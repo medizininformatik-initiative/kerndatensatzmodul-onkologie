@@ -2,7 +2,7 @@
 
 skinparam linetype polyline
 skinparam linetype ortho
-skinparam dpi 65
+'skinparam dpi 65
 
 object AdverseEvent_ST_Nebenwirkung #AliceBlue {
   Nebenwirkung_Grad : Catalog
@@ -41,28 +41,6 @@ object Condition_Fruehere_Tumorerkrankung #DodgerBlue {
   Diagnosedatum : String
 }
 
-object Condition_Diagnose #DodgerBlue {
-  Tumor_ID : String
-  Primaertumor_ICD_Code : String
-  Primaertumor_ICD_Version : Catalog
-  Primaertumor_Diagnosetext : String
-  Primaertumor_Topographie_ICD_O : String
-  Primaertumor_Topographie_ICD_O_Version : Catalog
-  Primaertumor_Topographie_ICD_O_Freitext : String
-  Diagnosedatum : String
-  Diagnosesicherung : Catalog
-  Seitenlokalisation : Catalog
-  Allgemeiner_Leistungszustand : Catalog
-  Anmerkung : String
-}
-
-object Condition_Tumorzuordnung #DodgerBlue {
-  Tumor_ID : String
-  Primaertumor_ICD_Code : String
-  Primaertumor_ICD_Version : Catalog
-  Diagnosedatum : String
-  Seitenlokalisation : Catalog
-}
 
 object Consent_Meldung #Thistle {
   MII-Basis-Model
@@ -91,32 +69,6 @@ object MedicationStatement_SYST #BurlyWood {
   Anmerkung : String
 }
 
-object Observation_cTNM #Coral {
-  TNM_ID : String
-  TNM_Datum : String
-  TNM_Version : Catalog
-  TNM_y_Symbol : Catalog
-  TNM_r_Symbol : Catalog
-  TNM_a_Symbol : Catalog
-  TNM_c_p_u_Praefix_T : Catalog
-  TNM_T : Catalog
-  TNM_m_Symbol : String
-  TNM_c_p_u_Praefix_N : Catalog
-  TNM_N : Catalog
-  TNM_c_p_u_Praefix_M : Catalog
-  TNM_M : Catalog
-  TNM_L : Catalog
-  TNM_V : Catalog
-  TNM_Pn : Catalog
-  TNM_S : Catalog
-}
-
-object Observation_Fernmetastase #Coral {
-  FM_Diagnosedatum : String
-  FM_Lokalisation : Catalog
-  FM_Diagnosedatum : String
-  FM_Lokalisation : Catalog
-}
 
 object Observation_Histologie #Coral {
   Histologie_ID : String
@@ -131,68 +83,6 @@ object Observation_Histologie #Coral {
   Sentinel_LK_untersucht : Integer
   Sentinel_LK_befallen : Integer
 
-}
-object Observation_Modul_Darm #Coral {
-  RektumAbstandAnokutanlinie : String
-  RektumAbstandAboralerResektionsrand : String
-  RektumAbstandCircResektionsebene : String
-  RektumQualitaetTME : Catalog
-  RektumMRTDuennschichtAngabemesorektaleFaszie : String
-  ArtEingriff : Catalog
-  RektumAnzeichnungStomaposition : Catalog
-  GradRektumAnastomoseninsuffizienz : Catalog
-  ASA : Catalog
-  RASMutation : Catalog
-
-}
-object Observation_Modul_Mamma #Coral {
-  Praetherapeutischer_Menopausenstatus : Catalog
-  HormonrezeptorStatus_Oestrogen : Catalog
-  HormonrezeptorStatus_Progesteron : Catalog
-  Her2neuStatus : Catalog
-  PraeopDrahtmarkierung : Catalog
-  IntraopPraeparatkontrolle : Catalog
-  TumorgroesseInvasiv : String
-  TumorgroesseDCIS : String
-}
-
-object Observation_Modul_Prostata #Coral {
-  GleasonGradPrimaer : Catalog
-  GleasonGradSekundaer : Catalog
-  GleasonScoreErgebnis : Catalog
-  AnlassGleasonScore : Catalog
-  DatumStanzen : Date
-  AnzahlStanzen : Integer
-  AnzahlPosStanzen : Integer
-  Prozentzahl : Integer
-  U : Catalog
-  PSA : Float
-  DatumPSA : Date
-  KomplPostOP_ClavienDindo : Catalog
-
-}
-object Observation_pTNM #Coral {
-  TNM_ID : String
-  TNM_Datum : String
-  TNM_Version : Catalog
-  TNM_y_Symbol : Catalog
-  TNM_r_Symbol : Catalog
-  TNM_a_Symbol : Catalog
-  TNM_c_p_u_Praefix_T : Catalog
-  TNM_T : Catalog
-  TNM_m_Symbol : String
-  TNM_c_p_u_Praefix_N : Catalog
-  TNM_N : Catalog
-  TNM_c_p_u_Praefix_M : Catalog
-  TNM_M : Catalog
-  TNM_L : Catalog
-  TNM_V : Catalog
-  TNM_Pn : Catalog
-  TNM_S : Catalog
-}
-object Observation_Residualstatus #Coral {
-  Lokale_Beurteilung_Residualstatus : Catalog
-  Gesamtbeurteilung_Residualstatus : Catalog
 }
 
 object Observation_TNM #Coral {
@@ -215,24 +105,7 @@ object Observation_TNM #Coral {
   TNM_S : Catalog
 }
 
-object Observation_Todesursache_ICD #Coral {
-  Tod_tumorbedingt : Catalog
-  Todesursache_ICD_Version : Catalog
-  Todesursache_ICD : String
-}
 
-object Observation_Weitere_Klassifikation #Coral {
-  Datum : String
-  Name : String
-  Stadium : String
-}
-
-object Observation_Zusatzitem #Coral {
-  Datum : String
-  Art : String
-  Wert : String
-  Bemerkung : String
-}
 
 object Research_Study_Modul_Allgemein #HoneyDew {
   Datum : Datum der Teilnahme an einer Studie mit Ethikvotum
@@ -307,36 +180,24 @@ MedicationStatement_SYST --> Condition_Fruehere_Tumorerkrankung :reason
 
 Procedure_Bestrahlung --> Patient :subject
 Procedure_OP --> Patient :subject
+Procedure_OP --> Specimen :specimen
 Procedure_SYST_Therapieart --> Patient :subject
 
 Medication_SYST_Substanz --> MedicationStatement_SYST :medication type
 
 Encounter_Modul_Allgemein --> Patient :subject
 
-Observation_cTNM --> Patient :subject
-Observation_Fernmetastase --> Patient :subject
 Observation_Histologie --> Patient :subject
-Observation_Modul_Darm --> Patient :subject
-Observation_Modul_Mamma --> Patient :subject
-Observation_Modul_Prostata --> Patient :subject
-Observation_pTNM --> Patient :subject
-Observation_Residualstatus --> Patient :subject
 Observation_TNM --> Patient :subject
-Observation_Todesursache_ICD --> Patient :subject
-Observation_Weitere_Klassifikation --> Patient :subject
-Observation_Zusatzitem --> Patient :subject
-Observation_Todesursache_ICD --> Patient :subject
 
-
-Condition_Diagnose --> Patient :subject
-Condition_Tumorzuordnung --> Patient :subject
 Condition_Fruehere_Tumorerkrankung --> Patient :subject
 ClinicalImpression_Verlauf --> Patient :subject
 CarePlan_Tumorkonferenz --> Patient :subject
 
 ClinicalImpression_Verlauf --> Condition_Fruehere_Tumorerkrankung :problem
 ClinicalImpression_Verlauf --> Patient :subject
-ClinicalImpression_Verlauf --> Observation_Histologie :item reference
+ClinicalImpression_Verlauf --> Observation_Histologie :item 
+ClinicalImpression_Verlauf --> Specimen :specimen
 
 Condition_Fruehere_Tumorerkrankung --> Observation_Histologie :evidence detail
 Condition_Fruehere_Tumorerkrankung --> Observation_TNM :stage assesment
@@ -347,6 +208,7 @@ Encounter_Modul_Allgemein --> Patient :subject
 Encounter_Modul_Allgemein --> Condition_Fruehere_Tumorerkrankung  :condition
 
 Observation_Histologie --> Encounter_Modul_Allgemein :encounter
+Observation_Histologie --> Specimen :specimen
 
 Procedure_OP_Komplikation --> Procedure_OP :complication in operation
 Procedure_OP_OPS --> Procedure_OP :operation type
@@ -356,7 +218,7 @@ AdverseEvent_SYST_Nebenwirkung --> Procedure_SYST_Therapieart :side effects
 Research_Study_Modul_Allgemein --> Patient :subject
 
 Practitioner_Melder --> Patient :subject
-Consent_Meldung --> Patient :subject
+Consent_Meldung "1..*" --> Patient :subject
 Specimen --> Patient :subject
 
 @enduml

@@ -1,0 +1,173 @@
+@startuml
+
+skinparam linetype polyline
+skinparam linetype ortho
+'skinparam dpi 65
+
+left to right direction
+
+object Condition_Diagnose #DodgerBlue {
+  Tumor_ID : String
+  Primaertumor_ICD_Code : String
+  Primaertumor_ICD_Version : Catalog
+  Primaertumor_Diagnosetext : String
+  Primaertumor_Topographie_ICD_O : String
+  Primaertumor_Topographie_ICD_O_Version : Catalog
+  Primaertumor_Topographie_ICD_O_Freitext : String
+  Diagnosedatum : String
+  Diagnosesicherung : Catalog
+  Seitenlokalisation : Catalog
+  Allgemeiner_Leistungszustand : Catalog
+  Anmerkung : String
+}
+
+object Condition_Tumorzuordnung #DodgerBlue {
+  Tumor_ID : String
+  Primaertumor_ICD_Code : String
+  Primaertumor_ICD_Version : Catalog
+  Diagnosedatum : String
+  Seitenlokalisation : Catalog
+}
+
+object Observation_cTNM #Coral {
+  TNM_ID : String
+  TNM_Datum : String
+  TNM_Version : Catalog
+  TNM_y_Symbol : Catalog
+  TNM_r_Symbol : Catalog
+  TNM_a_Symbol : Catalog
+  TNM_c_p_u_Praefix_T : Catalog
+  TNM_T : Catalog
+  TNM_m_Symbol : String
+  TNM_c_p_u_Praefix_N : Catalog
+  TNM_N : Catalog
+  TNM_c_p_u_Praefix_M : Catalog
+  TNM_M : Catalog
+  TNM_L : Catalog
+  TNM_V : Catalog
+  TNM_Pn : Catalog
+  TNM_S : Catalog
+}
+
+object Observation_Fernmetastase #Coral {
+  FM_Diagnosedatum : String
+  FM_Lokalisation : Catalog
+  FM_Diagnosedatum : String
+  FM_Lokalisation : Catalog
+}
+
+object Observation_Modul_Darm #Coral {
+  RektumAbstandAnokutanlinie : String
+  RektumAbstandAboralerResektionsrand : String
+  RektumAbstandCircResektionsebene : String
+  RektumQualitaetTME : Catalog
+  RektumMRTDuennschichtAngabemesorektaleFaszie : String
+  ArtEingriff : Catalog
+  RektumAnzeichnungStomaposition : Catalog
+  GradRektumAnastomoseninsuffizienz : Catalog
+  ASA : Catalog
+  RASMutation : Catalog
+
+}
+object Observation_Modul_Mamma #Coral {
+  Praetherapeutischer_Menopausenstatus : Catalog
+  HormonrezeptorStatus_Oestrogen : Catalog
+  HormonrezeptorStatus_Progesteron : Catalog
+  Her2neuStatus : Catalog
+  PraeopDrahtmarkierung : Catalog
+  IntraopPraeparatkontrolle : Catalog
+  TumorgroesseInvasiv : String
+  TumorgroesseDCIS : String
+}
+
+object Observation_Modul_Prostata #Coral {
+  GleasonGradPrimaer : Catalog
+  GleasonGradSekundaer : Catalog
+  GleasonScoreErgebnis : Catalog
+  AnlassGleasonScore : Catalog
+  DatumStanzen : Date
+  AnzahlStanzen : Integer
+  AnzahlPosStanzen : Integer
+  Prozentzahl : Integer
+  U : Catalog
+  PSA : Float
+  DatumPSA : Date
+  KomplPostOP_ClavienDindo : Catalog
+
+}
+object Observation_pTNM #Coral {
+  TNM_ID : String
+  TNM_Datum : String
+  TNM_Version : Catalog
+  TNM_y_Symbol : Catalog
+  TNM_r_Symbol : Catalog
+  TNM_a_Symbol : Catalog
+  TNM_c_p_u_Praefix_T : Catalog
+  TNM_T : Catalog
+  TNM_m_Symbol : String
+  TNM_c_p_u_Praefix_N : Catalog
+  TNM_N : Catalog
+  TNM_c_p_u_Praefix_M : Catalog
+  TNM_M : Catalog
+  TNM_L : Catalog
+  TNM_V : Catalog
+  TNM_Pn : Catalog
+  TNM_S : Catalog
+}
+object Observation_Residualstatus #Coral {
+  Lokale_Beurteilung_Residualstatus : Catalog
+  Gesamtbeurteilung_Residualstatus : Catalog
+}
+
+
+object Observation_Todesursache_ICD #Coral {
+  Tod_tumorbedingt : Catalog
+  Todesursache_ICD_Version : Catalog
+  Todesursache_ICD : String
+}
+
+object Observation_Weitere_Klassifikation #Coral {
+  Datum : String
+  Name : String
+  Stadium : String
+}
+
+object Observation_Zusatzitem #Coral {
+  Datum : String
+  Art : String
+  Wert : String
+  Bemerkung : String
+}
+
+object Patient #Chocolate {
+  MII-Basis-Model
+  Sterbedatum : String
+
+}
+
+object Specimen #HotPink {
+	
+  Biobank module
+}
+
+
+Observation_cTNM --> Patient :subject
+Observation_Fernmetastase --> Patient :subject
+Observation_Modul_Darm --> Patient :subject
+Observation_Modul_Mamma --> Patient :subject
+Observation_Modul_Prostata --> Patient :subject
+Observation_pTNM --> Patient :subject
+Observation_Residualstatus --> Patient :subject
+Observation_Todesursache_ICD --> Patient :subject
+Observation_Weitere_Klassifikation --> Patient :subject
+Observation_Zusatzitem --> Patient :subject
+Observation_Todesursache_ICD --> Patient :subject
+
+Observation_pTNM --> Specimen :specimen
+
+Condition_Diagnose "1..*" --> Patient :subject
+Condition_Tumorzuordnung --> Patient :subject
+
+
+
+@enduml
