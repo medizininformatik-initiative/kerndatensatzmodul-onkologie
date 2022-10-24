@@ -320,7 +320,7 @@ OP "0..*" -- "1" Patienten_Stammdaten
 Nebenwirkungen_von_Strahlentherapie_oder_systemischer_Therapie  "0..*" -- Strahlentherapie
 Nebenwirkungen_von_Strahlentherapie_oder_systemischer_Therapie  "0..*" -- Systemische_Therapie
 Verlauf "0..*" -- "1" Diagnose
-Tod "0..*" -- "1" Patienten_Stammdaten
+Tod "0..1" -- "1" Patienten_Stammdaten
 Allgemeiner_Leistungszustand "0..*" -- "1" Diagnose
 Specimen "0..*" -- "0..*" Verlauf
 Specimen "0..*" -- "1" Diagnose
@@ -341,4 +341,22 @@ Strahlentherapie "0..*" -- "1" Diagnose
 Systemische_Therapie "0..*" -- "1" Diagnose
 Histologie "0..*" -- "1" Diagnose
 TNM_Klassifikation "0..*" -- "1" Diagnose
+OP "0..*" -- "1" Diagnose
+TNM_Klassifikation "0..*" -- "1" Verlauf
+Histologie "0..*" -- "1" OP
+Histologie "0..*" -- "1" Verlauf
+Weitere_Klassifikation "0..*" -- "1" Diagnose
+Weitere_Klassifikation "0..*" -- "1" Verlauf
+Fernmetastasen "0..*" -- "1" Diagnose
+Fernmetastasen "0..*" -- "1" Verlauf
+Tod "0..1" -- "1" Verlauf
+Residualstatus "0..1" -- "1" OP
+Residualstatus "0..1" -- "1" Strahlentherapie
+Residualstatus "0..1" -- "1" Systemische_Therapie
+Tumorkonferenz_Therapieplanung "0..1" -- "1" Diagnose
+Genetische_Variante "0..*" -- "1" Diagnose
+Modul_Kolorektales_Karzinom "0..*" -- "1" Diagnose
+Modul_Malignes_Melanom "0..*" -- "1" Diagnose
+Modul_Mammakarzinom "0..*" -- "1" Diagnose
+Modul_Prostatakarzinom "0..*" -- "1" Diagnose
 @enduml
