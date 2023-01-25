@@ -3,31 +3,10 @@
 skinparam linetype ortho
 left to right direction
 
-object Meldung #Thistle {
-  Meldebegruendung : Catalog
-  Meldedatum : String
-}
 
 
-object Patienten_Stammdaten #Chocolate {
-  Patient_ID : String
-  KrankenversichertenNr : String
-  KrankenkassenNr : String
-  Patienten_Nachname : String
-  Patienten_Titel : String
-  Patienten_Namenszusatz : String
-  Patienten_Vornamen : String
-  Patienten_Geburtsname : String
-  Patienten_Frueherer_Name : String
-  Patienten_Geschlecht : Catalog
-  Patienten_Geburtsdatum : String
-  Patienten_Strasse : String
-  Patienten_Hausnummer : String
-  Patienten_Land : String
-  Patienten_PLZ : String
-  Patienten_Ort : String
 
-}
+
 
 
 object Diagnose #DodgerBlue {
@@ -50,7 +29,7 @@ object Diagnose #DodgerBlue {
 
 
 
-object Allgemeiner_Leistungszustand #DodgerBlue {
+object Allgemeiner_Leistungszustand #Coral {
   Allgemeiner_Leistungszustand : Catalog
 
 }
@@ -83,6 +62,19 @@ object Strahlentherapie #LightCyan {
   ST_Ende_Grund : Catalog
   Anmerkung : String
 }
+
+object Lokale_Interventionelle_Therapie #LightCyan {
+LIT_Art/Methode : Catalog
+LIT_Intention : Catalog
+LIT_Stellung_OP : Catalog
+LIT_Lokalisation : Catalog
+LIT_Zahl_Laesionen : Integer
+LIT_Komplikationen : String
+LIT_Datum : Date
+LIT_Weitere_Details : String
+LIT_Anmerkungen : String
+}
+
 
 object Nebenwirkungen_von_Strahlentherapie_oder_systemischer_Therapie #AliceBlue {
   Nebenwirkungen_nach_CTCAE-Grad  : Catalog
@@ -125,21 +117,12 @@ object Therapieempfehlung #Aqua {
 }
 
 
-object Tod #Chocolate {
+object Verknüpfung_Person_Todesursache #HotPink {
   Sterbedatum : Date
   Tod_tumorbedingt : Catalog
   Todesursache_ICD_Version : Catalog
   Todesursache_ICD : String
 }
-
-
-
-
-object Studienteilnahme #HoneyDew {
-  Studienteilnahme_Datum : Date
-  Studienteilnahme_Status : Catalog
-}
-
 
 object Zusätzliche_Kontakte #HoneyDew {
   Kontakt_Art : Catalog
@@ -155,8 +138,13 @@ object Specimen #HotPink {
   Probenart : Catalog
   Körperstelle : Catalog
   Kommentar : String
+  }
 
-}
+  object Verknüpfung_Molpatho #HotPink{
+  ID Molpatho : String
+  }
+
+
 object Histologie #Coral {
   Histologie_ID : String
   Tumor_Histologiedatum : String
@@ -204,6 +192,10 @@ object Weitere_Klassifikation #Coral {
 object Residualstatus #Coral {
   Beurteilung_des_lokalen_Residualstatus_nach_Abschluss_der_Operation : Catalog
   Gesamtbeurteilung_des_Residualstatus : Catalog
+}
+
+object Response #Coral {
+  Response auf Therapie : Catalog
 }
 
 
@@ -308,55 +300,46 @@ object Patienten_Stammdaten #Chocolate {
 
 }
 
-Meldung "1..*" -- "1" Patienten_Stammdaten
-Diagnose "1..*" -- "1" Patienten_Stammdaten
-Tumorkonferenz_Therapieplanung "0..*" -- "1" Patienten_Stammdaten
 Therapieempfehlung "0..*" -- Tumorkonferenz_Therapieplanung
-Studienteilnahme "0..*" -- "1" Patienten_Stammdaten
-Zusätzliche_Kontakte "0..*" -- "1" Patienten_Stammdaten
-Systemische_Therapie "0..*" -- "1" Patienten_Stammdaten
-Strahlentherapie "0..*" -- "1" Patienten_Stammdaten
-OP "0..*" -- "1" Patienten_Stammdaten
 Nebenwirkungen_von_Strahlentherapie_oder_systemischer_Therapie  "0..*" -- Strahlentherapie
 Nebenwirkungen_von_Strahlentherapie_oder_systemischer_Therapie  "0..*" -- Systemische_Therapie
 Verlauf "0..*" -- "1" Diagnose
-Tod "0..1" -- "1" Patienten_Stammdaten
 Allgemeiner_Leistungszustand "0..*" -- "1" Diagnose
+Allgemeiner_Leistungszustand "0..*" -- "1" Verlauf
 Specimen "0..*" -- "0..*" Verlauf
 Specimen "0..*" -- "1" Diagnose
 Specimen "0..*" -- "0..*" OP
-Histologie "0..*" -- "1" Patienten_Stammdaten
-TNM_Klassifikation "0..*" -- "1" Patienten_Stammdaten
-Weitere_Klassifikation "0..*" -- "1" Patienten_Stammdaten
-Residualstatus "0..*" -- "1" Patienten_Stammdaten
-Fernmetastasen "0..*" -- "1" Patienten_Stammdaten
-Genetische_Variante "0..*" -- "1" Patienten_Stammdaten
-Modul_Kolorektales_Karzinom"0..*" -- "1" Patienten_Stammdaten
-Modul_Malignes_Melanom" 0..*" -- "1" Patienten_Stammdaten
-Modul_Mammakarzinom "0..*" -- "1" Patienten_Stammdaten
-Modul_Prostatakarzinom "0..*" -- "1" Patienten_Stammdaten
 Specimen "0..*" -- "0..*" Histologie
 Specimen "0..*" -- "0..*" TNM_Klassifikation
 Strahlentherapie "0..*" -- "1" Diagnose
 Systemische_Therapie "0..*" -- "1" Diagnose
 Histologie "0..*" -- "1" Diagnose
+Histologie "0..*" -- "1" Residualstatus
 TNM_Klassifikation "0..*" -- "1" Diagnose
+TNM_Klassifikation "0..*" -- "1" OP
 OP "0..*" -- "1" Diagnose
 TNM_Klassifikation "0..*" -- "1" Verlauf
 Histologie "0..*" -- "1" OP
+Histologie "0..*" -- "1" Lokale_Interventionelle_Therapie
 Histologie "0..*" -- "1" Verlauf
 Weitere_Klassifikation "0..*" -- "1" Diagnose
 Weitere_Klassifikation "0..*" -- "1" Verlauf
 Fernmetastasen "0..*" -- "1" Diagnose
 Fernmetastasen "0..*" -- "1" Verlauf
-Tod "0..1" -- "1" Verlauf
+Verknüpfung_Person_Todesursache "0..1" -- "1" Verlauf
 Residualstatus "0..1" -- "1" OP
 Residualstatus "0..1" -- "1" Strahlentherapie
 Residualstatus "0..1" -- "1" Systemische_Therapie
+Response "0..1" -- "1" Strahlentherapie
+Response "0..1" -- "1" Systemische_Therapie
+Response "0..1" -- "1" OP
+Response "0..1" -- "1" Lokale_Interventionelle_Therapie
 Tumorkonferenz_Therapieplanung "0..1" -- "1" Diagnose
 Genetische_Variante "0..*" -- "1" Diagnose
-Modul_Kolorektales_Karzinom "0..*" -- "1" Diagnose
-Modul_Malignes_Melanom "0..*" -- "1" Diagnose
-Modul_Mammakarzinom "0..*" -- "1" Diagnose
-Modul_Prostatakarzinom "0..*" -- "1" Diagnose
+Modul_Kolorektales_Karzinom "0..1" -- "1" Diagnose
+Modul_Malignes_Melanom "0..1" -- "1" Diagnose
+Modul_Mammakarzinom "0..1" -- "1" Diagnose
+Modul_Prostatakarzinom "0..1" -- "1" Diagnose
+Lokale_Interventionelle_Therapie "0..*" -- "1" Diagnose
+Genetische_Variante "1" -- "0..*" Verknüpfung_Molpatho
 @enduml
