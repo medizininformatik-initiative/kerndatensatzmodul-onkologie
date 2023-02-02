@@ -1,5 +1,6 @@
 Instance: mii-exa-onko-strahlentherapie
 InstanceOf: MII_PR_Onko_Strahlentherapie
+Title: "Intersitielle, pulsierende Strahlentherapie der Lunge"
 * status = #stopped
 * subject = Reference(PatientExample)
 * performedPeriod
