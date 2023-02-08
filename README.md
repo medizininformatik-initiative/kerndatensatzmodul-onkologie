@@ -32,5 +32,5 @@ The HTML files can directly be opened using a browser or by hosting using _nginx
 A simple way is to use the official Docker image. Start the container from `output/` using the WSL command line. Docker is not available from inside dev containers.
 
 ```bash
-'docker run --rm --name nginx -v $(pwd):/usr/share/nginx/html:ro -p 8080:80 nginx'
+docker run --rm --name nginx -v $(pwd):/usr/share/nginx/html:ro -p 8080:80 nginx
 ```
