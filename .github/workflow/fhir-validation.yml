@@ -1,0 +1,78 @@
+name: FHIR Package
+
+on:
+  push:
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  fhir-packages:
+    name: Get FHIR Packages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout packages repository
+        uses: actions/checkout@v3
+        with:
+          repository: cybernop/fhir-packages
+          lfs: true
+      - name: Create package directory
+        run: mkdir packages
+      - name: Extract packages
+        working-directory: ./packages
+        run: ../extract.sh
+      - name: Archive extracted packages
+        uses: actions/upload-artifact@v3
+        with:
+          name: packages
+          path: ./packages
+
+  build-profiles:
+    name: Build Profiles
+    runs-on: ubuntu-latest
+    needs: fhir-packages
+    container: hl7fhir/ig-publisher-base:latest
+    steps:
+      - name: Setup NodeJS
+        uses: actions/setup-node@v2
+        with:
+          node-version: "12"
+      - name: Install fsh-sushi
+        run: npm install && npm install -g fsh-sushi@3.0.0-beta.1
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Download IG Publisher
+        run: ./_updatePublisher.sh -y
+      - name: Download profiles
+        uses: actions/download-artifact@v3
+        with:
+          name: packages
+          path: ~/.fhir/packages
+      - name: Build profiles
+        run: ./_genonce.sh
+      - name: Archive profile artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: package
+          path: output/package.tgz
+      - name: Archive generated pages
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: output
+
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+    needs: build-profiles
+    if: github.ref_name == 'main'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
