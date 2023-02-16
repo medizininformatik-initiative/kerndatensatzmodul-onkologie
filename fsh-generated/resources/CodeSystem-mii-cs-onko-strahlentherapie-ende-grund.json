@@ -1,0 +1,46 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "MII_CS_Onko_Strahlentherapie_Ende_Grund",
+  "id": "mii-cs-onko-strahlentherapie-ende-grund",
+  "title": "MII CS Onko Strahlentherapie Ende Grund",
+  "description": "Grund für das Ende der Strahlentherapie",
+  "version": "0.1.0",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-ende-grund",
+  "concept": [
+    {
+      "code": "E",
+      "display": "reguläres Ende"
+    },
+    {
+      "code": "F",
+      "display": "Zieldosis erreicht mit Unterbrechung > 3 Kalendertage"
+    },
+    {
+      "code": "A",
+      "display": "Abbruch wegen Nebenwirkungen"
+    },
+    {
+      "code": "P",
+      "display": "Abbruch wegen Progress"
+    },
+    {
+      "code": "S",
+      "display": "Abbruch aus sonstigen Gründen"
+    },
+    {
+      "code": "V",
+      "display": "Patient verweigert weitere Therapie"
+    },
+    {
+      "code": "T",
+      "display": "Patient verstorben"
+    },
+    {
+      "code": "U",
+      "display": "unbekannt"
+    }
+  ],
+  "count": 8
+}
