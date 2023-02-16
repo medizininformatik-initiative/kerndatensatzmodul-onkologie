@@ -1,0 +1,90 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-pr-onko-nebenwirkung",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Clinical.Summary"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "patient"
+    }
+  ],
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung",
+  "version": "0.1.0",
+  "name": "MII_PR_Onko_Nebenwirkung",
+  "title": "MII PR Onko Nebenwirkung",
+  "status": "active",
+  "description": "Nebenwirkung einer Therapie",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "AdverseEvent",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/AdverseEvent",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "AdverseEvent.extension",
+        "path": "AdverseEvent.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "AdverseEvent.extension:grade",
+        "path": "AdverseEvent.extension",
+        "sliceName": "grade",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-nebenwirkung-grad"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "AdverseEvent.actuality",
+        "path": "AdverseEvent.actuality",
+        "fixedCode": "actual"
+      },
+      {
+        "id": "AdverseEvent.event",
+        "path": "AdverseEvent.event",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-ctcae-term"
+        }
+      },
+      {
+        "id": "AdverseEvent.severity",
+        "path": "AdverseEvent.severity",
+        "max": "0"
+      }
+    ]
+  }
+}
