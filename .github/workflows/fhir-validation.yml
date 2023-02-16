@@ -42,7 +42,7 @@ jobs:
         with:
           node-version: "18"
       - name: Install fsh-sushi
-        run: npm install && npm install -g fsh-sushi@3.0.0-beta.1
+        run: npm install -g fsh-sushi@3.0.0-beta.1
       - name: Checkout code
         uses: actions/checkout@v3
       - name: Download IG Publisher
