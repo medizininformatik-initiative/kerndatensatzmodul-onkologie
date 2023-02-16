@@ -1,0 +1,27 @@
+@startuml Onco_Module
+skinparam linetype ortho
+left to right direction
+
+package Modul_Onkologie {
+
+  class Strahlentherapie << ProcedureRadiotherapy >> {
+    Intention : Intention
+    StellungZurOp : StellungOp
+    terminationReason : StrahlentherapieEndeGrund
+    performedPeriod : Period
+    bodySite : SNOMEDCTBodyStructures
+    # Strahlenart : Code
+    # Dose : Dose
+    # Applikationsart : Code
+    #Einzeldosis_pro_Tag : Float
+    outcome : Residualstatus
+  }
+
+  class Nebenwirkung << AdverseEvent >> {
+    grade : CTCAEGrade
+  }
+  Nebenwirkung --> "0..*" Strahlentherapie : suspectEntity.instance
+
+}
+
+@enduml
