@@ -13,12 +13,15 @@ package Modul_Onkologie {
     # Strahlenart : Code
     # Dose : Dose
     # Applikationsart : Code
-    #Einzeldosis_pro_Tag : Float
+    # Einzeldosis_pro_Tag : Float
+    # Boost: Code
     outcome : Residualstatus
   }
 
   class Nebenwirkung << AdverseEvent >> {
-    grade : CTCAEGrade
+    grade.code : CTCAEGrade
+    grade.version : URI
+    grade.version : String
   }
   Nebenwirkung --> "0..*" Strahlentherapie : suspectEntity.instance
 
