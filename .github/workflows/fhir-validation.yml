@@ -55,7 +55,7 @@ jobs:
           name: packages
           path: ~/.fhir/packages
       - name: Generate Plant UML diagrams
-        run: java -jar plantuml.jar -tsvg -o ../images $(pwd)/input/images-source'
+        run: java -jar plantuml.jar -tsvg -o ../images $(pwd)/input/images-source
       - name: Build profiles
         run: ./_genonce.sh
       - name: Archive profile artifacts
