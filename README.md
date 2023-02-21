@@ -21,13 +21,21 @@ First time opening this solution in a dev container will cause the Docker image 
 
 This container comes with FSH Sushi and dependencies pre-installed. Execute sushi from the command line by calling `sushi`.
 
-### IG Publisher
+#### Image Generation
+
+Generate images for the IG
+
+```bash
+gen_uml
+```
+
+#### IG Publisher
 
 At first, the latest version of the publisher needs to be downloaded. You can either use the script from the repository (`_updatePublisher.sh`) or use the version shipped with the container itself (`../_updatePublisher.sh`).
 
 The IG Publisher is started using the script `_genonce.sh`. This first internally calls sushi and generates the pages using the pre-installed tool _Jekyll_. The generated HTML files are placed in the `output/` folder.
 
-### Website
+#### Website
 
 The HTML files can directly be opened using a browser or by hosting using _nginx_.
 

@@ -17,3 +17,6 @@ RUN gem install jekyll
 
 RUN wget -P /workspaces https://raw.githubusercontent.com/HL7/ig-publisher-scripts/main/_updatePublisher.sh \
     && chmod a+x /workspaces/_updatePublisher.sh
+
+RUN wget -P /workspaces https://github.com/plantuml/plantuml/releases/latest/download/plantuml.jar \
+    && echo "alias gen_uml='java -jar /workspaces/plantuml.jar -tsvg -o ../images $(pwd)/input/images-source'" >> /etc/bash.bashrc
