@@ -1,5 +1,7 @@
 # MII Kerndatensatz Modul Onkologie
 
+[![FHIR Package](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/actions/workflows/fhir-validation.yml/badge.svg)](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/actions/workflows/fhir-validation.yml)
+
 ## Profiling
 
 For profiling or local evaluation of the current state the dev containers feature from Visual Studio Code can be used.
