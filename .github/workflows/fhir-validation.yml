@@ -35,29 +35,26 @@ jobs:
     name: Build Profiles
     runs-on: ubuntu-latest
     needs: fhir-packages
-    container: hl7fhir/ig-publisher-base:latest
+    container: ghcr.io/bih-cei/docker-helpers/ig-gen:main
     steps:
-      - name: Setup NodeJS
-        uses: actions/setup-node@v2
-        with:
-          node-version: "18"
-      - name: Install fsh-sushi
-        run: npm install -g fsh-sushi@3.0.0-beta.1
       - name: Checkout code
         uses: actions/checkout@v3
-      - name: Download IG Publisher
-        run: ./_updatePublisher.sh -y
-      - name: Download Plant UML
-        run: wget https://github.com/plantuml/plantuml/releases/latest/download/plantuml.jar
       - name: Download profiles
         uses: actions/download-artifact@v3
         with:
           name: packages
           path: ~/.fhir/packages
-      - name: Generate Plant UML diagrams
-        run: java -jar plantuml.jar -tsvg -o ../images $(pwd)/input/images-source
-      - name: Build profiles
-        run: ./_genonce.sh
+      - name: Link code directory
+        run: ln -s $(pwd) /usr/share/ig/content
+      - name: debug
+        run: ls -laH /usr/share/ig
+      - name: debug
+        run: ls -laH $(pwd)
+      - name: debug
+        run: ls -laH /usr/share/ig/content
+      - name: Build package
+        working-directory: /usr/share/ig
+        run: ./entrypoint.sh
       - name: Archive profile artifacts
         uses: actions/upload-artifact@v3
         with:
