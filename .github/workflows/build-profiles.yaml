@@ -35,8 +35,10 @@ jobs:
       - name: Commit and push changes
         working-directory: profiles
         run: |
-          git config user.name "${GITHUB_ACTOR}"
-          git config user.email "${GITHUB_ACTOR}@users.noreply.${INPUT_ORGANIZATION_DOMAIN}"
-          git add fsh-generated
-          git commit -m "[GEN] Generate FHIR profiles"
-          git push origin ${GITHUB_REF_NAME}
+          if [[ `git status --porcelain` ]]; then
+            git config user.name "${GITHUB_ACTOR}"
+            git config user.email "${GITHUB_ACTOR}@users.noreply.${INPUT_ORGANIZATION_DOMAIN}"
+            git add fsh-generated
+            git commit -m "[GEN] Generate FHIR profiles"
+            git push origin ${GITHUB_REF_NAME}
+          fi
