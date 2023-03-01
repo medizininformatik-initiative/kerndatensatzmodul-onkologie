@@ -23,8 +23,7 @@ jobs:
       - name: Create package directory
         run: mkdir packages
       - name: Extract packages
-        working-directory: ./packages
-        run: ../extract.sh
+        run: ./extract.sh packages
       - name: Archive extracted packages
         uses: actions/upload-artifact@v3
         with:

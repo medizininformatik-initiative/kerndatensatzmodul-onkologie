@@ -1,0 +1,42 @@
+name: Build Profiles
+
+on:
+  push:
+    # paths:
+    #   - "**.fsh"
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup NodeJS
+        uses: actions/setup-node@v2
+        with:
+          node-version: "18"
+      - name: Install fsh-sushi
+        run: npm install -g fsh-sushi@3.0.0-beta.1
+      - name: Checkout FHIR packages
+        uses: actions/checkout@v3
+        with:
+          repository: cybernop/fhir-packages
+          lfs: true
+          path: fhir-packages
+      - name: Extract packages
+        working-directory: fhir-packages
+        run: ./extract.sh ~/.fhir/packages
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          path: profiles
+      - name: Build profiles
+        working-directory: profiles
+        run: sushi
+      - name: Commit and push changes
+        working-directory: profiles
+        run: |
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.${INPUT_ORGANIZATION_DOMAIN}"
+          git add fsh-generated
+          git commit -m "[GEN] Generate FHIR profiles"
+          git push origin ${GITHUB_REF_NAME}
