@@ -20,7 +20,7 @@ jobs:
       - name: Get FHIR packages
         uses: cybernop/get-fhir-packages@v1
       - name: Build profiles
-        uses: cybernop/build-fhir-ig@main
+        uses: cybernop/build-fhir-ig@v1
         with:
           sushi-version: "3.0.0-beta.1"
       - name: Archive profile artifacts
