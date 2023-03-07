@@ -4,4 +4,5 @@ RUN apk update \
     && apk add graphviz
 
 RUN wget -P /workspaces https://github.com/plantuml/plantuml/releases/latest/download/plantuml.jar \
-    && echo "alias gen_uml='java -jar /workspaces/plantuml.jar -tsvg -o ../images $(pwd)/input/images-source'" >> /etc/bash.bashrc
+    && printf "#!/bin/bash\njava -jar /workspaces/plantuml.jar -tsvg -o ../images input/images-source" >> /workspaces/gen_uml.sh \
+    && chmod a+x /workspaces/gen_uml.sh
