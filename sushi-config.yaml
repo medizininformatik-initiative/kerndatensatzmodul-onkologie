@@ -19,6 +19,7 @@ publisher:
   name: Medizininformatik-Initiative
   url: https://www.medizininformatik-initiative.de/
   # email: test@example.org
+language: "de-DE"
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (or dev/current). For advanced
@@ -44,14 +45,14 @@ dependencies:
 # with supported extensions (e.g., .md/.xml) will be treated as
 # sub-pages.
 #
-# pages:
-#   index.md:
-#     title: Example Home
-#   implementation.xml:
-#   examples.xml:
-#     title: Examples Overview
-#     simpleExamples.xml:
-#     complexExamples.xml:
+pages:
+  index.md:
+    title: Home
+  guidance.md:
+    information_model.md:
+      title: Information-Model
+    fhir_model.md:
+      title: FHIR-Model
 #
 #
 # The parameters property represents IG.definition.parameter. Rather

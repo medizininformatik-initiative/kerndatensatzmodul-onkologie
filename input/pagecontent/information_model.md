@@ -1,3 +1,3 @@
-# Information Model
+### Überblick
 
 ![Informationsmodell](onco_merged.svg)

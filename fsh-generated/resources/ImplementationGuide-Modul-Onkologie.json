@@ -1,6 +1,7 @@
 {
   "resourceType": "ImplementationGuide",
   "id": "Modul-Onkologie",
+  "language": "de-DE",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/Modul-Onkologie",
   "version": "0.1.0",
   "name": "ModulOnkologie",
@@ -201,14 +202,21 @@
           "generation": "markdown"
         },
         {
-          "nameUrl": "fhir_model.html",
-          "title": "Fhir Model",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "information_model.html",
-          "title": "Information Model",
-          "generation": "markdown"
+          "nameUrl": "guidance.html",
+          "title": "Guidance",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "information_model.html",
+              "title": "Information-Model",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "fhir_model.html",
+              "title": "FHIR-Model",
+              "generation": "markdown"
+            }
+          ]
         }
       ]
     },
