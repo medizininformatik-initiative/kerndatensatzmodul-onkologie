@@ -1,19 +1,19 @@
-name: Verification
+name: FHIR Validator
 
 on:
   workflow_run:
-    workflows: ["Profiles"]
+    workflows: ["FHIR Profiles"]
 
 jobs:
   verify:
-    name: Verification
+    name: Validation
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
       - name: Get FHIR packages
         uses: cybernop/get-fhir-packages@v1
-      - name: Verify profiles
-        uses: cybernop/verify-fhir@main
+      - name: Validate profiles
+        uses: cybernop/validate-fhir@v1
         with:
           fhir-version: "4.0"

@@ -1,7 +1,7 @@
 # MII Kerndatensatz Modul Onkologie
 
 [![FHIR Profiles](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/actions/workflows/build-profiles.yaml/badge.svg)](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/actions/workflows/build-profiles.yaml)
-[![Verification](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/actions/workflows/verify-profiles.yaml/badge.svg)](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/actions/workflows/verify-profiles.yaml)
+[![FHIR Validator](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/actions/workflows/validate-profiles.yaml/badge.svg)](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/actions/workflows/validate-profiles.yaml)
 [![IG Publisher](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/actions/workflows/build-ig.yml/badge.svg)](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/actions/workflows/build-ig.yml)
 
 ## Profiling
