@@ -1,0 +1,116 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-pr-onko-lokale-interventionelle-therapie",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-lokale-interventionelle-therapie",
+  "name": "MII_PR_Onko_Lokale_Interventionelle_Therapie",
+  "title": "MII PR Onko Lokale Interventionelle Therapie",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Procedure",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Procedure",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Procedure.extension",
+        "path": "Procedure.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Procedure.extension:Intention",
+        "path": "Procedure.extension",
+        "sliceName": "Intention",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://fhir.de/onkologie/StructureDefinition/Intention"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Procedure.extension:Intention.value[x]",
+        "path": "Procedure.extension.value[x]",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-intention"
+        }
+      },
+      {
+        "id": "Procedure.extension:StellungZurOp",
+        "path": "Procedure.extension",
+        "sliceName": "StellungZurOp",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://fhir.de/onkologie/StructureDefinition/StellungZurOp"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Procedure.extension:StellungZurOp.value[x]",
+        "path": "Procedure.extension.value[x]",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-stellung-op"
+        }
+      },
+      {
+        "id": "Procedure.outcome",
+        "path": "Procedure.outcome",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://fhir.de/onkologie/ValueSet/ResidualstatusVS"
+        }
+      },
+      {
+        "id": "Procedure.complication",
+        "path": "Procedure.complication",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://fhir.de/onkologie/ValueSet/OpKomplikationenVS"
+        }
+      }
+    ]
+  }
+}

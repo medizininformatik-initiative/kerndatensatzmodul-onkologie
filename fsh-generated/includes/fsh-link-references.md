@@ -1,5 +1,6 @@
 [mii-exa-onko-strahlentherapie]: Procedure-mii-exa-onko-strahlentherapie.html
 [mii-exa-onko-krebsdiagnose]: Condition-mii-exa-onko-krebsdiagnose.html
+[mii-exa-onko-lokale-interventionelle-therapie]: Procedure-mii-exa-onko-lokale-interventionelle-therapie.html
 [mii-cm-onko-strahlentherapie-applikationsart-ops-mapping]: ConceptMap-mii-cm-onko-strahlentherapie-applikationsart-ops-mapping.html
 [MII_CS_Onko_CTCAE_Grad]: CodeSystem-mii-cs-onko-ctcae-grad.html
 [MII_CS_Onko_Intention]: CodeSystem-mii-cs-onko-intention.html
@@ -8,6 +9,7 @@
 [MII_CS_Onko_Strahlentherapie_Ende_Grund]: CodeSystem-mii-cs-onko-strahlentherapie-ende-grund.html
 [MII_EX_Onko_Nebenwirkung_Grad]: StructureDefinition-mii-ex-onko-nebenwirkung-grad.html
 [MII_EX_Onko_Strahlentherapie_Ende_Grund]: StructureDefinition-mii-ex-onko-strahlentherapie-ende-grund.html
+[MII_PR_Onko_Lokale_Interventionelle_Therapie]: StructureDefinition-mii-pr-onko-lokale-interventionelle-therapie.html
 [MII_PR_Onko_Nebenwirkung]: StructureDefinition-mii-pr-onko-nebenwirkung.html
 [MII_PR_Onko_Operation]: StructureDefinition-mii-pr-onko-operation.html
 [MII_PR_Onko_Strahlentherapie]: StructureDefinition-mii-pr-onko-strahlentherapie.html

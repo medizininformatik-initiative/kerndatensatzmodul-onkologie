@@ -29,6 +29,19 @@ package Modul_Onkologie {
   }
   Operation --> "0..*" Condition : reasonReference
 
+  class LokaleInterventionelleTherapie << Procedure >> {
+    # Art_Methode : Catalog
+    Intention : Intention
+    StellungZurOp : StellungOp
+    bodySite : Code
+    # Zahl_Laesionen : Integer
+    complication : OpKomplikationen
+    performedDateTime: dateTime
+    # Weitere_Details : String
+    outcome : Residualstatus
+  }
+  LokaleInterventionelleTherapie --> "0..*" Condition : reasonReference
+
   class Nebenwirkung << AdverseEvent >> {
     grade.code : CTCAEGrade
     grade.version : URI

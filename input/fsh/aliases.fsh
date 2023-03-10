@@ -3,7 +3,11 @@ Alias: $DeOnkoRadiotherapy = http://fhir.de/onkologie/StructureDefinition/proced
 Alias: $DeOnkoSurgery = http://fhir.de/onkologie/StructureDefinition/procedure-operation
 Alias: $DeOnkoDiagnosis = http://fhir.de/onkologie/StructureDefinition/KrebsDiagnose
 Alias: $DeOnkoResidualStatus = http://fhir.de/onkologie/CodeSystem/Residualstatus
+Alias: $DeOnkoResidualStatusVS = http://fhir.de/onkologie/ValueSet/ResidualstatusVS
 Alias: $DeOnkoOpComplications = http://fhir.de/onkologie/CodeSystem/OpKomplikationen
+Alias: $DeOnkoOpComplicationsVS = http://fhir.de/onkologie/ValueSet/OpKomplikationenVS
+Alias: $DeOnkoIntention = http://fhir.de/onkologie/StructureDefinition/Intention
+Alias: $DeOnkoStellungOp = http://fhir.de/onkologie/StructureDefinition/StellungZurOp
 
 // FHIR Core
 Alias: $EventStatus = http://hl7.org/fhir/event-status
