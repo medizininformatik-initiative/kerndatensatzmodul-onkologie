@@ -1,3 +1,3 @@
 ### Überblick
 
-![FHIR Model](FhirModulOnkologie.svg)
+![FHIR Model Therapy](FhirModulOnkologieTherapy.svg)
