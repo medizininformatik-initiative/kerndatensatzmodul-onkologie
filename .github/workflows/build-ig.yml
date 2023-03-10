@@ -22,7 +22,7 @@ jobs:
       - name: Build profiles
         uses: cybernop/build-fhir-ig@v1
         with:
-          sushi-version: "3.0.0-beta.1"
+          sushi-version: "3.0.0-beta.2"
       - name: Archive profile artifacts
         uses: actions/upload-artifact@v3
         with:
