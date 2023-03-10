@@ -41,6 +41,84 @@
     "resource": [
       {
         "reference": {
+          "reference": "Procedure/mii-exa-onko-strahlentherapie"
+        },
+        "name": "Intersitielle, pulsierende Strahlentherapie der Lunge",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie"
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-onko-krebsdiagnose"
+        },
+        "name": "Krebsdiagnose",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/mii-cm-onko-strahlentherapie-applikationsart-ops-mapping"
+        },
+        "name": "MII CM Onko Strahlentherapie Applikationsart / OPS Mapping",
+        "description": "Mapping von \"Strahlentherapie Applikationsart\" nach OPS",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-ctcae-grad"
+        },
+        "name": "MII CS Onko CTCAE-Grad",
+        "description": "CTCAE-Schweregrad für Ereignisse",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-intention"
+        },
+        "name": "MII CS Onko Intention",
+        "description": "Intention für eine Strahlen-, systemtische oder operative Therapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-stellung-op"
+        },
+        "name": "MII CS Onko Stellung OP",
+        "description": "Stellung zur operativen Therapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-strahlentherapie-applikationsart"
+        },
+        "name": "MII CS Onko Strahlentherapie Applikationsart",
+        "description": "Gibt an, mit welcher Technik die Strahlentherapie durchgeführt wurde.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-strahlentherapie-ende-grund"
+        },
+        "name": "MII CS Onko Strahlentherapie Ende Grund",
+        "description": "Grund für das Ende der Strahlentherapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-onko-nebenwirkung-grad"
+        },
+        "name": "MII EX Onko CTCAE-Grad",
+        "description": "CTCAE-Schweregrad für Ereignisse",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-onko-strahlentherapie-ende-grund"
+        },
+        "name": "MII EX Onko Strahlentherapie Ende Grund",
+        "description": "Grund für Ende eine Strahlentherapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-nebenwirkung"
         },
         "name": "MII PR Onko Nebenwirkung",
@@ -60,22 +138,6 @@
           "reference": "StructureDefinition/mii-pr-onko-strahlentherapie"
         },
         "name": "MII PR Onko Strahlentherapie",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/mii-ex-onko-nebenwirkung-grad"
-        },
-        "name": "MII EX Onko CTCAE-Grad",
-        "description": "CTCAE-Schweregrad für Ereignisse",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/mii-ex-onko-strahlentherapie-ende-grund"
-        },
-        "name": "MII EX Onko Strahlentherapie Ende Grund",
-        "description": "Grund für Ende eine Strahlentherapie",
         "exampleBoolean": false
       },
       {
@@ -136,43 +198,10 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/mii-cs-onko-ctcae-grad"
+          "reference": "Procedure/mii-exe-onko-operation"
         },
-        "name": "MII CS Onko CTCAE-Grad",
-        "description": "CTCAE-Schweregrad für Ereignisse",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/mii-cs-onko-intention"
-        },
-        "name": "MII CS Onko Intention",
-        "description": "Intention für eine Strahlen-, systemtische oder operative Therapie",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/mii-cs-onko-stellung-op"
-        },
-        "name": "MII CS Onko Stellung OP",
-        "description": "Stellung zur operativen Therapie",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/mii-cs-onko-strahlentherapie-applikationsart"
-        },
-        "name": "MII CS Onko Strahlentherapie Applikationsart",
-        "description": "Gibt an, mit welcher Technik die Strahlentherapie durchgeführt wurde.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/mii-cs-onko-strahlentherapie-ende-grund"
-        },
-        "name": "MII CS Onko Strahlentherapie Ende Grund",
-        "description": "Grund für das Ende der Strahlentherapie",
-        "exampleBoolean": false
+        "name": "Operation",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation"
       },
       {
         "reference": {
@@ -184,32 +213,10 @@
       },
       {
         "reference": {
-          "reference": "ConceptMap/mii-cm-onko-strahlentherapie-applikationsart-ops-mapping"
-        },
-        "name": "MII CM Onko Strahlentherapie Applikationsart / OPS Mapping",
-        "description": "Mapping von \"Strahlentherapie Applikationsart\" nach OPS",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "Condition/mii-exa-onko-krebsdiagnose"
-        },
-        "name": "Krebsdiagnose",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
           "reference": "AdverseEvent/mii-exa-onko-schwere-nebenwirkung"
         },
         "name": "Schwere Nebenwirkung",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung"
-      },
-      {
-        "reference": {
-          "reference": "Procedure/mii-exa-onko-strahlentherapie"
-        },
-        "name": "Intersitielle, pulsierende Strahlentherapie der Lunge",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie"
       }
     ],
     "page": {
