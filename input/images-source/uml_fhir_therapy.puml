@@ -17,6 +17,14 @@ package Modul_Onkologie {
     outcome : Residualstatus
   }
 
+  class Operation << ADT-Procedure-Surgery >> {
+    Intention : Intention
+    performedDateTime : dateTime
+    code : Code
+    complication : OpKomplikationen
+    outcome : Residualstatus
+  }
+
   class Nebenwirkung << AdverseEvent >> {
     grade.code : CTCAEGrade
     grade.version : URI
