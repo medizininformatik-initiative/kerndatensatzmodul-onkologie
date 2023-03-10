@@ -11,3 +11,4 @@ Title: "Intersitielle, pulsierende Strahlentherapie der Lunge"
 * code.coding[+] = mii-cs-onko-strahlentherapie-applikationsart#IPDR
 * code.coding[+] = $OPS#8-525.11
 * bodySite.coding = $SCT#184814008
+* reasonReference = Reference(mii-exa-onko-krebsdiagnose)

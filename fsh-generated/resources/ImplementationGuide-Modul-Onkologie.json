@@ -29,6 +29,12 @@
       "version": "1.0.0-ballot",
       "uri": "http://fhir.de/onkologie/ImplementationGuide/de.basisprofil.onkologie",
       "id": "de_basisprofil_onkologie"
+    },
+    {
+      "packageId": "de.basisprofil.r4",
+      "version": "1.4.0",
+      "uri": "http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4",
+      "id": "de_basisprofil_r4"
     }
   ],
   "definition": {
@@ -183,6 +189,13 @@
         "name": "MII CM Onko Strahlentherapie Applikationsart / OPS Mapping",
         "description": "Mapping von \"Strahlentherapie Applikationsart\" nach OPS",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-onko-krebsdiagnose"
+        },
+        "name": "Krebsdiagnose",
+        "exampleBoolean": true
       },
       {
         "reference": {
