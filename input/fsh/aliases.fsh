@@ -2,6 +2,11 @@
 Alias: $DeOnkoRadiotherapy = http://fhir.de/onkologie/StructureDefinition/procedure-bestrahlung
 Alias: $DeOnkoSurgery = http://fhir.de/onkologie/StructureDefinition/procedure-operation
 Alias: $DeOnkoDiagnosis = http://fhir.de/onkologie/StructureDefinition/KrebsDiagnose
+Alias: $DeOnkoResidualStatus = http://fhir.de/onkologie/CodeSystem/Residualstatus
+Alias: $DeOnkoOpComplications = http://fhir.de/onkologie/CodeSystem/OpKomplikationen
+
+// FHIR Core
+Alias: $EventStatus = http://hl7.org/fhir/event-status
 
 // Code Systems
 Alias: $CTCAE = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
