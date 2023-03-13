@@ -1,0 +1,24 @@
+{
+  "resourceType": "MedicationStatement",
+  "id": "mii-exa-onko-systemische-therapie",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
+    ]
+  },
+  "status": "completed",
+  "effectivePeriod": {
+    "start": "2021-01-01"
+  },
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "code": "74470007",
+        "system": "http://snomed.info/sct"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/PatientExample"
+  }
+}

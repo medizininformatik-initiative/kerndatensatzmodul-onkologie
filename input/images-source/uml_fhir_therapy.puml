@@ -42,12 +42,24 @@ package Modul_Onkologie {
   }
   LokaleInterventionelleTherapie --> "0..*" Condition : reasonReference
 
+  class SystemischeTherapie << MedicationStatement >> {
+    Intention : Intention
+    StellungZurOp : StellungOp
+    # Art_der_systemischen_oder_abwartenden_Therapie : Catalog
+    # Protokoll : Catalog
+    effectivePeriod : Period
+    medication : Code | Medication
+    # Ende_Grund : Catalog
+  }
+  SystemischeTherapie --> "0..*" Condition : reasonReference
+
   class Nebenwirkung << AdverseEvent >> {
     grade.code : CTCAEGrade
     grade.version : URI
     grade.version : String
   }
   Nebenwirkung --> "0..*" Strahlentherapie : suspectEntity.instance
+  Nebenwirkung --> "0..*" SystemischeTherapie : suspectEntity.instance
 
 }
 
