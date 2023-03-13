@@ -1,0 +1,66 @@
+{
+  "resourceType": "Procedure",
+  "id": "mii-exe-onko-operation",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://fhir.de/onkologie/StructureDefinition/Intention",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "K",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention"
+          }
+        ]
+      }
+    }
+  ],
+  "outcome": {
+    "extension": [
+      {
+        "url": "http://fhir.de/onkologie/StructureDefinition/GesamtbeurteilungResidualstatus",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "R1",
+              "system": "http://fhir.de/onkologie/CodeSystem/Residualstatus"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "status": "completed",
+  "performedDateTime": "2020-02-01",
+  "code": {
+    "coding": [
+      {
+        "code": "5-330",
+        "system": "http://fhir.de/CodeSystem/bfarm/ops",
+        "version": "2023"
+      }
+    ]
+  },
+  "complication": [
+    {
+      "coding": [
+        {
+          "code": "BIF",
+          "system": "http://fhir.de/onkologie/CodeSystem/OpKomplikationen"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "Patient/PatientExample"
+  },
+  "reasonReference": [
+    {
+      "reference": "Condition/mii-exa-onko-krebsdiagnose"
+    }
+  ]
+}

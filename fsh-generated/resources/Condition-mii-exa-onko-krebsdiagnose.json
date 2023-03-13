@@ -1,0 +1,28 @@
+{
+  "resourceType": "Condition",
+  "id": "mii-exa-onko-krebsdiagnose",
+  "meta": {
+    "profile": [
+      "http://fhir.de/onkologie/StructureDefinition/KrebsDiagnose"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+        "code": "C34.9",
+        "version": "2023"
+      }
+    ]
+  },
+  "clinicalStatus": {
+    "coding": [
+      {
+        "code": "active"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/PatientExample"
+  }
+}

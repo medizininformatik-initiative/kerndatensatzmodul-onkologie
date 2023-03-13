@@ -7,7 +7,8 @@ Title: "Intersitielle, pulsierende Strahlentherapie der Lunge"
   * start = "2020-01-01"
   * end = "2020-06-30"
 * extension[Intention].valueCodeableConcept.coding = mii-cs-onko-intention#K
-* extension[terminationReason].valueCodeableConcept.coding = mii-cs-onko-strahlentherapie-ende-grund#A
+* extension[terminationReason].valueCodeableConcept.coding = mii-cs-onko-therapie-ende-grund#A
 * code.coding[+] = mii-cs-onko-strahlentherapie-applikationsart#IPDR
 * code.coding[+] = $OPS#8-525.11
 * bodySite.coding = $SCT#184814008
+* reasonReference = Reference(mii-exa-onko-krebsdiagnose)

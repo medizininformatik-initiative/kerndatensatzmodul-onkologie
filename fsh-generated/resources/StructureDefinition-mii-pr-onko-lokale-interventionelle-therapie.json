@@ -1,9 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "mii-pr-onko-strahlentherapie",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie",
-  "name": "MII_PR_Onko_Strahlentherapie",
-  "title": "MII PR Onko Strahlentherapie",
+  "id": "mii-pr-onko-lokale-interventionelle-therapie",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-lokale-interventionelle-therapie",
+  "name": "MII_PR_Onko_Lokale_Interventionelle_Therapie",
+  "title": "MII PR Onko Lokale Interventionelle Therapie",
   "status": "draft",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -31,14 +31,38 @@
   "kind": "resource",
   "abstract": false,
   "type": "Procedure",
-  "baseDefinition": "http://fhir.de/onkologie/StructureDefinition/procedure-bestrahlung",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Procedure",
   "derivation": "constraint",
   "differential": {
     "element": [
       {
+        "id": "Procedure.extension",
+        "path": "Procedure.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
         "id": "Procedure.extension:Intention",
         "path": "Procedure.extension",
-        "sliceName": "Intention"
+        "sliceName": "Intention",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://fhir.de/onkologie/StructureDefinition/Intention"
+            ]
+          }
+        ]
       },
       {
         "id": "Procedure.extension:Intention.value[x]",
@@ -51,7 +75,17 @@
       {
         "id": "Procedure.extension:StellungZurOp",
         "path": "Procedure.extension",
-        "sliceName": "StellungZurOp"
+        "sliceName": "StellungZurOp",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://fhir.de/onkologie/StructureDefinition/StellungZurOp"
+            ]
+          }
+        ]
       },
       {
         "id": "Procedure.extension:StellungZurOp.value[x]",
@@ -62,27 +96,19 @@
         }
       },
       {
-        "id": "Procedure.extension:terminationReason",
-        "path": "Procedure.extension",
-        "sliceName": "terminationReason",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-therapie-ende-grund"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Procedure.code",
-        "path": "Procedure.code",
+        "id": "Procedure.outcome",
+        "path": "Procedure.outcome",
         "binding": {
           "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-code-ops"
+          "valueSet": "http://fhir.de/onkologie/ValueSet/ResidualstatusVS"
+        }
+      },
+      {
+        "id": "Procedure.complication",
+        "path": "Procedure.complication",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://fhir.de/onkologie/ValueSet/OpKomplikationenVS"
         }
       }
     ]

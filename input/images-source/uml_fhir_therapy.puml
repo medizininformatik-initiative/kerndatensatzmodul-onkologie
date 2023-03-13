@@ -1,0 +1,66 @@
+@startuml FhirModulOnkologieTherapy
+skinparam linetype ortho
+
+class Condition
+
+package Modul_Onkologie {
+
+  class Strahlentherapie << ProcedureRadiotherapy >> {
+    Intention : Intention
+    StellungZurOp : StellungOp
+    terminationReason : StrahlentherapieEndeGrund
+    performedPeriod : Period
+    bodySite : SNOMEDCTBodyStructures
+    # Strahlenart : Code
+    # Dose : Dose
+    # Applikationsart : Code
+    # Einzeldosis_pro_Tag : Float
+    # Boost: Code
+    outcome : Residualstatus
+  }
+  Strahlentherapie --> "0..*" Condition : reason
+
+  class Operation << ADT-Procedure-Surgery >> {
+    Intention : Intention
+    performedDateTime : dateTime
+    code : Code
+    complication : OpKomplikationen
+    outcome : Residualstatus
+  }
+  Operation --> "0..*" Condition : reason
+
+  class LokaleInterventionelleTherapie << Procedure >> {
+    # Art_Methode : Catalog
+    Intention : Intention
+    StellungZurOp : StellungOp
+    bodySite : Code
+    # Zahl_Laesionen : Integer
+    complication : OpKomplikationen
+    performedDateTime: dateTime
+    # Weitere_Details : String
+    outcome : Residualstatus
+  }
+  LokaleInterventionelleTherapie --> "0..*" Condition : reason
+
+  class SystemischeTherapie << MedicationStatement >> {
+    Intention : Intention
+    StellungZurOp : StellungOp
+    type : SystemischeTherapieArt
+    # Protokoll : Catalog
+    effectivePeriod : Period
+    medication : Code | Medication
+    terminationReason : StrahlentherapieEndeGrund
+  }
+  SystemischeTherapie --> "0..*" Condition : reason
+
+  class Nebenwirkung << AdverseEvent >> {
+    grade.code : CTCAEGrade
+    grade.version : URI
+    grade.version : String
+  }
+  Nebenwirkung --> "0..*" Strahlentherapie : suspectEntity
+  Nebenwirkung --> "0..*" SystemischeTherapie : suspectEntity
+
+}
+
+@enduml

@@ -1,11 +1,11 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "mii-ex-onko-nebenwirkung-grad",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-nebenwirkung-grad",
-  "name": "MII_EX_Onko_Nebenwirkung_Grad",
-  "title": "MII EX Onko CTCAE-Grad",
+  "id": "mii-ex-onko-therapie-ende-grund",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-therapie-ende-grund",
+  "name": "MII_EX_Onko_Therapie_Ende_Grund",
+  "title": "MII EX Onko Therapie Ende Grund",
   "status": "draft",
-  "description": "CTCAE-Schweregrad für Ereignisse",
+  "description": "Grund für Ende eine Therapie",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -30,8 +30,8 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "MII EX Onko CTCAE-Grad",
-        "definition": "CTCAE-Schweregrad für Ereignisse"
+        "short": "MII EX Onko Therapie Ende Grund",
+        "definition": "Grund für Ende eine Therapie"
       },
       {
         "id": "Extension.extension",
@@ -41,7 +41,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-nebenwirkung-grad"
+        "fixedUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-therapie-ende-grund"
       },
       {
         "id": "Extension.value[x]",
@@ -53,7 +53,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-ctcae-grad"
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapie-ende-grund"
         }
       }
     ]

@@ -1,0 +1,66 @@
+{
+  "resourceType": "Procedure",
+  "id": "mii-exa-onko-lokale-interventionelle-therapie",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-lokale-interventionelle-therapie"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://fhir.de/onkologie/StructureDefinition/Intention",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "S",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://fhir.de/onkologie/StructureDefinition/StellungZurOp",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "Z",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-stellung-op"
+          }
+        ]
+      }
+    }
+  ],
+  "status": "completed",
+  "performedDateTime": "2021-02-01",
+  "subject": {
+    "reference": "Patient/PatientExample"
+  },
+  "outcome": {
+    "coding": [
+      {
+        "code": "R0",
+        "system": "http://fhir.de/onkologie/CodeSystem/Residualstatus"
+      }
+    ]
+  },
+  "bodySite": [
+    {
+      "coding": [
+        {
+          "code": "788158006",
+          "system": "http://snomed.info/sct"
+        }
+      ]
+    }
+  ],
+  "complication": [
+    {
+      "coding": [
+        {
+          "code": "N",
+          "system": "http://fhir.de/onkologie/CodeSystem/OpKomplikationen"
+        }
+      ]
+    }
+  ]
+}

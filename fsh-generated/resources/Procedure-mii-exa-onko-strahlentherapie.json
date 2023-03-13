@@ -28,12 +28,12 @@
       }
     },
     {
-      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-ende-grund",
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-therapie-ende-grund",
       "valueCodeableConcept": {
         "coding": [
           {
             "code": "A",
-            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-ende-grund"
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund"
           }
         ]
       }
@@ -67,6 +67,11 @@
           "system": "http://snomed.info/sct"
         }
       ]
+    }
+  ],
+  "reasonReference": [
+    {
+      "reference": "Condition/mii-exa-onko-krebsdiagnose"
     }
   ]
 }
