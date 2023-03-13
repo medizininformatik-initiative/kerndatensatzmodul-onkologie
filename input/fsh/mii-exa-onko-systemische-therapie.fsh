@@ -8,3 +8,4 @@ Title: "Systemische Therapie"
 * subject = Reference(PatientExample)
 * extension[Intention].valueCodeableConcept = mii-cs-onko-intention#K
 * extension[StellungZurOp].valueCodeableConcept = mii-cs-onko-stellung-op#A
+* extension[terminationReason].valueCodeableConcept = mii-cs-onko-therapie-ende-grund#E

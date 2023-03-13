@@ -6,8 +6,10 @@
 [MII_CS_Onko_Intention]: CodeSystem-mii-cs-onko-intention.html
 [MII_CS_Onko_Stellung_OP]: CodeSystem-mii-cs-onko-stellung-op.html
 [MII_CS_Onko_Strahlentherapie_Applikationsart]: CodeSystem-mii-cs-onko-strahlentherapie-applikationsart.html
+[MII_CS_Onko_Systemische_Therapie_Art]: CodeSystem-mii-cs-onko-systemische-therapie-art.html
 [MII_CS_Onko_Therapie_Ende_Grund]: CodeSystem-mii-cs-onko-therapie-ende-grund.html
 [MII_EX_Onko_Nebenwirkung_Grad]: StructureDefinition-mii-ex-onko-nebenwirkung-grad.html
+[MII_EX_Onko_Systemische_Therapie_Art]: StructureDefinition-mii-ex-onko-systemische-therapie-art.html
 [MII_EX_Onko_Therapie_Ende_Grund]: StructureDefinition-mii-ex-onko-therapie-ende-grund.html
 [MII_PR_Onko_Lokale_Interventionelle_Therapie]: StructureDefinition-mii-pr-onko-lokale-interventionelle-therapie.html
 [MII_PR_Onko_Nebenwirkung]: StructureDefinition-mii-pr-onko-nebenwirkung.html
@@ -20,6 +22,7 @@
 [MII_VS_Onko_Stellung_OP]: ValueSet-mii-vs-onko-stellung-op.html
 [MII_VS_Onko_Strahlentherapie_Applikationsart]: ValueSet-mii-vs-onko-strahlentherapie-applikationsart.html
 [MII_VS_Onko_Strahlentherapie_Code_OPS]: ValueSet-mii-vs-onko-strahlentherapie-code-ops.html
+[MII_VS_Onko_Systemische_Therapie_Art]: ValueSet-mii-vs-onko-systemische-therapie-art.html
 [MII_VS_Onko_Therapie_Ende_Grund]: ValueSet-mii-vs-onko-therapie-ende-grund.html
 [mii-exe-onko-operation]: Procedure-mii-exe-onko-operation.html
 [PatientExample]: Patient-PatientExample.html

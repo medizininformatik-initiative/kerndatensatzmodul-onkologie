@@ -18,7 +18,7 @@ package Modul_Onkologie {
     # Boost: Code
     outcome : Residualstatus
   }
-  Strahlentherapie --> "0..*" Condition : reasonReference
+  Strahlentherapie --> "0..*" Condition : reason
 
   class Operation << ADT-Procedure-Surgery >> {
     Intention : Intention
@@ -27,7 +27,7 @@ package Modul_Onkologie {
     complication : OpKomplikationen
     outcome : Residualstatus
   }
-  Operation --> "0..*" Condition : reasonReference
+  Operation --> "0..*" Condition : reason
 
   class LokaleInterventionelleTherapie << Procedure >> {
     # Art_Methode : Catalog
@@ -40,26 +40,26 @@ package Modul_Onkologie {
     # Weitere_Details : String
     outcome : Residualstatus
   }
-  LokaleInterventionelleTherapie --> "0..*" Condition : reasonReference
+  LokaleInterventionelleTherapie --> "0..*" Condition : reason
 
   class SystemischeTherapie << MedicationStatement >> {
     Intention : Intention
     StellungZurOp : StellungOp
-    # Art_der_systemischen_oder_abwartenden_Therapie : Catalog
+    type : SystemischeTherapieArt
     # Protokoll : Catalog
     effectivePeriod : Period
     medication : Code | Medication
-    # Ende_Grund : Catalog
+    terminationReason : StrahlentherapieEndeGrund
   }
-  SystemischeTherapie --> "0..*" Condition : reasonReference
+  SystemischeTherapie --> "0..*" Condition : reason
 
   class Nebenwirkung << AdverseEvent >> {
     grade.code : CTCAEGrade
     grade.version : URI
     grade.version : String
   }
-  Nebenwirkung --> "0..*" Strahlentherapie : suspectEntity.instance
-  Nebenwirkung --> "0..*" SystemischeTherapie : suspectEntity.instance
+  Nebenwirkung --> "0..*" Strahlentherapie : suspectEntity
+  Nebenwirkung --> "0..*" SystemischeTherapie : suspectEntity
 
 }
 
