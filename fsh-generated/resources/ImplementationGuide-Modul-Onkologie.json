@@ -102,10 +102,10 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/mii-cs-onko-strahlentherapie-ende-grund"
+          "reference": "CodeSystem/mii-cs-onko-therapie-ende-grund"
         },
-        "name": "MII CS Onko Strahlentherapie Ende Grund",
-        "description": "Grund für das Ende der Strahlentherapie",
+        "name": "MII CS Onko Therapie Ende Grund",
+        "description": "Grund für das Ende der Therapie",
         "exampleBoolean": false
       },
       {
@@ -118,10 +118,10 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-ex-onko-strahlentherapie-ende-grund"
+          "reference": "StructureDefinition/mii-ex-onko-therapie-ende-grund"
         },
-        "name": "MII EX Onko Strahlentherapie Ende Grund",
-        "description": "Grund für Ende eine Strahlentherapie",
+        "name": "MII EX Onko Therapie Ende Grund",
+        "description": "Grund für Ende eine Therapie",
         "exampleBoolean": false
       },
       {
@@ -152,6 +152,13 @@
           "reference": "StructureDefinition/mii-pr-onko-strahlentherapie"
         },
         "name": "MII PR Onko Strahlentherapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-systemische-therapie"
+        },
+        "name": "MII PR Onko Systemische Therapie",
         "exampleBoolean": false
       },
       {
@@ -204,10 +211,10 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/mii-vs-onko-strahlentherapie-ende-grund"
+          "reference": "ValueSet/mii-vs-onko-therapie-ende-grund"
         },
-        "name": "MII VS Onko Strahlentherapie Ende Grund",
-        "description": "Grund für das Ende der Strahlentherapie",
+        "name": "MII VS Onko Therapie Ende Grund",
+        "description": "Grund für das Ende der Therapie",
         "exampleBoolean": false
       },
       {
@@ -231,6 +238,13 @@
         },
         "name": "Schwere Nebenwirkung",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung"
+      },
+      {
+        "reference": {
+          "reference": "MedicationStatement/mii-exa-onko-systemische-therapie"
+        },
+        "name": "Systemische Therapie",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
       }
     ],
     "page": {

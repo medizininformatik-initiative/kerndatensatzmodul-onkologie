@@ -2,6 +2,7 @@
 Alias: $DeOnkoRadiotherapy = http://fhir.de/onkologie/StructureDefinition/procedure-bestrahlung
 Alias: $DeOnkoSurgery = http://fhir.de/onkologie/StructureDefinition/procedure-operation
 Alias: $DeOnkoDiagnosis = http://fhir.de/onkologie/StructureDefinition/KrebsDiagnose
+Alias: $DeOnkoSystemischeTherapie = http://fhir.de/onkologie/StructureDefinition/SystemischeTherapie
 Alias: $DeOnkoResidualStatus = http://fhir.de/onkologie/CodeSystem/Residualstatus
 Alias: $DeOnkoResidualStatusVS = http://fhir.de/onkologie/ValueSet/ResidualstatusVS
 Alias: $DeOnkoOpComplications = http://fhir.de/onkologie/CodeSystem/OpKomplikationen

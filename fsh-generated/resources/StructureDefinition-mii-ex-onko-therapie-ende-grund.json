@@ -1,11 +1,11 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "mii-ex-onko-strahlentherapie-ende-grund",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-ende-grund",
-  "name": "MII_EX_Onko_Strahlentherapie_Ende_Grund",
-  "title": "MII EX Onko Strahlentherapie Ende Grund",
+  "id": "mii-ex-onko-therapie-ende-grund",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-therapie-ende-grund",
+  "name": "MII_EX_Onko_Therapie_Ende_Grund",
+  "title": "MII EX Onko Therapie Ende Grund",
   "status": "draft",
-  "description": "Grund für Ende eine Strahlentherapie",
+  "description": "Grund für Ende eine Therapie",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -30,8 +30,8 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "MII EX Onko Strahlentherapie Ende Grund",
-        "definition": "Grund für Ende eine Strahlentherapie"
+        "short": "MII EX Onko Therapie Ende Grund",
+        "definition": "Grund für Ende eine Therapie"
       },
       {
         "id": "Extension.extension",
@@ -41,7 +41,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-ende-grund"
+        "fixedUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-therapie-ende-grund"
       },
       {
         "id": "Extension.value[x]",
@@ -53,7 +53,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-ende-grund"
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapie-ende-grund"
         }
       }
     ]
