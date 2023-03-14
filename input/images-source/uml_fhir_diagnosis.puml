@@ -1,0 +1,26 @@
+@startuml FhirModulOnkologieDiagnosis
+skinparam linetype ortho
+
+package Modul_Onkologie {
+
+  class Diagnose {
+    Tumor_ID : String
+    Primaertumor_ICD_Code : String
+    Primaertumor_ICD_Version : Catalog
+    Primaertumor_Diagnosetext : String
+    Primaertumor_Topographie_ICD_O : String
+    Primaertumor_Topographie_ICD_O_Version : Catalog
+    Primaertumor_Topographie_ICD_O_Freitext : String
+    Primaertumor_Diagnosedatum : Date
+    Primaertumor_Diagnosesicherung : Catalog
+    Seitenlokalisation : Catalog
+    Fruehere_Tumorerkrankung_ICD_Code: String
+    Fruehere_Tumorerkrankung_ICD_Version: Catalog
+    Fruehere_Tumorerkrankung_Freitext: String
+    Fruehere_Tumorerkrankung_Diagnosedatum : Date
+    Anmerkung : String
+  }
+
+}
+
+@enduml
