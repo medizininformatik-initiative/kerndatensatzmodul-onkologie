@@ -7,16 +7,12 @@ package Modul_Onkologie {
     code : Code
     code.version : String
     code.display : String
-    # Primaertumor_Topographie_ICD_O : String
-    # Primaertumor_Topographie_ICD_O_Version : Catalog
-    # Primaertumor_Topographie_ICD_O_Freitext : String
-    recordedDate : Date
-    Diagnosesicherung : Diagnosesicherung
+    Diagnosesicherheit : Diagnosesicherheit
     Seitenlokalisation : Seitenlokalisation
-    # Fruehere_Tumorerkrankung_ICD_Code: String
-    # Fruehere_Tumorerkrankung_ICD_Version: Catalog
-    # Fruehere_Tumorerkrankung_Freitext: String
-    # Fruehere_Tumorerkrankung_Diagnosedatum : Date
+    topograpy : Code
+    topograpy.version : String
+    topograpy.display : String
+    recordedDate : Date
   }
 
 }
