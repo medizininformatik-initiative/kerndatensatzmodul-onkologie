@@ -55,7 +55,6 @@ package Modul_Onkologie {
 
   class Nebenwirkung << AdverseEvent >> {
     grade.code : CTCAEGrade
-    grade.version : URI
     grade.version : String
   }
   Nebenwirkung --> "0..*" Strahlentherapie : suspectEntity

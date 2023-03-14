@@ -38,7 +38,8 @@
       {
         "id": "Procedure.extension:Intention",
         "path": "Procedure.extension",
-        "sliceName": "Intention"
+        "sliceName": "Intention",
+        "mustSupport": true
       },
       {
         "id": "Procedure.extension:Intention.value[x]",
@@ -51,7 +52,8 @@
       {
         "id": "Procedure.extension:StellungZurOp",
         "path": "Procedure.extension",
-        "sliceName": "StellungZurOp"
+        "sliceName": "StellungZurOp",
+        "mustSupport": true
       },
       {
         "id": "Procedure.extension:StellungZurOp.value[x]",
@@ -84,6 +86,44 @@
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-code-ops"
         }
+      },
+      {
+        "id": "Procedure.performed[x]",
+        "path": "Procedure.performed[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.performed[x]:performedPeriod",
+        "path": "Procedure.performed[x]",
+        "sliceName": "performedPeriod",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.bodySite",
+        "path": "Procedure.bodySite",
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.outcome",
+        "path": "Procedure.outcome",
+        "mustSupport": true
       }
     ]
   }
