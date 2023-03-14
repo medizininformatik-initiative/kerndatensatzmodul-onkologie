@@ -51,7 +51,7 @@
           "reference": "Condition/mii-exa-onko-krebsdiagnose"
         },
         "name": "Krebsdiagnose",
-        "exampleBoolean": true
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krebsdiagnose"
       },
       {
         "reference": {
@@ -138,6 +138,13 @@
         },
         "name": "MII EX Onko Therapie Ende Grund",
         "description": "Grund für Ende eine Therapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-krebsdiagnose"
+        },
+        "name": "MII PR Onko Krebsdiagnose",
         "exampleBoolean": false
       },
       {

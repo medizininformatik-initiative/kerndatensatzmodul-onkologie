@@ -1,9 +1,9 @@
 @startuml FhirModulOnkologieTherapy
 skinparam linetype ortho
 
-class Condition
-
 package Modul_Onkologie {
+
+  class Krebsdiagnose
 
   class Strahlentherapie << ProcedureRadiotherapy >> {
     Intention : Intention
@@ -18,7 +18,7 @@ package Modul_Onkologie {
     # Boost: Code
     outcome : Residualstatus
   }
-  Strahlentherapie --> "0..*" Condition : reason
+  Strahlentherapie --> "0..*" Krebsdiagnose : reason
 
   class Operation << ADT-Procedure-Surgery >> {
     Intention : Intention
@@ -27,7 +27,7 @@ package Modul_Onkologie {
     complication : OpKomplikationen
     outcome : Residualstatus
   }
-  Operation --> "0..*" Condition : reason
+  Operation --> "0..*" Krebsdiagnose : reason
 
   class LokaleInterventionelleTherapie << Procedure >> {
     # Art_Methode : Catalog
@@ -40,7 +40,7 @@ package Modul_Onkologie {
     # Weitere_Details : String
     outcome : Residualstatus
   }
-  LokaleInterventionelleTherapie --> "0..*" Condition : reason
+  LokaleInterventionelleTherapie --> "0..*" Krebsdiagnose : reason
 
   class SystemischeTherapie << MedicationStatement >> {
     Intention : Intention
@@ -51,7 +51,7 @@ package Modul_Onkologie {
     medication : Code | Medication
     terminationReason : StrahlentherapieEndeGrund
   }
-  SystemischeTherapie --> "0..*" Condition : reason
+  SystemischeTherapie --> "0..*" Krebsdiagnose : reason
 
   class Nebenwirkung << AdverseEvent >> {
     grade.code : CTCAEGrade

@@ -9,9 +9,12 @@ Alias: $DeOnkoOpComplications = http://fhir.de/onkologie/CodeSystem/OpKomplikati
 Alias: $DeOnkoOpComplicationsVS = http://fhir.de/onkologie/ValueSet/OpKomplikationenVS
 Alias: $DeOnkoIntention = http://fhir.de/onkologie/StructureDefinition/Intention
 Alias: $DeOnkoStellungOp = http://fhir.de/onkologie/StructureDefinition/StellungZurOp
+Alias: $DeIcdSeitenlokalisation = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_SEITENLOKALISATION
+Alias: $DeIcdDiagnosesicherheit = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_DIAGNOSESICHERHEIT
 
 // FHIR Core
 Alias: $EventStatus = http://hl7.org/fhir/event-status
+Alias: $VerificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status
 
 // Code Systems
 Alias: $CTCAE = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl

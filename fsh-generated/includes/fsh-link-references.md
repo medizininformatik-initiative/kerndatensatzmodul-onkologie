@@ -11,6 +11,7 @@
 [MII_EX_Onko_Nebenwirkung_Grad]: StructureDefinition-mii-ex-onko-nebenwirkung-grad.html
 [MII_EX_Onko_Systemische_Therapie_Art]: StructureDefinition-mii-ex-onko-systemische-therapie-art.html
 [MII_EX_Onko_Therapie_Ende_Grund]: StructureDefinition-mii-ex-onko-therapie-ende-grund.html
+[MII_PR_Onko_Krebsdiagnose]: StructureDefinition-mii-pr-onko-krebsdiagnose.html
 [MII_PR_Onko_Lokale_Interventionelle_Therapie]: StructureDefinition-mii-pr-onko-lokale-interventionelle-therapie.html
 [MII_PR_Onko_Nebenwirkung]: StructureDefinition-mii-pr-onko-nebenwirkung.html
 [MII_PR_Onko_Operation]: StructureDefinition-mii-pr-onko-operation.html
