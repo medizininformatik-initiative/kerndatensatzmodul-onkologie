@@ -18,6 +18,7 @@
 [MII_PR_Onko_Operation]: StructureDefinition-mii-pr-onko-operation.html
 [MII_PR_Onko_Strahlentherapie]: StructureDefinition-mii-pr-onko-strahlentherapie.html
 [MII_PR_Onko_Systemische_Therapie]: StructureDefinition-mii-pr-onko-systemische-therapie.html
+[MII_PR_Onko_TNM_Klassifikation]: StructureDefinition-mii-pr-onko-tnm-klassifikation.html
 [MII_VS_Onko_CTCAE_Grad]: ValueSet-mii-vs-onko-ctcae-grad.html
 [MII_VS_Onko_CTCAE_Term]: ValueSet-mii-vs-onko-ctcae-term.html
 [MII_VS_Onko_Intention]: ValueSet-mii-vs-onko-intention.html
@@ -30,3 +31,4 @@
 [PatientExample]: Patient-PatientExample.html
 [mii-exa-onko-schwere-nebenwirkung]: AdverseEvent-mii-exa-onko-schwere-nebenwirkung.html
 [mii-exa-onko-systemische-therapie]: MedicationStatement-mii-exa-onko-systemische-therapie.html
+[mii-exa-onko-tnm-klassifikation]: Observation-mii-exa-onko-tnm-klassifikation.html
