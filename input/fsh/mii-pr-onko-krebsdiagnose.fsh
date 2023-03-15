@@ -19,3 +19,9 @@ Title: "MII PR Onko Krebsdiagnose"
   * system MS
   * display MS
 * recordedDate MS
+* stage
+  * assessment ^slicing.discriminator[+].type = #profile
+  * assessment ^slicing.discriminator[=].path = "resolve().code"
+  * assessment ^slicing.rules = #open
+  * assessment contains tnm-classification 0..*
+  * assessment[tnm-classification] only Reference(MII_PR_Onko_TNM_Klassifikation)

@@ -154,6 +154,34 @@
         "id": "Condition.recordedDate",
         "path": "Condition.recordedDate",
         "mustSupport": true
+      },
+      {
+        "id": "Condition.stage.assessment",
+        "path": "Condition.stage.assessment",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "profile",
+              "path": "resolve().code"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Condition.stage.assessment:tnm-classification",
+        "path": "Condition.stage.assessment",
+        "sliceName": "tnm-classification",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
+            ]
+          }
+        ]
       }
     ]
   }

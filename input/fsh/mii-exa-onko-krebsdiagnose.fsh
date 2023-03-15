@@ -12,3 +12,4 @@ Title: "Krebsdiagnose"
 * extension[topography].valueCoding = $ICDO#C34.8
 * subject = Reference(PatientExample)
 * recordedDate = "2023-01-01"
+* stage.assessment = Reference(mii-exa-onko-tnm-klassifikation)
