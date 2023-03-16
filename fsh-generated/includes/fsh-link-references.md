@@ -1,8 +1,10 @@
+[mii-exa-onko-fernmetastasen]: Observation-mii-exa-onko-fernmetastasen.html
 [mii-exa-onko-strahlentherapie]: Procedure-mii-exa-onko-strahlentherapie.html
 [mii-exa-onko-krebsdiagnose]: Condition-mii-exa-onko-krebsdiagnose.html
 [mii-exa-onko-lokale-interventionelle-therapie]: Procedure-mii-exa-onko-lokale-interventionelle-therapie.html
 [mii-cm-onko-strahlentherapie-applikationsart-ops-mapping]: ConceptMap-mii-cm-onko-strahlentherapie-applikationsart-ops-mapping.html
 [MII_CS_Onko_CTCAE_Grad]: CodeSystem-mii-cs-onko-ctcae-grad.html
+[MII_CS_Onko_Fernmetastasen_Lokalisation]: CodeSystem-mii-cs-onko-fernmetastasen-lokalisation.html
 [MII_CS_Onko_Intention]: CodeSystem-mii-cs-onko-intention.html
 [MII_CS_Onko_Stellung_OP]: CodeSystem-mii-cs-onko-stellung-op.html
 [MII_CS_Onko_Strahlentherapie_Applikationsart]: CodeSystem-mii-cs-onko-strahlentherapie-applikationsart.html
@@ -12,6 +14,7 @@
 [MII_EX_Onko_ICD_O]: StructureDefinition-mii-ex-onko-icd-o.html
 [MII_EX_Onko_Systemische_Therapie_Art]: StructureDefinition-mii-ex-onko-systemische-therapie-art.html
 [MII_EX_Onko_Therapie_Ende_Grund]: StructureDefinition-mii-ex-onko-therapie-ende-grund.html
+[MII_PR_Onko_Fernmetastasen]: StructureDefinition-mii-pr-onko-fernmetastasen.html
 [MII_PR_Onko_Krebsdiagnose]: StructureDefinition-mii-pr-onko-krebsdiagnose.html
 [MII_PR_Onko_Lokale_Interventionelle_Therapie]: StructureDefinition-mii-pr-onko-lokale-interventionelle-therapie.html
 [MII_PR_Onko_Nebenwirkung]: StructureDefinition-mii-pr-onko-nebenwirkung.html
@@ -21,6 +24,7 @@
 [MII_PR_Onko_TNM_Klassifikation]: StructureDefinition-mii-pr-onko-tnm-klassifikation.html
 [MII_VS_Onko_CTCAE_Grad]: ValueSet-mii-vs-onko-ctcae-grad.html
 [MII_VS_Onko_CTCAE_Term]: ValueSet-mii-vs-onko-ctcae-term.html
+[MII_VS_Onko_Fernmetastasen_Lokalisation]: ValueSet-mii-vs-onko-fernmetastasen-lokalisation.html
 [MII_VS_Onko_Intention]: ValueSet-mii-vs-onko-intention.html
 [MII_VS_Onko_Stellung_OP]: ValueSet-mii-vs-onko-stellung-op.html
 [MII_VS_Onko_Strahlentherapie_Applikationsart]: ValueSet-mii-vs-onko-strahlentherapie-applikationsart.html

@@ -1,0 +1,27 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-fernmetastasen",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "371497001",
+        "system": "http://snomed.info/sct"
+      }
+    ]
+  },
+  "status": "final",
+  "effectiveDateTime": "2021-10-30",
+  "bodySite": {
+    "coding": [
+      {
+        "code": "PUL",
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen-lokalisation"
+      }
+    ]
+  }
+}

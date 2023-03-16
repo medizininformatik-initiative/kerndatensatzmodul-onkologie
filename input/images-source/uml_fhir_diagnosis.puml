@@ -3,7 +3,7 @@ skinparam linetype ortho
 
 package Modul_Onkologie {
 
-  class TNM_Klassifikation {
+  class TNM_Klassifikation << TNM-Klassifikation >> {
     effectiveDateTime : dateTime
     code.version : String
     y_Symbol : Boolean
@@ -23,6 +23,11 @@ package Modul_Onkologie {
     # UICC_Stadium : Catalog
   }
 
+  class Fernmetastasen << Observation >> {
+    effectiveDateTime  : dateTime
+    bodySite : FernmetastasenLokalisation
+  }
+
   class Krebsdiagnose << Krebsdiagnose >> {
     code : Code
     code.version : String
@@ -35,6 +40,7 @@ package Modul_Onkologie {
     recordedDate : Date
   }
   Krebsdiagnose --> "0..*" TNM_Klassifikation : stage.assessment
+  Krebsdiagnose --> "0..*" Fernmetastasen : evidence
 
 }
 

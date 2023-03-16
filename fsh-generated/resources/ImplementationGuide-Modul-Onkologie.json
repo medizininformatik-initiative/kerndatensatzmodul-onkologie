@@ -41,6 +41,13 @@
     "resource": [
       {
         "reference": {
+          "reference": "Observation/mii-exa-onko-fernmetastasen"
+        },
+        "name": "Fernmetastasen",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen"
+      },
+      {
+        "reference": {
           "reference": "Procedure/mii-exa-onko-strahlentherapie"
         },
         "name": "Intersitielle, pulsierende Strahlentherapie der Lunge",
@@ -74,6 +81,14 @@
         },
         "name": "MII CS Onko CTCAE-Grad",
         "description": "CTCAE-Schweregrad für Ereignisse",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-fernmetastasen-lokalisation"
+        },
+        "name": "MII CS Onko Fernmetastasen-Lokalisation",
+        "description": "Lokalisation von Fernmetastasen",
         "exampleBoolean": false
       },
       {
@@ -150,6 +165,13 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-fernmetastasen"
+        },
+        "name": "MII PR Onko Fernmetastasen",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-krebsdiagnose"
         },
         "name": "MII PR Onko Krebsdiagnose",
@@ -213,6 +235,14 @@
         },
         "name": "MII VS Onko CTCAE-Terms",
         "description": "Term für Ereignisse",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-fernmetastasen-lokalisation"
+        },
+        "name": "MII VS Onko Fernmetastasen-Lokalisation",
+        "description": "Lokalisation von Fernmetastasen",
         "exampleBoolean": false
       },
       {
