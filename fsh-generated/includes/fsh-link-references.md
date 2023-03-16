@@ -2,6 +2,7 @@
 [mii-exa-onko-strahlentherapie]: Procedure-mii-exa-onko-strahlentherapie.html
 [mii-exa-onko-krebsdiagnose]: Condition-mii-exa-onko-krebsdiagnose.html
 [mii-exa-onko-lokale-interventionelle-therapie]: Procedure-mii-exa-onko-lokale-interventionelle-therapie.html
+[mii-cm-onko-fernmetastasen-lokalisation-icd-o]: ConceptMap-mii-cm-onko-fernmetastasen-lokalisation-icd-o.html
 [mii-cm-onko-strahlentherapie-applikationsart-ops-mapping]: ConceptMap-mii-cm-onko-strahlentherapie-applikationsart-ops-mapping.html
 [MII_CS_Onko_CTCAE_Grad]: CodeSystem-mii-cs-onko-ctcae-grad.html
 [MII_CS_Onko_Fernmetastasen_Lokalisation]: CodeSystem-mii-cs-onko-fernmetastasen-lokalisation.html

@@ -1,0 +1,149 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "mii-cm-onko-fernmetastasen-lokalisation-icd-o",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-fernmetastasen-lokalisation-icd-o",
+  "title": "MII CM Onko Fernmetastasen-Lokalisation / ICD-O Mapping",
+  "description": "Mapping von \"Fernmetastasen-Lokalisation\" nach ICD-O",
+  "status": "draft",
+  "name": "ConfoundingConditionMapping",
+  "sourceCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-fernmetastasen-lokalisation",
+  "targetUri": "http://terminology.hl7.org/CodeSystem/icd-o-3",
+  "group": [
+    {
+      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-fernmetastasen-lokalisation",
+      "target": "http://terminology.hl7.org/CodeSystem/icd-o-3",
+      "element": [
+        {
+          "code": "PUL",
+          "display": "Lunge",
+          "target": [
+            {
+              "code": "C34",
+              "display": "Bronchus und Lunge",
+              "equivalence": "wider"
+            }
+          ]
+        },
+        {
+          "code": "OSS",
+          "display": "Knochen",
+          "target": [
+            {
+              "code": "C40",
+              "display": "Knochen, Gelenke und Gelenkknorpel der Extremitäten",
+              "equivalence": "wider"
+            }
+          ]
+        },
+        {
+          "code": "HEP",
+          "display": "Leber",
+          "target": [
+            {
+              "code": "C22.0",
+              "display": "Leber",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "BRA",
+          "display": "Hirn",
+          "target": [
+            {
+              "code": "C71",
+              "display": "Gehirn",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "LYM",
+          "display": "Lymphknoten",
+          "target": [
+            {
+              "code": "C77",
+              "display": "Lymphknoten",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "MAR",
+          "display": "Knochenmark",
+          "target": [
+            {
+              "code": "C42.1",
+              "display": "Knochmark",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "PLE",
+          "display": "Pleura",
+          "target": [
+            {
+              "code": "C38.4",
+              "display": "Pleura o.n.A.",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "PER",
+          "display": "Peritoneum",
+          "target": [
+            {
+              "code": "C48",
+              "display": "Retroperitoneum und Peritoneum",
+              "equivalence": "wider"
+            }
+          ]
+        },
+        {
+          "code": "ADR",
+          "display": "Nebennieren",
+          "target": [
+            {
+              "code": "C74",
+              "display": "Nebenniere",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "SKI",
+          "display": "Haut",
+          "target": [
+            {
+              "code": "C44",
+              "display": "Haut",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "OTH",
+          "display": "andere Organe",
+          "target": [
+            {
+              "code": "C76",
+              "display": "Sonstiger oder mangelhaft bezeichneter Sitz",
+              "equivalence": "inexact"
+            }
+          ]
+        },
+        {
+          "code": "GEN",
+          "display": "generalisierte Metastasierung",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
