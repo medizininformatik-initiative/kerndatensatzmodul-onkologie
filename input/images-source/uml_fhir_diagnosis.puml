@@ -1,0 +1,47 @@
+@startuml FhirModulOnkologieDiagnosis
+skinparam linetype ortho
+
+package Modul_Onkologie {
+
+  class TNM_Klassifikation << TNM-Klassifikation >> {
+    effectiveDateTime : dateTime
+    code.version : String
+    y_Symbol : Boolean
+    r_Symbol : Boolean
+    a_Symbol : Boolean
+    T_Code : Code
+    T_Code.cpPraefix : Code
+    m_Symbol : Boolean
+    N_Code : Code
+    N_Code.cpPraefix : Code
+    M_Code : Code
+    M_Code.cpPraefix : Code
+    L_Deskriptor : Code
+    V_Deskriptor : Code
+    Pn_Deskriptor : Code
+    S_Symbol : Code
+    # UICC_Stadium : Catalog
+  }
+
+  class Fernmetastasen << Observation >> {
+    effectiveDateTime  : dateTime
+    bodySite : FernmetastasenLokalisation
+  }
+
+  class Krebsdiagnose << Krebsdiagnose >> {
+    code : Code
+    code.version : String
+    code.display : String
+    Diagnosesicherheit : Diagnosesicherheit
+    Seitenlokalisation : Seitenlokalisation
+    topograpy : Code
+    topograpy.version : String
+    topograpy.display : String
+    recordedDate : Date
+  }
+  Krebsdiagnose --> "0..*" TNM_Klassifikation : stage.assessment
+  Krebsdiagnose --> "0..*" Fernmetastasen : evidence
+
+}
+
+@enduml

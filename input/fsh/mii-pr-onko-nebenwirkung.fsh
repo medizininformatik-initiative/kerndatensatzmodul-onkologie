@@ -7,3 +7,6 @@ Description: "Nebenwirkung einer Therapie"
 * actuality = #actual (exactly)
 * event from mii-vs-onko-ctcae-term
 * extension contains mii-ex-onko-nebenwirkung-grad named grade 0..1 MS
+* extension[grade].valueCodeableConcept.coding
+  * code MS
+  * version MS

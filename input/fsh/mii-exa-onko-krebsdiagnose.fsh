@@ -1,7 +1,16 @@
 Instance: mii-exa-onko-krebsdiagnose
-InstanceOf: $DeOnkoDiagnosis
+InstanceOf: MII_PR_Onko_Krebsdiagnose
 Title: "Krebsdiagnose"
-* clinicalStatus = #active
+* clinicalStatus = $EventStatus#active
+* verificationStatus = $VerificationStatus#confirmed
 * code.coding = $ICD10GM#C34.9
-* code.coding.version = "2023"
+  * version = "2023"
+  * display = "Bronchus oder Lunge, nicht näher bezeichnet"
+  * extension[Seitenlokalisation].valueCoding = $DeIcdSeitenlokalisation#L
+  * extension[Diagnosesicherheit].valueCoding = $DeIcdDiagnosesicherheit#G
+    * display = "Lunge, mehrere Teilbereiche überlappend"
+* extension[topography].valueCoding = $ICDO3#C34.8
 * subject = Reference(PatientExample)
+* recordedDate = "2023-01-01"
+* stage.assessment = Reference(mii-exa-onko-tnm-klassifikation)
+* evidence[+].detail[+] = Reference(mii-exa-onko-fernmetastasen)

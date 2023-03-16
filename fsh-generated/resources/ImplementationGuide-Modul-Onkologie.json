@@ -41,6 +41,13 @@
     "resource": [
       {
         "reference": {
+          "reference": "Observation/mii-exa-onko-fernmetastasen"
+        },
+        "name": "Fernmetastasen",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen"
+      },
+      {
+        "reference": {
           "reference": "Procedure/mii-exa-onko-strahlentherapie"
         },
         "name": "Intersitielle, pulsierende Strahlentherapie der Lunge",
@@ -51,7 +58,7 @@
           "reference": "Condition/mii-exa-onko-krebsdiagnose"
         },
         "name": "Krebsdiagnose",
-        "exampleBoolean": true
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krebsdiagnose"
       },
       {
         "reference": {
@@ -59,6 +66,14 @@
         },
         "name": "Lokale Interventionelle Therapie",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-lokale-interventionelle-therapie"
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/mii-cm-onko-fernmetastasen-lokalisation-icd-o"
+        },
+        "name": "MII CM Onko Fernmetastasen-Lokalisation / ICD-O Mapping",
+        "description": "Mapping von \"Fernmetastasen-Lokalisation\" nach ICD-O",
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -74,6 +89,14 @@
         },
         "name": "MII CS Onko CTCAE-Grad",
         "description": "CTCAE-Schweregrad für Ereignisse",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-fernmetastasen-lokalisation"
+        },
+        "name": "MII CS Onko Fernmetastasen-Lokalisation",
+        "description": "Lokalisation von Fernmetastasen",
         "exampleBoolean": false
       },
       {
@@ -126,6 +149,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-ex-onko-icd-o"
+        },
+        "name": "MII EX Onko ICD-O",
+        "description": "International Classification of Diseases for Oncology, version 3",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-ex-onko-systemische-therapie-art"
         },
         "name": "MII EX Onko Systemische Therapie Art",
@@ -138,6 +169,20 @@
         },
         "name": "MII EX Onko Therapie Ende Grund",
         "description": "Grund für Ende eine Therapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-fernmetastasen"
+        },
+        "name": "MII PR Onko Fernmetastasen",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-krebsdiagnose"
+        },
+        "name": "MII PR Onko Krebsdiagnose",
         "exampleBoolean": false
       },
       {
@@ -179,6 +224,13 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-tnm-klassifikation"
+        },
+        "name": "MII PR Onko TNM-Klassifikation",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-ctcae-grad"
         },
         "name": "MII VS Onko CTCAE-Grade",
@@ -191,6 +243,14 @@
         },
         "name": "MII VS Onko CTCAE-Terms",
         "description": "Term für Ereignisse",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-fernmetastasen-lokalisation"
+        },
+        "name": "MII VS Onko Fernmetastasen-Lokalisation",
+        "description": "Lokalisation von Fernmetastasen",
         "exampleBoolean": false
       },
       {
@@ -269,6 +329,13 @@
         },
         "name": "Systemische Therapie",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-klassifikation"
+        },
+        "name": "TNM-Klassifikation",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
       }
     ],
     "page": {

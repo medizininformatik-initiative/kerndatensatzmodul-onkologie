@@ -62,7 +62,8 @@
               "http://fhir.de/onkologie/StructureDefinition/Intention"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Procedure.extension:Intention.value[x]",
@@ -85,7 +86,8 @@
               "http://fhir.de/onkologie/StructureDefinition/StellungZurOp"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Procedure.extension:StellungZurOp.value[x]",
@@ -96,8 +98,42 @@
         }
       },
       {
+        "id": "Procedure.performed[x]",
+        "path": "Procedure.performed[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.performed[x]:performedDateTime",
+        "path": "Procedure.performed[x]",
+        "sliceName": "performedDateTime",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.bodySite",
+        "path": "Procedure.bodySite",
+        "mustSupport": true
+      },
+      {
         "id": "Procedure.outcome",
         "path": "Procedure.outcome",
+        "mustSupport": true,
         "binding": {
           "strength": "required",
           "valueSet": "http://fhir.de/onkologie/ValueSet/ResidualstatusVS"
@@ -106,6 +142,7 @@
       {
         "id": "Procedure.complication",
         "path": "Procedure.complication",
+        "mustSupport": true,
         "binding": {
           "strength": "required",
           "valueSet": "http://fhir.de/onkologie/ValueSet/OpKomplikationenVS"
