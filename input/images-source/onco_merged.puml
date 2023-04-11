@@ -1,5 +1,4 @@
 @startuml
-
 skinparam linetype ortho
 left to right direction
 
@@ -9,7 +8,7 @@ left to right direction
 
 
 
-object Diagnose #DodgerBlue {
+object Diagnose <<Condition>> #DodgerBlue {
   Tumor_ID : String
   Primaertumor_ICD_Code : String
   Primaertumor_ICD_Version : Catalog
@@ -29,12 +28,12 @@ object Diagnose #DodgerBlue {
 
 
 
-object Allgemeiner_Leistungszustand #Coral {
+object Allgemeiner_Leistungszustand <<Observation>> #Coral {
   Allgemeiner_Leistungszustand : Catalog
 
 }
 
-object OP #LightCyan {
+object OP <<Procedure>> #LightCyan {
   OP_ID : String
   OP_Intention : Catalog
   OP_Datum : String
@@ -45,7 +44,7 @@ object OP #LightCyan {
 
 }
 
-object Strahlentherapie #LightCyan {
+object Strahlentherapie <<Procedure>> #LightCyan {
   ST_ID : String
   ST_Intention : Catalog
   ST_Stellung_OP : Catalog
@@ -63,7 +62,7 @@ object Strahlentherapie #LightCyan {
   Anmerkung : String
 }
 
-object Lokale_Interventionelle_Therapie #LightCyan {
+object Lokale_Interventionelle_Therapie <<Procedure>> #LightCyan {
 LIT_Art/Methode : Catalog
 LIT_Intention : Catalog
 LIT_Stellung_OP : Catalog
@@ -76,13 +75,13 @@ LIT_Anmerkungen : String
 }
 
 
-object Nebenwirkungen_von_Strahlentherapie_oder_systemischer_Therapie #AliceBlue {
+object Nebenwirkungen_von_Strahlentherapie_oder_systemischer_Therapie <<AdverseEvent>> #AliceBlue {
   Nebenwirkungen_nach_CTCAE-Grad  : Catalog
   Nebenwirkungen_nach_CTCAE-Art  : String
   Nebenwirkungen_nach_CTCAE-Version : Catalog
 }
 
-object Systemische_Therapie #LightCyan {
+object Systemische_Therapie <<Clinical>> #LightCyan {
   Intention_der_systemischen_Therapie : Catalog
   Systemische_Therapie_Stellung_zu_operativer_Therapie : Catalog
   Art_der_systemischen_oder_abwartenden_Therapie : Catalog
@@ -93,7 +92,7 @@ object Systemische_Therapie #LightCyan {
   Systemische_Therapie_Ende : Date
 }
 
-object Verlauf #Bisque {
+object Verlauf <<Base>> #Bisque {
   Verlauf_ID : String
   Untersuchungsdatum_Verlauf : String
   Gesamtbeurteilung_Tumorstatus : Catalog
@@ -104,33 +103,33 @@ object Verlauf #Bisque {
 }
 
 
-object Tumorkonferenz_Therapieplanung #Aqua {
+object Tumorkonferenz_Therapieplanung <<CarePlan>> #Aqua {
   Tumorkonferenz_ID : String
   Tumorkonferenz_Datum : String
   Tumorkonferenz_Typ : Catalog
   Anmerkung : String
 }
 
-object Therapieempfehlung #Aqua {
+object Therapieempfehlung <<CarePlan>> #Aqua {
   Tumorkonferenz_Therapieempfehlung_Typ : Catalog
   Tumorkonferenz/Therapieempfehlung_Therapieabweichung_auf_Wunsch_des_Patienten : Catalog
 }
 
 
-object Verknüpfung_Person_Todesursache #HotPink {
+object Verknüpfung_Person_Todesursache <<Link to other Module>> #HotPink {
   Sterbedatum : Date
   Tod_tumorbedingt : Catalog
   Todesursache_ICD_Version : Catalog
   Todesursache_ICD : String
 }
 
-object Zusätzliche_Kontakte #HoneyDew {
+object Zusätzliche_Kontakte <<Encounter>> #HoneyDew {
   Kontakt_Art : Catalog
   Kontakt_Datum : Date
   Kontakt_Status : Catalog
 }
 
-object Specimen #HotPink {
+object Specimen <<Link to other Module>> #HotPink {
 
   Identifikation : String
   Ent-/Abnahmezeitpunkt : Date
@@ -140,12 +139,12 @@ object Specimen #HotPink {
   Kommentar : String
   }
 
-  object Verknüpfung_Molpatho #HotPink{
+  object Verknüpfung_Molpatho <<Link to other Module>> #HotPink{
   ID Molpatho : String
   }
 
 
-object Histologie #Coral {
+object Histologie <<Observation>> #Coral {
   Histologie_ID : String
   Tumor_Histologiedatum : String
   Histologie_EinsendeNr : String
@@ -161,7 +160,7 @@ object Histologie #Coral {
 }
 
 
-object TNM_Klassifikation #Coral {
+object TNM_Klassifikation <<Observation>> #Coral {
   TNM_ID : String
   TNM_Datum : String
   TNM_Version : Catalog
@@ -183,36 +182,36 @@ object TNM_Klassifikation #Coral {
 }
 
 
-object Weitere_Klassifikation #Coral {
+object Weitere_Klassifikation <<Observation>> #Coral {
   Hämatoonkologische_und_sonstige_Klassifikationen_Datum : Date
   Hämatoonkologische_und_sonstige_Klassifikationen_Name : String
   Hämatoonkologische_und_sonstige_Klassifikationen_Einstufung  : String
 }
 
-object Residualstatus #Coral {
+object Residualstatus <<Observation>> #Coral {
   Beurteilung_des_lokalen_Residualstatus_nach_Abschluss_der_Operation : Catalog
   Gesamtbeurteilung_des_Residualstatus : Catalog
 }
 
-object Response #Coral {
+object Response <<Observation>> #Coral {
   Response auf Therapie : Catalog
 }
 
 
-object Fernmetastasen #Coral {
+object Fernmetastasen <<Observation>> #Coral {
   Datum_der_diagnostischen_Sicherung_von_Fernmetastasen  : String
   Lokalisation_von_Fernmetastase(n)  : Catalog
 
 }
 
-object Genetische_Variante #Coral {
+object Genetische_Variante <<Observation>> #Coral {
 
   Genetische_Variante_Name : String
   Genetische_Variante_Ausprägung : String
 
 }
 
-object Specimen #HotPink {
+object Specimen <<Link to other Module>> #HotPink {
 
   Identifikation : String
   Ent-/Abnahmezeitpunkt : Date
@@ -226,7 +225,7 @@ object Specimen #HotPink {
 
 
 
-object Modul_Kolorektales_Karzinom #Coral {
+object Modul_Kolorektales_Karzinom <<Observation>> #Coral {
   RektumAbstandAnokutanlinie : String
   RektumAbstandAboralerResektionsrand : String
   RektumAbstandCircResektionsebene : String
@@ -244,7 +243,7 @@ object Modul_Kolorektales_Karzinom #Coral {
 }
 
 
-object Modul_Malignes_Melanom #Coral {
+object Modul_Malignes_Melanom <<Observation>> #Coral {
 
   Sicherheitsabstand_Primärtumor: Catalog
   Tumordicke: Float
@@ -252,7 +251,7 @@ object Modul_Malignes_Melanom #Coral {
   Ulzeration: Catalog
 }
 
-object Modul_Mammakarzinom #Coral {
+object Modul_Mammakarzinom <<Observation>> #Coral {
   Praetherapeutischer_Menopausenstatus : Catalog
   HormonrezeptorStatus_Oestrogen : Catalog
   HormonrezeptorStatus_Progesteron : Catalog
@@ -263,7 +262,7 @@ object Modul_Mammakarzinom #Coral {
   TumorgroesseDCIS : String
 }
 
-object Modul_Prostatakarzinom #Coral {
+object Modul_Prostatakarzinom <<Observation>> #Coral {
   GleasonGradPrimaer : Catalog
   GleasonGradSekundaer : Catalog
   GleasonScoreErgebnis : Catalog
@@ -279,26 +278,6 @@ object Modul_Prostatakarzinom #Coral {
 
 }
 
-
-object Patienten_Stammdaten #Chocolate {
-  Patient_ID : String
-  KrankenversichertenNr : String
-  KrankenkassenNr : String
-  Patienten_Nachname : String
-  Patienten_Titel : String
-  Patienten_Namenszusatz : String
-  Patienten_Vornamen : String
-  Patienten_Geburtsname : String
-  Patienten_Frueherer_Name : String
-  Patienten_Geschlecht : Catalog
-  Patienten_Geburtsdatum : String
-  Patienten_Strasse : String
-  Patienten_Hausnummer : String
-  Patienten_Land : String
-  Patienten_PLZ : String
-  Patienten_Ort : String
-
-}
 
 Therapieempfehlung "0..*" -- Tumorkonferenz_Therapieplanung
 Nebenwirkungen_von_Strahlentherapie_oder_systemischer_Therapie  "0..*" -- Strahlentherapie
