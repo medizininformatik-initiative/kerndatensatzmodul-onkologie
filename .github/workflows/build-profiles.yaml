@@ -5,9 +5,10 @@ on:
     paths:
       - "**.fsh"
       - "**/sushi-config.yaml"
+  workflow_dispatch:
 
 jobs:
-  build:
+  build-profiles:
     name: Build
     runs-on: ubuntu-latest
     steps:
@@ -16,9 +17,15 @@ jobs:
         with:
           path: profiles
       - name: Get FHIR packages
-        uses: cybernop/get-fhir-packages@v1
+        uses: cybernop/fill-fhir-cache@v1
+        with:
+          project-dir: profiles
       - name: Update FHIR Profiles
-        uses: cybernop/update-fhir-profiles@main
+        uses: cybernop/build-fhir-profiles@v1
         with:
           sushi-version: "3.0.0-beta.2"
-          working-directory: profiles
+          project-dir: profiles
+      - name: Push built Profiles
+        uses: cybernop/push-fsh-profiles@v1
+        with:
+          project-dir: profiles

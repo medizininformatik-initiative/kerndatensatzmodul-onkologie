@@ -36,20 +36,6 @@
   "differential": {
     "element": [
       {
-        "id": "MedicationStatement.extension",
-        "path": "MedicationStatement.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
         "id": "MedicationStatement.extension:Intention",
         "path": "MedicationStatement.extension",
         "sliceName": "Intention",
