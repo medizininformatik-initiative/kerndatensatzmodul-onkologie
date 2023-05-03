@@ -5,6 +5,7 @@ on:
     paths:
       - "**.fsh"
       - "**/sushi-config.yaml"
+  workflow_dispatch:
 
 jobs:
   build:
