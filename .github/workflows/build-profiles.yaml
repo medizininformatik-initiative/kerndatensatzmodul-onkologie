@@ -17,6 +17,8 @@ jobs:
           path: profiles
       - name: Get FHIR packages
         uses: cybernop/fill-fhir-cache@v1
+        with:
+          project-dir: profiles
       - name: Update FHIR Profiles
         uses: cybernop/build-fhir-profiles@v1
         with:
