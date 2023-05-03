@@ -27,20 +27,6 @@
   "differential": {
     "element": [
       {
-        "id": "AdverseEvent.extension",
-        "path": "AdverseEvent.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
         "id": "AdverseEvent.extension:grade",
         "path": "AdverseEvent.extension",
         "sliceName": "grade",
