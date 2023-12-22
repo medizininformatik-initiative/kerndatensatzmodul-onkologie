@@ -18,6 +18,8 @@ Alias: $DeOnkoTumorstatusFernmetastasenVS = http://fhir.de/onkologie/ValueSet/Tu
 // FHIR Core
 Alias: $EventStatus = http://hl7.org/fhir/event-status
 Alias: $VerificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status
+Alias: $verification-status-vs = http://hl7.org/fhir/ValueSet/condition-ver-status
+Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
 
 // Code Systems
 Alias: $CTCAE = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
@@ -28,3 +30,11 @@ Alias: $ICD10GM = http://fhir.de/CodeSystem/bfarm/icd-10-gm
 Alias: $ICDO3 = http://terminology.hl7.org/CodeSystem/icd-o-3
 Alias: $LOINC = http://loinc.org
 Alias: $TNM = https://www.uicc.org/resources/tnm
+
+//MII Onko
+Alias: $mii-cs-onko-primaertumor-diagnosesicherung = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung
+Alias: $mii-vs-onko-primaertumor-diagnosesicherung = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-primaertumor-diagnosesicherung
+Alias: $mii-cs-onko-primaertumor-seitenlokalisation = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-seitenlokalisation
+Alias: $mii-vs-onko-primaertumor-seitenlokalisation = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-primaertumor-seitenlokalisation
+Alias: $mii-cs-onko-grading = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading
+Alias: $mii-vs-onko-grading = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-grading
