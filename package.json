@@ -1,0 +1,34 @@
+{
+  "name": "de.medizininformatikinitiative.kerndatensatz.onkologie",
+  "version": "2024.0.0-ballot",
+  "description": "Medizininformatik Initiative - Modul Onkologie",
+  "author": "juliansass",
+  "fhirVersions": [
+    "4.0.1"
+  ],
+  "keywords": [
+    "MII",
+    "KDS",
+    "Onkologie"
+  ],
+  "license": "CC0-1.0",
+  "homepage": "https://www.medizininformatik-initiative.de/",
+  "directories" : {
+    "lib" : "package",
+    "example" : "examples"
+  },
+  "title": "MII IG Onkologie",
+  "maintainers" : [
+    {
+      "name" : "Medizininformatik Initiative",
+      "url" : "https://www.medizininformatik-initiative.de/"
+    }
+  ],
+  "canonicals": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/mii-ig-onko-de-v2024",
+  "jurisdiction": "http://unstats.un.org/unsd/methods/m49/m49.htm#276",
+  "dependencies": {
+    "de.basisprofil.r4": "1.4.0",
+    "de.medizininformatikinitiative.kerndatensatz.meta": "1.0.3",
+    "de.medizininformatikinitiative.kerndatensatz.diagnose": "2024.0.0-ballot"
+  }
+}
