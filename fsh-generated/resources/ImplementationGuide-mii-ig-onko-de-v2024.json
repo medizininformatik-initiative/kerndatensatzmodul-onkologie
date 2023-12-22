@@ -1,0 +1,207 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "mii-ig-onko-de-v2024",
+  "language": "de-DE",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/mii-ig-onko-de-v2024",
+  "version": "2024.0.0-ballot",
+  "name": "MII_IG_Onko_DE",
+  "title": "MII IG Onkologie",
+  "status": "draft",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "name": "Medizininformatik Initiative",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de/"
+        }
+      ]
+    }
+  ],
+  "packageId": "mii-ig-onko-de-v2024",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "packageId": "de.basisprofil.r4",
+      "version": "1.4.0",
+      "uri": "http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4",
+      "id": "de_basisprofil_r4"
+    },
+    {
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.meta",
+      "version": "1.0.3",
+      "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.meta/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.meta",
+      "id": "de_medizininformatikinitiative_kerndatensatz_meta"
+    },
+    {
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.diagnose",
+      "version": "2024.0.0-ballot",
+      "uri": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ImplementationGuide/mii-ig-diagnose-de-v2024",
+      "id": "de_medizininformatikinitiative_kerndatensatz_diagnose"
+    },
+    {
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.biobank",
+      "version": "1.0.8",
+      "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.biobank/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.biobank",
+      "id": "de_medizininformatikinitiative_kerndatensatz_biobank"
+    }
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-grading"
+        },
+        "name": "MII CS Onkologie Grading",
+        "description": "Codes für Histologie Grading. Gibt den Differenzierungsgrad des Tumors entsprechend der aktuellen TNM-Auflage an.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung"
+        },
+        "name": "MII CS Onkologie Primärtumor Diagnosesicherung",
+        "description": "Codes für Primärtumor Diagnosesicherung, d.h. die höchste erreichte Diagnosesicherheit der Diagnose.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-primaertumor-seitenlokalisation"
+        },
+        "name": "MII CS Onkologie Primärtumor Seitenlokalisation",
+        "description": "Codes für Primärtumor Seitenlokalisation, d.h. organspezifische Angabe der betroffenen Seite.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-lm-onko"
+        },
+        "name": "MII LM Onkologie",
+        "description": "MII LogicalModel Modul Onkologie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-anzahl-befallene-lymphknoten"
+        },
+        "name": "MII PR Onkologie Anzahl der befallenen Lymphknoten",
+        "description": "Histologie: Anzahl der befallenen Lymphknoten. Gibt an, wie viele Lymphknoten befallen sind (einschließlich Sentinel).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-anzahl-befallene-sentinel-lymphknoten"
+        },
+        "name": "MII PR Onkologie Anzahl der befallenen Sentinel-Lymphknoten",
+        "description": "Histologie: Anzahl der befallenen Sentinel-Lymphknoten. Gibt an, wie viele Sentinel-Lymphknoten befallen sind.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-anzahl-untersuchte-lymphknoten"
+        },
+        "name": "MII PR Onkologie Anzahl der untersuchten Lymphknoten",
+        "description": "Histologie: Anzahl der untersuchten Lymphknoten. Gibt an, wie viele Lymphknoten untersucht wurden (einschließlich Sentinel).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-anzahl-untersuchte-sentinel-lymphknoten"
+        },
+        "name": "MII PR Onkologie Anzahl der untersuchten Sentinel-Lymphknoten",
+        "description": "Histologie: Anzahl der untersuchten Sentinel-Lymphknoten. Gibt an, wie viele Sentinel-Lymphknoten untersucht wurden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-diagnose"
+        },
+        "name": "MII PR Onkologie Diagnose",
+        "description": "Dieses Profil beschreibt eine Diagnose in der Onkologie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-grading"
+        },
+        "name": "MII PR Onkologie Grading",
+        "description": "Histologie: Tumor Grading. Gibt den Differenzierungsgrad des Tumors entsprechend der aktuellen TNM-Auflage an.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-specimen"
+        },
+        "name": "MII PR Onkologie Specimen",
+        "description": "Histologie: Dieses Profil beschreibt eine Gewebeprobe in der Onkologie.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-grading"
+        },
+        "name": "MII VS Onkologie Grading",
+        "description": "Codes für Histologie Grading. Gibt den Differenzierungsgrad des Tumors entsprechend der aktuellen TNM-Auflage an.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-primaertumor-diagnosesicherung"
+        },
+        "name": "MII VS Onkologie Primärtumor Diagnosesicherung",
+        "description": "Codes für Primärtumor Diagnosesicherung, d.h. die höchste erreichte Diagnosesicherheit der Diagnose.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-primaertumor-seitenlokalisation"
+        },
+        "name": "MII VS Onkologie Primärtumor Seitenlokalisation",
+        "description": "Codes für Primärtumor Seitenlokalisation, d.h. organspezifische Angabe der betroffenen Seite.",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "guidance.html",
+          "title": "Guidance",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "information_model.html",
+              "title": "Information-Model",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "fhir_model.html",
+              "title": "FHIR-Model",
+              "generation": "markdown"
+            }
+          ]
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2022+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "ci-build"
+      }
+    ]
+  }
+}
