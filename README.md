@@ -1,7 +1,16 @@
 # MII Kerndatensatz Modul Onkologie
 
+### Übersicht
+
+[![FHIR Project on GitHub.com](https://img.shields.io/badge/FHIR_project_on_GitHub.com-kerndatensatzmodul--onkologie-green)](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie) 
+
+[![CI (FHIR Validation)](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/actions/workflows/main.yml/badge.svg)](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/actions/workflows/main.yml)
+
+Das vorliegende Projekt beschreibt die FHIR-Spezifikation des Basismoduls 'Onkologie'. Die hier veröffentlichten FHIR-Profile und ImplemenationGuides dienen als zentrale und verbindliche Spezifikation für die syntaktische und semantische Kodierung der Modulinhalte.
+
+--- 
+
 [![FHIR Profiles](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/actions/workflows/build-profiles.yaml/badge.svg)](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/actions/workflows/build-profiles.yaml)
-[![FHIR Validator](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/actions/workflows/validate-profiles.yaml/badge.svg)](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/actions/workflows/validate-profiles.yaml)
 [![IG Publisher](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/actions/workflows/build-ig.yml/badge.svg)](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/actions/workflows/build-ig.yml)
 
 ## Profiling
