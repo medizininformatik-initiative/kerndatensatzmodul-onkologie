@@ -1,0 +1,109 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-pr-onko-specimen",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-specimen",
+  "version": "2024.0.0-ballot",
+  "name": "MII_PR_Onko_Specimen",
+  "title": "MII PR Onkologie Specimen",
+  "status": "draft",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "description": "Histologie: Dieses Profil beschreibt eine Gewebeprobe in der Onkologie.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "oBDS",
+      "name": "Mapping FHIR zu oBDS"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Specimen",
+  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Specimen",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Specimen",
+        "path": "Specimen",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "6",
+            "comment": "Histologie"
+          }
+        ]
+      },
+      {
+        "id": "Specimen.identifier.value",
+        "path": "Specimen.identifier.value",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "6.2",
+            "comment": "Histologie-Einsendenummer"
+          }
+        ]
+      },
+      {
+        "id": "Specimen.collection.collected[x]",
+        "path": "Specimen.collection.collected[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Specimen.collection.collected[x]:collectedDateTime",
+        "path": "Specimen.collection.collected[x]",
+        "sliceName": "collectedDateTime",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "6.1",
+            "comment": "Tumor Histologiedatum"
+          }
+        ]
+      }
+    ]
+  }
+}

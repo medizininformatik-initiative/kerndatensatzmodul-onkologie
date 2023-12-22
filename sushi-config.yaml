@@ -3,20 +3,20 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: mii-ig-onko
+id: mii-ig-onko-de-v2024
 canonical: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko
-name: Modul-Onkologie
-title: Kerndatendatz Erweiterungsmodul Onkologie
+name: MII_IG_Onko_DE
+title: MII IG Onkologie
 # description: Example Implementation Guide for getting started with SUSHI
 status: draft # draft | active | retired | unknown
-version: 0.1.0
+version: "2024.0.0-ballot"
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2022+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 publisher:
-  name: Medizininformatik-Initiative
+  name: Medizininformatik Initiative
   url: https://www.medizininformatik-initiative.de/
   # email: test@example.org
 language: "de-DE"
@@ -26,8 +26,10 @@ language: "de-DE"
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-  de.basisprofil.onkologie: 1.0.0-ballot
   de.basisprofil.r4: 1.4.0
+  de.medizininformatikinitiative.kerndatensatz.meta: 1.0.3
+  de.medizininformatikinitiative.kerndatensatz.diagnose: 2024.0.0-ballot
+  de.medizininformatikinitiative.kerndatensatz.biobank: 1.0.8
 #   hl7.fhir.us.core: 3.1.0
 #   hl7.fhir.us.mcode:
 #     id: mcode

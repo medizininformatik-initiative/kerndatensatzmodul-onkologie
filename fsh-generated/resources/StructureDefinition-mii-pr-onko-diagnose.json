@@ -1,0 +1,287 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-pr-onko-diagnose",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose",
+  "version": "2024.0.0-ballot",
+  "name": "MII_PR_Onko_Diagnose",
+  "title": "MII PR Onkologie Diagnose",
+  "status": "draft",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "description": "Dieses Profil beschreibt eine Diagnose in der Onkologie",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "sct-concept",
+      "uri": "http://snomed.info/conceptdomain",
+      "name": "SNOMED CT Concept Domain Binding"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "sct-attr",
+      "uri": "http://snomed.org/attributebinding",
+      "name": "SNOMED CT Attribute Binding"
+    },
+    {
+      "identity": "oBDS",
+      "name": "Mapping FHIR zu oBDS"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Condition",
+  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Condition",
+        "path": "Condition",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "5",
+            "comment": "Diagnose"
+          },
+          {
+            "identity": "oBDS",
+            "map": "5.9",
+            "comment": "Frühere Tumorerkrankungen"
+          }
+        ]
+      },
+      {
+        "id": "Condition.verificationStatus",
+        "path": "Condition.verificationStatus",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.verificationStatus.coding",
+        "path": "Condition.verificationStatus.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Condition.verificationStatus.coding:condition-ver-status",
+        "path": "Condition.verificationStatus.coding",
+        "sliceName": "condition-ver-status",
+        "min": 1,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/condition-ver-status"
+        }
+      },
+      {
+        "id": "Condition.verificationStatus.coding:primaertumorDiagnosesicherung",
+        "path": "Condition.verificationStatus.coding",
+        "sliceName": "primaertumorDiagnosesicherung",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung"
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-primaertumor-diagnosesicherung"
+        }
+      },
+      {
+        "id": "Condition.verificationStatus.coding:primaertumorDiagnosesicherung.system",
+        "path": "Condition.verificationStatus.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.verificationStatus.coding:primaertumorDiagnosesicherung.code",
+        "path": "Condition.verificationStatus.coding.code",
+        "min": 1,
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "5.7",
+            "comment": "Primärtumor Diagnosesicherung"
+          }
+        ]
+      },
+      {
+        "id": "Condition.code.coding:icd10-gm",
+        "path": "Condition.code.coding",
+        "sliceName": "icd10-gm"
+      },
+      {
+        "id": "Condition.code.coding:icd10-gm.version",
+        "path": "Condition.code.coding.version",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "5.2",
+            "comment": "Primärtumor Tumordiagnose ICD-Version"
+          }
+        ]
+      },
+      {
+        "id": "Condition.code.coding:icd10-gm.code",
+        "path": "Condition.code.coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "5.1",
+            "comment": "Primärtumor Tumordiagnose ICD Code"
+          }
+        ]
+      },
+      {
+        "id": "Condition.code.coding:icd-o-3",
+        "path": "Condition.code.coding",
+        "sliceName": "icd-o-3"
+      },
+      {
+        "id": "Condition.code.coding:icd-o-3.version",
+        "path": "Condition.code.coding.version",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "6.4",
+            "comment": "Morphologie ICD-O/Blue Book Version"
+          }
+        ]
+      },
+      {
+        "id": "Condition.code.coding:icd-o-3.code",
+        "path": "Condition.code.coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "6.3",
+            "comment": "Morphologie-Code"
+          }
+        ]
+      },
+      {
+        "id": "Condition.code.text",
+        "path": "Condition.code.text",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "5.3",
+            "comment": "Primärtumor Tumordiagnose Text"
+          },
+          {
+            "identity": "oBDS",
+            "map": "6.5",
+            "comment": "Morphologie-Freitext"
+          }
+        ]
+      },
+      {
+        "id": "Condition.bodySite.coding:icd-o-3",
+        "path": "Condition.bodySite.coding",
+        "sliceName": "icd-o-3"
+      },
+      {
+        "id": "Condition.bodySite.coding:icd-o-3.version",
+        "path": "Condition.bodySite.coding.version",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "5.5",
+            "comment": "Primärtumor Topographie ICD-O-Version"
+          }
+        ]
+      },
+      {
+        "id": "Condition.bodySite.coding:icd-o-3.code",
+        "path": "Condition.bodySite.coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "5.4",
+            "comment": "Primärtumor Topographie ICD-O"
+          }
+        ]
+      },
+      {
+        "id": "Condition.bodySite.coding:primaertumorSeitenlokalisation",
+        "path": "Condition.bodySite.coding",
+        "sliceName": "primaertumorSeitenlokalisation",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.bodySite.coding:primaertumorSeitenlokalisation.system",
+        "path": "Condition.bodySite.coding.system",
+        "min": 1,
+        "patternUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-seitenlokalisation",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.bodySite.coding:primaertumorSeitenlokalisation.code",
+        "path": "Condition.bodySite.coding.code",
+        "min": 1,
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "5.8",
+            "comment": "Primärtumor Seitenlokalisation"
+          }
+        ]
+      },
+      {
+        "id": "Condition.recordedDate",
+        "path": "Condition.recordedDate",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "5.6",
+            "comment": "Primärtumor Diagnosedatum"
+          }
+        ]
+      }
+    ]
+  }
+}

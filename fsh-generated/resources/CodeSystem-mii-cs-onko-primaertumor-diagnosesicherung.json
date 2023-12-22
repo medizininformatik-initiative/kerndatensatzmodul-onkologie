@@ -1,0 +1,71 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "MII_CS_Onko_Primaertumor_Diagnosesicherung",
+  "id": "mii-cs-onko-primaertumor-diagnosesicherung",
+  "title": "MII CS Onkologie Primärtumor Diagnosesicherung",
+  "description": "Codes für Primärtumor Diagnosesicherung, d.h. die höchste erreichte Diagnosesicherheit der Diagnose.",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung",
+  "concept": [
+    {
+      "code": "0",
+      "display": "Totenschein"
+    },
+    {
+      "code": "1",
+      "display": "klinisch",
+      "definition": "Die Diagnose wurde vor dem Tode gestellt, jedoch ohne die folgenden Maßnahmen (Schlüsselnummern 2 - 7)."
+    },
+    {
+      "code": "2",
+      "display": "klinische Diagnostik",
+      "definition": "Alle Untersuchungstechniken, einschließlich Röntgen, Endoskopie, bildgebender Verfahren, Ultraschall, explorativer Eingriffe (wie Laparotomie) und Autopsie, aber ohne Gewebsuntersuchung."
+    },
+    {
+      "code": "4",
+      "display": "spezifische Tumor-Marker",
+      "definition": "Zusätzlich biochemische und/oder immunologische Marker, die für einen bestimmten Tumorsitz spezifisch sind."
+    },
+    {
+      "code": "5",
+      "display": "Zytologie",
+      "definition": "Untersuchung von Zellen aus einem primären oder sekundären Sitz, einschließlich der aus durch Endoskopie oder durch Punktion gewonnenen Aspiraten; beinhaltet auch die mikroskopische Untersuchung peripheren Blutes und von Knochenmarkspunktaten."
+    },
+    {
+      "code": "6",
+      "display": "histologische Untersuchung einer Metastase",
+      "definition": "Histologische Untersuchung des Gewebes aus einer Metastase, inklusive der Untersuchung von Proben aus einer Autopsie."
+    },
+    {
+      "code": "7",
+      "display": "histologische Untersuchung eines Primärtumors",
+      "definition": "Histologische Untersuchung des Gewebes aus einem Primärtumor, gleich wie es gewonnen wurde; inklusive aller Schnitt-Techniken und Knochenmarksbiopsien; schließt auch die Untersuchung von Proben des Primärtumors aus einer Autopsie ein."
+    },
+    {
+      "code": "9",
+      "display": "unbekannt"
+    }
+  ],
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2024.0.0-ballot",
+  "caseSensitive": true,
+  "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-primaertumor-diagnosesicherung",
+  "count": 8
+}

@@ -1,0 +1,441 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-lm-onko",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-lm-onko",
+  "version": "2024.0.0-ballot",
+  "name": "MII_LM_Onko",
+  "title": "MII LM Onkologie",
+  "status": "draft",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "description": "MII LogicalModel Modul Onkologie",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "FHIR",
+      "name": "Onkologie LogicalModel FHIR Mapping"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-lm-onko",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "mii-lm-onko",
+        "path": "mii-lm-onko",
+        "short": "MII LM Onkologie",
+        "definition": "MII LogicalModel Modul Onkologie"
+      },
+      {
+        "id": "mii-lm-onko.Diagnose",
+        "path": "mii-lm-onko.Diagnose",
+        "short": "Diagnose",
+        "definition": "Diagnose",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.Diagnose.PrimaertumorTumordiagnoseICDCode",
+        "path": "mii-lm-onko.Diagnose.PrimaertumorTumordiagnoseICDCode",
+        "short": "Primärtumor Tumordiagnose ICD Code",
+        "definition": "Kodierung einer meldepflichtigen Erkrankung nach der aktuellen ICD-GM Version.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.code.coding.where(system='http://fhir.de/CodeSystem/bfarm/icd-10-gm').code"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.Diagnose.PrimaertumorTumordiagnoseICDVersion",
+        "path": "mii-lm-onko.Diagnose.PrimaertumorTumordiagnoseICDVersion",
+        "short": "Primärtumor Tumordiagnose ICD-Version",
+        "definition": "Bezeichnung der zur Kodierung verwendeten ICD-GM Version.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.code.coding.where(system='http://fhir.de/CodeSystem/bfarm/icd-10-gm').version"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.Diagnose.PrimaertumorTumordiagnoseText",
+        "path": "mii-lm-onko.Diagnose.PrimaertumorTumordiagnoseText",
+        "short": "Primärtumor Tumordiagnose Text",
+        "definition": "Bezeichnung einer meldepflichtigen Erkrankung.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.code.text"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.Diagnose.PrimaertumorTopographieICDO",
+        "path": "mii-lm-onko.Diagnose.PrimaertumorTopographieICDO",
+        "short": "Primärtumor Topographie ICD-O",
+        "definition": "Bezeichnung der Topographie einer Erkrankung nach der aktuellen ICD-O Version.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.bodySite.coding.where(system='http://terminology.hl7.org/CodeSystem/icd-o-3').code"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.Diagnose.PrimaertumorTopographieICDOVersion",
+        "path": "mii-lm-onko.Diagnose.PrimaertumorTopographieICDOVersion",
+        "short": "Primärtumor Topographie ICD-O-Version",
+        "definition": "Bezeichnung der zur Kodierung verwendeten ICD-O Version.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.bodySite.coding.where(system='http://terminology.hl7.org/CodeSystem/icd-o-3').version"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.Diagnose.PrimaertumorDiagnosedatum",
+        "path": "mii-lm-onko.Diagnose.PrimaertumorDiagnosedatum",
+        "short": "Primärtumor Diagnosedatum",
+        "definition": "Datum, angegeben in Tag, Monat und Jahr, an dem die meldepflichtige Diagnose erstmals durch einen Arzt klinisch oder mikroskopisch diagnostiziert wurde.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.recordedDate"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.Diagnose.PrimaertumorDiagnosesicherung",
+        "path": "mii-lm-onko.Diagnose.PrimaertumorDiagnosesicherung",
+        "short": "Primärtumor Diagnosesicherung",
+        "definition": "Höchste erreichte Diagnosesicherheit der Diagnose.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.verificationStatus.coding.where(system='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung').code"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.Diagnose.PrimaertumorSeitenlokalisation",
+        "path": "mii-lm-onko.Diagnose.PrimaertumorSeitenlokalisation",
+        "short": "Primärtumor Seitenlokalisation",
+        "definition": "Organspezifische Angabe der betroffenen Seite.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.bodySite.coding.where(system='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-seitenlokalisation').code"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.Diagnose.FruehereTumorerkrankungen",
+        "path": "mii-lm-onko.Diagnose.FruehereTumorerkrankungen",
+        "short": "Frühere Tumorerkrankungen",
+        "definition": "Tumorerkrankungen, die in der Anamnese zu einem früheren Zeitpunkt diagnostiziert/behandelt wurden.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Condition"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.Histologie",
+        "path": "mii-lm-onko.Histologie",
+        "short": "Histologie",
+        "definition": "Histologie",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.Histologie.TumorHistologiedatum",
+        "path": "mii-lm-onko.Histologie.TumorHistologiedatum",
+        "short": "Tumor Histologiedatum",
+        "definition": "Datum, an dem die Gewebeprobe entnommen wurde.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Specimen.collection.collectedDateTime"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.Histologie.HistologieEinsendenummer",
+        "path": "mii-lm-onko.Histologie.HistologieEinsendenummer",
+        "short": "Histologie-Einsendenummer",
+        "definition": "Die Histologie-Einsendenummer/Auftragsnummer wird vom Pathologischen Institut beim Eingang des Präparates vergeben.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Specimen.identifier.value"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.Histologie.MorphologieCode",
+        "path": "mii-lm-onko.Histologie.MorphologieCode",
+        "short": "Morphologie-Code",
+        "definition": "Gibt an, welche Histologie der Tumor aufweist.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.code.coding.where(system='http://terminology.hl7.org/CodeSystem/icd-o-3').code"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.Histologie.MorphologieICDOBlueBookVersion",
+        "path": "mii-lm-onko.Histologie.MorphologieICDOBlueBookVersion",
+        "short": "Morphologie ICD-O/Blue Book Version",
+        "definition": "Bezeichnung der zur Kodierung verwendeten ICD-O/Blue Book Version.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.code.coding.where(system='http://terminology.hl7.org/CodeSystem/icd-o-3').version"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.Histologie.MorphologieFreitext",
+        "path": "mii-lm-onko.Histologie.MorphologieFreitext",
+        "short": "Morphologie-Freitext",
+        "definition": "Gibt die Originalbezeichnung der morphologischen Diagnose an.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.code.text"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.Histologie.Grading",
+        "path": "mii-lm-onko.Histologie.Grading",
+        "short": "Grading",
+        "definition": "Gibt den Differenzierungsgrad des Tumors entsprechend der aktuellen TNM-Auflage an.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept.coding.where(system='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading').code"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.Histologie.AnzahlUntersuchteLymphknoten",
+        "path": "mii-lm-onko.Histologie.AnzahlUntersuchteLymphknoten",
+        "short": "Anzahl der untersuchten Lymphknoten",
+        "definition": "Gibt an, wie viele Lymphknoten untersucht wurden (einschließlich Sentinel).",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.code.coding.where(system='http://loinc.org' and code='2708-6').select(%resource.valueQuantity.value)"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.Histologie.AnzahlBefalleneLymphknoten",
+        "path": "mii-lm-onko.Histologie.AnzahlBefalleneLymphknoten",
+        "short": "Anzahl der befallenen Lymphknoten",
+        "definition": "Gibt an, wie viele Lymphknoten befallen sind (einschließlich Sentinel).",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.code.coding.where(system='http://loinc.org' and code='21893-3').select(%resource.valueQuantity.value)"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.Histologie.AnzahlUntersuchteSentinelLymphknoten",
+        "path": "mii-lm-onko.Histologie.AnzahlUntersuchteSentinelLymphknoten",
+        "short": "Anzahl der untersuchten Sentinel-Lymphknoten",
+        "definition": "Gibt an, wie viele Sentinel-Lymphknoten untersucht wurden.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.code.coding.where(system='http://loinc.org' and code='85347-3').select(%resource.valueQuantity.value)"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.Histologie.AnzahlBefalleneSentinelLymphknoten",
+        "path": "mii-lm-onko.Histologie.AnzahlBefalleneSentinelLymphknoten",
+        "short": "Anzahl der befallenen Sentinel-Lymphknoten",
+        "definition": "Gibt an, wie viele Sentinel-Lymphknoten befallen sind.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.code.coding.where(system='http://loinc.org' and code='92832-5').select(%resource.valueQuantity.value)"
+          }
+        ]
+      }
+    ]
+  }
+}
