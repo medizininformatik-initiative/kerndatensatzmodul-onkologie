@@ -8,7 +8,7 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 * ^status = #draft
 // OP-Datum
 * performed[performedDateTime] MS // required? 
-*  
+* code.coding[ops] 1..1 
 
 
 // Intention der OP
