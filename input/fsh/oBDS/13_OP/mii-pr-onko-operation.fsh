@@ -7,9 +7,8 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 * insert Publisher
 * ^status = #draft
 // OP-Datum
-* performed[performedDateTime] MS // required? 
+* performed only dateTime MS // required? 
 // OP-Prozedur 
-* code MS // eventuell doppelt weil in MII Prozedur-Ressource schon definiert
 * code.coding[ops] 1..1 MS // hier auch potentiel 1..*, weil mehrere Sachen gemacht werden können? geht das überhaupt, oder muss man da slicen?
  
 * complication MS
@@ -29,12 +28,14 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 * complication[compl_icd10] from http://fhir.de/ValueSet/bfarm/icd-10-gm // binding auf ICD10-GM Value Set
 * complication[compl_icd10] only http://fhir.de/StructureDefinition/CodingICD10GM // optional? , erlaubt ausschließlich die Nutzung einer validen offiziellen ICD-10GM Code FHIR Ressource
 * complication[compl_icd10].system = $ICD10GM // schreibt canonical ICD10 GM-FHIR-URI in system
+* complication[compl_icd10].system 1..
 * complication[compl_icd10].code 1..
 //Mapping: FHIR-to-oBDS Operation
 //Id: 
 
 
 // Intention der OP
+// Datum der OP
 // OPS Code
 // OPS Version
 // Komplikationen über oBDS Valueset, nicht enthaltene über ICD-10
