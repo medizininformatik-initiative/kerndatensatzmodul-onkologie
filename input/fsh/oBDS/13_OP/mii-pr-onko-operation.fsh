@@ -8,8 +8,10 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 * ^status = #draft
 // OP-Datum
 * performed[performedDateTime] MS // required? 
-* code MS // eventuell doppelt weil in MII Prozedur schon definiert
-* code.coding[ops] 1..1 MS
+// OP-Prozedur 
+* code MS // eventuell doppelt weil in MII Prozedur-Ressource schon definiert
+* code.coding[ops] 1..1 MS // hier auch potentiel 1..*, weil mehrere Sachen gemacht werden können? geht das überhaupt, oder muss man da slicen?
+ 
 * complication MS
 // * complication from $mii-vs-onko-operation-komplikation // quatsch, weil wir slices machen müssen
 * complication ^slicing.discriminator.type = #pattern
@@ -23,11 +25,11 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 * complication[compl_obds].system = $mii-cs-onko-operation-komplikation
 * complication[compl_obds].code 1.. MS
 
-* code.coding[compl_icd10] MS 
-* code.coding[compl_icd10] from http://fhir.de/ValueSet/bfarm/icd-10-gm // binding auf ICD10-GM Value Set
-* code.coding[compl_icd10] only http://fhir.de/StructureDefinition/CodingICD10GM // optional? , erlaubt ausschließlich die Nutzung einer validen offiziellen ICD-10GM Code FHIR Ressource
-* code.coding[compl_icd10].system = $ICD10GM // schreibt canonical ICD10 GM-FHIR-URI in system
-* code.coding[compl_icd10].code 1..
+* complication[compl_icd10] MS 
+* complication[compl_icd10] from http://fhir.de/ValueSet/bfarm/icd-10-gm // binding auf ICD10-GM Value Set
+* complication[compl_icd10] only http://fhir.de/StructureDefinition/CodingICD10GM // optional? , erlaubt ausschließlich die Nutzung einer validen offiziellen ICD-10GM Code FHIR Ressource
+* complication[compl_icd10].system = $ICD10GM // schreibt canonical ICD10 GM-FHIR-URI in system
+* complication[compl_icd10].code 1..
 //Mapping: FHIR-to-oBDS Operation
 //Id: 
 
