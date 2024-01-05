@@ -11,7 +11,7 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 * code MS // eventuell doppelt weil in MII Prozedur schon definiert
 * code.coding[ops] 1..1 MS
 * complication MS
-* //complication from $mii-vs-onko-operation-komplikation // quatsch, weil wir slices machen müssen
+// * complication from $mii-vs-onko-operation-komplikation // quatsch, weil wir slices machen müssen
 * complication ^slicing.discriminator.type = #pattern
 * complication ^slicing.discriminator.path = "$this"
 * complication ^slicing.rules = #open

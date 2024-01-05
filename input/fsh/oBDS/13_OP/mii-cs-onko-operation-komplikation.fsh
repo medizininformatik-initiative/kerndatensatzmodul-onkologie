@@ -11,6 +11,6 @@ Description: "oBDS-spezifisches Codesystem für Klassifikation von Komplikatione
 * ^caseSensitive = true
 * ^valueSet = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-operation-komplikation"
 * ^content = #complete
-* #ABD 'Abszess in einem Drainagekanal'
-* #ABS 'Abszess, intraabdominaler oder intrathorakaler'
-* #ASF 'Abszess, subfaszialer'
+* #ABD "Abszess in einem Drainagekanal"
+* #ABS "Abszess, intraabdominaler oder intrathorakaler"
+* #ASF "Abszess, subfaszialer"
