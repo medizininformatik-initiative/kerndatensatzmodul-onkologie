@@ -6,11 +6,12 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
-* 
+// OP-Datum
+* performed[performedDateTime] MS // required? 
+*  
 
 
 // Intention der OP
-//OP Datum
 // OPS Code
 // OPS Version
 // Komplikationen
