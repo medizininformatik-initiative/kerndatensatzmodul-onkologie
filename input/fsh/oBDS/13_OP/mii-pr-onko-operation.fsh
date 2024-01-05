@@ -16,16 +16,18 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 * complication ^slicing.discriminator.path = "$this"
 * complication ^slicing.rules = #open
 * complication contains 
-    compl_obds 0..* 
-    //and
-    //compl_icd10 0..*
+    compl_obds 0..* and
+    compl_icd10 0..*
 * complication[compl_obds] MS
 * complication[compl_obds].coding from $mii-vs-onko-operation-komplikation
 * complication[compl_obds].system = $mii-cs-onko-operation-komplikation
 * complication[compl_obds].code 1.. MS
-//* code.coding[compl_icd10] from 
-//* code.coding[compl_icd10].system = $ICD10GM
-//* code.coding[compl_icd10].code 1..
+
+* code.coding[compl_icd10] MS 
+* code.coding[compl_icd10] from http://fhir.de/ValueSet/bfarm/icd-10-gm // binding auf ICD10-GM Value Set
+* code.coding[compl_icd10] only http://fhir.de/StructureDefinition/CodingICD10GM // optional? , erlaubt ausschließlich die Nutzung einer validen offiziellen ICD-10GM Code FHIR Ressource
+* code.coding[compl_icd10].system = $ICD10GM // schreibt canonical ICD10 GM-FHIR-URI in system
+* code.coding[compl_icd10].code 1..
 //Mapping: FHIR-to-oBDS Operation
 //Id: 
 
