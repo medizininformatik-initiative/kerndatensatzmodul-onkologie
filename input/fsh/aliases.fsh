@@ -40,3 +40,5 @@ Alias: $mii-cs-onko-grading = https://www.medizininformatik-initiative.de/fhir/e
 Alias: $mii-vs-onko-grading = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-grading
 Alias: $mii-cs-onko-operation-komplikation = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-cs-onko-operation-komplikation
 Alias: $mii-vs-onko-operation-komplikation = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-operation-komplikation
+Alias: $mii-cs-onko-operation-intention = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-cs-onko-operation-intention
+Alias: $mii-vs-onko-operation-intention = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-operation-intention

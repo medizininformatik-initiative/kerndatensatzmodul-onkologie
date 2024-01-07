@@ -1,6 +1,9 @@
 [MII_CS_Onko_Grading]: CodeSystem-mii-cs-onko-grading.html
+[MII_CS_Onko_Operation_Intention]: CodeSystem-mii-cs-onko-operation-intention.html
+[MII_CS_Onko_Operation_Komplikationen]: CodeSystem-mii-cs-onko-operation-komplikation.html
 [MII_CS_Onko_Primaertumor_Diagnosesicherung]: CodeSystem-mii-cs-onko-primaertumor-diagnosesicherung.html
 [MII_CS_Onko_Primaertumor_Seitenlokalisation]: CodeSystem-mii-cs-onko-primaertumor-seitenlokalisation.html
+[MII_EX_Onko_Operation_Intention]: StructureDefinition-mii-ex-onko-operation-intention.html
 [MII_LM_Onko]: StructureDefinition-mii-lm-onko.html
 [MII_PR_Onko_Anzahl_Befallene_Lymphknoten]: StructureDefinition-mii-pr-onko-anzahl-befallene-lymphknoten.html
 [MII_PR_Onko_Anzahl_Befallene_Sentinel_Lymphknoten]: StructureDefinition-mii-pr-onko-anzahl-befallene-sentinel-lymphknoten.html
@@ -9,6 +12,9 @@
 [MII_PR_Onko_Diagnose]: StructureDefinition-mii-pr-onko-diagnose.html
 [MII_PR_Onko_Grading]: StructureDefinition-mii-pr-onko-grading.html
 [MII_PR_Onko_Specimen]: StructureDefinition-mii-pr-onko-specimen.html
+[MII-PR-Onko-Operation]: StructureDefinition-mii-pr-onko-operation.html
 [MII_VS_Onko_Grading]: ValueSet-mii-vs-onko-grading.html
+[MII_VS_Onko_Operation_Intention]: ValueSet-mii-vs-onko-operation-intention.html
+[MII_VS_Onko_Operation_Komplikation]: ValueSet-mii-vs-onko-operation-komplikation.html
 [MII_VS_Onko_Primaertumor_Diagnosesicherung]: ValueSet-mii-vs-onko-primaertumor-diagnosesicherung.html
 [MII_VS_Onko_Primaertumor_Seitenlokalisation]: ValueSet-mii-vs-onko-primaertumor-seitenlokalisation.html
