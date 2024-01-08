@@ -1,4 +1,4 @@
-Profile: MII-PR-Onko-Operation
+Profile: MII_PR_Onko_Operation
 Parent: https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure // müssen wir das noch irgendwo manuell hinzufügen
 Id: mii-pr-onko-operation
 Title: "MII PR Onkologie Operation"
@@ -7,7 +7,8 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 * insert Publisher
 * ^status = #draft
 // OP-Datum
-* performed only dateTime MS // required? 
+* performed MS
+* performed only dateTime 
 // OP-Prozedur 
 * code.coding[ops] 1..1 MS // hier auch potentiel 1..*, weil mehrere Sachen gemacht werden können? geht das überhaupt, oder muss man da slicen?
  
@@ -30,12 +31,17 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 * complication[compl_icd10].system = $ICD10GM // schreibt canonical ICD10 GM-FHIR-URI in system
 * complication[compl_icd10].system 1..
 * complication[compl_icd10].code 1..
-//Mapping: FHIR-to-oBDS Operation
-//Id: 
 
+* extension contains $mii-ex-onko-operation-intention 1..1 MS
 
-// Intention der OP
-// Datum der OP
-// OPS Code
-// OPS Version
-// Komplikationen über oBDS Valueset, nicht enthaltene über ICD-10
+Mapping: FHIR-oBDSOperation
+Id: oBDS
+Title: "Mapping FHIR zu oBDS"
+Source: MII_PR_Onko_Operation
+* -> "13" "Operation"
+* valueCodeableConcept.coding.code -> "13.1" "Intention der Operation"
+* performed -> "13.2" "OP Datum" 
+* code.coding[ops] -> "13.3" "OPS" // OPS Code
+* code.coding[ops].version -> "13.4" "OPS Version" 
+* complication -> "13.5" "OP Komplikationen " // Komplikationen über oBDS Valueset, nicht enthaltene über ICD-10
+

@@ -3,7 +3,7 @@
   "id": "mii-pr-onko-operation",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation",
   "version": "2024.0.0-ballot",
-  "name": "MII-PR-Onko-Operation",
+  "name": "MII_PR_Onko_Operation",
   "title": "MII PR Onkologie Operation",
   "status": "draft",
   "publisher": "Medizininformatik Initiative",
@@ -39,6 +39,10 @@
       "identity": "v2",
       "uri": "http://hl7.org/v2",
       "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "oBDS",
+      "name": "Mapping FHIR zu oBDS"
     }
   ],
   "kind": "resource",
@@ -49,26 +53,57 @@
   "differential": {
     "element": [
       {
-        "id": "Procedure.extension:intention",
-        "path": "Procedure.extension",
-        "sliceName": "intention",
-        "min": 0,
-        "max": "1",
-        "type": [
+        "id": "Procedure",
+        "path": "Procedure",
+        "mapping": [
           {
-            "code": "Extension",
-            "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/core/modul-onko/StructureDefinition/mii-ex-onko-operation-intention"
-            ]
+            "identity": "oBDS",
+            "map": "13",
+            "comment": "Operation"
           }
-        ],
+        ]
+      },
+      {
+        "id": "Procedure.extension",
+        "path": "Procedure.extension",
+        "min": 1
+      },
+      {
+        "id": "Procedure.extension:$mii-ex-onko-operation-intention",
+        "path": "Procedure.extension",
+        "sliceName": "$mii-ex-onko-operation-intention",
+        "min": 1,
+        "max": "1",
         "mustSupport": true
+      },
+      {
+        "id": "Procedure.extension:$mii-ex-onko-operation-intention.url",
+        "path": "Procedure.extension.url",
+        "fixedUri": "$mii-ex-onko-operation-intention"
       },
       {
         "id": "Procedure.code.coding:ops",
         "path": "Procedure.code.coding",
         "sliceName": "ops",
-        "min": 1
+        "min": 1,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "13.3",
+            "comment": "OPS"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.code.coding:ops.version",
+        "path": "Procedure.code.coding.version",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "13.4",
+            "comment": "OPS Version"
+          }
+        ]
       },
       {
         "id": "Procedure.complication",
@@ -82,7 +117,14 @@
           ],
           "rules": "open"
         },
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "13.5",
+            "comment": "OP Komplikationen "
+          }
+        ]
       },
       {
         "id": "Procedure.complication:compl_obds",
