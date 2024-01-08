@@ -8,16 +8,17 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 * ^status = #draft
 
 // Intention der Strahlentherapie
- 
+//* extension contains $mii-ex-onko-strahlentherapie-intention 1..1 MS --> not sure
+  
 
 // Strahlentherapie Stellung zu operativer Therapie 
-
+* extension contains MII_EX_Onko_Strahlentherapie_Stellung MS 
 
 // Strahlentherapie Zielgebiet 
-
+//TODO
 
 // Strahlentherapie Seite Zielgebiet 
-
+// ggfs. aus input/fsh/oBDS/05_Diagnose/mii-cs-onko-primaertumor-seitenlokalisation.fsh übernehmen
 
 // Strahlentherapie Beginn und Ende
 * performed MS
