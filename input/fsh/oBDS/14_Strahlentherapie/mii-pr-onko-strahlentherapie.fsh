@@ -12,7 +12,7 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
   
 
 // Strahlentherapie Stellung zu operativer Therapie 
-* extension contains MII_EX_Onko_Strahlentherapie_Stellung MS 
+* extension contains MII_EX_Onko_Strahlentherapie_Stellung 0.. MS 
 
 // Strahlentherapie Zielgebiet 
 //TODO

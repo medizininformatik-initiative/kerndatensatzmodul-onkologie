@@ -1,0 +1,66 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-pr-onko-strahlentherapie",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie",
+  "version": "2024.0.0-ballot",
+  "name": "MII_PR_Onko_Strahlentherapie",
+  "title": "MII PR Onkologie Strahlentherapie",
+  "status": "draft",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "description": "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie in der Onkologie.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Procedure",
+  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Procedure.extension:MII_EX_Onko_Strahlentherapie_Stellung",
+        "path": "Procedure.extension",
+        "sliceName": "MII_EX_Onko_Strahlentherapie_Stellung",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.extension:MII_EX_Onko_Strahlentherapie_Stellung.url",
+        "path": "Procedure.extension.url",
+        "fixedUri": "MII_EX_Onko_Strahlentherapie_Stellung"
+      }
+    ]
+  }
+}

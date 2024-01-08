@@ -1,4 +1,4 @@
-ValueSet: MII_CS_Onko_Strahlentherapie_Stellung
+ValueSet: MII_VS_Onko_Strahlentherapie_Stellung
 Id: mii-cs-onko-strahlentherapie-stellung
 Title: "MII CS Onkologie Strahlentherapie Stellung"
 Description: "oBDS-spezifisches Codesystem für Klassifikation von Stellung zur OP"

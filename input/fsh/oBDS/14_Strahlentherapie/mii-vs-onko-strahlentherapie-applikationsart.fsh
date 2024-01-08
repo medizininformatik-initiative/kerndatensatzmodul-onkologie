@@ -1,4 +1,4 @@
-ValueSet: MII_CS_Onko_Strahlentherapie_Applikationsart
+ValueSet: MII_VS_Onko_Strahlentherapie_Applikationsart
 Id: mii-cs-onko-strahlentherapie-applikationsart
 Title: "MII CS Onkologie Strahlentherapie Applikationsart"
 Description: "oBDS-spezifisches Codesystem für Klassifikation von Intention der OP"

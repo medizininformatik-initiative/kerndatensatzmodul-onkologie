@@ -59,6 +59,14 @@
     "resource": [
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-onko-strahlentherapie-intention"
+        },
+        "name": "MII CS Onko StrahlentherapieIntention",
+        "description": "Intention für eine Strahlen-, systemtische oder operative Therapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-onko-grading"
         },
         "name": "MII CS Onkologie Grading",
@@ -99,10 +107,74 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-cs-onko-strahlentherapie-applikationsart"
+        },
+        "name": "MII CS Onkologie Strahlentherapie Applikationsart",
+        "description": "oBDS-spezifisches Codesystem für Klassifikation von Intention der OP",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-strahlentherapie-applikationsart"
+        },
+        "name": "MII CS Onkologie Strahlentherapie Applikationsart",
+        "description": "oBDS-spezifisches Codesystem für Klassifikation von Intention der OP",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-cs-onko-strahlentherapie-stellung"
+        },
+        "name": "MII CS Onkologie Strahlentherapie Stellung",
+        "description": "oBDS-spezifisches Codesystem für Klassifikation von Stellung zur OP",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-strahlentherapie-stellung"
+        },
+        "name": "MII CS Onkologie Strahlentherapie Stellung",
+        "description": "oBDS-spezifisches Codesystem für Klassifikation von Stellung zur OP",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-cs-onko-strahlentherapie-strahlenart"
+        },
+        "name": "MII CS Onkologie Strahlentherapie Strahlenart",
+        "description": "oBDS-spezifisches Codesystem für Klassifikation von Strahlenart bei Strahlentherapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-strahlentherapie-strahlenart"
+        },
+        "name": "MII CS Onkologie Strahlentherapie Strahlenart",
+        "description": "oBDS-spezifisches Codesystem für Klassifikation von eingesetzter Strahlenart",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-ex-onko-operation-intention"
         },
         "name": "MII EX Onko Operation Intention",
         "description": "Intention der Operation",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-onko-strahlentherapie-applikationsart"
+        },
+        "name": "MII EX Onko Strahlentherapie Applikationsart",
+        "description": "Art der Strahlentherapie Applikation",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-onko-strahlentherapie-stellung"
+        },
+        "name": "MII EX Onko Strahlentherapie Stellung",
+        "description": "Strahlentherapie Stellung zur OP",
         "exampleBoolean": false
       },
       {
@@ -167,6 +239,14 @@
         },
         "name": "MII PR Onkologie Operation",
         "description": "Operation nach OPS inklusive Intention, Datum und Komplikationen:",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-strahlentherapie"
+        },
+        "name": "MII PR Onkologie Strahlentherapie",
+        "description": "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie in der Onkologie.",
         "exampleBoolean": false
       },
       {

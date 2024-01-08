@@ -1,4 +1,4 @@
-CodeSystem: MII_CS_Onko_Strahlentherapie-Intention
+CodeSystem: MII_CS_Onko_Strahlentherapie_Intention
 Id: mii-cs-onko-strahlentherapie-intention
 Title: "MII CS Onko StrahlentherapieIntention"
 Description: "Intention für eine Strahlen-, systemtische oder operative Therapie"

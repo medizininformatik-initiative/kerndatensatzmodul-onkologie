@@ -11,7 +11,7 @@ Description: "oBDS-spezifisches Codesystem für Klassifikation von eingesetzter 
 * ^caseSensitive = true
 * ^valueSet = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-strahlenart"
 * ^content = #complete
-*
+
 // ACHTUNG! Abkürzung der Variablen nicht auf Webseite hinterlegt, aber in der obDS-XML v3.0.2( siehe https://basisdatensatz.de/xml/oBDS_v3.0.2.xsd)
 
 * #UH "Photonen (ultraharte Röntgenstrahlen, inklusive Gamma-Strahler)"
