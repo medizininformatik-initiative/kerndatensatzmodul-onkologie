@@ -48,3 +48,5 @@ Alias: $mii-cs-onko-strahlentherapie-strahlenart = https://www.medizininformatik
 Alias: $mii-vs-onko-strahlentherapie-strahlenart = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-strahlenart
 Alias: $mii-cs-onko-strahlentherapie-applikationsart = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart
 Alias: $mii-vs-onko-strahlentherapie-applikationsart = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-applikationsart
+Alias: $mii-cs-onko-strahlentherapie-stellung = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-stellung
+Alias: $mii-vs-onko-strahlentherapie-stellung = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-stellung
