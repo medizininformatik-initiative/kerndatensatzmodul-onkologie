@@ -7,6 +7,7 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 * insert Publisher
 * ^status = #draft
 
+// Logical Modell see:  https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532153/Strahlentherapie+ST+Typ
 // Intention der Strahlentherapie #XRayXtension --> alles mit #XRayXtension soll in eine gemeinsame Extension
 //* extension contains $mii-ex-onko-strahlentherapie-intention 1..1 MS --> not sure
   
@@ -39,7 +40,6 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 //--> gilt auch für folgende Felder (oBDS-XML hat hier Restriktionen zwecks Validierung! )
 
 // Strahlentherapie Gesamtdosis (Dosis) #XRayXtension
-* 
 // Strahlentherapie Einzeldosis pro Tag (Dosis) #XRayXtension
 
 
