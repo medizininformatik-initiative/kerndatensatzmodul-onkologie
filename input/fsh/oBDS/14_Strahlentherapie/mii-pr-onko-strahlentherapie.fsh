@@ -7,42 +7,50 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 * insert Publisher
 * ^status = #draft
 
-// Intention der Strahlentherapie
+// Intention der Strahlentherapie #XRayXtension --> alles mit #XRayXtension soll in eine gemeinsame Extension
 //* extension contains $mii-ex-onko-strahlentherapie-intention 1..1 MS --> not sure
   
 
-// Strahlentherapie Stellung zu operativer Therapie 
+// Strahlentherapie Stellung zu operativer Therapie // ggfs. auch #XRayXtension
 * extension contains MII_EX_Onko_Strahlentherapie_Stellung 0.. MS 
 
-// Strahlentherapie Zielgebiet 
-//TODO
+// Strahlentherapie Zielgebiet #XRayXtension
+//TODO --> die MII Prozedur sieht bei bodysite eine Kodierung durch SNOMED vor, bound ex
+// ggfs. kann man hier ein CodeSystem mit den oBDS machen und ein ValueSet einbinden, dass sowohl dass SNOMED Codesystem als auch das oBDS-Codesystem mit einbindet. 
 
-// Strahlentherapie Seite Zielgebiet 
+// Strahlentherapie Seite Zielgebiet #XRayXtension
+// --> bei Bestrahlung mit mehreren Zielgebiet
+
 // ggfs. aus input/fsh/oBDS/05_Diagnose/mii-cs-onko-primaertumor-seitenlokalisation.fsh übernehmen
 
 // Strahlentherapie Beginn und Ende
-* performed MS
-* performed only Period
+* performed MS 
+* performed only Period //  wird über Period.start und Period.stop des MII Prozedurmoduls erfasst
 
-// Strahlentherapie Applikationsart 
-
-
-// Strahlenart 
-
-
-// Strahlentherapie Gesamtdosis (Dosis) 
+// Strahlentherapie Applikationsart #XRayXtension
+* extension contains MII_EX_Onko_Strahlentherapie_Applikationsart 0..MS
+// ist derzeit eine eigene Extension, sollten wir mit den anderen Strahlentherapie-feldern in eine eigene Extension überführen
+// #XRayXtension
 
 
-// Strahlentherapie Einzeldosis pro Tag (Dosis) 
+// Strahlenart #XRayXtension
+// Sowohl Strahlungsarten als auch Metabolite fallen hierdrunter 
+// --> entweder invarianten definieren, oder alle antwortmöglichkeiten zulassen
+//--> gilt auch für folgende Felder (oBDS-XML hat hier Restriktionen zwecks Validierung! )
+
+// Strahlentherapie Gesamtdosis (Dosis) #XRayXtension
+* 
+// Strahlentherapie Einzeldosis pro Tag (Dosis) #XRayXtension
 
 
-// Strahlentherapie Einheit 
+// Strahlentherapie Einheit #XRayXtension
+// Gray für Bestrahlung, Becquerel (inkl. kBq, MBq, GBq) für Metabolite
 
+// Boost #XRayXtension
+// ValueSet + Codesystem erstellen
 
-// Boost 
-
-
-// Strahlentherapie Ende Grund 
+// Strahlentherapie Ende Grund
+// #XRayXtension
 
 
 
