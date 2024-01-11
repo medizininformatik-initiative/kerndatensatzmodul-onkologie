@@ -1,0 +1,48 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "MII_VS_Onko_TNM_T_Kategorie",
+  "id": "mii-vs-onko-tnm-t-kategorie",
+  "title": "MII VS Onkologie TNM T Kategorie",
+  "description": "Codes für Codes zur Differenzierung der TNM T-Kategorie als entweder klinisch (cT) oder pathologisch (pT)",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-t-kategorie",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2024.0.0-ballot",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "78873005",
+            "display": "T category (observable entity)"
+          },
+          {
+            "code": "399504009",
+            "display": "cT category (observable entity)"
+          },
+          {
+            "code": "384625004",
+            "display": "pT category (observable entity)"
+          }
+        ]
+      }
+    ]
+  }
+}

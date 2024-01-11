@@ -1,0 +1,48 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "MII_VS_Onko_TNM_cp_Praefix",
+  "id": "mii-vs-onko-tnm-cp-praefix",
+  "title": "MII VS Onkologie TNM cpu Praefix",
+  "description": "Codes für TNM c/p-Präfix. Gibt an, ob die Klassifikation klinisch oder pathologisch erfolgte.",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-cp-praefix",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2024.0.0-ballot",
+  "compose": {
+    "include": [
+      {
+        "system": "https://www.uicc.org/resources/tnm",
+        "concept": [
+          {
+            "code": "c",
+            "display": "c"
+          },
+          {
+            "code": "p",
+            "display": "p"
+          },
+          {
+            "code": "u",
+            "display": "u"
+          }
+        ]
+      }
+    ]
+  }
+}

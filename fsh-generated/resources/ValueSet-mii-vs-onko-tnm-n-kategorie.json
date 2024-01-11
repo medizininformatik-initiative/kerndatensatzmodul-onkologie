@@ -1,0 +1,48 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "MII_VS_Onko_TNM_N_Kategorie",
+  "id": "mii-vs-onko-tnm-n-kategorie",
+  "title": "MII VS Onkologie TNM N Kategorie",
+  "description": "Codes für Codes zur Differenzierung der TNM N-Kategorie als entweder klinisch (cN) oder pathologisch (pN)",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-n-kategorie",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2024.0.0-ballot",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "277206009",
+            "display": "N category (observable entity)"
+          },
+          {
+            "code": "399534004",
+            "display": "cN category (observable entity)"
+          },
+          {
+            "code": "371494008",
+            "display": "pN category (observable entity)"
+          }
+        ]
+      }
+    ]
+  }
+}

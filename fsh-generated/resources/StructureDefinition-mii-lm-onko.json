@@ -435,6 +435,372 @@
             "map": "Observation.code.coding.where(system='http://loinc.org' and code='92832-5').select(%resource.valueQuantity.value)"
           }
         ]
+      },
+      {
+        "id": "mii-lm-onko.Histologie.Befund",
+        "path": "mii-lm-onko.Histologie.Befund",
+        "short": "Befund",
+        "definition": "Vollständiger Befundbericht des Pathologen.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "DiagnosticReport.code.coding.where(system='http://loinc.org' and code='60568-3').select(%resource.conclusion)"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.TNMKlassifikation",
+        "path": "mii-lm-onko.TNMKlassifikation",
+        "short": "TNM-Klassifikation",
+        "definition": "TNM-Klassifikation",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.TNMKlassifikation.TNMDatum",
+        "path": "mii-lm-onko.TNMKlassifikation.TNMDatum",
+        "short": "TNM Datum",
+        "definition": "Gibt an, auf welches Datum sich die TNM-Klassifikation bezieht.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.effectiveDateTime"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.TNMKlassifikation.TNMVersion",
+        "path": "mii-lm-onko.TNMKlassifikation.TNMVersion",
+        "short": "TNM Version",
+        "definition": "Gibt an, nach welcher Version des TNM klassifiziert wurde.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.method"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.TNMKlassifikation.TNMySymbol",
+        "path": "mii-lm-onko.TNMKlassifikation.TNMySymbol",
+        "code": [
+          {
+            "code": "101658-3",
+            "system": "http://loinc.org",
+            "display": "Cancer staging after multimodality therapy"
+          }
+        ],
+        "short": "TNM y-Symbol",
+        "definition": "Gibt an, ob die Klassifikation während oder nach initialer multimodaler Therapie erfolgte.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.TNMKlassifikation.TNMrSymbol",
+        "path": "mii-lm-onko.TNMKlassifikation.TNMrSymbol",
+        "code": [
+          {
+            "code": "101659-1",
+            "system": "http://loinc.org",
+            "display": "Cancer staging after tumor recurrence"
+          }
+        ],
+        "short": "TNM r-Symbol",
+        "definition": "Gibt an, ob die Klassifikation ein Rezidiv beurteilt.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.TNMKlassifikation.TNMaSymbol",
+        "path": "mii-lm-onko.TNMKlassifikation.TNMaSymbol",
+        "code": [
+          {
+            "code": "101660-9",
+            "system": "http://loinc.org",
+            "display": "Cancer staging during autopsy"
+          }
+        ],
+        "short": "TNM a-Symbol",
+        "definition": "Gibt an, ob die Klassifikation aus Anlass einer Autopsie erfolgte.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.TNMKlassifikation.TNMcpuPraefixT",
+        "path": "mii-lm-onko.TNMKlassifikation.TNMcpuPraefixT",
+        "short": "TNM c/p-Präfix T",
+        "definition": "Gibt an, ob die Klassifikation klinisch oder pathologisch erfolgte.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.code.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix').value.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.TNMKlassifikation.TNMcpuPraefixN",
+        "path": "mii-lm-onko.TNMKlassifikation.TNMcpuPraefixN",
+        "short": "TNM c/p-Präfix N",
+        "definition": "Gibt an, ob die Klassifikation klinisch oder pathologisch erfolgte.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.code.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix').value.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.TNMKlassifikation.TNMcpuPraefixM",
+        "path": "mii-lm-onko.TNMKlassifikation.TNMcpuPraefixM",
+        "short": "TNM c/p-Präfix M",
+        "definition": "Gibt an, ob die Klassifikation klinisch oder pathologisch erfolgte.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.code.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix').value.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.TNMKlassifikation.TNMTKategorie",
+        "path": "mii-lm-onko.TNMKlassifikation.TNMTKategorie",
+        "short": "TNM T-Kategorie",
+        "definition": "Ausbreitung des Primärtumors, erfolgt gemäß Tumorentität nach TNM.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.TNMKlassifikation.TNMmSymbol",
+        "path": "mii-lm-onko.TNMKlassifikation.TNMmSymbol",
+        "short": "TNM m-Symbol",
+        "definition": "Kennzeichnet Vorhandensein multipler Primärtumoren in einem anatomischen Bezirk.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.TNMKlassifikation.TNMNKategorie",
+        "path": "mii-lm-onko.TNMKlassifikation.TNMNKategorie",
+        "short": "TNM N-Kategorie",
+        "definition": "Ausbreitung von regionären Lymphknotenmetastasen, erfolgt gemäß Tumorentität nach TNM.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.TNMKlassifikation.TNMLKategorie",
+        "path": "mii-lm-onko.TNMKlassifikation.TNMLKategorie",
+        "code": [
+          {
+            "code": "395715009",
+            "system": "http://snomed.info/sct",
+            "display": "Status of lymphatic (small vessel) invasion by tumor (observable entity)"
+          }
+        ],
+        "short": "TNM L-Kategorie",
+        "definition": "Lymphgefäßinvasion.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.TNMKlassifikation.TNMVKategorie",
+        "path": "mii-lm-onko.TNMKlassifikation.TNMVKategorie",
+        "code": [
+          {
+            "code": "371493002",
+            "system": "http://snomed.info/sct",
+            "display": "Status of venous (large vessel) invasion by tumor (observable entity)"
+          }
+        ],
+        "short": "TNM V-Kategorie",
+        "definition": "Veneninvasion.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.TNMKlassifikation.TNMPnKategorie",
+        "path": "mii-lm-onko.TNMKlassifikation.TNMPnKategorie",
+        "code": [
+          {
+            "code": "371513001",
+            "system": "http://snomed.info/sct",
+            "display": "Presence of direct invasion by primary malignant neoplasm to nerve (observable entity)"
+          }
+        ],
+        "short": "TNM Pn-Kategorie",
+        "definition": "Perineuralinvasion.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-onko.TNMKlassifikation.TNMSKategorie",
+        "path": "mii-lm-onko.TNMKlassifikation.TNMSKategorie",
+        "code": [
+          {
+            "code": "399424006",
+            "system": "http://snomed.info/sct",
+            "display": "Serum tumor marker category (observable entity)"
+          }
+        ],
+        "short": "TNM S-Kategorie",
+        "definition": "Serumtumormarker.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept.coding.code"
+          }
+        ]
       }
     ]
   }

@@ -29,7 +29,8 @@ Alias: $SCT = http://snomed.info/sct
 Alias: $ICD10GM = http://fhir.de/CodeSystem/bfarm/icd-10-gm
 Alias: $ICDO3 = http://terminology.hl7.org/CodeSystem/icd-o-3
 Alias: $LOINC = http://loinc.org
-Alias: $TNM = https://www.uicc.org/resources/tnm
+Alias: $UICC = https://www.uicc.org/resources/tnm
+Alias: $UCUM = http://unitsofmeasure.org
 
 //MII Onko
 Alias: $mii-cs-onko-primaertumor-diagnosesicherung = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung
@@ -38,3 +39,5 @@ Alias: $mii-cs-onko-primaertumor-seitenlokalisation = https://www.medizininforma
 Alias: $mii-vs-onko-primaertumor-seitenlokalisation = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-primaertumor-seitenlokalisation
 Alias: $mii-cs-onko-grading = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading
 Alias: $mii-vs-onko-grading = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-grading
+Alias: $mii-cs-onko-tnm-version = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version
+Alias: $mii-vs-onko-tnm-version = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-version
