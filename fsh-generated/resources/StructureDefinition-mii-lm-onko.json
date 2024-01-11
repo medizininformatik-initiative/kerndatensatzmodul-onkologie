@@ -801,6 +801,25 @@
             "map": "Observation.valueCodeableConcept.coding.code"
           }
         ]
+      },
+      {
+        "id": "mii-lm-onko.TNMKlassifikation.UICCStadium",
+        "path": "mii-lm-onko.TNMKlassifikation.UICCStadium",
+        "short": "UICC Stadium",
+        "definition": "Stadium nach aktuell gültiger TNM-Klassifikation.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept.coding.code"
+          }
+        ]
       }
     ]
   }
