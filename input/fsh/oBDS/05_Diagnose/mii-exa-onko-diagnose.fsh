@@ -1,4 +1,4 @@
-Instance: mii-exa-diagnose
+Instance: mii-exa-onko-diagnose
 InstanceOf: mii-pr-onko-diagnose
 Usage: #example
 * clinicalStatus = $condition-clinical#active
