@@ -14,12 +14,14 @@ Alias: $DeIcdSeitenlokalisation = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_IC
 Alias: $DeIcdDiagnosesicherheit = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_DIAGNOSESICHERHEIT
 Alias: $DeIcdO3TopologieVS = http://fhir.de/onkologie/ValueSet/icd-o-3-topologie
 Alias: $DeOnkoTumorstatusFernmetastasenVS = http://fhir.de/onkologie/ValueSet/TumorstatusFernmetastasenVS
+Alias: $icd-seitenlokalisation = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_SEITENLOKALISATION
 
 // FHIR Core
 Alias: $EventStatus = http://hl7.org/fhir/event-status
-Alias: $VerificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status
+Alias: $condition-ver-status = http://terminology.hl7.org/CodeSystem/condition-ver-status
 Alias: $verification-status-vs = http://hl7.org/fhir/ValueSet/condition-ver-status
 Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
+Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-clinical
 
 // Code Systems
 Alias: $CTCAE = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl

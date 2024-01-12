@@ -48,6 +48,7 @@
 [MII_VS_Onko_TNM_UICC_Stadium]: ValueSet-mii-vs-onko-tnm-uicc-stadium.html
 [MII_VS_Onko_TNM_V_Kategorie_Werte]: ValueSet-mii-vs-onko-tnm-v-kategorie-werte.html
 [MII_VS_Onko_TNM_Version]: ValueSet-mii-vs-onko-tnm-version.html
+[mii-exa-diagnose]: Condition-mii-exa-diagnose.html
 [mii-exa-onko-anzahl-befallene-lymphknoten-0]: Observation-mii-exa-onko-anzahl-befallene-lymphknoten-0.html
 [mii-exa-onko-anzahl-untersuchte-lymphknoten-23]: Observation-mii-exa-onko-anzahl-untersuchte-lymphknoten-23.html
 [mii-exa-onko-tnm-klassifikation-TisN0M0]: Observation-mii-exa-onko-tnm-klassifikation-TisN0M0.html
