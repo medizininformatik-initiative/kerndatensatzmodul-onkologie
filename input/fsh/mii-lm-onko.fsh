@@ -5,6 +5,7 @@ Title: "MII LM Onkologie"
 Description: "MII LogicalModel Modul Onkologie"
 * insert Publisher
 * insert PR_CS_VS_Version
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/Onkologie"
 * Diagnose 0..* BackboneElement "Diagnose"
   * PrimaertumorTumordiagnoseICDCode 0..1 code "Primärtumor Tumordiagnose ICD Code" "Kodierung einer meldepflichtigen Erkrankung nach der aktuellen ICD-GM Version."
   * PrimaertumorTumordiagnoseICDVersion 0..1 string "Primärtumor Tumordiagnose ICD-Version" "Bezeichnung der zur Kodierung verwendeten ICD-GM Version."
