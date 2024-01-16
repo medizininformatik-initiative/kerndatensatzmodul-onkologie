@@ -9,15 +9,15 @@ Description: "Strahlentherapie einzelner Behandlungsabschnitt der Gesamttherapie
 * ^context.expression = "Procedure"
 
 * extension contains
-    Menge_Bestrahlung 1..1 and // this might be needed for slicing
+//   Menge_Bestrahlung 1..1 and // this might be needed for slicing
 //  Start + Ende Dauer MS and   --> laut datenmodell oBDS sinnvoll, da mehrere perionden mit der gleichen Intention 
     Zielgebiet 1..1 MS and
     Zielgebiet_Lateralitaet 0..1 MS and
     Gesamtdosis 0..1 MS and
     Einzeldosis 0..1 MS and
     Boost 0..1 MS and
-    radiationUnit 1 ..1 MS
-* extension[Menge_Strahlentherapie] = only unsigned    
+    radiationUnit 1..1 MS
+//* extension[Menge_Strahlentherapie] = only unsigned    
 * extension[Zielgebiet] ^short = "Strahlentherapie Zielgebiet"
 * extension[Zielgebiet] ^definition = "Gibt an, an welcher anatomischen Region die Bestrahlung durchgeführt wurde."
 * extension[Zielgebiet].value[x] from $mii-vs-onko-strahlentherapie-zielgebiet (required)
