@@ -22,25 +22,24 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
     compl_icd10 0..*
 * complication[compl_obds] MS
 * complication[compl_obds].coding from $mii-vs-onko-operation-komplikation
-* complication[compl_obds].system = $mii-cs-onko-operation-komplikation
-* complication[compl_obds].code 1.. MS
+* complication[compl_obds].coding.system = $mii-cs-onko-operation-komplikation
+* complication[compl_obds].coding.code 1.. MS
 
 * complication[compl_icd10] MS 
 * complication[compl_icd10] from http://fhir.de/ValueSet/bfarm/icd-10-gm // binding auf ICD10-GM Value Set
-* complication[compl_icd10] only http://fhir.de/StructureDefinition/CodingICD10GM // optional? , erlaubt ausschließlich die Nutzung einer validen offiziellen ICD-10GM Code FHIR Ressource
-* complication[compl_icd10].system = $ICD10GM // schreibt canonical ICD10 GM-FHIR-URI in system
-* complication[compl_icd10].system 1..
-* complication[compl_icd10].code 1..
+* complication[compl_icd10].coding.system = $ICD10GM // schreibt canonical ICD10 GM-FHIR-URI in system
+* complication[compl_icd10].coding.system 1..
+* complication[compl_icd10].coding.code 1..
 
-* extension contains $mii-ex-onko-operation-intention 1..1 MS
-
+* extension contains mii-ex-onko-operation-intention named Intention 1..1
+* extension[Intention] MS
 Mapping: FHIR-oBDSOperation
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
 Source: MII_PR_Onko_Operation
 * -> "13" "Operation"
-* valueCodeableConcept.coding.code -> "13.1" "Intention der Operation"
-* performed -> "13.2" "OP Datum" 
+* extension[Intention].valueCodeableConcept.coding.code -> "13.1" "Intention der Operation"
+* performedDateTime -> "13.2" "OP Datum" 
 * code.coding[ops] -> "13.3" "OPS" // OPS Code
 * code.coding[ops].version -> "13.4" "OPS Version" 
 * complication -> "13.5" "OP Komplikationen " // Komplikationen über oBDS Valueset, nicht enthaltene über ICD-10

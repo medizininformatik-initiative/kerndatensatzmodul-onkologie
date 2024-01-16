@@ -13,7 +13,8 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
   
 
 // Strahlentherapie Stellung zu operativer Therapie // ggfs. auch #XRayXtension
-* extension contains MII_EX_Onko_Strahlentherapie_Stellung 0.. MS 
+* extension contains MII_EX_Onko_Strahlentherapie_Stellung named Stellung 0.. 
+* extension[Stellung] MS 
 
 // Strahlentherapie Zielgebiet #XRayXtension
 //TODO --> die MII Prozedur sieht bei bodysite eine Kodierung durch SNOMED vor, bound ex
@@ -25,11 +26,11 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 // ggfs. aus input/fsh/oBDS/05_Diagnose/mii-cs-onko-primaertumor-seitenlokalisation.fsh übernehmen
 
 // Strahlentherapie Beginn und Ende
-* performed MS 
-* performed only Period //  wird über Period.start und Period.stop des MII Prozedurmoduls erfasst
+* performed[x] MS 
+* performed[x] only Period //  wird über Period.start und Period.stop des MII Prozedurmoduls erfasst
 
 // Strahlentherapie Applikationsart #XRayXtension
-* extension contains MII_EX_Onko_Strahlentherapie_Applikationsart 0.. MS
+// extension contains MII_EX_Onko_Strahlentherapie_Applikationsart named 0.. MS
 // ist derzeit eine eigene Extension, sollten wir mit den anderen Strahlentherapie-feldern in eine eigene Extension überführen
 // #XRayXtension
 
