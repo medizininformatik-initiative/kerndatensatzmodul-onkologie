@@ -1,0 +1,53 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "MII_CS_Onko_Strahlentherapie_Boost",
+  "id": "mii-cs-onko-strahlentherapie-boost",
+  "title": "MII CS Onkologie Strahlentherapie Boost",
+  "description": "oBDS-spezifisches Codesystem für Klassifikation von Strahlentherapie-Boosts",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-strahlentherapie-boost",
+  "concept": [
+    {
+      "code": "J",
+      "display": "ja, mit Boost o. n. A."
+    },
+    {
+      "code": "SIB",
+      "display": "simultan integrierter Boost"
+    },
+    {
+      "code": "SEQ",
+      "display": "sequentieller Boost"
+    },
+    {
+      "code": "KON",
+      "display": "konkomitanter Boost"
+    },
+    {
+      "code": "N",
+      "display": "nein, ohne Boost"
+    }
+  ],
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2024.0.0-ballot",
+  "caseSensitive": true,
+  "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-boost",
+  "count": 5
+}

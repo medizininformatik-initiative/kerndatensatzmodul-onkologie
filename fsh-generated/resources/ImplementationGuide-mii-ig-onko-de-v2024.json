@@ -107,14 +107,6 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/mii-cs-onko-strahlentherapie-applikationsart"
-        },
-        "name": "MII CS Onkologie Strahlentherapie Applikationsart",
-        "description": "oBDS-spezifisches Codesystem für Klassifikation von Intention der OP",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "CodeSystem/mii-cs-onko-strahlentherapie-applikationsart"
         },
         "name": "MII CS Onkologie Strahlentherapie Applikationsart",
@@ -123,10 +115,10 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/mii-cs-onko-strahlentherapie-stellung"
+          "reference": "CodeSystem/mii-cs-onko-strahlentherapie-boost"
         },
-        "name": "MII CS Onkologie Strahlentherapie Stellung",
-        "description": "oBDS-spezifisches Codesystem für Klassifikation von Stellung zur OP",
+        "name": "MII CS Onkologie Strahlentherapie Boost",
+        "description": "oBDS-spezifisches Codesystem für Klassifikation von Strahlentherapie-Boosts",
         "exampleBoolean": false
       },
       {
@@ -139,18 +131,18 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/mii-cs-onko-strahlentherapie-strahlenart"
-        },
-        "name": "MII CS Onkologie Strahlentherapie Strahlenart",
-        "description": "oBDS-spezifisches Codesystem für Klassifikation von Strahlenart bei Strahlentherapie",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "CodeSystem/mii-cs-onko-strahlentherapie-strahlenart"
         },
         "name": "MII CS Onkologie Strahlentherapie Strahlenart",
         "description": "oBDS-spezifisches Codesystem für Klassifikation von eingesetzter Strahlenart",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet"
+        },
+        "name": "MII CS Onkologie Strahlentherapie Zielgebiet",
+        "description": "oBDS-spezifisches Codesystem für Klassifikation von Zielgebiet von Strahlentherapie",
         "exampleBoolean": false
       },
       {
@@ -167,6 +159,14 @@
         },
         "name": "MII EX Onko Strahlentherapie Applikationsart",
         "description": "Art der Strahlentherapie Applikation",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-onko-strahlentherapie-behandlungsabschnitt"
+        },
+        "name": "MII EX Onko Strahlentherapie Behandlungsabschnitt",
+        "description": "Strahlentherapie einzelner Behandlungsabschnitt der Gesamttherapie",
         "exampleBoolean": false
       },
       {
@@ -243,6 +243,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-specimen"
+        },
+        "name": "MII PR Onkologie Specimen",
+        "description": "Histologie: Dieses Profil beschreibt eine Gewebeprobe in der Onkologie.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-strahlentherapie"
         },
         "name": "MII PR Onkologie Strahlentherapie",
@@ -287,6 +295,54 @@
         },
         "name": "MII VS Onkologie Primärtumor Seitenlokalisation",
         "description": "Codes für Primärtumor Seitenlokalisation, d.h. organspezifische Angabe der betroffenen Seite.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-strahlentherapie-applikationsart"
+        },
+        "name": "MII VS Onkologie Strahlentherapie Applikationsart",
+        "description": "oBDS-spezifisches Codesystem für Klassifikation von Applikationsart der Strahlentherapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-cs-onko-strahlentherapie-boost"
+        },
+        "name": "MII VS Onkologie Strahlentherapie Boost",
+        "description": "oBDS-spezifisches ValueSet für Klassifikation von Boosts bei Strahlentherapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-strahlentherapie-stellung"
+        },
+        "name": "MII VS Onkologie Strahlentherapie Stellung",
+        "description": "oBDS-spezifisches ValueSet für Klassifikation von Stellung zur OP",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-strahlentherapie-strahlenart"
+        },
+        "name": "MII VS Onkologie Strahlentherapie Strahlenart",
+        "description": "oBDS-spezifisches ValueSet für Klassifikation von Strahlenart bei Strahlentherapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-strahlentherapie-strahlungseinheit"
+        },
+        "name": "MII VS Onkologie Strahlentherapie Strahlungseinheit",
+        "description": "oBDS-spezifisches ValueSet für Klassifikation von Strahlenart bei Strahlungseinheit",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-strahlentherapie-zielgebiet"
+        },
+        "name": "MII VS Onkologie Strahlentherapie Zielgebiet",
+        "description": "oBDS-spezifisches ValueSet für Klassifikation von Zielgebiet bei Strahlentherapie",
         "exampleBoolean": false
       }
     ],

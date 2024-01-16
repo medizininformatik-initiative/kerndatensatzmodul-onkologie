@@ -49,17 +49,29 @@
   "differential": {
     "element": [
       {
-        "id": "Procedure.extension:MII_EX_Onko_Strahlentherapie_Stellung",
+        "id": "Procedure.extension:Stellung",
         "path": "Procedure.extension",
-        "sliceName": "MII_EX_Onko_Strahlentherapie_Stellung",
+        "sliceName": "Stellung",
         "min": 0,
         "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/core/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellung"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
-        "id": "Procedure.extension:MII_EX_Onko_Strahlentherapie_Stellung.url",
-        "path": "Procedure.extension.url",
-        "fixedUri": "MII_EX_Onko_Strahlentherapie_Stellung"
+        "id": "Procedure.performed[x]",
+        "path": "Procedure.performed[x]",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ]
       }
     ]
   }

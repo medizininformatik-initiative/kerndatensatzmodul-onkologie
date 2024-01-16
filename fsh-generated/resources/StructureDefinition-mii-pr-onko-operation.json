@@ -69,17 +69,31 @@
         "min": 1
       },
       {
-        "id": "Procedure.extension:$mii-ex-onko-operation-intention",
+        "id": "Procedure.extension:Intention",
         "path": "Procedure.extension",
-        "sliceName": "$mii-ex-onko-operation-intention",
+        "sliceName": "Intention",
         "min": 1,
         "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/core/modul-onko/StructureDefinition/mii-ex-onko-operation-intention"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
-        "id": "Procedure.extension:$mii-ex-onko-operation-intention.url",
-        "path": "Procedure.extension.url",
-        "fixedUri": "$mii-ex-onko-operation-intention"
+        "id": "Procedure.extension:Intention.value[x].coding.code",
+        "path": "Procedure.extension.value[x].coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "13.1",
+            "comment": "Intention der Operation"
+          }
+        ]
       },
       {
         "id": "Procedure.code.coding:ops",
@@ -102,6 +116,22 @@
             "identity": "oBDS",
             "map": "13.4",
             "comment": "OPS Version"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.performed[x]",
+        "path": "Procedure.performed[x]",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "13.2",
+            "comment": "OP Datum"
           }
         ]
       },
@@ -143,6 +173,17 @@
         }
       },
       {
+        "id": "Procedure.complication:compl_obds.coding.system",
+        "path": "Procedure.complication.coding.system",
+        "patternUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation"
+      },
+      {
+        "id": "Procedure.complication:compl_obds.coding.code",
+        "path": "Procedure.complication.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
         "id": "Procedure.complication:compl_icd10",
         "path": "Procedure.complication",
         "sliceName": "compl_icd10",
@@ -153,6 +194,17 @@
           "strength": "required",
           "valueSet": "http://fhir.de/ValueSet/bfarm/icd-10-gm"
         }
+      },
+      {
+        "id": "Procedure.complication:compl_icd10.coding.system",
+        "path": "Procedure.complication.coding.system",
+        "min": 1,
+        "patternUri": "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
+      },
+      {
+        "id": "Procedure.complication:compl_icd10.coding.code",
+        "path": "Procedure.complication.coding.code",
+        "min": 1
       }
     ]
   }

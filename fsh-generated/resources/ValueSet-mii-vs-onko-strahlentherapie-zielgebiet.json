@@ -1,0 +1,34 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "MII_VS_Onko_Strahlentherapie_Zielgebiet",
+  "id": "mii-vs-onko-strahlentherapie-zielgebiet",
+  "title": "MII VS Onkologie Strahlentherapie Zielgebiet",
+  "description": "oBDS-spezifisches ValueSet für Klassifikation von Zielgebiet bei Strahlentherapie",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-zielgebiet",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2024.0.0-ballot",
+  "compose": {
+    "include": [
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet"
+      }
+    ]
+  }
+}
