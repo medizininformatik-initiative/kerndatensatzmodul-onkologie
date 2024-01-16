@@ -8,7 +8,7 @@ Description: "Strahlentherapie einzelner Behandlungsabschnitt der Gesamttherapie
 * ^context.type = #element
 * ^context.expression = "Procedure"
 
-extension contains
+* extension contains
     Menge_Bestrahlung 1..1 and // this might be needed for slicing
 //  Start + Ende Dauer MS and   --> laut datenmodell oBDS sinnvoll, da mehrere perionden mit der gleichen Intention 
     Zielgebiet 1..1 MS and
