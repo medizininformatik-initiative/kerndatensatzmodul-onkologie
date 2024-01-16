@@ -30,6 +30,7 @@ Alias: $ICD10GM = http://fhir.de/CodeSystem/bfarm/icd-10-gm
 Alias: $ICDO3 = http://terminology.hl7.org/CodeSystem/icd-o-3
 Alias: $LOINC = http://loinc.org
 Alias: $TNM = https://www.uicc.org/resources/tnm
+Alias: $UCUM =  http://unitsofmeasure.org
 
 //MII Onko
 Alias: $mii-cs-onko-primaertumor-diagnosesicherung = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung
