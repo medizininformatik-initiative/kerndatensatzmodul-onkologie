@@ -33,7 +33,7 @@ Description: "Strahlentherapie einzelner Behandlungsabschnitt der Gesamttherapie
 * extension[Boost] ^short = "Strahlentherapie Boost"
 * extension[Boost] ^definition = "Angabe, ob ein Boost und falls ja, welche Art von Boost appliziert wurde."
 * extension[Boost] only CodeableConcept
-* extension[Boost] from XXX 
+* extension[Boost] from MII_CS_Onko_Strahlentherapie_Boost (required) 
 * extension[radiationUnit] ^short = "Strahlentherapie Einheit"
 * extension[radiationUnit] ^definition = "Gibt die Einheit zu der Einzel- oder Gesamtdosis an, mit welcher das Zielgebiet bestrahlt wurde, bzw. bei metabolischer Therapie die Aktivität des verwendeten Radionuklids."
 * extension[radiationUnit].value[x] only CodeableConcept
