@@ -1,0 +1,11 @@
+@startuml MII KDS Erweiterungsmodul Onkologie
+object MII_Prozedur
+MII_Prozedur : performed 
+object MII_Diagnose
+object Onko_OP
+object Onko_Strahlentherapie 
+object Onko_SystemischeTherapie
+MII_Prozedur <|-- Onko_OP
+MII_Prozedur <|-- Onko_Strahlentherapie
+MII_Prozedur <|-- Onko_SystemischeTherapie
+@enduml
