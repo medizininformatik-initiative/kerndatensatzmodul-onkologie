@@ -45,7 +45,7 @@
     {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.prozedur",
       "version": "2024.0.0-ballot",
-      "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.prozedur/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.prozedur",
+      "uri": "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/ImplementationGuide/mii-ig-prozedur-de-v2024",
       "id": "de_medizininformatikinitiative_kerndatensatz_prozedur"
     },
     {
@@ -123,6 +123,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-onko-strahlentherapie-ende-grund"
+        },
+        "name": "MII CS Onkologie Strahlentherapie Ende Grund",
+        "description": "oBDS-spezifisches Codesystem für Klassifikation des Grundes der Beendigung der Strahlentherapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-onko-strahlentherapie-stellung"
         },
         "name": "MII CS Onkologie Strahlentherapie Stellung",
@@ -167,6 +175,14 @@
         },
         "name": "MII EX Onko Strahlentherapie Behandlungsabschnitt",
         "description": "Strahlentherapie einzelner Behandlungsabschnitt der Gesamttherapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-onko-strahlentherapie-intention"
+        },
+        "name": "MII EX Onko Strahlentherapie Intention",
+        "description": "Strahlentherapie Intention",
         "exampleBoolean": false
       },
       {
@@ -311,6 +327,22 @@
         },
         "name": "MII VS Onkologie Strahlentherapie Boost",
         "description": "oBDS-spezifisches ValueSet für Klassifikation von Boosts bei Strahlentherapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-strahlentherapie-ende-grund"
+        },
+        "name": "MII VS Onkologie Strahlentherapie Ende Grund",
+        "description": "oBDS-spezifisches ValueSet für Klassifikation des Grundes der Beendigung der Strahlentherapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-strahlentherapie-intention"
+        },
+        "name": "MII VS Onkologie Strahlentherapie Intention",
+        "description": "Value Set für oBDS-Codes für Klassifikation von Intention der Strahlentherapie",
         "exampleBoolean": false
       },
       {

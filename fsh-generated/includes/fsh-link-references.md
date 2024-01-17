@@ -6,12 +6,14 @@
 [MII_CS_Onko_Primaertumor_Seitenlokalisation]: CodeSystem-mii-cs-onko-primaertumor-seitenlokalisation.html
 [MII_CS_Onko_Strahlentherapie_Applikationsart]: CodeSystem-mii-cs-onko-strahlentherapie-applikationsart.html
 [MII_CS_Onko_Strahlentherapie_Boost]: CodeSystem-mii-cs-onko-strahlentherapie-boost.html
+[MII_CS_Onko_Strahlentherapie_Ende_Grund]: CodeSystem-mii-cs-onko-strahlentherapie-ende-grund.html
 [MII_CS_Onko_Strahlentherapie_Stellung]: CodeSystem-mii-cs-onko-strahlentherapie-stellung.html
 [MII_CS_Onko_Strahlentherapie_Strahlenart]: CodeSystem-mii-cs-onko-strahlentherapie-strahlenart.html
 [MII_CS_Onko_Strahlentherapie_Zielgebiet]: CodeSystem-mii-cs-onko-strahlentherapie-zielgebiet.html
 [MII_EX_Onko_Operation_Intention]: StructureDefinition-mii-ex-onko-operation-intention.html
 [MII_EX_Onko_Strahlentherapie_Applikationsart]: StructureDefinition-mii-ex-onko-strahlentherapie-applikationsart.html
 [MII_EX_Onko_Strahlentherapie_Behandlungsabschnitt]: StructureDefinition-mii-ex-onko-strahlentherapie-behandlungsabschnitt.html
+[MII_EX_Onko_Strahlentherapie_Intention]: StructureDefinition-mii-ex-onko-strahlentherapie-intention.html
 [MII_EX_Onko_Strahlentherapie_Stellung]: StructureDefinition-mii-ex-onko-strahlentherapie-stellung.html
 [MII_LM_Onko]: StructureDefinition-mii-lm-onko.html
 [MII_PR_Onko_Anzahl_Befallene_Lymphknoten]: StructureDefinition-mii-pr-onko-anzahl-befallene-lymphknoten.html
@@ -30,6 +32,8 @@
 [MII_VS_Onko_Primaertumor_Seitenlokalisation]: ValueSet-mii-vs-onko-primaertumor-seitenlokalisation.html
 [MII_VS_Onko_Strahlentherapie_Applikationsart]: ValueSet-mii-vs-onko-strahlentherapie-applikationsart.html
 [MII_VS_Onko_Strahlentherapie_Boosts]: ValueSet-mii-cs-onko-strahlentherapie-boost.html
+[MII_VS_Onko_Strahlentherapie_Ende_Grund]: ValueSet-mii-vs-onko-strahlentherapie-ende-grund.html
+[MII_VS_Onko_Strahlentherapie_Intention]: ValueSet-mii-vs-onko-strahlentherapie-intention.html
 [MII_VS_Onko_Strahlentherapie_Stellung]: ValueSet-mii-vs-onko-strahlentherapie-stellung.html
 [MII_VS_Onko_Strahlentherapie_Strahlenart]: ValueSet-mii-vs-onko-strahlentherapie-strahlenart.html
 [MII_VS_Onko_Strahlentherapie_Strahlungseinheit]: ValueSet-mii-vs-onko-strahlentherapie-strahlungseinheit.html
