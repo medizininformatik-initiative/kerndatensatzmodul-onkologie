@@ -8,20 +8,24 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 * ^status = #draft
 
 // Logical Modell see:  https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532153/Strahlentherapie+ST+Typ
-// Intention der Strahlentherapie #XRayXtension --> alles mit #XRayXtension soll in eine gemeinsame Extension
-//* extension contains $mii-ex-onko-strahlentherapie-intention 1..1 MS --> not sure
-  
+// Intention der Strahlentherapie 
+* extension contains mii-ex-onko-strahlentherapie-intention named Intention 1..1 
+* extension[Intention] MS
 
-// Strahlentherapie Stellung zu operativer Therapie // ggfs. auch #XRayXtension
+// Strahlentherapie Stellung zu operativer Therapie
 * extension contains MII_EX_Onko_Strahlentherapie_Stellung named Stellung 0.. 
 * extension[Stellung] MS 
 
+* extension contains mii-ex-onko-strahlentherapie-behandlungsabschnitt named Behandlungsabschnitt 1..
+* extension[Behandlungsabschnitt] MS
+* extension[Behandlungsabschnitt] 1..*
+
 // Strahlentherapie Zielgebiet #XRayXtension
-//TODO --> die MII Prozedur sieht bei bodysite eine Kodierung durch SNOMED vor, bound ex
+//TODO --> die MII Prozedur sieht bei bodysite eine Kodierung durch SNOMED vor, bound explicitly to SNOMED
 // ggfs. kann man hier ein CodeSystem mit den oBDS machen und ein ValueSet einbinden, dass sowohl dass SNOMED Codesystem als auch das oBDS-Codesystem mit einbindet. 
 
 // Strahlentherapie Seite Zielgebiet #XRayXtension
-// --> bei Bestrahlung mit mehreren Zielgebiet
+// --> bei Bestrahlung mit mehreren Zielgebieten muss das klar sein
 
 // ggfs. aus input/fsh/oBDS/05_Diagnose/mii-cs-onko-primaertumor-seitenlokalisation.fsh übernehmen
 

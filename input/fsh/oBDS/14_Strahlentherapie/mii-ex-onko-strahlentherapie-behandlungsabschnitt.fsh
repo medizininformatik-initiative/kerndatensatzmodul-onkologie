@@ -7,6 +7,9 @@ Description: "Strahlentherapie einzelner Behandlungsabschnitt der Gesamttherapie
 * insert Publisher
 * ^context.type = #element
 * ^context.expression = "Procedure"
+* extension ^slicing.discriminator.type = #pattern
+* extension ^slicing.discriminator.path = "$this"
+* extension ^slicing.rules = #open
 
 * extension contains
 //   Menge_Bestrahlung 1..1 and // this might be needed for slicing
