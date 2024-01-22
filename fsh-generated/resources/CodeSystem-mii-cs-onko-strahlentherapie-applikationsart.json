@@ -1,0 +1,129 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "MII_CS_Onko_Strahlentherapie_Applikationsart",
+  "id": "mii-cs-onko-strahlentherapie-applikationsart",
+  "title": "MII CS Onkologie Strahlentherapie Applikationsart",
+  "description": "oBDS-spezifisches Codesystem für Klassifikation von Intention der OP",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-strahlentherapie-applikationsart",
+  "concept": [
+    {
+      "code": "P",
+      "display": "perkutan (Teletherapie)"
+    },
+    {
+      "code": "P-ST",
+      "display": "perkutan stereotaktisch"
+    },
+    {
+      "code": "P-4D",
+      "display": "perkutan, atemgetriggert"
+    },
+    {
+      "code": "P-ST4D",
+      "display": "perkutan, stereotaktisch, atemgetriggert"
+    },
+    {
+      "code": "PRCN-ST",
+      "display": "perkutan, stereotaktisch ohne Chemotherapie/Sensitizer"
+    },
+    {
+      "code": "PRCN-4D",
+      "display": "perkutan, atemgetriggert, ohne Chemotherapie/Sensitizer"
+    },
+    {
+      "code": "PRCN-ST4D",
+      "display": "perkutan, stereotaktisch, atemgetriggert, ohne Chemotherapie/Sensitizer"
+    },
+    {
+      "code": "PRCJ",
+      "display": "perkutan mit Chemotherapie/Sensitizer"
+    },
+    {
+      "code": "PRCJ-4D",
+      "display": "perkutan, atemgetriggert, mit Chemotherapie/Sensitizer"
+    },
+    {
+      "code": "K",
+      "display": "endokavitäre Kontakttherapie"
+    },
+    {
+      "code": "KHDR",
+      "display": "endokavitäre Kontakttherapie, high dose rate therapy"
+    },
+    {
+      "code": "KLDR",
+      "display": "endokavitäre Kontakttherapie, low dose rate therapy"
+    },
+    {
+      "code": "KPDR",
+      "display": "endokavitäre Kontakttherapie, pulsed dose rate therapy"
+    },
+    {
+      "code": "I",
+      "display": "intersitielle Kontakttherapie"
+    },
+    {
+      "code": "IHDR",
+      "display": "intersitielle Kontakttherapie, high dose rate therapy"
+    },
+    {
+      "code": "ILDR",
+      "display": "intersitielle Kontakttherapie, low dose rate therapy"
+    },
+    {
+      "code": "IPDR",
+      "display": "intersitielle Kontakttherapie, pulsed dose rate therapy"
+    },
+    {
+      "code": "MSIRT",
+      "display": "selektive interne Radio-Therapie"
+    },
+    {
+      "code": "MPRRT",
+      "display": "Peptid-Radio-Rezeptor-Therapie"
+    },
+    {
+      "code": "MPSMA",
+      "display": "PSMA-Therapie"
+    },
+    {
+      "code": "MRJT",
+      "display": "Radiojod-Therapie"
+    },
+    {
+      "code": "MRIT",
+      "display": "Radioimmun-Therapie"
+    },
+    {
+      "code": "M",
+      "display": "sonstige metabolische Radionuklidtherapie"
+    },
+    {
+      "code": "S",
+      "display": "Sonstiges"
+    }
+  ],
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2024.0.0-ballot",
+  "caseSensitive": true,
+  "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-applikationsart",
+  "count": 24
+}

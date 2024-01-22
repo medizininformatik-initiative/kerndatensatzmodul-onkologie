@@ -1,0 +1,105 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "MII_CS_Onko_Strahlentherapie_Strahlenart",
+  "id": "mii-cs-onko-strahlentherapie-strahlenart",
+  "title": "MII CS Onkologie Strahlentherapie Strahlenart",
+  "description": "oBDS-spezifisches Codesystem für Klassifikation von eingesetzter Strahlenart",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-strahlentherapie-strahlenart",
+  "concept": [
+    {
+      "code": "UH",
+      "display": "Photonen (ultraharte Röntgenstrahlen, inklusive Gamma-Strahler)"
+    },
+    {
+      "code": "EL",
+      "display": "Elektronen"
+    },
+    {
+      "code": "NE",
+      "display": "Neutronen"
+    },
+    {
+      "code": "PN",
+      "display": "Protonen (leichte Wasserstoffionen/H1/Leichtionen)"
+    },
+    {
+      "code": "SI",
+      "display": "Schwerionen (schwere Kohlenstoff-Ionen/C12/Sauerstoffionen/Heliumionen)"
+    },
+    {
+      "code": "RO",
+      "display": "Weichstrahl (kV)"
+    },
+    {
+      "code": "SO",
+      "display": "Sonstige (inklusive Mixed Beams, exklusive Nuklide)"
+    },
+    {
+      "code": "Lu-177",
+      "display": "Lu-177"
+    },
+    {
+      "code": "J-131",
+      "display": "J131"
+    },
+    {
+      "code": "Y-90",
+      "display": "Y-90"
+    },
+    {
+      "code": "Ra-223",
+      "display": "Ra-223"
+    },
+    {
+      "code": "Ac-225",
+      "display": "Ac-225"
+    },
+    {
+      "code": "Sm-153",
+      "display": "Sm-153"
+    },
+    {
+      "code": "Tb-161",
+      "display": "Tb-161"
+    },
+    {
+      "code": "Sr-89",
+      "display": "Sr-89"
+    },
+    {
+      "code": "Ir-192",
+      "display": "Ir-192"
+    },
+    {
+      "code": "Co-60",
+      "display": "Co-60"
+    },
+    {
+      "code": "SONU",
+      "display": "Sonstige Nuklide"
+    }
+  ],
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2024.0.0-ballot",
+  "caseSensitive": true,
+  "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-strahlenart",
+  "count": 18
+}
