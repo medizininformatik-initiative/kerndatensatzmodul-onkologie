@@ -1,0 +1,56 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "MII_VS_Onko_TNM_S_Kategorie_Werte",
+  "id": "mii-vs-onko-tnm-s-kategorie-werte",
+  "title": "MII VS Onkologie TNM S Kategorie Werte",
+  "description": "Das ValueSet enthält die TNM Codes für Serumtumormarker aus der UICC TNM - Klassifikation maligner Tumoren Achte Auflage.",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-s-kategorie-werte",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2024.0.0-ballot",
+  "compose": {
+    "include": [
+      {
+        "system": "https://www.uicc.org/resources/tnm",
+        "concept": [
+          {
+            "code": "S0",
+            "display": "S0"
+          },
+          {
+            "code": "S1",
+            "display": "S1"
+          },
+          {
+            "code": "S2",
+            "display": "S2"
+          },
+          {
+            "code": "S3",
+            "display": "S3"
+          },
+          {
+            "code": "SX",
+            "display": "SX"
+          }
+        ]
+      }
+    ]
+  }
+}

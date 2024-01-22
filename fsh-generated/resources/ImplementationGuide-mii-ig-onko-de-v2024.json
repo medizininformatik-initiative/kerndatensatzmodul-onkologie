@@ -59,6 +59,14 @@
     "resource": [
       {
         "reference": {
+          "reference": "ConceptMap/mii-cm-onko-tnm-uicc-snomed"
+        },
+        "name": "MII CM Onko TNM UICC SNOMED",
+        "description": "Mapping TNM UICC Codes zu SNOMED-CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-onko-strahlentherapie-intention"
         },
         "name": "MII CS Onko StrahlentherapieIntention",
@@ -155,6 +163,22 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-onko-tnm-uicc"
+        },
+        "name": "MII CS Onkologie TNM UICC",
+        "description": "Codes für TNM UICC Ausprägungen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-tnm-version"
+        },
+        "name": "MII CS Onkologie TNM Version",
+        "description": "Codes für TNM Version/Auflage nach welcher Version des TNM klassifiziert wird.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-ex-onko-operation-intention"
         },
         "name": "MII EX Onko Operation Intention",
@@ -191,6 +215,30 @@
         },
         "name": "MII EX Onko Strahlentherapie Stellung",
         "description": "Strahlentherapie Stellung zur OP",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-onko-tnm-cp-praefix"
+        },
+        "name": "MII EX Onkologie TNM c/p Präfix",
+        "description": "Die Extension verleiht einer TNM T-, N- oder M-Kategorie ein c, p oder u Präfix.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-onko-tnm-itc-suffix"
+        },
+        "name": "MII EX Onkologie TNM ITC Suffix",
+        "description": "Die Extension verleiht TNM N- und M-Kategorien isolierte Tumorzellen (ITC) Suffixe.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-onko-tnm-sn-suffix"
+        },
+        "name": "MII EX Onkologie TNM SN Suffix",
+        "description": "Die Extension verleiht der TNM N-Kategorie das Schildwächterlymphknoten (Sentinel Lymph Node) Suffix.",
         "exampleBoolean": false
       },
       {
@@ -235,6 +283,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-befund"
+        },
+        "name": "MII PR Onkologie Befund",
+        "description": "Histologie: Befund. Vollständiger Befundbericht des Pathologen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-diagnose"
         },
         "name": "MII PR Onkologie Diagnose",
@@ -271,6 +327,102 @@
         },
         "name": "MII PR Onkologie Strahlentherapie",
         "description": "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie in der Onkologie.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-tnm-a-symbol"
+        },
+        "name": "MII PR Onkologie TNM a-Symbol",
+        "description": "TNM-Klassifikation: TNM a-Symbol. Gibt an, ob die Klassifikation aus Anlass einer Autopsie erfolgte.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-tnm-l-kategorie"
+        },
+        "name": "MII PR Onkologie TNM L-Kategorie",
+        "description": "TNM-Klassifikation: TNM L-Kategorie. Lymphgefäßinvasion.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-tnm-m-kategorie"
+        },
+        "name": "MII PR Onkologie TNM M-Kategorie",
+        "description": "TNM-Klassifikation: TNM M-Kategorie. Fehlen oder Vorhandensein von Fernmetastasen, gemäß Tumorentität nach TNM.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-tnm-m-symbol"
+        },
+        "name": "MII PR Onkologie TNM m-Symbol",
+        "description": "TNM-Klassifikation: TNM m-Symbol. Kennzeichnet Vorhandensein multipler Primärtumoren in einem anatomischen Bezirk.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-tnm-n-kategorie"
+        },
+        "name": "MII PR Onkologie TNM N-Kategorie",
+        "description": "TNM-Klassifikation: TNM N-Kategorie. Ausbreitung von regionären Lymphknotenmetastasen, erfolgt gemäß Tumorentität nach TNM.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-tnm-pn-kategorie"
+        },
+        "name": "MII PR Onkologie TNM Pn-Kategorie",
+        "description": "TNM-Klassifikation: TNM Pn-Kategorie. Perineuralinvasion.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-tnm-r-symbol"
+        },
+        "name": "MII PR Onkologie TNM r-Symbol",
+        "description": "TNM-Klassifikation: TNM r-Symbol. Gibt an, ob die Klassifikation ein Rezidiv beurteilt.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-tnm-s-kategorie"
+        },
+        "name": "MII PR Onkologie TNM S-Kategorie",
+        "description": "TNM-Klassifikation: TNM S-Kategorie. Serumtumormarker.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-tnm-t-kategorie"
+        },
+        "name": "MII PR Onkologie TNM T-Kategorie",
+        "description": "TNM-Klassifikation: TNM T-Kategorie. Ausbreitung des Primärtumors, erfolgt gemäß Tumorentität nach TNM.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-tnm-v-kategorie"
+        },
+        "name": "MII PR Onkologie TNM V-Kategorie",
+        "description": "TNM-Klassifikation: TNM V-Kategorie. Veneninvasion.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-tnm-y-symbol"
+        },
+        "name": "MII PR Onkologie TNM y-Symbol",
+        "description": "TNM-Klassifikation: TNM y-Symbol. Gibt an, ob die Klassifikation während oder nach initialer multimodaler Therapie erfolgte.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-tnm-klassifikation"
+        },
+        "name": "MII PR Onkologie TNM-Klassifikation",
+        "description": "TNM-Klassifikation: Grouper-Profil für Komponenten der TNM-Klassifikation.",
         "exampleBoolean": false
       },
       {
@@ -376,6 +528,219 @@
         "name": "MII VS Onkologie Strahlentherapie Zielgebiet",
         "description": "oBDS-spezifisches ValueSet für Klassifikation von Zielgebiet bei Strahlentherapie",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-tnm-cp-praefix"
+        },
+        "name": "MII VS Onkologie TNM cpu Praefix",
+        "description": "Codes für TNM c/p-Präfix. Gibt an, ob die Klassifikation klinisch oder pathologisch erfolgte.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-tnm-itc-suffix"
+        },
+        "name": "MII VS Onkologie TNM ITC Suffix",
+        "description": "Das ValueSet enthält die isolierten Tumorzellen (ITC) Suffixe für die N- und M-Kategorien aus der UICC TNM - Klassifikation maligner Tumoren Achte Auflage.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-tnm-klassifikation-typ"
+        },
+        "name": "MII VS Onkologie TNM Klassifikation Typ",
+        "description": "Codes für TNM-Klassifikation Typ. Gibt an, ob die Klassifikation klinisch oder pathologisch erfolgte.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-tnm-l-kategorie-werte"
+        },
+        "name": "MII VS Onkologie TNM L Kategorie Werte",
+        "description": "Das ValueSet enthält die TNM Codes für die Beurteilung der Lymphgefäßinvasion aus der UICC TNM - Klassifikation maligner Tumoren Achte Auflage.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-tnm-m-kategorie"
+        },
+        "name": "MII VS Onkologie TNM M Kategorie",
+        "description": "Codes für Codes zur Differenzierung der TNM M-Kategorie als entweder klinisch (cN) oder pathologisch (pN)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-tnm-m-kategorie-werte"
+        },
+        "name": "MII VS Onkologie TNM M Kategorie Werte",
+        "description": "Das ValueSet enthält die TNM M-Kategorie Codes aus der UICC TNM - Klassifikation maligner Tumoren Achte Auflage.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-tnm-m-symbol"
+        },
+        "name": "MII VS Onkologie TNM m-Symbol",
+        "description": "Kennzeichnet Vorhandensein multipler Primärtumoren in einem anatomischen Bezirk.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-tnm-n-kategorie"
+        },
+        "name": "MII VS Onkologie TNM N Kategorie",
+        "description": "Codes für Codes zur Differenzierung der TNM N-Kategorie als entweder klinisch (cN) oder pathologisch (pN)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-tnm-n-kategorie-werte"
+        },
+        "name": "MII VS Onkologie TNM N Kategorie Werte",
+        "description": "Das ValueSet enthält die TNM N-Kategorie Codes aus der UICC TNM - Klassifikation maligner Tumoren Achte Auflage.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-tnm-pn-kategorie-werte"
+        },
+        "name": "MII VS Onkologie TNM Pn Kategorie Werte",
+        "description": "Das ValueSet enthält die TNM Codes für den Grad der perineuralen Invasion aus der UICC TNM - Klassifikation maligner Tumoren Achte Auflage.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-tnm-s-kategorie-werte"
+        },
+        "name": "MII VS Onkologie TNM S Kategorie Werte",
+        "description": "Das ValueSet enthält die TNM Codes für Serumtumormarker aus der UICC TNM - Klassifikation maligner Tumoren Achte Auflage.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-tnm-sn-suffix"
+        },
+        "name": "MII VS Onkologie TNM SN Suffix",
+        "description": "Das ValueSet enthält das Schildwächterlymphknoten (Sentinel Lymph Node) Suffix für die N-Kategorie aus der UICC TNM - Klassifikation maligner Tumoren Achte Auflage.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-tnm-t-kategorie"
+        },
+        "name": "MII VS Onkologie TNM T Kategorie",
+        "description": "Codes für Codes zur Differenzierung der TNM T-Kategorie als entweder klinisch (cT) oder pathologisch (pT)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-tnm-t-kategorie-werte"
+        },
+        "name": "MII VS Onkologie TNM T Kategorie Werte",
+        "description": "Das ValueSet enthält die TNM T-Kategorie Codes aus der UICC TNM - Klassifikation maligner Tumoren Achte Auflage.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-tnm-uicc-stadium"
+        },
+        "name": "MII VS Onkologie TNM UICC Stadium",
+        "description": "The ValueSet enthält Codes für die TNM-Stadien zur prognostischen Gruppeneinteilung von Patienten.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-tnm-v-kategorie-werte"
+        },
+        "name": "MII VS Onkologie TNM V Kategorie Werte",
+        "description": "Das ValueSet enthält die TNM Codes für die Beurteilung der Veneninvasion aus der UICC TNM - Klassifikation maligner Tumoren Achte Auflage.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-tnm-version"
+        },
+        "name": "MII VS Onkologie TNM Version",
+        "description": "Codes für TNM Version/Auflage nach welcher Version des TNM klassifiziert wird.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-anzahl-befallene-lymphknoten-0"
+        },
+        "name": "mii-exa-onko-anzahl-befallene-lymphknoten-0",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-befallene-lymphknoten"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-anzahl-untersuchte-lymphknoten-23"
+        },
+        "name": "mii-exa-onko-anzahl-untersuchte-lymphknoten-23",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-untersuchte-lymphknoten"
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-onko-diagnose"
+        },
+        "name": "mii-exa-onko-diagnose",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-klassifikation-TisN0M0"
+        },
+        "name": "mii-exa-onko-tnm-klassifikation-TisN0M0",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-klassifikation-uT2a2pN0023i-sncM1"
+        },
+        "name": "mii-exa-onko-tnm-klassifikation-uT2a2pN0023i-sncM1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-m-kategorie-cM1"
+        },
+        "name": "mii-exa-onko-tnm-m-kategorie-cM1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-m-kategorie-M0"
+        },
+        "name": "mii-exa-onko-tnm-m-kategorie-M0",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-n-kategorie-N0"
+        },
+        "name": "mii-exa-onko-tnm-n-kategorie-N0",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-n-kategorie-pN0i-sn"
+        },
+        "name": "mii-exa-onko-tnm-n-kategorie-pN0i-sn",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-t-kategorie-Tis"
+        },
+        "name": "mii-exa-onko-tnm-t-kategorie-Tis",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-t-kategorie-uT2a2"
+        },
+        "name": "mii-exa-onko-tnm-t-kategorie-uT2a2",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
       }
     ],
     "page": {

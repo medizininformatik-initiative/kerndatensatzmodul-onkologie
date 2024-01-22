@@ -1,0 +1,96 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "MII_VS_Onko_TNM_N_Kategorie_Werte",
+  "id": "mii-vs-onko-tnm-n-kategorie-werte",
+  "title": "MII VS Onkologie TNM N Kategorie Werte",
+  "description": "Das ValueSet enthält die TNM N-Kategorie Codes aus der UICC TNM - Klassifikation maligner Tumoren Achte Auflage.",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-n-kategorie-werte",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2024.0.0-ballot",
+  "compose": {
+    "include": [
+      {
+        "system": "https://www.uicc.org/resources/tnm",
+        "concept": [
+          {
+            "code": "NX",
+            "display": "Nx"
+          },
+          {
+            "code": "N0",
+            "display": "N0"
+          },
+          {
+            "code": "N1",
+            "display": "N1"
+          },
+          {
+            "code": "N1mi",
+            "display": "N1(mi)"
+          },
+          {
+            "code": "N1a",
+            "display": "N1a"
+          },
+          {
+            "code": "N1b",
+            "display": "N1b"
+          },
+          {
+            "code": "N1c",
+            "display": "N1c"
+          },
+          {
+            "code": "N2",
+            "display": "N2"
+          },
+          {
+            "code": "N2a",
+            "display": "N2a"
+          },
+          {
+            "code": "N2b",
+            "display": "N2b"
+          },
+          {
+            "code": "N2c",
+            "display": "N2c"
+          },
+          {
+            "code": "N3",
+            "display": "N3"
+          },
+          {
+            "code": "N3a",
+            "display": "N3a"
+          },
+          {
+            "code": "N3b",
+            "display": "N3b"
+          },
+          {
+            "code": "N3c",
+            "display": "N3c"
+          }
+        ]
+      }
+    ]
+  }
+}

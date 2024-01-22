@@ -1,0 +1,52 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "MII_VS_Onko_TNM_ITC_Suffix",
+  "id": "mii-vs-onko-tnm-itc-suffix",
+  "title": "MII VS Onkologie TNM ITC Suffix",
+  "description": "Das ValueSet enthält die isolierten Tumorzellen (ITC) Suffixe für die N- und M-Kategorien aus der UICC TNM - Klassifikation maligner Tumoren Achte Auflage.",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-itc-suffix",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2024.0.0-ballot",
+  "compose": {
+    "include": [
+      {
+        "system": "https://www.uicc.org/resources/tnm",
+        "concept": [
+          {
+            "code": "i+",
+            "display": "(i+)"
+          },
+          {
+            "code": "i-",
+            "display": "(i-)"
+          },
+          {
+            "code": "mol+",
+            "display": "(mol+)"
+          },
+          {
+            "code": "mol-",
+            "display": "(mol-)"
+          }
+        ]
+      }
+    ]
+  }
+}

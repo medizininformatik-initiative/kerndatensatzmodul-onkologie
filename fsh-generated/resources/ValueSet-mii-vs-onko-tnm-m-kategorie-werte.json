@@ -1,0 +1,64 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "MII_VS_Onko_TNM_M_Kategorie_Werte",
+  "id": "mii-vs-onko-tnm-m-kategorie-werte",
+  "title": "MII VS Onkologie TNM M Kategorie Werte",
+  "description": "Das ValueSet enthält die TNM M-Kategorie Codes aus der UICC TNM - Klassifikation maligner Tumoren Achte Auflage.",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-m-kategorie-werte",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2024.0.0-ballot",
+  "compose": {
+    "include": [
+      {
+        "system": "https://www.uicc.org/resources/tnm",
+        "concept": [
+          {
+            "code": "M0",
+            "display": "M0"
+          },
+          {
+            "code": "M1",
+            "display": "M1"
+          },
+          {
+            "code": "M1a",
+            "display": "M1a"
+          },
+          {
+            "code": "M1b",
+            "display": "M1b"
+          },
+          {
+            "code": "M1c",
+            "display": "M1c"
+          },
+          {
+            "code": "M1d",
+            "display": "M1d"
+          },
+          {
+            "code": "MX",
+            "display": "MX"
+          }
+        ]
+      }
+    ]
+  }
+}
