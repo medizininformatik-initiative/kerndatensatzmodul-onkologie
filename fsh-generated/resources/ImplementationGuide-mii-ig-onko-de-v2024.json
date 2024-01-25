@@ -59,6 +59,14 @@
     "resource": [
       {
         "reference": {
+          "reference": "Procedure/mii-exa-onko-systemische-therapie"
+        },
+        "name": "Example systemic therapy",
+        "description": "Example systemic therapy",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-onko-strahlentherapie-intention"
         },
         "name": "MII CS Onko StrahlentherapieIntention",
@@ -319,6 +327,14 @@
         },
         "name": "MII PR Onkologie Strahlentherapie",
         "description": "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie in der Onkologie.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-systemische-therapie"
+        },
+        "name": "MII PR Onkologie Systemische Therapie",
+        "description": "Systemische Therapie. Dieses Profil beschreibt eine Systemische Therapie für den oBDS. Da die Granularität der Anforderungen des oBDS nicht deckungsgleich mit den FHIR-Profilen für Medikation sind, wurde die Systemische Therapie als Prozedur umgesetzt",
         "exampleBoolean": false
       },
       {
