@@ -16,17 +16,19 @@ Description: "Systemische Therapie. Dieses Profil beschreibt eine Systemische Th
 * extension contains MII_EX_Onko_Strahlentherapie_Stellung named Stellung 0.. // hier ggfs Refactoren auf ein gemeinsames Code System mit unterschiedlicheN Value Sets
 * extension[Stellung] MS 
 
+* code MS 
 
-// Strahlentherapie Beginn und Ende
+// Systemische Therapie Beginn und Ende
 * performed[x] MS 
-* performed[x] only Period //  wird über Period.start und Period.stop des MII Prozedurmoduls erfasst
-* 
+* performed[x] only Period // wird über Period.start und Period.stop des MII Prozedurmoduls erfasst
+* performed[x].start 1..1 MS
+* performed[x].end 0..1 MS
 // Systemische Therapie Protokoll
 * instantiatesUri MS // String
 
 // Systemische Therapie Substanz
 * usedCode MS 
-// 0..* contains  --> Watchful Waiting hat z.B. keine Substanz
+// 0..* contains  --> Watchful Waiting hat z.B.gar keine Substanz
 //* ATC Code or
 //* String (one String per Medication)
 
