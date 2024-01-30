@@ -14,6 +14,7 @@ Description: "Strahlentherapie einzelner Behandlungsabschnitt der Gesamttherapie
 * extension contains
 //   Menge_Bestrahlung 1..1 and // this might be needed for slicing
 //  Start + Ende Dauer MS and   --> laut datenmodell oBDS sinnvoll, da mehrere perionden mit der gleichen Intention 
+    Applikationsart 1..1 MS and
     Zielgebiet 1..1 MS and
     Zielgebiet_Lateralitaet 0..1 MS and
     Gesamtdosis 0..1 MS and
@@ -21,6 +22,9 @@ Description: "Strahlentherapie einzelner Behandlungsabschnitt der Gesamttherapie
     Boost 0..1 MS and
     radiationUnit 1..1 MS
 //* extension[Menge_Strahlentherapie] = only unsigned    
+* extension[Applikationsart] ^short = "Strahlentherapie Applikationsart"
+* extension[Applikationsart] ^definition = "Gibt an, mit welcher Technik die Strahlentherapie durchgeführt wurde."
+* extension[Applikationsart].value[x] from $mii-vs-onko-strahlentherapie-applikationsart (required)
 * extension[Zielgebiet] ^short = "Strahlentherapie Zielgebiet"
 * extension[Zielgebiet] ^definition = "Gibt an, an welcher anatomischen Region die Bestrahlung durchgeführt wurde."
 * extension[Zielgebiet].value[x] from $mii-vs-onko-strahlentherapie-zielgebiet (required)
