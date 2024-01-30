@@ -83,6 +83,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-onko-systemische-therapie-intention"
+        },
+        "name": "MII CS Onko Systemische Therapie Intention",
+        "description": "Intention für eine systemische oder abwartende Therapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-onko-grading"
         },
         "name": "MII CS Onkologie Grading",
@@ -171,6 +179,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-onko-systemische-therapie-stellung"
+        },
+        "name": "MII CS Onkologie Systemische Therapie  Stellung",
+        "description": "oBDS-spezifisches Codesystem für Klassifikation von Stellung zur OP",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-onko-tnm-uicc"
         },
         "name": "MII CS Onkologie TNM UICC",
@@ -223,6 +239,22 @@
         },
         "name": "MII EX Onko Strahlentherapie Stellung",
         "description": "Strahlentherapie Stellung zur OP",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-onko-systemische-therapie-intention"
+        },
+        "name": "MII EX Onko Systemische Therapie Intention",
+        "description": "Systemische Therapie Intention",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-onko-systemische-therapie-stellung"
+        },
+        "name": "MII EX Onko Systemische Therapie Stellung",
+        "description": "Systemische Therapie Stellung zur OP",
         "exampleBoolean": false
       },
       {
@@ -343,6 +375,14 @@
         },
         "name": "MII PR Onkologie Systemische Therapie",
         "description": "Systemische Therapie. Dieses Profil beschreibt eine Systemische Therapie für den oBDS. Da die Granularität der Anforderungen des oBDS nicht deckungsgleich mit den FHIR-Profilen für Medikation sind, wurde die Systemische Therapie als Prozedur umgesetzt",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
+        },
+        "name": "MII PR Onkologie Systemische Therapie Medikation",
+        "description": "Medikation der Systemische Therapie. Dieses Profil beschreibt die konkreten Medikationen, die im Rahmen der systemische Therapie für den oBDS dokumentiert werden.  Da im oBDS systemische und abwartende Therapie in einem Feld gruppiert sind, werden die Daten für die Systemische und abwartende Therapie sowohl über eine FHIR-Prozedur (systemisch und abwartend) als auch als FHIR-Medikation abgedeckt. ",
         "exampleBoolean": false
       },
       {
@@ -543,6 +583,22 @@
         },
         "name": "MII VS Onkologie Strahlentherapie Zielgebiet",
         "description": "oBDS-spezifisches ValueSet für Klassifikation von Zielgebiet bei Strahlentherapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-systemische-therapie-intention"
+        },
+        "name": "MII VS Onkologie Systemische Therapie Intention",
+        "description": "Value Set für oBDS-Codes für Klassifikation von Intention der Systemischen Therapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-systemische-therapie-stellung"
+        },
+        "name": "MII VS Onkologie Systemische Therapie Stellung",
+        "description": "oBDS-spezifisches ValueSet für Klassifikation von Stellung zur OP",
         "exampleBoolean": false
       },
       {

@@ -1,10 +1,10 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "mii-ex-onko-strahlentherapie-intention",
-  "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention",
+  "id": "mii-ex-onko-systemische-therapie-stellung",
+  "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellung",
   "version": "2024.0.0-ballot",
-  "name": "MII_EX_Onko_Strahlentherapie_Intention",
-  "title": "MII EX Onko Strahlentherapie Intention",
+  "name": "MII_EX_Onko_Systemische_Therapie_Stellung",
+  "title": "MII EX Onko Systemische Therapie Stellung",
   "status": "draft",
   "publisher": "Medizininformatik Initiative",
   "contact": [
@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Strahlentherapie Intention",
+  "description": "Systemische Therapie Stellung zur OP",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -42,8 +42,8 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "MII EX Onko Strahlentherapie Intention",
-        "definition": "Strahlentherapie Intention"
+        "short": "MII EX Onko Systemische Therapie Stellung",
+        "definition": "Systemische Therapie Stellung zur OP"
       },
       {
         "id": "Extension.extension",
@@ -53,12 +53,11 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://www.medizininformatik-initiative.de/fhir/core/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention"
+        "fixedUri": "https://www.medizininformatik-initiative.de/fhir/core/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellung"
       },
       {
         "id": "Extension.value[x]",
         "path": "Extension.value[x]",
-        "min": 1,
         "type": [
           {
             "code": "CodeableConcept"
@@ -66,14 +65,14 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-intention"
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-systemische-therapie-stellung"
         }
       },
       {
         "id": "Extension.value[x].coding.system",
         "path": "Extension.value[x].coding.system",
         "min": 1,
-        "fixedUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-intention"
+        "fixedUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-systemische-therapie-stellung"
       },
       {
         "id": "Extension.value[x].coding.code",

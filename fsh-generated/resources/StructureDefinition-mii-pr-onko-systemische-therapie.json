@@ -39,6 +39,10 @@
       "identity": "v2",
       "uri": "http://hl7.org/v2",
       "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "oBDS",
+      "name": "Mapping FHIR zu oBDS"
     }
   ],
   "kind": "resource",
@@ -48,6 +52,17 @@
   "derivation": "constraint",
   "differential": {
     "element": [
+      {
+        "id": "Procedure",
+        "path": "Procedure",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "16",
+            "comment": "Systemische Therapie"
+          }
+        ]
+      },
       {
         "id": "Procedure.extension",
         "path": "Procedure.extension",
@@ -63,11 +78,22 @@
           {
             "code": "Extension",
             "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/core/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention"
+              "https://www.medizininformatik-initiative.de/fhir/core/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention"
             ]
           }
         ],
         "mustSupport": true
+      },
+      {
+        "id": "Procedure.extension:Intention.value[x].coding.code",
+        "path": "Procedure.extension.value[x].coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "16.1",
+            "comment": "Intention der systematischen Therapie"
+          }
+        ]
       },
       {
         "id": "Procedure.extension:Stellung",
@@ -79,16 +105,37 @@
           {
             "code": "Extension",
             "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/core/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellung"
+              "https://www.medizininformatik-initiative.de/fhir/core/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellung"
             ]
           }
         ],
         "mustSupport": true
       },
       {
-        "id": "Procedure.instantiatesUri",
-        "path": "Procedure.instantiatesUri",
-        "mustSupport": true
+        "id": "Procedure.extension:Stellung.value[x].coding.code",
+        "path": "Procedure.extension.value[x].coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "16.2",
+            "comment": "Systemische Therapie Stellung zu operativer Therapie"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.code.coding",
+        "path": "Procedure.code.coding"
+      },
+      {
+        "id": "Procedure.code.coding.code",
+        "path": "Procedure.code.coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "16.3",
+            "comment": "Art der systemischen oder abwartenden Therapie"
+          }
+        ]
       },
       {
         "id": "Procedure.performed[x]",
@@ -116,9 +163,12 @@
         "mustSupport": true
       },
       {
-        "id": "Procedure.usedCode",
-        "path": "Procedure.usedCode",
-        "mustSupport": true
+        "id": "Procedure.outcome.coding.code",
+        "path": "Procedure.outcome.coding.code",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-ende-grund"
+        }
       }
     ]
   }

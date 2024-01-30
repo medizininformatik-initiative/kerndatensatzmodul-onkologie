@@ -1,6 +1,7 @@
 [mii-exa-onko-systemische-therapie]: Procedure-mii-exa-onko-systemische-therapie.html
 [mii-cm-onko-tnm-uicc-snomed]: ConceptMap-mii-cm-onko-tnm-uicc-snomed.html
 [MII_CS_Onko_Strahlentherapie_Intention]: CodeSystem-mii-cs-onko-strahlentherapie-intention.html
+[MII_CS_Onko_Systemische_Therapie_Intention]: CodeSystem-mii-cs-onko-systemische-therapie-intention.html
 [MII_CS_Onko_Grading]: CodeSystem-mii-cs-onko-grading.html
 [MII_CS_Onko_Operation_Intention]: CodeSystem-mii-cs-onko-operation-intention.html
 [MII_CS_Onko_Operation_Komplikationen]: CodeSystem-mii-cs-onko-operation-komplikation.html
@@ -12,6 +13,7 @@
 [MII_CS_Onko_Strahlentherapie_Stellung]: CodeSystem-mii-cs-onko-strahlentherapie-stellung.html
 [MII_CS_Onko_Strahlentherapie_Strahlenart]: CodeSystem-mii-cs-onko-strahlentherapie-strahlenart.html
 [MII_CS_Onko_Strahlentherapie_Zielgebiet]: CodeSystem-mii-cs-onko-strahlentherapie-zielgebiet.html
+[MII_CS_Onko_Systemische_Therapie_Stellung]: CodeSystem-mii-cs-onko-systemische-therapie-stellung.html
 [MII_CS_Onko_TNM_UICC]: CodeSystem-mii-cs-onko-tnm-uicc.html
 [MII_CS_Onko_TNM_Version]: CodeSystem-mii-cs-onko-tnm-version.html
 [MII_EX_Onko_Operation_Intention]: StructureDefinition-mii-ex-onko-operation-intention.html
@@ -19,6 +21,8 @@
 [MII_EX_Onko_Strahlentherapie_Behandlungsabschnitt]: StructureDefinition-mii-ex-onko-strahlentherapie-behandlungsabschnitt.html
 [MII_EX_Onko_Strahlentherapie_Intention]: StructureDefinition-mii-ex-onko-strahlentherapie-intention.html
 [MII_EX_Onko_Strahlentherapie_Stellung]: StructureDefinition-mii-ex-onko-strahlentherapie-stellung.html
+[MII_EX_Onko_Systemische_Therapie_Intention]: StructureDefinition-mii-ex-onko-systemische-therapie-intention.html
+[MII_EX_Onko_Systemische_Therapie_Stellung]: StructureDefinition-mii-ex-onko-systemische-therapie-stellung.html
 [MII_EX_Onko_TNM_cp_Praefix]: StructureDefinition-mii-ex-onko-tnm-cp-praefix.html
 [MII_EX_Onko_TNM_ITC_Suffix]: StructureDefinition-mii-ex-onko-tnm-itc-suffix.html
 [MII_EX_Onko_TNM_SN_Suffix]: StructureDefinition-mii-ex-onko-tnm-sn-suffix.html
@@ -34,6 +38,7 @@
 [MII_PR_Onko_Specimen]: StructureDefinition-mii-pr-onko-specimen.html
 [MII_PR_Onko_Strahlentherapie]: StructureDefinition-mii-pr-onko-strahlentherapie.html
 [MII_PR_Onko_Systemische_Therapie]: StructureDefinition-mii-pr-onko-systemische-therapie.html
+[MII_PR_Onko_Systemische_Therapie_Medikation]: StructureDefinition-mii-pr-onko-systemische-therapie-medikation.html
 [MII_PR_Onko_TNM_a_Symbol]: StructureDefinition-mii-pr-onko-tnm-a-symbol.html
 [MII_PR_Onko_TNM_L_Kategorie]: StructureDefinition-mii-pr-onko-tnm-l-kategorie.html
 [MII_PR_Onko_TNM_M_Kategorie]: StructureDefinition-mii-pr-onko-tnm-m-kategorie.html
@@ -59,6 +64,8 @@
 [MII_VS_Onko_Strahlentherapie_Strahlenart]: ValueSet-mii-vs-onko-strahlentherapie-strahlenart.html
 [MII_VS_Onko_Strahlentherapie_Strahlungseinheit]: ValueSet-mii-vs-onko-strahlentherapie-strahlungseinheit.html
 [MII_VS_Onko_Strahlentherapie_Zielgebiet]: ValueSet-mii-vs-onko-strahlentherapie-zielgebiet.html
+[MII_VS_Onko_Systemische_Therapie_Intention]: ValueSet-mii-vs-onko-systemische-therapie-intention.html
+[MII_VS_Onko_Systemische_Therapie_Stellung]: ValueSet-mii-vs-onko-systemische-therapie-stellung.html
 [MII_VS_Onko_TNM_cp_Praefix]: ValueSet-mii-vs-onko-tnm-cp-praefix.html
 [MII_VS_Onko_TNM_ITC_Suffix]: ValueSet-mii-vs-onko-tnm-itc-suffix.html
 [MII_VS_Onko_TNM_Klassifikation_Typ]: ValueSet-mii-vs-onko-tnm-klassifikation-typ.html
