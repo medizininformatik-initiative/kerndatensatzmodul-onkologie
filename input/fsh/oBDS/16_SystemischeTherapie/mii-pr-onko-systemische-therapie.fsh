@@ -38,6 +38,10 @@ Description: "Systemische Therapie. Dieses Profil beschreibt eine Systemische Th
 * outcome.coding.code from MII_VS_Onko_Strahlentherapie_Ende_Grund (required)
 
 
+Mapping: 
+* -> "16" "Systemische Therapie"
+* code.coding[icd10-gm].code -> "5.1" "Primärtumor Tumordiagnose ICD Code"
+* code.coding[icd10-gm].version -> "5.2" "Primärtumor Tumordiagnose ICD-Version"
 /*
 Mapping
 16.1 Intention der systemischen Therapie ---> extension
