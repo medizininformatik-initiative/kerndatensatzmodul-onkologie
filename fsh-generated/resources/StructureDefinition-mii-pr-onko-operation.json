@@ -99,14 +99,7 @@
         "id": "Procedure.code.coding:ops",
         "path": "Procedure.code.coding",
         "sliceName": "ops",
-        "min": 1,
-        "mapping": [
-          {
-            "identity": "oBDS",
-            "map": "13.3",
-            "comment": "OPS"
-          }
-        ]
+        "min": 1
       },
       {
         "id": "Procedure.code.coding:ops.version",
@@ -116,6 +109,17 @@
             "identity": "oBDS",
             "map": "13.4",
             "comment": "OPS Version"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.code.coding:ops.code",
+        "path": "Procedure.code.coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "13.3",
+            "comment": "OPS"
           }
         ]
       },
