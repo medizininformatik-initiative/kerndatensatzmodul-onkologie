@@ -58,7 +58,35 @@
           "description": "Extensions are always sliced by (at least) url",
           "rules": "open"
         },
-        "min": 2
+        "min": 3
+      },
+      {
+        "id": "Extension.extension:Applikationsart",
+        "path": "Extension.extension",
+        "sliceName": "Applikationsart",
+        "short": "Strahlentherapie Applikationsart",
+        "definition": "Gibt an, mit welcher Technik die Strahlentherapie durchgeführt wurde.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:Applikationsart.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:Applikationsart.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "Applikationsart"
+      },
+      {
+        "id": "Extension.extension:Applikationsart.value[x]",
+        "path": "Extension.extension.value[x]",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-applikationsart"
+        }
       },
       {
         "id": "Extension.extension:Zielgebiet",
