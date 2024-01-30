@@ -32,8 +32,8 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 // Strahlentherapie Beginn und Ende
 * performed[x] MS
 * performed[x] only Period //  wird über Period.start und Period.stop des MII Prozedurmoduls erfasst
-* performed.start 1..1 MS 
-* performed.end 0..1 MS
+* performed[x].start 1..1 MS 
+* performed[x].end 0..1 MS
 
 // Strahlentherapie Applikationsart #XRayXtension
 // extension contains MII_EX_Onko_Strahlentherapie_Applikationsart named 0.. MS
