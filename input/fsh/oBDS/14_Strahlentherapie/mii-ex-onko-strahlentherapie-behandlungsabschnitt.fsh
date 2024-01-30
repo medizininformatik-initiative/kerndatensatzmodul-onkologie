@@ -12,16 +12,20 @@ Description: "Strahlentherapie einzelner Behandlungsabschnitt der Gesamttherapie
 //   Menge_Bestrahlung 1..1 and // this might be needed for slicing
 //  Start + Ende Dauer MS and   --> laut datenmodell oBDS sinnvoll, da mehrere perionden mit der gleichen Intention 
     Applikationsart 1..1 MS and
+    Strahlenart 1..1 MS and
     Zielgebiet 1..1 MS and
     Zielgebiet_Lateralitaet 0..1 MS and
     Gesamtdosis 0..1 MS and
     Einzeldosis 0..1 MS and
     Boost 0..1 MS and
-    radiationUnit 1..1 MS
+    Einheit 1..1 MS
 //* extension[Menge_Strahlentherapie] = only unsigned    
 * extension[Applikationsart] ^short = "Strahlentherapie Applikationsart"
 * extension[Applikationsart] ^definition = "Gibt an, mit welcher Technik die Strahlentherapie durchgeführt wurde."
 * extension[Applikationsart].value[x] from $mii-vs-onko-strahlentherapie-applikationsart (required)
+* extension[Strahlenart] ^short = "Strahlentherapie Strahlenart"
+* extension[Strahlenart] ^definition = "Gibt an, mit welcher Strahlenart (sowohl Strahlung als auch Metabolite) die Strahlentherapie durchgeführt wurde."
+* extension[Strahlenart].value[x] from $mii-vs-onko-strahlentherapie-strahlenart (required)
 * extension[Zielgebiet] ^short = "Strahlentherapie Zielgebiet"
 * extension[Zielgebiet] ^definition = "Gibt an, an welcher anatomischen Region die Bestrahlung durchgeführt wurde."
 * extension[Zielgebiet].value[x] from $mii-vs-onko-strahlentherapie-zielgebiet (required)
@@ -33,12 +37,12 @@ Description: "Strahlentherapie einzelner Behandlungsabschnitt der Gesamttherapie
 * extension[Gesamtdosis].value[x] only Quantity
 * extension[Einzeldosis] ^short = "Strahlentherapie Einzeldosis pro Tag (Dosis)"
 * extension[Einzeldosis] ^definition = "Gibt an, mit welcher Einzeldosis (häufigste Dosis, nicht Boost) pro Tag das Zielgebiet bestrahlt wurde."
-* extension[Einzeldosis].value[x] only unsignedInt
+* extension[Einzeldosis].value[x] only Quantity
 * extension[Boost] ^short = "Strahlentherapie Boost"
 * extension[Boost] ^definition = "Angabe, ob ein Boost und falls ja, welche Art von Boost appliziert wurde."
 * extension[Boost].value[x] only CodeableConcept
 * extension[Boost].value[x] from $mii-vs-onko-strahlentherapie-boost (required) 
-* extension[radiationUnit] ^short = "Strahlentherapie Einheit"
-* extension[radiationUnit] ^definition = "Gibt die Einheit zu der Einzel- oder Gesamtdosis an, mit welcher das Zielgebiet bestrahlt wurde, bzw. bei metabolischer Therapie die Aktivität des verwendeten Radionuklids."
-* extension[radiationUnit].value[x] only CodeableConcept
-* extension[radiationUnit].value[x] from $mii-vs-onko-strahlentherapie-strahlungseinheit (required)
+* extension[Einheit] ^short = "Strahlentherapie Einheit"
+* extension[Einheit] ^definition = "Gibt die Einheit zu der Einzel- oder Gesamtdosis an, mit welcher das Zielgebiet bestrahlt wurde, bzw. bei metabolischer Therapie die Aktivität des verwendeten Radionuklids."
+* extension[Einheit].value[x] only CodeableConcept
+* extension[Einheit].value[x] from $mii-vs-onko-strahlentherapie-strahlungseinheit (required)

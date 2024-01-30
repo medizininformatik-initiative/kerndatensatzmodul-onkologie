@@ -16,7 +16,10 @@ Description: "Systemische Therapie. Dieses Profil beschreibt eine Systemische Th
 * extension contains mii-ex-onko-systemische-therapie-stellung named Stellung 0.. // hier ggfs Refactoren auf ein gemeinsames Code System mit unterschiedlicheN Value Sets
 * extension[Stellung] MS 
 
-* code MS // MII_Code OPS oder SNOMED --> Erweiterung Art der systemischen oder abwrtenden teherapie oBDS CodeSystem als weiteren Slice ohne Erweiterung
+* code 1..1  // slicen! 
+* code.coding from $mii-vs-onko-systemische-therapie-art
+* code.coding.code 1..1
+* code.coding.system 1..1
 
 // Systemische Therapie Beginn und  --> ggfs. dupliziert im MedicationStatement oder MedicationAdministration
 * performed[x] MS 
