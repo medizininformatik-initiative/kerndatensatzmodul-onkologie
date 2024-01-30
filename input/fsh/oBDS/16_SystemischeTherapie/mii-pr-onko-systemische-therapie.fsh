@@ -7,13 +7,13 @@ Description: "Systemische Therapie. Dieses Profil beschreibt eine Systemische Th
 * insert Publisher
 * ^status = #draft
 
-// Logical Modell see:  https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532153/Strahlentherapie+ST+Typ
+// Logical Modell see:  https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532379/Systemische+Therapie+SYST+Typ // t
 // Intention der systemischen Therapie  
-* extension contains mii-ex-onko-strahlentherapie-intention named Intention 1..1 // hier ggfs. refactoring
+* extension contains mii-ex-onko-systemische-therapie-intention named Intention 1..1 // hier ggfs. refactoring
 * extension[Intention] MS
 
 // Systemische Therapie Stellung zu operativer Therapie 
-* extension contains MII_EX_Onko_Strahlentherapie_Stellung named Stellung 0.. // hier ggfs Refactoren auf ein gemeinsames Code System mit unterschiedlicheN Value Sets
+* extension contains mii-ex-onko-systemische-therapie-stellung named Stellung 0.. // hier ggfs Refactoren auf ein gemeinsames Code System mit unterschiedlicheN Value Sets
 * extension[Stellung] MS 
 
 * code MS // MII_Code OPS oder SNOMED --> Erweiterung Art der systemischen oder abwrtenden teherapie oBDS CodeSystem als weiteren Slice ohne Erweiterung
@@ -38,10 +38,12 @@ Description: "Systemische Therapie. Dieses Profil beschreibt eine Systemische Th
 * outcome.coding.code from MII_VS_Onko_Strahlentherapie_Ende_Grund (required)
 
 
-Mapping: 
+Mapping: FHIR-oBDS-Systemische_Therapie
 * -> "16" "Systemische Therapie"
-* code.coding[icd10-gm].code -> "5.1" "Primärtumor Tumordiagnose ICD Code"
-* code.coding[icd10-gm].version -> "5.2" "Primärtumor Tumordiagnose ICD-Version"
+* extension[Intention].valueCodeableConcept.coding.code -> "16.1" "Intention der systematischen Therapie"
+* extension[Stellung].calueCodeableConcept.coding.code -> "16.2" "Systemische Therapie Stellung zu operativer Therapie"
+* code.coding.code -> "16.3" "Art der systemischen oder abwartenden Therapie"
+
 /*
 Mapping
 16.1 Intention der systemischen Therapie ---> extension
