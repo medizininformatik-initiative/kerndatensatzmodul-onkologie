@@ -69,8 +69,16 @@
         "reference": {
           "reference": "CodeSystem/mii-cs-onko-strahlentherapie-intention"
         },
-        "name": "MII CS Onko StrahlentherapieIntention",
-        "description": "Intention für eine Strahlen-, systemtische oder operative Therapie",
+        "name": "MII CS Onko Strahlentherapie Intention",
+        "description": "Intention für eine Strahlentherapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-systemische-therapie-art"
+        },
+        "name": "MII CS Onko Systemische Therapie Art",
+        "description": "Art der systemischen oder abwartenden Therapie",
         "exampleBoolean": false
       },
       {
@@ -199,14 +207,6 @@
         },
         "name": "MII EX Onko Operation Intention",
         "description": "Intention der Operation",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/mii-ex-onko-strahlentherapie-applikationsart"
-        },
-        "name": "MII EX Onko Strahlentherapie Applikationsart",
-        "description": "Art der Strahlentherapie Applikation",
         "exampleBoolean": false
       },
       {
@@ -575,6 +575,14 @@
         },
         "name": "MII VS Onkologie Strahlentherapie Zielgebiet",
         "description": "oBDS-spezifisches ValueSet für Klassifikation von Zielgebiet bei Strahlentherapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-systemische-therapie-art"
+        },
+        "name": "MII VS Onkologie Systemische Therapie Art",
+        "description": "oBDS-spezifisches ValueSet für Klassifikation der Art der systemischen oder abwartenden Therapie",
         "exampleBoolean": false
       },
       {

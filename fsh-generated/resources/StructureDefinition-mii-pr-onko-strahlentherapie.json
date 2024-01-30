@@ -39,6 +39,10 @@
       "identity": "v2",
       "uri": "http://hl7.org/v2",
       "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "oBDS",
+      "name": "Mapping FHIR zu oBDS"
     }
   ],
   "kind": "resource",
@@ -48,6 +52,17 @@
   "derivation": "constraint",
   "differential": {
     "element": [
+      {
+        "id": "Procedure",
+        "path": "Procedure",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "14",
+            "comment": "Strahlentherapie"
+          }
+        ]
+      },
       {
         "id": "Procedure.extension",
         "path": "Procedure.extension",
@@ -70,6 +85,17 @@
         "mustSupport": true
       },
       {
+        "id": "Procedure.extension:Intention.value[x].coding.code",
+        "path": "Procedure.extension.value[x].coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "14.1",
+            "comment": "Intention der Strahlentherapie"
+          }
+        ]
+      },
+      {
         "id": "Procedure.extension:Stellung",
         "path": "Procedure.extension",
         "sliceName": "Stellung",
@@ -84,6 +110,17 @@
           }
         ],
         "mustSupport": true
+      },
+      {
+        "id": "Procedure.extension:Stellung.value[x].coding.code",
+        "path": "Procedure.extension.value[x].coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "14.2",
+            "comment": "Strahlentherapie Stellung zu operativer Therapie"
+          }
+        ]
       },
       {
         "id": "Procedure.extension:Behandlungsabschnitt",
@@ -102,6 +139,238 @@
         "mustSupport": true
       },
       {
+        "id": "Procedure.extension:Behandlungsabschnitt.extension:Applikationsart",
+        "path": "Procedure.extension.extension",
+        "sliceName": "Applikationsart"
+      },
+      {
+        "id": "Procedure.extension:Behandlungsabschnitt.extension:Applikationsart.value[x]",
+        "path": "Procedure.extension.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Procedure.extension:Behandlungsabschnitt.extension:Applikationsart.value[x]:valueCodeableConcept",
+        "path": "Procedure.extension.extension.value[x]",
+        "sliceName": "valueCodeableConcept",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.extension:Behandlungsabschnitt.extension:Applikationsart.value[x]:valueCodeableConcept.coding.code",
+        "path": "Procedure.extension.extension.value[x].coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "14.7",
+            "comment": "Strahlentherapie Applikationsart"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.extension:Behandlungsabschnitt.extension:Strahlenart",
+        "path": "Procedure.extension.extension",
+        "sliceName": "Strahlenart"
+      },
+      {
+        "id": "Procedure.extension:Behandlungsabschnitt.extension:Strahlenart.value[x]",
+        "path": "Procedure.extension.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Procedure.extension:Behandlungsabschnitt.extension:Strahlenart.value[x]:valueCodeableConcept",
+        "path": "Procedure.extension.extension.value[x]",
+        "sliceName": "valueCodeableConcept",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.extension:Behandlungsabschnitt.extension:Strahlenart.value[x]:valueCodeableConcept.coding.code",
+        "path": "Procedure.extension.extension.value[x].coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "14.8",
+            "comment": "Strahlentherapie Strahlenart"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.extension:Behandlungsabschnitt.extension:Zielgebiet",
+        "path": "Procedure.extension.extension",
+        "sliceName": "Zielgebiet"
+      },
+      {
+        "id": "Procedure.extension:Behandlungsabschnitt.extension:Zielgebiet.value[x]",
+        "path": "Procedure.extension.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Procedure.extension:Behandlungsabschnitt.extension:Zielgebiet.value[x]:valueCodeableConcept",
+        "path": "Procedure.extension.extension.value[x]",
+        "sliceName": "valueCodeableConcept",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.extension:Behandlungsabschnitt.extension:Zielgebiet.value[x]:valueCodeableConcept.coding.code",
+        "path": "Procedure.extension.extension.value[x].coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "14.3",
+            "comment": "Strahlentherapie Zielgebiet"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.extension:Behandlungsabschnitt.extension:Zielgebiet_Lateralitaet",
+        "path": "Procedure.extension.extension",
+        "sliceName": "Zielgebiet_Lateralitaet"
+      },
+      {
+        "id": "Procedure.extension:Behandlungsabschnitt.extension:Zielgebiet_Lateralitaet.value[x]",
+        "path": "Procedure.extension.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Procedure.extension:Behandlungsabschnitt.extension:Zielgebiet_Lateralitaet.value[x]:valueCodeableConcept",
+        "path": "Procedure.extension.extension.value[x]",
+        "sliceName": "valueCodeableConcept",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.extension:Behandlungsabschnitt.extension:Zielgebiet_Lateralitaet.value[x]:valueCodeableConcept.coding.code",
+        "path": "Procedure.extension.extension.value[x].coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "14.4",
+            "comment": "Strahlentherapie Seite Zielgebiet"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.extension:Behandlungsabschnitt.extension:Gesamtdosis",
+        "path": "Procedure.extension.extension",
+        "sliceName": "Gesamtdosis"
+      },
+      {
+        "id": "Procedure.extension:Behandlungsabschnitt.extension:Gesamtdosis.value[x].value",
+        "path": "Procedure.extension.extension.value[x].value",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "14.9",
+            "comment": "Strahlentherapie Gesamtdosis"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.extension:Behandlungsabschnitt.extension:Einzeldosis",
+        "path": "Procedure.extension.extension",
+        "sliceName": "Einzeldosis"
+      },
+      {
+        "id": "Procedure.extension:Behandlungsabschnitt.extension:Einzeldosis.value[x].value",
+        "path": "Procedure.extension.extension.value[x].value",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "14.10",
+            "comment": "Strahlentherapie Einzeldosis pro Tag"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.extension:Behandlungsabschnitt.extension:Boost",
+        "path": "Procedure.extension.extension",
+        "sliceName": "Boost"
+      },
+      {
+        "id": "Procedure.extension:Behandlungsabschnitt.extension:Boost.value[x].coding.code",
+        "path": "Procedure.extension.extension.value[x].coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "14.12",
+            "comment": "Strahlentherapie Boost"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.extension:Behandlungsabschnitt.extension:Einheit",
+        "path": "Procedure.extension.extension",
+        "sliceName": "Einheit"
+      },
+      {
+        "id": "Procedure.extension:Behandlungsabschnitt.extension:Einheit.value[x].coding.code",
+        "path": "Procedure.extension.extension.value[x].coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "14.11",
+            "comment": "Strahlentherapie Einheit"
+          }
+        ]
+      },
+      {
         "id": "Procedure.performed[x]",
         "path": "Procedure.performed[x]",
         "type": [
@@ -114,12 +383,26 @@
         "id": "Procedure.performed[x].start",
         "path": "Procedure.performed[x].start",
         "min": 1,
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "14.5",
+            "comment": "Strahlentherapie Beginn"
+          }
+        ]
       },
       {
         "id": "Procedure.performed[x].end",
         "path": "Procedure.performed[x].end",
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "14.6",
+            "comment": "Strahlentherapie Ende"
+          }
+        ]
       },
       {
         "id": "Procedure.outcome",
@@ -132,7 +415,14 @@
         "binding": {
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-ende-grund"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "14.13",
+            "comment": "Strahlentherapie Ende Grund"
+          }
+        ]
       }
     ]
   }

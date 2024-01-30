@@ -124,11 +124,21 @@
       },
       {
         "id": "Procedure.code.coding",
-        "path": "Procedure.code.coding"
+        "path": "Procedure.code.coding",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-art"
+        }
+      },
+      {
+        "id": "Procedure.code.coding.system",
+        "path": "Procedure.code.coding.system",
+        "min": 1
       },
       {
         "id": "Procedure.code.coding.code",
         "path": "Procedure.code.coding.code",
+        "min": 1,
         "mapping": [
           {
             "identity": "oBDS",
