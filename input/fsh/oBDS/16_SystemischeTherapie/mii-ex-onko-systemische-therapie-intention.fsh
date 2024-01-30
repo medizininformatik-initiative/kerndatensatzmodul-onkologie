@@ -1,4 +1,4 @@
-input/fsh/oBDS/14_Strahlentherapie/mii-ex-onko-strahlentherapie-stellung.fshExtension: MII_EX_Onko_Strahlentherapie_Intention
+Extension: MII_EX_Onko_Systemische_Therapie_Intention
 Id: mii-ex-onko-systemische-therapie-intention
 Title: "MII EX Onko Systemische Therapie Intention"
 Description: "Systemische Therapie Intention"
@@ -10,7 +10,7 @@ Description: "Systemische Therapie Intention"
 
 * value[x] 1..1
 * value[x] only CodeableConcept
-* value[x] from MII_VS_Onko_SystemischeTherapie_Intention (required)
+* value[x] from MII_VS_Onko_Systemische_Therapie_Intention (required)
 * valueCodeableConcept.coding.system 1..
 * valueCodeableConcept.coding.system = $mii-cs-onko-systemische-therapie-intention (exactly)
 * valueCodeableConcept.coding.code 1..

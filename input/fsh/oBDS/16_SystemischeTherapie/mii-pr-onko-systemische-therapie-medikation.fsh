@@ -1,6 +1,6 @@
 Profile: MII_PR_Onko_Systemische_Therapie_Medikation
-Parent: https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationStatement 
-Id: mii-pr-onko-systemische-therapie
+Parent: MedicationStatement // still have to change to MII Medication Statement https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationStatement
+Id: mii-pr-onko-systemische-therapie-medikation
 Title: "MII PR Onkologie Systemische Therapie Medikation"
 Description: "Medikation der Systemische Therapie. Dieses Profil beschreibt die konkreten Medikationen, die im Rahmen der systemische Therapie für den oBDS dokumentiert werden.  Da im oBDS systemische und abwartende Therapie in einem Feld gruppiert sind, werden die Daten für die Systemische und abwartende Therapie sowohl über eine FHIR-Prozedur (systemisch und abwartend) als auch als FHIR-Medikation abgedeckt. "
 * insert PR_CS_VS_Version
@@ -10,10 +10,10 @@ Description: "Medikation der Systemische Therapie. Dieses Profil beschreibt die 
 // Logical Modell see:  https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532379/Systemische+Therapie+SYST+Typ // t
 
 * category MS // MII_Code OPS oder SNOMED --> Erweiterung Art der systemischen oder abwrtenden teherapie oBDS CodeSystem als weiteren Slice ohne Erweiterung
-* medication 1..* MS
-* medicationCodeableConcept.coding from
+* medication[x] 1..1 MS
+// medicationCodeableConcept.coding from ATC list
 * partOf 1..* MS 
-* partOf only Reference(Procedure, MedicationAdministration)
+* partOf only Reference(Procedure or MedicationAdministration)
 
 
 // Systemische Therapie Beginn und  --> ggfs. dupliziert im MedicationStatement oder MedicationAdministration

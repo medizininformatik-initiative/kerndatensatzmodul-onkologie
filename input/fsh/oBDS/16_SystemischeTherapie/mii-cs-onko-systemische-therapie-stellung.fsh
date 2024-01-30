@@ -1,4 +1,4 @@
-CodeSystem: MII_CS_Onko_SystemischeTherapie_Stellung
+CodeSystem: MII_CS_Onko_Systemische_Therapie_Stellung
 Id: mii-cs-onko-systemische-therapie-stellung
 Title: "MII CS Onkologie Systemische Therapie  Stellung"
 Description: "oBDS-spezifisches Codesystem für Klassifikation von Stellung zur OP"
