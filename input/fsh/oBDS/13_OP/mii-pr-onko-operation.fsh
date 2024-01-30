@@ -33,7 +33,8 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 
 * extension contains mii-ex-onko-operation-intention named Intention 1..1
 * extension[Intention] MS
-Mapping: FHIR-oBDSOperation
+
+Mapping: FHIR-oBDS-Operation
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
 Source: MII_PR_Onko_Operation
