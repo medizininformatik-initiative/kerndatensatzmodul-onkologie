@@ -52,12 +52,24 @@ Source: MII_PR_Onko_Systemische_Therapie
 
 /*
 Mapping
-16.1 Intention der systemischen Therapie ---> extension
-16.2 Systemische Therapie Stellung zu operativer Therapie  --> extension
+16.1 Intention der systemischen Therapie
+16.2 Systemische Therapie Stellung zu operativer Therapie
 16.3 Art der systemischen oder abwartenden Therapie
 
 16.6 Systemische Therapie Beginn
 16.7 Systemische Therapie Ende Grund 
 16.8 Systemische Therapie Ende 
 */
+Mapping: FHIR-oBDS-Systemische_Therapie
+Id: oBDS
+Title: "Mapping FHIR zu oBDS"
+Source: MII_PR_Onko_Systemische_Therapie
+* -> "14" "Systemische Therapie"
+* extension[Intention].valueCodeableConcept.coding.code -> "16.1" "Intention der systemischen Therapie"
+* extension[Stellung].valueCodeableConcept.coding.code -> "16.2" "Systemische Therapie Stellung zu operativer Therapie" 
+* code.coding.code -> "16.3" "Art der systemischen oder abwartenden Therapie"
+* performed[x].start -> "16.6" "Systemische Therapie Beginn"
+* performed[x].end -> "16.8" "Systemische Therapie Ende"
+
+* outcome.coding.code -> "16.7" "Systemische Therapie Ende Grund"
 
