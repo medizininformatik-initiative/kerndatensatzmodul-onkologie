@@ -37,7 +37,7 @@ Description: "Umfang eines Residualtumors nach einer Therapie"
 * valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus"
 
 
-Mapping: FHIR-oBDSResidualstatus
+Mapping: FHIR-oBDS-Residualstatus
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
 Source: MII_PR_Onko_Residualstatus
