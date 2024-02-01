@@ -59,14 +59,6 @@
     "resource": [
       {
         "reference": {
-          "reference": "ConceptMap/mii-cm-onko-tnm-uicc-snomed"
-        },
-        "name": "MII CM Onko TNM UICC SNOMED",
-        "description": "Mapping TNM UICC Codes zu SNOMED-CT",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "CodeSystem/mii-cs-onko-strahlentherapie-intention"
         },
         "name": "MII CS Onko StrahlentherapieIntention",
@@ -111,6 +103,14 @@
         },
         "name": "MII CS Onkologie Primärtumor Seitenlokalisation",
         "description": "Codes für Primärtumor Seitenlokalisation, d.h. organspezifische Angabe der betroffenen Seite.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-residualstatus"
+        },
+        "name": "MII CS Onkologie Residualstatus",
+        "description": "oBDS-spezifisches Codesystem für R-Klassifikation",
         "exampleBoolean": false
       },
       {
@@ -315,6 +315,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-residualstatus"
+        },
+        "name": "MII PR Onkologie Residualstatus",
+        "description": "Umfang eines Residualtumors nach einer Therapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-specimen"
         },
         "name": "MII PR Onkologie Specimen",
@@ -427,6 +435,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-Weitere-Klassifikationen"
+        },
+        "name": "MII PR Onkologie Weitere Klassifikationen",
+        "description": "Weitere Tumor Staging Klassifikation neben TMN (Hämatoonkologische und sonstige Klassifikationen)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-grading"
         },
         "name": "MII VS Onkologie Grading",
@@ -463,6 +479,14 @@
         },
         "name": "MII VS Onkologie Primärtumor Seitenlokalisation",
         "description": "Codes für Primärtumor Seitenlokalisation, d.h. organspezifische Angabe der betroffenen Seite.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-residualstatus"
+        },
+        "name": "MII VS Onkologie Residualstatus",
+        "description": "Value Set für oBDS-Codes für R- Klassifikation",
         "exampleBoolean": false
       },
       {
@@ -663,6 +687,13 @@
         },
         "name": "MII VS Onkologie TNM Version",
         "description": "Codes für TNM Version/Auflage nach welcher Version des TNM klassifiziert wird.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/mii-cm-onko-tnm-uicc-snomed"
+        },
+        "name": "mii-cm-onko-tnm-uicc-snomed",
         "exampleBoolean": false
       },
       {
