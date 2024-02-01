@@ -1,6 +1,6 @@
 Profile: MII_PR_Onko_Weitere_Klassifikationen
 Parent: Observation
-Id: mii-pr-onko-Weitere-Klassifikationen
+Id: mii-pr-onko-weitere-klassifikationen
 Title: "MII PR Onkologie Weitere Klassifikationen"
 Description: "Weitere Tumor Staging Klassifikation neben TMN (Hämatoonkologische und sonstige Klassifikationen)"
 * insert PR_CS_VS_Version
