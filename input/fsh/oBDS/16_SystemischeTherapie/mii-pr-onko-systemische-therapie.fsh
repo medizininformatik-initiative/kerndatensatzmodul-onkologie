@@ -70,6 +70,5 @@ Source: MII_PR_Onko_Systemische_Therapie
 * code.coding.code -> "16.3" "Art der systemischen oder abwartenden Therapie"
 * performed[x].start -> "16.6" "Systemische Therapie Beginn"
 * performed[x].end -> "16.8" "Systemische Therapie Ende"
-
 * outcome.coding.code -> "16.7" "Systemische Therapie Ende Grund"
 

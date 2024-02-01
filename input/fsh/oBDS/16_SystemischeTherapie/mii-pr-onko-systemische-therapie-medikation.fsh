@@ -9,11 +9,11 @@ Description: "Medikation der Systemische Therapie. Dieses Profil beschreibt die 
 
 // Logical Modell see:  https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532379/Systemische+Therapie+SYST+Typ // t
 
-* category MS // MII_Code OPS oder SNOMED --> Erweiterung Art der systemischen oder abwrtenden teherapie oBDS CodeSystem als weiteren Slice ohne Erweiterung
 * medication[x] 1..1 MS
-// medicationCodeableConcept.coding from ATC list
 * partOf 1..* MS 
 * partOf only Reference(Procedure or MedicationAdministration)
+* note MS
+
 
 
 // Systemische Therapie Beginn und  --> ggfs. dupliziert im MedicationStatement oder MedicationAdministration
@@ -23,10 +23,10 @@ Description: "Medikation der Systemische Therapie. Dieses Profil beschreibt die 
 * effectivePeriod.end 0..1 MS
 * effectiveDateTime 0..1 MS  // falls es einmalige Anwendungen / Protokolle gibt
 
-/*
-Mapping
-16.4 Systemische Therapie Protokoll 
-16.5 Systemische Therapie Substanz
 
-*/
-
+Mapping: FHIR-oBDS-Systemische_Therapie_Medikation
+Id: oBDS
+Title: "Mapping FHIR zu oBDS"
+Source: MII_PR_Onko_Systemische_Therapie_Medikation
+* medication -> "16.4" "Systemische Therapie Protokoll"
+* note.text -> "16.6" "Systemische Therapie Substanz"
