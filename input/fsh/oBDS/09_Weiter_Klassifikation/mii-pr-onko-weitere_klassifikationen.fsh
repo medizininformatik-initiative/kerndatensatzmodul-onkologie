@@ -20,7 +20,7 @@ Description: "Weitere Tumor Staging Klassifikation neben TMN (Hämatoonkologisch
 * code.coding.code 1..1
 
 // 9.3 Hämatoonkologische und sonstige Klassifikationen Einstufung 
-* value[x] 1..1 MS
+* value[x] 0..1 MS
 
 Mapping: FHIR-oBDS-Weitere-Klassifikationen
 Id: oBDS
