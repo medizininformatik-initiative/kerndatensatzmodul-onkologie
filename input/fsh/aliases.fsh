@@ -63,3 +63,12 @@ Alias: $mii-cs-onko-strahlentherapie-boost = https://www.medizininformatik-initi
 Alias: $mii-vs-onko-strahlentherapie-boost = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-boost
 Alias: $mii-cs-onko-strahlentherapie-ende-grund = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-ende-grund
 Alias: $mii-vs-onko-strahlentherapie-ende-grund = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-ende-grund
+
+// Nebenwirkung
+Alias: $us-ctcae-grade = http://hl7.org/fhir/us/ctcae/CodeSystem/ctcae-grade-code-system
+Alias: $mii-cs-onko-nebenwirkung-ctcae-grad = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-vs-onko-nebenwirkung-ctcae-grad
+Alias: $mii-vs-onko-nebenwirkung-ctcae-grad = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-nebenwirkung-ctcae-grad
+Alias: $hl7-meddra-de = http://terminology.hl7.org/CodeSystem/MDRGER
+//Alias: $hl7-meddra-de = https://bioportal.bioontology.org/ontologies/MDRGER
+Alias: $mii-vs-onko-nebenwirkung-art = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-nebenwirkung-ctcae-art
+Alias: $mii-cs-onko-nebenwirkung-origination = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-origination

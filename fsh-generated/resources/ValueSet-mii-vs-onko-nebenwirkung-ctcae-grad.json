@@ -1,0 +1,40 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "MII_VS_Onko_Nebenwirkung_CTCAE_Grad",
+  "id": "mii-vs-onko-nebenwirkung-ctcae-grad",
+  "title": "MII VS Onkologie Nebenwirkung CTCAE Grad",
+  "description": "oBDS-spezifisches ValueSet für Nebenwirkung nach CTCAE-Grad",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-nebenwirkung-ctcae-grad",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2024.0.0-ballot",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/ctcae/CodeSystem/ctcae-grade-code-system",
+        "concept": [
+          {
+            "code": "1",
+            "display": "1"
+          }
+        ]
+      }
+    ]
+  }
+}

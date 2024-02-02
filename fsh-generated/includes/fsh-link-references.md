@@ -45,6 +45,7 @@
 [MII_PR_Onko_TNM_y_Symbol]: StructureDefinition-mii-pr-onko-tnm-y-symbol.html
 [MII_PR_Onko_TNM_Klassifikation]: StructureDefinition-mii-pr-onko-tnm-klassifikation.html
 [MII_VS_Onko_Grading]: ValueSet-mii-vs-onko-grading.html
+[MII_VS_Onko_Nebenwirkung_CTCAE_Grad]: ValueSet-mii-vs-onko-nebenwirkung-ctcae-grad.html
 [MII_VS_Onko_Operation_Intention]: ValueSet-mii-vs-onko-operation-intention.html
 [MII_VS_Onko_Operation_Komplikation]: ValueSet-mii-vs-onko-operation-komplikation.html
 [MII_VS_Onko_Primaertumor_Diagnosesicherung]: ValueSet-mii-vs-onko-primaertumor-diagnosesicherung.html
