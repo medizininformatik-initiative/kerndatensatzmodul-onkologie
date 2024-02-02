@@ -3,15 +3,9 @@
   "status": "draft",
   "name": "MII_VS_Onko_Nebenwirkung_CTCAE_Grad",
   "id": "mii-vs-onko-nebenwirkung-ctcae-grad",
-  "title": "MII VS Onkologie Nebenwirkung CTCAE Grad",
+  "title": "MII VS Onkologie Nebenwirkung nach CTCAE Grad",
   "description": "oBDS-spezifisches ValueSet für Nebenwirkung nach CTCAE-Grad",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-nebenwirkung-ctcae-grad",
-  "meta": {
-    "profile": [
-      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
-    ]
-  },
-  "experimental": false,
   "publisher": "Medizininformatik Initiative",
   "contact": [
     {
@@ -24,6 +18,12 @@
     }
   ],
   "version": "2024.0.0-ballot",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ]
+  },
+  "experimental": false,
   "compose": {
     "include": [
       {
@@ -31,9 +31,28 @@
         "concept": [
           {
             "code": "1",
-            "display": "1"
+            "display": "Mild Adverse Event"
+          },
+          {
+            "code": "2",
+            "display": "Moderate Adverse Event"
+          },
+          {
+            "code": "3",
+            "display": "Severe Adverse Event"
+          },
+          {
+            "code": "4",
+            "display": "Life Threatening or Disabling Adverse Event"
+          },
+          {
+            "code": "5",
+            "display": "Death Related to Adverse Event"
           }
         ]
+      },
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-vs-onko-nebenwirkung-ctcae-grad"
       }
     ]
   }

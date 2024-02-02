@@ -59,10 +59,18 @@
     "resource": [
       {
         "reference": {
-          "reference": "ConceptMap/mii-cm-onko-tnm-uicc-snomed"
+          "reference": "CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad"
         },
-        "name": "MII CM Onko TNM UICC SNOMED",
-        "description": "Mapping TNM UICC Codes zu SNOMED-CT",
+        "name": "MII CS Onko Nebenwirkung nach CTCAE-Grad",
+        "description": "Gibt an, zu welchem Schweregrad von Nebenwirkungen es bei der Bestrahlung oder der systemischen Therapie gekommen ist.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-cs-onko-nebenwirkung-origination"
+        },
+        "name": "MII CS Onko Nebenwirkung von verschiedene Therapien",
+        "description": "Gibt an, aus welche Therapie die Nebenwirkungen stammen.",
         "exampleBoolean": false
       },
       {
@@ -307,6 +315,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-nebenwirkung"
+        },
+        "name": "MII PR Onkologie Nebenwirkung von Strahlentherapie und systemische Therapie",
+        "description": "Dieses Profil beschreibt die Nebenwirkung von Strahlentherapie und systemische Therapie in der Onkologie.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-operation"
         },
         "name": "MII PR Onkologie Operation",
@@ -435,9 +451,17 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-onko-nebenwirkung-art"
+        },
+        "name": "MII VS Onkologie Nebenwirkung nach CTCAE Art",
+        "description": "oBDS-spezifisches ValueSet für Nebenwirkung nach CTCAE Art",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-nebenwirkung-ctcae-grad"
         },
-        "name": "MII VS Onkologie Nebenwirkung CTCAE Grad",
+        "name": "MII VS Onkologie Nebenwirkung nach CTCAE Grad",
         "description": "oBDS-spezifisches ValueSet für Nebenwirkung nach CTCAE-Grad",
         "exampleBoolean": false
       },
@@ -675,6 +699,13 @@
       },
       {
         "reference": {
+          "reference": "ConceptMap/mii-cm-onko-tnm-uicc-snomed"
+        },
+        "name": "mii-cm-onko-tnm-uicc-snomed",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-onko-anzahl-befallene-lymphknoten-0"
         },
         "name": "mii-exa-onko-anzahl-befallene-lymphknoten-0",
@@ -749,6 +780,20 @@
         },
         "name": "mii-exa-onko-tnm-t-kategorie-uT2a2",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-pr-onko-nebenwirkung-0"
+        },
+        "name": "mii-pr-onko-nebenwirkung-0",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-pr-onko-nebenwirkung-1"
+        },
+        "name": "mii-pr-onko-nebenwirkung-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung"
       }
     ],
     "page": {

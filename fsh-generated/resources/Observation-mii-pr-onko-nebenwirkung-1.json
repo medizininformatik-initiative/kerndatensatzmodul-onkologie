@@ -1,0 +1,69 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-pr-onko-nebenwirkung-1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung"
+    ]
+  },
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "263718001",
+            "system": "http://snomed.info/sct",
+            "display": "Complication"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "10002272",
+            "system": "http://terminology.hl7.org/CodeSystem/MDRGER",
+            "display": "Anämie"
+          }
+        ]
+      }
+    }
+  ],
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "therapy",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+        }
+      ]
+    }
+  ],
+  "partOf": [
+    {
+      "reference": "Procedure/Strahlentherapie"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "431010004",
+        "system": "http://snomed.info/sct",
+        "display": "Late effect of radiation therapy (disorder)"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "effectiveDateTime": "2024-01-11",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "3",
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-vs-onko-nebenwirkung-ctcae-grad",
+        "display": "Severe Adverse Event"
+      }
+    ]
+  }
+}
