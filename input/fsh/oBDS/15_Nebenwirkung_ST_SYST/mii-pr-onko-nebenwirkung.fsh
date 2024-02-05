@@ -1,5 +1,5 @@
 Profile: MII_PR_Onko_Nebenwirkung
-Parent: Observation
+Parent: Observation // MII_Symptom_Observation
 Id: mii-pr-onko-nebenwirkung
 Title: "MII PR Onkologie Nebenwirkung von Strahlentherapie und systemische Therapie"
 Description: "Dieses Profil beschreibt die Nebenwirkung von Strahlentherapie und systemische Therapie in der Onkologie."
@@ -18,7 +18,7 @@ Description: "Dieses Profil beschreibt die Nebenwirkung von Strahlentherapie und
 
 * code 1..1 MS
 // oder nutzt ein generisches Snomed code: Late effect of medical and surgical care complication (disorder) | Procedure related finding (finding)
-* code from $mii-cs-onko-nebenwirkung-origination (preferred)
+* code from $mii-cs-onko-nebenwirkung-origination (preferred) // I would make that distinction i nthe Procedure.category element 
 
 * subject 1..1 MS
 * subject only Reference(Patient)
@@ -31,12 +31,12 @@ Description: "Dieses Profil beschreibt die Nebenwirkung von Strahlentherapie und
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1 MS
 * valueCodeableConcept.coding 1..1 MS
-* valueCodeableConcept.coding.system 1..1 MS
+* valueCodeableConcept.coding.system 1..1 MS // fixed CTCAE
 * valueCodeableConcept.coding.code 1..1 MS
 * valueCodeableConcept.coding.code from $mii-vs-onko-nebenwirkung-ctcae-grad
 // aus die Beschreibung https://basisdatensatz.de/feld/207/nebenwirkungen-nach-ctcae-version ist die Notwendigkeit des Felders unklar
 // In der Katalog für CTCAE (https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15533115/Nebenwirkungen+CTCAE) steht Version 4 -> als Festwert?
-* valueCodeableConcept.coding.version 0..1 MS
+* valueCodeableConcept.coding.version 0..1 MS // 1..1 --> 
 
 * component MS
 * component.code.coding = $SCT#263718001 "Complication"
@@ -44,7 +44,7 @@ Description: "Dieses Profil beschreibt die Nebenwirkung von Strahlentherapie und
 * component.valueCodeableConcept 0..1 MS
 // Laut Definiton, es kann mehrere Nebenwirkung geben -> Kardinalität 1..*
 * component.valueCodeableConcept.coding 1.. MS
-* component.valueCodeableConcept.coding.system 1..1 MS
+* component.valueCodeableConcept.coding.system 1..1 MS //fixed "canoincal" medra link
 * component.valueCodeableConcept.coding.code 1..1 MS
 * component.valueCodeableConcept.coding.code from $mii-vs-onko-nebenwirkung-art
 * component.valueString 0..1 MS

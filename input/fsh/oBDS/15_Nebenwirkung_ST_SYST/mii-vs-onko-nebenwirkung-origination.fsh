@@ -3,7 +3,7 @@ Id: mii-cs-onko-nebenwirkung-origination
 Title: "MII CS Onko Nebenwirkung von verschiedene Therapien"
 Description: "Gibt an, aus welche Therapie die Nebenwirkungen stammen."
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-origination"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-origination" // Soll diese Datei hier  code system oder value set sein? Geht nur eines  
 * ^status = #draft
 * ^experimental = false
 * insert Publisher
