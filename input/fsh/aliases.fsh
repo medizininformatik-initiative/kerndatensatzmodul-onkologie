@@ -72,3 +72,5 @@ Alias: $mii-vs-onko-nebenwirkung-ctcae-grad = https://www.medizininformatik-init
 Alias: $hl7-meddra-de = http://terminology.hl7.org/CodeSystem/MDRGER
 //Alias: $hl7-meddra-de = https://bioportal.bioontology.org/ontologies/MDRGER
 Alias: $mii-vs-onko-nebenwirkung-art = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-nebenwirkung-ctcae-art
+Alias: $adverse-event-severity = http://terminology.hl7.org/CodeSystem/adverse-event-severity
+Alias: $mii-vs-onko-nebenwirkung-ctcae-grad-adverse-event = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-nebenwirkung-ctcae-grad-adverse-event
