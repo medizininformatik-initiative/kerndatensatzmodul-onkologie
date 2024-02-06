@@ -1,0 +1,38 @@
+{
+  "resourceType": "Procedure",
+  "id": "mii-pr-onko-nebenwirkung-3-pro",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-procedure"
+    ]
+  },
+  "complication": [
+    {
+      "coding": [
+        {
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-vs-onko-nebenwirkung-ctcae-grad",
+          "code": "4",
+          "display": "Lebensbedrohlich"
+        }
+      ]
+    }
+  ],
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "complicationDetail": [
+    {
+      "reference": "Condition/Nebenwirkung"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "1287742003",
+        "system": "http://snomed.info/sct"
+      }
+    ]
+  },
+  "performedDateTime": "2024-01-01"
+}

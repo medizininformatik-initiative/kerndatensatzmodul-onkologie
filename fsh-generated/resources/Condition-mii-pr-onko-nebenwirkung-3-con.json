@@ -1,0 +1,30 @@
+{
+  "resourceType": "Condition",
+  "id": "mii-pr-onko-nebenwirkung-3-con",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-condition-reference"
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "severity": {
+    "coding": [
+      {
+        "code": "4",
+        "display": "Lebensbedrohlich"
+      }
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "10016256",
+        "system": "http://terminology.hl7.org/CodeSystem/MDRGER",
+        "display": "Fatigue"
+      }
+    ]
+  },
+  "recordedDate": "2024-01-01T12:00:00+01:00"
+}

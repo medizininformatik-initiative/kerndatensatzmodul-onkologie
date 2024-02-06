@@ -30,6 +30,8 @@
 [MII_PR_Onko_Diagnose]: StructureDefinition-mii-pr-onko-diagnose.html
 [MII_PR_Onko_Grading]: StructureDefinition-mii-pr-onko-grading.html
 [MII_PR_Onko_Nebenwirkung]: StructureDefinition-mii-pr-onko-nebenwirkung.html
+[MII_PR_Onko_Nebenwirkung_Condition]: StructureDefinition-mii-pr-onko-nebenwirkung-condition-reference.html
+[MII_PR_Onko_Nebenwirkung_Procedure]: StructureDefinition-mii-pr-onko-nebenwirkung-procedure.html
 [MII_PR_Onko_Operation]: StructureDefinition-mii-pr-onko-operation.html
 [MII_PR_Onko_Specimen]: StructureDefinition-mii-pr-onko-specimen.html
 [MII_PR_Onko_Strahlentherapie]: StructureDefinition-mii-pr-onko-strahlentherapie.html
@@ -92,3 +94,5 @@
 [mii-pr-onko-nebenwirkung-0]: Observation-mii-pr-onko-nebenwirkung-0.html
 [mii-pr-onko-nebenwirkung-1]: Observation-mii-pr-onko-nebenwirkung-1.html
 [mii-pr-onko-nebenwirkung-2]: Observation-mii-pr-onko-nebenwirkung-2.html
+[mii-pr-onko-nebenwirkung-3-con]: Condition-mii-pr-onko-nebenwirkung-3-con.html
+[mii-pr-onko-nebenwirkung-3-pro]: Procedure-mii-pr-onko-nebenwirkung-3-pro.html
