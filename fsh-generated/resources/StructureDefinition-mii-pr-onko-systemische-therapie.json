@@ -91,7 +91,7 @@
           {
             "identity": "oBDS",
             "map": "16.1",
-            "comment": "Intention der systematischen Therapie"
+            "comment": "Intention der systemischen Therapie"
           }
         ]
       },
@@ -160,12 +160,26 @@
         "id": "Procedure.performed[x].start",
         "path": "Procedure.performed[x].start",
         "min": 1,
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "16.6",
+            "comment": "Systemische Therapie Beginn"
+          }
+        ]
       },
       {
         "id": "Procedure.performed[x].end",
         "path": "Procedure.performed[x].end",
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "16.8",
+            "comment": "Systemische Therapie Ende"
+          }
+        ]
       },
       {
         "id": "Procedure.outcome",
@@ -178,7 +192,14 @@
         "binding": {
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-ende-grund"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "16.7",
+            "comment": "Systemische Therapie Ende Grund"
+          }
+        ]
       }
     ]
   }

@@ -39,6 +39,10 @@
       "identity": "v2",
       "uri": "http://hl7.org/v2",
       "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "oBDS",
+      "name": "Mapping FHIR zu oBDS"
     }
   ],
   "kind": "resource",
@@ -64,14 +68,42 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationStatement.category",
-        "path": "MedicationStatement.category",
+        "id": "MedicationStatement.medication[x]",
+        "path": "MedicationStatement.medication[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
         "mustSupport": true
       },
       {
-        "id": "MedicationStatement.medication[x]",
+        "id": "MedicationStatement.medication[x]:medicationCodeableConcept",
         "path": "MedicationStatement.medication[x]",
-        "mustSupport": true
+        "sliceName": "medicationCodeableConcept",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement.medication[x]:medicationCodeableConcept.coding.code",
+        "path": "MedicationStatement.medication[x].coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "16.4",
+            "comment": "Systemische Therapie Substanz"
+          }
+        ]
       },
       {
         "id": "MedicationStatement.effective[x]",
@@ -123,6 +155,22 @@
           }
         ],
         "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.note",
+        "path": "MedicationStatement.note",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.note.text",
+        "path": "MedicationStatement.note.text",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "16.6",
+            "comment": "Systemische Therapie Protokoll"
+          }
+        ]
       }
     ]
   }
