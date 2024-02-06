@@ -28,5 +28,5 @@ Mapping: FHIR-oBDS-Systemische_Therapie_Medikation
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
 Source: MII_PR_Onko_Systemische_Therapie_Medikation
-* medication -> "16.4" "Systemische Therapie Protokoll"
-* note.text -> "16.6" "Systemische Therapie Substanz"
+* medicationCodeableConcept.coding.code -> "16.4" "Systemische Therapie Substanz"
+* note.text -> "16.6" "Systemische Therapie Protokoll"

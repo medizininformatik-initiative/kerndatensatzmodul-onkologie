@@ -147,7 +147,7 @@ Source: MII_LM_Onko
 * SystemischeTherapie
   * SysTxIntention -> "Procedure.extension[Intention].valueCodeableConcept.coding.code"
   * SysTxStellung -> "Procedure.extension[Stellung].valueCodeableConcept.coding.code"
-  * SysTxArtTherapie ->"Procedure.code.coding.code"
+  * SysTxArtTherapie -> "Procedure.code.coding.code"
   * SysTxBeginn -> "Procedure.performedPeriod.start"
   * SysTxArtEnde -> "Procedure.performedPeriod.end"
   * SysTxEndeGrund -> "Procedure.outcome.coding.code"
