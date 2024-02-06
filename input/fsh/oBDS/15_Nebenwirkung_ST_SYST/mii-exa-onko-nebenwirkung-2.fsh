@@ -1,4 +1,4 @@
-Instance: mii-pr-onko-nebenwirkung-1
+Instance: mii-pr-onko-nebenwirkung-2
 InstanceOf: mii-pr-onko-nebenwirkung
 Usage: #example
 * status = #draft
@@ -7,9 +7,7 @@ Usage: #example
 
 * subject = Reference(Patient/example)
 * effectiveDateTime = "2024-01-11"
-* component.valueCodeableConcept.coding.code = #10016256
-* component.valueCodeableConcept.coding.display = "Fatigue"
-* component.valueCodeableConcept.coding.version = "4"
+* component.valueString = "Lebensbedrohlich"
 * component.code.coding.code = #4
 * component.code.coding.display = "Lebensbedrohlich"
 * component.code.coding.system = $mii-cs-onko-nebenwirkung-ctcae-grad
