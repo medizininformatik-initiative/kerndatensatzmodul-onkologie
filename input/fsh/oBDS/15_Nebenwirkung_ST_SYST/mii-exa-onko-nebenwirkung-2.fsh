@@ -1,7 +1,7 @@
 Instance: mii-pr-onko-nebenwirkung-2
 InstanceOf: mii-pr-onko-nebenwirkung
 Usage: #example
-* status = #draft
+* status = #final
 * category = $observation-category#therapy
 * partOf = Reference(Procedure/Strahlentherapie)
 
