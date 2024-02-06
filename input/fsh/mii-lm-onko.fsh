@@ -149,6 +149,6 @@ Source: MII_LM_Onko
   * SysTxStellung -> "Procedure.extension[Stellung].valueCodeableConcept.coding.code"
   * SysTxArtTherapie -> "Procedure.code.coding.code"
   * SysTxBeginn -> "Procedure.performedPeriod.start"
-  * SysTxArtEnde -> "Procedure.performedPeriod.end"
+  * SysTxEnde -> "Procedure.performedPeriod.end"
   * SysTxEndeGrund -> "Procedure.outcome.coding.code"
 
