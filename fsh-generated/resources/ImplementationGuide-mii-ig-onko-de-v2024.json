@@ -313,6 +313,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event"
+        },
+        "name": "MII PR Onkologie Nebenwirkung von Strahlentherapie und systemische Therapie",
+        "description": "Dieses Profil beschreibt die Nebenwirkung von Strahlentherapie und systemische Therapie in der Onkologie.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-nebenwirkung"
         },
         "name": "MII PR Onkologie Nebenwirkung von Strahlentherapie und systemische Therapie",
@@ -469,6 +477,14 @@
         },
         "name": "MII VS Onkologie Nebenwirkung nach CTCAE Art",
         "description": "oBDS-spezifisches ValueSet für Nebenwirkung nach CTCAE Art",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-nebenwirkung-ctcae-grad-adverse-event"
+        },
+        "name": "MII VS Onkologie Nebenwirkung nach CTCAE Grad",
+        "description": "oBDS-spezifisches ValueSet für Nebenwirkung nach CTCAE-Grad",
         "exampleBoolean": false
       },
       {
@@ -829,6 +845,13 @@
         },
         "name": "mii-pr-onko-nebenwirkung-3-pro",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-procedure"
+      },
+      {
+        "reference": {
+          "reference": "AdverseEvent/mii-pr-onko-nebenwirkung-4"
+        },
+        "name": "mii-pr-onko-nebenwirkung-4",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event"
       }
     ],
     "page": {

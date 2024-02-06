@@ -1,0 +1,39 @@
+{
+  "resourceType": "AdverseEvent",
+  "id": "mii-pr-onko-nebenwirkung-4",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event"
+    ]
+  },
+  "actuality": "actual",
+  "event": {
+    "coding": [
+      {
+        "code": "10016256",
+        "system": "http://terminology.hl7.org/CodeSystem/MDRGER",
+        "display": "Fatigue",
+        "version": "Version 4"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "severity": {
+    "coding": [
+      {
+        "code": "4",
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-vs-onko-nebenwirkung-ctcae-grad",
+        "display": "Lebensbedrohlich"
+      }
+    ]
+  },
+  "suspectEntity": [
+    {
+      "instance": {
+        "reference": "Procedure/Strahlentherapie"
+      }
+    }
+  ]
+}
