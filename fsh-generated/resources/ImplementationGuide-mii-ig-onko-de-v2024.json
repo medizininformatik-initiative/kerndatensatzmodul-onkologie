@@ -53,6 +53,12 @@
       "version": "1.0.8",
       "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.biobank/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.biobank",
       "id": "de_medizininformatikinitiative_kerndatensatz_biobank"
+    },
+    {
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.symptom",
+      "version": "2024.0.0-ballot",
+      "uri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/ImplementationGuide/mii-ig-symptom-de-v2024",
+      "id": "de_medizininformatikinitiative_kerndatensatz_symptom"
     }
   ],
   "definition": {
@@ -63,14 +69,6 @@
         },
         "name": "MII CS Onko Nebenwirkung nach CTCAE-Grad",
         "description": "Gibt an, zu welchem Schweregrad von Nebenwirkungen es bei der Bestrahlung oder der systemischen Therapie gekommen ist.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-cs-onko-nebenwirkung-origination"
-        },
-        "name": "MII CS Onko Nebenwirkung von verschiedene Therapien",
-        "description": "Gibt an, aus welche Therapie die Nebenwirkungen stammen.",
         "exampleBoolean": false
       },
       {
@@ -793,6 +791,13 @@
           "reference": "Observation/mii-pr-onko-nebenwirkung-1"
         },
         "name": "mii-pr-onko-nebenwirkung-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-pr-onko-nebenwirkung-2"
+        },
+        "name": "mii-pr-onko-nebenwirkung-2",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung"
       }
     ],

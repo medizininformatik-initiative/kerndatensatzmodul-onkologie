@@ -6,15 +6,42 @@
   "id": "mii-cs-onko-nebenwirkung-ctcae-grad",
   "title": "MII CS Onko Nebenwirkung nach CTCAE-Grad",
   "description": "Gibt an, zu welchem Schweregrad von Nebenwirkungen es bei der Bestrahlung oder der systemischen Therapie gekommen ist.",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-vs-onko-nebenwirkung-ctcae-grad",
   "concept": [
     {
+      "code": "1",
+      "display": "mild",
+      "definition": "Mild"
+    },
+    {
+      "code": "2",
+      "display": "moderat",
+      "definition": "Moderat"
+    },
+    {
+      "code": "3",
+      "display": "schwerwiegend",
+      "definition": "Schwerwiegend"
+    },
+    {
+      "code": "4",
+      "display": "lebensbedrohlich",
+      "definition": "Lebensbedrohlich"
+    },
+    {
+      "code": "5",
+      "display": "tödlich",
+      "definition": "Tödlich"
+    },
+    {
       "code": "U",
-      "display": "Unbekannt"
+      "display": "unbekannt",
+      "definition": "Unbekannt"
     },
     {
       "code": "K",
-      "display": "keine"
+      "display": "keine",
+      "definition": "Keine"
     }
   ],
   "meta": {
@@ -36,6 +63,6 @@
   ],
   "version": "2024.0.0-ballot",
   "caseSensitive": true,
-  "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-cs-onko-nebenwirkung-ctcae-grad",
-  "count": 2
+  "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-nebenwirkung-ctcae-grad",
+  "count": 7
 }
