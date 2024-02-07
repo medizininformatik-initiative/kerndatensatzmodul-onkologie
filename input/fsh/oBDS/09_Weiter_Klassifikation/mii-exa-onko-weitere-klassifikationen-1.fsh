@@ -7,4 +7,3 @@ Usage: #example
 * subject = Reference(Patient/example)
 * effectiveDateTime = "2024-01-11"
 * valueString = "4+5" 
-/
