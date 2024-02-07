@@ -1,5 +1,5 @@
 Profile: MII_PR_Onko_Fernmetastasen
-Parent: Observation
+Parent: Observation // MII Symptom Observation
 Id: mii-pr-onko-fernmetastasen
 Title: "MII PR Onkologie Fernmetastasen"
 Description: "OBDS Beschreibung von Fernmetastasen (Lokalisation und Datum)"
