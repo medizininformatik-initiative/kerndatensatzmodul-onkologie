@@ -1,0 +1,93 @@
+@startuml MII KDS Erweiterungsmodul Onkologie
+object MII_Diagnose #AAFFAA
+Map 05_Diagnose #AAFFAA {
+ 05.1 Primaertumor Tumordiagnose ICD Code => Condition.code.coding[icd10-gm].code
+ 05.2 Primärtumor Tumordiagnose ICD-Version => Condition.code.coding[icd10-gm].version
+ 05.3 Primärtumor Tumordiagnose Text => Condition.code.text
+ 05.4 Primärtumor Topographie ICD O => Condition.bodySite.coding[icd-o-3].code
+ 05.5 Primärtumor Topographie ICD O Version => Condition.bodySite.coding[icd-o-3].version
+ 05.6 Primärtumor Diagnosedatum => Condition.recordedDate
+ 05.7 Primärtumor Diagnosesicherung => Condition.verificationStatus.coding[primaertumorDiagnosesicherung].code
+ 05.8 Primärtumor Seitenlokalisation => Condition.bodySite.coding[primaertumorSeitenlokalisation].code
+ 05.9 Frühere Tumorerkrankungen => 05_Diagnose
+ 06.3 Morphologie-Code => Condition.code.coding[icd-o-3].code
+ 06.4 Morphologie ICD-O/Blue Book Version => Condition.code.coding[icd-o-3].version
+ 06.5 Morphologie-Freitext => Condition.code.text
+} 
+
+MII_Diagnose <|-down- 05_Diagnose
+
+object MII_Onko_Operation #FFCCCC
+
+Map 06_Histologie_Residualstatus #AAFFAA{
+    10.1 lokaler Residualstatus nach Abschluss der OP *--> MII_Onko_Operation
+    10.2 Gesamtbeurteilung des Residualstatus => valueCodeableConcept.coding.code  
+}
+MII_Symptom_Observation <|-down-- 10_Residualstatus
+
+Map TNM_Klassifikation #AAFFAA {
+  8.1 TNM Datum  => effectiveDateTime 
+  8.2 TNM Version =>method 
+  8.17 UICC Stadium => valueCodeableConcept.coding.code
+
+}
+   
+Map TNM_T #AAFFAA{
+    8.6 TNM c/p-Präfix T => code.extension[MII_EX_Onko_TNM_cp_Praefix].valueCodeableConcept.coding.code
+    8.9 TNM T-Kategorie => valueCodeableConcept.coding.code
+   }
+
+TNM_Klassifikation o-- TNM_T
+Map TNM_N #AAFFAA{
+    8.7 TNM c/p-Präfix N => code.extension[MII_EX_Onko_TNM_cp_Praefix].valueCodeableConcept.coding.code
+    8.11 TNM N-Kategorie => valueCodeableConcept.coding.code
+   }
+TNM_Klassifikation o--- TNM_N
+Map TNM_M #AAFFAA{
+    8.8 TNM c/p-Präfix M => code.extension[MII_EX_Onko_TNM_cp_Praefix].valueCodeableConcept.coding.code
+    8.12 TNM M-Kategorie => valueCodeableConcept.coding.code
+   }
+TNM_Klassifikation o---- TNM_M
+Map TNM_m #AAFFAA{
+    8.10 TNM m-Symbol => valueCodeableConcept.coding.code
+}
+TNM_Klassifikation o-- TNM_m
+Map TNM_a #AAFFAA{
+    8.5 TNM a-Symbol => valueCodeableConcept.coding.code
+}
+TNM_Klassifikation o--- TNM_a
+Map TNM_L #AAFFAA{
+    8.13 TNM L-Kategorie => valueCodeableConcept.coding.code
+}
+TNM_Klassifikation o---- TNM_L
+Map TNM_Pn #AAFFAA{
+    8.15 TNM Pn-Kategorie => valueCodeableConcept.coding.code
+}
+TNM_Klassifikation o----- TNM_Pn
+Map TNM_r #AAFFAA{
+    8.4 TNM r-Symbol => valueCodeableConcept.coding.code
+}
+TNM_Klassifikation o-- TNM_r
+Map TNM_S #AAFFAA{
+    8.16 TNM S-Kategorie => valueCodeableConcept.coding.code
+}
+TNM_Klassifikation o--- TNM_S
+Map TNM_V #AAFFAA{
+    8.14 TNM V-Kategorie => valueCodeableConcept.coding.code
+}
+TNM_Klassifikation o---- TNM_V
+Map TNM_y #AAFFAA{
+    8.3 TNM y-Symbol => valueCodeableConcept.coding.code
+}
+TNM_Klassifikation o----- TNM_y
+
+MII_Symptom_Observation <|-down--- 11_Fernmetastasen
+
+
+Map 12_ECOGStatus #AAFFAA{
+    ECOG Status => Observation.code.coding.code
+
+}
+MII_Symptom_Observation <|-down---- 12_ECOGStatus
+
+@enduml
