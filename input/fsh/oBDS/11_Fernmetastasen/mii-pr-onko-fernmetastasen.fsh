@@ -20,3 +20,11 @@ Description: "OBDS Beschreibung von Fernmetastasen (Lokalisation und Datum)"
 * effective[x] MS
 * effective[x] only dateTime
 * effectiveDateTime 1.. MS
+
+Mapping: FHIR-oBDS-MII-PR-Onko-Fernmetastasen
+Id: oBDS
+Title: "Mapping FHIR zu oBDS"
+Source: MII_PR_Onko_Fernmetastasen
+* -> "11" "Fernmetastasen"
+* bodySite -> "11.1" "Gokalisation von Fernmetastase(n)"
+* effectiveDateTime -> "11.2" "GDatum der diagnostischen Sicherung von Fernmetastasen" 

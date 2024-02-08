@@ -33,7 +33,7 @@ Description: "OBDS Beschreibung des allgemeines Leistungszustandes"
 * valueCodeableConcept.coding.code 1.. MS
 
 
-Mapping: FHIR-oBDS-Allgemeiner_Leistungszustand
+Mapping: FHIR-oBDS-Allgemeiner-Leistungszustand
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
 Source: MII_PR_Onko_Allgemeiner_Leistungszustand
