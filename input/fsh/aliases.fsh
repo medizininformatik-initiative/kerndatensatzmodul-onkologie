@@ -67,3 +67,5 @@ Alias: $mii-cs-onko-residualstatus = https://www.medizininformatik-initiative.de
 Alias: $mii-vs-onko-residualstatus = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-residualstatus
 Alias: $mii-cs-onko-fernmetastasen = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-cs-onko-fernmetastasen
 Alias: $mii-vs-onko-fernmetastasen = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-fernmetastasen
+Alias: $mii-cs-onko-allgemeiner-leistungszustand = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-cs-onko-allgemeiner-leistungszustand
+Alias: $mii-vs-onko-allgemeiner-leistungszustand = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand
