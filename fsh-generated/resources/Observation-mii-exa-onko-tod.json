@@ -1,0 +1,42 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-tod",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tod"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "184305005",
+        "system": "http://snomed.info/sct"
+      }
+    ]
+  },
+  "interpretation": [
+    {
+      "coding": [
+        {
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-ende-tod",
+          "code": "J",
+          "display": "Ja, die Person ist an einer Tumorerkrankung oder Folge einer Tumorerkrankung (einschließlich Behandlungskomplikation) verstorben."
+        }
+      ]
+    }
+  ],
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+        "code": "C34.9",
+        "version": "ICD-10 GM Version 2024"
+      }
+    ]
+  },
+  "status": "final",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "effectiveDateTime": "2024-02-08"
+}

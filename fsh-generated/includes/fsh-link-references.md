@@ -1,4 +1,3 @@
-[mii-cm-onko-tnm-uicc-snomed]: ConceptMap-mii-cm-onko-tnm-uicc-snomed.html
 [MII_CS_Onko_Strahlentherapie_Intention]: CodeSystem-mii-cs-onko-strahlentherapie-intention.html
 [MII_CS_Onko_Grading]: CodeSystem-mii-cs-onko-grading.html
 [MII_CS_Onko_Operation_Intention]: CodeSystem-mii-cs-onko-operation-intention.html
@@ -13,6 +12,7 @@
 [MII_CS_Onko_Strahlentherapie_Zielgebiet]: CodeSystem-mii-cs-onko-strahlentherapie-zielgebiet.html
 [MII_CS_Onko_TNM_UICC]: CodeSystem-mii-cs-onko-tnm-uicc.html
 [MII_CS_Onko_TNM_Version]: CodeSystem-mii-cs-onko-tnm-version.html
+[MII_CS_Onko_Tod]: CodeSystem-mii-cs-onko-tod.html
 [MII_EX_Onko_Operation_Intention]: StructureDefinition-mii-ex-onko-operation-intention.html
 [MII_EX_Onko_Strahlentherapie_Applikationsart]: StructureDefinition-mii-ex-onko-strahlentherapie-applikationsart.html
 [MII_EX_Onko_Strahlentherapie_Behandlungsabschnitt]: StructureDefinition-mii-ex-onko-strahlentherapie-behandlungsabschnitt.html
@@ -44,6 +44,7 @@
 [MII_PR_Onko_TNM_V_Kategorie]: StructureDefinition-mii-pr-onko-tnm-v-kategorie.html
 [MII_PR_Onko_TNM_y_Symbol]: StructureDefinition-mii-pr-onko-tnm-y-symbol.html
 [MII_PR_Onko_TNM_Klassifikation]: StructureDefinition-mii-pr-onko-tnm-klassifikation.html
+[MII_PR_Onko_Tod]: StructureDefinition-mii-pr-onko-tod.html
 [MII_VS_Onko_Grading]: ValueSet-mii-vs-onko-grading.html
 [MII_VS_Onko_Operation_Intention]: ValueSet-mii-vs-onko-operation-intention.html
 [MII_VS_Onko_Operation_Komplikation]: ValueSet-mii-vs-onko-operation-komplikation.html
@@ -74,6 +75,8 @@
 [MII_VS_Onko_TNM_UICC_Stadium]: ValueSet-mii-vs-onko-tnm-uicc-stadium.html
 [MII_VS_Onko_TNM_V_Kategorie_Werte]: ValueSet-mii-vs-onko-tnm-v-kategorie-werte.html
 [MII_VS_Onko_TNM_Version]: ValueSet-mii-vs-onko-tnm-version.html
+[MII_VS_Onko_Tod]: ValueSet-mii-vs-onko-tod.html
+[mii-cm-onko-tnm-uicc-snomed]: ConceptMap-mii-cm-onko-tnm-uicc-snomed.html
 [mii-exa-onko-anzahl-befallene-lymphknoten-0]: Observation-mii-exa-onko-anzahl-befallene-lymphknoten-0.html
 [mii-exa-onko-anzahl-untersuchte-lymphknoten-23]: Observation-mii-exa-onko-anzahl-untersuchte-lymphknoten-23.html
 [mii-exa-onko-diagnose]: Condition-mii-exa-onko-diagnose.html
@@ -85,3 +88,4 @@
 [mii-exa-onko-tnm-n-kategorie-pN0i-sn]: Observation-mii-exa-onko-tnm-n-kategorie-pN0i-sn.html
 [mii-exa-onko-tnm-t-kategorie-Tis]: Observation-mii-exa-onko-tnm-t-kategorie-Tis.html
 [mii-exa-onko-tnm-t-kategorie-uT2a2]: Observation-mii-exa-onko-tnm-t-kategorie-uT2a2.html
+[mii-exa-onko-tod]: Observation-mii-exa-onko-tod.html
