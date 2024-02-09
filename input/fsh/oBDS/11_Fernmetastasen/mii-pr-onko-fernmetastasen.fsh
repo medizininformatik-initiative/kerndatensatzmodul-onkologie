@@ -27,4 +27,4 @@ Title: "Mapping FHIR zu oBDS"
 Source: MII_PR_Onko_Fernmetastasen
 * -> "11" "Fernmetastasen"
 * bodySite -> "11.1" "Lokalisation von Fernmetastase(n)"
-* effectiveDateTime -> "11.2" "GDatum der diagnostischen Sicherung von Fernmetastasen" 
+* effectiveDateTime -> "11.2" "Datum der diagnostischen Sicherung von Fernmetastasen" 
