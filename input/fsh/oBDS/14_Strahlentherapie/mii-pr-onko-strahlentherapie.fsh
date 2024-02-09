@@ -79,20 +79,3 @@ Source: MII_PR_Onko_Strahlentherapie
 * extension[Behandlungsabschnitt].extension[Einheit].valueCodeableConcept.coding.code -> "14.11" "Strahlentherapie Einheit"
 * extension[Behandlungsabschnitt].extension[Boost].valueCodeableConcept.coding.code -> "14.12" "Strahlentherapie Boost"
 * outcome.coding.code -> "14.13" "Strahlentherapie Ende Grund"
-
-/*
-Mapping
-14.1 Intention der Strahlentherapie 
-14.2 Strahlentherapie Stellung zu operativer Therapie 
-14.3 Strahlentherapie Zielgebiet 
-14.4 Strahlentherapie Seite Zielgebiet 
-14.5 Strahlentherapie Beginn 
-14.6 Strahlentherapie Ende 
-14.7 Strahlentherapie Applikationsart 
-14.8 Strahlenart 
-14.9 Strahlentherapie Gesamtdosis (Dosis) 
-14.10 Strahlentherapie Einzeldosis pro Tag (Dosis) 
-14.11 Strahlentherapie Einheit 
-14.12 Boost 
-14.13 Strahlentherapie Ende Grund 
-*/
