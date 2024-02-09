@@ -1,6 +1,6 @@
 Profile: MII_PR_Onko_Tod
 Parent: Observation
-Id: mii-pr-onko-anzahl-Tod
+Id: mii-pr-onko-tod
 Title: "MII PR Onkologie Tod"
 Description: "Tumorbedingter Tod"
 * insert PR_CS_VS_Version
@@ -8,7 +8,6 @@ Description: "Tumorbedingter Tod"
 * ^status = #draft
 
 * code MS
-* code 1..1
 * code.coding = $SCT#184305005
 
 * subject 1..1 MS
