@@ -1,0 +1,42 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-tod-u",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tod"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "184305005",
+        "system": "http://snomed.info/sct"
+      }
+    ]
+  },
+  "interpretation": [
+    {
+      "coding": [
+        {
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-ende-tod",
+          "code": "U",
+          "display": "unbekannt"
+        }
+      ]
+    }
+  ],
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+        "code": "C44.3",
+        "version": "ICD-10 GM Version 2022"
+      }
+    ]
+  },
+  "status": "final",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "effectiveDateTime": "2024-02-06"
+}

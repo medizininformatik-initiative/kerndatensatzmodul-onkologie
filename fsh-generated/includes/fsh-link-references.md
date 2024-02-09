@@ -90,3 +90,4 @@
 [mii-exa-onko-tnm-t-kategorie-uT2a2]: Observation-mii-exa-onko-tnm-t-kategorie-uT2a2.html
 [mii-exa-onko-tod-j]: Observation-mii-exa-onko-tod-j.html
 [mii-exa-onko-tod-n]: Observation-mii-exa-onko-tod-n.html
+[mii-exa-onko-tod-u]: Observation-mii-exa-onko-tod-u.html
