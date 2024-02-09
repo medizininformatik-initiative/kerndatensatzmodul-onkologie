@@ -1,4 +1,6 @@
 [MII_CS_Onko_Strahlentherapie_Intention]: CodeSystem-mii-cs-onko-strahlentherapie-intention.html
+[MII_CS_Onko_Allgemeiner_Leistungszustand]: CodeSystem-mii-cs-onko-allgemeiner-leistungszustand.html
+[MII_CS_Onko_Fernmetastasen]: CodeSystem-mii-cs-onko-fernmetastasen.html
 [MII_CS_Onko_Grading]: CodeSystem-mii-cs-onko-grading.html
 [MII_CS_Onko_Operation_Intention]: CodeSystem-mii-cs-onko-operation-intention.html
 [MII_CS_Onko_Operation_Komplikationen]: CodeSystem-mii-cs-onko-operation-komplikation.html
@@ -22,12 +24,14 @@
 [MII_EX_Onko_TNM_ITC_Suffix]: StructureDefinition-mii-ex-onko-tnm-itc-suffix.html
 [MII_EX_Onko_TNM_SN_Suffix]: StructureDefinition-mii-ex-onko-tnm-sn-suffix.html
 [MII_LM_Onko]: StructureDefinition-mii-lm-onko.html
+[MII_PR_Onko_Allgemeiner_Leistungszustand]: StructureDefinition-mii-pr-onko-allgemeiner-leistungszustand.html
 [MII_PR_Onko_Anzahl_Befallene_Lymphknoten]: StructureDefinition-mii-pr-onko-anzahl-befallene-lymphknoten.html
 [MII_PR_Onko_Anzahl_Befallene_Sentinel_Lymphknoten]: StructureDefinition-mii-pr-onko-anzahl-befallene-sentinel-lymphknoten.html
 [MII_PR_Onko_Anzahl_Untersuchte_Lymphknoten]: StructureDefinition-mii-pr-onko-anzahl-untersuchte-lymphknoten.html
 [MII_PR_Onko_Anzahl_Untersuchte_Sentinel_Lymphknoten]: StructureDefinition-mii-pr-onko-anzahl-untersuchte-sentinel-lymphknoten.html
 [MII_PR_Onko_Befund]: StructureDefinition-mii-pr-onko-befund.html
 [MII_PR_Onko_Diagnose]: StructureDefinition-mii-pr-onko-diagnose.html
+[MII_PR_Onko_Fernmetastasen]: StructureDefinition-mii-pr-onko-fernmetastasen.html
 [MII_PR_Onko_Grading]: StructureDefinition-mii-pr-onko-grading.html
 [MII_PR_Onko_Operation]: StructureDefinition-mii-pr-onko-operation.html
 [MII_PR_Onko_Residualstatus]: StructureDefinition-mii-pr-onko-residualstatus.html
@@ -46,6 +50,8 @@
 [MII_PR_Onko_TNM_y_Symbol]: StructureDefinition-mii-pr-onko-tnm-y-symbol.html
 [MII_PR_Onko_TNM_Klassifikation]: StructureDefinition-mii-pr-onko-tnm-klassifikation.html
 [MII_PR_Onko_Weitere_Klassifikationen]: StructureDefinition-mii-pr-onko-weitere-klassifikationen.html
+[MII_VS_Onko_Allgemeiner_Leistungszustand]: ValueSet-mii-vs-onko-allgemeiner-leistungszustand.html
+[MII_VS_Onko_Fernmetastasen]: ValueSet-mii-vs-onko-fernmetastasen.html
 [MII_VS_Onko_Grading]: ValueSet-mii-vs-onko-grading.html
 [MII_VS_Onko_Operation_Intention]: ValueSet-mii-vs-onko-operation-intention.html
 [MII_VS_Onko_Operation_Komplikation]: ValueSet-mii-vs-onko-operation-komplikation.html
@@ -90,3 +96,4 @@
 [mii-exa-onko-tnm-t-kategorie-Tis]: Observation-mii-exa-onko-tnm-t-kategorie-Tis.html
 [mii-exa-onko-tnm-t-kategorie-uT2a2]: Observation-mii-exa-onko-tnm-t-kategorie-uT2a2.html
 [mii-exa-onko-weitere-klassifikationen-1]: Observation-mii-exa-onko-weitere-klassifikationen-1.html
+[mii-exa-onko-weitere-klassifikationen-2]: Observation-mii-exa-onko-weitere-klassifikationen-2.html

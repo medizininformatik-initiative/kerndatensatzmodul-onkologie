@@ -67,6 +67,22 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-onko-allgemeiner-leistungszustand"
+        },
+        "name": "MII CS Onkologie Allgemeiner Leistungszustand",
+        "description": "oBDS-spezifisches Codesystem für den Allgemeinen Leistungszustand",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-fernmetastasen"
+        },
+        "name": "MII CS Onkologie Fernmetastasen",
+        "description": "oBDS-spezifisches Codesystem für Fernmetastasen",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-onko-grading"
         },
         "name": "MII CS Onkologie Grading",
@@ -251,6 +267,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand"
+        },
+        "name": "MII PR Onkologie Allgemeiner Leistungszustand",
+        "description": "OBDS Beschreibung des allgemeines Leistungszustandes",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-anzahl-befallene-lymphknoten"
         },
         "name": "MII PR Onkologie Anzahl der befallenen Lymphknoten",
@@ -295,6 +319,14 @@
         },
         "name": "MII PR Onkologie Diagnose",
         "description": "Dieses Profil beschreibt eine Diagnose in der Onkologie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-fernmetastasen"
+        },
+        "name": "MII PR Onkologie Fernmetastasen",
+        "description": "OBDS Beschreibung von Fernmetastasen (Lokalisation und Datum)",
         "exampleBoolean": false
       },
       {
@@ -439,6 +471,22 @@
         },
         "name": "MII PR Onkologie Weitere Klassifikationen",
         "description": "Weitere Tumor Staging Klassifikation neben TMN (Hämatoonkologische und sonstige Klassifikationen)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-allgemeiner-leistungszustand"
+        },
+        "name": "MII VS Onkologie Allgemeiner Leistungszustand",
+        "description": "Value Set für oBDS-Codes für den Allgemeinen Leistungszustand",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-fernmetastasen"
+        },
+        "name": "MII VS Onkologie Fernmetastasen",
+        "description": "Value Set für oBDS-Codes für Fernmetastasen",
         "exampleBoolean": false
       },
       {
@@ -778,6 +826,13 @@
           "reference": "Observation/mii-exa-onko-weitere-klassifikationen-1"
         },
         "name": "mii-exa-onko-weitere-klassifikationen-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-weitere-klassifikationen-2"
+        },
+        "name": "mii-exa-onko-weitere-klassifikationen-2",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen"
       }
     ],

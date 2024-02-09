@@ -1,0 +1,31 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-weitere-klassifikationen-2",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "385388004",
+        "system": "http://snomed.info/sct",
+        "display": "Ann Arbor Klassifkation"
+      }
+    ],
+    "text": "Ann Arbor Klassifkation"
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "effectiveDateTime": "2024-01-12",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "IIIX"
+      }
+    ]
+  }
+}
