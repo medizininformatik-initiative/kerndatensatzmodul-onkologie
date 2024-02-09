@@ -88,4 +88,5 @@
 [mii-exa-onko-tnm-n-kategorie-pN0i-sn]: Observation-mii-exa-onko-tnm-n-kategorie-pN0i-sn.html
 [mii-exa-onko-tnm-t-kategorie-Tis]: Observation-mii-exa-onko-tnm-t-kategorie-Tis.html
 [mii-exa-onko-tnm-t-kategorie-uT2a2]: Observation-mii-exa-onko-tnm-t-kategorie-uT2a2.html
-[mii-exa-onko-tod]: Observation-mii-exa-onko-tod.html
+[mii-exa-onko-tod-j]: Observation-mii-exa-onko-tod-j.html
+[mii-exa-onko-tod-n]: Observation-mii-exa-onko-tod-n.html
