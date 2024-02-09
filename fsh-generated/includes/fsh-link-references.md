@@ -87,6 +87,7 @@
 [mii-exa-onko-anzahl-befallene-lymphknoten-0]: Observation-mii-exa-onko-anzahl-befallene-lymphknoten-0.html
 [mii-exa-onko-anzahl-untersuchte-lymphknoten-23]: Observation-mii-exa-onko-anzahl-untersuchte-lymphknoten-23.html
 [mii-exa-onko-diagnose]: Condition-mii-exa-onko-diagnose.html
+[mii-exa-onko-residualstatus-1]: Observation-mii-exa-onko-residualstatus-1.html
 [mii-exa-onko-tnm-klassifikation-TisN0M0]: Observation-mii-exa-onko-tnm-klassifikation-TisN0M0.html
 [mii-exa-onko-tnm-klassifikation-uT2a2pN0023i-sncM1]: Observation-mii-exa-onko-tnm-klassifikation-uT2a2pN0023i-sncM1.html
 [mii-exa-onko-tnm-m-kategorie-cM1]: Observation-mii-exa-onko-tnm-m-kategorie-cM1.html
