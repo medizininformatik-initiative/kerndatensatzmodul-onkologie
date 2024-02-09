@@ -63,3 +63,5 @@ Alias: $mii-cs-onko-strahlentherapie-boost = https://www.medizininformatik-initi
 Alias: $mii-vs-onko-strahlentherapie-boost = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-boost
 Alias: $mii-cs-onko-strahlentherapie-ende-grund = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-ende-grund
 Alias: $mii-vs-onko-strahlentherapie-ende-grund = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-ende-grund
+Alias: $mii-cs-onko-tod = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-ende-tod
+Alias: $mii-vs-onko-tod = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-ende-tod
