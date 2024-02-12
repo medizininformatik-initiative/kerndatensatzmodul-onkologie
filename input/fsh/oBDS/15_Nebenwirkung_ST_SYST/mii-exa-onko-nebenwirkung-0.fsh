@@ -1,12 +1,10 @@
 Instance: mii-pr-onko-nebenwirkung-0
-InstanceOf: mii-pr-onko-nebenwirkung
+InstanceOf: mii-pr-onko-nebenwirkung-adverse-event
 Usage: #example
-* status = #final
-* category = $observation-category#therapy
-* partOf = Reference(Procedure/Strahlentherapie)
 
+* actuality = #actual
+* event.coding = $hl7-meddra-de#10016256 "Fatigue"
+* event.coding.version = "Version 4"
 * subject = Reference(Patient/example)
-* effectiveDateTime = "2024-01-11"
-* component.code.coding.code = #2
-* component.code.coding.display = "Moderat"
-* component.code.coding.system = $mii-cs-onko-nebenwirkung-ctcae-grad
+* severity.coding = $mii-cs-onko-nebenwirkung-ctcae-grad#4 "Lebensbedrohlich"
+* suspectEntity.instance = Reference(Procedure/Strahlentherapie)
