@@ -1,0 +1,45 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "MII_CS_Onko_Therapieempfehlung_Typ",
+  "id": "mii-cs-onko-therapieempfehlung-typ",
+  "title": "MII CS Onkologie Therapieempfehlung Typ",
+  "description": "oBDS-spezifisches Codesystem für den Typ der Therapieempfehlung",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapieempfehlung-typ",
+  "concept": [
+    {
+      "code": "OP",
+      "display": "Operation"
+    },
+    {
+      "code": "ST",
+      "display": "Strahlentherapie"
+    },
+    {
+      "code": "KW",
+      "display": "keine weitere tumorspezifische Therapie empfohlen"
+    }
+  ],
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2024.0.0-ballot",
+  "caseSensitive": true,
+  "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-therapieempfehlung-typ",
+  "count": 3
+}

@@ -1,4 +1,3 @@
-[mii-cm-onko-tnm-uicc-snomed]: ConceptMap-mii-cm-onko-tnm-uicc-snomed.html
 [MII_CS_Onko_Strahlentherapie_Intention]: CodeSystem-mii-cs-onko-strahlentherapie-intention.html
 [MII_CS_Onko_Grading]: CodeSystem-mii-cs-onko-grading.html
 [MII_CS_Onko_Operation_Intention]: CodeSystem-mii-cs-onko-operation-intention.html
@@ -11,6 +10,9 @@
 [MII_CS_Onko_Strahlentherapie_Stellung]: CodeSystem-mii-cs-onko-strahlentherapie-stellung.html
 [MII_CS_Onko_Strahlentherapie_Strahlenart]: CodeSystem-mii-cs-onko-strahlentherapie-strahlenart.html
 [MII_CS_Onko_Strahlentherapie_Zielgebiet]: CodeSystem-mii-cs-onko-strahlentherapie-zielgebiet.html
+[MII_CS_Onko_Therapieabweichung]: CodeSystem-mii-cs-onko-therapieabweichung.html
+[MII_CS_Onko_Therapieempfehlung_Typ]: CodeSystem-mii-cs-onko-therapieempfehlung-typ.html
+[MII_CS_Onko_Therapieplanung_Typ]: CodeSystem-mii-cs-onko-therapieplanung-typ.html
 [MII_CS_Onko_TNM_UICC]: CodeSystem-mii-cs-onko-tnm-uicc.html
 [MII_CS_Onko_TNM_Version]: CodeSystem-mii-cs-onko-tnm-version.html
 [MII_EX_Onko_Operation_Intention]: StructureDefinition-mii-ex-onko-operation-intention.html
@@ -44,6 +46,7 @@
 [MII_PR_Onko_TNM_V_Kategorie]: StructureDefinition-mii-pr-onko-tnm-v-kategorie.html
 [MII_PR_Onko_TNM_y_Symbol]: StructureDefinition-mii-pr-onko-tnm-y-symbol.html
 [MII_PR_Onko_TNM_Klassifikation]: StructureDefinition-mii-pr-onko-tnm-klassifikation.html
+[MII_PR_Onko_Turmokonferenz]: StructureDefinition-mii-pr-onko-turmokonferenz.html
 [MII_VS_Onko_Grading]: ValueSet-mii-vs-onko-grading.html
 [MII_VS_Onko_Operation_Intention]: ValueSet-mii-vs-onko-operation-intention.html
 [MII_VS_Onko_Operation_Komplikation]: ValueSet-mii-vs-onko-operation-komplikation.html
@@ -57,6 +60,9 @@
 [MII_VS_Onko_Strahlentherapie_Strahlenart]: ValueSet-mii-vs-onko-strahlentherapie-strahlenart.html
 [MII_VS_Onko_Strahlentherapie_Strahlungseinheit]: ValueSet-mii-vs-onko-strahlentherapie-strahlungseinheit.html
 [MII_VS_Onko_Strahlentherapie_Zielgebiet]: ValueSet-mii-vs-onko-strahlentherapie-zielgebiet.html
+[MII_VS_Onko_Therapieabweichung]: ValueSet-mii-vs-onko-therapieabweichung.html
+[MII_VS_Onko_Therapieempfehlung_Typ]: ValueSet-mii-vs-onko-therapieempfehlung-typ.html
+[MII_VS_Onko_Therapieplanung_Typ]: ValueSet-mii-vs-onko-therapieplanung-typ.html
 [MII_VS_Onko_TNM_cp_Praefix]: ValueSet-mii-vs-onko-tnm-cp-praefix.html
 [MII_VS_Onko_TNM_ITC_Suffix]: ValueSet-mii-vs-onko-tnm-itc-suffix.html
 [MII_VS_Onko_TNM_Klassifikation_Typ]: ValueSet-mii-vs-onko-tnm-klassifikation-typ.html
@@ -74,6 +80,7 @@
 [MII_VS_Onko_TNM_UICC_Stadium]: ValueSet-mii-vs-onko-tnm-uicc-stadium.html
 [MII_VS_Onko_TNM_V_Kategorie_Werte]: ValueSet-mii-vs-onko-tnm-v-kategorie-werte.html
 [MII_VS_Onko_TNM_Version]: ValueSet-mii-vs-onko-tnm-version.html
+[mii-cm-onko-tnm-uicc-snomed]: ConceptMap-mii-cm-onko-tnm-uicc-snomed.html
 [mii-exa-onko-anzahl-befallene-lymphknoten-0]: Observation-mii-exa-onko-anzahl-befallene-lymphknoten-0.html
 [mii-exa-onko-anzahl-untersuchte-lymphknoten-23]: Observation-mii-exa-onko-anzahl-untersuchte-lymphknoten-23.html
 [mii-exa-onko-diagnose]: Condition-mii-exa-onko-diagnose.html
