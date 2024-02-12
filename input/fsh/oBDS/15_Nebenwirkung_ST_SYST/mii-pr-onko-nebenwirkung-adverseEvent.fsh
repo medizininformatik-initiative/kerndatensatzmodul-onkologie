@@ -7,8 +7,7 @@ Description: "Dieses Profil beschreibt die Nebenwirkung von Strahlentherapie und
 * insert Publisher
 * ^status = #draft
 
-// Hier wird entweder die Bezeichnung von CTCAE Grad (als String) genutzt
-// oder die MEDDRA Code genutzt
+// Hier wird entweder die Bezeichnung von CTCAE Grad (als String) oder die MEDDRA Code genutzt
 * event 1..1 MS
 * event.coding 1..* MS
 * event.coding from $mii-vs-onko-nebenwirkung-art

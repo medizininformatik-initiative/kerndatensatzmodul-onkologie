@@ -72,4 +72,4 @@ Alias: $hl7-meddra-de = https://www.meddra.org
 Alias: $us-ctcae-grade = http://hl7.org/fhir/us/ctcae/CodeSystem/ctcae-grade-code-system
 Alias: $mii-vs-onko-nebenwirkung-art = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-nebenwirkung-ctcae-art
 Alias: $adverse-event-severity = http://terminology.hl7.org/CodeSystem/adverse-event-severity
-Alias: $mii-vs-onko-nebenwirkung-ctcae-grad-adverse-event = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-nebenwirkung-ctcae-grad-adverse-event
+Alias: $mii-vs-onko-nebenwirkung-ctcae-grad = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-nebenwirkung-ctcae-grad
