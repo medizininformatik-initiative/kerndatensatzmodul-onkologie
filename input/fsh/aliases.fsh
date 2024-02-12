@@ -22,6 +22,8 @@ Alias: $condition-ver-status = http://terminology.hl7.org/CodeSystem/condition-v
 Alias: $verification-status-vs = http://hl7.org/fhir/ValueSet/condition-ver-status
 Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
 Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-clinical
+Alias: $request-status = http://hl7.org/fhir/request-status
+Alias: $request-intent = http://hl7.org/fhir/request-intent
 
 // Code Systems
 Alias: $CTCAE = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
