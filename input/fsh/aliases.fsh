@@ -16,6 +16,9 @@ Alias: $DeIcdO3TopologieVS = http://fhir.de/onkologie/ValueSet/icd-o-3-topologie
 Alias: $DeOnkoTumorstatusFernmetastasenVS = http://fhir.de/onkologie/ValueSet/TumorstatusFernmetastasenVS
 Alias: $icd-seitenlokalisation = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_SEITENLOKALISATION
 
+// MII KDS
+Alias: $mii-symptom-observation = https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/StructureDefinition/finding-observation
+
 // FHIR Core
 Alias: $EventStatus = http://hl7.org/fhir/event-status
 Alias: $condition-ver-status = http://terminology.hl7.org/CodeSystem/condition-ver-status
@@ -63,14 +66,10 @@ Alias: $mii-cs-onko-strahlentherapie-boost = https://www.medizininformatik-initi
 Alias: $mii-vs-onko-strahlentherapie-boost = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-boost
 Alias: $mii-cs-onko-strahlentherapie-ende-grund = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-ende-grund
 Alias: $mii-vs-onko-strahlentherapie-ende-grund = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-ende-grund
-
-// Nebenwirkung
-Alias: $mii-symptom-observation = https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/StructureDefinition/finding-observation
-Alias: $us-ctcae-grade = http://hl7.org/fhir/us/ctcae/CodeSystem/ctcae-grade-code-system
 Alias: $mii-cs-onko-nebenwirkung-ctcae-grad = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-vs-onko-nebenwirkung-ctcae-grad
 Alias: $mii-vs-onko-nebenwirkung-ctcae-grad = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-nebenwirkung-ctcae-grad
-Alias: $hl7-meddra-de = http://terminology.hl7.org/CodeSystem/MDRGER
-//Alias: $hl7-meddra-de = https://bioportal.bioontology.org/ontologies/MDRGER
+Alias: $hl7-meddra-de = https://www.meddra.org
+Alias: $us-ctcae-grade = http://hl7.org/fhir/us/ctcae/CodeSystem/ctcae-grade-code-system
 Alias: $mii-vs-onko-nebenwirkung-art = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-nebenwirkung-ctcae-art
 Alias: $adverse-event-severity = http://terminology.hl7.org/CodeSystem/adverse-event-severity
 Alias: $mii-vs-onko-nebenwirkung-ctcae-grad-adverse-event = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-nebenwirkung-ctcae-grad-adverse-event
