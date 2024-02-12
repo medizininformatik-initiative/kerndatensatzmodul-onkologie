@@ -16,7 +16,7 @@ Description: "Dieses Profil beschreibt die Nebenwirkung von Strahlentherapie und
 
 // Hier wird CTCAE Grad genutzt
 * severity 1..1 MS
-* severity.coding from $mii-vs-onko-nebenwirkung-ctcae-grad-adverse-event
+* severity.coding from $mii-vs-onko-nebenwirkung-ctcae-grad
 
 * subject only Reference(Patient)
 
