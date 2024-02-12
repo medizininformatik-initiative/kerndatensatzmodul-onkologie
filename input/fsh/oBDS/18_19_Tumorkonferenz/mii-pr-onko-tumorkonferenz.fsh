@@ -21,7 +21,7 @@ Description: "Diese Profil beschreibt die Turmokonferenz und die Therapieempfehl
 // Therapieplanung Datum
 * created 1..1 MS
 
-// geplant für die Referenzieren zu Tumorerkrankung -> notwendig?
+// die Referenzieren zu Tumorerkrankung
 * addresses MS
 
 // Ist Melder/Ersteller gewünscht?
