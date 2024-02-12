@@ -321,30 +321,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-onko-nebenwirkung"
-        },
-        "name": "MII PR Onkologie Nebenwirkung von Strahlentherapie und systemische Therapie",
-        "description": "Dieses Profil beschreibt die Nebenwirkung von Strahlentherapie und systemische Therapie in der Onkologie.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/mii-pr-onko-nebenwirkung-condition-reference"
-        },
-        "name": "MII PR Onkologie Nebenwirkung von Strahlentherapie und systemische Therapie",
-        "description": "Dieses Profil beschreibt die Nebenwirkung von Strahlentherapie und systemische Therapie in der Onkologie.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/mii-pr-onko-nebenwirkung-procedure"
-        },
-        "name": "MII PR Onkologie Nebenwirkung von Strahlentherapie und systemische Therapie",
-        "description": "Dieses Profil beschreibt die Nebenwirkung von Strahlentherapie und systemische Therapie in der Onkologie.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-operation"
         },
         "name": "MII PR Onkologie Operation",
@@ -482,14 +458,6 @@
       {
         "reference": {
           "reference": "ValueSet/mii-vs-onko-nebenwirkung-ctcae-grad-adverse-event"
-        },
-        "name": "MII VS Onkologie Nebenwirkung nach CTCAE Grad",
-        "description": "oBDS-spezifisches ValueSet für Nebenwirkung nach CTCAE-Grad",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-nebenwirkung-ctcae-grad"
         },
         "name": "MII VS Onkologie Nebenwirkung nach CTCAE Grad",
         "description": "oBDS-spezifisches ValueSet für Nebenwirkung nach CTCAE-Grad",
@@ -813,44 +781,9 @@
       },
       {
         "reference": {
-          "reference": "Observation/mii-pr-onko-nebenwirkung-0"
+          "reference": "AdverseEvent/mii-pr-onko-nebenwirkung-0"
         },
         "name": "mii-pr-onko-nebenwirkung-0",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-pr-onko-nebenwirkung-1"
-        },
-        "name": "mii-pr-onko-nebenwirkung-1",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-pr-onko-nebenwirkung-2"
-        },
-        "name": "mii-pr-onko-nebenwirkung-2",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung"
-      },
-      {
-        "reference": {
-          "reference": "Condition/mii-pr-onko-nebenwirkung-3-con"
-        },
-        "name": "mii-pr-onko-nebenwirkung-3-con",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-condition-reference"
-      },
-      {
-        "reference": {
-          "reference": "Procedure/mii-pr-onko-nebenwirkung-3-pro"
-        },
-        "name": "mii-pr-onko-nebenwirkung-3-pro",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-procedure"
-      },
-      {
-        "reference": {
-          "reference": "AdverseEvent/mii-pr-onko-nebenwirkung-4"
-        },
-        "name": "mii-pr-onko-nebenwirkung-4",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event"
       }
     ],

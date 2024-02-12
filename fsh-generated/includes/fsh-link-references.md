@@ -30,9 +30,6 @@
 [MII_PR_Onko_Diagnose]: StructureDefinition-mii-pr-onko-diagnose.html
 [MII_PR_Onko_Grading]: StructureDefinition-mii-pr-onko-grading.html
 [MII_PR_Onko_Nebenwirkung_Adverse_Event]: StructureDefinition-mii-pr-onko-nebenwirkung-adverse-event.html
-[MII_PR_Onko_Nebenwirkung]: StructureDefinition-mii-pr-onko-nebenwirkung.html
-[MII_PR_Onko_Nebenwirkung_Condition]: StructureDefinition-mii-pr-onko-nebenwirkung-condition-reference.html
-[MII_PR_Onko_Nebenwirkung_Procedure]: StructureDefinition-mii-pr-onko-nebenwirkung-procedure.html
 [MII_PR_Onko_Operation]: StructureDefinition-mii-pr-onko-operation.html
 [MII_PR_Onko_Specimen]: StructureDefinition-mii-pr-onko-specimen.html
 [MII_PR_Onko_Strahlentherapie]: StructureDefinition-mii-pr-onko-strahlentherapie.html
@@ -51,7 +48,6 @@
 [MII_VS_Onko_Grading]: ValueSet-mii-vs-onko-grading.html
 [MII_VS_Onko_Nebenwirkung_Art]: ValueSet-mii-vs-onko-nebenwirkung-art.html
 [MII_VS_Onko_Nebenwirkung_CTCAE_Grad_Adverse_Event]: ValueSet-mii-vs-onko-nebenwirkung-ctcae-grad-adverse-event.html
-[MII_VS_Onko_Nebenwirkung_CTCAE_Grad]: ValueSet-mii-vs-onko-nebenwirkung-ctcae-grad.html
 [MII_VS_Onko_Operation_Intention]: ValueSet-mii-vs-onko-operation-intention.html
 [MII_VS_Onko_Operation_Komplikation]: ValueSet-mii-vs-onko-operation-komplikation.html
 [MII_VS_Onko_Primaertumor_Diagnosesicherung]: ValueSet-mii-vs-onko-primaertumor-diagnosesicherung.html
@@ -93,9 +89,4 @@
 [mii-exa-onko-tnm-n-kategorie-pN0i-sn]: Observation-mii-exa-onko-tnm-n-kategorie-pN0i-sn.html
 [mii-exa-onko-tnm-t-kategorie-Tis]: Observation-mii-exa-onko-tnm-t-kategorie-Tis.html
 [mii-exa-onko-tnm-t-kategorie-uT2a2]: Observation-mii-exa-onko-tnm-t-kategorie-uT2a2.html
-[mii-pr-onko-nebenwirkung-0]: Observation-mii-pr-onko-nebenwirkung-0.html
-[mii-pr-onko-nebenwirkung-1]: Observation-mii-pr-onko-nebenwirkung-1.html
-[mii-pr-onko-nebenwirkung-2]: Observation-mii-pr-onko-nebenwirkung-2.html
-[mii-pr-onko-nebenwirkung-3-con]: Condition-mii-pr-onko-nebenwirkung-3-con.html
-[mii-pr-onko-nebenwirkung-3-pro]: Procedure-mii-pr-onko-nebenwirkung-3-pro.html
-[mii-pr-onko-nebenwirkung-4]: AdverseEvent-mii-pr-onko-nebenwirkung-4.html
+[mii-pr-onko-nebenwirkung-0]: AdverseEvent-mii-pr-onko-nebenwirkung-0.html
