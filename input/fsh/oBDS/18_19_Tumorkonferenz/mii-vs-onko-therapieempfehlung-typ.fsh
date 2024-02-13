@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Onko_Therapieempfehlung_Typ
 Id: mii-vs-onko-therapieempfehlung-typ
 Title: "MII VS Onkologie Therapieempfehlung Typ"
-Description: "oBDS-spezifisches ValueSet für den Typ der Therapieempfehlung"
+Description: "oBDS-spezifisches ValueSet für den Therapieempfehlungstyp"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-therapieempfehlung-typ"
 * ^status = #draft

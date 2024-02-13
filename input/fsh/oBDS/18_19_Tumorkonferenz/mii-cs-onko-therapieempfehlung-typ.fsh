@@ -1,7 +1,7 @@
 CodeSystem: MII_CS_Onko_Therapieempfehlung_Typ
 Id: mii-cs-onko-therapieempfehlung-typ
 Title: "MII CS Onkologie Therapieempfehlung Typ"
-Description: "oBDS-spezifisches Codesystem für den Typ der Therapieempfehlung"
+Description: "oBDS-spezifisches Codesystem für den Therapieempfehlungstyp"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapieempfehlung-typ"
 * ^status = #draft
