@@ -9,4 +9,4 @@ Description: "oBDS-spezifisches ValueSet für Nebenwirkung nach CTCAE Art"
 * ^status = #draft
 * ^experimental = false
 
-* include codes from system $hl7-meddra-de
+* include codes from system $mii-cs-onko-meddra-de
