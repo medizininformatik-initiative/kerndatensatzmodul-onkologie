@@ -92,3 +92,4 @@
 [mii-exa-onko-tnm-n-kategorie-pN0i-sn]: Observation-mii-exa-onko-tnm-n-kategorie-pN0i-sn.html
 [mii-exa-onko-tnm-t-kategorie-Tis]: Observation-mii-exa-onko-tnm-t-kategorie-Tis.html
 [mii-exa-onko-tnm-t-kategorie-uT2a2]: Observation-mii-exa-onko-tnm-t-kategorie-uT2a2.html
+[mii-exa-onko-tumorkonferenz-01]: CarePlan-mii-exa-onko-tumorkonferenz-01.html
