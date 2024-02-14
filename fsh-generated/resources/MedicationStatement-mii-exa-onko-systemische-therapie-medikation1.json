@@ -1,0 +1,43 @@
+{
+  "resourceType": "MedicationStatement",
+  "id": "mii-exa-onko-systemische-therapie-medikation1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "status": "final",
+  "effectivePeriod": {
+    "start": "2021-12-04",
+    "end": "2022-04-06"
+  },
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/atc",
+        "code": "L01AA01",
+        "version": "Version 2022",
+        "display": "Cyclophosphamid"
+      },
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/atc",
+        "code": "01DB01",
+        "version": "Version 2022",
+        "display": "Doxorubicin"
+      }
+    ]
+  },
+  "partOf": [
+    {
+      "reference": "Procedure/mii-exa-onko-systemische-therapie-1"
+    }
+  ],
+  "note": [
+    {
+      "text": "AC"
+    }
+  ]
+}
