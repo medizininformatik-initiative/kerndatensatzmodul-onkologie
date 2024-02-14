@@ -75,7 +75,9 @@ Source: MII_PR_Onko_Strahlentherapie
 * extension[Behandlungsabschnitt].extension[Applikationsart].valueCodeableConcept.coding.code -> "14.7" "Strahlentherapie Applikationsart"
 * extension[Behandlungsabschnitt].extension[Strahlenart].valueCodeableConcept.coding.code -> "14.8" "Strahlentherapie Strahlenart"
 * extension[Behandlungsabschnitt].extension[Gesamtdosis].valueQuantity.value -> "14.9" "Strahlentherapie Gesamtdosis"
+* extension[Behandlungsabschnitt].extension[Gesamtdosis].valueQuantity.unit -> "14.11" "Strahlentherapie Einheit"
 * extension[Behandlungsabschnitt].extension[Einzeldosis].valueQuantity.value -> "14.10" "Strahlentherapie Einzeldosis pro Tag"
-* extension[Behandlungsabschnitt].extension[Einheit].valueCodeableConcept.coding.code -> "14.11" "Strahlentherapie Einheit"
+* extension[Behandlungsabschnitt].extension[Einzeldosis].valueQuantity.unit -> "14.11" "Strahlentherapie Einheit"
+
 * extension[Behandlungsabschnitt].extension[Boost].valueCodeableConcept.coding.code -> "14.12" "Strahlentherapie Boost"
 * outcome.coding.code -> "14.13" "Strahlentherapie Ende Grund"

@@ -33,5 +33,5 @@ Description: "Example for the FHIR profile systemic therapy based on German "
 
 
 * partOf = Reference(mii-exa-onko-systemische-therapie-1)
-* note.text = "AC" // Schemaabkürzung für Cyclophoshamid und Doxorubicin
+* note.text = "AC" // Schemaabkürzung für Cyclophosphamid und Doxorubicin
 
