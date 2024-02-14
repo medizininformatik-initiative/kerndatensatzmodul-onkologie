@@ -1,4 +1,5 @@
 [mii-exa-onko-systemische-therapie-medikation1]: MedicationStatement-mii-exa-onko-systemische-therapie-medikation1.html
+[mii-exa-onko-strahlentherapie]: Procedure-mii-exa-onko-strahlentherapie.html
 [mii-exa-onko-systemische-therapie-1]: Procedure-mii-exa-onko-systemische-therapie-1.html
 [MII_CS_Onko_Strahlentherapie_Intention]: CodeSystem-mii-cs-onko-strahlentherapie-intention.html
 [MII_CS_Onko_Systemische_Therapie_Art]: CodeSystem-mii-cs-onko-systemische-therapie-art.html

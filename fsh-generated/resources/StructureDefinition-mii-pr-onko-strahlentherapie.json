@@ -323,6 +323,17 @@
         ]
       },
       {
+        "id": "Procedure.extension:Behandlungsabschnitt.extension:Gesamtdosis.value[x].unit",
+        "path": "Procedure.extension.extension.value[x].unit",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "14.11",
+            "comment": "Strahlentherapie Einheit"
+          }
+        ]
+      },
+      {
         "id": "Procedure.extension:Behandlungsabschnitt.extension:Einzeldosis",
         "path": "Procedure.extension.extension",
         "sliceName": "Einzeldosis"
@@ -339,6 +350,17 @@
         ]
       },
       {
+        "id": "Procedure.extension:Behandlungsabschnitt.extension:Einzeldosis.value[x].unit",
+        "path": "Procedure.extension.extension.value[x].unit",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "14.11",
+            "comment": "Strahlentherapie Einheit"
+          }
+        ]
+      },
+      {
         "id": "Procedure.extension:Behandlungsabschnitt.extension:Boost",
         "path": "Procedure.extension.extension",
         "sliceName": "Boost"
@@ -351,22 +373,6 @@
             "identity": "oBDS",
             "map": "14.12",
             "comment": "Strahlentherapie Boost"
-          }
-        ]
-      },
-      {
-        "id": "Procedure.extension:Behandlungsabschnitt.extension:Einheit",
-        "path": "Procedure.extension.extension",
-        "sliceName": "Einheit"
-      },
-      {
-        "id": "Procedure.extension:Behandlungsabschnitt.extension:Einheit.value[x].coding.code",
-        "path": "Procedure.extension.extension.value[x].coding.code",
-        "mapping": [
-          {
-            "identity": "oBDS",
-            "map": "14.11",
-            "comment": "Strahlentherapie Einheit"
           }
         ]
       },
