@@ -33,6 +33,7 @@ Alias: $ICDO3 = http://terminology.hl7.org/CodeSystem/icd-o-3
 Alias: $LOINC = http://loinc.org
 Alias: $UICC = https://www.uicc.org/resources/tnm
 Alias: $UCUM =  http://unitsofmeasure.org
+Alias: $ATC_DE = http://fhir.de/CodeSystem/bfarm/atc
 
 //MII Onko
 Alias: $mii-cs-onko-primaertumor-diagnosesicherung = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung
