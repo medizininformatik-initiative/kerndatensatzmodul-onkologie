@@ -34,6 +34,10 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 * extension contains mii-ex-onko-operation-intention named Intention 1..1
 * extension[Intention] MS
 
+* outcome MS 
+* outcome 0..1 
+
+
 Mapping: FHIR-oBDS-Operation
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
@@ -44,4 +48,5 @@ Source: MII_PR_Onko_Operation
 * code.coding[ops].code -> "13.3" "OPS" // OPS Code
 * code.coding[ops].version -> "13.4" "OPS Version" 
 * complication -> "13.5" "OP Komplikationen " // Komplikationen über oBDS Valueset, nicht enthaltene über ICD-10
+* outcome-> "10.1" "Lokaler Resektionsstatus"
 
