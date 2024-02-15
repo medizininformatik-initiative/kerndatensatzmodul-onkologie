@@ -48,5 +48,5 @@ Source: MII_PR_Onko_Operation
 * code.coding[ops].code -> "13.3" "OPS" // OPS Code
 * code.coding[ops].version -> "13.4" "OPS Version" 
 * complication -> "13.5" "OP Komplikationen " // Komplikationen über oBDS Valueset, nicht enthaltene über ICD-10
-* outcome-> "10.1" "Lokaler Resektionsstatus"
+* outcome -> "10.1" "Lokaler Resektionsstatus"
 
