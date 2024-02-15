@@ -12,11 +12,10 @@ Description: "Medikation der Systemische Therapie. Dieses Profil beschreibt die 
 * medication[x] 1..1 MS
 * partOf 1..* MS 
 * partOf only Reference(Procedure or MedicationAdministration)
-* note MS
+* note MS // Angabe eines Schemas ist optional. Bei Angabe eines SChemas sind alle Wirkstoffe unter medication gesondert zu kodieren 
 
 
-
-// Systemische Therapie Beginn und  --> ggfs. dupliziert im MedicationStatement oder MedicationAdministration
+// Systemische Therapie Beginn und Ende --> ggfs. dupliziert im MedicationStatement 
 * effective[x] MS 
 * effective[x] 1..1 // wird über Period.start und Period.stop des MII Prozedurmoduls erfasst
 * effectivePeriod.start 0..1 MS

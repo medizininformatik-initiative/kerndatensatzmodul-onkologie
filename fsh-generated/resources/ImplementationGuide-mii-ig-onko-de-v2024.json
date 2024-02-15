@@ -65,7 +65,23 @@
     "resource": [
       {
         "reference": {
-          "reference": "Procedure/mii-exa-onko-systemische-therapie"
+          "reference": "MedicationStatement/mii-exa-onko-systemische-therapie-medikation1"
+        },
+        "name": "Example chemotherapy",
+        "description": "Example for the FHIR profile systemic therapy based on German ",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-strahlentherapie"
+        },
+        "name": "Example radiation therapy",
+        "description": "Example radiation therapy",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-systemische-therapie-1"
         },
         "name": "Example systemic therapy",
         "description": "Example systemic therapy",

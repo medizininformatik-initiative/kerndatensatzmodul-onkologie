@@ -1,0 +1,123 @@
+{
+  "resourceType": "Procedure",
+  "id": "mii-exa-onko-strahlentherapie",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie"
+    ]
+  },
+  "extension": [
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "P",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-intention"
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-behandlungsabschnitt",
+      "extension": [
+        {
+          "url": "Applikationsart",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "P-ST",
+                "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart"
+              }
+            ]
+          }
+        },
+        {
+          "url": "Strahlenart",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "UH",
+                "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart"
+              }
+            ]
+          }
+        },
+        {
+          "url": "Zielgebiet",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "3.4",
+                "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet"
+              }
+            ]
+          }
+        },
+        {
+          "url": "Zielgebiet_Lateralitaet",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "L",
+                "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-seitenlokalisation"
+              }
+            ]
+          }
+        },
+        {
+          "url": "Gesamtdosis",
+          "valueQuantity": {
+            "value": 60,
+            "unit": "Gy"
+          }
+        },
+        {
+          "url": "Einzeldosis",
+          "valueQuantity": {
+            "value": 12,
+            "unit": "Gy"
+          }
+        },
+        {
+          "url": "Boost",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "SIB",
+                "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellung",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "A",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-stellung"
+          }
+        ]
+      }
+    }
+  ],
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "8-52",
+        "system": "http://fhir.de/CodeSystem/bfarm/ops"
+      }
+    ]
+  },
+  "performedPeriod": {
+    "start": "2019-07-04",
+    "end": "2019-09-14"
+  }
+}
