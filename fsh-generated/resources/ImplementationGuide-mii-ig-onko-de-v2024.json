@@ -45,7 +45,7 @@
     {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.prozedur",
       "version": "2024.0.0-ballot",
-      "uri": "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/ImplementationGuide/mii-ig-prozedur-de-v2024",
+      "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.prozedur/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.prozedur",
       "id": "de_medizininformatikinitiative_kerndatensatz_prozedur"
     },
     {
@@ -86,6 +86,14 @@
         "name": "Example systemic therapy",
         "description": "Example systemic therapy",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/mii-cm-onko-tnm-uicc-snomed"
+        },
+        "name": "MII CM Onko TNM UICC SNOMED",
+        "description": "Mapping TNM UICC Codes zu SNOMED-CT",
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -773,13 +781,6 @@
         },
         "name": "MII VS Onkologie TNM Version",
         "description": "Codes für TNM Version/Auflage nach welcher Version des TNM klassifiziert wird.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/mii-cm-onko-tnm-uicc-snomed"
-        },
-        "name": "mii-cm-onko-tnm-uicc-snomed",
         "exampleBoolean": false
       },
       {
