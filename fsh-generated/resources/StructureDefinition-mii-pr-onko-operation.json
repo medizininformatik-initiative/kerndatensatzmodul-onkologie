@@ -143,11 +143,15 @@
         "id": "Procedure.outcome",
         "path": "Procedure.outcome",
         "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-residualstatus"
+        },
         "mapping": [
           {
             "identity": "oBDS",
             "map": "10.1",
-            "comment": "Lokaler Resektionsstatus"
+            "comment": "Beurteilung des lokalen Residualstatus nach Abschluss der Operation"
           }
         ]
       },
