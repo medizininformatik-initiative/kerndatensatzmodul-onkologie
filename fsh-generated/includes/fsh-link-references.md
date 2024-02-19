@@ -21,6 +21,9 @@
 [MII_CS_Onko_Strahlentherapie_Strahlenart]: CodeSystem-mii-cs-onko-strahlentherapie-strahlenart.html
 [MII_CS_Onko_Strahlentherapie_Zielgebiet]: CodeSystem-mii-cs-onko-strahlentherapie-zielgebiet.html
 [MII_CS_Onko_Systemische_Therapie_Stellung]: CodeSystem-mii-cs-onko-systemische-therapie-stellung.html
+[MII_CS_Onko_Therapieabweichung]: CodeSystem-mii-cs-onko-therapieabweichung.html
+[MII_CS_Onko_Therapieempfehlung_Typ]: CodeSystem-mii-cs-onko-therapieempfehlung-typ.html
+[MII_CS_Onko_Therapieplanung_Typ]: CodeSystem-mii-cs-onko-therapieplanung-typ.html
 [MII_CS_Onko_TNM_UICC]: CodeSystem-mii-cs-onko-tnm-uicc.html
 [MII_CS_Onko_TNM_Version]: CodeSystem-mii-cs-onko-tnm-version.html
 [MII_CS_Onko_Tod]: CodeSystem-mii-cs-onko-tod.html
@@ -67,6 +70,7 @@
 [MII_VS_Onko_Allgemeiner_Leistungszustand]: ValueSet-mii-vs-onko-allgemeiner-leistungszustand.html
 [MII_VS_Onko_Fernmetastasen]: ValueSet-mii-vs-onko-fernmetastasen.html
 [MII_PR_Onko_Tod]: StructureDefinition-mii-pr-onko-tod.html
+[MII_PR_Onko_Turmokonferenz]: StructureDefinition-mii-pr-onko-turmokonferenz.html
 [MII_VS_Onko_Grading]: ValueSet-mii-vs-onko-grading.html
 [MII_VS_Onko_Nebenwirkung_Art]: ValueSet-mii-vs-onko-nebenwirkung-art.html
 [MII_VS_Onko_Nebenwirkung_CTCAE_Grad]: ValueSet-mii-vs-onko-nebenwirkung-ctcae-grad.html
@@ -87,6 +91,9 @@
 [MII_VS_Onko_Systemische_Therapie_Art]: ValueSet-mii-vs-onko-systemische-therapie-art.html
 [MII_VS_Onko_Systemische_Therapie_Intention]: ValueSet-mii-vs-onko-systemische-therapie-intention.html
 [MII_VS_Onko_Systemische_Therapie_Stellung]: ValueSet-mii-vs-onko-systemische-therapie-stellung.html
+[MII_VS_Onko_Therapieabweichung]: ValueSet-mii-vs-onko-therapieabweichung.html
+[MII_VS_Onko_Therapieempfehlung_Typ]: ValueSet-mii-vs-onko-therapieempfehlung-typ.html
+[MII_VS_Onko_Therapieplanung_Typ]: ValueSet-mii-vs-onko-therapieplanung-typ.html
 [MII_VS_Onko_TNM_cp_Praefix]: ValueSet-mii-vs-onko-tnm-cp-praefix.html
 [MII_VS_Onko_TNM_ITC_Suffix]: ValueSet-mii-vs-onko-tnm-itc-suffix.html
 [MII_VS_Onko_TNM_Klassifikation_Typ]: ValueSet-mii-vs-onko-tnm-klassifikation-typ.html
@@ -127,3 +134,4 @@
 [mii-exa-onko-tod-j]: Observation-mii-exa-onko-tod-j.html
 [mii-exa-onko-tod-n]: Observation-mii-exa-onko-tod-n.html
 [mii-exa-onko-tod-u]: Observation-mii-exa-onko-tod-u.html
+[mii-exa-onko-tumorkonferenz-01]: CarePlan-mii-exa-onko-tumorkonferenz-01.html

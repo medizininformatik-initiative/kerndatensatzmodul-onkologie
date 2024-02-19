@@ -1,0 +1,45 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "MII_CS_Onko_Therapieabweichung",
+  "id": "mii-cs-onko-therapieabweichung",
+  "title": "MII CS Onkologie Therapieabweichung",
+  "description": "oBDS-spezifisches Codesystem für die Therapieabweichung auf Wunsch des Patients.",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapieabweichung",
+  "concept": [
+    {
+      "code": "J",
+      "display": "ja"
+    },
+    {
+      "code": "N",
+      "display": "nein"
+    },
+    {
+      "code": "U",
+      "display": "unbekannt"
+    }
+  ],
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2024.0.0-ballot",
+  "caseSensitive": true,
+  "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-vs-therapieabweichung",
+  "count": 3
+}

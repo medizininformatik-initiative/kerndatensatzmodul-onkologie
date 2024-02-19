@@ -25,6 +25,9 @@ Alias: $condition-ver-status = http://terminology.hl7.org/CodeSystem/condition-v
 Alias: $verification-status-vs = http://hl7.org/fhir/ValueSet/condition-ver-status
 Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
 Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-clinical
+Alias: $request-status = http://hl7.org/fhir/request-status
+Alias: $request-intent = http://hl7.org/fhir/request-intent
+Alias: $care-plan-activity-status = http://hl7.org/fhir/care-plan-activity-status
 
 // Code Systems
 Alias: $CTCAE = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
@@ -89,3 +92,9 @@ Alias: $adverse-event-severity = http://terminology.hl7.org/CodeSystem/adverse-e
 Alias: $mii-vs-onko-nebenwirkung-ctcae-grad = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-nebenwirkung-ctcae-grad
 Alias: $mii-cs-onko-tod = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-ende-tod
 Alias: $mii-vs-onko-tod = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-ende-tod
+Alias: $mii-cs-onko-therapieplanung-typ = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapieplanung-typ
+Alias: $mii-vs-onko-therapieplanung-typ = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-therapieplanung-typ
+Alias: $mii-cs-onko-therapieempfehlung-typ = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapieempfehlung-typ
+Alias: $mii-vs-onko-therapieempfehlung-typ = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-therapieempfehlung-typ
+Alias: $mii-cs-onko-therapieabweichung = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapieabweichung
+Alias: $mii-vs-onko-therapieabweichung = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-vs-therapieabweichung

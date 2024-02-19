@@ -77,14 +77,6 @@
     "resource": [
       {
         "reference": {
-          "reference": "ConceptMap/mii-cm-onko-tnm-uicc-snomed"
-        },
-        "name": "MII CM Onko TNM UICC SNOMED",
-        "description": "Mapping TNM UICC Codes zu SNOMED-CT",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "CodeSystem/mii-cs-onko-strahlentherapie-intention"
         },
         "name": "MII CS Onko Strahlentherapie Intention",
@@ -233,6 +225,26 @@
         },
         "name": "MII CS Onkologie Systemische Therapie  Stellung",
         "description": "oBDS-spezifisches Codesystem für Klassifikation von Stellung zur OP",
+          "reference": "CodeSystem/mii-cs-onko-therapieabweichung"
+        },
+        "name": "MII CS Onkologie Therapieabweichung",
+        "description": "oBDS-spezifisches Codesystem für die Therapieabweichung auf Wunsch des Patients.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-therapieempfehlung-typ"
+        },
+        "name": "MII CS Onkologie Therapieempfehlung Typ",
+        "description": "oBDS-spezifisches Codesystem für den Therapieempfehlungstyp",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-therapieplanung-typ"
+        },
+        "name": "MII CS Onkologie Therapieplanung Typ",
+        "description": "oBDS-spezifisches Codesystem für den Therapieplanungstyp",
         "exampleBoolean": false
       },
       {
@@ -573,6 +585,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-turmokonferenz"
+        },
+        "name": "MII PR Onkologie Turmokonferenz",
+        "description": "Diese Profil beschreibt die Turmokonferenz und die Therapieempfehlungen",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-grading"
         },
         "name": "MII VS Onkologie Grading",
@@ -713,6 +733,10 @@
         },
         "name": "MII VS Onkologie Systemische Therapie Art",
         "description": "oBDS-spezifisches ValueSet für Klassifikation der Art der systemischen oder abwartenden Therapie",
+          "reference": "ValueSet/mii-vs-onko-therapieabweichung"
+        },
+        "name": "MII VS Onkologie Therapieabweichung",
+        "description": "oBDS-spezifisches ValueSet für die Therapieabweichung auf Wunsch des Patients.",
         "exampleBoolean": false
       },
       {
@@ -721,6 +745,10 @@
         },
         "name": "MII VS Onkologie Systemische Therapie Intention",
         "description": "Value Set für oBDS-Codes für Klassifikation von Intention der Systemischen Therapie",
+          "reference": "ValueSet/mii-vs-onko-therapieempfehlung-typ"
+        },
+        "name": "MII VS Onkologie Therapieempfehlung Typ",
+        "description": "oBDS-spezifisches ValueSet für den Therapieempfehlungstyp",
         "exampleBoolean": false
       },
       {
@@ -729,6 +757,10 @@
         },
         "name": "MII VS Onkologie Systemische Therapie Stellung",
         "description": "oBDS-spezifisches ValueSet für Klassifikation von Stellung zur OP",
+          "reference": "ValueSet/mii-vs-onko-therapieplanung-typ"
+        },
+        "name": "MII VS Onkologie Therapieplanung Typ",
+        "description": "oBDS-spezifisches ValueSet für den Therapieplanungstyp",
         "exampleBoolean": false
       },
       {
@@ -869,6 +901,13 @@
       },
       {
         "reference": {
+          "reference": "ConceptMap/mii-cm-onko-tnm-uicc-snomed"
+        },
+        "name": "mii-cm-onko-tnm-uicc-snomed",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-onko-anzahl-befallene-lymphknoten-0"
         },
         "name": "mii-exa-onko-anzahl-befallene-lymphknoten-0",
@@ -957,6 +996,13 @@
         },
         "name": "mii-exa-onko-tnm-t-kategorie-uT2a2",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "CarePlan/mii-exa-onko-tumorkonferenz-01"
+        },
+        "name": "mii-exa-onko-tumorkonferenz-01",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-turmokonferenz"
       }
     ],
     "page": {
