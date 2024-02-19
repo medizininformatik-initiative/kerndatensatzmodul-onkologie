@@ -119,6 +119,22 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-onko-allgemeiner-leistungszustand"
+        },
+        "name": "MII CS Onkologie Allgemeiner Leistungszustand",
+        "description": "oBDS-spezifisches Codesystem für den Allgemeinen Leistungszustand",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-fernmetastasen"
+        },
+        "name": "MII CS Onkologie Fernmetastasen",
+        "description": "oBDS-spezifisches Codesystem für Fernmetastasen",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-onko-grading"
         },
         "name": "MII CS Onkologie Grading",
@@ -163,6 +179,14 @@
         },
         "name": "MII CS Onkologie Primärtumor Seitenlokalisation",
         "description": "Codes für Primärtumor Seitenlokalisation, d.h. organspezifische Angabe der betroffenen Seite.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-residualstatus"
+        },
+        "name": "MII CS Onkologie Residualstatus",
+        "description": "oBDS-spezifisches Codesystem für R-Klassifikation",
         "exampleBoolean": false
       },
       {
@@ -319,6 +343,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand"
+        },
+        "name": "MII PR Onkologie Allgemeiner Leistungszustand",
+        "description": "OBDS Beschreibung des allgemeines Leistungszustandes",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-anzahl-befallene-lymphknoten"
         },
         "name": "MII PR Onkologie Anzahl der befallenen Lymphknoten",
@@ -371,6 +403,10 @@
         },
         "name": "MII PR Onkologie Genetische Variante",
         "description": "Genetische Variante wie im oBDS ",
+          "reference": "StructureDefinition/mii-pr-onko-fernmetastasen"
+        },
+        "name": "MII PR Onkologie Fernmetastasen",
+        "description": "OBDS Beschreibung von Fernmetastasen (Lokalisation und Datum)",
         "exampleBoolean": false
       },
       {
@@ -387,6 +423,14 @@
         },
         "name": "MII PR Onkologie Operation",
         "description": "Operation nach OPS inklusive Intention, Datum und Komplikationen:",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-residualstatus"
+        },
+        "name": "MII PR Onkologie Residualstatus",
+        "description": "Umfang eines Residualtumors nach einer Therapie",
         "exampleBoolean": false
       },
       {
@@ -519,6 +563,30 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-weitere-klassifikationen"
+        },
+        "name": "MII PR Onkologie Weitere Klassifikationen",
+        "description": "Weitere Tumor Staging Klassifikation neben TMN (Hämatoonkologische und sonstige Klassifikationen)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-allgemeiner-leistungszustand"
+        },
+        "name": "MII VS Onkologie Allgemeiner Leistungszustand",
+        "description": "Value Set für oBDS-Codes für den Allgemeinen Leistungszustand",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-fernmetastasen"
+        },
+        "name": "MII VS Onkologie Fernmetastasen",
+        "description": "Value Set für oBDS-Codes für Fernmetastasen",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-grading"
         },
         "name": "MII VS Onkologie Grading",
@@ -563,6 +631,14 @@
         },
         "name": "MII VS Onkologie Primärtumor Seitenlokalisation",
         "description": "Codes für Primärtumor Seitenlokalisation, d.h. organspezifische Angabe der betroffenen Seite.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-residualstatus"
+        },
+        "name": "MII VS Onkologie Residualstatus",
+        "description": "Value Set für oBDS-Codes für R- Klassifikation",
         "exampleBoolean": false
       },
       {
@@ -798,6 +874,13 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-onko-allgemeiner-leistungszustand-1"
+        },
+        "name": "mii-exa-onko-allgemeiner-leistungszustand-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand"
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-onko-anzahl-befallene-lymphknoten-0"
         },
         "name": "mii-exa-onko-anzahl-befallene-lymphknoten-0",
@@ -816,6 +899,20 @@
         },
         "name": "mii-exa-onko-diagnose",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-fernmetastasen-1"
+        },
+        "name": "mii-exa-onko-fernmetastasen-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-residualstatus-1"
+        },
+        "name": "mii-exa-onko-residualstatus-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-residualstatus"
       },
       {
         "reference": {
@@ -872,6 +969,20 @@
         },
         "name": "mii-exa-onko-tnm-t-kategorie-uT2a2",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-weitere-klassifikationen-1"
+        },
+        "name": "mii-exa-onko-weitere-klassifikationen-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-weitere-klassifikationen-2"
+        },
+        "name": "mii-exa-onko-weitere-klassifikationen-2",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen"
       }
     ],
     "page": {

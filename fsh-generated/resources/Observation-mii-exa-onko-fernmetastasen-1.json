@@ -1,0 +1,30 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-fernmetastasen-1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "385421009",
+        "system": "http://snomed.info/sct"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "bodySite": {
+    "coding": [
+      {
+        "code": "PUL",
+        "display": "Lunge"
+      }
+    ]
+  },
+  "effectiveDateTime": "2024-02-08"
+}
