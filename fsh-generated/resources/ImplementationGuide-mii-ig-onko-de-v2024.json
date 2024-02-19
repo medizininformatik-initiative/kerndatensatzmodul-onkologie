@@ -45,7 +45,7 @@
     {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.prozedur",
       "version": "2024.0.0-ballot",
-      "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.prozedur/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.prozedur",
+      "uri": "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/ImplementationGuide/mii-ig-prozedur-de-v2024",
       "id": "de_medizininformatikinitiative_kerndatensatz_prozedur"
     },
     {
@@ -59,6 +59,12 @@
       "version": "2.0.0",
       "uri": "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/ImplementationGuide/mii-ig-medikation-v2",
       "id": "de_medizininformatikinitiative_kerndatensatz_medikation"
+    },
+    {
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.molgen",
+      "version": "1.0.0",
+      "uri": "/guide/MedizininformatikInitiative-ModulMolekulargenetischerBefundberic?version=current",
+      "id": "de_medizininformatikinitiative_kerndatensatz_molgen"
     }
   ],
   "definition": {
@@ -86,14 +92,6 @@
         "name": "Example systemic therapy",
         "description": "Example systemic therapy",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/mii-cm-onko-tnm-uicc-snomed"
-        },
-        "name": "MII CM Onko TNM UICC SNOMED",
-        "description": "Mapping TNM UICC Codes zu SNOMED-CT",
-        "exampleBoolean": false
       },
       {
         "reference": {
@@ -365,6 +363,14 @@
         },
         "name": "MII PR Onkologie Diagnose",
         "description": "Dieses Profil beschreibt eine Diagnose in der Onkologie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-genetische-variante"
+        },
+        "name": "MII PR Onkologie Genetische Variante",
+        "description": "Genetische Variante wie im oBDS ",
         "exampleBoolean": false
       },
       {
@@ -781,6 +787,13 @@
         },
         "name": "MII VS Onkologie TNM Version",
         "description": "Codes für TNM Version/Auflage nach welcher Version des TNM klassifiziert wird.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/mii-cm-onko-tnm-uicc-snomed"
+        },
+        "name": "mii-cm-onko-tnm-uicc-snomed",
         "exampleBoolean": false
       },
       {

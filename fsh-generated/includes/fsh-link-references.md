@@ -1,7 +1,6 @@
 [mii-exa-onko-systemische-therapie-medikation1]: MedicationStatement-mii-exa-onko-systemische-therapie-medikation1.html
 [mii-exa-onko-strahlentherapie]: Procedure-mii-exa-onko-strahlentherapie.html
 [mii-exa-onko-systemische-therapie-1]: Procedure-mii-exa-onko-systemische-therapie-1.html
-[mii-cm-onko-tnm-uicc-snomed]: ConceptMap-mii-cm-onko-tnm-uicc-snomed.html
 [MII_CS_Onko_Strahlentherapie_Intention]: CodeSystem-mii-cs-onko-strahlentherapie-intention.html
 [MII_CS_Onko_Systemische_Therapie_Art]: CodeSystem-mii-cs-onko-systemische-therapie-art.html
 [MII_CS_Onko_Systemische_Therapie_Intention]: CodeSystem-mii-cs-onko-systemische-therapie-intention.html
@@ -36,6 +35,7 @@
 [MII_PR_Onko_Anzahl_Untersuchte_Sentinel_Lymphknoten]: StructureDefinition-mii-pr-onko-anzahl-untersuchte-sentinel-lymphknoten.html
 [MII_PR_Onko_Befund]: StructureDefinition-mii-pr-onko-befund.html
 [MII_PR_Onko_Diagnose]: StructureDefinition-mii-pr-onko-diagnose.html
+[MII_PR_Onko_Genetische_Variante]: StructureDefinition-mii-pr-onko-genetische-variante.html
 [MII_PR_Onko_Grading]: StructureDefinition-mii-pr-onko-grading.html
 [MII_PR_Onko_Operation]: StructureDefinition-mii-pr-onko-operation.html
 [MII_PR_Onko_Specimen]: StructureDefinition-mii-pr-onko-specimen.html
@@ -88,6 +88,7 @@
 [MII_VS_Onko_TNM_UICC_Stadium]: ValueSet-mii-vs-onko-tnm-uicc-stadium.html
 [MII_VS_Onko_TNM_V_Kategorie_Werte]: ValueSet-mii-vs-onko-tnm-v-kategorie-werte.html
 [MII_VS_Onko_TNM_Version]: ValueSet-mii-vs-onko-tnm-version.html
+[mii-cm-onko-tnm-uicc-snomed]: ConceptMap-mii-cm-onko-tnm-uicc-snomed.html
 [mii-exa-onko-anzahl-befallene-lymphknoten-0]: Observation-mii-exa-onko-anzahl-befallene-lymphknoten-0.html
 [mii-exa-onko-anzahl-untersuchte-lymphknoten-23]: Observation-mii-exa-onko-anzahl-untersuchte-lymphknoten-23.html
 [mii-exa-onko-diagnose]: Condition-mii-exa-onko-diagnose.html
