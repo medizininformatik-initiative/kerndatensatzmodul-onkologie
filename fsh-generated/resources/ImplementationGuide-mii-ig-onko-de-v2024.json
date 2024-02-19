@@ -77,34 +77,10 @@
     "resource": [
       {
         "reference": {
-          "reference": "MedicationStatement/mii-exa-onko-systemische-therapie-medikation1"
+          "reference": "ConceptMap/mii-cm-onko-tnm-uicc-snomed"
         },
-        "name": "Example chemotherapy",
-        "description": "Example for the FHIR profile systemic therapy based on German ",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
-      },
-      {
-        "reference": {
-          "reference": "Procedure/mii-exa-onko-strahlentherapie"
-        },
-        "name": "Example radiation therapy",
-        "description": "Example radiation therapy",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie"
-      },
-      {
-        "reference": {
-          "reference": "Procedure/mii-exa-onko-systemische-therapie-1"
-        },
-        "name": "Example systemic therapy",
-        "description": "Example systemic therapy",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad"
-        },
-        "name": "MII CS Onko Nebenwirkung nach CTCAE-Grad",
-        "description": "Gibt an, zu welchem Schweregrad von Nebenwirkungen es bei der Bestrahlung oder der systemischen Therapie gekommen ist.",
+        "name": "MII CM Onko TNM UICC SNOMED",
+        "description": "Mapping TNM UICC Codes zu SNOMED-CT",
         "exampleBoolean": false
       },
       {
@@ -273,6 +249,14 @@
         },
         "name": "MII CS Onkologie TNM Version",
         "description": "Codes für TNM Version/Auflage nach welcher Version des TNM klassifiziert wird.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-tod"
+        },
+        "name": "MII CS Onkologie Tod",
+        "description": "oBDS-spezifisches Codesystem tumorbedingter Tod",
         "exampleBoolean": false
       },
       {
@@ -589,30 +573,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-onko-weitere-klassifikationen"
-        },
-        "name": "MII PR Onkologie Weitere Klassifikationen",
-        "description": "Weitere Tumor Staging Klassifikation neben TMN (Hämatoonkologische und sonstige Klassifikationen)",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-allgemeiner-leistungszustand"
-        },
-        "name": "MII VS Onkologie Allgemeiner Leistungszustand",
-        "description": "Value Set für oBDS-Codes für den Allgemeinen Leistungszustand",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-fernmetastasen"
-        },
-        "name": "MII VS Onkologie Fernmetastasen",
-        "description": "Value Set für oBDS-Codes für Fernmetastasen",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "ValueSet/mii-vs-onko-grading"
         },
         "name": "MII VS Onkologie Grading",
@@ -909,20 +869,6 @@
       },
       {
         "reference": {
-          "reference": "ConceptMap/mii-cm-onko-tnm-uicc-snomed"
-        },
-        "name": "mii-cm-onko-tnm-uicc-snomed",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-onko-allgemeiner-leistungszustand-1"
-        },
-        "name": "mii-exa-onko-allgemeiner-leistungszustand-1",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand"
-      },
-      {
-        "reference": {
           "reference": "Observation/mii-exa-onko-anzahl-befallene-lymphknoten-0"
         },
         "name": "mii-exa-onko-anzahl-befallene-lymphknoten-0",
@@ -1011,27 +957,6 @@
         },
         "name": "mii-exa-onko-tnm-t-kategorie-uT2a2",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-onko-weitere-klassifikationen-1"
-        },
-        "name": "mii-exa-onko-weitere-klassifikationen-1",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-onko-weitere-klassifikationen-2"
-        },
-        "name": "mii-exa-onko-weitere-klassifikationen-2",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen"
-      },
-      {
-        "reference": {
-          "reference": "AdverseEvent/mii-pr-onko-nebenwirkung-0"
-        },
-        "name": "mii-pr-onko-nebenwirkung-0",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event"
       }
     ],
     "page": {
