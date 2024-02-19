@@ -65,6 +65,8 @@
       "version": "1.0.0",
       "uri": "/guide/MedizininformatikInitiative-ModulMolekulargenetischerBefundberic?version=current",
       "id": "de_medizininformatikinitiative_kerndatensatz_molgen"
+    },
+    {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.symptom",
       "version": "2024.0.0-ballot",
       "uri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/ImplementationGuide/mii-ig-symptom-de-v2024",
@@ -96,6 +98,9 @@
         "name": "Example systemic therapy",
         "description": "Example systemic therapy",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad"
         },
         "name": "MII CS Onko Nebenwirkung nach CTCAE-Grad",
@@ -1020,6 +1025,9 @@
         },
         "name": "mii-exa-onko-weitere-klassifikationen-2",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen"
+      },
+      {
+        "reference": {
           "reference": "AdverseEvent/mii-pr-onko-nebenwirkung-0"
         },
         "name": "mii-pr-onko-nebenwirkung-0",
