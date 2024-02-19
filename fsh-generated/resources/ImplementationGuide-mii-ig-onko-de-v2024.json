@@ -65,6 +65,10 @@
       "version": "1.0.0",
       "uri": "/guide/MedizininformatikInitiative-ModulMolekulargenetischerBefundberic?version=current",
       "id": "de_medizininformatikinitiative_kerndatensatz_molgen"
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.symptom",
+      "version": "2024.0.0-ballot",
+      "uri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/ImplementationGuide/mii-ig-symptom-de-v2024",
+      "id": "de_medizininformatikinitiative_kerndatensatz_symptom"
     }
   ],
   "definition": {
@@ -92,6 +96,11 @@
         "name": "Example systemic therapy",
         "description": "Example systemic therapy",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
+          "reference": "CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad"
+        },
+        "name": "MII CS Onko Nebenwirkung nach CTCAE-Grad",
+        "description": "Gibt an, zu welchem Schweregrad von Nebenwirkungen es bei der Bestrahlung oder der systemischen Therapie gekommen ist.",
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -423,6 +432,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event"
+        },
+        "name": "MII PR Onkologie Nebenwirkung von Strahlentherapie und systemische Therapie",
+        "description": "Dieses Profil beschreibt die Nebenwirkung von Strahlentherapie und systemische Therapie in der Onkologie.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-operation"
         },
         "name": "MII PR Onkologie Operation",
@@ -595,6 +612,22 @@
         },
         "name": "MII VS Onkologie Grading",
         "description": "Codes für Histologie Grading. Gibt den Differenzierungsgrad des Tumors entsprechend der aktuellen TNM-Auflage an.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-nebenwirkung-art"
+        },
+        "name": "MII VS Onkologie Nebenwirkung nach CTCAE Art",
+        "description": "oBDS-spezifisches ValueSet für Nebenwirkung nach CTCAE oder MedDRA code",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-nebenwirkung-ctcae-grad"
+        },
+        "name": "MII VS Onkologie Nebenwirkung nach CTCAE Grad",
+        "description": "oBDS-spezifisches ValueSet für Nebenwirkung nach CTCAE-Grad",
         "exampleBoolean": false
       },
       {
@@ -987,6 +1020,10 @@
         },
         "name": "mii-exa-onko-weitere-klassifikationen-2",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen"
+          "reference": "AdverseEvent/mii-pr-onko-nebenwirkung-0"
+        },
+        "name": "mii-pr-onko-nebenwirkung-0",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event"
       }
     ],
     "page": {
