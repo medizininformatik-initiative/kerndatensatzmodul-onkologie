@@ -67,11 +67,10 @@
 [MII_PR_Onko_TNM_y_Symbol]: StructureDefinition-mii-pr-onko-tnm-y-symbol.html
 [MII_PR_Onko_TNM_Klassifikation]: StructureDefinition-mii-pr-onko-tnm-klassifikation.html
 [MII_PR_Onko_Tod]: StructureDefinition-mii-pr-onko-tod.html
+[MII_PR_Onko_Turmokonferenz]: StructureDefinition-mii-pr-onko-turmokonferenz.html
 [MII_PR_Onko_Weitere_Klassifikationen]: StructureDefinition-mii-pr-onko-weitere-klassifikationen.html
 [MII_VS_Onko_Allgemeiner_Leistungszustand]: ValueSet-mii-vs-onko-allgemeiner-leistungszustand.html
 [MII_VS_Onko_Fernmetastasen]: ValueSet-mii-vs-onko-fernmetastasen.html
-[MII_PR_Onko_Tod]: StructureDefinition-mii-pr-onko-tod.html
-[MII_PR_Onko_Turmokonferenz]: StructureDefinition-mii-pr-onko-turmokonferenz.html
 [MII_VS_Onko_Grading]: ValueSet-mii-vs-onko-grading.html
 [MII_VS_Onko_Nebenwirkung_Art]: ValueSet-mii-vs-onko-nebenwirkung-art.html
 [MII_VS_Onko_Nebenwirkung_CTCAE_Grad]: ValueSet-mii-vs-onko-nebenwirkung-ctcae-grad.html
