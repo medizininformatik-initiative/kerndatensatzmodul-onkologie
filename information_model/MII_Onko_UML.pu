@@ -8,4 +8,19 @@ object Onko_SystemischeTherapie
 MII_Prozedur <|-- Onko_OP
 MII_Prozedur <|-- Onko_Strahlentherapie
 MII_Prozedur <|-- Onko_SystemischeTherapie
+object CarePlan
+object PrimaerDiagnose
+object TNM_Klassifikation
+PrimaerDiagnose "Condition.stage.assessment"<-- TNM_Klassifikation
+PrimaerDiagnose <-- "adresses" CarePlan
+object Lymphknotenuntersuchung
+PrimaerDiagnose "hasMember"<--"partOf" Lymphknotenuntersuchung
+object HistologieGrading
+object Pathologiebefund 
+object Fernmetastasen
+object Tod
+object Bioprobe 
+object Verlauf 
+
+
 @enduml
