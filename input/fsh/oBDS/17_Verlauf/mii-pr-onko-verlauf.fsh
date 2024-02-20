@@ -8,8 +8,6 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
 * ^status = #draft
 
 * identifier MS
-* status ^fixedCode = $request-status#active
-* intent ^fixedCode = $request-intent#plan
 
 * subject MS
 * subject only Reference(Patient)
@@ -19,7 +17,6 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
 * category.coding ^fixedCoding.system = $mii-cs-onko-therapieplanung-typ
 
 // Therapieplanung Datum
-* created 1..1 MS
 * code MS
 * component MS
 * component 1..*
@@ -27,3 +24,10 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
 * component ^slicing.description = "Slice based on the component.code pattern"
+* component contains 
+    Tumor_Verlauf and 
+    Lymphknoten_Verlauf and 
+    Metastasen_Verlauf
+* component[Tumor_Verlauf] MS
+* component[Lymphknoten_Verlauf] MS 
+* component[Metastasen_Verlauf] MS
