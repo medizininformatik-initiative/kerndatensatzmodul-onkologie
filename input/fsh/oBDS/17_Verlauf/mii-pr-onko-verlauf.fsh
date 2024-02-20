@@ -21,7 +21,7 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
 // Therapieplanung Datum
 * created 1..1 MS
 * code MS
- component MS
+* component MS
 * component 1..*
 * component ^slicing.discriminator.type = #pattern
 * component ^slicing.discriminator.path = "code"
