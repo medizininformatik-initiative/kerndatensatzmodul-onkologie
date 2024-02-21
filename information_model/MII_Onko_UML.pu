@@ -1,26 +1,65 @@
 @startuml MII KDS Erweiterungsmodul Onkologie
-object MII_Prozedur
-MII_Prozedur : performed 
-object MII_Diagnose
 object Onko_OP
 object Onko_Strahlentherapie 
 object Onko_SystemischeTherapie
-MII_Prozedur <|-- Onko_OP
-MII_Prozedur <|-- Onko_Strahlentherapie
-MII_Prozedur <|-- Onko_SystemischeTherapie
 object CarePlan
+
+CarePlan <-- Onko_OP
+CarePlan <-- Onko_Strahlentherapie
+CarePlan <-- Onko_SystemischeTherapie
 object PrimaerDiagnose
 object TNM_Klassifikation
-PrimaerDiagnose "Condition.stage.assessment"<-- TNM_Klassifikation
+PrimaerDiagnose "Condition.stage.assessment"<--- TNM_Klassifikation
 PrimaerDiagnose <-- "adresses" CarePlan
 object Lymphknotenuntersuchung
-PrimaerDiagnose "hasMember"<--"partOf" Lymphknotenuntersuchung
+PrimaerDiagnose "evidence.detail" <--- Lymphknotenuntersuchung
 object HistologieGrading
-object Pathologiebefund 
+PrimaerDiagnose "evidence.detail" <--- HistologieGrading
+
+object Residualstatus
+object ECOG
 object Fernmetastasen
-object Tod
-object Bioprobe 
-object Verlauf 
+object Tod 
+object Verlauf
+PrimaerDiagnose "stage.assessment" <------->  Verlauf 
+Verlauf "hasMember"<---"partOf" Tod
+Verlauf "hasMember" <--- "partOf" TNM_Klassifikation
+Verlauf "hasMember"<--- "partOf" Lymphknotenuntersuchung
+Verlauf "hasMember"<--- "partOf" HistologieGrading
+Verlauf "hasMember"<--- "partOf" Pathologiebefund
+package "Pathologiebefund" {
+    object PathoBefund
+    object PathoAnforderung
+
+}
+package "MolGen-Befundbericht" {
+    object MolgenAnforderung
+    object MolGenBefund
+}
+PathoAnforderung "reasonReference" ---> PrimaerDiagnose
+MolgenAnforderung "reasonReference" ---> PrimaerDiagnose
+object Onko_Variante
+package "Medikation" {
+    object Medikation
+}
+package "Biobank" {
+    object Bioprobe 
+}
+
+legend right 
+|Color|Type|
+|<#FFFF66>|Condition|
+|<#CCCCFF>|CarePlan|
+|<#AAAAFF>|Procedure|
+|<#DDFFDD>|ServiceRequest|
+|<#88FF88>|DiagnosticReport|
+|<#22FF22>|Observation|
+|<#FFCCFF>|Medication|
+|<#FF9999>|AdverseEvent|
+
+endlegend
+
+
 
 
 @enduml
