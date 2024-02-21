@@ -12,12 +12,10 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
 * subject MS
 * subject only Reference(Patient)
 
-* category 1..1 MS
-* category.coding from $mii-vs-onko-therapieplanung-typ
-* category.coding ^fixedCoding.system = $mii-cs-onko-therapieplanung-typ
-
-// Therapieplanung Datum
 * code MS
+* code 1..1 
+* code from MII_VS_Onko_Verlauf_Gesamtbeurteilung (required)
+
 * component MS
 * component 1..*
 * component ^slicing.discriminator.type = #pattern
@@ -29,11 +27,14 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
     Lymphknoten_Verlauf 0..1 and 
     Fernmetastasen_Verlauf 0..1
 * component[Tumor_Verlauf] MS 
-* component[Tumor_Verlauf].valueCodeableConcept from mii-vs-onko-verlauf-primaertumor
+* component[Tumor_Verlauf].code.coding.code = $SCT#277062004 "Status des Residualtumors"
+* component[Tumor_Verlauf].valueCodeableConcept from mii-vs-onko-verlauf-primaertumor (required)
 * component[Lymphknoten_Verlauf] MS 
-* component[Lymphknoten_Verlauf].valueCodeableConcept from mii-vs-onko-verlauf-lymphknoten
+* component[Lymphknoten_Verlauf].code.coding.code = $SCT#277060007 "Status der lymphatischen Tumorinvasion"
+* component[Lymphknoten_Verlauf].valueCodeableConcept from mii-vs-onko-verlauf-lymphknoten (required)
 * component[Fernmetastasen_Verlauf] MS
-* component[Fernmetastasen_Verlauf].valueCodeableConcept from mii-vs-onko-verlauf-fernmetastasen
+* component[Fernmetastasen_Verlauf].code.coding.code = $SCT#260874000 "Status der Metastasen"
+* component[Fernmetastasen_Verlauf].valueCodeableConcept from mii-vs-onko-verlauf-fernmetastasen (required)
 
 
 Mapping: FHIR-oBDS-Verlauf
@@ -42,6 +43,6 @@ Title: "Mapping FHIR zu oBDS"
 Source: MII_PR_Onko_Verlauf
 * code.coding.code -> "17.2" "Gesamtbeurteilung des Tumorstatus"
 * effectiveDateTime -> "17.1" "Datum, an dem die letzte Untersuchung durchgeführt wurde, die zur Einschätzung des Tumorstatus geführt hat."
-* component[Tumor_Verlauf] -> "17.3" "Tumorstatus Primärtumor"
-* component[Lymphknoten_Verlauf] -> "17.4" "Tumorstatus Lymphknoten"
-* component[Fernmetastasen_Verlauf] -> "17.5" "Tumorstatus Fernmetastasen"
+* component[Tumor_Verlauf].code.coding.code -> "17.3" "Tumorstatus Primärtumor"
+* component[Lymphknoten_Verlauf].code.coding.code -> "17.4" "Tumorstatus Lymphknoten"
+* component[Fernmetastasen_Verlauf].code.coding.code -> "17.5" "Tumorstatus Fernmetastasen"
