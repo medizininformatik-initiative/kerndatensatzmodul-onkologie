@@ -1,0 +1,73 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "MII_CS_Onko_Verlauf_Gesamtbeurteilung",
+  "id": "mii-cs-onko-verlauf-gesamtbeurteilung",
+  "title": "MII CS Onkologie Verlauf Gesamtbeurteilung",
+  "description": "oBDS-spezifisches Codesystem für die Gesamtbeurteilung im Behandlungsverlauf ",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-verlauf-gesamtbeurteilung",
+  "concept": [
+    {
+      "code": "V",
+      "display": "Vollremission (complete remission, CR)"
+    },
+    {
+      "code": "T",
+      "display": "Teilremission (partial remission, PR)"
+    },
+    {
+      "code": "K",
+      "display": "keine Änderung (no change, NC) = stable disease"
+    },
+    {
+      "code": "P",
+      "display": "Progression"
+    },
+    {
+      "code": "D",
+      "display": "divergentes Geschehen"
+    },
+    {
+      "code": "B",
+      "display": "klinische Besserung des Zustandes, Teilremissionkriterien jedoch nicht erfüllt (minimal response, MR)"
+    },
+    {
+      "code": "R",
+      "display": "Vollremission mit residualen Auffälligkeiten (CRr)"
+    },
+    {
+      "code": "Y",
+      "display": "Rezidiv"
+    },
+    {
+      "code": "U",
+      "display": "Beurteilung unmöglich"
+    },
+    {
+      "code": "X",
+      "display": "fehlende Angabe"
+    }
+  ],
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2024.0.0-ballot",
+  "caseSensitive": true,
+  "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-verlauf-gesamtbeurteilung",
+  "count": 10
+}
