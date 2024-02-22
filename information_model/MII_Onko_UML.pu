@@ -2,21 +2,22 @@
 object Onko_OP #8888FF
 object Onko_Strahlentherapie #8888FF
 object Onko_SystemischeTherapie #8888FF
-object CarePlan #BBBBFF
-note left of CarePlan 
+object Therapieplanung_Tumorkonferenz #BBBBFF
+note left of Therapieplanung_Tumorkonferenz 
   Für den Fall, dass eine Prozedur keinem 
   CarePlan zugeordnet werden kann,
   referenzieren alle Prozeduren die 
   Primärdiagnose über Procedure.reasonReference
 end note
 
-CarePlan <-- Onko_OP 
-CarePlan <-- Onko_Strahlentherapie
-CarePlan <-- Onko_SystemischeTherapie
+Therapieplanung_Tumorkonferenz <-- Onko_OP: basedOn 
+Therapieplanung_Tumorkonferenz <-- Onko_Strahlentherapie: basedOn
+Therapieplanung_Tumorkonferenz <-- Onko_SystemischeTherapie: basedOn
 package "Medikation" {
     object Medikation #FFCCFF
 }
-Onko_SystemischeTherapie <--"partOf" Medikation 
+Onko_SystemischeTherapie <--- Medikation : partOf 
+Therapieplanung_Tumorkonferenz <--- Medikation: basedOn
 object PrimaerDiagnose #FFFF66
 
 package Observations{
@@ -31,48 +32,62 @@ package Observations{
     object Tod #22FF22
 }
 
-Residualstatus <--- "evidenceDetail"PrimaerDiagnose
-ECOG <--- PrimaerDiagnose
+PrimaerDiagnose ---> ECOG :evidenceDetail
 
 
-PrimaerDiagnose "Condition.stage.assessment"<--- TNM_Klassifikation
-PrimaerDiagnose <---  CarePlan : adresses
+PrimaerDiagnose ---> TNM_Klassifikation: stage.assessment
+PrimaerDiagnose <---  Therapieplanung_Tumorkonferenz : adresses
 PrimaerDiagnose  ---> Lymphknotenuntersuchung: evidenceDetail
 PrimaerDiagnose  ---> HistologieGrading : evidenceDetail
-
+PrimaerDiagnose ---> Onko_Variante :evidenceDetail
+PrimaerDiagnose ---> WeitereKlassifikation: stage.assessment
 
 object Verlauf #22FF22
-PrimaerDiagnose <----->  Verlauf 
-Verlauf <---> Tod: hasMember / partOf
-Verlauf <---> TNM_Klassifikation: hasMember / partOf
-Verlauf <---> "partOf" Lymphknotenuntersuchung : hasMember / partOf
-Verlauf <---> "partOf" HistologieGrading : hasMember / partOf
+PrimaerDiagnose ---->  Verlauf : stage.assessment
+
+Verlauf <---> Tod: hasMember / derivedFrom
+Verlauf <---> TNM_Klassifikation: hasMember / derivedFrom
+Verlauf <--->  Lymphknotenuntersuchung : hasMember / derivedFrom
+
+Verlauf <--->  HistologieGrading : hasMember / derivedFrom
+Verlauf ---> Fernmetastasen :hasMember /derivedFrom
+
+Verlauf ---> Residualstatus: hasMember / derivedFrom
+
+Onko_OP <--- Residualstatus: partOf
+
+
 package "Pathologiebefund" {
     object PathoAnforderung #DDFFDD
     object PathoBefund #88FF88
-
 }
-PathoBefund <--> PathoAnforderung : Joa, keine Ahnung
+PathoBefund <-- PathoAnforderung : request
 PathoBefund --> PrimaerDiagnose :supportingInfo.codedDiagnosis
 
-Verlauf <---> PathoBefund: hasMember/ partOf
+Lymphknotenuntersuchung ---> PathoAnforderung: basedOn 
+HistologieGrading ---> PathoAnforderung: basedOn
+
+
 package "MolGen-Befundbericht" {
-    object MolgenAnforderung #DDFFDD
+    object MolGenAnforderung #DDFFDD
     object MolGenBefund #88FF88
 }
-PathoAnforderung  ---> PrimaerDiagnose : reasonReference
-MolgenAnforderung ---> PrimaerDiagnose: reasonReference
 
 package "Biobank" {
-    object Bioprobe 
+    object Bioprobe #44FFFF
 }
+MolGenBefund ---> Onko_Variante: result[variant]
+PathoAnforderung  ---> PrimaerDiagnose : reasonReference
+MolGenAnforderung ---> PrimaerDiagnose: reasonReference
+PathoAnforderung ---> Bioprobe: specimen
+PathoAnforderung <--- Bioprobe: request
+MolGenAnforderung ---> Bioprobe: specimen
+MolGenAnforderung <--- Bioprobe: request
+
 object AdverseEvent #FF9999
-Onko_SystemischeTherapie --> AdverseEvent
-Onko_Strahlentherapie --> AdverseEvent
+Onko_SystemischeTherapie <--- AdverseEvent: suspectEntity.instance
+Onko_Strahlentherapie <--- AdverseEvent: suspectEntity.instance
 
-
-
-Fernmetastasen <--- Verlauf
 
 legend right 
 |Color|Type|
@@ -84,6 +99,7 @@ legend right
 |<#22FF22>|Observation|
 |<#FFCCFF>|Medication|
 |<#FF9999>|AdverseEvent|
+|<#44FFFF>|Specimen|
 endlegend
 
 
