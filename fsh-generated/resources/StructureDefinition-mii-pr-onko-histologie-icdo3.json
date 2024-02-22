@@ -1,10 +1,10 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "mii-pr-onko-histologie",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-histologie",
+  "id": "mii-pr-onko-histologie-icdo3",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-histologie-icdo3",
   "version": "2024.0.0-ballot",
-  "name": "MII_PR_Onko_Histologie",
-  "title": "MII PR Onkologie Histologie",
+  "name": "MII_PR_Onko_Histologie_ICDO3",
+  "title": "MII PR Onkologie Histologie ICD-O-3",
   "status": "draft",
   "publisher": "Medizininformatik Initiative",
   "contact": [
@@ -126,6 +126,20 @@
           "strength": "required",
           "valueSet": "http://terminology.hl7.org/CodeSystem/icd-o-3"
         }
+      },
+      {
+        "id": "Observation.specimen",
+        "path": "Observation.specimen",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-specimen"
+            ]
+          }
+        ],
+        "mustSupport": true
       }
     ]
   }
