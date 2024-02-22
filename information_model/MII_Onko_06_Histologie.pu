@@ -1,0 +1,50 @@
+@startuml MII KDS Erweiterungsmodul Onkologie
+
+object MII_Symptom_Observation #AAFFAA
+
+Map  NrUntersuchteLymphknoten #AAFFAA {
+    6.7 Anzahl unters. Lymphkn. => Observation.valueQuantity.value
+}
+
+MII_Symptom_Observation <|-down- NrUntersuchteLymphknoten
+
+Map NrBefalleneLymphknoten #AAFFAA {
+6.8 Anzahl bef. Lymphkn. => Observation.valueQuantity.value
+}
+MII_Symptom_Observation <|-down-- NrBefalleneLymphknoten
+
+
+Map NrUntersuchteSentinelLymphknoten  #AAFFAA{
+6.9 Anzahl unters. Sent.-Lymphkn. => Observation.valueQuantity.value
+}
+
+MII_Symptom_Observation <|-down--- NrUntersuchteSentinelLymphknoten
+
+Map NrBefalleneSentinelLymphknoten  #AAFFAA{
+6.10 Anzahl bef. Sent.-Lymphkn. => Observation.valueQuantity.value
+}
+MII_Symptom_Observation <|-down-- NrBefalleneSentinelLymphknoten
+
+
+
+Map Onko_Grading #AAFFAA {
+6.6 Grading =>Observation.valueCodeableConcept.coding.code
+}
+MII_Symptom_Observation <|-- Onko_Grading
+
+Map Onko_Befund #AAFFAA{
+6.11 Befund => DiagnosticReport.conclusion
+}
+object R4_DiagnosticReport #AAFFAA
+R4_DiagnosticReport <|-- Onko_Befund 
+
+Map Onko_Specimen #AAFFAA {
+6.1 Tumor Histologiedatum => Specimen.collection.collectedDateTime
+6.2 Histologie-Einsendenummer => Specimen.identifier.value
+}
+object MII_Biobank #AAFFAA
+MII_Biobank <|--- Onko_Specimen
+
+
+
+@enduml

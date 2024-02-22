@@ -53,24 +53,98 @@
       "version": "1.0.8",
       "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.biobank/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.biobank",
       "id": "de_medizininformatikinitiative_kerndatensatz_biobank"
+    },
+    {
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.medikation",
+      "version": "2.0.0",
+      "uri": "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/ImplementationGuide/mii-ig-medikation-v2",
+      "id": "de_medizininformatikinitiative_kerndatensatz_medikation"
+    },
+    {
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.molgen",
+      "version": "1.0.0",
+      "uri": "/guide/MedizininformatikInitiative-ModulMolekulargenetischerBefundberic?version=current",
+      "id": "de_medizininformatikinitiative_kerndatensatz_molgen"
+    },
+    {
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.symptom",
+      "version": "2024.0.0-ballot",
+      "uri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/ImplementationGuide/mii-ig-symptom-de-v2024",
+      "id": "de_medizininformatikinitiative_kerndatensatz_symptom"
     }
   ],
   "definition": {
     "resource": [
       {
         "reference": {
-          "reference": "ConceptMap/mii-cm-onko-tnm-uicc-snomed"
+          "reference": "MedicationStatement/mii-exa-onko-systemische-therapie-medikation1"
         },
-        "name": "MII CM Onko TNM UICC SNOMED",
-        "description": "Mapping TNM UICC Codes zu SNOMED-CT",
+        "name": "Example chemotherapy",
+        "description": "Example for the FHIR profile systemic therapy based on German ",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-strahlentherapie"
+        },
+        "name": "Example radiation therapy",
+        "description": "Example radiation therapy",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-systemische-therapie-1"
+        },
+        "name": "Example systemic therapy",
+        "description": "Example systemic therapy",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad"
+        },
+        "name": "MII CS Onko Nebenwirkung nach CTCAE-Grad",
+        "description": "Gibt an, zu welchem Schweregrad von Nebenwirkungen es bei der Bestrahlung oder der systemischen Therapie gekommen ist.",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "CodeSystem/mii-cs-onko-strahlentherapie-intention"
         },
-        "name": "MII CS Onko StrahlentherapieIntention",
-        "description": "Intention für eine Strahlen-, systemtische oder operative Therapie",
+        "name": "MII CS Onko Strahlentherapie Intention",
+        "description": "Intention für eine Strahlentherapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-systemische-therapie-art"
+        },
+        "name": "MII CS Onko Systemische Therapie Art",
+        "description": "Art der systemischen oder abwartenden Therapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-systemische-therapie-intention"
+        },
+        "name": "MII CS Onko Systemische Therapie Intention",
+        "description": "Intention für eine systemische oder abwartende Therapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-allgemeiner-leistungszustand"
+        },
+        "name": "MII CS Onkologie Allgemeiner Leistungszustand",
+        "description": "oBDS-spezifisches Codesystem für den Allgemeinen Leistungszustand",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-fernmetastasen"
+        },
+        "name": "MII CS Onkologie Fernmetastasen",
+        "description": "oBDS-spezifisches Codesystem für Fernmetastasen",
         "exampleBoolean": false
       },
       {
@@ -99,6 +173,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-onko-operation-resektionsstatus"
+        },
+        "name": "MII CS Onkologie Operation Resektionsstatus",
+        "description": "oBDS-spezifisches Codesystem für Klassifikation von Resektionsstatus der OP",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung"
         },
         "name": "MII CS Onkologie Primärtumor Diagnosesicherung",
@@ -111,6 +193,14 @@
         },
         "name": "MII CS Onkologie Primärtumor Seitenlokalisation",
         "description": "Codes für Primärtumor Seitenlokalisation, d.h. organspezifische Angabe der betroffenen Seite.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-residualstatus"
+        },
+        "name": "MII CS Onkologie Residualstatus",
+        "description": "oBDS-spezifisches Codesystem für R-Klassifikation",
         "exampleBoolean": false
       },
       {
@@ -163,6 +253,38 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-onko-systemische-therapie-stellung"
+        },
+        "name": "MII CS Onkologie Systemische Therapie  Stellung",
+        "description": "oBDS-spezifisches Codesystem für Klassifikation von Stellung zur OP",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-therapieabweichung"
+        },
+        "name": "MII CS Onkologie Therapieabweichung",
+        "description": "oBDS-spezifisches Codesystem für die Therapieabweichung auf Wunsch des Patients.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-therapieempfehlung-typ"
+        },
+        "name": "MII CS Onkologie Therapieempfehlung Typ",
+        "description": "oBDS-spezifisches Codesystem für den Therapieempfehlungstyp",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-therapieplanung-typ"
+        },
+        "name": "MII CS Onkologie Therapieplanung Typ",
+        "description": "oBDS-spezifisches Codesystem für den Therapieplanungstyp",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-onko-tnm-uicc"
         },
         "name": "MII CS Onkologie TNM UICC",
@@ -179,18 +301,18 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-ex-onko-operation-intention"
+          "reference": "CodeSystem/mii-cs-onko-tod"
         },
-        "name": "MII EX Onko Operation Intention",
-        "description": "Intention der Operation",
+        "name": "MII CS Onkologie Tod",
+        "description": "oBDS-spezifisches Codesystem tumorbedingter Tod",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-ex-onko-strahlentherapie-applikationsart"
+          "reference": "StructureDefinition/mii-ex-onko-operation-intention"
         },
-        "name": "MII EX Onko Strahlentherapie Applikationsart",
-        "description": "Art der Strahlentherapie Applikation",
+        "name": "MII EX Onko Operation Intention",
+        "description": "Intention der Operation",
         "exampleBoolean": false
       },
       {
@@ -215,6 +337,22 @@
         },
         "name": "MII EX Onko Strahlentherapie Stellung",
         "description": "Strahlentherapie Stellung zur OP",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-onko-systemische-therapie-intention"
+        },
+        "name": "MII EX Onko Systemische Therapie Intention",
+        "description": "Systemische Therapie Intention",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-onko-systemische-therapie-stellung"
+        },
+        "name": "MII EX Onko Systemische Therapie Stellung",
+        "description": "Systemische Therapie Stellung zur OP",
         "exampleBoolean": false
       },
       {
@@ -247,6 +385,14 @@
         },
         "name": "MII LM Onkologie",
         "description": "MII LogicalModel Modul Onkologie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand"
+        },
+        "name": "MII PR Onkologie Allgemeiner Leistungszustand",
+        "description": "OBDS Beschreibung des allgemeines Leistungszustandes",
         "exampleBoolean": false
       },
       {
@@ -299,6 +445,22 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-fernmetastasen"
+        },
+        "name": "MII PR Onkologie Fernmetastasen",
+        "description": "OBDS Beschreibung von Fernmetastasen (Lokalisation und Datum)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-genetische-variante"
+        },
+        "name": "MII PR Onkologie Genetische Variante",
+        "description": "Genetische Variante wie im oBDS ",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-grading"
         },
         "name": "MII PR Onkologie Grading",
@@ -307,10 +469,26 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event"
+        },
+        "name": "MII PR Onkologie Nebenwirkung von Strahlentherapie und systemische Therapie",
+        "description": "Dieses Profil beschreibt die Nebenwirkung von Strahlentherapie und systemische Therapie in der Onkologie.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-operation"
         },
         "name": "MII PR Onkologie Operation",
         "description": "Operation nach OPS inklusive Intention, Datum und Komplikationen:",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-residualstatus"
+        },
+        "name": "MII PR Onkologie Residualstatus",
+        "description": "Umfang eines Residualtumors nach einer Therapie",
         "exampleBoolean": false
       },
       {
@@ -327,6 +505,22 @@
         },
         "name": "MII PR Onkologie Strahlentherapie",
         "description": "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie in der Onkologie.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-systemische-therapie"
+        },
+        "name": "MII PR Onkologie Systemische Therapie",
+        "description": "Systemische Therapie. Dieses Profil beschreibt eine Systemische Therapie für den oBDS. Da die Granularität der Anforderungen des oBDS nicht deckungsgleich mit den FHIR-Profilen für Medikation sind, wurde die Systemische Therapie als Prozedur umgesetzt",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
+        },
+        "name": "MII PR Onkologie Systemische Therapie Medikation",
+        "description": "Medikation der Systemische Therapie. Dieses Profil beschreibt die konkreten Medikationen, die im Rahmen der systemische Therapie für den oBDS dokumentiert werden.  Da im oBDS systemische und abwartende Therapie in einem Feld gruppiert sind, werden die Daten für die Systemische und abwartende Therapie sowohl über eine FHIR-Prozedur (systemisch und abwartend) als auch als FHIR-Medikation abgedeckt. ",
         "exampleBoolean": false
       },
       {
@@ -427,10 +621,66 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-tod"
+        },
+        "name": "MII PR Onkologie Tod",
+        "description": "Tumorbedingter Tod",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-turmokonferenz"
+        },
+        "name": "MII PR Onkologie Turmokonferenz",
+        "description": "Diese Profil beschreibt die Turmokonferenz und die Therapieempfehlungen",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-weitere-klassifikationen"
+        },
+        "name": "MII PR Onkologie Weitere Klassifikationen",
+        "description": "Weitere Tumor Staging Klassifikation neben TMN (Hämatoonkologische und sonstige Klassifikationen)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-allgemeiner-leistungszustand"
+        },
+        "name": "MII VS Onkologie Allgemeiner Leistungszustand",
+        "description": "Value Set für oBDS-Codes für den Allgemeinen Leistungszustand",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-fernmetastasen"
+        },
+        "name": "MII VS Onkologie Fernmetastasen",
+        "description": "Value Set für oBDS-Codes für Fernmetastasen",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-grading"
         },
         "name": "MII VS Onkologie Grading",
         "description": "Codes für Histologie Grading. Gibt den Differenzierungsgrad des Tumors entsprechend der aktuellen TNM-Auflage an.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-nebenwirkung-art"
+        },
+        "name": "MII VS Onkologie Nebenwirkung nach CTCAE Art",
+        "description": "oBDS-spezifisches ValueSet für Nebenwirkung nach CTCAE oder MedDRA code",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-nebenwirkung-ctcae-grad"
+        },
+        "name": "MII VS Onkologie Nebenwirkung nach CTCAE Grad",
+        "description": "oBDS-spezifisches ValueSet für Nebenwirkung nach CTCAE-Grad",
         "exampleBoolean": false
       },
       {
@@ -451,6 +701,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-onko-operation-resektionsstatus"
+        },
+        "name": "MII VS Onkologie Operation Resektionsstatus",
+        "description": "Value Set für oBDS-Codes für Klassifikation von Resektionstatus der OP",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-primaertumor-diagnosesicherung"
         },
         "name": "MII VS Onkologie Primärtumor Diagnosesicherung",
@@ -463,6 +721,14 @@
         },
         "name": "MII VS Onkologie Primärtumor Seitenlokalisation",
         "description": "Codes für Primärtumor Seitenlokalisation, d.h. organspezifische Angabe der betroffenen Seite.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-residualstatus"
+        },
+        "name": "MII VS Onkologie Residualstatus",
+        "description": "Value Set für oBDS-Codes für R- Klassifikation",
         "exampleBoolean": false
       },
       {
@@ -527,6 +793,54 @@
         },
         "name": "MII VS Onkologie Strahlentherapie Zielgebiet",
         "description": "oBDS-spezifisches ValueSet für Klassifikation von Zielgebiet bei Strahlentherapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-systemische-therapie-art"
+        },
+        "name": "MII VS Onkologie Systemische Therapie Art",
+        "description": "oBDS-spezifisches ValueSet für Klassifikation der Art der systemischen oder abwartenden Therapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-systemische-therapie-intention"
+        },
+        "name": "MII VS Onkologie Systemische Therapie Intention",
+        "description": "Value Set für oBDS-Codes für Klassifikation von Intention der Systemischen Therapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-systemische-therapie-stellung"
+        },
+        "name": "MII VS Onkologie Systemische Therapie Stellung",
+        "description": "oBDS-spezifisches ValueSet für Klassifikation von Stellung zur OP",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-therapieabweichung"
+        },
+        "name": "MII VS Onkologie Therapieabweichung",
+        "description": "oBDS-spezifisches ValueSet für die Therapieabweichung auf Wunsch des Patients.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-therapieempfehlung-typ"
+        },
+        "name": "MII VS Onkologie Therapieempfehlung Typ",
+        "description": "oBDS-spezifisches ValueSet für den Therapieempfehlungstyp",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-therapieplanung-typ"
+        },
+        "name": "MII VS Onkologie Therapieplanung Typ",
+        "description": "oBDS-spezifisches ValueSet für den Therapieplanungstyp",
         "exampleBoolean": false
       },
       {
@@ -667,6 +981,28 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-onko-tod"
+        },
+        "name": "MII VS Onkologie Tod",
+        "description": "Value Set für oBDS-Codes turmorbedingter Tod",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/mii-cm-onko-tnm-uicc-snomed"
+        },
+        "name": "mii-cm-onko-tnm-uicc-snomed",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-allgemeiner-leistungszustand-1"
+        },
+        "name": "mii-exa-onko-allgemeiner-leistungszustand-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand"
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-onko-anzahl-befallene-lymphknoten-0"
         },
         "name": "mii-exa-onko-anzahl-befallene-lymphknoten-0",
@@ -685,6 +1021,20 @@
         },
         "name": "mii-exa-onko-diagnose",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-fernmetastasen-1"
+        },
+        "name": "mii-exa-onko-fernmetastasen-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-residualstatus-1"
+        },
+        "name": "mii-exa-onko-residualstatus-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-residualstatus"
       },
       {
         "reference": {
@@ -741,6 +1091,55 @@
         },
         "name": "mii-exa-onko-tnm-t-kategorie-uT2a2",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tod-j"
+        },
+        "name": "mii-exa-onko-tod-j",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tod"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tod-n"
+        },
+        "name": "mii-exa-onko-tod-n",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tod"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tod-u"
+        },
+        "name": "mii-exa-onko-tod-u",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tod"
+      },
+      {
+        "reference": {
+          "reference": "CarePlan/mii-exa-onko-tumorkonferenz-01"
+        },
+        "name": "mii-exa-onko-tumorkonferenz-01",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-turmokonferenz"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-weitere-klassifikationen-1"
+        },
+        "name": "mii-exa-onko-weitere-klassifikationen-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-weitere-klassifikationen-2"
+        },
+        "name": "mii-exa-onko-weitere-klassifikationen-2",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen"
+      },
+      {
+        "reference": {
+          "reference": "AdverseEvent/mii-pr-onko-nebenwirkung-0"
+        },
+        "name": "mii-pr-onko-nebenwirkung-0",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event"
       }
     ],
     "page": {

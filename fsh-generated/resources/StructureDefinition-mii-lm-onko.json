@@ -820,6 +820,453 @@
             "map": "Observation.valueCodeableConcept.coding.code"
           }
         ]
+      },
+      {
+        "id": "Onkologie.Operation",
+        "path": "Onkologie.Operation",
+        "short": "Operation",
+        "definition": "Operation",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Operation.OPIntention",
+        "path": "Onkologie.Operation.OPIntention",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.extension.valueCodeableConcept.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Operation.OPDatum",
+        "path": "Onkologie.Operation.OPDatum",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.performedDateTime"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Operation.OPSCode",
+        "path": "Onkologie.Operation.OPSCode",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.code.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Operation.OPSVersion",
+        "path": "Onkologie.Operation.OPSVersion",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.code.coding.version"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Operation.OPKomplikation",
+        "path": "Onkologie.Operation.OPKomplikation",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.complication.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Strahlentherapie",
+        "path": "Onkologie.Strahlentherapie",
+        "short": "Strahlentherapie",
+        "definition": "Strahlentherapie",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Strahlentherapie.StrahlenTxIntention",
+        "path": "Onkologie.Strahlentherapie.StrahlenTxIntention",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.extension[Intention].valueCodeableConcept.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Strahlentherapie.StrahlenTxStellung",
+        "path": "Onkologie.Strahlentherapie.StrahlenTxStellung",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.extension[Stellung].valueCodeableConcept.coding.code."
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Strahlentherapie.StrahlenTxZielgebiet",
+        "path": "Onkologie.Strahlentherapie.StrahlenTxZielgebiet",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.extension[Behandlungsabschnitt].extension[Zielgebiet].valueCodeableConcept.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Strahlentherapie.StrahlenTxSeiteZielgebiet",
+        "path": "Onkologie.Strahlentherapie.StrahlenTxSeiteZielgebiet",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.extension[Behandlungsabschnitt].extension[Zielgebiet_Lateralitaet].valueCodeableConcept.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Strahlentherapie.StrahlenTxBeginn",
+        "path": "Onkologie.Strahlentherapie.StrahlenTxBeginn",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.performedPeriod.start"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Strahlentherapie.StrahlenTxEnde",
+        "path": "Onkologie.Strahlentherapie.StrahlenTxEnde",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.performedPeriod.end"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Strahlentherapie.StrahlenTxApplikationsart",
+        "path": "Onkologie.Strahlentherapie.StrahlenTxApplikationsart",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.extension[Behandlungsabschnitt].extension[Applikationsart].valueCodeableConcept.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Strahlentherapie.Strahlenart",
+        "path": "Onkologie.Strahlentherapie.Strahlenart",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.extension[Behandlungsabschnitt].extension[Strahlenart].valueCodeableConcept.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Strahlentherapie.StrahlenTxGesamtdosis",
+        "path": "Onkologie.Strahlentherapie.StrahlenTxGesamtdosis",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.extension[Behandlungsabschnitt].extension[Gesamtdosis].valueQuantity.value"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Strahlentherapie.StrahlenTxEinzeldosis",
+        "path": "Onkologie.Strahlentherapie.StrahlenTxEinzeldosis",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.extension[Behandlungsabschnitt].extension[Einzeldosis].valueQuantity.value"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Strahlentherapie.StrahlenTxEinheit",
+        "path": "Onkologie.Strahlentherapie.StrahlenTxEinheit",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.extension[Behandlungsabschnitt].extension[Einheit].valueCodeableConcept.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Strahlentherapie.Boost",
+        "path": "Onkologie.Strahlentherapie.Boost",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.extension[Behandlungsabschnitt].extension[Boost].valueCodeableConcept.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Strahlentherapie.StrahlenTxEndeGrund",
+        "path": "Onkologie.Strahlentherapie.StrahlenTxEndeGrund",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.outcome.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.SystemischeTherapie",
+        "path": "Onkologie.SystemischeTherapie",
+        "short": "Systemische Therapie",
+        "definition": "Systemische Therapie",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.SystemischeTherapie.SysTxIntention",
+        "path": "Onkologie.SystemischeTherapie.SysTxIntention",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.extension[Intention].valueCodeableConcept.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.SystemischeTherapie.SysTxStellung",
+        "path": "Onkologie.SystemischeTherapie.SysTxStellung",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.extension[Stellung].valueCodeableConcept.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.SystemischeTherapie.SysTxArtTherapie",
+        "path": "Onkologie.SystemischeTherapie.SysTxArtTherapie",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.code.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.SystemischeTherapie.SysTxBeginn",
+        "path": "Onkologie.SystemischeTherapie.SysTxBeginn",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.performedPeriod.start"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.SystemischeTherapie.SysTxEnde",
+        "path": "Onkologie.SystemischeTherapie.SysTxEnde",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.performedPeriod.end"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.SystemischeTherapie.SysTxEndeGrund",
+        "path": "Onkologie.SystemischeTherapie.SysTxEndeGrund",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.outcome.coding.code"
+          }
+        ]
       }
     ]
   }

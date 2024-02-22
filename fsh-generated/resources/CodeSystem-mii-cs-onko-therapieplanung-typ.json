@@ -1,0 +1,49 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "MII_CS_Onko_Therapieplanung_Typ",
+  "id": "mii-cs-onko-therapieplanung-typ",
+  "title": "MII CS Onkologie Therapieplanung Typ",
+  "description": "oBDS-spezifisches Codesystem für den Therapieplanungstyp",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapieplanung-typ",
+  "concept": [
+    {
+      "code": "praeth",
+      "display": "prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie)"
+    },
+    {
+      "code": "postop",
+      "display": "postoperative Tumorkonferenz (Planung der postoperativen Therapie, z. B. zur Frage adjuvante Therapie)"
+    },
+    {
+      "code": "postth",
+      "display": "posttherapeutische Tumorkonferenz (manche Tumoren werden nicht operiert)"
+    },
+    {
+      "code": "ther",
+      "display": "Therapieplanung ohne Tumorkonferenz"
+    }
+  ],
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2024.0.0-ballot",
+  "caseSensitive": true,
+  "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-therapieplanung-typ",
+  "count": 4
+}

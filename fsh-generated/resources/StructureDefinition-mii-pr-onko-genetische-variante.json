@@ -1,0 +1,139 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-pr-onko-genetische-variante",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-genetische-variante",
+  "version": "2024.0.0-ballot",
+  "name": "MII_PR_Onko_Genetische_Variante",
+  "title": "MII PR Onkologie Genetische Variante",
+  "status": "draft",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "description": "Genetische Variante wie im oBDS ",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "sct-concept",
+      "uri": "http://snomed.info/conceptdomain",
+      "name": "SNOMED CT Concept Domain Binding"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "sct-attr",
+      "uri": "http://snomed.org/attributebinding",
+      "name": "SNOMED CT Attribute Binding"
+    },
+    {
+      "identity": "MII-KDS",
+      "name": "MII KDS Mapping"
+    },
+    {
+      "identity": "oBDS",
+      "name": "Mapping FHIR zu oBDS"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation",
+        "path": "Observation",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "23",
+            "comment": "Genetische Variante"
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "code"
+            }
+          ],
+          "rules": "open",
+          "description": "Slice based on the value.code pattern"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component",
+        "path": "Observation.component",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:conclusion-string",
+        "path": "Observation.component",
+        "sliceName": "conclusion-string"
+      },
+      {
+        "id": "Observation.component:conclusion-string.value[x]",
+        "path": "Observation.component.value[x]",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "23.1",
+            "comment": "Genetische Variante Name"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:molecular-consequence",
+        "path": "Observation.component",
+        "sliceName": "molecular-consequence"
+      },
+      {
+        "id": "Observation.component:molecular-consequence.value[x]",
+        "path": "Observation.component.value[x]",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "23.2",
+            "comment": "Genetische Variante Auswirkung"
+          }
+        ]
+      }
+    ]
+  }
+}

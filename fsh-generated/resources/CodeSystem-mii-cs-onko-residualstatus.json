@@ -1,0 +1,61 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "MII_CS_Onko_Residualstatus",
+  "id": "mii-cs-onko-residualstatus",
+  "title": "MII CS Onkologie Residualstatus",
+  "description": "oBDS-spezifisches Codesystem für R-Klassifikation",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-residualstatus",
+  "concept": [
+    {
+      "code": "R0",
+      "display": "Kein Residualtumor"
+    },
+    {
+      "code": "R1",
+      "display": "Mikroskopischer Residualtumor"
+    },
+    {
+      "code": "R1(is)",
+      "display": "In-Situ-Rest"
+    },
+    {
+      "code": "R1(cy+)",
+      "display": "Cytologischer Rest"
+    },
+    {
+      "code": "R2",
+      "display": "Makroskopischer Residualtumor"
+    },
+    {
+      "code": "RX",
+      "display": "Vorhandensein von Residualtumor kann nicht beurteilt werden"
+    },
+    {
+      "code": "U",
+      "display": "Residualtumorstatus ist nicht bekannt"
+    }
+  ],
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2024.0.0-ballot",
+  "caseSensitive": true,
+  "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-residualstatus",
+  "count": 7
+}

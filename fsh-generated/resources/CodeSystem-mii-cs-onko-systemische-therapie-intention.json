@@ -1,0 +1,49 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "MII_CS_Onko_Systemische_Therapie_Intention",
+  "id": "mii-cs-onko-systemische-therapie-intention",
+  "title": "MII CS Onko Systemische Therapie Intention",
+  "description": "Intention für eine systemische oder abwartende Therapie",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-intention",
+  "concept": [
+    {
+      "code": "K",
+      "display": "kurativ"
+    },
+    {
+      "code": "P",
+      "display": "palliativ"
+    },
+    {
+      "code": "S",
+      "display": "Sonstiges"
+    },
+    {
+      "code": "X",
+      "display": "keine Angabe"
+    }
+  ],
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2024.0.0-ballot",
+  "caseSensitive": true,
+  "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-intention",
+  "count": 4
+}

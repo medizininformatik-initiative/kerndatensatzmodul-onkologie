@@ -1,0 +1,25 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-weitere-klassifikationen-1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "372278000",
+        "system": "http://snomed.info/sct",
+        "display": "Gleason score"
+      }
+    ],
+    "text": "Gleason score"
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "effectiveDateTime": "2024-01-11",
+  "valueString": "4+5"
+}

@@ -30,11 +30,12 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 // ggfs. aus input/fsh/oBDS/05_Diagnose/mii-cs-onko-primaertumor-seitenlokalisation.fsh übernehmen
 
 // Strahlentherapie Beginn und Ende
-* performed[x] MS 
+* performed[x] MS
 * performed[x] only Period //  wird über Period.start und Period.stop des MII Prozedurmoduls erfasst
+* performed[x].start 1..1 MS 
+* performed[x].end 0..1 MS
 
 // Strahlentherapie Applikationsart #XRayXtension
-// extension contains MII_EX_Onko_Strahlentherapie_Applikationsart named 0.. MS
 // ist derzeit eine eigene Extension, sollten wir mit den anderen Strahlentherapie-feldern in eine eigene Extension überführen
 // #XRayXtension
 
@@ -60,19 +61,23 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 * outcome.coding.code from MII_VS_Onko_Strahlentherapie_Ende_Grund (required)
 
 
-/*
-Mapping
-14.1 Intention der Strahlentherapie 
-14.2 Strahlentherapie Stellung zu operativer Therapie 
-14.3 Strahlentherapie Zielgebiet 
-14.4 Strahlentherapie Seite Zielgebiet 
-14.5 Strahlentherapie Beginn 
-14.6 Strahlentherapie Ende 
-14.7 Strahlentherapie Applikationsart 
-14.8 Strahlenart 
-14.9 Strahlentherapie Gesamtdosis (Dosis) 
-14.10 Strahlentherapie Einzeldosis pro Tag (Dosis) 
-14.11 Strahlentherapie Einheit 
-14.12 Boost 
-14.13 Strahlentherapie Ende Grund 
-*/
+Mapping: FHIR-oBDS-Strahlentherapie
+Id: oBDS
+Title: "Mapping FHIR zu oBDS"
+Source: MII_PR_Onko_Strahlentherapie
+* -> "14" "Strahlentherapie"
+* extension[Intention].valueCodeableConcept.coding.code -> "14.1" "Intention der Strahlentherapie"
+* extension[Stellung].valueCodeableConcept.coding.code -> "14.2" "Strahlentherapie Stellung zu operativer Therapie" 
+* extension[Behandlungsabschnitt].extension[Zielgebiet].valueCodeableConcept.coding.code -> "14.3" "Strahlentherapie Zielgebiet" 
+* extension[Behandlungsabschnitt].extension[Zielgebiet_Lateralitaet].valueCodeableConcept.coding.code -> "14.4" "Strahlentherapie Seite Zielgebiet" 
+* performed[x].start -> "14.5" "Strahlentherapie Beginn"
+* performed[x].end -> "14.6" "Strahlentherapie Ende"
+* extension[Behandlungsabschnitt].extension[Applikationsart].valueCodeableConcept.coding.code -> "14.7" "Strahlentherapie Applikationsart"
+* extension[Behandlungsabschnitt].extension[Strahlenart].valueCodeableConcept.coding.code -> "14.8" "Strahlentherapie Strahlenart"
+* extension[Behandlungsabschnitt].extension[Gesamtdosis].valueQuantity.value -> "14.9" "Strahlentherapie Gesamtdosis"
+* extension[Behandlungsabschnitt].extension[Gesamtdosis].valueQuantity.unit -> "14.11" "Strahlentherapie Einheit"
+* extension[Behandlungsabschnitt].extension[Einzeldosis].valueQuantity.value -> "14.10" "Strahlentherapie Einzeldosis pro Tag"
+* extension[Behandlungsabschnitt].extension[Einzeldosis].valueQuantity.unit -> "14.11" "Strahlentherapie Einheit"
+
+* extension[Behandlungsabschnitt].extension[Boost].valueCodeableConcept.coding.code -> "14.12" "Strahlentherapie Boost"
+* outcome.coding.code -> "14.13" "Strahlentherapie Ende Grund"

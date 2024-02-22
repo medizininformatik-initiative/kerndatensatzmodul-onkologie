@@ -16,12 +16,18 @@ Alias: $DeIcdO3TopologieVS = http://fhir.de/onkologie/ValueSet/icd-o-3-topologie
 Alias: $DeOnkoTumorstatusFernmetastasenVS = http://fhir.de/onkologie/ValueSet/TumorstatusFernmetastasenVS
 Alias: $icd-seitenlokalisation = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_SEITENLOKALISATION
 
+// MII KDS
+Alias: $mii-symptom-observation = https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/StructureDefinition/finding-observation
+
 // FHIR Core
 Alias: $EventStatus = http://hl7.org/fhir/event-status
 Alias: $condition-ver-status = http://terminology.hl7.org/CodeSystem/condition-ver-status
 Alias: $verification-status-vs = http://hl7.org/fhir/ValueSet/condition-ver-status
 Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
 Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-clinical
+Alias: $request-status = http://hl7.org/fhir/request-status
+Alias: $request-intent = http://hl7.org/fhir/request-intent
+Alias: $care-plan-activity-status = http://hl7.org/fhir/care-plan-activity-status
 
 // Code Systems
 Alias: $CTCAE = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
@@ -33,6 +39,7 @@ Alias: $ICDO3 = http://terminology.hl7.org/CodeSystem/icd-o-3
 Alias: $LOINC = http://loinc.org
 Alias: $UICC = https://www.uicc.org/resources/tnm
 Alias: $UCUM =  http://unitsofmeasure.org
+Alias: $ATC_DE = http://fhir.de/CodeSystem/bfarm/atc
 
 //MII Onko
 Alias: $mii-cs-onko-primaertumor-diagnosesicherung = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung
@@ -47,6 +54,8 @@ Alias: $mii-cs-onko-operation-komplikation = https://www.medizininformatik-initi
 Alias: $mii-vs-onko-operation-komplikation = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-operation-komplikation
 Alias: $mii-cs-onko-operation-intention = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-intention
 Alias: $mii-vs-onko-operation-intention = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-operation-intention
+Alias: $mii-cs-onko-operation-resektionsstatus = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-resektionsstatus
+Alias: $mii-vs-onko-operation-resektionsstatus = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-operation-resektionsstatus
 Alias: $mii-cs-onko-strahlentherapie-intention = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-intention
 Alias: $mii-vs-onko-strahlentherapie-intention = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-intention
 Alias: $mii-cs-onko-strahlentherapie-strahlenart = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart
@@ -63,3 +72,39 @@ Alias: $mii-cs-onko-strahlentherapie-boost = https://www.medizininformatik-initi
 Alias: $mii-vs-onko-strahlentherapie-boost = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-boost
 Alias: $mii-cs-onko-strahlentherapie-ende-grund = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-ende-grund
 Alias: $mii-vs-onko-strahlentherapie-ende-grund = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-ende-grund
+Alias: $mii-cs-onko-systemische-therapie-intention = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-intention
+Alias: $mii-vs-onko-systemische-therapie-intention = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-intention
+Alias: $mii-cs-onko-systemische-therapie-stellung = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-stellung
+Alias: $mii-vs-onko-systemische-therapie-stellung = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-stellung
+Alias: $mii-cs-onko-systemische-therapie-art = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art
+Alias: $mii-vs-onko-systemische-therapie-art = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-art
+Alias: $mii-cs-onko-residualstatus = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-cs-onko-residualstatus
+Alias: $mii-vs-onko-residualstatus = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-residualstatus
+Alias: $mii-cs-onko-fernmetastasen = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-cs-onko-fernmetastasen
+Alias: $mii-vs-onko-fernmetastasen = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-fernmetastasen
+Alias: $mii-cs-onko-allgemeiner-leistungszustand = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-cs-onko-allgemeiner-leistungszustand
+Alias: $mii-vs-onko-allgemeiner-leistungszustand = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand
+Alias: $mii-cs-onko-nebenwirkung-ctcae-grad = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-vs-onko-nebenwirkung-ctcae-grad
+Alias: $mii-vs-onko-nebenwirkung-ctcae-grad = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-nebenwirkung-ctcae-grad
+Alias: $mii-cs-onko-meddra-de = https://www.meddra.org
+Alias: $mii-vs-onko-nebenwirkung-art = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-nebenwirkung-ctcae-art
+Alias: $adverse-event-severity = http://terminology.hl7.org/CodeSystem/adverse-event-severity
+Alias: $mii-vs-onko-nebenwirkung-ctcae-grad = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-nebenwirkung-ctcae-grad
+Alias: $mii-cs-onko-tod = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-ende-tod
+Alias: $mii-vs-onko-tod = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-ende-tod
+Alias: $mii-cs-onko-therapieplanung-typ = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapieplanung-typ
+Alias: $mii-vs-onko-therapieplanung-typ = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-therapieplanung-typ
+Alias: $mii-cs-onko-therapieempfehlung-typ = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapieempfehlung-typ
+Alias: $mii-vs-onko-therapieempfehlung-typ = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-therapieempfehlung-typ
+Alias: $mii-cs-onko-therapieabweichung = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapieabweichung
+Alias: $mii-vs-onko-therapieabweichung = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-vs-therapieabweichung
+Alias: $mii-cs-onko-verlauf-gesamtbeurteilung = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung
+Alias: $mii-vs-onko-verlauf-gesamtbeurteilung = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-verlauf-gesamtbeurteilung
+Alias: $mii-cs-onko-verlauf-primaertumor = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-primaertumor
+Alias: $mii-vs-onko-verlauf-primaertumor = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-verlauf-primaertumor
+Alias: $mii-cs-onko-verlauf-lymphknoten = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-lymphknoten
+Alias: $mii-vs-onko-verlauf-lymphknoten = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-verlauf-lymphknoten
+Alias: $mii-cs-onko-verlauf-fernmetastasen = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen
+Alias: $mii-vs-onko-verlauf-fernmetastasen = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-verlauf-fernmetastasen
+Alias: $mii-cs-onko-genetische-variante-auspraegung = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-genetische-variante-auspraegung
+Alias: $mii-vs-onko-genetische-variante-auspraegung = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-genetische-variante-auspraegung

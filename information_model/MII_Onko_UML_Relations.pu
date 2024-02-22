@@ -1,0 +1,101 @@
+@startuml MII KDS Erweiterungsmodul Onkologie
+object Onko_OP #8888FF
+object Onko_Strahlentherapie #8888FF
+object Onko_SystemischeTherapie #8888FF
+object Therapieplanung_Tumorkonferenz #BBBBFF
+note left of Therapieplanung_Tumorkonferenz 
+  Für den Fall, dass eine Prozedur keinem 
+  CarePlan zugeordnet werden kann,
+  referenzieren alle Prozeduren die 
+  Primärdiagnose über Procedure.reasonReference
+end note
+
+Therapieplanung_Tumorkonferenz <-- Onko_OP: basedOn 
+Therapieplanung_Tumorkonferenz <-- Onko_Strahlentherapie: basedOn
+Therapieplanung_Tumorkonferenz <-- Onko_SystemischeTherapie: basedOn
+package "Medikation" {
+    object Medikation #FFCCFF
+}
+Onko_SystemischeTherapie <--- Medikation : partOf 
+Therapieplanung_Tumorkonferenz <--- Medikation: basedOn
+object PrimaerDiagnose #FFFF66
+
+package "Onkologie Observations"{
+    object Onko_Variante #22FF22
+    object Fernmetastasen #22FF22
+    object TNM_Klassifikation #22FF22
+    object WeitereKlassifikation #22FF22 
+    object Lymphknotenuntersuchung #22FF22
+    object HistologieGrading #22FF22
+    object Residualstatus #22FF22
+    object ECOG #22FF22
+    object Tod #22FF22
+}
+
+PrimaerDiagnose ---> TNM_Klassifikation: stage.assessment
+PrimaerDiagnose <---  Therapieplanung_Tumorkonferenz : adresses
+PrimaerDiagnose  ---> Lymphknotenuntersuchung: evidenceDetail
+PrimaerDiagnose  ---> HistologieGrading : stage.assessment
+PrimaerDiagnose ---> Onko_Variante :evidenceDetail
+PrimaerDiagnose ---> WeitereKlassifikation: stage.assessment
+PrimaerDiagnose ---> ECOG :evidenceDetail
+
+
+object Verlauf #22FF22
+PrimaerDiagnose ---->  Verlauf : stage.assessment
+
+Verlauf <---> Tod: hasMember / derivedFrom
+Verlauf <---> TNM_Klassifikation: hasMember / derivedFrom
+Verlauf <--->  Lymphknotenuntersuchung : hasMember / derivedFrom
+
+Verlauf <--->  HistologieGrading : hasMember / derivedFrom
+Verlauf <---> Fernmetastasen :hasMember /derivedFrom
+
+Verlauf ---> Residualstatus: hasMember / derivedFrom
+Onko_OP <--- Residualstatus: partOf
+
+Verlauf ---> Onko_Variante: hasMember / derivedFrom
+
+package "Pathologiebefund" {
+    object PathoAnforderung #DDFFDD
+    object PathoBefund #88FF88
+}
+PathoBefund <-- PathoAnforderung : request
+
+
+package "MolGen-Befundbericht" {
+    object MolGenAnforderung #DDFFDD
+    object MolGenBefund #88FF88
+}
+MolGenBefund <-- MolGenAnforderung: request
+
+package "Biobank" {
+    object Bioprobe #44FFFF
+}
+MolGenBefund ----> Onko_Variante: result[variant]
+PathoAnforderung  ---> PrimaerDiagnose : reasonReference
+MolGenAnforderung ---> PrimaerDiagnose: reasonReference
+PathoAnforderung --> Bioprobe: specimen
+PathoAnforderung <-- Bioprobe: request
+MolGenAnforderung --> Bioprobe: specimen
+MolGenAnforderung <-- Bioprobe: request
+
+object AdverseEvent #FF9999
+Onko_SystemischeTherapie <--- AdverseEvent: suspectEntity.instance
+Onko_Strahlentherapie <--- AdverseEvent: suspectEntity.instance
+
+legend right 
+|Color|Type|
+|<#FFFF66>|Condition|
+|<#CCCCFF>|CarePlan|
+|<#AAAAFF>|Procedure|
+|<#DDFFDD>|ServiceRequest|
+|<#88FF88>|DiagnosticReport|
+|<#22FF22>|Observation|
+|<#FFCCFF>|Medication|
+|<#FF9999>|AdverseEvent|
+|<#44FFFF>|Specimen|
+endlegend
+
+
+@enduml
