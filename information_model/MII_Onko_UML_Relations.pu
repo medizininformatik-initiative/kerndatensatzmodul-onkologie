@@ -20,7 +20,7 @@ Onko_SystemischeTherapie <--- Medikation : partOf
 Therapieplanung_Tumorkonferenz <--- Medikation: basedOn
 object PrimaerDiagnose #FFFF66
 
-package Observations{
+package "Onkologie Observations"{
     object Onko_Variante #22FF22
     object Fernmetastasen #22FF22
     object TNM_Klassifikation #22FF22
@@ -32,15 +32,14 @@ package Observations{
     object Tod #22FF22
 }
 
-PrimaerDiagnose ---> ECOG :evidenceDetail
-
-
 PrimaerDiagnose ---> TNM_Klassifikation: stage.assessment
 PrimaerDiagnose <---  Therapieplanung_Tumorkonferenz : adresses
 PrimaerDiagnose  ---> Lymphknotenuntersuchung: evidenceDetail
-PrimaerDiagnose  ---> HistologieGrading : evidenceDetail
+PrimaerDiagnose  ---> HistologieGrading : stage.assessment
 PrimaerDiagnose ---> Onko_Variante :evidenceDetail
 PrimaerDiagnose ---> WeitereKlassifikation: stage.assessment
+PrimaerDiagnose ---> ECOG :evidenceDetail
+
 
 object Verlauf #22FF22
 PrimaerDiagnose ---->  Verlauf : stage.assessment
@@ -50,44 +49,40 @@ Verlauf <---> TNM_Klassifikation: hasMember / derivedFrom
 Verlauf <--->  Lymphknotenuntersuchung : hasMember / derivedFrom
 
 Verlauf <--->  HistologieGrading : hasMember / derivedFrom
-Verlauf ---> Fernmetastasen :hasMember /derivedFrom
+Verlauf <---> Fernmetastasen :hasMember /derivedFrom
 
 Verlauf ---> Residualstatus: hasMember / derivedFrom
-
 Onko_OP <--- Residualstatus: partOf
 
+Verlauf ---> Onko_Variante: hasMember / derivedFrom
 
 package "Pathologiebefund" {
     object PathoAnforderung #DDFFDD
     object PathoBefund #88FF88
 }
 PathoBefund <-- PathoAnforderung : request
-PathoBefund --> PrimaerDiagnose :supportingInfo.codedDiagnosis
-
-Lymphknotenuntersuchung ---> PathoAnforderung: basedOn 
-HistologieGrading ---> PathoAnforderung: basedOn
 
 
 package "MolGen-Befundbericht" {
     object MolGenAnforderung #DDFFDD
     object MolGenBefund #88FF88
 }
+MolGenBefund <-- MolGenAnforderung: request
 
 package "Biobank" {
     object Bioprobe #44FFFF
 }
-MolGenBefund ---> Onko_Variante: result[variant]
+MolGenBefund ----> Onko_Variante: result[variant]
 PathoAnforderung  ---> PrimaerDiagnose : reasonReference
 MolGenAnforderung ---> PrimaerDiagnose: reasonReference
-PathoAnforderung ---> Bioprobe: specimen
-PathoAnforderung <--- Bioprobe: request
-MolGenAnforderung ---> Bioprobe: specimen
-MolGenAnforderung <--- Bioprobe: request
+PathoAnforderung --> Bioprobe: specimen
+PathoAnforderung <-- Bioprobe: request
+MolGenAnforderung --> Bioprobe: specimen
+MolGenAnforderung <-- Bioprobe: request
 
 object AdverseEvent #FF9999
 Onko_SystemischeTherapie <--- AdverseEvent: suspectEntity.instance
 Onko_Strahlentherapie <--- AdverseEvent: suspectEntity.instance
-
 
 legend right 
 |Color|Type|
