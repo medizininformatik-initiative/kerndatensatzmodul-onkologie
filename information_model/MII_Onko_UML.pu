@@ -1,50 +1,78 @@
 @startuml MII KDS Erweiterungsmodul Onkologie
-object Onko_OP
-object Onko_Strahlentherapie 
-object Onko_SystemischeTherapie
-object CarePlan
+object Onko_OP #8888FF
+object Onko_Strahlentherapie #8888FF
+object Onko_SystemischeTherapie #8888FF
+object CarePlan #BBBBFF
+note left of CarePlan 
+  Für den Fall, dass eine Prozedur keinem 
+  CarePlan zugeordnet werden kann,
+  referenzieren alle Prozeduren die 
+  Primärdiagnose über Procedure.reasonReference
+end note
 
-CarePlan <-- Onko_OP
+CarePlan <-- Onko_OP 
 CarePlan <-- Onko_Strahlentherapie
 CarePlan <-- Onko_SystemischeTherapie
-object PrimaerDiagnose
-object TNM_Klassifikation
-PrimaerDiagnose "Condition.stage.assessment"<--- TNM_Klassifikation
-PrimaerDiagnose <-- "adresses" CarePlan
-object Lymphknotenuntersuchung
-PrimaerDiagnose "evidence.detail" <--- Lymphknotenuntersuchung
-object HistologieGrading
-PrimaerDiagnose "evidence.detail" <--- HistologieGrading
-
-object Residualstatus
-object ECOG
-object Fernmetastasen
-object Tod 
-object Verlauf
-PrimaerDiagnose "stage.assessment" <------->  Verlauf 
-Verlauf "hasMember"<---"partOf" Tod
-Verlauf "hasMember" <--- "partOf" TNM_Klassifikation
-Verlauf "hasMember"<--- "partOf" Lymphknotenuntersuchung
-Verlauf "hasMember"<--- "partOf" HistologieGrading
-Verlauf "hasMember"<--- "partOf" Pathologiebefund
-package "Pathologiebefund" {
-    object PathoBefund
-    object PathoAnforderung
-
-}
-package "MolGen-Befundbericht" {
-    object MolgenAnforderung
-    object MolGenBefund
-}
-PathoAnforderung "reasonReference" ---> PrimaerDiagnose
-MolgenAnforderung "reasonReference" ---> PrimaerDiagnose
-object Onko_Variante
 package "Medikation" {
-    object Medikation
+    object Medikation #FFCCFF
 }
+Onko_SystemischeTherapie <--"partOf" Medikation 
+object PrimaerDiagnose #FFFF66
+
+package Observations{
+    object Onko_Variante #22FF22
+    object Fernmetastasen #22FF22
+    object TNM_Klassifikation #22FF22
+    object WeitereKlassifikation #22FF22 
+    object Lymphknotenuntersuchung #22FF22
+    object HistologieGrading #22FF22
+    object Residualstatus #22FF22
+    object ECOG #22FF22
+    object Tod #22FF22
+}
+
+Residualstatus <--- "evidenceDetail"PrimaerDiagnose
+ECOG <--- PrimaerDiagnose
+
+
+PrimaerDiagnose "Condition.stage.assessment"<--- TNM_Klassifikation
+PrimaerDiagnose <---  CarePlan : adresses
+PrimaerDiagnose  ---> Lymphknotenuntersuchung: evidenceDetail
+PrimaerDiagnose  ---> HistologieGrading : evidenceDetail
+
+
+object Verlauf #22FF22
+PrimaerDiagnose <----->  Verlauf 
+Verlauf <---> Tod: hasMember / partOf
+Verlauf <---> TNM_Klassifikation: hasMember / partOf
+Verlauf <---> "partOf" Lymphknotenuntersuchung : hasMember / partOf
+Verlauf <---> "partOf" HistologieGrading : hasMember / partOf
+package "Pathologiebefund" {
+    object PathoAnforderung #DDFFDD
+    object PathoBefund #88FF88
+
+}
+PathoBefund <--> PathoAnforderung : Joa, keine Ahnung
+PathoBefund --> PrimaerDiagnose :supportingInfo.codedDiagnosis
+
+Verlauf <---> PathoBefund: hasMember/ partOf
+package "MolGen-Befundbericht" {
+    object MolgenAnforderung #DDFFDD
+    object MolGenBefund #88FF88
+}
+PathoAnforderung  ---> PrimaerDiagnose : reasonReference
+MolgenAnforderung ---> PrimaerDiagnose: reasonReference
+
 package "Biobank" {
     object Bioprobe 
 }
+object AdverseEvent #FF9999
+Onko_SystemischeTherapie --> AdverseEvent
+Onko_Strahlentherapie --> AdverseEvent
+
+
+
+Fernmetastasen <--- Verlauf
 
 legend right 
 |Color|Type|
@@ -56,10 +84,7 @@ legend right
 |<#22FF22>|Observation|
 |<#FFCCFF>|Medication|
 |<#FF9999>|AdverseEvent|
-
 endlegend
-
-
 
 
 @enduml

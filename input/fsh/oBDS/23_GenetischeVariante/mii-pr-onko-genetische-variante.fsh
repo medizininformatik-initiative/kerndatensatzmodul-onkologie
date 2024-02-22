@@ -22,6 +22,7 @@ Description: "Genetische Variante wie im oBDS "
 * value[x] ^slicing.description = "Slice based on the value.code pattern"
 
 * value[x] only CodeableConcept
+* valueCodeableConcept from $mii-cs-onko-genetische-variante-auspraegung (required)
 
 Mapping: FHIR-oBDSGenetischeVariante
 Id: oBDS
