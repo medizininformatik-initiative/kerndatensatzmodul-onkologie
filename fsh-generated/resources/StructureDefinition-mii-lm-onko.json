@@ -1002,7 +1002,7 @@
         "path": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt",
         "short": "Behandlungsabschnitt",
         "definition": "Dieses ",
-        "min": 1,
+        "min": 0,
         "max": "*",
         "type": [
           {
@@ -1387,13 +1387,65 @@
       {
         "id": "Onkologie.Verlauf.VerlaufDatum",
         "path": "Onkologie.Verlauf.VerlaufDatum",
-        "short": "Verlauf Datum",
-        "definition": "Verlauf Datum",
+        "short": "Untersuchungsdatum Verlauf",
+        "definition": "Datum, an dem die letzte Untersuchung durchgeführt wurde, die zur Einschätzung des Tumorstatus geführt hat.",
         "min": 0,
         "max": "*",
         "type": [
           {
             "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Verlauf.VerlaufBeurteilungTumorstatus",
+        "path": "Onkologie.Verlauf.VerlaufBeurteilungTumorstatus",
+        "short": "Gesamtbeurteilung des Tumorstatus",
+        "definition": "Gesamtbeurteilung der Erkrankung unter Berücksichtigung aller Manifestationen.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Verlauf.VerlaufTumorstatusPrimaertumor",
+        "path": "Onkologie.Verlauf.VerlaufTumorstatusPrimaertumor",
+        "short": "Tumorstatus Primärtumor",
+        "definition": "Beurteilung der Situation im Primärtumorbereich.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Verlauf.VerlaufTumorstatusLymphknoten",
+        "path": "Onkologie.Verlauf.VerlaufTumorstatusLymphknoten",
+        "short": "Tumorstatus Lymphknoten",
+        "definition": "Beurteilung der Situation im Bereich der regionären Lymphknoten.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Verlauf.VerlaufTumorstatusMetastasen",
+        "path": "Onkologie.Verlauf.VerlaufTumorstatusMetastasen",
+        "short": "Tumorstatus Fernmetastasen",
+        "definition": "Beurteilung der Situation im Bereich der Fernmetastasen.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
           }
         ]
       },
@@ -1426,8 +1478,8 @@
       {
         "id": "Onkologie.GenetischeVariante.GenetischeVarianteAuspraegung",
         "path": "Onkologie.GenetischeVariante.GenetischeVarianteAuspraegung",
-        "short": "Genetische Variante Auspraegung",
-        "definition": "Genetische Variante Auspraegung",
+        "short": "Genetische Variante Ausprägung",
+        "definition": "Genetische Variante Ausprägung",
         "min": 0,
         "max": "1",
         "type": [
