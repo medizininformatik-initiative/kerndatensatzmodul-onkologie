@@ -64,7 +64,7 @@ Description: "MII LogicalModel Modul Onkologie"
   * StrahlentherapieEndeGrund 0..1 code "" ""
   * StrahlentherapieBehandlungsabschnitt 1..* BackboneElement "Behandlungsabschnitt" "Dieses "
     * StrahlentherapieZielgebiet  0..* code "Strahlentherapie Zielgebiet" "Gibt an, an welcher anatomischen Region die Bestrahlung durchgeführt wurde."
-    * StrahlentherapieSeiteZielgebiet 0..*  code "Strahlentherapie Seite Zielgebiet" "Bei Zielgebieten, die durch "(r, l)" gekennzeichnet sind, ist eine Seitenangabe Pflicht."
+    * StrahlentherapieSeiteZielgebiet 0..*  code "Strahlentherapie Seite Zielgebiet" "Bei Zielgebieten, die durch \"(r, l)\" gekennzeichnet sind, ist eine Seitenangabe Pflicht."
     * StrahlentherapieBeginn  0..1 date "Strahlentherapie Beginn" "Gibt an, wann die Strahlentherapie begonnen wurde."
     * StrahlentherapieEnde  0..1 date "Strahlentherapie Ende" "Gibt an, wann die Strahlentherapie beendet wurde."
     * StrahlentherapieApplikationsart 0..1 code "Strahlentherapie Applikationsart" "Gibt an, mit welcher Technik die Strahlentherapie durchgeführt wurde."
@@ -81,12 +81,12 @@ Description: "MII LogicalModel Modul Onkologie"
   * SystemischeTherapieSubstanz 0..* code "Systemische Therapie Substanz" "Gibt an, mit welcher Substanz die Systemtherapie durchgeführt wurde. Nach Möglichkeit ATC kodiert. Mehrere Substanzen sind jeweils einzeln zu kodieren. "
   * SystemischeTherapieBeginn  0..1 date "Systemische Therapie Beginn" "Gibt an, wann die systemische Therapie begonnen wurde."
   * SystemischeTherapieEnde  0..1 date "Systemische Therapie Ende Grund" "Gibt den Grund an, warum die Systemtherapie beendet wurde."
-  * SystemischeTherapieEndeGrund  0..1 code "Systemische Therapie Ende" "Gibt an, wann die systemische Therapie beendet wurde."
-* Verlauf 0..* BackboneElement
-  * VerlaufDatum 0..* date
-* GenetischeVariante 0..* BackboneElement
-  * GenetischeVarianteName 0..1 string
-  * GenetischeVarianteAuspraegung 0..1 code
+  * SystemischeTherapieEndeGrund 0..1 code "Systemische Therapie Ende" "Gibt an, wann die systemische Therapie beendet wurde."
+* Verlauf 0..* BackboneElement "Verlauf"
+  * VerlaufDatum 0..* date "Verlauf Datum"
+* GenetischeVariante 0..* BackboneElement "Genetische Variante"
+  * GenetischeVarianteName 0..1 string "Genetische Variante Name"
+  * GenetischeVarianteAuspraegung 0..1 code "Genetische Variante Auspraegung"
 
 
 
