@@ -62,7 +62,7 @@ Description: "MII LogicalModel Modul Onkologie"
   * StrahlentherapieIntention 0..1 code "Intention der Strahlentherapie" "Gibt an, mit welcher Intention die Strahlentherapie geplant wurde."
   * StrahlentherapieStellung  0..1 code "Strahlentherapie Stellung zu operativer Therapie" "Gibt an, in welchem Bezug zu einer operativen Therapie die Bestrahlung steht."
   * StrahlentherapieEndeGrund 0..1 code "" ""
-  * StrahlentherapieBehandlungsabschnitt 1..* BackboneElement "Behandlungsabschnitt" "Dieses "
+  * StrahlentherapieBehandlungsabschnitt 0..* BackboneElement "Behandlungsabschnitt" "Dieses "
     * StrahlentherapieZielgebiet  0..* code "Strahlentherapie Zielgebiet" "Gibt an, an welcher anatomischen Region die Bestrahlung durchgeführt wurde."
     * StrahlentherapieSeiteZielgebiet 0..*  code "Strahlentherapie Seite Zielgebiet" "Bei Zielgebieten, die durch \"(r, l)\" gekennzeichnet sind, ist eine Seitenangabe Pflicht."
     * StrahlentherapieBeginn  0..1 date "Strahlentherapie Beginn" "Gibt an, wann die Strahlentherapie begonnen wurde."
@@ -83,12 +83,14 @@ Description: "MII LogicalModel Modul Onkologie"
   * SystemischeTherapieEnde  0..1 date "Systemische Therapie Ende Grund" "Gibt den Grund an, warum die Systemtherapie beendet wurde."
   * SystemischeTherapieEndeGrund 0..1 code "Systemische Therapie Ende" "Gibt an, wann die systemische Therapie beendet wurde."
 * Verlauf 0..* BackboneElement "Verlauf"
-  * VerlaufDatum 0..* date "Verlauf Datum"
+  * VerlaufDatum 0..* date "Untersuchungsdatum Verlauf" "Datum, an dem die letzte Untersuchung durchgeführt wurde, die zur Einschätzung des Tumorstatus geführt hat."
+  * VerlaufBeurteilungTumorstatus 0..* code "Gesamtbeurteilung des Tumorstatus" "Gesamtbeurteilung der Erkrankung unter Berücksichtigung aller Manifestationen."
+  * VerlaufTumorstatusPrimaertumor 0..* code "Tumorstatus Primärtumor" "Beurteilung der Situation im Primärtumorbereich."
+  * VerlaufTumorstatusLymphknoten 0..* code "Tumorstatus Lymphknoten" "Beurteilung der Situation im Bereich der regionären Lymphknoten."
+  * VerlaufTumorstatusMetastasen 0..* code "Tumorstatus Fernmetastasen" "Beurteilung der Situation im Bereich der Fernmetastasen."
 * GenetischeVariante 0..* BackboneElement "Genetische Variante"
   * GenetischeVarianteName 0..1 string "Genetische Variante Name"
-  * GenetischeVarianteAuspraegung 0..1 code "Genetische Variante Auspraegung"
-
-
+  * GenetischeVarianteAuspraegung 0..1 code "Genetische Variante Ausprägung"
 
 Mapping: Onkologie-LogicalModel
 Id: FHIR
