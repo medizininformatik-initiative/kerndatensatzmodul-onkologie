@@ -149,6 +149,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-onko-genetische-variante-auspraegung"
+        },
+        "name": "MII CS Onkologie Genetische Variante Ausprägung",
+        "description": "oBDS-spezifisches Codesystem Konsequenz der genetischen Variante Ausprägung",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-onko-grading"
         },
         "name": "MII CS Onkologie Grading",
@@ -305,6 +313,38 @@
         },
         "name": "MII CS Onkologie Tod",
         "description": "oBDS-spezifisches Codesystem tumorbedingter Tod",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-verlauf-fernmetastasen"
+        },
+        "name": "MII CS Onkologie Verlauf Fernmetastasen",
+        "description": "oBDS-spezifisches Codesystem für die Beurteilung von Fernmetastasen im Behandlungsverlauf ",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung"
+        },
+        "name": "MII CS Onkologie Verlauf Gesamtbeurteilung",
+        "description": "oBDS-spezifisches Codesystem für die Gesamtbeurteilung im Behandlungsverlauf ",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-verlauf-lymphknoten"
+        },
+        "name": "MII CS Onkologie Verlauf Lymphknoten",
+        "description": "oBDS-spezifisches Codesystem für die Beurteilung von Lymphknoten im Behandlungsverlauf ",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-verlauf-primaertumor"
+        },
+        "name": "MII CS Onkologie Verlauf Primärtumor",
+        "description": "oBDS-spezifisches Codesystem für die Beurteilung des Primärtumors im Behandlungsverlauf ",
         "exampleBoolean": false
       },
       {
@@ -633,6 +673,14 @@
         },
         "name": "MII PR Onkologie Turmokonferenz",
         "description": "Diese Profil beschreibt die Turmokonferenz und die Therapieempfehlungen",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-verlauf"
+        },
+        "name": "MII PR Onkologie Verlauf",
+        "description": "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. auf andere verlaufsrelevante diagnostische Maßnahmen",
         "exampleBoolean": false
       },
       {
@@ -989,6 +1037,38 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-onko-verlauf-fernmetastasen"
+        },
+        "name": "MII VS Onkologie Verlauf Fernmetastasen",
+        "description": "oBDS-spezifisches ValueSet für die Beurteilung der Fernmetastasen im Behandlungsverlauf",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-verlauf-gesamtbeurteilung"
+        },
+        "name": "MII VS Onkologie Verlauf Gesamtbeurteilung",
+        "description": "oBDS-spezifisches ValueSet für die Gesamtbeurteilung im Behandlungsverlauf",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-verlauf-lymphknoten"
+        },
+        "name": "MII VS Onkologie Verlauf Lymphknoten",
+        "description": "oBDS-spezifisches ValueSet für die Beurteilung der Lymphknoten im Behandlungsverlauf",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-verlauf-primaertumor"
+        },
+        "name": "MII VS Onkologie Verlauf Primärtumor",
+        "description": "oBDS-spezifisches ValueSet für die Beurteilung des Primärtumors im Behandlungsverlauf",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ConceptMap/mii-cm-onko-tnm-uicc-snomed"
         },
         "name": "mii-cm-onko-tnm-uicc-snomed",
@@ -1028,6 +1108,13 @@
         },
         "name": "mii-exa-onko-fernmetastasen-1",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-genetische-variante-braf"
+        },
+        "name": "mii-exa-onko-genetische-variante-braf",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-genetische-variante"
       },
       {
         "reference": {
@@ -1140,6 +1227,14 @@
         },
         "name": "mii-pr-onko-nebenwirkung-0",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-genetische-variante-auspraegung"
+        },
+        "name": "MII_VS Onkologie Genetische Variante Ausprägung",
+        "description": "Value Set für oBDS-Codes für Ausprägung der Genetischen Variante",
+        "exampleBoolean": false
       }
     ],
     "page": {

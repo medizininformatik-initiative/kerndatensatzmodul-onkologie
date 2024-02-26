@@ -1,0 +1,65 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "MII_CS_Onko_Verlauf_Fernmetastasen",
+  "id": "mii-cs-onko-verlauf-fernmetastasen",
+  "title": "MII CS Onkologie Verlauf Fernmetastasen",
+  "description": "oBDS-spezifisches Codesystem für die Beurteilung von Fernmetastasen im Behandlungsverlauf ",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-verlauf-fernmetastasen",
+  "concept": [
+    {
+      "code": "K",
+      "display": "kein Lymphknotenbefall nachweisbar"
+    },
+    {
+      "code": "R",
+      "display": "neu aufgetretenes Lymphknotenrezidiv"
+    },
+    {
+      "code": "T",
+      "display": "bekannter Lymphknotenbefall Residuen"
+    },
+    {
+      "code": "P",
+      "display": "bekannter Lymphknotenbefall Progress"
+    },
+    {
+      "code": "N",
+      "display": "bekannter Lymphknotenbefall No Change"
+    },
+    {
+      "code": "F",
+      "display": "fraglicher Befund"
+    },
+    {
+      "code": "U",
+      "display": "unbekannt"
+    },
+    {
+      "code": "X",
+      "display": "fehlende Angabe"
+    }
+  ],
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2024.0.0-ballot",
+  "caseSensitive": true,
+  "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-verlauf-fernmetastasen",
+  "count": 8
+}
