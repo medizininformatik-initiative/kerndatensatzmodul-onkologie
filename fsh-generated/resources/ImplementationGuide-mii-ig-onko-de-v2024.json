@@ -509,6 +509,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-histologie-icdo3"
+        },
+        "name": "MII PR Onkologie Histologie ICD-O-3",
+        "description": "Histologie-Kodierung nach ICD-0 für die Verwendung von Folgediagnostik. Bei der histologischen Beurteilung des Primärtumors sind die histologischen Informationen direkt über die Condition-Ressource abgebildet.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event"
         },
         "name": "MII PR Onkologie Nebenwirkung von Strahlentherapie und systemische Therapie",
@@ -1115,6 +1123,13 @@
         },
         "name": "mii-exa-onko-genetische-variante-braf",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-genetische-variante"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-histologie-icdo3"
+        },
+        "name": "mii-exa-onko-histologie-icdo3",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-histologie-icdo3"
       },
       {
         "reference": {
