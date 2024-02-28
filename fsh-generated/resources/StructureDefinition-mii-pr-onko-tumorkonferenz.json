@@ -1,10 +1,10 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "mii-pr-onko-turmokonferenz",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-turmokonferenz",
+  "id": "mii-pr-onko-tumorkonferenz",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz",
   "version": "2024.0.0-ballot",
-  "name": "MII_PR_Onko_Turmokonferenz",
-  "title": "MII PR Onkologie Turmokonferenz",
+  "name": "MII_PR_Onko_Tumorkonferenz",
+  "title": "MII PR Onkologie Tumorkonferenz",
   "status": "draft",
   "publisher": "Medizininformatik Initiative",
   "contact": [
@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Diese Profil beschreibt die Turmokonferenz und die Therapieempfehlungen",
+  "description": "Dieses Profil beschreibt die Tumorkonferenz und die Therapieempfehlungen",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -39,6 +39,10 @@
       "identity": "v2",
       "uri": "http://hl7.org/v2",
       "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "oBDS",
+      "name": "Mapping FHIR zu oBDS"
     }
   ],
   "kind": "resource",
@@ -82,6 +86,17 @@
         }
       },
       {
+        "id": "CarePlan.category.coding.code",
+        "path": "CarePlan.category.coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "18.2",
+            "comment": "Tumorkonferenz Therapieplanung Typ"
+          }
+        ]
+      },
+      {
         "id": "CarePlan.subject",
         "path": "CarePlan.subject",
         "type": [
@@ -98,7 +113,14 @@
         "id": "CarePlan.created",
         "path": "CarePlan.created",
         "min": 1,
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "18.1",
+            "comment": "Tumorkonferenz Therapieplanung Datum"
+          }
+        ]
       },
       {
         "id": "CarePlan.contributor",
@@ -138,9 +160,27 @@
         }
       },
       {
+        "id": "CarePlan.activity.detail.code.coding.code",
+        "path": "CarePlan.activity.detail.code.coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "19.1",
+            "comment": "Tumorkonferenz Therapieempfehlung Typ"
+          }
+        ]
+      },
+      {
         "id": "CarePlan.activity.detail.status",
         "path": "CarePlan.activity.detail.status",
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "19.2",
+            "comment": "Tumorkonferenz/Therapieempfehlung Therapieabweichung auf Wunsch des Patienten"
+          }
+        ]
       },
       {
         "id": "CarePlan.activity.detail.statusReason.coding",
@@ -151,7 +191,14 @@
         "binding": {
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-vs-therapieabweichung"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "19.2",
+            "comment": "Tumorkonferenz/Therapieempfehlung Therapieabweichung auf Wunsch des Patienten"
+          }
+        ]
       }
     ]
   }

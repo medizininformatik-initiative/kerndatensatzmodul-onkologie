@@ -1450,6 +1450,184 @@
         ]
       },
       {
+        "id": "Onkologie.TumorkonferenzTherapieempfehlung",
+        "path": "Onkologie.TumorkonferenzTherapieempfehlung",
+        "short": "Tumorkonferenz und Therapieempfehlung",
+        "definition": "Tumorkonferenz und Therapieempfehlung",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.TumorkonferenzTherapieempfehlung.TherapieplanungDatum",
+        "path": "Onkologie.TumorkonferenzTherapieempfehlung.TherapieplanungDatum",
+        "short": "Tumorkonferenz Therapieplanung Datum",
+        "definition": "Datum der Durchführung der Tumorkonferenz bzw. der sonstigen Therapieplanung.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "CarePlan.created"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.TumorkonferenzTherapieempfehlung.TherapieplanungTyp",
+        "path": "Onkologie.TumorkonferenzTherapieempfehlung.TherapieplanungTyp",
+        "short": "Tumorkonferenz Therapieplanung Typ",
+        "definition": "Typ der Tumorkonferenz bzw. der sonstigen Therapieplanung.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "CarePlan.category"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.TumorkonferenzTherapieempfehlung.TherapieempfehlungTyp",
+        "path": "Onkologie.TumorkonferenzTherapieempfehlung.TherapieempfehlungTyp",
+        "short": "Tumorkonferenz Therapieempfehlung Typ",
+        "definition": "Typ der Therapieempfehlung der Tumorkonferenz.",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "CarePlan.activity.detail.code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.TumorkonferenzTherapieempfehlung.TherapieAbweichungPatientenwunsch",
+        "path": "Onkologie.TumorkonferenzTherapieempfehlung.TherapieAbweichungPatientenwunsch",
+        "short": "Tumorkonferenz/Therapieempfehlung Therapieabweichung auf Wunsch des Patienten",
+        "definition": "Abweichung auf Wunsch des Patienten.",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "CarePlan.activity.detail.status & statusReason"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Tod",
+        "path": "Onkologie.Tod",
+        "short": "Tod",
+        "definition": "Tod",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Tod.Sterbedatum",
+        "path": "Onkologie.Tod.Sterbedatum",
+        "short": "Sterbedatum",
+        "definition": "Datum des Todes",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.effectiveDateTime"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Tod.TodTumorbedingt",
+        "path": "Onkologie.Tod.TodTumorbedingt",
+        "short": "Tod tumorbedingt",
+        "definition": "Krebs-Tod-Relation",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.interpretation.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Tod.TodesursacheICD",
+        "path": "Onkologie.Tod.TodesursacheICD",
+        "short": "Todesursache ICD",
+        "definition": "Todesursache im Sinne des Grundleidens",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Tod.TodesursacheICDVersion",
+        "path": "Onkologie.Tod.TodesursacheICDVersion",
+        "short": "Todesursache ICD Version",
+        "definition": "Bezeichnung der zur Kodierung verwendeten ICD-GM-Version",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept.coding.version"
+          }
+        ]
+      },
+      {
         "id": "Onkologie.GenetischeVariante",
         "path": "Onkologie.GenetischeVariante",
         "short": "Genetische Variante",
