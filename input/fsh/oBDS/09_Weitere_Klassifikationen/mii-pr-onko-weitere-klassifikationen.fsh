@@ -17,7 +17,7 @@ Description: "Weitere Tumor Staging Klassifikation neben TMN (Hämatoonkologisch
 * code 1..1
 * code.text MS // hier ist der String aus dem oBDS einzuleiten
 * code.text 1..1
-* code.coding.code 1..1 // hier ist ein entsprechender Code anzugeben, mit dem die Klassifikation in einem internationalen Standard semantisch annotiert werden kann 
+* code.coding.code 0..1 // hier ist ein entsprechender Code anzugeben, mit dem die Klassifikation in einem internationalen Standard semantisch annotiert werden kann 
 
 // 9.3 Hämatoonkologische und sonstige Klassifikationen Einstufung 
 * value[x] 0..1 MS

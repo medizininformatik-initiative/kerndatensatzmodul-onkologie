@@ -822,6 +822,214 @@
         ]
       },
       {
+        "id": "Onkologie.WeitereKlassifikationen",
+        "path": "Onkologie.WeitereKlassifikationen",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.WeitereKlassifikationen.WeitereKlassifikationDatum",
+        "path": "Onkologie.WeitereKlassifikationen.WeitereKlassifikationDatum",
+        "short": "Hämatoonkologische und sonstige Klassifikationen Datum",
+        "definition": "Gibt an, auf welches Datum sich die Klassifikation bezieht.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.effectiveDateTime"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.WeitereKlassifikationen.WeitereKlassifikationName",
+        "path": "Onkologie.WeitereKlassifikationen.WeitereKlassifikationName",
+        "short": "Hämatoonkologische und sonstige Klassifikationen Name",
+        "definition": "Name der hämatologischen oder sonstigen Klassifikation. Art der Klassifikation.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.code.text"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.WeitereKlassifikationen.WeitereKlassifikationEinstufung",
+        "path": "Onkologie.WeitereKlassifikationen.WeitereKlassifikationEinstufung",
+        "short": "Hämatoonkologische und sonstige Klassifikationen Einstufung",
+        "definition": "Einstufung gemäß der verwendeten hämatoonkologischen oder sonstigen Klassifikationen.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.value[x]"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Residualstatus",
+        "path": "Onkologie.Residualstatus",
+        "short": "Residualstatus",
+        "definition": "Residualstatus",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Residualstatus.LokalerResidualstatus",
+        "path": "Onkologie.Residualstatus.LokalerResidualstatus",
+        "short": "Beurteilung des lokalen Residualstatus nach Abschluss der Operation",
+        "definition": "Lokale Beurteilung der Residualklassifikation nach Resektion, bezieht sich auf das, was reseziert wurde, meist Primärtumor, aber z. B. auch Lebermetastasen.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.outcome"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Residualstatus.GlobalerResidualstatus",
+        "path": "Onkologie.Residualstatus.GlobalerResidualstatus",
+        "short": "Gesamtbeurteilung des Residualstatus",
+        "definition": "Gesamtbeurteilung der Residualklassifikation der Erkrankung einschließlich etwaiger Fernmetastasen.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Fernmetastasen",
+        "path": "Onkologie.Fernmetastasen",
+        "short": "Fernmetastasen",
+        "definition": "Fernmetastasen",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Fernmetastasen.LokalisationFernmetastase",
+        "path": "Onkologie.Fernmetastasen.LokalisationFernmetastase",
+        "short": "Lokalisation von Fernmetastase(n)",
+        "definition": "Lokalisation der Fernmetastase(n).",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.bodySite"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Fernmetastasen.DatumFernmetase",
+        "path": "Onkologie.Fernmetastasen.DatumFernmetase",
+        "short": "Datum der diagnostischen Sicherung von Fernmetastasen",
+        "definition": "Gibt an, wann die Fernmetastase festgestellt wurde.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.effectiveDateTime"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.AllgemeinerLeistungszustand",
+        "path": "Onkologie.AllgemeinerLeistungszustand",
+        "short": "Allgemeiner Leistungszustand",
+        "definition": "Allgemeiner Leistungszustand",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.AllgemeinerLeistungszustand.ECOGKarnofsky",
+        "path": "Onkologie.AllgemeinerLeistungszustand.ECOGKarnofsky",
+        "short": "ECOG oder Karnofsky",
+        "definition": "ECOG oder Karnofsky",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.value[x]"
+          }
+        ]
+      },
+      {
         "id": "Onkologie.Operation",
         "path": "Onkologie.Operation",
         "short": "Operation",
@@ -837,6 +1045,8 @@
       {
         "id": "Onkologie.Operation.OPIntention",
         "path": "Onkologie.Operation.OPIntention",
+        "short": "Intention",
+        "definition": "Gibt an, mit welchem Ziel die Operation geplant wurde",
         "min": 0,
         "max": "1",
         "type": [
@@ -854,6 +1064,8 @@
       {
         "id": "Onkologie.Operation.OPDatum",
         "path": "Onkologie.Operation.OPDatum",
+        "short": "OP Datum",
+        "definition": "Datum der OP",
         "min": 0,
         "max": "1",
         "type": [
@@ -871,6 +1083,8 @@
       {
         "id": "Onkologie.Operation.OPSCode",
         "path": "Onkologie.Operation.OPSCode",
+        "short": "OPS Code",
+        "definition": "Gibt an, welche Operation durchgeführ wurde. OPS (5-*), so genau wie möglich. Bei paaringen Organen mit Seitenangabe",
         "min": 0,
         "max": "*",
         "type": [
@@ -888,6 +1102,8 @@
       {
         "id": "Onkologie.Operation.OPSVersion",
         "path": "Onkologie.Operation.OPSVersion",
+        "short": "OPS Version",
+        "definition": "Gibt an, nach welcher Version (Jahr) des OPS klassifiziert wurde (Gültige Bezeichnung nach BfArM)",
         "min": 0,
         "max": "1",
         "type": [
@@ -905,6 +1121,8 @@
       {
         "id": "Onkologie.Operation.OPKomplikation",
         "path": "Onkologie.Operation.OPKomplikation",
+        "short": "OP Komplikationen",
+        "definition": "Gibt an, ob eine oder keine Komplikation aufgetreten ist, bzw. wenn eine aufgetreten ist welche.",
         "min": 0,
         "max": "*",
         "type": [
@@ -933,8 +1151,10 @@
         ]
       },
       {
-        "id": "Onkologie.Strahlentherapie.StrahlenTxIntention",
-        "path": "Onkologie.Strahlentherapie.StrahlenTxIntention",
+        "id": "Onkologie.Strahlentherapie.StrahlentherapieIntention",
+        "path": "Onkologie.Strahlentherapie.StrahlentherapieIntention",
+        "short": "Intention der Strahlentherapie",
+        "definition": "Gibt an, mit welcher Intention die Strahlentherapie geplant wurde.",
         "min": 0,
         "max": "1",
         "type": [
@@ -950,8 +1170,10 @@
         ]
       },
       {
-        "id": "Onkologie.Strahlentherapie.StrahlenTxStellung",
-        "path": "Onkologie.Strahlentherapie.StrahlenTxStellung",
+        "id": "Onkologie.Strahlentherapie.StrahlentherapieStellung",
+        "path": "Onkologie.Strahlentherapie.StrahlentherapieStellung",
+        "short": "Strahlentherapie Stellung zu operativer Therapie",
+        "definition": "Gibt an, in welchem Bezug zu einer operativen Therapie die Bestrahlung steht.",
         "min": 0,
         "max": "1",
         "type": [
@@ -962,13 +1184,53 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Procedure.extension[Stellung].valueCodeableConcept.coding.code."
+            "map": "Procedure.extension[Stellung].valueCodeableConcept.coding.code"
           }
         ]
       },
       {
-        "id": "Onkologie.Strahlentherapie.StrahlenTxZielgebiet",
-        "path": "Onkologie.Strahlentherapie.StrahlenTxZielgebiet",
+        "id": "Onkologie.Strahlentherapie.StrahlentherapieEndeGrund",
+        "path": "Onkologie.Strahlentherapie.StrahlentherapieEndeGrund",
+        "short": "Strahlentherapie Ende Grund",
+        "definition": "Gibt den Grund an, warum die Strahlentherapie beendet wurde.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.outcome.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt",
+        "path": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt",
+        "short": "Behandlungsabschnitt",
+        "definition": "Dieses ",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.extension[Behandlungsabschnitt]"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieZielgebiet",
+        "path": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieZielgebiet",
+        "short": "Strahlentherapie Zielgebiet",
+        "definition": "Gibt an, an welcher anatomischen Region die Bestrahlung durchgeführt wurde.",
         "min": 0,
         "max": "*",
         "type": [
@@ -984,8 +1246,10 @@
         ]
       },
       {
-        "id": "Onkologie.Strahlentherapie.StrahlenTxSeiteZielgebiet",
-        "path": "Onkologie.Strahlentherapie.StrahlenTxSeiteZielgebiet",
+        "id": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieSeiteZielgebiet",
+        "path": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieSeiteZielgebiet",
+        "short": "Strahlentherapie Seite Zielgebiet",
+        "definition": "Bei Zielgebieten, die durch \"(r, l)\" gekennzeichnet sind, ist eine Seitenangabe Pflicht.",
         "min": 0,
         "max": "*",
         "type": [
@@ -1001,8 +1265,10 @@
         ]
       },
       {
-        "id": "Onkologie.Strahlentherapie.StrahlenTxBeginn",
-        "path": "Onkologie.Strahlentherapie.StrahlenTxBeginn",
+        "id": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieBeginn",
+        "path": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieBeginn",
+        "short": "Strahlentherapie Beginn",
+        "definition": "Gibt an, wann die Strahlentherapie begonnen wurde.",
         "min": 0,
         "max": "1",
         "type": [
@@ -1018,8 +1284,10 @@
         ]
       },
       {
-        "id": "Onkologie.Strahlentherapie.StrahlenTxEnde",
-        "path": "Onkologie.Strahlentherapie.StrahlenTxEnde",
+        "id": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieEnde",
+        "path": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieEnde",
+        "short": "Strahlentherapie Ende",
+        "definition": "Gibt an, wann die Strahlentherapie beendet wurde.",
         "min": 0,
         "max": "1",
         "type": [
@@ -1035,8 +1303,10 @@
         ]
       },
       {
-        "id": "Onkologie.Strahlentherapie.StrahlenTxApplikationsart",
-        "path": "Onkologie.Strahlentherapie.StrahlenTxApplikationsart",
+        "id": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieApplikationsart",
+        "path": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieApplikationsart",
+        "short": "Strahlentherapie Applikationsart",
+        "definition": "Gibt an, mit welcher Technik die Strahlentherapie durchgeführt wurde.",
         "min": 0,
         "max": "1",
         "type": [
@@ -1052,8 +1322,10 @@
         ]
       },
       {
-        "id": "Onkologie.Strahlentherapie.Strahlenart",
-        "path": "Onkologie.Strahlentherapie.Strahlenart",
+        "id": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieStrahlenart",
+        "path": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieStrahlenart",
+        "short": "Strahlenart",
+        "definition": "Angewandte Strahlenart (Strahlung oder metabolische Nuklide)",
         "min": 0,
         "max": "1",
         "type": [
@@ -1069,8 +1341,10 @@
         ]
       },
       {
-        "id": "Onkologie.Strahlentherapie.StrahlenTxGesamtdosis",
-        "path": "Onkologie.Strahlentherapie.StrahlenTxGesamtdosis",
+        "id": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieGesamtdosis",
+        "path": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieGesamtdosis",
+        "short": "Strahlentherapie Gesamtdosis",
+        "definition": "Gibt an, mit welcher Gesamtdosis das Zielgebiet bestrahlt wurde (inklusive Boost).",
         "min": 0,
         "max": "1",
         "type": [
@@ -1086,8 +1360,10 @@
         ]
       },
       {
-        "id": "Onkologie.Strahlentherapie.StrahlenTxEinzeldosis",
-        "path": "Onkologie.Strahlentherapie.StrahlenTxEinzeldosis",
+        "id": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieEinzeldosis",
+        "path": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieEinzeldosis",
+        "short": "Strahlentherapie Einzeldosis",
+        "definition": "Strahlentherapie Einzeldosis pro Tag (Dosis)",
         "min": 0,
         "max": "1",
         "type": [
@@ -1103,8 +1379,10 @@
         ]
       },
       {
-        "id": "Onkologie.Strahlentherapie.StrahlenTxEinheit",
-        "path": "Onkologie.Strahlentherapie.StrahlenTxEinheit",
+        "id": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieEinheit",
+        "path": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieEinheit",
+        "short": "Strahlentherapie Einheit",
+        "definition": "Gibt die Einheit zu der Einzel- oder Gesamtdosis an, mit welcher das Zielgebiet bestrahlt wurde, bzw. bei metabolischer Therapie die Aktivität des verwendeten Radionuklids.",
         "min": 0,
         "max": "1",
         "type": [
@@ -1120,8 +1398,10 @@
         ]
       },
       {
-        "id": "Onkologie.Strahlentherapie.Boost",
-        "path": "Onkologie.Strahlentherapie.Boost",
+        "id": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieBoost",
+        "path": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieBoost",
+        "short": "Boost",
+        "definition": "Angabe, ob ein Boost und falls ja, welche Art von Boost appliziert wurde.",
         "min": 0,
         "max": "1",
         "type": [
@@ -1133,23 +1413,6 @@
           {
             "identity": "FHIR",
             "map": "Procedure.extension[Behandlungsabschnitt].extension[Boost].valueCodeableConcept.coding.code"
-          }
-        ]
-      },
-      {
-        "id": "Onkologie.Strahlentherapie.StrahlenTxEndeGrund",
-        "path": "Onkologie.Strahlentherapie.StrahlenTxEndeGrund",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "code"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Procedure.outcome.coding.code"
           }
         ]
       },
@@ -1167,8 +1430,10 @@
         ]
       },
       {
-        "id": "Onkologie.SystemischeTherapie.SysTxIntention",
-        "path": "Onkologie.SystemischeTherapie.SysTxIntention",
+        "id": "Onkologie.SystemischeTherapie.SystemischeTherapieIntention",
+        "path": "Onkologie.SystemischeTherapie.SystemischeTherapieIntention",
+        "short": "Intention der systemischen Therapie",
+        "definition": "Intention der systemischen Therapie",
         "min": 0,
         "max": "1",
         "type": [
@@ -1184,8 +1449,10 @@
         ]
       },
       {
-        "id": "Onkologie.SystemischeTherapie.SysTxStellung",
-        "path": "Onkologie.SystemischeTherapie.SysTxStellung",
+        "id": "Onkologie.SystemischeTherapie.SystemischeTherapieStellung",
+        "path": "Onkologie.SystemischeTherapie.SystemischeTherapieStellung",
+        "short": "Systemische Therapie Stellung zu operativer Therapie",
+        "definition": "Gibt an, in welchem Bezug zu einer operativen Therapie die systemische Therapie steht.",
         "min": 0,
         "max": "1",
         "type": [
@@ -1201,8 +1468,10 @@
         ]
       },
       {
-        "id": "Onkologie.SystemischeTherapie.SysTxArtTherapie",
-        "path": "Onkologie.SystemischeTherapie.SysTxArtTherapie",
+        "id": "Onkologie.SystemischeTherapie.SystemischeTherapieArtTherapie",
+        "path": "Onkologie.SystemischeTherapie.SystemischeTherapieArtTherapie",
+        "short": "Art der systemischen oder abwartenden Therapie",
+        "definition": "Gibt an, welche Art der Therapie bzw. abwartende Strategie durchgeführt wurde.",
         "min": 0,
         "max": "1",
         "type": [
@@ -1218,8 +1487,48 @@
         ]
       },
       {
-        "id": "Onkologie.SystemischeTherapie.SysTxBeginn",
-        "path": "Onkologie.SystemischeTherapie.SysTxBeginn",
+        "id": "Onkologie.SystemischeTherapie.SystemischeTherapieProtokoll",
+        "path": "Onkologie.SystemischeTherapie.SystemischeTherapieProtokoll",
+        "short": "Systemische Therapie Protokoll",
+        "definition": "Gibt an, nach welchem Protokoll die Systemtherapie durchgeführt wurde.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "MedicationStatement.medicationCodeableConcept.text "
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.SystemischeTherapie.SystemischeTherapieSubstanz",
+        "path": "Onkologie.SystemischeTherapie.SystemischeTherapieSubstanz",
+        "short": "Systemische Therapie Substanz",
+        "definition": "Gibt an, mit welcher Substanz die Systemtherapie durchgeführt wurde. Nach Möglichkeit ATC kodiert. Mehrere Substanzen sind jeweils einzeln zu kodieren. ",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "MedicationStatement.medicationCodeableConcept[atcClassDe].coding.code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.SystemischeTherapie.SystemischeTherapieBeginn",
+        "path": "Onkologie.SystemischeTherapie.SystemischeTherapieBeginn",
+        "short": "Systemische Therapie Beginn",
+        "definition": "Gibt an, wann die systemische Therapie begonnen wurde.",
         "min": 0,
         "max": "1",
         "type": [
@@ -1235,8 +1544,10 @@
         ]
       },
       {
-        "id": "Onkologie.SystemischeTherapie.SysTxEnde",
-        "path": "Onkologie.SystemischeTherapie.SysTxEnde",
+        "id": "Onkologie.SystemischeTherapie.SystemischeTherapieEnde",
+        "path": "Onkologie.SystemischeTherapie.SystemischeTherapieEnde",
+        "short": "Systemische Therapie Ende Grund",
+        "definition": "Gibt den Grund an, warum die Systemtherapie beendet wurde.",
         "min": 0,
         "max": "1",
         "type": [
@@ -1252,8 +1563,10 @@
         ]
       },
       {
-        "id": "Onkologie.SystemischeTherapie.SysTxEndeGrund",
-        "path": "Onkologie.SystemischeTherapie.SysTxEndeGrund",
+        "id": "Onkologie.SystemischeTherapie.SystemischeTherapieEndeGrund",
+        "path": "Onkologie.SystemischeTherapie.SystemischeTherapieEndeGrund",
+        "short": "Systemische Therapie Ende",
+        "definition": "Gibt an, wann die systemische Therapie beendet wurde.",
         "min": 0,
         "max": "1",
         "type": [
@@ -1265,6 +1578,389 @@
           {
             "identity": "FHIR",
             "map": "Procedure.outcome.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Nebenwirkungen",
+        "path": "Onkologie.Nebenwirkungen",
+        "short": "Nebenwirkungen",
+        "definition": "Nebenwirkungen",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Nebenwirkungen.NebenwirkungenCTCAEGrad",
+        "path": "Onkologie.Nebenwirkungen.NebenwirkungenCTCAEGrad",
+        "short": "Nebenwirkungen nach CTCAE-Grad",
+        "definition": "Gibt an, zu welchem Schweregrad von Nebenwirkungen es bei der Bestrahlung oder der systemischen Therapie gekommen ist.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "AdverseEvent.severity.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Nebenwirkungen.NebenwirkungenCTCAEArt",
+        "path": "Onkologie.Nebenwirkungen.NebenwirkungenCTCAEArt",
+        "short": "Nebenwirkungen nach CTCAE Art",
+        "definition": "Gibt an, zu welcher Nebenwirkung es bei der Bestrahlung oder der systemischen Therapie gekommen ist. Bei der Bestrahlung sind sogenannte akute Nebenwirkungen bis zum 90. Tag nach Bestrahlungsbeginn gemeint.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "AdverseEvent.event.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Nebenwirkungen.NebenwirkungenCTCAEVersion",
+        "path": "Onkologie.Nebenwirkungen.NebenwirkungenCTCAEVersion",
+        "short": "Nebenwirkungen nach CTCAE Version",
+        "definition": "Für den medizinischen Katalog gültige Versionsbezeichnungen.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "AdverseEvent.event.coding.version"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Verlauf",
+        "path": "Onkologie.Verlauf",
+        "short": "Verlauf",
+        "definition": "Verlauf",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Verlauf.VerlaufDatum",
+        "path": "Onkologie.Verlauf.VerlaufDatum",
+        "short": "Untersuchungsdatum Verlauf",
+        "definition": "Datum, an dem die letzte Untersuchung durchgeführt wurde, die zur Einschätzung des Tumorstatus geführt hat.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Verlauf.VerlaufBeurteilungTumorstatus",
+        "path": "Onkologie.Verlauf.VerlaufBeurteilungTumorstatus",
+        "short": "Gesamtbeurteilung des Tumorstatus",
+        "definition": "Gesamtbeurteilung der Erkrankung unter Berücksichtigung aller Manifestationen.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Verlauf.VerlaufTumorstatusPrimaertumor",
+        "path": "Onkologie.Verlauf.VerlaufTumorstatusPrimaertumor",
+        "short": "Tumorstatus Primärtumor",
+        "definition": "Beurteilung der Situation im Primärtumorbereich.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Verlauf.VerlaufTumorstatusLymphknoten",
+        "path": "Onkologie.Verlauf.VerlaufTumorstatusLymphknoten",
+        "short": "Tumorstatus Lymphknoten",
+        "definition": "Beurteilung der Situation im Bereich der regionären Lymphknoten.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Verlauf.VerlaufTumorstatusMetastasen",
+        "path": "Onkologie.Verlauf.VerlaufTumorstatusMetastasen",
+        "short": "Tumorstatus Fernmetastasen",
+        "definition": "Beurteilung der Situation im Bereich der Fernmetastasen.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.TumorkonferenzTherapieempfehlung",
+        "path": "Onkologie.TumorkonferenzTherapieempfehlung",
+        "short": "Tumorkonferenz und Therapieempfehlung",
+        "definition": "Tumorkonferenz und Therapieempfehlung",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.TumorkonferenzTherapieempfehlung.TherapieplanungDatum",
+        "path": "Onkologie.TumorkonferenzTherapieempfehlung.TherapieplanungDatum",
+        "short": "Tumorkonferenz Therapieplanung Datum",
+        "definition": "Datum der Durchführung der Tumorkonferenz bzw. der sonstigen Therapieplanung.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "CarePlan.created"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.TumorkonferenzTherapieempfehlung.TherapieplanungTyp",
+        "path": "Onkologie.TumorkonferenzTherapieempfehlung.TherapieplanungTyp",
+        "short": "Tumorkonferenz Therapieplanung Typ",
+        "definition": "Typ der Tumorkonferenz bzw. der sonstigen Therapieplanung.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "CarePlan.category"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.TumorkonferenzTherapieempfehlung.TherapieempfehlungTyp",
+        "path": "Onkologie.TumorkonferenzTherapieempfehlung.TherapieempfehlungTyp",
+        "short": "Tumorkonferenz Therapieempfehlung Typ",
+        "definition": "Typ der Therapieempfehlung der Tumorkonferenz.",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "CarePlan.activity.detail.code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.TumorkonferenzTherapieempfehlung.TherapieAbweichungPatientenwunsch",
+        "path": "Onkologie.TumorkonferenzTherapieempfehlung.TherapieAbweichungPatientenwunsch",
+        "short": "Tumorkonferenz/Therapieempfehlung Therapieabweichung auf Wunsch des Patienten",
+        "definition": "Abweichung auf Wunsch des Patienten.",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "CarePlan.activity.detail.status & statusReason"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Tod",
+        "path": "Onkologie.Tod",
+        "short": "Tod",
+        "definition": "Tod",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Tod.Sterbedatum",
+        "path": "Onkologie.Tod.Sterbedatum",
+        "short": "Sterbedatum",
+        "definition": "Datum des Todes",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.effectiveDateTime"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Tod.TodTumorbedingt",
+        "path": "Onkologie.Tod.TodTumorbedingt",
+        "short": "Tod tumorbedingt",
+        "definition": "Krebs-Tod-Relation",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.interpretation.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Tod.TodesursacheICD",
+        "path": "Onkologie.Tod.TodesursacheICD",
+        "short": "Todesursache ICD",
+        "definition": "Todesursache im Sinne des Grundleidens",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Tod.TodesursacheICDVersion",
+        "path": "Onkologie.Tod.TodesursacheICDVersion",
+        "short": "Todesursache ICD Version",
+        "definition": "Bezeichnung der zur Kodierung verwendeten ICD-GM-Version",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept.coding.version"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.GenetischeVariante",
+        "path": "Onkologie.GenetischeVariante",
+        "short": "Genetische Variante",
+        "definition": "Genetische Variante",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.GenetischeVariante.GenetischeVarianteName",
+        "path": "Onkologie.GenetischeVariante.GenetischeVarianteName",
+        "short": "Genetische Variante Name",
+        "definition": "Genetische Variante Name",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component[conclusion-string].valueString"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.GenetischeVariante.GenetischeVarianteAuspraegung",
+        "path": "Onkologie.GenetischeVariante.GenetischeVarianteAuspraegung",
+        "short": "Genetische Variante Ausprägung",
+        "definition": "Genetische Variante Ausprägung",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component[molecular-consequence].valueCodeableConcept"
           }
         ]
       }

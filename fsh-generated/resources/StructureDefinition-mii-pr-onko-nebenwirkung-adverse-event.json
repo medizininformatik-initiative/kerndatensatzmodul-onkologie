@@ -29,6 +29,10 @@
       "identity": "rim",
       "uri": "http://hl7.org/v3",
       "name": "RIM Mapping"
+    },
+    {
+      "identity": "oBDS",
+      "name": "Mapping FHIR zu oBDS"
     }
   ],
   "kind": "resource",
@@ -61,6 +65,28 @@
         "mustSupport": true
       },
       {
+        "id": "AdverseEvent.event.coding.version",
+        "path": "AdverseEvent.event.coding.version",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "15.3",
+            "comment": "Nebenwirkungen nach CTCAE Version"
+          }
+        ]
+      },
+      {
+        "id": "AdverseEvent.event.coding.code",
+        "path": "AdverseEvent.event.coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "15.2",
+            "comment": "Nebenwirkungen nach CTCAE Art"
+          }
+        ]
+      },
+      {
         "id": "AdverseEvent.event.text",
         "path": "AdverseEvent.event.text",
         "mustSupport": true
@@ -81,7 +107,14 @@
         "id": "AdverseEvent.severity",
         "path": "AdverseEvent.severity",
         "min": 1,
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "15.1",
+            "comment": "Nebenwirkungen nach CTCAE-Grad"
+          }
+        ]
       },
       {
         "id": "AdverseEvent.severity.coding",

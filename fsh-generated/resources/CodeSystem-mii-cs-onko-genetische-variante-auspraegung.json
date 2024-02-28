@@ -1,0 +1,57 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "MII_CS_Onko_Genetische_Variante_Auspraegung",
+  "id": "mii-cs-onko-genetische-variante-auspraegung",
+  "title": "MII CS Onkologie Genetische Variante Ausprägung",
+  "description": "oBDS-spezifisches Codesystem Konsequenz der genetischen Variante Ausprägung",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-tod",
+  "concept": [
+    {
+      "code": "M",
+      "display": "Mutation/positiv"
+    },
+    {
+      "code": "W",
+      "display": "Wildtyp/nicht mutiert/ negativ"
+    },
+    {
+      "code": "P",
+      "display": "Polymorphismus"
+    },
+    {
+      "code": "S",
+      "display": "Sonstiges"
+    },
+    {
+      "code": "N",
+      "display": "Nicht bestimmbar"
+    },
+    {
+      "code": "U",
+      "display": "Unbekannt"
+    }
+  ],
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2024.0.0-ballot",
+  "caseSensitive": true,
+  "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-genetische-variante-auspraegung",
+  "count": 6
+}

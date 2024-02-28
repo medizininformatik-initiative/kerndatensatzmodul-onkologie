@@ -7,6 +7,7 @@
 [MII_CS_Onko_Systemische_Therapie_Intention]: CodeSystem-mii-cs-onko-systemische-therapie-intention.html
 [MII_CS_Onko_Allgemeiner_Leistungszustand]: CodeSystem-mii-cs-onko-allgemeiner-leistungszustand.html
 [MII_CS_Onko_Fernmetastasen]: CodeSystem-mii-cs-onko-fernmetastasen.html
+[MII_CS_Onko_Genetische_Variante_Auspraegung]: CodeSystem-mii-cs-onko-genetische-variante-auspraegung.html
 [MII_CS_Onko_Grading]: CodeSystem-mii-cs-onko-grading.html
 [MII_CS_Onko_Operation_Intention]: CodeSystem-mii-cs-onko-operation-intention.html
 [MII_CS_Onko_Operation_Komplikationen]: CodeSystem-mii-cs-onko-operation-komplikation.html
@@ -27,6 +28,10 @@
 [MII_CS_Onko_TNM_UICC]: CodeSystem-mii-cs-onko-tnm-uicc.html
 [MII_CS_Onko_TNM_Version]: CodeSystem-mii-cs-onko-tnm-version.html
 [MII_CS_Onko_Tod]: CodeSystem-mii-cs-onko-tod.html
+[MII_CS_Onko_Verlauf_Fernmetastasen]: CodeSystem-mii-cs-onko-verlauf-fernmetastasen.html
+[MII_CS_Onko_Verlauf_Gesamtbeurteilung]: CodeSystem-mii-cs-onko-verlauf-gesamtbeurteilung.html
+[MII_CS_Onko_Verlauf_Lymphknoten]: CodeSystem-mii-cs-onko-verlauf-lymphknoten.html
+[MII_CS_Onko_Verlauf_Primaertumor]: CodeSystem-mii-cs-onko-verlauf-primaertumor.html
 [MII_EX_Onko_Operation_Intention]: StructureDefinition-mii-ex-onko-operation-intention.html
 [MII_EX_Onko_Strahlentherapie_Behandlungsabschnitt]: StructureDefinition-mii-ex-onko-strahlentherapie-behandlungsabschnitt.html
 [MII_EX_Onko_Strahlentherapie_Intention]: StructureDefinition-mii-ex-onko-strahlentherapie-intention.html
@@ -67,7 +72,8 @@
 [MII_PR_Onko_TNM_y_Symbol]: StructureDefinition-mii-pr-onko-tnm-y-symbol.html
 [MII_PR_Onko_TNM_Klassifikation]: StructureDefinition-mii-pr-onko-tnm-klassifikation.html
 [MII_PR_Onko_Tod]: StructureDefinition-mii-pr-onko-tod.html
-[MII_PR_Onko_Turmokonferenz]: StructureDefinition-mii-pr-onko-turmokonferenz.html
+[MII_PR_Onko_Tumorkonferenz]: StructureDefinition-mii-pr-onko-tumorkonferenz.html
+[MII_PR_Onko_Verlauf]: StructureDefinition-mii-pr-onko-verlauf.html
 [MII_PR_Onko_Weitere_Klassifikationen]: StructureDefinition-mii-pr-onko-weitere-klassifikationen.html
 [MII_VS_Onko_Allgemeiner_Leistungszustand]: ValueSet-mii-vs-onko-allgemeiner-leistungszustand.html
 [MII_VS_Onko_Fernmetastasen]: ValueSet-mii-vs-onko-fernmetastasen.html
@@ -112,12 +118,17 @@
 [MII_VS_Onko_TNM_V_Kategorie_Werte]: ValueSet-mii-vs-onko-tnm-v-kategorie-werte.html
 [MII_VS_Onko_TNM_Version]: ValueSet-mii-vs-onko-tnm-version.html
 [MII_VS_Onko_Tod]: ValueSet-mii-vs-onko-tod.html
+[MII_VS_Onko_Verlauf_Fernmetastasen]: ValueSet-mii-vs-onko-verlauf-fernmetastasen.html
+[MII_VS_Onko_Verlauf_Gesamtbeurteilung]: ValueSet-mii-vs-onko-verlauf-gesamtbeurteilung.html
+[MII_VS_Onko_Verlauf_Lymphknoten]: ValueSet-mii-vs-onko-verlauf-lymphknoten.html
+[MII_VS_Onko_Verlauf_Primaertumor]: ValueSet-mii-vs-onko-verlauf-primaertumor.html
 [mii-cm-onko-tnm-uicc-snomed]: ConceptMap-mii-cm-onko-tnm-uicc-snomed.html
 [mii-exa-onko-allgemeiner-leistungszustand-1]: Observation-mii-exa-onko-allgemeiner-leistungszustand-1.html
 [mii-exa-onko-anzahl-befallene-lymphknoten-0]: Observation-mii-exa-onko-anzahl-befallene-lymphknoten-0.html
 [mii-exa-onko-anzahl-untersuchte-lymphknoten-23]: Observation-mii-exa-onko-anzahl-untersuchte-lymphknoten-23.html
 [mii-exa-onko-diagnose]: Condition-mii-exa-onko-diagnose.html
 [mii-exa-onko-fernmetastasen-1]: Observation-mii-exa-onko-fernmetastasen-1.html
+[mii-exa-onko-genetische-variante-braf]: Observation-mii-exa-onko-genetische-variante-braf.html
 [mii-exa-onko-residualstatus-1]: Observation-mii-exa-onko-residualstatus-1.html
 [mii-exa-onko-tnm-klassifikation-TisN0M0]: Observation-mii-exa-onko-tnm-klassifikation-TisN0M0.html
 [mii-exa-onko-tnm-klassifikation-uT2a2pN0023i-sncM1]: Observation-mii-exa-onko-tnm-klassifikation-uT2a2pN0023i-sncM1.html
@@ -134,3 +145,4 @@
 [mii-exa-onko-weitere-klassifikationen-1]: Observation-mii-exa-onko-weitere-klassifikationen-1.html
 [mii-exa-onko-weitere-klassifikationen-2]: Observation-mii-exa-onko-weitere-klassifikationen-2.html
 [mii-pr-onko-nebenwirkung-0]: AdverseEvent-mii-pr-onko-nebenwirkung-0.html
+[MII_VS_Onko_Genetische_Variante_Auspraegung]: ValueSet-mii-vs-onko-genetische-variante-auspraegung.html

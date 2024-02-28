@@ -1,0 +1,65 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "MII_CS_Onko_Verlauf_Primaertumor",
+  "id": "mii-cs-onko-verlauf-primaertumor",
+  "title": "MII CS Onkologie Verlauf Primärtumor",
+  "description": "oBDS-spezifisches Codesystem für die Beurteilung des Primärtumors im Behandlungsverlauf ",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-verlauf-primaertumor",
+  "concept": [
+    {
+      "code": "K",
+      "display": "kein Tumor nachweisbar"
+    },
+    {
+      "code": "T",
+      "display": "Tumorreste (Residualtumor)"
+    },
+    {
+      "code": "P",
+      "display": "Tumorreste (Residualtumor) Progress"
+    },
+    {
+      "code": "N",
+      "display": "Tumorreste (Residualtumor) No Change"
+    },
+    {
+      "code": "R",
+      "display": "Lokalrezidiv"
+    },
+    {
+      "code": "F",
+      "display": "fraglicher Befund"
+    },
+    {
+      "code": "U",
+      "display": "unbekannt"
+    },
+    {
+      "code": "X",
+      "display": "fehlende Angabe"
+    }
+  ],
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2024.0.0-ballot",
+  "caseSensitive": true,
+  "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-verlauf-primaertumor",
+  "count": 8
+}

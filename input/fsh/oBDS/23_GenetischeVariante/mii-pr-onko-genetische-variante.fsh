@@ -30,4 +30,4 @@ Title: "Mapping FHIR zu oBDS"
 Source: MII_PR_Onko_Genetische_Variante
 * -> "23" "Genetische Variante"
 * component[conclusion-string].value[x] -> "23.1" "Genetische Variante Name" 
-* component[molecular-consequence].value[x] -> "23.2" "Genetische Variante Auswirkung" // OPS Code
+* component[molecular-consequence].value[x] -> "23.2" "Genetische Variante Auswirkung" 
