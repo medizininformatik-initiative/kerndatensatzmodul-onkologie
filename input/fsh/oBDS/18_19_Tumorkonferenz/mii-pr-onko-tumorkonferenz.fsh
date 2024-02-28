@@ -36,7 +36,7 @@ Description: "Dieses Profil beschreibt die Tumorkonferenz und die Therapieempfeh
 * activity.detail.statusReason.coding from $mii-vs-onko-therapieabweichung
 * activity.detail.statusReason.coding ^fixedCoding.system = $mii-cs-onko-therapieabweichung
 
-Mapping: FHIR-oBDS-Therapieplanung
+Mapping: FHIR-oBDS-Therapieplanung-Tumorkonferenz
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
 Source: MII_PR_Onko_Tumorkonferenz
