@@ -830,6 +830,12 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation"
+          }
         ]
       },
       {
@@ -842,6 +848,12 @@
         "type": [
           {
             "code": "date"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.effectiveDateTime"
           }
         ]
       },
@@ -856,6 +868,12 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.code.text"
+          }
         ]
       },
       {
@@ -868,6 +886,12 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.value[x]"
           }
         ]
       },
@@ -895,6 +919,12 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.outcome"
+          }
         ]
       },
       {
@@ -907,6 +937,12 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept.coding.code"
           }
         ]
       },
@@ -934,6 +970,12 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.bodySite"
+          }
         ]
       },
       {
@@ -946,6 +988,12 @@
         "type": [
           {
             "code": "date"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.effectiveDateTime"
           }
         ]
       },
@@ -972,6 +1020,12 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.value[x]"
           }
         ]
       },
@@ -1551,6 +1605,12 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "AdverseEvent.severity.coding.code"
+          }
         ]
       },
       {
@@ -1564,6 +1624,12 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "AdverseEvent.event.coding.code"
+          }
         ]
       },
       {
@@ -1576,6 +1642,12 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "AdverseEvent.event.coding.version"
           }
         ]
       },
@@ -1846,6 +1918,12 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation"
+          }
         ]
       },
       {
@@ -1859,6 +1937,12 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component[conclusion-string].valueString"
+          }
         ]
       },
       {
@@ -1871,6 +1955,12 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component[molecular-consequence].valueCodeableConcept"
           }
         ]
       }
