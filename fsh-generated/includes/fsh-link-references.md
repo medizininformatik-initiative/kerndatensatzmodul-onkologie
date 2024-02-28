@@ -73,7 +73,7 @@
 [MII_PR_Onko_TNM_y_Symbol]: StructureDefinition-mii-pr-onko-tnm-y-symbol.html
 [MII_PR_Onko_TNM_Klassifikation]: StructureDefinition-mii-pr-onko-tnm-klassifikation.html
 [MII_PR_Onko_Tod]: StructureDefinition-mii-pr-onko-tod.html
-[MII_PR_Onko_Turmokonferenz]: StructureDefinition-mii-pr-onko-turmokonferenz.html
+[MII_PR_Onko_Tumorkonferenz]: StructureDefinition-mii-pr-onko-tumorkonferenz.html
 [MII_PR_Onko_Verlauf]: StructureDefinition-mii-pr-onko-verlauf.html
 [MII_PR_Onko_Weitere_Klassifikationen]: StructureDefinition-mii-pr-onko-weitere-klassifikationen.html
 [MII_VS_Onko_Allgemeiner_Leistungszustand]: ValueSet-mii-vs-onko-allgemeiner-leistungszustand.html
@@ -130,6 +130,7 @@
 [mii-exa-onko-diagnose]: Condition-mii-exa-onko-diagnose.html
 [mii-exa-onko-fernmetastasen-1]: Observation-mii-exa-onko-fernmetastasen-1.html
 [mii-exa-onko-genetische-variante-braf]: Observation-mii-exa-onko-genetische-variante-braf.html
+[mii-exa-onko-histologie-icdo3]: Observation-mii-exa-onko-histologie-icdo3.html
 [mii-exa-onko-residualstatus-1]: Observation-mii-exa-onko-residualstatus-1.html
 [mii-exa-onko-tnm-klassifikation-TisN0M0]: Observation-mii-exa-onko-tnm-klassifikation-TisN0M0.html
 [mii-exa-onko-tnm-klassifikation-uT2a2pN0023i-sncM1]: Observation-mii-exa-onko-tnm-klassifikation-uT2a2pN0023i-sncM1.html
