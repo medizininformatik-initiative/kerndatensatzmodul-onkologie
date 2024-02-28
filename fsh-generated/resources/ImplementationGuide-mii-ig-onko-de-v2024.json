@@ -677,10 +677,18 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-onko-turmokonferenz"
+          "reference": "StructureDefinition/mii-pr-onko-tumorkonferenz"
         },
-        "name": "MII PR Onkologie Turmokonferenz",
-        "description": "Diese Profil beschreibt die Turmokonferenz und die Therapieempfehlungen",
+        "name": "MII PR Onkologie Tumorkonferenz",
+        "description": "Dieses Profil beschreibt die Tumorkonferenz und die Therapieempfehlungen",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-verlauf"
+        },
+        "name": "MII PR Onkologie Verlauf",
+        "description": "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. auf andere verlaufsrelevante diagnostische Maßnahmen",
         "exampleBoolean": false
       },
       {
@@ -1126,13 +1134,6 @@
       },
       {
         "reference": {
-          "reference": "Observation/mii-exa-onko-histologie-icdo3"
-        },
-        "name": "mii-exa-onko-histologie-icdo3",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-histologie-icdo3"
-      },
-      {
-        "reference": {
           "reference": "Observation/mii-exa-onko-residualstatus-1"
         },
         "name": "mii-exa-onko-residualstatus-1",
@@ -1220,7 +1221,7 @@
           "reference": "CarePlan/mii-exa-onko-tumorkonferenz-01"
         },
         "name": "mii-exa-onko-tumorkonferenz-01",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-turmokonferenz"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
       },
       {
         "reference": {

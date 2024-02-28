@@ -16,6 +16,7 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 * extension contains MII_EX_Onko_Strahlentherapie_Stellung named Stellung 0.. 
 * extension[Stellung] MS 
 
+// hier später Behandlungsabschnitt nochmal zu Bestrahlung refactoren
 * extension contains mii-ex-onko-strahlentherapie-behandlungsabschnitt named Behandlungsabschnitt 1..
 * extension[Behandlungsabschnitt] MS
 * extension[Behandlungsabschnitt] 1..*

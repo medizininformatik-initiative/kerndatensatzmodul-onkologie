@@ -23,3 +23,11 @@ Description: "Dieses Profil beschreibt die Nebenwirkung von Strahlentherapie und
 // Die Referenz zu Procedure/MedicationStatement
 * suspectEntity 1..* MS
 * suspectEntity.instance MS
+
+Mapping: FHIR-oBDS-AdverseEvents
+Id: oBDS
+Title: "Mapping FHIR zu oBDS"
+Source: MII_PR_Onko_Nebenwirkung_Adverse_Event
+* severity -> "15.1" "Nebenwirkungen nach CTCAE-Grad"
+* event.coding.code -> "15.2" "Nebenwirkungen nach CTCAE Art"
+* event.coding.version -> "15.3" "Nebenwirkungen nach CTCAE Version"

@@ -1,5 +1,5 @@
 Instance: mii-exa-onko-tumorkonferenz-01
-InstanceOf: mii-pr-onko-turmokonferenz
+InstanceOf: mii-pr-onko-tumorkonferenz
 Usage: #example
 
 * identifier.value = "Tumorkonferenz_1"
