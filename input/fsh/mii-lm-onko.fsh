@@ -161,6 +161,18 @@ Source: MII_LM_Onko
   * TNMPnKategorie -> "Observation.valueCodeableConcept.coding.code"
   * TNMSKategorie -> "Observation.valueCodeableConcept.coding.code"
   * UICCStadium -> "Observation.valueCodeableConcept.coding.code"
+* WeitereKlassifikationen -> "Observation"
+  * WeitereKlassifikationDatum -> "Observation.effectiveDateTime"
+  * WeitereKlassifikationName -> "Observation.code.text"
+  * WeitereKlassifikationEinstufung -> "Observation.value[x]"
+* Residualstatus 
+  * LokalerResidualstatus -> "Procedure.outcome"
+  * GlobalerResidualstatus -> "Observation.valueCodeableConcept.coding.code"
+* Fernmetastasen  
+  * LokalisationFernmetastase -> "Observation.bodySite"
+  * DatumFernmetase -> "Observation.effectiveDateTime"
+* AllgemeinerLeistungszustand
+  * ECOGKarnofsky -> "Observation.value[x]"
 * Operation
   * OPIntention -> "Procedure.extension.valueCodeableConcept.coding.code"
   * OPDatum -> "Procedure.performedDateTime"
@@ -193,6 +205,11 @@ Source: MII_LM_Onko
   * SystemischeTherapieEnde -> "Procedure.performedPeriod.end"
   * SystemischeTherapieEndeGrund -> "Procedure.outcome.coding.code"
 
+* Nebenwirkungen 
+  * NebenwirkungenCTCAEGrad -> "AdverseEvent.severity.coding.code"
+  * NebenwirkungenCTCAEArt -> "AdverseEvent.event.coding.code"
+  * NebenwirkungenCTCAEVersion -> "AdverseEvent.event.coding.version"
+
 * TumorkonferenzTherapieempfehlung
   * TherapieplanungDatum -> "CarePlan.created"
   * TherapieplanungTyp -> "CarePlan.category"
@@ -204,4 +221,6 @@ Source: MII_LM_Onko
   * TodesursacheICD -> "Observation.valueCodeableConcept.coding.code" 
   * TodesursacheICDVersion -> "Observation.valueCodeableConcept.coding.version" 
 
-  
+* GenetischeVariante -> "Observation"
+  * GenetischeVarianteName -> "Observation.component[conclusion-string].valueString"
+  * GenetischeVarianteAuspraegung -> "Observation.component[molecular-consequence].valueCodeableConcept"
