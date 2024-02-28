@@ -822,6 +822,160 @@
         ]
       },
       {
+        "id": "Onkologie.WeitereKlassifikationen",
+        "path": "Onkologie.WeitereKlassifikationen",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.WeitereKlassifikationen.WeitereKlassifikationDatum",
+        "path": "Onkologie.WeitereKlassifikationen.WeitereKlassifikationDatum",
+        "short": "Hämatoonkologische und sonstige Klassifikationen Datum",
+        "definition": "Gibt an, auf welches Datum sich die Klassifikation bezieht.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.WeitereKlassifikationen.WeitereKlassifikationName",
+        "path": "Onkologie.WeitereKlassifikationen.WeitereKlassifikationName",
+        "short": "Hämatoonkologische und sonstige Klassifikationen Name",
+        "definition": "Name der hämatologischen oder sonstigen Klassifikation. Art der Klassifikation.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.WeitereKlassifikationen.WeitereKlassifikationEinstufung",
+        "path": "Onkologie.WeitereKlassifikationen.WeitereKlassifikationEinstufung",
+        "short": "Hämatoonkologische und sonstige Klassifikationen Einstufung",
+        "definition": "Einstufung gemäß der verwendeten hämatoonkologischen oder sonstigen Klassifikationen.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Residualstatus",
+        "path": "Onkologie.Residualstatus",
+        "short": "Residualstatus",
+        "definition": "Residualstatus",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Residualstatus.LokalerResidualstatus",
+        "path": "Onkologie.Residualstatus.LokalerResidualstatus",
+        "short": "Beurteilung des lokalen Residualstatus nach Abschluss der Operation",
+        "definition": "Lokale Beurteilung der Residualklassifikation nach Resektion, bezieht sich auf das, was reseziert wurde, meist Primärtumor, aber z. B. auch Lebermetastasen.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Residualstatus.GlobalerResidualstatus",
+        "path": "Onkologie.Residualstatus.GlobalerResidualstatus",
+        "short": "Gesamtbeurteilung des Residualstatus",
+        "definition": "Gesamtbeurteilung der Residualklassifikation der Erkrankung einschließlich etwaiger Fernmetastasen.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Fernmetastasen",
+        "path": "Onkologie.Fernmetastasen",
+        "short": "Fernmetastasen",
+        "definition": "Fernmetastasen",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Fernmetastasen.LokalisationFernmetastase",
+        "path": "Onkologie.Fernmetastasen.LokalisationFernmetastase",
+        "short": "Lokalisation von Fernmetastase(n)",
+        "definition": "Lokalisation der Fernmetastase(n).",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Fernmetastasen.DatumFernmetase",
+        "path": "Onkologie.Fernmetastasen.DatumFernmetase",
+        "short": "Datum der diagnostischen Sicherung von Fernmetastasen",
+        "definition": "Gibt an, wann die Fernmetastase festgestellt wurde.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.AllgemeinerLeistungszustand",
+        "path": "Onkologie.AllgemeinerLeistungszustand",
+        "short": "Allgemeiner Leistungszustand",
+        "definition": "Allgemeiner Leistungszustand",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.AllgemeinerLeistungszustand.ECOGKarnofsky",
+        "path": "Onkologie.AllgemeinerLeistungszustand.ECOGKarnofsky",
+        "short": "ECOG oder Karnofsky",
+        "definition": "ECOG oder Karnofsky",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
         "id": "Onkologie.Operation",
         "path": "Onkologie.Operation",
         "short": "Operation",
@@ -983,6 +1137,8 @@
       {
         "id": "Onkologie.Strahlentherapie.StrahlentherapieEndeGrund",
         "path": "Onkologie.Strahlentherapie.StrahlentherapieEndeGrund",
+        "short": "Strahlentherapie Ende Grund",
+        "definition": "Gibt den Grund an, warum die Strahlentherapie beendet wurde.",
         "min": 0,
         "max": "1",
         "type": [
@@ -1368,6 +1524,58 @@
           {
             "identity": "FHIR",
             "map": "Procedure.outcome.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Nebenwirkungen",
+        "path": "Onkologie.Nebenwirkungen",
+        "short": "Nebenwirkungen",
+        "definition": "Nebenwirkungen",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Nebenwirkungen.NebenwirkungenCTCAEGrad",
+        "path": "Onkologie.Nebenwirkungen.NebenwirkungenCTCAEGrad",
+        "short": "Nebenwirkungen nach CTCAE-Grad",
+        "definition": "Gibt an, zu welchem Schweregrad von Nebenwirkungen es bei der Bestrahlung oder der systemischen Therapie gekommen ist.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Nebenwirkungen.NebenwirkungenCTCAEArt",
+        "path": "Onkologie.Nebenwirkungen.NebenwirkungenCTCAEArt",
+        "short": "Nebenwirkungen nach CTCAE Art",
+        "definition": "Gibt an, zu welcher Nebenwirkung es bei der Bestrahlung oder der systemischen Therapie gekommen ist. Bei der Bestrahlung sind sogenannte akute Nebenwirkungen bis zum 90. Tag nach Bestrahlungsbeginn gemeint.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Nebenwirkungen.NebenwirkungenCTCAEVersion",
+        "path": "Onkologie.Nebenwirkungen.NebenwirkungenCTCAEVersion",
+        "short": "Nebenwirkungen nach CTCAE Version",
+        "definition": "Für den medizinischen Katalog gültige Versionsbezeichnungen.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
           }
         ]
       },
