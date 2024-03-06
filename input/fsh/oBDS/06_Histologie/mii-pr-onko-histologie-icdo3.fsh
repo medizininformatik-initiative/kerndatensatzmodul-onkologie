@@ -14,9 +14,11 @@ Description: "Histologie-Kodierung nach ICD-0 für die Verwendung von Folgediagn
 * subject only Reference(Patient)
 * value[x] 1..1 MS
 * value[x] only CodeableConcept
+* valueCodeableConcept MS
+* valueCodeableConcept 1..1
 * valueCodeableConcept from $ICDO3 (required)
 * bodySite MS
-* bodySite 1..1
+* bodySite 0..1
 * bodySite.coding from $ICDO3 (required)
 * specimen MS 
 * specimen 1..1
@@ -27,5 +29,7 @@ Id: oBDS
 Title: "Mapping FHIR zu oBDS"
 Source: MII_PR_Onko_Histologie_ICDO3
 * bodySite -> "6.11" "Befund"
-* code.coding.code
-* code
+* valueCodeableConcept.coding.code -> "6.3" "Morphologie-Code"
+* valueCodeableConcep.coding.version -> "6.4" "Morphologie ICD-O/Blue Book Version"
+* valueCodeableConcept.text -> "6.5" "Morphologie Freitext"
+* 
