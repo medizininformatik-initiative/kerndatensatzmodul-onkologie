@@ -107,17 +107,42 @@
         }
       },
       {
-        "id": "Observation.bodySite",
-        "path": "Observation.bodySite",
-        "min": 1,
-        "mustSupport": true,
+        "id": "Observation.value[x].coding.version",
+        "path": "Observation.value[x].coding.version",
         "mapping": [
           {
             "identity": "oBDS",
-            "map": "6.11",
-            "comment": "Befund"
+            "map": "6.4",
+            "comment": "Morphologie ICD-O/Blue Book Version"
           }
         ]
+      },
+      {
+        "id": "Observation.value[x].coding.code",
+        "path": "Observation.value[x].coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "6.3",
+            "comment": "Morphologie-Code"
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x].text",
+        "path": "Observation.value[x].text",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "6.5",
+            "comment": "Morphologie Freitext"
+          }
+        ]
+      },
+      {
+        "id": "Observation.bodySite",
+        "path": "Observation.bodySite",
+        "mustSupport": true
       },
       {
         "id": "Observation.bodySite.coding",
