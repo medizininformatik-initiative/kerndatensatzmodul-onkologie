@@ -28,8 +28,6 @@ Mapping: FHIR-oBDS-Histologie-ICD-O-3
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
 Source: MII_PR_Onko_Histologie_ICDO3
-* bodySite -> "6.11" "Befund"
 * valueCodeableConcept.coding.code -> "6.3" "Morphologie-Code"
-* valueCodeableConcep.coding.version -> "6.4" "Morphologie ICD-O/Blue Book Version"
+* valueCodeableConcept.coding.version -> "6.4" "Morphologie ICD-O/Blue Book Version"
 * valueCodeableConcept.text -> "6.5" "Morphologie Freitext"
-* 
