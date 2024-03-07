@@ -6,9 +6,9 @@ Description: "Example systemic therapy"
 * subject = Reference(Patient/example)
 * status = #final
 * extension[0].valueCodeableConcept = $mii-cs-onko-systemische-therapie-intention#K // kurativ
-* extension[0].url = "https://www.medizininformatik-initiative.de/fhir/core/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention"
+* extension[0].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention"
 * extension[1].valueCodeableConcept = $mii-cs-onko-systemische-therapie-stellung#A // adjuvant
-* extension[1].url = "https://www.medizininformatik-initiative.de/fhir/core/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellung"
+* extension[1].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellung"
 * code = $mii-cs-onko-systemische-therapie-art#CH // Chemotherapie , ggfs. hier auch ein slice, weil OPS mit angegeben werden kann
 * performedPeriod.start = "2021-12-04"
 * performedPeriod.end = "2022-04-06"

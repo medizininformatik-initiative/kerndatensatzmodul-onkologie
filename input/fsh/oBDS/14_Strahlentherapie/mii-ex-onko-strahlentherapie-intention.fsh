@@ -2,7 +2,7 @@ Extension: MII_EX_Onko_Strahlentherapie_Intention
 Id: mii-ex-onko-strahlentherapie-intention
 Title: "MII EX Onko Strahlentherapie Intention"
 Description: "Strahlentherapie Intention"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/core/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^context.type = #element
