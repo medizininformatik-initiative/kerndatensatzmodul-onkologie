@@ -1,5 +1,5 @@
 Profile: MII_PR_Onko_Specimen
-Parent: https://www.medizininformatik-initiative.de/fhir/core/modul-biobank/StructureDefinition/Specimen
+Parent: https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Specimen
 Id: mii-pr-onko-specimen
 Title: "MII PR Onkologie Specimen"
 Description: "Histologie: Dieses Profil beschreibt eine Gewebeprobe in der Onkologie."
