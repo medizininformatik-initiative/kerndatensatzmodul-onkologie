@@ -1,5 +1,5 @@
 Profile: MII_PR_Onko_Diagnose
-Parent: https://www.medizininformatik-initiative.de/fhir/ext/modul-diagnose/StructureDefinition/Diagnose
+Parent: https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose
 Id: mii-pr-onko-diagnose
 Title: "MII PR Onkologie Diagnose"
 Description: "Dieses Profil beschreibt eine Diagnose in der Onkologie"

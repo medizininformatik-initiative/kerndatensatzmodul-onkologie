@@ -1,5 +1,5 @@
 Profile: MII_PR_Onko_Strahlentherapie
-Parent: https://www.medizininformatik-initiative.de/fhir/ext/modul-prozedur/StructureDefinition/Procedure 
+Parent: https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure 
 Id: mii-pr-onko-strahlentherapie
 Title: "MII PR Onkologie Strahlentherapie"
 Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie in der Onkologie."
