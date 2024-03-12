@@ -27,7 +27,33 @@
   "compose": {
     "include": [
       {
-        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-intention"
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention",
+        "concept": [
+          {
+            "code": "K",
+            "display": "kurativ"
+          },
+          {
+            "code": "P",
+            "display": "palliativ"
+          },
+          {
+            "code": "D",
+            "display": "diagnostisch"
+          },
+          {
+            "code": "R",
+            "display": "Revision/Komplikation"
+          },
+          {
+            "code": "S",
+            "display": "Sonstiges"
+          },
+          {
+            "code": "X",
+            "display": "fehlende Angabe"
+          }
+        ]
       }
     ]
   }

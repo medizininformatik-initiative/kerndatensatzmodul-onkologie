@@ -9,6 +9,7 @@
 [MII_CS_Onko_Fernmetastasen]: CodeSystem-mii-cs-onko-fernmetastasen.html
 [MII_CS_Onko_Genetische_Variante_Auspraegung]: CodeSystem-mii-cs-onko-genetische-variante-auspraegung.html
 [MII_CS_Onko_Grading]: CodeSystem-mii-cs-onko-grading.html
+[MII_CS_Onko_Intention]: CodeSystem-mii-cs-onko-intention.html
 [MII_CS_Onko_Operation_Intention]: CodeSystem-mii-cs-onko-operation-intention.html
 [MII_CS_Onko_Operation_Komplikationen]: CodeSystem-mii-cs-onko-operation-komplikation.html
 [MII_CS_Onko_Operation_Resektionsstatus]: CodeSystem-mii-cs-onko-operation-resektionsstatus.html
@@ -22,6 +23,7 @@
 [MII_CS_Onko_Strahlentherapie_Strahlenart]: CodeSystem-mii-cs-onko-strahlentherapie-strahlenart.html
 [MII_CS_Onko_Strahlentherapie_Zielgebiet]: CodeSystem-mii-cs-onko-strahlentherapie-zielgebiet.html
 [MII_CS_Onko_Systemische_Therapie_Stellung]: CodeSystem-mii-cs-onko-systemische-therapie-stellung.html
+[MII_CS_Onko_Therapie_Stellung]: CodeSystem-mii-cs-onko-therapie-stellung.html
 [MII_CS_Onko_Therapieabweichung]: CodeSystem-mii-cs-onko-therapieabweichung.html
 [MII_CS_Onko_Therapieempfehlung_Typ]: CodeSystem-mii-cs-onko-therapieempfehlung-typ.html
 [MII_CS_Onko_Therapieplanung_Typ]: CodeSystem-mii-cs-onko-therapieplanung-typ.html

@@ -60,12 +60,12 @@
       {
         "id": "CarePlan.status",
         "path": "CarePlan.status",
-        "fixedCode": "active"
+        "mustSupport": true
       },
       {
         "id": "CarePlan.intent",
         "path": "CarePlan.intent",
-        "fixedCode": "plan"
+        "mustSupport": true
       },
       {
         "id": "CarePlan.category",
@@ -77,17 +77,25 @@
       {
         "id": "CarePlan.category.coding",
         "path": "CarePlan.category.coding",
-        "fixedCoding": {
-          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapieplanung-typ"
-        },
+        "min": 1,
+        "mustSupport": true,
         "binding": {
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-therapieplanung-typ"
         }
       },
       {
+        "id": "CarePlan.category.coding.system",
+        "path": "CarePlan.category.coding.system",
+        "min": 1,
+        "patternUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapieplanung-typ",
+        "mustSupport": true
+      },
+      {
         "id": "CarePlan.category.coding.code",
         "path": "CarePlan.category.coding.code",
+        "min": 1,
+        "mustSupport": true,
         "mapping": [
           {
             "identity": "oBDS",
@@ -151,17 +159,23 @@
       {
         "id": "CarePlan.activity.detail.code.coding",
         "path": "CarePlan.activity.detail.code.coding",
-        "fixedCoding": {
-          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapieempfehlung-typ"
-        },
         "binding": {
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-therapieempfehlung-typ"
         }
       },
       {
+        "id": "CarePlan.activity.detail.code.coding.system",
+        "path": "CarePlan.activity.detail.code.coding.system",
+        "min": 1,
+        "patternUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapieempfehlung-typ",
+        "mustSupport": true
+      },
+      {
         "id": "CarePlan.activity.detail.code.coding.code",
         "path": "CarePlan.activity.detail.code.coding.code",
+        "min": 1,
+        "mustSupport": true,
         "mapping": [
           {
             "identity": "oBDS",
@@ -183,11 +197,14 @@
         ]
       },
       {
+        "id": "CarePlan.activity.detail.statusReason",
+        "path": "CarePlan.activity.detail.statusReason",
+        "mustSupport": true
+      },
+      {
         "id": "CarePlan.activity.detail.statusReason.coding",
         "path": "CarePlan.activity.detail.statusReason.coding",
-        "fixedCoding": {
-          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapieabweichung"
-        },
+        "mustSupport": true,
         "binding": {
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-vs-therapieabweichung"
@@ -199,6 +216,16 @@
             "comment": "Tumorkonferenz/Therapieempfehlung Therapieabweichung auf Wunsch des Patienten"
           }
         ]
+      },
+      {
+        "id": "CarePlan.activity.detail.statusReason.coding.system",
+        "path": "CarePlan.activity.detail.statusReason.coding.system",
+        "patternUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapieabweichung"
+      },
+      {
+        "id": "CarePlan.activity.detail.statusReason.coding.code",
+        "path": "CarePlan.activity.detail.statusReason.coding.code",
+        "mustSupport": true
       }
     ]
   }

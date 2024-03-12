@@ -27,7 +27,29 @@
   "compose": {
     "include": [
       {
-        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-intention"
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention",
+        "concept": [
+          {
+            "code": "K",
+            "display": "kurativ"
+          },
+          {
+            "code": "P",
+            "display": "palliativ"
+          },
+          {
+            "code": "S",
+            "display": "Sonstiges"
+          },
+          {
+            "code": "X",
+            "display": "keine Angabe"
+          },
+          {
+            "code": "O",
+            "display": "lokal kurativ bei Oligometastasierung"
+          }
+        ]
       }
     ]
   }

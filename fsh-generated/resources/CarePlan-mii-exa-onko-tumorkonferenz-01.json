@@ -6,8 +6,6 @@
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
     ]
   },
-  "status": "active",
-  "intent": "plan",
   "category": [
     {
       "coding": [
@@ -29,15 +27,14 @@
             }
           ]
         },
+        "status": "scheduled",
         "statusReason": {
           "coding": [
             {
-              "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapieabweichung",
               "code": "N"
             }
           ]
-        },
-        "status": "scheduled"
+        }
       }
     }
   ],
@@ -46,6 +43,8 @@
       "value": "Tumorkonferenz_1"
     }
   ],
+  "status": "active",
+  "intent": "plan",
   "subject": {
     "reference": "Patient/example"
   },
