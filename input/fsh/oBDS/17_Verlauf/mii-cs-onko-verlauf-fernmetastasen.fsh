@@ -11,11 +11,11 @@ Description: "oBDS-spezifisches Codesystem für die Beurteilung von Fernmetastas
 * ^caseSensitive = true
 * ^valueSet = $mii-vs-onko-verlauf-fernmetastasen
 * ^content = #complete
-* #K "kein Lymphknotenbefall nachweisbar"
-* #R "neu aufgetretenes Lymphknotenrezidiv"
-* #T "bekannter Lymphknotenbefall Residuen"
-* #P "bekannter Lymphknotenbefall Progress"
-* #N "bekannter Lymphknotenbefall No Change"
+* #K "kein Fernmetastasen nachweisbar"
+* #R "neu aufgetretene Fernmetastase(n) bzw. Metastasenrezidiv"
+* #T "Fernmetastasen Residuen"
+* #P "Fernmetastasen Progress"
+* #N "Fernmetastasen No Change"
 * #F "fraglicher Befund"
 * #U "unbekannt"
 * #X "fehlende Angabe"
