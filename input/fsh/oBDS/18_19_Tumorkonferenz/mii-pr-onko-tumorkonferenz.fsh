@@ -8,15 +8,18 @@ Description: "Dieses Profil beschreibt die Tumorkonferenz und die Therapieempfeh
 * ^status = #draft
 
 * identifier MS
-* status ^fixedCode = $request-status#active // was ist mit completed? Die daten werden ja retrospektiv generiert
-* intent ^fixedCode = $request-intent#plan
+* status MS
+* intent MS
 
 * subject MS
 * subject only Reference(Patient)
 
 * category 1..1 MS
 * category.coding from $mii-vs-onko-therapieplanung-typ
-* category.coding ^fixedCoding.system = $mii-cs-onko-therapieplanung-typ
+* category.coding 1..* MS
+* category.coding.system = $mii-cs-onko-therapieplanung-typ
+* category.coding.system 1..1 MS
+* category.coding.code 1..1 MS
 
 // Therapieplanung Datum
 * created 1..1 MS
@@ -31,10 +34,17 @@ Description: "Dieses Profil beschreibt die Tumorkonferenz und die Therapieempfeh
 * activity.detail MS
 * activity.detail.code 1..1 MS
 * activity.detail.code.coding from $mii-vs-onko-therapieempfehlung-typ
-* activity.detail.code.coding ^fixedCoding.system = $mii-cs-onko-therapieempfehlung-typ
+* activity.detail.code.coding.system = $mii-cs-onko-therapieempfehlung-typ
+* activity.detail.code.coding.system 1..1 MS
+* activity.detail.code.coding.code 1..1 MS
+
 * activity.detail.status MS
+
+* activity.detail.statusReason MS
 * activity.detail.statusReason.coding from $mii-vs-onko-therapieabweichung
-* activity.detail.statusReason.coding ^fixedCoding.system = $mii-cs-onko-therapieabweichung
+* activity.detail.statusReason.coding MS
+* activity.detail.statusReason.coding.system = $mii-cs-onko-therapieabweichung
+* activity.detail.statusReason.coding.code MS
 
 Mapping: FHIR-oBDS-Therapieplanung-Tumorkonferenz
 Id: oBDS
