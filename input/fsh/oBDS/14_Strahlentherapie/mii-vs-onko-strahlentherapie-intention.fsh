@@ -8,4 +8,10 @@ Description: "Value Set für oBDS-Codes für Klassifikation von Intention der St
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
-* include codes from system $mii-cs-onko-strahlentherapie-intention
+//* include codes from system $mii-cs-onko-strahlentherapie-intention
+
+* $mii-cs-onko-intention#K "kurativ"
+* $mii-cs-onko-intention#P "palliativ"
+* $mii-cs-onko-intention#S "Sonstiges"
+* $mii-cs-onko-intention#X "keine Angabe"
+* $mii-cs-onko-intention#O "lokal kurativ bei Oligometastasierung"
