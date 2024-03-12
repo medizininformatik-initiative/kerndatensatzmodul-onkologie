@@ -3,6 +3,8 @@ InstanceOf: mii-pr-onko-tumorkonferenz
 Usage: #example
 
 * identifier.value = "Tumorkonferenz_1"
+* status = $request-status#active
+* intent = $request-intent#plan
 * subject = Reference(Patient/example)
 * category.coding.code = $mii-cs-onko-therapieplanung-typ#postop
 * created = "2024-01-11"
