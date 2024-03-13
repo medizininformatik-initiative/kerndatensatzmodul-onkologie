@@ -27,7 +27,61 @@
   "compose": {
     "include": [
       {
-        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art"
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ",
+        "concept": [
+          {
+            "code": "CH",
+            "display": "Chemotherapie"
+          },
+          {
+            "code": "HO",
+            "display": "Hormontherapie"
+          },
+          {
+            "code": "IM",
+            "display": "Immun-/Antikörpertherapie"
+          },
+          {
+            "code": "ZS",
+            "display": "zielgerichtete Substanzen"
+          },
+          {
+            "code": "SZ",
+            "display": "Stammzelltransplantation (inklusive Knochenmarktransplantation)"
+          },
+          {
+            "code": "CI",
+            "display": "Chemo- + Immun-/Antikörpertherapie"
+          },
+          {
+            "code": "CZ",
+            "display": "Chemotherapie + zielgerichtete Substanzen"
+          },
+          {
+            "code": "CIZ",
+            "display": "Chemo- + Immun-/Antikörpertherapie + zielgerichtete Substanzen"
+          },
+          {
+            "code": "IZ",
+            "display": "Immun-/Antikörpertherapie + zielgerichtete Substanzen"
+          },
+          {
+            "code": "WW",
+            "display": "Watchful Waiting"
+          },
+          {
+            "code": "AS",
+            "display": "Active Surveillance"
+          },
+          {
+            "code": "WS",
+            "display": "Wait and see"
+          },
+          {
+            "code": "SO",
+            "display": "Sonstiges"
+          }
+        ]
       }
     ]
   }

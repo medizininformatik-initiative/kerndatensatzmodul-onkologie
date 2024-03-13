@@ -5,6 +5,7 @@
 [MII_CS_Onko_Strahlentherapie_Intention]: CodeSystem-mii-cs-onko-strahlentherapie-intention.html
 [MII_CS_Onko_Systemische_Therapie_Art]: CodeSystem-mii-cs-onko-systemische-therapie-art.html
 [MII_CS_Onko_Systemische_Therapie_Intention]: CodeSystem-mii-cs-onko-systemische-therapie-intention.html
+[MII_CS_Onko_Therapie_Typ]: CodeSystem-mii-cs-onko-therapie-typ.html
 [MII_CS_Onko_Allgemeiner_Leistungszustand]: CodeSystem-mii-cs-onko-allgemeiner-leistungszustand.html
 [MII_CS_Onko_Fernmetastasen]: CodeSystem-mii-cs-onko-fernmetastasen.html
 [MII_CS_Onko_Genetische_Variante_Auspraegung]: CodeSystem-mii-cs-onko-genetische-variante-auspraegung.html
