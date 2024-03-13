@@ -31,7 +31,7 @@ Description: "Umfang eines Residualtumors nach einer Therapie"
 * value[x] only CodeableConcept
 * valueCodeableConcept MS
 * valueCodeableConcept 1..1
-* valueCodeableConcept from $mii-vs-onko-residualstatus (required)
+* valueCodeableConcept from $mii-vs-onko-gesamtbeurteilung-residualstatus (required)
 * valueCodeableConcept.coding.code 1.. MS
 * valueCodeableConcept.coding.system 1.. MS
 * valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus"

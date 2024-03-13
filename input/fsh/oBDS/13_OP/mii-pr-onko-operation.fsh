@@ -34,7 +34,7 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 // Residualstatus lokal
 * outcome MS
 * outcome 0..1
-* outcome from $mii-vs-onko-residualstatus (required)
+* outcome from $mii-vs-onko-beurteilung-lokaler-residualstatus (required)
 
 
 * extension contains mii-ex-onko-operation-intention named Intention 1..1

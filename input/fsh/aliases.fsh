@@ -47,6 +47,7 @@ Alias: $mii-cs-onko-intention = https://www.medizininformatik-initiative.de/fhir
 Alias: $mii-cs-onko-therapie-stellung = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-stellung
 Alias: $mii-cs-onko-therapie-ende-grund = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende
 Alias: $mii-cs-onko-therapie-typ = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ
+Alias: $mii-cs-onko-residualstatus = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-cs-onko-residualstatus
 
 //05
 Alias: $mii-cs-onko-primaertumor-diagnosesicherung = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung
@@ -67,6 +68,7 @@ Alias: $mii-cs-onko-operation-intention = https://www.medizininformatik-initiati
 Alias: $mii-vs-onko-operation-intention = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-operation-intention
 Alias: $mii-cs-onko-operation-resektionsstatus = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-resektionsstatus
 Alias: $mii-vs-onko-operation-resektionsstatus = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-operation-resektionsstatus
+Alias: $mii-vs-onko-beurteilung-lokaler-residualstatus = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-beurteilung-lokaler-residualstatus
 
 //14
 Alias: $mii-cs-onko-strahlentherapie-intention = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-intention
@@ -95,8 +97,7 @@ Alias: $mii-cs-onko-systemische-therapie-art = https://www.medizininformatik-ini
 Alias: $mii-vs-onko-systemische-therapie-art = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-art
 
 //10
-Alias: $mii-cs-onko-residualstatus = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-cs-onko-residualstatus
-Alias: $mii-vs-onko-residualstatus = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-residualstatus
+Alias: $mii-vs-onko-gesamtbeurteilung-residualstatus = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-residualstatus
 
 //11
 Alias: $mii-cs-onko-fernmetastasen = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-cs-onko-fernmetastasen
