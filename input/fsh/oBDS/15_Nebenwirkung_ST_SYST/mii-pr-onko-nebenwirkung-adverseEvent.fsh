@@ -13,6 +13,7 @@ Description: "Dieses Profil beschreibt die Nebenwirkung von Strahlentherapie und
 * event.coding from $mii-vs-onko-nebenwirkung-art
 * event.coding.system 1..1 MS
 * event.coding.code 1..1 MS
+* event.coding.version MS
 * event.text MS
 
 // Hier wird CTCAE Grad genutzt
