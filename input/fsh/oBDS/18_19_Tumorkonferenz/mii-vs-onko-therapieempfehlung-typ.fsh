@@ -8,6 +8,4 @@ Description: "oBDS-spezifisches ValueSet für den Therapieempfehlungstyp"
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
-* include codes from system $mii-cs-onko-therapieempfehlung-typ
-// es kann sein, dass es jetzt noch Fehler geben könnte, da CodeSystem $mii-cs-onko-systemische-therapie-art in diesem Branch noch nicht existiert
-//* include codes from system $mii-cs-onko-systemische-therapie-art
+* include codes from system $mii-cs-onko-therapie-typ
