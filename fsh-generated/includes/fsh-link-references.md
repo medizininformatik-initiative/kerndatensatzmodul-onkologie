@@ -81,7 +81,9 @@
 [MII_PR_Onko_Verlauf]: StructureDefinition-mii-pr-onko-verlauf.html
 [MII_PR_Onko_Weitere_Klassifikationen]: StructureDefinition-mii-pr-onko-weitere-klassifikationen.html
 [MII_VS_Onko_Allgemeiner_Leistungszustand]: ValueSet-mii-vs-onko-allgemeiner-leistungszustand.html
+[MII_VS_Onko_Beurteilung_Lokaler_Residualstatus]: ValueSet-mii-vs-onko-beurteilung-lokaler-residualstatus.html
 [MII_VS_Onko_Fernmetastasen]: ValueSet-mii-vs-onko-fernmetastasen.html
+[MII_VS_Onko_Gesamtbeurteilung_Residualstatus]: ValueSet-mii-vs-onko-gesamtbeurteilung-residualstatus.html
 [MII_VS_Onko_Grading]: ValueSet-mii-vs-onko-grading.html
 [MII_VS_Onko_Nebenwirkung_Art]: ValueSet-mii-vs-onko-nebenwirkung-art.html
 [MII_VS_Onko_Nebenwirkung_CTCAE_Grad]: ValueSet-mii-vs-onko-nebenwirkung-ctcae-grad.html
@@ -90,7 +92,6 @@
 [MII_VS_Onko_Operation_Resektionsstatus]: ValueSet-mii-vs-onko-operation-resektionsstatus.html
 [MII_VS_Onko_Primaertumor_Diagnosesicherung]: ValueSet-mii-vs-onko-primaertumor-diagnosesicherung.html
 [MII_VS_Onko_Primaertumor_Seitenlokalisation]: ValueSet-mii-vs-onko-primaertumor-seitenlokalisation.html
-[MII_VS_Onko_Residualstatus]: ValueSet-mii-vs-onko-residualstatus.html
 [MII_VS_Onko_Strahlentherapie_Applikationsart]: ValueSet-mii-vs-onko-strahlentherapie-applikationsart.html
 [MII_VS_Onko_Strahlentherapie_Boosts]: ValueSet-mii-cs-onko-strahlentherapie-boost.html
 [MII_VS_Onko_Strahlentherapie_Ende_Grund]: ValueSet-mii-vs-onko-strahlentherapie-ende-grund.html

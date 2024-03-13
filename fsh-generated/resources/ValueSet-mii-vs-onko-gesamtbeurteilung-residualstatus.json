@@ -1,0 +1,60 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "MII_VS_Onko_Gesamtbeurteilung_Residualstatus",
+  "id": "mii-vs-onko-gesamtbeurteilung-residualstatus",
+  "title": "MII VS Onkologie Gesamtbeurteilung des Residualstatus",
+  "description": "Value Set für oBDS-Codes für die Gesamtbeurteilung des Residualstatus",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-gesamtbeurteilung-residualstatus",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2024.0.0-ballot",
+  "compose": {
+    "include": [
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-cs-onko-residualstatus",
+        "concept": [
+          {
+            "code": "R0",
+            "display": "Kein Residualtumor"
+          },
+          {
+            "code": "R1",
+            "display": "Mikroskopischer Residualtumor"
+          },
+          {
+            "code": "R1(is)",
+            "display": "In-Situ-Rest"
+          },
+          {
+            "code": "R1(cy+)",
+            "display": "Cytologischer Rest"
+          },
+          {
+            "code": "R2",
+            "display": "Makroskopischer Residualtumor"
+          },
+          {
+            "code": "RX",
+            "display": "Vorhandensein von Residualtumor kann nicht beurteilt werden"
+          }
+        ]
+      }
+    ]
+  }
+}
