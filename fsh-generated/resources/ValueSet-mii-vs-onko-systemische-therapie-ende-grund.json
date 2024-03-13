@@ -1,11 +1,11 @@
 {
   "resourceType": "ValueSet",
   "status": "draft",
-  "name": "MII_VS_Onko_Strahlentherapie_Ende_Grund",
-  "id": "mii-vs-onko-strahlentherapie-ende-grund",
-  "title": "MII VS Onkologie Strahlentherapie Ende Grund",
-  "description": "oBDS-spezifisches ValueSet für Klassifikation des Grundes der Beendigung der Strahlentherapie",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-ende-grund",
+  "name": "MII_VS_Onko_Systemische_Therapie_Ende_Grund",
+  "id": "mii-vs-onko-systemische-therapie-ende-grund",
+  "title": "MII VS Onkologie Systemische Therapie Ende Grund",
+  "description": "oBDS-spezifisches ValueSet für Klassifikation des Grundes der Beendigung der Systemischen Therapie",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-systemische-therapie-ende-grund",
   "meta": {
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
@@ -34,8 +34,12 @@
             "display": "reguläres Ende"
           },
           {
-            "code": "F",
-            "display": "Zieldosis erreicht mit Unterbrechung > 3 Kalendertage"
+            "code": "R",
+            "display": "reguläres Ende mit Dosisreduktion"
+          },
+          {
+            "code": "W",
+            "display": "reguläres Ende mit Substanzwechsel"
           },
           {
             "code": "A",
