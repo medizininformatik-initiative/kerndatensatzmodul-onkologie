@@ -377,6 +377,21 @@
         ]
       },
       {
+        "id": "Procedure.subject",
+        "path": "Procedure.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference"
+            ],
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ]
+      },
+      {
         "id": "Procedure.performed[x]",
         "path": "Procedure.performed[x]",
         "type": [

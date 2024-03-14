@@ -92,6 +92,20 @@
         ]
       },
       {
+        "id": "Observation.subject",
+        "path": "Observation.subject",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Observation.effective[x]",
         "path": "Observation.effective[x]",
         "min": 1,
