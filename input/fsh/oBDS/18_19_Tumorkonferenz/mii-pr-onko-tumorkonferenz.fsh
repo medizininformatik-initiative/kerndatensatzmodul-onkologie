@@ -12,6 +12,7 @@ Description: "Dieses Profil beschreibt die Tumorkonferenz und die Therapieempfeh
 * intent MS
 
 * subject MS
+* subject 1..1
 * subject only Reference(Patient)
 
 * category 1..1 MS

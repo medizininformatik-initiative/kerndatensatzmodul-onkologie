@@ -33,7 +33,6 @@ Description: "Strahlentherapie einzelner Behandlungsabschnitt der Gesamttherapie
 * extension[Gesamtdosis] ^definition = "Gibt an, mit welcher Gesamtdosis da Zielgebiet bestrahlt wurde (inklusive Boost)."
 * extension[Gesamtdosis].value[x] only Quantity
 * extension[Gesamtdosis].valueQuantity.unit from $mii-vs-onko-strahlentherapie-strahlungseinheit (required)
-// hier ggfs. den short/definition text für einheit anhängen
 * extension[Einzeldosis] ^short = "Strahlentherapie Einzeldosis pro Tag (Dosis)"
 * extension[Einzeldosis] ^definition = "Gibt an, mit welcher Einzeldosis (häufigste Dosis, nicht Boost) pro Tag das Zielgebiet bestrahlt wurde."
 * extension[Einzeldosis].value[x] only Quantity

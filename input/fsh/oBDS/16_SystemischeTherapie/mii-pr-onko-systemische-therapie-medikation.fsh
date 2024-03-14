@@ -9,6 +9,9 @@ Description: "Medikation der Systemische Therapie. Dieses Profil beschreibt die 
 
 // Logical Modell see:  https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532379/Systemische+Therapie+SYST+Typ // t
 
+* subject 1..1 MS
+* subject only Reference(Patient)
+
 * medication[x] 1..1 MS
 * partOf 1..* MS 
 * partOf only Reference(Procedure or MedicationAdministration)

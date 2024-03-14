@@ -8,6 +8,10 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 * ^status = #draft
 
 // Logical Modell see:  https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532153/Strahlentherapie+ST+Typ
+
+* subject 1..1 MS
+* subject only Reference(Patient)
+
 // Intention der Strahlentherapie 
 * extension contains mii-ex-onko-strahlentherapie-intention named Intention 1..1 
 * extension[Intention] MS
@@ -21,40 +25,12 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 * extension[Behandlungsabschnitt] MS
 * extension[Behandlungsabschnitt] 1..*
 
-// Strahlentherapie Zielgebiet #XRayXtension
-//TODO --> die MII Prozedur sieht bei bodysite eine Kodierung durch SNOMED vor, bound explicitly to SNOMED
-// ggfs. kann man hier ein CodeSystem mit den oBDS machen und ein ValueSet einbinden, dass sowohl dass SNOMED Codesystem als auch das oBDS-Codesystem mit einbindet. 
-
-// Strahlentherapie Seite Zielgebiet #XRayXtension
-// --> bei Bestrahlung mit mehreren Zielgebieten muss das klar sein
-
-// ggfs. aus input/fsh/oBDS/05_Diagnose/mii-cs-onko-primaertumor-seitenlokalisation.fsh übernehmen
-
+/
 // Strahlentherapie Beginn und Ende
 * performed[x] MS
 * performed[x] only Period //  wird über Period.start und Period.stop des MII Prozedurmoduls erfasst
 * performed[x].start 1..1 MS 
 * performed[x].end 0..1 MS
-
-// Strahlentherapie Applikationsart #XRayXtension
-// ist derzeit eine eigene Extension, sollten wir mit den anderen Strahlentherapie-feldern in eine eigene Extension überführen
-// #XRayXtension
-
-
-// Strahlenart #XRayXtension
-// Sowohl Strahlungsarten als auch Metabolite fallen hierdrunter 
-// --> entweder invarianten definieren, oder alle antwortmöglichkeiten zulassen
-//--> gilt auch für folgende Felder (oBDS-XML hat hier Restriktionen zwecks Validierung! )
-
-// Strahlentherapie Gesamtdosis (Dosis) #XRayXtension
-// Strahlentherapie Einzeldosis pro Tag (Dosis) #XRayXtension
-
-
-// Strahlentherapie Einheit #XRayXtension
-// Gray für Bestrahlung, Becquerel (inkl. kBq, MBq, GBq) für Metabolite
-
-// Boost #XRayXtension
-// ValueSet + Codesystem erstellen
 
 // Strahlentherapie Ende Grund
 * outcome MS

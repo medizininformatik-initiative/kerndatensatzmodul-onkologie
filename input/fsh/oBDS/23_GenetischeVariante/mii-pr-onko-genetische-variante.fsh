@@ -7,6 +7,10 @@ Description: "Genetische Variante wie im oBDS "
 * insert Publisher
 * ^status = #draft
 
+
+* subject 1..1 MS
+* subject only Reference(Patient)
+
 * component MS
 * component 1..*
 * component ^slicing.discriminator.type = #pattern

@@ -21,18 +21,14 @@ Description: "Systemische Therapie. Dieses Profil beschreibt eine Systemische Th
 * code.coding.code 1..1
 * code.coding.system 1..1
 
-// Systemische Therapie Beginn und  --> ggfs. dupliziert im MedicationStatement oder MedicationAdministration
+// Systemische Therapie Beginn und  Ende--> ggfs. dupliziert im MedicationStatement oder MedicationAdministration
 * performed[x] MS 
 * performed[x] only Period // wird über Period.start und Period.stop des MII Prozedurmoduls erfasst
 * performed[x].start 1..1 MS
 * performed[x].end 0..1 MS
-// Systemische Therapie Protokoll//
-//umgesetzt im Therapiemodul  wie sieht das mit dem Slicen aus?
 
-// Systemische Therapie Substanz --> rauss, wir düber medicationprofile abgebildet
-// 0..* contains  --> Watchful Waiting hat z.B.gar keine Substanz
-//* ATC Code or
-//* String (one String per Medication)
+* subject 1..1 MS
+* subject only Reference(Patient)
 
 
 // Systemische Therapie Ende Grund

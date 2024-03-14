@@ -7,6 +7,10 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 * insert Publisher
 * ^status = #draft
 // OP-Datum
+
+* subject 1..1 MS
+* subject only Reference(Patient)
+
 * performed[x] MS
 * performed[x] only dateTime 
 // OP-Prozedur 
