@@ -2,7 +2,7 @@ Extension: MII_EX_Onko_Systemische_Therapie_Stellung
 Id: mii-ex-onko-systemische-therapie-stellung
 Title: "MII EX Onko Systemische Therapie Stellung"
 Description: "Systemische Therapie Stellung zur OP"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/core/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellung"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellung"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^context.type = #element

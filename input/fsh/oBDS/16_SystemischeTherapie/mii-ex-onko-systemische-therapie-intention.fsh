@@ -2,7 +2,7 @@ Extension: MII_EX_Onko_Systemische_Therapie_Intention
 Id: mii-ex-onko-systemische-therapie-intention
 Title: "MII EX Onko Systemische Therapie Intention"
 Description: "Systemische Therapie Intention"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/core/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^context.type = #element

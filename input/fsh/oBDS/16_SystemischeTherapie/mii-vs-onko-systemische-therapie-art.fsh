@@ -8,4 +8,18 @@ Description: "oBDS-spezifisches ValueSet für Klassifikation der Art der systemi
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
-* include codes from system $mii-cs-onko-systemische-therapie-art
+//* include codes from system $mii-cs-onko-systemische-therapie-art
+
+* $mii-cs-onko-therapie-typ#CH "Chemotherapie"
+* $mii-cs-onko-therapie-typ#HO "Hormontherapie"
+* $mii-cs-onko-therapie-typ#IM "Immun-/Antikörpertherapie"
+* $mii-cs-onko-therapie-typ#ZS "zielgerichtete Substanzen"
+* $mii-cs-onko-therapie-typ#SZ "Stammzelltransplantation (inklusive Knochenmarktransplantation)"
+* $mii-cs-onko-therapie-typ#CI "Chemo- + Immun-/Antikörpertherapie"
+* $mii-cs-onko-therapie-typ#CZ "Chemotherapie + zielgerichtete Substanzen"
+* $mii-cs-onko-therapie-typ#CIZ "Chemo- + Immun-/Antikörpertherapie + zielgerichtete Substanzen"
+* $mii-cs-onko-therapie-typ#IZ "Immun-/Antikörpertherapie + zielgerichtete Substanzen"
+* $mii-cs-onko-therapie-typ#WW "Watchful Waiting"
+* $mii-cs-onko-therapie-typ#AS "Active Surveillance"
+* $mii-cs-onko-therapie-typ#WS "Wait and see"
+* $mii-cs-onko-therapie-typ#SO "Sonstiges"

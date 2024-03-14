@@ -1,0 +1,96 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "MII_CS_Onko_Therapie_Typ",
+  "id": "mii-cs-onko-therapie-typ",
+  "title": "MII CS Onko Therapie Typ",
+  "description": "Typ der Therapie",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ",
+  "concept": [
+    {
+      "code": "CH",
+      "display": "Chemotherapie"
+    },
+    {
+      "code": "HO",
+      "display": "Hormontherapie"
+    },
+    {
+      "code": "IM",
+      "display": "Immun-/Antikörpertherapie"
+    },
+    {
+      "code": "ZS",
+      "display": "zielgerichtete Substanzen"
+    },
+    {
+      "code": "SZ",
+      "display": "Stammzelltransplantation (inklusive Knochenmarktransplantation)"
+    },
+    {
+      "code": "CI",
+      "display": "Chemo- + Immun-/Antikörpertherapie"
+    },
+    {
+      "code": "CZ",
+      "display": "Chemotherapie + zielgerichtete Substanzen"
+    },
+    {
+      "code": "CIZ",
+      "display": "Chemo- + Immun-/Antikörpertherapie + zielgerichtete Substanzen"
+    },
+    {
+      "code": "IZ",
+      "display": "Immun-/Antikörpertherapie + zielgerichtete Substanzen"
+    },
+    {
+      "code": "WW",
+      "display": "Watchful Waiting"
+    },
+    {
+      "code": "AS",
+      "display": "Active Surveillance"
+    },
+    {
+      "code": "WS",
+      "display": "Wait and see"
+    },
+    {
+      "code": "OP",
+      "display": "Operation"
+    },
+    {
+      "code": "ST",
+      "display": "Strahlentherapie"
+    },
+    {
+      "code": "KW",
+      "display": "keine weitere tumorspezifische Therapie empfohlen"
+    },
+    {
+      "code": "SO",
+      "display": "Sonstiges"
+    }
+  ],
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2024.0.0-ballot",
+  "caseSensitive": true,
+  "count": 16
+}

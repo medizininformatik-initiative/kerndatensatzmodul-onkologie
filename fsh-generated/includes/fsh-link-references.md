@@ -5,10 +5,12 @@
 [MII_CS_Onko_Strahlentherapie_Intention]: CodeSystem-mii-cs-onko-strahlentherapie-intention.html
 [MII_CS_Onko_Systemische_Therapie_Art]: CodeSystem-mii-cs-onko-systemische-therapie-art.html
 [MII_CS_Onko_Systemische_Therapie_Intention]: CodeSystem-mii-cs-onko-systemische-therapie-intention.html
+[MII_CS_Onko_Therapie_Typ]: CodeSystem-mii-cs-onko-therapie-typ.html
 [MII_CS_Onko_Allgemeiner_Leistungszustand]: CodeSystem-mii-cs-onko-allgemeiner-leistungszustand.html
 [MII_CS_Onko_Fernmetastasen]: CodeSystem-mii-cs-onko-fernmetastasen.html
 [MII_CS_Onko_Genetische_Variante_Auspraegung]: CodeSystem-mii-cs-onko-genetische-variante-auspraegung.html
 [MII_CS_Onko_Grading]: CodeSystem-mii-cs-onko-grading.html
+[MII_CS_Onko_Intention]: CodeSystem-mii-cs-onko-intention.html
 [MII_CS_Onko_Operation_Intention]: CodeSystem-mii-cs-onko-operation-intention.html
 [MII_CS_Onko_Operation_Komplikationen]: CodeSystem-mii-cs-onko-operation-komplikation.html
 [MII_CS_Onko_Operation_Resektionsstatus]: CodeSystem-mii-cs-onko-operation-resektionsstatus.html
@@ -18,10 +20,12 @@
 [MII_CS_Onko_Strahlentherapie_Applikationsart]: CodeSystem-mii-cs-onko-strahlentherapie-applikationsart.html
 [MII_CS_Onko_Strahlentherapie_Boost]: CodeSystem-mii-cs-onko-strahlentherapie-boost.html
 [MII_CS_Onko_Strahlentherapie_Ende_Grund]: CodeSystem-mii-cs-onko-strahlentherapie-ende-grund.html
+[MII_CS_Onko_Therapie_Ende_Grund]: CodeSystem-mii-cs-onko-therapie-ende-grund.html
 [MII_CS_Onko_Strahlentherapie_Stellung]: CodeSystem-mii-cs-onko-strahlentherapie-stellung.html
 [MII_CS_Onko_Strahlentherapie_Strahlenart]: CodeSystem-mii-cs-onko-strahlentherapie-strahlenart.html
 [MII_CS_Onko_Strahlentherapie_Zielgebiet]: CodeSystem-mii-cs-onko-strahlentherapie-zielgebiet.html
 [MII_CS_Onko_Systemische_Therapie_Stellung]: CodeSystem-mii-cs-onko-systemische-therapie-stellung.html
+[MII_CS_Onko_Therapie_Stellung]: CodeSystem-mii-cs-onko-therapie-stellung.html
 [MII_CS_Onko_Therapieabweichung]: CodeSystem-mii-cs-onko-therapieabweichung.html
 [MII_CS_Onko_Therapieempfehlung_Typ]: CodeSystem-mii-cs-onko-therapieempfehlung-typ.html
 [MII_CS_Onko_Therapieplanung_Typ]: CodeSystem-mii-cs-onko-therapieplanung-typ.html
@@ -77,7 +81,9 @@
 [MII_PR_Onko_Verlauf]: StructureDefinition-mii-pr-onko-verlauf.html
 [MII_PR_Onko_Weitere_Klassifikationen]: StructureDefinition-mii-pr-onko-weitere-klassifikationen.html
 [MII_VS_Onko_Allgemeiner_Leistungszustand]: ValueSet-mii-vs-onko-allgemeiner-leistungszustand.html
+[MII_VS_Onko_Beurteilung_Lokaler_Residualstatus]: ValueSet-mii-vs-onko-beurteilung-lokaler-residualstatus.html
 [MII_VS_Onko_Fernmetastasen]: ValueSet-mii-vs-onko-fernmetastasen.html
+[MII_VS_Onko_Gesamtbeurteilung_Residualstatus]: ValueSet-mii-vs-onko-gesamtbeurteilung-residualstatus.html
 [MII_VS_Onko_Grading]: ValueSet-mii-vs-onko-grading.html
 [MII_VS_Onko_Nebenwirkung_Art]: ValueSet-mii-vs-onko-nebenwirkung-art.html
 [MII_VS_Onko_Nebenwirkung_CTCAE_Grad]: ValueSet-mii-vs-onko-nebenwirkung-ctcae-grad.html
@@ -86,7 +92,6 @@
 [MII_VS_Onko_Operation_Resektionsstatus]: ValueSet-mii-vs-onko-operation-resektionsstatus.html
 [MII_VS_Onko_Primaertumor_Diagnosesicherung]: ValueSet-mii-vs-onko-primaertumor-diagnosesicherung.html
 [MII_VS_Onko_Primaertumor_Seitenlokalisation]: ValueSet-mii-vs-onko-primaertumor-seitenlokalisation.html
-[MII_VS_Onko_Residualstatus]: ValueSet-mii-vs-onko-residualstatus.html
 [MII_VS_Onko_Strahlentherapie_Applikationsart]: ValueSet-mii-vs-onko-strahlentherapie-applikationsart.html
 [MII_VS_Onko_Strahlentherapie_Boosts]: ValueSet-mii-cs-onko-strahlentherapie-boost.html
 [MII_VS_Onko_Strahlentherapie_Ende_Grund]: ValueSet-mii-vs-onko-strahlentherapie-ende-grund.html
@@ -96,6 +101,7 @@
 [MII_VS_Onko_Strahlentherapie_Strahlungseinheit]: ValueSet-mii-vs-onko-strahlentherapie-strahlungseinheit.html
 [MII_VS_Onko_Strahlentherapie_Zielgebiet]: ValueSet-mii-vs-onko-strahlentherapie-zielgebiet.html
 [MII_VS_Onko_Systemische_Therapie_Art]: ValueSet-mii-vs-onko-systemische-therapie-art.html
+[MII_VS_Onko_Systemische_Therapie_Ende_Grund]: ValueSet-mii-vs-onko-systemische-therapie-ende-grund.html
 [MII_VS_Onko_Systemische_Therapie_Intention]: ValueSet-mii-vs-onko-systemische-therapie-intention.html
 [MII_VS_Onko_Systemische_Therapie_Stellung]: ValueSet-mii-vs-onko-systemische-therapie-stellung.html
 [MII_VS_Onko_Therapieabweichung]: ValueSet-mii-vs-onko-therapieabweichung.html

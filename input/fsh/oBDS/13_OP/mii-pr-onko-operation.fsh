@@ -1,5 +1,5 @@
 Profile: MII_PR_Onko_Operation
-Parent: https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure // müssen wir das noch irgendwo manuell hinzufügen
+Parent: https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure 
 Id: mii-pr-onko-operation
 Title: "MII PR Onkologie Operation"
 Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
@@ -34,7 +34,7 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 // Residualstatus lokal
 * outcome MS
 * outcome 0..1
-* outcome from $mii-vs-onko-residualstatus (required)
+* outcome from $mii-vs-onko-beurteilung-lokaler-residualstatus (required)
 
 
 * extension contains mii-ex-onko-operation-intention named Intention 1..1

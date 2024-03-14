@@ -133,6 +133,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-onko-therapie-typ"
+        },
+        "name": "MII CS Onko Therapie Typ",
+        "description": "Typ der Therapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-onko-allgemeiner-leistungszustand"
         },
         "name": "MII CS Onkologie Allgemeiner Leistungszustand",
@@ -161,6 +169,14 @@
         },
         "name": "MII CS Onkologie Grading",
         "description": "Codes für Histologie Grading. Gibt den Differenzierungsgrad des Tumors entsprechend der aktuellen TNM-Auflage an.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-intention"
+        },
+        "name": "MII CS Onkologie Intention",
+        "description": "oBDS-spezifisches Codesystem für Klassifikation von Intention der OP, der Strahlentherapie und der Systemischen Therapie.",
         "exampleBoolean": false
       },
       {
@@ -237,6 +253,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-onko-therapie-ende-grund"
+        },
+        "name": "MII CS Onkologie Strahlentherapie Ende Grund",
+        "description": "oBDS-spezifisches Codesystem für Klassifikation des Grundes der Beendigung der Strahlentherapie oder der systemischen Therapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-onko-strahlentherapie-stellung"
         },
         "name": "MII CS Onkologie Strahlentherapie Stellung",
@@ -264,6 +288,14 @@
           "reference": "CodeSystem/mii-cs-onko-systemische-therapie-stellung"
         },
         "name": "MII CS Onkologie Systemische Therapie  Stellung",
+        "description": "oBDS-spezifisches Codesystem für Klassifikation von Stellung zur OP",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-therapie-stellung"
+        },
+        "name": "MII CS Onkologie Therapie Stellung",
         "description": "oBDS-spezifisches Codesystem für Klassifikation von Stellung zur OP",
         "exampleBoolean": false
       },
@@ -709,10 +741,26 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-onko-beurteilung-lokaler-residualstatus"
+        },
+        "name": "MII VS Onkologie Beurteilung des lokalen Residualstatus",
+        "description": "Value Set für oBDS-Codes für die Beurteilung des lokalen Residualstatus",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-fernmetastasen"
         },
         "name": "MII VS Onkologie Fernmetastasen",
         "description": "Value Set für oBDS-Codes für Fernmetastasen",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-gesamtbeurteilung-residualstatus"
+        },
+        "name": "MII VS Onkologie Gesamtbeurteilung des Residualstatus",
+        "description": "Value Set für oBDS-Codes für die Gesamtbeurteilung des Residualstatus",
         "exampleBoolean": false
       },
       {
@@ -777,14 +825,6 @@
         },
         "name": "MII VS Onkologie Primärtumor Seitenlokalisation",
         "description": "Codes für Primärtumor Seitenlokalisation, d.h. organspezifische Angabe der betroffenen Seite.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-residualstatus"
-        },
-        "name": "MII VS Onkologie Residualstatus",
-        "description": "Value Set für oBDS-Codes für R- Klassifikation",
         "exampleBoolean": false
       },
       {
@@ -857,6 +897,14 @@
         },
         "name": "MII VS Onkologie Systemische Therapie Art",
         "description": "oBDS-spezifisches ValueSet für Klassifikation der Art der systemischen oder abwartenden Therapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-systemische-therapie-ende-grund"
+        },
+        "name": "MII VS Onkologie Systemische Therapie Ende Grund",
+        "description": "oBDS-spezifisches ValueSet für Klassifikation des Grundes der Beendigung der Systemischen Therapie",
         "exampleBoolean": false
       },
       {

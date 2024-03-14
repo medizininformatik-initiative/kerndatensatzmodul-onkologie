@@ -2,7 +2,7 @@ Extension: MII_EX_Onko_Strahlentherapie_Stellung
 Id: mii-ex-onko-strahlentherapie-stellung
 Title: "MII EX Onko Strahlentherapie Stellung"
 Description: "Strahlentherapie Stellung zur OP"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/core/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellung"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellung"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^context.type = #element

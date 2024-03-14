@@ -2,7 +2,7 @@ Extension: MII_EX_Onko_Operation_Intention
 Id: mii-ex-onko-operation-intention
 Title: "MII EX Onko Operation Intention"
 Description: "Intention der Operation"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/core/modul-onko/StructureDefinition/mii-ex-onko-operation-intention"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^context.type = #element

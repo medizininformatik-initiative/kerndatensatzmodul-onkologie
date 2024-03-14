@@ -27,7 +27,29 @@
   "compose": {
     "include": [
       {
-        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-stellung"
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-stellung",
+        "concept": [
+          {
+            "code": "O",
+            "display": "ohne Bezug zur operativen Therapie"
+          },
+          {
+            "code": "A",
+            "display": "adjuvant"
+          },
+          {
+            "code": "N",
+            "display": "neoadjuvant"
+          },
+          {
+            "code": "I",
+            "display": "intraoperativ"
+          },
+          {
+            "code": "S",
+            "display": "Sonstiges"
+          }
+        ]
       }
     ]
   }

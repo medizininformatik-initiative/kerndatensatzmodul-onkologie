@@ -1,0 +1,72 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "MII_CS_Onko_Therapie_Ende_Grund",
+  "id": "mii-cs-onko-therapie-ende-grund",
+  "title": "MII CS Onkologie Strahlentherapie Ende Grund",
+  "description": "oBDS-spezifisches Codesystem für Klassifikation des Grundes der Beendigung der Strahlentherapie oder der systemischen Therapie",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende",
+  "concept": [
+    {
+      "code": "E",
+      "display": "reguläres Ende"
+    },
+    {
+      "code": "R",
+      "display": "reguläres Ende mit Dosisreduktion"
+    },
+    {
+      "code": "W",
+      "display": "reguläres Ende mit Substanzwechsel"
+    },
+    {
+      "code": "A",
+      "display": "Abbruch wegen Nebenwirkungen"
+    },
+    {
+      "code": "P",
+      "display": "Abbruch wegen Progress"
+    },
+    {
+      "code": "S",
+      "display": "Abbruch aus sonstigen Gründen"
+    },
+    {
+      "code": "V",
+      "display": "Patient verweigert weitere Therapie"
+    },
+    {
+      "code": "T",
+      "display": "Patient verstorben"
+    },
+    {
+      "code": "F",
+      "display": "Zieldosis erreicht mit Unterbrechung > 3 Kalendertage"
+    },
+    {
+      "code": "U",
+      "display": "unbekannt"
+    }
+  ],
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2024.0.0-ballot",
+  "caseSensitive": true,
+  "count": 10
+}
