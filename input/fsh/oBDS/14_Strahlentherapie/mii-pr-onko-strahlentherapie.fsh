@@ -25,7 +25,7 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 * extension[Behandlungsabschnitt] MS
 * extension[Behandlungsabschnitt] 1..*
 
-/
+
 // Strahlentherapie Beginn und Ende
 * performed[x] MS
 * performed[x] only Period //  wird über Period.start und Period.stop des MII Prozedurmoduls erfasst
