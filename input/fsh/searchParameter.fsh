@@ -9,10 +9,10 @@ Usage: #definition
 * name = "MII_SP_Fernmetastasen_Body-Site"
 * description = "SearchParameter for Fernmetastasen.bodysite"
 * status = #active 
-* code = #fernmetastasen-body-site
+* code = #body-site
 * base = #Observation 
 * type = #token
-* expression = "Fernmetastasen.bodySite"
+* expression = "Observation.bodySite"
 
 //----------------------------------------
 // SearchParameters for Tod
