@@ -1,8 +1,8 @@
-Extension: MII_EX_Onko_Strahlentherapie_Behandlungsabschnitt
-Id: mii-ex-onko-strahlentherapie-behandlungsabschnitt
-Title: "MII EX Onko Strahlentherapie Behandlungsabschnitt"
-Description: "Strahlentherapie einzelner Behandlungsabschnitt der Gesamttherapie"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-behandlungsabschnitt"
+Extension: MII_EX_Onko_Strahlentherapie_Bestrahlung
+Id: mii-ex-onko-strahlentherapie-bestrahlung
+Title: "MII EX Onko Strahlentherapie Bestrahlung"
+Description: "Strahlentherapie: einzelne Bestrahlung innerhalb der Gesamttherapie"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^context.type = #element
