@@ -1208,10 +1208,10 @@
         ]
       },
       {
-        "id": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt",
-        "path": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt",
-        "short": "Behandlungsabschnitt",
-        "definition": "Dieses ",
+        "id": "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung",
+        "path": "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung",
+        "short": "Bestrahlung",
+        "definition": "Dieser Abschnitt entspricht einer Bestrahlung mit spezifischem Zielgebiet, Methodik und Dosis ",
         "min": 0,
         "max": "*",
         "type": [
@@ -1222,13 +1222,13 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Procedure.extension[Behandlungsabschnitt]"
+            "map": "Procedure.extension[Bestrahlung]"
           }
         ]
       },
       {
-        "id": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieZielgebiet",
-        "path": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieZielgebiet",
+        "id": "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieZielgebiet",
+        "path": "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieZielgebiet",
         "short": "Strahlentherapie Zielgebiet",
         "definition": "Gibt an, an welcher anatomischen Region die Bestrahlung durchgeführt wurde.",
         "min": 0,
@@ -1241,13 +1241,13 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Procedure.extension[Behandlungsabschnitt].extension[Zielgebiet].valueCodeableConcept.coding.code"
+            "map": "Procedure.extension[Bestrahlung].extension[Zielgebiet].valueCodeableConcept.coding.code"
           }
         ]
       },
       {
-        "id": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieSeiteZielgebiet",
-        "path": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieSeiteZielgebiet",
+        "id": "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieSeiteZielgebiet",
+        "path": "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieSeiteZielgebiet",
         "short": "Strahlentherapie Seite Zielgebiet",
         "definition": "Bei Zielgebieten, die durch \"(r, l)\" gekennzeichnet sind, ist eine Seitenangabe Pflicht.",
         "min": 0,
@@ -1260,13 +1260,13 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Procedure.extension[Behandlungsabschnitt].extension[Zielgebiet_Lateralitaet].valueCodeableConcept.coding.code"
+            "map": "Procedure.extension[Bestrahlung].extension[Zielgebiet_Lateralitaet].valueCodeableConcept.coding.code"
           }
         ]
       },
       {
-        "id": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieBeginn",
-        "path": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieBeginn",
+        "id": "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieBeginn",
+        "path": "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieBeginn",
         "short": "Strahlentherapie Beginn",
         "definition": "Gibt an, wann die Strahlentherapie begonnen wurde.",
         "min": 0,
@@ -1284,8 +1284,8 @@
         ]
       },
       {
-        "id": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieEnde",
-        "path": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieEnde",
+        "id": "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieEnde",
+        "path": "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieEnde",
         "short": "Strahlentherapie Ende",
         "definition": "Gibt an, wann die Strahlentherapie beendet wurde.",
         "min": 0,
@@ -1303,8 +1303,8 @@
         ]
       },
       {
-        "id": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieApplikationsart",
-        "path": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieApplikationsart",
+        "id": "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieApplikationsart",
+        "path": "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieApplikationsart",
         "short": "Strahlentherapie Applikationsart",
         "definition": "Gibt an, mit welcher Technik die Strahlentherapie durchgeführt wurde.",
         "min": 0,
@@ -1317,13 +1317,13 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Procedure.extension[Behandlungsabschnitt].extension[Applikationsart].valueCodeableConcept.coding.code"
+            "map": "Procedure.extension[Bestrahlung].extension[Applikationsart].valueCodeableConcept.coding.code"
           }
         ]
       },
       {
-        "id": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieStrahlenart",
-        "path": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieStrahlenart",
+        "id": "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieStrahlenart",
+        "path": "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieStrahlenart",
         "short": "Strahlenart",
         "definition": "Angewandte Strahlenart (Strahlung oder metabolische Nuklide)",
         "min": 0,
@@ -1336,13 +1336,13 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Procedure.extension[Behandlungsabschnitt].extension[Strahlenart].valueCodeableConcept.coding.code"
+            "map": "Procedure.extension[Bestrahlung].extension[Strahlenart].valueCodeableConcept.coding.code"
           }
         ]
       },
       {
-        "id": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieGesamtdosis",
-        "path": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieGesamtdosis",
+        "id": "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieGesamtdosis",
+        "path": "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieGesamtdosis",
         "short": "Strahlentherapie Gesamtdosis",
         "definition": "Gibt an, mit welcher Gesamtdosis das Zielgebiet bestrahlt wurde (inklusive Boost).",
         "min": 0,
@@ -1355,13 +1355,13 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Procedure.extension[Behandlungsabschnitt].extension[Gesamtdosis].valueQuantity.value"
+            "map": "Procedure.extension[Bestrahlung].extension[Gesamtdosis].valueQuantity.value"
           }
         ]
       },
       {
-        "id": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieEinzeldosis",
-        "path": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieEinzeldosis",
+        "id": "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieEinzeldosis",
+        "path": "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieEinzeldosis",
         "short": "Strahlentherapie Einzeldosis",
         "definition": "Strahlentherapie Einzeldosis pro Tag (Dosis)",
         "min": 0,
@@ -1374,13 +1374,13 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Procedure.extension[Behandlungsabschnitt].extension[Einzeldosis].valueQuantity.value"
+            "map": "Procedure.extension[Bestrahlung].extension[Einzeldosis].valueQuantity.value"
           }
         ]
       },
       {
-        "id": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieEinheit",
-        "path": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieEinheit",
+        "id": "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieEinheit",
+        "path": "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieEinheit",
         "short": "Strahlentherapie Einheit",
         "definition": "Gibt die Einheit zu der Einzel- oder Gesamtdosis an, mit welcher das Zielgebiet bestrahlt wurde, bzw. bei metabolischer Therapie die Aktivität des verwendeten Radionuklids.",
         "min": 0,
@@ -1393,13 +1393,13 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Procedure.extension[Behandlungsabschnitt].extension[Einheit].valueCodeableConcept.coding.code"
+            "map": "Procedure.extension[Bestrahlung].extension[Einheit].valueCodeableConcept.coding.code"
           }
         ]
       },
       {
-        "id": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieBoost",
-        "path": "Onkologie.Strahlentherapie.StrahlentherapieBehandlungsabschnitt.StrahlentherapieBoost",
+        "id": "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieBoost",
+        "path": "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieBoost",
         "short": "Boost",
         "definition": "Angabe, ob ein Boost und falls ja, welche Art von Boost appliziert wurde.",
         "min": 0,
@@ -1412,7 +1412,7 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Procedure.extension[Behandlungsabschnitt].extension[Boost].valueCodeableConcept.coding.code"
+            "map": "Procedure.extension[Bestrahlung].extension[Boost].valueCodeableConcept.coding.code"
           }
         ]
       },
@@ -1930,7 +1930,7 @@
         "id": "Onkologie.GenetischeVariante.GenetischeVarianteName",
         "path": "Onkologie.GenetischeVariante.GenetischeVarianteName",
         "short": "Genetische Variante Name",
-        "definition": "Genetische Variante Name",
+        "definition": "Name der genetischen Variante (z.B. K-ras, BRAFV600, NRAS, C-KIT)",
         "min": 0,
         "max": "1",
         "type": [
@@ -1949,7 +1949,7 @@
         "id": "Onkologie.GenetischeVariante.GenetischeVarianteAuspraegung",
         "path": "Onkologie.GenetischeVariante.GenetischeVarianteAuspraegung",
         "short": "Genetische Variante Ausprägung",
-        "definition": "Genetische Variante Ausprägung",
+        "definition": "Ausprägung der genetischen Variante nach oBDS",
         "min": 0,
         "max": "1",
         "type": [

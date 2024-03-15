@@ -37,7 +37,7 @@
 [MII_CS_Onko_Verlauf_Lymphknoten]: CodeSystem-mii-cs-onko-verlauf-lymphknoten.html
 [MII_CS_Onko_Verlauf_Primaertumor]: CodeSystem-mii-cs-onko-verlauf-primaertumor.html
 [MII_EX_Onko_Operation_Intention]: StructureDefinition-mii-ex-onko-operation-intention.html
-[MII_EX_Onko_Strahlentherapie_Behandlungsabschnitt]: StructureDefinition-mii-ex-onko-strahlentherapie-behandlungsabschnitt.html
+[MII_EX_Onko_Strahlentherapie_Bestrahlung]: StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung.html
 [MII_EX_Onko_Strahlentherapie_Intention]: StructureDefinition-mii-ex-onko-strahlentherapie-intention.html
 [MII_EX_Onko_Strahlentherapie_Stellung]: StructureDefinition-mii-ex-onko-strahlentherapie-stellung.html
 [MII_EX_Onko_Systemische_Therapie_Intention]: StructureDefinition-mii-ex-onko-systemische-therapie-intention.html
