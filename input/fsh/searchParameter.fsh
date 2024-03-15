@@ -6,7 +6,7 @@ InstanceOf: SearchParameter
 Usage: #definition
 * insert SP_Publisher
 * insert Version
-* name = "MII_SP_Fernmetastasen_Body-Site"
+* name = "MII_SP_Fernmetastasen_Body_Site"
 * description = "SearchParameter for Fernmetastasen.bodysite"
 * status = #active 
 * code = #body-site
@@ -17,12 +17,38 @@ Usage: #definition
 //----------------------------------------
 // SearchParameters for Operation
 //----------------------------------------
+Instance: mii-sp-onko-operation-extension-durchfuehrungsabsicht
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert Version
+* name = "MII_SP_Operation_Extension_Durchfuehrungsabsicht"
+* description = "SearchParameter for Operation.extension.durchfuehrungsabsicht"
+* status = #active 
+* code = #extension-durchfuehrungsabsicht
+* base = #Procedure 
+* type = #token
+* expression = "Procedure.extension.durchfuehrungsabsicht"
+
+Instance: mii-sp-onko-operation-extension-intention // sollte kleingeschrieben werden im profil + Dokumentationsdatum auch
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert Version
+* name = "MII_SP_Operation_Extension_Intention"
+* description = "SearchParameter for Operation.extension.intention"
+* status = #active 
+* code = #extension-intention
+* base = #Procedure 
+* type = #token
+* expression = "Procedure.extension.intention"
+
 Instance: mii-sp-onko-operation-body-site
 InstanceOf: SearchParameter
 Usage: #definition
 * insert SP_Publisher
 * insert Version
-* name = "MII_SP_Operation_Body-Site"
+* name = "MII_SP_Operation_Body_Site"
 * description = "SearchParameter for Operation.bodysite"
 * status = #active 
 * code = #body-site

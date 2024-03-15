@@ -40,7 +40,7 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 * extension contains mii-ex-onko-operation-intention named Intention 1..1
 * extension[Intention] MS
 
-* outcome MS 
+* outcome MS //doppelt?
 * outcome 0..1 
 
 
