@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Intention der Operation",
+  "description": "Intention der Operation im Rahmen des oBDS",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -43,7 +43,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "MII EX Onko Operation Intention",
-        "definition": "Intention der Operation"
+        "definition": "Intention der Operation im Rahmen des oBDS"
       },
       {
         "id": "Extension.extension",
@@ -63,11 +63,7 @@
           {
             "code": "CodeableConcept"
           }
-        ],
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-operation-intention"
-        }
+        ]
       },
       {
         "id": "Extension.value[x].coding.system",
@@ -78,7 +74,11 @@
       {
         "id": "Extension.value[x].coding.code",
         "path": "Extension.value[x].coding.code",
-        "min": 1
+        "min": 1,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-operation-intention"
+        }
       },
       {
         "id": "Extension.value[x].text",
