@@ -222,5 +222,5 @@ Source: MII_LM_Onko
   * TodesursacheICDVersion -> "Observation.valueCodeableConcept.coding.version" 
 
 * GenetischeVariante -> "Observation"
-  * GenetischeVarianteName -> "Observation.component[conclusion-string].valueString"
-  * GenetischeVarianteAuspraegung -> "Observation.component[molecular-consequence].valueCodeableConcept"
+  * GenetischeVarianteName -> "Observation.note"
+  * GenetischeVarianteAuspraegung -> "Observation.interpretation"
