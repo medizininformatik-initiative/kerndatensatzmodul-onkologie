@@ -5,5 +5,5 @@ Usage: #example
 * subject = Reference(Patient/example)
 
 * effectiveDateTime = "2022-02-08"
-* note = "BRAF1 Class II Mutation"
+* note.text = "BRAF1 Class II Mutation"
 * interpretation = $mii-cs-onko-genetische-variante-auspraegung#M
