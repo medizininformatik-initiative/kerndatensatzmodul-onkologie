@@ -15,7 +15,7 @@ Description: "Dieses Profil beschreibt die Tumorkonferenz und die Therapieempfeh
 * subject 1..1
 * subject only Reference(Patient)
 
-* category 1..1 MS
+* category 1..1 MS 
 * category.coding from $mii-vs-onko-therapieplanung-typ
 * category.coding 1..* MS
 * category.coding.system = $mii-cs-onko-therapieplanung-typ

@@ -8,4 +8,4 @@ Description: "Codes für TNM Version/Auflage nach welcher Version des TNM klassi
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
-* include codes from system $mii-vs-onko-tnm-version
+* include codes from system $mii-cs-onko-tnm-version

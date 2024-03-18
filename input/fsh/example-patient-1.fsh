@@ -13,37 +13,116 @@ Kim Musterperson, geb. 14.03.1956
 */
 // Umsetzung als FHIR R4 Patient, ggfs. in finaler Version als MII Patient
 
-Instance: OncologicExamplePatient1
+Instance: OncologicExamplePatientKimMusterperson
 InstanceOf: Patient // or MII Patient, but then I guess I have to import it? 
 Usage: #example
 * birthDate = 1956-03-14
 * name.family = "Musterperson"
 * name.given = "Kim"
 
-
 // 10.06.2021 CT Abdomen mit KM: V.a. Peritonealkarzinose, Aszites im gesamten Bauchraum, Raumforderung Ovar rechts. Mesenteriale retroperitoneale LK-Metastasen, V.a. Lebermetastasierung
 // Diagnostische Eingriffe und Bildgebung werden im oBDS nicht gesondert kodiert, dafür dann Prozedur OPS
 
+Instance: OncologicExamplePatientProcedure1
+InstanceOf: $mii-procedure
+Usage: #example  
+Description: "10.06.2021 CT Abdomen mit KM"
+* status = #completed
+* subject = Reference(OncologicExamplePatientKimMusterperson)
+* code.coding = $OPS#3-225 "Computertomographie des Beckens mit Kontrastmittel"
+* code.coding.version = "OPS 2024"
+* performedDateTime = 2021-06-10
 /*
-15.06.2021 Aszitespunktion: mit malignen Tumorzellen. Zytologisch mögliches Ovarial-CA.
-// Modeling einer condition Ressource mit Ov-CA. ICD-10 wahrscheinlich klar, ICD-O noch 
-22.06.2021 CT Thorax: kein Hinweis auf Metastasen. 
-// Modelling als cM0?
+Instance: OncologicExamplePatientPrimaryDiagnosis
+InstanceOf: mii-pr-onko-diagnose
+Usage: #example
+Description: "Primärdiagnose"
+* recordedDate = 2021-06-10
+* subject = Reference(OncologicExamplePatientKimMusterperson)
+* clinicalStatus = #active //zum Zeitpunkt der Diagnosestellung
+* verificationStatus.coding[primaertumorDiagnosesicherung].code = #2 "klinische Diagnostik" // steht für "Alle Untersuchungstechniken, einschl. Röntgen, Endoskopie, bildgeb. Verfahren, Ultraschall, explorativer Eingriffe(wie Laparotomie) und Autopsie, aber ohne Gewebsuntersuchungen"
+* code.coding  = $ICD10GM#C48.2 "Bösartige Neubildung des Retroperitoneums und Peritoneums - Peritoneum, nicht näher bezeichnet "
+// 389026000 | Ascites (disorder) | 
+* bodySite = $ICDO3#C56.9 "Ovar" // mögliche Lokalisation des Haupttumors? 
 
-Tumorboard 25.06.2021: Eindeutiges CT-Korrelat und zytologisch ED Ovarial-CA. Neoadjuvante Chemotherapie mit 3 Zyklen Carboplatin/Paxlitaxel, Intervall-Debulking im Verlauf. 
+
+// Kann man auf Basis von "Mesenteriale retroperitoneale LK-Metastasen, V.a. Lebermetastasierung" ein NM-Staging machen? Ovar
+// T3 N1 M1b accoding to 8th TNM UICC ?? Dann 4 Tumorinstanzen
+*/
+Instance: OncologicExamplePatientPrimaryDiagnosis2
+InstanceOf: mii-pr-onko-diagnose
+Usage: #example
+Description: "Primärdiagnose"
+* recordedDate = 2021-06-10
+* subject = Reference(OncologicExamplePatientKimMusterperson)
+* clinicalStatus = #active //zum Zeitpunkt der Diagnosestellung
+* verificationStatus.coding[primaertumorDiagnosesicherung].code = #2 "klinische Diagnostik" // steht für "Alle Untersuchungstechniken, einschl. Röntgen, Endoskopie, bildgeb. Verfahren, Ultraschall, explorativer Eingriffe(wie Laparotomie) und Autopsie, aber ohne Gewebsuntersuchungen"
+* code.coding  = $ICD10GM#C48.2 "Bösartige Neubildung des Retroperitoneums und Peritoneums - Peritoneum, nicht näher bezeichnet "
+// 389026000 | Ascites (disorder) | 
+* bodySite = $ICDO3#C56.9 "Ovar" // mögliche Lokalisation des Haupttumors? 
+
+//15.06.2021 Aszitespunktion: mit malignen Tumorzellen. Zytologisch mögliches Ovarial-CA.
+// Modeling einer condition Ressource mit Ov-CA. ICD-10 + ICD-O Topopgraphe wahrscheinlich klar, ICD-O Morphologisch noch nicht
+Instance: OncologicExamplePatientProcedure2
+InstanceOf: $mii-procedure
+Usage: #example  
+Description: "15.06.2021 Aszitespunktion"
+* status = #completed
+* subject = Reference(OncologicExamplePatientKimMusterperson)
+* code.coding = $OPS#1-853.2 "Aszitespunktion"
+* performedDateTime = 2021-06-15
+
+//22.06.2021 CT Thorax: kein Hinweis auf Metastasen. 
+// Modelling als cM0
+
+Instance: OncologicExamplePatientProcedure3
+InstanceOf: $mii-procedure
+Usage: #example  
+Description: "22.06.2021 CT Thorax: kein Hinweis auf Metastasen."
+* status = #completed
+* subject = Reference(OncologicExamplePatientKimMusterperson)
+* code.coding = $OPS#1-853.2 "Aszitespunktion"
+* performedDateTime = 2021-06-22
+
+Instance: TNM-M-Observation-1
+InstanceOf: MII_PR_Onko_TNM_M_Kategorie
+Usage: #example  
+Description: "."
+* status = #completed
+* subject = Reference(OncologicExamplePatientKimMusterperson)
+* code.extension[cpPraefix].valueCodeableConcept = $UICC#c
+* code.coding = $SCT#1-853.2 "M - Distant metastasis stage"
+* effectiveDateTime = 2021-06-22
+* method = #8
+* partOf(Reference(OncologicExamplePatientProcedure3))
+
+//Tumorboard 25.06.2021: Eindeutiges CT-Korrelat und zytologisch ED Ovarial-CA. Neoadjuvante Chemotherapie mit 3 Zyklen Carboplatin/Paxlitaxel, Intervall-Debulking im Verlauf. 
 // Modelling als Tumorboard mit Empfehlung Carboplatin/Paxlitaxel. Debulking deutet auf geplante partielle Resektionen hin.
+Instance: Tumorkonferenz-1
+InstanceOf: MII_PR_Onko_Tumorkonferenz
+Usage: #example  
+Description: "."
+* subject = Reference(OncologicExamplePatientKimMusterperson)
+* status = #completed
+* intent = #plan
+* category.coding = $mii-cs-onko-therapieplanung-typ#praeth "Prätherapeutische Tumorkonferenz" 
+* created = 2021-06-25
+* addresses 
+/*
 
 05.07.21-25.07.21 Z1 Carboplatin AUC5 d1, Paclitaxel 175 mg/m2, d1, Wdh. d21
 26.07.21-15.08.21 Z2 Carboplatin AUC5 d1, Paclitaxel 175 mg/m2, d1, Wdh. d21
 16.08.21-05.09.21 Z3 Carboplatin AUC5 d1, Paclitaxel 175 mg/m2, d1, Wdh. d21
 // Modelling als SystemicTherapy (Intent?),MedicationStatement, Anfangs-Enddauer als Procedure, ATC Codes raussuchen (von 21?)
-15.09.21 CT Thorax/Abdomen: Beurteilung
 
+15.09.21 CT Thorax/Abdomen: Beurteilung
 Peritonelakarzinose zunehmend, metastasensuspekte Lymphknoten retroperitoneal. V.a. konstante Lebermetastasierung
 // Symptomatik wird so denke ich nicht im oBDS abgebildet, ggfs. MII Conditions mit Primärdiagnose ED? 
+
 16.09.21 Tumorboard: 
 Deutlicher Tumorprogress. OP zur histologischen Sicherung bereits geplant, optimales Debulking anstreben.
 // deutlicher Tumorprogress unklar zu kodieren. 
+
 30.09.2021 OP
 Intervalldebulking mittels Längsschnittlaparotomie, Tumorresektion mittels Hysterektomie, bilateraler Adnexektomie, und atpyischer Lebersegmentresektion (Seg. II und V). Postoperativ: R0.
 // 
