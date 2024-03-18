@@ -1941,7 +1941,7 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Observation.component[conclusion-string].valueString"
+            "map": "Observation.note"
           }
         ]
       },
@@ -1960,7 +1960,7 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Observation.component[molecular-consequence].valueCodeableConcept"
+            "map": "Observation.interpretation"
           }
         ]
       }
