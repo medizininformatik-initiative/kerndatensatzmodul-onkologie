@@ -155,4 +155,10 @@
 [mii-exa-onko-weitere-klassifikationen-2]: Observation-mii-exa-onko-weitere-klassifikationen-2.html
 [mii-pr-onko-nebenwirkung-0]: AdverseEvent-mii-pr-onko-nebenwirkung-0.html
 [MII_VS_Onko_Genetische_Variante_Auspraegung]: ValueSet-mii-vs-onko-genetische-variante-auspraegung.html
-[OncologicExamplePatient1]: Patient-OncologicExamplePatient1.html
+[OncologicExamplePatientKimMusterperson]: Patient-OncologicExamplePatientKimMusterperson.html
+[OncologicExamplePatientPrimaryDiagnosis2]: Condition-OncologicExamplePatientPrimaryDiagnosis2.html
+[OncologicExamplePatientProcedure1]: Procedure-OncologicExamplePatientProcedure1.html
+[OncologicExamplePatientProcedure2]: Procedure-OncologicExamplePatientProcedure2.html
+[OncologicExamplePatientProcedure3]: Procedure-OncologicExamplePatientProcedure3.html
+[TNM-M-Observation-1]: Observation-TNM-M-Observation-1.html
+[Tumorkonferenz-1]: CarePlan-Tumorkonferenz-1.html

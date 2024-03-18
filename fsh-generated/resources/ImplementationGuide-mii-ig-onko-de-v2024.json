@@ -1308,10 +1308,58 @@
       },
       {
         "reference": {
-          "reference": "Patient/OncologicExamplePatient1"
+          "reference": "Patient/OncologicExamplePatientKimMusterperson"
         },
-        "name": "OncologicExamplePatient1",
+        "name": "OncologicExamplePatientKimMusterperson",
         "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/OncologicExamplePatientPrimaryDiagnosis2"
+        },
+        "name": "OncologicExamplePatientPrimaryDiagnosis2",
+        "description": "Primärdiagnose",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/OncologicExamplePatientProcedure1"
+        },
+        "name": "OncologicExamplePatientProcedure1",
+        "description": "10.06.2021 CT Abdomen mit KM",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Procedure/OncologicExamplePatientProcedure2"
+        },
+        "name": "OncologicExamplePatientProcedure2",
+        "description": "15.06.2021 Aszitespunktion",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Procedure/OncologicExamplePatientProcedure3"
+        },
+        "name": "OncologicExamplePatientProcedure3",
+        "description": "22.06.2021 CT Thorax: kein Hinweis auf Metastasen.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/TNM-M-Observation-1"
+        },
+        "name": "TNM-M-Observation-1",
+        "description": ".",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "CarePlan/Tumorkonferenz-1"
+        },
+        "name": "Tumorkonferenz-1",
+        "description": ".",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
       }
     ],
     "page": {
