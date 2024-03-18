@@ -1,0 +1,26 @@
+{
+  "resourceType": "CarePlan",
+  "id": "Tumorkonferenz-1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapieplanung-typ",
+          "code": "praeth",
+          "display": "Prätherapeutische Tumorkonferenz"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "Patient/OncologicExamplePatientKimMusterperson"
+  },
+  "status": "completed",
+  "intent": "plan",
+  "created": "2021-06-25"
+}
