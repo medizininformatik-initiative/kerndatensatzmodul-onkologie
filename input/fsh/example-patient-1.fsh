@@ -94,7 +94,7 @@ Description: "."
 * code.coding = $SCT#1-853.2 "M - Distant metastasis stage"
 * effectiveDateTime = 2021-06-22
 * method = #8
-* partOf(Reference(OncologicExamplePatientProcedure3))
+* partOf = Reference(OncologicExamplePatientProcedure3)
 
 //Tumorboard 25.06.2021: Eindeutiges CT-Korrelat und zytologisch ED Ovarial-CA. Neoadjuvante Chemotherapie mit 3 Zyklen Carboplatin/Paxlitaxel, Intervall-Debulking im Verlauf. 
 // Modelling als Tumorboard mit Empfehlung Carboplatin/Paxlitaxel. Debulking deutet auf geplante partielle Resektionen hin.
