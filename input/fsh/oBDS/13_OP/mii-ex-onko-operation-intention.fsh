@@ -10,7 +10,7 @@ Description: "Intention der Operation im Rahmen des oBDS"
 * value[x] 1..
 * value[x] only CodeableConcept
 * valueCodeableConcept.coding.system 1..
-* valueCodeableConcept.coding.system = $mii-cs-onko-operation-intention (exactly)
+* valueCodeableConcept.coding.system = $mii-cs-onko-intention (exactly)
 * valueCodeableConcept.coding.code 1.. 
 * valueCodeableConcept.coding.code from MII_VS_Onko_Operation_Intention (required)
 * valueCodeableConcept.text MS

@@ -6,7 +6,7 @@ Description: "Example radiation therapy"
 * subject = Reference(Patient/example)
 * status = #final
 
-* extension[Intention].valueCodeableConcept = $mii-cs-onko-strahlentherapie-intention#P // palliativ
+* extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#P // palliativ
 * extension[Intention].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention"
 * extension[Stellung].valueCodeableConcept = $mii-cs-onko-strahlentherapie-stellung#A // adjuvant
 * extension[Stellung].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellung"
