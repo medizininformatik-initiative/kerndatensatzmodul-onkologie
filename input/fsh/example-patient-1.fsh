@@ -107,14 +107,52 @@ Description: "."
 * intent = #plan
 * category.coding = $mii-cs-onko-therapieplanung-typ#praeth "Prätherapeutische Tumorkonferenz" 
 * created = 2021-06-25
-* addresses 
-/*
+* addresses = Reference(OncologicExamplePatientPrimaryDiagnosis2)
+* activity[0].detail.code = $mii-cs-onko-therapie-typ#CH "Chemotherapie"
+* activity[0].detail.status = #completed // In den Daten nicht enthalten, aber die Leitlinien sehen 6 Zyklen vor. Es wurden nur 3 Zyklen gemacht
+* activity[0].detail.statusReason = $mii-cs-onko-therapieabweichung#N
+* activity[1].detail.code = $mii-cs-onko-therapie-typ#OP
+* activity[1].detail.status = #completed
+* activity[1].detail.statusReason = $mii-cs-onko-therapieabweichung#N
 
-05.07.21-25.07.21 Z1 Carboplatin AUC5 d1, Paclitaxel 175 mg/m2, d1, Wdh. d21
-26.07.21-15.08.21 Z2 Carboplatin AUC5 d1, Paclitaxel 175 mg/m2, d1, Wdh. d21
-16.08.21-05.09.21 Z3 Carboplatin AUC5 d1, Paclitaxel 175 mg/m2, d1, Wdh. d21
+
+
+
+//L01CD01 Paclitaxel
+//L01XA02 Carboplatin
+Instance: SystemicTherapy1
+InstanceOf: MII_PR_Onko_Systemische_Therapie
+Usage: #example
+Description: "."
+* subject = Reference(OncologicExamplePatientKimMusterperson)
+* status = #completed
+* code.coding = $OPS#8-54 "Chemotherapie " // bei Bedarf spezifischer? 
+* extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K // impliziert 
+* extension[Stellung].valueCodeableConcept = $mii-cs-onko-systemische-therapie-stellung#O "ohne Bezug zur operativen Therapie"
+* performedPeriod.start = 2021-07-05
+* performedPeriod.end = 2021-09-05
+
+Instance: SystemicTherapyMedication1
+InstanceOf: MII_PR_Onko_Systemische_Therapie_Medikation
+Usage: #example
+Description: "."
+* subject = Reference(OncologicExamplePatientKimMusterperson)
+* status = #completed
+* effectivePeriod.start = 2021-07-05  
+* effectivePeriod.end = 2021-09-05
+* medicationCodeableConcept.coding[atcClassDe][0] = $ATC_DE#L01CD01 "Paclitaxel"
+* medicationCodeableConcept.coding[atcClassDe][1] = $ATC_DE#L01XA02 "Carboplatin"
+* partOf = Reference(SystemicTherapy1)
+* note.text = "CarboTax"
+
+
+
+//05.07.21-25.07.21 Z1 Carboplatin AUC5 d1, Paclitaxel 175 mg/m2, d1, Wdh. d21
+//26.07.21-15.08.21 Z2 Carboplatin AUC5 d1, Paclitaxel 175 mg/m2, d1, Wdh. d21
+//16.08.21-05.09.21 Z3 Carboplatin AUC5 d1, Paclitaxel 175 mg/m2, d1, Wdh. d21
+
 // Modelling als SystemicTherapy (Intent?),MedicationStatement, Anfangs-Enddauer als Procedure, ATC Codes raussuchen (von 21?)
-
+/*
 15.09.21 CT Thorax/Abdomen: Beurteilung
 Peritonelakarzinose zunehmend, metastasensuspekte Lymphknoten retroperitoneal. V.a. konstante Lebermetastasierung
 // Symptomatik wird so denke ich nicht im oBDS abgebildet, ggfs. MII Conditions mit Primärdiagnose ED? 
