@@ -160,5 +160,7 @@
 [OncologicExamplePatientProcedure1]: Procedure-OncologicExamplePatientProcedure1.html
 [OncologicExamplePatientProcedure2]: Procedure-OncologicExamplePatientProcedure2.html
 [OncologicExamplePatientProcedure3]: Procedure-OncologicExamplePatientProcedure3.html
+[SystemicTherapy1]: Procedure-SystemicTherapy1.html
+[SystemicTherapyMedication1]: MedicationStatement-SystemicTherapyMedication1.html
 [TNM-M-Observation-1]: Observation-TNM-M-Observation-1.html
 [Tumorkonferenz-1]: CarePlan-Tumorkonferenz-1.html
