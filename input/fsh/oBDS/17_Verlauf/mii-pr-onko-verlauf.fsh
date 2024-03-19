@@ -7,6 +7,7 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
 * insert Publisher
 * ^status = #draft
 
+// siehe Kodierrichtlinien hier : https://plattform65c.atlassian.net/wiki/spaces/Dokumentat/pages/75628552/Verlaufsmeldung
 * identifier MS
 
 * subject MS
