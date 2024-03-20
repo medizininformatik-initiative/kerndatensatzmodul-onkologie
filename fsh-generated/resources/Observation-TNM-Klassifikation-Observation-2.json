@@ -1,0 +1,35 @@
+{
+  "resourceType": "Observation",
+  "id": "TNM-Klassifikation-Observation-2",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
+    ]
+  },
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/OncologicExamplePatientKimMusterperson"
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "1-853.2",
+        "system": "http://snomed.info/sct",
+        "display": "M - Distant metastasis stage"
+      }
+    ]
+  },
+  "effectiveDateTime": "2021-06-22",
+  "method": {
+    "coding": [
+      {
+        "code": "8"
+      }
+    ]
+  },
+  "partOf": [
+    {
+      "reference": "Procedure/OncologicExamplePatientProcedure4"
+    }
+  ]
+}

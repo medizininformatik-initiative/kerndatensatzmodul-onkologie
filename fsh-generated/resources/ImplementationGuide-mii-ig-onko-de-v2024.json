@@ -1315,6 +1315,14 @@
       },
       {
         "reference": {
+          "reference": "DiagnosticReport/OncologicExamplePatientPathoReport1"
+        },
+        "name": "OncologicExamplePatientPathoReport1",
+        "description": "Pathoreport incl. Immunhistochemie",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "Condition/OncologicExamplePatientPrimaryDiagnosis2"
         },
         "name": "OncologicExamplePatientPrimaryDiagnosis2",
@@ -1347,6 +1355,22 @@
       },
       {
         "reference": {
+          "reference": "Procedure/OncologicExamplePatientProcedure4"
+        },
+        "name": "OncologicExamplePatientProcedure4",
+        "description": "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie, Tumorresektion mittels Hysterektomie, bilateraler Adnexektomie, und atpyischer Lebersegmentresektion (Seg. II und V). Postoperativ: R0.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Specimen/OncologicExamplePatientSample1"
+        },
+        "name": "OncologicExamplePatientSample1",
+        "description": "Pathoreport incl. Immunhistochemie",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "Procedure/SystemicTherapy1"
         },
         "name": "SystemicTherapy1",
@@ -1363,6 +1387,14 @@
       },
       {
         "reference": {
+          "reference": "Observation/TNM-Klassifikation-Observation-2"
+        },
+        "name": "TNM-Klassifikation-Observation-2",
+        "description": ". ",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
+      },
+      {
+        "reference": {
           "reference": "Observation/TNM-M-Observation-1"
         },
         "name": "TNM-M-Observation-1",
@@ -1371,11 +1403,51 @@
       },
       {
         "reference": {
+          "reference": "Observation/TNM-M-Observation-2"
+        },
+        "name": "TNM-M-Observation-2",
+        "description": ".",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/TNM-N-Observation-2"
+        },
+        "name": "TNM-N-Observation-2",
+        "description": ".",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/TNM-T-Observation-2"
+        },
+        "name": "TNM-T-Observation-2",
+        "description": "Lokale Tumorausbreitung: Ovartumor links mit einer max. Größe von 2,2 cm und tumorinfiltrierter Kapsel mit Nachweis von Tumorzellen auf der Ovaroberfläche, Anteil vitaler Tumorzellen von ca. 80 %. ",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
+      },
+      {
+        "reference": {
           "reference": "CarePlan/Tumorkonferenz-1"
         },
         "name": "Tumorkonferenz-1",
         "description": ".",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
+      },
+      {
+        "reference": {
+          "reference": "CarePlan/Tumorkonferenz-2"
+        },
+        "name": "Tumorkonferenz-2",
+        "description": ".",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
+      },
+      {
+        "reference": {
+          "reference": "Observation/Verlauf-2021-09-15"
+        },
+        "name": "Verlauf-2021-09-15",
+        "description": ". ",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf"
       }
     ],
     "page": {
