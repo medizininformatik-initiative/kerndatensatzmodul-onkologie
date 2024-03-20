@@ -29,7 +29,7 @@ Usage: #example
 Description: "10.06.2021 CT Abdomen mit KM"
 * status = #completed
 * subject = Reference(OncologicExamplePatientKimMusterperson)
-* code.coding = $OPS#3-225 "Computertomographie des Beckens mit Kontrastmittel"
+* code.coding = $OPS#3-225 "Computertomographie des Abdomens mit Kontrastmittel"
 * code.coding.version = "OPS 2024"
 * performedDateTime = 2021-06-10
 /*
@@ -109,7 +109,7 @@ Description: "."
 * created = 2021-06-25
 * addresses = Reference(OncologicExamplePatientPrimaryDiagnosis2)
 * activity[0].detail.code = $mii-cs-onko-therapie-typ#CH "Chemotherapie"
-* activity[0].detail.status = #completed // In den Daten nicht enthalten, aber die Leitlinien sehen 6 Zyklen vor. Es wurden nur 3 Zyklen gemacht
+* activity[0].detail.status = #completed // Es wurden nur 3 Zyklen geplant, die alle durchgeführt wurden
 * activity[0].detail.statusReason = $mii-cs-onko-therapieabweichung#N
 * activity[1].detail.code = $mii-cs-onko-therapie-typ#OP
 * activity[1].detail.status = #completed
@@ -128,7 +128,7 @@ Description: "."
 * status = #completed
 * code.coding = $OPS#8-54 "Chemotherapie " // bei Bedarf spezifischer? 
 * extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K // impliziert 
-* extension[Stellung].valueCodeableConcept = $mii-cs-onko-systemische-therapie-stellung#O "ohne Bezug zur operativen Therapie"
+* extension[Stellung].valueCodeableConcept = $mii-cs-onko-systemische-therapie-stellung#N "neo"
 * performedPeriod.start = 2021-07-05
 * performedPeriod.end = 2021-09-05
 
@@ -150,20 +150,135 @@ Description: "."
 //05.07.21-25.07.21 Z1 Carboplatin AUC5 d1, Paclitaxel 175 mg/m2, d1, Wdh. d21
 //26.07.21-15.08.21 Z2 Carboplatin AUC5 d1, Paclitaxel 175 mg/m2, d1, Wdh. d21
 //16.08.21-05.09.21 Z3 Carboplatin AUC5 d1, Paclitaxel 175 mg/m2, d1, Wdh. d21
-
 // Modelling als SystemicTherapy (Intent?),MedicationStatement, Anfangs-Enddauer als Procedure, ATC Codes raussuchen (von 21?)
-/*
-15.09.21 CT Thorax/Abdomen: Beurteilung
-Peritonelakarzinose zunehmend, metastasensuspekte Lymphknoten retroperitoneal. V.a. konstante Lebermetastasierung
-// Symptomatik wird so denke ich nicht im oBDS abgebildet, ggfs. MII Conditions mit Primärdiagnose ED? 
+// die genaueren Informationen können als MedicationAdministration kodiert werden -> außerhalb oBDS
 
-16.09.21 Tumorboard: 
-Deutlicher Tumorprogress. OP zur histologischen Sicherung bereits geplant, optimales Debulking anstreben.
-// deutlicher Tumorprogress unklar zu kodieren. 
+Instance: Verlauf-2021-09-15
+InstanceOf: MII_PR_Onko_Verlauf
+Usage: #example
+Description: ". "
+* status = #final
+* effectiveDateTime = 2021-09-15
+* code.coding = $mii-cs-onko-verlauf-gesamtbeurteilung#P "Progression"
+* component[Tumor_Verlauf].code.coding = $SCT#277062004 "Status des Residualtumors"
+* component[Tumor_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-primaertumor#P "Tumorreste (Residualtumor) Progress"
 
-30.09.2021 OP
-Intervalldebulking mittels Längsschnittlaparotomie, Tumorresektion mittels Hysterektomie, bilateraler Adnexektomie, und atpyischer Lebersegmentresektion (Seg. II und V). Postoperativ: R0.
+* component[Lymphknoten_Verlauf].code.coding =  $SCT#277060007 "Status der lymphatischen Tumorinvasion"
+* component[Lymphknoten_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-lymphknoten#R "neu aufgetretenes Lymphknotenrezidiv" // Text nicht aussagekräftig, ggfs. auch als #P "bekannter Lymphknotenbefall Progress" oder  #N "bekannter Lymphknotenbefall No Change" zu kodieren
+
+* component[Fernmetastasen_Verlauf].code.coding = $SCT#260874000 "Status der Metastasen"
+* component[Fernmetastasen_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-fernmetastasen#K "Keine Änderung"
+
+
+
+
+//15.09.21 CT Thorax/Abdomen: Beurteilung
+//Peritonelakarzinose zunehmend, metastasensuspekte Lymphknoten retroperitoneal. V.a. konstante Lebermetastasierung
+// Abbildung außerhalb des oBDS als Prozedur.codes = 3-222 und 3-225 (mit Kontrastmittel)
+// Abildung der Conditions 
+//TNM-Staging angebracht? zu wenig Informationen? cT3c cN1 cM0 ? 
+
+
+//16.09.21 Tumorboard: 
+//Deutlicher Tumorprogress. OP zur histologischen Sicherung bereits geplant, optimales Debulking anstreben.
+// deutlicher Tumorprogress unklar zu kodieren. Verlaufsbeobachtung und CarePlan
+
+Instance: Tumorkonferenz-2
+InstanceOf: MII_PR_Onko_Tumorkonferenz
+Usage: #example  
+Description: "."
+* subject = Reference(OncologicExamplePatientKimMusterperson)
+* status = #completed
+* intent = #plan
+* category.coding = $mii-cs-onko-therapieplanung-typ#praeth "Prätherapeutische Tumorkonferenz" 
+* created = 2021-09-16
+* addresses = Reference(OncologicExamplePatientPrimaryDiagnosis2)
+* activity[0].detail.code = $mii-cs-onko-therapie-typ#OP
+* activity[0].detail.status = #completed
+* activity[0].detail.statusReason = $mii-cs-onko-therapieabweichung#N
+
+
+//
 // 
+// 
+
+Instance: OncologicExamplePatientProcedure4
+InstanceOf: $mii-procedure
+Usage: #example  
+Description: "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie, Tumorresektion mittels Hysterektomie, bilateraler Adnexektomie, und atpyischer Lebersegmentresektion (Seg. II und V). Postoperativ: R0."
+* status = #completed
+* subject = Reference(OncologicExamplePatientKimMusterperson)
+* code.coding[0] = $OPS#5-547.0 "Resektion von Gewebe ohne sichere Organzuordnung - intraperitoneal" // alternativ 5-590.8 Resektion von Gewebe ohne sichere Organzuordnung
+* code.coding[1] = $OPS#5-683 "Hysterektomie"
+* code.coding[2] = $OPS#5-661 "bilaterale Adnexektomie / Salpingektomie"
+* code.coding[3] = $OPS#5-501 "atypische Lebersegmentresektion"
+* performedDateTime = 2021-09-30
+* outcome = $mii-cs-onko-residualstatus#R0
+
+Instance: OncologicExamplePatientPathoReport1
+InstanceOf: DiagnosticReport
+Usage: #example  
+Description: "Pathoreport incl. Immunhistochemie"
+* status = #complete
+* code.coding = $LOINC#60568-3 "Pathological laboratory report"
+
+
+Instance: OncologicExamplePatientSample1
+InstanceOf: Specimen
+Usage: #example  
+Description: "Pathoreport incl. Immunhistochemie"
+
+
+Instance: TNM-Klassifikation-Observation-2
+InstanceOf: MII_PR_Onko_TNM_Klassifikation
+Usage: #example  
+Description: ". "
+* status = #completed
+* subject = Reference(OncologicExamplePatientKimMusterperson)
+* code.extension[cpPraefix].valueCodeableConcept = $UICC#p
+* code.coding = $SCT#1-853.2 "M - Distant metastasis stage"
+* effectiveDateTime = 2021-06-22
+* method = #8
+* partOf = Reference(OncologicExamplePatientProcedure4)
+
+Instance: TNM-T-Observation-2
+InstanceOf: MII_PR_Onko_TNM_T_Kategorie
+Usage: #example  
+Description: "Lokale Tumorausbreitung: Ovartumor links mit einer max. Größe von 2,2 cm und tumorinfiltrierter Kapsel mit Nachweis von Tumorzellen auf der Ovaroberfläche, Anteil vitaler Tumorzellen von ca. 80 %. "
+* status = #completed
+* subject = Reference(OncologicExamplePatientKimMusterperson)
+* code.extension[cpPraefix].valueCodeableConcept = $UICC#p
+* code.coding = $SCT#1-853.2 "M - Distant metastasis stage"
+* effectiveDateTime = 2021-06-22
+* method = #8
+* partOf = Reference(OncologicExamplePatientProcedure4)
+
+Instance: TNM-N-Observation-2
+InstanceOf: MII_PR_Onko_TNM_N_Kategorie
+Usage: #example  
+Description: "."
+* status = #completed
+* subject = Reference(OncologicExamplePatientKimMusterperson)
+* code.extension[cpPraefix].valueCodeableConcept = $UICC#p
+* code.coding = $SCT#1-853.2 "M - Distant metastasis stage"
+* effectiveDateTime = 2021-06-22
+* method = #8
+* partOf = Reference(OncologicExamplePatientProcedure4)
+
+Instance: TNM-M-Observation-2
+InstanceOf: MII_PR_Onko_TNM_M_Kategorie
+Usage: #example  
+Description: "."
+* status = #completed
+* subject = Reference(OncologicExamplePatientKimMusterperson)
+* code.extension[cpPraefix].valueCodeableConcept = $UICC#p
+* code.coding = $SCT#1-853.2 "M - Distant metastasis stage"
+* effectiveDateTime = 2021-06-22
+* method = #8
+* partOf = Reference(OncologicExamplePatientProcedure4)
+
+
+/*
 Histologie: Resektat vom 30.09.2021
 Neoplasie des Ovars (Z.n. neoadjuvanter Therapie) (ICD-10-C56) Ovar o.n.A. (ICD-O-C56.9) Untersuchungsmaterial: Resektat WHO-Typ: Seröses Adenokarzinom (ICD-O M-8441/3) 
 Lokale Tumorausbreitung: Ovartumor links mit einer max. Größe von 2,2 cm und tumorinfiltrierter Kapsel mit Nachweis von Tumorzellen auf der Ovaroberfläche, Anteil vitaler Tumorzellen von ca. 80 %. 
@@ -194,6 +309,4 @@ Regredienter Befund, bei Z.n. zwischenzeitig operativem Debulking
 Erhaltungstherapie mit Niraparib bei BRCAwt // genetische Variante
 Restaging in 3 Monaten mit CT Thorax/Abdomen und TM
 25.01.22 Beginn Niraparib 300mg d1-28 wdh d28 //Systemic Therapy
-
-
  */
