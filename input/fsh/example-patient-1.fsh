@@ -235,7 +235,6 @@ Usage: #example
 Description: ". "
 * status = #completed
 * subject = Reference(OncologicExamplePatientKimMusterperson)
-* code.extension[cpPraefix].valueCodeableConcept = $UICC#p
 * code.coding = $SCT#1-853.2 "M - Distant metastasis stage"
 * effectiveDateTime = 2021-06-22
 * method = #8
