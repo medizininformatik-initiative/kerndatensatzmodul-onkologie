@@ -1,0 +1,45 @@
+{
+  "resourceType": "Observation",
+  "id": "Verlauf-2021-09-25",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf"
+    ]
+  },
+  "subject": {
+    "reference": "Patient/PatientKimMusterperson"
+  },
+  "status": "final",
+  "effectiveDateTime": "2021-10-25",
+  "code": {
+    "coding": [
+      {
+        "code": "V",
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung",
+        "display": "Vollremission"
+      }
+    ]
+  },
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "277062004",
+            "system": "http://snomed.info/sct",
+            "display": "Status des Residualtumors"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "K",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-primaertumor",
+            "display": "kein Tumor nachweisbar"
+          }
+        ]
+      }
+    }
+  ]
+}

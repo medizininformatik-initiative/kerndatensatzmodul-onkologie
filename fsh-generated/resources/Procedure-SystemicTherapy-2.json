@@ -1,6 +1,6 @@
 {
   "resourceType": "Procedure",
-  "id": "SystemicTherapy1",
+  "id": "SystemicTherapy-2",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
@@ -23,9 +23,9 @@
       "valueCodeableConcept": {
         "coding": [
           {
-            "code": "N",
+            "code": "A",
             "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-stellung",
-            "display": "neo"
+            "display": "adjuvant"
           }
         ]
       }
@@ -45,12 +45,7 @@
     ]
   },
   "performedPeriod": {
-    "start": "2021-07-05",
-    "end": "2021-09-05"
-  },
-  "basedOn": [
-    {
-      "reference": "CarePlan/Tumorkonferenz-1"
-    }
-  ]
+    "start": "2021-11-08",
+    "end": "2022-01-09"
+  }
 }

@@ -1308,13 +1308,6 @@
       },
       {
         "reference": {
-          "reference": "Patient/OncologicExamplePatientKimMusterperson"
-        },
-        "name": "OncologicExamplePatientKimMusterperson",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
           "reference": "DiagnosticReport/OncologicExamplePatientPathoReport1"
         },
         "name": "OncologicExamplePatientPathoReport1",
@@ -1328,14 +1321,6 @@
         "name": "OncologicExamplePatientPrimaryDiagnosis2",
         "description": "Primärdiagnose",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose"
-      },
-      {
-        "reference": {
-          "reference": "Procedure/OncologicExamplePatientProcedure1"
-        },
-        "name": "OncologicExamplePatientProcedure1",
-        "description": "10.06.2021 CT Abdomen mit KM",
-        "exampleBoolean": true
       },
       {
         "reference": {
@@ -1366,8 +1351,31 @@
           "reference": "Specimen/OncologicExamplePatientSample1"
         },
         "name": "OncologicExamplePatientSample1",
-        "description": "Pathoreport incl. Immunhistochemie",
+        "description": "Tumorresektat Primärtumor",
         "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/PatientKimMusterperson"
+        },
+        "name": "PatientKimMusterperson",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Procedure/PatientKimMusterperson-Procedure-1"
+        },
+        "name": "PatientKimMusterperson-Procedure-1",
+        "description": "10.06.2021 CT Abdomen mit KM",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Procedure/SystemicTherapy-2"
+        },
+        "name": "SystemicTherapy-2",
+        "description": ".",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
       },
       {
         "reference": {
@@ -1376,6 +1384,14 @@
         "name": "SystemicTherapy1",
         "description": ".",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
+      },
+      {
+        "reference": {
+          "reference": "MedicationStatement/SystemicTherapyMedication-1"
+        },
+        "name": "SystemicTherapyMedication-1",
+        "description": ".",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
       },
       {
         "reference": {
@@ -1443,9 +1459,25 @@
       },
       {
         "reference": {
+          "reference": "CarePlan/Tumorkonferenz-3"
+        },
+        "name": "Tumorkonferenz-3",
+        "description": ".",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
+      },
+      {
+        "reference": {
           "reference": "Observation/Verlauf-2021-09-15"
         },
         "name": "Verlauf-2021-09-15",
+        "description": ". ",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf"
+      },
+      {
+        "reference": {
+          "reference": "Observation/Verlauf-2021-09-25"
+        },
+        "name": "Verlauf-2021-09-25",
         "description": ". ",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf"
       }
