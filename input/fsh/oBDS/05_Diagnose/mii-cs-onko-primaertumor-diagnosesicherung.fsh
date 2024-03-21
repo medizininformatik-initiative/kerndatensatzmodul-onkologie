@@ -22,7 +22,4 @@ Description: "Codes für Primärtumor Diagnosesicherung, d.h. die höchste errei
 * #7.2 "histologische Untersuchung einer Metastase" "Histologische Untersuchung des Gewebes aus einer Metastase, inklusive der Untersuchung von Proben aus einer Autopsie."
 * #7.3 "Histologie der Autopsie" "Histologische Untersuchung von Tumorgewebe gleich wie es gewonnen wurde; inklusive aller Schnitt-Techniken und Knochenmarksbiopsien"
 * #8 "Zytogenetisch und/oder molekularer Test" "Nachweis von tumorspezifischen genetischen Anomalien und genetischen Veränderungen im Tumor einschließlich Verfahren wie Karyotypisierung, FISH (Fluoreszenz in situ-Hybridisierung), PCR"
-
-
-
-#9 "unbekannt"
+* #9 "unbekannt"
