@@ -13,7 +13,7 @@ Kim Musterperson, geb. 14.03.1956
 */
 // Umsetzung als FHIR R4 Patient, ggfs. in finaler Version als MII Patient
 
-Instance: OncologicExamplePatientKimMusterperson
+Instance: PatientKimMusterperson
 InstanceOf: Patient // or MII Patient, but then I guess I have to import it? 
 Usage: #example
 * birthDate = 1956-03-14
@@ -23,12 +23,12 @@ Usage: #example
 // 10.06.2021 CT Abdomen mit KM: V.a. Peritonealkarzinose, Aszites im gesamten Bauchraum, Raumforderung Ovar rechts. Mesenteriale retroperitoneale LK-Metastasen, V.a. Lebermetastasierung
 // Diagnostische Eingriffe und Bildgebung werden im oBDS nicht gesondert kodiert, dafür dann Prozedur OPS
 
-Instance: OncologicExamplePatientProcedure1
+Instance: PatientKimMusterperson-Procedure-1
 InstanceOf: $mii-procedure
 Usage: #example  
 Description: "10.06.2021 CT Abdomen mit KM"
 * status = #completed
-* subject = Reference(OncologicExamplePatientKimMusterperson)
+* subject = Reference(PatientKimMusterperson)
 * code.coding = $OPS#3-225 "Computertomographie des Abdomens mit Kontrastmittel"
 * code.coding.version = "OPS 2024"
 * performedDateTime = 2021-06-10
@@ -54,7 +54,7 @@ InstanceOf: mii-pr-onko-diagnose
 Usage: #example
 Description: "Primärdiagnose"
 * recordedDate = 2021-06-10
-* subject = Reference(OncologicExamplePatientKimMusterperson)
+* subject = Reference(PatientKimMusterperson)
 * clinicalStatus = #active //zum Zeitpunkt der Diagnosestellung
 * verificationStatus.coding[primaertumorDiagnosesicherung].code = #2 "klinische Diagnostik" // steht für "Alle Untersuchungstechniken, einschl. Röntgen, Endoskopie, bildgeb. Verfahren, Ultraschall, explorativer Eingriffe(wie Laparotomie) und Autopsie, aber ohne Gewebsuntersuchungen"
 * code.coding  = $ICD10GM#C48.2 "Bösartige Neubildung des Retroperitoneums und Peritoneums - Peritoneum, nicht näher bezeichnet "
@@ -68,7 +68,7 @@ InstanceOf: $mii-procedure
 Usage: #example  
 Description: "15.06.2021 Aszitespunktion"
 * status = #completed
-* subject = Reference(OncologicExamplePatientKimMusterperson)
+* subject = Reference(PatientKimMusterperson)
 * code.coding = $OPS#1-853.2 "Aszitespunktion"
 * performedDateTime = 2021-06-15
 
@@ -80,7 +80,7 @@ InstanceOf: $mii-procedure
 Usage: #example  
 Description: "22.06.2021 CT Thorax: kein Hinweis auf Metastasen."
 * status = #completed
-* subject = Reference(OncologicExamplePatientKimMusterperson)
+* subject = Reference(PatientKimMusterperson)
 * code.coding = $OPS#1-853.2 "Aszitespunktion"
 * performedDateTime = 2021-06-22
 
@@ -89,7 +89,7 @@ InstanceOf: MII_PR_Onko_TNM_M_Kategorie
 Usage: #example  
 Description: "."
 * status = #completed
-* subject = Reference(OncologicExamplePatientKimMusterperson)
+* subject = Reference(PatientKimMusterperson)
 * code.extension[cpPraefix].valueCodeableConcept = $UICC#c
 * code.coding = $SCT#1-853.2 "M - Distant metastasis stage"
 * effectiveDateTime = 2021-06-22
@@ -102,7 +102,7 @@ Instance: Tumorkonferenz-1
 InstanceOf: MII_PR_Onko_Tumorkonferenz
 Usage: #example  
 Description: "."
-* subject = Reference(OncologicExamplePatientKimMusterperson)
+* subject = Reference(PatientKimMusterperson)
 * status = #completed
 * intent = #plan
 * category.coding = $mii-cs-onko-therapieplanung-typ#praeth "Prätherapeutische Tumorkonferenz" 
@@ -124,19 +124,20 @@ Instance: SystemicTherapy1
 InstanceOf: MII_PR_Onko_Systemische_Therapie
 Usage: #example
 Description: "."
-* subject = Reference(OncologicExamplePatientKimMusterperson)
+* subject = Reference(PatientKimMusterperson)
 * status = #completed
 * code.coding = $OPS#8-54 "Chemotherapie " // bei Bedarf spezifischer? 
 * extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K // impliziert 
 * extension[Stellung].valueCodeableConcept = $mii-cs-onko-systemische-therapie-stellung#N "neo"
 * performedPeriod.start = 2021-07-05
 * performedPeriod.end = 2021-09-05
+* basedOn = Reference(Tumorkonferenz-1)
 
 Instance: SystemicTherapyMedication1
 InstanceOf: MII_PR_Onko_Systemische_Therapie_Medikation
 Usage: #example
 Description: "."
-* subject = Reference(OncologicExamplePatientKimMusterperson)
+* subject = Reference(PatientKimMusterperson)
 * status = #completed
 * effectivePeriod.start = 2021-07-05  
 * effectivePeriod.end = 2021-09-05
@@ -157,6 +158,7 @@ Instance: Verlauf-2021-09-15
 InstanceOf: MII_PR_Onko_Verlauf
 Usage: #example
 Description: ". "
+* subject = Reference(PatientKimMusterperson)
 * status = #final
 * effectiveDateTime = 2021-09-15
 * code.coding = $mii-cs-onko-verlauf-gesamtbeurteilung#P "Progression"
@@ -187,7 +189,7 @@ Instance: Tumorkonferenz-2
 InstanceOf: MII_PR_Onko_Tumorkonferenz
 Usage: #example  
 Description: "."
-* subject = Reference(OncologicExamplePatientKimMusterperson)
+* subject = Reference(PatientKimMusterperson)
 * status = #completed
 * intent = #plan
 * category.coding = $mii-cs-onko-therapieplanung-typ#praeth "Prätherapeutische Tumorkonferenz" 
@@ -207,7 +209,7 @@ InstanceOf: $mii-procedure
 Usage: #example  
 Description: "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie, Tumorresektion mittels Hysterektomie, bilateraler Adnexektomie, und atpyischer Lebersegmentresektion (Seg. II und V). Postoperativ: R0."
 * status = #completed
-* subject = Reference(OncologicExamplePatientKimMusterperson)
+* subject = Reference(PatientKimMusterperson)
 * code.coding[0] = $OPS#5-547.0 "Resektion von Gewebe ohne sichere Organzuordnung - intraperitoneal" // alternativ 5-590.8 Resektion von Gewebe ohne sichere Organzuordnung
 * code.coding[1] = $OPS#5-683 "Hysterektomie"
 * code.coding[2] = $OPS#5-661 "bilaterale Adnexektomie / Salpingektomie"
@@ -219,6 +221,7 @@ Instance: OncologicExamplePatientPathoReport1
 InstanceOf: DiagnosticReport
 Usage: #example  
 Description: "Pathoreport incl. Immunhistochemie"
+* subject = Reference(PatientKimMusterperson)
 * status = #complete
 * code.coding = $LOINC#60568-3 "Pathological laboratory report"
 
@@ -226,7 +229,9 @@ Description: "Pathoreport incl. Immunhistochemie"
 Instance: OncologicExamplePatientSample1
 InstanceOf: Specimen
 Usage: #example  
-Description: "Pathoreport incl. Immunhistochemie"
+Description: "Tumorresektat Primärtumor"
+* subject = Reference(PatientKimMusterperson)
+
 
 
 Instance: TNM-Klassifikation-Observation-2
@@ -234,7 +239,7 @@ InstanceOf: MII_PR_Onko_TNM_Klassifikation
 Usage: #example  
 Description: ". "
 * status = #completed
-* subject = Reference(OncologicExamplePatientKimMusterperson)
+* subject = Reference(PatientKimMusterperson)
 * code.coding = $SCT#1-853.2 "M - Distant metastasis stage"
 * effectiveDateTime = 2021-06-22
 * method = #8
@@ -245,7 +250,7 @@ InstanceOf: MII_PR_Onko_TNM_T_Kategorie
 Usage: #example  
 Description: "Lokale Tumorausbreitung: Ovartumor links mit einer max. Größe von 2,2 cm und tumorinfiltrierter Kapsel mit Nachweis von Tumorzellen auf der Ovaroberfläche, Anteil vitaler Tumorzellen von ca. 80 %. "
 * status = #completed
-* subject = Reference(OncologicExamplePatientKimMusterperson)
+* subject = Reference(PatientKimMusterperson)
 * code.extension[cpPraefix].valueCodeableConcept = $UICC#p
 * code.coding = $SCT#1-853.2 "M - Distant metastasis stage"
 * effectiveDateTime = 2021-06-22
@@ -257,7 +262,7 @@ InstanceOf: MII_PR_Onko_TNM_N_Kategorie
 Usage: #example  
 Description: "."
 * status = #completed
-* subject = Reference(OncologicExamplePatientKimMusterperson)
+* subject = Reference(PatientKimMusterperson)
 * code.extension[cpPraefix].valueCodeableConcept = $UICC#p
 * code.coding = $SCT#1-853.2 "M - Distant metastasis stage"
 * effectiveDateTime = 2021-06-22
@@ -269,7 +274,7 @@ InstanceOf: MII_PR_Onko_TNM_M_Kategorie
 Usage: #example  
 Description: "."
 * status = #completed
-* subject = Reference(OncologicExamplePatientKimMusterperson)
+* subject = Reference(PatientKimMusterperson)
 * code.extension[cpPraefix].valueCodeableConcept = $UICC#p
 * code.coding = $SCT#1-853.2 "M - Distant metastasis stage"
 * effectiveDateTime = 2021-06-22
@@ -287,23 +292,81 @@ UICC-Klassifikation (8. Auflage): ypT3c. pM1b (HEP) L1. V0. Pn0 FIGO: IVB
 Immunhistochemie: (Beispiel für einige Marker, in echtem Befund stehen viel mehr)  Vereinzelt kräftige nukleäre Expression des Progesteronrezeptors. Positivität für P16 im Tumor. Der Proliferationsindex mittels MIB-1 liegt bei max. 38%. Mikroskopie: Partieller Nachweis von Muzin. 
 Kommentar: Das immunhistochemische Markerprofil passt zu einem high-grade serösen Adenokarzinom des Ovars (Z.n. neoadjuvanter CTX)
 // Joa, auch mit zu Patho. ggfs. Modellierung eines PathoBefundberichts
+*/
+Instance: Tumorkonferenz-3
+InstanceOf: MII_PR_Onko_Tumorkonferenz
+Usage: #example  
+Description: "."
+* subject = Reference(PatientKimMusterperson)
+* status = #completed
+* intent = #plan
+* category.coding = $mii-cs-onko-therapieplanung-typ#postop "Prätherapeutische Tumorkonferenz" 
+* created = 2021-10-25
+* addresses = Reference(OncologicExamplePatientPrimaryDiagnosis2)
+* activity[0].detail.code = $mii-cs-onko-therapie-typ#CH
+* activity[0].detail.status = #completed // unklar, weil genaue Zyklenanzahl nicht beschrieben ist
+* activity[0].detail.statusReason = $mii-cs-onko-therapieabweichung#N
 
+Instance: Verlauf-2021-09-25
+InstanceOf: MII_PR_Onko_Verlauf
+Usage: #example
+Description: ". "
+* subject = Reference(PatientKimMusterperson)
+* status = #final
+* effectiveDateTime = 2021-10-25
+* code.coding = $mii-cs-onko-verlauf-gesamtbeurteilung#V "Vollremission" // 26 Tage postop, aber sehr unsicher weil Neoadjuvanter progress
+* component[Tumor_Verlauf].code.coding = $SCT#277062004 "Status des Residualtumors"
+* component[Tumor_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-primaertumor#K "kein Tumor nachweisbar"
+
+
+/*
 Tumorboard 25.10.2021 :
 Durch OP makroskopische Komplett-Resektion erreicht.
 Jedoch Progress unter Neoadjuvanz.
 Daher Umstellung auf Carboplatin/Gemcitabine
-Humangenetische Vorstellung empfohlen
+Humangenetische Vorstellung empfohlen // nicht über oBDS abbildbar
+*/
 
+Instance: SystemicTherapy-2
+InstanceOf: MII_PR_Onko_Systemische_Therapie
+Usage: #example
+Description: "."
+* subject = Reference(PatientKimMusterperson)
+* status = #completed
+* code.coding = $OPS#8-54 "Chemotherapie " // bei Bedarf spezifischer? 
+* extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K // impliziert 
+* extension[Stellung].valueCodeableConcept = $mii-cs-onko-systemische-therapie-stellung#A "adjuvant"
+* performedPeriod.start = 2021-11-08
+* performedPeriod.end = 2022-01-09
+
+Instance: SystemicTherapyMedication-1
+InstanceOf: MII_PR_Onko_Systemische_Therapie_Medikation
+Usage: #example
+Description: "."
+* subject = Reference(PatientKimMusterperson)
+* status = #completed
+* effectivePeriod.start = 2021-11-08  
+* effectivePeriod.end = 2022-01-09
+* medicationCodeableConcept.coding[atcClassDe][0] = $ATC_DE#L01BC05 "Gemcitabin"
+* medicationCodeableConcept.coding[atcClassDe][1] = $ATC_DE#L01XA02 "Carboplatin"
+* partOf = Reference(SystemicTherapy1)
+* note.text = "Gem-Carbo"
+
+/*
 08.11.21-28.11.21 Z1 Carboplatin AUC 4 d1, Gemcitabin 1000mg/m2 d1+d8 Wdh d22
 29.11.21- 19.12.21  Z2 Carboplatin AUC 4 d1, Gemcitabin 1000mg/m2 d1+d8 Wdh d22
 20.12.21-09.01.22 Z3 Carboplatin AUC 4 d1, Gemcitabin 1000mg/m2 d1+d8 Wdh d22
+
 15.01.22 CT: // Verlaufs-Observation
 Abdomen:
 - Regredienz der bekannten Peritonealkarzinose
 - Leber ohne eindeutigen Hinweis auf Metastasierung, bei Z.n. atpyischer Lebersegmentresektion a.e. narbige Veränderungen
 Beurteilung
 Regredienter Befund, bei Z.n. zwischenzeitig operativem Debulking
+*/
 
+
+/*
 20.01.22 Tumorboard: 
 Erhaltungstherapie mit Niraparib bei BRCAwt // genetische Variante
 Restaging in 3 Monaten mit CT Thorax/Abdomen und TM

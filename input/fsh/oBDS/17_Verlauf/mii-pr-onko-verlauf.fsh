@@ -11,6 +11,7 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
 * identifier MS
 
 * subject MS
+* subject 1..1
 * subject only Reference(Patient)
 
 * code MS
