@@ -26,6 +26,8 @@ Description: "TNM-Klassifikation: TNM M-Kategorie. Fehlen oder Vorhandensein von
 * method ^short = "TNM Version"
 * method ^definition = "Gibt an, nach welcher Version des TNM klassifiziert wurde."
 * method from mii-vs-onko-tnm-version (required)
+* partOf MS
+* partOf only Reference(Procedure)
 * value[x] MS
 * value[x] only CodeableConcept
 * valueCodeableConcept.extension contains 

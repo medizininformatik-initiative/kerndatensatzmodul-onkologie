@@ -1,0 +1,41 @@
+{
+  "resourceType": "MedicationStatement",
+  "id": "SystemicTherapyMedication-1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
+    ]
+  },
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/atc",
+        "code": "L01BC05",
+        "display": "Gemcitabin"
+      },
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/atc",
+        "code": "L01XA02",
+        "display": "Carboplatin"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/PatientKimMusterperson"
+  },
+  "status": "completed",
+  "effectivePeriod": {
+    "start": "2021-11-08",
+    "end": "2022-01-09"
+  },
+  "partOf": [
+    {
+      "reference": "Procedure/SystemicTherapy1"
+    }
+  ],
+  "note": [
+    {
+      "text": "Gem-Carbo"
+    }
+  ]
+}

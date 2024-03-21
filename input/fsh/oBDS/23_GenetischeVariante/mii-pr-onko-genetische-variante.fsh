@@ -1,5 +1,5 @@
 Profile: MII_PR_Onko_Genetische_Variante
-Parent: https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante // müssen wir das noch irgendwo manuell hinzufügen
+Parent: https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante 
 Id: mii-pr-onko-genetische-variante
 Title: "MII PR Onkologie Genetische Variante"
 Description: "Genetische Variante wie im oBDS "
@@ -7,27 +7,21 @@ Description: "Genetische Variante wie im oBDS "
 * insert Publisher
 * ^status = #draft
 
-* component MS
-* component 1..*
-* component ^slicing.discriminator.type = #pattern
-* component ^slicing.discriminator.path = "code"
-* component ^slicing.rules = #open
-* component ^slicing.description = "Slice based on the component.code pattern"
 
-* component[conclusion-string] MS
-* component[molecular-consequence] MS
+* subject 1..1 MS
+* subject only Reference(Patient)
+
+* interpretation MS
+* interpretation from $mii-cs-onko-genetische-variante-auspraegung (required)
 * value[x] ^slicing.discriminator.type = #pattern
-* value[x] ^slicing.discriminator.path = "code"
 * value[x] ^slicing.rules = #open
-* value[x] ^slicing.description = "Slice based on the value.code pattern"
+* value[x] ^slicing.ordered = false
 
-* value[x] only CodeableConcept
-* valueCodeableConcept from $mii-cs-onko-genetische-variante-auspraegung (required)
 
 Mapping: FHIR-oBDSGenetischeVariante
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
 Source: MII_PR_Onko_Genetische_Variante
 * -> "23" "Genetische Variante"
-* component[conclusion-string].value[x] -> "23.1" "Genetische Variante Name" 
-* component[molecular-consequence].value[x] -> "23.2" "Genetische Variante Auswirkung" 
+* note -> "23.1" "Genetische Variante Name" 
+* interpretation -> "23.2" "Genetische Variante Ausprägung" 

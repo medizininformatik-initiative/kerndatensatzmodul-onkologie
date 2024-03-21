@@ -9,7 +9,7 @@ Description: "Codes für TNM Version/Auflage nach welcher Version des TNM klassi
 * insert Publisher
 * insert PR_CS_VS_Version
 * ^caseSensitive = true
-* ^valueSet = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-cs-onko-tnm-version"
+* ^valueSet = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-version"
 * ^content = #complete
 * #1 "1. Auflage" 
 * #2 "2. Auflage" 

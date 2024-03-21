@@ -6,6 +6,8 @@ Description: "Dieses Profil beschreibt eine Diagnose in der Onkologie"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
+* subject 1..1 MS
+* subject only Reference(Patient)
 * verificationStatus MS 
 * verificationStatus.coding ^slicing.discriminator.type = #pattern
 * verificationStatus.coding ^slicing.discriminator.path = "$this"

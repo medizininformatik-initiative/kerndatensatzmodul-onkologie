@@ -1,8 +1,8 @@
-Extension: MII_EX_Onko_Strahlentherapie_Behandlungsabschnitt
-Id: mii-ex-onko-strahlentherapie-behandlungsabschnitt
-Title: "MII EX Onko Strahlentherapie Behandlungsabschnitt"
-Description: "Strahlentherapie einzelner Behandlungsabschnitt der Gesamttherapie"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-behandlungsabschnitt"
+Extension: MII_EX_Onko_Strahlentherapie_Bestrahlung
+Id: mii-ex-onko-strahlentherapie-bestrahlung
+Title: "MII EX Onko Strahlentherapie Bestrahlung"
+Description: "Strahlentherapie: einzelne Bestrahlung innerhalb der Gesamttherapie"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^context.type = #element
@@ -33,7 +33,6 @@ Description: "Strahlentherapie einzelner Behandlungsabschnitt der Gesamttherapie
 * extension[Gesamtdosis] ^definition = "Gibt an, mit welcher Gesamtdosis da Zielgebiet bestrahlt wurde (inklusive Boost)."
 * extension[Gesamtdosis].value[x] only Quantity
 * extension[Gesamtdosis].valueQuantity.unit from $mii-vs-onko-strahlentherapie-strahlungseinheit (required)
-// hier ggfs. den short/definition text für einheit anhängen
 * extension[Einzeldosis] ^short = "Strahlentherapie Einzeldosis pro Tag (Dosis)"
 * extension[Einzeldosis] ^definition = "Gibt an, mit welcher Einzeldosis (häufigste Dosis, nicht Boost) pro Tag das Zielgebiet bestrahlt wurde."
 * extension[Einzeldosis].value[x] only Quantity

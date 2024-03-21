@@ -12,9 +12,10 @@ Description: "Dieses Profil beschreibt die Tumorkonferenz und die Therapieempfeh
 * intent MS
 
 * subject MS
+* subject 1..1
 * subject only Reference(Patient)
 
-* category 1..1 MS
+* category 1..1 MS 
 * category.coding from $mii-vs-onko-therapieplanung-typ
 * category.coding 1..* MS
 * category.coding.system = $mii-cs-onko-therapieplanung-typ
@@ -28,13 +29,13 @@ Description: "Dieses Profil beschreibt die Tumorkonferenz und die Therapieempfeh
 * addresses MS
 
 // Ist Melder/Ersteller gewünscht? --> Erstmal werden die Daten in den DIZen erstellt. Es wird gerade diskutiert, die von der MII generierten Daten in die Metadaten-Tags zu packen
-* contributor MS
+* contributor MS //würde ich daher rausnehmen
 
-* activity MS
-* activity.detail MS
+* activity 0..* MS
+* activity.detail 1..1 MS
 * activity.detail.code 1..1 MS
 * activity.detail.code.coding from $mii-vs-onko-therapieempfehlung-typ
-* activity.detail.code.coding.system = $mii-cs-onko-therapieempfehlung-typ
+* activity.detail.code.coding.system = $mii-cs-onko-therapie-typ
 * activity.detail.code.coding.system 1..1 MS
 * activity.detail.code.coding.code 1..1 MS
 

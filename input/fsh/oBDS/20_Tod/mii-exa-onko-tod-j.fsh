@@ -2,7 +2,7 @@ Instance: mii-exa-onko-tod-j
 InstanceOf: mii-pr-onko-tod
 Usage: #example
 * status = #final
-* code.coding = $SCT#184305005 // should this not be set as default?
+* code.coding = $SCT#184305005 
 * subject = Reference(Patient/example)
 
 * effectiveDateTime = "2024-02-08"

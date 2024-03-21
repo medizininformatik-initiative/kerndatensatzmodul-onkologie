@@ -3,7 +3,7 @@ Id: mii-cs-onko-genetische-variante-auspraegung
 Title: "MII CS Onkologie Genetische Variante Ausprägung"
 Description: "oBDS-spezifisches Codesystem Konsequenz der genetischen Variante Ausprägung"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-tod"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-genetische-variante-auspraegung"
 * ^status = #draft
 * ^experimental = false
 * insert Publisher

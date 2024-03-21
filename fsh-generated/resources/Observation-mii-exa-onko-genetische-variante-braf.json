@@ -24,41 +24,24 @@
       ]
     }
   ],
-  "component": [
-    {
-      "code": {
-        "coding": [
-          {
-            "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
-            "code": "conclusion-string"
-          }
-        ]
-      },
-      "valueString": "BRAF1 Class II Mutation"
-    },
-    {
-      "code": {
-        "coding": [
-          {
-            "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
-            "code": "molecular-consequence"
-          }
-        ]
-      },
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "code": "M",
-            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-genetische-variante-auspraegung",
-            "display": "Mutation"
-          }
-        ]
-      }
-    }
-  ],
   "status": "final",
   "subject": {
     "reference": "Patient/example"
   },
-  "effectiveDateTime": "2022-02-08"
+  "effectiveDateTime": "2022-02-08",
+  "note": [
+    {
+      "text": "BRAF1 Class II Mutation"
+    }
+  ],
+  "interpretation": [
+    {
+      "coding": [
+        {
+          "code": "M",
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-genetische-variante-auspraegung"
+        }
+      ]
+    }
+  ]
 }
