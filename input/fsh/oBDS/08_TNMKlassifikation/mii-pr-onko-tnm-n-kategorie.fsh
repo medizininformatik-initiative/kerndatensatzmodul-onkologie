@@ -23,7 +23,7 @@ Description: "TNM-Klassifikation: TNM N-Kategorie. Ausbreitung von regionären L
 * effectiveDateTime MS
 * effectiveDateTime obeys tnm-datum
 * hasMember MS
-* hasMember only Reference(MII_PR_Onko_Anzahl_Befallene_Lymphknoten or MII_PR_Onko_Anzahl_Untersuchte_Lymphknotenor MII_PR_Onko_Anzahl_Befallene_Sentinel_Lymphknoten or MII_PR_Onko_Anzahl_Untersuchte_Sentinel_Lymphknoten )
+* hasMember only Reference(MII_PR_Onko_Anzahl_Befallene_Lymphknoten or MII_PR_Onko_Anzahl_Untersuchte_Lymphknoten or MII_PR_Onko_Anzahl_Befallene_Sentinel_Lymphknoten or MII_PR_Onko_Anzahl_Untersuchte_Sentinel_Lymphknoten )
 * method MS
 * method ^short = "TNM Version"
 * method ^definition = "Gibt an, nach welcher Version des TNM klassifiziert wurde."
