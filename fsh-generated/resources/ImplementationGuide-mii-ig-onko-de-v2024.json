@@ -45,7 +45,7 @@
     {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.prozedur",
       "version": "2024.0.0-ballot",
-      "uri": "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/ImplementationGuide/mii-ig-prozedur-de-v2024",
+      "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.prozedur/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.prozedur",
       "id": "de_medizininformatikinitiative_kerndatensatz_prozedur"
     },
     {
@@ -98,6 +98,14 @@
         "name": "Example systemic therapy",
         "description": "Example systemic therapy",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/mii-cm-onko-tnm-uicc-snomed"
+        },
+        "name": "MII CM Onko TNM UICC SNOMED",
+        "description": "Mapping TNM UICC Codes zu SNOMED-CT",
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -1125,13 +1133,6 @@
       },
       {
         "reference": {
-          "reference": "ConceptMap/mii-cm-onko-tnm-uicc-snomed"
-        },
-        "name": "mii-cm-onko-tnm-uicc-snomed",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "Observation/mii-exa-onko-allgemeiner-leistungszustand-1"
         },
         "name": "mii-exa-onko-allgemeiner-leistungszustand-1",
@@ -1301,30 +1302,6 @@
       },
       {
         "reference": {
-          "reference": "DiagnosticReport/OncologicExamplePatientPathoReport1"
-        },
-        "name": "OncologicExamplePatientPathoReport1",
-        "description": "Pathoreport incl. Immunhistochemie",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Procedure/OncologicExamplePatientProcedure4"
-        },
-        "name": "OncologicExamplePatientProcedure4",
-        "description": "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie, Tumorresektion mittels Hysterektomie, bilateraler Adnexektomie, und atpyischer Lebersegmentresektion (Seg. II und V). Postoperativ: R0.",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Specimen/OncologicExamplePatientSample1"
-        },
-        "name": "OncologicExamplePatientSample1",
-        "description": "Tumorresektat Primärtumor",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
           "reference": "Patient/PatientKimMusterperson"
         },
         "name": "PatientKimMusterperson",
@@ -1337,6 +1314,14 @@
         "name": "PatientKimMusterperson-Diagnosis1",
         "description": "Primärdiagnose",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose"
+      },
+      {
+        "reference": {
+          "reference": "DiagnosticReport/PatientKimMusterperson-PathoReport-1"
+        },
+        "name": "PatientKimMusterperson-PathoReport-1",
+        "description": "Pathoreport incl. Immunhistochemie",
+        "exampleBoolean": true
       },
       {
         "reference": {
@@ -1364,6 +1349,22 @@
       },
       {
         "reference": {
+          "reference": "Procedure/PatientKimMusterperson-Procedure-4"
+        },
+        "name": "PatientKimMusterperson-Procedure-4",
+        "description": "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie, Tumorresektion mittels Hysterektomie, bilateraler Adnexektomie, und atpyischer Lebersegmentresektion (Seg. II und V). Postoperativ: R0.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Specimen/PatientKimMusterperson-Specimen-1"
+        },
+        "name": "PatientKimMusterperson-Specimen-1",
+        "description": "Tumorresektat Primärtumor",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "Procedure/PatientKimMusterperson-SystemicTherapy-1"
         },
         "name": "PatientKimMusterperson-SystemicTherapy-1",
@@ -1375,6 +1376,14 @@
           "reference": "Procedure/PatientKimMusterperson-SystemicTherapy-2"
         },
         "name": "PatientKimMusterperson-SystemicTherapy-2",
+        "description": ".",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/PatientKimMusterperson-SystemicTherapy-3"
+        },
+        "name": "PatientKimMusterperson-SystemicTherapy-3",
         "description": ".",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
       },
@@ -1396,6 +1405,14 @@
       },
       {
         "reference": {
+          "reference": "MedicationStatement/PatientKimMusterperson-SystemicTherapyMedication-3"
+        },
+        "name": "PatientKimMusterperson-SystemicTherapyMedication-3",
+        "description": ".",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
+      },
+      {
+        "reference": {
           "reference": "Observation/PatientKimMusterperson-TNM-Observation-1-M"
         },
         "name": "PatientKimMusterperson-TNM-Observation-1-M",
@@ -1409,6 +1426,29 @@
         "name": "PatientKimMusterperson-Tumorkonferenz-1",
         "description": ".",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
+      },
+      {
+        "reference": {
+          "reference": "CarePlan/PatientKimMusterperson-Tumorkonferenz-2"
+        },
+        "name": "PatientKimMusterperson-Tumorkonferenz-2",
+        "description": ".",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
+      },
+      {
+        "reference": {
+          "reference": "CarePlan/PatientKimMusterperson-Tumorkonferenz-4"
+        },
+        "name": "PatientKimMusterperson-Tumorkonferenz-4",
+        "description": ".",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PatientKimMusterperson-Variante-BRCAwt"
+        },
+        "name": "PatientKimMusterperson-Variante-BRCAwt",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-genetische-variante"
       },
       {
         "reference": {
@@ -1471,14 +1511,6 @@
           "reference": "CarePlan/Tumorkonferenz-2"
         },
         "name": "Tumorkonferenz-2",
-        "description": ".",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
-      },
-      {
-        "reference": {
-          "reference": "CarePlan/Tumorkonferenz-3"
-        },
-        "name": "Tumorkonferenz-3",
         "description": ".",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
       }

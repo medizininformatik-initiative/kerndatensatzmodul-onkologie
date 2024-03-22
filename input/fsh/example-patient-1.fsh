@@ -199,7 +199,7 @@ Description: "."
 // 
 // 
 
-Instance: OncologicExamplePatientProcedure4
+Instance: PatientKimMusterperson-Procedure-4
 InstanceOf: $mii-procedure
 Usage: #example  
 Description: "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie, Tumorresektion mittels Hysterektomie, bilateraler Adnexektomie, und atpyischer Lebersegmentresektion (Seg. II und V). Postoperativ: R0."
@@ -212,7 +212,7 @@ Description: "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie,
 * performedDateTime = 2021-09-30
 * outcome = $mii-cs-onko-residualstatus#R0
 
-Instance: OncologicExamplePatientPathoReport1
+Instance: PatientKimMusterperson-PathoReport-1
 InstanceOf: DiagnosticReport
 Usage: #example  
 Description: "Pathoreport incl. Immunhistochemie"
@@ -221,7 +221,7 @@ Description: "Pathoreport incl. Immunhistochemie"
 * code.coding = $LOINC#60568-3 "Pathological laboratory report"
 
 
-Instance: OncologicExamplePatientSample1
+Instance: PatientKimMusterperson-Specimen-1
 InstanceOf: Specimen
 Usage: #example  
 Description: "Tumorresektat Primärtumor"
@@ -288,7 +288,7 @@ Immunhistochemie: (Beispiel für einige Marker, in echtem Befund stehen viel meh
 Kommentar: Das immunhistochemische Markerprofil passt zu einem high-grade serösen Adenokarzinom des Ovars (Z.n. neoadjuvanter CTX)
 // Joa, auch mit zu Patho. ggfs. Modellierung eines PathoBefundberichts
 */
-Instance: Tumorkonferenz-3
+Instance: PatientKimMusterperson-Tumorkonferenz-2
 InstanceOf: MII_PR_Onko_Tumorkonferenz
 Usage: #example  
 Description: "."
@@ -297,7 +297,8 @@ Description: "."
 * intent = #plan
 * category.coding = $mii-cs-onko-therapieplanung-typ#postop "Prätherapeutische Tumorkonferenz" 
 * created = 2021-10-25
-* addresses = Reference(OncologicExamplePatientPrimaryDiagnosis2)
+* replaces = Reference(PatientKimMusterperson-Tumorkonferenz-2)
+* addresses = Reference(PatientKimMusterperson-PrimaryDiagnosis-2)
 * activity[0].detail.code = $mii-cs-onko-therapie-typ#CH
 * activity[0].detail.status = #completed // unklar, weil genaue Zyklenanzahl nicht beschrieben ist
 * activity[0].detail.statusReason = $mii-cs-onko-therapieabweichung#N
@@ -344,7 +345,7 @@ Description: "."
 * effectivePeriod.end = 2022-01-09
 * medicationCodeableConcept.coding[atcClassDe][0] = $ATC_DE#L01BC05 "Gemcitabin"
 * medicationCodeableConcept.coding[atcClassDe][1] = $ATC_DE#L01XA02 "Carboplatin"
-* partOf = Reference(SystemicTherapy1)
+* partOf = Reference(PatientKimMusterperson-SystemicTherapy-2)
 * note.text = "Gem-Carbo"
 
 /*
@@ -369,7 +370,9 @@ Description: ". "
 * effectiveDateTime = 2022-01-22
 * code.coding = $mii-cs-onko-verlauf-gesamtbeurteilung#V "Vollremission" // 
 * component[Tumor_Verlauf].code.coding = $SCT#277062004 "Status des Residualtumors"
-* component[Tumor_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-primaertumor#K "kein Tumor nachweisbar"
+* component[Tumor_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-primaertumor#T "Tumorreste (Residualtumor)"
+* component[Fernmetastasen_Verlauf].code.coding = $SCT#260874000 "Status der Metastasen"
+* component[Fernmetastasen_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-fernmetastasen#K "Keine Fernmetastasen nachweisbar"
 
 /*
 20.01.22 Tumorboard: 
@@ -377,3 +380,54 @@ Erhaltungstherapie mit Niraparib bei BRCAwt // genetische Variante
 Restaging in 3 Monaten mit CT Thorax/Abdomen und TM
 25.01.22 Beginn Niraparib 300mg d1-28 wdh d28 //Systemic Therapy
  */
+
+Instance: PatientKimMusterperson-Variante-BRCAwt
+InstanceOf: mii-pr-onko-genetische-variante
+Usage: #example
+* status = #final
+* subject = Reference(PatientKimMusterperson)
+//* effectiveDateTime = "2022-02-08"
+* note.text = "BRCAwt"
+* interpretation = $mii-cs-onko-genetische-variante-auspraegung#W "Wildtyp"
+
+Instance: PatientKimMusterperson-Tumorkonferenz-4
+InstanceOf: MII_PR_Onko_Tumorkonferenz
+Usage: #example  
+Description: "."
+* subject = Reference(PatientKimMusterperson)
+* status = #active
+* intent = #plan
+* category.coding = $mii-cs-onko-therapieplanung-typ#postop "postoperativ Tumorkonferenz" 
+* created = 2021-10-25
+* replaces = Reference(PatientKimMusterperson-Tumorkonferenz-3)
+* addresses = Reference(OncologicExamplePatientPrimaryDiagnosis2)
+
+* activity[0].detail.code = $mii-cs-onko-therapie-typ#ZS
+* activity[0].detail.status = #active 
+* activity[0].detail.statusReason = $mii-cs-onko-therapieabweichung#U "unbekannt"
+* description = "Erhaltungstherapie mit Niraparib bei BRCAwt"
+
+Instance: PatientKimMusterperson-SystemicTherapy-3
+InstanceOf: MII_PR_Onko_Systemische_Therapie
+Usage: #example
+Description: "."
+* subject = Reference(PatientKimMusterperson)
+* status = #completed
+* code.coding = $OPS#8-54 "Chemotherapie " // bei Bedarf spezifischer? 
+* extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K // impliziert 
+* extension[Stellung].valueCodeableConcept = $mii-cs-onko-systemische-therapie-stellung#A "adjuvant"
+* performedPeriod.start = 2021-11-08
+* performedPeriod.end = 2022-01-09
+
+Instance: PatientKimMusterperson-SystemicTherapyMedication-3
+InstanceOf: MII_PR_Onko_Systemische_Therapie_Medikation
+Usage: #example
+Description: "."
+* subject = Reference(PatientKimMusterperson)
+* status = #completed
+* effectivePeriod.start = 2021-11-08  
+* effectivePeriod.end = 2022-01-09
+* medicationCodeableConcept.coding[atcClassDe][0] = $ATC_DE#L01BC05 "Gemcitabin"
+* medicationCodeableConcept.coding[atcClassDe][1] = $ATC_DE#L01XA02 "Carboplatin"
+* partOf = Reference(PatientKimMusterperson-SystemicTherapy-3)
+* note.text = "Gem-Carbo"
