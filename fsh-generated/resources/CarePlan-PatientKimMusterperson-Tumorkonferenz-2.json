@@ -1,0 +1,59 @@
+{
+  "resourceType": "CarePlan",
+  "id": "PatientKimMusterperson-Tumorkonferenz-2",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapieplanung-typ",
+          "code": "postop",
+          "display": "Prätherapeutische Tumorkonferenz"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "Patient/PatientKimMusterperson"
+  },
+  "status": "completed",
+  "intent": "plan",
+  "created": "2021-10-25",
+  "replaces": [
+    {
+      "reference": "CarePlan/PatientKimMusterperson-Tumorkonferenz-2"
+    }
+  ],
+  "addresses": [
+    {
+      "reference": "PatientKimMusterperson-PrimaryDiagnosis-2"
+    }
+  ],
+  "activity": [
+    {
+      "detail": {
+        "code": {
+          "coding": [
+            {
+              "code": "CH",
+              "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ"
+            }
+          ]
+        },
+        "status": "completed",
+        "statusReason": {
+          "coding": [
+            {
+              "code": "N",
+              "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapieabweichung"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

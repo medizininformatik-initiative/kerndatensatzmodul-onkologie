@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "PatientKimMusterperson-Verlauf-2022-01-22",
+  "id": "PatientKimMusterperson-Verlauf-2021-09-15",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf"
@@ -10,13 +10,13 @@
     "reference": "Patient/PatientKimMusterperson"
   },
   "status": "final",
-  "effectiveDateTime": "2022-01-22",
+  "effectiveDateTime": "2021-09-15",
   "code": {
     "coding": [
       {
-        "code": "V",
+        "code": "P",
         "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung",
-        "display": "Vollremission"
+        "display": "Progression"
       }
     ]
   },
@@ -34,9 +34,29 @@
       "valueCodeableConcept": {
         "coding": [
           {
-            "code": "T",
+            "code": "P",
             "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-primaertumor",
-            "display": "Tumorreste (Residualtumor)"
+            "display": "Tumorreste (Residualtumor) Progress"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "277060007",
+            "system": "http://snomed.info/sct",
+            "display": "Status der lymphatischen Tumorinvasion"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "R",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-lymphknoten",
+            "display": "neu aufgetretenes Lymphknotenrezidiv"
           }
         ]
       }
@@ -56,7 +76,7 @@
           {
             "code": "K",
             "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen",
-            "display": "Keine Fernmetastasen nachweisbar"
+            "display": "Keine Änderung"
           }
         ]
       }
