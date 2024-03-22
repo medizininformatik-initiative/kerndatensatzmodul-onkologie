@@ -15,8 +15,13 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
 * subject only Reference(Patient)
 
 * code MS
-* code 1..1 
-* code from MII_VS_Onko_Verlauf_Gesamtbeurteilung (required)
+// * code 1..1  erst wieder reinschalten 
+// * code.coding = SNOMED/LOINC Beurteilung
+* value[x] MS
+* value[x] 0..1
+* value[x] only CodeableConcept
+
+* valueCodeableConcept from MII_VS_Onko_Verlauf_Gesamtbeurteilung
 
 * component MS
 * component 1..*

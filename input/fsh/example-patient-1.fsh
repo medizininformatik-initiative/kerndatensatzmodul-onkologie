@@ -1,10 +1,5 @@
 
 
-Instance: mii-exa-onko-example-Procedure
-InstanceOf: mii-pr-onko-genetische-variante
-Usage: #example
-* status = #final
-* subject = Reference(Patient/example)
 /* 
 KDS Onkologie – klinische Testdaten
 Disclaimer: Der Therapieverlauf entspricht einer möglichen leitliniengerechten Therapie, Daten und Verlauf sind für Testzwecke konstruiert, Ähnlichkeiten mit tatsächlichen Krankheitsverläufen sind zufällig.
@@ -47,9 +42,9 @@ Description: "Primärdiagnose"
 
 
 // Kann man auf Basis von "Mesenteriale retroperitoneale LK-Metastasen, V.a. Lebermetastasierung" ein NM-Staging machen? Ovar
-// T3 N1 M1b accoding to 8th TNM UICC ?? Dann 4 Tumorinstanzen
+// T3 N1 M1 accoding to 8th TNM UICC ?? Dann 4 Ressourcen von klinischem TNM 
 */
-Instance: OncologicExamplePatientPrimaryDiagnosis2
+Instance: PatientKimMusterperson-Diagnosis1
 InstanceOf: mii-pr-onko-diagnose
 Usage: #example
 Description: "Primärdiagnose"
@@ -63,7 +58,7 @@ Description: "Primärdiagnose"
 
 //15.06.2021 Aszitespunktion: mit malignen Tumorzellen. Zytologisch mögliches Ovarial-CA.
 // Modeling einer condition Ressource mit Ov-CA. ICD-10 + ICD-O Topopgraphe wahrscheinlich klar, ICD-O Morphologisch noch nicht
-Instance: OncologicExamplePatientProcedure2
+Instance: PatientKimMusterperson-Procedure-2
 InstanceOf: $mii-procedure
 Usage: #example  
 Description: "15.06.2021 Aszitespunktion"
@@ -75,7 +70,7 @@ Description: "15.06.2021 Aszitespunktion"
 //22.06.2021 CT Thorax: kein Hinweis auf Metastasen. 
 // Modelling als cM0
 
-Instance: OncologicExamplePatientProcedure3
+Instance: PatientKimMusterperson-Procedure-3
 InstanceOf: $mii-procedure
 Usage: #example  
 Description: "22.06.2021 CT Thorax: kein Hinweis auf Metastasen."
@@ -84,7 +79,7 @@ Description: "22.06.2021 CT Thorax: kein Hinweis auf Metastasen."
 * code.coding = $OPS#1-853.2 "Aszitespunktion"
 * performedDateTime = 2021-06-22
 
-Instance: TNM-M-Observation-1
+Instance: PatientKimMusterperson-TNM-Observation-1-M
 InstanceOf: MII_PR_Onko_TNM_M_Kategorie
 Usage: #example  
 Description: "."
@@ -98,7 +93,7 @@ Description: "."
 
 //Tumorboard 25.06.2021: Eindeutiges CT-Korrelat und zytologisch ED Ovarial-CA. Neoadjuvante Chemotherapie mit 3 Zyklen Carboplatin/Paxlitaxel, Intervall-Debulking im Verlauf. 
 // Modelling als Tumorboard mit Empfehlung Carboplatin/Paxlitaxel. Debulking deutet auf geplante partielle Resektionen hin.
-Instance: Tumorkonferenz-1
+Instance: PatientKimMusterperson-Tumorkonferenz-1
 InstanceOf: MII_PR_Onko_Tumorkonferenz
 Usage: #example  
 Description: "."
@@ -120,7 +115,7 @@ Description: "."
 
 //L01CD01 Paclitaxel
 //L01XA02 Carboplatin
-Instance: SystemicTherapy1
+Instance: PatientKimMusterperson-SystemicTherapy-1
 InstanceOf: MII_PR_Onko_Systemische_Therapie
 Usage: #example
 Description: "."
@@ -133,7 +128,7 @@ Description: "."
 * performedPeriod.end = 2021-09-05
 * basedOn = Reference(Tumorkonferenz-1)
 
-Instance: SystemicTherapyMedication1
+Instance: PatientKimMusterperson-SystemicTherapyMedication-1
 InstanceOf: MII_PR_Onko_Systemische_Therapie_Medikation
 Usage: #example
 Description: "."
@@ -154,7 +149,7 @@ Description: "."
 // Modelling als SystemicTherapy (Intent?),MedicationStatement, Anfangs-Enddauer als Procedure, ATC Codes raussuchen (von 21?)
 // die genaueren Informationen können als MedicationAdministration kodiert werden -> außerhalb oBDS
 
-Instance: Verlauf-2021-09-15
+Instance: PatientKimMusterperson-Verlauf-2021-09-15
 InstanceOf: MII_PR_Onko_Verlauf
 Usage: #example
 Description: ". "
@@ -307,7 +302,7 @@ Description: "."
 * activity[0].detail.status = #completed // unklar, weil genaue Zyklenanzahl nicht beschrieben ist
 * activity[0].detail.statusReason = $mii-cs-onko-therapieabweichung#N
 
-Instance: Verlauf-2021-09-25
+Instance: PatientKimMusterperson-Verlauf-2021-10-25
 InstanceOf: MII_PR_Onko_Verlauf
 Usage: #example
 Description: ". "
@@ -327,7 +322,7 @@ Daher Umstellung auf Carboplatin/Gemcitabine
 Humangenetische Vorstellung empfohlen // nicht über oBDS abbildbar
 */
 
-Instance: SystemicTherapy-2
+Instance: PatientKimMusterperson-SystemicTherapy-2
 InstanceOf: MII_PR_Onko_Systemische_Therapie
 Usage: #example
 Description: "."
@@ -339,7 +334,7 @@ Description: "."
 * performedPeriod.start = 2021-11-08
 * performedPeriod.end = 2022-01-09
 
-Instance: SystemicTherapyMedication-1
+Instance: PatientKimMusterperson-SystemicTherapyMedication-2
 InstanceOf: MII_PR_Onko_Systemische_Therapie_Medikation
 Usage: #example
 Description: "."
@@ -365,6 +360,16 @@ Beurteilung
 Regredienter Befund, bei Z.n. zwischenzeitig operativem Debulking
 */
 
+Instance: PatientKimMusterperson-Verlauf-2022-01-22
+InstanceOf: MII_PR_Onko_Verlauf
+Usage: #example
+Description: ". "
+* subject = Reference(PatientKimMusterperson)
+* status = #final
+* effectiveDateTime = 2022-01-22
+* code.coding = $mii-cs-onko-verlauf-gesamtbeurteilung#V "Vollremission" // 
+* component[Tumor_Verlauf].code.coding = $SCT#277062004 "Status des Residualtumors"
+* component[Tumor_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-primaertumor#K "kein Tumor nachweisbar"
 
 /*
 20.01.22 Tumorboard: 

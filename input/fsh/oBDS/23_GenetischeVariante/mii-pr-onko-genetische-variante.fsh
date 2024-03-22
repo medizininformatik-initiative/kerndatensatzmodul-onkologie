@@ -16,6 +16,8 @@ Description: "Genetische Variante wie im oBDS "
 * value[x] ^slicing.discriminator.type = #pattern
 * value[x] ^slicing.rules = #open
 * value[x] ^slicing.ordered = false
+* value[x] only CodeableConcept
+* valueCodeableConcept 0..1 MS
 
 
 Mapping: FHIR-oBDSGenetischeVariante
