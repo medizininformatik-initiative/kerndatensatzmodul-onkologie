@@ -219,6 +219,7 @@ Description: "Pathoreport incl. Immunhistochemie"
 * subject = Reference(PatientKimMusterperson)
 * status = #complete
 * code.coding = $LOINC#60568-3 "Pathological laboratory report"
+* conclusion = "Histologie: Resektat vom 30.09.2021Neoplasie des Ovars (Z.n. neoadjuvanter Therapie) (ICD-10-C56) Ovar o.n.A. (ICD-O-C56.9) Untersuchungsmaterial: Resektat WHO-Typ: Seröses Adenokarzinom (ICD-O M-8441/3) Lokale Tumorausbreitung: Ovartumor links mit einer max. Größe von 2,2 cm und tumorinfiltrierter Kapsel mit Nachweis von Tumorzellen auf der Ovaroberfläche, Anteil vitaler Tumorzellen von ca. 80 %. UICC-Klassifikation (8. Auflage): ypT3c. pM1b (HEP) L1. V0. Pn0 FIGO: IVB"
 
 
 Instance: PatientKimMusterperson-Specimen-1
@@ -315,6 +316,19 @@ Description: "."
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
 * valueCodeableConcept.coding = $UICC#V0
 
+Instance: FIGO-Observation-2
+InstanceOf: MII_PR_Onko_Weitere_Klassifikationen
+Usage: #example
+Description: "."
+* status = #completed
+* subject = Reference(PatientKimMusterperson)
+* code.coding = $SCT#385361009 "International Federation of Gynecology and Obstetrics tumor stage (observable entity)"
+* code.text = "FIGO Klassifikation für ovariale Tumore"
+* effectiveDateTime = 2021-06-22
+* method = $SCT#254386003 "International Federation of Gynecology and Obstetrics ovarian tumor staging system (tumor staging)"
+* partOf = Reference(PatientKimMusterperson-Procedure-4)
+* valueCodeableConcept.coding.code = #IVB
+
 
 /*
 Histologie: Resektat vom 30.09.2021
@@ -324,6 +338,7 @@ UICC-Klassifikation (8. Auflage): ypT3c. pM1b (HEP) L1. V0. Pn0 FIGO: IVB
 // dieser Text in den Pathobefundbericht, zusätzlich kodierung als einzelne Observations. 
 
 Immunhistochemie: (Beispiel für einige Marker, in echtem Befund stehen viel mehr)  Vereinzelt kräftige nukleäre Expression des Progesteronrezeptors. Positivität für P16 im Tumor. Der Proliferationsindex mittels MIB-1 liegt bei max. 38%. Mikroskopie: Partieller Nachweis von Muzin. 
+
 Kommentar: Das immunhistochemische Markerprofil passt zu einem high-grade serösen Adenokarzinom des Ovars (Z.n. neoadjuvanter CTX)
 // Joa, auch mit zu Patho. ggfs. Modellierung eines PathoBefundberichts
 */
@@ -407,7 +422,7 @@ Description: ". "
 * subject = Reference(PatientKimMusterperson)
 * status = #final
 * effectiveDateTime = 2022-01-22
-* code.coding = $mii-cs-onko-verlauf-gesamtbeurteilung#V "Vollremission" // 
+* code.coding = $mii-cs-onko-verlauf-gesamtbeurteilung#V "Vollremission" 
 * component[Tumor_Verlauf].code.coding = $SCT#277062004 "Status des Residualtumors"
 * component[Tumor_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-primaertumor#T "Tumorreste (Residualtumor)"
 * component[Fernmetastasen_Verlauf].code.coding = $SCT#260874000 "Status der Metastasen"
