@@ -1,6 +1,6 @@
 {
   "resourceType": "CarePlan",
-  "id": "Tumorkonferenz-2",
+  "id": "PatientKimMusterperson-Tumorkonferenz-3",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
@@ -11,8 +11,8 @@
       "coding": [
         {
           "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapieplanung-typ",
-          "code": "praeth",
-          "display": "Prätherapeutische Tumorkonferenz"
+          "code": "postop",
+          "display": "Posttherapeutische Tumorkonferenz"
         }
       ]
     }
@@ -22,10 +22,15 @@
   },
   "status": "completed",
   "intent": "plan",
-  "created": "2021-09-16",
+  "created": "2021-10-25",
+  "replaces": [
+    {
+      "reference": "CarePlan/PatientKimMusterperson-Tumorkonferenz-2"
+    }
+  ],
   "addresses": [
     {
-      "reference": "OncologicExamplePatientPrimaryDiagnosis2"
+      "reference": "PatientKimMusterperson-PrimaryDiagnosis-2"
     }
   ],
   "activity": [
@@ -34,7 +39,7 @@
         "code": {
           "coding": [
             {
-              "code": "OP",
+              "code": "CH",
               "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ"
             }
           ]
