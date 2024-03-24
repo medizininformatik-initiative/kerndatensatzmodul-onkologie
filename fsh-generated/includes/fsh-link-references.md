@@ -2,7 +2,6 @@
 [mii-exa-onko-strahlentherapie]: Procedure-mii-exa-onko-strahlentherapie.html
 [mii-exa-onko-systemische-therapie-1]: Procedure-mii-exa-onko-systemische-therapie-1.html
 [FIGO-Observation-2]: Observation-FIGO-Observation-2.html
-[mii-cm-onko-tnm-uicc-snomed]: ConceptMap-mii-cm-onko-tnm-uicc-snomed.html
 [MII_CS_Onko_Nebenwirkung_CTCAE_Grad]: CodeSystem-mii-cs-onko-nebenwirkung-ctcae-grad.html
 [MII_CS_Onko_Strahlentherapie_Intention]: CodeSystem-mii-cs-onko-strahlentherapie-intention.html
 [MII_CS_Onko_Systemische_Therapie_Art]: CodeSystem-mii-cs-onko-systemische-therapie-art.html
@@ -131,6 +130,7 @@
 [MII_VS_Onko_Verlauf_Gesamtbeurteilung]: ValueSet-mii-vs-onko-verlauf-gesamtbeurteilung.html
 [MII_VS_Onko_Verlauf_Lymphknoten]: ValueSet-mii-vs-onko-verlauf-lymphknoten.html
 [MII_VS_Onko_Verlauf_Primaertumor]: ValueSet-mii-vs-onko-verlauf-primaertumor.html
+[mii-cm-onko-tnm-uicc-snomed]: ConceptMap-mii-cm-onko-tnm-uicc-snomed.html
 [mii-exa-onko-allgemeiner-leistungszustand-1]: Observation-mii-exa-onko-allgemeiner-leistungszustand-1.html
 [mii-exa-onko-anzahl-befallene-lymphknoten-0]: Observation-mii-exa-onko-anzahl-befallene-lymphknoten-0.html
 [mii-exa-onko-anzahl-untersuchte-lymphknoten-23]: Observation-mii-exa-onko-anzahl-untersuchte-lymphknoten-23.html
