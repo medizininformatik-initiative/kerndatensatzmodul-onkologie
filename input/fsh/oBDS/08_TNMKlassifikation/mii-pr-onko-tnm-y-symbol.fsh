@@ -19,7 +19,7 @@ Description: "TNM-Klassifikation: TNM y-Symbol. Gibt an, ob die Klassifikation w
 * effectiveDateTime obeys tnm-datum
 * value[x] MS
 * value[x] only CodeableConcept
-* valueCodeableConcept = #SCT#421755005
+* valueCodeableConcept = $SCT#421755005
 * valueCodeableConcept ^short = "y-Symbol"
 * valueCodeableConcept ^definition = "Gibt an, ob die Klassifikation während oder nach initialer multimodaler Therapie erfolgte."
 * valueCodeableConcept ^comment = "y = Klassifikation erfolgte während oder nach initialer multimodaler Therapie; (leer) = „native“ Klassifikation"

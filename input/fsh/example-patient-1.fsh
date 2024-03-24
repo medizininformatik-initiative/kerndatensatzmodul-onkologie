@@ -240,7 +240,6 @@ Description: ". "
 * effectiveDateTime = 2021-06-22
 * method = #8
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
-* valueCodeableConcept.coding = $UICC#T3c
 
 Instance: TNM-T-Observation-2
 InstanceOf: MII_PR_Onko_TNM_T_Kategorie
@@ -253,7 +252,7 @@ Description: "Lokale Tumorausbreitung: Ovartumor links mit einer max. Größe vo
 * effectiveDateTime = 2021-06-22
 * method = #8
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
-* valueCodeableConcept
+* valueCodeableConcept.coding = $UICC#T3c
 
 Instance: TNM-M-Observation-2
 InstanceOf: MII_PR_Onko_TNM_M_Kategorie
@@ -266,6 +265,55 @@ Description: "."
 * effectiveDateTime = 2021-06-22
 * method = #8
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
+* valueCodeableConcept.coding = $UICC#M1b
+
+Instance: TNM-y-Symbol-Observation-2
+InstanceOf: MII_PR_Onko_TNM_y_Symbol
+Usage: #example  
+Description: "."
+* status = #completed
+* subject = Reference(PatientKimMusterperson)
+* code.coding = $LOINC#101658-3
+* effectiveDateTime = 2021-06-22
+* method = #8
+* partOf = Reference(PatientKimMusterperson-Procedure-4)
+* valueCodeableConcept.coding = $SCT#421755005
+
+Instance: TNM-Pn-Observation-2
+InstanceOf: MII_PR_Onko_TNM_Pn_Kategorie
+Usage: #example  
+Description: "."
+* status = #completed
+* subject = Reference(PatientKimMusterperson)
+* code.coding = $SCT#371513001
+* effectiveDateTime = 2021-06-22
+* method = #8
+* partOf = Reference(PatientKimMusterperson-Procedure-4)
+* valueCodeableConcept.coding = $UICC#Pn0
+
+Instance: TNM-L-Observation-2
+InstanceOf: MII_PR_Onko_TNM_L_Kategorie
+Usage: #example  
+Description: "."
+* status = #completed
+* subject = Reference(PatientKimMusterperson)
+* code.coding = $SCT#395715009
+* effectiveDateTime = 2021-06-22
+* method = #8
+* partOf = Reference(PatientKimMusterperson-Procedure-4)
+* valueCodeableConcept.coding = $UICC#L1
+
+Instance: TNM-V-Observation-2
+InstanceOf: MII_PR_Onko_TNM_L_Kategorie
+Usage: #example  
+Description: "."
+* status = #completed
+* subject = Reference(PatientKimMusterperson)
+* code.coding = $SCT#371493002
+* effectiveDateTime = 2021-06-22
+* method = #8
+* partOf = Reference(PatientKimMusterperson-Procedure-4)
+* valueCodeableConcept.coding = $UICC#V0
 
 
 /*
