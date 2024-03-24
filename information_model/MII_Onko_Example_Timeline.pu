@@ -5,7 +5,8 @@ object Patient {
 * name.given = "Kim"
 }
 
-object Primaerdiagnose #FFFF66{
+Patient -right-> Primaerdiagnose
+object Primaerdiagnose #FFFF66 {
 * recordedDate = 2021-06-10
 * subject = Reference(PatientKimMusterperson)
 * clinicalStatus = #active //
@@ -14,7 +15,7 @@ object Primaerdiagnose #FFFF66{
 * bodySite = $ICDO3#C56.9 "Ovar"
 }
 
-
+DiagnosticProcedure_1 -up--> Primaerdiagnose
 object DiagnosticProcedure_1 {
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
@@ -23,13 +24,16 @@ object DiagnosticProcedure_1 {
 * performedDateTime = 2021-06-10
 }
 
+DiagnosticProcedure_2 -up---> Primaerdiagnose
+
 object DiagnosticProcedure_2 {
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
 * code.coding = $OPS#1-853.2 "Aszitespunktion"
 * performedDateTime = 2021-06-15
-
 }
+DiagnosticProcedure_3 -up----> Primaerdiagnose
+
 object DiagnosticProcedure_3 {
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
@@ -37,7 +41,8 @@ object DiagnosticProcedure_3 {
 * performedDateTime = 2021-06-22
 }
 
-
+TNM_M_1 -up--> Primaerdiagnose
+TNM_M_1 -up-> DiagnosticProcedure_3 
 object TNM_M_1 {
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
@@ -47,6 +52,7 @@ object TNM_M_1 {
 * method = #8
 * partOf = Reference(PatientKimMusterperson-Procedure-3)
 }
+Primaerdiagnose -right-> Tumorboard_1
 
 object Tumorboard_1 {
 * subject = Reference(PatientKimMusterperson)
@@ -62,6 +68,7 @@ object Tumorboard_1 {
 * activity[1].detail.status = #completed
 * activity[1].detail.statusReason = $mii-cs-onko-therapieabweichung#N
 }
+SystemicTherapy_1 -up--> Tumorboard_1
 object SystemicTherapy_1 {
 * subject = Reference(PatientKimMusterperson)
 * status = #completed
@@ -73,6 +80,7 @@ object SystemicTherapy_1 {
 * basedOn = Reference(Tumorkonferenz-1)
 }
 
+SystemicTherapyMedication_1 -up->SystemicTherapy_1 
 object SystemicTherapyMedication_1 {
 * subject = Reference(PatientKimMusterperson)
 * status = #completed
@@ -83,8 +91,11 @@ object SystemicTherapyMedication_1 {
 * partOf = Reference(SystemicTherapy_1)
 * note.text = "CarboTax"
 }
+object SystemicTherapyMedication_1_Administration_1_2_3 {
+* Detailinformation zu Dosis und Applikation
+}
 
-
+Tumorboard_1 -right-> Verlauf_21_09_15 
 object Verlauf_21_09_15 #22FF22 {
 * subject = Reference(PatientKimMusterperson)
 * status = #final
@@ -98,8 +109,8 @@ object Verlauf_21_09_15 #22FF22 {
 * component[Fernmetastasen_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-fernmetastasen#K "Keine Änderung"
 }
 
-
-object Tumorboard_2{
+Verlauf_21_09_15  -right-> Tumorboard_2
+object Tumorboard_2 {
 * subject = Reference(PatientKimMusterperson)
 * status = #completed
 * intent = #plan
@@ -111,6 +122,8 @@ object Tumorboard_2{
 * activity[0].detail.statusReason = $mii-cs-onko-therapieabweichung#N
 }
 
+Verlauf_21_09_15 --> SurgicalProcedure_1
+ Tumorboard_2 <-right--SurgicalProcedure_1 
 object SurgicalProcedure_1 {
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
@@ -121,6 +134,7 @@ object SurgicalProcedure_1 {
 * performedDateTime = 2021-09-30
 * outcome = $mii-cs-onko-residualstatus#R0
 }
+TNM_Klassifikation_2 -up-> SurgicalProcedure_1
 object TNM_Klassifikation_2 {
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
@@ -129,6 +143,7 @@ object TNM_Klassifikation_2 {
 * method = #8
 * partOf = Reference(OncologicExamplePatientProcedure4)
 }
+TNM_T_Kategorie_2 -up-> TNM_Klassifikation_2
 object TNM_T_Kategorie_2 {
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
@@ -139,7 +154,7 @@ object TNM_T_Kategorie_2 {
 * partOf = Reference(OncologicExamplePatientProcedure4)
 * valueCodeableConcept.coding = $UICC#T3c
 }
-
+TNM_M_Kategorie_2 -up-> TNM_Klassifikation_2
 object TNM_M_Kategorie_2 {
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
@@ -151,6 +166,7 @@ object TNM_M_Kategorie_2 {
 * valueCodeableConcept.coding = $UICC#M1b
 }
 
+TNM_y_Symbol_2 -up--> TNM_Klassifikation_2
 object TNM_y_Symbol_2 {
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
@@ -160,7 +176,7 @@ object TNM_y_Symbol_2 {
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
 * valueCodeableConcept.coding = $SCT#421755005
 }
-
+TNM_Pn_Observation_2 -up--> TNM_Klassifikation_2
 object TNM_Pn_Observation_2 {
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
@@ -171,6 +187,7 @@ object TNM_Pn_Observation_2 {
 * valueCodeableConcept.coding = $UICC#Pn0
 }
 
+TNM_L_Observation_2 -up--> TNM_Klassifikation_2
 object TNM_L_Observation_2 {
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
@@ -180,6 +197,7 @@ object TNM_L_Observation_2 {
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
 * valueCodeableConcept.coding = $UICC#L1
 }
+TNM_V_Observation_2 -up--> TNM_Klassifikation_2 
 object TNM_V_Observation_2 {
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
@@ -189,7 +207,7 @@ object TNM_V_Observation_2 {
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
 * valueCodeableConcept.coding = $UICC#V0
 }
-
+FIGO_Observation_2 -up-->  SurgicalProcedure_1
 object FIGO_Observation_2 {
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
@@ -200,6 +218,8 @@ object FIGO_Observation_2 {
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
 * valueCodeableConcept.coding.code = #IVB
 }
+Tumorboard_2 -right-> Verlauf_21_10_25
+Verlauf_21_10_25-right->Tumorboard_3 
 object Tumorboard_3 {
 * subject = Reference(PatientKimMusterperson)
 * status = #completed
@@ -220,7 +240,7 @@ object Verlauf_21_10_25 #22FF22 {
 * component[Tumor_Verlauf].code.coding = $SCT#277062004 "Status des Residualtumors"
 * component[Tumor_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-primaertumor#K "kein Tumor nachweisbar"
 }
-
+SystemicTherapy_2 -up-> Tumorboard_3
 object SystemicTherapy_2 {
 * subject = Reference(PatientKimMusterperson)
 * status = #completed
@@ -230,6 +250,8 @@ object SystemicTherapy_2 {
 * performedPeriod.start = 2021-11-08
 * performedPeriod.end = 2022-01-09
 }
+
+SystemicTherapyMedication_2 -up-> SystemicTherapy_2
 object SystemicTherapyMedication_2 {
 * subject = Reference(PatientKimMusterperson)
 * status = #completed
@@ -240,6 +262,8 @@ object SystemicTherapyMedication_2 {
 * partOf = Reference(PatientKimMusterperson-SystemicTherapy-2)
 * note.text = "Gem-Carbo"
 }
+
+Tumorboard_3 -right->Verlauf_22_01_22
 object Verlauf_22_01_22 #22FF22 {
 * subject = Reference(PatientKimMusterperson)
 * status = #final
@@ -250,13 +274,14 @@ object Verlauf_22_01_22 #22FF22 {
 * component[Fernmetastasen_Verlauf].code.coding = $SCT#260874000 "Status der Metastasen"
 * component[Fernmetastasen_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-fernmetastasen#K "Keine Fernmetastasen nachweisbar"
 }
+GenetischeVariante_1 -up--> Tumorboard_3
 object GenetischeVariante_1 {
 * status = #final
 * subject = Reference(PatientKimMusterperson)
 * note.text = "BRCAwt"
 * interpretation = $mii-cs-onko-genetische-variante-auspraegung#W "Wildtyp"
 }
-
+Tumorboard_3 -right->Tumorboard_4
 object Tumorboard_4 {
 * subject = Reference(PatientKimMusterperson)
 * status = #active
@@ -270,7 +295,7 @@ object Tumorboard_4 {
 * activity[0].detail.statusReason = $mii-cs-onko-therapieabweichung#U "unbekannt"
 * description = "Erhaltungstherapie mit Niraparib bei BRCAwt"
 }
-
+SystemicTherapy_3 -up->Tumorboard_4
 object SystemicTherapy_3 {
 * subject = Reference(PatientKimMusterperson)
 * status = #completed
@@ -280,6 +305,7 @@ object SystemicTherapy_3 {
 * performedPeriod.start = 2021-11-08
 * performedPeriod.end = 2022-01-09
 }
+SystemicTherapyMedication_3 -up-> SystemicTherapy_3
 object SystemicTherapyMedication_3 {
 * subject = Reference(PatientKimMusterperson)
 * status = #completed
