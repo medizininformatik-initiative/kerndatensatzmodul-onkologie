@@ -192,12 +192,7 @@ Description: "."
 * addresses = Reference(PatientKimMusterperson-Diagnosis-1)
 * activity[0].detail.code = $mii-cs-onko-therapie-typ#OP
 * activity[0].detail.status = #completed
-* activity[0].detail.statusReason = $mii-cs-onko-therapieabweichung#N
-
-
-//
-// 
-// 
+* activity[0].detail.statusReason = $mii-cs-onko-therapieabweichung#N 
 
 Instance: PatientKimMusterperson-Procedure-4
 InstanceOf: $mii-procedure
