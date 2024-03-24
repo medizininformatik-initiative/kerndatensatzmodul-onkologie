@@ -177,6 +177,10 @@
 [PatientKimMusterperson-Verlauf-2021-10-25]: Observation-PatientKimMusterperson-Verlauf-2021-10-25.html
 [PatientKimMusterperson-Verlauf-2022-01-22]: Observation-PatientKimMusterperson-Verlauf-2022-01-22.html
 [TNM-Klassifikation-Observation-2]: Observation-TNM-Klassifikation-Observation-2.html
+[TNM-L-Observation-2]: Observation-TNM-L-Observation-2.html
 [TNM-M-Observation-2]: Observation-TNM-M-Observation-2.html
+[TNM-Pn-Observation-2]: Observation-TNM-Pn-Observation-2.html
 [TNM-T-Observation-2]: Observation-TNM-T-Observation-2.html
+[TNM-V-Observation-2]: Observation-TNM-V-Observation-2.html
+[TNM-y-Symbol-Observation-2]: Observation-TNM-y-Symbol-Observation-2.html
 [Tumorkonferenz-2]: CarePlan-Tumorkonferenz-2.html
