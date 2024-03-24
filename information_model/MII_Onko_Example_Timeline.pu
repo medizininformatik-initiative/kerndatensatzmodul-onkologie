@@ -1,0 +1,165 @@
+@startuml MII KDS Erweiterungsmodul Onkologie
+object Patient {
+* birthDate = 1956-03-14
+* name.family = "Musterperson"
+* name.given = "Kim"
+}
+
+object Primaerdiagnose #FFFF66{
+* recordedDate = 2021-06-10
+* subject = Reference(PatientKimMusterperson)
+* clinicalStatus = #active //
+* verificationStatus.coding[primaertumorDiagnosesicherung].code = #2 "klinische Diagnostik" 
+* code.coding  = $ICD10GM#C48.2 "Bösartige Neubildung des Retroperitoneums und Peritoneums - Peritoneum, nicht näher bezeichnet "
+* bodySite = $ICDO3#C56.9 "Ovar"
+}
+
+
+object DiagnosticProcedure_1 {
+* status = #completed
+* subject = Reference(PatientKimMusterperson)
+* code.coding = $OPS#3-225 "CT des Abdomens mit KM"
+* code.coding.version = "OPS 2024"
+* performedDateTime = 2021-06-10
+}
+
+object DiagnosticProcedure_2 {
+* status = #completed
+* subject = Reference(PatientKimMusterperson)
+* code.coding = $OPS#1-853.2 "Aszitespunktion"
+* performedDateTime = 2021-06-15
+
+}
+object DiagnosticProcedure_3 {
+* status = #completed
+* subject = Reference(PatientKimMusterperson)
+* code.coding = $OPS#3-222 "CT Thorax"
+* performedDateTime = 2021-06-22
+}
+
+
+object TNM_M_1 {
+* status = #completed
+* subject = Reference(PatientKimMusterperson)
+* code.extension[cpPraefix].valueCodeableConcept = $UICC#c
+* code.coding = $SCT#1-853.2 "M - Distant metastasis stage"
+* effectiveDateTime = 2021-06-22
+* method = #8
+* partOf = Reference(PatientKimMusterperson-Procedure-3)
+}
+
+object Tumorboard_1 {
+* subject = Reference(PatientKimMusterperson)
+* status = #completed
+* intent = #plan
+* category.coding = $mii-cs-onko-therapieplanung-typ#praeth "Prätherapeutische Tumorkonferenz" 
+* created = 2021-06-25
+* addresses = Reference(OncologicExamplePatientPrimaryDiagnosis2)
+* activity[0].detail.code = $mii-cs-onko-therapie-typ#CH "Chemotherapie"
+* activity[0].detail.status = #completed // Es wurden nur 3 Zyklen geplant, die alle durchgeführt wurden
+* activity[0].detail.statusReason = $mii-cs-onko-therapieabweichung#N
+* activity[1].detail.code = $mii-cs-onko-therapie-typ#OP
+* activity[1].detail.status = #completed
+* activity[1].detail.statusReason = $mii-cs-onko-therapieabweichung#N
+}
+object SystemicTherapy_1 {
+* subject = Reference(PatientKimMusterperson)
+* status = #completed
+* code.coding = $OPS#8-54 "Chemotherapie " // bei Bedarf spezifischer? 
+* extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K // impliziert 
+* extension[Stellung].valueCodeableConcept = $mii-cs-onko-systemische-therapie-stellung#N "neo"
+* performedPeriod.start = 2021-07-05
+* performedPeriod.end = 2021-09-05
+* basedOn = Reference(Tumorkonferenz-1)
+}
+
+object SystemicTherapyMedication_1 {
+* subject = Reference(PatientKimMusterperson)
+* status = #completed
+* effectivePeriod.start = 2021-07-05  
+* effectivePeriod.end = 2021-09-05
+* medicationCodeableConcept.coding[atcClassDe][0] = $ATC_DE#L01CD01 "Paclitaxel"
+* medicationCodeableConcept.coding[atcClassDe][1] = $ATC_DE#L01XA02 "Carboplatin"
+* partOf = Reference(SystemicTherapy1)
+* note.text = "CarboTax"
+}
+
+
+object Verlauf #22FF22 {
+* subject = Reference(PatientKimMusterperson)
+* status = #final
+* effectiveDateTime = 2021-09-15
+* code.coding = $mii-cs-onko-verlauf-gesamtbeurteilung#P "Progression"
+* component[Tumor_Verlauf].code.coding = $SCT#277062004 "Status des Residualtumors"
+* component[Tumor_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-primaertumor#P "Tumorreste (Residualtumor) Progress"
+* component[Lymphknoten_Verlauf].code.coding =  $SCT#277060007 "Status der lymphatischen Tumorinvasion"
+* component[Lymphknoten_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-lymphknoten#R "neu aufgetretenes Lymphknotenrezidiv" 
+* component[Fernmetastasen_Verlauf].code.coding = $SCT#260874000 "Status der Metastasen"
+* component[Fernmetastasen_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-fernmetastasen#K "Keine Änderung"
+}
+
+
+object Tumorboard_2{
+* subject = Reference(PatientKimMusterperson)
+* status = #completed
+* intent = #plan
+* category.coding = $mii-cs-onko-therapieplanung-typ#praeth "Prätherapeutische Tumorkonferenz" 
+* created = 2021-09-16
+* addresses = Reference(OncologicExamplePatientPrimaryDiagnosis2)
+* activity[0].detail.code = $mii-cs-onko-therapie-typ#OP
+* activity[0].detail.status = #completed
+* activity[0].detail.statusReason = $mii-cs-onko-therapieabweichung#N
+}
+
+object SurgicalProcedure_1 {
+* status = #completed
+* subject = Reference(PatientKimMusterperson)
+* code.coding[0] = $OPS#5-547.0 "Resektion von Gewebe ohne sichere Organzuordnung - intraperitoneal" // alternativ 5-590.8 Resektion von Gewebe ohne sichere Organzuordnung
+* code.coding[1] = $OPS#5-683 "Hysterektomie"
+* code.coding[2] = $OPS#5-661 "bilaterale Adnexektomie / Salpingektomie"
+* code.coding[3] = $OPS#5-501 "atypische Lebersegmentresektion"
+* performedDateTime = 2021-09-30
+* outcome = $mii-cs-onko-residualstatus#R0
+}
+object TNM_Klassifikation_2 {
+* status = #completed
+* subject = Reference(PatientKimMusterperson)
+* code.coding = $SCT#1-853.2 "M - Distant metastasis stage"
+* effectiveDateTime = 2021-06-22
+* method = #8
+* partOf = Reference(OncologicExamplePatientProcedure4)
+}
+object TNM_T_Kategorie_2 {
+* status = #completed
+* subject = Reference(PatientKimMusterperson)
+* code.extension[cpPraefix].valueCodeableConcept = $UICC#p
+* code.coding = $SCT#1-853.2 "M - Distant metastasis stage"
+* effectiveDateTime = 2021-06-22
+* method = #8
+* partOf = Reference(OncologicExamplePatientProcedure4)
+}
+object TNM_N_Kategorie_2 {
+
+}
+object TNM_M_Kategorie_2 {
+
+}
+object TNM_y_Symbol_2 {
+
+}
+object TNM 
+legend right 
+|Color|Type|
+|<#FFFF66>|Condition|
+|<#CCCCFF>|CarePlan|
+|<#AAAAFF>|Procedure|
+|<#DDFFDD>|ServiceRequest|
+|<#88FF88>|DiagnosticReport|
+|<#22FF22>|Observation|
+|<#FFCCFF>|Medication|
+|<#FF9999>|AdverseEvent|
+|<#44FFFF>|Specimen|
+endlegend
+
+
+@enduml

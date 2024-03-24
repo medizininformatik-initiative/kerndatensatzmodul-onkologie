@@ -24,7 +24,7 @@ Usage: #example
 Description: "10.06.2021 CT Abdomen mit KM"
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
-* code.coding = $OPS#3-225 "Computertomographie des Abdomens mit Kontrastmittel"
+* code.coding = $OPS#3-222 "Computertomographie des Abdomens mit Kontrastmittel"
 * code.coding.version = "OPS 2024"
 * performedDateTime = 2021-06-10
 /*
@@ -76,7 +76,7 @@ Usage: #example
 Description: "22.06.2021 CT Thorax: kein Hinweis auf Metastasen."
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
-* code.coding = $OPS#1-853.2 "Aszitespunktion"
+* code.coding = $OPS#1-853.2 "CT Thorax"
 * performedDateTime = 2021-06-22
 
 Instance: PatientKimMusterperson-TNM-Observation-1-M
@@ -89,7 +89,7 @@ Description: "."
 * code.coding = $SCT#1-853.2 "M - Distant metastasis stage"
 * effectiveDateTime = 2021-06-22
 * method = #8
-* partOf = Reference(OncologicExamplePatientProcedure3)
+* partOf = Reference(PatientKimMusterperson-Procedure-3)
 
 //Tumorboard 25.06.2021: Eindeutiges CT-Korrelat und zytologisch ED Ovarial-CA. Neoadjuvante Chemotherapie mit 3 Zyklen Carboplatin/Paxlitaxel, Intervall-Debulking im Verlauf. 
 // Modelling als Tumorboard mit Empfehlung Carboplatin/Paxlitaxel. Debulking deutet auf geplante partielle Resektionen hin.
@@ -226,7 +226,8 @@ InstanceOf: Specimen
 Usage: #example  
 Description: "Tumorresektat Primärtumor"
 * subject = Reference(PatientKimMusterperson)
-
+* identifier.value = "12345678"
+* collection.collectedDateTime = 2021-09-30 
 
 
 Instance: TNM-Klassifikation-Observation-2
@@ -235,10 +236,11 @@ Usage: #example
 Description: ". "
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
-* code.coding = $SCT#1-853.2 "M - Distant metastasis stage"
+* code.coding = $SCT#263642008 "Tumor-node-metastasis (TNM) staging classification (attribute)"
 * effectiveDateTime = 2021-06-22
 * method = #8
-* partOf = Reference(OncologicExamplePatientProcedure4)
+* partOf = Reference(PatientKimMusterperson-Procedure-4)
+* valueCodeableConcept.coding = $UICC#T3c
 
 Instance: TNM-T-Observation-2
 InstanceOf: MII_PR_Onko_TNM_T_Kategorie
@@ -247,22 +249,11 @@ Description: "Lokale Tumorausbreitung: Ovartumor links mit einer max. Größe vo
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
 * code.extension[cpPraefix].valueCodeableConcept = $UICC#p
-* code.coding = $SCT#1-853.2 "M - Distant metastasis stage"
+* code.coding = $SCT#384625004 "pT category (observable entity)"
 * effectiveDateTime = 2021-06-22
 * method = #8
-* partOf = Reference(OncologicExamplePatientProcedure4)
-
-Instance: TNM-N-Observation-2
-InstanceOf: MII_PR_Onko_TNM_N_Kategorie
-Usage: #example  
-Description: "."
-* status = #completed
-* subject = Reference(PatientKimMusterperson)
-* code.extension[cpPraefix].valueCodeableConcept = $UICC#p
-* code.coding = $SCT#1-853.2 "M - Distant metastasis stage"
-* effectiveDateTime = 2021-06-22
-* method = #8
-* partOf = Reference(OncologicExamplePatientProcedure4)
+* partOf = Reference(PatientKimMusterperson-Procedure-4)
+* valueCodeableConcept
 
 Instance: TNM-M-Observation-2
 InstanceOf: MII_PR_Onko_TNM_M_Kategorie
@@ -271,10 +262,10 @@ Description: "."
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
 * code.extension[cpPraefix].valueCodeableConcept = $UICC#p
-* code.coding = $SCT#1-853.2 "M - Distant metastasis stage"
+* code.coding = $SCT#371497001 "pM category (observable entity)"
 * effectiveDateTime = 2021-06-22
 * method = #8
-* partOf = Reference(OncologicExamplePatientProcedure4)
+* partOf = Reference(PatientKimMusterperson-Procedure-4)
 
 
 /*
@@ -427,7 +418,6 @@ Description: "."
 * status = #completed
 * effectivePeriod.start = 2021-11-08  
 * effectivePeriod.end = 2022-01-09
-* medicationCodeableConcept.coding[atcClassDe][0] = $ATC_DE#L01BC05 "Gemcitabin"
-* medicationCodeableConcept.coding[atcClassDe][1] = $ATC_DE#L01XA02 "Carboplatin"
+* medicationCodeableConcept.coding[atcClassDe][0] = $ATC_DE#L01XK02  "Niraparib"
 * partOf = Reference(PatientKimMusterperson-SystemicTherapy-3)
-* note.text = "Gem-Carbo"
+* note.text = "Niraparib"
