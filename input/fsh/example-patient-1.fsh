@@ -44,7 +44,7 @@ Description: "Primärdiagnose"
 // Kann man auf Basis von "Mesenteriale retroperitoneale LK-Metastasen, V.a. Lebermetastasierung" ein NM-Staging machen? Ovar
 // T3 N1 M1 accoding to 8th TNM UICC ?? Dann 4 Ressourcen von klinischem TNM 
 */
-Instance: PatientKimMusterperson-Diagnosis1
+Instance: PatientKimMusterperson-Diagnosis-1
 InstanceOf: mii-pr-onko-diagnose
 Usage: #example
 Description: "Primärdiagnose"
@@ -126,7 +126,7 @@ Description: "."
 * extension[Stellung].valueCodeableConcept = $mii-cs-onko-systemische-therapie-stellung#N "neo"
 * performedPeriod.start = 2021-07-05
 * performedPeriod.end = 2021-09-05
-* basedOn = Reference(Tumorkonferenz-1)
+* basedOn = Reference(PatientKimMusterperson-Tumorkonferenz-1)
 
 Instance: PatientKimMusterperson-SystemicTherapyMedication-1
 InstanceOf: MII_PR_Onko_Systemische_Therapie_Medikation
@@ -180,7 +180,7 @@ Description: ". "
 //Deutlicher Tumorprogress. OP zur histologischen Sicherung bereits geplant, optimales Debulking anstreben.
 // deutlicher Tumorprogress unklar zu kodieren. Verlaufsbeobachtung und CarePlan
 
-Instance: Tumorkonferenz-2
+Instance: PatientKimMusterperson-Tumorkonferenz-2
 InstanceOf: MII_PR_Onko_Tumorkonferenz
 Usage: #example  
 Description: "."
@@ -189,7 +189,7 @@ Description: "."
 * intent = #plan
 * category.coding = $mii-cs-onko-therapieplanung-typ#praeth "Prätherapeutische Tumorkonferenz" 
 * created = 2021-09-16
-* addresses = Reference(OncologicExamplePatientPrimaryDiagnosis2)
+* addresses = Reference(PatientKimMusterperson-Diagnosis-1)
 * activity[0].detail.code = $mii-cs-onko-therapie-typ#OP
 * activity[0].detail.status = #completed
 * activity[0].detail.statusReason = $mii-cs-onko-therapieabweichung#N
@@ -342,14 +342,14 @@ Immunhistochemie: (Beispiel für einige Marker, in echtem Befund stehen viel meh
 Kommentar: Das immunhistochemische Markerprofil passt zu einem high-grade serösen Adenokarzinom des Ovars (Z.n. neoadjuvanter CTX)
 // Joa, auch mit zu Patho. ggfs. Modellierung eines PathoBefundberichts
 */
-Instance: PatientKimMusterperson-Tumorkonferenz-2
+Instance: PatientKimMusterperson-Tumorkonferenz-3
 InstanceOf: MII_PR_Onko_Tumorkonferenz
 Usage: #example  
 Description: "."
 * subject = Reference(PatientKimMusterperson)
 * status = #completed
 * intent = #plan
-* category.coding = $mii-cs-onko-therapieplanung-typ#postop "Prätherapeutische Tumorkonferenz" 
+* category.coding = $mii-cs-onko-therapieplanung-typ#postop "Posttherapeutische Tumorkonferenz" 
 * created = 2021-10-25
 * replaces = Reference(PatientKimMusterperson-Tumorkonferenz-2)
 * addresses = Reference(PatientKimMusterperson-PrimaryDiagnosis-2)
@@ -455,7 +455,6 @@ Description: "."
 * created = 2021-10-25
 * replaces = Reference(PatientKimMusterperson-Tumorkonferenz-3)
 * addresses = Reference(OncologicExamplePatientPrimaryDiagnosis2)
-
 * activity[0].detail.code = $mii-cs-onko-therapie-typ#ZS
 * activity[0].detail.status = #active 
 * activity[0].detail.statusReason = $mii-cs-onko-therapieabweichung#U "unbekannt"

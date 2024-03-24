@@ -80,12 +80,12 @@ object SystemicTherapyMedication_1 {
 * effectivePeriod.end = 2021-09-05
 * medicationCodeableConcept.coding[atcClassDe][0] = $ATC_DE#L01CD01 "Paclitaxel"
 * medicationCodeableConcept.coding[atcClassDe][1] = $ATC_DE#L01XA02 "Carboplatin"
-* partOf = Reference(SystemicTherapy1)
+* partOf = Reference(SystemicTherapy_1)
 * note.text = "CarboTax"
 }
 
 
-object Verlauf #22FF22 {
+object Verlauf_21_09_15 #22FF22 {
 * subject = Reference(PatientKimMusterperson)
 * status = #final
 * effectiveDateTime = 2021-09-15
@@ -200,9 +200,95 @@ object FIGO_Observation_2 {
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
 * valueCodeableConcept.coding.code = #IVB
 }
+object Tumorboard_3 {
+* subject = Reference(PatientKimMusterperson)
+* status = #completed
+* intent = #plan
+* category.coding = $mii-cs-onko-therapieplanung-typ#postop "Posttherapeutische Tumorkonferenz" 
+* created = 2021-10-25
+* replaces = Reference(PatientKimMusterperson-Tumorkonferenz-2)
+* addresses = Reference(PatientKimMusterperson-PrimaryDiagnosis-2)
+* activity[0].detail.code = $mii-cs-onko-therapie-typ#CH
+* activity[0].detail.status = #completed // unklar, weil genaue Zyklenanzahl nicht beschrieben ist
+* activity[0].detail.statusReason = $mii-cs-onko-therapieabweichung#N
+} 
+object Verlauf_21_10_25 #22FF22 {
+    * subject = Reference(PatientKimMusterperson)
+* status = #final
+* effectiveDateTime = 2021-10-25
+* code.coding = $mii-cs-onko-verlauf-gesamtbeurteilung#V "Vollremission" // 26 Tage postop, aber sehr unsicher weil Neoadjuvanter progress
+* component[Tumor_Verlauf].code.coding = $SCT#277062004 "Status des Residualtumors"
+* component[Tumor_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-primaertumor#K "kein Tumor nachweisbar"
+}
 
+object SystemicTherapy_2 {
+* subject = Reference(PatientKimMusterperson)
+* status = #completed
+* code.coding = $OPS#8-54 "Chemotherapie " // bei Bedarf spezifischer? 
+* extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K // impliziert 
+* extension[Stellung].valueCodeableConcept = $mii-cs-onko-systemische-therapie-stellung#A "adjuvant"
+* performedPeriod.start = 2021-11-08
+* performedPeriod.end = 2022-01-09
+}
+object SystemicTherapyMedication_2 {
+* subject = Reference(PatientKimMusterperson)
+* status = #completed
+* effectivePeriod.start = 2021-11-08  
+* effectivePeriod.end = 2022-01-09
+* medicationCodeableConcept.coding[atcClassDe][0] = $ATC_DE#L01BC05 "Gemcitabin"
+* medicationCodeableConcept.coding[atcClassDe][1] = $ATC_DE#L01XA02 "Carboplatin"
+* partOf = Reference(PatientKimMusterperson-SystemicTherapy-2)
+* note.text = "Gem-Carbo"
+}
+object Verlauf_22_01_22 #22FF22 {
+* subject = Reference(PatientKimMusterperson)
+* status = #final
+* effectiveDateTime = 2022-01-22
+* code.coding = $mii-cs-onko-verlauf-gesamtbeurteilung#V "Vollremission" 
+* component[Tumor_Verlauf].code.coding = $SCT#277062004 "Status des Residualtumors"
+* component[Tumor_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-primaertumor#T "Tumorreste (Residualtumor)"
+* component[Fernmetastasen_Verlauf].code.coding = $SCT#260874000 "Status der Metastasen"
+* component[Fernmetastasen_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-fernmetastasen#K "Keine Fernmetastasen nachweisbar"
+}
+object GenetischeVariante_1 {
+* status = #final
+* subject = Reference(PatientKimMusterperson)
+* note.text = "BRCAwt"
+* interpretation = $mii-cs-onko-genetische-variante-auspraegung#W "Wildtyp"
+}
 
+object Tumorboard_4 {
+* subject = Reference(PatientKimMusterperson)
+* status = #active
+* intent = #plan
+* category.coding = $mii-cs-onko-therapieplanung-typ#postop "postoperativ Tumorkonferenz" 
+* created = 2021-10-25
+* replaces = Reference(PatientKimMusterperson-Tumorkonferenz-3)
+* addresses = Reference(OncologicExamplePatientPrimaryDiagnosis2)
+* activity[0].detail.code = $mii-cs-onko-therapie-typ#ZS
+* activity[0].detail.status = #active 
+* activity[0].detail.statusReason = $mii-cs-onko-therapieabweichung#U "unbekannt"
+* description = "Erhaltungstherapie mit Niraparib bei BRCAwt"
+}
 
+object SystemicTherapy_3 {
+* subject = Reference(PatientKimMusterperson)
+* status = #completed
+* code.coding = $OPS#8-54 "Chemotherapie " // bei Bedarf spezifischer? 
+* extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K // impliziert 
+* extension[Stellung].valueCodeableConcept = $mii-cs-onko-systemische-therapie-stellung#A "adjuvant"
+* performedPeriod.start = 2021-11-08
+* performedPeriod.end = 2022-01-09
+}
+object SystemicTherapyMedication_3 {
+* subject = Reference(PatientKimMusterperson)
+* status = #completed
+* effectivePeriod.start = 2021-11-08  
+* effectivePeriod.end = 2022-01-09
+* medicationCodeableConcept.coding[atcClassDe][0] = $ATC_DE#L01XK02  "Niraparib"
+* partOf = Reference(PatientKimMusterperson-SystemicTherapy-3)
+* note.text = "Niraparib"
+}
 
 legend right 
 |Color|Type|
