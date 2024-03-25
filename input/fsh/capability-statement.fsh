@@ -51,6 +51,21 @@ Usage: #definition
 * format[+] = #json
 * rest.mode = #server
 
+// Diagnose requirements
+* insert SupportResource(Diagnose, #SHALL)
+* insert Profile(http://hl7.org/fhir/StructureDefinition/Diagnose, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/modul-onko/StructureDefinition/Diagnose, #SHALL)
+* insert SupportInteraction(#read, #SHALL)
+* insert SupportInteraction(#search-type, #SHALL)
+* insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
+* insert SupportSearchParam(_lastUpdated, http://hl7.org/fhir/SearchParameter/Resource-lastUpdated, #date, #SHALL)
+* insert SupportSearchParam(_profile, http://hl7.org/fhir/SearchParameter/Resource-profile, #uri, #SHALL)
+* insert SupportSearchParam(verificationStatus, http://hl7.org/fhir/SearchParameter/Diagnose-verificationStatus, #token, #SHALL)
+
+// Histologie requirements
+
+// TNM Klassifikation requirements
+
 // Weitere Klassifikationen requirements
 * insert SupportResource(WeitereKlassifikationen, #SHALL)
 * insert Profile(http://hl7.org/fhir/StructureDefinition/WeitereKlassifikationen, #SHALL)
@@ -103,10 +118,64 @@ Usage: #definition
 * insert SupportSearchParam(_profile, http://hl7.org/fhir/SearchParameter/Resource-profile, #uri, #SHALL)
 * insert SupportSearchParam(durchfuehrungsabsicht, http://hl7.org/fhir/SearchParameter/Operation-durchfuehrungsabsicht, #token, #SHALL)
 * insert SupportSearchParam(intention, http://hl7.org/fhir/SearchParameter/Operation-intention, #token, #SHALL)
-* insert SupportSearchParam(body-site, http://hl7.org/fhir/SearchParameter/Operation-body-site, #token, #SHALL)
 * insert SupportSearchParam(outcome, http://hl7.org/fhir/SearchParameter/Operation-outcome, #token, #SHALL)
 * insert SupportSearchParam(complication, http://hl7.org/fhir/SearchParameter/Operation-complication, #token, #SHALL)
-* insert SupportSearchParam(note, http://hl7.org/fhir/SearchParameter/Operation-note, #token, #SHALL)
+
+// Strahlentherapie requirements
+* insert SupportResource(Strahlentherapie, #SHALL)
+* insert Profile(http://hl7.org/fhir/StructureDefinition/Strahlentherapie, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/modul-onko/StructureDefinition/Strahlentherapie, #SHALL)
+* insert SupportInteraction(#read, #SHALL)
+* insert SupportInteraction(#search-type, #SHALL)
+* insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
+* insert SupportSearchParam(_lastUpdated, http://hl7.org/fhir/SearchParameter/Resource-lastUpdated, #date, #SHALL)
+* insert SupportSearchParam(_profile, http://hl7.org/fhir/SearchParameter/Resource-profile, #uri, #SHALL)
+// more
+
+// Nebenwirkung requirements
+* insert SupportResource(Nebenwirkung, #SHALL)
+* insert Profile(http://hl7.org/fhir/StructureDefinition/Nebenwirkung, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/modul-onko/StructureDefinition/Nebenwirkung, #SHALL)
+* insert SupportInteraction(#read, #SHALL)
+* insert SupportInteraction(#search-type, #SHALL)
+* insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
+* insert SupportSearchParam(_lastUpdated, http://hl7.org/fhir/SearchParameter/Resource-lastUpdated, #date, #SHALL)
+* insert SupportSearchParam(_profile, http://hl7.org/fhir/SearchParameter/Resource-profile, #uri, #SHALL)
+* insert SupportSearchParam(instance, http://hl7.org/fhir/SearchParameter/Nebenwirkung-suspectEntity_instance, #reference, #SHALL)
+
+// Systemische Therapie requirements
+* insert SupportResource(Systemische_Therapie, #SHALL)
+* insert Profile(http://hl7.org/fhir/StructureDefinition/Systemische_Therapie, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/modul-onko/StructureDefinition/Systemische_Therapie, #SHALL)
+* insert SupportInteraction(#read, #SHALL)
+* insert SupportInteraction(#search-type, #SHALL)
+* insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
+* insert SupportSearchParam(_lastUpdated, http://hl7.org/fhir/SearchParameter/Resource-lastUpdated, #date, #SHALL)
+* insert SupportSearchParam(_profile, http://hl7.org/fhir/SearchParameter/Resource-profile, #uri, #SHALL)
+* insert SupportSearchParam(outcome, http://hl7.org/fhir/SearchParameter/Systemische_Therapie-outcome, #token, #SHALL)
+
+// Verlauf requirements
+* insert SupportResource(Verlauf, #SHALL)
+* insert Profile(http://hl7.org/fhir/StructureDefinition/Verlauf, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/modul-onko/StructureDefinition/Verlauf, #SHALL)
+* insert SupportInteraction(#read, #SHALL)
+* insert SupportInteraction(#search-type, #SHALL)
+* insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
+* insert SupportSearchParam(_lastUpdated, http://hl7.org/fhir/SearchParameter/Resource-lastUpdated, #date, #SHALL)
+* insert SupportSearchParam(_profile, http://hl7.org/fhir/SearchParameter/Resource-profile, #uri, #SHALL)
+
+// Tumorkonferenz requirements
+* insert SupportResource(Tumorkonferenz, #SHALL)
+* insert Profile(http://hl7.org/fhir/StructureDefinition/Tumorkonferenz, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/modul-onko/StructureDefinition/Tumorkonferenz, #SHALL)
+* insert SupportInteraction(#read, #SHALL)
+* insert SupportInteraction(#search-type, #SHALL)
+* insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
+* insert SupportSearchParam(_lastUpdated, http://hl7.org/fhir/SearchParameter/Resource-lastUpdated, #date, #SHALL)
+* insert SupportSearchParam(_profile, http://hl7.org/fhir/SearchParameter/Resource-profile, #uri, #SHALL)
+* insert SupportSearchParam(created, http://hl7.org/fhir/SearchParameter/Tumorkonferenz-created, #date, #SHALL)
+* insert SupportSearchParam(contributor, http://hl7.org/fhir/SearchParameter/Tumorkonferenz-contributor, #reference, #SHALL)
+* insert SupportSearchParam(addresses, http://hl7.org/fhir/SearchParameter/Tumorkonferenz-addresses, #reference, #SHALL)
 
 // Tod requirements
 * insert SupportResource(Tod, #SHALL)
@@ -118,3 +187,14 @@ Usage: #definition
 * insert SupportSearchParam(_lastUpdated, http://hl7.org/fhir/SearchParameter/Resource-lastUpdated, #date, #SHALL)
 * insert SupportSearchParam(_profile, http://hl7.org/fhir/SearchParameter/Resource-profile, #uri, #SHALL)
 * insert SupportSearchParam(interpretation, http://hl7.org/fhir/SearchParameter/Tod-interpretation, #token, #SHALL)
+
+// Genetische Variante requirements
+* insert SupportResource(Genetische_Variante, #SHALL)
+* insert Profile(http://hl7.org/fhir/StructureDefinition/Genetische_Variante, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/modul-onko/StructureDefinition/Genetische_Variante, #SHALL)
+* insert SupportInteraction(#read, #SHALL)
+* insert SupportInteraction(#search-type, #SHALL)
+* insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
+* insert SupportSearchParam(_lastUpdated, http://hl7.org/fhir/SearchParameter/Resource-lastUpdated, #date, #SHALL)
+* insert SupportSearchParam(_profile, http://hl7.org/fhir/SearchParameter/Resource-profile, #uri, #SHALL)
+* insert SupportSearchParam(interpretation, http://hl7.org/fhir/SearchParameter/Genetische_Variante-interpretation, #token, #SHALL)

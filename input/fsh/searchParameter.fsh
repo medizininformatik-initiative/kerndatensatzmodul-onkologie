@@ -212,6 +212,12 @@ Usage: #definition
 * expression = "Procedure.outcome" 
 
 //----------------------------------------
+// SearchParameters for Verlauf
+//----------------------------------------
+
+// 3 Verlauf Componenten, nicht sicher ob die vom Observation base abgedeckt sind?
+
+//----------------------------------------
 // SearchParameters for Tumorkonferenz
 //----------------------------------------
 Instance: mii-sp-onko-tumorkonferenz-created
