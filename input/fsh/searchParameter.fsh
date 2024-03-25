@@ -1,4 +1,41 @@
 //----------------------------------------
+// SearchParameters for Diagnose
+//----------------------------------------
+// verificationStatus
+Instance: mii-sp-onko-diagnose-verification-status
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert Version
+* name = "MII_SP_Diagnose_verification_status"
+* description = "SearchParameter for Diagnose.verificationStatus"
+* status = #active 
+* code = #verification-status
+* base = #Observation 
+* type = #token
+* expression = "Condition.verificationStatus"
+
+//----------------------------------------
+// SearchParameters for Histologie
+//----------------------------------------
+
+//----------------------------------------
+// SearchParameters for TNM Klassifikationen
+//----------------------------------------
+
+//----------------------------------------
+// SearchParameters for Weitere Klassifikationen
+//----------------------------------------
+
+// No search parameters to cover
+
+//----------------------------------------
+// SearchParameters for Redidualstatus
+//----------------------------------------
+
+// No search parameters to cover
+
+//----------------------------------------
 // SearchParameters for Fernmetastasen
 //----------------------------------------
 Instance: mii-sp-onko-fernmetastasen-body-site
@@ -15,9 +52,15 @@ Usage: #definition
 * expression = "Observation.bodySite" // is Observation not already covered by base?
 
 //----------------------------------------
+// SearchParameters for Allgemeiner Leistungszustand
+//----------------------------------------
+
+// No search parameters to cover
+
+//----------------------------------------
 // SearchParameters for Operation
 //----------------------------------------
-Instance: mii-sp-onko-operation-extension-durchfuehrungsabsicht // wo kommt die extension her? Vllt von der base abgeleitet? steht auch in strahlentherapie
+Instance: mii-sp-onko-operation-extension-durchfuehrungsabsicht // wo kommt die extension her? Vllt von der base abgeleitet? steht auch in strahlentherapie -> kann wahrscheinlic raus
 InstanceOf: SearchParameter
 Usage: #definition
 * insert SP_Publisher
@@ -42,19 +85,6 @@ Usage: #definition
 * base = #Procedure // im profil steht mii procdure, tut das eine spezifische mii base dann erfordern?
 * type = #token
 * expression = "Procedure.extension.intention"
-
-Instance: mii-sp-onko-operation-body-site
-InstanceOf: SearchParameter
-Usage: #definition
-* insert SP_Publisher
-* insert Version
-* name = "MII_SP_Operation_Body_Site"
-* description = "SearchParameter for Operation.bodysite"
-* status = #active 
-* code = #body-site
-* base = #Procedure 
-* type = #token
-* expression = "Procedure.bodySite" 
 
 Instance: mii-sp-onko-operation-outcome
 InstanceOf: SearchParameter
@@ -81,19 +111,6 @@ Usage: #definition
 * base = #Procedure 
 * type = #token
 * expression = "Procedure.complication" 
-
-Instance: mii-sp-onko-operation-note
-InstanceOf: SearchParameter
-Usage: #definition
-* insert SP_Publisher
-* insert Version
-* name = "MII_SP_Operation_Note"
-* description = "SearchParameter for Operation.note"
-* status = #active 
-* code = #note
-* base = #Procedure 
-* type = #string
-* expression = "Procedure.note" 
 
 //----------------------------------------
 // SearchParameters for Strahlentherapie
@@ -127,38 +144,27 @@ Usage: #definition
 * type = #token
 * expression = "Procedure.extension.stellung"
 
-Instance: mii-sp-onko-strahlentherapie-extension-behandlungsabschnitt // complex extension
+// is this correct for a complex extension?
+Instance: mii-sp-onko-strahlentherapie-extension-bestrahlung // complex extension
 InstanceOf: SearchParameter
 Usage: #definition
 * insert SP_Publisher
 * insert Version
-* name = "MII_SP_Strahlentherapie_Extension_Behandlungsabschnitt"
-* description = "SearchParameter for Strahlentherapie.extension.behandlungsabschnitt.extension..."
+* name = "MII_SP_Strahlentherapie_Extension_Bestrahlung"
+* description = "SearchParameter for Strahlentherapie.extension.bestrahlung.extension..."
 * status = #active 
-* code = #extension-behandlungsabschnitt
+* code = #extension-bestrahlung
 * base = #Procedure
 * type = #token
-* expression = "Procedure.extension.behandlungsabschnitt.extension-element.Applikationsart | ⁄
-Procedure.extension.behandlungsabschnitt.extension-element.Strahlenart | ⁄
-Procedure.extension.behandlungsabschnitt.extension-element.Zielgebiet | ⁄
-Procedure.extension.behandlungsabschnitt.extension-element.Zielgebiet_Lateralitaet | ⁄
-Procedure.extension.behandlungsabschnitt.extension-element.Gesamtdosis | ⁄
-Procedure.extension.behandlungsabschnitt.extension-element.Einzeldosis | ⁄
-Procedure.extension.behandlungsabschnitt.extension-element.Boost ⁄
+* expression = "Procedure.extension.bestrahlung.extension-element.Applikationsart | ⁄ 
+Procedure.extension.bestrahlung.extension-element.Strahlenart | ⁄
+Procedure.extension.bestrahlung.extension-element.Zielgebiet | ⁄
+Procedure.extension.bestrahlung.extension-element.Zielgebiet_Lateralitaet | ⁄
+Procedure.extension.bestrahlung.extension-element.Gesamtdosis | ⁄
+Procedure.extension.bestrahlung.extension-element.Einzeldosis | ⁄
+Procedure.extension.bestrahlung.extension-element.Boost ⁄
 "
-
-Instance: mii-sp-onko-strahlentherapie-body-site
-InstanceOf: SearchParameter
-Usage: #definition
-* insert SP_Publisher
-* insert Version
-* name = "MII_SP_Strahlentherapie_Body_Site"
-* description = "SearchParameter for Strahlentherapie.bodysite"
-* status = #active 
-* code = #body-site
-* base = #Procedure 
-* type = #token
-* expression = "Procedure.bodySite" 
+// die unterschiedlichen extension elemente können unterschiedliche typen haben?!?
 
 Instance: mii-sp-onko-strahlentherapie-outcome
 InstanceOf: SearchParameter
@@ -173,22 +179,77 @@ Usage: #definition
 * type = #token
 * expression = "Procedure.outcome" 
 
-Instance: mii-sp-onko-strahlentherapie-note
+//----------------------------------------
+// SearchParameters for Nebenwirkung
+//----------------------------------------
+Instance: mii-sp-onko-nebenwirkun-suspectEntity
 InstanceOf: SearchParameter
 Usage: #definition
 * insert SP_Publisher
 * insert Version
-* name = "MII_SP_Strahlentherapie_Note"
-* description = "SearchParameter for Strahlentherapie.note"
+* name = "MII_SP_Nebenwirkung_SuspectEntity_instance"
+* description = "SearchParameter for Nebenwirkung.suspectEntity.instance"
 * status = #active 
-* code = #note
+* code = #instance
+* base = #AdverseEvent 
+* type = #reference
+* expression = "AdverseEvent.suspectEntity.instance" 
+
+//----------------------------------------
+// SearchParameters for Systemische Therapie -> Fehler in IG
+//----------------------------------------
+Instance: mii-sp-onko-systemische-therapie-outcome
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert Version
+* name = "MII_SP_Systemische_Therapie_Outcome"
+* description = "SearchParameter for Systemische_Therapie.outcome"
+* status = #active 
+* code = #outcome
 * base = #Procedure 
-* type = #string
-* expression = "Procedure.note" 
+* type = #token
+* expression = "Procedure.outcome" 
 
-// Systemische Therapie -> Fehler in IG
+//----------------------------------------
+// SearchParameters for Tumorkonferenz
+//----------------------------------------
+Instance: mii-sp-onko-tumorkonferenz-created
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert Version
+* name = "MII_SP_Tumorkonferenz_Created"
+* description = "SearchParameter for Tumorkonferenz.created"
+* status = #active 
+* code = #created
+* base = #CarePlan 
+* type = #date
+* expression = "CarePlan.created" 
 
+Instance: mii-sp-onko-tumorkonferenz-contributor
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert Version
+* name = "MII_SP_Tumorkonferenz_Contributor"
+* description = "SearchParameter for Tumorkonferenz.contributor"
+* status = #active 
+* code = #contributor
+* base = #CarePlan 
+* type = #reference
 
+Instance: mii-sp-onko-tumorkonferenz-addresses
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert Version
+* name = "MII_SP_Tumorkonferenz_Addresses"
+* description = "SearchParameter for Tumorkonferenz.addresses"
+* status = #active 
+* code = #addresses
+* base = #CarePlan 
+* type = #reference
 
 //----------------------------------------
 // SearchParameters for Tod
@@ -200,6 +261,22 @@ Usage: #definition
 * insert Version
 * name = "MII_SP_Onko_Tod_Interpreation"
 * description = "SearchParameter for Tod.interpretation"
+* status = #active
+* code = #interpretation
+* base = #Observation
+* type = #token
+* expression = "Observation.interpretation"
+
+//----------------------------------------
+// SearchParameters for Genetische Variante
+//----------------------------------------
+Instance: mii-sp-onko-genetische-variante-interpreation // why is this MS? It not from parent but also not defined in fsh profile?
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert Version
+* name = "MII_SP_Onko_Genetische_Variante_Interpreation"
+* description = "SearchParameter for Genetische_Variante.interpretation"
 * status = #active
 * code = #interpretation
 * base = #Observation

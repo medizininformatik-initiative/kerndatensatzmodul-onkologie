@@ -37,7 +37,7 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 * outcome from $mii-vs-onko-beurteilung-lokaler-residualstatus (required)
 
 
-* extension contains mii-ex-onko-operation-intention named Intention 1..1
+* extension contains mii-ex-onko-operation-intention named Intention 1..1 // TODO kleinschreiben
 * extension[Intention] MS
 
 * outcome MS //doppelt?
