@@ -31,7 +31,7 @@ Description: "OBDS Beschreibung des allgemeines Leistungszustandes"
 * value[x] only CodeableConcept
 * valueCodeableConcept MS
 * valueCodeableConcept 1..1
-* valueCodeableConcept.coding from $mii-vs-onko-allgemeiner-leistungszustand (required)
+* valueCodeableConcept from mii-vs-onko-allgemeiner-leistungszustand (required)
 * valueCodeableConcept.coding.system = $mii-cs-onko-allgemeiner-leistungszustand
 * valueCodeableConcept.coding.code 1.. MS
 

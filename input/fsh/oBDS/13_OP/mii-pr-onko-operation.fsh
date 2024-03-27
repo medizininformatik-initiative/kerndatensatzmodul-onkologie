@@ -28,7 +28,7 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
     compl_obds 0..* and
     compl_icd10 0..*
 * complication[compl_obds] MS
-* complication[compl_obds].coding from $mii-vs-onko-operation-komplikation
+* complication[compl_obds] from mii-vs-onko-operation-komplikation
 * complication[compl_obds].coding.system = $mii-cs-onko-operation-komplikation
 * complication[compl_obds].coding.code 1.. MS
 
@@ -41,7 +41,7 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 // Residualstatus lokal
 * outcome MS
 * outcome 0..1
-* outcome from $mii-vs-onko-beurteilung-lokaler-residualstatus (required)
+* outcome from mii-vs-onko-beurteilung-lokaler-residualstatus (required)
 
 
 

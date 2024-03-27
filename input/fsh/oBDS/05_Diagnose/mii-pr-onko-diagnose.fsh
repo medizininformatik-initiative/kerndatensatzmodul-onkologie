@@ -18,7 +18,7 @@ Description: "Dieses Profil beschreibt eine Diagnose in der Onkologie"
 * verificationStatus.coding[condition-ver-status] ^patternCoding.system = $condition-ver-status
 * verificationStatus.coding[condition-ver-status] from $verification-status-vs (required)
 * verificationStatus.coding[primaertumorDiagnosesicherung] ^patternCoding.system = $mii-cs-onko-primaertumor-diagnosesicherung
-* verificationStatus.coding[primaertumorDiagnosesicherung] from $mii-vs-onko-primaertumor-diagnosesicherung (required)
+* verificationStatus.coding[primaertumorDiagnosesicherung] from mii-vs-onko-primaertumor-diagnosesicherung (required)
 * verificationStatus.coding[primaertumorDiagnosesicherung].code 1.. MS
 * verificationStatus.coding[primaertumorDiagnosesicherung].system 1.. MS
 * bodySite.coding contains
