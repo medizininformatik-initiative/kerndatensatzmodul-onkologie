@@ -40,7 +40,7 @@ Description: "Histologie: Anzahl der untersuchten Sentinel-Lymphknoten. Gibt an,
 * valueQuantity.code = #1
 * valueQuantity.code ^comment = "The mandatory system is UCUM."
 * valueQuantity.system 1.. MS
-* valueQuantity.system = "http://unitsofmeasure.org" (exactly)
+* valueQuantity.system = $UCUM (exactly)
 * valueQuantity.unit 1.. MS
 * valueQuantity.value 1.. MS
 
