@@ -9,7 +9,6 @@ Description: "oBDS-spezifisches Codesystem für den Therapieplanungstyp"
 * insert Publisher
 * insert PR_CS_VS_Version
 * ^caseSensitive = true
-* ^valueSet = $mii-vs-onko-therapieplanung-typ
 * ^content = #complete
 * #praeth "prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie)"
 * #postop "postoperative Tumorkonferenz (Planung der postoperativen Therapie, z. B. zur Frage adjuvante Therapie)"
