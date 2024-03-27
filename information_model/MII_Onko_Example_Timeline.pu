@@ -340,6 +340,26 @@ SystemicTherapy_3 -up-> Tumorboard_4
 
 SystemicTherapyMedication_3 -up-> SystemicTherapy_3
 
+
+object Primaerdiagnose_final #FFFF66 {
+* recordedDate = 2021-10-25 // geupdated auf Verlaufsdatum mit Diagnose
+* subject = Reference(PatientKimMusterperson)
+* clinicalStatus = #remission // 
+* verificationStatus.coding[primaertumorDiagnosesicherung].code = #7.1 "histologische Untersuchung eines Primärtumors" // update von "klinische Diagnostik"
+* code.coding[0]  = $ICD10GM#C56   // update von #C48.2 "Bösartige Neubildung des Retroperitoneums und Peritoneums - Peritoneum, nicht näher bezeichnet "
+* code.coding[1]  = $ICDO3#M_8441_3 "Seröses Adenokarzinom" // in erster Diagnose noch nicht bestimmt
+* bodySite = $ICDO3#C56.9 "Ovar o.n.A."
+* staging[0].assessment = Reference(Verlauf_21_09_15)
+* staging[1].assessment = Reference(TNM_Klassifikation_2)
+* staging[2].assessment = Reference(FIGO_Observation_2)
+* staging[3].assessment = Reference(Verlauf_21_10_25)
+* staging[4].assessment = Reference(Verlauf_2_01_22)
+* evidence[0].detail = Reference(DiagnosticProcedure_1)
+* evidence[1].detail = Reference(DiagnosticProcedure_2)
+* evidence[2].detail = Reference(DiagnosticProcedure_3) 
+* evidence[3].detail = Reference(GenetischeVariante_1)
+}
+
 legend right 
 |Color|Type|
 |<#FFFF66>|Condition|
