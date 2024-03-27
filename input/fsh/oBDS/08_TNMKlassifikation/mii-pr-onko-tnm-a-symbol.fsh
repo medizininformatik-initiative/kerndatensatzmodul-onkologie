@@ -19,7 +19,7 @@ Description: "TNM-Klassifikation: TNM a-Symbol. Gibt an, ob die Klassifikation a
 * effectiveDateTime obeys tnm-datum
 * value[x] MS
 * value[x] only CodeableConcept
-* valueCodeableConcept = #SCT#421426001
+* valueCodeableConcept = $SCT#421426001
 * valueCodeableConcept ^short = "a-Symbol"
 * valueCodeableConcept ^definition = "Gibt an, ob die Klassifikation aus Anlass einer Autopsie erfolgte."
 * valueCodeableConcept ^comment = "a = Klassifikation erfolgte durch Autopsie; (leer) = Klassifikation erfolgte nicht durch Autopsie"
