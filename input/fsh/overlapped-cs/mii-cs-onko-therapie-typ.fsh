@@ -9,7 +9,6 @@ Description: "Typ der Therapie"
 * insert Publisher
 * insert PR_CS_VS_Version
 * ^caseSensitive = true
-//* ^valueSet = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-art"
 * ^content = #complete
 * #CH "Chemotherapie"
 * #HO "Hormontherapie"

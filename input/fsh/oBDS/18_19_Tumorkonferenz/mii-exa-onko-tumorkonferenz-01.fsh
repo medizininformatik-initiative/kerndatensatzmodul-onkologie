@@ -8,6 +8,6 @@ Usage: #example
 * subject = Reference(Patient/example)
 * category.coding.code = $mii-cs-onko-therapieplanung-typ#postop
 * created = "2024-01-11"
-* activity.detail.code.coding.code = $mii-cs-onko-therapieempfehlung-typ#OP
+* activity.detail.code.coding = $mii-cs-onko-therapie-typ#OP
 * activity.detail.status = $care-plan-activity-status#scheduled
 * activity.detail.statusReason.coding.code = $mii-cs-onko-therapieabweichung#N
