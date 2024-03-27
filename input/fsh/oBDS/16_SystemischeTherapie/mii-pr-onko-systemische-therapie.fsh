@@ -39,10 +39,8 @@ Description: "Systemische Therapie. Dieses Profil beschreibt eine Systemische Th
 * partOf MS
 * partOf only Reference(Observation)
 
-
 * subject 1..1 MS
 * subject only Reference(Patient)
-
 
 // Systemische Therapie Ende Grund
 * outcome MS

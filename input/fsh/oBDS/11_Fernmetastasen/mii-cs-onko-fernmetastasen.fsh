@@ -1,7 +1,7 @@
 CodeSystem: MII_CS_Onko_Fernmetastasen
 Id: mii-cs-onko-fernmetastasen
 Title: "MII CS Onkologie Fernmetastasen"
-Description: "oBDS-spezifisches Codesystem für Fernmetastasen"
+Description: "oBDS-spezifisches Codesystem für Fernmetastasen, basierend auf Spezifikation durch TNM-Klassifikation"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-fernmetastasen"
 * ^status = #draft
