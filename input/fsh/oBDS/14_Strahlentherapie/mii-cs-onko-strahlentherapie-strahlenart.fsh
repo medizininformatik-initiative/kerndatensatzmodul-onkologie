@@ -3,7 +3,7 @@ Id: mii-cs-onko-strahlentherapie-strahlenart
 Title: "MII CS Onkologie Strahlentherapie Strahlenart"
 Description: "oBDS-spezifisches Codesystem für Klassifikation von eingesetzter Strahlenart"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-strahlentherapie-strahlenart"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart"
 * ^status = #draft
 * ^experimental = false
 * insert Publisher

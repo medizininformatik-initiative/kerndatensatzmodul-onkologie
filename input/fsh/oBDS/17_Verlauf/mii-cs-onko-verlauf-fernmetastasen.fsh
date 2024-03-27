@@ -3,13 +3,12 @@ Id: mii-cs-onko-verlauf-fernmetastasen
 Title: "MII CS Onkologie Verlauf Fernmetastasen"
 Description: "oBDS-spezifisches Codesystem für die Beurteilung von Fernmetastasen im Behandlungsverlauf "
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-verlauf-fernmetastasen"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen"
 * ^status = #draft
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
 * ^caseSensitive = true
-* ^valueSet = $mii-vs-onko-verlauf-fernmetastasen
 * ^content = #complete
 * #K "kein Fernmetastasen nachweisbar"
 * #R "neu aufgetretene Fernmetastase(n) bzw. Metastasenrezidiv"

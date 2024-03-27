@@ -3,7 +3,7 @@ Id: mii-cs-onko-strahlentherapie-zielgebiet
 Title: "MII CS Onkologie Strahlentherapie Zielgebiet"
 Description: "oBDS-spezifisches Codesystem für Klassifikation von Zielgebiet von Strahlentherapie"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-strahlentherapie-zielgebiet"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet"
 * ^status = #draft
 * ^experimental = false
 * insert Publisher

@@ -3,7 +3,7 @@ Id: mii-vs-onko-therapieplanung-typ
 Title: "MII VS Onkologie Therapieplanung Typ"
 Description: "oBDS-spezifisches ValueSet für den Therapieplanungstyp"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-therapieplanung-typ"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieplanung-typ"
 * ^status = #draft
 * ^experimental = false
 * insert Publisher
