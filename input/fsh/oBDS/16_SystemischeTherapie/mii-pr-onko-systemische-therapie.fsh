@@ -1,5 +1,5 @@
 Profile: MII_PR_Onko_Systemische_Therapie
-Parent: https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure 
+Parent: https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure
 Id: mii-pr-onko-systemische-therapie
 Title: "MII PR Onkologie Systemische Therapie"
 Description: "Systemische Therapie. Dieses Profil beschreibt eine Systemische Therapie für den oBDS. Da die Granularität der Anforderungen des oBDS nicht deckungsgleich mit den FHIR-Profilen für Medikation sind, wurde die Systemische Therapie als Prozedur umgesetzt"
@@ -17,9 +17,11 @@ Description: "Systemische Therapie. Dieses Profil beschreibt eine Systemische Th
 * extension[Stellung] MS 
 
 * code 1..1  // slicen! 
-* code.coding from $mii-vs-onko-systemische-therapie-art
-* code.coding.code 1..1
-* code.coding.system 1..1
+* code.coding contains
+        systemische_therapie_art 0..1
+* code.coding[systemische_therapie_art] from mii-vs-onko-systemische-therapie-art
+* code.coding[systemische_therapie_art].code 1..1
+* code.coding[systemische_therapie_art].system 1..1
 
 // Systemische Therapie Beginn und  Ende--> ggfs. dupliziert im MedicationStatement oder MedicationAdministration
 * performed[x] MS 
