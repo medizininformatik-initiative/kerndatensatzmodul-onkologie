@@ -27,6 +27,19 @@ Description: "Systemische Therapie. Dieses Profil beschreibt eine Systemische Th
 * performed[x].start 1..1 MS
 * performed[x].end 0..1 MS
 
+// Referenz auf Tumorboard
+* basedOn MS
+* basedOn only Reference(CarePlan)
+
+// Referenz auf Primaerdiagnose oder andere Condition
+* reasonReference MS 
+* reasonReference only Reference(Condition)
+
+// Referenz auf letzte Verlaufsobservation zur zeitlichen und inhaltlichen Kopplung
+* partOf MS
+* partOf only Reference(Observation)
+
+
 * subject 1..1 MS
 * subject only Reference(Patient)
 
