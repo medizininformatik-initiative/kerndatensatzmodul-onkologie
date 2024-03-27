@@ -10,7 +10,7 @@ Description: "Strahlentherapie Stellung zur OP"
 
 * value[x] 0..
 * value[x] only CodeableConcept
-* value[x] from MII_VS_Onko_Strahlentherapie_Stellung (required)
+* valueCodeableConcept from MII_VS_Onko_Strahlentherapie_Stellung (required)
 * valueCodeableConcept.coding.system 1..
 * valueCodeableConcept.coding.system = $mii-cs-onko-strahlentherapie-stellung (exactly)
 * valueCodeableConcept.coding.code 1..

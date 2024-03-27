@@ -45,7 +45,9 @@ Description: "Systemische Therapie. Dieses Profil beschreibt eine Systemische Th
 // Systemische Therapie Ende Grund
 * outcome MS
 * outcome 0..1
-* outcome.coding.code from MII_VS_Onko_Strahlentherapie_Ende_Grund (required)
+* outcome from MII_VS_Onko_Systemische_Therapie_Ende_Grund (required)
+* outcome.coding.code MS
+* outcome.coding.system MS
 
 
 Mapping: FHIR-oBDS-Systemische_Therapie
