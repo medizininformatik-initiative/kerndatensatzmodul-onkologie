@@ -8,8 +8,6 @@ Description: "Value Set für oBDS-Codes für die Gesamtbeurteilung des Residuals
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
-//* include codes from system $mii-cs-onko-residualstatus
-
 * $mii-cs-onko-residualstatus#R0 "Kein Residualtumor"
 * $mii-cs-onko-residualstatus#R1 "Mikroskopischer Residualtumor"
 * $mii-cs-onko-residualstatus#R1(is) "In-Situ-Rest"

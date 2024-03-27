@@ -8,8 +8,6 @@ Description: "oBDS-spezifisches ValueSet für Klassifikation des Grundes der Bee
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
-//* include codes from system $mii-cs-onko-strahlentherapie-ende-grund
-
 * $mii-cs-onko-therapie-ende-grund#E "reguläres Ende"
 * $mii-cs-onko-therapie-ende-grund#F "Zieldosis erreicht mit Unterbrechung > 3 Kalendertage"
 * $mii-cs-onko-therapie-ende-grund#A "Abbruch wegen Nebenwirkungen"
