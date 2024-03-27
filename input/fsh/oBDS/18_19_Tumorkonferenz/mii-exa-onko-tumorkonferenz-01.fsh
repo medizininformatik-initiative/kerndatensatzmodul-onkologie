@@ -10,4 +10,4 @@ Usage: #example
 * created = "2024-01-11"
 * activity.detail.code.coding = $mii-cs-onko-therapie-typ#OP
 * activity.detail.status = $care-plan-activity-status#scheduled
-* activity.detail.statusReason.coding.code = $mii-cs-onko-therapieabweichung#N
+* activity.detail.statusReason.coding = $mii-cs-onko-therapieabweichung#N "nein"
