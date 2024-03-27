@@ -7,7 +7,7 @@ Description: "Example systemic therapy"
 * status = #final
 * extension[0].valueCodeableConcept = $mii-cs-onko-systemische-therapie-intention#K // kurativ
 * extension[0].url = $mii-ex-onko-systemische-therapie-intention
-* extension[1].valueCodeableConcept = $mii-cs-onko-systemische-therapie-stellung#A // adjuvant
+* extension[1].valueCodeableConcept = $mii-cs-onko-therapie-stellung#A // adjuvant
 * extension[1].url = $mii-ex-onko-systemische-therapie-stellung
 * code = $mii-cs-onko-systemische-therapie-art#CH // Chemotherapie , ggfs. hier auch ein slice, weil OPS mit angegeben werden kann
 * performedPeriod.start = "2021-12-04"

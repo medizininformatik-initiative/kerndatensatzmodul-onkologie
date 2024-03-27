@@ -9,7 +9,6 @@ Description: "oBDS-spezifisches Codesystem für Klassifikation von Stellung zur 
 * insert Publisher
 * insert PR_CS_VS_Version
 * ^caseSensitive = true
-//* ^valueSet = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-stellung"
 * ^content = #complete
 * #O "ohne Bezug zur operativen Therapie"
 * #A "adjuvant"

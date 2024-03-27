@@ -123,7 +123,7 @@ Description: "."
 * status = #completed
 * code.coding = $OPS#8-54 "Chemotherapie " // bei Bedarf spezifischer? 
 * extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K // impliziert 
-* extension[Stellung].valueCodeableConcept = $mii-cs-onko-systemische-therapie-stellung#N "neo"
+* extension[Stellung].valueCodeableConcept = $mii-cs-onko-therapie-stellung#N "neo"
 * performedPeriod.start = 2021-07-05
 * performedPeriod.end = 2021-09-05
 * basedOn = Reference(PatientKimMusterperson-Tumorkonferenz-1)
@@ -380,7 +380,7 @@ Description: "."
 * status = #completed
 * code.coding = $OPS#8-54 "Chemotherapie " // bei Bedarf spezifischer? 
 * extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K // impliziert 
-* extension[Stellung].valueCodeableConcept = $mii-cs-onko-systemische-therapie-stellung#A "adjuvant"
+* extension[Stellung].valueCodeableConcept = $mii-cs-onko-therapie-stellung#A "adjuvant"
 * performedPeriod.start = 2021-11-08
 * performedPeriod.end = 2022-01-09
 
@@ -463,7 +463,7 @@ Description: "."
 * status = #completed
 * code.coding = $OPS#8-54 "Chemotherapie " // bei Bedarf spezifischer? 
 * extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K // impliziert 
-* extension[Stellung].valueCodeableConcept = $mii-cs-onko-systemische-therapie-stellung#A "adjuvant"
+* extension[Stellung].valueCodeableConcept = $mii-cs-onko-therapie-stellung#A "adjuvant"
 * performedPeriod.start = 2022-01-25
 
 Instance: PatientKimMusterperson-SystemicTherapyMedication-3
