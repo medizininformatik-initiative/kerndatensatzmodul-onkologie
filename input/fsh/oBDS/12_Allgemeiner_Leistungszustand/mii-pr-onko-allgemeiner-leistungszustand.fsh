@@ -32,7 +32,7 @@ Description: "OBDS Beschreibung des allgemeines Leistungszustandes"
 * valueCodeableConcept MS
 * valueCodeableConcept 1..1
 * valueCodeableConcept.coding from $mii-vs-onko-allgemeiner-leistungszustand (required)
-* valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungsstatus"
+* valueCodeableConcept.coding.system = $mii-cs-onko-allgemeiner-leistungszustand
 * valueCodeableConcept.coding.code 1.. MS
 
 
