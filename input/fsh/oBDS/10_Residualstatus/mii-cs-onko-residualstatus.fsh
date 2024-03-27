@@ -3,7 +3,7 @@ Id: mii-cs-onko-residualstatus
 Title: "MII CS Onkologie Residualstatus"
 Description: "oBDS-spezifisches Codesystem für R-Klassifikation"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-residualstatus"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus"
 * ^status = #draft
 * ^experimental = false
 * insert Publisher
