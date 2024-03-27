@@ -17,7 +17,7 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 * performed[x] MS
 * performed[x] only dateTime 
 // OP-Prozedur 
-* code.coding[ops] 1..* MS // hier auch potentiel 1..*, weil mehrere Sachen gemacht werden können? geht das überhaupt, oder muss man da slicen?
+* code.coding[ops] 1..1 MS // hier auch potentiel 1..*, weil mehrere Sachen gemacht werden können? --> geht nicht wegen MII Prozedur-Binding
  
 * complication MS
 // * complication from $mii-vs-onko-operation-komplikation // quatsch, weil wir slices machen müssen
