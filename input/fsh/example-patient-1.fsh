@@ -102,7 +102,7 @@ Description: "."
 * intent = #plan
 * category.coding = $mii-cs-onko-therapieplanung-typ#praeth "Prätherapeutische Tumorkonferenz" 
 * created = 2021-06-25
-* addresses = Reference(OncologicExamplePatientPrimaryDiagnosis2)
+* addresses = Reference(PatientKimMusterperson-Diagnosis-1)
 * activity[0].detail.code = $mii-cs-onko-therapie-typ#CH "Chemotherapie"
 * activity[0].detail.status = #completed // Es wurden nur 3 Zyklen geplant, die alle durchgeführt wurden
 * activity[0].detail.statusReason = $mii-cs-onko-therapieabweichung#N
@@ -214,7 +214,7 @@ Description: "Pathoreport incl. Immunhistochemie"
 * subject = Reference(PatientKimMusterperson)
 * status = #complete
 * code.coding = $LOINC#60568-3 "Pathological laboratory report"
-* conclusion = "Histologie: Resektat vom 30.09.2021Neoplasie des Ovars (Z.n. neoadjuvanter Therapie) (ICD-10-C56) Ovar o.n.A. (ICD-O-C56.9) Untersuchungsmaterial: Resektat WHO-Typ: Seröses Adenokarzinom (ICD-O M-8441/3) Lokale Tumorausbreitung: Ovartumor links mit einer max. Größe von 2,2 cm und tumorinfiltrierter Kapsel mit Nachweis von Tumorzellen auf der Ovaroberfläche, Anteil vitaler Tumorzellen von ca. 80 %. UICC-Klassifikation (8. Auflage): ypT3c. pM1b (HEP) L1. V0. Pn0 FIGO: IVB"
+* conclusion = "Histologie: Resektat vom 30.09.2021: Neoplasie des Ovars (Z.n. neoadjuvanter Therapie) (ICD-10-C56) Ovar o.n.A. (ICD-O-C56.9) Untersuchungsmaterial: Resektat WHO-Typ: Seröses Adenokarzinom (ICD-O M-8441/3) Lokale Tumorausbreitung: Ovartumor links mit einer max. Größe von 2,2 cm und tumorinfiltrierter Kapsel mit Nachweis von Tumorzellen auf der Ovaroberfläche, Anteil vitaler Tumorzellen von ca. 80 %. UICC-Klassifikation (8. Auflage): ypT3c. pM1b (HEP) L1. V0. Pn0 FIGO: IVB"
 
 
 Instance: PatientKimMusterperson-Specimen-1
@@ -447,7 +447,7 @@ Description: "."
 * status = #active
 * intent = #plan
 * category.coding = $mii-cs-onko-therapieplanung-typ#postop "postoperativ Tumorkonferenz" 
-* created = 2021-10-25
+* created = 2022-01-20
 * replaces = Reference(PatientKimMusterperson-Tumorkonferenz-3)
 * addresses = Reference(OncologicExamplePatientPrimaryDiagnosis2)
 * activity[0].detail.code = $mii-cs-onko-therapie-typ#ZS
@@ -464,8 +464,7 @@ Description: "."
 * code.coding = $OPS#8-54 "Chemotherapie " // bei Bedarf spezifischer? 
 * extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K // impliziert 
 * extension[Stellung].valueCodeableConcept = $mii-cs-onko-systemische-therapie-stellung#A "adjuvant"
-* performedPeriod.start = 2021-11-08
-* performedPeriod.end = 2022-01-09
+* performedPeriod.start = 2022-01-25
 
 Instance: PatientKimMusterperson-SystemicTherapyMedication-3
 InstanceOf: MII_PR_Onko_Systemische_Therapie_Medikation
@@ -473,8 +472,7 @@ Usage: #example
 Description: "."
 * subject = Reference(PatientKimMusterperson)
 * status = #completed
-* effectivePeriod.start = 2021-11-08  
-* effectivePeriod.end = 2022-01-09
+* effectivePeriod.start = 2022-01-25  
 * medicationCodeableConcept.coding[atcClassDe][0] = $ATC_DE#L01XK02  "Niraparib"
 * partOf = Reference(PatientKimMusterperson-SystemicTherapy-3)
 * note.text = "Niraparib"
