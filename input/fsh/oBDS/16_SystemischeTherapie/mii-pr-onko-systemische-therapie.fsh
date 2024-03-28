@@ -18,7 +18,7 @@ Description: "Systemische Therapie. Dieses Profil beschreibt eine Systemische Th
 
 * code 1..1  // slicen! 
 * code.coding contains
-        systemische_therapie_art 0..1
+        systemische_therapie_art 0..1 
 * code.coding[systemische_therapie_art] from mii-vs-onko-systemische-therapie-art
 * code.coding[systemische_therapie_art].code 1..1
 * code.coding[systemische_therapie_art].system 1..1
