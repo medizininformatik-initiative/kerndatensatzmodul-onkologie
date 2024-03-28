@@ -141,6 +141,7 @@
       {
         "id": "Observation.note",
         "path": "Observation.note",
+        "mustSupport": true,
         "mapping": [
           {
             "identity": "oBDS",
@@ -148,6 +149,11 @@
             "comment": "Genetische Variante Name"
           }
         ]
+      },
+      {
+        "id": "Observation.note.text",
+        "path": "Observation.note.text",
+        "mustSupport": true
       }
     ]
   }
