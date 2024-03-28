@@ -249,13 +249,19 @@
         "sliceName": "primaertumorSeitenlokalisation",
         "min": 0,
         "max": "1",
-        "mustSupport": true
+        "patternCoding": {
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-seitenlokalisation"
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-primaertumor-seitenlokalisation"
+        }
       },
       {
         "id": "Condition.bodySite.coding:primaertumorSeitenlokalisation.system",
         "path": "Condition.bodySite.coding.system",
         "min": 1,
-        "patternUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-seitenlokalisation",
         "mustSupport": true
       },
       {

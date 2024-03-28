@@ -109,34 +109,18 @@
       },
       {
         "reference": {
+          "reference": "ConceptMap/MII-CM-Onko-oBDS-SCT-Mapping"
+        },
+        "name": "Mapping",
+        "description": "hier wurde gemappt",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad"
         },
         "name": "MII CS Onko Nebenwirkung nach CTCAE-Grad",
         "description": "Gibt an, zu welchem Schweregrad von Nebenwirkungen es bei der Bestrahlung oder der systemischen Therapie gekommen ist.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/mii-cs-onko-strahlentherapie-intention"
-        },
-        "name": "MII CS Onko Strahlentherapie Intention",
-        "description": "Intention für eine Strahlentherapie",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/mii-cs-onko-systemische-therapie-art"
-        },
-        "name": "MII CS Onko Systemische Therapie Art",
-        "description": "Art der systemischen oder abwartenden Therapie",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/mii-cs-onko-systemische-therapie-intention"
-        },
-        "name": "MII CS Onko Systemische Therapie Intention",
-        "description": "Intention für eine systemische oder abwartende Therapie",
         "exampleBoolean": false
       },
       {
@@ -160,7 +144,7 @@
           "reference": "CodeSystem/mii-cs-onko-fernmetastasen"
         },
         "name": "MII CS Onkologie Fernmetastasen",
-        "description": "oBDS-spezifisches Codesystem für Fernmetastasen",
+        "description": "oBDS-spezifisches Codesystem für Fernmetastasen, basierend auf Spezifikation durch TNM-Klassifikation",
         "exampleBoolean": false
       },
       {
@@ -189,26 +173,10 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/mii-cs-onko-operation-intention"
-        },
-        "name": "MII CS Onkologie Operation Intention",
-        "description": "oBDS-spezifisches Codesystem für Klassifikation von Intention der OP",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "CodeSystem/mii-cs-onko-operation-komplikation"
         },
         "name": "MII CS Onkologie Operation Komplikationen",
         "description": "oBDS-spezifisches Codesystem für Klassifikation von Komplikationen während der OP",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/mii-cs-onko-operation-resektionsstatus"
-        },
-        "name": "MII CS Onkologie Operation Resektionsstatus",
-        "description": "oBDS-spezifisches Codesystem für Klassifikation von Resektionsstatus der OP",
         "exampleBoolean": false
       },
       {
@@ -253,26 +221,10 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/mii-cs-onko-strahlentherapie-ende-grund"
-        },
-        "name": "MII CS Onkologie Strahlentherapie Ende Grund",
-        "description": "oBDS-spezifisches Codesystem für Klassifikation des Grundes der Beendigung der Strahlentherapie",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "CodeSystem/mii-cs-onko-therapie-ende-grund"
         },
         "name": "MII CS Onkologie Strahlentherapie Ende Grund",
         "description": "oBDS-spezifisches Codesystem für Klassifikation des Grundes der Beendigung der Strahlentherapie oder der systemischen Therapie",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/mii-cs-onko-strahlentherapie-stellung"
-        },
-        "name": "MII CS Onkologie Strahlentherapie Stellung",
-        "description": "oBDS-spezifisches Codesystem für Klassifikation von Stellung zur OP",
         "exampleBoolean": false
       },
       {
@@ -293,14 +245,6 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/mii-cs-onko-systemische-therapie-stellung"
-        },
-        "name": "MII CS Onkologie Systemische Therapie  Stellung",
-        "description": "oBDS-spezifisches Codesystem für Klassifikation von Stellung zur OP",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "CodeSystem/mii-cs-onko-therapie-stellung"
         },
         "name": "MII CS Onkologie Therapie Stellung",
@@ -313,14 +257,6 @@
         },
         "name": "MII CS Onkologie Therapieabweichung",
         "description": "oBDS-spezifisches Codesystem für die Therapieabweichung auf Wunsch des Patients.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/mii-cs-onko-therapieempfehlung-typ"
-        },
-        "name": "MII CS Onkologie Therapieempfehlung Typ",
-        "description": "oBDS-spezifisches Codesystem für den Therapieempfehlungstyp",
         "exampleBoolean": false
       },
       {
@@ -813,14 +749,6 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/mii-vs-onko-operation-resektionsstatus"
-        },
-        "name": "MII VS Onkologie Operation Resektionsstatus",
-        "description": "Value Set für oBDS-Codes für Klassifikation von Resektionstatus der OP",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "ValueSet/mii-vs-onko-primaertumor-diagnosesicherung"
         },
         "name": "MII VS Onkologie Primärtumor Diagnosesicherung",
@@ -845,7 +773,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/mii-cs-onko-strahlentherapie-boost"
+          "reference": "ValueSet/mii-vs-onko-strahlentherapie-boost"
         },
         "name": "MII VS Onkologie Strahlentherapie Boost",
         "description": "oBDS-spezifisches ValueSet für Klassifikation von Boosts bei Strahlentherapie",

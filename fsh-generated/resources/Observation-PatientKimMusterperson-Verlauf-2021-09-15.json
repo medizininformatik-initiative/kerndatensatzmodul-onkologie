@@ -6,20 +6,6 @@
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf"
     ]
   },
-  "subject": {
-    "reference": "Patient/PatientKimMusterperson"
-  },
-  "status": "final",
-  "effectiveDateTime": "2021-09-15",
-  "code": {
-    "coding": [
-      {
-        "code": "P",
-        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung",
-        "display": "Progression"
-      }
-    ]
-  },
   "component": [
     {
       "code": {
@@ -81,5 +67,19 @@
         ]
       }
     }
-  ]
+  ],
+  "subject": {
+    "reference": "Patient/PatientKimMusterperson"
+  },
+  "status": "final",
+  "effectiveDateTime": "2021-09-15",
+  "code": {
+    "coding": [
+      {
+        "code": "P",
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung",
+        "display": "Progression"
+      }
+    ]
+  }
 }

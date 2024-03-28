@@ -6,20 +6,6 @@
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf"
     ]
   },
-  "subject": {
-    "reference": "Patient/PatientKimMusterperson"
-  },
-  "status": "final",
-  "effectiveDateTime": "2021-10-25",
-  "code": {
-    "coding": [
-      {
-        "code": "V",
-        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung",
-        "display": "Vollremission"
-      }
-    ]
-  },
   "component": [
     {
       "code": {
@@ -41,5 +27,19 @@
         ]
       }
     }
-  ]
+  ],
+  "subject": {
+    "reference": "Patient/PatientKimMusterperson"
+  },
+  "status": "final",
+  "effectiveDateTime": "2021-10-25",
+  "code": {
+    "coding": [
+      {
+        "code": "V",
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung",
+        "display": "Vollremission"
+      }
+    ]
+  }
 }
