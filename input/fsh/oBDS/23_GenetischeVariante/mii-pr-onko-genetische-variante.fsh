@@ -11,6 +11,9 @@ Description: "Genetische Variante wie im oBDS "
 * subject 1..1 MS
 * subject only Reference(Patient)
 
+* note MS 
+* note.text MS 
+
 * interpretation MS
 * interpretation from mii-vs-onko-genetische-variante-auspraegung (required)
 * value[x] ^slicing.discriminator.type = #pattern
