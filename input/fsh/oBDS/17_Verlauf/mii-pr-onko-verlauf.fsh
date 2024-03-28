@@ -15,8 +15,13 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
 * subject only Reference(Patient)
 
 * code MS
-* code 1..1 
-* code from MII_VS_Onko_Verlauf_Gesamtbeurteilung (required)
+// * code 1..1  erst wieder reinschalten 
+// * code.coding = SNOMED/LOINC Beurteilung
+* value[x] MS
+* value[x] 0..1
+* value[x] only CodeableConcept
+
+* valueCodeableConcept from MII_VS_Onko_Verlauf_Gesamtbeurteilung
 
 * component MS
 * component 1..*
@@ -29,13 +34,13 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
     Lymphknoten_Verlauf 0..1 and 
     Fernmetastasen_Verlauf 0..1
 * component[Tumor_Verlauf] MS 
-* component[Tumor_Verlauf].code.coding.code = $SCT#277062004 "Status des Residualtumors"
+* component[Tumor_Verlauf].code.coding = $SCT#277062004 "Status des Residualtumors"
 * component[Tumor_Verlauf].valueCodeableConcept from mii-vs-onko-verlauf-primaertumor (required)
 * component[Lymphknoten_Verlauf] MS 
-* component[Lymphknoten_Verlauf].code.coding.code = $SCT#277060007 "Status der lymphatischen Tumorinvasion"
+* component[Lymphknoten_Verlauf].code.coding = $SCT#277060007 "Status der lymphatischen Tumorinvasion"
 * component[Lymphknoten_Verlauf].valueCodeableConcept from mii-vs-onko-verlauf-lymphknoten (required)
 * component[Fernmetastasen_Verlauf] MS
-* component[Fernmetastasen_Verlauf].code.coding.code = $SCT#260874000 "Status der Metastasen"
+* component[Fernmetastasen_Verlauf].code.coding = $SCT#260874000 "Status der Metastasen"
 * component[Fernmetastasen_Verlauf].valueCodeableConcept from mii-vs-onko-verlauf-fernmetastasen (required)
 
 

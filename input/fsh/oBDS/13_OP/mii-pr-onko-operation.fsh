@@ -8,13 +8,16 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 * ^status = #draft
 // OP-Datum
 
+* extension contains mii-ex-onko-operation-intention named Intention 1..1
+* extension[Intention] MS
+
 * subject 1..1 MS
 * subject only Reference(Patient)
 
 * performed[x] MS
 * performed[x] only dateTime 
 // OP-Prozedur 
-* code.coding[ops] 1..1 MS // hier auch potentiel 1..*, weil mehrere Sachen gemacht werden können? geht das überhaupt, oder muss man da slicen?
+* code.coding[ops] 1..1 MS // hier auch potentiel 1..*, weil mehrere Sachen gemacht werden können? --> geht nicht wegen MII Prozedur-Binding
  
 * complication MS
 // * complication from $mii-vs-onko-operation-komplikation // quatsch, weil wir slices machen müssen
@@ -25,7 +28,7 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
     compl_obds 0..* and
     compl_icd10 0..*
 * complication[compl_obds] MS
-* complication[compl_obds].coding from $mii-vs-onko-operation-komplikation
+* complication[compl_obds] from mii-vs-onko-operation-komplikation
 * complication[compl_obds].coding.system = $mii-cs-onko-operation-komplikation
 * complication[compl_obds].coding.code 1.. MS
 
@@ -38,14 +41,24 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 // Residualstatus lokal
 * outcome MS
 * outcome 0..1
-* outcome from $mii-vs-onko-beurteilung-lokaler-residualstatus (required)
+* outcome from mii-vs-onko-beurteilung-lokaler-residualstatus (required)
 
 
-* extension contains mii-ex-onko-operation-intention named Intention 1..1
-* extension[Intention] MS
 
-* outcome MS 
-* outcome 0..1 
+
+// Referenz auf Tumorboard
+* basedOn MS
+* basedOn only Reference(CarePlan)
+
+// Referenz auf Primaerdiagnose oder andere Condition
+* reasonReference MS 
+* reasonReference only Reference(Condition)
+
+// Referenz auf letzte Verlaufsobservation zur zeitlichen und inhaltlichen Kopplung
+* partOf MS
+* partOf only Reference(Observation)
+
+
 
 
 Mapping: FHIR-oBDS-Operation

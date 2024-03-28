@@ -70,11 +70,7 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-verlauf-gesamtbeurteilung"
-        }
+        "mustSupport": true
       },
       {
         "id": "Observation.code.coding.code",
@@ -135,6 +131,20 @@
         ]
       },
       {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-verlauf-gesamtbeurteilung"
+        }
+      },
+      {
         "id": "Observation.component",
         "path": "Observation.component",
         "slicing": {
@@ -159,9 +169,17 @@
         "mustSupport": true
       },
       {
+        "id": "Observation.component:Tumor_Verlauf.code.coding",
+        "path": "Observation.component.code.coding",
+        "patternCoding": {
+          "code": "277062004",
+          "system": "http://snomed.info/sct",
+          "display": "Status des Residualtumors"
+        }
+      },
+      {
         "id": "Observation.component:Tumor_Verlauf.code.coding.code",
         "path": "Observation.component.code.coding.code",
-        "patternCode": "277062004",
         "mapping": [
           {
             "identity": "oBDS",
@@ -209,9 +227,17 @@
         "mustSupport": true
       },
       {
+        "id": "Observation.component:Lymphknoten_Verlauf.code.coding",
+        "path": "Observation.component.code.coding",
+        "patternCoding": {
+          "code": "277060007",
+          "system": "http://snomed.info/sct",
+          "display": "Status der lymphatischen Tumorinvasion"
+        }
+      },
+      {
         "id": "Observation.component:Lymphknoten_Verlauf.code.coding.code",
         "path": "Observation.component.code.coding.code",
-        "patternCode": "277060007",
         "mapping": [
           {
             "identity": "oBDS",
@@ -259,9 +285,17 @@
         "mustSupport": true
       },
       {
+        "id": "Observation.component:Fernmetastasen_Verlauf.code.coding",
+        "path": "Observation.component.code.coding",
+        "patternCoding": {
+          "code": "260874000",
+          "system": "http://snomed.info/sct",
+          "display": "Status der Metastasen"
+        }
+      },
+      {
         "id": "Observation.component:Fernmetastasen_Verlauf.code.coding.code",
         "path": "Observation.component.code.coding.code",
-        "patternCode": "260874000",
         "mapping": [
           {
             "identity": "oBDS",

@@ -3,7 +3,7 @@ Id: mii-cs-onko-allgemeiner-leistungszustand
 Title: "MII CS Onkologie Allgemeiner Leistungszustand"
 Description: "oBDS-spezifisches Codesystem für den Allgemeinen Leistungszustand"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-allgemeiner-leistungszustand"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand"
 * ^status = #draft
 * ^experimental = false
 * insert Publisher

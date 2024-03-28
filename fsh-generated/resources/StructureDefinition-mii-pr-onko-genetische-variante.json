@@ -104,7 +104,23 @@
           ],
           "rules": "open",
           "ordered": false
-        }
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x]:valueCodeableConcept",
+        "path": "Observation.value[x]",
+        "sliceName": "valueCodeableConcept",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true
       },
       {
         "id": "Observation.interpretation",
@@ -112,7 +128,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-genetische-variante-auspraegung"
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-genetische-variante-auspraegung"
         },
         "mapping": [
           {
@@ -125,6 +141,7 @@
       {
         "id": "Observation.note",
         "path": "Observation.note",
+        "mustSupport": true,
         "mapping": [
           {
             "identity": "oBDS",
@@ -132,6 +149,11 @@
             "comment": "Genetische Variante Name"
           }
         ]
+      },
+      {
+        "id": "Observation.note.text",
+        "path": "Observation.note.text",
+        "mustSupport": true
       }
     ]
   }

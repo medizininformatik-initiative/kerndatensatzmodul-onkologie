@@ -18,7 +18,7 @@ Description: "Tumorbedingter Tod"
 * effectiveDateTime 1.. MS
 
 * interpretation MS
-* interpretation.coding from $mii-vs-onko-tod
+* interpretation.coding from mii-vs-onko-tod
 * interpretation.coding.code 1.. MS
 * interpretation.coding.system 1.. MS
 * interpretation.coding.system = $mii-cs-onko-tod

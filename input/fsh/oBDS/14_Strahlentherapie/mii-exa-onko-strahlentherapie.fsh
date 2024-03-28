@@ -7,10 +7,10 @@ Description: "Example radiation therapy"
 * status = #final
 
 * extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#P // palliativ
-* extension[Intention].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention"
-* extension[Stellung].valueCodeableConcept = $mii-cs-onko-strahlentherapie-stellung#A // adjuvant
-* extension[Stellung].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellung"
-* extension[Bestrahlung].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung"
+* extension[Intention].url = $mii-ex-onko-strahlentherapie-intention
+* extension[Stellung].valueCodeableConcept = $mii-cs-onko-therapie-stellung#A // adjuvant
+* extension[Stellung].url = $mii-ex-onko-strahlentherapie-stellung
+* extension[Bestrahlung].url = $mii-ex-onko-strahlentherapie-bestrahlung
 * extension[Bestrahlung].extension[Applikationsart].valueCodeableConcept =  $mii-cs-onko-strahlentherapie-applikationsart#P-ST
 * extension[Bestrahlung].extension[Strahlenart].valueCodeableConcept =  $mii-cs-onko-strahlentherapie-strahlenart#UH
 * extension[Bestrahlung].extension[Zielgebiet].valueCodeableConcept =  $mii-cs-onko-strahlentherapie-zielgebiet#3.4

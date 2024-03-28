@@ -11,11 +11,16 @@ Description: "Genetische Variante wie im oBDS "
 * subject 1..1 MS
 * subject only Reference(Patient)
 
+* note MS 
+* note.text MS 
+
 * interpretation MS
-* interpretation from $mii-cs-onko-genetische-variante-auspraegung (required)
+* interpretation from mii-vs-onko-genetische-variante-auspraegung (required)
 * value[x] ^slicing.discriminator.type = #pattern
 * value[x] ^slicing.rules = #open
 * value[x] ^slicing.ordered = false
+* value[x] only CodeableConcept
+* valueCodeableConcept 0..1 MS
 
 
 Mapping: FHIR-oBDSGenetischeVariante

@@ -17,9 +17,7 @@ Description: "Histologie-Kodierung nach ICD-0 für die Verwendung von Folgediagn
 * valueCodeableConcept MS
 * valueCodeableConcept 1..1
 * valueCodeableConcept from $ICDO3 (required)
-* bodySite MS
-* bodySite 0..1
-* bodySite.coding from $ICDO3 (required)
+
 * specimen MS 
 * specimen 1..1
 * specimen only Reference(MII_PR_Onko_Specimen)

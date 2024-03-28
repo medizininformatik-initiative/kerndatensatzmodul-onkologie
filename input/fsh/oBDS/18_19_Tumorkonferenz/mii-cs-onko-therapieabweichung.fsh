@@ -9,7 +9,6 @@ Description: "oBDS-spezifisches Codesystem für die Therapieabweichung auf Wunsc
 * insert Publisher
 * insert PR_CS_VS_Version
 * ^caseSensitive = true
-* ^valueSet = $mii-vs-onko-therapieabweichung
 * ^content = #complete
 * #J "ja"
 * #N "nein"

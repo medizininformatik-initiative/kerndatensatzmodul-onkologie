@@ -1,0 +1,46 @@
+{
+  "resourceType": "Procedure",
+  "id": "PatientKimMusterperson-Procedure-4",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure"
+    ]
+  },
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/PatientKimMusterperson"
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "5-547.0",
+        "system": "http://fhir.de/CodeSystem/bfarm/ops",
+        "display": "Resektion von Gewebe ohne sichere Organzuordnung - intraperitoneal"
+      },
+      {
+        "code": "5-683",
+        "system": "http://fhir.de/CodeSystem/bfarm/ops",
+        "display": "Hysterektomie"
+      },
+      {
+        "code": "5-661",
+        "system": "http://fhir.de/CodeSystem/bfarm/ops",
+        "display": "bilaterale Adnexektomie / Salpingektomie"
+      },
+      {
+        "code": "5-501",
+        "system": "http://fhir.de/CodeSystem/bfarm/ops",
+        "display": "atypische Lebersegmentresektion"
+      }
+    ]
+  },
+  "performedDateTime": "2021-09-30",
+  "outcome": {
+    "coding": [
+      {
+        "code": "R0",
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus"
+      }
+    ]
+  }
+}

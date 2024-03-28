@@ -22,9 +22,9 @@
     ],
     "coding": [
       {
-        "code": "1-853.2",
+        "code": "384625004",
         "system": "http://snomed.info/sct",
-        "display": "M - Distant metastasis stage"
+        "display": "pT category (observable entity)"
       }
     ]
   },
@@ -42,7 +42,15 @@
   },
   "partOf": [
     {
-      "reference": "Procedure/OncologicExamplePatientProcedure4"
+      "reference": "Procedure/PatientKimMusterperson-Procedure-4"
     }
-  ]
+  ],
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "T3c",
+        "system": "https://www.uicc.org/resources/tnm"
+      }
+    ]
+  }
 }

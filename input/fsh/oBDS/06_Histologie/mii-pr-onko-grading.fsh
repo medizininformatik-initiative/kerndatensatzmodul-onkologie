@@ -36,7 +36,7 @@ Description: "Histologie: Tumor Grading. Gibt den Differenzierungsgrad des Tumor
 * effectiveDateTime 1.. MS
 * value[x] only CodeableConcept
 * valueCodeableConcept MS
-* valueCodeableConcept from $mii-vs-onko-grading (required)
+* valueCodeableConcept from mii-vs-onko-grading (required)
 * valueCodeableConcept.coding.code 1.. MS
 * valueCodeableConcept.coding.system 1.. MS
 

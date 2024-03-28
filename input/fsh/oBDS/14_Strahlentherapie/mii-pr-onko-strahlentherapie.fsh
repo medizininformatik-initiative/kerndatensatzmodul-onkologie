@@ -34,7 +34,20 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 // Strahlentherapie Ende Grund
 * outcome MS
 * outcome 0..1
-* outcome.coding.code from MII_VS_Onko_Strahlentherapie_Ende_Grund (required)
+* outcome.coding from MII_VS_Onko_Strahlentherapie_Ende_Grund (required)
+
+// Referenz auf Tumorboard
+* basedOn MS
+* basedOn only Reference(CarePlan)
+
+// Referenz auf Primaerdiagnose oder andere Condition
+* reasonReference MS 
+* reasonReference only Reference(Condition)
+
+// Referenz auf letzte Verlaufsobservation zur zeitlichen und inhaltlichen Kopplung
+* partOf MS
+* partOf only Reference(Observation)
+
 
 
 Mapping: FHIR-oBDS-Strahlentherapie

@@ -8,8 +8,6 @@ Description: "oBDS-spezifisches ValueSet für Klassifikation der Art der systemi
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
-//* include codes from system $mii-cs-onko-systemische-therapie-art
-
 * $mii-cs-onko-therapie-typ#CH "Chemotherapie"
 * $mii-cs-onko-therapie-typ#HO "Hormontherapie"
 * $mii-cs-onko-therapie-typ#IM "Immun-/Antikörpertherapie"

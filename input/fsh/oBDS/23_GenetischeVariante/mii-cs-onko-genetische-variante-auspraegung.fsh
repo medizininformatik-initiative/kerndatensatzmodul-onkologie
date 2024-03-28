@@ -9,7 +9,6 @@ Description: "oBDS-spezifisches Codesystem Konsequenz der genetischen Variante A
 * insert Publisher
 * insert PR_CS_VS_Version
 * ^caseSensitive = true
-* ^valueSet = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-genetische-variante-auspraegung"
 * ^content = #complete
 * #M "Mutation/positiv"
 * #W "Wildtyp/nicht mutiert/ negativ"

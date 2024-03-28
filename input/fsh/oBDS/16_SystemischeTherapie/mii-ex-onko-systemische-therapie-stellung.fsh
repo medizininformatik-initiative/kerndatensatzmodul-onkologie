@@ -12,6 +12,6 @@ Description: "Systemische Therapie Stellung zur OP"
 * value[x] only CodeableConcept
 * value[x] from MII_VS_Onko_Systemische_Therapie_Stellung (required)
 * valueCodeableConcept.coding.system 1..
-* valueCodeableConcept.coding.system = $mii-cs-onko-systemische-therapie-stellung (exactly)
+* valueCodeableConcept.coding.system = $mii-cs-onko-therapie-stellung (exactly)
 * valueCodeableConcept.coding.code 1..
 * valueCodeableConcept.text MS

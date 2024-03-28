@@ -1,0 +1,65 @@
+{
+  "resourceType": "Observation",
+  "id": "PatientKimMusterperson-Verlauf-2022-01-22",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf"
+    ]
+  },
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "277062004",
+            "system": "http://snomed.info/sct",
+            "display": "Status des Residualtumors"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "T",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-primaertumor",
+            "display": "Tumorreste (Residualtumor)"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "260874000",
+            "system": "http://snomed.info/sct",
+            "display": "Status der Metastasen"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "K",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen",
+            "display": "Keine Fernmetastasen nachweisbar"
+          }
+        ]
+      }
+    }
+  ],
+  "subject": {
+    "reference": "Patient/PatientKimMusterperson"
+  },
+  "status": "final",
+  "effectiveDateTime": "2022-01-22",
+  "code": {
+    "coding": [
+      {
+        "code": "V",
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung",
+        "display": "Vollremission"
+      }
+    ]
+  }
+}

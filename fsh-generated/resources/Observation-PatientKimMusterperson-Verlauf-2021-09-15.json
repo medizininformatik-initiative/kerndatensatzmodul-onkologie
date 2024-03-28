@@ -1,0 +1,85 @@
+{
+  "resourceType": "Observation",
+  "id": "PatientKimMusterperson-Verlauf-2021-09-15",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf"
+    ]
+  },
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "277062004",
+            "system": "http://snomed.info/sct",
+            "display": "Status des Residualtumors"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "P",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-primaertumor",
+            "display": "Tumorreste (Residualtumor) Progress"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "277060007",
+            "system": "http://snomed.info/sct",
+            "display": "Status der lymphatischen Tumorinvasion"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "R",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-lymphknoten",
+            "display": "neu aufgetretenes Lymphknotenrezidiv"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "260874000",
+            "system": "http://snomed.info/sct",
+            "display": "Status der Metastasen"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "K",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen",
+            "display": "Keine Änderung"
+          }
+        ]
+      }
+    }
+  ],
+  "subject": {
+    "reference": "Patient/PatientKimMusterperson"
+  },
+  "status": "final",
+  "effectiveDateTime": "2021-09-15",
+  "code": {
+    "coding": [
+      {
+        "code": "P",
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung",
+        "display": "Progression"
+      }
+    ]
+  }
+}
