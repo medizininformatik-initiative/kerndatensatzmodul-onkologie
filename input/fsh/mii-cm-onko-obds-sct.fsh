@@ -1,4 +1,4 @@
-Instance: MII_CM_Onko_oBDS_SCT_Mapping
+Instance: MII-CM-Onko-oBDS-SCT-Mapping
 InstanceOf: ConceptMap 
 Usage: #example
 Title: "Mapping"
