@@ -10,10 +10,10 @@ Description: "Dieses Profil beschreibt eine Liste, die alle Observationen enthä
 * subject only Reference(Patient)
 * encounter 0..1 MS
 * mode MS 
-* mode = #snapshot (fixed)
+* mode = #snapshot
 * status MS
 * status = #current
 * entry 1.. MS 
-* entry[x].flag MS
-* entry[x].item MS
-* entry[x].item only Reference(Observation)
+* entry.flag MS
+* entry.item MS
+* entry.item only Reference(Observation)
