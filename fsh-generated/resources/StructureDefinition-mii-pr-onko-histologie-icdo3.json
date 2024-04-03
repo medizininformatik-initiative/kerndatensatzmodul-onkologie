@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Histologie-Kodierung nach ICD-0 für die Verwendung von Folgediagnostik. Bei der histologischen Beurteilung des Primärtumors sind die histologischen Informationen direkt über die Condition-Ressource abgebildet.",
+  "description": "Histologie-Kodierung nach ICD-0 für die Verwendung von Folgediagnostik. Bei der histologischen Beurteilung des Primärtumors sind die histologischen Informationen direkt über die Condition-Ressource abzubilden.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -65,7 +65,7 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "short": "Histologische Bewertung nach ICD-0",
+        "short": "Histologische Bewertung nach ICD-0-3",
         "mustSupport": true
       },
       {
