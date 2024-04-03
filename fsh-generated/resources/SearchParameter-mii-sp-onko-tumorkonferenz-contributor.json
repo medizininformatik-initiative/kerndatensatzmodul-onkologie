@@ -15,11 +15,12 @@
   ],
   "version": "2024.0.0-ballot",
   "name": "MII_SP_Tumorkonferenz_Contributor",
-  "description": "SearchParameter for Tumorkonferenz.contributor",
+  "description": "SearchParameter for CarePlan.contributor",
   "status": "active",
   "code": "contributor",
   "base": [
     "CarePlan"
   ],
-  "type": "reference"
+  "type": "reference",
+  "expression": "CarePlan.contributor"
 }

@@ -15,11 +15,12 @@
   ],
   "version": "2024.0.0-ballot",
   "name": "MII_SP_Tumorkonferenz_Addresses",
-  "description": "SearchParameter for Tumorkonferenz.addresses",
+  "description": "SearchParameter for CarePlan.addresses",
   "status": "active",
   "code": "addresses",
   "base": [
     "CarePlan"
   ],
-  "type": "reference"
+  "type": "reference",
+  "expression": "CarePlan.addresses"
 }
