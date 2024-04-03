@@ -24,8 +24,6 @@ Usage: #definition
 //----------------------------------------
 // SearchParameters for TNM Klassifikationen
 //----------------------------------------
-
-// hasMember
 Instance: mii-sp-onko-tnm-klassifikation-has-member
 InstanceOf: SearchParameter
 Usage: #definition
@@ -157,7 +155,7 @@ Usage: #definition
 * type = #token
 * expression = Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung').extension.where(url='Zielgebiet').value
 
-Instance: mii-sp-onko-strahlentherapie-extension-bestrahlung-zielgebiet_lateralitaet
+Instance: mii-sp-onko-strahlentherapie-extension-bestrahlung-zielgebiet-lateralitaet
 InstanceOf: SearchParameter
 Usage: #definition
 * insert SP_Publisher
