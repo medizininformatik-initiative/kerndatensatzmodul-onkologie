@@ -8,10 +8,10 @@ Usage: #definition
 * insert SP_Publisher
 * insert Version
 * name = "MII_SP_Diagnose_verification_status"
-* description = "SearchParameter for Diagnose.verificationStatus"
+* description = "SearchParameter for Condition.verificationStatus"
 * status = #active 
 * code = #verification-status
-* base = #Observation 
+* base = #Condition 
 * type = #token
 * expression = "Condition.verificationStatus"
 
@@ -19,9 +19,25 @@ Usage: #definition
 // SearchParameters for Histologie
 //----------------------------------------
 
+// No search parameters to cover
+
 //----------------------------------------
 // SearchParameters for TNM Klassifikationen
 //----------------------------------------
+
+// hasMember
+Instance: mii-sp-onko-tnm-klassifikation-has-member
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert Version
+* name = "MII_SP_TNM_Klassifikationen_Has_Member"
+* description = "SearchParameter for Observation.hasMembe"
+* status = #active 
+* code = #verification-status
+* base = #Observation 
+* type = #reference
+* expression = "Observation.hasMember"
 
 //----------------------------------------
 // SearchParameters for Weitere Klassifikationen
@@ -44,12 +60,12 @@ Usage: #definition
 * insert SP_Publisher
 * insert Version
 * name = "MII_SP_Fernmetastasen_Body_Site"
-* description = "SearchParameter for Fernmetastasen.bodysite" // Muss hier Fernmetastasen oder Observation stehen?
+* description = "SearchParameter for Observation.bodySite"
 * status = #active 
 * code = #body-site
 * base = #Observation 
 * type = #token
-* expression = "Observation.bodySite" // is Observation not already covered by base?
+* expression = "Observation.bodySite"
 
 //----------------------------------------
 // SearchParameters for Allgemeiner Leistungszustand
@@ -60,52 +76,26 @@ Usage: #definition
 //----------------------------------------
 // SearchParameters for Operation
 //----------------------------------------
-Instance: mii-sp-onko-operation-extension-durchfuehrungsabsicht // wo kommt die extension her? Vllt von der base abgeleitet? steht auch in strahlentherapie -> kann wahrscheinlic raus
-InstanceOf: SearchParameter
-Usage: #definition
-* insert SP_Publisher
-* insert Version
-* name = "MII_SP_Operation_Extension_Durchfuehrungsabsicht"
-* description = "SearchParameter for Operation.extension.durchfuehrungsabsicht"
-* status = #active 
-* code = #extension-durchfuehrungsabsicht
-* base = #Procedure 
-* type = #token
-* expression = "Procedure.extension.durchfuehrungsabsicht"
-
-Instance: mii-sp-onko-operation-extension-intention // sollte kleingeschrieben werden im profil + Dokumentationsdatum auch
+Instance: mii-sp-onko-operation-extension-intention // im IG sollte kleingeschrieben werden im profil + Dokumentationsdatum auch
 InstanceOf: SearchParameter
 Usage: #definition
 * insert SP_Publisher
 * insert Version
 * name = "MII_SP_Operation_Extension_Intention"
-* description = "SearchParameter for Operation.extension.intention"
+* description = "SearchParameter for Procedure.extension.intention"
 * status = #active 
 * code = #extension-intention
-* base = #Procedure // im profil steht mii procdure, tut das eine spezifische mii base dann erfordern?
+* base = #Procedure
 * type = #token
-* expression = "Procedure.extension.intention"
+* expression = Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention').value 
 
-Instance: mii-sp-onko-operation-outcome
-InstanceOf: SearchParameter
-Usage: #definition
-* insert SP_Publisher
-* insert Version
-* name = "MII_SP_Operation_Outcome"
-* description = "SearchParameter for Operation.outcome"
-* status = #active 
-* code = #outcome
-* base = #Procedure 
-* type = #token
-* expression = "Procedure.outcome" 
-
-Instance: mii-sp-onko-operation-complication // is this enouh or we need two for obds and icd10 slices?
+Instance: mii-sp-onko-operation-complication
 InstanceOf: SearchParameter
 Usage: #definition
 * insert SP_Publisher
 * insert Version
 * name = "MII_SP_Operation_Complication"
-* description = "SearchParameter for Operation.complication"
+* description = "SearchParameter for Procedure.complication"
 * status = #active 
 * code = #complication
 * base = #Procedure 
@@ -115,56 +105,109 @@ Usage: #definition
 //----------------------------------------
 // SearchParameters for Strahlentherapie
 //----------------------------------------
-
-// durchfuehrungsabsicht?
-
-Instance: mii-sp-onko-strahlentherapie-extension-intention
-InstanceOf: SearchParameter
-Usage: #definition
-* insert SP_Publisher
-* insert Version
-* name = "MII_SP_Strahlentherapie_Extension_Intention"
-* description = "SearchParameter for Strahlentherapie.extension.intention"
-* status = #active 
-* code = #extension-intention
-* base = #Procedure
-* type = #token
-* expression = "Procedure.extension.intention"
-
 Instance: mii-sp-onko-strahlentherapie-extension-stellung
 InstanceOf: SearchParameter
 Usage: #definition
 * insert SP_Publisher
 * insert Version
 * name = "MII_SP_Strahlentherapie_Extension_Stellung"
-* description = "SearchParameter for Strahlentherapie.extension.stellung"
+* description = "SearchParameter for Procedure.extension.stellung"
 * status = #active 
 * code = #extension-stellung
 * base = #Procedure
 * type = #token
-* expression = "Procedure.extension.stellung"
+* expression = Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellung').value 
 
-// is this correct for a complex extension?
-Instance: mii-sp-onko-strahlentherapie-extension-bestrahlung // complex extension
+Instance: mii-sp-onko-strahlentherapie-extension-bestrahlung-applikationsart
 InstanceOf: SearchParameter
 Usage: #definition
 * insert SP_Publisher
 * insert Version
-* name = "MII_SP_Strahlentherapie_Extension_Bestrahlung"
-* description = "SearchParameter for Strahlentherapie.extension.bestrahlung.extension..."
+* name = "MII_SP_Strahlentherapie_Extension_Bestrahlung_Applikationsart"
+* description = "SearchParameter for Procedure.extension:bestrahlung.extension:applikationsart"
 * status = #active 
-* code = #extension-bestrahlung
+* code = #extension-bestrahlung-applikationsart
 * base = #Procedure
 * type = #token
-* expression = "Procedure.extension.bestrahlung.extension-element.Applikationsart | ⁄ 
-Procedure.extension.bestrahlung.extension-element.Strahlenart | ⁄
-Procedure.extension.bestrahlung.extension-element.Zielgebiet | ⁄
-Procedure.extension.bestrahlung.extension-element.Zielgebiet_Lateralitaet | ⁄
-Procedure.extension.bestrahlung.extension-element.Gesamtdosis | ⁄
-Procedure.extension.bestrahlung.extension-element.Einzeldosis | ⁄
-Procedure.extension.bestrahlung.extension-element.Boost ⁄
-"
-// die unterschiedlichen extension elemente können unterschiedliche typen haben?!?
+* expression = Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung').extension.where(url='Applikationsart').value
+
+Instance: mii-sp-onko-strahlentherapie-extension-bestrahlung-strahlenart
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert Version
+* name = "MII_SP_Strahlentherapie_Extension_Bestrahlung_Strahlenart"
+* description = "SearchParameter for Procedure.extension:bestrahlung.extension:strahlenart"
+* status = #active 
+* code = #extension-bestrahlung-strahlenart
+* base = #Procedure
+* type = #token
+* expression = Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung').extension.where(url='Strahlenart').value
+
+Instance: mii-sp-onko-strahlentherapie-extension-bestrahlung-zielgebiet
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert Version
+* name = "MII_SP_Strahlentherapie_Extension_Bestrahlung_Zielgebiet"
+* description = "SearchParameter for Procedure.extension:bestrahlung.extension:zielgebiet"
+* status = #active 
+* code = #extension-bestrahlung-zielgebiet
+* base = #Procedure
+* type = #token
+* expression = Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung').extension.where(url='Zielgebiet').value
+
+Instance: mii-sp-onko-strahlentherapie-extension-bestrahlung-zielgebiet_lateralitaet
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert Version
+* name = "MII_SP_Strahlentherapie_Extension_Bestrahlung_Zielgebiet_Lateralitaet"
+* description = "SearchParameter for Procedure.extension:bestrahlung.extension:zielgebiet_Lateralitaet"
+* status = #active 
+* code = #extension-bestrahlung-zielgebiet-Lateralitaet
+* base = #Procedure
+* type = #token
+* expression = Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung').extension.where(url='Zielgebiet_Lateralitaet').value
+
+Instance: mii-sp-onko-strahlentherapie-extension-bestrahlung-gesamtdosis
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert Version
+* name = "MII_SP_Strahlentherapie_Extension_Bestrahlung_Gesamtdosis"
+* description = "SearchParameter for Procedure.extension:bestrahlung.extension:gesamtdosis"
+* status = #active 
+* code = #extension-bestrahlung-gesamtdosis
+* base = #Procedure
+* type = #quantity
+* expression = Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung').extension.where(url='Gesamtdosis').value
+
+Instance: mii-sp-onko-strahlentherapie-extension-bestrahlung-einzeldosis
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert Version
+* name = "MII_SP_Strahlentherapie_Extension_Bestrahlung_Einzeldosis"
+* description = "SearchParameter for Procedure.extension:bestrahlung.extension:einzeldosis"
+* status = #active 
+* code = #extension-bestrahlung-einzeldosis
+* base = #Procedure
+* type = #quantity
+* expression = Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung').extension.where(url='Einzeldosis').value
+
+Instance: mii-sp-onko-strahlentherapie-extension-bestrahlung-boost
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert Version
+* name = "MII_SP_Strahlentherapie_Extension_Bestrahlung_Boost"
+* description = "SearchParameter for Procedure.extension:bestrahlung.extension:boost"
+* status = #active 
+* code = #extension-bestrahlung-boost
+* base = #Procedure
+* type = #token
+* expression = Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung').extension.where(url='Boost').value
 
 Instance: mii-sp-onko-strahlentherapie-outcome
 InstanceOf: SearchParameter
@@ -172,7 +215,7 @@ Usage: #definition
 * insert SP_Publisher
 * insert Version
 * name = "MII_SP_Strahlentherapie_Outcome"
-* description = "SearchParameter for Strahlentherapie.outcome"
+* description = "SearchParameter for Procedure.outcome"
 * status = #active 
 * code = #outcome
 * base = #Procedure 
@@ -188,7 +231,7 @@ Usage: #definition
 * insert SP_Publisher
 * insert Version
 * name = "MII_SP_Nebenwirkung_SuspectEntity_instance"
-* description = "SearchParameter for Nebenwirkung.suspectEntity.instance"
+* description = "SearchParameter for AdverseEvent.suspectEntity.instance"
 * status = #active 
 * code = #instance
 * base = #AdverseEvent 
@@ -196,26 +239,16 @@ Usage: #definition
 * expression = "AdverseEvent.suspectEntity.instance" 
 
 //----------------------------------------
-// SearchParameters for Systemische Therapie -> Fehler in IG
+// SearchParameters for Systemische Therapie
 //----------------------------------------
-Instance: mii-sp-onko-systemische-therapie-outcome
-InstanceOf: SearchParameter
-Usage: #definition
-* insert SP_Publisher
-* insert Version
-* name = "MII_SP_Systemische_Therapie_Outcome"
-* description = "SearchParameter for Systemische_Therapie.outcome"
-* status = #active 
-* code = #outcome
-* base = #Procedure 
-* type = #token
-* expression = "Procedure.outcome" 
+
+// No search parameters to cover
 
 //----------------------------------------
 // SearchParameters for Verlauf
 //----------------------------------------
 
-// 3 Verlauf Componenten, nicht sicher ob die vom Observation base abgedeckt sind?
+// No search parameters to cover
 
 //----------------------------------------
 // SearchParameters for Tumorkonferenz
@@ -226,7 +259,7 @@ Usage: #definition
 * insert SP_Publisher
 * insert Version
 * name = "MII_SP_Tumorkonferenz_Created"
-* description = "SearchParameter for Tumorkonferenz.created"
+* description = "SearchParameter for CarePlan.created"
 * status = #active 
 * code = #created
 * base = #CarePlan 
@@ -239,11 +272,12 @@ Usage: #definition
 * insert SP_Publisher
 * insert Version
 * name = "MII_SP_Tumorkonferenz_Contributor"
-* description = "SearchParameter for Tumorkonferenz.contributor"
+* description = "SearchParameter for CarePlan.contributor"
 * status = #active 
 * code = #contributor
 * base = #CarePlan 
 * type = #reference
+* expression = "CarePlan.contributor" 
 
 Instance: mii-sp-onko-tumorkonferenz-addresses
 InstanceOf: SearchParameter
@@ -251,11 +285,12 @@ Usage: #definition
 * insert SP_Publisher
 * insert Version
 * name = "MII_SP_Tumorkonferenz_Addresses"
-* description = "SearchParameter for Tumorkonferenz.addresses"
+* description = "SearchParameter for CarePlan.addresses"
 * status = #active 
 * code = #addresses
 * base = #CarePlan 
 * type = #reference
+* expression = "CarePlan.addresses" 
 
 //----------------------------------------
 // SearchParameters for Tod
@@ -266,7 +301,7 @@ Usage: #definition
 * insert SP_Publisher
 * insert Version
 * name = "MII_SP_Onko_Tod_Interpreation"
-* description = "SearchParameter for Tod.interpretation"
+* description = "SearchParameter for Observation.interpretation"
 * status = #active
 * code = #interpretation
 * base = #Observation
@@ -276,15 +311,5 @@ Usage: #definition
 //----------------------------------------
 // SearchParameters for Genetische Variante
 //----------------------------------------
-Instance: mii-sp-onko-genetische-variante-interpreation // why is this MS? It not from parent but also not defined in fsh profile?
-InstanceOf: SearchParameter
-Usage: #definition
-* insert SP_Publisher
-* insert Version
-* name = "MII_SP_Onko_Genetische_Variante_Interpreation"
-* description = "SearchParameter for Genetische_Variante.interpretation"
-* status = #active
-* code = #interpretation
-* base = #Observation
-* type = #token
-* expression = "Observation.interpretation"
+
+// No search parameters to cover
