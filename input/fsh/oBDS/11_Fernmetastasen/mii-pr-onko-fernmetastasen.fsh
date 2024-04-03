@@ -7,6 +7,10 @@ Description: "OBDS Beschreibung von Fernmetastasen (Lokalisation und Datum)"
 * insert Publisher
 * ^status = #draft
 
+
+* subject 1..1 MS
+* subject only Reference(Patient)
+
 * code MS
 * code 1..1
 * code.coding = $SCT#385421009
