@@ -3,13 +3,12 @@ Id: mii-cs-onko-verlauf-primaertumor
 Title: "MII CS Onkologie Verlauf Primärtumor"
 Description: "oBDS-spezifisches Codesystem für die Beurteilung des Primärtumors im Behandlungsverlauf "
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-verlauf-primaertumor"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-primaertumor"
 * ^status = #draft
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
 * ^caseSensitive = true
-* ^valueSet = $mii-vs-onko-verlauf-primaertumor
 * ^content = #complete
 * #K "kein Tumor nachweisbar"
 * #T "Tumorreste (Residualtumor)"

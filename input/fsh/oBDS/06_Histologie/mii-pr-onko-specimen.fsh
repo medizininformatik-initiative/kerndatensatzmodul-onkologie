@@ -6,6 +6,8 @@ Description: "Histologie: Dieses Profil beschreibt eine Gewebeprobe in der Onkol
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
+* subject 1..1 MS
+* subject only Reference(Patient)
 * collection.collectedDateTime MS
 * identifier.value MS
 

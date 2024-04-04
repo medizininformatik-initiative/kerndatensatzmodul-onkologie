@@ -7,6 +7,9 @@ Description: "OBDS Beschreibung des allgemeines Leistungszustandes"
 * insert Publisher
 * ^status = #draft
 
+* subject 1..1 MS
+* subject only Reference(Patient)
+
 * code MS
 * code.coding MS
 * code.coding 1..*
@@ -28,8 +31,8 @@ Description: "OBDS Beschreibung des allgemeines Leistungszustandes"
 * value[x] only CodeableConcept
 * valueCodeableConcept MS
 * valueCodeableConcept 1..1
-* valueCodeableConcept.coding from $mii-vs-onko-allgemeiner-leistungszustand (required)
-* valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungsstatus"
+* valueCodeableConcept from mii-vs-onko-allgemeiner-leistungszustand (required)
+* valueCodeableConcept.coding.system = $mii-cs-onko-allgemeiner-leistungszustand
 * valueCodeableConcept.coding.code 1.. MS
 
 

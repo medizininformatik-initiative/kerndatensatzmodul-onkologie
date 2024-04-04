@@ -63,6 +63,19 @@
   "differential": {
     "element": [
       {
+        "id": "Observation.partOf",
+        "path": "Observation.partOf",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Procedure"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Observation.status",
         "path": "Observation.status",
         "mustSupport": true
@@ -221,6 +234,19 @@
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-version"
         }
+      },
+      {
+        "id": "Observation.hasMember",
+        "path": "Observation.hasMember",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen"
+            ]
+          }
+        ],
+        "mustSupport": true
       }
     ]
   }

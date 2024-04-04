@@ -8,8 +8,6 @@ Description: "Value Set für oBDS-Codes für Klassifikation von Intention der OP
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
-//* include codes from system $mii-cs-onko-operation-intention
-
 * $mii-cs-onko-intention#K "kurativ"
 * $mii-cs-onko-intention#P "palliativ"
 * $mii-cs-onko-intention#D "diagnostisch"

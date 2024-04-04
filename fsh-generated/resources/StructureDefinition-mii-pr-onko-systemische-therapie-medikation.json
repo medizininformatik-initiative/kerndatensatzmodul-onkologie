@@ -92,6 +92,21 @@
         ]
       },
       {
+        "id": "MedicationStatement.subject",
+        "path": "MedicationStatement.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference"
+            ],
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ]
+      },
+      {
         "id": "MedicationStatement.effective[x]:effectivePeriod",
         "path": "MedicationStatement.effective[x]",
         "sliceName": "effectivePeriod",

@@ -7,6 +7,9 @@ Description: "Weitere Tumor Staging Klassifikation neben TMN (Hämatoonkologisch
 * insert Publisher
 * ^status = #draft
 
+* subject 1..1 MS
+* subject only Reference(Patient)
+
 // 9.1 Hämatoonkologische und sonstige Klassifikationen Datum 
 * effective[x] MS
 * effective[x] only dateTime

@@ -123,54 +123,28 @@
         ]
       },
       {
-        "id": "Procedure.extension:Behandlungsabschnitt",
+        "id": "Procedure.extension:Bestrahlung",
         "path": "Procedure.extension",
-        "sliceName": "Behandlungsabschnitt",
+        "sliceName": "Bestrahlung",
         "min": 1,
         "max": "*",
         "type": [
           {
             "code": "Extension",
             "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-behandlungsabschnitt"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung"
             ]
           }
         ],
         "mustSupport": true
       },
       {
-        "id": "Procedure.extension:Behandlungsabschnitt.extension:Applikationsart",
+        "id": "Procedure.extension:Bestrahlung.extension:Applikationsart",
         "path": "Procedure.extension.extension",
         "sliceName": "Applikationsart"
       },
       {
-        "id": "Procedure.extension:Behandlungsabschnitt.extension:Applikationsart.value[x]",
-        "path": "Procedure.extension.extension.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "id": "Procedure.extension:Behandlungsabschnitt.extension:Applikationsart.value[x]:valueCodeableConcept",
-        "path": "Procedure.extension.extension.value[x]",
-        "sliceName": "valueCodeableConcept",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ]
-      },
-      {
-        "id": "Procedure.extension:Behandlungsabschnitt.extension:Applikationsart.value[x]:valueCodeableConcept.coding.code",
+        "id": "Procedure.extension:Bestrahlung.extension:Applikationsart.value[x].coding.code",
         "path": "Procedure.extension.extension.value[x].coding.code",
         "mapping": [
           {
@@ -181,38 +155,12 @@
         ]
       },
       {
-        "id": "Procedure.extension:Behandlungsabschnitt.extension:Strahlenart",
+        "id": "Procedure.extension:Bestrahlung.extension:Strahlenart",
         "path": "Procedure.extension.extension",
         "sliceName": "Strahlenart"
       },
       {
-        "id": "Procedure.extension:Behandlungsabschnitt.extension:Strahlenart.value[x]",
-        "path": "Procedure.extension.extension.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "id": "Procedure.extension:Behandlungsabschnitt.extension:Strahlenart.value[x]:valueCodeableConcept",
-        "path": "Procedure.extension.extension.value[x]",
-        "sliceName": "valueCodeableConcept",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ]
-      },
-      {
-        "id": "Procedure.extension:Behandlungsabschnitt.extension:Strahlenart.value[x]:valueCodeableConcept.coding.code",
+        "id": "Procedure.extension:Bestrahlung.extension:Strahlenart.value[x].coding.code",
         "path": "Procedure.extension.extension.value[x].coding.code",
         "mapping": [
           {
@@ -223,38 +171,12 @@
         ]
       },
       {
-        "id": "Procedure.extension:Behandlungsabschnitt.extension:Zielgebiet",
+        "id": "Procedure.extension:Bestrahlung.extension:Zielgebiet",
         "path": "Procedure.extension.extension",
         "sliceName": "Zielgebiet"
       },
       {
-        "id": "Procedure.extension:Behandlungsabschnitt.extension:Zielgebiet.value[x]",
-        "path": "Procedure.extension.extension.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "id": "Procedure.extension:Behandlungsabschnitt.extension:Zielgebiet.value[x]:valueCodeableConcept",
-        "path": "Procedure.extension.extension.value[x]",
-        "sliceName": "valueCodeableConcept",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ]
-      },
-      {
-        "id": "Procedure.extension:Behandlungsabschnitt.extension:Zielgebiet.value[x]:valueCodeableConcept.coding.code",
+        "id": "Procedure.extension:Bestrahlung.extension:Zielgebiet.value[x].coding.code",
         "path": "Procedure.extension.extension.value[x].coding.code",
         "mapping": [
           {
@@ -265,38 +187,12 @@
         ]
       },
       {
-        "id": "Procedure.extension:Behandlungsabschnitt.extension:Zielgebiet_Lateralitaet",
+        "id": "Procedure.extension:Bestrahlung.extension:Zielgebiet_Lateralitaet",
         "path": "Procedure.extension.extension",
         "sliceName": "Zielgebiet_Lateralitaet"
       },
       {
-        "id": "Procedure.extension:Behandlungsabschnitt.extension:Zielgebiet_Lateralitaet.value[x]",
-        "path": "Procedure.extension.extension.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "id": "Procedure.extension:Behandlungsabschnitt.extension:Zielgebiet_Lateralitaet.value[x]:valueCodeableConcept",
-        "path": "Procedure.extension.extension.value[x]",
-        "sliceName": "valueCodeableConcept",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ]
-      },
-      {
-        "id": "Procedure.extension:Behandlungsabschnitt.extension:Zielgebiet_Lateralitaet.value[x]:valueCodeableConcept.coding.code",
+        "id": "Procedure.extension:Bestrahlung.extension:Zielgebiet_Lateralitaet.value[x].coding.code",
         "path": "Procedure.extension.extension.value[x].coding.code",
         "mapping": [
           {
@@ -307,12 +203,12 @@
         ]
       },
       {
-        "id": "Procedure.extension:Behandlungsabschnitt.extension:Gesamtdosis",
+        "id": "Procedure.extension:Bestrahlung.extension:Gesamtdosis",
         "path": "Procedure.extension.extension",
         "sliceName": "Gesamtdosis"
       },
       {
-        "id": "Procedure.extension:Behandlungsabschnitt.extension:Gesamtdosis.value[x].value",
+        "id": "Procedure.extension:Bestrahlung.extension:Gesamtdosis.value[x].value",
         "path": "Procedure.extension.extension.value[x].value",
         "mapping": [
           {
@@ -323,7 +219,7 @@
         ]
       },
       {
-        "id": "Procedure.extension:Behandlungsabschnitt.extension:Gesamtdosis.value[x].unit",
+        "id": "Procedure.extension:Bestrahlung.extension:Gesamtdosis.value[x].unit",
         "path": "Procedure.extension.extension.value[x].unit",
         "mapping": [
           {
@@ -334,12 +230,12 @@
         ]
       },
       {
-        "id": "Procedure.extension:Behandlungsabschnitt.extension:Einzeldosis",
+        "id": "Procedure.extension:Bestrahlung.extension:Einzeldosis",
         "path": "Procedure.extension.extension",
         "sliceName": "Einzeldosis"
       },
       {
-        "id": "Procedure.extension:Behandlungsabschnitt.extension:Einzeldosis.value[x].value",
+        "id": "Procedure.extension:Bestrahlung.extension:Einzeldosis.value[x].value",
         "path": "Procedure.extension.extension.value[x].value",
         "mapping": [
           {
@@ -350,7 +246,7 @@
         ]
       },
       {
-        "id": "Procedure.extension:Behandlungsabschnitt.extension:Einzeldosis.value[x].unit",
+        "id": "Procedure.extension:Bestrahlung.extension:Einzeldosis.value[x].unit",
         "path": "Procedure.extension.extension.value[x].unit",
         "mapping": [
           {
@@ -361,18 +257,59 @@
         ]
       },
       {
-        "id": "Procedure.extension:Behandlungsabschnitt.extension:Boost",
+        "id": "Procedure.extension:Bestrahlung.extension:Boost",
         "path": "Procedure.extension.extension",
         "sliceName": "Boost"
       },
       {
-        "id": "Procedure.extension:Behandlungsabschnitt.extension:Boost.value[x].coding.code",
+        "id": "Procedure.extension:Bestrahlung.extension:Boost.value[x].coding.code",
         "path": "Procedure.extension.extension.value[x].coding.code",
         "mapping": [
           {
             "identity": "oBDS",
             "map": "14.12",
             "comment": "Strahlentherapie Boost"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.basedOn",
+        "path": "Procedure.basedOn",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/CarePlan"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.partOf",
+        "path": "Procedure.partOf",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Observation"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.subject",
+        "path": "Procedure.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference"
+            ],
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
           }
         ]
       },
@@ -411,17 +348,34 @@
         ]
       },
       {
+        "id": "Procedure.reasonReference",
+        "path": "Procedure.reasonReference",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Condition"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Procedure.outcome",
         "path": "Procedure.outcome",
         "mustSupport": true
       },
       {
-        "id": "Procedure.outcome.coding.code",
-        "path": "Procedure.outcome.coding.code",
+        "id": "Procedure.outcome.coding",
+        "path": "Procedure.outcome.coding",
         "binding": {
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-ende-grund"
-        },
+        }
+      },
+      {
+        "id": "Procedure.outcome.coding.code",
+        "path": "Procedure.outcome.coding.code",
         "mapping": [
           {
             "identity": "oBDS",

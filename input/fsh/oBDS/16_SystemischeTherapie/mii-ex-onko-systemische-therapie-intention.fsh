@@ -12,6 +12,6 @@ Description: "Systemische Therapie Intention"
 * value[x] only CodeableConcept
 * value[x] from MII_VS_Onko_Systemische_Therapie_Intention (required)
 * valueCodeableConcept.coding.system 1..
-* valueCodeableConcept.coding.system = $mii-cs-onko-systemische-therapie-intention (exactly)
+* valueCodeableConcept.coding.system = $mii-cs-onko-intention (exactly)
 * valueCodeableConcept.coding.code 1..
 * valueCodeableConcept.text MS

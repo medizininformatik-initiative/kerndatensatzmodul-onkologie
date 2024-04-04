@@ -139,6 +139,20 @@
         "min": 1
       },
       {
+        "id": "Observation.subject",
+        "path": "Observation.subject",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
         "min": 1,
@@ -147,11 +161,7 @@
             "code": "CodeableConcept"
           }
         ],
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.value[x].coding",
-        "path": "Observation.value[x].coding",
+        "mustSupport": true,
         "binding": {
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand"
@@ -160,7 +170,7 @@
       {
         "id": "Observation.value[x].coding.system",
         "path": "Observation.value[x].coding.system",
-        "patternUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungsstatus"
+        "patternUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand"
       },
       {
         "id": "Observation.value[x].coding.code",

@@ -123,27 +123,79 @@
         ]
       },
       {
+        "id": "Procedure.basedOn",
+        "path": "Procedure.basedOn",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/CarePlan"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.partOf",
+        "path": "Procedure.partOf",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Observation"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Procedure.code.coding",
+        "path": "Procedure.code.coding"
+      },
+      {
+        "id": "Procedure.code.coding.code",
+        "path": "Procedure.code.coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "16.3",
+            "comment": "Art der systemischen oder abwartenden Therapie"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.code.coding:systemische_therapie_art",
         "path": "Procedure.code.coding",
+        "sliceName": "systemische_therapie_art",
+        "min": 0,
+        "max": "1",
         "binding": {
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-art"
         }
       },
       {
-        "id": "Procedure.code.coding.system",
+        "id": "Procedure.code.coding:systemische_therapie_art.system",
         "path": "Procedure.code.coding.system",
         "min": 1
       },
       {
-        "id": "Procedure.code.coding.code",
+        "id": "Procedure.code.coding:systemische_therapie_art.code",
         "path": "Procedure.code.coding.code",
-        "min": 1,
-        "mapping": [
+        "min": 1
+      },
+      {
+        "id": "Procedure.subject",
+        "path": "Procedure.subject",
+        "type": [
           {
-            "identity": "oBDS",
-            "map": "16.3",
-            "comment": "Art der systemischen oder abwartenden Therapie"
+            "code": "Reference",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference"
+            ],
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
           }
         ]
       },
@@ -182,17 +234,36 @@
         ]
       },
       {
+        "id": "Procedure.reasonReference",
+        "path": "Procedure.reasonReference",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Condition"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Procedure.outcome",
         "path": "Procedure.outcome",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-systemische-therapie-ende-grund"
+        }
+      },
+      {
+        "id": "Procedure.outcome.coding.system",
+        "path": "Procedure.outcome.coding.system",
         "mustSupport": true
       },
       {
         "id": "Procedure.outcome.coding.code",
         "path": "Procedure.outcome.coding.code",
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-ende-grund"
-        },
+        "mustSupport": true,
         "mapping": [
           {
             "identity": "oBDS",

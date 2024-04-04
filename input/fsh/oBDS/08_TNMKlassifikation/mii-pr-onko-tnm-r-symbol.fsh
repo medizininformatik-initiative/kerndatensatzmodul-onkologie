@@ -19,7 +19,7 @@ Description: "TNM-Klassifikation: TNM r-Symbol. Gibt an, ob die Klassifikation e
 * effectiveDateTime obeys tnm-datum
 * value[x] MS
 * value[x] only CodeableConcept
-* valueCodeableConcept = #SCT#421188008
+* valueCodeableConcept = $SCT#421188008
 * valueCodeableConcept ^short = "r-Symbol"
 * valueCodeableConcept ^definition = "Gibt an, ob die Klassifikation ein Rezidiv beurteilt."
 * valueCodeableConcept ^comment = "r = Klassifikation erfolgte zur Beurteilung eines Rezidivs; (leer) = „native“ Klassifikation vor Eintreten eines Rezidivs"

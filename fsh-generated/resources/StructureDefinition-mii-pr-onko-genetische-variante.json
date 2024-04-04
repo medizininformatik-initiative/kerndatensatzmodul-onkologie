@@ -78,17 +78,32 @@
         ]
       },
       {
+        "id": "Observation.subject",
+        "path": "Observation.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference"
+            ],
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ]
+      },
+      {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
         "slicing": {
           "discriminator": [
             {
               "type": "pattern",
-              "path": "code"
+              "path": "$this"
             }
           ],
           "rules": "open",
-          "description": "Slice based on the value.code pattern"
+          "ordered": false
         },
         "type": [
           {
@@ -105,25 +120,28 @@
             "code": "CodeableConcept"
           }
         ],
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-genetische-variante-auspraegung"
-        }
-      },
-      {
-        "id": "Observation.component",
-        "path": "Observation.component",
-        "min": 1,
         "mustSupport": true
       },
       {
-        "id": "Observation.component:conclusion-string",
-        "path": "Observation.component",
-        "sliceName": "conclusion-string"
+        "id": "Observation.interpretation",
+        "path": "Observation.interpretation",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-genetische-variante-auspraegung"
+        },
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "23.2",
+            "comment": "Genetische Variante Ausprägung"
+          }
+        ]
       },
       {
-        "id": "Observation.component:conclusion-string.value[x]",
-        "path": "Observation.component.value[x]",
+        "id": "Observation.note",
+        "path": "Observation.note",
+        "mustSupport": true,
         "mapping": [
           {
             "identity": "oBDS",
@@ -133,20 +151,9 @@
         ]
       },
       {
-        "id": "Observation.component:molecular-consequence",
-        "path": "Observation.component",
-        "sliceName": "molecular-consequence"
-      },
-      {
-        "id": "Observation.component:molecular-consequence.value[x]",
-        "path": "Observation.component.value[x]",
-        "mapping": [
-          {
-            "identity": "oBDS",
-            "map": "23.2",
-            "comment": "Genetische Variante Auswirkung"
-          }
-        ]
+        "id": "Observation.note.text",
+        "path": "Observation.note.text",
+        "mustSupport": true
       }
     ]
   }

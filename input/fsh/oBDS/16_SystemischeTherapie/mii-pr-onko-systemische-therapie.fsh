@@ -1,5 +1,5 @@
 Profile: MII_PR_Onko_Systemische_Therapie
-Parent: https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure 
+Parent: https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure
 Id: mii-pr-onko-systemische-therapie
 Title: "MII PR Onkologie Systemische Therapie"
 Description: "Systemische Therapie. Dieses Profil beschreibt eine Systemische Therapie für den oBDS. Da die Granularität der Anforderungen des oBDS nicht deckungsgleich mit den FHIR-Profilen für Medikation sind, wurde die Systemische Therapie als Prozedur umgesetzt"
@@ -17,28 +17,39 @@ Description: "Systemische Therapie. Dieses Profil beschreibt eine Systemische Th
 * extension[Stellung] MS 
 
 * code 1..1  // slicen! 
-* code.coding from $mii-vs-onko-systemische-therapie-art
-* code.coding.code 1..1
-* code.coding.system 1..1
+* code.coding contains
+        systemische_therapie_art 0..1 
+* code.coding[systemische_therapie_art] from mii-vs-onko-systemische-therapie-art
+* code.coding[systemische_therapie_art].code 1..1
+* code.coding[systemische_therapie_art].system 1..1
 
-// Systemische Therapie Beginn und  --> ggfs. dupliziert im MedicationStatement oder MedicationAdministration
+// Systemische Therapie Beginn und  Ende--> ggfs. dupliziert im MedicationStatement oder MedicationAdministration
 * performed[x] MS 
 * performed[x] only Period // wird über Period.start und Period.stop des MII Prozedurmoduls erfasst
 * performed[x].start 1..1 MS
 * performed[x].end 0..1 MS
-// Systemische Therapie Protokoll//
-//umgesetzt im Therapiemodul  wie sieht das mit dem Slicen aus?
 
-// Systemische Therapie Substanz --> rauss, wir düber medicationprofile abgebildet
-// 0..* contains  --> Watchful Waiting hat z.B.gar keine Substanz
-//* ATC Code or
-//* String (one String per Medication)
+// Referenz auf Tumorboard
+* basedOn MS
+* basedOn only Reference(CarePlan)
 
+// Referenz auf Primaerdiagnose oder andere Condition
+* reasonReference MS 
+* reasonReference only Reference(Condition)
+
+// Referenz auf letzte Verlaufsobservation zur zeitlichen und inhaltlichen Kopplung
+* partOf MS
+* partOf only Reference(Observation)
+
+* subject 1..1 MS
+* subject only Reference(Patient)
 
 // Systemische Therapie Ende Grund
 * outcome MS
 * outcome 0..1
-* outcome.coding.code from MII_VS_Onko_Strahlentherapie_Ende_Grund (required)
+* outcome from MII_VS_Onko_Systemische_Therapie_Ende_Grund (required)
+* outcome.coding.code MS
+* outcome.coding.system MS
 
 
 Mapping: FHIR-oBDS-Systemische_Therapie

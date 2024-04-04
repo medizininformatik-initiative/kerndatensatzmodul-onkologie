@@ -8,8 +8,6 @@ Description: "oBDS-spezifisches ValueSet für Klassifikation von Stellung zur OP
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
-//* include codes from system $mii-cs-onko-systemische-therapie-stellung
-
 * $mii-cs-onko-therapie-stellung#O "ohne Bezug zur operativen Therapie"
 * $mii-cs-onko-therapie-stellung#A "adjuvant"
 * $mii-cs-onko-therapie-stellung#N "neoadjuvant"
