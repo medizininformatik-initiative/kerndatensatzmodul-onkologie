@@ -166,7 +166,6 @@
 [mii-sp-onko-tumorkonferenz-contributor]: SearchParameter-mii-sp-onko-tumorkonferenz-contributor.html
 [mii-sp-onko-tumorkonferenz-created]: SearchParameter-mii-sp-onko-tumorkonferenz-created.html
 [MII_VS_Onko_Genetische_Variante_Auspraegung]: ValueSet-mii-vs-onko-genetische-variante-auspraegung.html
-[MII_VS_Onko_Genetische_Variante_Auspraegung]: ValueSet-mii-vs-onko-genetische-variante-auspraegung.html
 [PatientKimMusterperson]: Patient-PatientKimMusterperson.html
 [PatientKimMusterperson-Diagnosis-1]: Condition-PatientKimMusterperson-Diagnosis-1.html
 [PatientKimMusterperson-PathoReport-1]: DiagnosticReport-PatientKimMusterperson-PathoReport-1.html
