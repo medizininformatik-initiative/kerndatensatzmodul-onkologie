@@ -17,7 +17,6 @@ Alias: $DeOnkoTumorstatusFernmetastasenVS = http://fhir.de/onkologie/ValueSet/Tu
 Alias: $icd-seitenlokalisation = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_SEITENLOKALISATION
 
 // MII KDS
-Alias: $mii-symptom-observation = https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/StructureDefinition/finding-observation
 Alias: $mii-procedure  = https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure 
 //Alias: $mii-specimen =  // optional for later
 //Alias: $mii-pathoreport =  // optional for later
