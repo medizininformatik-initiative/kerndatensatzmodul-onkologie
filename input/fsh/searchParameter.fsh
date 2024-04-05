@@ -30,7 +30,7 @@ Usage: #definition
 * insert SP_Publisher
 * insert Version
 * name = "MII_SP_TNM_Klassifikationen_Has_Member"
-* description = "SearchParameter for Observation.hasMembe"
+* description = "SearchParameter for Observation.hasMember"
 * status = #active 
 * code = #verification-status
 * base = #Observation 
@@ -223,7 +223,7 @@ Usage: #definition
 //----------------------------------------
 // SearchParameters for Nebenwirkung
 //----------------------------------------
-Instance: mii-sp-onko-nebenwirkun-suspectEntity
+Instance: mii-sp-onko-nebenwirkung-suspectEntity
 InstanceOf: SearchParameter
 Usage: #definition
 * insert SP_Publisher
@@ -309,5 +309,15 @@ Usage: #definition
 //----------------------------------------
 // SearchParameters for Genetische Variante
 //----------------------------------------
-
-// No search parameters to cover
+Instance: mii-sp-onko-genetische-variante-note
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert Version
+* name = "MII_SP_Onko_Genetische_Variante_Note"
+* description = "SearchParameter for Observation.note"
+* status = #active
+* code = #interpretation
+* base = #Observation
+* type = #token
+* expression = "Observation.note"
