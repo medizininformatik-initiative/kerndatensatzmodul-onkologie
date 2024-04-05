@@ -1,4 +1,7 @@
+//skinparam linetype polyline 
+//skinparam linetype ortho
 @startuml MII KDS Erweiterungsmodul Onkologie
+
 object Onko_OP #8888FF
 object Onko_Strahlentherapie #8888FF
 object Onko_SystemischeTherapie #8888FF
@@ -32,29 +35,28 @@ package "Onkologie Observations"{
     object Tod #22FF22
 }
 
-PrimaerDiagnose ---> TNM_Klassifikation: stage.assessment
-PrimaerDiagnose <---  Therapieplanung_Tumorkonferenz : adresses
-PrimaerDiagnose  ---> Lymphknotenuntersuchung: evidenceDetail
-PrimaerDiagnose  ---> HistologieGrading : stage.assessment
-PrimaerDiagnose ---> Onko_Variante :evidenceDetail
-PrimaerDiagnose ---> WeitereKlassifikation: stage.assessment
-PrimaerDiagnose ---> ECOG :evidenceDetail
+PrimaerDiagnose <--- TNM_Klassifikation: focus
+PrimaerDiagnose <---  Therapieplanung_Tumorkonferenz : addresses
+PrimaerDiagnose <--- Lymphknotenuntersuchung: focus
+PrimaerDiagnose <--- HistologieGrading :focus
+PrimaerDiagnose <--- Onko_Variante :focus
+PrimaerDiagnose <--- WeitereKlassifikation: focus
+PrimaerDiagnose <--- ECOG :focus
 
 
 object Verlauf #22FF22
-PrimaerDiagnose ---->  Verlauf : stage.assessment
+PrimaerDiagnose <----  Verlauf : focus
+Verlauf <--- Tod: derivedFrom
+Verlauf <--- TNM_Klassifikation:  derivedFrom
+Verlauf <---  Lymphknotenuntersuchung : derivedFrom
 
-Verlauf <---> Tod: hasMember / derivedFrom
-Verlauf <---> TNM_Klassifikation: hasMember / derivedFrom
-Verlauf <--->  Lymphknotenuntersuchung : hasMember / derivedFrom
+Verlauf <---  HistologieGrading :/ derivedFrom
+Verlauf <--- Fernmetastasen: derivedFrom
 
-Verlauf <--->  HistologieGrading : hasMember / derivedFrom
-Verlauf <---> Fernmetastasen :hasMember /derivedFrom
+Verlauf <--- Residualstatus:  derivedFrom
+Onko_OP <--- Residualstatus: partOf ??
 
-Verlauf ---> Residualstatus: hasMember / derivedFrom
-Onko_OP <--- Residualstatus: partOf
-
-Verlauf ---> Onko_Variante: hasMember / derivedFrom
+Verlauf <--- Onko_Variante: derivedFrom
 
 package "Pathologiebefund" {
     object PathoAnforderung #DDFFDD
@@ -72,6 +74,7 @@ MolGenBefund <-- MolGenAnforderung: request
 package "Biobank" {
     object Bioprobe #44FFFF
 }
+
 MolGenBefund ----> Onko_Variante: result[variant]
 PathoAnforderung  ---> PrimaerDiagnose : reasonReference
 MolGenAnforderung ---> PrimaerDiagnose: reasonReference
