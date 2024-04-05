@@ -24,7 +24,8 @@ Description: "Medikation der Systemische Therapie. Dieses Profil beschreibt die 
 * effectivePeriod.start 0..1 MS
 * effectivePeriod.end 0..1 MS
 * effectiveDateTime 0..1 MS  // falls es einmalige Anwendungen / Protokolle gibt
-
+* basedOn MS
+* basedOn only Reference(CarePlan)
 
 Mapping: FHIR-oBDS-Systemische_Therapie_Medikation
 Id: oBDS
