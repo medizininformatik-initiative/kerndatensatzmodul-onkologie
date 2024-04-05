@@ -2,7 +2,7 @@ Profile: MII_PR_Onko_Genetische_Variante
 Parent: https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante 
 Id: mii-pr-onko-genetische-variante
 Title: "MII PR Onkologie Genetische Variante"
-Description: "Genetische Variante wie im oBDS "
+Description: "Genetische Variante wie im oBDS beschrieben"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft

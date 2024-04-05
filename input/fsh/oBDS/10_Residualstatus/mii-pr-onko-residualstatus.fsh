@@ -1,5 +1,5 @@
 Profile: MII_PR_Onko_Residualstatus
-Parent: Observation // MII Symptom Observation
+Parent: Observation 
 Id: mii-pr-onko-residualstatus
 Title: "MII PR Onkologie Residualstatus"
 Description: "Umfang eines Residualtumors nach einer Therapie"
