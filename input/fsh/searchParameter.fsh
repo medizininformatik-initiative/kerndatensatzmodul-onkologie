@@ -32,7 +32,7 @@ Usage: #definition
 * name = "MII_SP_TNM_Klassifikationen_Has_Member"
 * description = "SearchParameter for Observation.hasMember"
 * status = #active 
-* code = #verification-status
+* code = #has-member
 * base = #Observation 
 * type = #reference
 * expression = "Observation.hasMember"
