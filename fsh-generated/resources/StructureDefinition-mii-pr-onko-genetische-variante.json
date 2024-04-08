@@ -93,6 +93,11 @@
         ]
       },
       {
+        "id": "Observation.encounter",
+        "path": "Observation.encounter",
+        "mustSupport": true
+      },
+      {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
         "slicing": {
@@ -123,6 +128,16 @@
         "mustSupport": true
       },
       {
+        "id": "Observation.value[x]:valueCodeableConcept.coding.system",
+        "path": "Observation.value[x].coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueCodeableConcept.coding.code",
+        "path": "Observation.value[x].coding.code",
+        "mustSupport": true
+      },
+      {
         "id": "Observation.interpretation",
         "path": "Observation.interpretation",
         "mustSupport": true,
@@ -137,6 +152,16 @@
             "comment": "Genetische Variante Ausprägung"
           }
         ]
+      },
+      {
+        "id": "Observation.interpretation.coding.system",
+        "path": "Observation.interpretation.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.interpretation.coding.code",
+        "path": "Observation.interpretation.coding.code",
+        "mustSupport": true
       },
       {
         "id": "Observation.note",

@@ -98,6 +98,11 @@
         "mustSupport": true
       },
       {
+        "id": "Observation.encounter",
+        "path": "Observation.encounter",
+        "mustSupport": true
+      },
+      {
         "id": "Observation.effective[x]",
         "path": "Observation.effective[x]",
         "slicing": {
@@ -143,6 +148,16 @@
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-verlauf-gesamtbeurteilung"
         }
+      },
+      {
+        "id": "Observation.value[x].coding.system",
+        "path": "Observation.value[x].coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x].coding.code",
+        "path": "Observation.value[x].coding.code",
+        "mustSupport": true
       },
       {
         "id": "Observation.component",
@@ -191,23 +206,6 @@
       {
         "id": "Observation.component:Tumor_Verlauf.value[x]",
         "path": "Observation.component.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "id": "Observation.component:Tumor_Verlauf.value[x]:valueCodeableConcept",
-        "path": "Observation.component.value[x]",
-        "sliceName": "valueCodeableConcept",
-        "min": 0,
-        "max": "1",
         "type": [
           {
             "code": "CodeableConcept"
@@ -217,6 +215,16 @@
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-verlauf-primaertumor"
         }
+      },
+      {
+        "id": "Observation.component:Tumor_Verlauf.value[x].coding.system",
+        "path": "Observation.component.value[x].coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:Tumor_Verlauf.value[x].coding.code",
+        "path": "Observation.component.value[x].coding.code",
+        "mustSupport": true
       },
       {
         "id": "Observation.component:Lymphknoten_Verlauf",
@@ -249,23 +257,6 @@
       {
         "id": "Observation.component:Lymphknoten_Verlauf.value[x]",
         "path": "Observation.component.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "id": "Observation.component:Lymphknoten_Verlauf.value[x]:valueCodeableConcept",
-        "path": "Observation.component.value[x]",
-        "sliceName": "valueCodeableConcept",
-        "min": 0,
-        "max": "1",
         "type": [
           {
             "code": "CodeableConcept"
@@ -275,6 +266,16 @@
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-verlauf-lymphknoten"
         }
+      },
+      {
+        "id": "Observation.component:Lymphknoten_Verlauf.value[x].coding.system",
+        "path": "Observation.component.value[x].coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:Lymphknoten_Verlauf.value[x].coding.code",
+        "path": "Observation.component.value[x].coding.code",
+        "mustSupport": true
       },
       {
         "id": "Observation.component:Fernmetastasen_Verlauf",
@@ -307,23 +308,6 @@
       {
         "id": "Observation.component:Fernmetastasen_Verlauf.value[x]",
         "path": "Observation.component.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "id": "Observation.component:Fernmetastasen_Verlauf.value[x]:valueCodeableConcept",
-        "path": "Observation.component.value[x]",
-        "sliceName": "valueCodeableConcept",
-        "min": 0,
-        "max": "1",
         "type": [
           {
             "code": "CodeableConcept"
@@ -333,6 +317,16 @@
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-verlauf-fernmetastasen"
         }
+      },
+      {
+        "id": "Observation.component:Fernmetastasen_Verlauf.value[x].coding.system",
+        "path": "Observation.component.value[x].coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:Fernmetastasen_Verlauf.value[x].coding.code",
+        "path": "Observation.component.value[x].coding.code",
+        "mustSupport": true
       }
     ]
   }

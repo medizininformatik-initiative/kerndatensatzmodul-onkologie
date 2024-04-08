@@ -101,6 +101,11 @@
         "mustSupport": true
       },
       {
+        "id": "Observation.encounter",
+        "path": "Observation.encounter",
+        "mustSupport": true
+      },
+      {
         "id": "Observation.effective[x]",
         "path": "Observation.effective[x]",
         "min": 1,
@@ -134,6 +139,16 @@
             "comment": "Lokalisation von Fernmetastase(n)"
           }
         ]
+      },
+      {
+        "id": "Observation.bodySite.coding.system",
+        "path": "Observation.bodySite.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.bodySite.coding.code",
+        "path": "Observation.bodySite.coding.code",
+        "mustSupport": true
       }
     ]
   }
