@@ -6,4 +6,5 @@ Description: "Die Extension verleiht TNM N- und M-Kategorien isolierte Tumorzell
 * ^context.type = #element
 * ^context.expression = "CodeableConcept"
 * value[x] only CodeableConcept
-* value[x] from MII_VS_Onko_TNM_ITC_Suffix (required)
+* valueCodeableConcept.coding.system MS
+* valueCodeableConcept.coding.code MS

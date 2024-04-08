@@ -21,6 +21,8 @@ Description: "OBDS Beschreibung von Fernmetastasen (Lokalisation und Datum)"
 * bodySite MS
 * bodySite 1..1
 * bodySite from mii-vs-onko-fernmetastasen
+* bodySite.coding.system MS
+* bodySite.coding.code MS
 
 // 11.2 Datum der diagnostischen Sicherung von Fernmetastasen 
 * effective[x] MS

@@ -6,4 +6,5 @@ Description: "Die Extension verleiht einer TNM T-, N- oder M-Kategorie ein c, p 
 * ^context.type = #element
 * ^context.expression = "CodeableConcept"
 * value[x] only CodeableConcept
-* value[x] from MII_VS_Onko_TNM_cp_Praefix (required)
+* valueCodeableConcept.coding.system MS
+* valueCodeableConcept.coding.code MS

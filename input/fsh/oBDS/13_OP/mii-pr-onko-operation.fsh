@@ -43,6 +43,9 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 * outcome MS
 * outcome 0..1
 * outcome from mii-vs-onko-beurteilung-lokaler-residualstatus (required)
+* outcome.coding.system = $mii-cs-onko-residualstatus
+* outcome.coding.system MS
+* outcome.coding.code MS
 
 
 
