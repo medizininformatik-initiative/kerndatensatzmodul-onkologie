@@ -1,7 +1,7 @@
 //skinparam linetype polyline 
 //skinparam linetype ortho
 @startuml MII KDS Erweiterungsmodul Onkologie
-
+skinparam linetype polyline
 object Onko_OP #8888FF
 object Onko_Strahlentherapie #8888FF
 object Onko_SystemischeTherapie #8888FF
@@ -33,6 +33,8 @@ package "Onkologie Observations"{
     object Residualstatus #22FF22
     object ECOG #22FF22
     object Tod #22FF22
+    object Onko_Befund #88FF88
+
 }
 
 PrimaerDiagnose <--- TNM_Klassifikation: focus
@@ -42,20 +44,18 @@ PrimaerDiagnose <--- HistologieGrading :focus
 PrimaerDiagnose <--- Onko_Variante :focus
 PrimaerDiagnose <--- WeitereKlassifikation: focus
 PrimaerDiagnose <--- ECOG :focus
+PrimaerDiagnose <--- Fernmetastasen :focus
 
+Therapieplanung_Tumorkonferenz <--- Onko_Befund  : basedOn
 
 object Verlauf #22FF22
 PrimaerDiagnose <----  Verlauf : focus
 Verlauf <--- Tod: derivedFrom
 Verlauf <--- TNM_Klassifikation:  derivedFrom
 Verlauf <---  Lymphknotenuntersuchung : derivedFrom
-
-Verlauf <---  HistologieGrading :/ derivedFrom
+Verlauf <---  HistologieGrading : derivedFrom
 Verlauf <--- Fernmetastasen: derivedFrom
-
 Verlauf <--- Residualstatus:  derivedFrom
-Onko_OP <--- Residualstatus: partOf ??
-
 Verlauf <--- Onko_Variante: derivedFrom
 
 package "Pathologiebefund" {
@@ -75,13 +75,13 @@ package "Biobank" {
     object Bioprobe #44FFFF
 }
 
-MolGenBefund ----> Onko_Variante: result[variant]
-PathoAnforderung  ---> PrimaerDiagnose : reasonReference
-MolGenAnforderung ---> PrimaerDiagnose: reasonReference
-PathoAnforderung --> Bioprobe: specimen
-PathoAnforderung <-- Bioprobe: request
-MolGenAnforderung --> Bioprobe: specimen
-MolGenAnforderung <-- Bioprobe: request
+MolGenBefund ....> Onko_Variante: result[variant]
+PathoAnforderung  ....> PrimaerDiagnose : reasonReference
+MolGenAnforderung ....> PrimaerDiagnose: reasonReference
+PathoAnforderung ...> Bioprobe: specimen
+PathoAnforderung <... Bioprobe: request
+MolGenAnforderung ...> Bioprobe: specimen
+MolGenAnforderung <... Bioprobe: request
 
 object AdverseEvent #FF9999
 Onko_SystemischeTherapie <--- AdverseEvent: suspectEntity.instance
