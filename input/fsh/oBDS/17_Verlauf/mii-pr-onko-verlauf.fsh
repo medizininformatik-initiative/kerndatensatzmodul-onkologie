@@ -57,6 +57,10 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
 * component[Fernmetastasen_Verlauf].valueCodeableConcept.coding.system MS
 * component[Fernmetastasen_Verlauf].valueCodeableConcept.coding.code MS
 
+// Referenz zu Primärtumor
+* focus MS
+* focus only Reference(MII_PR_Onko_Diagnose)
+
 
 Mapping: FHIR-oBDS-Verlauf
 Id: oBDS
