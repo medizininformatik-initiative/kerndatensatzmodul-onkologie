@@ -6,6 +6,7 @@ Description: "Histologie-Kodierung nach ICD-0 für die Verwendung von Folgediagn
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
+* meta.profile 0..* MS
 * code MS
 * code ^short = "Histologische Bewertung nach ICD-0-3"
 * code.coding MS

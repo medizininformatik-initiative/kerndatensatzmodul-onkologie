@@ -6,6 +6,7 @@ Description: "TNM-Klassifikation: TNM M-Kategorie. Fehlen oder Vorhandensein von
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
+* meta.profile 0..* MS
 * status MS
 * code MS
 * code.extension contains 

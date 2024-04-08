@@ -6,6 +6,7 @@ Description: "TNM-Klassifikation: Grouper-Profil für Komponenten der TNM-Klassi
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
+* meta.profile 0..* MS
 * status MS
 * code MS
 * code from mii-vs-onko-tnm-klassifikation-typ (required)

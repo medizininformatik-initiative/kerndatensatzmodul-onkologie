@@ -6,6 +6,7 @@ Description: "TNM-Klassifikation: TNM N-Kategorie. Ausbreitung von regionären L
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
+* meta.profile 0..* MS
 * status MS
 * code MS
 * code.extension contains 

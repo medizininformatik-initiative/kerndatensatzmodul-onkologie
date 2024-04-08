@@ -6,6 +6,8 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
+
+* meta.profile 0..* MS
 // OP-Datum
 
 * extension contains mii-ex-onko-operation-intention named Intention 1..1

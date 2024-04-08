@@ -8,7 +8,7 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 * ^status = #draft
 
 // Logical Modell see:  https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532153/Strahlentherapie+ST+Typ
-
+* meta.profile 0..* MS
 * subject 1..1 MS
 * subject only Reference(Patient)
 * encounter MS

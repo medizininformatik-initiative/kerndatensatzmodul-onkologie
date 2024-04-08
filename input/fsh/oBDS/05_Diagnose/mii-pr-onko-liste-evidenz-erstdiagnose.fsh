@@ -6,6 +6,7 @@ Description: "Dieses Profil beschreibt eine Liste, die alle Observationen enthä
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
+* meta.profile 0..* MS
 * subject 1..1 MS
 * subject only Reference(Patient)
 * encounter 0..1 MS

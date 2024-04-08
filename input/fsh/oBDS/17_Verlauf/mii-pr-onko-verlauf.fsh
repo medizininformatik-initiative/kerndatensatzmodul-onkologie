@@ -8,6 +8,7 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
 * ^status = #draft
 
 // siehe Kodierrichtlinien hier : https://plattform65c.atlassian.net/wiki/spaces/Dokumentat/pages/75628552/Verlaufsmeldung
+* meta.profile 0..* MS
 * identifier MS
 
 * subject MS

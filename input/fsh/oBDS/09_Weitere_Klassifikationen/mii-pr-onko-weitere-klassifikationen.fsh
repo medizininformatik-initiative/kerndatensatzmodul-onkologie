@@ -6,6 +6,7 @@ Description: "Weitere Tumor Staging Klassifikation neben TMN (Hämatoonkologisch
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
+* meta.profile 0..* MS
 
 * subject 1..1 MS
 * subject only Reference(Patient)

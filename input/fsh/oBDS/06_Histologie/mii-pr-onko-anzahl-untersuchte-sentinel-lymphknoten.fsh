@@ -6,6 +6,7 @@ Description: "Histologie: Anzahl der untersuchten Sentinel-Lymphknoten. Gibt an,
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
+* meta.profile 0..* MS
 * category MS
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"

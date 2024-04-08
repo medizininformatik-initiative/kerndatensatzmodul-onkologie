@@ -6,6 +6,7 @@ Description: "TNM-Klassifikation: TNM a-Symbol. Gibt an, ob die Klassifikation a
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
+* meta.profile 0..* MS
 * status MS
 * code MS
 * code = $LOINC#101660-9

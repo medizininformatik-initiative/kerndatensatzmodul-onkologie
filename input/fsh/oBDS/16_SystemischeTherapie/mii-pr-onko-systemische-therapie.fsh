@@ -8,6 +8,7 @@ Description: "Systemische Therapie. Dieses Profil beschreibt eine Systemische Th
 * ^status = #draft
 
 // Logical Modell see:  https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532379/Systemische+Therapie+SYST+Typ // t
+* meta.profile 0..* MS
 // Intention der systemischen Therapie  
 * extension contains mii-ex-onko-systemische-therapie-intention named Intention 1..1 // hier ggfs. refactoring
 * extension[Intention] MS

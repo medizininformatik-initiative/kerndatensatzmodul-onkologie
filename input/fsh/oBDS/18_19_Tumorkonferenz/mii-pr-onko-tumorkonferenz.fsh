@@ -7,6 +7,7 @@ Description: "Dieses Profil beschreibt die Tumorkonferenz und die Therapieempfeh
 * insert Publisher
 * ^status = #draft
 
+* meta.profile 0..* MS
 * identifier MS
 * status MS
 * intent MS
