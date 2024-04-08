@@ -13,6 +13,7 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 
 * subject 1..1 MS
 * subject only Reference(Patient)
+* encounter MS
 
 * performed[x] MS
 * performed[x] only dateTime 

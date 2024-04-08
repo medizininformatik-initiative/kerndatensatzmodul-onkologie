@@ -43,6 +43,7 @@ Description: "Systemische Therapie. Dieses Profil beschreibt eine Systemische Th
 
 * subject 1..1 MS
 * subject only Reference(Patient)
+* encounter MS
 
 // Systemische Therapie Ende Grund
 * outcome MS

@@ -9,6 +9,7 @@ Description: "OBDS Beschreibung des allgemeines Leistungszustandes"
 
 * subject 1..1 MS
 * subject only Reference(Patient)
+* encounter MS
 
 * code MS
 * code.coding MS

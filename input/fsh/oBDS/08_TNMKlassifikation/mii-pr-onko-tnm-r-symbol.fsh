@@ -17,6 +17,7 @@ Description: "TNM-Klassifikation: TNM r-Symbol. Gibt an, ob die Klassifikation e
 * effective[x] only dateTime
 * effectiveDateTime MS
 * effectiveDateTime obeys tnm-datum
+* encounter MS
 * value[x] MS
 * value[x] only CodeableConcept
 * valueCodeableConcept = $SCT#421188008

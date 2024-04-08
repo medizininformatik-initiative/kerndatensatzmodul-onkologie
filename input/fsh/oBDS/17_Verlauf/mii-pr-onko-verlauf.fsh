@@ -13,6 +13,7 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
 * subject MS
 * subject 1..1
 * subject only Reference(Patient)
+* encounter MS
 
 * code MS
 // * code 1..1  erst wieder reinschalten 

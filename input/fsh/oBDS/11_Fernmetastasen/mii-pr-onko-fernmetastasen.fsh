@@ -11,6 +11,8 @@ Description: "OBDS Beschreibung von Fernmetastasen (Lokalisation und Datum)"
 * subject 1..1 MS
 * subject only Reference(Patient)
 
+* encounter MS
+
 * code MS
 * code 1..1
 * code.coding = $SCT#385421009

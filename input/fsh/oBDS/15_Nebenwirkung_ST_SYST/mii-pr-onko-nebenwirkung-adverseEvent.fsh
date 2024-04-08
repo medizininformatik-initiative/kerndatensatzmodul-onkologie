@@ -10,6 +10,7 @@ Description: "Dieses Profil beschreibt die Nebenwirkung von Strahlentherapie und
 
 * subject 1..1 MS
 * subject only Reference(Patient)
+* encounter MS
 
 // Hier wird entweder die Bezeichnung von CTCAE Grad oder die MedDRA Code genutzt
 * event 1..1 MS

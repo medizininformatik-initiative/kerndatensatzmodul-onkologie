@@ -18,6 +18,7 @@ Description: "TNM-Klassifikation: TNM T-Kategorie. Ausbreitung des Primärtumors
 * code.coding.system 1.. MS
 * subject 1..1 MS
 * subject only Reference(Patient)
+* encounter MS
 * effective[x] MS
 * effective[x] only dateTime
 * effectiveDateTime MS

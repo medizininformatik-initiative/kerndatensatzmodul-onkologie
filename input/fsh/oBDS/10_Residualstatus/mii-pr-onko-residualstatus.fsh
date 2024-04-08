@@ -11,6 +11,7 @@ Description: "Umfang eines Residualtumors nach einer Therapie"
 // Moved into Procedure.outcome in OP 
 * subject 1..1 MS
 * subject only Reference(Patient)
+* encounter MS
 
 // Gesamtbeurteilung des Residualstatus 
 * code MS
