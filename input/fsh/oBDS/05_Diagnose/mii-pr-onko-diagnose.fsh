@@ -24,9 +24,9 @@ Description: "Dieses Profil beschreibt eine Diagnose in der Onkologie"
 * verificationStatus.coding[primaertumorDiagnosesicherung].system 1.. MS
 * bodySite.coding contains
     primaertumorSeitenlokalisation 0..1 MS
-* bodySite.coding[primaertumorSeitenlokalisation] from mii-vs-onko-primaertumor-seitenlokalisation
+* bodySite.coding[primaertumorSeitenlokalisation] from mii-vs-onko-seitenlokalisation
 * bodySite.coding[primaertumorSeitenlokalisation].system 1.. MS
-* bodySite.coding[primaertumorSeitenlokalisation] ^patternCoding.system = $mii-cs-onko-primaertumor-seitenlokalisation
+* bodySite.coding[primaertumorSeitenlokalisation] ^patternCoding.system = $mii-cs-onko-seitenlokalisation
 * bodySite.coding[primaertumorSeitenlokalisation].code 1.. MS
 
 Mapping: FHIR-oBDS-Diagnose

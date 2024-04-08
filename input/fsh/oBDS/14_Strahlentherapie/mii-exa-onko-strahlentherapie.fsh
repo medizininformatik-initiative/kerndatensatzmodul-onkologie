@@ -14,7 +14,7 @@ Description: "Example radiation therapy"
 * extension[Bestrahlung].extension[Applikationsart].valueCodeableConcept =  $mii-cs-onko-strahlentherapie-applikationsart#P-ST
 * extension[Bestrahlung].extension[Strahlenart].valueCodeableConcept =  $mii-cs-onko-strahlentherapie-strahlenart#UH
 * extension[Bestrahlung].extension[Zielgebiet].valueCodeableConcept =  $mii-cs-onko-strahlentherapie-zielgebiet#3.4
-* extension[Bestrahlung].extension[Zielgebiet_Lateralitaet].valueCodeableConcept =  $mii-cs-onko-primaertumor-seitenlokalisation#L
+* extension[Bestrahlung].extension[Zielgebiet_Lateralitaet].valueCodeableConcept =  $mii-cs-onko-seitenlokalisation#L
 * extension[Bestrahlung].extension[Gesamtdosis].valueQuantity.value =  60.0
 * extension[Bestrahlung].extension[Gesamtdosis].valueQuantity.unit =  $UCUM#Gy
 * extension[Bestrahlung].extension[Einzeldosis].valueQuantity.value =  12.0
