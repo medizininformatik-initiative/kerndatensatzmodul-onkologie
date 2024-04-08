@@ -461,6 +461,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-liste-evidenz-erstdiagnose"
+        },
+        "name": "MII PR Onkologie Diagnose",
+        "description": "Dieses Profil beschreibt eine Liste, die alle Observationen enthält, die für eine Erstdiagnostik relevant waren.  (synchrone Observationen im Sinne der Krebsregister)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-fernmetastasen"
         },
         "name": "MII PR Onkologie Fernmetastasen",
@@ -472,7 +480,7 @@
           "reference": "StructureDefinition/mii-pr-onko-genetische-variante"
         },
         "name": "MII PR Onkologie Genetische Variante",
-        "description": "Genetische Variante wie im oBDS ",
+        "description": "Genetische Variante wie im oBDS beschrieben",
         "exampleBoolean": false
       },
       {
@@ -488,7 +496,7 @@
           "reference": "StructureDefinition/mii-pr-onko-histologie-icdo3"
         },
         "name": "MII PR Onkologie Histologie ICD-O-3",
-        "description": "Histologie-Kodierung nach ICD-0 für die Verwendung von Folgediagnostik. Bei der histologischen Beurteilung des Primärtumors sind die histologischen Informationen direkt über die Condition-Ressource abgebildet.",
+        "description": "Histologie-Kodierung nach ICD-0 für die Verwendung von Folgediagnostik. Bei der histologischen Beurteilung des Primärtumors sind die histologischen Informationen direkt über die Condition-Ressource abzubilden.",
         "exampleBoolean": false
       },
       {

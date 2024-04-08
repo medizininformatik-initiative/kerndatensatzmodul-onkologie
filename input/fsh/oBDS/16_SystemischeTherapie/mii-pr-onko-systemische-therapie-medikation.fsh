@@ -14,7 +14,7 @@ Description: "Medikation der Systemische Therapie. Dieses Profil beschreibt die 
 
 * medication[x] 1..1 MS
 * partOf 1..* MS 
-* partOf only Reference(Procedure or MedicationAdministration)
+* partOf only Reference(Procedure)
 * note MS // Angabe eines Schemas ist optional. Bei Angabe eines SChemas sind alle Wirkstoffe unter medication gesondert zu kodieren 
 // vielleicht aber Schema auch als medicationCodeableConcept.text
 

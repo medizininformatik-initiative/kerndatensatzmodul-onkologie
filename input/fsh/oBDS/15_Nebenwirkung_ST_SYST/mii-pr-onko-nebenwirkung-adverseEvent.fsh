@@ -28,11 +28,9 @@ Description: "Dieses Profil beschreibt die Nebenwirkung von Strahlentherapie und
 * severity.coding.code 1..1 MS
 * severity.text MS
 
-* subject only Reference(Patient)
-
 // Die Referenz zu Procedure/MedicationStatement
 * suspectEntity 1..* MS
-* suspectEntity.instance MS
+* suspectEntity.instance MS // add Refernce to Systemic and radiation therapy
 
 Mapping: FHIR-oBDS-AdverseEvents
 Id: oBDS

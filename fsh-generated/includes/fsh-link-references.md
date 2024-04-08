@@ -46,6 +46,7 @@
 [MII_PR_Onko_Anzahl_Untersuchte_Sentinel_Lymphknoten]: StructureDefinition-mii-pr-onko-anzahl-untersuchte-sentinel-lymphknoten.html
 [MII_PR_Onko_Befund]: StructureDefinition-mii-pr-onko-befund.html
 [MII_PR_Onko_Diagnose]: StructureDefinition-mii-pr-onko-diagnose.html
+[MII_PR_Onko_Liste_Evidenz_Erstdiagnose]: StructureDefinition-mii-pr-onko-liste-evidenz-erstdiagnose.html
 [MII_PR_Onko_Fernmetastasen]: StructureDefinition-mii-pr-onko-fernmetastasen.html
 [MII_PR_Onko_Genetische_Variante]: StructureDefinition-mii-pr-onko-genetische-variante.html
 [MII_PR_Onko_Grading]: StructureDefinition-mii-pr-onko-grading.html
