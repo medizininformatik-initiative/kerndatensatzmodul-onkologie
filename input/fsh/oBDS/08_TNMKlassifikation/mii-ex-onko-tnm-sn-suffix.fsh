@@ -6,5 +6,6 @@ Description: "Die Extension verleiht der TNM N-Kategorie das Schildwächterlymph
 * ^context.type = #element
 * ^context.expression = "CodeableConcept"
 * value[x] only CodeableConcept
+* valueCodeableConcept from MII_VS_Onko_TNM_SN_Suffix (required)
 * valueCodeableConcept.coding.system MS
 * valueCodeableConcept.coding.code MS

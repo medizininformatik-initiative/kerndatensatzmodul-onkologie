@@ -38,7 +38,7 @@ Description: "Dieses Profil beschreibt die Tumorkonferenz und die Therapieempfeh
 * activity 0..* MS
 * activity.detail 1..1 MS
 * activity.detail.code 1..1 MS
-* activity.detail.code.coding from mii-vs-onko-therapieempfehlung-typ
+* activity.detail.code from mii-vs-onko-therapieempfehlung-typ
 * activity.detail.code.coding.system = $mii-cs-onko-therapie-typ
 * activity.detail.code.coding.system 1..1 MS
 * activity.detail.code.coding.code 1..1 MS
@@ -46,7 +46,7 @@ Description: "Dieses Profil beschreibt die Tumorkonferenz und die Therapieempfeh
 * activity.detail.status MS
 
 * activity.detail.statusReason MS
-* activity.detail.statusReason.coding from mii-vs-onko-therapieabweichung
+* activity.detail.statusReason from mii-vs-onko-therapieabweichung
 * activity.detail.statusReason.coding MS
 * activity.detail.statusReason.coding.system = $mii-cs-onko-therapieabweichung
 * activity.detail.statusReason.coding.code MS
