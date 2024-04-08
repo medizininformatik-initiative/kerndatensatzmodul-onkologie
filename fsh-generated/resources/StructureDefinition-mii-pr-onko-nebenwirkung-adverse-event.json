@@ -165,6 +165,15 @@
       {
         "id": "AdverseEvent.suspectEntity.instance",
         "path": "AdverseEvent.suspectEntity.instance",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Procedure",
+              "http://hl7.org/fhir/StructureDefinition/MedicationStatement"
+            ]
+          }
+        ],
         "mustSupport": true
       }
     ]

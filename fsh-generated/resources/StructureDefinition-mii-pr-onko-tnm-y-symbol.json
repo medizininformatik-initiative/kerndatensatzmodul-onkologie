@@ -112,6 +112,19 @@
         "mustSupport": true
       },
       {
+        "id": "Observation.focus",
+        "path": "Observation.focus",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Observation.encounter",
         "path": "Observation.encounter",
         "mustSupport": true
@@ -181,6 +194,20 @@
             "comment": "TNM y-Symbol"
           }
         ]
+      },
+      {
+        "id": "Observation.derivedFrom",
+        "path": "Observation.derivedFrom",
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf"
+            ]
+          }
+        ],
+        "mustSupport": true
       }
     ]
   }

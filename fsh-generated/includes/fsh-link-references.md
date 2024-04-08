@@ -12,7 +12,7 @@
 [MII_CS_Onko_Intention]: CodeSystem-mii-cs-onko-intention.html
 [MII_CS_Onko_Operation_Komplikationen]: CodeSystem-mii-cs-onko-operation-komplikation.html
 [MII_CS_Onko_Primaertumor_Diagnosesicherung]: CodeSystem-mii-cs-onko-primaertumor-diagnosesicherung.html
-[MII_CS_Onko_Primaertumor_Seitenlokalisation]: CodeSystem-mii-cs-onko-primaertumor-seitenlokalisation.html
+[MII_CS_Onko_Seitenlokalisation]: CodeSystem-mii-cs-onko-seitenlokalisation.html
 [MII_CS_Onko_Residualstatus]: CodeSystem-mii-cs-onko-residualstatus.html
 [MII_CS_Onko_Strahlentherapie_Applikationsart]: CodeSystem-mii-cs-onko-strahlentherapie-applikationsart.html
 [MII_CS_Onko_Strahlentherapie_Boost]: CodeSystem-mii-cs-onko-strahlentherapie-boost.html
@@ -84,7 +84,7 @@
 [MII_VS_Onko_Operation_Intention]: ValueSet-mii-vs-onko-operation-intention.html
 [MII_VS_Onko_Operation_Komplikation]: ValueSet-mii-vs-onko-operation-komplikation.html
 [MII_VS_Onko_Primaertumor_Diagnosesicherung]: ValueSet-mii-vs-onko-primaertumor-diagnosesicherung.html
-[MII_VS_Onko_Primaertumor_Seitenlokalisation]: ValueSet-mii-vs-onko-primaertumor-seitenlokalisation.html
+[MII_VS_Onko_Seitenlokalisation]: ValueSet-mii-vs-onko-seitenlokalisation.html
 [MII_VS_Onko_Strahlentherapie_Applikationsart]: ValueSet-mii-vs-onko-strahlentherapie-applikationsart.html
 [MII_VS_Onko_Strahlentherapie_Boosts]: ValueSet-mii-vs-onko-strahlentherapie-boost.html
 [MII_VS_Onko_Strahlentherapie_Ende_Grund]: ValueSet-mii-vs-onko-strahlentherapie-ende-grund.html
