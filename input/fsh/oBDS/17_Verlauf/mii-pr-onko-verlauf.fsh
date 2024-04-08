@@ -6,6 +6,8 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
+* meta.profile 0..* MS
+* encounter 0..1 MS
 
 // siehe Kodierrichtlinien hier : https://plattform65c.atlassian.net/wiki/spaces/Dokumentat/pages/75628552/Verlaufsmeldung
 * identifier MS

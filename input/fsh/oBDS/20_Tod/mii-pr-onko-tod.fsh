@@ -6,6 +6,9 @@ Description: "Tumorbedingter Tod"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
+* meta.profile 0..* MS
+* encounter 0..1 MS
+
 
 * code MS
 * code.coding = $SCT#184305005

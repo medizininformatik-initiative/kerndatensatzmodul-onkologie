@@ -11,6 +11,9 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 
 * subject 1..1 MS
 * subject only Reference(Patient)
+* meta.profile 0..* MS
+* encounter 0..1 MS
+
 
 // Intention der Strahlentherapie 
 * extension contains mii-ex-onko-strahlentherapie-intention named Intention 1..1 

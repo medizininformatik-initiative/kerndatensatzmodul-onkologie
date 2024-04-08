@@ -6,7 +6,8 @@ Description: "Genetische Variante wie im oBDS beschrieben"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
-
+* meta.profile 0..* MS
+* encounter 0..1 MS
 
 * subject 1..1 MS
 * subject only Reference(Patient)

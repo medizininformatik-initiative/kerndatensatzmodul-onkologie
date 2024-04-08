@@ -6,6 +6,9 @@ Description: "Histologie: Befund. Vollständiger Befundbericht des Pathologen."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
+* meta.profile 0..* MS
+* encounter 0..1 MS
+
 * code MS
 * code ^short = "Pathology report code"
 * code.coding MS

@@ -6,6 +6,9 @@ Description: "TNM-Klassifikation: TNM y-Symbol. Gibt an, ob die Klassifikation w
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
+* meta.profile 0..* MS
+* encounter 0..1 MS
+
 * status MS
 * code MS
 * code = $LOINC#101658-3

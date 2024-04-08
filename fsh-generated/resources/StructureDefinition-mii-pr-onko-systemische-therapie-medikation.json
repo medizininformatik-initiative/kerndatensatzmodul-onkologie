@@ -53,6 +53,18 @@
   "differential": {
     "element": [
       {
+        "id": "MedicationStatement.basedOn",
+        "path": "MedicationStatement.basedOn",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/CarePlan"
+            ]
+          }
+        ]
+      },
+      {
         "id": "MedicationStatement.partOf",
         "path": "MedicationStatement.partOf",
         "min": 1,

@@ -6,6 +6,9 @@ Description: "Dieses Profil beschreibt die Tumorkonferenz und die Therapieempfeh
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
+* meta.profile 0..* MS
+* encounter 0..1 MS
+
 
 * identifier MS
 * status MS

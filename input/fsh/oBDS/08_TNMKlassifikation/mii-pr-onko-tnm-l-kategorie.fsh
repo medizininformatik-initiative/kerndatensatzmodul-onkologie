@@ -6,6 +6,9 @@ Description: "TNM-Klassifikation: TNM L-Kategorie. Lymphgefäßinvasion."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
+* meta.profile 0..* MS
+* encounter 0..1 MS
+
 * status MS
 * code MS
 * code = $SCT#395715009

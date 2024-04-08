@@ -6,6 +6,8 @@ Description: "Histologie: Anzahl der befallenen Lymphknoten. Gibt an, wie viele 
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
+* meta.profile 0..* MS
+* encounter 0..1 MS
 * category MS
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
