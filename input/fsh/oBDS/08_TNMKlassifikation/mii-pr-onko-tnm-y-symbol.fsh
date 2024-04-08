@@ -33,6 +33,11 @@ Description: "TNM-Klassifikation: TNM y-Symbol. Gibt an, ob die Klassifikation w
 * derivedFrom 0..1 MS
 * derivedFrom only Reference(MII_PR_Onko_Verlauf)
 
+// Referenz zu Primärtumor
+* focus MS
+* focus only Reference(MII_PR_Onko_Diagnose)
+
+
 Mapping: FHIR-oBDS-TNM_y_Symbol
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"

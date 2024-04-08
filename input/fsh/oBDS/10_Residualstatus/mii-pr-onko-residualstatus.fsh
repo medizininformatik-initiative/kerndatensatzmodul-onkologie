@@ -18,6 +18,10 @@ Description: "Umfang eines Residualtumors nach einer Therapie"
 * derivedFrom 0..1 MS
 * derivedFrom only Reference(MII_PR_Onko_Verlauf)
 
+// Referenz zu Primärtumor
+* focus MS
+* focus only Reference(MII_PR_Onko_Diagnose)
+
 // Gesamtbeurteilung des Residualstatus 
 * code MS
 * code.coding 1..* MS

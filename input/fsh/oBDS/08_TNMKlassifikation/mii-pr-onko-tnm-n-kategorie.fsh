@@ -48,6 +48,11 @@ Description: "TNM-Klassifikation: TNM N-Kategorie. Ausbreitung von regionären L
 * derivedFrom 0..1 MS
 * derivedFrom only Reference(MII_PR_Onko_Verlauf)
 
+// Referenz zu Primärtumor
+* focus MS
+* focus only Reference(MII_PR_Onko_Diagnose)
+
+
 Mapping: FHIR-oBDS-TNM_N_Kategorie
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"

@@ -35,6 +35,11 @@ Description: "TNM-Klassifikation: TNM Pn-Kategorie. Perineuralinvasion."
 * derivedFrom 0..1 MS
 * derivedFrom only Reference(MII_PR_Onko_Verlauf)
 
+// Referenz zu Primärtumor
+* focus MS
+* focus only Reference(MII_PR_Onko_Diagnose)
+
+
 Mapping: FHIR-oBDS-TNM_Pn_Kategorie
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"

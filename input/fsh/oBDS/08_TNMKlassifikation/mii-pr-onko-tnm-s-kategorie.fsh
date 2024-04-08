@@ -36,6 +36,11 @@ Description: "TNM-Klassifikation: TNM S-Kategorie. Serumtumormarker."
 * derivedFrom 0..1 MS
 * derivedFrom only Reference(MII_PR_Onko_Verlauf)
 
+// Referenz zu Primärtumor
+* focus MS
+* focus only Reference(MII_PR_Onko_Diagnose)
+
+
 Mapping: FHIR-oBDS-TNM_S_Kategorie
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"

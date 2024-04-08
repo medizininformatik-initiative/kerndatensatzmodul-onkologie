@@ -34,6 +34,11 @@ Description: "TNM-Klassifikation: Grouper-Profil für Komponenten der TNM-Klassi
 * derivedFrom 0..1 MS
 * derivedFrom only Reference(MII_PR_Onko_Verlauf)
 
+// Referenz zu Primärtumor
+* focus MS
+* focus only Reference(MII_PR_Onko_Diagnose)
+
+
 Mapping: FHIR-oBDS-TNM-Klassifikation
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"

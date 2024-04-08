@@ -50,6 +50,11 @@ Description: "Histologie: Anzahl der befallenen Sentinel-Lymphknoten. Gibt an, w
 * derivedFrom 0..1 MS
 * derivedFrom only Reference(MII_PR_Onko_Verlauf)
 
+// Referenz zu Primärtumor
+* focus MS
+* focus only Reference(MII_PR_Onko_Diagnose)
+
+
 Mapping: FHIR-oBDS-Histologie-Anzahl-Befallene-Sentinel-Lymphknoten
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
