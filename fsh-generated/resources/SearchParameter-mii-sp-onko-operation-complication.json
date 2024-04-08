@@ -1,0 +1,26 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "mii-sp-onko-operation-complication",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-operation-complication",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2024.0.0-ballot",
+  "name": "MII_SP_Operation_Complication",
+  "description": "SearchParameter for Procedure.complication",
+  "status": "active",
+  "code": "complication",
+  "base": [
+    "Procedure"
+  ],
+  "type": "token",
+  "expression": "Procedure.complication"
+}
