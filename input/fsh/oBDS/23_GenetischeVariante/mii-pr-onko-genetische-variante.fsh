@@ -27,6 +27,10 @@ Description: "Genetische Variante wie im oBDS beschrieben"
 * valueCodeableConcept.coding.system MS
 * valueCodeableConcept.coding.code MS
 
+// Referenz zu Verlauf-Observation
+* derivedFrom 0..1 MS
+* derivedFrom only Reference(MII_PR_Onko_Verlauf)
+
 
 Mapping: FHIR-oBDSGenetischeVariante
 Id: oBDS

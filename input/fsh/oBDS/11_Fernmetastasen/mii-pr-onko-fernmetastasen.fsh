@@ -29,6 +29,10 @@ Description: "OBDS Beschreibung von Fernmetastasen (Lokalisation und Datum)"
 * effective[x] only dateTime
 * effectiveDateTime 1..1 MS  // hier 1..1, wenn bei bodySite auch 1..1 -> es steht dann eine Observation für eine Metastase
 
+// Referenz zu Verlauf-Observation
+* derivedFrom 0..1 MS
+* derivedFrom only Reference(MII_PR_Onko_Verlauf)
+
 Mapping: FHIR-oBDS-MII-PR-Onko-Fernmetastasen
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"

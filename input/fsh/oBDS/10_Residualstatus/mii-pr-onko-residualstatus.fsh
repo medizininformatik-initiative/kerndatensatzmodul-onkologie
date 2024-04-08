@@ -14,6 +14,10 @@ Description: "Umfang eines Residualtumors nach einer Therapie"
 * subject only Reference(Patient)
 * encounter MS
 
+// Referenz zu Verlauf-Observation
+* derivedFrom 0..1 MS
+* derivedFrom only Reference(MII_PR_Onko_Verlauf)
+
 // Gesamtbeurteilung des Residualstatus 
 * code MS
 * code.coding 1..* MS

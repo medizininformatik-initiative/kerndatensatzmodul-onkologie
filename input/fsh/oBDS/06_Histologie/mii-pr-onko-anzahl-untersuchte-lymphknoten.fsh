@@ -46,6 +46,10 @@ Description: "Histologie: Anzahl der untersuchten Lymphknoten. Gibt an, wie viel
 * valueQuantity.unit 1.. MS
 * valueQuantity.value 1.. MS
 
+// Referenz zu Verlauf-Observation
+* derivedFrom 0..1 MS
+* derivedFrom only Reference(MII_PR_Onko_Verlauf)
+
 Mapping: FHIR-oBDS-Histologie-Anzahl-Untersuchte-Lymphknoten
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
