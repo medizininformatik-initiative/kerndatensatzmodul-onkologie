@@ -1,0 +1,26 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "mii-sp-onko-strahlentherapie-ext-stellung",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-strahlentherapie-ext-stellung",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2024.0.0-ballot",
+  "name": "MII_SP_Strahlentherapie_Extension_Stellung",
+  "description": "SearchParameter for Procedure.extension.stellung",
+  "status": "active",
+  "code": "extension-stellung",
+  "base": [
+    "Procedure"
+  ],
+  "type": "token",
+  "expression": "Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellung').value"
+}
