@@ -10,7 +10,9 @@ Description: "Histologie: Befund. Vollständiger Befundbericht des Pathologen."
 * encounter 0..1 MS
 
 * basedOn 0..* MS
-* basedOn only Reference(CarePlan)
+* basedOn only Reference(MII_PR_Onko_Tumorkonferenz or CarePlan)
+* specimen 0..* MS 
+* specimen only Reference(MII_PR_Onko_Specimen or Specimen)
 * code MS
 * code ^short = "Pathology report code"
 * code.coding MS
