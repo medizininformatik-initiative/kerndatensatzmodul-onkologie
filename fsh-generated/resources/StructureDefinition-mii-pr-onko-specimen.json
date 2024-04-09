@@ -43,7 +43,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Specimen",
-  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Specimen",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Specimen",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -59,6 +59,11 @@
         ]
       },
       {
+        "id": "Specimen.meta.profile",
+        "path": "Specimen.meta.profile",
+        "mustSupport": true
+      },
+      {
         "id": "Specimen.identifier.value",
         "path": "Specimen.identifier.value",
         "mustSupport": true,
@@ -69,6 +74,20 @@
             "comment": "Histologie-Einsendenummer"
           }
         ]
+      },
+      {
+        "id": "Specimen.subject",
+        "path": "Specimen.subject",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ],
+        "mustSupport": true
       },
       {
         "id": "Specimen.collection.collected[x]",

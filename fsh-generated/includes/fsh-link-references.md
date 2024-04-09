@@ -3,7 +3,6 @@
 [mii-exa-onko-systemische-therapie-1]: Procedure-mii-exa-onko-systemische-therapie-1.html
 [FIGO-Observation-2]: Observation-FIGO-Observation-2.html
 [MII-CM-Onko-oBDS-SCT-Mapping]: ConceptMap-MII-CM-Onko-oBDS-SCT-Mapping.html
-[mii-cm-onko-tnm-uicc-snomed]: ConceptMap-mii-cm-onko-tnm-uicc-snomed.html
 [MII_CS_Onko_Nebenwirkung_CTCAE_Grad]: CodeSystem-mii-cs-onko-nebenwirkung-ctcae-grad.html
 [MII_CS_Onko_Therapie_Typ]: CodeSystem-mii-cs-onko-therapie-typ.html
 [MII_CS_Onko_Allgemeiner_Leistungszustand]: CodeSystem-mii-cs-onko-allgemeiner-leistungszustand.html
