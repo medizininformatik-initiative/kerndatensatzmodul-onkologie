@@ -10,13 +10,11 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
 * encounter 0..1 MS
 
 // siehe Kodierrichtlinien hier : https://plattform65c.atlassian.net/wiki/spaces/Dokumentat/pages/75628552/Verlaufsmeldung
-* meta.profile 0..* MS
 * identifier MS
 
 * subject MS
 * subject 1..1
 * subject only Reference(Patient)
-* encounter MS
 
 * code MS
 // * code 1..1  erst wieder reinschalten 

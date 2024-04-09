@@ -14,7 +14,6 @@ Description: "TNM-Klassifikation: Grouper-Profil für Komponenten der TNM-Klassi
 * code from mii-vs-onko-tnm-klassifikation-typ (required)
 * subject 1..1 MS
 * subject only Reference(Patient)
-* encounter MS
 * effective[x] MS
 * effective[x] only dateTime
 * effectiveDateTime MS

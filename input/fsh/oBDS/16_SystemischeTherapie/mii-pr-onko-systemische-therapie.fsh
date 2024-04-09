@@ -6,7 +6,6 @@ Description: "Systemische Therapie. Dieses Profil beschreibt eine Systemische Th
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
-* meta.profile 0..* MS
 * encounter 0..1 MS
 
 // Logical Modell see:  https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532379/Systemische+Therapie+SYST+Typ // t
@@ -46,7 +45,6 @@ Description: "Systemische Therapie. Dieses Profil beschreibt eine Systemische Th
 
 * subject 1..1 MS
 * subject only Reference(Patient)
-* encounter MS
 
 // Systemische Therapie Ende Grund
 * outcome MS

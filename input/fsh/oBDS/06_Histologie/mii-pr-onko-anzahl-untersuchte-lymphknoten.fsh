@@ -33,7 +33,6 @@ Description: "Histologie: Anzahl der untersuchten Lymphknoten. Gibt an, wie viel
 * code.coding[snomed].code 1..
 * subject 1..1 MS
 * subject only Reference(Patient)
-* encounter MS
 * effective[x] MS
 * effective[x] only dateTime
 * effectiveDateTime 1.. MS

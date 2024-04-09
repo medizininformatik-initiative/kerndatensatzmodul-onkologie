@@ -16,7 +16,6 @@ Description: "TNM-Klassifikation: TNM m-Symbol. Kennzeichnet Vorhandensein multi
 * code.coding.system 1.. MS
 * subject 1..1 MS
 * subject only Reference(Patient)
-* encounter MS
 * effective[x] MS
 * effective[x] only dateTime
 * effectiveDateTime MS

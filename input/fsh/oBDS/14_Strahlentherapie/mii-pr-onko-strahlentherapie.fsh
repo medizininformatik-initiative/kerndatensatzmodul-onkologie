@@ -11,7 +11,6 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 * meta.profile 0..* MS
 * subject 1..1 MS
 * subject only Reference(Patient)
-* meta.profile 0..* MS
 * encounter 0..1 MS
 
 

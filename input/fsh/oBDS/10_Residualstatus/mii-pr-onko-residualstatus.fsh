@@ -12,7 +12,7 @@ Description: "Umfang eines Residualtumors nach einer Therapie"
 // Moved into Procedure.outcome in OP 
 * subject 1..1 MS
 * subject only Reference(Patient)
-* encounter MS
+* encounter 0..1 MS
 
 // Referenz zu Verlauf-Observation
 * derivedFrom 0..1 MS

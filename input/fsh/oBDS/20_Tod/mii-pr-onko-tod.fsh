@@ -10,13 +10,11 @@ Description: "Tumorbedingter Tod"
 * encounter 0..1 MS
 
 
-* meta.profile 0..* MS
 * code MS
 * code.coding = $SCT#184305005
 
 * subject 1..1 MS
 * subject only Reference(Patient)
-* encounter MS
 
 * effective[x] MS
 * effective[x] only dateTime

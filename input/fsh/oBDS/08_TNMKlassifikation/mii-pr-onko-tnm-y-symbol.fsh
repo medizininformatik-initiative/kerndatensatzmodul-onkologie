@@ -16,7 +16,6 @@ Description: "TNM-Klassifikation: TNM y-Symbol. Gibt an, ob die Klassifikation w
 * code.coding.system 1.. MS
 * subject 1..1 MS
 * subject only Reference(Patient)
-* encounter MS
 * effective[x] MS
 * effective[x] only dateTime
 * effectiveDateTime MS

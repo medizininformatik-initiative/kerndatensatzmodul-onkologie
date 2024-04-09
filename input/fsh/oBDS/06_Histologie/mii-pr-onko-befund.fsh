@@ -9,6 +9,8 @@ Description: "Histologie: Befund. Vollständiger Befundbericht des Pathologen."
 * meta.profile 0..* MS
 * encounter 0..1 MS
 
+* basedOn 0..* MS
+* basedOn only Reference(CarePlan)
 * code MS
 * code ^short = "Pathology report code"
 * code.coding MS

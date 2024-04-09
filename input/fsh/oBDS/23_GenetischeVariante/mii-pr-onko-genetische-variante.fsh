@@ -11,7 +11,6 @@ Description: "Genetische Variante wie im oBDS beschrieben"
 
 * subject 1..1 MS
 * subject only Reference(Patient)
-* encounter MS
 
 * note MS 
 * note.text MS 

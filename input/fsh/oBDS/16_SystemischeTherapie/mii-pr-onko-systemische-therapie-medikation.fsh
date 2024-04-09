@@ -11,7 +11,6 @@ Description: "Medikation der Systemische Therapie. Dieses Profil beschreibt die 
 * meta.profile 0..* MS
 * subject 1..1 MS
 * subject only Reference(Patient)
-* meta.profile 0..* MS
 
 
 * medication[x] 1..1 MS

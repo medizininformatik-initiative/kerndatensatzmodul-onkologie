@@ -7,7 +7,6 @@ Description: "Histologie: Anzahl der befallenen Lymphknoten. Gibt an, wie viele 
 * insert Publisher
 * ^status = #draft
 * meta.profile 0..* MS
-* encounter 0..1 MS
 * category MS
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
@@ -32,7 +31,7 @@ Description: "Histologie: Anzahl der befallenen Lymphknoten. Gibt an, wie viele 
 * code.coding[snomed].code 1..
 * subject 1..1 MS
 * subject only Reference(Patient)
-* encounter MS
+* encounter 0..1 MS
 * effective[x] MS
 * effective[x] only dateTime
 * effectiveDateTime 1.. MS

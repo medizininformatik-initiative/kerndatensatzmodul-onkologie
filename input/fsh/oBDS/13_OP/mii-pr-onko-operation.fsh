@@ -12,13 +12,11 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 
 * extension contains mii-ex-onko-operation-intention named Intention 1..1
 * extension[Intention] MS
-* meta.profile 0..* MS
 * encounter 0..1 MS
 
 
 * subject 1..1 MS
 * subject only Reference(Patient)
-* encounter MS
 
 * performed[x] MS
 * performed[x] only dateTime 

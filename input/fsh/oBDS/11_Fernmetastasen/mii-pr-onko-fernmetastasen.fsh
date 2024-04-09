@@ -10,10 +10,7 @@ Description: "OBDS Beschreibung von Fernmetastasen (Lokalisation und Datum)"
 * meta.profile 0..* MS
 * subject 1..1 MS
 * subject only Reference(Patient)
-* meta.profile 0..* MS
 * encounter 0..1 MS
-
-* encounter MS
 
 * code MS
 * code 1..1

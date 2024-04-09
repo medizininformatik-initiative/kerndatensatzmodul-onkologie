@@ -9,8 +9,6 @@ Description: "Dieses Profil beschreibt die Tumorkonferenz und die Therapieempfeh
 * meta.profile 0..* MS
 * encounter 0..1 MS
 
-
-* meta.profile 0..* MS
 * identifier MS
 * status MS
 * intent MS
@@ -18,7 +16,6 @@ Description: "Dieses Profil beschreibt die Tumorkonferenz und die Therapieempfeh
 * subject MS
 * subject 1..1
 * subject only Reference(Patient)
-* encounter MS
 
 * category 1..1 MS 
 * category.coding from mii-vs-onko-therapieplanung-typ
