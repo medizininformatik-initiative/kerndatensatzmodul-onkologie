@@ -12,14 +12,12 @@ Description: "Medikation der Systemische Therapie. Dieses Profil beschreibt die 
 * subject 1..1 MS
 * subject only Reference(Patient)
 * meta.profile 0..* MS
-* encounter 0..1 MS
 
 
 * medication[x] 1..1 MS
 * partOf 1..* MS 
 * partOf only Reference(Procedure)
 * note MS // Angabe eines Schemas ist optional. Bei Angabe eines SChemas sind alle Wirkstoffe unter medication gesondert zu kodieren 
-// vielleicht aber Schema auch als medicationCodeableConcept.text
 
 // Systemische Therapie Beginn und Ende --> ggfs. dupliziert im MedicationStatement 
 * effective[x] MS 
