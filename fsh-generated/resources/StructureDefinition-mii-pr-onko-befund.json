@@ -58,6 +58,19 @@
         "mustSupport": true
       },
       {
+        "id": "DiagnosticReport.basedOn",
+        "path": "DiagnosticReport.basedOn",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/CarePlan"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "DiagnosticReport.code",
         "path": "DiagnosticReport.code",
         "short": "Pathology report code",
