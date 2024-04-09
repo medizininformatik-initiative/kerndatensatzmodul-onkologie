@@ -10,11 +10,13 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
 * encounter 0..1 MS
 
 // siehe Kodierrichtlinien hier : https://plattform65c.atlassian.net/wiki/spaces/Dokumentat/pages/75628552/Verlaufsmeldung
+* meta.profile 0..* MS
 * identifier MS
 
 * subject MS
 * subject 1..1
 * subject only Reference(Patient)
+* encounter MS
 
 * code MS
 // * code 1..1  erst wieder reinschalten 
@@ -22,8 +24,9 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
 * value[x] MS
 * value[x] 0..1
 * value[x] only CodeableConcept
-
 * valueCodeableConcept from MII_VS_Onko_Verlauf_Gesamtbeurteilung
+* valueCodeableConcept.coding.system MS
+* valueCodeableConcept.coding.code MS
 
 * component MS
 * component 1..*
@@ -37,13 +40,28 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
     Fernmetastasen_Verlauf 0..1
 * component[Tumor_Verlauf] MS 
 * component[Tumor_Verlauf].code.coding = $SCT#277062004 "Status des Residualtumors"
+* component[Tumor_Verlauf].value[x] only CodeableConcept
 * component[Tumor_Verlauf].valueCodeableConcept from mii-vs-onko-verlauf-primaertumor (required)
+* component[Tumor_Verlauf].valueCodeableConcept.coding.system MS
+* component[Tumor_Verlauf].valueCodeableConcept.coding.code MS
+
 * component[Lymphknoten_Verlauf] MS 
 * component[Lymphknoten_Verlauf].code.coding = $SCT#277060007 "Status der lymphatischen Tumorinvasion"
+* component[Lymphknoten_Verlauf].value[x] only CodeableConcept
 * component[Lymphknoten_Verlauf].valueCodeableConcept from mii-vs-onko-verlauf-lymphknoten (required)
+* component[Lymphknoten_Verlauf].valueCodeableConcept.coding.system MS
+* component[Lymphknoten_Verlauf].valueCodeableConcept.coding.code MS
+
 * component[Fernmetastasen_Verlauf] MS
 * component[Fernmetastasen_Verlauf].code.coding = $SCT#260874000 "Status der Metastasen"
+* component[Fernmetastasen_Verlauf].value[x] only CodeableConcept
 * component[Fernmetastasen_Verlauf].valueCodeableConcept from mii-vs-onko-verlauf-fernmetastasen (required)
+* component[Fernmetastasen_Verlauf].valueCodeableConcept.coding.system MS
+* component[Fernmetastasen_Verlauf].valueCodeableConcept.coding.code MS
+
+// Referenz zu Primärtumor
+* focus MS
+* focus only Reference(MII_PR_Onko_Diagnose)
 
 
 Mapping: FHIR-oBDS-Verlauf

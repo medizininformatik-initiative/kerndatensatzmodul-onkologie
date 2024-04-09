@@ -16,6 +16,7 @@ Description: "TNM-Klassifikation: TNM m-Symbol. Kennzeichnet Vorhandensein multi
 * code.coding.system 1.. MS
 * subject 1..1 MS
 * subject only Reference(Patient)
+* encounter MS
 * effective[x] MS
 * effective[x] only dateTime
 * effectiveDateTime MS
@@ -28,6 +29,15 @@ Description: "TNM-Klassifikation: TNM m-Symbol. Kennzeichnet Vorhandensein multi
 * valueCodeableConcept ^comment = "(m) = multiple Tumoren ohne Angabe der Zahl; (Zahl) = Anzahl der multiplen Tumoren; (leer) = keine multiplen Tumoren"
 * valueCodeableConcept.coding.code 1.. MS
 * valueCodeableConcept.coding.system 1.. MS
+
+// Referenz zu Verlauf-Observation
+* derivedFrom 0..1 MS
+* derivedFrom only Reference(MII_PR_Onko_Verlauf)
+
+// Referenz zu Primärtumor
+* focus MS
+* focus only Reference(MII_PR_Onko_Diagnose)
+
 
 Mapping: FHIR-oBDS-TNM_m_Symbol
 Id: oBDS

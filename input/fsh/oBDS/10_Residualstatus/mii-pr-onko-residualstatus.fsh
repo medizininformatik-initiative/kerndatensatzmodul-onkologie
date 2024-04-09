@@ -7,10 +7,20 @@ Description: "Umfang eines Residualtumors nach einer Therapie"
 * insert Publisher
 * ^status = #draft
 
+* meta.profile 0..* MS
 // Beurteilung des lokalen Residualstatus nach Abschluss der Operation 
 // Moved into Procedure.outcome in OP 
 * subject 1..1 MS
 * subject only Reference(Patient)
+* encounter MS
+
+// Referenz zu Verlauf-Observation
+* derivedFrom 0..1 MS
+* derivedFrom only Reference(MII_PR_Onko_Verlauf)
+
+// Referenz zu Primärtumor
+* focus MS
+* focus only Reference(MII_PR_Onko_Diagnose)
 
 // Gesamtbeurteilung des Residualstatus 
 * code MS

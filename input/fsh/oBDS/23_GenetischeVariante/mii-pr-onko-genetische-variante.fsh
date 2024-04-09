@@ -11,17 +11,30 @@ Description: "Genetische Variante wie im oBDS beschrieben"
 
 * subject 1..1 MS
 * subject only Reference(Patient)
+* encounter MS
 
 * note MS 
 * note.text MS 
 
 * interpretation MS
 * interpretation from mii-vs-onko-genetische-variante-auspraegung (required)
+* interpretation.coding.system MS
+* interpretation.coding.code MS
 * value[x] ^slicing.discriminator.type = #pattern
 * value[x] ^slicing.rules = #open
 * value[x] ^slicing.ordered = false
 * value[x] only CodeableConcept
 * valueCodeableConcept 0..1 MS
+* valueCodeableConcept.coding.system MS
+* valueCodeableConcept.coding.code MS
+
+// Referenz zu Verlauf-Observation
+* derivedFrom 0..1 MS
+* derivedFrom only Reference(MII_PR_Onko_Verlauf)
+
+// Referenz zu Primärtumor
+* focus MS
+* focus only Reference(MII_PR_Onko_Diagnose)
 
 
 Mapping: FHIR-oBDSGenetischeVariante

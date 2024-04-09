@@ -7,11 +7,13 @@ Description: "OBDS Beschreibung von Fernmetastasen (Lokalisation und Datum)"
 * insert Publisher
 * ^status = #draft
 
-
+* meta.profile 0..* MS
 * subject 1..1 MS
 * subject only Reference(Patient)
 * meta.profile 0..* MS
 * encounter 0..1 MS
+
+* encounter MS
 
 * code MS
 * code 1..1
@@ -21,11 +23,21 @@ Description: "OBDS Beschreibung von Fernmetastasen (Lokalisation und Datum)"
 * bodySite MS
 * bodySite 1..1
 * bodySite from mii-vs-onko-fernmetastasen
+* bodySite.coding.system MS
+* bodySite.coding.code MS
 
 // 11.2 Datum der diagnostischen Sicherung von Fernmetastasen 
 * effective[x] MS
 * effective[x] only dateTime
 * effectiveDateTime 1..1 MS  // hier 1..1, wenn bei bodySite auch 1..1 -> es steht dann eine Observation für eine Metastase
+
+// Referenz zu Verlauf-Observation
+* derivedFrom 0..1 MS
+* derivedFrom only Reference(MII_PR_Onko_Verlauf)
+
+// Referenz zu Primärtumor
+* focus MS
+* focus only Reference(MII_PR_Onko_Diagnose)
 
 Mapping: FHIR-oBDS-MII-PR-Onko-Fernmetastasen
 Id: oBDS

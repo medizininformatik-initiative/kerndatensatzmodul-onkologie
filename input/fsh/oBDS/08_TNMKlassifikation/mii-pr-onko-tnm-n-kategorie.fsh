@@ -25,6 +25,7 @@ Description: "TNM-Klassifikation: TNM N-Kategorie. Ausbreitung von regionären L
 * effective[x] only dateTime
 * effectiveDateTime MS
 * effectiveDateTime obeys tnm-datum
+* encounter MS
 * hasMember MS
 * hasMember only Reference(MII_PR_Onko_Anzahl_Befallene_Lymphknoten or MII_PR_Onko_Anzahl_Untersuchte_Lymphknoten or MII_PR_Onko_Anzahl_Befallene_Sentinel_Lymphknoten or MII_PR_Onko_Anzahl_Untersuchte_Sentinel_Lymphknoten )
 * method MS
@@ -44,6 +45,15 @@ Description: "TNM-Klassifikation: TNM N-Kategorie. Ausbreitung von regionären L
 * valueCodeableConcept ^comment = "Entitätsspezifisch, siehe auch allgemeine Bemerkungen zu TNM."
 * valueCodeableConcept.coding.code 1.. MS
 * valueCodeableConcept.coding.system 1.. MS
+
+// Referenz zu Verlauf-Observation
+* derivedFrom 0..1 MS
+* derivedFrom only Reference(MII_PR_Onko_Verlauf)
+
+// Referenz zu Primärtumor
+* focus MS
+* focus only Reference(MII_PR_Onko_Diagnose)
+
 
 Mapping: FHIR-oBDS-TNM_N_Kategorie
 Id: oBDS

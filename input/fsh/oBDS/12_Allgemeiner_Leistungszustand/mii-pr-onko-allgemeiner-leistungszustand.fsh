@@ -7,6 +7,7 @@ Description: "OBDS Beschreibung des allgemeines Leistungszustandes"
 * insert Publisher
 * ^status = #draft
 
+* meta.profile 0..* MS
 * subject 1..1 MS
 * subject only Reference(Patient)
 * meta.profile 0..* MS

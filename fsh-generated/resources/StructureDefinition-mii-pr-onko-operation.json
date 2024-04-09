@@ -166,6 +166,11 @@
         "mustSupport": true
       },
       {
+        "id": "Procedure.encounter",
+        "path": "Procedure.encounter",
+        "mustSupport": true
+      },
+      {
         "id": "Procedure.performed[x]",
         "path": "Procedure.performed[x]",
         "type": [
@@ -209,6 +214,17 @@
             "comment": "Beurteilung des lokalen Residualstatus nach Abschluss der Operation"
           }
         ]
+      },
+      {
+        "id": "Procedure.outcome.coding.system",
+        "path": "Procedure.outcome.coding.system",
+        "patternUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus",
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.outcome.coding.code",
+        "path": "Procedure.outcome.coding.code",
+        "mustSupport": true
       },
       {
         "id": "Procedure.complication",
