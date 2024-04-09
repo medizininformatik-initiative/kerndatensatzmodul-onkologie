@@ -2,10 +2,10 @@
 //skinparam linetype ortho
 @startuml MII KDS Erweiterungsmodul Onkologie
 skinparam linetype polyline
-object Onko_OP #8888FF
-object Onko_Strahlentherapie #8888FF
-object Onko_SystemischeTherapie #8888FF
-object Therapieplanung_Tumorkonferenz #BBBBFF
+object Onko_OP #9999FF
+object Onko_Strahlentherapie #9999FF
+object Onko_SystemischeTherapie #9999FF
+object Therapieplanung_Tumorkonferenz #CCCCFF
 note left of Therapieplanung_Tumorkonferenz 
   Für den Fall, dass eine Prozedur keinem 
   CarePlan zugeordnet werden kann,
@@ -91,7 +91,7 @@ legend right
 |Color|Type|
 |<#FFFF66>|Condition|
 |<#CCCCFF>|CarePlan|
-|<#AAAAFF>|Procedure|
+|<#9999FF>|Procedure|
 |<#DDFFDD>|ServiceRequest|
 |<#88FF88>|DiagnosticReport|
 |<#22FF22>|Observation|

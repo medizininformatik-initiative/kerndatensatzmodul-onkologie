@@ -1,32 +1,36 @@
 @startuml MII KDS Erweiterungsmodul Onkologie
-object MII_Symptom_Observation #AAFFAA
-Map WeitereKlassifikation #AAFFAA {
+object R4_Observation #22FF22
+Map WeitereKlassifikation #22FF22 {
  09.1 Hämatoonkologische und sonstige Klassifikationen Datum => Observation.effectiveDateTime
  09.2 Hämatoonkologische und sonstige Klassifikationen Name => Observation.code.text
  09.3 Hämatoonkologische und sonstige Klassifikationen Einstufung => Observation.value[x]
 } 
-MII_Symptom_Observation <|-down- WeitereKlassifikation
+R4_Observation <|-down- WeitereKlassifikation
 
-object MII_Onko_Operation #FFCCCC
+object MII_Onko_Operation #9999FF
+note bottom 
+    Lokaler Residualstatus wird über Procedure.outcome einer Operation erfasst
+end note
 
-Map Residualstatus #AAFFAA{
+Map Residualstatus #22FF22{
     10.1 lokaler Residualstatus nach Abschluss der OP *--> MII_Onko_Operation
     10.2 Gesamtbeurteilung des Residualstatus => valueCodeableConcept.coding.code  
 }
-MII_Symptom_Observation <|-down-- Residualstatus
+R4_Observation <|-down-- Residualstatus
 
-Map Fernmetastasen #AAFFAA{
+Map Fernmetastasen #22FF22{
     11.1 Lokalisation von Fernmetastase(n)  => Observation.bodySite.coding.code
     11.2 Datum der diagnostischen Sicherung => Observation.effectiveDateTime
  
 }
-MII_Symptom_Observation <|-down--- Fernmetastasen
+R4_Observation <|-down--- Fernmetastasen
 
 
-Map ECOGStatus #AAFFAA{
-    12. 1ECOG Status => Observation.code.coding.code
+Map ECOGStatus #22FF22{
+    12. 1ECOG Status => Observation.valueCodeableConcept
 
 }
-MII_Symptom_Observation <|-down---- ECOGStatus
+R4_Observation <|-down---- ECOGStatus
+
 
 @enduml

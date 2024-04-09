@@ -18,23 +18,26 @@ object Primaerdiagnose #FFFF66 {
 Patient -right-> Primaerdiagnose
 
 object DiagnosticProcedure_1 {
-* status = #completed
 * subject = Reference(PatientKimMusterperson)
+* reasonReference = Reference(Primaerdiagnose)    
+* status = #completed
 * code.coding = $OPS#3-225 "CT des Abdomens mit KM"
 * code.coding.version = "OPS 2024"
 * performedDateTime = 2021-06-10
 }
 
 object DiagnosticProcedure_2 {
-* status = #completed
 * subject = Reference(PatientKimMusterperson)
+* reasonReference = Reference(Primaerdiagnose)
+* status = #completed
 * code.coding = $OPS#1-853.2 "Aszitespunktion"
 * performedDateTime = 2021-06-15
 }
 
 object DiagnosticProcedure_3 {
-* status = #completed
 * subject = Reference(PatientKimMusterperson)
+* reasonReference = Reference(Primaerdiagnose)    
+* status = #completed
 * code.coding = $OPS#3-222 "CT Thorax"
 * performedDateTime = 2021-06-22
 }
@@ -47,12 +50,12 @@ DiagnosticProcedure_3 -up----> Primaerdiagnose
 
 
 object Tumorboard_1 #CCCCFF {
+* addresses = Reference(Primaerdiagnose)
 * subject = Reference(PatientKimMusterperson)
 * status = #completed
 * intent = #plan
 * category.coding = $mii-cs-onko-therapieplanung-typ#praeth "Prätherapeutische Tumorkonferenz" 
 * created = 2021-06-25
-* addresses = Reference(OncologicExamplePatientPrimaryDiagnosis2)
 * activity[0].detail.code = $mii-cs-onko-therapie-typ#CH "Chemotherapie"
 * activity[0].detail.status = #completed // Es wurden nur 3 Zyklen geplant, die alle durchgeführt wurden
 * activity[0].detail.statusReason = $mii-cs-onko-therapieabweichung#N
@@ -62,6 +65,7 @@ object Tumorboard_1 #CCCCFF {
 }
 object SystemicTherapy_1 #AAAAFF {
 * subject = Reference(PatientKimMusterperson)
+* reasonReference = Reference(Primaerdiagnose)    
 * status = #completed
 * code.coding = $OPS#8-54 "Chemotherapie " // bei Bedarf spezifischer? 
 * extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K // impliziert 
@@ -73,6 +77,7 @@ object SystemicTherapy_1 #AAAAFF {
 
 object SystemicTherapyMedication_1 #FFCCFF {
 * subject = Reference(PatientKimMusterperson)
+* reasonReference = Reference(Primaerdiagnose)    
 * status = #completed
 * effectivePeriod.start = 2021-07-05  
 * effectivePeriod.end = 2021-09-05
@@ -84,8 +89,7 @@ object SystemicTherapyMedication_1 #FFCCFF {
 
 Primaerdiagnose -right-> Tumorboard_1
 SystemicTherapy_1 -up--> Tumorboard_1
-SystemicTherapyMedication_1 -up->SystemicTherapy_1 
-
+SystemicTherapyMedication_1 -up-> SystemicTherapy_1 
 
 
 object SystemicTherapyMedicationAdministration_1_2_3 {
@@ -96,6 +100,7 @@ SystemicTherapyMedicationAdministration_1_2_3 -up-> SystemicTherapyMedication_1
 
 object Verlauf_21_09_15 #22FF22 {
 * subject = Reference(PatientKimMusterperson)
+* focus = Reference(Primaerdiagnose)
 * status = #final
 * effectiveDateTime = 2021-09-15
 * code.coding = $mii-cs-onko-verlauf-gesamtbeurteilung#P "Progression"
@@ -110,6 +115,7 @@ Tumorboard_1 -right-> Verlauf_21_09_15
 
 object Tumorboard_2 #CCCCFF {
 * subject = Reference(PatientKimMusterperson)
+* addresses = Reference(Primaerdiagnose)
 * status = #completed
 * intent = #plan
 * category.coding = $mii-cs-onko-therapieplanung-typ#praeth "Prätherapeutische Tumorkonferenz" 
@@ -123,6 +129,7 @@ Verlauf_21_09_15  -right-> Tumorboard_2
 
 object SurgicalProcedure_1 #AAAAFF {
 * status = #completed
+* reasonReference = Reference(Primaerdiagnose)    
 * subject = Reference(PatientKimMusterperson)
 * code.coding[0] = $OPS#5-547.0 "Resektion von Gewebe ohne sichere Organzuordnung - intraperitoneal" // alternativ 5-590.8 Resektion von Gewebe ohne sichere Organzuordnung
 * code.coding[1] = $OPS#5-683 "Hysterektomie"
@@ -134,8 +141,9 @@ object SurgicalProcedure_1 #AAAAFF {
  Tumorboard_2 <-right-- "basedOn" SurgicalProcedure_1 
 
 object TNM_Klassifikation_2 #22FF22 {
-* status = #completed
+* focus = Reference(Primaerdiagnose)
 * subject = Reference(PatientKimMusterperson)
+* status = #completed
 * code.coding = $SCT#263642008 "Tumor-node-metastasis (TNM) staging classification (attribute)"
 * effectiveDateTime = 2021-06-22
 * method = #8
@@ -144,6 +152,7 @@ object TNM_Klassifikation_2 #22FF22 {
 object TNM_T_Kategorie_2 #22FF22 {
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
+* focus = Reference(Primaerdiagnose)
 * code.extension[cpPraefix].valueCodeableConcept = $UICC#p
 * code.coding =  $SCT#384625004 "pT category (observable entity)"
 * effectiveDateTime = 2021-06-22
@@ -154,6 +163,7 @@ object TNM_T_Kategorie_2 #22FF22 {
 object TNM_M_Kategorie_2 #22FF22 {
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
+* focus = Reference(Primaerdiagnose)
 * code.extension[cpPraefix].valueCodeableConcept = $UICC#p
 * code.coding = $SCT#371497001 "pM category (observable entity)"
 * effectiveDateTime = 2021-06-22
@@ -165,6 +175,7 @@ object TNM_M_Kategorie_2 #22FF22 {
 object TNM_y_Symbol_2 #22FF22 {
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
+* focus = Reference(Primaerdiagnose)
 * code.coding = $LOINC#101658-3
 * effectiveDateTime = 2021-06-22
 * method = #8
@@ -174,6 +185,7 @@ object TNM_y_Symbol_2 #22FF22 {
 object TNM_Pn_Observation_2 #22FF22 {
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
+* focus = Reference(Primaerdiagnose)
 * code.coding = $SCT#371513001
 * effectiveDateTime = 2021-06-22
 * method = #8
@@ -183,7 +195,8 @@ object TNM_Pn_Observation_2 #22FF22 {
 
 object TNM_L_Observation_2 #22FF22 {
 * status = #completed
-* subject = Reference(PatientKimMusterperson)
+* subject = Reference(PatientKimMusterperson
+* focus = Reference(Primaerdiagnose))
 * code.coding = $SCT#395715009
 * effectiveDateTime = 2021-06-22
 * method = #8
@@ -193,6 +206,7 @@ object TNM_L_Observation_2 #22FF22 {
 object TNM_V_Observation_2 #22FF22 {
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
+* focus = Reference(Primaerdiagnose)
 * code.coding = $SCT#371493002
 * effectiveDateTime = 2021-06-22
 * method = #8
@@ -211,6 +225,7 @@ TNM_V_Observation_2 -up--> TNM_Klassifikation_2
 object FIGO_Observation_2 #22FF22 {
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
+* focus = Reference(Primaerdiagnose)
 * code.coding = $SCT#385361009 "International Federation of Gynecology and Obstetrics tumor stage (observable entity)"
 * code.text = "FIGO Klassifikation für ovariale Tumore"
 * effectiveDateTime = 2021-06-22
@@ -222,6 +237,7 @@ FIGO_Observation_2 -up-->  SurgicalProcedure_1
 
 object Tumorboard_3 #CCCCFF {
 * subject = Reference(PatientKimMusterperson)
+* addresses = Reference(Primaerdiagnose)
 * status = #completed
 * intent = #plan
 * category.coding = $mii-cs-onko-therapieplanung-typ#postop "Posttherapeutische Tumorkonferenz" 
@@ -248,7 +264,8 @@ Bioprobe_1 -up->SurgicalProcedure_1
 Pathobericht_1 -----up->SurgicalProcedure_1
 
 object Verlauf_21_10_25 #22FF22 {
-    * subject = Reference(PatientKimMusterperson)
+* subject = Reference(PatientKimMusterperson)
+* focus = Reference(Primaerdiagnose)
 * status = #final
 * effectiveDateTime = 2021-10-25
 * code.coding = $mii-cs-onko-verlauf-gesamtbeurteilung#V "Vollremission" // 26 Tage postop, aber sehr unsicher weil Neoadjuvanter progress
@@ -263,6 +280,7 @@ Verlauf_21_10_25 <-- SurgicalProcedure_1
 
 object SystemicTherapy_2  #AAAAFF {
 * subject = Reference(PatientKimMusterperson)
+* reasonReference = Reference(Primaerdiagnose)
 * status = #completed
 * code.coding = $OPS#8-54 "Chemotherapie " // bei Bedarf spezifischer? 
 * extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K // impliziert 
@@ -274,6 +292,7 @@ SystemicTherapy_2 -up-> Tumorboard_3
 
 object SystemicTherapyMedication_2 #FFCCFF {
 * subject = Reference(PatientKimMusterperson)
+* reasonReference = Reference(Primaerdiagnose)
 * status = #completed
 * effectivePeriod.start = 2021-11-08  
 * effectivePeriod.end = 2022-01-09
@@ -287,6 +306,7 @@ SystemicTherapyMedication_2 -up-> SystemicTherapy_2
 
 object Verlauf_22_01_22 #22FF22 {
 * subject = Reference(PatientKimMusterperson)
+* focus = Reference(Primaerdiagnose)
 * status = #final
 * effectiveDateTime = 2022-01-22
 * code.coding = $mii-cs-onko-verlauf-gesamtbeurteilung#V "Vollremission" 
@@ -299,8 +319,9 @@ Tumorboard_3 -right->Verlauf_22_01_22
 
 
 object GenetischeVariante_1 #22FF22 {
-* status = #final
 * subject = Reference(PatientKimMusterperson)
+* focus = Reference(Primaerdiagnose)
+* status = #final
 * note.text = "BRCAwt"
 * interpretation = $mii-cs-onko-genetische-variante-auspraegung#W "Wildtyp"
 }
@@ -308,6 +329,7 @@ GenetischeVariante_1 -up--> Tumorboard_3
 
 object Tumorboard_4 #CCCCFF {
 * subject = Reference(PatientKimMusterperson)
+* addresses = Reference(Primaerdiagnose)
 * status = #active
 * intent = #plan
 * category.coding = $mii-cs-onko-therapieplanung-typ#postop "postoperativ Tumorkonferenz" 
@@ -323,8 +345,9 @@ object Tumorboard_4 #CCCCFF {
 Verlauf_22_01_22 -right->Tumorboard_4
 object SystemicTherapy_3 #AAAAFF {
 * subject = Reference(PatientKimMusterperson)
+* focus = Reference(Primaerdiagnose)
 * status = #active
-* code.coding = $OPS#8-54 "Chemotherapie " // bei Bedarf spezifischer? 
+* code.coding = $OPS#8-54 "Chemotherapie " 
 * extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K 
 * extension[Stellung].valueCodeableConcept = $mii-cs-onko-systemische-therapie-stellung#A "adjuvant"
 * performedPeriod.start = 2021-11-15
@@ -332,6 +355,7 @@ object SystemicTherapy_3 #AAAAFF {
 
 object SystemicTherapyMedication_3 #FFCCFF {
 * subject = Reference(PatientKimMusterperson)
+* reasonReference = Reference(Primaerdiagnose)
 * status = #active
 * effectivePeriod.start = 2022-01-25  
 * medicationCodeableConcept.coding[atcClassDe][0] = $ATC_DE#L01XK02  "Niraparib"
@@ -344,22 +368,13 @@ SystemicTherapyMedication_3 -up-> SystemicTherapy_3
 
 
 object Primaerdiagnose_final #FFFF66 {
-* recordedDate = 2021-10-25 // geupdated auf Verlaufsdatum mit Diagnose
+* recordedDate = 2021-10-25 
 * subject = Reference(PatientKimMusterperson)
-* clinicalStatus = #remission // 
-* verificationStatus.coding[primaertumorDiagnosesicherung].code = #7.1 "histologische Untersuchung eines Primärtumors" // update von "klinische Diagnostik"
-* code.coding[0]  = $ICD10GM#C56   // update von #C48.2 "Bösartige Neubildung des Retroperitoneums und Peritoneums - Peritoneum, nicht näher bezeichnet "
-* code.coding[1]  = $ICDO3#M_8441_3 "Seröses Adenokarzinom" // in erster Diagnose noch nicht bestimmt
+* clinicalStatus = #remission 
+* verificationStatus.coding[primaertumorDiagnosesicherung].code = #7.1 "histologische Untersuchung eines Primärtumors" 
+* code.coding[0]  = $ICD10GM#C56   
+* code.coding[1]  = $ICDO3#M_8441_3 "Seröses Adenokarzinom" 
 * bodySite = $ICDO3#C56.9 "Ovar o.n.A."
-* staging[0].assessment = Reference(Verlauf_21_09_15)
-* staging[1].assessment = Reference(TNM_Klassifikation_2)
-* staging[2].assessment = Reference(FIGO_Observation_2)
-* staging[3].assessment = Reference(Verlauf_21_10_25)
-* staging[4].assessment = Reference(Verlauf_2_01_22)
-* evidence[0].detail = Reference(DiagnosticProcedure_1)
-* evidence[1].detail = Reference(DiagnosticProcedure_2)
-* evidence[2].detail = Reference(DiagnosticProcedure_3) 
-* evidence[3].detail = Reference(GenetischeVariante_1)
 }
 
 legend right 

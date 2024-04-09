@@ -1,6 +1,6 @@
 @startuml MII KDS Erweiterungsmodul Onkologie
-object MII_Prozedur_2024 #AAAAFF
-Map Onko_Operation #AAAAFF{
+object MII_Prozedur_2024 #9999FF
+Map Onko_Operation #9999FF{
 13.1 Intention der Operation => Procedure. extension[Intention].valueCodeableConcept.coding.code
 13.2 OP Datum => Procedure.performedDateTime
 13.3 OPS => Procedure.code.coding.code 
@@ -8,7 +8,7 @@ Map Onko_Operation #AAAAFF{
 13.5 OP Komplikationen => Procedure.complication
 10.1 Lokaler Resektionsstatus => Procedure.outcome
 }
-Map Onko_Strahlentherapie #AAAAFF{
+Map Onko_Strahlentherapie #9999FF{
 14.1 Intention der Strahlentherapie => Procedure.extension[Intention].valueCodeableConcept.coding.code
 14.2 Strahlentherapie Stellung zu operativer Therapie => Procedure.extension[Stellung].ValueCodeableConcept.coding.code
 
@@ -17,7 +17,7 @@ Map Onko_Strahlentherapie #AAAAFF{
 14.13 Strahlentherapie Ende Grund => Procedure.outcome
 }
 
-Map Onko_Strahlentherapie_Behandlungsabschnitt #AAAAFF{
+Map Onko_Strahlentherapie_Behandlungsabschnitt #9999FF{
 14.3 Strahlentherapie Zielgebiet => Procedure.extension[Behandlungsabschnitt].extension[Zielgebiet].codeableConcept.code
 14.4 Strahlentherapie Seite Zielgebiet => Procedure.extension[Behandlungsabschnitt].extension[Zielgebiet_Lateralität].codeableConcept.code
 14.7 Strahlentherapie Applikationsart => Procedure.extension[Behandlungsabschnitt].extension[Applikationsart].codeableConcept.code
@@ -30,7 +30,7 @@ Map Onko_Strahlentherapie_Behandlungsabschnitt #AAAAFF{
 
 Onko_Strahlentherapie "Extension   " o-- Onko_Strahlentherapie_Behandlungsabschnitt
 
-Map Onko_SystemischeTherapie #AAAAFF{
+Map Onko_SystemischeTherapie #9999FF{
 16.1 Intention der systemischen Therapie => Procedure.extension[Intention].codeableConcept.coding.code
 16.2 Systemische Therapie Stellung zu operativer Therapie => Procedure.extension[Stellung].codeableConcept.coding.code
 16.3 Art der systemischen oder abwartenden Therapie => Procedure.code[oBDS]
@@ -41,14 +41,14 @@ Map Onko_SystemischeTherapie #AAAAFF{
 16.8 Systemische Therapie Ende => Procedure.performedPeriod.end
 }
 
-Map Onko_Medikation #FFAAFF{
+Map Onko_Medikation #FFCCFF{
 
 16.4 Systemische Therapie Protokoll => MedicationStatement.note
 
 16.5 Systemische Therapie Substanz => MedicationStatement.medication.medicationCodeableConcept.atcClassDe
 
 }
-object MII_MedicationStatement #FFAAFF
+object MII_MedicationStatement #FFCCFF
 MII_MedicationStatement <|-- Onko_Medikation
 Onko_SystemischeTherapie o-- Onko_Medikation
 
@@ -69,4 +69,16 @@ R4_AdverseEvent <|--- Onko_Nebenwirkung
 Onko_Strahlentherapie o-- Onko_Nebenwirkung
 Onko_SystemischeTherapie o-- Onko_Nebenwirkung
 
+legend right 
+|Color|Type|
+|<#FFFF66>|Condition|
+|<#CCCCFF>|CarePlan|
+|<#9999FF>|Procedure|
+|<#DDFFDD>|ServiceRequest|
+|<#88FF88>|DiagnosticReport|
+|<#22FF22>|Observation|
+|<#FFCCFF>|Medication|
+|<#FF9999>|AdverseEvent|
+|<#44FFFF>|Specimen|
+endlegend
 @enduml

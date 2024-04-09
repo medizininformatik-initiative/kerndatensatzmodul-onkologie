@@ -1,7 +1,7 @@
-@startuml MII KDS Erweiterungsmodul Onkologie
-object MII_Diagnose #AAFFAA
-Map 05_Diagnose #AAFFAA {
- 05.1 Primaertumor Tumordiagnose ICD Code => Condition.code.coding[icd10-gm].code
+@startuml MII_Onko_05_Diagnosis
+object MII_Diagnose #FFFF66
+Map 05_Diagnose #FFFF66 {
+ 05.1 Primärtumor Tumordiagnose ICD Code => Condition.code.coding[icd10-gm].code
  05.2 Primärtumor Tumordiagnose ICD-Version => Condition.code.coding[icd10-gm].version
  05.3 Primärtumor Tumordiagnose Text => Condition.code.text
  05.4 Primärtumor Topographie ICD O => Condition.bodySite.coding[icd-o-3].code
@@ -15,8 +15,20 @@ Map 05_Diagnose #AAFFAA {
  06.5 Morphologie-Freitext => Condition.code.text
 } 
 
-MII_Diagnose <|-down- 05_Diagnose
+MII_Diagnose <|-down-- 05_Diagnose
 
+legend right 
+|Color|Type|
+|<#FFFF66>|Condition|
+|<#CCCCFF>|CarePlan|
+|<#9999FF>|Procedure|
+|<#DDFFDD>|ServiceRequest|
+|<#88FF88>|DiagnosticReport|
+|<#22FF22>|Observation|
+|<#FFCCFF>|Medication|
+|<#FF9999>|AdverseEvent|
+|<#44FFFF>|Specimen|
+endlegend
 
 
 

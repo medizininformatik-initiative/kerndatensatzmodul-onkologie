@@ -1,4 +1,4 @@
-@startuml MII KDS Erweiterungsmodul Onkologie
+@startuml MII_Onko_06_Histologie
 
 object R4_Observation #AAFFAA
 
@@ -10,7 +10,7 @@ R4_Observation <|-down- NrUntersuchteLymphknoten
 
 Map NrBefalleneLymphknoten #AAFFAA {
 6.8 Anzahl bef. Lymphkn. => Observation.valueQuantity.value
-}plant
+}
 R4_Observation <|-down-- NrBefalleneLymphknoten
 
 
@@ -35,6 +35,8 @@ R4_Observation <|-- Onko_Grading
 Map Onko_Befund #AAFFAA{
 6.11 Befund => DiagnosticReport.conclusion
 }
+
+ 
 object R4_DiagnosticReport #AAFFAA
 R4_DiagnosticReport <|-- Onko_Befund 
 
@@ -43,7 +45,20 @@ Map Onko_Specimen #AAFFAA {
 6.2 Histologie-Einsendenummer => Specimen.identifier.value
 }
 object R4_Specimen #AAFFAA
-R4_Specimen <|--- Onko_Specimen
+R4_Specimen <|---- Onko_Specimen
+
+legend right 
+|Color|Type|
+|<#FFFF66>|Condition|
+|<#CCCCFF>|CarePlan|
+|<#9999FF>|Procedure|
+|<#DDFFDD>|ServiceRequest|
+|<#88FF88>|DiagnosticReport|
+|<#22FF22>|Observation|
+|<#FFCCFF>|Medication|
+|<#FF9999>|AdverseEvent|
+|<#44FFFF>|Specimen|
+endlegend
 
 
 
