@@ -130,6 +130,8 @@
 [MII-CM-Onko-Primaertumor-Diagnosesicherung-SCT-Mapping]: ConceptMap-MII-CM-Onko-Primaertumor-Diagnosesicherung-SCT-Mapping.html
 [MII-CM-Onko-Primaertumor-SCT-Mapping]: ConceptMap-MII-CM-Onko-Primaertumor-SCT-Mapping.html
 [MII-CM-Onko-Seitenlokalisation-SCT-Mapping]: ConceptMap-MII-CM-Onko-Seitenlokalisation-SCT-Mapping.html
+[MII-CM-Onko-Therapie-Typ-SCT-Mapping]: ConceptMap-MII-CM-Onko-Therapie-Typ-SCT-Mapping.html
+[MII-CM-Onko-Therapieabweichung-SCT-Mapping]: ConceptMap-MII-CM-Onko-Therapieabweichung-SCT-Mapping.html
 [mii-cm-onko-tnm-uicc-snomed]: ConceptMap-mii-cm-onko-tnm-uicc-snomed.html
 [MII-CM-Onko-Verlauf-Fernmetastasen-SCT-Mapping]: ConceptMap-MII-CM-Onko-Verlauf-Fernmetastasen-SCT-Mapping.html
 [MII-CM-Onko-Verlauf-Primaertumor-SCT-Mapping]: ConceptMap-MII-CM-Onko-Verlauf-Primaertumor-SCT-Mapping.html
