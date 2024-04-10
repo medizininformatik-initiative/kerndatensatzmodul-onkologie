@@ -7,7 +7,7 @@ Usage: #definition
 * status = #draft
 * experimental = false
 * date = "2024-04-10"
-* description = "Mapping Primärtumor Codes zu SNOMED-CT"
+* description = "Mapping Seitenlokalisation Codes zu SNOMED-CT"
 * purpose = "Technical mapping to transform oBDS-Data into SNOMED"
 * sourceUri = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/"
 * targetUri[+] = "http://snomed.info/sct"
