@@ -64,6 +64,7 @@
           {
             "code": "Reference",
             "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz",
               "http://hl7.org/fhir/StructureDefinition/CarePlan"
             ]
           }
@@ -132,6 +133,20 @@
       {
         "id": "DiagnosticReport.encounter",
         "path": "DiagnosticReport.encounter",
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.specimen",
+        "path": "DiagnosticReport.specimen",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-specimen",
+              "http://hl7.org/fhir/StructureDefinition/Specimen"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
