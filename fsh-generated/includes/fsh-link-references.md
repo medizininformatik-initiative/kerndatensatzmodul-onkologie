@@ -129,7 +129,6 @@
 [MII-CM-Onko-Nebenwirkung-SCT-Mapping]: ConceptMap-MII-CM-Onko-Nebenwirkung-SCT-Mapping.html
 [MII-CM-Onko-Operation-Komplikation-SCT-Mapping]: ConceptMap-MII-CM-Onko-Operation-Komplikation-SCT-Mapping.html
 [MII-CM-Onko-Primaertumor-Diagnosesicherung-SCT-Mapping]: ConceptMap-MII-CM-Onko-Primaertumor-Diagnosesicherung-SCT-Mapping.html
-[MII-CM-Onko-Primaertumor-SCT-Mapping]: ConceptMap-MII-CM-Onko-Primaertumor-SCT-Mapping.html
 [MII-CM-Onko-Seitenlokalisation-SCT-Mapping]: ConceptMap-MII-CM-Onko-Seitenlokalisation-SCT-Mapping.html
 [MII-CM-Onko-Therapie-Typ-SCT-Mapping]: ConceptMap-MII-CM-Onko-Therapie-Typ-SCT-Mapping.html
 [MII-CM-Onko-Therapieabweichung-SCT-Mapping]: ConceptMap-MII-CM-Onko-Therapieabweichung-SCT-Mapping.html
