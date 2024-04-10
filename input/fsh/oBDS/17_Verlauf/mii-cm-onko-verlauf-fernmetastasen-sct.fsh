@@ -19,7 +19,7 @@ Usage: #definition
 * group[=].element[=].target.code = #261985008
 * group[=].element[=].target.display = "No metastases (tumor staging)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Qualifier value for "verlauf Fernmetastasen""
+* group[=].element[=].target.comment = "Qualifier value for 'verlauf Fernmetastasen'"
 
 // Wert von equivalence muss noch überprüft werden
 * group[=].element[+].code = #R
@@ -27,50 +27,50 @@ Usage: #definition
 * group[=].element[=].target.code = #7147002
 * group[=].element[=].target.display = "New (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Qualifier value for "verlauf Fernmetastasen""
+* group[=].element[=].target.comment = "Qualifier value for 'verlauf Fernmetastasen'"
 * group[=].element[+].target.code = #263855007
 * group[=].element[=].target.display = "Relapse phase (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Qualifier value for "verlauf Fernmetastasen""
+* group[=].element[=].target.comment = "Qualifier value for 'verlauf Fernmetastasen'"
 
 * group[=].element[+].code = #T
 * group[=].element[=].display = "Fernmetastasen Residuen"
 * group[=].element[=].target.code = #65320000
 * group[=].element[=].target.display = "Residual (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Qualifier value for "verlauf Fernmetastasen""
+* group[=].element[=].target.comment = "Qualifier value for 'verlauf Fernmetastasen'"
 
 * group[=].element[+].code = #P
 * group[=].element[=].display = "Fernmetastasen Progress"
 * group[=].element[=].target.code = #255314001
 * group[=].element[=].target.display = "Progressive (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Qualifier value for "verlauf Fernmetastasen""
+* group[=].element[=].target.comment = "Qualifier value for 'verlauf Fernmetastasen'"
 
 * group[=].element[+].code = #N
 * group[=].element[=].display = "Fernmetastasen No Change"
 * group[=].element[=].target.code = #260388006
 * group[=].element[=].target.display = "No status change (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Qualifier value for "verlauf Fernmetastasen""
+* group[=].element[=].target.comment = "Qualifier value for 'verlauf Fernmetastasen'"
 
 * group[=].element[+].code = #F
 * group[=].element[=].display = "fraglicher Befund"
 * group[=].element[=].target.code = #64957009
 * group[=].element[=].target.display = "Uncertain (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Qualifier value for "verlauf Fernmetastasen""
+* group[=].element[=].target.comment = "Qualifier value for 'verlauf Fernmetastasen'"
 
 * group[=].element[+].code = #U
 * group[=].element[=].display = "unbekannt"
 * group[=].element[=].target.code = #261665006
 * group[=].element[=].target.display = "Unknown (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Qualifier value for "verlauf Fernmetastasen""
+* group[=].element[=].target.comment = "Qualifier value for 'verlauf Fernmetastasen'"
 
 * group[=].element[+].code = #X
 * group[=].element[=].display = "fehlende Angabe"
 * group[=].element[=].target.code = #1287211007
 * group[=].element[=].target.display = " No information available (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Qualifier value for "verlauf Fernmetastasen""
+* group[=].element[=].target.comment = "Qualifier value for 'verlauf Fernmetastasen'"
