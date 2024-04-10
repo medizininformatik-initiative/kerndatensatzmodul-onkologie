@@ -19,28 +19,28 @@ Usage: #definition
 * group[=].element[=].target.code = #550991000124107
 * group[=].element[=].target.display = "Malignant neoplasm in full remission (disorder)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Qualifier value for "verlauf Fernmetastasen""
+* group[=].element[=].target.comment = "Gesamtbeurteilung des Tumorstatus"
 
 * group[=].element[+].code = #T
 * group[=].element[=].display = "Teilremission (partial remission, PR)"
 * group[=].element[=].target.code = #551001000124108
 * group[=].element[=].target.display = "Malignant neoplasm in partial remission (disorder)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Qualifier value for "verlauf Fernmetastasen""
+* group[=].element[=].target.comment = "Gesamtbeurteilung des Tumorstatus"
 
 * group[=].element[+].code = #K
 * group[=].element[=].display = "keine Änderung (no change, NC) = stable disease"
 * group[=].element[=].target.code = #260388006
 * group[=].element[=].target.display = "No status change (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Qualifier value for "verlauf Fernmetastasen""
+* group[=].element[=].target.comment = "Gesamtbeurteilung des Tumorstatus"
 
 * group[=].element[+].code = #P
 * group[=].element[=].display = "Progression"
 * group[=].element[=].target.code = #419835002
 * group[=].element[=].target.display = "Tumor progression (finding)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Qualifier value for "verlauf Fernmetastasen""
+* group[=].element[=].target.comment = "Gesamtbeurteilung des Tumorstatus"
 
 // * #D "divergentes Geschehen"
 
@@ -49,32 +49,32 @@ Usage: #definition
 * group[=].element[=].target.code = #84190002
 * group[=].element[=].target.display = "Minimal therapeutic response (finding)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Qualifier value for "verlauf Fernmetastasen""
+* group[=].element[=].target.comment = "Gesamtbeurteilung des Tumorstatus"
 
 * group[=].element[+].code = #R
 * group[=].element[=].display = "Vollremission mit residualen Auffälligkeiten (CRr)"
 * group[=].element[=].target.code = #550991000124107
 * group[=].element[=].target.display = "Malignant neoplasm in full remission (disorder)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Qualifier value for "verlauf Fernmetastasen""
+* group[=].element[=].target.comment = "Gesamtbeurteilung des Tumorstatus"
 
 * group[=].element[+].code = #Y
 * group[=].element[=].display = "Rezidiv"
 * group[=].element[=].target.code = #1259237005
 * group[=].element[=].target.display = "Recurrent malignant neoplasm (disorder)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Qualifier value for "verlauf Fernmetastasen""
+* group[=].element[=].target.comment = "Gesamtbeurteilung des Tumorstatus"
 
 * group[=].element[+].code = #U
 * group[=].element[=].display = "Beurteilung unmöglich"
 * group[=].element[=].target.code = #385432009
 * group[=].element[=].target.display = "Not applicable (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Qualifier value for "verlauf Fernmetastasen""
+* group[=].element[=].target.comment = "Gesamtbeurteilung des Tumorstatus"
 
 * group[=].element[+].code = #X
 * group[=].element[=].display = "fehlende Angabe"
 * group[=].element[=].target.code = #1287211007
 * group[=].element[=].target.display = " No information available (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Qualifier value for "verlauf Fernmetastasen""
+* group[=].element[=].target.comment = "Gesamtbeurteilung des Tumorstatus"
