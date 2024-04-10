@@ -122,6 +122,8 @@
 [MII_VS_Onko_Verlauf_Gesamtbeurteilung]: ValueSet-mii-vs-onko-verlauf-gesamtbeurteilung.html
 [MII_VS_Onko_Verlauf_Lymphknoten]: ValueSet-mii-vs-onko-verlauf-lymphknoten.html
 [MII_VS_Onko_Verlauf_Primaertumor]: ValueSet-mii-vs-onko-verlauf-primaertumor.html
+[MII-CM-Onko-Intension-SCT-Mapping]: ConceptMap-MII-CM-Onko-Intension-SCT-Mapping.html
+[MII-CM-Onko-Operation-Komplikation-SCT-Mapping]: ConceptMap-MII-CM-Onko-Operation-Komplikation-SCT-Mapping.html
 [MII-CM-Onko-Primaertumor-Diagnosesicherung-SCT-Mapping]: ConceptMap-MII-CM-Onko-Primaertumor-Diagnosesicherung-SCT-Mapping.html
 [MII-CM-Onko-Primaertumor-SCT-Mapping]: ConceptMap-MII-CM-Onko-Primaertumor-SCT-Mapping.html
 [MII-CM-Onko-Seitenlokalisation-SCT-Mapping]: ConceptMap-MII-CM-Onko-Seitenlokalisation-SCT-Mapping.html
