@@ -1,50 +1,50 @@
 @startuml MII_Onko_06_Histologie
 
-object R4_Observation #AAFFAA
+object R4_Observation #22FF22
 
-Map  NrUntersuchteLymphknoten #AAFFAA {
+Map  NrUntersuchteLymphknoten #22FF22 {
     6.7 Anzahl unters. Lymphkn. => Observation.valueQuantity.value
 }
 
 R4_Observation <|-down- NrUntersuchteLymphknoten
 
-Map NrBefalleneLymphknoten #AAFFAA {
+Map NrBefalleneLymphknoten #22FF22 {
 6.8 Anzahl bef. Lymphkn. => Observation.valueQuantity.value
 }
 R4_Observation <|-down-- NrBefalleneLymphknoten
 
 
-Map NrUntersuchteSentinelLymphknoten  #AAFFAA{
+Map NrUntersuchteSentinelLymphknoten  #22FF22{
 6.9 Anzahl unters. Sent.-Lymphkn. => Observation.valueQuantity.value
 }
 
 R4_Observation <|-down--- NrUntersuchteSentinelLymphknoten
 
-Map NrBefalleneSentinelLymphknoten  #AAFFAA{
+Map NrBefalleneSentinelLymphknoten  #22FF22{
 6.10 Anzahl bef. Sent.-Lymphkn. => Observation.valueQuantity.value
 }
 R4_Observation <|-down-- NrBefalleneSentinelLymphknoten
 
 
 
-Map Onko_Grading #AAFFAA {
+Map Onko_Grading #22FF22 {
 6.6 Grading =>Observation.valueCodeableConcept.coding.code
 }
 R4_Observation <|-- Onko_Grading
 
-Map Onko_Befund #AAFFAA{
+Map Onko_Befund #88FF88{
 6.11 Befund => DiagnosticReport.conclusion
 }
 
  
-object R4_DiagnosticReport #AAFFAA
+object R4_DiagnosticReport #88FF88
 R4_DiagnosticReport <|-- Onko_Befund 
 
-Map Onko_Specimen #AAFFAA {
+Map Onko_Specimen #44FFFF {
 6.1 Tumor Histologiedatum => Specimen.collection.collectedDateTime
 6.2 Histologie-Einsendenummer => Specimen.identifier.value
 }
-object R4_Specimen #AAFFAA
+object R4_Specimen #44FFFF
 R4_Specimen <|---- Onko_Specimen
 
 legend right 

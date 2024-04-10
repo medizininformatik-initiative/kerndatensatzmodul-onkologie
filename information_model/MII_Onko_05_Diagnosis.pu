@@ -15,7 +15,13 @@ Map 05_Diagnose #FFFF66 {
  06.5 Morphologie-Freitext => Condition.code.text
 } 
 
-MII_Diagnose <|-down-- 05_Diagnose
+MII_Diagnose <|-down- 05_Diagnose
+object R4_List
+object Evidenz_Primärdiagnose {
+    + enthält Referenzen auf alle Beobachtungen, die zum Zeitpunkt der Diagnosestellung bekannt sind
+    + soll aus Diagnosemeldung befüllt werden
+}
+R4_List <|---- Evidenz_Primärdiagnose
 
 legend right 
 |Color|Type|
@@ -28,6 +34,7 @@ legend right
 |<#FFCCFF>|Medication|
 |<#FF9999>|AdverseEvent|
 |<#44FFFF>|Specimen|
+|<#EEEEEE>|List|
 endlegend
 
 

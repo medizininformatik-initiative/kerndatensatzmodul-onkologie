@@ -1,0 +1,99 @@
+//skinparam linetype polyline 
+//skinparam linetype ortho
+@startuml MII_Onko_UML_Relations_v2
+skinparam linetype polyline
+object Onko_OP #9999FF
+object Onko_Strahlentherapie #9999FF
+object Onko_SystemischeTherapie #9999FF
+object Therapieplanung_Tumorkonferenz #CCCCFF
+
+
+Therapieplanung_Tumorkonferenz <-- Onko_OP: basedOn 
+Therapieplanung_Tumorkonferenz <-- Onko_Strahlentherapie: basedOn
+Therapieplanung_Tumorkonferenz <-- Onko_SystemischeTherapie: basedOn
+rectangle "Modul Medikation" {
+    object Medikation #FFCCFF
+}
+Onko_SystemischeTherapie <--- Medikation : partOf 
+Therapieplanung_Tumorkonferenz <--- Medikation: basedOn
+object PrimaerDiagnose #FFFF66
+
+rectangle "Onkologie Observations"{
+    object Onko_Variante #22FF22
+    object Fernmetastasen #22FF22
+    object TNM_Klassifikation #22FF22
+    object WeitereKlassifikation #22FF22 
+    object Lymphknotenuntersuchung #22FF22
+    object HistologieGrading #22FF22
+    object Residualstatus #22FF22
+    object ECOG #22FF22
+    object Tod #22FF22
+}
+
+PrimaerDiagnose <--- TNM_Klassifikation: focus
+PrimaerDiagnose <---  Therapieplanung_Tumorkonferenz : addresses
+PrimaerDiagnose <--- Lymphknotenuntersuchung: focus
+PrimaerDiagnose <--- HistologieGrading :focus
+PrimaerDiagnose <--- Onko_Variante :focus
+PrimaerDiagnose <--- WeitereKlassifikation: focus
+PrimaerDiagnose <--- ECOG :focus
+PrimaerDiagnose <--- Fernmetastasen :focus
+
+Therapieplanung_Tumorkonferenz <--- Onko_Befund  : basedOn
+
+object Verlauf #22FF22
+PrimaerDiagnose <----  Verlauf : focus
+Verlauf <--- Tod: derivedFrom
+Verlauf <--- TNM_Klassifikation:  derivedFrom
+Verlauf <---  Lymphknotenuntersuchung : derivedFrom
+Verlauf <---  HistologieGrading : derivedFrom
+Verlauf <--- Fernmetastasen: derivedFrom
+Verlauf <--- Residualstatus:  derivedFrom
+Verlauf <--- Onko_Variante: derivedFrom
+
+rectangle "Modul Pathologiebefund" {
+    object MII_PathoAnforderung #DDFFDD
+    object MII_PathoBefund #88FF88
+}
+MII_PathoBefund <-- MII_PathoAnforderung : request
+
+
+rectangle "Modul MolGen-Befundbericht" {
+    object MII_MolGenAnforderung #DDFFDD
+    object MII_MolGenBefund #88FF88
+}
+MII_MolGenBefund <-- MII_MolGenAnforderung: request
+
+rectangle "Modul Biobank" {
+    object MII_Bioprobe #44FFFF
+}
+
+
+
+MII_MolGenBefund ....> Onko_Variante: result[variant]
+MII_PathoAnforderung  ....> PrimaerDiagnose : reasonReference
+MII_MolGenAnforderung ....> PrimaerDiagnose: reasonReference
+MII_PathoAnforderung ...> MII_Bioprobe: specimen
+MII_PathoAnforderung <... MII_Bioprobe: request
+MII_MolGenAnforderung ...> MII_Bioprobe: specimen
+MII_MolGenAnforderung <... MII_Bioprobe: request
+
+object AdverseEvent #FF9999
+Onko_SystemischeTherapie <--- AdverseEvent: suspectEntity.instance
+Onko_Strahlentherapie <--- AdverseEvent: suspectEntity.instance
+
+legend right 
+|Color|Type|
+|<#FFFF66>|Condition|
+|<#CCCCFF>|CarePlan|
+|<#9999FF>|Procedure|
+|<#DDFFDD>|ServiceRequest|
+|<#88FF88>|DiagnosticReport|
+|<#22FF22>|Observation|
+|<#FFCCFF>|Medication|
+|<#FF9999>|AdverseEvent|
+|<#44FFFF>|Specimen|
+endlegend
+
+
+@enduml

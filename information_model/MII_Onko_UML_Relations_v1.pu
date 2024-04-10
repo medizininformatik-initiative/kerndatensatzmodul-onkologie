@@ -1,29 +1,23 @@
 //skinparam linetype polyline 
 //skinparam linetype ortho
-@startuml MII KDS Erweiterungsmodul Onkologie
+@startuml MII_Onko_UML_Relations_v1
 skinparam linetype polyline
 object Onko_OP #9999FF
 object Onko_Strahlentherapie #9999FF
 object Onko_SystemischeTherapie #9999FF
 object Therapieplanung_Tumorkonferenz #CCCCFF
-note left of Therapieplanung_Tumorkonferenz 
-  Für den Fall, dass eine Prozedur keinem 
-  CarePlan zugeordnet werden kann,
-  referenzieren alle Prozeduren die 
-  Primärdiagnose über Procedure.reasonReference
-end note
 
 Therapieplanung_Tumorkonferenz <-- Onko_OP: basedOn 
 Therapieplanung_Tumorkonferenz <-- Onko_Strahlentherapie: basedOn
 Therapieplanung_Tumorkonferenz <-- Onko_SystemischeTherapie: basedOn
-package "Medikation" {
+rectangle "Medikation" {
     object Medikation #FFCCFF
 }
 Onko_SystemischeTherapie <--- Medikation : partOf 
 Therapieplanung_Tumorkonferenz <--- Medikation: basedOn
 object PrimaerDiagnose #FFFF66
 
-package "Onkologie Observations"{
+rectangle "Onkologie Observations"{
     object Onko_Variante #22FF22
     object Fernmetastasen #22FF22
     object TNM_Klassifikation #22FF22
@@ -38,7 +32,7 @@ package "Onkologie Observations"{
 }
 
 PrimaerDiagnose <--- TNM_Klassifikation: focus
-PrimaerDiagnose <---  Therapieplanung_Tumorkonferenz : addresses
+PrimaerDiagnose <-right--  Therapieplanung_Tumorkonferenz : addresses
 PrimaerDiagnose <--- Lymphknotenuntersuchung: focus
 PrimaerDiagnose <--- HistologieGrading :focus
 PrimaerDiagnose <--- Onko_Variante :focus
@@ -46,7 +40,7 @@ PrimaerDiagnose <--- WeitereKlassifikation: focus
 PrimaerDiagnose <--- ECOG :focus
 PrimaerDiagnose <--- Fernmetastasen :focus
 
-Therapieplanung_Tumorkonferenz <--- Onko_Befund  : basedOn
+Therapieplanung_Tumorkonferenz <-right-- Onko_Befund  : basedOn
 
 object Verlauf #22FF22
 PrimaerDiagnose <----  Verlauf : focus
@@ -58,30 +52,11 @@ Verlauf <--- Fernmetastasen: derivedFrom
 Verlauf <--- Residualstatus:  derivedFrom
 Verlauf <--- Onko_Variante: derivedFrom
 
-package "Pathologiebefund" {
-    object PathoAnforderung #DDFFDD
-    object PathoBefund #88FF88
-}
-PathoBefund <-- PathoAnforderung : request
 
 
-package "MolGen-Befundbericht" {
-    object MolGenAnforderung #DDFFDD
-    object MolGenBefund #88FF88
-}
-MolGenBefund <-- MolGenAnforderung: request
 
-package "Biobank" {
-    object Bioprobe #44FFFF
-}
-
-MolGenBefund ....> Onko_Variante: result[variant]
-PathoAnforderung  ....> PrimaerDiagnose : reasonReference
-MolGenAnforderung ....> PrimaerDiagnose: reasonReference
-PathoAnforderung ...> Bioprobe: specimen
-PathoAnforderung <... Bioprobe: request
-MolGenAnforderung ...> Bioprobe: specimen
-MolGenAnforderung <... Bioprobe: request
+object Onko_Bioprobe #44FFFF 
+Onko_Bioprobe <-- Onko_Befund : specimen
 
 object AdverseEvent #FF9999
 Onko_SystemischeTherapie <--- AdverseEvent: suspectEntity.instance
