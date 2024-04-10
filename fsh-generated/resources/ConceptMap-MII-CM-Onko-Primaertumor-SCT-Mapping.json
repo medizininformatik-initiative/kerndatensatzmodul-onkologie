@@ -1,0 +1,32 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "MII-CM-Onko-Primaertumor-SCT-Mapping",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-primaertumor-sct",
+  "name": "MII_CM_Onko_Primaertumor_SNOMED_Mapping",
+  "title": "MII CM Onko Primaertumor SNOMED Mapping",
+  "status": "draft",
+  "experimental": false,
+  "date": "2024-04-10",
+  "description": "Mapping Primärtumor Codes zu SNOMED-CT",
+  "purpose": "Technical mapping to transform oBDS-Data into SNOMED",
+  "sourceUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
+  "targetUri": "http://snomed.info/sct",
+  "group": [
+    {
+      "source": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+      "target": "http://snomed.info/sct",
+      "element": [
+        {
+          "target": [
+            {
+              "code": "372087000",
+              "display": "Primary malignant neoplasm (disorder)",
+              "equivalence": "wider",
+              "comment": "Primary malignant neoplasm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

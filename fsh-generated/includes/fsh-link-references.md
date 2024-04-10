@@ -122,6 +122,9 @@
 [MII_VS_Onko_Verlauf_Gesamtbeurteilung]: ValueSet-mii-vs-onko-verlauf-gesamtbeurteilung.html
 [MII_VS_Onko_Verlauf_Lymphknoten]: ValueSet-mii-vs-onko-verlauf-lymphknoten.html
 [MII_VS_Onko_Verlauf_Primaertumor]: ValueSet-mii-vs-onko-verlauf-primaertumor.html
+[MII-CM-Onko-Primaertumor-Diagnosesicherung-SCT-Mapping]: ConceptMap-MII-CM-Onko-Primaertumor-Diagnosesicherung-SCT-Mapping.html
+[MII-CM-Onko-Primaertumor-SCT-Mapping]: ConceptMap-MII-CM-Onko-Primaertumor-SCT-Mapping.html
+[MII-CM-Onko-Seitenlokalisation-SCT-Mapping]: ConceptMap-MII-CM-Onko-Seitenlokalisation-SCT-Mapping.html
 [mii-cm-onko-tnm-uicc-snomed]: ConceptMap-mii-cm-onko-tnm-uicc-snomed.html
 [mii-cps-onko-capabilitystatement]: CapabilityStatement-mii-cps-onko-capabilitystatement.html
 [mii-exa-onko-allgemeiner-leistungszustand-1]: Observation-mii-exa-onko-allgemeiner-leistungszustand-1.html
