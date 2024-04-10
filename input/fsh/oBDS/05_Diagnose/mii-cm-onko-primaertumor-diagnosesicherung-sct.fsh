@@ -18,6 +18,7 @@ Usage: #definition
 
 * group[=].element[0].code = #1
 * group[=].element[=].display = "klinisch"
+* group[=].element[=]
 * group[=].element[=].target.code = #373795004
 * group[=].element[=].target.display = "Cancer diagnosis based on clinical evidence (finding)"
 * group[=].element[=].target.equivalence = #equivalent
@@ -32,23 +33,23 @@ Usage: #definition
 * group[=].element[+].target.code = #363680008
 * group[=].element[=].target.display = "Radiographic imaging procedure (procedure)"
 * group[=].element[=].target.equivalence = #narrower
-* group[=].element[=].target.comment = "Diagnostic certainty for primary tumor"
+* group[=].element[=].target.comment = "Procedure: X-ray"
 * group[=].element[+].target.code = #423827005
 * group[=].element[=].target.display = "Endoscopy (procedure)"
 * group[=].element[=].target.equivalence = #narrower
-* group[=].element[=].target.comment = "Diagnostic certainty for primary tumor"
+* group[=].element[=].target.comment = "Procedure: Endoscopy"
 * group[=].element[+].target.code = #363679005
 * group[=].element[=].target.display = "Imaging (procedure)"
 * group[=].element[=].target.equivalence = #narrower
-* group[=].element[=].target.comment = "Diagnostic certainty for primary tumor"
+* group[=].element[=].target.comment = "Procedure: Imaging"
 * group[=].element[+].target.code = #16310003
 * group[=].element[=].target.display = "Ultrasonography (procedure)"
 * group[=].element[=].target.equivalence = #narrower
-* group[=].element[=].target.comment = "Diagnostic certainty for primary tumor"
+* group[=].element[=].target.comment = "Procedure: Ultrassound"
 * group[=].element[+].target.code = #122458006
 * group[=].element[=].target.display = "Exploration procedure (procedure)"
 * group[=].element[=].target.equivalence = #narrower
-* group[=].element[=].target.comment = "Diagnostic certainty for primary tumor"
+* group[=].element[=].target.comment = "Procedure: surgery"
 
 * group[=].element[0].code = #4
 * group[=].element[=].display = "spezifische Tumor-Marker"
