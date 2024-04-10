@@ -14,6 +14,7 @@ Usage: #definition
 * group[+].source = $ICD10GM
 * group[=].target = "http://snomed.info/sct"
 
+//unsicher ob es so überhaupt Sinn macht
 * group[=].element[+].target.code = #372087000
 * group[=].element[=].target.display = "Primary malignant neoplasm (disorder)"
 * group[=].element[=].target.equivalence = #wider
