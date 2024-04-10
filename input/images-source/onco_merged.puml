@@ -1,26 +1,21 @@
+//left to right direction
+
 @startuml
 skinparam linetype ortho
-left to right direction
-
-
-
-
-
-
-
-object Diagnose <<Condition>> #DodgerBlue {
+top to bottom direction
+object Diagnose #FFFF66 {
   Tumor_ID : String
   Primaertumor_ICD_Code : String
-  Primaertumor_ICD_Version : Catalog
+  Primaertumor_ICD_Version : Code
   Primaertumor_Diagnosetext : String
   Primaertumor_Topographie_ICD_O : String
-  Primaertumor_Topographie_ICD_O_Version : Catalog
+  Primaertumor_Topographie_ICD_O_Version : Code
   Primaertumor_Topographie_ICD_O_Freitext : String
   Primaertumor_Diagnosedatum : Date
-  Primaertumor_Diagnosesicherung : Catalog
-  Seitenlokalisation : Catalog
+  Primaertumor_Diagnosesicherung : Code
+  Seitenlokalisation : Code
   Fruehere_Tumorerkrankung_ICD_Code: String
-  Fruehere_Tumorerkrankung_ICD_Version: Catalog
+  Fruehere_Tumorerkrankung_ICD_Version: Code
   Fruehere_Tumorerkrankung_Freitext: String
   Fruehere_Tumorerkrankung_Diagnosedatum : Date
   Anmerkung : String
@@ -28,130 +23,99 @@ object Diagnose <<Condition>> #DodgerBlue {
 
 
 
-object Allgemeiner_Leistungszustand <<Observation>> #Coral {
-  Allgemeiner_Leistungszustand : Catalog
+object Allgemeiner_Leistungszustand  #22FF22 {
+  Allgemeiner_Leistungszustand : Code
 
 }
 
-object OP <<Procedure>> #LightCyan {
-  OP_ID : String
-  OP_Intention : Catalog
+object OP #9999FF {
+  OP_Intention : Code
   OP_Datum : String
-  OPS: Catalog
-  OPS_Version : Catalog
-  OP_Komplikation : Catalog
+  OPS: Code
+  OPS_Version : Code
+  OP_Komplikation : Code
   Anmerkung : String
 
 }
 
-object Strahlentherapie <<Procedure>> #LightCyan {
-  ST_ID : String
-  ST_Intention : Catalog
-  ST_Stellung_OP : Catalog
-  ST_Zielgebiet : Catalog
-  ST_Seite_Zielgebiet : Catalog
+object Strahlentherapie  #9999FF {
+  ST_Intention : Code
+  ST_Stellung_OP : Code
   ST_Beginn_Datum : Date
   ST_Ende_Datum : Date
-  ST_Applikationsart : Catalog
-  Strahlenart : Catalog
+  ST_Ende_Grund : Code
+  Anmerkung : String
+  
+}
+object Bestrahlung #9999FF {
+  ST_Zielgebiet : Code
+  ST_Seite_Zielgebiet : Code
+  ST_Applikationsart : Code
+  Strahlenart : Code
   ST_Gesamtdosis_Dosis : Float
   ST_Einzeldosis_pro_Tag_Dosis : Float
-  ST_Einheit : Catalog
-  Boost: Catalog
-  ST_Ende_Grund : Catalog
-  Anmerkung : String
-}
+  ST_Einheit : Code
+  Boost: Code
 
-object Lokale_Interventionelle_Therapie <<Procedure>> #LightCyan {
-LIT_Art/Methode : Catalog
-LIT_Intention : Catalog
-LIT_Stellung_OP : Catalog
-LIT_Lokalisation : Catalog
-LIT_Zahl_Laesionen : Integer
-LIT_Komplikationen : String
-LIT_Datum : Date
-LIT_Weitere_Details : String
-LIT_Anmerkungen : String
 }
 
 
-object Nebenwirkungen_von_Strahlentherapie_oder_systemischer_Therapie <<AdverseEvent>> #AliceBlue {
-  Nebenwirkungen_nach_CTCAE-Grad  : Catalog
+object Nebenwirkungen_Strahlentherapie_SystemischeTherapie  #FF9999 {
+  Nebenwirkungen_nach_CTCAE-Grad  : Code
   Nebenwirkungen_nach_CTCAE-Art  : String
-  Nebenwirkungen_nach_CTCAE-Version : Catalog
+  Nebenwirkungen_nach_CTCAE-Version : Code
 }
 
-object Systemische_Therapie <<Clinical>> #LightCyan {
-  Intention_der_systemischen_Therapie : Catalog
-  Systemische_Therapie_Stellung_zu_operativer_Therapie : Catalog
-  Art_der_systemischen_oder_abwartenden_Therapie : Catalog
-  Systemische_Therapie_Protokoll : Catalog
+object Systemische_Therapie  #9999FF {
+  Intention_der_systemischen_Therapie : Code
+  Systemische_Therapie_Stellung_zu_operativer_Therapie : Code
+  Art_der_systemischen_oder_abwartenden_Therapie : Code
+  Systemische_Therapie_Protokoll : Code
   Systemische_Therapie_Beginn : Date
   Systemische_Therapie_Substanz : String
-  Systemische_Therapie_Ende Grund : Catalog
+  Systemische_Therapie_Ende Grund : Code
   Systemische_Therapie_Ende : Date
 }
 
-object Verlauf <<Base>> #Bisque {
-  Verlauf_ID : String
+object Verlauf  #22FF22 {
   Untersuchungsdatum_Verlauf : String
-  Gesamtbeurteilung_Tumorstatus : Catalog
-  Verlauf_Lokaler_Tumorstatus : Catalog
-  Verlauf_Tumorstatus_Lymphknoten : Catalog
-  Verlauf_Tumorstatus_Fernmetastasen : Catalog
+  Gesamtbeurteilung_Tumorstatus : Code
+  Verlauf_Lokaler_Tumorstatus : Code
+  Verlauf_Tumorstatus_Lymphknoten : Code
+  Verlauf_Tumorstatus_Fernmetastasen : Code
   Anmerkung : String
 }
 
 
-object Tumorkonferenz_Therapieplanung <<CarePlan>> #Aqua {
-  Tumorkonferenz_ID : String
+object Tumorkonferenz_Therapieplanung #CCCCFF {
   Tumorkonferenz_Datum : String
-  Tumorkonferenz_Typ : Catalog
+  Tumorkonferenz_Typ : Code
   Anmerkung : String
 }
 
-object Therapieempfehlung <<CarePlan>> #Aqua {
-  Tumorkonferenz_Therapieempfehlung_Typ : Catalog
-  Tumorkonferenz/Therapieempfehlung_Therapieabweichung_auf_Wunsch_des_Patienten : Catalog
+object Therapieempfehlung #CCCCFF {
+  Tumorkonferenz_Therapieempfehlung_Typ : Code
+  Tumorkonferenz/Therapieempfehlung_Therapieabweichung_auf_Wunsch_des_Patienten : Code
 }
 
 
-object Verknüpfung_Person_Todesursache <<Link to other Module>> #HotPink {
+object Tod  #22FF22 {
   Sterbedatum : Date
-  Tod_tumorbedingt : Catalog
-  Todesursache_ICD_Version : Catalog
+  Tod_tumorbedingt : Code
+  Todesursache_ICD_Version : Code
   Todesursache_ICD : String
 }
 
-object Zusätzliche_Kontakte <<Encounter>> #HoneyDew {
-  Kontakt_Art : Catalog
-  Kontakt_Datum : Date
-  Kontakt_Status : Catalog
-}
-
-object Specimen <<Link to other Module>> #HotPink {
-
-  Identifikation : String
-  Ent-/Abnahmezeitpunkt : Date
-  Laboreingangszeitpunkt : Date
-  Probenart : Catalog
-  Körperstelle : Catalog
-  Kommentar : String
-  }
-
-  object Verknüpfung_Molpatho <<Link to other Module>> #HotPink{
-  ID Molpatho : String
-  }
 
 
-object Histologie <<Observation>> #Coral {
+object Histologie #22FF22 {
   Histologie_ID : String
   Tumor_Histologiedatum : String
   Histologie_EinsendeNr : String
   Morphologie_Code : String
-  Morphologie_ICD_O_Version : Catalog
+  Morphologie_ICD_O_Version : Code
   Morphologie_Freitext : String
-  Grading : Catalog
+  Grading : Cod
   Anzahl_der_untersuchten_Lymphknoten : Integer
   Anzahl_der_befallenen_Lymphknoten : Integer
   Anzahl_der_untersuchten_Sentinel-Lymphknoten : Integer
@@ -160,129 +124,68 @@ object Histologie <<Observation>> #Coral {
 }
 
 
-object TNM_Klassifikation <<Observation>> #Coral {
+object TNM_Klassifikation #22FF22 {
   TNM_ID : String
   TNM_Datum : String
-  TNM_Version : Catalog
-  TNM_y_Symbol : Catalog
-  TNM_r_Symbol : Catalog
-  TNM_a_Symbol : Catalog
-  TNM_c_p_u_Praefix_T : Catalog
-  TNM_T : Catalog
+  TNM_Version : Code
+  TNM_y_Symbol : Code
+  TNM_r_Symbol : Code
+  TNM_a_Symbol : Code
+  TNM_c_p_u_Praefix_T : Code
+  TNM_T : Code
   TNM_m_Symbol : String
-  TNM_c_p_u_Praefix_N : Catalog
-  TNM_N : Catalog
-  TNM_c_p_u_Praefix_M : Catalog
-  TNM_M : Catalog
-  TNM_L : Catalog
-  TNM_V : Catalog
-  TNM_Pn : Catalog
-  TNM_S : Catalog
-  UICC_Stadium : Catalog
+  TNM_c_p_u_Praefix_N : Code
+  TNM_N : Code
+  TNM_c_p_u_Praefix_M : Code
+  TNM_M : Code
+  TNM_L : Code
+  TNM_V : Code
+  TNM_Pn : Code
+  TNM_S : Code
+  UICC_Stadium : Code
 }
 
 
-object Weitere_Klassifikation <<Observation>> #Coral {
+object Weitere_Klassifikation  #22FF22 {
   Hämatoonkologische_und_sonstige_Klassifikationen_Datum : Date
   Hämatoonkologische_und_sonstige_Klassifikationen_Name : String
   Hämatoonkologische_und_sonstige_Klassifikationen_Einstufung  : String
 }
 
-object Residualstatus <<Observation>> #Coral {
-  Beurteilung_des_lokalen_Residualstatus_nach_Abschluss_der_Operation : Catalog
-  Gesamtbeurteilung_des_Residualstatus : Catalog
-}
-
-object Response <<Observation>> #Coral {
-  Response auf Therapie : Catalog
+object Residualstatus  #22FF22 {
+  Beurteilung_des_lokalen_Residualstatus_nach_Abschluss_der_Operation : Code
+  Gesamtbeurteilung_des_Residualstatus : Code
 }
 
 
-object Fernmetastasen <<Observation>> #Coral {
+object Fernmetastasen #22FF22 {
   Datum_der_diagnostischen_Sicherung_von_Fernmetastasen  : String
-  Lokalisation_von_Fernmetastase(n)  : Catalog
+  Lokalisation_von_Fernmetastase(n)  : Code
 
 }
 
-object Genetische_Variante <<Observation>> #Coral {
+object Genetische_Variante  #22FF22 {
 
   Genetische_Variante_Name : String
   Genetische_Variante_Ausprägung : String
 
 }
 
-object Specimen <<Link to other Module>> #HotPink {
+object Specimen  #44FFFF {
 
   Identifikation : String
   Ent-/Abnahmezeitpunkt : Date
   Laboreingangszeitpunkt : Date
-  Probenart : Catalog
-  Körperstelle : Catalog
+  Probenart : Code
+  Körperstelle : Code
   Kommentar : String
-
-}
-
-
-
-
-object Modul_Kolorektales_Karzinom <<Observation>> #Coral {
-  RektumAbstandAnokutanlinie : String
-  RektumAbstandAboralerResektionsrand : String
-  RektumAbstandCircResektionsebene : String
-  RektumQualitaetTME : Catalog
-  RektumMRTDuennschichtAngabemesorektaleFaszie : String
-  ArtEingriff : Catalog
-  RektumAnzeichnungStomaposition : Catalog
-  GradRektumAnastomoseninsuffizienz : Catalog
-  ASA : Catalog
-  RASMutation : Catalog
-  Datum_des_Sozialdienstkontaktes : Date
-  Studienteilnahme : Catalog
-
-
-}
-
-
-object Modul_Malignes_Melanom <<Observation>> #Coral {
-
-  Sicherheitsabstand_Primärtumor: Catalog
-  Tumordicke: Float
-  LDH: Integer
-  Ulzeration: Catalog
-}
-
-object Modul_Mammakarzinom <<Observation>> #Coral {
-  Praetherapeutischer_Menopausenstatus : Catalog
-  HormonrezeptorStatus_Oestrogen : Catalog
-  HormonrezeptorStatus_Progesteron : Catalog
-  Her2neuStatus : Catalog
-  PraeopDrahtmarkierung : Catalog
-  IntraopPraeparatkontrolle : Catalog
-  TumorgroesseInvasiv : String
-  TumorgroesseDCIS : String
-}
-
-object Modul_Prostatakarzinom <<Observation>> #Coral {
-  GleasonGradPrimaer : Catalog
-  GleasonGradSekundaer : Catalog
-  GleasonScoreErgebnis : Catalog
-  AnlassGleasonScore : Catalog
-  DatumStanzen : Date
-  AnzahlStanzen : Integer
-  AnzahlPosStanzen : Integer
-  Prozentzahl : Integer
-  U : Catalog
-  PSA : Float
-  DatumPSA : Date
-  KomplPostOP_ClavienDindo : Catalog
-
 }
 
 
 Therapieempfehlung "0..*" -- Tumorkonferenz_Therapieplanung
-Nebenwirkungen_von_Strahlentherapie_oder_systemischer_Therapie  "0..*" -- Strahlentherapie
-Nebenwirkungen_von_Strahlentherapie_oder_systemischer_Therapie  "0..*" -- Systemische_Therapie
-Verlauf "0..*" -- "1" Diagnose
+Nebenwirkungen_Strahlentherapie_SystemischeTherapie  "0..*" -- Strahlentherapie
+Nebenwirkungen_Strahlentherapie_SystemischeTherapie  "0..*" -- Systemische_Therapie
+Verlauf "0..*" ---- "1" Diagnose
 Allgemeiner_Leistungszustand "0..*" -- "1" Diagnose
 Allgemeiner_Leistungszustand "0..*" -- "1" Verlauf
 Specimen "0..*" -- "0..*" Verlauf
@@ -292,6 +195,7 @@ Specimen "0..*" -- "0..*" Histologie
 Specimen "0..*" -- "0..*" TNM_Klassifikation
 Strahlentherapie "0..*" -- "1" Diagnose
 Systemische_Therapie "0..*" -- "1" Diagnose
+Bestrahlung "0..*" -- "1" Strahlentherapie
 Histologie "0..*" -- "1" Diagnose
 Histologie "0..*" -- "1" Residualstatus
 TNM_Klassifikation "0..*" -- "1" Diagnose
@@ -299,26 +203,30 @@ TNM_Klassifikation "0..*" -- "1" OP
 OP "0..*" -- "1" Diagnose
 TNM_Klassifikation "0..*" -- "1" Verlauf
 Histologie "0..*" -- "1" OP
-Histologie "0..*" -- "1" Lokale_Interventionelle_Therapie
 Histologie "0..*" -- "1" Verlauf
 Weitere_Klassifikation "0..*" -- "1" Diagnose
 Weitere_Klassifikation "0..*" -- "1" Verlauf
 Fernmetastasen "0..*" -- "1" Diagnose
 Fernmetastasen "0..*" -- "1" Verlauf
-Verknüpfung_Person_Todesursache "0..1" -- "1" Verlauf
+Tod "0..1" -- "1" Verlauf
 Residualstatus "0..1" -- "1" OP
 Residualstatus "0..1" -- "1" Strahlentherapie
 Residualstatus "0..1" -- "1" Systemische_Therapie
-Response "0..1" -- "1" Strahlentherapie
-Response "0..1" -- "1" Systemische_Therapie
-Response "0..1" -- "1" OP
-Response "0..1" -- "1" Lokale_Interventionelle_Therapie
 Tumorkonferenz_Therapieplanung "0..1" -- "1" Diagnose
 Genetische_Variante "0..*" -- "1" Diagnose
-Modul_Kolorektales_Karzinom "0..1" -- "1" Diagnose
-Modul_Malignes_Melanom "0..1" -- "1" Diagnose
-Modul_Mammakarzinom "0..1" -- "1" Diagnose
-Modul_Prostatakarzinom "0..1" -- "1" Diagnose
-Lokale_Interventionelle_Therapie "0..*" -- "1" Diagnose
-Genetische_Variante "1" -- "0..*" Verknüpfung_Molpatho
+
+legend left
+
+|Color|Type|
+|<#FFFF66>|Condition|
+|<#CCCCFF>|CarePlan|
+|<#9999FF>|Procedure|
+|<#DDFFDD>|ServiceRequest|
+|<#88FF88>|DiagnosticReport|
+|<#22FF22>|Observation|
+|<#FFCCFF>|Medication|
+|<#FF9999>|AdverseEvent|
+|<#44FFFF>|Specimen|
+endlegend
+
 @enduml
