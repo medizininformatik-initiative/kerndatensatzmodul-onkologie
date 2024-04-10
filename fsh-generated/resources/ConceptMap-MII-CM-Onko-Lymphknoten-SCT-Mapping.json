@@ -1,0 +1,118 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "MII-CM-Onko-Lymphknoten-SCT-Mapping",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-lymphknoten-sct",
+  "name": "MII_CM_Onko_Lymphknoten_SNOMED_Mapping",
+  "title": "MII CM Onko Lymphknoten SNOMED Mapping",
+  "status": "draft",
+  "experimental": false,
+  "date": "2024-04-10",
+  "description": "Mapping Lymphknoten Codes zu SNOMED-CT",
+  "purpose": "Technical mapping to transform oBDS-Data into SNOMED",
+  "sourceUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
+  "targetUri": "http://snomed.info/sct",
+  "group": [
+    {
+      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-lymphknoten",
+      "target": "http://snomed.info/sct",
+      "element": [
+        {
+          "code": "K",
+          "display": "kein Lymphknotenbefall nachweisbar",
+          "target": [
+            {
+              "code": "399647000",
+              "display": "No regional lymph node metastasis (finding)",
+              "equivalence": "equivalent",
+              "comment": "Tumorstatus Lymphknoten"
+            }
+          ]
+        },
+        {
+          "code": "R",
+          "display": "neu aufgetretenes Lymphknotenrezidiv",
+          "target": [
+            {
+              "code": "263855007",
+              "display": "Relapse phase (qualifier value)",
+              "equivalence": "equivalent",
+              "comment": "Tumorstatus Lymphknoten"
+            }
+          ]
+        },
+        {
+          "code": "T",
+          "display": "bekannter Lymphknotenbefall Residuen",
+          "target": [
+            {
+              "code": "65320000",
+              "display": "Residual (qualifier value)",
+              "equivalence": "equivalent",
+              "comment": "Tumorstatus Lymphknoten"
+            }
+          ]
+        },
+        {
+          "code": "P",
+          "display": "bekannter Lymphknotenbefall Progress",
+          "target": [
+            {
+              "code": "255314001",
+              "display": "Progressive (qualifier value)",
+              "equivalence": "equivalent",
+              "comment": "Tumorstatus Lymphknoten"
+            }
+          ]
+        },
+        {
+          "code": "N",
+          "display": "bekannter Lymphknotenbefall No Change",
+          "target": [
+            {
+              "code": "260388006",
+              "display": "No status change (qualifier value)",
+              "equivalence": "equivalent",
+              "comment": "Tumorstatus Lymphknoten"
+            }
+          ]
+        },
+        {
+          "code": "F",
+          "display": "fraglicher Befund",
+          "target": [
+            {
+              "code": "64957009",
+              "display": "Uncertain (qualifier value)",
+              "equivalence": "equivalent",
+              "comment": "Tumorstatus Lymphknoten"
+            }
+          ]
+        },
+        {
+          "code": "U",
+          "display": "unbekannt",
+          "target": [
+            {
+              "code": "261665006",
+              "display": "Unknown (qualifier value)",
+              "equivalence": "equivalent",
+              "comment": "Tumorstatus Lymphknoten"
+            }
+          ]
+        },
+        {
+          "code": "X",
+          "display": "fehlende Angabe",
+          "target": [
+            {
+              "code": "1287211007",
+              "display": " No information available (qualifier value)",
+              "equivalence": "equivalent",
+              "comment": "Tumorstatus Lymphknoten"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
