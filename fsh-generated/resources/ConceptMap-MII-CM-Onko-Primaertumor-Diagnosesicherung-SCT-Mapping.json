@@ -17,8 +17,42 @@
       "target": "http://snomed.info/sct",
       "element": [
         {
-          "code": "9",
-          "display": "unbekannt",
+          "code": "7.2",
+          "display": "histologische Untersuchung einer Metastase",
+          "target": [
+            {
+              "code": "373799005",
+              "display": "Cancer diagnosis based on metastatic histological evidence (finding)",
+              "equivalence": "equivalent",
+              "comment": "Diagnostic certainty for primary tumor"
+            }
+          ]
+        },
+        {
+          "code": "7.3",
+          "display": "histologische Untersuchung eines Primärtumors",
+          "target": [
+            {
+              "code": "373800009",
+              "display": "Cancer diagnosis based on primary site histological evidence (finding)",
+              "equivalence": "unmatched",
+              "comment": "keine direktes Mapping möglich, ggfs. über Postkoordination"
+            }
+          ]
+        },
+        {
+          "target": [
+            {
+              "code": "394804000",
+              "display": "Clinical cytogenetics and molecular genetics (qualifier value)",
+              "equivalence": "equivalent",
+              "comment": "Diagnostic certainty for primary tumor"
+            }
+          ],
+          "code": "8",
+          "display": "Zytogenetisch und/oder molekularer Test"
+        },
+        {
           "target": [
             {
               "code": "261665006",
@@ -26,27 +60,9 @@
               "equivalence": "equivalent",
               "comment": "Diagnostic certainty for primary tumor"
             }
-          ]
-        },
-        {
-          "target": [
-            {
-              "code": "363680008",
-              "display": "Radiographic imaging procedure (procedure)",
-              "equivalence": "narrower",
-              "comment": "Procedure: X-ray"
-            }
-          ]
-        },
-        {
-          "target": [
-            {
-              "code": "423827005",
-              "display": "Endoscopy (procedure)",
-              "equivalence": "narrower",
-              "comment": "Procedure: Endoscopy"
-            }
-          ]
+          ],
+          "code": "9",
+          "display": "unbekannt"
         },
         {
           "target": [
@@ -75,6 +91,66 @@
               "display": "Exploration procedure (procedure)",
               "equivalence": "narrower",
               "comment": "Procedure: surgery"
+            }
+          ]
+        },
+        {
+          "code": "4",
+          "display": "spezifische Tumor-Marker",
+          "target": [
+            {
+              "code": "373797007",
+              "display": "Cancer diagnosis based on specific tumor markers (finding)",
+              "equivalence": "equivalent",
+              "comment": "Diagnostic certainty for primary tumor"
+            }
+          ]
+        },
+        {
+          "code": "5",
+          "display": "Zytologie",
+          "target": [
+            {
+              "code": "373798002",
+              "display": "Cancer diagnosis based on cytological evidence (finding)",
+              "equivalence": "equivalent",
+              "comment": "Diagnostic certainty for primary tumor"
+            }
+          ]
+        },
+        {
+          "code": "6",
+          "display": "histologische Untersuchung einer Metastase",
+          "target": [
+            {
+              "code": "373799005",
+              "display": "Cancer diagnosis based on metastatic histological evidence (finding)",
+              "equivalence": "equivalent",
+              "comment": "entspricht 7.3"
+            }
+          ]
+        },
+        {
+          "code": "7",
+          "display": "histologische Untersuchung eines Primärtumors",
+          "target": [
+            {
+              "code": "373800009",
+              "display": "Cancer diagnosis based on primary site histological evidence (finding)",
+              "equivalence": "equivalent",
+              "comment": "entspricht 7.1"
+            }
+          ]
+        },
+        {
+          "code": "7.1",
+          "display": "histologische Untersuchung eines Primärtumors",
+          "target": [
+            {
+              "code": "373800009",
+              "display": "Cancer diagnosis based on primary site histological evidence (finding)",
+              "equivalence": "equivalent",
+              "comment": "Diagnostic certainty for primary tumor"
             }
           ]
         }
