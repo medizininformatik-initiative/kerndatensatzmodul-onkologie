@@ -20,7 +20,7 @@ Usage: #definition
 * group[=].element[=].target.display = "Gray (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
 
-* group[=].element[+].code = #kBq
+* group[=].element[+].code = #GBq
 * group[=].element[=].display = "kBq"
 * group[=].element[=].target.code = #418931004
 * group[=].element[=].target.display = "Gigabecquerel (qualifier value)"
@@ -32,8 +32,8 @@ Usage: #definition
 * group[=].element[=].target.display = "Megabecquerel (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
 
-* group[=].element[+].code = #GBq
-* group[=].element[=].display = "GBq"
+* group[=].element[+].code = #kBq
+* group[=].element[=].display = "kBq"
 * group[=].element[=].target.code = #282143001
 * group[=].element[=].target.display = "Kilobecquerel (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
