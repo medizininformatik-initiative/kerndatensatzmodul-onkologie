@@ -317,7 +317,7 @@ Usage: #definition
 * name = "MII_SP_Onko_Genetische_Variante_Note"
 * description = "SearchParameter for Observation.note"
 * status = #active
-* code = #interpretation
+* code = #note
 * base = #Observation
-* type = #token
+* type = #string
 * expression = "Observation.note"
