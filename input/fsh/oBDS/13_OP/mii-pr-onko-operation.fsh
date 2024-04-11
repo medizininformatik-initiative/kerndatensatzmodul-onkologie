@@ -24,7 +24,6 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 * code.coding[ops] 1..1 MS // hier auch potentiel 1..*, weil mehrere Sachen gemacht werden können? --> geht nicht wegen MII Prozedur-Binding
  
 * complication MS
-// * complication from $mii-vs-onko-operation-komplikation // quatsch, weil wir slices machen müssen
 * complication ^slicing.discriminator.type = #pattern
 * complication ^slicing.discriminator.path = "$this"
 * complication ^slicing.rules = #open
@@ -37,8 +36,8 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 * complication[compl_obds].coding.code 1.. MS
 
 * complication[compl_icd10] MS 
-* complication[compl_icd10] from http://fhir.de/ValueSet/bfarm/icd-10-gm // binding auf ICD10-GM Value Set
-* complication[compl_icd10].coding.system = $ICD10GM // schreibt canonical ICD10 GM-FHIR-URI in system
+* complication[compl_icd10] from http://fhir.de/ValueSet/bfarm/icd-10-gm 
+* complication[compl_icd10].coding.system = $ICD10GM 
 * complication[compl_icd10].coding.system 1..
 * complication[compl_icd10].coding.code 1..
 
