@@ -1,0 +1,62 @@
+{
+  "resourceType": "List",
+  "id": "mii-exa-onko-liste-evidenz-erstdiagnose-1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-liste-evidenz-erstdiagnose"
+    ]
+  },
+  "status": "current",
+  "mode": "snapshot",
+  "title": "Liste der Evidenz zum Erstdiagnosezeitpunkt",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "entry": [
+    {
+      "item": {
+        "reference": "Observation/example-ecog-zustand"
+      }
+    },
+    {
+      "item": {
+        "reference": "Observation/example-tnm-klassifikation"
+      }
+    },
+    {
+      "item": {
+        "reference": "Observation/example-tnm-t-kategorie"
+      }
+    },
+    {
+      "item": {
+        "reference": "Observation/example-tnm-n-kategorie"
+      }
+    },
+    {
+      "item": {
+        "reference": "Observation/example-tnm-m-kategorie"
+      }
+    },
+    {
+      "item": {
+        "reference": "Observation/example-tnm-l-kategorie"
+      }
+    },
+    {
+      "item": {
+        "reference": "Observation/example-fernmetastase-1"
+      }
+    },
+    {
+      "item": {
+        "reference": "Observation/example-fernmetastase-2"
+      }
+    },
+    {
+      "item": {
+        "reference": "DiagnosticReport/example-pathobefund-1"
+      }
+    }
+  ]
+}

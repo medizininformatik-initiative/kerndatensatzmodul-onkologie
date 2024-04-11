@@ -464,7 +464,7 @@
           "reference": "StructureDefinition/mii-pr-onko-liste-evidenz-erstdiagnose"
         },
         "name": "MII PR Onkologie Diagnose",
-        "description": "Dieses Profil beschreibt eine Liste, die alle Observationen enthält, die für eine Erstdiagnostik relevant waren.  (synchrone Observationen im Sinne der Krebsregister)",
+        "description": "Dieses Profil beschreibt eine Liste, die alle Observationen und Berichte enthält, die für eine Erstdiagnostik relevant waren.  (synchrone Observationen im Sinne der Krebsregister)",
         "exampleBoolean": false
       },
       {
@@ -1181,10 +1181,24 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-onko-anzahl-befallene-sentinel-lymphknoten-0"
+        },
+        "name": "mii-exa-onko-anzahl-befallene-sentinel-lymphknoten-0",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-befallene-sentinel-lymphknoten"
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-onko-anzahl-untersuchte-lymphknoten-23"
         },
         "name": "mii-exa-onko-anzahl-untersuchte-lymphknoten-23",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-untersuchte-lymphknoten"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-anzahl-untersuchte-sentinel-lymphknoten-0"
+        },
+        "name": "mii-exa-onko-anzahl-untersuchte-sentinel-lymphknoten-0",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-untersuchte-sentinel-lymphknoten"
       },
       {
         "reference": {
@@ -1216,10 +1230,25 @@
       },
       {
         "reference": {
+          "reference": "List/mii-exa-onko-liste-evidenz-erstdiagnose-1"
+        },
+        "name": "mii-exa-onko-liste-evidenz-erstdiagnose-1",
+        "description": "Eine Beispielliste, welche Observations zur Diagnosestellung präsent waren",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-liste-evidenz-erstdiagnose"
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-onko-residualstatus-1"
         },
         "name": "mii-exa-onko-residualstatus-1",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-residualstatus"
+      },
+      {
+        "reference": {
+          "reference": "Specimen/mii-exa-onko-specimen-1"
+        },
+        "name": "mii-exa-onko-specimen-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-specimen"
       },
       {
         "reference": {
