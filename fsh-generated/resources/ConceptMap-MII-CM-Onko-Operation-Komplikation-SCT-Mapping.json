@@ -1,0 +1,44 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "MII-CM-Onko-Operation-Komplikation-SCT-Mapping",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-operation-komplikation-sct",
+  "name": "MII_CM_Onko_Operation_Komplikation_SNOMED_Mapping",
+  "title": "MII CM Onko Operation Komplikation SNOMED Mapping",
+  "status": "draft",
+  "experimental": false,
+  "date": "2024-04-10",
+  "description": "Mapping Operation Komplikation Codes zu SNOMED-CT",
+  "purpose": "Technical mapping to transform oBDS-Data into SNOMED",
+  "sourceUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
+  "targetUri": "http://snomed.info/sct",
+  "group": [
+    {
+      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation",
+      "target": "http://snomed.info/sct",
+      "element": [
+        {
+          "code": "WSS",
+          "display": "Wundheilungsstörung, subkutane",
+          "target": [
+            {
+              "code": "271618001",
+              "display": "Impaired wound healing (finding)",
+              "equivalence": "equivalent",
+              "comment": "Operation complications"
+            }
+          ]
+        },
+        {
+          "target": [
+            {
+              "code": "60168000",
+              "display": "Osteomyelitis (disorder) ",
+              "equivalence": "equivalent",
+              "comment": "Operation complications"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

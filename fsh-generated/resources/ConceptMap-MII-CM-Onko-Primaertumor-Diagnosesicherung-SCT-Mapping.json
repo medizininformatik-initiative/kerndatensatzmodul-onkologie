@@ -1,0 +1,84 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "MII-CM-Onko-Primaertumor-Diagnosesicherung-SCT-Mapping",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-primaertumor-diagnosesicherung-sct",
+  "name": "MII_CM_Onko_Primaertumor_Diagnosesicherung_SNOMED_Mapping",
+  "title": "MII CM Onko Primaertumor Diagnosesicherung SNOMED Mapping",
+  "status": "draft",
+  "experimental": false,
+  "date": "2024-04-10",
+  "description": "Mapping Primärtumor Diagnosesicherung Codes zu SNOMED-CT",
+  "purpose": "Technical mapping to transform oBDS-Data into SNOMED",
+  "sourceUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
+  "targetUri": "http://snomed.info/sct",
+  "group": [
+    {
+      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung",
+      "target": "http://snomed.info/sct",
+      "element": [
+        {
+          "code": "9",
+          "display": "unbekannt",
+          "target": [
+            {
+              "code": "261665006",
+              "display": "Unknown (qualifier value)",
+              "equivalence": "equivalent",
+              "comment": "Diagnostic certainty for primary tumor"
+            }
+          ]
+        },
+        {
+          "target": [
+            {
+              "code": "363680008",
+              "display": "Radiographic imaging procedure (procedure)",
+              "equivalence": "narrower",
+              "comment": "Procedure: X-ray"
+            }
+          ]
+        },
+        {
+          "target": [
+            {
+              "code": "423827005",
+              "display": "Endoscopy (procedure)",
+              "equivalence": "narrower",
+              "comment": "Procedure: Endoscopy"
+            }
+          ]
+        },
+        {
+          "target": [
+            {
+              "code": "363679005",
+              "display": "Imaging (procedure)",
+              "equivalence": "narrower",
+              "comment": "Procedure: Imaging"
+            }
+          ]
+        },
+        {
+          "target": [
+            {
+              "code": "16310003",
+              "display": "Ultrasonography (procedure)",
+              "equivalence": "narrower",
+              "comment": "Procedure: Ultrassound"
+            }
+          ]
+        },
+        {
+          "target": [
+            {
+              "code": "122458006",
+              "display": "Exploration procedure (procedure)",
+              "equivalence": "narrower",
+              "comment": "Procedure: surgery"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

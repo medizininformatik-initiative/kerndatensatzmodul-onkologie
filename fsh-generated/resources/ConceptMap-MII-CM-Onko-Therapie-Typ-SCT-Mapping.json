@@ -1,0 +1,44 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "MII-CM-Onko-Therapie-Typ-SCT-Mapping",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-therapie-typ-sct",
+  "name": "MII_CM_Onko_Therapie_Typ_SNOMED_Mapping",
+  "title": "MII CM Onko Therapie Typ SNOMED Mapping",
+  "status": "draft",
+  "experimental": false,
+  "date": "2024-04-10",
+  "description": "Mapping Therapie Typ Codes zu SNOMED-CT",
+  "purpose": "Technical mapping to transform oBDS-Data into SNOMED",
+  "sourceUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
+  "targetUri": "http://snomed.info/sct",
+  "group": [
+    {
+      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ",
+      "target": "http://snomed.info/sct",
+      "element": [
+        {
+          "code": "SO",
+          "display": "Sonstiges",
+          "target": [
+            {
+              "code": "74964007",
+              "display": "Other (qualifier value)",
+              "equivalence": "equivalent",
+              "comment": "Therapy type for therapy recommandation and systematic therapy"
+            }
+          ]
+        },
+        {
+          "target": [
+            {
+              "code": "1255831008",
+              "display": "Chemotherapy for malignant neoplastic disease using targeted agent (procedure)",
+              "equivalence": "equivalent",
+              "comment": "Therapy type for therapy recommandation and systematic therapy"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
