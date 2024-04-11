@@ -19,7 +19,7 @@ Usage: #definition
 * group[=].element[=].target.code = #415175000
 * group[=].element[=].target.display = "Primary acquired melanosis of conjunctiva without atypia (disorder)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = 'Hier der Vollständigkeit aufgeführt.'
+* group[=].element[=].target.comment = "Hier der Vollständigkeit aufgeführt."
 
 * group[=].element[+].code = #1
 * group[=].element[=].display = "gut differenziert"
