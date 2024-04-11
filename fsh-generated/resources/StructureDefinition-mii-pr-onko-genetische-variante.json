@@ -78,6 +78,11 @@
         ]
       },
       {
+        "id": "Observation.meta.profile",
+        "path": "Observation.meta.profile",
+        "mustSupport": true
+      },
+      {
         "id": "Observation.subject",
         "path": "Observation.subject",
         "type": [
@@ -91,6 +96,24 @@
             ]
           }
         ]
+      },
+      {
+        "id": "Observation.focus",
+        "path": "Observation.focus",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.encounter",
+        "path": "Observation.encounter",
+        "mustSupport": true
       },
       {
         "id": "Observation.value[x]",
@@ -123,6 +146,16 @@
         "mustSupport": true
       },
       {
+        "id": "Observation.value[x]:valueCodeableConcept.coding.system",
+        "path": "Observation.value[x].coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueCodeableConcept.coding.code",
+        "path": "Observation.value[x].coding.code",
+        "mustSupport": true
+      },
+      {
         "id": "Observation.interpretation",
         "path": "Observation.interpretation",
         "mustSupport": true,
@@ -139,6 +172,16 @@
         ]
       },
       {
+        "id": "Observation.interpretation.coding.system",
+        "path": "Observation.interpretation.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.interpretation.coding.code",
+        "path": "Observation.interpretation.coding.code",
+        "mustSupport": true
+      },
+      {
         "id": "Observation.note",
         "path": "Observation.note",
         "mustSupport": true,
@@ -153,6 +196,20 @@
       {
         "id": "Observation.note.text",
         "path": "Observation.note.text",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.derivedFrom",
+        "path": "Observation.derivedFrom",
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf"
+            ]
+          }
+        ],
         "mustSupport": true
       }
     ]

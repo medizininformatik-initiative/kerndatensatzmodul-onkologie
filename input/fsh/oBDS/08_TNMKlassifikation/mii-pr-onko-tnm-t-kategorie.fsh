@@ -6,6 +6,9 @@ Description: "TNM-Klassifikation: TNM T-Kategorie. Ausbreitung des Primärtumors
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
+* meta.profile 0..* MS
+* encounter 0..1 MS
+
 * status MS
 * code MS
 * code.extension contains 
@@ -34,6 +37,15 @@ Description: "TNM-Klassifikation: TNM T-Kategorie. Ausbreitung des Primärtumors
 * valueCodeableConcept ^comment = "Entitätsspezifisch, siehe auch allgemeine Bemerkungen zu TNM."
 * valueCodeableConcept.coding.code 1.. MS
 * valueCodeableConcept.coding.system 1.. MS
+
+// Referenz zu Verlauf-Observation
+* derivedFrom 0..1 MS
+* derivedFrom only Reference(MII_PR_Onko_Verlauf)
+
+// Referenz zu Primärtumor
+* focus MS
+* focus only Reference(MII_PR_Onko_Diagnose)
+
 
 Mapping: FHIR-oBDS-TNM_T_Kategorie
 Id: oBDS

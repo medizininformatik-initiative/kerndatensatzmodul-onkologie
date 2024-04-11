@@ -6,6 +6,9 @@ Description: "TNM-Klassifikation: TNM M-Kategorie. Fehlen oder Vorhandensein von
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
+* meta.profile 0..* MS
+* encounter 0..1 MS
+
 * status MS
 * code MS
 * code.extension contains 
@@ -41,6 +44,15 @@ Description: "TNM-Klassifikation: TNM M-Kategorie. Fehlen oder Vorhandensein von
 * valueCodeableConcept ^comment = "Teilweise entitätsspezifisch, einschließlich Zusatzangaben wie (i+/-) und (mol+/-)"
 * valueCodeableConcept.coding.code 1.. MS
 * valueCodeableConcept.coding.system 1.. MS
+
+// Referenz zu Verlauf-Observation
+* derivedFrom 0..1 MS
+* derivedFrom only Reference(MII_PR_Onko_Verlauf)
+
+// Referenz zu Primärtumor
+* focus MS
+* focus only Reference(MII_PR_Onko_Diagnose)
+
 
 Mapping: FHIR-oBDS-TNM_M_Kategorie
 Id: oBDS

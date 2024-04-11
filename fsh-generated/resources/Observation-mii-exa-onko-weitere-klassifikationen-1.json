@@ -10,16 +10,31 @@
   "code": {
     "coding": [
       {
-        "code": "372278000",
+        "code": "385361009",
         "system": "http://snomed.info/sct",
-        "display": "Gleason score"
+        "display": "International Federation of Gynecology and Obstetrics tumor stage (observable entity)"
       }
     ],
-    "text": "Gleason score"
+    "text": "FIGO Klassifikation für ovariale Tumore"
+  },
+  "method": {
+    "coding": [
+      {
+        "code": "254386003",
+        "system": "http://snomed.info/sct",
+        "display": "International Federation of Gynecology and Obstetrics ovarian tumor staging system (tumor staging)"
+      }
+    ]
   },
   "subject": {
     "reference": "Patient/example"
   },
   "effectiveDateTime": "2024-01-11",
-  "valueString": "4+5"
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "IVB"
+      }
+    ]
+  }
 }

@@ -35,7 +35,7 @@ Description: "Strahlentherapie: einzelne Bestrahlung innerhalb der Gesamttherapi
 * extension[Zielgebiet_Lateralitaet] ^short = "Seitenlokalisation Zielgebietes"
 * extension[Zielgebiet_Lateralitaet] ^definition = "Gibt Seitenlokalisation des Zielgebietes an. Bei beidseitiger Bestrahlung paariger Organe sind die Bestrahlungen einzeln zu melden."
 * extension[Zielgebiet_Lateralitaet].value[x] only CodeableConcept
-* extension[Zielgebiet_Lateralitaet].valueCodeableConcept from mii-vs-onko-primaertumor-seitenlokalisation (required) //hier ggfs. refactoren
+* extension[Zielgebiet_Lateralitaet].valueCodeableConcept from mii-vs-onko-seitenlokalisation (required) //hier ggfs. refactoren
 
 * extension[Gesamtdosis] ^short = "Strahlentherapie Gesamtdosis (Dosis)"
 * extension[Gesamtdosis] ^definition = "Gibt an, mit welcher Gesamtdosis da Zielgebiet bestrahlt wurde (inklusive Boost)."

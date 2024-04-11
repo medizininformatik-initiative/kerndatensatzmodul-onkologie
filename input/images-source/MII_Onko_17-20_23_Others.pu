@@ -1,0 +1,51 @@
+@startuml MII_Onko_17-20_23_Others
+object R4_Observation #22FF22
+Map 17_Verlauf #22FF22{
+    17.1 Untersuchungsdatum Verlauf => Observation.effectiveDateTime
+    17.2 Gesamtbeurteilung Tumorstatus => Observation.component[Gesamtbeurteilung].coding.code
+    17.3 Tumorstatus Primärtumor => Observation.component[Primaertumor].coding.code
+    17.4 Tumorstatus Lymphknoten => Observation.component[Lymphknoten].coding.code
+    17.5 Tumorstatus Fernmetastasen => Observation.component[Fernmetastasen].coding.code
+
+}
+R4_Observation <|-down-- 17_Verlauf
+
+object R4_CarePlan #CCCCFF
+Map 18_19_Tumorkonferenz_Therapieempfehlung #CCCCFF{
+    18.1 Tumorkonferenz Therapieplanung Datum => CarePlan.created
+    18.2 Tumorkonferenz Therapieplanung Typ => CarePlan.category
+    19.1 Tumorkonferenz Therapieempfehlung Typ => CarePlan.activity.detail.code
+    19.2 Tumorkonferenz/Therapieempfehlung Therapieabweichung auf Wunsch des Patienten => CarePlan.activityStatus / activityStatusReason
+}
+R4_CarePlan <|-down-- 18_19_Tumorkonferenz_Therapieempfehlung
+
+Map 20_Tod_Todesursache #22FF22 {
+ 20.1 Sterbedatum => Observation.effectiveDateTime 
+ 20.2 Tod tumorbedingt => Observation.interpretation
+ 20.3 Todesursache ICD  => Observation.valueCodeableConcept.coding.code
+ 20.4 Todesursache ICD-Version => Observation.valueCodeableConcept.coding.version
+ } 
+R4_Observation <|-down- 20_Tod_Todesursache
+
+object MII_MolGen_Variante #22FF22
+Map 23_Genetische_Variante #22FF22 {
+    23.1 Genetische Variante Name => Observation.component[conclusion-string]
+    23.2 Genetische Variante Ausprägung => Observation.component[molecular-consequence]
+}
+
+MII_MolGen_Variante <|-down- 23_Genetische_Variante
+
+legend right 
+|Color|Type|
+|<#FFFF66>|Condition|
+|<#CCCCFF>|CarePlan|
+|<#9999FF>|Procedure|
+|<#DDFFDD>|ServiceRequest|
+|<#88FF88>|DiagnosticReport|
+|<#22FF22>|Observation|
+|<#FFCCFF>|Medication|
+|<#FF9999>|AdverseEvent|
+|<#44FFFF>|Specimen|
+endlegend
+
+@enduml

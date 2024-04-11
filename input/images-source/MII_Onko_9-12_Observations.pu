@@ -1,0 +1,50 @@
+@startuml MII_Onko_9-12_Observations
+object R4_Observation #22FF22
+Map 09_WeitereKlassifikation #22FF22 {
+ 09.1 Hämatoonkologische und sonstige Klassifikationen Datum => Observation.effectiveDateTime
+ 09.2 Hämatoonkologische und sonstige Klassifikationen Name => Observation.code.text
+ 09.3 Hämatoonkologische und sonstige Klassifikationen Einstufung => Observation.value[x]
+} 
+R4_Observation <|-down- 09_WeitereKlassifikation
+
+object 13_MII_Onko_Operation #9999FF
+note bottom 
+    Lokaler Residualstatus wird über Procedure.outcome einer Operation erfasst
+end note
+
+Map 10_Residualstatus #22FF22{
+    10.1 lokaler Residualstatus nach Abschluss der OP *--> 13_MII_Onko_Operation
+    10.2 Gesamtbeurteilung des Residualstatus => valueCodeableConcept.coding.code  
+}
+
+R4_Observation <|-down-- 10_Residualstatus
+
+Map 11_Fernmetastasen #22FF22{
+    11.1 Lokalisation von Fernmetastase(n)  => Observation.bodySite.coding.code
+    11.2 Datum der diagnostischen Sicherung => Observation.effectiveDateTime
+ 
+}
+R4_Observation <|-down--- 11_Fernmetastasen
+
+
+Map 12_ECOGStatus #22FF22{
+    12. 1ECOG Status => Observation.valueCodeableConcept
+
+}
+R4_Observation <|-down---- 12_ECOGStatus
+
+legend right 
+|Color|Type|
+|<#FFFF66>|Condition|
+|<#CCCCFF>|CarePlan|
+|<#9999FF>|Procedure|
+|<#DDFFDD>|ServiceRequest|
+|<#88FF88>|DiagnosticReport|
+|<#22FF22>|Observation|
+|<#FFCCFF>|Medication|
+|<#FF9999>|AdverseEvent|
+|<#44FFFF>|Specimen|
+endlegend
+
+
+@enduml

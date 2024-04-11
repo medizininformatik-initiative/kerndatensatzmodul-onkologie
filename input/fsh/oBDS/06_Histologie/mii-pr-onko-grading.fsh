@@ -7,6 +7,9 @@ Description: "Histologie: Tumor Grading. Gibt den Differenzierungsgrad des Tumor
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
+* meta.profile 0..* MS
+* encounter 0..1 MS
+
 * category MS
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
@@ -34,11 +37,21 @@ Description: "Histologie: Tumor Grading. Gibt den Differenzierungsgrad des Tumor
 * effective[x] MS
 * effective[x] only dateTime
 * effectiveDateTime 1.. MS
+* value[x] 1..1 MS 
 * value[x] only CodeableConcept
-* valueCodeableConcept MS
+* valueCodeableConcept 1..1 MS
 * valueCodeableConcept from mii-vs-onko-grading (required)
 * valueCodeableConcept.coding.code 1.. MS
 * valueCodeableConcept.coding.system 1.. MS
+
+// Referenz zu Verlauf-Observation
+* derivedFrom 0..1 MS
+* derivedFrom only Reference(MII_PR_Onko_Verlauf)
+
+// Referenz zu Primärtumor
+* focus MS
+* focus only Reference(MII_PR_Onko_Diagnose)
+
 
 Mapping: FHIR-oBDS-Histologie-Grading
 Id: oBDS

@@ -1,0 +1,42 @@
+@startuml MII_Onko_05_Diagnosis
+object MII_Diagnose #FFFF66
+Map 05_Diagnose #FFFF66 {
+ 05.1 Primärtumor Tumordiagnose ICD Code => Condition.code.coding[icd10-gm].code
+ 05.2 Primärtumor Tumordiagnose ICD-Version => Condition.code.coding[icd10-gm].version
+ 05.3 Primärtumor Tumordiagnose Text => Condition.code.text
+ 05.4 Primärtumor Topographie ICD O => Condition.bodySite.coding[icd-o-3].code
+ 05.5 Primärtumor Topographie ICD O Version => Condition.bodySite.coding[icd-o-3].version
+ 05.6 Primärtumor Diagnosedatum => Condition.recordedDate
+ 05.7 Primärtumor Diagnosesicherung => Condition.verificationStatus.coding[primaertumorDiagnosesicherung].code
+ 05.8 Primärtumor Seitenlokalisation => Condition.bodySite.coding[primaertumorSeitenlokalisation].code
+ 05.9 Frühere Tumorerkrankungen => 05_Diagnose
+ 06.3 Morphologie-Code => Condition.code.coding[icd-o-3].code
+ 06.4 Morphologie ICD-O/Blue Book Version => Condition.code.coding[icd-o-3].version
+ 06.5 Morphologie-Freitext => Condition.code.text
+} 
+
+MII_Diagnose <|-down- 05_Diagnose
+object R4_List
+object Evidenz_Primärdiagnose {
+    + enthält Referenzen auf alle Beobachtungen, die zum Zeitpunkt der Diagnosestellung bekannt sind
+    + soll aus Diagnosemeldung befüllt werden
+}
+R4_List <|---- Evidenz_Primärdiagnose
+
+legend right 
+|Color|Type|
+|<#FFFF66>|Condition|
+|<#CCCCFF>|CarePlan|
+|<#9999FF>|Procedure|
+|<#DDFFDD>|ServiceRequest|
+|<#88FF88>|DiagnosticReport|
+|<#22FF22>|Observation|
+|<#FFCCFF>|Medication|
+|<#FF9999>|AdverseEvent|
+|<#44FFFF>|Specimen|
+|<#EEEEEE>|List|
+endlegend
+
+
+
+@enduml

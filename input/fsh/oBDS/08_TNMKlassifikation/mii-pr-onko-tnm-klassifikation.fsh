@@ -6,6 +6,9 @@ Description: "TNM-Klassifikation: Grouper-Profil für Komponenten der TNM-Klassi
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
+* meta.profile 0..* MS
+* encounter 0..1 MS
+
 * status MS
 * code MS
 * code from mii-vs-onko-tnm-klassifikation-typ (required)
@@ -27,6 +30,15 @@ Description: "TNM-Klassifikation: Grouper-Profil für Komponenten der TNM-Klassi
 * valueCodeableConcept ^definition = "Stadium nach aktuell gültiger TNM-Klassifikation."
 * valueCodeableConcept.coding.code 1.. MS
 * valueCodeableConcept.coding.system 1.. MS
+
+// Referenz zu Verlauf-Observation
+* derivedFrom 0..1 MS
+* derivedFrom only Reference(MII_PR_Onko_Verlauf)
+
+// Referenz zu Primärtumor
+* focus MS
+* focus only Reference(MII_PR_Onko_Diagnose)
+
 
 Mapping: FHIR-oBDS-TNM-Klassifikation
 Id: oBDS

@@ -6,6 +6,9 @@ Description: "TNM-Klassifikation: TNM m-Symbol. Kennzeichnet Vorhandensein multi
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
+* meta.profile 0..* MS
+* encounter 0..1 MS
+
 * status MS
 * code MS
 * code = $LOINC#42030-7
@@ -25,6 +28,15 @@ Description: "TNM-Klassifikation: TNM m-Symbol. Kennzeichnet Vorhandensein multi
 * valueCodeableConcept ^comment = "(m) = multiple Tumoren ohne Angabe der Zahl; (Zahl) = Anzahl der multiplen Tumoren; (leer) = keine multiplen Tumoren"
 * valueCodeableConcept.coding.code 1.. MS
 * valueCodeableConcept.coding.system 1.. MS
+
+// Referenz zu Verlauf-Observation
+* derivedFrom 0..1 MS
+* derivedFrom only Reference(MII_PR_Onko_Verlauf)
+
+// Referenz zu Primärtumor
+* focus MS
+* focus only Reference(MII_PR_Onko_Diagnose)
+
 
 Mapping: FHIR-oBDS-TNM_m_Symbol
 Id: oBDS

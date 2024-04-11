@@ -1,0 +1,79 @@
+//skinparam linetype polyline 
+//skinparam linetype ortho
+@startuml MII_Onko_UML_Relations_v1
+skinparam linetype polyline
+object Onko_OP #9999FF
+object Onko_Strahlentherapie #9999FF
+object Onko_SystemischeTherapie #9999FF
+object Therapieplanung_Tumorkonferenz #CCCCFF
+
+Therapieplanung_Tumorkonferenz <-- Onko_OP: basedOn 
+Therapieplanung_Tumorkonferenz <-- Onko_Strahlentherapie: basedOn
+Therapieplanung_Tumorkonferenz <-- Onko_SystemischeTherapie: basedOn
+rectangle "Medikation" {
+    object Medikation #FFCCFF
+}
+Onko_SystemischeTherapie <--- Medikation : partOf 
+Therapieplanung_Tumorkonferenz <--- Medikation: basedOn
+object PrimaerDiagnose #FFFF66
+
+rectangle "Onkologie Observations"{
+    object Onko_Variante #22FF22
+    object Fernmetastasen #22FF22
+    object TNM_Klassifikation #22FF22
+    object WeitereKlassifikation #22FF22 
+    object Lymphknotenuntersuchung #22FF22
+    object HistologieGrading #22FF22
+    object Residualstatus #22FF22
+    object ECOG #22FF22
+    object Tod #22FF22
+    object Onko_Befund #88FF88
+
+}
+
+PrimaerDiagnose <--- TNM_Klassifikation: focus
+PrimaerDiagnose <-right--  Therapieplanung_Tumorkonferenz : addresses
+PrimaerDiagnose <--- Lymphknotenuntersuchung: focus
+PrimaerDiagnose <--- HistologieGrading :focus
+PrimaerDiagnose <--- Onko_Variante :focus
+PrimaerDiagnose <--- WeitereKlassifikation: focus
+PrimaerDiagnose <--- ECOG :focus
+PrimaerDiagnose <--- Fernmetastasen :focus
+
+Therapieplanung_Tumorkonferenz <-right-- Onko_Befund  : basedOn
+
+object Verlauf #22FF22
+PrimaerDiagnose <----  Verlauf : focus
+Verlauf <--- Tod: derivedFrom
+Verlauf <--- TNM_Klassifikation:  derivedFrom
+Verlauf <---  Lymphknotenuntersuchung : derivedFrom
+Verlauf <---  HistologieGrading : derivedFrom
+Verlauf <--- Fernmetastasen: derivedFrom
+Verlauf <--- Residualstatus:  derivedFrom
+Verlauf <--- Onko_Variante: derivedFrom
+
+
+
+
+object Onko_Bioprobe #44FFFF 
+Onko_Bioprobe <-- Onko_Befund : specimen
+
+object AdverseEvent #FF9999
+Onko_SystemischeTherapie <--- AdverseEvent: suspectEntity.instance
+Onko_Strahlentherapie <--- AdverseEvent: suspectEntity.instance
+
+legend right 
+|Color|Type|
+|<#FFFF66>|Condition|
+|<#CCCCFF>|CarePlan|
+|<#9999FF>|Procedure|
+|<#DDFFDD>|ServiceRequest|
+|<#88FF88>|DiagnosticReport|
+|<#22FF22>|Observation|
+|<#FFCCFF>|Medication|
+|<#FF9999>|AdverseEvent|
+|<#44FFFF>|Specimen|
+endlegend
+
+
+@enduml

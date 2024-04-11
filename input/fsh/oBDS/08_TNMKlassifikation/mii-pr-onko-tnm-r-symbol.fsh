@@ -6,6 +6,9 @@ Description: "TNM-Klassifikation: TNM r-Symbol. Gibt an, ob die Klassifikation e
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
+* meta.profile 0..* MS
+* encounter 0..1 MS
+
 * status MS
 * code MS
 * code = $LOINC#101659-1
@@ -26,6 +29,15 @@ Description: "TNM-Klassifikation: TNM r-Symbol. Gibt an, ob die Klassifikation e
 * valueCodeableConcept.coding.code 1.. MS
 * valueCodeableConcept.coding.system 1.. MS
 //* dataAbsentReason MS
+
+// Referenz zu Verlauf-Observation
+* derivedFrom 0..1 MS
+* derivedFrom only Reference(MII_PR_Onko_Verlauf)
+
+// Referenz zu Primärtumor
+* focus MS
+* focus only Reference(MII_PR_Onko_Diagnose)
+
 
 Mapping: FHIR-oBDS-TNM_r_Symbol
 Id: oBDS

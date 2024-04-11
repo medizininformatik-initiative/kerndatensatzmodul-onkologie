@@ -6,10 +6,14 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
+
+* meta.profile 0..* MS
 // OP-Datum
 
 * extension contains mii-ex-onko-operation-intention named Intention 1..1
 * extension[Intention] MS
+* encounter 0..1 MS
+
 
 * subject 1..1 MS
 * subject only Reference(Patient)
@@ -42,6 +46,9 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 * outcome MS
 * outcome 0..1
 * outcome from mii-vs-onko-beurteilung-lokaler-residualstatus (required)
+* outcome.coding.system = $mii-cs-onko-residualstatus
+* outcome.coding.system MS
+* outcome.coding.code MS
 
 
 

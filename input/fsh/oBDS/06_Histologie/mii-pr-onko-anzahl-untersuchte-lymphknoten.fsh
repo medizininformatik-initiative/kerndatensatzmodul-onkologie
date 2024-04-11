@@ -6,6 +6,9 @@ Description: "Histologie: Anzahl der untersuchten Lymphknoten. Gibt an, wie viel
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
+* meta.profile 0..* MS
+* encounter 0..1 MS
+
 * category MS
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
@@ -43,6 +46,15 @@ Description: "Histologie: Anzahl der untersuchten Lymphknoten. Gibt an, wie viel
 * valueQuantity.system = $UCUM (exactly)
 * valueQuantity.unit 1.. MS
 * valueQuantity.value 1.. MS
+
+// Referenz zu Verlauf-Observation
+* derivedFrom 0..1 MS
+* derivedFrom only Reference(MII_PR_Onko_Verlauf)
+
+// Referenz zu Primärtumor
+* focus MS
+* focus only Reference(MII_PR_Onko_Diagnose)
+
 
 Mapping: FHIR-oBDS-Histologie-Anzahl-Untersuchte-Lymphknoten
 Id: oBDS

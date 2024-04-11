@@ -6,6 +6,9 @@ Description: "Tumorbedingter Tod"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
+* meta.profile 0..* MS
+* encounter 0..1 MS
+
 
 * code MS
 * code.coding = $SCT#184305005
@@ -33,6 +36,13 @@ Description: "Tumorbedingter Tod"
 * valueCodeableConcept.coding.system = $ICD10GM 
 * valueCodeableConcept.coding.version 1.. MS
 
+// Referenz zu Verlauf-Observation
+* derivedFrom 0..1 MS
+* derivedFrom only Reference(MII_PR_Onko_Verlauf)
+
+// Referenz zu Primärtumor
+* focus MS
+* focus only Reference(MII_PR_Onko_Diagnose)
 
 Mapping: FHIR-oBDS-Tod
 Id: oBDS

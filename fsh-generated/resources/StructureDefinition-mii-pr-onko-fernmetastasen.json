@@ -74,6 +74,11 @@
         ]
       },
       {
+        "id": "Observation.meta.profile",
+        "path": "Observation.meta.profile",
+        "mustSupport": true
+      },
+      {
         "id": "Observation.code",
         "path": "Observation.code",
         "mustSupport": true
@@ -98,6 +103,24 @@
             ]
           }
         ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.focus",
+        "path": "Observation.focus",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.encounter",
+        "path": "Observation.encounter",
         "mustSupport": true
       },
       {
@@ -134,6 +157,30 @@
             "comment": "Lokalisation von Fernmetastase(n)"
           }
         ]
+      },
+      {
+        "id": "Observation.bodySite.coding.system",
+        "path": "Observation.bodySite.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.bodySite.coding.code",
+        "path": "Observation.bodySite.coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.derivedFrom",
+        "path": "Observation.derivedFrom",
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf"
+            ]
+          }
+        ],
+        "mustSupport": true
       }
     ]
   }

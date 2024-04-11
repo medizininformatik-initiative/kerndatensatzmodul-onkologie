@@ -1,0 +1,58 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "MII_CS_Onko_Seitenlokalisation",
+  "id": "mii-cs-onko-seitenlokalisation",
+  "title": "MII CS Onkologie Primärtumor Seitenlokalisation",
+  "description": "Codes für Seitenlokalisation, d.h. organspezifische Angabe der betroffenen Seite.",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation",
+  "concept": [
+    {
+      "code": "L",
+      "display": "links"
+    },
+    {
+      "code": "R",
+      "display": "rechts"
+    },
+    {
+      "code": "B",
+      "display": "beidseitig",
+      "definition": "(sollte bei Tumoren in paarigen Organen 2 Meldungen ergeben)"
+    },
+    {
+      "code": "M",
+      "display": "Mittellinie/mittig"
+    },
+    {
+      "code": "U",
+      "display": "unbekannt"
+    },
+    {
+      "code": "T",
+      "display": "trifft nicht zu",
+      "definition": "Seitenangabe nicht sinnvoll, einschließlich Systemerkrankungen"
+    }
+  ],
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2024.0.0-ballot",
+  "caseSensitive": true,
+  "count": 6
+}

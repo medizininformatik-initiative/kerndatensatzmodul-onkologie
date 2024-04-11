@@ -8,15 +8,15 @@ Description: "Medikation der Systemische Therapie. Dieses Profil beschreibt die 
 * ^status = #draft
 
 // Logical Modell see:  https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532379/Systemische+Therapie+SYST+Typ // t
-
+* meta.profile 0..* MS
 * subject 1..1 MS
 * subject only Reference(Patient)
+
 
 * medication[x] 1..1 MS
 * partOf 1..* MS 
 * partOf only Reference(Procedure)
 * note MS // Angabe eines Schemas ist optional. Bei Angabe eines SChemas sind alle Wirkstoffe unter medication gesondert zu kodieren 
-// vielleicht aber Schema auch als medicationCodeableConcept.text
 
 // Systemische Therapie Beginn und Ende --> ggfs. dupliziert im MedicationStatement 
 * effective[x] MS 
@@ -24,7 +24,8 @@ Description: "Medikation der Systemische Therapie. Dieses Profil beschreibt die 
 * effectivePeriod.start 0..1 MS
 * effectivePeriod.end 0..1 MS
 * effectiveDateTime 0..1 MS  // falls es einmalige Anwendungen / Protokolle gibt
-
+* basedOn MS
+* basedOn only Reference(CarePlan)
 
 Mapping: FHIR-oBDS-Systemische_Therapie_Medikation
 Id: oBDS

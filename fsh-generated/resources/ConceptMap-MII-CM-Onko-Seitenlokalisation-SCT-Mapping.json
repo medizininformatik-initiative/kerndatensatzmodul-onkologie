@@ -1,0 +1,34 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "MII-CM-Onko-Seitenlokalisation-SCT-Mapping",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-seitenlokalisation-sct",
+  "name": "MII_CM_Onko_Seitenlokalisation_SNOMED_Mapping",
+  "title": "MII CM Onko Seitenlokalisation SNOMED Mapping",
+  "status": "draft",
+  "experimental": false,
+  "date": "2024-04-10",
+  "description": "Mapping Seitenlokalisation Codes zu SNOMED-CT",
+  "purpose": "Technical mapping to transform oBDS-Data into SNOMED",
+  "sourceUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
+  "targetUri": "http://snomed.info/sct",
+  "group": [
+    {
+      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation",
+      "target": "http://snomed.info/sct",
+      "element": [
+        {
+          "target": [
+            {
+              "code": "385432009",
+              "display": "Not applicable (qualifier value)",
+              "equivalence": "equivalent",
+              "comment": "Mapping of Seitenlokalisation to SNOMED"
+            }
+          ],
+          "code": "T",
+          "display": "trifft nicht zu"
+        }
+      ]
+    }
+  ]
+}

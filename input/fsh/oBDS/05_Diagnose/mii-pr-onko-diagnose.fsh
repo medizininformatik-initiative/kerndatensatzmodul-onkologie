@@ -6,6 +6,8 @@ Description: "Dieses Profil beschreibt eine Diagnose in der Onkologie"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
+* meta.profile 0..* MS
+* encounter 0..1 MS
 * subject 1..1 MS
 * subject only Reference(Patient)
 * verificationStatus MS 
@@ -23,10 +25,14 @@ Description: "Dieses Profil beschreibt eine Diagnose in der Onkologie"
 * verificationStatus.coding[primaertumorDiagnosesicherung].system 1.. MS
 * bodySite.coding contains
     primaertumorSeitenlokalisation 0..1 MS
-* bodySite.coding[primaertumorSeitenlokalisation] from mii-vs-onko-primaertumor-seitenlokalisation
+* bodySite.coding[primaertumorSeitenlokalisation] from mii-vs-onko-seitenlokalisation
 * bodySite.coding[primaertumorSeitenlokalisation].system 1.. MS
-* bodySite.coding[primaertumorSeitenlokalisation] ^patternCoding.system = $mii-cs-onko-primaertumor-seitenlokalisation
+* bodySite.coding[primaertumorSeitenlokalisation] ^patternCoding.system = $mii-cs-onko-seitenlokalisation
 * bodySite.coding[primaertumorSeitenlokalisation].code 1.. MS
+* evidence 0..1 MS
+* evidence.detail MS
+* evidence.detail only Reference(MII_PR_Onko_Liste_Evidenz_Erstdiagnose)
+
 
 Mapping: FHIR-oBDS-Diagnose
 Id: oBDS
