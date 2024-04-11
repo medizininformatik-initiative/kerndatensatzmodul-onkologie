@@ -98,7 +98,7 @@ Usage: #definition
 * group[=].element[=].display = "Biliäre Fistel"
 * group[=].element[=].target.code = #53206008
 * group[=].element[=].target.display = "Fistula of bile duct (disorder) "
-* group[=].element[=].target.equivalence = #equivalent #unmatched
+* group[=].element[=].target.equivalence = #equivalent 
 * group[=].element[=].target.comment = "Operation complications"
 
 * group[=].element[+].code = #BOG
