@@ -178,7 +178,6 @@
 [mii-pr-onko-nebenwirkung-0]: AdverseEvent-mii-pr-onko-nebenwirkung-0.html
 [mii-sp-onko-diagnose-verification-status]: SearchParameter-mii-sp-onko-diagnose-verification-status.html
 [mii-sp-onko-fernmetastasen-body-site]: SearchParameter-mii-sp-onko-fernmetastasen-body-site.html
-[mii-sp-onko-genetische-variante-note]: SearchParameter-mii-sp-onko-genetische-variante-note.html
 [mii-sp-onko-nebenwirkung-suspectEntity]: SearchParameter-mii-sp-onko-nebenwirkung-suspectEntity.html
 [mii-sp-onko-operation-complication]: SearchParameter-mii-sp-onko-operation-complication.html
 [mii-sp-onko-operation-ext-intention]: SearchParameter-mii-sp-onko-operation-ext-intention.html
