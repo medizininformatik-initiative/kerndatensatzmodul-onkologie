@@ -309,15 +309,5 @@ Usage: #definition
 //----------------------------------------
 // SearchParameters for Genetische Variante
 //----------------------------------------
-Instance: mii-sp-onko-genetische-variante-note
-InstanceOf: SearchParameter
-Usage: #definition
-* insert SP_Publisher
-* insert Version
-* name = "MII_SP_Onko_Genetische_Variante_Note"
-* description = "SearchParameter for Observation.note"
-* status = #active
-* code = #note
-* base = #Observation
-* type = #string
-* expression = "Observation.note"
+
+// No search parameters to cover
