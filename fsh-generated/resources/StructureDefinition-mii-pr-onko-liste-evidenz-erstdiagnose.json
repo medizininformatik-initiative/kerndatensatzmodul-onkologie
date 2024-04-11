@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Dieses Profil beschreibt eine Liste, die alle Observationen enthält, die für eine Erstdiagnostik relevant waren.  (synchrone Observationen im Sinne der Krebsregister)",
+  "description": "Dieses Profil beschreibt eine Liste, die alle Observationen und Berichte enthält, die für eine Erstdiagnostik relevant waren.  (synchrone Observationen im Sinne der Krebsregister)",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -53,6 +53,13 @@
         "id": "List.mode",
         "path": "List.mode",
         "patternCode": "snapshot",
+        "mustSupport": true
+      },
+      {
+        "id": "List.title",
+        "path": "List.title",
+        "min": 1,
+        "patternString": "Liste der Evidenz zum Erstdiagnosezeitpunkt",
         "mustSupport": true
       },
       {
@@ -92,7 +99,8 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Observation"
+              "http://hl7.org/fhir/StructureDefinition/Observation",
+              "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"
             ]
           }
         ],
