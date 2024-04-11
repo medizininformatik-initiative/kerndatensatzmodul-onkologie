@@ -17,52 +17,47 @@
       "target": "http://snomed.info/sct",
       "element": [
         {
-          "code": "7.2",
-          "display": "histologische Untersuchung einer Metastase",
+          "code": "1",
+          "display": "klinisch",
           "target": [
             {
-              "code": "373799005",
-              "display": "Cancer diagnosis based on metastatic histological evidence (finding)",
-              "equivalence": "equivalent",
-              "comment": "Diagnostic certainty for primary tumor"
+              "code": "373795004",
+              "display": "Cancer diagnosis based on clinical evidence (finding)",
+              "equivalence": "equivalent"
             }
           ]
         },
         {
-          "code": "7.3",
-          "display": "histologische Untersuchung eines Primärtumors",
+          "code": "2",
+          "display": "klinische Diagnostik",
           "target": [
             {
-              "code": "373800009",
-              "display": "Cancer diagnosis based on primary site histological evidence (finding)",
-              "equivalence": "unmatched",
-              "comment": "keine direktes Mapping möglich, ggfs. über Postkoordination"
+              "code": "373796003",
+              "display": "Cancer diagnosis based on investigations, without a tissue diagnosis (finding)",
+              "equivalence": "equivalent",
+              "comment": "übergreifender Begriff, gültig für alle diagnostischen Mittel"
             }
           ]
         },
         {
           "target": [
             {
-              "code": "394804000",
-              "display": "Clinical cytogenetics and molecular genetics (qualifier value)",
-              "equivalence": "equivalent",
-              "comment": "Diagnostic certainty for primary tumor"
+              "code": "363680008",
+              "display": "Radiographic imaging procedure (procedure)",
+              "equivalence": "narrower",
+              "comment": "Röntgen als Spezifizierung"
             }
-          ],
-          "code": "8",
-          "display": "Zytogenetisch und/oder molekularer Test"
+          ]
         },
         {
           "target": [
             {
-              "code": "261665006",
-              "display": "Unknown (qualifier value)",
-              "equivalence": "equivalent",
-              "comment": "Diagnostic certainty for primary tumor"
+              "code": "423827005",
+              "display": "Endoscopy (procedure)",
+              "equivalence": "narrower",
+              "comment": "Endoskopie als Spezifizierung"
             }
-          ],
-          "code": "9",
-          "display": "unbekannt"
+          ]
         },
         {
           "target": [
@@ -70,7 +65,7 @@
               "code": "363679005",
               "display": "Imaging (procedure)",
               "equivalence": "narrower",
-              "comment": "Procedure: Imaging"
+              "comment": "Imaging als Spezifizierung"
             }
           ]
         },
@@ -80,7 +75,7 @@
               "code": "16310003",
               "display": "Ultrasonography (procedure)",
               "equivalence": "narrower",
-              "comment": "Procedure: Ultrassound"
+              "comment": "Ultraschall als Spezifizierung"
             }
           ]
         },
@@ -90,7 +85,7 @@
               "code": "122458006",
               "display": "Exploration procedure (procedure)",
               "equivalence": "narrower",
-              "comment": "Procedure: surgery"
+              "comment": "Explorativer Eingriff als Spezifizierung"
             }
           ]
         },
@@ -101,8 +96,7 @@
             {
               "code": "373797007",
               "display": "Cancer diagnosis based on specific tumor markers (finding)",
-              "equivalence": "equivalent",
-              "comment": "Diagnostic certainty for primary tumor"
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -113,8 +107,7 @@
             {
               "code": "373798002",
               "display": "Cancer diagnosis based on cytological evidence (finding)",
-              "equivalence": "equivalent",
-              "comment": "Diagnostic certainty for primary tumor"
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -126,7 +119,7 @@
               "code": "373799005",
               "display": "Cancer diagnosis based on metastatic histological evidence (finding)",
               "equivalence": "equivalent",
-              "comment": "entspricht 7.3"
+              "comment": "Auswahlmöglichkeit veraltet, entspricht 7.2"
             }
           ]
         },
@@ -138,7 +131,7 @@
               "code": "373800009",
               "display": "Cancer diagnosis based on primary site histological evidence (finding)",
               "equivalence": "equivalent",
-              "comment": "entspricht 7.1"
+              "comment": "Auswahlmöglichkeit veraltet, entspricht 7.1"
             }
           ]
         },
@@ -149,8 +142,50 @@
             {
               "code": "373800009",
               "display": "Cancer diagnosis based on primary site histological evidence (finding)",
-              "equivalence": "equivalent",
-              "comment": "Diagnostic certainty for primary tumor"
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "7.2",
+          "display": "histologische Untersuchung einer Metastase",
+          "target": [
+            {
+              "code": "373799005",
+              "display": "Cancer diagnosis based on metastatic histological evidence (finding)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "7.3",
+          "display": "histologische Untersuchung des Gewebes bei Autopsie",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "keine direktes Mapping möglich, ggfs. über Postkoordination mit Autopsie -Prozedur"
+            }
+          ]
+        },
+        {
+          "code": "8",
+          "display": "Zytogenetisch und/oder molekularer Test",
+          "target": [
+            {
+              "code": "394804000",
+              "display": "Clinical cytogenetics and molecular genetics (qualifier value)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "9",
+          "display": "unbekannt",
+          "target": [
+            {
+              "code": "261665006",
+              "display": "Unknown (qualifier value)",
+              "equivalence": "equivalent"
             }
           ]
         }
