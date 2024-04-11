@@ -55,7 +55,7 @@ Usage: #definition
 * group[=].element[=].target.code = #128477000
 * group[=].element[=].target.display = "Abscess (disorder)"
 * group[=].element[=].target.equivalence = #wider
-* group[=].element[=].target.comment = "keine englische Expression für subfaszial gefunden"
+* group[=].element[=].target.comment = "keine englische Expression für die Spezifizierung subfaszial gefunden"
 
 * group[=].element[+].code = #ANI
 * group[=].element[=].display = "Akute Niereninsuffizienz"
