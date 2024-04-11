@@ -15,7 +15,7 @@ Usage: #definition
 * group[=].target = "http://snomed.info/sct"
 
 * group[=].element[+].code = #0
-* group[=].element[=].display = "primär erworbene Melanose ohne zelluläre Atypien" "(nur beim malignen Melanom der Konjunktiva)"
+* group[=].element[=].display = "primär erworbene Melanose ohne zelluläre Atypien (nur beim malignen Melanom der Konjunktiva)"
 * group[=].element[=].target.code = #415175000
 * group[=].element[=].target.display = "Primary acquired melanosis of conjunctiva without atypia (disorder)"
 * group[=].element[=].target.equivalence = #equivalent

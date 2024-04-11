@@ -11,7 +11,7 @@ Usage: #definition
 * purpose = "Technical mapping to transform oBDS-Data into SNOMED"
 * sourceUri = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/"
 * targetUri[+] = "http://snomed.info/sct"
-* group[+].source = $mii-cs-onko-therapieplanung
+* group[+].source = $mii-cs-onko-therapieplanung-typ
 * group[=].target = "http://snomed.info/sct"
 
 * group[=].element[+].code = #praeth
@@ -27,7 +27,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #wider
 
 * group[=].element[+].code = #postth
-* group[=].element[=].display = "posttherapeutische Tumorkonferenz (manche Tumoren werden nicht operiert)"
+* group[=].element[=].display = "posttherapeutische Tumorkonferenz (manche Tumore werden nicht operiert)"
 * group[=].element[=].target.code = #303110006
 * group[=].element[=].target.display = "Postprocedural period (qualifier value)"
 * group[=].element[=].target.equivalence = #wider

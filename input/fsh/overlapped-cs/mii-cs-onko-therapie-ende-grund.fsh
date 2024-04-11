@@ -22,30 +22,3 @@ Description: "oBDS-spezifisches Codesystem für Klassifikation des Grundes der B
 * #U "unbekannt"
 
 
-
-/*
-P = perkutan (Teletherapie)
-P-ST = perkutan stereotaktisch
-P-4D = perkutan, atemgetriggert
-P-ST4D = perkutan, stereotaktisch, atemgetriggert
-PRCN-ST = perkutan, stereotaktisch ohne Chemotherapie/Sensitizer
-PRCN-4D = perkutan, atemgetriggert, ohne Chemotherapie/Sensitizer
-PRCN-ST4D = perkutan, stereotaktisch, atemgetriggert, ohne Chemotherapie/Sensitizer
-PRCJ = perkutan mit Chemotherapie/Sensitizer
-PRCJ-4D = perkutan, atemgetriggert, mit Chemotherapie/Sensitizer
-K = endokavitäre Kontakttherapie
-KHDR = endokavitäre Kontakttherapie, high dose rate therapy
-KLDR = endokavitäre Kontakttherapie, low dose rate therapy
-KPDR = endokavitäre Kontakttherapie, pulsed dose rate therapy
-I = intersitielle Kontakttherapie
-IHDR = intersitielle Kontakttherapie, high dose rate therapy
-ILDR = intersitielle Kontakttherapie, low dose rate therapy
-IPDR = intersitielle Kontakttherapie, pulsed dose rate therapy
-MSIRT = selektive interne Radio-Therapie
-MPRRT = Peptid-Radio-Rezeptor-Therapie
-MPSMA = PSMA-Therapie
-MRJT = Radiojod-Therapie
-MRIT = Radioimmun-Therapie
-M = sonstige metabolische Radionuklidtherapie
-S = Sonstiges
-*/

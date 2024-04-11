@@ -14,10 +14,6 @@ Usage: #definition
 * group[+].source = $mii-cs-onko-tod
 * group[=].target = "http://snomed.info/sct"
 
-* #J "Ja, die Person ist an einer Tumorerkrankung oder Folge einer Tumorerkrankung (einschließlich Behandlungskomplikation) verstorben."
-* #N "Nein, die Person ist nicht an einer Tumorerkrankung oder Folge einer Tumorerkrankung (einschließlich Behandlungskomplikation) verstorben."
-* #U "unbekannt"
-
 * group[=].element[+].code = #J
 * group[=].element[=].display = "Ja, die Person ist an einer Tumorerkrankung oder Folge einer Tumorerkrankung (einschließlich Behandlungskomplikation) verstorben."
 * group[=].element[=].target.code = #373066001
