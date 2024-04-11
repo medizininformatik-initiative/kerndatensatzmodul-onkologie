@@ -18,7 +18,7 @@ Usage: #definition
 * group[=].element[=].display = "perkutan (Teletherapie)"
 * group[=].element[=].target.code = #33195004
 * group[=].element[=].target.display = "External beam radiation therapy procedure (procedure)"
-* group[=].element[=].target.equivalence = #equivalent //?
+* group[=].element[=].target.equivalence = #equivalent 
 
 * group[=].element[+].code = #P-ST
 * group[=].element[=].display = "perkutan stereotaktisch"
@@ -35,6 +35,7 @@ Usage: #definition
 * group[=].element[+].code = #P-ST4D
 * group[=].element[=].display = "perkutan, stereotaktisch, atemgetriggert"
 * group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target.comment = "Einzelkonzepte über SNOMED abbildbar"
 
 * group[=].element[+].code = #PRCN-ST
 * group[=].element[=].display = "perkutan, stereotaktisch ohne Chemotherapie/Sensitizer"
