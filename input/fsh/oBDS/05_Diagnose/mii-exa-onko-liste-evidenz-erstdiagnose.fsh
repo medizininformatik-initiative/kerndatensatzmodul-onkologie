@@ -2,7 +2,7 @@ Instance: mii-exa-onko-liste-evidenz-erstdiagnose-1
 InstanceOf: mii-pr-onko-liste-evidenz-erstdiagnose
 Usage: #example
 Description: "Eine Beispielliste, welche Observations zur Diagnosestellung präsent waren"
-* status = #active
+* status = #current
 * mode = #snapshot
 * title = "Liste der Evidenz zum Erstdiagnosezeitpunkt"
 * subject = Reference(Patient/example)
