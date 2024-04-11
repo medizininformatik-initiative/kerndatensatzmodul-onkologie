@@ -2,7 +2,7 @@ Instance: mii-exa-onko-befund-1
 InstanceOf: mii-pr-onko-befund
 Usage: #example
 * status = #final
-* subject= Reference(Patient/example)
+* subject = Reference(Patient/example)
 
 
 * basedOn = Reference(CarePlan/example-tumorboard-1)
