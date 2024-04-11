@@ -29,6 +29,10 @@ Description: "Dieses Profil beschreibt eine Diagnose in der Onkologie"
 * bodySite.coding[primaertumorSeitenlokalisation].system 1.. MS
 * bodySite.coding[primaertumorSeitenlokalisation] ^patternCoding.system = $mii-cs-onko-seitenlokalisation
 * bodySite.coding[primaertumorSeitenlokalisation].code 1.. MS
+* evidence 0..1 MS
+* evidence.detail MS
+* evidence.detail only Reference(MII_PR_Onko_Liste_Evidenz_Erstdiagnose)
+
 
 Mapping: FHIR-oBDS-Diagnose
 Id: oBDS
