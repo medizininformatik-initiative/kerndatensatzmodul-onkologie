@@ -1,5 +1,5 @@
-Instance: mii-exa-onko-anzahl-befallene-lymphknoten-0
-InstanceOf: mii-pr-onko-anzahl-befallene-lymphknoten
+Instance: mii-exa-onko-anzahl-untersuchte-sentinel-lymphknoten-0
+InstanceOf: mii-pr-onko-anzahl-untersuchte-sentinel-lymphknoten
 Usage: #example
 * status = #final
 * category[laboratory] = $observation-category#laboratory

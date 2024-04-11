@@ -138,12 +138,16 @@
 [mii-cps-onko-capabilitystatement]: CapabilityStatement-mii-cps-onko-capabilitystatement.html
 [mii-exa-onko-allgemeiner-leistungszustand-1]: Observation-mii-exa-onko-allgemeiner-leistungszustand-1.html
 [mii-exa-onko-anzahl-befallene-lymphknoten-0]: Observation-mii-exa-onko-anzahl-befallene-lymphknoten-0.html
+[mii-exa-onko-anzahl-befallene-sentinel-lymphknoten-0]: Observation-mii-exa-onko-anzahl-befallene-sentinel-lymphknoten-0.html
 [mii-exa-onko-anzahl-untersuchte-lymphknoten-23]: Observation-mii-exa-onko-anzahl-untersuchte-lymphknoten-23.html
+[mii-exa-onko-anzahl-untersuchte-sentinel-lymphknoten-0]: Observation-mii-exa-onko-anzahl-untersuchte-sentinel-lymphknoten-0.html
 [mii-exa-onko-diagnose]: Condition-mii-exa-onko-diagnose.html
 [mii-exa-onko-fernmetastasen-1]: Observation-mii-exa-onko-fernmetastasen-1.html
 [mii-exa-onko-genetische-variante-braf]: Observation-mii-exa-onko-genetische-variante-braf.html
 [mii-exa-onko-histologie-icdo3]: Observation-mii-exa-onko-histologie-icdo3.html
+[mii-exa-onko-liste-evidenz-erstdiagnose-1]: List-mii-exa-onko-liste-evidenz-erstdiagnose-1.html
 [mii-exa-onko-residualstatus-1]: Observation-mii-exa-onko-residualstatus-1.html
+[mii-exa-onko-specimen-1]: Specimen-mii-exa-onko-specimen-1.html
 [mii-exa-onko-tnm-klassifikation-TisN0M0]: Observation-mii-exa-onko-tnm-klassifikation-TisN0M0.html
 [mii-exa-onko-tnm-klassifikation-uT2a2pN0023i-sncM1]: Observation-mii-exa-onko-tnm-klassifikation-uT2a2pN0023i-sncM1.html
 [mii-exa-onko-tnm-m-kategorie-cM1]: Observation-mii-exa-onko-tnm-m-kategorie-cM1.html
