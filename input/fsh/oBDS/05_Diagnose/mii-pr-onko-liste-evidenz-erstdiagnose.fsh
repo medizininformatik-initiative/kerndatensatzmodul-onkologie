@@ -10,11 +10,13 @@ Description: "Dieses Profil beschreibt eine Liste, die alle Observationen enthä
 * subject 1..1 MS
 * subject only Reference(Patient)
 * encounter 0..1 MS
-* mode MS 
+* mode 1..1 MS 
 * mode = #snapshot
-* status MS
+* status 1..1 MS
 * status = #current
+* title 1..1 MS
+* title = "Liste der Evidenz zum Erstdiagnosezeitpunkt"
 * entry 1.. MS 
 * entry.flag MS
 * entry.item MS
-* entry.item only Reference(Observation)
+* entry.item only Reference(Observation or Condition or DiagnosticReport)
