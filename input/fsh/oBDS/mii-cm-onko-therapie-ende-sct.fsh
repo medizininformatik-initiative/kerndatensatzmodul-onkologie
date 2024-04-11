@@ -65,5 +65,5 @@ Usage: #definition
 * group[=].element[0].code = #U
 * group[=].element[=].display = "unbekannt"
 * group[=].element[=].target.code = #261665006
-* group[=].element[=].target.display = Unknown (qualifier value) "
+* group[=].element[=].target.display = "Unknown (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
