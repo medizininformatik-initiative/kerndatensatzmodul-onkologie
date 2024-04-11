@@ -12,7 +12,7 @@ Usage: #definition
 //* targetCanonical = "http://snomed.info/sct?fhir_vs"
 * group.source = "https://www.uicc.org/resources/tnm"
 * group.target = "http://snomed.info/sct"
-* group.element[0].code = #y
+* group.element[+].code = #y
 * group.element[=].display = "y"
 * group.element[=].target.code = #421755005
 * group.element[=].target.display = "Tumor staging descriptor y (tumor staging)"
