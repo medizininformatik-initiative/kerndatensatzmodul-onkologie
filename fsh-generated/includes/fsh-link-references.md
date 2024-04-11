@@ -152,9 +152,11 @@
 [mii-exa-onko-anzahl-befallene-sentinel-lymphknoten-0]: Observation-mii-exa-onko-anzahl-befallene-sentinel-lymphknoten-0.html
 [mii-exa-onko-anzahl-untersuchte-lymphknoten-23]: Observation-mii-exa-onko-anzahl-untersuchte-lymphknoten-23.html
 [mii-exa-onko-anzahl-untersuchte-sentinel-lymphknoten-0]: Observation-mii-exa-onko-anzahl-untersuchte-sentinel-lymphknoten-0.html
+[mii-exa-onko-befund-1]: DiagnosticReport-mii-exa-onko-befund-1.html
 [mii-exa-onko-diagnose]: Condition-mii-exa-onko-diagnose.html
 [mii-exa-onko-fernmetastasen-1]: Observation-mii-exa-onko-fernmetastasen-1.html
 [mii-exa-onko-genetische-variante-braf]: Observation-mii-exa-onko-genetische-variante-braf.html
+[mii-exa-onko-grading-1]: Observation-mii-exa-onko-grading-1.html
 [mii-exa-onko-histologie-icdo3]: Observation-mii-exa-onko-histologie-icdo3.html
 [mii-exa-onko-liste-evidenz-erstdiagnose-1]: List-mii-exa-onko-liste-evidenz-erstdiagnose-1.html
 [mii-exa-onko-residualstatus-1]: Observation-mii-exa-onko-residualstatus-1.html
