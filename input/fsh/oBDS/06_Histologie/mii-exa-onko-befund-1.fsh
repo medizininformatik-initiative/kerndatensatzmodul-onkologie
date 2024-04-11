@@ -1,5 +1,5 @@
-Instance: mii-exa-onko-specimen-1
-InstanceOf: mii-pr-onko-specimen
+Instance: mii-exa-onko-befund-1
+InstanceOf: mii-pr-onko-befund
 Usage: #example
 * status = #final
 * subject= Reference(Patient/example)
