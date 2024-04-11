@@ -54,7 +54,7 @@ Usage: #definition
 * group[=].element[=].display = "Sonstige (inklusive Mixed Beams, exklusive Nuklide)"
 * group[=].element[=].target.code = #74964007
 * group[=].element[=].target.display = "Other (qualifier value)"
-* group[=].element[=].target.equivalence = #wider //?
+* group[=].element[=].target.equivalence = #equivalent
 
 * group[=].element[+].code = #LU-177
 * group[=].element[=].display = "Lu-177"
@@ -118,4 +118,4 @@ Usage: #definition
 * group[=].element[=].display = "Sonstige Nuklide"
 * group[=].element[=].target.code = #89457008
 * group[=].element[=].target.display = "Radioactive isotope (substance)"
-* group[=].element[=].target.equivalence = #equivalent //?
+* group[=].element[=].target.equivalence = #equivalent

@@ -24,22 +24,22 @@ Usage: #definition
 * group[=].element[=].display = "simultan integrierter Boost"
 * group[=].element[=].target.code = #445232009
 * group[=].element[=].target.display = "Boost radiation therapy (procedure)"
-* group[=].element[=].target.equivalence = #narrower
+* group[=].element[=].target.equivalence = #wider
 
 * group[=].element[+].code = #SEQ
 * group[=].element[=].display = "sequentieller Boost"
 * group[=].element[=].target.code = #445232009
 * group[=].element[=].target.display = "Boost radiation therapy (procedure)"
-* group[=].element[=].target.equivalence = #narrower
+* group[=].element[=].target.equivalence = #wider
 
 * group[=].element[+].code = #KON
 * group[=].element[=].display = "konkomitanter Boost"
 * group[=].element[=].target.code = #445232009
 * group[=].element[=].target.display = "Boost radiation therapy (procedure)"
-* group[=].element[=].target.equivalence = #narrower
+* group[=].element[=].target.equivalence = #wider
 
 * group[=].element[+].code = #N
 * group[=].element[=].display = "nein, ohne Boost"
 * group[=].element[=].target.code = #373067005
 * group[=].element[=].target.display = "No (qualifier value)"
-* group[=].element[=].target.equivalence = #wider
+* group[=].element[=].target.equivalence = #equivalent

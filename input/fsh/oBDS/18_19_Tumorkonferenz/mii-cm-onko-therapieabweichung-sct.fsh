@@ -19,18 +19,15 @@ Usage: #definition
 * group[=].element[=].target.code = #373066001
 * group[=].element[=].target.display = "Yes (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Deviation from therapy based on patient opinion"
 
 * group[=].element[0].code = #N
 * group[=].element[=].display = "nein"
 * group[=].element[=].target.code = #373067005
 * group[=].element[=].target.display = "No (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Deviation from therapy based on patient opinion"
 
 * group[=].element[0].code = #U
 * group[=].element[=].display = "unbekannt"
 * group[=].element[=].target.code = #261665006
 * group[=].element[=].target.display = "Unknown (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Deviation from therapy based on patient opinion"
