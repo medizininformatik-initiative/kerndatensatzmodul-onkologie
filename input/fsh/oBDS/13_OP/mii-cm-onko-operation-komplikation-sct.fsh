@@ -33,7 +33,7 @@ Usage: #definition
 * group[=].element[=].target.code = #128477000
 * group[=].element[=].target.display = "Abscess (disorder)"
 * group[=].element[=].target.equivalence = #wider
-* group[=].element[=].target.comment = "Abzsess in Drainagekanal existiert nicht als konzept, kann ggfs. über Postkoordination konstruiert werden"
+* group[=].element[=].target.comment = "Abzsess in Drainagekanal existiert nicht als Konzept, kann ggfs. über Postkoordination konstruiert werden"
 
 * group[=].element[+].code = #ABS
 * group[=].element[=].display = "Abszess, intraabdominaler oder intrathorakaler"
@@ -98,7 +98,7 @@ Usage: #definition
 * group[=].element[=].display = "Biliäre Fistel"
 * group[=].element[=].target.code = #53206008
 * group[=].element[=].target.display = "Fistula of bile duct (disorder) "
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.equivalence = #equivalent #unmatched
 * group[=].element[=].target.comment = "Operation complications"
 
 * group[=].element[+].code = #BOG
