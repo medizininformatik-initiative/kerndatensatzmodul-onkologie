@@ -1,0 +1,100 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "MII-CM-Onko-Grading-SCT-Mapping",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-grading-sct",
+  "name": "MII_CM_Onko_Grading_SNOMED_Mapping",
+  "title": "MII CM Onko Grading SNOMED Mapping",
+  "status": "draft",
+  "experimental": false,
+  "date": "2024-04-11",
+  "description": "Mapping Grading Codes zu SNOMED-CT",
+  "purpose": "Technical mapping to transform oBDS-Data into SNOMED",
+  "sourceUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
+  "targetUri": "http://snomed.info/sct",
+  "group": [
+    {
+      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading",
+      "target": "http://snomed.info/sct",
+      "element": [
+        {
+          "code": "L",
+          "display": "low grade (G1 oder G2)",
+          "target": [
+            {
+              "code": "1155708003",
+              "display": "Low histologic grade (qualifier value)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "M",
+          "display": "intermediate grade (G2 oder G3)",
+          "target": [
+            {
+              "code": "1286893008",
+              "display": "Intermediate histologic grade (qualifier value)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "H",
+          "display": "high grade (G3 oder G4)",
+          "target": [
+            {
+              "code": "1155707008",
+              "display": "High histologic grade (qualifier value)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "B",
+          "display": "Borderline",
+          "target": [
+            {
+              "code": "1268929003",
+              "display": "GB: Borderline tumor (qualifier value)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "U",
+          "display": "unbekannt",
+          "target": [
+            {
+              "code": "261665006",
+              "display": "Unknown (qualifier value)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "T",
+          "display": "trifft nicht zu",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "comment": "Diagnostic certainty for primary tumor",
+              "code": "385432009",
+              "display": "Not applicable (qualifier value)"
+            }
+          ]
+        },
+        {
+          "code": "X",
+          "display": "nicht bestimmbar",
+          "target": [
+            {
+              "code": "1155705000",
+              "display": "GX: Histologic grade cannot be assessed (qualifier value)",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "MII-CM-Onko-Strahlentherapie-Strahleneinheit-SCT-Mapping",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-strahlentherapie-strahleneinheit-sct",
+  "name": "MII_CM_Onko_Strahlentherapie_Strahleneinheit_SNOMED_Mapping",
+  "title": "MII CM Onko Strahlentherapie Strahleneinheit SNOMED Mapping",
+  "status": "draft",
+  "experimental": false,
+  "date": "2024-04-11",
+  "description": "Mapping Strahlentherapie Strahleneinheit Codes zu SNOMED-CT",
+  "purpose": "Technical mapping to transform oBDS-Data into SNOMED",
+  "sourceUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
+  "targetUri": "http://snomed.info/sct",
+  "group": [
+    {
+      "source": "http://unitsofmeasure.org",
+      "target": "http://snomed.info/sct",
+      "element": [
+        {
+          "code": "Gy",
+          "display": "Gy",
+          "target": [
+            {
+              "code": "229029004",
+              "display": "Gray (qualifier value)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "kBq",
+          "display": "kBq",
+          "target": [
+            {
+              "code": "418931004",
+              "display": "Gigabecquerel (qualifier value)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "MBq",
+          "display": "MBq",
+          "target": [
+            {
+              "code": "229034000",
+              "display": "Megabecquerel (qualifier value)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "GBq",
+          "display": "GBq",
+          "target": [
+            {
+              "code": "282143001",
+              "display": "Kilobecquerel (qualifier value)",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
