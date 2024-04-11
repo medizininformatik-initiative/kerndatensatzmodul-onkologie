@@ -1,0 +1,77 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "MII-CM-Onko-Strahlentherapie-Boost-SCT-Mapping",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-strahlentherapie-boost-sct",
+  "name": "MII_CM_Onko_Strahlentherapie_Boost_SNOMED_Mapping",
+  "title": "MII CM Onko Strahlentherapie Boost SNOMED Mapping",
+  "status": "draft",
+  "experimental": false,
+  "date": "2024-04-11",
+  "description": "Mapping Strahlentherapie Boost Codes zu SNOMED-CT",
+  "purpose": "Technical mapping to transform oBDS-Data into SNOMED",
+  "sourceUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
+  "targetUri": "http://snomed.info/sct",
+  "group": [
+    {
+      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost",
+      "target": "http://snomed.info/sct",
+      "element": [
+        {
+          "code": "J",
+          "display": "ja, mit Boost o. n. A.",
+          "target": [
+            {
+              "code": "445232009",
+              "display": "Boost radiation therapy (procedure)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SIB",
+          "display": "simultan integrierter Boost",
+          "target": [
+            {
+              "code": "445232009",
+              "display": "Boost radiation therapy (procedure)",
+              "equivalence": "narrower"
+            }
+          ]
+        },
+        {
+          "code": "SEQ",
+          "display": "sequentieller Boost",
+          "target": [
+            {
+              "code": "445232009",
+              "display": "Boost radiation therapy (procedure)",
+              "equivalence": "narrower"
+            }
+          ]
+        },
+        {
+          "code": "KON",
+          "display": "konkomitanter Boost",
+          "target": [
+            {
+              "code": "445232009",
+              "display": "Boost radiation therapy (procedure)",
+              "equivalence": "narrower"
+            }
+          ]
+        },
+        {
+          "code": "N",
+          "display": "nein, ohne Boost",
+          "target": [
+            {
+              "code": "373067005",
+              "display": "No (qualifier value)",
+              "equivalence": "wider"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
