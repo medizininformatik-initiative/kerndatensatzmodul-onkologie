@@ -14,55 +14,59 @@ Usage: #definition
 * group[+].source = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende"
 * group[=].target = "http://snomed.info/sct"
 
-// Excel und CS weichen voneinander ab
-
-* group[=].element[0].code = #E
+* group[=].element[+].code = #E
 * group[=].element[=].display = "reguläres Ende"
 * group[=].element[=].target.code = #261782000
 * group[=].element[=].target.display = "End (qualifier value)"
-* group[=].element[=].target.equivalence = #equivalent //?
+* group[=].element[=].target.equivalence = #equivalent 
+* group[=].element[=].target.comment = "ggfs. Postkoordination bei Abgrenzung zu den anderen End-Begrifen" 
 
-* group[=].element[0].code = #R
+* group[=].element[+].code = #R
 * group[=].element[=].display = "reguläres Ende mit Dosisreduktion"
 * group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target.comment = "ggfs. Postkoordination von Dosisreduktion" 
 
-* group[=].element[0].code = #W
+* group[=].element[+].code = #W
 * group[=].element[=].display = "reguläres Ende mit Substanzwechsel"
 * group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target.comment = "ggfs. Postkoordination von Substanzwechsel" 
 
-* group[=].element[0].code = #A
+* group[=].element[+].code = #A
 * group[=].element[=].display = "Abbruch wegen Nebenwirkungen"
 * group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target.comment = "ggfs. Postkoordination von Substanzwechsel" 
 
-* group[=].element[0].code = #P
+* group[=].element[+].code = #P
 * group[=].element[=].display = "Abbruch wegen Progress"
 * group[=].element[=].target.code = #419835002
 * group[=].element[=].target.display = "Tumor progression (finding)"
-* group[=].element[=].target.equivalence = #equivalent //?
+* group[=].element[=].target.equivalence = #wider 
+* group[=].element[=].target.comment = "ggfs. Postkoordination " 
 
-* group[=].element[0].code = #S
+* group[=].element[+].code = #S
 * group[=].element[=].display = "Abbruch aus sonstigen Gründen"
 * group[=].element[=].target.code = #74964007
 * group[=].element[=].target.display = "Other (qualifier value)"
 * group[=].element[=].target.equivalence = #wider
+* group[=].element[=].target.comment = "ggfs. Postkoordination" 
 
-* group[=].element[0].code = #V
+* group[=].element[+].code = #V
 * group[=].element[=].display = "Patient verweigert weitere Therapie"
-* group[=].element[=].target.code = #16633941000119101
-* group[=].element[=].target.display = "Radiotherapy declined by patient (situation)"
+* group[=].element[=].target.code = #183948000
+* group[=].element[=].target.display = " Procedure declined by parent (situation)"
 * group[=].element[=].target.equivalence = #equivalent
 
-* group[=].element[0].code = #T
+* group[=].element[+].code = #T
 * group[=].element[=].display = "Patient verstorben"
 * group[=].element[=].target.code = #419099009
 * group[=].element[=].target.display = "Dead (finding)"
 * group[=].element[=].target.equivalence = #equivalent
 
-* group[=].element[0].code = #F
+* group[=].element[+].code = #F
 * group[=].element[=].display = "Zieldosis erreicht mit Unterbrechung > 3 Kalendertage"
 * group[=].element[=].target.equivalence = #unmatched
 
-* group[=].element[0].code = #U
+* group[=].element[+].code = #U
 * group[=].element[=].display = "unbekannt"
 * group[=].element[=].target.code = #261665006
 * group[=].element[=].target.display = "Unknown (qualifier value)"
