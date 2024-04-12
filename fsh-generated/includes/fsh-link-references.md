@@ -191,6 +191,9 @@
 [mii-sp-onko-strahlentherapie-extension-bestrahlung-zielgebiet]: SearchParameter-mii-sp-onko-strahlentherapie-extension-bestrahlung-zielgebiet.html
 [mii-sp-onko-strahlentherapie-outcome]: SearchParameter-mii-sp-onko-strahlentherapie-outcome.html
 [mii-sp-onko-tnm-klassifikation-has-member]: SearchParameter-mii-sp-onko-tnm-klassifikation-has-member.html
+[mii-sp-onko-tod-derived-from]: SearchParameter-mii-sp-onko-tod-derived-from.html
+[mii-sp-onko-tod-encounter]: SearchParameter-mii-sp-onko-tod-encounter.html
+[mii-sp-onko-tod-focus]: SearchParameter-mii-sp-onko-tod-focus.html
 [mii-sp-onko-tod-interpretation]: SearchParameter-mii-sp-onko-tod-interpretation.html
 [mii-sp-onko-tumorkonferenz-addresses]: SearchParameter-mii-sp-onko-tumorkonferenz-addresses.html
 [mii-sp-onko-tumorkonferenz-contributor]: SearchParameter-mii-sp-onko-tumorkonferenz-contributor.html
