@@ -19,14 +19,79 @@
         {
           "target": [
             {
-              "code": "385432009",
-              "display": "Not applicable (qualifier value)",
+              "code": "399687005",
+              "display": "Anatomic location of primary malignant neoplasm (observable entity)",
               "equivalence": "equivalent",
               "comment": "Mapping of Seitenlokalisation to SNOMED"
             }
-          ],
+          ]
+        },
+        {
+          "code": "L",
+          "display": "links",
+          "target": [
+            {
+              "code": "7771000",
+              "display": "Left (qualifier value)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "R",
+          "display": "rechts",
+          "target": [
+            {
+              "code": "24028007",
+              "display": "Right (qualifier value) ",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "B",
+          "display": "beidseitig",
+          "target": [
+            {
+              "code": "51440002",
+              "display": "Right and left (qualifier value)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "M",
+          "display": "Mittellinie/mittig",
+          "target": [
+            {
+              "code": "260528009",
+              "display": "Median (qualifier value)",
+              "equivalence": "equivalent",
+              "comment": "Mapping of Seitenlokalisation to SNOMED"
+            }
+          ]
+        },
+        {
+          "code": "U",
+          "display": "unbekannt",
+          "target": [
+            {
+              "code": "261665006",
+              "display": "Unknown (qualifier value)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
           "code": "T",
-          "display": "trifft nicht zu"
+          "display": "trifft nicht zu",
+          "target": [
+            {
+              "code": "385432009",
+              "display": "Not applicable (qualifier value)",
+              "equivalence": "equivalent"
+            }
+          ]
         }
       ]
     }
