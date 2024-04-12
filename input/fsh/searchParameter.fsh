@@ -306,6 +306,45 @@ Usage: #definition
 * type = #token
 * expression = "Observation.interpretation"
 
+Instance: mii-sp-onko-tod-focus
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert Version
+* name = "MII_SP_Onko_Tod_Focus"
+* description = "SearchParameter for Observation.focus"
+* status = #active
+* code = #focus
+* base = #Observation
+* type = #reference
+* expression = "Observation.focus"
+
+Instance: mii-sp-onko-tod-encounter
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert Version
+* name = "MII_SP_Onko_Tod_Encounter"
+* description = "SearchParameter for Observation.encounter"
+* status = #active
+* code = #encounter
+* base = #Observation
+* type = #reference
+* expression = "Observation.encounter"
+
+Instance: mii-sp-onko-tod-derived-from
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert Version
+* name = "MII_SP_Onko_Tod_DerivedFrom"
+* description = "SearchParameter for Observation.derivedFrom"
+* status = #active
+* code = #derived-from
+* base = #Observation
+* type = #reference
+* expression = "Observation.derived-from"
+
 //----------------------------------------
 // SearchParameters for Genetische Variante
 //----------------------------------------
