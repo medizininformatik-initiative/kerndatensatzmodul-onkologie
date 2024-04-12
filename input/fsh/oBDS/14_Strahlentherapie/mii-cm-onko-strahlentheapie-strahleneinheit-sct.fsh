@@ -21,7 +21,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 
 * group[=].element[+].code = #GBq
-* group[=].element[=].display = "kBq"
+* group[=].element[=].display = "GBq"
 * group[=].element[=].target.code = #418931004
 * group[=].element[=].target.display = "Gigabecquerel (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
