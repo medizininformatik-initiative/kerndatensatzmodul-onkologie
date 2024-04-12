@@ -17,6 +17,66 @@
       "target": "http://snomed.info/sct",
       "element": [
         {
+          "code": "M",
+          "display": "Mutation/positiv",
+          "target": [
+            {
+              "code": "55446002",
+              "display": "Genetic mutation (finding)",
+              "equivalence": "equivalent",
+              "comment": "Genetic variants to SNOMED mapping"
+            }
+          ]
+        },
+        {
+          "code": "W",
+          "display": "Wildtyp/nicht mutiert/ negativ",
+          "target": [
+            {
+              "code": "412730000",
+              "display": "Genetic finding not detected (finding)",
+              "equivalence": "equivalent",
+              "comment": "Genetic variants to SNOMED mapping"
+            }
+          ]
+        },
+        {
+          "code": "P",
+          "display": "Polymorphismus",
+          "target": [
+            {
+              "code": "50334000",
+              "display": "Genetic polymorphism (finding)",
+              "equivalence": "equivalent",
+              "comment": "Genetic variants to SNOMED mapping"
+            }
+          ]
+        },
+        {
+          "code": "S",
+          "display": "Sonstiges",
+          "target": [
+            {
+              "code": "74964007",
+              "display": "Other (qualifier value)",
+              "equivalence": "equivalent",
+              "comment": "Genetic variants to SNOMED mapping"
+            }
+          ]
+        },
+        {
+          "code": "N",
+          "display": "Nicht bestimmbar",
+          "target": [
+            {
+              "code": "1156316003",
+              "display": "Cannot be determined (qualifier value)",
+              "equivalence": "equivalent",
+              "comment": "Genetic variants to SNOMED mapping"
+            }
+          ]
+        },
+        {
           "code": "U",
           "display": "Unbekannt",
           "target": [
