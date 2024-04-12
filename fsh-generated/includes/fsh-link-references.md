@@ -1,9 +1,9 @@
 [mii-exa-onko-systemische-therapie-medikation1]: MedicationStatement-mii-exa-onko-systemische-therapie-medikation1.html
 [mii-exa-onko-strahlentherapie]: Procedure-mii-exa-onko-strahlentherapie.html
+[mii-exa-onko-operation-1]: Procedure-mii-exa-onko-operation-1.html
 [mii-exa-onko-systemische-therapie-1]: Procedure-mii-exa-onko-systemische-therapie-1.html
 [FIGO-Observation-2]: Observation-FIGO-Observation-2.html
 [mii-exa-onko-liste-evidenz-erstdiagnose-1]: List-mii-exa-onko-liste-evidenz-erstdiagnose-1.html
-[MII-CM-Onko-oBDS-SCT-Mapping]: ConceptMap-MII-CM-Onko-oBDS-SCT-Mapping.html
 [MII-CM-Onko-Allgemeiner-Leistungszustand-SCT-Mapping]: ConceptMap-MII-CM-Onko-Allgemeiner-Leistungszustand-SCT-Mapping.html
 [MII-CM-Onko-Genetische-Variante-Auspraegung-SCT-Mapping]: ConceptMap-MII-CM-Onko-Genetische-Variante-Auspraegung-SCT-Mapping.html
 [MII-CM-Onko-Grading-SCT-Mapping]: ConceptMap-MII-CM-Onko-Grading-SCT-Mapping.html
@@ -198,6 +198,7 @@
 [mii-sp-onko-tumorkonferenz-addresses]: SearchParameter-mii-sp-onko-tumorkonferenz-addresses.html
 [mii-sp-onko-tumorkonferenz-contributor]: SearchParameter-mii-sp-onko-tumorkonferenz-contributor.html
 [mii-sp-onko-tumorkonferenz-created]: SearchParameter-mii-sp-onko-tumorkonferenz-created.html
+[MII-CM-Onko-Fernmetastasen-SCT-Mapping]: ConceptMap-MII-CM-Onko-Fernmetastasen-SCT-Mapping.html
 [MII_VS_Onko_Genetische_Variante_Auspraegung]: ValueSet-mii-vs-onko-genetische-variante-auspraegung.html
 [PatientKimMusterperson]: Patient-PatientKimMusterperson.html
 [PatientKimMusterperson-Diagnosis-1]: Condition-PatientKimMusterperson-Diagnosis-1.html

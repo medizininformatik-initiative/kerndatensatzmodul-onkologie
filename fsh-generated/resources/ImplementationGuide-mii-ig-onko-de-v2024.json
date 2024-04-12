@@ -44,8 +44,8 @@
     },
     {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.prozedur",
-      "version": "2024.0.0",
-      "uri": "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/ImplementationGuide/mii-ig-prozedur-de-v2024",
+      "version": "2024.0.0-ballot",
+      "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.prozedur/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.prozedur",
       "id": "de_medizininformatikinitiative_kerndatensatz_prozedur"
     },
     {
@@ -93,6 +93,14 @@
       },
       {
         "reference": {
+          "reference": "Procedure/mii-exa-onko-operation-1"
+        },
+        "name": "Example surgical therapy",
+        "description": "Example surgical therapy",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation"
+      },
+      {
+        "reference": {
           "reference": "Procedure/mii-exa-onko-systemische-therapie-1"
         },
         "name": "Example systemic therapy",
@@ -114,14 +122,6 @@
         "name": "Liste der Evidenz zum Erstdiagnosezeitpunkt",
         "description": "Eine Beispielliste, welche Observations zur Diagnosestellung präsent waren",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-liste-evidenz-erstdiagnose"
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/MII-CM-Onko-oBDS-SCT-Mapping"
-        },
-        "name": "Mapping",
-        "description": "Mapping der Fernmetastasen-Codesystems  auf SNOMED",
-        "exampleBoolean": true
       },
       {
         "reference": {
@@ -1646,6 +1646,14 @@
         "name": "mii-sp-onko-tumorkonferenz-created",
         "description": "SearchParameter for CarePlan.created",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/MII-CM-Onko-Fernmetastasen-SCT-Mapping"
+        },
+        "name": "MII_CM_Onko_Fernmetastasen_SCT_Mapping",
+        "description": "Mapping der Fernmetastasen-Codesystems  auf SNOMED",
+        "exampleBoolean": true
       },
       {
         "reference": {
