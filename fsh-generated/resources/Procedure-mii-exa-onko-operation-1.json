@@ -1,0 +1,65 @@
+{
+  "resourceType": "Procedure",
+  "id": "mii-exa-onko-operation-1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/ops",
+        "code": "5-870",
+        "display": "Partielle (brusterhaltende) Exzision der Mamma und Destruktion von Mammagewebe",
+        "version": "OPS 2021"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "encounter": {
+    "reference": "Encounter/example"
+  },
+  "basedOn": [
+    {
+      "reference": "CarePlan/example"
+    }
+  ],
+  "status": "final",
+  "extension": [
+    {
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "K",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention"
+          }
+        ]
+      },
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention"
+    }
+  ],
+  "performedDateTime": "2021-12-04",
+  "complication": [
+    {
+      "coding": [
+        {
+          "code": "HNK",
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation",
+          "display": "Hautnekrose im Operationsbereich"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "coding": [
+      {
+        "code": "R1",
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus",
+        "display": "Mikroskopischer Residualtumor"
+      }
+    ]
+  }
+}

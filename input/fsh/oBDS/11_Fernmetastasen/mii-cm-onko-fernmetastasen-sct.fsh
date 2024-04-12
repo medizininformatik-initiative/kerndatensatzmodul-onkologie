@@ -1,7 +1,7 @@
-Instance: MII-CM-Onko-oBDS-SCT-Mapping
+Instance: MII-CM-Onko-Fernmetastasen-SCT-Mapping
 InstanceOf: ConceptMap 
 Usage: #example
-Title: "Mapping"
+Title: "MII_CM_Onko_Fernmetastasen_SCT_Mapping"
 Description: "Mapping der Fernmetastasen-Codesystems  auf SNOMED"
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-fernmetastasen-sct"
 * name = "oBDS-SNOMED-Mapping-Fernmetastasen"					

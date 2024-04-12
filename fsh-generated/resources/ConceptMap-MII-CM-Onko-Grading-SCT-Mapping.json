@@ -17,14 +17,90 @@
       "target": "http://snomed.info/sct",
       "element": [
         {
+          "code": "0",
+          "display": "primär erworbene Melanose ohne zelluläre Atypien (nur beim malignen Melanom der Konjunktiva)",
+          "target": [
+            {
+              "code": "415175000",
+              "display": "Primary acquired melanosis of conjunctiva without atypia (disorder)",
+              "equivalence": "equivalent",
+              "comment": "Hier der Vollständigkeit aufgeführt."
+            }
+          ]
+        },
+        {
+          "code": "1",
+          "display": "gut differenziert",
+          "target": [
+            {
+              "code": "373375007",
+              "display": "Well differentiated histological grade finding (finding)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "2",
+          "display": "mäßig differenziert",
+          "target": [
+            {
+              "code": "373377004",
+              "display": "Moderately differentiated histological grade finding (finding)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "3",
+          "display": "schlecht differenziert",
+          "target": [
+            {
+              "code": "373373000",
+              "display": "Poorly differentiated histological grade finding (finding)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "4",
+          "display": "undifferenziert",
+          "target": [
+            {
+              "code": "373374006",
+              "display": "Undifferentiated histological grade finding (finding)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "5",
+          "display": "nur für C61, TNM8",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "wird im derzeitigen oBDS nicht mehr kodiert, kein passender SNOMED CT Code notwendig"
+            }
+          ]
+        },
+        {
+          "code": "X",
+          "display": "nicht bestimmbar",
+          "target": [
+            {
+              "code": "1155705000",
+              "display": "GX: Histologic grade cannot be assessed (qualifier value)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
           "code": "L",
           "display": "low grade (G1 oder G2)",
           "target": [
             {
               "code": "1155708003",
               "display": "Low histologic grade (qualifier value)",
-              "equivalence": "equivalent",
-              "comment": "Hier der Vollständigkeit aufgeführt."
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -77,20 +153,8 @@
           "display": "trifft nicht zu",
           "target": [
             {
-              "equivalence": "equivalent",
-              "comment": "wird im derzeitigen oBDS nicht mehr kodiert, kein passender SNOMED CT Code notwendig",
               "code": "385432009",
-              "display": "Not applicable (qualifier value)"
-            }
-          ]
-        },
-        {
-          "code": "X",
-          "display": "nicht bestimmbar",
-          "target": [
-            {
-              "code": "1155705000",
-              "display": "GX: Histologic grade cannot be assessed (qualifier value)",
+              "display": "Not applicable (qualifier value)",
               "equivalence": "equivalent"
             }
           ]
