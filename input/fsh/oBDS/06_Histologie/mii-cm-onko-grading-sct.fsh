@@ -56,7 +56,7 @@ Usage: #definition
 * group[=].element[=].target.display = "GX: Histologic grade cannot be assessed (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
 
-* group[=].element[0].code = #L
+* group[=].element[+].code = #L
 * group[=].element[=].display = "low grade (G1 oder G2)"
 * group[=].element[=].target.code = #1155708003
 * group[=].element[=].target.display = "Low histologic grade (qualifier value)"
