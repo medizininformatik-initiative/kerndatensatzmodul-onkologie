@@ -14,10 +14,6 @@ Usage: #definition
 * group[+].source = $mii-cs-onko-seitenlokalisation
 * group[=].target = "http://snomed.info/sct"
 
-* group[=].element[+].target.code = #399687005
-* group[=].element[=].target.display = "Anatomic location of primary malignant neoplasm (observable entity)"
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Mapping of Seitenlokalisation to SNOMED"
 
 * group[=].element[+].code = #L
 * group[=].element[=].display = "links"
