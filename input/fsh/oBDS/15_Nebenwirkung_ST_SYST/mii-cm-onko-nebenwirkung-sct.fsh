@@ -19,46 +19,39 @@ Usage: #definition
 * group[=].element[=].target.code = #260413007
 * group[=].element[=].target.display = "None (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Side effect in CTCAE Grade"
 
 * group[=].element[+].code = #1
 * group[=].element[=].display = "mild"
 * group[=].element[=].target.code = #255604002
 * group[=].element[=].target.display = "Mild (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Side effect in CTCAE Grade"
 
 * group[=].element[+].code = #2
 * group[=].element[=].display = "moderat"
 * group[=].element[=].target.code = #1255665007
 * group[=].element[=].target.display = "Moderate (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Side effect in CTCAE Grade"
 
 * group[=].element[+].code = #3
 * group[=].element[=].display = "schwerwiegend"
 * group[=].element[=].target.code = #24484000
 * group[=].element[=].target.display = "Severe (severity modifier) (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Side effect in CTCAE Grade"
 
 * group[=].element[+].code = #4
 * group[=].element[=].display = "lebensbedrohlich"
 * group[=].element[=].target.code = #442452003
 * group[=].element[=].target.display = "Life threatening severity (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Side effect in CTCAE Grade"
 
 * group[=].element[+].code = #5
 * group[=].element[=].display = "tödlich"
 * group[=].element[=].target.code = #399166001
 * group[=].element[=].target.display = "Fatal (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Side effect in CTCAE Grade"
 
 * group[=].element[+].code = #U
 * group[=].element[=].display = "unbekannt"
 * group[=].element[=].target.code = #261665006
 * group[=].element[=].target.display = "Unknown (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Side effect in CTCAE Grade"

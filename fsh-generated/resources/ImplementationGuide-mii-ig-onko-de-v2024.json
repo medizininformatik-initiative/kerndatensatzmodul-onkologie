@@ -38,7 +38,7 @@
     },
     {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.diagnose",
-      "version": "2024.0.0-ballot",
+      "version": "2024.0.0",
       "uri": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ImplementationGuide/mii-ig-diagnose-de-v2024",
       "id": "de_medizininformatikinitiative_kerndatensatz_diagnose"
     },
@@ -1462,13 +1462,6 @@
       },
       {
         "reference": {
-          "reference": "SearchParameter/mii-sp-onko-genetische-variante-note"
-        },
-        "name": "mii-sp-onko-genetische-variante-note",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "SearchParameter/mii-sp-onko-nebenwirkung-suspectEntity"
         },
         "name": "mii-sp-onko-nebenwirkung-suspectEntity",
@@ -1556,6 +1549,27 @@
           "reference": "SearchParameter/mii-sp-onko-tnm-klassifikation-has-member"
         },
         "name": "mii-sp-onko-tnm-klassifikation-has-member",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-onko-tod-derived-from"
+        },
+        "name": "mii-sp-onko-tod-derived-from",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-onko-tod-encounter"
+        },
+        "name": "mii-sp-onko-tod-encounter",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-onko-tod-focus"
+        },
+        "name": "mii-sp-onko-tod-focus",
         "exampleBoolean": false
       },
       {

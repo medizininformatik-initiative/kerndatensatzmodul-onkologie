@@ -178,7 +178,6 @@
 [mii-pr-onko-nebenwirkung-0]: AdverseEvent-mii-pr-onko-nebenwirkung-0.html
 [mii-sp-onko-diagnose-verification-status]: SearchParameter-mii-sp-onko-diagnose-verification-status.html
 [mii-sp-onko-fernmetastasen-body-site]: SearchParameter-mii-sp-onko-fernmetastasen-body-site.html
-[mii-sp-onko-genetische-variante-note]: SearchParameter-mii-sp-onko-genetische-variante-note.html
 [mii-sp-onko-nebenwirkung-suspectEntity]: SearchParameter-mii-sp-onko-nebenwirkung-suspectEntity.html
 [mii-sp-onko-operation-complication]: SearchParameter-mii-sp-onko-operation-complication.html
 [mii-sp-onko-operation-ext-intention]: SearchParameter-mii-sp-onko-operation-ext-intention.html
@@ -192,6 +191,9 @@
 [mii-sp-onko-strahlentherapie-extension-bestrahlung-zielgebiet]: SearchParameter-mii-sp-onko-strahlentherapie-extension-bestrahlung-zielgebiet.html
 [mii-sp-onko-strahlentherapie-outcome]: SearchParameter-mii-sp-onko-strahlentherapie-outcome.html
 [mii-sp-onko-tnm-klassifikation-has-member]: SearchParameter-mii-sp-onko-tnm-klassifikation-has-member.html
+[mii-sp-onko-tod-derived-from]: SearchParameter-mii-sp-onko-tod-derived-from.html
+[mii-sp-onko-tod-encounter]: SearchParameter-mii-sp-onko-tod-encounter.html
+[mii-sp-onko-tod-focus]: SearchParameter-mii-sp-onko-tod-focus.html
 [mii-sp-onko-tod-interpretation]: SearchParameter-mii-sp-onko-tod-interpretation.html
 [mii-sp-onko-tumorkonferenz-addresses]: SearchParameter-mii-sp-onko-tumorkonferenz-addresses.html
 [mii-sp-onko-tumorkonferenz-contributor]: SearchParameter-mii-sp-onko-tumorkonferenz-contributor.html

@@ -3,7 +3,6 @@ InstanceOf: ConceptMap
 Usage: #example
 Title: "Mapping"
 Description: "hier wurde gemappt"
-//* ^url = ""
 
 * name = "oBDS-SNOMED-Mapping-Fernmetastasen"					
 * title = "Fernmetastasen"					
@@ -21,77 +20,67 @@ Description: "hier wurde gemappt"
 * group[=].element[=].target.code = #258332000					
 * group[=].element[=].target.display = "PUL (body structure)"					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "TNM recommendation how to code for location of metastasis"	
 
 * group[=].element[+].code = #OSS					
 * group[=].element[=].display = "Knochen"					
 * group[=].element[=].target.code = #258333005					
 * group[=].element[=].target.display = "OSS (body structure)"					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "TNM recommendation how to code for location of metastasis"	
 
 * group[=].element[+].code = #HEP					
 * group[=].element[=].display = "Leber"					
 * group[=].element[=].target.code = #258334004					
 * group[=].element[=].target.display = "HEP (body structure)"					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "TNM recommendation how to code for location of metastasis"	
 
 * group[=].element[+].code = #BRA					
 * group[=].element[=].display = "Hirn"					
 * group[=].element[=].target.code = #313367003					
 * group[=].element[=].target.display = "BRA (body structure)"					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "TNM recommendation how to code for location of metastasis"	
 
 * group[=].element[+].code = #LYM					
 * group[=].element[=].display = "Lymphknoten"					
 * group[=].element[=].target.code = #258336002					
 * group[=].element[=].target.display = "LYM (body structure)"					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "TNM recommendation how to code for location of metastasis"	
 
 * group[=].element[+].code = #MAR					
 * group[=].element[=].display = "Knochenmark"					
 * group[=].element[=].target.code = #14016003					
 * group[=].element[=].target.display = "Bone marrow structure (body structure)"					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "MAR Term for anatomical location of bone marrow is present in current TNM 8th Edition, but not in SNOMED-CT"	
+* group[=].element[=].target.comment = "In TNM 8. Edition ist MAR als Lokalisation mit aufgeführt, in der aktuellen SNOMED-Version so aber nicht enthalten."	
 
 * group[=].element[+].code = #PLE					
 * group[=].element[=].display = "Pleura"					
 * group[=].element[=].target.code = #258337006					
 * group[=].element[=].target.display = "PLE (body structure)"					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "TNM recommendation how to code for location of metastasis"	
 
 * group[=].element[+].code = #PER					
 * group[=].element[=].display = "Peritoneum"					
 * group[=].element[=].target.code = #258338001					
 * group[=].element[=].target.display = "PER (body structure)"					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "TNM recommendation how to code for location of metastasis"	
 
 * group[=].element[+].code = #ADR					
 * group[=].element[=].display = "Nebennieren"					
 * group[=].element[=].target.code = #258339009					
 * group[=].element[=].target.display = "ADR (body structure)"					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "TNM recommendation how to code for location of metastasis"	
 
 * group[=].element[+].code = #SKI					
 * group[=].element[=].display = "Haut"					
 * group[=].element[=].target.code = #258340006					
 * group[=].element[=].target.display = "SKI (body structure)"					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "TNM recommendation how to code for location of metastasis"	
 
 * group[=].element[+].code = #OTH					
 * group[=].element[=].display = "andere Organe"					
 * group[=].element[=].target.code = #258348004					
 * group[=].element[=].target.display = "OTH (body structure)"					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "TNM recommendation how to code for location of metastasis"	
 
 * group[=].element[+].code = #GEN					
 * group[=].element[=].display = "generalisierte Metastasierung"					

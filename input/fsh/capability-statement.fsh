@@ -362,6 +362,9 @@ Usage: #definition
 * insert SupportSearchParam(_lastUpdated, http://hl7.org/fhir/SearchParameter/Resource-lastUpdated, #date, #SHALL)
 * insert SupportSearchParam(_profile, http://hl7.org/fhir/SearchParameter/Resource-profile, #uri, #SHALL)
 * insert SupportSearchParam(interpretation, http://hl7.org/fhir/SearchParameter/Tod-interpretation, #token, #SHALL)
+* insert SupportSearchParam(focus, http://hl7.org/fhir/SearchParameter/Tod-focus, #reference, #SHALL)
+* insert SupportSearchParam(encounter, http://hl7.org/fhir/SearchParameter/Tod-encounter, #reference, #SHALL)
+* insert SupportSearchParam(derived-from, http://hl7.org/fhir/SearchParameter/Tod-derived-from, #reference, #SHALL)
 
 // Genetische Variante requirements
 * insert SupportResource(Genetische_Variante, #SHALL)

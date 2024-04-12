@@ -43,7 +43,9 @@ Usage: #definition
 * group[=].element[=].display = "Hirn sonstiges"
 * group[=].element[=].target.code = #74964007
 * group[=].element[=].target.display = " Other (qualifier value)"
-* group[=].element[=].target.equivalence = #wider
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "ggfs. über Postkoordination besser darstellbar"
+
 
 //Bereich: Kopf-Hals
 * group[=].element[+].code = #2.1
@@ -51,6 +53,9 @@ Usage: #definition
 * group[=].element[=].target.code = #81745001
 * group[=].element[=].target.display = "Structure of eye proper (body structure)"
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Lateralität über Postkoordination darstellbar"
+
+
 
 * group[=].element[+].code = #2.2
 * group[=].element[=].display = "Nase/Nasennebenhöhle"
@@ -69,12 +74,16 @@ Usage: #definition
 * group[=].element[=].target.code = #117590005
 * group[=].element[=].target.display = "Ear structure (body structure)"
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Lateralität über Postkoordination darstellbar"
+
 
 * group[=].element[+].code = #2.5
 * group[=].element[=].display = "Speicheldrüse (r, l)"
 * group[=].element[=].target.code = #385294005
 * group[=].element[=].target.display = "Salivary gland structure (body structure)"
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Lateralität über Postkoordination darstellbar"
+
 
 * group[=].element[+].code = #2.6
 * group[=].element[=].display = "Pharynx"
@@ -124,24 +133,32 @@ Usage: #definition
 * group[=].element[=].target.code = #181131000
 * group[=].element[=].target.display = "Entire breast (body structure)"
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Lateralität über Postkoordination darstellbar"
+
 
 * group[=].element[+].code = #3.2
 * group[=].element[=].display = "Mamma als Teilbrust (r, l)"
 * group[=].element[=].target.code = #119184005
 * group[=].element[=].target.display = "Breast part (body structure)"
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Lateralität über Postkoordination darstellbar"
+
 
 * group[=].element[+].code = #3.3
 * group[=].element[=].display = "Thoraxwand, gegebenenfalls r, l"
 * group[=].element[=].target.code = #78904004
 * group[=].element[=].target.display = "Chest wall structure (body structure)"
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Lateralität über Postkoordination darstellbar"
+
 
 * group[=].element[+].code = #3.4
 * group[=].element[=].display = "Lunge (r, l)"
 * group[=].element[=].target.code = #39607008
 * group[=].element[=].target.display = "Lung structure (body structure)"
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Lateralität über Postkoordination darstellbar"
+
 
 * group[=].element[+].code = #3.5
 * group[=].element[=].display = "Ösophagus"
@@ -197,12 +214,16 @@ Usage: #definition
 * group[=].element[=].target.code = #64033007
 * group[=].element[=].target.display = "Kidney structure (body structure)"
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Lateralität über Postkoordination darstellbar"
+
 
 * group[=].element[+].code = #4.6
 * group[=].element[=].display = "Nebenniere (r, l"
 * group[=].element[=].target.code = #23451007
 * group[=].element[=].target.display = "Adrenal structure (body structure)"
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Lateralität über Postkoordination darstellbar"
+
 
 * group[=].element[+].code = #4.7
 * group[=].element[=].display = "Retroperitoneum (z. B. Sarkome)"
@@ -215,6 +236,8 @@ Usage: #definition
 * group[=].element[=].target.code = #87953007
 * group[=].element[=].target.display = "Ureteric structure (body structure)"
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Lateralität über Postkoordination darstellbar"
+
 
 * group[=].element[+].code = #4.9
 * group[=].element[=].display = "Bauchwand (z. B. Sarkome)"
@@ -337,6 +360,8 @@ Usage: #definition
 * group[=].element[=].target.code = #363654007
 * group[=].element[=].target.display = "Structure of orbit proper (body structure)"
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Lateralität über Postkoordination darstellbar"
+
 
 * group[=].element[+].code = #6.4
 * group[=].element[=].display = "Halswirbelsäule"
@@ -367,6 +392,8 @@ Usage: #definition
 * group[=].element[=].target.code = #113197003
 * group[=].element[=].target.display = "Bone structure of rib (body structure)"
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Lateralität über Postkoordination darstellbar"
+
 
 * group[=].element[+].code = #6.9
 * group[=].element[=].display = "Sternum"
@@ -379,42 +406,56 @@ Usage: #definition
 * group[=].element[=].target.code = #896747000
 * group[=].element[=].target.display = "Bone structure of shoulder girdle and/or proximal humerus (body structure)"
 * group[=].element[=].target.equivalence = #wider
+* group[=].element[=].target.comment = "Lateralität über Postkoordination darstellbar"
+
 
 * group[=].element[+].code = #6.11
 * group[=].element[=].display = "Oberarm (r, l)"
 * group[=].element[=].target.code = #85050009
 * group[=].element[=].target.display = "Bone structure of humerus (body structure)"
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Lateralität über Postkoordination darstellbar"
+
 
 * group[=].element[+].code = #6.12
 * group[=].element[=].display = "Unterarm (r, l)"
 * group[=].element[=].target.code = #299701004
 * group[=].element[=].target.display = "Structure of bone of forearm (body structure)"
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Lateralität über Postkoordination darstellbar"
+
 
 * group[=].element[+].code = #6.13
 * group[=].element[=].display = "Hand (r, l)"
 * group[=].element[=].target.code = #24097009
 * group[=].element[=].target.display = "Bone structure of hand (body structure)"
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Lateralität über Postkoordination darstellbar"
+
 
 * group[=].element[+].code = #6.14
 * group[=].element[=].display = "Becken (r, l)"
 * group[=].element[=].target.code = #12921003
 * group[=].element[=].target.display = "Structure of pelvis (body structure)"
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Lateralität über Postkoordination darstellbar"
+
 
 * group[=].element[+].code = #6.15
 * group[=].element[=].display = "Hüfte (r, l)"
 * group[=].element[=].target.code = #28254004
 * group[=].element[=].target.display = "Innominate bone structure (body structure)"
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Lateralität über Postkoordination darstellbar"
+
 
 * group[=].element[+].code = #6.16
 * group[=].element[=].display = "Oberschenkel (r, l)"
 * group[=].element[=].target.code = #71341001
 * group[=].element[=].target.display = "Bone structure of femur (body structure)"
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Lateralität über Postkoordination darstellbar"
+
 
 * group[=].element[+].code = #6.17
 * group[=].element[=].display = "Unterschenkel"
@@ -427,6 +468,8 @@ Usage: #definition
 * group[=].element[=].target.code = #84167007
 * group[=].element[=].target.display = "Bone structure of foot (body structure)"
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Lateralität über Postkoordination darstellbar"
+
 
 * group[=].element[+].code = #6.19
 * group[=].element[=].display = "Knochen sonstige"
@@ -446,12 +489,16 @@ Usage: #definition
 * group[=].element[=].target.code = #53120007
 * group[=].element[=].target.display = "Upper limb structure (body structure)"
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Lateralität über Postkoordination darstellbar"
+
 
 * group[=].element[+].code = #7.3
 * group[=].element[=].display = "untere Extremität und Hüfte (r, l)"
 * group[=].element[=].target.code = #61685007
 * group[=].element[=].target.display = "Lower limb structure (body structure)"
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Lateralität über Postkoordination darstellbar"
+
 
 * group[=].element[+].code = #7.4
 * group[=].element[=].display = "Thorax"
@@ -475,7 +522,7 @@ Usage: #definition
 * group[=].element[=].display = "Stammes o. n. A."
 * group[=].element[=].target.code = #1490004
 * group[=].element[=].target.display = "Structure of soft tissue of trunk (body structure)"
-* group[=].element[=].target.equivalence = #equivalent //?
+* group[=].element[=].target.equivalence = #equivalent 
 
 * group[=].element[+].code = #7.8
 * group[=].element[=].display = "mehrere Bereiche überlappend"
@@ -509,18 +556,24 @@ Usage: #definition
 * group[=].element[=].target.code = #81105003
 * group[=].element[=].target.display = "Cervical lymph node structure (body structure)"
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Lateralität über Postkoordination darstellbar"
+
 
 * group[=].element[+].code = #9.2
 * group[=].element[=].display = "Supra-/infraclavikuläre Lymphknoten (r, l)"
 * group[=].element[=].target.code = #9659009
 * group[=].element[=].target.display = "Structure of infraclavicular lymph node (body structure)"
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Lateralität über Postkoordination darstellbar"
+
 
 * group[=].element[+].code = #9.3
 * group[=].element[=].display = "Axilläre Lymphknoten (r, l)"
 * group[=].element[=].target.code = #245269009
 * group[=].element[=].target.display = "Axillary lymph node group (body structure)"
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Lateralität über Postkoordination darstellbar"
+
 
 * group[=].element[+].code = #9.4
 * group[=].element[=].display = "Retrosternale/sternale/Mammaria interna Lymphknoten"
@@ -544,13 +597,13 @@ Usage: #definition
 * group[=].element[=].display = "Intraabdominale Lymphknoten (z. B. subphrenisch, perigastrisch, peripankreatisch, Leber-, Milzhilus)"
 * group[=].element[=].target.code = #818991007
 * group[=].element[=].target.display = "Structure of abdominal lymph node (body structure)"
-* group[=].element[=].target.equivalence = #wider //?
+* group[=].element[=].target.equivalence = #equivalent 
 
 * group[=].element[+].code = #9.8
 * group[=].element[=].display = "Paraaortale/paracavale Lymphknoten"
 * group[=].element[=].target.code = #245285004
 * group[=].element[=].target.display = "Para-aortic lymph node group (body structure)"
-* group[=].element[=].target.equivalence = #wider //?
+* group[=].element[=].target.equivalence = #narrower 
 
 * group[=].element[+].code = #9.9
 * group[=].element[=].display = "Retroperitoneale Lymphknoten"
@@ -563,12 +616,15 @@ Usage: #definition
 * group[=].element[=].target.code = #54268001
 * group[=].element[=].target.display = "Pelvic lymph node structure (body structure)"
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Lateralität über Postkoordination darstellbar"
+
 
 * group[=].element[+].code = #9.11
 * group[=].element[=].display = "Inguinale Lymphknoten (r, l)"
 * group[=].element[=].target.code = #8928004
 * group[=].element[=].target.display = "Inguinal lymph node structure (body structure)"
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Lateralität über Postkoordination darstellbar"
 
 * group[=].element[+].code = #9.12
 * group[=].element[=].display = "Involved Node"

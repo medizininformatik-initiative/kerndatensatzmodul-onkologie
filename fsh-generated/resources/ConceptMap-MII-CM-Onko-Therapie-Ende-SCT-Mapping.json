@@ -17,6 +17,103 @@
       "target": "http://snomed.info/sct",
       "element": [
         {
+          "code": "E",
+          "display": "reguläres Ende",
+          "target": [
+            {
+              "code": "261782000",
+              "display": "End (qualifier value)",
+              "equivalence": "equivalent",
+              "comment": "ggfs. Postkoordination bei Abgrenzung zu den anderen End-Begrifen"
+            }
+          ]
+        },
+        {
+          "code": "R",
+          "display": "reguläres Ende mit Dosisreduktion",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "ggfs. Postkoordination von Dosisreduktion"
+            }
+          ]
+        },
+        {
+          "code": "W",
+          "display": "reguläres Ende mit Substanzwechsel",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "ggfs. Postkoordination von Substanzwechsel"
+            }
+          ]
+        },
+        {
+          "code": "A",
+          "display": "Abbruch wegen Nebenwirkungen",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "ggfs. Postkoordination von Substanzwechsel"
+            }
+          ]
+        },
+        {
+          "code": "P",
+          "display": "Abbruch wegen Progress",
+          "target": [
+            {
+              "code": "419835002",
+              "display": "Tumor progression (finding)",
+              "equivalence": "wider",
+              "comment": "ggfs. Postkoordination "
+            }
+          ]
+        },
+        {
+          "code": "S",
+          "display": "Abbruch aus sonstigen Gründen",
+          "target": [
+            {
+              "code": "74964007",
+              "display": "Other (qualifier value)",
+              "equivalence": "wider",
+              "comment": "ggfs. Postkoordination"
+            }
+          ]
+        },
+        {
+          "code": "V",
+          "display": "Patient verweigert weitere Therapie",
+          "target": [
+            {
+              "code": "183948000",
+              "display": " Procedure declined by parent (situation)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "T",
+          "display": "Patient verstorben",
+          "target": [
+            {
+              "code": "419099009",
+              "display": "Dead (finding)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "F",
+          "display": "Zieldosis erreicht mit Unterbrechung > 3 Kalendertage",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
           "code": "U",
           "display": "unbekannt",
           "target": [

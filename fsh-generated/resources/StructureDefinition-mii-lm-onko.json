@@ -473,7 +473,7 @@
         "path": "Onkologie.TNMKlassifikation.TNMDatum",
         "short": "TNM Datum",
         "definition": "Gibt an, auf welches Datum sich die TNM-Klassifikation bezieht.",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -492,7 +492,7 @@
         "path": "Onkologie.TNMKlassifikation.TNMVersion",
         "short": "TNM Version",
         "definition": "Gibt an, nach welcher Version des TNM klassifiziert wurde.",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -1047,7 +1047,7 @@
         "path": "Onkologie.Operation.OPIntention",
         "short": "Intention",
         "definition": "Gibt an, mit welchem Ziel die Operation geplant wurde",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -1066,7 +1066,7 @@
         "path": "Onkologie.Operation.OPDatum",
         "short": "OP Datum",
         "definition": "Datum der OP",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -1085,7 +1085,7 @@
         "path": "Onkologie.Operation.OPSCode",
         "short": "OPS Code",
         "definition": "Gibt an, welche Operation durchgeführ wurde. OPS (5-*), so genau wie möglich. Bei paaringen Organen mit Seitenangabe",
-        "min": 0,
+        "min": 1,
         "max": "*",
         "type": [
           {
@@ -1104,7 +1104,7 @@
         "path": "Onkologie.Operation.OPSVersion",
         "short": "OPS Version",
         "definition": "Gibt an, nach welcher Version (Jahr) des OPS klassifiziert wurde (Gültige Bezeichnung nach BfArM)",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -1155,7 +1155,7 @@
         "path": "Onkologie.Strahlentherapie.StrahlentherapieIntention",
         "short": "Intention der Strahlentherapie",
         "definition": "Gibt an, mit welcher Intention die Strahlentherapie geplant wurde.",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -1174,7 +1174,7 @@
         "path": "Onkologie.Strahlentherapie.StrahlentherapieStellung",
         "short": "Strahlentherapie Stellung zu operativer Therapie",
         "definition": "Gibt an, in welchem Bezug zu einer operativen Therapie die Bestrahlung steht.",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -1212,7 +1212,7 @@
         "path": "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung",
         "short": "Bestrahlung",
         "definition": "Dieser Abschnitt entspricht einer Bestrahlung mit spezifischem Zielgebiet, Methodik und Dosis ",
-        "min": 0,
+        "min": 1,
         "max": "*",
         "type": [
           {
@@ -1231,7 +1231,7 @@
         "path": "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieZielgebiet",
         "short": "Strahlentherapie Zielgebiet",
         "definition": "Gibt an, an welcher anatomischen Region die Bestrahlung durchgeführt wurde.",
-        "min": 0,
+        "min": 1,
         "max": "*",
         "type": [
           {
@@ -1269,7 +1269,7 @@
         "path": "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieBeginn",
         "short": "Strahlentherapie Beginn",
         "definition": "Gibt an, wann die Strahlentherapie begonnen wurde.",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -1307,7 +1307,7 @@
         "path": "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieApplikationsart",
         "short": "Strahlentherapie Applikationsart",
         "definition": "Gibt an, mit welcher Technik die Strahlentherapie durchgeführt wurde.",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -1326,7 +1326,7 @@
         "path": "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieStrahlenart",
         "short": "Strahlenart",
         "definition": "Angewandte Strahlenart (Strahlung oder metabolische Nuklide)",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -1434,7 +1434,7 @@
         "path": "Onkologie.SystemischeTherapie.SystemischeTherapieIntention",
         "short": "Intention der systemischen Therapie",
         "definition": "Intention der systemischen Therapie",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -1453,7 +1453,7 @@
         "path": "Onkologie.SystemischeTherapie.SystemischeTherapieStellung",
         "short": "Systemische Therapie Stellung zu operativer Therapie",
         "definition": "Gibt an, in welchem Bezug zu einer operativen Therapie die systemische Therapie steht.",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -1472,7 +1472,7 @@
         "path": "Onkologie.SystemischeTherapie.SystemischeTherapieArtTherapie",
         "short": "Art der systemischen oder abwartenden Therapie",
         "definition": "Gibt an, welche Art der Therapie bzw. abwartende Strategie durchgeführt wurde.",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
