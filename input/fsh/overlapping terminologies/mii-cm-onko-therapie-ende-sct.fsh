@@ -16,10 +16,10 @@ Usage: #definition
 
 * group[=].element[+].code = #E
 * group[=].element[=].display = "reguläres Ende"
-* group[=].element[=].target.code = #261782000
-* group[=].element[=].target.display = "End (qualifier value)"
+* group[=].element[=].target.code = #385656004
+* group[=].element[=].target.display = "Ended (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent 
-* group[=].element[=].target.comment = "ggfs. Postkoordination bei Abgrenzung zu den anderen End-Begrifen" 
+* group[=].element[=].target.comment = "keine Postkoordination zu andernen End-Konzepten möglich" 
 
 * group[=].element[+].code = #R
 * group[=].element[=].display = "reguläres Ende mit Dosisreduktion"
