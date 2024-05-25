@@ -38,7 +38,6 @@ Usage: #definition
 * group[=].element[=].target.code = #260528009
 * group[=].element[=].target.display = "Median (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Mapping of Seitenlokalisation to SNOMED"
 
 * group[=].element[+].code = #U
 * group[=].element[=].display = "unbekannt"

@@ -19,39 +19,33 @@ Usage: #definition
 * group[=].element[=].target.code = #55446002
 * group[=].element[=].target.display = "Genetic mutation (finding)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Genetic variants to SNOMED mapping"
 
 * group[=].element[+].code = #W
 * group[=].element[=].display = "Wildtyp/nicht mutiert/ negativ"
 * group[=].element[=].target.code = #412730000
 * group[=].element[=].target.display = "Genetic finding not detected (finding)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Genetic variants to SNOMED mapping"
 
 * group[=].element[+].code = #P
 * group[=].element[=].display = "Polymorphismus"
 * group[=].element[=].target.code = #50334000
 * group[=].element[=].target.display = "Genetic polymorphism (finding)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Genetic variants to SNOMED mapping"
 
 * group[=].element[+].code = #S
 * group[=].element[=].display = "Sonstiges"
 * group[=].element[=].target.code = #74964007
 * group[=].element[=].target.display = "Other (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Genetic variants to SNOMED mapping"
 
 * group[=].element[+].code = #N
 * group[=].element[=].display = "Nicht bestimmbar"
 * group[=].element[=].target.code = #1156316003
 * group[=].element[=].target.display = "Cannot be determined (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Genetic variants to SNOMED mapping"
 
 * group[=].element[+].code = #U
 * group[=].element[=].display = "Unbekannt"
 * group[=].element[=].target.code = #261665006
 * group[=].element[=].target.display = "Unknown (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Genetic variants to SNOMED mapping"
