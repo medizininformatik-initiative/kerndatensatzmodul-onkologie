@@ -8,8 +8,6 @@ Usage: #definition
 * experimental = false
 * date = "2024-01-05"
 * description = "Mapping TNM UICC Codes zu SNOMED-CT"
-//* sourceCanonical = "http://fhir.de/ValueSet/bfarm/ops"
-//* targetCanonical = "http://snomed.info/sct?fhir-vs"
 * group.source = "https://www.uicc.org/resources/tnm"
 * group.target = "http://snomed.info/sct"
 * group.element[+].code = #y
