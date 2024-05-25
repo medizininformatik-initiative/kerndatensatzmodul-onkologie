@@ -3,7 +3,7 @@ InstanceOf: ConceptMap
 Usage: #definition
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-therapie-ende-sct"
 * name = "mii-cm-onko-therapie-ende-snomed-mapping"
-* title = "MII CM Onko Therapi Ende SNOMED Mapping"
+* title = "MII CM Onko Therapie Ende SNOMED Mapping"
 * status = #draft
 * experimental = false
 * date = "2024-04-11"
