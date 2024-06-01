@@ -123,11 +123,10 @@
 [MII_VS_Onko_Verlauf_Lymphknoten]: ValueSet-mii-vs-onko-verlauf-lymphknoten.html
 [MII_VS_Onko_Verlauf_Primaertumor]: ValueSet-mii-vs-onko-verlauf-primaertumor.html
 [MII-CM-Onko-Allgemeiner-Leistungszustand-SCT-Mapping]: ConceptMap-MII-CM-Onko-Allgemeiner-Leistungszustand-SCT-Mapping.html
+[MII-CM-Onko-Fernmetastasen-SCT-Mapping]: ConceptMap-MII-CM-Onko-Fernmetastasen-SCT-Mapping.html
 [MII-CM-Onko-Genetische-Variante-Auspraegung-SCT-Mapping]: ConceptMap-MII-CM-Onko-Genetische-Variante-Auspraegung-SCT-Mapping.html
-[MII-CM-Onko-Gesamtbeurteilung-SCT-Mapping]: ConceptMap-MII-CM-Onko-Gesamtbeurteilung-SCT-Mapping.html
 [MII-CM-Onko-Grading-SCT-Mapping]: ConceptMap-MII-CM-Onko-Grading-SCT-Mapping.html
 [MII-CM-Onko-Intension-SCT-Mapping]: ConceptMap-MII-CM-Onko-Intension-SCT-Mapping.html
-[MII-CM-Onko-Lymphknoten-SCT-Mapping]: ConceptMap-MII-CM-Onko-Lymphknoten-SCT-Mapping.html
 [MII-CM-Onko-Nebenwirkung-SCT-Mapping]: ConceptMap-MII-CM-Onko-Nebenwirkung-SCT-Mapping.html
 [MII-CM-Onko-Operation-Komplikation-SCT-Mapping]: ConceptMap-MII-CM-Onko-Operation-Komplikation-SCT-Mapping.html
 [MII-CM-Onko-Primaertumor-Diagnosesicherung-SCT-Mapping]: ConceptMap-MII-CM-Onko-Primaertumor-Diagnosesicherung-SCT-Mapping.html
@@ -145,6 +144,8 @@
 [mii-cm-onko-tnm-uicc-snomed]: ConceptMap-mii-cm-onko-tnm-uicc-snomed.html
 [MII-CM-Onko-Tod-SCT-Mapping]: ConceptMap-MII-CM-Onko-Tod-SCT-Mapping.html
 [MII-CM-Onko-Verlauf-Fernmetastasen-SCT-Mapping]: ConceptMap-MII-CM-Onko-Verlauf-Fernmetastasen-SCT-Mapping.html
+[MII-CM-Onko-Verlauf-Gesamtbeurteilung-SCT-Mapping]: ConceptMap-MII-CM-Onko-Verlauf-Gesamtbeurteilung-SCT-Mapping.html
+[MII-CM-Onko-Verlauf-Lymphknoten-SCT-Mapping]: ConceptMap-MII-CM-Onko-Verlauf-Lymphknoten-SCT-Mapping.html
 [MII-CM-Onko-Verlauf-Primaertumor-SCT-Mapping]: ConceptMap-MII-CM-Onko-Verlauf-Primaertumor-SCT-Mapping.html
 [mii-cps-onko-capabilitystatement]: CapabilityStatement-mii-cps-onko-capabilitystatement.html
 [mii-exa-onko-allgemeiner-leistungszustand-1]: Observation-mii-exa-onko-allgemeiner-leistungszustand-1.html
@@ -198,7 +199,6 @@
 [mii-sp-onko-tumorkonferenz-addresses]: SearchParameter-mii-sp-onko-tumorkonferenz-addresses.html
 [mii-sp-onko-tumorkonferenz-contributor]: SearchParameter-mii-sp-onko-tumorkonferenz-contributor.html
 [mii-sp-onko-tumorkonferenz-created]: SearchParameter-mii-sp-onko-tumorkonferenz-created.html
-[MII-CM-Onko-Fernmetastasen-SCT-Mapping]: ConceptMap-MII-CM-Onko-Fernmetastasen-SCT-Mapping.html
 [MII_VS_Onko_Genetische_Variante_Auspraegung]: ValueSet-mii-vs-onko-genetische-variante-auspraegung.html
 [PatientKimMusterperson]: Patient-PatientKimMusterperson.html
 [PatientKimMusterperson-Diagnosis-1]: Condition-PatientKimMusterperson-Diagnosis-1.html
