@@ -1,7 +1,7 @@
 ## {{page-title}}
 
 
-Im folgenden werden die Profile einmal in vereinfachter Version dargestellt. Diese Darstellung legt insbesondere Wert auf die übersichtliche Darstellung : 
+Im Folgenden werden die Profile einmal in vereinfachter Version dargestellt. Diese Darstellung legt insbesondere Wert auf die übersichtliche Darstellung : 
 - Vererbung von anderen Profilen 
 - das Mapping der oBDS-Datenfelder auf die entsprechenden FHIR-Elemente. 
 

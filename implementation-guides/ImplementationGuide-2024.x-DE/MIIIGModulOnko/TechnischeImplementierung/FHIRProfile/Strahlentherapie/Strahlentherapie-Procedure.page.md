@@ -24,7 +24,7 @@ Der Grund der Beendigung (unabhängig ob erfolgreich oder nicht erfolgreich) wir
 
 ### Struktur 
 Die Entscheidung, die Bestrahlungsdaten als Extension umzusetzen, hat mehrere Gründe. 
-1. Die Datenstruktur des oBDS sieht die Angabe von einer StrahlentherapieGesamtperiode mit Start und Ende sowie einem Gesamt-Intentions und Stellung-zur-OP-Datenpunkt. Alle weiteren strukturierten Behandlungsinformationen zur Bestrahlung(Strahlenart, Lokalisation, Dosis, Boost etc). sollen gemeinsam als Bestrahlung  vorliegen. 
+1. Die Datenstruktur des oBDS sieht die Angabe von einer StrahlentherapieGesamtperiode mit Start und Ende sowie einem Gesamt-Intentions und Stellung-zur-OP-Datenpunkt. Alle weiteren strukturierten Behandlungsinformationen zur Bestrahlung (Strahlenart, Lokalisation, Dosis, Boost etc) sollen gemeinsam als Bestrahlung vorliegen. 
 2. Die MII-Prozedur verlangt, dass 
 
 3. Die US-amerikanische FHIR-Datenmodell mCODE bildet die relevanten Datenpunkte in Extensions ab. Zu erwähnen ist allerdings, dass es bei mCODE hier keine Unterscheidung in übergeordnete Strahlentherapie und untergeordnete Bestrahlung gibt. mCODe sieht jedoch dafür auch detaillierte Angaben zur Größe des Zielvolumens 

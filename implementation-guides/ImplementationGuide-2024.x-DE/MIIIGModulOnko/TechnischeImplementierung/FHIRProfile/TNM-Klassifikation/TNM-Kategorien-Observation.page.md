@@ -13,7 +13,7 @@ Die T-, M- und M-KateFernmetastasenmenhängend oder getrennt erfasst werden.
 * können jeweils durch eine c/p Präfix spezifiziert werden. 
 * können durch ein 
 
-Im folgenden sind die Profile für T-, M- und M-KateFernmetastasen@```
+Im Folgenden sind die Profile für T-, M- und M-KateFernmetastasen@```
 from 
     StructureDefinition 
 where 

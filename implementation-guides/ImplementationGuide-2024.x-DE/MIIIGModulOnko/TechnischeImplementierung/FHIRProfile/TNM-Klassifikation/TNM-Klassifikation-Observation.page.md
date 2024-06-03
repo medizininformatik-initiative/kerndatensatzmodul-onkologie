@@ -12,7 +12,7 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 
 Dieses Profil ist das Gruppierungsprofil für eine TNM-Klassifikation in der Onkologie. 
 
-Das Profil enthält das Referenzdatum und dient als Ankerpunkt für alle weiteren TNM-Einzelbeobachtungen zu diesem Zeitpunkt. Das Element `hasMember` enthält Referenzen zu allen verb. 
+Das Profil enthält das Referenzdatum und dient als Ankerpunkt für alle weiteren TNM-Einzelbeobachtungen zu diesem Zeitpunkt. Das Element `hasMember` enthält Referenzen zu allen verbundenen TNM-Einzelbeobachtungen.
 
 
 Außerdem wird im Element `value` das UICC-Staging kodiert, dass von den untergeordneten TNM-Beobachtungen abgeleitet ist. 

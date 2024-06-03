@@ -17,7 +17,7 @@ Die Informationen zu genetischen Varianten werden seit der Version 2021 als Teil
 
 Die MII bietet mit dem Molekulargenetischen Befundbericht (MolGenBB) bereits eine Struktur für den Austausch genetischer Befunde. Der MolGenBB basiert auf dem GenomicReport (Version STU2) der internationalen HL7 Clinical Genomics Working Group und verwendet internationale Terminologien und Nomenklaturen wie: 
 * **HGNC** für die eindeutige Beschreibung von Gennamen
-* **HGVS** für die Beschreibung von Varianten im kodierenden und nicht-kodierenden DNA-Bereich sowie für Protiene
+* **HGVS** für die Beschreibung von Varianten im kodierenden und nicht-kodierenden DNA-Bereich sowie für Proteine
 * **ISCN** für Beschreibung cytogenomischer Position und strukturellen Varianten 
 * **Sequence Ontology** für die semantische Annotation der Varianten
 
@@ -31,7 +31,7 @@ Nach Möglichkeit **SOLLTE** eine genauere Variantenbeschreibung über die MII V
 
 Eine Einbindung dieser Varianten **SOLLTE** über die Einbettung in den MII Molekulargenetischen Befundbericht `DiagnosticReport`und die MII Molekulargenetische Anforderung `ServiceRequest` erfolgen. 
 
-Für den Fall, dass diese Module an den DIZ-Standorten gar nicht, noch nicht oder nur teilweise möglich ist, **SOLL** ein direktes Mapping der oBDS-Felder auf folgende Felder erfolgen:  
+Für den Fall, dass diese Module an den DIZ-Standorten gar nicht, noch nicht oder nur teilweise implementierbar sind, **SOLL** ein direktes Mapping der oBDS-Felder auf folgende Felder erfolgen:  
 * `Observation.note` für Variante Name
 * `Observation.interpretation` für die Ausprägung der Variante. 
 

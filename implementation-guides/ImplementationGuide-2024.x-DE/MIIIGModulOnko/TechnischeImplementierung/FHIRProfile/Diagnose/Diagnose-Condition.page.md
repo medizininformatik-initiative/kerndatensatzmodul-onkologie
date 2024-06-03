@@ -29,10 +29,10 @@ Die onkologische Diagnose ist das zentrale Kernelement des Basisdatensatzes. All
 ---
 
 ### Zeitliche Zuordnung im Verlauf
-Im oBDS ist eine Zuordung der Beobachtungen als wichtig für die Erstdiagnosestellung dadurch gegeben, dass diese Teil der Diagnosemeldung sind. Spätere Meldungen können dann bsw. als Verlaufs-, Pathologie- oder Todesmeldung gemachtwerden. 
+Im oBDS ist eine Zuordung der Beobachtungen als wichtig für die Erstdiagnosestellung dadurch gegeben, dass diese Teil der Diagnosemeldung sind. Spätere Meldungen können dann bsw. als Verlaufs-, Pathologie- oder Todesmeldung gemacht werden. 
 
 Beobachtungen, die nach Stellung der Erstdiagnose  gemacht werden, verweisen in der vorliegenden Profilierung auf eine "Verlauf"-Observation-Ressource mit einem eigenen Datum. 
-Die Beobachtungen, die zum Zeitpunkt der Erstdiagnosestellung bekannt sind, sind von von besonderem Interesse für prognostische Forschungsfragen. Um diese Datenpunkte leichter zu identifizieren, **SOLLEN** alle Beobachtungen aus der oBDS-Diagnosemeldung in einer FHIR-Liste mit dem Profil "Evidenz Erstdiagnose" über `evidence.detail` referenziert werden. 
+Die Beobachtungen, die zum Zeitpunkt der Erstdiagnosestellung bekannt sind, sind von besonderem Interesse für prognostische Forschungsfragen. Um diese Datenpunkte leichter zu identifizieren, **SOLLEN** alle Beobachtungen aus der oBDS-Diagnosemeldung in einer FHIR-Liste mit dem Profil "Evidenz Erstdiagnose" über `evidence.detail` referenziert werden. 
 
 
 
