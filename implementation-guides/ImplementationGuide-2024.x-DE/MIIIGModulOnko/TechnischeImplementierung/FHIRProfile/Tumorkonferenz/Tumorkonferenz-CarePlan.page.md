@@ -90,7 +90,7 @@ where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Str
     for differential.element where id.contains('Tumorkonferenz')
     select 
         Datensatz: short,
-        Erklärung: definition, 
+        Erklaerung: definition, 
         FHIR: mapping[0].map 
 
 ```
