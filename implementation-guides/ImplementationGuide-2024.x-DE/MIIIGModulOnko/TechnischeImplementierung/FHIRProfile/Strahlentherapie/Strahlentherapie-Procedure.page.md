@@ -14,7 +14,7 @@ Da die Details der Prozedur in den einzelnen Bestrahlungselementen hinterlegt si
 Die OPS-Kodierung SOLLTE so detailliert wie möglich übernommen werden.  
 
 
-Das MII-Modul Prozedur besitzt bereits eine Extension "Durchführungsabsicht" mit Binding auf SNOMED-CT Codes. Da die Intention der Strahlentherapie im oBDS jedoch durch ein oBDS-spezifisches Antwortspektrum erfasst wird, wurde die Prozedur um eine zusätzliches Element "Intention" erweitert. Ebenso wird der Zusammenhang zu eventuellen Operationen (z.b. adjuvant/neoadjuvant) über das Erweiterungselement "Stellung" erfasst.   
+Das MII-Modul Prozedur besitzt bereits eine Extension [Durchführungsabsicht](https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht) mit Binding auf SNOMED-CT Codes. Da die Intention der Strahlentherapie im oBDS jedoch durch ein oBDS-spezifisches Antwortspektrum erfasst wird, wurde die Prozedur um eine zusätzliches Element "Intention" erweitert. Ebenso wird der Zusammenhang zu eventuellen Operationen (z.b. adjuvant/neoadjuvant) über das Erweiterungselement "Stellung" erfasst.   
 
 Die spezifischen Details der Strahlentherapie werden in einzelnen Bestrahlungen unterteilt und berichtet. Dabei wird jede Bestrahlung als Extension erfasst. 
 
