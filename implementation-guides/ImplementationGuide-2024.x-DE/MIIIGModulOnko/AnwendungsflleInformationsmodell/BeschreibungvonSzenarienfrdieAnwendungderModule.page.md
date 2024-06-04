@@ -14,6 +14,8 @@ So wird bei der FHIR-Abbildung des untenstehenden Beispiels klar, dass Informati
 
 Disclaimer: Der Therapieverlauf entspricht einer möglichen leitliniengerechten Therapie, Daten und Verlauf sind für Testzwecke konstruiert, Ähnlichkeiten mit tatsächlichen Krankheitsverläufen sind zufällig.
 
+#### Textuelle Darstellung des beispielhaften Therapieverlaufs
+
 * Kim Musterperson, geb. 14.03.1956
 
 * 10.06.2021 CT Abdomen mit KM: V.a. Peritonealkarzinose, Aszites im gesamten Bauchraum, Raumforderung Ovar rechts. Mesenteriale retroperitoneale LK-Metastasen, V.a. Lebermetastasierung
@@ -63,9 +65,8 @@ Intervalldebulking mittels Längsschnittlaparotomie, Tumorresektion mittels Hyst
     * Restaging in 3 Monaten mit CT Thorax/Abdomen und TM
 * 25.01.22 Beginn Niraparib 300mg d1-28 wdh d28
 
+#### Grafische Darstellung des beispielhaften Therapieverlaufs
 
-<img src="https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/8d6c2498d5c40a6f056547cd0b0db6a37a2c1e55/implementation-guides/ImplementationGuide-2024.x-DE/Images/MII_Onko_Example_Timeline.svg" width="100%" >
+<img src="https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/8d6c2498d5c40a6f056547cd0b0db6a37a2c1e55/implementation-guides/ImplementationGuide-2024.x-DE/Images/MII_Onko_Example_Timeline.svg" width="100%"></br>
 
-&nbsp; 
-
- Darstellung und Download des Bildes unter: https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/8d6c2498d5c40a6f056547cd0b0db6a37a2c1e55/implementation-guides/ImplementationGuide-2024.x-DE/Images/MII_Onko_Example_Timeline.svg
+Die Bildatei kann [hier (Github)](https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/8d6c2498d5c40a6f056547cd0b0db6a37a2c1e55/implementation-guides/ImplementationGuide-2024.x-DE/Images/MII_Onko_Example_Timeline.svg) zur besseren Darstellung einzeln betrachtet und heruntergeladen werden (Bereitstellung als `.svg`).

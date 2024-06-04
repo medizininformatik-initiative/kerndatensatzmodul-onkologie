@@ -1,13 +1,10 @@
 ## {{page-title}}
 
-
 Im Folgenden werden die Profile einmal in vereinfachter Version dargestellt. Diese Darstellung legt insbesondere Wert auf die übersichtliche Darstellung : 
 - Vererbung von anderen Profilen 
 - das Mapping der oBDS-Datenfelder auf die entsprechenden FHIR-Elemente. 
 
-Die Bildateien können zur besseren Darstellung einzeln in folgendem Ordner betrachtet und heruntergeladen werden (Bereitstellung als `.png` und `.svg`): https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/tree/dev/implementation-guides/ImplementationGuide-2024.x-DE/Images
-
-
+Die Bildateien können [hier (Github)](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/tree/07ce6ec12a951f16a4d9c191e1e9e72eecd53449/implementation-guides/ImplementationGuide-2024.x-DE/Images) zur besseren Darstellung einzeln betrachtet und heruntergeladen werden (Bereitstellung als `.png` und `.svg`).
 
 ### Diagnose 
 
