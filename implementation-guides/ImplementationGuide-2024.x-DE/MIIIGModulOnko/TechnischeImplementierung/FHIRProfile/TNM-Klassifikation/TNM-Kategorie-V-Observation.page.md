@@ -6,6 +6,8 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 
 ## {{page-title}}
 
+Dieses Profil beschreibt die V-Kategorie der TNM-Klassifikation. Die V-Kategorie kodiert für eine mikroskopische oder makroskopische Veneninvasion.
+
 @```
 from 
     StructureDefinition 
@@ -14,10 +16,6 @@ where
 select 
     Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 ```
-
-Dieses Profil beschreibt die V-Kategorie der TNM-Klassifikation. Die V-Kategorie kodiert für eine mikroskopische oder makroskopische Veneninvasion. 
-
-
 
 ### Inhalt
 

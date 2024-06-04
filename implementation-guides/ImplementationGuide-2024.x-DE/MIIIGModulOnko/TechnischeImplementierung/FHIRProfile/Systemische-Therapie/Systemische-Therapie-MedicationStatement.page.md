@@ -6,6 +6,7 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 
 ## {{page-title}}
 
+Dieses Profil beschreibt die konkreten Medikationen, die im Rahmen der systemischen Therapie für den oBDS dokumentiert werden.
 
 @```
 from 
@@ -16,16 +17,14 @@ select
     Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 ```
 
-
-Medikation der Systemische Therapie. Dieses Profil beschreibt die konkreten Medikationen, die im Rahmen der systemische Therapie für den oBDS dokumentiert werden.  Da im oBDS systemische und abwartende Therapie in einem Feld gruppiert sind, werden die Daten für die Systemische und abwartende Therapie sowohl über eine FHIR-Prozedur (systemisch und abwartend) als auch als FHIR-Medikation abgedeckt.
+Da im oBDS systemische und abwartende Therapie in einem Feld gruppiert sind, werden die Daten für die systemische und abwartende Therapie sowohl über eine FHIR-Prozedur (systemisch und abwartend) als auch als FHIR-Medikation abgedeckt.
 
 Die Angaben zur systemischen onkologischen Medikation im oBDS wird amit folgenden Datenpunkten 
-Im Medikationsprofil der Systemischen Therapie ist das spezifisch: 
+Im Medikationsprofil der Systemischen Therapie ist das spezifisch:
+
 * Start und Ende der Medikation
 * Name des Behandlungsschemas
 * Wirkstoffe (ATC-kodiert) 
-
-
 
 ### Inhalt
 
