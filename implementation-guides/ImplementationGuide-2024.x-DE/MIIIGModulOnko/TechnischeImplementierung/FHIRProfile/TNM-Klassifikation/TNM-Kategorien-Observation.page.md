@@ -7,13 +7,11 @@ topic: TNM-Kategories
 
 Dieses Profil ist ein Container für ein TNM-Staging in der Onkologie. 
 
-Der oBDS erfasst die TNM-Klassifikation umfassend in einzelnen Datenfeldern. 
+Der oBDS erfasst die TNM-Klassifikation umfassend in einzelnen Datenfeldern. Die T-, N- und M-Kategorien können zusammenhängend oder getrennt erfasst werden. Spezifische Ausprägungen, z.B. eine klinische oder pathologische Klassifikation, lassen sich ebenfalls abbilden.
 
-Die T-, M- und M-KateFernmetastasenmenhängend oder getrennt erfasst werden. 
-* können jeweils durch eine c/p Präfix spezifiziert werden. 
-* können durch ein 
+Im folgenden sind die Profile für T-, N- und M-Kategorien dargestellt.
 
-Im Folgenden sind die Profile für T-, M- und M-KateFernmetastasen@```
+@```
 from 
     StructureDefinition 
 where 
@@ -29,7 +27,7 @@ order by
 ---
 
 
-### Inhalt TNM-T-Kategorie (Tumorgröße)
+### Inhalt TNM T-Kategorie (Tumorgröße)
 
 <tabs>
 <tab title="Darstellung">{{tree: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie, buttons}}</tab>
@@ -63,7 +61,7 @@ order by
   <tab title="Link">{{link:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie}}</tab>
 </tabs>
 
-### Inhalt TNM-M-Kategorie (Fernmetastasen)
+### Inhalt TNM N-Kategorie (Lymphknoten)
 
 <tabs>
 <tab title="Darstellung">{{tree: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie, buttons}}</tab>
@@ -99,7 +97,7 @@ order by
 
 ---
 
-### Inhalt TNM-M-Kategorie (Fernmetastasen)
+### Inhalt TNM M-Kategorie (Fernmetastasen)
 
 <tabs>
 <tab title="Darstellung">{{tree: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie, buttons}}</tab>

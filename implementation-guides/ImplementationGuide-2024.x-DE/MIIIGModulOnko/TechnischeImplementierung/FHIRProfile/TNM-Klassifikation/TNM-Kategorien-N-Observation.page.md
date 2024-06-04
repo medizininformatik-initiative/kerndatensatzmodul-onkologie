@@ -6,7 +6,7 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 
 ## {{page-title}}
 
-Dieses Profil beschreibt die N-Kategorie der TNM-Klassifikation. Die N-Kategorie kodiert für die Tumorgröße und wird entitätsspezifisch kodiert. 
+Dieses Profil beschreibt die N-Kategorie der TNM-Klassifikation. Die N-Kategorie kodiert für Fehlen bzw. Vorhandensein von regionären Lymphknotenmetastasen und wird entitätsspezifisch kodiert.
 
 @```
 from 

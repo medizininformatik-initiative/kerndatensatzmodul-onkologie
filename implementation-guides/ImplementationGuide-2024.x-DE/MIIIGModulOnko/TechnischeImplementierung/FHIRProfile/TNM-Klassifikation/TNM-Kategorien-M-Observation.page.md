@@ -6,7 +6,7 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 
 ## {{page-title}}
 
-Dieses Profil beschreibt die M-Kategorie der TNM-Klassifikation. Die M-Kategorie kodiert für die Tumorgröße und wird entitätsspezifisch kodiert. 
+Dieses Profil beschreibt die M-Kategorie der TNM-Klassifikation. Die M-Kategorie kodiert für das Fehlen bzw. Vorhandensein von Fernmetastasen und wird entitätsspezifisch kodiert.
 
 @```
 from 
