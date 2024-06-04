@@ -10,11 +10,11 @@ Da die Verwendung von Extensions im FHIR-Kontext nach Möglichkeit zu vermeiden 
 __Intention__
 * Notwendigkeit der Extension: 
     * die FHIR R4 Prozedur enthält kein Element, das die Behandlungsintention adäquat darstellen kann. 
-    * die MII-Prozedur enthält daher eine Extension `behandlungsabsicht`
+    * die MII-Prozedur enthält daher eine Extension [Durchführungsabsicht](https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht)
 
     * CarePlan enthält das Element Intention ; dieses beschreibt jedoch die Stärke der Intention  der Ressource (wie bindend die Ressource ist, also Plan, Option, Anforderung etc.) und kann damit nicht für die Kodierung der Behandlungsabsicht im Sinne des oBDS genutzt werden
 * Alternativer Vorschlag
-    * Eventuell kann über ein konsentiertes SNOMED-Mapping eine Übereinstimmung erreicht werden, so dass die Behandlungintention direkt in SNOMED-CT erfasst wird und so mittels der "behandlungsabsicht"-extension durchgeführt werden kann. 
+    * Eventuell kann über ein konsentiertes SNOMED-Mapping eine Übereinstimmung erreicht werden, so dass die Behandlungintention direkt in SNOMED-CT erfasst wird und so mittels der Extension [Durchführungsabsicht](https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht) durchgeführt werden kann. 
 
 __Stellung__
 * Die Stellung einer Strahlen- oder Systemischen Therapie kann über die bisherigen FHIR-Prozeduren nicht abgebildet werden. Eine Abbildung über eine andere Ressource (z.B. in CarePlan als Teil der Tumorkonferenz) wurde diskutiert, aber als nicht vorteilhafter eingeschätzt. 

@@ -6,7 +6,7 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 
 ## Extensions von Operation
 
-Die Extension der Operation war notwendig, da sonst die oBDS-eigenen Codes nicht abgebildet werden können, weil das Binding der von der MII zum gleichen Zweck eingeführten Extension "behandlungsabsicht" zu stark ist.  
+Die Extension der Operation war notwendig, da sonst die oBDS-eigenen Codes nicht abgebildet werden können, weil das Binding der von der MII zum gleichen Zweck eingeführten Extension [Durchführungsabsicht](https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht) zu stark ist.  
 
 ### Inhalt
 
