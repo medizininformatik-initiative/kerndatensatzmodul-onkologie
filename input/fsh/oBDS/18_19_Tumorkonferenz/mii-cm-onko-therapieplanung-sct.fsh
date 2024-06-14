@@ -2,7 +2,7 @@ Instance: MII-CM-Onko-Therapieplanung-SCT-Mapping
 InstanceOf: ConceptMap
 Usage: #definition
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-therapieplanung-sct"
-* name = "MII_CM_Onko_Therapieplanung_SNOMED_Mapping"
+* name = "mii-cm-onko-therapieplanung-snomed-mapping"
 * title = "MII CM Onko Therapieplanung SNOMED Mapping"
 * status = #draft
 * experimental = false

@@ -2,12 +2,12 @@ Instance: MII-CM-Onko-Verlauf-Primaertumor-SCT-Mapping
 InstanceOf: ConceptMap
 Usage: #definition
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-verlauf-primaertumor-sct"
-* name = "MII_CM_Onko_Verlauf_Primaertumor_SNOMED_Mapping"
+* name = "mii-cm-onko-verlauf-primaertumor-snomed-mapping"
 * title = "MII CM Onko Verlauf Primaertumor SNOMED Mapping"
 * status = #draft
 * experimental = false
 * date = "2024-04-10"
-* description = "Mapping Verlauf_Primaertumor Codes zu SNOMED-CT"
+* description = "Mapping Verlauf-Primaertumor Codes zu SNOMED-CT"
 * purpose = "Technical mapping to transform oBDS-Data into SNOMED"
 * sourceUri = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/"
 * targetUri[+] = "http://snomed.info/sct"

@@ -2,7 +2,7 @@ Instance: MII-CM-Onko-Seitenlokalisation-SCT-Mapping
 InstanceOf: ConceptMap
 Usage: #definition
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-seitenlokalisation-sct"
-* name = "MII_CM_Onko_Seitenlokalisation_SNOMED_Mapping"
+* name = "mii-cm-onko-seitenlokalisation-snomed-mapping"
 * title = "MII CM Onko Seitenlokalisation SNOMED Mapping"
 * status = #draft
 * experimental = false
@@ -38,7 +38,6 @@ Usage: #definition
 * group[=].element[=].target.code = #260528009
 * group[=].element[=].target.display = "Median (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Mapping of Seitenlokalisation to SNOMED"
 
 * group[=].element[+].code = #U
 * group[=].element[=].display = "unbekannt"

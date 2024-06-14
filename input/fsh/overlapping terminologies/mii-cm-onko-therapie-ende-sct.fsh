@@ -2,8 +2,8 @@ Instance: MII-CM-Onko-Therapie-Ende-SCT-Mapping
 InstanceOf: ConceptMap
 Usage: #definition
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-therapie-ende-sct"
-* name = "MII_CM_Onko_Therapie_Ende_SNOMED_Mapping"
-* title = "MII CM Onko Therapi Ende SNOMED Mapping"
+* name = "mii-cm-onko-therapie-ende-snomed-mapping"
+* title = "MII CM Onko Therapie Ende SNOMED Mapping"
 * status = #draft
 * experimental = false
 * date = "2024-04-11"
@@ -16,10 +16,10 @@ Usage: #definition
 
 * group[=].element[+].code = #E
 * group[=].element[=].display = "reguläres Ende"
-* group[=].element[=].target.code = #261782000
-* group[=].element[=].target.display = "End (qualifier value)"
+* group[=].element[=].target.code = #385656004
+* group[=].element[=].target.display = "Ended (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent 
-* group[=].element[=].target.comment = "ggfs. Postkoordination bei Abgrenzung zu den anderen End-Begrifen" 
+* group[=].element[=].target.comment = "keine Postkoordination zu andernen End-Konzepten möglich" 
 
 * group[=].element[+].code = #R
 * group[=].element[=].display = "reguläres Ende mit Dosisreduktion"

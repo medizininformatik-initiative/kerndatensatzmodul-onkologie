@@ -2,7 +2,7 @@ Instance: MII-CM-Onko-Strahlentherapie-Boost-SCT-Mapping
 InstanceOf: ConceptMap
 Usage: #definition
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-strahlentherapie-boost-sct"
-* name = "MII_CM_Onko_Strahlentherapie_Boost_SNOMED_Mapping"
+* name = "mii-cm-onko-strahlentherapie-boost-snomed-mapping"
 * title = "MII CM Onko Strahlentherapie Boost SNOMED Mapping"
 * status = #draft
 * experimental = false
