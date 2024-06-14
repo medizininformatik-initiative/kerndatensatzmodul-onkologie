@@ -6,7 +6,7 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 
 ## {{page-title}}
 
-Dieses Profil beschreibt eine Pathologie-Befund im Rahmen in der Onkologie.
+Dieses Profil beschreibt einen Pathologie-Befund im Rahmen in der Onkologie.
 
 
 Da die Daten aus den lokalen Tumordokumentationssystemen stammen, wird ein Großteil der Befunde in reiner Textform vorliegen. 

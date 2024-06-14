@@ -6,7 +6,7 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 
 ## {{page-title}}
 
-Dieses Profil beschreibt die M-Kategorie der TNM-Klassifikation. Die M-Kategorie kodiert für die Tumorgröße und wird entitätsspezifisch kodiert. 
+Dieses Profil beschreibt die M-Kategorie der TNM-Klassifikation. Die M-Kategorie kodiert für das Fehlen bzw. Vorhandensein von Fernmetastasen und wird entitätsspezifisch kodiert.
 
 @```
 from 
@@ -89,7 +89,7 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
 
     Beispiele: 
 
-    ```GET [base]/Condition?_id=1234```
+    ```GET [base]/Observation?_id=1234```
     
     Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
@@ -97,7 +97,7 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
 
     Beispiele:
     
-    ```GET [base]/Condition?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose```
+    ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie```
     
     Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
 

@@ -14,8 +14,7 @@ Dieses Profil beschreibt eine Operation in der Onkologie.
 
 ### Extensions
 
-Das MII-Modul Prozedur besitzt bereits eine Extension "Durchführungsabsicht" mit Binding auf SNOMED-CT Codes. Da die Intention der OP im oBDS jedoch durch ein oBDS-spezifisches Antwortspektrum erfasst wird, wurde die Prozedur um eine zusätzliches Element "Intention" erweitert. Die zwei Erweiterungen des MII-Prozedur-Moduls (Durchführungsabsicht, rsind optional und für das Mapping vom obDS nicht direkt relevant. 
-
+Das MII-Modul Prozedur besitzt bereits eine Extension [Durchführungsabsicht](https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht) mit Binding auf SNOMED-CT Codes. Da die Intention der OP im oBDS jedoch durch ein oBDS-spezifisches Antwortspektrum erfasst wird, wurde die Prozedur um eine zusätzliches Element "Intention" erweitert. Vorhandene Erweiterungen des MII-Moduls Prozedur sind optional und für das Mapping von oBDS nicht direkt relevant.
 
 ### Residualstatus und weitere Beobachtungen
 Der oBDS sieht bei Resektion von Tumorgewebe eine Erfassung des R-Status vor. 

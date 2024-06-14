@@ -19,4 +19,4 @@ Das Erweiterungsmodul Onkologie basiert auf dem onkologischen Basisdatensatz (oB
     * https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532143/Meldungsinhalte und alle Unterpages für Detailansichten und Datenmodelldiagramme der einzelnen Meldeinhalten
 
 
-Es existieren ältere Vorarbeiten zur Abbildung des oBDS als Informationsmodell auf der Plattform ART-DECOR , die momentan den aktuellen Stand nicht vollständig abbilden. Diese sind [hier](https://art-decor.org/ad/#/mide-/datasets/dataset/2.16.840.1.113883.3.1937.777.24.1.1/2018-06-05T12:44:12/concept/2.16.840.1.113883.3.1937.777.24.2.1525/2020-05-04T10:57:26) zu erreichen.
+Es existieren ältere Vorarbeiten zur Abbildung des oBDS als Informationsmodell auf der Plattform ART-DECOR , die momentan den aktuellen Stand nicht vollständig abbilden. Diese sind [hier](https://art-decor.org/art-decor/decor-datasets--mide-?id=2.16.840.1.113883.3.1937.777.24.1.1&effectiveDate=2018-06-05T12%3A44%3A12&conceptId=2.16.840.1.113883.3.1937.777.24.2.62&conceptEffectiveDate=2018-06-06T06%3A13%3A32) zu erreichen.

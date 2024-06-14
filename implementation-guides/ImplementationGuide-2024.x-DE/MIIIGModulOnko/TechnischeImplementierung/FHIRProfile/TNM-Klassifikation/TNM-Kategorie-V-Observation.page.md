@@ -6,6 +6,8 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 
 ## {{page-title}}
 
+Dieses Profil beschreibt die V-Kategorie der TNM-Klassifikation. Die V-Kategorie kodiert für eine mikroskopische oder makroskopische Veneninvasion.
+
 @```
 from 
     StructureDefinition 
@@ -14,10 +16,6 @@ where
 select 
     Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 ```
-
-Dieses Profil beschreibt die V-Kategorie der TNM-Klassifikation. Die V-Kategorie kodiert für eine mikroskopische oder makroskopische Veneninvasion. 
-
-
 
 ### Inhalt
 
@@ -91,7 +89,7 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
 
     Beispiele: 
 
-    ```GET [base]/Condition?_id=1234```
+    ```GET [base]/Observation?_id=1234```
     
     Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
@@ -99,7 +97,7 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
 
     Beispiele:
     
-    ```GET [base]/Condition?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose```
+    ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-v-kategorie```
     
     Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
 

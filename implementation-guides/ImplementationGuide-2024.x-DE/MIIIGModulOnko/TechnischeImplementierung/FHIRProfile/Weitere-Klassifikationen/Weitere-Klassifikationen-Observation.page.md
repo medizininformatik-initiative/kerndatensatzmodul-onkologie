@@ -6,7 +6,7 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 
 ## {{page-title}}
 
-Dieses Profil beschreibt weitere Tumor Staging Klassifikationen neben TMN. Neben speziellen Tump sind hier v.a. die hämatologischen Klassifikationen zu nennen. 
+Dieses Profil beschreibt weitere Tumorklassifikationen neben TMN. Neben entitätsspezifischen Klassifikationen (z.B. FIGO-Klassifikation bei gynäkologischen Tumoren) sind hier v.a. die hämatologischen Klassifikationen und die WHO-Klassifikation bei Tumoren des ZNS zu nennen. 
 
 Die Plattform §65c stellt einen Katalog bereit, wie die häufigsten Klassifikationen aus Harmonisierungsgründen **für die Krebsregistermeldung** zu kodieren sind. 
 https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532511/Weitere+Klassifikationen

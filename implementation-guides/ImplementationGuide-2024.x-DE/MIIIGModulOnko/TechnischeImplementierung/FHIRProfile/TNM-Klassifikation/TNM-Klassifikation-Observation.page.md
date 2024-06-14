@@ -12,7 +12,7 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 
 Dieses Profil ist das Gruppierungsprofil für eine TNM-Klassifikation in der Onkologie. 
 
-Das Profil enthält das Referenzdatum und dient als Ankerpunkt für alle weiteren TNM-Einzelbeobachtungen zu diesem Zeitpunkt. Das Element `hasMember` enthält Referenzen zu allen verb. 
+Das Profil enthält das Referenzdatum und dient als Ankerpunkt für alle weiteren TNM-Einzelbeobachtungen zu diesem Zeitpunkt. Das Element `hasMember` enthält Referenzen zu allen verbundenen TNM-Einzelbeobachtungen.
 
 
 Außerdem wird im Element `value` das UICC-Staging kodiert, dass von den untergeordneten TNM-Beobachtungen abgeleitet ist. 
@@ -101,7 +101,7 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
 
     Beispiele: 
 
-    ```GET [base]/Condition?_id=1234```
+    ```GET [base]/Observation?_id=1234```
     
     Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
@@ -109,7 +109,7 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
 
     Beispiele:
     
-    ```GET [base]/Condition?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose```
+    ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation```
     
     Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
 

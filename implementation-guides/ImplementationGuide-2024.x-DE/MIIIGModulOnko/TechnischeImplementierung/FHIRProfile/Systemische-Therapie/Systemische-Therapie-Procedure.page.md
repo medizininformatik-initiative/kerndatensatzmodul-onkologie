@@ -4,6 +4,10 @@ topic: StrahlentherapieProcedure
 subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie
 ---
 
+## Systemische und abwartende Therapie
+
+Dieses Profil beschreibt eine systemische oder abwartende Therapie in der Onkologie.
+
 @```
 from 
     StructureDefinition 
@@ -13,19 +17,12 @@ select
     Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 ```
 
-## Systemische und abwartende Therapie
-
-Dieses Profil beschreibt eine systemische oder abwartende Therapie in der Onkologie. 
-
-
 Im oBDS wird eine systemische Therapie mittels Chemo-/Hormon-/Immun- oder Kombinationstherapien in den gleichen Feldern kodiert wie die abwartenden Therapien. Dazu gehören
 * Watchful Waiting 
 * Active Surveillance
 * Wait and see
 
- 
-Zur Kodierung der Systemischen Therapie SOLL wie folgt vorgegangen werden: 
-
+Zur Kodierung der Systemischen Therapie SOLL wie folgt vorgegangen werden:
 
 * **Systemische Therapie** ist über **OPS** zu kodieren 
     * Chemo-/Immun/Hormon-/zielgerichtete Therapien und/oder Kombinationstherapien:  `OPS 8-54` oder spezifischer
@@ -35,10 +32,7 @@ Zur Kodierung der Systemischen Therapie SOLL wie folgt vorgegangen werden:
     * Active Surveillance als SNOMED-CT: `424313000 | Active surveillance (regime/therapy) |`
     * Wait and see als SNOMED-CT: `310341009 | Follow-up (wait and see) (finding) |`
  
-
 Der Grund der Beendigung (unabhängig ob erfolgreich oder nicht erfolgreich) wird über `Procedure.outcome` kodiert.
-
-
 
 ### Inhalt
 

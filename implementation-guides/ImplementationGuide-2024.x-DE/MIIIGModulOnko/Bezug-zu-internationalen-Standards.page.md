@@ -26,8 +26,8 @@ Die enthaltenen Datenelemente lassen sich unterteilen in:
 
 #### Entscheidende Unterschiede mCODE - oBDS
 
-1. mCODE und weitere nicht in mCODE-abgebildete (Komorbiditäten, Vitalparameter, Ethnizität etc.)basieren zu großen Teilen auf den US-amerikanischen FHIR-Basismodulen aus us-core und ist daher in Deutschland nicht direkt anwendbar.
-2. In der Datenmodellierung ist die klinische Entscheidungsfindung wie z.B. über ein Tumorboard
+1. mCODE und durch mCODE referenzierte Datenelemente (Komorbiditäten, Vitalparameter, Ethnizität etc.) basieren zu großen Teilen auf den US-amerikanischen FHIR-Basismodulen aus us-core und ist daher in Deutschland nicht direkt anwendbar.
+2. In der Datenmodellierung ist die klinische Entscheidungsfindung wie z.B. Empfehlungen eines interdisziplinären Tumorboards nicht abgebildet. 
 3. Es soll mit tatsächlichen Behandlungsdaten gearbeitet werden, daher sind viele FHIR-Ressourcen detaillierter, als es die Datenlage im oBDS zulässt. So sind genaue Zeitpunkte der Medikamentengabe und Dosisangaben nicht Teil des oBDS, wohl aber von mCODE. 
 4. Insgesamt ist mCODE für eine prospektive Datenerfassung optimiert bzw. kann in der Behandlung kontinuierlich fortgeschrieben werden. 
 Hierin unterscheidet sich der Grundaufbau deutlich von den retrospektiv dokumentierten deutschen Krebsregisterdaten, deren Inhalte meldungsspezifisch variieren können (Diagnose, Operation, Verlauf etc). 

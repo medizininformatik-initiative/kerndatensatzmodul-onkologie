@@ -277,6 +277,12 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
 
 **Beispiele**
 
-{{json:}}
+{{json:mii-exa-onko-anzahl-untersuchte-lymphknoten-23}}
+
+{{json:mii-exa-onko-anzahl-befallene-lymphknoten-0}}
+
+{{json:mii-exa-onko-anzahl-untersuchte-sentinel-lymphknoten-0}}
+
+{{json:mii-exa-onko-anzahl-befallene-sentinel-lymphknoten-0}}
 
 ---
