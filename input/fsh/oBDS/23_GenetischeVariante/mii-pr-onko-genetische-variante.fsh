@@ -19,10 +19,10 @@ Description: "Genetische Variante wie im oBDS beschrieben"
 * interpretation from mii-vs-onko-genetische-variante-auspraegung (required)
 * interpretation.coding.system MS
 * interpretation.coding.code MS
-* value[x] ^slicing.discriminator.type = #pattern
-* value[x] ^slicing.rules = #open
-* value[x] ^slicing.ordered = false
-* value[x] only CodeableConcept
+// * value[x] ^slicing.discriminator.type = #type
+// * value[x] ^slicing.discriminator.path = "$this"
+// * value[x] ^slicing.rules = #closed
+* value[x] only CodeableConcept // sollte ausreichen
 * valueCodeableConcept 0..1 MS
 * valueCodeableConcept.coding.system MS
 * valueCodeableConcept.coding.code MS
