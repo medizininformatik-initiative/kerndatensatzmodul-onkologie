@@ -23,7 +23,7 @@ jobs:
       - name: Update FHIR Profiles
         uses: cybernop/build-fhir-profiles@v1
         with:
-          sushi-version: "3.0.0-beta.2"
+          sushi-version: "3.11.0"
           project-dir: profiles
       - name: Push built Profiles
         uses: cybernop/push-fsh-profiles@v1
