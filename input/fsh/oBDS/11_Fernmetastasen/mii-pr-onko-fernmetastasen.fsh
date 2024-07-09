@@ -15,7 +15,7 @@ Description: "OBDS Beschreibung von Fernmetastasen (Lokalisation und Datum)"
 * code MS
 * code 1..1 
 * code ^definition = "SCTID: 385421009 | Site of distant metastasis"
-* code ^short "Lokalisation einer Fernmetastase laut oBDS"
+* code ^short = "Lokalisation einer Fernmetastase laut oBDS"
 * code.coding = $SCT#385421009 
 * code.coding 
 // 11.1 Lokalisation von Fernmetastase(n) 
