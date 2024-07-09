@@ -21,36 +21,6 @@
   "fhirVersion": "4.0.1",
   "mapping": [
     {
-      "identity": "workflow",
-      "uri": "http://hl7.org/fhir/workflow",
-      "name": "Workflow Pattern"
-    },
-    {
-      "identity": "sct-concept",
-      "uri": "http://snomed.info/conceptdomain",
-      "name": "SNOMED CT Concept Domain Binding"
-    },
-    {
-      "identity": "v2",
-      "uri": "http://hl7.org/v2",
-      "name": "HL7 v2 Mapping"
-    },
-    {
-      "identity": "rim",
-      "uri": "http://hl7.org/v3",
-      "name": "RIM Mapping"
-    },
-    {
-      "identity": "w5",
-      "uri": "http://hl7.org/fhir/fivews",
-      "name": "FiveWs Pattern Mapping"
-    },
-    {
-      "identity": "sct-attr",
-      "uri": "http://snomed.org/attributebinding",
-      "name": "SNOMED CT Attribute Binding"
-    },
-    {
       "identity": "oBDS",
       "name": "Mapping FHIR zu oBDS"
     }
@@ -81,6 +51,8 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
+        "short": "Lokalisation einer Fernmetastase laut oBDS",
+        "definition": "SCTID: 385421009 | Site of distant metastasis",
         "mustSupport": true
       },
       {
@@ -126,6 +98,8 @@
       {
         "id": "Observation.effective[x]",
         "path": "Observation.effective[x]",
+        "short": "Datum der diagnostischen Sicherung von Fernmetastasen",
+        "definition": "Gibt an, wann die Fernmetastase festgestellt wurde.",
         "min": 1,
         "type": [
           {
@@ -144,6 +118,8 @@
       {
         "id": "Observation.bodySite",
         "path": "Observation.bodySite",
+        "short": "Lokalisation der Fernmetastase laut oBDS/TNM-Kodierung",
+        "definition": "weitere Lokalisiationen sind als einzelne Ressourcen zu kodieren",
         "min": 1,
         "mustSupport": true,
         "binding": {
