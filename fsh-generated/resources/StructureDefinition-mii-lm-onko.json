@@ -675,6 +675,25 @@
         ]
       },
       {
+        "id": "Onkologie.TNMKlassifikation.TNMMKategorie",
+        "path": "Onkologie.TNMKlassifikation.TNMMKategorie",
+        "short": "TNM M-Kategorie",
+        "definition": "Fehlen oder Vorhandensein von Fernmetastasen, gemäß Tumorentität nach TNM.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept.coding.code"
+          }
+        ]
+      },
+      {
         "id": "Onkologie.TNMKlassifikation.TNMNKategorie",
         "path": "Onkologie.TNMKlassifikation.TNMNKategorie",
         "short": "TNM N-Kategorie",
