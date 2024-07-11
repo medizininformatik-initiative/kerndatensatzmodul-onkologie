@@ -10,23 +10,23 @@ Description: "Systemische Therapie. Dieses Profil beschreibt eine Systemische Th
 
 // Logical Modell see:  https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532379/Systemische+Therapie+SYST+Typ // t
 * meta.profile 0..* MS
-// Intention der systemischen Therapie  
+// Intention der systemischen Therapie
 * extension contains mii-ex-onko-systemische-therapie-intention named Intention 1..1 // hier ggfs. refactoring
 * extension[Intention] MS
 
-// Systemische Therapie Stellung zu operativer Therapie 
-* extension contains mii-ex-onko-systemische-therapie-stellung named Stellung 0.. // hier ggfs Refactoren auf ein gemeinsames Code System mit unterschiedlicheN Value Sets
-* extension[Stellung] MS 
+// Systemische Therapie Stellung zu operativer Therapie
+* extension contains mii-ex-onko-systemische-therapie-stellung-zur-op named StellungZurOp 0.. // hier ggfs Refactoren auf ein gemeinsames Code System mit unterschiedlicheN Value Sets
+* extension[StellungZurOp] MS
 
-* code 1..1  // slicen! 
+* code 1..1  // slicen!
 * code.coding contains
-        systemische_therapie_art 0..1 
+        systemische_therapie_art 0..1
 * code.coding[systemische_therapie_art] from mii-vs-onko-systemische-therapie-art
 * code.coding[systemische_therapie_art].code 1..1
 * code.coding[systemische_therapie_art].system 1..1
 
 // Systemische Therapie Beginn und  Ende--> ggfs. dupliziert im MedicationStatement oder MedicationAdministration
-* performed[x] MS 
+* performed[x] MS
 * performed[x] only Period // wird über Period.start und Period.stop des MII Prozedurmoduls erfasst
 * performed[x].start 1..1 MS
 * performed[x].end 0..1 MS
@@ -36,7 +36,7 @@ Description: "Systemische Therapie. Dieses Profil beschreibt eine Systemische Th
 * basedOn only Reference(CarePlan)
 
 // Referenz auf Primaerdiagnose oder andere Condition
-* reasonReference MS 
+* reasonReference MS
 * reasonReference only Reference(Condition)
 
 // Referenz auf letzte Verlaufsobservation zur zeitlichen und inhaltlichen Kopplung
@@ -60,7 +60,7 @@ Title: "Mapping FHIR zu oBDS"
 Source: MII_PR_Onko_Systemische_Therapie
 * -> "16" "Systemische Therapie"
 * extension[Intention].valueCodeableConcept.coding.code -> "16.1" "Intention der systemischen Therapie"
-* extension[Stellung].valueCodeableConcept.coding.code -> "16.2" "Systemische Therapie Stellung zu operativer Therapie" 
+* extension[StellungZurOp].valueCodeableConcept.coding.code -> "16.2" "Systemische Therapie Stellung zu operativer Therapie"
 * code.coding.code -> "16.3" "Art der systemischen oder abwartenden Therapie"
 * performed[x].start -> "16.6" "Systemische Therapie Beginn"
 * performed[x].end -> "16.8" "Systemische Therapie Ende"
