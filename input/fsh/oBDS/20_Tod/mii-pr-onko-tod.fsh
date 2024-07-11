@@ -29,11 +29,11 @@ Description: "Tumorbedingter Tod"
 * value[x] MS
 * value[x] only CodeableConcept
 * valueCodeableConcept MS
-* valueCodeableConcept 1..
-* valueCodeableConcept from http://fhir.de/ValueSet/bfarm/icd-10-gm 
+* valueCodeableConcept 0..1
+* valueCodeableConcept from http://fhir.de/ValueSet/bfarm/icd-10-gm
 * valueCodeableConcept.coding.code 1.. MS
 * valueCodeableConcept.coding.system 1.. MS
-* valueCodeableConcept.coding.system = $ICD10GM 
+* valueCodeableConcept.coding.system = $ICD10GM
 * valueCodeableConcept.coding.version 1.. MS
 
 // Referenz zu Verlauf-Observation
