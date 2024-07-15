@@ -10,7 +10,7 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 
 
 
-Dieses Profil beschreibt die die Tumorkonferenz und die Therapieempfehlungen.
+Dieses Profil beschreibt die Tumorkonferenz und die Therapieempfehlungen.
 Die Datenfelder sind seit der Version 2021 Teil des oBDS und werden in zwei verschiedenen Modulen erfasst. Da alle beteiligten Felder sehr gut über die FHIR CarePlan-Ressource abbildbar sind, wurden alle die Tumorkonferenz- und Therapieemfpehlungsfelder im Tumorkonferenz-Profil zusammengefasst.  
 
 Das Tumorkonferenz-Profil umfasst daher

@@ -8,7 +8,7 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 ## {{page-title}}
 
 ### Kontext
-Dieses Profil beschreibt den allgemeiner Leistungszustand eines Patienten in der Onkologie.
+Dieses Profil beschreibt den allgemeinen Leistungszustand eines Patienten in der Onkologie.
 
 Die Erfassung des allgemeine Leistungszustand wird im oBDS vorgeschrieben. 
 Dabei wird die eigentliche Meldung als ECOG kodiert und übertragen, wobei die Antwortmöglichkeiten ein Mapping vom Karnofsky-Score ermöglichen. 
