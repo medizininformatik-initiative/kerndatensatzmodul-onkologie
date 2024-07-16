@@ -19,13 +19,16 @@ Description: "OBDS Beschreibung von Fernmetastasen (Lokalisation und Datum)"
 * code.coding = $SCT#385421009 
 * code.coding 
 // 11.1 Lokalisation von Fernmetastase(n) 
-* bodySite MS
-* bodySite 1..1
-* bodySite ^short = "Lokalisation der Fernmetastase laut oBDS/TNM-Kodierung"
-* bodySite ^definition = "weitere Lokalisiationen sind als einzelne Ressourcen zu kodieren"
-* bodySite from mii-vs-onko-fernmetastasen
-* bodySite.coding.system MS
-* bodySite.coding.code MS
+* value[x] MS
+* value[x] 1..1
+* value[x] ^short = "Lokalisation der Fernmetastase laut oBDS/TNM-Kodierung"
+* value[x] ^definition = "weitere Lokalisationen sind als einzelne Ressourcen zu kodieren"
+* value[x] only CodeableConcept 
+* valueCodeableConcept MS
+* valueCodeableConcept.coding MS 
+* valueCodeableConcept.coding from mii-vs-onko-fernmetastasen
+* valueCodeableConcept.coding.system MS
+* valueCodeableConcept.coding.code MS
 
 // 11.2 Datum der diagnostischen Sicherung von Fernmetastasen 
 * effective[x] MS
@@ -46,5 +49,5 @@ Id: oBDS
 Title: "Mapping FHIR zu oBDS"
 Source: MII_PR_Onko_Fernmetastasen
 * -> "11" "Fernmetastasen"
-* bodySite -> "11.1" "Lokalisation von Fernmetastase(n)"
+* valueCodeableConcept.coding.code -> "11.1" "Lokalisation von Fernmetastase(n)"
 * effectiveDateTime -> "11.2" "Datum der diagnostischen Sicherung von Fernmetastasen" 
