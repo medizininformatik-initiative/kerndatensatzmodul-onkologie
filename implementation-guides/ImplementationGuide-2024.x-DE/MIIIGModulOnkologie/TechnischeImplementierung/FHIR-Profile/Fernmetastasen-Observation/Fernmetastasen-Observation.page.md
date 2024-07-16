@@ -13,7 +13,7 @@ Dieses Profil beschreibt Fernmetastasen, wie sie im Rahmen des oBDS in der Onkol
 * Lokalisation basierend auf oBDS-eigener Kodierung
 
 In der FHIR-Profilierung **SOLL** jede Fernmetastase als einzelne Ressource angelegt werden. 
-Im oBDS ist die Angabe von nicht-invasiven diagnostischen Prozeduren nicht vorgesehen. Bei Bedarf **KANN** eine Fernmetastase auf entsprechende diagnostische Prozeduren verweisen. 
+Im oBDS ist die Angabe von nicht-invasiven diagnostischen Prozeduren nicht vorgesehen. Ebensowenig muss laut oBDS der Grad der diagnostischen Sicherung (klinisch, radiologisch, histologisch) erhoben werden. Bei Bedarf **KANN** eine Fernmetastase auf entsprechende diagnostische Prozeduren verweisen. 
  
 
 @```
