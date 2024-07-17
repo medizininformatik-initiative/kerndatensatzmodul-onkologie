@@ -1,31 +1,28 @@
 ---
 parent: 
-topic: AllgemeinerLeistungszustandObservation
-subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand
+topic: FernmetastasenObservation
+subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen
 ---
+
 
 
 ## {{page-title}}
 
-### Kontext
-Dieses Profil beschreibt den allgemeiner Leistungszustand eines Patienten in der Onkologie.
+Dieses Profil beschreibt Fernmetastasen, wie sie im Rahmen des oBDS in der Onkologie für die Meldung an die Krebsregister erfasst werden. Für jede Metastase sind folgende Datenfelder einzeln anzugeben: 
+* Datum der Feststellung 
+* Lokalisation basierend auf oBDS-eigener Kodierung
 
-Die Erfassung des allgemeine Leistungszustand wird im oBDS vorgeschrieben. 
-Dabei wird die eigentliche Meldung als ECOG kodiert und übertragen, wobei die Antwortmöglichkeiten ein Mapping vom Karnofsky-Score ermöglichen. 
+In der FHIR-Profilierung **SOLL** jede Fernmetastase als einzelne Ressource angelegt werden. 
+Im oBDS ist die Angabe von nicht-invasiven diagnostischen Prozeduren nicht vorgesehen. Ebensowenig muss laut oBDS der Grad der diagnostischen Sicherung (klinisch, radiologisch, histologisch) erhoben werden. Bei Bedarf **KANN** eine Fernmetastase auf entsprechende diagnostische Prozeduren verweisen. 
 
-Im bisherigen oBDS und in den vorliegenden FHIR-Profilen ist sowohl eine Dokumentation des ECOG mit den Antwortmöglichkeiten 0-4 als auch des Karnofsky-Scores mit 10%, 20% etc.  gestattet. 
-Der aktuelle Umsetzungsleitfaden enthält jedoch einen Hinweis, dass in Zukunft ausschließlich der ECOG gemeldet werden soll. https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532323/Allgemeiner+Leistungszustand+Typ
-
-Für den Fall, dass in den Befunden nur Bezug auf den Allgemeinzustand genommen wird, ohne dabei in ECOG oder Karnofsky zu kodieren, empfiehlt der Dokumentationsleitfaden der Plattform §65c die Entwicklung hausinterner Richtlinien zur besseren Reproduzierbarkeit. https://plattform65c.atlassian.net/wiki/spaces/Dokumentat/pages/86310992/Allgemeiner+Leistungszustand 
-
-
-Daher enthält das vorliegende Profil nur Kodierungen für die Angabe des ECOG-Leistungszustandes.   
+Dieses Profil ist konform zum [Patho-Finding-Profil des MII-Pathologiebefundes ](https://simplifier.net/guide/mii-ig-pathologie/Befund-TechnischeImplementierung-FHIRProfile-MII-PR-Patho-Finding?version=current) und kann daher als Observation in einen pathologischen Befundbericht eingebunden werden. 
+ 
 
 @```
 from 
     StructureDefinition 
 where 
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand' 
+    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen' 
 select 
     Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 ```
@@ -39,7 +36,7 @@ select
         from
 	        StructureDefinition
         where
-	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand' 
+	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen' 
         select
 	        Beschreibung: description
         with
@@ -49,7 +46,7 @@ select
         from 
             StructureDefinition 
         where 
-            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand' 
+            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen' 
         for 
             differential.element 
             where 
@@ -69,12 +66,11 @@ Mapping Datensatz zu FHIR
 @```
 from StructureDefinition 
 where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/Onkologie'
-    for differential.element where id.contains('AllgemeinerLeistungszustand')
+    for differential.element where id.contains('Fernmetastasen')
     select 
         Datensatz: short,
         Erklaerung: definition, 
         FHIR: mapping[0].map 
-
 ```
 
 ---
@@ -83,7 +79,7 @@ Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensa
 
 @```
 from StructureDefinition 
-where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand'  
+where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen'  
     for differential.element
     where mapping.identity='oBDS'
     select 
@@ -113,6 +109,7 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
     ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand```
     
     Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
+
 3. Der Suchparameter "code" MUSS unterstützt werden:
 
     Beispiele:
@@ -129,17 +126,49 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "subject" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
 
-5. Der Suchparameter "encounter" MUSS unterstützt werden:
+5. Der Suchparameter "focus" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/Observation?focus=Condition/example```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "focus" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+
+6. Der Suchparameter "encounter" MUSS unterstützt werden:
 
     Beispiele:
 
     ```GET [base]/Observation?encounter=Encounter/example```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "encounter" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
-    
+
+7. Der Suchparameter "date" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/Observation?date=2024-02-08```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "date" finden sich in der FHIR-Basisspezifikation - Abschnitt "date".
+
+8. Der Suchparameter "body-site" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/Observation?body-site=http://snomed.info/sct|258332000```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "body-site" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
+
+9. Der Suchparameter "derived-from" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/Observation?derived-from=Observation/example```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "derived-from" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+
 
 **Beispiele**
 
-{{json:mii-exa-onko-allgemeiner-leistungszustand-1}}
+{{json:mii-exa-onko-fernmetastasen-1}}
 
 ---

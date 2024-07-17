@@ -10,7 +10,7 @@ Der Datensatz basiert auf dem onkologischen Basisdatensatz (oBDS, siehe Referenz
 In der Umsetzung wurde der Fokus auf die Umwandlung der bei der Registermeldungdaten anfallenden Datenpunkte 
 in FHIR-Ressourcen für das FDPG für die Sekundärdatennutzung 
 
-Daher sind sind Meldungs-und personenrelevante Daten des oBDS nicht enthalten. Ebenso wurden bei die Erstimplementierung die organspezifischen Module nicht berücksichtigt. 
+Daher sind Meldungs- und personenrelevante Daten des oBDS nicht enthalten. Ebenso wurden bei die Erstimplementierung die organspezifischen Module nicht berücksichtigt. 
 
 {{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/Onkologie}} 
 

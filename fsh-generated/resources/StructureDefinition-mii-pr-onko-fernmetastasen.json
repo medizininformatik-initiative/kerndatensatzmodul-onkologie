@@ -21,36 +21,6 @@
   "fhirVersion": "4.0.1",
   "mapping": [
     {
-      "identity": "workflow",
-      "uri": "http://hl7.org/fhir/workflow",
-      "name": "Workflow Pattern"
-    },
-    {
-      "identity": "sct-concept",
-      "uri": "http://snomed.info/conceptdomain",
-      "name": "SNOMED CT Concept Domain Binding"
-    },
-    {
-      "identity": "v2",
-      "uri": "http://hl7.org/v2",
-      "name": "HL7 v2 Mapping"
-    },
-    {
-      "identity": "rim",
-      "uri": "http://hl7.org/v3",
-      "name": "RIM Mapping"
-    },
-    {
-      "identity": "w5",
-      "uri": "http://hl7.org/fhir/fivews",
-      "name": "FiveWs Pattern Mapping"
-    },
-    {
-      "identity": "sct-attr",
-      "uri": "http://snomed.org/attributebinding",
-      "name": "SNOMED CT Attribute Binding"
-    },
-    {
       "identity": "oBDS",
       "name": "Mapping FHIR zu oBDS"
     }
@@ -81,6 +51,8 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
+        "short": "Lokalisation einer Fernmetastase laut oBDS",
+        "definition": "SCTID: 385421009 | Site of distant metastasis",
         "mustSupport": true
       },
       {
@@ -126,6 +98,8 @@
       {
         "id": "Observation.effective[x]",
         "path": "Observation.effective[x]",
+        "short": "Datum der diagnostischen Sicherung von Fernmetastasen",
+        "definition": "Gibt an, wann die Fernmetastase festgestellt wurde.",
         "min": 1,
         "type": [
           {
@@ -142,14 +116,36 @@
         ]
       },
       {
-        "id": "Observation.bodySite",
-        "path": "Observation.bodySite",
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "short": "Lokalisation der Fernmetastase laut oBDS/TNM-Kodierung",
+        "definition": "weitere Lokalisationen sind als einzelne Ressourcen zu kodieren",
         "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x].coding",
+        "path": "Observation.value[x].coding",
         "mustSupport": true,
         "binding": {
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-fernmetastasen"
-        },
+        }
+      },
+      {
+        "id": "Observation.value[x].coding.system",
+        "path": "Observation.value[x].coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x].coding.code",
+        "path": "Observation.value[x].coding.code",
+        "mustSupport": true,
         "mapping": [
           {
             "identity": "oBDS",
@@ -157,16 +153,6 @@
             "comment": "Lokalisation von Fernmetastase(n)"
           }
         ]
-      },
-      {
-        "id": "Observation.bodySite.coding.system",
-        "path": "Observation.bodySite.coding.system",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.bodySite.coding.code",
-        "path": "Observation.bodySite.coding.code",
-        "mustSupport": true
       },
       {
         "id": "Observation.derivedFrom",

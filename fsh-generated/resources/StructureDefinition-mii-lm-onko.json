@@ -21,11 +21,6 @@
   "fhirVersion": "4.0.1",
   "mapping": [
     {
-      "identity": "rim",
-      "uri": "http://hl7.org/v3",
-      "name": "RIM Mapping"
-    },
-    {
       "identity": "FHIR",
       "name": "Onkologie LogicalModel FHIR Mapping"
     }
@@ -665,6 +660,25 @@
         "path": "Onkologie.TNMKlassifikation.TNMmSymbol",
         "short": "TNM m-Symbol",
         "definition": "Kennzeichnet Vorhandensein multipler Primärtumoren in einem anatomischen Bezirk.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept.coding.code"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.TNMKlassifikation.TNMMKategorie",
+        "path": "Onkologie.TNMKlassifikation.TNMMKategorie",
+        "short": "TNM M-Kategorie",
+        "definition": "Fehlen oder Vorhandensein von Fernmetastasen, gemäß Tumorentität nach TNM.",
         "min": 0,
         "max": "1",
         "type": [
