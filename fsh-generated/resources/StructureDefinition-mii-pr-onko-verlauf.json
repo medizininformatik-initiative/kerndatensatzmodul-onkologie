@@ -21,36 +21,6 @@
   "fhirVersion": "4.0.1",
   "mapping": [
     {
-      "identity": "workflow",
-      "uri": "http://hl7.org/fhir/workflow",
-      "name": "Workflow Pattern"
-    },
-    {
-      "identity": "sct-concept",
-      "uri": "http://snomed.info/conceptdomain",
-      "name": "SNOMED CT Concept Domain Binding"
-    },
-    {
-      "identity": "v2",
-      "uri": "http://hl7.org/v2",
-      "name": "HL7 v2 Mapping"
-    },
-    {
-      "identity": "rim",
-      "uri": "http://hl7.org/v3",
-      "name": "RIM Mapping"
-    },
-    {
-      "identity": "w5",
-      "uri": "http://hl7.org/fhir/fivews",
-      "name": "FiveWs Pattern Mapping"
-    },
-    {
-      "identity": "sct-attr",
-      "uri": "http://snomed.org/attributebinding",
-      "name": "SNOMED CT Attribute Binding"
-    },
-    {
       "identity": "oBDS",
       "name": "Mapping FHIR zu oBDS"
     }
@@ -76,6 +46,15 @@
         "id": "Observation.code",
         "path": "Observation.code",
         "mustSupport": true
+      },
+      {
+        "id": "Observation.code.coding",
+        "path": "Observation.code.coding",
+        "patternCoding": {
+          "code": "396432002",
+          "system": "http://snomed.info/sct",
+          "display": "Status of regression of tumor (observable entity)"
+        }
       },
       {
         "id": "Observation.code.coding.code",
@@ -163,7 +142,7 @@
         ],
         "mustSupport": true,
         "binding": {
-          "strength": "required",
+          "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-verlauf-gesamtbeurteilung"
         }
       },
@@ -256,9 +235,9 @@
         "id": "Observation.component:Lymphknoten_Verlauf.code.coding",
         "path": "Observation.component.code.coding",
         "patternCoding": {
-          "code": "277060007",
+          "code": "399656008",
           "system": "http://snomed.info/sct",
-          "display": "Status der lymphatischen Tumorinvasion"
+          "display": "Status of tumor metastasis to regional lymph nodes (observable entity)"
         }
       },
       {
@@ -307,9 +286,9 @@
         "id": "Observation.component:Fernmetastasen_Verlauf.code.coding",
         "path": "Observation.component.code.coding",
         "patternCoding": {
-          "code": "260874000",
+          "code": "399608002",
           "system": "http://snomed.info/sct",
-          "display": "Status der Metastasen"
+          "display": "Status of distant metastasis (observable entity)"
         }
       },
       {

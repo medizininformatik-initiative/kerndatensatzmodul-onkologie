@@ -16,7 +16,7 @@ Description: "Example systemic therapy"
 Instance: mii-exa-onko-systemische-therapie-medikation1
 InstanceOf: MII_PR_Onko_Systemische_Therapie_Medikation
 Usage: #example
-Title: "Example chemotherapy"
+Title: "Example chemotherapy 1"
 Description: "Example for the FHIR profile systemic therapy based on German "
 * subject = Reference(Patient/example)
 * status = #final
@@ -26,11 +26,23 @@ Description: "Example for the FHIR profile systemic therapy based on German "
 * medicationCodeableConcept.coding[0].code = #L01AA01
 * medicationCodeableConcept.coding[0].version = "Version 2022"
 * medicationCodeableConcept.coding[0].display = "Cyclophosphamid"
-* medicationCodeableConcept.coding[1].system = $ATC_DE
-* medicationCodeableConcept.coding[1].code = #01DB01
-* medicationCodeableConcept.coding[1].version = "Version 2022"
-* medicationCodeableConcept.coding[1].display = "Doxorubicin"
 
+* partOf = Reference(mii-exa-onko-systemische-therapie-1)
+* note.text = "AC" // Schemaabkürzung für Cyclophosphamid und Doxorubicin
+
+Instance: mii-exa-onko-systemische-therapie-medikation2
+InstanceOf: MII_PR_Onko_Systemische_Therapie_Medikation
+Usage: #example
+Title: "Example chemotherapy 2"
+Description: "Example for the FHIR profile systemic therapy based on German "
+* subject = Reference(Patient/example)
+* status = #final
+* effectivePeriod.start = "2021-12-04"
+* effectivePeriod.end = "2022-04-06"
+* medicationCodeableConcept.coding[0].system = $ATC_DE
+* medicationCodeableConcept.coding[0].code = #01DB01
+* medicationCodeableConcept.coding[0].version = "Version 2022"
+* medicationCodeableConcept.coding[0].display = "Doxorubicin"
 
 * partOf = Reference(mii-exa-onko-systemische-therapie-1)
 * note.text = "AC" // Schemaabkürzung für Cyclophosphamid und Doxorubicin

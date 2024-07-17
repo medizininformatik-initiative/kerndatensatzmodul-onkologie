@@ -1,26 +1,23 @@
 ---
 parent: 
-topic: FernmetastasenObservation
-subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen
+topic: Verlaufshistologie
+subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-histologie-icdo3
 ---
-
-
 
 ## {{page-title}}
 
-Dieses Profil beschreibt Fernmetastasen, wie sie im Rahmen des oBDS in der Onkologie für die Meldung an die Krebsregister erfasst werden. Für jede Metastase sind folgende Datenfelder einzeln anzugeben: 
-* Datum der Feststellung 
-* Lokalisation basierend auf oBDS-eigener Kodierung
+Dieses Profil beschreibt eine Histologie-Untersuchung im Rahmen in der Onkologie.
 
-In der FHIR-Profilierung **SOLL** jede Fernmetastase als einzelne Ressource angelegt werden. 
-Im oBDS ist die Angabe von nicht-invasiven diagnostischen Prozeduren nicht vorgesehen. Bei Bedarf **KANN** eine Fernmetastase auf entsprechende diagnostische Prozeduren verweisen. 
- 
+Für Histologien, die zum Stellen der Primärdiagnose herangezogen werden, SOLLEN die ICD-O-3-Kodierungen direkt in der Primärdiagnose hinterlegt werden. 
+Das vorliegende Profil ist für den Fall reserviert, dass ein ICD-O-3 in einer Histologie im Verlauf durchgeführt wird. Mögliche Einsatzszenarien dafür sind die histologische Sicherung von Fernmetastasen oder eine histologische Verlaufskontrolle von bekannten Tumorherden. 
+Untersuchungen, die zu neuen Krebsdiagnosen führen, SOLLEN direkt als Teil der neuen Diagnose kodiert werden.  
+
 
 @```
 from 
     StructureDefinition 
 where 
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen' 
+    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-histologie-icdo3' 
 select 
     Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 ```
@@ -34,7 +31,7 @@ select
         from
 	        StructureDefinition
         where
-	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen' 
+	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-histologie-icdo3'
         select
 	        Beschreibung: description
         with
@@ -44,7 +41,7 @@ select
         from 
             StructureDefinition 
         where 
-            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen' 
+            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-histologie-icdo3' 
         for 
             differential.element 
             where 
@@ -64,11 +61,12 @@ Mapping Datensatz zu FHIR
 @```
 from StructureDefinition 
 where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/Onkologie'
-    for differential.element where id.contains('Fernmetastasen')
+    for differential.element where id.contains('ICD-O') 
     select 
         Datensatz: short,
         Erklaerung: definition, 
         FHIR: mapping[0].map 
+
 ```
 
 ---
@@ -77,7 +75,7 @@ Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensa
 
 @```
 from StructureDefinition 
-where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen'  
+where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-histologie-icdo3'  
     for differential.element
     where mapping.identity='oBDS'
     select 
@@ -104,11 +102,19 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
 
     Beispiele:
     
-    ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand```
+    ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading```
     
     Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
 
-3. Der Suchparameter "code" MUSS unterstützt werden:
+3. Der Suchparameter "category" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/Observation?category=http://terminology.hl7.org/CodeSystem/observation-category|laboratory```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "category" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
+
+4. Der Suchparameter "code" MUSS unterstützt werden:
 
     Beispiele:
 
@@ -116,7 +122,7 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "code" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
 
-4. Der Suchparameter "subject" MUSS unterstützt werden:
+5. Der Suchparameter "subject" MUSS unterstützt werden:
 
     Beispiele:
 
@@ -124,7 +130,7 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "subject" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
 
-5. Der Suchparameter "focus" MUSS unterstützt werden:
+6. Der Suchparameter "focus" MUSS unterstützt werden:
 
     Beispiele:
 
@@ -132,7 +138,7 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "focus" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
 
-6. Der Suchparameter "encounter" MUSS unterstützt werden:
+7. Der Suchparameter "encounter" MUSS unterstützt werden:
 
     Beispiele:
 
@@ -140,21 +146,13 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "encounter" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
 
-7. Der Suchparameter "date" MUSS unterstützt werden:
+8. Der Suchparameter "date" MUSS unterstützt werden:
 
     Beispiele:
 
     ```GET [base]/Observation?date=2024-02-08```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "date" finden sich in der FHIR-Basisspezifikation - Abschnitt "date".
-
-8. Der Suchparameter "body-site" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Observation?body-site=http://snomed.info/sct|258332000```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "body-site" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
 
 9. Der Suchparameter "derived-from" MUSS unterstützt werden:
 
@@ -164,9 +162,8 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "derived-from" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
 
-
 **Beispiele**
 
-{{json:mii-exa-onko-fernmetastasen-1}}
+{{json:mii-exa-onko-histologie-icdo3}}
 
 ---
