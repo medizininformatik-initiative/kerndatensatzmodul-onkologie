@@ -8,17 +8,17 @@ Das Erweiterungsmodul Onkologie beinhaltet diejenigen Gruppen des oBDS, die v.a.
 Daher wurden mehrere Gruppen **nicht** in FHIR implementiert. Das umfasst: 
 
 - Die personenbezogenen Gruppen 
-    - Modul 3: Patienten Stammdaten
-    - Modul 4: Melder Stammdaten
-    - Modul 7: Einsender
-    - Modul 22: Operateur
-    - Modul 25: Zusätzliche Kontakte
+    - Gruppe 3: Patienten Stammdaten
+    - Gruppe 4: Melder Stammdaten
+    - Gruppe 7: Einsender
+    - Gruppe 22: Operateur
+    - Gruppe 25: Zusätzliche Kontakte
 
 - die administrativen und meldungsbezogenen Gruppen
-    - Modul 1: Meldung
-    - Modul 2: Zentrum
-    - Modul 21: Anmerkungen
-    - Modul 24: Studienteilnahme
+    - Gruppe 1: Meldung
+    - Gruppe 2: Zentrum
+    - Gruppe 21: Anmerkungen
+    - Gruppe 24: Studienteilnahme
 
 Ebenfalls wurde entschieden, in der ersten Profilierung den Fokus auf die technische Implementierung der Hauptinhalte zu setzen, und damit die organspezifischen Module erst in einem späteren Schritt zu integrieren. 
 - Dazu gehören: 
