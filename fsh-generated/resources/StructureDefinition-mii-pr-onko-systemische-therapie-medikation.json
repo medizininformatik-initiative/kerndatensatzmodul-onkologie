@@ -47,7 +47,23 @@
       {
         "id": "MedicationStatement.partOf",
         "path": "MedicationStatement.partOf",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "profile",
+              "path": "resolve()"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "MedicationStatement.partOf:systemischeTherapie",
+        "path": "MedicationStatement.partOf",
+        "sliceName": "systemischeTherapie",
         "min": 1,
+        "max": "*",
         "type": [
           {
             "code": "Reference",
