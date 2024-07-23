@@ -18,12 +18,12 @@ Description: "Tumorbedingter Tod"
 
 * effective[x] MS
 * effective[x] only dateTime
-* effectiveDateTime 1.. MS
+* effectiveDateTime 0..1 MS
 
 * interpretation MS
 * interpretation.coding from mii-vs-onko-tod
-* interpretation.coding.code 1.. MS
-* interpretation.coding.system 1.. MS
+* interpretation.coding.code 0..* MS
+* interpretation.coding.system 0..* MS
 * interpretation.coding.system = $mii-cs-onko-tod
 
 * value[x] MS
