@@ -22,8 +22,8 @@ Description: "Tumorbedingter Tod"
 
 * interpretation MS
 * interpretation.coding from mii-vs-onko-tod
-* interpretation.coding.code 0..* MS
-* interpretation.coding.system 0..* MS
+* interpretation.coding.code 0..1 MS
+* interpretation.coding.system 0..1 MS
 * interpretation.coding.system = $mii-cs-onko-tod
 
 * value[x] MS
