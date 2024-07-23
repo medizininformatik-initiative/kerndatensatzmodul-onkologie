@@ -36,6 +36,9 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 // Strahlentherapie Ende Grund
 * outcome MS
 * outcome 0..1
+* outcome.coding MS
+* outcome.coding.code MS
+* outcome.coding.system MS
 * outcome.coding from MII_VS_Onko_Strahlentherapie_Ende_Grund (required)
 
 // Referenz auf Tumorboard

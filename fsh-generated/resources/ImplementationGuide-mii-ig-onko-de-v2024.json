@@ -44,7 +44,7 @@
     },
     {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.prozedur",
-      "version": "2024.0.0-ballot",
+      "version": "2024.0.0",
       "uri": "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/ImplementationGuide/mii-ig-prozedur-de-v2024",
       "id": "de_medizininformatikinitiative_kerndatensatz_prozedur"
     },
@@ -79,7 +79,15 @@
         "reference": {
           "reference": "MedicationStatement/mii-exa-onko-systemische-therapie-medikation1"
         },
-        "name": "Example chemotherapy",
+        "name": "Example chemotherapy 1",
+        "description": "Example for the FHIR profile systemic therapy based on German ",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
+      },
+      {
+        "reference": {
+          "reference": "MedicationStatement/mii-exa-onko-systemische-therapie-medikation2"
+        },
+        "name": "Example chemotherapy 2",
         "description": "Example for the FHIR profile systemic therapy based on German ",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
       },
@@ -109,11 +117,211 @@
       },
       {
         "reference": {
-          "reference": "Observation/FIGO-Observation-2"
+          "reference": "List/mii-exa-onko-liste-evidenz-erstdiagnose-1"
         },
-        "name": "FIGO-Observation-2",
-        "description": ".",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen"
+        "name": "Liste der Evidenz zum Erstdiagnosezeitpunkt",
+        "description": "Eine Beispielliste, welche Observations zur Diagnosestellung präsent waren",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-liste-evidenz-erstdiagnose"
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/MII-CM-Onko-Allgemeiner-Leistungszustand-SCT-Mapping"
+        },
+        "name": "MII CM Onko Allgemeiner Leistungszustand SNOMED Mapping",
+        "description": "Mapping Allgemeiner Leistungszustand Codes zu SNOMED-CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/MII-CM-Onko-Genetische-Variante-Auspraegung-SCT-Mapping"
+        },
+        "name": "MII CM Onko Genetische Variante Auspraegung SNOMED Mapping",
+        "description": "Mapping Therapieabweichung Codes zu SNOMED-CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/MII-CM-Onko-Grading-SCT-Mapping"
+        },
+        "name": "MII CM Onko Grading SNOMED Mapping",
+        "description": "Mapping Grading Codes zu SNOMED-CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/MII-CM-Onko-Intension-SCT-Mapping"
+        },
+        "name": "MII CM Onko Intention SNOMED Mapping",
+        "description": "Mapping Intention Codes zu SNOMED-CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/MII-CM-Onko-Nebenwirkung-SCT-Mapping"
+        },
+        "name": "MII CM Onko Nebenwirkung SNOMED Mapping",
+        "description": "Mapping Nebenwirkung CTCAE Codes zu SNOMED-CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/MII-CM-Onko-Operation-Komplikation-SCT-Mapping"
+        },
+        "name": "MII CM Onko Operation Komplikation SNOMED Mapping",
+        "description": "Mapping Operation Komplikation Codes zu SNOMED-CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/MII-CM-Onko-Primaertumor-Diagnosesicherung-SCT-Mapping"
+        },
+        "name": "MII CM Onko Primaertumor Diagnosesicherung SNOMED Mapping",
+        "description": "Mapping Primärtumor Diagnosesicherung Codes zu SNOMED-CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/MII-CM-Onko-Seitenlokalisation-SCT-Mapping"
+        },
+        "name": "MII CM Onko Seitenlokalisation SNOMED Mapping",
+        "description": "Mapping Seitenlokalisation Codes zu SNOMED-CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/MII-CM-Onko-Strahlentherapie-Applikationsart-SCT-Mapping"
+        },
+        "name": "MII CM Onko Strahlentherapie Applikationsart SNOMED Mapping",
+        "description": "Mapping Strahlentherapie Applikationsart Codes zu SNOMED-CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/MII-CM-Onko-Strahlentherapie-Boost-SCT-Mapping"
+        },
+        "name": "MII CM Onko Strahlentherapie Boost SNOMED Mapping",
+        "description": "Mapping Strahlentherapie Boost Codes zu SNOMED-CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/MII-CM-Onko-Strahlentherapie-Strahlenart-SCT-Mapping"
+        },
+        "name": "MII CM Onko Strahlentherapie Strahlenart SNOMED Mapping",
+        "description": "Mapping Strahlentherapie Strahlenart Codes zu SNOMED-CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/MII-CM-Onko-Strahlentherapie-Strahleneinheit-SCT-Mapping"
+        },
+        "name": "MII CM Onko Strahlentherapie Strahleneinheit SNOMED Mapping",
+        "description": "Mapping Strahlentherapie Strahleneinheit Codes zu SNOMED-CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/MII-CM-Onko-Strahlentherapie-Zielstellung-SCT-Mapping"
+        },
+        "name": "MII CM Onko Strahlentherapie Zielgebiet SNOMED Mapping",
+        "description": "Mapping Strahlentherapie Zielgebiet Codes zu SNOMED-CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/MII-CM-Onko-Therapie-Ende-SCT-Mapping"
+        },
+        "name": "MII CM Onko Therapie Ende SNOMED Mapping",
+        "description": "Mapping Therapie Ende Codes zu SNOMED-CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/MII-CM-Onko-Therapie-Stellung-SCT-Mapping"
+        },
+        "name": "MII CM Onko Therapie Stellung SNOMED Mapping",
+        "description": "Mapping Therapie Stellung Codes zu SNOMED-CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/MII-CM-Onko-Therapie-Typ-SCT-Mapping"
+        },
+        "name": "MII CM Onko Therapie Typ SNOMED Mapping",
+        "description": "Mapping Therapie Typ Codes zu SNOMED-CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/MII-CM-Onko-Therapieabweichung-SCT-Mapping"
+        },
+        "name": "MII CM Onko Therapieabweichung SNOMED Mapping",
+        "description": "Mapping Therapieabweichung Codes zu SNOMED-CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/MII-CM-Onko-Therapieplanung-SCT-Mapping"
+        },
+        "name": "MII CM Onko Therapieplanung SNOMED Mapping",
+        "description": "Mapping Therapieplanung Codes zu SNOMED-CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/mii-cm-onko-tnm-uicc-snomed"
+        },
+        "name": "MII CM Onko TNM UICC SNOMED",
+        "description": "Mapping TNM UICC Codes zu SNOMED-CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/MII-CM-Onko-Tod-SCT-Mapping"
+        },
+        "name": "MII CM Onko Tod SNOMED Mapping",
+        "description": "Mapping Tod Codes zu SNOMED-CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/MII-CM-Onko-Verlauf-Fernmetastasen-SCT-Mapping"
+        },
+        "name": "MII CM Onko Verlauf Fernmetastasen SNOMED Mapping",
+        "description": "Mapping Verlauf Fernmetastasen Codes zu SNOMED-CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/MII-CM-Onko-Verlauf-Gesamtbeurteilung-SCT-Mapping"
+        },
+        "name": "MII CM Onko Verlauf Gesamtbeurteilung SNOMED Mapping",
+        "description": "Mapping Gesamtbeurteilung Codes zu SNOMED-CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/MII-CM-Onko-Verlauf-Lymphknoten-SCT-Mapping"
+        },
+        "name": "MII CM Onko Verlauf Lymphknoten SNOMED Mapping",
+        "description": "Mapping Lymphknoten Codes zu SNOMED-CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/MII-CM-Onko-Verlauf-Primaertumor-SCT-Mapping"
+        },
+        "name": "MII CM Onko Verlauf Primaertumor SNOMED Mapping",
+        "description": "Mapping Verlauf-Primaertumor Codes zu SNOMED-CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/mii-cps-onko-capabilitystatement"
+        },
+        "name": "MII CPS Onkology CapabilityStatement",
+        "description": "Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktionen die ein konformes System unterstützen muss, um das Modul Onkologie der Medizininformatik Initiative zu implementieren.",
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -1069,186 +1277,11 @@
       },
       {
         "reference": {
-          "reference": "ConceptMap/MII-CM-Onko-Allgemeiner-Leistungszustand-SCT-Mapping"
-        },
-        "name": "MII-CM-Onko-Allgemeiner-Leistungszustand-SCT-Mapping",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "ConceptMap/MII-CM-Onko-Fernmetastasen-SCT-Mapping"
         },
         "name": "mii-cm-onko-fernmetastasen-sct-mapping",
         "description": "Mapping der Fernmetastasen-Codesystems  auf SNOMED",
         "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/MII-CM-Onko-Genetische-Variante-Auspraegung-SCT-Mapping"
-        },
-        "name": "MII-CM-Onko-Genetische-Variante-Auspraegung-SCT-Mapping",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/MII-CM-Onko-Grading-SCT-Mapping"
-        },
-        "name": "MII-CM-Onko-Grading-SCT-Mapping",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/MII-CM-Onko-Intension-SCT-Mapping"
-        },
-        "name": "MII-CM-Onko-Intension-SCT-Mapping",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/MII-CM-Onko-Nebenwirkung-SCT-Mapping"
-        },
-        "name": "MII-CM-Onko-Nebenwirkung-SCT-Mapping",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/MII-CM-Onko-Operation-Komplikation-SCT-Mapping"
-        },
-        "name": "MII-CM-Onko-Operation-Komplikation-SCT-Mapping",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/MII-CM-Onko-Primaertumor-Diagnosesicherung-SCT-Mapping"
-        },
-        "name": "MII-CM-Onko-Primaertumor-Diagnosesicherung-SCT-Mapping",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/MII-CM-Onko-Seitenlokalisation-SCT-Mapping"
-        },
-        "name": "MII-CM-Onko-Seitenlokalisation-SCT-Mapping",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/MII-CM-Onko-Strahlentherapie-Applikationsart-SCT-Mapping"
-        },
-        "name": "MII-CM-Onko-Strahlentherapie-Applikationsart-SCT-Mapping",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/MII-CM-Onko-Strahlentherapie-Boost-SCT-Mapping"
-        },
-        "name": "MII-CM-Onko-Strahlentherapie-Boost-SCT-Mapping",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/MII-CM-Onko-Strahlentherapie-Strahlenart-SCT-Mapping"
-        },
-        "name": "MII-CM-Onko-Strahlentherapie-Strahlenart-SCT-Mapping",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/MII-CM-Onko-Strahlentherapie-Strahleneinheit-SCT-Mapping"
-        },
-        "name": "MII-CM-Onko-Strahlentherapie-Strahleneinheit-SCT-Mapping",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/MII-CM-Onko-Strahlentherapie-Zielstellung-SCT-Mapping"
-        },
-        "name": "MII-CM-Onko-Strahlentherapie-Zielstellung-SCT-Mapping",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/MII-CM-Onko-Therapie-Ende-SCT-Mapping"
-        },
-        "name": "MII-CM-Onko-Therapie-Ende-SCT-Mapping",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/MII-CM-Onko-Therapie-Stellung-SCT-Mapping"
-        },
-        "name": "MII-CM-Onko-Therapie-Stellung-SCT-Mapping",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/MII-CM-Onko-Therapie-Typ-SCT-Mapping"
-        },
-        "name": "MII-CM-Onko-Therapie-Typ-SCT-Mapping",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/MII-CM-Onko-Therapieabweichung-SCT-Mapping"
-        },
-        "name": "MII-CM-Onko-Therapieabweichung-SCT-Mapping",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/MII-CM-Onko-Therapieplanung-SCT-Mapping"
-        },
-        "name": "MII-CM-Onko-Therapieplanung-SCT-Mapping",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/mii-cm-onko-tnm-uicc-snomed"
-        },
-        "name": "mii-cm-onko-tnm-uicc-snomed",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/MII-CM-Onko-Tod-SCT-Mapping"
-        },
-        "name": "MII-CM-Onko-Tod-SCT-Mapping",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/MII-CM-Onko-Verlauf-Fernmetastasen-SCT-Mapping"
-        },
-        "name": "MII-CM-Onko-Verlauf-Fernmetastasen-SCT-Mapping",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/MII-CM-Onko-Verlauf-Gesamtbeurteilung-SCT-Mapping"
-        },
-        "name": "MII-CM-Onko-Verlauf-Gesamtbeurteilung-SCT-Mapping",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/MII-CM-Onko-Verlauf-Lymphknoten-SCT-Mapping"
-        },
-        "name": "MII-CM-Onko-Verlauf-Lymphknoten-SCT-Mapping",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/MII-CM-Onko-Verlauf-Primaertumor-SCT-Mapping"
-        },
-        "name": "MII-CM-Onko-Verlauf-Primaertumor-SCT-Mapping",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CapabilityStatement/mii-cps-onko-capabilitystatement"
-        },
-        "name": "mii-cps-onko-capabilitystatement",
-        "exampleBoolean": false
       },
       {
         "reference": {
@@ -1326,14 +1359,6 @@
         },
         "name": "mii-exa-onko-histologie-icdo3",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-histologie-icdo3"
-      },
-      {
-        "reference": {
-          "reference": "List/mii-exa-onko-liste-evidenz-erstdiagnose-1"
-        },
-        "name": "mii-exa-onko-liste-evidenz-erstdiagnose-1",
-        "description": "Eine Beispielliste, welche Observations zur Diagnosestellung präsent waren",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-liste-evidenz-erstdiagnose"
       },
       {
         "reference": {
@@ -1459,6 +1484,7 @@
           "reference": "SearchParameter/mii-sp-onko-diagnose-verification-status"
         },
         "name": "mii-sp-onko-diagnose-verification-status",
+        "description": "SearchParameter for Condition.verificationStatus",
         "exampleBoolean": false
       },
       {
@@ -1466,6 +1492,7 @@
           "reference": "SearchParameter/mii-sp-onko-fernmetastasen-body-site"
         },
         "name": "mii-sp-onko-fernmetastasen-body-site",
+        "description": "SearchParameter for Observation.bodySite",
         "exampleBoolean": false
       },
       {
@@ -1473,6 +1500,7 @@
           "reference": "SearchParameter/mii-sp-onko-nebenwirkung-suspectEntity"
         },
         "name": "mii-sp-onko-nebenwirkung-suspectEntity",
+        "description": "SearchParameter for AdverseEvent.suspectEntity.instance",
         "exampleBoolean": false
       },
       {
@@ -1480,6 +1508,7 @@
           "reference": "SearchParameter/mii-sp-onko-operation-complication"
         },
         "name": "mii-sp-onko-operation-complication",
+        "description": "SearchParameter for Procedure.complication",
         "exampleBoolean": false
       },
       {
@@ -1487,6 +1516,7 @@
           "reference": "SearchParameter/mii-sp-onko-operation-ext-intention"
         },
         "name": "mii-sp-onko-operation-ext-intention",
+        "description": "SearchParameter for Procedure.extension.intention",
         "exampleBoolean": false
       },
       {
@@ -1494,6 +1524,7 @@
           "reference": "SearchParameter/mii-sp-onko-strahlentherapie-ext-bestrahlung-applikationsart"
         },
         "name": "mii-sp-onko-strahlentherapie-ext-bestrahlung-applikationsart",
+        "description": "SearchParameter for Procedure.extension:bestrahlung.extension:applikationsart",
         "exampleBoolean": false
       },
       {
@@ -1501,6 +1532,7 @@
           "reference": "SearchParameter/mii-sp-onko-strahlentherapie-ext-bestrahlung-boost"
         },
         "name": "mii-sp-onko-strahlentherapie-ext-bestrahlung-boost",
+        "description": "SearchParameter for Procedure.extension:bestrahlung.extension:boost",
         "exampleBoolean": false
       },
       {
@@ -1508,6 +1540,7 @@
           "reference": "SearchParameter/mii-sp-onko-strahlentherapie-ext-bestrahlung-einzeldosis"
         },
         "name": "mii-sp-onko-strahlentherapie-ext-bestrahlung-einzeldosis",
+        "description": "SearchParameter for Procedure.extension:bestrahlung.extension:einzeldosis",
         "exampleBoolean": false
       },
       {
@@ -1515,6 +1548,7 @@
           "reference": "SearchParameter/mii-sp-onko-strahlentherapie-ext-bestrahlung-gesamtdosis"
         },
         "name": "mii-sp-onko-strahlentherapie-ext-bestrahlung-gesamtdosis",
+        "description": "SearchParameter for Procedure.extension:bestrahlung.extension:gesamtdosis",
         "exampleBoolean": false
       },
       {
@@ -1522,6 +1556,7 @@
           "reference": "SearchParameter/mii-sp-onko-strahlentherapie-ext-bestrahlung-strahlenart"
         },
         "name": "mii-sp-onko-strahlentherapie-ext-bestrahlung-strahlenart",
+        "description": "SearchParameter for Procedure.extension:bestrahlung.extension:strahlenart",
         "exampleBoolean": false
       },
       {
@@ -1529,6 +1564,7 @@
           "reference": "SearchParameter/mii-sp-onko-strahlentherapie-ext-stellung"
         },
         "name": "mii-sp-onko-strahlentherapie-ext-stellung",
+        "description": "SearchParameter for Procedure.extension.stellung",
         "exampleBoolean": false
       },
       {
@@ -1536,6 +1572,7 @@
           "reference": "SearchParameter/mii-sp-onko-strahlentherapie-ext-zielgebiet-lateralitaet"
         },
         "name": "mii-sp-onko-strahlentherapie-ext-zielgebiet-lateralitaet",
+        "description": "SearchParameter for Procedure.extension:bestrahlung.extension:zielgebiet_Lateralitaet",
         "exampleBoolean": false
       },
       {
@@ -1543,6 +1580,7 @@
           "reference": "SearchParameter/mii-sp-onko-strahlentherapie-extension-bestrahlung-zielgebiet"
         },
         "name": "mii-sp-onko-strahlentherapie-extension-bestrahlung-zielgebiet",
+        "description": "SearchParameter for Procedure.extension:bestrahlung.extension:zielgebiet",
         "exampleBoolean": false
       },
       {
@@ -1550,6 +1588,7 @@
           "reference": "SearchParameter/mii-sp-onko-strahlentherapie-outcome"
         },
         "name": "mii-sp-onko-strahlentherapie-outcome",
+        "description": "SearchParameter for Procedure.outcome",
         "exampleBoolean": false
       },
       {
@@ -1557,6 +1596,7 @@
           "reference": "SearchParameter/mii-sp-onko-tnm-klassifikation-has-member"
         },
         "name": "mii-sp-onko-tnm-klassifikation-has-member",
+        "description": "SearchParameter for Observation.hasMember",
         "exampleBoolean": false
       },
       {
@@ -1564,6 +1604,7 @@
           "reference": "SearchParameter/mii-sp-onko-tod-derived-from"
         },
         "name": "mii-sp-onko-tod-derived-from",
+        "description": "SearchParameter for Observation.derivedFrom",
         "exampleBoolean": false
       },
       {
@@ -1571,6 +1612,7 @@
           "reference": "SearchParameter/mii-sp-onko-tod-encounter"
         },
         "name": "mii-sp-onko-tod-encounter",
+        "description": "SearchParameter for Observation.encounter",
         "exampleBoolean": false
       },
       {
@@ -1578,6 +1620,7 @@
           "reference": "SearchParameter/mii-sp-onko-tod-focus"
         },
         "name": "mii-sp-onko-tod-focus",
+        "description": "SearchParameter for Observation.focus",
         "exampleBoolean": false
       },
       {
@@ -1585,6 +1628,7 @@
           "reference": "SearchParameter/mii-sp-onko-tod-interpretation"
         },
         "name": "mii-sp-onko-tod-interpretation",
+        "description": "SearchParameter for Observation.interpretation",
         "exampleBoolean": false
       },
       {
@@ -1592,6 +1636,7 @@
           "reference": "SearchParameter/mii-sp-onko-tumorkonferenz-addresses"
         },
         "name": "mii-sp-onko-tumorkonferenz-addresses",
+        "description": "SearchParameter for CarePlan.addresses",
         "exampleBoolean": false
       },
       {
@@ -1599,6 +1644,7 @@
           "reference": "SearchParameter/mii-sp-onko-tumorkonferenz-contributor"
         },
         "name": "mii-sp-onko-tumorkonferenz-contributor",
+        "description": "SearchParameter for CarePlan.contributor",
         "exampleBoolean": false
       },
       {
@@ -1606,6 +1652,7 @@
           "reference": "SearchParameter/mii-sp-onko-tumorkonferenz-created"
         },
         "name": "mii-sp-onko-tumorkonferenz-created",
+        "description": "SearchParameter for CarePlan.created",
         "exampleBoolean": false
       },
       {
@@ -1615,244 +1662,6 @@
         "name": "MII_VS Onkologie Genetische Variante Ausprägung",
         "description": "Value Set für oBDS-Codes für Ausprägung der Genetischen Variante",
         "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "Patient/PatientKimMusterperson"
-        },
-        "name": "PatientKimMusterperson",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Condition/PatientKimMusterperson-Diagnosis-1"
-        },
-        "name": "PatientKimMusterperson-Diagnosis-1",
-        "description": "Primärdiagnose",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose"
-      },
-      {
-        "reference": {
-          "reference": "DiagnosticReport/PatientKimMusterperson-PathoReport-1"
-        },
-        "name": "PatientKimMusterperson-PathoReport-1",
-        "description": "Pathoreport incl. Immunhistochemie",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Procedure/PatientKimMusterperson-Procedure-1"
-        },
-        "name": "PatientKimMusterperson-Procedure-1",
-        "description": "10.06.2021 CT Abdomen mit KM",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Procedure/PatientKimMusterperson-Procedure-2"
-        },
-        "name": "PatientKimMusterperson-Procedure-2",
-        "description": "15.06.2021 Aszitespunktion",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Procedure/PatientKimMusterperson-Procedure-3"
-        },
-        "name": "PatientKimMusterperson-Procedure-3",
-        "description": "22.06.2021 CT Thorax: kein Hinweis auf Metastasen.",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Procedure/PatientKimMusterperson-Procedure-4"
-        },
-        "name": "PatientKimMusterperson-Procedure-4",
-        "description": "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie, Tumorresektion mittels Hysterektomie, bilateraler Adnexektomie, und atpyischer Lebersegmentresektion (Seg. II und V). Postoperativ: R0.",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Specimen/PatientKimMusterperson-Specimen-1"
-        },
-        "name": "PatientKimMusterperson-Specimen-1",
-        "description": "Tumorresektat Primärtumor",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Procedure/PatientKimMusterperson-SystemicTherapy-1"
-        },
-        "name": "PatientKimMusterperson-SystemicTherapy-1",
-        "description": ".",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
-      },
-      {
-        "reference": {
-          "reference": "Procedure/PatientKimMusterperson-SystemicTherapy-2"
-        },
-        "name": "PatientKimMusterperson-SystemicTherapy-2",
-        "description": ".",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
-      },
-      {
-        "reference": {
-          "reference": "Procedure/PatientKimMusterperson-SystemicTherapy-3"
-        },
-        "name": "PatientKimMusterperson-SystemicTherapy-3",
-        "description": ".",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
-      },
-      {
-        "reference": {
-          "reference": "MedicationStatement/PatientKimMusterperson-SystemicTherapyMedication-1"
-        },
-        "name": "PatientKimMusterperson-SystemicTherapyMedication-1",
-        "description": ".",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
-      },
-      {
-        "reference": {
-          "reference": "MedicationStatement/PatientKimMusterperson-SystemicTherapyMedication-2"
-        },
-        "name": "PatientKimMusterperson-SystemicTherapyMedication-2",
-        "description": ".",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
-      },
-      {
-        "reference": {
-          "reference": "MedicationStatement/PatientKimMusterperson-SystemicTherapyMedication-3"
-        },
-        "name": "PatientKimMusterperson-SystemicTherapyMedication-3",
-        "description": ".",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PatientKimMusterperson-TNM-Observation-1-M"
-        },
-        "name": "PatientKimMusterperson-TNM-Observation-1-M",
-        "description": ".",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie"
-      },
-      {
-        "reference": {
-          "reference": "CarePlan/PatientKimMusterperson-Tumorkonferenz-1"
-        },
-        "name": "PatientKimMusterperson-Tumorkonferenz-1",
-        "description": ".",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
-      },
-      {
-        "reference": {
-          "reference": "CarePlan/PatientKimMusterperson-Tumorkonferenz-2"
-        },
-        "name": "PatientKimMusterperson-Tumorkonferenz-2",
-        "description": ".",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
-      },
-      {
-        "reference": {
-          "reference": "CarePlan/PatientKimMusterperson-Tumorkonferenz-3"
-        },
-        "name": "PatientKimMusterperson-Tumorkonferenz-3",
-        "description": ".",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
-      },
-      {
-        "reference": {
-          "reference": "CarePlan/PatientKimMusterperson-Tumorkonferenz-4"
-        },
-        "name": "PatientKimMusterperson-Tumorkonferenz-4",
-        "description": ".",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PatientKimMusterperson-Variante-BRCAwt"
-        },
-        "name": "PatientKimMusterperson-Variante-BRCAwt",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-genetische-variante"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PatientKimMusterperson-Verlauf-2021-09-15"
-        },
-        "name": "PatientKimMusterperson-Verlauf-2021-09-15",
-        "description": ". ",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PatientKimMusterperson-Verlauf-2021-10-25"
-        },
-        "name": "PatientKimMusterperson-Verlauf-2021-10-25",
-        "description": ". ",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PatientKimMusterperson-Verlauf-2022-01-22"
-        },
-        "name": "PatientKimMusterperson-Verlauf-2022-01-22",
-        "description": ". ",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf"
-      },
-      {
-        "reference": {
-          "reference": "Observation/TNM-Klassifikation-Observation-2"
-        },
-        "name": "TNM-Klassifikation-Observation-2",
-        "description": ". ",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
-      },
-      {
-        "reference": {
-          "reference": "Observation/TNM-L-Observation-2"
-        },
-        "name": "TNM-L-Observation-2",
-        "description": ".",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-l-kategorie"
-      },
-      {
-        "reference": {
-          "reference": "Observation/TNM-M-Observation-2"
-        },
-        "name": "TNM-M-Observation-2",
-        "description": ".",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie"
-      },
-      {
-        "reference": {
-          "reference": "Observation/TNM-Pn-Observation-2"
-        },
-        "name": "TNM-Pn-Observation-2",
-        "description": ".",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-pn-kategorie"
-      },
-      {
-        "reference": {
-          "reference": "Observation/TNM-T-Observation-2"
-        },
-        "name": "TNM-T-Observation-2",
-        "description": "Lokale Tumorausbreitung: Ovartumor links mit einer max. Größe von 2,2 cm und tumorinfiltrierter Kapsel mit Nachweis von Tumorzellen auf der Ovaroberfläche, Anteil vitaler Tumorzellen von ca. 80 %. ",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
-      },
-      {
-        "reference": {
-          "reference": "Observation/TNM-V-Observation-2"
-        },
-        "name": "TNM-V-Observation-2",
-        "description": ".",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-l-kategorie"
-      },
-      {
-        "reference": {
-          "reference": "Observation/TNM-y-Symbol-Observation-2"
-        },
-        "name": "TNM-y-Symbol-Observation-2",
-        "description": ".",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-y-symbol"
       }
     ],
     "page": {

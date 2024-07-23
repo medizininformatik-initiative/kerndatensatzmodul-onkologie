@@ -1,35 +1,37 @@
 {
   "resourceType": "MedicationStatement",
-  "id": "PatientKimMusterperson-SystemicTherapyMedication-3",
+  "id": "mii-exa-onko-systemische-therapie-medikation2",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
     ]
   },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "status": "final",
+  "effectivePeriod": {
+    "start": "2021-12-04",
+    "end": "2022-04-06"
+  },
   "medicationCodeableConcept": {
     "coding": [
       {
         "system": "http://fhir.de/CodeSystem/bfarm/atc",
-        "code": "L01XK02",
-        "display": "Niraparib"
+        "code": "01DB01",
+        "version": "Version 2022",
+        "display": "Doxorubicin"
       }
     ]
   },
-  "subject": {
-    "reference": "Patient/PatientKimMusterperson"
-  },
-  "status": "completed",
-  "effectivePeriod": {
-    "start": "2022-01-25"
-  },
   "partOf": [
     {
-      "reference": "Procedure/PatientKimMusterperson-SystemicTherapy-3"
+      "reference": "Procedure/mii-exa-onko-systemische-therapie-1"
     }
   ],
   "note": [
     {
-      "text": "Niraparib"
+      "text": "AC"
     }
   ]
 }
