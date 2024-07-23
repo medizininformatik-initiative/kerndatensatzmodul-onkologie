@@ -85,7 +85,6 @@
       {
         "id": "Observation.effective[x]",
         "path": "Observation.effective[x]",
-        "min": 1,
         "type": [
           {
             "code": "dateTime"
@@ -163,14 +162,12 @@
       {
         "id": "Observation.interpretation.coding.system",
         "path": "Observation.interpretation.coding.system",
-        "min": 1,
         "patternUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-ende-tod",
         "mustSupport": true
       },
       {
         "id": "Observation.interpretation.coding.code",
         "path": "Observation.interpretation.coding.code",
-        "min": 1,
         "mustSupport": true,
         "mapping": [
           {
