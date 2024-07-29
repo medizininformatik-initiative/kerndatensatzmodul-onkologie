@@ -44,7 +44,7 @@ Usage: #definition
 * group[=].element[=].target.display = "Abscess of thorax (disorder)"
 * group[=].element[=].target.equivalence = #narrower
 * group[=].element[=].target.comment = "kein spezifischer Code für diese 'oder'-Konstruktion, daher spezifisch entweder Abdominal oder thorarical Abzess"
-* group[=].element[=].target.code = #128477000
+* group[=].element[+].target.code = #128477000
 * group[=].element[=].target.display = "Abscess (disorder)"
 * group[=].element[=].target.equivalence = #wider
 * group[=].element[=].target.comment = "weiterfassend als Abszess kodiert"
