@@ -202,15 +202,16 @@
           {
             "code": "Quantity"
           }
-        ]
-      },
-      {
-        "id": "Extension.extension:Gesamtdosis.value[x].unit",
-        "path": "Extension.extension.value[x].unit",
+        ],
         "binding": {
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-strahlungseinheit"
         }
+      },
+      {
+        "id": "Extension.extension:Gesamtdosis.value[x].system",
+        "path": "Extension.extension.value[x].system",
+        "patternUri": "http://unitsofmeasure.org"
       },
       {
         "id": "Extension.extension:Einzeldosis",
@@ -239,15 +240,16 @@
           {
             "code": "Quantity"
           }
-        ]
-      },
-      {
-        "id": "Extension.extension:Einzeldosis.value[x].unit",
-        "path": "Extension.extension.value[x].unit",
+        ],
         "binding": {
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-strahlungseinheit"
         }
+      },
+      {
+        "id": "Extension.extension:Einzeldosis.value[x].system",
+        "path": "Extension.extension.value[x].system",
+        "patternUri": "http://unitsofmeasure.org"
       },
       {
         "id": "Extension.extension:Boost",
