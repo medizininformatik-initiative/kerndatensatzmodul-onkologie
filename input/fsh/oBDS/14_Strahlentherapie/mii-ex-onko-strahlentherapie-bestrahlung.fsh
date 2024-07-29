@@ -40,12 +40,14 @@ Description: "Strahlentherapie: einzelne Bestrahlung innerhalb der Gesamttherapi
 * extension[Gesamtdosis] ^short = "Strahlentherapie Gesamtdosis (Dosis)"
 * extension[Gesamtdosis] ^definition = "Gibt an, mit welcher Gesamtdosis da Zielgebiet bestrahlt wurde (inklusive Boost)."
 * extension[Gesamtdosis].value[x] only Quantity
-* extension[Gesamtdosis].valueQuantity.unit from mii-vs-onko-strahlentherapie-strahlungseinheit (required)
+* extension[Gesamtdosis].valueQuantity from mii-vs-onko-strahlentherapie-strahlungseinheit (required)
+* extension[Gesamtdosis].valueQuantity.system = $UCUM
 
 * extension[Einzeldosis] ^short = "Strahlentherapie Einzeldosis pro Tag (Dosis)"
 * extension[Einzeldosis] ^definition = "Gibt an, mit welcher Einzeldosis (häufigste Dosis, nicht Boost) pro Tag das Zielgebiet bestrahlt wurde."
 * extension[Einzeldosis].value[x] only Quantity
-* extension[Einzeldosis].valueQuantity.unit from mii-vs-onko-strahlentherapie-strahlungseinheit (required)
+* extension[Einzeldosis].valueQuantity from mii-vs-onko-strahlentherapie-strahlungseinheit (required)
+* extension[Einzeldosis].valueQuantity.system = $UCUM
 
 * extension[Boost] ^short = "Strahlentherapie Boost"
 * extension[Boost] ^definition = "Angabe, ob ein Boost und falls ja, welche Art von Boost appliziert wurde."
