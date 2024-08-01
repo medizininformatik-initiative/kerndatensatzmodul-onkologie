@@ -1,8 +1,8 @@
-Instance: MII-CM-Onko-Operation-Komplikation-SCT-Mapping
+Instance: mii-cm-onko-operation-komplikation-snomed-mapping
 InstanceOf: ConceptMap
 Usage: #definition
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-operation-komplikation-sct"
-* name = "mii-cm-onko-operation-komplikation-snomed-mapping"
+* name = "MII CM Onko Operation Komplikation SCT Mapping"
 * title = "MII CM Onko Operation Komplikation SNOMED Mapping"
 * status = #draft
 * experimental = false

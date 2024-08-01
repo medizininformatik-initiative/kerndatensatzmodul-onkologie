@@ -1,8 +1,8 @@
-Instance: MII-CM-Onko-Genetische-Variante-Auspraegung-SCT-Mapping
+Instance: mii-cm-onko-genetische-variante-auspraegung-snomed-mapping
 InstanceOf: ConceptMap
 Usage: #definition
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-genetische-variante-auspraegung-sct"
-* name = "mii-cm-onko-genetische-variante-auspraegung-snomed-mapping"
+* name = "MII CM Onko Genetische Variante Auspraegung SCT Mapping"
 * title = "MII CM Onko Genetische Variante Auspraegung SNOMED Mapping"
 * status = #draft
 * experimental = false

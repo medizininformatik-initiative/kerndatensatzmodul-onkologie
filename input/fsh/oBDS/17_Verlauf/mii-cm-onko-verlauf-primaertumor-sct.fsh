@@ -1,8 +1,8 @@
-Instance: MII-CM-Onko-Verlauf-Primaertumor-SCT-Mapping
+Instance: mii-cm-onko-verlauf-primaertumor-snomed-mapping
 InstanceOf: ConceptMap
 Usage: #definition
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-verlauf-primaertumor-sct"
-* name = "mii-cm-onko-verlauf-primaertumor-snomed-mapping"
+* name = "MII CM Onko Verlauf Primaertumor SCT Mapping"
 * title = "MII CM Onko Verlauf Primaertumor SNOMED Mapping"
 * status = #draft
 * experimental = false

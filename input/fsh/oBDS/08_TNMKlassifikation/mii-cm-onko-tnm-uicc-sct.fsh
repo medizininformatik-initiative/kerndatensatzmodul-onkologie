@@ -2,7 +2,7 @@ Instance: mii-cm-onko-tnm-uicc-snomed
 InstanceOf: ConceptMap
 Usage: #definition
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-tnm-uicc-sct"
-* name = "mii-cm-onko-tnm-uicc-snomed"
+* name = "MII CM Onko TNM UICC SCT Mapping"
 * title = "MII CM Onko TNM UICC SNOMED"
 * status = #draft
 * experimental = false

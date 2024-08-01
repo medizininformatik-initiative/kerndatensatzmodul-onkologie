@@ -1,8 +1,8 @@
-Instance: MII-CM-Onko-Therapieabweichung-SCT-Mapping
+Instance:  mii-cm-onko-therapieabweichung-snomed-mapping
 InstanceOf: ConceptMap
 Usage: #definition
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-therapieabweichung-sct"
-* name = "mii-cm-onko-therapieabweichung-snomed-mapping"
+* name = "MII CM Onko Therapieabweichung SCT Mappingg"
 * title = "MII CM Onko Therapieabweichung SNOMED Mapping"
 * status = #draft
 * experimental = false

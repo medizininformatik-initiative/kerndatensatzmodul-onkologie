@@ -1,8 +1,8 @@
-Instance: MII-CM-Onko-Studienteilnahme-SCT-Mapping
+Instance: mii-cm-onko-studienteilnahme-snomed-mapping
 InstanceOf: ConceptMap
 Usage: #definition
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-studienteilnahme-sct"
-* name = "mii-cm-onko-studienteilnahme-snomed-mapping"
+* name = "MII CM Onko Studienteilnahme SCT Mapping"
 * title = "MII CM Onko Studienteilnahme SNOMED Mapping"
 * status = #draft
 * experimental = false
