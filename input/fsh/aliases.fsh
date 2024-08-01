@@ -102,3 +102,6 @@ Alias: $mii-cs-onko-verlauf-fernmetastasen = https://www.medizininformatik-initi
 
 //23
 Alias: $mii-cs-onko-genetische-variante-auspraegung = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-genetische-variante-auspraegung
+
+//24
+Alias: $mii-cs-onko-studienteilnahme = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-studienteilnahme

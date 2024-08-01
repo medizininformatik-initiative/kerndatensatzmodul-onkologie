@@ -8,4 +8,4 @@ Description: "Value Set für oBDS-Codes des Studienteilnahme Status"
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
-* include codes from system $mii-cs-onko-studienteilnahmes
+* include codes from system $mii-cs-onko-studienteilnahme
