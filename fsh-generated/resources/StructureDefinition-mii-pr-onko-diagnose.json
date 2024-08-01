@@ -49,6 +49,55 @@
         ]
       },
       {
+        "id": "Condition.extension:morphology-behavior-icdo3",
+        "path": "Condition.extension",
+        "sliceName": "morphology-behavior-icdo3",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.extension:morphology-behavior-icdo3.value[x].coding.version",
+        "path": "Condition.extension.value[x].coding.version",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "6.4",
+            "comment": "Morphologie ICD-O/Blue Book Version"
+          }
+        ]
+      },
+      {
+        "id": "Condition.extension:morphology-behavior-icdo3.value[x].coding.code",
+        "path": "Condition.extension.value[x].coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "6.3",
+            "comment": "Morphologie-Code"
+          }
+        ]
+      },
+      {
+        "id": "Condition.extension:morphology-behavior-icdo3.value[x].text",
+        "path": "Condition.extension.value[x].text",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "6.5",
+            "comment": "Morphologie-Freitext"
+          }
+        ]
+      },
+      {
         "id": "Condition.verificationStatus",
         "path": "Condition.verificationStatus",
         "mustSupport": true
@@ -144,33 +193,6 @@
         ]
       },
       {
-        "id": "Condition.code.coding:icd-o-3",
-        "path": "Condition.code.coding",
-        "sliceName": "icd-o-3"
-      },
-      {
-        "id": "Condition.code.coding:icd-o-3.version",
-        "path": "Condition.code.coding.version",
-        "mapping": [
-          {
-            "identity": "oBDS",
-            "map": "6.4",
-            "comment": "Morphologie ICD-O/Blue Book Version"
-          }
-        ]
-      },
-      {
-        "id": "Condition.code.coding:icd-o-3.code",
-        "path": "Condition.code.coding.code",
-        "mapping": [
-          {
-            "identity": "oBDS",
-            "map": "6.3",
-            "comment": "Morphologie-Code"
-          }
-        ]
-      },
-      {
         "id": "Condition.code.text",
         "path": "Condition.code.text",
         "mapping": [
@@ -178,11 +200,6 @@
             "identity": "oBDS",
             "map": "5.3",
             "comment": "Primärtumor Tumordiagnose Text"
-          },
-          {
-            "identity": "oBDS",
-            "map": "6.5",
-            "comment": "Morphologie-Freitext"
           }
         ]
       },

@@ -1,0 +1,44 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "Studienteilnahme",
+  "id": "mii-cs-onko-studienteilnahme",
+  "title": "MII CS Onkologie Studienteilnahme",
+  "description": "oBDS-spezifisches Codesystem den Status der Studienteilnahme",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-studienteilnahme",
+  "concept": [
+    {
+      "code": "J",
+      "display": "Ja"
+    },
+    {
+      "code": "N",
+      "display": "Nein"
+    },
+    {
+      "code": "U",
+      "display": "Unbekannt"
+    }
+  ],
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2024.0.0-ballot",
+  "caseSensitive": true,
+  "count": 3
+}
