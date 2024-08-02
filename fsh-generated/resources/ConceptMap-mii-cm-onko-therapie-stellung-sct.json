@@ -1,0 +1,86 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "mii-cm-onko-therapie-stellung-sct",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-therapie-stellung-sct",
+  "name": "MII CM Onko Therapie Stellung SNOMED Mapping",
+  "title": "MII CM Onko Therapie Stellung SNOMED Mapping",
+  "status": "draft",
+  "experimental": false,
+  "date": "2024-04-11",
+  "description": "Mapping Therapie Stellung Codes zu SNOMED-CT",
+  "purpose": "Technical mapping to transform oBDS-Data into SNOMED",
+  "sourceUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
+  "targetUri": "http://snomed.info/sct",
+  "group": [
+    {
+      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-stellung",
+      "target": "http://snomed.info/sct",
+      "element": [
+        {
+          "code": "O",
+          "display": "ohne Bezug zur operativen Therapie",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "A",
+          "display": "adjuvant",
+          "target": [
+            {
+              "code": "373846009",
+              "display": "Adjuvant - intent (qualifier value)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "N",
+          "display": "neoadjuvant",
+          "target": [
+            {
+              "code": "373847000",
+              "display": "Neo-adjuvant - intent (qualifier value)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "I",
+          "display": "intraoperativ",
+          "target": [
+            {
+              "code": "277671009",
+              "display": "Intraoperative (qualifier value)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Z",
+          "display": "additiv",
+          "target": [
+            {
+              "code": "260364009",
+              "display": "Additive (qualifier value)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "S",
+          "display": "Sonstiges",
+          "target": [
+            {
+              "code": "74964007",
+              "display": "Other (qualifier value)",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

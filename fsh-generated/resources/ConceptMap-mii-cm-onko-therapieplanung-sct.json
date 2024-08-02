@@ -1,0 +1,64 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "mii-cm-onko-therapieplanung-sct",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-therapieplanung-sct",
+  "name": "MII CM Onko Therapieplanung SCT Mapping",
+  "title": "MII CM Onko Therapieplanung SNOMED Mapping",
+  "status": "draft",
+  "experimental": false,
+  "date": "2024-04-11",
+  "description": "Mapping Therapieplanung Codes zu SNOMED-CT",
+  "purpose": "Technical mapping to transform oBDS-Data into SNOMED",
+  "sourceUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
+  "targetUri": "http://snomed.info/sct",
+  "group": [
+    {
+      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ",
+      "target": "http://snomed.info/sct",
+      "element": [
+        {
+          "code": "praeth",
+          "display": "prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie)",
+          "target": [
+            {
+              "code": "307153007",
+              "display": "Before procedure (qualifier value)",
+              "equivalence": "wider"
+            }
+          ]
+        },
+        {
+          "code": "postop",
+          "display": "postoperative Tumorkonferenz (Planung der postoperativen Therapie, z. B. zur Frage adjuvante Therapie)",
+          "target": [
+            {
+              "code": "262061000",
+              "display": "Postoperative period (qualifier value)",
+              "equivalence": "wider"
+            }
+          ]
+        },
+        {
+          "code": "postth",
+          "display": "posttherapeutische Tumorkonferenz (manche Tumore werden nicht operiert)",
+          "target": [
+            {
+              "code": "303110006",
+              "display": "Postprocedural period (qualifier value)",
+              "equivalence": "wider"
+            }
+          ]
+        },
+        {
+          "code": "ther",
+          "display": "Therapieplanung ohne Tumorkonferenz",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

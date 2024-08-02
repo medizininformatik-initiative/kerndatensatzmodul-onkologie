@@ -11,3 +11,7 @@ Hier sind wie folgt alle Änderungen aufgelistet.
 - Fernmetasen (Observation): Lokalisation der Fernmetastasen von `bodySite` nach `valueCodeableConcept` verschoben, um konform mit den Pathologiebefund-Patho Findings zu sein 
 - to be continued :-) 
 
+### SNOMED Mappings
+- IDs der ConceptMaps auf MII-Naming convention angepasst (mii-cm-*); Vereinheitlichen der ids, urls und Dateinamen 
+- 
+

@@ -157,6 +157,19 @@
         "mustSupport": true
       },
       {
+        "id": "Observation.hasMember",
+        "path": "Observation.hasMember",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Observation"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Observation.component",
         "path": "Observation.component",
         "slicing": {

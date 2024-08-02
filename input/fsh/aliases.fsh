@@ -1,20 +1,20 @@
 // DE Basisprofile
-Alias: $DeOnkoRadiotherapy = http://fhir.de/onkologie/StructureDefinition/procedure-bestrahlung
-Alias: $DeOnkoSurgery = http://fhir.de/onkologie/StructureDefinition/procedure-operation
-Alias: $DeOnkoDiagnosis = http://fhir.de/onkologie/StructureDefinition/KrebsDiagnose
-Alias: $DeOnkoSystemischeTherapie = http://fhir.de/onkologie/StructureDefinition/SystemischeTherapie
-Alias: $DeTnmKlassifikation = http://fhir.de/onkologie/StructureDefinition/uicc-tnm
-Alias: $DeOnkoResidualStatus = http://fhir.de/onkologie/CodeSystem/Residualstatus
-Alias: $DeOnkoResidualStatusVS = http://fhir.de/onkologie/ValueSet/ResidualstatusVS
-Alias: $DeOnkoOpComplications = http://fhir.de/onkologie/CodeSystem/OpKomplikationen
-Alias: $DeOnkoOpComplicationsVS = http://fhir.de/onkologie/ValueSet/OpKomplikationenVS
-Alias: $DeOnkoIntention = http://fhir.de/onkologie/StructureDefinition/Intention
-Alias: $DeOnkoStellungOp = http://fhir.de/onkologie/StructureDefinition/StellungZurOp
-Alias: $DeIcdSeitenlokalisation = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_SEITENLOKALISATION
-Alias: $DeIcdDiagnosesicherheit = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_DIAGNOSESICHERHEIT
-Alias: $DeIcdO3TopologieVS = http://fhir.de/onkologie/ValueSet/icd-o-3-topologie
-Alias: $DeOnkoTumorstatusFernmetastasenVS = http://fhir.de/onkologie/ValueSet/TumorstatusFernmetastasenVS
-Alias: $icd-seitenlokalisation = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_SEITENLOKALISATION
+// Alias: $DeOnkoRadiotherapy = http://fhir.de/onkologie/StructureDefinition/procedure-bestrahlung
+// Alias: $DeOnkoSurgery = http://fhir.de/onkologie/StructureDefinition/procedure-operation
+// Alias: $DeOnkoDiagnosis = http://fhir.de/onkologie/StructureDefinition/KrebsDiagnose
+// Alias: $DeOnkoSystemischeTherapie = http://fhir.de/onkologie/StructureDefinition/SystemischeTherapie
+// Alias: $DeTnmKlassifikation = http://fhir.de/onkologie/StructureDefinition/uicc-tnm
+// Alias: $DeOnkoResidualStatus = http://fhir.de/onkologie/CodeSystem/Residualstatus
+// Alias: $DeOnkoResidualStatusVS = http://fhir.de/onkologie/ValueSet/ResidualstatusVS
+// Alias: $DeOnkoOpComplications = http://fhir.de/onkologie/CodeSystem/OpKomplikationen
+// Alias: $DeOnkoOpComplicationsVS = http://fhir.de/onkologie/ValueSet/OpKomplikationenVS
+// Alias: $DeOnkoIntention = http://fhir.de/onkologie/StructureDefinition/Intention
+// Alias: $DeOnkoStellungOp = http://fhir.de/onkologie/StructureDefinition/StellungZurOp
+// Alias: $DeIcdSeitenlokalisation = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_SEITENLOKALISATION
+// Alias: $DeIcdDiagnosesicherheit = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_DIAGNOSESICHERHEIT
+// Alias: $DeIcdO3TopologieVS = http://fhir.de/onkologie/ValueSet/icd-o-3-topologie
+// Alias: $DeOnkoTumorstatusFernmetastasenVS = http://fhir.de/onkologie/ValueSet/TumorstatusFernmetastasenVS
+ Alias: $icd-seitenlokalisation = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_SEITENLOKALISATION
 
 // MII KDS
 Alias: $mii-procedure  = https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure 
@@ -102,3 +102,6 @@ Alias: $mii-cs-onko-verlauf-fernmetastasen = https://www.medizininformatik-initi
 
 //23
 Alias: $mii-cs-onko-genetische-variante-auspraegung = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-genetische-variante-auspraegung
+
+//24
+Alias: $mii-cs-onko-studienteilnahme = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-studienteilnahme

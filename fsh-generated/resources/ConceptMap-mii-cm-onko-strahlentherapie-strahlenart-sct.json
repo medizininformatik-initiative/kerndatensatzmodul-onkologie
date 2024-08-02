@@ -1,0 +1,218 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "mii-cm-onko-strahlentherapie-strahlenart-sct",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-strahlentherapie-strahlenart-sct",
+  "name": "MII CM Onko Strahlentherapie Strahlenart SCT Mapping",
+  "title": "MII CM Onko Strahlentherapie Strahlenart SNOMED Mapping",
+  "status": "draft",
+  "experimental": false,
+  "date": "2024-04-11",
+  "description": "Mapping Strahlentherapie Strahlenart Codes zu SNOMED-CT",
+  "purpose": "Technical mapping to transform oBDS-Data into SNOMED",
+  "sourceUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
+  "targetUri": "http://snomed.info/sct",
+  "group": [
+    {
+      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart",
+      "target": "http://snomed.info/sct",
+      "element": [
+        {
+          "code": "UH",
+          "display": "Photonen (ultraharte Röntgenstrahlen, inklusive Gamma-Strahler)",
+          "target": [
+            {
+              "code": "290006006",
+              "display": "Photon (substance)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "EL",
+          "display": "Elektronen",
+          "target": [
+            {
+              "code": "46602004",
+              "display": "Electron (substance) ",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "NE",
+          "display": "Neutronen",
+          "target": [
+            {
+              "code": "58607005",
+              "display": "Neutron (substance)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "PN",
+          "display": "Protonen (leichte Wasserstoffionen/H1/Leichtionen)",
+          "target": [
+            {
+              "code": "89177007",
+              "display": "Proton (substance)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SI",
+          "display": "Schwerionen (schwere Kohlenstoff-Ionen/C12/Sauerstoffionen/Heliumionen)",
+          "target": [
+            {
+              "code": "312253001",
+              "display": "Heavy ion radiation (physical force)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "RO",
+          "display": "Weichstrahl (kV)",
+          "target": [
+            {
+              "code": "286630003",
+              "display": "Soft X-radiation (physical force)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SO",
+          "display": "Sonstige (inklusive Mixed Beams, exklusive Nuklide)",
+          "target": [
+            {
+              "code": "74964007",
+              "display": "Other (qualifier value)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "LU-177",
+          "display": "Lu-177",
+          "target": [
+            {
+              "code": "447553000",
+              "display": "Lutetium-177 (substance)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "J-131",
+          "display": "J131",
+          "target": [
+            {
+              "code": "1368003",
+              "display": "Iodine-131 (substance) ",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Y-90",
+          "display": "Y-90",
+          "target": [
+            {
+              "code": "14691008",
+              "display": "Yttrium-90 (substance)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Ra-223",
+          "display": "Ra-223",
+          "target": [
+            {
+              "code": "24853006",
+              "display": "Radium-223 (substance)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Ac-225",
+          "display": "Ac-225",
+          "target": [
+            {
+              "code": "32059002",
+              "display": "Actinium-225 (substance)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Sm-153",
+          "display": "Sm-153",
+          "target": [
+            {
+              "code": "419804008",
+              "display": "Samarium-153 (substance)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Tb-161",
+          "display": "Tb-161",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "Sr-89",
+          "display": "Sr-89",
+          "target": [
+            {
+              "code": "7770004",
+              "display": " Strontium-89 (substance)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Ir-192",
+          "display": "Ir-192",
+          "target": [
+            {
+              "code": "48341001",
+              "display": "Iridium-192 (substance)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Co-60",
+          "display": "Co-60",
+          "target": [
+            {
+              "code": "5405008",
+              "display": "Cobalt-60 (substance)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SONU",
+          "display": "Sonstige Nuklide",
+          "target": [
+            {
+              "code": "89457008",
+              "display": "Radioactive isotope (substance)",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

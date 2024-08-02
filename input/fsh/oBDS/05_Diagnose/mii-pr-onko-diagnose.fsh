@@ -33,6 +33,9 @@ Description: "Dieses Profil beschreibt eine Diagnose in der Onkologie"
 * evidence.detail MS
 * evidence.detail only Reference(MII_PR_Onko_Liste_Evidenz_Erstdiagnose)
 
+* extension contains mii-ex-onko-histology-morphology-behavior-icdo3 named morphology-behavior-icdo3 0..1
+* extension[morphology-behavior-icdo3] MS
+
 
 Mapping: FHIR-oBDS-Diagnose
 Id: oBDS
@@ -48,6 +51,6 @@ Source: MII_PR_Onko_Diagnose
 * verificationStatus.coding[primaertumorDiagnosesicherung].code -> "5.7" "Primärtumor Diagnosesicherung"
 * bodySite.coding[primaertumorSeitenlokalisation].code -> "5.8" "Primärtumor Seitenlokalisation"
 * -> "5.9" "Frühere Tumorerkrankungen"
-* code.coding[icd-o-3].code -> "6.3" "Morphologie-Code"
-* code.coding[icd-o-3].version -> "6.4" "Morphologie ICD-O/Blue Book Version"
-* code.text -> "6.5" "Morphologie-Freitext"
+* extension[morphology-behavior-icdo3].valueCodeableConcept.coding.code -> "6.3" "Morphologie-Code"
+* extension[morphology-behavior-icdo3].valueCodeableConcept.coding.version -> "6.4" "Morphologie ICD-O/Blue Book Version"
+* extension[morphology-behavior-icdo3].valueCodeableConcept.text -> "6.5" "Morphologie-Freitext"

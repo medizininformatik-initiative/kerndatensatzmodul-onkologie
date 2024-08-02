@@ -1,0 +1,99 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-verlauf-tumor",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf"
+    ]
+  },
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "277062004",
+            "system": "http://snomed.info/sct",
+            "display": "Status des Residualtumors"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "T",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-primaertumor",
+            "display": "Tumorreste (Residualtumor)"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "399656008",
+            "system": "http://snomed.info/sct",
+            "display": "Status of tumor metastasis to regional lymph nodes (observable entity)"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "P",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-lymphknoten",
+            "display": "bekannter Lymphknotenbefall Progress"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "399608002",
+            "system": "http://snomed.info/sct",
+            "display": "Status of distant metastasis (observable entity)"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "K",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen",
+            "display": "kein Fernmetastasen nachweisbar"
+          }
+        ]
+      }
+    }
+  ],
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "396432002",
+        "system": "http://snomed.info/sct",
+        "display": "Status of regression of tumor (observable entity)"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "focus": [
+    {
+      "reference": "Condition/exampleOncologicCondition"
+    }
+  ],
+  "effectiveDateTime": "2024-02-08",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "B",
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung",
+        "display": "klinische Besserung des Zustandes, Teilremissionkriterien jedoch nicht erfüllt (minimal response, MR)"
+      }
+    ]
+  }
+}

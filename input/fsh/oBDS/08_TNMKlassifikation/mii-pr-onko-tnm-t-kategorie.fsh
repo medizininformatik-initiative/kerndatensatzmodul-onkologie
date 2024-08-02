@@ -38,10 +38,6 @@ Description: "TNM-Klassifikation: TNM T-Kategorie. Ausbreitung des Primärtumors
 * valueCodeableConcept.coding.code 1.. MS
 * valueCodeableConcept.coding.system 1.. MS
 
-// Referenz zu Verlauf-Observation
-* derivedFrom 0..1 MS
-* derivedFrom only Reference(MII_PR_Onko_Verlauf)
-
 // Referenz zu Primärtumor
 * focus MS
 * focus only Reference(MII_PR_Onko_Diagnose)
