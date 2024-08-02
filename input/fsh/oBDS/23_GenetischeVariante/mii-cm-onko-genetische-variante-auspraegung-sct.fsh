@@ -1,4 +1,4 @@
-Instance: mii-cm-onko-genetische-variante-auspraegung-snomed-mapping
+Instance: mii-cm-onko-genetische-variante-auspraegung-sct
 InstanceOf: ConceptMap
 Usage: #definition
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-genetische-variante-auspraegung-sct"

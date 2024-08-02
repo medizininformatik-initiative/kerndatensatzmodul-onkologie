@@ -1,4 +1,4 @@
-Instance: mii-cm-onko-verlauf-gesamtbeurteilung-snomed-mapping
+Instance: mii-cm-onko-verlauf-gesamtbeurteilung-sct
 InstanceOf: ConceptMap
 Usage: #definition
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-verlauf-gesamtbeurteilung-sct"

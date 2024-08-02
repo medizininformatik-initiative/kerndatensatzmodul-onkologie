@@ -1,4 +1,4 @@
-Instance: mii-cm-onko-strahlentherapie-applikationsart-snomed-mapping
+Instance: mii-cm-onko-strahlentherapie-applikationsart-sct
 InstanceOf: ConceptMap
 Usage: #definition
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-strahlentherapie-applikationsart-sct"

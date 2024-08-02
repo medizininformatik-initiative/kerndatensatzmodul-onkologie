@@ -1,4 +1,4 @@
-Instance: mii-cm-onko-fernmetastasen-sct-mapping
+Instance: mii-cm-onko-fernmetastasen-sct
 InstanceOf: ConceptMap 
 Usage: #example
 Title: "MII CM Onko Fernmetastasen SCT Mapping"

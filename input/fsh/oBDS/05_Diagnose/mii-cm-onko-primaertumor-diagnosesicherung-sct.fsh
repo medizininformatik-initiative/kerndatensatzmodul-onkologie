@@ -1,4 +1,4 @@
-Instance: mii-cm-onko-primaertumor-diagnosesicherung-snomed-mapping
+Instance: mii-cm-onko-primaertumor-diagnosesicherung-sct
 InstanceOf: ConceptMap
 Usage: #definition
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-primaertumor-diagnosesicherung-sct"
