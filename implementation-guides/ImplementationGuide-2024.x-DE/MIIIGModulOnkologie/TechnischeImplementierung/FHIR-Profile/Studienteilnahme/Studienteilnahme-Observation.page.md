@@ -11,16 +11,21 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 
 
 
-Dieses Profil beschreibt ob und wann ein Patient an einer Studien teilgenommen hat. 
+Dieses Profil beschreibt ob und wann ein Patient an einer Studie teilgenommen hat. 
 
 
 
 Es beinhaltet: 
 * eine Referenz auf Patient
+* eine Referenz auf die Primärdiagnose
 * den Observation-Code "70709491003 | Enrollment in clinical trial (procedure)" (SNOMED-CT)
-* das genaue Studienteilnahmedatum
-* den Status zur Studienteilnahme
+* das genaue Ersteinschlusssdatum zu einer Studie mit Ethikvotum 
+* den Status zur Studienteilnahme (Ja, Nein, Unbekannt)
 
+
+Im Falle einer pharmakologischen Studie SOLLTE am besten eine Referenz zu einer Procedure / Systemischen Therapie bestehen, entweder über Observation.partOf = Reference (SystemischeTherapie), Observation.basedOn = Reference (MedicationRequest); oder Procedure.basedOn. 
+
+Außerdem fehlen noch Informationen über die genaue Studie (Organisation, StudienID etc). 
 
 @```
 from 
