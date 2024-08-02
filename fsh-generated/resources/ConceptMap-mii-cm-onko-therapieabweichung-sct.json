@@ -1,24 +1,24 @@
 {
   "resourceType": "ConceptMap",
-  "id": "mii-cm-onko-studienteilnahme-snomed-mapping",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-studienteilnahme-sct",
-  "name": "MII CM Onko Studienteilnahme SCT Mapping",
-  "title": "MII CM Onko Studienteilnahme SNOMED Mapping",
+  "id": "mii-cm-onko-therapieabweichung-sct",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-therapieabweichung-sct",
+  "name": "MII CM Onko Therapieabweichung SCT Mappingg",
+  "title": "MII CM Onko Therapieabweichung SNOMED Mapping",
   "status": "draft",
   "experimental": false,
-  "date": "2024-08-01",
-  "description": "Mapping Studienteilnahme Status Codes zu SNOMED-CT",
+  "date": "2024-04-10",
+  "description": "Mapping Therapieabweichung Codes zu SNOMED-CT",
   "purpose": "Technical mapping to transform oBDS-Data into SNOMED",
   "sourceUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
   "targetUri": "http://snomed.info/sct",
   "group": [
     {
-      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-studienteilnahme",
+      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieabweichung",
       "target": "http://snomed.info/sct",
       "element": [
         {
           "code": "J",
-          "display": "Ja",
+          "display": "ja",
           "target": [
             {
               "code": "373066001",
@@ -29,7 +29,7 @@
         },
         {
           "code": "N",
-          "display": "Nein",
+          "display": "nein",
           "target": [
             {
               "code": "373067005",
@@ -40,7 +40,7 @@
         },
         {
           "code": "U",
-          "display": "Unbekannt",
+          "display": "unbekannt",
           "target": [
             {
               "code": "261665006",
