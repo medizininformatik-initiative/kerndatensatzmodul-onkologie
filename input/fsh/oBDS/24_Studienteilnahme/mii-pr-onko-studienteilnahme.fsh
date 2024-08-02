@@ -17,7 +17,6 @@ Description: "Dieses Profil beschreibt Studienteilnahmen in der Onkologie"
 * code ^definition = "SCTID: 70709491003 | Enrollment in clinical trial (procedure)"
 * code ^short = "Studienteilnahme laut oBDS"
 * code.coding = $SCT#70709491003 
-* code.coding 
 
 // 24.1 Studienteilnahme Status
 * value[x] MS
@@ -31,7 +30,7 @@ Description: "Dieses Profil beschreibt Studienteilnahmen in der Onkologie"
 // Studienteilnahme Datum
 * effective[x] MS
 * effective[x] only dateTime
-* effectiveDateTime 1.. MS
+* effectiveDateTime 0..1 MS
 
 Mapping: FHIR-oBDS-Studienteilnahme
 Id: oBDS
