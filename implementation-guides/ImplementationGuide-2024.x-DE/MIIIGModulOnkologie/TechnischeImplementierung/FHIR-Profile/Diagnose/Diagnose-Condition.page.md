@@ -12,9 +12,9 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 Dieses Profil beschreibt eine Diagnose in der Onkologie. Es basiert auf dem MII-Diagnosemodul. 
 
 Der oBDS erwartet die Kodierung der Diagnose via ICD-10 sowie die Kodierung der Topographie des Primärtumors und der histologischen Morphologie über ICD-O-3. In FHIR kann diese Kombination bereits vollständig über die MII-Diagnose abgebildet werden: 
-* ICD-10 und ICD-O-Morphologie über zwei verschiedene Einträge in `Condition.code`,
-* ICD-O-Topgraphie über `Condition.bodySite`. 
-
+* ICD-10-GM über `Condition.code[icd10-gm]`, (abgeleitet von MII-Diagnose)
+* ICD-O-3-Morphologie über `Condition.extension[morphology-behavior-icdo3]` (vergleichbar mCODE-Erweiterung)
+* ICD-O-3-Topgraphie über `Condition.bodySite`. 
 
 Weitere histologische Untersuchungen mit abweichenden Morphologien im Therapieverlauf SOLLEN über das Histologie-Profil erfasst werden. 
 
