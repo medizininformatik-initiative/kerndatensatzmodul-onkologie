@@ -1,55 +1,35 @@
 {
   "resourceType": "ConceptMap",
-  "id": "mii-cm-onko-verlauf-fernmetastasen-snomed-mapping",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-verlauf-fernmetastasen-sct",
-  "name": "MII CM Onko Verlauf Fernmetastasen SCT Mapping",
-  "title": "MII CM Onko Verlauf Fernmetastasen SNOMED Mapping",
+  "id": "mii-cm-onko-verlauf-primaertumor-sct",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-verlauf-primaertumor-sct",
+  "name": "MII CM Onko Verlauf Primaertumor SCT Mapping",
+  "title": "MII CM Onko Verlauf Primaertumor SNOMED Mapping",
   "status": "draft",
   "experimental": false,
   "date": "2024-04-10",
-  "description": "Mapping Verlauf Fernmetastasen Codes zu SNOMED-CT",
+  "description": "Mapping Verlauf-Primaertumor Codes zu SNOMED-CT",
   "purpose": "Technical mapping to transform oBDS-Data into SNOMED",
   "sourceUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
   "targetUri": "http://snomed.info/sct",
   "group": [
     {
-      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen",
+      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-primaertumor",
       "target": "http://snomed.info/sct",
       "element": [
         {
           "code": "K",
-          "display": "kein Fernmetastasen nachweisbar",
+          "display": "kein Tumor nachweisbar",
           "target": [
             {
-              "code": "261985008",
-              "display": "No metastases (tumor staging)",
+              "code": "58899004",
+              "display": "No evidence of neoplasm (finding)",
               "equivalence": "equivalent"
             }
           ]
         },
         {
-          "code": "R",
-          "display": "neu aufgetretene Fernmetastase(n) bzw. Metastasenrezidiv",
-          "target": [
-            {
-              "code": "7147002",
-              "display": "New (qualifier value)",
-              "equivalence": "narrower"
-            }
-          ]
-        },
-        {
-          "target": [
-            {
-              "code": "263855007",
-              "display": "Relapse phase (qualifier value)",
-              "equivalence": "narrower"
-            }
-          ]
-        },
-        {
           "code": "T",
-          "display": "Fernmetastasen Residuen",
+          "display": "Tumorreste (Residualtumor)",
           "target": [
             {
               "code": "65320000",
@@ -60,7 +40,7 @@
         },
         {
           "code": "P",
-          "display": "Fernmetastasen Progress",
+          "display": "Tumorreste (Residualtumor) Progress",
           "target": [
             {
               "code": "255314001",
@@ -71,11 +51,22 @@
         },
         {
           "code": "N",
-          "display": "Fernmetastasen No Change",
+          "display": "Tumorreste (Residualtumor) No Change",
           "target": [
             {
               "code": "260388006",
               "display": "No status change (qualifier value)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "R",
+          "display": "Lokalrezidiv",
+          "target": [
+            {
+              "code": "1259237005",
+              "display": "Recurrent malignant neoplasm (disorder)",
               "equivalence": "equivalent"
             }
           ]
