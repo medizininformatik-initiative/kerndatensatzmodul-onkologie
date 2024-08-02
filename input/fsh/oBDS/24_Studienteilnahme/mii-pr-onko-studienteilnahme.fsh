@@ -12,6 +12,9 @@ Description: "Dieses Profil beschreibt Studienteilnahmen in der Onkologie"
 * subject only Reference(Patient)
 * encounter 0..1 MS
 
+* focus MS
+* focus only Reference(MII_PR_Onko_Diagnose)
+
 * code MS
 * code 1..1 
 * code ^definition = "SCTID: 70709491003 | Enrollment in clinical trial (procedure)"
