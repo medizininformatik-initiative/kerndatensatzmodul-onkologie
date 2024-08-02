@@ -1,46 +1,55 @@
 {
   "resourceType": "ConceptMap",
-  "id": "MII-CM-Onko-Verlauf-Lymphknoten-SCT-Mapping",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-verlauf-lymphknoten-sct",
-  "name": "mii-cm-onko-verlauf-lymphknoten-snomed-mapping",
-  "title": "MII CM Onko Verlauf Lymphknoten SNOMED Mapping",
+  "id": "mii-cm-onko-verlauf-fernmetastasen-snomed-mapping",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-verlauf-fernmetastasen-sct",
+  "name": "MII CM Onko Verlauf Fernmetastasen SCT Mapping",
+  "title": "MII CM Onko Verlauf Fernmetastasen SNOMED Mapping",
   "status": "draft",
   "experimental": false,
   "date": "2024-04-10",
-  "description": "Mapping Lymphknoten Codes zu SNOMED-CT",
+  "description": "Mapping Verlauf Fernmetastasen Codes zu SNOMED-CT",
   "purpose": "Technical mapping to transform oBDS-Data into SNOMED",
   "sourceUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
   "targetUri": "http://snomed.info/sct",
   "group": [
     {
-      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-lymphknoten",
+      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen",
       "target": "http://snomed.info/sct",
       "element": [
         {
           "code": "K",
-          "display": "kein Lymphknotenbefall nachweisbar",
+          "display": "kein Fernmetastasen nachweisbar",
           "target": [
             {
-              "code": "399647000",
-              "display": "No regional lymph node metastasis (finding)",
+              "code": "261985008",
+              "display": "No metastases (tumor staging)",
               "equivalence": "equivalent"
             }
           ]
         },
         {
           "code": "R",
-          "display": "neu aufgetretenes Lymphknotenrezidiv",
+          "display": "neu aufgetretene Fernmetastase(n) bzw. Metastasenrezidiv",
+          "target": [
+            {
+              "code": "7147002",
+              "display": "New (qualifier value)",
+              "equivalence": "narrower"
+            }
+          ]
+        },
+        {
           "target": [
             {
               "code": "263855007",
               "display": "Relapse phase (qualifier value)",
-              "equivalence": "equivalent"
+              "equivalence": "narrower"
             }
           ]
         },
         {
           "code": "T",
-          "display": "bekannter Lymphknotenbefall Residuen",
+          "display": "Fernmetastasen Residuen",
           "target": [
             {
               "code": "65320000",
@@ -51,7 +60,7 @@
         },
         {
           "code": "P",
-          "display": "bekannter Lymphknotenbefall Progress",
+          "display": "Fernmetastasen Progress",
           "target": [
             {
               "code": "255314001",
@@ -62,7 +71,7 @@
         },
         {
           "code": "N",
-          "display": "bekannter Lymphknotenbefall No Change",
+          "display": "Fernmetastasen No Change",
           "target": [
             {
               "code": "260388006",
