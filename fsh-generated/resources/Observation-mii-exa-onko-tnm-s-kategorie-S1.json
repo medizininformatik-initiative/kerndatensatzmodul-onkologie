@@ -1,0 +1,41 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-tnm-s-kategorie-S1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-s-kategorie"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "399424006",
+        "system": "http://snomed.info/sct",
+        "display": "History of alcohol abuse"
+      }
+    ]
+  },
+  "status": "final",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "effectiveDateTime": "2024-01-12",
+  "method": {
+    "coding": [
+      {
+        "code": "8",
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+        "display": "8. Auflage"
+      }
+    ]
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "S1",
+        "system": "https://www.uicc.org/resources/tnm",
+        "display": "S1"
+      }
+    ]
+  }
+}

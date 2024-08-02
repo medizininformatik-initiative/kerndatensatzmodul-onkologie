@@ -1,0 +1,41 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-tnm-l-kategorie-L1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-l-kategorie"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "395715009",
+        "system": "http://snomed.info/sct",
+        "display": "Viral infection"
+      }
+    ]
+  },
+  "status": "final",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "effectiveDateTime": "2024-01-12",
+  "method": {
+    "coding": [
+      {
+        "code": "8",
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+        "display": "8. Auflage"
+      }
+    ]
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "L1",
+        "system": "https://www.uicc.org/resources/tnm",
+        "display": "L1"
+      }
+    ]
+  }
+}
