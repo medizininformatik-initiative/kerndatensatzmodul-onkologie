@@ -25,7 +25,12 @@ Description: "Dieses Profil beschreibt eine Medikations-Tumorempfehlung"
 * medication[x] MS
 * medication[x] 1..1
 * medicationCodeableConcept MS
-* medicationCodeableConcept 1..*
+* medicationCodeableConcept 1..1
+* medicationCodeableConcept.coding MS
+* medicationCodeableConcept.coding 1..*
+
+
+
 // zusätzlich SNOMED-Codierung von Wirkstoffklassen erlauben? 
 
 // Therapieplanung Datum
@@ -37,8 +42,6 @@ Description: "Dieses Profil beschreibt eine Medikations-Tumorempfehlung"
 
 // Referenz zu relevanten Verlaufs-Stagings oder anderen Observationen
 * supportingInformation MS
-
-*
 
 Mapping: FHIR-oBDS-Therapieplanung-Medikation
 Id: oBDS
