@@ -36,7 +36,7 @@ Description: "Dieses Profil beschreibt eine Medikations-Tumorempfehlung"
 * reasonReference only Reference(MII_PR_Onko_Diagnose)
 
 // Referenz zu relevanten Verlaufs-Stagings oder anderen Observationen
-* supportingInfo MS
+* supportingInformation MS
 
 *
 
