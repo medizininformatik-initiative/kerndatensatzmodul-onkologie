@@ -89,6 +89,7 @@
 [MII_PR_Onko_Studienteilnahme]: StructureDefinition-mii-pr-onko-studienteilnahme.html
 [MII_PR_Onko_Systemische_Therapie]: StructureDefinition-mii-pr-onko-systemische-therapie.html
 [MII_PR_Onko_Systemische_Therapie_Medikation]: StructureDefinition-mii-pr-onko-systemische-therapie-medikation.html
+[MII_PR_Onko_Therapieempfehlung_Medikation]: StructureDefinition-mii-pr-onko-therapieempfehlung-Mmedikation.html
 [MII_PR_Onko_TNM_a_Symbol]: StructureDefinition-mii-pr-onko-tnm-a-symbol.html
 [MII_PR_Onko_TNM_L_Kategorie]: StructureDefinition-mii-pr-onko-tnm-l-kategorie.html
 [MII_PR_Onko_TNM_M_Kategorie]: StructureDefinition-mii-pr-onko-tnm-m-kategorie.html
