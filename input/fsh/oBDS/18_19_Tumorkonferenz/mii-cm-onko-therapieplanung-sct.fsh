@@ -27,7 +27,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #wider
 
 * group[=].element[+].code = #postth
-* group[=].element[=].display = "posttherapeutische Tumorkonferenz (manche Tumore werden nicht operiert)"
+* group[=].element[=].display = "posttherapeutisch (nach Therapieabschluss, zur Evaluation durchgeführter oder Planung weiterer Therapien / Nachsorge"
 * group[=].element[=].target.code = #303110006
 * group[=].element[=].target.display = "Postprocedural period (qualifier value)"
 * group[=].element[=].target.equivalence = #wider
