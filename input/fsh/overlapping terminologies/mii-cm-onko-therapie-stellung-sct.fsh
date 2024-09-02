@@ -28,7 +28,7 @@ Usage: #definition
 * group[=].element[+].code = #N
 * group[=].element[=].display = "neoadjuvant"
 * group[=].element[=].target.code = #373847000
-* group[=].element[=].target.display = "Neo-adjuvant - intent (qualifier value)"
+* group[=].element[=].target.display = "Neoadjuvant intent (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
 
 * group[=].element[+].code = #I
