@@ -19,30 +19,30 @@ Usage: #definition
 * group[=].element[=].target.code = #415175000
 * group[=].element[=].target.display = "Primary acquired melanosis of conjunctiva without atypia (disorder)"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Hier der Vollständigkeit aufgeführt."
+* group[=].element[=].target.comment = "Es gibt kein passendes Konzept unter dem Parent-Konzept '370114008 | Histological grades (qualifier value) |' oder generell in der Hierarchie '362981000 | Qualifier value (qualifier value) |"
 
 * group[=].element[+].code = #1
 * group[=].element[=].display = "gut differenziert"
-* group[=].element[=].target.code = #373375007
-* group[=].element[=].target.display = "Well differentiated histological grade finding (finding)"
+* group[=].element[=].target.code = #1155701009
+* group[=].element[=].target.display = "G1: Well differentiated histologic grade (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
 
 * group[=].element[+].code = #2
 * group[=].element[=].display = "mäßig differenziert"
-* group[=].element[=].target.code = #373377004
-* group[=].element[=].target.display = "Moderately differentiated histological grade finding (finding)"
+* group[=].element[=].target.code = #1155703007
+* group[=].element[=].target.display = "G2: Moderately differentiated histologic grade (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
 
 * group[=].element[+].code = #3
 * group[=].element[=].display = "schlecht differenziert"
-* group[=].element[=].target.code = #373373000
-* group[=].element[=].target.display = "Poorly differentiated histological grade finding (finding)"
+* group[=].element[=].target.code = #1155704001
+* group[=].element[=].target.display = "G3: Poorly differentiated histologic grade (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
 
 * group[=].element[+].code = #4
 * group[=].element[=].display = "undifferenziert"
-* group[=].element[=].target.code = #373374006
-* group[=].element[=].target.display = "Undifferentiated histological grade finding (finding)"
+* group[=].element[=].target.code = #1155702002
+* group[=].element[=].target.display = "G4: Undifferentiated histologic grade (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
 
 * group[=].element[+].code = #5
