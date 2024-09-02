@@ -11,7 +11,7 @@ Description: "Histologie: Dieses Profil beschreibt eine Gewebeprobe in der Onkol
 * subject 1..1 MS
 * subject only Reference(Patient)
 * collection.collectedDateTime MS
-* identifier.value MS
+* accessionIdentifier.value MS
 
 Mapping: FHIR-oBDS-Histologie-Specimen
 Id: oBDS
