@@ -162,6 +162,15 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "derived-from" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
 
+10. Der Suchparameter "body-site" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/Observation?bodysite=http://fhir.de/CodeSystem/icd-o-3|C00.4```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "derived-from" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+
+
 **Beispiele**
 
 {{json:mii-exa-onko-histologie-icdo3}}
