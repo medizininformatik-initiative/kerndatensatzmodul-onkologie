@@ -34,9 +34,10 @@ Usage: #definition
 
 * group[=].element[+].code = #R
 * group[=].element[=].display = "Revision/Komplikation"
-* group[=].element[=].target.code = #255231005
-* group[=].element[=].target.display = "Revision - value (qualifier value)"
+* group[=].element[=].target.code = #261560009 
+* group[=].element[=].target.display = "Revision procedure (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Dieser Code befindet sich nicht wie die anderen Codes als direktes Children-Element des Konzepts 363675004 | Intents (nature of procedure values) (qualifier value) | , sondern stattdessenvon dem darüberliegenden Konzept 277367001 | Nature of procedure values (qualifier value)"
 
 * group[=].element[+].code = #S
 * group[=].element[=].display = "Sonstiges"
@@ -55,4 +56,4 @@ Usage: #definition
 * group[=].element[=].target.code = #373808002
 * group[=].element[=].target.display = "Curative - procedure intent (qualifier value)"
 * group[=].element[=].target.equivalence = #wider
-* group[=].element[=].target.comment = "ggfs. Postkoordination mit 1255358009 | Oligometastatic malignant neoplasm (disorder) |"
+* group[=].element[=].target.comment = "Folgende Postkoordinierung möglich:1287742003 | Radiotherapy (procedure) | : 363702006 |Has focus (attribute)| = 1255358009 | Oligometastatic malignant neoplasm (disorder) |, 363703001 |Has intent (attribute)| = 373808002 | Curative - procedure intent (qualifier value) |"
