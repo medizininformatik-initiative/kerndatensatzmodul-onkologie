@@ -1,8 +1,8 @@
-Instance: MII-CM-Onko-Grading-SCT-Mapping
+Instance: mii-cm-onko-grading-sct
 InstanceOf: ConceptMap
 Usage: #definition
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-grading-sct"
-* name = "mii-cm-onko-grading-snomed-mapping"
+* name = "MII CM Onko Grading SCT Mapping"
 * title = "MII CM Onko Grading SNOMED Mapping"
 * status = #draft
 * experimental = false

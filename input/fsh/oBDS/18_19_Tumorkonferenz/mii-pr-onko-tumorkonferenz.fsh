@@ -33,9 +33,6 @@ Description: "Dieses Profil beschreibt die Tumorkonferenz und die Therapieempfeh
 // Referenz zu relevanten Verlaufs-Stagings oder anderen Observationen
 * supportingInfo MS
 
-// Ist Melder/Ersteller gewünscht? --> Erstmal werden die Daten in den DIZen erstellt. Es wird gerade diskutiert, die von der MII generierten Daten in die Metadaten-Tags zu packen
-* contributor MS //würde ich daher rausnehmen
-
 * activity 0..* MS
 * activity.detail 1..1 MS
 * activity.detail.code 1..1 MS

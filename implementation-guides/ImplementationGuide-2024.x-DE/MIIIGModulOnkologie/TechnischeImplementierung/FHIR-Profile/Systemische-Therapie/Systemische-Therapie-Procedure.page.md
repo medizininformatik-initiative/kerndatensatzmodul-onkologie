@@ -210,6 +210,6 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
 
 **Beispiele**
 
-{{json:mii-exa-systemische-therapie-1}}
+{{json:mii-exa-onko-systemische-therapie-1}}
 
 ---

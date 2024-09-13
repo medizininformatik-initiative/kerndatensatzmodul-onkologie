@@ -1,0 +1,34 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-studienteilnahme",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-studienteilnahme"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "70709491003",
+        "system": "http://snomed.info/sct"
+      }
+    ]
+  },
+  "status": "final",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "focus": [
+    {
+      "reference": "Condition/exampleOncologicCondition"
+    }
+  ],
+  "effectiveDateTime": "2024-01-02",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "J"
+      }
+    ]
+  }
+}

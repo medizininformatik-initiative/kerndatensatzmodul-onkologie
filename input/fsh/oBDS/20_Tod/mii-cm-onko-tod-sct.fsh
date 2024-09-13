@@ -1,8 +1,8 @@
-Instance: MII-CM-Onko-Tod-SCT-Mapping
+Instance: mii-cm-onko-tod-sct
 InstanceOf: ConceptMap
 Usage: #definition
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-tod-sct"
-* name = "mii-cm-onko-tod-snomed-mapping"
+* name = "MII CM Onko Tod SCT Mapping"
 * title = "MII CM Onko Tod SNOMED Mapping"
 * status = #draft
 * experimental = false

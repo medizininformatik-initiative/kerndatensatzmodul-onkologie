@@ -20,6 +20,12 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
 // * code 1..1  erst wieder reinschalten 
 // * code.coding = SNOMED/LOINC Beurteilung
 * code.coding = $SCT#396432002 "Status of regression of tumor (observable entity)"
+
+
+* hasMember MS
+* hasMember 0..*
+* hasMember only Reference(Observation)
+
 * value[x] MS
 * value[x] 0..1
 * value[x] only CodeableConcept

@@ -20,3 +20,7 @@ Hier sind wie folgt alle Änderungen aufgelistet.
  
 - to be continued :-) 
 
+### SNOMED Mappings
+- IDs der ConceptMaps auf MII-Naming convention angepasst (mii-cm-*); Vereinheitlichen der ids, urls und Dateinamen 
+- 
+

@@ -1,6 +1,6 @@
 ---
 parent: 
-topic: StrahlentherapieIntention
+topic: StrahlentherapieBestrahlung
 subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung
 ---
 

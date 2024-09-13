@@ -1,8 +1,8 @@
-Instance: MII-CM-Onko-Verlauf-Lymphknoten-SCT-Mapping
+Instance: mii-cm-onko-verlauf-lymphknoten-sct
 InstanceOf: ConceptMap
 Usage: #definition
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-verlauf-lymphknoten-sct"
-* name = "mii-cm-onko-verlauf-lymphknoten-snomed-mapping"
+* name = "MII CM Onko Verlauf Lymphknoten SCT Mapping"
 * title = "MII CM Onko Verlauf Lymphknoten SNOMED Mapping"
 * status = #draft
 * experimental = false

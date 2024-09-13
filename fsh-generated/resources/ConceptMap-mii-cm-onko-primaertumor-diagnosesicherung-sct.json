@@ -1,0 +1,195 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "mii-cm-onko-primaertumor-diagnosesicherung-sct",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-primaertumor-diagnosesicherung-sct",
+  "name": "MII CM Onko Primaertumor Diagnosesicherung SCT Mapping",
+  "title": "MII CM Onko Primaertumor Diagnosesicherung SNOMED Mapping",
+  "status": "draft",
+  "experimental": false,
+  "date": "2024-04-10",
+  "description": "Mapping Primärtumor Diagnosesicherung Codes zu SNOMED-CT",
+  "purpose": "Technical mapping to transform oBDS-Data into SNOMED",
+  "sourceUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
+  "targetUri": "http://snomed.info/sct",
+  "group": [
+    {
+      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung",
+      "target": "http://snomed.info/sct",
+      "element": [
+        {
+          "code": "1",
+          "display": "klinisch",
+          "target": [
+            {
+              "code": "373795004",
+              "display": "Cancer diagnosis based on clinical evidence (finding)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "2",
+          "display": "klinische Diagnostik",
+          "target": [
+            {
+              "code": "373796003",
+              "display": "Cancer diagnosis based on investigations, without a tissue diagnosis (finding)",
+              "equivalence": "equivalent",
+              "comment": "übergreifender Begriff, gültig für alle diagnostischen Mittel"
+            }
+          ]
+        },
+        {
+          "target": [
+            {
+              "code": "363680008",
+              "display": "Radiographic imaging procedure (procedure)",
+              "equivalence": "narrower",
+              "comment": "Röntgen als Spezifizierung"
+            }
+          ]
+        },
+        {
+          "target": [
+            {
+              "code": "423827005",
+              "display": "Endoscopy (procedure)",
+              "equivalence": "narrower",
+              "comment": "Endoskopie als Spezifizierung"
+            }
+          ]
+        },
+        {
+          "target": [
+            {
+              "code": "363679005",
+              "display": "Imaging (procedure)",
+              "equivalence": "narrower",
+              "comment": "Imaging als Spezifizierung"
+            }
+          ]
+        },
+        {
+          "target": [
+            {
+              "code": "16310003",
+              "display": "Ultrasonography (procedure)",
+              "equivalence": "narrower",
+              "comment": "Ultraschall als Spezifizierung"
+            }
+          ]
+        },
+        {
+          "target": [
+            {
+              "code": "122458006",
+              "display": "Exploration procedure (procedure)",
+              "equivalence": "narrower",
+              "comment": "Explorativer Eingriff als Spezifizierung"
+            }
+          ]
+        },
+        {
+          "code": "4",
+          "display": "spezifische Tumor-Marker",
+          "target": [
+            {
+              "code": "373797007",
+              "display": "Cancer diagnosis based on specific tumor markers (finding)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "5",
+          "display": "Zytologie",
+          "target": [
+            {
+              "code": "373798002",
+              "display": "Cancer diagnosis based on cytological evidence (finding)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "6",
+          "display": "histologische Untersuchung einer Metastase",
+          "target": [
+            {
+              "code": "373799005",
+              "display": "Cancer diagnosis based on metastatic histological evidence (finding)",
+              "equivalence": "equivalent",
+              "comment": "Auswahlmöglichkeit veraltet, entspricht 7.2"
+            }
+          ]
+        },
+        {
+          "code": "7",
+          "display": "histologische Untersuchung eines Primärtumors",
+          "target": [
+            {
+              "code": "373800009",
+              "display": "Cancer diagnosis based on primary site histological evidence (finding)",
+              "equivalence": "equivalent",
+              "comment": "Auswahlmöglichkeit veraltet, entspricht 7.1"
+            }
+          ]
+        },
+        {
+          "code": "7.1",
+          "display": "histologische Untersuchung eines Primärtumors",
+          "target": [
+            {
+              "code": "373800009",
+              "display": "Cancer diagnosis based on primary site histological evidence (finding)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "7.2",
+          "display": "histologische Untersuchung einer Metastase",
+          "target": [
+            {
+              "code": "373799005",
+              "display": "Cancer diagnosis based on metastatic histological evidence (finding)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "7.3",
+          "display": "histologische Untersuchung des Gewebes bei Autopsie",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "keine direktes Mapping möglich, ggfs. über Postkoordination mit Autopsie -Prozedur"
+            }
+          ]
+        },
+        {
+          "code": "8",
+          "display": "Zytogenetisch und/oder molekularer Test",
+          "target": [
+            {
+              "code": "394804000",
+              "display": "Clinical cytogenetics and molecular genetics (qualifier value)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "9",
+          "display": "unbekannt",
+          "target": [
+            {
+              "code": "261665006",
+              "display": "Unknown (qualifier value)",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

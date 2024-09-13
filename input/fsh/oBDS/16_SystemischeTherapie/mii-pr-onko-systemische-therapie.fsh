@@ -39,9 +39,8 @@ Description: "Systemische Therapie. Dieses Profil beschreibt eine Systemische Th
 * reasonReference MS
 * reasonReference only Reference(Condition)
 
-// Referenz auf letzte Verlaufsobservation zur zeitlichen und inhaltlichen Kopplung
+// Referenz auf mehrere Observations / Medications möglich
 * partOf MS
-* partOf only Reference(Observation)
 
 * subject 1..1 MS
 * subject only Reference(Patient)

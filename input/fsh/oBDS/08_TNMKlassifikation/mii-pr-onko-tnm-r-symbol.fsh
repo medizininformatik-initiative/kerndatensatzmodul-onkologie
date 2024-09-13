@@ -28,11 +28,6 @@ Description: "TNM-Klassifikation: TNM r-Symbol. Gibt an, ob die Klassifikation e
 * valueCodeableConcept ^comment = "r = Klassifikation erfolgte zur Beurteilung eines Rezidivs; (leer) = „native“ Klassifikation vor Eintreten eines Rezidivs"
 * valueCodeableConcept.coding.code 1.. MS
 * valueCodeableConcept.coding.system 1.. MS
-//* dataAbsentReason MS
-
-// Referenz zu Verlauf-Observation
-* derivedFrom 0..1 MS
-* derivedFrom only Reference(MII_PR_Onko_Verlauf)
 
 // Referenz zu Primärtumor
 * focus MS
