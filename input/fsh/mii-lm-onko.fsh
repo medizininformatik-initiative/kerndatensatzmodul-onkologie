@@ -118,6 +118,9 @@ Description: "MII LogicalModel Modul Onkologie"
 * GenetischeVariante 0..* BackboneElement "Genetische Variante"
   * GenetischeVarianteName 0..1 string "Genetische Variante Name" "Name der genetischen Variante (z.B. K-ras, BRAFV600, NRAS, C-KIT)"
   * GenetischeVarianteAuspraegung 0..1 code "Genetische Variante Ausprägung" "Ausprägung der genetischen Variante nach oBDS"
+* Studienteilnahme 0..* BackboneElemement "Studienteilnahme"
+  * StudienteilnahmeStatus 0..1 code "Studienteilnahme Status" "Einschluss in eine Studie mit Ethikvotum" 
+  * StudienteilnahmeDatum 0..1 code "Studienteilnahme Datum" "Erstes Einschlussdatum einer Studie mit Ethikvotum"
 
 Mapping: Onkologie-LogicalModel
 Id: FHIR
@@ -226,3 +229,6 @@ Source: MII_LM_Onko
 * GenetischeVariante -> "Observation"
   * GenetischeVarianteName -> "Observation.note"
   * GenetischeVarianteAuspraegung -> "Observation.interpretation"
+* Studienteilnahme -> "Observation"
+  * StudienteilnahmeStatus -> "Observation.valueCodeableConcept"
+  * StudienteilnahmeDatum -> "Observation.effectiveDateTime"
