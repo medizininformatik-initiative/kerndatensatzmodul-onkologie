@@ -21,6 +21,16 @@ Description: "Histologie-Kodierung nach ICD-0 für die Verwendung von Folgediagn
 * valueCodeableConcept 1..1
 * valueCodeableConcept from $ICDO3 (required)
 
+* bodySite.coding MS
+* bodySite.coding ^slicing.discriminator.type = #pattern
+* bodySite.coding ^slicing.discriminator.path = "$this"
+* bodySite.coding ^slicing.rules = #open
+* bodySite.coding contains Seitenlokalisation 0..1 MS
+* bodySite.coding[Seitenlokalisation] from mii-vs-onko-seitenlokalisation
+* bodySite.coding[Seitenlokalisation].system 1.. MS
+* bodySite.coding[Seitenlokalisation] ^patternCoding.system = $mii-cs-onko-seitenlokalisation
+* bodySite.coding[Seitenlokalisation].code 1.. MS
+
 * specimen MS 
 * specimen 1..1
 * specimen only Reference(MII_PR_Onko_Specimen)
