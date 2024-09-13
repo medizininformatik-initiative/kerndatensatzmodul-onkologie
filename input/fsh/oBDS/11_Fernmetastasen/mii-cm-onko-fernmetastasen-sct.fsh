@@ -36,7 +36,7 @@ Description: "Mapping der Fernmetastasen-Codesystems  auf SNOMED"
 * group[=].element[+].code = #BRA					
 * group[=].element[=].display = "Hirn"					
 * group[=].element[=].target.code = #313367003					
-* group[=].element[=].target.display = "BRA (body structure)"					
+* group[=].element[=].target.display = "BRA - tumor site notation (body structure)"					
 * group[=].element[=].target.equivalence = #equivalent					
 
 * group[=].element[+].code = #LYM					
@@ -87,4 +87,4 @@ Description: "Mapping der Fernmetastasen-Codesystems  auf SNOMED"
 * group[=].element[=].target.code = #405843009					
 * group[=].element[=].target.display = "Widespread metastatic malignant neoplastic disease (disorder)"					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "no specific localisation term for generalized (except maybe 60132005 as Generalized (qualifier value)), but this concept is equally valid to describe the condition"	
+* group[=].element[=].target.comment = "Anmerkung: GEN ist nicht Teil der ursprünglich von der TNM veröffentlichen empfohlenen Lokalisationen. SNOMED CT beinhaltet kein Konzept zur Beschreibung einer generalisierten Metastasierung - weder unter dem Parent-Konzept 258331007 | Anatomical site notations for tumor staging (body structure) | noch allgemein unter 123037004 | Body structure (body structure) |."	
