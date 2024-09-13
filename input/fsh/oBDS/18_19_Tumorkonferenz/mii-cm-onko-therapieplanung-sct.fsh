@@ -31,6 +31,7 @@ Usage: #definition
 * group[=].element[=].target.code = #303110006
 * group[=].element[=].target.display = "Postprocedural period (qualifier value)"
 * group[=].element[=].target.equivalence = #wider
+* group[=].element[=].target.comment = "Könnte problematisch sein, dass 303110006 | Postprocedural period (qualifier value) | das Parent-Konzept von 262061000 | Postoperative period (qualifier value) | ist. Alternative Ansätze: Generelle Verwendung von 225292002 | Developing a treatment plan (procedure) | oder 720006006 |Cancer care review (procedure)|, aber hier keine Postkoordination möglich."
 
 * group[=].element[+].code = #ther
 * group[=].element[=].display = "Therapieplanung ohne Tumorkonferenz"
