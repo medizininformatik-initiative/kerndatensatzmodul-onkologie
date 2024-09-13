@@ -9,7 +9,7 @@ Description: "oBDS-spezifisches Codesystem für Klassifikation von Intention der
 * insert Publisher
 * insert PR_CS_VS_Version
 * ^caseSensitive = true
-//* ^valueSet = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-operation-intention"
+//* ^valueSet = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-intention"
 * ^content = #complete
 * #K "kurativ"
 * #P "palliativ"

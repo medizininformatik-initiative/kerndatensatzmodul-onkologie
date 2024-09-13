@@ -118,6 +118,9 @@ Description: "MII LogicalModel Modul Onkologie"
 * GenetischeVariante 0..* BackboneElement "Genetische Variante"
   * GenetischeVarianteName 0..1 string "Genetische Variante Name" "Name der genetischen Variante (z.B. K-ras, BRAFV600, NRAS, C-KIT)"
   * GenetischeVarianteAuspraegung 0..1 code "Genetische Variante Ausprägung" "Ausprägung der genetischen Variante nach oBDS"
+* Studienteilnahme 0..* BackboneElemement "Studienteilnahme"
+  * StudienteilnahmeStatus 0..1 code "Studienteilnahme Status" "Einschluss in eine Studie mit Ethikvotum" 
+  * StudienteilnahmeDatum 0..1 code "Studienteilnahme Datum" "Erstes Einschlussdatum einer Studie mit Ethikvotum"
 
 Mapping: Onkologie-LogicalModel
 Id: FHIR
@@ -135,9 +138,9 @@ Source: MII_LM_Onko
   * FruehereTumorerkrankungen -> "Condition"
 * Histologie
   * TumorHistologiedatum -> "Specimen.collection.collectedDateTime"
-  * HistologieEinsendenummer -> "Specimen.identifier.value"
-  * MorphologieCode -> "Condition.code.coding.where(system='http://terminology.hl7.org/CodeSystem/icd-o-3').code"
-  * MorphologieICDOBlueBookVersion -> "Condition.code.coding.where(system='http://terminology.hl7.org/CodeSystem/icd-o-3').version"
+  * HistologieEinsendenummer -> "Specimen.accessionIdentifier"
+  * MorphologieCode -> "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3').valueCodeableConcept.code"
+  * MorphologieICDOBlueBookVersion -> "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3').valueCodeableConcept.version"
   * MorphologieFreitext -> "Condition.code.text"
   * Grading -> "Observation.valueCodeableConcept.coding.where(system='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading').code"
   * AnzahlUntersuchteLymphknoten -> "Observation.code.coding.where(system='http://loinc.org' and code='2708-6').select(%resource.valueQuantity.value)"
@@ -226,3 +229,6 @@ Source: MII_LM_Onko
 * GenetischeVariante -> "Observation"
   * GenetischeVarianteName -> "Observation.note"
   * GenetischeVarianteAuspraegung -> "Observation.interpretation"
+* Studienteilnahme -> "Observation"
+  * StudienteilnahmeStatus -> "Observation.valueCodeableConcept.coding.code"
+  * StudienteilnahmeDatum -> "Observation.effectiveDateTime"
