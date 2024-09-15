@@ -51,7 +51,6 @@
       {
         "id": "Specimen.identifier.value",
         "path": "Specimen.identifier.value",
-        "mustSupport": true,
         "mapping": [
           {
             "identity": "oBDS",
@@ -59,6 +58,11 @@
             "comment": "Histologie-Einsendenummer"
           }
         ]
+      },
+      {
+        "id": "Specimen.accessionIdentifier.value",
+        "path": "Specimen.accessionIdentifier.value",
+        "mustSupport": true
       },
       {
         "id": "Specimen.subject",
