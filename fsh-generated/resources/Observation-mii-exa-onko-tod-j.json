@@ -14,17 +14,6 @@
       }
     ]
   },
-  "interpretation": [
-    {
-      "coding": [
-        {
-          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-ende-tod",
-          "code": "J",
-          "display": "Ja, die Person ist an einer Tumorerkrankung oder Folge einer Tumorerkrankung (einschließlich Behandlungskomplikation) verstorben."
-        }
-      ]
-    }
-  ],
   "valueCodeableConcept": {
     "coding": [
       {
@@ -38,5 +27,16 @@
   "subject": {
     "reference": "Patient/example"
   },
-  "effectiveDateTime": "2024-02-08"
+  "effectiveDateTime": "2024-02-08",
+  "interpretation": [
+    {
+      "coding": [
+        {
+          "code": "J",
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-ende-tod",
+          "display": "Ja, die Person ist an einer Tumorerkrankung oder Folge einer Tumorerkrankung (einschließlich Behandlungskomplikation) verstorben."
+        }
+      ]
+    }
+  ]
 }

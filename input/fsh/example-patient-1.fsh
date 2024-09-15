@@ -15,8 +15,8 @@
 // * name.family = "Musterperson"
 // * name.given = "Kim"
 
-// // 10.06.2021 CT Abdomen mit KM: V.a. Peritonealkarzinose, Aszites im gesamten Bauchraum, Raumforderung Ovar rechts. Mesenteriale retroperitoneale LK-Metastasen, V.a. Lebermetastasierung
-// // Diagnostische Eingriffe und Bildgebung werden im oBDS nicht gesondert kodiert, dafür dann Prozedur OPS
+// // // 10.06.2021 CT Abdomen mit KM: V.a. Peritonealkarzinose, Aszites im gesamten Bauchraum, Raumforderung Ovar rechts. Mesenteriale retroperitoneale LK-Metastasen, V.a. Lebermetastasierung
+// // // Diagnostische Eingriffe und Bildgebung werden im oBDS nicht gesondert kodiert, dafür dann Prozedur OPS
 
 // Instance: PatientKimMusterperson-Procedure-1
 // InstanceOf: $mii-procedure
@@ -143,28 +143,28 @@
 
 
 
-// //05.07.21-25.07.21 Z1 Carboplatin AUC5 d1, Paclitaxel 175 mg/m2, d1, Wdh. d21
-// //26.07.21-15.08.21 Z2 Carboplatin AUC5 d1, Paclitaxel 175 mg/m2, d1, Wdh. d21
-// //16.08.21-05.09.21 Z3 Carboplatin AUC5 d1, Paclitaxel 175 mg/m2, d1, Wdh. d21
-// // Modelling als SystemicTherapy (Intent?),MedicationStatement, Anfangs-Enddauer als Procedure, ATC Codes raussuchen (von 21?)
-// // die genaueren Informationen können als MedicationAdministration kodiert werden -> außerhalb oBDS
+// // //05.07.21-25.07.21 Z1 Carboplatin AUC5 d1, Paclitaxel 175 mg/m2, d1, Wdh. d21
+// // //26.07.21-15.08.21 Z2 Carboplatin AUC5 d1, Paclitaxel 175 mg/m2, d1, Wdh. d21
+// // //16.08.21-05.09.21 Z3 Carboplatin AUC5 d1, Paclitaxel 175 mg/m2, d1, Wdh. d21
+// // // Modelling als SystemicTherapy (Intent?),MedicationStatement, Anfangs-Enddauer als Procedure, ATC Codes raussuchen (von 21?)
+// // // die genaueren Informationen können als MedicationAdministration kodiert werden -> außerhalb oBDS
 
-// Instance: PatientKimMusterperson-Verlauf-2021-09-15
-// InstanceOf: MII_PR_Onko_Verlauf
-// Usage: #example
-// Description: ". "
-// * subject = Reference(PatientKimMusterperson)
-// * status = #final
-// * effectiveDateTime = 2021-09-15
-// * code.coding = $mii-cs-onko-verlauf-gesamtbeurteilung#P "Progression"
-// * component[Tumor_Verlauf].code.coding = $SCT#277062004 "Status des Residualtumors"
-// * component[Tumor_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-primaertumor#P "Tumorreste (Residualtumor) Progress"
+// // Instance: PatientKimMusterperson-Verlauf-2021-09-15
+// // InstanceOf: MII_PR_Onko_Verlauf
+// // Usage: #example
+// // Description: ". "
+// // * subject = Reference(PatientKimMusterperson)
+// // * status = #final
+// // * effectiveDateTime = 2021-09-15
+// // * code.coding = $mii-cs-onko-verlauf-gesamtbeurteilung#P "Progression"
+// // * component[Tumor_Verlauf].code.coding = $SCT#277062004 "Status des Residualtumors"
+// // * component[Tumor_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-primaertumor#P "Tumorreste (Residualtumor) Progress"
 
-// * component[Lymphknoten_Verlauf].code.coding =  $SCT#277060007 "Status der lymphatischen Tumorinvasion"
-// * component[Lymphknoten_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-lymphknoten#R "neu aufgetretenes Lymphknotenrezidiv" // Text nicht aussagekräftig, ggfs. auch als #P "bekannter Lymphknotenbefall Progress" oder  #N "bekannter Lymphknotenbefall No Change" zu kodieren
+// // * component[Lymphknoten_Verlauf].code.coding =  $SCT#277060007 "Status der lymphatischen Tumorinvasion"
+// // * component[Lymphknoten_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-lymphknoten#R "neu aufgetretenes Lymphknotenrezidiv" // Text nicht aussagekräftig, ggfs. auch als #P "bekannter Lymphknotenbefall Progress" oder  #N "bekannter Lymphknotenbefall No Change" zu kodieren
 
-// * component[Fernmetastasen_Verlauf].code.coding = $SCT#260874000 "Status der Metastasen"
-// * component[Fernmetastasen_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-fernmetastasen#K "Keine Änderung"
+// // * component[Fernmetastasen_Verlauf].code.coding = $SCT#260874000 "Status der Metastasen"
+// // * component[Fernmetastasen_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-fernmetastasen#K "Keine Änderung"
 
 
 
@@ -311,18 +311,18 @@
 // * partOf = Reference(PatientKimMusterperson-Procedure-4)
 // * valueCodeableConcept.coding = $UICC#V0
 
-// Instance: FIGO-Observation-2
-// InstanceOf: MII_PR_Onko_Weitere_Klassifikationen
-// Usage: #example
-// Description: "."
-// * status = #completed
-// * subject = Reference(PatientKimMusterperson)
-// * code.coding = $SCT#385361009 "International Federation of Gynecology and Obstetrics tumor stage (observable entity)"
-// * code.text = "FIGO Klassifikation für ovariale Tumore"
-// * effectiveDateTime = 2021-06-22
-// * method = $SCT#254386003 "International Federation of Gynecology and Obstetrics ovarian tumor staging system (tumor staging)"
-// * partOf = Reference(PatientKimMusterperson-Procedure-4)
-// * valueCodeableConcept.coding.code = #IVB
+// // Instance: FIGO-Observation-2
+// // InstanceOf: MII_PR_Onko_Weitere_Klassifikationen
+// // Usage: #example
+// // Description: "."
+// // * status = #completed
+// // * subject = Reference(PatientKimMusterperson)
+// // * code.coding = $SCT#385361009 "International Federation of Gynecology and Obstetrics tumor stage (observable entity)"
+// // * code.text = "FIGO Klassifikation für ovariale Tumore"
+// // * effectiveDateTime = 2021-06-22
+// // * method = $SCT#254386003 "International Federation of Gynecology and Obstetrics ovarian tumor staging system (tumor staging)"
+// // * partOf = Reference(PatientKimMusterperson-Procedure-4)
+// // * valueCodeableConcept.coding.code = #IVB
 
 
 // /*
@@ -352,25 +352,25 @@
 // * activity[0].detail.status = #completed // unklar, weil genaue Zyklenanzahl nicht beschrieben ist
 // * activity[0].detail.statusReason = $mii-cs-onko-therapieabweichung#N
 
-// Instance: PatientKimMusterperson-Verlauf-2021-10-25
-// InstanceOf: MII_PR_Onko_Verlauf
-// Usage: #example
-// Description: ". "
-// * subject = Reference(PatientKimMusterperson)
-// * status = #final
-// * effectiveDateTime = 2021-10-25
-// * code.coding = $mii-cs-onko-verlauf-gesamtbeurteilung#V "Vollremission" // 26 Tage postop, aber sehr unsicher weil Neoadjuvanter progress
-// * component[Tumor_Verlauf].code.coding = $SCT#277062004 "Status des Residualtumors"
-// * component[Tumor_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-primaertumor#K "kein Tumor nachweisbar"
+// // Instance: PatientKimMusterperson-Verlauf-2021-10-25
+// // InstanceOf: MII_PR_Onko_Verlauf
+// // Usage: #example
+// // Description: ". "
+// // * subject = Reference(PatientKimMusterperson)
+// // * status = #final
+// // * effectiveDateTime = 2021-10-25
+// // * code.coding = $mii-cs-onko-verlauf-gesamtbeurteilung#V "Vollremission" // 26 Tage postop, aber sehr unsicher weil Neoadjuvanter progress
+// // * component[Tumor_Verlauf].code.coding = $SCT#277062004 "Status des Residualtumors"
+// // * component[Tumor_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-primaertumor#K "kein Tumor nachweisbar"
 
 
-// /*
-// Tumorboard 25.10.2021 :
-// Durch OP makroskopische Komplett-Resektion erreicht.
-// Jedoch Progress unter Neoadjuvanz.
-// Daher Umstellung auf Carboplatin/Gemcitabine
-// Humangenetische Vorstellung empfohlen // nicht über oBDS abbildbar
-// */
+// // /*
+// // Tumorboard 25.10.2021 :
+// // Durch OP makroskopische Komplett-Resektion erreicht.
+// // Jedoch Progress unter Neoadjuvanz.
+// // Daher Umstellung auf Carboplatin/Gemcitabine
+// // Humangenetische Vorstellung empfohlen // nicht über oBDS abbildbar
+// // */
 
 // Instance: PatientKimMusterperson-SystemicTherapy-2
 // InstanceOf: MII_PR_Onko_Systemische_Therapie
@@ -397,18 +397,18 @@
 // * partOf = Reference(PatientKimMusterperson-SystemicTherapy-2)
 // * note.text = "Gem-Carbo"
 
-// /*
-// 08.11.21-28.11.21 Z1 Carboplatin AUC 4 d1, Gemcitabin 1000mg/m2 d1+d8 Wdh d22
-// 29.11.21- 19.12.21  Z2 Carboplatin AUC 4 d1, Gemcitabin 1000mg/m2 d1+d8 Wdh d22
-// 20.12.21-09.01.22 Z3 Carboplatin AUC 4 d1, Gemcitabin 1000mg/m2 d1+d8 Wdh d22
+// // /*
+// // 08.11.21-28.11.21 Z1 Carboplatin AUC 4 d1, Gemcitabin 1000mg/m2 d1+d8 Wdh d22
+// // 29.11.21- 19.12.21  Z2 Carboplatin AUC 4 d1, Gemcitabin 1000mg/m2 d1+d8 Wdh d22
+// // 20.12.21-09.01.22 Z3 Carboplatin AUC 4 d1, Gemcitabin 1000mg/m2 d1+d8 Wdh d22
 
-// 15.01.22 CT: // Verlaufs-Observation
-// Abdomen:
-// - Regredienz der bekannten Peritonealkarzinose
-// - Leber ohne eindeutigen Hinweis auf Metastasierung, bei Z.n. atpyischer Lebersegmentresektion a.e. narbige Veränderungen
-// Beurteilung
-// Regredienter Befund, bei Z.n. zwischenzeitig operativem Debulking
-// */
+// // 15.01.22 CT: // Verlaufs-Observation
+// // Abdomen:
+// // - Regredienz der bekannten Peritonealkarzinose
+// // - Leber ohne eindeutigen Hinweis auf Metastasierung, bei Z.n. atpyischer Lebersegmentresektion a.e. narbige Veränderungen
+// // Beurteilung
+// // Regredienter Befund, bei Z.n. zwischenzeitig operativem Debulking
+// // */
 
 // Instance: PatientKimMusterperson-Verlauf-2022-01-22
 // InstanceOf: MII_PR_Onko_Verlauf
@@ -430,14 +430,14 @@
 // 25.01.22 Beginn Niraparib 300mg d1-28 wdh d28 //Systemic Therapy
 //  */
 
-// Instance: PatientKimMusterperson-Variante-BRCAwt
-// InstanceOf: mii-pr-onko-genetische-variante
-// Usage: #example
-// * status = #final
-// * subject = Reference(PatientKimMusterperson)
-// //* effectiveDateTime = "2022-02-08"
-// * note.text = "BRCAwt"
-// * interpretation = $mii-cs-onko-genetische-variante-auspraegung#W "Wildtyp"
+// // Instance: PatientKimMusterperson-Variante-BRCAwt
+// // InstanceOf: mii-pr-onko-genetische-variante
+// // Usage: #example
+// // * status = #final
+// // * subject = Reference(PatientKimMusterperson)
+// // //* effectiveDateTime = "2022-02-08"
+// // * note.text = "BRCAwt"
+// // * interpretation = $mii-cs-onko-genetische-variante-auspraegung#W "Wildtyp"
 
 // Instance: PatientKimMusterperson-Tumorkonferenz-4
 // InstanceOf: MII_PR_Onko_Tumorkonferenz

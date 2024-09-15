@@ -1,10 +1,10 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "mii-ex-onko-strahlentherapie-stellung",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellung",
+  "id": "mii-ex-onko-systemische-therapie-stellung-zur-op",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellung-zur-op",
   "version": "2024.0.0-ballot",
-  "name": "MII_EX_Onko_Strahlentherapie_Stellung",
-  "title": "MII EX Onko Strahlentherapie Stellung",
+  "name": "MII_EX_Onko_Systemische_Therapie_Stellung_Zur_Op",
+  "title": "MII EX Onko Systemische Therapie Stellung zur OP",
   "status": "draft",
   "publisher": "Medizininformatik Initiative",
   "contact": [
@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Strahlentherapie Stellung zur OP",
+  "description": "Systemische Therapie Stellung zur OP",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
@@ -35,8 +35,8 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "MII EX Onko Strahlentherapie Stellung",
-        "definition": "Strahlentherapie Stellung zur OP"
+        "short": "MII EX Onko Systemische Therapie Stellung zur OP",
+        "definition": "Systemische Therapie Stellung zur OP"
       },
       {
         "id": "Extension.extension",
@@ -46,7 +46,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellung"
+        "fixedUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellung-zur-op"
       },
       {
         "id": "Extension.value[x]",
@@ -58,7 +58,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-stellung"
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-systemische-therapie-stellung"
         }
       },
       {
