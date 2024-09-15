@@ -118,7 +118,7 @@ Description: "MII LogicalModel Modul Onkologie"
 * GenetischeVariante 0..* BackboneElement "Genetische Variante"
   * GenetischeVarianteName 0..1 string "Genetische Variante Name" "Name der genetischen Variante (z.B. K-ras, BRAFV600, NRAS, C-KIT)"
   * GenetischeVarianteAuspraegung 0..1 code "Genetische Variante Ausprägung" "Ausprägung der genetischen Variante nach oBDS"
-* Studienteilnahme 0..* BackboneElemement "Studienteilnahme"
+* Studienteilnahme 0..* BackboneElement "Studienteilnahme"
   * StudienteilnahmeStatus 0..1 code "Studienteilnahme Status" "Einschluss in eine Studie mit Ethikvotum" 
   * StudienteilnahmeDatum 0..1 code "Studienteilnahme Datum" "Erstes Einschlussdatum einer Studie mit Ethikvotum"
 

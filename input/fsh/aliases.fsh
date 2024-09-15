@@ -81,7 +81,8 @@ Alias: $mii-ex-onko-systemische-therapie-stellung = https://www.medizininformati
 Alias: $mii-cs-onko-fernmetastasen = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen
 
 //12
-Alias: $mii-cs-onko-allgemeiner-leistungszustand = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand
+Alias: $mii-cs-onko-allgemeiner-leistungszustand-ecog = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-ecog
+Alias: $mii-cs-onko-allgemeiner-leistungszustand-karnofsky = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-karnofsky
 
 //15
 Alias: $mii-cs-onko-nebenwirkung-ctcae-grad = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-vs-onko-nebenwirkung-ctcae-grad

@@ -16,20 +16,10 @@ Description: "OBDS Beschreibung des allgemeines Leistungszustandes"
 * code MS
 * code.coding MS
 * code.coding 1..*
-* code.coding ^slicing.discriminator.type = #pattern
-* code.coding ^slicing.discriminator.path = "$this"
-* code.coding ^slicing.rules = #open
-* code.coding contains
-    loinc 0..1 and
-    snomed 0..1
-* code.coding[loinc] MS
-* code.coding[loinc] = $LOINC#89262-0
-* code.coding[loinc].system 1.. MS
-* code.coding[loinc].code 1.. MS
-* code.coding[snomed] = $SCT#423740007
-* code.coding[snomed].system 1..
-* code.coding[snomed].code 1..
-
+* code.coding = $SCT#423690003  
+* code.coding.system 1..
+* code.coding.code 1..
+/*
 * value[x] MS
 * value[x] only CodeableConcept
 * valueCodeableConcept MS
@@ -37,7 +27,30 @@ Description: "OBDS Beschreibung des allgemeines Leistungszustandes"
 * valueCodeableConcept from mii-vs-onko-allgemeiner-leistungszustand (required)
 * valueCodeableConcept.coding.system = $mii-cs-onko-allgemeiner-leistungszustand
 * valueCodeableConcept.coding.code 1.. MS
+*/
 
+* component MS
+* component ^slicing.discriminator.type = #pattern
+* component ^slicing.discriminator.path = "$this"
+* component ^slicing.rules = #open
+* component contains
+    ecog 0..1 and
+    karnofsky 0..1 and 
+    who 0..1
+
+* component[ecog].code.coding =  $SCT#423740007 //|Eastern Cooperative Oncology Group performance status (observable entity)|
+* component[karnofsky].code.coding =  $SCT#761869008  //|Karnofsky Performance Status score (observable entity)|
+* component[who].code.coding =  $SCT#1230348002  //|World Health Organization performance status score (observable entity)|
+
+
+/*TODO: 
+* value löschen
+Values im Code überprüfen
+neuen Value nochmal in SNOMED überprüfen
+Code system udn value set umbenenenn in ECOG
+neues Code System und Value Set für Karnofsy
+optional: neues Code Sysstem udn value set für WHO? 
+*/ 
 
 Mapping: FHIR-oBDS-Allgemeiner-Leistungszustand
 Id: oBDS

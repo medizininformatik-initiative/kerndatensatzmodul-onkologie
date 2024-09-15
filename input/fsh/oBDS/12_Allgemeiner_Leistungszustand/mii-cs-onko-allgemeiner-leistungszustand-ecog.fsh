@@ -1,15 +1,15 @@
-CodeSystem: MII_CS_Onko_Allgemeiner_Leistungszustand
-Id: mii-cs-onko-allgemeiner-leistungszustand
-Title: "MII CS Onkologie Allgemeiner Leistungszustand"
-Description: "oBDS-spezifisches Codesystem für den Allgemeinen Leistungszustand"
+CodeSystem: MII_CS_Onko_Allgemeiner_Leistungszustand_ECOG
+Id: mii-cs-onko-allgemeiner-leistungszustand-ecog
+Title: "MII CS Onkologie Allgemeiner Leistungszustand ECOG"
+Description: "oBDS-spezifisches Codesystem für den Allgemeinen Leistungszustand nach ECOG"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-ecog"
 * ^status = #draft
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
 * ^caseSensitive = true
-* ^valueSet = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand"
+* ^valueSet = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-ecog"
 * ^content = #complete
 * #0 "Normale, uneingeschränkte Aktivität wie vor der Erkrankung (90 - 100 % nach Karnofsky)"
 * #1 "Einschränkung bei körperlicher Anstrengung, aber gehfähig; leichte körperliche Arbeit bzw. Arbeit im Sitzen (z. B. leichte Hausarbeit oder Büroarbeit) möglich (70 - 80 % nach Karnofsky)"
