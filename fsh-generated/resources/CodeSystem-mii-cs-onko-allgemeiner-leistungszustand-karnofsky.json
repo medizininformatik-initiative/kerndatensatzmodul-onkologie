@@ -1,0 +1,77 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "MII_CS_Onko_Allgemeiner_Leistungszustand_Karnofsky",
+  "id": "mii-cs-onko-allgemeiner-leistungszustand-karnofsky",
+  "title": "MII CS Onkologie Allgemeiner Leistungszustand Karnofsky",
+  "description": "oBDS-spezifisches Codesystem für den Allgemeinen Leistungszustand nach Karnofsky",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-karnofsky",
+  "concept": [
+    {
+      "code": "100%",
+      "display": "100%"
+    },
+    {
+      "code": "90%",
+      "display": "90%"
+    },
+    {
+      "code": "80%",
+      "display": "80%"
+    },
+    {
+      "code": "70%",
+      "display": "70%"
+    },
+    {
+      "code": "60%",
+      "display": "60%"
+    },
+    {
+      "code": "50%",
+      "display": "50%"
+    },
+    {
+      "code": "40%",
+      "display": "40%"
+    },
+    {
+      "code": "30%",
+      "display": "30%"
+    },
+    {
+      "code": "20%",
+      "display": "20%"
+    },
+    {
+      "code": "10%",
+      "display": "10%"
+    },
+    {
+      "code": "0%",
+      "display": "0%"
+    }
+  ],
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2024.0.0-ballot",
+  "caseSensitive": true,
+  "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-karnofsky",
+  "count": 11
+}

@@ -11,7 +11,7 @@ Usage: #definition
 * purpose = "Technical mapping to transform oBDS-Data into SNOMED"
 * sourceUri = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/"
 * targetUri[+] = "http://snomed.info/sct"
-* group[+].source = $mii-cs-onko-allgemeiner-leistungszustand
+* group[+].source = $mii-cs-onko-allgemeiner-leistungszustand-ecog
 * group[=].target = "http://snomed.info/sct"
 
 * group[=].element[+].code = #0

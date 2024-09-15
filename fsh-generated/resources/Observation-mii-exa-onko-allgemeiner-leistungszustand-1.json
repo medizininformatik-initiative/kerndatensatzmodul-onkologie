@@ -6,23 +6,54 @@
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand"
     ]
   },
-  "status": "final",
   "code": {
     "coding": [
       {
-        "code": "89262-0",
-        "system": "http://loinc.org"
+        "code": "423690003",
+        "system": "http://snomed.info/sct"
       }
     ]
   },
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "423740007",
+            "system": "http://snomed.info/sct"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "3",
+            "display": "Nur begrenzte Selbstversorgung möglich; ist 50 % oder mehr der Wachzeit an Bett oder Stuhl gebunden (30 - 40 % nach Karnofsky)"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "761869008",
+            "system": "http://snomed.info/sct"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "30%",
+            "display": "30%"
+          }
+        ]
+      }
+    }
+  ],
+  "status": "final",
   "subject": {
     "reference": "Patient/example"
-  },
-  "valueCodeableConcept": {
-    "coding": [
-      {
-        "code": "3"
-      }
-    ]
   }
 }

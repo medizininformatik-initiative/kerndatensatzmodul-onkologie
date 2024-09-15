@@ -33,7 +33,8 @@
 [mii-cps-onko-capabilitystatement]: CapabilityStatement-mii-cps-onko-capabilitystatement.html
 [MII_CS_Onko_Nebenwirkung_CTCAE_Grad]: CodeSystem-mii-cs-onko-nebenwirkung-ctcae-grad.html
 [MII_CS_Onko_Therapie_Typ]: CodeSystem-mii-cs-onko-therapie-typ.html
-[MII_CS_Onko_Allgemeiner_Leistungszustand]: CodeSystem-mii-cs-onko-allgemeiner-leistungszustand.html
+[MII_CS_Onko_Allgemeiner_Leistungszustand_ECOG]: CodeSystem-mii-cs-onko-allgemeiner-leistungszustand-ecog.html
+[MII_CS_Onko_Allgemeiner_Leistungszustand_Karnofsky]: CodeSystem-mii-cs-onko-allgemeiner-leistungszustand-karnofsky.html
 [MII_CS_Onko_Fernmetastasen]: CodeSystem-mii-cs-onko-fernmetastasen.html
 [MII_CS_Onko_Genetische_Variante_Auspraegung]: CodeSystem-mii-cs-onko-genetische-variante-auspraegung.html
 [MII_CS_Onko_Grading]: CodeSystem-mii-cs-onko-grading.html
@@ -105,7 +106,8 @@
 [MII_PR_Onko_Tumorkonferenz]: StructureDefinition-mii-pr-onko-tumorkonferenz.html
 [MII_PR_Onko_Verlauf]: StructureDefinition-mii-pr-onko-verlauf.html
 [MII_PR_Onko_Weitere_Klassifikationen]: StructureDefinition-mii-pr-onko-weitere-klassifikationen.html
-[MII_VS_Onko_Allgemeiner_Leistungszustand]: ValueSet-mii-vs-onko-allgemeiner-leistungszustand.html
+[MII_VS_Onko_Allgemeiner_Leistungszustand_ECOG]: ValueSet-mii-vs-onko-allgemeiner-leistungszustand-ecog.html
+[MII_VS_Onko_Allgemeiner_Leistungszustand_Karnofsky]: ValueSet-mii-vs-onko-allgemeiner-leistungszustand-karnofsky.html
 [MII_VS_Onko_Beurteilung_Lokaler_Residualstatus]: ValueSet-mii-vs-onko-beurteilung-lokaler-residualstatus.html
 [MII_VS_Onko_Fernmetastasen]: ValueSet-mii-vs-onko-fernmetastasen.html
 [MII_VS_Onko_Gesamtbeurteilung_Residualstatus]: ValueSet-mii-vs-onko-gesamtbeurteilung-residualstatus.html

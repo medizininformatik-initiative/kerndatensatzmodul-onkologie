@@ -24,12 +24,20 @@
     "endLine": 13
   },
   {
-    "outputFile": "CodeSystem-mii-cs-onko-allgemeiner-leistungszustand.json",
-    "fshName": "MII_CS_Onko_Allgemeiner_Leistungszustand",
+    "outputFile": "CodeSystem-mii-cs-onko-allgemeiner-leistungszustand-ecog.json",
+    "fshName": "MII_CS_Onko_Allgemeiner_Leistungszustand_ECOG",
     "fshType": "CodeSystem",
-    "fshFile": "oBDS\\12_Allgemeiner_Leistungszustand\\mii-cs-onko-allgemeiner-leistungszustand.fsh",
+    "fshFile": "oBDS\\12_Allgemeiner_Leistungszustand\\mii-cs-onko-allgemeiner-leistungszustand-ecog.fsh",
     "startLine": 1,
     "endLine": 19
+  },
+  {
+    "outputFile": "CodeSystem-mii-cs-onko-allgemeiner-leistungszustand-karnofsky.json",
+    "fshName": "MII_CS_Onko_Allgemeiner_Leistungszustand_Karnofsky",
+    "fshType": "CodeSystem",
+    "fshFile": "oBDS\\12_Allgemeiner_Leistungszustand\\mii-cs-onko-allgemeiner-leistungszustand-karnofsky.fsh",
+    "startLine": 1,
+    "endLine": 24
   },
   {
     "outputFile": "CodeSystem-mii-cs-onko-fernmetastasen.json",
@@ -493,7 +501,7 @@
     "fshType": "Instance",
     "fshFile": "oBDS\\12_Allgemeiner_Leistungszustand\\mii-exa-onko-allgemeiner-leistungszustand-1.fsh",
     "startLine": 1,
-    "endLine": 8
+    "endLine": 11
   },
   {
     "outputFile": "Observation-mii-exa-onko-anzahl-befallene-lymphknoten-0.json",
@@ -1029,7 +1037,7 @@
     "fshType": "Profile",
     "fshFile": "oBDS\\12_Allgemeiner_Leistungszustand\\mii-pr-onko-allgemeiner-leistungszustand.fsh",
     "startLine": 1,
-    "endLine": 39
+    "endLine": 43
   },
   {
     "outputFile": "StructureDefinition-mii-pr-onko-anzahl-befallene-lymphknoten.json",
@@ -1312,10 +1320,18 @@
     "endLine": 32
   },
   {
-    "outputFile": "ValueSet-mii-vs-onko-allgemeiner-leistungszustand.json",
-    "fshName": "MII_VS_Onko_Allgemeiner_Leistungszustand",
+    "outputFile": "ValueSet-mii-vs-onko-allgemeiner-leistungszustand-ecog.json",
+    "fshName": "MII_VS_Onko_Allgemeiner_Leistungszustand_ECOG",
     "fshType": "ValueSet",
-    "fshFile": "oBDS\\12_Allgemeiner_Leistungszustand\\mii-vs-onko-allgemeiner-leistungszustand.fsh",
+    "fshFile": "oBDS\\12_Allgemeiner_Leistungszustand\\mii-vs-onko-allgemeiner-leistungszustand-ecog.fsh",
+    "startLine": 1,
+    "endLine": 11
+  },
+  {
+    "outputFile": "ValueSet-mii-vs-onko-allgemeiner-leistungszustand-karnofsky.json",
+    "fshName": "MII_VS_Onko_Allgemeiner_Leistungszustand_Karnofsky",
+    "fshType": "ValueSet",
+    "fshFile": "oBDS\\12_Allgemeiner_Leistungszustand\\mii-vs-onko-allgemeiner-leistungszustand-karnofsky.fsh",
     "startLine": 1,
     "endLine": 11
   },
