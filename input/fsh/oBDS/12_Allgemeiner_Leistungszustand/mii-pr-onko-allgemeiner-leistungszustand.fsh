@@ -35,22 +35,23 @@ Description: "OBDS Beschreibung des allgemeines Leistungszustandes"
 * component ^slicing.rules = #open
 * component contains
     ecog 0..1 and
-    karnofsky 0..1 and 
-    who 0..1
+    karnofsky 0..1  
 
+* component[ecog].code 1..1 MS
+* component[ecog].code.coding 1..1  MS
 * component[ecog].code.coding =  $SCT#423740007 //|Eastern Cooperative Oncology Group performance status (observable entity)|
+* component[ecog].value[x] 1..1 MS
+* component[ecog].value[x] only CodeableConcept
+* component[ecog].value[x] from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-ecog
+* component[karnofsky] 1..1 MS
+* component[karnofsky].code 1..1 MS
+* component[karnofsky].code.coding 1..1 MS
 * component[karnofsky].code.coding =  $SCT#761869008  //|Karnofsky Performance Status score (observable entity)|
-* component[who].code.coding =  $SCT#1230348002  //|World Health Organization performance status score (observable entity)|
+* component[karnofsky].value[x] 1..1 MS
+* component[karnofsky].value[x] only CodeableConcept
+* component[karnofsky].valueCodeableConcept from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-karnofsky
 
 
-/*TODO: 
-* value löschen
-Values im Code überprüfen
-neuen Value nochmal in SNOMED überprüfen
-Code system udn value set umbenenenn in ECOG
-neues Code System und Value Set für Karnofsy
-optional: neues Code Sysstem udn value set für WHO? 
-*/ 
 
 Mapping: FHIR-oBDS-Allgemeiner-Leistungszustand
 Id: oBDS
