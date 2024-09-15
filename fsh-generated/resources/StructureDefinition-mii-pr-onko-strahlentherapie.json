@@ -76,23 +76,23 @@
         ]
       },
       {
-        "id": "Procedure.extension:Stellung",
+        "id": "Procedure.extension:StellungZurOp",
         "path": "Procedure.extension",
-        "sliceName": "Stellung",
+        "sliceName": "StellungZurOp",
         "min": 0,
         "max": "*",
         "type": [
           {
             "code": "Extension",
             "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellung"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellung-zur-op"
             ]
           }
         ],
         "mustSupport": true
       },
       {
-        "id": "Procedure.extension:Stellung.value[x].coding.code",
+        "id": "Procedure.extension:StellungZurOp.value[x].coding.code",
         "path": "Procedure.extension.value[x].coding.code",
         "mapping": [
           {

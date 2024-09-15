@@ -62,9 +62,9 @@
 [MII_EX_Onko_Operation_Intention]: StructureDefinition-mii-ex-onko-operation-intention.html
 [MII_EX_Onko_Strahlentherapie_Bestrahlung]: StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung.html
 [MII_EX_Onko_Strahlentherapie_Intention]: StructureDefinition-mii-ex-onko-strahlentherapie-intention.html
-[MII_EX_Onko_Strahlentherapie_Stellung]: StructureDefinition-mii-ex-onko-strahlentherapie-stellung.html
+[MII_EX_Onko_Strahlentherapie_Stellung_Zur_Op]: StructureDefinition-mii-ex-onko-strahlentherapie-stellung-zur-op.html
 [MII_EX_Onko_Systemische_Therapie_Intention]: StructureDefinition-mii-ex-onko-systemische-therapie-intention.html
-[MII_EX_Onko_Systemische_Therapie_Stellung]: StructureDefinition-mii-ex-onko-systemische-therapie-stellung.html
+[MII_EX_Onko_Systemische_Therapie_Stellung_Zur_Op]: StructureDefinition-mii-ex-onko-systemische-therapie-stellung-zur-op.html
 [MII_EX_Onko_TNM_cp_Praefix]: StructureDefinition-mii-ex-onko-tnm-cp-praefix.html
 [MII_EX_Onko_TNM_ITC_Suffix]: StructureDefinition-mii-ex-onko-tnm-itc-suffix.html
 [MII_EX_Onko_TNM_SN_Suffix]: StructureDefinition-mii-ex-onko-tnm-sn-suffix.html

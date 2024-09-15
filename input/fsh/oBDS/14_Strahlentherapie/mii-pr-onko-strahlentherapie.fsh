@@ -1,5 +1,5 @@
 Profile: MII_PR_Onko_Strahlentherapie
-Parent: https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure 
+Parent: https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure
 Id: mii-pr-onko-strahlentherapie
 Title: "MII PR Onkologie Strahlentherapie"
 Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie in der Onkologie."
@@ -14,13 +14,13 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 * encounter 0..1 MS
 
 
-// Intention der Strahlentherapie 
-* extension contains mii-ex-onko-strahlentherapie-intention named Intention 1..1 
+// Intention der Strahlentherapie
+* extension contains mii-ex-onko-strahlentherapie-intention named Intention 1..1
 * extension[Intention] MS
 
 // Strahlentherapie Stellung zu operativer Therapie
-* extension contains MII_EX_Onko_Strahlentherapie_Stellung named Stellung 0.. 
-* extension[Stellung] MS 
+* extension contains MII_EX_Onko_Strahlentherapie_Stellung_Zur_Op named StellungZurOp 0..
+* extension[StellungZurOp] MS
 
 * extension contains mii-ex-onko-strahlentherapie-bestrahlung named Bestrahlung 1..
 * extension[Bestrahlung] MS
@@ -30,7 +30,7 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 // Strahlentherapie Beginn und Ende
 * performed[x] MS
 * performed[x] only Period //  wird über Period.start und Period.stop des MII Prozedurmoduls erfasst
-* performed[x].start 1..1 MS 
+* performed[x].start 1..1 MS
 * performed[x].end 0..1 MS
 
 // Strahlentherapie Ende Grund
@@ -46,7 +46,7 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 * basedOn only Reference(CarePlan)
 
 // Referenz auf Primaerdiagnose oder andere Condition
-* reasonReference MS 
+* reasonReference MS
 * reasonReference only Reference(Condition)
 
 // Referenz auf letzte Verlaufsobservation zur zeitlichen und inhaltlichen Kopplung
@@ -61,9 +61,9 @@ Title: "Mapping FHIR zu oBDS"
 Source: MII_PR_Onko_Strahlentherapie
 * -> "14" "Strahlentherapie"
 * extension[Intention].valueCodeableConcept.coding.code -> "14.1" "Intention der Strahlentherapie"
-* extension[Stellung].valueCodeableConcept.coding.code -> "14.2" "Strahlentherapie Stellung zu operativer Therapie" 
-* extension[Bestrahlung].extension[Zielgebiet].valueCodeableConcept.coding.code -> "14.3" "Strahlentherapie Zielgebiet" 
-* extension[Bestrahlung].extension[Zielgebiet_Lateralitaet].valueCodeableConcept.coding.code -> "14.4" "Strahlentherapie Seite Zielgebiet" 
+* extension[StellungZurOp].valueCodeableConcept.coding.code -> "14.2" "Strahlentherapie Stellung zu operativer Therapie"
+* extension[Bestrahlung].extension[Zielgebiet].valueCodeableConcept.coding.code -> "14.3" "Strahlentherapie Zielgebiet"
+* extension[Bestrahlung].extension[Zielgebiet_Lateralitaet].valueCodeableConcept.coding.code -> "14.4" "Strahlentherapie Seite Zielgebiet"
 * performed[x].start -> "14.5" "Strahlentherapie Beginn"
 * performed[x].end -> "14.6" "Strahlentherapie Ende"
 * extension[Bestrahlung].extension[Applikationsart].valueCodeableConcept.coding.code -> "14.7" "Strahlentherapie Applikationsart"
