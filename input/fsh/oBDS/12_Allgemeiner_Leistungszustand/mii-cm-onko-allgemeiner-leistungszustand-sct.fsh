@@ -1,8 +1,8 @@
-Instance: MII-CM-Onko-Allgemeiner-Leistungszustand-SCT-Mapping
+Instance: mii-cm-onko-allgemeiner-leistungszustand-sct
 InstanceOf: ConceptMap
 Usage: #definition
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-allgemeiner-leistungszustand-sct"
-* name = "mii-cm-onko-allgemeiner-leistungszustand-snomed-mapping"
+* name = "MII CM Onko Allgemeiner Leistungszustand SCT Mapping"
 * title = "MII CM Onko Allgemeiner Leistungszustand SNOMED Mapping"
 * status = #draft
 * experimental = false

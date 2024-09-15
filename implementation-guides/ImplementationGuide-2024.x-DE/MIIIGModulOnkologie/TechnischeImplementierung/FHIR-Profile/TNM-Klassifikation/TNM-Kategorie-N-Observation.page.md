@@ -174,6 +174,7 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
     Anwendungshinweise: Weitere Informationen zur Suche nach "derived-from" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
 **Beispiele**
 
-{{json:}}
+{{json:mii-exa-onko-tnm-n-kategorie-N0}}
 
+{{json:mii-exa-onko-tnm-n-kategorie-pN0i-sn}}
 ---

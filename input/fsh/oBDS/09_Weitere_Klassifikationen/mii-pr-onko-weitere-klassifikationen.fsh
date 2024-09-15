@@ -12,6 +12,9 @@ Description: "Weitere Tumor Staging Klassifikation neben TMN (Hämatoonkologisch
 * subject only Reference(Patient)
 * encounter 0..1 MS
 
+// Referenz zu Primärtumor
+* focus MS
+* focus only Reference(MII_PR_Onko_Diagnose)
 
 // 9.1 Hämatoonkologische und sonstige Klassifikationen Datum 
 * effective[x] MS

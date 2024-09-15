@@ -187,6 +187,8 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
 
 **Beispiele**
 
-{{json:}}
+{{json:mii-exa-onko-tnm-klassifikation-TisN0M0}}
+
+{{json:mii-exa-onko-tnm-klassifikation-uT2a2pN0023i-sncM1}}
 
 ---

@@ -1,0 +1,52 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "mii-cm-onko-tnm-uicc-sct",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-tnm-uicc-sct",
+  "name": "MII CM Onko TNM UICC SCT Mapping",
+  "title": "MII CM Onko TNM UICC SNOMED",
+  "status": "draft",
+  "experimental": false,
+  "date": "2024-01-05",
+  "description": "Mapping TNM UICC Codes zu SNOMED-CT",
+  "group": [
+    {
+      "source": "https://www.uicc.org/resources/tnm",
+      "target": "http://snomed.info/sct",
+      "element": [
+        {
+          "code": "y",
+          "display": "y",
+          "target": [
+            {
+              "code": "421755005",
+              "display": "Tumor staging descriptor y (tumor staging)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "r",
+          "display": "r",
+          "target": [
+            {
+              "code": "421188008",
+              "display": "Tumor staging descriptor r (tumor staging)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "a",
+          "display": "a",
+          "target": [
+            {
+              "code": "421426001",
+              "display": "Tumor staging descriptor a (tumor staging)",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

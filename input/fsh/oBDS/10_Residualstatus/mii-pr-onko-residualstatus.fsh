@@ -14,9 +14,9 @@ Description: "Umfang eines Residualtumors nach einer Therapie"
 * subject only Reference(Patient)
 * encounter 0..1 MS
 
-// Referenz zu Verlauf-Observation
-* derivedFrom 0..1 MS
-* derivedFrom only Reference(MII_PR_Onko_Verlauf)
+// Referenz auf Procedure/ Operation, die Specimen erzeugt (Biopsie, Exzision) 
+* partOf MS
+* partOf 0..1
 
 // Referenz zu Primärtumor
 * focus MS

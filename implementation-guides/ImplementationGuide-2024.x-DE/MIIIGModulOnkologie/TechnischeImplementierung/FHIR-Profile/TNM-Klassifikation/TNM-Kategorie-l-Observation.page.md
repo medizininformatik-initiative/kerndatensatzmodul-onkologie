@@ -170,6 +170,6 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
 
 **Beispiele**
 
-{{json:}}
+{{json:mii-exa-onko-tnm-l-kategorie-L1}}
 
 ---

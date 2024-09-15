@@ -30,9 +30,6 @@ Description: "TNM-Klassifikation: TNM a-Symbol. Gibt an, ob die Klassifikation a
 * valueCodeableConcept.coding.system 1.. MS
 //* dataAbsentReason MS
 
-// Referenz zu Verlauf-Observation
-* derivedFrom 0..1 MS
-* derivedFrom only Reference(MII_PR_Onko_Verlauf)
 
 // Referenz zu Primärtumor
 * focus MS

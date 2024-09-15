@@ -1,0 +1,216 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "mii-cm-onko-therapie-typ-sct",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-therapie-typ-sct",
+  "name": "MII CM Onko Therapie Typ SNOMED Mapping",
+  "title": "MII CM Onko Therapie Typ SNOMED Mapping",
+  "status": "draft",
+  "experimental": false,
+  "date": "2024-04-10",
+  "description": "Mapping Therapie Typ Codes zu SNOMED-CT",
+  "purpose": "Technical mapping to transform oBDS-Data into SNOMED",
+  "sourceUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
+  "targetUri": "http://snomed.info/sct",
+  "group": [
+    {
+      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ",
+      "target": "http://snomed.info/sct",
+      "element": [
+        {
+          "code": "CH",
+          "display": "Chemotherapie",
+          "target": [
+            {
+              "code": "367336001",
+              "display": "Chemotherapy (procedure)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "HO",
+          "display": "Hormontherapie",
+          "target": [
+            {
+              "code": "169413002",
+              "display": "Hormone therapy (procedure)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "IM",
+          "display": "Immun-/Antikörpertherapie",
+          "target": [
+            {
+              "code": "897713009",
+              "display": "Immunotherapy (procedure)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "ZS",
+          "display": "zielgerichtete Substanzen",
+          "target": [
+            {
+              "code": "1255831008",
+              "display": "Chemotherapy for malignant neoplastic disease using targeted agent (procedure)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SZ",
+          "display": "Stammzelltransplantation (inklusive Knochenmarktransplantation)",
+          "target": [
+            {
+              "code": "1269349006",
+              "display": "Transplantation of stem cell (procedure)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "CI",
+          "display": "Chemo- + Immun-/Antikörpertherapie",
+          "target": [
+            {
+              "code": "897713009",
+              "display": "Antineoplastic chemoimmunotherapy (regime/therapy)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "CZ",
+          "display": "Chemotherapie + zielgerichtete Substanzen",
+          "target": [
+            {
+              "code": "1255831008",
+              "display": "Chemotherapy for malignant neoplastic disease using targeted agent (procedure)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "CIZ",
+          "display": "Chemo- + Immun-/Antikörpertherapie + zielgerichtete Substanzen",
+          "target": [
+            {
+              "code": "897713009",
+              "display": "Antineoplastic chemoimmunotherapy (regime/therapy)",
+              "equivalence": "narrower"
+            }
+          ]
+        },
+        {
+          "target": [
+            {
+              "code": "1255831008",
+              "display": "Chemotherapy for malignant neoplastic disease using targeted agent (procedure)",
+              "equivalence": "narrower"
+            }
+          ]
+        },
+        {
+          "code": "IZ",
+          "display": "Immun-/Antikörpertherapie + zielgerichtete Substanzen",
+          "target": [
+            {
+              "code": "76334006",
+              "display": "Immunotherapy (procedure)",
+              "equivalence": "narrower"
+            }
+          ]
+        },
+        {
+          "target": [
+            {
+              "code": "1255831008",
+              "display": "Chemotherapy for malignant neoplastic disease using targeted agent (procedure)",
+              "equivalence": "narrower"
+            }
+          ]
+        },
+        {
+          "code": "WW",
+          "display": "Watchful Waiting",
+          "target": [
+            {
+              "code": "373818007",
+              "display": "No anti-cancer treatment - watchful waiting (finding)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "AS",
+          "display": "Active Surveillance",
+          "target": [
+            {
+              "code": "424313000",
+              "display": "Active surveillance (regime/therapy)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "WS",
+          "display": "Wait and see",
+          "target": [
+            {
+              "code": "310341009",
+              "display": "Follow-up (wait and see) (finding)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "OP",
+          "display": "Operation",
+          "target": [
+            {
+              "code": "387713003",
+              "display": "Surgical procedure (procedure)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "ST",
+          "display": "Strahlentherapie",
+          "target": [
+            {
+              "code": "1287742003",
+              "display": "Radiotherapy (procedure)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "KW",
+          "display": "keine weitere tumorspezifische Therapie empfohlen",
+          "target": [
+            {
+              "code": "897016006",
+              "display": "Not recommended (qualifier value)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SO",
+          "display": "Sonstiges",
+          "target": [
+            {
+              "code": "74964007",
+              "display": "Other (qualifier value)",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

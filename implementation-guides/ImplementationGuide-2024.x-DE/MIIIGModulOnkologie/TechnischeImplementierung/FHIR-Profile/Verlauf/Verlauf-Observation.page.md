@@ -176,6 +176,6 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
 
 **Beispiele**
 
-{{json:mii-exa-onko-verlauf-1}}
+{{json:mii-exa-onko-verlauf-tumor}}
 
 ---

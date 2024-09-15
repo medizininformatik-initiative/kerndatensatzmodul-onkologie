@@ -46,9 +46,6 @@ Description: "Histologie: Anzahl der befallenen Lymphknoten. Gibt an, wie viele 
 * valueQuantity.unit 1.. MS
 * valueQuantity.value 1.. MS
 
-// Referenz zu Verlauf-Observation
-* derivedFrom 0..1 MS
-* derivedFrom only Reference(MII_PR_Onko_Verlauf)
 
 // Referenz zu Primärtumor
 * focus MS

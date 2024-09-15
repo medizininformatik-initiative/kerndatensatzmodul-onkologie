@@ -1,8 +1,8 @@
-Instance: MII-CM-Onko-Operation-Komplikation-SCT-Mapping
+Instance: mii-cm-onko-operation-komplikation-sct
 InstanceOf: ConceptMap
 Usage: #definition
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-operation-komplikation-sct"
-* name = "mii-cm-onko-operation-komplikation-snomed-mapping"
+* name = "MII CM Onko Operation Komplikation SCT Mapping"
 * title = "MII CM Onko Operation Komplikation SNOMED Mapping"
 * status = #draft
 * experimental = false
@@ -44,7 +44,7 @@ Usage: #definition
 * group[=].element[=].target.display = "Abscess of thorax (disorder)"
 * group[=].element[=].target.equivalence = #narrower
 * group[=].element[=].target.comment = "kein spezifischer Code für diese 'oder'-Konstruktion, daher spezifisch entweder Abdominal oder thorarical Abzess"
-* group[=].element[=].target.code = #128477000
+* group[=].element[+].target.code = #128477000
 * group[=].element[=].target.display = "Abscess (disorder)"
 * group[=].element[=].target.equivalence = #wider
 * group[=].element[=].target.comment = "weiterfassend als Abszess kodiert"

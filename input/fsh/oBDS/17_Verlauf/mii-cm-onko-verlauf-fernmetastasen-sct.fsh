@@ -1,8 +1,8 @@
-Instance: MII-CM-Onko-Verlauf-Fernmetastasen-SCT-Mapping
+Instance: mii-cm-onko-verlauf-fernmetastasen-sct
 InstanceOf: ConceptMap
 Usage: #definition
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-verlauf-fernmetastasen-sct"
-* name = "mii-cm-onko-verlauf-fernmetastasen-snomed-mapping"
+* name = "MII CM Onko Verlauf Fernmetastasen SCT Mapping"
 * title = "MII CM Onko Verlauf Fernmetastasen SNOMED Mapping"
 * status = #draft
 * experimental = false

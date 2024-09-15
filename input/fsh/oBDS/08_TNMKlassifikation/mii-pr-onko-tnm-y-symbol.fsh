@@ -30,10 +30,6 @@ Description: "TNM-Klassifikation: TNM y-Symbol. Gibt an, ob die Klassifikation w
 * valueCodeableConcept.coding.system 1.. MS
 //* dataAbsentReason MS
 
-// Referenz zu Verlauf-Observation
-* derivedFrom 0..1 MS
-* derivedFrom only Reference(MII_PR_Onko_Verlauf)
-
 // Referenz zu Primärtumor
 * focus MS
 * focus only Reference(MII_PR_Onko_Diagnose)
