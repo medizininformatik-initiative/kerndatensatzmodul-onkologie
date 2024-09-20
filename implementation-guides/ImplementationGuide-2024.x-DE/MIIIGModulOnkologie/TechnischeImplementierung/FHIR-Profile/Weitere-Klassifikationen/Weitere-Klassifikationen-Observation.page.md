@@ -12,6 +12,8 @@ Die Plattform §65c stellt einen Katalog bereit, wie die häufigsten Klassifikat
 https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532511/Weitere+Klassifikationen
 
 
+Aufgrund der Vielzahl der möglichen Skalen und Scores ist es nich tmöglich, hier einen umfassenden und allgemeingültigen Katalog zu hinterlegen, so dass die konkrete Ausgestaltung den Herstellern und Systemen überlassen bleibt. HL7 Deutschland stellt dazu unter folgendem Link Hinweise bereit: https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Observation-Skalen-und-Scores.html  
+
 Folgende Klassifikation werden im Zukunft über die organspezifischen Module abgedeckt und sollen nicht mehr über weitere Klassifikationen kodiert werden: 
 * Gleasson-Score (Prostata) 
 
