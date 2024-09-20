@@ -34,7 +34,10 @@ Im oBDS ist eine Zuordung der Beobachtungen als wichtig für die Erstdiagnoseste
 Beobachtungen, die nach Stellung der Erstdiagnose  gemacht werden, verweisen in der vorliegenden Profilierung auf eine "Verlauf"-Observation-Ressource mit einem eigenen Datum. 
 Die Beobachtungen, die zum Zeitpunkt der Erstdiagnosestellung bekannt sind, sind von besonderem Interesse für prognostische Forschungsfragen. Um diese Datenpunkte leichter zu identifizieren, **SOLLEN** alle Beobachtungen aus der oBDS-Diagnosemeldung in einer FHIR-Liste mit dem Profil "Evidenz Erstdiagnose" über `evidence.detail` referenziert werden. 
 
+---
 
+### Konformität 
+Die vorliegende Profilierung ist kompatibel mit dem Diagnoseprofil der ISiK-Basismodule Stufe 4. https://simplifier.net/isik-basis-v4/isikdiagnose
 
 @```
 from 

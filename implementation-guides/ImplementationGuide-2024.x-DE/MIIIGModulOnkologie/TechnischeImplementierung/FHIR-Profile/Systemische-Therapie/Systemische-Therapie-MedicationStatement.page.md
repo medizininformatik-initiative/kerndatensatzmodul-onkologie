@@ -26,6 +26,13 @@ Im Medikationsprofil der Systemischen Therapie ist das spezifisch:
 * Name des Behandlungsschemas
 * Wirkstoffe (ATC-kodiert) 
 
+
+---
+
+### Konformität
+
+Die vorliegende Profilierung ist kompatibel mit dem Prozedurenprofil der ISiK-Basismodule Stufe 4. https://simplifier.net/isik-medikation-v4/isikmedikationsinformation
+
 ### Inhalt
 
 <tabs>
