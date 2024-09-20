@@ -19,7 +19,7 @@ Description: "Weitere Tumor Staging Klassifikation neben TMN (Hämatoonkologisch
 // 9.1 Hämatoonkologische und sonstige Klassifikationen Datum 
 * effective[x] MS
 * effective[x] only dateTime
-* effectiveDateTime 1.. MS
+* effectiveDateTime 0..1 MS
 
 // 9.2 Hämatoonkologische und sonstige Klassifikationen Name 
 * code MS
