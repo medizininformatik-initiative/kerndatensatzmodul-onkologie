@@ -6,8 +6,6 @@ Beim beschriebenen Basisdatensatz Onkologie handelt es sich um einen Datensatz, 
 
 In der FHIR-Modellierung wurde die FHIR-Profilierung anderer nationaler onkologischer Datenmodelle aus dem Ausland betrachtet. 
 ---
-### Minimal Common Oncology Data Elements (mCODE, USA)
-mCODE beschriebt einen vereinheitlichten Datensatz
 https://hl7.org/fhir/us/mcode/
 Das Modell befindet sich momentan in der vierten Iteratation.
 Die enthaltenen Datenelemente lassen sich unterteilen in: 
