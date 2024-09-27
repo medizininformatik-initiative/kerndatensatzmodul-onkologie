@@ -20,6 +20,10 @@ Description: "Histologie-Kodierung nach ICD-0 für die Verwendung von Folgediagn
 * valueCodeableConcept MS
 * valueCodeableConcept 1..1
 * valueCodeableConcept from $ICDO3 (required)
+* valueCodeableConcept.coding 0..1 MS
+* valueCodeableConcept.text 0..1 MS
+
+
 
 * bodySite.coding MS
 * bodySite.coding ^slicing.discriminator.type = #pattern
