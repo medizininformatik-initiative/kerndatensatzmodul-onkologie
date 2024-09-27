@@ -62,6 +62,12 @@ Usage: #definition
 * group[=].element[=].target.display = "Lutetium-177 (substance)"
 * group[=].element[=].target.equivalence = #equivalent
 
+* group[=].element[+].code = #LU-177
+* group[=].element[=].display = "Lu-177"
+* group[=].element[=].target.code = #1263784000
+* group[=].element[=].target.display = "Radioligand therapy using lutetium (177-Lu) vipivotide tetraxetan (procedure)"
+* group[=].element[=].target.equivalence = #narrower
+
 * group[=].element[+].code = #J-131
 * group[=].element[=].display = "J131"
 * group[=].element[=].target.code = #1368003
