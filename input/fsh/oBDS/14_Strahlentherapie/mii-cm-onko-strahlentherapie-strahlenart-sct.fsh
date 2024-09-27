@@ -74,6 +74,12 @@ Usage: #definition
 * group[=].element[=].target.display = "Yttrium-90 (substance)"
 * group[=].element[=].target.equivalence = #equivalent
 
+* group[=].element[+].code = #Y-90
+* group[=].element[=].display = "Y-90"
+* group[=].element[=].target.code = #764677008
+* group[=].element[=].target.display = "Selective internal radiotherapy of liver using yttrium (90-Y) labeled microspheres (procedure)"
+* group[=].element[=].target.equivalence = #narrower  
+
 * group[=].element[+].code = #Ra-223
 * group[=].element[=].display = "Ra-223"
 * group[=].element[=].target.code = #24853006
