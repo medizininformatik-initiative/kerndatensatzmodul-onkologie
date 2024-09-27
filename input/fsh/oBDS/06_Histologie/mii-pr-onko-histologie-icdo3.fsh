@@ -13,6 +13,8 @@ Description: "Histologie-Kodierung nach ICD-0 für die Verwendung von Folgediagn
 * code ^short = "Histologische Bewertung nach ICD-0-3"
 * code.coding MS
 * code.coding = $LOINC#31205-8 
+* effective[x] MS
+* effective[x] only dateTime
 * subject 1.. MS
 * subject only Reference(Patient)
 * value[x] 1..1 MS
@@ -47,6 +49,7 @@ Mapping: FHIR-oBDS-Histologie-ICD-O-3
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
 Source: MII_PR_Onko_Histologie_ICDO3
+* effectiveDateTime -> "6.1" "Tumor Histologiedatum"
 * valueCodeableConcept.coding.code -> "6.3" "Morphologie-Code"
 * valueCodeableConcept.coding.version -> "6.4" "Morphologie ICD-O/Blue Book Version"
 * valueCodeableConcept.text -> "6.5" "Morphologie Freitext"
