@@ -50,7 +50,7 @@ R4_DiagnosticReport <|-- Onko_Befund
 
 Map Onko_Specimen #44FFFF {
 6.1 Tumor Histologiedatum => Specimen.collection.collectedDateTime
-6.2 Histologie-Einsendenummer => Specimen.identifier.value
+6.2 Histologie-Einsendenummer => Specimen.accessionIdentifier.value
 }
 
 object R4_Specimen #44FFFF
