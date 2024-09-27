@@ -21,7 +21,7 @@ Description: "Medikation der Systemische Therapie. Dieses Profil beschreibt die 
 * partOf contains 
     systemischeTherapie 1..
 * partOf[systemischeTherapie] only Reference(Procedure)
-* note MS // Angabe eines Schemas ist optional. Bei Angabe eines SChemas sind alle Wirkstoffe unter medication gesondert zu kodieren 
+* note MS // Angabe eines Schemas ist optional. Bei Angabe eines Schemas sind alle Wirkstoffe unter medication gesondert zu kodieren 
 
 // Systemische Therapie Beginn und Ende --> ggfs. dupliziert im MedicationStatement 
 * effective[x] MS 

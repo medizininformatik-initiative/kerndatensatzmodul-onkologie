@@ -6,8 +6,6 @@ Beim beschriebenen Basisdatensatz Onkologie handelt es sich um einen Datensatz, 
 
 In der FHIR-Modellierung wurde die FHIR-Profilierung anderer nationaler onkologischer Datenmodelle aus dem Ausland betrachtet. 
 ---
-### Minimal Common Oncology Data Elements (mCODE, USA)
-mCODE beschriebt einen vereinheitlichten Datensatz
 https://hl7.org/fhir/us/mcode/
 Das Modell befindet sich momentan in der vierten Iteratation.
 Die enthaltenen Datenelemente lassen sich unterteilen in: 
@@ -20,7 +18,7 @@ Die enthaltenen Datenelemente lassen sich unterteilen in:
 
 #### Einflüsse von mCODE auf die Datenmodellierung 
 1. mCODE erfasst die individuellen Bestandteile der **TNM-Klassifikation** über einzelne FHIR-Observationen, die dann mittels einer Stage Group Ressource gruppiert werden. Neben TNM gibt es eine Reihe wichtiger Tumor Staging Klassifikation / Scores, die explizit als FHIR-PRofile angelegt wurden. Dieses Vorgehen empfehlen wir ebenfalls in der fortlaufenden Profilierung der organspezifischen Module des oBDS (z.B. Gleason-Score) 
-2. mCODE kodiert die Details zu einzelnen **Bestrahlungseinheiten** über Erweiterungen. Es gibt auch eine von mCODE abgeleitetes Modul, das sich explizit mit der Modellierung von Bestrahlungsschemata befasst - dieses ist jedoch deutlich detaillierter als der oBDS.
+2. mCODE kodiert die Details zu einzelnen **Bestrahlungseinheiten** über Erweiterungen. Es gibt mit CodeX Radiation Therapy ein von mCODE abgeleitetes Modul, das sich explizit mit der Modellierung von Bestrahlungsschemata befasst (https://hl7.org/fhir/us/codex-radiation-therapy/ )- dieses ist jedoch deutlich detaillierter als der oBDS.
 3. mCODE erfasst die genomischen Daten mit dem HL7 FHIR Genomics Report, der von der HL7 FHIR Clinical Genomics Working Group erarbeitet wurde. In der aktuellen Version beinhaltet der oBDS nur spärliche Informationen zu **genetischen Varianten**. Falls am Standort detaillierte Informationen über die molekulargenetischen Untersuchungen, Varianten und therapeutischen Konsequenzen vorliegen, kann der Molekulargenetische Befundbericht der MII genutzt werden, der ebenfalls auf dem HL7 Genomics Report basiert.
 
 
@@ -41,7 +39,6 @@ umfasst zwei unabhängige Kerndatensätze: einen klinischen und einen genomische
 
 Der OSIRIS-Datensatz modelliert die zeitliche Darstellung vor allem um sog. "Tumor Events". 
 Tumor Events sind dabei entweder Erstdiagnosen oder Verlaufsbeobachtungen. 
-
 
 Weitere Informationen sind nachzulesen unter: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8140800/
 

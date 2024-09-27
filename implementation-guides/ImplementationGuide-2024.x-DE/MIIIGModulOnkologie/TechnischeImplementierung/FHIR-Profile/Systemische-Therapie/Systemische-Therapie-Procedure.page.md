@@ -34,6 +34,11 @@ Zur Kodierung der Systemischen Therapie SOLL wie folgt vorgegangen werden:
  
 Der Grund der Beendigung (unabhängig ob erfolgreich oder nicht erfolgreich) wird über `Procedure.outcome` kodiert.
 
+---
+
+### Konformität 
+Die vorliegende Profilierung ist kompatibel mit dem Prozedurenprofil der ISiK-Basismodule Stufe 4. https://simplifier.net/isik-basis-v4/isikprozedur
+
 ### Inhalt
 
 <tabs>

@@ -28,6 +28,10 @@ Es gibt nebem dem Residualstatus  weitere Datenpunkte, die auf eine Operation ve
 Eine im Rahmen der Krebsregister erfasste und gemeldete Operation basiert häufig auf einer Therapieempfehlung eines Tumorboards. In diesem Fall sollte eine Verknüpfung der Elemente über `Procedure.basedOn(Reference(CarePlan))` hergestellt werden.
 Weiterhin verweist die Operation über `Procedure.reasonReference` auf die Primärdiagnose.  
 
+---
+
+### Konformität 
+Die vorliegende Profilierung ist kompatibel mit dem Prozedurenprofil der ISiK-Basismodule Stufe 4. https://simplifier.net/isik-basis-v4/isikprozedur
 
 ---
 

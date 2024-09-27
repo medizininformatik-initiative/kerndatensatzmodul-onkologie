@@ -10,7 +10,13 @@ Description: "Histologie: Befund. Vollständiger Befundbericht des Pathologen."
 * encounter 0..1 MS
 
 * basedOn 0..* MS
-* basedOn only Reference(MII_PR_Onko_Tumorkonferenz or CarePlan)
+* basedOn ^slicing.discriminator.type = #pattern
+* basedOn ^slicing.discriminator.path = "$this"
+* basedOn ^slicing.rules = #open
+
+* basedOn contains 
+    tumorkonferenz 0..1 MS
+* basedOn[tumorkonferenz] only Reference(MII_PR_Onko_Tumorkonferenz or CarePlan)
 * specimen 0..* MS 
 * specimen only Reference(MII_PR_Onko_Specimen or Specimen)
 * code MS

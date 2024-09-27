@@ -66,6 +66,7 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
 
 // Referenz zu Primärtumor
 * focus MS
+* focus 1..1
 * focus only Reference(MII_PR_Onko_Diagnose)
 
 
