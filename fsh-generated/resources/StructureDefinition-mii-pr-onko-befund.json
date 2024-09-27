@@ -40,6 +40,23 @@
       {
         "id": "DiagnosticReport.basedOn",
         "path": "DiagnosticReport.basedOn",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.basedOn:tumorkonferenz",
+        "path": "DiagnosticReport.basedOn",
+        "sliceName": "tumorkonferenz",
+        "min": 0,
+        "max": "1",
         "type": [
           {
             "code": "Reference",

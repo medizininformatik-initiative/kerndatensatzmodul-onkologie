@@ -23,7 +23,7 @@ Description: "TNM-Klassifikation: Grouper-Profil für Komponenten der TNM-Klassi
 * method ^definition = "Gibt an, nach welcher Version des TNM klassifiziert wurde."
 * method from mii-vs-onko-tnm-version (required)
 * hasMember MS
-* hasMember only Reference (MII_PR_Onko_TNM_L_Kategorie or MII_PR_Onko_TNM_M_Kategorie or MII_PR_Onko_TNM_M_Symbol or MII_PR_Onko_TNM_N_Kategorie or MII_PR_Onko_TNM_T_Kategorie or MII_PR_Onko_TNM_Pn_Kategorie or MII_PR_Onko_TNM_S_Kategorie or MII_PR_Onko_TNM_V_Kategorie or MII_PR_Onko_TNM_a_Symbol or MII_PR_Onko_TNM_r_Symbol or MII_PR_Onko_TNM_y_Symbol)
+* hasMember only Reference (MII_PR_Onko_TNM_L_Kategorie or MII_PR_Onko_TNM_M_Kategorie or MII_PR_Onko_TNM_m_Symbol or MII_PR_Onko_TNM_N_Kategorie or MII_PR_Onko_TNM_T_Kategorie or MII_PR_Onko_TNM_Pn_Kategorie or MII_PR_Onko_TNM_S_Kategorie or MII_PR_Onko_TNM_V_Kategorie or MII_PR_Onko_TNM_a_Symbol or MII_PR_Onko_TNM_r_Symbol or MII_PR_Onko_TNM_y_Symbol)
 
 * specimen 0..1 MS 
 * specimen only Reference (MII_PR_Onko_Specimen or Specimen)
