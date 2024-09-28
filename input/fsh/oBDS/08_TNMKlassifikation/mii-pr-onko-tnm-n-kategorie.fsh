@@ -49,7 +49,7 @@ Description: "TNM-Klassifikation: TNM N-Kategorie. Ausbreitung von regionären L
 
 // Referenz zu Primärtumor
 * focus MS
-* focus only Reference(MII_PR_Onko_Diagnose)
+* focus only Reference(MII_PR_Onko_Diagnose_Primaertumor)
 
 
 Mapping: FHIR-oBDS-TNM_N_Kategorie

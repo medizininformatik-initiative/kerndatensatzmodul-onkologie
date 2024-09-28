@@ -20,7 +20,7 @@ Description: "Umfang eines Residualtumors nach einer Therapie"
 
 // Referenz zu Primärtumor
 * focus MS
-* focus only Reference(MII_PR_Onko_Diagnose)
+* focus only Reference(MII_PR_Onko_Diagnose_Primaertumor)
 
 // Gesamtbeurteilung des Residualstatus 
 * code MS

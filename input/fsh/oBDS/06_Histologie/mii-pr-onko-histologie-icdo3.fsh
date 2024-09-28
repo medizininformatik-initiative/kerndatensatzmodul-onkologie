@@ -43,7 +43,7 @@ Description: "Histologie-Kodierung nach ICD-0 für die Verwendung von Folgediagn
 
 // Referenz zu Primärtumor
 * focus MS
-* focus only Reference(MII_PR_Onko_Diagnose)
+* focus only Reference(MII_PR_Onko_Diagnose_Primaertumor)
  
 Mapping: FHIR-oBDS-Histologie-ICD-O-3
 Id: oBDS

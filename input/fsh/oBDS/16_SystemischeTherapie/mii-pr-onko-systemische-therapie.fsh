@@ -37,7 +37,7 @@ Description: "Systemische Therapie. Dieses Profil beschreibt eine Systemische Th
 
 // Referenz auf Primaerdiagnose oder andere Condition
 * reasonReference MS
-* reasonReference only Reference(MII_PR_Onko_Diagnose or Condition)
+* reasonReference only Reference(MII_PR_Onko_Diagnose_Primaertumor or Condition)
 
 // Referenz auf mehrere Observations / Medications möglich
 * partOf MS

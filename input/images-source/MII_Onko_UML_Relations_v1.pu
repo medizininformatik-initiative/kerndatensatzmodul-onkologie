@@ -15,7 +15,7 @@ rectangle "Medikation" {
 }
 Onko_SystemischeTherapie <--- Medikation : partOf 
 Therapieplanung_Tumorkonferenz <--- Medikation: basedOn
-object PrimaerDiagnose #FFFF66
+object Diagnose_Primaertumor #FFFF66
 
 rectangle "Onkologie Observations"{
     object Onko_Variante #22FF22

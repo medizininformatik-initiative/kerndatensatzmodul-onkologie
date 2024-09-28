@@ -13,7 +13,7 @@ Description: "Dieses Profil beschreibt Studienteilnahmen in der Onkologie"
 * encounter 0..1 MS
 
 * focus MS
-* focus only Reference(MII_PR_Onko_Diagnose)
+* focus only Reference(MII_PR_Onko_Diagnose_Primaertumor)
 
 * code MS
 * code 1..1 

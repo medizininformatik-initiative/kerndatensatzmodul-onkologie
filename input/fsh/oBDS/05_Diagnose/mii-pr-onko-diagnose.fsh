@@ -1,8 +1,8 @@
-Profile: MII_PR_Onko_Diagnose
+Profile: MII_PR_Onko_Diagnose_Primaertumor_Primaertumor
 Parent: https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose
 Id: mii-pr-onko-diagnose
-Title: "MII PR Onkologie Diagnose"
-Description: "Dieses Profil beschreibt eine Diagnose in der Onkologie"
+Title: "MII PR Onkologie Diagnose Primärtumor"
+Description: "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der primären hämatologisch-myeloneoplastischen Erkrankung)"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
@@ -40,7 +40,7 @@ Description: "Dieses Profil beschreibt eine Diagnose in der Onkologie"
 Mapping: FHIR-oBDS-Diagnose
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
-Source: MII_PR_Onko_Diagnose
+Source: MII_PR_Onko_Diagnose_Primaertumor
 * -> "5" "Diagnose"
 * code.coding[icd10-gm].code -> "5.1" "Primärtumor Tumordiagnose ICD Code"
 * code.coding[icd10-gm].version -> "5.2" "Primärtumor Tumordiagnose ICD-Version"
@@ -50,7 +50,7 @@ Source: MII_PR_Onko_Diagnose
 * recordedDate -> "5.6" "Primärtumor Diagnosedatum"
 * verificationStatus.coding[primaertumorDiagnosesicherung].code -> "5.7" "Primärtumor Diagnosesicherung"
 * bodySite.coding[primaertumorSeitenlokalisation].code -> "5.8" "Primärtumor Seitenlokalisation"
-* -> "5.9" "Frühere Tumorerkrankungen"
 * extension[morphology-behavior-icdo3].valueCodeableConcept.coding.code -> "6.3" "Morphologie-Code"
 * extension[morphology-behavior-icdo3].valueCodeableConcept.coding.version -> "6.4" "Morphologie ICD-O/Blue Book Version"
 * extension[morphology-behavior-icdo3].valueCodeableConcept.text -> "6.5" "Morphologie-Freitext"
+* -> "5.9" "Frühere Tumorerkrankungen"

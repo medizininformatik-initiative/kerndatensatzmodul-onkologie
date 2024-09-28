@@ -51,7 +51,7 @@ Description: "Histologie: Anzahl der untersuchten Sentinel-Lymphknoten. Gibt an,
 
 // Referenz zu Primärtumor
 * focus MS
-* focus only Reference(MII_PR_Onko_Diagnose)
+* focus only Reference(MII_PR_Onko_Diagnose_Primaertumor)
 
 Mapping: FHIR-oBDS-Histologie-Anzahl-Untersuchte-Sentinel-Lymphknoten
 Id: oBDS

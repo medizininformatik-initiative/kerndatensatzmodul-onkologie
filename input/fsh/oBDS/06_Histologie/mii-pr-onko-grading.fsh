@@ -46,7 +46,7 @@ Description: "Histologie: Tumor Grading. Gibt den Differenzierungsgrad des Tumor
 
 // Referenz zu Primärtumor
 * focus MS
-* focus only Reference(MII_PR_Onko_Diagnose)
+* focus only Reference(MII_PR_Onko_Diagnose_Primaertumor)
 
 
 Mapping: FHIR-oBDS-Histologie-Grading

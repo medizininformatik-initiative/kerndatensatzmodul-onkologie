@@ -49,7 +49,7 @@ Description: "Histologie: Anzahl der befallenen Lymphknoten. Gibt an, wie viele 
 
 // Referenz zu Primärtumor
 * focus MS
-* focus only Reference(MII_PR_Onko_Diagnose)
+* focus only Reference(MII_PR_Onko_Diagnose_Primaertumor)
 
 
 Mapping: FHIR-oBDS-Histologie-Anzahl-Befallene-Lymphknoten

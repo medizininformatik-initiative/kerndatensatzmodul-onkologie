@@ -35,7 +35,7 @@ Description: "TNM-Klassifikation: TNM L-Kategorie. Lymphgefäßinvasion."
 
 // Referenz zu Primärtumor
 * focus MS
-* focus only Reference(MII_PR_Onko_Diagnose)
+* focus only Reference(MII_PR_Onko_Diagnose_Primaertumor)
 
 
 Mapping: FHIR-oBDS-TNM_L_Kategorie
