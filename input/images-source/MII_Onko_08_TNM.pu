@@ -1,10 +1,13 @@
 @startuml MII_Onko_08_TNM
+object R4_Observation #22FF22
+
 Map TNM_Klassifikation #22FF22 {
   8.1 TNM Datum  => effectiveDateTime 
   8.2 TNM Version =>method 
   8.17 UICC Stadium => valueCodeableConcept.coding.code
 }
-   
+R4_Observation <|-down- TNM_Klassifikation
+
 Map TNM_T #22FF22{
     8.6 TNM c/p-Präfix T => code.extension[MII_EX_Onko_TNM_cp_Praefix].valueCodeableConcept.coding.code
     8.9 TNM T-Kategorie => valueCodeableConcept.coding.code
