@@ -1,6 +1,6 @@
-Profile: MII_PR_Onko_Diagnose_Primaertumor_Primaertumor
+Profile: MII_PR_Onko_Diagnose_Primaertumor
 Parent: https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose
-Id: mii-pr-onko-diagnose
+Id: mii-pr-onko-diagnose-primaertumor
 Title: "MII PR Onkologie Diagnose Primärtumor"
 Description: "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der primären hämatologisch-myeloneoplastischen Erkrankung)"
 * insert PR_CS_VS_Version
