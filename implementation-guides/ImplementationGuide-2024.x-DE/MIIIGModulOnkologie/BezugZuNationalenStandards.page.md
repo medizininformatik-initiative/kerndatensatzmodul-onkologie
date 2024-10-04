@@ -8,11 +8,15 @@ Beim beschriebenen Basisdatensatz Onkologie handelt es sich um einen Datensatz, 
 ---
 #### Informationssysteme im Krankenhaus(ISiK)
 ISiK beschreibt einen Standard, der für Krankenhaussysteme zum Austausch untereinander genutzt werden soll. 
-ISiK selbst enthält wenige Inhaltliche Vorgaben und Binding, die für die Erfassung von onkologischen Daten relevant sind. Durch die steigende Bedeutung im Krankenhaussektor wurde bei der Profilierung auf eine Konformität geachtet. Die Diagnose-, Prozedur- und Medikationsprofile 
+ISiK selbst enthält wenige Inhaltliche Vorgaben und Binding, die für die Erfassung von onkologischen Daten relevant sind. Durch die steigende Bedeutung im Krankenhaussektor wurde bei der Profilierung auf eine Konformität geachtet. 
+- Die Diagnose- und Prozedur-Profile sind Teil der ISiK-Basismodule https://simplifier.net/guide/isik-basis-v4?version=current
+- Medikation ist Teil des ISiK-Medikationsmoduls https://simplifier.net/guide/isik-medikation-v4?version=current 
 
 
 #### Medizinische Informationsobjekte (MIOs) 
-MIOs sind als strukturierte Datenelemente im Kontext der elektronischen Patientenakte (ePA) von Bedeutung. Der erste große Baustein soll dabei eine Bereistellung von strukturierten Medikationsdaten Zum Zeitpunkt der Erstellung der Profilierung (Jan-Apr 2024) befanden sich die Profile für Medikation / Medikationsplan noch in der Profilierung und konnten daher in der vorliegenden Spezifikation keine Berücksichtigung finden. Zu beachten ist dabei aber, dass die Medikationsliste und die Tumordokumentation momentan noch getrennte Ökosysteme sind. Eine langfriste Harmonisierung von vergleichbaren Profilen wird ab 2025 durch das KIG der gematik koordiniert und vorangetrieben. 
+MIOs sind als strukturierte Datenelemente im Kontext der elektronischen Patientenakte (ePA) von Bedeutung. Der erste große Baustein soll dabei eine Bereistellung von strukturierten Medikationsdaten Zum Zeitpunkt der Erstellung der Profilierung (Jan-Apr 2024) befanden sich die Profile für Medikation / Medikationsplan noch in der Profilierung und konnten daher in der vorliegenden Spezifikation keine Berücksichtigung finden. Zu beachten ist dabei aber, dass die Medikationsliste und die Tumordokumentation momentan noch getrennte Ökosysteme sind. Eine langfriste Harmonisierung von vergleichbaren Profilen wird ab 2025 durch das KIG der gematik koordiniert und vorangetrieben.
+Der Implementierungsleitfaden für den "ePA Medication Service" befindet sich hier: https://simplifier.net/guide/medication-service?version=1.1.0
+Link  konkrete Profil EPA MedicationStatement https://simplifier.net/epa-medication/epamedicationstatement 
 
 ---
 
