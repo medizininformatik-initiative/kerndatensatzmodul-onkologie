@@ -25,35 +25,32 @@ rectangle "Onkologie Observations"{
     object Lymphknotenuntersuchung #22FF22
     object HistologieGrading #22FF22
     object Residualstatus #22FF22
-    object ECOG #22FF22
+    object Allgemeiner_Leistungszustand #22FF22
     object Tod #22FF22
     object Onko_Befund #88FF88
 
 }
 
-PrimaerDiagnose <--- TNM_Klassifikation: focus
-PrimaerDiagnose <-right--  Therapieplanung_Tumorkonferenz : addresses
-PrimaerDiagnose <--- Lymphknotenuntersuchung: focus
-PrimaerDiagnose <--- HistologieGrading :focus
-PrimaerDiagnose <--- Onko_Variante :focus
-PrimaerDiagnose <--- WeitereKlassifikation: focus
-PrimaerDiagnose <--- ECOG :focus
-PrimaerDiagnose <--- Fernmetastasen :focus
+Diagnose_Primaertumor <--- TNM_Klassifikation: focus
+Diagnose_Primaertumor <-right--  Therapieplanung_Tumorkonferenz : addresses
+Diagnose_Primaertumor <--- Lymphknotenuntersuchung: focus
+Diagnose_Primaertumor <--- HistologieGrading :focus
+Diagnose_Primaertumor <--- Onko_Variante :focus
+Diagnose_Primaertumor <--- WeitereKlassifikation: focus
+Diagnose_Primaertumor <--- Allgemeiner_Leistungszustand :focus
+Diagnose_Primaertumor <--- Fernmetastasen :focus
 
 Therapieplanung_Tumorkonferenz <-right-- Onko_Befund  : basedOn
 
 object Verlauf #22FF22
-PrimaerDiagnose <----  Verlauf : focus
-Verlauf <--- Tod: derivedFrom
-Verlauf <--- TNM_Klassifikation:  derivedFrom
-Verlauf <---  Lymphknotenuntersuchung : derivedFrom
-Verlauf <---  HistologieGrading : derivedFrom
-Verlauf <--- Fernmetastasen: derivedFrom
-Verlauf <--- Residualstatus:  derivedFrom
-Verlauf <--- Onko_Variante: derivedFrom
-
-
-
+Diagnose_Primaertumor <----  Verlauf : focus
+Verlauf ---> Tod: hasMember
+Verlauf ---> TNM_Klassifikation:  hasMember
+Verlauf --->  Lymphknotenuntersuchung : hasMember
+Verlauf --->  HistologieGrading : hasMember
+Verlauf ---> Fernmetastasen: hasMember
+Verlauf ---> Residualstatus:  hasMember
+Verlauf ---> Onko_Variante: hasMember
 
 object Onko_Bioprobe #44FFFF 
 Onko_Bioprobe <-- Onko_Befund : specimen
