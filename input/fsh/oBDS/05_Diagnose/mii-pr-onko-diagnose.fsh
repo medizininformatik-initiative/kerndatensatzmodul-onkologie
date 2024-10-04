@@ -36,9 +36,7 @@ Description: "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der 
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
-* extension contains mii-ex-onko-histology-morphology-behavior-icdo3 named morphology-behavior-icdo3 0..1
-
-
+* extension contains mii-ex-onko-histology-morphology-behavior-icdo3 named morphology-behavior-icdo3 0..1 MS
 
 Mapping: FHIR-oBDS-Diagnose
 Id: oBDS
