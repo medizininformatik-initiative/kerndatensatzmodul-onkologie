@@ -1,6 +1,6 @@
 {
   "resourceType": "Procedure",
-  "id": "mii-exa-onko-systemische-therapie-1",
+  "id": "PatientKimMusterperson-SystemicTherapy-2",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
@@ -24,26 +24,28 @@
         "coding": [
           {
             "code": "A",
-            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-stellung"
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-stellung",
+            "display": "adjuvant"
           }
         ]
       }
     }
   ],
   "subject": {
-    "reference": "Patient/example"
+    "reference": "Patient/PatientKimMusterperson"
   },
-  "status": "final",
+  "status": "completed",
   "code": {
     "coding": [
       {
-        "code": "CH",
-        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ"
+        "code": "8-54",
+        "system": "http://fhir.de/CodeSystem/bfarm/ops",
+        "display": "Chemotherapie "
       }
     ]
   },
   "performedPeriod": {
-    "start": "2021-12-04",
-    "end": "2022-04-06"
+    "start": "2021-11-08",
+    "end": "2022-01-09"
   }
 }

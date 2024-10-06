@@ -1,0 +1,79 @@
+{
+  "resourceType": "Observation",
+  "id": "PatientKimMusterperson-Verlauf-2022-01-22",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "396432002",
+        "system": "http://snomed.info/sct",
+        "display": "Status of regression of tumor (observable entity)"
+      }
+    ]
+  },
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "277062004",
+            "system": "http://snomed.info/sct",
+            "display": "Status des Residualtumors"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "T",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-primaertumor",
+            "display": "Tumorreste (Residualtumor)"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "399608002",
+            "system": "http://snomed.info/sct",
+            "display": "Status of distant metastasis (observable entity)"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "K",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen",
+            "display": "Keine Fernmetastasen nachweisbar"
+          }
+        ]
+      }
+    }
+  ],
+  "subject": {
+    "reference": "Patient/PatientKimMusterperson"
+  },
+  "status": "final",
+  "effectiveDateTime": "2022-01-22",
+  "focus": [
+    {
+      "reference": "Pa"
+    }
+  ],
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "V",
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung",
+        "display": "Vollremission"
+      }
+    ]
+  }
+}
