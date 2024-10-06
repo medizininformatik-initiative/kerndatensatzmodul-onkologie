@@ -26,11 +26,12 @@ Map NrBefalleneSentinelLymphknoten  #22FF22{
 R4_Observation <|-down-- NrBefalleneSentinelLymphknoten
 
 Map Onko_Verlaufshistologie #22FF22 {
-    06.3 Tumor-Histologiedatum=> Condition.extension[morphology-behaviour-icdo3].valueCodeableConcept.coding[icd-o-3].code
-    06.3 Morphologie-Code => Condition.extension[morphology-behaviour-icdo3].valueCodeableConcept.coding[icd-o-3].code
-    06.4 Morphologie ICD-O/Blue Book Version => Condition.extension[morphology-behaviour-icdo3].valueCodeableConcept.coding[icd-o-3].version
-    06.5 Morphologie-Freitext => Condition.extension[morphology-behaviour-icdo3].valueCodeableConcept.coding[icd-o-3].code
+    06.1 Tumor-Histologiedatum=> Observation.effectiveDateTime
+    06.3 Morphologie-Code => Observation.valueCodeableConcept.coding[icd-o-3].code
+    06.4 Morphologie ICD-O/Blue Book Version => Observation.valueCodeableConcept.coding[icd-o-3].version
+    06.5 Morphologie-Freitext => Observation.valueCodeableConcept.text
 }
+
 
 R4_Observation <|-down-- Onko_Verlaufshistologie
 
@@ -38,6 +39,8 @@ R4_Observation <|-down-- Onko_Verlaufshistologie
 Map Onko_Grading #22FF22 {
 6.6 Grading =>Observation.valueCodeableConcept.coding.code
 }
+
+
 R4_Observation <|-- Onko_Grading
 
 Map Onko_Befund #AAFFAA{

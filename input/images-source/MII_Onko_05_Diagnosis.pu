@@ -12,7 +12,7 @@ Map 05_Diagnose #FFFF66 {
  05.9 Frühere Tumorerkrankungen => 05_Diagnose
  06.3 Morphologie-Code => Condition.extension[morphology-behaviour-icdo3].valueCodeableConcept.coding[icd-o-3].code
  06.4 Morphologie ICD-O/Blue Book Version => Condition.extension[morphology-behaviour-icdo3].valueCodeableConcept.coding[icd-o-3].version
- 06.5 Morphologie-Freitext => Condition.code.text
+ 06.5 Morphologie-Freitext => Condition.extension[morphology-behaviour-icdo3].valueCodeableConcept.text
 } 
 
 MII_Diagnose <|-down- 05_Diagnose 
