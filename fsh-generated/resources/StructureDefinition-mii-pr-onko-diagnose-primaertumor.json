@@ -1,10 +1,10 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "mii-pr-onko-diagnose",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose",
+  "id": "mii-pr-onko-diagnose-primaertumor",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor",
   "version": "2024.0.0-ballot",
   "name": "MII_PR_Onko_Diagnose_Primaertumor",
-  "title": "MII PR Onkologie Diagnose",
+  "title": "MII PR Onkologie Diagnose Primärtumor",
   "status": "draft",
   "publisher": "Medizininformatik Initiative",
   "contact": [
@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Dieses Profil beschreibt eine Diagnose in der Onkologie",
+  "description": "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der primären hämatologisch-myeloneoplastischen Erkrankung)",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -47,6 +47,11 @@
             "comment": "Frühere Tumorerkrankungen"
           }
         ]
+      },
+      {
+        "id": "Condition.extension",
+        "path": "Condition.extension",
+        "mustSupport": true
       },
       {
         "id": "Condition.extension:morphology-behavior-icdo3",
