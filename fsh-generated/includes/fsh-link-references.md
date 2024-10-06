@@ -76,7 +76,7 @@
 [MII_PR_Onko_Anzahl_Untersuchte_Lymphknoten]: StructureDefinition-mii-pr-onko-anzahl-untersuchte-lymphknoten.html
 [MII_PR_Onko_Anzahl_Untersuchte_Sentinel_Lymphknoten]: StructureDefinition-mii-pr-onko-anzahl-untersuchte-sentinel-lymphknoten.html
 [MII_PR_Onko_Befund]: StructureDefinition-mii-pr-onko-befund.html
-[MII_PR_Onko_Diagnose_Primaertumor]: StructureDefinition-mii-pr-onko-diagnose.html
+[MII_PR_Onko_Diagnose_Primaertumor]: StructureDefinition-mii-pr-onko-diagnose-primaertumor.html
 [MII_PR_Onko_Liste_Evidenz_Erstdiagnose]: StructureDefinition-mii-pr-onko-liste-evidenz-erstdiagnose.html
 [MII_PR_Onko_Fernmetastasen]: StructureDefinition-mii-pr-onko-fernmetastasen.html
 [MII_PR_Onko_Genetische_Variante]: StructureDefinition-mii-pr-onko-genetische-variante.html
@@ -192,8 +192,8 @@
 [mii-exa-onko-weitere-klassifikationen-1]: Observation-mii-exa-onko-weitere-klassifikationen-1.html
 [mii-exa-onko-weitere-klassifikationen-2]: Observation-mii-exa-onko-weitere-klassifikationen-2.html
 [mii-pr-onko-nebenwirkung-0]: AdverseEvent-mii-pr-onko-nebenwirkung-0.html
+[mii-sp-onko-diagnose-ext-morphology-behavior-icdo3]: SearchParameter-mii-sp-onko-diagnose-ext-morphology-behavior-icdo3.html
 [mii-sp-onko-diagnose-verification-status]: SearchParameter-mii-sp-onko-diagnose-verification-status.html
-[mii-sp-onko-fernmetastasen-body-site]: SearchParameter-mii-sp-onko-fernmetastasen-body-site.html
 [mii-sp-onko-nebenwirkung-suspectEntity]: SearchParameter-mii-sp-onko-nebenwirkung-suspectEntity.html
 [mii-sp-onko-operation-complication]: SearchParameter-mii-sp-onko-operation-complication.html
 [mii-sp-onko-operation-ext-intention]: SearchParameter-mii-sp-onko-operation-ext-intention.html

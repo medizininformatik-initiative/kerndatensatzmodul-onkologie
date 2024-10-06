@@ -701,17 +701,17 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-onko-diagnose"
+          "reference": "StructureDefinition/mii-pr-onko-diagnose-primaertumor"
         },
-        "name": "MII PR Onkologie Diagnose",
-        "description": "Dieses Profil beschreibt eine Diagnose in der Onkologie",
+        "name": "MII PR Onkologie Diagnose Primärtumor",
+        "description": "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der primären hämatologisch-myeloneoplastischen Erkrankung)",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "StructureDefinition/mii-pr-onko-liste-evidenz-erstdiagnose"
         },
-        "name": "MII PR Onkologie Evidenz Erstdiagnose",
+        "name": "MII PR Onkologie Evidenz Diagnose Primärtumor",
         "description": "Dieses Profil beschreibt eine Liste, die alle Observationen und Berichte enthält, die für eine Erstdiagnostik relevant waren.  (synchrone Observationen im Sinne der Krebsregister)",
         "exampleBoolean": false
       },
@@ -1394,7 +1394,7 @@
           "reference": "Condition/mii-exa-onko-diagnose"
         },
         "name": "mii-exa-onko-diagnose",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
       },
       {
         "reference": {
@@ -1594,18 +1594,18 @@
       },
       {
         "reference": {
-          "reference": "SearchParameter/mii-sp-onko-diagnose-verification-status"
+          "reference": "SearchParameter/mii-sp-onko-diagnose-ext-morphology-behavior-icdo3"
         },
-        "name": "mii-sp-onko-diagnose-verification-status",
-        "description": "SearchParameter for Condition.verificationStatus",
+        "name": "mii-sp-onko-diagnose-ext-morphology-behavior-icdo3",
+        "description": "SearchParameter for Diagnosis.extension[morphology-behaviour-icdo3]",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "SearchParameter/mii-sp-onko-fernmetastasen-body-site"
+          "reference": "SearchParameter/mii-sp-onko-diagnose-verification-status"
         },
-        "name": "mii-sp-onko-fernmetastasen-body-site",
-        "description": "SearchParameter for Observation.bodySite",
+        "name": "mii-sp-onko-diagnose-verification-status",
+        "description": "SearchParameter for Condition.verificationStatus",
         "exampleBoolean": false
       },
       {
