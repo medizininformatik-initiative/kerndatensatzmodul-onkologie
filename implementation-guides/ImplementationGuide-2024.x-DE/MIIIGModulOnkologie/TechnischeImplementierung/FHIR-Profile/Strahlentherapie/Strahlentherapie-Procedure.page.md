@@ -28,22 +28,23 @@ Alternativ wurde auch eine Umsetzung diskutiert, die übergreifende Strahlenther
 ### Kategorie und Codes
 
 #### Kategorie 
-- Die MII-Prozedur empfiehlt die Abbildung der **Kategorie** mittels der in SNOMED übertragenen OPS-Hauptkategorien (https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/ValueSet/procedures-category-sct)
-- S
+- Die verwendete MII-Prozedur empfiehlt die Abbildung der **Kategorie** mittels der in SNOMED übertragenen OPS-Hauptkategorien (https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/ValueSet/procedures-category-sct)
+- Die vorliegende Kategorie SNOMED `277132007 | Therapeutic procedure` , die der OPS Kategorie 8 ("Nicht-operative therapeutische Maßnahmen") entspricht, beinhaltet sowohl Strahlen - als auch Nuklearmedizinische Therapie als auch bestimmte systemische Therapien (z.B. Chemo- und Immuntherapie), wobei andere systemische medikamtöse Therapien (z.B. Hormontherapie, Targeted Therapy) auch unter Kategorie 6 "Medikamente" kodiert werden können. Er ist daher unspezifisch und nicht geeignet, um z.B. innerhalb einer Forschungsfrage gezielt nach Nuklearmedizinischen Therapien zu filtern.   
 
 #### Code
-- Als **Code** wird durch die MII-Prozedur ein verpflichtender OPS-Code und ein optionaler SNOMED-Code verlangt. 
-- OPS hat Kodierungen für Strahlentherapie (`8-52`) und Nuklearmedizinische Behandlung (`8-53`) mit ausführlichen Unterkodierungen. Im oBDS selbst wird bei Strahlentherapie und Nuklearmedizin jedoch nicht nach OPS kodiert, sondern folgt einer krebsregisterspezifischen Kodierung von Lokalisation, Applikationsart und Strahlungsart sowie weiteren Datenpunkten. 
-- In der MII-Prozedur SOLL genau ein OPS-Wert kodiert werden. Zusätzliche Prozeduren werden als einzelne Procedure-Ressourcen abgebildet. Eine OPS-Kodierung KANN durch eine SNOMED-CT-Kodierung ergänzt werden.   
-- Achtung: Innerhalb des Erweiterungsmoduls Onkologie wird die übergeorndete MII-Prozedur auch für die Abbildung der Strahlen- und Systemischen/abwartenden Therapie genutzt. Für die Besondheiten bei Kategorien und Code - siehe [Strahlentherapie:Procedure  ](https://simplifier.net/guide/mii-ig-modul-onkologie-2024-de/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Strahlentherapie/Strahlentherapie-Procedure.page.md?version=current) und [Systemische Therapie: Procedure](https://simplifier.net/guide/mii-ig-modul-onkologie-2024-de/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Systemische-Therapie/Systemische-Therapie-Procedure.page.md?version=current).
+- Als **Code** wird von der MII-Prozedur ein OPS-Code oder ein SNOMED-Code verlangt. 
+- OPS beinhaltet Kodierungen für Strahlentherapie (`8-52`) und Nuklearmedizinische Behandlung (`8-53`) mit ausführlichen Unterkodierungen. Im oBDS selbst wird bei Strahlentherapie und Nuklearmedizin jedoch nicht nach OPS kodiert, sondern folgt einer krebsregisterspezifischen Kodierung von Lokalisation, Applikationsart und Strahlungsart sowie weiteren Datenpunkten. 
+- In der MII-Prozedur SOLL genau eine Kodierung (OPS oder SNOMED CT)für genau eine Therapie verwendet werden. Zusätzliche Prozeduren werden als einzelne Procedure-Ressourcen abgebildet. 
+
 
 #### Implementierungsempfehlung
-- Kodierung der Kategorie als SNOMED - Code 
-    - für Strahlentherapie
-    - für Nuklearmedizin
-- Kodierung 
-    - Strahlentherapie als OPS 8-52 (oder genauer wenn vorhanden)
-    - für Nuklearmedizin  
+Aus den oben genannten Punkten ergibt sich folgende Kodierempfehlung für die oBDS-Strahlentherapie:
+- Kategorie als SNOMED - Code 
+    - Kategorie für Strahlentherapie `1287742003 | Radiotherapy (procedure)` 
+    - Kategorie für Nuklearmedizin `399315003 | Radionuclide therapy (procedure)` 
+- Kodierung über OPS  
+    - Strahlentherapie als OPS `8-52 Strahlentherapie` (oder genauer wenn vorhanden)
+    - Nuklearmedizinische Therapie als OPS `8-53 Nuklearmedizinische Therapie` (oder genauer wenn vorhanden)
 
 ---
 
