@@ -7,7 +7,7 @@ object Patient {
 * name.given = "Kim"
 }
 
-object Primaerdiagnose #FFFF66 {
+object Diagnose_Primaertumor #FFFF66 {
 * recordedDate = 2021-06-10
 * subject = Reference(PatientKimMusterperson)
 * clinicalStatus = #active //
@@ -15,7 +15,7 @@ object Primaerdiagnose #FFFF66 {
 * code.coding  = $ICD10GM#C48.2 "Bösartige Neubildung des Retroperitoneums und Peritoneums - Peritoneum, nicht näher bezeichnet "
 * bodySite = $ICDO3#C56.9 "Ovar"
 }
-Patient -right-> Primaerdiagnose
+Patient -down-> Diagnose_Primaertumor
 
 object DiagnosticProcedure_1 {
 * subject = Reference(PatientKimMusterperson)
@@ -44,9 +44,9 @@ object DiagnosticProcedure_3 {
 
 
 
-DiagnosticProcedure_1 -up--> Primaerdiagnose
-DiagnosticProcedure_2 -up---> Primaerdiagnose
-DiagnosticProcedure_3 -up----> Primaerdiagnose
+DiagnosticProcedure_1 -left--> Diagnose_Primaertumor
+DiagnosticProcedure_2 -left---> Diagnose_Primaertumor
+DiagnosticProcedure_3 -left----> Diagnose_Primaertumor
 
 
 object Tumorboard_1 #CCCCFF {
@@ -87,15 +87,15 @@ object SystemicTherapyMedication_1 #FFCCFF {
 * note.text = "CarboTax"
 }
 
-Primaerdiagnose -right-> Tumorboard_1
-SystemicTherapy_1 -up--> Tumorboard_1
-SystemicTherapyMedication_1 -up-> SystemicTherapy_1 
+Diagnose_Primaertumor -down-> Tumorboard_1
+SystemicTherapy_1 -left--> Tumorboard_1
+SystemicTherapyMedication_1 -left-> SystemicTherapy_1 
 
 
 object SystemicTherapyMedicationAdministration_1_2_3 {
 * Detailinformation zu Dosis und Applikation
 }
-SystemicTherapyMedicationAdministration_1_2_3 -up-> SystemicTherapyMedication_1
+SystemicTherapyMedicationAdministration_1_2_3 -right-> SystemicTherapyMedication_1
 
 
 object Verlauf_21_09_15 #22FF22 {
@@ -111,7 +111,7 @@ object Verlauf_21_09_15 #22FF22 {
 * component[Fernmetastasen_Verlauf].code.coding = $SCT#260874000 "Status der Metastasen"
 * component[Fernmetastasen_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-fernmetastasen#K "Keine Änderung"
 }
-Tumorboard_1 -right-> Verlauf_21_09_15 
+Tumorboard_1 -down-> Verlauf_21_09_15 
 
 object Tumorboard_2 #CCCCFF {
 * subject = Reference(PatientKimMusterperson)
@@ -125,7 +125,7 @@ object Tumorboard_2 #CCCCFF {
 * activity[0].detail.status = #completed
 * activity[0].detail.statusReason = $mii-cs-onko-therapieabweichung#N
 }
-Verlauf_21_09_15  -right-> Tumorboard_2
+Verlauf_21_09_15  -down-> Tumorboard_2
 
 object SurgicalProcedure_1 #AAAAFF {
 * status = #completed
@@ -140,7 +140,7 @@ object SurgicalProcedure_1 #AAAAFF {
 }
  Tumorboard_2 <-right-- "basedOn" SurgicalProcedure_1 
 
-object TNM_Klassifikation_2 #22FF22 {
+object TNM_Klassifikation #22FF22 {
 * focus = Reference(Primaerdiagnose)
 * subject = Reference(PatientKimMusterperson)
 * status = #completed
@@ -149,7 +149,7 @@ object TNM_Klassifikation_2 #22FF22 {
 * method = #8
 * partOf = Reference(OncologicExamplePatientProcedure4)
 }
-object TNM_T_Kategorie_2 #22FF22 {
+object TNM_T_Kategorie #22FF22 {
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
 * focus = Reference(Primaerdiagnose)
@@ -160,7 +160,7 @@ object TNM_T_Kategorie_2 #22FF22 {
 * partOf = Reference(OncologicExamplePatientProcedure4)
 * valueCodeableConcept.coding = $UICC#T3c
 }
-object TNM_M_Kategorie_2 #22FF22 {
+object TNM_M_Kategorie #22FF22 {
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
 * focus = Reference(Primaerdiagnose)
@@ -172,7 +172,7 @@ object TNM_M_Kategorie_2 #22FF22 {
 * valueCodeableConcept.coding = $UICC#M1b
 }
 
-object TNM_y_Symbol_2 #22FF22 {
+object TNM_y_Symbol #22FF22 {
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
 * focus = Reference(Primaerdiagnose)
@@ -182,7 +182,7 @@ object TNM_y_Symbol_2 #22FF22 {
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
 * valueCodeableConcept.coding = $SCT#421755005
 }
-object TNM_Pn_Observation_2 #22FF22 {
+object TNM_Pn_Observation #22FF22 {
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
 * focus = Reference(Primaerdiagnose)
@@ -193,7 +193,7 @@ object TNM_Pn_Observation_2 #22FF22 {
 * valueCodeableConcept.coding = $UICC#Pn0
 }
 
-object TNM_L_Observation_2 #22FF22 {
+object TNM_L_Observation #22FF22 {
 * status = #completed
 * subject = Reference(PatientKimMusterperson
 * focus = Reference(Primaerdiagnose))
@@ -203,7 +203,7 @@ object TNM_L_Observation_2 #22FF22 {
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
 * valueCodeableConcept.coding = $UICC#L1
 }
-object TNM_V_Observation_2 #22FF22 {
+object TNM_V_Observation #22FF22 {
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
 * focus = Reference(Primaerdiagnose)
@@ -214,13 +214,13 @@ object TNM_V_Observation_2 #22FF22 {
 * valueCodeableConcept.coding = $UICC#V0
 }
 
-TNM_Klassifikation_2 -up-> SurgicalProcedure_1
-TNM_T_Kategorie_2 -up-> TNM_Klassifikation_2
-TNM_M_Kategorie_2 -up-> TNM_Klassifikation_2
-TNM_y_Symbol_2 -up--> TNM_Klassifikation_2
-TNM_Pn_Observation_2 -up--> TNM_Klassifikation_2
-TNM_L_Observation_2 -up--> TNM_Klassifikation_2
-TNM_V_Observation_2 -up--> TNM_Klassifikation_2 
+TNM_Klassifikation -left-> SurgicalProcedure_1
+TNM_T_Kategorie -up-> TNM_Klassifikation
+TNM_M_Kategorie -up-> TNM_Klassifikation
+TNM_y_Symbol -up--> TNM_Klassifikation
+TNM_Pn_Observation -up--> TNM_Klassifikation
+TNM_L_Observation -up--> TNM_Klassifikation
+TNM_V_Observation -up--> TNM_Klassifikation 
 
 object FIGO_Observation_2 #22FF22 {
 * status = #completed
@@ -233,7 +233,7 @@ object FIGO_Observation_2 #22FF22 {
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
 * valueCodeableConcept.coding.code = #IVB
 }
-FIGO_Observation_2 -up-->  SurgicalProcedure_1
+FIGO_Observation_2 -left----->  SurgicalProcedure_1
 
 object Tumorboard_3 #CCCCFF {
 * subject = Reference(PatientKimMusterperson)
@@ -252,7 +252,11 @@ object Pathobericht_1 #88FF88{
 * subject = Reference(PatientKimMusterperson)
 * status = #complete
 * code.coding = $LOINC#60568-3 "Pathological laboratory report"
-* conclusion = '"Histologie: Resektat vom 30.09.2021: Neoplasie des Ovars (Z.n. neoadjuvanter Therapie) (ICD-10-C56) Ovar o.n.A. (ICD-O-C56.9) Untersuchungsmaterial: Resektat WHO-Typ: Seröses Adenokarzinom (ICD-O M-8441/3) Lokale Tumorausbreitung: Ovartumor links mit einer max. Größe von 2,2 cm und tumorinfiltrierter Kapsel mit Nachweis von Tumorzellen auf der Ovaroberfläche, Anteil vitaler Tumorzellen von ca. 80 %. UICC-Klassifikation (8. Auflage): ypT3c. pM1b (HEP) L1. V0. Pn0 FIGO: IVB"'
+* conclusion = '"Histologie: Resektat vom 30.09.2021: Neoplasie des Ovars (Z.n. neoadjuvanter Therapie) (ICD-10-C56)
+ Ovar o.n.A. (ICD-O-C56.9) Untersuchungsmaterial: Resektat WHO-Typ: Seröses Adenokarzinom (ICD-O M-8441/3) 
+ Lokale Tumorausbreitung: Ovartumor links mit einer max. Größe von 2,2 cm und tumorinfiltrierter Kapsel 
+ mit Nachweis von Tumorzellen auf der Ovaroberfläche, Anteil vitaler Tumorzellen von ca. 80 %. 
+ UICC-Klassifikation (8. Auflage): ypT3c. pM1b (HEP) L1. V0. Pn0 FIGO: IVB"'
 }
 
 object Bioprobe_1 #44FFFF {
@@ -260,8 +264,8 @@ object Bioprobe_1 #44FFFF {
 * identifier.value = "12345678"
 * collection.collectedDateTime = 2021-09-30 
 }
-Bioprobe_1 -up->SurgicalProcedure_1
-Pathobericht_1 -----up->SurgicalProcedure_1
+Bioprobe_1 -up->  SurgicalProcedure_1
+Pathobericht_1 --up->SurgicalProcedure_1
 
 object Verlauf_21_10_25 #22FF22 {
 * subject = Reference(PatientKimMusterperson)
@@ -272,11 +276,24 @@ object Verlauf_21_10_25 #22FF22 {
 * component[Tumor_Verlauf].code.coding = $SCT#277062004 "Status des Residualtumors"
 * component[Tumor_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-primaertumor#K "kein Tumor nachweisbar"
 }
-Tumorboard_2 -right-> Verlauf_21_10_25
+Tumorboard_2 -down-> Verlauf_21_10_25
 
-Verlauf_21_10_25-right->Tumorboard_3 
-Verlauf_21_10_25 <-- SurgicalProcedure_1
+Verlauf_21_10_25-down->Tumorboard_3 
 
+''Verlauf_21_10_25 <-right---- SurgicalProcedure_1
+
+object Verlauf_22_01_22 #22FF22 {
+* subject = Reference(PatientKimMusterperson)
+* focus = Reference(Primaerdiagnose)
+* status = #final
+* effectiveDateTime = 2022-01-22
+* code.coding = $mii-cs-onko-verlauf-gesamtbeurteilung#V "Vollremission" 
+* component[Tumor_Verlauf].code.coding = $SCT#277062004 "Status des Residualtumors"
+* component[Tumor_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-primaertumor#T "Tumorreste (Residualtumor)"
+* component[Fernmetastasen_Verlauf].code.coding = $SCT#260874000 "Status der Metastasen"
+* component[Fernmetastasen_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-fernmetastasen#K "Keine Fernmetastasen nachweisbar"
+}
+Tumorboard_3 -down->Verlauf_22_01_22
 
 object SystemicTherapy_2  #AAAAFF {
 * subject = Reference(PatientKimMusterperson)
@@ -301,21 +318,10 @@ object SystemicTherapyMedication_2 #FFCCFF {
 * partOf = Reference(PatientKimMusterperson-SystemicTherapy-2)
 * note.text = "Gem-Carbo"
 }
-SystemicTherapyMedication_2 -up-> SystemicTherapy_2
+SystemicTherapyMedication_2 -left-> SystemicTherapy_2
 
 
-object Verlauf_22_01_22 #22FF22 {
-* subject = Reference(PatientKimMusterperson)
-* focus = Reference(Primaerdiagnose)
-* status = #final
-* effectiveDateTime = 2022-01-22
-* code.coding = $mii-cs-onko-verlauf-gesamtbeurteilung#V "Vollremission" 
-* component[Tumor_Verlauf].code.coding = $SCT#277062004 "Status des Residualtumors"
-* component[Tumor_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-primaertumor#T "Tumorreste (Residualtumor)"
-* component[Fernmetastasen_Verlauf].code.coding = $SCT#260874000 "Status der Metastasen"
-* component[Fernmetastasen_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-fernmetastasen#K "Keine Fernmetastasen nachweisbar"
-}
-Tumorboard_3 -right->Verlauf_22_01_22
+
 
 
 object GenetischeVariante_1 #22FF22 {
@@ -342,7 +348,8 @@ object Tumorboard_4 #CCCCFF {
 * description = "Erhaltungstherapie mit Niraparib bei BRCAwt"
 }
 
-Verlauf_22_01_22 -right->Tumorboard_4
+Verlauf_22_01_22 --down->Tumorboard_4
+
 object SystemicTherapy_3 #AAAAFF {
 * subject = Reference(PatientKimMusterperson)
 * focus = Reference(Primaerdiagnose)
@@ -362,9 +369,9 @@ object SystemicTherapyMedication_3 #FFCCFF {
 * partOf = Reference(PatientKimMusterperson-SystemicTherapy-3)
 * note.text = "Niraparib"
 }
-SystemicTherapy_3 -up-> Tumorboard_4
+SystemicTherapy_3 -left-> Tumorboard_4
 
-SystemicTherapyMedication_3 -up-> SystemicTherapy_3
+SystemicTherapyMedication_3 -left-> SystemicTherapy_3
 
 
 object Primaerdiagnose_final #FFFF66 {
