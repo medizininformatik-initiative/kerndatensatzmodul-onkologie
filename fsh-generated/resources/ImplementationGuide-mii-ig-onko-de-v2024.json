@@ -1610,6 +1610,14 @@
       },
       {
         "reference": {
+          "reference": "SearchParameter/mii-sp-onko-ext-strahlentherapie-stellungzurop"
+        },
+        "name": "mii-sp-onko-ext-strahlentherapie-stellungzurop",
+        "description": "SearchParameter for Procedure.extension.stellung",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "SearchParameter/mii-sp-onko-nebenwirkung-suspectEntity"
         },
         "name": "mii-sp-onko-nebenwirkung-suspectEntity",
@@ -1674,14 +1682,6 @@
       },
       {
         "reference": {
-          "reference": "SearchParameter/mii-sp-onko-strahlentherapie-ext-stellung"
-        },
-        "name": "mii-sp-onko-strahlentherapie-ext-stellung",
-        "description": "SearchParameter for Procedure.extension.stellung",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "SearchParameter/mii-sp-onko-strahlentherapie-ext-zielgebiet-lateralitaet"
         },
         "name": "mii-sp-onko-strahlentherapie-ext-zielgebiet-lateralitaet",
@@ -1706,18 +1706,18 @@
       },
       {
         "reference": {
-          "reference": "SearchParameter/mii-sp-onko-tnm-klassifikation-has-member"
+          "reference": "SearchParameter/mii-sp-onko-systemischetherapie-ext-stellungzurop"
         },
-        "name": "mii-sp-onko-tnm-klassifikation-has-member",
-        "description": "SearchParameter for Observation.hasMember",
+        "name": "mii-sp-onko-systemischetherapie-ext-stellungzurop",
+        "description": "SearchParameter for Procedure.extension.stellung",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "SearchParameter/mii-sp-onko-tod-derived-from"
+          "reference": "SearchParameter/mii-sp-onko-tnm-klassifikation-has-member"
         },
-        "name": "mii-sp-onko-tod-derived-from",
-        "description": "SearchParameter for Observation.derivedFrom",
+        "name": "mii-sp-onko-tnm-klassifikation-has-member",
+        "description": "SearchParameter for Observation.hasMember",
         "exampleBoolean": false
       },
       {

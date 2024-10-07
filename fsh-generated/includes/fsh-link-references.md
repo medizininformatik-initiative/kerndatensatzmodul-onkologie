@@ -194,6 +194,7 @@
 [mii-pr-onko-nebenwirkung-0]: AdverseEvent-mii-pr-onko-nebenwirkung-0.html
 [mii-sp-onko-diagnose-ext-morphology-behavior-icdo3]: SearchParameter-mii-sp-onko-diagnose-ext-morphology-behavior-icdo3.html
 [mii-sp-onko-diagnose-verification-status]: SearchParameter-mii-sp-onko-diagnose-verification-status.html
+[mii-sp-onko-ext-strahlentherapie-stellungzurop]: SearchParameter-mii-sp-onko-ext-strahlentherapie-stellungzurop.html
 [mii-sp-onko-nebenwirkung-suspectEntity]: SearchParameter-mii-sp-onko-nebenwirkung-suspectEntity.html
 [mii-sp-onko-operation-complication]: SearchParameter-mii-sp-onko-operation-complication.html
 [mii-sp-onko-operation-ext-intention]: SearchParameter-mii-sp-onko-operation-ext-intention.html
@@ -202,12 +203,11 @@
 [mii-sp-onko-strahlentherapie-ext-bestrahlung-einzeldosis]: SearchParameter-mii-sp-onko-strahlentherapie-ext-bestrahlung-einzeldosis.html
 [mii-sp-onko-strahlentherapie-ext-bestrahlung-gesamtdosis]: SearchParameter-mii-sp-onko-strahlentherapie-ext-bestrahlung-gesamtdosis.html
 [mii-sp-onko-strahlentherapie-ext-bestrahlung-strahlenart]: SearchParameter-mii-sp-onko-strahlentherapie-ext-bestrahlung-strahlenart.html
-[mii-sp-onko-strahlentherapie-ext-stellung]: SearchParameter-mii-sp-onko-strahlentherapie-ext-stellung.html
 [mii-sp-onko-strahlentherapie-ext-zielgebiet-lateralitaet]: SearchParameter-mii-sp-onko-strahlentherapie-ext-zielgebiet-lateralitaet.html
 [mii-sp-onko-strahlentherapie-extension-bestrahlung-zielgebiet]: SearchParameter-mii-sp-onko-strahlentherapie-extension-bestrahlung-zielgebiet.html
 [mii-sp-onko-strahlentherapie-outcome]: SearchParameter-mii-sp-onko-strahlentherapie-outcome.html
+[mii-sp-onko-systemischetherapie-ext-stellungzurop]: SearchParameter-mii-sp-onko-systemischetherapie-ext-stellungzurop.html
 [mii-sp-onko-tnm-klassifikation-has-member]: SearchParameter-mii-sp-onko-tnm-klassifikation-has-member.html
-[mii-sp-onko-tod-derived-from]: SearchParameter-mii-sp-onko-tod-derived-from.html
 [mii-sp-onko-tod-encounter]: SearchParameter-mii-sp-onko-tod-encounter.html
 [mii-sp-onko-tod-focus]: SearchParameter-mii-sp-onko-tod-focus.html
 [mii-sp-onko-tod-interpretation]: SearchParameter-mii-sp-onko-tod-interpretation.html
