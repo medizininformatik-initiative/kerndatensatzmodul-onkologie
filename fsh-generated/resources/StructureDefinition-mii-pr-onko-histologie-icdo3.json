@@ -47,7 +47,7 @@
         "id": "Observation.code.coding",
         "path": "Observation.code.coding",
         "patternCoding": {
-          "code": "31205-8",
+          "code": "59847-4",
           "system": "http://loinc.org"
         },
         "mustSupport": true
@@ -73,7 +73,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
             ]
           }
         ],
@@ -83,6 +83,23 @@
         "id": "Observation.encounter",
         "path": "Observation.encounter",
         "mustSupport": true
+      },
+      {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "6.1",
+            "comment": "Tumor Histologiedatum"
+          }
+        ]
       },
       {
         "id": "Observation.value[x]",
@@ -98,6 +115,12 @@
           "strength": "required",
           "valueSet": "http://terminology.hl7.org/CodeSystem/icd-o-3"
         }
+      },
+      {
+        "id": "Observation.value[x].coding",
+        "path": "Observation.value[x].coding",
+        "max": "1",
+        "mustSupport": true
       },
       {
         "id": "Observation.value[x].coding.version",
@@ -124,6 +147,7 @@
       {
         "id": "Observation.value[x].text",
         "path": "Observation.value[x].text",
+        "mustSupport": true,
         "mapping": [
           {
             "identity": "oBDS",

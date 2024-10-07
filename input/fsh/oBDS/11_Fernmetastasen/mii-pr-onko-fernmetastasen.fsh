@@ -40,7 +40,7 @@ Description: "OBDS Beschreibung von Fernmetastasen (Lokalisation und Datum)"
 
 // Referenz zu Primärtumor
 * focus MS
-* focus only Reference(MII_PR_Onko_Diagnose)
+* focus only Reference(MII_PR_Onko_Diagnose_Primaertumor)
 
 Mapping: FHIR-oBDS-MII-PR-Onko-Fernmetastasen
 Id: oBDS

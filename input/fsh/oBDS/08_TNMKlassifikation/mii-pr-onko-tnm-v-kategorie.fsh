@@ -34,7 +34,7 @@ Description: "TNM-Klassifikation: TNM V-Kategorie. Veneninvasion."
 
 // Referenz zu Primärtumor
 * focus MS
-* focus only Reference(MII_PR_Onko_Diagnose)
+* focus only Reference(MII_PR_Onko_Diagnose_Primaertumor)
 
 
 Mapping: FHIR-oBDS-TNM_V_Kategorie

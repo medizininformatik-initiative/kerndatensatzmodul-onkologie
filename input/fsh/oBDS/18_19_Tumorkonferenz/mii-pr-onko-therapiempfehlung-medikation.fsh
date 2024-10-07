@@ -38,7 +38,7 @@
 
 // // die Referenz zu Tumorerkrankung
 // * reasonReference MS
-// * reasonReference only Reference(MII_PR_Onko_Diagnose)
+// * reasonReference only Reference(MII_PR_Onko_Diagnose_Primaertumor)
 
 // // Referenz zu relevanten Verlaufs-Stagings oder anderen Observationen
 // * supportingInformation MS

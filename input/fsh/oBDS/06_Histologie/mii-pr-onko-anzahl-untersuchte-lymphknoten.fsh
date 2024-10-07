@@ -50,7 +50,7 @@ Description: "Histologie: Anzahl der untersuchten Lymphknoten. Gibt an, wie viel
 
 // Referenz zu Primärtumor
 * focus MS
-* focus only Reference(MII_PR_Onko_Diagnose)
+* focus only Reference(MII_PR_Onko_Diagnose_Primaertumor)
 
 
 Mapping: FHIR-oBDS-Histologie-Anzahl-Untersuchte-Lymphknoten

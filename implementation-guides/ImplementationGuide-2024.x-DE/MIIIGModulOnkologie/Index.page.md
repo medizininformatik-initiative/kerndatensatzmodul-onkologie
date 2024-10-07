@@ -8,8 +8,8 @@ Im Folgenden werden die Use Cases des Moduls, sowie die dazugehörigen FHIR-Prof
 
 | Veröffentlichung   |   |
 |---------|---|
-| Datum   | 16.04.2024 |
-| Version | 1.0.0-ballot        |
+| Datum   | 15.10.2024 |
+| Version | 1.0.0        |
 | Reifegrad | MM0 |
 | Status  | Draft       |
 | Realm   | DE          | 

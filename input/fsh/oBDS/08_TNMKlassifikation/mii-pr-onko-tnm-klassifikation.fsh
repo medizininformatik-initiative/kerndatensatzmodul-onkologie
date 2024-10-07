@@ -39,7 +39,7 @@ Description: "TNM-Klassifikation: Grouper-Profil für Komponenten der TNM-Klassi
 
 // Referenz zu Primärtumor
 * focus MS
-* focus only Reference(MII_PR_Onko_Diagnose)
+* focus only Reference(MII_PR_Onko_Diagnose_Primaertumor)
 
 
 Mapping: FHIR-oBDS-TNM-Klassifikation

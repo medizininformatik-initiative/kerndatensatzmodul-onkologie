@@ -37,6 +37,14 @@ Bei den Statusangaben `on-hold` und `stopped` SOLL das Feld `statusReason` mit d
 
 Jede Tumorkonferenz mit Therapieempfehlung SOLL als einzelne Ressource gespeichert und über `CarePlan.addresses(Reference(Condition))` auf die Primärdiagnose referenzieren. 
 
+### Zukünftige Entwicklungen
+Im Rahmen des MII-Erweiterungsmoduls Molekulares Tumorboard wurden die Modellierung der Therapieempfehlungen nochmal überarbeitet. In der derzzeitigen Profilierung werden die Empfehlungen alle explizit unter CarePlan.activity kodiert. Für die spätere Verwendung ist das insofern unpraktikabel, als dass diese nicht von außen logisch referenziert werden können. Es ist daher geplant, Änderungen an der CarePlan-Ressource aus der FHIR-Version R5 zu übernehmen, so dass die Empfehlungen nicht mehr explizit gelistet sind, sondern über `CarePlan.plannedActivityReference`als konkrete `ServiceRequests` bzw. `MedicationRequest` referenziert werden können. Auf die gleiche Art und Weise können tatsächlich stattgefundene Prozeduren und Medikationen unter `CarePlan.performedActivity`.
+
+Es wird hier in der nächsten Version zu einer Umprofilierung kommen, die keinen breaking change vorraussetzt, aber die Informationen anders strukturiert und die Erschließung von neuen FHIR-Ressourcen und Suchparametern erfordert.
+- Erstellung von Extensions für die Verwendung der R5-Elemente in R4 
+- Erstellung von Profile für Therapieempfehlungen (ServiceRequest / MedicationRequest)
+- Erstellung eines RequestGroup-Profils zur Abbildung von Kombinationstherapien
+
 
 @```
 from 

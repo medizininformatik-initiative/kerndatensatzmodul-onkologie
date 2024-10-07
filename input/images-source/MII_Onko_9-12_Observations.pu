@@ -20,18 +20,18 @@ Map 10_Residualstatus #22FF22{
 R4_Observation <|-down-- 10_Residualstatus
 
 Map 11_Fernmetastasen #22FF22{
-    11.1 Lokalisation von Fernmetastase(n)  => Observation.bodySite.coding.code
+    11.1 Lokalisation von Fernmetastase(n)  => Observation.valueCodeableConcept
     11.2 Datum der diagnostischen Sicherung => Observation.effectiveDateTime
  
 }
 R4_Observation <|-down--- 11_Fernmetastasen
 
 
-Map 12_ECOGStatus #22FF22{
-    12. 1ECOG Status => Observation.valueCodeableConcept
+Map 12_Allgemeiner_Leistungszustand #22FF22{
+    12. 1 Allgemeiner_Leistungszustand => Observation.component[ecog / karnofsky].valueCodeableConcept
 
 }
-R4_Observation <|-down---- 12_ECOGStatus
+R4_Observation <|-down---- 12_Allgemeiner_Leistungszustand
 
 legend right 
 |Color|Type|

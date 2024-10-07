@@ -1,0 +1,41 @@
+{
+  "resourceType": "MedicationStatement",
+  "id": "PatientKimMusterperson-SystemicTherapyMedication-1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
+    ]
+  },
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/atc",
+        "code": "L01CD01",
+        "display": "Paclitaxel"
+      },
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/atc",
+        "code": "L01XA02",
+        "display": "Carboplatin"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/PatientKimMusterperson"
+  },
+  "status": "completed",
+  "effectivePeriod": {
+    "start": "2021-07-05",
+    "end": "2021-09-05"
+  },
+  "partOf": [
+    {
+      "reference": "SystemicTherapy1"
+    }
+  ],
+  "note": [
+    {
+      "text": "CarboTax"
+    }
+  ]
+}

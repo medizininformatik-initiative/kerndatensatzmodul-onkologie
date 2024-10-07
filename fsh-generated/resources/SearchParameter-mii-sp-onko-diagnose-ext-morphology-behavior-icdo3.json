@@ -1,0 +1,26 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "mii-sp-onko-diagnose-ext-morphology-behavior-icdo3",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-diagnose-ext-morphology-behavior-icdo3",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2024.0.0-ballot",
+  "name": "MII_SP_Operation_Extension_Morphology_Behaviour_ICD-O-3",
+  "description": "SearchParameter for Diagnosis.extension[morphology-behaviour-icdo3]",
+  "status": "active",
+  "code": "extension-morphology-behavior-icdo3",
+  "base": [
+    "Diagnosis"
+  ],
+  "type": "token",
+  "expression": "Diagnosis.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3').value"
+}

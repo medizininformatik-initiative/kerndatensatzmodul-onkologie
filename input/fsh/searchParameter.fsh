@@ -15,6 +15,20 @@ Usage: #definition
 * type = #token
 * expression = "Condition.verificationStatus"
 
+Instance: mii-sp-onko-diagnose-ext-morphology-behavior-icdo3
+
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert Version
+* name = "MII_SP_Operation_Extension_Morphology_Behaviour_ICD-O-3"
+* description = "SearchParameter for Diagnosis.extension[morphology-behaviour-icdo3]"
+* status = #active 
+* code = #extension-morphology-behavior-icdo3
+* base = #Diagnosis
+* type = #token
+* expression = "Diagnosis.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3').value"
+
 //----------------------------------------
 // SearchParameters for Histologie
 //----------------------------------------
@@ -52,18 +66,9 @@ Usage: #definition
 //----------------------------------------
 // SearchParameters for Fernmetastasen
 //----------------------------------------
-Instance: mii-sp-onko-fernmetastasen-body-site
-InstanceOf: SearchParameter
-Usage: #definition
-* insert SP_Publisher
-* insert Version
-* name = "MII_SP_Fernmetastasen_Body_Site"
-* description = "SearchParameter for Observation.bodySite"
-* status = #active 
-* code = #body-site
-* base = #Observation 
-* type = #token
-* expression = "Observation.bodySite"
+
+// No search parameters to cover, since Lokalisation was moved from bodySite to valueCodeableConcept
+
 
 //----------------------------------------
 // SearchParameters for Allgemeiner Leistungszustand
@@ -103,12 +108,12 @@ Usage: #definition
 //----------------------------------------
 // SearchParameters for Strahlentherapie
 //----------------------------------------
-Instance: mii-sp-onko-strahlentherapie-ext-stellung
+Instance: mii-sp-onko-ext-strahlentherapie-stellungzurop
 InstanceOf: SearchParameter
 Usage: #definition
 * insert SP_Publisher
 * insert Version
-* name = "MII_SP_Strahlentherapie_Extension_Stellung"
+* name = "MII_SP_Extension_StellungZurOp"
 * description = "SearchParameter for Procedure.extension.stellung"
 * status = #active 
 * code = #extension-stellung
@@ -240,13 +245,26 @@ Usage: #definition
 // SearchParameters for Systemische Therapie
 //----------------------------------------
 
-// No search parameters to cover
+Instance: mii-sp-onko-systemischetherapie-ext-stellungzurop
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert Version
+* name = "MII_SP_Extension_StellungZurOp"
+* description = "SearchParameter for Procedure.extension.stellung"
+* status = #active 
+* code = #extension-stellung
+* base = #Procedure
+* type = #token
+* expression = "Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellung').value"
+
 
 //----------------------------------------
 // SearchParameters for Verlauf
 //----------------------------------------
 
 // No search parameters to cover
+
 
 //----------------------------------------
 // SearchParameters for Tumorkonferenz
@@ -332,18 +350,6 @@ Usage: #definition
 * type = #reference
 * expression = "Observation.encounter"
 
-Instance: mii-sp-onko-tod-derived-from
-InstanceOf: SearchParameter
-Usage: #definition
-* insert SP_Publisher
-* insert Version
-* name = "MII_SP_Onko_Tod_DerivedFrom"
-* description = "SearchParameter for Observation.derivedFrom"
-* status = #active
-* code = #derived-from
-* base = #Observation
-* type = #reference
-* expression = "Observation.derived-from"
 
 //----------------------------------------
 // SearchParameters for Genetische Variante

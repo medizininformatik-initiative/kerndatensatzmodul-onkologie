@@ -47,7 +47,7 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 
 // Referenz auf Primaerdiagnose oder andere Condition
 * reasonReference MS
-* reasonReference only Reference(MII_PR_Onko_Diagnose or Condition)
+* reasonReference only Reference(MII_PR_Onko_Diagnose_Primaertumor or Condition)
 
 // Referenz auf letzte Verlaufsobservation zur zeitlichen und inhaltlichen Kopplung
 * partOf MS

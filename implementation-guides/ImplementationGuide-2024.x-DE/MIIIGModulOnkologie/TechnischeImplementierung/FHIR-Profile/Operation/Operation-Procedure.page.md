@@ -8,9 +8,15 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 
 Dieses Profil beschreibt eine Operation in der Onkologie. 
 
-- Das Operationsprofil für die Onkologie ist vom Prozedurenmodul der MII abgeleitet und für oBDS-Inhalten zusätzlich ausspezifiziert. 
-- Die Art der Prozedur wird im Feld `Procedure.code` als OPS kodiert. Laut oBDS soll dabei möglichst präzise kodiert werden. 
-- Es ist möglich, mehrere Prozedurencodes innerhalb einer Prozedur zu hinterlegen. 
+- Das Operationsprofil für die Onkologie ist vom Prozedurenmodul der MII abgeleitet und für oBDS-Inhalten zusätzlich ausspezifiziert. https://simplifier.net/guide/mii-ig-modul-prozedur-2024-de/MIIIGModulProzedur/TechnischeImplementierung/FHIRProfile/Prozedur-Procedure.page.md?version=current 
+
+### Kategorie und Code
+
+- Die MII-Prozedur empfiehlt die Abbildung der Kategorie mittels der in SNOMED übertragenen OPS-Hauptkategorien (https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/ValueSet/procedures-category-sct) , wobei der SNOMED-Code `38771300` der OPS-Kategorie "5 - Operationen" entspricht. Laut oBDS kann hier aber in begründeten Fällen auch ein andere Kodierung (z.B. `103693007`	 für "1 - Diagnostische Maßnahmen") eigetragen werden. Die Kategorie wird aus diesem Grund nicht weiter eingeschränkt. 
+- Die genaue Art der Prozedur wird im Feld `Procedure.code` als OPS kodiert. Laut oBDS soll dabei möglichst präzise kodiert werden. 
+- Es SOLL genau ein OPS-Wert kodiert werden. Zusätzliche Prozeduren werden als einzelne Procedure-Ressourcen abgebildet. Eine OPS-Kodierung KANN durch eine SNOMED-CT-Kodierung ergänzt werden.   
+- Achtung: Innerhalb des Erweiterungsmoduls Onkologie wird die übergeorndete MII-Prozedur auch für die Abbildung der Strahlen- und Systemischen/abwartenden Therapie genutzt. Für die Besondheiten bei Kategorien und Code - siehe [Strahlentherapie:Procedure  ](https://simplifier.net/guide/mii-ig-modul-onkologie-2024-de/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Strahlentherapie/Strahlentherapie-Procedure.page.md?version=current) und [Systemische Therapie: Procedure](https://simplifier.net/guide/mii-ig-modul-onkologie-2024-de/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Systemische-Therapie/Systemische-Therapie-Procedure.page.md?version=current).  
+
 
 ### Extensions
 

@@ -1,7 +1,7 @@
 Profile: MII_PR_Onko_Liste_Evidenz_Erstdiagnose
 Parent: List
 Id: mii-pr-onko-liste-evidenz-erstdiagnose
-Title: "MII PR Onkologie Evidenz Erstdiagnose"
+Title: "MII PR Onkologie Evidenz Diagnose Primärtumor"
 Description: "Dieses Profil beschreibt eine Liste, die alle Observationen und Berichte enthält, die für eine Erstdiagnostik relevant waren.  (synchrone Observationen im Sinne der Krebsregister)"
 * insert PR_CS_VS_Version
 * insert Publisher

@@ -30,7 +30,7 @@ Description: "Genetische Variante wie im oBDS beschrieben"
 
 // Referenz zu Primärtumor
 * focus MS
-* focus only Reference(MII_PR_Onko_Diagnose)
+* focus only Reference(MII_PR_Onko_Diagnose_Primaertumor)
 
 
 Mapping: FHIR-oBDSGenetischeVariante

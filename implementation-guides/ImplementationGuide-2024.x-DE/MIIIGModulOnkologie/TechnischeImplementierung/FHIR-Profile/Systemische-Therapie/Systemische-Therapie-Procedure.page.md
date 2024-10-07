@@ -17,22 +17,53 @@ select
     Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 ```
 
-Im oBDS wird eine systemische Therapie mittels Chemo-/Hormon-/Immun- oder Kombinationstherapien in den gleichen Feldern kodiert wie die abwartenden Therapien. Dazu gehören
-* Watchful Waiting 
-* Active Surveillance
-* Wait and see
+### Beschreibung 
 
-Zur Kodierung der Systemischen Therapie SOLL wie folgt vorgegangen werden:
+Im oBDS werden mehrere klinische Konzepte innerhalb der Systemische Therapie abbgebildet
+* Systemische Therapien
+    * Chemotherapie
+    * Immuntherapie 
+    * Targeted Therapy 
+    * Kombinationstherapien der oben genannten Therapien
+    * Hormontherapie
+    * Stammzell- und Knochenmarkstransplantation
+* Abwartende Therapien 
+    * Watchful Waiting 
+    * Active Surveillance
+    * Wait and see
 
-* **Systemische Therapie** ist über **OPS** zu kodieren 
-    * Chemo-/Immun/Hormon-/zielgerichtete Therapien und/oder Kombinationstherapien:  `OPS 8-54` oder spezifischer
-
-* **Abwartende Therapien** sind über **SNOMED-CT** zu kodieren
-    * Watchful Waiting als SNOMED-CT:  `373818007 | No anti-cancer treatment - watchful waiting (finding) |`
-    * Active Surveillance als SNOMED-CT: `424313000 | Active surveillance (regime/therapy) |`
-    * Wait and see als SNOMED-CT: `310341009 | Follow-up (wait and see) (finding) |`
  
-Der Grund der Beendigung (unabhängig ob erfolgreich oder nicht erfolgreich) wird über `Procedure.outcome` kodiert.
+Zu diesen einzelnen Therapien werden im oBDS weitere Datenelemente erfasst und hier abgebildet, darunter: 
+- Start und Endezeitpunkt der Therapie 
+- Zusammenhang zur OP und Intention der Therapie
+- der Grund der Beendigung (unabhängig ob erfolgreich oder nicht erfolgreich).
+
+#### Kategorie 
+- Die verwendete MII-Prozedur empfiehlt die Abbildung der **Kategorie** mittels der in SNOMED übertragenen OPS-Hauptkategorien (https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/ValueSet/procedures-category-sct)
+- Die vorliegende Kategorie SNOMED `277132007 | Therapeutic procedure` , die der OPS Kategorie 8 ("Nicht-operative therapeutische Maßnahmen") entspricht, beinhaltet sowohl Strahlen - als auch Nuklearmedizinische Therapie als auch bestimmte systemische Therapien (z.B. Chemo- und Immuntherapie), wobei andere systemische medikamtöse Therapien (z.B. Hormontherapie, Targeted Therapy) auch unter Kategorie 6 "Medikamente" kodiert werden können. Er ist daher unspezifisch und nicht geeignet, um z.B. innerhalb einer Forschungsfrage gezielt nach Nuklearmedizinischen Therapien zu filtern.   
+
+#### Code
+- Als **Code** wird von der MII-Prozedur ein OPS-Code oder ein SNOMED-Code verlangt. 
+- Die medikationsbasierten systemischen Therapien werden je nach Art der Therapie durch unterschiedlichen OPS-Kategorien kodiert. 
+- Für die abwartenden Therapien sind keine OPS-Codes im aktuellen Katalog hinterlegt.  
+- In der MII-Prozedur SOLL genau eine Kodierung (OPS oder SNOMED CT) für genau eine Therapie verwendet werden. Zusätzliche Prozeduren werden als einzelne Procedure-Ressourcen abgebildet. 
+
+#### Implementierungsempfehlung
+Aus den oben genannten Punkten ergibt sich folgende Kodierempfehlung für die Systemische / abwartende Therapie aus dem oBDS:
+- Kategorie als SNOMED - Code 
+    - Kategorie für Systemische Therapien `18629005 | Administration of drug or medicament (procedure)` 
+    - Kategorie für Abwartende Therapien : keine (kein geeignetes Parent-Konzept, Suche direkt über Kodierung empfohlen) 
+- Kodierung 
+    - Systemische Therapie über OPS wie folgt. Es ist zu beachten, dass der exakte Wirkstoff mittels ATC als Teil der MedicationStatment-Ressource kodiert wird. Eine zusätzliche Dokumentation der Medikation über     
+        - Chemotherapie über OPS `8-54` oder spezifischer
+        - Immuntherapie über OPS `8-54` oder spezifischer (Zusatzangabe von )
+        - Stammzelltherapie über OPS `8-86` oder spezifischer
+        - Hormontherapie über OPS `6-xxx.y` (bsw.`6-009.0` für Olaparib, oral bei Prostatakarzinom)
+    - Abwartende Therapie über SNOMED-CT wie folgt
+        - Watchful Waiting: SNOMED-CT `373818007 | No anti-cancer treatment - watchful waiting (finding)` 
+        - Active Surveillance: SNOMED-CT `424313000 | Active surveillance (regime/therapy)` 
+        - Wait and see: SNOMED-CT `310341009 | Follow-up (wait and see) (finding)` 
+
 
 ---
 

@@ -25,25 +25,37 @@ Map NrBefalleneSentinelLymphknoten  #22FF22{
 }
 R4_Observation <|-down-- NrBefalleneSentinelLymphknoten
 
+Map Onko_Verlaufshistologie #22FF22 {
+    06.1 Tumor-Histologiedatum=> Observation.effectiveDateTime
+    06.3 Morphologie-Code => Observation.valueCodeableConcept.coding[icd-o-3].code
+    06.4 Morphologie ICD-O/Blue Book Version => Observation.valueCodeableConcept.coding[icd-o-3].version
+    06.5 Morphologie-Freitext => Observation.valueCodeableConcept.text
+}
+
+
+R4_Observation <|-down-- Onko_Verlaufshistologie
 
 
 Map Onko_Grading #22FF22 {
 6.6 Grading =>Observation.valueCodeableConcept.coding.code
 }
+
+
 R4_Observation <|-- Onko_Grading
 
-Map Onko_Befund #88FF88{
+Map Onko_Befund #AAFFAA{
 6.11 Befund => DiagnosticReport.conclusion
 }
 
  
-object R4_DiagnosticReport #88FF88
+object R4_DiagnosticReport #AAFFAA
 R4_DiagnosticReport <|-- Onko_Befund 
 
 Map Onko_Specimen #44FFFF {
 6.1 Tumor Histologiedatum => Specimen.collection.collectedDateTime
-6.2 Histologie-Einsendenummer => Specimen.identifier.value
+6.2 Histologie-Einsendenummer => Specimen.accessionIdentifier.value
 }
+
 object R4_Specimen #44FFFF
 R4_Specimen <|---- Onko_Specimen
 
@@ -53,7 +65,7 @@ legend right
 |<#CCCCFF>|CarePlan|
 |<#9999FF>|Procedure|
 |<#DDFFDD>|ServiceRequest|
-|<#88FF88>|DiagnosticReport|
+|<#AAFFAA>|DiagnosticReport|
 |<#22FF22>|Observation|
 |<#FFCCFF>|Medication|
 |<#FF9999>|AdverseEvent|

@@ -32,8 +32,16 @@ Map 23_Genetische_Variante #22FF22 {
     23.1 Genetische Variante Name => Observation.component[conclusion-string]
     23.2 Genetische Variante Ausprägung => Observation.component[molecular-consequence]
 }
-
 MII_MolGen_Variante <|-down- 23_Genetische_Variante
+
+
+Map 24_Studienteilnahme #22FF22 {
+    24.1 Studienteilnahme Status => Observation.valueCodeableConcept.coding.code
+    24.2 Studienteilnahme Datum => Observation.effectiveDateTime
+}
+R4_Observation <|-down- 24_Studienteilnahme
+
+
 
 legend right 
 |Color|Type|

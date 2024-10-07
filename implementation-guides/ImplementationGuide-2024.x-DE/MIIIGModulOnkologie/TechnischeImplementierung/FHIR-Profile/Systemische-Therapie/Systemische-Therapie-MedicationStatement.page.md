@@ -33,6 +33,8 @@ Im Medikationsprofil der Systemischen Therapie ist das spezifisch:
 
 Die vorliegende Profilierung ist kompatibel mit dem Prozedurenprofil der ISiK-Basismodule Stufe 4. https://simplifier.net/isik-medikation-v4/isikmedikationsinformation
 
+Die vorliegende Profilierung ist derzeit *nicht* kompatibel mit dem EPA MedicationStatement, da dort unter MedicationStatement.medication explizit eine Referenz zu einer Medication-Ressource verlangt, während im vorliegenden Onkologie-MedicationStatement eine Kodierung über ATC präferiert wird. https://simplifier.net/epa-medication/epamedicationstatement
+
 ### Inhalt
 
 <tabs>

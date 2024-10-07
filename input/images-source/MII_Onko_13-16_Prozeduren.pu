@@ -10,29 +10,29 @@ Map Onko_Operation #9999FF{
 }
 Map Onko_Strahlentherapie #9999FF{
 14.1 Intention der Strahlentherapie => Procedure.extension[Intention].valueCodeableConcept.coding.code
-14.2 Strahlentherapie Stellung zu operativer Therapie => Procedure.extension[Stellung].ValueCodeableConcept.coding.code
+14.2 Strahlentherapie Stellung zu operativer Therapie => Procedure.extension[StellungZurOp].ValueCodeableConcept.coding.code
 
 14.5 Strahlentherapie Beginn => Prodedure.performedPeriod.start
 14.6 Strahlentherapie Ende =>Procedure.performedPeriod.end
 14.13 Strahlentherapie Ende Grund => Procedure.outcome
 }
 
-Map Onko_Strahlentherapie_Behandlungsabschnitt #9999FF{
-14.3 Strahlentherapie Zielgebiet => Procedure.extension[Behandlungsabschnitt].extension[Zielgebiet].codeableConcept.code
-14.4 Strahlentherapie Seite Zielgebiet => Procedure.extension[Behandlungsabschnitt].extension[Zielgebiet_Lateralität].codeableConcept.code
-14.7 Strahlentherapie Applikationsart => Procedure.extension[Behandlungsabschnitt].extension[Applikationsart].codeableConcept.code
-14.8 Strahlenart => Procedure.extension[Behandlungsabschnitt].extension[Strahlenart].codeableConcept.code
-14.9 Strahlentherapie Gesamtdosis (Dosis) => Procedure.extension[Behandlungsabschnitt].extension[Gesamtdosis].codeableConcept.code
-14.10 Strahlentherapie Einzeldosis pro Tag (Dosis) =>Procedure.extension[Behandlungsabschnitt].extension[Einzeldosis].codeableConcept.code
-14.11 Strahlentherapie Einheit =>Procedure.extension[Behandlungsabschnitt].extension[Einheit].codeableConcept.code
-14.12 Boost=>Procedure.extension[Behandlungsabschnitt].extension[Boost].codeableConcept.code
+Map Onko_Strahlentherapie_Bestrahlung #9999FF{
+14.3 Strahlentherapie Zielgebiet => Procedure.extension[Bestrahlung].extension[Zielgebiet].codeableConcept.code
+14.4 Strahlentherapie Seite Zielgebiet => Procedure.extension[Bestrahlung].extension[Zielgebiet_Lateralität].codeableConcept.code
+14.7 Strahlentherapie Applikationsart => Procedure.extension[Bestrahlung].extension[Applikationsart].codeableConcept.code
+14.8 Strahlenart => Procedure.extension[Bestrahlung].extension[Strahlenart].codeableConcept.code
+14.9 Strahlentherapie Gesamtdosis (Dosis) => Procedure.extension[Bestrahlung].extension[Gesamtdosis].codeableConcept.code
+14.10 Strahlentherapie Einzeldosis pro Tag (Dosis) =>Procedure.extension[Bestrahlung].extension[Einzeldosis].codeableConcept.code
+14.11 Strahlentherapie Einheit =>Procedure.extension[Bestrahlung].extension[Einheit].codeableConcept.code
+14.12 Boost=>Procedure.extension[Bestrahlung].extension[Boost].codeableConcept.code
 }
 
-Onko_Strahlentherapie "Extension   " o-- Onko_Strahlentherapie_Behandlungsabschnitt
+Onko_Strahlentherapie "Extension   " o-- Onko_Strahlentherapie_Bestrahlung
 
 Map Onko_SystemischeTherapie #9999FF{
 16.1 Intention der systemischen Therapie => Procedure.extension[Intention].codeableConcept.coding.code
-16.2 Systemische Therapie Stellung zu operativer Therapie => Procedure.extension[Stellung].codeableConcept.coding.code
+16.2 Systemische Therapie Stellung zu operativer Therapie => Procedure.extension[StellungZurOp].codeableConcept.coding.code
 16.3 Art der systemischen oder abwartenden Therapie => Procedure.code[oBDS]
 16.6 Systemische Therapie Beginn => Procedure.performedPeriod.start
 
@@ -45,9 +45,9 @@ Map Onko_Medikation #FFCCFF{
 
 16.4 Systemische Therapie Protokoll => MedicationStatement.note
 
-16.5 Systemische Therapie Substanz => MedicationStatement.medication.medicationCodeableConcept.atcClassDe
-
+16.5 Systemische Therapie Substanz => MedicationStatement.medication.medicationCodeableConcept.coding[atcClassDe]
 }
+
 object MII_MedicationStatement #FFCCFF
 MII_MedicationStatement <|-- Onko_Medikation
 Onko_SystemischeTherapie o-- Onko_Medikation

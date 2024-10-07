@@ -40,7 +40,7 @@ Description: "TNM-Klassifikation: TNM T-Kategorie. Ausbreitung des Primärtumors
 
 // Referenz zu Primärtumor
 * focus MS
-* focus only Reference(MII_PR_Onko_Diagnose)
+* focus only Reference(MII_PR_Onko_Diagnose_Primaertumor)
 
 
 Mapping: FHIR-oBDS-TNM_T_Kategorie

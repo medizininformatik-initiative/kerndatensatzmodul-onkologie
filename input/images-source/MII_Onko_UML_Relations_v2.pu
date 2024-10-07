@@ -12,11 +12,14 @@ Therapieplanung_Tumorkonferenz <-- Onko_OP: basedOn
 Therapieplanung_Tumorkonferenz <-- Onko_Strahlentherapie: basedOn
 Therapieplanung_Tumorkonferenz <-- Onko_SystemischeTherapie: basedOn
 rectangle "Modul Medikation" {
-    object Medikation #FFCCFF
+    object MedicationStatement #FFCCFF
 }
-Onko_SystemischeTherapie <--- Medikation : partOf 
-Therapieplanung_Tumorkonferenz <--- Medikation: basedOn
-object PrimaerDiagnose #FFFF66
+Onko_SystemischeTherapie <--- MedicationStatement : partOf 
+Therapieplanung_Tumorkonferenz <--- MedicationStatement: basedOn
+object Diagnose_Primaertumor #FFFF66
+object Evidenz_Erstdiagnose #EEEEEE 
+Diagnose_Primaertumor --left--> Evidenz_Erstdiagnose : evidence.detail
+
 
 rectangle "Onkologie Observations"{
     object Onko_Variante #22FF22
@@ -26,36 +29,44 @@ rectangle "Onkologie Observations"{
     object Lymphknotenuntersuchung #22FF22
     object HistologieGrading #22FF22
     object Residualstatus #22FF22
-    object ECOG #22FF22
+    object Allgemeiner_Leistungszustand #22FF22
     object Tod #22FF22
+    object Onko_Befund #88FF88
 }
 
-PrimaerDiagnose <--- TNM_Klassifikation: focus
-PrimaerDiagnose <---  Therapieplanung_Tumorkonferenz : addresses
-PrimaerDiagnose <--- Lymphknotenuntersuchung: focus
-PrimaerDiagnose <--- HistologieGrading :focus
-PrimaerDiagnose <--- Onko_Variante :focus
-PrimaerDiagnose <--- WeitereKlassifikation: focus
-PrimaerDiagnose <--- ECOG :focus
-PrimaerDiagnose <--- Fernmetastasen :focus
+Diagnose_Primaertumor <--- TNM_Klassifikation: focus
+Diagnose_Primaertumor <---  Therapieplanung_Tumorkonferenz : addresses
+Diagnose_Primaertumor <--- Lymphknotenuntersuchung: focus
+Diagnose_Primaertumor <--- HistologieGrading :focus
+Diagnose_Primaertumor <--- Onko_Variante :focus
+Diagnose_Primaertumor <--- WeitereKlassifikation: focus
+Diagnose_Primaertumor <--- Allgemeiner_Leistungszustand :focus
+Diagnose_Primaertumor <--- Fernmetastasen :focus
 
 Therapieplanung_Tumorkonferenz <--- Onko_Befund  : basedOn
 
 object Verlauf #22FF22
 PrimaerDiagnose <----  Verlauf : focus
-Verlauf <--- Tod: derivedFrom
-Verlauf <--- TNM_Klassifikation:  derivedFrom
-Verlauf <---  Lymphknotenuntersuchung : derivedFrom
-Verlauf <---  HistologieGrading : derivedFrom
-Verlauf <--- Fernmetastasen: derivedFrom
-Verlauf <--- Residualstatus:  derivedFrom
-Verlauf <--- Onko_Variante: derivedFrom
+Verlauf ---> Tod: hasMember
+Verlauf ---> TNM_Klassifikation:  hasMember
+Verlauf --->  Lymphknotenuntersuchung : hasMember
+Verlauf --->  HistologieGrading : hasMember
+Verlauf ---> Fernmetastasen: hasMember
+Verlauf ---> Residualstatus:  hasMember
+Verlauf ---> Onko_Variante: hasMember
 
 rectangle "Modul Pathologiebefund" {
     object MII_PathoAnforderung #DDFFDD
-    object MII_PathoBefund #88FF88
+    object MII_PathoBefund #88FF88 
 }
 MII_PathoBefund <-- MII_PathoAnforderung : request
+MII_PathoBefund ----> TNM_Klassifikation : result
+MII_PathoBefund ----> WeitereKlassifikation : result
+MII_PathoBefund ----> HistologieGrading : result
+MII_PathoBefund ----> Fernmetastasen : result
+MII_PathoBefund ----> Residualstatus : result
+MII_PathoBefund ----> Onko_Variante : result
+
 
 
 rectangle "Modul MolGen-Befundbericht" {

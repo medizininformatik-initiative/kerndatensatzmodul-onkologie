@@ -1,31 +1,74 @@
-name: FHIR Profiles
+name: Build FHIR Profiles
+
+env:
+  NODE_VERSION: 20
+  DOTNET_VERSION: 8
+
+defaults:
+  run:
+    shell: bash
 
 on:
   push:
     paths:
       - "**.fsh"
+      - "**/package.json"
       - "**/sushi-config.yaml"
+    branches:
+      - dev
+      - main
+
+  pull_request:
+    branches:
+      - dev
+      - main
+
   workflow_dispatch:
 
 jobs:
   build-profiles:
-    name: Build
+    name: Build Profiles
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
+      - name: Install Node (for SUSHI)
+        uses: actions/setup-node@v4
         with:
-          path: profiles
-      - name: Get FHIR packages
-        uses: cybernop/fill-fhir-cache@v1
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install latest SUSHI
+        run: npm install -g fsh-sushi
+
+      - name: Install .NET SDK (for Firely Terminal)
+        uses: actions/setup-dotnet@v4
         with:
-          project-dir: profiles
-      - name: Update FHIR Profiles
-        uses: cybernop/build-fhir-profiles@v1
-        with:
-          sushi-version: "3.11.0"
-          project-dir: profiles
-      - name: Push built Profiles
-        uses: cybernop/push-fsh-profiles@v1
-        with:
-          project-dir: profiles
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+
+      - name: Install latest Firely Terminal
+        run: dotnet tool install -g firely.terminal
+
+      - name: Get all FHIR packages
+        run: fhir restore
+
+      - name: Generate depended FHIR packages snapshots
+        run: fhir deps | tr ' ' '@' | xargs -I% fhir inflate --package % --snapshot --expand --force
+
+      - name: Build FHIR profiles
+        run: sushi .
+
+      - name: Push built FHIR profiles
+        run: |
+          if [[ `git status --porcelain` ]]; then
+            git config user.name "${{ github.actor }}"
+            git config user.email "${{ github.actor_id }}+${{ github.actor }}@users.noreply.${{ github.repository_owner }}"
+            git fetch origin ${{ github.head_ref }}
+            git stash
+            git checkout ${{ github.head_ref }}
+            git pull origin ${{ github.head_ref }}
+            git stash pop
+            git add fsh-generated
+            git commit -m "[GEN] Generate FHIR profiles"
+            git push
+          fi
