@@ -107,12 +107,12 @@ Usage: #definition
 //----------------------------------------
 // SearchParameters for Strahlentherapie
 //----------------------------------------
-Instance: mii-sp-onko-strahlentherapie-ext-stellung
+Instance: mii-sp-onko-ext-strahlentherapie-stellungzurop
 InstanceOf: SearchParameter
 Usage: #definition
 * insert SP_Publisher
 * insert Version
-* name = "MII_SP_Strahlentherapie_Extension_Stellung"
+* name = "MII_SP_Extension_StellungZurOp"
 * description = "SearchParameter for Procedure.extension.stellung"
 * status = #active 
 * code = #extension-stellung
@@ -244,7 +244,19 @@ Usage: #definition
 // SearchParameters for Systemische Therapie
 //----------------------------------------
 
-// No search parameters to cover
+Instance: mii-sp-onko-systemischetherapie-ext-stellungzurop
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert Version
+* name = "MII_SP_Extension_StellungZurOp"
+* description = "SearchParameter for Procedure.extension.stellung"
+* status = #active 
+* code = #extension-stellung
+* base = #Procedure
+* type = #token
+* expression = "Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellung').value"
+
 
 //----------------------------------------
 // SearchParameters for Verlauf
@@ -336,18 +348,6 @@ Usage: #definition
 * type = #reference
 * expression = "Observation.encounter"
 
-Instance: mii-sp-onko-tod-derived-from
-InstanceOf: SearchParameter
-Usage: #definition
-* insert SP_Publisher
-* insert Version
-* name = "MII_SP_Onko_Tod_DerivedFrom"
-* description = "SearchParameter for Observation.derivedFrom"
-* status = #active
-* code = #derived-from
-* base = #Observation
-* type = #reference
-* expression = "Observation.derived-from"
 
 //----------------------------------------
 // SearchParameters for Genetische Variante
