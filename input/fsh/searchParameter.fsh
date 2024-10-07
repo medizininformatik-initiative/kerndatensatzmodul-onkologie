@@ -15,7 +15,8 @@ Usage: #definition
 * type = #token
 * expression = "Condition.verificationStatus"
 
-Instance: mii-sp-onko-diagnose-ext-morphology-behavior-icdo3 // im IG sollte kleingeschrieben werden im profil + Dokumentationsdatum auch
+Instance: mii-sp-onko-diagnose-ext-morphology-behavior-icdo3
+
 InstanceOf: SearchParameter
 Usage: #definition
 * insert SP_Publisher
@@ -263,6 +264,7 @@ Usage: #definition
 //----------------------------------------
 
 // No search parameters to cover
+
 
 //----------------------------------------
 // SearchParameters for Tumorkonferenz
