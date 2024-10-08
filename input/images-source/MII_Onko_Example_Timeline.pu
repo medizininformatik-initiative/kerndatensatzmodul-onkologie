@@ -305,7 +305,7 @@ object SystemicTherapy_2  #AAAAFF {
 * performedPeriod.start = 2021-11-08
 * performedPeriod.end = 2022-01-09
 }
-SystemicTherapy_2 -up-> Tumorboard_3
+SystemicTherapy_2 -left-> Tumorboard_3
 
 object SystemicTherapyMedication_2 #FFCCFF {
 * subject = Reference(PatientKimMusterperson)
@@ -331,7 +331,7 @@ object GenetischeVariante_1 #22FF22 {
 * note.text = "BRCAwt"
 * interpretation = $mii-cs-onko-genetische-variante-auspraegung#W "Wildtyp"
 }
-GenetischeVariante_1 -up--> Tumorboard_3
+GenetischeVariante_1 -left--> Verlauf_22_01_22
 
 object Tumorboard_4 #CCCCFF {
 * subject = Reference(PatientKimMusterperson)
@@ -380,9 +380,10 @@ object Primaerdiagnose_final #FFFF66 {
 * clinicalStatus = #remission 
 * verificationStatus.coding[primaertumorDiagnosesicherung].code = #7.1 "histologische Untersuchung eines Primärtumors" 
 * code.coding[0]  = $ICD10GM#C56   
-* code.coding[1]  = $ICDO3#M_8441_3 "Seröses Adenokarzinom" 
+* extension[morphology-behaviour-icdo3]  = $ICDO3#M_8441_3 "Seröses Adenokarzinom" 
 * bodySite = $ICDO3#C56.9 "Ovar o.n.A."
 }
+Tumorboard_4 -down-> Primaerdiagnose_final
 
 legend right 
 |Color|Type|
