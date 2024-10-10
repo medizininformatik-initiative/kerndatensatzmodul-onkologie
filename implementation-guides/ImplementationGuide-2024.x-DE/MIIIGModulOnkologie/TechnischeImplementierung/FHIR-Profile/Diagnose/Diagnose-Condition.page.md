@@ -157,6 +157,25 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "Condition.subject" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
 
+1. Der Suchparameter "body-site" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/Condition?body-site=http://terminology.hl7.org/CodeSystem/icd-o-3|C44.2```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "Condition.body-site" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+
+
+
+1. Der Suchparameter "morphology-behaviour-icd03" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/Condition?morphology-behaviour-icdo3=http://terminology.hl7.org/CodeSystem/icd-o-3|8503/2```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "Condition.extension[morphology-behaviour-icdo3]" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+
+
 1. Der Suchparameter "icd10gm-diagnosesicherheit" MUSS unterstützt werden:
 
     Beispiele:
