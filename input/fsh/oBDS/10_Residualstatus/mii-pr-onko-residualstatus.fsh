@@ -5,7 +5,7 @@ Title: "MII PR Onkologie Residualstatus"
 Description: "Umfang eines Residualtumors nach einer Therapie"
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 
 * meta.profile 0..* MS
 // Beurteilung des lokalen Residualstatus nach Abschluss der Operation 

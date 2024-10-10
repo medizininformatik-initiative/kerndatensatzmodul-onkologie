@@ -4,7 +4,7 @@ Title: "MII CS Onkologie TNM Version"
 Description: "Codes für TNM Version/Auflage nach welcher Version des TNM klassifiziert wird."
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version

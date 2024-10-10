@@ -5,7 +5,7 @@ Title: "MII PR Onkologie Histologie ICD-O-3"
 Description: "Histologie-Kodierung nach ICD-0 für die Verwendung von Folgediagnostik. Bei der histologischen Beurteilung des Primärtumors sind die histologischen Informationen direkt über die Condition-Ressource abzubilden."
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 * meta.profile 0..* MS
 * encounter 0..1 MS
 

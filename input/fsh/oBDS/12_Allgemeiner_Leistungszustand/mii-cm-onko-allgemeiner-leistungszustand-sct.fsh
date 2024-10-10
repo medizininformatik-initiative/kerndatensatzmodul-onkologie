@@ -4,7 +4,7 @@ Usage: #definition
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-allgemeiner-leistungszustand-sct"
 * name = "MII CM Onko Allgemeiner Leistungszustand SCT Mapping"
 * title = "MII CM Onko Allgemeiner Leistungszustand SNOMED Mapping"
-* status = #draft
+* status = #active
 * experimental = false
 * date = "2024-04-11"
 * description = "Mapping Allgemeiner Leistungszustand Codes zu SNOMED-CT"

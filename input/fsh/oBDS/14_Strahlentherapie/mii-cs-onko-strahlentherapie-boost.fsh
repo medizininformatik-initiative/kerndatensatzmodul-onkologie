@@ -4,7 +4,7 @@ Title: "MII CS Onkologie Strahlentherapie Boost"
 Description: "oBDS-spezifisches Codesystem für Klassifikation von Strahlentherapie-Boosts"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version

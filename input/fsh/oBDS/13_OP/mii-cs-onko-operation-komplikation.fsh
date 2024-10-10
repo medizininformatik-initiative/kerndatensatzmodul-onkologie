@@ -4,7 +4,7 @@ Title: "MII CS Onkologie Operation Komplikationen"
 Description: "oBDS-spezifisches Codesystem für Klassifikation von Komplikationen während der OP"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version

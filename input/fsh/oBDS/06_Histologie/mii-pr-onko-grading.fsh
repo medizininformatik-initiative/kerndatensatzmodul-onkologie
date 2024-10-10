@@ -6,7 +6,7 @@ Title: "MII PR Onkologie Grading"
 Description: "Histologie: Tumor Grading. Gibt den Differenzierungsgrad des Tumors entsprechend der aktuellen TNM-Auflage an."
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 * meta.profile 0..* MS
 * encounter 0..1 MS
 

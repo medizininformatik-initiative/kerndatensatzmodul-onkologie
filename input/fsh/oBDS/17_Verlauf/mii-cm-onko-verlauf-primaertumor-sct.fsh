@@ -4,7 +4,7 @@ Usage: #definition
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-verlauf-primaertumor-sct"
 * name = "MII CM Onko Verlauf Primaertumor SCT Mapping"
 * title = "MII CM Onko Verlauf Primaertumor SNOMED Mapping"
-* status = #draft
+* status = #active
 * experimental = false
 * date = "2024-04-10"
 * description = "Mapping Verlauf-Primaertumor Codes zu SNOMED-CT"

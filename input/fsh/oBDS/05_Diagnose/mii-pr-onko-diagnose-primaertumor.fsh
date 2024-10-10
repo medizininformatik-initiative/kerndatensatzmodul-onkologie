@@ -5,7 +5,7 @@ Title: "MII PR Onkologie Diagnose Primärtumor"
 Description: "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der primären hämatologisch-myeloneoplastischen Erkrankung)"
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 * meta.profile 0..* MS
 * encounter 0..1 MS
 * subject 1..1 MS

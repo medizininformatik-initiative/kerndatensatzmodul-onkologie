@@ -4,7 +4,7 @@ Usage: #definition
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-verlauf-fernmetastasen-sct"
 * name = "MII CM Onko Verlauf Fernmetastasen SCT Mapping"
 * title = "MII CM Onko Verlauf Fernmetastasen SNOMED Mapping"
-* status = #draft
+* status = #active
 * experimental = false
 * date = "2024-04-10"
 * description = "Mapping Verlauf Fernmetastasen Codes zu SNOMED-CT"

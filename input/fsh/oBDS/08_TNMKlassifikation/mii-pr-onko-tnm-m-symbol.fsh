@@ -5,7 +5,7 @@ Title: "MII PR Onkologie TNM m-Symbol"
 Description: "TNM-Klassifikation: TNM m-Symbol. Kennzeichnet Vorhandensein multipler Primärtumoren in einem anatomischen Bezirk."
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 * meta.profile 0..* MS
 * encounter 0..1 MS
 

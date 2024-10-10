@@ -4,7 +4,7 @@ Title: "MII VS Onkologie TNM N Kategorie Werte"
 Description: "Das ValueSet enthält die TNM N-Kategorie Codes aus der UICC TNM - Klassifikation maligner Tumoren Achte Auflage."
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-n-kategorie-werte"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version

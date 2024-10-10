@@ -5,7 +5,7 @@ Title: "MII PR Onkologie TNM L-Kategorie"
 Description: "TNM-Klassifikation: TNM L-Kategorie. Lymphgefäßinvasion."
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 * meta.profile 0..* MS
 * encounter 0..1 MS
 

@@ -4,7 +4,7 @@ Title: "MII VS Onkologie TNM m-Symbol"
 Description: "Kennzeichnet Vorhandensein multipler Primärtumoren in einem anatomischen Bezirk."
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-m-symbol"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version

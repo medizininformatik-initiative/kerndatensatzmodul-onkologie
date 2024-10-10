@@ -5,7 +5,7 @@ Title: "MII PR Onkologie Strahlentherapie"
 Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie in der Onkologie."
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 
 // Logical Modell see:  https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532153/Strahlentherapie+ST+Typ
 * meta.profile 0..* MS

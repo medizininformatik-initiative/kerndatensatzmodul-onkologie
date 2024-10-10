@@ -5,7 +5,7 @@ Title: "MII PR Onkologie Weitere Klassifikationen"
 Description: "Weitere Tumor Staging Klassifikation neben TMN (Hämatoonkologische und sonstige Klassifikationen)"
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 * meta.profile 0..* MS
 
 * subject 1..1 MS

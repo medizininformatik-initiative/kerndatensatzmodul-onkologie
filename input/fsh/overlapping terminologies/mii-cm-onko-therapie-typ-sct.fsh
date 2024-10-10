@@ -4,7 +4,7 @@ Usage: #definition
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-therapie-typ-sct"
 * name = "MII CM Onko Therapie Typ SNOMED Mapping"
 * title = "MII CM Onko Therapie Typ SNOMED Mapping"
-* status = #draft
+* status = #active
 * experimental = false
 * date = "2024-04-10"
 * description = "Mapping Therapie Typ Codes zu SNOMED-CT"

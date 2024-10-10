@@ -6,7 +6,7 @@ Description: "Mapping der Fernmetastasen-Codesystems  auf SNOMED"
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-fernmetastasen-sct"
 * name = "mii-cm-onko-fernmetastasen-sct-mapping"					
 * title = "Fernmetastasen"					
-* status = #draft
+* status = #active
 * experimental = true					
 * description = "Fernmetastasen"					
 * purpose = "Technical mapping to transform oBDS-Data into SNOMED"					
