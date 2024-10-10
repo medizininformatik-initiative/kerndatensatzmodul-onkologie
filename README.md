@@ -8,7 +8,7 @@
 
 Das vorliegende Projekt beschreibt die FHIR-Spezifikation des Basismoduls 'Onkologie'. Die hier veröffentlichten FHIR-Profile und ImplemenationGuides dienen als zentrale und verbindliche Spezifikation für die syntaktische und semantische Kodierung der Modulinhalte.
 
-Das Modul befindet sich derzeit in der Version 2024.0.0, das der ersten ooffiziellen Version entspricht. 
+Das Modul befindet sich derzeit in der Version 2025.0.0, das der ersten offiziellen Version entspricht. 
 
 
 Eine Weiterentwiclung des Moduls wird derzeit geplant, wobei mit Blick auf Ressourcen eine unter anderem werden folgende Punkte diskutiert: 
