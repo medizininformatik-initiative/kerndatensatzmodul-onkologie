@@ -46,6 +46,9 @@ Description: "Histologie: Anzahl der untersuchten Sentinel-Lymphknoten. Gibt an,
 * valueQuantity.system = $UCUM (exactly)
 * valueQuantity.unit 1.. MS
 * valueQuantity.value 1.. MS
+* insert Translation(valueQuantity.value ^short, de-DE, Anzahl untersuchter Lymphknoten )
+* insert Translation(valueQuantity.value ^definition, de-DE, Anzahl untersuchter SentinelLymphknoten nach 6.8 oBDS 2021 )
+
 
 
 
