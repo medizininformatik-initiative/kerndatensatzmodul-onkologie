@@ -4,7 +4,7 @@ Title: "MII VS Onkologie Allgemeiner Leistungszustand nach ECOG"
 Description: "Value Set für oBDS-Codes für den Allgemeinen Leistungszustand nach ECOG"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-ecog"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version

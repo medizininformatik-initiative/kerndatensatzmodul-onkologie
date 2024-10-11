@@ -4,7 +4,7 @@ Title: "MII CS Onkologie Allgemeiner Leistungszustand ECOG"
 Description: "oBDS-spezifisches Codesystem für den Allgemeinen Leistungszustand nach ECOG"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-ecog"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version

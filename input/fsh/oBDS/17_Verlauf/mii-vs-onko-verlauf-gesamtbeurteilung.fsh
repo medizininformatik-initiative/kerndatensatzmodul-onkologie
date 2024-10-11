@@ -4,7 +4,7 @@ Title: "MII VS Onkologie Verlauf Gesamtbeurteilung"
 Description: "oBDS-spezifisches ValueSet für die Gesamtbeurteilung im Behandlungsverlauf"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-verlauf-gesamtbeurteilung"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version

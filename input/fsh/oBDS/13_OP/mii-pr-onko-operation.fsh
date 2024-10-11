@@ -5,7 +5,7 @@ Title: "MII PR Onkologie Operation"
 Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 
 * meta.profile 0..* MS
 // OP-Datum

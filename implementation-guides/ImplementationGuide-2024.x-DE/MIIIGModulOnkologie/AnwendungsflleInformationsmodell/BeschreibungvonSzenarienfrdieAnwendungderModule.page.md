@@ -67,6 +67,6 @@ Intervalldebulking mittels Längsschnittlaparotomie, Tumorresektion mittels Hyst
 
 #### Grafische Darstellung des beispielhaften Therapieverlaufs
 
-<img src="https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/8d6c2498d5c40a6f056547cd0b0db6a37a2c1e55/implementation-guides/ImplementationGuide-2024.x-DE/Images/MII_Onko_Example_Timeline.svg" width="100%"></br>
+<img src="https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/refs/heads/dev/implementation-guides/ImplementationGuide-2024.x-DE/Images/MII_Onko_Example_Patient.svg" width="100%"></br>
 
-Die Bildatei kann [hier (Github)](https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/8d6c2498d5c40a6f056547cd0b0db6a37a2c1e55/implementation-guides/ImplementationGuide-2024.x-DE/Images/MII_Onko_Example_Timeline.svg) zur besseren Darstellung einzeln betrachtet und heruntergeladen werden (Bereitstellung als `.svg`).
+Die Bildatei kann [hier (Github)](https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/refs/heads/dev/implementation-guides/ImplementationGuide-2024.x-DE/Images/MII_Onko_Example_Timeline.svg) zur besseren Darstellung einzeln betrachtet und heruntergeladen werden (Bereitstellung als `.svg`).

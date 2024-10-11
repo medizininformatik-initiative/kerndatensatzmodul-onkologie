@@ -5,7 +5,7 @@ Title: "MII PR Onkologie Tumorkonferenz"
 Description: "Dieses Profil beschreibt die Tumorkonferenz und die Therapieempfehlungen"
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 * meta.profile 0..* MS
 * encounter 0..1 MS
 

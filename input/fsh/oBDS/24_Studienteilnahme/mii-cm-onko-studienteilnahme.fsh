@@ -4,7 +4,7 @@ Usage: #definition
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-studienteilnahme-sct"
 * name = "MII CM Onko Studienteilnahme SCT Mapping"
 * title = "MII CM Onko Studienteilnahme SNOMED Mapping"
-* status = #draft
+* status = #active
 * experimental = false
 * date = "2024-08-01"
 * description = "Mapping Studienteilnahme Status Codes zu SNOMED-CT"

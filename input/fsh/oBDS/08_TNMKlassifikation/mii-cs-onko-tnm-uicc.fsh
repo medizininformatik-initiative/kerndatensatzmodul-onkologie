@@ -4,7 +4,7 @@ Title: "MII CS Onkologie TNM UICC"
 Description: "Codes für TNM UICC Ausprägungen."
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
 * ^url = "https://www.uicc.org/resources/tnm"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version

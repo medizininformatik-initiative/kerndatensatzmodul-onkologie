@@ -4,7 +4,7 @@ Usage: #definition
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-grading-sct"
 * name = "MII CM Onko Grading SCT Mapping"
 * title = "MII CM Onko Grading SNOMED Mapping"
-* status = #draft
+* status = #active
 * experimental = false
 * date = "2024-04-11"
 * description = "Mapping Grading Codes zu SNOMED-CT"

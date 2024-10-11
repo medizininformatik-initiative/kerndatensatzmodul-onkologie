@@ -4,7 +4,7 @@ Title: "MII VS Onkologie Strahlentherapie Strahlungseinheit"
 Description: "oBDS-spezifisches ValueSet für Klassifikation von Strahlenart bei Strahlungseinheit"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-strahlungseinheit"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version

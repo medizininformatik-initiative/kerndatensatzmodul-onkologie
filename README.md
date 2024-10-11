@@ -8,6 +8,21 @@
 
 Das vorliegende Projekt beschreibt die FHIR-Spezifikation des Basismoduls 'Onkologie'. Die hier veröffentlichten FHIR-Profile und ImplemenationGuides dienen als zentrale und verbindliche Spezifikation für die syntaktische und semantische Kodierung der Modulinhalte.
 
+Das Modul befindet sich derzeit in der Version 2025.0.0, das der ersten offiziellen Version entspricht. 
+
+
+Eine Weiterentwiclung des Moduls wird derzeit geplant, wobei mit Blick auf Ressourcen eine unter anderem werden folgende Punkte diskutiert: 
+
+- Profilierung der organspezfischen Module des oBDS
+- Anpassen der Modellierung des CarePlans auf neuere FHIR R5 verfügbare Ressourcenelemente, so dass Therapieempfehlungen als ServiceRequests/MedicationRequests abgebildet werden
+- Ausprofilieren der wichtigsten verwendeten "weiteren" Klassifikationen
+- ggfs. Anpassen der oBDS-Datenelemente oder SNOMED-Mappings   
+
+
+
+
+
+
 --- 
 
 [![FHIR Profiles](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/actions/workflows/build-profiles.yaml/badge.svg)](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/actions/workflows/build-profiles.yaml)

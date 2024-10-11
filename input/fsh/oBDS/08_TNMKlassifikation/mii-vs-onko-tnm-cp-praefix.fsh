@@ -4,7 +4,7 @@ Title: "MII VS Onkologie TNM cpu Praefix"
 Description: "Codes für TNM c/p-Präfix. Gibt an, ob die Klassifikation klinisch oder pathologisch erfolgte."
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-cp-praefix"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version

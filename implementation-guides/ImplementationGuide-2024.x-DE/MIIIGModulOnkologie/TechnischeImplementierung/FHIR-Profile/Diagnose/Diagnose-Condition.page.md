@@ -1,7 +1,7 @@
 ---
 parent: 
 topic: DiagnoseCondition
-subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose
+subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose_primaertumor
 ---
 
 ## {{page-title}}
@@ -43,7 +43,7 @@ Die vorliegende Profilierung ist kompatibel mit dem Diagnoseprofil der ISiK-Basi
 from 
     StructureDefinition 
 where 
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose' 
+    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor' 
 select 
     Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 
@@ -58,7 +58,7 @@ select
         from
 	        StructureDefinition
         where
-	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose'
+	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor'
         select
 	        Beschreibung: description
         with
@@ -68,7 +68,7 @@ select
         from 
             StructureDefinition 
         where 
-            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose' 
+            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor' 
         for 
             differential.element 
             where 
@@ -102,7 +102,7 @@ Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensa
 
 @```
 from StructureDefinition 
-where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose'  
+where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor'  
     for differential.element
     where mapping.identity='oBDS'
     select 
@@ -156,6 +156,25 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
     ```GET [base]/Condition?patient=Patient/test```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "Condition.subject" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+
+1. Der Suchparameter "body-site" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/Condition?body-site=http://terminology.hl7.org/CodeSystem/icd-o-3|C44.2```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "Condition.body-site" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+
+
+
+1. Der Suchparameter "morphology-behaviour-icd03" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/Condition?morphology-behaviour-icdo3=http://terminology.hl7.org/CodeSystem/icd-o-3|8503/2```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "Condition.extension[morphology-behaviour-icdo3]" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+
 
 1. Der Suchparameter "icd10gm-diagnosesicherheit" MUSS unterstützt werden:
 
