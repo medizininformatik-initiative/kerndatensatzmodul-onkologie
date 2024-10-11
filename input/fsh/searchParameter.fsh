@@ -21,7 +21,7 @@ InstanceOf: SearchParameter
 Usage: #definition
 * insert SP_Publisher
 * insert Version
-* name = "MII_SP_Operation_Extension_Morphology_Behaviour_ICD-O-3"
+* name = "MII_SP_Diagnose_Extension_Morphology_Behaviour_ICD-O-3"
 * description = "SearchParameter for Diagnosis.extension[morphology-behaviour-icdo3]"
 * status = #active 
 * code = #extension-morphology-behavior-icdo3
