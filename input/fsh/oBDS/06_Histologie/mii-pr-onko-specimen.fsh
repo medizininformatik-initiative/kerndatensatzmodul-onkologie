@@ -10,7 +10,9 @@ Description: "Histologie: Dieses Profil beschreibt eine Gewebeprobe in der Onkol
 
 * subject 1..1 MS
 * subject only Reference(Patient)
+* collection MS
 * collection.collectedDateTime MS
+* accessionIdentifier MS
 * accessionIdentifier.value MS
 
 Mapping: FHIR-oBDS-Histologie-Specimen
@@ -19,4 +21,4 @@ Title: "Mapping FHIR zu oBDS"
 Source: MII_PR_Onko_Specimen
 * -> "6" "Histologie"
 * collection.collectedDateTime -> "6.1" "Tumor Histologiedatum"
-* identifier.value -> "6.2" "Histologie-Einsendenummer"
+* accessionIdentifier.value -> "6.2" "Histologie-Einsendenummer"
