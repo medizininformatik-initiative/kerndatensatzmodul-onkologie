@@ -6,6 +6,8 @@ Description: "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der 
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active
+* insert Translation(^title, de-DE, Onkologische Diagnose im Rahmen einer onkologischen Erkrankung)
+* insert Translation(^description, de-DE, Diagnose des Primärtumors bzw. der primären hämatologisch-myeloneoplastischen Erkrankung im Rahmen einer onkologischen Erkrankung)
 * meta.profile 0..* MS
 * encounter 0..1 MS
 * subject 1..1 MS
@@ -23,21 +25,33 @@ Description: "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der 
 * verificationStatus.coding[primaertumorDiagnosesicherung] from mii-vs-onko-primaertumor-diagnosesicherung (required)
 * verificationStatus.coding[primaertumorDiagnosesicherung].code 1.. MS
 * verificationStatus.coding[primaertumorDiagnosesicherung].system 1.. MS
+* insert Translation(verificationStatus.coding[primaertumorDiagnosesicherung] ^short, de-DE, Diagnosesicherung gemäß oBDS )
+* insert Translation(verificationStatus.coding[primaertumorDiagnosesicherung] ^definition, de-DE, Art der Diagnosesicherung nach 5.7 oBDS 2021 )
+
 * bodySite.coding contains
     primaertumorSeitenlokalisation 0..1 MS
 * bodySite.coding[primaertumorSeitenlokalisation] from mii-vs-onko-seitenlokalisation
 * bodySite.coding[primaertumorSeitenlokalisation].system 1.. MS
 * bodySite.coding[primaertumorSeitenlokalisation] ^patternCoding.system = $mii-cs-onko-seitenlokalisation
 * bodySite.coding[primaertumorSeitenlokalisation].code 1.. MS
+* insert Translation(bodySite.coding[primaertumorSeitenlokalisation] ^short, de-DE, Seitenlokalisation des Primärtumors gemäß oBDS )
+* insert Translation(bodySite.coding[primaertumorSeitenlokalisation] ^definition, de-DE, Seitenlokalisation des Primärtumors nach 5.8 oBDS 2021 )
+* insert Translation(bodySite.coding[icd-o-3] ^short, de-DE, ICD-O-Topographie )
+* insert Translation(bodySite.coding[icd-o-3] ^definition, de-DE, LiTopographie des Primärtumors nach ICD-O-3 nach 5.4 oBDS 2021 )
+
 * evidence 0..1 MS
 * evidence.detail MS
 * evidence.detail only Reference(MII_PR_Onko_Liste_Evidenz_Erstdiagnose)
+* insert Translation(evidence.detail ^short, de-DE, Evidenz für Erstdiagnose  )
+* insert Translation(evidence.detail ^definition, de-DE, Liste aller für die Erstdiagnose ausschlaggebenden Beobachtungen)
 
 * extension MS
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 * extension contains MII_EX_Onko_Histology_Morphology_Behavior_ICDO3 named morphology-behavior-icdo3 0..1 MS
+* insert Translation(extension[morphology-behavior-icdo3] ^short, de-DE, ICD-O-Morphologie )
+* insert Translation(extension[morphology-behavior-icdo3] ^definition, de-DE, Morphologie des Primärtumors nach ICD-O-3 nach 6.3 oBDS )
 
 Mapping: FHIR-oBDS-Diagnose
 Id: oBDS
