@@ -49,8 +49,14 @@
         "mustSupport": true
       },
       {
-        "id": "Specimen.identifier.value",
-        "path": "Specimen.identifier.value",
+        "id": "Specimen.accessionIdentifier",
+        "path": "Specimen.accessionIdentifier",
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.accessionIdentifier.value",
+        "path": "Specimen.accessionIdentifier.value",
+        "mustSupport": true,
         "mapping": [
           {
             "identity": "oBDS",
@@ -58,11 +64,6 @@
             "comment": "Histologie-Einsendenummer"
           }
         ]
-      },
-      {
-        "id": "Specimen.accessionIdentifier.value",
-        "path": "Specimen.accessionIdentifier.value",
-        "mustSupport": true
       },
       {
         "id": "Specimen.subject",
@@ -76,6 +77,11 @@
             ]
           }
         ],
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection",
+        "path": "Specimen.collection",
         "mustSupport": true
       },
       {

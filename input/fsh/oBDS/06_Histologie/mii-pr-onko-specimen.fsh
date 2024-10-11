@@ -21,4 +21,4 @@ Title: "Mapping FHIR zu oBDS"
 Source: MII_PR_Onko_Specimen
 * -> "6" "Histologie"
 * collection.collectedDateTime -> "6.1" "Tumor Histologiedatum"
-* identifier.value -> "6.2" "Histologie-Einsendenummer"
+* accessionIdentifier.value -> "6.2" "Histologie-Einsendenummer"

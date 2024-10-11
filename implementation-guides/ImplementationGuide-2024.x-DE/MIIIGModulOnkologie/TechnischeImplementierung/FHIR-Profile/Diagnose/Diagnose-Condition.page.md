@@ -1,7 +1,7 @@
 ---
 parent: 
 topic: DiagnoseCondition
-subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose_primaertumor
+subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor
 ---
 
 ## {{page-title}}

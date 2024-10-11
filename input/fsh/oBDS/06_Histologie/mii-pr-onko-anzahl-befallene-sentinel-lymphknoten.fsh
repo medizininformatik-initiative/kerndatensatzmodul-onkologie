@@ -46,6 +46,9 @@ Description: "Histologie: Anzahl der befallenen Sentinel-Lymphknoten. Gibt an, w
 * valueQuantity.system = $UCUM (exactly)
 * valueQuantity.unit 1.. MS
 * valueQuantity.value 1.. MS
+* insert Translation(valueQuantity.value ^short, de-DE, Anzahl befallener Sentinel-Lymphknoten )
+* insert Translation(valueQuantity.value ^definition, de-DE, Anzahl befallener Lymphknoten nach 6.10 oBDS 2021 )
+
 
 
 // Referenz zu Primärtumor

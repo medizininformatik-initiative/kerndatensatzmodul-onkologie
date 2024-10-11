@@ -20,7 +20,7 @@ Description: "Histologie: Befund. Vollständiger Befundbericht des Pathologen."
 * specimen 0..* MS 
 * specimen only Reference(MII_PR_Onko_Specimen or Specimen)
 * code MS
-* code ^short = "Pathology report code"
+* code ^short = "Pathology report code" 
 * code.coding MS
 * code.coding ^slicing.discriminator.type = #pattern
 * code.coding ^slicing.discriminator.path = "$this"

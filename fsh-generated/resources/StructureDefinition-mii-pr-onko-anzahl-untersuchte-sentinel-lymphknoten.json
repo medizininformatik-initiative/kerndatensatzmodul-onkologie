@@ -197,7 +197,41 @@
             "map": "6.9",
             "comment": "Anzahl der untersuchten Sentinel-Lymphknoten"
           }
-        ]
+        ],
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Anzahl untersuchter Lymphknoten"
+                }
+              ]
+            }
+          ]
+        },
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Anzahl untersuchter SentinelLymphknoten nach 6.8 oBDS 2021"
+                }
+              ]
+            }
+          ]
+        }
       },
       {
         "id": "Observation.value[x].unit",

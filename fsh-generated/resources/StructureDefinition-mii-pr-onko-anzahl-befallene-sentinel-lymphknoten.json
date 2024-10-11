@@ -197,7 +197,41 @@
             "map": "6.10",
             "comment": "Anzahl der befallenen Sentinel-Lymphknoten"
           }
-        ]
+        ],
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Anzahl befallener Sentinel-Lymphknoten"
+                }
+              ]
+            }
+          ]
+        },
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Anzahl befallener Lymphknoten nach 6.10 oBDS 2021"
+                }
+              ]
+            }
+          ]
+        }
       },
       {
         "id": "Observation.value[x].unit",
