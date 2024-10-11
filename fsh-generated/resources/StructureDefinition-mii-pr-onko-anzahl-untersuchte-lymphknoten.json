@@ -197,7 +197,41 @@
             "map": "6.7",
             "comment": "Anzahl der untersuchten Lymphknoten"
           }
-        ]
+        ],
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Anzahl untersuchter Lymphknoten"
+                }
+              ]
+            }
+          ]
+        },
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Anzahl untersuchter Lymphknoten nach 6.7 oBDS 2021"
+                }
+              ]
+            }
+          ]
+        }
       },
       {
         "id": "Observation.value[x].unit",
