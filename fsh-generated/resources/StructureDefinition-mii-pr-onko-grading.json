@@ -192,6 +192,44 @@
         }
       },
       {
+        "id": "Observation.value[x].coding",
+        "path": "Observation.value[x].coding",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Histologisches Grading"
+                }
+              ]
+            }
+          ]
+        },
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Histologisches Grading nach 6.6 oBDS 2021"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
         "id": "Observation.value[x].coding.system",
         "path": "Observation.value[x].coding.system",
         "min": 1,

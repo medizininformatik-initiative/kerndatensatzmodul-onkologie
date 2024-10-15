@@ -20,6 +20,9 @@ Description: "TNM-Klassifikation: TNM S-Kategorie. Serumtumormarker."
 * effective[x] only dateTime
 * effectiveDateTime MS
 * effectiveDateTime obeys tnm-datum
+* insert Translation(effectiveDateTime ^short, de-DE, TNM-Datum )
+* insert Translation(effectiveDateTime ^definition, de-DE, Datum der TNM-Klassifikation nach 8.1 oBDS 2021 )
+
 * method MS
 * method ^short = "TNM Version"
 * method ^definition = "Gibt an, nach welcher Version des TNM klassifiziert wurde."
@@ -32,6 +35,9 @@ Description: "TNM-Klassifikation: TNM S-Kategorie. Serumtumormarker."
 * valueCodeableConcept ^comment = "Nach aktuellem TNM: derzeit nur beim Hodentumor."
 * valueCodeableConcept.coding.code 1.. MS
 * valueCodeableConcept.coding.system 1.. MS
+* insert Translation(valueCodeableConcept.coding ^short, de-DE, TNM S-Kategorie )
+* insert Translation(valueCodeableConcept.coding ^definition, de-DE, TNM Serumtumormarker nach 8.16 oBDS 2021 )
+
 
 
 // Referenz zu Primärtumor

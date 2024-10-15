@@ -25,6 +25,9 @@ Description: "TNM-Klassifikation: TNM N-Kategorie. Ausbreitung von regionären L
 * effective[x] only dateTime
 * effectiveDateTime MS
 * effectiveDateTime obeys tnm-datum
+* insert Translation(effectiveDateTime ^short, de-DE, TNM-Datum )
+* insert Translation(effectiveDateTime ^definition, de-DE, Datum der TNM-Klassifikation nach 8.1 oBDS 2021 )
+
 * hasMember MS
 * hasMember only Reference(MII_PR_Onko_Anzahl_Befallene_Lymphknoten or MII_PR_Onko_Anzahl_Untersuchte_Lymphknoten or MII_PR_Onko_Anzahl_Befallene_Sentinel_Lymphknoten or MII_PR_Onko_Anzahl_Untersuchte_Sentinel_Lymphknoten )
 * method MS
@@ -44,6 +47,9 @@ Description: "TNM-Klassifikation: TNM N-Kategorie. Ausbreitung von regionären L
 * valueCodeableConcept ^comment = "Entitätsspezifisch, siehe auch allgemeine Bemerkungen zu TNM."
 * valueCodeableConcept.coding.code 1.. MS
 * valueCodeableConcept.coding.system 1.. MS
+* insert Translation(valueCodeableConcept.coding ^short, de-DE, TNM N-Kategorie )
+* insert Translation(valueCodeableConcept.coding ^definition, de-DE, TNM Lymphknotenbefall nach 8.11 oBDS 2021 )
+
 
 
 

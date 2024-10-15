@@ -157,7 +157,45 @@
             "map": "6.11",
             "comment": "Befund"
           }
-        ]
+        ],
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Befund als Freitext"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "DiagnosticReport.conclusion.value",
+        "path": "DiagnosticReport.conclusion.value",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Befund als Freitext nach 6.11 oBDS 2021"
+                }
+              ]
+            }
+          ]
+        }
       }
     ]
   }
