@@ -54,8 +54,65 @@
         "mustSupport": true
       },
       {
+        "id": "Observation.code.coding.code",
+        "path": "Observation.code.coding.code",
+        "definition": "Hier ist eine entsprechende Kodierung anzugeben, mit dem die Klassifikation in einem internationalen Standard (z.B. SNOMED-CT, LOINC, etc. ) semantisch annotiert werden kann",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Name der Klassifikation kodiert in internationalem Standard - falls vorhanden"
+                }
+              ]
+            }
+          ]
+        },
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Klassifikation Name Kodierung"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
         "id": "Observation.code.text",
         "path": "Observation.code.text",
+        "definition": "Hier ist der String aus dem oBDS einzuleiten",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Name der Klassifikation wie in Krebsregistermeldung angegeben"
+                }
+              ]
+            }
+          ]
+        },
         "min": 1,
         "mustSupport": true,
         "mapping": [
@@ -64,7 +121,24 @@
             "map": "09.2",
             "comment": "Hämatoonkologische und sonstige Klassifikationen Name"
           }
-        ]
+        ],
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Klassifikation Name Freitext"
+                }
+              ]
+            }
+          ]
+        }
       },
       {
         "id": "Observation.subject",
@@ -113,11 +187,81 @@
             "map": "09.1",
             "comment": "Hämatoonkologische und sonstige Klassifikationen Datum"
           }
-        ]
+        ],
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Datum"
+                }
+              ]
+            }
+          ]
+        },
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Datum der weiteren Klassifikation"
+                }
+              ]
+            }
+          ]
+        }
       },
       {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
+        "short": "Wert/ Einstufung in jeweiliger Klassifikation",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Wert der weiteren Klassifikation"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Einstufung nach jeweiliger Klassifikation. Je nach ausgewählter Systematik kann hier eine Klassifikation/Kategorisierung, ein Puntkwert oder ein anderer Datentyp auftauchen",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Wert in oben ausgewählter Klassifikation"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true,
         "mapping": [
           {
