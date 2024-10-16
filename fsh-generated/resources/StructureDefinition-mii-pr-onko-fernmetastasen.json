@@ -119,7 +119,41 @@
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
         "short": "Lokalisation der Fernmetastase laut oBDS/TNM-Kodierung",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Lokalisation der Fernmetastasen"
+                }
+              ]
+            }
+          ]
+        },
         "definition": "weitere Lokalisationen sind als einzelne Ressourcen zu kodieren",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Lokalisation der Fernmetastasen laut 11.1 oBDS 2021 / TNM Kodierung"
+                }
+              ]
+            }
+          ]
+        },
         "min": 1,
         "type": [
           {
