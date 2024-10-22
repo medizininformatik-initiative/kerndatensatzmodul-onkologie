@@ -60,9 +60,6 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 * insert Translation(outcome.coding ^short, de-DE, Lokaler Residualstatus )
 * insert Translation(outcome.coding ^definition, de-DE, Lokaler Residualstatus der OP gemäß 10.1 oBDS 2021. Globaler Residualstatus wird prozedurenunabhängig als eigenständige Observation kodiert. )
 
-
-
-
 // Referenz auf Tumorboard
 * basedOn MS
 * basedOn only Reference(CarePlan)
