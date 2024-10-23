@@ -9,10 +9,10 @@ Description: "Dieses Profil beschreibt die Tumorkonferenz und die Therapieempfeh
 * meta.profile 0..* MS
 * encounter 0..1 MS
 
-* identifier MS
 * status MS
+* status = #unknown
 * intent MS
-
+* intent = #plan
 * subject MS
 * subject 1..1
 * subject only Reference(Patient)
@@ -26,6 +26,8 @@ Description: "Dieses Profil beschreibt die Tumorkonferenz und die Therapieempfeh
 
 // Therapieplanung Datum
 * created 1..1 MS
+* insert Translation(component[Fernmetastasen_Verlauf].valueCodeableConcept.coding ^short, de-DE, Gesamtbeurteilung Fernmetastasen im Verlauf )
+* insert Translation(component[Fernmetastasen_Verlauf].valueCodeableConcept.coding ^definition, de-DE, Gesamtbeurteilung von Fernmetastasen im Verlauf gemäß 17.5 oBDS 2021. )
 
 // die Referenz zu Tumorerkrankung
 * addresses MS
