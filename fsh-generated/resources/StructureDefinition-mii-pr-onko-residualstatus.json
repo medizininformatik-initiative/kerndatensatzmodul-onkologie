@@ -184,7 +184,41 @@
             "map": "10.2",
             "comment": "Gesamtbeurteilung des Residualstatus"
           }
-        ]
+        ],
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Residualstatus"
+                }
+              ]
+            }
+          ]
+        },
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Globaler Residualstatus nach 10.2 oBDS 2021. Der lokale Residualstatus von Operationen wird direkt an der Operation kodiert"
+                }
+              ]
+            }
+          ]
+        }
       }
     ]
   }

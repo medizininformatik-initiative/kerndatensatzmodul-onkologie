@@ -20,6 +20,9 @@ Description: "TNM-Klassifikation: TNM r-Symbol. Gibt an, ob die Klassifikation e
 * effective[x] only dateTime
 * effectiveDateTime MS
 * effectiveDateTime obeys tnm-datum
+* insert Translation(effectiveDateTime ^short, de-DE, TNM-Datum )
+* insert Translation(effectiveDateTime ^definition, de-DE, Datum der TNM-Klassifikation nach 8.1 oBDS 2021 )
+
 * value[x] MS
 * value[x] only CodeableConcept
 * valueCodeableConcept = $SCT#421188008
@@ -28,6 +31,9 @@ Description: "TNM-Klassifikation: TNM r-Symbol. Gibt an, ob die Klassifikation e
 * valueCodeableConcept ^comment = "r = Klassifikation erfolgte zur Beurteilung eines Rezidivs; (leer) = „native“ Klassifikation vor Eintreten eines Rezidivs"
 * valueCodeableConcept.coding.code 1.. MS
 * valueCodeableConcept.coding.system 1.. MS
+* insert Translation(valueCodeableConcept.coding ^short, de-DE, TNM r-Symbol )
+* insert Translation(valueCodeableConcept.coding ^definition, de-DE, TNM Rezidiv nach 8.4 oBDS 2021 )
+
 
 // Referenz zu Primärtumor
 * focus MS

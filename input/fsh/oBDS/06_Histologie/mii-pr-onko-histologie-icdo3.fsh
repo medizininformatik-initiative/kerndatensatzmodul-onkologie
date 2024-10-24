@@ -15,6 +15,8 @@ Description: "Histologie-Kodierung nach ICD-0 für die Verwendung von Folgediagn
 * code.coding = $LOINC#59847-4 
 * effective[x] MS
 * effective[x] only dateTime
+* insert Translation(effectiveDateTime ^short, de-DE, Tumor Histologiedatum )
+* insert Translation(effectiveDateTime ^definition, de-DE, Tumor Histologiedatum im Krankheitsverlauf )
 * subject 1.. MS
 * subject only Reference(Patient)
 * value[x] 1..1 MS
@@ -24,7 +26,10 @@ Description: "Histologie-Kodierung nach ICD-0 für die Verwendung von Folgediagn
 * valueCodeableConcept from $ICDO3 (required)
 * valueCodeableConcept.coding 0..1 MS
 * valueCodeableConcept.text 0..1 MS
-
+* insert Translation(valueCodeableConcept.coding.code ^short, de-DE, Morphologie-Kode )
+* insert Translation(valueCodeableConcept.coding.code ^definition, de-DE, Morphologie als ICD-O-3 nach 6.3 oBDS 2021 )
+* insert Translation(valueCodeableConcept.coding.version ^short, de-DE, Morphologie-Kode-Version )
+* insert Translation(valueCodeableConcept.coding.version ^definition, de-DE, Version der ICD-O-3 bzw. Blue Book nach 6.4 oBDS 2021 )
 
 
 * bodySite.coding MS

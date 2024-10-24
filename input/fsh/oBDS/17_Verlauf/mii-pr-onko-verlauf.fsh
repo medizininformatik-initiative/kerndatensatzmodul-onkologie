@@ -17,14 +17,20 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
 * subject only Reference(Patient)
 
 * code MS
-// * code 1..1  erst wieder reinschalten 
-// * code.coding = SNOMED/LOINC Beurteilung
-* code.coding = $SCT#396432002 "Status of regression of tumor (observable entity)"
 
+* code.coding = $SCT#396432002 "Status of regression of tumor (observable entity)"
 
 * hasMember MS
 * hasMember 0..*
 * hasMember only Reference(Observation)
+
+
+* effective[x] MS
+* effectiveDateTime  0..1 MS
+* effectiveDateTime ^comment = "In der vorliegenden ersten Version des Moduls Onkologie ist das letzte (= späteste) Datum der verlinkten Observations anzugeben, entsprechend Punkt 17.1 des oBDS 2021 . Langfristig ist zu überlegen, hier über eine effectivePeriod eine Datumsrange abzubilden. "
+* insert Translation(valueCodeableConcept.coding ^short, de-DE, Datum der Untersuchung im Verlauf )
+* insert Translation(valueCodeableConcept.coding ^definition, de-DE, Datum der letzten Untersuchung in dieser Verlaufsbeurteilung gemäß 17.1 oBDS 2021. )
+
 
 * value[x] MS
 * value[x] 0..1
@@ -32,6 +38,8 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
 * valueCodeableConcept from MII_VS_Onko_Verlauf_Gesamtbeurteilung (extensible)
 * valueCodeableConcept.coding.system MS
 * valueCodeableConcept.coding.code MS
+* insert Translation(valueCodeableConcept.coding ^short, de-DE, Gesamtbeurteilung im Verlauf )
+* insert Translation(valueCodeableConcept.coding ^definition, de-DE, Gesamtbeurteilung im Verlauf gemäß 17.2 oBDS 2021. )
 
 * component MS
 * component 1..*
@@ -49,6 +57,9 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
 * component[Tumor_Verlauf].valueCodeableConcept from mii-vs-onko-verlauf-primaertumor (required)
 * component[Tumor_Verlauf].valueCodeableConcept.coding.system MS
 * component[Tumor_Verlauf].valueCodeableConcept.coding.code MS
+* insert Translation(component[Tumor_Verlauf].valueCodeableConcept.coding ^short, de-DE, Gesamtbeurteilung Primärtumor im Verlauf )
+* insert Translation(component[Tumor_Verlauf].valueCodeableConcept.coding ^definition, de-DE, Gesamtbeurteilung des Primärtumors im Verlauf gemäß 17.3 oBDS 2021. )
+
 
 * component[Lymphknoten_Verlauf] MS 
 * component[Lymphknoten_Verlauf].code.coding = $SCT#399656008 "Status of tumor metastasis to regional lymph nodes (observable entity)"
@@ -56,6 +67,8 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
 * component[Lymphknoten_Verlauf].valueCodeableConcept from mii-vs-onko-verlauf-lymphknoten (required)
 * component[Lymphknoten_Verlauf].valueCodeableConcept.coding.system MS
 * component[Lymphknoten_Verlauf].valueCodeableConcept.coding.code MS
+* insert Translation(component[Lymphknoten_Verlauf].valueCodeableConcept.coding ^short, de-DE, Gesamtbeurteilung Lymphknoten im Verlauf )
+* insert Translation(component[Lymphknoten_Verlauf].valueCodeableConcept.coding ^definition, de-DE, Gesamtbeurteilung der Lymphknoteninfiltration im Verlauf gemäß 17.4 oBDS 2021. )
 
 * component[Fernmetastasen_Verlauf] MS
 * component[Fernmetastasen_Verlauf].code.coding = $SCT#399608002 "Status of distant metastasis (observable entity)"
@@ -63,6 +76,8 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
 * component[Fernmetastasen_Verlauf].valueCodeableConcept from mii-vs-onko-verlauf-fernmetastasen (required)
 * component[Fernmetastasen_Verlauf].valueCodeableConcept.coding.system MS
 * component[Fernmetastasen_Verlauf].valueCodeableConcept.coding.code MS
+* insert Translation(component[Fernmetastasen_Verlauf].valueCodeableConcept.coding ^short, de-DE, Gesamtbeurteilung Fernmetastasen im Verlauf )
+* insert Translation(component[Fernmetastasen_Verlauf].valueCodeableConcept.coding ^definition, de-DE, Gesamtbeurteilung von Fernmetastasen im Verlauf gemäß 17.5 oBDS 2021. )
 
 // Referenz zu Primärtumor
 * focus MS

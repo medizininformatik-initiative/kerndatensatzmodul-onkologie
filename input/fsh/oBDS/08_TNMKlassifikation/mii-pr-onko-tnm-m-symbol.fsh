@@ -20,6 +20,9 @@ Description: "TNM-Klassifikation: TNM m-Symbol. Kennzeichnet Vorhandensein multi
 * effective[x] only dateTime
 * effectiveDateTime MS
 * effectiveDateTime obeys tnm-datum
+* insert Translation(effectiveDateTime ^short, de-DE, TNM-Datum )
+* insert Translation(effectiveDateTime ^definition, de-DE, Datum der TNM-Klassifikation nach 8.1 oBDS 2021 )
+
 * value[x] MS
 * value[x] only CodeableConcept
 * valueCodeableConcept from MII_VS_Onko_TNM_m_Symbol (required)
@@ -28,6 +31,8 @@ Description: "TNM-Klassifikation: TNM m-Symbol. Kennzeichnet Vorhandensein multi
 * valueCodeableConcept ^comment = "(m) = multiple Tumoren ohne Angabe der Zahl; (Zahl) = Anzahl der multiplen Tumoren; (leer) = keine multiplen Tumoren"
 * valueCodeableConcept.coding.code 1.. MS
 * valueCodeableConcept.coding.system 1.. MS
+* insert Translation(valueCodeableConcept.coding ^short, de-DE, TNM m-Symbol )
+* insert Translation(valueCodeableConcept.coding ^definition, de-DE, TNM multiple Tumore nach 8.10 oBDS 2021 )
 
 
 // Referenz zu Primärtumor

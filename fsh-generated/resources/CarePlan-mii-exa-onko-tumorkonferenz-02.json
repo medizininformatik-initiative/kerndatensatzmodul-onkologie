@@ -1,6 +1,6 @@
 {
   "resourceType": "CarePlan",
-  "id": "PatientKimMusterperson-Tumorkonferenz-1",
+  "id": "mii-exa-onko-tumorkonferenz-02",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
@@ -12,20 +12,9 @@
       "coding": [
         {
           "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ",
-          "code": "praeth",
-          "display": "Prätherapeutische Tumorkonferenz"
+          "code": "postop"
         }
       ]
-    }
-  ],
-  "subject": {
-    "reference": "Patient/PatientKimMusterperson"
-  },
-  "status": "completed",
-  "created": "2021-06-25",
-  "addresses": [
-    {
-      "reference": "Condition/PatientKimMusterperson-Diagnosis-1"
     }
   ],
   "activity": [
@@ -34,18 +23,18 @@
         "code": {
           "coding": [
             {
-              "code": "CH",
               "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ",
-              "display": "Chemotherapie"
+              "code": "OP"
             }
           ]
         },
-        "status": "completed",
+        "status": "cancelled",
         "statusReason": {
           "coding": [
             {
               "code": "N",
-              "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieabweichung"
+              "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieabweichung",
+              "display": "nein"
             }
           ]
         }
@@ -56,21 +45,33 @@
         "code": {
           "coding": [
             {
-              "code": "OP",
-              "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ"
+              "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ",
+              "code": "ZS",
+              "display": "Zielgerichtete Substanzen"
             }
           ]
         },
-        "status": "completed",
+        "status": "cancelled",
         "statusReason": {
           "coding": [
             {
               "code": "N",
-              "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieabweichung"
+              "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieabweichung",
+              "display": "nein"
             }
           ]
         }
       }
     }
-  ]
+  ],
+  "identifier": [
+    {
+      "value": "Tumorkonferenz_2"
+    }
+  ],
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "created": "2024-01-11"
 }
