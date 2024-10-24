@@ -60,17 +60,14 @@ Usage: #definition
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
 * insert SupportSearchParam(_lastUpdated, http://hl7.org/fhir/SearchParameter/Resource-lastUpdated, #date, #SHALL)
 * insert SupportSearchParam(_profile, http://hl7.org/fhir/SearchParameter/Resource-profile, #uri, #SHALL)
-* insert SupportSearchParam(verificationStatus, https://www.medizininformatik-initiative.de/fhir/core/modul-onko/SearchParameter/verificationStatus, #token, #SHALL)
-* insert SupportSearchParam(extension-morphology-behavior-icdo3, http://hl7.org/fhir/SearchParameter/Diagnose-morphology-behavior-icdo3, #token, #SHALL) // nochmal überprüfen
-* insert SupportSearchParam(clinical-status, http://hl7.org/fhir/SearchParameter/Condition-clinical-status, #token, #SHALL) 
+* insert SupportSearchParam(verificationStatus, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-condition-verification-status, #token, #SHALL)
+* insert SupportSearchParam(morphology-behavior-icdo3, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-condition-ext-morphology-behavior-icdo, #token, #SHALL)
 * insert SupportSearchParam(code, http://hl7.org/fhir/SearchParameter/clinical-code, #token, #SHALL) 
 * insert SupportSearchParam(body-site, http://hl7.org/fhir/SearchParameter/Condition-body-site, #token, #SHALL) 
 * insert SupportSearchParam(subject, http://hl7.org/fhir/SearchParameter/Condition-subject, #reference, #SHALL)
 * insert SupportSearchParam(encounter, http://hl7.org/fhir/SearchParameter/clinical-encounter, #reference, #SHALL)
-* insert SupportSearchParam(onset-date, http://hl7.org/fhir/SearchParameter/Condition-onset-date, #date, #SHALL)
 * insert SupportSearchParam(recorded-date, http://hl7.org/fhir/SearchParameter/Condition-recorded-date, #date, #SHALL)
-* insert SupportSearchParam(evidenc-detail, http://hl7.org/fhir/SearchParameter/Condition-evidence-detail, #reference, #SHALL)
-* insert SupportSearchParam(note, https://www.medizininformatik-initiative.de/fhir/core/modul-onko/SearchParameter/note, #string, #SHALL)
+* insert SupportSearchParam(evidence-detail, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-condition-evidence, #reference, #SHALL)
 
 // Specimen requirements
 * insert SupportResource(Specimen, #SHALL)
@@ -141,20 +138,18 @@ Usage: #definition
 * insert SupportSearchParam(code, http://hl7.org/fhir/SearchParameter/clinical-code, #token, #SHALL)
 * insert SupportSearchParam(subject, http://hl7.org/fhir/SearchParameter/Observation-subject, #reference, #SHALL)
 * insert SupportSearchParam(focus, http://hl7.org/fhir/SearchParameter/Observation-focus, #reference, #SHALL)
-* insert SupportSearchParam(encounter, http://hl7.org/fhir/SearchParameter/clinical-encounter, #reference, #SHALL) 
+* insert SupportSearchParam(encounter, http://hl7.org/fhir/SearchParameter/clinical-encounter, #reference, #SHALL)
 * insert SupportSearchParam(date, http://hl7.org/fhir/SearchParameter/clinical-date, #date, #SHALL)
 * insert SupportSearchParam(value-quantity, http://hl7.org/fhir/SearchParameter/Observation-value-quantity, #quantity, #SHALL)
 * insert SupportSearchParam(hasMember, http://hl7.org/fhir/SearchParameter/Observation-hasMember, #reference, #SHALL)
 * insert SupportSearchParam(status, http://hl7.org/fhir/SearchParameter/Observation-status, #token, #SHALL)
 * insert SupportSearchParam(method, http://hl7.org/fhir/SearchParameter/Observation-method, #token, #SHALL)
 * insert SupportSearchParam(part-of, http://hl7.org/fhir/SearchParameter/Observation-part-of, #token, #SHALL)
-* insert SupportSearchParam(component-code, http://hl7.org/fhir/SearchParameter/Observation-component-code, #token, #SHALL) // nochmal überprüfen
+* insert SupportSearchParam(component-code, http://hl7.org/fhir/SearchParameter/Observation-component-code, #token, #SHALL)
 * insert SupportSearchParam(identifier, http://hl7.org/fhir/SearchParameter/clinical-identifier, #token, #SHALL)
-* insert SupportSearchParam(interpretation, https://www.medizininformatik-initiative.de/fhir/core/modul-onko/SearchParameter/interpretation,  #token, #SHALL)
+* insert SupportSearchParam(interpretation, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-observation-interpretation,  #token, #SHALL)
 * insert SupportSearchParam(value-concept, http://hl7.org/fhir/SearchParameter/Observation-value-concept, #token, #SHALL)
-* insert SupportSearchParam(note, https://www.medizininformatik-initiative.de/fhir/core/modul-onko/SearchParameter/note, #token, #SHALL)
-* insert SupportSearchParam(specimen, http://hl7.org/fhir/SearchParameter/Observation-specimen, #reference, #SHALL)
-* insert SupportSearchParam(device, http://hl7.org/fhir/SearchParameter/Observation-device, #reference, #SHALL)
+* insert SupportSearchParam(note, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-observation-note, #string, #SHALL)
 
 // List requirements
 * insert SupportResource(List, #SHALL)
@@ -166,12 +161,12 @@ Usage: #definition
 * insert SupportSearchParam(_lastUpdated, http://hl7.org/fhir/SearchParameter/Resource-lastUpdated, #date, #SHALL)
 * insert SupportSearchParam(_profile, http://hl7.org/fhir/SearchParameter/Resource-profile, #uri, #SHALL)
 * insert SupportSearchParam(status, http://hl7.org/fhir/SearchParameter/List-status, #token, #SHALL)
-// TODO mode
+* insert SupportSearchParam(mode, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-mode, #token, #SHALL)
 * insert SupportSearchParam(title, http://hl7.org/fhir/SearchParameter/List-title, #string, #SHALL)
 * insert SupportSearchParam(subject, http://hl7.org/fhir/SearchParameter/List-subject, #reference, #SHALL)
 * insert SupportSearchParam(encounter, http://hl7.org/fhir/SearchParameter/clinical-encounter, #reference, #SHALL) 
-// TODO entry
-
+* insert SupportSearchParam(flag, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-flag, #token, #SHALL)
+* insert SupportSearchParam(item, http://hl7.org/fhir/SearchParameter/List-item, #reference, #SHALL) 
 
 // Procedure requirements
 * insert SupportResource(Procedure, #SHALL)
@@ -186,28 +181,25 @@ Usage: #definition
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
 * insert SupportSearchParam(_lastUpdated, http://hl7.org/fhir/SearchParameter/Resource-lastUpdated, #date, #SHALL)
 * insert SupportSearchParam(_profile, http://hl7.org/fhir/SearchParameter/Resource-profile, #uri, #SHALL)
-* insert SupportSearchParam(extension-intention, http://hl7.org/fhir/SearchParameter/Operation-intention, #token, #SHALL)
+* insert SupportSearchParam(intention, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-intention, #token, #SHALL)
 * insert SupportSearchParam(based-on, http://hl7.org/fhir/SearchParameter/Procedure-based-on, #reference, #SHALL)
 * insert SupportSearchParam(part-of, http://hl7.org/fhir/SearchParameter/Procedure-part-of, #token, #SHALL)
-* insert SupportSearchParam(status, http://hl7.org/fhir/SearchParameter/Procedure-status, #token, #SHALL)
-* insert SupportSearchParam(category, http://hl7.org/fhir/SearchParameter/Procedure-category, #token, #SHALL)
 * insert SupportSearchParam(code, http://hl7.org/fhir/SearchParameter/clinical-code, #token, #SHALL)
-* insert SupportSearchParam(date, http://hl7.org/fhir/SearchParameter/clinical-date, #date, #SHALL)
+* insert SupportSearchParam(performed, http://hl7.org/fhir/SearchParameter/clinical-date, #date, #SHALL)
 * insert SupportSearchParam(reason-reference, http://hl7.org/fhir/SearchParameter/Procedure-reason-reference, #date, #SHALL)
-* insert SupportSearchParam(body-site, https://www.medizininformatik-initiative.de/fhir/core/modul-onko/SearchParameter/, #token, #SHALL) // no SP for Procedure maybye location?
-* insert SupportSearchParam(outcome, https://www.medizininformatik-initiative.de/fhir/core/modul-onko/SearchParameter/outcome, #token, #SHALL)
-* insert SupportSearchParam(complication, https://www.medizininformatik-initiative.de/fhir/core/modul-onko/SearchParameter/complication, #token, #SHALL)
+* insert SupportSearchParam(outcome, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-procedure-outcome, #token, #SHALL)
+* insert SupportSearchParam(complication, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-procedure-complication, #token, #SHALL)
 * insert SupportSearchParam(subject, http://hl7.org/fhir/SearchParameter/Procedure-subject, #reference, #SHALL)
 * insert SupportSearchParam(encounter, http://hl7.org/fhir/SearchParameter/clinical-encounter, #reference, #SHALL) 
-* insert SupportSearchParam(note, https://www.medizininformatik-initiative.de/fhir/core/modul-onko/SearchParameter/note, #token, #SHALL)
-* insert SupportSearchParam(extension-stellung, http://hl7.org/fhir/SearchParameter/, #token, #SHALL) // extension path?
-* insert SupportSearchParam(extension-applikationsart, http://hl7.org/fhir/SearchParameter/, #token, #SHALL) // extension path?
-* insert SupportSearchParam(extension-strahlenart, http://hl7.org/fhir/SearchParameter/, #token, #SHALL) // extension path?
-* insert SupportSearchParam(extension-zielgebiet, http://hl7.org/fhir/SearchParameter/, #token, #SHALL) // extension path?
-* insert SupportSearchParam(extension-zielgebiet-lateralitaet, http://hl7.org/fhir/SearchParameter/, #token, #SHALL) // extension path?
-* insert SupportSearchParam(extension-gesamtdosis, http://hl7.org/fhir/SearchParameter/, #quantity, #SHALL) // extension path?
-* insert SupportSearchParam(extension-einzeldosis, http://hl7.org/fhir/SearchParameter/, #quantity, #SHALL) // extension path?
-* insert SupportSearchParam(extension-boost, http://hl7.org/fhir/SearchParameter/, #token, #SHALL) // extension path?
+* insert SupportSearchParam(strahlentherapie-stellung, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-stellungzurop, #token, #SHALL)
+* insert SupportSearchParam(bestrahlung-applikationsart,https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-applikationsart, #token, #SHALL)
+* insert SupportSearchParam(bestrahlung-strahlenart, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-strahlenart, #token, #SHALL)
+* insert SupportSearchParam(bestrahlung-zielgebiet, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-zielgebiet, #token, #SHALL)
+* insert SupportSearchParam(bestrahlung-zielgebiet-lateralitaet, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-lateralitaet, #token, #SHALL)
+* insert SupportSearchParam(bestrahlung-gesamtdosis, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-gesamtdosis, #quantity, #SHALL)
+* insert SupportSearchParam(bestrahlung-einzeldosis, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-einzeldosis, #quantity, #SHALL)
+* insert SupportSearchParam(bestrahlung-boost, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-boost, #token, #SHALL)
+* insert SupportSearchParam(systemischetherapie-stellung, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-systemischetherapie-stellungzurop, #token, #SHALL)
 
 // AdverseEvent requirements
 * insert SupportResource(AdverseEvent, #SHALL)
@@ -218,11 +210,11 @@ Usage: #definition
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
 * insert SupportSearchParam(_lastUpdated, http://hl7.org/fhir/SearchParameter/Resource-lastUpdated, #date, #SHALL)
 * insert SupportSearchParam(_profile, http://hl7.org/fhir/SearchParameter/Resource-profile, #uri, #SHALL)
-* insert SupportSearchParam(event, https://www.medizininformatik-initiative.de/fhir/core/modul-onko/SearchParameter/event, #token, #SHALL) // no SP for AdverseEvent
+* insert SupportSearchParam(event, http://hl7.org/fhir/SearchParameter/event, #token, #SHALL)
 * insert SupportSearchParam(subject, http://hl7.org/fhir/SearchParameter/AdverseEvent-subject, #reference, #SHALL)
-* insert SupportSearchParam(encounter, http://hl7.org/fhir/SearchParameter/, #reference, #SHALL) // no SP for AdverseEvent
-* insert SupportSearchParam(severity, http://hl7.org/fhir/SearchParameter/, #reference, #SHALL) // no SP for AdverseEvent
-* insert SupportSearchParam(suspectEntity, http://hl7.org/fhir/SearchParameter/, #reference, #SHALL) // no SP for AdverseEvent
+* insert SupportSearchParam(encounter, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-encounter, #reference, #SHALL)
+* insert SupportSearchParam(severity, http://hl7.org/fhir/SearchParameter/severity, #token, #SHALL)
+* insert SupportSearchParam(suspectEntity, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-instance, #reference, #SHALL)
 
 // Medication Statement requirements
 * insert SupportResource(MedicationStatement, #SHALL)
@@ -233,21 +225,12 @@ Usage: #definition
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
 * insert SupportSearchParam(_lastUpdated, http://hl7.org/fhir/SearchParameter/Resource-lastUpdated, #date, #SHALL)
 * insert SupportSearchParam(_profile, http://hl7.org/fhir/SearchParameter/Resource-profile, #uri, #SHALL)
-* insert SupportSearchParam(identifier, http://hl7.org/fhir/SearchParameter/clinical-identifier, #token, #SHALL)
-// TODO based-on
-// TODO part-of
-* insert SupportSearchParam(status, http://hl7.org/fhir/SearchParameter/medications-status, #token, #SHALL)
-* insert SupportSearchParam(category, http://hl7.org/fhir/SearchParameter/MedicationStatement-category, #token, #SHALL)
+* insert SupportSearchParam(based-on, https://www.medizininformatik-initiative.de/fhir/, #reference, #SHALL) // fromm mii
+* insert SupportSearchParam(part-of, https://www.medizininformatik-initiative.de/fhir/, #reference, #SHALL) // from mii
 * insert SupportSearchParam(medication, http://hl7.org/fhir/SearchParameter/medications-medication, #reference, #SHALL)
 * insert SupportSearchParam(subject, http://hl7.org/fhir/SearchParameter/MedicationStatement-subject, #reference, #SHALL)
-// TODO context
 * insert SupportSearchParam(date, http://hl7.org/fhir/SearchParameter/clinical-date, #date, #SHALL)
-// TODO dateAsserted
-* insert SupportSearchParam(subjecsourcet, http://hl7.org/fhir/SearchParameter/MedicationStatement-source, #reference, #SHALL)
-// TODO reasonCode
-// TODO reasonReference
-* insert SupportSearchParam(note, https://www.medizininformatik-initiative.de/fhir/core/modul-onko/SearchParameter/note, #token, #SHALL)
-// TODO dosage
+* insert SupportSearchParam(note, https://www.medizininformatik-initiative.de/fhir/, #token, #SHALL) // from mii
 
 // CarePlan requirements
 * insert SupportResource(CarePlan, #SHALL)
@@ -264,7 +247,7 @@ Usage: #definition
 * insert SupportSearchParam(category, http://hl7.org/fhir/SearchParameter/CarePlan-category, #token, #SHALL)
 * insert SupportSearchParam(subject, http://hl7.org/fhir/SearchParameter/CarePlan-subject, #reference, #SHALL)
 * insert SupportSearchParam(encounter, http://hl7.org/fhir/SearchParameter/clinical-encounter, #reference, #SHALL)
-* insert SupportSearchParam(date, http://hl7.org/fhir/SearchParameter/clinical-date, #date, #SHALL)
-* insert SupportSearchParam(addresses, https://www.medizininformatik-initiative.de/fhir/core/modul-onko/SearchParameter/addresses, #reference, #SHALL)
-* insert SupportSearchParam(supportingInfo, https://www.medizininformatik-initiative.de/fhir/core/modul-onko/SearchParameter/supportingInfo, #reference, #SHALL)
-// TODO activity
+* insert SupportSearchParam(created, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-careplan-created, #date, #SHALL)
+* insert SupportSearchParam(addresses, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-careplan-addresses, #reference, #SHALL)
+* insert SupportSearchParam(supportingInfo, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-careplan-supporting-info, #reference, #SHALL) 
+* insert SupportSearchParam(activity-code, http://hl7.org/fhir/SearchParameter/activity-code, #token, #SHALL)
