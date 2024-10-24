@@ -38,11 +38,6 @@
         "mustSupport": true
       },
       {
-        "id": "CarePlan.identifier",
-        "path": "CarePlan.identifier",
-        "mustSupport": true
-      },
-      {
         "id": "CarePlan.status",
         "path": "CarePlan.status",
         "mustSupport": true
@@ -50,6 +45,7 @@
       {
         "id": "CarePlan.intent",
         "path": "CarePlan.intent",
+        "patternCode": "plan",
         "mustSupport": true
       },
       {
@@ -67,6 +63,40 @@
         "binding": {
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieplanung-typ"
+        },
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Art der Tumorkonferenz / Therapieplanung"
+                }
+              ]
+            }
+          ]
+        },
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Art der Tumorkonferenz / Therapieplanung gemäß 18.2 oBDS 2021."
+                }
+              ]
+            }
+          ]
         }
       },
       {
@@ -118,11 +148,53 @@
             "map": "18.1",
             "comment": "Tumorkonferenz Therapieplanung Datum"
           }
-        ]
+        ],
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Datum der Tumorkonferenz / Therapieplanung"
+                }
+              ]
+            }
+          ]
+        },
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Datum der Tumorkonferenz / Therapieplanung gemäß 18.1 oBDS 2021."
+                }
+              ]
+            }
+          ]
+        }
       },
       {
         "id": "CarePlan.addresses",
         "path": "CarePlan.addresses",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
@@ -139,6 +211,15 @@
         "id": "CarePlan.activity.detail",
         "path": "CarePlan.activity.detail",
         "min": 1,
+        "constraint": [
+          {
+            "key": "tumorkonferenz-empfehlung-entscheidung-patient",
+            "severity": "error",
+            "human": "Therapieabweichung aufgrund Patientenwunsch: Bei nichtangetretener oder abgebrochener Therapie ist anzugeben, ob dies dem Patientenwunsch entspricht oder ggfs. andere Gründe hat ",
+            "expression": "status = 'cancelled' or status = 'stopped' implies statusReason.exists()",
+            "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
+          }
+        ],
         "mustSupport": true
       },
       {
@@ -149,6 +230,40 @@
         "binding": {
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieempfehlung-typ"
+        },
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Typ der Therapieempfehlung"
+                }
+              ]
+            }
+          ]
+        },
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Typ der Therapieempfehlung der Tumorkonferenz gemäß 19.1 oBDS 2021."
+                }
+              ]
+            }
+          ]
         }
       },
       {
@@ -181,7 +296,41 @@
             "map": "19.2",
             "comment": "Tumorkonferenz/Therapieempfehlung Therapieabweichung auf Wunsch des Patienten"
           }
-        ]
+        ],
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Status der Therapieempfehlung"
+                }
+              ]
+            }
+          ]
+        },
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Status der Therapieempfehlung nach HL7 FHIR CarePlanActivityStatus | not-started | scheduled | in-progress | on-hold | completed | cancelled | stopped | unknown | entered-in-error |"
+                }
+              ]
+            }
+          ]
+        }
       },
       {
         "id": "CarePlan.activity.detail.statusReason",
@@ -190,6 +339,40 @@
         "binding": {
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieabweichung"
+        },
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Therapieabweichung aufgrund Patientenwunsch der Therapieempfehlung"
+                }
+              ]
+            }
+          ]
+        },
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "wenn Therapieabweichung - z.B. status = cancelled - Aussage ob dies durch Patientenwunsch erfolgt ist gemäß 19.2 oBDS 2021."
+                }
+              ]
+            }
+          ]
         }
       },
       {
