@@ -106,3 +106,6 @@ Alias: $mii-cs-onko-genetische-variante-auspraegung = https://www.medizininforma
 
 //24
 Alias: $mii-cs-onko-studienteilnahme = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-studienteilnahme
+
+// licenses
+Alias: $spdx-license = http://hl7.org/fhir/spdx-license
