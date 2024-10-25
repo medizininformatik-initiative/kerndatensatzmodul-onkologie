@@ -181,7 +181,6 @@ Usage: #definition
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
 * insert SupportSearchParam(_lastUpdated, http://hl7.org/fhir/SearchParameter/Resource-lastUpdated, #date, #SHALL)
 * insert SupportSearchParam(_profile, http://hl7.org/fhir/SearchParameter/Resource-profile, #uri, #SHALL)
-* insert SupportSearchParam(intention, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-intention, #token, #SHALL)
 * insert SupportSearchParam(based-on, http://hl7.org/fhir/SearchParameter/Procedure-based-on, #reference, #SHALL)
 * insert SupportSearchParam(part-of, http://hl7.org/fhir/SearchParameter/Procedure-part-of, #token, #SHALL)
 * insert SupportSearchParam(code, http://hl7.org/fhir/SearchParameter/clinical-code, #token, #SHALL)
@@ -191,6 +190,7 @@ Usage: #definition
 * insert SupportSearchParam(complication, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-procedure-complication, #token, #SHALL)
 * insert SupportSearchParam(subject, http://hl7.org/fhir/SearchParameter/Procedure-subject, #reference, #SHALL)
 * insert SupportSearchParam(encounter, http://hl7.org/fhir/SearchParameter/clinical-encounter, #reference, #SHALL) 
+* insert SupportSearchParam(strahlentherapie-intention, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-intention, #token, #SHALL)
 * insert SupportSearchParam(strahlentherapie-stellung, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-stellungzurop, #token, #SHALL)
 * insert SupportSearchParam(bestrahlung-applikationsart,https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-applikationsart, #token, #SHALL)
 * insert SupportSearchParam(bestrahlung-strahlenart, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-strahlenart, #token, #SHALL)
@@ -199,7 +199,8 @@ Usage: #definition
 * insert SupportSearchParam(bestrahlung-gesamtdosis, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-gesamtdosis, #quantity, #SHALL)
 * insert SupportSearchParam(bestrahlung-einzeldosis, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-einzeldosis, #quantity, #SHALL)
 * insert SupportSearchParam(bestrahlung-boost, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-boost, #token, #SHALL)
-* insert SupportSearchParam(systemischetherapie-stellung, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-systemischetherapie-stellungzurop, #token, #SHALL)
+* insert SupportSearchParam(systemischetherapie-intention, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-systemischetherapie-ext-intention, #token, #SHALL)
+* insert SupportSearchParam(systemischetherapie-stellung, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-systemischetherapie-ext-stellungzurop, #token, #SHALL)
 
 // AdverseEvent requirements
 * insert SupportResource(AdverseEvent, #SHALL)

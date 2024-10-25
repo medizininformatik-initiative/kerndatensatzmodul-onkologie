@@ -18,27 +18,27 @@ Usage: #definition
 * type = #token
 * expression = "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3').value"
 
-Instance: mii-sp-onko-procedure-ext-intention
+Instance: mii-sp-onko-procedure-ext-strahlentherapie-intention
 InstanceOf: SearchParameter
 Usage: #definition
 * insert SP_Publisher
 * insert LicenseCodeableCCBY40Instance
 * insert SP_Profile
 * insert Version
-* name = "MII_SP_Procedure_Extension_Intention"
+* name = "MII_SP_Procedure_Extension_Strahlentherapie_Intention"
 * description = "SearchParameter for Procedure.extension[intention]"
 * status = #active 
-* code = #intention
+* code = #strahlentherapie-intention
 * base = #Procedure
 * type = #token
-* expression = "Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-intention').value"
+* expression = "Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention').value"
 
 Instance: mii-sp-onko-ext-strahlentherapie-stellungzurop
 InstanceOf: SearchParameter
 Usage: #definition
 * insert SP_Publisher
 * insert Version
-* name = "MII_SP_Extension_StellungZurOp"
+* name = "MII_SP_Procedure_Extension_Strahlentherapie_StellungZurOp"
 * description = "SearchParameter for Procedure.extension[StellungZurOp]"
 * status = #active 
 * code = #strahlentherapie-stellungzurop
@@ -151,12 +151,27 @@ Usage: #definition
 * type = #token
 * expression = "Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung').extension.where(url='Boost').value"
 
-nstance: mii-sp-onko-systemischetherapie-ext-stellungzurop
+Instance: mii-sp-onko-procedure-ext-systemischetherapie-intention
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert LicenseCodeableCCBY40Instance
+* insert SP_Profile
+* insert Version
+* name = "MII_SP_Procedure_Extension_Systemischetherapie_Intention"
+* description = "SearchParameter for Procedure.extension[intention]"
+* status = #active 
+* code = #systemischetherapie-intention
+* base = #Procedure
+* type = #token
+* expression = "Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention').value"
+
+Instance: mii-sp-onko-ext-systemischetherapie-stellungzurop
 InstanceOf: SearchParameter
 Usage: #definition
 * insert SP_Publisher
 * insert Version
-* name = "MII_SP_Extension_StellungZurOp"
+* name = "MII_SP_Procedure_Extension_Systemischetherapie_StellungZurOp"
 * description = "SearchParameter for Procedure.extension[StellungZurOp]"
 * status = #active 
 * code = #systemischetherapie-stellungzurop
