@@ -51,7 +51,6 @@ Description: "Diagnose Primärtumor"
 * recordedDate = 2021-06-10
 * subject = Reference(PatientKimMusterperson)
 * clinicalStatus = #active //zum Zeitpunkt der Diagnosestellung
-* verificationStatus.coding[condition-ver-status] = 
 * verificationStatus.coding[primaertumorDiagnosesicherung].code = #2 "klinische Diagnostik" // steht für "Alle Untersuchungstechniken, einschl. Röntgen, Endoskopie, bildgeb. Verfahren, Ultraschall, explorativer Eingriffe(wie Laparotomie) und Autopsie, aber ohne Gewebsuntersuchungen"
 * code.coding  = $ICD10GM#C48.2 "Bösartige Neubildung des Retroperitoneums und Peritoneums - Peritoneum, nicht näher bezeichnet "
 // 389026000 | Ascites (disorder) | 
@@ -196,6 +195,7 @@ Description: "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie,
 * code.coding[3] = $OPS#5-501 "atypische Lebersegmentresektion"
 * performedDateTime = 2021-09-30
 * outcome = $mii-cs-onko-residualstatus#R0
+
 
 Instance: PatientKimMusterperson-PathoReport-1
 InstanceOf: DiagnosticReport
