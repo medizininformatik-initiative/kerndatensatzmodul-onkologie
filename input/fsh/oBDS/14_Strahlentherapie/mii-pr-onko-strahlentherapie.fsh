@@ -21,7 +21,7 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 * insert Translation(extension[Intention] ^definition, de-DE, Intention der Strahlentherapie gemäß 14.1 oBDS 2021. )
 
 // Strahlentherapie Stellung zu operativer Therapie
-* extension contains MII_EX_Onko_Strahlentherapie_Stellung_Zur_Op named StellungZurOp 0..
+* extension contains MII_EX_Onko_Strahlentherapie_StellungZurOp named StellungZurOp 0..
 * extension[StellungZurOp] MS
 * insert Translation(extension[StellungZurOp] ^short, de-DE, Stellung der Strahlentherapie zu einer Operation)
 * insert Translation(extension[StellungZurOp] ^definition, de-DE, Stellung der Strahlentherapie zu einer Operation gemäß 14.2 oBDS 2021. )

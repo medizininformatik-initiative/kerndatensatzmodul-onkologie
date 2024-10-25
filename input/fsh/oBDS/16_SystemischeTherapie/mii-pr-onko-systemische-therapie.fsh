@@ -11,14 +11,14 @@ Description: "Systemische Therapie. Dieses Profil beschreibt eine Systemische Th
 // Logical Modell see:  https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532379/Systemische+Therapie+SYST+Typ // t
 * meta.profile 0..* MS
 // Intention der systemischen Therapie
-* extension contains mii-ex-onko-systemische-therapie-intention named Intention 1..1 // hier ggfs. refactoring
+* extension contains mii-ex-onko-systemische-therapie-intention named Intention 1..1 
 * extension[Intention] MS
 * insert Translation(extension[Intention] ^short, de-DE, Intention der systemischen oder abwartenden Therapie )
 * insert Translation(extension[Intention] ^definition, de-DE, Intention der systemischen oder abwartenden Therapie gemäß 16.1 oBDS 2021. )
 
 
 // Systemische Therapie Stellung zu operativer Therapie
-* extension contains mii-ex-onko-systemische-therapie-stellung-zur-op named StellungZurOp 0.. // hier ggfs Refactoren auf ein gemeinsames Code System mit unterschiedlicheN Value Sets
+* extension contains mii-ex-onko-systemische-therapie-stellungzurop named StellungZurOp 0.. 
 * extension[StellungZurOp] MS
 * insert Translation(extension[StellungZurOp] ^short, de-DE, Stellung der systemischen Therapie zu einer Operation )
 * insert Translation(extension[StellungZurOp] ^definition, de-DE, Stellung der systemischen Therapie zu einer Operation gemäß 16.2 oBDS 2021. )

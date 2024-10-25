@@ -1,11 +1,11 @@
 {
   "resourceType": "ValueSet",
   "status": "active",
-  "name": "MII_VS_Onko_Systemische_Therapie_Stellung",
-  "id": "mii-vs-onko-systemische-therapie-stellung",
+  "name": "MII_VS_Onko_Systemische_Therapie_StellungZurOp",
+  "id": "mii-vs-onko-systemische-therapie-stellungzurop",
   "title": "MII VS Onkologie Systemische Therapie Stellung",
   "description": "oBDS-spezifisches ValueSet für Klassifikation von Stellung zur OP",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-systemische-therapie-stellung",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-systemische-therapie-stellungzurop",
   "meta": {
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
@@ -27,7 +27,7 @@
   "compose": {
     "include": [
       {
-        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-stellung",
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-stellungzurop",
         "concept": [
           {
             "code": "O",

@@ -1,25 +1,8 @@
 // DE Basisprofile
-// Alias: $DeOnkoRadiotherapy = http://fhir.de/onkologie/StructureDefinition/procedure-bestrahlung
-// Alias: $DeOnkoSurgery = http://fhir.de/onkologie/StructureDefinition/procedure-operation
-// Alias: $DeOnkoDiagnosis = http://fhir.de/onkologie/StructureDefinition/KrebsDiagnose
-// Alias: $DeOnkoSystemischeTherapie = http://fhir.de/onkologie/StructureDefinition/SystemischeTherapie
-// Alias: $DeTnmKlassifikation = http://fhir.de/onkologie/StructureDefinition/uicc-tnm
-// Alias: $DeOnkoResidualStatus = http://fhir.de/onkologie/CodeSystem/Residualstatus
-// Alias: $DeOnkoResidualStatusVS = http://fhir.de/onkologie/ValueSet/ResidualstatusVS
-// Alias: $DeOnkoOpComplications = http://fhir.de/onkologie/CodeSystem/OpKomplikationen
-// Alias: $DeOnkoOpComplicationsVS = http://fhir.de/onkologie/ValueSet/OpKomplikationenVS
-// Alias: $DeOnkoIntention = http://fhir.de/onkologie/StructureDefinition/Intention
-// Alias: $DeOnkoStellungOp = http://fhir.de/onkologie/StructureDefinition/StellungZurOp
-// Alias: $DeIcdSeitenlokalisation = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_SEITENLOKALISATION
-// Alias: $DeIcdDiagnosesicherheit = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_DIAGNOSESICHERHEIT
-// Alias: $DeIcdO3TopologieVS = http://fhir.de/onkologie/ValueSet/icd-o-3-topologie
-// Alias: $DeOnkoTumorstatusFernmetastasenVS = http://fhir.de/onkologie/ValueSet/TumorstatusFernmetastasenVS
  Alias: $icd-seitenlokalisation = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_SEITENLOKALISATION
 
 // MII KDS
 Alias: $mii-procedure  = https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure
-//Alias: $mii-specimen =  // optional for later
-//Alias: $mii-pathoreport =  // optional for later
 
 // FHIR Core
 Alias: $EventStatus = http://hl7.org/fhir/event-status
@@ -46,7 +29,7 @@ Alias: $ATC_DE = http://fhir.de/CodeSystem/bfarm/atc
 //MII Onko
 //Allgemeines CodeSystem
 Alias: $mii-cs-onko-intention = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention
-Alias: $mii-cs-onko-therapie-stellung = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-stellung
+Alias: $mii-cs-onko-therapie-stellungzurop = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-stellungzurop
 Alias: $mii-cs-onko-therapie-ende-grund = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende
 Alias: $mii-cs-onko-therapie-typ = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ
 Alias: $mii-cs-onko-residualstatus = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus
@@ -71,11 +54,11 @@ Alias: $mii-cs-onko-strahlentherapie-zielgebiet = https://www.medizininformatik-
 Alias: $mii-cs-onko-strahlentherapie-boost = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost
 Alias: $mii-ex-onko-strahlentherapie-intention = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention
 Alias: $mii-ex-onko-strahlentherapie-bestrahlung = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung
-Alias: $mii-ex-onko-strahlentherapie-stellung-zur-op = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellung-zur-op
+Alias: $mii-ex-onko-strahlentherapie-stellungzurop = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop
 
 //16
 Alias: $mii-ex-onko-systemische-therapie-intention = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention
-Alias: $mii-ex-onko-systemische-therapie-stellung-zur-op = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellung-zur-op
+Alias: $mii-ex-onko-systemische-therapie-stellungzurop = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellungzurop
 
 //11
 Alias: $mii-cs-onko-fernmetastasen = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen
@@ -106,3 +89,6 @@ Alias: $mii-cs-onko-genetische-variante-auspraegung = https://www.medizininforma
 
 //24
 Alias: $mii-cs-onko-studienteilnahme = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-studienteilnahme
+
+// licenses
+Alias: $spdx-license = http://hl7.org/fhir/spdx-license
