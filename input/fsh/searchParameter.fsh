@@ -18,6 +18,21 @@ Usage: #definition
 * type = #token
 * expression = "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3').value"
 
+Instance: mii-sp-onko-procedure-ext-operation-intention
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert LicenseCodeableCCBY40Instance
+* insert SP_Profile
+* insert Version
+* name = "MII_SP_Procedure_Extension_Operation_Intention"
+* description = "SearchParameter for Procedure.extension[intention]"
+* status = #active 
+* code = #operation-intention
+* base = #Operation
+* type = #token
+* expression = "Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention').value"
+
 Instance: mii-sp-onko-procedure-ext-strahlentherapie-intention
 InstanceOf: SearchParameter
 Usage: #definition
