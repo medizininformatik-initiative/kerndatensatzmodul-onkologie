@@ -17,7 +17,7 @@ Description: "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der 
 * verificationStatus.coding ^slicing.discriminator.path = "$this"
 * verificationStatus.coding ^slicing.rules = #open
 * verificationStatus.coding contains
-    condition-ver-status 1..1 MS and
+    condition-ver-status 0..1 MS and
     primaertumorDiagnosesicherung 0..1 MS
 * verificationStatus.coding[condition-ver-status] ^patternCoding.system = $condition-ver-status
 * verificationStatus.coding[condition-ver-status] from $verification-status-vs (required)
