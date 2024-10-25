@@ -8,8 +8,8 @@ Description: "Example radiation therapy"
 
 * extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#P // palliativ
 * extension[Intention].url = $mii-ex-onko-strahlentherapie-intention
-* extension[StellungZurOp].valueCodeableConcept = $mii-cs-onko-therapie-stellung#A // adjuvant
-* extension[StellungZurOp].url = $mii-ex-onko-strahlentherapie-stellung-zur-op
+* extension[StellungZurOp].valueCodeableConcept = $mii-cs-onko-therapie-stellungzurop#A // adjuvant
+* extension[StellungZurOp].url = $mii-ex-onko-strahlentherapie-stellungzurop
 * extension[Bestrahlung].url = $mii-ex-onko-strahlentherapie-bestrahlung
 * extension[Bestrahlung].extension[Applikationsart].valueCodeableConcept =  $mii-cs-onko-strahlentherapie-applikationsart#P-ST
 * extension[Bestrahlung].extension[Strahlenart].valueCodeableConcept =  $mii-cs-onko-strahlentherapie-strahlenart#UH

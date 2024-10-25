@@ -34,20 +34,22 @@ Usage: #definition
 * expression = "Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-intention').value"
 
 
-Instance: mii-sp-onko-procedure-ext-strahlentherapie-stellungzurop
+
+//----------------------------------------
+// SearchParameters for Strahlentherapie
+//----------------------------------------
+Instance: mii-sp-onko-ext-strahlentherapie-stellungzurop
 InstanceOf: SearchParameter
 Usage: #definition
 * insert SP_Publisher
-* insert LicenseCodeableCCBY40Instance
-* insert SP_Profile
 * insert Version
-* name = "MII_SP_Procedure_Extension_Strahlentherapie_StellungZurOp"
-* description = "SearchParameter for Procedure.extension.strahlentherapie.stellung"
+* name = "MII_SP_Extension_StellungZurOp"
+* description = "SearchParameter for Procedure.extension[StellungZurOp]"
 * status = #active 
-* code = #strahlentherapie-stellung
+* code = #extension-stellungzurop
 * base = #Procedure
 * type = #token
-* expression = "Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellung').value"
+* expression = "Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop').value"
 
 Instance: mii-sp-onko-procedure-ext-strahlentherapie-bs-applikationsart
 InstanceOf: SearchParameter
@@ -164,7 +166,140 @@ Usage: #definition
 * name = "MII_SP_Procedure_Extension_SystemischeTherapie_StellungZurOp"
 * description = "SearchParameter for Procedure.extension.systemischetherapie.stellung"
 * status = #active 
-* code = #systemischetherapie-stellung
+* code = #systemischetherapie-stellungzur
 * base = #Procedure
 * type = #token
 * expression = "Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellung').value"
+
+
+//----------------------------------------
+// SearchParameters for Nebenwirkung
+//----------------------------------------
+Instance: mii-sp-onko-nebenwirkung-suspectEntity
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert Version
+* name = "MII_SP_Nebenwirkung_SuspectEntity_instance"
+* description = "SearchParameter for AdverseEvent.suspectEntity.instance"
+* status = #active 
+* code = #instance
+* base = #AdverseEvent 
+* type = #reference
+* expression = "AdverseEvent.suspectEntity.instance" 
+
+//----------------------------------------
+// SearchParameters for Systemische Therapie
+//----------------------------------------
+
+Instance: mii-sp-onko-systemischetherapie-ext-stellungzurop
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert Version
+* name = "MII_SP_Extension_StellungZurOp"
+* description = "SearchParameter for Procedure.extension[StellungZurOp]"
+* status = #active 
+* code = #extension-stellungzurop
+* base = #Procedure
+* type = #token
+* expression = "Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellung').value"
+
+
+//----------------------------------------
+// SearchParameters for Verlauf
+//----------------------------------------
+
+// No search parameters to cover
+
+
+//----------------------------------------
+// SearchParameters for Tumorkonferenz
+//----------------------------------------
+Instance: mii-sp-onko-tumorkonferenz-created
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert Version
+* name = "MII_SP_Tumorkonferenz_Created"
+* description = "SearchParameter for CarePlan.created"
+* status = #active 
+* code = #created
+* base = #CarePlan 
+* type = #date
+* expression = "CarePlan.created" 
+
+Instance: mii-sp-onko-tumorkonferenz-contributor
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert Version
+* name = "MII_SP_Tumorkonferenz_Contributor"
+* description = "SearchParameter for CarePlan.contributor"
+* status = #active 
+* code = #contributor
+* base = #CarePlan 
+* type = #reference
+* expression = "CarePlan.contributor" 
+
+Instance: mii-sp-onko-tumorkonferenz-addresses
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert Version
+* name = "MII_SP_Tumorkonferenz_Addresses"
+* description = "SearchParameter for CarePlan.addresses"
+* status = #active 
+* code = #addresses
+* base = #CarePlan 
+* type = #reference
+* expression = "CarePlan.addresses" 
+
+//----------------------------------------
+// SearchParameters for Tod
+//----------------------------------------
+Instance: mii-sp-onko-tod-interpretation
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert Version
+* name = "MII_SP_Onko_Tod_Interpreation"
+* description = "SearchParameter for Observation.interpretation"
+* status = #active
+* code = #interpretation
+* base = #Observation
+* type = #token
+* expression = "Observation.interpretation"
+
+Instance: mii-sp-onko-tod-focus
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert Version
+* name = "MII_SP_Onko_Tod_Focus"
+* description = "SearchParameter for Observation.focus"
+* status = #active
+* code = #focus
+* base = #Observation
+* type = #reference
+* expression = "Observation.focus"
+
+Instance: mii-sp-onko-tod-encounter
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert Version
+* name = "MII_SP_Onko_Tod_Encounter"
+* description = "SearchParameter for Observation.encounter"
+* status = #active
+* code = #encounter
+* base = #Observation
+* type = #reference
+* expression = "Observation.encounter"
+
+
+//----------------------------------------
+// SearchParameters for Genetische Variante
+//----------------------------------------
+
+// No search parameters to cover

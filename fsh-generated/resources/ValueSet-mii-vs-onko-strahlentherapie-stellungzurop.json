@@ -1,11 +1,11 @@
 {
   "resourceType": "ValueSet",
   "status": "active",
-  "name": "MII_VS_Onko_Strahlentherapie_Stellung",
-  "id": "mii-vs-onko-strahlentherapie-stellung",
-  "title": "MII VS Onkologie Strahlentherapie Stellung",
+  "name": "MII_VS_Onko_Strahlentherapie_StellungZurOp",
+  "id": "mii-vs-onko-strahlentherapie-stellungzurop",
+  "title": "MII VS Onkologie Strahlentherapie Stellung zur OP",
   "description": "oBDS-spezifisches ValueSet für Klassifikation von Stellung zur OP",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-stellung",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-stellungzurop",
   "meta": {
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
@@ -27,7 +27,7 @@
   "compose": {
     "include": [
       {
-        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-stellung"
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-stellungzurop"
       }
     ]
   }

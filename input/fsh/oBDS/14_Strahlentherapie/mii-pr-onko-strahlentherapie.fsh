@@ -19,7 +19,7 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 * extension[Intention] MS
 
 // Strahlentherapie Stellung zu operativer Therapie
-* extension contains MII_EX_Onko_Strahlentherapie_Stellung_Zur_Op named StellungZurOp 0..
+* extension contains MII_EX_Onko_Strahlentherapie_StellungZurOp named StellungZurOp 0..
 * extension[StellungZurOp] MS
 
 * extension contains mii-ex-onko-strahlentherapie-bestrahlung named Bestrahlung 1..

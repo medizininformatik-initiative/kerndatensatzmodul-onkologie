@@ -485,7 +485,7 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/mii-cs-onko-therapie-stellung"
+          "reference": "CodeSystem/mii-cs-onko-therapie-stellungzurop"
         },
         "name": "MII CS Onkologie Therapie Stellung",
         "description": "oBDS-spezifisches Codesystem für Klassifikation von Stellung zur OP",
@@ -597,7 +597,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-ex-onko-strahlentherapie-stellung-zur-op"
+          "reference": "StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop"
         },
         "name": "MII EX Onko Strahlentherapie Stellung zur OP",
         "description": "Strahlentherapie Stellung zur OP",
@@ -613,7 +613,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-ex-onko-systemische-therapie-stellung-zur-op"
+          "reference": "StructureDefinition/mii-ex-onko-systemische-therapie-stellungzurop"
         },
         "name": "MII EX Onko Systemische Therapie Stellung zur OP",
         "description": "Systemische Therapie Stellung zur OP",
@@ -1077,9 +1077,9 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/mii-vs-onko-strahlentherapie-stellung"
+          "reference": "ValueSet/mii-vs-onko-strahlentherapie-stellungzurop"
         },
-        "name": "MII VS Onkologie Strahlentherapie Stellung",
+        "name": "MII VS Onkologie Strahlentherapie Stellung zur OP",
         "description": "oBDS-spezifisches ValueSet für Klassifikation von Stellung zur OP",
         "exampleBoolean": false
       },
@@ -1141,7 +1141,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/mii-vs-onko-systemische-therapie-stellung"
+          "reference": "ValueSet/mii-vs-onko-systemische-therapie-stellungzurop"
         },
         "name": "MII VS Onkologie Systemische Therapie Stellung",
         "description": "oBDS-spezifisches ValueSet für Klassifikation von Stellung zur OP",
@@ -1613,7 +1613,7 @@
           "reference": "SearchParameter/mii-sp-onko-ext-strahlentherapie-stellungzurop"
         },
         "name": "mii-sp-onko-ext-strahlentherapie-stellungzurop",
-        "description": "SearchParameter for Procedure.extension.stellung",
+        "description": "SearchParameter for Procedure.extension[StellungZurOp]",
         "exampleBoolean": false
       },
       {
@@ -1709,7 +1709,7 @@
           "reference": "SearchParameter/mii-sp-onko-systemischetherapie-ext-stellungzurop"
         },
         "name": "mii-sp-onko-systemischetherapie-ext-stellungzurop",
-        "description": "SearchParameter for Procedure.extension.stellung",
+        "description": "SearchParameter for Procedure.extension[StellungZurOp]",
         "exampleBoolean": false
       },
       {
