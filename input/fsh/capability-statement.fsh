@@ -256,3 +256,5 @@ Usage: #definition
 * insert SupportSearchParam(addresses, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-careplan-addresses, #reference, #SHALL)
 * insert SupportSearchParam(supportingInfo, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-careplan-supporting-info, #reference, #SHALL) 
 * insert SupportSearchParam(activity-code, http://hl7.org/fhir/SearchParameter/activity-code, #token, #SHALL)
+* insert SupportSearchParam(activity-status, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-careplan-activity-status, #token, #SHALL)
+* insert SupportSearchParam(activity-status-reason, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-careplan-activity-status-reason, #token, #SHALL)
