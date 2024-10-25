@@ -1,12 +1,12 @@
 {
   "resourceType": "SearchParameter",
-  "id": "mii-sp-onko-procedure-ext-intention",
+  "id": "mii-sp-onko-observation-ext-tnm-n-cppraefix",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-pr-meta-searchparameter"
     ]
   },
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-intention",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-ext-tnm-n-cppraefix",
   "publisher": "Medizininformatik Initiative",
   "contact": [
     {
@@ -33,13 +33,13 @@
     }
   ],
   "version": "2025.0.0",
-  "name": "MII_SP_Procedure_Extension_Intention",
-  "description": "SearchParameter for Procedure.extension[intention]",
+  "name": "MII_SP_Observation_Extension_TNM_N_CpPraefix",
+  "description": "SearchParameter for Observation.extension[cppraefix]",
   "status": "active",
-  "code": "intention",
+  "code": "tnm-n-cppraefix",
   "base": [
-    "Procedure"
+    "Observation"
   ],
   "type": "token",
-  "expression": "Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-intention').value"
+  "expression": "Observation.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-t-cppraefic').value"
 }

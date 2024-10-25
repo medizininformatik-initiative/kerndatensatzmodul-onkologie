@@ -1610,17 +1610,57 @@
       },
       {
         "reference": {
-          "reference": "SearchParameter/mii-sp-onko-nebenwirkung-suspectEntity"
+          "reference": "SearchParameter/mii-sp-onko-ext-systemischetherapie-stellungzurop"
         },
-        "name": "mii-sp-onko-nebenwirkung-suspectEntity",
-        "description": "SearchParameter for AdverseEvent.suspectEntity.instance",
+        "name": "mii-sp-onko-ext-systemischetherapie-stellungzurop",
+        "description": "SearchParameter for Procedure.extension[StellungZurOp]",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "SearchParameter/mii-sp-onko-procedure-ext-intention"
+          "reference": "SearchParameter/mii-sp-onko-observation-ext-tnm-m-cppraefix"
         },
-        "name": "mii-sp-onko-procedure-ext-intention",
+        "name": "mii-sp-onko-observation-ext-tnm-m-cppraefix",
+        "description": "SearchParameter for Observation.extension[cppraefix]",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-onko-observation-ext-tnm-n-cppraefix"
+        },
+        "name": "mii-sp-onko-observation-ext-tnm-n-cppraefix",
+        "description": "SearchParameter for Observation.extension[cppraefix]",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-onko-observation-ext-tnm-n-itc"
+        },
+        "name": "mii-sp-onko-observation-ext-tnm-n-itc",
+        "description": "SearchParameter for Observation.extension[itc]",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-onko-observation-ext-tnm-n-sn-suffix"
+        },
+        "name": "mii-sp-onko-observation-ext-tnm-n-sn-suffix",
+        "description": "SearchParameter for Observation.extension[sn-suffix]",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-onko-observation-ext-tnm-t-cppraefix"
+        },
+        "name": "mii-sp-onko-observation-ext-tnm-t-cppraefix",
+        "description": "SearchParameter for Observation.extension[cppraefix]",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-onko-procedure-ext-operation-intention"
+        },
+        "name": "mii-sp-onko-procedure-ext-operation-intention",
         "description": "SearchParameter for Procedure.extension[intention]",
         "exampleBoolean": false
       },
@@ -1682,58 +1722,18 @@
       },
       {
         "reference": {
-          "reference": "SearchParameter/mii-sp-onko-systemischetherapie-ext-stellungzurop"
+          "reference": "SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-intention"
         },
-        "name": "mii-sp-onko-systemischetherapie-ext-stellungzurop",
-        "description": "SearchParameter for Procedure.extension[StellungZurOp]",
+        "name": "mii-sp-onko-procedure-ext-strahlentherapie-intention",
+        "description": "SearchParameter for Procedure.extension[intention]",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "SearchParameter/mii-sp-onko-tod-encounter"
+          "reference": "SearchParameter/mii-sp-onko-procedure-ext-systemischetherapie-intention"
         },
-        "name": "mii-sp-onko-tod-encounter",
-        "description": "SearchParameter for Observation.encounter",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "SearchParameter/mii-sp-onko-tod-focus"
-        },
-        "name": "mii-sp-onko-tod-focus",
-        "description": "SearchParameter for Observation.focus",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "SearchParameter/mii-sp-onko-tod-interpretation"
-        },
-        "name": "mii-sp-onko-tod-interpretation",
-        "description": "SearchParameter for Observation.interpretation",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "SearchParameter/mii-sp-onko-tumorkonferenz-addresses"
-        },
-        "name": "mii-sp-onko-tumorkonferenz-addresses",
-        "description": "SearchParameter for CarePlan.addresses",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "SearchParameter/mii-sp-onko-tumorkonferenz-contributor"
-        },
-        "name": "mii-sp-onko-tumorkonferenz-contributor",
-        "description": "SearchParameter for CarePlan.contributor",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "SearchParameter/mii-sp-onko-tumorkonferenz-created"
-        },
-        "name": "mii-sp-onko-tumorkonferenz-created",
-        "description": "SearchParameter for CarePlan.created",
+        "name": "mii-sp-onko-procedure-ext-systemischetherapie-intention",
+        "description": "SearchParameter for Procedure.extension[intention]",
         "exampleBoolean": false
       },
       {

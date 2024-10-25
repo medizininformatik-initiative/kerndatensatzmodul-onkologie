@@ -970,6 +970,61 @@
                   "valueCode": "SHALL"
                 }
               ]
+            },
+            {
+              "name": "tnm-t-cppraefix",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-ext-tnm-t-cppraefix",
+              "type": "token",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "tnm-n-cppraefix",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-ext-tnm-n-cppraefix",
+              "type": "token",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "tnm-m-cppraefix",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-ext-tnm-m-cppraefix",
+              "type": "token",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "tnm-n-itc",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-ext-tnm-n-itc",
+              "type": "token",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "tnm-n-sn-suffix",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-ext-tnm-n-sn-suffix",
+              "type": "token",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
             }
           ]
         },
@@ -1156,9 +1211,18 @@
           "supportedProfile": [
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-operation",
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-strahlentherapie",
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-systemische-therapie"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-systemische-therapie",
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-operation"
           ],
           "_supportedProfile": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
             {
               "extension": [
                 {
@@ -1239,8 +1303,8 @@
               ]
             },
             {
-              "name": "intention",
-              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-intention",
+              "name": "operation-intention",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-operation-intention",
               "type": "token",
               "extension": [
                 {
@@ -1349,6 +1413,28 @@
               ]
             },
             {
+              "name": "category",
+              "definition": "http://hl7.org/fhir/SearchParameter/Procedure-category",
+              "type": "reference",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "strahlentherapie-intention",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-intention",
+              "type": "token",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
               "name": "strahlentherapie-stellung",
               "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-stellungzurop",
               "type": "token",
@@ -1437,8 +1523,19 @@
               ]
             },
             {
+              "name": "systemischetherapie-intention",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-systemischetherapie-ext-intention",
+              "type": "token",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
               "name": "systemischetherapie-stellung",
-              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-systemischetherapie-stellungzurop",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-systemischetherapie-ext-stellungzurop",
               "type": "token",
               "extension": [
                 {
@@ -1676,7 +1773,7 @@
             },
             {
               "name": "based-on",
-              "definition": "https://www.medizininformatik-initiative.de/fhir/",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-medicationstatement-based-on",
               "type": "reference",
               "extension": [
                 {
@@ -1687,7 +1784,7 @@
             },
             {
               "name": "part-of",
-              "definition": "https://www.medizininformatik-initiative.de/fhir/",
+              "definition": "http://hl7.org/fhir/SearchParameter/MedicationStatement-part-of",
               "type": "reference",
               "extension": [
                 {
@@ -1699,7 +1796,7 @@
             {
               "name": "medication",
               "definition": "http://hl7.org/fhir/SearchParameter/medications-medication",
-              "type": "reference",
+              "type": "code",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
@@ -1731,7 +1828,7 @@
             },
             {
               "name": "note",
-              "definition": "https://www.medizininformatik-initiative.de/fhir/",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-medicationstatement-note",
               "type": "token",
               "extension": [
                 {
@@ -1928,6 +2025,28 @@
             {
               "name": "activity-code",
               "definition": "http://hl7.org/fhir/SearchParameter/activity-code",
+              "type": "token",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "activity-status",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-careplan-activity-status",
+              "type": "token",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "activity-status-reason",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-careplan-activity-status-reason",
               "type": "token",
               "extension": [
                 {
