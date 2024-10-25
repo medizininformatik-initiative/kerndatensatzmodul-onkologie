@@ -51,6 +51,7 @@ Description: "Diagnose Primärtumor"
 * recordedDate = 2021-06-10
 * subject = Reference(PatientKimMusterperson)
 * clinicalStatus = #active //zum Zeitpunkt der Diagnosestellung
+* verificationStatus.coding[condition-ver-status] = 
 * verificationStatus.coding[primaertumorDiagnosesicherung].code = #2 "klinische Diagnostik" // steht für "Alle Untersuchungstechniken, einschl. Röntgen, Endoskopie, bildgeb. Verfahren, Ultraschall, explorativer Eingriffe(wie Laparotomie) und Autopsie, aber ohne Gewebsuntersuchungen"
 * code.coding  = $ICD10GM#C48.2 "Bösartige Neubildung des Retroperitoneums und Peritoneums - Peritoneum, nicht näher bezeichnet "
 // 389026000 | Ascites (disorder) | 
@@ -89,7 +90,7 @@ Description: "."
 * subject = Reference(PatientKimMusterperson)
 * status = #completed
 * intent = #plan
-* category.coding = $mii-cs-onko-therapieplanung-typ#praeth "Prätherapeutische Tumorkonferenz" 
+* category.coding = $mii-cs-onko-therapieplanung-typ#praeth "prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie)" 
 * created = 2021-06-25
 * addresses = Reference(PatientKimMusterperson-Diagnosis-1)
 * activity[0].detail.code = $mii-cs-onko-therapie-typ#CH "Chemotherapie"
