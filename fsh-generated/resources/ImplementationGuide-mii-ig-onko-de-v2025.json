@@ -1594,18 +1594,10 @@
       },
       {
         "reference": {
-          "reference": "SearchParameter/mii-sp-onko-diagnose-ext-morphology-behavior-icdo3"
+          "reference": "SearchParameter/mii-sp-onko-condition-ext-morphology-behavior-icdo3"
         },
-        "name": "mii-sp-onko-diagnose-ext-morphology-behavior-icdo3",
-        "description": "SearchParameter for Diagnosis.extension[morphology-behaviour-icdo3]",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "SearchParameter/mii-sp-onko-diagnose-verification-status"
-        },
-        "name": "mii-sp-onko-diagnose-verification-status",
-        "description": "SearchParameter for Condition.verificationStatus",
+        "name": "mii-sp-onko-condition-ext-morphology-behavior-icdo3",
+        "description": "SearchParameter for Condition.extension[morphology-behaviour-icdo3]",
         "exampleBoolean": false
       },
       {
@@ -1626,82 +1618,66 @@
       },
       {
         "reference": {
-          "reference": "SearchParameter/mii-sp-onko-operation-complication"
+          "reference": "SearchParameter/mii-sp-onko-procedure-ext-intention"
         },
-        "name": "mii-sp-onko-operation-complication",
-        "description": "SearchParameter for Procedure.complication",
+        "name": "mii-sp-onko-procedure-ext-intention",
+        "description": "SearchParameter for Procedure.extension[intention]",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "SearchParameter/mii-sp-onko-operation-ext-intention"
+          "reference": "SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-applikationsart"
         },
-        "name": "mii-sp-onko-operation-ext-intention",
-        "description": "SearchParameter for Procedure.extension.intention",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "SearchParameter/mii-sp-onko-strahlentherapie-ext-bestrahlung-applikationsart"
-        },
-        "name": "mii-sp-onko-strahlentherapie-ext-bestrahlung-applikationsart",
+        "name": "mii-sp-onko-procedure-ext-strahlentherapie-bs-applikationsart",
         "description": "SearchParameter for Procedure.extension:bestrahlung.extension:applikationsart",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "SearchParameter/mii-sp-onko-strahlentherapie-ext-bestrahlung-boost"
+          "reference": "SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-boost"
         },
-        "name": "mii-sp-onko-strahlentherapie-ext-bestrahlung-boost",
+        "name": "mii-sp-onko-procedure-ext-strahlentherapie-bs-boost",
         "description": "SearchParameter for Procedure.extension:bestrahlung.extension:boost",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "SearchParameter/mii-sp-onko-strahlentherapie-ext-bestrahlung-einzeldosis"
+          "reference": "SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-einzeldosis"
         },
-        "name": "mii-sp-onko-strahlentherapie-ext-bestrahlung-einzeldosis",
+        "name": "mii-sp-onko-procedure-ext-strahlentherapie-bs-einzeldosis",
         "description": "SearchParameter for Procedure.extension:bestrahlung.extension:einzeldosis",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "SearchParameter/mii-sp-onko-strahlentherapie-ext-bestrahlung-gesamtdosis"
+          "reference": "SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-gesamtdosis"
         },
-        "name": "mii-sp-onko-strahlentherapie-ext-bestrahlung-gesamtdosis",
+        "name": "mii-sp-onko-procedure-ext-strahlentherapie-bs-gesamtdosis",
         "description": "SearchParameter for Procedure.extension:bestrahlung.extension:gesamtdosis",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "SearchParameter/mii-sp-onko-strahlentherapie-ext-bestrahlung-strahlenart"
+          "reference": "SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-lateralitaet"
         },
-        "name": "mii-sp-onko-strahlentherapie-ext-bestrahlung-strahlenart",
-        "description": "SearchParameter for Procedure.extension:bestrahlung.extension:strahlenart",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "SearchParameter/mii-sp-onko-strahlentherapie-ext-zielgebiet-lateralitaet"
-        },
-        "name": "mii-sp-onko-strahlentherapie-ext-zielgebiet-lateralitaet",
+        "name": "mii-sp-onko-procedure-ext-strahlentherapie-bs-lateralitaet",
         "description": "SearchParameter for Procedure.extension:bestrahlung.extension:zielgebiet_Lateralitaet",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "SearchParameter/mii-sp-onko-strahlentherapie-extension-bestrahlung-zielgebiet"
+          "reference": "SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-strahlenart"
         },
-        "name": "mii-sp-onko-strahlentherapie-extension-bestrahlung-zielgebiet",
-        "description": "SearchParameter for Procedure.extension:bestrahlung.extension:zielgebiet",
+        "name": "mii-sp-onko-procedure-ext-strahlentherapie-bs-strahlenart",
+        "description": "SearchParameter for Procedure.extension:bestrahlung.extension:strahlenart",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "SearchParameter/mii-sp-onko-strahlentherapie-outcome"
+          "reference": "SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-zielgebiet"
         },
-        "name": "mii-sp-onko-strahlentherapie-outcome",
-        "description": "SearchParameter for Procedure.outcome",
+        "name": "mii-sp-onko-procedure-ext-strahlentherapie-bs-zielgebiet",
+        "description": "SearchParameter for Procedure.extension:bestrahlung.extension:zielgebiet",
         "exampleBoolean": false
       },
       {
@@ -1710,14 +1686,6 @@
         },
         "name": "mii-sp-onko-systemischetherapie-ext-stellungzurop",
         "description": "SearchParameter for Procedure.extension[StellungZurOp]",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "SearchParameter/mii-sp-onko-tnm-klassifikation-has-member"
-        },
-        "name": "mii-sp-onko-tnm-klassifikation-has-member",
-        "description": "SearchParameter for Observation.hasMember",
         "exampleBoolean": false
       },
       {

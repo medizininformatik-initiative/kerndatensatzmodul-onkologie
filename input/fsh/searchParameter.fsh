@@ -46,7 +46,7 @@ Usage: #definition
 * name = "MII_SP_Extension_StellungZurOp"
 * description = "SearchParameter for Procedure.extension[StellungZurOp]"
 * status = #active 
-* code = #extension-stellungzurop
+* code = #strahlentherapie-stellungzurop
 * base = #Procedure
 * type = #token
 * expression = "Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop').value"
@@ -156,20 +156,6 @@ Usage: #definition
 * type = #token
 * expression = "Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung').extension.where(url='Boost').value"
 
-Instance: mii-sp-onko-procedure-ext-systemischetherapie-stellungzurop
-InstanceOf: SearchParameter
-Usage: #definition
-* insert SP_Publisher
-* insert LicenseCodeableCCBY40Instance
-* insert SP_Profile
-* insert Version
-* name = "MII_SP_Procedure_Extension_SystemischeTherapie_StellungZurOp"
-* description = "SearchParameter for Procedure.extension.systemischetherapie.stellung"
-* status = #active 
-* code = #systemischetherapie-stellungzur
-* base = #Procedure
-* type = #token
-* expression = "Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellung').value"
 
 
 //----------------------------------------
@@ -200,10 +186,10 @@ Usage: #definition
 * name = "MII_SP_Extension_StellungZurOp"
 * description = "SearchParameter for Procedure.extension[StellungZurOp]"
 * status = #active 
-* code = #extension-stellungzurop
+* code = #systemischetherapie-stellungzurop
 * base = #Procedure
 * type = #token
-* expression = "Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellung').value"
+* expression = "Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellungzurop').value"
 
 
 //----------------------------------------
