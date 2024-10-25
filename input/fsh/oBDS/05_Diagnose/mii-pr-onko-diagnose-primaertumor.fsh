@@ -29,7 +29,8 @@ Description: "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der 
 * insert Translation(verificationStatus.coding[primaertumorDiagnosesicherung] ^definition, de-DE, Art der Diagnosesicherung nach 5.7 oBDS 2021 )
 
 * bodySite.coding contains
-    primaertumorSeitenlokalisation 0..1 MS
+    primaertumorSeitenlokalisation 0..1 MS and 
+    icd-o-3 0..1 MS
 * bodySite.coding[primaertumorSeitenlokalisation] from mii-vs-onko-seitenlokalisation
 * bodySite.coding[primaertumorSeitenlokalisation].system 1.. MS
 * bodySite.coding[primaertumorSeitenlokalisation] ^patternCoding.system = $mii-cs-onko-seitenlokalisation
@@ -53,7 +54,8 @@ Description: "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der 
 * insert Translation(extension[morphology-behavior-icdo3] ^short, de-DE, ICD-O-Morphologie )
 * insert Translation(extension[morphology-behavior-icdo3] ^definition, de-DE, Morphologie des Primärtumors nach ICD-O-3 nach 6.3 oBDS )
 
-* extension[http://hl7.org/fhir/StructureDefinition/condition-assertedDate] named assertedDate 1..1 MS
+* extension[Feststellungsdatum] 1..1 MS
+
 
 Mapping: FHIR-oBDS-Diagnose
 Id: oBDS
