@@ -18,6 +18,51 @@ Usage: #definition
 * type = #token
 * expression = "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3').value"
 
+Instance: mii-sp-onko-observation-ext-tnm-t-cppraefix
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert LicenseCodeableCCBY40Instance
+* insert SP_Profile
+* insert Version
+* name = "MII_SP_Observation_Extension_TNM_T_CpPraefix"
+* description = "SearchParameter for Observation.extension[cppraefix]"
+* status = #active 
+* code = #tnm-t-cppraefix
+* base = #Observation
+* type = #token
+* expression = "Observation.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-t-cppraefic').value"
+
+Instance: mii-sp-onko-observation-ext-tnm-n-cppraefix
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert LicenseCodeableCCBY40Instance
+* insert SP_Profile
+* insert Version
+* name = "MII_SP_Observation_Extension_TNM_N_CpPraefix"
+* description = "SearchParameter for Observation.extension[cppraefix]"
+* status = #active 
+* code = #tnm-n-cppraefix
+* base = #Observation
+* type = #token
+* expression = "Observation.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-t-cppraefic').value"
+
+Instance: mii-sp-onko-observation-ext-tnm-m-cppraefix
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert LicenseCodeableCCBY40Instance
+* insert SP_Profile
+* insert Version
+* name = "MII_SP_Observation_Extension_TNM_M_CpPraefix"
+* description = "SearchParameter for Observation.extension[cppraefix]"
+* status = #active 
+* code = #tnm-m-cppraefix
+* base = #Observation
+* type = #token
+* expression = "Observation.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-t-cppraefic').value"
+
 Instance: mii-sp-onko-procedure-ext-operation-intention
 InstanceOf: SearchParameter
 Usage: #definition
@@ -29,7 +74,7 @@ Usage: #definition
 * description = "SearchParameter for Procedure.extension[intention]"
 * status = #active 
 * code = #operation-intention
-* base = #Operation
+* base = #Procedure
 * type = #token
 * expression = "Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention').value"
 
