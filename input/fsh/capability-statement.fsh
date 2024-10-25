@@ -225,12 +225,12 @@ Usage: #definition
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
 * insert SupportSearchParam(_lastUpdated, http://hl7.org/fhir/SearchParameter/Resource-lastUpdated, #date, #SHALL)
 * insert SupportSearchParam(_profile, http://hl7.org/fhir/SearchParameter/Resource-profile, #uri, #SHALL)
-* insert SupportSearchParam(based-on, https://www.medizininformatik-initiative.de/fhir/, #reference, #SHALL) // fromm mii
-* insert SupportSearchParam(part-of, https://www.medizininformatik-initiative.de/fhir/, #reference, #SHALL) // from mii
+* insert SupportSearchParam(based-on, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-medicationstatement-based-on, #reference, #SHALL)
+* insert SupportSearchParam(part-of, http://hl7.org/fhir/SearchParameter/MedicationStatement-part-of, #reference, #SHALL)
 * insert SupportSearchParam(medication, http://hl7.org/fhir/SearchParameter/medications-medication, #reference, #SHALL)
 * insert SupportSearchParam(subject, http://hl7.org/fhir/SearchParameter/MedicationStatement-subject, #reference, #SHALL)
 * insert SupportSearchParam(date, http://hl7.org/fhir/SearchParameter/clinical-date, #date, #SHALL)
-* insert SupportSearchParam(note, https://www.medizininformatik-initiative.de/fhir/, #token, #SHALL) // from mii
+* insert SupportSearchParam(note, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-medicationstatement-note, #token, #SHALL)
 
 // CarePlan requirements
 * insert SupportResource(CarePlan, #SHALL)
