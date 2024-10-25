@@ -63,6 +63,36 @@ Usage: #definition
 * type = #token
 * expression = "Observation.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-t-cppraefic').value"
 
+Instance: mii-sp-onko-observation-ext-tnm-n-itc
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert LicenseCodeableCCBY40Instance
+* insert SP_Profile
+* insert Version
+* name = "MII_SP_Observation_Extension_TNM_N_ITC"
+* description = "SearchParameter for Observation.extension[itc]"
+* status = #active 
+* code = #tnm-n-itc
+* base = #Observation
+* type = #token
+* expression = "Observation.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-n-itc').value"
+
+Instance: mii-sp-onko-observation-ext-tnm-n-sn-suffix
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert LicenseCodeableCCBY40Instance
+* insert SP_Profile
+* insert Version
+* name = "MII_SP_Observation_Extension_TNM_N__SN_Suffix"
+* description = "SearchParameter for Observation.extension[sn-suffix]"
+* status = #active 
+* code = #tnm-n-sn-suffix
+* base = #Observation
+* type = #token
+* expression = "Observation.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-n-sn-suffix').value"
+
 Instance: mii-sp-onko-procedure-ext-operation-intention
 InstanceOf: SearchParameter
 Usage: #definition
