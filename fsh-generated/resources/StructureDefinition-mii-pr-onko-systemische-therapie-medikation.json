@@ -74,6 +74,46 @@
         ]
       },
       {
+        "id": "MedicationStatement.medication[x]",
+        "path": "MedicationStatement.medication[x]",
+        "short": "Wirkstoff der systemischen Medikation",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Wirkstoff/ Substanz der systemischen Medikation"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Wirkstoff der systemischen onkologischen Medikation. Nach Möglichkeit als ATC-kodiert anzugeben. Wirkstoffe sind einzeln zu kodieren. Kombinationstherapien können über MedicationStatement.partOf in übergeordneten MedicationStatements gruppiert werden - in diesem Fall ist bei jedem Wirkstoff unter `MedicationStatement.note.text` das Kürzel des (z.B. chemotherapeutischen) Protokolls zu hinterlegen.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Wirkstoff / Substanz der systemischen onkologischen Medikation gemäß 16.4  oBDS 2021."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
         "id": "MedicationStatement.medication[x]:medicationCodeableConcept",
         "path": "MedicationStatement.medication[x]",
         "sliceName": "medicationCodeableConcept",
@@ -126,16 +166,121 @@
       {
         "id": "MedicationStatement.effective[x]:effectivePeriod.start",
         "path": "MedicationStatement.effective[x].start",
-        "mustSupport": true
+        "mustSupport": true,
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Startdatum der systemischen Medikation"
+                }
+              ]
+            }
+          ]
+        },
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Startdatum der systemischen Medikation gemäß 16.7 oBDS 2021."
+                }
+              ]
+            }
+          ]
+        }
       },
       {
         "id": "MedicationStatement.effective[x]:effectivePeriod.end",
         "path": "MedicationStatement.effective[x].end",
-        "mustSupport": true
+        "mustSupport": true,
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Enddatum der systemischen Medikation"
+                }
+              ]
+            }
+          ]
+        },
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Enddatum der systemischen Medikation gemäß 16.9 oBDS 2021."
+                }
+              ]
+            }
+          ]
+        }
       },
       {
         "id": "MedicationStatement.note.text",
         "path": "MedicationStatement.note.text",
+        "short": "Protokoll",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Protokoll der systemischen Medikation"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Protokoll der systemischen Medikation. Bei Angabe eines Schemas sind alle Wirkstoffe in einzelnen Ressourcen unter MedicationStatement.medication[x] gesondert zu kodieren ",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Protokoll der systemischen Medikation gemäß 16.6 oBDS 2021."
+                }
+              ]
+            }
+          ]
+        },
+        "mustSupport": true,
         "mapping": [
           {
             "identity": "oBDS",

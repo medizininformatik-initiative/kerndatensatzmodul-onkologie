@@ -29,6 +29,8 @@ Description: "OBDS Beschreibung von Fernmetastasen (Lokalisation und Datum)"
 * valueCodeableConcept.coding from mii-vs-onko-fernmetastasen
 * valueCodeableConcept.coding.system MS
 * valueCodeableConcept.coding.code MS
+* insert Translation(value[x] ^short, de-DE, Lokalisation der Fernmetastasen )
+* insert Translation(value[x] ^definition, de-DE, Lokalisation der Fernmetastasen laut 11.1 oBDS 2021 / TNM Kodierung )
 
 // 11.2 Datum der diagnostischen Sicherung von Fernmetastasen 
 * effective[x] MS

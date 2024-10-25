@@ -123,11 +123,16 @@
       {
         "id": "Observation.interpretation",
         "path": "Observation.interpretation",
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-genetische-variante-auspraegung"
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
         },
+        "mustSupport": true,
         "mapping": [
           {
             "identity": "oBDS",
@@ -137,12 +142,57 @@
         ]
       },
       {
-        "id": "Observation.interpretation.coding.system",
+        "id": "Observation.interpretation:oBDS",
+        "path": "Observation.interpretation",
+        "sliceName": "oBDS",
+        "min": 0,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-genetische-variante-auspraegung"
+        },
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Genetische Variante Ausprägung"
+                }
+              ]
+            }
+          ]
+        },
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Genetische Variante Ausprägung gemäß 23.2 oBDS 2021"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.interpretation:oBDS.coding.system",
         "path": "Observation.interpretation.coding.system",
         "mustSupport": true
       },
       {
-        "id": "Observation.interpretation.coding.code",
+        "id": "Observation.interpretation:oBDS.coding.code",
         "path": "Observation.interpretation.coding.code",
         "mustSupport": true
       },
@@ -161,7 +211,41 @@
       {
         "id": "Observation.note.text",
         "path": "Observation.note.text",
-        "mustSupport": true
+        "mustSupport": true,
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Genetische Variante Name"
+                }
+              ]
+            }
+          ]
+        },
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Genetische Variante Name gemäß 23.1 oBDS 2021"
+                }
+              ]
+            }
+          ]
+        }
       }
     ]
   }

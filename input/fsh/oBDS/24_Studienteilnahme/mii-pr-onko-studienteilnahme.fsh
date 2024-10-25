@@ -29,11 +29,15 @@ Description: "Dieses Profil beschreibt Studienteilnahmen in der Onkologie"
 * valueCodeableConcept from mii-vs-onko-studienteilnahme (required)
 * valueCodeableConcept.coding.system = $mii-cs-onko-studienteilnahme
 * valueCodeableConcept.coding.code 1.. MS
+* insert Translation(valueCodeableConcept.coding ^short, de-DE, Studienteilnahme )
+* insert Translation(valueCodeableConcept.coding ^definition, de-DE, Studienteilnahme gemäß 24.1 oBDS 2021   )
 
 // Studienteilnahme Datum
 * effective[x] MS
 * effective[x] only dateTime
 * effectiveDateTime 0..1 MS
+* insert Translation(effectiveDateTime ^short, de-DE, Studienteilnahme Datum)
+* insert Translation(effectiveDateTime ^definition, de-DE, Studienteilnahme Datum gemäß 24.2 oBDS 2021   )
 
 Mapping: FHIR-oBDS-Studienteilnahme
 Id: oBDS

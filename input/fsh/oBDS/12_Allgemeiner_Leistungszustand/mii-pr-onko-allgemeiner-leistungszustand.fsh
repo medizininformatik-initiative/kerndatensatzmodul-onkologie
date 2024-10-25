@@ -19,15 +19,7 @@ Description: "OBDS Beschreibung des allgemeines Leistungszustandes"
 * code.coding = $SCT#423690003  
 * code.coding.system 1..
 * code.coding.code 1..
-/*
-* value[x] MS
-* value[x] only CodeableConcept
-* valueCodeableConcept MS
-* valueCodeableConcept 1..1
-* valueCodeableConcept from mii-vs-onko-allgemeiner-leistungszustand (required)
-* valueCodeableConcept.coding.system = $mii-cs-onko-allgemeiner-leistungszustand
-* valueCodeableConcept.coding.code 1.. MS
-*/
+
 
 * component MS
 * component ^slicing.discriminator.type = #pattern
@@ -43,6 +35,9 @@ Description: "OBDS Beschreibung des allgemeines Leistungszustandes"
 * component[ecog].value[x] 1..1 MS
 * component[ecog].value[x] only CodeableConcept
 * component[ecog].value[x] from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-ecog
+* insert Translation(value[x] ^short, de-DE, Leistungszustand nach ECOG )
+* insert Translation(value[x] ^definition, de-DE, Leistungszustand nach ECOG Stufen 0-4 gemäß 12.1 oBDS 2021)
+
 * component[karnofsky] 1..1 MS
 * component[karnofsky].code 1..1 MS
 * component[karnofsky].code.coding 1..1 MS
@@ -50,6 +45,8 @@ Description: "OBDS Beschreibung des allgemeines Leistungszustandes"
 * component[karnofsky].value[x] 1..1 MS
 * component[karnofsky].value[x] only CodeableConcept
 * component[karnofsky].valueCodeableConcept from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-karnofsky
+* insert Translation(value[x] ^short, de-DE, Leistungszustand nach Karnofsky )
+* insert Translation(value[x] ^definition, de-DE, Leistungszustand nach Karnofsky 0-100% gemäß 12.1 oBDS 2021 )
 
 
 

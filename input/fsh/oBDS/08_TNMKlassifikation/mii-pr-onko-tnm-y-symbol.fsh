@@ -20,6 +20,9 @@ Description: "TNM-Klassifikation: TNM y-Symbol. Gibt an, ob die Klassifikation w
 * effective[x] only dateTime
 * effectiveDateTime MS
 * effectiveDateTime obeys tnm-datum
+* insert Translation(effectiveDateTime ^short, de-DE, TNM-Datum )
+* insert Translation(effectiveDateTime ^definition, de-DE, Datum der TNM-Klassifikation nach 8.1 oBDS 2021 )
+
 * value[x] MS
 * value[x] only CodeableConcept
 * valueCodeableConcept = $SCT#421755005
@@ -28,6 +31,9 @@ Description: "TNM-Klassifikation: TNM y-Symbol. Gibt an, ob die Klassifikation w
 * valueCodeableConcept ^comment = "y = Klassifikation erfolgte während oder nach initialer multimodaler Therapie; (leer) = „native“ Klassifikation"
 * valueCodeableConcept.coding.code 1.. MS
 * valueCodeableConcept.coding.system 1.. MS
+* insert Translation(valueCodeableConcept.coding ^short, de-DE, TNM y-Symbol )
+* insert Translation(valueCodeableConcept.coding ^definition, de-DE, TNM Klassifikation nach/ während multimodaler Therapie nach 8.3 oBDS 2021 )
+
 //* dataAbsentReason MS
 
 // Referenz zu Primärtumor
