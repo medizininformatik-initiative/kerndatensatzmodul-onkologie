@@ -69,7 +69,41 @@
             "map": "15.3",
             "comment": "Nebenwirkungen nach CTCAE Version"
           }
-        ]
+        ],
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "CTCAE-Version"
+                }
+              ]
+            }
+          ]
+        },
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Verion der für Art der Nebenwirkung verwendeten CTCAE-Klassifikation gemäß 15.3 oBDS 2021."
+                }
+              ]
+            }
+          ]
+        }
       },
       {
         "id": "AdverseEvent.event.coding.code",
@@ -82,7 +116,41 @@
             "map": "15.2",
             "comment": "Nebenwirkungen nach CTCAE Art"
           }
-        ]
+        ],
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Art der Nebenwirkung"
+                }
+              ]
+            }
+          ]
+        },
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Art der Nebenwirkung nach CTCAE / MedDRA gemäß 15.2 oBDS 2021."
+                }
+              ]
+            }
+          ]
+        }
       },
       {
         "id": "AdverseEvent.event.text",
@@ -127,7 +195,24 @@
       {
         "id": "AdverseEvent.severity.coding",
         "path": "AdverseEvent.severity.coding",
-        "mustSupport": true
+        "mustSupport": true,
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Schweregrad der Nebenwirkung nach CTCAE"
+                }
+              ]
+            }
+          ]
+        }
       },
       {
         "id": "AdverseEvent.severity.coding.system",
@@ -145,6 +230,27 @@
         "id": "AdverseEvent.severity.text",
         "path": "AdverseEvent.severity.text",
         "mustSupport": true
+      },
+      {
+        "id": "AdverseEvent.outcome.coding",
+        "path": "AdverseEvent.outcome.coding",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Schweregrad der Nebenwirkung nach CTCAE gemäß 15.1 oBDS 2021."
+                }
+              ]
+            }
+          ]
+        }
       },
       {
         "id": "AdverseEvent.suspectEntity",

@@ -21,6 +21,10 @@ Description: "Dieses Profil beschreibt die Nebenwirkung von Strahlentherapie und
 * event.coding.code 1..1 MS
 * event.coding.version MS
 * event.text MS
+* insert Translation(event.coding.code ^short, de-DE, Art der Nebenwirkung)
+* insert Translation(event.coding.code ^definition, de-DE, Art der Nebenwirkung nach CTCAE / MedDRA gemäß 15.2 oBDS 2021.)
+* insert Translation(event.coding.version ^short, de-DE, CTCAE-Version)
+* insert Translation(event.coding.version ^definition, de-DE, Verion der für Art der Nebenwirkung verwendeten CTCAE-Klassifikation gemäß 15.3 oBDS 2021.)
 
 // Hier wird CTCAE Grad genutzt
 * severity 1..1 MS
@@ -29,6 +33,8 @@ Description: "Dieses Profil beschreibt die Nebenwirkung von Strahlentherapie und
 * severity.coding.system 1..1 MS
 * severity.coding.code 1..1 MS
 * severity.text MS
+* insert Translation(severity.coding ^short, de-DE, Schweregrad der Nebenwirkung nach CTCAE )
+* insert Translation(outcome.coding ^definition, de-DE, Schweregrad der Nebenwirkung nach CTCAE gemäß 15.1 oBDS 2021.)
 
 // Die Referenz zu Procedure/MedicationStatement
 * suspectEntity 1..* MS

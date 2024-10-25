@@ -47,6 +47,8 @@ Description: "Umfang eines Residualtumors nach einer Therapie"
 * valueCodeableConcept.coding.code 1.. MS
 * valueCodeableConcept.coding.system 1.. MS
 * valueCodeableConcept.coding.system = $mii-cs-onko-residualstatus
+* insert Translation(valueCodeableConcept.coding.code ^short, de-DE, Residualstatus )
+* insert Translation(valueCodeableConcept.coding.code ^definition, de-DE, Globaler Residualstatus nach 10.2 oBDS 2021. Der lokale Residualstatus von Operationen wird direkt an der Operation kodiert )
 
 
 Mapping: FHIR-oBDS-Residualstatus

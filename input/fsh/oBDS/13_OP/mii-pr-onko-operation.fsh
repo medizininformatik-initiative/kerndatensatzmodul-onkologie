@@ -11,6 +11,8 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 // OP-Datum
 
 * extension contains mii-ex-onko-operation-intention named Intention 1..1
+* insert Translation(extension[Intention] ^short, de-DE, Intention der OP )
+* insert Translation(extension[Intention] ^definition, de-DE, Intention der OP gemäß 13.1 oBDS 2021 )
 * extension[Intention] MS
 * encounter 0..1 MS
 
@@ -21,8 +23,11 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 * performed[x] MS
 * performed[x] only dateTime 
 // OP-Prozedur 
-* code.coding[ops] 1..1 MS // hier auch potentiel 1..*, weil mehrere Sachen gemacht werden können? --> geht nicht wegen MII Prozedur-Binding
- 
+* code.coding[ops] 1..1 MS 
+* code.coding[ops] ^definition =  "OPS-Kodierung. Nur ein Kode erlaubt, bei mehreren kodierten Prozeduren sind mehrere Einzelprozeduren anzulegen."
+* insert Translation(code.coding[ops] ^short, de-DE, OPS-Kode der Operation )
+* insert Translation(code.coding[ops] ^definition, de-DE, OPS-Kode der Operation gemäß 13.3 oBDS 2021 )
+
 * complication MS
 * complication ^slicing.discriminator.type = #pattern
 * complication ^slicing.discriminator.path = "$this"
@@ -34,12 +39,16 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 * complication[compl_obds] from mii-vs-onko-operation-komplikation
 * complication[compl_obds].coding.system = $mii-cs-onko-operation-komplikation
 * complication[compl_obds].coding.code 1.. MS
+* insert Translation(complication[compl_obds] ^short, de-DE, Komplikation der OP laut oBDS )
+* insert Translation(complication[compl_obds] ^definition, de-DE, Komplikation der OP gemäß 13.5 oBDS 2021)
 
 * complication[compl_icd10] MS 
 * complication[compl_icd10] from http://fhir.de/ValueSet/bfarm/icd-10-gm 
 * complication[compl_icd10].coding.system = $ICD10GM 
 * complication[compl_icd10].coding.system 1..
 * complication[compl_icd10].coding.code 1..
+* insert Translation(complication[compl_icd10] ^short, de-DE, Komplikation der OP Sonstige ICD-10 )
+* insert Translation(complication[compl_icd10] ^definition, de-DE, Komplikation der OP - soweit nicht in 13.1 oBDS 2021 enthalten - als ICD-10-GM)
 
 // Residualstatus lokal
 * outcome MS
@@ -48,9 +57,8 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 * outcome.coding.system = $mii-cs-onko-residualstatus
 * outcome.coding.system MS
 * outcome.coding.code MS
-
-
-
+* insert Translation(outcome.coding ^short, de-DE, Lokaler Residualstatus )
+* insert Translation(outcome.coding ^definition, de-DE, Lokaler Residualstatus der OP gemäß 10.1 oBDS 2021. Globaler Residualstatus wird prozedurenunabhängig als eigenständige Observation kodiert. )
 
 // Referenz auf Tumorboard
 * basedOn MS

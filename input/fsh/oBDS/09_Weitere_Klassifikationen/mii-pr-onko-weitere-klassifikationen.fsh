@@ -20,16 +20,30 @@ Description: "Weitere Tumor Staging Klassifikation neben TMN (Hämatoonkologisch
 * effective[x] MS
 * effective[x] only dateTime
 * effectiveDateTime 0..1 MS
+* insert Translation(effectiveDateTime ^short, de-DE, Datum)
+* insert Translation(effectiveDateTime ^definition, de-DE, Datum der weiteren Klassifikation )
 
 // 9.2 Hämatoonkologische und sonstige Klassifikationen Name 
 * code MS
 * code 1..1
-* code.text MS // hier ist der String aus dem oBDS einzuleiten
-* code.text 1..1
-* code.coding.code 0..1 // hier ist ein entsprechender Code anzugeben, mit dem die Klassifikation in einem internationalen Standard semantisch annotiert werden kann 
+* code.text MS 
+* code.text 1..1 
+* code.text ^definition = "Hier ist der String aus dem oBDS einzuleiten"
+* code.coding.code 0..1 
+* code.coding.code ^definition = "Hier ist eine entsprechende Kodierung anzugeben, mit dem die Klassifikation in einem internationalen Standard (z.B. SNOMED-CT, LOINC, etc. ) semantisch annotiert werden kann" 
+* insert Translation(code.text ^short, de-DE, Klassifikation Name Freitext )
+* insert Translation(code.text ^definition, de-DE, Name der Klassifikation wie in Krebsregistermeldung angegeben )
+* insert Translation(code.coding.code ^short, de-DE, Klassifikation Name Kodierung  )
+* insert Translation(code.coding.code ^definition, de-DE, Name der Klassifikation kodiert in internationalem Standard - falls vorhanden )
+
 
 // 9.3 Hämatoonkologische und sonstige Klassifikationen Einstufung 
-* value[x] 0..1 MS
+* value[x] 0..1 MS 
+* value[x] ^short = "Wert/ Einstufung in jeweiliger Klassifikation"
+* value[x] ^definition = "Einstufung nach jeweiliger Klassifikation. Je nach ausgewählter Systematik kann hier eine Klassifikation/Kategorisierung, ein Puntkwert oder ein anderer Datentyp auftauchen"
+* insert Translation(value[x] ^short, de-DE, Wert der weiteren Klassifikation )
+* insert Translation(value[x] ^definition, de-DE, Wert in oben ausgewählter Klassifikation )
+
 
 Mapping: FHIR-oBDS-Weitere-Klassifikationen
 Id: oBDS

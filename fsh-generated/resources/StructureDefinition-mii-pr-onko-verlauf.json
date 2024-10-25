@@ -113,12 +113,14 @@
           ],
           "ordered": false,
           "rules": "open"
-        }
+        },
+        "mustSupport": true
       },
       {
         "id": "Observation.effective[x]:effectiveDateTime",
         "path": "Observation.effective[x]",
         "sliceName": "effectiveDateTime",
+        "comment": "In der vorliegenden ersten Version des Moduls Onkologie ist das letzte (= späteste) Datum der verlinkten Observations anzugeben, entsprechend Punkt 17.1 des oBDS 2021 . Langfristig ist zu überlegen, hier über eine effectivePeriod eine Datumsrange abzubilden. ",
         "min": 0,
         "max": "1",
         "type": [
@@ -126,6 +128,7 @@
             "code": "dateTime"
           }
         ],
+        "mustSupport": true,
         "mapping": [
           {
             "identity": "oBDS",
@@ -137,24 +140,110 @@
       {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
         "type": [
           {
             "code": "CodeableConcept"
           }
         ],
-        "mustSupport": true,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]:valueCodeableConcept",
+        "path": "Observation.value[x]",
+        "sliceName": "valueCodeableConcept",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
         "binding": {
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-verlauf-gesamtbeurteilung"
         }
       },
       {
-        "id": "Observation.value[x].coding.system",
+        "id": "Observation.value[x]:valueCodeableConcept.coding",
+        "path": "Observation.value[x].coding",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Datum der Untersuchung im Verlauf"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Gesamtbeurteilung im Verlauf"
+                }
+              ]
+            }
+          ]
+        },
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Datum der letzten Untersuchung in dieser Verlaufsbeurteilung gemäß 17.1 oBDS 2021."
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Gesamtbeurteilung im Verlauf gemäß 17.2 oBDS 2021."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.value[x]:valueCodeableConcept.coding.system",
         "path": "Observation.value[x].coding.system",
         "mustSupport": true
       },
       {
-        "id": "Observation.value[x].coding.code",
+        "id": "Observation.value[x]:valueCodeableConcept.coding.code",
         "path": "Observation.value[x].coding.code",
         "mustSupport": true
       },
@@ -229,6 +318,44 @@
         }
       },
       {
+        "id": "Observation.component:Tumor_Verlauf.value[x].coding",
+        "path": "Observation.component.value[x].coding",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Gesamtbeurteilung Primärtumor im Verlauf"
+                }
+              ]
+            }
+          ]
+        },
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Gesamtbeurteilung des Primärtumors im Verlauf gemäß 17.3 oBDS 2021."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
         "id": "Observation.component:Tumor_Verlauf.value[x].coding.system",
         "path": "Observation.component.value[x].coding.system",
         "mustSupport": true
@@ -280,6 +407,44 @@
         }
       },
       {
+        "id": "Observation.component:Lymphknoten_Verlauf.value[x].coding",
+        "path": "Observation.component.value[x].coding",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Gesamtbeurteilung Lymphknoten im Verlauf"
+                }
+              ]
+            }
+          ]
+        },
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Gesamtbeurteilung der Lymphknoteninfiltration im Verlauf gemäß 17.4 oBDS 2021."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
         "id": "Observation.component:Lymphknoten_Verlauf.value[x].coding.system",
         "path": "Observation.component.value[x].coding.system",
         "mustSupport": true
@@ -328,6 +493,44 @@
         "binding": {
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-verlauf-fernmetastasen"
+        }
+      },
+      {
+        "id": "Observation.component:Fernmetastasen_Verlauf.value[x].coding",
+        "path": "Observation.component.value[x].coding",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Gesamtbeurteilung Fernmetastasen im Verlauf"
+                }
+              ]
+            }
+          ]
+        },
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Gesamtbeurteilung von Fernmetastasen im Verlauf gemäß 17.5 oBDS 2021."
+                }
+              ]
+            }
+          ]
         }
       },
       {
