@@ -150,3 +150,16 @@ Usage: #definition
 * base = #Procedure
 * type = #token
 * expression = "Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung').extension.where(url='Boost').value"
+
+nstance: mii-sp-onko-systemischetherapie-ext-stellungzurop
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* insert Version
+* name = "MII_SP_Extension_StellungZurOp"
+* description = "SearchParameter for Procedure.extension[StellungZurOp]"
+* status = #active 
+* code = #systemischetherapie-stellungzurop
+* base = #Procedure
+* type = #token
+* expression = "Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellungzurop').value"
