@@ -12,3 +12,4 @@ Usage: #example
 * recordedDate = "2020-02-16"
 * bodySite.coding[snomed-ct] = $SCT#76365002 "Structure of upper outer quadrant of breast (body structure)"
 * bodySite.coding[icd-o-3] = $ICDO3#C50.4 "Oberer äußerer Quadrant der Brust"
+* extension[Feststellungsdatum].valueDateTime = 2021-05-09 

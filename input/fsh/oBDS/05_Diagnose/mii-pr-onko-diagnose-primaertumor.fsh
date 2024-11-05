@@ -29,7 +29,8 @@ Description: "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der 
 * insert Translation(verificationStatus.coding[primaertumorDiagnosesicherung] ^definition, de-DE, Art der Diagnosesicherung nach 5.7 oBDS 2021 )
 
 * bodySite.coding contains
-    primaertumorSeitenlokalisation 0..1 MS
+    primaertumorSeitenlokalisation 0..1 MS and 
+    icd-o-3 0..1 MS
 * bodySite.coding[primaertumorSeitenlokalisation] from mii-vs-onko-seitenlokalisation
 * bodySite.coding[primaertumorSeitenlokalisation].system 1.. MS
 * bodySite.coding[primaertumorSeitenlokalisation] ^patternCoding.system = $mii-cs-onko-seitenlokalisation
@@ -53,6 +54,9 @@ Description: "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der 
 * insert Translation(extension[morphology-behavior-icdo3] ^short, de-DE, ICD-O-Morphologie )
 * insert Translation(extension[morphology-behavior-icdo3] ^definition, de-DE, Morphologie des Primärtumors nach ICD-O-3 nach 6.3 oBDS )
 
+* extension[Feststellungsdatum] 1..1 MS
+
+
 Mapping: FHIR-oBDS-Diagnose
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
@@ -63,7 +67,7 @@ Source: MII_PR_Onko_Diagnose_Primaertumor
 * code.text -> "5.3" "Primärtumor Tumordiagnose Text"
 * bodySite.coding[icd-o-3].code -> "5.4" "Primärtumor Topographie ICD-O"
 * bodySite.coding[icd-o-3].version -> "5.5" "Primärtumor Topographie ICD-O-Version"
-* recordedDate -> "5.6" "Primärtumor Diagnosedatum"
+* extension[Feststellungsdatum] -> "5.6" "Primärtumor Diagnosedatum"
 * verificationStatus.coding[primaertumorDiagnosesicherung].code -> "5.7" "Primärtumor Diagnosesicherung"
 * bodySite.coding[primaertumorSeitenlokalisation].code -> "5.8" "Primärtumor Seitenlokalisation"
 * extension[morphology-behavior-icdo3].valueCodeableConcept.coding.code -> "6.3" "Morphologie-Code"
