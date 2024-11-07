@@ -72,7 +72,7 @@ Alias: $mii-cs-onko-nebenwirkung-ctcae-grad = https://www.medizininformatik-init
 Alias: $mii-cs-onko-meddra-de = https://www.meddra.org
 
 //20
-Alias: $mii-cs-onko-tod = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-ende-tod
+Alias: $mii-cs-onko-tod = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tod
 
 //18-19
 Alias: $mii-cs-onko-therapieplanung-typ = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ

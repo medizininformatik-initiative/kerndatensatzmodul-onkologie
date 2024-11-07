@@ -269,7 +269,7 @@ Usage: #example
 Description: ". "
 * status = #final
 * subject = Reference(PatientKimMusterperson)
-* code.coding = $SCT#263642008 "Tumor-node-metastasis (TNM) staging classification (attribute)"
+* code.coding = $SCT#399588009 "Pathologic TNM stage grouping"
 * effectiveDateTime = 2021-06-22
 * method = #8
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
