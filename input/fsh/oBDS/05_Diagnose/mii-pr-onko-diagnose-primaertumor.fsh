@@ -12,7 +12,7 @@ Description: "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der 
 * encounter 0..1 MS
 * subject 1..1 MS
 * subject only Reference(Patient)
-* verificationStatus MS 
+* verificationStatus 0..1 MS 
 * verificationStatus.coding ^slicing.discriminator.type = #pattern
 * verificationStatus.coding ^slicing.discriminator.path = "$this"
 * verificationStatus.coding ^slicing.rules = #open

@@ -36,7 +36,8 @@ Description: "bestätigte Primärdiagnose"
 * recordedDate = 2021-06-10
 * subject = Reference(PatientKimMusterperson)
 * clinicalStatus = #active //zum Zeitpunkt der Diagnosestellung
-* verificationStatus.coding[primaertumorDiagnosesicherung].code = #2 "klinische Diagnostik" // steht für "Alle Untersuchungstechniken, einschl. Röntgen, Endoskopie, bildgeb. Verfahren, Ultraschall, explorativer Eingriffe(wie Laparotomie) und Autopsie, aber ohne Gewebsuntersuchungen"
+* verificationStatus.coding[condition-ver-status] = #unconfirmed
+* verificationStatus.coding[primaertumorDiagnosesicherung].code = #2 //"klinische Diagnostik"  steht für "Alle Untersuchungstechniken, einschl. Röntgen, Endoskopie, bildgeb. Verfahren, Ultraschall, explorativer Eingriffe(wie Laparotomie) und Autopsie, aber ohne Gewebsuntersuchungen"
 * code.coding  = $ICD10GM#C48.2 "Bösartige Neubildung des Retroperitoneums und Peritoneums - Peritoneum, nicht näher bezeichnet "
 // 389026000 | Ascites (disorder) | 
 * bodySite = $ICDO3#C56.9 "Ovar" // mögliche Lokalisation des Haupttumors? 
