@@ -220,6 +220,10 @@
 [PatientKimMusterperson-Procedure-2]: Procedure-PatientKimMusterperson-Procedure-2.html
 [PatientKimMusterperson-Procedure-3]: Procedure-PatientKimMusterperson-Procedure-3.html
 [PatientKimMusterperson-Procedure-4]: Procedure-PatientKimMusterperson-Procedure-4.html
+[PatientKimMusterperson-Procedure-4a]: Procedure-PatientKimMusterperson-Procedure-4a.html
+[PatientKimMusterperson-Procedure-4b]: Procedure-PatientKimMusterperson-Procedure-4b.html
+[PatientKimMusterperson-Procedure-4c]: Procedure-PatientKimMusterperson-Procedure-4c.html
+[PatientKimMusterperson-Procedure-4d]: Procedure-PatientKimMusterperson-Procedure-4d.html
 [PatientKimMusterperson-Specimen-1]: Specimen-PatientKimMusterperson-Specimen-1.html
 [PatientKimMusterperson-SystemicTherapy-1]: Procedure-PatientKimMusterperson-SystemicTherapy-1.html
 [PatientKimMusterperson-SystemicTherapy-2]: Procedure-PatientKimMusterperson-SystemicTherapy-2.html

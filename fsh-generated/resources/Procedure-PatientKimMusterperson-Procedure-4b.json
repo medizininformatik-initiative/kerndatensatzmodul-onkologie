@@ -1,0 +1,36 @@
+{
+  "resourceType": "Procedure",
+  "id": "PatientKimMusterperson-Procedure-4b",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure"
+    ]
+  },
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/PatientKimMusterperson"
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "5-683",
+        "system": "http://fhir.de/CodeSystem/bfarm/ops",
+        "display": "Hysterektomie"
+      }
+    ]
+  },
+  "performedDateTime": "2021-09-30",
+  "partOf": [
+    {
+      "reference": "Procedure/PatientKimMusterperson-Procedure-4"
+    }
+  ],
+  "outcome": {
+    "coding": [
+      {
+        "code": "R0",
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus"
+      }
+    ]
+  }
+}
