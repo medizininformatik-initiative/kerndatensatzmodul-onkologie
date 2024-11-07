@@ -37,7 +37,7 @@ Description: "bestätigte Primärdiagnose"
 * subject = Reference(PatientKimMusterperson)
 * clinicalStatus = #active //zum Zeitpunkt der Diagnosestellung
 * verificationStatus.coding[condition-ver-status] = http://terminology.hl7.org/CodeSystem/condition-ver-status#unconfirmed
-* verificationStatus.coding[primaertumorDiagnosesicherung].code = #2 //"klinische Diagnostik"  steht für "Alle Untersuchungstechniken, einschl. Röntgen, Endoskopie, bildgeb. Verfahren, Ultraschall, explorativer Eingriffe(wie Laparotomie) und Autopsie, aber ohne Gewebsuntersuchungen"
+* verificationStatus.coding[primaertumorDiagnosesicherung] = $mii-cs-onko-primaertumor-diagnosesicherung#2 //"klinische Diagnostik"  steht für "Alle Untersuchungstechniken, einschl. Röntgen, Endoskopie, bildgeb. Verfahren, Ultraschall, explorativer Eingriffe(wie Laparotomie) und Autopsie, aber ohne Gewebsuntersuchungen"
 * code.coding  = $ICD10GM#C48.2 "Bösartige Neubildung des Retroperitoneums und Peritoneums - Peritoneum, nicht näher bezeichnet "
 // 389026000 | Ascites (disorder) | 
 * bodySite = $ICDO3#C56.9 "Ovar" // mögliche Lokalisation des Haupttumors? 
@@ -267,7 +267,7 @@ Instance: TNM-Klassifikation-Observation-2
 InstanceOf: MII_PR_Onko_TNM_Klassifikation
 Usage: #example  
 Description: ". "
-* status = #completed
+* status = #final
 * subject = Reference(PatientKimMusterperson)
 * code.coding = $SCT#263642008 "Tumor-node-metastasis (TNM) staging classification (attribute)"
 * effectiveDateTime = 2021-06-22
