@@ -215,6 +215,7 @@
 [PatientKimMusterperson]: Patient-PatientKimMusterperson.html
 [PatientKimMusterperson-Diagnosis-1]: Condition-PatientKimMusterperson-Diagnosis-1.html
 [PatientKimMusterperson-PathoReport-1]: DiagnosticReport-PatientKimMusterperson-PathoReport-1.html
+[PatientKimMusterperson-PrimaryDiagnosis-2]: Condition-PatientKimMusterperson-PrimaryDiagnosis-2.html
 [PatientKimMusterperson-Procedure-1]: Procedure-PatientKimMusterperson-Procedure-1.html
 [PatientKimMusterperson-Procedure-2]: Procedure-PatientKimMusterperson-Procedure-2.html
 [PatientKimMusterperson-Procedure-3]: Procedure-PatientKimMusterperson-Procedure-3.html

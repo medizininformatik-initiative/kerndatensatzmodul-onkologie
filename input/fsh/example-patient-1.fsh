@@ -27,13 +27,14 @@ Description: "10.06.2021 CT Abdomen mit KM"
 * code.coding = $OPS#3-222 "Computertomographie des Abdomens mit Kontrastmittel"
 * code.coding.version = "OPS 2024"
 * performedDateTime = 2021-06-10
-/*
-Instance: OncologicExamplePatientPrimaryDiagnosis
-InstanceOf: mii-pr-onko-diagnose
+
+Instance: PatientKimMusterperson-PrimaryDiagnosis-2
+InstanceOf: mii-pr-onko-diagnose-primaertumor
 Usage: #example
-Description: "Primärdiagnose"
+Description: "bestätigte Primärdiagnose"
+* extension[Feststellungsdatum].valueDateTime = 2021-06-10
 * recordedDate = 2021-06-10
-* subject = Reference(OncologicExamplePatientKimMusterperson)
+* subject = Reference(PatientKimMusterperson)
 * clinicalStatus = #active //zum Zeitpunkt der Diagnosestellung
 * verificationStatus.coding[primaertumorDiagnosesicherung].code = #2 "klinische Diagnostik" // steht für "Alle Untersuchungstechniken, einschl. Röntgen, Endoskopie, bildgeb. Verfahren, Ultraschall, explorativer Eingriffe(wie Laparotomie) und Autopsie, aber ohne Gewebsuntersuchungen"
 * code.coding  = $ICD10GM#C48.2 "Bösartige Neubildung des Retroperitoneums und Peritoneums - Peritoneum, nicht näher bezeichnet "
@@ -43,7 +44,7 @@ Description: "Primärdiagnose"
 
 // Kann man auf Basis von "Mesenteriale retroperitoneale LK-Metastasen, V.a. Lebermetastasierung" ein NM-Staging machen? Ovar
 // T3 N1 M1 accoding to 8th TNM UICC ?? Dann 4 Ressourcen von klinischem TNM 
-*/
+
 Instance: PatientKimMusterperson-Diagnosis-1
 InstanceOf: mii-pr-onko-diagnose-primaertumor
 Usage: #example
@@ -127,7 +128,7 @@ Description: "."
 * effectivePeriod.end = 2021-09-05
 * medicationCodeableConcept.coding[atcClassDe][0] = $ATC_DE#L01CD01 "Paclitaxel"
 * medicationCodeableConcept.coding[atcClassDe][1] = $ATC_DE#L01XA02 "Carboplatin"
-* partOf = Reference(SystemicTherapy1)
+* partOf = Reference(PatientKimMusterperson-SystemicTherapy-1)
 * note.text = "CarboTax"
 
 
@@ -419,7 +420,7 @@ Description: ". "
 * subject = Reference(PatientKimMusterperson)
 * status = #final
 * effectiveDateTime = 2022-01-22
-* focus = Reference(Pa)
+* focus = Reference(PatientKimMusterperson-PrimaryDiagnosis-2)
 * code.coding = $SCT#396432002 "Status of regression of tumor (observable entity)"
 * valueCodeableConcept.coding = $mii-cs-onko-verlauf-gesamtbeurteilung#V "Vollremission" 
 * component[Tumor_Verlauf].code.coding = $SCT#277062004 "Status des Residualtumors"
@@ -453,7 +454,7 @@ Description: "."
 * category.coding = $mii-cs-onko-therapieplanung-typ#postop "postoperativ Tumorkonferenz" 
 * created = 2022-01-20
 * replaces = Reference(PatientKimMusterperson-Tumorkonferenz-3)
-* addresses = Reference(OncologicExamplePatientPrimaryDiagnosis2)
+* addresses = Reference(PatientKimMusterperson-PrimaryDiagnosis-2)
 * activity[0].detail.code = $mii-cs-onko-therapie-typ#ZS
 * activity[0].detail.status = #active 
 * activity[0].detail.statusReason = $mii-cs-onko-therapieabweichung#U "unbekannt"
