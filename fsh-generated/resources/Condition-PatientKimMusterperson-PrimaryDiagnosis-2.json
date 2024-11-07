@@ -1,11 +1,17 @@
 {
   "resourceType": "Condition",
-  "id": "PatientKimMusterperson-Diagnosis-1",
+  "id": "PatientKimMusterperson-PrimaryDiagnosis-2",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
     ]
   },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+      "valueDateTime": "2021-06-10"
+    }
+  ],
   "verificationStatus": {
     "coding": [
       {

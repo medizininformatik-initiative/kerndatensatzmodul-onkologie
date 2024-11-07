@@ -186,14 +186,13 @@
             }
           ],
           "rules": "open"
-        },
-        "min": 1
+        }
       },
       {
         "id": "Condition.verificationStatus.coding:condition-ver-status",
         "path": "Condition.verificationStatus.coding",
         "sliceName": "condition-ver-status",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "patternCoding": {
           "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
