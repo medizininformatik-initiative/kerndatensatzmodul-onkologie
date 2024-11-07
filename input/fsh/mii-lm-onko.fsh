@@ -132,7 +132,7 @@ Source: MII_LM_Onko
   * PrimaertumorTumordiagnoseText -> "Condition.code.text"
   * PrimaertumorTopographieICDO -> "Condition.bodySite.coding.where(system='http://terminology.hl7.org/CodeSystem/icd-o-3').code"
   * PrimaertumorTopographieICDOVersion -> "Condition.bodySite.coding.where(system='http://terminology.hl7.org/CodeSystem/icd-o-3').version"
-  * PrimaertumorDiagnosedatum -> "Condition.recordedDate"
+  * PrimaertumorDiagnosedatum -> "Condition.assertedDate"
   * PrimaertumorDiagnosesicherung -> "Condition.verificationStatus.coding.where(system='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung').code"
   * PrimaertumorSeitenlokalisation -> "Condition.bodySite.coding.where(system='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-seitenlokalisation').code"
   * FruehereTumorerkrankungen -> "Condition"
