@@ -72,5 +72,5 @@ Usage: #definition
 * group[=].element[+].code = #X
 * group[=].element[=].display = "fehlende Angabe"
 * group[=].element[=].target.code = #1287211007
-* group[=].element[=].target.display = " No information available (qualifier value)"
+* group[=].element[=].target.display = "No information available (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent

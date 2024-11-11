@@ -26,9 +26,12 @@ Usage: #definition
 * group[=].element[=].target.code = #7147002
 * group[=].element[=].target.display = "New (qualifier value)"
 * group[=].element[=].target.equivalence = #narrower
+* group[=].element[=].target.comment = "Kodierung für neu aufgetretene Fernmetastasen"
+
 * group[=].element[+].target.code = #263855007
 * group[=].element[=].target.display = "Relapse phase (qualifier value)"
 * group[=].element[=].target.equivalence = #narrower
+* group[=].element[=].target.comment = "Kodierung für Metastasenrezidiv"
 
 * group[=].element[+].code = #T
 * group[=].element[=].display = "Fernmetastasen Residuen"
@@ -63,5 +66,5 @@ Usage: #definition
 * group[=].element[+].code = #X
 * group[=].element[=].display = "fehlende Angabe"
 * group[=].element[=].target.code = #1287211007
-* group[=].element[=].target.display = " No information available (qualifier value)"
+* group[=].element[=].target.display = "No information available (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
