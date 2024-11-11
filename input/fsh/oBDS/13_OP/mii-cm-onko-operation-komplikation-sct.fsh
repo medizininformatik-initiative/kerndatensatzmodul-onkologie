@@ -94,7 +94,7 @@ Usage: #definition
 * group[=].element[+].code = #BIF
 * group[=].element[=].display = "Biliäre Fistel"
 * group[=].element[=].target.code = #53206008
-* group[=].element[=].target.display = "Fistula of bile duct (disorder) "
+* group[=].element[=].target.display = "Fistula of bile duct (disorder)"
 * group[=].element[=].target.equivalence = #equivalent 
 
 * group[=].element[+].code = #BOG
@@ -212,7 +212,7 @@ Usage: #definition
 * group[=].element[+].code = #HRS
 * group[=].element[=].display = "Herzrhythmusstörungen"
 * group[=].element[=].target.code = #698247007
-* group[=].element[=].target.display = "Cardiac arrhythmia (disorder) "
+* group[=].element[=].target.display = "Cardiac arrhythmia (disorder)"
 * group[=].element[=].target.equivalence = #equivalent
 
 * group[=].element[+].code = #HNA
@@ -259,7 +259,7 @@ Usage: #definition
 * group[=].element[+].code = #KIM
 * group[=].element[=].display = "Komplikation eines Implantates (Gefäßprothese, Totalendoprothese, Katheter), z. B. Dislokation"
 * group[=].element[=].target.code = #19220005
-* group[=].element[=].target.display = "Complication of implant (disorder) "
+* group[=].element[=].target.display = "Complication of implant (disorder)"
 * group[=].element[=].target.equivalence = #equivalent
 
 * group[=].element[+].code = #KRA
@@ -289,7 +289,7 @@ Usage: #definition
 * group[=].element[+].code = #LYF
 * group[=].element[=].display = "Lymphfistel"
 * group[=].element[=].target.code = #234105001
-* group[=].element[=].target.display = "Lymph fistula (disorder) "
+* group[=].element[=].target.display = "Lymph fistula (disorder)"
 * group[=].element[=].target.equivalence = #equivalent
 
 * group[=].element[+].code = #LYE
@@ -365,7 +365,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #narrower
 * group[=].element[=].target.comment = "Spezifische Kodierung für Knochenentzündung"
 * group[=].element[+].target.code = #60168000
-* group[=].element[=].target.display = "Osteomyelitis (disorder) "
+* group[=].element[=].target.display = "Osteomyelitis (disorder)"
 * group[=].element[=].target.equivalence = #narrower
 * group[=].element[=].target.comment = "Spezifische Kodierung für Knochenmarksentzündung"
 
@@ -463,7 +463,7 @@ Usage: #definition
 * group[=].element[=].target.code = #19220005
 * group[=].element[=].target.display = "Complication of implant (disorder)"
 * group[=].element[=].target.equivalence = #wider
-* group[=].element[=].target.comment = "Komplikation hat keine spezifischen Sepsis-Unterkonzepte, ggfs. über Postkoordination "
+* group[=].element[=].target.comment = "Komplikation hat keine spezifischen Sepsis-Unterkonzepte, ggfs. über Postkoordination"
 
 * group[=].element[+].code = #SES
 * group[=].element[=].display = "Septischer Schock"
@@ -490,7 +490,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 
 * group[=].element[+].code = #TIA
-* group[=].element[=].display = "TIA (transitorische ischämische Attacke) oder Rind (reversibles ischämisches neurologisches Defizit)"
+* group[=].element[=].display = "TIA(transitorische ischämische Attacke) oder RIND(reversibles ischämisches neurologisches Defizit)"
 * group[=].element[=].target.code = #266257000
 * group[=].element[=].target.display = "Transient ischemic attack (disorder)"
 * group[=].element[=].target.equivalence = #equivalent

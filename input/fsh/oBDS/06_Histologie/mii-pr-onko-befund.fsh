@@ -26,7 +26,7 @@ Description: "Histologie: Befund. Vollständiger Befundbericht des Pathologen."
 * code.coding ^slicing.discriminator.path = "$this"
 * code.coding ^slicing.rules = #open
 * code.coding contains pathology-report 1..1 MS
-* code.coding[pathology-report] = $LOINC#60568-3 
+* code.coding[pathology-report] = $LOINC#22034-3 
 * code.coding[pathology-report].system 1.. MS 
 * code.coding[pathology-report].code 1.. MS
 * subject 1.. MS

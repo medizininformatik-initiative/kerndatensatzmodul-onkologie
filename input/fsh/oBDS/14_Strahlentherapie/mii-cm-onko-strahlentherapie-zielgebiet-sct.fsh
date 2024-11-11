@@ -42,7 +42,7 @@ Usage: #definition
 * group[=].element[+].code = #1.5
 * group[=].element[=].display = "Hirn sonstiges"
 * group[=].element[=].target.code = #74964007
-* group[=].element[=].target.display = " Other (qualifier value)"
+* group[=].element[=].target.display = "Other (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "ggfs. über Postkoordination besser darstellbar"
 
@@ -100,7 +100,7 @@ Usage: #definition
 * group[=].element[+].code = #2.8
 * group[=].element[=].display = "Oropharynx"
 * group[=].element[=].target.code = #31389004
-* group[=].element[=].target.display = "Oropharyngeal structure (body structure) "
+* group[=].element[=].target.display = "Oropharyngeal structure (body structure)"
 * group[=].element[=].target.equivalence = #equivalent
 
 * group[=].element[+].code = #2.9
@@ -181,7 +181,7 @@ Usage: #definition
 * group[=].element[+].code = #3.8
 * group[=].element[=].display = "Thorax sonstige"
 * group[=].element[=].target.code = #51185008
-* group[=].element[=].target.display = " Thoracic structure (body structure)"
+* group[=].element[=].target.display = "Thoracic structure (body structure)"
 * group[=].element[=].target.equivalence = #equivalent
 
 //Bereich: "Abdomen"
@@ -200,7 +200,7 @@ Usage: #definition
 * group[=].element[+].code = #4.3
 * group[=].element[=].display = "Leber, auch bei Teilbestrahlung"
 * group[=].element[=].target.code = #10200004
-* group[=].element[=].target.display = " Liver structure (body structure)"
+* group[=].element[=].target.display = "Liver structure (body structure)"
 * group[=].element[=].target.equivalence = #wider
 
 * group[=].element[+].code = #4.4
@@ -218,7 +218,7 @@ Usage: #definition
 
 
 * group[=].element[+].code = #4.6
-* group[=].element[=].display = "Nebenniere (r, l"
+* group[=].element[=].display = "Nebenniere (r, l)"
 * group[=].element[=].target.code = #23451007
 * group[=].element[=].target.display = "Adrenal structure (body structure)"
 * group[=].element[=].target.equivalence = #equivalent
@@ -295,7 +295,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 
 * group[=].element[+].code = #5.5
-* group[=].element[=].display = "Hoden"
+* group[=].element[=].display = "Hoden (r, l)"
 * group[=].element[=].target.code = #40689003
 * group[=].element[=].target.display = "Testis structure (body structure)"
 * group[=].element[=].target.equivalence = #equivalent
@@ -458,7 +458,7 @@ Usage: #definition
 
 
 * group[=].element[+].code = #6.17
-* group[=].element[=].display = "Unterschenkel"
+* group[=].element[=].display = "Unterschenkel (r, l)"
 * group[=].element[=].target.code = #702468001
 * group[=].element[=].target.display = "Bone structure of lower leg (body structure)"
 * group[=].element[=].target.equivalence = #equivalent
@@ -580,6 +580,7 @@ Usage: #definition
 * group[=].element[=].target.code = #245282001
 * group[=].element[=].target.display = "Internal mammary lymph node group (body structure)"
 * group[=].element[=].target.equivalence = #narrower
+* group[=].element[=].target.comment = "Mapping umfasst nur Mammaria-interna-Lokalisation der Lymphknoten."
 
 * group[=].element[+].code = #9.5
 * group[=].element[=].display = "Mediastinale Lymphknoten"
@@ -604,6 +605,7 @@ Usage: #definition
 * group[=].element[=].target.code = #245285004
 * group[=].element[=].target.display = "Para-aortic lymph node group (body structure)"
 * group[=].element[=].target.equivalence = #narrower 
+* group[=].element[=].target.comment = "Mapping umfasst nur para-aortale Lokalisation der Lymphknoten."
 
 * group[=].element[+].code = #9.9
 * group[=].element[=].display = "Retroperitoneale Lymphknoten"

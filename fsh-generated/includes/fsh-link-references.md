@@ -228,7 +228,8 @@
 [PatientKimMusterperson-SystemicTherapy-1]: Procedure-PatientKimMusterperson-SystemicTherapy-1.html
 [PatientKimMusterperson-SystemicTherapy-2]: Procedure-PatientKimMusterperson-SystemicTherapy-2.html
 [PatientKimMusterperson-SystemicTherapy-3]: Procedure-PatientKimMusterperson-SystemicTherapy-3.html
-[PatientKimMusterperson-SystemicTherapyMedication-1]: MedicationStatement-PatientKimMusterperson-SystemicTherapyMedication-1.html
+[PatientKimMusterperson-SystemicTherapyMedication-1a]: MedicationStatement-PatientKimMusterperson-SystemicTherapyMedication-1a.html
+[PatientKimMusterperson-SystemicTherapyMedication-1b]: MedicationStatement-PatientKimMusterperson-SystemicTherapyMedication-1b.html
 [PatientKimMusterperson-SystemicTherapyMedication-2a]: MedicationStatement-PatientKimMusterperson-SystemicTherapyMedication-2a.html
 [PatientKimMusterperson-SystemicTherapyMedication-2b]: MedicationStatement-PatientKimMusterperson-SystemicTherapyMedication-2b.html
 [PatientKimMusterperson-SystemicTherapyMedication-3]: MedicationStatement-PatientKimMusterperson-SystemicTherapyMedication-3.html

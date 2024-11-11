@@ -3,7 +3,7 @@
   "id": "mii-ig-onko-de-v2025",
   "language": "de-DE",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/mii-ig-onko-de-v2025",
-  "version": "2025.0.0",
+  "version": "2025.0.0-alpha1",
   "name": "MII_IG_Onko_DE",
   "title": "MII IG Onkologie",
   "status": "active",
@@ -32,7 +32,7 @@
     },
     {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.meta",
-      "version": "2025.0.0-alpha1",
+      "version": "2025.0.0-alpha3",
       "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.meta/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.meta",
       "id": "de_medizininformatikinitiative_kerndatensatz_meta"
     },
@@ -62,8 +62,8 @@
     },
     {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.molgen",
-      "version": "1.0.0",
-      "uri": "/guide/MedizininformatikInitiative-ModulMolekulargenetischerBefundberic?version=current",
+      "version": "2025.0.0-alpha1",
+      "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.molgen/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.molgen",
       "id": "de_medizininformatikinitiative_kerndatensatz_molgen"
     },
     {
@@ -1880,9 +1880,17 @@
       },
       {
         "reference": {
-          "reference": "MedicationStatement/PatientKimMusterperson-SystemicTherapyMedication-1"
+          "reference": "MedicationStatement/PatientKimMusterperson-SystemicTherapyMedication-1a"
         },
-        "name": "PatientKimMusterperson-SystemicTherapyMedication-1",
+        "name": "PatientKimMusterperson-SystemicTherapyMedication-1a",
+        "description": ".",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
+      },
+      {
+        "reference": {
+          "reference": "MedicationStatement/PatientKimMusterperson-SystemicTherapyMedication-1b"
+        },
+        "name": "PatientKimMusterperson-SystemicTherapyMedication-1b",
         "description": ".",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
       },

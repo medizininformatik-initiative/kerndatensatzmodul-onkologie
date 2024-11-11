@@ -23,7 +23,7 @@ Usage: #definition
 * group[=].element[+].code = #EL
 * group[=].element[=].display = "Elektronen"
 * group[=].element[=].target.code = #46602004
-* group[=].element[=].target.display = "Electron (substance) "
+* group[=].element[=].target.display = "Electron (substance)"
 * group[=].element[=].target.equivalence = #equivalent
 
 * group[=].element[+].code = #NE
@@ -56,22 +56,23 @@ Usage: #definition
 * group[=].element[=].target.display = "Other (qualifier value)"
 * group[=].element[=].target.equivalence = #equivalent
 
-* group[=].element[+].code = #LU-177
+* group[=].element[+].code = #Lu-177
 * group[=].element[=].display = "Lu-177"
 * group[=].element[=].target.code = #447553000
 * group[=].element[=].target.display = "Lutetium-177 (substance)"
 * group[=].element[=].target.equivalence = #equivalent
 
-* group[=].element[+].code = #LU-177
+* group[=].element[+].code = #Lu-177
 * group[=].element[=].display = "Lu-177"
 * group[=].element[=].target.code = #1263784000
 * group[=].element[=].target.display = "Radioligand therapy using lutetium (177-Lu) vipivotide tetraxetan (procedure)"
 * group[=].element[=].target.equivalence = #narrower
+* group[=].element[=].target.comment = "Verwendung einer bestimmten Verbindung. Momentan wird Lu-177 hauptsächlich damit verwendet; es ist aber nicht auszuschließen, dass in Zukunft auch andere Substanzen zum Einsatz kommen."
 
 * group[=].element[+].code = #J-131
 * group[=].element[=].display = "J131"
 * group[=].element[=].target.code = #1368003
-* group[=].element[=].target.display = "Iodine-131 (substance) "
+* group[=].element[=].target.display = "Iodine-131 (substance)"
 * group[=].element[=].target.equivalence = #equivalent
 
 * group[=].element[+].code = #Y-90
@@ -84,7 +85,8 @@ Usage: #definition
 * group[=].element[=].display = "Y-90"
 * group[=].element[=].target.code = #764677008
 * group[=].element[=].target.display = "Selective internal radiotherapy of liver using yttrium (90-Y) labeled microspheres (procedure)"
-* group[=].element[=].target.equivalence = #narrower  
+* group[=].element[=].target.equivalence = #narrower
+* group[=].element[=].target.comment = "Kombination einer bestimmten Strahlequelle mit einer bestimmten Applikation (Microsphären). Andere Anwendungen sind theoretisch in Zukunft denkbar und werden von diesem Code nicht miterfasst."
 
 * group[=].element[+].code = #Ra-223
 * group[=].element[=].display = "Ra-223"
@@ -111,7 +113,7 @@ Usage: #definition
 * group[=].element[+].code = #Sr-89
 * group[=].element[=].display = "Sr-89"
 * group[=].element[=].target.code = #7770004
-* group[=].element[=].target.display = " Strontium-89 (substance)"
+* group[=].element[=].target.display = "Strontium-89 (substance)"
 * group[=].element[=].target.equivalence = #equivalent
 
 * group[=].element[+].code = #Ir-192

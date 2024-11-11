@@ -5,7 +5,7 @@ Title: "MII CM Onko Fernmetastasen SCT Mapping"
 Description: "Mapping der Fernmetastasen-Codesystems  auf SNOMED"
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-fernmetastasen-sct"
 * name = "mii-cm-onko-fernmetastasen-sct-mapping"					
-* title = "Fernmetastasen"					
+* title = "Fernmetastasen Mapping"					
 * status = #active
 * experimental = true					
 * description = "Fernmetastasen"					

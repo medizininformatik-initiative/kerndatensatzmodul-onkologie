@@ -36,7 +36,7 @@ Description: "bestätigte Primärdiagnose"
 * recordedDate = 2021-06-10
 * subject = Reference(PatientKimMusterperson)
 * clinicalStatus = #active //zum Zeitpunkt der Diagnosestellung
-* verificationStatus.coding[condition-ver-status] = http://terminology.hl7.org/CodeSystem/condition-ver-status#unconfirmed
+* verificationStatus.coding[condition-ver-status] = $condition-ver-status#unconfirmed
 * verificationStatus.coding[primaertumorDiagnosesicherung] = $mii-cs-onko-primaertumor-diagnosesicherung#2 //"klinische Diagnostik"  steht für "Alle Untersuchungstechniken, einschl. Röntgen, Endoskopie, bildgeb. Verfahren, Ultraschall, explorativer Eingriffe(wie Laparotomie) und Autopsie, aber ohne Gewebsuntersuchungen"
 * code.coding  = $ICD10GM#C48.2 "Bösartige Neubildung des Retroperitoneums und Peritoneums - Peritoneum, nicht näher bezeichnet "
 // 389026000 | Ascites (disorder) | 
@@ -52,8 +52,8 @@ Usage: #example
 Description: "Diagnose Primärtumor"
 * recordedDate = 2021-06-10
 * subject = Reference(PatientKimMusterperson)
-* clinicalStatus = #active //zum Zeitpunkt der Diagnosestellung
-* verificationStatus.coding[primaertumorDiagnosesicherung].code = #2 "klinische Diagnostik" // steht für "Alle Untersuchungstechniken, einschl. Röntgen, Endoskopie, bildgeb. Verfahren, Ultraschall, explorativer Eingriffe(wie Laparotomie) und Autopsie, aber ohne Gewebsuntersuchungen"
+* clinicalStatus = $condition-ver-status#active //zum Zeitpunkt der Diagnosestellung
+* verificationStatus.coding[primaertumorDiagnosesicherung] = $mii-cs-onko-primaertumor-diagnosesicherung#2 "klinische Diagnostik" // steht für "Alle Untersuchungstechniken, einschl. Röntgen, Endoskopie, bildgeb. Verfahren, Ultraschall, explorativer Eingriffe(wie Laparotomie) und Autopsie, aber ohne Gewebsuntersuchungen"
 * code.coding  = $ICD10GM#C48.2 "Bösartige Neubildung des Retroperitoneums und Peritoneums - Peritoneum, nicht näher bezeichnet "
 // 389026000 | Ascites (disorder) | 
 * bodySite = $ICDO3#C56.9 "Ovar" // mögliche Lokalisation des Haupttumors?
@@ -121,17 +121,29 @@ Description: "."
 * performedPeriod.end = 2021-09-05
 * basedOn = Reference(PatientKimMusterperson-Tumorkonferenz-1)
 
-Instance: PatientKimMusterperson-SystemicTherapyMedication-1
+
+Instance: PatientKimMusterperson-SystemicTherapyMedication-1a
 InstanceOf: MII_PR_Onko_Systemische_Therapie_Medikation
 Usage: #example
 Description: "."
 * subject = Reference(PatientKimMusterperson)
-* status = #completed
+* status = #recorded 
 * effectivePeriod.start = 2021-07-05  
 * effectivePeriod.end = 2021-09-05
 * medicationCodeableConcept.coding[atcClassDe][0] = $ATC_DE#L01CD01 "Paclitaxel"
-* medicationCodeableConcept.coding[atcClassDe][1] = $ATC_DE#L01XA02 "Carboplatin"
-* partOf = Reference(PatientKimMusterperson-SystemicTherapy-1)
+* partOf[+] = Reference(PatientKimMusterperson-SystemicTherapy-1)
+* note.text = "CarboTax"
+
+Instance: PatientKimMusterperson-SystemicTherapyMedication-1b
+InstanceOf: MII_PR_Onko_Systemische_Therapie_Medikation
+Usage: #example
+Description: "."
+* subject = Reference(PatientKimMusterperson)
+* status = #recorded 
+* effectivePeriod.start = 2021-07-05  
+* effectivePeriod.end = 2021-09-05
+* medicationCodeableConcept.coding[atcClassDe][0] = $ATC_DE#L01XA02 "Carboplatin"
+* partOf[+] = Reference(PatientKimMusterperson-SystemicTherapy-1)
 * note.text = "CarboTax"
 
 
@@ -180,7 +192,7 @@ Description: "."
 * subject = Reference(PatientKimMusterperson)
 * status = #completed
 * intent = #plan
-* category.coding = $mii-cs-onko-therapieplanung-typ#praeth "Prätherapeutische Tumorkonferenz" 
+* category.coding = $mii-cs-onko-therapieplanung-typ#praeth "prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie" 
 * created = 2021-09-16
 * addresses = Reference(PatientKimMusterperson-Diagnosis-1)
 * activity[0].detail.code = $mii-cs-onko-therapie-typ#OP
@@ -250,7 +262,7 @@ Usage: #example
 Description: "Pathoreport incl. Immunhistochemie"
 * subject = Reference(PatientKimMusterperson)
 * status = #complete
-* code.coding = $LOINC#60568-3 "Pathological laboratory report"
+* code.coding = $LOINC#22034-3 "Pathology Report Cancer Narrative"
 * conclusion = "Histologie: Resektat vom 30.09.2021: Neoplasie des Ovars (Z.n. neoadjuvanter Therapie) (ICD-10-C56) Ovar o.n.A. (ICD-O-C56.9) Untersuchungsmaterial: Resektat WHO-Typ: Seröses Adenokarzinom (ICD-O M-8441/3) Lokale Tumorausbreitung: Ovartumor links mit einer max. Größe von 2,2 cm und tumorinfiltrierter Kapsel mit Nachweis von Tumorzellen auf der Ovaroberfläche, Anteil vitaler Tumorzellen von ca. 80 %. UICC-Klassifikation (8. Auflage): ypT3c. pM1b (HEP) L1. V0. Pn0 FIGO: IVB"
 
 
@@ -271,19 +283,19 @@ Description: ". "
 * subject = Reference(PatientKimMusterperson)
 * code.coding = $SCT#399588009 "Pathologic TNM stage grouping"
 * effectiveDateTime = 2021-06-22
-* method = #8
+* method = $mii-cs-onko-tnm-version#8 "8. Auflage"
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
 
 Instance: TNM-T-Observation-2
 InstanceOf: MII_PR_Onko_TNM_T_Kategorie
 Usage: #example  
 Description: "Lokale Tumorausbreitung: Ovartumor links mit einer max. Größe von 2,2 cm und tumorinfiltrierter Kapsel mit Nachweis von Tumorzellen auf der Ovaroberfläche, Anteil vitaler Tumorzellen von ca. 80 %. "
-* status = #completed
+* status = #final
 * subject = Reference(PatientKimMusterperson)
 * code.extension[cpPraefix].valueCodeableConcept = $UICC#p
 * code.coding = $SCT#384625004 "pT category (observable entity)"
 * effectiveDateTime = 2021-06-22
-* method = #8
+* method = $mii-cs-onko-tnm-version#8 "8. Auflage"
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
 * valueCodeableConcept.coding = $UICC#T3c
 
@@ -291,12 +303,12 @@ Instance: TNM-M-Observation-2
 InstanceOf: MII_PR_Onko_TNM_M_Kategorie
 Usage: #example  
 Description: "."
-* status = #completed
+* status = #final
 * subject = Reference(PatientKimMusterperson)
 * code.extension[cpPraefix].valueCodeableConcept = $UICC#p
 * code.coding = $SCT#371497001 "pM category (observable entity)"
 * effectiveDateTime = 2021-06-22
-* method = #8
+* method = $mii-cs-onko-tnm-version#8 "8. Auflage"
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
 * valueCodeableConcept.coding = $UICC#M1b
 
@@ -304,11 +316,11 @@ Instance: TNM-y-Symbol-Observation-2
 InstanceOf: MII_PR_Onko_TNM_y_Symbol
 Usage: #example  
 Description: "."
-* status = #completed
+* status = #final
 * subject = Reference(PatientKimMusterperson)
 * code.coding = $LOINC#101658-3
 * effectiveDateTime = 2021-06-22
-* method = #8
+* method = $mii-cs-onko-tnm-version#8 "8. Auflage"
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
 * valueCodeableConcept.coding = $SCT#421755005
 
@@ -316,11 +328,11 @@ Instance: TNM-Pn-Observation-2
 InstanceOf: MII_PR_Onko_TNM_Pn_Kategorie
 Usage: #example  
 Description: "."
-* status = #completed
+* status = #final
 * subject = Reference(PatientKimMusterperson)
 * code.coding = $SCT#371513001
 * effectiveDateTime = 2021-06-22
-* method = #8
+* method = $mii-cs-onko-tnm-version#8 "8. Auflage"
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
 * valueCodeableConcept.coding = $UICC#Pn0
 
@@ -328,11 +340,11 @@ Instance: TNM-L-Observation-2
 InstanceOf: MII_PR_Onko_TNM_L_Kategorie
 Usage: #example  
 Description: "."
-* status = #completed
+* status = #final
 * subject = Reference(PatientKimMusterperson)
 * code.coding = $SCT#395715009
 * effectiveDateTime = 2021-06-22
-* method = #8
+* method = $mii-cs-onko-tnm-version#8 "8. Auflage"
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
 * valueCodeableConcept.coding = $UICC#L1
 
@@ -340,11 +352,11 @@ Instance: TNM-V-Observation-2
 InstanceOf: MII_PR_Onko_TNM_L_Kategorie
 Usage: #example  
 Description: "."
-* status = #completed
+* status = #final
 * subject = Reference(PatientKimMusterperson)
 * code.coding = $SCT#371493002
 * effectiveDateTime = 2021-06-22
-* method = #8
+* method = $mii-cs-onko-tnm-version#8 "8. Auflage"
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
 * valueCodeableConcept.coding = $UICC#V0
 
@@ -468,14 +480,14 @@ Description: ". "
 * effectiveDateTime = 2022-01-22
 * focus = Reference(PatientKimMusterperson-PrimaryDiagnosis-2)
 * code.coding = $SCT#396432002 "Status of regression of tumor (observable entity)"
-* valueCodeableConcept.coding = $mii-cs-onko-verlauf-gesamtbeurteilung#V "Vollremission" 
+* valueCodeableConcept.coding = $mii-cs-onko-verlauf-gesamtbeurteilung#V "Vollremission (complete remission, CR)" 
 * component[Tumor_Verlauf].code.coding = $SCT#277062004 "Status des Residualtumors"
 * component[Tumor_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-primaertumor#T "Tumorreste (Residualtumor)"
 * component[Fernmetastasen_Verlauf].code.coding = $SCT#399608002 "Status of distant metastasis (observable entity)"
 * component[Fernmetastasen_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-fernmetastasen#K "Keine Fernmetastasen nachweisbar"
 
 /*
-20.01.22 Tumorboard: 
+20.01.22 Tumorboard: TN
 Erhaltungstherapie mit Niraparib bei BRCAwt // genetische Variante
 Restaging in 3 Monaten mit CT Thorax/Abdomen und TM
 25.01.22 Beginn Niraparib 300mg d1-28 wdh d28 //Systemic Therapy
@@ -495,9 +507,9 @@ InstanceOf: MII_PR_Onko_Tumorkonferenz
 Usage: #example  
 Description: "."
 * subject = Reference(PatientKimMusterperson)
-* status = #active
+* status = #in-progress
 * intent = #plan
-* category.coding = $mii-cs-onko-therapieplanung-typ#postop "postoperativ Tumorkonferenz" 
+* category.coding = $mii-cs-onko-therapieplanung-typ#postop "posttherapeutische Tumorkonferenz (manche Tumoren werden nicht operiert)" 
 * created = 2022-01-20
 * replaces = Reference(PatientKimMusterperson-Tumorkonferenz-3)
 * addresses = Reference(PatientKimMusterperson-PrimaryDiagnosis-2)

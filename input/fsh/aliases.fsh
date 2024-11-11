@@ -37,7 +37,6 @@ Alias: $mii-cs-onko-residualstatus = https://www.medizininformatik-initiative.de
 //05
 Alias: $mii-cs-onko-primaertumor-diagnosesicherung = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung
 Alias: $mii-cs-onko-seitenlokalisation = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation
-
 //06
 Alias: $mii-cs-onko-grading = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading
 
@@ -59,6 +58,8 @@ Alias: $mii-ex-onko-strahlentherapie-stellungzurop = https://www.medizininformat
 //16
 Alias: $mii-ex-onko-systemische-therapie-intention = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention
 Alias: $mii-ex-onko-systemische-therapie-stellungzurop = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellungzurop
+
+//10
 
 //11
 Alias: $mii-cs-onko-fernmetastasen = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen

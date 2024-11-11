@@ -1,5 +1,5 @@
 Profile: MII_PR_Onko_Operation
-Parent: https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure 
+Parent: $mii-procedure 
 Id: mii-pr-onko-operation
 Title: "MII PR Onkologie Operation"
 Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
