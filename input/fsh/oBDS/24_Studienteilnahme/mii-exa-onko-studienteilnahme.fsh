@@ -2,7 +2,7 @@ Instance: mii-exa-onko-studienteilnahme
 InstanceOf: mii-pr-onko-studienteilnahme
 Usage: #example
 * status = #final
-* code.coding = $SCT#70709491003 
+* code.coding = $SCT#709491003 
 * subject = Reference(Patient/example)
 * focus = Reference (Condition/exampleOncologicCondition)
 

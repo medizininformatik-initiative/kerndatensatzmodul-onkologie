@@ -12,5 +12,5 @@ Description: "oBDS-spezifisches Codesystem für den Therapieplanungstyp"
 * ^content = #complete
 * #praeth "prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie)"
 * #postop "postoperative Tumorkonferenz (Planung der postoperativen Therapie, z. B. zur Frage adjuvante Therapie)"
-* #postth "posttherapeutische Tumorkonferenz (manche Tumoren werden nicht operiert)"
+* #postth "posttherapeutische Tumorkonferenz (manche Tumore werden nicht operiert)"
 * #ther "Therapieplanung ohne Tumorkonferenz"

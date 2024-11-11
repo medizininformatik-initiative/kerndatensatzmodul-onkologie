@@ -24,17 +24,17 @@ Usage: #definition
 * group[=].element[+].code = #R
 * group[=].element[=].display = "reguläres Ende mit Dosisreduktion"
 * group[=].element[=].target.equivalence = #unmatched
-* group[=].element[=].target.comment = "ggfs. Postkoordination von Dosisreduktion, aber keine Postkoordination mit 'qualifier value' möglich.  " 
+* group[=].element[=].target.comment = "ggfs. Postkoordination von Dosisreduktion, aber keine Postkoordination mit 'qualifier value' möglich." 
 
 * group[=].element[+].code = #W
 * group[=].element[=].display = "reguläres Ende mit Substanzwechsel"
 * group[=].element[=].target.equivalence = #unmatched
-* group[=].element[=].target.comment = "ggfs. Postkoordination von Substanzwechsel, aber keine Postkoordination mit 'qualifier value' möglich. " 
+* group[=].element[=].target.comment = "ggfs. Postkoordination von Substanzwechsel, aber keine Postkoordination mit 'qualifier value' möglich." 
 
 * group[=].element[+].code = #A
 * group[=].element[=].display = "Abbruch wegen Nebenwirkungen"
 * group[=].element[=].target.equivalence = #unmatched
-* group[=].element[=].target.comment = "ggfs. Postkoordination von Nebnwirkungen, aber keine Postkoordination mit 'qualifier value' möglich. " 
+* group[=].element[=].target.comment = "ggfs. Postkoordination von Nebnwirkungen, aber keine Postkoordination mit 'qualifier value' möglich." 
 
 * group[=].element[+].code = #P
 * group[=].element[=].display = "Abbruch wegen Progress"

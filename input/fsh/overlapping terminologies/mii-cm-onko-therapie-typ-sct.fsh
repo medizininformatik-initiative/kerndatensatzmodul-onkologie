@@ -61,18 +61,25 @@ Usage: #definition
 * group[=].element[=].target.code = #897713009
 * group[=].element[=].target.display = "Antineoplastic chemoimmunotherapy (regime/therapy)"
 * group[=].element[=].target.equivalence = #narrower
+* group[=].element[=].target.comment = "Spezifische Kombination für Chemo- und Immuntherapie, aber ohne zielgerichtete Substanzen"
+
 * group[=].element[+].target.code = #1255831008
 * group[=].element[=].target.display = "Chemotherapy for malignant neoplastic disease using targeted agent (procedure)"
 * group[=].element[=].target.equivalence = #narrower
+* group[=].element[=].target.comment = "Spezifischer Code für zielgerichtete Substanzen"
 
 * group[=].element[+].code = #IZ
 * group[=].element[=].display = "Immun-/Antikörpertherapie + zielgerichtete Substanzen"
 * group[=].element[=].target.code = #76334006
 * group[=].element[=].target.display = "Immunotherapy (procedure)"
 * group[=].element[=].target.equivalence = #narrower
+* group[=].element[=].target.comment = "Spezifischer Code Immuntherapie, aber ohne zielgerichtete Substanzen"
+
 * group[=].element[+].target.code = #1255831008
 * group[=].element[=].target.display = "Chemotherapy for malignant neoplastic disease using targeted agent (procedure)"
 * group[=].element[=].target.equivalence = #narrower
+* group[=].element[=].target.comment = "Spezifischer Code für zielgerichtete Substanzen"
+
 
 * group[=].element[+].code = #WW
 * group[=].element[=].display = "Watchful Waiting"

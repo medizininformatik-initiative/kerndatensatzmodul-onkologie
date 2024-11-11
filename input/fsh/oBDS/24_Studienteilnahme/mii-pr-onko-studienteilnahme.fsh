@@ -17,9 +17,9 @@ Description: "Dieses Profil beschreibt Studienteilnahmen in der Onkologie"
 
 * code MS
 * code 1..1 
-* code ^definition = "SCTID: 70709491003 | Enrollment in clinical trial (procedure)"
+* code ^definition = "SCTID: 709491003 | Enrollment in clinical trial (procedure)"
 * code ^short = "Studienteilnahme laut oBDS"
-* code.coding = $SCT#70709491003 
+* code.coding = $SCT#709491003 
 
 // 24.1 Studienteilnahme Status
 * value[x] MS
