@@ -211,7 +211,7 @@ Source: MII_LM_Onko
   * SystemischeTherapieEndeGrund -> "Procedure.outcome.coding.code"
 
 * Nebenwirkungen 
-  * NebenwirkungenCTCAEGrad -> "AdverseEvent.severity.coding.code"
+  * NebenwirkungenCTCAEGrad -> "AdverseEvent.seriousness.coding.code"
   * NebenwirkungenCTCAEArt -> "AdverseEvent.event.coding.code"
   * NebenwirkungenCTCAEVersion -> "AdverseEvent.event.coding.version"
 

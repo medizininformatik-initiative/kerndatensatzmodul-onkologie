@@ -27,13 +27,13 @@ Description: "Dieses Profil beschreibt die Nebenwirkung von Strahlentherapie und
 * insert Translation(event.coding.version ^definition, de-DE, Verion der für Art der Nebenwirkung verwendeten CTCAE-Klassifikation gemäß 15.3 oBDS 2021.)
 
 // Hier wird CTCAE Grad genutzt
-* severity 1..1 MS
-* severity from mii-vs-onko-nebenwirkung-ctcae-grad
-* severity.coding MS
-* severity.coding.system 1..1 MS
-* severity.coding.code 1..1 MS
-* severity.text MS
-* insert Translation(severity.coding ^short, de-DE, Schweregrad der Nebenwirkung nach CTCAE )
+* seriousness 1..1 MS
+* seriousness from mii-vs-onko-nebenwirkung-ctcae-grad
+* seriousness.coding MS
+* seriousness.coding.system 1..1 MS
+* seriousness.coding.code 1..1 MS
+* seriousness.text MS
+* insert Translation(seriousness.coding ^short, de-DE, Schweregrad der Nebenwirkung nach CTCAE )
 * insert Translation(outcome.coding ^definition, de-DE, Schweregrad der Nebenwirkung nach CTCAE gemäß 15.1 oBDS 2021.)
 
 // Die Referenz zu Procedure/MedicationStatement
@@ -45,6 +45,6 @@ Mapping: FHIR-oBDS-AdverseEvents
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
 Source: MII_PR_Onko_Nebenwirkung_Adverse_Event
-* severity -> "15.1" "Nebenwirkungen nach CTCAE-Grad"
+* seriousness -> "15.1" "Nebenwirkungen nach CTCAE-Grad"
 * event.coding.code -> "15.2" "Nebenwirkungen nach CTCAE Art"
 * event.coding.version -> "15.3" "Nebenwirkungen nach CTCAE Version"
