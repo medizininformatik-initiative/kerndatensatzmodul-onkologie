@@ -223,7 +223,7 @@ Usage: #definition
 * insert SupportSearchParam(event, http://hl7.org/fhir/SearchParameter/event, #token, #SHALL)
 * insert SupportSearchParam(subject, http://hl7.org/fhir/SearchParameter/AdverseEvent-subject, #reference, #SHALL)
 * insert SupportSearchParam(encounter, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-encounter, #reference, #SHALL)
-* insert SupportSearchParam(severity, http://hl7.org/fhir/SearchParameter/severity, #token, #SHALL)
+* insert SupportSearchParam(seriousness, http://hl7.org/fhir/SearchParameter/seriousness, #token, #SHALL)
 * insert SupportSearchParam(suspectEntity, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-instance, #reference, #SHALL)
 
 // Medication Statement requirements
