@@ -20,19 +20,20 @@ Description: "TNM-Klassifikation: TNM a-Symbol. Gibt an, ob die Klassifikation a
 * effective[x] only dateTime
 * effectiveDateTime MS
 * effectiveDateTime obeys tnm-datum
+* insert Label(effectiveDateTime, TNM-Datum, Datum der TNM-Klassifikation nach 8.1 oBDS 2021)
 * insert Translation(effectiveDateTime ^short, de-DE, TNM-Datum )
 * insert Translation(effectiveDateTime ^definition, de-DE, Datum der TNM-Klassifikation nach 8.1 oBDS 2021 )
 
 * value[x] MS
 * value[x] only CodeableConcept
 * valueCodeableConcept = $SCT#421426001
-* valueCodeableConcept ^short = "a-Symbol"
-* valueCodeableConcept ^definition = "Gibt an, ob die Klassifikation aus Anlass einer Autopsie erfolgte."
-* valueCodeableConcept ^comment = "a = Klassifikation erfolgte durch Autopsie; (leer) = Klassifikation erfolgte nicht durch Autopsie"
+* valueCodeableConcept.coding ^short = "a-Symbol"
+* valueCodeableConcept.coding ^definition = "Gibt an, ob die Klassifikation aus Anlass einer Autopsie erfolgte."
+* valueCodeableConcept.coding ^comment = "a = Klassifikation erfolgte durch Autopsie; (leer) = Klassifikation erfolgte nicht durch Autopsie"
 * valueCodeableConcept.coding.code 1.. MS
 * valueCodeableConcept.coding.system 1.. MS
-* insert Translation(valueCodeableConcept.coding ^short, de-DE, TNM a-Symbol )
-* insert Translation(valueCodeableConcept.coding ^definition, de-DE, TNM-a Autopsie nach  8.5 oBDS 2021 )
+* insert Translation(valueCodeableConcept ^short, de-DE, TNM a-Symbol )
+* insert Translation(valueCodeableConcept ^definition, de-DE, TNM-a Autopsie nach  8.5 oBDS 2021 )
 
 //* dataAbsentReason MS
 

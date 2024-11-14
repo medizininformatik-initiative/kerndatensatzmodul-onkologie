@@ -86,6 +86,42 @@
       {
         "id": "Observation.effective[x]",
         "path": "Observation.effective[x]",
+        "short": "TNM-Datum",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "TNM-Datum"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Datum der TNM-Klassifikation nach 8.1 oBDS 2021",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Datum der TNM-Klassifikation nach 8.1 oBDS 2021"
+                }
+              ]
+            }
+          ]
+        },
         "type": [
           {
             "code": "dateTime"
@@ -107,47 +143,11 @@
             "map": "8.1",
             "comment": "TNM Datum"
           }
-        ],
-        "_short": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
-              "extension": [
-                {
-                  "url": "lang",
-                  "valueCode": "de-DE"
-                },
-                {
-                  "url": "content",
-                  "valueString": "TNM-Datum"
-                }
-              ]
-            }
-          ]
-        },
-        "_definition": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
-              "extension": [
-                {
-                  "url": "lang",
-                  "valueCode": "de-DE"
-                },
-                {
-                  "url": "content",
-                  "valueString": "Datum der TNM-Klassifikation nach 8.1 oBDS 2021"
-                }
-              ]
-            }
-          ]
-        }
+        ]
       },
       {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
-        "short": "UICC Stadium",
-        "definition": "Stadium nach aktuell gültiger TNM-Klassifikation.",
         "type": [
           {
             "code": "CodeableConcept"
@@ -162,6 +162,7 @@
       {
         "id": "Observation.value[x].coding",
         "path": "Observation.value[x].coding",
+        "short": "UICC Stadium",
         "_short": {
           "extension": [
             {
@@ -179,6 +180,7 @@
             }
           ]
         },
+        "definition": "Stadium nach aktuell gültiger TNM-Klassifikation.",
         "_definition": {
           "extension": [
             {
@@ -237,6 +239,7 @@
       {
         "id": "Observation.method.coding",
         "path": "Observation.method.coding",
+        "short": "TNM-Version",
         "_short": {
           "extension": [
             {
@@ -254,6 +257,7 @@
             }
           ]
         },
+        "definition": "TNM-Version nach 8.5 oBDS 2021",
         "_definition": {
           "extension": [
             {

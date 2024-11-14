@@ -43,6 +43,7 @@ Description: "Histologie: Tumor Grading. Gibt den Differenzierungsgrad des Tumor
 * valueCodeableConcept from mii-vs-onko-grading (required)
 * valueCodeableConcept.coding.code 1.. MS
 * valueCodeableConcept.coding.system 1.. MS
+* insert Label (valueCodeableConcept.coding, Histologisches Grading, Histologisches Grading nach 6.6 oBDS 2021 )
 * insert Translation(valueCodeableConcept.coding ^short, de-DE, Histologisches Grading )
 * insert Translation(valueCodeableConcept.coding ^definition, de-DE, Histologisches Grading nach 6.6 oBDS 2021 )
 

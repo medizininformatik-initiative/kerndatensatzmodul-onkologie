@@ -35,8 +35,9 @@ Description: "OBDS Beschreibung des allgemeines Leistungszustandes"
 * component[ecog].value[x] 1..1 MS
 * component[ecog].value[x] only CodeableConcept
 * component[ecog].value[x] from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-ecog
-* insert Translation(value[x] ^short, de-DE, Leistungszustand nach ECOG )
-* insert Translation(value[x] ^definition, de-DE, Leistungszustand nach ECOG Stufen 0-4 gemäß 12.1 oBDS 2021)
+* insert Label(component[ecog].valueCodeableConcept.coding, Leistungszustand nach ECOG, Leistungszustand nach ECOG Stufen 0-4 gemäß 12.1 oBDS 2021 )
+* insert Translation(component[ecog].valueCodeableConcept.coding ^short, de-DE, Leistungszustand nach ECOG )
+* insert Translation(component[ecog].valueCodeableConcept.coding ^definition, de-DE, Leistungszustand nach ECOG Stufen 0-4 gemäß 12.1 oBDS 2021)
 
 * component[karnofsky] 1..1 MS
 * component[karnofsky].code 1..1 MS

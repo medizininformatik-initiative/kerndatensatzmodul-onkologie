@@ -62,14 +62,7 @@
       {
         "id": "AdverseEvent.event.coding.version",
         "path": "AdverseEvent.event.coding.version",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "oBDS",
-            "map": "15.3",
-            "comment": "Nebenwirkungen nach CTCAE Version"
-          }
-        ],
+        "short": "CTCAE-Version",
         "_short": {
           "extension": [
             {
@@ -87,6 +80,7 @@
             }
           ]
         },
+        "definition": "Version der für Art der Nebenwirkung verwendeten CTCAE-Klassifikation gemäß 15.3 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -98,25 +92,25 @@
                 },
                 {
                   "url": "content",
-                  "valueString": "Verion der für Art der Nebenwirkung verwendeten CTCAE-Klassifikation gemäß 15.3 oBDS 2021."
+                  "valueString": "Version der für Art der Nebenwirkung verwendeten CTCAE-Klassifikation gemäß 15.3 oBDS 2021."
                 }
               ]
             }
           ]
-        }
-      },
-      {
-        "id": "AdverseEvent.event.coding.code",
-        "path": "AdverseEvent.event.coding.code",
-        "min": 1,
+        },
         "mustSupport": true,
         "mapping": [
           {
             "identity": "oBDS",
-            "map": "15.2",
-            "comment": "Nebenwirkungen nach CTCAE Art"
+            "map": "15.3",
+            "comment": "Nebenwirkungen nach CTCAE Version"
           }
-        ],
+        ]
+      },
+      {
+        "id": "AdverseEvent.event.coding.code",
+        "path": "AdverseEvent.event.coding.code",
+        "short": "Art der Nebenwirkung",
         "_short": {
           "extension": [
             {
@@ -134,6 +128,7 @@
             }
           ]
         },
+        "definition": "Art der Nebenwirkung nach CTCAE / MedDRA gemäß 15.2 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -150,7 +145,16 @@
               ]
             }
           ]
-        }
+        },
+        "min": 1,
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "15.2",
+            "comment": "Nebenwirkungen nach CTCAE Art"
+          }
+        ]
       },
       {
         "id": "AdverseEvent.event.text",

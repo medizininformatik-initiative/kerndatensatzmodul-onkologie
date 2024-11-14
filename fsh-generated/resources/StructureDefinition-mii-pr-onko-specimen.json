@@ -56,14 +56,7 @@
       {
         "id": "Specimen.accessionIdentifier.value",
         "path": "Specimen.accessionIdentifier.value",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "oBDS",
-            "map": "6.2",
-            "comment": "Histologie-Einsendenummer"
-          }
-        ],
+        "short": "Histologie-Einsendenummer",
         "_short": {
           "extension": [
             {
@@ -81,6 +74,7 @@
             }
           ]
         },
+        "definition": "Histologie-Einsendenummer nach 6.2 oBDS 2021",
         "_definition": {
           "extension": [
             {
@@ -97,7 +91,15 @@
               ]
             }
           ]
-        }
+        },
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "6.2",
+            "comment": "Histologie-Einsendenummer"
+          }
+        ]
       },
       {
         "id": "Specimen.subject",
@@ -136,21 +138,7 @@
         "id": "Specimen.collection.collected[x]:collectedDateTime",
         "path": "Specimen.collection.collected[x]",
         "sliceName": "collectedDateTime",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "dateTime"
-          }
-        ],
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "oBDS",
-            "map": "6.1",
-            "comment": "Tumor Histologiedatum"
-          }
-        ],
+        "short": "Tumor Histologiedatum",
         "_short": {
           "extension": [
             {
@@ -168,6 +156,7 @@
             }
           ]
         },
+        "definition": "Histologiedatum nach 6.1 oBDS 2021",
         "_definition": {
           "extension": [
             {
@@ -184,7 +173,22 @@
               ]
             }
           ]
-        }
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "6.1",
+            "comment": "Tumor Histologiedatum"
+          }
+        ]
       }
     ]
   }

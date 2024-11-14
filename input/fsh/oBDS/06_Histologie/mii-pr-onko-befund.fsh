@@ -32,6 +32,7 @@ Description: "Histologie: Befund. Vollständiger Befundbericht des Pathologen."
 * subject 1.. MS
 * subject only Reference(Patient)
 * conclusion 1.. MS
+* insert Label (conclusion, Befund als Freitext, Befund als Freitext nach 6.11 oBDS 2021)
 * insert Translation(conclusion ^short, de-DE, Befund als Freitext)
 * insert Translation(conclusion.value ^definition, de-DE, Befund als Freitext nach 6.11 oBDS 2021 )
 

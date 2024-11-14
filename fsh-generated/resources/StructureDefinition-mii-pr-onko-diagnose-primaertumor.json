@@ -493,15 +493,7 @@
       {
         "id": "Condition.evidence.detail",
         "path": "Condition.evidence.detail",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-liste-evidenz-erstdiagnose"
-            ]
-          }
-        ],
-        "mustSupport": true,
+        "short": "Evidenz für Erstdiagnose",
         "_short": {
           "extension": [
             {
@@ -519,6 +511,7 @@
             }
           ]
         },
+        "definition": "Liste aller für die Erstdiagnose ausschlaggebenden Beobachtungen",
         "_definition": {
           "extension": [
             {
@@ -535,7 +528,16 @@
               ]
             }
           ]
-        }
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-liste-evidenz-erstdiagnose"
+            ]
+          }
+        ],
+        "mustSupport": true
       }
     ]
   }

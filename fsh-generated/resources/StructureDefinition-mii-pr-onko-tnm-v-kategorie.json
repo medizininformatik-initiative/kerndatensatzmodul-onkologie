@@ -102,6 +102,42 @@
       {
         "id": "Observation.effective[x]",
         "path": "Observation.effective[x]",
+        "short": "TNM-Datum",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "TNM-Datum"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Datum der TNM-Klassifikation nach 8.1 oBDS 2021",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Datum der TNM-Klassifikation nach 8.1 oBDS 2021"
+                }
+              ]
+            }
+          ]
+        },
         "type": [
           {
             "code": "dateTime"
@@ -123,47 +159,11 @@
             "map": "8.1",
             "comment": "TNM Datum"
           }
-        ],
-        "_short": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
-              "extension": [
-                {
-                  "url": "lang",
-                  "valueCode": "de-DE"
-                },
-                {
-                  "url": "content",
-                  "valueString": "TNM-Datum"
-                }
-              ]
-            }
-          ]
-        },
-        "_definition": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
-              "extension": [
-                {
-                  "url": "lang",
-                  "valueCode": "de-DE"
-                },
-                {
-                  "url": "content",
-                  "valueString": "Datum der TNM-Klassifikation nach 8.1 oBDS 2021"
-                }
-              ]
-            }
-          ]
-        }
+        ]
       },
       {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
-        "short": "TNM V-Kategorie",
-        "definition": "Veneninvasion.",
         "type": [
           {
             "code": "CodeableConcept"
@@ -178,6 +178,7 @@
       {
         "id": "Observation.value[x].coding",
         "path": "Observation.value[x].coding",
+        "short": "TNM V-Kategorie",
         "_short": {
           "extension": [
             {
@@ -195,6 +196,7 @@
             }
           ]
         },
+        "definition": "Veneninvasion.",
         "_definition": {
           "extension": [
             {

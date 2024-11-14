@@ -25,6 +25,8 @@ Description: "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der 
 * verificationStatus.coding[primaertumorDiagnosesicherung] from mii-vs-onko-primaertumor-diagnosesicherung (required)
 * verificationStatus.coding[primaertumorDiagnosesicherung].code 1.. MS
 * verificationStatus.coding[primaertumorDiagnosesicherung].system 1.. MS
+* verificationStatus.coding[primaertumorDiagnosesicherung] ^short = "Diagnosesicherung gemäß oBDS"
+* verificationStatus.coding[primaertumorDiagnosesicherung] ^definition = "Art der Diagnosesicherung nach 5.7 oBDS 2021"
 * insert Translation(verificationStatus.coding[primaertumorDiagnosesicherung] ^short, de-DE, Diagnosesicherung gemäß oBDS )
 * insert Translation(verificationStatus.coding[primaertumorDiagnosesicherung] ^definition, de-DE, Art der Diagnosesicherung nach 5.7 oBDS 2021 )
 
@@ -35,14 +37,21 @@ Description: "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der 
 * bodySite.coding[primaertumorSeitenlokalisation].system 1.. MS
 * bodySite.coding[primaertumorSeitenlokalisation] ^patternCoding.system = $mii-cs-onko-seitenlokalisation
 * bodySite.coding[primaertumorSeitenlokalisation].code 1.. MS
+* insert Label (bodySite.coding[primaertumorSeitenlokalisation], Seitenlokalisation des Primärtumors gemäß oBDS,Seitenlokalisation des Primärtumors nach 5.8 oBDS 2021)
 * insert Translation(bodySite.coding[primaertumorSeitenlokalisation] ^short, de-DE, Seitenlokalisation des Primärtumors gemäß oBDS )
 * insert Translation(bodySite.coding[primaertumorSeitenlokalisation] ^definition, de-DE, Seitenlokalisation des Primärtumors nach 5.8 oBDS 2021 )
+
+* bodySite.coding[icd-o-3].system 1.. MS
+* bodySite.coding[icd-o-3] ^patternCoding.system = $ICDO3
+* bodySite.coding[icd-o-3].code 1.. MS
+* insert Label (bodySite.coding[icd-o-3], ICD-O-Topographie, Topographie des Primärtumors nach ICD-O-3 nach 5.4 oBDS 2021)
 * insert Translation(bodySite.coding[icd-o-3] ^short, de-DE, ICD-O-Topographie )
-* insert Translation(bodySite.coding[icd-o-3] ^definition, de-DE, LiTopographie des Primärtumors nach ICD-O-3 nach 5.4 oBDS 2021 )
+* insert Translation(bodySite.coding[icd-o-3] ^definition, de-DE, Topographie des Primärtumors nach ICD-O-3 nach 5.4 oBDS 2021 )
 
 * evidence 0..1 MS
 * evidence.detail MS
 * evidence.detail only Reference(MII_PR_Onko_Liste_Evidenz_Erstdiagnose)
+* insert Label (evidence.detail, Evidenz für Erstdiagnose, Liste aller für die Erstdiagnose ausschlaggebenden Beobachtungen)
 * insert Translation(evidence.detail ^short, de-DE, Evidenz für Erstdiagnose  )
 * insert Translation(evidence.detail ^definition, de-DE, Liste aller für die Erstdiagnose ausschlaggebenden Beobachtungen)
 

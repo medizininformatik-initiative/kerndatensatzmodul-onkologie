@@ -293,15 +293,40 @@
       {
         "id": "Procedure.performed[x].start",
         "path": "Procedure.performed[x].start",
-        "min": 1,
-        "mustSupport": true,
         "mapping": [
           {
             "identity": "oBDS",
             "map": "16.6",
             "comment": "Systemische Therapie Beginn"
           }
-        ],
+        ]
+      },
+      {
+        "id": "Procedure.performed[x].end",
+        "path": "Procedure.performed[x].end",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "16.8",
+            "comment": "Systemische Therapie Ende"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.performed[x]:performedPeriod",
+        "path": "Procedure.performed[x]",
+        "sliceName": "performedPeriod",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.performed[x]:performedPeriod.start",
+        "path": "Procedure.performed[x].start",
+        "min": 1,
+        "mustSupport": true,
         "_short": {
           "extension": [
             {
@@ -338,16 +363,9 @@
         }
       },
       {
-        "id": "Procedure.performed[x].end",
+        "id": "Procedure.performed[x]:performedPeriod.end",
         "path": "Procedure.performed[x].end",
         "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "oBDS",
-            "map": "16.8",
-            "comment": "Systemische Therapie Ende"
-          }
-        ],
         "_short": {
           "extension": [
             {

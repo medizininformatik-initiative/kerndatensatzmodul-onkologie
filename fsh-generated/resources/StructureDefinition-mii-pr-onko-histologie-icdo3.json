@@ -87,19 +87,7 @@
       {
         "id": "Observation.effective[x]",
         "path": "Observation.effective[x]",
-        "type": [
-          {
-            "code": "dateTime"
-          }
-        ],
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "oBDS",
-            "map": "6.1",
-            "comment": "Tumor Histologiedatum"
-          }
-        ],
+        "short": "Tumor Histologiedatum",
         "_short": {
           "extension": [
             {
@@ -117,6 +105,7 @@
             }
           ]
         },
+        "definition": "Tumor Histologiedatum im Krankheitsverlauf",
         "_definition": {
           "extension": [
             {
@@ -133,7 +122,20 @@
               ]
             }
           ]
-        }
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "6.1",
+            "comment": "Tumor Histologiedatum"
+          }
+        ]
       },
       {
         "id": "Observation.value[x]",
@@ -159,13 +161,7 @@
       {
         "id": "Observation.value[x].coding.version",
         "path": "Observation.value[x].coding.version",
-        "mapping": [
-          {
-            "identity": "oBDS",
-            "map": "6.4",
-            "comment": "Morphologie ICD-O/Blue Book Version"
-          }
-        ],
+        "short": "Morphologie-Kode-Version",
         "_short": {
           "extension": [
             {
@@ -183,6 +179,7 @@
             }
           ]
         },
+        "definition": "Version der ICD-O-3 bzw. Blue Book nach 6.4 oBDS 2021",
         "_definition": {
           "extension": [
             {
@@ -199,18 +196,19 @@
               ]
             }
           ]
-        }
+        },
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "6.4",
+            "comment": "Morphologie ICD-O/Blue Book Version"
+          }
+        ]
       },
       {
         "id": "Observation.value[x].coding.code",
         "path": "Observation.value[x].coding.code",
-        "mapping": [
-          {
-            "identity": "oBDS",
-            "map": "6.3",
-            "comment": "Morphologie-Code"
-          }
-        ],
+        "short": "Morphologie-Kode",
         "_short": {
           "extension": [
             {
@@ -228,6 +226,7 @@
             }
           ]
         },
+        "definition": "Morphologie als ICD-O-3 nach 6.3 oBDS 2021",
         "_definition": {
           "extension": [
             {
@@ -244,7 +243,14 @@
               ]
             }
           ]
-        }
+        },
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "6.3",
+            "comment": "Morphologie-Code"
+          }
+        ]
       },
       {
         "id": "Observation.value[x].text",
@@ -276,6 +282,42 @@
         "id": "Observation.bodySite.coding:Seitenlokalisation",
         "path": "Observation.bodySite.coding",
         "sliceName": "Seitenlokalisation",
+        "short": "Seitenlokalisation",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Seitenlokalisation"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Seitenlokalisation bei paarigen Organen",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Seitenlokalisation bei paarigen Organen"
+                }
+              ]
+            }
+          ]
+        },
         "min": 0,
         "max": "1",
         "patternCoding": {
@@ -295,6 +337,65 @@
       },
       {
         "id": "Observation.bodySite.coding:Seitenlokalisation.code",
+        "path": "Observation.bodySite.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.bodySite.coding:icd-o-3",
+        "path": "Observation.bodySite.coding",
+        "sliceName": "icd-o-3",
+        "short": "ICD-O-3 Topographie",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "ICD-O-3 Topographie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "ICD-O-3 Topographie bei vom Primärtumor abweichender Lokalisation in der Verlaufsbeschreibung",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "ICD-O-3 Topographie bei vom Primärtumor abweichender Lokalisation in der Verlaufsbeschreibung"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://terminology.hl7.org/CodeSystem/icd-o-3"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.bodySite.coding:icd-o-3.system",
+        "path": "Observation.bodySite.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.bodySite.coding:icd-o-3.code",
         "path": "Observation.bodySite.coding.code",
         "min": 1,
         "mustSupport": true

@@ -20,15 +20,16 @@ Description: "TNM-Klassifikation: TNM y-Symbol. Gibt an, ob die Klassifikation w
 * effective[x] only dateTime
 * effectiveDateTime MS
 * effectiveDateTime obeys tnm-datum
+* insert Label(effectiveDateTime, TNM-Datum, Datum der TNM-Klassifikation nach 8.1 oBDS 2021)
 * insert Translation(effectiveDateTime ^short, de-DE, TNM-Datum )
 * insert Translation(effectiveDateTime ^definition, de-DE, Datum der TNM-Klassifikation nach 8.1 oBDS 2021 )
 
 * value[x] MS
 * value[x] only CodeableConcept
 * valueCodeableConcept = $SCT#421755005
-* valueCodeableConcept ^short = "y-Symbol"
-* valueCodeableConcept ^definition = "Gibt an, ob die Klassifikation während oder nach initialer multimodaler Therapie erfolgte."
-* valueCodeableConcept ^comment = "y = Klassifikation erfolgte während oder nach initialer multimodaler Therapie; (leer) = „native“ Klassifikation"
+* valueCodeableConcept.coding ^short = "y-Symbol"
+* valueCodeableConcept.coding ^definition = "Gibt an, ob die Klassifikation während oder nach initialer multimodaler Therapie erfolgte."
+* valueCodeableConcept.coding ^comment = "y = Klassifikation erfolgte während oder nach initialer multimodaler Therapie; (leer) = „native“ Klassifikation"
 * valueCodeableConcept.coding.code 1.. MS
 * valueCodeableConcept.coding.system 1.. MS
 * insert Translation(valueCodeableConcept.coding ^short, de-DE, TNM y-Symbol )

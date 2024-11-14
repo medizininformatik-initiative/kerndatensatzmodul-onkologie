@@ -102,6 +102,42 @@
       {
         "id": "Observation.effective[x]",
         "path": "Observation.effective[x]",
+        "short": "TNM-Datum",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "TNM-Datum"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Datum der TNM-Klassifikation nach 8.1 oBDS 2021",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Datum der TNM-Klassifikation nach 8.1 oBDS 2021"
+                }
+              ]
+            }
+          ]
+        },
         "type": [
           {
             "code": "dateTime"
@@ -123,48 +159,11 @@
             "map": "8.1",
             "comment": "TNM Datum"
           }
-        ],
-        "_short": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
-              "extension": [
-                {
-                  "url": "lang",
-                  "valueCode": "de-DE"
-                },
-                {
-                  "url": "content",
-                  "valueString": "TNM-Datum"
-                }
-              ]
-            }
-          ]
-        },
-        "_definition": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
-              "extension": [
-                {
-                  "url": "lang",
-                  "valueCode": "de-DE"
-                },
-                {
-                  "url": "content",
-                  "valueString": "Datum der TNM-Klassifikation nach 8.1 oBDS 2021"
-                }
-              ]
-            }
-          ]
-        }
+        ]
       },
       {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
-        "short": "y-Symbol",
-        "definition": "Gibt an, ob die Klassifikation während oder nach initialer multimodaler Therapie erfolgte.",
-        "comment": "y = Klassifikation erfolgte während oder nach initialer multimodaler Therapie; (leer) = „native“ Klassifikation",
         "type": [
           {
             "code": "CodeableConcept"
@@ -183,6 +182,7 @@
       {
         "id": "Observation.value[x].coding",
         "path": "Observation.value[x].coding",
+        "short": "y-Symbol",
         "_short": {
           "extension": [
             {
@@ -200,6 +200,7 @@
             }
           ]
         },
+        "definition": "Gibt an, ob die Klassifikation während oder nach initialer multimodaler Therapie erfolgte.",
         "_definition": {
           "extension": [
             {
@@ -216,7 +217,8 @@
               ]
             }
           ]
-        }
+        },
+        "comment": "y = Klassifikation erfolgte während oder nach initialer multimodaler Therapie; (leer) = „native“ Klassifikation"
       },
       {
         "id": "Observation.value[x].coding.system",

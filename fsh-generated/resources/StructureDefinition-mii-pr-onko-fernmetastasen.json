@@ -99,7 +99,41 @@
         "id": "Observation.effective[x]",
         "path": "Observation.effective[x]",
         "short": "Datum der diagnostischen Sicherung von Fernmetastasen",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Datum der diagnostischen Sicherung von Fernmetastasen"
+                }
+              ]
+            }
+          ]
+        },
         "definition": "Gibt an, wann die Fernmetastase festgestellt wurde.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Gibt an wann die Fernmetastase festgestellt wurde."
+                }
+              ]
+            }
+          ]
+        },
         "min": 1,
         "type": [
           {
@@ -118,6 +152,17 @@
       {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x].coding",
+        "path": "Observation.value[x].coding",
         "short": "Lokalisation der Fernmetastase laut oBDS/TNM-Kodierung",
         "_short": {
           "extension": [
@@ -154,17 +199,6 @@
             }
           ]
         },
-        "min": 1,
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.value[x].coding",
-        "path": "Observation.value[x].coding",
         "mustSupport": true,
         "binding": {
           "strength": "required",

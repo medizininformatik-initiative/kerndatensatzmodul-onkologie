@@ -116,19 +116,6 @@
                 },
                 {
                   "url": "content",
-                  "valueString": "Leistungszustand nach ECOG"
-                }
-              ]
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
-              "extension": [
-                {
-                  "url": "lang",
-                  "valueCode": "de-DE"
-                },
-                {
-                  "url": "content",
                   "valueString": "Leistungszustand nach Karnofsky"
                 }
               ]
@@ -137,19 +124,6 @@
         },
         "_definition": {
           "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
-              "extension": [
-                {
-                  "url": "lang",
-                  "valueCode": "de-DE"
-                },
-                {
-                  "url": "content",
-                  "valueString": "Leistungszustand nach ECOG Stufen 0-4 gemäß 12.1 oBDS 2021"
-                }
-              ]
-            },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
@@ -240,6 +214,46 @@
         "binding": {
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-ecog"
+        }
+      },
+      {
+        "id": "Observation.component:ecog.value[x].coding",
+        "path": "Observation.component.value[x].coding",
+        "short": "Leistungszustand nach ECOG",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Leistungszustand nach ECOG"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Leistungszustand nach ECOG Stufen 0-4 gemäß 12.1 oBDS 2021",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Leistungszustand nach ECOG Stufen 0-4 gemäß 12.1 oBDS 2021"
+                }
+              ]
+            }
+          ]
         }
       },
       {

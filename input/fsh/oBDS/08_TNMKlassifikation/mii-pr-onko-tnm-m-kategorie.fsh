@@ -25,6 +25,7 @@ Description: "TNM-Klassifikation: TNM M-Kategorie. Fehlen oder Vorhandensein von
 * effective[x] only dateTime
 * effectiveDateTime MS
 * effectiveDateTime obeys tnm-datum
+* insert Label(effectiveDateTime, TNM-Datum, Datum der TNM-Klassifikation nach 8.1 oBDS 2021)
 * insert Translation(effectiveDateTime ^short, de-DE, TNM-Datum )
 * insert Translation(effectiveDateTime ^definition, de-DE, Datum der TNM-Klassifikation nach 8.1 oBDS 2021 )
 
@@ -42,9 +43,9 @@ Description: "TNM-Klassifikation: TNM M-Kategorie. Fehlen oder Vorhandensein von
     MII_EX_Onko_TNM_ITC_Suffix named itcSuffix 0..1 MS
 * valueCodeableConcept.extension[MII_EX_Onko_TNM_ITC_Suffix] ^short = "isolierte Tumorzellen (ITC) Suffix"
 * valueCodeableConcept from MII_VS_Onko_TNM_M_Kategorie_Werte (required)
-* valueCodeableConcept ^short = "TNM M-Kategorie"
-* valueCodeableConcept ^definition = "Fehlen oder Vorhandensein von Fernmetastasen, gemäß Tumorentität nach TNM."
-* valueCodeableConcept ^comment = "Teilweise entitätsspezifisch, einschließlich Zusatzangaben wie (i+/-) und (mol+/-)"
+* valueCodeableConcept.coding ^short = "TNM M-Kategorie"
+* valueCodeableConcept.coding ^definition = "Fehlen oder Vorhandensein von Fernmetastasen, gemäß Tumorentität nach TNM."
+* valueCodeableConcept.coding ^comment = "Teilweise entitätsspezifisch, einschließlich Zusatzangaben wie (i+/-) und (mol+/-)"
 * valueCodeableConcept.coding.code 1.. MS
 * valueCodeableConcept.coding.system 1.. MS
 * insert Translation(valueCodeableConcept.coding ^short, de-DE, TNM M-Kategorie )
