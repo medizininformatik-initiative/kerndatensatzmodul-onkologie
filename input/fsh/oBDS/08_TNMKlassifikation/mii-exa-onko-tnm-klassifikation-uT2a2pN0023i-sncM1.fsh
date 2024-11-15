@@ -13,4 +13,4 @@ Usage: #example
 * hasMember[3] = Reference(mii-exa-onko-anzahl-untersuchte-lymphknoten-23)
 * hasMember[4] = Reference(mii-exa-onko-tnm-n-kategorie-pN0i-sn)
 * hasMember[5] = Reference(mii-exa-onko-tnm-m-kategorie-cM1)
-* valueCodeableConcept = $UICC#IVC "Stage IVC"
+* valueCodeableConcept = $UICC#IVC "Stadium IVC"

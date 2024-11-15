@@ -19,6 +19,7 @@ Description: "Tumorbedingter Tod"
 * effective[x] MS
 * effective[x] only dateTime
 * effectiveDateTime 0..1 MS
+* insert Label(effectiveDateTime, Sterbedatum, Sterbedatum gemäß 20.1 oBDS 2021 )
 * insert Translation(effectiveDateTime ^short, de-DE, Sterbedatum )
 * insert Translation(effectiveDateTime ^definition, de-DE, Sterbedatum gemäß 20.1 oBDS 2021   )
 
@@ -28,6 +29,7 @@ Description: "Tumorbedingter Tod"
 * interpretation.coding.code 0..1 MS
 * interpretation.coding.system 0..1 MS
 * interpretation.coding.system = $mii-cs-onko-tod
+* insert Label(interpretation.coding, Sterbedatum, Sterbedatum gemäß 20.1 oBDS 2021 )
 * insert Translation(interpretation.coding ^short, de-DE, Tod tumorbedingt )
 * insert Translation(interpretation.coding ^definition, de-DE, Tod tumorbedingt gemäß 20.2 oBDS 2021   )
 
@@ -40,6 +42,7 @@ Description: "Tumorbedingter Tod"
 * valueCodeableConcept.coding.system 1.. MS
 * valueCodeableConcept.coding.system = $ICD10GM
 * valueCodeableConcept.coding.version 1.. MS
+* insert Label(valueCodeableConcept.coding, Todesursache ICD-10, Todesursache ICD-10 gemäß 20.3 oBDS 2021 )
 * insert Translation(valueCodeableConcept.coding ^short, de-DE, Todesursache ICD-10)
 * insert Translation(valueCodeableConcept.coding ^definition, de-DE, Todesursache ICD-10 gemäß 20.3 oBDS 2021   )
 

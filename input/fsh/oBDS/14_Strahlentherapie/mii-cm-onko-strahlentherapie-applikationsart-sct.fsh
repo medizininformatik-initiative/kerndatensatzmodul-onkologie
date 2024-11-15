@@ -26,7 +26,7 @@ Usage: #definition
 * group[=].element[=].target.display = "Stereotactic radiotherapy (procedure)"
 * group[=].element[=].target.equivalence = #equivalent
 
-* group[=].element[+].code = #p-4D
+* group[=].element[+].code = #P-4D
 * group[=].element[=].display = "perkutan, atemgetriggert"
 * group[=].element[=].target.code = #721061000124106
 * group[=].element[=].target.display = "External beam radiotherapy with respiratory gating (procedure)"
@@ -114,7 +114,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #unmatched
 
 * group[=].element[+].code = #MPSMA
-* group[=].element[=].display = "PSMA-TherapiePSMA-Therapie"
+* group[=].element[=].display = "PSMA-Therapie"
 * group[=].element[=].target.equivalence = #unmatched
 
 * group[=].element[+].code = #MRJT

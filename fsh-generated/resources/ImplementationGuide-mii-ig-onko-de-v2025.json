@@ -3,7 +3,7 @@
   "id": "mii-ig-onko-de-v2025",
   "language": "de-DE",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/mii-ig-onko-de-v2025",
-  "version": "2025.0.0",
+  "version": "2025.0.0-alpha1",
   "name": "MII_IG_Onko_DE",
   "title": "MII IG Onkologie",
   "status": "active",
@@ -32,7 +32,7 @@
     },
     {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.meta",
-      "version": "2025.0.0-alpha1",
+      "version": "2025.0.0-alpha4",
       "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.meta/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.meta",
       "id": "de_medizininformatikinitiative_kerndatensatz_meta"
     },
@@ -44,13 +44,13 @@
     },
     {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.prozedur",
-      "version": "2025.0.0-alpha1",
+      "version": "2025.0.0-alpha2",
       "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.prozedur/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.prozedur",
       "id": "de_medizininformatikinitiative_kerndatensatz_prozedur"
     },
     {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.biobank",
-      "version": "2025.0.0-rc",
+      "version": "2025.0.0",
       "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.biobank/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.biobank",
       "id": "de_medizininformatikinitiative_kerndatensatz_biobank"
     },
@@ -62,8 +62,8 @@
     },
     {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.molgen",
-      "version": "1.0.0",
-      "uri": "/guide/MedizininformatikInitiative-ModulMolekulargenetischerBefundberic?version=current",
+      "version": "2025.0.0-alpha1",
+      "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.molgen/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.molgen",
       "id": "de_medizininformatikinitiative_kerndatensatz_molgen"
     },
     {
@@ -653,10 +653,18 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand"
+          "reference": "StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog"
         },
-        "name": "MII PR Onkologie Allgemeiner Leistungszustand",
-        "description": "OBDS Beschreibung des allgemeines Leistungszustandes",
+        "name": "MII PR Onkologie Allgemeiner Leistungszustand ECOG",
+        "description": "OBDS Beschreibung des allgemeines Leistungszustandes nach ECOG",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-karnofsky"
+        },
+        "name": "MII PR Onkologie Allgemeiner Leistungszustand nach Karnofsky",
+        "description": "OBDS Beschreibung des allgemeines Leistungszustandes nach Karnofsky",
         "exampleBoolean": false
       },
       {
@@ -1349,10 +1357,17 @@
       },
       {
         "reference": {
-          "reference": "Observation/mii-exa-onko-allgemeiner-leistungszustand-1"
+          "reference": "Observation/mii-exa-onko-allgemeiner-leistungszustand-ecog"
         },
-        "name": "mii-exa-onko-allgemeiner-leistungszustand-1",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand"
+        "name": "mii-exa-onko-allgemeiner-leistungszustand-ecog",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-allgemeiner-leistungszustand-karnofsky"
+        },
+        "name": "mii-exa-onko-allgemeiner-leistungszustand-karnofsky",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-karnofsky"
       },
       {
         "reference": {
@@ -1776,6 +1791,14 @@
       },
       {
         "reference": {
+          "reference": "Condition/PatientKimMusterperson-PrimaryDiagnosis-2"
+        },
+        "name": "PatientKimMusterperson-PrimaryDiagnosis-2",
+        "description": "bestätigte Primärdiagnose",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+      },
+      {
+        "reference": {
           "reference": "Procedure/PatientKimMusterperson-Procedure-1"
         },
         "name": "PatientKimMusterperson-Procedure-1",
@@ -1803,6 +1826,38 @@
           "reference": "Procedure/PatientKimMusterperson-Procedure-4"
         },
         "name": "PatientKimMusterperson-Procedure-4",
+        "description": "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie, Tumorresektion mittels Hysterektomie, bilateraler Adnexektomie, und atpyischer Lebersegmentresektion (Seg. II und V). Postoperativ: R0.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Procedure/PatientKimMusterperson-Procedure-4a"
+        },
+        "name": "PatientKimMusterperson-Procedure-4a",
+        "description": "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie, Tumorresektion mittels Hysterektomie, bilateraler Adnexektomie, und atpyischer Lebersegmentresektion (Seg. II und V). Postoperativ: R0.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Procedure/PatientKimMusterperson-Procedure-4b"
+        },
+        "name": "PatientKimMusterperson-Procedure-4b",
+        "description": "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie, Tumorresektion mittels Hysterektomie, bilateraler Adnexektomie, und atpyischer Lebersegmentresektion (Seg. II und V). Postoperativ: R0.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Procedure/PatientKimMusterperson-Procedure-4c"
+        },
+        "name": "PatientKimMusterperson-Procedure-4c",
+        "description": "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie, Tumorresektion mittels Hysterektomie, bilateraler Adnexektomie, und atpyischer Lebersegmentresektion (Seg. II und V). Postoperativ: R0.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Procedure/PatientKimMusterperson-Procedure-4d"
+        },
+        "name": "PatientKimMusterperson-Procedure-4d",
         "description": "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie, Tumorresektion mittels Hysterektomie, bilateraler Adnexektomie, und atpyischer Lebersegmentresektion (Seg. II und V). Postoperativ: R0.",
         "exampleBoolean": true
       },
@@ -1840,9 +1895,17 @@
       },
       {
         "reference": {
-          "reference": "MedicationStatement/PatientKimMusterperson-SystemicTherapyMedication-1"
+          "reference": "MedicationStatement/PatientKimMusterperson-SystemicTherapyMedication-1a"
         },
-        "name": "PatientKimMusterperson-SystemicTherapyMedication-1",
+        "name": "PatientKimMusterperson-SystemicTherapyMedication-1a",
+        "description": ".",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
+      },
+      {
+        "reference": {
+          "reference": "MedicationStatement/PatientKimMusterperson-SystemicTherapyMedication-1b"
+        },
+        "name": "PatientKimMusterperson-SystemicTherapyMedication-1b",
         "description": ".",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
       },

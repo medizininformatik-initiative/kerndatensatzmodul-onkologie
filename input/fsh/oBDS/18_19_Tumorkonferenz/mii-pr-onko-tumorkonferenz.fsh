@@ -22,11 +22,13 @@ Description: "Dieses Profil beschreibt die Tumorkonferenz und die Therapieempfeh
 * category.coding.system = $mii-cs-onko-therapieplanung-typ
 * category.coding.system 1..1 MS
 * category.coding.code 1..1 MS
+* insert Label(category.coding, Art der Tumorkonferenz / Therapieplanung, Art der Tumorkonferenz / Therapieplanung gemäß 18.2 oBDS 2021. )
 * insert Translation(category.coding ^short, de-DE, Art der Tumorkonferenz / Therapieplanung )
 * insert Translation(category.coding ^definition, de-DE, Art der Tumorkonferenz / Therapieplanung gemäß 18.2 oBDS 2021. )
 
 // Therapieplanung Datum
 * created 1..1 MS
+* insert Label(created,Datum der Tumorkonferenz / Therapieplanung, Datum der Tumorkonferenz / Therapieplanung gemäß 18.1 oBDS 2021. )
 * insert Translation(created ^short, de-DE, Datum der Tumorkonferenz / Therapieplanung )
 * insert Translation(created  ^definition, de-DE, Datum der Tumorkonferenz / Therapieplanung gemäß 18.1 oBDS 2021. )
 
@@ -43,8 +45,9 @@ Description: "Dieses Profil beschreibt die Tumorkonferenz und die Therapieempfeh
 * activity.detail.code.coding.system = $mii-cs-onko-therapie-typ
 * activity.detail.code.coding.system 1..1 MS
 * activity.detail.code.coding.code 1..1 MS
-* insert Translation(activity.detail.code ^short, de-DE, Typ der Therapieempfehlung )
-* insert Translation(activity.detail.code ^definition, de-DE, Typ der Therapieempfehlung der Tumorkonferenz gemäß 19.1 oBDS 2021. )
+* insert Label(activity.detail.code.coding, Typ der Therapieempfehlung, Typ der Therapieempfehlung der Tumorkonferenz gemäß 19.1 oBDS 2021.)
+* insert Translation(activity.detail.code.coding ^short, de-DE, Typ der Therapieempfehlung  )
+* insert Translation(activity.detail.code.coding ^definition, de-DE, Typ der Therapieempfehlung der Tumorkonferenz gemäß 19.1 oBDS 2021. )
 
 * activity.detail obeys tumorkonferenz-empfehlung-entscheidung-patient
 * activity.detail.status MS

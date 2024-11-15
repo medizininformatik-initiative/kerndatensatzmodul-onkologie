@@ -18,6 +18,7 @@ Description: "TNM-Klassifikation: Grouper-Profil für Komponenten der TNM-Klassi
 * effective[x] only dateTime
 * effectiveDateTime MS
 * effectiveDateTime obeys tnm-datum
+* insert Label(effectiveDateTime, TNM-Datum, Datum der TNM-Klassifikation nach 8.1 oBDS 2021)
 * insert Translation(effectiveDateTime ^short, de-DE, TNM-Datum )
 * insert Translation(effectiveDateTime ^definition, de-DE, Datum der TNM-Klassifikation nach 8.1 oBDS 2021 )
 
@@ -25,6 +26,7 @@ Description: "TNM-Klassifikation: Grouper-Profil für Komponenten der TNM-Klassi
 * method ^short = "TNM Version"
 * method ^definition = "Gibt an, nach welcher Version des TNM klassifiziert wurde."
 * method from mii-vs-onko-tnm-version (required)
+* insert Label(method.coding, TNM-Version, TNM-Version nach 8.5 oBDS 2021)
 * insert Translation(method.coding ^short, de-DE, TNM-Version)
 * insert Translation(method.coding ^definition, de-DE, TNM-Version nach 8.5 oBDS 2021 )
 
@@ -37,8 +39,8 @@ Description: "TNM-Klassifikation: Grouper-Profil für Komponenten der TNM-Klassi
 * value[x] MS
 * value[x] only CodeableConcept
 * valueCodeableConcept from MII_VS_Onko_TNM_UICC_Stadium (required)
-* valueCodeableConcept ^short = "UICC Stadium"
-* valueCodeableConcept ^definition = "Stadium nach aktuell gültiger TNM-Klassifikation."
+* valueCodeableConcept.coding ^short = "UICC Stadium"
+* valueCodeableConcept.coding ^definition = "Stadium nach aktuell gültiger TNM-Klassifikation."
 * valueCodeableConcept.coding.code 1.. MS
 * valueCodeableConcept.coding.system 1.. MS
 * insert Translation(valueCodeableConcept.coding ^short, de-DE, UICC-Staging)

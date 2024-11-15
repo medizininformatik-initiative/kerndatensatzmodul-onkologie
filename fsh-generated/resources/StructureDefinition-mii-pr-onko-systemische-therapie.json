@@ -62,7 +62,12 @@
             ]
           }
         ],
-        "mustSupport": true,
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.extension:Intention.value[x].coding",
+        "path": "Procedure.extension.value[x].coding",
+        "short": "Intention der systemischen oder abwartenden Therapie",
         "_short": {
           "extension": [
             {
@@ -80,6 +85,7 @@
             }
           ]
         },
+        "definition": "Intention der systemischen oder abwartenden Therapie gemäß 16.1 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -123,7 +129,12 @@
             ]
           }
         ],
-        "mustSupport": true,
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.extension:StellungZurOp.value[x].coding",
+        "path": "Procedure.extension.value[x].coding",
+        "short": "Stellung der systemischen Therapie zu einer Operation",
         "_short": {
           "extension": [
             {
@@ -141,6 +152,7 @@
             }
           ]
         },
+        "definition": "Stellung der systemischen Therapie zu einer Operation gemäß 16.2 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -213,12 +225,7 @@
         "id": "Procedure.code.coding:systemische_therapie_art",
         "path": "Procedure.code.coding",
         "sliceName": "systemische_therapie_art",
-        "min": 0,
-        "max": "1",
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-art"
-        },
+        "short": "Art der systemischen oder abwartenden Therapie",
         "_short": {
           "extension": [
             {
@@ -230,12 +237,13 @@
                 },
                 {
                   "url": "content",
-                  "valueString": ""
+                  "valueString": "Art der systemischen oder abwartenden Therapie"
                 }
               ]
             }
           ]
         },
+        "definition": "Art der systemischen oder abwartenden Therapie gemäß 16.3 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -252,6 +260,12 @@
               ]
             }
           ]
+        },
+        "min": 0,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-art"
         }
       },
       {
@@ -293,15 +307,39 @@
       {
         "id": "Procedure.performed[x].start",
         "path": "Procedure.performed[x].start",
-        "min": 1,
-        "mustSupport": true,
         "mapping": [
           {
             "identity": "oBDS",
             "map": "16.6",
             "comment": "Systemische Therapie Beginn"
           }
-        ],
+        ]
+      },
+      {
+        "id": "Procedure.performed[x].end",
+        "path": "Procedure.performed[x].end",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "16.8",
+            "comment": "Systemische Therapie Ende"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.performed[x]:performedPeriod",
+        "path": "Procedure.performed[x]",
+        "sliceName": "performedPeriod",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.performed[x]:performedPeriod.start",
+        "path": "Procedure.performed[x].start",
+        "short": "Startdatum der systemischen oder abwartenden Therapie",
         "_short": {
           "extension": [
             {
@@ -319,6 +357,7 @@
             }
           ]
         },
+        "definition": "Startdatum der systemischen oder abwartenden Therapie gemäß 16.6 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -335,19 +374,14 @@
               ]
             }
           ]
-        }
+        },
+        "min": 1,
+        "mustSupport": true
       },
       {
-        "id": "Procedure.performed[x].end",
+        "id": "Procedure.performed[x]:performedPeriod.end",
         "path": "Procedure.performed[x].end",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "oBDS",
-            "map": "16.8",
-            "comment": "Systemische Therapie Ende"
-          }
-        ],
+        "short": "Enddatum der systemischen oder abwartenden Therapie",
         "_short": {
           "extension": [
             {
@@ -365,6 +399,7 @@
             }
           ]
         },
+        "definition": "Enddatum der systemischen oder abwartenden Therapie gemäß 16.8 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -381,7 +416,8 @@
               ]
             }
           ]
-        }
+        },
+        "mustSupport": true
       },
       {
         "id": "Procedure.reasonReference",
@@ -409,6 +445,7 @@
       {
         "id": "Procedure.outcome.coding",
         "path": "Procedure.outcome.coding",
+        "short": "Grund für Ende der systemischen oder abwartenden Therapie",
         "_short": {
           "extension": [
             {
@@ -426,6 +463,7 @@
             }
           ]
         },
+        "definition": "Grund für Ende der systemischen oder abwartenden Therapie gemäß 16.7 oBDS 2021.",
         "_definition": {
           "extension": [
             {

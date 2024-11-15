@@ -86,7 +86,7 @@ Description: "oBDS-spezifisches Codesystem für Klassifikation von Komplikatione
 * #SFH "Störungen des Flüssigkeits-, Elektrolyt- und Säurebasenhaushaltes"
 * #STK "Stomakomplikation (z. B. Blutung, Nekrose, Stenose)"
 * #TZP "Thrombozytopenie"
-* #TIA "(transitorische ischämische Attacke) oder Rind (reversibles ischämisches neurologisches Defizit)"
+* #TIA "TIA(transitorische ischämische Attacke) oder RIND(reversibles ischämisches neurologisches Defizit)"
 * #TRZ "Transfusionszwischenfall"
 * #WUH "Wundhämatom (konservativ therapiert)"
 * #WSS "Wundheilungsstörung, subkutane"

@@ -74,12 +74,24 @@
         ]
       },
       {
-        "id": "MedicationStatement.medication[x]",
+        "id": "MedicationStatement.medication[x]:medicationCodeableConcept",
         "path": "MedicationStatement.medication[x]",
+        "sliceName": "medicationCodeableConcept",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement.medication[x]:medicationCodeableConcept.coding",
+        "path": "MedicationStatement.medication[x].coding",
         "short": "Wirkstoff der systemischen Medikation",
         "_short": {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -89,21 +101,7 @@
                   "url": "content",
                   "valueString": "Wirkstoff/ Substanz der systemischen Medikation"
                 }
-              ],
-              "url": "http://hl7.org/fhir/StructureDefinition/translation"
-            },
-            {
-              "extension": [
-                {
-                  "url": "lang",
-                  "valueCode": "en-US"
-                },
-                {
-                  "url": "content",
-                  "valueString": "Medication"
-                }
-              ],
-              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+              ]
             }
           ]
         },
@@ -111,6 +109,7 @@
         "_definition": {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -120,38 +119,11 @@
                   "url": "content",
                   "valueString": "Wirkstoff / Substanz der systemischen onkologischen Medikation gemäß 16.4  oBDS 2021."
                 }
-              ],
-              "url": "http://hl7.org/fhir/StructureDefinition/translation"
-            },
-            {
-              "extension": [
-                {
-                  "url": "lang",
-                  "valueCode": "en-US"
-                },
-                {
-                  "url": "content",
-                  "valueString": "The medication that was taken. Code or a reference to a Medication resource."
-                }
-              ],
-              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+              ]
             }
           ]
-        }
-      },
-      {
-        "id": "MedicationStatement.medication[x]:medicationCodeableConcept",
-        "path": "MedicationStatement.medication[x]",
-        "sliceName": "medicationCodeableConcept",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.medication[x]:medicationCodeableConcept.coding",
-        "path": "MedicationStatement.medication[x].coding"
+        },
+        "min": 1
       },
       {
         "id": "MedicationStatement.medication[x]:medicationCodeableConcept.coding.code",

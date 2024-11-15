@@ -179,6 +179,42 @@
       {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
+        "short": "Anzahl befallener Lymphknoten",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Anzahl befallener Lymphknoten"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Anzahl befallener Lymphknoten nach 6.8 oBDS 2021",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Anzahl befallener Lymphknoten nach 6.8 oBDS 2021"
+                }
+              ]
+            }
+          ]
+        },
         "type": [
           {
             "code": "Quantity"
@@ -197,41 +233,7 @@
             "map": "6.8",
             "comment": "Anzahl der befallenen Lymphknoten"
           }
-        ],
-        "_short": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
-              "extension": [
-                {
-                  "url": "lang",
-                  "valueCode": "de-DE"
-                },
-                {
-                  "url": "content",
-                  "valueString": "Anzahl befallener Lymphknoten"
-                }
-              ]
-            }
-          ]
-        },
-        "_definition": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
-              "extension": [
-                {
-                  "url": "lang",
-                  "valueCode": "de-DE"
-                },
-                {
-                  "url": "content",
-                  "valueString": "Anzahl befallener Lymphknoten nach 6.8 oBDS 2021"
-                }
-              ]
-            }
-          ]
-        }
+        ]
       },
       {
         "id": "Observation.value[x].unit",

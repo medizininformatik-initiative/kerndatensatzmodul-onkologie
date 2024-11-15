@@ -46,6 +46,7 @@ Description: "Histologie: Anzahl der untersuchten Lymphknoten. Gibt an, wie viel
 * valueQuantity.system = $UCUM (exactly)
 * valueQuantity.unit 1.. MS
 * valueQuantity.value 1.. MS
+* insert Label (valueQuantity.value, Anzahl untersuchter Lymphknoten, Anzahl untersuchter Lymphknoten nach 6.8 oBDS 2021)
 * insert Translation(valueQuantity.value ^short, de-DE, Anzahl untersuchter Lymphknoten )
 * insert Translation(valueQuantity.value ^definition, de-DE, Anzahl untersuchter Lymphknoten nach 6.7 oBDS 2021 )
 

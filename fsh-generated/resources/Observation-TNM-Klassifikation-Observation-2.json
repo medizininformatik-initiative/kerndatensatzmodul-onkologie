@@ -6,16 +6,16 @@
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
     ]
   },
-  "status": "completed",
+  "status": "final",
   "subject": {
     "reference": "Patient/PatientKimMusterperson"
   },
   "code": {
     "coding": [
       {
-        "code": "263642008",
+        "code": "399588009",
         "system": "http://snomed.info/sct",
-        "display": "Tumor-node-metastasis (TNM) staging classification (attribute)"
+        "display": "Pathologic TNM stage grouping"
       }
     ]
   },
@@ -23,7 +23,9 @@
   "method": {
     "coding": [
       {
-        "code": "8"
+        "code": "8",
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+        "display": "8. Auflage"
       }
     ]
   },

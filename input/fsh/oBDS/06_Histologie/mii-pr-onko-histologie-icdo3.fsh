@@ -15,6 +15,7 @@ Description: "Histologie-Kodierung nach ICD-0 für die Verwendung von Folgediagn
 * code.coding = $LOINC#59847-4 
 * effective[x] MS
 * effective[x] only dateTime
+* insert Label (effectiveDateTime, Tumor Histologiedatum, Tumor Histologiedatum im Krankheitsverlauf)
 * insert Translation(effectiveDateTime ^short, de-DE, Tumor Histologiedatum )
 * insert Translation(effectiveDateTime ^definition, de-DE, Tumor Histologiedatum im Krankheitsverlauf )
 * subject 1.. MS
@@ -26,8 +27,10 @@ Description: "Histologie-Kodierung nach ICD-0 für die Verwendung von Folgediagn
 * valueCodeableConcept from $ICDO3 (required)
 * valueCodeableConcept.coding 0..1 MS
 * valueCodeableConcept.text 0..1 MS
+* insert Label (valueCodeableConcept.coding.code, Morphologie-Kode, Morphologie als ICD-O-3 nach 6.3 oBDS 2021)
 * insert Translation(valueCodeableConcept.coding.code ^short, de-DE, Morphologie-Kode )
 * insert Translation(valueCodeableConcept.coding.code ^definition, de-DE, Morphologie als ICD-O-3 nach 6.3 oBDS 2021 )
+* insert Label (valueCodeableConcept.coding.version, Morphologie-Kode-Version, Version der ICD-O-3 bzw. Blue Book nach 6.4 oBDS 2021)
 * insert Translation(valueCodeableConcept.coding.version ^short, de-DE, Morphologie-Kode-Version )
 * insert Translation(valueCodeableConcept.coding.version ^definition, de-DE, Version der ICD-O-3 bzw. Blue Book nach 6.4 oBDS 2021 )
 
@@ -36,11 +39,24 @@ Description: "Histologie-Kodierung nach ICD-0 für die Verwendung von Folgediagn
 * bodySite.coding ^slicing.discriminator.type = #pattern
 * bodySite.coding ^slicing.discriminator.path = "$this"
 * bodySite.coding ^slicing.rules = #open
-* bodySite.coding contains Seitenlokalisation 0..1 MS
+* bodySite.coding contains 
+    Seitenlokalisation 0..1 MS and
+    icd-o-3 0..1 MS
 * bodySite.coding[Seitenlokalisation] from mii-vs-onko-seitenlokalisation
 * bodySite.coding[Seitenlokalisation].system 1.. MS
 * bodySite.coding[Seitenlokalisation] ^patternCoding.system = $mii-cs-onko-seitenlokalisation
 * bodySite.coding[Seitenlokalisation].code 1.. MS
+* insert Label (bodySite.coding[Seitenlokalisation], Seitenlokalisation, Seitenlokalisation bei paarigen Organen)
+* insert Translation(bodySite.coding[Seitenlokalisation] ^short, de-DE, Seitenlokalisation )
+* insert Translation(bodySite.coding[Seitenlokalisation] ^definition, de-DE, Seitenlokalisation bei paarigen Organen )
+
+* bodySite.coding[icd-o-3].system 1.. MS
+* bodySite.coding[icd-o-3] ^patternCoding.system = $ICDO3
+* bodySite.coding[icd-o-3].code 1.. MS
+* insert Label (bodySite.coding[icd-o-3], ICD-O-3 Topographie, ICD-O-3 Topographie bei vom Primärtumor abweichender Lokalisation in der Verlaufsbeschreibung)
+* insert Translation(bodySite.coding[icd-o-3] ^short, de-DE, ICD-O-3 Topographie )
+* insert Translation(bodySite.coding[icd-o-3] ^definition, de-DE, ICD-O-3 Topographie bei vom Primärtumor abweichender Lokalisation in der Verlaufsbeschreibung)
+
 
 * specimen MS 
 * specimen 1..1

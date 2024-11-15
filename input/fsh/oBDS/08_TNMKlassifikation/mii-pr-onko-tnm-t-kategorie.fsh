@@ -25,6 +25,7 @@ Description: "TNM-Klassifikation: TNM T-Kategorie. Ausbreitung des Primärtumors
 * effective[x] only dateTime
 * effectiveDateTime MS
 * effectiveDateTime obeys tnm-datum
+* insert Label(effectiveDateTime, TNM-Datum, Datum der TNM-Klassifikation nach 8.1 oBDS 2021)
 * insert Translation(effectiveDateTime ^short, de-DE, TNM-Datum )
 * insert Translation(effectiveDateTime ^definition, de-DE, Datum der TNM-Klassifikation nach 8.1 oBDS 2021 )
 
@@ -35,9 +36,9 @@ Description: "TNM-Klassifikation: TNM T-Kategorie. Ausbreitung des Primärtumors
 * value[x] MS
 * value[x] only CodeableConcept
 * valueCodeableConcept from MII_VS_Onko_TNM_T_Kategorie_Werte (required)
-* valueCodeableConcept ^short = "TNM T-Kategorie"
-* valueCodeableConcept ^definition = "Ausbreitung des Primärtumors, erfolgt gemäß Tumorentität nach TNM."
-* valueCodeableConcept ^comment = "Entitätsspezifisch, siehe auch allgemeine Bemerkungen zu TNM."
+* valueCodeableConcept.coding ^short = "TNM T-Kategorie"
+* valueCodeableConcept.coding ^definition = "Ausbreitung des Primärtumors, erfolgt gemäß Tumorentität nach TNM."
+* valueCodeableConcept.coding ^comment = "Entitätsspezifisch, siehe auch allgemeine Bemerkungen zu TNM."
 * valueCodeableConcept.coding.code 1.. MS
 * valueCodeableConcept.coding.system 1.. MS
 * insert Translation(valueCodeableConcept.coding ^short, de-DE, TNM T-Kategorie )

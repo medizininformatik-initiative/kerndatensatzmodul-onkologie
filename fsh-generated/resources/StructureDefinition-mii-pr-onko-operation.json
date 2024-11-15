@@ -52,17 +52,7 @@
         "id": "Procedure.extension:Intention",
         "path": "Procedure.extension",
         "sliceName": "Intention",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention"
-            ]
-          }
-        ],
-        "mustSupport": true,
+        "short": "Intention der OP",
         "_short": {
           "extension": [
             {
@@ -80,6 +70,7 @@
             }
           ]
         },
+        "definition": "Intention der OP gemäß 13.1 oBDS 2021",
         "_definition": {
           "extension": [
             {
@@ -96,7 +87,18 @@
               ]
             }
           ]
-        }
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention"
+            ]
+          }
+        ],
+        "mustSupport": true
       },
       {
         "id": "Procedure.extension:Intention.value[x].coding.code",
@@ -139,29 +141,10 @@
         "id": "Procedure.code.coding:ops",
         "path": "Procedure.code.coding",
         "sliceName": "ops",
-        "definition": "OPS-Kodierung. Nur ein Kode erlaubt, bei mehreren kodierten Prozeduren sind mehrere Einzelprozeduren anzulegen.",
-        "_definition": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
-              "extension": [
-                {
-                  "url": "lang",
-                  "valueCode": "de-DE"
-                },
-                {
-                  "url": "content",
-                  "valueString": "OPS-Kode der Operation gemäß 13.3 oBDS 2021"
-                }
-              ]
-            }
-          ]
-        },
-        "min": 1,
+        "short": "Komplikation der OP laut oBDS",
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -171,10 +154,56 @@
                   "url": "content",
                   "valueString": "OPS-Kode der Operation"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueString": "OPS code"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
-        }
+        },
+        "definition": "Komplikation der OP gemäß 13.5 oBDS 2021",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "OPS-Kode der Operation gemäß 13.3 oBDS 2021"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueString": "A reference to a code defined by the German Procedure Classification OPS"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 1
       },
       {
         "id": "Procedure.code.coding:ops.version",
@@ -222,6 +251,16 @@
           {
             "code": "dateTime"
           }
+        ]
+      },
+      {
+        "id": "Procedure.performed[x]:performedDateTime",
+        "path": "Procedure.performed[x]",
+        "sliceName": "performedDateTime",
+        "type": [
+          {
+            "code": "dateTime"
+          }
         ],
         "mapping": [
           {
@@ -264,6 +303,7 @@
       {
         "id": "Procedure.outcome.coding",
         "path": "Procedure.outcome.coding",
+        "short": "Lokaler Residualstatus",
         "_short": {
           "extension": [
             {
@@ -281,6 +321,7 @@
             }
           ]
         },
+        "definition": "Lokaler Residualstatus der OP gemäß 10.1 oBDS 2021. Globaler Residualstatus wird prozedurenunabhängig als eigenständige Observation kodiert.",
         "_definition": {
           "extension": [
             {
@@ -392,13 +433,7 @@
         "id": "Procedure.complication:compl_icd10",
         "path": "Procedure.complication",
         "sliceName": "compl_icd10",
-        "min": 0,
-        "max": "*",
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://fhir.de/ValueSet/bfarm/icd-10-gm"
-        },
+        "short": "Komplikation der OP Sonstige ICD-10",
         "_short": {
           "extension": [
             {
@@ -416,6 +451,7 @@
             }
           ]
         },
+        "definition": "Komplikation der OP - soweit nicht in 13.1 oBDS 2021 enthalten - als ICD-10-GM",
         "_definition": {
           "extension": [
             {
@@ -432,6 +468,13 @@
               ]
             }
           ]
+        },
+        "min": 0,
+        "max": "*",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://fhir.de/ValueSet/bfarm/icd-10-gm"
         }
       },
       {

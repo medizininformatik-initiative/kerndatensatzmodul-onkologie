@@ -20,6 +20,7 @@ Description: "TNM-Klassifikation: TNM V-Kategorie. Veneninvasion."
 * effective[x] only dateTime
 * effectiveDateTime MS
 * effectiveDateTime obeys tnm-datum
+* insert Label(effectiveDateTime, TNM-Datum, Datum der TNM-Klassifikation nach 8.1 oBDS 2021)
 * insert Translation(effectiveDateTime ^short, de-DE, TNM-Datum )
 * insert Translation(effectiveDateTime ^definition, de-DE, Datum der TNM-Klassifikation nach 8.1 oBDS 2021 )
 
@@ -30,8 +31,8 @@ Description: "TNM-Klassifikation: TNM V-Kategorie. Veneninvasion."
 * value[x] MS
 * value[x] only CodeableConcept
 * valueCodeableConcept from MII_VS_Onko_TNM_V_Kategorie_Werte (required)
-* valueCodeableConcept ^short = "TNM V-Kategorie"
-* valueCodeableConcept ^definition = "Veneninvasion."
+* valueCodeableConcept.coding ^short = "TNM V-Kategorie"
+* valueCodeableConcept.coding ^definition = "Veneninvasion."
 * valueCodeableConcept.coding.code 1.. MS
 * valueCodeableConcept.coding.system 1.. MS
 * insert Translation(valueCodeableConcept.coding ^short, de-DE, TNM V-Kategorie )

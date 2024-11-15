@@ -189,15 +189,7 @@
       {
         "id": "Observation.value[x].value",
         "path": "Observation.value[x].value",
-        "min": 1,
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "oBDS",
-            "map": "6.9",
-            "comment": "Anzahl der untersuchten Sentinel-Lymphknoten"
-          }
-        ],
+        "short": "Anzahl untersuchter Sentinel-Lymphknoten",
         "_short": {
           "extension": [
             {
@@ -215,6 +207,7 @@
             }
           ]
         },
+        "definition": "Anzahl untersuchter Sentinel-Lymphknoten nach 6.8 oBDS 2021",
         "_definition": {
           "extension": [
             {
@@ -231,7 +224,16 @@
               ]
             }
           ]
-        }
+        },
+        "min": 1,
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "6.9",
+            "comment": "Anzahl der untersuchten Sentinel-Lymphknoten"
+          }
+        ]
       },
       {
         "id": "Observation.value[x].unit",

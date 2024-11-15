@@ -14,10 +14,12 @@ Description: "Medikation der Systemische Therapie. Dieses Profil beschreibt die 
 
 
 * medication[x] 1..1 MS
-* medication[x] ^short = "Wirkstoff der systemischen Medikation"
-* medication[x] ^definition = "Wirkstoff der systemischen onkologischen Medikation. Nach Möglichkeit als ATC-kodiert anzugeben. Wirkstoffe sind einzeln zu kodieren. Kombinationstherapien können über MedicationStatement.partOf in übergeordneten MedicationStatements gruppiert werden - in diesem Fall ist bei jedem Wirkstoff unter `MedicationStatement.note.text` das Kürzel des (z.B. chemotherapeutischen) Protokolls zu hinterlegen."
-* insert Translation(medication[x] ^short, de-DE, Wirkstoff/ Substanz der systemischen Medikation)
-* insert Translation(medication[x] ^definition, de-DE, Wirkstoff / Substanz der systemischen onkologischen Medikation gemäß 16.4  oBDS 2021. )
+* medicationCodeableConcept 1..1 MS
+* medicationCodeableConcept.coding 1..* MS
+* medicationCodeableConcept.coding ^short = "Wirkstoff der systemischen Medikation"
+* medicationCodeableConcept.coding ^definition = "Wirkstoff der systemischen onkologischen Medikation. Nach Möglichkeit als ATC-kodiert anzugeben. Wirkstoffe sind einzeln zu kodieren. Kombinationstherapien können über MedicationStatement.partOf in übergeordneten MedicationStatements gruppiert werden - in diesem Fall ist bei jedem Wirkstoff unter `MedicationStatement.note.text` das Kürzel des (z.B. chemotherapeutischen) Protokolls zu hinterlegen."
+* insert Translation(medicationCodeableConcept.coding ^short, de-DE, Wirkstoff/ Substanz der systemischen Medikation)
+* insert Translation(medicationCodeableConcept.coding ^definition, de-DE, Wirkstoff / Substanz der systemischen onkologischen Medikation gemäß 16.4  oBDS 2021. )
 
 * partOf 1..* MS 
 * partOf ^slicing.discriminator[0].type = #profile

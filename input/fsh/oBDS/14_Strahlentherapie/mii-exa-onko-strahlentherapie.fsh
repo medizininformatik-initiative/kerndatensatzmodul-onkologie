@@ -4,7 +4,7 @@ Usage: #example
 Title: "Example radiation therapy"
 Description: "Example radiation therapy"
 * subject = Reference(Patient/example)
-* status = #final
+* status = #completed
 
 * extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#P // palliativ
 * extension[Intention].url = $mii-ex-onko-strahlentherapie-intention

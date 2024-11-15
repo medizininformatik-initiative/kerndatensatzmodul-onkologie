@@ -26,12 +26,13 @@ Description: "Histologie: Befund. Vollständiger Befundbericht des Pathologen."
 * code.coding ^slicing.discriminator.path = "$this"
 * code.coding ^slicing.rules = #open
 * code.coding contains pathology-report 1..1 MS
-* code.coding[pathology-report] = $LOINC#60568-3 
+* code.coding[pathology-report] = $LOINC#22034-3 
 * code.coding[pathology-report].system 1.. MS 
 * code.coding[pathology-report].code 1.. MS
 * subject 1.. MS
 * subject only Reference(Patient)
 * conclusion 1.. MS
+* insert Label (conclusion, Befund als Freitext, Befund als Freitext nach 6.11 oBDS 2021)
 * insert Translation(conclusion ^short, de-DE, Befund als Freitext)
 * insert Translation(conclusion.value ^definition, de-DE, Befund als Freitext nach 6.11 oBDS 2021 )
 

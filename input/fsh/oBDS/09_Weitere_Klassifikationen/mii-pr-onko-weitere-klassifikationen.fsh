@@ -20,6 +20,7 @@ Description: "Weitere Tumor Staging Klassifikation neben TMN (Hämatoonkologisch
 * effective[x] MS
 * effective[x] only dateTime
 * effectiveDateTime 0..1 MS
+* insert Label(effectiveDateTime, Datum, Datum der weiteren Klassifikation)
 * insert Translation(effectiveDateTime ^short, de-DE, Datum)
 * insert Translation(effectiveDateTime ^definition, de-DE, Datum der weiteren Klassifikation )
 
@@ -31,8 +32,10 @@ Description: "Weitere Tumor Staging Klassifikation neben TMN (Hämatoonkologisch
 * code.text ^definition = "Hier ist der String aus dem oBDS einzuleiten"
 * code.coding.code 0..1 
 * code.coding.code ^definition = "Hier ist eine entsprechende Kodierung anzugeben, mit dem die Klassifikation in einem internationalen Standard (z.B. SNOMED-CT, LOINC, etc. ) semantisch annotiert werden kann" 
-* insert Translation(code.text ^short, de-DE, Klassifikation Name Freitext )
-* insert Translation(code.text ^definition, de-DE, Name der Klassifikation wie in Krebsregistermeldung angegeben )
+* insert Label(code.text, Klassifikation Name Freitext, Datum der weiteren Klassifikation)
+* insert Translation(code.text ^short, de-DE, Name der Klassifikation wie in Krebsregistermeldung angegeben)
+* insert Translation(code.text ^definition, de-DE, Name der Klassifikation wie in Krebsregistermeldung angegeben)
+* insert Label(code.coding.code, Klassifikation Name Kodierung, Name der Klassifikation kodiert in internationalem Standard - falls vorhanden)
 * insert Translation(code.coding.code ^short, de-DE, Klassifikation Name Kodierung  )
 * insert Translation(code.coding.code ^definition, de-DE, Name der Klassifikation kodiert in internationalem Standard - falls vorhanden )
 

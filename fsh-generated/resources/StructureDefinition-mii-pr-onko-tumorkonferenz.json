@@ -58,12 +58,7 @@
       {
         "id": "CarePlan.category.coding",
         "path": "CarePlan.category.coding",
-        "min": 1,
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieplanung-typ"
-        },
+        "short": "Art der Tumorkonferenz / Therapieplanung",
         "_short": {
           "extension": [
             {
@@ -81,6 +76,7 @@
             }
           ]
         },
+        "definition": "Art der Tumorkonferenz / Therapieplanung gemäß 18.2 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -97,6 +93,12 @@
               ]
             }
           ]
+        },
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieplanung-typ"
         }
       },
       {
@@ -140,15 +142,7 @@
       {
         "id": "CarePlan.created",
         "path": "CarePlan.created",
-        "min": 1,
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "oBDS",
-            "map": "18.1",
-            "comment": "Tumorkonferenz Therapieplanung Datum"
-          }
-        ],
+        "short": "Datum der Tumorkonferenz / Therapieplanung",
         "_short": {
           "extension": [
             {
@@ -166,6 +160,7 @@
             }
           ]
         },
+        "definition": "Datum der Tumorkonferenz / Therapieplanung gemäß 18.1 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -182,7 +177,16 @@
               ]
             }
           ]
-        }
+        },
+        "min": 1,
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "18.1",
+            "comment": "Tumorkonferenz Therapieplanung Datum"
+          }
+        ]
       },
       {
         "id": "CarePlan.addresses",
@@ -230,7 +234,12 @@
         "binding": {
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieempfehlung-typ"
-        },
+        }
+      },
+      {
+        "id": "CarePlan.activity.detail.code.coding",
+        "path": "CarePlan.activity.detail.code.coding",
+        "short": "Typ der Therapieempfehlung",
         "_short": {
           "extension": [
             {
@@ -248,6 +257,7 @@
             }
           ]
         },
+        "definition": "Typ der Therapieempfehlung der Tumorkonferenz gemäß 19.1 oBDS 2021.",
         "_definition": {
           "extension": [
             {

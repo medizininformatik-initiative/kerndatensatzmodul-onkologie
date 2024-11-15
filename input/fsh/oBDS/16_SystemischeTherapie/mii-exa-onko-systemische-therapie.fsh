@@ -4,7 +4,7 @@ Usage: #example
 Title: "Example systemic therapy"
 Description: "Example systemic therapy"
 * subject = Reference(Patient/example)
-* status = #final
+* status = #completed
 * extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K // kurativ
 * extension[Intention].url = $mii-ex-onko-systemische-therapie-intention
 * extension[StellungZurOp].valueCodeableConcept = $mii-cs-onko-therapie-stellungzurop#A // adjuvant

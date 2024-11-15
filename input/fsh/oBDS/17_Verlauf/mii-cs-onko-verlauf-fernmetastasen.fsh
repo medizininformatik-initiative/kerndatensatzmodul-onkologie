@@ -10,7 +10,7 @@ Description: "oBDS-spezifisches Codesystem für die Beurteilung von Fernmetastas
 * insert PR_CS_VS_Version
 * ^caseSensitive = true
 * ^content = #complete
-* #K "kein Fernmetastasen nachweisbar"
+* #K "keine Fernmetastasen nachweisbar"
 * #R "neu aufgetretene Fernmetastase(n) bzw. Metastasenrezidiv"
 * #T "Fernmetastasen Residuen"
 * #P "Fernmetastasen Progress"

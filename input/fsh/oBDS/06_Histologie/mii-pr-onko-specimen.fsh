@@ -12,12 +12,13 @@ Description: "Histologie: Dieses Profil beschreibt eine Gewebeprobe in der Onkol
 * subject only Reference(Patient)
 * collection MS
 * collection.collectedDateTime 0..1 MS
-
+* insert Label (collection.collectedDateTime, Tumor Histologiedatum, Histologiedatum nach 6.1 oBDS 2021)
 * insert Translation(collection.collectedDateTime ^short, de-DE, Tumor Histologiedatum)
 * insert Translation(collection.collectedDateTime ^definition, de-DE, Histologiedatum nach 6.1 oBDS 2021 )
 
 * accessionIdentifier MS
 * accessionIdentifier.value 0..1 MS
+* insert Label (accessionIdentifier.value, Histologie-Einsendenummer, Histologie-Einsendenummer nach 6.2 oBDS 2021)
 * insert Translation(accessionIdentifier.value ^short, de-DE, Histologie-Einsendenummer)
 * insert Translation(accessionIdentifier.value ^definition, de-DE, Histologie-Einsendenummer nach 6.2 oBDS 2021)
 

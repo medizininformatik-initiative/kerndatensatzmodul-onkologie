@@ -56,24 +56,7 @@
       {
         "id": "Observation.code.coding.code",
         "path": "Observation.code.coding.code",
-        "definition": "Hier ist eine entsprechende Kodierung anzugeben, mit dem die Klassifikation in einem internationalen Standard (z.B. SNOMED-CT, LOINC, etc. ) semantisch annotiert werden kann",
-        "_definition": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
-              "extension": [
-                {
-                  "url": "lang",
-                  "valueCode": "de-DE"
-                },
-                {
-                  "url": "content",
-                  "valueString": "Name der Klassifikation kodiert in internationalem Standard - falls vorhanden"
-                }
-              ]
-            }
-          ]
-        },
+        "short": "Klassifikation Name Kodierung",
         "_short": {
           "extension": [
             {
@@ -90,12 +73,48 @@
               ]
             }
           ]
+        },
+        "definition": "Name der Klassifikation kodiert in internationalem Standard - falls vorhanden",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Name der Klassifikation kodiert in internationalem Standard - falls vorhanden"
+                }
+              ]
+            }
+          ]
         }
       },
       {
         "id": "Observation.code.text",
         "path": "Observation.code.text",
-        "definition": "Hier ist der String aus dem oBDS einzuleiten",
+        "short": "Klassifikation Name Freitext",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Name der Klassifikation wie in Krebsregistermeldung angegeben"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Datum der weiteren Klassifikation",
         "_definition": {
           "extension": [
             {
@@ -121,24 +140,7 @@
             "map": "09.2",
             "comment": "Hämatoonkologische und sonstige Klassifikationen Name"
           }
-        ],
-        "_short": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
-              "extension": [
-                {
-                  "url": "lang",
-                  "valueCode": "de-DE"
-                },
-                {
-                  "url": "content",
-                  "valueString": "Klassifikation Name Freitext"
-                }
-              ]
-            }
-          ]
-        }
+        ]
       },
       {
         "id": "Observation.subject",
@@ -175,19 +177,7 @@
       {
         "id": "Observation.effective[x]",
         "path": "Observation.effective[x]",
-        "type": [
-          {
-            "code": "dateTime"
-          }
-        ],
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "oBDS",
-            "map": "09.1",
-            "comment": "Hämatoonkologische und sonstige Klassifikationen Datum"
-          }
-        ],
+        "short": "Datum",
         "_short": {
           "extension": [
             {
@@ -205,6 +195,7 @@
             }
           ]
         },
+        "definition": "Datum der weiteren Klassifikation",
         "_definition": {
           "extension": [
             {
@@ -221,7 +212,20 @@
               ]
             }
           ]
-        }
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "09.1",
+            "comment": "Hämatoonkologische und sonstige Klassifikationen Datum"
+          }
+        ]
       },
       {
         "id": "Observation.value[x]",

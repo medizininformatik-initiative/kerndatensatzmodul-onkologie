@@ -22,7 +22,7 @@
   filter: (StructureDefinition or ValueSet or CodeSystem or ConceptMap or StructureMap or NamingSystem or SearchParameter or CapabilityStatement or OperationDefinition or ImplementationGuide).exists()
   # Excluding NamingSystem as they have no version
   status: "Checking if all resources have version filled"
-  predicate: version.exists() and (version in ('2024.0.0') or version in ('2024.0.0-ballot') or version in ('2025.0.0'))
+  predicate: version.exists() and (version in ('2024.0.0', '2024.0.0-ballot', '2025.0.0','2025.0.0-alpha1')
   error-message: "version not filled (correctly)"
   files:
     - /**/*.xml
@@ -66,7 +66,7 @@
 - name: naming-convention-url
   filter: (StructureDefinition or ValueSet or CodeSystem or ConceptMap or StructureMap or NamingSystem or SearchParameter or CapabilityStatement or OperationDefinition or ImplementationGuide).exists()
   status: "Checking if all resource urls follow the naming convention"
-  predicate: url.exists() implies url.matches('^https://www.medizininformatik-initiative.de/fhir/core/modul-onko/')
+  predicate: url.exists() implies url.matches('^https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/')
   error-message: "resource url naming convention mismatch"
   files:
     - /**/*.xml

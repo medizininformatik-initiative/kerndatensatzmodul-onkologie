@@ -27,7 +27,8 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
 
 * effective[x] MS
 * effectiveDateTime  0..1 MS
-* effectiveDateTime ^comment = "In der vorliegenden ersten Version des Moduls Onkologie ist das letzte (= späteste) Datum der verlinkten Observations anzugeben, entsprechend Punkt 17.1 des oBDS 2021 . Langfristig ist zu überlegen, hier über eine effectivePeriod eine Datumsrange abzubilden. "
+* effectiveDateTime ^comment = "In der vorliegenden ersten Version des Moduls Onkologie ist das letzte (= späteste) Datum der verlinkten Observations anzugeben, entsprechend Punkt 17.1 des oBDS 2021. Langfristig ist zu überlegen, hier über eine effectivePeriod eine Datumsrange abzubilden. "
+* insert Label(valueCodeableConcept.coding, Datum der Untersuchung im Verlauf, Datum der letzten Untersuchung in dieser Verlaufsbeurteilung gemäß 17.1 oBDS 2021. )
 * insert Translation(valueCodeableConcept.coding ^short, de-DE, Datum der Untersuchung im Verlauf )
 * insert Translation(valueCodeableConcept.coding ^definition, de-DE, Datum der letzten Untersuchung in dieser Verlaufsbeurteilung gemäß 17.1 oBDS 2021. )
 
@@ -38,6 +39,7 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
 * valueCodeableConcept from MII_VS_Onko_Verlauf_Gesamtbeurteilung (extensible)
 * valueCodeableConcept.coding.system MS
 * valueCodeableConcept.coding.code MS
+* insert Label(valueCodeableConcept.coding, Gesamtbeurteilung im Verlauf, Gesamtbeurteilung im Verlauf gemäß 17.2 oBDS 2021.)
 * insert Translation(valueCodeableConcept.coding ^short, de-DE, Gesamtbeurteilung im Verlauf )
 * insert Translation(valueCodeableConcept.coding ^definition, de-DE, Gesamtbeurteilung im Verlauf gemäß 17.2 oBDS 2021. )
 
@@ -57,6 +59,7 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
 * component[Tumor_Verlauf].valueCodeableConcept from mii-vs-onko-verlauf-primaertumor (required)
 * component[Tumor_Verlauf].valueCodeableConcept.coding.system MS
 * component[Tumor_Verlauf].valueCodeableConcept.coding.code MS
+* insert Label(component[Tumor_Verlauf].valueCodeableConcept.coding, Gesamtbeurteilung Primärtumor im Verlauf, Gesamtbeurteilung des Primärtumors im Verlauf gemäß 17.3 oBDS 2021.)
 * insert Translation(component[Tumor_Verlauf].valueCodeableConcept.coding ^short, de-DE, Gesamtbeurteilung Primärtumor im Verlauf )
 * insert Translation(component[Tumor_Verlauf].valueCodeableConcept.coding ^definition, de-DE, Gesamtbeurteilung des Primärtumors im Verlauf gemäß 17.3 oBDS 2021. )
 
@@ -67,6 +70,7 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
 * component[Lymphknoten_Verlauf].valueCodeableConcept from mii-vs-onko-verlauf-lymphknoten (required)
 * component[Lymphknoten_Verlauf].valueCodeableConcept.coding.system MS
 * component[Lymphknoten_Verlauf].valueCodeableConcept.coding.code MS
+* insert Label(component[Lymphknoten_Verlauf].valueCodeableConcept.coding, Gesamtbeurteilung Lymphknoten im Verlauf, Gesamtbeurteilung der Lymphknoteninfiltration im Verlauf gemäß 17.4 oBDS 2021.)
 * insert Translation(component[Lymphknoten_Verlauf].valueCodeableConcept.coding ^short, de-DE, Gesamtbeurteilung Lymphknoten im Verlauf )
 * insert Translation(component[Lymphknoten_Verlauf].valueCodeableConcept.coding ^definition, de-DE, Gesamtbeurteilung der Lymphknoteninfiltration im Verlauf gemäß 17.4 oBDS 2021. )
 
@@ -76,6 +80,7 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
 * component[Fernmetastasen_Verlauf].valueCodeableConcept from mii-vs-onko-verlauf-fernmetastasen (required)
 * component[Fernmetastasen_Verlauf].valueCodeableConcept.coding.system MS
 * component[Fernmetastasen_Verlauf].valueCodeableConcept.coding.code MS
+* insert Label(component[Fernmetastasen_Verlauf].valueCodeableConcept.coding, Gesamtbeurteilung Fernmetastasen im Verlauf, Gesamtbeurteilung von Fernmetastasen im Verlauf gemäß 17.5 oBDS 2021.)
 * insert Translation(component[Fernmetastasen_Verlauf].valueCodeableConcept.coding ^short, de-DE, Gesamtbeurteilung Fernmetastasen im Verlauf )
 * insert Translation(component[Fernmetastasen_Verlauf].valueCodeableConcept.coding ^definition, de-DE, Gesamtbeurteilung von Fernmetastasen im Verlauf gemäß 17.5 oBDS 2021. )
 
@@ -89,7 +94,7 @@ Mapping: FHIR-oBDS-Verlauf
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
 Source: MII_PR_Onko_Verlauf
-* code.coding.code -> "17.2" "Gesamtbeurteilung des Tumorstatus"
+* valueCodeableConcept.coding.code -> "17.2" "Gesamtbeurteilung des Tumorstatus"
 * effectiveDateTime -> "17.1" "Datum, an dem die letzte Untersuchung durchgeführt wurde, die zur Einschätzung des Tumorstatus geführt hat."
 * component[Tumor_Verlauf].code.coding.code -> "17.3" "Tumorstatus Primärtumor"
 * component[Lymphknoten_Verlauf].code.coding.code -> "17.4" "Tumorstatus Lymphknoten"

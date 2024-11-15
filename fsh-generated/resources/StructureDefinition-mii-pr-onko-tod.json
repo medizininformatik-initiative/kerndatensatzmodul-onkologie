@@ -85,19 +85,7 @@
       {
         "id": "Observation.effective[x]",
         "path": "Observation.effective[x]",
-        "type": [
-          {
-            "code": "dateTime"
-          }
-        ],
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "oBDS",
-            "map": "20.1",
-            "comment": "Sterbedatum"
-          }
-        ],
+        "short": "Sterbedatum",
         "_short": {
           "extension": [
             {
@@ -115,6 +103,7 @@
             }
           ]
         },
+        "definition": "Sterbedatum gemäß 20.1 oBDS 2021",
         "_definition": {
           "extension": [
             {
@@ -131,7 +120,20 @@
               ]
             }
           ]
-        }
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "20.1",
+            "comment": "Sterbedatum"
+          }
+        ]
       },
       {
         "id": "Observation.value[x]",
@@ -150,6 +152,7 @@
       {
         "id": "Observation.value[x].coding",
         "path": "Observation.value[x].coding",
+        "short": "Todesursache ICD-10",
         "_short": {
           "extension": [
             {
@@ -167,6 +170,7 @@
             }
           ]
         },
+        "definition": "Todesursache ICD-10 gemäß 20.3 oBDS 2021",
         "_definition": {
           "extension": [
             {
@@ -226,10 +230,7 @@
       {
         "id": "Observation.interpretation.coding",
         "path": "Observation.interpretation.coding",
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tod"
-        },
+        "short": "Sterbedatum",
         "_short": {
           "extension": [
             {
@@ -247,6 +248,7 @@
             }
           ]
         },
+        "definition": "Sterbedatum gemäß 20.1 oBDS 2021",
         "_definition": {
           "extension": [
             {
@@ -263,12 +265,16 @@
               ]
             }
           ]
+        },
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tod"
         }
       },
       {
         "id": "Observation.interpretation.coding.system",
         "path": "Observation.interpretation.coding.system",
-        "patternUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-ende-tod",
+        "patternUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tod",
         "mustSupport": true
       },
       {

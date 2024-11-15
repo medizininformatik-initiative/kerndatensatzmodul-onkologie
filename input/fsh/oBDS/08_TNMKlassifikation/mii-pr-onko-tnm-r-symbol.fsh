@@ -20,15 +20,16 @@ Description: "TNM-Klassifikation: TNM r-Symbol. Gibt an, ob die Klassifikation e
 * effective[x] only dateTime
 * effectiveDateTime MS
 * effectiveDateTime obeys tnm-datum
+* insert Label(effectiveDateTime, TNM-Datum, Datum der TNM-Klassifikation nach 8.1 oBDS 2021)
 * insert Translation(effectiveDateTime ^short, de-DE, TNM-Datum )
 * insert Translation(effectiveDateTime ^definition, de-DE, Datum der TNM-Klassifikation nach 8.1 oBDS 2021 )
 
 * value[x] MS
 * value[x] only CodeableConcept
 * valueCodeableConcept = $SCT#421188008
-* valueCodeableConcept ^short = "r-Symbol"
-* valueCodeableConcept ^definition = "Gibt an, ob die Klassifikation ein Rezidiv beurteilt."
-* valueCodeableConcept ^comment = "r = Klassifikation erfolgte zur Beurteilung eines Rezidivs; (leer) = „native“ Klassifikation vor Eintreten eines Rezidivs"
+* valueCodeableConcept.coding ^short = "r-Symbol"
+* valueCodeableConcept.coding ^definition = "Gibt an, ob die Klassifikation ein Rezidiv beurteilt."
+* valueCodeableConcept.coding ^comment = "r = Klassifikation erfolgte zur Beurteilung eines Rezidivs; (leer) = „native“ Klassifikation vor Eintreten eines Rezidivs"
 * valueCodeableConcept.coding.code 1.. MS
 * valueCodeableConcept.coding.system 1.. MS
 * insert Translation(valueCodeableConcept.coding ^short, de-DE, TNM r-Symbol )

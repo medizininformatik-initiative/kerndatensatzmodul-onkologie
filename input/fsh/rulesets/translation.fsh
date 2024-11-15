@@ -4,3 +4,7 @@ RuleSet: Translation(path, language, translation)
 * {path}.extension[=].extension[0].valueCode = #{language}
 * {path}.extension[=].extension[1].url = "content"
 * {path}.extension[=].extension[1].valueString = "{translation}"
+
+RuleSet: Label (path, short, definition)
+* {path} ^short = "{short}"
+* {path} ^definition = "{definition}"

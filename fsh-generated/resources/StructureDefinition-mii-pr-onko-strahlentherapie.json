@@ -52,17 +52,7 @@
         "id": "Procedure.extension:Intention",
         "path": "Procedure.extension",
         "sliceName": "Intention",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention"
-            ]
-          }
-        ],
-        "mustSupport": true,
+        "short": "Intention der Strahlentherapie",
         "_short": {
           "extension": [
             {
@@ -80,6 +70,7 @@
             }
           ]
         },
+        "definition": "Intention der Strahlentherapie gemäß 14.1 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -96,7 +87,18 @@
               ]
             }
           ]
-        }
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention"
+            ]
+          }
+        ],
+        "mustSupport": true
       },
       {
         "id": "Procedure.extension:Intention.value[x].coding.code",
@@ -113,17 +115,7 @@
         "id": "Procedure.extension:StellungZurOp",
         "path": "Procedure.extension",
         "sliceName": "StellungZurOp",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop"
-            ]
-          }
-        ],
-        "mustSupport": true,
+        "short": "Stellung der Strahlentherapie zu einer Operation",
         "_short": {
           "extension": [
             {
@@ -141,6 +133,7 @@
             }
           ]
         },
+        "definition": "Stellung der Strahlentherapie zu einer Operation gemäß 14.2 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -157,7 +150,18 @@
               ]
             }
           ]
-        }
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop"
+            ]
+          }
+        ],
+        "mustSupport": true
       },
       {
         "id": "Procedure.extension:StellungZurOp.value[x].coding.code",
@@ -194,6 +198,7 @@
       {
         "id": "Procedure.extension:Bestrahlung.extension:Applikationsart.value[x].coding",
         "path": "Procedure.extension.extension.value[x].coding",
+        "short": "Applikationsart",
         "_short": {
           "extension": [
             {
@@ -211,6 +216,7 @@
             }
           ]
         },
+        "definition": "Applikationsart der Bestrahlung gemäß 14.7 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -248,6 +254,7 @@
       {
         "id": "Procedure.extension:Bestrahlung.extension:Strahlenart.value[x].coding",
         "path": "Procedure.extension.extension.value[x].coding",
+        "short": "Strahlenart",
         "_short": {
           "extension": [
             {
@@ -265,6 +272,7 @@
             }
           ]
         },
+        "definition": "Strahlenart der Bestrahlung gemäß 14.8 oBDS 2021. Hier werden sowohl Bestrahlungen als auch Radioisotope angegeben.",
         "_definition": {
           "extension": [
             {
@@ -302,6 +310,7 @@
       {
         "id": "Procedure.extension:Bestrahlung.extension:Zielgebiet.value[x].coding",
         "path": "Procedure.extension.extension.value[x].coding",
+        "short": "Zielgebiet",
         "_short": {
           "extension": [
             {
@@ -319,6 +328,7 @@
             }
           ]
         },
+        "definition": "Zielgebiet der Strahlentherapie gemäß 14.3 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -356,6 +366,7 @@
       {
         "id": "Procedure.extension:Bestrahlung.extension:Zielgebiet_Lateralitaet.value[x].coding",
         "path": "Procedure.extension.extension.value[x].coding",
+        "short": "Zielgebiet Lateralität",
         "_short": {
           "extension": [
             {
@@ -373,6 +384,7 @@
             }
           ]
         },
+        "definition": "Lateralität des Zielgebiets der Strahlentherapie gemäß 14.4 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -410,13 +422,7 @@
       {
         "id": "Procedure.extension:Bestrahlung.extension:Gesamtdosis.value[x].value",
         "path": "Procedure.extension.extension.value[x].value",
-        "mapping": [
-          {
-            "identity": "oBDS",
-            "map": "14.9",
-            "comment": "Strahlentherapie Gesamtdosis"
-          }
-        ],
+        "short": "Gesamtdosis",
         "_short": {
           "extension": [
             {
@@ -434,6 +440,7 @@
             }
           ]
         },
+        "definition": "Gesamtdosis gemäß 14.9 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -445,12 +452,19 @@
                 },
                 {
                   "url": "content",
-                  "valueString": "Gesamtdosis gemäß 14.9 oBDS 2021. Hier werden sowohl Bestrahlungen als auch Radioisotope angegeben."
+                  "valueString": "Gesamtdosis gemäß 14.9 oBDS 2021."
                 }
               ]
             }
           ]
-        }
+        },
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "14.9",
+            "comment": "Strahlentherapie Gesamtdosis"
+          }
+        ]
       },
       {
         "id": "Procedure.extension:Bestrahlung.extension:Gesamtdosis.value[x].unit",
@@ -505,13 +519,7 @@
       {
         "id": "Procedure.extension:Bestrahlung.extension:Einzeldosis.value[x].value",
         "path": "Procedure.extension.extension.value[x].value",
-        "mapping": [
-          {
-            "identity": "oBDS",
-            "map": "14.10",
-            "comment": "Strahlentherapie Einzeldosis pro Tag"
-          }
-        ],
+        "short": "Einzeldosis",
         "_short": {
           "extension": [
             {
@@ -529,6 +537,7 @@
             }
           ]
         },
+        "definition": "Einzeldosis der Strahlentherapie gemäß 14.10 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -545,7 +554,14 @@
               ]
             }
           ]
-        }
+        },
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "14.10",
+            "comment": "Strahlentherapie Einzeldosis pro Tag"
+          }
+        ]
       },
       {
         "id": "Procedure.extension:Bestrahlung.extension:Einzeldosis.value[x].unit",
@@ -600,6 +616,7 @@
       {
         "id": "Procedure.extension:Bestrahlung.extension:Boost.value[x].coding",
         "path": "Procedure.extension.extension.value[x].coding",
+        "short": "Boost",
         "_short": {
           "extension": [
             {
@@ -617,6 +634,7 @@
             }
           ]
         },
+        "definition": "Verwendung von Boosts als Teil der Bestrahlung gemäß 14.12 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -701,15 +719,39 @@
       {
         "id": "Procedure.performed[x].start",
         "path": "Procedure.performed[x].start",
-        "min": 1,
-        "mustSupport": true,
         "mapping": [
           {
             "identity": "oBDS",
             "map": "14.5",
             "comment": "Strahlentherapie Beginn"
           }
-        ],
+        ]
+      },
+      {
+        "id": "Procedure.performed[x].end",
+        "path": "Procedure.performed[x].end",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "14.6",
+            "comment": "Strahlentherapie Ende"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.performed[x]:performedPeriod",
+        "path": "Procedure.performed[x]",
+        "sliceName": "performedPeriod",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.performed[x]:performedPeriod.start",
+        "path": "Procedure.performed[x].start",
+        "short": "Grund für Ende der Strahlentherapie",
         "_short": {
           "extension": [
             {
@@ -727,6 +769,7 @@
             }
           ]
         },
+        "definition": "Grund für Ende der Strahlentherapie - planmäßig oder abgebrochen -  gemäß 14.12 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -743,19 +786,14 @@
               ]
             }
           ]
-        }
+        },
+        "min": 1,
+        "mustSupport": true
       },
       {
-        "id": "Procedure.performed[x].end",
+        "id": "Procedure.performed[x]:performedPeriod.end",
         "path": "Procedure.performed[x].end",
         "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "oBDS",
-            "map": "14.6",
-            "comment": "Strahlentherapie Ende"
-          }
-        ],
         "_short": {
           "extension": [
             {

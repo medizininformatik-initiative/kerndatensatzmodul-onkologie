@@ -885,7 +885,7 @@
             },
             {
               "name": "hasMember",
-              "definition": "http://hl7.org/fhir/SearchParameter/Observation-hasMember",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-has-member",
               "type": "reference",
               "extension": [
                 {
@@ -919,7 +919,7 @@
             {
               "name": "part-of",
               "definition": "http://hl7.org/fhir/SearchParameter/Observation-part-of",
-              "type": "token",
+              "type": "reference",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
@@ -1338,7 +1338,7 @@
             {
               "name": "part-of",
               "definition": "http://hl7.org/fhir/SearchParameter/Procedure-part-of",
-              "type": "token",
+              "type": "reference",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
@@ -1371,7 +1371,7 @@
             {
               "name": "reason-reference",
               "definition": "http://hl7.org/fhir/SearchParameter/Procedure-reason-reference",
-              "type": "date",
+              "type": "reference",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
@@ -1426,7 +1426,7 @@
             {
               "name": "category",
               "definition": "http://hl7.org/fhir/SearchParameter/Procedure-category",
-              "type": "reference",
+              "type": "token",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
@@ -1675,8 +1675,8 @@
               ]
             },
             {
-              "name": "severity",
-              "definition": "http://hl7.org/fhir/SearchParameter/severity",
+              "name": "seriousness",
+              "definition": "http://hl7.org/fhir/SearchParameter/seriousness",
               "type": "token",
               "extension": [
                 {
@@ -1805,9 +1805,9 @@
               ]
             },
             {
-              "name": "medication",
-              "definition": "http://hl7.org/fhir/SearchParameter/medications-medication",
-              "type": "code",
+              "name": "code",
+              "definition": "http://hl7.org/fhir/SearchParameter/MedicationStatement-code",
+              "type": "token",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
@@ -2035,7 +2035,7 @@
             },
             {
               "name": "activity-code",
-              "definition": "http://hl7.org/fhir/SearchParameter/activity-code",
+              "definition": "http://hl7.org/fhir/SearchParameter/CarePlan-activity-code",
               "type": "token",
               "extension": [
                 {

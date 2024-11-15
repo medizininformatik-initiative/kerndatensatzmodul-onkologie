@@ -1,0 +1,7 @@
+Diagnose 
+[15, 8] Condition.extension[1].value.ofType(CodeableConcept).coding[0].display: Error - Wrong Display Name 'Invasives duktales Karzinom o.n.A. [C50.-]' for http://terminology.hl7.org/CodeSystem/icd-o-3#8500/3. Valid display is 'Infiltrating duct carcinoma, NOS' (for the language(s) 'en')
+[15, 8] Condition.extension[1].value.ofType(CodeableConcept): Error - Keiner der bereitgestellten Codes ist im ValueSet 'MII VS Onkologie Histology Morphology Behavior ICDO3' (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-histology-morphology-behavior-icdo3|2025.0.0), und ein Code aus diesem ValueSet ist erforderlich) (Codes = http://terminology.hl7.org/CodeSystem/icd-o-3#8500/3)
+
+
+Observation.interpretation (betrifft Variante, Studie, Tod)
+[32, 6] Observation.interpretation[0]: Warning - Keiner der angegebenen Codes ist im Valueset 'Observation Interpretation Codes' (http://hl7.org/fhir/ValueSet/observation-interpretation|4.0.1), und ein Code sollte aus diesem Valueset stammen, es sei denn, er enth�lt keinen geeigneten Code) (Codes = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tod#N)

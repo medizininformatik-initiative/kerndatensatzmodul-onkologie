@@ -17,9 +17,9 @@ Description: "Dieses Profil beschreibt Studienteilnahmen in der Onkologie"
 
 * code MS
 * code 1..1 
-* code ^definition = "SCTID: 70709491003 | Enrollment in clinical trial (procedure)"
+* code ^definition = "SCTID: 709491003 | Enrollment in clinical trial (procedure)"
 * code ^short = "Studienteilnahme laut oBDS"
-* code.coding = $SCT#70709491003 
+* code.coding = $SCT#709491003 
 
 // 24.1 Studienteilnahme Status
 * value[x] MS
@@ -29,6 +29,7 @@ Description: "Dieses Profil beschreibt Studienteilnahmen in der Onkologie"
 * valueCodeableConcept from mii-vs-onko-studienteilnahme (required)
 * valueCodeableConcept.coding.system = $mii-cs-onko-studienteilnahme
 * valueCodeableConcept.coding.code 1.. MS
+* insert Label(valueCodeableConcept.coding, Studienteilnahme, Studienteilnahme gemäß 24.1 oBDS 2021)
 * insert Translation(valueCodeableConcept.coding ^short, de-DE, Studienteilnahme )
 * insert Translation(valueCodeableConcept.coding ^definition, de-DE, Studienteilnahme gemäß 24.1 oBDS 2021   )
 
@@ -36,8 +37,9 @@ Description: "Dieses Profil beschreibt Studienteilnahmen in der Onkologie"
 * effective[x] MS
 * effective[x] only dateTime
 * effectiveDateTime 0..1 MS
+* insert Label(effectiveDateTime, Studienteilnahme Datum, Studienteilnahme Datum gemäß 24.2 oBDS 2021)
 * insert Translation(effectiveDateTime ^short, de-DE, Studienteilnahme Datum)
-* insert Translation(effectiveDateTime ^definition, de-DE, Studienteilnahme Datum gemäß 24.2 oBDS 2021   )
+* insert Translation(effectiveDateTime ^definition, de-DE, Studienteilnahme Datum gemäß 24.2 oBDS 2021)
 
 Mapping: FHIR-oBDS-Studienteilnahme
 Id: oBDS

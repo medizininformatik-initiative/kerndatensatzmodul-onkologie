@@ -200,14 +200,13 @@
             }
           ],
           "rules": "open"
-        },
-        "min": 1
+        }
       },
       {
         "id": "Condition.verificationStatus.coding:condition-ver-status",
         "path": "Condition.verificationStatus.coding",
         "sliceName": "condition-ver-status",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "patternCoding": {
           "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
@@ -222,16 +221,7 @@
         "id": "Condition.verificationStatus.coding:primaertumorDiagnosesicherung",
         "path": "Condition.verificationStatus.coding",
         "sliceName": "primaertumorDiagnosesicherung",
-        "min": 0,
-        "max": "1",
-        "patternCoding": {
-          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung"
-        },
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-primaertumor-diagnosesicherung"
-        },
+        "short": "Diagnosesicherung gemäß oBDS",
         "_short": {
           "extension": [
             {
@@ -249,6 +239,7 @@
             }
           ]
         },
+        "definition": "Art der Diagnosesicherung nach 5.7 oBDS 2021",
         "_definition": {
           "extension": [
             {
@@ -265,6 +256,16 @@
               ]
             }
           ]
+        },
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung"
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-primaertumor-diagnosesicherung"
         }
       },
       {
@@ -328,16 +329,7 @@
         "id": "Condition.bodySite.coding:primaertumorSeitenlokalisation",
         "path": "Condition.bodySite.coding",
         "sliceName": "primaertumorSeitenlokalisation",
-        "min": 0,
-        "max": "1",
-        "patternCoding": {
-          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation"
-        },
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-seitenlokalisation"
-        },
+        "short": "Seitenlokalisation des Primärtumors gemäß oBDS",
         "_short": {
           "extension": [
             {
@@ -355,6 +347,7 @@
             }
           ]
         },
+        "definition": "Seitenlokalisation des Primärtumors nach 5.8 oBDS 2021",
         "_definition": {
           "extension": [
             {
@@ -371,6 +364,16 @@
               ]
             }
           ]
+        },
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation"
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-seitenlokalisation"
         }
       },
       {
@@ -396,9 +399,7 @@
         "id": "Condition.bodySite.coding:icd-o-3",
         "path": "Condition.bodySite.coding",
         "sliceName": "icd-o-3",
-        "min": 0,
-        "max": "1",
-        "mustSupport": true,
+        "short": "ICD-O-Topographie",
         "_short": {
           "extension": [
             {
@@ -416,6 +417,7 @@
             }
           ]
         },
+        "definition": "Topographie des Primärtumors nach ICD-O-3 nach 5.4 oBDS 2021",
         "_definition": {
           "extension": [
             {
@@ -427,12 +429,24 @@
                 },
                 {
                   "url": "content",
-                  "valueString": "LiTopographie des Primärtumors nach ICD-O-3 nach 5.4 oBDS 2021"
+                  "valueString": "Topographie des Primärtumors nach ICD-O-3 nach 5.4 oBDS 2021"
                 }
               ]
             }
           ]
-        }
+        },
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://terminology.hl7.org/CodeSystem/icd-o-3"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.bodySite.coding:icd-o-3.system",
+        "path": "Condition.bodySite.coding.system",
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Condition.bodySite.coding:icd-o-3.version",
@@ -448,6 +462,8 @@
       {
         "id": "Condition.bodySite.coding:icd-o-3.code",
         "path": "Condition.bodySite.coding.code",
+        "min": 1,
+        "mustSupport": true,
         "mapping": [
           {
             "identity": "oBDS",
@@ -477,15 +493,7 @@
       {
         "id": "Condition.evidence.detail",
         "path": "Condition.evidence.detail",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-liste-evidenz-erstdiagnose"
-            ]
-          }
-        ],
-        "mustSupport": true,
+        "short": "Evidenz für Erstdiagnose",
         "_short": {
           "extension": [
             {
@@ -503,6 +511,7 @@
             }
           ]
         },
+        "definition": "Liste aller für die Erstdiagnose ausschlaggebenden Beobachtungen",
         "_definition": {
           "extension": [
             {
@@ -519,7 +528,16 @@
               ]
             }
           ]
-        }
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-liste-evidenz-erstdiagnose"
+            ]
+          }
+        ],
+        "mustSupport": true
       }
     ]
   }
