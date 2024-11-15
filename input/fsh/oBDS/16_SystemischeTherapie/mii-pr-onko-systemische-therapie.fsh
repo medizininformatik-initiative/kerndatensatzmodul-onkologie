@@ -13,15 +13,17 @@ Description: "Systemische Therapie. Dieses Profil beschreibt eine Systemische Th
 // Intention der systemischen Therapie
 * extension contains mii-ex-onko-systemische-therapie-intention named Intention 1..1 
 * extension[Intention] MS
-* insert Translation(extension[Intention] ^short, de-DE, Intention der systemischen oder abwartenden Therapie )
-* insert Translation(extension[Intention] ^definition, de-DE, Intention der systemischen oder abwartenden Therapie gemäß 16.1 oBDS 2021. )
+* insert Label(extension[Intention].valueCodeableConcept.coding, Intention der systemischen oder abwartenden Therapie, Intention der systemischen oder abwartenden Therapie gemäß 16.1 oBDS 2021.)
+* insert Translation(extension[Intention].valueCodeableConcept.coding ^short, de-DE, Intention der systemischen oder abwartenden Therapie )
+* insert Translation(extension[Intention].valueCodeableConcept.coding ^definition, de-DE, Intention der systemischen oder abwartenden Therapie gemäß 16.1 oBDS 2021. )
 
 
 // Systemische Therapie Stellung zu operativer Therapie
 * extension contains mii-ex-onko-systemische-therapie-stellungzurop named StellungZurOp 0.. 
 * extension[StellungZurOp] MS
-* insert Translation(extension[StellungZurOp] ^short, de-DE, Stellung der systemischen Therapie zu einer Operation )
-* insert Translation(extension[StellungZurOp] ^definition, de-DE, Stellung der systemischen Therapie zu einer Operation gemäß 16.2 oBDS 2021. )
+* insert Label(extension[StellungZurOp].valueCodeableConcept.coding, Stellung der systemischen Therapie zu einer Operation, Stellung der systemischen Therapie zu einer Operation gemäß 16.2 oBDS 2021.)
+* insert Translation(extension[StellungZurOp].valueCodeableConcept.coding ^short, de-DE, Stellung der systemischen Therapie zu einer Operation )
+* insert Translation(extension[StellungZurOp].valueCodeableConcept.coding ^definition, de-DE, Stellung der systemischen Therapie zu einer Operation gemäß 16.2 oBDS 2021. )
 
 
 * code 1..1  
@@ -33,7 +35,8 @@ Description: "Systemische Therapie. Dieses Profil beschreibt eine Systemische Th
 * code.coding[systemische_therapie_art] from mii-vs-onko-systemische-therapie-art
 * code.coding[systemische_therapie_art].code 1..1
 * code.coding[systemische_therapie_art].system 1..1
-* insert Translation(code.coding[systemische_therapie_art] ^short, de-DE,  )
+* insert Label(code.coding[systemische_therapie_art], Art der systemischen oder abwartenden Therapie, Art der systemischen oder abwartenden Therapie gemäß 16.3 oBDS 2021.)
+* insert Translation(code.coding[systemische_therapie_art] ^short, de-DE, Art der systemischen oder abwartenden Therapie )
 * insert Translation(code.coding[systemische_therapie_art] ^definition, de-DE, Art der systemischen oder abwartenden Therapie gemäß 16.3 oBDS 2021. )
 // Die Translation-Labels für OPS und SNOMED werden im MII-Basismodul Prozedur verwaltet
 
@@ -42,8 +45,10 @@ Description: "Systemische Therapie. Dieses Profil beschreibt eine Systemische Th
 * performed[x] only Period // wird über Period.start und Period.stop des MII Prozedurmoduls erfasst
 * performedPeriod.start 1..1 MS
 * performedPeriod.end 0..1 MS
+* insert Label(performedPeriod.start, Startdatum der systemischen oder abwartenden Therapie, Startdatum der systemischen oder abwartenden Therapie gemäß 16.6 oBDS 2021.)
 * insert Translation(performedPeriod.start ^short, de-DE, Startdatum der systemischen oder abwartenden Therapie )
 * insert Translation(performedPeriod.start ^definition, de-DE, Startdatum der systemischen oder abwartenden Therapie gemäß 16.6 oBDS 2021. )
+* insert Label(performedPeriod.end, Enddatum der systemischen oder abwartenden Therapie, Enddatum der systemischen oder abwartenden Therapie gemäß 16.8 oBDS 2021.)
 * insert Translation(performedPeriod.end ^short, de-DE, Enddatum der systemischen oder abwartenden Therapie )
 * insert Translation(performedPeriod.end ^definition, de-DE, Enddatum der systemischen oder abwartenden Therapie - wenn vorhanden -  gemäß 16.8 oBDS 2021. )
 
@@ -67,6 +72,7 @@ Description: "Systemische Therapie. Dieses Profil beschreibt eine Systemische Th
 * outcome from MII_VS_Onko_Systemische_Therapie_Ende_Grund (required)
 * outcome.coding.code MS
 * outcome.coding.system MS
+* insert Label(outcome.coding, Grund für Ende der systemischen oder abwartenden Therapie, Grund für Ende der systemischen oder abwartenden Therapie gemäß 16.7 oBDS 2021.)
 * insert Translation(outcome.coding ^short, de-DE, Grund für Ende der systemischen oder abwartenden Therapie )
 * insert Translation(outcome.coding ^definition, de-DE, Grund für Ende der systemischen oder abwartenden Therapie gemäß 16.7 oBDS 2021. )
 

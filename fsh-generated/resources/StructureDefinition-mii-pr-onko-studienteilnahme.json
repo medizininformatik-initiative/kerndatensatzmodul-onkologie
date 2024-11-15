@@ -98,19 +98,7 @@
       {
         "id": "Observation.effective[x]",
         "path": "Observation.effective[x]",
-        "type": [
-          {
-            "code": "dateTime"
-          }
-        ],
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "oBDS",
-            "map": "24.2",
-            "comment": "Studienteilnahme Datum"
-          }
-        ],
+        "short": "Studienteilnahme Datum",
         "_short": {
           "extension": [
             {
@@ -128,6 +116,7 @@
             }
           ]
         },
+        "definition": "Studienteilnahme Datum gemäß 24.2 oBDS 2021",
         "_definition": {
           "extension": [
             {
@@ -144,7 +133,20 @@
               ]
             }
           ]
-        }
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "24.2",
+            "comment": "Studienteilnahme Datum"
+          }
+        ]
       },
       {
         "id": "Observation.value[x]",
@@ -164,6 +166,7 @@
       {
         "id": "Observation.value[x].coding",
         "path": "Observation.value[x].coding",
+        "short": "Studienteilnahme",
         "_short": {
           "extension": [
             {
@@ -181,6 +184,7 @@
             }
           ]
         },
+        "definition": "Studienteilnahme gemäß 24.1 oBDS 2021",
         "_definition": {
           "extension": [
             {

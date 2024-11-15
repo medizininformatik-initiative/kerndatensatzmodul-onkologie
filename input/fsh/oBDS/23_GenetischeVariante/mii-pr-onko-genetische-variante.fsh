@@ -14,8 +14,9 @@ Description: "Genetische Variante wie im oBDS beschrieben"
 
 * note MS 
 * note.text MS 
+* insert Label(note.text, Genetische Variante Name, Genetische Variante Name gemäß 23.1 oBDS 2021)
 * insert Translation(note.text ^short, de-DE, Genetische Variante Name)
-* insert Translation(note.text ^definition, de-DE, Genetische Variante Name gemäß 23.1 oBDS 2021   )
+* insert Translation(note.text ^definition, de-DE, Genetische Variante Name gemäß 23.1 oBDS 2021)
 
 * interpretation MS
 * interpretation ^slicing.discriminator.type = #type
@@ -26,8 +27,9 @@ Description: "Genetische Variante wie im oBDS beschrieben"
 * interpretation[oBDS] from mii-vs-onko-genetische-variante-auspraegung (required)
 * interpretation[oBDS].coding.system MS
 * interpretation[oBDS].coding.code MS
-* insert Translation(interpretation[oBDS] ^short, de-DE, Genetische Variante Ausprägung)
-* insert Translation(interpretation[oBDS] ^definition, de-DE, Genetische Variante Ausprägung gemäß 23.2 oBDS 2021   )
+* insert Label(interpretation[oBDS].coding, Genetische Variante Ausprägung, Genetische Variante Ausprägung gemäß 23.1 oBDS 2021)
+* insert Translation(interpretation[oBDS].coding ^short, de-DE, Genetische Variante Ausprägung)
+* insert Translation(interpretation[oBDS].coding ^definition, de-DE, Genetische Variante Ausprägung gemäß 23.2 oBDS 2021)
 
 * value[x] ^slicing.discriminator.type = #type
 * value[x] ^slicing.discriminator.path = "$this"

@@ -35,8 +35,9 @@ Description: "Dieses Profil beschreibt die Nebenwirkung von Strahlentherapie und
 * seriousness.coding.system 1..1 MS
 * seriousness.coding.code 1..1 MS
 * seriousness.text MS
+* insert Label(seriousness.coding, Schweregrad der Nebenwirkung nach CTCAE , Schweregrad der Nebenwirkung nach CTCAE gemäß 15.1 oBDS 2021.)
 * insert Translation(seriousness.coding ^short, de-DE, Schweregrad der Nebenwirkung nach CTCAE )
-* insert Translation(outcome.coding ^definition, de-DE, Schweregrad der Nebenwirkung nach CTCAE gemäß 15.1 oBDS 2021.)
+* insert Translation(seriousness.coding ^definition, de-DE, Schweregrad der Nebenwirkung nach CTCAE gemäß 15.1 oBDS 2021.)
 
 // Die Referenz zu Procedure/MedicationStatement
 * suspectEntity 1..* MS

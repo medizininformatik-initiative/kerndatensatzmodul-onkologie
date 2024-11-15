@@ -180,8 +180,8 @@
         "mustSupport": true
       },
       {
-        "id": "AdverseEvent.severity",
-        "path": "AdverseEvent.severity",
+        "id": "AdverseEvent.seriousness",
+        "path": "AdverseEvent.seriousness",
         "min": 1,
         "mustSupport": true,
         "binding": {
@@ -197,9 +197,9 @@
         ]
       },
       {
-        "id": "AdverseEvent.severity.coding",
-        "path": "AdverseEvent.severity.coding",
-        "mustSupport": true,
+        "id": "AdverseEvent.seriousness.coding",
+        "path": "AdverseEvent.seriousness.coding",
+        "short": "Schweregrad der Nebenwirkung nach CTCAE",
         "_short": {
           "extension": [
             {
@@ -216,28 +216,8 @@
               ]
             }
           ]
-        }
-      },
-      {
-        "id": "AdverseEvent.severity.coding.system",
-        "path": "AdverseEvent.severity.coding.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "AdverseEvent.severity.coding.code",
-        "path": "AdverseEvent.severity.coding.code",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "AdverseEvent.severity.text",
-        "path": "AdverseEvent.severity.text",
-        "mustSupport": true
-      },
-      {
-        "id": "AdverseEvent.outcome.coding",
-        "path": "AdverseEvent.outcome.coding",
+        },
+        "definition": "Schweregrad der Nebenwirkung nach CTCAE gemäß 15.1 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -254,7 +234,25 @@
               ]
             }
           ]
-        }
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "AdverseEvent.seriousness.coding.system",
+        "path": "AdverseEvent.seriousness.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "AdverseEvent.seriousness.coding.code",
+        "path": "AdverseEvent.seriousness.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "AdverseEvent.seriousness.text",
+        "path": "AdverseEvent.seriousness.text",
+        "mustSupport": true
       },
       {
         "id": "AdverseEvent.suspectEntity",

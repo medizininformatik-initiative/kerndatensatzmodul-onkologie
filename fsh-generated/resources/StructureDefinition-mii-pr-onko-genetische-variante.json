@@ -148,7 +148,12 @@
         "binding": {
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-genetische-variante-auspraegung"
-        },
+        }
+      },
+      {
+        "id": "Observation.interpretation:oBDS.coding",
+        "path": "Observation.interpretation.coding",
+        "short": "Genetische Variante Ausprägung",
         "_short": {
           "extension": [
             {
@@ -166,6 +171,7 @@
             }
           ]
         },
+        "definition": "Genetische Variante Ausprägung gemäß 23.1 oBDS 2021",
         "_definition": {
           "extension": [
             {
@@ -209,7 +215,7 @@
       {
         "id": "Observation.note.text",
         "path": "Observation.note.text",
-        "mustSupport": true,
+        "short": "Genetische Variante Name",
         "_short": {
           "extension": [
             {
@@ -227,6 +233,7 @@
             }
           ]
         },
+        "definition": "Genetische Variante Name gemäß 23.1 oBDS 2021",
         "_definition": {
           "extension": [
             {
@@ -243,7 +250,8 @@
               ]
             }
           ]
-        }
+        },
+        "mustSupport": true
       }
     ]
   }

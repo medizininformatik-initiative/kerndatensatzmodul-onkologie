@@ -57,17 +57,6 @@
         }
       },
       {
-        "id": "Observation.code.coding.code",
-        "path": "Observation.code.coding.code",
-        "mapping": [
-          {
-            "identity": "oBDS",
-            "map": "17.2",
-            "comment": "Gesamtbeurteilung des Tumorstatus"
-          }
-        ]
-      },
-      {
         "id": "Observation.subject",
         "path": "Observation.subject",
         "min": 1,
@@ -120,7 +109,7 @@
         "id": "Observation.effective[x]:effectiveDateTime",
         "path": "Observation.effective[x]",
         "sliceName": "effectiveDateTime",
-        "comment": "In der vorliegenden ersten Version des Moduls Onkologie ist das letzte (= späteste) Datum der verlinkten Observations anzugeben, entsprechend Punkt 17.1 des oBDS 2021 . Langfristig ist zu überlegen, hier über eine effectivePeriod eine Datumsrange abzubilden. ",
+        "comment": "In der vorliegenden ersten Version des Moduls Onkologie ist das letzte (= späteste) Datum der verlinkten Observations anzugeben, entsprechend Punkt 17.1 des oBDS 2021. Langfristig ist zu überlegen, hier über eine effectivePeriod eine Datumsrange abzubilden. ",
         "min": 0,
         "max": "1",
         "type": [
@@ -176,6 +165,7 @@
       {
         "id": "Observation.value[x]:valueCodeableConcept.coding",
         "path": "Observation.value[x].coding",
+        "short": "Gesamtbeurteilung im Verlauf",
         "_short": {
           "extension": [
             {
@@ -206,6 +196,7 @@
             }
           ]
         },
+        "definition": "Gesamtbeurteilung im Verlauf gemäß 17.2 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -245,7 +236,14 @@
       {
         "id": "Observation.value[x]:valueCodeableConcept.coding.code",
         "path": "Observation.value[x].coding.code",
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "17.2",
+            "comment": "Gesamtbeurteilung des Tumorstatus"
+          }
+        ]
       },
       {
         "id": "Observation.hasMember",
@@ -320,6 +318,7 @@
       {
         "id": "Observation.component:Tumor_Verlauf.value[x].coding",
         "path": "Observation.component.value[x].coding",
+        "short": "Gesamtbeurteilung Primärtumor im Verlauf",
         "_short": {
           "extension": [
             {
@@ -337,6 +336,7 @@
             }
           ]
         },
+        "definition": "Gesamtbeurteilung des Primärtumors im Verlauf gemäß 17.3 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -409,6 +409,7 @@
       {
         "id": "Observation.component:Lymphknoten_Verlauf.value[x].coding",
         "path": "Observation.component.value[x].coding",
+        "short": "Gesamtbeurteilung Lymphknoten im Verlauf",
         "_short": {
           "extension": [
             {
@@ -426,6 +427,7 @@
             }
           ]
         },
+        "definition": "Gesamtbeurteilung der Lymphknoteninfiltration im Verlauf gemäß 17.4 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -498,6 +500,7 @@
       {
         "id": "Observation.component:Fernmetastasen_Verlauf.value[x].coding",
         "path": "Observation.component.value[x].coding",
+        "short": "Gesamtbeurteilung Fernmetastasen im Verlauf",
         "_short": {
           "extension": [
             {
@@ -515,6 +518,7 @@
             }
           ]
         },
+        "definition": "Gesamtbeurteilung von Fernmetastasen im Verlauf gemäß 17.5 oBDS 2021.",
         "_definition": {
           "extension": [
             {
