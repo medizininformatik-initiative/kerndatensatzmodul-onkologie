@@ -653,10 +653,18 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand"
+          "reference": "StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog"
         },
-        "name": "MII PR Onkologie Allgemeiner Leistungszustand",
-        "description": "OBDS Beschreibung des allgemeines Leistungszustandes",
+        "name": "MII PR Onkologie Allgemeiner Leistungszustand ECOG",
+        "description": "OBDS Beschreibung des allgemeines Leistungszustandes nach ECOG",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-karnofsky"
+        },
+        "name": "MII PR Onkologie Allgemeiner Leistungszustand nach Karnofsky",
+        "description": "OBDS Beschreibung des allgemeines Leistungszustandes nach Karnofsky",
         "exampleBoolean": false
       },
       {
@@ -1349,10 +1357,17 @@
       },
       {
         "reference": {
-          "reference": "Observation/mii-exa-onko-allgemeiner-leistungszustand-1"
+          "reference": "Observation/mii-exa-onko-allgemeiner-leistungszustand-ecog"
         },
-        "name": "mii-exa-onko-allgemeiner-leistungszustand-1",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand"
+        "name": "mii-exa-onko-allgemeiner-leistungszustand-ecog",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-allgemeiner-leistungszustand-karnofsky"
+        },
+        "name": "mii-exa-onko-allgemeiner-leistungszustand-karnofsky",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-karnofsky"
       },
       {
         "reference": {
