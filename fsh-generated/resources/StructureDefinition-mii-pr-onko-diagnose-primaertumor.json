@@ -1,6 +1,20 @@
 {
   "resourceType": "StructureDefinition",
   "id": "mii-pr-onko-diagnose-primaertumor",
+  "extension": [
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/spdx-license",
+            "code": "CC-BY-4.0",
+            "display": "Creative Commons Attribution 4.0 International"
+          }
+        ]
+      }
+    }
+  ],
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor",
   "version": "2025.0.0",
   "name": "MII_PR_Onko_Diagnose_Primaertumor",
@@ -183,11 +197,6 @@
             "comment": "Morphologie-Freitext"
           }
         ]
-      },
-      {
-        "id": "Condition.verificationStatus",
-        "path": "Condition.verificationStatus",
-        "mustSupport": true
       },
       {
         "id": "Condition.verificationStatus.coding",
