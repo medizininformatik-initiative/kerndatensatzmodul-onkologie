@@ -8,7 +8,7 @@ Im Folgenden werden die Use Cases des Moduls, sowie die dazugehörigen FHIR-Prof
 
 | Veröffentlichung   |   |
 |---------|---|
-| Datum   | 15.12.2024 |
+| Datum   | 17.12.2024 |
 | Version | 2025.0.0        |
 | Reifegrad | MM0 |
 | Status  | Active       |
