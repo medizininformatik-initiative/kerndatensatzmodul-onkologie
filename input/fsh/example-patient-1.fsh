@@ -214,10 +214,8 @@ Usage: #example
 Description: "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie, Tumorresektion mittels Hysterektomie, bilateraler Adnexektomie, und atpyischer Lebersegmentresektion (Seg. II und V). Postoperativ: R0."
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
-* code.coding[0] = $OPS#5-547.0 "Resektion von Gewebe ohne sichere Organzuordnung - intraperitoneal" // alternativ 5-590.8 Resektion von Gewebe ohne sichere Organzuordnung
-* code.coding[1] = $OPS#5-683 "Hysterektomie"
-* code.coding[2] = $OPS#5-661 "bilaterale Adnexektomie / Salpingektomie"
-* code.coding[3] = $OPS#5-501 "atypische Lebersegmentresektion"
+* category = $SCT#387713003 "Operationen"
+* code.coding = $OPS#5-547.0 "Resektion von Gewebe ohne sichere Organzuordnung - intraperitoneal" // alternativ 5-590.8 Resektion von Gewebe ohne sichere Organzuordnung
 * performedDateTime = 2021-09-30
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
 * outcome = $mii-cs-onko-residualstatus#R0
@@ -228,6 +226,7 @@ Usage: #example
 Description: "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie, Tumorresektion mittels Hysterektomie, bilateraler Adnexektomie, und atpyischer Lebersegmentresektion (Seg. II und V). Postoperativ: R0."
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
+* category = $SCT#387713003 "Operationen"
 * code.coding = $OPS#5-683 "Hysterektomie"
 * performedDateTime = 2021-09-30
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
@@ -239,6 +238,7 @@ Usage: #example
 Description: "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie, Tumorresektion mittels Hysterektomie, bilateraler Adnexektomie, und atpyischer Lebersegmentresektion (Seg. II und V). Postoperativ: R0."
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
+* category = $SCT#387713003 "Operationen"
 * code.coding = $OPS#5-661 "bilaterale Adnexektomie / Salpingektomie"
 * performedDateTime = 2021-09-30
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
@@ -250,6 +250,7 @@ Usage: #example
 Description: "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie, Tumorresektion mittels Hysterektomie, bilateraler Adnexektomie, und atpyischer Lebersegmentresektion (Seg. II und V). Postoperativ: R0."
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
+* category = $SCT#387713003 "Operationen"
 * code.coding = $OPS#5-501 "atypische Lebersegmentresektion"
 * performedDateTime = 2021-09-30
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
