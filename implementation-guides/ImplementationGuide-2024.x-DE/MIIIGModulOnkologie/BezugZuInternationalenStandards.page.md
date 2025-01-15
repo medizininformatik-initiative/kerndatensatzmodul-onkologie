@@ -2,12 +2,12 @@
 
 
 
-Beim beschriebenen Basisdatensatz Onkologie handelt es sich um einen Datensatz, der auf dem oBDS und damit den deutschen Krebsregister-Datenmodellen folgt. 
+Beim beschriebenen Basisdatensatz Onkologie handelt es sich um einen Datensatz, der auf dem oBDS und damit den deutschen Krebsregister-Datenmodellen beruht. 
 
 In der FHIR-Modellierung wurde die FHIR-Profilierung anderer nationaler onkologischer Datenmodelle aus dem Ausland betrachtet. 
 ---
 https://hl7.org/fhir/us/mcode/
-Das Modell befindet sich momentan in der vierten Iteratation.
+Das Modell befindet sich momentan in der vierten Iteration.
 Die enthaltenen Datenelemente lassen sich unterteilen in: 
 - Patienteninformationen
 - Charakterisierung der Erkrankung
