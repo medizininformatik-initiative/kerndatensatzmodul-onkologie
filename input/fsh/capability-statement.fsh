@@ -47,7 +47,7 @@ Usage: #definition
 * jurisdiction = urn:iso:std:iso:3166#DE "Germany"
 * kind = #requirements
 * fhirVersion = #4.0.1
-* format[0] = #xml
+* format[+] = #xml
 * format[+] = #json
 * rest.mode = #server
 
