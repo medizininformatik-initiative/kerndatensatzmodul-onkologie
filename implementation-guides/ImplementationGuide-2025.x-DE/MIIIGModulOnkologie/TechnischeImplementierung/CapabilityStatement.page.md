@@ -6,6 +6,6 @@ Nachfolgend wird aufgelistet weleche Inhalte verpflichtend im CapabilityStatemen
 
 Canonical: ```https://www.medizininformatik-initiative.de/fhir/modul-onko/CapabilityStatement/metadata```
 
-[Link Simplifier Profil Übersicht](https://simplifier.net/resolve?canonical=https://www.medizininformatik-initiative.de/fhir/modul-onko/CapabilityStatement/metadata&fhirVersion=R4&scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2024.0.0-ballot)
+[Link Simplifier Profil Übersicht](https://simplifier.net/resolve?canonical=https://www.medizininformatik-initiative.de/fhir/modul-onko/CapabilityStatement/metadata&fhirVersion=R4&scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2025.0.0)
 
 {{render:https://www.medizininformatik-initiative.de/fhir/modul-onko/CapabilityStatement/metadata}}

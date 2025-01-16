@@ -10,7 +10,7 @@ Description: "Extension zur Erfassung von ICDO3 da Morphology nicht als Conditio
 
 * value[x] 1..1
 * value[x] only CodeableConcept
-* valueCodeableConcept from MII_VS_Onko_Histology_Morphology_Behavior_ICDO3 (required)
+* valueCodeableConcept from MII_VS_Onko_ICDO3_Morphologie (required)
 * valueCodeableConcept.coding.system 1..1
 * valueCodeableConcept.coding.system = $ICDO3 (exactly)
 * valueCodeableConcept.coding.code 1..1

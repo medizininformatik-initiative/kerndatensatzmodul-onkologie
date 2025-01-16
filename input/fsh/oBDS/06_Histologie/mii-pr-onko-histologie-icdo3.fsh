@@ -24,7 +24,7 @@ Description: "Histologie-Kodierung nach ICD-0 für die Verwendung von Folgediagn
 * value[x] only CodeableConcept
 * valueCodeableConcept MS
 * valueCodeableConcept 1..1
-* valueCodeableConcept from $ICDO3 (required)
+* valueCodeableConcept from MII_VS_Onko_ICDO3_Morphologie (required)
 * valueCodeableConcept.coding 0..1 MS
 * valueCodeableConcept.text 0..1 MS
 * insert Label (valueCodeableConcept.coding.code, Morphologie-Kode, Morphologie als ICD-O-3 nach 6.3 oBDS 2021)
@@ -53,6 +53,7 @@ Description: "Histologie-Kodierung nach ICD-0 für die Verwendung von Folgediagn
 * bodySite.coding[icd-o-3].system 1.. MS
 * bodySite.coding[icd-o-3] ^patternCoding.system = $ICDO3
 * bodySite.coding[icd-o-3].code 1.. MS
+* bodySite.coding[icd-o-3].code from MII_VS_Onko_ICDO3_Topographie (required)
 * insert Label (bodySite.coding[icd-o-3], ICD-O-3 Topographie, ICD-O-3 Topographie bei vom Primärtumor abweichender Lokalisation in der Verlaufsbeschreibung)
 * insert Translation(bodySite.coding[icd-o-3] ^short, de-DE, ICD-O-3 Topographie )
 * insert Translation(bodySite.coding[icd-o-3] ^definition, de-DE, ICD-O-3 Topographie bei vom Primärtumor abweichender Lokalisation in der Verlaufsbeschreibung)
