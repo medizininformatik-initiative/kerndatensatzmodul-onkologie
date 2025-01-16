@@ -25,7 +25,7 @@ Description: "10.06.2021 CT Abdomen mit KM"
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
 * code.coding = $OPS#3-222 "Computertomographie des Abdomens mit Kontrastmittel"
-* code.coding.version = "OPS 2024"
+* code.coding.version = "2024"
 * performedDateTime = 2021-06-10
 
 Instance: PatientKimMusterperson-PrimaryDiagnosis-2
