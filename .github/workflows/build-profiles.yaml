@@ -3,6 +3,8 @@ name: Build FHIR Profiles
 env:
   NODE_VERSION: 20
   DOTNET_VERSION: 8
+  FIRELY_TERMINAL_VERSION: 3.3.2
+  SUSHI_VERSION: 3.12.1
 
 defaults:
   run:
@@ -39,7 +41,7 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
 
       - name: Install latest SUSHI
-        run: npm install -g fsh-sushi
+        run: npm install -g fsh-sushi@${{ env.SUSHI_VERSION }}
 
       - name: Install .NET SDK (for Firely Terminal)
         uses: actions/setup-dotnet@v4
@@ -47,16 +49,19 @@ jobs:
           dotnet-version: ${{ env.DOTNET_VERSION }}
 
       - name: Install latest Firely Terminal
-        run: dotnet tool install -g firely.terminal
+        run: dotnet tool install firely.terminal -g --version ${{ env.FIRELY_TERMINAL_VERSION }}
+      
+      - name: Clean up local FHIR cache
+        run: rm -rf ${HOME}/.fhir
 
       - name: Get all FHIR packages
         run: fhir restore
 
       - name: Generate depended FHIR packages snapshots
-        run: fhir deps | tr ' ' '@' | xargs -I% fhir inflate --package % --snapshot --expand --force
+        run: fhir deps | sed '/^hl7.fhir.*.core.*/d' | sed -E 's/([a-z0-9.-]+)[[:space:]]+([0-9a-z.-]+).*/\1@\2/g' | xargs -I % fhir inflate --package % --snapshot --expand --force
 
       - name: Build FHIR profiles
-        run: sushi .
+        run: sushi build --log-level debug
 
       - name: Push built FHIR profiles
         run: |
