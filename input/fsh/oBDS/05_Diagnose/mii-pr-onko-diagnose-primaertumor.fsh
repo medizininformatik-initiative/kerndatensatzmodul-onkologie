@@ -44,6 +44,7 @@ Description: "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der 
 * bodySite.coding[icd-o-3].system 1.. MS
 * bodySite.coding[icd-o-3] ^patternCoding.system = $ICDO3
 * bodySite.coding[icd-o-3].code 1.. MS
+* bodySite.coding[icd-o-3].code from MII_VS_Onko_ICDO3_Topographie (required)
 * insert Label (bodySite.coding[icd-o-3], ICD-O-Topographie, Topographie des Primärtumors nach ICD-O-3 nach 5.4 oBDS 2021)
 * insert Translation(bodySite.coding[icd-o-3] ^short, de-DE, ICD-O-Topographie )
 * insert Translation(bodySite.coding[icd-o-3] ^definition, de-DE, Topographie des Primärtumors nach ICD-O-3 nach 5.4 oBDS 2021 )

@@ -1341,7 +1341,7 @@
     "fshType": "Profile",
     "fshFile": "oBDS\\05_Diagnose\\mii-pr-onko-diagnose-primaertumor.fsh",
     "startLine": 1,
-    "endLine": 66
+    "endLine": 67
   },
   {
     "outputFile": "StructureDefinition-mii-pr-onko-fernmetastasen.json",
@@ -1373,7 +1373,7 @@
     "fshType": "Profile",
     "fshFile": "oBDS\\06_Histologie\\mii-pr-onko-histologie-icdo3.fsh",
     "startLine": 1,
-    "endLine": 67
+    "endLine": 68
   },
   {
     "outputFile": "StructureDefinition-mii-pr-onko-liste-evidenz-erstdiagnose.json",
@@ -1632,10 +1632,18 @@
     "endLine": 11
   },
   {
-    "outputFile": "ValueSet-mii-vs-onko-histology-morphology-behavior-icdo3.json",
-    "fshName": "MII_VS_Onko_Histology_Morphology_Behavior_ICDO3",
+    "outputFile": "ValueSet-mii-vs-onko-icdo3-morphologie.json",
+    "fshName": "MII_VS_Onko_ICDO3_Morphologie",
     "fshType": "ValueSet",
-    "fshFile": "oBDS\\05_Diagnose\\mii-vs-onko-histology-morphology-behavior.fsh",
+    "fshFile": "overlapping terminologies\\mii-vs-onko-icdo3-morphologie.fsh",
+    "startLine": 1,
+    "endLine": 11
+  },
+  {
+    "outputFile": "ValueSet-mii-vs-onko-icdo3-topographie.json",
+    "fshName": "MII_VS_Onko_ICDO3_Topographie",
+    "fshType": "ValueSet",
+    "fshFile": "overlapping terminologies\\mii-vs-onko-icdo3-topographie.fsh",
     "startLine": 1,
     "endLine": 11
   },

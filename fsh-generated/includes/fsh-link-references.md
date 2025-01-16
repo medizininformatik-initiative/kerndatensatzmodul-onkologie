@@ -113,7 +113,8 @@
 [MII_VS_Onko_Fernmetastasen]: ValueSet-mii-vs-onko-fernmetastasen.html
 [MII_VS_Onko_Gesamtbeurteilung_Residualstatus]: ValueSet-mii-vs-onko-gesamtbeurteilung-residualstatus.html
 [MII_VS_Onko_Grading]: ValueSet-mii-vs-onko-grading.html
-[MII_VS_Onko_Histology_Morphology_Behavior_ICDO3]: ValueSet-mii-vs-onko-histology-morphology-behavior-icdo3.html
+[MII_VS_Onko_ICDO3_Morphologie]: ValueSet-mii-vs-onko-icdo3-morphologie.html
+[MII_VS_Onko_ICDO3_Topographie]: ValueSet-mii-vs-onko-icdo3-topographie.html
 [MII_VS_Onko_Nebenwirkung_Art]: ValueSet-mii-vs-onko-nebenwirkung-art.html
 [MII_VS_Onko_Nebenwirkung_CTCAE_Grad]: ValueSet-mii-vs-onko-nebenwirkung-ctcae-grad.html
 [MII_VS_Onko_Operation_Intention]: ValueSet-mii-vs-onko-operation-intention.html
