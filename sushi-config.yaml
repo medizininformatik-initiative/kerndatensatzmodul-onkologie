@@ -51,14 +51,14 @@ dependencies:
 # with supported extensions (e.g., .md/.xml) will be treated as
 # sub-pages.
 #
-pages:
-  index.md:
-    title: Home
-  guidance.md:
-    information_model.md:
-      title: Information-Model
-    fhir_model.md:
-      title: FHIR-Model
+# pages:
+#   index.md:
+#     title: Home
+#   guidance.md:
+#     information_model.md:
+#       title: Information-Model
+#     fhir_model.md:
+#       title: FHIR-Model
 # The parameters property represents IG.definition.parameter. Rather
 # than a list of code/value pairs (as in the ImplementationGuide
 # resource), the code is the YAML key. If a parameter allows repeating
@@ -78,12 +78,12 @@ pages:
 # │ input/includes. To use a provided input/includes/menu.xml file, delete the "menu"              │
 # │ property below.                                                                                │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-menu:
-  Home: index.html
-  Guidance:
-    Information Model: information_model.html
-    FHIR Model: fhir_model.html
-  Artifacts: artifacts.html
+# menu:
+#   Home: index.html
+#   Guidance:
+#     Information Model: information_model.html
+#     FHIR Model: fhir_model.html
+#   Artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │

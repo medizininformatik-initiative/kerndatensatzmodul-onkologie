@@ -5,6 +5,12 @@ parent:
 ## {{page-title}}
 Hier sind  alle Änderungen aufgelistet. 
 
+## Änderungen in 2025.0.3
+- Hinzufügen von ValueSets für ICD-O-3 Morphologie und Topologie, sowie required-binding bei den Profilen "Diagnose" und "Verlaufshistologie"
+- Einfügen von fehlender SNOMED-Categories bei Operations-Beispielen
+- kleine Korrekturen von Rechtschreibfehlern im IG
+- Aktualisierung von externen Links 
+
 
 ## Änderungen in der Profilierung seit der Kommentierungsversion 2024.0.0-ballot
 

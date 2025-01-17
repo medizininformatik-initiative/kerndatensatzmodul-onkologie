@@ -1,7 +1,7 @@
 ---
 parent: 
 topic: StrahlentherapieStellung
-subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellung
+subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzuropte
 ---
 
 ## Extensions von Strahlentherapie: Stellung
