@@ -1,7 +1,7 @@
 ---
 parent: 
 topic: StrahlentherapieStellung
-subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzuropte
+subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop
 ---
 
 ## Extensions von Strahlentherapie: Stellung
@@ -12,13 +12,13 @@ Hier wird die Stellung zur OP innerhalb eines onkologischen Behandlungskontexts 
 ### Inhalt
 
 <tabs>
-  <tab title="Darstellung">{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellung}}</tab>
+  <tab title="Darstellung">{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop}}</tab>
   <tab title="Beschreibung"> 
         @```
         from
 	        StructureDefinition
         where
-	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellung'
+	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop'
         select
 	        Beschreibung: description
         with
@@ -28,7 +28,7 @@ Hier wird die Stellung zur OP innerhalb eines onkologischen Behandlungskontexts 
         from 
             StructureDefinition 
         where 
-            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellung' 
+            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop' 
         for 
             differential.element 
             where 
