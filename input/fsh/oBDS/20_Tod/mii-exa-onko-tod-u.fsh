@@ -7,6 +7,4 @@ Usage: #example
 
 * effectiveDateTime = "2024-02-06"
 * interpretation.coding = $mii-cs-onko-tod#U "unbekannt"
-* valueCodeableConcept.coding.code = $ICD10GM#C44.3 "Haut sonstiger und nicht näher bezeichneter Teile des Gesichtes"
-* valueCodeableConcept.coding.version = "ICD-10 GM Version 2022"
-
+* valueCodeableConcept.coding = $ICD10GM|2022#C44.3 "Sonstige bösartige Neubildungen: Haut sonstiger und nicht näher bezeichneter Teile des Gesichtes"
