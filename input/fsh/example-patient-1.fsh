@@ -24,7 +24,7 @@ Usage: #example
 Description: "10.06.2021 CT Abdomen mit KM"
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
-* code.coding = $OPS#3-222 "Computertomographie des Abdomens mit Kontrastmittel"
+* code.coding = $OPS#3-222 "Computertomographie des Thorax mit Kontrastmittel"
 * code.coding.version = "2024"
 * performedDateTime = 2021-06-10
 
@@ -38,7 +38,7 @@ Description: "bestätigte Primärdiagnose"
 * clinicalStatus = #active //zum Zeitpunkt der Diagnosestellung
 * verificationStatus.coding[condition-ver-status] = $condition-ver-status#unconfirmed
 * verificationStatus.coding[primaertumorDiagnosesicherung] = $mii-cs-onko-primaertumor-diagnosesicherung#2 //"klinische Diagnostik"  steht für "Alle Untersuchungstechniken, einschl. Röntgen, Endoskopie, bildgeb. Verfahren, Ultraschall, explorativer Eingriffe(wie Laparotomie) und Autopsie, aber ohne Gewebsuntersuchungen"
-* code.coding  = $ICD10GM#C48.2 "Bösartige Neubildung des Retroperitoneums und Peritoneums - Peritoneum, nicht näher bezeichnet "
+* code.coding  = $ICD10GM|2020#C48.2 "Bösartige Neubildung: Peritoneum, nicht näher bezeichnet"
 // 389026000 | Ascites (disorder) | 
 * bodySite = $ICDO3#C56.9 "Ovar" // mögliche Lokalisation des Haupttumors? 
 
@@ -54,7 +54,7 @@ Description: "Diagnose Primärtumor"
 * subject = Reference(PatientKimMusterperson)
 * clinicalStatus = $condition-ver-status#active //zum Zeitpunkt der Diagnosestellung
 * verificationStatus.coding[primaertumorDiagnosesicherung] = $mii-cs-onko-primaertumor-diagnosesicherung#2 "klinische Diagnostik" // steht für "Alle Untersuchungstechniken, einschl. Röntgen, Endoskopie, bildgeb. Verfahren, Ultraschall, explorativer Eingriffe(wie Laparotomie) und Autopsie, aber ohne Gewebsuntersuchungen"
-* code.coding  = $ICD10GM#C48.2 "Bösartige Neubildung des Retroperitoneums und Peritoneums - Peritoneum, nicht näher bezeichnet "
+* code.coding  = $ICD10GM|2020#C48.2 "Bösartige Neubildung: Peritoneum, nicht näher bezeichnet"
 // 389026000 | Ascites (disorder) | 
 * bodySite = $ICDO3#C56.9 "Ovar" // mögliche Lokalisation des Haupttumors?
 * extension[Feststellungsdatum].valueDateTime = 2021-05-09 
@@ -67,7 +67,7 @@ Usage: #example
 Description: "15.06.2021 Aszitespunktion"
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
-* code.coding = $OPS#1-853.2 "Aszitespunktion"
+* code.coding = $OPS#1-853.2 "Diagnostische (perkutane) Punktion und Aspiration der Bauchhöhle: Aszitespunktion"
 * performedDateTime = 2021-06-15
 
 //22.06.2021 CT Thorax: kein Hinweis auf Metastasen. 
@@ -114,7 +114,7 @@ Description: "."
 * subject = Reference(PatientKimMusterperson)
 * status = #completed
 * category = $SCT#18629005 // Administration of drug or medicament (procedure)
-* code.coding = $OPS#8-54 "Chemotherapie " // bei Bedarf spezifischer? 
+* code.coding = $OPS#8-54 "Zytostatische Chemotherapie, Immuntherapie und antiretrovirale Therapie" // bei Bedarf spezifischer?
 * extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K // impliziert 
 * extension[StellungZurOp].valueCodeableConcept = $mii-cs-onko-therapie-stellungzurop#N "neoadjuvant"
 * performedPeriod.start = 2021-07-05
@@ -192,7 +192,7 @@ Description: "."
 * subject = Reference(PatientKimMusterperson)
 * status = #completed
 * intent = #plan
-* category.coding = $mii-cs-onko-therapieplanung-typ#praeth "prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie" 
+* category.coding = $mii-cs-onko-therapieplanung-typ#praeth "prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie)"
 * created = 2021-09-16
 * addresses = Reference(PatientKimMusterperson-Diagnosis-1)
 * activity[0].detail.code = $mii-cs-onko-therapie-typ#OP
@@ -215,7 +215,7 @@ Description: "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie,
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
 * category = $SCT#387713003 "Operationen"
-* code.coding = $OPS#5-547.0 "Resektion von Gewebe ohne sichere Organzuordnung - intraperitoneal" // alternativ 5-590.8 Resektion von Gewebe ohne sichere Organzuordnung
+* code.coding = $OPS#5-547.0 "Resektion von Gewebe in der Bauchregion ohne sichere Organzuordnung: Intraperitoneal" // alternativ 5-590.8 Resektion von Gewebe ohne sichere Organzuordnung
 * performedDateTime = 2021-09-30
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
 * outcome = $mii-cs-onko-residualstatus#R0
@@ -227,7 +227,7 @@ Description: "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie,
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
 * category = $SCT#387713003 "Operationen"
-* code.coding = $OPS#5-683 "Hysterektomie"
+* code.coding = $OPS#5-683 "Uterusexstirpation [Hysterektomie]"
 * performedDateTime = 2021-09-30
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
 * outcome = $mii-cs-onko-residualstatus#R0
@@ -239,7 +239,7 @@ Description: "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie,
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
 * category = $SCT#387713003 "Operationen"
-* code.coding = $OPS#5-661 "bilaterale Adnexektomie / Salpingektomie"
+* code.coding = $OPS#5-661 "Salpingektomie"
 * performedDateTime = 2021-09-30
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
 * outcome = $mii-cs-onko-residualstatus#R0
@@ -251,7 +251,7 @@ Description: "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie,
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
 * category = $SCT#387713003 "Operationen"
-* code.coding = $OPS#5-501 "atypische Lebersegmentresektion"
+* code.coding = $OPS#5-501 "Lokale Exzision und Destruktion von erkranktem Gewebe der Leber (atypische Leberresektion)"
 * performedDateTime = 2021-09-30
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
 * outcome = $mii-cs-onko-residualstatus#R0
@@ -263,7 +263,7 @@ Usage: #example
 Description: "Pathoreport incl. Immunhistochemie"
 * subject = Reference(PatientKimMusterperson)
 * status = #complete
-* code.coding = $LOINC#22034-3 "Pathology Report Cancer Narrative"
+* code.coding = $LOINC#22034-3 "Pathology report Cancer Narrative"
 * conclusion = "Histologie: Resektat vom 30.09.2021: Neoplasie des Ovars (Z.n. neoadjuvanter Therapie) (ICD-10-C56) Ovar o.n.A. (ICD-O-C56.9) Untersuchungsmaterial: Resektat WHO-Typ: Seröses Adenokarzinom (ICD-O M-8441/3) Lokale Tumorausbreitung: Ovartumor links mit einer max. Größe von 2,2 cm und tumorinfiltrierter Kapsel mit Nachweis von Tumorzellen auf der Ovaroberfläche, Anteil vitaler Tumorzellen von ca. 80 %. UICC-Klassifikation (8. Auflage): ypT3c. pM1b (HEP) L1. V0. Pn0 FIGO: IVB"
 
 
@@ -394,7 +394,7 @@ Description: "."
 * subject = Reference(PatientKimMusterperson)
 * status = #completed
 * intent = #plan
-* category.coding = $mii-cs-onko-therapieplanung-typ#postop "Posttherapeutische Tumorkonferenz" 
+* category.coding = $mii-cs-onko-therapieplanung-typ#postop "postoperative Tumorkonferenz (Planung der postoperativen Therapie, z. B. zur Frage adjuvante Therapie)"
 * created = 2021-10-25
 * replaces = Reference(PatientKimMusterperson-Tumorkonferenz-2)
 * addresses = Reference(PatientKimMusterperson-PrimaryDiagnosis-2)
@@ -428,7 +428,7 @@ Usage: #example
 Description: "."
 * subject = Reference(PatientKimMusterperson)
 * status = #completed
-* code.coding = $OPS#8-54 "Chemotherapie " // bei Bedarf spezifischer? 
+* code.coding = $OPS#8-54 "Zytostatische Chemotherapie, Immuntherapie und antiretrovirale Therapie" // bei Bedarf spezifischer?
 * extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K // impliziert 
 * extension[StellungZurOp].valueCodeableConcept = $mii-cs-onko-therapie-stellungzurop#A "adjuvant"
 * performedPeriod.start = 2021-11-08
@@ -510,7 +510,7 @@ Description: "."
 * subject = Reference(PatientKimMusterperson)
 * status = #in-progress
 * intent = #plan
-* category.coding = $mii-cs-onko-therapieplanung-typ#postop "posttherapeutische Tumorkonferenz (manche Tumoren werden nicht operiert)" 
+* category.coding = $mii-cs-onko-therapieplanung-typ#postop "postoperative Tumorkonferenz (Planung der postoperativen Therapie, z. B. zur Frage adjuvante Therapie)"
 * created = 2022-01-20
 * replaces = Reference(PatientKimMusterperson-Tumorkonferenz-3)
 * addresses = Reference(PatientKimMusterperson-PrimaryDiagnosis-2)
@@ -525,7 +525,7 @@ Usage: #example
 Description: "."
 * subject = Reference(PatientKimMusterperson)
 * status = #completed
-* code.coding = $OPS#8-54 "Chemotherapie " // bei Bedarf spezifischer? 
+* code.coding = $OPS#8-54 "Zytostatische Chemotherapie, Immuntherapie und antiretrovirale Therapie" // bei Bedarf spezifischer?
 * extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K // impliziert 
 * extension[StellungZurOp].valueCodeableConcept = $mii-cs-onko-therapie-stellungzurop#A "adjuvant"
 * performedPeriod.start = 2022-01-25

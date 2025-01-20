@@ -7,6 +7,4 @@ Usage: #example
 
 * effectiveDateTime = "2024-02-07"
 * interpretation.coding = $mii-cs-onko-tod#N "Nein, die Person ist nicht an einer Tumorerkrankung oder Folge einer Tumorerkrankung (einschließlich Behandlungskomplikation) verstorben."
-* valueCodeableConcept.coding.code = $ICD10GM#C50.3 "Unterer innerer Quadrant der Brustdrüse"
-* valueCodeableConcept.coding.version = "ICD-10 GM Version 2019"
-
+* valueCodeableConcept.coding = $ICD10GM|2019#C50.3 "Bösartige Neubildung: Unterer innerer Quadrant der Brustdrüse"
