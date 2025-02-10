@@ -6,15 +6,12 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 
 ## {{page-title}}
 
-Dieses Profil beschreibt einen Pathologie-Befund im Rahmen in der Onkologie.
+This profile describes a pathology report in oncology.
 
+Since the data comes from local tumor documentation systems, most of the findings will be in pure text form.
 
-Da die Daten aus den lokalen Tumordokumentationssystemen stammen, wird ein Großteil der Befunde in reiner Textform vorliegen. 
-
-Die Pathologie-Befundung **KANN** im Rahmen der MII ebenfalls über den Pathologie-Befundbericht erfolgen. In dem Fall können einzelne Beobachtung als Patho Findings über LOINC oder SNOMED strukturiert codiert werden. 
+The pathology report **CAN** also be done via the pathology report within the MII. In this case, individual observations can be structured and coded as Patho Findings using LOINC or SNOMED.
 https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Pathologie_Befund/MII-IG-KDS-Modul-Pathologie-Befund-TechnischeImplementierung-FHIRProfile-MII-PR-Patho-Report.html
-
-
 
 @```
 from 
@@ -25,18 +22,18 @@ select
     Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 ```
 
-### Inhalt
+### Content
 
 <tabs>
-  <tab title="Darstellung">{{tree, buttons}}</tab>
-  <tab title="Beschreibung"> 
+  <tab title="Representation">{{tree, buttons}}</tab>
+  <tab title="Description"> 
         @```
         from
 	        StructureDefinition
         where
 	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-befund'
         select
-	        Beschreibung: description
+	        Description: description
         with
             no header
         ```
@@ -49,7 +46,7 @@ select
             differential.element 
             where 
                 mustSupport = true 
-            select Feldname: id, Kurzbeschreibung: short, Hinweise: comment
+            select Field Name: id, Short Description: short, Notes: comment
         ```
   </tab>
   <tab title="XML">{{xml}}</tab>
@@ -59,22 +56,21 @@ select
 
 ---
 
-Mapping Datensatz zu FHIR
+Mapping dataset to FHIR
 
 @```
 from StructureDefinition 
 where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/Onkologie'
     for differential.element where id.contains('Befund') 
     select 
-        Datensatz: short,
-        Erklaerung: definition, 
+        Dataset: short,
+        Explanation: definition, 
         FHIR: mapping[0].map 
-
 ```
 
 ---
 
-Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensatz.de/basisdatensatz) zu FHIR
+Mapping [Unified Oncological Basic Dataset (oBDS)](https://basisdatensatz.de/basisdatensatz) to FHIR
 
 @```
 from StructureDefinition 
@@ -89,27 +85,27 @@ where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Str
 
 ---
 
-**Suchparameter**
+**Search Parameters**
 
-Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombination:
+The following search parameters are relevant for the oncology module, also in combination:
 
-1. Der Suchparameter ```_id``` MUSS unterstützt werden:
+1. The search parameter ```_id``` MUST be supported:
 
-    Beispiele: 
+    Examples: 
 
     ```GET [base]/Condition?_id=1234```
     
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+    Application notes: Further information on searching by "_id" can be found in the [FHIR base specification - section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
-2. Der Suchparameter "_profile" MUSS unterstützt werden:
+2. The search parameter "_profile" MUST be supported:
 
-    Beispiele:
+    Examples:
     
     ```GET [base]/DiagnosticReport?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-befund```
     
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
+    Application notes: Further information on searching by "_profile" can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#all).
 
-**Beispiele**
+**Examples**
 
 {{json:mii-exa-onko-befund-1}}
 

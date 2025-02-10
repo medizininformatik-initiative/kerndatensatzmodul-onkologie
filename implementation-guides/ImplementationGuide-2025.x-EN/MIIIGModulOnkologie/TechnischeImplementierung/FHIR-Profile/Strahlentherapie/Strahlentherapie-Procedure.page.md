@@ -4,52 +4,51 @@ topic: StrahlentherapieProcedure
 subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie
 ---
 
-## Strahlentherapie
+## Radiotherapy
 
-Dieses Profil beschreibt eine Strahlentherapie in der Onkologie. Das Strahlentherapieprofil für die Onkologie basiert auf dem Prozedurenmodul der MII. Es übernimmt damit die zwingende Angabe von OPS als Kodierung für die Art der Prozedur. Da die Details der Prozedur in den einzelnen Bestrahlungselementen hinterlegt sind, soll hier die OPS für Strahlentherapie kodiert werden.
+This profile describes radiotherapy in oncology. The oncology radiotherapy profile is based on the MII procedure module. It therefore adopts the mandatory specification of OPS as coding for the type of procedure. Since the details of the procedure are stored in the individual irradiation elements, the OPS for radiotherapy should be coded here.
 
-Das MII-Modul Prozedur besitzt bereits eine Extension [Durchführungsabsicht](https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht) mit Binding auf SNOMED-CT Codes. Da die Intention der Strahlentherapie im oBDS jedoch durch ein oBDS-spezifisches Antwortspektrum erfasst wird, wurde die Prozedur um eine zusätzliches Element "Intention" erweitert. Ebenso wird der Zusammenhang zu eventuellen Operationen (z.B. adjuvant/neoadjuvant) über das Erweiterungselement "Stellung" erfasst.
+The MII procedure module already has an extension [Implementation Intention](https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht) with binding to SNOMED-CT codes. Since the intention of radiotherapy in the oBDS is captured by an oBDS-specific response spectrum, the procedure was extended by an additional element "Intention". Likewise, the relationship to any surgeries (e.g., adjuvant/neoadjuvant) is captured via the extension element "Position".
 
-Die spezifischen Details der Strahlentherapie werden in einzelnen Bestrahlungen unterteilt und berichtet. Dabei wird jede Bestrahlung als Extension erfasst.
+The specific details of radiotherapy are divided and reported in individual irradiations. Each irradiation is recorded as an extension.
 
-Komplikationen der Strahlentherapie werden nicht als `Procedure.complication` oder `Procedure.complicationReference` kodiert, sondern wie bei der Systemischen Therapie in einer gesonderten AdverseEvent-Ressource mit Verweis auf die Strahlentherapie-Ressource erfasst. Es ist dabei zu beachten, dass ein Verweis auf die Strahlentherapie-Ressource unspezifisch auf die komplette Strahlentherapie und nicht auf einzelne Bestrahlungen zeigt. 
+Complications of radiotherapy are not coded as `Procedure.complication` or `Procedure.complicationReference`, but like systemic therapy, they are recorded in a separate AdverseEvent resource with reference to the radiotherapy resource. It should be noted that a reference to the radiotherapy resource is non-specific to the entire radiotherapy and not to individual irradiations.
 
-Der Grund der Beendigung (unabhängig ob erfolgreich oder nicht erfolgreich) wird über `Procedure.outcome` kodiert.
+The reason for termination (whether successful or unsuccessful) is coded via `Procedure.outcome`.
 
-### Struktur 
-Die Entscheidung, die Bestrahlungsdaten als Extension umzusetzen, hat mehrere Gründe. 
-1. Die Datenstruktur des oBDS sieht die Angabe einer Strahlentherapie-Gesamtperiode mit Start und Ende sowie einem Gesamt-Intentions und Stellung-zur-OP-Datenpunkt vor. Alle weiteren strukturierten Behandlungsinformationen zur Bestrahlung (Strahlenart, Lokalisation, Dosis, Boost etc.) sollen einzeln in einem Element "Bestrahlung" kodiert werden. 
-2. Die MII-Prozedur verlangt, dass jede Prozedur genau einen Code vorliegen hat, entweder OPS oder SNOMED-CT.  
+### Structure
+The decision to implement the irradiation data as an extension has several reasons.
+1. The data structure of the oBDS provides for the specification of an overall radiotherapy period with start and end dates, as well as an overall intention and position-to-surgery data point. All other structured treatment information for irradiation (type of radiation, localization, dose, boost, etc.) should be coded individually in an element "Irradiation".
+2. The MII procedure requires that each procedure has exactly one code, either OPS or SNOMED-CT.
 
-3. Die US-amerikanische FHIR-Datenmodell mCODE bildet die relevanten Datenpunkte in Extensions ab. Zu erwähnen ist allerdings, dass es bei mCODE hier keine Unterscheidung in übergeordnete Strahlentherapie und untergeordnete Bestrahlung gibt. mCODE sieht jedoch dafür auch detaillierte Angaben zur Größe des Zielvolumens vor.
+3. The US FHIR data model mCODE maps the relevant data points in extensions. It should be noted, however, that mCODE does not distinguish between overarching radiotherapy and subordinate irradiation. mCODE, however, provides detailed information on the size of the target volume.
 
-Alternativ wurde auch eine Umsetzung diskutiert, die übergreifende Strahlentherapie als Profil konform zur MII-Prozedur zu belassen, und die untergeordneten Bestrahlungen aus der regulären `Procedure` zu profilieren. Diese Profilierung wurde wegen der größeren Anzahl von notwenidgen Ressourcen und der vorrausichtlichen Schwierigkeit der korrekten Belegung des OPS/SNOMED Codes verworfen.  
+Alternatively, an implementation was discussed that would leave the overarching radiotherapy as a profile conforming to the MII procedure and profile the subordinate irradiations from the regular `Procedure`. This profiling was discarded due to the larger number of required resources and the anticipated difficulty of correctly assigning the OPS/SNOMED code.
 
-### Kategorie und Codes
+### Category and Codes
 
-#### Kategorie 
-- Die verwendete MII-Prozedur empfiehlt die Abbildung der **Kategorie** mittels der in SNOMED übertragenen OPS-Hauptkategorien (https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/ValueSet/procedures-category-sct)
-- Die vorliegende Kategorie SNOMED `277132007 | Therapeutic procedure` , die der OPS Kategorie 8 ("Nicht-operative therapeutische Maßnahmen") entspricht, beinhaltet sowohl Strahlen - als auch Nuklearmedizinische Therapie als auch bestimmte systemische Therapien (z.B. Chemo- und Immuntherapie), wobei andere systemische medikamtöse Therapien (z.B. Hormontherapie, Targeted Therapy) auch unter Kategorie 6 "Medikamente" kodiert werden können. Er ist daher unspezifisch und nicht geeignet, um z.B. innerhalb einer Forschungsfrage gezielt nach Nuklearmedizinischen Therapien zu filtern.   
+#### Category
+- The MII procedure recommends mapping the **category** using the OPS main categories transferred in SNOMED (https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/ValueSet/procedures-category-sct)
+- The present category SNOMED `277132007 | Therapeutic procedure`, which corresponds to the OPS category 8 ("Non-operative therapeutic measures"), includes both radiation and nuclear medicine therapy as well as certain systemic therapies (e.g., chemo and immunotherapy), while other systemic drug therapies (e.g., hormone therapy, targeted therapy) can also be coded under category 6 "Drugs". It is therefore non-specific and not suitable for filtering specifically for nuclear medicine therapies within a research question.
 
 #### Code
-- Als **Code** wird von der MII-Prozedur ein OPS-Code oder ein SNOMED-Code verlangt. 
-- OPS beinhaltet Kodierungen für Strahlentherapie (`8-52`) und Nuklearmedizinische Behandlung (`8-53`) mit ausführlichen Unterkodierungen. Im oBDS selbst wird bei Strahlentherapie und Nuklearmedizin jedoch nicht nach OPS kodiert, sondern folgt einer krebsregisterspezifischen Kodierung von Lokalisation, Applikationsart und Strahlungsart sowie weiteren Datenpunkten. 
-- In der MII-Prozedur SOLL genau eine Kodierung (OPS oder SNOMED CT)für genau eine Therapie verwendet werden. Zusätzliche Prozeduren werden als einzelne Procedure-Ressourcen abgebildet. 
+- The **code** required by the MII procedure is an OPS code or a SNOMED code.
+- OPS includes codes for radiotherapy (`8-52`) and nuclear medicine treatment (`8-53`) with detailed sub-codes. In the oBDS itself, radiotherapy and nuclear medicine are not coded according to OPS but follow a cancer registry-specific coding of localization, application type, and radiation type, as well as other data points.
+- In the MII procedure, exactly one coding (OPS or SNOMED CT) SHOULD be used for exactly one therapy. Additional procedures are represented as individual Procedure resources.
 
-
-#### Implementierungsempfehlung
-Aus den oben genannten Punkten ergibt sich folgende Kodierempfehlung für die oBDS-Strahlentherapie:
-- Kategorie als SNOMED - Code 
-    - Kategorie für Strahlentherapie `1287742003 | Radiotherapy (procedure)` 
-    - Kategorie für Nuklearmedizin `399315003 | Radionuclide therapy (procedure)` 
-- Kodierung über OPS  
-    - Strahlentherapie als OPS `8-52 Strahlentherapie` (oder genauer wenn vorhanden)
-    - Nuklearmedizinische Therapie als OPS `8-53 Nuklearmedizinische Therapie` (oder genauer wenn vorhanden)
+#### Implementation Recommendation
+Based on the above points, the following coding recommendation for oBDS radiotherapy is derived:
+- Category as SNOMED code
+    - Category for radiotherapy `1287742003 | Radiotherapy (procedure)`
+    - Category for nuclear medicine `399315003 | Radionuclide therapy (procedure)`
+- Coding via OPS
+    - Radiotherapy as OPS `8-52 Radiotherapy` (or more specific if available)
+    - Nuclear medicine therapy as OPS `8-53 Nuclear medicine therapy` (or more specific if available)
 
 ---
 
-### Konformität 
-Die vorliegende Profilierung ist kompatibel mit dem Prozedurenprofil der ISiK-Basismodule Stufe 4. https://simplifier.net/isik-basis-v4/isikprozedur
+### Conformity
+The present profiling is compatible with the procedure profile of the ISiK basic modules level 4. https://simplifier.net/isik-basis-v4/isikprozedur
 
 @```
 from 
@@ -60,18 +59,18 @@ select
     Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 ```
 
-### Inhalt
+### Content
 
 <tabs>
-  <tab title="Darstellung">{{tree, buttons}}</tab>
-  <tab title="Beschreibung"> 
+  <tab title="Representation">{{tree, buttons}}</tab>
+  <tab title="Description"> 
         @```
         from
 	        StructureDefinition
         where
 	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie'
         select
-	        Beschreibung: description
+	        Description: description
         with
             no header
         ```
@@ -84,7 +83,7 @@ select
             differential.element 
             where 
                 mustSupport = true 
-            select Feldname: id, Kurzbeschreibung: short, Hinweise: comment
+            select Field Name: id, Short Description: short, Notes: comment
         ```
   </tab>
   <tab title="XML">{{xml}}</tab>
@@ -94,22 +93,21 @@ select
 
 ---
 
-Mapping Datensatz zu FHIR
+Mapping dataset to FHIR
 
 @```
 from StructureDefinition 
 where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/Onkologie'
     for differential.element where id.contains('Strahlentherapie')
     select 
-        Datensatz: short,
-        Erklaerung: definition, 
+        Dataset: short,
+        Explanation: definition, 
         FHIR: mapping[0].map 
-
 ```
 
 ---
 
-Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensatz.de/basisdatensatz) zu FHIR
+Mapping [Unified Oncological Basic Dataset (oBDS)](https://basisdatensatz.de/basisdatensatz) to FHIR
 
 @```
 from StructureDefinition 
@@ -124,194 +122,179 @@ where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Str
 
 ---
 
-**Suchparameter**
+**Search Parameters**
 
-Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombination:
+The following search parameters are relevant for the oncology module, also in combination:
 
-1. Der Suchparameter "_id" MUSS unterstützt werden:
+1. The search parameter "_id" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?_id=103270```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+    Application notes: Further information on searching by "_id" can be found in the [FHIR base specification - section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
-1. Der Suchparameter "_profile" MUSS unterstützt werden:
+1. The search parameter "_profile" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?_profile=https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+    Application notes: Further information on searching by "_profile" can be found in the [FHIR base specification - section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
-1. Der Suchparameter "status" MUSS unterstützt werden:
+1. The search parameter "status" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?status=completed```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.status" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).
+    Application notes: Further information on searching by "Procedure.status" can be found in the [FHIR base specification - section "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
-1. Der Suchparameter "category" MUSS unterstützt werden:
+1. The search parameter "category" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?category=http://snomed.info/sct|103693007```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.category" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).
+    Application notes: Further information on searching by "Procedure.category" can be found in the [FHIR base specification - section "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
-1. Der Suchparameter "code" MUSS unterstützt werden:
+1. The search parameter "code" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?code=http://fhir.de/CodeSystem/bfarm/ops|5-37```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.code" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).
+    Application notes: Further information on searching by "Procedure.code" can be found in the [FHIR base specification - section "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
-1. Der Suchparameter "date" MUSS unterstützt werden:
+1. The search parameter "date" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?date=2022-01-01```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.performed" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Date Search"](http://hl7.org/fhir/R4/search.html#date).
+    Application notes: Further information on searching by "Procedure.performed" can be found in the [FHIR base specification - section "Date Search"](http://hl7.org/fhir/R4/search.html#date).
 
-1. Der Suchparameter "subject" MUSS unterstützt werden:
+1. The search parameter "subject" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?subject=Patient/test```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.subject" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+    Application notes: Further information on searching by "Procedure.subject" can be found in the [FHIR base specification - section "reference"](http://hl7.org/fhir/R4/search.html#reference).
 
-1. Der Suchparameter "patient" MUSS unterstützt werden:
+1. The search parameter "patient" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?patient=Patient/test```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.subject" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+    Application notes: Further information on searching by "Procedure.subject" can be found in the [FHIR base specification - section "reference"](http://hl7.org/fhir/R4/search.html#reference).
 
-1. Der Suchparameter "bodySite" MUSS unterstützt werden:
+1. The search parameter "bodySite" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?bodySite=http://snomed.info/sct|80891009```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.bodySite" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).
+    Application notes: Further information on searching by "Procedure.bodySite" can be found in the [FHIR base specification - section "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
-1. Der Suchparameter "dokumentationsdatum" MUSS unterstützt werden:
+1. The search parameter "dokumentationsdatum" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?dokumentationsdatum=2022-01-01```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.extension:Dokumentationsdatum" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Date Search"](http://hl7.org/fhir/R4/search.html#date).
+    Application notes: Further information on searching by "Procedure.extension:Dokumentationsdatum" can be found in the [FHIR base specification - section "Date Search"](http://hl7.org/fhir/R4/search.html#date).
 
-1. Der Suchparameter "durchfuehrungsabsicht" MUSS unterstützt werden:
+1. The search parameter "durchfuehrungsabsicht" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?durchfuehrungsabsicht=http://snomed.info/sct|262202000```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.extension:Durchfuehrungsabsicht" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).
+    Application notes: Further information on searching by "Procedure.extension:Durchfuehrungsabsicht" can be found in the [FHIR base specification - section "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
-1. Der Suchparameter "outcome" MUSS unterstützt werden:
+1. The search parameter "outcome" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?outcome=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund|R1```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.extension:Durchfuehrungsabsicht" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).    
+    Application notes: Further information on searching by "Procedure.extension:Durchfuehrungsabsicht" can be found in the [FHIR base specification - section "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
-1.  Der Suchparameter "extension-intention" MUSS unterstützt werden:
+1. The search parameter "extension-intention" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?extension-intention=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention|K```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.extension:Intention" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).    
+    Application notes: Further information on searching by "Procedure.extension:Intention" can be found in the [FHIR base specification - section "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
-1.  Der Suchparameter "extension-stellung" MUSS unterstützt werden:
+1. The search parameter "extension-stellung" MUST be supported:
 
-    Beispiele:
-
-    ```GET [base]/Procedure?extension-stellung=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-stellung|K```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.extension:Stellung" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).   
-
-1.  Der Suchparameter "extension-stellung" MUSS unterstützt werden:
-
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?extension-stellung=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-stellung|K```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.extension:Stellung" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).    
+    Application notes: Further information on searching by "Procedure.extension:Stellung" can be found in the [FHIR base specification - section "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
+1. The search parameter "extension-bestrahlung-applikationsart" MUST be supported:
 
-
-1.  Der Suchparameter "extension-bestrahlung-applikationsart" MUSS unterstützt werden:
-
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?extension-bestrahlung-applikationsart=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-bestrahlung-applikationsart|KLDR```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.extension:Stellung" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).    
+    Application notes: Further information on searching by "Procedure.extension:Stellung" can be found in the [FHIR base specification - section "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
+1. The search parameter "extension-bestrahlung-strahlenart" MUST be supported:
 
-1.  Der Suchparameter "extension-bestrahlung-strahlenart" MUSS unterstützt werden:
-
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?extension-bestrahlung-strahlenart=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-bestrahlung-strahlenarart|PN```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.extension:Stellung" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).    
+    Application notes: Further information on searching by "Procedure.extension:Stellung" can be found in the [FHIR base specification - section "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
+1. The search parameter "extension-bestrahlung-zielgebiet" MUST be supported:
 
-1.  Der Suchparameter "extension-bestrahlung-zielgebiet" MUSS unterstützt werden:
-
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?extension-bestrahlung-zielgebiet=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-bestrahlung-zielgebiet|4.9```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.extension:Bestrahlung.extension:Applikationsart" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).
+    Application notes: Further information on searching by "Procedure.extension:Bestrahlung.extension:Applikationsart" can be found in the [FHIR base specification - section "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
-1.  Der Suchparameter "extension-bestrahlung-zielgebiet-Lateralitaet" MUSS unterstützt werden:
+1. The search parameter "extension-bestrahlung-zielgebiet-Lateralitaet" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?extension-bestrahlung-zielgebiet-Lateralitaet=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation|L```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.extension:Bestrahlung.extension:Zielgebiet_Lateralitaet" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"]
-(http://hl7.org/fhir/R4/search.html#token).
+    Application notes: Further information on searching by "Procedure.extension:Bestrahlung.extension:Zielgebiet_Lateralitaet" can be found in the [FHIR base specification - section "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
+1. The search parameter "extension-bestrahlung-boost" MUST be supported:
 
-1.  Der Suchparameter "extension-bestrahlung-boost" MUSS unterstützt werden:
-
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?extension-bestrahlung-boost=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost|SIB```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.extension:Bestrahlung.extension:Boost" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"]
+    Application notes: Further information on searching by "Procedure.extension:Bestrahlung.extension:Boost" can be found in the [FHIR base specification - section "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
-1.  Der Suchparameter "extension-bestrahlung-einzeldosis" MUSS unterstützt werden:
+1. The search parameter "extension-bestrahlung-einzeldosis" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?extension-bestrahlung-einzeldosis=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-bestrahlung-einzeldosis```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.extension:Bestrahlung.extension:Einzeldosis" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Quantity Search"]
+    Application notes: Further information on searching by "Procedure.extension:Bestrahlung.extension:Einzeldosis" can be found in the [FHIR base specification - section "Quantity Search"](http://hl7.org/fhir/R4/search.html#quantity).
 
-1.  Der Suchparameter "extension-bestrahlung-gesamtdosis
-" MUSS unterstützt werden:
+1. The search parameter "extension-bestrahlung-gesamtdosis" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?extension-bestrahlung-gesamtdosis=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-bestrahlung-gesamtdosis```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.extension:Bestrahlung.extension:Gesamtdosis" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Quantity Search"]
+    Application notes: Further information on searching by "Procedure.extension:Bestrahlung.extension:Gesamtdosis" can be found in the [FHIR base specification - section "Quantity Search"](http://hl7.org/fhir/R4/search.html#quantity).
 
-**Beispiele**
+**Examples**
 
 {{json:mii-exa-onko-strahlentherapie}}
 

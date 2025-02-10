@@ -4,19 +4,16 @@ topic: FernmetastasenObservation
 subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen
 ---
 
-
-
 ## {{page-title}}
 
-Dieses Profil beschreibt Fernmetastasen, wie sie im Rahmen des oBDS in der Onkologie für die Meldung an die Krebsregister erfasst werden. Für jede Metastase sind folgende Datenfelder einzeln anzugeben: 
-* Datum der Feststellung 
-* Lokalisation basierend auf oBDS-eigener Kodierung
+This profile describes distant metastases as recorded in the oBDS in oncology for reporting to cancer registries. For each metastasis, the following data fields must be specified individually:
+* Date of detection
+* Localization based on oBDS-specific coding
 
-In der FHIR-Profilierung **SOLL** jede Fernmetastase als einzelne Ressource angelegt werden. 
-Im oBDS ist die Angabe von nicht-invasiven diagnostischen Prozeduren nicht vorgesehen. Ebensowenig muss laut oBDS der Grad der diagnostischen Sicherung (klinisch, radiologisch, histologisch) erhoben werden. Bei Bedarf **KANN** eine Fernmetastase auf entsprechende diagnostische Prozeduren verweisen. 
+In the FHIR profiling, **SHOULD** each distant metastasis be created as a separate resource.
+In the oBDS, the specification of non-invasive diagnostic procedures is not provided. Likewise, according to the oBDS, the degree of diagnostic certainty (clinical, radiological, histological) does not need to be collected. If necessary, a distant metastasis **CAN** refer to corresponding diagnostic procedures.
 
-Dieses Profil ist konform zum [Patho-Finding-Profil des MII-Pathologiebefundes ](https://simplifier.net/guide/mii-ig-pathologie/Befund-TechnischeImplementierung-FHIRProfile-MII-PR-Patho-Finding?version=current) und kann daher als Observation in einen pathologischen Befundbericht eingebunden werden. 
- 
+This profile is compliant with the [Patho-Finding profile of the MII pathology report](https://simplifier.net/guide/mii-ig-pathologie/Befund-TechnischeImplementierung-FHIRProfile-MII-PR-Patho-Finding?version=current) and can therefore be included as an observation in a pathological report.
 
 @```
 from 
@@ -27,18 +24,18 @@ select
     Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 ```
 
-### Inhalt
+### Content
 
 <tabs>
-  <tab title="Darstellung">{{tree, buttons}}</tab>
-  <tab title="Beschreibung"> 
+  <tab title="Representation">{{tree, buttons}}</tab>
+  <tab title="Description"> 
         @```
         from
 	        StructureDefinition
         where
 	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen' 
         select
-	        Beschreibung: description
+	        Description: description
         with
             no header
         ```
@@ -51,7 +48,7 @@ select
             differential.element 
             where 
                 mustSupport = true 
-            select Feldname: id, Kurzbeschreibung: short, Hinweise: comment
+            select Field Name: id, Short Description: short, Notes: comment
         ```
   </tab>
   <tab title="XML">{{xml}}</tab>
@@ -61,21 +58,21 @@ select
 
 ---
 
-Mapping Datensatz zu FHIR
+Mapping dataset to FHIR
 
 @```
 from StructureDefinition 
 where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/Onkologie'
     for differential.element where id.contains('Fernmetastasen')
     select 
-        Datensatz: short,
-        Erklaerung: definition, 
+        Dataset: short,
+        Explanation: definition, 
         FHIR: mapping[0].map 
 ```
 
 ---
 
-Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensatz.de/basisdatensatz) zu FHIR
+Mapping [Unified Oncological Basic Dataset (oBDS)](https://basisdatensatz.de/basisdatensatz) to FHIR
 
 @```
 from StructureDefinition 
@@ -90,84 +87,83 @@ where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Str
 
 ---
 
-**Suchparameter**
+**Search Parameters**
 
-Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombination:
+The following search parameters are relevant for the oncology module, also in combination:
 
-1. Der Suchparameter ```_id``` MUSS unterstützt werden:
+1. The search parameter ```_id``` MUST be supported:
 
-    Beispiele: 
+    Examples: 
 
     ```GET [base]/Observation?_id=1234```
     
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+    Application notes: Further information on searching by "_id" can be found in the [FHIR base specification - section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
-2. Der Suchparameter "_profile" MUSS unterstützt werden:
+2. The search parameter "_profile" MUST be supported:
 
-    Beispiele:
+    Examples:
     
     ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand```
     
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
+    Application notes: Further information on searching by "_profile" can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#all).
 
-3. Der Suchparameter "code" MUSS unterstützt werden:
+3. The search parameter "code" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?code=http://fhir.de/CodeSystem/sct|184305005```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "code" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
+    Application notes: Further information on searching by "code" can be found in the FHIR base specification - section "token".
 
-4. Der Suchparameter "subject" MUSS unterstützt werden:
+4. The search parameter "subject" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?subject=Patient/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "subject" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+    Application notes: Further information on searching by "subject" can be found in the FHIR base specification - section "reference".
 
-5. Der Suchparameter "focus" MUSS unterstützt werden:
+5. The search parameter "focus" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?focus=Condition/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "focus" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+    Application notes: Further information on searching by "focus" can be found in the FHIR base specification - section "reference".
 
-6. Der Suchparameter "encounter" MUSS unterstützt werden:
+6. The search parameter "encounter" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?encounter=Encounter/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "encounter" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+    Application notes: Further information on searching by "encounter" can be found in the FHIR base specification - section "reference".
 
-7. Der Suchparameter "date" MUSS unterstützt werden:
+7. The search parameter "date" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?date=2024-02-08```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "date" finden sich in der FHIR-Basisspezifikation - Abschnitt "date".
+    Application notes: Further information on searching by "date" can be found in the FHIR base specification - section "date".
 
-8. Der Suchparameter "body-site" MUSS unterstützt werden:
+8. The search parameter "body-site" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?body-site=http://snomed.info/sct|258332000```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "body-site" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
+    Application notes: Further information on searching by "body-site" can be found in the FHIR base specification - section "token".
 
-9. Der Suchparameter "derived-from" MUSS unterstützt werden:
+9. The search parameter "derived-from" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?derived-from=Observation/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "derived-from" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+    Application notes: Further information on searching by "derived-from" can be found in the FHIR base specification - section "reference".
 
-
-**Beispiele**
+**Examples**
 
 {{json:mii-exa-onko-fernmetastasen-1}}
 

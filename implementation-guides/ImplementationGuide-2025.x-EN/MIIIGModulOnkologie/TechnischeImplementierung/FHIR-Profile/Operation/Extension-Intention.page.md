@@ -4,22 +4,22 @@ topic: OperationIntention
 subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention
 ---
 
-## Extensions von Operation
+## Extensions of Operation
 
-Die Extension der Operation war notwendig, da sonst die oBDS-eigenen Codes nicht abgebildet werden können, weil das Binding der von der MII zum gleichen Zweck eingeführten Extension [Durchführungsabsicht](https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht) zu stark ist.  
+The extension of the operation was necessary because otherwise the oBDS-specific codes could not be represented, as the binding of the extension [Implementation Intention](https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht) introduced by the MII for the same purpose is too strong.
 
-### Inhalt
+### Content
 
 <tabs>
-  <tab title="Darstellung">{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention}}</tab>
-  <tab title="Beschreibung"> 
+  <tab title="Representation">{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention}}</tab>
+  <tab title="Description"> 
         @```
         from
 	        StructureDefinition
         where
 	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention'
         select
-	        Beschreibung: description
+	        Description: description
         with
             no header
         ```
@@ -32,7 +32,7 @@ Die Extension der Operation war notwendig, da sonst die oBDS-eigenen Codes nicht
             differential.element 
             where 
                 mustSupport = true 
-            select Feldname: id, Kurzbeschreibung: short, Hinweise: comment
+            select Field Name: id, Short Description: short, Notes: comment
         ```
   </tab>
   <tab title="XML">{{xml}}</tab>

@@ -4,23 +4,23 @@ topic: StrahlentherapieBestrahlung
 subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung
 ---
 
-## Extensions von Strahlentherapie: Bestrahlung
+## Extensions of Radiotherapy: Irradiation
 
-Die Bestrahlungsextension ist die umfangreichste Extension. 
-Hier können alle Informationen kodiert werden, die für einzelne Bestrahlungseinheiten relevant sind und die nicht bereits durch das übergeordnete Prozedurprofil Strahlentherapie abgedeckt wurden.  
+The irradiation extension is the most extensive extension.
+Here, all information relevant to individual irradiation units that is not already covered by the overarching radiotherapy procedure profile can be coded.
 
-### Inhalt
+### Content
 
 <tabs>
-  <tab title="Darstellung">{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung}}</tab>
-  <tab title="Beschreibung"> 
+  <tab title="Representation">{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung}}</tab>
+  <tab title="Description"> 
         @```
         from
 	        StructureDefinition
         where
 	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung'
         select
-	        Beschreibung: description
+	        Description: description
         with
             no header
         ```
@@ -33,7 +33,7 @@ Hier können alle Informationen kodiert werden, die für einzelne Bestrahlungsei
             differential.element 
             where 
                 mustSupport = true 
-            select Feldname: id, Kurzbeschreibung: short, Hinweise: comment
+            select Field Name: id, Short Description: short, Notes: comment
         ```
   </tab>
   <tab title="XML">{{xml}}</tab>

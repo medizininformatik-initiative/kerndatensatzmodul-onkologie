@@ -6,14 +6,12 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 
 ## {{page-title}}
 
-Dieses Profil beschreibt die Gesamtstatus des Tumorresiduums nach einer (operativen)Therapie in der Onkologie. 
+This profile describes the overall status of the tumor residue after (surgical) therapy in oncology.
 
-Der oBDS-Datensatz sieht abhängig von den durchgeführten Prozeduren entweder eine lokale oder globale Bestimmung des Residualstatus vor. 
-Der OPS-Katalog der Prozeduren, für die ein lokaler Residualstatus erwartet wird, wird von der Plattform §65c bereitgestellt. 
+The oBDS dataset provides for either a local or global determination of the residual status depending on the procedures performed.
+The OPS catalog of procedures for which a local residual status is expected is provided by the platform §65c.
 
-
-Aufgrund des direkten Bezugs wurde die Beurteilung des lokalen Residualstatus nach Abschluss einer Operation als Procedure.outcome in dem Profil Operation abgebildet.
-
+Due to the direct reference, the assessment of the local residual status after completion of an operation is represented as Procedure.outcome in the operation profile.
 
 @```
 from 
@@ -24,18 +22,18 @@ select
     Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 ```
 
-### Inhalt
+### Content
 
 <tabs>
-  <tab title="Darstellung">{{tree, buttons}}</tab>
-  <tab title="Beschreibung"> 
+  <tab title="Representation">{{tree, buttons}}</tab>
+  <tab title="Description"> 
         @```
         from
 	        StructureDefinition
         where
 	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-residualstatus'
         select
-	        Beschreibung: description
+	        Description: description
         with
             no header
         ```
@@ -48,7 +46,7 @@ select
             differential.element 
             where 
                 mustSupport = true 
-            select Feldname: id, Kurzbeschreibung: short, Hinweise: comment
+            select Field Name: id, Short Description: short, Notes: comment
         ```
   </tab>
   <tab title="XML">{{xml}}</tab>
@@ -58,22 +56,21 @@ select
 
 ---
 
-Mapping Datensatz zu FHIR
+Mapping dataset to FHIR
 
 @```
 from StructureDefinition 
 where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/Onkologie'
     for differential.element where id.contains('Residualstatus')
     select 
-        Datensatz: short,
-        Erklaerung: definition, 
+        Dataset: short,
+        Explanation: definition, 
         FHIR: mapping[0].map 
-
 ```
 
 ---
 
-Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensatz.de/basisdatensatz) zu FHIR
+Mapping [Unified Oncological Basic Dataset (oBDS)](https://basisdatensatz.de/basisdatensatz) to FHIR
 
 @```
 from StructureDefinition 
@@ -88,68 +85,67 @@ where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Str
 
 ---
 
-**Suchparameter**
+**Search Parameters**
 
-Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombination:
+The following search parameters are relevant for the oncology module, also in combination:
 
-1. Der Suchparameter ```_id``` MUSS unterstützt werden:
+1. The search parameter ```_id``` MUST be supported:
 
-    Beispiele: 
+    Examples: 
 
     ```GET [base]/Observation?_id=1234```
     
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+    Application notes: Further information on searching by "_id" can be found in the [FHIR base specification - section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
-2. Der Suchparameter "_profile" MUSS unterstützt werden:
+2. The search parameter "_profile" MUST be supported:
 
-    Beispiele:
+    Examples:
     
     ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tod```
     
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
+    Application notes: Further information on searching by "_profile" can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#all).
 
-3. Der Suchparameter "code" MUSS unterstützt werden:
+3. The search parameter "code" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?code=http://fhir.de/CodeSystem/sct|184305005```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "code" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
+    Application notes: Further information on searching by "code" can be found in the FHIR base specification - section "token".
 
-4. Der Suchparameter "subject" MUSS unterstützt werden:
+4. The search parameter "subject" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?subject=Patient/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "subject" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+    Application notes: Further information on searching by "subject" can be found in the FHIR base specification - section "reference".
 
-5. Der Suchparameter "focus" MUSS unterstützt werden:
+5. The search parameter "focus" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?focus=Condition/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "focus" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+    Application notes: Further information on searching by "focus" can be found in the FHIR base specification - section "reference".
 
-6. Der Suchparameter "encounter" MUSS unterstützt werden:
+6. The search parameter "encounter" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?encounter=Encounter/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "encounter" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+    Application notes: Further information on searching by "encounter" can be found in the FHIR base specification - section "reference".
 
+7. The search parameter "derived-from" MUST be supported:
 
-7. Der Suchparameter "derived-from" MUSS unterstützt werden:
-
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?derived-from=Observation/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "derived-from" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+    Application notes: Further information on searching by "derived-from" can be found in the FHIR base specification - section "reference".
 
-**Beispiele**
+**Examples**
 
 {{json:mii-exa-onko-residualstatus-1}}
 

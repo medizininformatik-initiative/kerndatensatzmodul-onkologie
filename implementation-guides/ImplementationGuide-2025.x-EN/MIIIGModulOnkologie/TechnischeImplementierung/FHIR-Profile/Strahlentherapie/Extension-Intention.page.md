@@ -4,23 +4,23 @@ topic: StrahlentherapieIntention
 subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention
 ---
 
-## Extensions von Strahlentherapie: Intention
+## Extensions of Radiotherapy: Intention
 
-Extension für die Strahlentherape - Intention.
-Siehe auch Extension: Intention unter Operation. 
+Extension for radiotherapy - intention.
+See also Extension: Intention under Operation.
 
-### Inhalt
+### Content
 
 <tabs>
-  <tab title="Darstellung">{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention}}</tab>
-  <tab title="Beschreibung"> 
+  <tab title="Representation">{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention}}</tab>
+  <tab title="Description"> 
         @```
         from
 	        StructureDefinition
         where
 	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention'
         select
-	        Beschreibung: description
+	        Description: description
         with
             no header
         ```
@@ -33,7 +33,7 @@ Siehe auch Extension: Intention unter Operation.
             differential.element 
             where 
                 mustSupport = true 
-            select Feldname: id, Kurzbeschreibung: short, Hinweise: comment
+            select Field Name: id, Short Description: short, Notes: comment
         ```
   </tab>
   <tab title="XML">{{xml}}</tab>

@@ -7,28 +7,28 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 
 ## {{page-title}}
 
-### Kontext
-Dieses Profil beschreibt den allgemeinen Leistungszustand eines Patienten in der Onkologie nach Karnofsky.
+### Context
+This profile describes the general performance status of a patient in oncology according to Karnofsky.
 
-Die Erfassung des allgemeine Leistungszustand wird im oBDS vorgeschrieben. 
-Dabei wird die eigentliche Meldung als ECOG kodiert und übertragen, wobei die Antwortmöglichkeiten ein Mapping vom Karnofsky-Score ermöglichen. 
+The recording of the general performance status is prescribed in the oBDS.
+The actual report is coded and transmitted as ECOG, with the response options allowing a mapping from the Karnofsky score.
 
-Im bisherigen oBDS und in den vorliegenden FHIR-Profilen ist sowohl eine Dokumentation des ECOG mit den Antwortmöglichkeiten 0-4 als auch des Karnofsky-Scores mit 10%, 20% etc.  gestattet. 
-Der aktuelle Umsetzungsleitfaden enthält jedoch einen Hinweis, dass in Zukunft ausschließlich der ECOG gemeldet werden soll. https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532323/Allgemeiner+Leistungszustand+Typ
+In the previous oBDS and in the present FHIR profiles, both documentation of the ECOG with response options 0-4 and the Karnofsky score with 10%, 20%, etc. is permitted.
+However, the current implementation guide contains a note that in the future only the ECOG should be reported. https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532323/Allgemeiner+Leistungszustand+Typ
 
-Für den Fall, dass in den Befunden nur Bezug auf den Allgemeinzustand genommen wird, ohne dabei in ECOG oder Karnofsky zu kodieren, empfiehlt der Dokumentationsleitfaden der Plattform §65c die Entwicklung hausinterner Richtlinien zur besseren Reproduzierbarkeit. https://plattform65c.atlassian.net/wiki/spaces/Dokumentat/pages/86310992/Allgemeiner+Leistungszustand 
+In cases where the findings only refer to the general condition without coding in ECOG or Karnofsky, the documentation guide of the platform §65c recommends the development of internal guidelines for better reproducibility. https://plattform65c.atlassian.net/wiki/spaces/Dokumentat/pages/86310992/Allgemeiner+Leistungszustand 
 
 
 @```
 from 
     StructureDefinition 
 where 
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-karnofsky' 
+    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-general-performance-status-ecog' 
 select 
     Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 ```
 
-### Inhalt
+### Content
 
 <tabs>
   <tab title="Darstellung">{{tree, buttons}}</tab>
@@ -62,7 +62,7 @@ select
 
 ---
 
-Mapping Datensatz zu FHIR
+Mapping dataset to FHIR
 
 @```
 from StructureDefinition 
@@ -92,51 +92,52 @@ where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Str
 
 ---
 
-**Suchparameter**
+**Search parameter**
 
-Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombination:
+The following search parameters are relevant for the Oncology Module, also in combination:
 
-1. Der Suchparameter ```_id``` MUSS unterstützt werden:
+1. The search parameter ```_id``` MUST be supported:
 
-    Beispiele: 
+    Examples: 
 
     ```GET [base]/Observation?_id=1234```
     
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+    Application notes: Further information on searching by "_id" can be found in the [FHIR base specification - section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
-2. Der Suchparameter "_profile" MUSS unterstützt werden:
+2. The search parameter "_profile" MUST be supported:
 
-    Beispiele:
+    Examples:
     
     ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand```
     
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
-3. Der Suchparameter "code" MUSS unterstützt werden:
+    Application notes: Further information on searching by "_profile" can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#all).
 
-    Beispiele:
+3. The search parameter "code" MUST be supported:
+
+    Examples:
 
     ```GET [base]/Observation?code=http://fhir.de/CodeSystem/sct|184305005```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "code" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
+    Application notes: Further information on searching by "code" can be found in the FHIR base specification - section "token".
 
-4. Der Suchparameter "subject" MUSS unterstützt werden:
+4. The search parameter "subject" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?subject=Patient/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "subject" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+    Application notes: Further information on searching by "subject" can be found in the FHIR base specification - section "reference".
 
-5. Der Suchparameter "encounter" MUSS unterstützt werden:
+5. The search parameter "encounter" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?encounter=Encounter/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "encounter" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+    Application notes: Further information on searching by "encounter" can be found in the FHIR base specification - section "reference".
     
 
-**Beispiele**
+**Examples**
 
 {{json:mii-exa-onko-allgemeiner-leistungszustand-1}}
 
