@@ -6,17 +6,15 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 
 ## {{page-title}}
 
-
 ---
 
-### Kontext
+### Context
 
-Dieses Profil beschreibt eine Verlaufsbeobachtung im Rahmen der onkologischen Therapie. 
+This profile describes a follow-up observation in the context of oncological therapy.
 
-Im oBDS ist die Verlaufsmeldung eine von mehreren Meldearten. Die Verlaufsmeldung kann dabei mehrere andere Meldeinhalte enthalten. In der vorliegenden FHIR-Profilierung sind Verlaufs-Beobachtungen neben Tumorkonferenzen eine der zwei entscheidenden Ressourcentypen, die der zeitlichen Modellierung des Behandlungsverlaufs dienen. 
+In the oBDS, the follow-up report is one of several types of reports. The follow-up report can contain several other report contents. In the present FHIR profiling, follow-up observations, along with tumor boards, are one of the two key resource types used for the temporal modeling of the treatment course.
 
-
-Die korrekte Kodierung und Interpretation der Krebsregister-Verlaufsdaten ist nicht trivial - Details sind dem Dokumentationsleitfaden der Plattform §65c zu entnehmen.  
+The correct coding and interpretation of cancer registry follow-up data is not trivial - details can be found in the documentation guide of the §65c platform.
 
 https://plattform65c.atlassian.net/wiki/spaces/Dokumentat/pages/75628552/Verlaufsmeldung
 
@@ -24,11 +22,10 @@ https://plattform65c.atlassian.net/wiki/spaces/Dokumentat/pages/75628552/Verlauf
 
 ### Conformance Statements
 
-- Eine Verlaufs-Beobachtung **SOLL** mittels `focus` einen Verweis auf die Primärdiagnose haben
-- Eine Verlaufs-Beobachtung **SOLLTE** im `value` eine Einschätzung des Krankheitsprogresses (PD, PR, MR etc.) beinhalten, insofern diese vorgenommen wurde und in den Daten vorliegt
-- Eine Verlaufs-Beobachtung **SOLLTE** weitherin im `component` Einschätzungen zum Staging des Tumors, der Lymphknoten und der Fernmetastasen enthalten, insofern diese vorgenommen wurden und diese für das Staging relevant sind
-- Da die FHIR-Profilierung keine komplette Verlaufs-Meldung abbildet, **SOLLEN** andere Beobachtungen, die zusätzlich oder abweichend zu den oben genannenten TNM-Kriterien für das Staging relevant sind,  über `derivedFrom' auf die Verlaufs-Beobachtung referenzieren. Beispielsweise sind das neu diagnostizierte Fernmetastasen, zusätzlich angefertigte Histologien oder später im Verlauf durchgeführte genetische Untersuchungen. Diese Beobachtungen **KÖNNEN** direkt aus den oBDS-Meldeinhalten der jeweiligen Verlaufs-Meldung übernommen werden. 
-
+- A follow-up observation **SHOULD** have a reference to the primary diagnosis via `focus`
+- A follow-up observation **SHOULD** include an assessment of disease progression (PD, PR, MR, etc.) in the `value` if this has been made and is available in the data
+- A follow-up observation **SHOULD** also include assessments of the staging of the tumor, lymph nodes, and distant metastases in the `component` if these have been made and are relevant for staging
+- Since the FHIR profiling does not represent a complete follow-up report, other observations that are additionally or differently relevant for staging than the above-mentioned TNM criteria **SHOULD** refer to the follow-up observation via `derivedFrom`. For example, these are newly diagnosed distant metastases, additional histologies, or later genetic examinations. These observations **CAN** be directly taken from the oBDS report contents of the respective follow-up report.
 
 @```
 from 
@@ -41,18 +38,18 @@ select
 
 ---
 
-### Inhalt
+### Content
 
 <tabs>
-  <tab title="Darstellung">{{tree, buttons}}</tab>
-  <tab title="Beschreibung"> 
+  <tab title="Representation">{{tree, buttons}}</tab>
+  <tab title="Description"> 
         @```
         from
 	        StructureDefinition
         where
 	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf' 
         select
-	        Beschreibung: description
+	        Description: description
         with
             no header
         ```
@@ -65,7 +62,7 @@ select
             differential.element 
             where 
                 mustSupport = true 
-            select Feldname: id, Kurzbeschreibung: short, Hinweise: comment
+            select Field Name: id, Short Description: short, Notes: comment
         ```
   </tab>
   <tab title="XML">{{xml}}</tab>
@@ -75,22 +72,21 @@ select
 
 ---
 
-Mapping Datensatz zu FHIR
+Mapping dataset to FHIR
 
 @```
 from StructureDefinition 
 where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/Onkologie'
     for differential.element where id.contains('AllgemeinerLeistungszustand')
     select 
-        Datensatz: short,
-        Erklaerung: definition, 
+        Dataset: short,
+        Explanation: definition, 
         FHIR: mapping[0].map 
-
 ```
 
 ---
 
-Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensatz.de/basisdatensatz) zu FHIR
+Mapping [Unified Oncological Basic Dataset (oBDS)](https://basisdatensatz.de/basisdatensatz) to FHIR
 
 @```
 from StructureDefinition 
@@ -105,76 +101,75 @@ where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Str
 
 ---
 
-**Suchparameter**
+**Search Parameters**
 
-Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombination:
+The following search parameters are relevant for the oncology module, also in combination:
 
-1. Der Suchparameter ```_id``` MUSS unterstützt werden:
+1. The search parameter ```_id``` MUST be supported:
 
-    Beispiele: 
+    Examples: 
 
     ```GET [base]/Observation?_id=1234```
     
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+    Application notes: Further information on searching by "_id" can be found in the [FHIR base specification - section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
-2. Der Suchparameter "_profile" MUSS unterstützt werden:
+2. The search parameter "_profile" MUST be supported:
 
-    Beispiele:
+    Examples:
     
     ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand```
     
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
+    Application notes: Further information on searching by "_profile" can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#all).
 
-3. Der Suchparameter "identfier" MUSS unterstützt werden:
+3. The search parameter "identifier" MUST be supported:
 
-    Beispiele:
+    Examples:
 
-    ```GET [base]/Observation?identfier=http://charite.de/labor/labortests|1234```
+    ```GET [base]/Observation?identifier=http://charite.de/labor/labortests|1234```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "identfier" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
+    Application notes: Further information on searching by "identifier" can be found in the FHIR base specification - section "token".
 
-4. Der Suchparameter "code" MUSS unterstützt werden:
+4. The search parameter "code" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?code=http://fhir.de/CodeSystem/sct|184305005```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "code" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
+    Application notes: Further information on searching by "code" can be found in the FHIR base specification - section "token".
 
-5. Der Suchparameter "subject" MUSS unterstützt werden:
+5. The search parameter "subject" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?subject=Patient/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "subject" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+    Application notes: Further information on searching by "subject" can be found in the FHIR base specification - section "reference".
 
-6. Der Suchparameter "focus" MUSS unterstützt werden:
+6. The search parameter "focus" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?focus=Condition/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "focus" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+    Application notes: Further information on searching by "focus" can be found in the FHIR base specification - section "reference".
 
-7. Der Suchparameter "encounter" MUSS unterstützt werden:
+7. The search parameter "encounter" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?encounter=Encounter/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "encounter" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+    Application notes: Further information on searching by "encounter" can be found in the FHIR base specification - section "reference".
 
-8. Der Suchparameter "component-code-value-concept" MUSS unterstützt werden:
+8. The search parameter "component-code-value-concept" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?component-code-value-concept=http://loinc.org|12345-6$http://fhir.de/CodeSystem/sct|12345678```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "components" finden sich in der FHIR-Basisspezifikation - Abschnitt "compodsite".
+    Application notes: Further information on searching by "components" can be found in the FHIR base specification - section "composite".
 
-
-**Beispiele**
+**Examples**
 
 {{json:mii-exa-onko-verlauf-tumor}}
 

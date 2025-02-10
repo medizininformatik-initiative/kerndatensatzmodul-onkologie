@@ -1,11 +1,11 @@
 ## {{page-title}}
 
-Um eine dezentrale Datenauswertung mittel des Deutsche Forschungsdatenportal für Gesundheit der Medizininformatik-Initiative zu ermöglichen MUSS die [capabilities-Interaktion](https://www.hl7.org/fhir/R4/http.html#capabilities) untersützt werden, sodass durch durch den FHIR-Server unter ```[BASE_URL]/metadata``` ein CapabilityStatement exponiert wird. Innerhalb dieses CapabilityStatement MUSS angegeben werden welche Profile inkl. Version, sowie welche Suchparameter unterstüzt werden.
+To enable decentralized data analysis through the German Health Research Data Portal of the Medical Informatics Initiative, the [capabilities interaction](https://www.hl7.org/fhir/R4/http.html#capabilities) MUST be supported, so that a CapabilityStatement is exposed by the FHIR server at ```[BASE_URL]/metadata```. Within this CapabilityStatement, it MUST be specified which profiles, including version, and which search parameters are supported.
 
-Nachfolgend wird aufgelistet weleche Inhalte verpflichtend im CapabilityStatement angegeben werden MÜSSEN. Darüber hinaus MUSS eine Konformität zu dem nachfolgenden CapabilityStatement in der jeweiligen CapabilityStatement Instanz unter [```CapabilityStatement.instantiates```](https://www.hl7.org/fhir/R4/capabilitystatement-definitions.html#CapabilityStatement.instantiates) angegeben werden.
+The following lists the contents that MUST be specified in the CapabilityStatement. Additionally, conformance to the following CapabilityStatement MUST be indicated in the respective CapabilityStatement instance under [```CapabilityStatement.instantiates```](https://www.hl7.org/fhir/R4/capabilitystatement-definitions.html#CapabilityStatement.instantiates).
 
 Canonical: ```https://www.medizininformatik-initiative.de/fhir/modul-onko/CapabilityStatement/metadata```
 
-[Link Simplifier Profil Übersicht](https://simplifier.net/resolve?canonical=https://www.medizininformatik-initiative.de/fhir/modul-onko/CapabilityStatement/metadata&fhirVersion=R4&scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2025.0.0)
+[Link Simplifier Profile Overview](https://simplifier.net/resolve?canonical=https://www.medizininformatik-initiative.de/fhir/modul-onko/CapabilityStatement/metadata&fhirVersion=R4&scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2025.0.0)
 
 {{render:https://www.medizininformatik-initiative.de/fhir/modul-onko/CapabilityStatement/metadata}}

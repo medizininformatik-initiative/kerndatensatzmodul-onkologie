@@ -1,47 +1,46 @@
 ## {{page-title}}
-Der vorliegende Implementation Guide beschreibt eine Umsetzung des oBDS in FHIR. Eine reine 1:1 Abbildung des kompletten Datensatzes ist weder inhaltlich noch technisch sinnvoll. Hier die wichtigsten Abweichungen:  
+This Implementation Guide describes an implementation of the oBDS in FHIR. A pure 1:1 mapping of the complete dataset is neither meaningful in content nor technically feasible. Here are the most important deviations:
 
-### Inhalte
- 
-Das Erweiterungsmodul Onkologie beinhaltet diejenigen Gruppen des oBDS, die v.a. klinisch-diagnostische und therapeutische Datenpunkte umfassen. 
+### Contents
 
-Daher wurden mehrere Gruppen **nicht** in FHIR implementiert. Das umfasst: 
+The oncology extension module includes those groups of the oBDS that primarily encompass clinical-diagnostic and therapeutic data points.
 
-- Die personenbezogenen Gruppen 
-    - Gruppe 3: Patienten Stammdaten
-    - Gruppe 4: Melder Stammdaten
-    - Gruppe 7: Einsender
-    - Gruppe 22: Operateur
-    - Gruppe 25: Zusätzliche Kontakte
+Therefore, several groups were **not** implemented in FHIR. This includes:
 
-- die administrativen und meldungsbezogenen Gruppen
-    - Gruppe 1: Meldung
-    - Gruppe 2: Zentrum
-    - Gruppe 21: Anmerkungen
-    - Gruppe 24: Studienteilnahme
+- The person-related groups
+    - Group 3: Patient Master Data
+    - Group 4: Reporter Master Data
+    - Group 7: Sender
+    - Group 22: Surgeon
+    - Group 25: Additional Contacts
 
-Ebenfalls wurde entschieden, in der ersten Profilierung den Fokus auf die technische Implementierung der Hauptinhalte zu setzen, und damit die organspezifischen Module erst in einem späteren Schritt zu integrieren. 
-- Dazu gehören: 
-    - Modul Prostata
-    - Modul Mamma
-    - Modul Melanom
-    - Modul Kolon
+- The administrative and report-related groups
+    - Group 1: Report
+    - Group 2: Center
+    - Group 21: Notes
+    - Group 24: Study Participation
 
-### Kardinalitäten
-Der oBDS ist hauptsächlich für die Datenmeldung an die Krebsregister optimiert worden. 
+It was also decided to focus on the technical implementation of the main contents in the first profiling and to integrate the organ-specific modules at a later stage.
+- These include:
+    - Prostate Module
+    - Breast Module
+    - Melanoma Module
+    - Colon Module
 
-In der ersten Version wurden die Kardinalitäten größtenteils aus dem oBDS übernommen, sind teilweise aber "weicher" eingestellt, um gerade in einem ersten Schritt Zugang zu einer breiteren Datenbasis zu bekommen.  
+### Cardinalities
+The oBDS has been primarily optimized for data reporting to cancer registries.
 
+In the first version, the cardinalities were largely adopted from the oBDS but are partially set "softer" to gain access to a broader data base, especially in the first step.
 
-### Einbindung von Terminologien und Codesystemen 
-Um eine Auswertbarkeit durch das Forschungsdatenportal Gesundheit (FDPG) zu gewährleisten,  verlangt die Angabe der Medikation bei Systemischer Therapie eine Kodierung mittels ATC. Freitext ist weiterhin als zusätzliche Angabe möglich. 
+### Integration of Terminologies and Code Systems
+To ensure evaluability by the Health Research Data Portal (FDPG), the specification of medication in systemic therapy requires coding using ATC. Free text is still possible as an additional specification.
 
-### Validierung
-Im oBDS-XML-Schema 3.0.2 ist eine Reihe von Validierungen vorgesehen, die die Datenqualität und -vollständigkeit überprüfen. Diese sind technisch in der ersten Version **nicht** mit implementiert. Es ist davon auszugehen, dass die oBDS-Daten in den Primärsystemen der Tumordokumentation zumindest soweit validiert werden, dass ein Export ins XML-Format möglich ist. Weitere Validierungen (z.B. sich gegenseitig ausschließende Datenfelder) könnten bei Bedarf in Zukunft vorgenommen werden. Dies wäre erforderlich, wenn das vorliegende Erweiterungsmodul über seinen derzeitigen Zweck hinaus als Datenerhebungsgrundlage für Primärsysteme dienen soll. 
+### Validation
+The oBDS XML schema 3.0.2 provides a number of validations to check data quality and completeness. These are technically **not** implemented in the first version. It is assumed that the oBDS data in the primary tumor documentation systems is at least validated to the extent that an export to XML format is possible. Further validations (e.g., mutually exclusive data fields) could be performed in the future if needed. This would be necessary if the present extension module is to serve as a data collection basis for primary systems beyond its current purpose.
 
-### Inhalte der Module und Profile
-Im oBDS sind die Datenfelder an die Meldestruktur gebunden. Gruppen, die unterschiedliche Kardinalitäten haben, sind häufig in verschiedenen Gruppen gelagert. So sind bspw. Tumorkonferenz und Therapieempfehlungen in zwei verschiedenen Gruppen, da eine Tumorkonferenz auf mehrere Therapieempfehlungen verweisen kann. Beide Gruppen sind aber problemlos in der FHIR-Ressource CarePlan abbildbar, so dass dieses in ein FHIR-Profil zusammengelegt wurde. Wichtige Änderungen im Folgenden auszughaft:
+### Contents of the Modules and Profiles
+In the oBDS, the data fields are bound to the reporting structure. Groups with different cardinalities are often stored in different groups. For example, tumor board and therapy recommendations are in two different groups because a tumor board can refer to multiple therapy recommendations. However, both groups can be easily represented in the FHIR CarePlan resource, so they were combined into one FHIR profile. Important changes are excerpted below:
 
-- die Diagnose enthält Teile des Histologie-Gruppe (ICD-O Topologie, ICD-O Morphologie)
-- die Tumorkonferenz-Gruppe wurden in der Gruppe Tumorkonferenz/Therapieempfehlung zusammengelegt
-- der Allgemeine Leistungszustand soll nur als ECOG kodiert werden können(und nicht mehr optional auch als Karnofksy), was für zukünfitge oBDS-Versionen ebenfalls angedacht ist. 
+- The diagnosis includes parts of the histology group (ICD-O topography, ICD-O morphology)
+- The tumor board group was combined with the tumor board/therapy recommendation group
+- The general condition should only be coded as ECOG (and no longer optionally as Karnofsky), which is also planned for future oBDS versions.

@@ -6,21 +6,21 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 
 ## {{page-title}}
 
-Der c/p Präfix wird in der TNM-Klassifikation benutzt, um klinische von pathologischer Erhebung zu unterscheiden. 
-In der vorliegenden Profilierung nutzen die Profile der T-,N- und M-Kategorie alle die gleiche Extension. 
+The c/p prefix is used in the TNM classification to distinguish between clinical and pathological findings.
+In the present profiling, the profiles of the T, N, and M categories all use the same extension.
 
-### Inhalt
+### Content
 
 <tabs>
-  <tab title="Darstellung">{{tree}}</tab>
-  <tab title="Beschreibung"> 
+  <tab title="Representation">{{tree}}</tab>
+  <tab title="Description"> 
         @```
         from
 	        StructureDefinition
         where
 	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix'
         select
-	        Beschreibung: description
+	        Description: description
         with
             no header
         ```
@@ -33,7 +33,7 @@ In der vorliegenden Profilierung nutzen die Profile der T-,N- und M-Kategorie al
             differential.element 
             where 
                 mustSupport = true 
-            select Feldname: id, Kurzbeschreibung: short, Hinweise: comment
+            select Field Name: id, Short Description: short, Notes: comment
         ```
   </tab>
   <tab title="XML">{{xml}}</tab>

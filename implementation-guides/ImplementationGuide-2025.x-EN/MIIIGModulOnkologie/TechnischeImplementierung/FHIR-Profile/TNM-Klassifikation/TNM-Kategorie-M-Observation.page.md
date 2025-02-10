@@ -6,7 +6,7 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 
 ## {{page-title}}
 
-Dieses Profil beschreibt die M-Kategorie der TNM-Klassifikation. Die M-Kategorie kodiert für das Fehlen bzw. Vorhandensein von Fernmetastasen und wird entitätsspezifisch kodiert.
+This profile describes the M category of the TNM classification. The M category codes for the absence or presence of distant metastases and is entity-specific.
 
 @```
 from 
@@ -17,18 +17,18 @@ select
     Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 ```
 
-### Inhalt
+### Content
 
 <tabs>
-  <tab title="Darstellung">{{tree, buttons}}</tab>
-  <tab title="Beschreibung"> 
+  <tab title="Representation">{{tree, buttons}}</tab>
+  <tab title="Description"> 
         @```
         from
 	        StructureDefinition
         where
 	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie'
         select
-	        Beschreibung: description
+	        Description: description
         with
             no header
         ```
@@ -41,7 +41,7 @@ select
             differential.element 
             where 
                 mustSupport = true 
-            select Feldname: id, Kurzbeschreibung: short, Hinweise: comment
+            select Field Name: id, Short Description: short, Notes: comment
         ```
   </tab>
   <tab title="XML">{{xml}}</tab>
@@ -51,22 +51,21 @@ select
 
 ---
 
-Mapping Datensatz zu FHIR
+Mapping dataset to FHIR
 
 @```
 from StructureDefinition 
 where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/Onkologie'
     for differential.element where id.contains('TNMKlassifikation') 
     select 
-        Datensatz: short,
-        Erklaerung: definition, 
+        Dataset: short,
+        Explanation: definition, 
         FHIR: mapping[0].map 
-
 ```
 
 ---
 
-Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensatz.de/basisdatensatz) zu FHIR
+Mapping [Unified Oncological Basic Dataset (oBDS)](https://basisdatensatz.de/basisdatensatz) to FHIR
 
 @```
 from StructureDefinition 
@@ -81,107 +80,107 @@ where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Str
 
 ---
 
-**Suchparameter**
+**Search Parameters**
 
-Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombination:
+The following search parameters are relevant for the oncology module, also in combination:
 
-1. Der Suchparameter ```_id``` MUSS unterstützt werden:
+1. The search parameter ```_id``` MUST be supported:
 
-    Beispiele: 
+    Examples: 
 
     ```GET [base]/Observation?_id=1234```
     
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+    Application notes: Further information on searching by "_id" can be found in the [FHIR base specification - section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
-2. Der Suchparameter "_profile" MUSS unterstützt werden:
+2. The search parameter "_profile" MUST be supported:
 
-    Beispiele:
+    Examples:
     
     ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie```
     
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
+    Application notes: Further information on searching by "_profile" can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#all).
 
-3. Der Suchparameter "part-of" MUSS unterstützt werden:
+3. The search parameter "part-of" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?part-of=Procedure/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "part-of" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+    Application notes: Further information on searching by "part-of" can be found in the FHIR base specification - section "reference".
 
-4. Der Suchparameter "status" MUSS unterstützt werden:
+4. The search parameter "status" MUST be supported:
 
-    Beispiele:
+    Examples:
 
-    ```GET [base]/Observation?status=final
+    ```GET [base]/Observation?status=final```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "status" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".```
+    Application notes: Further information on searching by "status" can be found in the FHIR base specification - section "token".
 
-5. Der Suchparameter "code" MUSS unterstützt werden:
+5. The search parameter "code" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?code=http://fhir.de/CodeSystem/sct|184305005```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "code" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
+    Application notes: Further information on searching by "code" can be found in the FHIR base specification - section "token".
 
-6. Der Suchparameter "subject" MUSS unterstützt werden:
+6. The search parameter "subject" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?subject=Patient/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "subject" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+    Application notes: Further information on searching by "subject" can be found in the FHIR base specification - section "reference".
 
-7. Der Suchparameter "focus" MUSS unterstützt werden:
+7. The search parameter "focus" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?focus=Condition/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "focus" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+    Application notes: Further information on searching by "focus" can be found in the FHIR base specification - section "reference".
 
-8. Der Suchparameter "encounter" MUSS unterstützt werden:
+8. The search parameter "encounter" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?encounter=Encounter/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "encounter" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+    Application notes: Further information on searching by "encounter" can be found in the FHIR base specification - section "reference".
 
-9. Der Suchparameter "date" MUSS unterstützt werden:
+9. The search parameter "date" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?date=2024-02-08```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "date" finden sich in der FHIR-Basisspezifikation - Abschnitt "date".
+    Application notes: Further information on searching by "date" can be found in the FHIR base specification - section "date".
 
-10. Der Suchparameter "method" MUSS unterstützt werden:
+10. The search parameter "method" MUST be supported:
 
-    Beispiele:
+    Examples:
 
-    ```GET [base]/Observation?method=http://loinc.org|LA26398-0
+    ```GET [base]/Observation?method=http://loinc.org|LA26398-0```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "method" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".```
+    Application notes: Further information on searching by "method" can be found in the FHIR base specification - section "token".
 
-11. Der Suchparameter "has-member" MUSS unterstützt werden:
+11. The search parameter "has-member" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?has-member=Observation/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "has-member" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+    Application notes: Further information on searching by "has-member" can be found in the FHIR base specification - section "reference".
 
-12. Der Suchparameter "derived-from" MUSS unterstützt werden:
+12. The search parameter "derived-from" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?derived-from=Observation/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "derived-from" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+    Application notes: Further information on searching by "derived-from" can be found in the FHIR base specification - section "reference".
 
-**Beispiele**
+**Examples**
 
 {{json:mii-exa-onko-tnm-m-kategorie-M0}}
 

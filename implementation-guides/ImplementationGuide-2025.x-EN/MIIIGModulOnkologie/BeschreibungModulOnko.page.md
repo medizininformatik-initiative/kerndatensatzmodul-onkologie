@@ -3,25 +3,23 @@ parent:
 ---
 
 ## {{page-title}}
-Das Modul Onkologie dient der Erfassung von Datenpunkten. 
-In seiner ersten Version orientiert sich das Modul am ADT/GEKID Basisdatensatz, der die Basis für die nationalen Krebsregister bildet. Das umfasst diagnostische und histologische Parameter sowie Angaben zu Behandlung, Tumor-Staging zu Beginn und im Verlauf, sowie die Erfassung von Nebenwirkungen und Erkennung von Metastasen. 
+The oncology module serves to capture data points.
+In its first version, the module is based on the ADT/GEKID core dataset, which forms the basis for the national cancer registries. This includes diagnostic and histological parameters as well as information on treatment, tumor staging at the beginning and during the course, and the recording of side effects and detection of metastases.
 
+### Content and Purpose of the Modeling
+The goal of the oncology extension module is to accurately represent the oncological data that arises in primary care and cancer registry reporting and to relate it to other data sources.
 
-### Inhalt und Zweck der Modellierung
-Das Erweiterungsmodul Onkologie hat das Ziel, die onkologischen Daten, die in der Primärversorgung und bei der Krebsregistermeldung anfallen, korrekt abzubilden und mit anderen Datenquellen in Beziehung zu bringen.  
+The focus of the first implementation version is the transfer of the registry data collected in the oBDS for secondary data use with the FDPG and other projects within the framework of PM4Onko. Therefore, this first version only includes data points that have a clinical-diagnostic or therapeutic character. Administrative (e.g., reporting, reporter) or person-identifying (person, tumor assignment) data points are not within the scope.
 
-Fokus der ersten Implementierungsversion ist die Überführung der im oBDS anfallenden Registerdaten für die Sekundärdatennutzung mit dem FDPG und anderen Projekten im Rahmen von PM4Onko. Daher sind in dieser ersten Version nur die Datenpunkte enthalten, die klinisch-diagnostische oder therapeutischen Charakter haben. Administrative (z.B. Meldung, Melder) oder personenidentifizierende (Person, Tumorzuordnung) Datenpunkte sind nicht innerhalb des Betrachtungsrahmens. 
+In addition to the core dataset, the oBDS provides for the collection of organ-specific data fields.
+In the first implementation step, the implementation of the organ-specific modules (breast, colon, prostate, melanoma) was omitted.
 
-Der oBDS sieht neben dem Basisdatensatz eine Erhebung von organspezifischen Datenfeldern vor. 
-Im ersten Umsetzungsschritt wurde auf die Umsetzung der organspezifischen Module (Mamma, Darm, Prostata, Melanom) verzichtet. 
+### Mapping to Open Data Standards
 
-
-### Mapping auf offene Datenstandards
-
-Der onkologischen Basisdatensatz enthält ValueSets, die primär durch ADT/GEKID definiert wurden und keinen direkten Bezug zu offenen Datenstandards und -terminologien wie SNOMED-CT oder LOINC haben. 
-Die Kodierung der Antwortmöglichkeiten wurden in der gleichen Art und Weise übernommen, wie Sie auch in den Primärsystemen vorliegen. 
-Gleichzeitig stellt dieser Implementierungsleitfaden ein vorläufiges Mapping der Felder und Antwortmöglichkeiten auf SNOMED-CT (sowie ggfs. anderer Terminologien) als FHIR ConceptMap bereit. 
-Die Landeskrebsregister streben mit dem BfArM für Ende 2024 die Erstellung eines offiziellen nationalen Mappings der oBDS-Krebsregisterdaten auf SNOMED-CT an. 
-Sobald dieses offiziell veröffentlicht ist, wird das hier enthaltene Mapping entsprechend geupdated. 
+The oncological core dataset contains ValueSets primarily defined by ADT/GEKID and has no direct reference to open data standards and terminologies such as SNOMED-CT or LOINC.
+The coding of the response options was adopted in the same way as they are present in the primary systems.
+At the same time, this implementation guide provides a preliminary mapping of the fields and response options to SNOMED-CT (and possibly other terminologies) as a FHIR ConceptMap.
+The state cancer registries, in collaboration with the BfArM, aim to create an official national mapping of the oBDS cancer registry data to SNOMED-CT by the end of 2024.
+Once this is officially published, the mapping contained here will be updated accordingly.
 
 

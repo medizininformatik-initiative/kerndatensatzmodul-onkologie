@@ -4,9 +4,9 @@ topic: StrahlentherapieProcedure
 subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie
 ---
 
-## Systemische und abwartende Therapie
+## Systemic and Watchful Therapy
 
-Dieses Profil beschreibt eine systemische oder abwartende Therapie in der Onkologie.
+This profile describes a systemic or watchful therapy in oncology.
 
 @```
 from 
@@ -17,71 +17,69 @@ select
     Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 ```
 
-### Beschreibung 
+### Description
 
-Im oBDS werden mehrere klinische Konzepte innerhalb der Systemische Therapie abbgebildet
-* Systemische Therapien
-    * Chemotherapie
-    * Immuntherapie 
-    * Targeted Therapy 
-    * Kombinationstherapien der oben genannten Therapien
-    * Hormontherapie
-    * Stammzell- und Knochenmarkstransplantation
-* Abwartende Therapien 
-    * Watchful Waiting 
-    * Active Surveillance
+In the oBDS, several clinical concepts are represented within systemic therapy:
+* Systemic therapies
+    * Chemotherapy
+    * Immunotherapy
+    * Targeted therapy
+    * Combination therapies of the above therapies
+    * Hormone therapy
+    * Stem cell and bone marrow transplantation
+* Watchful therapies
+    * Watchful waiting
+    * Active surveillance
     * Wait and see
 
- 
-Zu diesen einzelnen Therapien werden im oBDS weitere Datenelemente erfasst und hier abgebildet, darunter: 
-- Start und Endezeitpunkt der Therapie 
-- Zusammenhang zur OP und Intention der Therapie
-- der Grund der Beendigung (unabhängig ob erfolgreich oder nicht erfolgreich).
+For these individual therapies, additional data elements are recorded in the oBDS and represented here, including:
+- Start and end time of the therapy
+- Relationship to surgery and intention of the therapy
+- The reason for termination (whether successful or unsuccessful).
 
-#### Kategorie 
-- Die verwendete MII-Prozedur empfiehlt die Abbildung der **Kategorie** mittels der in SNOMED übertragenen OPS-Hauptkategorien (https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/ValueSet/procedures-category-sct)
-- Die vorliegende Kategorie SNOMED `277132007 | Therapeutic procedure` , die der OPS Kategorie 8 ("Nicht-operative therapeutische Maßnahmen") entspricht, beinhaltet sowohl Strahlen - als auch Nuklearmedizinische Therapie als auch bestimmte systemische Therapien (z.B. Chemo- und Immuntherapie), wobei andere systemische medikamtöse Therapien (z.B. Hormontherapie, Targeted Therapy) auch unter Kategorie 6 "Medikamente" kodiert werden können. Er ist daher unspezifisch und nicht geeignet, um z.B. innerhalb einer Forschungsfrage gezielt nach Nuklearmedizinischen Therapien zu filtern.   
+#### Category
+- The MII procedure recommends mapping the **category** using the OPS main categories transferred in SNOMED (https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/ValueSet/procedures-category-sct)
+- The present category SNOMED `277132007 | Therapeutic procedure`, which corresponds to the OPS category 8 ("Non-operative therapeutic measures"), includes both radiation and nuclear medicine therapy as well as certain systemic therapies (e.g., chemo and immunotherapy), while other systemic drug therapies (e.g., hormone therapy, targeted therapy) can also be coded under category 6 "Drugs". It is therefore non-specific and not suitable for filtering specifically for nuclear medicine therapies within a research question.
 
 #### Code
-- Als **Code** wird von der MII-Prozedur ein OPS-Code oder ein SNOMED-Code verlangt. 
-- Die medikationsbasierten systemischen Therapien werden je nach Art der Therapie durch unterschiedlichen OPS-Kategorien kodiert. 
-- Für die abwartenden Therapien sind keine OPS-Codes im aktuellen Katalog hinterlegt.  
-- In der MII-Prozedur SOLL genau eine Kodierung (OPS oder SNOMED CT) für genau eine Therapie verwendet werden. Zusätzliche Prozeduren werden als einzelne Procedure-Ressourcen abgebildet. 
+- The **code** required by the MII procedure is an OPS code or a SNOMED code.
+- Medication-based systemic therapies are coded according to the type of therapy through different OPS categories.
+- For watchful therapies, no OPS codes are currently available in the catalog.
+- In the MII procedure, exactly one coding (OPS or SNOMED CT) SHOULD be used for exactly one therapy. Additional procedures are represented as individual Procedure resources.
 
-#### Implementierungsempfehlung
-Aus den oben genannten Punkten ergibt sich folgende Kodierempfehlung für die Systemische / abwartende Therapie aus dem oBDS:
-- Kategorie als SNOMED - Code 
-    - Kategorie für Systemische Therapien `18629005 | Administration of drug or medicament (procedure)` 
-    - Kategorie für Abwartende Therapien : keine (kein geeignetes Parent-Konzept, Suche direkt über Kodierung empfohlen) 
-- Kodierung 
-    - Systemische Therapie über OPS wie folgt. Es ist zu beachten, dass der exakte Wirkstoff mittels ATC als Teil der MedicationStatment-Ressource kodiert wird. Eine zusätzliche Dokumentation der Medikation über     
-        - Chemotherapie über OPS `8-54` oder spezifischer
-        - Immuntherapie über OPS `8-54` oder spezifischer (Zusatzangabe von )
-        - Stammzelltherapie über OPS `8-86` oder spezifischer
-        - Hormontherapie über OPS `6-xxx.y` (bsw.`6-009.0` für Olaparib, oral bei Prostatakarzinom)
-    - Abwartende Therapie über SNOMED-CT wie folgt
-        - Watchful Waiting: SNOMED-CT `373818007 | No anti-cancer treatment - watchful waiting (finding)` 
-        - Active Surveillance: SNOMED-CT `424313000 | Active surveillance (regime/therapy)` 
-        - Wait and see: SNOMED-CT `310341009 | Follow-up (wait and see) (finding)` 
-
+#### Implementation Recommendation
+Based on the above points, the following coding recommendation for systemic/watchful therapy from the oBDS is derived:
+- Category as SNOMED code
+    - Category for systemic therapies `18629005 | Administration of drug or medicament (procedure)`
+    - Category for watchful therapies: none (no suitable parent concept, search directly via coding recommended)
+- Coding
+    - Systemic therapy via OPS as follows. It should be noted that the exact active substance is coded using ATC as part of the MedicationStatement resource. Additional documentation of the medication via
+        - Chemotherapy via OPS `8-54` or more specific
+        - Immunotherapy via OPS `8-54` or more specific (additional specification of)
+        - Stem cell therapy via OPS `8-86` or more specific
+        - Hormone therapy via OPS `6-xxx.y` (e.g., `6-009.0` for Olaparib, oral for prostate cancer)
+    - Watchful therapy via SNOMED-CT as follows
+        - Watchful waiting: SNOMED-CT `373818007 | No anti-cancer treatment - watchful waiting (finding)`
+        - Active surveillance: SNOMED-CT `424313000 | Active surveillance (regime/therapy)`
+        - Wait and see: SNOMED-CT `310341009 | Follow-up (wait and see) (finding)`
 
 ---
 
-### Konformität 
-Die vorliegende Profilierung ist kompatibel mit dem Prozedurenprofil der ISiK-Basismodule Stufe 4. https://simplifier.net/isik-basis-v4/isikprozedur
+### Conformity
+The present profiling is compatible with the procedure profile of the ISiK basic modules level 4. https://simplifier.net/isik-basis-v4/isikprozedur
 
-### Inhalt
+### Content
 
 <tabs>
-  <tab title="Darstellung">{{tree, buttons}}</tab>
-  <tab title="Beschreibung"> 
+  <tab title="Representation">{{tree, buttons}}</tab>
+  <tab title="Description"> 
         @```
         from
 	        StructureDefinition
         where
 	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie'
         select
-	        Beschreibung: description
+	        Description: description
         with
             no header
         ```
@@ -94,7 +92,7 @@ Die vorliegende Profilierung ist kompatibel mit dem Prozedurenprofil der ISiK-Ba
             differential.element 
             where 
                 mustSupport = true 
-            select Feldname: id, Kurzbeschreibung: short, Hinweise: comment
+            select Field Name: id, Short Description: short, Notes: comment
         ```
   </tab>
   <tab title="XML">{{xml}}</tab>
@@ -104,22 +102,21 @@ Die vorliegende Profilierung ist kompatibel mit dem Prozedurenprofil der ISiK-Ba
 
 ---
 
-Mapping Datensatz zu FHIR
+Mapping dataset to FHIR
 
 @```
 from StructureDefinition 
 where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/Onkologie'
     for differential.element where id.contains('SystemischeTherapie')
     select 
-        Datensatz: short,
-        Erklaerung: definition, 
+        Dataset: short,
+        Explanation: definition, 
         FHIR: mapping[0].map 
-
 ```
 
 ---
 
-Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensatz.de/basisdatensatz) zu FHIR
+Mapping [Unified Oncological Basic Dataset (oBDS)](https://basisdatensatz.de/basisdatensatz) to FHIR
 
 @```
 from StructureDefinition 
@@ -134,117 +131,115 @@ where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Str
 
 ---
 
-**Suchparameter**
+**Search Parameters**
 
-Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombination:
+The following search parameters are relevant for the oncology module, also in combination:
 
-Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombination:
+1. The search parameter "_id" MUST be supported:
 
-1. Der Suchparameter "_id" MUSS unterstützt werden:
-
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?_id=103270```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+    Application notes: Further information on searching by "_id" can be found in the [FHIR base specification - section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
-1. Der Suchparameter "_profile" MUSS unterstützt werden:
+1. The search parameter "_profile" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?_profile=https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+    Application notes: Further information on searching by "_profile" can be found in the [FHIR base specification - section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
-1. Der Suchparameter "status" MUSS unterstützt werden:
+1. The search parameter "status" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?status=completed```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.status" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).
+    Application notes: Further information on searching by "Procedure.status" can be found in the [FHIR base specification - section "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
-1. Der Suchparameter "category" MUSS unterstützt werden:
+1. The search parameter "category" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?category=http://snomed.info/sct|103693007```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.category" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).
+    Application notes: Further information on searching by "Procedure.category" can be found in the [FHIR base specification - section "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
-1. Der Suchparameter "code" MUSS unterstützt werden:
+1. The search parameter "code" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?code=http://fhir.de/CodeSystem/bfarm/ops|5-37```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.code" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).
+    Application notes: Further information on searching by "Procedure.code" can be found in the [FHIR base specification - section "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
-1. Der Suchparameter "date" MUSS unterstützt werden:
+1. The search parameter "date" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?date=2022-01-01```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.performed" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Date Search"](http://hl7.org/fhir/R4/search.html#date).
+    Application notes: Further information on searching by "Procedure.performed" can be found in the [FHIR base specification - section "Date Search"](http://hl7.org/fhir/R4/search.html#date).
 
-1. Der Suchparameter "subject" MUSS unterstützt werden:
+1. The search parameter "subject" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?subject=Patient/test```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.subject" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+    Application notes: Further information on searching by "Procedure.subject" can be found in the [FHIR base specification - section "reference"](http://hl7.org/fhir/R4/search.html#reference).
 
-1. Der Suchparameter "patient" MUSS unterstützt werden:
+1. The search parameter "patient" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?patient=Patient/test```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.subject" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+    Application notes: Further information on searching by "Procedure.subject" can be found in the [FHIR base specification - section "reference"](http://hl7.org/fhir/R4/search.html#reference).
 
-1. Der Suchparameter "bodySite" MUSS unterstützt werden:
+1. The search parameter "bodySite" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?bodySite=http://snomed.info/sct|80891009```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.bodySite" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).
+    Application notes: Further information on searching by "Procedure.bodySite" can be found in the [FHIR base specification - section "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
-1. Der Suchparameter "dokumentationsdatum" MUSS unterstützt werden:
+1. The search parameter "dokumentationsdatum" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?dokumentationsdatum=2022-01-01```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.extension:Dokumentationsdatum" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Date Search"](http://hl7.org/fhir/R4/search.html#date).
+    Application notes: Further information on searching by "Procedure.extension:Dokumentationsdatum" can be found in the [FHIR base specification - section "Date Search"](http://hl7.org/fhir/R4/search.html#date).
 
-1. Der Suchparameter "durchfuehrungsabsicht" MUSS unterstützt werden:
+1. The search parameter "durchfuehrungsabsicht" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?durchfuehrungsabsicht=http://snomed.info/sct|262202000```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.extension:Durchfuehrungsabsicht" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).
+    Application notes: Further information on searching by "Procedure.extension:Durchfuehrungsabsicht" can be found in the [FHIR base specification - section "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
-1. Der Suchparameter "outcome" MUSS unterstützt werden:
+1. The search parameter "outcome" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?outcome=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus|R1```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.extension:Durchfuehrungsabsicht" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).    
+    Application notes: Further information on searching by "Procedure.extension:Durchfuehrungsabsicht" can be found in the [FHIR base specification - section "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
-1.  Der Suchparameter "extension-intention" MUSS unterstützt werden:
+1. The search parameter "extension-intention" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?extension-intention=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention|K```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.extension:Durchfuehrungsabsicht" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).   
+    Application notes: Further information on searching by "Procedure.extension:Durchfuehrungsabsicht" can be found in the [FHIR base specification - section "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
-**Beispiele**
+**Examples**
 
 {{json:mii-exa-onko-systemische-therapie-1}}
 

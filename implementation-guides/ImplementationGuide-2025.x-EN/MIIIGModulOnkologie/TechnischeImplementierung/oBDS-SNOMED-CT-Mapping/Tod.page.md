@@ -1,7 +1,6 @@
 ## {{page-title}}
 
-Im Zuge der 
-Für dieses komplexe Konzept gibt es in SNOMED-CT keine einfache Abbildung. Daher wurden die Antwortmöglichkeiten als Qualifier Values kodiert.  
+For this complex concept, there is no simple representation in SNOMED-CT. Therefore, the response options were coded as Qualifier Values.
 
 @```
 from ConceptMap 
