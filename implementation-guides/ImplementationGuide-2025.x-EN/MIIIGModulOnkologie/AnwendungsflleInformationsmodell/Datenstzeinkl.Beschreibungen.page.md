@@ -2,19 +2,18 @@
 parent: 
 ---
 
-## Datensätze inkl. Beschreibungen
+## Datasets Including Descriptions
 
-Der Datensatz basiert auf dem onkologischen Basisdatensatz (oBDS, siehe Referenzen). 
+The dataset is based on the oncological basic dataset (oBDS, see references).
 
+In the implementation, the focus was on converting the data points collected during registry reporting into FHIR resources for the FDPG for secondary data use.
 
-In der Umsetzung wurde der Fokus auf die Umwandlung der bei der Registermeldungdaten anfallenden Datenpunkte 
-in FHIR-Ressourcen für das FDPG für die Sekundärdatennutzung 
+Therefore, reporting and person-relevant data of the oBDS are not included. Likewise, the organ-specific modules were not considered in the initial implementation.
 
-Daher sind Meldungs- und personenrelevante Daten des oBDS nicht enthalten. Ebenso wurden bei die Erstimplementierung die organspezifischen Module nicht berücksichtigt. 
+{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/Onkologie}}
 
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/Onkologie}} 
+It should be noted that the Logical Model purely aims to map the data elements and their descriptions. The data types and cardinalities used are not to be considered mandatory. This is ultimately determined by the FHIR profiles. For each element within the Logical Model, there is a 1:1 mapping to an element of a specific FHIR resource.
 
-Es ist zu beachten, dass das Logical Model rein auf die Abbildung der Datenelemente und deren Beschreibung abzielt. Verwendete Datentypen und Kardinalitäten sind nicht als verpflichtend anzusehen. Dies wird abschließend durch die FHIR-Profile festgelegt. Für jedes Element innerhalb des Logical Models existiert ein 1:1 Mapping auf ein Element einer konkreten FHIR Ressource.
 
 @```
 from StructureDefinition 
@@ -26,3 +25,4 @@ where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Str
 ```
  
 <br><br>
+

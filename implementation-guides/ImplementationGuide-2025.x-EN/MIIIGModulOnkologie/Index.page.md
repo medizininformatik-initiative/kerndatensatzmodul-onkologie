@@ -1,37 +1,37 @@
 ---
 parent: 
 ---
-# Kerndatensatz Erweiterungsmodul Onkologie
+# Core Dataset Extension Module Oncology
 
-Die vorliegende Spezifikation beschreibt die FHIR-Repräsentation des Kerndatensatz Moduls Onkologie der Medizininformatik-Initiative.
-Im Folgenden werden die Use Cases des Moduls, sowie die dazugehörigen FHIR-Profile und Terminologie-Ressourcen in ihrer verbindlichen Form beschrieben.
+This specification describes the FHIR representation of the core dataset module Oncology of the Medical Informatics Initiative.
+The following sections describe the use cases of the module, as well as the associated FHIR profiles and terminology resources in their binding form.
 
-| Veröffentlichung   |   |
+| Publication   |   |
 |---------|---|
-| Datum   | 17.12.2024 |
+| Date   | 17.12.2024 |
 | Version | 2025.0.0        |
 | Status  | Active       |
 | Realm   | DE          | 
 
-## Inhaltsverzeichnis
+## Table of Contents
 
 {{index:root}}
-## Impressum
-Dieser Leitfaden ist im Rahmen der Medizininformatik Initative erstellt wurden und unterliegt per Governance Prozess dem Abstimmungsverfahren des Interoperabilitätsforums und der Technischen Komitees von HL7 Deutschland e. V..
+## Imprint
+This guide was created as part of the Medical Informatics Initiative and is subject to the governance process of the Interoperability Forum and the Technical Committees of HL7 Germany e. V..
 
-## Ansprechpartner
+## Contact Persons
 * Thomas Debertshäuser, Berlin Institute of Health (Charité) 
 * Jori Kern (DKFZ Heidelberg)
 * Martin Boeker (DIFUTURE) 
 * Sylvia Thun, Berlin Institute of Health (Charité) 
-* Karoline Buckow, TMF – Technologie- und Methodenplattform für die vernetzte medizinische Forschung e.V.
-* Franziska Klepka, TMF – Technologie- und Methodenplattform für die vernetzte medizinische Forschung e.V.
+* Karoline Buckow, TMF – Technology and Methods Platform for Networked Medical Research e.V.
+* Franziska Klepka, TMF – Technology and Methods Platform for Networked Medical Research e.V.
 
-Fragen zu der vorliegenden Publikation können jederzeit unter [chat.fhir.org](https://chat.fhir.org) im Stream 'german/mi-initiative' gestellt werden.
+Questions about this publication can be asked at any time on [chat.fhir.org](https://chat.fhir.org) in the 'german/mi-initiative' stream.
 
-Anmerkungen und Kritik wird in Form von 'Issues' im Simplifier Projekt stets gern entgegengenommen.
+Comments and criticism are always welcome in the form of 'Issues' in the Simplifier project.
 
-## Autoren (in alphabetischer Reihenfolge)
+## Authors (in alphabetical order)
 * Jori Kern (DKFZ Heidelberg)
 * Julian Saß, Berlin Institute of Health (Charité) 
 * Margaux Gatrio, Berlin Institute of Health (Charité) 
@@ -40,16 +40,16 @@ Anmerkungen und Kritik wird in Form von 'Issues' im Simplifier Projekt stets ger
 * Nina Haffer, Berlin Institute of Health (Charité)
 * Sophie Klopfenstein, Berlin Institute of Health (Charité)
 * Thomas Debertshäuser, Berlin Institute of Health (Charité) 
-* Yuan Peng, Institut für Medizinische Informatik und Biometrie (TU Dresden)
+* Yuan Peng, Institute for Medical Informatics and Biometry (TU Dresden)
 
-## Copyright-Hinweis, Nutzungshinweise
+## Copyright Notice, Usage Notes
 Copyright © 2019+: TMF e. V., Charlottenstraße 42, 10117 Berlin
 
-Der Inhalt dieser Spezifikation ist öffentlich. Die Nachnutzungs- bzw. Veröffentlichungsansprüche sind nicht beschränkt.
+The content of this specification is public. The reuse or publication rights are not restricted.
 
-Zu den Nutzungsrechten der zugrunde liegenden FHIR-Technologie siehe die FHIR-Basis-Spezifikation.
+For the usage rights of the underlying FHIR technology, see the FHIR base specification.
 
-Einige verwendete Codesysteme werden von anderen Organisationen herausgegeben und gepflegt. Es gilt das Copyright der dort jeweils aufgeführten Herausgeber (Publisher).
+Some codesystems used are issued and maintained by other organizations. The copyright of the respective publishers applies.
 
 ## Disclaimer
-Der Inhalt dieses Dokuments ist öffentlich. Zu beachten ist, dass Teile dieses Dokuments auf FHIR Version R4 beruhen, für die Copyright HL7 International gilt.
+The content of this document is public. Note that parts of this document are based on FHIR Version R4, for which HL7 International holds the copyright.

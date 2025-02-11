@@ -6,45 +6,40 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 
 ## {{page-title}}
 
+This profile describes the tumor board and therapy recommendations.
+The data fields have been part of the oBDS since version 2021 and are recorded in two different modules. Since all the involved fields can be well represented via the FHIR CarePlan resource, all the tumor board and therapy recommendation fields have been combined in the tumor board profile.
 
+The tumor board profile therefore includes:
+* the reference to the patient via `subject`
+* the reference to the primary diagnosis via `addresses`
+* the category of the plan according to oBDS via `category`
+* the date via `created`
+* individual recommendations (`activity`) with the following elements:
+    * the oBDS coding of the proposed therapy measure `code`
+    * the status of the individual activities under `status` according to the HL7 FHIR status codes
+    * in case of discontinuation: the indication of whether the therapy was discontinued at the patient's request under `statusReason`
 
+The CarePlan resource requires a mandatory specification of the `status` element of an `activity`. This information is not included in the oBDS in this form. However, the actual therapies performed are recorded in the cancer registry data and SHOULD refer to the tumor board resource via `Procedure.basedOn(Reference(CarePlan))`.
 
+The status information reflects the actual status of the therapy recommendation. For all status information, the official FHIR CarePlanActivityStatus code set applies.
+https://www.hl7.org/fhir/R4/valueset-care-plan-activity-status.html
+The following status codes SHOULD be used:
+- `completed` for completed therapy,
+- `on-hold` for therapy interruption for not yet started therapy
+- `stopped` for therapy interruption for already started therapy
+- `unknown` for unknown, if no information about the status is available.
 
-Dieses Profil beschreibt die Tumorkonferenz und die Therapieempfehlungen.
-Die Datenfelder sind seit der Version 2021 Teil des oBDS und werden in zwei verschiedenen Modulen erfasst. Da alle beteiligten Felder sehr gut über die FHIR CarePlan-Ressource abbildbar sind, wurden alle die Tumorkonferenz- und Therapieemfpehlungsfelder im Tumorkonferenz-Profil zusammengefasst.  
+For the status information `on-hold` and `stopped`, the `statusReason` field SHOULD be filled with the information from the oBDS field 'Therapy deviation at the patient's request'.
 
-Das Tumorkonferenz-Profil umfasst daher
-* die Referenz auf Patient über `subject`
-* die Referenz auf die Primärdiagnose über `addresses`.
-* die Kategorie des Plans nach oBDS über `category`
-* das Datum über `created`
-* einzelne Empfehlungen (`activity`)mit jeweils den folgenden Elementen: 
-    * die oBDS-Kodierung der vorgeschlagenen Therapiemaßnahme`code`
-    * Der Status der einzelnen Aktivitäten unter`status` gemäß den HL7 FHIR status codes
-    * Bei Abbruch: Die Angabe, ob therapiespezifisch auf Wunsch des Patienten abgebrochen wurde, unter `statusReason`
+Each tumor board with therapy recommendation SHOULD be stored as a separate resource and refer to the primary diagnosis via `CarePlan.addresses(Reference(Condition))`.
 
-Die CarePlan-Ressource sieht eine verpflichtende Angabe des `status`-Elements einer `activity` vor. Diese Informationen sind in dieser Form nicht im oBDS  enthalten. Die tatsächlich erfolgten Therapien werden jedoch in den Krebsregisterdaten erfasst und SOLLEN  über `Procedure.basedOn(Reference(CarePlan))` auf die Tumorkonferenz-Ressource verweisen. 
+### Future Developments
+As part of the MII extension module Molecular Tumor Board, the modeling of therapy recommendations has been revised. In the current profiling, the recommendations are all explicitly coded under CarePlan.activity. For later use, this is impractical as they cannot be logically referenced from the outside. Therefore, it is planned to adopt changes to the CarePlan resource from FHIR version R5, so that the recommendations are no longer explicitly listed but can be referenced as specific `ServiceRequests` or `MedicationRequests` via `CarePlan.plannedActivityReference`. Similarly, actual procedures and medications can be referenced under `CarePlan.performedActivity`.
 
-Die Statusangaben geben den tatsächlichen Stand der Therapieempfehlung wieder. Für alle Statusangaben gilt das offizielle FHIR CarePlanActivityStatus-CodeSet.  
-https://www.hl7.org/fhir/R4/valueset-care-plan-activity-status.html  
-Es SOLLTEN folgende Status-Codes verwendet werden: 
-- `completed` bei abgeschlossener Therapie,
-- `on-hold` bei Therapieunterbrechung für noch nicht gestartete Therapie
-- `stopped` bei Therapieunterbrechung für bereits gestarteter Therapie
-- `unknown` für unbekannt, soweit keine Informationen über den Status vorliegen. 
-
-Bei den Statusangaben `on-hold` und `stopped` SOLL das Feld `statusReason` mit den Angaben aus dem oBDS-Feld 'Therapieabweichung auf Wunsch des Patienten'  befüllt werden.
-
-Jede Tumorkonferenz mit Therapieempfehlung SOLL als einzelne Ressource gespeichert und über `CarePlan.addresses(Reference(Condition))` auf die Primärdiagnose referenzieren. 
-
-### Zukünftige Entwicklungen
-Im Rahmen des MII-Erweiterungsmoduls Molekulares Tumorboard wurden die Modellierung der Therapieempfehlungen nochmal überarbeitet. In der derzzeitigen Profilierung werden die Empfehlungen alle explizit unter CarePlan.activity kodiert. Für die spätere Verwendung ist das insofern unpraktikabel, als dass diese nicht von außen logisch referenziert werden können. Es ist daher geplant, Änderungen an der CarePlan-Ressource aus der FHIR-Version R5 zu übernehmen, so dass die Empfehlungen nicht mehr explizit gelistet sind, sondern über `CarePlan.plannedActivityReference`als konkrete `ServiceRequests` bzw. `MedicationRequest` referenziert werden können. Auf die gleiche Art und Weise können tatsächlich stattgefundene Prozeduren und Medikationen unter `CarePlan.performedActivity`.
-
-Es wird hier in der nächsten Version zu einer Umprofilierung kommen, die keinen breaking change vorraussetzt, aber die Informationen anders strukturiert und die Erschließung von neuen FHIR-Ressourcen und Suchparametern erfordert.
-- Erstellung von Extensions für die Verwendung der R5-Elemente in R4 
-- Erstellung von Profile für Therapieempfehlungen (ServiceRequest / MedicationRequest)
-- Erstellung eines RequestGroup-Profils zur Abbildung von Kombinationstherapien
-
+This will result in a re-profiling in the next version, which does not require a breaking change but structures the information differently and requires the introduction of new FHIR resources and search parameters.
+- Creation of extensions for the use of R5 elements in R4
+- Creation of profiles for therapy recommendations (ServiceRequest / MedicationRequest)
+- Creation of a RequestGroup profile to represent combination therapies
 
 @```
 from 
@@ -55,19 +50,18 @@ select
     Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 ```
 
-
-### Inhalt
+### Content
 
 <tabs>
-  <tab title="Darstellung">{{tree, buttons}}</tab>
-  <tab title="Beschreibung"> 
+  <tab title="Representation">{{tree, buttons}}</tab>
+  <tab title="Description"> 
         @```
         from
 	        StructureDefinition
         where
 	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz'
         select
-	        Beschreibung: description
+	        Description: description
         with
             no header
         ```
@@ -80,7 +74,7 @@ select
             differential.element 
             where 
                 mustSupport = true 
-            select Feldname: id, Kurzbeschreibung: short, Hinweise: comment
+            select Field Name: id, Short Description: short, Notes: comment
         ```
   </tab>
   <tab title="XML">{{xml}}</tab>
@@ -90,22 +84,21 @@ select
 
 ---
 
-Mapping Datensatz zu FHIR
+Mapping dataset to FHIR
 
 @```
 from StructureDefinition 
 where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/Onkologie'
     for differential.element where id.contains('Tumorkonferenz')
     select 
-        Datensatz: short,
-        Erklaerung: definition, 
+        Dataset: short,
+        Explanation: definition, 
         FHIR: mapping[0].map 
-
 ```
 
 ---
 
-Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensatz.de/basisdatensatz) zu FHIR
+Mapping [Unified Oncological Basic Dataset (oBDS)](https://basisdatensatz.de/basisdatensatz) to FHIR
 
 @```
 from StructureDefinition 
@@ -120,77 +113,77 @@ where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Str
 
 ---
 
-**Suchparameter**
+**Search Parameters**
 
-Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombination:
+The following search parameters are relevant for the oncology module, also in combination:
 
-1. Der Suchparameter ```_id``` MUSS unterstützt werden:
+1. The search parameter ```_id``` MUST be supported:
 
-    Beispiele: 
+    Examples: 
 
     ```GET [base]/CarePlan?_id=1234```
     
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+    Application notes: Further information on searching by "_id" can be found in the [FHIR base specification - section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
-2. Der Suchparameter ```_profile``` MUSS unterstützt werden:
+2. The search parameter ```_profile``` MUST be supported:
 
-    Beispiele:
+    Examples:
     
     ```GET [base]/CarePlan?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz```
     
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
+    Application notes: Further information on searching by "_profile" can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#all).
 
-3. Der Suchparameter ```identifier``` MUSS unterstützt werden:
+3. The search parameter ```identifier``` MUST be supported:
 
-    Beispiele:
+    Examples:
     
     ```GET [base]/CarePlan?identifier=Tumorkonferenz_1```
     
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"].
+    Application notes: Further information on searching by "identifier" can be found in the [FHIR base specification - section "token"].
 
-4. Der Suchparameter ```category``` MUSS unterstützt werden:
-    Beispiele:
+4. The search parameter ```category``` MUST be supported:
+    Examples:
 
     ```GET [base]/CarePlan?category=http://snomed.info/sct|734163000```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"].
+    Application notes: Further information on searching by "category" can be found in the [FHIR base specification - section "token"].
 
-5. Der Suchparameter ```subject``` MUSS unterstützt werden:
-    Beispiele:
+5. The search parameter ```subject``` MUST be supported:
+    Examples:
     
     ```GET [base]/CarePlan?subject=Patient/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "identifier" oder Abschnitt "[type]"].
+    Application notes: Further information on searching by "subject" can be found in the [FHIR base specification - section "identifier" or section "[type]"].
 
-6. Der Suchparameter ```period``` MUSS unterstützt werden:
-    Beispiele:
+6. The search parameter ```period``` MUST be supported:
+    Examples:
     
     ```GET [base]/CarePlan?date=eq2022-01-01```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "date"].
+    Application notes: Further information on searching by "date" can be found in the [FHIR base specification - section "date"].
 
-7. Der Suchparameter ```contributor``` MUSS unterstützt werden:
-    Beispiele:
+7. The search parameter ```contributor``` MUST be supported:
+    Examples:
     
     ```GET [base]/CarePlan?contributor=Practitioner/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "identifier" oder Abschnitt "[type]"].
+    Application notes: Further information on searching by "contributor" can be found in the [FHIR base specification - section "identifier" or section "[type]"].
 
-8. Der Suchparameter ```addresses``` MUSS unterstützt werden:
-    Beispiele:
+8. The search parameter ```addresses``` MUST be supported:
+    Examples:
     
     ```GET [base]/CarePlan?addresses=Condition/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "identifier" oder Abschnitt "[type]"].
+    Application notes: Further information on searching by "addresses" can be found in the [FHIR base specification - section "identifier" or section "[type]"].
 
-9. Der Suchparameter ```activity-code``` MUSS unterstützt werden:
-    Beispiele:
+9. The search parameter ```activity-code``` MUST be supported:
+    Examples:
     
     ```GET [base]/CarePlan?activity-code=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapieempfehlung-typ|OP```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"].
+    Application notes: Further information on searching by "activity-code" can be found in the [FHIR base specification - section "token"].
 
-**Beispiele**
+**Examples**
 
 {{json:mii-exa-onko-tumorkonferenz-01}}
 

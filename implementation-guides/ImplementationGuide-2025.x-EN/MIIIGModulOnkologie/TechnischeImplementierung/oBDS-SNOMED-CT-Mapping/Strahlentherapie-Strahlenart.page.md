@@ -1,15 +1,15 @@
 ## {{page-title}}
-Die Strahlenart umfasst sowohl die Art der Strahlung als auch die Art der eingesetzten Radioaktiven Metabolite. Bis auf Tb-161 waren alle Strahlen in SNOMED-CT hinterlegt. 
+The type of radiation includes both the type of radiation and the type of radioactive metabolites used. Except for Tb-161, all types of radiation were included in SNOMED-CT.
 
 @```
 from ConceptMap 
 where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-strahlentherapie-strahlenart-sct' 
     for group.element
         select 
-            oBDS_Kodierung: code, 
+            oBDS_Coding: code, 
             oBDS_Label: display, 
             SNOMED_CT_ID: target.code, 
             SNOMED_CT_Name: target.display, 
-            Aequivalenzlevel: target.equivalence, 
-            Kommentar: target.comment  
+            Equivalence_Level: target.equivalence, 
+            Comment: target.comment  
 ```

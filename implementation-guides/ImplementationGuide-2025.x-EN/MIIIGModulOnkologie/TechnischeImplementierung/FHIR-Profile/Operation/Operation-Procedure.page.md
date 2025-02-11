@@ -6,38 +6,37 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 
 ## Operation
 
-Dieses Profil beschreibt eine Operation in der Onkologie. 
+This profile describes an operation in oncology.
 
-- Das Operationsprofil für die Onkologie ist vom Prozedurenmodul der MII abgeleitet und für oBDS-Inhalten zusätzlich ausspezifiziert. https://simplifier.net/guide/mii-ig-modul-prozedur-2024-de/MIIIGModulProzedur/TechnischeImplementierung/FHIRProfile/Prozedur-Procedure.page.md?version=current 
+- The oncology operation profile is derived from the MII procedure module and further specified for oBDS content. https://simplifier.net/guide/mii-ig-modul-prozedur-2024-de/MIIIGModulProzedur/TechnischeImplementierung/FHIRProfile/Prozedur-Procedure.page.md?version=current
 
-### Kategorie und Code
+### Category and Code
 
-- Die MII-Prozedur empfiehlt die Abbildung der Kategorie mittels der in SNOMED übertragenen OPS-Hauptkategorien (https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/ValueSet/procedures-category-sct) , wobei der SNOMED-Code `38771300` der OPS-Kategorie "5 - Operationen" entspricht. Laut oBDS kann hier aber in begründeten Fällen auch ein andere Kodierung (z.B. `103693007`	 für "1 - Diagnostische Maßnahmen") eigetragen werden. Die Kategorie wird aus diesem Grund nicht weiter eingeschränkt. 
-- Die genaue Art der Prozedur wird im Feld `Procedure.code` als OPS kodiert. Laut oBDS soll dabei möglichst präzise kodiert werden. 
-- Es SOLL genau ein OPS-Wert kodiert werden. Zusätzliche Prozeduren werden als einzelne Procedure-Ressourcen abgebildet. Eine OPS-Kodierung KANN durch eine SNOMED-CT-Kodierung ergänzt werden.   
-- Achtung: Innerhalb des Erweiterungsmoduls Onkologie wird die übergeorndete MII-Prozedur auch für die Abbildung der Strahlen- und Systemischen/abwartenden Therapie genutzt. Für die Besondheiten bei Kategorien und Code - siehe [Strahlentherapie:Procedure  ](https://simplifier.net/guide/mii-ig-modul-onkologie-2024-de/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Strahlentherapie/Strahlentherapie-Procedure.page.md?version=current) und [Systemische Therapie: Procedure](https://simplifier.net/guide/mii-ig-modul-onkologie-2024-de/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Systemische-Therapie/Systemische-Therapie-Procedure.page.md?version=current).  
-
+- The MII procedure recommends mapping the category using the OPS main categories transferred in SNOMED (https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/ValueSet/procedures-category-sct), where the SNOMED code `38771300` corresponds to the OPS category "5 - Operations". According to oBDS, however, another coding (e.g., `103693007` for "1 - Diagnostic measures") can be entered in justified cases. The category is therefore not further restricted.
+- The exact type of procedure is coded in the `Procedure.code` field as OPS. According to oBDS, it should be coded as precisely as possible.
+- Exactly one OPS value SHOULD be coded. Additional procedures are represented as individual Procedure resources. An OPS coding CAN be supplemented by a SNOMED-CT coding.
+- Note: Within the oncology extension module, the overarching MII procedure is also used for mapping radiotherapy and systemic/awaiting therapy. For specifics on categories and codes, see [Radiotherapy: Procedure](https://simplifier.net/guide/mii-ig-modul-onkologie-2024-de/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Strahlentherapie/Strahlentherapie-Procedure.page.md?version=current) and [Systemic Therapy: Procedure](https://simplifier.net/guide/mii-ig-modul-onkologie-2024-de/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Systemische-Therapie/Systemische-Therapie-Procedure.page.md?version=current).
 
 ### Extensions
 
-Das MII-Modul Prozedur besitzt bereits eine Extension [Durchführungsabsicht](https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht) mit Binding auf SNOMED-CT Codes. Da die Intention der OP im oBDS jedoch durch ein oBDS-spezifisches Antwortspektrum erfasst wird, wurde die Prozedur um eine zusätzliches Element "Intention" erweitert. Vorhandene Erweiterungen des MII-Moduls Prozedur sind optional und für das Mapping von oBDS nicht direkt relevant.
+The MII procedure module already has an extension [Implementation Intention](https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht) with binding to SNOMED-CT codes. Since the intention of the operation in the oBDS is captured by an oBDS-specific response spectrum, the procedure was extended by an additional element "Intention". Existing extensions of the MII procedure module are optional and not directly relevant for the mapping of oBDS.
 
-### Residualstatus und weitere Beobachtungen
-Der oBDS sieht bei Resektion von Tumorgewebe eine Erfassung des R-Status vor. 
-Je nach durchgeführter Prozedur soll die Beurteilung des Residualstatus dabei **lokal** oder **global** vorgenommen werden. Diese werden im oBDS als zwei verschieden Datenpunkte erfasst. In der vorliegenden FHIR-Profilierung ist der lokale Residualstatus (wenn zutreffend) unter Procedure.outcome kodiert. Der globale Residualstatus wird über eine eigene Observation erfasst (siehe Residualstatus: Observation.)
+### Residual Status and Other Observations
+The oBDS provides for the recording of the R-status when resecting tumor tissue.
+Depending on the procedure performed, the assessment of the residual status should be done **locally** or **globally**. These are recorded as two different data points in the oBDS. In the present FHIR profiling, the local residual status (if applicable) is coded under Procedure.outcome. The global residual status is recorded via a separate observation (see Residual Status: Observation).
 
-Es gibt nebem dem Residualstatus  weitere Datenpunkte, die auf eine Operation verweisen können und im oBDS gemeinsam mit dieser gemeldet werden. Dazu gehören die histologischen Untersuchungen (Lymphknoten, Grading) sowie ICD-O Morphologie, TNM und/oder ggfs. weitere Klassifikationen.
-
----
-
-#### Verweise auf andere Profile
-Eine im Rahmen der Krebsregister erfasste und gemeldete Operation basiert häufig auf einer Therapieempfehlung eines Tumorboards. In diesem Fall sollte eine Verknüpfung der Elemente über `Procedure.basedOn(Reference(CarePlan))` hergestellt werden.
-Weiterhin verweist die Operation über `Procedure.reasonReference` auf die Primärdiagnose.  
+In addition to the residual status, there are other data points that can refer to an operation and are reported together with it in the oBDS. These include histological examinations (lymph nodes, grading) as well as ICD-O morphology, TNM, and/or other classifications if applicable.
 
 ---
 
-### Konformität 
-Die vorliegende Profilierung ist kompatibel mit dem Prozedurenprofil der ISiK-Basismodule Stufe 4. https://simplifier.net/isik-basis-v4/isikprozedur
+#### References to Other Profiles
+An operation recorded and reported as part of the cancer registry is often based on a therapy recommendation from a tumor board. In this case, a link between the elements should be established via `Procedure.basedOn(Reference(CarePlan))`.
+Furthermore, the operation refers to the primary diagnosis via `Procedure.reasonReference`.
+
+---
+
+### Conformity
+The present profiling is compatible with the procedure profile of the ISiK basic modules level 4. https://simplifier.net/isik-basis-v4/isikprozedur
 
 ---
 
@@ -50,18 +49,18 @@ select
     Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 ```
 
-### Inhalt
+### Content
 
 <tabs>
-  <tab title="Darstellung">{{tree, buttons}}</tab>
-  <tab title="Beschreibung"> 
+  <tab title="Representation">{{tree, buttons}}</tab>
+  <tab title="Description"> 
         @```
         from
 	        StructureDefinition
         where
 	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation'
         select
-	        Beschreibung: description
+	        Description: description
         with
             no header
         ```
@@ -74,7 +73,7 @@ select
             differential.element 
             where 
                 mustSupport = true 
-            select Feldname: id, Kurzbeschreibung: short, Hinweise: comment
+            select Field Name: id, Short Description: short, Notes: comment
         ```
   </tab>
   <tab title="XML">{{xml}}</tab>
@@ -84,22 +83,21 @@ select
 
 ---
 
-Mapping Datensatz zu FHIR
+Mapping dataset to FHIR
 
 @```
 from StructureDefinition 
 where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/Onkologie'
     for differential.element where id.contains('Operation')
     select 
-        Datensatz: short,
-        Erklaerung: definition, 
+        Dataset: short,
+        Explanation: definition, 
         FHIR: mapping[0].map 
-
 ```
 
 ---
 
-Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensatz.de/basisdatensatz) zu FHIR
+Mapping [Unified Oncological Basic Dataset (oBDS)](https://basisdatensatz.de/basisdatensatz) to FHIR
 
 @```
 from StructureDefinition 
@@ -114,115 +112,115 @@ where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Str
 
 ---
 
-**Suchparameter**
+**Search Parameters**
 
-Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombination:
+The following search parameters are relevant for the oncology module, also in combination:
 
-1. Der Suchparameter "_id" MUSS unterstützt werden:
+1. The search parameter "_id" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?_id=103270```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+    Application notes: Further information on searching by "_id" can be found in the [FHIR base specification - section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
-1. Der Suchparameter "_profile" MUSS unterstützt werden:
+1. The search parameter "_profile" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?_profile=https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+    Application notes: Further information on searching by "_profile" can be found in the [FHIR base specification - section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
-1. Der Suchparameter "status" MUSS unterstützt werden:
+1. The search parameter "status" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?status=completed```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.status" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).
+    Application notes: Further information on searching by "Procedure.status" can be found in the [FHIR base specification - section "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
-1. Der Suchparameter "category" MUSS unterstützt werden:
+1. The search parameter "category" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?category=http://snomed.info/sct|103693007```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.category" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).
+    Application notes: Further information on searching by "Procedure.category" can be found in the [FHIR base specification - section "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
-1. Der Suchparameter "code" MUSS unterstützt werden:
+1. The search parameter "code" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?code=http://fhir.de/CodeSystem/bfarm/ops|5-37```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.code" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).
+    Application notes: Further information on searching by "Procedure.code" can be found in the [FHIR base specification - section "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
-1. Der Suchparameter "date" MUSS unterstützt werden:
+1. The search parameter "date" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?date=2022-01-01```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.performed" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Date Search"](http://hl7.org/fhir/R4/search.html#date).
+    Application notes: Further information on searching by "Procedure.performed" can be found in the [FHIR base specification - section "Date Search"](http://hl7.org/fhir/R4/search.html#date).
 
-1. Der Suchparameter "subject" MUSS unterstützt werden:
+1. The search parameter "subject" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?subject=Patient/test```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.subject" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+    Application notes: Further information on searching by "Procedure.subject" can be found in the [FHIR base specification - section "reference"](http://hl7.org/fhir/R4/search.html#reference).
 
-1. Der Suchparameter "patient" MUSS unterstützt werden:
+1. The search parameter "patient" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?patient=Patient/test```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.subject" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+    Application notes: Further information on searching by "Procedure.subject" can be found in the [FHIR base specification - section "reference"](http://hl7.org/fhir/R4/search.html#reference).
 
-1. Der Suchparameter "bodySite" MUSS unterstützt werden:
+1. The search parameter "bodySite" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?bodySite=http://snomed.info/sct|80891009```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.bodySite" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).
+    Application notes: Further information on searching by "Procedure.bodySite" can be found in the [FHIR base specification - section "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
-1. Der Suchparameter "dokumentationsdatum" MUSS unterstützt werden:
+1. The search parameter "dokumentationsdatum" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?dokumentationsdatum=2022-01-01```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.extension:Dokumentationsdatum" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Date Search"](http://hl7.org/fhir/R4/search.html#date).
+    Application notes: Further information on searching by "Procedure.extension:Dokumentationsdatum" can be found in the [FHIR base specification - section "Date Search"](http://hl7.org/fhir/R4/search.html#date).
 
-1. Der Suchparameter "durchfuehrungsabsicht" MUSS unterstützt werden:
+1. The search parameter "durchfuehrungsabsicht" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?durchfuehrungsabsicht=http://snomed.info/sct|262202000```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.extension:Durchfuehrungsabsicht" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).
+    Application notes: Further information on searching by "Procedure.extension:Durchfuehrungsabsicht" can be found in the [FHIR base specification - section "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
-1. Der Suchparameter "outcome" MUSS unterstützt werden:
+1. The search parameter "outcome" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?outcome=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus|R1```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.extension:Durchfuehrungsabsicht" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).    
+    Application notes: Further information on searching by "Procedure.extension:Durchfuehrungsabsicht" can be found in the [FHIR base specification - section "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
-1.  Der Suchparameter "extension-intention" MUSS unterstützt werden:
+1. The search parameter "extension-intention" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Procedure?extension-intention=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention|K```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.extension:Durchfuehrungsabsicht" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).   
+    Application notes: Further information on searching by "Procedure.extension:Durchfuehrungsabsicht" can be found in the [FHIR base specification - section "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
-**Beispiele**
+**Examples**
 
 {{json:mii-exa-onko-operation-1}}
 

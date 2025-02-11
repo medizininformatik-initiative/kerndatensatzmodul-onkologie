@@ -1,72 +1,71 @@
 ---
 parent: 
 ---
-## Beschreibung von Szenarien für die Anwendung der Module
+## Description of Scenarios for the Application of the Modules
 
-Der oBDS dient als Grundlage für die Krebsregistermeldungen an die Landeskrebsregister. 
+The oBDS serves as the basis for cancer registry reports to the state cancer registries.
 
-Die vorliegende Profilierung des oBDS hat den Anspruch, die Daten, die bei der Krebsregistrierung anfallen, für andere Forschungsfelder nutzbar zu machen. 
+The present profiling of the oBDS aims to make the data collected during cancer registration usable for other research fields.
 
-So wird bei der FHIR-Abbildung des untenstehenden Beispiels klar, dass Informationen zu bildgebenden Verfahren, zu detaillierten Behandlungs- und Bestrahlungsschemata und zu genetischen Varianten außerhalb der Krebsregisterdaten in detaillierter Form vorliegen. Die vorliegende FHIR-Profilierung liefert damit einen wichtigen Beitrag zur Einbindung möglichst vieler Informationen für die onkologische Forschung. 
+Thus, in the FHIR mapping of the example below, it becomes clear that information on imaging procedures, detailed treatment and radiation schemes, and genetic variants are available in detailed form outside the cancer registry data. The present FHIR profiling thus makes an important contribution to integrating as much information as possible for oncological research.
 
+### Application Scenario of Guideline-Based Treatment
 
-### Anwendungsszenario einer leitliniengerechten Behandlung
+Disclaimer: The course of therapy corresponds to a possible guideline-based therapy, data and course are constructed for testing purposes, similarities with actual disease courses are coincidental.
 
-Disclaimer: Der Therapieverlauf entspricht einer möglichen leitliniengerechten Therapie, Daten und Verlauf sind für Testzwecke konstruiert, Ähnlichkeiten mit tatsächlichen Krankheitsverläufen sind zufällig.
+#### Textual Representation of the Exemplary Course of Therapy
 
-#### Textuelle Darstellung des beispielhaften Therapieverlaufs
+* Kim Musterperson, born 14.03.1956
 
-* Kim Musterperson, geb. 14.03.1956
+* 10.06.2021 CT Abdomen with contrast: Suspected peritoneal carcinomatosis, ascites throughout the abdominal cavity, mass in the right ovary. Mesenteric retroperitoneal lymph node metastases, suspected liver metastasis.
 
-* 10.06.2021 CT Abdomen mit KM: V.a. Peritonealkarzinose, Aszites im gesamten Bauchraum, Raumforderung Ovar rechts. Mesenteriale retroperitoneale LK-Metastasen, V.a. Lebermetastasierung
+* 15.06.2021 Ascites puncture: with malignant tumor cells. Cytologically possible ovarian cancer.
+* 22.06.2021 CT Thorax: no evidence of metastases.
 
-* 15.06.2021 Aszitespunktion: mit malignen Tumorzellen. Zytologisch mögliches Ovarial-CA.
-* 22.06.2021 CT Thorax: kein Hinweis auf Metastasen. 
+* Tumor board 25.06.2021: Clear CT correlate and cytological diagnosis of ovarian cancer.
+    * Neoadjuvant chemotherapy with 3 cycles of Carboplatin/Paclitaxel, interval debulking in the course.
+        * 05.07.21-25.07.21 Cycle 1 Carboplatin AUC5 d1, Paclitaxel 175 mg/m2, d1, repeat d21
+        * 26.07.21-15.08.21 Cycle 2 Carboplatin AUC5 d1, Paclitaxel 175 mg/m2, d1, repeat d21
+        * 16.08.21-05.09.21 Cycle 3 Carboplatin AUC5 d1, Paclitaxel 175 mg/m2, d1, repeat d21
+* 15.09.21 CT Thorax/Abdomen: Assessment
+Peritoneal carcinomatosis increasing, metastasis-suspect lymph nodes retroperitoneal. Suspected constant liver metastasis.
 
-* Tumorboard 25.06.2021: Eindeutiges CT-Korrelat und zytologisch ED Ovarial-CA. 
-    * Neoadjuvante Chemotherapie mit 3 Zyklen Carboplatin/Paxlitaxel, Intervall-Debulking im Verlauf. 
-        * 05.07.21-25.07.21 Z1 Carboplatin AUC5 d1, Paclitaxel 175 mg/m2, d1, Wdh. d21
-        * 26.07.21-15.08.21 Z2 Carboplatin AUC5 d1, Paclitaxel 175 mg/m2, d1, Wdh. d21
-        * 16.08.21-05.09.21 Z3 Carboplatin AUC5 d1, Paclitaxel 175 mg/m2, d1, Wdh. d21
-* 15.09.21 CT Thorax/Abdomen: Beurteilung
-Peritonelakarzinose zunehmend, metastasensuspekte Lymphknoten retroperitoneal. V.a. konstante Lebermetastasierung
+* 16.09.21 Tumor board:
+Significant tumor progression. Surgery for histological confirmation already planned, aiming for optimal debulking.
 
-* 16.09.21 Tumorboard: 
-Deutlicher Tumorprogress. OP zur histologischen Sicherung bereits geplant, optimales Debulking anstreben.
+* 30.09.2021 Surgery
+Interval debulking via longitudinal laparotomy, tumor resection via hysterectomy, bilateral adnexectomy, and atypical liver segment resection (segments II and V). Postoperative: R0.
 
-* 30.09.2021 OP
-Intervalldebulking mittels Längsschnittlaparotomie, Tumorresektion mittels Hysterektomie, bilateraler Adnexektomie, und atpyischer Lebersegmentresektion (Seg. II und V). Postoperativ: R0.
+* Pathological Report
+    * Histology: Resection specimen from 30.09.2021
+    * Neoplasm of the ovary (post neoadjuvant therapy) (ICD-10-C56) Ovary NOS (ICD-O-C56.9) Examination material: Resection specimen WHO type: Serous adenocarcinoma (ICD-O M-8441/3)
+    * Local tumor spread: Ovarian tumor left with a maximum size of 2.2 cm and tumor-infiltrated capsule with evidence of tumor cells on the ovarian surface, proportion of viable tumor cells about 80%.
+    * UICC classification (8th edition): ypT3c. pM1b (HEP) L1. V0. Pn0 FIGO: IVB
+    * Immunohistochemistry: (example for some markers, in a real report there are many more) Occasionally strong nuclear expression of the progesterone receptor. Positivity for P16 in the tumor. The proliferation index by MIB-1 is up to 38%. Microscopy: Partial evidence of mucin.
+    * Comment: The immunohistochemical marker profile is consistent with a high-grade serous adenocarcinoma of the ovary (post neoadjuvant chemotherapy).
 
-* Pathologischer Bericht
-    * Histologie: Resektat vom 30.09.2021
-    * Neoplasie des Ovars (Z.n. neoadjuvanter Therapie) (ICD-10-C56) Ovar o.n.A. (ICD-O-C56.9) Untersuchungsmaterial: Resektat WHO-Typ: Seröses Adenokarzinom (ICD-O M-8441/3) 
-    * Lokale Tumorausbreitung: Ovartumor links mit einer max. Größe von 2,2 cm und tumorinfiltrierter Kapsel mit Nachweis von Tumorzellen auf der Ovaroberfläche, Anteil vitaler Tumorzellen von ca. 80 %. 
-    * UICC-Klassifikation (8. Auflage): ypT3c. pM1b (HEP) L1. V0. Pn0 FIGO: IVB 
-    * Immunhistochemie: (Beispiel für einige Marker, in echtem Befund stehen viel mehr)  Vereinzelt kräftige nukleäre Expression des Progesteronrezeptors. Positivität für P16 im Tumor. Der Proliferationsindex mittels MIB-1 liegt bei max. 38%. Mikroskopie: Partieller Nachweis von Muzin. 
-    * Kommentar: Das immunhistochemische Markerprofil passt zu einem high-grade serösen Adenokarzinom des Ovars (Z.n. neoadjuvanter CTX)
+* Tumor board 25.10.2021:
+    * Macroscopic complete resection achieved by surgery.
+    * However, progression under neoadjuvant therapy.
+    * Therefore switch to Carboplatin/Gemcitabine
+    * Human genetic consultation recommended
 
-* Tumorboard 25.10.2021 :
-    * Durch OP makroskopische Komplett-Resektion erreicht.
-    * Jedoch Progress unter Neoadjuvanz.
-    * Daher Umstellung auf Carboplatin/Gemcitabine
-    * Humangenetische Vorstellung empfohlen
-
-* Systemische Therapie
-    * 08.11.21-28.11.21 Z1 Carboplatin AUC 4 d1, Gemcitabin 1000mg/m2 d1+d8 Wdh d22
-    * 29.11.21- 19.12.21  Z2 Carboplatin AUC 4 d1, Gemcitabin 1000mg/m2 d1+d8 Wdh d22
-    * 20.12.21-09.01.22 Z3 Carboplatin AUC 4 d1, Gemcitabin 1000mg/m2 d1+d8 Wdh d22
+* Systemic Therapy
+    * 08.11.21-28.11.21 Cycle 1 Carboplatin AUC 4 d1, Gemcitabine 1000mg/m2 d1+d8 repeat d22
+    * 29.11.21-19.12.21 Cycle 2 Carboplatin AUC 4 d1, Gemcitabine 1000mg/m2 d1+d8 repeat d22
+    * 20.12.21-09.01.22 Cycle 3 Carboplatin AUC 4 d1, Gemcitabine 1000mg/m2 d1+d8 repeat d22
 * 15.01.22 CT: Abdomen:
-    * Regredienz der bekannten Peritonealkarzinose
-    * Leber ohne eindeutigen Hinweis auf Metastasierung, bei Z.n. atpyischer Lebersegmentresektion a.e. narbige Veränderungen
-    * Beurteilung: Regredienter Befund, bei Z.n. zwischenzeitig operativem Debulking
+    * Regression of the known peritoneal carcinomatosis
+    * Liver without clear evidence of metastasis, post atypical liver segment resection likely scar changes
+    * Assessment: Regressive findings, post interim surgical debulking
 
-* 20.01.22 Tumorboard: 
-    * Erhaltungstherapie mit Niraparib bei BRCAwt 
-    * Restaging in 3 Monaten mit CT Thorax/Abdomen und TM
-* 25.01.22 Beginn Niraparib 300mg d1-28 wdh d28
+* 20.01.22 Tumor board:
+    * Maintenance therapy with Niraparib in BRCA wild type
+    * Restaging in 3 months with CT Thorax/Abdomen and tumor markers
+* 25.01.22 Start Niraparib 300mg d1-28 repeat d28
 
-#### Grafische Darstellung des beispielhaften Therapieverlaufs
+#### Graphical Representation of the Exemplary Course of Therapy
 
 <img src="https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/refs/heads/dev/implementation-guides/ImplementationGuide-2025.x-DE/Images/MII_Onko_Example_Patient.svg" width="100%"></br>
 
-Die Bildatei kann [hier (Github)](https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/refs/heads/dev/implementation-guides/ImplementationGuide-2025.x-DE/Images/MII_Onko_Example_Timeline.svg) zur besseren Darstellung einzeln betrachtet und heruntergeladen werden (Bereitstellung als `.svg`).
+The image file can be viewed and downloaded separately [here (Github)](https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/refs/heads/dev/implementation-guides/ImplementationGuide-2025.x-DE/Images/MII_Onko_Example_Timeline.svg) for better representation (provided as `.svg`).

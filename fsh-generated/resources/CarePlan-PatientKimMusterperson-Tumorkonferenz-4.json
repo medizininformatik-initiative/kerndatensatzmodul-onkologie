@@ -13,7 +13,7 @@
         {
           "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ",
           "code": "postop",
-          "display": "posttherapeutische Tumorkonferenz (manche Tumoren werden nicht operiert)"
+          "display": "postoperative Tumorkonferenz (Planung der postoperativen Therapie, z. B. zur Frage adjuvante Therapie)"
         }
       ]
     }
@@ -21,7 +21,7 @@
   "subject": {
     "reference": "Patient/PatientKimMusterperson"
   },
-  "status": "in-progress",
+  "status": "active",
   "created": "2022-01-20",
   "replaces": [
     {
@@ -44,7 +44,7 @@
             }
           ]
         },
-        "status": "active",
+        "status": "in-progress",
         "statusReason": {
           "coding": [
             {

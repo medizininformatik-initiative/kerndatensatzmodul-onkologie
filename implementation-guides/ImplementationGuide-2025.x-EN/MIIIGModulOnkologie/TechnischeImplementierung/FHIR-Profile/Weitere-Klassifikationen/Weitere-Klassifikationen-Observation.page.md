@@ -6,18 +6,15 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 
 ## {{page-title}}
 
-Dieses Profil beschreibt weitere Tumorklassifikationen neben TMN. Neben entitätsspezifischen Klassifikationen (z.B. FIGO-Klassifikation bei gynäkologischen Tumoren) sind hier v.a. die hämatologischen Klassifikationen und die WHO-Klassifikation bei Tumoren des ZNS zu nennen. 
+ This profile describes additional tumor classifications besides TNM. In addition to entity-specific classifications (e.g., FIGO classification for gynecological tumors), hematological classifications and the WHO classification for CNS tumors are particularly noteworthy.
 
-Die Plattform §65c stellt einen Katalog bereit, wie die häufigsten Klassifikationen aus Harmonisierungsgründen **für die Krebsregistermeldung** zu kodieren sind. 
+The §65c platform provides a catalog on how the most common classifications **for cancer registry reporting** should be coded for harmonization reasons.
 https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532511/Weitere+Klassifikationen
 
+Due to the multitude of possible scales and scores, it is not possible to provide a comprehensive and universally valid catalog here, so the specific design is left to the manufacturers and systems. HL7 Germany provides guidance at the following link: https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Observation-Skalen-und-Scores.html
 
-Aufgrund der Vielzahl der möglichen Skalen und Scores ist es nich tmöglich, hier einen umfassenden und allgemeingültigen Katalog zu hinterlegen, so dass die konkrete Ausgestaltung den Herstellern und Systemen überlassen bleibt. HL7 Deutschland stellt dazu unter folgendem Link Hinweise bereit: https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Observation-Skalen-und-Scores.html  
-
-Folgende Klassifikation werden im Zukunft über die organspezifischen Module abgedeckt und sollen nicht mehr über weitere Klassifikationen kodiert werden: 
-* Gleasson-Score (Prostata) 
-
-
+The following classifications will be covered by organ-specific modules in the future and should no longer be coded via additional classifications:
+* Gleason Score (Prostate)
 
 @```
 from 
@@ -28,18 +25,18 @@ select
     Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 ```
 
-### Inhalt
+### Content
 
 <tabs>
-  <tab title="Darstellung">{{tree, buttons}}</tab>
-  <tab title="Beschreibung"> 
+  <tab title="Representation">{{tree, buttons}}</tab>
+  <tab title="Description"> 
         @```
         from
 	        StructureDefinition
         where
 	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen'
         select
-	        Beschreibung: description
+	        Description: description
         with
             no header
         ```
@@ -52,7 +49,7 @@ select
             differential.element 
             where 
                 mustSupport = true 
-            select Feldname: id, Kurzbeschreibung: short, Hinweise: comment
+            select Field Name: id, Short Description: short, Notes: comment
         ```
   </tab>
   <tab title="XML">{{xml}}</tab>
@@ -62,22 +59,21 @@ select
 
 ---
 
-Mapping Datensatz zu FHIR
+Mapping dataset to FHIR
 
 @```
 from StructureDefinition 
 where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/Onkologie'
     for differential.element where id.contains('Weitere Klassifikationen')
     select 
-        Datensatz: short,
-        Erklaerung: definition, 
+        Dataset: short,
+        Explanation: definition, 
         FHIR: mapping[0].map 
-
 ```
 
 ---
 
-Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensatz.de/basisdatensatz) zu FHIR
+Mapping [Unified Oncological Basic Dataset (oBDS)](https://basisdatensatz.de/basisdatensatz) to FHIR
 
 @```
 from StructureDefinition 
@@ -92,60 +88,59 @@ where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Str
 
 ---
 
-**Suchparameter**
+**Search Parameters**
 
-Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombination:
+The following search parameters are relevant for the oncology module, also in combination:
 
-1. Der Suchparameter ```_id``` MUSS unterstützt werden:
+1. The search parameter ```_id``` MUST be supported:
 
-    Beispiele: 
+    Examples: 
 
     ```GET [base]/Observation?_id=1234```
     
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+    Application notes: Further information on searching by "_id" can be found in the [FHIR base specification - section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
-2. Der Suchparameter "_profile" MUSS unterstützt werden:
+2. The search parameter "_profile" MUST be supported:
 
-    Beispiele:
+    Examples:
     
     ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen```
     
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
+    Application notes: Further information on searching by "_profile" can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#all).
 
+3. The search parameter "code" MUST be supported:
 
-3. Der Suchparameter "code" MUSS unterstützt werden:
-
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?code=http://fhir.de/CodeSystem/sct|184305005```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "code" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
+    Application notes: Further information on searching by "code" can be found in the FHIR base specification - section "token".
 
-4. Der Suchparameter "subject" MUSS unterstützt werden:
+4. The search parameter "subject" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?subject=Patient/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "subject" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+    Application notes: Further information on searching by "subject" can be found in the FHIR base specification - section "reference".
 
-5. Der Suchparameter "encounter" MUSS unterstützt werden:
+5. The search parameter "encounter" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?encounter=Encounter/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "encounter" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+    Application notes: Further information on searching by "encounter" can be found in the FHIR base specification - section "reference".
 
-6. Der Suchparameter "date" MUSS unterstützt werden:
+6. The search parameter "date" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?date=2024-02-08```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "date" finden sich in der FHIR-Basisspezifikation - Abschnitt "date".
+    Application notes: Further information on searching by "date" can be found in the FHIR base specification - section "date".
 
-**Beispiele**
+**Examples**
 
 {{json:mii-exa-onko-weitere-klassifikationen-1}}
 

@@ -4,23 +4,22 @@ topic: StrahlentherapieStellung
 subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop
 ---
 
-## Extensions von Strahlentherapie: Stellung
+## Extensions of Radiotherapy: Position
 
-Hier wird die Stellung zur OP innerhalb eines onkologischen Behandlungskontexts dargestellt. 
+This extension represents the position relative to surgery within an oncological treatment context.
 
-
-### Inhalt
+### Content
 
 <tabs>
-  <tab title="Darstellung">{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop}}</tab>
-  <tab title="Beschreibung"> 
+  <tab title="Representation">{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop}}</tab>
+  <tab title="Description"> 
         @```
         from
 	        StructureDefinition
         where
 	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop'
         select
-	        Beschreibung: description
+	        Description: description
         with
             no header
         ```
@@ -33,7 +32,7 @@ Hier wird die Stellung zur OP innerhalb eines onkologischen Behandlungskontexts 
             differential.element 
             where 
                 mustSupport = true 
-            select Feldname: id, Kurzbeschreibung: short, Hinweise: comment
+            select Field Name: id, Short Description: short, Notes: comment
         ```
   </tab>
   <tab title="XML">{{xml}}</tab>

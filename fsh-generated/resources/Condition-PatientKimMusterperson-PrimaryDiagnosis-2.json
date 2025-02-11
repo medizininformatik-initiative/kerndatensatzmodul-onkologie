@@ -42,7 +42,8 @@
   "clinicalStatus": {
     "coding": [
       {
-        "code": "active"
+        "code": "active",
+        "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
       }
     ]
   },
@@ -51,7 +52,8 @@
       {
         "code": "C48.2",
         "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-        "display": "Bösartige Neubildung des Retroperitoneums und Peritoneums - Peritoneum, nicht näher bezeichnet "
+        "version": "2020",
+        "display": "Bösartige Neubildung: Peritoneum, nicht näher bezeichnet"
       }
     ]
   }

@@ -1,6 +1,6 @@
 ---
 parent: 
 ---
-## Anwendungsfälle / Informationsmodell
+## Use Cases / Information model
 
 Diese Seite wurde absichtlich leer gelassen.

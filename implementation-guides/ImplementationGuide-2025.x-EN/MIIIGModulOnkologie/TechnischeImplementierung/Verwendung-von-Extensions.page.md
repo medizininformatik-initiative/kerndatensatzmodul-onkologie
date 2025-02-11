@@ -1,45 +1,43 @@
 ## {{page-title}}
 
-Die Umsetzung des oBDS erfolgt unter Verwendung von Extensions. Dies hat insbesondere mit der oBDS-Datenstruktur und den oBDS-spezifischen Codesystemen und dem Versuch zu tun, diese mit Modulen aus dem MII-Kerndatensatz abzubilden. 
+The implementation of the oBDS is done using extensions. This is particularly related to the oBDS data structure and the oBDS-specific code systems and the attempt to map them with modules from the MII core dataset.
 
-Die vorliegenden Extensions wurden mit dem Fokus auf die Integration in den MII-Kerndatensatz und die Verwendung als Sekundärdatennutzung der Krebsregisterdaten über das FDPG gestaltet. 
+The present extensions were designed with a focus on integration into the MII core dataset and use as secondary data utilization of cancer registry data via the FDPG.
 
-Da die Verwendung von Extensions im FHIR-Kontext nach Möglichkeit zu vermeiden ist, zumindest solange es sinnvolle alternative Möglichkeiten innerhalb es bestehenden FHIR-Datenmodell gibt, sollen im Folgenden Umsetzungsalternativen aufgezeigt und diskutiert werden. 
+Since the use of extensions in the FHIR context should be avoided if possible, at least as long as there are meaningful alternative options within the existing FHIR data model, implementation alternatives should be presented and discussed below.
 
-### Prozeduren-Extension (Intention, Stellung)
+### Procedures Extension (Intention, Position)
 __Intention__
-* Notwendigkeit der Extension: 
-    * die FHIR R4 Prozedur enthält kein Element, das die Behandlungsintention adäquat darstellen kann. 
-    * die MII-Prozedur enthält daher eine Extension [Durchführungsabsicht](https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht)
+* Necessity of the extension:
+    * The FHIR R4 Procedure does not contain an element that can adequately represent the treatment intention.
+    * The MII Procedure therefore contains an extension [Implementation Intention](https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht)
+    * CarePlan contains the element Intention; however, this describes the strength of the intention of the resource (how binding the resource is, i.e., plan, option, requirement, etc.) and therefore cannot be used for coding the treatment intention in the sense of the oBDS.
+* Alternative proposal:
+    * Possibly, a consensus SNOMED mapping can achieve agreement so that the treatment intention is directly captured in SNOMED-CT and thus implemented using the extension [Implementation Intention](https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht).
 
-    * CarePlan enthält das Element Intention ; dieses beschreibt jedoch die Stärke der Intention  der Ressource (wie bindend die Ressource ist, also Plan, Option, Anforderung etc.) und kann damit nicht für die Kodierung der Behandlungsabsicht im Sinne des oBDS genutzt werden
-* Alternativer Vorschlag
-    * Eventuell kann über ein konsentiertes SNOMED-Mapping eine Übereinstimmung erreicht werden, so dass die Behandlungintention direkt in SNOMED-CT erfasst wird und so mittels der Extension [Durchführungsabsicht](https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht) durchgeführt werden kann. 
+__Position__
+* The position of a radiation or systemic therapy cannot be represented by the previous FHIR procedures. Mapping via another resource (e.g., in CarePlan as part of the tumor board) was discussed but not considered advantageous.
 
-__Stellung__
-* Die Stellung einer Strahlen- oder Systemischen Therapie kann über die bisherigen FHIR-Prozeduren nicht abgebildet werden. Eine Abbildung über eine andere Ressource (z.B. in CarePlan als Teil der Tumorkonferenz) wurde diskutiert, aber als nicht vorteilhafter eingeschätzt. 
+### Radiotherapy Radiation Extension
+* Necessity of the extension: Mapping the complex oBDS radiation type via traditional FHIR resources is currently only partially possible.
+* Representation of individual radiations in MII is not possible, as mandatory OPS codes or SNOMED-CT codes must be specified, which are not available for all oBDS data fields.
 
+* Alternative proposal:
+    * Continue radiotherapy as MII_Procedure
+    * Define radiation as R4 Procedure
+        * bodySite for target area, with laterality extension
+        * code as application type
+        * method as slice for radiation type
+        * Mapping of dose and boost still via extensions
 
-### Strahlentherapie-Bestrahlungs-Extension
-* Notwendigkeit der Extension: Abbildung des komplexen oBDS-Bestrahlungs-Typ über traditionelle FHIR-Ressourcen derzeitig nur bedingt möglich. 
-* Darstellung der Einzelbestrahlungen MII nicht möglich, da jeweils verpflichtende OPS-Codes oder SNOMED-CT-Codes angegeben werden müssen, die nicht für alle oBDS-Datenfelder vorliegen
+### TNM (c/p, itc, sn) Extensions
 
-* Alternativer Vorschlag
-    * Strahlentherapie weiter as MII_Prozedur
-    * Bestrahlung als R4 Prozedur definieren
-        * bodySite für Zielgebiet, mit Lateralitätsextension
-        * code als Applikationsart 
-        * method als Slice für und Strahlenart
-        * Abbildung von Dosis und Boost weiterhin über Extensions
+Alternative implementations:
+* As individual observations with existing TNM grouper logic
+    * Advantage: behaves the same as other categories and symbols
+    * Disadvantage: does not occur independently, close coupling to T/N/M classification profiles necessary
+* As part of the T/N/M categories (e.g., component)
 
-### TNM (c/p, itc,sn) -Extensions
-
-Alternative Umsetzungen: 
-* als Einzelobservations mit bestehender TNM-Grouperlogik
-    * Vorteil: verhält sich genauso wie andere Kategorien und Symbole
-    * Nachteil: kommt nicht eigenständig vor, enge Kopplung an T/N/M_Klassifikationsprofile notwendig
-* als Teil der T/N/M Kategorien (z.B. component)
-    
 
 
 

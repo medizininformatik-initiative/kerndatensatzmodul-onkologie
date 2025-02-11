@@ -1,19 +1,18 @@
 ## {{page-title}}
 
-Das Feld Therapie Ende Grund wird sowohl von Strahlentherapie als auch von Systemischer Therapie angegeben.
+The field Therapy End Reason is specified for both radiotherapy and systemic therapy.
 
-Problematisch beim Mappen war hier vor allem das Zusammenspiel aus Outcome und
-Grund/Modifikator, so dass fast immer zwei Konzepte in einer Antwortmöglichkeit gemeinsam auftreten. 
+The main challenge in mapping was the interplay of outcome and reason/modifier, so that almost always two concepts appear together in one response option.
 
- @```
+@```
 from ConceptMap 
 where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-therapie-ende-sct' 
     for group.element
         select 
-            oBDS_Kodierung: code, 
+            oBDS_Coding: code, 
             oBDS_Label: display, 
             SNOMED_CT_ID: target.code, 
             SNOMED_CT_Name: target.display, 
-            Aequivalenzlevel: target.equivalence, 
-            Kommentar: target.comment  
+            Equivalence_Level: target.equivalence, 
+            Comment: target.comment  
 ```

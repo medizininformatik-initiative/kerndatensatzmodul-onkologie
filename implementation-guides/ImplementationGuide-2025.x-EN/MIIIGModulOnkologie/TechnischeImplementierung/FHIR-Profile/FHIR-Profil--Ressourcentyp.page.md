@@ -1,12 +1,12 @@
 ---
 parent: 
 ---
-## FHIR-Profil (Ressourcentyp)
+## FHIR Profile (Resource Type)
 
-* Beschreibung
-* Inhalt 
-* Hinweise FHIR-Element Erklärung
-* Mapping des Logical Models auf FHIR
-* Constraints Invarianten
-* Suchparameter
-* Beispielinstanzen
+* Description
+* Content 
+* Notes FHIR Element Explanation
+* Mapping of the Logical Models to FHIR
+* Constraints Invariants
+* Search Parameters
+* Example Instances

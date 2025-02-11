@@ -4,24 +4,23 @@ topic: HistologyMorphologyBehaviourExtension
 subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3
 ---
 
-## Extensions von Operation
+## Extensions of Operation
 
-- Diese Extension ersetzt den vorheringen ICD-O-3-Slice in der MII-Diagnose. 
-- In der ursprünglichen Profilierung wurde auf demICD-O-3-Slice des `Condition.code`-Elements aufgebaut. Gleichzeitig enthält das `Condition.code`-Feld auch die ICD-10-Kodierung der onkologischen Diagnose. In der Kommentierungsphase wurde jedoch angemerkt, dass eine ICD-O-3-Morphologie ein inhaltlich anderes klinisches Konzept beschreibt als eine ICD-10-kodierte Diagnose. Ein Darstellung im gleichen CodeableConcept widerspricht daher gängigen FHIR-Modellierungskonventionen. Daher wurde sich für eine Modellierung als Extension vergleichbar mit mCode entschieden. Die Abbildung der ICD-O-3-Topographie über `Condition.bodySite` ist davon nicht beeinträchtigt. Weitere Histologien, die im Rahmen einer Verlaufskontrolle vorgenommen werden, sollen weiterhin über das Verlaufshistologieprofil (Observation.bodySite und Observation.valueCodeableConcept) abgebildet werden;  die vorliegende Extension findet darin keine Verwendung. 
+- This extension replaces the previous ICD-O-3 slice in the MII diagnosis.
+- In the original profiling, the ICD-O-3 slice of the `Condition.code` element was used. At the same time, the `Condition.code` field also contains the ICD-10 coding of the oncological diagnosis. However, during the commenting phase, it was noted that an ICD-O-3 morphology describes a different clinical concept than an ICD-10 coded diagnosis. Therefore, representing them in the same CodeableConcept contradicts common FHIR modeling conventions. Hence, it was decided to model it as an extension comparable to mCode. The mapping of the ICD-O-3 topography via `Condition.bodySite` is not affected by this. Further histologies performed as part of follow-up should continue to be mapped via the follow-up histology profile (Observation.bodySite and Observation.valueCodeableConcept); this extension is not used in that context.
 
-
-### Inhalt
+### Content
 
 <tabs>
-  <tab title="Darstellung">{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3}}</tab>
-  <tab title="Beschreibung"> 
+  <tab title="Representation">{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3}}</tab>
+  <tab title="Description"> 
         @```
         from
 	        StructureDefinition
         where
 	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3'
         select
-	        Beschreibung: description
+	        Description: description
         with
             no header
         ```
@@ -34,7 +33,7 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
             differential.element 
             where 
                 mustSupport = true 
-            select Feldname: id, Kurzbeschreibung: short, Hinweise: comment
+            select Field Name: id, Short Description: short, Notes: comment
         ```
   </tab>
   <tab title="XML">{{xml}}</tab>
@@ -43,3 +42,4 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 </tabs>
 
 ---
+````

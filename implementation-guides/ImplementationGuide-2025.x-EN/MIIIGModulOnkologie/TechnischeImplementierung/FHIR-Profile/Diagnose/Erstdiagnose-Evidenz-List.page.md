@@ -6,16 +6,12 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 
 ## {{page-title}}
 
-Die List-Ressource ist eine flache Sammlung von Ressourcen und bietet Funktionen für die Verwaltung der Sammlung. In diesem Fall dient die Ressource als Sammlung der Observationen und Befundberichte, die zum Zeitpunkt der onkologischen Erstdiagnose bekannt sind. Dazu gehören beispielsweise eine TNM-Klassifikation sowie weitere diagnostisch relevante Klassifikationen, Fernmetastasen, Histologien etc. 
+The List resource is a flat collection of resources and provides functions for managing the collection. In this case, the resource serves as a collection of observations and diagnostic reports known at the time of the initial oncological diagnosis. This includes, for example, a TNM classification as well as other diagnostically relevant classifications, distant metastases, histologies, etc.
 
+The evidence list itself is not part of the oBDS but is intended to permanently record the status at the time of the initial diagnosis.
 
-Die Evidenz-Liste selbst ist nicht Teil des oBDS, sondern soll den Stand zum Zeitpunkt der Erstdiagnose dauerhaft festhalten.
-
-* Die Liste **SOLLTE** auf Basis der Inhalte erstellt werden, die vor bzw. zum Zeitpunkt der Erstdiagnosestellung bekannt waren.
-* Dazu **KÖNNEN** die Einträge direkt aus der Diagnosemeldung übernommen werden. 
-
-
-
+* The list **SHOULD** be created based on the contents known before or at the time of the initial diagnosis.
+* The entries **CAN** be directly taken from the diagnosis report.
 
 @```
 from 
@@ -27,19 +23,18 @@ select
 
 ```
 
-
-### Inhalt
+### Content
 
 <tabs>
-  <tab title="Darstellung">{{tree, buttons}}</tab>
-  <tab title="Beschreibung"> 
+  <tab title="Representation">{{tree, buttons}}</tab>
+  <tab title="Description"> 
         @```
         from
 	        StructureDefinition
         where
 	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-liste-evidenz-erstdiagnose'
         select
-	        Beschreibung: description
+	        Description: description
         with
             no header
         ```
@@ -52,7 +47,7 @@ select
             differential.element 
             where 
                 mustSupport = true 
-            select Feldname: id, Kurzbeschreibung: short, Hinweise: comment
+            select Field Name: id, Short Description: short, Notes: comment
         ```
   </tab>
   <tab title="XML">{{xml}}</tab>
@@ -62,62 +57,27 @@ select
 
 ---
 
+**Search Parameters**
 
+The following search parameters are relevant for the oncology module, also in combination:
 
----
+1. The search parameter ```_id``` MUST be supported:
 
-**Suchparameter**
-
-Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombination:
-
-1. Der Suchparameter ```_id``` MUSS unterstützt werden:
-
-    Beispiele: 
+    Examples: 
 
     ```GET [base]/Condition?_id=1234```
     
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+    Application notes: Further information on searching by "_id" can be found in the [FHIR base specification - section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
-2. Der Suchparameter "_profile" MUSS unterstützt werden:
+2. The search parameter "_profile" MUST be supported:
 
-    Beispiele:
+    Examples:
     
     ```GET [base]/Condition?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose```
     
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
-1. Der Suchparameter ```_id``` MUSS unterstützt werden:
+    Application notes: Further information on searching by "_profile" can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#all).
 
-    Beispiele: 
-
-    ```GET [base]/Condition?_id=1234```
-    
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
-
-2. Der Suchparameter "_profile" MUSS unterstützt werden:
-
-    Beispiele:
-    
-    ```GET [base]/Condition?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose```
-    
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
-
-1. Der Suchparameter ```_id``` MUSS unterstützt werden:
-
-    Beispiele: 
-
-    ```GET [base]/Condition?_id=1234```
-    
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
-
-2. Der Suchparameter "_profile" MUSS unterstützt werden:
-
-    Beispiele:
-    
-    ```GET [base]/Condition?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose```
-    
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
-
-**Beispiele**
+**Examples**
 
 {{json:mii-exa-onko-liste-evidenz-erstdiagnose-1}}
 

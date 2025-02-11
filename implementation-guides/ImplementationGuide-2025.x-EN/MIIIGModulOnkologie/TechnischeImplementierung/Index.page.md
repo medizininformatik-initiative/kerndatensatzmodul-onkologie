@@ -1,6 +1,6 @@
 ---
 parent: 
 ---
-## Technische Implementierung
+## Technical Implementation 
 
 Diese Seite wurde absichtlich leer gelassen.

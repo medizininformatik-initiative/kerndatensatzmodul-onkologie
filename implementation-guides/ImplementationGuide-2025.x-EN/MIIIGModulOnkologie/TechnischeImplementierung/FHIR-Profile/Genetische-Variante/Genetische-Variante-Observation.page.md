@@ -6,52 +6,46 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 
 ## {{page-title}}
 
+### Context
 
+Information on genetic variants has been recorded as part of the oBDS in oncology since version 2021. The recording of a variant is done via two data fields:
+* 'Genetic Variant Name' as free text
+* 'Genetic Variant Expression' as oBDS-specific codes for interpretation.
 
+The MII already offers a structure for the exchange of genetic findings with the Molecular Genetic Report (MolGenBB). The MolGenBB is based on the GenomicReport (version STU2) of the international HL7 Clinical Genomics Working Group and uses international terminologies and nomenclatures such as:
+* **HGNC** for the unique description of gene names
+* **HGVS** for the description of variants in the coding and non-coding DNA regions as well as for proteins
+* **ISCN** for the description of cytogenomic position and structural variants
+* **Sequence Ontology** for the semantic annotation of variants
 
-### Kontext
+It is assumed that genetic laboratories and bioinformatics pipelines work based on these classifications or can map them.
 
-Die Informationen zu genetischen Varianten werden seit der Version 2021 als Teil des oBDS erfasst. Die Erfassung einer Variante erfolgt dabei über zwei Datenfelder: 
-* 'Genetische Variante Name' als Freitext 
-* 'Genetische Variante Ausprägung' als oBDS-spezifische Codes für die Interpretation. 
-
-Die MII bietet mit dem Molekulargenetischen Befundbericht (MolGenBB) bereits eine Struktur für den Austausch genetischer Befunde. Der MolGenBB basiert auf dem GenomicReport (Version STU2) der internationalen HL7 Clinical Genomics Working Group und verwendet internationale Terminologien und Nomenklaturen wie: 
-* **HGNC** für die eindeutige Beschreibung von Gennamen
-* **HGVS** für die Beschreibung von Varianten im kodierenden und nicht-kodierenden DNA-Bereich sowie für Proteine
-* **ISCN** für Beschreibung cytogenomischer Position und strukturellen Varianten 
-* **Sequence Ontology** für die semantische Annotation der Varianten
-
-Es ist davon auszugehen, dass die genetischen Labore und bioinformatischen Pipelines auf Basis dieser Klassifikationen arbeiten oder diese abbilden können. 
-
-Die grobkörnige Erfassung der Variantendaten im oBDS macht jedoch ein direktes Mapping auf die oben genannten Terminologien und Nomenklaturen unmöglich. 
-
+However, the coarse-grained recording of variant data in the oBDS makes direct mapping to the above-mentioned terminologies and nomenclatures impossible.
 
 ### Conformance Statements
-Nach Möglichkeit **SOLLTE** eine genauere Variantenbeschreibung über die MII Variante erfolgen. 
+Where possible, a more precise variant description **SHOULD** be done via the MII variant.
 
-Eine Einbindung dieser Varianten **SOLLTE** über die Einbettung in den MII Molekulargenetischen Befundbericht `DiagnosticReport`und die MII Molekulargenetische Anforderung `ServiceRequest` erfolgen. 
+The inclusion of these variants **SHOULD** be done by embedding them in the MII Molecular Genetic Report `DiagnosticReport` and the MII Molecular Genetic Request `ServiceRequest`.
 
-Für den Fall, dass diese Module an den DIZ-Standorten gar nicht, noch nicht oder nur teilweise implementierbar sind, **SOLL** ein direktes Mapping der oBDS-Felder auf folgende Felder erfolgen:  
-* `Observation.note` für Variante Name
-* `Observation.interpretation` für die Ausprägung der Variante. 
+In the event that these modules cannot be implemented at the DIZ sites at all, not yet, or only partially, a direct mapping of the oBDS fields to the following fields **SHOULD** be done:
+* `Observation.note` for Variant Name
+* `Observation.interpretation` for the expression of the variant.
 
-### Übersicht MII Variante
-Das Variantenprofil des Molekularen Befundberichts ist hier zu finden: 
+### Overview MII Variant
+The variant profile of the Molecular Report can be found here:
 https://simplifier.net/medizininformatikinitiative-modulomics/sdmiimolgenvariante
 
-Bei der Verwendung der MII Variante sind folgende Datenfelder zur Konformanz zwingend erforderlich: 
-* `subject`: Referenz auf einen Patient
-* `code` : fester LOINC-Code( 69548-6) zur Identifikation als Untersuchung einer genetischen Variante
-* `status` :  HL7 Status
-* `category`: fester HL7-Code zur Einordnung als Laborwert 
+When using the MII variant, the following data fields are mandatory for conformance:
+* `subject`: Reference to a patient
+* `code`: fixed LOINC code (69548-6) for identification as a genetic variant examination
+* `status`: HL7 status
+* `category`: fixed HL7 code for classification as a laboratory value
 
-Optional können darüber hinaus folgende Angaben gemacht werden: 
-* `specimen`:  Referenz auf die Bioprobe 
-* `method`: Methodik der Untersuchung 
-* `valueCodeableConcept` Varianten-Assessment (präsent, nicht präsent, nicht gecalled, unbestimmt)
-* `component`: alle weiteren Details über die methodische Durchführung und Auswertung sowie Varianteninformationen   
-
-
+Additionally, the following information can be provided:
+* `specimen`: Reference to the biological sample
+* `method`: Methodology of the examination
+* `valueCodeableConcept`: Variant assessment (present, not present, not called, indeterminate)
+* `component`: all other details about the methodological implementation and evaluation as well as variant information
 
 @```
 from 
@@ -62,19 +56,18 @@ select
     Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 ```
 
-
-### Inhalt
+### Content
 
 <tabs>
-  <tab title="Darstellung">{{tree, buttons}}</tab>
-  <tab title="Beschreibung"> 
+  <tab title="Representation">{{tree, buttons}}</tab>
+  <tab title="Description"> 
         @```
         from
 	        StructureDefinition
         where
 	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-genetische-variante'
         select
-	        Beschreibung: description
+	        Description: description
         with
             no header
         ```
@@ -87,7 +80,7 @@ select
             differential.element 
             where 
                 mustSupport = true 
-            select Feldname: id, Kurzbeschreibung: short, Hinweise: comment
+            select Field Name: id, Short Description: short, Notes: comment
         ```
   </tab>
   <tab title="XML">{{xml}}</tab>
@@ -97,22 +90,21 @@ select
 
 ---
 
-Mapping Datensatz zu FHIR
+Mapping dataset to FHIR
 
 @```
 from StructureDefinition 
 where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/Onkologie'
     for differential.element where id.contains('GenetischeVariante')
     select 
-        Datensatz: short,
-        Erklaerung: definition, 
+        Dataset: short,
+        Explanation: definition, 
         FHIR: mapping[0].map 
-
 ```
 
 ---
 
-Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensatz.de/basisdatensatz) zu FHIR
+Mapping [Unified Oncological Basic Dataset (oBDS)](https://basisdatensatz.de/basisdatensatz) to FHIR
 
 @```
 from StructureDefinition 
@@ -127,115 +119,115 @@ where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Str
 
 ---
 
-**Suchparameter**
+**Search Parameters**
 
-Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombination:
+The following search parameters are relevant for the oncology module, also in combination:
 
-1. Der Suchparameter ```_id``` MUSS unterstützt werden:
+1. The search parameter ```_id``` MUST be supported:
 
-    Beispiele: 
+    Examples: 
 
     ```GET [base]/Observation?_id=1234```
     
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+    Application notes: Further information on searching by "_id" can be found in the [FHIR base specification - section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
-2. Der Suchparameter ```_profile``` MUSS unterstützt werden:
+2. The search parameter ```_profile``` MUST be supported:
 
-    Beispiele:
+    Examples:
     
     ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-genetische-variante```
     
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
+    Application notes: Further information on searching by "_profile" can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#all).
 
-3. Der Suchparameter "status" MUSS unterstützt werden:
+3. The search parameter "status" MUST be supported:
 
-    Beispiele:
+    Examples:
 
-    ```GET [base]/Observation?status=final
+    ```GET [base]/Observation?status=final```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "status" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".```
+    Application notes: Further information on searching by "status" can be found in the FHIR base specification - section "token".
 
-4. Der Suchparameter "category" MUSS unterstützt werden:
+4. The search parameter "category" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?category=http://terminology.hl7.org/CodeSystem/observation-category|laboratory```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "category" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
+    Application notes: Further information on searching by "category" can be found in the FHIR base specification - section "token".
 
-5. Der Suchparameter "code" MUSS unterstützt werden:
+5. The search parameter "code" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?code=http://fhir.de/CodeSystem/sct|184305005```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "code" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
+    Application notes: Further information on searching by "code" can be found in the FHIR base specification - section "token".
 
-6. Der Suchparameter "subject" MUSS unterstützt werden:
+6. The search parameter "subject" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?subject=Patient/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "subject" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+    Application notes: Further information on searching by "subject" can be found in the FHIR base specification - section "reference".
 
-7. Der Suchparameter "focus" MUSS unterstützt werden:
+7. The search parameter "focus" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?focus=Condition/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "focus" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+    Application notes: Further information on searching by "focus" can be found in the FHIR base specification - section "reference".
 
-8. Der Suchparameter "encounter" MUSS unterstützt werden:
+8. The search parameter "encounter" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?encounter=Encounter/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "encounter" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+    Application notes: Further information on searching by "encounter" can be found in the FHIR base specification - section "reference".
 
-9. Der Suchparameter "interpretation" MUSS unterstützt werden:
+9. The search parameter "interpretation" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?interpretation=http://snomed.info/sct|55446002```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "interpretation" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
+    Application notes: Further information on searching by "interpretation" can be found in the FHIR base specification - section "token".
 
-10. Der Suchparameter "method" MUSS unterstützt werden:
+10. The search parameter "method" MUST be supported:
 
-    Beispiele:
+    Examples:
 
-    ```GET [base]/Observation?method=http://loinc.org|LA26398-0
+    ```GET [base]/Observation?method=http://loinc.org|LA26398-0```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "method" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".```
+    Application notes: Further information on searching by "method" can be found in the FHIR base specification - section "token".
 
-11. Der Suchparameter "specimen" MUSS unterstützt werden:
+11. The search parameter "specimen" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?specimen=Specimen/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "specimen" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+    Application notes: Further information on searching by "specimen" can be found in the FHIR base specification - section "reference".
 
-12. Der Suchparameter "device" MUSS unterstützt werden:
+12. The search parameter "device" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?device-from=Device/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "device" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+    Application notes: Further information on searching by "device" can be found in the FHIR base specification - section "reference".
 
-13. Der Suchparameter "derived-from" MUSS unterstützt werden:
+13. The search parameter "derived-from" MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/Observation?derived-from=Observation/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "derived-from" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+    Application notes: Further information on searching by "derived-from" can be found in the FHIR base specification - section "reference".
 
-**Beispiele**
+**Examples**
 
 {{json:mii-exa-onko-genetische-variante-braf}}
 
