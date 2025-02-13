@@ -11,10 +11,25 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 * subject 1..1 MS
 * subject only Reference(Patient)
 * encounter 0..1 MS
-* code 0..1 MS
-* code from MII_VS_Onko_Strahlentherapie_Applikationsart
-* usedCode 0..* MS 
-* usedCode from  MII_VS_Onko_Strahlentherapie_Strahlenart  
+* code = $SCT#1287742003 "Radiotherapy (procedure)"
+
+* usedCode 2..* MS
+* usedCode.coding ^slicing.discriminator.type = #pattern
+* usedCode.coding ^slicing.discriminator.path = "$this"
+* usedCode.coding ^slicing.rules = #open
+* usedCode.coding contains 
+    Strahlenart 1..1 MS and
+    Applikationsart 1..1 MS
+
+
+* usedCode.coding[Strahlenart] ^short = "Strahlentherapie Strahlenart" 
+* usedCode.coding[Strahlenart] ^definition = "Gibt an, mit welcher Strahlenart (sowohl Strahlung als auch Metabolite) die Strahlentherapie durchgeführt wurde."
+* usedCode.coding[Strahlenart] from  MII_VS_Onko_Strahlentherapie_Strahlenart  
+
+* usedCode.coding[Applikationsart] ^short = "Strahlentherapie Applikationsart"
+* usedCode.coding[Applikationsart] ^definition = "Gibt an, mit welcher Technik die Strahlentherapie durchgeführt wurde."
+* usedCode.coding[Applikationsart] from MII_VS_Onko_Strahlentherapie_Applikationsart (extensible)
+
 * bodySite 0..1 MS
 * bodySite from MII_VS_Onko_Strahlentherapie_Zielgebiet (extensible)
 
