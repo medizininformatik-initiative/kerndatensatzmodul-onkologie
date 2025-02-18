@@ -1,6 +1,7 @@
 [mii-exa-onko-systemische-therapie-medikation1]: MedicationStatement-mii-exa-onko-systemische-therapie-medikation1.html
 [mii-exa-onko-systemische-therapie-medikation2]: MedicationStatement-mii-exa-onko-systemische-therapie-medikation2.html
-[mii-exa-onko-strahlentherapie-neu]: Procedure-mii-exa-onko-strahlentherapie-neu.html
+[mii-exa-onko-strahlentherapie-nuklearmedizin-1]: Procedure-mii-exa-onko-strahlentherapie-nuklearmedizin-1.html
+[mii-exa-onko-strahlentherapie-strahlentherapie-1]: Procedure-mii-exa-onko-strahlentherapie-strahlentherapie-1.html
 [mii-exa-onko-strahlentherapie]: Procedure-mii-exa-onko-strahlentherapie.html
 [mii-exa-onko-operation-1]: Procedure-mii-exa-onko-operation-1.html
 [mii-exa-onko-systemische-therapie-1]: Procedure-mii-exa-onko-systemische-therapie-1.html
@@ -66,6 +67,7 @@
 [MII_EX_Onko_Strahlentherapie_Bestrahlung_Boost]: StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-boost.html
 [MII_EX_Onko_Strahlentherapie_Bestrahlung_Einzeldosis]: StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis.html
 [MII_EX_Onko_Strahlentherapie_Bestrahlung_Gesamtdosis]: StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis.html
+[MII_EX_Onko_Strahlentherapie_Bestrahlung_Seitenlokalisation]: StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation.html
 [MII_EX_Onko_Strahlentherapie_Intention]: StructureDefinition-mii-ex-onko-strahlentherapie-intention.html
 [MII_EX_Onko_Strahlentherapie_StellungZurOp]: StructureDefinition-mii-ex-onko-strahlentherapie-stellungzurop.html
 [MII_EX_Onko_Systemische_Therapie_Intention]: StructureDefinition-mii-ex-onko-systemische-therapie-intention.html
@@ -91,9 +93,10 @@
 [MII_PR_Onko_Operation]: StructureDefinition-mii-pr-onko-operation.html
 [MII_PR_Onko_Residualstatus]: StructureDefinition-mii-pr-onko-residualstatus.html
 [MII_PR_Onko_Specimen]: StructureDefinition-mii-pr-onko-specimen.html
-[MII_PR_Onko_Strahlentherapie_Bestrahlung]: StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung.html
+[MII_PR_Onko_Strahlentherapie_Bestrahlung_Strahlentherapie]: StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.html
 [MII_PR_Onko_Strahlentherapie_neu]: StructureDefinition-mii-pr-onko-strahlentherapie-neu.html
 [MII_PR_Onko_Strahlentherapie]: StructureDefinition-mii-pr-onko-strahlentherapie.html
+[MII_PR_Onko_Strahlentherapie_Bestrahlung_Nuklearmedizin]: StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin.html
 [MII_PR_Onko_Studienteilnahme]: StructureDefinition-mii-pr-onko-studienteilnahme.html
 [MII_PR_Onko_Systemische_Therapie]: StructureDefinition-mii-pr-onko-systemische-therapie.html
 [MII_PR_Onko_Systemische_Therapie_Medikation]: StructureDefinition-mii-pr-onko-systemische-therapie-medikation.html
@@ -125,6 +128,8 @@
 [MII_VS_Onko_Nebenwirkung_CTCAE_Grad]: ValueSet-mii-vs-onko-nebenwirkung-ctcae-grad.html
 [MII_VS_Onko_Operation_Intention]: ValueSet-mii-vs-onko-operation-intention.html
 [MII_VS_Onko_Operation_Komplikation]: ValueSet-mii-vs-onko-operation-komplikation.html
+[MII_VS_Onko_OPS_Nuklearmedizin]: ValueSet-mii-vs-onko-ops-nuklearmedizin.html
+[MII_VS_Onko_OPS_Strahlentherapie]: ValueSet-mii-vs-onko-ops-strahlentherapie.html
 [MII_VS_Onko_Primaertumor_Diagnosesicherung]: ValueSet-mii-vs-onko-primaertumor-diagnosesicherung.html
 [MII_VS_Onko_Seitenlokalisation]: ValueSet-mii-vs-onko-seitenlokalisation.html
 [MII_VS_Onko_Strahlentherapie_Applikationsart]: ValueSet-mii-vs-onko-strahlentherapie-applikationsart.html
@@ -247,6 +252,8 @@
 [PatientKimMusterperson-Tumorkonferenz-3]: CarePlan-PatientKimMusterperson-Tumorkonferenz-3.html
 [PatientKimMusterperson-Tumorkonferenz-4]: CarePlan-PatientKimMusterperson-Tumorkonferenz-4.html
 [PatientKimMusterperson-Verlauf-2022-01-22]: Observation-PatientKimMusterperson-Verlauf-2022-01-22.html
+[mii-exa-onko-strahlentherapie-bestrahlung-nuklearmedizin-1]: Procedure-mii-exa-onko-strahlentherapie-bestrahlung-nuklearmedizin-1.html
+[mii-exa-onko-strahlentherapie-bestrahlung-strahlentherapie-1]: Procedure-mii-exa-onko-strahlentherapie-bestrahlung-strahlentherapie-1.html
 [TNM-Klassifikation-Observation-2]: Observation-TNM-Klassifikation-Observation-2.html
 [TNM-L-Observation-2]: Observation-TNM-L-Observation-2.html
 [TNM-M-Observation-2]: Observation-TNM-M-Observation-2.html

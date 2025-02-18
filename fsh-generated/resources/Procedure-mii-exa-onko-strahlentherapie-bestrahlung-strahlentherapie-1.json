@@ -1,0 +1,44 @@
+{
+  "resourceType": "Procedure",
+  "id": "mii-exa-onko-strahlentherapie-bestrahlung-strahlentherapie-1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "8-53",
+        "system": "http://snomed.info/sct",
+        "display": "Radiotherapy (procedure)"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "status": "completed",
+  "performedPeriod": {
+    "start": "2019-07-04",
+    "end": "2019-09-14"
+  },
+  "usedCode": [
+    {
+      "coding": [
+        {
+          "code": "PN",
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "code": "PRCJ",
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart"
+        }
+      ]
+    }
+  ]
+}

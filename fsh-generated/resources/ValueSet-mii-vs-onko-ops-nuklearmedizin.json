@@ -1,0 +1,49 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Onko_OPS_Nuklearmedizin",
+  "id": "mii-vs-onko-ops-nuklearmedizin",
+  "title": "MII VS Onkologie OPS Nuklearmedizin",
+  "description": "OPS-Codes für Nuklearmedizinische Therapie",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-ops-nuklearmedizin",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2025.0.0",
+  "compose": {
+    "include": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/ops",
+        "concept": [
+          {
+            "code": "8-53"
+          }
+        ]
+      },
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/ops",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "8-53"
+          }
+        ]
+      }
+    ]
+  }
+}

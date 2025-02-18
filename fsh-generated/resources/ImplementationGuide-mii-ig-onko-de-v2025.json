@@ -87,10 +87,18 @@
       },
       {
         "reference": {
-          "reference": "Procedure/mii-exa-onko-strahlentherapie-neu"
+          "reference": "Procedure/mii-exa-onko-strahlentherapie-nuklearmedizin-1"
         },
         "name": "Example radiation therapy",
-        "description": "Example radiation therapy",
+        "description": "Example radiation therapy conformant with MII Prozedur as bracket for radiation and nuclear therapy",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-neu"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-strahlentherapie-strahlentherapie-1"
+        },
+        "name": "Example radiation therapy",
+        "description": "Example radiation therapy conformant with MII Prozedur as bracket for radiation and nuclear therapy",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-neu"
       },
       {
@@ -615,6 +623,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation"
+        },
+        "name": "MII EX Onko Strahlentherapie Bestrahlung Seitenlokalisation",
+        "description": "Strahlentherapie: Seitenlokalisation einer Bestrahlung",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-ex-onko-strahlentherapie-intention"
         },
         "name": "MII EX Onko Strahlentherapie Intention",
@@ -815,7 +831,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung"
+          "reference": "StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie"
         },
         "name": "MII PR Onkologie Strahlentherapie",
         "description": "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie in der Onkologie.",
@@ -835,6 +851,14 @@
         },
         "name": "MII PR Onkologie Strahlentherapie",
         "description": "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie in der Onkologie.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin"
+        },
+        "name": "MII PR Onkologie Strahlentherapie Nuklearmedizin",
+        "description": "Strahlentherapie. Dieses Profil beschreibt eine Nuklearmedizinische  in der Onkologie.",
         "exampleBoolean": false
       },
       {
@@ -1083,6 +1107,22 @@
         },
         "name": "MII VS Onkologie Operation Komplikationen",
         "description": "Value Set für oBDS-Codes für Klassifikation von Komplikationen während der OP",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-ops-nuklearmedizin"
+        },
+        "name": "MII VS Onkologie OPS Nuklearmedizin",
+        "description": "OPS-Codes für Nuklearmedizinische Therapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-ops-strahlentherapie"
+        },
+        "name": "MII VS Onkologie OPS Strahlentherapie",
+        "description": "OPS-Codes für Strahlentherapie",
         "exampleBoolean": false
       },
       {
@@ -2022,6 +2062,22 @@
         "name": "PatientKimMusterperson-Verlauf-2022-01-22",
         "description": ". ",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-strahlentherapie-bestrahlung-nuklearmedizin-1"
+        },
+        "name": "Strahlentherapie: Beispiel einer Nuklearmedizinischen Bestrahlungstherapie",
+        "description": "Example radiation therapy conformant with MII Prozedur as bracket for radiation and nuclear therapy",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-strahlentherapie-bestrahlung-strahlentherapie-1"
+        },
+        "name": "Strahlentherapie: Beispiel einer Nuklearmedizinischen Bestrahlungstherapie",
+        "description": "Example radiation therapy conformant with MII Prozedur as bracket for radiation and nuclear therapy",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie"
       },
       {
         "reference": {

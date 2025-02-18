@@ -1,34 +1,47 @@
-Profile: MII_PR_Onko_Strahlentherapie_neu
-Parent: https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure
-Id: mii-pr-onko-strahlentherapie-neu
-Title: "MII PR Onkologie Strahlentherapie"
-Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie in der Onkologie."
+Profile: MII_PR_Onko_Strahlentherapie_Bestrahlung_Nuklearmedizin
+Parent: Procedure
+Id: mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin
+Title: "MII PR Onkologie Strahlentherapie Nuklearmedizin"
+Description: "Strahlentherapie. Dieses Profil beschreibt eine Nuklearmedizinische  in der Onkologie."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active
 
-// Logical Modell see:  https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532153/Strahlentherapie+ST+Typ
 * meta.profile 0..* MS
 * subject 1..1 MS
 * subject only Reference(Patient)
 * encounter 0..1 MS
+* code = $SCT#1287742003 "Radiotherapy (procedure)"
+
+* usedCode 2..* MS
+* usedCode ^slicing.discriminator.type = #pattern
+* usedCode ^slicing.discriminator.path = "$this"
+* usedCode ^slicing.rules = #open
+* usedCode contains 
+    Strahlenart 1..1 MS and
+    Applikationsart 1..1 MS
 
 
-// Intention der Strahlentherapie
-* extension contains mii-ex-onko-strahlentherapie-intention named Intention 1..1
-* extension[Intention] MS
-* insert Label (extension[Intention], Intention der Strahlentherapie,Intention der Strahlentherapie gemäß 14.1 oBDS 2021. )
-* insert Translation(extension[Intention] ^short, de-DE, Intention der Strahlentherapie )
-* insert Translation(extension[Intention] ^definition, de-DE, Intention der Strahlentherapie gemäß 14.1 oBDS 2021. )
+* usedCode[Strahlenart] ^short = "Strahlentherapie Strahlenart" 
+* usedCode[Strahlenart] ^definition = "Gibt an, mit welcher Strahlenart (sowohl Strahlung als auch Metabolite) die Strahlentherapie durchgeführt wurde."
+* usedCode[Strahlenart] from  MII_VS_Onko_Strahlentherapie_Strahlenart  
+* insert Label(usedCode[Strahlenart], Strahlenart, Strahlenart der Bestrahlung gemäß 14.7 oBDS 2021.)
+* insert Translation(usedCode[Strahlenart] ^short, de-DE, Applikationsart)
+* insert Translation(usedCode[Strahlenart] ^definition, de-DE, Applikationsart der Bestrahlung gemäß 14.7 oBDS 2021. )
 
-// Strahlentherapie Stellung zu operativer Therapie
-* extension contains MII_EX_Onko_Strahlentherapie_StellungZurOp named StellungZurOp 0..
-* extension[StellungZurOp] MS
-* insert Label (extension[StellungZurOp], Stellung der Strahlentherapie zu einer Operation,Stellung der Strahlentherapie zu einer Operation gemäß 14.2 oBDS 2021. )
-* insert Translation(extension[StellungZurOp] ^short, de-DE, Stellung der Strahlentherapie zu einer Operation)
-* insert Translation(extension[StellungZurOp] ^definition, de-DE, Stellung der Strahlentherapie zu einer Operation gemäß 14.2 oBDS 2021. )
+
+* usedCode[Applikationsart] ^short = "Strahlentherapie Applikationsart"
+* usedCode[Applikationsart] ^definition = "Gibt an, mit welcher Technik die Strahlentherapie durchgeführt wurde."
+* usedCode[Applikationsart] from MII_VS_Onko_Strahlentherapie_Applikationsart (extensible)
+* insert Label(usedCode[Applikationsart], Applikationsart, Applikationsart der Bestrahlung gemäß 14.7 oBDS 2021.)
+* insert Translation(usedCode[Applikationsart] ^short, de-DE, Applikationsart)
+* insert Translation(usedCode[Applikationsart] ^definition, de-DE, Applikationsart der Bestrahlung gemäß 14.7 oBDS 2021. )
+
+
 /*
-
+* extension contains mii-ex-onko-strahlentherapie-bestrahlung named Bestrahlung 1..
+* extension[Bestrahlung] MS
+* extension[Bestrahlung] 1..*
 // Strahlentherapie 14.3 Zielgebiet FDPG Label
 * insert Label(extension[Bestrahlung].extension[Zielgebiet].valueCodeableConcept.coding, Zielgebiet, Zielgebiet der Strahlentherapie gemäß 14.3 oBDS 2021.) 
 * insert Translation(extension[Bestrahlung].extension[Zielgebiet].valueCodeableConcept.coding ^short, de-DE, Zielgebiet)
@@ -66,7 +79,7 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 * insert Translation(extension[Bestrahlung].extension[Boost].valueCodeableConcept.coding ^short, de-DE, Boost)
 * insert Translation(extension[Bestrahlung].extension[Boost].valueCodeableConcept.coding ^definition, de-DE, Verwendung von Boosts als Teil der Bestrahlung gemäß 14.12 oBDS 2021. )
 
-*/
+
 
 // Strahlentherapie Beginn und Ende
 * performed[x] MS
@@ -91,7 +104,6 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 * insert Translation(outcome.coding ^short, de-DE, Grund für Ende der Strahlentherapie)
 * insert Translation(outcome.coding ^definition, de-DE, Grund für Ende der Strahlentherapie - planmäßig oder abgebrochen -  gemäß 14.12 oBDS 2021.)
 
-
 // Referenz auf Tumorboard
 * basedOn MS
 * basedOn only Reference(CarePlan)
@@ -99,17 +111,16 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 // Referenz auf Primaerdiagnose oder andere Condition
 * reasonReference MS
 * reasonReference only Reference(MII_PR_Onko_Diagnose_Primaertumor or Condition)
-
+*/
 // Referenz auf letzte Verlaufsobservation zur zeitlichen und inhaltlichen Kopplung
 * partOf MS
-* partOf only Reference(Observation)
-
+* partOf only Reference(Procedure or Observation)
 
 /*
-Mapping: FHIR-oBDS-Strahlentherapie-neu
+Mapping: FHIR-oBDS-Strahlentherapie
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
-Source: MII_PR_Onko_Strahlentherapie_neu
+Source: MII_PR_Onko_Strahlentherapie
 * -> "14" "Strahlentherapie"
 * extension[Intention].valueCodeableConcept.coding.code -> "14.1" "Intention der Strahlentherapie"
 * extension[StellungZurOp].valueCodeableConcept.coding.code -> "14.2" "Strahlentherapie Stellung zu operativer Therapie"

@@ -44,3 +44,18 @@ Description: "Strahlentherapie: Boost einer Bestrahlung"
 * value[x] ^definition = "Angabe, ob ein Boost und falls ja, welche Art von Boost appliziert wurde."
 * value[x] only CodeableConcept
 * valueCodeableConcept from mii-vs-onko-strahlentherapie-boost (required) 
+
+Extension: MII_EX_Onko_Strahlentherapie_Bestrahlung_Seitenlokalisation
+Id: mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation
+Title: "MII EX Onko Strahlentherapie Bestrahlung Seitenlokalisation"
+Description: "Strahlentherapie: Seitenlokalisation einer Bestrahlung"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation"
+* insert PR_CS_VS_Version
+* insert Publisher
+* ^context.type = #element
+* ^context.expression = "Procedure"  
+
+* value[x] ^short = "Seitenlokalisation im Zielgebiet"
+* value[x] ^definition = "Gibt Seitenlokalisation des Zielgebietes an. Bei beidseitiger Bestrahlung paariger Organe sind die Bestrahlungen einzeln zu melden."
+* value[x] only CodeableConcept
+* valueCodeableConcept from mii-vs-onko-seitenlokalisation (required) 
