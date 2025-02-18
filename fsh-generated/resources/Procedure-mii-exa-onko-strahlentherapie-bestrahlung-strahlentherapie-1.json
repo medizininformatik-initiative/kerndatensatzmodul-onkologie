@@ -6,6 +6,29 @@
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie"
     ]
   },
+  "bodySite": [
+    {
+      "extension": [
+        {
+          "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "L",
+                "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation"
+              }
+            ]
+          }
+        }
+      ],
+      "coding": [
+        {
+          "code": "3.4",
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet"
+        }
+      ]
+    }
+  ],
   "code": {
     "coding": [
       {
@@ -15,6 +38,33 @@
       }
     ]
   },
+  "extension": [
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis",
+      "valueQuantity": {
+        "value": 60,
+        "unit": "Gy"
+      }
+    },
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis",
+      "valueQuantity": {
+        "value": 12,
+        "unit": "Gy"
+      }
+    },
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-boost",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "SIB",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost"
+          }
+        ]
+      }
+    }
+  ],
   "subject": {
     "reference": "Patient/example"
   },

@@ -13,6 +13,12 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 * encounter 0..1 MS
 * code = $SCT#1287742003 "Radiotherapy (procedure)"
 
+
+* extension contains 
+    MII_EX_Onko_Strahlentherapie_Bestrahlung_Gesamtdosis named Gesamtdosis 0..1 MS and
+    MII_EX_Onko_Strahlentherapie_Bestrahlung_Einzeldosis named Einzeldosis 0..1 MS and
+    MII_EX_Onko_Strahlentherapie_Bestrahlung_Boost named Boost 0..1 MS
+
 * usedCode 2..* MS
 * usedCode ^slicing.discriminator.type = #pattern
 * usedCode ^slicing.discriminator.path = "$this"
@@ -20,7 +26,6 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 * usedCode contains 
     Strahlenart 1..1 MS and
     Applikationsart 1..1 MS
-
 
 * usedCode[Strahlenart] ^short = "Strahlentherapie Strahlenart" 
 * usedCode[Strahlenart] ^definition = "Gibt an, mit welcher Strahlenart (sowohl Strahlung als auch Metabolite) die Strahlentherapie durchgeführt wurde."
@@ -42,7 +47,6 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 * bodySite 0..1 MS
 * bodySite from MII_VS_Onko_Strahlentherapie_Zielgebiet (extensible)
 * bodySite.extension contains MII_EX_Onko_Strahlentherapie_Bestrahlung_Seitenlokalisation named Seitenlokalisation 0..1 MS
-
 
 
 * performed[x] MS

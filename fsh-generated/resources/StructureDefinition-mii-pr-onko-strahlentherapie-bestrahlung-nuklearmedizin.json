@@ -32,6 +32,277 @@
         "mustSupport": true
       },
       {
+        "id": "Procedure.extension",
+        "path": "Procedure.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Procedure.extension:Gesamtdosis",
+        "path": "Procedure.extension",
+        "sliceName": "Gesamtdosis",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.extension:Gesamtdosis.value[x].value",
+        "path": "Procedure.extension.value[x].value",
+        "short": "Gesamtdosis",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Gesamtdosis"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Gesamtdosis gemäß 14.9 oBDS 2021.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Gesamtdosis gemäß 14.9 oBDS 2021."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "Procedure.extension:Gesamtdosis.value[x].unit",
+        "path": "Procedure.extension.value[x].unit",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Einheit der Gesamtdosis"
+                }
+              ]
+            }
+          ]
+        },
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Einheit der Gesamtdosis gemäß 14.11 oBDS 2021. Hier werden sowohl Bestrahlungen als auch Radioisotope angegeben."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "Procedure.extension:Einzeldosis",
+        "path": "Procedure.extension",
+        "sliceName": "Einzeldosis",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.extension:Einzeldosis.value[x].value",
+        "path": "Procedure.extension.value[x].value",
+        "short": "Einzeldosis",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Einzeldosis"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Einzeldosis der Strahlentherapie gemäß 14.10 oBDS 2021.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Einzeldosis der Strahlentherapie gemäß 14.10 oBDS 2021."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "Procedure.extension:Einzeldosis.value[x].unit",
+        "path": "Procedure.extension.value[x].unit",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Einheit der Einzeldosis"
+                }
+              ]
+            }
+          ]
+        },
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Einheit der Einzeldosis gemäß 14.11 oBDS 2021."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "Procedure.extension:Boost",
+        "path": "Procedure.extension",
+        "sliceName": "Boost",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-boost"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.extension:Boost.value[x].coding",
+        "path": "Procedure.extension.value[x].coding",
+        "short": "Boost",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Boost"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Verwendung von Boosts als Teil der Bestrahlung gemäß 14.12 oBDS 2021.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Verwendung von Boosts als Teil der Bestrahlung gemäß 14.12 oBDS 2021."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "Procedure.basedOn",
+        "path": "Procedure.basedOn",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/CarePlan"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Procedure.partOf",
         "path": "Procedure.partOf",
         "type": [
@@ -75,6 +346,217 @@
         "id": "Procedure.encounter",
         "path": "Procedure.encounter",
         "mustSupport": true
+      },
+      {
+        "id": "Procedure.performed[x]",
+        "path": "Procedure.performed[x]",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.performed[x].start",
+        "path": "Procedure.performed[x].start",
+        "short": "Ende der Strahlentherapie",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Start der Strahlentherapie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Ende der gesamten Strahlentherapie mit allen Einzelbestrahlungen gemäß 14.6 oBDS 2021.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Start der gesamten Strahlentherapie mit allen Einzelbestrahlungen gemäß 14.5 oBDS 2021."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.performed[x].end",
+        "path": "Procedure.performed[x].end",
+        "mustSupport": true,
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Ende der Strahlentherapie"
+                }
+              ]
+            }
+          ]
+        },
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Ende der gesamten Strahlentherapie mit allen Einzelbestrahlungen gemäß 14.6 oBDS 2021."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "Procedure.reasonReference",
+        "path": "Procedure.reasonReference",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor",
+              "http://hl7.org/fhir/StructureDefinition/Condition"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.bodySite",
+        "path": "Procedure.bodySite",
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-zielgebiet"
+        }
+      },
+      {
+        "id": "Procedure.bodySite.extension:Seitenlokalisation",
+        "path": "Procedure.bodySite.extension",
+        "sliceName": "Seitenlokalisation",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.bodySite.extension:Seitenlokalisation.value[x].coding",
+        "path": "Procedure.bodySite.extension.value[x].coding",
+        "short": "Zielgebiet Lateralität",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Zielgebiet Lateralität"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Lateralität des Zielgebiets der Strahlentherapie gemäß 14.4 oBDS 2021.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Lateralität des Zielgebiets der Strahlentherapie gemäß 14.4 oBDS 2021."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "Procedure.bodySite.coding",
+        "path": "Procedure.bodySite.coding",
+        "short": "Zielgebiet",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Zielgebiet"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Zielgebiet der Strahlentherapie gemäß 14.3 oBDS 2021.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Zielgebiet der Strahlentherapie gemäß 14.3 oBDS 2021."
+                }
+              ]
+            }
+          ]
+        }
       },
       {
         "id": "Procedure.usedCode",
