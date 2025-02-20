@@ -69,7 +69,7 @@ Alias: $mii-cs-onko-allgemeiner-leistungszustand-ecog = https://www.medizininfor
 Alias: $mii-cs-onko-allgemeiner-leistungszustand-karnofsky = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-karnofsky
 
 //15
-Alias: $mii-cs-onko-nebenwirkung-ctcae-grad = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-vs-onko-nebenwirkung-ctcae-grad
+Alias: $mii-cs-onko-nebenwirkung-ctcae-grad = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad
 Alias: $mii-cs-onko-meddra-de = https://www.meddra.org
 
 //20
