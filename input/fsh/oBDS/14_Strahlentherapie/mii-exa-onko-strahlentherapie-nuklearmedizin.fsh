@@ -36,19 +36,13 @@ Description: "Example radiation therapy conformant with MII Prozedur as bracket 
 
 
 
-/*
-* extension[Bestrahlung].url = $mii-ex-onko-strahlentherapie-bestrahlung
-* extension[Bestrahlung].extension[Applikationsart].valueCodeableConcept =  $mii-cs-onko-strahlentherapie-applikationsart#P-ST
-* extension[Bestrahlung].extension[Strahlenart].valueCodeableConcept =  $mii-cs-onko-strahlentherapie-strahlenart#UH
-* extension[Bestrahlung].extension[Zielgebiet].valueCodeableConcept =  $mii-cs-onko-strahlentherapie-zielgebiet#3.4
-* extension[Bestrahlung].extension[Zielgebiet_Lateralitaet].valueCodeableConcept =  $mii-cs-onko-seitenlokalisation#L
-* extension[Bestrahlung].extension[Gesamtdosis].valueQuantity.value =  60.0
-* extension[Bestrahlung].extension[Gesamtdosis].valueQuantity.unit =  $UCUM#Gy
-* extension[Bestrahlung].extension[Einzeldosis].valueQuantity.value =  12.0
-* extension[Bestrahlung].extension[Einzeldosis].valueQuantity.unit =  $UCUM#Gy
-* extension[Bestrahlung].extension[Boost].valueCodeableConcept =  $mii-cs-onko-strahlentherapie-boost#SIB
-*/
-* code.coding = $SCT#8-53 // allgemeiner OPS-Code, ggfs noch beispiel mit zwei spezifischeren OPS-Codes
+* bodySite =  $mii-cs-onko-strahlentherapie-zielgebiet#6.14 "Becken (r, l)"
+* bodySite.extension[Seitenlokalisation].valueCodeableConcept =  $mii-cs-onko-seitenlokalisation#L
+* extension[Gesamtdosis].valueQuantity.value =  30.0
+* extension[Gesamtdosis].valueQuantity.unit =  $UCUM#GBq
+* extension[Boost].valueCodeableConcept =  $mii-cs-onko-strahlentherapie-boost#N
+* category = $SCT#399315003 "Radionuclide therapy" 
+* code.coding = $OPS#8-530.d2 "Therapie mit Lutetium-177-PSMA-Liganden aus nicht patientenindividueller Herstellung" // 
 * performedPeriod.start = "2019-07-04"
 * performedPeriod.end = "2019-09-14"
 * usedCode[Strahlenart] = $mii-cs-onko-strahlentherapie-strahlenart#Lu-177

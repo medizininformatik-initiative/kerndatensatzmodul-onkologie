@@ -1,5 +1,5 @@
 Profile: MII_PR_Onko_Strahlentherapie_Bestrahlung_Nuklearmedizin
-Parent: Procedure
+Parent: MII_PR_Prozedur_Procedure
 Id: mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin
 Title: "MII PR Onkologie Strahlentherapie Nuklearmedizin"
 Description: "Strahlentherapie. Dieses Profil beschreibt eine Nuklearmedizinische  in der Onkologie."
@@ -11,7 +11,9 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Nuklearmedizinisch
 * subject 1..1 MS
 * subject only Reference(Patient)
 * encounter 0..1 MS
-* code = $SCT#1287742003 "Radiotherapy (procedure)"
+* category  1..1 MS
+* category = $SCT#399315003 "Radionuclide therapy" 
+* code.coding from MII_VS_Onko_OPS_Nuklearmedizin (extensible)
 
 * usedCode 2..* MS
 * usedCode ^slicing.discriminator.type = #pattern
@@ -21,20 +23,12 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Nuklearmedizinisch
     Strahlenart 1..1 MS and
     Applikationsart 1..1 MS
 
-* extension contains 
-    MII_EX_Onko_Strahlentherapie_Bestrahlung_Gesamtdosis named Gesamtdosis 0..1 MS and
-    MII_EX_Onko_Strahlentherapie_Bestrahlung_Einzeldosis named Einzeldosis 0..1 MS and
-    MII_EX_Onko_Strahlentherapie_Bestrahlung_Boost named Boost 0..1 MS
-
-
-
 * usedCode[Strahlenart] ^short = "Strahlentherapie Strahlenart" 
 * usedCode[Strahlenart] ^definition = "Gibt an, mit welcher Strahlenart (sowohl Strahlung als auch Metabolite) die Strahlentherapie durchgeführt wurde."
 * usedCode[Strahlenart] from  MII_VS_Onko_Strahlentherapie_Strahlenart  
 * insert Label(usedCode[Strahlenart], Strahlenart, Strahlenart der Bestrahlung gemäß 14.7 oBDS 2021.)
 * insert Translation(usedCode[Strahlenart] ^short, de-DE, Applikationsart)
 * insert Translation(usedCode[Strahlenart] ^definition, de-DE, Applikationsart der Bestrahlung gemäß 14.7 oBDS 2021. )
-
 
 * usedCode[Applikationsart] ^short = "Strahlentherapie Applikationsart"
 * usedCode[Applikationsart] ^definition = "Gibt an, mit welcher Technik die Strahlentherapie durchgeführt wurde."
@@ -43,6 +37,10 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Nuklearmedizinisch
 * insert Translation(usedCode[Applikationsart] ^short, de-DE, Applikationsart)
 * insert Translation(usedCode[Applikationsart] ^definition, de-DE, Applikationsart der Bestrahlung gemäß 14.7 oBDS 2021. )
 
+* extension contains 
+    MII_EX_Onko_Strahlentherapie_Bestrahlung_Gesamtdosis named Gesamtdosis 0..1 MS and
+    MII_EX_Onko_Strahlentherapie_Bestrahlung_Einzeldosis named Einzeldosis 0..1 MS and
+    MII_EX_Onko_Strahlentherapie_Bestrahlung_Boost named Boost 0..1 MS
 
 
 //Gesamtdosis
@@ -101,25 +99,20 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Nuklearmedizinisch
 * partOf MS
 * partOf only Reference(Procedure or Observation)
 
-/*
-Mapping: FHIR-oBDS-Strahlentherapie
+
+Mapping: FHIR-oBDS-Strahlentherapie-Bestrahlung-Nuklearmedizin
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
-Source: MII_PR_Onko_Strahlentherapie
+Source: MII_PR_Onko_Strahlentherapie_Bestrahlung_Nuklearmedizin
 * -> "14" "Strahlentherapie"
-* extension[Intention].valueCodeableConcept.coding.code -> "14.1" "Intention der Strahlentherapie"
-* extension[StellungZurOp].valueCodeableConcept.coding.code -> "14.2" "Strahlentherapie Stellung zu operativer Therapie"
-* extension[Bestrahlung].extension[Zielgebiet].valueCodeableConcept.coding.code -> "14.3" "Strahlentherapie Zielgebiet"
-* extension[Bestrahlung].extension[Zielgebiet_Lateralitaet].valueCodeableConcept.coding.code -> "14.4" "Strahlentherapie Seite Zielgebiet"
+* bodySite.coding.code -> "14.3" "Strahlentherapie Zielgebiet"
+* bodySite.extension[Seitenlokalisation].valueCodeableConcept.coding.code -> "14.4" "Strahlentherapie Seite Zielgebiet"
 * performed[x].start -> "14.5" "Strahlentherapie Beginn"
 * performed[x].end -> "14.6" "Strahlentherapie Ende"
-* extension[Bestrahlung].extension[Applikationsart].valueCodeableConcept.coding.code -> "14.7" "Strahlentherapie Applikationsart"
-* extension[Bestrahlung].extension[Strahlenart].valueCodeableConcept.coding.code -> "14.8" "Strahlentherapie Strahlenart"
-* extension[Bestrahlung].extension[Gesamtdosis].valueQuantity.value -> "14.9" "Strahlentherapie Gesamtdosis"
-* extension[Bestrahlung].extension[Gesamtdosis].valueQuantity.unit -> "14.11" "Strahlentherapie Einheit"
-* extension[Bestrahlung].extension[Einzeldosis].valueQuantity.value -> "14.10" "Strahlentherapie Einzeldosis pro Tag"
-* extension[Bestrahlung].extension[Einzeldosis].valueQuantity.unit -> "14.11" "Strahlentherapie Einheit"
-
-* extension[Bestrahlung].extension[Boost].valueCodeableConcept.coding.code -> "14.12" "Strahlentherapie Boost"
-* outcome.coding.code -> "14.13" "Strahlentherapie Ende Grund"
-*/
+* usedCode[Applikationsart].coding.code -> "14.7" "Strahlentherapie Applikationsart"
+* usedCode[Strahlenart].coding.code -> "14.8" "Strahlentherapie Strahlenart"
+* extension[Gesamtdosis].valueQuantity.value -> "14.9" "Strahlentherapie Gesamtdosis"
+* extension[Gesamtdosis].valueQuantity.unit -> "14.11" "Strahlentherapie Einheit"
+* extension[Einzeldosis].valueQuantity.value -> "14.10" "Strahlentherapie Einzeldosis pro Tag"
+* extension[Einzeldosis].valueQuantity.unit -> "14.11" "Strahlentherapie Einheit"
+* extension[Boost].valueCodeableConcept.coding.code -> "14.12" "Strahlentherapie Boost"

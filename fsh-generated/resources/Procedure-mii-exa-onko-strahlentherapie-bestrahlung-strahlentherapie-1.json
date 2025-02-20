@@ -29,15 +29,6 @@
       ]
     }
   ],
-  "code": {
-    "coding": [
-      {
-        "code": "8-53",
-        "system": "http://snomed.info/sct",
-        "display": "Radiotherapy (procedure)"
-      }
-    ]
-  },
   "extension": [
     {
       "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis",
@@ -69,6 +60,14 @@
     "reference": "Patient/example"
   },
   "status": "completed",
+  "code": {
+    "coding": [
+      {
+        "code": "8-53",
+        "system": "http://snomed.info/sct"
+      }
+    ]
+  },
   "performedPeriod": {
     "start": "2019-07-04",
     "end": "2019-09-14"

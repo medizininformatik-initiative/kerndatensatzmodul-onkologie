@@ -33,6 +33,12 @@
   ],
   "description": "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie in der Onkologie.",
   "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "oBDS",
+      "name": "Mapping FHIR zu oBDS"
+    }
+  ],
   "kind": "resource",
   "abstract": false,
   "type": "Procedure",
@@ -40,6 +46,17 @@
   "derivation": "constraint",
   "differential": {
     "element": [
+      {
+        "id": "Procedure",
+        "path": "Procedure",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "14",
+            "comment": "Strahlentherapie"
+          }
+        ]
+      },
       {
         "id": "Procedure.extension",
         "path": "Procedure.extension",
@@ -98,6 +115,17 @@
         "mustSupport": true
       },
       {
+        "id": "Procedure.extension:Intention.value[x].coding.code",
+        "path": "Procedure.extension.value[x].coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "14.1",
+            "comment": "Intention der Strahlentherapie"
+          }
+        ]
+      },
+      {
         "id": "Procedure.extension:StellungZurOp",
         "path": "Procedure.extension",
         "sliceName": "StellungZurOp",
@@ -150,6 +178,17 @@
         "mustSupport": true
       },
       {
+        "id": "Procedure.extension:StellungZurOp.value[x].coding.code",
+        "path": "Procedure.extension.value[x].coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "14.2",
+            "comment": "Strahlentherapie Stellung zu operativer Therapie"
+          }
+        ]
+      },
+      {
         "id": "Procedure.basedOn",
         "path": "Procedure.basedOn",
         "type": [
@@ -198,6 +237,28 @@
         "type": [
           {
             "code": "Period"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.performed[x].start",
+        "path": "Procedure.performed[x].start",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "14.5",
+            "comment": "Strahlentherapie Beginn"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.performed[x].end",
+        "path": "Procedure.performed[x].end",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "14.6",
+            "comment": "Strahlentherapie Ende"
           }
         ]
       },
@@ -362,7 +423,14 @@
       {
         "id": "Procedure.outcome.coding.code",
         "path": "Procedure.outcome.coding.code",
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "14.13",
+            "comment": "Strahlentherapie Ende Grund"
+          }
+        ]
       }
     ]
   }
