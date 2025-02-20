@@ -116,7 +116,7 @@ The following search parameters are relevant for the oncology module, also in co
     
     Examples:
 
-    ```GET [base]/AdverseEvent?seriousness=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-vs-onko-nebenwirkung-ctcae-grad|4```
+    ```GET [base]/AdverseEvent?seriousness=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad|4```
 
     Application notes: Further information on searching by "seriousness" can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#all).
 
