@@ -3,7 +3,7 @@ Id: mii-cs-onko-nebenwirkung-ctcae-grad
 Title: "MII CS Onko Nebenwirkung nach CTCAE-Grad"
 Description: "Gibt an, zu welchem Schweregrad von Nebenwirkungen es bei der Bestrahlung oder der systemischen Therapie gekommen ist."
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-vs-onko-nebenwirkung-ctcae-grad"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad"
 * ^status = #active
 * ^experimental = false
 * insert Publisher
