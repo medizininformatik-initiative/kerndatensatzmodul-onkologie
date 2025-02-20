@@ -5,6 +5,22 @@ parent:
 ## {{page-title}}
 Hier sind  alle Änderungen aufgelistet. 
 
+## Änderungen in 2025.1.0
+- Umprofilierung des Strahlentherapie-Profils (BREAKING CHANGE!)
+    - bisher: 
+        - basierend auf MII-Prozedur-Profil
+        - mit Extensions für Intention, Stellung zur OP und Bestrahlungsdetails
+    - neu: 
+        - übergeordnete Strahlentherapie-Prozedur 
+            - Extensions für Intention und Stellung zur OP
+            - Zeitraum der kompletten Strahlentherapie über Procedure
+        - individuelle Bestrahlungsprofile für Strahlentherapi eund Nuklearmedizin
+            - Strahlenart und Applikationsart über Procedure.usedCode
+            - Zielstruktur und Seitenlokalisation über Procedure.bodySite
+            - Zeitraum der Einzelbestrahlungen über Procedure.effectivePeriod
+            - Gesamtdosis, Einzeldosis und Boost als Extension
+
+
 ## Änderungen in 2025.0.3
 - Hinzufügen von ValueSets für ICD-O-3 Morphologie und Topologie, sowie required-binding bei den Profilen "Diagnose" und "Verlaufshistologie"
 - Einfügen von fehlender SNOMED-Categories bei Operations-Beispielen
