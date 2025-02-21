@@ -35,7 +35,7 @@ Description: "bestätigte Primärdiagnose"
 * extension[Feststellungsdatum].valueDateTime = 2021-06-10
 * recordedDate = 2021-06-10
 * subject = Reference(PatientKimMusterperson)
-* clinicalStatus = #active //zum Zeitpunkt der Diagnosestellung
+* clinicalStatus = $condition-clinical#active //zum Zeitpunkt der Diagnosestellung
 * verificationStatus.coding[condition-ver-status] = $condition-ver-status#unconfirmed
 * verificationStatus.coding[primaertumorDiagnosesicherung] = $mii-cs-onko-primaertumor-diagnosesicherung#2 //"klinische Diagnostik"  steht für "Alle Untersuchungstechniken, einschl. Röntgen, Endoskopie, bildgeb. Verfahren, Ultraschall, explorativer Eingriffe(wie Laparotomie) und Autopsie, aber ohne Gewebsuntersuchungen"
 * code.coding  = $ICD10GM|2020#C48.2 "Bösartige Neubildung: Peritoneum, nicht näher bezeichnet"
@@ -508,14 +508,14 @@ InstanceOf: MII_PR_Onko_Tumorkonferenz
 Usage: #example  
 Description: "."
 * subject = Reference(PatientKimMusterperson)
-* status = #in-progress
+* status = #active
 * intent = #plan
 * category.coding = $mii-cs-onko-therapieplanung-typ#postop "postoperative Tumorkonferenz (Planung der postoperativen Therapie, z. B. zur Frage adjuvante Therapie)"
 * created = 2022-01-20
 * replaces = Reference(PatientKimMusterperson-Tumorkonferenz-3)
 * addresses = Reference(PatientKimMusterperson-PrimaryDiagnosis-2)
 * activity[0].detail.code = $mii-cs-onko-therapie-typ#ZS
-* activity[0].detail.status = #active 
+* activity[0].detail.status = #in-progress
 * activity[0].detail.statusReason = $mii-cs-onko-therapieabweichung#U "unbekannt"
 * description = "Erhaltungstherapie mit Niraparib bei BRCAwt"
 
