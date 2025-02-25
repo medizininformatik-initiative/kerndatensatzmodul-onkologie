@@ -41,10 +41,23 @@
       {
         "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall",
         "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall",
-        "short": "Diagnose",
-        "definition": "Diagnose",
+        "short": "Onkologie-Fall",
+        "definition": "Onkologie-Fall",
         "min": 0,
         "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose",
+        "short": "Diagnose",
+        "definition": "Diagnose",
+        "min": 1,
+        "max": "1",
         "type": [
           {
             "code": "BackboneElement"
@@ -58,11 +71,11 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Haupttumordiagnose",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Haupttumordiagnose",
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.Haupttumordiagnose",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.Haupttumordiagnose",
         "short": "Haupttumordiagnose",
         "definition": "Haupttumordiagnose in ICD-10-GM",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -77,8 +90,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.WeitereOnkologischeDiagnosen",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.WeitereOnkologischeDiagnosen",
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.WeitereOnkologischeDiagnosen",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.WeitereOnkologischeDiagnosen",
         "short": "Weitere onkologische Diagnosen",
         "definition": "Optional bei mehreren onkologischen Diagnosen, insbesondere Dokumentation als weiter onkologische Diagnose bei hereditären Tumordispositionssydroms (HT), bei HT zusätzliche Dokumentation ORPHAcode oder AlphaID, ein Code soweit vorhanden ist. Undiagnostizierte Erkrankungen sind mit ORPHA:616874 zu kodieren.",
         "min": 0,
@@ -92,6 +105,409 @@
           {
             "identity": "Modellvorhaben-Genomsequenzierung-FHIR",
             "map": "Condition.code.coding.where(system='http://fhir.de/CodeSystem/bfarm/icd-10-gm').code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.Hauptdiagnosedatum",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.Hauptdiagnosedatum",
+        "short": "Hauptdiagnosedatum",
+        "definition": "Datum der Erstdiagnose der Hauptdiagnose. Wenn Tag unbekannt -> 15. des Monats",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.ECOGStatus",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.ECOGStatus",
+        "short": "ECOG-Status",
+        "definition": "Eastern Cooperative Oncology Group (ECOG) Performance Status nach 0,1,2,3,4,5,unknown, not applicable",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.KeimbahndiagnoseVorhanden",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.KeimbahndiagnoseVorhanden",
+        "short": "Keimbahndiagnose vorhanden",
+        "definition": "Ja, Nein, unbekannt",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.Keimbahndiagnose",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.Keimbahndiagnose",
+        "short": "Keimbahndiagnose",
+        "definition": "Keimbahndiagnosen nach ICD-10-GM.Bei Diagnose eines hereditären Tumordispositionssydroms als Teil der OE ist verpflichtend anzugeben mit ICD10 und ORPHA oder AlphaID ",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.HPOPhaenotypisierung",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.HPOPhaenotypisierung",
+        "short": "Phänotypisierung nach HPO ",
+        "definition": "Human Phenotype Ontology.Bei Diagnose eines hereditären Tumordispositionssydroms als Teil der OE, wenn vorhanden angeben (optional) ",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.Histologie",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.Histologie",
+        "short": "Histologie nach ICD-O-3",
+        "definition": "Histologische Morphologie und Verhalten nach ICD-O-3",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.Topographie",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.Topographie",
+        "short": "Topographie nach ICD-O-3",
+        "definition": "Topographie des Tumors nach ICD-O-3",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.Grading",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.Grading",
+        "short": "Differenzierungsgrad",
+        "definition": "Gibt den Differenzierungsgrad des Tumors entsprechend der aktuellen TNM-Auflage an,  Bei der Klassifikation sind die einschlägigen Regeln der Literatur (TNM) zu beachten.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.TNMSchlüssel",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.TNMSchlüssel",
+        "short": "TNM-Klassifikation",
+        "definition": "TNM-Klassifikation des Tumors",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.TNMSystematik",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.TNMSystematik",
+        "short": "TNM-Systematik",
+        "definition": "TNM-Systematik nach AJCC oder UICC",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.WeitereKlassifikationen",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.WeitereKlassifikationen",
+        "short": "Weitere Klassifikationen",
+        "definition": "Weitere Klassifikationen des Tumors zum Diagnosezeitpunkt",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.DiagnostischeVoruntersuchungen",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.DiagnostischeVoruntersuchungen",
+        "short": "Diagnostische Voruntersuchungen",
+        "definition": "Diagnostische Voruntersuchungen zum Diagnosezeitpunkt. Bewertung der durchgeführten genetischen Diagnostik, nur für heriditäre Prädispositionssyndrome/ Erbliche Tumore",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Vordiagnostik",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Vordiagnostik",
+        "short": "Vordiagnostik",
+        "definition": "Vordiagnostik",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Vordiagnostik.ArtDiagnostik",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Vordiagnostik.ArtDiagnostik",
+        "short": "Diagnostik",
+        "definition": "Diagnostik, die vor dem MV Genomseq, durchgeführt wurde (Vorbefunde)",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Vordiagnostik.DatumDiagnostik",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Vordiagnostik.DatumDiagnostik",
+        "short": "Datum",
+        "definition": "Datum der Diagnostik",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.MolekulareVorbefunde",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.MolekulareVorbefunde",
+        "short": "klinisch relevante Ergebnisse der Diagnostik",
+        "definition": "klinisch relevante Ergebnisse der Diagnostik",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.MolekulareVorbefunde.Gen",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.MolekulareVorbefunde.Gen",
+        "short": "Gen",
+        "definition": "Gen kodiert nach HGNC",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.MolekulareVorbefunde.Transkript",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.MolekulareVorbefunde.Transkript",
+        "short": "Transkript",
+        "definition": "Transkript kodiert nach Ensembl/RefSeq",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.MolekulareVorbefunde.DNAChange",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.MolekulareVorbefunde.DNAChange",
+        "short": "DNA-Veränderung",
+        "definition": "DNA-Verändung nach cHGVS",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.MolekulareVorbefunde.ProteinChange",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.MolekulareVorbefunde.ProteinChange",
+        "short": "Protein-Veränderung",
+        "definition": "Protein-Veränderung nach pHGVS",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.MolekulareVorbefunde.Variantenklasse",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.MolekulareVorbefunde.Variantenklasse",
+        "short": "Variantenklasse",
+        "definition": "Variantenklasse nach Sequence ontology (SO)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.MolekulareVorbefunde.KomplexeAlteration",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.MolekulareVorbefunde.KomplexeAlteration",
+        "short": "Komplexe Alteration",
+        "definition": "Ausführliche Beschreibung bei komplexen Alteration z.B. Fusion",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien",
+        "short": "Systemische Vortherapien",
+        "definition": "Systemische Vortherapien",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien.ArtTherapie",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien.ArtTherapie",
+        "short": "Bezug zur operativen Therapie",
+        "definition": "Bezug der Vortherapie zu einer operativen Therapie, z.B. adjuvant, neoadjuvant",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien.IntentionTherapie",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien.IntentionTherapie",
+        "short": "Intention",
+        "definition": "Intention der Vortherapie, z.B. kurativ, palliativ",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien.Substanz",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien.Substanz",
+        "short": "Substanz",
+        "definition": "Substanz der Vortherapie nach ATC oder Text bei nicht-ATC-Wirkstoffen",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien.Therapiestart",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien.Therapiestart",
+        "short": "Startdatum",
+        "definition": "Startdatum der Vortherapie. Wenn Datum unbekannt, dann 15. des Monats",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien.Therapieende",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien.Therapieende",
+        "short": "Enddatum",
+        "definition": "Enddatum der Vortherapie. Wenn Datum unbekannt, dann 15. des Monats",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien.EndeGrund",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien.EndeGrund",
+        "short": "Ende der Therapie",
+        "definition": "Grund für das Ende der Vortherapie",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien.TherapieAnsprechen",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien.TherapieAnsprechen",
+        "short": "Ansprechen",
+        "definition": "Therapieansprechen der fallrelevante, systemische Vortherapie (PD: Progression, SD:Stabile Erkrankung, PR:Partielle Remission, CR:Komplette Remission)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien.TherapieAnsprechenDatum",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien.TherapieAnsprechenDatum",
+        "short": "Datum",
+        "definition": "Datum des Ansprechens der Vortherapie",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
           }
         ]
       },
