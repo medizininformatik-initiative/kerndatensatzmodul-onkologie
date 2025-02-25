@@ -1,0 +1,243 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-lm-modellvorhaben-genomsequenzierung-onko",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/Modellvorhaben-Genomsequenzierung-Onkologie",
+  "version": "2025.0.0",
+  "name": "MII_LM_Modellvorhaben_Genomsequenzierung_Onko",
+  "title": "MII LM Modellvorhaben Genomsequenzierung Onkologie",
+  "status": "active",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "description": "MII LogicalModel Modellvorhaben Genomsequenzierung Onkologie",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "Modellvorhaben-Genomsequenzierung-FHIR",
+      "name": "Onkologie LogicalModel FHIR Mapping"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/Modellvorhaben-Genomsequenzierung-Onkologie",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie",
+        "short": "MII LM Modellvorhaben Genomsequenzierung Onkologie",
+        "definition": "MII LogicalModel Modellvorhaben Genomsequenzierung Onkologie"
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall",
+        "short": "Diagnose",
+        "definition": "Diagnose",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "Modellvorhaben-Genomsequenzierung-FHIR",
+            "map": "Condition"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Haupttumordiagnose",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Haupttumordiagnose",
+        "short": "Haupttumordiagnose",
+        "definition": "Haupttumordiagnose in ICD-10-GM",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "Modellvorhaben-Genomsequenzierung-FHIR",
+            "map": "Condition.code.coding.where(system='http://fhir.de/CodeSystem/bfarm/icd-10-gm').code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.WeitereOnkologischeDiagnosen",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.WeitereOnkologischeDiagnosen",
+        "short": "Weitere onkologische Diagnosen",
+        "definition": "Optional bei mehreren onkologischen Diagnosen, insbesondere Dokumentation als weiter onkologische Diagnose bei hereditären Tumordispositionssydroms (HT), bei HT zusätzliche Dokumentation ORPHAcode oder AlphaID, ein Code soweit vorhanden ist. Undiagnostizierte Erkrankungen sind mit ORPHA:616874 zu kodieren.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "Modellvorhaben-Genomsequenzierung-FHIR",
+            "map": "Condition.code.coding.where(system='http://fhir.de/CodeSystem/bfarm/icd-10-gm').code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular",
+        "short": "Molekulare Diagnostik",
+        "definition": "Molekulare Diagnostik",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante",
+        "short": "Einfache Variante",
+        "definition": "Einfache Variante",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante.Gen",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante.Gen",
+        "short": "Gen",
+        "definition": "Gen",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante",
+        "short": "Einfache Variante",
+        "definition": "Einfache Variante",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.CNVTyp",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.CNVTyp",
+        "short": "CNV-Typ",
+        "definition": "Komplettverlust, partieller Verlust, Amplifikation",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante",
+        "short": "Strukturelle Variante",
+        "definition": "Strukturelle Variante",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante.Gen",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante.Gen",
+        "short": "Gen",
+        "definition": "N-terminales Gen",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante.GenC",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante.GenC",
+        "short": "Gen",
+        "definition": "C-terminales Gen",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante",
+        "short": "Expressionsvariante",
+        "definition": "Expressionsvariante",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan",
+        "short": "Therapieplan",
+        "definition": "Therapieplan",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup",
+        "short": "Follow-up",
+        "definition": "Follow-up",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      }
+    ]
+  }
+}

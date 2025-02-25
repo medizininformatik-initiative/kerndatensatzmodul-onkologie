@@ -75,6 +75,7 @@
 [MII_EX_Onko_TNM_cp_Praefix]: StructureDefinition-mii-ex-onko-tnm-cp-praefix.html
 [MII_EX_Onko_TNM_ITC_Suffix]: StructureDefinition-mii-ex-onko-tnm-itc-suffix.html
 [MII_EX_Onko_TNM_SN_Suffix]: StructureDefinition-mii-ex-onko-tnm-sn-suffix.html
+[MII_LM_Modellvorhaben_Genomsequenzierung_Onko]: StructureDefinition-mii-lm-modellvorhaben-genomsequenzierung-onko.html
 [MII_LM_Onko]: StructureDefinition-mii-lm-onko.html
 [MII_PR_Onko_Allgemeiner_Leistungszustand_ECOG]: StructureDefinition-mii-pr-onko-allgemeiner-leistungszustand-ecog.html
 [MII_PR_Onko_Allgemeiner_Leistungszustand_Karnofsky]: StructureDefinition-mii-pr-onko-allgemeiner-leistungszustand-karnofsky.html
