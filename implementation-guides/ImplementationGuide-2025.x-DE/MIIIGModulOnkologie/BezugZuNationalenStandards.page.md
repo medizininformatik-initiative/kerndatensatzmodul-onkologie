@@ -35,3 +35,12 @@ Die Arbeiten an den Basisprofilen ruhen seit der Kommentierung 2022. Mittlerweil
 
 #### Deutsches Konsortium für Translationale Krebsforschung
 Das interne Datenmodell der DKTK nutzt aus den Tumordokumentationssystemen aufbereitete oBDS-Daten im FHIR-Format als Austauschmedium. (erreichbar unter https://simplifier.net/oncology)  Das ursprüngliche Informationsmodell des Erweiterungsmoduls Onkologie war stark am DKTK-Modell orientiert. Die Profilierung unterscheidet sich jedoch insofern, als dass die DKTK-Profile in sich abgeschlossen sind, während ein MII-Modul möglichst gut mit den MII-Basismodulen (v.a. Diagnose, Prozedur, Medikation) und bereits bestehenden Erweiterungsmodulen arbeiten soll. Daher war einer der Hauptmodellierungsentscheidungen die Verwendung der MII-Diagnose und MII-Medikation, sowie die Darstellung von OPs, Strahlentherapien und Systemischen / abwartenden Therapien als MII-Prozeduren.  
+
+#### Modellvorhaben Genomsequenzierung
+
+Das Modellvorhaben Genomsequezierung nach §64e SGB V sieht die Erhebung eines Datenkranzes bei einer Next-Generation-Sequenzierung (NGS) von onkologischen Patienten vor. 
+Der Datenkranz beinhaltet dabei Informationen zur diagnostischen und therapeutischen Vorgeschichte, der molekulargenetischen Beschreibung des Tumors, den Empfehlungen zu Studienteilnahmen und systemischen Therapien sowie Follow-up-Informationen zu tatsächlich durchgeführten Therapien und Therapieansprechen / Vitalstatus. 
+
+
+Es gibt einen ähnlichen Datenkranz für Seltene Erkrankungen, der zukünftig im Modul Seltene Erkrankungen abgebildet wird. 
+{{tree: mii-lm-modellvorhaben-genomsequenzierung-onkologie.json}}
