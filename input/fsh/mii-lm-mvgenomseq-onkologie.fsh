@@ -1,11 +1,11 @@
-Logical: MII_LM_Modellvorhaben_Genomsequenzierung_Onko
+Logical: MII_LM_MVGenomSeq_Onkologie
 Parent: Element
-Id: mii-lm-modellvorhaben-genomsequenzierung-onko
+Id: mii-lm-mvgenomseq-onkologie
 Title: "MII LM Modellvorhaben Genomsequenzierung Onkologie"
 Description: "MII LogicalModel Modellvorhaben Genomsequenzierung Onkologie"
 * insert Publisher
 * insert PR_CS_VS_Version
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/Modellvorhaben-Genomsequenzierung-Onkologie"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onkologie/ConceptMap/mii-lm-mvgenomseq-onkologie"
 * OnkologieFall 0..* BackboneElement "Onkologie-Fall"
   * Diagnose 1..1 BackboneElement "Diagnose"
     * Haupttumordiagnose 1..1 code "Haupttumordiagnose" "Haupttumordiagnose in ICD-10-GM"
@@ -151,10 +151,10 @@ Description: "MII LogicalModel Modellvorhaben Genomsequenzierung Onkologie"
 
 
     
-Mapping: Modellvorhaben-Genomsequenzierung-Onkologie-LogicalModel
-Id: Modellvorhaben-Genomsequenzierung-FHIR
+Mapping: MVGenomSeq-to-MII-Onkologie
+Id: MVGenomSeq-Datenkranz-to-MII-FHIR
 Title: "Onkologie LogicalModel MII Onkologie Mapping"
-Source: MII_LM_Modellvorhaben_Genomsequenzierung_Onko
+Source: MII_LM_MVGenomSeq_Onkologie
 * OnkologieFall 
   * Diagnose -> "Condition"
     * Haupttumordiagnose -> "Condition.code.coding.where(system='http://fhir.de/CodeSystem/bfarm/icd-10-gm').code"
@@ -163,5 +163,23 @@ Source: MII_LM_Modellvorhaben_Genomsequenzierung_Onko
 // Terminology Alignment
 // ConceptMaps Modellvorhaben-Genomsequenzierung-SNOMED-CT
 // ConceptMaps Modellvorhaben-Genomsequenuzierung-LOINC
-// ConceptMap.group.element.target.dependsOn
-// StructureMap.rule.documentation
+// ConceptMap.group.element.target.dependsOn für mehr Kontext
+
+Mapping: MII-Onkologie-to-MVGenomSeq-Diagnose-Primaertumor
+Id: MII-FHIR-to-MVGenomSeq
+Title: "Onkologie LogicalModel MII Onkologie Mapping"
+Source: MII_PR_Onko_Diagnose_Primaertumor
+* -> "OnkologieFall.Diagnose"
+
+Instance: mii-cm-mii-to-mvgenomseq-condition-diagnose-primaertumor
+InstanceOf: ConceptMap
+Usage: #definition
+* status = #draft
+* sourceCanonical = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onkologie/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+* targetUri = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onkologie/ConceptMap/mii-lm-mvgenomseq-onkologie"
+
+
+// Idee: zwei Mapping
+// An den Standorten, an denen die DIZ mit der Bereitstellung der Daten beauftragt sind, und die MII-Daten bereits vorhalten, brauchen jetzt ein Mapping MII->64e. 
+// an den Standorten, an denen z.B. Bioinformationsche Core Units damit beaufrragt sind, die Daten bereitgestellt zu bekommen, brauchen ein Mapping 64e->MII, damit die Daten den DIZen zur Verfügung gestellt werden können.
+// Die Standorte 
