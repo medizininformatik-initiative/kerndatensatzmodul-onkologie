@@ -160,3 +160,8 @@ Source: MII_LM_Modellvorhaben_Genomsequenzierung_Onko
     * Haupttumordiagnose -> "Condition.code.coding.where(system='http://fhir.de/CodeSystem/bfarm/icd-10-gm').code"
     * WeitereOnkologischeDiagnosen -> "Condition.code.coding.where(system='http://fhir.de/CodeSystem/bfarm/icd-10-gm').code"
 
+// Terminology Alignment
+// ConceptMaps Modellvorhaben-Genomsequenzierung-SNOMED-CT
+// ConceptMaps Modellvorhaben-Genomsequenuzierung-LOINC
+// ConceptMap.group.element.target.dependsOn
+// StructureMap.rule.documentation
