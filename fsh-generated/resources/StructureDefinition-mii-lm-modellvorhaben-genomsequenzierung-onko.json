@@ -22,7 +22,7 @@
   "mapping": [
     {
       "identity": "Modellvorhaben-Genomsequenzierung-FHIR",
-      "name": "Onkologie LogicalModel FHIR Mapping"
+      "name": "Onkologie LogicalModel MII Onkologie Mapping"
     }
   ],
   "kind": "logical",
@@ -213,8 +213,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.TNMSchlüssel",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.TNMSchlüssel",
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.TNMSchluessel",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.TNMSchluessel",
         "short": "TNM-Klassifikation",
         "definition": "TNM-Klassifikation des Tumors",
         "min": 0,
@@ -369,10 +369,10 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.MolekulareVorbefunde.Variantenklasse",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.MolekulareVorbefunde.Variantenklasse",
-        "short": "Variantenklasse",
-        "definition": "Variantenklasse nach Sequence ontology (SO)",
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.MolekulareVorbefunde.TypAlteration",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.MolekulareVorbefunde.TypAlteration",
+        "short": "Typ der Alteration",
+        "definition": "Typ der Alteration / Variantenklasse nach Sequence ontology (SO)",
         "min": 0,
         "max": "1",
         "type": [
@@ -527,8 +527,8 @@
       {
         "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante",
         "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante",
-        "short": "Einfache Variante",
-        "definition": "Einfache Variante",
+        "short": "Einfache Variante inkl. Fusionen im codierenden Bereich",
+        "definition": "Einfache Variante inkl. Fusionen im codierenden Bereich",
         "min": 0,
         "max": "*",
         "type": [
@@ -538,11 +538,102 @@
         ]
       },
       {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante.Identifier",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante.Identifier",
+        "short": "Identifier",
+        "definition": "interner Identifikator der Variante",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
         "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante.Gen",
         "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante.Gen",
         "short": "Gen",
-        "definition": "Gen",
+        "definition": "Gen kodiert nach HGNC",
         "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante.Transkript",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante.Transkript",
+        "short": "Transkript",
+        "definition": "Transkript kodiert nach Ensembl/RefSeq",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante.DNAChange",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante.DNAChange",
+        "short": "DNA-Veränderung",
+        "definition": "DNA-Verändung nach cHGVS",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante.ProteinChange",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante.ProteinChange",
+        "short": "Protein-Veränderung",
+        "definition": "Protein-Veränderung nach pHGVS",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante.TypAlteration",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante.TypAlteration",
+        "short": "Typ der Alteration",
+        "definition": "Typ der Alteration / Variantenklasse nach Sequence ontology (SO)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante.Lokalization",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante.Lokalization",
+        "short": "Lokalisation der Variante",
+        "definition": "Lokalisation im kodierenden, regulatorischen oder intergenischen Bereich",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante.LossOfHeterozygosity",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante.LossOfHeterozygosity",
+        "short": "Loss of Heterozygosity (LOH)",
+        "definition": "Loss of Heterozygosity (LOH) im Bereich der Variante Ja / Nein",
+        "min": 0,
         "max": "1",
         "type": [
           {
@@ -553,13 +644,26 @@
       {
         "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante",
         "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante",
-        "short": "Einfache Variante",
-        "definition": "Einfache Variante",
+        "short": "Variante mit Kopienzahlveränderung (Copy Number Variation, CNV)",
+        "definition": "Variante mit Kopienzahlveränderung (Copy Number Variation, CNV)",
         "min": 0,
         "max": "*",
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.Identifier",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.Identifier",
+        "short": "Identifier",
+        "definition": "interner Identifikator der Variante",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
           }
         ]
       },
@@ -577,6 +681,97 @@
         ]
       },
       {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.Quellprobe",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.Quellprobe",
+        "short": "Art der Quellprobe",
+        "definition": "Art der Quellprobe (somatisch oder Keimbahn)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.Gen",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.Gen",
+        "short": "Gen",
+        "definition": "Gen kodiert nach HGNC - falls nur ein Gen betreffend",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.Chromosom",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.Chromosom",
+        "short": "Chromosom",
+        "definition": "Chromosom",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.CNVStartPosition",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.CNVStartPosition",
+        "short": "CNV-Start",
+        "definition": "Startposition des CNV basierend auf Hg38",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "integer"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.CNVEndPosition",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.CNVEndPosition",
+        "short": "CNV-Ende",
+        "definition": "Endposition des CNV basierend auf Hg38",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "integer"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.CopyNumber",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.CopyNumber",
+        "short": "Copy Number",
+        "definition": "Copy Number",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "integer"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.Lokalization",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.Lokalization",
+        "short": "Lokalisation der Variante",
+        "definition": "Lokalisation im kodierenden, regulatorischen oder intergenischen Bereich",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
         "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante",
         "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante",
         "short": "Strukturelle Variante",
@@ -586,6 +781,32 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante.Identifier",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante.Identifier",
+        "short": "Identifier",
+        "definition": "interner Identifikator der Variante",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante.Quellprobe",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante.Quellprobe",
+        "short": "Art der Quellprobe",
+        "definition": "Art der Quellprobe (somatisch oder Keimbahn)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
           }
         ]
       },
@@ -606,7 +827,59 @@
         "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante.GenC",
         "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante.GenC",
         "short": "Gen",
-        "definition": "C-terminales Gen",
+        "definition": "C-terminales Gen, falls in-frame und kodierend",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante.StrukturTyp",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante.StrukturTyp",
+        "short": "Variantentyp",
+        "definition": "Variantentyp (Inversion, Translokation, Deletion, Insertion, Duplikation)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante.Beschreibung",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante.Beschreibung",
+        "short": "Beschreibung der Variante",
+        "definition": "Beschreibung der Variante nach HGVS oder ISCN",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante.Nachweismethode",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante.Nachweismethode",
+        "short": "Nachweismethode",
+        "definition": "Nachweismethode (DNA / RNA)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante.Lokalization",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante.Lokalization",
+        "short": "Lokalisation der Variante",
+        "definition": "Lokalisation im kodierenden, regulatorischen oder intergenischen Bereich",
         "min": 0,
         "max": "1",
         "type": [
@@ -629,6 +902,149 @@
         ]
       },
       {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.Identifier",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.Identifier",
+        "short": "Identifier",
+        "definition": "interner Identifikator der Variante",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.Gen",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.Gen",
+        "short": "Gen",
+        "definition": "Gen kodiert nach HGNC",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.Expression",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.Expression",
+        "short": "Expression",
+        "definition": "Expression des Gens (über- oder unterexprimiert)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.Bewertungsgrundlage",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.Bewertungsgrundlage",
+        "short": "Bewertungsgrundlage",
+        "definition": "Bewertungsgrundlage der Expression (z.B. Vergleichskohorte von 400 Patienten)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.TMB",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.TMB",
+        "short": "Tumor Mutational Burden (TMB)",
+        "definition": "Tumor Mutational Burden (TMB) in Mut/Mb",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.HRD",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.HRD",
+        "short": "Homologous Recombination Deficiency (HRD)",
+        "definition": "Homologous Recombination Deficiency (HRD) erhöht ja/nein",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.LST",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.LST",
+        "short": "Large Scale Transition (LST)",
+        "definition": "Large Scale Transition (LST) erhöht ja/nein",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.TAI",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.TAI",
+        "short": "Telomeric Allelic Imbalance (TAI)",
+        "definition": "Telomeric Allelic Imbalance (TAI) erhöht ja/nein",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.SBS",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.SBS",
+        "short": "Single Base Substitution (SBS)",
+        "definition": "Single Base Substitution (SBS) erhöht ja/nein",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.SBSSignature",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.SBSSignature",
+        "short": "Single Base Substitution Signature",
+        "definition": "Single Base Substitution Signature",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.Lokalization",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.Lokalization",
+        "short": "Lokalisation der Variante",
+        "definition": "Lokalisation im kodierenden, regulatorischen oder intergenischen Bereich",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
         "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan",
         "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan",
         "short": "Therapieplan",
@@ -642,15 +1058,678 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup",
-        "short": "Follow-up",
-        "definition": "Follow-up",
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard",
+        "short": "Molekulares Tumorboard",
+        "definition": "Molekulares Tumorboard",
         "min": 0,
         "max": "*",
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.Datum",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.Datum",
+        "short": "Datum",
+        "definition": "Datum des Tumorboards",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungStudie",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungStudie",
+        "short": "Empfehlung Studie",
+        "definition": "Empfehlung zur Studienteilnahme ja/nein",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungBeratung",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungBeratung",
+        "short": "Empfehlung humangenetische Beratung",
+        "definition": "Empfehlung zu einer humangenetischen Beratung ja/nein",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungReevaluation",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungReevaluation",
+        "short": "Empfehlung Reevaluation",
+        "definition": "Empfehlung zur Reevaluation der molekularen Diagnostik ja/nein",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungOperation",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungOperation",
+        "short": "Empfehlung Operation",
+        "definition": "Empfehlung zur Operation ja/nein",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungOperationArt",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungOperationArt",
+        "short": "empfohlenene Operation",
+        "definition": "empfohlenen Operation",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungOperationRisikoreduzierend",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungOperationRisikoreduzierend",
+        "short": "empfohlene Operation ist riskoreduzierend",
+        "definition": "empfohlenen Operation ist riskoreduzierend ja/nein",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungOperationTherapeutisch",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungOperationTherapeutisch",
+        "short": "empfohlene Operation ist therapeutisch",
+        "definition": "empfohlenene Operation ist therapeutisch ja/nein",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.DurchgefuehrteOperation",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.DurchgefuehrteOperation",
+        "short": "Durchgeführte Operation",
+        "definition": "Durchgeführte Operation nach OPS inkl. Version",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie",
+        "short": "Empfohlene Studieneinschlüsse",
+        "definition": "Empfohlene Studieneinschlüsse",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.Identifier",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.Identifier",
+        "short": "Identifier",
+        "definition": "interner Identifikator der Studie",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.Register",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.Register",
+        "short": "Register",
+        "definition": "Registersystematik, in dem die StudienID angegeben wird (NCT, EudraCT/CTIS, DRKS, andere, unbekannt)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.StudienID",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.StudienID",
+        "short": "Studie",
+        "definition": "StudienID in einer Registersystematik",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.Studienname",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.Studienname",
+        "short": "Name der Studie",
+        "definition": "Name der Studie",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.Substanzen",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.Substanzen",
+        "short": "Substanzen",
+        "definition": "Substanzen, die in der Studie eingesetzt werden, nach ATC kodiert",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.Evidenzgrad",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.Evidenzgrad",
+        "short": "Evidenzgrad",
+        "definition": "Evidenzgrad",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.ZusatzverweiseEvidenzgraduierung",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.ZusatzverweiseEvidenzgraduierung",
+        "short": "Zusatzverweise zur Evidenzgraduierung",
+        "definition": "Zusatzverweise zur Evidenzgraduierung",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.Prioritaet",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.Prioritaet",
+        "short": "Priorität",
+        "definition": "Priorität der Studie, falls mehrere Studien empfohlen wurde. 1 ist höchste Priorität",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.Variante",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.Variante",
+        "short": "Variante",
+        "definition": "interne VariantenID der Variante, die für die Studie relevant ist",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.Therapieempfehlung",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.Therapieempfehlung",
+        "short": "String",
+        "definition": "String",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.Therapieempfehlung.Identifier",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.Therapieempfehlung.Identifier",
+        "short": "Identifier",
+        "definition": "interner Identifikator der Therapieempfehlung",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.Therapieempfehlung.EmpfehlungTyp",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.Therapieempfehlung.EmpfehlungTyp",
+        "short": "Typ der Empfehlung",
+        "definition": "Typ der Empfehlung (z.B. inlabel, offlabel, compassionate use, unknown, secondary preventive)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.Therapieempfehlung.Substanz",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.Therapieempfehlung.Substanz",
+        "short": "Substanzen",
+        "definition": "Substanzen, die empfohlen werden, nach ATC kodiert",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.Therapieempfehlung.Evidenzgrad",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.Therapieempfehlung.Evidenzgrad",
+        "short": "Evidenzgrad",
+        "definition": "Evidenzgrad (m1A - m4, unbekannt)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.Therapieempfehlung.Prioritaet",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.Therapieempfehlung.Prioritaet",
+        "short": "Priorität",
+        "definition": "Priorität der Therapieempfehlung, falls mehrere Empfehlungen gegeben wurden. 1 ist höchste Priorität",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.Therapieempfehlung.Variante",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.Therapieempfehlung.Variante",
+        "short": "Variante",
+        "definition": "interne VariantenID der Variante, die für die Therapieempfehlung relevant ist",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.Therapieempfehlung.TherapeutischeStrategie",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.Therapieempfehlung.TherapeutischeStrategie",
+        "short": "Therapeutische Strategie",
+        "definition": "Therapeutische Strategie (z.B. zielgerichtete Therapie, Immuntherapie, Chemotherapie, supportive Therapie)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.PraeventiveUntersuchungen",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.PraeventiveUntersuchungen",
+        "short": "Präventive Maßnahmen",
+        "definition": "Präventive Maßnahmen",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.PraeventiveUntersuchungen.Identifier",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.PraeventiveUntersuchungen.Identifier",
+        "short": "Identifier",
+        "definition": "interner Identifikator der präventiven Maßnahme",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.PraeventiveUntersuchungen.ArtUntersuchung",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.PraeventiveUntersuchungen.ArtUntersuchung",
+        "short": "Art der Untersuchung",
+        "definition": "Art der Untersuchung(z.B. Breast Imaging, MRI, MGR, US;Colonoscopy ; Esophago-gastro-duodenoscopy )",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup",
+        "short": "Follow-up und Umsetzung der Therapieempfehlung",
+        "definition": "Follow-up und Umsetzung der Therapieempfehlung",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Datum",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Datum",
+        "short": "Datum",
+        "definition": "Datum des Follow-up",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.MetachroneTumore",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.MetachroneTumore",
+        "short": "Auftreten Metachroner Tumore",
+        "definition": "Auftreten metachroner Tumore ja/nein",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.MetachroneDiagnose",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.MetachroneDiagnose",
+        "short": "Diagnose",
+        "definition": "Diagnose des metachronen Tumors laut ICD-10",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.ECOG",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.ECOG",
+        "short": "ECOG-Status",
+        "definition": "Eastern Cooperative Oncology Group (ECOG) Performance Status nach 0,1,2,3,4,5,unknown, not applicable",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Vitalstatus",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Vitalstatus",
+        "short": "Vitalstatus",
+        "definition": "Vitalstatus des Patienten zum Zeitpunkt des Follow-ups (lebend, verstorben, unbekannt)",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.LetzterKontakt",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.LetzterKontakt",
+        "short": "Letzter Kontakt",
+        "definition": "Datum des letzten Kontakts",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Todesdatum",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Todesdatum",
+        "short": "Todesdatum",
+        "definition": "Datum des Todes",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien",
+        "short": "Therapien",
+        "definition": "Therapien",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien.reference",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien.reference",
+        "short": "Referenz Studien-/ Therapieempfehlung",
+        "definition": "Referenz auf Studien- / Therapieempfehlung",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien.TherapieStart",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien.TherapieStart",
+        "short": "Startdatum",
+        "definition": "Startdatum der Therapie",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien.TherapieEnde",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien.TherapieEnde",
+        "short": "Enddatum",
+        "definition": "Enddatum der Therapie",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien.TherapieWirkstoff",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien.TherapieWirkstoff",
+        "short": "Wirkstoff",
+        "definition": "Wirkstoff der Therapie nach ATC oder Text bei nicht-ATC-Wirkstoffen",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien.TherapieAnsprechen",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien.TherapieAnsprechen",
+        "short": "Ansprechen",
+        "definition": "Therapieansprechen der Therapie (PD: Progression, SD:Stabile Erkrankung, PR:Partielle Remission, CR:Komplette Remission)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien.TherapieAnsprechenDatum",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien.TherapieAnsprechenDatum",
+        "short": "Datum",
+        "definition": "Datum des Ansprechens der Vortherapie",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien.TherapieEndeGrund",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien.TherapieEndeGrund",
+        "short": "Ende der Therapie",
+        "definition": "Grund für das Ende der Vortherapie",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien.DatenquelleTherapieansprechen",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien.DatenquelleTherapieansprechen",
+        "short": "Datenquelle Therapieansprechen",
+        "definition": "Datenquelle des Therapieansprechens (z.B. Arztbrief, Entlassungsbericht, Tumordokumentation)",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.PraeventiveMassnahmen",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.PraeventiveMassnahmen",
+        "short": "Präventive Maßnahmen",
+        "definition": "Präventive Maßnahmen",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.PraeventiveMassnahmen.reference",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.PraeventiveMassnahmen.reference",
+        "short": "Referenz präventive Maßnahme",
+        "definition": "interne Referenz auf präventive Maßnahme",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.PraeventiveMassnahmen.preventiveMeasureResult",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.PraeventiveMassnahmen.preventiveMeasureResult",
+        "short": "Ergebnis der präventiven Maßnahme",
+        "definition": "Ergebnis der präventiven Maßnahme (z.B. ohne Befund, benigner Befund, Malignom, unklar)",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.PraeventiveMassnahmen.preventiveMeasureDate",
+        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.PraeventiveMassnahmen.preventiveMeasureDate",
+        "short": "Datum der präventiven Maßnahme",
+        "definition": "Datum der präventiven Maßnahme",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
           }
         ]
       }
