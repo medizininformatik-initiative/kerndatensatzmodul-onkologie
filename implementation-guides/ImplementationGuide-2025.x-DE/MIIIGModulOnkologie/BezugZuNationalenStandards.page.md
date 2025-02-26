@@ -43,4 +43,4 @@ Der Datenkranz beinhaltet dabei Informationen zur diagnostischen und therapeutis
 
 
 Es gibt einen ähnlichen Datenkranz für Seltene Erkrankungen, der zukünftig im Modul Seltene Erkrankungen abgebildet wird. 
-{{tree: mii-lm-modellvorhaben-genomsequenzierung-onkologie.json}}
+{{tree: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/Modellvorhaben-Genomsequenzierung-Onkologie}}
