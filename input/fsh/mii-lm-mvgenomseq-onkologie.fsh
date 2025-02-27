@@ -1,11 +1,11 @@
-Logical: MII_LM_Modellvorhaben_Genomsequenzierung_Onko
+Logical: MII_LM_MVGenomSeq_Onkologie
 Parent: Element
-Id: mii-lm-modellvorhaben-genomsequenzierung-onko
+Id: mii-lm-mvgenomseq-onkologie
 Title: "MII LM Modellvorhaben Genomsequenzierung Onkologie"
 Description: "MII LogicalModel Modellvorhaben Genomsequenzierung Onkologie"
 * insert Publisher
 * insert PR_CS_VS_Version
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/Modellvorhaben-Genomsequenzierung-Onkologie"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onkologie/ConceptMap/mii-lm-mvgenomseq-onkologie"
 * OnkologieFall 0..* BackboneElement "Onkologie-Fall"
   * Diagnose 1..1 BackboneElement "Diagnose"
     * Haupttumordiagnose 1..1 code "Haupttumordiagnose" "Haupttumordiagnose in ICD-10-GM"
@@ -89,10 +89,6 @@ Description: "MII LogicalModel Modellvorhaben Genomsequenzierung Onkologie"
     * SBSSignature 0..1 code "Single Base Substitution Signature" "Single Base Substitution Signature"
     * Lokalization 0..1 code "Lokalisation der Variante" "Lokalisation im kodierenden, regulatorischen oder intergenischen Bereich"
 
-  
-
-
-
 * OnkologiePlan 0..* BackboneElement "Therapieplan"
   * MolekularesTumorboard 0..* BackboneElement "Molekulares Tumorboard"
     * Datum 1..1 date "Datum" "Datum des Tumorboards"
@@ -151,17 +147,67 @@ Description: "MII LogicalModel Modellvorhaben Genomsequenzierung Onkologie"
 
 
     
-Mapping: Modellvorhaben-Genomsequenzierung-Onkologie-LogicalModel
-Id: Modellvorhaben-Genomsequenzierung-FHIR
+Mapping: MVGenomSeq-to-MII-Onkologie
+Id: MVGenomSeq-Datenkranz-to-MII-FHIR
 Title: "Onkologie LogicalModel MII Onkologie Mapping"
-Source: MII_LM_Modellvorhaben_Genomsequenzierung_Onko
+Source: MII_LM_MVGenomSeq_Onkologie
 * OnkologieFall 
   * Diagnose -> "Condition"
     * Haupttumordiagnose -> "Condition.code.coding.where(system='http://fhir.de/CodeSystem/bfarm/icd-10-gm').code"
     * WeitereOnkologischeDiagnosen -> "Condition.code.coding.where(system='http://fhir.de/CodeSystem/bfarm/icd-10-gm').code"
+    * Hauptdiagnosedatum -> "Condition.extension.where(url='http://hl7.org/fhir/StructureDefinition/condition-assertedDate').valueDate"
+    * ECOGStatus -> "Observation.where(code='423740007' and system='http://snomed.info/sct').valueCodeableConcept.coding.code"
+    * KeimbahndiagnoseVorhanden -> "no direct match, vsl. über FHIRPath automatisch generieren, wenn Keimbahndiagnose.exists()"
+    * Keimbahndiagnose -> "no direct match. Keimbahndiagnose existiert als Konzept nicht, hier könnte / müsste mit Condition.category gearbeitet werden, z.B. SNOMED Hereditary cancer-predisposing syndrome (disorder)"
+    * HPOPhaenotypisierung -> "Observation.where(valueCodeableConcept.coding.system='http://human-phenotype-ontology.org')"
+    * Histologie -> "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3').valueCodeableConcept.coding.code"
+    * Topographie -> "Condition.bodySite.coding.code"
+    * Grading ->  "Observation.where(code.coding.code='33732-9' and code.coding.system='http://loinc.org').valueCodeableConcept.coding.code"
+    * TNMSchluessel -> "Observation.where(code.coding.code='33732-9' and code.coding.system='http://snomed.info/sct').valueCodeableConcept.coding.code"
+    * TNMSystematik -> "Laut Krebsregisterdaten nur UICC vorgesehen? kein expiziter Datenpunkt außer Version"
+    * WeitereKlassifikationen -> "no direkt match - Observation - Nutzung des Profils WeitereKlassifikationen, aber aufgrund der Vielfalt der Klassifikationen keine direkte Zuordnung möglich"
+    * DiagnostischeVoruntersuchungen -> "no direkt match"
+  * Vordiagnostik ->  "Vordiagnostik"
+    * ArtDiagnostik -> "Diagnoste)"
+    * DatumDiagnostik -> "Datum Diagnostik"
+  * MolekulareVorbefunde ->  "klinisch relevante Ergebnisse der Diagnostik"
+    * Gen -> "Genert nach HGNC"
+    * Transkript -> "Transkriranskript kodiert nach Ensembl/RefSeq"
+    * DNAChange -> "DNA-VeränVerändung nach cHGVS"
+    * ProteinChange -> "Protein-Verändotein-Veränderung nach pHGVS"
+    * TypAlteration -> "Typ der Alteratr Alteration / Variantenklasse nach Sequence ontology (SO)"
+    * KomplexeAlteration -> "Komplexe AlteratAusführliche Beschreibung"
+  * SystemischeVortherapien -> "Procedure"
+    * ArtTherapie -> "Procedure.extension.where(url='StellungZurOp')"
+    * IntentionTherapie -> "Procedure.extension.where(url='Intention')"
+    * Substanz -> "MedicationStatement.medicationCode.coding[atc-de].code"
+    * Therapiestart -> "Procedure.effectivePeriod.start"
+    * Therapieende -> "Procedure.effectivePeriod.end"
+    * EndeGrund -> "Procedure.outcome"
+    * TherapieAnsprechen -> "Verlauf.valueCodeableConcept.coding.code"
+    * TherapieAnsprechenDatum -> "Verlauf.effectiveDateTime" 
+
 
 // Terminology Alignment
 // ConceptMaps Modellvorhaben-Genomsequenzierung-SNOMED-CT
 // ConceptMaps Modellvorhaben-Genomsequenuzierung-LOINC
-// ConceptMap.group.element.target.dependsOn
-// StructureMap.rule.documentation
+// ConceptMap.group.element.target.dependsOn für mehr Kontext
+
+Mapping: MII-Onkologie-to-MVGenomSeq-Diagnose-Primaertumor
+Id: MII-FHIR-to-MVGenomSeq
+Title: "Onkologie LogicalModel MII Onkologie Mapping"
+Source: MII_PR_Onko_Diagnose_Primaertumor
+* -> "OnkologieFall.Diagnose"
+
+Instance: mii-cm-mii-to-mvgenomseq-condition-diagnose-primaertumor
+InstanceOf: ConceptMap
+Usage: #definition
+* status = #draft
+* sourceCanonical = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onkologie/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+* targetUri = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onkologie/ConceptMap/mii-lm-mvgenomseq-onkologie"
+
+
+// Idee: zwei Mapping
+// An den Standorten, an denen die DIZ mit der Bereitstellung der Daten beauftragt sind, und die MII-Daten bereits vorhalten, brauchen jetzt ein Mapping MII->64e. 
+// an den Standorten, an denen z.B. Bioinformationsche Core Units damit beaufrragt sind, die Daten bereitgestellt zu bekommen, brauchen ein Mapping 64e->MII, damit die Daten den DIZen zur Verfügung gestellt werden können.
+// Die Standorte 
