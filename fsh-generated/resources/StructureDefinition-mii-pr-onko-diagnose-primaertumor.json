@@ -69,6 +69,10 @@
   "fhirVersion": "4.0.1",
   "mapping": [
     {
+      "identity": "MII-FHIR-to-MVGenomSeq",
+      "name": "Onkologie LogicalModel MII Onkologie Mapping"
+    },
+    {
       "identity": "oBDS",
       "name": "Mapping FHIR zu oBDS"
     }
@@ -84,6 +88,10 @@
         "id": "Condition",
         "path": "Condition",
         "mapping": [
+          {
+            "identity": "MII-FHIR-to-MVGenomSeq",
+            "map": "OnkologieFall.Diagnose"
+          },
           {
             "identity": "oBDS",
             "map": "5",

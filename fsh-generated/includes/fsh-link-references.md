@@ -75,7 +75,7 @@
 [MII_EX_Onko_TNM_cp_Praefix]: StructureDefinition-mii-ex-onko-tnm-cp-praefix.html
 [MII_EX_Onko_TNM_ITC_Suffix]: StructureDefinition-mii-ex-onko-tnm-itc-suffix.html
 [MII_EX_Onko_TNM_SN_Suffix]: StructureDefinition-mii-ex-onko-tnm-sn-suffix.html
-[MII_LM_Modellvorhaben_Genomsequenzierung_Onko]: StructureDefinition-mii-lm-modellvorhaben-genomsequenzierung-onko.html
+[MII_LM_MVGenomSeq_Onkologie]: StructureDefinition-mii-lm-mvgenomseq-onkologie.html
 [MII_LM_Onko]: StructureDefinition-mii-lm-onko.html
 [MII_PR_Onko_Allgemeiner_Leistungszustand_ECOG]: StructureDefinition-mii-pr-onko-allgemeiner-leistungszustand-ecog.html
 [MII_PR_Onko_Allgemeiner_Leistungszustand_Karnofsky]: StructureDefinition-mii-pr-onko-allgemeiner-leistungszustand-karnofsky.html
@@ -171,6 +171,7 @@
 [MII_VS_Onko_Verlauf_Gesamtbeurteilung]: ValueSet-mii-vs-onko-verlauf-gesamtbeurteilung.html
 [MII_VS_Onko_Verlauf_Lymphknoten]: ValueSet-mii-vs-onko-verlauf-lymphknoten.html
 [MII_VS_Onko_Verlauf_Primaertumor]: ValueSet-mii-vs-onko-verlauf-primaertumor.html
+[mii-cm-mii-to-mvgenomseq-condition-diagnose-primaertumor]: ConceptMap-mii-cm-mii-to-mvgenomseq-condition-diagnose-primaertumor.html
 [mii-exa-onko-allgemeiner-leistungszustand-ecog]: Observation-mii-exa-onko-allgemeiner-leistungszustand-ecog.html
 [mii-exa-onko-allgemeiner-leistungszustand-karnofsky]: Observation-mii-exa-onko-allgemeiner-leistungszustand-karnofsky.html
 [mii-exa-onko-anzahl-befallene-lymphknoten-0]: Observation-mii-exa-onko-anzahl-befallene-lymphknoten-0.html
