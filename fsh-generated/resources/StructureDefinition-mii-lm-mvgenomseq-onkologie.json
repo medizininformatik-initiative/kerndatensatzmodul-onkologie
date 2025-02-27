@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-lm-mvgenomseq-onkologie",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onkologie/ConceptMap/mii-lm-mvgenomseq-onkologie",
-  "version": "2025.0.0",
+  "version": "2025.1.0",
   "name": "MII_LM_MVGenomSeq_Onkologie",
   "title": "MII LM Modellvorhaben Genomsequenzierung Onkologie",
   "status": "active",
@@ -119,6 +119,12 @@
           {
             "code": "date"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Condition.extension.where(url='http://hl7.org/fhir/StructureDefinition/condition-assertedDate').valueDate"
+          }
         ]
       },
       {
@@ -131,6 +137,12 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Observation.where(code='423740007' and system='http://snomed.info/sct').valueCodeableConcept.coding.code"
           }
         ]
       },
@@ -145,6 +157,12 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "no direct match, vsl. über FHIRPath automatisch generieren, wenn Keimbahndiagnose.exists()"
+          }
         ]
       },
       {
@@ -157,6 +175,12 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "no direct match. Keimbahndiagnose existiert als Konzept nicht, hier könnte / müsste mit Condition.category gearbeitet werden, z.B. SNOMED Hereditary cancer-predisposing syndrome (disorder)"
           }
         ]
       },
@@ -171,6 +195,12 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Observation.where(valueCodeableConcept.coding.system='http://human-phenotype-ontology.org')"
+          }
         ]
       },
       {
@@ -183,6 +213,12 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3').valueCodeableConcept.coding.code"
           }
         ]
       },
@@ -197,6 +233,12 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Condition.bodySite.coding.code"
+          }
         ]
       },
       {
@@ -209,6 +251,12 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Observation.where(code.coding.code='33732-9' and code.coding.system='http://loinc.org').valueCodeableConcept.coding.code"
           }
         ]
       },
@@ -223,6 +271,12 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Observation.where(code.coding.code='33732-9' and code.coding.system='http://snomed.info/sct').valueCodeableConcept.coding.code"
+          }
         ]
       },
       {
@@ -235,6 +289,12 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Laut Krebsregisterdaten nur UICC vorgesehen? kein expiziter Datenpunkt außer Version"
           }
         ]
       },
@@ -249,6 +309,12 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "no direkt match - Observation - Nutzung des Profils WeitereKlassifikationen, aber aufgrund der Vielfalt der Klassifikationen keine direkte Zuordnung möglich"
+          }
         ]
       },
       {
@@ -261,6 +327,12 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "no direkt match"
           }
         ]
       },
@@ -275,6 +347,12 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Vordiagnostik"
+          }
         ]
       },
       {
@@ -287,6 +365,12 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Diagnoste)"
           }
         ]
       },
@@ -301,6 +385,12 @@
           {
             "code": "date"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Datum Diagnostik"
+          }
         ]
       },
       {
@@ -313,6 +403,12 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "klinisch relevante Ergebnisse der Diagnostik"
           }
         ]
       },
@@ -327,6 +423,12 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Genert nach HGNC"
+          }
         ]
       },
       {
@@ -339,6 +441,12 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Transkriranskript kodiert nach Ensembl/RefSeq"
           }
         ]
       },
@@ -353,6 +461,12 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "DNA-VeränVerändung nach cHGVS"
+          }
         ]
       },
       {
@@ -365,6 +479,12 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Protein-Verändotein-Veränderung nach pHGVS"
           }
         ]
       },
@@ -379,6 +499,12 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Typ der Alteratr Alteration / Variantenklasse nach Sequence ontology (SO)"
+          }
         ]
       },
       {
@@ -391,6 +517,12 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Komplexe AlteratAusführliche Beschreibung"
           }
         ]
       },
@@ -405,6 +537,12 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Procedure"
+          }
         ]
       },
       {
@@ -417,6 +555,12 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Procedure.extension.where(url='StellungZurOp')"
           }
         ]
       },
@@ -431,6 +575,12 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Procedure.extension.where(url='Intention')"
+          }
         ]
       },
       {
@@ -443,6 +593,12 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "MedicationStatement.medicationCode.coding[atc-de].code"
           }
         ]
       },
@@ -457,6 +613,12 @@
           {
             "code": "date"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Procedure.effectivePeriod.start"
+          }
         ]
       },
       {
@@ -469,6 +631,12 @@
         "type": [
           {
             "code": "date"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Procedure.effectivePeriod.end"
           }
         ]
       },
@@ -483,6 +651,12 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Procedure.outcome"
+          }
         ]
       },
       {
@@ -496,6 +670,12 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Verlauf.valueCodeableConcept.coding.code"
+          }
         ]
       },
       {
@@ -508,6 +688,12 @@
         "type": [
           {
             "code": "date"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Verlauf.effectiveDateTime"
           }
         ]
       },

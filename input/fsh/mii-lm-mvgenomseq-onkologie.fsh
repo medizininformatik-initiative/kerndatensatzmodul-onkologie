@@ -89,10 +89,6 @@ Description: "MII LogicalModel Modellvorhaben Genomsequenzierung Onkologie"
     * SBSSignature 0..1 code "Single Base Substitution Signature" "Single Base Substitution Signature"
     * Lokalization 0..1 code "Lokalisation der Variante" "Lokalisation im kodierenden, regulatorischen oder intergenischen Bereich"
 
-  
-
-
-
 * OnkologiePlan 0..* BackboneElement "Therapieplan"
   * MolekularesTumorboard 0..* BackboneElement "Molekulares Tumorboard"
     * Datum 1..1 date "Datum" "Datum des Tumorboards"
@@ -159,6 +155,38 @@ Source: MII_LM_MVGenomSeq_Onkologie
   * Diagnose -> "Condition"
     * Haupttumordiagnose -> "Condition.code.coding.where(system='http://fhir.de/CodeSystem/bfarm/icd-10-gm').code"
     * WeitereOnkologischeDiagnosen -> "Condition.code.coding.where(system='http://fhir.de/CodeSystem/bfarm/icd-10-gm').code"
+    * Hauptdiagnosedatum -> "Condition.extension.where(url='http://hl7.org/fhir/StructureDefinition/condition-assertedDate').valueDate"
+    * ECOGStatus -> "Observation.where(code='423740007' and system='http://snomed.info/sct').valueCodeableConcept.coding.code"
+    * KeimbahndiagnoseVorhanden -> "no direct match, vsl. über FHIRPath automatisch generieren, wenn Keimbahndiagnose.exists()"
+    * Keimbahndiagnose -> "no direct match. Keimbahndiagnose existiert als Konzept nicht, hier könnte / müsste mit Condition.category gearbeitet werden, z.B. SNOMED Hereditary cancer-predisposing syndrome (disorder)"
+    * HPOPhaenotypisierung -> "Observation.where(valueCodeableConcept.coding.system='http://human-phenotype-ontology.org')"
+    * Histologie -> "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3').valueCodeableConcept.coding.code"
+    * Topographie -> "Condition.bodySite.coding.code"
+    * Grading ->  "Observation.where(code.coding.code='33732-9' and code.coding.system='http://loinc.org').valueCodeableConcept.coding.code"
+    * TNMSchluessel -> "Observation.where(code.coding.code='33732-9' and code.coding.system='http://snomed.info/sct').valueCodeableConcept.coding.code"
+    * TNMSystematik -> "Laut Krebsregisterdaten nur UICC vorgesehen? kein expiziter Datenpunkt außer Version"
+    * WeitereKlassifikationen -> "no direkt match - Observation - Nutzung des Profils WeitereKlassifikationen, aber aufgrund der Vielfalt der Klassifikationen keine direkte Zuordnung möglich"
+    * DiagnostischeVoruntersuchungen -> "no direkt match"
+  * Vordiagnostik ->  "Vordiagnostik"
+    * ArtDiagnostik -> "Diagnoste)"
+    * DatumDiagnostik -> "Datum Diagnostik"
+  * MolekulareVorbefunde ->  "klinisch relevante Ergebnisse der Diagnostik"
+    * Gen -> "Genert nach HGNC"
+    * Transkript -> "Transkriranskript kodiert nach Ensembl/RefSeq"
+    * DNAChange -> "DNA-VeränVerändung nach cHGVS"
+    * ProteinChange -> "Protein-Verändotein-Veränderung nach pHGVS"
+    * TypAlteration -> "Typ der Alteratr Alteration / Variantenklasse nach Sequence ontology (SO)"
+    * KomplexeAlteration -> "Komplexe AlteratAusführliche Beschreibung"
+  * SystemischeVortherapien -> "Procedure"
+    * ArtTherapie -> "Procedure.extension.where(url='StellungZurOp')"
+    * IntentionTherapie -> "Procedure.extension.where(url='Intention')"
+    * Substanz -> "MedicationStatement.medicationCode.coding[atc-de].code"
+    * Therapiestart -> "Procedure.effectivePeriod.start"
+    * Therapieende -> "Procedure.effectivePeriod.end"
+    * EndeGrund -> "Procedure.outcome"
+    * TherapieAnsprechen -> "Verlauf.valueCodeableConcept.coding.code"
+    * TherapieAnsprechenDatum -> "Verlauf.effectiveDateTime" 
+
 
 // Terminology Alignment
 // ConceptMaps Modellvorhaben-Genomsequenzierung-SNOMED-CT
