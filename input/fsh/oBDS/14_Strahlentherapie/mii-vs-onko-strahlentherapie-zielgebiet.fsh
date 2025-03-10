@@ -3,7 +3,7 @@ Id: mii-vs-onko-strahlentherapie-zielgebiet
 Title: "MII VS Onkologie Strahlentherapie Zielgebiet"
 Description: "oBDS-spezifisches ValueSet für Klassifikation von Zielgebiet bei Strahlentherapie"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-zielgebiet"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-zielgebiet"
 * ^status = #active
 * ^experimental = false
 * insert Publisher
