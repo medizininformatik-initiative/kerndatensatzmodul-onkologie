@@ -8,7 +8,7 @@ Usage: #definition
 * experimental = false
 * date = "2024-01-05"
 * description = "Mapping Residualstatus UICC Codes zu SNOMED-CT"
-* group.source = "https://www.uicc.org/resources/"
+* group.source = "https://www.uicc.org/resources/residualstatus" // Not sure if correct?!
 * group.target = "http://snomed.info/sct"
 
 * group.element[+].code = #R0
