@@ -1,7 +1,7 @@
 ---
 parent: 
-topic: TodObservation
-subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tod
+topic: StudienteilnahmeObservation
+subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-studienteilnahme
 ---
 
 ## {{page-title}}
@@ -18,7 +18,7 @@ Dieses Profil beschreibt ob und wann ein Patient an einer Studie teilgenommen ha
 Es beinhaltet: 
 * eine Referenz auf Patient
 * eine Referenz auf die Primärdiagnose
-* den Observation-Code "70709491003 | Enrollment in clinical trial (procedure)" (SNOMED-CT)
+* den Observation-Code "709491003 | Enrollment in clinical trial (procedure)" (SNOMED-CT)
 * das genaue Ersteinschlusssdatum zu einer Studie mit Ethikvotum 
 * den Status zur Studienteilnahme (Ja, Nein, Unbekannt)
 
@@ -116,7 +116,7 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
 
     Beispiele:
     
-    ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tod```
+    ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-studienteilnahme```
     
     Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
 
@@ -124,7 +124,7 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
 
     Beispiele:
 
-    ```GET [base]/Observation?code=http://fhir.de/CodeSystem/sct|70709491003```
+    ```GET [base]/Observation?code=http://fhir.de/CodeSystem/sct|709491003```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "code" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
 

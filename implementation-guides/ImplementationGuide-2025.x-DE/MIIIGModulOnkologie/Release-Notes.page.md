@@ -22,7 +22,9 @@ Hier sind  alle Änderungen aufgelistet.
 
 
 ## Änderungen in 2025.0.4 (veröffentlicht 28.03.2025)
-- Nebenwirkung: Kardinalität des Elements AdverseEvent.event von 1..1 auf 
+- Nebenwirkung: Kardinalität des Elements AdverseEvent.event von 1..1 auf 0..1 gesenkt, da 
+- Studienteilnahme: Korrektur eines falschen SNOMED-Codes auf der IG-Seite von 70709491003 auf 709491003(Code im Profil war korrekt)
+- 
 
 ## Änderungen in 2025.0.3
 - Hinzufügen von ValueSets für ICD-O-3 Morphologie und Topologie, sowie required-binding bei den Profilen "Diagnose" und "Verlaufshistologie"
