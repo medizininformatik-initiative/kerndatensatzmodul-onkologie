@@ -14,6 +14,8 @@ zu entnehmen. Außerdem stellt die Plattform §65c eine kuratierte Liste mit üb
 https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15533115/Nebenwirkungen+CTCAE
 
 
+Abweichend zum oBDS können mit dem vorliegenden Profil auch Events der Schweregrade 1 und 2 explizit angegeben werden. Dadurch kann es dazu kommen, dass in den Krebsregisterdaten gar nicht hinterlegt ist, um was für eine Art von Nebenwirkung es sich handelt. In
+
 
 @```
 from 
