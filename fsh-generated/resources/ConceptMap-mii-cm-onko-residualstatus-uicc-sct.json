@@ -1,0 +1,90 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "mii-cm-onko-residualstatus-uicc-sct",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-residualstatus-uicc-sct",
+  "name": "MII CM Onko Residualstatus UICC SCT Mapping",
+  "title": "MII CM Onko Residualstatus UICC SNOMED",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-01-05",
+  "description": "Mapping Residualstatus UICC Codes zu SNOMED-CT",
+  "group": [
+    {
+      "source": "https://www.uicc.org/resources/residualstatus",
+      "target": "http://snomed.info/sct",
+      "element": [
+        {
+          "code": "R0",
+          "display": "Kein Residualtumor",
+          "target": [
+            {
+              "code": "1352526005",
+              "display": "Union for International Cancer Control R0 (qualifier value)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "R1",
+          "display": "Mikroskopischer Residualtumor",
+          "target": [
+            {
+              "code": "1352529003",
+              "display": "Union for International Cancer Control R1 (qualifier value)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "R1(is)",
+          "display": "In-Situ-Rest",
+          "target": [
+            {
+              "equivalence": "unknown"
+            }
+          ]
+        },
+        {
+          "code": "R1(cy+)",
+          "display": "Cytologischer Rest",
+          "target": [
+            {
+              "equivalence": "unknown"
+            }
+          ]
+        },
+        {
+          "code": "R2",
+          "display": "Makroskopischer Residualtumor",
+          "target": [
+            {
+              "code": "1352528006",
+              "display": "Union for International Cancer Control R2 (qualifier value)\tR2 (UICC)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "RX",
+          "display": "Vorhandensein von Residualtumor kann nicht beurteilt werden",
+          "target": [
+            {
+              "code": "1352527001",
+              "display": "Union for International Cancer Control RX (qualifier value)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "U",
+          "display": "Residualtumorstatus ist nicht bekannt",
+          "target": [
+            {
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
