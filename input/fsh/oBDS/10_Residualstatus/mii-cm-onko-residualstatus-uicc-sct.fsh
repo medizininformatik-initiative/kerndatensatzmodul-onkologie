@@ -45,4 +45,4 @@ Usage: #definition
 
 * group.element[+].code = #U
 * group.element[=].display = "Residualtumorstatus ist nicht bekannt"
-* group.element[=].target.equivalence = #equivalent
+* group.element[=].target.equivalence = #unknown
