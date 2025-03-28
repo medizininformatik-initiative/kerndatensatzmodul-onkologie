@@ -7,13 +7,16 @@
 [mii-exa-onko-systemische-therapie-1]: Procedure-mii-exa-onko-systemische-therapie-1.html
 [mii-exa-onko-liste-evidenz-erstdiagnose-1]: List-mii-exa-onko-liste-evidenz-erstdiagnose-1.html
 [mii-cm-onko-allgemeiner-leistungszustand-sct]: ConceptMap-mii-cm-onko-allgemeiner-leistungszustand-sct.html
+[mii-cm-onko-tnm-uicc-sct-clinical]: ConceptMap-mii-cm-onko-tnm-uicc-sct-clinical.html
 [mii-cm-onko-fernmetastasen-sct]: ConceptMap-mii-cm-onko-fernmetastasen-sct.html
 [mii-cm-onko-genetische-variante-auspraegung-sct]: ConceptMap-mii-cm-onko-genetische-variante-auspraegung-sct.html
 [mii-cm-onko-grading-sct]: ConceptMap-mii-cm-onko-grading-sct.html
 [mii-cm-onko-intention-sct]: ConceptMap-mii-cm-onko-intention-sct.html
 [mii-cm-onko-nebenwirkung-sct]: ConceptMap-mii-cm-onko-nebenwirkung-sct.html
 [mii-cm-onko-operation-komplikation-sct]: ConceptMap-mii-cm-onko-operation-komplikation-sct.html
+[mii-cm-onko-tnm-uicc-sct-pathological]: ConceptMap-mii-cm-onko-tnm-uicc-sct-pathological.html
 [mii-cm-onko-primaertumor-diagnosesicherung-sct]: ConceptMap-mii-cm-onko-primaertumor-diagnosesicherung-sct.html
+[mii-cm-onko-residualstatus-uicc-sct]: ConceptMap-mii-cm-onko-residualstatus-uicc-sct.html
 [mii-cm-onko-seitenlokalisation-sct]: ConceptMap-mii-cm-onko-seitenlokalisation-sct.html
 [mii-cm-onko-strahlentherapie-applikationsart-sct]: ConceptMap-mii-cm-onko-strahlentherapie-applikationsart-sct.html
 [mii-cm-onko-strahlentherapie-boost-sct]: ConceptMap-mii-cm-onko-strahlentherapie-boost-sct.html
