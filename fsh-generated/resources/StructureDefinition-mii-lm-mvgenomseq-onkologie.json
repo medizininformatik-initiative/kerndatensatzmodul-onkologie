@@ -1,9 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "mii-lm-modellvorhaben-genomsequenzierung-onko",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/Modellvorhaben-Genomsequenzierung-Onkologie",
+  "id": "mii-lm-mvgenomseq-onkologie",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onkologie/StructureDefinition/LogicalModel/mii-lm-mvgenomseq-onkologie",
   "version": "2025.0.0",
-  "name": "MII_LM_Modellvorhaben_Genomsequenzierung_Onko",
+  "name": "MII_LM_MVGenomSeq_Onkologie",
   "title": "MII LM Modellvorhaben Genomsequenzierung Onkologie",
   "status": "active",
   "publisher": "Medizininformatik Initiative",
@@ -21,26 +21,26 @@
   "fhirVersion": "4.0.1",
   "mapping": [
     {
-      "identity": "Modellvorhaben-Genomsequenzierung-FHIR",
+      "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
       "name": "Onkologie LogicalModel MII Onkologie Mapping"
     }
   ],
   "kind": "logical",
   "abstract": false,
-  "type": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/Modellvorhaben-Genomsequenzierung-Onkologie",
+  "type": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onkologie/StructureDefinition/LogicalModel/mii-lm-mvgenomseq-onkologie",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie",
+        "id": "mii-lm-mvgenomseq-onkologie",
+        "path": "mii-lm-mvgenomseq-onkologie",
         "short": "MII LM Modellvorhaben Genomsequenzierung Onkologie",
         "definition": "MII LogicalModel Modellvorhaben Genomsequenzierung Onkologie"
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFall",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFall",
         "short": "Onkologie-Fall",
         "definition": "Onkologie-Fall",
         "min": 0,
@@ -52,8 +52,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Diagnose",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Diagnose",
         "short": "Diagnose",
         "definition": "Diagnose",
         "min": 1,
@@ -65,14 +65,14 @@
         ],
         "mapping": [
           {
-            "identity": "Modellvorhaben-Genomsequenzierung-FHIR",
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
             "map": "Condition"
           }
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.Haupttumordiagnose",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.Haupttumordiagnose",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Diagnose.Haupttumordiagnose",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Diagnose.Haupttumordiagnose",
         "short": "Haupttumordiagnose",
         "definition": "Haupttumordiagnose in ICD-10-GM",
         "min": 1,
@@ -84,14 +84,14 @@
         ],
         "mapping": [
           {
-            "identity": "Modellvorhaben-Genomsequenzierung-FHIR",
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
             "map": "Condition.code.coding.where(system='http://fhir.de/CodeSystem/bfarm/icd-10-gm').code"
           }
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.WeitereOnkologischeDiagnosen",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.WeitereOnkologischeDiagnosen",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Diagnose.WeitereOnkologischeDiagnosen",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Diagnose.WeitereOnkologischeDiagnosen",
         "short": "Weitere onkologische Diagnosen",
         "definition": "Optional bei mehreren onkologischen Diagnosen, insbesondere Dokumentation als weiter onkologische Diagnose bei hereditären Tumordispositionssydroms (HT), bei HT zusätzliche Dokumentation ORPHAcode oder AlphaID, ein Code soweit vorhanden ist. Undiagnostizierte Erkrankungen sind mit ORPHA:616874 zu kodieren.",
         "min": 0,
@@ -103,14 +103,14 @@
         ],
         "mapping": [
           {
-            "identity": "Modellvorhaben-Genomsequenzierung-FHIR",
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
             "map": "Condition.code.coding.where(system='http://fhir.de/CodeSystem/bfarm/icd-10-gm').code"
           }
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.Hauptdiagnosedatum",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.Hauptdiagnosedatum",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Diagnose.Hauptdiagnosedatum",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Diagnose.Hauptdiagnosedatum",
         "short": "Hauptdiagnosedatum",
         "definition": "Datum der Erstdiagnose der Hauptdiagnose. Wenn Tag unbekannt -> 15. des Monats",
         "min": 0,
@@ -119,11 +119,17 @@
           {
             "code": "date"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Condition.extension.where(url='http://hl7.org/fhir/StructureDefinition/condition-assertedDate').valueDate"
+          }
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.ECOGStatus",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.ECOGStatus",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Diagnose.ECOGStatus",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Diagnose.ECOGStatus",
         "short": "ECOG-Status",
         "definition": "Eastern Cooperative Oncology Group (ECOG) Performance Status nach 0,1,2,3,4,5,unknown, not applicable",
         "min": 0,
@@ -132,11 +138,17 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Observation.where(code='423740007' and system='http://snomed.info/sct').valueCodeableConcept.coding.code"
+          }
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.KeimbahndiagnoseVorhanden",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.KeimbahndiagnoseVorhanden",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Diagnose.KeimbahndiagnoseVorhanden",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Diagnose.KeimbahndiagnoseVorhanden",
         "short": "Keimbahndiagnose vorhanden",
         "definition": "Ja, Nein, unbekannt",
         "min": 0,
@@ -145,11 +157,17 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "no direct match, vsl. über FHIRPath automatisch generieren, wenn Keimbahndiagnose.exists()"
+          }
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.Keimbahndiagnose",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.Keimbahndiagnose",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Diagnose.Keimbahndiagnose",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Diagnose.Keimbahndiagnose",
         "short": "Keimbahndiagnose",
         "definition": "Keimbahndiagnosen nach ICD-10-GM.Bei Diagnose eines hereditären Tumordispositionssydroms als Teil der OE ist verpflichtend anzugeben mit ICD10 und ORPHA oder AlphaID ",
         "min": 0,
@@ -158,11 +176,17 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "no direct match. Keimbahndiagnose existiert als Konzept nicht, hier könnte / müsste mit Condition.category gearbeitet werden, z.B. SNOMED Hereditary cancer-predisposing syndrome (disorder)"
+          }
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.HPOPhaenotypisierung",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.HPOPhaenotypisierung",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Diagnose.HPOPhaenotypisierung",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Diagnose.HPOPhaenotypisierung",
         "short": "Phänotypisierung nach HPO ",
         "definition": "Human Phenotype Ontology.Bei Diagnose eines hereditären Tumordispositionssydroms als Teil der OE, wenn vorhanden angeben (optional) ",
         "min": 0,
@@ -171,11 +195,17 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Observation.where(valueCodeableConcept.coding.system='http://human-phenotype-ontology.org')"
+          }
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.Histologie",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.Histologie",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Diagnose.Histologie",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Diagnose.Histologie",
         "short": "Histologie nach ICD-O-3",
         "definition": "Histologische Morphologie und Verhalten nach ICD-O-3",
         "min": 1,
@@ -184,11 +214,17 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3').valueCodeableConcept.coding.code"
+          }
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.Topographie",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.Topographie",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Diagnose.Topographie",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Diagnose.Topographie",
         "short": "Topographie nach ICD-O-3",
         "definition": "Topographie des Tumors nach ICD-O-3",
         "min": 1,
@@ -197,11 +233,17 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Condition.bodySite.coding.code"
+          }
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.Grading",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.Grading",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Diagnose.Grading",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Diagnose.Grading",
         "short": "Differenzierungsgrad",
         "definition": "Gibt den Differenzierungsgrad des Tumors entsprechend der aktuellen TNM-Auflage an,  Bei der Klassifikation sind die einschlägigen Regeln der Literatur (TNM) zu beachten.",
         "min": 0,
@@ -210,11 +252,17 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Observation.where(code.coding.code='33732-9' and code.coding.system='http://loinc.org').valueCodeableConcept.coding.code"
+          }
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.TNMSchluessel",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.TNMSchluessel",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Diagnose.TNMSchluessel",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Diagnose.TNMSchluessel",
         "short": "TNM-Klassifikation",
         "definition": "TNM-Klassifikation des Tumors",
         "min": 0,
@@ -223,11 +271,17 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Observation.where(code.coding.code='33732-9' and code.coding.system='http://snomed.info/sct').valueCodeableConcept.coding.code"
+          }
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.TNMSystematik",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.TNMSystematik",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Diagnose.TNMSystematik",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Diagnose.TNMSystematik",
         "short": "TNM-Systematik",
         "definition": "TNM-Systematik nach AJCC oder UICC",
         "min": 0,
@@ -236,11 +290,17 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Laut Krebsregisterdaten nur UICC vorgesehen? kein expiziter Datenpunkt außer Version"
+          }
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.WeitereKlassifikationen",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.WeitereKlassifikationen",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Diagnose.WeitereKlassifikationen",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Diagnose.WeitereKlassifikationen",
         "short": "Weitere Klassifikationen",
         "definition": "Weitere Klassifikationen des Tumors zum Diagnosezeitpunkt",
         "min": 0,
@@ -249,11 +309,17 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "no direkt match - Observation - Nutzung des Profils WeitereKlassifikationen, aber aufgrund der Vielfalt der Klassifikationen keine direkte Zuordnung möglich"
+          }
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.DiagnostischeVoruntersuchungen",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Diagnose.DiagnostischeVoruntersuchungen",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Diagnose.DiagnostischeVoruntersuchungen",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Diagnose.DiagnostischeVoruntersuchungen",
         "short": "Diagnostische Voruntersuchungen",
         "definition": "Diagnostische Voruntersuchungen zum Diagnosezeitpunkt. Bewertung der durchgeführten genetischen Diagnostik, nur für heriditäre Prädispositionssyndrome/ Erbliche Tumore",
         "min": 0,
@@ -262,11 +328,17 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "no direkt match"
+          }
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Vordiagnostik",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Vordiagnostik",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Vordiagnostik",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Vordiagnostik",
         "short": "Vordiagnostik",
         "definition": "Vordiagnostik",
         "min": 0,
@@ -275,11 +347,17 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Vordiagnostik"
+          }
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Vordiagnostik.ArtDiagnostik",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Vordiagnostik.ArtDiagnostik",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Vordiagnostik.ArtDiagnostik",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Vordiagnostik.ArtDiagnostik",
         "short": "Diagnostik",
         "definition": "Diagnostik, die vor dem MV Genomseq, durchgeführt wurde (Vorbefunde)",
         "min": 1,
@@ -288,11 +366,17 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Diagnoste)"
+          }
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Vordiagnostik.DatumDiagnostik",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.Vordiagnostik.DatumDiagnostik",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Vordiagnostik.DatumDiagnostik",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFall.Vordiagnostik.DatumDiagnostik",
         "short": "Datum",
         "definition": "Datum der Diagnostik",
         "min": 0,
@@ -301,11 +385,17 @@
           {
             "code": "date"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Datum Diagnostik"
+          }
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.MolekulareVorbefunde",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.MolekulareVorbefunde",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFall.MolekulareVorbefunde",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFall.MolekulareVorbefunde",
         "short": "klinisch relevante Ergebnisse der Diagnostik",
         "definition": "klinisch relevante Ergebnisse der Diagnostik",
         "min": 0,
@@ -314,11 +404,17 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "klinisch relevante Ergebnisse der Diagnostik"
+          }
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.MolekulareVorbefunde.Gen",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.MolekulareVorbefunde.Gen",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFall.MolekulareVorbefunde.Gen",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFall.MolekulareVorbefunde.Gen",
         "short": "Gen",
         "definition": "Gen kodiert nach HGNC",
         "min": 1,
@@ -327,11 +423,17 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Genert nach HGNC"
+          }
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.MolekulareVorbefunde.Transkript",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.MolekulareVorbefunde.Transkript",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFall.MolekulareVorbefunde.Transkript",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFall.MolekulareVorbefunde.Transkript",
         "short": "Transkript",
         "definition": "Transkript kodiert nach Ensembl/RefSeq",
         "min": 0,
@@ -340,11 +442,17 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Transkriranskript kodiert nach Ensembl/RefSeq"
+          }
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.MolekulareVorbefunde.DNAChange",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.MolekulareVorbefunde.DNAChange",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFall.MolekulareVorbefunde.DNAChange",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFall.MolekulareVorbefunde.DNAChange",
         "short": "DNA-Veränderung",
         "definition": "DNA-Verändung nach cHGVS",
         "min": 0,
@@ -353,11 +461,17 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "DNA-VeränVerändung nach cHGVS"
+          }
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.MolekulareVorbefunde.ProteinChange",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.MolekulareVorbefunde.ProteinChange",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFall.MolekulareVorbefunde.ProteinChange",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFall.MolekulareVorbefunde.ProteinChange",
         "short": "Protein-Veränderung",
         "definition": "Protein-Veränderung nach pHGVS",
         "min": 0,
@@ -366,11 +480,17 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Protein-Verändotein-Veränderung nach pHGVS"
+          }
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.MolekulareVorbefunde.TypAlteration",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.MolekulareVorbefunde.TypAlteration",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFall.MolekulareVorbefunde.TypAlteration",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFall.MolekulareVorbefunde.TypAlteration",
         "short": "Typ der Alteration",
         "definition": "Typ der Alteration / Variantenklasse nach Sequence ontology (SO)",
         "min": 0,
@@ -379,11 +499,17 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Typ der Alteratr Alteration / Variantenklasse nach Sequence ontology (SO)"
+          }
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.MolekulareVorbefunde.KomplexeAlteration",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.MolekulareVorbefunde.KomplexeAlteration",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFall.MolekulareVorbefunde.KomplexeAlteration",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFall.MolekulareVorbefunde.KomplexeAlteration",
         "short": "Komplexe Alteration",
         "definition": "Ausführliche Beschreibung bei komplexen Alteration z.B. Fusion",
         "min": 0,
@@ -392,11 +518,17 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Komplexe AlteratAusführliche Beschreibung"
+          }
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFall.SystemischeVortherapien",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFall.SystemischeVortherapien",
         "short": "Systemische Vortherapien",
         "definition": "Systemische Vortherapien",
         "min": 0,
@@ -405,11 +537,17 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Procedure"
+          }
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien.ArtTherapie",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien.ArtTherapie",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFall.SystemischeVortherapien.ArtTherapie",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFall.SystemischeVortherapien.ArtTherapie",
         "short": "Bezug zur operativen Therapie",
         "definition": "Bezug der Vortherapie zu einer operativen Therapie, z.B. adjuvant, neoadjuvant",
         "min": 1,
@@ -418,11 +556,17 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Procedure.extension.where(url='StellungZurOp')"
+          }
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien.IntentionTherapie",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien.IntentionTherapie",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFall.SystemischeVortherapien.IntentionTherapie",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFall.SystemischeVortherapien.IntentionTherapie",
         "short": "Intention",
         "definition": "Intention der Vortherapie, z.B. kurativ, palliativ",
         "min": 0,
@@ -431,11 +575,17 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Procedure.extension.where(url='Intention')"
+          }
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien.Substanz",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien.Substanz",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFall.SystemischeVortherapien.Substanz",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFall.SystemischeVortherapien.Substanz",
         "short": "Substanz",
         "definition": "Substanz der Vortherapie nach ATC oder Text bei nicht-ATC-Wirkstoffen",
         "min": 0,
@@ -444,11 +594,17 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "MedicationStatement.medicationCode.coding[atc-de].code"
+          }
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien.Therapiestart",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien.Therapiestart",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFall.SystemischeVortherapien.Therapiestart",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFall.SystemischeVortherapien.Therapiestart",
         "short": "Startdatum",
         "definition": "Startdatum der Vortherapie. Wenn Datum unbekannt, dann 15. des Monats",
         "min": 0,
@@ -457,11 +613,17 @@
           {
             "code": "date"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Procedure.effectivePeriod.start"
+          }
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien.Therapieende",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien.Therapieende",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFall.SystemischeVortherapien.Therapieende",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFall.SystemischeVortherapien.Therapieende",
         "short": "Enddatum",
         "definition": "Enddatum der Vortherapie. Wenn Datum unbekannt, dann 15. des Monats",
         "min": 0,
@@ -470,11 +632,17 @@
           {
             "code": "date"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Procedure.effectivePeriod.end"
+          }
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien.EndeGrund",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien.EndeGrund",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFall.SystemischeVortherapien.EndeGrund",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFall.SystemischeVortherapien.EndeGrund",
         "short": "Ende der Therapie",
         "definition": "Grund für das Ende der Vortherapie",
         "min": 0,
@@ -483,11 +651,17 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Procedure.outcome"
+          }
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien.TherapieAnsprechen",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien.TherapieAnsprechen",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFall.SystemischeVortherapien.TherapieAnsprechen",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFall.SystemischeVortherapien.TherapieAnsprechen",
         "short": "Ansprechen",
         "definition": "Therapieansprechen der fallrelevante, systemische Vortherapie (PD: Progression, SD:Stabile Erkrankung, PR:Partielle Remission, CR:Komplette Remission)",
         "min": 0,
@@ -496,11 +670,17 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Verlauf.valueCodeableConcept.coding.code"
+          }
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien.TherapieAnsprechenDatum",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFall.SystemischeVortherapien.TherapieAnsprechenDatum",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFall.SystemischeVortherapien.TherapieAnsprechenDatum",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFall.SystemischeVortherapien.TherapieAnsprechenDatum",
         "short": "Datum",
         "definition": "Datum des Ansprechens der Vortherapie",
         "min": 0,
@@ -509,11 +689,17 @@
           {
             "code": "date"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "MVGenomSeq-Datenkranz-to-MII-FHIR",
+            "map": "Verlauf.effectiveDateTime"
+          }
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular",
         "short": "Molekulare Diagnostik",
         "definition": "Molekulare Diagnostik",
         "min": 0,
@@ -525,8 +711,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.EinfacheVariante",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.EinfacheVariante",
         "short": "Einfache Variante inkl. Fusionen im codierenden Bereich",
         "definition": "Einfache Variante inkl. Fusionen im codierenden Bereich",
         "min": 0,
@@ -538,8 +724,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante.Identifier",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante.Identifier",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.EinfacheVariante.Identifier",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.EinfacheVariante.Identifier",
         "short": "Identifier",
         "definition": "interner Identifikator der Variante",
         "min": 0,
@@ -551,8 +737,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante.Gen",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante.Gen",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.EinfacheVariante.Gen",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.EinfacheVariante.Gen",
         "short": "Gen",
         "definition": "Gen kodiert nach HGNC",
         "min": 1,
@@ -564,8 +750,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante.Transkript",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante.Transkript",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.EinfacheVariante.Transkript",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.EinfacheVariante.Transkript",
         "short": "Transkript",
         "definition": "Transkript kodiert nach Ensembl/RefSeq",
         "min": 0,
@@ -577,8 +763,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante.DNAChange",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante.DNAChange",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.EinfacheVariante.DNAChange",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.EinfacheVariante.DNAChange",
         "short": "DNA-Veränderung",
         "definition": "DNA-Verändung nach cHGVS",
         "min": 0,
@@ -590,8 +776,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante.ProteinChange",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante.ProteinChange",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.EinfacheVariante.ProteinChange",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.EinfacheVariante.ProteinChange",
         "short": "Protein-Veränderung",
         "definition": "Protein-Veränderung nach pHGVS",
         "min": 0,
@@ -603,8 +789,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante.TypAlteration",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante.TypAlteration",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.EinfacheVariante.TypAlteration",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.EinfacheVariante.TypAlteration",
         "short": "Typ der Alteration",
         "definition": "Typ der Alteration / Variantenklasse nach Sequence ontology (SO)",
         "min": 0,
@@ -616,8 +802,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante.Lokalization",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante.Lokalization",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.EinfacheVariante.Lokalization",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.EinfacheVariante.Lokalization",
         "short": "Lokalisation der Variante",
         "definition": "Lokalisation im kodierenden, regulatorischen oder intergenischen Bereich",
         "min": 0,
@@ -629,8 +815,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante.LossOfHeterozygosity",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.EinfacheVariante.LossOfHeterozygosity",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.EinfacheVariante.LossOfHeterozygosity",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.EinfacheVariante.LossOfHeterozygosity",
         "short": "Loss of Heterozygosity (LOH)",
         "definition": "Loss of Heterozygosity (LOH) im Bereich der Variante Ja / Nein",
         "min": 0,
@@ -642,8 +828,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.CopyNumberVariante",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.CopyNumberVariante",
         "short": "Variante mit Kopienzahlveränderung (Copy Number Variation, CNV)",
         "definition": "Variante mit Kopienzahlveränderung (Copy Number Variation, CNV)",
         "min": 0,
@@ -655,8 +841,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.Identifier",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.Identifier",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.CopyNumberVariante.Identifier",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.CopyNumberVariante.Identifier",
         "short": "Identifier",
         "definition": "interner Identifikator der Variante",
         "min": 0,
@@ -668,8 +854,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.CNVTyp",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.CNVTyp",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.CopyNumberVariante.CNVTyp",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.CopyNumberVariante.CNVTyp",
         "short": "CNV-Typ",
         "definition": "Komplettverlust, partieller Verlust, Amplifikation",
         "min": 0,
@@ -681,8 +867,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.Quellprobe",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.Quellprobe",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.CopyNumberVariante.Quellprobe",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.CopyNumberVariante.Quellprobe",
         "short": "Art der Quellprobe",
         "definition": "Art der Quellprobe (somatisch oder Keimbahn)",
         "min": 0,
@@ -694,8 +880,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.Gen",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.Gen",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.CopyNumberVariante.Gen",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.CopyNumberVariante.Gen",
         "short": "Gen",
         "definition": "Gen kodiert nach HGNC - falls nur ein Gen betreffend",
         "min": 0,
@@ -707,8 +893,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.Chromosom",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.Chromosom",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.CopyNumberVariante.Chromosom",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.CopyNumberVariante.Chromosom",
         "short": "Chromosom",
         "definition": "Chromosom",
         "min": 0,
@@ -720,8 +906,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.CNVStartPosition",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.CNVStartPosition",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.CopyNumberVariante.CNVStartPosition",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.CopyNumberVariante.CNVStartPosition",
         "short": "CNV-Start",
         "definition": "Startposition des CNV basierend auf Hg38",
         "min": 0,
@@ -733,8 +919,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.CNVEndPosition",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.CNVEndPosition",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.CopyNumberVariante.CNVEndPosition",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.CopyNumberVariante.CNVEndPosition",
         "short": "CNV-Ende",
         "definition": "Endposition des CNV basierend auf Hg38",
         "min": 0,
@@ -746,8 +932,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.CopyNumber",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.CopyNumber",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.CopyNumberVariante.CopyNumber",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.CopyNumberVariante.CopyNumber",
         "short": "Copy Number",
         "definition": "Copy Number",
         "min": 0,
@@ -759,8 +945,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.Lokalization",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.CopyNumberVariante.Lokalization",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.CopyNumberVariante.Lokalization",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.CopyNumberVariante.Lokalization",
         "short": "Lokalisation der Variante",
         "definition": "Lokalisation im kodierenden, regulatorischen oder intergenischen Bereich",
         "min": 0,
@@ -772,8 +958,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.StrukturelleVariante",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.StrukturelleVariante",
         "short": "Strukturelle Variante",
         "definition": "Strukturelle Variante",
         "min": 0,
@@ -785,8 +971,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante.Identifier",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante.Identifier",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.StrukturelleVariante.Identifier",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.StrukturelleVariante.Identifier",
         "short": "Identifier",
         "definition": "interner Identifikator der Variante",
         "min": 0,
@@ -798,8 +984,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante.Quellprobe",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante.Quellprobe",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.StrukturelleVariante.Quellprobe",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.StrukturelleVariante.Quellprobe",
         "short": "Art der Quellprobe",
         "definition": "Art der Quellprobe (somatisch oder Keimbahn)",
         "min": 0,
@@ -811,8 +997,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante.Gen",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante.Gen",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.StrukturelleVariante.Gen",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.StrukturelleVariante.Gen",
         "short": "Gen",
         "definition": "N-terminales Gen",
         "min": 0,
@@ -824,8 +1010,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante.GenC",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante.GenC",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.StrukturelleVariante.GenC",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.StrukturelleVariante.GenC",
         "short": "Gen",
         "definition": "C-terminales Gen, falls in-frame und kodierend",
         "min": 0,
@@ -837,8 +1023,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante.StrukturTyp",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante.StrukturTyp",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.StrukturelleVariante.StrukturTyp",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.StrukturelleVariante.StrukturTyp",
         "short": "Variantentyp",
         "definition": "Variantentyp (Inversion, Translokation, Deletion, Insertion, Duplikation)",
         "min": 0,
@@ -850,8 +1036,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante.Beschreibung",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante.Beschreibung",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.StrukturelleVariante.Beschreibung",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.StrukturelleVariante.Beschreibung",
         "short": "Beschreibung der Variante",
         "definition": "Beschreibung der Variante nach HGVS oder ISCN",
         "min": 0,
@@ -863,8 +1049,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante.Nachweismethode",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante.Nachweismethode",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.StrukturelleVariante.Nachweismethode",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.StrukturelleVariante.Nachweismethode",
         "short": "Nachweismethode",
         "definition": "Nachweismethode (DNA / RNA)",
         "min": 0,
@@ -876,8 +1062,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante.Lokalization",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.StrukturelleVariante.Lokalization",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.StrukturelleVariante.Lokalization",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.StrukturelleVariante.Lokalization",
         "short": "Lokalisation der Variante",
         "definition": "Lokalisation im kodierenden, regulatorischen oder intergenischen Bereich",
         "min": 0,
@@ -889,8 +1075,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.ExpressionsVariante",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.ExpressionsVariante",
         "short": "Expressionsvariante",
         "definition": "Expressionsvariante",
         "min": 0,
@@ -902,8 +1088,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.Identifier",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.Identifier",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.ExpressionsVariante.Identifier",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.ExpressionsVariante.Identifier",
         "short": "Identifier",
         "definition": "interner Identifikator der Variante",
         "min": 0,
@@ -915,8 +1101,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.Gen",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.Gen",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.ExpressionsVariante.Gen",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.ExpressionsVariante.Gen",
         "short": "Gen",
         "definition": "Gen kodiert nach HGNC",
         "min": 1,
@@ -928,8 +1114,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.Expression",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.Expression",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.ExpressionsVariante.Expression",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.ExpressionsVariante.Expression",
         "short": "Expression",
         "definition": "Expression des Gens (über- oder unterexprimiert)",
         "min": 0,
@@ -941,8 +1127,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.Bewertungsgrundlage",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.Bewertungsgrundlage",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.ExpressionsVariante.Bewertungsgrundlage",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.ExpressionsVariante.Bewertungsgrundlage",
         "short": "Bewertungsgrundlage",
         "definition": "Bewertungsgrundlage der Expression (z.B. Vergleichskohorte von 400 Patienten)",
         "min": 0,
@@ -954,8 +1140,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.TMB",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.TMB",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.ExpressionsVariante.TMB",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.ExpressionsVariante.TMB",
         "short": "Tumor Mutational Burden (TMB)",
         "definition": "Tumor Mutational Burden (TMB) in Mut/Mb",
         "min": 0,
@@ -967,8 +1153,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.HRD",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.HRD",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.ExpressionsVariante.HRD",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.ExpressionsVariante.HRD",
         "short": "Homologous Recombination Deficiency (HRD)",
         "definition": "Homologous Recombination Deficiency (HRD) erhöht ja/nein",
         "min": 0,
@@ -980,8 +1166,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.LST",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.LST",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.ExpressionsVariante.LST",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.ExpressionsVariante.LST",
         "short": "Large Scale Transition (LST)",
         "definition": "Large Scale Transition (LST) erhöht ja/nein",
         "min": 0,
@@ -993,8 +1179,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.TAI",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.TAI",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.ExpressionsVariante.TAI",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.ExpressionsVariante.TAI",
         "short": "Telomeric Allelic Imbalance (TAI)",
         "definition": "Telomeric Allelic Imbalance (TAI) erhöht ja/nein",
         "min": 0,
@@ -1006,8 +1192,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.SBS",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.SBS",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.ExpressionsVariante.SBS",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.ExpressionsVariante.SBS",
         "short": "Single Base Substitution (SBS)",
         "definition": "Single Base Substitution (SBS) erhöht ja/nein",
         "min": 0,
@@ -1019,8 +1205,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.SBSSignature",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.SBSSignature",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.ExpressionsVariante.SBSSignature",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.ExpressionsVariante.SBSSignature",
         "short": "Single Base Substitution Signature",
         "definition": "Single Base Substitution Signature",
         "min": 0,
@@ -1032,8 +1218,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.Lokalization",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieMolekular.ExpressionsVariante.Lokalization",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.ExpressionsVariante.Lokalization",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieMolekular.ExpressionsVariante.Lokalization",
         "short": "Lokalisation der Variante",
         "definition": "Lokalisation im kodierenden, regulatorischen oder intergenischen Bereich",
         "min": 0,
@@ -1045,8 +1231,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologiePlan",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologiePlan",
         "short": "Therapieplan",
         "definition": "Therapieplan",
         "min": 0,
@@ -1058,8 +1244,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.MolekularesTumorboard",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.MolekularesTumorboard",
         "short": "Molekulares Tumorboard",
         "definition": "Molekulares Tumorboard",
         "min": 0,
@@ -1071,8 +1257,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.Datum",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.Datum",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.MolekularesTumorboard.Datum",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.MolekularesTumorboard.Datum",
         "short": "Datum",
         "definition": "Datum des Tumorboards",
         "min": 1,
@@ -1084,8 +1270,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungStudie",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungStudie",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungStudie",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungStudie",
         "short": "Empfehlung Studie",
         "definition": "Empfehlung zur Studienteilnahme ja/nein",
         "min": 0,
@@ -1097,8 +1283,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungBeratung",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungBeratung",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungBeratung",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungBeratung",
         "short": "Empfehlung humangenetische Beratung",
         "definition": "Empfehlung zu einer humangenetischen Beratung ja/nein",
         "min": 0,
@@ -1110,8 +1296,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungReevaluation",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungReevaluation",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungReevaluation",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungReevaluation",
         "short": "Empfehlung Reevaluation",
         "definition": "Empfehlung zur Reevaluation der molekularen Diagnostik ja/nein",
         "min": 0,
@@ -1123,8 +1309,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungOperation",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungOperation",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungOperation",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungOperation",
         "short": "Empfehlung Operation",
         "definition": "Empfehlung zur Operation ja/nein",
         "min": 0,
@@ -1136,8 +1322,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungOperationArt",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungOperationArt",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungOperationArt",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungOperationArt",
         "short": "empfohlenene Operation",
         "definition": "empfohlenen Operation",
         "min": 0,
@@ -1149,8 +1335,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungOperationRisikoreduzierend",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungOperationRisikoreduzierend",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungOperationRisikoreduzierend",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungOperationRisikoreduzierend",
         "short": "empfohlene Operation ist riskoreduzierend",
         "definition": "empfohlenen Operation ist riskoreduzierend ja/nein",
         "min": 0,
@@ -1162,8 +1348,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungOperationTherapeutisch",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungOperationTherapeutisch",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungOperationTherapeutisch",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.MolekularesTumorboard.EmpfehlungOperationTherapeutisch",
         "short": "empfohlene Operation ist therapeutisch",
         "definition": "empfohlenene Operation ist therapeutisch ja/nein",
         "min": 0,
@@ -1175,8 +1361,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.DurchgefuehrteOperation",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.MolekularesTumorboard.DurchgefuehrteOperation",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.MolekularesTumorboard.DurchgefuehrteOperation",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.MolekularesTumorboard.DurchgefuehrteOperation",
         "short": "Durchgeführte Operation",
         "definition": "Durchgeführte Operation nach OPS inkl. Version",
         "min": 0,
@@ -1188,8 +1374,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.EmpfohleneStudie",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.EmpfohleneStudie",
         "short": "Empfohlene Studieneinschlüsse",
         "definition": "Empfohlene Studieneinschlüsse",
         "min": 0,
@@ -1201,8 +1387,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.Identifier",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.Identifier",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.EmpfohleneStudie.Identifier",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.EmpfohleneStudie.Identifier",
         "short": "Identifier",
         "definition": "interner Identifikator der Studie",
         "min": 0,
@@ -1214,8 +1400,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.Register",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.Register",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.EmpfohleneStudie.Register",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.EmpfohleneStudie.Register",
         "short": "Register",
         "definition": "Registersystematik, in dem die StudienID angegeben wird (NCT, EudraCT/CTIS, DRKS, andere, unbekannt)",
         "min": 0,
@@ -1227,8 +1413,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.StudienID",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.StudienID",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.EmpfohleneStudie.StudienID",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.EmpfohleneStudie.StudienID",
         "short": "Studie",
         "definition": "StudienID in einer Registersystematik",
         "min": 0,
@@ -1240,8 +1426,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.Studienname",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.Studienname",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.EmpfohleneStudie.Studienname",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.EmpfohleneStudie.Studienname",
         "short": "Name der Studie",
         "definition": "Name der Studie",
         "min": 1,
@@ -1253,8 +1439,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.Substanzen",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.Substanzen",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.EmpfohleneStudie.Substanzen",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.EmpfohleneStudie.Substanzen",
         "short": "Substanzen",
         "definition": "Substanzen, die in der Studie eingesetzt werden, nach ATC kodiert",
         "min": 0,
@@ -1266,8 +1452,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.Evidenzgrad",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.Evidenzgrad",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.EmpfohleneStudie.Evidenzgrad",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.EmpfohleneStudie.Evidenzgrad",
         "short": "Evidenzgrad",
         "definition": "Evidenzgrad",
         "min": 0,
@@ -1279,8 +1465,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.ZusatzverweiseEvidenzgraduierung",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.ZusatzverweiseEvidenzgraduierung",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.EmpfohleneStudie.ZusatzverweiseEvidenzgraduierung",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.EmpfohleneStudie.ZusatzverweiseEvidenzgraduierung",
         "short": "Zusatzverweise zur Evidenzgraduierung",
         "definition": "Zusatzverweise zur Evidenzgraduierung",
         "min": 0,
@@ -1292,8 +1478,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.Prioritaet",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.Prioritaet",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.EmpfohleneStudie.Prioritaet",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.EmpfohleneStudie.Prioritaet",
         "short": "Priorität",
         "definition": "Priorität der Studie, falls mehrere Studien empfohlen wurde. 1 ist höchste Priorität",
         "min": 0,
@@ -1305,8 +1491,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.Variante",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.EmpfohleneStudie.Variante",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.EmpfohleneStudie.Variante",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.EmpfohleneStudie.Variante",
         "short": "Variante",
         "definition": "interne VariantenID der Variante, die für die Studie relevant ist",
         "min": 0,
@@ -1318,8 +1504,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.Therapieempfehlung",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.Therapieempfehlung",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.Therapieempfehlung",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.Therapieempfehlung",
         "short": "String",
         "definition": "String",
         "min": 0,
@@ -1331,8 +1517,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.Therapieempfehlung.Identifier",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.Therapieempfehlung.Identifier",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.Therapieempfehlung.Identifier",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.Therapieempfehlung.Identifier",
         "short": "Identifier",
         "definition": "interner Identifikator der Therapieempfehlung",
         "min": 0,
@@ -1344,8 +1530,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.Therapieempfehlung.EmpfehlungTyp",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.Therapieempfehlung.EmpfehlungTyp",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.Therapieempfehlung.EmpfehlungTyp",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.Therapieempfehlung.EmpfehlungTyp",
         "short": "Typ der Empfehlung",
         "definition": "Typ der Empfehlung (z.B. inlabel, offlabel, compassionate use, unknown, secondary preventive)",
         "min": 0,
@@ -1357,8 +1543,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.Therapieempfehlung.Substanz",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.Therapieempfehlung.Substanz",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.Therapieempfehlung.Substanz",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.Therapieempfehlung.Substanz",
         "short": "Substanzen",
         "definition": "Substanzen, die empfohlen werden, nach ATC kodiert",
         "min": 0,
@@ -1370,8 +1556,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.Therapieempfehlung.Evidenzgrad",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.Therapieempfehlung.Evidenzgrad",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.Therapieempfehlung.Evidenzgrad",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.Therapieempfehlung.Evidenzgrad",
         "short": "Evidenzgrad",
         "definition": "Evidenzgrad (m1A - m4, unbekannt)",
         "min": 0,
@@ -1383,8 +1569,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.Therapieempfehlung.Prioritaet",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.Therapieempfehlung.Prioritaet",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.Therapieempfehlung.Prioritaet",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.Therapieempfehlung.Prioritaet",
         "short": "Priorität",
         "definition": "Priorität der Therapieempfehlung, falls mehrere Empfehlungen gegeben wurden. 1 ist höchste Priorität",
         "min": 0,
@@ -1396,8 +1582,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.Therapieempfehlung.Variante",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.Therapieempfehlung.Variante",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.Therapieempfehlung.Variante",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.Therapieempfehlung.Variante",
         "short": "Variante",
         "definition": "interne VariantenID der Variante, die für die Therapieempfehlung relevant ist",
         "min": 0,
@@ -1409,8 +1595,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.Therapieempfehlung.TherapeutischeStrategie",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.Therapieempfehlung.TherapeutischeStrategie",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.Therapieempfehlung.TherapeutischeStrategie",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.Therapieempfehlung.TherapeutischeStrategie",
         "short": "Therapeutische Strategie",
         "definition": "Therapeutische Strategie (z.B. zielgerichtete Therapie, Immuntherapie, Chemotherapie, supportive Therapie)",
         "min": 0,
@@ -1422,8 +1608,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.PraeventiveUntersuchungen",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.PraeventiveUntersuchungen",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.PraeventiveUntersuchungen",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.PraeventiveUntersuchungen",
         "short": "Präventive Maßnahmen",
         "definition": "Präventive Maßnahmen",
         "min": 0,
@@ -1435,8 +1621,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.PraeventiveUntersuchungen.Identifier",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.PraeventiveUntersuchungen.Identifier",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.PraeventiveUntersuchungen.Identifier",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.PraeventiveUntersuchungen.Identifier",
         "short": "Identifier",
         "definition": "interner Identifikator der präventiven Maßnahme",
         "min": 0,
@@ -1448,8 +1634,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.PraeventiveUntersuchungen.ArtUntersuchung",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologiePlan.PraeventiveUntersuchungen.ArtUntersuchung",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.PraeventiveUntersuchungen.ArtUntersuchung",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologiePlan.PraeventiveUntersuchungen.ArtUntersuchung",
         "short": "Art der Untersuchung",
         "definition": "Art der Untersuchung(z.B. Breast Imaging, MRI, MGR, US;Colonoscopy ; Esophago-gastro-duodenoscopy )",
         "min": 0,
@@ -1461,8 +1647,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup",
         "short": "Follow-up und Umsetzung der Therapieempfehlung",
         "definition": "Follow-up und Umsetzung der Therapieempfehlung",
         "min": 0,
@@ -1474,8 +1660,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Datum",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Datum",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.Datum",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.Datum",
         "short": "Datum",
         "definition": "Datum des Follow-up",
         "min": 1,
@@ -1487,8 +1673,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.MetachroneTumore",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.MetachroneTumore",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.MetachroneTumore",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.MetachroneTumore",
         "short": "Auftreten Metachroner Tumore",
         "definition": "Auftreten metachroner Tumore ja/nein",
         "min": 0,
@@ -1500,8 +1686,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.MetachroneDiagnose",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.MetachroneDiagnose",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.MetachroneDiagnose",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.MetachroneDiagnose",
         "short": "Diagnose",
         "definition": "Diagnose des metachronen Tumors laut ICD-10",
         "min": 1,
@@ -1513,8 +1699,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.ECOG",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.ECOG",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.ECOG",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.ECOG",
         "short": "ECOG-Status",
         "definition": "Eastern Cooperative Oncology Group (ECOG) Performance Status nach 0,1,2,3,4,5,unknown, not applicable",
         "min": 0,
@@ -1526,8 +1712,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Vitalstatus",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Vitalstatus",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.Vitalstatus",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.Vitalstatus",
         "short": "Vitalstatus",
         "definition": "Vitalstatus des Patienten zum Zeitpunkt des Follow-ups (lebend, verstorben, unbekannt)",
         "min": 1,
@@ -1539,8 +1725,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.LetzterKontakt",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.LetzterKontakt",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.LetzterKontakt",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.LetzterKontakt",
         "short": "Letzter Kontakt",
         "definition": "Datum des letzten Kontakts",
         "min": 0,
@@ -1552,8 +1738,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Todesdatum",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Todesdatum",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.Todesdatum",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.Todesdatum",
         "short": "Todesdatum",
         "definition": "Datum des Todes",
         "min": 0,
@@ -1565,8 +1751,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.Therapien",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.Therapien",
         "short": "Therapien",
         "definition": "Therapien",
         "min": 0,
@@ -1578,8 +1764,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien.reference",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien.reference",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.Therapien.reference",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.Therapien.reference",
         "short": "Referenz Studien-/ Therapieempfehlung",
         "definition": "Referenz auf Studien- / Therapieempfehlung",
         "min": 1,
@@ -1591,8 +1777,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien.TherapieStart",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien.TherapieStart",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.Therapien.TherapieStart",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.Therapien.TherapieStart",
         "short": "Startdatum",
         "definition": "Startdatum der Therapie",
         "min": 0,
@@ -1604,8 +1790,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien.TherapieEnde",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien.TherapieEnde",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.Therapien.TherapieEnde",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.Therapien.TherapieEnde",
         "short": "Enddatum",
         "definition": "Enddatum der Therapie",
         "min": 0,
@@ -1617,8 +1803,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien.TherapieWirkstoff",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien.TherapieWirkstoff",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.Therapien.TherapieWirkstoff",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.Therapien.TherapieWirkstoff",
         "short": "Wirkstoff",
         "definition": "Wirkstoff der Therapie nach ATC oder Text bei nicht-ATC-Wirkstoffen",
         "min": 0,
@@ -1630,8 +1816,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien.TherapieAnsprechen",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien.TherapieAnsprechen",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.Therapien.TherapieAnsprechen",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.Therapien.TherapieAnsprechen",
         "short": "Ansprechen",
         "definition": "Therapieansprechen der Therapie (PD: Progression, SD:Stabile Erkrankung, PR:Partielle Remission, CR:Komplette Remission)",
         "min": 0,
@@ -1643,8 +1829,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien.TherapieAnsprechenDatum",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien.TherapieAnsprechenDatum",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.Therapien.TherapieAnsprechenDatum",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.Therapien.TherapieAnsprechenDatum",
         "short": "Datum",
         "definition": "Datum des Ansprechens der Vortherapie",
         "min": 0,
@@ -1656,8 +1842,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien.TherapieEndeGrund",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien.TherapieEndeGrund",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.Therapien.TherapieEndeGrund",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.Therapien.TherapieEndeGrund",
         "short": "Ende der Therapie",
         "definition": "Grund für das Ende der Vortherapie",
         "min": 0,
@@ -1669,8 +1855,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien.DatenquelleTherapieansprechen",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.Therapien.DatenquelleTherapieansprechen",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.Therapien.DatenquelleTherapieansprechen",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.Therapien.DatenquelleTherapieansprechen",
         "short": "Datenquelle Therapieansprechen",
         "definition": "Datenquelle des Therapieansprechens (z.B. Arztbrief, Entlassungsbericht, Tumordokumentation)",
         "min": 1,
@@ -1682,8 +1868,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.PraeventiveMassnahmen",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.PraeventiveMassnahmen",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.PraeventiveMassnahmen",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.PraeventiveMassnahmen",
         "short": "Präventive Maßnahmen",
         "definition": "Präventive Maßnahmen",
         "min": 0,
@@ -1695,8 +1881,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.PraeventiveMassnahmen.reference",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.PraeventiveMassnahmen.reference",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.PraeventiveMassnahmen.reference",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.PraeventiveMassnahmen.reference",
         "short": "Referenz präventive Maßnahme",
         "definition": "interne Referenz auf präventive Maßnahme",
         "min": 1,
@@ -1708,8 +1894,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.PraeventiveMassnahmen.preventiveMeasureResult",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.PraeventiveMassnahmen.preventiveMeasureResult",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.PraeventiveMassnahmen.preventiveMeasureResult",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.PraeventiveMassnahmen.preventiveMeasureResult",
         "short": "Ergebnis der präventiven Maßnahme",
         "definition": "Ergebnis der präventiven Maßnahme (z.B. ohne Befund, benigner Befund, Malignom, unklar)",
         "min": 1,
@@ -1721,8 +1907,8 @@
         ]
       },
       {
-        "id": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.PraeventiveMassnahmen.preventiveMeasureDate",
-        "path": "Modellvorhaben-Genomsequenzierung-Onkologie.OnkologieFollowup.PraeventiveMassnahmen.preventiveMeasureDate",
+        "id": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.PraeventiveMassnahmen.preventiveMeasureDate",
+        "path": "mii-lm-mvgenomseq-onkologie.OnkologieFollowup.PraeventiveMassnahmen.preventiveMeasureDate",
         "short": "Datum der präventiven Maßnahme",
         "definition": "Datum der präventiven Maßnahme",
         "min": 0,

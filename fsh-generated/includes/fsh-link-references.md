@@ -7,13 +7,16 @@
 [mii-exa-onko-systemische-therapie-1]: Procedure-mii-exa-onko-systemische-therapie-1.html
 [mii-exa-onko-liste-evidenz-erstdiagnose-1]: List-mii-exa-onko-liste-evidenz-erstdiagnose-1.html
 [mii-cm-onko-allgemeiner-leistungszustand-sct]: ConceptMap-mii-cm-onko-allgemeiner-leistungszustand-sct.html
+[mii-cm-onko-tnm-uicc-sct-clinical]: ConceptMap-mii-cm-onko-tnm-uicc-sct-clinical.html
 [mii-cm-onko-fernmetastasen-sct]: ConceptMap-mii-cm-onko-fernmetastasen-sct.html
 [mii-cm-onko-genetische-variante-auspraegung-sct]: ConceptMap-mii-cm-onko-genetische-variante-auspraegung-sct.html
 [mii-cm-onko-grading-sct]: ConceptMap-mii-cm-onko-grading-sct.html
 [mii-cm-onko-intention-sct]: ConceptMap-mii-cm-onko-intention-sct.html
 [mii-cm-onko-nebenwirkung-sct]: ConceptMap-mii-cm-onko-nebenwirkung-sct.html
 [mii-cm-onko-operation-komplikation-sct]: ConceptMap-mii-cm-onko-operation-komplikation-sct.html
+[mii-cm-onko-tnm-uicc-sct-pathological]: ConceptMap-mii-cm-onko-tnm-uicc-sct-pathological.html
 [mii-cm-onko-primaertumor-diagnosesicherung-sct]: ConceptMap-mii-cm-onko-primaertumor-diagnosesicherung-sct.html
+[mii-cm-onko-residualstatus-uicc-sct]: ConceptMap-mii-cm-onko-residualstatus-uicc-sct.html
 [mii-cm-onko-seitenlokalisation-sct]: ConceptMap-mii-cm-onko-seitenlokalisation-sct.html
 [mii-cm-onko-strahlentherapie-applikationsart-sct]: ConceptMap-mii-cm-onko-strahlentherapie-applikationsart-sct.html
 [mii-cm-onko-strahlentherapie-boost-sct]: ConceptMap-mii-cm-onko-strahlentherapie-boost-sct.html
@@ -75,7 +78,7 @@
 [MII_EX_Onko_TNM_cp_Praefix]: StructureDefinition-mii-ex-onko-tnm-cp-praefix.html
 [MII_EX_Onko_TNM_ITC_Suffix]: StructureDefinition-mii-ex-onko-tnm-itc-suffix.html
 [MII_EX_Onko_TNM_SN_Suffix]: StructureDefinition-mii-ex-onko-tnm-sn-suffix.html
-[MII_LM_Modellvorhaben_Genomsequenzierung_Onko]: StructureDefinition-mii-lm-modellvorhaben-genomsequenzierung-onko.html
+[MII_LM_MVGenomSeq_Onkologie]: StructureDefinition-mii-lm-mvgenomseq-onkologie.html
 [MII_LM_Onko]: StructureDefinition-mii-lm-onko.html
 [MII_PR_Onko_Allgemeiner_Leistungszustand_ECOG]: StructureDefinition-mii-pr-onko-allgemeiner-leistungszustand-ecog.html
 [MII_PR_Onko_Allgemeiner_Leistungszustand_Karnofsky]: StructureDefinition-mii-pr-onko-allgemeiner-leistungszustand-karnofsky.html
@@ -171,6 +174,7 @@
 [MII_VS_Onko_Verlauf_Gesamtbeurteilung]: ValueSet-mii-vs-onko-verlauf-gesamtbeurteilung.html
 [MII_VS_Onko_Verlauf_Lymphknoten]: ValueSet-mii-vs-onko-verlauf-lymphknoten.html
 [MII_VS_Onko_Verlauf_Primaertumor]: ValueSet-mii-vs-onko-verlauf-primaertumor.html
+[mii-cm-mii-to-mvgenomseq-condition-diagnose-primaertumor]: ConceptMap-mii-cm-mii-to-mvgenomseq-condition-diagnose-primaertumor.html
 [mii-exa-onko-allgemeiner-leistungszustand-ecog]: Observation-mii-exa-onko-allgemeiner-leistungszustand-ecog.html
 [mii-exa-onko-allgemeiner-leistungszustand-karnofsky]: Observation-mii-exa-onko-allgemeiner-leistungszustand-karnofsky.html
 [mii-exa-onko-anzahl-befallene-lymphknoten-0]: Observation-mii-exa-onko-anzahl-befallene-lymphknoten-0.html

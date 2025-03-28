@@ -26,7 +26,7 @@
   "dependsOn": [
     {
       "packageId": "de.basisprofil.r4",
-      "version": "1.5.x",
+      "version": "1.5.1",
       "uri": "http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4",
       "id": "de_basisprofil_r4"
     },
@@ -143,6 +143,14 @@
       },
       {
         "reference": {
+          "reference": "ConceptMap/mii-cm-onko-tnm-uicc-sct-clinical"
+        },
+        "name": "MII CM Onko Clincal TNM UICC SNOMED",
+        "description": "Mapping clincal TNM UICC Codes zu SNOMED-CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ConceptMap/mii-cm-onko-fernmetastasen-sct"
         },
         "name": "MII CM Onko Fernmetastasen SCT Mapping",
@@ -191,10 +199,26 @@
       },
       {
         "reference": {
+          "reference": "ConceptMap/mii-cm-onko-tnm-uicc-sct-pathological"
+        },
+        "name": "MII CM Onko Pathological TNM UICC SNOMED",
+        "description": "Mapping pathological TNM UICC Codes zu SNOMED-CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ConceptMap/mii-cm-onko-primaertumor-diagnosesicherung-sct"
         },
         "name": "MII CM Onko Primaertumor Diagnosesicherung SNOMED Mapping",
         "description": "Mapping Primärtumor Diagnosesicherung Codes zu SNOMED-CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/mii-cm-onko-residualstatus-uicc-sct"
+        },
+        "name": "MII CM Onko Residualstatus UICC SNOMED",
+        "description": "Mapping Residualstatus UICC Codes zu SNOMED-CT",
         "exampleBoolean": false
       },
       {
@@ -687,7 +711,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-lm-modellvorhaben-genomsequenzierung-onko"
+          "reference": "StructureDefinition/mii-lm-mvgenomseq-onkologie"
         },
         "name": "MII LM Modellvorhaben Genomsequenzierung Onkologie",
         "description": "MII LogicalModel Modellvorhaben Genomsequenzierung Onkologie",
@@ -1451,6 +1475,13 @@
         },
         "name": "MII VS Onkologie Verlauf Primärtumor",
         "description": "oBDS-spezifisches ValueSet für die Beurteilung des Primärtumors im Behandlungsverlauf",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/mii-cm-mii-to-mvgenomseq-condition-diagnose-primaertumor"
+        },
+        "name": "mii-cm-mii-to-mvgenomseq-condition-diagnose-primaertumor",
         "exampleBoolean": false
       },
       {
