@@ -28,15 +28,15 @@ Usage: #definition
 
 * group.element[+].code = #c
 * group.element[=].display = "c"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #p
 * group.element[=].display = "p"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #u
 * group.element[=].display = "u"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #TX
 * group.element[=].display = "TX"
@@ -245,7 +245,7 @@ Usage: #definition
 
 * group.element[+].code = #T3e
 * group.element[=].display = "T3e"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #T4
 * group.element[=].display = "T4"
@@ -285,43 +285,43 @@ Usage: #definition
 
 * group.element[+].code = #m
 * group.element[=].display = "m"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #2
 * group.element[=].display = "2"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #3
 * group.element[=].display = "3"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #4
 * group.element[=].display = "4"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #5
 * group.element[=].display = "5"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #6
 * group.element[=].display = "6"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #7
 * group.element[=].display = "7"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #8
 * group.element[=].display = "8"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #9
 * group.element[=].display = "9"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #10
 * group.element[=].display = "10"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #NX
 * group.element[=].display = "Nx"
@@ -415,7 +415,7 @@ Usage: #definition
 
 * group.element[+].code = #M0
 * group.element[=].display = "M0"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #M1
 * group.element[=].display = "M1"
@@ -449,91 +449,91 @@ Usage: #definition
 
 * group.element[+].code = #MX
 * group.element[=].display = "MX"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #i+
 * group.element[=].display = "i+"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #i-
 * group.element[=].display = "i-"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #mol+
 * group.element[=].display = "mol+"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #mol-
 * group.element[=].display = "mol-"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #sn
 * group.element[=].display = "sn"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #L0
 * group.element[=].display = "L0"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #L1
 * group.element[=].display = "L1"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #LX
 * group.element[=].display = "LX"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #V0
 * group.element[=].display = "V0"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #V1
 * group.element[=].display = "V1"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #V2
 * group.element[=].display = "V2"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #VX
 * group.element[=].display = "VX"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #Pn0
 * group.element[=].display = "Pn0"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #Pn1
 * group.element[=].display = "Pn1"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #PnX
 * group.element[=].display = "PnX"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #S0
 * group.element[=].display = "S0"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #S1
 * group.element[=].display = "S1"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #S2
 * group.element[=].display = "S2"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #S3
 * group.element[=].display = "S3"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #SX
 * group.element[=].display = "SX"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #okk
 * group.element[=].display = "Stadium X"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #0
 * group.element[=].display = "Stadium 0"

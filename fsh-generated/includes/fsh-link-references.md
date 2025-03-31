@@ -29,7 +29,6 @@
 [mii-cm-onko-therapie-typ-sct]: ConceptMap-mii-cm-onko-therapie-typ-sct.html
 [mii-cm-onko-therapieabweichung-sct]: ConceptMap-mii-cm-onko-therapieabweichung-sct.html
 [mii-cm-onko-therapieplanung-sct]: ConceptMap-mii-cm-onko-therapieplanung-sct.html
-[mii-cm-onko-tnm-uicc-sct]: ConceptMap-mii-cm-onko-tnm-uicc-sct.html
 [mii-cm-onko-tod-sct]: ConceptMap-mii-cm-onko-tod-sct.html
 [mii-cm-onko-verlauf-fernmetastasen-sct]: ConceptMap-mii-cm-onko-verlauf-fernmetastasen-sct.html
 [mii-cm-onko-verlauf-gesamtbeurteilung-sct]: ConceptMap-mii-cm-onko-verlauf-gesamtbeurteilung-sct.html
