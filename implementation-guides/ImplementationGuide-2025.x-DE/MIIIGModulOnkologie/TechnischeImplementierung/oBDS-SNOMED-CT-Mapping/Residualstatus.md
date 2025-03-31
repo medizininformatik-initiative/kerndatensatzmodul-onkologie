@@ -1,8 +1,9 @@
 ## {{page-title}}
 
-Die Kodierungen für die TNM-Flags y, r und a werden hier dargestellt. Die SNOMED-CT oder LOINC-Kodierungen der anderen TNM-Symbole und -Kategorien befinden sich direkt an den jeweiligen Profilen. 
+Die Kodierungen für die UICC Residualstatus werden hier dargestellt. Die UICC-Konzepte sind seit Anfang 2025 Teil der internationalen SNOMED-Distribution. 
 
-Aus lizenzrechtlichen Gründen (AJCC hat Berechtigung zur Verwendung zurückgezogen) ist das SNOMED-Mapping nicht vollständig. Im Mai 2024 wurde eine Kooperation zwischen UICC und SNOMED-CT angekündigt. Es ist zu erwarten, dass demnächst die UICC-TNM-Klassifikation in SNOMED-CT verfügbar ist.  
+Die untenstehende Tabelle stellt ein mögliches Mapping auf den UICC Residualstatus dar. 
+
 @```
 from ConceptMap 
 where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-residualstatus-uicc-sct' 

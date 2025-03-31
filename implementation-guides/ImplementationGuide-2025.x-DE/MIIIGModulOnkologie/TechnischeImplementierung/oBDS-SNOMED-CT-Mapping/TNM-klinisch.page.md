@@ -7,7 +7,6 @@ Leider ist die Granularität und Aggregation der Konzepte so gewählt worden, da
 Die untenstehende Tabelle stellt ein mögliches Mapping auf die klinischen TNMs (cTNMs ) dar. 
 
 
-
 @```
 from ConceptMap 
 where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-tnm-uicc-sct-clinical' 
