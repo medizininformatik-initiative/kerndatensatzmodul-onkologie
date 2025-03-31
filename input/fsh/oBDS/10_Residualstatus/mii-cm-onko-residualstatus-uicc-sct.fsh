@@ -8,7 +8,7 @@ Usage: #definition
 * experimental = false
 * date = "2024-01-05"
 * description = "Mapping Residualstatus UICC Codes zu SNOMED-CT"
-* group.source = "https://www.uicc.org/resources/residualstatus" // Not sure if correct?!
+* group.source = "https://www.uicc.org/resources/r-classification" 
 * group.target = "http://snomed.info/sct"
 
 * group.element[+].code = #R0
@@ -25,11 +25,11 @@ Usage: #definition
 
 * group.element[+].code = #R1(is)
 * group.element[=].display = "In-Situ-Rest"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #R1(cy+)
 * group.element[=].display = "Cytologischer Rest"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #R2
 * group.element[=].display = "Makroskopischer Residualtumor"
@@ -45,4 +45,4 @@ Usage: #definition
 
 * group.element[+].code = #U
 * group.element[=].display = "Residualtumorstatus ist nicht bekannt"
-* group.element[=].target.equivalence = #unknown
+* group.element[=].target.equivalence = #unmatched
