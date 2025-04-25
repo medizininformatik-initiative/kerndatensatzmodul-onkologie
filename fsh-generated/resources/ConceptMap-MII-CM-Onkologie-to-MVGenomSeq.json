@@ -91,9 +91,168 @@
           "display": "ICD-O-3 Morphologie-Code",
           "target": [
             {
-              "code": "diagnosisOd.mainDiagnosis.icdoMorphology",
+              "code": "DiagnosisOd.mainDiagnosis.icdoMorphology",
               "display": "ICD-O-3 Morphologie",
               "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-diagnose/StructureDefinition/Diagnose",
+      "target": "https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json",
+      "sourceVersion": "2025.0.0",
+      "targetVersion": "1.1.1",
+      "element": [
+        {
+          "code": "Condition.code.coding\"",
+          "display": "Diagnosecode",
+          "target": [
+            {
+              "code": "DiagnosisOd.additionalDiagnoses\"",
+              "display": "Diagnosecode",
+              "equivalence": "narrower",
+              "comment": "Abbildung über ICD-10-GM/OrphaCode/AlphaID jeweils mit Code/System/Version. Hier hauptsächlich relevante onkologische Begleit- und Vorerkrankungen. Diagnostizierte Keimbahnerkrankungen sollen über "
+            }
+          ]
+        },
+        {
+          "code": "Condition.extension:Feststellungsdatum",
+          "display": "Feststellungsdatum",
+          "target": [
+            {
+              "code": "DiagnosisOd.additionalDiagnoses.date",
+              "display": "Datum der Diagnose",
+              "equivalence": "equivalent",
+              "comment": "Wenn Tag unbekannt, soll auf 15. gesetzt werden"
+            }
+          ]
+        },
+        {
+          "code": "Condition.code.coding\"",
+          "display": "Diagnosecode",
+          "target": [
+            {
+              "code": "DiagnosisOd.germlineDiagnoses\"",
+              "display": "Diagnosecode",
+              "equivalence": "narrower",
+              "comment": "Nachgewiesene Keimbahnerkrankungen.Über ICD-10-GM und (OrphaCode und/oder AlphaID) jeweils mit Code/System/Version. "
+            },
+            {
+              "code": "DiagnosisOd.germlineDiagnosesConfirmed\"",
+              "display": "Diagnosecode",
+              "equivalence": "unmatched"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog",
+      "target": "https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json",
+      "sourceVersion": "2025.0.4",
+      "targetVersion": "1.1.1",
+      "element": [
+        {
+          "code": "Observation.valueCodeableConcept.coding.code",
+          "display": "ECOG-Performance-Status",
+          "target": [
+            {
+              "code": "ecogPerformanceStatusScore",
+              "display": "ECOG-Performance-Status",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog",
+      "target": "https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json",
+      "sourceVersion": "2025.0.4",
+      "targetVersion": "1.1.1",
+      "element": [
+        {
+          "code": "Observation.valueCodeableConcept.coding.code",
+          "display": "ECOG-Performance-Status",
+          "target": [
+            {
+              "code": "ecogPerformanceStatusScore",
+              "display": "ECOG-Performance-Status",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading",
+      "target": "https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json",
+      "sourceVersion": "2025.0.4",
+      "targetVersion": "1.1.1",
+      "element": [
+        {
+          "code": "Observation.valueCodeableConcept.coding.code",
+          "display": "Histologisches Grading",
+          "target": [
+            {
+              "code": "grading",
+              "display": "Histologisches Grading",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation",
+      "target": "https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json",
+      "sourceVersion": "2025.0.4",
+      "targetVersion": "1.1.1",
+      "element": [
+        {
+          "code": "Observation.valueCodeableConcept.coding.code",
+          "display": "TNM-Klassifikation",
+          "target": [
+            {
+              "code": "ecogPerformanceStatusScore",
+              "display": "TNM-KLassifkation",
+              "equivalence": "equivalent\"",
+              "comment": "für Primärtherapie entscheidendes TNM(auswerterelevanter TNM)"
+            }
+          ]
+        },
+        {
+          "code": "Observation.valueCodeableConcept.coding.code",
+          "display": "TNM-T-Kategorie",
+          "target": [
+            {
+              "code": "ecogPerformanceStatusScore",
+              "display": "TNM-KLassifkation",
+              "equivalence": "equivalent\""
+            }
+          ]
+        },
+        {
+          "code": "Observation.valueCodeableConcept.coding.code",
+          "display": "TNM-N-Kategorie",
+          "target": [
+            {
+              "code": "ecogPerformanceStatusScore",
+              "display": "TNM-KLassifkation",
+              "equivalence": "equivalent\""
+            }
+          ]
+        },
+        {
+          "code": "Observation.valueCodeableConcept.coding.code",
+          "display": "TNM-M-Kategorie",
+          "target": [
+            {
+              "code": "ecogPerformanceStatusScore",
+              "display": "TNM-KLassifkation",
+              "equivalence": "equivalent\""
             }
           ]
         }
