@@ -14,8 +14,8 @@ Description: "Dieses Profil beschreibt die Nebenwirkung von Strahlentherapie und
 
 
 // Hier wird entweder die Bezeichnung von CTCAE Grad oder die MedDRA Code genutzt
-* event 0..1 MS 
-* event.coding 1..* MS
+* event 1..1 MS
+* event.coding 0..* MS
 * event from mii-vs-onko-nebenwirkung-art
 * event.coding.system 1..1 MS
 * event.coding.code 1..1 MS
@@ -41,7 +41,7 @@ Description: "Dieses Profil beschreibt die Nebenwirkung von Strahlentherapie und
 
 // Die Referenz zu Procedure/MedicationStatement
 * suspectEntity 1..* MS
-* suspectEntity.instance MS 
+* suspectEntity.instance MS
 * suspectEntity.instance only Reference(Procedure or MedicationStatement) // add Refernce to Systemic and radiation therapy
 
 Mapping: FHIR-oBDS-AdverseEvents
