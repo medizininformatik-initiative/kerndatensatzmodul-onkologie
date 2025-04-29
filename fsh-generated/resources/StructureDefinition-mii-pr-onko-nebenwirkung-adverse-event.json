@@ -40,7 +40,6 @@
       {
         "id": "AdverseEvent.event",
         "path": "AdverseEvent.event",
-        "min": 1,
         "mustSupport": true,
         "binding": {
           "strength": "required",
@@ -128,7 +127,7 @@
             }
           ]
         },
-        "definition": "Art der Nebenwirkung nach CTCAE / MedDRA gemäß 15.2 oBDS 2021.",
+        "definition": "Art der Nebenwirkung nach CTCAE / MedDRA.  Abweichend von 15.2 oBDS 2021 kann dieses Feld leer sein falls eine Nebenwirkung des Schweregrads 1 oder 2 vorliegt und keine spezifische Art der Nebenwirkung dokumentiert wurde",
         "_definition": {
           "extension": [
             {
@@ -140,7 +139,7 @@
                 },
                 {
                   "url": "content",
-                  "valueString": "Art der Nebenwirkung nach CTCAE / MedDRA gemäß 15.2 oBDS 2021."
+                  "valueString": "Art der Nebenwirkung nach CTCAE / MedDRA . Abweichend von 15.2 oBDS 2021 kann dieses Feld leer sein falls eine Nebenwirkung des Schweregrads 1 oder 2 vorliegt und keine spezifische Art der Nebenwirkung dokumentiert wurde"
                 }
               ]
             }

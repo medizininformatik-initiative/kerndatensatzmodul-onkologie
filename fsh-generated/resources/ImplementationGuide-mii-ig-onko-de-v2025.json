@@ -3,7 +3,7 @@
   "id": "mii-ig-onko-de-v2025",
   "language": "de-DE",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/mii-ig-onko-de-v2025",
-  "version": "2025.1.0",
+  "version": "2025.0.4",
   "name": "MII_IG_Onko_DE",
   "title": "MII IG Onkologie",
   "status": "active",
@@ -143,6 +143,14 @@
       },
       {
         "reference": {
+          "reference": "ConceptMap/mii-cm-onko-tnm-uicc-sct-clinical"
+        },
+        "name": "MII CM Onko Clincal TNM UICC SNOMED",
+        "description": "Mapping clincal TNM UICC Codes zu SNOMED-CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ConceptMap/mii-cm-onko-fernmetastasen-sct"
         },
         "name": "MII CM Onko Fernmetastasen SCT Mapping",
@@ -191,10 +199,26 @@
       },
       {
         "reference": {
+          "reference": "ConceptMap/mii-cm-onko-tnm-uicc-sct-pathological"
+        },
+        "name": "MII CM Onko Pathological TNM UICC SNOMED",
+        "description": "Mapping pathological TNM UICC Codes zu SNOMED-CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ConceptMap/mii-cm-onko-primaertumor-diagnosesicherung-sct"
         },
         "name": "MII CM Onko Primaertumor Diagnosesicherung SNOMED Mapping",
         "description": "Mapping Primärtumor Diagnosesicherung Codes zu SNOMED-CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/mii-cm-onko-residualstatus-uicc-sct"
+        },
+        "name": "MII CM Onko Residualstatus UICC SNOMED",
+        "description": "Mapping Residualstatus UICC Codes zu SNOMED-CT",
         "exampleBoolean": false
       },
       {
@@ -291,14 +315,6 @@
         },
         "name": "MII CM Onko Therapieplanung SNOMED Mapping",
         "description": "Mapping Therapieplanung Codes zu SNOMED-CT",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/mii-cm-onko-tnm-uicc-sct"
-        },
-        "name": "MII CM Onko TNM UICC SNOMED",
-        "description": "Mapping TNM UICC Codes zu SNOMED-CT",
         "exampleBoolean": false
       },
       {

@@ -20,17 +20,17 @@ Description: "Strahlentherapie: einzelne Bestrahlung innerhalb der Gesamttherapi
 * extension[Applikationsart] ^short = "Strahlentherapie Applikationsart"
 * extension[Applikationsart] ^definition = "Gibt an, mit welcher Technik die Strahlentherapie durchgeführt wurde."
 * extension[Applikationsart].value[x] only CodeableConcept
-* extension[Applikationsart].valueCodeableConcept from mii-vs-onko-strahlentherapie-applikationsart (required)
+* extension[Applikationsart].valueCodeableConcept from mii-vs-onko-strahlentherapie-applikationsart (extensible)
 
 * extension[Strahlenart] ^short = "Strahlentherapie Strahlenart"
 * extension[Strahlenart] ^definition = "Gibt an, mit welcher Strahlenart (sowohl Strahlung als auch Metabolite) die Strahlentherapie durchgeführt wurde."
 * extension[Strahlenart].value[x] only CodeableConcept
-* extension[Strahlenart].valueCodeableConcept from mii-vs-onko-strahlentherapie-strahlenart (required)
+* extension[Strahlenart].valueCodeableConcept from mii-vs-onko-strahlentherapie-strahlenart (extensible)
 
 * extension[Zielgebiet] ^short = "Strahlentherapie Zielgebiet"
 * extension[Zielgebiet] ^definition = "Gibt an, an welcher anatomischen Region die Bestrahlung durchgeführt wurde."
 * extension[Zielgebiet].value[x] only CodeableConcept
-* extension[Zielgebiet].valueCodeableConcept from mii-vs-onko-strahlentherapie-zielgebiet (required)
+* extension[Zielgebiet].valueCodeableConcept from mii-vs-onko-strahlentherapie-zielgebiet (extensible)
 
 * extension[Zielgebiet_Lateralitaet] ^short = "Seitenlokalisation Zielgebietes"
 * extension[Zielgebiet_Lateralitaet] ^definition = "Gibt Seitenlokalisation des Zielgebietes an. Bei beidseitiger Bestrahlung paariger Organe sind die Bestrahlungen einzeln zu melden."

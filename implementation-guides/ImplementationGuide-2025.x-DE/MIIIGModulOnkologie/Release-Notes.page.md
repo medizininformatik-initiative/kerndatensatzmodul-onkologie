@@ -5,7 +5,7 @@ parent:
 ## {{page-title}}
 Hier sind  alle Änderungen aufgelistet. 
 
-## Änderungen in 2025.1.0
+## Änderungen in 2025.1.0 (geplant, unbestätigt)
 - Umprofilierung des Strahlentherapie-Profils (BREAKING CHANGE!)
     - bisher: 
         - basierend auf MII-Prozedur-Profil
@@ -20,6 +20,11 @@ Hier sind  alle Änderungen aufgelistet.
             - Zeitraum der Einzelbestrahlungen über Procedure.effectivePeriod
             - Gesamtdosis, Einzeldosis und Boost als Extension
 
+
+## Änderungen in 2025.0.4 (veröffentlicht 28.03.2025)
+- Nebenwirkung: Kardinalität des Elements AdverseEvent.event von 1..1 auf 0..1 gesenkt, da in den Krebsregisterdaten keine näheren Informationen zu CTCAE 0-2 gegeben werden. 
+- Studienteilnahme: Korrektur eines falschen SNOMED-Codes auf der IG-Seite von 70709491003 auf 709491003(Code im Profil war korrekt)
+- Strahlentherapie-Bestrahlung: ValueSet-Binding von Strahlenart, Applikationsart und Lokalisation von required auf extensible gesenkt. Hintergrund war, dass auch experimentelle Strahlentherapien kodierbar sein sollen, und dass historische Werte teilweise auf der alten Werteliste Zielgebiet_2014 basieren (siehe https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532594/oBDS_Zielgebiet2014_Typ)
 
 ## Änderungen in 2025.0.3
 - Hinzufügen von ValueSets für ICD-O-3 Morphologie und Topologie, sowie required-binding bei den Profilen "Diagnose" und "Verlaufshistologie"
