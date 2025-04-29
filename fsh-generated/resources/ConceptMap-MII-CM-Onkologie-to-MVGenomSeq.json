@@ -106,11 +106,11 @@
       "targetVersion": "1.1.1",
       "element": [
         {
-          "code": "Condition.code.coding\"",
+          "code": "Condition.code.coding",
           "display": "Diagnosecode",
           "target": [
             {
-              "code": "DiagnosisOd.additionalDiagnoses\"",
+              "code": "DiagnosisOd.additionalDiagnoses",
               "display": "Diagnosecode",
               "equivalence": "narrower",
               "comment": "Abbildung über ICD-10-GM/OrphaCode/AlphaID jeweils mit Code/System/Version. Hier hauptsächlich relevante onkologische Begleit- und Vorerkrankungen. Diagnostizierte Keimbahnerkrankungen sollen über "
@@ -134,13 +134,13 @@
           "display": "Diagnosecode",
           "target": [
             {
-              "code": "DiagnosisOd.germlineDiagnoses\"",
+              "code": "DiagnosisOd.germlineDiagnoses",
               "display": "Diagnosecode",
               "equivalence": "narrower",
               "comment": "Nachgewiesene Keimbahnerkrankungen.Über ICD-10-GM und (OrphaCode und/oder AlphaID) jeweils mit Code/System/Version. "
             },
             {
-              "code": "DiagnosisOd.germlineDiagnosesConfirmed\"",
+              "code": "DiagnosisOd.germlineDiagnosesConfirmed",
               "display": "Diagnosecode",
               "equivalence": "unmatched"
             }
@@ -218,7 +218,7 @@
             {
               "code": "ecogPerformanceStatusScore",
               "display": "TNM-KLassifkation",
-              "equivalence": "equivalent\"",
+              "equivalence": "equivalent",
               "comment": "für Primärtherapie entscheidendes TNM(auswerterelevanter TNM)"
             }
           ]
@@ -230,7 +230,7 @@
             {
               "code": "ecogPerformanceStatusScore",
               "display": "TNM-KLassifkation",
-              "equivalence": "equivalent\""
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -241,7 +241,7 @@
             {
               "code": "ecogPerformanceStatusScore",
               "display": "TNM-KLassifkation",
-              "equivalence": "equivalent\""
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -252,7 +252,7 @@
             {
               "code": "ecogPerformanceStatusScore",
               "display": "TNM-KLassifkation",
-              "equivalence": "equivalent\""
+              "equivalence": "equivalent"
             }
           ]
         }
