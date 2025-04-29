@@ -5,7 +5,7 @@ Title: "MII LM Modellvorhaben Genomsequenzierung Onkologie"
 Description: "MII LogicalModel Modellvorhaben Genomsequenzierung Onkologie"
 * insert Publisher
 * insert PR_CS_VS_Version
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onkologie/StructureDefinition/LogicalModel/mii-lm-mvgenomseq-onkologie"
+//* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/mii-lm-mvgenomseq-onkologie"
 * OnkologieFall 0..* BackboneElement "Onkologie-Fall"
   * Diagnose 1..1 BackboneElement "Diagnose"
     * Haupttumordiagnose 1..1 code "Haupttumordiagnose" "Haupttumordiagnose in ICD-10-GM"
