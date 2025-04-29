@@ -44,3 +44,19 @@ Der Datenkranz beinhaltet dabei Informationen zur diagnostischen und therapeutis
 
 Es gibt einen ähnlichen Datenkranz für Seltene Erkrankungen, der zukünftig im Modul Seltene Erkrankungen abgebildet wird. 
 {{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/mii-lm-mvgenomseq-onkologie}}
+
+Ein Mapping der Datenelemente auf den MII KDS ist derzeit in Arbeit, hier ein erster Ausschnitt. 
+@```
+
+from ConceptMap 
+where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onkologie/ConceptMap/mii-cm-onkologie-to-mvgenomseq' 
+    for group
+        for group.element
+            select 
+                MII-KDS: code, 
+                MII: display, 
+                SNOMED_CT_ID: target.code, 
+                SNOMED_CT_Name: target.display, 
+                Aequivalenzlevel: target.equivalence, 
+                Kommentar: target.comment  
+```

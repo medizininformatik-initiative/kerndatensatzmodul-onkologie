@@ -8,8 +8,8 @@ The following sections describe the use cases of the module, as well as the asso
 
 | Publication   |   |
 |---------|---|
-| Date   | 17.12.2024 |
-| Version | 2025.0.0        |
+| Date   | 31.03.2025 |
+| Version | 2025.0.4        |
 | Status  | Active       |
 | Realm   | DE          | 
 

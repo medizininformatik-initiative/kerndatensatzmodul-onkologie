@@ -1,0 +1,27 @@
+{
+  "$id": "https://www.bfarm.de/schemas/genomde/Oncology",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Oncology Data Schema",
+  "type": "object",
+  "required": [
+    "metaData"
+  ],
+  "properties": {
+    "metaData": {
+      "$ref": "https://www.bfarm.de/schemas/genomde/Submission#"
+    },
+    "OncologyCase": {
+      "$ref": "https://www.bfarm.de/schemas/genomde/OncologyCase#"
+    },
+    "OncologyMolecular": {
+      "$ref": "https://www.bfarm.de/schemas/genomde/OncologyMolecular#"
+    },
+    "OncologyPlan": {
+        "$ref": "https://www.bfarm.de/schemas/genomde/OncologyPlan#"
+    },
+    "OncologyFollowUp": {
+        "$ref": "https://www.bfarm.de/schemas/genomde/OncologyFollowUp#"
+    }
+  }
+}
+  
