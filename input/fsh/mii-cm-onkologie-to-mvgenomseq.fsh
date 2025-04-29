@@ -99,17 +99,6 @@ Description: "MII LogicalModel Modellvorhaben Genomsequenzierung Onkologie"
 * group[=].element[=].target[=].display = "ECOG-Performance-Status"
 * group[=].element[=].target[=].equivalence = #equivalent
 
-* group[+].source = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog"
-* group[=].target = "https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json"
-* group[=].sourceVersion = "2025.0.4"
-* group[=].targetVersion = "1.1.1"
-
-* group[=].element[+].code = #Observation.valueCodeableConcept.coding.code
-* group[=].element[=].display = "ECOG-Performance-Status"
-* group[=].element[=].target[+].code = #ecogPerformanceStatusScore
-* group[=].element[=].target[=].display = "ECOG-Performance-Status"
-* group[=].element[=].target[=].equivalence = #equivalent
-
 * group[+].source = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading"
 * group[=].target = "https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json"
 * group[=].sourceVersion = "2025.0.4"
