@@ -26,7 +26,7 @@
   "dependsOn": [
     {
       "packageId": "de.basisprofil.r4",
-      "version": "1.5.x",
+      "version": "1.5.1",
       "uri": "http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4",
       "id": "de_basisprofil_r4"
     },
@@ -340,6 +340,14 @@
         "name": "MII CM Onko Verlauf Primaertumor SNOMED Mapping",
         "description": "Mapping Verlauf-Primaertumor Codes zu SNOMED-CT",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/MII-CM-Onkologie-to-MVGenomSeq"
+        },
+        "name": "MII Concept Map Modellvorhaben Genomsequenzierung Onkologie",
+        "description": "MII LogicalModel Modellvorhaben Genomsequenzierung Onkologie",
+        "exampleBoolean": true
       },
       {
         "reference": {

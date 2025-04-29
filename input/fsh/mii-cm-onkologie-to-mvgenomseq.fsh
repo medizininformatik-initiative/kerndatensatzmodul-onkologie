@@ -83,6 +83,7 @@ Description: "MII LogicalModel Modellvorhaben Genomsequenzierung Onkologie"
 * group[=].element[=].target[=].comment = "Nachgewiesene Keimbahnerkrankungen.Über ICD-10-GM und (OrphaCode und/oder AlphaID) jeweils mit Code/System/Version. "
 * group[=].element[=].target[+].code = #DiagnosisOd.germlineDiagnosesConfirmed"
 * group[=].element[=].target[=].display = "Diagnosecode"
+* group[=].element[=].target[=].equivalence = #unmatched
 
 
 
