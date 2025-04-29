@@ -8,8 +8,8 @@ Im Folgenden werden die Use Cases des Moduls, sowie die dazugehörigen FHIR-Prof
 
 | Veröffentlichung   |   |
 |---------|---|
-| Datum   | 17.12.2024 |
-| Version | 2025.0.0        |
+| Datum   | 31.03.2025 |
+| Version | 2025.0.4        |
 | Status  | Active       |
 | Realm   | DE          | 
 
@@ -29,7 +29,7 @@ Dieser Leitfaden ist im Rahmen der Medizininformatik Initative erstellt wurden u
 
 Fragen zu der vorliegenden Publikation können jederzeit unter [chat.fhir.org](https://chat.fhir.org) im Stream 'german/mi-initiative' gestellt werden.
 
-Anmerkungen und Kritik wird in Form von 'Issues' im Simplifier Projekt stets gern entgegengenommen.
+Anmerkungen und Kritik wird in Form von 'Issues' im [GitHub-Projekt](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues) stets gern entgegengenommen: .
 
 ## Autoren (in alphabetischer Reihenfolge)
 * Jori Kern (DKFZ Heidelberg)
