@@ -1,0 +1,34 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Onko_Nebenwirkung_Art",
+  "id": "mii-vs-onko-nebenwirkung-art",
+  "title": "MII VS Onkologie Nebenwirkung nach CTCAE Art",
+  "description": "oBDS-spezifisches ValueSet für Nebenwirkung nach CTCAE oder MedDRA code",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-nebenwirkung-art",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2025.0.4",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ]
+  },
+  "experimental": false,
+  "compose": {
+    "include": [
+      {
+        "system": "https://www.meddra.org"
+      }
+    ]
+  }
+}

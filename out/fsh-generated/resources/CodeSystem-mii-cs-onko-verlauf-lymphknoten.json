@@ -1,0 +1,64 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "MII_CS_Onko_Verlauf_Lymphknoten",
+  "id": "mii-cs-onko-verlauf-lymphknoten",
+  "title": "MII CS Onkologie Verlauf Lymphknoten",
+  "description": "oBDS-spezifisches Codesystem für die Beurteilung von Lymphknoten im Behandlungsverlauf ",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-lymphknoten",
+  "concept": [
+    {
+      "code": "K",
+      "display": "kein Lymphknotenbefall nachweisbar"
+    },
+    {
+      "code": "R",
+      "display": "neu aufgetretenes Lymphknotenrezidiv"
+    },
+    {
+      "code": "T",
+      "display": "bekannter Lymphknotenbefall Residuen"
+    },
+    {
+      "code": "P",
+      "display": "bekannter Lymphknotenbefall Progress"
+    },
+    {
+      "code": "N",
+      "display": "bekannter Lymphknotenbefall No Change"
+    },
+    {
+      "code": "F",
+      "display": "fraglicher Befund"
+    },
+    {
+      "code": "U",
+      "display": "unbekannt"
+    },
+    {
+      "code": "X",
+      "display": "fehlende Angabe"
+    }
+  ],
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2025.0.4",
+  "caseSensitive": true,
+  "count": 8
+}

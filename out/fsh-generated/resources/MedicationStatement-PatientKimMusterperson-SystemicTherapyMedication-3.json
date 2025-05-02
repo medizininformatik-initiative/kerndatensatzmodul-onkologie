@@ -1,0 +1,35 @@
+{
+  "resourceType": "MedicationStatement",
+  "id": "PatientKimMusterperson-SystemicTherapyMedication-3",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
+    ]
+  },
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/atc",
+        "code": "L01XK02",
+        "display": "Niraparib"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/PatientKimMusterperson"
+  },
+  "status": "completed",
+  "effectivePeriod": {
+    "start": "2022-01-25"
+  },
+  "partOf": [
+    {
+      "reference": "Procedure/PatientKimMusterperson-SystemicTherapy-3"
+    }
+  ],
+  "note": [
+    {
+      "text": "Niraparib"
+    }
+  ]
+}

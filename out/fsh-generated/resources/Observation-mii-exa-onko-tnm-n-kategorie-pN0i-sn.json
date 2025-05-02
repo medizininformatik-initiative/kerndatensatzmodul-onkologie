@@ -1,0 +1,81 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-tnm-n-kategorie-pN0i-sn",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie"
+    ]
+  },
+  "valueCodeableConcept": {
+    "extension": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-itc-suffix",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "i-",
+              "system": "https://www.uicc.org/resources/tnm",
+              "display": "(i-)"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-sn-suffix",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "sn",
+              "system": "https://www.uicc.org/resources/tnm",
+              "display": "(sn)"
+            }
+          ]
+        }
+      }
+    ],
+    "coding": [
+      {
+        "code": "N0",
+        "system": "https://www.uicc.org/resources/tnm",
+        "display": "N0"
+      }
+    ]
+  },
+  "status": "final",
+  "code": {
+    "extension": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "p",
+              "system": "https://www.uicc.org/resources/tnm",
+              "display": "p"
+            }
+          ]
+        }
+      }
+    ],
+    "coding": [
+      {
+        "code": "371494008",
+        "system": "http://snomed.info/sct",
+        "display": "pN category (observable entity)"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "effectiveDateTime": "2024-01-11",
+  "method": {
+    "coding": [
+      {
+        "code": "8",
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+        "display": "8. Auflage"
+      }
+    ]
+  }
+}

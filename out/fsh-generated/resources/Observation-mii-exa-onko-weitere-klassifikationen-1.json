@@ -1,0 +1,40 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-weitere-klassifikationen-1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "385361009",
+        "system": "http://snomed.info/sct",
+        "display": "International Federation of Gynecology and Obstetrics stage for gynecological malignancy (observable entity)"
+      }
+    ],
+    "text": "FIGO Klassifikation für ovariale Tumore"
+  },
+  "method": {
+    "coding": [
+      {
+        "code": "254386003",
+        "system": "http://snomed.info/sct",
+        "display": "International Federation of Gynecology and Obstetrics ovarian tumor staging system (tumor staging)"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "effectiveDateTime": "2024-01-11",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "IVB"
+      }
+    ]
+  }
+}

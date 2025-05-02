@@ -1,0 +1,26 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "mii-sp-onko-ext-strahlentherapie-stellungzurop",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-ext-strahlentherapie-stellungzurop",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2025.0.4",
+  "name": "MII_SP_Procedure_Extension_Strahlentherapie_StellungZurOp",
+  "description": "SearchParameter for Procedure.extension[StellungZurOp]",
+  "status": "active",
+  "code": "strahlentherapie-stellungzurop",
+  "base": [
+    "Procedure"
+  ],
+  "type": "token",
+  "expression": "Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop').value"
+}

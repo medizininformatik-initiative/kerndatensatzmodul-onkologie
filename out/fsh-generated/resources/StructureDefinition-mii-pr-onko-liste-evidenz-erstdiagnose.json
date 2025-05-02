@@ -1,0 +1,99 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-pr-onko-liste-evidenz-erstdiagnose",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-liste-evidenz-erstdiagnose",
+  "version": "2025.0.4",
+  "name": "MII_PR_Onko_Liste_Evidenz_Erstdiagnose",
+  "title": "MII PR Onkologie Evidenz Diagnose Primärtumor",
+  "status": "active",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "description": "Dieses Profil beschreibt eine Liste, die alle Observationen und Berichte enthält, die für eine Erstdiagnostik relevant waren.  (synchrone Observationen im Sinne der Krebsregister)",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "List",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/List",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "List.meta.profile",
+        "path": "List.meta.profile",
+        "mustSupport": true
+      },
+      {
+        "id": "List.status",
+        "path": "List.status",
+        "patternCode": "current",
+        "mustSupport": true
+      },
+      {
+        "id": "List.mode",
+        "path": "List.mode",
+        "patternCode": "snapshot",
+        "mustSupport": true
+      },
+      {
+        "id": "List.title",
+        "path": "List.title",
+        "min": 1,
+        "patternString": "Liste der Evidenz zum Erstdiagnosezeitpunkt",
+        "mustSupport": true
+      },
+      {
+        "id": "List.subject",
+        "path": "List.subject",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "List.encounter",
+        "path": "List.encounter",
+        "mustSupport": true
+      },
+      {
+        "id": "List.entry",
+        "path": "List.entry",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "List.entry.flag",
+        "path": "List.entry.flag",
+        "mustSupport": true
+      },
+      {
+        "id": "List.entry.item",
+        "path": "List.entry.item",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Observation",
+              "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  }
+}

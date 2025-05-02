@@ -1,0 +1,565 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-pr-onko-diagnose-primaertumor",
+  "extension": [
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/spdx-license",
+            "code": "CC-BY-4.0",
+            "display": "Creative Commons Attribution 4.0 International"
+          }
+        ]
+      }
+    }
+  ],
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor",
+  "version": "2025.0.4",
+  "name": "MII_PR_Onko_Diagnose_Primaertumor",
+  "title": "MII PR Onkologie Diagnose Primärtumor",
+  "_title": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "de-DE"
+          },
+          {
+            "url": "content",
+            "valueString": "Onkologische Diagnose im Rahmen einer onkologischen Erkrankung"
+          }
+        ]
+      }
+    ]
+  },
+  "status": "active",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "description": "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der primären hämatologisch-myeloneoplastischen Erkrankung)",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "de-DE"
+          },
+          {
+            "url": "content",
+            "valueString": "Diagnose des Primärtumors bzw. der primären hämatologisch-myeloneoplastischen Erkrankung im Rahmen einer onkologischen Erkrankung"
+          }
+        ]
+      }
+    ]
+  },
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "MII-FHIR-to-MVGenomSeq",
+      "name": "Onkologie LogicalModel MII Onkologie Mapping"
+    },
+    {
+      "identity": "oBDS",
+      "name": "Mapping FHIR zu oBDS"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Condition",
+  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Condition",
+        "path": "Condition",
+        "mapping": [
+          {
+            "identity": "MII-FHIR-to-MVGenomSeq",
+            "map": "OnkologieFall.Diagnose"
+          },
+          {
+            "identity": "oBDS",
+            "map": "5",
+            "comment": "Diagnose"
+          },
+          {
+            "identity": "oBDS",
+            "map": "5.9",
+            "comment": "Frühere Tumorerkrankungen"
+          }
+        ]
+      },
+      {
+        "id": "Condition.extension",
+        "path": "Condition.extension",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.extension:Feststellungsdatum",
+        "path": "Condition.extension",
+        "sliceName": "Feststellungsdatum",
+        "min": 1,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "5.6",
+            "comment": "Primärtumor Diagnosedatum"
+          }
+        ]
+      },
+      {
+        "id": "Condition.extension:morphology-behavior-icdo3",
+        "path": "Condition.extension",
+        "sliceName": "morphology-behavior-icdo3",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3"
+            ]
+          }
+        ],
+        "mustSupport": true,
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "ICD-O-Morphologie"
+                }
+              ]
+            }
+          ]
+        },
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Morphologie des Primärtumors nach ICD-O-3 nach 6.3 oBDS"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "Condition.extension:morphology-behavior-icdo3.value[x].coding.version",
+        "path": "Condition.extension.value[x].coding.version",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "6.4",
+            "comment": "Morphologie ICD-O/Blue Book Version"
+          }
+        ]
+      },
+      {
+        "id": "Condition.extension:morphology-behavior-icdo3.value[x].coding.code",
+        "path": "Condition.extension.value[x].coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "6.3",
+            "comment": "Morphologie-Code"
+          }
+        ]
+      },
+      {
+        "id": "Condition.extension:morphology-behavior-icdo3.value[x].text",
+        "path": "Condition.extension.value[x].text",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "6.5",
+            "comment": "Morphologie-Freitext"
+          }
+        ]
+      },
+      {
+        "id": "Condition.verificationStatus.coding",
+        "path": "Condition.verificationStatus.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Condition.verificationStatus.coding:condition-ver-status",
+        "path": "Condition.verificationStatus.coding",
+        "sliceName": "condition-ver-status",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/condition-ver-status"
+        }
+      },
+      {
+        "id": "Condition.verificationStatus.coding:primaertumorDiagnosesicherung",
+        "path": "Condition.verificationStatus.coding",
+        "sliceName": "primaertumorDiagnosesicherung",
+        "short": "Diagnosesicherung gemäß oBDS",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Diagnosesicherung gemäß oBDS"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Art der Diagnosesicherung nach 5.7 oBDS 2021",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Art der Diagnosesicherung nach 5.7 oBDS 2021"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung"
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-primaertumor-diagnosesicherung"
+        }
+      },
+      {
+        "id": "Condition.verificationStatus.coding:primaertumorDiagnosesicherung.system",
+        "path": "Condition.verificationStatus.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.verificationStatus.coding:primaertumorDiagnosesicherung.code",
+        "path": "Condition.verificationStatus.coding.code",
+        "min": 1,
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "5.7",
+            "comment": "Primärtumor Diagnosesicherung"
+          }
+        ]
+      },
+      {
+        "id": "Condition.code.coding:icd10-gm",
+        "path": "Condition.code.coding",
+        "sliceName": "icd10-gm"
+      },
+      {
+        "id": "Condition.code.coding:icd10-gm.version",
+        "path": "Condition.code.coding.version",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "5.2",
+            "comment": "Primärtumor Tumordiagnose ICD-Version"
+          }
+        ]
+      },
+      {
+        "id": "Condition.code.coding:icd10-gm.code",
+        "path": "Condition.code.coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "5.1",
+            "comment": "Primärtumor Tumordiagnose ICD Code"
+          }
+        ]
+      },
+      {
+        "id": "Condition.code.text",
+        "path": "Condition.code.text",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "5.3",
+            "comment": "Primärtumor Tumordiagnose Text"
+          }
+        ]
+      },
+      {
+        "id": "Condition.bodySite.coding:primaertumorSeitenlokalisation",
+        "path": "Condition.bodySite.coding",
+        "sliceName": "primaertumorSeitenlokalisation",
+        "short": "Seitenlokalisation des Primärtumors gemäß oBDS",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Seitenlokalisation des Primärtumors gemäß oBDS"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Seitenlokalisation des Primärtumors nach 5.8 oBDS 2021",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Seitenlokalisation des Primärtumors nach 5.8 oBDS 2021"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation"
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-seitenlokalisation"
+        }
+      },
+      {
+        "id": "Condition.bodySite.coding:primaertumorSeitenlokalisation.system",
+        "path": "Condition.bodySite.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.bodySite.coding:primaertumorSeitenlokalisation.code",
+        "path": "Condition.bodySite.coding.code",
+        "min": 1,
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "5.8",
+            "comment": "Primärtumor Seitenlokalisation"
+          }
+        ]
+      },
+      {
+        "id": "Condition.bodySite.coding:icd-o-3",
+        "path": "Condition.bodySite.coding",
+        "sliceName": "icd-o-3",
+        "short": "ICD-O-Topographie",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "ICD-O-Topographie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Topographie des Primärtumors nach ICD-O-3 nach 5.4 oBDS 2021",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Topographie des Primärtumors nach ICD-O-3 nach 5.4 oBDS 2021"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://terminology.hl7.org/CodeSystem/icd-o-3"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.bodySite.coding:icd-o-3.system",
+        "path": "Condition.bodySite.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.bodySite.coding:icd-o-3.version",
+        "path": "Condition.bodySite.coding.version",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "5.5",
+            "comment": "Primärtumor Topographie ICD-O-Version"
+          }
+        ]
+      },
+      {
+        "id": "Condition.bodySite.coding:icd-o-3.code",
+        "path": "Condition.bodySite.coding.code",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-topographie"
+        },
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "5.4",
+            "comment": "Primärtumor Topographie ICD-O"
+          }
+        ]
+      },
+      {
+        "id": "Condition.subject",
+        "path": "Condition.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Condition.evidence",
+        "path": "Condition.evidence",
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.evidence.detail",
+        "path": "Condition.evidence.detail",
+        "short": "Evidenz für Erstdiagnose",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Evidenz für Erstdiagnose"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Liste aller für die Erstdiagnose ausschlaggebenden Beobachtungen",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Liste aller für die Erstdiagnose ausschlaggebenden Beobachtungen"
+                }
+              ]
+            }
+          ]
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-liste-evidenz-erstdiagnose"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "resourceType": "CarePlan",
+  "id": "mii-exa-onko-tumorkonferenz-01",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
+    ]
+  },
+  "intent": "plan",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ",
+          "code": "postop"
+        }
+      ]
+    }
+  ],
+  "activity": [
+    {
+      "detail": {
+        "code": {
+          "coding": [
+            {
+              "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ",
+              "code": "OP"
+            }
+          ]
+        },
+        "status": "completed"
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "value": "Tumorkonferenz_1"
+    }
+  ],
+  "status": "active",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "created": "2024-01-11"
+}

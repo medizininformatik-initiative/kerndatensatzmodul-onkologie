@@ -1,0 +1,36 @@
+{
+  "resourceType": "MedicationStatement",
+  "id": "PatientKimMusterperson-SystemicTherapyMedication-1a",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
+    ]
+  },
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/atc",
+        "code": "L01CD01",
+        "display": "Paclitaxel"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/PatientKimMusterperson"
+  },
+  "status": "recorded",
+  "effectivePeriod": {
+    "start": "2021-07-05",
+    "end": "2021-09-05"
+  },
+  "partOf": [
+    {
+      "reference": "Procedure/PatientKimMusterperson-SystemicTherapy-1"
+    }
+  ],
+  "note": [
+    {
+      "text": "CarboTax"
+    }
+  ]
+}

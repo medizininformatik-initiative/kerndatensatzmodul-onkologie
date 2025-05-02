@@ -1,0 +1,64 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "MII_CS_Onko_Verlauf_Fernmetastasen",
+  "id": "mii-cs-onko-verlauf-fernmetastasen",
+  "title": "MII CS Onkologie Verlauf Fernmetastasen",
+  "description": "oBDS-spezifisches Codesystem für die Beurteilung von Fernmetastasen im Behandlungsverlauf ",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen",
+  "concept": [
+    {
+      "code": "K",
+      "display": "keine Fernmetastasen nachweisbar"
+    },
+    {
+      "code": "R",
+      "display": "neu aufgetretene Fernmetastase(n) bzw. Metastasenrezidiv"
+    },
+    {
+      "code": "T",
+      "display": "Fernmetastasen Residuen"
+    },
+    {
+      "code": "P",
+      "display": "Fernmetastasen Progress"
+    },
+    {
+      "code": "N",
+      "display": "Fernmetastasen No Change"
+    },
+    {
+      "code": "F",
+      "display": "fraglicher Befund"
+    },
+    {
+      "code": "U",
+      "display": "unbekannt"
+    },
+    {
+      "code": "X",
+      "display": "fehlende Angabe"
+    }
+  ],
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2025.0.4",
+  "caseSensitive": true,
+  "count": 8
+}

@@ -1,0 +1,52 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-tnm-klassifikation-TisN0M0",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "399537006",
+        "system": "http://snomed.info/sct",
+        "display": "Clinical TNM stage grouping"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "effectiveDateTime": "2024-01-11",
+  "method": {
+    "coding": [
+      {
+        "code": "8",
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+        "display": "8. Auflage"
+      }
+    ]
+  },
+  "hasMember": [
+    {
+      "reference": "Observation/mii-exa-onko-tnm-t-kategorie-Tis"
+    },
+    {
+      "reference": "Observation/mii-exa-onko-tnm-n-kategorie-N0"
+    },
+    {
+      "reference": "Observation/mii-exa-onko-tnm-m-kategorie-M0"
+    }
+  ],
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "0",
+        "system": "https://www.uicc.org/resources/tnm",
+        "display": "Stadium 0"
+      }
+    ]
+  }
+}

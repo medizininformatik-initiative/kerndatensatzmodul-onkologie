@@ -1,0 +1,278 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-pr-onko-nebenwirkung-adverse-event",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event",
+  "version": "2025.0.4",
+  "name": "MII_PR_Onko_Nebenwirkung_Adverse_Event",
+  "title": "MII PR Onkologie Nebenwirkung von Strahlentherapie und systemische Therapie",
+  "status": "active",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "description": "Dieses Profil beschreibt die Nebenwirkung von Strahlentherapie und systemische Therapie in der Onkologie.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "oBDS",
+      "name": "Mapping FHIR zu oBDS"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "AdverseEvent",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/AdverseEvent",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "AdverseEvent.meta.profile",
+        "path": "AdverseEvent.meta.profile",
+        "mustSupport": true
+      },
+      {
+        "id": "AdverseEvent.event",
+        "path": "AdverseEvent.event",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-nebenwirkung-art"
+        }
+      },
+      {
+        "id": "AdverseEvent.event.coding",
+        "path": "AdverseEvent.event.coding",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "AdverseEvent.event.coding.system",
+        "path": "AdverseEvent.event.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "AdverseEvent.event.coding.version",
+        "path": "AdverseEvent.event.coding.version",
+        "short": "CTCAE-Version",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "CTCAE-Version"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Version der für Art der Nebenwirkung verwendeten CTCAE-Klassifikation gemäß 15.3 oBDS 2021.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Version der für Art der Nebenwirkung verwendeten CTCAE-Klassifikation gemäß 15.3 oBDS 2021."
+                }
+              ]
+            }
+          ]
+        },
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "15.3",
+            "comment": "Nebenwirkungen nach CTCAE Version"
+          }
+        ]
+      },
+      {
+        "id": "AdverseEvent.event.coding.code",
+        "path": "AdverseEvent.event.coding.code",
+        "short": "Art der Nebenwirkung",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Art der Nebenwirkung"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Art der Nebenwirkung nach CTCAE / MedDRA.  Abweichend von 15.2 oBDS 2021 kann dieses Feld leer sein falls eine Nebenwirkung des Schweregrads 1 oder 2 vorliegt und keine spezifische Art der Nebenwirkung dokumentiert wurde",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Art der Nebenwirkung nach CTCAE / MedDRA . Abweichend von 15.2 oBDS 2021 kann dieses Feld leer sein falls eine Nebenwirkung des Schweregrads 1 oder 2 vorliegt und keine spezifische Art der Nebenwirkung dokumentiert wurde"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "15.2",
+            "comment": "Nebenwirkungen nach CTCAE Art"
+          }
+        ]
+      },
+      {
+        "id": "AdverseEvent.event.text",
+        "path": "AdverseEvent.event.text",
+        "mustSupport": true
+      },
+      {
+        "id": "AdverseEvent.subject",
+        "path": "AdverseEvent.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "AdverseEvent.encounter",
+        "path": "AdverseEvent.encounter",
+        "mustSupport": true
+      },
+      {
+        "id": "AdverseEvent.seriousness",
+        "path": "AdverseEvent.seriousness",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-nebenwirkung-ctcae-grad"
+        },
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "15.1",
+            "comment": "Nebenwirkungen nach CTCAE-Grad"
+          }
+        ]
+      },
+      {
+        "id": "AdverseEvent.seriousness.coding",
+        "path": "AdverseEvent.seriousness.coding",
+        "short": "Schweregrad der Nebenwirkung nach CTCAE",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Schweregrad der Nebenwirkung nach CTCAE"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Schweregrad der Nebenwirkung nach CTCAE gemäß 15.1 oBDS 2021.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Schweregrad der Nebenwirkung nach CTCAE gemäß 15.1 oBDS 2021."
+                }
+              ]
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "AdverseEvent.seriousness.coding.system",
+        "path": "AdverseEvent.seriousness.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "AdverseEvent.seriousness.coding.code",
+        "path": "AdverseEvent.seriousness.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "AdverseEvent.seriousness.text",
+        "path": "AdverseEvent.seriousness.text",
+        "mustSupport": true
+      },
+      {
+        "id": "AdverseEvent.suspectEntity",
+        "path": "AdverseEvent.suspectEntity",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "AdverseEvent.suspectEntity.instance",
+        "path": "AdverseEvent.suspectEntity.instance",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Procedure",
+              "http://hl7.org/fhir/StructureDefinition/MedicationStatement"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  }
+}
