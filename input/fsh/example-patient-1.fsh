@@ -127,7 +127,7 @@ InstanceOf: MII_PR_Onko_Systemische_Therapie_Medikation
 Usage: #example
 Description: "."
 * subject = Reference(PatientKimMusterperson)
-* status = #recorded 
+* status = #completed 
 * effectivePeriod.start = 2021-07-05  
 * effectivePeriod.end = 2021-09-05
 * medicationCodeableConcept.coding[atcClassDe][0] = $ATC_DE#L01CD01 "Paclitaxel"
@@ -139,7 +139,7 @@ InstanceOf: MII_PR_Onko_Systemische_Therapie_Medikation
 Usage: #example
 Description: "."
 * subject = Reference(PatientKimMusterperson)
-* status = #recorded 
+* status = #completed 
 * effectivePeriod.start = 2021-07-05  
 * effectivePeriod.end = 2021-09-05
 * medicationCodeableConcept.coding[atcClassDe][0] = $ATC_DE#L01XA02 "Carboplatin"
