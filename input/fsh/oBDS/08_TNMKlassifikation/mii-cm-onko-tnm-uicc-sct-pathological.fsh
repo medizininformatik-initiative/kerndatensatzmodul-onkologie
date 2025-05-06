@@ -88,11 +88,11 @@ Usage: #definition
 
 * group.element[+].code = #Tis(pu)
 * group.element[=].display = "Tis(pu)"
-* group.element[=].target.equivalence = #unkwnown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #Tis(pd)
 * group.element[=].display = "Tis(pd)"
-* group.element[=].target.equivalence = #unkwnown
+* group.element[=].target.equivalence = #unmatched
 
 * group.element[+].code = #T1
 * group.element[=].display = "T1"
