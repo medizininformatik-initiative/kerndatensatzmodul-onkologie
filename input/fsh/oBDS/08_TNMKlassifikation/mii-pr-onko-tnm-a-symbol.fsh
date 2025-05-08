@@ -32,8 +32,8 @@ Description: "TNM-Klassifikation: TNM a-Symbol. Gibt an, ob die Klassifikation a
 * valueCodeableConcept.coding ^comment = "a = Klassifikation erfolgte durch Autopsie; (leer) = Klassifikation erfolgte nicht durch Autopsie"
 * valueCodeableConcept.coding.code 1.. MS
 * valueCodeableConcept.coding.system 1.. MS
-* insert Translation(valueCodeableConcept ^short, de-DE, TNM a-Symbol )
-* insert Translation(valueCodeableConcept ^definition, de-DE, TNM-a Autopsie nach  8.5 oBDS 2021 )
+* insert Translation(valueCodeableConcept.coding ^short, de-DE, TNM a-Symbol )
+* insert Translation(valueCodeableConcept.coding ^definition, de-DE, TNM-a Autopsie nach  8.5 oBDS 2021 )
 
 //* dataAbsentReason MS
 

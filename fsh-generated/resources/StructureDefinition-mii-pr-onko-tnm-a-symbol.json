@@ -177,7 +177,12 @@
             }
           ]
         },
-        "mustSupport": true,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x].coding",
+        "path": "Observation.value[x].coding",
+        "short": "a-Symbol",
         "_short": {
           "extension": [
             {
@@ -195,6 +200,7 @@
             }
           ]
         },
+        "definition": "Gibt an, ob die Klassifikation aus Anlass einer Autopsie erfolgte.",
         "_definition": {
           "extension": [
             {
@@ -211,13 +217,7 @@
               ]
             }
           ]
-        }
-      },
-      {
-        "id": "Observation.value[x].coding",
-        "path": "Observation.value[x].coding",
-        "short": "a-Symbol",
-        "definition": "Gibt an, ob die Klassifikation aus Anlass einer Autopsie erfolgte.",
+        },
         "comment": "a = Klassifikation erfolgte durch Autopsie; (leer) = Klassifikation erfolgte nicht durch Autopsie"
       },
       {

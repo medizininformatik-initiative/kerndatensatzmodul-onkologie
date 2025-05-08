@@ -37,4 +37,4 @@ Id: oBDS
 Title: "Mapping FHIR zu oBDS"
 Source: MII_PR_Onko_Allgemeiner_Leistungszustand_ECOG
 * -> "12" "Allgemeiner Leistungszustand"
-* valueCodeableConcept.coding.code -> "12.1" "Allgemeiner Leistungszustand " 
+* valueCodeableConcept.coding.code -> "12.1" "Allgemeiner Leistungszustand" 

@@ -179,16 +179,6 @@
       {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
-        "type": [
-          {
-            "code": "Quantity"
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.value[x].value",
-        "path": "Observation.value[x].value",
         "short": "Anzahl untersuchter Lymphknoten",
         "_short": {
           "extension": [
@@ -225,6 +215,16 @@
             }
           ]
         },
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x].value",
+        "path": "Observation.value[x].value",
         "min": 1,
         "mustSupport": true,
         "mapping": [

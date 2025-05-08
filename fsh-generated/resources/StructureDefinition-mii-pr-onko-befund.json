@@ -149,6 +149,19 @@
       {
         "id": "DiagnosticReport.conclusion",
         "path": "DiagnosticReport.conclusion",
+        "min": 1,
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "6.11",
+            "comment": "Befund"
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.conclusion.value",
+        "path": "DiagnosticReport.conclusion.value",
         "short": "Befund als Freitext",
         "_short": {
           "extension": [
@@ -168,19 +181,6 @@
           ]
         },
         "definition": "Befund als Freitext nach 6.11 oBDS 2021",
-        "min": 1,
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "oBDS",
-            "map": "6.11",
-            "comment": "Befund"
-          }
-        ]
-      },
-      {
-        "id": "DiagnosticReport.conclusion.value",
-        "path": "DiagnosticReport.conclusion.value",
         "_definition": {
           "extension": [
             {
