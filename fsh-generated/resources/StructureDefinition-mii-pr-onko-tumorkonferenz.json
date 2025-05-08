@@ -299,14 +299,7 @@
       {
         "id": "CarePlan.activity.detail.status",
         "path": "CarePlan.activity.detail.status",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "oBDS",
-            "map": "19.2",
-            "comment": "Tumorkonferenz/Therapieempfehlung Therapieabweichung auf Wunsch des Patienten"
-          }
-        ],
+        "short": "Status der Therapieempfehlung",
         "_short": {
           "extension": [
             {
@@ -324,6 +317,7 @@
             }
           ]
         },
+        "definition": "Status der Therapieempfehlung nach HL7 FHIR CarePlanActivityStatus | not-started | scheduled | in-progress | on-hold | completed | cancelled | stopped | unknown | entered-in-error |",
         "_definition": {
           "extension": [
             {
@@ -340,16 +334,20 @@
               ]
             }
           ]
-        }
+        },
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "19.2",
+            "comment": "Tumorkonferenz/Therapieempfehlung Therapieabweichung auf Wunsch des Patienten"
+          }
+        ]
       },
       {
         "id": "CarePlan.activity.detail.statusReason",
         "path": "CarePlan.activity.detail.statusReason",
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieabweichung"
-        },
+        "short": "Therapieabweichung aufgrund Patientenwunsch der Therapieempfehlung",
         "_short": {
           "extension": [
             {
@@ -367,6 +365,7 @@
             }
           ]
         },
+        "definition": "wenn Therapieabweichung - z.B. status = cancelled - Aussage ob dies durch Patientenwunsch erfolgt ist gemäß 19.2 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -383,6 +382,11 @@
               ]
             }
           ]
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieabweichung"
         }
       },
       {
