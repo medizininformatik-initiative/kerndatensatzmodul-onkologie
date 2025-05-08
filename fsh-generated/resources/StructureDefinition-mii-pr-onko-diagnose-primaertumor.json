@@ -127,7 +127,17 @@
         "id": "Condition.extension:morphology-behavior-icdo3",
         "path": "Condition.extension",
         "sliceName": "morphology-behavior-icdo3",
-        "short": "ICD-O-Morphologie",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3"
+            ]
+          }
+        ],
+        "mustSupport": true,
         "_short": {
           "extension": [
             {
@@ -145,7 +155,6 @@
             }
           ]
         },
-        "definition": "Morphologie des Primärtumors nach ICD-O-3 nach 6.3 oBDS",
         "_definition": {
           "extension": [
             {
@@ -162,18 +171,7 @@
               ]
             }
           ]
-        },
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3"
-            ]
-          }
-        ],
-        "mustSupport": true
+        }
       },
       {
         "id": "Condition.extension:morphology-behavior-icdo3.value[x].coding.version",
