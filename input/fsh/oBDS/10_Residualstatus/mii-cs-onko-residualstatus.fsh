@@ -9,7 +9,7 @@ Description: "oBDS-spezifisches Codesystem für R-Klassifikation"
 * insert Publisher
 * insert PR_CS_VS_Version
 * ^caseSensitive = true
-* ^valueSet = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-residualstatus"
+* ^valueSet = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-gesamtbeurteilung-residualstatus"
 * ^content = #complete
 * #R0 "Kein Residualtumor"
 * #R1 "Mikroskopischer Residualtumor"
