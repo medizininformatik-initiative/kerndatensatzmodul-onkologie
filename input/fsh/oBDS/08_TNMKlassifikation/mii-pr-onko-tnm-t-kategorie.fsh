@@ -30,9 +30,13 @@ Description: "TNM-Klassifikation: TNM T-Kategorie. Ausbreitung des Primärtumors
 * insert Translation(effectiveDateTime ^definition, de-DE, Datum der TNM-Klassifikation nach 8.1 oBDS 2021 )
 
 * method MS
-* method ^short = "TNM Version"
-* method ^definition = "Gibt an, nach welcher Version des TNM klassifiziert wurde."
+* method.coding MS
+* method.coding ^short = "TNM Version"
+* method.coding ^definition = "Gibt an, nach welcher Version des TNM klassifiziert wurde."
 * method from mii-vs-onko-tnm-version (required)
+* insert Translation(method.coding ^short, de-DE, TNM Version )
+* insert Translation(method.coding ^definition, de-DE, Version nach 8.2 oBDS 2021 )
+
 * value[x] MS
 * value[x] only CodeableConcept
 * valueCodeableConcept from MII_VS_Onko_TNM_T_Kategorie_Werte (required)

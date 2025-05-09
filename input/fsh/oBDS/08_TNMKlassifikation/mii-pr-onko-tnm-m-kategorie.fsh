@@ -13,9 +13,9 @@ Description: "TNM-Klassifikation: TNM M-Kategorie. Fehlen oder Vorhandensein von
 * code MS
 * code.extension contains 
     MII_EX_Onko_TNM_cp_Praefix named cpPraefix 0..1 MS
-* code.extension[MII_EX_Onko_TNM_cp_Praefix] ^short = "TNM c/p-Präfix M"
-* code.extension[MII_EX_Onko_TNM_cp_Praefix] ^definition = "Gibt an, ob die Klassifikation klinisch oder pathologisch erfolgte."
-* code.extension[MII_EX_Onko_TNM_cp_Praefix] ^comment = "c oder (leer) = Kategorie wurde durch klinische Angaben festgestellt, bzw. erfüllt die Kriterien für p nicht. p = Feststellung der Kategorie erfolgte durch eine pathohistologische Untersuchung, mit der auch der höchste Grad der jeweiligen Kategorie hätte festgestellt werden können. u (Feststellung mit Ultraschall) ist unter c zu übermitteln."
+* code.extension[MII_EX_Onko_TNM_cp_Praefix].valueCodeableConcept.coding ^short = "TNM c/p-Präfix M"
+* code.extension[MII_EX_Onko_TNM_cp_Praefix].valueCodeableConcept.coding ^definition = "Gibt an, ob die Klassifikation klinisch oder pathologisch erfolgte."
+* code.extension[MII_EX_Onko_TNM_cp_Praefix].valueCodeableConcept.coding ^comment = "c oder (leer) = Kategorie wurde durch klinische Angaben festgestellt, bzw. erfüllt die Kriterien für p nicht. p = Feststellung der Kategorie erfolgte durch eine pathohistologische Untersuchung, mit der auch der höchste Grad der jeweiligen Kategorie hätte festgestellt werden können. u (Feststellung mit Ultraschall) ist unter c zu übermitteln."
 * code from MII_VS_Onko_TNM_M_Kategorie (preferred)
 * code.coding.code 1.. MS
 * code.coding.system 1.. MS
@@ -32,9 +32,13 @@ Description: "TNM-Klassifikation: TNM M-Kategorie. Fehlen oder Vorhandensein von
 * hasMember MS
 * hasMember only Reference(MII_PR_Onko_Fernmetastasen)
 * method MS
-* method ^short = "TNM Version"
-* method ^definition = "Gibt an, nach welcher Version des TNM klassifiziert wurde."
-* method from mii-vs-onko-tnm-version (required)
+* method.coding MS
+* method.coding ^short = "TNM Version"
+* method.coding ^definition = "Gibt an, nach welcher Version des TNM klassifiziert wurde."
+* method.coding from mii-vs-onko-tnm-version (required)
+* insert Translation(method.coding ^short, de-DE, TNM Version )
+* insert Translation(method.coding ^definition, de-DE, Version nach 8.2 oBDS 2021 )
+
 * partOf MS
 * partOf only Reference(Procedure)
 * value[x] MS

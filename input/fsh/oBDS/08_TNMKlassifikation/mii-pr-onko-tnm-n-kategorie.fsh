@@ -32,9 +32,13 @@ Description: "TNM-Klassifikation: TNM N-Kategorie. Ausbreitung von regionären L
 * hasMember MS
 * hasMember only Reference(MII_PR_Onko_Anzahl_Befallene_Lymphknoten or MII_PR_Onko_Anzahl_Untersuchte_Lymphknoten or MII_PR_Onko_Anzahl_Befallene_Sentinel_Lymphknoten or MII_PR_Onko_Anzahl_Untersuchte_Sentinel_Lymphknoten )
 * method MS
-* method ^short = "TNM Version"
-* method ^definition = "Gibt an, nach welcher Version des TNM klassifiziert wurde."
-* method from mii-vs-onko-tnm-version (required)
+* method.coding MS
+* method.coding ^short = "TNM Version"
+* method.coding ^definition = "Gibt an, nach welcher Version des TNM klassifiziert wurde."
+* method.coding from mii-vs-onko-tnm-version (required)
+* insert Translation(method.coding ^short, de-DE, TNM Version )
+* insert Translation(method.coding ^definition, de-DE, Version nach 8.2 oBDS 2021 )
+
 * value[x] MS
 * value[x] only CodeableConcept
 * valueCodeableConcept.extension contains 
