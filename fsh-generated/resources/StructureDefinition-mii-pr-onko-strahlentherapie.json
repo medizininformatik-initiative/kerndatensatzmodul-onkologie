@@ -491,13 +491,7 @@
       {
         "id": "Procedure.extension:Bestrahlung.extension:Gesamtdosis.value[x].unit",
         "path": "Procedure.extension.extension.value[x].unit",
-        "mapping": [
-          {
-            "identity": "oBDS",
-            "map": "14.11",
-            "comment": "Strahlentherapie Einheit"
-          }
-        ],
+        "short": "Einheit der Gesamtdosis",
         "_short": {
           "extension": [
             {
@@ -515,6 +509,7 @@
             }
           ]
         },
+        "definition": "Einheit der Gesamtdosis gemäß 14.11 oBDS 2021. Hier werden sowohl Bestrahlungen als auch Radioisotope angegeben.",
         "_definition": {
           "extension": [
             {
@@ -531,7 +526,14 @@
               ]
             }
           ]
-        }
+        },
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "14.11",
+            "comment": "Strahlentherapie Einheit"
+          }
+        ]
       },
       {
         "id": "Procedure.extension:Bestrahlung.extension:Einzeldosis",
@@ -588,13 +590,7 @@
       {
         "id": "Procedure.extension:Bestrahlung.extension:Einzeldosis.value[x].unit",
         "path": "Procedure.extension.extension.value[x].unit",
-        "mapping": [
-          {
-            "identity": "oBDS",
-            "map": "14.11",
-            "comment": "Strahlentherapie Einheit"
-          }
-        ],
+        "short": "Einheit der Einzeldosis",
         "_short": {
           "extension": [
             {
@@ -612,6 +608,7 @@
             }
           ]
         },
+        "definition": "Einheit der Einzeldosis gemäß 14.11 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -628,7 +625,14 @@
               ]
             }
           ]
-        }
+        },
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "14.11",
+            "comment": "Strahlentherapie Einheit"
+          }
+        ]
       },
       {
         "id": "Procedure.extension:Bestrahlung.extension:Boost",
