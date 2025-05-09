@@ -155,7 +155,7 @@
         "id": "Procedure.code.coding:ops",
         "path": "Procedure.code.coding",
         "sliceName": "ops",
-        "short": "Komplikation der OP laut oBDS",
+        "short": "OPS-Kode der Operation",
         "_short": {
           "extension": [
             {
@@ -186,7 +186,7 @@
             }
           ]
         },
-        "definition": "Komplikation der OP gemäß 13.5 oBDS 2021",
+        "definition": "OPS-Kode der Operation gemäß 13.3 oBDS 2021",
         "_definition": {
           "extension": [
             {
@@ -396,7 +396,12 @@
         "binding": {
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-operation-komplikation"
-        },
+        }
+      },
+      {
+        "id": "Procedure.complication:compl_obds.coding",
+        "path": "Procedure.complication.coding",
+        "short": "Komplikation der OP laut oBDS",
         "_short": {
           "extension": [
             {
@@ -414,6 +419,7 @@
             }
           ]
         },
+        "definition": "Komplikation der OP gemäß 13.5 oBDS 2021",
         "_definition": {
           "extension": [
             {
@@ -447,6 +453,17 @@
         "id": "Procedure.complication:compl_icd10",
         "path": "Procedure.complication",
         "sliceName": "compl_icd10",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://fhir.de/ValueSet/bfarm/icd-10-gm"
+        }
+      },
+      {
+        "id": "Procedure.complication:compl_icd10.coding",
+        "path": "Procedure.complication.coding",
         "short": "Komplikation der OP Sonstige ICD-10",
         "_short": {
           "extension": [
@@ -482,13 +499,6 @@
               ]
             }
           ]
-        },
-        "min": 0,
-        "max": "*",
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://fhir.de/ValueSet/bfarm/icd-10-gm"
         }
       },
       {
