@@ -17,16 +17,16 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 // Intention der Strahlentherapie
 * extension contains mii-ex-onko-strahlentherapie-intention named Intention 1..1
 * extension[Intention] MS
-* insert Label (extension[Intention], Intention der Strahlentherapie,Intention der Strahlentherapie gemäß 14.1 oBDS 2021. )
-* insert Translation(extension[Intention] ^short, de-DE, Intention der Strahlentherapie )
-* insert Translation(extension[Intention] ^definition, de-DE, Intention der Strahlentherapie gemäß 14.1 oBDS 2021. )
+* insert Label (extension[Intention].valueCodeableConcept.coding, Intention der Strahlentherapie,Intention der Strahlentherapie gemäß 14.1 oBDS 2021. )
+* insert Translation(extension[Intention].valueCodeableConcept.coding ^short, de-DE, Intention der Strahlentherapie )
+* insert Translation(extension[Intention].valueCodeableConcept.coding ^definition, de-DE, Intention der Strahlentherapie gemäß 14.1 oBDS 2021. )
 
 // Strahlentherapie Stellung zu operativer Therapie
 * extension contains MII_EX_Onko_Strahlentherapie_StellungZurOp named StellungZurOp 0..
 * extension[StellungZurOp] MS
-* insert Label (extension[StellungZurOp], Stellung der Strahlentherapie zu einer Operation,Stellung der Strahlentherapie zu einer Operation gemäß 14.2 oBDS 2021. )
-* insert Translation(extension[StellungZurOp] ^short, de-DE, Stellung der Strahlentherapie zu einer Operation)
-* insert Translation(extension[StellungZurOp] ^definition, de-DE, Stellung der Strahlentherapie zu einer Operation gemäß 14.2 oBDS 2021. )
+* insert Label (extension[StellungZurOp].valueCodeableConcept.coding, Stellung der Strahlentherapie zu einer Operation,Stellung der Strahlentherapie zu einer Operation gemäß 14.2 oBDS 2021. )
+* insert Translation(extension[StellungZurOp].valueCodeableConcept.coding ^short, de-DE, Stellung der Strahlentherapie zu einer Operation)
+* insert Translation(extension[StellungZurOp].valueCodeableConcept.coding ^definition, de-DE, Stellung der Strahlentherapie zu einer Operation gemäß 14.2 oBDS 2021. )
 
 * extension contains mii-ex-onko-strahlentherapie-bestrahlung named Bestrahlung 1..
 * extension[Bestrahlung] MS
@@ -89,7 +89,7 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 * outcome.coding.code MS
 * outcome.coding.system MS
 * outcome.coding from MII_VS_Onko_Strahlentherapie_Ende_Grund (required)
-* insert Label(performedPeriod.start, Grund für Ende der Strahlentherapie, Grund für Ende der Strahlentherapie - planmäßig oder abgebrochen -  gemäß 14.12 oBDS 2021.)
+* insert Label(outcome.coding, Grund für Ende der Strahlentherapie, Grund für Ende der Strahlentherapie - planmäßig oder abgebrochen -  gemäß 14.12 oBDS 2021.)
 * insert Translation(outcome.coding ^short, de-DE, Grund für Ende der Strahlentherapie)
 * insert Translation(outcome.coding ^definition, de-DE, Grund für Ende der Strahlentherapie - planmäßig oder abgebrochen -  gemäß 14.12 oBDS 2021.)
 
