@@ -1,5 +1,5 @@
 ---
-parent: 
+parent:
 topic: AdverseEvent
 subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event
 ---
@@ -14,11 +14,11 @@ Additionally, the platform §65c provides a curated list with translated CTCAE t
 https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15533115/Nebenwirkungen+CTCAE
 
 @```
-from 
-    StructureDefinition 
-where 
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event' 
-select 
+from
+    StructureDefinition
+where
+    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event'
+select
     Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 ```
 
@@ -26,7 +26,7 @@ select
 
 <tabs>
   <tab title="Representation">{{tree, buttons}}</tab>
-  <tab title="Description"> 
+  <tab title="Description">
         @```
         from
 	        StructureDefinition
@@ -38,14 +38,14 @@ select
             no header
         ```
         @```
-        from 
-            StructureDefinition 
-        where 
-            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event' 
-        for 
-            differential.element 
-            where 
-                mustSupport = true 
+        from
+            StructureDefinition
+        where
+            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event'
+        for
+            differential.element
+            where
+                mustSupport = true
             select Field Name: id, Short Description: short, Notes: comment
         ```
   </tab>
@@ -59,13 +59,13 @@ select
 Mapping dataset to FHIR
 
 @```
-from StructureDefinition 
+from StructureDefinition
 where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/Onkologie'
     for differential.element where id.contains('Nebenwirkungen')
-    select 
+    select
         Dataset: short,
-        Explanation: definition, 
-        FHIR: mapping[0].map 
+        Explanation: definition,
+        FHIR: mapping[0].map
 ```
 
 ---
@@ -73,11 +73,11 @@ where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Str
 Mapping [Unified Oncological Basic Dataset (oBDS)](https://basisdatensatz.de/basisdatensatz) to FHIR
 
 @```
-from StructureDefinition 
-where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event'  
+from StructureDefinition
+where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event'
     for differential.element
     where mapping.identity='oBDS'
-    select 
+    select
         oBDS: mapping.map,
         Definition: mapping.comment,
         FHIR: path
@@ -91,18 +91,18 @@ The following search parameters are relevant for the oncology module, also in co
 
 1. The search parameter ```_id``` MUST be supported:
 
-    Examples: 
+    Examples:
 
     ```GET [base]/AdverseEvent?_id=1234```
-    
+
     Application notes: Further information on searching by "_id" can be found in the [FHIR base specification - section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
 2. The search parameter ```_profile``` MUST be supported:
 
     Examples:
-    
+
     ```GET [base]/AdverseEvent?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event```
-    
+
     Application notes: Further information on searching by "_profile" can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#all).
 
 3. The search parameter ```event``` MUST be supported:
@@ -113,7 +113,7 @@ The following search parameters are relevant for the oncology module, also in co
     Application notes: Further information on searching by "event" can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#all).
 
 4. The search parameter ```seriousness``` MUST be supported:
-    
+
     Examples:
 
     ```GET [base]/AdverseEvent?seriousness=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad|4```
@@ -121,7 +121,7 @@ The following search parameters are relevant for the oncology module, also in co
     Application notes: Further information on searching by "seriousness" can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#all).
 
 5. The search parameter ```suspectEntity.instance``` MUST be supported:
-    
+
     Examples:
 
     ```GET [base]/AdverseEvent?suspectEntity.instance=Patient/example```
@@ -131,5 +131,9 @@ The following search parameters are relevant for the oncology module, also in co
 **Examples**
 
 {{json:mii-pr-onko-nebenwirkung-0}}
+
+Adverse effect without MedDRA-Coding:
+
+{{json:mii-pr-onko-nebenwirkung-text}}
 
 ---
