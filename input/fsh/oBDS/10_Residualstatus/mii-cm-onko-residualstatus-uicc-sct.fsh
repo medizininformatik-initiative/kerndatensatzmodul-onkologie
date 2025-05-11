@@ -8,8 +8,9 @@ Usage: #definition
 * experimental = false
 * date = "2024-01-05"
 * description = "Mapping Residualstatus UICC Codes zu SNOMED-CT"
+
 * group.source = "https://www.uicc.org/resources/r-classification" 
-* group.target = "http://snomed.info/sct"
+* group.target = "http://snomed.info/sct/900000000000207008/version/20240401"
 
 * group.element[+].code = #R0
 * group.element[=].display = "Kein Residualtumor"

@@ -11,9 +11,9 @@ Description: "Mapping der Fernmetastasen-Codesystems  auf SNOMED"
 * description = "Fernmetastasen"					
 * purpose = "Technical mapping to transform oBDS-Data into SNOMED"					
 * sourceUri = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/"					
-* targetUri[+] = "http://snomed.info/sct"					
+* targetUri[+] = "http://snomed.info/sct/900000000000207008/version/20240401"					
 * group[+].source = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen"					
-* group[=].target = "http://snomed.info/sct"					
+* group[=].target = "http://snomed.info/sct/900000000000207008/version/20240401"					
 
 * group[=].element[+].code = #PUL					
 * group[=].element[=].display = "Lunge"					

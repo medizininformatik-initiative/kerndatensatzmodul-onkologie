@@ -9,7 +9,7 @@ Usage: #definition
 * date = "2024-01-05"
 * description = "Mapping pathological TNM UICC Codes zu SNOMED-CT"
 * group.source = "https://www.uicc.org/resources/tnm"
-* group.target = "http://snomed.info/sct"
+* group.target = "http://snomed.info/sct/900000000000207008/version/20240401"
 * group.element[+].code = #y
 * group.element[=].display = "y"
 * group.element[=].target.code = #421755005
