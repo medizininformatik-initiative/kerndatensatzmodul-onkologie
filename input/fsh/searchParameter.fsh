@@ -11,6 +11,7 @@ Usage: #definition
 * insert SP_Profile
 * insert Version
 * name = "MII_SP_Condition_Extension_Morphology_Behaviour_ICD-O-3"
+* experimental = true
 * description = "SearchParameter for Condition.extension[morphology-behaviour-icdo3]"
 * status = #active 
 * code = #morphology-behavior-icdo3
@@ -28,6 +29,7 @@ Usage: #definition
 * name = "MII_SP_Observation_Extension_TNM_T_CpPraefix"
 * description = "SearchParameter for Observation.extension[cppraefix]"
 * status = #active 
+* experimental = true
 * code = #tnm-t-cppraefix
 * base = #Observation
 * type = #token
@@ -43,6 +45,7 @@ Usage: #definition
 * name = "MII_SP_Observation_Extension_TNM_N_CpPraefix"
 * description = "SearchParameter for Observation.extension[cppraefix]"
 * status = #active 
+* experimental = true
 * code = #tnm-n-cppraefix
 * base = #Observation
 * type = #token
@@ -58,6 +61,7 @@ Usage: #definition
 * name = "MII_SP_Observation_Extension_TNM_M_CpPraefix"
 * description = "SearchParameter for Observation.extension[cppraefix]"
 * status = #active 
+* experimental = true
 * code = #tnm-m-cppraefix
 * base = #Observation
 * type = #token
@@ -73,6 +77,7 @@ Usage: #definition
 * name = "MII_SP_Observation_Extension_TNM_N_ITC"
 * description = "SearchParameter for Observation.extension[itc]"
 * status = #active 
+* experimental = true
 * code = #tnm-n-itc
 * base = #Observation
 * type = #token
@@ -88,6 +93,7 @@ Usage: #definition
 * name = "MII_SP_Observation_Extension_TNM_N__SN_Suffix"
 * description = "SearchParameter for Observation.extension[sn-suffix]"
 * status = #active 
+* experimental = true
 * code = #tnm-n-sn-suffix
 * base = #Observation
 * type = #token
@@ -103,6 +109,7 @@ Usage: #definition
 * name = "MII_SP_Procedure_Extension_Operation_Intention"
 * description = "SearchParameter for Procedure.extension[intention]"
 * status = #active 
+* experimental = true
 * code = #operation-intention
 * base = #Procedure
 * type = #token
@@ -118,6 +125,7 @@ Usage: #definition
 * name = "MII_SP_Procedure_Extension_Strahlentherapie_Intention"
 * description = "SearchParameter for Procedure.extension[intention]"
 * status = #active 
+* experimental = true
 * code = #strahlentherapie-intention
 * base = #Procedure
 * type = #token
@@ -131,6 +139,7 @@ Usage: #definition
 * name = "MII_SP_Procedure_Extension_Strahlentherapie_StellungZurOp"
 * description = "SearchParameter for Procedure.extension[StellungZurOp]"
 * status = #active 
+* experimental = true
 * code = #strahlentherapie-stellungzurop
 * base = #Procedure
 * type = #token
@@ -146,6 +155,7 @@ Usage: #definition
 * name = "MII_SP_Procedure_Extension_Strahlentherapie_Bestrahlung_Applikationsart"
 * description = "SearchParameter for Procedure.extension:bestrahlung.extension:applikationsart"
 * status = #active 
+* experimental = true
 * code = #bestrahlung-applikationsart
 * base = #Procedure
 * type = #token
@@ -161,6 +171,7 @@ Usage: #definition
 * name = "MII_SP_Procedure_Extension_Strahlentherapie_Bestrahlung_Strahlenart"
 * description = "SearchParameter for Procedure.extension:bestrahlung.extension:strahlenart"
 * status = #active 
+* experimental = true
 * code = #bestrahlung-strahlenart
 * base = #Procedure
 * type = #token
@@ -176,6 +187,7 @@ Usage: #definition
 * name = "MII_SP_Procedure_Extension_Strahlentherapie_Bestrahlung_Zielgebiet"
 * description = "SearchParameter for Procedure.extension:bestrahlung.extension:zielgebiet"
 * status = #active 
+* experimental = true
 * code = #bestrahlung-zielgebiet
 * base = #Procedure
 * type = #token
@@ -191,6 +203,7 @@ Usage: #definition
 * name = "MII_SP_Procedure_Extension_Strahlentherapie_Bestrahlung_Zielgebiet_Lateralitaet"
 * description = "SearchParameter for Procedure.extension:bestrahlung.extension:zielgebiet_Lateralitaet"
 * status = #active 
+* experimental = true
 * code = #bestrahlung-zielgebiet-lateralitaet
 * base = #Procedure
 * type = #token
@@ -206,6 +219,7 @@ Usage: #definition
 * name = "MII_SP_Procedure_Extension_Strahlentherapie_Bestrahlung_Gesamtdosis"
 * description = "SearchParameter for Procedure.extension:bestrahlung.extension:gesamtdosis"
 * status = #active 
+* experimental = true
 * code = #bestrahlung-gesamtdosis
 * base = #Procedure
 * type = #quantity
@@ -221,6 +235,7 @@ Usage: #definition
 * name = "MII_SP_Procedure_Extension_Strahlentherapie_Bestrahlung_Einzeldosis"
 * description = "SearchParameter for Procedure.extension:bestrahlung.extension:einzeldosis"
 * status = #active 
+* experimental = true
 * code = #bestrahlung-einzeldosis
 * base = #Procedure
 * type = #quantity
@@ -236,6 +251,7 @@ Usage: #definition
 * name = "MII_SP_Procedure_Extension_Strahlentherapie_Bestrahlung_Boost"
 * description = "SearchParameter for Procedure.extension:bestrahlung.extension:boost"
 * status = #active 
+* experimental = true
 * code = #bestrahlung-boost
 * base = #Procedure
 * type = #token
@@ -251,6 +267,7 @@ Usage: #definition
 * name = "MII_SP_Procedure_Extension_Systemischetherapie_Intention"
 * description = "SearchParameter for Procedure.extension[intention]"
 * status = #active 
+* experimental = true
 * code = #systemischetherapie-intention
 * base = #Procedure
 * type = #token
@@ -264,6 +281,7 @@ Usage: #definition
 * name = "MII_SP_Procedure_Extension_Systemischetherapie_StellungZurOp"
 * description = "SearchParameter for Procedure.extension[StellungZurOp]"
 * status = #active 
+* experimental = true
 * code = #systemischetherapie-stellungzurop
 * base = #Procedure
 * type = #token
