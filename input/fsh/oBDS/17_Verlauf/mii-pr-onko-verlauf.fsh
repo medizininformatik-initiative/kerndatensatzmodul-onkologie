@@ -54,7 +54,7 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
     Lymphknoten_Verlauf 0..1 and 
     Fernmetastasen_Verlauf 0..1
 * component[Tumor_Verlauf] MS 
-* component[Tumor_Verlauf].code.coding = $SCT#277062004 "Status des Residualtumors"
+* component[Tumor_Verlauf].code.coding = $SCT#445200009 "Status of residual neoplasm (observable entity)"
 * component[Tumor_Verlauf].value[x] only CodeableConcept
 * component[Tumor_Verlauf].valueCodeableConcept from mii-vs-onko-verlauf-primaertumor (required)
 * component[Tumor_Verlauf].valueCodeableConcept.coding.system MS

@@ -483,7 +483,7 @@ Description: ". "
 * focus = Reference(PatientKimMusterperson-PrimaryDiagnosis-2)
 * code.coding = $SCT#396432002 "Status of regression of tumor (observable entity)"
 * valueCodeableConcept.coding = $mii-cs-onko-verlauf-gesamtbeurteilung#V "Vollremission (complete remission, CR)" 
-* component[Tumor_Verlauf].code.coding = $SCT#277062004 "Status des Residualtumors"
+* component[Tumor_Verlauf].code.coding = $SCT#445200009 "Status of residual neoplasm (observable entity)"
 * component[Tumor_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-primaertumor#T "Tumorreste (Residualtumor)"
 * component[Fernmetastasen_Verlauf].code.coding = $SCT#399608002 "Status of distant metastasis (observable entity)"
 * component[Fernmetastasen_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-fernmetastasen#K "Keine Fernmetastasen nachweisbar"

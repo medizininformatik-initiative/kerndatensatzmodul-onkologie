@@ -10,7 +10,7 @@ Usage: #example
 * effectiveDateTime = "2024-02-08"
 
 * valueCodeableConcept.coding = $mii-cs-onko-verlauf-gesamtbeurteilung#B "klinische Besserung des Zustandes, Teilremissionkriterien jedoch nicht erfüllt (minimal response, MR)"
-* component[Tumor_Verlauf].code.coding = $SCT#277062004 "Status des Residualtumors"
+* component[Tumor_Verlauf].code.coding = $SCT#445200009 "Status of residual neoplasm (observable entity)"
 * component[Tumor_Verlauf].valueCodeableConcept.coding = $mii-cs-onko-verlauf-primaertumor#T "Tumorreste (Residualtumor)"
 * component[Lymphknoten_Verlauf].code.coding = $SCT#399656008 "Status of tumor metastasis to regional lymph nodes (observable entity)"
 * component[Lymphknoten_Verlauf].valueCodeableConcept.coding = $mii-cs-onko-verlauf-lymphknoten#P "bekannter Lymphknotenbefall Progress"
