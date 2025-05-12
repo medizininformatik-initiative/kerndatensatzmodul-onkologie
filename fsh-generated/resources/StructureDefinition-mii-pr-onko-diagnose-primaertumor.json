@@ -345,6 +345,19 @@
         ]
       },
       {
+        "id": "Condition.bodySite.coding",
+        "path": "Condition.bodySite.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
         "id": "Condition.bodySite.coding:primaertumorSeitenlokalisation",
         "path": "Condition.bodySite.coding",
         "sliceName": "primaertumorSeitenlokalisation",
