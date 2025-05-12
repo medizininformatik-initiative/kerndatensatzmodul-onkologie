@@ -351,7 +351,7 @@ Description: "."
 * valueCodeableConcept.coding = $UICC#L1
 
 Instance: TNM-V-Observation-2
-InstanceOf: MII_PR_Onko_TNM_L_Kategorie
+InstanceOf: MII_PR_Onko_TNM_V_Kategorie
 Usage: #example  
 Description: "."
 * status = #final
