@@ -11,6 +11,7 @@ Description: "Example systemic therapy"
 * extension[StellungZurOp].url = $mii-ex-onko-systemische-therapie-stellungzurop
 * code.coding[+] = $mii-cs-onko-therapie-typ#CH // Chemotherapie , ggfs. hier auch ein slice, weil OPS mit angegeben werden kann
 * code.coding[+] = $OPS#8-52 // Chemotherapie nach OPS
+* code.coding[=].version = "2021"
 
 * performedPeriod.start = "2021-12-04"
 * performedPeriod.end = "2022-04-06"
