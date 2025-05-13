@@ -25,7 +25,7 @@ Description: "10.06.2021 CT Abdomen mit KM"
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
 * category = $SCT#363679005 "Imaging (procedure)"
-* code.coding = $OPS#3-222 "Computertomographie des Thorax mit Kontrastmittel"
+* code.coding = $OPS#3-225 "Computertomographie des Abdomens mit Kontrastmittel"
 * code.coding.version = "2021"
 * performedDateTime = 2021-06-10
 
@@ -84,7 +84,7 @@ Description: "22.06.2021 CT Thorax: kein Hinweis auf Metastasen."
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
 * category = $SCT#363679005 "Imaging (procedure)"
-* code.coding = $OPS#1-853.2 "CT Thorax"
+* code.coding = $OPS#3-202 "Native Computertomographie des Thorax"
 * code.coding.version = "2021"
 * performedDateTime = 2021-06-22
 
