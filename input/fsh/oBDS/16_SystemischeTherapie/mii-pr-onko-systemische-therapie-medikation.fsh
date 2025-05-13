@@ -26,8 +26,8 @@ Description: "Medikation der Systemische Therapie. Dieses Profil beschreibt die 
 * partOf ^slicing.discriminator[=].path = "resolve()"
 * partOf ^slicing.rules = #open
 * partOf contains 
-    systemischeTherapie 1..
-* partOf[systemischeTherapie] only Reference(Procedure)
+    systemischeTherapie 0..1
+* partOf[systemischeTherapie] only Reference(MII_PR_Onko_Systemische_Therapie)
 * note MS // 
 * note.text MS 
 * note.text ^short = "Protokoll"

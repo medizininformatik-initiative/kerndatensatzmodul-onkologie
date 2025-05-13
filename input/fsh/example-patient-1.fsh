@@ -132,7 +132,7 @@ Description: "."
 * effectivePeriod.start = 2021-07-05  
 * effectivePeriod.end = 2021-09-05
 * medicationCodeableConcept.coding[atcClassDe][0] = $ATC_DE#L01CD01 "Paclitaxel"
-* partOf[+] = Reference(PatientKimMusterperson-SystemicTherapy-1)
+* partOf[systemischeTherapie] = Reference(PatientKimMusterperson-SystemicTherapy-1)
 * note.text = "CarboTax"
 
 Instance: PatientKimMusterperson-SystemicTherapyMedication-1b
@@ -144,7 +144,7 @@ Description: "."
 * effectivePeriod.start = 2021-07-05  
 * effectivePeriod.end = 2021-09-05
 * medicationCodeableConcept.coding[atcClassDe][0] = $ATC_DE#L01XA02 "Carboplatin"
-* partOf[+] = Reference(PatientKimMusterperson-SystemicTherapy-1)
+* partOf[systemischeTherapie] = Reference(PatientKimMusterperson-SystemicTherapy-1)
 * note.text = "CarboTax"
 
 

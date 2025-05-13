@@ -30,7 +30,7 @@ Description: "Example for the FHIR profile systemic therapy based on German "
 * medicationCodeableConcept.coding[=].version = "2022"
 * medicationCodeableConcept.coding[=].display = "Cyclophosphamid"
 
-* partOf = Reference(mii-exa-onko-systemische-therapie-1)
+* partOf[systemischeTherapie] = Reference(mii-exa-onko-systemische-therapie-1)
 * note.text = "AC" // Schemaabkürzung für Cyclophosphamid und Doxorubicin
 
 Instance: mii-exa-onko-systemische-therapie-medikation2
@@ -47,5 +47,5 @@ Description: "Example for the FHIR profile systemic therapy based on German "
 * medicationCodeableConcept.coding[=].version = "2022"
 * medicationCodeableConcept.coding[=].display = "Doxorubicin"
 
-* partOf = Reference(mii-exa-onko-systemische-therapie-1)
+* partOf[systemischeTherapie] = Reference(mii-exa-onko-systemische-therapie-1)
 * note.text = "AC" // Schemaabkürzung für Cyclophosphamid und Doxorubicin
