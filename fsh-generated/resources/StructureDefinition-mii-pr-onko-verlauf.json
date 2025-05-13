@@ -265,7 +265,7 @@
           "discriminator": [
             {
               "type": "pattern",
-              "path": "code"
+              "path": "code.coding"
             }
           ],
           "rules": "open",
@@ -285,6 +285,7 @@
       {
         "id": "Observation.component:Tumor_Verlauf.code.coding",
         "path": "Observation.component.code.coding",
+        "min": 1,
         "patternCoding": {
           "code": "445200009",
           "system": "http://snomed.info/sct",
@@ -376,6 +377,7 @@
       {
         "id": "Observation.component:Lymphknoten_Verlauf.code.coding",
         "path": "Observation.component.code.coding",
+        "min": 1,
         "patternCoding": {
           "code": "399656008",
           "system": "http://snomed.info/sct",
@@ -467,6 +469,7 @@
       {
         "id": "Observation.component:Fernmetastasen_Verlauf.code.coding",
         "path": "Observation.component.code.coding",
+        "min": 1,
         "patternCoding": {
           "code": "399608002",
           "system": "http://snomed.info/sct",

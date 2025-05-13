@@ -46,7 +46,7 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
 * component MS
 * component 1..*
 * component ^slicing.discriminator.type = #pattern
-* component ^slicing.discriminator.path = "code"
+* component ^slicing.discriminator.path = "code.coding"
 * component ^slicing.rules = #open
 * component ^slicing.description = "Slice based on the component.code pattern"
 * component contains 
