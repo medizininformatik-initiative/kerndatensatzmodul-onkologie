@@ -10,12 +10,22 @@
   "subject": {
     "reference": "Patient/PatientKimMusterperson"
   },
+  "category": {
+    "coding": [
+      {
+        "code": "363679005",
+        "system": "http://snomed.info/sct",
+        "display": "Imaging (procedure)"
+      }
+    ]
+  },
   "code": {
     "coding": [
       {
         "code": "1-853.2",
         "system": "http://fhir.de/CodeSystem/bfarm/ops",
-        "display": "CT Thorax"
+        "display": "CT Thorax",
+        "version": "2021"
       }
     ]
   },

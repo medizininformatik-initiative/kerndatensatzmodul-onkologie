@@ -24,8 +24,9 @@ Usage: #example
 Description: "10.06.2021 CT Abdomen mit KM"
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
+* category = $SCT#363679005 "Imaging (procedure)"
 * code.coding = $OPS#3-222 "Computertomographie des Thorax mit Kontrastmittel"
-* code.coding.version = "2024"
+* code.coding.version = "2021"
 * performedDateTime = 2021-06-10
 
 Instance: PatientKimMusterperson-PrimaryDiagnosis-2
@@ -68,7 +69,9 @@ Usage: #example
 Description: "15.06.2021 Aszitespunktion"
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
+* category = $SCT#165197003 "Diagnostic assessment (procedure)"
 * code.coding = $OPS#1-853.2 "Diagnostische (perkutane) Punktion und Aspiration der Bauchhöhle: Aszitespunktion"
+* code.coding.version = "2021"
 * performedDateTime = 2021-06-15
 
 //22.06.2021 CT Thorax: kein Hinweis auf Metastasen. 
@@ -80,7 +83,10 @@ Usage: #example
 Description: "22.06.2021 CT Thorax: kein Hinweis auf Metastasen."
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
+* category = $SCT#363679005 "Imaging (procedure)"
+
 * code.coding = $OPS#1-853.2 "CT Thorax"
+* code.coding.version = "2021"
 * performedDateTime = 2021-06-22
 
 
