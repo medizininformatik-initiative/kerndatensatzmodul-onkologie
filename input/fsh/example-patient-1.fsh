@@ -84,7 +84,6 @@ Description: "22.06.2021 CT Thorax: kein Hinweis auf Metastasen."
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
 * category = $SCT#363679005 "Imaging (procedure)"
-
 * code.coding = $OPS#1-853.2 "CT Thorax"
 * code.coding.version = "2021"
 * performedDateTime = 2021-06-22
@@ -122,6 +121,7 @@ Description: "."
 * status = #completed
 * category = $SCT#18629005 // Administration of drug or medicament (procedure)
 * code.coding = $OPS#8-54 "Zytostatische Chemotherapie, Immuntherapie und antiretrovirale Therapie" // bei Bedarf spezifischer?
+* code.coding.version = "2021"
 * extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K // impliziert 
 * extension[StellungZurOp].valueCodeableConcept = $mii-cs-onko-therapie-stellungzurop#N "neoadjuvant"
 * performedPeriod.start = 2021-07-05
@@ -440,7 +440,9 @@ Usage: #example
 Description: "."
 * subject = Reference(PatientKimMusterperson)
 * status = #completed
+* category = $SCT#18629005 // Administration of drug or medicament (procedure)
 * code.coding = $OPS#8-54 "Zytostatische Chemotherapie, Immuntherapie und antiretrovirale Therapie" // bei Bedarf spezifischer?
+* code.coding.version = "2021"
 * extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K // impliziert 
 * extension[StellungZurOp].valueCodeableConcept = $mii-cs-onko-therapie-stellungzurop#A "adjuvant"
 * performedPeriod.start = 2021-11-08
