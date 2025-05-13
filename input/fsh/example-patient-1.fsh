@@ -206,6 +206,7 @@ Usage: #example
 Description: "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie, Tumorresektion mittels Hysterektomie, bilateraler Adnexektomie, und atpyischer Lebersegmentresektion (Seg. II und V). Postoperativ: R0."
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
+* category = $SCT#387713003 "Surgical procedure"
 * performedDateTime = 2021-09-30
 * outcome = $mii-cs-onko-residualstatus#R0
 
@@ -215,8 +216,9 @@ Usage: #example
 Description: "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie, Tumorresektion mittels Hysterektomie, bilateraler Adnexektomie, und atpyischer Lebersegmentresektion (Seg. II und V). Postoperativ: R0."
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
-* category = $SCT#387713003 "Operationen"
+* category = $SCT#387713003 "Surgical procedure"
 * code.coding = $OPS#5-547.0 "Resektion von Gewebe in der Bauchregion ohne sichere Organzuordnung: Intraperitoneal" // alternativ 5-590.8 Resektion von Gewebe ohne sichere Organzuordnung
+* code.coding.version = "2021"
 * performedDateTime = 2021-09-30
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
 * outcome = $mii-cs-onko-residualstatus#R0
@@ -227,8 +229,9 @@ Usage: #example
 Description: "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie, Tumorresektion mittels Hysterektomie, bilateraler Adnexektomie, und atpyischer Lebersegmentresektion (Seg. II und V). Postoperativ: R0."
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
-* category = $SCT#387713003 "Operationen"
+* category = $SCT#387713003 "Surgical procedure"
 * code.coding = $OPS#5-683 "Uterusexstirpation [Hysterektomie]"
+* code.coding.version = "2021"
 * performedDateTime = 2021-09-30
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
 * outcome = $mii-cs-onko-residualstatus#R0
@@ -239,8 +242,9 @@ Usage: #example
 Description: "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie, Tumorresektion mittels Hysterektomie, bilateraler Adnexektomie, und atpyischer Lebersegmentresektion (Seg. II und V). Postoperativ: R0."
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
-* category = $SCT#387713003 "Operationen"
+* category = $SCT#387713003 "Surgical procedure"
 * code.coding = $OPS#5-661 "Salpingektomie"
+* code.coding.version = "2021"
 * performedDateTime = 2021-09-30
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
 * outcome = $mii-cs-onko-residualstatus#R0
@@ -251,8 +255,9 @@ Usage: #example
 Description: "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie, Tumorresektion mittels Hysterektomie, bilateraler Adnexektomie, und atpyischer Lebersegmentresektion (Seg. II und V). Postoperativ: R0."
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
-* category = $SCT#387713003 "Operationen"
+* category = $SCT#387713003 "Surgical procedure"
 * code.coding = $OPS#5-501 "Lokale Exzision und Destruktion von erkranktem Gewebe der Leber (atypische Leberresektion)"
+* code.coding.version = "2021"
 * performedDateTime = 2021-09-30
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
 * outcome = $mii-cs-onko-residualstatus#R0
