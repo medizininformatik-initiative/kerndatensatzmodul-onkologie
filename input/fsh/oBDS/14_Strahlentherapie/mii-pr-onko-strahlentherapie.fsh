@@ -1,11 +1,12 @@
 Profile: MII_PR_Onko_Strahlentherapie
-Parent: https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure
+Parent: MII_PR_Prozedur_Procedure
 Id: mii-pr-onko-strahlentherapie
 Title: "MII PR Onkologie Strahlentherapie"
 Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie in der Onkologie."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active
+
 
 // Logical Modell see:  https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532153/Strahlentherapie+ST+Typ
 * meta.profile 0..* MS
@@ -17,59 +18,16 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 // Intention der Strahlentherapie
 * extension contains mii-ex-onko-strahlentherapie-intention named Intention 1..1
 * extension[Intention] MS
-* insert Label (extension[Intention].valueCodeableConcept.coding, Intention der Strahlentherapie,Intention der Strahlentherapie gemäß 14.1 oBDS 2021. )
-* insert Translation(extension[Intention].valueCodeableConcept.coding ^short, de-DE, Intention der Strahlentherapie )
-* insert Translation(extension[Intention].valueCodeableConcept.coding ^definition, de-DE, Intention der Strahlentherapie gemäß 14.1 oBDS 2021. )
+* insert Label (extension[Intention], Intention der Strahlentherapie,Intention der Strahlentherapie gemäß 14.1 oBDS 2021. )
+* insert Translation(extension[Intention] ^short, de-DE, Intention der Strahlentherapie )
+* insert Translation(extension[Intention] ^definition, de-DE, Intention der Strahlentherapie gemäß 14.1 oBDS 2021. )
 
 // Strahlentherapie Stellung zu operativer Therapie
 * extension contains MII_EX_Onko_Strahlentherapie_StellungZurOp named StellungZurOp 0..
 * extension[StellungZurOp] MS
-* insert Label (extension[StellungZurOp].valueCodeableConcept.coding, Stellung der Strahlentherapie zu einer Operation,Stellung der Strahlentherapie zu einer Operation gemäß 14.2 oBDS 2021. )
-* insert Translation(extension[StellungZurOp].valueCodeableConcept.coding ^short, de-DE, Stellung der Strahlentherapie zu einer Operation)
-* insert Translation(extension[StellungZurOp].valueCodeableConcept.coding ^definition, de-DE, Stellung der Strahlentherapie zu einer Operation gemäß 14.2 oBDS 2021. )
-
-* extension contains mii-ex-onko-strahlentherapie-bestrahlung named Bestrahlung 1..
-* extension[Bestrahlung] MS
-* extension[Bestrahlung] 1..*
-// Strahlentherapie 14.3 Zielgebiet FDPG Label
-* insert Label(extension[Bestrahlung].extension[Zielgebiet].valueCodeableConcept.coding, Zielgebiet, Zielgebiet der Strahlentherapie gemäß 14.3 oBDS 2021.) 
-* insert Translation(extension[Bestrahlung].extension[Zielgebiet].valueCodeableConcept.coding ^short, de-DE, Zielgebiet)
-* insert Translation(extension[Bestrahlung].extension[Zielgebiet].valueCodeableConcept.coding ^definition, de-DE, Zielgebiet der Strahlentherapie gemäß 14.3 oBDS 2021. )
-// Strahlentherapie 14.4 Zielgebiet FDPG Label
-* insert Label(extension[Bestrahlung].extension[Zielgebiet_Lateralitaet].valueCodeableConcept.coding, Zielgebiet Lateralität, Lateralität des Zielgebiets der Strahlentherapie gemäß 14.4 oBDS 2021.)
-* insert Translation(extension[Bestrahlung].extension[Zielgebiet_Lateralitaet].valueCodeableConcept.coding ^short, de-DE, Zielgebiet Lateralität)
-* insert Translation(extension[Bestrahlung].extension[Zielgebiet_Lateralitaet].valueCodeableConcept.coding ^definition, de-DE, Lateralität des Zielgebiets der Strahlentherapie gemäß 14.4 oBDS 2021. )
-// Applikationsart
-* insert Label(extension[Bestrahlung].extension[Applikationsart].valueCodeableConcept.coding, Applikationsart, Applikationsart der Bestrahlung gemäß 14.7 oBDS 2021.)
-* insert Translation(extension[Bestrahlung].extension[Applikationsart].valueCodeableConcept.coding ^short, de-DE, Applikationsart)
-* insert Translation(extension[Bestrahlung].extension[Applikationsart].valueCodeableConcept.coding ^definition, de-DE, Applikationsart der Bestrahlung gemäß 14.7 oBDS 2021. )
-// Strahlenart
-* insert Label(extension[Bestrahlung].extension[Strahlenart].valueCodeableConcept.coding, Strahlenart, Strahlenart der Bestrahlung gemäß 14.8 oBDS 2021. Hier werden sowohl Bestrahlungen als auch Radioisotope angegeben.)
-* insert Translation(extension[Bestrahlung].extension[Strahlenart].valueCodeableConcept.coding ^short, de-DE, Strahlenart)
-* insert Translation(extension[Bestrahlung].extension[Strahlenart].valueCodeableConcept.coding ^definition, de-DE, Strahlenart der Bestrahlung gemäß 14.8 oBDS 2021. Hier werden sowohl Bestrahlungen als auch Radioisotope angegeben.)
-
-//Gesamtdosis
-* insert Label(extension[Bestrahlung].extension[Gesamtdosis].valueQuantity.value, Gesamtdosis, Gesamtdosis gemäß 14.9 oBDS 2021. )
-* insert Translation(extension[Bestrahlung].extension[Gesamtdosis].valueQuantity.value ^short, de-DE, Gesamtdosis)
-* insert Translation(extension[Bestrahlung].extension[Gesamtdosis].valueQuantity.value ^definition, de-DE, Gesamtdosis gemäß 14.9 oBDS 2021. )
-* insert Label(extension[Bestrahlung].extension[Gesamtdosis].valueQuantity.unit, Einheit der Gesamtdosis, Einheit der Gesamtdosis gemäß 14.11 oBDS 2021. Hier werden sowohl Bestrahlungen als auch Radioisotope angegeben. )
-* insert Translation(extension[Bestrahlung].extension[Gesamtdosis].valueQuantity.unit ^short, de-DE, Einheit der Gesamtdosis)
-* insert Translation(extension[Bestrahlung].extension[Gesamtdosis].valueQuantity.unit ^definition, de-DE, Einheit der Gesamtdosis gemäß 14.11 oBDS 2021. Hier werden sowohl Bestrahlungen als auch Radioisotope angegeben.)
-
-//Einzeldosis
-* insert Label(extension[Bestrahlung].extension[Einzeldosis].valueQuantity.value, Einzeldosis, Einzeldosis der Strahlentherapie gemäß 14.10 oBDS 2021.)
-* insert Translation(extension[Bestrahlung].extension[Einzeldosis].valueQuantity.value ^short, de-DE, Einzeldosis)
-* insert Translation(extension[Bestrahlung].extension[Einzeldosis].valueQuantity.value ^definition, de-DE, Einzeldosis der Strahlentherapie gemäß 14.10 oBDS 2021. )
-* insert Label(extension[Bestrahlung].extension[Einzeldosis].valueQuantity.unit, Einheit der Einzeldosis, Einheit der Einzeldosis gemäß 14.11 oBDS 2021.)
-* insert Translation(extension[Bestrahlung].extension[Einzeldosis].valueQuantity.unit ^short, de-DE, Einheit der Einzeldosis)
-* insert Translation(extension[Bestrahlung].extension[Einzeldosis].valueQuantity.unit ^definition, de-DE, Einheit der Einzeldosis gemäß 14.11 oBDS 2021.)
-
-
-// Boost
-* insert Label(extension[Bestrahlung].extension[Boost].valueCodeableConcept.coding, Boost, Verwendung von Boosts als Teil der Bestrahlung gemäß 14.12 oBDS 2021.)
-* insert Translation(extension[Bestrahlung].extension[Boost].valueCodeableConcept.coding ^short, de-DE, Boost)
-* insert Translation(extension[Bestrahlung].extension[Boost].valueCodeableConcept.coding ^definition, de-DE, Verwendung von Boosts als Teil der Bestrahlung gemäß 14.12 oBDS 2021. )
-
+* insert Label (extension[StellungZurOp], Stellung der Strahlentherapie zu einer Operation,Stellung der Strahlentherapie zu einer Operation gemäß 14.2 oBDS 2021. )
+* insert Translation(extension[StellungZurOp] ^short, de-DE, Stellung der Strahlentherapie zu einer Operation)
+* insert Translation(extension[StellungZurOp] ^definition, de-DE, Stellung der Strahlentherapie zu einer Operation gemäß 14.2 oBDS 2021. )
 
 
 // Strahlentherapie Beginn und Ende
@@ -91,7 +49,7 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 * outcome.coding.code MS
 * outcome.coding.system MS
 * outcome.coding from MII_VS_Onko_Strahlentherapie_Ende_Grund (required)
-* insert Label(outcome.coding, Grund für Ende der Strahlentherapie, Grund für Ende der Strahlentherapie - planmäßig oder abgebrochen -  gemäß 14.12 oBDS 2021.)
+* insert Label(performedPeriod.start, Grund für Ende der Strahlentherapie, Grund für Ende der Strahlentherapie - planmäßig oder abgebrochen -  gemäß 14.12 oBDS 2021.)
 * insert Translation(outcome.coding ^short, de-DE, Grund für Ende der Strahlentherapie)
 * insert Translation(outcome.coding ^definition, de-DE, Grund für Ende der Strahlentherapie - planmäßig oder abgebrochen -  gemäß 14.12 oBDS 2021.)
 
@@ -117,16 +75,6 @@ Source: MII_PR_Onko_Strahlentherapie
 * -> "14" "Strahlentherapie"
 * extension[Intention].valueCodeableConcept.coding.code -> "14.1" "Intention der Strahlentherapie"
 * extension[StellungZurOp].valueCodeableConcept.coding.code -> "14.2" "Strahlentherapie Stellung zu operativer Therapie"
-* extension[Bestrahlung].extension[Zielgebiet].valueCodeableConcept.coding.code -> "14.3" "Strahlentherapie Zielgebiet"
-* extension[Bestrahlung].extension[Zielgebiet_Lateralitaet].valueCodeableConcept.coding.code -> "14.4" "Strahlentherapie Seite Zielgebiet"
 * performed[x].start -> "14.5" "Strahlentherapie Beginn"
 * performed[x].end -> "14.6" "Strahlentherapie Ende"
-* extension[Bestrahlung].extension[Applikationsart].valueCodeableConcept.coding.code -> "14.7" "Strahlentherapie Applikationsart"
-* extension[Bestrahlung].extension[Strahlenart].valueCodeableConcept.coding.code -> "14.8" "Strahlentherapie Strahlenart"
-* extension[Bestrahlung].extension[Gesamtdosis].valueQuantity.value -> "14.9" "Strahlentherapie Gesamtdosis"
-* extension[Bestrahlung].extension[Gesamtdosis].valueQuantity.unit -> "14.11" "Strahlentherapie Einheit"
-* extension[Bestrahlung].extension[Einzeldosis].valueQuantity.value -> "14.10" "Strahlentherapie Einzeldosis pro Tag"
-* extension[Bestrahlung].extension[Einzeldosis].valueQuantity.unit -> "14.11" "Strahlentherapie Einheit"
-
-* extension[Bestrahlung].extension[Boost].valueCodeableConcept.coding.code -> "14.12" "Strahlentherapie Boost"
 * outcome.coding.code -> "14.13" "Strahlentherapie Ende Grund"

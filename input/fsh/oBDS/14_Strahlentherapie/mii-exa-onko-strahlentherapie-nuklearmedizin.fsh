@@ -1,5 +1,5 @@
 Instance: mii-exa-onko-strahlentherapie-nuklearmedizin-1
-InstanceOf: MII_PR_Onko_Strahlentherapie_neu
+InstanceOf: MII_PR_Onko_Strahlentherapie
 Usage: #example
 Title: "Example radiation therapy"
 Description: "Example radiation therapy conformant with MII Prozedur as bracket for radiation and nuclear therapy"

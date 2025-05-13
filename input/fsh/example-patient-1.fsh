@@ -539,7 +539,9 @@ Usage: #example
 Description: "."
 * subject = Reference(PatientKimMusterperson)
 * status = #completed
+* category = $SCT#18629005 // Administration of drug or medicament (procedure)
 * code.coding = $OPS#8-54 "Zytostatische Chemotherapie, Immuntherapie und antiretrovirale Therapie" // bei Bedarf spezifischer?
+* code.coding.version = "2022"
 * extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K // impliziert 
 * extension[StellungZurOp].valueCodeableConcept = $mii-cs-onko-therapie-stellungzurop#A "adjuvant"
 * performedPeriod.start = 2022-01-25
