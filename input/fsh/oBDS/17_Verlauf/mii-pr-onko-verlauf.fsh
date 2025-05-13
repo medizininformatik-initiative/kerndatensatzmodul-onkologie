@@ -65,7 +65,7 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
 
 
 * component[Lymphknoten_Verlauf] MS 
-* component[Lymphknoten_Verlauf].code.coding = $SCT#399656008 "Status of tumor metastasis to regional lymph nodes (observable entity)"
+* component[Lymphknoten_Verlauf].code.coding = $SCT#399656008 "Presence of metastatic neoplasm in regional lymph node (observable entity)"
 * component[Lymphknoten_Verlauf].value[x] only CodeableConcept
 * component[Lymphknoten_Verlauf].valueCodeableConcept from mii-vs-onko-verlauf-lymphknoten (required)
 * component[Lymphknoten_Verlauf].valueCodeableConcept.coding.system MS
