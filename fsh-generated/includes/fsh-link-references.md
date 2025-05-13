@@ -65,7 +65,6 @@
 [MII_CS_Onko_Verlauf_Primaertumor]: CodeSystem-mii-cs-onko-verlauf-primaertumor.html
 [MII_EX_Onko_Histology_Morphology_Behavior_ICDO3]: StructureDefinition-mii-ex-onko-histology-morphology-behavior-icdo3.html
 [MII_EX_Onko_Operation_Intention]: StructureDefinition-mii-ex-onko-operation-intention.html
-[MII_EX_Onko_Strahlentherapie_Bestrahlung]: StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung.html
 [MII_EX_Onko_Strahlentherapie_Bestrahlung_Boost]: StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-boost.html
 [MII_EX_Onko_Strahlentherapie_Bestrahlung_Einzeldosis]: StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis.html
 [MII_EX_Onko_Strahlentherapie_Bestrahlung_Gesamtdosis]: StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis.html

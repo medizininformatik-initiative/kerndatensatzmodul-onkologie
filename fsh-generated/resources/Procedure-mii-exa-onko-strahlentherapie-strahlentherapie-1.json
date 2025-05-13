@@ -34,11 +34,20 @@
     "reference": "Patient/example"
   },
   "status": "completed",
+  "category": {
+    "coding": [
+      {
+        "code": "1287742003",
+        "system": "http://snomed.info/sct",
+        "display": "Radiotherapy (procedure)"
+      }
+    ]
+  },
   "code": {
     "coding": [
       {
         "code": "8-52",
-        "system": "http://snomed.info/sct"
+        "system": "http://fhir.de/CodeSystem/bfarm/ops"
       }
     ]
   },

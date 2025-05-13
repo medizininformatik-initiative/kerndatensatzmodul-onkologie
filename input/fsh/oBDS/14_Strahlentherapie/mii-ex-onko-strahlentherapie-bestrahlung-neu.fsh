@@ -53,7 +53,7 @@ Description: "Strahlentherapie: Seitenlokalisation einer Bestrahlung"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^context.type = #element
-* ^context.expression = "Procedure"  
+* ^context.expression = "Procedure.bodySite"  
 
 * value[x] ^short = "Seitenlokalisation im Zielgebiet"
 * value[x] ^definition = "Gibt Seitenlokalisation des Zielgebietes an. Bei beidseitiger Bestrahlung paariger Organe sind die Bestrahlungen einzeln zu melden."

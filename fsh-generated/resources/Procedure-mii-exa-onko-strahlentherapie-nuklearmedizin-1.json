@@ -34,10 +34,19 @@
     "reference": "Patient/example"
   },
   "status": "completed",
+  "category": {
+    "coding": [
+      {
+        "code": "399315003",
+        "system": "http://snomed.info/sct",
+        "display": "Radionuclide therapy"
+      }
+    ]
+  },
   "code": {
     "coding": [
       {
-        "code": "8-52",
+        "code": "8-53",
         "system": "http://fhir.de/CodeSystem/bfarm/ops"
       }
     ]

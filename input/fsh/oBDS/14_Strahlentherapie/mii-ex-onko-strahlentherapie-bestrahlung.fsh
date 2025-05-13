@@ -1,4 +1,4 @@
-Extension: MII_EX_Onko_Strahlentherapie_Bestrahlung
+/*Extension: MII_EX_Onko_Strahlentherapie_Bestrahlung
 Id: mii-ex-onko-strahlentherapie-bestrahlung
 Title: "MII EX Onko Strahlentherapie Bestrahlung"
 Description: "Strahlentherapie: einzelne Bestrahlung innerhalb der Gesamttherapie"
@@ -53,3 +53,4 @@ Description: "Strahlentherapie: einzelne Bestrahlung innerhalb der Gesamttherapi
 * extension[Boost] ^definition = "Angabe, ob ein Boost und falls ja, welche Art von Boost appliziert wurde."
 * extension[Boost].value[x] only CodeableConcept
 * extension[Boost].valueCodeableConcept from mii-vs-onko-strahlentherapie-boost (required) 
+*/
