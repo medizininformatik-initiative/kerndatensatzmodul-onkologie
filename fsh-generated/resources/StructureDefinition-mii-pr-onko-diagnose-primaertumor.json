@@ -386,9 +386,6 @@
         },
         "min": 0,
         "max": "1",
-        "patternCoding": {
-          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation"
-        },
         "mustSupport": true,
         "binding": {
           "strength": "required",
@@ -399,6 +396,7 @@
         "id": "Condition.bodySite.coding:primaertumorSeitenlokalisation.system",
         "path": "Condition.bodySite.coding.system",
         "min": 1,
+        "patternUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation",
         "mustSupport": true
       },
       {
@@ -456,15 +454,13 @@
         },
         "min": 0,
         "max": "1",
-        "patternCoding": {
-          "system": "http://terminology.hl7.org/CodeSystem/icd-o-3"
-        },
         "mustSupport": true
       },
       {
         "id": "Condition.bodySite.coding:icd-o-3.system",
         "path": "Condition.bodySite.coding.system",
         "min": 1,
+        "patternUri": "http://terminology.hl7.org/CodeSystem/icd-o-3",
         "mustSupport": true
       },
       {

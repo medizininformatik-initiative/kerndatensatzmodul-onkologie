@@ -39,14 +39,14 @@ Description: "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der 
     icd-o-3 0..1 MS
 * bodySite.coding[primaertumorSeitenlokalisation] from mii-vs-onko-seitenlokalisation
 * bodySite.coding[primaertumorSeitenlokalisation].system 1.. MS
-* bodySite.coding[primaertumorSeitenlokalisation] ^patternCoding.system = $mii-cs-onko-seitenlokalisation
+* bodySite.coding[primaertumorSeitenlokalisation].system = $mii-cs-onko-seitenlokalisation
 * bodySite.coding[primaertumorSeitenlokalisation].code 1.. MS
 * insert Label (bodySite.coding[primaertumorSeitenlokalisation], Seitenlokalisation des Primärtumors gemäß oBDS,Seitenlokalisation des Primärtumors nach 5.8 oBDS 2021)
 * insert Translation(bodySite.coding[primaertumorSeitenlokalisation] ^short, de-DE, Seitenlokalisation des Primärtumors gemäß oBDS )
 * insert Translation(bodySite.coding[primaertumorSeitenlokalisation] ^definition, de-DE, Seitenlokalisation des Primärtumors nach 5.8 oBDS 2021 )
 
 * bodySite.coding[icd-o-3].system 1.. MS
-* bodySite.coding[icd-o-3] ^patternCoding.system = $ICDO3
+* bodySite.coding[icd-o-3].system = $ICDO3
 * bodySite.coding[icd-o-3].code 1.. MS
 * bodySite.coding[icd-o-3].code from MII_VS_Onko_ICDO3_Topographie (required)
 * insert Label (bodySite.coding[icd-o-3], ICD-O-Topographie, Topographie des Primärtumors nach ICD-O-3 nach 5.4 oBDS 2021)
