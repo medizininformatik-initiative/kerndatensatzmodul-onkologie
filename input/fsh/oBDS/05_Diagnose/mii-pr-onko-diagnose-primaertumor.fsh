@@ -32,7 +32,7 @@ Description: "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der 
 * insert Translation(verificationStatus.coding[primaertumorDiagnosesicherung] ^definition, de-DE, Art der Diagnosesicherung nach 5.7 oBDS 2021 )
 
 * bodySite.coding ^slicing.discriminator.type = #pattern
-* bodySite.coding ^slicing.discriminator.path = "$this"
+* bodySite.coding ^slicing.discriminator.path = "system"
 * bodySite.coding ^slicing.rules = #open
 * bodySite.coding contains
     primaertumorSeitenlokalisation 0..1 MS and 
