@@ -3,6 +3,7 @@ InstanceOf: ConceptMap
 Usage: #example
 Title: "MII CM Onko Fernmetastasen SCT Mapping"
 Description: "Mapping der Fernmetastasen-Codesystems  auf SNOMED"
+* insert Version
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-fernmetastasen-sct"
 * name = "mii-cm-onko-fernmetastasen-sct-mapping"					
 * title = "Fernmetastasen Mapping"					

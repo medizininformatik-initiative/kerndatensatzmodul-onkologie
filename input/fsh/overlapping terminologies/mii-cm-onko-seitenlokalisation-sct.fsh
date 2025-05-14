@@ -1,6 +1,7 @@
 Instance: mii-cm-onko-seitenlokalisation-sct
 InstanceOf: ConceptMap
 Usage: #definition
+* insert Version
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-seitenlokalisation-sct"
 * name = "MII CM Onko Seitenlokalisation SNOMED Mapping"
 * title = "MII CM Onko Seitenlokalisation SNOMED Mapping"

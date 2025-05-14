@@ -1,6 +1,7 @@
 Instance: mii-cm-onko-residualstatus-uicc-sct
 InstanceOf: ConceptMap
 Usage: #definition
+* insert Version
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-residualstatus-uicc-sct"
 * name = "MII CM Onko Residualstatus UICC SCT Mapping"
 * title = "MII CM Onko Residualstatus UICC SNOMED"

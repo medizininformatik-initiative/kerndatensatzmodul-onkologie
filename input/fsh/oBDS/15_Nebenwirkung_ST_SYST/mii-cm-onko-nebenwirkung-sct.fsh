@@ -1,6 +1,7 @@
 Instance: mii-cm-onko-nebenwirkung-sct
 InstanceOf: ConceptMap
 Usage: #definition
+* insert Version
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-nebenwirkung-sct"
 * name = "MII CM Onko Nebenwirkung SCT Mapping"
 * title = "MII CM Onko Nebenwirkung SNOMED Mapping"
