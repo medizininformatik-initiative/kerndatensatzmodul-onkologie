@@ -19,7 +19,12 @@ Hier sind  alle Änderungen aufgelistet.
             - Zielstruktur und Seitenlokalisation über Procedure.bodySite
             - Zeitraum der Einzelbestrahlungen über Procedure.effectivePeriod
 - Profile
-    - `Verlauf.component[Tumor].code` von `277062004 |Status des Residualtumors|` auf `445200009 |Status of residual neoplasm (observable entity)|` (verfügbar seit September 2024)
+    - `Verlauf.component[Tumor].code` von `277062004 |Status des Residualtumors|` auf `445200009 |Status of residual neoplasm (observable entity)|` (verfügbar seit September 2024) und pattern angepasst
+    - Extensions haben jetzt experimental `experimental=true` und Datumsstempel
+    - Slicing-Regeln des Onko-Befunds korrigiert und Label korrekt auf von `conclusion.value` auf `conclusion` gesetzt
+    - Onko-Medikation: MedicationStatement.partOf-Slice korrigiert und Kardinalität von 1..* auf 0..1 angepasst
+    - 
+
 - ConceptMaps
     - Einfügen Versionsnummer entsprechend dem Package
     - Ersetzen der targetURI "http://snomed.info/sct" (CodeSystem-URI) mit spezifischer SNOMED-Distribution "http://snomed.info/sct/900000000000207008/version/20240401" (ValueSet-URI)
