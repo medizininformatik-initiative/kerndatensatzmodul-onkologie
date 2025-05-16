@@ -66,6 +66,21 @@
         "id": "Procedure.extension:Intention",
         "path": "Procedure.extension",
         "sliceName": "Intention",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.extension:Intention.value[x].coding",
+        "path": "Procedure.extension.value[x].coding",
         "short": "Intention der Strahlentherapie",
         "_short": {
           "extension": [
@@ -101,18 +116,7 @@
               ]
             }
           ]
-        },
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention"
-            ]
-          }
-        ],
-        "mustSupport": true
+        }
       },
       {
         "id": "Procedure.extension:Intention.value[x].coding.code",
@@ -129,6 +133,21 @@
         "id": "Procedure.extension:StellungZurOp",
         "path": "Procedure.extension",
         "sliceName": "StellungZurOp",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.extension:StellungZurOp.value[x].coding",
+        "path": "Procedure.extension.value[x].coding",
         "short": "Stellung der Strahlentherapie zu einer Operation",
         "_short": {
           "extension": [
@@ -164,18 +183,7 @@
               ]
             }
           ]
-        },
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop"
-            ]
-          }
-        ],
-        "mustSupport": true
+        }
       },
       {
         "id": "Procedure.extension:StellungZurOp.value[x].coding.code",
@@ -483,13 +491,7 @@
       {
         "id": "Procedure.extension:Bestrahlung.extension:Gesamtdosis.value[x].unit",
         "path": "Procedure.extension.extension.value[x].unit",
-        "mapping": [
-          {
-            "identity": "oBDS",
-            "map": "14.11",
-            "comment": "Strahlentherapie Einheit"
-          }
-        ],
+        "short": "Einheit der Gesamtdosis",
         "_short": {
           "extension": [
             {
@@ -507,6 +509,7 @@
             }
           ]
         },
+        "definition": "Einheit der Gesamtdosis gemäß 14.11 oBDS 2021. Hier werden sowohl Bestrahlungen als auch Radioisotope angegeben.",
         "_definition": {
           "extension": [
             {
@@ -523,7 +526,14 @@
               ]
             }
           ]
-        }
+        },
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "14.11",
+            "comment": "Strahlentherapie Einheit"
+          }
+        ]
       },
       {
         "id": "Procedure.extension:Bestrahlung.extension:Einzeldosis",
@@ -580,13 +590,7 @@
       {
         "id": "Procedure.extension:Bestrahlung.extension:Einzeldosis.value[x].unit",
         "path": "Procedure.extension.extension.value[x].unit",
-        "mapping": [
-          {
-            "identity": "oBDS",
-            "map": "14.11",
-            "comment": "Strahlentherapie Einheit"
-          }
-        ],
+        "short": "Einheit der Einzeldosis",
         "_short": {
           "extension": [
             {
@@ -604,6 +608,7 @@
             }
           ]
         },
+        "definition": "Einheit der Einzeldosis gemäß 14.11 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -620,7 +625,14 @@
               ]
             }
           ]
-        }
+        },
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "14.11",
+            "comment": "Strahlentherapie Einheit"
+          }
+        ]
       },
       {
         "id": "Procedure.extension:Bestrahlung.extension:Boost",
@@ -765,7 +777,7 @@
       {
         "id": "Procedure.performed[x]:performedPeriod.start",
         "path": "Procedure.performed[x].start",
-        "short": "Grund für Ende der Strahlentherapie",
+        "short": "Ende der Strahlentherapie",
         "_short": {
           "extension": [
             {
@@ -783,7 +795,7 @@
             }
           ]
         },
-        "definition": "Grund für Ende der Strahlentherapie - planmäßig oder abgebrochen -  gemäß 14.12 oBDS 2021.",
+        "definition": "Ende der gesamten Strahlentherapie mit allen Einzelbestrahlungen gemäß 14.6 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -865,11 +877,7 @@
       {
         "id": "Procedure.outcome.coding",
         "path": "Procedure.outcome.coding",
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-ende-grund"
-        },
+        "short": "Grund für Ende der Strahlentherapie",
         "_short": {
           "extension": [
             {
@@ -887,6 +895,7 @@
             }
           ]
         },
+        "definition": "Grund für Ende der Strahlentherapie - planmäßig oder abgebrochen -  gemäß 14.12 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -903,6 +912,11 @@
               ]
             }
           ]
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-ende-grund"
         }
       },
       {

@@ -237,13 +237,17 @@
       {
         "id": "Observation.method",
         "path": "Observation.method",
-        "short": "TNM Version",
-        "definition": "Gibt an, nach welcher Version des TNM klassifiziert wurde.",
         "mustSupport": true,
         "binding": {
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-version"
         }
+      },
+      {
+        "id": "Observation.method.coding",
+        "path": "Observation.method.coding",
+        "short": "TNM Version",
+        "definition": "Gibt an, nach welcher Version des TNM klassifiziert wurde."
       }
     ]
   }

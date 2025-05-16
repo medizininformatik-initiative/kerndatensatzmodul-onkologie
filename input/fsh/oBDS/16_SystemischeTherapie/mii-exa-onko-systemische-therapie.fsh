@@ -19,7 +19,7 @@ Usage: #example
 Title: "Example chemotherapy 1"
 Description: "Example for the FHIR profile systemic therapy based on German "
 * subject = Reference(Patient/example)
-* status = #final
+* status = #completed
 * effectivePeriod.start = "2021-12-04" // identical to the Procedure.performedPeriod
 * effectivePeriod.end = "2022-04-06"
 * medicationCodeableConcept.coding[+].system = $ATC_DE
@@ -36,7 +36,7 @@ Usage: #example
 Title: "Example chemotherapy 2"
 Description: "Example for the FHIR profile systemic therapy based on German "
 * subject = Reference(Patient/example)
-* status = #final
+* status = #completed
 * effectivePeriod.start = "2021-12-04"
 * effectivePeriod.end = "2022-04-06"
 * medicationCodeableConcept.coding[+].system = $ATC_DE

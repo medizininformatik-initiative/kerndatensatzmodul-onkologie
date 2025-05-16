@@ -42,12 +42,17 @@ Description: "Medikation der Systemische Therapie. Dieses Profil beschreibt die 
 * effectivePeriod.start 0..1 MS
 * effectivePeriod.end 0..1 MS
 * effectiveDateTime 0..1 MS  // falls es einmalige Anwendungen / Protokolle gibt
-* basedOn MS
-* basedOn only Reference(CarePlan)
+
+* effectivePeriod.start ^short = "Startdatum der systemischen Medikation"
+* effectivePeriod.start ^definition = "Startdatum der systemischen Medikation gemäß 16.7 oBDS 2021."
+* effectivePeriod.end ^short = "Enddatum der systemischen Medikation"
+* effectivePeriod.end ^definition = "Enddatum der systemischen Medikation gemäß 16.9 oBDS 2021."
 * insert Translation(effectivePeriod.start ^short, de-DE, Startdatum der systemischen Medikation)
 * insert Translation(effectivePeriod.start ^definition, de-DE, Startdatum der systemischen Medikation gemäß 16.7 oBDS 2021. )
 * insert Translation(effectivePeriod.end ^short, de-DE, Enddatum der systemischen Medikation)
 * insert Translation(effectivePeriod.end ^definition, de-DE, Enddatum der systemischen Medikation gemäß 16.9 oBDS 2021. )
+* basedOn MS
+* basedOn only Reference(CarePlan)
 
 
 Mapping: FHIR-oBDS-Systemische_Therapie_Medikation

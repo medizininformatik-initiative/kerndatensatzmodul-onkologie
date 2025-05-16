@@ -127,7 +127,7 @@ InstanceOf: MII_PR_Onko_Systemische_Therapie_Medikation
 Usage: #example
 Description: "."
 * subject = Reference(PatientKimMusterperson)
-* status = #recorded 
+* status = #completed 
 * effectivePeriod.start = 2021-07-05  
 * effectivePeriod.end = 2021-09-05
 * medicationCodeableConcept.coding[atcClassDe][0] = $ATC_DE#L01CD01 "Paclitaxel"
@@ -139,7 +139,7 @@ InstanceOf: MII_PR_Onko_Systemische_Therapie_Medikation
 Usage: #example
 Description: "."
 * subject = Reference(PatientKimMusterperson)
-* status = #recorded 
+* status = #completed 
 * effectivePeriod.start = 2021-07-05  
 * effectivePeriod.end = 2021-09-05
 * medicationCodeableConcept.coding[atcClassDe][0] = $ATC_DE#L01XA02 "Carboplatin"
@@ -262,7 +262,7 @@ InstanceOf: DiagnosticReport
 Usage: #example  
 Description: "Pathoreport incl. Immunhistochemie"
 * subject = Reference(PatientKimMusterperson)
-* status = #complete
+* status = #final
 * code.coding = $LOINC#22034-3 "Pathology report Cancer Narrative"
 * conclusion = "Histologie: Resektat vom 30.09.2021: Neoplasie des Ovars (Z.n. neoadjuvanter Therapie) (ICD-10-C56) Ovar o.n.A. (ICD-O-C56.9) Untersuchungsmaterial: Resektat WHO-Typ: Seröses Adenokarzinom (ICD-O M-8441/3) Lokale Tumorausbreitung: Ovartumor links mit einer max. Größe von 2,2 cm und tumorinfiltrierter Kapsel mit Nachweis von Tumorzellen auf der Ovaroberfläche, Anteil vitaler Tumorzellen von ca. 80 %. UICC-Klassifikation (8. Auflage): ypT3c. pM1b (HEP) L1. V0. Pn0 FIGO: IVB"
 

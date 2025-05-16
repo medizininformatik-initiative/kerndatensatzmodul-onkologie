@@ -175,7 +175,7 @@
       {
         "id": "MedicationStatement.effective[x]:effectivePeriod.start",
         "path": "MedicationStatement.effective[x].start",
-        "mustSupport": true,
+        "short": "Startdatum der systemischen Medikation",
         "_short": {
           "extension": [
             {
@@ -193,6 +193,7 @@
             }
           ]
         },
+        "definition": "Startdatum der systemischen Medikation gemäß 16.7 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -209,12 +210,13 @@
               ]
             }
           ]
-        }
+        },
+        "mustSupport": true
       },
       {
         "id": "MedicationStatement.effective[x]:effectivePeriod.end",
         "path": "MedicationStatement.effective[x].end",
-        "mustSupport": true,
+        "short": "Enddatum der systemischen Medikation",
         "_short": {
           "extension": [
             {
@@ -232,6 +234,7 @@
             }
           ]
         },
+        "definition": "Enddatum der systemischen Medikation gemäß 16.9 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -248,7 +251,8 @@
               ]
             }
           ]
-        }
+        },
+        "mustSupport": true
       },
       {
         "id": "MedicationStatement.note.text",

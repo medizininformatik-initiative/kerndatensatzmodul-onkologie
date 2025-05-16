@@ -41,18 +41,18 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 * complication[compl_obds] from mii-vs-onko-operation-komplikation
 * complication[compl_obds].coding.system = $mii-cs-onko-operation-komplikation
 * complication[compl_obds].coding.code 1.. MS
-* insert Label(code.coding[ops], Komplikation der OP laut oBDS, Komplikation der OP gemäß 13.5 oBDS 2021)
-* insert Translation(complication[compl_obds] ^short, de-DE, Komplikation der OP laut oBDS )
-* insert Translation(complication[compl_obds] ^definition, de-DE, Komplikation der OP gemäß 13.5 oBDS 2021)
+* insert Label(complication[compl_obds].coding, Komplikation der OP laut oBDS, Komplikation der OP gemäß 13.5 oBDS 2021)
+* insert Translation(complication[compl_obds].coding ^short, de-DE, Komplikation der OP laut oBDS )
+* insert Translation(complication[compl_obds].coding ^definition, de-DE, Komplikation der OP gemäß 13.5 oBDS 2021)
 
 * complication[compl_icd10] MS 
 * complication[compl_icd10] from http://fhir.de/ValueSet/bfarm/icd-10-gm 
 * complication[compl_icd10].coding.system = $ICD10GM 
 * complication[compl_icd10].coding.system 1..
 * complication[compl_icd10].coding.code 1..
-* insert Label(complication[compl_icd10], Komplikation der OP Sonstige ICD-10, Komplikation der OP - soweit nicht in 13.1 oBDS 2021 enthalten - als ICD-10-GM)
-* insert Translation(complication[compl_icd10] ^short, de-DE, Komplikation der OP Sonstige ICD-10 )
-* insert Translation(complication[compl_icd10] ^definition, de-DE, Komplikation der OP - soweit nicht in 13.1 oBDS 2021 enthalten - als ICD-10-GM)
+* insert Label(complication[compl_icd10].coding, Komplikation der OP Sonstige ICD-10, Komplikation der OP - soweit nicht in 13.1 oBDS 2021 enthalten - als ICD-10-GM)
+* insert Translation(complication[compl_icd10].coding ^short, de-DE, Komplikation der OP Sonstige ICD-10 )
+* insert Translation(complication[compl_icd10].coding ^definition, de-DE, Komplikation der OP - soweit nicht in 13.1 oBDS 2021 enthalten - als ICD-10-GM)
 
 // Residualstatus lokal
 * outcome MS

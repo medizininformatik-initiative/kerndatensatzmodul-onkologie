@@ -1,6 +1,9 @@
 {
   "resourceType": "ConceptMap",
   "id": "MII-CM-Onkologie-to-MVGenomSeq",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/MII-CM-Onkologie-to-MVGenomSeq",
+  "title": "MII Concept Map Modellvorhaben Genomsequenzierung Onkologie",
+  "description": "Mapping der einzelnen MII-OnkologieProfile auf den Klinischen Datenkranz der MVGenomSeq",
   "version": "0.1.0",
   "name": "MII_CM_MVGenomSeq_Onkologie",
   "status": "draft",
@@ -19,7 +22,6 @@
       ]
     }
   ],
-  "description": "Mapping der einzelnen MII-OnkologieProfile auf den Klinischen Datenkranz der MVGenomSeq",
   "jurisdiction": [
     {
       "coding": [
@@ -143,25 +145,6 @@
               "code": "DiagnosisOd.germlineDiagnosesConfirmed",
               "display": "Diagnosecode",
               "equivalence": "unmatched"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog",
-      "target": "https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json",
-      "sourceVersion": "2025.0.4",
-      "targetVersion": "1.1.1",
-      "element": [
-        {
-          "code": "Observation.valueCodeableConcept.coding.code",
-          "display": "ECOG-Performance-Status",
-          "target": [
-            {
-              "code": "ecogPerformanceStatusScore",
-              "display": "ECOG-Performance-Status",
-              "equivalence": "equivalent"
             }
           ]
         }

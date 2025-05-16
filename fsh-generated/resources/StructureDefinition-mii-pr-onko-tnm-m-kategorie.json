@@ -68,9 +68,6 @@
         "id": "Observation.code.extension:cpPraefix",
         "path": "Observation.code.extension",
         "sliceName": "cpPraefix",
-        "short": "TNM c/p-Präfix M",
-        "definition": "Gibt an, ob die Klassifikation klinisch oder pathologisch erfolgte.",
-        "comment": "c oder (leer) = Kategorie wurde durch klinische Angaben festgestellt, bzw. erfüllt die Kriterien für p nicht. p = Feststellung der Kategorie erfolgte durch eine pathohistologische Untersuchung, mit der auch der höchste Grad der jeweiligen Kategorie hätte festgestellt werden können. u (Feststellung mit Ultraschall) ist unter c zu übermitteln.",
         "min": 0,
         "max": "1",
         "type": [
@@ -82,6 +79,13 @@
           }
         ],
         "mustSupport": true
+      },
+      {
+        "id": "Observation.code.extension:cpPraefix.value[x].coding",
+        "path": "Observation.code.extension.value[x].coding",
+        "short": "TNM c/p-Präfix M",
+        "definition": "Gibt an, ob die Klassifikation klinisch oder pathologisch erfolgte.",
+        "comment": "c oder (leer) = Kategorie wurde durch klinische Angaben festgestellt, bzw. erfüllt die Kriterien für p nicht. p = Feststellung der Kategorie erfolgte durch eine pathohistologische Untersuchung, mit der auch der höchste Grad der jeweiligen Kategorie hätte festgestellt werden können. u (Feststellung mit Ultraschall) ist unter c zu übermitteln."
       },
       {
         "id": "Observation.code.extension:cpPraefix.value[x].coding.code",
@@ -294,8 +298,47 @@
       {
         "id": "Observation.method",
         "path": "Observation.method",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.method.coding",
+        "path": "Observation.method.coding",
         "short": "TNM Version",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "TNM Version"
+                }
+              ]
+            }
+          ]
+        },
         "definition": "Gibt an, nach welcher Version des TNM klassifiziert wurde.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Version nach 8.2 oBDS 2021"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true,
         "binding": {
           "strength": "required",

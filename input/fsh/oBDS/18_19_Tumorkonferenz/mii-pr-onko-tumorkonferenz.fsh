@@ -56,8 +56,10 @@ Description: "Dieses Profil beschreibt die Tumorkonferenz und die Therapieempfeh
 * activity.detail.statusReason.coding MS
 * activity.detail.statusReason.coding.system = $mii-cs-onko-therapieabweichung
 * activity.detail.statusReason.coding.code MS
+* insert Label(activity.detail.status, Status der Therapieempfehlung, Status der Therapieempfehlung nach HL7 FHIR CarePlanActivityStatus | not-started | scheduled | in-progress | on-hold | completed | cancelled | stopped | unknown | entered-in-error |)
 * insert Translation(activity.detail.status ^short, de-DE, Status der Therapieempfehlung )
 * insert Translation(activity.detail.status ^definition, de-DE, Status der Therapieempfehlung nach HL7 FHIR CarePlanActivityStatus | not-started | scheduled | in-progress | on-hold | completed | cancelled | stopped | unknown | entered-in-error |   )
+* insert Label(activity.detail.statusReason, Therapieabweichung aufgrund Patientenwunsch der Therapieempfehlung, wenn Therapieabweichung - z.B. status = cancelled - Aussage ob dies durch Patientenwunsch erfolgt ist gemäß 19.2 oBDS 2021.)
 * insert Translation(activity.detail.statusReason ^short, de-DE, Therapieabweichung aufgrund Patientenwunsch der Therapieempfehlung )
 * insert Translation(activity.detail.statusReason ^definition, de-DE, wenn Therapieabweichung - z.B. status = cancelled - Aussage ob dies durch Patientenwunsch erfolgt ist gemäß 19.2 oBDS 2021. )
 
