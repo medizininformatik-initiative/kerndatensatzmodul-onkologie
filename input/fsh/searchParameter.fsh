@@ -169,7 +169,7 @@ Usage: #definition
 * code = #bestrahlung-applikationsart
 * base = #Procedure
 * type = #token
-* expression = "Procedure.usedCode.coding.where(system='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-cs-onko-strahlentherapie-bestrahlung-applikationsart').value"
+* expression = "Procedure.usedCode.coding.where(system='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-cs-onko-strahlentherapie-bestrahlung-applikationsart')"
 
 Instance: mii-sp-onko-procedure-ext-strahlentherapie-bs-strahlenart
 InstanceOf: SearchParameter
@@ -186,7 +186,7 @@ Usage: #definition
 * code = #bestrahlung-strahlenart
 * base = #Procedure
 * type = #token
-* expression = "Procedure.usedCode.coding.where(system='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-cs-onko-strahlentherapie-bestrahlung-strahlenart').value"
+* expression = "Procedure.usedCode.coding.where(system='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-cs-onko-strahlentherapie-bestrahlung-strahlenart')"
 
 Instance: mii-sp-onko-procedure-ext-strahlentherapie-bs-zielgebiet
 InstanceOf: SearchParameter
@@ -203,7 +203,7 @@ Usage: #definition
 * code = #bestrahlung-zielgebiet
 * base = #Procedure
 * type = #token
-* expression = "Procedure.bodySite.coding.where(system='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet').value"
+* expression = "Procedure.bodySite.coding.where(system='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet')"
 
 // brauchen wir das oder ist das über BodySite ggfs. schon erfasst?
 Instance: mii-sp-onko-procedure-ext-strahlentherapie-bs-lateralitaet
@@ -274,7 +274,7 @@ Usage: #definition
 * code = #bestrahlung-boost
 * base = #Procedure
 * type = #token
-* expression = "Procedure.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-boost').value"
+* expression = "Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-boost').value"
 
 Instance: mii-sp-onko-procedure-ext-systemischetherapie-intention
 InstanceOf: SearchParameter

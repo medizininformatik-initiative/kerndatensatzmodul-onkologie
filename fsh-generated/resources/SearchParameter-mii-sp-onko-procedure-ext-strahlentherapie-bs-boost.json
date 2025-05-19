@@ -43,5 +43,5 @@
     "Procedure"
   ],
   "type": "token",
-  "expression": "Procedure.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-boost').value"
+  "expression": "Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-boost').value"
 }
