@@ -12,6 +12,7 @@ Description: "Example radiation therapy conformant with MII Prozedur as bracket 
 * extension[StellungZurOp].url = $mii-ex-onko-strahlentherapie-stellungzurop
 * category = $SCT#1287742003 "Radiotherapy (procedure)"
 * code.coding = $OPS#8-52 // allgemeiner OPS-Code, ggfs noch beispiel mit zwei spezifischeren OPS-Codes
+* code.coding.version = "2019"
 * performedPeriod.start = "2019-07-04"
 * performedPeriod.end = "2019-09-14"
 

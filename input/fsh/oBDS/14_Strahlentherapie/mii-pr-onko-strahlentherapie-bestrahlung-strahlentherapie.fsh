@@ -24,7 +24,7 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 
 * usedCode 0..* MS
 * usedCode ^slicing.discriminator.type = #pattern
-* usedCode ^slicing.discriminator.path = "$this"
+* usedCode ^slicing.discriminator.path = "system"
 * usedCode ^slicing.rules = #open
 * usedCode contains 
     Strahlenart 0..1 MS and
