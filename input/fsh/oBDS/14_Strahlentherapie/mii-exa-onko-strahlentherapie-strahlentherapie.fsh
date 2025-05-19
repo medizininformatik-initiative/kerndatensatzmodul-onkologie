@@ -18,14 +18,14 @@ Description: "Example radiation therapy conformant with MII Prozedur as bracket 
 Instance: mii-exa-onko-strahlentherapie-bestrahlung-strahlentherapie-1
 InstanceOf: MII_PR_Onko_Strahlentherapie_Bestrahlung_Strahlentherapie
 Usage: #example
-Title: "Strahlentherapie: Beispiel einer Nuklearmedizinischen Bestrahlungstherapie"
+Title: "Strahlentherapie: Beispiel einer Strahlentherapie mit allgemeinem OPS-Code 8-52"
 Description: "Example radiation therapy conformant with MII Prozedur as bracket for radiation and nuclear therapy"
 * subject = Reference(Patient/example)
 * status = #completed
 * bodySite.coding =  $mii-cs-onko-strahlentherapie-zielgebiet#3.4
 
 * bodySite.extension[Seitenlokalisation].valueCodeableConcept =  $mii-cs-onko-seitenlokalisation#L
-* code.coding = $SCT#8-53 // allgemeiner OPS-Code, ggfs noch beispiel mit zwei spezifischeren OPS-Codes
+* code.coding = $OPS#8-52 // allgemeiner OPS-Code, ggfs noch beispiel mit zwei spezifischeren OPS-Codes
 * performedPeriod.start = "2019-07-04"
 * performedPeriod.end = "2019-09-14"
 * usedCode[Strahlenart] = $mii-cs-onko-strahlentherapie-strahlenart#PN

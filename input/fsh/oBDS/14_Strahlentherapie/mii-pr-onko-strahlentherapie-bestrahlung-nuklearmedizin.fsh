@@ -15,7 +15,7 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Nuklearmedizinisch
 * category = $SCT#399315003 "Radionuclide therapy" 
 * code.coding from MII_VS_Onko_OPS_Nuklearmedizin (extensible)
 
-* usedCode 2..* MS
+* usedCode 0..* MS
 * usedCode ^slicing.discriminator.type = #pattern
 * usedCode ^slicing.discriminator.path = "$this"
 * usedCode ^slicing.rules = #open
@@ -25,7 +25,10 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Nuklearmedizinisch
 
 * usedCode[Strahlenart] ^short = "Strahlentherapie Strahlenart" 
 * usedCode[Strahlenart] ^definition = "Gibt an, mit welcher Strahlenart (sowohl Strahlung als auch Metabolite) die Strahlentherapie durchgeführt wurde."
-* usedCode[Strahlenart] from  MII_VS_Onko_Strahlentherapie_Strahlenart  
+* usedCode[Strahlenart] from  MII_VS_Onko_Strahlentherapie_Strahlenart (extensible)
+* usedCode[Strahlenart].coding.code 1..1 MS
+* usedCode[Strahlenart].coding.system 1..1 MS
+* usedCode[Strahlenart].coding.system = $mii-cs-onko-strahlentherapie-strahlenart
 * insert Label(usedCode[Strahlenart], Strahlenart, Strahlenart der Bestrahlung gemäß 14.7 oBDS 2021.)
 * insert Translation(usedCode[Strahlenart] ^short, de-DE, Applikationsart)
 * insert Translation(usedCode[Strahlenart] ^definition, de-DE, Applikationsart der Bestrahlung gemäß 14.7 oBDS 2021. )
@@ -33,6 +36,9 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Nuklearmedizinisch
 * usedCode[Applikationsart] ^short = "Strahlentherapie Applikationsart"
 * usedCode[Applikationsart] ^definition = "Gibt an, mit welcher Technik die Strahlentherapie durchgeführt wurde."
 * usedCode[Applikationsart] from MII_VS_Onko_Strahlentherapie_Applikationsart (extensible)
+* usedCode[Applikationsart].coding.code 1..1 MS
+* usedCode[Applikationsart].coding.system 1..1 MS
+* usedCode[Applikationsart].coding.system = $mii-cs-onko-strahlentherapie-applikationsart
 * insert Label(usedCode[Applikationsart], Applikationsart, Applikationsart der Bestrahlung gemäß 14.7 oBDS 2021.)
 * insert Translation(usedCode[Applikationsart] ^short, de-DE, Applikationsart)
 * insert Translation(usedCode[Applikationsart] ^definition, de-DE, Applikationsart der Bestrahlung gemäß 14.7 oBDS 2021. )
@@ -47,6 +53,7 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Nuklearmedizinisch
 * insert Label(extension[Gesamtdosis].valueQuantity.value, Gesamtdosis, Gesamtdosis gemäß 14.9 oBDS 2021. )
 * insert Translation(extension[Gesamtdosis].valueQuantity.value ^short, de-DE, Gesamtdosis)
 * insert Translation(extension[Gesamtdosis].valueQuantity.value ^definition, de-DE, Gesamtdosis gemäß 14.9 oBDS 2021. )
+* insert Label(extension[Gesamtdosis].valueQuantity.unit, Einheit der Gesamtdosis, Einheit der Gesamtdosis gemäß 14.11 oBDS 2021. )
 * insert Translation(extension[Gesamtdosis].valueQuantity.unit ^short, de-DE, Einheit der Gesamtdosis)
 * insert Translation(extension[Gesamtdosis].valueQuantity.unit ^definition, de-DE, Einheit der Gesamtdosis gemäß 14.11 oBDS 2021. Hier werden sowohl Bestrahlungen als auch Radioisotope angegeben.)
 
@@ -54,6 +61,7 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Nuklearmedizinisch
 * insert Label(extension[Einzeldosis].valueQuantity.value, Einzeldosis, Einzeldosis der Strahlentherapie gemäß 14.10 oBDS 2021.)
 * insert Translation(extension[Einzeldosis].valueQuantity.value ^short, de-DE, Einzeldosis)
 * insert Translation(extension[Einzeldosis].valueQuantity.value ^definition, de-DE, Einzeldosis der Strahlentherapie gemäß 14.10 oBDS 2021. )
+* insert Label(extension[Einzeldosis].valueQuantity.unit, Einheit der Einzeldosis, Einheit der Einzeldosis der Strahlentherapie gemäß 14.11 oBDS 2021.)
 * insert Translation(extension[Einzeldosis].valueQuantity.unit ^short, de-DE, Einheit der Einzeldosis)
 * insert Translation(extension[Einzeldosis].valueQuantity.unit ^definition, de-DE, Einheit der Einzeldosis gemäß 14.11 oBDS 2021.)
 
