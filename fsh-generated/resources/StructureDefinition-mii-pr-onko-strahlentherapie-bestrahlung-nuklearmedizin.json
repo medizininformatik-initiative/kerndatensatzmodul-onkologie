@@ -450,7 +450,7 @@
       {
         "id": "Procedure.performed[x]:performedPeriod.start",
         "path": "Procedure.performed[x].start",
-        "short": "Ende der Strahlentherapie",
+        "short": "Start der Strahlentherapie",
         "_short": {
           "extension": [
             {
@@ -468,7 +468,7 @@
             }
           ]
         },
-        "definition": "Ende der gesamten Strahlentherapie mit allen Einzelbestrahlungen gemäß 14.6 oBDS 2021.",
+        "definition": "Start der gesamten Strahlentherapie mit allen Einzelbestrahlungen gemäß 14.5 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -492,7 +492,7 @@
       {
         "id": "Procedure.performed[x]:performedPeriod.end",
         "path": "Procedure.performed[x].end",
-        "mustSupport": true,
+        "short": "Ende der Strahlentherapie",
         "_short": {
           "extension": [
             {
@@ -510,6 +510,7 @@
             }
           ]
         },
+        "definition": "Ende der gesamten Strahlentherapie mit allen Einzelbestrahlungen gemäß 14.6 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -526,7 +527,8 @@
               ]
             }
           ]
-        }
+        },
+        "mustSupport": true
       },
       {
         "id": "Procedure.reasonReference",
@@ -724,7 +726,7 @@
             }
           ]
         },
-        "min": 1,
+        "min": 0,
         "max": "1",
         "mustSupport": true,
         "binding": {
@@ -783,7 +785,7 @@
             }
           ]
         },
-        "min": 1,
+        "min": 0,
         "max": "1",
         "mustSupport": true,
         "binding": {

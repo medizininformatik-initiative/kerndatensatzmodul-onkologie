@@ -38,7 +38,7 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 * insert Label(performedPeriod.start, Start der Strahlentherapie, Start der gesamten Strahlentherapie mit allen Einzelbestrahlungen gemäß 14.5 oBDS 2021.)
 * insert Translation(performedPeriod.start ^short, de-DE, Start der Strahlentherapie)
 * insert Translation(performedPeriod.start ^definition, de-DE, Start der gesamten Strahlentherapie mit allen Einzelbestrahlungen gemäß 14.5 oBDS 2021. )
-* insert Label(performedPeriod.start, Ende der Strahlentherapie, Ende der gesamten Strahlentherapie mit allen Einzelbestrahlungen gemäß 14.6 oBDS 2021.)
+* insert Label(performedPeriod.end, Ende der Strahlentherapie, Ende der gesamten Strahlentherapie mit allen Einzelbestrahlungen gemäß 14.6 oBDS 2021.)
 * insert Translation(performedPeriod.end ^short, de-DE, Ende der Strahlentherapie )
 * insert Translation(performedPeriod.end ^definition, de-DE, Ende der gesamten Strahlentherapie mit allen Einzelbestrahlungen gemäß 14.6 oBDS 2021. )
 
@@ -49,7 +49,7 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 * outcome.coding.code MS
 * outcome.coding.system MS
 * outcome.coding from MII_VS_Onko_Strahlentherapie_Ende_Grund (required)
-* insert Label(performedPeriod.start, Grund für Ende der Strahlentherapie, Grund für Ende der Strahlentherapie - planmäßig oder abgebrochen -  gemäß 14.12 oBDS 2021.)
+* insert Label(outcome.coding, Grund für Ende der Strahlentherapie, Grund für Ende der Strahlentherapie - planmäßig oder abgebrochen -  gemäß 14.12 oBDS 2021.)
 * insert Translation(outcome.coding ^short, de-DE, Grund für Ende der Strahlentherapie)
 * insert Translation(outcome.coding ^definition, de-DE, Grund für Ende der Strahlentherapie - planmäßig oder abgebrochen -  gemäß 14.12 oBDS 2021.)
 

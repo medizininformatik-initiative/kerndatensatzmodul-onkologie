@@ -275,7 +275,7 @@
       {
         "id": "Procedure.performed[x]:performedPeriod.start",
         "path": "Procedure.performed[x].start",
-        "short": "Grund für Ende der Strahlentherapie",
+        "short": "Start der Strahlentherapie",
         "_short": {
           "extension": [
             {
@@ -293,7 +293,7 @@
             }
           ]
         },
-        "definition": "Grund für Ende der Strahlentherapie - planmäßig oder abgebrochen -  gemäß 14.12 oBDS 2021.",
+        "definition": "Start der gesamten Strahlentherapie mit allen Einzelbestrahlungen gemäß 14.5 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -317,7 +317,7 @@
       {
         "id": "Procedure.performed[x]:performedPeriod.end",
         "path": "Procedure.performed[x].end",
-        "mustSupport": true,
+        "short": "Ende der Strahlentherapie",
         "_short": {
           "extension": [
             {
@@ -335,6 +335,7 @@
             }
           ]
         },
+        "definition": "Ende der gesamten Strahlentherapie mit allen Einzelbestrahlungen gemäß 14.6 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -351,7 +352,8 @@
               ]
             }
           ]
-        }
+        },
+        "mustSupport": true
       },
       {
         "id": "Procedure.reasonReference",
@@ -375,11 +377,7 @@
       {
         "id": "Procedure.outcome.coding",
         "path": "Procedure.outcome.coding",
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-ende-grund"
-        },
+        "short": "Grund für Ende der Strahlentherapie",
         "_short": {
           "extension": [
             {
@@ -397,6 +395,7 @@
             }
           ]
         },
+        "definition": "Grund für Ende der Strahlentherapie - planmäßig oder abgebrochen -  gemäß 14.12 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -413,6 +412,11 @@
               ]
             }
           ]
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-ende-grund"
         }
       },
       {

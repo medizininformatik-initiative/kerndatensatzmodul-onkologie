@@ -20,8 +20,8 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Nuklearmedizinisch
 * usedCode ^slicing.discriminator.path = "$this"
 * usedCode ^slicing.rules = #open
 * usedCode contains 
-    Strahlenart 1..1 MS and
-    Applikationsart 1..1 MS
+    Strahlenart 0..1 MS and
+    Applikationsart 0..1 MS
 
 * usedCode[Strahlenart] ^short = "Strahlentherapie Strahlenart" 
 * usedCode[Strahlenart] ^definition = "Gibt an, mit welcher Strahlenart (sowohl Strahlung als auch Metabolite) die Strahlentherapie durchgeführt wurde."
@@ -73,7 +73,7 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Nuklearmedizinisch
 * insert Label(performedPeriod.start, Start der Strahlentherapie, Start der gesamten Strahlentherapie mit allen Einzelbestrahlungen gemäß 14.5 oBDS 2021.)
 * insert Translation(performedPeriod.start ^short, de-DE, Start der Strahlentherapie)
 * insert Translation(performedPeriod.start ^definition, de-DE, Start der gesamten Strahlentherapie mit allen Einzelbestrahlungen gemäß 14.5 oBDS 2021. )
-* insert Label(performedPeriod.start, Ende der Strahlentherapie, Ende der gesamten Strahlentherapie mit allen Einzelbestrahlungen gemäß 14.6 oBDS 2021.)
+* insert Label(performedPeriod.end, Ende der Strahlentherapie, Ende der gesamten Strahlentherapie mit allen Einzelbestrahlungen gemäß 14.6 oBDS 2021.)
 * insert Translation(performedPeriod.end ^short, de-DE, Ende der Strahlentherapie )
 * insert Translation(performedPeriod.end ^definition, de-DE, Ende der gesamten Strahlentherapie mit allen Einzelbestrahlungen gemäß 14.6 oBDS 2021. )
 
