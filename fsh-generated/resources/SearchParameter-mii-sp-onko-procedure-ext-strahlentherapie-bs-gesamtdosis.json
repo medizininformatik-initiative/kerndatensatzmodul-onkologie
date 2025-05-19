@@ -34,7 +34,7 @@
   ],
   "version": "2025.0.4",
   "name": "MII_SP_Procedure_Extension_Strahlentherapie_Bestrahlung_Gesamtdosis",
-  "description": "SearchParameter for Procedure.extension:bestrahlung.extension:gesamtdosis",
+  "description": "SearchParameter for Procedure.extension:gesamtdosis",
   "status": "active",
   "experimental": true,
   "date": "2024-04-15",
@@ -43,5 +43,5 @@
     "Procedure"
   ],
   "type": "quantity",
-  "expression": "Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung').extension.where(url='Gesamtdosis').value"
+  "expression": "Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis').value"
 }

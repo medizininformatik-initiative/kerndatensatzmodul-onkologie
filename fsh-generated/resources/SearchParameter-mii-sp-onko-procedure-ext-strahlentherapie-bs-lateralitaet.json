@@ -37,11 +37,11 @@
   "description": "SearchParameter for Procedure.extension:bestrahlung.extension:zielgebiet_Lateralitaet",
   "status": "active",
   "experimental": true,
-  "date": "2024-04-15",
+  "date": "2025-05-17",
   "code": "bestrahlung-zielgebiet-lateralitaet",
   "base": [
     "Procedure"
   ],
   "type": "token",
-  "expression": "Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung').extension.where(url='Zielgebiet_Lateralitaet').value"
+  "expression": "Procedure.bodySite.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation').value"
 }

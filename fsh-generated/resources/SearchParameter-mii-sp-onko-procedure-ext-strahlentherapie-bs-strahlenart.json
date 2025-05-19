@@ -34,7 +34,7 @@
   ],
   "version": "2025.0.4",
   "name": "MII_SP_Procedure_Extension_Strahlentherapie_Bestrahlung_Strahlenart",
-  "description": "SearchParameter for Procedure.extension:bestrahlung.extension:strahlenart",
+  "description": "SearchParameter for Procedure.usedCode:strahlenart",
   "status": "active",
   "date": "2024-04-15",
   "experimental": true,
@@ -43,5 +43,5 @@
     "Procedure"
   ],
   "type": "token",
-  "expression": "Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung').extension.where(url='Strahlenart').value"
+  "expression": "Procedure.usedCode.coding.where(system='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-cs-onko-strahlentherapie-bestrahlung-strahlenart').value"
 }
