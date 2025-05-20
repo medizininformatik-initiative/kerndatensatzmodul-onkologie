@@ -5,7 +5,7 @@ parent:
 ## {{page-title}}
 Hier sind  alle Änderungen aufgelistet. 
 
-## Änderungen in 2025.1.0 (geplant, unbestätigt)
+## Änderungen in 2025.1.0 (geplant)
 - Umprofilierung des Strahlentherapie-Profils (BREAKING CHANGE!)
     - bisher: 
         - basierend auf MII-Prozedur-Profil
@@ -23,7 +23,7 @@ Hier sind  alle Änderungen aufgelistet.
     - Extensions haben jetzt experimental `experimental=true` und Datumsstempel
     - Slicing-Regeln des Onko-Befunds korrigiert und Label korrekt auf von `conclusion.value` auf `conclusion` gesetzt
     - Onko-Medikation: MedicationStatement.partOf-Slice korrigiert und Kardinalität von 1..* auf 0..1 angepasst
-    - 
+    - Operations-Prozeduren können jetzt wieder mit `Procedure.partOf` auf übergeordnete Profile verweisen, wenn mehrere OPS-Codes für einen Eingriff kodiert wurden(war vorher auf Observation eingeschränkt)
 
 - ConceptMaps
     - Einfügen Versionsnummer entsprechend dem Package

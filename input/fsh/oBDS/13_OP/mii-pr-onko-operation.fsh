@@ -73,9 +73,9 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 * reasonReference MS 
 * reasonReference only Reference(MII_PR_Onko_Diagnose_Primaertumor or Condition)
 
-// Referenz auf letzte Verlaufsobservation zur zeitlichen und inhaltlichen Kopplung
+// Referenz auf letzte Verlaufsobservation oder Übergeordneten Prozedur zur zeitlichen und inhaltlichen Kopplung
 * partOf MS
-* partOf only Reference(Observation)
+* partOf only Reference(Observation or Procedure)
 
 
 
