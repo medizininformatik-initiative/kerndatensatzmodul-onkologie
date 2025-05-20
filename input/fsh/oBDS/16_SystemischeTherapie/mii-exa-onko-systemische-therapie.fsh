@@ -9,7 +9,11 @@ Description: "Example systemic therapy"
 * extension[Intention].url = $mii-ex-onko-systemische-therapie-intention
 * extension[StellungZurOp].valueCodeableConcept = $mii-cs-onko-therapie-stellungzurop#A // adjuvant
 * extension[StellungZurOp].url = $mii-ex-onko-systemische-therapie-stellungzurop
-* code = $mii-cs-onko-therapie-typ#CH // Chemotherapie , ggfs. hier auch ein slice, weil OPS mit angegeben werden kann
+* category = $SCT#367336001 "Chemotherapy (procedure)" 
+* code.coding[+] = $mii-cs-onko-therapie-typ#CH // Chemotherapie , ggfs. hier auch ein slice, weil OPS mit angegeben werden kann
+* code.coding[+] = $OPS#8-52 // Chemotherapie nach OPS
+* code.coding[=].version = "2021"
+
 * performedPeriod.start = "2021-12-04"
 * performedPeriod.end = "2022-04-06"
 
@@ -27,7 +31,7 @@ Description: "Example for the FHIR profile systemic therapy based on German "
 * medicationCodeableConcept.coding[=].version = "2022"
 * medicationCodeableConcept.coding[=].display = "Cyclophosphamid"
 
-* partOf = Reference(mii-exa-onko-systemische-therapie-1)
+* partOf[systemischeTherapie] = Reference(mii-exa-onko-systemische-therapie-1)
 * note.text = "AC" // Schemaabkürzung für Cyclophosphamid und Doxorubicin
 
 Instance: mii-exa-onko-systemische-therapie-medikation2
@@ -44,5 +48,5 @@ Description: "Example for the FHIR profile systemic therapy based on German "
 * medicationCodeableConcept.coding[=].version = "2022"
 * medicationCodeableConcept.coding[=].display = "Doxorubicin"
 
-* partOf = Reference(mii-exa-onko-systemische-therapie-1)
+* partOf[systemischeTherapie] = Reference(mii-exa-onko-systemische-therapie-1)
 * note.text = "AC" // Schemaabkürzung für Cyclophosphamid und Doxorubicin

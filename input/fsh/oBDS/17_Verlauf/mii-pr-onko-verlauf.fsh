@@ -46,7 +46,7 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
 * component MS
 * component 1..*
 * component ^slicing.discriminator.type = #pattern
-* component ^slicing.discriminator.path = "code"
+* component ^slicing.discriminator.path = "code.coding"
 * component ^slicing.rules = #open
 * component ^slicing.description = "Slice based on the component.code pattern"
 * component contains 
@@ -54,7 +54,7 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
     Lymphknoten_Verlauf 0..1 and 
     Fernmetastasen_Verlauf 0..1
 * component[Tumor_Verlauf] MS 
-* component[Tumor_Verlauf].code.coding = $SCT#277062004 "Status des Residualtumors"
+* component[Tumor_Verlauf].code.coding = $SCT#445200009 "Status of residual neoplasm (observable entity)"
 * component[Tumor_Verlauf].value[x] only CodeableConcept
 * component[Tumor_Verlauf].valueCodeableConcept from mii-vs-onko-verlauf-primaertumor (required)
 * component[Tumor_Verlauf].valueCodeableConcept.coding.system MS
@@ -65,7 +65,7 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
 
 
 * component[Lymphknoten_Verlauf] MS 
-* component[Lymphknoten_Verlauf].code.coding = $SCT#399656008 "Status of tumor metastasis to regional lymph nodes (observable entity)"
+* component[Lymphknoten_Verlauf].code.coding = $SCT#399656008 "Presence of metastatic neoplasm in regional lymph node (observable entity)"
 * component[Lymphknoten_Verlauf].value[x] only CodeableConcept
 * component[Lymphknoten_Verlauf].valueCodeableConcept from mii-vs-onko-verlauf-lymphknoten (required)
 * component[Lymphknoten_Verlauf].valueCodeableConcept.coding.system MS

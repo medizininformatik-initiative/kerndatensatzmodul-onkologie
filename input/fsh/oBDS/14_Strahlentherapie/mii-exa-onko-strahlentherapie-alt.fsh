@@ -1,3 +1,4 @@
+/*
 Instance: mii-exa-onko-strahlentherapie
 InstanceOf: MII_PR_Onko_Strahlentherapie
 Usage: #example
@@ -21,5 +22,7 @@ Description: "Example radiation therapy"
 * extension[Bestrahlung].extension[Einzeldosis].valueQuantity.unit =  $UCUM#Gy
 * extension[Bestrahlung].extension[Boost].valueCodeableConcept =  $mii-cs-onko-strahlentherapie-boost#SIB
 * code.coding = $OPS#8-52 // allgemeiner OPS-Code, ggfs noch beispiel mit zwei spezifischeren OPS-Codes
+* code.coding[=].version = "2021"
 * performedPeriod.start = "2019-07-04"
 * performedPeriod.end = "2019-09-14"
+*/

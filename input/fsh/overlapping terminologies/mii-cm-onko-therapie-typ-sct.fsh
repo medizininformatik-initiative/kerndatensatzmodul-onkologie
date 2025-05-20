@@ -1,6 +1,7 @@
 Instance: mii-cm-onko-therapie-typ-sct
 InstanceOf: ConceptMap
 Usage: #definition
+* insert Version
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-therapie-typ-sct"
 * name = "MII CM Onko Therapie Typ SNOMED Mapping"
 * title = "MII CM Onko Therapie Typ SNOMED Mapping"
@@ -10,9 +11,9 @@ Usage: #definition
 * description = "Mapping Therapie Typ Codes zu SNOMED-CT"
 * purpose = "Technical mapping to transform oBDS-Data into SNOMED"
 * sourceUri = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/"
-* targetUri[+] = "http://snomed.info/sct"
+* targetUri = "http://snomed.info/sct/900000000000207008/version/20240401"
 * group[+].source = $mii-cs-onko-therapie-typ
-* group[=].target = "http://snomed.info/sct"
+* group[=].target = "http://snomed.info/sct/900000000000207008/version/20240401"
 
 * group[=].element[+].code = #CH
 * group[=].element[=].display = "Chemotherapie"
@@ -62,7 +63,6 @@ Usage: #definition
 * group[=].element[=].target.display = "Antineoplastic chemoimmunotherapy (regime/therapy)"
 * group[=].element[=].target.equivalence = #narrower
 * group[=].element[=].target.comment = "Spezifische Kombination für Chemo- und Immuntherapie, aber ohne zielgerichtete Substanzen"
-
 * group[=].element[+].target.code = #1255831008
 * group[=].element[=].target.display = "Chemotherapy for malignant neoplastic disease using targeted agent (procedure)"
 * group[=].element[=].target.equivalence = #narrower
@@ -79,7 +79,6 @@ Usage: #definition
 * group[=].element[=].target.display = "Chemotherapy for malignant neoplastic disease using targeted agent (procedure)"
 * group[=].element[=].target.equivalence = #narrower
 * group[=].element[=].target.comment = "Spezifischer Code für zielgerichtete Substanzen"
-
 
 * group[=].element[+].code = #WW
 * group[=].element[=].display = "Watchful Waiting"

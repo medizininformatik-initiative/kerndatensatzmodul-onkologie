@@ -3,6 +3,7 @@ InstanceOf: ConceptMap
 Usage: #example
 Title: "MII CM Onko Fernmetastasen SCT Mapping"
 Description: "Mapping der Fernmetastasen-Codesystems  auf SNOMED"
+* insert Version
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-fernmetastasen-sct"
 * name = "mii-cm-onko-fernmetastasen-sct-mapping"					
 * title = "Fernmetastasen Mapping"					
@@ -11,9 +12,9 @@ Description: "Mapping der Fernmetastasen-Codesystems  auf SNOMED"
 * description = "Fernmetastasen"					
 * purpose = "Technical mapping to transform oBDS-Data into SNOMED"					
 * sourceUri = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/"					
-* targetUri[+] = "http://snomed.info/sct"					
+* targetUri[+] = "http://snomed.info/sct/900000000000207008/version/20240401"					
 * group[+].source = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen"					
-* group[=].target = "http://snomed.info/sct"					
+* group[=].target = "http://snomed.info/sct/900000000000207008/version/20240401"					
 
 * group[=].element[+].code = #PUL					
 * group[=].element[=].display = "Lunge"					

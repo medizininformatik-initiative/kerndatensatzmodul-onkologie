@@ -22,10 +22,10 @@ https://plattform65c.atlassian.net/wiki/spaces/Dokumentat/pages/75628552/Verlauf
 
 ### Conformance Statements
 
-- A follow-up observation **SHOULD** have a reference to the primary diagnosis via `focus`
+- A follow-up observation **SHALL** have a reference to the primary diagnosis via `focus`
 - A follow-up observation **SHOULD** include an assessment of disease progression (PD, PR, MR, etc.) in the `value` if this has been made and is available in the data
 - A follow-up observation **SHOULD** also include assessments of the staging of the tumor, lymph nodes, and distant metastases in the `component` if these have been made and are relevant for staging
-- Since the FHIR profiling does not represent a complete follow-up report, other observations that are additionally or differently relevant for staging than the above-mentioned TNM criteria **SHOULD** refer to the follow-up observation via `derivedFrom`. For example, these are newly diagnosed distant metastases, additional histologies, or later genetic examinations. These observations **CAN** be directly taken from the oBDS report contents of the respective follow-up report.
+- Since the FHIR profiling does not represent a complete follow-up report, other observations that are  relevant for staging in additio to the the above-mentioned TNM criteria **SHOULD** refered to by the to the follow-up observation via `hasMember`. For example, these are newly diagnosed distant metastases, additional histologies, or later genetic examinations. These observations **CAN** be directly taken from the oBDS report contents of the respective follow-up report.
 
 @```
 from 

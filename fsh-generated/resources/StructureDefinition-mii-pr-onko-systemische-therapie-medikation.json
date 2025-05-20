@@ -16,7 +16,7 @@
     }
   ],
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation",
-  "version": "2025.0.4",
+  "version": "2025.1.0",
   "name": "MII_PR_Onko_Systemische_Therapie_Medikation",
   "title": "MII PR Onkologie Systemische Therapie Medikation",
   "status": "active",
@@ -76,13 +76,13 @@
         "id": "MedicationStatement.partOf:systemischeTherapie",
         "path": "MedicationStatement.partOf",
         "sliceName": "systemischeTherapie",
-        "min": 1,
-        "max": "*",
+        "min": 0,
+        "max": "1",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Procedure"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
             ]
           }
         ]

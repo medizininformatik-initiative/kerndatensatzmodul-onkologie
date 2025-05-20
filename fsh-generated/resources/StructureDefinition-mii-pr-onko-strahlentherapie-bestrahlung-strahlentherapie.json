@@ -16,7 +16,7 @@
     }
   ],
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie",
-  "version": "2025.0.4",
+  "version": "2025.1.0",
   "name": "MII_PR_Onko_Strahlentherapie_Bestrahlung_Strahlentherapie",
   "title": "MII PR Onkologie Strahlentherapie",
   "status": "active",
@@ -269,7 +269,7 @@
       {
         "id": "Procedure.performed[x]:performedPeriod.start",
         "path": "Procedure.performed[x].start",
-        "short": "Ende der Strahlentherapie",
+        "short": "Start der Strahlentherapie",
         "_short": {
           "extension": [
             {
@@ -287,7 +287,7 @@
             }
           ]
         },
-        "definition": "Ende der gesamten Strahlentherapie mit allen Einzelbestrahlungen gemäß 14.6 oBDS 2021.",
+        "definition": "Start der gesamten Strahlentherapie mit allen Einzelbestrahlungen gemäß 14.5 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -311,7 +311,7 @@
       {
         "id": "Procedure.performed[x]:performedPeriod.end",
         "path": "Procedure.performed[x].end",
-        "mustSupport": true,
+        "short": "Ende der Strahlentherapie",
         "_short": {
           "extension": [
             {
@@ -329,6 +329,7 @@
             }
           ]
         },
+        "definition": "Ende der gesamten Strahlentherapie mit allen Einzelbestrahlungen gemäß 14.6 oBDS 2021.",
         "_definition": {
           "extension": [
             {
@@ -345,7 +346,8 @@
               ]
             }
           ]
-        }
+        },
+        "mustSupport": true
       },
       {
         "id": "Procedure.reasonReference",
@@ -495,12 +497,11 @@
           "discriminator": [
             {
               "type": "pattern",
-              "path": "$this"
+              "path": "coding.system"
             }
           ],
           "rules": "open"
         },
-        "min": 2,
         "mustSupport": true
       },
       {
@@ -543,17 +544,26 @@
             }
           ]
         },
-        "min": 1,
+        "min": 0,
         "max": "1",
         "mustSupport": true,
         "binding": {
-          "strength": "required",
+          "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-strahlenart"
         }
       },
       {
+        "id": "Procedure.usedCode:Strahlenart.coding.system",
+        "path": "Procedure.usedCode.coding.system",
+        "min": 1,
+        "patternUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart",
+        "mustSupport": true
+      },
+      {
         "id": "Procedure.usedCode:Strahlenart.coding.code",
         "path": "Procedure.usedCode.coding.code",
+        "min": 1,
+        "mustSupport": true,
         "mapping": [
           {
             "identity": "oBDS",
@@ -602,7 +612,7 @@
             }
           ]
         },
-        "min": 1,
+        "min": 0,
         "max": "1",
         "mustSupport": true,
         "binding": {
@@ -611,8 +621,17 @@
         }
       },
       {
+        "id": "Procedure.usedCode:Applikationsart.coding.system",
+        "path": "Procedure.usedCode.coding.system",
+        "min": 1,
+        "patternUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart",
+        "mustSupport": true
+      },
+      {
         "id": "Procedure.usedCode:Applikationsart.coding.code",
         "path": "Procedure.usedCode.coding.code",
+        "min": 1,
+        "mustSupport": true,
         "mapping": [
           {
             "identity": "oBDS",

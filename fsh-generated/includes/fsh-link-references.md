@@ -2,7 +2,6 @@
 [mii-exa-onko-systemische-therapie-medikation2]: MedicationStatement-mii-exa-onko-systemische-therapie-medikation2.html
 [mii-exa-onko-strahlentherapie-nuklearmedizin-1]: Procedure-mii-exa-onko-strahlentherapie-nuklearmedizin-1.html
 [mii-exa-onko-strahlentherapie-strahlentherapie-1]: Procedure-mii-exa-onko-strahlentherapie-strahlentherapie-1.html
-[mii-exa-onko-strahlentherapie]: Procedure-mii-exa-onko-strahlentherapie.html
 [mii-exa-onko-operation-1]: Procedure-mii-exa-onko-operation-1.html
 [mii-exa-onko-systemische-therapie-1]: Procedure-mii-exa-onko-systemische-therapie-1.html
 [mii-exa-onko-liste-evidenz-erstdiagnose-1]: List-mii-exa-onko-liste-evidenz-erstdiagnose-1.html
@@ -66,7 +65,6 @@
 [MII_CS_Onko_Verlauf_Primaertumor]: CodeSystem-mii-cs-onko-verlauf-primaertumor.html
 [MII_EX_Onko_Histology_Morphology_Behavior_ICDO3]: StructureDefinition-mii-ex-onko-histology-morphology-behavior-icdo3.html
 [MII_EX_Onko_Operation_Intention]: StructureDefinition-mii-ex-onko-operation-intention.html
-[MII_EX_Onko_Strahlentherapie_Bestrahlung]: StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung.html
 [MII_EX_Onko_Strahlentherapie_Bestrahlung_Boost]: StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-boost.html
 [MII_EX_Onko_Strahlentherapie_Bestrahlung_Einzeldosis]: StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis.html
 [MII_EX_Onko_Strahlentherapie_Bestrahlung_Gesamtdosis]: StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis.html
@@ -98,7 +96,6 @@
 [MII_PR_Onko_Residualstatus]: StructureDefinition-mii-pr-onko-residualstatus.html
 [MII_PR_Onko_Specimen]: StructureDefinition-mii-pr-onko-specimen.html
 [MII_PR_Onko_Strahlentherapie_Bestrahlung_Strahlentherapie]: StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.html
-[MII_PR_Onko_Strahlentherapie_neu]: StructureDefinition-mii-pr-onko-strahlentherapie-neu.html
 [MII_PR_Onko_Strahlentherapie]: StructureDefinition-mii-pr-onko-strahlentherapie.html
 [MII_PR_Onko_Strahlentherapie_Bestrahlung_Nuklearmedizin]: StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin.html
 [MII_PR_Onko_Studienteilnahme]: StructureDefinition-mii-pr-onko-studienteilnahme.html

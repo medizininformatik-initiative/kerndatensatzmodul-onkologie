@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-onko-verlauf",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf",
-  "version": "2025.0.4",
+  "version": "2025.1.0",
   "name": "MII_PR_Onko_Verlauf",
   "title": "MII PR Onkologie Verlauf",
   "status": "active",
@@ -265,7 +265,7 @@
           "discriminator": [
             {
               "type": "pattern",
-              "path": "code"
+              "path": "code.coding"
             }
           ],
           "rules": "open",
@@ -285,10 +285,11 @@
       {
         "id": "Observation.component:Tumor_Verlauf.code.coding",
         "path": "Observation.component.code.coding",
+        "min": 1,
         "patternCoding": {
-          "code": "277062004",
+          "code": "445200009",
           "system": "http://snomed.info/sct",
-          "display": "Status des Residualtumors"
+          "display": "Status of residual neoplasm (observable entity)"
         }
       },
       {
@@ -376,10 +377,11 @@
       {
         "id": "Observation.component:Lymphknoten_Verlauf.code.coding",
         "path": "Observation.component.code.coding",
+        "min": 1,
         "patternCoding": {
           "code": "399656008",
           "system": "http://snomed.info/sct",
-          "display": "Status of tumor metastasis to regional lymph nodes (observable entity)"
+          "display": "Presence of metastatic neoplasm in regional lymph node (observable entity)"
         }
       },
       {
@@ -467,6 +469,7 @@
       {
         "id": "Observation.component:Fernmetastasen_Verlauf.code.coding",
         "path": "Observation.component.code.coding",
+        "min": 1,
         "patternCoding": {
           "code": "399608002",
           "system": "http://snomed.info/sct",

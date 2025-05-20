@@ -26,7 +26,7 @@
   "dependsOn": [
     {
       "packageId": "de.basisprofil.r4",
-      "version": "1.5.1",
+      "version": "1.5.x",
       "uri": "http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4",
       "id": "de_basisprofil_r4"
     },
@@ -91,7 +91,7 @@
         },
         "name": "Example radiation therapy",
         "description": "Example radiation therapy conformant with MII Prozedur as bracket for radiation and nuclear therapy",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-neu"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie"
       },
       {
         "reference": {
@@ -99,14 +99,6 @@
         },
         "name": "Example radiation therapy",
         "description": "Example radiation therapy conformant with MII Prozedur as bracket for radiation and nuclear therapy",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-neu"
-      },
-      {
-        "reference": {
-          "reference": "Procedure/mii-exa-onko-strahlentherapie"
-        },
-        "name": "Example radiation therapy",
-        "description": "Example radiation therapy",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie"
       },
       {
@@ -615,14 +607,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung"
-        },
-        "name": "MII EX Onko Strahlentherapie Bestrahlung",
-        "description": "Strahlentherapie: einzelne Bestrahlung innerhalb der Gesamttherapie",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-boost"
         },
         "name": "MII EX Onko Strahlentherapie Bestrahlung Boost",
@@ -864,14 +848,6 @@
       {
         "reference": {
           "reference": "StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie"
-        },
-        "name": "MII PR Onkologie Strahlentherapie",
-        "description": "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie in der Onkologie.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/mii-pr-onko-strahlentherapie-neu"
         },
         "name": "MII PR Onkologie Strahlentherapie",
         "description": "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie in der Onkologie.",
@@ -1226,7 +1202,7 @@
           "reference": "ValueSet/mii-vs-onko-strahlentherapie-strahlungseinheit"
         },
         "name": "MII VS Onkologie Strahlentherapie Strahlungseinheit",
-        "description": "oBDS-spezifisches ValueSet für Klassifikation von Strahlenart bei Strahlungseinheit",
+        "description": "oBDS-spezifisches ValueSet für Strahlungseinheit en für Strahlen- und Nuklearmedizinische Therapie",
         "exampleBoolean": false
       },
       {
@@ -1820,7 +1796,7 @@
           "reference": "SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-applikationsart"
         },
         "name": "mii-sp-onko-procedure-ext-strahlentherapie-bs-applikationsart",
-        "description": "SearchParameter for Procedure.extension:bestrahlung.extension:applikationsart",
+        "description": "SearchParameter for Procedure.usedCode:applikationsart",
         "exampleBoolean": false
       },
       {
@@ -1828,7 +1804,7 @@
           "reference": "SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-boost"
         },
         "name": "mii-sp-onko-procedure-ext-strahlentherapie-bs-boost",
-        "description": "SearchParameter for Procedure.extension:bestrahlung.extension:boost",
+        "description": "SearchParameter for Procedure.extension:boost",
         "exampleBoolean": false
       },
       {
@@ -1836,7 +1812,7 @@
           "reference": "SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-einzeldosis"
         },
         "name": "mii-sp-onko-procedure-ext-strahlentherapie-bs-einzeldosis",
-        "description": "SearchParameter for Procedure.extension:bestrahlung.extension:einzeldosis",
+        "description": "SearchParameter for Procedure.extension:einzeldosis",
         "exampleBoolean": false
       },
       {
@@ -1844,7 +1820,7 @@
           "reference": "SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-gesamtdosis"
         },
         "name": "mii-sp-onko-procedure-ext-strahlentherapie-bs-gesamtdosis",
-        "description": "SearchParameter for Procedure.extension:bestrahlung.extension:gesamtdosis",
+        "description": "SearchParameter for Procedure.extension:gesamtdosis",
         "exampleBoolean": false
       },
       {
@@ -1860,7 +1836,7 @@
           "reference": "SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-strahlenart"
         },
         "name": "mii-sp-onko-procedure-ext-strahlentherapie-bs-strahlenart",
-        "description": "SearchParameter for Procedure.extension:bestrahlung.extension:strahlenart",
+        "description": "SearchParameter for Procedure.usedCode:strahlenart",
         "exampleBoolean": false
       },
       {
@@ -1868,7 +1844,7 @@
           "reference": "SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-zielgebiet"
         },
         "name": "mii-sp-onko-procedure-ext-strahlentherapie-bs-zielgebiet",
-        "description": "SearchParameter for Procedure.extension:bestrahlung.extension:zielgebiet",
+        "description": "SearchParameter for Procedure.bodySite.coding:zielgebiet",
         "exampleBoolean": false
       },
       {
@@ -2114,7 +2090,7 @@
         "reference": {
           "reference": "Procedure/mii-exa-onko-strahlentherapie-bestrahlung-strahlentherapie-1"
         },
-        "name": "Strahlentherapie: Beispiel einer Nuklearmedizinischen Bestrahlungstherapie",
+        "name": "Strahlentherapie: Beispiel einer Strahlentherapie mit allgemeinem OPS-Code 8-52",
         "description": "Example radiation therapy conformant with MII Prozedur as bracket for radiation and nuclear therapy",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie"
       },
@@ -2164,7 +2140,7 @@
         },
         "name": "TNM-V-Observation-2",
         "description": ".",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-l-kategorie"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-v-kategorie"
       },
       {
         "reference": {
@@ -2179,7 +2155,13 @@
       "nameUrl": "toc.html",
       "title": "Table of Contents",
       "generation": "html",
-      "page": []
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        }
+      ]
     },
     "parameter": [
       {
