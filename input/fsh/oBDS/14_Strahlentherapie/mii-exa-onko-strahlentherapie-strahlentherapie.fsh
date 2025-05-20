@@ -26,7 +26,9 @@ Description: "Example radiation therapy conformant with MII Prozedur as bracket 
 * bodySite.coding =  $mii-cs-onko-strahlentherapie-zielgebiet#3.4
 
 * bodySite.extension[Seitenlokalisation].valueCodeableConcept =  $mii-cs-onko-seitenlokalisation#L
+* category = $SCT#1287742003 "Radiotherapy (procedure)"
 * code.coding = $OPS#8-52 // allgemeiner OPS-Code, ggfs noch beispiel mit zwei spezifischeren OPS-Codes
+* code.coding.version = "2019"
 * performedPeriod.start = "2019-07-04"
 * performedPeriod.end = "2019-09-14"
 * usedCode[Strahlenart] = $mii-cs-onko-strahlentherapie-strahlenart#PN
