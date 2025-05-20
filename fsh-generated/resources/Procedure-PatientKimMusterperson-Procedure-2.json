@@ -10,12 +10,22 @@
   "subject": {
     "reference": "Patient/PatientKimMusterperson"
   },
+  "category": {
+    "coding": [
+      {
+        "code": "165197003",
+        "system": "http://snomed.info/sct",
+        "display": "Diagnostic assessment (procedure)"
+      }
+    ]
+  },
   "code": {
     "coding": [
       {
         "code": "1-853.2",
         "system": "http://fhir.de/CodeSystem/bfarm/ops",
-        "display": "Diagnostische (perkutane) Punktion und Aspiration der Bauchhöhle: Aszitespunktion"
+        "display": "Diagnostische (perkutane) Punktion und Aspiration der Bauchhöhle: Aszitespunktion",
+        "version": "2021"
       }
     ]
   },

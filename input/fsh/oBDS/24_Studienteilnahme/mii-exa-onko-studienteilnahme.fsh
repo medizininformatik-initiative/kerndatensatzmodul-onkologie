@@ -7,4 +7,4 @@ Usage: #example
 * focus = Reference (Condition/exampleOncologicCondition)
 
 * effectiveDateTime = "2024-01-02"
-* valueCodeableConcept.coding.code = $mii-cs-onko-studienteilnahme#J "Ja"
+* valueCodeableConcept.coding = $mii-cs-onko-studienteilnahme#J "Ja"

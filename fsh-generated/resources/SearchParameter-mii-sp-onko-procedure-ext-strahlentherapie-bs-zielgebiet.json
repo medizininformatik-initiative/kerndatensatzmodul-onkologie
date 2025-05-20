@@ -32,14 +32,16 @@
       }
     }
   ],
-  "version": "2025.0.4",
+  "version": "2025.1.0",
   "name": "MII_SP_Procedure_Extension_Strahlentherapie_Bestrahlung_Zielgebiet",
-  "description": "SearchParameter for Procedure.extension:bestrahlung.extension:zielgebiet",
+  "description": "SearchParameter for Procedure.bodySite.coding:zielgebiet",
   "status": "active",
+  "experimental": true,
+  "date": "2025-05-17",
   "code": "bestrahlung-zielgebiet",
   "base": [
     "Procedure"
   ],
   "type": "token",
-  "expression": "Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung').extension.where(url='Zielgebiet').value"
+  "expression": "Procedure.bodySite.coding.where(system='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet')"
 }

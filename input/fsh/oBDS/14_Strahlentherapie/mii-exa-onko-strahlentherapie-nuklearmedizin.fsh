@@ -1,5 +1,5 @@
 Instance: mii-exa-onko-strahlentherapie-nuklearmedizin-1
-InstanceOf: MII_PR_Onko_Strahlentherapie_neu
+InstanceOf: MII_PR_Onko_Strahlentherapie
 Usage: #example
 Title: "Example radiation therapy"
 Description: "Example radiation therapy conformant with MII Prozedur as bracket for radiation and nuclear therapy"
@@ -10,8 +10,9 @@ Description: "Example radiation therapy conformant with MII Prozedur as bracket 
 * extension[Intention].url = $mii-ex-onko-strahlentherapie-intention
 * extension[StellungZurOp].valueCodeableConcept = $mii-cs-onko-therapie-stellungzurop#A // adjuvant
 * extension[StellungZurOp].url = $mii-ex-onko-strahlentherapie-stellungzurop
-
-* code.coding = $SCT#8-52 // allgemeiner OPS-Code, ggfs noch beispiel mit zwei spezifischeren OPS-Codes
+* category = $SCT#399315003 "Radionuclide therapy"
+* code.coding = $OPS#8-53 // allgemeiner OPS-Code, ggfs noch beispiel mit zwei spezifischeren OPS-Codes
+* code.coding.version = "2019"
 * performedPeriod.start = "2019-07-04"
 * performedPeriod.end = "2019-09-14"
 
@@ -31,7 +32,8 @@ Description: "Example radiation therapy conformant with MII Prozedur as bracket 
 * extension[Gesamtdosis].valueQuantity.unit =  $UCUM#GBq
 * extension[Boost].valueCodeableConcept =  $mii-cs-onko-strahlentherapie-boost#N
 * category = $SCT#399315003 "Radionuclide therapy" 
-* code.coding = $OPS#8-530.d2 "Therapie mit Lutetium-177-PSMA-Liganden aus nicht patientenindividueller Herstellung" // 
+* code.coding = $OPS#8-530.d0 "Therapie mit Lutetium-177-PSMA-Liganden" // achtung, in der aktuellen OPS-Version ist hier ein anderer Code! 
+* code.coding.version = "2019"
 * performedPeriod.start = "2019-07-04"
 * performedPeriod.end = "2019-09-14"
 * usedCode[Strahlenart] = $mii-cs-onko-strahlentherapie-strahlenart#Lu-177

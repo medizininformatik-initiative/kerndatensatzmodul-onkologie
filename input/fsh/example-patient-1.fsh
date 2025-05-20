@@ -24,8 +24,9 @@ Usage: #example
 Description: "10.06.2021 CT Abdomen mit KM"
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
-* code.coding = $OPS#3-222 "Computertomographie des Thorax mit Kontrastmittel"
-* code.coding.version = "2024"
+* category = $SCT#363679005 "Imaging (procedure)"
+* code.coding = $OPS#3-225 "Computertomographie des Abdomens mit Kontrastmittel"
+* code.coding.version = "2021"
 * performedDateTime = 2021-06-10
 
 Instance: PatientKimMusterperson-PrimaryDiagnosis-2
@@ -52,7 +53,8 @@ Usage: #example
 Description: "Diagnose Primärtumor"
 * recordedDate = 2021-06-10
 * subject = Reference(PatientKimMusterperson)
-* clinicalStatus = $condition-ver-status#active //zum Zeitpunkt der Diagnosestellung
+* clinicalStatus = $condition-clinical#active //zum Zeitpunkt der Diagnosestellung
+* verificationStatus.coding[condition-ver-status] = $condition-ver-status#unconfirmed
 * verificationStatus.coding[primaertumorDiagnosesicherung] = $mii-cs-onko-primaertumor-diagnosesicherung#2 "klinische Diagnostik" // steht für "Alle Untersuchungstechniken, einschl. Röntgen, Endoskopie, bildgeb. Verfahren, Ultraschall, explorativer Eingriffe(wie Laparotomie) und Autopsie, aber ohne Gewebsuntersuchungen"
 * code.coding  = $ICD10GM|2020#C48.2 "Bösartige Neubildung: Peritoneum, nicht näher bezeichnet"
 // 389026000 | Ascites (disorder) | 
@@ -67,7 +69,9 @@ Usage: #example
 Description: "15.06.2021 Aszitespunktion"
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
+* category = $SCT#165197003 "Diagnostic assessment (procedure)"
 * code.coding = $OPS#1-853.2 "Diagnostische (perkutane) Punktion und Aspiration der Bauchhöhle: Aszitespunktion"
+* code.coding.version = "2021"
 * performedDateTime = 2021-06-15
 
 //22.06.2021 CT Thorax: kein Hinweis auf Metastasen. 
@@ -79,7 +83,9 @@ Usage: #example
 Description: "22.06.2021 CT Thorax: kein Hinweis auf Metastasen."
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
-* code.coding = $OPS#1-853.2 "CT Thorax"
+* category = $SCT#363679005 "Imaging (procedure)"
+* code.coding = $OPS#3-202 "Native Computertomographie des Thorax"
+* code.coding.version = "2021"
 * performedDateTime = 2021-06-22
 
 
@@ -115,6 +121,7 @@ Description: "."
 * status = #completed
 * category = $SCT#18629005 // Administration of drug or medicament (procedure)
 * code.coding = $OPS#8-54 "Zytostatische Chemotherapie, Immuntherapie und antiretrovirale Therapie" // bei Bedarf spezifischer?
+* code.coding.version = "2021"
 * extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K // impliziert 
 * extension[StellungZurOp].valueCodeableConcept = $mii-cs-onko-therapie-stellungzurop#N "neoadjuvant"
 * performedPeriod.start = 2021-07-05
@@ -131,7 +138,7 @@ Description: "."
 * effectivePeriod.start = 2021-07-05  
 * effectivePeriod.end = 2021-09-05
 * medicationCodeableConcept.coding[atcClassDe][0] = $ATC_DE#L01CD01 "Paclitaxel"
-* partOf[+] = Reference(PatientKimMusterperson-SystemicTherapy-1)
+* partOf[systemischeTherapie] = Reference(PatientKimMusterperson-SystemicTherapy-1)
 * note.text = "CarboTax"
 
 Instance: PatientKimMusterperson-SystemicTherapyMedication-1b
@@ -143,7 +150,7 @@ Description: "."
 * effectivePeriod.start = 2021-07-05  
 * effectivePeriod.end = 2021-09-05
 * medicationCodeableConcept.coding[atcClassDe][0] = $ATC_DE#L01XA02 "Carboplatin"
-* partOf[+] = Reference(PatientKimMusterperson-SystemicTherapy-1)
+* partOf[systemischeTherapie] = Reference(PatientKimMusterperson-SystemicTherapy-1)
 * note.text = "CarboTax"
 
 
@@ -205,6 +212,7 @@ Usage: #example
 Description: "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie, Tumorresektion mittels Hysterektomie, bilateraler Adnexektomie, und atpyischer Lebersegmentresektion (Seg. II und V). Postoperativ: R0."
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
+* category = $SCT#387713003 "Surgical procedure"
 * performedDateTime = 2021-09-30
 * outcome = $mii-cs-onko-residualstatus#R0
 
@@ -214,8 +222,9 @@ Usage: #example
 Description: "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie, Tumorresektion mittels Hysterektomie, bilateraler Adnexektomie, und atpyischer Lebersegmentresektion (Seg. II und V). Postoperativ: R0."
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
-* category = $SCT#387713003 "Operationen"
+* category = $SCT#387713003 "Surgical procedure"
 * code.coding = $OPS#5-547.0 "Resektion von Gewebe in der Bauchregion ohne sichere Organzuordnung: Intraperitoneal" // alternativ 5-590.8 Resektion von Gewebe ohne sichere Organzuordnung
+* code.coding.version = "2021"
 * performedDateTime = 2021-09-30
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
 * outcome = $mii-cs-onko-residualstatus#R0
@@ -226,8 +235,9 @@ Usage: #example
 Description: "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie, Tumorresektion mittels Hysterektomie, bilateraler Adnexektomie, und atpyischer Lebersegmentresektion (Seg. II und V). Postoperativ: R0."
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
-* category = $SCT#387713003 "Operationen"
+* category = $SCT#387713003 "Surgical procedure"
 * code.coding = $OPS#5-683 "Uterusexstirpation [Hysterektomie]"
+* code.coding.version = "2021"
 * performedDateTime = 2021-09-30
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
 * outcome = $mii-cs-onko-residualstatus#R0
@@ -238,8 +248,9 @@ Usage: #example
 Description: "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie, Tumorresektion mittels Hysterektomie, bilateraler Adnexektomie, und atpyischer Lebersegmentresektion (Seg. II und V). Postoperativ: R0."
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
-* category = $SCT#387713003 "Operationen"
+* category = $SCT#387713003 "Surgical procedure"
 * code.coding = $OPS#5-661 "Salpingektomie"
+* code.coding.version = "2021"
 * performedDateTime = 2021-09-30
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
 * outcome = $mii-cs-onko-residualstatus#R0
@@ -250,8 +261,9 @@ Usage: #example
 Description: "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie, Tumorresektion mittels Hysterektomie, bilateraler Adnexektomie, und atpyischer Lebersegmentresektion (Seg. II und V). Postoperativ: R0."
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
-* category = $SCT#387713003 "Operationen"
+* category = $SCT#387713003 "Surgical procedure"
 * code.coding = $OPS#5-501 "Lokale Exzision und Destruktion von erkranktem Gewebe der Leber (atypische Leberresektion)"
+* code.coding.version = "2021"
 * performedDateTime = 2021-09-30
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
 * outcome = $mii-cs-onko-residualstatus#R0
@@ -350,7 +362,7 @@ Description: "."
 * valueCodeableConcept.coding = $UICC#L1
 
 Instance: TNM-V-Observation-2
-InstanceOf: MII_PR_Onko_TNM_L_Kategorie
+InstanceOf: MII_PR_Onko_TNM_V_Kategorie
 Usage: #example  
 Description: "."
 * status = #final
@@ -428,7 +440,9 @@ Usage: #example
 Description: "."
 * subject = Reference(PatientKimMusterperson)
 * status = #completed
+* category = $SCT#18629005 // Administration of drug or medicament (procedure)
 * code.coding = $OPS#8-54 "Zytostatische Chemotherapie, Immuntherapie und antiretrovirale Therapie" // bei Bedarf spezifischer?
+* code.coding.version = "2021"
 * extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K // impliziert 
 * extension[StellungZurOp].valueCodeableConcept = $mii-cs-onko-therapie-stellungzurop#A "adjuvant"
 * performedPeriod.start = 2021-11-08
@@ -482,7 +496,7 @@ Description: ". "
 * focus = Reference(PatientKimMusterperson-PrimaryDiagnosis-2)
 * code.coding = $SCT#396432002 "Status of regression of tumor (observable entity)"
 * valueCodeableConcept.coding = $mii-cs-onko-verlauf-gesamtbeurteilung#V "Vollremission (complete remission, CR)" 
-* component[Tumor_Verlauf].code.coding = $SCT#277062004 "Status des Residualtumors"
+* component[Tumor_Verlauf].code.coding = $SCT#445200009 "Status of residual neoplasm (observable entity)"
 * component[Tumor_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-primaertumor#T "Tumorreste (Residualtumor)"
 * component[Fernmetastasen_Verlauf].code.coding = $SCT#399608002 "Status of distant metastasis (observable entity)"
 * component[Fernmetastasen_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-fernmetastasen#K "Keine Fernmetastasen nachweisbar"
@@ -525,7 +539,9 @@ Usage: #example
 Description: "."
 * subject = Reference(PatientKimMusterperson)
 * status = #completed
+* category = $SCT#18629005 // Administration of drug or medicament (procedure)
 * code.coding = $OPS#8-54 "Zytostatische Chemotherapie, Immuntherapie und antiretrovirale Therapie" // bei Bedarf spezifischer?
+* code.coding.version = "2022"
 * extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K // impliziert 
 * extension[StellungZurOp].valueCodeableConcept = $mii-cs-onko-therapie-stellungzurop#A "adjuvant"
 * performedPeriod.start = 2022-01-25

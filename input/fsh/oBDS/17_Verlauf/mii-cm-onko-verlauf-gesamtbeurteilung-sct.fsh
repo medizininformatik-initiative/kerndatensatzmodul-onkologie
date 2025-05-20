@@ -1,6 +1,7 @@
 Instance: mii-cm-onko-verlauf-gesamtbeurteilung-sct
 InstanceOf: ConceptMap
 Usage: #definition
+* insert Version
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-verlauf-gesamtbeurteilung-sct"
 * name = "MII CM Onko Verlauf Gesamtbeurteilung SCT Mapping"
 * title = "MII CM Onko Verlauf Gesamtbeurteilung SNOMED Mapping"
@@ -10,9 +11,9 @@ Usage: #definition
 * description = "Mapping Gesamtbeurteilung Codes zu SNOMED-CT"
 * purpose = "Technical mapping to transform oBDS-Data into SNOMED"
 * sourceUri = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/"
-* targetUri[+] = "http://snomed.info/sct"
+* targetUri[+] = "http://snomed.info/sct/900000000000207008/version/20240401"
 * group[+].source = $mii-cs-onko-verlauf-gesamtbeurteilung
-* group[=].target = "http://snomed.info/sct"
+* group[=].target = "http://snomed.info/sct/900000000000207008/version/20240401"
 
 * group[=].element[+].code = #V
 * group[=].element[=].display = "Vollremission (complete remission, CR)"

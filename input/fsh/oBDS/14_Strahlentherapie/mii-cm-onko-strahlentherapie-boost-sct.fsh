@@ -1,6 +1,7 @@
 Instance: mii-cm-onko-strahlentherapie-boost-sct
 InstanceOf: ConceptMap
 Usage: #definition
+* insert Version
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-strahlentherapie-boost-sct"
 * name = "MII CM Onko Strahlentherapie Boost SCT Mapping"
 * title = "MII CM Onko Strahlentherapie Boost SNOMED Mapping"
@@ -10,9 +11,9 @@ Usage: #definition
 * description = "Mapping Strahlentherapie Boost Codes zu SNOMED-CT"
 * purpose = "Technical mapping to transform oBDS-Data into SNOMED"
 * sourceUri = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/"
-* targetUri[+] = "http://snomed.info/sct"
+* targetUri[+] = "http://snomed.info/sct/900000000000207008/version/20240401"
 * group[+].source = $mii-cs-onko-strahlentherapie-boost
-* group[=].target = "http://snomed.info/sct"
+* group[=].target = "http://snomed.info/sct/900000000000207008/version/20240401"
 
 * group[=].element[+].code = #J
 * group[=].element[=].display = "ja, mit Boost o. n. A."

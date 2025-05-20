@@ -35,12 +35,21 @@
     "reference": "Patient/PatientKimMusterperson"
   },
   "status": "completed",
+  "category": {
+    "coding": [
+      {
+        "code": "18629005",
+        "system": "http://snomed.info/sct"
+      }
+    ]
+  },
   "code": {
     "coding": [
       {
         "code": "8-54",
         "system": "http://fhir.de/CodeSystem/bfarm/ops",
-        "display": "Zytostatische Chemotherapie, Immuntherapie und antiretrovirale Therapie"
+        "display": "Zytostatische Chemotherapie, Immuntherapie und antiretrovirale Therapie",
+        "version": "2022"
       }
     ]
   },

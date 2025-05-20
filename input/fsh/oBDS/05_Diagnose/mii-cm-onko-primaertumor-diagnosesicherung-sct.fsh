@@ -1,6 +1,7 @@
 Instance: mii-cm-onko-primaertumor-diagnosesicherung-sct
 InstanceOf: ConceptMap
 Usage: #definition
+* insert Version
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-primaertumor-diagnosesicherung-sct"
 * name = "MII CM Onko Primaertumor Diagnosesicherung SCT Mapping"
 * title = "MII CM Onko Primaertumor Diagnosesicherung SNOMED Mapping"
@@ -10,12 +11,12 @@ Usage: #definition
 * description = "Mapping Primärtumor Diagnosesicherung Codes zu SNOMED-CT"
 * purpose = "Technical mapping to transform oBDS-Data into SNOMED"
 * sourceUri = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/"
-* targetUri[+] = "http://snomed.info/sct"
+* targetUri[+] = "http://snomed.info/sct/900000000000207008/version/20240401"
 
 
 // Primaertumor Diagnosesicherung
 * group[+].source = $mii-cs-onko-primaertumor-diagnosesicherung
-* group[=].target = "http://snomed.info/sct"
+* group[=].target = "http://snomed.info/sct/900000000000207008/version/20240401"
 
 // #0 "Totenschein"
 

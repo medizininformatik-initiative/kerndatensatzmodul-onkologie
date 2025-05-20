@@ -1,6 +1,7 @@
 Instance: mii-cm-onko-studienteilnahme-sct
 InstanceOf: ConceptMap
 Usage: #definition
+* insert Version
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-studienteilnahme-sct"
 * name = "MII CM Onko Studienteilnahme SCT Mapping"
 * title = "MII CM Onko Studienteilnahme SNOMED Mapping"
@@ -10,9 +11,9 @@ Usage: #definition
 * description = "Mapping Studienteilnahme Status Codes zu SNOMED-CT"
 * purpose = "Technical mapping to transform oBDS-Data into SNOMED"
 * sourceUri = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/"
-* targetUri[+] = "http://snomed.info/sct"
+* targetUri[+] = "http://snomed.info/sct/900000000000207008/version/20240401"
 * group[+].source = $mii-cs-onko-studienteilnahme
-* group[=].target = "http://snomed.info/sct"
+* group[=].target = "http://snomed.info/sct/900000000000207008/version/20240401"
 
 * group[=].element[+].code = #J
 * group[=].element[=].display = "Ja"
