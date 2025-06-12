@@ -5,7 +5,7 @@ parent:
 ## {{page-title}}
 Hier sind  alle Änderungen aufgelistet. 
 
-## Änderungen in 2025.1.0 (geplant)
+## Änderungen in 2025.1.0 (veröffentlicht 12.06.2025)
 - Umprofilierung des Strahlentherapie-Profils (BREAKING CHANGE!)
     - bisher: 
         - basierend auf MII-Prozedur-Profil
@@ -25,6 +25,7 @@ Hier sind  alle Änderungen aufgelistet.
     - Onko-Medikation: MedicationStatement.partOf-Slice korrigiert und Kardinalität von 1..* auf 0..1 angepasst
     - Operations-Prozeduren können jetzt wieder mit `Procedure.partOf` auf übergeordnete Profile verweisen, wenn mehrere OPS-Codes für einen Eingriff kodiert wurden(war vorher auf Observation eingeschränkt) [Ticket](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/194)
     - UICC-ValueSet um vier Staging-Stadien ergänzt [Ticket] (https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/193)
+    - Nebenwirkung: AdverseEvent.event wieder auf 1..1 gesetzt und Beispieldatei mit nur-Text ohne coding unter AdverseEvent.event.text hinzugefügt
 
 - ConceptMaps
     - Einfügen Versionsnummer entsprechend dem Package
