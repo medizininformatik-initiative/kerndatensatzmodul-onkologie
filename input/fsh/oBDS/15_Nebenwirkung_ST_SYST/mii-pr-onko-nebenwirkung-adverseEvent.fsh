@@ -16,11 +16,11 @@ Description: "Dieses Profil beschreibt die Nebenwirkung von Strahlentherapie und
 // Hier wird entweder die Bezeichnung von CTCAE Grad oder die MedDRA Code genutzt
 * event 1..1 MS
 * event.coding 0..* MS
-* event from mii-vs-onko-nebenwirkung-art
+* event.coding.code from mii-vs-onko-nebenwirkung-art
+* event.coding.code 0..1 MS
 * event.coding.system 1..1 MS
-* event.coding.code 1..1 MS
 * event.coding.version MS
-* event.text MS
+* event.text 0..1 MS
 * insert Label(event.coding.code, Art der Nebenwirkung, Art der Nebenwirkung nach CTCAE / MedDRA.  Abweichend von 15.2 oBDS 2021 kann dieses Feld leer sein falls eine Nebenwirkung des Schweregrads 1 oder 2 vorliegt und keine spezifische Art der Nebenwirkung dokumentiert wurde)
 * insert Translation(event.coding.code ^short, de-DE, Art der Nebenwirkung)
 * insert Translation(event.coding.code ^definition, de-DE, Art der Nebenwirkung nach CTCAE / MedDRA . Abweichend von 15.2 oBDS 2021 kann dieses Feld leer sein falls eine Nebenwirkung des Schweregrads 1 oder 2 vorliegt und keine spezifische Art der Nebenwirkung dokumentiert wurde)
