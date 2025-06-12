@@ -1,0 +1,32 @@
+{
+  "resourceType": "AdverseEvent",
+  "id": "mii-pr-onko-nebenwirkung-text",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event"
+    ]
+  },
+  "actuality": "actual",
+  "event": {
+    "text": "Schüttelfrost"
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "seriousness": {
+    "coding": [
+      {
+        "code": "3",
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad",
+        "display": "schwerwiegend"
+      }
+    ]
+  },
+  "suspectEntity": [
+    {
+      "instance": {
+        "reference": "Procedure/Strahlentherapie"
+      }
+    }
+  ]
+}

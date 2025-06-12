@@ -209,6 +209,7 @@
 [mii-exa-onko-weitere-klassifikationen-1]: Observation-mii-exa-onko-weitere-klassifikationen-1.html
 [mii-exa-onko-weitere-klassifikationen-2]: Observation-mii-exa-onko-weitere-klassifikationen-2.html
 [mii-pr-onko-nebenwirkung-0]: AdverseEvent-mii-pr-onko-nebenwirkung-0.html
+[mii-pr-onko-nebenwirkung-text]: AdverseEvent-mii-pr-onko-nebenwirkung-text.html
 [mii-sp-onko-condition-ext-morphology-behavior-icdo3]: SearchParameter-mii-sp-onko-condition-ext-morphology-behavior-icdo3.html
 [mii-sp-onko-ext-strahlentherapie-stellungzurop]: SearchParameter-mii-sp-onko-ext-strahlentherapie-stellungzurop.html
 [mii-sp-onko-ext-systemischetherapie-stellungzurop]: SearchParameter-mii-sp-onko-ext-systemischetherapie-stellungzurop.html
