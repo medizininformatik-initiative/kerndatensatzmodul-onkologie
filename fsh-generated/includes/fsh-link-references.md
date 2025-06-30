@@ -101,6 +101,9 @@
 [MII_PR_Onko_Studienteilnahme]: StructureDefinition-mii-pr-onko-studienteilnahme.html
 [MII_PR_Onko_Systemische_Therapie]: StructureDefinition-mii-pr-onko-systemische-therapie.html
 [MII_PR_Onko_Systemische_Therapie_Medikation]: StructureDefinition-mii-pr-onko-systemische-therapie-medikation.html
+[MII_PR_Onko_Therapieempfehlung_Medikation]: StructureDefinition-mii-pr-onko-therapieempfehlung-medikation.html
+[MII_PR_Onko_Therapieempfehlung_Kombinationstherapie]: StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie.html
+[MII_PR_Onko_Therapieempfehlung_Operation]: StructureDefinition-mii-pr-onko-therapieempfehlung-operation.html
 [MII_PR_Onko_TNM_a_Symbol]: StructureDefinition-mii-pr-onko-tnm-a-symbol.html
 [MII_PR_Onko_TNM_L_Kategorie]: StructureDefinition-mii-pr-onko-tnm-l-kategorie.html
 [MII_PR_Onko_TNM_M_Kategorie]: StructureDefinition-mii-pr-onko-tnm-m-kategorie.html
@@ -117,6 +120,7 @@
 [MII_PR_Onko_Tumorkonferenz]: StructureDefinition-mii-pr-onko-tumorkonferenz.html
 [MII_PR_Onko_Verlauf]: StructureDefinition-mii-pr-onko-verlauf.html
 [MII_PR_Onko_Weitere_Klassifikationen]: StructureDefinition-mii-pr-onko-weitere-klassifikationen.html
+[MII_VS_Onko_Weitere_Klassifikationen]: ValueSet-mii-vs-onko-weitere-klassifikationen.html
 [MII_VS_Onko_Allgemeiner_Leistungszustand_ECOG]: ValueSet-mii-vs-onko-allgemeiner-leistungszustand-ecog.html
 [MII_VS_Onko_Allgemeiner_Leistungszustand_Karnofsky]: ValueSet-mii-vs-onko-allgemeiner-leistungszustand-karnofsky.html
 [MII_VS_Onko_Beurteilung_Lokaler_Residualstatus]: ValueSet-mii-vs-onko-beurteilung-lokaler-residualstatus.html

@@ -895,6 +895,30 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-therapieempfehlung-medikation"
+        },
+        "name": "MII PR Onkologie Therapieempfehlung Medikation",
+        "description": "Dieses Profil beschreibt eine Medikations-Tumorempfehlung",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie"
+        },
+        "name": "MII PR Onkologie Therapieempfehlung Operation",
+        "description": "Dieses Profil beschreibt eine Empfehlung für eine Operation im Rahmen der Tumorkonferenz",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-therapieempfehlung-operation"
+        },
+        "name": "MII PR Onkologie Therapieempfehlung Operation",
+        "description": "Dieses Profil beschreibt eine Empfehlung für eine Operation im Rahmen der Tumorkonferenz",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-tnm-a-symbol"
         },
         "name": "MII PR Onkologie TNM a-Symbol",
@@ -1019,6 +1043,14 @@
         },
         "name": "MII PR Onkologie Weitere Klassifikationen",
         "description": "Weitere Tumor Staging Klassifikation neben TMN (Hämatoonkologische und sonstige Klassifikationen)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-weitere-klassifikationen"
+        },
+        "name": "MII Value Set Onkologie - Weitere Klassifikationen",
+        "description": "Cancer staging systems that may be used in staging assertions, such as those defined by AJCC, FIGO, and other specialized staging systems. Based on mCODE STU4 and German oBDS catalogue",
         "exampleBoolean": false
       },
       {

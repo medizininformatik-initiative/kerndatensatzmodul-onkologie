@@ -25,7 +25,7 @@ Alias: $LOINC = http://loinc.org
 Alias: $UICC = https://www.uicc.org/resources/tnm
 Alias: $UCUM =  http://unitsofmeasure.org
 Alias: $ATC_DE = http://fhir.de/CodeSystem/bfarm/atc
-
+Alias: $NCIT =  http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
 //MII Onko
 //Allgemeines CodeSystem
 Alias: $mii-cs-onko-intention = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention
