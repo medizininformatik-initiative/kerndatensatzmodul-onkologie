@@ -1,21 +1,19 @@
 ---
 parent: 
-topic: StrahlentherapieProcedure
+topic: NuklearmedizinProcedure
 subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin
 ---
 
 ## Strahlentherapie
 
-Dieses Profil beschreibt einzelbestrahlungen einer Strahlentherapie in der Onkologie. Das Strahlentherapieprofil für die Onkologie basiert auf dem Prozedurenmodul der MII. 
+Dieses Profil beschreibt "Einzelbestrahlungen" von Nuklearmedizinischen Therapie in der Onkologie. Mit diesem Profil sollen sowohl Brachytherapien als auch die systemische Gabe von radioaktiven Metaboliten oder vgl. abgedeckt werden. Das Profil für die Onkologie basiert auf dem Prozeduren-Profil des MII-Basismoduls Prozedur. Jede brachytherapeutischer Eingriff bzw. systemische nuklearmedizinische Therapie verweist auf eine übergeordnete Strahlentherapie-Prozedur, die übergreifende Angaben wie Intention und Outcome. 
 
 
 #### Implementierungsempfehlung
-Aus den oben genannten Punkten ergibt sich folgende Kodierempfehlung für die oBDS-Strahlentherapie:
+Aus den oben genannten Punkten ergibt sich folgende Kodierempfehlung für die oBDS-Nuklearmedizinische Behandlung:
 - Kategorie als SNOMED - Code 
-    - Kategorie für Strahlentherapie `1287742003 | Radiotherapy (procedure)` 
     - Kategorie für Nuklearmedizin `399315003 | Radionuclide therapy (procedure)` 
 - Kodierung über OPS  
-    - Strahlentherapie als OPS `8-52 Strahlentherapie` (oder genauer wenn vorhanden)
     - Nuklearmedizinische Therapie als OPS `8-53 Nuklearmedizinische Therapie` (oder genauer wenn vorhanden)
 
 ---

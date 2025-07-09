@@ -6,7 +6,8 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 
 ## Strahlentherapie
 
-Dieses Profil beschreibt einzelbestrahlungen einer Strahlentherapie in der Onkologie. Das Strahlentherapieprofil für die Onkologie basiert auf dem Prozedurenmodul der MII. 
+Dieses Profil beschreibt Einzelbestrahlungen im Rahmen einer Strahlentherapie in der Onkologie. Dieses Profil beschriebt Strahlentherapie im engeren Sinne; Brachytherapien und systemische nuklearmedizinische Prozeduren werden über das Profil Nuklearmedizinische Therapien abgebildet.  
+Das Strahlentherapieprofil für die Onkologie basiert auf dem Prozedurenmodul der MII. 
 
 
 #### Implementierungsempfehlung
