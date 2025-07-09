@@ -1,21 +1,20 @@
 ---
 parent: 
-topic: StrahlentherapieProcedure
-subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie
+topic: NuklearmedizinProcedure
+subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin
 ---
 
 ## Strahlentherapie
 
-Dieses Profil beschreibt Einzelbestrahlungen im Rahmen einer Strahlentherapie in der Onkologie. Dieses Profil beschriebt Strahlentherapie im engeren Sinne; Brachytherapien und systemische nuklearmedizinische Prozeduren werden über das Profil Nuklearmedizinische Therapien abgebildet.  
-Das Strahlentherapieprofil für die Onkologie basiert auf dem Prozedurenmodul der MII. 
+Dieses Profil beschreibt "Einzelbestrahlungen" von Nuklearmedizinischen Therapie in der Onkologie. Mit diesem Profil sollen sowohl Brachytherapien als auch die systemische Gabe von radioaktiven Metaboliten oder vgl. abgedeckt werden. Das Profil für die Onkologie basiert auf dem Prozeduren-Profil des MII-Basismoduls Prozedur. Jede brachytherapeutischer Eingriff bzw. systemische nuklearmedizinische Therapie verweist auf eine übergeordnete Strahlentherapie-Prozedur, die übergreifende Angaben wie Intention und Outcome. 
 
 
 #### Implementierungsempfehlung
-Aus den oben genannten Punkten ergibt sich folgende Kodierempfehlung für die oBDS-Strahlentherapie:
+Aus den oben genannten Punkten ergibt sich folgende Kodierempfehlung für die oBDS-Nuklearmedizinische Behandlung:
 - Kategorie als SNOMED - Code 
-    - Kategorie für Strahlentherapie `1287742003 | Radiotherapy (procedure)` 
+    - Kategorie für Nuklearmedizin `399315003 | Radionuclide therapy (procedure)` 
 - Kodierung über OPS  
-    - Strahlentherapie als OPS `8-52 Strahlentherapie` oder genauer wenn vorhanden
+    - Nuklearmedizinische Therapie als OPS `8-53 Nuklearmedizinische Therapie` (oder genauer wenn vorhanden)
 
 ---
 
@@ -26,7 +25,7 @@ Die vorliegenden Profilierungen sind kompatibel mit dem Prozedurenprofil der ISi
 from 
     StructureDefinition 
 where 
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie' 
+    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin' 
 select 
     Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 ```
@@ -40,7 +39,7 @@ select
         from
 	        StructureDefinition
         where
-	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie'
+	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin'
         select
 	        Beschreibung: description
         with
@@ -50,7 +49,37 @@ select
         from 
             StructureDefinition 
         where 
-            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie' 
+            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin' 
+        for 
+            differential.element 
+            where 
+                mustSupport = true 
+            select Feldname: id, Kurzbeschreibung: short, Hinweise: comment
+        ```
+  </tab>
+  <tab title="XML">{{xml}}</tab>
+  <tab title="JSON">{{json}}</tab>
+  <tab title="Link">{{link}}</tab>
+</tabs>
+
+<tabs>
+  <tab title="Darstellung">{{tree, buttons}}</tab>
+  <tab title="Beschreibung"> 
+        @```
+        from
+	        StructureDefinition
+        where
+	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin'
+        select
+	        Beschreibung: description
+        with
+            no header
+        ```
+        @```
+        from 
+            StructureDefinition 
+        where 
+            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin' 
         for 
             differential.element 
             where 
@@ -64,7 +93,6 @@ select
 </tabs>
 
 
-
 ---
 
 Mapping Datensatz zu FHIR<tabs>
@@ -74,7 +102,7 @@ Mapping Datensatz zu FHIR<tabs>
         from
 	        StructureDefinition
         where
-	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie'
+	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin'
         select
 	        Beschreibung: description
         with
@@ -84,7 +112,7 @@ Mapping Datensatz zu FHIR<tabs>
         from 
             StructureDefinition 
         where 
-            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie' 
+            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin' 
         for 
             differential.element 
             where 
@@ -114,7 +142,7 @@ Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensa
 
 @```
 from StructureDefinition 
-where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie'  
+where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin'  
     for differential.element
     where mapping.identity='oBDS'
     select 
