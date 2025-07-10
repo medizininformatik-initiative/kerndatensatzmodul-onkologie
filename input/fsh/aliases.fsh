@@ -91,5 +91,10 @@ Alias: $mii-cs-onko-genetische-variante-auspraegung = https://www.medizininforma
 //24
 Alias: $mii-cs-onko-studienteilnahme = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-studienteilnahme
 
+//Prostata
+Alias: $mii-vs-onko-prostata-gleason-primary-secondary-tertiary = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-primary-secondary-tertiary
+Alias: $mii-vs-onko-prostata-gleason-patterns = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-patterns
+
+
 // licenses
 Alias: $spdx-license = http://hl7.org/fhir/spdx-license

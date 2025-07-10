@@ -93,6 +93,7 @@
 [MII_PR_Onko_Histologie_ICDO3]: StructureDefinition-mii-pr-onko-histologie-icdo3.html
 [MII_PR_Onko_Nebenwirkung_Adverse_Event]: StructureDefinition-mii-pr-onko-nebenwirkung-adverse-event.html
 [MII_PR_Onko_Operation]: StructureDefinition-mii-pr-onko-operation.html
+[MII_PR_Onko_Prostata_Gleason_Pattern]: StructureDefinition-mii-pr-onko-prostate-gleason-patterns.html
 [MII_PR_Onko_Residualstatus]: StructureDefinition-mii-pr-onko-residualstatus.html
 [MII_PR_Onko_Specimen]: StructureDefinition-mii-pr-onko-specimen.html
 [MII_PR_Onko_Strahlentherapie_Bestrahlung_Strahlentherapie]: StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.html
@@ -137,6 +138,7 @@
 [MII_VS_Onko_OPS_Strahlentherapie]: ValueSet-mii-vs-onko-ops-strahlentherapie.html
 [MII_VS_Onko_Primaertumor_Diagnosesicherung]: ValueSet-mii-vs-onko-primaertumor-diagnosesicherung.html
 [MII_VS_Onko_Seitenlokalisation]: ValueSet-mii-vs-onko-seitenlokalisation.html
+[MII_VS_Onko_Prostata_Gleason_Patterns]: ValueSet-mii-vs-onko-prostata-gleason-patterns.html
 [MII_VS_Onko_Strahlentherapie_Applikationsart]: ValueSet-mii-vs-onko-strahlentherapie-applikationsart.html
 [MII_VS_Onko_Strahlentherapie_Boosts]: ValueSet-mii-vs-onko-strahlentherapie-boost.html
 [MII_VS_Onko_Strahlentherapie_Ende_Grund]: ValueSet-mii-vs-onko-strahlentherapie-ende-grund.html
@@ -188,6 +190,8 @@
 [mii-exa-onko-genetische-variante-braf]: Observation-mii-exa-onko-genetische-variante-braf.html
 [mii-exa-onko-grading-1]: Observation-mii-exa-onko-grading-1.html
 [mii-exa-onko-histologie-icdo3]: Observation-mii-exa-onko-histologie-icdo3.html
+[mii-exa-onko-prostata-gleason-pattern-primary]: Observation-mii-exa-onko-prostata-gleason-pattern-primary.html
+[mii-exa-onko-prostata-gleason-pattern-secondary]: Observation-mii-exa-onko-prostata-gleason-pattern-secondary.html
 [mii-exa-onko-residualstatus-1]: Observation-mii-exa-onko-residualstatus-1.html
 [mii-exa-onko-specimen-1]: Specimen-mii-exa-onko-specimen-1.html
 [mii-exa-onko-studienteilnahme]: Observation-mii-exa-onko-studienteilnahme.html
@@ -233,6 +237,7 @@
 [mii-sp-onko-procedure-ext-strahlentherapie-intention]: SearchParameter-mii-sp-onko-procedure-ext-strahlentherapie-intention.html
 [mii-sp-onko-procedure-ext-systemischetherapie-intention]: SearchParameter-mii-sp-onko-procedure-ext-systemischetherapie-intention.html
 [MII_VS_Onko_Genetische_Variante_Auspraegung]: ValueSet-mii-vs-onko-genetische-variante-auspraegung.html
+[MII_VS_Onko_Prostata_Gleason_PrimarySecondaryTertiary]: ValueSet-mii-vs-onko-prostata-gleason-primary-secondary-tertiary.html
 [PatientKimMusterperson]: Patient-PatientKimMusterperson.html
 [PatientKimMusterperson-Diagnosis-1]: Condition-PatientKimMusterperson-Diagnosis-1.html
 [PatientKimMusterperson-PathoReport-1]: DiagnosticReport-PatientKimMusterperson-PathoReport-1.html

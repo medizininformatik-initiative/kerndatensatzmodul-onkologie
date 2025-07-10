@@ -1,0 +1,56 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Onko_Prostata_Gleason_Patterns",
+  "id": "mii-vs-onko-prostata-gleason-patterns",
+  "title": "MII VS Onkologie Prostata Gleason Patterns",
+  "description": "Value Set für die histopathologische Bewertung von Prostata-Adenokarzinomen mittels Gleason-Patterns. Dieser Value Set wird verwendet, um die verschiedenen Gleason-Patterns zu kodieren, die bei der Beurteilung von Prostatakarzinomen auftreten können.",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-primary-secondary-tertiary",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ]
+  },
+  "experimental": true,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2025.1.0",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "369770006",
+            "display": "Gleason pattern 1 (finding)"
+          },
+          {
+            "code": "369771005",
+            "display": "Gleason pattern 2 (finding)"
+          },
+          {
+            "code": "369772003",
+            "display": "Gleason pattern 3 (finding)"
+          },
+          {
+            "code": "369773008",
+            "display": "Gleason pattern 4 (finding)"
+          },
+          {
+            "code": "369774002",
+            "display": "Gleason pattern 5 (finding)"
+          }
+        ]
+      }
+    ]
+  }
+}

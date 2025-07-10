@@ -831,6 +831,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-prostate-gleason-patterns"
+        },
+        "name": "MII PR Onkologie Prostata Gleason Primär",
+        "description": "Dieses Profil beschreibt einen primären Gleasonscore in der Onkologie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-residualstatus"
         },
         "name": "MII PR Onkologie Residualstatus",
@@ -1179,6 +1187,14 @@
         },
         "name": "MII VS Onkologie Primärtumor Seitenlokalisation",
         "description": "Codes für Seitenlokalisation, d.h. organspezifische Angabe der betroffenen Seite.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-prostata-gleason-patterns"
+        },
+        "name": "MII VS Onkologie Prostata Gleason Patterns",
+        "description": "Value Set für die histopathologische Bewertung von Prostata-Adenokarzinomen mittels Gleason-Patterns. Dieser Value Set wird verwendet, um die verschiedenen Gleason-Patterns zu kodieren, die bei der Beurteilung von Prostatakarzinomen auftreten können.",
         "exampleBoolean": false
       },
       {
@@ -1578,6 +1594,20 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-onko-prostata-gleason-pattern-primary"
+        },
+        "name": "mii-exa-onko-prostata-gleason-pattern-primary",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-prostata-gleason-pattern-secondary"
+        },
+        "name": "mii-exa-onko-prostata-gleason-pattern-secondary",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns"
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-onko-residualstatus-1"
         },
         "name": "mii-exa-onko-residualstatus-1",
@@ -1908,6 +1938,14 @@
         },
         "name": "MII_VS Onkologie Genetische Variante Ausprägung",
         "description": "Value Set für oBDS-Codes für Ausprägung der Genetischen Variante",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-prostata-gleason-primary-secondary-tertiary"
+        },
+        "name": "MII_VS_Onko_Prostata_Gleason_PrimarySecondaryTertiary",
+        "description": "Value Set für Primär-, Sekundär- und Tertiär-Gleason Patterns in der Onkologie Prostata. Der häufigste Gleason Pattern wird als primär, der zweithäufigste als sekundär und (seltener, meistens bei Gleason Pattern 5) der dritthäufigste als tertiär bezeichnet. Diese Value Set wird verwendet, um die verschiedenen Gleason Patterns zu kodieren, die bei der Beurteilung von Prostatakarzinomen auftreten können.",
         "exampleBoolean": false
       },
       {
