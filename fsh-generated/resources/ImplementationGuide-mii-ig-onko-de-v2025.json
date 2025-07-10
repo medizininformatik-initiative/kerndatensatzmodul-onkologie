@@ -831,6 +831,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-prostate-gleason-grade-group"
+        },
+        "name": "MII PR Onkologie Prostata Gleason Grade Group",
+        "description": "Dieses Profil beschreibt einen Gleasonscore in der Onkologie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-prostate-gleason-patterns"
         },
         "name": "MII PR Onkologie Prostata Gleason Primär",
@@ -1946,6 +1954,14 @@
         },
         "name": "MII_VS_Onko_Prostata_Gleason_PrimarySecondaryTertiary",
         "description": "Value Set für Primär-, Sekundär- und Tertiär-Gleason Patterns in der Onkologie Prostata. Der häufigste Gleason Pattern wird als primär, der zweithäufigste als sekundär und (seltener, meistens bei Gleason Pattern 5) der dritthäufigste als tertiär bezeichnet. Diese Value Set wird verwendet, um die verschiedenen Gleason Patterns zu kodieren, die bei der Beurteilung von Prostatakarzinomen auftreten können.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-prostata-gleason-score"
+        },
+        "name": "MII_VS_Onko_Prostata_Gleason_Score",
+        "description": "Value Set für Gleason Score",
         "exampleBoolean": false
       },
       {
