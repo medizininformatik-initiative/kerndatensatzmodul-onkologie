@@ -46,6 +46,7 @@
 [MII_CS_Onko_Operation_Komplikationen]: CodeSystem-mii-cs-onko-operation-komplikation.html
 [MII_CS_Onko_Primaertumor_Diagnosesicherung]: CodeSystem-mii-cs-onko-primaertumor-diagnosesicherung.html
 [MII_CS_Onko_Seitenlokalisation]: CodeSystem-mii-cs-onko-seitenlokalisation.html
+[MII_CS_Onko_Prostata_Postoperative_Complications]: CodeSystem-mii-cs-onko-prostata-postoperative-complications.html
 [MII_CS_Onko_Residualstatus]: CodeSystem-mii-cs-onko-residualstatus.html
 [MII_CS_Onko_Strahlentherapie_Applikationsart]: CodeSystem-mii-cs-onko-strahlentherapie-applikationsart.html
 [MII_CS_Onko_Strahlentherapie_Boost]: CodeSystem-mii-cs-onko-strahlentherapie-boost.html
@@ -86,6 +87,7 @@
 [MII_PR_Onko_Anzahl_Untersuchte_Sentinel_Lymphknoten]: StructureDefinition-mii-pr-onko-anzahl-untersuchte-sentinel-lymphknoten.html
 [MII_PR_Onko_Befund]: StructureDefinition-mii-pr-onko-befund.html
 [MII_PR_Onko_Prostata_CA_Befall_Stanze]: StructureDefinition-mii-pr-onko-prostate-ca-befall-stanze.html
+[MII_PR_Onko_Prostata_Clavien_Dindo]: StructureDefinition-mii-pr-onko-prostate-clavien-dindo.html
 [MII_PR_Onko_Diagnose_Primaertumor]: StructureDefinition-mii-pr-onko-diagnose-primaertumor.html
 [MII_PR_Onko_Liste_Evidenz_Erstdiagnose]: StructureDefinition-mii-pr-onko-liste-evidenz-erstdiagnose.html
 [MII_PR_Onko_Fernmetastasen]: StructureDefinition-mii-pr-onko-fernmetastasen.html
@@ -95,9 +97,10 @@
 [MII_PR_Onko_Nebenwirkung_Adverse_Event]: StructureDefinition-mii-pr-onko-nebenwirkung-adverse-event.html
 [MII_PR_Onko_Operation]: StructureDefinition-mii-pr-onko-operation.html
 [MII_PR_Onko_Prostata_Anzahl_Positive_Stanzen]: StructureDefinition-mii-pr-onko-prostate-anzahl-positive-stanzen.html
-[MII_PR_Onko_Prostata_Anzahl_Positiver_Stanzen]: StructureDefinition-mii-pr-onko-prostate-anzahl-positiver-stanzen.html
+[MII_PR_Onko_Prostata_Anzahl_Stanzen]: StructureDefinition-mii-pr-onko-prostate-anzahl-stanzen.html
 [MII_PR_Onko_Prostata_Gleason_Grade_Group]: StructureDefinition-mii-pr-onko-prostate-gleason-grade-group.html
 [MII_PR_Onko_Prostata_Gleason_Pattern]: StructureDefinition-mii-pr-onko-prostate-gleason-patterns.html
+[MII_PR_Onko_Prostata_PSA]: StructureDefinition-mii-pr-onko-prostate-psa.html
 [MII_PR_Onko_Residualstatus]: StructureDefinition-mii-pr-onko-residualstatus.html
 [MII_PR_Onko_Specimen]: StructureDefinition-mii-pr-onko-specimen.html
 [MII_PR_Onko_Strahlentherapie_Bestrahlung_Strahlentherapie]: StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.html
@@ -194,9 +197,18 @@
 [mii-exa-onko-genetische-variante-braf]: Observation-mii-exa-onko-genetische-variante-braf.html
 [mii-exa-onko-grading-1]: Observation-mii-exa-onko-grading-1.html
 [mii-exa-onko-histologie-icdo3]: Observation-mii-exa-onko-histologie-icdo3.html
+[mii-exa-onko-mamma-example-bundle-1]: Bundle-mii-exa-onko-mamma-example-bundle-1.html
+[mii-exa-onko-prostata-anzahl-positiver-stanzen-1]: Observation-mii-exa-onko-prostata-anzahl-positiver-stanzen-1.html
+[mii-exa-onko-prostata-anzahl-stanzen-1]: Observation-mii-exa-onko-prostata-anzahl-stanzen-1.html
+[mii-exa-onko-prostata-ca-befall-stanze-1]: Observation-mii-exa-onko-prostata-ca-befall-stanze-1.html
+[mii-exa-onko-prostata-example-bundle-1]: Bundle-mii-exa-onko-prostata-example-bundle-1.html
 [mii-exa-onko-prostata-gleason-pattern-grade-group-1]: Observation-mii-exa-onko-prostata-gleason-pattern-grade-group-1.html
 [mii-exa-onko-prostata-gleason-pattern-primary-1]: Observation-mii-exa-onko-prostata-gleason-pattern-primary-1.html
 [mii-exa-onko-prostata-gleason-pattern-secondary-1]: Observation-mii-exa-onko-prostata-gleason-pattern-secondary-1.html
+[mii-exa-onko-prostata-psa-diagnose-1]: Observation-mii-exa-onko-prostata-psa-diagnose-1.html
+[mii-exa-onko-prostata-psa-verlauf-1]: Observation-mii-exa-onko-prostata-psa-verlauf-1.html
+[mii-exa-onko-prostata-surgery-1]: Procedure-mii-exa-onko-prostata-surgery-1.html
+[mii-exa-onko-prostata-surgical-complication-1]: Observation-mii-exa-onko-prostata-surgical-complication-1.html
 [mii-exa-onko-residualstatus-1]: Observation-mii-exa-onko-residualstatus-1.html
 [mii-exa-onko-specimen-1]: Specimen-mii-exa-onko-specimen-1.html
 [mii-exa-onko-studienteilnahme]: Observation-mii-exa-onko-studienteilnahme.html
@@ -242,8 +254,10 @@
 [mii-sp-onko-procedure-ext-strahlentherapie-intention]: SearchParameter-mii-sp-onko-procedure-ext-strahlentherapie-intention.html
 [mii-sp-onko-procedure-ext-systemischetherapie-intention]: SearchParameter-mii-sp-onko-procedure-ext-systemischetherapie-intention.html
 [MII_VS_Onko_Genetische_Variante_Auspraegung]: ValueSet-mii-vs-onko-genetische-variante-auspraegung.html
+[MII_VS_Onko_Prostata_Clavien_Dindo]: ValueSet-mii-vs-onko-prostata-clavien-dindo.html
 [MII_VS_Onko_Prostata_Gleason_PrimarySecondaryTertiary]: ValueSet-mii-vs-onko-prostata-gleason-primary-secondary-tertiary.html
 [MII_VS_Onko_Prostata_Gleason_Score]: ValueSet-mii-vs-onko-prostata-gleason-score.html
+[MII_VS_Onko_Prostata_postsurgical_complications]: ValueSet-mii-vs-onko-prostata-postsurgical-complications.html
 [PatientKimMusterperson]: Patient-PatientKimMusterperson.html
 [PatientKimMusterperson-Diagnosis-1]: Condition-PatientKimMusterperson-Diagnosis-1.html
 [PatientKimMusterperson-PathoReport-1]: DiagnosticReport-PatientKimMusterperson-PathoReport-1.html

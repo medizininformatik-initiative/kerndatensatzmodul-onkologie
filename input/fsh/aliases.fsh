@@ -94,7 +94,8 @@ Alias: $mii-cs-onko-studienteilnahme = https://www.medizininformatik-initiative.
 //Prostata
 Alias: $mii-vs-onko-prostata-gleason-primary-secondary-tertiary = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-primary-secondary-tertiary
 Alias: $mii-vs-onko-prostata-gleason-patterns = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-patterns
-
-
+Alias: $mii-cs-onko-prostata-postsurgical-complications = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-prostata-postsurgical-complications
+Alias: $mii-vs-onko-prostata-postsurgical-complications = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-postsurgical-complications
+Alias: $mii-vs-onko-prostata-clavien-dindo = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-clavien-dindo
 // licenses
 Alias: $spdx-license = http://hl7.org/fhir/spdx-license

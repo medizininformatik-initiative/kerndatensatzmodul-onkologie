@@ -455,6 +455,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-onko-prostata-postoperative-complications"
+        },
+        "name": "MII CS Onkologie Prostata Postoperative Komplikationen",
+        "description": "CodeSystem zur Darstellung des Vorhandenseins von postoperativen Komplikationen nach Prostatektomie in der Onkologie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-onko-residualstatus"
         },
         "name": "MII CS Onkologie Residualstatus",
@@ -775,6 +783,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-prostate-clavien-dindo"
+        },
+        "name": "MII PR Onkologie Clavien Dindo",
+        "description": "Dieses Profil beschreibt den Clavien-Dindo-Score für die Prostatektomie in der Onkologie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-diagnose-primaertumor"
         },
         "name": "MII PR Onkologie Diagnose Primärtumor",
@@ -847,7 +863,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-onko-prostate-anzahl-positiver-stanzen"
+          "reference": "StructureDefinition/mii-pr-onko-prostate-anzahl-stanzen"
         },
         "name": "MII PR Onkologie Prostata Anzahl Stanzen",
         "description": "Dieses Profil beschreibt die Anzahl Stanzen einer Prostata-Biopsie oder eines Prostata-Exzisionspräparates in der Onkologie",
@@ -867,6 +883,14 @@
         },
         "name": "MII PR Onkologie Prostata Gleason Primär",
         "description": "Dieses Profil beschreibt einen primären Gleasonscore in der Onkologie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-prostate-psa"
+        },
+        "name": "MII PR Onkologie PSA-Wert",
+        "description": "Dieses Profil beschreibt den PSA-Wert sowohl beim Monitoring als auch in der Verlaufskontrolle in der Onkologie",
         "exampleBoolean": false
       },
       {
@@ -1626,6 +1650,41 @@
       },
       {
         "reference": {
+          "reference": "Bundle/mii-exa-onko-mamma-example-bundle-1"
+        },
+        "name": "mii-exa-onko-mamma-example-bundle-1",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-prostata-anzahl-positiver-stanzen-1"
+        },
+        "name": "mii-exa-onko-prostata-anzahl-positiver-stanzen-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-anzahl-positive-stanzen"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-prostata-anzahl-stanzen-1"
+        },
+        "name": "mii-exa-onko-prostata-anzahl-stanzen-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-anzahl-stanzen"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-prostata-ca-befall-stanze-1"
+        },
+        "name": "mii-exa-onko-prostata-ca-befall-stanze-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-ca-befall-stanze"
+      },
+      {
+        "reference": {
+          "reference": "Bundle/mii-exa-onko-prostata-example-bundle-1"
+        },
+        "name": "mii-exa-onko-prostata-example-bundle-1",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-onko-prostata-gleason-pattern-grade-group-1"
         },
         "name": "mii-exa-onko-prostata-gleason-pattern-grade-group-1",
@@ -1644,6 +1703,34 @@
         },
         "name": "mii-exa-onko-prostata-gleason-pattern-secondary-1",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-prostata-psa-diagnose-1"
+        },
+        "name": "mii-exa-onko-prostata-psa-diagnose-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-psa"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-prostata-psa-verlauf-1"
+        },
+        "name": "mii-exa-onko-prostata-psa-verlauf-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-psa"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-prostata-surgery-1"
+        },
+        "name": "mii-exa-onko-prostata-surgery-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-prostata-surgical-complication-1"
+        },
+        "name": "mii-exa-onko-prostata-surgical-complication-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-clavien-dindo"
       },
       {
         "reference": {
@@ -1981,6 +2068,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-onko-prostata-clavien-dindo"
+        },
+        "name": "MII_VS_Onko_Prostata_Clavien_Dindo",
+        "description": "Value Set für Gleason Score",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-prostata-gleason-primary-secondary-tertiary"
         },
         "name": "MII_VS_Onko_Prostata_Gleason_PrimarySecondaryTertiary",
@@ -1992,6 +2087,14 @@
           "reference": "ValueSet/mii-vs-onko-prostata-gleason-score"
         },
         "name": "MII_VS_Onko_Prostata_Gleason_Score",
+        "description": "Value Set für Gleason Score",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-prostata-postsurgical-complications"
+        },
+        "name": "MII_VS_Onko_Prostata_postsurgical_complications",
         "description": "Value Set für Gleason Score",
         "exampleBoolean": false
       },

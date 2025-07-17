@@ -1,6 +1,6 @@
-Profile: MII_PR_Onko_Prostata_Anzahl_Positiver_Stanzen
+Profile: MII_PR_Onko_Prostata_Anzahl_Stanzen
 Parent: Observation
-Id: mii-pr-onko-prostate-anzahl-positiver-stanzen
+Id: mii-pr-onko-prostate-anzahl-stanzen
 Title: "MII PR Onkologie Prostata Anzahl Stanzen"
 Description: "Dieses Profil beschreibt die Anzahl Stanzen einer Prostata-Biopsie oder eines Prostata-Exzisionspräparates in der Onkologie"
 * insert PR_CS_VS_Version

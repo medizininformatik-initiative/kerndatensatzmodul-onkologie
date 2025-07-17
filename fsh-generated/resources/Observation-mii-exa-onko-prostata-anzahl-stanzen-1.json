@@ -1,0 +1,29 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-prostata-anzahl-stanzen-1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-anzahl-stanzen"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "44652-6",
+        "system": "http://loinc.org",
+        "display": "Total number of cores in Tissue core"
+      }
+    ]
+  },
+  "status": "final",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "focus": [
+    {
+      "reference": "Condition/exampleOncologicCondition"
+    }
+  ],
+  "effectiveDateTime": "2024-01-02",
+  "valueInteger": 12
+}

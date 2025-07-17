@@ -1,0 +1,71 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Onko_Prostata_Clavien_Dindo",
+  "id": "mii-vs-onko-prostata-clavien-dindo",
+  "description": "Value Set für Gleason Score",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-clavien-dindo",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ]
+  },
+  "experimental": true,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2025.1.0",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "1367519000",
+            "display": "Clavien-Dindo classification grade I (finding)"
+          },
+          {
+            "code": "1367520006",
+            "display": "Clavien-Dindo classification grade II (finding)"
+          },
+          {
+            "code": "1367521005",
+            "display": "Clavien-Dindo classification grade III (finding)"
+          },
+          {
+            "code": "1367522003",
+            "display": "Clavien-Dindo classification grade IIIa (finding)"
+          },
+          {
+            "code": "1367523008",
+            "display": "Clavien-Dindo classification grade IIIb (finding)"
+          },
+          {
+            "code": "1367524002",
+            "display": "Clavien-Dindo classification grade IV (finding)"
+          },
+          {
+            "code": "1367525001",
+            "display": "Clavien-Dindo classification grade IVa (finding)"
+          },
+          {
+            "code": "1367526000",
+            "display": "Clavien-Dindo classification grade IVb (finding)"
+          },
+          {
+            "code": "1367527009",
+            "display": "Clavien-Dindo classification grade V (finding)"
+          }
+        ]
+      }
+    ]
+  }
+}

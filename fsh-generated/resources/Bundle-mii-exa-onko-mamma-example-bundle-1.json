@@ -1,0 +1,52 @@
+{
+  "resourceType": "Bundle",
+  "id": "mii-exa-onko-mamma-example-bundle-1",
+  "type": "transaction",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "mii-exa-onko-mamma-example-condition",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+            "valueDateTime": "2020-03-07"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+              "code": "C50.3",
+              "display": "Bösartige Neubildung der Brustdrüse [Mamma] - Unterer innerer Quadrant der Brustdrüse",
+              "version": "2024"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "code": "confirmed"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/example"
+        },
+        "recordedDate": "2024-01-02"
+      }
+    }
+  ]
+}
