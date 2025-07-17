@@ -94,6 +94,7 @@
 [MII_PR_Onko_Genetische_Variante]: StructureDefinition-mii-pr-onko-genetische-variante.html
 [MII_PR_Onko_Grading]: StructureDefinition-mii-pr-onko-grading.html
 [MII_PR_Onko_Histologie_ICDO3]: StructureDefinition-mii-pr-onko-histologie-icdo3.html
+[MII_PR_Onko_Mamma_Menopausenstatus]: StructureDefinition-mii-pr-onko-mamma-menopause-status.html
 [MII_PR_Onko_Nebenwirkung_Adverse_Event]: StructureDefinition-mii-pr-onko-nebenwirkung-adverse-event.html
 [MII_PR_Onko_Operation]: StructureDefinition-mii-pr-onko-operation.html
 [MII_PR_Onko_Prostata_Anzahl_Positive_Stanzen]: StructureDefinition-mii-pr-onko-prostate-anzahl-positive-stanzen.html
@@ -198,6 +199,8 @@
 [mii-exa-onko-grading-1]: Observation-mii-exa-onko-grading-1.html
 [mii-exa-onko-histologie-icdo3]: Observation-mii-exa-onko-histologie-icdo3.html
 [mii-exa-onko-mamma-example-bundle-1]: Bundle-mii-exa-onko-mamma-example-bundle-1.html
+[mii-exa-onko-mamma-example-patient]: Patient-mii-exa-onko-mamma-example-patient.html
+[mii-exa-onko-mamma-menopause-status-1]: Observation-mii-exa-onko-mamma-menopause-status-1.html
 [mii-exa-onko-prostata-anzahl-positiver-stanzen-1]: Observation-mii-exa-onko-prostata-anzahl-positiver-stanzen-1.html
 [mii-exa-onko-prostata-anzahl-stanzen-1]: Observation-mii-exa-onko-prostata-anzahl-stanzen-1.html
 [mii-exa-onko-prostata-ca-befall-stanze-1]: Observation-mii-exa-onko-prostata-ca-befall-stanze-1.html
@@ -254,6 +257,7 @@
 [mii-sp-onko-procedure-ext-strahlentherapie-intention]: SearchParameter-mii-sp-onko-procedure-ext-strahlentherapie-intention.html
 [mii-sp-onko-procedure-ext-systemischetherapie-intention]: SearchParameter-mii-sp-onko-procedure-ext-systemischetherapie-intention.html
 [MII_VS_Onko_Genetische_Variante_Auspraegung]: ValueSet-mii-vs-onko-genetische-variante-auspraegung.html
+[MII_VS_Onko_Mamma_Menopause_Status]: ValueSet-mii-vs-onko-mamma-menopause-status.html
 [MII_VS_Onko_Prostata_Clavien_Dindo]: ValueSet-mii-vs-onko-prostata-clavien-dindo.html
 [MII_VS_Onko_Prostata_Gleason_PrimarySecondaryTertiary]: ValueSet-mii-vs-onko-prostata-gleason-primary-secondary-tertiary.html
 [MII_VS_Onko_Prostata_Gleason_Score]: ValueSet-mii-vs-onko-prostata-gleason-score.html

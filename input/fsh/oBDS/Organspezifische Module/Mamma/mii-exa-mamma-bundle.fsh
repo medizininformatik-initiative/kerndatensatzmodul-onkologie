@@ -2,8 +2,15 @@ Instance: mii-exa-onko-mamma-example-bundle-1
 InstanceOf: Bundle
 Usage: #example
 * type = #transaction
-* entry[0].resource = mii-exa-onko-mamma-example-condition
+* entry[+].resource = mii-exa-onko-mamma-example-condition
+* entry[+].resource = mii-exa-onko-mamma-menopause-status-1
 
+
+Instance: mii-exa-onko-mamma-example-patient
+InstanceOf: Patient
+Usage: #example
+* name.given = "Martha"
+* name.family = "MammaCa"
 
 Instance: mii-exa-onko-mamma-example-condition
 InstanceOf: MII_PR_Onko_Diagnose_Primaertumor
@@ -12,6 +19,15 @@ Usage: #inline
 * verificationStatus = #confirmed
 * code.coding[icd10-gm] = $ICD10GM#C50.3 "Bösartige Neubildung der Brustdrüse [Mamma] - Unterer innerer Quadrant der Brustdrüse"
 * code.coding[icd10-gm].version = "2024"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-onko-mamma-example-patient)
 * recordedDate = "2024-01-02"
 * extension[Feststellungsdatum].valueDateTime = 2020-03-07
+
+Instance: mii-exa-onko-mamma-menopause-status-1
+InstanceOf: MII_PR_Onko_Mamma_Menopausenstatus
+Usage: #example
+* status = #final
+* code.coding = $SCT#161712005 "Menopause, function (observable entity)"
+* subject = Reference(mii-exa-onko-mamma-example-patient)
+* focus = Reference(Condition/mii-exa-onko-mamma-example-condition)
+* valueCodeableConcept.coding = $SCT#22636003 "Premenopausal state (finding)"

@@ -839,6 +839,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-mamma-menopause-status"
+        },
+        "name": "MII PR Onkologie Menopausenstatus Mamma",
+        "description": "Dieses Profil beschreibt den (prätherapeutischen) Menopausenstatus einer Patientin mit Mamma-Karzinom in der Onkologie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event"
         },
         "name": "MII PR Onkologie Nebenwirkung von Strahlentherapie und systemische Therapie",
@@ -1657,6 +1665,20 @@
       },
       {
         "reference": {
+          "reference": "Patient/mii-exa-onko-mamma-example-patient"
+        },
+        "name": "mii-exa-onko-mamma-example-patient",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-mamma-menopause-status-1"
+        },
+        "name": "mii-exa-onko-mamma-menopause-status-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-menopause-status"
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-onko-prostata-anzahl-positiver-stanzen-1"
         },
         "name": "mii-exa-onko-prostata-anzahl-positiver-stanzen-1",
@@ -2064,6 +2086,14 @@
         },
         "name": "MII_VS Onkologie Genetische Variante Ausprägung",
         "description": "Value Set für oBDS-Codes für Ausprägung der Genetischen Variante",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-menopause-status"
+        },
+        "name": "MII_VS_Onko_Mamma_Menopause_Status",
+        "description": "Value Set für (prätherapeutischen) Status der Menopause Score",
         "exampleBoolean": false
       },
       {
