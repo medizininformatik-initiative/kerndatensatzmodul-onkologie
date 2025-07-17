@@ -22,18 +22,18 @@ Description: "Dieses Profil beschreibt einen Gleasonscore in der Onkologie"
 * code.coding =  $SCT#1812491000004107 "Histologic grade of primary malignant neoplasm of prostate by International Society of Urological Pathology technique (observable entity)"
 
 
-// 24.1 Studienteilnahme Status
+// P1 Gleason Score und Grade Group
 * value[x] MS
 * value[x] only CodeableConcept
 * valueCodeableConcept MS
 * valueCodeableConcept 1..1
 * valueCodeableConcept from $mii-vs-onko-prostata-gleason-patterns (extensible)
 * valueCodeableConcept.coding.code 1.. MS
-* insert Label(valueCodeableConcept.coding, Primäres Gleason-Pattern, Primäres Gleason-Pattern einer Prostata-Biopsie oder Operation)
-* insert Translation(valueCodeableConcept.coding ^short, de-DE, Primäres Gleason-Pattern )
-* insert Translation(valueCodeableConcept.coding ^definition, de-DE, Primäres Gleason-Pattern einer Prostata-Biopsie oder Operation)
+* insert Label(valueCodeableConcept.coding,  Gleason-Score und Grade Group,  Gleason-Score und Grade Group einer Prostata-Biopsie oder Operation)
+* insert Translation(valueCodeableConcept.coding ^short, de-DE, Gleason-Score und Grade Group )
+* insert Translation(valueCodeableConcept.coding ^definition, de-DE, Gleason-Score und Grade Gr einer Prostata-Biopsie oder Operation)
 
-// Studienteilnahme Datum
+// P3 Datum der Stanzen 
 * effective[x] MS
 * effective[x] only dateTime
 * effectiveDateTime 0..1 MS

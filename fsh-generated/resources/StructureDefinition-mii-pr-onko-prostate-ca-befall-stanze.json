@@ -1,0 +1,156 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-pr-onko-prostate-ca-befall-stanze",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-ca-befall-stanze",
+  "version": "2025.1.0",
+  "name": "MII_PR_Onko_Prostata_CA_Befall_Stanze",
+  "title": "MII PR Onkologie Ca-Befall Stanze",
+  "status": "draft",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "description": "Dieses Profil beschreibt den prozentualen Befall der am stärksten befallenen Stanze einer Prostata-Biopsie oder eines Prostata-Exzisionspräparates in der Onkologie",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.meta.profile",
+        "path": "Observation.meta.profile",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "short": "Prozentualer Karzinombefall",
+        "definition": "Prozentualer Karzinombefall der am stärksten befallenen Stanze einer Prostata-Biopsie oder eines Prostata-Exzisionspräparates. ",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code.coding",
+        "path": "Observation.code.coding",
+        "patternCoding": {
+          "code": "44654-2",
+          "system": "http://loinc.org",
+          "display": "Tissue involved by tumor in Prostate tumor"
+        }
+      },
+      {
+        "id": "Observation.subject",
+        "path": "Observation.subject",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.focus",
+        "path": "Observation.focus",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.encounter",
+        "path": "Observation.encounter",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "short": "Prozentualer Karzinombefall",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Prozentualer Karzinombefall"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Prozentualer Karzinombefall der am stärksten befallenen Stanze einer Prostata-Biopsie",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Prozentualer Karzinombefall der am stärksten befallenen Stanze einer Prostata-Biopsie"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x].value",
+        "path": "Observation.value[x].value",
+        "min": 1
+      },
+      {
+        "id": "Observation.value[x].unit",
+        "path": "Observation.value[x].unit",
+        "patternString": "%"
+      },
+      {
+        "id": "Observation.value[x].system",
+        "path": "Observation.value[x].system",
+        "patternUri": "http://unitsofmeasure.org"
+      },
+      {
+        "id": "Observation.value[x].code",
+        "path": "Observation.value[x].code",
+        "patternCode": "%"
+      },
+      {
+        "id": "Observation.specimen",
+        "path": "Observation.specimen",
+        "mustSupport": true
+      }
+    ]
+  }
+}

@@ -85,6 +85,7 @@
 [MII_PR_Onko_Anzahl_Untersuchte_Lymphknoten]: StructureDefinition-mii-pr-onko-anzahl-untersuchte-lymphknoten.html
 [MII_PR_Onko_Anzahl_Untersuchte_Sentinel_Lymphknoten]: StructureDefinition-mii-pr-onko-anzahl-untersuchte-sentinel-lymphknoten.html
 [MII_PR_Onko_Befund]: StructureDefinition-mii-pr-onko-befund.html
+[MII_PR_Onko_Prostata_CA_Befall_Stanze]: StructureDefinition-mii-pr-onko-prostate-ca-befall-stanze.html
 [MII_PR_Onko_Diagnose_Primaertumor]: StructureDefinition-mii-pr-onko-diagnose-primaertumor.html
 [MII_PR_Onko_Liste_Evidenz_Erstdiagnose]: StructureDefinition-mii-pr-onko-liste-evidenz-erstdiagnose.html
 [MII_PR_Onko_Fernmetastasen]: StructureDefinition-mii-pr-onko-fernmetastasen.html
@@ -93,6 +94,8 @@
 [MII_PR_Onko_Histologie_ICDO3]: StructureDefinition-mii-pr-onko-histologie-icdo3.html
 [MII_PR_Onko_Nebenwirkung_Adverse_Event]: StructureDefinition-mii-pr-onko-nebenwirkung-adverse-event.html
 [MII_PR_Onko_Operation]: StructureDefinition-mii-pr-onko-operation.html
+[MII_PR_Onko_Prostata_Anzahl_Positive_Stanzen]: StructureDefinition-mii-pr-onko-prostate-anzahl-positive-stanzen.html
+[MII_PR_Onko_Prostata_Anzahl_Positiver_Stanzen]: StructureDefinition-mii-pr-onko-prostate-anzahl-positiver-stanzen.html
 [MII_PR_Onko_Prostata_Gleason_Grade_Group]: StructureDefinition-mii-pr-onko-prostate-gleason-grade-group.html
 [MII_PR_Onko_Prostata_Gleason_Pattern]: StructureDefinition-mii-pr-onko-prostate-gleason-patterns.html
 [MII_PR_Onko_Residualstatus]: StructureDefinition-mii-pr-onko-residualstatus.html
