@@ -191,8 +191,9 @@
 [mii-exa-onko-genetische-variante-braf]: Observation-mii-exa-onko-genetische-variante-braf.html
 [mii-exa-onko-grading-1]: Observation-mii-exa-onko-grading-1.html
 [mii-exa-onko-histologie-icdo3]: Observation-mii-exa-onko-histologie-icdo3.html
-[mii-exa-onko-prostata-gleason-pattern-primary]: Observation-mii-exa-onko-prostata-gleason-pattern-primary.html
-[mii-exa-onko-prostata-gleason-pattern-secondary]: Observation-mii-exa-onko-prostata-gleason-pattern-secondary.html
+[mii-exa-onko-prostata-gleason-pattern-grade-group-1]: Observation-mii-exa-onko-prostata-gleason-pattern-grade-group-1.html
+[mii-exa-onko-prostata-gleason-pattern-primary-1]: Observation-mii-exa-onko-prostata-gleason-pattern-primary-1.html
+[mii-exa-onko-prostata-gleason-pattern-secondary-1]: Observation-mii-exa-onko-prostata-gleason-pattern-secondary-1.html
 [mii-exa-onko-residualstatus-1]: Observation-mii-exa-onko-residualstatus-1.html
 [mii-exa-onko-specimen-1]: Specimen-mii-exa-onko-specimen-1.html
 [mii-exa-onko-studienteilnahme]: Observation-mii-exa-onko-studienteilnahme.html

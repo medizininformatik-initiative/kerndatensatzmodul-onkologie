@@ -34,16 +34,17 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "short": "Primärer Gleason Score",
-        "definition": "Primäres Gleason Pattern. Der Gleason Score ist ein histopathologisches Klassifikationssystem zur Beurteilung der Morphologie von Adenokarzinomen der Prostata und wird aus der Summe von primären und sekundärem Pattern berechnet.",
+        "short": "Gleason Grade Group",
+        "definition": "Gleason Grade Group. Die Gleason Grade Group ist aus dem Gleason Grade abgeleitet. Score ist ein histopathologisches Klassifikationssystem zur Beurteilung der Morphologie von Adenokarzinomen der Prostata und wird aus der Summe von primären und sekundärem Pattern berechnet.",
         "mustSupport": true
       },
       {
         "id": "Observation.code.coding",
         "path": "Observation.code.coding",
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-primary-secondary-tertiary"
+        "patternCoding": {
+          "code": "1812491000004107",
+          "system": "http://snomed.info/sct",
+          "display": "Histologic grade of primary malignant neoplasm of prostate by International Society of Urological Pathology technique (observable entity)"
         }
       },
       {
