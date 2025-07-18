@@ -106,19 +106,115 @@
         },
         "component": [
           {
-            "code": {
-              "coding": [
-                {
-                  "code": "444644009",
-                  "system": "http://snomed.info/sct",
-                  "display": "Number fraction of estrogen receptors in neoplasm using immune stain (observable entity)"
-                }
-              ]
-            },
             "valueQuantity": {
               "unit": "%",
               "system": "http://unitsofmeasure.org",
               "value": 25
+            },
+            "code": {
+              "coding": [
+                {
+                  "code": "1234804006",
+                  "system": "http://snomed.info/sct",
+                  "display": "Percent of cells with estrogen receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
+                }
+              ]
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "1236874005",
+                  "system": "http://snomed.info/sct",
+                  "display": "Intensity of stain of estrogen receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "LA13034-6",
+                  "system": "http://loinc.org",
+                  "display": "Weak"
+                }
+              ]
+            }
+          }
+        ],
+        "status": "final",
+        "subject": {
+          "reference": "Patient/mii-exa-onko-mamma-example-patient"
+        },
+        "focus": [
+          {
+            "reference": "Condition/mii-exa-onko-mamma-example-condition"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "LA6576-8",
+              "system": "http://loinc.org",
+              "display": "Positive"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "mii-exa-onko-mamma-rezeptorstatus-progesteron-1",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-rezeptorstatus-progesteron"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "85339-0",
+              "system": "http://loinc.org",
+              "display": "Progesteron receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+            }
+          ]
+        },
+        "component": [
+          {
+            "valueQuantity": {
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "value": 25
+            },
+            "code": {
+              "coding": [
+                {
+                  "code": "1234803000",
+                  "system": "http://snomed.info/sct",
+                  "display": "Percent of cells with progesterone receptor in primary malignant neoplasm of breast by immunohistochemistry(observable entity)"
+                }
+              ]
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "1237278006",
+                  "system": "http://snomed.info/sct",
+                  "display": "Intensity of stain of progesterone receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "LA13034-6",
+                  "system": "http://loinc.org",
+                  "display": "Weak"
+                }
+              ]
             }
           }
         ],

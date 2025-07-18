@@ -104,6 +104,7 @@
 [MII_PR_Onko_Prostata_PSA]: StructureDefinition-mii-pr-onko-prostate-psa.html
 [MII_PR_Onko_Residualstatus]: StructureDefinition-mii-pr-onko-residualstatus.html
 [MII_PR_Onko_Mamma_Rezeptorstatus_Estrogen]: StructureDefinition-mii-pr-onko-mamma-rezeptorstatus-estrogen.html
+[MII_PR_Onko_Mamma_Rezeptorstatus_Progesteron]: StructureDefinition-mii-pr-onko-mamma-rezeptorstatus-progesteron.html
 [MII_PR_Onko_Specimen]: StructureDefinition-mii-pr-onko-specimen.html
 [MII_PR_Onko_Strahlentherapie_Bestrahlung_Strahlentherapie]: StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.html
 [MII_PR_Onko_Strahlentherapie]: StructureDefinition-mii-pr-onko-strahlentherapie.html
@@ -203,6 +204,7 @@
 [mii-exa-onko-mamma-example-patient]: Patient-mii-exa-onko-mamma-example-patient.html
 [mii-exa-onko-mamma-menopause-status-1]: Observation-mii-exa-onko-mamma-menopause-status-1.html
 [mii-exa-onko-mamma-rezeptorstatus-estrogen-1]: Observation-mii-exa-onko-mamma-rezeptorstatus-estrogen-1.html
+[mii-exa-onko-mamma-rezeptorstatus-progesteron-1]: Observation-mii-exa-onko-mamma-rezeptorstatus-progesteron-1.html
 [mii-exa-onko-prostata-anzahl-positiver-stanzen-1]: Observation-mii-exa-onko-prostata-anzahl-positiver-stanzen-1.html
 [mii-exa-onko-prostata-anzahl-stanzen-1]: Observation-mii-exa-onko-prostata-anzahl-stanzen-1.html
 [mii-exa-onko-prostata-ca-befall-stanze-1]: Observation-mii-exa-onko-prostata-ca-befall-stanze-1.html

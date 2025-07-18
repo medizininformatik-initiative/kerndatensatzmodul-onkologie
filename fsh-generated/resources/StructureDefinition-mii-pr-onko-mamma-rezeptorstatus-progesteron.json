@@ -1,10 +1,10 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "mii-pr-onko-mamma-rezeptorstatus-estrogen",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-rezeptorstatus-estrogen",
+  "id": "mii-pr-onko-mamma-rezeptorstatus-progesteron",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-rezeptorstatus-progesteron",
   "version": "2025.1.0",
-  "name": "MII_PR_Onko_Mamma_Rezeptorstatus_Estrogen",
-  "title": "MII PR Onkologie Rezeptorstatus Estrogen",
+  "name": "MII_PR_Onko_Mamma_Rezeptorstatus_Progesteron",
+  "title": "MII PR Onkologie Rezeptorstatus Progesteron",
   "status": "draft",
   "publisher": "Medizininformatik Initiative",
   "contact": [
@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Dieses Profil beschreibt den diagnostischen Estrogen-Rezeptorstatus eines pathologisch untersuchten Probe beim Mamma-Karzinom in der Onkologie",
+  "description": "Dieses Profil beschreibt den diagnostischen Progesteron-Rezeptorstatus eines pathologisch untersuchten Probe beim Mamma-Karzinom in der Onkologie",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -34,17 +34,17 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "short": "Rezeptorstatus Estrogen",
-        "definition": "Rezeptorstatus Estrogen, abgeleitet aus der Immunhistochemie der Mamma-Biopsie oder des Mamma-Exzisionspräparates, basierend auf Zahl der positiven Zellen und Färbeintensität",
+        "short": "Rezeptorstatus Progesteron",
+        "definition": "Rezeptorstatus Progesteron, abgeleitet aus der Immunhistochemie der Mamma-Biopsie oder des Mamma-Exzisionspräparates, basierend auf Zahl der positiven Zellen und Färbeintensität",
         "mustSupport": true
       },
       {
         "id": "Observation.code.coding",
         "path": "Observation.code.coding",
         "patternCoding": {
-          "code": "40556-3",
+          "code": "85339-0",
           "system": "http://loinc.org",
-          "display": "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+          "display": "Progesteron receptor Ag [Presence] in Breast cancer specimen by Immune stain"
         }
       },
       {
@@ -111,7 +111,7 @@
             }
           ],
           "rules": "open",
-          "description": "Slice for Receptor Status Estrogen primary data observations",
+          "description": "Slice for Receptor Status Progesteron primary data observations",
           "ordered": false
         },
         "mustSupport": true
@@ -129,9 +129,9 @@
         "path": "Observation.component.code.coding",
         "min": 1,
         "patternCoding": {
-          "code": "1234804006",
+          "code": "1234803000",
           "system": "http://snomed.info/sct",
-          "display": "Percent of cells with estrogen receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
+          "display": "Percent of cells with progesterone receptor in primary malignant neoplasm of breast by immunohistochemistry(observable entity)"
         }
       },
       {
@@ -177,9 +177,9 @@
         "path": "Observation.component.code.coding",
         "min": 1,
         "patternCoding": {
-          "code": "1236874005",
+          "code": "1237278006",
           "system": "http://snomed.info/sct",
-          "display": "Intensity of stain of estrogen receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
+          "display": "Intensity of stain of progesterone receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
         }
       },
       {
