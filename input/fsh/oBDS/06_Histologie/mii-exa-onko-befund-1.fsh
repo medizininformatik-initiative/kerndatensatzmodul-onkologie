@@ -13,6 +13,6 @@ java.lang.NullPointerException: Cannot invoke "org.hl7.fhir.r5.renderers.utils.R
 
 * basedOn = Reference(CarePlan/example-tumorboard-1)
 * specimen = Reference(Specimen/example-specimen-2)
-* code.coding[pathology-report] = $LOINC#22034-3 
+* code.coding[pathology-report] = $LNC#22034-3 
 
 * conclusion = "Mäßig differenziertes invasiv duktales Karzinom (8500/3), Grading G2 an der rechten Mamma, ..."

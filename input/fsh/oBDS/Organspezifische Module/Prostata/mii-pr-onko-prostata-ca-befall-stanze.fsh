@@ -19,7 +19,7 @@ Description: "Dieses Profil beschreibt den prozentualen Befall der am stärksten
 * code 1..1 
 * code ^definition = "Prozentualer Karzinombefall der am stärksten befallenen Stanze einer Prostata-Biopsie oder eines Prostata-Exzisionspräparates. "
 * code ^short = "Prozentualer Karzinombefall"
-* code.coding = $LOINC#44654-2 "Tissue involved by tumor in Prostate tumor" 
+* code.coding = $LNC#44654-2 "Tissue involved by tumor in Prostate tumor" 
 * specimen MS
 * specimen 0..1
 

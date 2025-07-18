@@ -26,7 +26,7 @@ Description: "Histologie: Tumor Grading. Gibt den Differenzierungsgrad des Tumor
     loinc 1..* and
     snomed 0..*
 * code.coding[loinc] MS
-* code.coding[loinc] = $LOINC#33732-9
+* code.coding[loinc] = $LNC#33732-9
 * code.coding[loinc].system 1.. MS
 * code.coding[loinc].code 1.. MS
 * code.coding[snomed] = $SCT#371469007

@@ -19,7 +19,7 @@ Description: "Dieses Profil beschreibt die Anzahl positiver Stanzen einer Prosta
 * code 1..1 
 * code ^definition = "Anzahl Stanzen der Prostata-Biopsie"
 * code ^short = "Anzahl Stanzen"
-* code.coding = $LOINC#44651-8 "Tissue cores.positive.carcinoma in Tissue core" 
+* code.coding = $LNC#44651-8 "Tissue cores.positive.carcinoma in Tissue core" 
 
 
 // P5 Anzahl der positiven Stanzen 

@@ -1,0 +1,54 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-mamma-rezeptorstatus-estrogen-1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-rezeptorstatus-estrogen"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "40556-3",
+        "system": "http://loinc.org",
+        "display": "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+      }
+    ]
+  },
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "444644009",
+            "system": "http://snomed.info/sct",
+            "display": "Number fraction of estrogen receptors in neoplasm using immune stain (observable entity)"
+          }
+        ]
+      },
+      "valueQuantity": {
+        "unit": "%",
+        "system": "http://unitsofmeasure.org",
+        "value": 25
+      }
+    }
+  ],
+  "status": "final",
+  "subject": {
+    "reference": "Patient/mii-exa-onko-mamma-example-patient"
+  },
+  "focus": [
+    {
+      "reference": "Condition/mii-exa-onko-mamma-example-condition"
+    }
+  ],
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "LA6576-8",
+        "system": "http://loinc.org",
+        "display": "Positive"
+      }
+    ]
+  }
+}

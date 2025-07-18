@@ -4,6 +4,7 @@ Usage: #example
 * type = #transaction
 * entry[+].resource = mii-exa-onko-mamma-example-condition
 * entry[+].resource = mii-exa-onko-mamma-menopause-status-1
+* entry[+].resource = mii-exa-onko-mamma-rezeptorstatus-estrogen-1
 
 
 Instance: mii-exa-onko-mamma-example-patient
@@ -31,3 +32,18 @@ Usage: #example
 * subject = Reference(mii-exa-onko-mamma-example-patient)
 * focus = Reference(Condition/mii-exa-onko-mamma-example-condition)
 * valueCodeableConcept.coding = $SCT#22636003 "Premenopausal state (finding)"
+
+Instance: mii-exa-onko-mamma-rezeptorstatus-estrogen-1
+InstanceOf: MII_PR_Onko_Mamma_Rezeptorstatus_Estrogen
+Usage: #example
+* status = #final
+* code.coding = $LNC#40556-3 "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain" 
+* subject = Reference(mii-exa-onko-mamma-example-patient)
+* focus = Reference(Condition/mii-exa-onko-mamma-example-condition)
+* valueCodeableConcept.coding = $LNC#LA6576-8 "Positive"
+* component[AnteilPositiveZellen].code.coding = $SCT#444644009 "Number fraction of estrogen receptors in neoplasm using immune stain (observable entity)"
+* component[AnteilPositiveZellen].valueQuantity.value = 25
+* component[AnteilPositiveZellen].valueQuantity.unit = "%"
+* component[AnteilPositiveZellen].valueQuantity.system = "http://unitsofmeasure.org"
+
+

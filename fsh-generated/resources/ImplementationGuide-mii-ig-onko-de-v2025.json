@@ -911,6 +911,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-mamma-rezeptorstatus-estrogen"
+        },
+        "name": "MII PR Onkologie Rezeptorstatus Estrogen",
+        "description": "Dieses Profil beschreibt den diagnostischen Estrogen-Rezeptorstatus eines pathologisch untersuchten Probe beim Mamma-Karzinom in der Onkologie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-specimen"
         },
         "name": "MII PR Onkologie Specimen",
@@ -1679,6 +1687,13 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-onko-mamma-rezeptorstatus-estrogen-1"
+        },
+        "name": "mii-exa-onko-mamma-rezeptorstatus-estrogen-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-rezeptorstatus-estrogen"
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-onko-prostata-anzahl-positiver-stanzen-1"
         },
         "name": "mii-exa-onko-prostata-anzahl-positiver-stanzen-1",
@@ -2094,6 +2109,14 @@
         },
         "name": "MII_VS_Onko_Mamma_Menopause_Status",
         "description": "Value Set für (prätherapeutischen) Status der Menopause Score",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-rezeptorstatus"
+        },
+        "name": "MII_VS_Onko_Mamma_Rezeptorstatus",
+        "description": "Value Set für oBDS-Rezeptorstatus Mamma",
         "exampleBoolean": false
       },
       {

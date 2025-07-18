@@ -19,7 +19,7 @@ Description: "Dieses Profil beschreibt die Anzahl Stanzen einer Prostata-Biopsie
 * code 1..1 
 * code ^definition = "Anzahl Stanzen der Prostata-Biopsie"
 * code ^short = "Anzahl Stanzen"
-* code.coding = $LOINC#44652-6 "Total number of cores in Tissue core" 
+* code.coding = $LNC#44652-6 "Total number of cores in Tissue core" 
 
 
 // P4 Anzahl der Stanzen 
