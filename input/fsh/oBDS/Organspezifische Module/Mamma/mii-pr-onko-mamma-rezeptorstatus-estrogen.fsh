@@ -29,11 +29,18 @@ Description: "Dieses Profil beschreibt den diagnostischen Estrogen-Rezeptorstatu
 * value[x] only CodeableConcept
 * valueCodeableConcept MS
 * valueCodeableConcept 1..1
-* valueCodeableConcept from mii-vs-onko-mamma-rezeptorstatus (extensible)
+* valueCodeableConcept.coding ^slicing.discriminator.type = #value
+* valueCodeableConcept.coding ^slicing.discriminator.path = "code"
+* valueCodeableConcept.coding ^slicing.rules = #open
+* valueCodeableConcept.coding ^slicing.description = "Slicing für die unterschiedliche Definition von Rezeptorstatus im oBDS und in den S3-Leitlinien"
+* valueCodeableConcept.coding ^slicing.ordered = false
+* valueCodeableConcept.coding contains DefinitionOBDS 0..1 MS and DefinitionLeitlinie 0..1 MS
+* valueCodeableConcept.coding[DefinitionOBDS] from mii-vs-onko-mamma-rezeptorstatus-obds (extensible)
+* valueCodeableConcept.coding[DefinitionLeitlinie] from mii-vs-onko-mamma-rezeptorstatus-leitlinie (extensible)
+
 * valueCodeableConcept.coding.code 1.. MS
+
 * component MS
-
-
 * component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code.coding"
 * component ^slicing.rules = #open
@@ -50,6 +57,8 @@ Description: "Dieses Profil beschreibt den diagnostischen Estrogen-Rezeptorstatu
 * component[AnteilPositiveZellen].valueQuantity.system = "http://unitsofmeasure.org"
 * component[AnteilPositiveZellen].valueQuantity.code = #%
 * component[AnteilPositiveZellen].valueQuantity.value 0..1 MS
+* component[AnteilPositiveZellen].interpretation MS 
+
 * component[Faerbeintensitaet].code.coding = $SCT#1236874005 "Intensity of stain of estrogen receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
 * component[Faerbeintensitaet].value[x] MS
 * component[Faerbeintensitaet].value[x] only CodeableConcept

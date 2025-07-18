@@ -431,6 +431,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-onko-mamma-rezeptorstatus-leitlinie"
+        },
+        "name": "MII CS Onkologie Mamma Rezeptorstatus",
+        "description": "oBDS-spezifisches Codesystem Mamma-Rezeptorstatus, basierend auf der S3-Leitlinie Mammakarzinom v5.02 Abschnitt 4.5.4",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-onko-operation-komplikation"
         },
         "name": "MII CS Onkologie Operation Komplikationen",
@@ -2128,9 +2136,17 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/mii-vs-onko-mamma-rezeptorstatus"
+          "reference": "ValueSet/mii-vs-onko-mamma-rezeptorstatus-leitlinie"
         },
-        "name": "MII_VS_Onko_Mamma_Rezeptorstatus",
+        "name": "MII_VS_Onko_Mamma_Rezeptorstatus_Leitlinie",
+        "description": "Value Set für oBDS-Rezeptorstatus Mamma",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-rezeptorstatus-obds"
+        },
+        "name": "MII_VS_Onko_Mamma_Rezeptorstatus_oBDS",
         "description": "Value Set für oBDS-Rezeptorstatus Mamma",
         "exampleBoolean": false
       },

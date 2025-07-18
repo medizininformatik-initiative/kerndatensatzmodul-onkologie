@@ -43,6 +43,7 @@
 [MII_CS_Onko_Genetische_Variante_Auspraegung]: CodeSystem-mii-cs-onko-genetische-variante-auspraegung.html
 [MII_CS_Onko_Grading]: CodeSystem-mii-cs-onko-grading.html
 [MII_CS_Onko_Intention]: CodeSystem-mii-cs-onko-intention.html
+[MII_CS_Onko_Mamma_Rezeptorstatus_Leitlinie]: CodeSystem-mii-cs-onko-mamma-rezeptorstatus-leitlinie.html
 [MII_CS_Onko_Operation_Komplikationen]: CodeSystem-mii-cs-onko-operation-komplikation.html
 [MII_CS_Onko_Primaertumor_Diagnosesicherung]: CodeSystem-mii-cs-onko-primaertumor-diagnosesicherung.html
 [MII_CS_Onko_Seitenlokalisation]: CodeSystem-mii-cs-onko-seitenlokalisation.html
@@ -262,7 +263,8 @@
 [mii-sp-onko-procedure-ext-systemischetherapie-intention]: SearchParameter-mii-sp-onko-procedure-ext-systemischetherapie-intention.html
 [MII_VS_Onko_Genetische_Variante_Auspraegung]: ValueSet-mii-vs-onko-genetische-variante-auspraegung.html
 [MII_VS_Onko_Mamma_Menopause_Status]: ValueSet-mii-vs-onko-mamma-menopause-status.html
-[MII_VS_Onko_Mamma_Rezeptorstatus]: ValueSet-mii-vs-onko-mamma-rezeptorstatus.html
+[MII_VS_Onko_Mamma_Rezeptorstatus_Leitlinie]: ValueSet-mii-vs-onko-mamma-rezeptorstatus-leitlinie.html
+[MII_VS_Onko_Mamma_Rezeptorstatus_oBDS]: ValueSet-mii-vs-onko-mamma-rezeptorstatus-obds.html
 [MII_VS_Onko_Prostata_Clavien_Dindo]: ValueSet-mii-vs-onko-prostata-clavien-dindo.html
 [MII_VS_Onko_Prostata_Gleason_PrimarySecondaryTertiary]: ValueSet-mii-vs-onko-prostata-gleason-primary-secondary-tertiary.html
 [MII_VS_Onko_Prostata_Gleason_Score]: ValueSet-mii-vs-onko-prostata-gleason-score.html

@@ -29,8 +29,14 @@ Description: "Dieses Profil beschreibt den diagnostischen Progesteron-Rezeptorst
 * value[x] only CodeableConcept
 * valueCodeableConcept MS
 * valueCodeableConcept 1..1
-* valueCodeableConcept from mii-vs-onko-mamma-rezeptorstatus (extensible)
-* valueCodeableConcept.coding.code 1.. MS
+* valueCodeableConcept.coding ^slicing.discriminator.type = #value
+* valueCodeableConcept.coding ^slicing.discriminator.path = "code"
+* valueCodeableConcept.coding ^slicing.rules = #open
+* valueCodeableConcept.coding ^slicing.description = "Slicing für die unterschiedliche Definition von Rezeptorstatus im oBDS und in den S3-Leitlinien"
+* valueCodeableConcept.coding ^slicing.ordered = false
+* valueCodeableConcept.coding contains DefinitionOBDS 0..1 MS and DefinitionLeitlinie 0..1 MS
+* valueCodeableConcept.coding[DefinitionOBDS] from mii-vs-onko-mamma-rezeptorstatus-obds (extensible)
+* valueCodeableConcept.coding[DefinitionLeitlinie] from mii-vs-onko-mamma-rezeptorstatus-leitlinie (extensible)
 * component MS
 
 

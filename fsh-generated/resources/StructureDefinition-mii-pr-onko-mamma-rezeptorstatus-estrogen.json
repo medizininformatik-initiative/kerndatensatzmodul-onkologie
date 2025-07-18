@@ -88,10 +88,21 @@
             "code": "CodeableConcept"
           }
         ],
-        "mustSupport": true,
-        "binding": {
-          "strength": "extensible",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-rezeptorstatus"
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x].coding",
+        "path": "Observation.value[x].coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "code"
+            }
+          ],
+          "rules": "open",
+          "description": "Slicing für die unterschiedliche Definition von Rezeptorstatus im oBDS und in den S3-Leitlinien",
+          "ordered": false
         }
       },
       {
@@ -99,6 +110,30 @@
         "path": "Observation.value[x].coding.code",
         "min": 1,
         "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x].coding:DefinitionOBDS",
+        "path": "Observation.value[x].coding",
+        "sliceName": "DefinitionOBDS",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-rezeptorstatus-obds"
+        }
+      },
+      {
+        "id": "Observation.value[x].coding:DefinitionLeitlinie",
+        "path": "Observation.value[x].coding",
+        "sliceName": "DefinitionLeitlinie",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-rezeptorstatus-leitlinie"
+        }
       },
       {
         "id": "Observation.component",
@@ -163,6 +198,11 @@
         "id": "Observation.component:AnteilPositiveZellen.value[x].code",
         "path": "Observation.component.value[x].code",
         "patternCode": "%"
+      },
+      {
+        "id": "Observation.component:AnteilPositiveZellen.interpretation",
+        "path": "Observation.component.interpretation",
+        "mustSupport": true
       },
       {
         "id": "Observation.component:Faerbeintensitaet",

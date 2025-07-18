@@ -1,0 +1,47 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "MII_CS_Onko_Mamma_Rezeptorstatus_Leitlinie",
+  "id": "mii-cs-onko-mamma-rezeptorstatus-leitlinie",
+  "title": "MII CS Onkologie Mamma Rezeptorstatus",
+  "description": "oBDS-spezifisches Codesystem Mamma-Rezeptorstatus, basierend auf der S3-Leitlinie Mammakarzinom v5.02 Abschnitt 4.5.4",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-rezeptorstatus",
+  "concept": [
+    {
+      "code": "positiv",
+      "display": "positiv",
+      "definition": "Positiv: > 10% positive Tumorzellen"
+    },
+    {
+      "code": "gering-positiv",
+      "display": "gering positiv",
+      "definition": "Gering positiv: 1-10% positive Tumorzellen"
+    },
+    {
+      "code": "negativ",
+      "display": "negativ",
+      "definition": "Negativ: < 1% positive Tumorzellen"
+    }
+  ],
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2025.1.0",
+  "caseSensitive": true,
+  "count": 3
+}
