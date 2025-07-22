@@ -43,6 +43,7 @@
 [MII_CS_Onko_Genetische_Variante_Auspraegung]: CodeSystem-mii-cs-onko-genetische-variante-auspraegung.html
 [MII_CS_Onko_Grading]: CodeSystem-mii-cs-onko-grading.html
 [MII_CS_Onko_Intention]: CodeSystem-mii-cs-onko-intention.html
+[MII_CS_Onko_Mamma_Intraoperative_Bildgebung]: CodeSystem-mii-cs-onko-mamma-intraoperative-bildgebung.html
 [MII_CS_Onko_Mamma_Rezeptorstatus_Leitlinie]: CodeSystem-mii-cs-onko-mamma-rezeptorstatus-leitlinie.html
 [MII_CS_Onko_Operation_Komplikationen]: CodeSystem-mii-cs-onko-operation-komplikation.html
 [MII_CS_Onko_Primaertumor_Diagnosesicherung]: CodeSystem-mii-cs-onko-primaertumor-diagnosesicherung.html
@@ -102,6 +103,8 @@
 [MII_PR_Onko_Prostata_Anzahl_Stanzen]: StructureDefinition-mii-pr-onko-prostate-anzahl-stanzen.html
 [MII_PR_Onko_Prostata_Gleason_Grade_Group]: StructureDefinition-mii-pr-onko-prostate-gleason-grade-group.html
 [MII_PR_Onko_Prostata_Gleason_Pattern]: StructureDefinition-mii-pr-onko-prostate-gleason-patterns.html
+[MII_PR_Onko_Mamma_Intraoperatives_Imaging_Specimen]: StructureDefinition-mii-pr-onko-mamma-intraoperatives-imaging-specimen.html
+[MII_PR_Onko_Mamma_Praeoperative_Markierung]: StructureDefinition-mii-pr-onko-mamma-praeoperative-markierung.html
 [MII_PR_Onko_Prostata_PSA]: StructureDefinition-mii-pr-onko-prostate-psa.html
 [MII_PR_Onko_Residualstatus]: StructureDefinition-mii-pr-onko-residualstatus.html
 [MII_PR_Onko_Mamma_Rezeptorstatus_Estrogen]: StructureDefinition-mii-pr-onko-mamma-rezeptorstatus-estrogen.html
@@ -262,7 +265,9 @@
 [mii-sp-onko-procedure-ext-strahlentherapie-intention]: SearchParameter-mii-sp-onko-procedure-ext-strahlentherapie-intention.html
 [mii-sp-onko-procedure-ext-systemischetherapie-intention]: SearchParameter-mii-sp-onko-procedure-ext-systemischetherapie-intention.html
 [MII_VS_Onko_Genetische_Variante_Auspraegung]: ValueSet-mii-vs-onko-genetische-variante-auspraegung.html
+[MII_VS_Onko_Mamma_Intraoperatives_Imaging_Praeparat]: ValueSet-mii-vs-onko-mamma-intraoperatives-imaging-praeparat.html
 [MII_VS_Onko_Mamma_Menopause_Status]: ValueSet-mii-vs-onko-mamma-menopause-status.html
+[MII_VS_Onko_Mamma_Praeoperative_Markierung_Modalitaet]: ValueSet-mii-vs-onko-mamma-praeoperative-markierung-modalitaet.html
 [MII_VS_Onko_Mamma_Rezeptorstatus_Leitlinie]: ValueSet-mii-vs-onko-mamma-rezeptorstatus-leitlinie.html
 [MII_VS_Onko_Mamma_Rezeptorstatus_oBDS]: ValueSet-mii-vs-onko-mamma-rezeptorstatus-obds.html
 [MII_VS_Onko_Prostata_Clavien_Dindo]: ValueSet-mii-vs-onko-prostata-clavien-dindo.html

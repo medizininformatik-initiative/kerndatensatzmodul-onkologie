@@ -431,6 +431,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-onko-mamma-intraoperative-bildgebung"
+        },
+        "name": "MII CS Onkologie intraoperative Bildgebung Mamma",
+        "description": "oBDS-spezifisches Codesystem Mamma-Rezeptorstatus, basierend auf der S3-Leitlinie Mammakarzinom v5.02 Abschnitt 4.5.4",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-onko-mamma-rezeptorstatus-leitlinie"
         },
         "name": "MII CS Onkologie Mamma Rezeptorstatus",
@@ -899,6 +907,22 @@
         },
         "name": "MII PR Onkologie Prostata Gleason Primär",
         "description": "Dieses Profil beschreibt einen primären Gleasonscore in der Onkologie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-mamma-intraoperatives-imaging-specimen"
+        },
+        "name": "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
+        "description": "Das vorliegende Profil beschreibt eine radiologisch durchgeführte Markierung von Tumorgewebe mittels  der Brust. Dabei können verschiedene Methoden gewählt werden. Die  ",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-mamma-praeoperative-markierung"
+        },
+        "name": "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
+        "description": "Das vorliegende Profil beschreibt eine radiologisch durchgeführte Markierung von Tumorgewebe mittels  der Brust. Dabei können verschiedene Methoden gewählt werden. Die  ",
         "exampleBoolean": false
       },
       {
@@ -2128,10 +2152,26 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-intraoperatives-imaging-praeparat"
+        },
+        "name": "MII_VS_Onko_Mamma_Intraoperatives_Imaging_Praeparat",
+        "description": "Value Set für intraoperatives Imaging des Präparats nach Exzision bei Mamma-Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-mamma-menopause-status"
         },
         "name": "MII_VS_Onko_Mamma_Menopause_Status",
         "description": "Value Set für (prätherapeutischen) Status der Menopause Score",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-praeoperative-markierung-modalitaet"
+        },
+        "name": "MII_VS_Onko_Mamma_Praeoperative_Markierung_Modalitaet",
+        "description": "Value Set für Imagingmodalität der präopartiven Markierung bei Mamma-Karzinom",
         "exampleBoolean": false
       },
       {

@@ -1,0 +1,40 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Onko_Mamma_Intraoperatives_Imaging_Praeparat",
+  "id": "mii-vs-onko-mamma-intraoperatives-imaging-praeparat",
+  "description": "Value Set für intraoperatives Imaging des Präparats nach Exzision bei Mamma-Karzinom",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-intraoperatives-imaging-praeparat",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ]
+  },
+  "experimental": true,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2025.1.0",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "code",
+            "op": "is-a",
+            "value": "1332559003"
+          }
+        ]
+      }
+    ]
+  }
+}

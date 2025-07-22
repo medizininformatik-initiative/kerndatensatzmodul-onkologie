@@ -42,7 +42,7 @@ Usage: #example
 * subject = Reference(mii-exa-onko-mamma-example-patient)
 * focus = Reference(Condition/mii-exa-onko-mamma-example-condition)
 * valueCodeableConcept.coding = $LNC#LA6576-8 "Positive"
-* component[AnteilPositiveZellen].valueQuantity.value = 25
+* component[AnteilPositiveZellen].valueQuantity.value = 5
 * component[AnteilPositiveZellen].valueQuantity.unit = "%"
 * component[AnteilPositiveZellen].valueQuantity.system = "http://unitsofmeasure.org"
 * component[Faerbeintensitaet].valueCodeableConcept.coding = $LNC#LA13034-6 "Weak"  
@@ -54,7 +54,7 @@ Usage: #example
 * code.coding = $LNC#85339-0 "Progesteron receptor Ag [Presence] in Breast cancer specimen by Immune stain" 
 * subject = Reference(mii-exa-onko-mamma-example-patient)
 * focus = Reference(Condition/mii-exa-onko-mamma-example-condition)
-* valueCodeableConcept.coding = $LNC#LA6576-8 "Positive"
+* valueCodeableConcept.coding[DefinitionOBDS] = $LNC#LA6576-8 "Positive"
 * component[AnteilPositiveZellen].valueQuantity.value = 25
 * component[AnteilPositiveZellen].valueQuantity.unit = "%"
 * component[AnteilPositiveZellen].valueQuantity.system = "http://unitsofmeasure.org"

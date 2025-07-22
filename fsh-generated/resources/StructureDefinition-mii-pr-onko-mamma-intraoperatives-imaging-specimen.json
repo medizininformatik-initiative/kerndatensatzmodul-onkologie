@@ -1,0 +1,75 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-pr-onko-mamma-intraoperatives-imaging-specimen",
+  "extension": [
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/spdx-license",
+            "code": "CC-BY-4.0",
+            "display": "Creative Commons Attribution 4.0 International"
+          }
+        ]
+      }
+    }
+  ],
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-intraoperatives-imaging-specimen",
+  "version": "2025.1.0",
+  "name": "MII_PR_Onko_Mamma_Intraoperatives_Imaging_Specimen",
+  "title": "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
+  "status": "draft",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "description": "Das vorliegende Profil beschreibt eine radiologisch durchgeführte Markierung von Tumorgewebe mittels  der Brust. Dabei können verschiedene Methoden gewählt werden. Die  ",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Procedure",
+  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Procedure.partOf",
+        "path": "Procedure.partOf",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Procedure.code",
+        "path": "Procedure.code",
+        "short": "Status der Menopause",
+        "definition": "Prätherapeutischer Menopausenstatus einer Patientin mit Mamma-Karzinom"
+      },
+      {
+        "id": "Procedure.reasonReference",
+        "path": "Procedure.reasonReference",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

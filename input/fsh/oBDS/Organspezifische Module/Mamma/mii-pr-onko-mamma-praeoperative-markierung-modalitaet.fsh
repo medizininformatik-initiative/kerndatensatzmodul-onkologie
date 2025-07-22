@@ -1,0 +1,50 @@
+Profile: MII_PR_Onko_Mamma_Praeoperative_Markierung
+Id: mii-pr-onko-mamma-praeoperative-markierung
+Parent: Procedure
+Title: "MII PR Onkologie Präoperative Drahtmarkierung Mamma"
+Description: "Das vorliegende Profil beschreibt eine radiologisch durchgeführte Markierung von Tumorgewebe mittels  der Brust. Dabei können verschiedene Methoden gewählt werden. Die  "
+* insert PR_CS_VS_Version
+* insert Publisher
+* ^status = #draft
+
+* meta.profile 0..* MS
+* subject 1..1 MS
+* subject only Reference(Patient)
+* encounter 0..1 MS
+
+
+* status MS
+* code MS
+* code 1..1 
+* code ^definition = "Prätherapeutischer Menopausenstatus einer Patientin mit Mamma-Karzinom"
+* code ^short = "Status der Menopause"
+* code.coding MS // OPS-2025 Code einfach, oder 
+
+* partOf MS
+* partOf only Reference(MII_PR_Onko_Operation) 
+* usedCode
+* usedCode only CodeableConcept
+* usedCode 0..*
+* usedCode.coding MS
+
+* usedCode.coding ^slicing.discriminator.type = #value
+* usedCode.coding ^slicing.discriminator.path = "code"
+* usedCode.coding ^slicing.rules = #open
+* usedCode.coding ^slicing.description = "Slicing für die Modalität der präoperativen Markierung, sowie für verschiedene Seed-Markierungen"
+* usedCode.coding ^slicing.ordered = false
+
+* usedCode.coding contains PraeoperativeMarkierung 0..1 MS 
+* usedCode.coding[PraeoperativeMarkierung] from mii-vs-onko-mamma-praeoperative-markierung-modalitaet (extensible)
+
+
+
+/*
+Mapping: FHIR-oBDS-Studienteilnahme
+Id: oBDS
+Title: "Mapping FHIR zu oBDS"
+Source: MII_PR_Onko_Studienteilnahme
+* -> "24" "Studienteilnahme"
+*  valueCodeableConcept.coding.code -> "24.1" "Studienteilnahme Status"
+*  effectiveDateTime -> "24.2" "Studienteilnahme Datum"
+
+*/
