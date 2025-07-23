@@ -11,7 +11,6 @@ Description: "Value Set für Imagingmodalität der präopartiven Markierung bei 
 * include $SCT#433222002 "Insertion of guide wire into breast using ultrasound guidance (procedure)"
 * include $SCT#911831000000104 "Wire guided localization of lesion of breast using magnetic resonance imaging guidance (procedure)"
 * include $SCT#836381000000102 "Insertion of marker into breast using plain X-ray guidance (procedure)"
-* include $SCT#836381000000102 "Insertion of marker into breast using plain X-ray guidance (procedure)"
-
+// TODO Codes hinzufügen
 // im Original ValueSet: Mammografie, Sono, MRT, keine, unbekannt
 // keine, unbekannt werden über Status abgebildet

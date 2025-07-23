@@ -63,3 +63,28 @@ Usage: #example
 
 
 // her2 neu from MTB?
+
+Instance: mii-exa-onko-mamma-praeoperative-markierung-1
+InstanceOf: MII_PR_Onko_Mamma_Praeoperative_Markierung
+Usage: #example
+* status = #completed
+* code.coding = $LNC#LA6576-8 "Positive"
+* subject = Reference(mii-exa-onko-mamma-example-patient)
+* reasonReference = Reference(Condition/mii-exa-onko-mamma-example-condition)
+
+
+Instance: mii-exa-onko-mamma-tumorgroesse-1
+InstanceOf: MII_PR_Onko_Tumorgroesse
+Usage: #example
+* status = #final
+* code.coding[loinc] = $LNC#21889-9 "Size Tumor"
+* code.coding[snomed] = $SCT#371479009 "Tumor size, largest dimension (observable entity)"
+* subject = Reference(mii-exa-onko-mamma-example-patient)
+
+* subject = Reference(mii-exa-onko-mamma-example-patient)
+* focus = Reference(Condition/mii-exa-onko-mamma-example-condition)
+* valueQuantity.value = 25
+* valueQuantity.unit = "mm"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* effectiveDateTime = "2024-01-02T10:00:00Z"
+* bodySite = $SCT#110494001 "Structure of upper inner quadrant of right breast (body structure)"

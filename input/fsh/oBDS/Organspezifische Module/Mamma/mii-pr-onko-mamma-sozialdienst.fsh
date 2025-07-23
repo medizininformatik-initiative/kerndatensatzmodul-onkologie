@@ -1,5 +1,5 @@
-Profile: MII_PR_Onko_Mamma_Operation
-Id: mii-pr-onko-mamma-intraoperatives-imaging-specimen
+Profile: MII_PR_Onko_Mamma_Sozialdienst
+Id: mii-pr-onko-mamma-sozialdienst
 Parent: MII_PR_Onko_Operation
 Title: "MII PR Onkologie Präoperative Drahtmarkierung Mamma"
 Description: "Das vorliegende Profil beschreibt eine radiologisch durchgeführte Markierung von Tumorgewebe mittels  der Brust. Dabei können verschiedene Methoden gewählt werden. Die  "
@@ -18,21 +18,13 @@ Description: "Das vorliegende Profil beschreibt eine radiologisch durchgeführte
 * status MS
 * code MS
 * code 1..1 
-* code ^definition = "Operation der Brust, z.B. Exzision eines Tumors, Entfernung eines Lymphknotens"
-* code ^short = "Operation der Brust"
-* code.coding MS // OPS-2025 Code einfach, oder 
-//* code.coding[sct] from mii-vs-onko-mamma-operationen (extensible)
-
-* partOf MS
-* partOf only Reference(MII_PR_Onko_Operation) 
-* usedCode MS
-* usedCode only CodeableConcept
-* usedCode 0..*
-* usedCode.coding MS
-* usedCode.coding ^slicing.discriminator.type = #value
-* usedCode.coding ^slicing.discriminator.path = "code"
-* usedCode.coding ^slicing.rules = #open
-* usedCode.coding ^slicing.description = "Slicing für die intraoperative Verwendung von z.B. Drahtmarkierungen, Markierungsclips oder Seed-Markierungen"
+* code ^definition = "Sozialdienstkontakt zur Unterstützung der Patientin bei der Bewältigung der Erkrankung, nach oBDS-Definition M9"
+* code ^short = "Sozialdienstkontakt"
+* code.coding = $SCT#306238000 "Referral to Social Services (procedure)"
+* performedDateTime MS
+* performedDateTime 1..1
+* performedDateTime ^definition = "Datum des Kontakts mit dem Sozialdienst"
+* performedDateTime ^short = "Datum"
 
 
 /*
