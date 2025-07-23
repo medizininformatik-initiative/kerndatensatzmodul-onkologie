@@ -1,0 +1,56 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "incomplete",
+  "name": "MII_CS_Onko_KRK_Operationstyp",
+  "id": "mii-cs-onko-krk-operationstyp",
+  "title": "MII CS Onkologie KRK Operationstyp",
+  "description": "oBDS-spezifisches Codesystem TME-Präparat, basierend auf der S3-Leitlinie Mammakarzinom v",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-operationstyp",
+  "concept": [
+    {
+      "code": "T",
+      "display": "TME",
+      "definition": "Totale mesorektale Exzision"
+    },
+    {
+      "code": "P",
+      "display": "PME",
+      "definition": "Partielle mesorektale Exzision"
+    },
+    {
+      "code": "L",
+      "display": "Lokale Exzision",
+      "definition": "Lokale Exzision des Rektums"
+    },
+    {
+      "code": "A",
+      "display": "Andere Operation",
+      "definition": "Andere Operation des Rektums"
+    },
+    {
+      "code": "U",
+      "display": "Unbekannt",
+      "definition": "Unbekannte Operation des Rektums"
+    }
+  ],
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2025.1.0",
+  "caseSensitive": true
+}
