@@ -127,6 +127,14 @@
       },
       {
         "reference": {
+          "reference": "ConceptMap/mii-cm-onko-krk-stoma-obds-sct"
+        },
+        "name": "Mapping oBDS Stoma-Anzeichnung zu SNOMED CT",
+        "description": "Mapping der oBDS-Codes für präoperative Stoma-Anzeichnung zu SNOMED CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ConceptMap/mii-cm-onko-allgemeiner-leistungszustand-sct"
         },
         "name": "MII CM Onko Allgemeiner Leistungszustand SNOMED Mapping",
@@ -439,6 +447,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-onko-krk-anastomoseninsuffizienz"
+        },
+        "name": "MII CS Onkologie KRK Anastomoseninsuffizienz",
+        "description": "oBDS-spezifisches Codesystem für Anastomoseninsuffizienz beim Kolorektalen Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-onko-krk-operationstyp"
         },
         "name": "MII CS Onkologie KRK Operationstyp",
@@ -743,6 +759,86 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-onko-krk-abstand-circumferelle-resektionsebene"
+        },
+        "name": "MII EXA Onko KRK Abstand Circumferelle Resektionsebene",
+        "description": "Beispiel für den minimalen Abstand des Tumorrandes zur circumferellen Dissektionslinie",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-circumferelle-resektionsebene"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-krk-abstand-mesorektale-fascie"
+        },
+        "name": "MII EXA Onko KRK Abstand Mesorektale Fascie",
+        "description": "Beispiel für den Abstand des Tumors zur mesorektalen Faszie bei MRT-Untersuchung",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-mrt-mesorektale-faszie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-krk-abstand-resektionsrand-aboral"
+        },
+        "name": "MII EXA Onko KRK Abstand Resektionsrand Aboral",
+        "description": "Beispiel für den minimalen Abstand des Tumorrandes zur aboralen Dissektionslinie",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-aboral"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-krk-abstand-tumor-anokutanlinie"
+        },
+        "name": "MII EXA Onko KRK Abstand Tumor Anokutanlinie",
+        "description": "Beispiel für den Abstand des Tumorunterrandes zur Anokutanlinie beim Rektumkarzinom",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-anokutan"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-krk-anastomoseninsuffizienz"
+        },
+        "name": "MII EXA Onko KRK Anastomoseninsuffizienz",
+        "description": "Beispiel für die Bewertung einer Anastomoseninsuffizienz beim Kolorektalen Karzinom",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-anastomoseninsuffizienz"
+      },
+      {
+        "reference": {
+          "reference": "Bundle/mii-exa-onko-krk-bundle"
+        },
+        "name": "MII EXA Onko KRK Bundle",
+        "description": "Beispiel-Bundle für Kolorektales Karzinom mit allen spezifischen Profilen",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-onko-diagnose-primaertumor-krk"
+        },
+        "name": "MII EXA Onko KRK Diagnose Primaertumor",
+        "description": "Beispiel für eine Primärtumor-Diagnose beim Kolorektalen Karzinom",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-krk-operation"
+        },
+        "name": "MII EXA Onko KRK Operation",
+        "description": "Beispiel für eine Operation beim Kolorektalen Karzinom",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-operation"
+      },
+      {
+        "reference": {
+          "reference": "Specimen/mii-exa-onko-krk-specimen"
+        },
+        "name": "MII EXA Onko KRK Specimen",
+        "description": "Beispiel für ein Histologie-Specimen beim Kolorektalen Karzinom",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-specimen"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-krk-stoma-markierung"
+        },
+        "name": "MII EXA Onko KRK Stoma-Markierung",
+        "description": "Beispiel für eine präoperative Stoma-Markierung beim Kolorektalen Karzinom",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-stoma-markierung"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-lm-mvgenomseq-onkologie"
         },
         "name": "MII LM Modellvorhaben Genomsequenzierung Onkologie",
@@ -903,10 +999,26 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-krk-anastomoseninsuffizienz"
+        },
+        "name": "MII PR Onkologie KRK Anastomoseninsuffizienz",
+        "description": "Dieses Profil beschreibt die Bewertung der Anastomoseninsuffizienz nach einer Operation beim Kolorektalen Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-krk-mrt-mesorektale-faszie"
         },
         "name": "MII PR Onkologie KRK MRT/CT Abstand Mesorektale Faszie",
         "description": "Dieses Profil beschreibt den Abstand des Tumors zur mesorektalen Faszie bei MRT oder Dünnschicht-CT Untersuchung beim Kolorektalen Karzinom (oBDS KR5)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-krk-stoma-markierung"
+        },
+        "name": "MII PR Onkologie KRK Stoma-Markierung",
+        "description": "Dieses Profil beschreibt die präoperative Markierung der geplanten Stoma-Position beim Kolorektalen Karzinom",
         "exampleBoolean": false
       },
       {
@@ -2254,6 +2366,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-onko-krk-stoma-anzeichnung"
+        },
+        "name": "MII_CS_Onko_KRK_Stoma_Anzeichnung",
+        "description": "oBDS-basiertes Codesystem für die präoperative Anzeichnung der Stoma-Position beim Rektumkarzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-onko-operation-urgency"
         },
         "name": "MII_CS_Onko_Operation_Urgency",
@@ -2286,10 +2406,34 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-onko-krk-anastomoseninsuffizienz"
+        },
+        "name": "MII_VS_Onko_KRK_Anastomoseninsuffizienz",
+        "description": "Value Set für die Bewertung der Anastomoseninsuffizienz beim Kolorektalen Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-krk-mrt-mesorektale-faszie-status"
         },
         "name": "MII_VS_Onko_KRK_MRT_Mesorektale_Faszie_Status",
         "description": "Value Set für semantische Kodierung des oBDS-Status der MRT/CT Untersuchung zur mesorektalen Faszie beim Kolorektalen Karzinom (KR5)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-krk-stoma-anzeichnung"
+        },
+        "name": "MII_VS_Onko_KRK_Stoma_Anzeichnung",
+        "description": "Value Set für semantische Kodierung der oBDS-präoperativen Stoma-Anzeichnung beim Rektumkarzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-krk-stoma-status-reason"
+        },
+        "name": "MII_VS_Onko_KRK_Stoma_Status_Reason",
+        "description": "Value Set für SNOMED CT Codes zur Begründung des Status der präoperativen Stoma-Anzeichnung",
         "exampleBoolean": false
       },
       {

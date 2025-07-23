@@ -1,0 +1,635 @@
+{
+  "resourceType": "Bundle",
+  "id": "mii-exa-onko-krk-bundle",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/Bundle"
+    ]
+  },
+  "identifier": {
+    "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko",
+    "value": "krk-example-bundle-2024-001"
+  },
+  "type": "collection",
+  "timestamp": "2024-03-25T10:00:00+01:00",
+  "entry": [
+    {
+      "fullUrl": "Patient/example",
+      "resource": {
+        "resourceType": "CodeSystem",
+        "id": "example",
+        "meta": {
+          "lastUpdated": "2019-11-01T09:29:23.356+11:00",
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+            "valueCode": "fhir"
+          }
+        ],
+        "url": "http://hl7.org/fhir/CodeSystem/example",
+        "identifier": [
+          {
+            "system": "http://acme.com/identifiers/codesystems",
+            "value": "internal-cholesterol-inl"
+          }
+        ],
+        "version": "4.0.1",
+        "name": "ACMECholCodesBlood",
+        "title": "ACME Codes for Cholesterol in Serum/Plasma",
+        "status": "draft",
+        "experimental": true,
+        "date": "2016-01-28",
+        "publisher": "Acme Co",
+        "contact": [
+          {
+            "name": "FHIR project team",
+            "telecom": [
+              {
+                "system": "url",
+                "value": "http://hl7.org/fhir"
+              }
+            ]
+          }
+        ],
+        "description": "This is an example code system that includes all the ACME codes for serum/plasma cholesterol from v2.36.",
+        "caseSensitive": true,
+        "content": "complete",
+        "filter": [
+          {
+            "code": "acme-plasma",
+            "description": "An internal filter used to select codes that are only used with plasma",
+            "operator": [
+              "="
+            ],
+            "value": "the value of this filter is either 'true' or 'false'"
+          }
+        ],
+        "concept": [
+          {
+            "code": "chol-mmol",
+            "display": "SChol (mmol/L)",
+            "definition": "Serum Cholesterol, in mmol/L",
+            "designation": [
+              {
+                "use": {
+                  "system": "http://acme.com/config/fhir/codesystems/internal",
+                  "code": "internal-label"
+                },
+                "value": "From ACME POC Testing"
+              }
+            ]
+          },
+          {
+            "code": "chol-mass",
+            "display": "SChol (mg/L)",
+            "definition": "Serum Cholesterol, in mg/L",
+            "designation": [
+              {
+                "use": {
+                  "system": "http://acme.com/config/fhir/codesystems/internal",
+                  "code": "internal-label"
+                },
+                "value": "From Paragon Labs"
+              }
+            ]
+          },
+          {
+            "code": "chol",
+            "display": "SChol",
+            "definition": "Serum Cholesterol",
+            "designation": [
+              {
+                "use": {
+                  "system": "http://acme.com/config/fhir/codesystems/internal",
+                  "code": "internal-label"
+                },
+                "value": "Obdurate Labs uses this with both kinds of units..."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Condition/mii-exa-onko-diagnose-primaertumor-krk",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "mii-exa-onko-diagnose-primaertumor-krk",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+            "valueDateTime": "2020-03-07"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "C18",
+              "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+              "display": "Bösartige Neubildung des Kolons",
+              "version": "2024"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "code": "confirmed"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/example"
+        },
+        "recordedDate": "2024-01-02"
+      }
+    },
+    {
+      "fullUrl": "Encounter/example",
+      "resource": {
+        "resourceType": "CodeSystem",
+        "id": "example",
+        "meta": {
+          "lastUpdated": "2019-11-01T09:29:23.356+11:00",
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+            "valueCode": "fhir"
+          }
+        ],
+        "url": "http://hl7.org/fhir/CodeSystem/example",
+        "identifier": [
+          {
+            "system": "http://acme.com/identifiers/codesystems",
+            "value": "internal-cholesterol-inl"
+          }
+        ],
+        "version": "4.0.1",
+        "name": "ACMECholCodesBlood",
+        "title": "ACME Codes for Cholesterol in Serum/Plasma",
+        "status": "draft",
+        "experimental": true,
+        "date": "2016-01-28",
+        "publisher": "Acme Co",
+        "contact": [
+          {
+            "name": "FHIR project team",
+            "telecom": [
+              {
+                "system": "url",
+                "value": "http://hl7.org/fhir"
+              }
+            ]
+          }
+        ],
+        "description": "This is an example code system that includes all the ACME codes for serum/plasma cholesterol from v2.36.",
+        "caseSensitive": true,
+        "content": "complete",
+        "filter": [
+          {
+            "code": "acme-plasma",
+            "description": "An internal filter used to select codes that are only used with plasma",
+            "operator": [
+              "="
+            ],
+            "value": "the value of this filter is either 'true' or 'false'"
+          }
+        ],
+        "concept": [
+          {
+            "code": "chol-mmol",
+            "display": "SChol (mmol/L)",
+            "definition": "Serum Cholesterol, in mmol/L",
+            "designation": [
+              {
+                "use": {
+                  "system": "http://acme.com/config/fhir/codesystems/internal",
+                  "code": "internal-label"
+                },
+                "value": "From ACME POC Testing"
+              }
+            ]
+          },
+          {
+            "code": "chol-mass",
+            "display": "SChol (mg/L)",
+            "definition": "Serum Cholesterol, in mg/L",
+            "designation": [
+              {
+                "use": {
+                  "system": "http://acme.com/config/fhir/codesystems/internal",
+                  "code": "internal-label"
+                },
+                "value": "From Paragon Labs"
+              }
+            ]
+          },
+          {
+            "code": "chol",
+            "display": "SChol",
+            "definition": "Serum Cholesterol",
+            "designation": [
+              {
+                "use": {
+                  "system": "http://acme.com/config/fhir/codesystems/internal",
+                  "code": "internal-label"
+                },
+                "value": "Obdurate Labs uses this with both kinds of units..."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Procedure/mii-exa-onko-krk-stoma-markierung",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "mii-exa-onko-krk-stoma-markierung",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-stoma-markierung"
+          ]
+        },
+        "category": {
+          "coding": [
+            {
+              "code": "387713003",
+              "system": "http://snomed.info/sct",
+              "display": "Surgical procedure"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "225134005",
+              "system": "http://snomed.info/sct",
+              "display": "Marking position of planned stoma site (procedure)"
+            }
+          ]
+        },
+        "status": "completed",
+        "statusReason": {
+          "coding": [
+            {
+              "code": "262008008",
+              "system": "http://snomed.info/sct",
+              "display": "Not performed (qualifier value)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/example"
+        },
+        "encounter": {
+          "reference": "Encounter/example"
+        },
+        "reasonReference": [
+          {
+            "reference": "Condition/mii-exa-onko-diagnose-primaertumor"
+          }
+        ],
+        "performedDateTime": "2024-03-15T09:30:00+01:00",
+        "note": [
+          {
+            "text": "Präoperative Markierung der geplanten Stoma-Position im rechten Hemiabdomen nach Rücksprache mit dem Patienten"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/mii-exa-onko-krk-abstand-tumor-anokutanlinie",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "mii-exa-onko-krk-abstand-tumor-anokutanlinie",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-anokutan"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "33748-5",
+              "system": "http://loinc.org",
+              "display": "Distance from anal verge"
+            }
+          ]
+        },
+        "valueQuantity": {
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm",
+          "value": 8.5
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/example"
+        },
+        "encounter": {
+          "reference": "Encounter/example"
+        },
+        "focus": [
+          {
+            "reference": "Condition/mii-exa-onko-diagnose-primaertumor"
+          }
+        ],
+        "effectiveDateTime": "2024-03-10T14:30:00+01:00"
+      }
+    },
+    {
+      "fullUrl": "Observation/mii-exa-onko-krk-abstand-circumferelle-resektionsebene",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "mii-exa-onko-krk-abstand-circumferelle-resektionsebene",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-circumferelle-resektionsebene"
+          ]
+        },
+        "valueQuantity": {
+          "unit": "mm",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm",
+          "value": 2.5
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "code": "81176-0",
+              "system": "http://loinc.org",
+              "display": "Distance of tumor from circumferential resection margin [Length] in Specimen by Macroscopy"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/example"
+        },
+        "encounter": {
+          "reference": "Encounter/example"
+        },
+        "focus": [
+          {
+            "reference": "Condition/mii-exa-onko-diagnose-primaertumor"
+          }
+        ],
+        "effectiveDateTime": "2024-03-20T10:15:00+01:00"
+      }
+    },
+    {
+      "fullUrl": "Observation/mii-exa-onko-krk-abstand-resektionsrand-aboral",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "mii-exa-onko-krk-abstand-resektionsrand-aboral",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-aboral"
+          ]
+        },
+        "valueQuantity": {
+          "unit": "mm",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm",
+          "value": 15
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "code": "81175-2",
+              "system": "http://loinc.org",
+              "display": "Distance of tumor from closest margin [Length] in Specimen by Macroscopy"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/example"
+        },
+        "encounter": {
+          "reference": "Encounter/example"
+        },
+        "focus": [
+          {
+            "reference": "Condition/mii-exa-onko-diagnose-primaertumor"
+          }
+        ],
+        "effectiveDateTime": "2024-03-20T10:15:00+01:00"
+      }
+    },
+    {
+      "fullUrl": "Observation/mii-exa-onko-krk-abstand-mesorektale-fascie",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "mii-exa-onko-krk-abstand-mesorektale-fascie",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-mrt-mesorektale-faszie"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "RDE96",
+              "system": "http://radlex.org",
+              "display": "Distance to MRF"
+            }
+          ]
+        },
+        "valueQuantity": {
+          "unit": "mm",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm",
+          "value": 3.2
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/example"
+        },
+        "encounter": {
+          "reference": "Encounter/example"
+        },
+        "focus": [
+          {
+            "reference": "Condition/mii-exa-onko-diagnose-primaertumor"
+          }
+        ],
+        "effectiveDateTime": "2024-03-12T16:00:00+01:00"
+      }
+    },
+    {
+      "fullUrl": "Procedure/mii-exa-onko-krk-operation",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "mii-exa-onko-krk-operation",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-operation"
+          ]
+        },
+        "extension": [
+          {
+            "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "K",
+                  "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention",
+                  "display": "kurativ"
+                }
+              ]
+            }
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/bfarm/ops",
+              "code": "5-484.55",
+              "display": "Tiefe anteriore Resektion : Laparoskopisch mit Anastomose",
+              "version": "OPS 2024"
+            }
+          ]
+        },
+        "status": "completed",
+        "category": {
+          "coding": [
+            {
+              "code": "387713003",
+              "system": "http://snomed.info/sct",
+              "display": "Surgical procedure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/example"
+        },
+        "encounter": {
+          "reference": "Encounter/example"
+        },
+        "reasonReference": [
+          {
+            "reference": "Condition/mii-exa-onko-diagnose-primaertumor-krk"
+          }
+        ],
+        "performedDateTime": "2024-03-22T08:00:00+01:00",
+        "note": [
+          {
+            "text": "Laparoskopische Resektion beim kolorektalen Karzinom"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Specimen/mii-exa-onko-krk-specimen",
+      "resource": {
+        "resourceType": "Specimen",
+        "id": "mii-exa-onko-krk-specimen",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-specimen"
+          ]
+        },
+        "status": "available",
+        "type": {
+          "coding": [
+            {
+              "code": "309226005",
+              "system": "http://snomed.info/sct",
+              "display": "Specimen from large intestine"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/example"
+        },
+        "collection": {
+          "collectedDateTime": "2024-03-22T08:30:00+01:00"
+        },
+        "accessionIdentifier": {
+          "value": "KRK-2024-001234"
+        },
+        "condition": [
+          {
+            "coding": [
+              {
+                "code": "1",
+                "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-tme-qualitaet",
+                "display": "Grad 1 (gut)"
+              }
+            ]
+          }
+        ],
+        "note": [
+          {
+            "text": "Sigmaresekat mit Primärtumor und regionären Lymphknoten"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/mii-exa-onko-krk-anastomoseninsuffizienz",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "mii-exa-onko-krk-anastomoseninsuffizienz",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-anastomoseninsuffizienz"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "129037007",
+              "system": "http://snomed.info/sct",
+              "display": "Anastomotic leak"
+            }
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/example"
+        },
+        "encounter": {
+          "reference": "Encounter/example"
+        },
+        "focus": [
+          {
+            "reference": "Procedure/mii-exa-onko-krk-operation"
+          }
+        ],
+        "effectiveDateTime": "2024-03-25T08:00:00+01:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "B",
+              "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-anastomoseninsuffizienz",
+              "display": "Anastomoseninsuffizienz Grad B"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

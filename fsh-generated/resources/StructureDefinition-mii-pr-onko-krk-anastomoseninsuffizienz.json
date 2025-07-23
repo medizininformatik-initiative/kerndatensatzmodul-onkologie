@@ -1,11 +1,11 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "mii-pr-onko-krk-abstand-circumferelle-resektionsebene",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-circumferelle-resektionsebene",
+  "id": "mii-pr-onko-krk-anastomoseninsuffizienz",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-anastomoseninsuffizienz",
   "version": "2025.1.0",
-  "name": "MII_PR_Onko_KRK_Abstand_Circumferelle_Resektionsebene",
-  "title": "MII PR Onkologie Abstand Circumferelle Resektionsebene",
-  "status": "draft",
+  "name": "MII_PR_Onko_KRK_Anastomoseninsuffizienz",
+  "title": "MII PR Onkologie KRK Anastomoseninsuffizienz",
+  "status": "active",
   "publisher": "Medizininformatik Initiative",
   "contact": [
     {
@@ -17,8 +17,14 @@
       ]
     }
   ],
-  "description": "Dieses Profil beschreibt den minimalen Abstand des Tumorrandes zur circumferellen Dissektionlinie beim Kolorektalen Karzinom",
+  "description": "Dieses Profil beschreibt die Bewertung der Anastomoseninsuffizienz nach einer Operation beim Kolorektalen Karzinom",
   "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "oBDS",
+      "name": "Mapping FHIR zu oBDS"
+    }
+  ],
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
@@ -27,6 +33,17 @@
   "differential": {
     "element": [
       {
+        "id": "Observation",
+        "path": "Observation",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "KR-Anastomose",
+            "comment": "Anastomoseninsuffizienz"
+          }
+        ]
+      },
+      {
         "id": "Observation.meta.profile",
         "path": "Observation.meta.profile",
         "mustSupport": true
@@ -34,16 +51,17 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "short": "Minimaler Abstand Tumorrand circumferell - makroskopisch oder mikroskopisch",
-        "definition": "Minimaler Abstand des Tumorrandes zum circumferellen Resektionsrand in mm., gemäß oBDS 2021 KR3 - makroskopisch oder mikroskopisch",
+        "short": "Anastomoseninsuffizienz",
+        "definition": "Bewertung der Anastomoseninsuffizienz nach kolorektaler Operation",
         "mustSupport": true
       },
       {
         "id": "Observation.code.coding",
         "path": "Observation.code.coding",
-        "binding": {
-          "strength": "extensible",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-abstand-circumferelle-resektionsrand"
+        "patternCoding": {
+          "code": "129037007",
+          "system": "http://snomed.info/sct",
+          "display": "Anastomotic leak"
         }
       },
       {
@@ -67,7 +85,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-operation"
             ]
           }
         ],
@@ -81,7 +99,7 @@
       {
         "id": "Observation.effective[x]",
         "path": "Observation.effective[x]",
-        "short": "Datum der Untersuchung",
+        "short": "Datum der Bewertung",
         "_short": {
           "extension": [
             {
@@ -93,13 +111,13 @@
                 },
                 {
                   "url": "content",
-                  "valueString": "Datum der Untersuchung"
+                  "valueString": "Datum der Bewertung"
                 }
               ]
             }
           ]
         },
-        "definition": "Datum der Untersuchung",
+        "definition": "Datum der Bewertung der Anastomoseninsuffizienz",
         "_definition": {
           "extension": [
             {
@@ -111,7 +129,7 @@
                 },
                 {
                   "url": "content",
-                  "valueString": "Datum der Untersuchung"
+                  "valueString": "Datum der Bewertung der Anastomoseninsuffizienz"
                 }
               ]
             }
@@ -122,12 +140,19 @@
             "code": "dateTime"
           }
         ],
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "KR-Anastomose",
+            "comment": "Datum der Bewertung"
+          }
+        ]
       },
       {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
-        "short": "Minimaler Abstand Tumorrand aboral",
+        "short": "Anastomoseninsuffizienz Grad",
         "_short": {
           "extension": [
             {
@@ -139,13 +164,13 @@
                 },
                 {
                   "url": "content",
-                  "valueString": "Minimaler Abstand Tumorrand circumferell"
+                  "valueString": "Anastomoseninsuffizienz Grad"
                 }
               ]
             }
           ]
         },
-        "definition": "Minimaler Abstand des aboralen Tumorrandes zum aboralen Resektionsrand in mm. gemäß oBDS 2021 KR2",
+        "definition": "Grad der Anastomoseninsuffizienz nach oBDS",
         "_definition": {
           "extension": [
             {
@@ -157,7 +182,7 @@
                 },
                 {
                   "url": "content",
-                  "valueString": "Minimaler Abstand des aboralen Tumorrandes zum aboralen Resektionsrand in mm. gemäß oBDS 2021 KR2"
+                  "valueString": "Grad der Anastomoseninsuffizienz nach oBDS"
                 }
               ]
             }
@@ -165,37 +190,25 @@
         },
         "type": [
           {
-            "code": "Quantity"
+            "code": "CodeableConcept"
           }
         ],
-        "mustSupport": true
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-anastomoseninsuffizienz"
+        }
       },
       {
-        "id": "Observation.value[x].value",
-        "path": "Observation.value[x].value",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.value[x].unit",
-        "path": "Observation.value[x].unit",
-        "min": 1,
-        "patternString": "mm",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.value[x].system",
-        "path": "Observation.value[x].system",
-        "min": 1,
-        "fixedUri": "http://unitsofmeasure.org",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.value[x].code",
-        "path": "Observation.value[x].code",
-        "min": 1,
-        "patternCode": "mm",
-        "mustSupport": true
+        "id": "Observation.value[x].coding.code",
+        "path": "Observation.value[x].coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "KR-Anastomose",
+            "comment": "Bewertung der Anastomoseninsuffizienz"
+          }
+        ]
       }
     ]
   }
