@@ -70,6 +70,7 @@
 [MII_CS_Onko_Verlauf_Primaertumor]: CodeSystem-mii-cs-onko-verlauf-primaertumor.html
 [MII_EX_Onko_Histology_Morphology_Behavior_ICDO3]: StructureDefinition-mii-ex-onko-histology-morphology-behavior-icdo3.html
 [MII_EX_Onko_Operation_Intention]: StructureDefinition-mii-ex-onko-operation-intention.html
+[MII_EX_Onko_Operation_Urgency]: StructureDefinition-mii-ex-onko-operation-urgency.html
 [MII_EX_Onko_Strahlentherapie_Bestrahlung_Boost]: StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-boost.html
 [MII_EX_Onko_Strahlentherapie_Bestrahlung_Einzeldosis]: StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis.html
 [MII_EX_Onko_Strahlentherapie_Bestrahlung_Gesamtdosis]: StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis.html
@@ -277,6 +278,7 @@
 [mii-sp-onko-procedure-ext-strahlentherapie-intention]: SearchParameter-mii-sp-onko-procedure-ext-strahlentherapie-intention.html
 [mii-sp-onko-procedure-ext-systemischetherapie-intention]: SearchParameter-mii-sp-onko-procedure-ext-systemischetherapie-intention.html
 [MII_CS_Onko_KRK_MRT_Mesorektale_Faszie_Status]: CodeSystem-mii-cs-onko-krk-mrt-mesorektale-faszie-status.html
+[MII_CS_Onko_Operation_Urgency]: CodeSystem-mii-cs-onko-operation-urgency.html
 [MII_VS_Onko_Genetische_Variante_Auspraegung]: ValueSet-mii-vs-onko-genetische-variante-auspraegung.html
 [MII_VS_Onko_KRK_Abstand_Circumferelle_Resektionsrand]: ValueSet-mii-vs-onko-krk-abstand-circumferelle-resektionsrand.html
 [MII_VS_Onko_KRK_Abstand_Resektionslinie_Aboral]: ValueSet-mii-vs-onko-krk-abstand-resektionslinie-aboral.html
@@ -288,6 +290,7 @@
 [MII_VS_Onko_Mamma_Praeoperative_Markierung_Modalitaet]: ValueSet-mii-vs-onko-mamma-praeoperative-markierung-modalitaet.html
 [MII_VS_Onko_Mamma_Rezeptorstatus_Leitlinie]: ValueSet-mii-vs-onko-mamma-rezeptorstatus-leitlinie.html
 [MII_VS_Onko_Mamma_Rezeptorstatus_oBDS]: ValueSet-mii-vs-onko-mamma-rezeptorstatus-obds.html
+[MII_VS_Onko_Operation_Urgency]: ValueSet-mii-vs-onko-operation-urgency.html
 [MII_VS_Onko_Prostata_Clavien_Dindo]: ValueSet-mii-vs-onko-prostata-clavien-dindo.html
 [MII_VS_Onko_Prostata_Gleason_PrimarySecondaryTertiary]: ValueSet-mii-vs-onko-prostata-gleason-primary-secondary-tertiary.html
 [MII_VS_Onko_Prostata_Gleason_Score]: ValueSet-mii-vs-onko-prostata-gleason-score.html

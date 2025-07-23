@@ -10,11 +10,18 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 * meta.profile 0..* MS
 // OP-Datum
 
-* extension contains mii-ex-onko-operation-intention named Intention 1..1
+* extension contains 
+    mii-ex-onko-operation-intention named Intention 1..1 and
+    mii-ex-onko-operation-urgency named Urgency 0..1
 * insert Label(extension[Intention], Intention der OP, Intention der OP gemäß 13.1 oBDS 2021)
 * insert Translation(extension[Intention] ^short, de-DE, Intention der OP )
 * insert Translation(extension[Intention] ^definition, de-DE, Intention der OP gemäß 13.1 oBDS 2021 )
 * extension[Intention] MS
+
+* insert Label(extension[Urgency], Art des Eingriffs, Modalität der Eingriffsdurchführung gemäß KR6 oBDS 2021)
+* insert Translation(extension[Urgency] ^short, de-DE, Art des Eingriffs)
+* insert Translation(extension[Urgency] ^definition, de-DE, Modalität der Eingriffsdurchführung - Elektiveingriff vs. Notfalleingriff - gemäß KR6 oBDS 2021)
+* extension[Urgency] MS
 * encounter 0..1 MS
 
 
@@ -86,6 +93,7 @@ Title: "Mapping FHIR zu oBDS"
 Source: MII_PR_Onko_Operation
 * -> "13" "Operation"
 * extension[Intention].valueCodeableConcept.coding.code -> "13.1" "Intention der Operation"
+* extension[Urgency].valueCodeableConcept.coding.code -> "KR6" "Art des Eingriffs (Modalität der Eingriffsdurchführung)"
 * performedDateTime -> "13.2" "OP Datum" 
 * code.coding[ops].code -> "13.3" "OPS" // OPS Code
 * code.coding[ops].version -> "13.4" "OPS Version" 

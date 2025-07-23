@@ -45,6 +45,7 @@ Alias: $mii-cs-onko-tnm-version = https://www.medizininformatik-initiative.de/fh
 
 //13
 Alias: $mii-cs-onko-operation-komplikation = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation
+Alias: $mii-cs-onko-operation-urgency = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-urgency
 
 //14
 Alias: $mii-cs-onko-strahlentherapie-strahlenart = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart
