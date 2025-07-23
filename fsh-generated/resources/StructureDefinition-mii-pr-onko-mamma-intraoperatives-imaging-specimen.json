@@ -17,7 +17,7 @@
   ],
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-intraoperatives-imaging-specimen",
   "version": "2025.1.0",
-  "name": "MII_PR_Onko_Mamma_Intraoperatives_Imaging_Specimen",
+  "name": "MII_PR_Onko_Mamma_Operation",
   "title": "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
   "status": "draft",
   "publisher": "Medizininformatik Initiative",
@@ -55,8 +55,8 @@
       {
         "id": "Procedure.code",
         "path": "Procedure.code",
-        "short": "Status der Menopause",
-        "definition": "Prätherapeutischer Menopausenstatus einer Patientin mit Mamma-Karzinom"
+        "short": "Operation der Brust",
+        "definition": "Operation der Brust, z.B. Exzision eines Tumors, Entfernung eines Lymphknotens"
       },
       {
         "id": "Procedure.reasonReference",
@@ -69,6 +69,26 @@
             ]
           }
         ]
+      },
+      {
+        "id": "Procedure.usedCode",
+        "path": "Procedure.usedCode",
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.usedCode.coding",
+        "path": "Procedure.usedCode.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "code"
+            }
+          ],
+          "rules": "open",
+          "description": "Slicing für die intraoperative Verwendung von z.B. Drahtmarkierungen, Markierungsclips oder Seed-Markierungen"
+        },
+        "mustSupport": true
       }
     ]
   }

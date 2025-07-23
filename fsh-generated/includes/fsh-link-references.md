@@ -44,6 +44,7 @@
 [MII_CS_Onko_Grading]: CodeSystem-mii-cs-onko-grading.html
 [MII_CS_Onko_Intention]: CodeSystem-mii-cs-onko-intention.html
 [MII_CS_Onko_Mamma_Intraoperative_Bildgebung]: CodeSystem-mii-cs-onko-mamma-intraoperative-bildgebung.html
+[MII_CS_Onko_KRK_Operationstyp]: CodeSystem-mii-cs-onko-krk-operationstyp.html
 [MII_CS_Onko_Mamma_Rezeptorstatus_Leitlinie]: CodeSystem-mii-cs-onko-mamma-rezeptorstatus-leitlinie.html
 [MII_CS_Onko_Operation_Komplikationen]: CodeSystem-mii-cs-onko-operation-komplikation.html
 [MII_CS_Onko_Primaertumor_Diagnosesicherung]: CodeSystem-mii-cs-onko-primaertumor-diagnosesicherung.html
@@ -59,6 +60,7 @@
 [MII_CS_Onko_Therapie_StellungZurOp]: CodeSystem-mii-cs-onko-therapie-stellungzurop.html
 [MII_CS_Onko_Therapieabweichung]: CodeSystem-mii-cs-onko-therapieabweichung.html
 [MII_CS_Onko_Therapieplanung_Typ]: CodeSystem-mii-cs-onko-therapieplanung-typ.html
+[MII_CS_Onko_KRK_TME_Qualitaet]: CodeSystem-mii-cs-onko-krk-tme-qualitaet.html
 [MII_CS_Onko_TNM_UICC]: CodeSystem-mii-cs-onko-tnm-uicc.html
 [MII_CS_Onko_TNM_Version]: CodeSystem-mii-cs-onko-tnm-version.html
 [MII_CS_Onko_Tod]: CodeSystem-mii-cs-onko-tod.html
@@ -81,6 +83,9 @@
 [MII_EX_Onko_TNM_SN_Suffix]: StructureDefinition-mii-ex-onko-tnm-sn-suffix.html
 [MII_LM_MVGenomSeq_Onkologie]: StructureDefinition-mii-lm-mvgenomseq-onkologie.html
 [MII_LM_Onko]: StructureDefinition-mii-lm-onko.html
+[MII_PR_Onko_KRK_Abstand_Aboral]: StructureDefinition-mii-pr-onko-krk-abstand-aboral.html
+[MII_PR_Onko_KRK_Abstand_Anokutan]: StructureDefinition-mii-pr-onko-krk-abstand-anokutan.html
+[MII_PR_Onko_KRK_Abstand_Circumferelle_Resektionsebene]: StructureDefinition-mii-pr-onko-krk-abstand-circumferelle-resektionsebene.html
 [MII_PR_Onko_Allgemeiner_Leistungszustand_ECOG]: StructureDefinition-mii-pr-onko-allgemeiner-leistungszustand-ecog.html
 [MII_PR_Onko_Allgemeiner_Leistungszustand_Karnofsky]: StructureDefinition-mii-pr-onko-allgemeiner-leistungszustand-karnofsky.html
 [MII_PR_Onko_Anzahl_Befallene_Lymphknoten]: StructureDefinition-mii-pr-onko-anzahl-befallene-lymphknoten.html
@@ -96,6 +101,7 @@
 [MII_PR_Onko_Genetische_Variante]: StructureDefinition-mii-pr-onko-genetische-variante.html
 [MII_PR_Onko_Grading]: StructureDefinition-mii-pr-onko-grading.html
 [MII_PR_Onko_Histologie_ICDO3]: StructureDefinition-mii-pr-onko-histologie-icdo3.html
+[MII_PR_Onko_KRK_MRT_Mesorektale_Faszie]: StructureDefinition-mii-pr-onko-krk-mrt-mesorektale-faszie.html
 [MII_PR_Onko_Mamma_Menopausenstatus]: StructureDefinition-mii-pr-onko-mamma-menopause-status.html
 [MII_PR_Onko_Nebenwirkung_Adverse_Event]: StructureDefinition-mii-pr-onko-nebenwirkung-adverse-event.html
 [MII_PR_Onko_Operation]: StructureDefinition-mii-pr-onko-operation.html
@@ -103,13 +109,16 @@
 [MII_PR_Onko_Prostata_Anzahl_Stanzen]: StructureDefinition-mii-pr-onko-prostate-anzahl-stanzen.html
 [MII_PR_Onko_Prostata_Gleason_Grade_Group]: StructureDefinition-mii-pr-onko-prostate-gleason-grade-group.html
 [MII_PR_Onko_Prostata_Gleason_Pattern]: StructureDefinition-mii-pr-onko-prostate-gleason-patterns.html
-[MII_PR_Onko_Mamma_Intraoperatives_Imaging_Specimen]: StructureDefinition-mii-pr-onko-mamma-intraoperatives-imaging-specimen.html
+[MII_PR_Onko_KRK_Operation]: StructureDefinition-mii-pr-onko-krk-operation.html
+[MII_PR_Onko_Mamma_Operation]: StructureDefinition-mii-pr-onko-mamma-intraoperatives-imaging-specimen.html
 [MII_PR_Onko_Mamma_Praeoperative_Markierung]: StructureDefinition-mii-pr-onko-mamma-praeoperative-markierung.html
+[MII_PR_Onko_Mamma_Sozialdienst]: StructureDefinition-mii-pr-onko-mamma-sozialdienst.html
 [MII_PR_Onko_Prostata_PSA]: StructureDefinition-mii-pr-onko-prostate-psa.html
 [MII_PR_Onko_Residualstatus]: StructureDefinition-mii-pr-onko-residualstatus.html
 [MII_PR_Onko_Mamma_Rezeptorstatus_Estrogen]: StructureDefinition-mii-pr-onko-mamma-rezeptorstatus-estrogen.html
 [MII_PR_Onko_Mamma_Rezeptorstatus_Progesteron]: StructureDefinition-mii-pr-onko-mamma-rezeptorstatus-progesteron.html
 [MII_PR_Onko_Specimen]: StructureDefinition-mii-pr-onko-specimen.html
+[MII_PR_Onko_KRK_Specimen]: StructureDefinition-mii-pr-onko-krk-specimen.html
 [MII_PR_Onko_Strahlentherapie_Bestrahlung_Strahlentherapie]: StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.html
 [MII_PR_Onko_Strahlentherapie]: StructureDefinition-mii-pr-onko-strahlentherapie.html
 [MII_PR_Onko_Strahlentherapie_Bestrahlung_Nuklearmedizin]: StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin.html
@@ -132,6 +141,7 @@
 [MII_PR_Onko_TNM_y_Symbol]: StructureDefinition-mii-pr-onko-tnm-y-symbol.html
 [MII_PR_Onko_TNM_Klassifikation]: StructureDefinition-mii-pr-onko-tnm-klassifikation.html
 [MII_PR_Onko_Tod]: StructureDefinition-mii-pr-onko-tod.html
+[MII_PR_Onko_Tumorgroesse]: StructureDefinition-mii-pr-onko-tumorgroesse.html
 [MII_PR_Onko_Tumorkonferenz]: StructureDefinition-mii-pr-onko-tumorkonferenz.html
 [MII_PR_Onko_Verlauf]: StructureDefinition-mii-pr-onko-verlauf.html
 [MII_PR_Onko_Weitere_Klassifikationen]: StructureDefinition-mii-pr-onko-weitere-klassifikationen.html
@@ -207,8 +217,10 @@
 [mii-exa-onko-mamma-example-bundle-1]: Bundle-mii-exa-onko-mamma-example-bundle-1.html
 [mii-exa-onko-mamma-example-patient]: Patient-mii-exa-onko-mamma-example-patient.html
 [mii-exa-onko-mamma-menopause-status-1]: Observation-mii-exa-onko-mamma-menopause-status-1.html
+[mii-exa-onko-mamma-praeoperative-markierung-1]: Procedure-mii-exa-onko-mamma-praeoperative-markierung-1.html
 [mii-exa-onko-mamma-rezeptorstatus-estrogen-1]: Observation-mii-exa-onko-mamma-rezeptorstatus-estrogen-1.html
 [mii-exa-onko-mamma-rezeptorstatus-progesteron-1]: Observation-mii-exa-onko-mamma-rezeptorstatus-progesteron-1.html
+[mii-exa-onko-mamma-tumorgroesse-1]: Observation-mii-exa-onko-mamma-tumorgroesse-1.html
 [mii-exa-onko-prostata-anzahl-positiver-stanzen-1]: Observation-mii-exa-onko-prostata-anzahl-positiver-stanzen-1.html
 [mii-exa-onko-prostata-anzahl-stanzen-1]: Observation-mii-exa-onko-prostata-anzahl-stanzen-1.html
 [mii-exa-onko-prostata-ca-befall-stanze-1]: Observation-mii-exa-onko-prostata-ca-befall-stanze-1.html
@@ -264,9 +276,15 @@
 [mii-sp-onko-procedure-ext-strahlentherapie-bs-zielgebiet]: SearchParameter-mii-sp-onko-procedure-ext-strahlentherapie-bs-zielgebiet.html
 [mii-sp-onko-procedure-ext-strahlentherapie-intention]: SearchParameter-mii-sp-onko-procedure-ext-strahlentherapie-intention.html
 [mii-sp-onko-procedure-ext-systemischetherapie-intention]: SearchParameter-mii-sp-onko-procedure-ext-systemischetherapie-intention.html
+[MII_CS_Onko_KRK_MRT_Mesorektale_Faszie_Status]: CodeSystem-mii-cs-onko-krk-mrt-mesorektale-faszie-status.html
 [MII_VS_Onko_Genetische_Variante_Auspraegung]: ValueSet-mii-vs-onko-genetische-variante-auspraegung.html
+[MII_VS_Onko_KRK_Abstand_Circumferelle_Resektionsrand]: ValueSet-mii-vs-onko-krk-abstand-circumferelle-resektionsrand.html
+[MII_VS_Onko_KRK_Abstand_Resektionslinie_Aboral]: ValueSet-mii-vs-onko-krk-abstand-resektionslinie-aboral.html
+[MII_VS_Onko_KRK_MRT_Mesorektale_Faszie_Status]: ValueSet-mii-vs-onko-krk-mrt-mesorektale-faszie-status.html
+[MII_VS_Onko_KRK_TME_Qualitaet]: ValueSet-mii-vs-onko-krk-tme-qualitaet.html
 [MII_VS_Onko_Mamma_Intraoperatives_Imaging_Praeparat]: ValueSet-mii-vs-onko-mamma-intraoperatives-imaging-praeparat.html
 [MII_VS_Onko_Mamma_Menopause_Status]: ValueSet-mii-vs-onko-mamma-menopause-status.html
+[MII_VS_Onko_Mamma_Operationen]: ValueSet-mii-vs-onko-mamma-operationen.html
 [MII_VS_Onko_Mamma_Praeoperative_Markierung_Modalitaet]: ValueSet-mii-vs-onko-mamma-praeoperative-markierung-modalitaet.html
 [MII_VS_Onko_Mamma_Rezeptorstatus_Leitlinie]: ValueSet-mii-vs-onko-mamma-rezeptorstatus-leitlinie.html
 [MII_VS_Onko_Mamma_Rezeptorstatus_oBDS]: ValueSet-mii-vs-onko-mamma-rezeptorstatus-obds.html

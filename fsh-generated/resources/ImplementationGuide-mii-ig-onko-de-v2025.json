@@ -439,6 +439,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-onko-krk-operationstyp"
+        },
+        "name": "MII CS Onkologie KRK Operationstyp",
+        "description": "oBDS-spezifisches Codesystem TME-Präparat, basierend auf der S3-Leitlinie Mammakarzinom v",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-onko-mamma-rezeptorstatus-leitlinie"
         },
         "name": "MII CS Onkologie Mamma Rezeptorstatus",
@@ -555,6 +563,14 @@
         },
         "name": "MII CS Onkologie Therapieplanung Typ",
         "description": "oBDS-spezifisches Codesystem für den Therapieplanungstyp",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-krk-tme-qualitaet"
+        },
+        "name": "MII CS Onkologie TME Qualität",
+        "description": "oBDS-spezifisches Codesystem TME-Präparat, basierend auf der S3-Leitlinie Mammakarzinom v",
         "exampleBoolean": false
       },
       {
@@ -735,6 +751,30 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-krk-abstand-aboral"
+        },
+        "name": "MII PR Onkologie Abstand Aboral",
+        "description": "Dieses Profil beschreibt den minimalen Abstand des Tumorrandes zur aboralen Dissektionlinie im Kolorektalen Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-krk-abstand-anokutan"
+        },
+        "name": "MII PR Onkologie Abstand Anokutan",
+        "description": "Dieses Profil beschreibt den Abstand des Tumorunterrandes zur Anokutanlinie im Kolorektalen Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-krk-abstand-circumferelle-resektionsebene"
+        },
+        "name": "MII PR Onkologie Abstand Circumferelle Resektionsebene",
+        "description": "Dieses Profil beschreibt den minimalen Abstand des Tumorrandes zur circumferellen Dissektionlinie beim Kolorektalen Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog"
         },
         "name": "MII PR Onkologie Allgemeiner Leistungszustand ECOG",
@@ -855,6 +895,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-krk-mrt-mesorektale-faszie"
+        },
+        "name": "MII PR Onkologie KRK MRT/CT Abstand Mesorektale Faszie",
+        "description": "Dieses Profil beschreibt den Abstand des Tumors zur mesorektalen Faszie bei MRT oder Dünnschicht-CT Untersuchung beim Kolorektalen Karzinom (oBDS KR5)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-mamma-menopause-status"
         },
         "name": "MII PR Onkologie Menopausenstatus Mamma",
@@ -911,6 +959,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-krk-operation"
+        },
+        "name": "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
+        "description": "Das vorliegende Profil beschreibt eine radiologisch durchgeführte Markierung von Tumorgewebe mittels  der Brust. Dabei können verschiedene Methoden gewählt werden. Die  ",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-mamma-intraoperatives-imaging-specimen"
         },
         "name": "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
@@ -920,6 +976,14 @@
       {
         "reference": {
           "reference": "StructureDefinition/mii-pr-onko-mamma-praeoperative-markierung"
+        },
+        "name": "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
+        "description": "Das vorliegende Profil beschreibt eine radiologisch durchgeführte Markierung von Tumorgewebe mittels  der Brust. Dabei können verschiedene Methoden gewählt werden. Die  ",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-mamma-sozialdienst"
         },
         "name": "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
         "description": "Das vorliegende Profil beschreibt eine radiologisch durchgeführte Markierung von Tumorgewebe mittels  der Brust. Dabei können verschiedene Methoden gewählt werden. Die  ",
@@ -960,6 +1024,14 @@
       {
         "reference": {
           "reference": "StructureDefinition/mii-pr-onko-specimen"
+        },
+        "name": "MII PR Onkologie Specimen",
+        "description": "Histologie: Dieses Profil beschreibt eine Gewebeprobe in der Onkologie.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-krk-specimen"
         },
         "name": "MII PR Onkologie Specimen",
         "description": "Histologie: Dieses Profil beschreibt eine Gewebeprobe in der Onkologie.",
@@ -1139,6 +1211,14 @@
         },
         "name": "MII PR Onkologie Tod",
         "description": "Tumorbedingter Tod",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-tumorgroesse"
+        },
+        "name": "MII PR Onkologie Tumorgröße",
+        "description": "Tumorgröße in mm. Gibt die Größe des Tumors in der größten Dimension an. Basierend auf dem oBDS-Modul Mamma. ",
         "exampleBoolean": false
       },
       {
@@ -1727,6 +1807,13 @@
       },
       {
         "reference": {
+          "reference": "Procedure/mii-exa-onko-mamma-praeoperative-markierung-1"
+        },
+        "name": "mii-exa-onko-mamma-praeoperative-markierung-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-praeoperative-markierung"
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-onko-mamma-rezeptorstatus-estrogen-1"
         },
         "name": "mii-exa-onko-mamma-rezeptorstatus-estrogen-1",
@@ -1738,6 +1825,13 @@
         },
         "name": "mii-exa-onko-mamma-rezeptorstatus-progesteron-1",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-rezeptorstatus-progesteron"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-mamma-tumorgroesse-1"
+        },
+        "name": "mii-exa-onko-mamma-tumorgroesse-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorgroesse"
       },
       {
         "reference": {
@@ -2144,10 +2238,50 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-onko-krk-mrt-mesorektale-faszie-status"
+        },
+        "name": "MII_CS_Onko_KRK_MRT_Mesorektale_Faszie_Status",
+        "description": "oBDS-basiertes Codesystem für den Status der MRT/CT Untersuchung zur mesorektalen Faszie beim Kolorektalen Karzinom (KR5)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-genetische-variante-auspraegung"
         },
         "name": "MII_VS Onkologie Genetische Variante Ausprägung",
         "description": "Value Set für oBDS-Codes für Ausprägung der Genetischen Variante",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-krk-abstand-circumferelle-resektionsrand"
+        },
+        "name": "MII_VS_Onko_KRK_Abstand_Circumferelle_Resektionsrand",
+        "description": "Value Set für semantische Kodierung des oBDS-Abstand des Tumorrandes zur circumferellen Resektionsrand im Kolorektalen Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-krk-abstand-resektionslinie-aboral"
+        },
+        "name": "MII_VS_Onko_KRK_Abstand_Resektionslinie_Aboral",
+        "description": "Value Set für semantische Kodierung des oBDS-Abstand des Tumorrandes zur aboralen Resektionslinie im Kolorektalen Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-krk-mrt-mesorektale-faszie-status"
+        },
+        "name": "MII_VS_Onko_KRK_MRT_Mesorektale_Faszie_Status",
+        "description": "Value Set für semantische Kodierung des oBDS-Status der MRT/CT Untersuchung zur mesorektalen Faszie beim Kolorektalen Karzinom (KR5)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-krk-tme-qualitaet"
+        },
+        "name": "MII_VS_Onko_KRK_TME_Qualitaet",
+        "description": "Value Set für semantische Kodierung des oBDS-Abstand des Tumorrandes zur aboralen Resektionslinie im Kolorektalen Karzinom",
         "exampleBoolean": false
       },
       {
@@ -2164,6 +2298,14 @@
         },
         "name": "MII_VS_Onko_Mamma_Menopause_Status",
         "description": "Value Set für (prätherapeutischen) Status der Menopause Score",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-operationen"
+        },
+        "name": "MII_VS_Onko_Mamma_Operationen",
+        "description": "Value Set für oBDS-Rezeptorstatus Mamma",
         "exampleBoolean": false
       },
       {
