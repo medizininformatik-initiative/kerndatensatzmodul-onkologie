@@ -18,8 +18,8 @@ Description: "Das vorliegende Profil beschreibt eine radiologisch durchgeführte
 * status MS
 * code MS
 * code 1..1 
-* code ^definition = "Operation der Brust, z.B. Exzision eines Tumors, Entfernung eines Lymphknotens"
-* code ^short = "Operation der Brust"
+* code ^definition = "Operation des Kolons und des Rektums, z.B. Exzision eines Tumors, "
+* code ^short = "Kolorektale Operation"
 * code.coding MS // OPS-2025 Code einfach, oder 
 //* code.coding[sct] from mii-vs-onko-mamma-operationen (extensible)
 

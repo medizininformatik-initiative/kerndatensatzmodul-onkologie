@@ -20,7 +20,7 @@ Description: "Dieses Profil beschreibt den minimalen Abstand des Tumorrandes zur
 * code 1..1 
 * code ^definition = "Minimaler Abstand des Tumorrandes zum circumferellen Resektionsrand in mm., gemäß oBDS 2021 KR3 - makroskopisch oder mikroskopisch"
 * code ^short = "Minimaler Abstand Tumorrand circumferell - makroskopisch oder mikroskopisch"
-* code.coding from MII_VS_Onko_KRK_Abstand_Resektionslinie_Aboral (extensible)
+* code.coding from MII_VS_Onko_KRK_Abstand_Circumferelle_Resektionsrand (extensible)
 // mikroskopisch 
 
 * value[x] MS
