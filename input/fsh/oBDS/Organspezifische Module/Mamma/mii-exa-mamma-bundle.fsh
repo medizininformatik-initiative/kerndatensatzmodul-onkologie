@@ -2,10 +2,22 @@ Instance: mii-exa-onko-mamma-example-bundle-1
 InstanceOf: Bundle
 Usage: #example
 * type = #transaction
-* entry[+].resource = mii-exa-onko-mamma-example-condition
-* entry[+].resource = mii-exa-onko-mamma-menopause-status-1
-* entry[+].resource = mii-exa-onko-mamma-rezeptorstatus-estrogen-1
-* entry[+].resource = mii-exa-onko-mamma-rezeptorstatus-progesteron-1
+* entry[+].fullUrl = "Condition/mii-exa-onko-mamma-example-condition"
+* entry[=].resource = mii-exa-onko-mamma-example-condition
+* entry[=].request.method = #POST
+* entry[=].request.url = "Condition"
+* entry[+].fullUrl = "Observation/mii-exa-onko-mamma-menopause-status-1"
+* entry[=].resource = mii-exa-onko-mamma-menopause-status-1
+* entry[=].request.method = #POST
+* entry[=].request.url = "Observation"
+* entry[+].fullUrl = "Observation/mii-exa-onko-mamma-rezeptorstatus-estrogen-1"
+* entry[=].resource = mii-exa-onko-mamma-rezeptorstatus-estrogen-1
+* entry[=].request.method = #POST
+* entry[=].request.url = "Observation"
+* entry[+].fullUrl = "Observation/mii-exa-onko-mamma-rezeptorstatus-progesteron-1"
+* entry[=].resource = mii-exa-onko-mamma-rezeptorstatus-progesteron-1
+* entry[=].request.method = #POST
+* entry[=].request.url = "Observation"
 
 
 Instance: mii-exa-onko-mamma-example-patient
@@ -17,9 +29,9 @@ Usage: #example
 Instance: mii-exa-onko-mamma-example-condition
 InstanceOf: MII_PR_Onko_Diagnose_Primaertumor
 Usage: #inline
-* clinicalStatus = #active
-* verificationStatus = #confirmed
-* code.coding[icd10-gm] = $ICD10GM#C50.3 "Bösartige Neubildung der Brustdrüse [Mamma] - Unterer innerer Quadrant der Brustdrüse"
+* clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active
+* verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed
+* code.coding[icd10-gm] = $ICD10GM#C50.3 "Bösartige Neubildung: Unterer innerer Quadrant der Brustdrüse"
 * code.coding[icd10-gm].version = "2024"
 * subject = Reference(mii-exa-onko-mamma-example-patient)
 * recordedDate = "2024-01-02"

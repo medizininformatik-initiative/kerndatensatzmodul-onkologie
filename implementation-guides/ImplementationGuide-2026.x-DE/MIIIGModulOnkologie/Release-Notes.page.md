@@ -15,6 +15,8 @@ Hier sind  alle Änderungen aufgelistet.
     - ServiceRequests
 -
 
+## Änderungen in 2026.0.0-ballot-release
+
 ## Änderungen in 2025.1.0 (veröffentlicht 12.06.2025)
 - Umprofilierung des Strahlentherapie-Profils (BREAKING CHANGE!)
     - bisher: 

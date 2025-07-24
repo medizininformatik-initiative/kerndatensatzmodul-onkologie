@@ -1,4 +1,16 @@
 
+Instance: mii-exa-onko-krk-example-patient
+InstanceOf: Patient
+Usage: #example
+* name.given = "Klaus"
+* name.family = "KolorektalCa"
+
+Instance: mii-exa-onko-krk-example-encounter
+InstanceOf: Encounter
+Usage: #example  
+* status = #finished
+* class = http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP "inpatient encounter"
+* subject = Reference(mii-exa-onko-krk-example-patient)
 
 Instance: mii-exa-onko-krk-bundle
 InstanceOf: Bundle
@@ -10,52 +22,74 @@ Description: "Beispiel-Bundle für Kolorektales Karzinom mit allen spezifischen 
 * identifier.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"
 * identifier.value = "krk-example-bundle-2024-001"
 
-* type = #collection
+* type = #transaction
 * timestamp = "2024-03-25T10:00:00+01:00"
 
 // Patient
-* entry[0].fullUrl = "Patient/example"
-* entry[=].resource = example
+* entry[0].fullUrl = "Patient/mii-exa-onko-krk-example-patient"
+* entry[=].resource = mii-exa-onko-krk-example-patient
+* entry[=].request.method = #POST
+* entry[=].request.url = "Patient"
 
 // Primary tumor diagnosis
 * entry[+].fullUrl = "Condition/mii-exa-onko-diagnose-primaertumor-krk"
 * entry[=].resource = mii-exa-onko-diagnose-primaertumor-krk
+* entry[=].request.method = #POST
+* entry[=].request.url = "Condition"
 
 // Encounter
-* entry[+].fullUrl = "Encounter/example"
-* entry[=].resource = example
+* entry[+].fullUrl = "Encounter/mii-exa-onko-krk-example-encounter"
+* entry[=].resource = mii-exa-onko-krk-example-encounter
+* entry[=].request.method = #POST
+* entry[=].request.url = "Encounter"
 
 // Stoma marking procedure
 * entry[+].fullUrl = "Procedure/mii-exa-onko-krk-stoma-markierung"  
 * entry[=].resource = mii-exa-onko-krk-stoma-markierung
+* entry[=].request.method = #POST
+* entry[=].request.url = "Procedure"
 
 // Distance to anal verge observation
 * entry[+].fullUrl = "Observation/mii-exa-onko-krk-abstand-tumor-anokutanlinie"
 * entry[=].resource = mii-exa-onko-krk-abstand-tumor-anokutanlinie
+* entry[=].request.method = #POST
+* entry[=].request.url = "Observation"
 
 // Circumferential resection margin observation
 * entry[+].fullUrl = "Observation/mii-exa-onko-krk-abstand-circumferelle-resektionsebene"
 * entry[=].resource = mii-exa-onko-krk-abstand-circumferelle-resektionsebene
+* entry[=].request.method = #POST
+* entry[=].request.url = "Observation"
 
 // Aboral resection margin observation
 * entry[+].fullUrl = "Observation/mii-exa-onko-krk-abstand-resektionsrand-aboral"
 * entry[=].resource = mii-exa-onko-krk-abstand-resektionsrand-aboral
+* entry[=].request.method = #POST
+* entry[=].request.url = "Observation"
 
 // MRT mesorectal fascia observation
 * entry[+].fullUrl = "Observation/mii-exa-onko-krk-abstand-mesorektale-fascie"
 * entry[=].resource = mii-exa-onko-krk-abstand-mesorektale-fascie
+* entry[=].request.method = #POST
+* entry[=].request.url = "Observation"
 
 // KRK operation procedure
 * entry[+].fullUrl = "Procedure/mii-exa-onko-krk-operation"
 * entry[=].resource = mii-exa-onko-krk-operation
+* entry[=].request.method = #POST
+* entry[=].request.url = "Procedure"
 
 // KRK specimen
 * entry[+].fullUrl = "Specimen/mii-exa-onko-krk-specimen"
 * entry[=].resource = mii-exa-onko-krk-specimen
+* entry[=].request.method = #POST
+* entry[=].request.url = "Specimen"
 
 // KRK anastomotic insufficiency observation
 * entry[+].fullUrl = "Observation/mii-exa-onko-krk-anastomoseninsuffizienz"
 * entry[=].resource = mii-exa-onko-krk-anastomoseninsuffizienz
+* entry[=].request.method = #POST
+* entry[=].request.url = "Observation"
 
 Instance: mii-exa-onko-diagnose-primaertumor-krk
 InstanceOf: MII_PR_Onko_Diagnose_Primaertumor

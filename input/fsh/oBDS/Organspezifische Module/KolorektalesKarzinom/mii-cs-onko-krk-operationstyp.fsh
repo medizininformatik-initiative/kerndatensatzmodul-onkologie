@@ -9,7 +9,7 @@ Description: "oBDS-spezifisches Codesystem TME-Präparat, basierend auf der S3-L
 * insert Publisher
 * insert PR_CS_VS_Version
 * ^caseSensitive = true
-* ^content = #incomplete
+* ^content = #fragment
 * #T "TME" "Totale mesorektale Exzision" // ergänzt, im Original-oBDS nicht enthalten
 * #P "PME" "Partielle mesorektale Exzision"
 * #L "Lokale Exzision" "Lokale Exzision des Rektums"
