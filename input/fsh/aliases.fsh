@@ -13,7 +13,7 @@ Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-cli
 Alias: $request-status = http://hl7.org/fhir/request-status
 Alias: $request-intent = http://hl7.org/fhir/request-intent
 Alias: $care-plan-activity-status = http://hl7.org/fhir/care-plan-activity-status
-
+Alias: $observation-interpretation = http://terminology.hl7.org/CodeSystem/observation-interpretation
 // Code Systems
 Alias: $CTCAE = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
 Alias: $MDRAE = http://terminology.hl7.org/CodeSystem/MDRGER

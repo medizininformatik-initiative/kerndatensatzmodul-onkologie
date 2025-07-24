@@ -48,6 +48,7 @@
 [MII_CS_Onko_KRK_Anastomoseninsuffizienz]: CodeSystem-mii-cs-onko-krk-anastomoseninsuffizienz.html
 [MII_CS_Onko_KRK_Operationstyp]: CodeSystem-mii-cs-onko-krk-operationstyp.html
 [MII_CS_Onko_Mamma_Rezeptorstatus_Leitlinie]: CodeSystem-mii-cs-onko-mamma-rezeptorstatus-leitlinie.html
+[MII_CS_Onko_Melanom_Ulzeration]: CodeSystem-mii-cs-onko-melanom-ulzeration.html
 [MII_CS_Onko_Operation_Komplikationen]: CodeSystem-mii-cs-onko-operation-komplikation.html
 [MII_CS_Onko_Primaertumor_Diagnosesicherung]: CodeSystem-mii-cs-onko-primaertumor-diagnosesicherung.html
 [MII_CS_Onko_Seitenlokalisation]: CodeSystem-mii-cs-onko-seitenlokalisation.html
@@ -94,6 +95,10 @@
 [mii-exa-onko-krk-operation]: Procedure-mii-exa-onko-krk-operation.html
 [mii-exa-onko-krk-specimen]: Specimen-mii-exa-onko-krk-specimen.html
 [mii-exa-onko-krk-stoma-markierung]: Procedure-mii-exa-onko-krk-stoma-markierung.html
+[mii-exa-onko-melanom-breslow-tiefe]: Observation-mii-exa-onko-melanom-breslow-tiefe.html
+[mii-exa-onko-melanom-ldh]: Observation-mii-exa-onko-melanom-ldh.html
+[mii-exa-onko-melanom-sicherheitsabstand]: Observation-mii-exa-onko-melanom-sicherheitsabstand.html
+[mii-exa-onko-melanom-ulzeration]: Observation-mii-exa-onko-melanom-ulzeration.html
 [MII_LM_MVGenomSeq_Onkologie]: StructureDefinition-mii-lm-mvgenomseq-onkologie.html
 [MII_LM_Onko]: StructureDefinition-mii-lm-onko.html
 [MII_PR_Onko_KRK_Abstand_Aboral]: StructureDefinition-mii-pr-onko-krk-abstand-aboral.html
@@ -117,6 +122,10 @@
 [MII_PR_Onko_KRK_Anastomoseninsuffizienz]: StructureDefinition-mii-pr-onko-krk-anastomoseninsuffizienz.html
 [MII_PR_Onko_KRK_MRT_Mesorektale_Faszie]: StructureDefinition-mii-pr-onko-krk-mrt-mesorektale-faszie.html
 [MII_PR_Onko_KRK_Stoma_Markierung]: StructureDefinition-mii-pr-onko-krk-stoma-markierung.html
+[MII_PR_Onko_Melanom_Breslow_Tiefe]: StructureDefinition-mii-pr-onko-melanom-breslow-tiefe.html
+[MII_PR_Onko_Melanom_LDH]: StructureDefinition-mii-pr-onko-melanom-ldh.html
+[MII_PR_Onko_Melanom_Sicherheitsabstand]: StructureDefinition-mii-pr-onko-melanom-sicherheitsabstand.html
+[MII_PR_Onko_Melanom_Ulzeration]: StructureDefinition-mii-pr-onko-melanom-ulzeration.html
 [MII_PR_Onko_Mamma_Menopausenstatus]: StructureDefinition-mii-pr-onko-mamma-menopause-status.html
 [MII_PR_Onko_Nebenwirkung_Adverse_Event]: StructureDefinition-mii-pr-onko-nebenwirkung-adverse-event.html
 [MII_PR_Onko_Operation]: StructureDefinition-mii-pr-onko-operation.html
@@ -169,6 +178,7 @@
 [MII_VS_Onko_Grading]: ValueSet-mii-vs-onko-grading.html
 [MII_VS_Onko_ICDO3_Morphologie]: ValueSet-mii-vs-onko-icdo3-morphologie.html
 [MII_VS_Onko_ICDO3_Topographie]: ValueSet-mii-vs-onko-icdo3-topographie.html
+[MII_VS_Onko_Melanom_Ulzeration]: ValueSet-mii-vs-onko-melanom-ulzeration.html
 [MII_VS_Onko_Nebenwirkung_Art]: ValueSet-mii-vs-onko-nebenwirkung-art.html
 [MII_VS_Onko_Nebenwirkung_CTCAE_Grad]: ValueSet-mii-vs-onko-nebenwirkung-ctcae-grad.html
 [MII_VS_Onko_Operation_Intention]: ValueSet-mii-vs-onko-operation-intention.html
@@ -308,6 +318,7 @@
 [MII_VS_Onko_Mamma_Praeoperative_Markierung_Modalitaet]: ValueSet-mii-vs-onko-mamma-praeoperative-markierung-modalitaet.html
 [MII_VS_Onko_Mamma_Rezeptorstatus_Leitlinie]: ValueSet-mii-vs-onko-mamma-rezeptorstatus-leitlinie.html
 [MII_VS_Onko_Mamma_Rezeptorstatus_oBDS]: ValueSet-mii-vs-onko-mamma-rezeptorstatus-obds.html
+[MII_VS_Onko_Melanom_LDH]: ValueSet-mii-vs-onko-melanom-ldh.html
 [MII_VS_Onko_Operation_Urgency]: ValueSet-mii-vs-onko-operation-urgency.html
 [MII_VS_Onko_Prostata_Clavien_Dindo]: ValueSet-mii-vs-onko-prostata-clavien-dindo.html
 [MII_VS_Onko_Prostata_Gleason_PrimarySecondaryTertiary]: ValueSet-mii-vs-onko-prostata-gleason-primary-secondary-tertiary.html

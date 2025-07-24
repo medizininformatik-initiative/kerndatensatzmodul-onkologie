@@ -471,6 +471,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-onko-melanom-ulzeration"
+        },
+        "name": "MII CS Onkologie Melanom Ulzeration",
+        "description": "Codes für die Ulzeration beim Malignen Melanom der Haut nach oBDS",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-onko-operation-komplikation"
         },
         "name": "MII CS Onkologie Operation Komplikationen",
@@ -839,6 +847,38 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-onko-melanom-breslow-tiefe"
+        },
+        "name": "MII EXA Onko Melanom Breslow Tiefe",
+        "description": "Beispiel für die Messung der Breslow-Tumordicke beim Malignen Melanom",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-breslow-tiefe"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-melanom-ldh"
+        },
+        "name": "MII EXA Onko Melanom LDH",
+        "description": "Beispiel für einen LDH Laborwert beim Malignen Melanom",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-ldh"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-melanom-sicherheitsabstand"
+        },
+        "name": "MII EXA Onko Melanom Sicherheitsabstand",
+        "description": "Beispiel für die Messung des Sicherheitsabstands beim Malignen Melanom",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-sicherheitsabstand"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-melanom-ulzeration"
+        },
+        "name": "MII EXA Onko Melanom Ulzeration",
+        "description": "Beispiel für die Bestimmung der Ulzeration beim Malignen Melanom",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-ulzeration"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-lm-mvgenomseq-onkologie"
         },
         "name": "MII LM Modellvorhaben Genomsequenzierung Onkologie",
@@ -1019,6 +1059,38 @@
         },
         "name": "MII PR Onkologie KRK Stoma-Markierung",
         "description": "Dieses Profil beschreibt die präoperative Markierung der geplanten Stoma-Position beim Kolorektalen Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-melanom-breslow-tiefe"
+        },
+        "name": "MII PR Onkologie Melanom Breslow Tiefe",
+        "description": "Dieses Profil beschreibt die Breslow-Tumordicke beim Malignen Melanom der Haut",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-melanom-ldh"
+        },
+        "name": "MII PR Onkologie Melanom LDH",
+        "description": "Dieses Profil beschreibt die Laktatdehydrogenase (LDH) Laborwerte beim Malignen Melanom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-melanom-sicherheitsabstand"
+        },
+        "name": "MII PR Onkologie Melanom Sicherheitsabstand",
+        "description": "Dieses Profil beschreibt den minimalen Sicherheitsabstand zum Primärtumor beim Malignen Melanom basierend oBDS Feld MM1. Abweichend ",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-melanom-ulzeration"
+        },
+        "name": "MII PR Onkologie Melanom Ulzeration",
+        "description": "Dieses Profil beschreibt die Ulzeration beim Malignen Melanom der Haut",
         "exampleBoolean": false
       },
       {
@@ -1435,6 +1507,14 @@
         },
         "name": "MII VS Onkologie ICD-O-3 Topographie",
         "description": "Codes für Topographie einer neoplastischen Veränderung",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-melanom-ulzeration"
+        },
+        "name": "MII VS Onkologie Melanom Ulzeration",
+        "description": "Codes für die Ulzeration beim Malignen Melanom der Haut",
         "exampleBoolean": false
       },
       {
@@ -2490,6 +2570,14 @@
         },
         "name": "MII_VS_Onko_Mamma_Rezeptorstatus_oBDS",
         "description": "Value Set für oBDS-Rezeptorstatus Mamma",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-melanom-ldh"
+        },
+        "name": "MII_VS_Onko_Melanom_LDH",
+        "description": "Value Set für Laktatdehydrogenase (LDH) Laborwerte beim Malignen Melanom",
         "exampleBoolean": false
       },
       {
