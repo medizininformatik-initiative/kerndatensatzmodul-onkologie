@@ -10,108 +10,26 @@
     "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko",
     "value": "krk-example-bundle-2024-001"
   },
-  "type": "collection",
+  "type": "transaction",
   "timestamp": "2024-03-25T10:00:00+01:00",
   "entry": [
     {
-      "fullUrl": "Patient/example",
+      "fullUrl": "Patient/mii-exa-onko-krk-example-patient",
       "resource": {
-        "resourceType": "CodeSystem",
-        "id": "example",
-        "meta": {
-          "lastUpdated": "2019-11-01T09:29:23.356+11:00",
-          "profile": [
-            "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
-          ]
-        },
-        "extension": [
+        "resourceType": "Patient",
+        "id": "mii-exa-onko-krk-example-patient",
+        "name": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
-            "valueCode": "fhir"
-          }
-        ],
-        "url": "http://hl7.org/fhir/CodeSystem/example",
-        "identifier": [
-          {
-            "system": "http://acme.com/identifiers/codesystems",
-            "value": "internal-cholesterol-inl"
-          }
-        ],
-        "version": "4.0.1",
-        "name": "ACMECholCodesBlood",
-        "title": "ACME Codes for Cholesterol in Serum/Plasma",
-        "status": "draft",
-        "experimental": true,
-        "date": "2016-01-28",
-        "publisher": "Acme Co",
-        "contact": [
-          {
-            "name": "FHIR project team",
-            "telecom": [
-              {
-                "system": "url",
-                "value": "http://hl7.org/fhir"
-              }
-            ]
-          }
-        ],
-        "description": "This is an example code system that includes all the ACME codes for serum/plasma cholesterol from v2.36.",
-        "caseSensitive": true,
-        "content": "complete",
-        "filter": [
-          {
-            "code": "acme-plasma",
-            "description": "An internal filter used to select codes that are only used with plasma",
-            "operator": [
-              "="
+            "given": [
+              "Klaus"
             ],
-            "value": "the value of this filter is either 'true' or 'false'"
-          }
-        ],
-        "concept": [
-          {
-            "code": "chol-mmol",
-            "display": "SChol (mmol/L)",
-            "definition": "Serum Cholesterol, in mmol/L",
-            "designation": [
-              {
-                "use": {
-                  "system": "http://acme.com/config/fhir/codesystems/internal",
-                  "code": "internal-label"
-                },
-                "value": "From ACME POC Testing"
-              }
-            ]
-          },
-          {
-            "code": "chol-mass",
-            "display": "SChol (mg/L)",
-            "definition": "Serum Cholesterol, in mg/L",
-            "designation": [
-              {
-                "use": {
-                  "system": "http://acme.com/config/fhir/codesystems/internal",
-                  "code": "internal-label"
-                },
-                "value": "From Paragon Labs"
-              }
-            ]
-          },
-          {
-            "code": "chol",
-            "display": "SChol",
-            "definition": "Serum Cholesterol",
-            "designation": [
-              {
-                "use": {
-                  "system": "http://acme.com/config/fhir/codesystems/internal",
-                  "code": "internal-label"
-                },
-                "value": "Obdurate Labs uses this with both kinds of units..."
-              }
-            ]
+            "family": "KolorektalCa"
           }
         ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient"
       }
     },
     {
@@ -158,107 +76,30 @@
           "reference": "Patient/example"
         },
         "recordedDate": "2024-01-02"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
       }
     },
     {
-      "fullUrl": "Encounter/example",
+      "fullUrl": "Encounter/mii-exa-onko-krk-example-encounter",
       "resource": {
-        "resourceType": "CodeSystem",
-        "id": "example",
-        "meta": {
-          "lastUpdated": "2019-11-01T09:29:23.356+11:00",
-          "profile": [
-            "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
-          ]
+        "resourceType": "Encounter",
+        "id": "mii-exa-onko-krk-example-encounter",
+        "status": "finished",
+        "class": {
+          "code": "IMP",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "display": "inpatient encounter"
         },
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
-            "valueCode": "fhir"
-          }
-        ],
-        "url": "http://hl7.org/fhir/CodeSystem/example",
-        "identifier": [
-          {
-            "system": "http://acme.com/identifiers/codesystems",
-            "value": "internal-cholesterol-inl"
-          }
-        ],
-        "version": "4.0.1",
-        "name": "ACMECholCodesBlood",
-        "title": "ACME Codes for Cholesterol in Serum/Plasma",
-        "status": "draft",
-        "experimental": true,
-        "date": "2016-01-28",
-        "publisher": "Acme Co",
-        "contact": [
-          {
-            "name": "FHIR project team",
-            "telecom": [
-              {
-                "system": "url",
-                "value": "http://hl7.org/fhir"
-              }
-            ]
-          }
-        ],
-        "description": "This is an example code system that includes all the ACME codes for serum/plasma cholesterol from v2.36.",
-        "caseSensitive": true,
-        "content": "complete",
-        "filter": [
-          {
-            "code": "acme-plasma",
-            "description": "An internal filter used to select codes that are only used with plasma",
-            "operator": [
-              "="
-            ],
-            "value": "the value of this filter is either 'true' or 'false'"
-          }
-        ],
-        "concept": [
-          {
-            "code": "chol-mmol",
-            "display": "SChol (mmol/L)",
-            "definition": "Serum Cholesterol, in mmol/L",
-            "designation": [
-              {
-                "use": {
-                  "system": "http://acme.com/config/fhir/codesystems/internal",
-                  "code": "internal-label"
-                },
-                "value": "From ACME POC Testing"
-              }
-            ]
-          },
-          {
-            "code": "chol-mass",
-            "display": "SChol (mg/L)",
-            "definition": "Serum Cholesterol, in mg/L",
-            "designation": [
-              {
-                "use": {
-                  "system": "http://acme.com/config/fhir/codesystems/internal",
-                  "code": "internal-label"
-                },
-                "value": "From Paragon Labs"
-              }
-            ]
-          },
-          {
-            "code": "chol",
-            "display": "SChol",
-            "definition": "Serum Cholesterol",
-            "designation": [
-              {
-                "use": {
-                  "system": "http://acme.com/config/fhir/codesystems/internal",
-                  "code": "internal-label"
-                },
-                "value": "Obdurate Labs uses this with both kinds of units..."
-              }
-            ]
-          }
-        ]
+        "subject": {
+          "reference": "Patient/mii-exa-onko-krk-example-patient"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
       }
     },
     {
@@ -316,6 +157,10 @@
             "text": "Präoperative Markierung der geplanten Stoma-Position im rechten Hemiabdomen nach Rücksprache mit dem Patienten"
           }
         ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Procedure"
       }
     },
     {
@@ -356,6 +201,10 @@
           }
         ],
         "effectiveDateTime": "2024-03-10T14:30:00+01:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
       }
     },
     {
@@ -396,6 +245,10 @@
           }
         ],
         "effectiveDateTime": "2024-03-20T10:15:00+01:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
       }
     },
     {
@@ -436,6 +289,10 @@
           }
         ],
         "effectiveDateTime": "2024-03-20T10:15:00+01:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
       }
     },
     {
@@ -476,6 +333,10 @@
           }
         ],
         "effectiveDateTime": "2024-03-12T16:00:00+01:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
       }
     },
     {
@@ -539,6 +400,10 @@
             "text": "Laparoskopische Resektion beim kolorektalen Karzinom"
           }
         ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Procedure"
       }
     },
     {
@@ -586,6 +451,10 @@
             "text": "Sigmaresekat mit Primärtumor und regionären Lymphknoten"
           }
         ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Specimen"
       }
     },
     {
@@ -629,6 +498,10 @@
             }
           ]
         }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
       }
     }
   ]

@@ -4,6 +4,7 @@
   "type": "transaction",
   "entry": [
     {
+      "fullUrl": "Condition/mii-exa-onko-mamma-example-condition",
       "resource": {
         "resourceType": "Condition",
         "id": "mii-exa-onko-mamma-example-condition",
@@ -23,7 +24,7 @@
             {
               "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
               "code": "C50.3",
-              "display": "Bösartige Neubildung der Brustdrüse [Mamma] - Unterer innerer Quadrant der Brustdrüse",
+              "display": "Bösartige Neubildung: Unterer innerer Quadrant der Brustdrüse",
               "version": "2024"
             }
           ]
@@ -31,14 +32,16 @@
         "clinicalStatus": {
           "coding": [
             {
-              "code": "active"
+              "code": "active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
             }
           ]
         },
         "verificationStatus": {
           "coding": [
             {
-              "code": "confirmed"
+              "code": "confirmed",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
             }
           ]
         },
@@ -46,9 +49,14 @@
           "reference": "Patient/mii-exa-onko-mamma-example-patient"
         },
         "recordedDate": "2024-01-02"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
       }
     },
     {
+      "fullUrl": "Observation/mii-exa-onko-mamma-menopause-status-1",
       "resource": {
         "resourceType": "Observation",
         "id": "mii-exa-onko-mamma-menopause-status-1",
@@ -84,9 +92,14 @@
             }
           ]
         }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
       }
     },
     {
+      "fullUrl": "Observation/mii-exa-onko-mamma-rezeptorstatus-estrogen-1",
       "resource": {
         "resourceType": "Observation",
         "id": "mii-exa-onko-mamma-rezeptorstatus-estrogen-1",
@@ -160,9 +173,14 @@
             }
           ]
         }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
       }
     },
     {
+      "fullUrl": "Observation/mii-exa-onko-mamma-rezeptorstatus-progesteron-1",
       "resource": {
         "resourceType": "Observation",
         "id": "mii-exa-onko-mamma-rezeptorstatus-progesteron-1",
@@ -236,6 +254,10 @@
             }
           ]
         }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
       }
     }
   ]
