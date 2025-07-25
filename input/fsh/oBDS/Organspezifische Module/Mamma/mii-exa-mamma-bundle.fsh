@@ -50,9 +50,9 @@ Instance: mii-exa-onko-mamma-rezeptorstatus-estrogen-1
 InstanceOf: MII_PR_Onko_Mamma_Rezeptorstatus_Estrogen
 Usage: #example
 * status = #final
-* code.coding = $LNC#40556-3 "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain" 
 * subject = Reference(mii-exa-onko-mamma-example-patient)
 * focus = Reference(Condition/mii-exa-onko-mamma-example-condition)
+* code.coding = $LNC#40556-3 "Estrogen receptor Ag [Presence] in Tissue by Immune stain" 
 * valueCodeableConcept.coding = $LNC#LA6576-8 "Positive"
 * component[AnteilPositiveZellen].valueQuantity.value = 5
 * component[AnteilPositiveZellen].valueQuantity.unit = "%"
@@ -63,7 +63,7 @@ Instance: mii-exa-onko-mamma-rezeptorstatus-progesteron-1
 InstanceOf: MII_PR_Onko_Mamma_Rezeptorstatus_Progesteron
 Usage: #example
 * status = #final
-* code.coding = $LNC#85339-0 "Progesteron receptor Ag [Presence] in Breast cancer specimen by Immune stain" 
+* code.coding = $LNC#85339-0 "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"
 * subject = Reference(mii-exa-onko-mamma-example-patient)
 * focus = Reference(Condition/mii-exa-onko-mamma-example-condition)
 * valueCodeableConcept.coding[DefinitionOBDS] = $LNC#LA6576-8 "Positive"
@@ -73,8 +73,6 @@ Usage: #example
 * component[Faerbeintensitaet].valueCodeableConcept.coding = $LNC#LA13034-6 "Weak"  
 
 
-
-// her2 neu from MTB?
 
 Instance: mii-exa-onko-mamma-praeoperative-markierung-1
 InstanceOf: MII_PR_Onko_Mamma_Praeoperative_Markierung
@@ -89,7 +87,7 @@ Instance: mii-exa-onko-mamma-tumorgroesse-1
 InstanceOf: MII_PR_Onko_Tumorgroesse
 Usage: #example
 * status = #final
-* code.coding[loinc] = $LNC#21889-9 "Size Tumor"
+* code.coding[loinc] = $LNC#21889-1 "Size Tumor"
 * code.coding[snomed] = $SCT#371479009 "Tumor size, largest dimension (observable entity)"
 * subject = Reference(mii-exa-onko-mamma-example-patient)
 

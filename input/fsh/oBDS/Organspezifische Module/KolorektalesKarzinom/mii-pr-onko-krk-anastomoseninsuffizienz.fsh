@@ -19,7 +19,7 @@ Description: "Dieses Profil beschreibt die Bewertung der Anastomoseninsuffizienz
 * code 1..1 
 * code ^definition = "Bewertung der Anastomoseninsuffizienz nach kolorektaler Operation"
 * code ^short = "Anastomoseninsuffizienz"
-* code.coding = $SCT#129037007 "Anastomotic leak"
+* code.coding = $SCT#236091002 "Large intestine anastomotic leak (disorder)"
 
 * value[x] MS
 * value[x] only CodeableConcept

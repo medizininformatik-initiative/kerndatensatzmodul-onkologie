@@ -2,7 +2,7 @@ ValueSet: MII_VS_Onko_Prostata_Gleason_Score
 Id: mii-vs-onko-prostata-gleason-score
 Description: "Value Set für Gleason Score"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
-* ^url = ""
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-score"
 * ^status = #active
 * ^experimental = true
 * insert Publisher

@@ -19,7 +19,7 @@ Description: "Dieses Profil beschreibt den diagnostischen Estrogen-Rezeptorstatu
 * code 1..1 
 * code ^definition = "Rezeptorstatus Estrogen, abgeleitet aus der Immunhistochemie der Mamma-Biopsie oder des Mamma-Exzisionspräparates, basierend auf Zahl der positiven Zellen und Färbeintensität"
 * code ^short = "Rezeptorstatus Estrogen"
-* code.coding = $LNC#40556-3 "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain" 
+* code.coding = $LNC#40556-3 "Estrogen receptor Ag [Presence] in Tissue by Immune stain" 
 
 
 // M2 Menopausenstatus
@@ -30,7 +30,7 @@ Description: "Dieses Profil beschreibt den diagnostischen Estrogen-Rezeptorstatu
 * valueCodeableConcept MS
 * valueCodeableConcept 1..1
 * valueCodeableConcept.coding ^slicing.discriminator.type = #value
-* valueCodeableConcept.coding ^slicing.discriminator.path = "code"
+* valueCodeableConcept.coding ^slicing.discriminator.path = "system"
 * valueCodeableConcept.coding ^slicing.rules = #open
 * valueCodeableConcept.coding ^slicing.description = "Slicing für die unterschiedliche Definition von Rezeptorstatus im oBDS und in den S3-Leitlinien"
 * valueCodeableConcept.coding ^slicing.ordered = false

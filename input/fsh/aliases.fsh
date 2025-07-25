@@ -13,7 +13,7 @@ Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-cli
 Alias: $request-status = http://hl7.org/fhir/request-status
 Alias: $request-intent = http://hl7.org/fhir/request-intent
 Alias: $care-plan-activity-status = http://hl7.org/fhir/care-plan-activity-status
-Alias: $observation-interpretation = http://terminology.hl7.org/CodeSystem/observation-interpretation
+Alias: $observation-interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
 // Code Systems
 Alias: $CTCAE = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
 Alias: $MDRAE = http://terminology.hl7.org/CodeSystem/MDRGER
@@ -97,6 +97,7 @@ Alias: $mii-cs-onko-studienteilnahme = https://www.medizininformatik-initiative.
 Alias: $mii-vs-onko-prostata-gleason-primary-secondary-tertiary = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-primary-secondary-tertiary
 Alias: $mii-vs-onko-prostata-gleason-patterns = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-patterns
 Alias: $mii-cs-onko-prostata-postsurgical-complications = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-prostata-postsurgical-complications
+
 Alias: $mii-vs-onko-prostata-postsurgical-complications = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-postsurgical-complications
 Alias: $mii-vs-onko-prostata-clavien-dindo = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-clavien-dindo
 // licenses

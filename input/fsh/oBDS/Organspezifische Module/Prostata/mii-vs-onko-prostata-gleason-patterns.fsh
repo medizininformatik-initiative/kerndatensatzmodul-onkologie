@@ -22,8 +22,8 @@ Description: "Value Set für die histopathologische Bewertung von Prostata-Adeno
 * ^experimental = true
 * insert Publisher
 * insert PR_CS_VS_Version
-* include $SCT#369770006 "Gleason pattern 1 (finding)"
-* include $SCT#369771005 "Gleason pattern 2 (finding)"
-* include $SCT#369772003 "Gleason pattern 3 (finding)"
-* include $SCT#369773008 "Gleason pattern 4 (finding)"
-* include $SCT#369774002 "Gleason pattern 5 (finding)"
+* include $SCT#369770006 "Gleason Pattern 1"
+* include $SCT#369771005 "Gleason Pattern 2"
+* include $SCT#369772003 "Gleason Pattern 3"
+* include $SCT#369773008 "Gleason Pattern 4"
+* include $SCT#369774002 "Gleason Pattern 5"

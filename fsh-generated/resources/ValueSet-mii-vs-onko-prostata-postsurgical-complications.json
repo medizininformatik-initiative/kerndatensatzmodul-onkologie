@@ -1,9 +1,9 @@
 {
   "resourceType": "ValueSet",
   "status": "active",
-  "name": "MII_VS_Onko_Prostata_postsurgical_complications",
+  "name": "MII_VS_Onko_Prostata_Postsurgical_Complications",
   "id": "mii-vs-onko-prostata-postsurgical-complications",
-  "description": "Value Set für Gleason Score",
+  "description": "Value Set für Clavien-Dindo Klassifikation",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-postsurgical-complications",
   "meta": {
     "profile": [
@@ -26,7 +26,7 @@
   "compose": {
     "include": [
       {
-        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-prostata-postoperative-complications"
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-prostata-postsurgical-complications"
       }
     ]
   }

@@ -7,6 +7,4 @@ Description: "Value Set für semantische Kodierung des oBDS-Status der MRT/CT Un
 * insert Publisher
 * insert PR_CS_VS_Version
 
-* MII_CS_Onko_KRK_MRT_Mesorektale_Faszie_Status#D "Durchgeführt, aber Abstand nicht angegeben"
-* MII_CS_Onko_KRK_MRT_Mesorektale_Faszie_Status#N "Nein (MRT/CT nicht durchgeführt)"
-* MII_CS_Onko_KRK_MRT_Mesorektale_Faszie_Status#U "Unbekannt"
+* include codes from system https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-mrt-mesorektale-faszie-status

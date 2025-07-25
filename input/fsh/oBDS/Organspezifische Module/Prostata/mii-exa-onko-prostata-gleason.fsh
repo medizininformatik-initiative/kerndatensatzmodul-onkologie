@@ -7,7 +7,7 @@ Usage: #example
 * focus = Reference (Condition/exampleOncologicCondition)
 
 * effectiveDateTime = "2024-01-02"
-* valueCodeableConcept.coding = $SCT#369772003 "Gleason pattern 3 (finding)"
+* valueCodeableConcept.coding = $SCT#369772003 "Gleason Pattern 3"
 
 Instance: mii-exa-onko-prostata-gleason-pattern-secondary-1
 InstanceOf: MII_PR_Onko_Prostata_Gleason_Pattern

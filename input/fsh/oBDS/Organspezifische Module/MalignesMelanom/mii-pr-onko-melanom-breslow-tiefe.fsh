@@ -48,7 +48,7 @@ Description: "Dieses Profil beschreibt die Breslow-Tumordicke beim Malignen Mela
 
 * method MS
 * method.coding MS
-* method.coding = $SCT#117617002 "Histopathologic examination (procedure)"
+* method.coding = $SCT#117617002 "Immunohistochemistry procedure"
 
 Mapping: FHIR-oBDS-Melanom-Breslow-Tiefe
 Id: oBDS

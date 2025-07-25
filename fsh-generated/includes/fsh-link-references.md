@@ -44,7 +44,6 @@
 [MII_CS_Onko_Genetische_Variante_Auspraegung]: CodeSystem-mii-cs-onko-genetische-variante-auspraegung.html
 [MII_CS_Onko_Grading]: CodeSystem-mii-cs-onko-grading.html
 [MII_CS_Onko_Intention]: CodeSystem-mii-cs-onko-intention.html
-[MII_CS_Onko_Mamma_Intraoperative_Bildgebung]: CodeSystem-mii-cs-onko-mamma-intraoperative-bildgebung.html
 [MII_CS_Onko_KRK_Anastomoseninsuffizienz]: CodeSystem-mii-cs-onko-krk-anastomoseninsuffizienz.html
 [MII_CS_Onko_KRK_Operationstyp]: CodeSystem-mii-cs-onko-krk-operationstyp.html
 [MII_CS_Onko_Mamma_Rezeptorstatus_Leitlinie]: CodeSystem-mii-cs-onko-mamma-rezeptorstatus-leitlinie.html
@@ -239,6 +238,8 @@
 [mii-exa-onko-genetische-variante-braf]: Observation-mii-exa-onko-genetische-variante-braf.html
 [mii-exa-onko-grading-1]: Observation-mii-exa-onko-grading-1.html
 [mii-exa-onko-histologie-icdo3]: Observation-mii-exa-onko-histologie-icdo3.html
+[mii-exa-onko-krk-example-encounter]: Encounter-mii-exa-onko-krk-example-encounter.html
+[mii-exa-onko-krk-example-patient]: Patient-mii-exa-onko-krk-example-patient.html
 [mii-exa-onko-mamma-example-bundle-1]: Bundle-mii-exa-onko-mamma-example-bundle-1.html
 [mii-exa-onko-mamma-example-patient]: Patient-mii-exa-onko-mamma-example-patient.html
 [mii-exa-onko-mamma-menopause-status-1]: Observation-mii-exa-onko-mamma-menopause-status-1.html
@@ -250,6 +251,7 @@
 [mii-exa-onko-prostata-anzahl-stanzen-1]: Observation-mii-exa-onko-prostata-anzahl-stanzen-1.html
 [mii-exa-onko-prostata-ca-befall-stanze-1]: Observation-mii-exa-onko-prostata-ca-befall-stanze-1.html
 [mii-exa-onko-prostata-example-bundle-1]: Bundle-mii-exa-onko-prostata-example-bundle-1.html
+[mii-exa-onko-prostata-example-patient]: Patient-mii-exa-onko-prostata-example-patient.html
 [mii-exa-onko-prostata-gleason-pattern-grade-group-1]: Observation-mii-exa-onko-prostata-gleason-pattern-grade-group-1.html
 [mii-exa-onko-prostata-gleason-pattern-primary-1]: Observation-mii-exa-onko-prostata-gleason-pattern-primary-1.html
 [mii-exa-onko-prostata-gleason-pattern-secondary-1]: Observation-mii-exa-onko-prostata-gleason-pattern-secondary-1.html
@@ -323,7 +325,7 @@
 [MII_VS_Onko_Prostata_Clavien_Dindo]: ValueSet-mii-vs-onko-prostata-clavien-dindo.html
 [MII_VS_Onko_Prostata_Gleason_PrimarySecondaryTertiary]: ValueSet-mii-vs-onko-prostata-gleason-primary-secondary-tertiary.html
 [MII_VS_Onko_Prostata_Gleason_Score]: ValueSet-mii-vs-onko-prostata-gleason-score.html
-[MII_VS_Onko_Prostata_postsurgical_complications]: ValueSet-mii-vs-onko-prostata-postsurgical-complications.html
+[MII_VS_Onko_Prostata_Postsurgical_Complications]: ValueSet-mii-vs-onko-prostata-postsurgical-complications.html
 [PatientKimMusterperson]: Patient-PatientKimMusterperson.html
 [PatientKimMusterperson-Diagnosis-1]: Condition-PatientKimMusterperson-Diagnosis-1.html
 [PatientKimMusterperson-PathoReport-1]: DiagnosticReport-PatientKimMusterperson-PathoReport-1.html

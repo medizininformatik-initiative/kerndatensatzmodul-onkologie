@@ -1,6 +1,6 @@
-ValueSet: MII_VS_Onko_Prostata_postsurgical_complications
+ValueSet: MII_VS_Onko_Prostata_Postsurgical_Complications
 Id: mii-vs-onko-prostata-postsurgical-complications
-Description: "Value Set für Gleason Score"
+Description: "Value Set für Clavien-Dindo Klassifikation"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 //* ^url = ""
 * ^status = #active
@@ -8,4 +8,4 @@ Description: "Value Set für Gleason Score"
 * insert Publisher
 * insert PR_CS_VS_Version
 
-* include codes from system https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-prostata-postoperative-complications
+* include codes from system https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-prostata-postsurgical-complications

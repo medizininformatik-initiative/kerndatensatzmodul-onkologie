@@ -20,4 +20,4 @@ Description: "Beispiel für die Messung der Breslow-Tumordicke beim Malignen Mel
 * valueQuantity.system = $UCUM
 * valueQuantity.code = #mm
 
-* method.coding = $SCT#117617002 "Histopathologic examination (procedure)"
+* method.coding = $SCT#117617002 "Immunohistochemistry procedure"

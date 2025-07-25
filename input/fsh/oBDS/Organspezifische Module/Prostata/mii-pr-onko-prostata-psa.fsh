@@ -19,7 +19,7 @@ Description: "Dieses Profil beschreibt den PSA-Wert sowohl beim Monitoring als a
 * code 1..1 
 * code ^definition = "PSA-Wert wie im oBDS definiert. Der PSA-Wert ist ein Tumormarker, der bei der Diagnostik und Verlaufskontrolle von Prostatakrebs verwendet wird. Er wird in ng/ml gemessen. Bei Vorliegen kann dieser Datenpunkt auch durch eine Observation aus dem Labormodul abgebildet werden. "
 * code ^short = "PSA-Wert"
-* code.coding = $LNC#2857-1 "Prostate specific Ag[Mass/volume] in Serum or Plasma" 
+* code.coding = $LNC#2857-1 "Prostate specific Ag [Mass/volume] in Serum or Plasma" 
 * specimen MS
 * specimen 0..1
 

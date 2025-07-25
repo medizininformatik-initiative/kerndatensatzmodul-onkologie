@@ -14,8 +14,8 @@ Description: "Dieses Profil beschreibt den Clavien-Dindo-Score für die Prostate
 
 
 * focus MS
-* focus ^slicing.discriminator.type = #type
-* focus ^slicing.discriminator.path = "this.resolve()"
+* focus ^slicing.discriminator.type = #profile
+* focus ^slicing.discriminator.path = "$this"
 * focus ^slicing.rules = #open
 * focus ^slicing.description = "Slice to differentiate between focus condition and focus procedure"
 * focus ^slicing.ordered = false
@@ -46,7 +46,7 @@ Description: "Dieses Profil beschreibt den Clavien-Dindo-Score für die Prostate
 * valueCodeableConcept.coding ^slicing.discriminator.type = #value
 * valueCodeableConcept.coding ^slicing.discriminator.path = "system"
 * valueCodeableConcept.coding ^slicing.rules = #open
-* valueCodeableConcept.coding ^slicing.description = ""
+* valueCodeableConcept.coding ^slicing.description = "Slicing für Clavien-Dindo und oBDS Postoperative Komplikationen"
 * valueCodeableConcept.coding ^slicing.ordered = false
 
 * valueCodeableConcept.coding contains ClavienDindo 0..1 MS and OBDSPostOPKompl 0..1 MS

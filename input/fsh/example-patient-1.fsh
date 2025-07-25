@@ -41,7 +41,8 @@ Description: "bestätigte Primärdiagnose"
 * verificationStatus.coding[primaertumorDiagnosesicherung] = $mii-cs-onko-primaertumor-diagnosesicherung#2 //"klinische Diagnostik"  steht für "Alle Untersuchungstechniken, einschl. Röntgen, Endoskopie, bildgeb. Verfahren, Ultraschall, explorativer Eingriffe(wie Laparotomie) und Autopsie, aber ohne Gewebsuntersuchungen"
 * code.coding  = $ICD10GM|2020#C48.2 "Bösartige Neubildung: Peritoneum, nicht näher bezeichnet"
 // 389026000 | Ascites (disorder) | 
-* bodySite = $ICDO3#C56.9 "Ovar" // mögliche Lokalisation des Haupttumors? 
+* bodySite.coding[icd-o-3] = $ICDO3#C56.9 "Ovar" // mögliche Lokalisation des Haupttumors? 
+* bodySite.coding[snomed-ct] = $SCT#15497006 "Ovary" 
 
 
 // Kann man auf Basis von "Mesenteriale retroperitoneale LK-Metastasen, V.a. Lebermetastasierung" ein NM-Staging machen? Ovar
@@ -58,8 +59,10 @@ Description: "Diagnose Primärtumor"
 * verificationStatus.coding[primaertumorDiagnosesicherung] = $mii-cs-onko-primaertumor-diagnosesicherung#2 "klinische Diagnostik" // steht für "Alle Untersuchungstechniken, einschl. Röntgen, Endoskopie, bildgeb. Verfahren, Ultraschall, explorativer Eingriffe(wie Laparotomie) und Autopsie, aber ohne Gewebsuntersuchungen"
 * code.coding  = $ICD10GM|2020#C48.2 "Bösartige Neubildung: Peritoneum, nicht näher bezeichnet"
 // 389026000 | Ascites (disorder) | 
-* bodySite = $ICDO3#C56.9 "Ovar" // mögliche Lokalisation des Haupttumors?
+* bodySite.coding[icd-o-3] = $ICDO3#C56.9 "Ovar" // mögliche Lokalisation des Haupttumors?
 * extension[Feststellungsdatum].valueDateTime = 2021-05-09 
+* bodySite.coding[snomed-ct] = $SCT#15497006 "Ovary" 
+
 
 //15.06.2021 Aszitespunktion: mit malignen Tumorzellen. Zytologisch mögliches Ovarial-CA.
 // Modeling einer condition Ressource mit Ov-CA. ICD-10 + ICD-O Topopgraphe wahrscheinlich klar, ICD-O Morphologisch noch nicht

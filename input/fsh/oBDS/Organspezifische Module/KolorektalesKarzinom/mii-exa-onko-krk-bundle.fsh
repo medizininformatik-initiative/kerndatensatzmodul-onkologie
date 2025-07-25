@@ -99,8 +99,8 @@ Description: "Beispiel für eine Primärtumor-Diagnose beim Kolorektalen Karzino
 
 * code.coding = $ICD10GM#C18 "Bösartige Neubildung des Kolons"
 * code.coding.version = "2024"
-* clinicalStatus = #active
-* verificationStatus = #confirmed
+* clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active
+* verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed
 * subject = Reference(Patient/example)
 * recordedDate = "2024-01-02"
 * extension[Feststellungsdatum].valueDateTime = "2020-03-07"

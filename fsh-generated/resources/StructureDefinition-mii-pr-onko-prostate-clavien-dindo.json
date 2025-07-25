@@ -67,8 +67,8 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "type",
-              "path": "this.resolve()"
+              "type": "profile",
+              "path": "$this"
             }
           ],
           "rules": "open",
@@ -137,7 +137,7 @@
             }
           ],
           "rules": "open",
-          "description": "",
+          "description": "Slicing für Clavien-Dindo und oBDS Postoperative Komplikationen",
           "ordered": false
         },
         "min": 1,

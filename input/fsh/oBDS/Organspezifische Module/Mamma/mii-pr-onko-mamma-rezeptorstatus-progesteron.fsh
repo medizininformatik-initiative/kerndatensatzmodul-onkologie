@@ -19,7 +19,7 @@ Description: "Dieses Profil beschreibt den diagnostischen Progesteron-Rezeptorst
 * code 1..1 
 * code ^definition = "Rezeptorstatus Progesteron, abgeleitet aus der Immunhistochemie der Mamma-Biopsie oder des Mamma-Exzisionspräparates, basierend auf Zahl der positiven Zellen und Färbeintensität"
 * code ^short = "Rezeptorstatus Progesteron"
-* code.coding = $LNC#85339-0 "Progesteron receptor Ag [Presence] in Breast cancer specimen by Immune stain" 
+* code.coding = $LNC#85339-0 "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain" 
 // achtung bei Metastasen ggfs. nicht zutreffend, da kein breast cancer specimen, dann 40557-1 "Progesterone receptor Ag [Presence] in Tissue by Immune stain"
 
 // M2 Menopausenstatus
@@ -30,7 +30,7 @@ Description: "Dieses Profil beschreibt den diagnostischen Progesteron-Rezeptorst
 * valueCodeableConcept MS
 * valueCodeableConcept 1..1
 * valueCodeableConcept.coding ^slicing.discriminator.type = #value
-* valueCodeableConcept.coding ^slicing.discriminator.path = "code"
+* valueCodeableConcept.coding ^slicing.discriminator.path = "system"
 * valueCodeableConcept.coding ^slicing.rules = #open
 * valueCodeableConcept.coding ^slicing.description = "Slicing für die unterschiedliche Definition von Rezeptorstatus im oBDS und in den S3-Leitlinien"
 * valueCodeableConcept.coding ^slicing.ordered = false
@@ -47,7 +47,7 @@ Description: "Dieses Profil beschreibt den diagnostischen Progesteron-Rezeptorst
 * component ^slicing.ordered = false
  
 * component contains AnteilPositiveZellen 0..1 MS and Faerbeintensitaet 0..1 MS
-* component[AnteilPositiveZellen].code.coding = $SCT#1234803000 "Percent of cells with progesterone receptor in primary malignant neoplasm of breast by immunohistochemistry(observable entity)"
+* component[AnteilPositiveZellen].code.coding = $SCT#1234803000 "Percent of cells with progesterone receptor in primary malignant neoplasm of breast by immunohistochemistry"
 * component[AnteilPositiveZellen].value[x] MS
 * component[AnteilPositiveZellen].value[x] only Quantity
 * component[AnteilPositiveZellen].valueQuantity MS

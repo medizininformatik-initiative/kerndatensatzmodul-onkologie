@@ -17,4 +17,4 @@ Description: "Beispiel für die Bestimmung der Ulzeration beim Malignen Melanom"
 
 * valueCodeableConcept.coding = MII_CS_Onko_Melanom_Ulzeration#J "Ja"
 
-* method.coding = $SCT#117617002 "Histopathologic examination (procedure)"
+* method.coding = $SCT#117617002 "Immunohistochemistry procedure"

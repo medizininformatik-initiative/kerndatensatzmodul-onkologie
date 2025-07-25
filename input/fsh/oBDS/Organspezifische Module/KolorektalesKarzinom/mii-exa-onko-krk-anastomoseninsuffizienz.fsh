@@ -7,7 +7,7 @@ Description: "Beispiel für die Bewertung einer Anastomoseninsuffizienz beim Kol
 
 * status = #final
 
-* code.coding = $SCT#129037007 "Anastomotic leak"
+* code.coding = $SCT#236091002 "Large intestine anastomotic leak (disorder)"
 
 * subject = Reference(Patient/example)
 * encounter = Reference(Encounter/example)

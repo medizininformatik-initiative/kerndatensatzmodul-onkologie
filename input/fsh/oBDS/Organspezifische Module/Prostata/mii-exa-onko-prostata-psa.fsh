@@ -2,7 +2,7 @@ Instance: mii-exa-onko-prostata-psa-diagnose-1
 InstanceOf: MII_PR_Onko_Prostata_PSA
 Usage: #example
 * status = #final
-* code.coding = $LNC#2857-1 "Prostate specific Ag[Mass/volume] in Serum or Plasma"
+* code.coding = $LNC#2857-1 "Prostate specific Ag [Mass/volume] in Serum or Plasma"
 * subject = Reference(Patient/example)
 * focus = Reference (Condition/exampleOncologicCondition)
 
@@ -14,7 +14,7 @@ Instance: mii-exa-onko-prostata-psa-verlauf-1
 InstanceOf: MII_PR_Onko_Prostata_PSA
 Usage: #example
 * status = #final
-* code.coding = $LNC#2857-1 "Prostate specific Ag[Mass/volume] in Serum or Plasma"
+* code.coding = $LNC#2857-1 "Prostate specific Ag [Mass/volume] in Serum or Plasma"
 * subject = Reference(Patient/example)
 * focus = Reference (Condition/exampleOncologicCondition)
 

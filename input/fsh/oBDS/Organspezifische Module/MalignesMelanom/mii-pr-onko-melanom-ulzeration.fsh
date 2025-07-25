@@ -42,7 +42,7 @@ Description: "Dieses Profil beschreibt die Ulzeration beim Malignen Melanom der 
 
 * method MS
 * method.coding MS
-* method.coding = $SCT#117617002 "Histopathologic examination (procedure)"
+* method.coding = $SCT#117617002 "Immunohistochemistry procedure"
 
 Mapping: FHIR-oBDS-Melanom-Ulzeration
 Id: oBDS

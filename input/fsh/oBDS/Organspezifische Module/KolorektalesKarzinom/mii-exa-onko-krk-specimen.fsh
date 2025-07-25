@@ -7,7 +7,7 @@ Description: "Beispiel für ein Histologie-Specimen beim Kolorektalen Karzinom"
 
 * status = #available
 
-* type.coding = $SCT#309226005 "Specimen from large intestine"
+* type.coding = $SCT#122652004 "Specimen from colon obtained by rectal/rectosigmoid (low anterior) resection (specimen)"
 
 * subject = Reference(Patient/example)
 

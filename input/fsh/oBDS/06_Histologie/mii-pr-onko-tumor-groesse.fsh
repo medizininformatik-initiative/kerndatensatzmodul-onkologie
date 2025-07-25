@@ -17,7 +17,7 @@ Description: "Tumorgröße in mm. Gibt die Größe des Tumors in der größten D
     loinc 1..* and
     snomed 0..*
 * code.coding[loinc] MS
-* code.coding[loinc] = $LNC#21889-9 "Size Tumor"
+* code.coding[loinc] = $LNC#21889-1 "Size Tumor"
 * code.coding[loinc].system 1.. MS
 * code.coding[loinc].code 1.. MS
 * code.coding[snomed] = $SCT#371479009 "Tumor size, largest dimension (observable entity)"

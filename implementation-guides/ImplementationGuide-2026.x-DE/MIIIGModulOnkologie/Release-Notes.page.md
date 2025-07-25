@@ -6,14 +6,20 @@ parent:
 Hier sind  alle Änderungen aufgelistet. 
 
 ## Änderungen Version 2026 (geplante Kommentierung September 2025 )
-- Neue Profile zur Abdeckung des Moduls Prostata (in Arbet)
+- Neue Profile zur Abdeckung der organspezifischen Module
+    - Prostata 
+    - Mamma
+    - Kolorektales Karzinom
+    - Malignes Melanom
 
-- Hinterlegen eines preferred-Binding-ValueSets für Weitere Klassifikationen 
+- Hinterlegen eines preferred-Binding-ValueSets für Weitere Klassifikationen, basierend auf der oB
+
 - Ermöglichen der optionalen Darstellung von Therapieempfehlungen mittels Referenzen als 
     - MedicationRequests
     - RequestGroups
     - ServiceRequests
 -
+- hinterlegen der CTCAE-Liste zum Abgleich der Dokumentation von Nebenwirkungen. 
 
 ## Änderungen in 2026.0.0-ballot-release
 

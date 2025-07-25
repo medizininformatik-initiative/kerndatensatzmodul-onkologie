@@ -38,6 +38,7 @@
 **Overall Status**: [EXTERNAL] - Awaiting terminology infrastructure updates
 **Comment**: MedDRA v4, ICD-10-GM 2024, OPS 2024 versions not available in validator
 **Strategy**: Monitor until terminology packages catch up, suppress known version mismatches
+**Advisor Suppression**: CANDIDATE - Add to advisor.json for external dependency errors
 
 **Pattern**: "The System URI could not be determined for the code", "None of the codings provided are in the value set"
 **Affected Files**:
@@ -83,6 +84,7 @@
 **Overall Status**: [EXTERNAL] - Awaiting package dependency updates
 **Comment**: Terminology package versions not aligned with what examples expect
 **Strategy**: Suppress until upstream packages provide correct versions
+**Advisor Suppression**: CANDIDATE - Add to advisor.json for version mismatch errors
 
 **Pattern**: "A definition for CodeSystem ... version ... could not be found"
 **Affected Files**:
