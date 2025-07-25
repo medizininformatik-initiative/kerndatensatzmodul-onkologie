@@ -100,6 +100,7 @@
 [mii-exa-onko-melanom-ulzeration]: Observation-mii-exa-onko-melanom-ulzeration.html
 [MII_LM_MVGenomSeq_Onkologie]: StructureDefinition-mii-lm-mvgenomseq-onkologie.html
 [MII_LM_Onko]: StructureDefinition-mii-lm-onko.html
+[MII_LM_Onko_Organspezifische_Zusatzmodule]: StructureDefinition-mii-lm-onko-organspezifische-zusatzmodule.html
 [MII_PR_Onko_KRK_Abstand_Aboral]: StructureDefinition-mii-pr-onko-krk-abstand-aboral.html
 [MII_PR_Onko_KRK_Abstand_Anokutan]: StructureDefinition-mii-pr-onko-krk-abstand-anokutan.html
 [MII_PR_Onko_KRK_Abstand_Circumferelle_Resektionsebene]: StructureDefinition-mii-pr-onko-krk-abstand-circumferelle-resektionsebene.html
@@ -121,6 +122,7 @@
 [MII_PR_Onko_KRK_Anastomoseninsuffizienz]: StructureDefinition-mii-pr-onko-krk-anastomoseninsuffizienz.html
 [MII_PR_Onko_KRK_MRT_Mesorektale_Faszie]: StructureDefinition-mii-pr-onko-krk-mrt-mesorektale-faszie.html
 [MII_PR_Onko_KRK_Stoma_Markierung]: StructureDefinition-mii-pr-onko-krk-stoma-markierung.html
+[MII_PR_Onko_Mamma_Operation]: StructureDefinition-mii-pr-onko-mamma-operation.html
 [MII_PR_Onko_Melanom_Breslow_Tiefe]: StructureDefinition-mii-pr-onko-melanom-breslow-tiefe.html
 [MII_PR_Onko_Melanom_LDH]: StructureDefinition-mii-pr-onko-melanom-ldh.html
 [MII_PR_Onko_Melanom_Sicherheitsabstand]: StructureDefinition-mii-pr-onko-melanom-sicherheitsabstand.html
@@ -133,9 +135,8 @@
 [MII_PR_Onko_Prostata_Gleason_Grade_Group]: StructureDefinition-mii-pr-onko-prostate-gleason-grade-group.html
 [MII_PR_Onko_Prostata_Gleason_Pattern]: StructureDefinition-mii-pr-onko-prostate-gleason-patterns.html
 [MII_PR_Onko_KRK_Operation]: StructureDefinition-mii-pr-onko-krk-operation.html
-[MII_PR_Onko_Mamma_Operation]: StructureDefinition-mii-pr-onko-mamma-intraoperatives-imaging-specimen.html
-[MII_PR_Onko_Mamma_Praeoperative_Markierung]: StructureDefinition-mii-pr-onko-mamma-praeoperative-markierung.html
 [MII_PR_Onko_Mamma_Sozialdienst]: StructureDefinition-mii-pr-onko-mamma-sozialdienst.html
+[MII_PR_Onko_Mamma_Praeoperative_Markierung]: StructureDefinition-mii-pr-onko-mamma-praeoperative-markierung.html
 [MII_PR_Onko_Prostata_PSA]: StructureDefinition-mii-pr-onko-prostate-psa.html
 [MII_PR_Onko_Residualstatus]: StructureDefinition-mii-pr-onko-residualstatus.html
 [MII_PR_Onko_Mamma_Rezeptorstatus_Estrogen]: StructureDefinition-mii-pr-onko-mamma-rezeptorstatus-estrogen.html
@@ -317,6 +318,8 @@
 [MII_VS_Onko_Mamma_Intraoperatives_Imaging_Praeparat]: ValueSet-mii-vs-onko-mamma-intraoperatives-imaging-praeparat.html
 [MII_VS_Onko_Mamma_Menopause_Status]: ValueSet-mii-vs-onko-mamma-menopause-status.html
 [MII_VS_Onko_Mamma_Operationen]: ValueSet-mii-vs-onko-mamma-operationen.html
+[MII_VS_Onko_Mamma_Operation_OPS]: ValueSet-mii-vs-onko-mamma-operation-ops.html
+[MII_VS_Onko_Mamma_Operation_SCT]: ValueSet-mii-vs-onko-mamma-operation-sct.html
 [MII_VS_Onko_Mamma_Praeoperative_Markierung_Modalitaet]: ValueSet-mii-vs-onko-mamma-praeoperative-markierung-modalitaet.html
 [MII_VS_Onko_Mamma_Rezeptorstatus_Leitlinie]: ValueSet-mii-vs-onko-mamma-rezeptorstatus-leitlinie.html
 [MII_VS_Onko_Mamma_Rezeptorstatus_oBDS]: ValueSet-mii-vs-onko-mamma-rezeptorstatus-obds.html

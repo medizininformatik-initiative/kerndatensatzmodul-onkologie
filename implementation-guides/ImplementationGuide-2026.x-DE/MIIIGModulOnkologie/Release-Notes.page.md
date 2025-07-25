@@ -8,7 +8,15 @@ Hier sind  alle Änderungen aufgelistet.
 ## Änderungen Version 2026 (geplante Kommentierung September 2025 )
 - Neue Profile zur Abdeckung der organspezifischen Module
     - Prostata 
-    - Mamma
+    - **Mamma**: Vollständige Implementierung des Mamma-Moduls
+        - **Estrogen-Rezeptorstatus**: Profil mit dualer Kodierung (oBDS/S3-Leitlinien) und Komponenten für Anteil positiver Zellen und Färbeintensität
+        - **Progesteron-Rezeptorstatus**: Entsprechendes Profil mit identischer Struktur zum Estrogen-Status
+        - **Menopause-Status**: Prätherapeutische Bestimmung mit oBDS 2021-konformer Subsumierung (perimenopausal → prämenopausal)
+        - **Präoperative Markierung**: Profil für verschiedene Markierungsmodalitäten (Draht, Seeds, magnetisch)
+        - **Mamma-Operation**: Spezialisiertes Operationsprofil mit SNOMED CT und OPS ValueSets
+        - **Bundle-Beispiel**: Transaktions-Bundle demonstriert Verknüpfung aller Mamma-Profile
+        - **Hinweise**: Her2Neu im Molecular Tumorboard-Profil; Tumorgröße im Histologie-Modul; Studienteilnahme in oBDS 2021 abgedeckt
+        - **Entwicklung**: Detailliertere Spezifikation in Kooperation BIH/Deutsche Gesellschaft für Senologie geplant
     - Kolorektales Karzinom
     - Malignes Melanom
 
@@ -18,7 +26,7 @@ Hier sind  alle Änderungen aufgelistet.
     - MedicationRequests
     - RequestGroups
     - ServiceRequests
--
+
 - hinterlegen der CTCAE-Liste zum Abgleich der Dokumentation von Nebenwirkungen. 
 
 ## Änderungen in 2026.0.0-ballot-release

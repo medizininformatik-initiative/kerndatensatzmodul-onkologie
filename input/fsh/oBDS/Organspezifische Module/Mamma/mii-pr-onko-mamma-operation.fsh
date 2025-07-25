@@ -1,8 +1,8 @@
 Profile: MII_PR_Onko_Mamma_Operation
-Id: mii-pr-onko-mamma-intraoperatives-imaging-specimen
+Id: mii-pr-onko-mamma-operation
 Parent: MII_PR_Onko_Operation
-Title: "MII PR Onkologie Präoperative Drahtmarkierung Mamma"
-Description: "Das vorliegende Profil beschreibt eine radiologisch durchgeführte Markierung von Tumorgewebe mittels  der Brust. Dabei können verschiedene Methoden gewählt werden. Die  "
+Title: "MII PR Onkologie Mamma Operation"
+Description: "Das vorliegende Profil beschreibt operative Eingriffe an der Brust im Rahmen der Mammakarzinom-Behandlung. Es erweitert das allgemeine Operationsprofil um Mamma-spezifische Aspekte und ermöglicht die detaillierte Erfassung von brustchirurgischen Verfahren."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
@@ -20,11 +20,13 @@ Description: "Das vorliegende Profil beschreibt eine radiologisch durchgeführte
 * code 1..1 
 * code ^definition = "Operation der Brust, z.B. Exzision eines Tumors, Entfernung eines Lymphknotens"
 * code ^short = "Operation der Brust"
-* code.coding MS // OPS-2025 Code einfach, oder 
-//* code.coding[sct] from mii-vs-onko-mamma-operationen (extensible)
+* code.coding[ops] from mii-vs-onko-mamma-operation-ops (required)
+* code.coding[sct] from mii-vs-onko-mamma-operation-sct (required)
 
 * partOf MS
+
 * partOf only Reference(MII_PR_Onko_Operation) 
+
 * usedCode MS
 * usedCode only CodeableConcept
 * usedCode 0..*
@@ -32,16 +34,19 @@ Description: "Das vorliegende Profil beschreibt eine radiologisch durchgeführte
 * usedCode.coding ^slicing.discriminator.type = #value
 * usedCode.coding ^slicing.discriminator.path = "code"
 * usedCode.coding ^slicing.rules = #open
-* usedCode.coding ^slicing.description = "Slicing für die intraoperative Verwendung von z.B. Drahtmarkierungen, Markierungsclips oder Seed-Markierungen"
+* usedCode.coding ^slicing.description = "Slicing für die intraoperative Verwendung von z.B. Drahtmarkierungen, Markierungsclips oder Seed-Markierungen. Hier existiert noch kein vollständiges ValueSet"
+
 
 
 /*
-Mapping: FHIR-oBDS-Studienteilnahme
+Mapping: FHIR-oBDS-MammaOperation
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
-Source: MII_PR_Onko_Studienteilnahme
-* -> "24" "Studienteilnahme"
-*  valueCodeableConcept.coding.code -> "24.1" "Studienteilnahme Status"
-*  effectiveDateTime -> "24.2" "Studienteilnahme Datum"
+Source: MII_PR_Onko_Mamma_Operation
+* -> "13" "Operation"
+* code.coding[ops].code -> "13.3" "OPS - Mamma-spezifische Operationen"
+* code.coding[sct].code -> "13.3" "SNOMED CT - Mamma-spezifische Operationen"
+* usedCode.coding -> "13.6" "Intraoperative Hilfsmittel und Markierungen"
+* performedDateTime -> "13.2" "OP Datum"
 
 */

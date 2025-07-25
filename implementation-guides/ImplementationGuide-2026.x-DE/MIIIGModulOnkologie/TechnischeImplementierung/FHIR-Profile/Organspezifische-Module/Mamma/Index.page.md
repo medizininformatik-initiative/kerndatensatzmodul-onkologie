@@ -8,15 +8,17 @@ subject:
 
 ## Inhalt
 
-Das **Mamma-Modul** implementiert die organspezifischen FHIR-Profile für die Dokumentation von Mammakarzinom-relevanten Daten gemäß dem onkologischen Basisdatensatz (oBDS). 
+Das **Mamma-Modul** implementiert die organspezifischen FHIR-Profile für die Dokumentation von Mammakarzinom-relevanten Daten gemäß dem [onkologischen Basisdatensatz (oBDS) - Mammakarzinom](https://www.basisdatensatz.de/module/5/mammakarzinom). 
 
 Das Modul umfasst spezialisierte Profile für die charakteristischen Aspekte der Mammakarzinom-Behandlung:
 
 - **Rezeptorstatus-Bestimmungen**: Estrogen- und Progesteron-Rezeptorstatus mit detaillierter Dokumentation von Färbeintensität und Anteil positiver Zellen
+- **Her2Neu-Status**: Als multimodaler Biomarker mit IHC- und ISH-Nachweismethoden ist dieser derzeit im Molecular Tumorboard-Profil abgebildet
+- **Tumorgröße**: Wurde in das Histologie-Modul verschoben, da sie auf multiple Entitäten anwendbar ist
 - **Menopausenstatus**: Prätherapeutische Bestimmung des Menopausenstatus als wichtiger prognostischer Faktor
+- **Studienteilnahme**: Bereits durch den aktuellen oBDS 2021 abgedeckt und im entsprechenden Studienteilnahme-Profil implementiert
 - **Operationsverfahren**: Mamma-spezifische chirurgische Eingriffe und deren Dokumentation
 - **Bildgebungsverfahren**: Präoperative Markierungsmodalitäten und intraoperatives Imaging
-- **Soziale Betreuung**: Integration von Sozialdienst-Maßnahmen in die onkologische Versorgung
 
 ## Verknüpfungen zu anderen Ressourcen
 
@@ -53,11 +55,12 @@ Das Mamma-Modul umfasst folgende FHIR-Profile:
 - **Estrogen-Rezeptorstatus**: Detaillierte Dokumentation mit Anteil positiver Zellen und Färbeintensität
 - **Progesteron-Rezeptorstatus**: Entsprechende Dokumentation für Progesteron-Rezeptoren
 - **Menopausenstatus**: Prätherapeutische Hormonstatusbestimmung
+- **Tumorgröße**: Referenz zum Histologie-Modul (MII_PR_Onko_Tumorgroesse)
+- **Studienteilnahme**: Referenz zum allgemeinen Studienteilnahme-Profil (MII_PR_Onko_Studienteilnahme)
 
 ### Verfahren (Procedures)
 - **Mamma-Operationen**: Organspezifische chirurgische Eingriffe
 - **Präoperative Markierung**: Modalitäten der präoperativen Markierung
-- **Sozialdienst-Maßnahmen**: Integration sozialer Betreuungsaspekte
 
 ### Terminologien
 - **ValueSets**: Organspezifische Wertelisten für Mamma-relevante Konzepte
@@ -74,5 +77,7 @@ Das Mamma-Modul umfasst folgende FHIR-Profile:
 - **Vollständigkeitsprüfung**: Kritische Datenfelder als Must Support markiert
 - **Wertebereichsvalidierung**: Einschränkung auf medizinisch sinnvolle Wertebereiche
 - **Terminologie-Konsistenz**: Verwendung standardisierter Kodierungssysteme
+
+**Entwicklungshinweis**: Eine weitere, detailliertere Spezifikation der Mamma-Profile ist derzeit in Zusammenarbeit zwischen dem BIH und der Deutschen Gesellschaft für Senologie in Entwicklung.
 
 Die Mamma-Profile ermöglichen eine vollständige und strukturierte Dokumentation der mammakarzinom-spezifischen Daten entsprechend den aktuellen medizinischen Standards und dem oBDS.

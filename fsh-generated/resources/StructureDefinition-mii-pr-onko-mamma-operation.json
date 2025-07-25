@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "mii-pr-onko-mamma-intraoperatives-imaging-specimen",
+  "id": "mii-pr-onko-mamma-operation",
   "extension": [
     {
       "url": "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable",
@@ -15,10 +15,10 @@
       }
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-intraoperatives-imaging-specimen",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-operation",
   "version": "2025.1.0",
   "name": "MII_PR_Onko_Mamma_Operation",
-  "title": "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
+  "title": "MII PR Onkologie Mamma Operation",
   "status": "draft",
   "publisher": "Medizininformatik Initiative",
   "contact": [
@@ -31,7 +31,7 @@
       ]
     }
   ],
-  "description": "Das vorliegende Profil beschreibt eine radiologisch durchgeführte Markierung von Tumorgewebe mittels  der Brust. Dabei können verschiedene Methoden gewählt werden. Die  ",
+  "description": "Das vorliegende Profil beschreibt operative Eingriffe an der Brust im Rahmen der Mammakarzinom-Behandlung. Es erweitert das allgemeine Operationsprofil um Mamma-spezifische Aspekte und ermöglicht die detaillierte Erfassung von brustchirurgischen Verfahren.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -57,6 +57,24 @@
         "path": "Procedure.code",
         "short": "Operation der Brust",
         "definition": "Operation der Brust, z.B. Exzision eines Tumors, Entfernung eines Lymphknotens"
+      },
+      {
+        "id": "Procedure.code.coding:ops",
+        "path": "Procedure.code.coding",
+        "sliceName": "ops",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-operation-ops"
+        }
+      },
+      {
+        "id": "Procedure.code.coding:sct",
+        "path": "Procedure.code.coding",
+        "sliceName": "sct",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-operation-sct"
+        }
       },
       {
         "id": "Procedure.reasonReference",
@@ -86,7 +104,7 @@
             }
           ],
           "rules": "open",
-          "description": "Slicing für die intraoperative Verwendung von z.B. Drahtmarkierungen, Markierungsclips oder Seed-Markierungen"
+          "description": "Slicing für die intraoperative Verwendung von z.B. Drahtmarkierungen, Markierungsclips oder Seed-Markierungen. Hier existiert noch kein vollständiges ValueSet"
         },
         "mustSupport": true
       }

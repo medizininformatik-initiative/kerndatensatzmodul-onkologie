@@ -887,6 +887,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-lm-onko-organspezifische-zusatzmodule"
+        },
+        "name": "MII LM Onkologie Organspezifische Zusatzmodule",
+        "description": "Logisches Modell für die organspezifischen Zusatzmodule des oBDS",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-krk-abstand-aboral"
         },
         "name": "MII PR Onkologie Abstand Aboral",
@@ -1055,6 +1063,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-mamma-operation"
+        },
+        "name": "MII PR Onkologie Mamma Operation",
+        "description": "Das vorliegende Profil beschreibt operative Eingriffe an der Brust im Rahmen der Mammakarzinom-Behandlung. Es erweitert das allgemeine Operationsprofil um Mamma-spezifische Aspekte und ermöglicht die detaillierte Erfassung von brustchirurgischen Verfahren.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-melanom-breslow-tiefe"
         },
         "name": "MII PR Onkologie Melanom Breslow Tiefe",
@@ -1151,7 +1167,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-onko-mamma-intraoperatives-imaging-specimen"
+          "reference": "StructureDefinition/mii-pr-onko-mamma-sozialdienst"
         },
         "name": "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
         "description": "Das vorliegende Profil beschreibt eine radiologisch durchgeführte Markierung von Tumorgewebe mittels  der Brust. Dabei können verschiedene Methoden gewählt werden. Die  ",
@@ -1161,16 +1177,8 @@
         "reference": {
           "reference": "StructureDefinition/mii-pr-onko-mamma-praeoperative-markierung"
         },
-        "name": "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
-        "description": "Das vorliegende Profil beschreibt eine radiologisch durchgeführte Markierung von Tumorgewebe mittels  der Brust. Dabei können verschiedene Methoden gewählt werden. Die  ",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/mii-pr-onko-mamma-sozialdienst"
-        },
-        "name": "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
-        "description": "Das vorliegende Profil beschreibt eine radiologisch durchgeführte Markierung von Tumorgewebe mittels  der Brust. Dabei können verschiedene Methoden gewählt werden. Die  ",
+        "name": "MII PR Onkologie Präoperative Markierung Mamma",
+        "description": "Das vorliegende Profil beschreibt eine präoperativ durchgeführte Markierung von Tumorgewebe in der Brust. Dabei können verschiedene Markierungsmodalitäten gewählt werden, wie z.B. Drahtmarkierungen, Seed-Markierungen oder andere Lokalisationstechniken.",
         "exampleBoolean": false
       },
       {
@@ -2563,10 +2571,26 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-operation-ops"
+        },
+        "name": "MII_VS_Onko_Mamma_Operation_OPS",
+        "description": "Value Set für Mamma-Operationen basierend auf OPS",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-operation-sct"
+        },
+        "name": "MII_VS_Onko_Mamma_Operation_SCT",
+        "description": "Value Set für Mamma-Operationen basierend auf SNOMED CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-mamma-praeoperative-markierung-modalitaet"
         },
         "name": "MII_VS_Onko_Mamma_Praeoperative_Markierung_Modalitaet",
-        "description": "Value Set für Imagingmodalität der präopartiven Markierung bei Mamma-Karzinom",
+        "description": "Value Set für Imagingmodalität der präopertiven Markierung bei Mamma-Karzinom",
         "exampleBoolean": false
       },
       {
