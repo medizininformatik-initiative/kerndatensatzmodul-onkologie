@@ -302,7 +302,7 @@
           {
             "identity": "oBDS",
             "map": "M5",
-            "comment": "Präoperative Markierung - Alternative Modellierung als usedCode-Slices diskutierbar"
+            "comment": "Präoperative Markierung"
           }
         ]
       },
@@ -394,6 +394,11 @@
           {
             "identity": "FHIR",
             "map": "Procedure.usedCode"
+          },
+          {
+            "identity": "oBDS",
+            "map": "M4.2",
+            "comment": "Intraoperative Hilfsmittel und Markierungen"
           }
         ]
       },
@@ -459,27 +464,344 @@
           },
           {
             "identity": "oBDS",
-            "map": "Prostata-Zusatzmodul",
-            "comment": "Placeholder für Prostata-spezifische oBDS-Mappings"
+            "map": "Prostata-Zusatzmodul nach oBDS",
+            "comment": "Organspezifische Erweiterungen für Prostatakarzinom basierend auf oBDS-Modul"
           }
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Prostata.Placeholder",
-        "path": "OrganspezifischeZusatzmodule.Prostata.Placeholder",
-        "short": "Placeholder",
-        "definition": "Placeholder für Prostata-spezifische Datenelemente.",
+        "id": "OrganspezifischeZusatzmodule.Prostata.PSAWert",
+        "path": "OrganspezifischeZusatzmodule.Prostata.PSAWert",
+        "short": "PSA-Wert",
+        "definition": "Prostataspezifisches Antigen in ng/ml für Diagnostik und Verlaufskontrolle.",
         "min": 0,
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "Quantity"
           }
         ],
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Placeholder für Prostata-spezifische Implementierung"
+            "map": "Observation.where(code.coding.system='http://loinc.org' and code.coding.code='2857-1').valueQuantity"
+          },
+          {
+            "identity": "oBDS",
+            "map": "P1",
+            "comment": "PSA-Wert als Tumormarker für Diagnostik und Verlaufskontrolle"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Prostata.GleasonPattern",
+        "path": "OrganspezifischeZusatzmodule.Prostata.GleasonPattern",
+        "short": "Gleason Pattern",
+        "definition": "Gleason Pattern",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.memberOf('mii-vs-onko-prostata-gleason-primary-secondary-tertiary'))"
+          },
+          {
+            "identity": "oBDS",
+            "map": "P2",
+            "comment": "Gleason Pattern (primär, sekundär, tertiär) für histopathologische Klassifikation"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Prostata.GleasonPattern.PatternTyp",
+        "path": "OrganspezifischeZusatzmodule.Prostata.GleasonPattern.PatternTyp",
+        "short": "Pattern Typ",
+        "definition": "Primäres, sekundäres oder tertiäres Gleason Pattern.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.code"
+          },
+          {
+            "identity": "oBDS",
+            "map": "P2.1",
+            "comment": "Art des Gleason Patterns (primär/sekundär/tertiär)"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Prostata.GleasonPattern.PatternWert",
+        "path": "OrganspezifischeZusatzmodule.Prostata.GleasonPattern.PatternWert",
+        "short": "Pattern Wert",
+        "definition": "Gleason Pattern Wert (1-5, ab 3 als maligne).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept"
+          },
+          {
+            "identity": "oBDS",
+            "map": "P2.2",
+            "comment": "Gleason Pattern Wert (1-5, ab 3 maligne)"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Prostata.GleasonScore",
+        "path": "OrganspezifischeZusatzmodule.Prostata.GleasonScore",
+        "short": "Gleason Score",
+        "definition": "Gleason Score",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.system='http://loinc.org' and code.coding.code='44642-7')"
+          },
+          {
+            "identity": "oBDS",
+            "map": "P3",
+            "comment": "Gleason Score als Summe der Patterns"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Prostata.GleasonScore.Score",
+        "path": "OrganspezifischeZusatzmodule.Prostata.GleasonScore.Score",
+        "short": "Gleason Score",
+        "definition": "Summe aus primärem und sekundärem Pattern.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept"
+          },
+          {
+            "identity": "oBDS",
+            "map": "P3.1",
+            "comment": "Gleason Score Gesamtwert"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Prostata.GleasonScore.GradeGroup",
+        "path": "OrganspezifischeZusatzmodule.Prostata.GleasonScore.GradeGroup",
+        "short": "Grade Group",
+        "definition": "Internationale Standard Grade Group (1-5).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component.where(code.coding.system='http://loinc.org' and code.coding.code='79892-6').valueCodeableConcept"
+          },
+          {
+            "identity": "oBDS",
+            "map": "P3.2",
+            "comment": "Internationale Standard Grade Group (1-5)"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse",
+        "path": "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse",
+        "short": "Biopsie Ergebnisse",
+        "definition": "Biopsie Ergebnisse",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation Collection"
+          },
+          {
+            "identity": "oBDS",
+            "map": "P4",
+            "comment": "Prostatabiopsie-Ergebnisse"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse.AnzahlStanzen",
+        "path": "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse.AnzahlStanzen",
+        "short": "Anzahl Stanzen",
+        "definition": "Gesamtanzahl der entnommenen Biopsie-Stanzen.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.system='http://loinc.org' and code.coding.code='33747-0').valueQuantity"
+          },
+          {
+            "identity": "oBDS",
+            "map": "P4.1",
+            "comment": "Gesamtanzahl entnommener Biopsie-Stanzen"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse.AnzahlPositiverStanzen",
+        "path": "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse.AnzahlPositiverStanzen",
+        "short": "Anzahl positive Stanzen",
+        "definition": "Anzahl der tumorpositiven Stanzen.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.system='http://loinc.org' and code.coding.code='33746-2').valueQuantity"
+          },
+          {
+            "identity": "oBDS",
+            "map": "P4.2",
+            "comment": "Anzahl tumorpositiver Stanzen"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse.KarzinomBefallStanze",
+        "path": "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse.KarzinomBefallStanze",
+        "short": "Karzinom-Befall je Stanze",
+        "definition": "Prozentuale Ausdehnung des Karzinoms in der Stanze.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.system='http://loinc.org' and code.coding.code='44637-7').valueQuantity"
+          },
+          {
+            "identity": "oBDS",
+            "map": "P4.3",
+            "comment": "Prozentuale Ausdehnung Karzinom je Stanze"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Prostata.ChirurgischeKomplikationen",
+        "path": "OrganspezifischeZusatzmodule.Prostata.ChirurgischeKomplikationen",
+        "short": "Chirurgische Komplikationen",
+        "definition": "Chirurgische Komplikationen",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(method.coding.system='http://snomed.info/sct' and method.coding.code='789278003')"
+          },
+          {
+            "identity": "oBDS",
+            "map": "P5",
+            "comment": "Postoperative Komplikationen nach Prostatektomie"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Prostata.ChirurgischeKomplikationen.ClavienDindoGrad",
+        "path": "OrganspezifischeZusatzmodule.Prostata.ChirurgischeKomplikationen.ClavienDindoGrad",
+        "short": "Clavien-Dindo Grad",
+        "definition": "Graduierung postoperativer Komplikationen nach Clavien-Dindo.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept"
+          },
+          {
+            "identity": "oBDS",
+            "map": "P5.1",
+            "comment": "Clavien-Dindo Klassifikation postoperativer Komplikationen"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Prostata.ChirurgischeKomplikationen.KomplikationsArt",
+        "path": "OrganspezifischeZusatzmodule.Prostata.ChirurgischeKomplikationen.KomplikationsArt",
+        "short": "Komplikationsart",
+        "definition": "Spezifische Art der postoperativen Komplikation.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component.where(code.coding.system='http://loinc.org' and code.coding.code='LA462-5').valueCodeableConcept"
+          },
+          {
+            "identity": "oBDS",
+            "map": "P5.2",
+            "comment": "Spezifische Art der postoperativen Komplikation"
           }
         ]
       },
