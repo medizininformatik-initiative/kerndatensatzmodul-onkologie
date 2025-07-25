@@ -57,7 +57,7 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Bundle/Collection von Mamma-spezifischen Ressourcen"
+            "map": "Brustspezifische Datenpunkte"
           },
           {
             "identity": "oBDS",
@@ -70,7 +70,7 @@
         "id": "OrganspezifischeZusatzmodule.Mamma.Menopausenstatus",
         "path": "OrganspezifischeZusatzmodule.Mamma.Menopausenstatus",
         "short": "Menopausenstatus",
-        "definition": "Prätherapeutischer Menopausenstatus einer Patientin mit Mamma-Karzinom.",
+        "definition": "Prätherapeutischer Menopausenstatus einer Patientin mit Mamma-Karzinom. oBDS M1",
         "min": 0,
         "max": "1",
         "type": [
@@ -81,7 +81,7 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Observation.valueCodeableConcept (MII_PR_Onko_Mamma_Menopausenstatus)"
+            "map": "Observation.where(code.coding.system='http://snomed.info/sct' and code.coding.code='161712005').valueCodeableConcept"
           },
           {
             "identity": "oBDS",
@@ -105,7 +105,7 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Observation (MII_PR_Onko_Mamma_Rezeptorstatus_Estrogen)"
+            "map": "Observation.where(code.coding.system='http://loinc.org' and code.coding.code='40556-3')"
           },
           {
             "identity": "oBDS",
@@ -118,7 +118,7 @@
         "id": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusEstrogen.Status",
         "path": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusEstrogen.Status",
         "short": "Estrogen-Rezeptorstatus",
-        "definition": "Kategoriale Bewertung des Estrogen-Rezeptorstatus: positiv/negativ.",
+        "definition": "Kategoriale Bewertung des Estrogen-Rezeptorstatus: positiv/negativ. oBDS M2",
         "min": 0,
         "max": "1",
         "type": [
@@ -153,7 +153,7 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Observation.component[AnteilPositiveZellen].valueQuantity"
+            "map": "Observation.component.where(code.coding.system='http://snomed.info/sct' and code.coding.code='1234804006').valueQuantity"
           },
           {
             "identity": "oBDS",
@@ -177,7 +177,7 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Observation.component[Faerbeintensitaet].valueCodeableConcept"
+            "map": "Observation.component.where(code.coding.system='http://snomed.info/sct' and code.coding.code='1236874005').valueCodeableConcept"
           },
           {
             "identity": "oBDS",
@@ -201,7 +201,7 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Observation (MII_PR_Onko_Mamma_Rezeptorstatus_Progesteron)"
+            "map": "Observation.where(code.coding.system='http://loinc.org' and code.coding.code='85339-0')"
           },
           {
             "identity": "oBDS",
@@ -214,7 +214,7 @@
         "id": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusProgesteron.Status",
         "path": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusProgesteron.Status",
         "short": "Progesteron-Rezeptorstatus",
-        "definition": "Kategoriale Bewertung des Progesteron-Rezeptorstatus: positiv/negativ.",
+        "definition": "Kategoriale Bewertung des Progesteron-Rezeptorstatus: positiv/negativ. oBDS M3",
         "min": 0,
         "max": "1",
         "type": [
@@ -249,7 +249,7 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Observation.component[AnteilPositiveZellen].valueQuantity"
+            "map": "Observation.component.where(code.coding.system='http://snomed.info/sct' and code.coding.code='1234803000').valueQuantity"
           },
           {
             "identity": "oBDS",
@@ -273,7 +273,7 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Observation.component[Faerbeintensitaet].valueCodeableConcept"
+            "map": "Observation.component.where(code.coding.system='http://snomed.info/sct' and code.coding.code='1237278006').valueCodeableConcept"
           },
           {
             "identity": "oBDS",
@@ -283,12 +283,12 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Mamma.Her2NeuStatus",
-        "path": "OrganspezifischeZusatzmodule.Mamma.Her2NeuStatus",
-        "short": "Her2Neu-Status",
-        "definition": "Her2Neu-Status",
+        "id": "OrganspezifischeZusatzmodule.Mamma.PraeoperativeMarkierung",
+        "path": "OrganspezifischeZusatzmodule.Mamma.PraeoperativeMarkierung",
+        "short": "Präoperative Markierung",
+        "definition": "Präoperative Markierung",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "type": [
           {
             "code": "BackboneElement"
@@ -297,20 +297,20 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Observation (Molecular Tumorboard Profil)"
+            "map": "Procedure.where(meta.profile.contains('https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-praeoperative-markierung'))"
           },
           {
             "identity": "oBDS",
-            "map": "M3",
-            "comment": "Her2Neu-Status - Derzeit im Molecular Tumorboard-Profil abgebildet"
+            "map": "M5",
+            "comment": "Präoperative Markierung - Alternative Modellierung als usedCode-Slices diskutierbar"
           }
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Mamma.Her2NeuStatus.Status",
-        "path": "OrganspezifischeZusatzmodule.Mamma.Her2NeuStatus.Status",
-        "short": "Her2Neu-Status",
-        "definition": "Her2Neu-Status als multimodaler Biomarker.",
+        "id": "OrganspezifischeZusatzmodule.Mamma.PraeoperativeMarkierung.Modalitaet",
+        "path": "OrganspezifischeZusatzmodule.Mamma.PraeoperativeMarkierung.Modalitaet",
+        "short": "Markierungsmodalität",
+        "definition": "Art der präoperativen Markierung.",
         "min": 0,
         "max": "1",
         "type": [
@@ -321,12 +321,12 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Observation.valueCodeableConcept"
+            "map": "Procedure.usedCode.coding.where(memberOf('mii-vs-onko-mamma-praeoperative-markierung-modalitaet'))"
           },
           {
             "identity": "oBDS",
-            "map": "M3.1",
-            "comment": "Her2Neu-Status Bewertung"
+            "map": "M5.1",
+            "comment": "Modalität der präoperativen Markierung"
           }
         ]
       },
@@ -345,7 +345,7 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Procedure (MII_PR_Onko_Mamma_Operation)"
+            "map": "Procedure.where(meta.profile.contains('https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-operation'))"
           },
           {
             "identity": "oBDS",
@@ -379,10 +379,10 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Mamma.MammaOperation.IntraoperativeHilfsmittel",
-        "path": "OrganspezifischeZusatzmodule.Mamma.MammaOperation.IntraoperativeHilfsmittel",
-        "short": "Intraoperative Hilfsmittel",
-        "definition": "Markierungen und Hilfsmittel während der Operation.",
+        "id": "OrganspezifischeZusatzmodule.Mamma.MammaOperation.IntraoperativesImaging",
+        "path": "OrganspezifischeZusatzmodule.Mamma.MammaOperation.IntraoperativesImaging",
+        "short": "Intraoperatives Imaging",
+        "definition": "Intraoperatives Imagung und weitere Markierungen und Hilfsmittel während der Operation.",
         "min": 0,
         "max": "*",
         "type": [
@@ -394,107 +394,6 @@
           {
             "identity": "FHIR",
             "map": "Procedure.usedCode"
-          },
-          {
-            "identity": "oBDS",
-            "map": "M4.2",
-            "comment": "Intraoperative Hilfsmittel und Markierungen"
-          }
-        ]
-      },
-      {
-        "id": "OrganspezifischeZusatzmodule.Mamma.PraeoperativeMarkierung",
-        "path": "OrganspezifischeZusatzmodule.Mamma.PraeoperativeMarkierung",
-        "short": "Präoperative Markierung",
-        "definition": "Präoperative Markierung",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "BackboneElement"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Procedure (MII_PR_Onko_Mamma_Praeoperative_Markierung)"
-          },
-          {
-            "identity": "oBDS",
-            "map": "M5",
-            "comment": "Präoperative Markierung - Alternative Modellierung als usedCode-Slices diskutierbar"
-          }
-        ]
-      },
-      {
-        "id": "OrganspezifischeZusatzmodule.Mamma.PraeoperativeMarkierung.Modalitaet",
-        "path": "OrganspezifischeZusatzmodule.Mamma.PraeoperativeMarkierung.Modalitaet",
-        "short": "Markierungsmodalität",
-        "definition": "Art der präoperativen Markierung.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Procedure.usedCode.coding[PraeoperativeMarkierung]"
-          },
-          {
-            "identity": "oBDS",
-            "map": "M5.1",
-            "comment": "Modalität der präoperativen Markierung"
-          }
-        ]
-      },
-      {
-        "id": "OrganspezifischeZusatzmodule.Mamma.Tumorgroesse",
-        "path": "OrganspezifischeZusatzmodule.Mamma.Tumorgroesse",
-        "short": "Tumorgröße",
-        "definition": "Größte Dimension des Primärtumors.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Quantity"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Observation (MII_PR_Onko_Tumorgroesse)"
-          },
-          {
-            "identity": "oBDS",
-            "map": "M6",
-            "comment": "Tumorgröße - Verschoben in Histologie-Modul, da auf multiple Entitäten anwendbar"
-          }
-        ]
-      },
-      {
-        "id": "OrganspezifischeZusatzmodule.Mamma.Studienteilnahme",
-        "path": "OrganspezifischeZusatzmodule.Mamma.Studienteilnahme",
-        "short": "Studienteilnahme",
-        "definition": "Teilnahme an klinischen Studien.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Observation (MII_PR_Onko_Studienteilnahme)"
-          },
-          {
-            "identity": "oBDS",
-            "map": "M7",
-            "comment": "Studienteilnahme - Bereits durch oBDS 2021 abgedeckt"
           }
         ]
       },
