@@ -1,0 +1,44 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "MII_CS_Onko_KRK_TME_Qualitaet",
+  "id": "mii-cs-onko-krk-tme-qualitaet",
+  "title": "MII CS Onkologie TME Qualität",
+  "description": "oBDS-spezifisches Codesystem TME-Präparat, basierend auf der S3-Leitlinie Mammakarzinom v",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-tme-qualitaet",
+  "concept": [
+    {
+      "code": "1",
+      "display": "Grad 1 (gut)"
+    },
+    {
+      "code": "2",
+      "display": "Grad 2 (moderat)"
+    },
+    {
+      "code": "3",
+      "display": "Grad 3 (schlecht)"
+    }
+  ],
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2025.1.0",
+  "caseSensitive": true,
+  "count": 3
+}

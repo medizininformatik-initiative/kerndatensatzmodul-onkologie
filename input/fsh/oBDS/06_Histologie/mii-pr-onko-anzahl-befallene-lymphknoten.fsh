@@ -23,7 +23,7 @@ Description: "Histologie: Anzahl der befallenen Lymphknoten. Gibt an, wie viele 
     loinc 1..* and
     snomed 0..*
 * code.coding[loinc] MS
-* code.coding[loinc] = $LOINC#21893-3
+* code.coding[loinc] = $LNC#21893-3
 * code.coding[loinc].system 1.. MS
 * code.coding[loinc].code 1.. MS
 * code.coding[snomed] = $SCT#443527007

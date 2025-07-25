@@ -1,0 +1,37 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-krk-abstand-mesorektale-fascie",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-mrt-mesorektale-faszie"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "RDE96",
+        "system": "http://radlex.org",
+        "display": "Distance to MRF"
+      }
+    ]
+  },
+  "valueQuantity": {
+    "unit": "mm",
+    "system": "http://unitsofmeasure.org",
+    "code": "mm",
+    "value": 3.2
+  },
+  "status": "final",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "encounter": {
+    "reference": "Encounter/example"
+  },
+  "focus": [
+    {
+      "reference": "Condition/mii-exa-onko-diagnose-primaertumor"
+    }
+  ],
+  "effectiveDateTime": "2024-03-12T16:00:00+01:00"
+}

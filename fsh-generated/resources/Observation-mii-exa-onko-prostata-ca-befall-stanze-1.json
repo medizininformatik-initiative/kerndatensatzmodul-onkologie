@@ -1,0 +1,35 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-prostata-ca-befall-stanze-1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-ca-befall-stanze"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "44654-2",
+        "system": "http://loinc.org",
+        "display": "Tissue involved by tumor in Prostate tumor"
+      }
+    ]
+  },
+  "valueQuantity": {
+    "unit": "%",
+    "value": 80
+  },
+  "status": "final",
+  "effectiveDateTime": "2024-01-02",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "focus": [
+    {
+      "reference": "Condition/exampleOncologicCondition"
+    }
+  ],
+  "specimen": {
+    "reference": "Specimen/exampleProstateBiopsySlide"
+  }
+}

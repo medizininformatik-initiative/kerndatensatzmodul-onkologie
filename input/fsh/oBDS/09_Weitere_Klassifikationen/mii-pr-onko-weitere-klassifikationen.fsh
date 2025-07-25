@@ -31,6 +31,7 @@ Description: "Weitere Tumor Staging Klassifikation neben TMN (Hämatoonkologisch
 * code.text 1..1 
 * code.text ^definition = "Hier ist der String aus dem oBDS einzuleiten"
 * code.coding.code 0..1 
+* code.coding.code from MII_VS_Onko_Weitere_Klassifikationen (preferred) 
 * code.coding.code ^definition = "Hier ist eine entsprechende Kodierung anzugeben, mit dem die Klassifikation in einem internationalen Standard (z.B. SNOMED-CT, LOINC, etc. ) semantisch annotiert werden kann" 
 * insert Label(code.text, Klassifikation Name Freitext, Datum der weiteren Klassifikation)
 * insert Translation(code.text ^short, de-DE, Name der Klassifikation wie in Krebsregistermeldung angegeben)
@@ -44,6 +45,8 @@ Description: "Weitere Tumor Staging Klassifikation neben TMN (Hämatoonkologisch
 * value[x] 0..1 MS 
 * value[x] ^short = "Wert/ Einstufung in jeweiliger Klassifikation"
 * value[x] ^definition = "Einstufung nach jeweiliger Klassifikation. Je nach ausgewählter Systematik kann hier eine Klassifikation/Kategorisierung, ein Puntkwert oder ein anderer Datentyp auftauchen"
+* valueCodeableConcept MS
+
 * insert Translation(value[x] ^short, de-DE, Wert der weiteren Klassifikation )
 * insert Translation(value[x] ^definition, de-DE, Wert in oben ausgewählter Klassifikation )
 

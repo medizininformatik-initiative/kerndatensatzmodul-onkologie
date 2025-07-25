@@ -11,7 +11,7 @@ Description: "TNM-Klassifikation: TNM y-Symbol. Gibt an, ob die Klassifikation w
 
 * status MS
 * code MS
-* code = $LOINC#101658-3
+* code = $LNC#101658-3
 * code.coding.code 1.. MS
 * code.coding.system 1.. MS
 * subject 1..1 MS

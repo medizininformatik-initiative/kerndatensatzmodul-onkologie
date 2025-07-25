@@ -1,0 +1,21 @@
+Instance: mii-exa-onko-krk-abstand-mesorektale-fascie
+InstanceOf: MII_PR_Onko_KRK_MRT_Mesorektale_Faszie
+Usage: #example
+Title: "MII EXA Onko KRK Abstand Mesorektale Fascie"
+Description: "Beispiel für den Abstand des Tumors zur mesorektalen Faszie bei MRT-Untersuchung"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-mrt-mesorektale-faszie"
+
+* status = #final
+
+* code.coding = $RADLEX#RDE96 "Distance to MRF"
+
+* subject = Reference(Patient/example)
+* encounter = Reference(Encounter/example)
+* focus = Reference(Condition/mii-exa-onko-diagnose-primaertumor)
+
+* effectiveDateTime = "2024-03-12T16:00:00+01:00"
+
+* valueQuantity.value = 3.2
+* valueQuantity.unit = "mm"
+* valueQuantity.system = $UCUM
+* valueQuantity.code = #mm

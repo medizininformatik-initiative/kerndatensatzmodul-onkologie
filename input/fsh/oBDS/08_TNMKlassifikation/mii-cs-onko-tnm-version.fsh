@@ -19,3 +19,4 @@ Description: "Codes für TNM Version/Auflage nach welcher Version des TNM klassi
 * #6 "6. Auflage" 
 * #7 "7. Auflage" 
 * #8 "8. Auflage" 
+* #9 "9. Auflage"

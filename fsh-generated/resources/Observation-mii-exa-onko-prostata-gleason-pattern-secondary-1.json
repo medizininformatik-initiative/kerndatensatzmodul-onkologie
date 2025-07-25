@@ -1,0 +1,37 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-prostata-gleason-pattern-secondary-1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "384995005",
+        "system": "http://snomed.info/sct",
+        "display": "Secondary Gleason pattern (observable entity)"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "focus": [
+    {
+      "reference": "Condition/exampleOncologicCondition"
+    }
+  ],
+  "effectiveDateTime": "2024-01-02",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "369773008",
+        "system": "http://snomed.info/sct",
+        "display": "Gleason pattern 4 (finding)"
+      }
+    ]
+  }
+}

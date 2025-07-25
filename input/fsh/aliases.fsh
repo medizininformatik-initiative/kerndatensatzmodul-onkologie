@@ -13,7 +13,7 @@ Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-cli
 Alias: $request-status = http://hl7.org/fhir/request-status
 Alias: $request-intent = http://hl7.org/fhir/request-intent
 Alias: $care-plan-activity-status = http://hl7.org/fhir/care-plan-activity-status
-
+Alias: $observation-interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
 // Code Systems
 Alias: $CTCAE = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
 Alias: $MDRAE = http://terminology.hl7.org/CodeSystem/MDRGER
@@ -21,11 +21,12 @@ Alias: $OPS = http://fhir.de/CodeSystem/bfarm/ops
 Alias: $SCT = http://snomed.info/sct
 Alias: $ICD10GM = http://fhir.de/CodeSystem/bfarm/icd-10-gm
 Alias: $ICDO3 = http://terminology.hl7.org/CodeSystem/icd-o-3
-Alias: $LOINC = http://loinc.org
+Alias: $LNC = http://loinc.org
 Alias: $UICC = https://www.uicc.org/resources/tnm
 Alias: $UCUM =  http://unitsofmeasure.org
 Alias: $ATC_DE = http://fhir.de/CodeSystem/bfarm/atc
-
+Alias: $NCIT =  http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
+Alias: $RADLEX = http://radlex.org
 //MII Onko
 //Allgemeines CodeSystem
 Alias: $mii-cs-onko-intention = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention
@@ -45,6 +46,7 @@ Alias: $mii-cs-onko-tnm-version = https://www.medizininformatik-initiative.de/fh
 
 //13
 Alias: $mii-cs-onko-operation-komplikation = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation
+Alias: $mii-cs-onko-operation-urgency = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-urgency
 
 //14
 Alias: $mii-cs-onko-strahlentherapie-strahlenart = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart
@@ -91,5 +93,12 @@ Alias: $mii-cs-onko-genetische-variante-auspraegung = https://www.medizininforma
 //24
 Alias: $mii-cs-onko-studienteilnahme = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-studienteilnahme
 
+//Prostata
+Alias: $mii-vs-onko-prostata-gleason-primary-secondary-tertiary = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-primary-secondary-tertiary
+Alias: $mii-vs-onko-prostata-gleason-patterns = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-patterns
+Alias: $mii-cs-onko-prostata-postsurgical-complications = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-prostata-postsurgical-complications
+
+Alias: $mii-vs-onko-prostata-postsurgical-complications = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-postsurgical-complications
+Alias: $mii-vs-onko-prostata-clavien-dindo = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-clavien-dindo
 // licenses
 Alias: $spdx-license = http://hl7.org/fhir/spdx-license

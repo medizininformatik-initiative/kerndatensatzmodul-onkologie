@@ -25,7 +25,7 @@ Description: "Histologie: Anzahl der befallenen Sentinel-Lymphknoten. Gibt an, w
     loinc 1..* and
     snomed 0..*
 * code.coding[loinc] MS
-* code.coding[loinc] = $LOINC#92832-5
+* code.coding[loinc] = $LNC#92832-5
 * code.coding[loinc].system 1.. MS
 * code.coding[loinc].code 1.. MS
 * code.coding[snomed] = $SCT#1264491009

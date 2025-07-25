@@ -1,0 +1,47 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Onko_Mamma_Menopause_Status",
+  "id": "mii-vs-onko-mamma-menopause-status",
+  "description": "Value Set für (prätherapeutischen) Status der Menopause Score",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-menopause-status",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ]
+  },
+  "experimental": true,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2025.1.0",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "22636003",
+            "display": "Premenopausal state (finding)"
+          },
+          {
+            "code": "76498008",
+            "display": "Postmenopausal state (finding)"
+          },
+          {
+            "code": "261665006",
+            "display": "Unknown (qualifier value)"
+          }
+        ]
+      }
+    ]
+  }
+}

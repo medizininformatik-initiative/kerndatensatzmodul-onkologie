@@ -127,6 +127,14 @@
       },
       {
         "reference": {
+          "reference": "ConceptMap/mii-cm-onko-krk-stoma-obds-sct"
+        },
+        "name": "Mapping oBDS Stoma-Anzeichnung zu SNOMED CT",
+        "description": "Mapping der oBDS-Codes für präoperative Stoma-Anzeichnung zu SNOMED CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ConceptMap/mii-cm-onko-allgemeiner-leistungszustand-sct"
         },
         "name": "MII CM Onko Allgemeiner Leistungszustand SNOMED Mapping",
@@ -431,6 +439,38 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-onko-krk-anastomoseninsuffizienz"
+        },
+        "name": "MII CS Onkologie KRK Anastomoseninsuffizienz",
+        "description": "oBDS-spezifisches Codesystem für Anastomoseninsuffizienz beim Kolorektalen Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-krk-operationstyp"
+        },
+        "name": "MII CS Onkologie KRK Operationstyp",
+        "description": "oBDS-spezifisches Codesystem TME-Präparat, basierend auf der S3-Leitlinie Mammakarzinom v",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-mamma-rezeptorstatus-leitlinie"
+        },
+        "name": "MII CS Onkologie Mamma Rezeptorstatus",
+        "description": "oBDS-spezifisches Codesystem Mamma-Rezeptorstatus, basierend auf der S3-Leitlinie Mammakarzinom v5.02 Abschnitt 4.5.4",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-melanom-ulzeration"
+        },
+        "name": "MII CS Onkologie Melanom Ulzeration",
+        "description": "Codes für die Ulzeration beim Malignen Melanom der Haut nach oBDS",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-onko-operation-komplikation"
         },
         "name": "MII CS Onkologie Operation Komplikationen",
@@ -451,6 +491,14 @@
         },
         "name": "MII CS Onkologie Primärtumor Seitenlokalisation",
         "description": "Codes für Seitenlokalisation, d.h. organspezifische Angabe der betroffenen Seite.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-prostata-postoperative-complications"
+        },
+        "name": "MII CS Onkologie Prostata Postoperative Komplikationen",
+        "description": "CodeSystem zur Darstellung des Vorhandenseins von postoperativen Komplikationen nach Prostatektomie in der Onkologie",
         "exampleBoolean": false
       },
       {
@@ -535,6 +583,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-onko-krk-tme-qualitaet"
+        },
+        "name": "MII CS Onkologie TME Qualität",
+        "description": "oBDS-spezifisches Codesystem TME-Präparat, basierend auf der S3-Leitlinie Mammakarzinom v",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-onko-tnm-uicc"
         },
         "name": "MII CS Onkologie TNM UICC",
@@ -603,6 +659,14 @@
         },
         "name": "MII EX Onko Operation Intention",
         "description": "Intention der Operation im Rahmen des oBDS",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-onko-operation-urgency"
+        },
+        "name": "MII EX Onko Operation Urgency",
+        "description": "Modalität der Eingriffsdurchführung (Art des Eingriffs) im Rahmen des oBDS (KR6)",
         "exampleBoolean": false
       },
       {
@@ -695,6 +759,118 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-onko-krk-abstand-circumferelle-resektionsebene"
+        },
+        "name": "MII EXA Onko KRK Abstand Circumferelle Resektionsebene",
+        "description": "Beispiel für den minimalen Abstand des Tumorrandes zur circumferellen Dissektionslinie",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-circumferelle-resektionsebene"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-krk-abstand-mesorektale-fascie"
+        },
+        "name": "MII EXA Onko KRK Abstand Mesorektale Fascie",
+        "description": "Beispiel für den Abstand des Tumors zur mesorektalen Faszie bei MRT-Untersuchung",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-mrt-mesorektale-faszie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-krk-abstand-resektionsrand-aboral"
+        },
+        "name": "MII EXA Onko KRK Abstand Resektionsrand Aboral",
+        "description": "Beispiel für den minimalen Abstand des Tumorrandes zur aboralen Dissektionslinie",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-aboral"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-krk-abstand-tumor-anokutanlinie"
+        },
+        "name": "MII EXA Onko KRK Abstand Tumor Anokutanlinie",
+        "description": "Beispiel für den Abstand des Tumorunterrandes zur Anokutanlinie beim Rektumkarzinom",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-anokutan"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-krk-anastomoseninsuffizienz"
+        },
+        "name": "MII EXA Onko KRK Anastomoseninsuffizienz",
+        "description": "Beispiel für die Bewertung einer Anastomoseninsuffizienz beim Kolorektalen Karzinom",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-anastomoseninsuffizienz"
+      },
+      {
+        "reference": {
+          "reference": "Bundle/mii-exa-onko-krk-bundle"
+        },
+        "name": "MII EXA Onko KRK Bundle",
+        "description": "Beispiel-Bundle für Kolorektales Karzinom mit allen spezifischen Profilen",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-onko-diagnose-primaertumor-krk"
+        },
+        "name": "MII EXA Onko KRK Diagnose Primaertumor",
+        "description": "Beispiel für eine Primärtumor-Diagnose beim Kolorektalen Karzinom",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-krk-operation"
+        },
+        "name": "MII EXA Onko KRK Operation",
+        "description": "Beispiel für eine Operation beim Kolorektalen Karzinom",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-operation"
+      },
+      {
+        "reference": {
+          "reference": "Specimen/mii-exa-onko-krk-specimen"
+        },
+        "name": "MII EXA Onko KRK Specimen",
+        "description": "Beispiel für ein Histologie-Specimen beim Kolorektalen Karzinom",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-specimen"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-krk-stoma-markierung"
+        },
+        "name": "MII EXA Onko KRK Stoma-Markierung",
+        "description": "Beispiel für eine präoperative Stoma-Markierung beim Kolorektalen Karzinom",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-stoma-markierung"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-melanom-breslow-tiefe"
+        },
+        "name": "MII EXA Onko Melanom Breslow Tiefe",
+        "description": "Beispiel für die Messung der Breslow-Tumordicke beim Malignen Melanom",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-breslow-tiefe"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-melanom-ldh"
+        },
+        "name": "MII EXA Onko Melanom LDH",
+        "description": "Beispiel für einen LDH Laborwert beim Malignen Melanom",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-ldh"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-melanom-sicherheitsabstand"
+        },
+        "name": "MII EXA Onko Melanom Sicherheitsabstand",
+        "description": "Beispiel für die Messung des Sicherheitsabstands beim Malignen Melanom",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-sicherheitsabstand"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-melanom-ulzeration"
+        },
+        "name": "MII EXA Onko Melanom Ulzeration",
+        "description": "Beispiel für die Bestimmung der Ulzeration beim Malignen Melanom",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-ulzeration"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-lm-mvgenomseq-onkologie"
         },
         "name": "MII LM Modellvorhaben Genomsequenzierung Onkologie",
@@ -707,6 +883,38 @@
         },
         "name": "MII LM Onkologie",
         "description": "MII LogicalModel Modul Onkologie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-lm-onko-organspezifische-zusatzmodule"
+        },
+        "name": "MII LM Onkologie Organspezifische Zusatzmodule",
+        "description": "Logisches Modell für die organspezifischen Zusatzmodule des oBDS",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-krk-abstand-aboral"
+        },
+        "name": "MII PR Onkologie Abstand Aboral",
+        "description": "Dieses Profil beschreibt den minimalen Abstand des Tumorrandes zur aboralen Dissektionlinie im Kolorektalen Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-krk-abstand-anokutan"
+        },
+        "name": "MII PR Onkologie Abstand Anokutan",
+        "description": "Dieses Profil beschreibt den Abstand des Tumorunterrandes zur Anokutanlinie im Kolorektalen Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-krk-abstand-circumferelle-resektionsebene"
+        },
+        "name": "MII PR Onkologie Abstand Circumferelle Resektionsebene",
+        "description": "Dieses Profil beschreibt den minimalen Abstand des Tumorrandes zur circumferellen Dissektionlinie beim Kolorektalen Karzinom",
         "exampleBoolean": false
       },
       {
@@ -767,6 +975,22 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-prostate-ca-befall-stanze"
+        },
+        "name": "MII PR Onkologie Ca-Befall Stanze",
+        "description": "Dieses Profil beschreibt den prozentualen Befall der am stärksten befallenen Stanze einer Prostata-Biopsie oder eines Prostata-Exzisionspräparates in der Onkologie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-prostate-clavien-dindo"
+        },
+        "name": "MII PR Onkologie Clavien Dindo",
+        "description": "Dieses Profil beschreibt den Clavien-Dindo-Score für die Prostatektomie in der Onkologie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-diagnose-primaertumor"
         },
         "name": "MII PR Onkologie Diagnose Primärtumor",
@@ -815,6 +1039,78 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-krk-anastomoseninsuffizienz"
+        },
+        "name": "MII PR Onkologie KRK Anastomoseninsuffizienz",
+        "description": "Dieses Profil beschreibt die Bewertung der Anastomoseninsuffizienz nach einer Operation beim Kolorektalen Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-krk-mrt-mesorektale-faszie"
+        },
+        "name": "MII PR Onkologie KRK MRT/CT Abstand Mesorektale Faszie",
+        "description": "Dieses Profil beschreibt den Abstand des Tumors zur mesorektalen Faszie bei MRT oder Dünnschicht-CT Untersuchung beim Kolorektalen Karzinom (oBDS KR5)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-krk-stoma-markierung"
+        },
+        "name": "MII PR Onkologie KRK Stoma-Markierung",
+        "description": "Dieses Profil beschreibt die präoperative Markierung der geplanten Stoma-Position beim Kolorektalen Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-mamma-operation"
+        },
+        "name": "MII PR Onkologie Mamma Operation",
+        "description": "Das vorliegende Profil beschreibt operative Eingriffe an der Brust im Rahmen der Mammakarzinom-Behandlung. Es erweitert das allgemeine Operationsprofil um Mamma-spezifische Aspekte und ermöglicht die detaillierte Erfassung von brustchirurgischen Verfahren.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-melanom-breslow-tiefe"
+        },
+        "name": "MII PR Onkologie Melanom Breslow Tiefe",
+        "description": "Dieses Profil beschreibt die Breslow-Tumordicke beim Malignen Melanom der Haut",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-melanom-ldh"
+        },
+        "name": "MII PR Onkologie Melanom LDH",
+        "description": "Dieses Profil beschreibt die Laktatdehydrogenase (LDH) Laborwerte beim Malignen Melanom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-melanom-sicherheitsabstand"
+        },
+        "name": "MII PR Onkologie Melanom Sicherheitsabstand",
+        "description": "Dieses Profil beschreibt den minimalen Sicherheitsabstand zum Primärtumor beim Malignen Melanom basierend oBDS Feld MM1. Abweichend ",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-melanom-ulzeration"
+        },
+        "name": "MII PR Onkologie Melanom Ulzeration",
+        "description": "Dieses Profil beschreibt die Ulzeration beim Malignen Melanom der Haut",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-mamma-menopause-status"
+        },
+        "name": "MII PR Onkologie Menopausenstatus Mamma",
+        "description": "Dieses Profil beschreibt den (prätherapeutischen) Menopausenstatus einer Patientin mit Mamma-Karzinom in der Onkologie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event"
         },
         "name": "MII PR Onkologie Nebenwirkung von Strahlentherapie und systemische Therapie",
@@ -831,6 +1127,70 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-prostate-anzahl-positive-stanzen"
+        },
+        "name": "MII PR Onkologie Prostata Anzahl positiver Stanzen",
+        "description": "Dieses Profil beschreibt die Anzahl positiver Stanzen einer Prostata-Biopsie in der Onkologie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-prostate-anzahl-stanzen"
+        },
+        "name": "MII PR Onkologie Prostata Anzahl Stanzen",
+        "description": "Dieses Profil beschreibt die Anzahl Stanzen einer Prostata-Biopsie oder eines Prostata-Exzisionspräparates in der Onkologie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-prostate-gleason-grade-group"
+        },
+        "name": "MII PR Onkologie Prostata Gleason Grade Group",
+        "description": "Dieses Profil beschreibt einen Gleasonscore in der Onkologie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-prostate-gleason-patterns"
+        },
+        "name": "MII PR Onkologie Prostata Gleason Primär",
+        "description": "Dieses Profil beschreibt einen primären Gleasonscore in der Onkologie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-krk-operation"
+        },
+        "name": "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
+        "description": "Das vorliegende Profil beschreibt eine radiologisch durchgeführte Markierung von Tumorgewebe mittels  der Brust. Dabei können verschiedene Methoden gewählt werden. Die  ",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-mamma-sozialdienst"
+        },
+        "name": "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
+        "description": "Das vorliegende Profil beschreibt eine radiologisch durchgeführte Markierung von Tumorgewebe mittels  der Brust. Dabei können verschiedene Methoden gewählt werden. Die  ",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-mamma-praeoperative-markierung"
+        },
+        "name": "MII PR Onkologie Präoperative Markierung Mamma",
+        "description": "Das vorliegende Profil beschreibt eine präoperativ durchgeführte Markierung von Tumorgewebe in der Brust. Dabei können verschiedene Markierungsmodalitäten gewählt werden, wie z.B. Drahtmarkierungen, Seed-Markierungen oder andere Lokalisationstechniken.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-prostate-psa"
+        },
+        "name": "MII PR Onkologie PSA-Wert",
+        "description": "Dieses Profil beschreibt den PSA-Wert sowohl beim Monitoring als auch in der Verlaufskontrolle in der Onkologie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-residualstatus"
         },
         "name": "MII PR Onkologie Residualstatus",
@@ -839,7 +1199,31 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-mamma-rezeptorstatus-estrogen"
+        },
+        "name": "MII PR Onkologie Rezeptorstatus Estrogen",
+        "description": "Dieses Profil beschreibt den diagnostischen Estrogen-Rezeptorstatus eines pathologisch untersuchten Probe beim Mamma-Karzinom in der Onkologie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-mamma-rezeptorstatus-progesteron"
+        },
+        "name": "MII PR Onkologie Rezeptorstatus Progesteron",
+        "description": "Dieses Profil beschreibt den diagnostischen Progesteron-Rezeptorstatus eines pathologisch untersuchten Probe beim Mamma-Karzinom in der Onkologie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-specimen"
+        },
+        "name": "MII PR Onkologie Specimen",
+        "description": "Histologie: Dieses Profil beschreibt eine Gewebeprobe in der Onkologie.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-krk-specimen"
         },
         "name": "MII PR Onkologie Specimen",
         "description": "Histologie: Dieses Profil beschreibt eine Gewebeprobe in der Onkologie.",
@@ -891,6 +1275,30 @@
         },
         "name": "MII PR Onkologie Systemische Therapie Medikation",
         "description": "Medikation der Systemische Therapie. Dieses Profil beschreibt die konkreten Medikationen, die im Rahmen der systemische Therapie für den oBDS dokumentiert werden.  Da im oBDS systemische und abwartende Therapie in einem Feld gruppiert sind, werden die Daten für die Systemische und abwartende Therapie sowohl über eine FHIR-Prozedur (systemisch und abwartend) als auch als FHIR-Medikation abgedeckt. ",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-therapieempfehlung-medikation"
+        },
+        "name": "MII PR Onkologie Therapieempfehlung Medikation",
+        "description": "Dieses Profil beschreibt eine Medikations-Tumorempfehlung",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie"
+        },
+        "name": "MII PR Onkologie Therapieempfehlung Operation",
+        "description": "Dieses Profil beschreibt eine Empfehlung für eine Operation im Rahmen der Tumorkonferenz",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-therapieempfehlung-operation"
+        },
+        "name": "MII PR Onkologie Therapieempfehlung Operation",
+        "description": "Dieses Profil beschreibt eine Empfehlung für eine Operation im Rahmen der Tumorkonferenz",
         "exampleBoolean": false
       },
       {
@@ -999,6 +1407,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-tumorgroesse"
+        },
+        "name": "MII PR Onkologie Tumorgröße",
+        "description": "Tumorgröße in mm. Gibt die Größe des Tumors in der größten Dimension an. Basierend auf dem oBDS-Modul Mamma. ",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-tumorkonferenz"
         },
         "name": "MII PR Onkologie Tumorkonferenz",
@@ -1019,6 +1435,14 @@
         },
         "name": "MII PR Onkologie Weitere Klassifikationen",
         "description": "Weitere Tumor Staging Klassifikation neben TMN (Hämatoonkologische und sonstige Klassifikationen)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-weitere-klassifikationen"
+        },
+        "name": "MII Value Set Onkologie - Weitere Klassifikationen",
+        "description": "Cancer staging systems that may be used in staging assertions, such as those defined by AJCC, FIGO, and other specialized staging systems. Based on mCODE STU4 and German oBDS catalogue",
         "exampleBoolean": false
       },
       {
@@ -1087,6 +1511,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-onko-melanom-ulzeration"
+        },
+        "name": "MII VS Onkologie Melanom Ulzeration",
+        "description": "Codes für die Ulzeration beim Malignen Melanom der Haut",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-nebenwirkung-art"
         },
         "name": "MII VS Onkologie Nebenwirkung nach CTCAE Art",
@@ -1147,6 +1579,14 @@
         },
         "name": "MII VS Onkologie Primärtumor Seitenlokalisation",
         "description": "Codes für Seitenlokalisation, d.h. organspezifische Angabe der betroffenen Seite.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-prostata-gleason-patterns"
+        },
+        "name": "MII VS Onkologie Prostata Gleason Patterns",
+        "description": "Value Set für die histopathologische Bewertung von Prostata-Adenokarzinomen mittels Gleason-Patterns. Dieser Value Set wird verwendet, um die verschiedenen Gleason-Patterns zu kodieren, die bei der Beurteilung von Prostatakarzinomen auftreten können.",
         "exampleBoolean": false
       },
       {
@@ -1546,6 +1986,153 @@
       },
       {
         "reference": {
+          "reference": "Encounter/mii-exa-onko-krk-example-encounter"
+        },
+        "name": "mii-exa-onko-krk-example-encounter",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/mii-exa-onko-krk-example-patient"
+        },
+        "name": "mii-exa-onko-krk-example-patient",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Bundle/mii-exa-onko-mamma-example-bundle-1"
+        },
+        "name": "mii-exa-onko-mamma-example-bundle-1",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/mii-exa-onko-mamma-example-patient"
+        },
+        "name": "mii-exa-onko-mamma-example-patient",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-mamma-menopause-status-1"
+        },
+        "name": "mii-exa-onko-mamma-menopause-status-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-menopause-status"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-mamma-praeoperative-markierung-1"
+        },
+        "name": "mii-exa-onko-mamma-praeoperative-markierung-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-praeoperative-markierung"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-mamma-rezeptorstatus-estrogen-1"
+        },
+        "name": "mii-exa-onko-mamma-rezeptorstatus-estrogen-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-rezeptorstatus-estrogen"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-mamma-rezeptorstatus-progesteron-1"
+        },
+        "name": "mii-exa-onko-mamma-rezeptorstatus-progesteron-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-rezeptorstatus-progesteron"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-mamma-tumorgroesse-1"
+        },
+        "name": "mii-exa-onko-mamma-tumorgroesse-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorgroesse"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-prostata-anzahl-positiver-stanzen-1"
+        },
+        "name": "mii-exa-onko-prostata-anzahl-positiver-stanzen-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-anzahl-positive-stanzen"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-prostata-anzahl-stanzen-1"
+        },
+        "name": "mii-exa-onko-prostata-anzahl-stanzen-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-anzahl-stanzen"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-prostata-ca-befall-stanze-1"
+        },
+        "name": "mii-exa-onko-prostata-ca-befall-stanze-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-ca-befall-stanze"
+      },
+      {
+        "reference": {
+          "reference": "Bundle/mii-exa-onko-prostata-example-bundle-1"
+        },
+        "name": "mii-exa-onko-prostata-example-bundle-1",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/mii-exa-onko-prostata-example-patient"
+        },
+        "name": "mii-exa-onko-prostata-example-patient",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-prostata-gleason-pattern-grade-group-1"
+        },
+        "name": "mii-exa-onko-prostata-gleason-pattern-grade-group-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-grade-group"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-prostata-gleason-pattern-primary-1"
+        },
+        "name": "mii-exa-onko-prostata-gleason-pattern-primary-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-prostata-gleason-pattern-secondary-1"
+        },
+        "name": "mii-exa-onko-prostata-gleason-pattern-secondary-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-prostata-psa-diagnose-1"
+        },
+        "name": "mii-exa-onko-prostata-psa-diagnose-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-psa"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-prostata-psa-verlauf-1"
+        },
+        "name": "mii-exa-onko-prostata-psa-verlauf-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-psa"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-prostata-surgery-1"
+        },
+        "name": "mii-exa-onko-prostata-surgery-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-prostata-surgical-complication-1"
+        },
+        "name": "mii-exa-onko-prostata-surgical-complication-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-clavien-dindo"
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-onko-residualstatus-1"
         },
         "name": "mii-exa-onko-residualstatus-1",
@@ -1872,10 +2459,202 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-onko-krk-mrt-mesorektale-faszie-status"
+        },
+        "name": "MII_CS_Onko_KRK_MRT_Mesorektale_Faszie_Status",
+        "description": "oBDS-basiertes Codesystem für den Status der MRT/CT Untersuchung zur mesorektalen Faszie beim Kolorektalen Karzinom (KR5)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-krk-stoma-anzeichnung"
+        },
+        "name": "MII_CS_Onko_KRK_Stoma_Anzeichnung",
+        "description": "oBDS-basiertes Codesystem für die präoperative Anzeichnung der Stoma-Position beim Rektumkarzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-operation-urgency"
+        },
+        "name": "MII_CS_Onko_Operation_Urgency",
+        "description": "oBDS-basiertes Codesystem für die Modalität der Eingriffsdurchführung (Art des Eingriffs KR6)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-genetische-variante-auspraegung"
         },
         "name": "MII_VS Onkologie Genetische Variante Ausprägung",
         "description": "Value Set für oBDS-Codes für Ausprägung der Genetischen Variante",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-krk-abstand-circumferelle-resektionsrand"
+        },
+        "name": "MII_VS_Onko_KRK_Abstand_Circumferelle_Resektionsrand",
+        "description": "Value Set für semantische Kodierung des oBDS-Abstand des Tumorrandes zur circumferellen Resektionsrand im Kolorektalen Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-krk-abstand-resektionslinie-aboral"
+        },
+        "name": "MII_VS_Onko_KRK_Abstand_Resektionslinie_Aboral",
+        "description": "Value Set für semantische Kodierung des oBDS-Abstand des Tumorrandes zur aboralen Resektionslinie im Kolorektalen Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-krk-anastomoseninsuffizienz"
+        },
+        "name": "MII_VS_Onko_KRK_Anastomoseninsuffizienz",
+        "description": "Value Set für die Bewertung der Anastomoseninsuffizienz beim Kolorektalen Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-krk-mrt-mesorektale-faszie-status"
+        },
+        "name": "MII_VS_Onko_KRK_MRT_Mesorektale_Faszie_Status",
+        "description": "Value Set für semantische Kodierung des oBDS-Status der MRT/CT Untersuchung zur mesorektalen Faszie beim Kolorektalen Karzinom (KR5)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-krk-stoma-anzeichnung"
+        },
+        "name": "MII_VS_Onko_KRK_Stoma_Anzeichnung",
+        "description": "Value Set für semantische Kodierung der oBDS-präoperativen Stoma-Anzeichnung beim Rektumkarzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-krk-stoma-status-reason"
+        },
+        "name": "MII_VS_Onko_KRK_Stoma_Status_Reason",
+        "description": "Value Set für SNOMED CT Codes zur Begründung des Status der präoperativen Stoma-Anzeichnung",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-krk-tme-qualitaet"
+        },
+        "name": "MII_VS_Onko_KRK_TME_Qualitaet",
+        "description": "Value Set für semantische Kodierung des oBDS-Abstand des Tumorrandes zur aboralen Resektionslinie im Kolorektalen Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-intraoperatives-imaging-praeparat"
+        },
+        "name": "MII_VS_Onko_Mamma_Intraoperatives_Imaging_Praeparat",
+        "description": "Value Set für intraoperatives Imaging des Präparats nach Exzision bei Mamma-Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-menopause-status"
+        },
+        "name": "MII_VS_Onko_Mamma_Menopause_Status",
+        "description": "Value Set für (prätherapeutischen) Status der Menopause Score",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-operationen"
+        },
+        "name": "MII_VS_Onko_Mamma_Operationen",
+        "description": "Value Set für oBDS-Rezeptorstatus Mamma",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-operation-ops"
+        },
+        "name": "MII_VS_Onko_Mamma_Operation_OPS",
+        "description": "Value Set für Mamma-Operationen basierend auf OPS",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-operation-sct"
+        },
+        "name": "MII_VS_Onko_Mamma_Operation_SCT",
+        "description": "Value Set für Mamma-Operationen basierend auf SNOMED CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-praeoperative-markierung-modalitaet"
+        },
+        "name": "MII_VS_Onko_Mamma_Praeoperative_Markierung_Modalitaet",
+        "description": "Value Set für Imagingmodalität der präopertiven Markierung bei Mamma-Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-rezeptorstatus-leitlinie"
+        },
+        "name": "MII_VS_Onko_Mamma_Rezeptorstatus_Leitlinie",
+        "description": "Value Set für oBDS-Rezeptorstatus Mamma",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-rezeptorstatus-obds"
+        },
+        "name": "MII_VS_Onko_Mamma_Rezeptorstatus_oBDS",
+        "description": "Value Set für oBDS-Rezeptorstatus Mamma",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-melanom-ldh"
+        },
+        "name": "MII_VS_Onko_Melanom_LDH",
+        "description": "Value Set für Laktatdehydrogenase (LDH) Laborwerte beim Malignen Melanom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-operation-urgency"
+        },
+        "name": "MII_VS_Onko_Operation_Urgency",
+        "description": "Value Set für semantische Kodierung der oBDS-Modalität der Eingriffsdurchführung (Art des Eingriffs KR6)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-prostata-clavien-dindo"
+        },
+        "name": "MII_VS_Onko_Prostata_Clavien_Dindo",
+        "description": "Value Set für Gleason Score",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-prostata-gleason-primary-secondary-tertiary"
+        },
+        "name": "MII_VS_Onko_Prostata_Gleason_PrimarySecondaryTertiary",
+        "description": "Value Set für Primär-, Sekundär- und Tertiär-Gleason Patterns in der Onkologie Prostata. Der häufigste Gleason Pattern wird als primär, der zweithäufigste als sekundär und (seltener, meistens bei Gleason Pattern 5) der dritthäufigste als tertiär bezeichnet. Diese Value Set wird verwendet, um die verschiedenen Gleason Patterns zu kodieren, die bei der Beurteilung von Prostatakarzinomen auftreten können.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-prostata-gleason-score"
+        },
+        "name": "MII_VS_Onko_Prostata_Gleason_Score",
+        "description": "Value Set für Gleason Score",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-prostata-postsurgical-complications"
+        },
+        "name": "MII_VS_Onko_Prostata_Postsurgical_Complications",
+        "description": "Value Set für Clavien-Dindo Klassifikation",
         "exampleBoolean": false
       },
       {

@@ -32,7 +32,7 @@ Description: "Umfang eines Residualtumors nach einer Therapie"
     loinc 0..1 and
     snomed 0..1
 * code.coding[loinc] MS
-* code.coding[loinc] = $LOINC#84892-9
+* code.coding[loinc] = $LNC#84892-9
 * code.coding[loinc].system 1.. MS
 * code.coding[loinc].code 1.. MS
 * code.coding[snomed] = $SCT#445200009

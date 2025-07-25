@@ -126,6 +126,69 @@
         ]
       },
       {
+        "id": "Procedure.extension:Urgency",
+        "path": "Procedure.extension",
+        "sliceName": "Urgency",
+        "short": "Art des Eingriffs",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Art des Eingriffs"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Modalität der Eingriffsdurchführung gemäß KR6 oBDS 2021",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Modalität der Eingriffsdurchführung - Elektiveingriff vs. Notfalleingriff - gemäß KR6 oBDS 2021"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-urgency"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.extension:Urgency.value[x].coding.code",
+        "path": "Procedure.extension.value[x].coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "KR6",
+            "comment": "Art des Eingriffs (Modalität der Eingriffsdurchführung)"
+          }
+        ]
+      },
+      {
         "id": "Procedure.basedOn",
         "path": "Procedure.basedOn",
         "type": [

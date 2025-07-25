@@ -12,7 +12,7 @@ Description: "Histologie-Kodierung nach ICD-0 für die Verwendung von Folgediagn
 * code MS
 * code ^short = "Histologische Bewertung nach ICD-0-3"
 * code.coding MS
-* code.coding = $LOINC#59847-4 
+* code.coding = $LNC#59847-4 
 * effective[x] MS
 * effective[x] only dateTime
 * insert Label (effectiveDateTime, Tumor Histologiedatum, Tumor Histologiedatum im Krankheitsverlauf)

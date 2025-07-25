@@ -1,0 +1,43 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Onko_Melanom_Ulzeration",
+  "id": "mii-vs-onko-melanom-ulzeration",
+  "title": "MII VS Onkologie Melanom Ulzeration",
+  "description": "Codes für die Ulzeration beim Malignen Melanom der Haut",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-melanom-ulzeration",
+  "version": "2025.1.0",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "experimental": false,
+  "compose": {
+    "include": [
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-melanom-ulzeration",
+        "concept": [
+          {
+            "code": "J",
+            "display": "Ja"
+          },
+          {
+            "code": "N",
+            "display": "Nein"
+          },
+          {
+            "code": "U",
+            "display": "Unbekannt"
+          }
+        ]
+      }
+    ]
+  }
+}

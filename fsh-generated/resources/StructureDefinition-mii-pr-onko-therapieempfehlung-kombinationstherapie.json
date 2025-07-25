@@ -1,0 +1,96 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-pr-onko-therapieempfehlung-kombinationstherapie",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie",
+  "version": "2025.1.0",
+  "name": "MII_PR_Onko_Therapieempfehlung_Kombinationstherapie",
+  "title": "MII PR Onkologie Therapieempfehlung Operation",
+  "status": "active",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "description": "Dieses Profil beschreibt eine Empfehlung für eine Operation im Rahmen der Tumorkonferenz",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "oBDS",
+      "name": "Mapping FHIR zu oBDS"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "RequestGroup",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/RequestGroup",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "RequestGroup.meta.profile",
+        "path": "RequestGroup.meta.profile",
+        "mustSupport": true
+      },
+      {
+        "id": "RequestGroup.identifier",
+        "path": "RequestGroup.identifier",
+        "mustSupport": true
+      },
+      {
+        "id": "RequestGroup.status",
+        "path": "RequestGroup.status",
+        "mustSupport": true
+      },
+      {
+        "id": "RequestGroup.intent",
+        "path": "RequestGroup.intent",
+        "patternCode": "proposal",
+        "mustSupport": true
+      },
+      {
+        "id": "RequestGroup.subject",
+        "path": "RequestGroup.subject",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "RequestGroup.encounter",
+        "path": "RequestGroup.encounter",
+        "mustSupport": true
+      },
+      {
+        "id": "RequestGroup.authoredOn",
+        "path": "RequestGroup.authoredOn",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "RequestGroup.reasonReference",
+        "path": "RequestGroup.reasonReference",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  }
+}

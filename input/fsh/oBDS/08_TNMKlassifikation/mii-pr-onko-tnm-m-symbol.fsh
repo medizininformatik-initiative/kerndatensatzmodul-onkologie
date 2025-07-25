@@ -11,7 +11,7 @@ Description: "TNM-Klassifikation: TNM m-Symbol. Kennzeichnet Vorhandensein multi
 
 * status MS
 * code MS
-* code = $LOINC#42030-7
+* code = $LNC#42030-7
 * code.coding.code 1.. MS
 * code.coding.system 1.. MS
 * subject 1..1 MS

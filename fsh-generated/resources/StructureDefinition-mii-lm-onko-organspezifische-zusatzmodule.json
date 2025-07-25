@@ -1,0 +1,632 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-lm-onko-organspezifische-zusatzmodule",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/OrganspezifischeZusatzmodule",
+  "version": "2025.1.0",
+  "name": "MII_LM_Onko_Organspezifische_Zusatzmodule",
+  "title": "MII LM Onkologie Organspezifische Zusatzmodule",
+  "status": "active",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "description": "Logisches Modell für die organspezifischen Zusatzmodule des oBDS",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "FHIR",
+      "name": "Organspezifische Zusatzmodule LogicalModel FHIR Mapping"
+    },
+    {
+      "identity": "oBDS",
+      "name": "Organspezifische Zusatzmodule LogicalModel oBDS Mapping"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/OrganspezifischeZusatzmodule",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "OrganspezifischeZusatzmodule",
+        "path": "OrganspezifischeZusatzmodule",
+        "short": "MII LM Onkologie Organspezifische Zusatzmodule",
+        "definition": "Logisches Modell für die organspezifischen Zusatzmodule des oBDS"
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Mamma",
+        "path": "OrganspezifischeZusatzmodule.Mamma",
+        "short": "Mamma",
+        "definition": "Mamma",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Bundle/Collection von Mamma-spezifischen Ressourcen"
+          },
+          {
+            "identity": "oBDS",
+            "map": "Mamma-Zusatzmodul nach oBDS",
+            "comment": "Basiert auf oBDS Mammakarzinom-Modul: https://www.basisdatensatz.de/module/5/mammakarzinom"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Mamma.Menopausenstatus",
+        "path": "OrganspezifischeZusatzmodule.Mamma.Menopausenstatus",
+        "short": "Menopausenstatus",
+        "definition": "Prätherapeutischer Menopausenstatus einer Patientin mit Mamma-Karzinom.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept (MII_PR_Onko_Mamma_Menopausenstatus)"
+          },
+          {
+            "identity": "oBDS",
+            "map": "M1",
+            "comment": "Menopausenstatus - oBDS 2021: perimenopausal wird unter prämenopausal subsumiert"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusEstrogen",
+        "path": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusEstrogen",
+        "short": "Rezeptorstatus Estrogen",
+        "definition": "Rezeptorstatus Estrogen",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation (MII_PR_Onko_Mamma_Rezeptorstatus_Estrogen)"
+          },
+          {
+            "identity": "oBDS",
+            "map": "M2.1",
+            "comment": "Estrogen-Rezeptorstatus - Duale Kodierung: oBDS-Definition und S3-Leitlinien-Definition"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusEstrogen.Status",
+        "path": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusEstrogen.Status",
+        "short": "Estrogen-Rezeptorstatus",
+        "definition": "Kategoriale Bewertung des Estrogen-Rezeptorstatus: positiv/negativ.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept"
+          },
+          {
+            "identity": "oBDS",
+            "map": "M2.1.1",
+            "comment": "Kategoriale Bewertung des Estrogen-Rezeptorstatus"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusEstrogen.AnteilPositiveZellen",
+        "path": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusEstrogen.AnteilPositiveZellen",
+        "short": "Anteil positive Zellen",
+        "definition": "Quantitative Bestimmung in Prozent.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component[AnteilPositiveZellen].valueQuantity"
+          },
+          {
+            "identity": "oBDS",
+            "map": "M2.1.2",
+            "comment": "Quantitative Estrogen-Bestimmung in Prozent"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusEstrogen.Faerbeintensitaet",
+        "path": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusEstrogen.Faerbeintensitaet",
+        "short": "Färbeintensität",
+        "definition": "Qualitative Bewertung der Färbeintensität.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component[Faerbeintensitaet].valueCodeableConcept"
+          },
+          {
+            "identity": "oBDS",
+            "map": "M2.1.3",
+            "comment": "Estrogen-Färbeintensität"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusProgesteron",
+        "path": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusProgesteron",
+        "short": "Rezeptorstatus Progesteron",
+        "definition": "Rezeptorstatus Progesteron",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation (MII_PR_Onko_Mamma_Rezeptorstatus_Progesteron)"
+          },
+          {
+            "identity": "oBDS",
+            "map": "M2.2",
+            "comment": "Progesteron-Rezeptorstatus"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusProgesteron.Status",
+        "path": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusProgesteron.Status",
+        "short": "Progesteron-Rezeptorstatus",
+        "definition": "Kategoriale Bewertung des Progesteron-Rezeptorstatus: positiv/negativ.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept"
+          },
+          {
+            "identity": "oBDS",
+            "map": "M2.2.1",
+            "comment": "Kategoriale Bewertung des Progesteron-Rezeptorstatus"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusProgesteron.AnteilPositiveZellen",
+        "path": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusProgesteron.AnteilPositiveZellen",
+        "short": "Anteil positive Zellen",
+        "definition": "Quantitative Bestimmung in Prozent.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component[AnteilPositiveZellen].valueQuantity"
+          },
+          {
+            "identity": "oBDS",
+            "map": "M2.2.2",
+            "comment": "Quantitative Progesteron-Bestimmung in Prozent"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusProgesteron.Faerbeintensitaet",
+        "path": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusProgesteron.Faerbeintensitaet",
+        "short": "Färbeintensität",
+        "definition": "Qualitative Bewertung der Färbeintensität.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component[Faerbeintensitaet].valueCodeableConcept"
+          },
+          {
+            "identity": "oBDS",
+            "map": "M2.2.3",
+            "comment": "Progesteron-Färbeintensität"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Mamma.Her2NeuStatus",
+        "path": "OrganspezifischeZusatzmodule.Mamma.Her2NeuStatus",
+        "short": "Her2Neu-Status",
+        "definition": "Her2Neu-Status",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation (Molecular Tumorboard Profil)"
+          },
+          {
+            "identity": "oBDS",
+            "map": "M3",
+            "comment": "Her2Neu-Status - Derzeit im Molecular Tumorboard-Profil abgebildet"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Mamma.Her2NeuStatus.Status",
+        "path": "OrganspezifischeZusatzmodule.Mamma.Her2NeuStatus.Status",
+        "short": "Her2Neu-Status",
+        "definition": "Her2Neu-Status als multimodaler Biomarker.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept"
+          },
+          {
+            "identity": "oBDS",
+            "map": "M3.1",
+            "comment": "Her2Neu-Status Bewertung"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Mamma.MammaOperation",
+        "path": "OrganspezifischeZusatzmodule.Mamma.MammaOperation",
+        "short": "Mamma-Operation",
+        "definition": "Mamma-Operation",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure (MII_PR_Onko_Mamma_Operation)"
+          },
+          {
+            "identity": "oBDS",
+            "map": "M4",
+            "comment": "Mamma-Operationen"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Mamma.MammaOperation.Operationstyp",
+        "path": "OrganspezifischeZusatzmodule.Mamma.MammaOperation.Operationstyp",
+        "short": "Operationstyp",
+        "definition": "Art der Mamma-Operation.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.code"
+          },
+          {
+            "identity": "oBDS",
+            "map": "M4.1",
+            "comment": "Art der Mamma-Operation (BET, Mastektomie, Lymphknotenoperation, Rekonstruktion)"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Mamma.MammaOperation.IntraoperativeHilfsmittel",
+        "path": "OrganspezifischeZusatzmodule.Mamma.MammaOperation.IntraoperativeHilfsmittel",
+        "short": "Intraoperative Hilfsmittel",
+        "definition": "Markierungen und Hilfsmittel während der Operation.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.usedCode"
+          },
+          {
+            "identity": "oBDS",
+            "map": "M4.2",
+            "comment": "Intraoperative Hilfsmittel und Markierungen"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Mamma.PraeoperativeMarkierung",
+        "path": "OrganspezifischeZusatzmodule.Mamma.PraeoperativeMarkierung",
+        "short": "Präoperative Markierung",
+        "definition": "Präoperative Markierung",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure (MII_PR_Onko_Mamma_Praeoperative_Markierung)"
+          },
+          {
+            "identity": "oBDS",
+            "map": "M5",
+            "comment": "Präoperative Markierung - Alternative Modellierung als usedCode-Slices diskutierbar"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Mamma.PraeoperativeMarkierung.Modalitaet",
+        "path": "OrganspezifischeZusatzmodule.Mamma.PraeoperativeMarkierung.Modalitaet",
+        "short": "Markierungsmodalität",
+        "definition": "Art der präoperativen Markierung.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.usedCode.coding[PraeoperativeMarkierung]"
+          },
+          {
+            "identity": "oBDS",
+            "map": "M5.1",
+            "comment": "Modalität der präoperativen Markierung"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Mamma.Tumorgroesse",
+        "path": "OrganspezifischeZusatzmodule.Mamma.Tumorgroesse",
+        "short": "Tumorgröße",
+        "definition": "Größte Dimension des Primärtumors.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation (MII_PR_Onko_Tumorgroesse)"
+          },
+          {
+            "identity": "oBDS",
+            "map": "M6",
+            "comment": "Tumorgröße - Verschoben in Histologie-Modul, da auf multiple Entitäten anwendbar"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Mamma.Studienteilnahme",
+        "path": "OrganspezifischeZusatzmodule.Mamma.Studienteilnahme",
+        "short": "Studienteilnahme",
+        "definition": "Teilnahme an klinischen Studien.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation (MII_PR_Onko_Studienteilnahme)"
+          },
+          {
+            "identity": "oBDS",
+            "map": "M7",
+            "comment": "Studienteilnahme - Bereits durch oBDS 2021 abgedeckt"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom",
+        "short": "Kolorektales Karzinom",
+        "definition": "Kolorektales Karzinom",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Bundle/Collection von KRK-spezifischen Ressourcen"
+          },
+          {
+            "identity": "oBDS",
+            "map": "KRK-Zusatzmodul",
+            "comment": "Placeholder für KRK-spezifische oBDS-Mappings"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Placeholder",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Placeholder",
+        "short": "Placeholder",
+        "definition": "Placeholder für KRK-spezifische Datenelemente.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Placeholder für KRK-spezifische Implementierung"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Prostata",
+        "path": "OrganspezifischeZusatzmodule.Prostata",
+        "short": "Prostata",
+        "definition": "Prostata",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Bundle/Collection von Prostata-spezifischen Ressourcen"
+          },
+          {
+            "identity": "oBDS",
+            "map": "Prostata-Zusatzmodul",
+            "comment": "Placeholder für Prostata-spezifische oBDS-Mappings"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Prostata.Placeholder",
+        "path": "OrganspezifischeZusatzmodule.Prostata.Placeholder",
+        "short": "Placeholder",
+        "definition": "Placeholder für Prostata-spezifische Datenelemente.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Placeholder für Prostata-spezifische Implementierung"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.MalignesMelanom",
+        "path": "OrganspezifischeZusatzmodule.MalignesMelanom",
+        "short": "Malignes Melanom",
+        "definition": "Malignes Melanom",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Bundle/Collection von Melanom-spezifischen Ressourcen"
+          },
+          {
+            "identity": "oBDS",
+            "map": "Melanom-Zusatzmodul",
+            "comment": "Placeholder für Melanom-spezifische oBDS-Mappings"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.MalignesMelanom.Placeholder",
+        "path": "OrganspezifischeZusatzmodule.MalignesMelanom.Placeholder",
+        "short": "Placeholder",
+        "definition": "Placeholder für Melanom-spezifische Datenelemente.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Placeholder für Melanom-spezifische Implementierung"
+          }
+        ]
+      }
+    ]
+  }
+}

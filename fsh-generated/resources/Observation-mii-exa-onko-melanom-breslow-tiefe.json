@@ -1,0 +1,46 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-melanom-breslow-tiefe",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-breslow-tiefe"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "106243009",
+        "system": "http://snomed.info/sct",
+        "display": "Breslow depth staging for melanoma of skin (observable entity)"
+      }
+    ]
+  },
+  "valueQuantity": {
+    "unit": "mm",
+    "system": "http://unitsofmeasure.org",
+    "code": "mm",
+    "value": 2.1
+  },
+  "method": {
+    "coding": [
+      {
+        "code": "117617002",
+        "system": "http://snomed.info/sct",
+        "display": "Immunohistochemistry procedure"
+      }
+    ]
+  },
+  "status": "final",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "encounter": {
+    "reference": "Encounter/example"
+  },
+  "focus": [
+    {
+      "reference": "Condition/mii-exa-onko-diagnose-primaertumor"
+    }
+  ],
+  "effectiveDateTime": "2024-03-20T14:30:00+01:00"
+}

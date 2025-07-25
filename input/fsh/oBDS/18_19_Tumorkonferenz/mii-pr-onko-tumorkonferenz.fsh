@@ -39,6 +39,7 @@ Description: "Dieses Profil beschreibt die Tumorkonferenz und die Therapieempfeh
 * supportingInfo MS
 
 * activity 0..* MS
+
 * activity.detail 1..1 MS
 * activity.detail.code 1..1 MS
 * activity.detail.code from mii-vs-onko-therapieempfehlung-typ

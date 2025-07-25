@@ -11,7 +11,7 @@ Description: "TNM-Klassifikation: TNM r-Symbol. Gibt an, ob die Klassifikation e
 
 * status MS
 * code MS
-* code = $LOINC#101659-1
+* code = $LNC#101659-1
 * code.coding.code 1.. MS
 * code.coding.system 1.. MS
 * subject 1..1 MS

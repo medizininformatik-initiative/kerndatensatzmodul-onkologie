@@ -1,0 +1,264 @@
+{
+  "resourceType": "Bundle",
+  "id": "mii-exa-onko-mamma-example-bundle-1",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "Condition/mii-exa-onko-mamma-example-condition",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "mii-exa-onko-mamma-example-condition",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+            "valueDateTime": "2020-03-07"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+              "code": "C50.3",
+              "display": "Bösartige Neubildung: Unterer innerer Quadrant der Brustdrüse",
+              "version": "2024"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "code": "confirmed",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/mii-exa-onko-mamma-example-patient"
+        },
+        "recordedDate": "2024-01-02"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "fullUrl": "Observation/mii-exa-onko-mamma-menopause-status-1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "mii-exa-onko-mamma-menopause-status-1",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-menopause-status"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "161712005",
+              "system": "http://snomed.info/sct",
+              "display": "Menopause, function (observable entity)"
+            }
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/mii-exa-onko-mamma-example-patient"
+        },
+        "focus": [
+          {
+            "reference": "Condition/mii-exa-onko-mamma-example-condition"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "22636003",
+              "system": "http://snomed.info/sct",
+              "display": "Premenopausal state (finding)"
+            }
+          ]
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "Observation/mii-exa-onko-mamma-rezeptorstatus-estrogen-1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "mii-exa-onko-mamma-rezeptorstatus-estrogen-1",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-rezeptorstatus-estrogen"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "40556-3",
+              "system": "http://loinc.org",
+              "display": "Estrogen receptor Ag [Presence] in Tissue by Immune stain"
+            }
+          ]
+        },
+        "component": [
+          {
+            "valueQuantity": {
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "value": 5
+            },
+            "code": {
+              "coding": [
+                {
+                  "code": "1234804006",
+                  "system": "http://snomed.info/sct",
+                  "display": "Percent of cells with estrogen receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
+                }
+              ]
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "1236874005",
+                  "system": "http://snomed.info/sct",
+                  "display": "Intensity of stain of estrogen receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "LA13034-6",
+                  "system": "http://loinc.org",
+                  "display": "Weak"
+                }
+              ]
+            }
+          }
+        ],
+        "status": "final",
+        "subject": {
+          "reference": "Patient/mii-exa-onko-mamma-example-patient"
+        },
+        "focus": [
+          {
+            "reference": "Condition/mii-exa-onko-mamma-example-condition"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "LA6576-8",
+              "system": "http://loinc.org",
+              "display": "Positive"
+            }
+          ]
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "Observation/mii-exa-onko-mamma-rezeptorstatus-progesteron-1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "mii-exa-onko-mamma-rezeptorstatus-progesteron-1",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-rezeptorstatus-progesteron"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "85339-0",
+              "system": "http://loinc.org",
+              "display": "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+            }
+          ]
+        },
+        "component": [
+          {
+            "valueQuantity": {
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "value": 25
+            },
+            "code": {
+              "coding": [
+                {
+                  "code": "1234803000",
+                  "system": "http://snomed.info/sct",
+                  "display": "Percent of cells with progesterone receptor in primary malignant neoplasm of breast by immunohistochemistry"
+                }
+              ]
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "1237278006",
+                  "system": "http://snomed.info/sct",
+                  "display": "Intensity of stain of progesterone receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "LA13034-6",
+                  "system": "http://loinc.org",
+                  "display": "Weak"
+                }
+              ]
+            }
+          }
+        ],
+        "status": "final",
+        "subject": {
+          "reference": "Patient/mii-exa-onko-mamma-example-patient"
+        },
+        "focus": [
+          {
+            "reference": "Condition/mii-exa-onko-mamma-example-condition"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "LA6576-8",
+              "system": "http://loinc.org",
+              "display": "Positive"
+            }
+          ]
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    }
+  ]
+}

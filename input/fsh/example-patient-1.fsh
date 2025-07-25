@@ -41,7 +41,8 @@ Description: "bestätigte Primärdiagnose"
 * verificationStatus.coding[primaertumorDiagnosesicherung] = $mii-cs-onko-primaertumor-diagnosesicherung#2 //"klinische Diagnostik"  steht für "Alle Untersuchungstechniken, einschl. Röntgen, Endoskopie, bildgeb. Verfahren, Ultraschall, explorativer Eingriffe(wie Laparotomie) und Autopsie, aber ohne Gewebsuntersuchungen"
 * code.coding  = $ICD10GM|2020#C48.2 "Bösartige Neubildung: Peritoneum, nicht näher bezeichnet"
 // 389026000 | Ascites (disorder) | 
-* bodySite = $ICDO3#C56.9 "Ovar" // mögliche Lokalisation des Haupttumors? 
+* bodySite.coding[icd-o-3] = $ICDO3#C56.9 "Ovar" // mögliche Lokalisation des Haupttumors? 
+* bodySite.coding[snomed-ct] = $SCT#15497006 "Ovary" 
 
 
 // Kann man auf Basis von "Mesenteriale retroperitoneale LK-Metastasen, V.a. Lebermetastasierung" ein NM-Staging machen? Ovar
@@ -58,8 +59,10 @@ Description: "Diagnose Primärtumor"
 * verificationStatus.coding[primaertumorDiagnosesicherung] = $mii-cs-onko-primaertumor-diagnosesicherung#2 "klinische Diagnostik" // steht für "Alle Untersuchungstechniken, einschl. Röntgen, Endoskopie, bildgeb. Verfahren, Ultraschall, explorativer Eingriffe(wie Laparotomie) und Autopsie, aber ohne Gewebsuntersuchungen"
 * code.coding  = $ICD10GM|2020#C48.2 "Bösartige Neubildung: Peritoneum, nicht näher bezeichnet"
 // 389026000 | Ascites (disorder) | 
-* bodySite = $ICDO3#C56.9 "Ovar" // mögliche Lokalisation des Haupttumors?
+* bodySite.coding[icd-o-3] = $ICDO3#C56.9 "Ovar" // mögliche Lokalisation des Haupttumors?
 * extension[Feststellungsdatum].valueDateTime = 2021-05-09 
+* bodySite.coding[snomed-ct] = $SCT#15497006 "Ovary" 
+
 
 //15.06.2021 Aszitespunktion: mit malignen Tumorzellen. Zytologisch mögliches Ovarial-CA.
 // Modeling einer condition Ressource mit Ov-CA. ICD-10 + ICD-O Topopgraphe wahrscheinlich klar, ICD-O Morphologisch noch nicht
@@ -275,7 +278,7 @@ Usage: #example
 Description: "Pathoreport incl. Immunhistochemie"
 * subject = Reference(PatientKimMusterperson)
 * status = #final
-* code.coding = $LOINC#22034-3 "Pathology report Cancer Narrative"
+* code.coding = $LNC#22034-3 "Pathology report Cancer Narrative"
 * conclusion = "Histologie: Resektat vom 30.09.2021: Neoplasie des Ovars (Z.n. neoadjuvanter Therapie) (ICD-10-C56) Ovar o.n.A. (ICD-O-C56.9) Untersuchungsmaterial: Resektat WHO-Typ: Seröses Adenokarzinom (ICD-O M-8441/3) Lokale Tumorausbreitung: Ovartumor links mit einer max. Größe von 2,2 cm und tumorinfiltrierter Kapsel mit Nachweis von Tumorzellen auf der Ovaroberfläche, Anteil vitaler Tumorzellen von ca. 80 %. UICC-Klassifikation (8. Auflage): ypT3c. pM1b (HEP) L1. V0. Pn0 FIGO: IVB"
 
 
@@ -331,7 +334,7 @@ Usage: #example
 Description: "."
 * status = #final
 * subject = Reference(PatientKimMusterperson)
-* code.coding = $LOINC#101658-3
+* code.coding = $LNC#101658-3
 * effectiveDateTime = 2021-06-22
 * method = $mii-cs-onko-tnm-version#8 "8. Auflage"
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
