@@ -12,7 +12,7 @@ Hier sind  alle Änderungen aufgelistet.
     - Kolorektales Karzinom
     - Malignes Melanom
 
-- Hinterlegen eines preferred-Binding-ValueSets für Weitere Klassifikationen, basierend auf der oB
+- Hinterlegen eines preferred-Binding-ValueSets für Weitere Klassifikationen, basierend auf der oBDS-
 
 - Ermöglichen der optionalen Darstellung von Therapieempfehlungen mittels Referenzen als 
     - MedicationRequests
