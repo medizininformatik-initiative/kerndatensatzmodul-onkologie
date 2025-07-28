@@ -9,8 +9,8 @@ Description: "Beispiel für die Bewertung einer Anastomoseninsuffizienz beim Kol
 
 * code.coding = $SCT#236091002 "Large intestine anastomotic leak (disorder)"
 
-* subject = Reference(Patient/example)
-* encounter = Reference(Encounter/example)
+* subject = Reference(mii-exa-onko-krk-bundle-patient)
+* encounter = Reference(mii-exa-onko-krk-bundle-encounter)
 * focus = Reference(Procedure/mii-exa-onko-krk-operation)
 
 * effectiveDateTime = "2024-03-25T08:00:00+01:00"

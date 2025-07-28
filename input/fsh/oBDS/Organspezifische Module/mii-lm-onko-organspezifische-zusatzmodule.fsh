@@ -58,7 +58,12 @@ Description: "Logisches Modell für die organspezifischen Zusatzmodule des oBDS"
     * ClavienDindoGrad 0..1 CodeableConcept "Clavien-Dindo Grad" "Graduierung postoperativer Komplikationen nach Clavien-Dindo."
     * KomplikationsArt 0..1 CodeableConcept "Komplikationsart" "Spezifische Art der postoperativen Komplikation."
 * MalignesMelanom 0..* BackboneElement "Malignes Melanom"
-  * Placeholder 0..1 string "Placeholder" "Placeholder für Melanom-spezifische Datenelemente."
+  * Sicherheitsabstand 0..1 Quantity "Sicherheitsabstand Primärtumor" "Minimaler Sicherheitsabstand zum Primärtumor in mm gemäß oBDS MM1"
+  * BreslowTiefe 0..1 Quantity "Breslow-Tiefe" "Breslow-Tumordicke in mm beim Malignen Melanom der Haut"
+  * Ulzeration 0..1 CodeableConcept "Ulzeration" "Pathologisches Kriterium der Ulzeration beim Malignen Melanom der Haut gemäß oBDS MM4"
+  * LDH 0..1 BackboneElement "Laktatdehydrogenase"
+    * Wert 0..1 Quantity "LDH-Wert" "Laktatdehydrogenase Aktivität in U/L als prognostischer Marker"
+    * Bewertung 0..1 CodeableConcept "LDH-Bewertung" "Klinische Bewertung des LDH-Werts (normal/erhöht)"
 
 Mapping: OrganspezifischeZusatzmodule-LogicalModel
 Id: FHIR
@@ -114,7 +119,12 @@ Source: MII_LM_Onko_Organspezifische_Zusatzmodule
     * ClavienDindoGrad -> "Observation.valueCodeableConcept"
     * KomplikationsArt -> "Observation.component.where(code.coding.system='http://loinc.org' and code.coding.code='LA462-5').valueCodeableConcept"
 * MalignesMelanom -> "Bundle/Collection von Melanom-spezifischen Ressourcen"
-  * Placeholder -> "Placeholder für Melanom-spezifische Implementierung"
+  * Sicherheitsabstand -> "Observation.where(code.coding.system='http://snomed.info/sct' and code.coding.code='396511007').valueQuantity"
+  * BreslowTiefe -> "Observation.where(code.coding.system='http://snomed.info/sct' and code.coding.code='106243009').valueQuantity"
+  * Ulzeration -> "Observation.where(code.coding.system='http://snomed.info/sct' and code.coding.code='6270001000004106').valueCodeableConcept"
+  * LDH -> "Observation.where(code.coding.memberOf('mii-vs-onko-melanom-ldh'))"
+    * Wert -> "Observation.valueQuantity"
+    * Bewertung -> "Observation.interpretation"
 
 Mapping: oBDS-Mapping
 Id: oBDS
@@ -169,4 +179,10 @@ Source: MII_LM_Onko_Organspezifische_Zusatzmodule
   * ChirurgischeKomplikationen -> "P5" "Postoperative Komplikationen nach Prostatektomie"
     * ClavienDindoGrad -> "P5.1" "Clavien-Dindo Klassifikation postoperativer Komplikationen"
     * KomplikationsArt -> "P5.2" "Spezifische Art der postoperativen Komplikation"
-* MalignesMelanom -> "Melanom-Zusatzmodul" "Placeholder für Melanom-spezifische oBDS-Mappings"
+* MalignesMelanom -> "Melanom-Zusatzmodul nach oBDS" "Organspezifische Erweiterungen für Malignes Melanom basierend auf oBDS-Modul"
+  * Sicherheitsabstand -> "MM1" "Minimaler Sicherheitsabstand zum Primärtumor in mm nach definitivem operativem Eingriff"
+  * BreslowTiefe -> "Breslow" "Breslow-Tumordicke in mm - vertikale Tumordicke von der Granularschicht der Epidermis bis zur tiefsten Tumorinvasion"
+  * Ulzeration -> "MM4" "Ulzeration der Epidermis über dem Melanom (J = Ja, N = Nein, U = Unbekannt)" 
+  * LDH -> "LDH" "Laktatdehydrogenase als prognostischer Marker beim metastasierten Melanom"
+    * Wert -> "LDH" "LDH-Wert in U/L"
+    * Bewertung -> "LDH" "Bewertung des LDH-Werts (normal/erhöht)"

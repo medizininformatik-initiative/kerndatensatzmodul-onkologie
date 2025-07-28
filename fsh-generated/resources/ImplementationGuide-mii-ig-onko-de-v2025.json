@@ -119,6 +119,22 @@
       },
       {
         "reference": {
+          "reference": "ServiceRequest/mii-exa-onko-service-request-genetic-testing"
+        },
+        "name": "Genetic Testing ServiceRequest",
+        "description": "Request for comprehensive genomic profiling",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "CarePlan/mii-exa-onko-tumorkonferenz-legacy"
+        },
+        "name": "Legacy Coded Tumorboard Example",
+        "description": "Traditional approach using coded therapy recommendations from cancer registry",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
+      },
+      {
+        "reference": {
           "reference": "List/mii-exa-onko-liste-evidenz-erstdiagnose-1"
         },
         "name": "Liste der Evidenz zum Erstdiagnosezeitpunkt",
@@ -823,14 +839,6 @@
       },
       {
         "reference": {
-          "reference": "Condition/mii-exa-onko-diagnose-primaertumor-krk"
-        },
-        "name": "MII EXA Onko KRK Diagnose Primaertumor",
-        "description": "Beispiel für eine Primärtumor-Diagnose beim Kolorektalen Karzinom",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
-      },
-      {
-        "reference": {
           "reference": "Procedure/mii-exa-onko-krk-operation"
         },
         "name": "MII EXA Onko KRK Operation",
@@ -871,6 +879,14 @@
       },
       {
         "reference": {
+          "reference": "Bundle/mii-exa-onko-melanom-bundle"
+        },
+        "name": "MII EXA Onko Melanom Bundle",
+        "description": "Beispiel-Bundle für Malignes Melanom mit allen spezifischen Profilen",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-onko-melanom-ldh"
         },
         "name": "MII EXA Onko Melanom LDH",
@@ -892,6 +908,14 @@
         "name": "MII EXA Onko Melanom Ulzeration",
         "description": "Beispiel für die Bestimmung der Ulzeration beim Malignen Melanom",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-ulzeration"
+      },
+      {
+        "reference": {
+          "reference": "Bundle/mii-exa-onko-prostata-example-bundle-1"
+        },
+        "name": "MII EXA Onko Prostata Bundle",
+        "description": "Beispiel-Bundle für Prostata-Karzinom mit allen spezifischen Profilen",
+        "exampleBoolean": true
       },
       {
         "reference": {
@@ -2102,6 +2126,27 @@
       },
       {
         "reference": {
+          "reference": "Encounter/mii-exa-onko-melanom-bundle-encounter"
+        },
+        "name": "mii-exa-onko-melanom-bundle-encounter",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/mii-exa-onko-melanom-bundle-patient"
+        },
+        "name": "mii-exa-onko-melanom-bundle-patient",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-onko-melanom-diagnose"
+        },
+        "name": "mii-exa-onko-melanom-diagnose",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-onko-prostata-anzahl-positiver-stanzen-1"
         },
         "name": "mii-exa-onko-prostata-anzahl-positiver-stanzen-1",
@@ -2116,10 +2161,31 @@
       },
       {
         "reference": {
+          "reference": "Encounter/mii-exa-onko-prostata-bundle-encounter"
+        },
+        "name": "mii-exa-onko-prostata-bundle-encounter",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/mii-exa-onko-prostata-bundle-patient"
+        },
+        "name": "mii-exa-onko-prostata-bundle-patient",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-onko-prostata-ca-befall-stanze-1"
         },
         "name": "mii-exa-onko-prostata-ca-befall-stanze-1",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-ca-befall-stanze"
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-onko-prostata-diagnose"
+        },
+        "name": "mii-exa-onko-prostata-diagnose",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
       },
       {
         "reference": {
@@ -2714,6 +2780,22 @@
       },
       {
         "reference": {
+          "reference": "CarePlan/mii-exa-onko-tumorkonferenz-mixed"
+        },
+        "name": "Mixed Approach Tumorboard",
+        "description": "Combination of legacy coded and structured references in same CarePlan",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
+      },
+      {
+        "reference": {
+          "reference": "CarePlan/mii-exa-onko-tumorkonferenz-structured"
+        },
+        "name": "Molecular Tumor Board with Structured References",
+        "description": "Modern approach using references to complete MedicationRequest and ServiceRequest resources",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
+      },
+      {
+        "reference": {
           "reference": "Patient/PatientKimMusterperson"
         },
         "name": "PatientKimMusterperson",
@@ -2934,6 +3016,14 @@
         "name": "Strahlentherapie: Beispiel einer Strahlentherapie mit allgemeinem OPS-Code 8-52",
         "description": "Example radiation therapy conformant with MII Prozedur as bracket for radiation and nuclear therapy",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie"
+      },
+      {
+        "reference": {
+          "reference": "MedicationRequest/mii-exa-onko-medication-request-targeted-therapy"
+        },
+        "name": "Targeted Therapy MedicationRequest",
+        "description": "Complete medication request with dosing, schedule, and monitoring",
+        "exampleBoolean": true
       },
       {
         "reference": {

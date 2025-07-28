@@ -1,7 +1,7 @@
 //=========================
 // Bundle Core Resources 
 //=========================
-/*
+
 Instance: mii-exa-onko-prostata-bundle-patient
 InstanceOf: Patient
 Usage: #example
@@ -70,29 +70,38 @@ Description: "Beispiel-Bundle für Prostata-Karzinom mit allen spezifischen Prof
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
 
-* entry[+].fullUrl = "Observation/mii-exa-onko-prostata-anzahl-positive-stanzen-1"
-* entry[=].resource = mii-exa-onko-prostata-anzahl-positive-stanzen-1
+* entry[+].fullUrl = "Observation/mii-exa-onko-prostata-anzahl-positiver-stanzen-1"
+* entry[=].resource = mii-exa-onko-prostata-anzahl-positiver-stanzen-1
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
 
-* entry[+].fullUrl = "Observation/mii-exa-onko-prostata-karzinom-befall-stanze-1"
-* entry[=].resource = mii-exa-onko-prostata-karzinom-befall-stanze-1
+* entry[+].fullUrl = "Observation/mii-exa-onko-prostata-ca-befall-stanze-1"
+* entry[=].resource = mii-exa-onko-prostata-ca-befall-stanze-1
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
 
-* entry[+].fullUrl = "Observation/mii-exa-onko-prostata-gleason-score-grade-group-1"
-* entry[=].resource = mii-exa-onko-prostata-gleason-score-grade-group-1
+* entry[+].fullUrl = "Observation/mii-exa-onko-prostata-gleason-pattern-grade-group-1"
+* entry[=].resource = mii-exa-onko-prostata-gleason-pattern-grade-group-1
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
 
-* entry[+].fullUrl = "Observation/mii-exa-onko-prostata-gleason-patterns-1"
-* entry[=].resource = mii-exa-onko-prostata-gleason-patterns-1
+* entry[+].fullUrl = "Observation/mii-exa-onko-prostata-gleason-pattern-primary-1"
+* entry[=].resource = mii-exa-onko-prostata-gleason-pattern-primary-1
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
 
-* entry[+].fullUrl = "Observation/mii-exa-onko-prostata-clavien-dindo-1"
-* entry[=].resource = mii-exa-onko-prostata-clavien-dindo-1
+* entry[+].fullUrl = "Observation/mii-exa-onko-prostata-gleason-pattern-secondary-1"
+* entry[=].resource = mii-exa-onko-prostata-gleason-pattern-secondary-1
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
 
-*/
+* entry[+].fullUrl = "Observation/mii-exa-onko-prostata-surgical-complication-1"
+* entry[=].resource = mii-exa-onko-prostata-surgical-complication-1
+* entry[=].request.method = #POST
+* entry[=].request.url = "Observation"
+
+* entry[+].fullUrl = "Procedure/mii-exa-onko-prostata-surgery-1"
+* entry[=].resource = mii-exa-onko-prostata-surgery-1
+* entry[=].request.method = #POST
+* entry[=].request.url = "Procedure"
+

@@ -9,9 +9,9 @@ Description: "Beispiel für die Messung des Sicherheitsabstands beim Malignen Me
 
 * code.coding = $SCT#396511007 "Distance of in situ melanoma from closest lateral surgical margin in excised specimen of skin (observable entity)"
 
-* subject = Reference(Patient/example)
-* encounter = Reference(Encounter/example)
-* focus = Reference(Condition/mii-exa-onko-diagnose-primaertumor)
+* subject = Reference(mii-exa-onko-melanom-bundle-patient)
+* encounter = Reference(mii-exa-onko-melanom-bundle-encounter)
+* focus = Reference(mii-exa-onko-melanom-diagnose)
 
 * effectiveDateTime = "2024-03-25T10:00:00+01:00"
 

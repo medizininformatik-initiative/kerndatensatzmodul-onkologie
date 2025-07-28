@@ -3,22 +3,42 @@ parent:
 ---
 
 ## {{page-title}}
-Hier sind  alle Änderungen aufgelistet. 
+Hier sind alle Änderungen aufgelistet. 
 
 ## Änderungen Version 2026 (geplante Kommentierung September 2025 )
 - Neue Profile zur Abdeckung der organspezifischen Module
-    - Prostata 
     - **Mamma**: Vollständige Implementierung des Mamma-Moduls
         - **Estrogen-Rezeptorstatus**: Profil mit dualer Kodierung (oBDS/S3-Leitlinien) und Komponenten für Anteil positiver Zellen und Färbeintensität
         - **Progesteron-Rezeptorstatus**: Entsprechendes Profil mit identischer Struktur zum Estrogen-Status
         - **Menopause-Status**: Prätherapeutische Bestimmung mit oBDS 2021-konformer Subsumierung (perimenopausal → prämenopausal)
         - **Präoperative Markierung**: Profil für verschiedene Markierungsmodalitäten (Draht, Seeds, magnetisch)
         - **Mamma-Operation**: Spezialisiertes Operationsprofil mit SNOMED CT und OPS ValueSets
-        - **Bundle-Beispiel**: Transaktions-Bundle demonstriert Verknüpfung aller Mamma-Profile
         - **Hinweise**: Her2Neu im Molecular Tumorboard-Profil; Tumorgröße im Histologie-Modul; Studienteilnahme in oBDS 2021 abgedeckt
-        - **Entwicklung**: Detailliertere Spezifikation in Kooperation BIH/Deutsche Gesellschaft für Senologie geplant
-    - Kolorektales Karzinom
+    - **Prostata**: Vollständige Implementierung des Prostata-Moduls
+        - **PSA**: Prostata-spezifisches Antigen mit LOINC 2857-1 Kodierung
+        - **Anzahl Stanzen**: Gesamtzahl der entnommenen Biopsie-Stanzen (LOINC 33743-6)
+        - **Anzahl positive Stanzen**: Anzahl der Stanzen mit Adenokarzinom (LOINC 33746-9)
+        - **Karzinom-Befall Stanze**: Tumorbefall in Prozent pro Stanze (LOINC 33748-5)
+        - **Gleason Score/Grade Group**: Modernes ISUP-Graduierungssystem (LOINC 44648-7)
+        - **Gleason Patterns**: Primäre und sekundäre Gleason-Grad-Komponenten
+        - **Clavien-Dindo**: Chirurgische Komplikationsklassifikation mit dualer Kodierung (SNOMED CT + oBDS)
+    - **Kolorektales Karzinom**: Vollständige Implementierung des KRK-Moduls
+        - **Abstand Anokutanlinie**: Tumorsitz-Messung ab Anokutanlinie in cm (oBDS KR1, LOINC 33748-5)
+        - **Circumferelle Resektionsebene**: Minimaler Abstand zur circumferellen Resektionsebene in mm (oBDS KR3)
+        - **Aboraler Resektionsrand**: Minimaler Abstand zum aboralen Resektionsrand in mm (oBDS KR2)
+        - **MRT Mesorektale Faszie**: Bildgebende Bewertung der mesorektalen Faszie mit Abstandsmessung (oBDS KR2)
+        - **ASA-Klassifikation**: Präoperative Risikobewertung ASA I-VI + hirntote Organspender (oBDS KR9, LOINC 97816-3)
+        - **Anastomoseninsuffizienz**: Postoperative Komplikationsbewertung (oBDS KR8, SNOMED CT 235919008)
+        - **KRK-Operation**: Operative Eingriffe mit TME-Qualitätsbewertung (oBDS KR4)
+        - **KRK-Specimen**: Operationspräparate mit pathologischer TME-Qualität
+        - **Stoma-Markierung**: Präoperative Stomapositionsmarkierung (oBDS KR7)
+        - **Logical Model Integration**: Umfassendes KRK-Logisches-Modell mit präzisen FHIR-Mappings
+        - **Implementation Guide**: Vollständige Dokumentation mit 10 Seiten (9 Profile + Bundle)
+        - **Bundle-Beispiel**: Transaktions-Bundle demonstriert vollständigen KRK-Workflow
+        - **CapabilityStatement**: Alle KRK-Profile für Implementierungsabdeckung deklariert
     - Malignes Melanom
+
+- **Bundle-Beispiele**: Für alle organspezifischen Module (Mamma, Prostata, KRK) stehen vollständige Transaktions-Bundles zur Verfügung, die alle zugehörigen Profile in einem server-konsumierbaren Format demonstrieren
 
 - Hinterlegen eines preferred-Binding-ValueSets für Weitere Klassifikationen, basierend auf der oBDS-
 

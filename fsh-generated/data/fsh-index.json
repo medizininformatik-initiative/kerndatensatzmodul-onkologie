@@ -32,12 +32,28 @@
     "endLine": 90
   },
   {
+    "outputFile": "Bundle-mii-exa-onko-melanom-bundle.json",
+    "fshName": "mii-exa-onko-melanom-bundle",
+    "fshType": "Instance",
+    "fshFile": "oBDS\\Organspezifische Module\\MalignesMelanom\\mii-exa-melanom-bundle.fsh",
+    "startLine": 33,
+    "endLine": 81
+  },
+  {
+    "outputFile": "Bundle-mii-exa-onko-prostata-example-bundle-1.json",
+    "fshName": "mii-exa-onko-prostata-example-bundle-1",
+    "fshType": "Instance",
+    "fshFile": "oBDS\\Organspezifische Module\\Prostata\\mii-exa-prostata-bundle.fsh",
+    "startLine": 33,
+    "endLine": 106
+  },
+  {
     "outputFile": "CapabilityStatement-mii-cps-onko-capabilitystatement.json",
     "fshName": "mii-cps-onko-capabilitystatement",
     "fshType": "Instance",
     "fshFile": "capability-statement.fsh",
     "startLine": 33,
-    "endLine": 304
+    "endLine": 310
   },
   {
     "outputFile": "CarePlan-PatientKimMusterperson-Tumorkonferenz-1.json",
@@ -86,6 +102,30 @@
     "fshFile": "oBDS\\18_19_Tumorkonferenz\\mii-exa-onko-tumorkonferenz-01.fsh",
     "startLine": 13,
     "endLine": 27
+  },
+  {
+    "outputFile": "CarePlan-mii-exa-onko-tumorkonferenz-legacy.json",
+    "fshName": "mii-exa-onko-tumorkonferenz-legacy",
+    "fshType": "Instance",
+    "fshFile": "oBDS\\18_19_Tumorkonferenz\\mii-exa-onko-tumorkonferenz-examples.fsh",
+    "startLine": 6,
+    "endLine": 21
+  },
+  {
+    "outputFile": "CarePlan-mii-exa-onko-tumorkonferenz-mixed.json",
+    "fshName": "mii-exa-onko-tumorkonferenz-mixed",
+    "fshType": "Instance",
+    "fshFile": "oBDS\\18_19_Tumorkonferenz\\mii-exa-onko-tumorkonferenz-examples.fsh",
+    "startLine": 97,
+    "endLine": 115
+  },
+  {
+    "outputFile": "CarePlan-mii-exa-onko-tumorkonferenz-structured.json",
+    "fshName": "mii-exa-onko-tumorkonferenz-structured",
+    "fshType": "Instance",
+    "fshFile": "oBDS\\18_19_Tumorkonferenz\\mii-exa-onko-tumorkonferenz-examples.fsh",
+    "startLine": 71,
+    "endLine": 91
   },
   {
     "outputFile": "CodeSystem-mii-cs-onko-allgemeiner-leistungszustand-ecog.json",
@@ -664,14 +704,6 @@
     "endLine": 45
   },
   {
-    "outputFile": "Condition-mii-exa-onko-diagnose-primaertumor-krk.json",
-    "fshName": "mii-exa-onko-diagnose-primaertumor-krk",
-    "fshType": "Instance",
-    "fshFile": "oBDS\\Organspezifische Module\\KolorektalesKarzinom\\mii-exa-onko-krk-bundle.fsh",
-    "startLine": 109,
-    "endLine": 121
-  },
-  {
     "outputFile": "Condition-mii-exa-onko-diagnose.json",
     "fshName": "mii-exa-onko-diagnose",
     "fshType": "Instance",
@@ -692,6 +724,22 @@
     "fshName": "mii-exa-onko-mamma-diagnose",
     "fshType": "Instance",
     "fshFile": "oBDS\\Organspezifische Module\\Mamma\\mii-exa-mamma-bundle.fsh",
+    "startLine": 18,
+    "endLine": 27
+  },
+  {
+    "outputFile": "Condition-mii-exa-onko-melanom-diagnose.json",
+    "fshName": "mii-exa-onko-melanom-diagnose",
+    "fshType": "Instance",
+    "fshFile": "oBDS\\Organspezifische Module\\MalignesMelanom\\mii-exa-melanom-bundle.fsh",
+    "startLine": 18,
+    "endLine": 27
+  },
+  {
+    "outputFile": "Condition-mii-exa-onko-prostata-diagnose.json",
+    "fshName": "mii-exa-onko-prostata-diagnose",
+    "fshType": "Instance",
+    "fshFile": "oBDS\\Organspezifische Module\\Prostata\\mii-exa-prostata-bundle.fsh",
     "startLine": 18,
     "endLine": 27
   },
@@ -728,12 +776,36 @@
     "endLine": 16
   },
   {
+    "outputFile": "Encounter-mii-exa-onko-melanom-bundle-encounter.json",
+    "fshName": "mii-exa-onko-melanom-bundle-encounter",
+    "fshType": "Instance",
+    "fshFile": "oBDS\\Organspezifische Module\\MalignesMelanom\\mii-exa-melanom-bundle.fsh",
+    "startLine": 11,
+    "endLine": 16
+  },
+  {
+    "outputFile": "Encounter-mii-exa-onko-prostata-bundle-encounter.json",
+    "fshName": "mii-exa-onko-prostata-bundle-encounter",
+    "fshType": "Instance",
+    "fshFile": "oBDS\\Organspezifische Module\\Prostata\\mii-exa-prostata-bundle.fsh",
+    "startLine": 11,
+    "endLine": 16
+  },
+  {
     "outputFile": "List-mii-exa-onko-liste-evidenz-erstdiagnose-1.json",
     "fshName": "mii-exa-onko-liste-evidenz-erstdiagnose-1",
     "fshType": "Instance",
     "fshFile": "oBDS\\05_Diagnose\\mii-exa-onko-liste-evidenz-erstdiagnose.fsh",
     "startLine": 1,
     "endLine": 17
+  },
+  {
+    "outputFile": "MedicationRequest-mii-exa-onko-medication-request-targeted-therapy.json",
+    "fshName": "mii-exa-onko-medication-request-targeted-therapy",
+    "fshType": "Instance",
+    "fshFile": "oBDS\\18_19_Tumorkonferenz\\mii-exa-onko-tumorkonferenz-examples.fsh",
+    "startLine": 28,
+    "endLine": 48
   },
   {
     "outputFile": "MedicationStatement-PatientKimMusterperson-SystemicTherapyMedication-1a.json",
@@ -1312,6 +1384,22 @@
     "endLine": 9
   },
   {
+    "outputFile": "Patient-mii-exa-onko-melanom-bundle-patient.json",
+    "fshName": "mii-exa-onko-melanom-bundle-patient",
+    "fshType": "Instance",
+    "fshFile": "oBDS\\Organspezifische Module\\MalignesMelanom\\mii-exa-melanom-bundle.fsh",
+    "startLine": 5,
+    "endLine": 9
+  },
+  {
+    "outputFile": "Patient-mii-exa-onko-prostata-bundle-patient.json",
+    "fshName": "mii-exa-onko-prostata-bundle-patient",
+    "fshType": "Instance",
+    "fshFile": "oBDS\\Organspezifische Module\\Prostata\\mii-exa-prostata-bundle.fsh",
+    "startLine": 5,
+    "endLine": 9
+  },
+  {
     "outputFile": "Procedure-PatientKimMusterperson-Procedure-1.json",
     "fshName": "PatientKimMusterperson-Procedure-1",
     "fshType": "Instance",
@@ -1624,6 +1712,14 @@
     "endLine": 294
   },
   {
+    "outputFile": "ServiceRequest-mii-exa-onko-service-request-genetic-testing.json",
+    "fshName": "mii-exa-onko-service-request-genetic-testing",
+    "fshType": "Instance",
+    "fshFile": "oBDS\\18_19_Tumorkonferenz\\mii-exa-onko-tumorkonferenz-examples.fsh",
+    "startLine": 51,
+    "endLine": 65
+  },
+  {
     "outputFile": "Specimen-PatientKimMusterperson-Specimen-1.json",
     "fshName": "PatientKimMusterperson-Specimen-1",
     "fshType": "Instance",
@@ -1773,7 +1869,7 @@
     "fshType": "Logical",
     "fshFile": "oBDS\\Organspezifische Module\\mii-lm-onko-organspezifische-zusatzmodule.fsh",
     "startLine": 1,
-    "endLine": 61
+    "endLine": 66
   },
   {
     "outputFile": "StructureDefinition-mii-lm-onko.json",
@@ -2317,7 +2413,7 @@
     "fshType": "Profile",
     "fshFile": "oBDS\\18_19_Tumorkonferenz\\mii-pr-onko-tumorkonferenz.fsh",
     "startLine": 1,
-    "endLine": 65
+    "endLine": 82
   },
   {
     "outputFile": "StructureDefinition-mii-pr-onko-verlauf.json",

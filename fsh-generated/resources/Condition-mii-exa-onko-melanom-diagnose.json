@@ -1,6 +1,6 @@
 {
   "resourceType": "Condition",
-  "id": "mii-exa-onko-diagnose-primaertumor-krk",
+  "id": "mii-exa-onko-melanom-diagnose",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
@@ -9,19 +9,9 @@
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
-      "valueDateTime": "2020-03-07"
+      "valueDateTime": "2024-01-02"
     }
   ],
-  "code": {
-    "coding": [
-      {
-        "code": "C18",
-        "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-        "display": "Bösartige Neubildung des Kolons",
-        "version": "2024"
-      }
-    ]
-  },
   "clinicalStatus": {
     "coding": [
       {
@@ -38,8 +28,18 @@
       }
     ]
   },
+  "code": {
+    "coding": [
+      {
+        "code": "C43.9",
+        "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+        "display": "Bösartige Neubildung: Haut, nicht näher bezeichnet",
+        "version": "2024"
+      }
+    ]
+  },
   "subject": {
-    "reference": "Patient/example"
+    "reference": "Patient/mii-exa-onko-melanom-bundle-patient"
   },
   "recordedDate": "2024-01-02"
 }

@@ -7,8 +7,8 @@ Usage: #example
 
 * code.coding = $LNC#97816-3 "American Society of Anesthesiologists physical status score"
 
-* subject = Reference(Patient/example)
-* focus = Reference(Condition/primaertumor-example)
+* subject = Reference(mii-exa-onko-krk-bundle-patient)
+* focus = Reference(mii-exa-onko-krk-diagnose)
 
 * effectiveDateTime = "2024-03-15T08:30:00+01:00"
 

@@ -1237,27 +1237,152 @@
           },
           {
             "identity": "oBDS",
-            "map": "Melanom-Zusatzmodul",
-            "comment": "Placeholder für Melanom-spezifische oBDS-Mappings"
+            "map": "Melanom-Zusatzmodul nach oBDS",
+            "comment": "Organspezifische Erweiterungen für Malignes Melanom basierend auf oBDS-Modul"
           }
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.MalignesMelanom.Placeholder",
-        "path": "OrganspezifischeZusatzmodule.MalignesMelanom.Placeholder",
-        "short": "Placeholder",
-        "definition": "Placeholder für Melanom-spezifische Datenelemente.",
+        "id": "OrganspezifischeZusatzmodule.MalignesMelanom.Sicherheitsabstand",
+        "path": "OrganspezifischeZusatzmodule.MalignesMelanom.Sicherheitsabstand",
+        "short": "Sicherheitsabstand Primärtumor",
+        "definition": "Minimaler Sicherheitsabstand zum Primärtumor in mm gemäß oBDS MM1",
         "min": 0,
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "Quantity"
           }
         ],
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Placeholder für Melanom-spezifische Implementierung"
+            "map": "Observation.where(code.coding.system='http://snomed.info/sct' and code.coding.code='396511007').valueQuantity"
+          },
+          {
+            "identity": "oBDS",
+            "map": "MM1",
+            "comment": "Minimaler Sicherheitsabstand zum Primärtumor in mm nach definitivem operativem Eingriff"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.MalignesMelanom.BreslowTiefe",
+        "path": "OrganspezifischeZusatzmodule.MalignesMelanom.BreslowTiefe",
+        "short": "Breslow-Tiefe",
+        "definition": "Breslow-Tumordicke in mm beim Malignen Melanom der Haut",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.system='http://snomed.info/sct' and code.coding.code='106243009').valueQuantity"
+          },
+          {
+            "identity": "oBDS",
+            "map": "Breslow",
+            "comment": "Breslow-Tumordicke in mm - vertikale Tumordicke von der Granularschicht der Epidermis bis zur tiefsten Tumorinvasion"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.MalignesMelanom.Ulzeration",
+        "path": "OrganspezifischeZusatzmodule.MalignesMelanom.Ulzeration",
+        "short": "Ulzeration",
+        "definition": "Pathologisches Kriterium der Ulzeration beim Malignen Melanom der Haut gemäß oBDS MM4",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.system='http://snomed.info/sct' and code.coding.code='6270001000004106').valueCodeableConcept"
+          },
+          {
+            "identity": "oBDS",
+            "map": "MM4",
+            "comment": "Ulzeration der Epidermis über dem Melanom (J = Ja, N = Nein, U = Unbekannt)"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.MalignesMelanom.LDH",
+        "path": "OrganspezifischeZusatzmodule.MalignesMelanom.LDH",
+        "short": "Laktatdehydrogenase",
+        "definition": "Laktatdehydrogenase",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.memberOf('mii-vs-onko-melanom-ldh'))"
+          },
+          {
+            "identity": "oBDS",
+            "map": "LDH",
+            "comment": "Laktatdehydrogenase als prognostischer Marker beim metastasierten Melanom"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.MalignesMelanom.LDH.Wert",
+        "path": "OrganspezifischeZusatzmodule.MalignesMelanom.LDH.Wert",
+        "short": "LDH-Wert",
+        "definition": "Laktatdehydrogenase Aktivität in U/L als prognostischer Marker",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueQuantity"
+          },
+          {
+            "identity": "oBDS",
+            "map": "LDH",
+            "comment": "LDH-Wert in U/L"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.MalignesMelanom.LDH.Bewertung",
+        "path": "OrganspezifischeZusatzmodule.MalignesMelanom.LDH.Bewertung",
+        "short": "LDH-Bewertung",
+        "definition": "Klinische Bewertung des LDH-Werts (normal/erhöht)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.interpretation"
+          },
+          {
+            "identity": "oBDS",
+            "map": "LDH",
+            "comment": "Bewertung des LDH-Werts (normal/erhöht)"
           }
         ]
       }

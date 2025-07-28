@@ -9,9 +9,9 @@ Description: "Beispiel für die Bestimmung der Ulzeration beim Malignen Melanom"
 
 * code.coding = $SCT#6270001000004106 "Presence of ulcer in primary malignant melanoma of skin (observable entity)"
 
-* subject = Reference(Patient/example)
-* encounter = Reference(Encounter/example)
-* focus = Reference(Condition/mii-exa-onko-diagnose-primaertumor)
+* subject = Reference(mii-exa-onko-melanom-bundle-patient)
+* encounter = Reference(mii-exa-onko-melanom-bundle-encounter)
+* focus = Reference(mii-exa-onko-melanom-diagnose)
 
 * effectiveDateTime = "2024-03-20T14:30:00+01:00"
 

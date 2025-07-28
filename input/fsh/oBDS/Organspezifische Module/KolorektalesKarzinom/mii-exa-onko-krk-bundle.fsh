@@ -106,16 +106,3 @@ Description: "Beispiel-Bundle für Kolorektales Karzinom mit allen spezifischen 
 * entry[=].request.method = #POST
 * entry[=].request.url = "Specimen"
 
-Instance: mii-exa-onko-diagnose-primaertumor-krk
-InstanceOf: MII_PR_Onko_Diagnose_Primaertumor
-Usage: #example
-Title: "MII EXA Onko KRK Diagnose Primaertumor"
-Description: "Beispiel für eine Primärtumor-Diagnose beim Kolorektalen Karzinom"
-
-* code.coding = $ICD10GM#C18 "Bösartige Neubildung des Kolons"
-* code.coding.version = "2024"
-* clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active
-* verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed
-* subject = Reference(Patient/example)
-* recordedDate = "2024-01-02"
-* extension[Feststellungsdatum].valueDateTime = "2020-03-07"
