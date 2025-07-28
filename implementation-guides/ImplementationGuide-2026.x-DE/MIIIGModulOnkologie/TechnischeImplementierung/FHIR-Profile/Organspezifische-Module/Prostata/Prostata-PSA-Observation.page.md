@@ -1,7 +1,7 @@
 ---
 parent: 
-topic: MammaMenopauseStatus
-subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-menopause-status
+topic: ProstataPSA
+subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-psa
 ---
 
 ## {{page-title}}
@@ -9,48 +9,35 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 ---
 
 ### Inhalt
-Dieses Profil beschreibt den (prätherapeutischen) Menopausenstatus einer Patientin mit Mamma-Karzinom in der Onkologie. Der Menopausenstatus ist ein wichtiger prognostischer Faktor für die Behandlungsplanung und Therapieauswahl bei Mamma-Karzinom.
+Dieses Profil beschreibt den PSA-Wert (Prostataspezifisches Antigen) bei Patienten mit Prostatakarzinom in der Onkologie. Der PSA-Wert ist ein zentraler Tumormarker für die Diagnostik, Verlaufskontrolle und Therapieüberwachung bei Prostatakarzinom.
 
-Das Profil basiert auf einer FHIR Observation-Ressource und verwendet SNOMED CT zur Kodierung des beobachteten Merkmals (Menopause-Funktion). Die spezifischen Ausprägungen des Menopausenstatus werden über ein dediziertes ValueSet definiert.
+Das Profil basiert auf einer FHIR Observation-Ressource und verwendet LOINC zur Kodierung des beobachteten Parameters. PSA-Werte können sowohl als Gesamt-PSA als auch als freies PSA dokumentiert werden.
 
 ---
 
 ### Verknüpfungen zu anderen Ressourcen
-Der Menopausenstatus ist eine wichtige tumorspezifische Beobachtung:
+Der PSA-Wert ist eine wichtige tumorspezifische Beobachtung:
 - verweist über `Observation.focus` auf die Primärdiagnose (MII_PR_Onko_Diagnose_Primaertumor)
-- verweist über `Observation.subject` auf die Patientin (Patient-Ressource)
+- verweist über `Observation.subject` auf den Patienten (Patient-Ressource)
 - kann über `Observation.encounter` mit einem spezifischen Behandlungsfall verknüpft werden
 
 ---
 
 ### oBDS-Kontext
-Gemäß der aktuellen oBDS-Version 2021 wird der perimenopausal Status implizit unter prämenopausal subsumiert. Diese Konvention wird in der FHIR-Profilierung durch das entsprechende ValueSet abgebildet.
+Gemäß oBDS P1 wird der PSA-Wert als Tumormarker für Diagnostik und Verlaufskontrolle dokumentiert. Es können sowohl Diagnose- als auch Verlaufs-PSA-Werte erfasst werden.
 
 ### Terminologie-Binding
-Das ValueSet für den Menopausenstatus ist **extensible** gebunden. Dies bedeutet, dass die Codes aus dem definierten ValueSet bevorzugt verwendet werden SOLLEN, jedoch bei Bedarf auch andere geeignete Codes verwendet werden KÖNNEN, falls die vordefinierten Werte nicht ausreichen.
+Das ValueSet für PSA-Codes ist **required** gebunden, da LOINC-Codes für PSA-Bestimmungen standardisiert und eindeutig definiert sind.
 
-#### ValueSet: MII VS Onko Mamma Menopause Status
+#### PSA-Codes
 
-@```
-from ValueSet 
-where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-menopause-status'
-select
-    Name: name, Status: status, Version: version, Canonical: url
-```
-
-@```
-from ValueSet 
-where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-menopause-status'
-    for expansion.contains
-    select
-        Code: code, Display: display, System: system
-```
+- **Freies PSA**: LOINC 10886-0 "Prostate specific antigen Free [Mass/volume] in Serum or Plasma"
 
 @```
 from 
     StructureDefinition 
 where 
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-menopause-status' 
+    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-psa' 
 select 
     Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 
@@ -65,7 +52,7 @@ select
         from
 	        StructureDefinition
         where
-	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-menopause-status'
+	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-psa'
         select
 	        Beschreibung: description
         with
@@ -75,7 +62,7 @@ select
         from 
             StructureDefinition 
         where 
-            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-menopause-status' 
+            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-psa' 
         for 
             differential.element 
             where 
@@ -95,7 +82,7 @@ Mapping Datensatz zu FHIR
 @```
 from StructureDefinition 
 where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/OrganspezifischeZusatzmodule'
-    for differential.element where id.contains('Mamma.Menopausenstatus')
+    for differential.element where id.contains('Prostata.PSAWert')
     select 
         Datensatz: short,
         Erklaerung: definition, 
@@ -109,7 +96,7 @@ Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensa
 
 @```
 from StructureDefinition 
-where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-menopause-status'  
+where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-psa'  
     for differential.element
     where mapping.identity='oBDS'
     select 
@@ -122,7 +109,7 @@ where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Str
 
 **Suchparameter**
 
-Folgende Suchparameter sind für das Mamma-Menopause-Status Profil relevant, auch in Kombination:
+Folgende Suchparameter sind für das Prostata-PSA Profil relevant, auch in Kombination:
 
 1. Der Suchparameter "_id" MUSS unterstützt werden:
 
@@ -136,7 +123,7 @@ Folgende Suchparameter sind für das Mamma-Menopause-Status Profil relevant, auc
 
     Beispiele:
 
-    ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-menopause-status```
+    ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-psa```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
@@ -144,7 +131,7 @@ Folgende Suchparameter sind für das Mamma-Menopause-Status Profil relevant, auc
 
     Beispiele:
 
-    ```GET [base]/Observation?code=http://snomed.info/sct|161712005```
+    ```GET [base]/Observation?code=http://loinc.org|2857-1```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "Observation.code" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
@@ -156,8 +143,6 @@ Folgende Suchparameter sind für das Mamma-Menopause-Status Profil relevant, auc
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "Observation.subject" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
 
-1. 
-
 1. Der Suchparameter "focus" MUSS unterstützt werden:
 
     Beispiele:
@@ -166,17 +151,19 @@ Folgende Suchparameter sind für das Mamma-Menopause-Status Profil relevant, auc
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "Observation.focus" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
 
-1. Der Suchparameter "value-concept" MUSS unterstützt werden:
+1. Der Suchparameter "value-quantity" MUSS unterstützt werden:
 
     Beispiele:
 
-    ```GET [base]/Observation?value-concept=http://snomed.info/sct|76498008```
+    ```GET [base]/Observation?value-quantity=gt5.0```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Observation.value[x]" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).
+    Anwendungshinweise: Weitere Informationen zur Suche nach "Observation.value[x]" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Quantity Search"](http://hl7.org/fhir/R4/search.html#quantity).
 
 ---
 **Beispiele**
 
-{{json:mii-exa-onko-mamma-menopause-status-1}}
+{{json:mii-exa-onko-prostata-psa-diagnose-1}}
+
+{{json:mii-exa-onko-prostata-psa-verlauf-1}}
 
 ---
