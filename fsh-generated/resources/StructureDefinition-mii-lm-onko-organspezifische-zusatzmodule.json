@@ -310,7 +310,7 @@
         "id": "OrganspezifischeZusatzmodule.Mamma.PraeoperativeMarkierung.Modalitaet",
         "path": "OrganspezifischeZusatzmodule.Mamma.PraeoperativeMarkierung.Modalitaet",
         "short": "Markierungsmodalität",
-        "definition": "Art der präoperativen Markierung.",
+        "definition": "Art der präoperativen Markierung",
         "min": 0,
         "max": "1",
         "type": [
@@ -421,27 +421,440 @@
           },
           {
             "identity": "oBDS",
-            "map": "KRK-Zusatzmodul",
-            "comment": "Placeholder für KRK-spezifische oBDS-Mappings"
+            "map": "KRK-Zusatzmodul nach oBDS",
+            "comment": "Organspezifische Erweiterungen für Kolorektales Karzinom basierend auf oBDS-Modul"
           }
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Placeholder",
-        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Placeholder",
-        "short": "Placeholder",
-        "definition": "Placeholder für KRK-spezifische Datenelemente.",
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.TumorLokalisation",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.TumorLokalisation",
+        "short": "Tumor Lokalisation",
+        "definition": "Tumor Lokalisation",
         "min": 0,
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "BackboneElement"
           }
         ],
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Placeholder für KRK-spezifische Implementierung"
+            "map": "KRK-spezifische Tumorlokalisation"
+          },
+          {
+            "identity": "oBDS",
+            "map": "KR1",
+            "comment": "Tumorlokalisation und anatomische Bezugspunkte"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.TumorLokalisation.AbstandAnokutanlinie",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.TumorLokalisation.AbstandAnokutanlinie",
+        "short": "Abstand Anokutanlinie",
+        "definition": "Höhe des Sitzes des Rektumkarzinoms ab Anokutanlinie in cm. oBDS KR1",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.system='http://loinc.org' and code.coding.code='33748-5').valueQuantity"
+          },
+          {
+            "identity": "oBDS",
+            "map": "KR1",
+            "comment": "Rektum: Höhe des Sitzes des Rektumkarzinoms ab Anokutanlinie in cm"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren",
+        "short": "Bildgebende Verfahren",
+        "definition": "Bildgebende Verfahren",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "KRK-spezifische bildgebende Verfahren"
+          },
+          {
+            "identity": "oBDS",
+            "map": "KR5",
+            "comment": "Bildgebende Verfahren zur präoperativen Beurteilung"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren.MRTMesorektale",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren.MRTMesorektale",
+        "short": "MRT/CT Mesorektale Faszie",
+        "definition": "MRT/CT Mesorektale Faszie",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.system='http://radlex.org' and code.coding.code='RDE96')"
+          },
+          {
+            "identity": "oBDS",
+            "map": "KR5",
+            "comment": "Rektum: MRT oder Dünnschicht-CT durchgeführt mit Angabe Abstand mesorektale Faszie"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren.MRTMesorektale.AbstandMesorektale",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren.MRTMesorektale.AbstandMesorektale",
+        "short": "Abstand Mesorektale Faszie",
+        "definition": "Abstand des Tumors zur mesorektalen Faszie in mm bei MRT/CT. oBDS KR5",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueQuantity"
+          },
+          {
+            "identity": "oBDS",
+            "map": "KR5",
+            "comment": "Abstand zur mesorektalen Faszie in mm"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren.MRTMesorektale.AbstandNichtVerfuegbarGrund",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren.MRTMesorektale.AbstandNichtVerfuegbarGrund",
+        "short": "Grund für fehlende Abstandsmessung",
+        "definition": "Grund warum der Abstand zur mesorektalen Faszie nicht verfügbar ist (nicht durchgeführt/nicht angegeben/unbekannt).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept"
+          },
+          {
+            "identity": "oBDS",
+            "map": "KR5",
+            "comment": "Status: D/N/U (durchgeführt aber nicht angegeben/nicht durchgeführt/unbekannt)"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation",
+        "short": "KRK Operation",
+        "definition": "KRK Operation",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.where(meta.profile.contains('https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-operation'))"
+          },
+          {
+            "identity": "oBDS",
+            "map": "KR-Operation",
+            "comment": "KRK-spezifische operative Verfahren"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.Operationstyp",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.Operationstyp",
+        "short": "Operationstyp",
+        "definition": "Art der kolorektalen Operation (TME, PME, lokale Exzision, etc.).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.code"
+          },
+          {
+            "identity": "oBDS",
+            "map": "OPS",
+            "comment": "Art der kolorektalen Operation nach OPS-Katalog"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.ASAKlassifikation",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.ASAKlassifikation",
+        "short": "ASA-Klassifikation",
+        "definition": "American Society of Anesthesiologists Physical Status Classification System. oBDS KR4",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.system='http://loinc.org' and code.coding.code='97816-3').valueCodeableConcept"
+          },
+          {
+            "identity": "oBDS",
+            "map": "KR9",
+            "comment": "ASA-Klassifikation"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.StomaMarkierung",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.StomaMarkierung",
+        "short": "Stoma Markierung",
+        "definition": "Stoma Markierung",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.where(meta.profile.contains('https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-stoma-markierung'))"
+          },
+          {
+            "identity": "oBDS",
+            "map": "KR7",
+            "comment": "Rektum: Präoperative Anzeichnung der Stomaposition"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.StomaMarkierung.Status",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.StomaMarkierung.Status",
+        "short": "Markierungsstatus",
+        "definition": "Status der präoperativen Stoma-Markierung.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.status"
+          },
+          {
+            "identity": "oBDS",
+            "map": "KR7",
+            "comment": "Status der präoperativen Stoma-Markierung"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.StomaMarkierung.StatusGrund",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.StomaMarkierung.StatusGrund",
+        "short": "Status Grund",
+        "definition": "Grund für Markierungsstatus (geplant/nicht geplant/abgelehnt).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.statusReason"
+          },
+          {
+            "identity": "oBDS",
+            "map": "KR7",
+            "comment": "Grund für Markierungsstatus"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PathologischeBewertung",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PathologischeBewertung",
+        "short": "Pathologische Bewertung",
+        "definition": "Pathologische Bewertung",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "KRK-spezifische pathologische Bewertung"
+          },
+          {
+            "identity": "oBDS",
+            "map": "KR2-KR4",
+            "comment": "Pathologische Bewertung"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PathologischeBewertung.ResektionsraenderAboral",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PathologischeBewertung.ResektionsraenderAboral",
+        "short": "Resektionsrand aboral",
+        "definition": "Minimaler Abstand des aboralen Tumorrandes zum aboralen Resektionsrand in mm. oBDS KR2",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.system='http://loinc.org' and code.coding.code='81175-2').valueQuantity"
+          },
+          {
+            "identity": "oBDS",
+            "map": "KR2",
+            "comment": "Minimaler Abstand des aboralen Tumorrandes zum aboralen Resektionsrand in mm"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PathologischeBewertung.ResektionsraenderCircumferell",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PathologischeBewertung.ResektionsraenderCircumferell",
+        "short": "Resektionsrand circumferell",
+        "definition": "Minimaler Abstand des Tumors zur circumferellen Resektionsebene in mm. oBDS KR3",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.system='http://loinc.org' and code.coding.code='81176-0').valueQuantity"
+          },
+          {
+            "identity": "oBDS",
+            "map": "KR3",
+            "comment": "Minimaler Abstand des Tumors zur circumferellen Resektionsebene in mm"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PathologischeBewertung.TMEQualitaet",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PathologischeBewertung.TMEQualitaet",
+        "short": "TME Qualität",
+        "definition": "Qualität der totalen mesorektalen Exzision (Grad 1-3).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Specimen.where(meta.profile.contains('https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-specimen')).extension"
+          },
+          {
+            "identity": "oBDS",
+            "map": "KR4",
+            "comment": "Rektum: Qualität des TME-Präparats"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PostoperativeKomplikationen",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PostoperativeKomplikationen",
+        "short": "Postoperative Komplikationen",
+        "definition": "Postoperative Komplikationen",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "KRK-spezifische postoperative Komplikationen"
+          },
+          {
+            "identity": "oBDS",
+            "map": "KR8",
+            "comment": "Postoperative Komplikationen"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PostoperativeKomplikationen.Anastomoseninsuffizienz",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PostoperativeKomplikationen.Anastomoseninsuffizienz",
+        "short": "Anastomoseninsuffizienz",
+        "definition": "Bewertung der Anastomoseninsuffizienz nach Grad A/B/C.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.system='http://snomed.info/sct' and code.coding.code='361317002').valueCodeableConcept"
+          },
+          {
+            "identity": "oBDS",
+            "map": "KR8",
+            "comment": "Rektumkarzinom: Anastomoseninsuffizienz"
           }
         ]
       },

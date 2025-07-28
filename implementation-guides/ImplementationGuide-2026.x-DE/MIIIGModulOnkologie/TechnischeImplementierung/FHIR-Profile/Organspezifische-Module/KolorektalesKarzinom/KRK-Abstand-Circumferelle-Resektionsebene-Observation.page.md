@@ -1,7 +1,7 @@
 ---
 parent: 
-topic: ProstataKarzinomBefallStanze
-subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-ca-befall-stanze
+topic: KRKAbstandCircumferelleResektionsebene
+subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-circumferelle-resektionsebene
 ---
 
 ## {{page-title}}
@@ -9,35 +9,48 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 ---
 
 ### Inhalt
-Dieses Profil beschreibt den prozentualen Befall der am stärksten befallenen Stanze einer Prostata-Biopsie oder eines Prostata-Exzisionspräparates in der Onkologie. Diese Angabe ist ein wichtiger histopathologischer Parameter zur Beurteilung der Tumorausdehnung und Aggressivität bei Prostatakarzinom.
+Dieses Profil beschreibt den minimalen Abstand des Tumorrandes zur circumferellen Resektionsebene beim Kolorektalen Karzinom gemäß oBDS KR3. Diese Messung ist ein wichtiger prognostischer Faktor und wird sowohl makroskopisch als auch mikroskopisch bestimmt. Ein geringer circumfereller Resektionsrand ist mit einem erhöhten Lokalrezidivrisiko assoziiert.
 
-Das Profil basiert auf einer FHIR Observation-Ressource und verwendet LOINC zur Kodierung des beobachteten Parameters. Der Wert wird als Prozentsatz angegeben und bezieht sich auf die am stärksten befallene Stanze der Biopsie.
+Das Profil basiert auf einer FHIR Observation-Ressource und verwendet ein dediziertes ValueSet zur Unterscheidung zwischen makroskopischer und mikroskopischer Bewertung. Der Abstand wird als Quantity-Wert in Millimetern angegeben.
 
 ---
 
 ### Verknüpfungen zu anderen Ressourcen
-Der Karzinom-Befall der Stanze ist eine wichtige histopathologische Beobachtung:
+Die circumferelle Resektionsrandmessung ist eine wichtige pathologische Beobachtung:
 - verweist über `Observation.focus` auf die Primärdiagnose (MII_PR_Onko_Diagnose_Primaertumor)
 - verweist über `Observation.subject` auf den Patienten (Patient-Ressource)
 - kann über `Observation.encounter` mit einem spezifischen Behandlungsfall verknüpft werden
-- kann über `Observation.specimen` mit der entsprechenden Gewebeprobe verknüpft werden
 
 ---
 
 ### oBDS-Kontext
-Gemäß oBDS P4.3 wird der prozentuale Karzinombefall der am stärksten befallenen Stanze einer Prostata-Biopsie dokumentiert. Dies ist ein wichtiger Parameter für die histopathologische Beurteilung der Tumorausdehnung.
+Die Abstandsmessung entspricht dem oBDS-Datenfeld KR3 "Minimaler Abstand des Tumorrandes zur circumferellen Resektionsebene" und wird in Millimetern dokumentiert. Die Unterscheidung zwischen makroskopischer und mikroskopischer Bewertung ist durch das entsprechende ValueSet abgebildet.
 
 ### Terminologie-Binding
-Das Profil verwendet einen **required** LOINC-Code für die eindeutige Identifikation der Beobachtung:
+Das ValueSet für die circumferelle Resektionsebene ist **extensible** gebunden und unterscheidet zwischen makroskopischer und mikroskopischer Bewertung der Resektionsränder.
 
-#### Karzinom-Befall Code
-- **LOINC**: 44654-2 "Tissue involved by tumor in Prostate tumor"
+#### ValueSet: MII VS Onko KRK Abstand Circumferelle Resektionsrand
+
+@```
+from ValueSet 
+where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-abstand-circumferelle-resektionsebene'
+select
+    Name: name, Status: status, Version: version, Canonical: url
+```
+
+@```
+from ValueSet 
+where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-abstand-circumferelle-resektionsebene'
+    for expansion.contains
+    select
+        Code: code, Display: display, System: system
+```
 
 @```
 from 
     StructureDefinition 
 where 
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-ca-befall-stanze' 
+    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-circumferelle-resektionsebene' 
 select 
     Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 
@@ -52,7 +65,7 @@ select
         from
 	        StructureDefinition
         where
-	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-ca-befall-stanze'
+	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-circumferelle-resektionsebene'
         select
 	        Beschreibung: description
         with
@@ -62,7 +75,7 @@ select
         from 
             StructureDefinition 
         where 
-            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-ca-befall-stanze' 
+            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-circumferelle-resektionsebene' 
         for 
             differential.element 
             where 
@@ -82,7 +95,7 @@ Mapping Datensatz zu FHIR
 @```
 from StructureDefinition 
 where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/OrganspezifischeZusatzmodule'
-    for differential.element where id.contains('Prostata.BiopsieErgebnisse.KarzinomBefallStanze')
+    for differential.element where id.contains('KolorektalesKarzinom.PathologischeBewertung.AbstandCircumferelle')
     select 
         Datensatz: short,
         Erklaerung: definition, 
@@ -96,7 +109,7 @@ Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensa
 
 @```
 from StructureDefinition 
-where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-ca-befall-stanze'  
+where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-circumferelle-resektionsebene'  
     for differential.element
     where mapping.identity='oBDS'
     select 
@@ -109,7 +122,7 @@ where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Str
 
 **Suchparameter**
 
-Folgende Suchparameter sind für das Prostata-Karzinom-Befall-Stanze Profil relevant, auch in Kombination:
+Folgende Suchparameter sind für das KRK-Circumferelle-Resektionsebene Profil relevant, auch in Kombination:
 
 1. Der Suchparameter "_id" MUSS unterstützt werden:
 
@@ -123,7 +136,7 @@ Folgende Suchparameter sind für das Prostata-Karzinom-Befall-Stanze Profil rele
 
     Beispiele:
 
-    ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-ca-befall-stanze```
+    ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-circumferelle-resektionsebene```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
@@ -131,7 +144,7 @@ Folgende Suchparameter sind für das Prostata-Karzinom-Befall-Stanze Profil rele
 
     Beispiele:
 
-    ```GET [base]/Observation?code=http://loinc.org|44654-2```
+    ```GET [base]/Observation?code=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-abstand-circumferelle-resektionsebene|makroskopisch```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "Observation.code" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
@@ -155,13 +168,13 @@ Folgende Suchparameter sind für das Prostata-Karzinom-Befall-Stanze Profil rele
 
     Beispiele:
 
-    ```GET [base]/Observation?value-quantity=gt50```
+    ```GET [base]/Observation?value-quantity=2|http://unitsofmeasure.org|mm```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "Observation.value[x]" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Quantity Search"](http://hl7.org/fhir/R4/search.html#quantity).
 
 ---
 **Beispiele**
 
-{{json:mii-exa-onko-prostata-ca-befall-stanze-1}}
+{{json:mii-exa-onko-krk-abstand-circumferelle-resektionsebene}}
 
 ---

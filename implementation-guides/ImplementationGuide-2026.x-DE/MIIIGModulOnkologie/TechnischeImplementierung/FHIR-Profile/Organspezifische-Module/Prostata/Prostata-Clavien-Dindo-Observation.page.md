@@ -203,6 +203,6 @@ Folgende Suchparameter sind für das Prostata-Clavien-Dindo Profil relevant, auc
 ---
 **Beispiele**
 
-{{json:mii-exa-onko-prostata-surgical-complications}}
+{{json:mii-exa-onko-prostata-surgical-complication-1}}
 
 ---

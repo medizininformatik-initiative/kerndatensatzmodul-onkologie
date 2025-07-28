@@ -14,10 +14,10 @@
   "timestamp": "2024-03-25T10:00:00+01:00",
   "entry": [
     {
-      "fullUrl": "Patient/mii-exa-onko-krk-example-patient",
+      "fullUrl": "Patient/mii-exa-onko-krk-bundle-patient",
       "resource": {
         "resourceType": "Patient",
-        "id": "mii-exa-onko-krk-example-patient",
+        "id": "mii-exa-onko-krk-bundle-patient",
         "name": [
           {
             "given": [
@@ -33,10 +33,10 @@
       }
     },
     {
-      "fullUrl": "Condition/mii-exa-onko-diagnose-primaertumor-krk",
+      "fullUrl": "Condition/mii-exa-onko-krk-diagnose",
       "resource": {
         "resourceType": "Condition",
-        "id": "mii-exa-onko-diagnose-primaertumor-krk",
+        "id": "mii-exa-onko-krk-diagnose",
         "meta": {
           "profile": [
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
@@ -48,16 +48,6 @@
             "valueDateTime": "2020-03-07"
           }
         ],
-        "code": {
-          "coding": [
-            {
-              "code": "C18",
-              "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-              "display": "Bösartige Neubildung des Kolons",
-              "version": "2024"
-            }
-          ]
-        },
         "clinicalStatus": {
           "coding": [
             {
@@ -74,8 +64,18 @@
             }
           ]
         },
+        "code": {
+          "coding": [
+            {
+              "code": "C18",
+              "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+              "display": "Bösartige Neubildung des Kolons",
+              "version": "2024"
+            }
+          ]
+        },
         "subject": {
-          "reference": "Patient/example"
+          "reference": "Patient/mii-exa-onko-krk-bundle-patient"
         },
         "recordedDate": "2024-01-02"
       },
@@ -85,10 +85,10 @@
       }
     },
     {
-      "fullUrl": "Encounter/mii-exa-onko-krk-example-encounter",
+      "fullUrl": "Encounter/mii-exa-onko-krk-bundle-encounter",
       "resource": {
         "resourceType": "Encounter",
-        "id": "mii-exa-onko-krk-example-encounter",
+        "id": "mii-exa-onko-krk-bundle-encounter",
         "status": "finished",
         "class": {
           "code": "IMP",
@@ -96,73 +96,12 @@
           "display": "inpatient encounter"
         },
         "subject": {
-          "reference": "Patient/mii-exa-onko-krk-example-patient"
+          "reference": "Patient/mii-exa-onko-krk-bundle-patient"
         }
       },
       "request": {
         "method": "POST",
         "url": "Encounter"
-      }
-    },
-    {
-      "fullUrl": "Procedure/mii-exa-onko-krk-stoma-markierung",
-      "resource": {
-        "resourceType": "Procedure",
-        "id": "mii-exa-onko-krk-stoma-markierung",
-        "meta": {
-          "profile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-stoma-markierung"
-          ]
-        },
-        "category": {
-          "coding": [
-            {
-              "code": "387713003",
-              "system": "http://snomed.info/sct",
-              "display": "Surgical procedure"
-            }
-          ]
-        },
-        "code": {
-          "coding": [
-            {
-              "code": "225134005",
-              "system": "http://snomed.info/sct",
-              "display": "Marking position of planned stoma site (procedure)"
-            }
-          ]
-        },
-        "status": "completed",
-        "statusReason": {
-          "coding": [
-            {
-              "code": "262008008",
-              "system": "http://snomed.info/sct",
-              "display": "Not performed (qualifier value)"
-            }
-          ]
-        },
-        "subject": {
-          "reference": "Patient/example"
-        },
-        "encounter": {
-          "reference": "Encounter/example"
-        },
-        "reasonReference": [
-          {
-            "reference": "Condition/mii-exa-onko-diagnose-primaertumor"
-          }
-        ],
-        "performedDateTime": "2024-03-15T09:30:00+01:00",
-        "note": [
-          {
-            "text": "Präoperative Markierung der geplanten Stoma-Position im rechten Hemiabdomen nach Rücksprache mit dem Patienten"
-          }
-        ]
-      },
-      "request": {
-        "method": "POST",
-        "url": "Procedure"
       }
     },
     {
@@ -342,6 +281,158 @@
       }
     },
     {
+      "fullUrl": "Observation/mii-exa-onko-krk-anastomoseninsuffizienz",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "mii-exa-onko-krk-anastomoseninsuffizienz",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-anastomoseninsuffizienz"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "236091002",
+              "system": "http://snomed.info/sct",
+              "display": "Large intestine anastomotic leak (disorder)"
+            }
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/example"
+        },
+        "encounter": {
+          "reference": "Encounter/example"
+        },
+        "focus": [
+          {
+            "reference": "Procedure/mii-exa-onko-krk-operation"
+          }
+        ],
+        "effectiveDateTime": "2024-03-25T08:00:00+01:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "B",
+              "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-anastomoseninsuffizienz",
+              "display": "Anastomoseninsuffizienz Grad B"
+            }
+          ]
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "Observation/mii-exa-onko-krk-asa-klassifikation",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "mii-exa-onko-krk-asa-klassifikation",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-asa-klassifikation"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "97816-3",
+              "system": "http://loinc.org",
+              "display": "American Society of Anesthesiologists physical status score"
+            }
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/example"
+        },
+        "focus": [
+          {
+            "reference": "Condition/primaertumor-example"
+          }
+        ],
+        "effectiveDateTime": "2024-03-15T08:30:00+01:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "2",
+              "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-asa-obds",
+              "display": "ASA II"
+            }
+          ]
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "Procedure/mii-exa-onko-krk-stoma-markierung",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "mii-exa-onko-krk-stoma-markierung",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-stoma-markierung"
+          ]
+        },
+        "category": {
+          "coding": [
+            {
+              "code": "387713003",
+              "system": "http://snomed.info/sct",
+              "display": "Surgical procedure"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "225134005",
+              "system": "http://snomed.info/sct",
+              "display": "Marking position of planned stoma site (procedure)"
+            }
+          ]
+        },
+        "status": "completed",
+        "statusReason": {
+          "coding": [
+            {
+              "code": "262008008",
+              "system": "http://snomed.info/sct",
+              "display": "Not performed (qualifier value)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/example"
+        },
+        "encounter": {
+          "reference": "Encounter/example"
+        },
+        "reasonReference": [
+          {
+            "reference": "Condition/mii-exa-onko-diagnose-primaertumor"
+          }
+        ],
+        "performedDateTime": "2024-03-15T09:30:00+01:00",
+        "note": [
+          {
+            "text": "Präoperative Markierung der geplanten Stoma-Position im rechten Hemiabdomen nach Rücksprache mit dem Patienten"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Procedure"
+      }
+    },
+    {
       "fullUrl": "Procedure/mii-exa-onko-krk-operation",
       "resource": {
         "resourceType": "Procedure",
@@ -457,53 +548,6 @@
       "request": {
         "method": "POST",
         "url": "Specimen"
-      }
-    },
-    {
-      "fullUrl": "Observation/mii-exa-onko-krk-anastomoseninsuffizienz",
-      "resource": {
-        "resourceType": "Observation",
-        "id": "mii-exa-onko-krk-anastomoseninsuffizienz",
-        "meta": {
-          "profile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-anastomoseninsuffizienz"
-          ]
-        },
-        "code": {
-          "coding": [
-            {
-              "code": "236091002",
-              "system": "http://snomed.info/sct",
-              "display": "Large intestine anastomotic leak (disorder)"
-            }
-          ]
-        },
-        "status": "final",
-        "subject": {
-          "reference": "Patient/example"
-        },
-        "encounter": {
-          "reference": "Encounter/example"
-        },
-        "focus": [
-          {
-            "reference": "Procedure/mii-exa-onko-krk-operation"
-          }
-        ],
-        "effectiveDateTime": "2024-03-25T08:00:00+01:00",
-        "valueCodeableConcept": {
-          "coding": [
-            {
-              "code": "B",
-              "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-anastomoseninsuffizienz",
-              "display": "Anastomoseninsuffizienz Grad B"
-            }
-          ]
-        }
-      },
-      "request": {
-        "method": "POST",
-        "url": "Observation"
       }
     }
   ]

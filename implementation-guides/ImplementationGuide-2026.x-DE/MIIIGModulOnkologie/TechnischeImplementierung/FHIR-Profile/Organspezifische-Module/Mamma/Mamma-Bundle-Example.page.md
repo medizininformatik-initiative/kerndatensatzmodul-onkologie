@@ -116,10 +116,10 @@ Das Bundle zeigt die praktische Anwendung verschiedener Terminologien:
 ### Einzelne Ressourcen-Beispiele
 
 #### Patient
-{{json:mii-exa-onko-mamma-example-patient}}
+{{json:mii-exa-onko-mamma-bundle-patient}}
 
 #### Primärtumor-Condition
-{{json:mii-exa-onko-mamma-example-condition}}
+{{json:mii-exa-onko-mamma-diagnose}}
 
 #### Menopause Status
 {{json:mii-exa-onko-mamma-menopause-status-1}}

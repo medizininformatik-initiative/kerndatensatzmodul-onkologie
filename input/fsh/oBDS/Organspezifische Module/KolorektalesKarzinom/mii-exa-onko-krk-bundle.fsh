@@ -1,16 +1,35 @@
 
-Instance: mii-exa-onko-krk-example-patient
+//=========================
+// Bundle Core Resources 
+//=========================
+
+Instance: mii-exa-onko-krk-bundle-patient
 InstanceOf: Patient
 Usage: #example
 * name.given = "Klaus"
 * name.family = "KolorektalCa"
 
-Instance: mii-exa-onko-krk-example-encounter
+Instance: mii-exa-onko-krk-bundle-encounter
 InstanceOf: Encounter
 Usage: #example  
 * status = #finished
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP "inpatient encounter"
-* subject = Reference(mii-exa-onko-krk-example-patient)
+* subject = Reference(mii-exa-onko-krk-bundle-patient)
+
+Instance: mii-exa-onko-krk-diagnose
+InstanceOf: MII_PR_Onko_Diagnose_Primaertumor
+Usage: #example
+* clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active
+* verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed
+* code.coding = $ICD10GM#C18 "Bösartige Neubildung des Kolons"
+* code.coding.version = "2024"
+* subject = Reference(mii-exa-onko-krk-bundle-patient)
+* recordedDate = "2024-01-02"
+* extension[Feststellungsdatum].valueDateTime = "2020-03-07"
+
+//=========================
+// Transaction Bundle
+//=========================
 
 Instance: mii-exa-onko-krk-bundle
 InstanceOf: Bundle
@@ -25,71 +44,67 @@ Description: "Beispiel-Bundle für Kolorektales Karzinom mit allen spezifischen 
 * type = #transaction
 * timestamp = "2024-03-25T10:00:00+01:00"
 
-// Patient
-* entry[0].fullUrl = "Patient/mii-exa-onko-krk-example-patient"
-* entry[=].resource = mii-exa-onko-krk-example-patient
+// Core Resources
+* entry[0].fullUrl = "Patient/mii-exa-onko-krk-bundle-patient"
+* entry[=].resource = mii-exa-onko-krk-bundle-patient
 * entry[=].request.method = #POST
 * entry[=].request.url = "Patient"
 
-// Primary tumor diagnosis
-* entry[+].fullUrl = "Condition/mii-exa-onko-diagnose-primaertumor-krk"
-* entry[=].resource = mii-exa-onko-diagnose-primaertumor-krk
+* entry[+].fullUrl = "Condition/mii-exa-onko-krk-diagnose"
+* entry[=].resource = mii-exa-onko-krk-diagnose
 * entry[=].request.method = #POST
 * entry[=].request.url = "Condition"
 
-// Encounter
-* entry[+].fullUrl = "Encounter/mii-exa-onko-krk-example-encounter"
-* entry[=].resource = mii-exa-onko-krk-example-encounter
+* entry[+].fullUrl = "Encounter/mii-exa-onko-krk-bundle-encounter"
+* entry[=].resource = mii-exa-onko-krk-bundle-encounter
 * entry[=].request.method = #POST
 * entry[=].request.url = "Encounter"
 
-// Stoma marking procedure
-* entry[+].fullUrl = "Procedure/mii-exa-onko-krk-stoma-markierung"  
-* entry[=].resource = mii-exa-onko-krk-stoma-markierung
-* entry[=].request.method = #POST
-* entry[=].request.url = "Procedure"
-
-// Distance to anal verge observation
+// KRK-Specific Examples (using existing individual examples)
 * entry[+].fullUrl = "Observation/mii-exa-onko-krk-abstand-tumor-anokutanlinie"
 * entry[=].resource = mii-exa-onko-krk-abstand-tumor-anokutanlinie
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
 
-// Circumferential resection margin observation
 * entry[+].fullUrl = "Observation/mii-exa-onko-krk-abstand-circumferelle-resektionsebene"
 * entry[=].resource = mii-exa-onko-krk-abstand-circumferelle-resektionsebene
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
 
-// Aboral resection margin observation
 * entry[+].fullUrl = "Observation/mii-exa-onko-krk-abstand-resektionsrand-aboral"
 * entry[=].resource = mii-exa-onko-krk-abstand-resektionsrand-aboral
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
 
-// MRT mesorectal fascia observation
 * entry[+].fullUrl = "Observation/mii-exa-onko-krk-abstand-mesorektale-fascie"
 * entry[=].resource = mii-exa-onko-krk-abstand-mesorektale-fascie
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
 
-// KRK operation procedure
+* entry[+].fullUrl = "Observation/mii-exa-onko-krk-anastomoseninsuffizienz"
+* entry[=].resource = mii-exa-onko-krk-anastomoseninsuffizienz
+* entry[=].request.method = #POST
+* entry[=].request.url = "Observation"
+
+* entry[+].fullUrl = "Observation/mii-exa-onko-krk-asa-klassifikation"
+* entry[=].resource = mii-exa-onko-krk-asa-klassifikation
+* entry[=].request.method = #POST
+* entry[=].request.url = "Observation"
+
+* entry[+].fullUrl = "Procedure/mii-exa-onko-krk-stoma-markierung"
+* entry[=].resource = mii-exa-onko-krk-stoma-markierung
+* entry[=].request.method = #POST
+* entry[=].request.url = "Procedure"
+
 * entry[+].fullUrl = "Procedure/mii-exa-onko-krk-operation"
 * entry[=].resource = mii-exa-onko-krk-operation
 * entry[=].request.method = #POST
 * entry[=].request.url = "Procedure"
 
-// KRK specimen
 * entry[+].fullUrl = "Specimen/mii-exa-onko-krk-specimen"
 * entry[=].resource = mii-exa-onko-krk-specimen
 * entry[=].request.method = #POST
 * entry[=].request.url = "Specimen"
-
-// KRK anastomotic insufficiency observation
-* entry[+].fullUrl = "Observation/mii-exa-onko-krk-anastomoseninsuffizienz"
-* entry[=].resource = mii-exa-onko-krk-anastomoseninsuffizienz
-* entry[=].request.method = #POST
-* entry[=].request.url = "Observation"
 
 Instance: mii-exa-onko-diagnose-primaertumor-krk
 InstanceOf: MII_PR_Onko_Diagnose_Primaertumor

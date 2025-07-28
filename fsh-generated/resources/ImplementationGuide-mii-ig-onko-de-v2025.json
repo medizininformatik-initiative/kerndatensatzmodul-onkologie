@@ -359,6 +359,14 @@
       },
       {
         "reference": {
+          "reference": "ConceptMap/mii-cm-onko-krk-asa-obds-loinc"
+        },
+        "name": "MII CM Onkologie KRK ASA oBDS zu LOINC",
+        "description": "Mapping von oBDS ASA-Klassifikation (KR9) zu LOINC ASA Physical Status",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ConceptMap/MII-CM-Onkologie-to-MVGenomSeq"
         },
         "name": "MII Concept Map Modellvorhaben Genomsequenzierung Onkologie",
@@ -443,6 +451,14 @@
         },
         "name": "MII CS Onkologie KRK Anastomoseninsuffizienz",
         "description": "oBDS-spezifisches Codesystem für Anastomoseninsuffizienz beim Kolorektalen Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-krk-asa-obds"
+        },
+        "name": "MII CS Onkologie KRK ASA-Klassifikation oBDS",
+        "description": "oBDS-basiertes CodeSystem für ASA-Klassifikation beim Kolorektalen Karzinom (KR9)",
         "exampleBoolean": false
       },
       {
@@ -839,6 +855,14 @@
       },
       {
         "reference": {
+          "reference": "Bundle/mii-exa-onko-mamma-example-bundle-1"
+        },
+        "name": "MII EXA Onko Mamma Bundle",
+        "description": "Beispiel-Bundle für Mamma-Karzinom mit allen spezifischen Profilen",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-onko-melanom-breslow-tiefe"
         },
         "name": "MII EXA Onko Melanom Breslow Tiefe",
@@ -1043,6 +1067,14 @@
         },
         "name": "MII PR Onkologie KRK Anastomoseninsuffizienz",
         "description": "Dieses Profil beschreibt die Bewertung der Anastomoseninsuffizienz nach einer Operation beim Kolorektalen Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-krk-asa-klassifikation"
+        },
+        "name": "MII PR Onkologie KRK ASA-Klassifikation",
+        "description": "Dieses Profil beschreibt die ASA-Klassifikation (American Society of Anesthesiologists Physical Status Classification) beim Kolorektalen Karzinom gemäß oBDS KR9",
         "exampleBoolean": false
       },
       {
@@ -1986,31 +2018,52 @@
       },
       {
         "reference": {
-          "reference": "Encounter/mii-exa-onko-krk-example-encounter"
+          "reference": "Observation/mii-exa-onko-krk-asa-klassifikation"
         },
-        "name": "mii-exa-onko-krk-example-encounter",
+        "name": "mii-exa-onko-krk-asa-klassifikation",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-asa-klassifikation"
+      },
+      {
+        "reference": {
+          "reference": "Encounter/mii-exa-onko-krk-bundle-encounter"
+        },
+        "name": "mii-exa-onko-krk-bundle-encounter",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "Patient/mii-exa-onko-krk-example-patient"
+          "reference": "Patient/mii-exa-onko-krk-bundle-patient"
         },
-        "name": "mii-exa-onko-krk-example-patient",
+        "name": "mii-exa-onko-krk-bundle-patient",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "Bundle/mii-exa-onko-mamma-example-bundle-1"
+          "reference": "Condition/mii-exa-onko-krk-diagnose"
         },
-        "name": "mii-exa-onko-mamma-example-bundle-1",
+        "name": "mii-exa-onko-krk-diagnose",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+      },
+      {
+        "reference": {
+          "reference": "Encounter/mii-exa-onko-mamma-bundle-encounter"
+        },
+        "name": "mii-exa-onko-mamma-bundle-encounter",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "Patient/mii-exa-onko-mamma-example-patient"
+          "reference": "Patient/mii-exa-onko-mamma-bundle-patient"
         },
-        "name": "mii-exa-onko-mamma-example-patient",
+        "name": "mii-exa-onko-mamma-bundle-patient",
         "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-onko-mamma-diagnose"
+        },
+        "name": "mii-exa-onko-mamma-diagnose",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
       },
       {
         "reference": {
@@ -2067,20 +2120,6 @@
         },
         "name": "mii-exa-onko-prostata-ca-befall-stanze-1",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-ca-befall-stanze"
-      },
-      {
-        "reference": {
-          "reference": "Bundle/mii-exa-onko-prostata-example-bundle-1"
-        },
-        "name": "mii-exa-onko-prostata-example-bundle-1",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Patient/mii-exa-onko-prostata-example-patient"
-        },
-        "name": "mii-exa-onko-prostata-example-patient",
-        "exampleBoolean": true
       },
       {
         "reference": {
@@ -2511,6 +2550,22 @@
         },
         "name": "MII_VS_Onko_KRK_Anastomoseninsuffizienz",
         "description": "Value Set für die Bewertung der Anastomoseninsuffizienz beim Kolorektalen Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-krk-asa-loinc"
+        },
+        "name": "MII_VS_Onko_KRK_ASA_LOINC",
+        "description": "Value Set für LOINC ASA Physical Status Classification",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-krk-asa-obds"
+        },
+        "name": "MII_VS_Onko_KRK_ASA_oBDS",
+        "description": "Value Set für oBDS ASA-Klassifikation beim Kolorektalen Karzinom (KR9)",
         "exampleBoolean": false
       },
       {
