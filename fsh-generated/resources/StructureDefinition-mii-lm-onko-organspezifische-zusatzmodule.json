@@ -57,7 +57,7 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Bundle/Collection von Mamma-spezifischen Ressourcen"
+            "map": "Brustspezifische Datenpunkte"
           },
           {
             "identity": "oBDS",
@@ -70,7 +70,7 @@
         "id": "OrganspezifischeZusatzmodule.Mamma.Menopausenstatus",
         "path": "OrganspezifischeZusatzmodule.Mamma.Menopausenstatus",
         "short": "Menopausenstatus",
-        "definition": "Prätherapeutischer Menopausenstatus einer Patientin mit Mamma-Karzinom.",
+        "definition": "Prätherapeutischer Menopausenstatus einer Patientin mit Mamma-Karzinom. oBDS M1",
         "min": 0,
         "max": "1",
         "type": [
@@ -81,7 +81,7 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Observation.valueCodeableConcept (MII_PR_Onko_Mamma_Menopausenstatus)"
+            "map": "Observation.where(code.coding.system='http://snomed.info/sct' and code.coding.code='161712005').valueCodeableConcept"
           },
           {
             "identity": "oBDS",
@@ -105,7 +105,7 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Observation (MII_PR_Onko_Mamma_Rezeptorstatus_Estrogen)"
+            "map": "Observation.where(code.coding.system='http://loinc.org' and code.coding.code='40556-3')"
           },
           {
             "identity": "oBDS",
@@ -118,7 +118,7 @@
         "id": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusEstrogen.Status",
         "path": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusEstrogen.Status",
         "short": "Estrogen-Rezeptorstatus",
-        "definition": "Kategoriale Bewertung des Estrogen-Rezeptorstatus: positiv/negativ.",
+        "definition": "Kategoriale Bewertung des Estrogen-Rezeptorstatus: positiv/negativ. oBDS M2",
         "min": 0,
         "max": "1",
         "type": [
@@ -153,7 +153,7 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Observation.component[AnteilPositiveZellen].valueQuantity"
+            "map": "Observation.component.where(code.coding.system='http://snomed.info/sct' and code.coding.code='1234804006').valueQuantity"
           },
           {
             "identity": "oBDS",
@@ -177,7 +177,7 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Observation.component[Faerbeintensitaet].valueCodeableConcept"
+            "map": "Observation.component.where(code.coding.system='http://snomed.info/sct' and code.coding.code='1236874005').valueCodeableConcept"
           },
           {
             "identity": "oBDS",
@@ -201,7 +201,7 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Observation (MII_PR_Onko_Mamma_Rezeptorstatus_Progesteron)"
+            "map": "Observation.where(code.coding.system='http://loinc.org' and code.coding.code='85339-0')"
           },
           {
             "identity": "oBDS",
@@ -214,7 +214,7 @@
         "id": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusProgesteron.Status",
         "path": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusProgesteron.Status",
         "short": "Progesteron-Rezeptorstatus",
-        "definition": "Kategoriale Bewertung des Progesteron-Rezeptorstatus: positiv/negativ.",
+        "definition": "Kategoriale Bewertung des Progesteron-Rezeptorstatus: positiv/negativ. oBDS M3",
         "min": 0,
         "max": "1",
         "type": [
@@ -249,7 +249,7 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Observation.component[AnteilPositiveZellen].valueQuantity"
+            "map": "Observation.component.where(code.coding.system='http://snomed.info/sct' and code.coding.code='1234803000').valueQuantity"
           },
           {
             "identity": "oBDS",
@@ -273,7 +273,7 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Observation.component[Faerbeintensitaet].valueCodeableConcept"
+            "map": "Observation.component.where(code.coding.system='http://snomed.info/sct' and code.coding.code='1237278006').valueCodeableConcept"
           },
           {
             "identity": "oBDS",
@@ -283,12 +283,12 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Mamma.Her2NeuStatus",
-        "path": "OrganspezifischeZusatzmodule.Mamma.Her2NeuStatus",
-        "short": "Her2Neu-Status",
-        "definition": "Her2Neu-Status",
+        "id": "OrganspezifischeZusatzmodule.Mamma.PraeoperativeMarkierung",
+        "path": "OrganspezifischeZusatzmodule.Mamma.PraeoperativeMarkierung",
+        "short": "Präoperative Markierung",
+        "definition": "Präoperative Markierung",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "type": [
           {
             "code": "BackboneElement"
@@ -297,20 +297,20 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Observation (Molecular Tumorboard Profil)"
+            "map": "Procedure.where(meta.profile.contains('https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-praeoperative-markierung'))"
           },
           {
             "identity": "oBDS",
-            "map": "M3",
-            "comment": "Her2Neu-Status - Derzeit im Molecular Tumorboard-Profil abgebildet"
+            "map": "M5",
+            "comment": "Präoperative Markierung"
           }
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Mamma.Her2NeuStatus.Status",
-        "path": "OrganspezifischeZusatzmodule.Mamma.Her2NeuStatus.Status",
-        "short": "Her2Neu-Status",
-        "definition": "Her2Neu-Status als multimodaler Biomarker.",
+        "id": "OrganspezifischeZusatzmodule.Mamma.PraeoperativeMarkierung.Modalitaet",
+        "path": "OrganspezifischeZusatzmodule.Mamma.PraeoperativeMarkierung.Modalitaet",
+        "short": "Markierungsmodalität",
+        "definition": "Art der präoperativen Markierung",
         "min": 0,
         "max": "1",
         "type": [
@@ -321,12 +321,12 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Observation.valueCodeableConcept"
+            "map": "Procedure.usedCode.coding.where(memberOf('mii-vs-onko-mamma-praeoperative-markierung-modalitaet'))"
           },
           {
             "identity": "oBDS",
-            "map": "M3.1",
-            "comment": "Her2Neu-Status Bewertung"
+            "map": "M5.1",
+            "comment": "Modalität der präoperativen Markierung"
           }
         ]
       },
@@ -345,7 +345,7 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Procedure (MII_PR_Onko_Mamma_Operation)"
+            "map": "Procedure.where(meta.profile.contains('https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-operation'))"
           },
           {
             "identity": "oBDS",
@@ -379,10 +379,10 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Mamma.MammaOperation.IntraoperativeHilfsmittel",
-        "path": "OrganspezifischeZusatzmodule.Mamma.MammaOperation.IntraoperativeHilfsmittel",
-        "short": "Intraoperative Hilfsmittel",
-        "definition": "Markierungen und Hilfsmittel während der Operation.",
+        "id": "OrganspezifischeZusatzmodule.Mamma.MammaOperation.IntraoperativesImaging",
+        "path": "OrganspezifischeZusatzmodule.Mamma.MammaOperation.IntraoperativesImaging",
+        "short": "Intraoperatives Imaging",
+        "definition": "Intraoperatives Imagung und weitere Markierungen und Hilfsmittel während der Operation.",
         "min": 0,
         "max": "*",
         "type": [
@@ -399,102 +399,6 @@
             "identity": "oBDS",
             "map": "M4.2",
             "comment": "Intraoperative Hilfsmittel und Markierungen"
-          }
-        ]
-      },
-      {
-        "id": "OrganspezifischeZusatzmodule.Mamma.PraeoperativeMarkierung",
-        "path": "OrganspezifischeZusatzmodule.Mamma.PraeoperativeMarkierung",
-        "short": "Präoperative Markierung",
-        "definition": "Präoperative Markierung",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "BackboneElement"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Procedure (MII_PR_Onko_Mamma_Praeoperative_Markierung)"
-          },
-          {
-            "identity": "oBDS",
-            "map": "M5",
-            "comment": "Präoperative Markierung - Alternative Modellierung als usedCode-Slices diskutierbar"
-          }
-        ]
-      },
-      {
-        "id": "OrganspezifischeZusatzmodule.Mamma.PraeoperativeMarkierung.Modalitaet",
-        "path": "OrganspezifischeZusatzmodule.Mamma.PraeoperativeMarkierung.Modalitaet",
-        "short": "Markierungsmodalität",
-        "definition": "Art der präoperativen Markierung.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Procedure.usedCode.coding[PraeoperativeMarkierung]"
-          },
-          {
-            "identity": "oBDS",
-            "map": "M5.1",
-            "comment": "Modalität der präoperativen Markierung"
-          }
-        ]
-      },
-      {
-        "id": "OrganspezifischeZusatzmodule.Mamma.Tumorgroesse",
-        "path": "OrganspezifischeZusatzmodule.Mamma.Tumorgroesse",
-        "short": "Tumorgröße",
-        "definition": "Größte Dimension des Primärtumors.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Quantity"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Observation (MII_PR_Onko_Tumorgroesse)"
-          },
-          {
-            "identity": "oBDS",
-            "map": "M6",
-            "comment": "Tumorgröße - Verschoben in Histologie-Modul, da auf multiple Entitäten anwendbar"
-          }
-        ]
-      },
-      {
-        "id": "OrganspezifischeZusatzmodule.Mamma.Studienteilnahme",
-        "path": "OrganspezifischeZusatzmodule.Mamma.Studienteilnahme",
-        "short": "Studienteilnahme",
-        "definition": "Teilnahme an klinischen Studien.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Observation (MII_PR_Onko_Studienteilnahme)"
-          },
-          {
-            "identity": "oBDS",
-            "map": "M7",
-            "comment": "Studienteilnahme - Bereits durch oBDS 2021 abgedeckt"
           }
         ]
       },
@@ -517,27 +421,440 @@
           },
           {
             "identity": "oBDS",
-            "map": "KRK-Zusatzmodul",
-            "comment": "Placeholder für KRK-spezifische oBDS-Mappings"
+            "map": "KRK-Zusatzmodul nach oBDS",
+            "comment": "Organspezifische Erweiterungen für Kolorektales Karzinom basierend auf oBDS-Modul"
           }
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Placeholder",
-        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Placeholder",
-        "short": "Placeholder",
-        "definition": "Placeholder für KRK-spezifische Datenelemente.",
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.TumorLokalisation",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.TumorLokalisation",
+        "short": "Tumor Lokalisation",
+        "definition": "Tumor Lokalisation",
         "min": 0,
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "BackboneElement"
           }
         ],
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Placeholder für KRK-spezifische Implementierung"
+            "map": "KRK-spezifische Tumorlokalisation"
+          },
+          {
+            "identity": "oBDS",
+            "map": "KR1",
+            "comment": "Tumorlokalisation und anatomische Bezugspunkte"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.TumorLokalisation.AbstandAnokutanlinie",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.TumorLokalisation.AbstandAnokutanlinie",
+        "short": "Abstand Anokutanlinie",
+        "definition": "Höhe des Sitzes des Rektumkarzinoms ab Anokutanlinie in cm. oBDS KR1",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.system='http://loinc.org' and code.coding.code='33748-5').valueQuantity"
+          },
+          {
+            "identity": "oBDS",
+            "map": "KR1",
+            "comment": "Rektum: Höhe des Sitzes des Rektumkarzinoms ab Anokutanlinie in cm"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren",
+        "short": "Bildgebende Verfahren",
+        "definition": "Bildgebende Verfahren",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "KRK-spezifische bildgebende Verfahren"
+          },
+          {
+            "identity": "oBDS",
+            "map": "KR5",
+            "comment": "Bildgebende Verfahren zur präoperativen Beurteilung"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren.MRTMesorektale",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren.MRTMesorektale",
+        "short": "MRT/CT Mesorektale Faszie",
+        "definition": "MRT/CT Mesorektale Faszie",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.system='http://radlex.org' and code.coding.code='RDE96')"
+          },
+          {
+            "identity": "oBDS",
+            "map": "KR5",
+            "comment": "Rektum: MRT oder Dünnschicht-CT durchgeführt mit Angabe Abstand mesorektale Faszie"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren.MRTMesorektale.AbstandMesorektale",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren.MRTMesorektale.AbstandMesorektale",
+        "short": "Abstand Mesorektale Faszie",
+        "definition": "Abstand des Tumors zur mesorektalen Faszie in mm bei MRT/CT. oBDS KR5",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueQuantity"
+          },
+          {
+            "identity": "oBDS",
+            "map": "KR5",
+            "comment": "Abstand zur mesorektalen Faszie in mm"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren.MRTMesorektale.AbstandNichtVerfuegbarGrund",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren.MRTMesorektale.AbstandNichtVerfuegbarGrund",
+        "short": "Grund für fehlende Abstandsmessung",
+        "definition": "Grund warum der Abstand zur mesorektalen Faszie nicht verfügbar ist (nicht durchgeführt/nicht angegeben/unbekannt).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept"
+          },
+          {
+            "identity": "oBDS",
+            "map": "KR5",
+            "comment": "Status: D/N/U (durchgeführt aber nicht angegeben/nicht durchgeführt/unbekannt)"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation",
+        "short": "KRK Operation",
+        "definition": "KRK Operation",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.where(meta.profile.contains('https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-operation'))"
+          },
+          {
+            "identity": "oBDS",
+            "map": "KR-Operation",
+            "comment": "KRK-spezifische operative Verfahren"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.Operationstyp",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.Operationstyp",
+        "short": "Operationstyp",
+        "definition": "Art der kolorektalen Operation (TME, PME, lokale Exzision, etc.).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.code"
+          },
+          {
+            "identity": "oBDS",
+            "map": "OPS",
+            "comment": "Art der kolorektalen Operation nach OPS-Katalog"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.ASAKlassifikation",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.ASAKlassifikation",
+        "short": "ASA-Klassifikation",
+        "definition": "American Society of Anesthesiologists Physical Status Classification System. oBDS KR4",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.system='http://loinc.org' and code.coding.code='97816-3').valueCodeableConcept"
+          },
+          {
+            "identity": "oBDS",
+            "map": "KR9",
+            "comment": "ASA-Klassifikation"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.StomaMarkierung",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.StomaMarkierung",
+        "short": "Stoma Markierung",
+        "definition": "Stoma Markierung",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.where(meta.profile.contains('https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-stoma-markierung'))"
+          },
+          {
+            "identity": "oBDS",
+            "map": "KR7",
+            "comment": "Rektum: Präoperative Anzeichnung der Stomaposition"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.StomaMarkierung.Status",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.StomaMarkierung.Status",
+        "short": "Markierungsstatus",
+        "definition": "Status der präoperativen Stoma-Markierung.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.status"
+          },
+          {
+            "identity": "oBDS",
+            "map": "KR7",
+            "comment": "Status der präoperativen Stoma-Markierung"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.StomaMarkierung.StatusGrund",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.StomaMarkierung.StatusGrund",
+        "short": "Status Grund",
+        "definition": "Grund für Markierungsstatus (geplant/nicht geplant/abgelehnt).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.statusReason"
+          },
+          {
+            "identity": "oBDS",
+            "map": "KR7",
+            "comment": "Grund für Markierungsstatus"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PathologischeBewertung",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PathologischeBewertung",
+        "short": "Pathologische Bewertung",
+        "definition": "Pathologische Bewertung",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "KRK-spezifische pathologische Bewertung"
+          },
+          {
+            "identity": "oBDS",
+            "map": "KR2-KR4",
+            "comment": "Pathologische Bewertung"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PathologischeBewertung.ResektionsraenderAboral",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PathologischeBewertung.ResektionsraenderAboral",
+        "short": "Resektionsrand aboral",
+        "definition": "Minimaler Abstand des aboralen Tumorrandes zum aboralen Resektionsrand in mm. oBDS KR2",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.system='http://loinc.org' and code.coding.code='81175-2').valueQuantity"
+          },
+          {
+            "identity": "oBDS",
+            "map": "KR2",
+            "comment": "Minimaler Abstand des aboralen Tumorrandes zum aboralen Resektionsrand in mm"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PathologischeBewertung.ResektionsraenderCircumferell",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PathologischeBewertung.ResektionsraenderCircumferell",
+        "short": "Resektionsrand circumferell",
+        "definition": "Minimaler Abstand des Tumors zur circumferellen Resektionsebene in mm. oBDS KR3",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.system='http://loinc.org' and code.coding.code='81176-0').valueQuantity"
+          },
+          {
+            "identity": "oBDS",
+            "map": "KR3",
+            "comment": "Minimaler Abstand des Tumors zur circumferellen Resektionsebene in mm"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PathologischeBewertung.TMEQualitaet",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PathologischeBewertung.TMEQualitaet",
+        "short": "TME Qualität",
+        "definition": "Qualität der totalen mesorektalen Exzision (Grad 1-3).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Specimen.where(meta.profile.contains('https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-specimen')).extension"
+          },
+          {
+            "identity": "oBDS",
+            "map": "KR4",
+            "comment": "Rektum: Qualität des TME-Präparats"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PostoperativeKomplikationen",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PostoperativeKomplikationen",
+        "short": "Postoperative Komplikationen",
+        "definition": "Postoperative Komplikationen",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "KRK-spezifische postoperative Komplikationen"
+          },
+          {
+            "identity": "oBDS",
+            "map": "KR8",
+            "comment": "Postoperative Komplikationen"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PostoperativeKomplikationen.Anastomoseninsuffizienz",
+        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PostoperativeKomplikationen.Anastomoseninsuffizienz",
+        "short": "Anastomoseninsuffizienz",
+        "definition": "Bewertung der Anastomoseninsuffizienz nach Grad A/B/C.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.system='http://snomed.info/sct' and code.coding.code='361317002').valueCodeableConcept"
+          },
+          {
+            "identity": "oBDS",
+            "map": "KR8",
+            "comment": "Rektumkarzinom: Anastomoseninsuffizienz"
           }
         ]
       },
@@ -560,27 +877,344 @@
           },
           {
             "identity": "oBDS",
-            "map": "Prostata-Zusatzmodul",
-            "comment": "Placeholder für Prostata-spezifische oBDS-Mappings"
+            "map": "Prostata-Zusatzmodul nach oBDS",
+            "comment": "Organspezifische Erweiterungen für Prostatakarzinom basierend auf oBDS-Modul"
           }
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Prostata.Placeholder",
-        "path": "OrganspezifischeZusatzmodule.Prostata.Placeholder",
-        "short": "Placeholder",
-        "definition": "Placeholder für Prostata-spezifische Datenelemente.",
+        "id": "OrganspezifischeZusatzmodule.Prostata.PSAWert",
+        "path": "OrganspezifischeZusatzmodule.Prostata.PSAWert",
+        "short": "PSA-Wert",
+        "definition": "Prostataspezifisches Antigen in ng/ml für Diagnostik und Verlaufskontrolle.",
         "min": 0,
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "Quantity"
           }
         ],
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Placeholder für Prostata-spezifische Implementierung"
+            "map": "Observation.where(code.coding.system='http://loinc.org' and code.coding.code='2857-1').valueQuantity"
+          },
+          {
+            "identity": "oBDS",
+            "map": "P1",
+            "comment": "PSA-Wert als Tumormarker für Diagnostik und Verlaufskontrolle"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Prostata.GleasonPattern",
+        "path": "OrganspezifischeZusatzmodule.Prostata.GleasonPattern",
+        "short": "Gleason Pattern",
+        "definition": "Gleason Pattern",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.memberOf('mii-vs-onko-prostata-gleason-primary-secondary-tertiary'))"
+          },
+          {
+            "identity": "oBDS",
+            "map": "P2",
+            "comment": "Gleason Pattern (primär, sekundär, tertiär) für histopathologische Klassifikation"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Prostata.GleasonPattern.PatternTyp",
+        "path": "OrganspezifischeZusatzmodule.Prostata.GleasonPattern.PatternTyp",
+        "short": "Pattern Typ",
+        "definition": "Primäres, sekundäres oder tertiäres Gleason Pattern.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.code"
+          },
+          {
+            "identity": "oBDS",
+            "map": "P2.1",
+            "comment": "Art des Gleason Patterns (primär/sekundär/tertiär)"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Prostata.GleasonPattern.PatternWert",
+        "path": "OrganspezifischeZusatzmodule.Prostata.GleasonPattern.PatternWert",
+        "short": "Pattern Wert",
+        "definition": "Gleason Pattern Wert (1-5, ab 3 als maligne).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept"
+          },
+          {
+            "identity": "oBDS",
+            "map": "P2.2",
+            "comment": "Gleason Pattern Wert (1-5, ab 3 maligne)"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Prostata.GleasonScore",
+        "path": "OrganspezifischeZusatzmodule.Prostata.GleasonScore",
+        "short": "Gleason Score",
+        "definition": "Gleason Score",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.system='http://loinc.org' and code.coding.code='44642-7')"
+          },
+          {
+            "identity": "oBDS",
+            "map": "P3",
+            "comment": "Gleason Score als Summe der Patterns"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Prostata.GleasonScore.Score",
+        "path": "OrganspezifischeZusatzmodule.Prostata.GleasonScore.Score",
+        "short": "Gleason Score",
+        "definition": "Summe aus primärem und sekundärem Pattern.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept"
+          },
+          {
+            "identity": "oBDS",
+            "map": "P3.1",
+            "comment": "Gleason Score Gesamtwert"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Prostata.GleasonScore.GradeGroup",
+        "path": "OrganspezifischeZusatzmodule.Prostata.GleasonScore.GradeGroup",
+        "short": "Grade Group",
+        "definition": "Internationale Standard Grade Group (1-5).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component.where(code.coding.system='http://loinc.org' and code.coding.code='79892-6').valueCodeableConcept"
+          },
+          {
+            "identity": "oBDS",
+            "map": "P3.2",
+            "comment": "Internationale Standard Grade Group (1-5)"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse",
+        "path": "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse",
+        "short": "Biopsie Ergebnisse",
+        "definition": "Biopsie Ergebnisse",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation Collection"
+          },
+          {
+            "identity": "oBDS",
+            "map": "P4",
+            "comment": "Prostatabiopsie-Ergebnisse"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse.AnzahlStanzen",
+        "path": "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse.AnzahlStanzen",
+        "short": "Anzahl Stanzen",
+        "definition": "Gesamtanzahl der entnommenen Biopsie-Stanzen.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.system='http://loinc.org' and code.coding.code='33747-0').valueQuantity"
+          },
+          {
+            "identity": "oBDS",
+            "map": "P4.1",
+            "comment": "Gesamtanzahl entnommener Biopsie-Stanzen"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse.AnzahlPositiverStanzen",
+        "path": "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse.AnzahlPositiverStanzen",
+        "short": "Anzahl positive Stanzen",
+        "definition": "Anzahl der tumorpositiven Stanzen.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.system='http://loinc.org' and code.coding.code='33746-2').valueQuantity"
+          },
+          {
+            "identity": "oBDS",
+            "map": "P4.2",
+            "comment": "Anzahl tumorpositiver Stanzen"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse.KarzinomBefallStanze",
+        "path": "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse.KarzinomBefallStanze",
+        "short": "Karzinom-Befall je Stanze",
+        "definition": "Prozentuale Ausdehnung des Karzinoms in der Stanze.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.system='http://loinc.org' and code.coding.code='44637-7').valueQuantity"
+          },
+          {
+            "identity": "oBDS",
+            "map": "P4.3",
+            "comment": "Prozentuale Ausdehnung Karzinom je Stanze"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Prostata.ChirurgischeKomplikationen",
+        "path": "OrganspezifischeZusatzmodule.Prostata.ChirurgischeKomplikationen",
+        "short": "Chirurgische Komplikationen",
+        "definition": "Chirurgische Komplikationen",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(method.coding.system='http://snomed.info/sct' and method.coding.code='789278003')"
+          },
+          {
+            "identity": "oBDS",
+            "map": "P5",
+            "comment": "Postoperative Komplikationen nach Prostatektomie"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Prostata.ChirurgischeKomplikationen.ClavienDindoGrad",
+        "path": "OrganspezifischeZusatzmodule.Prostata.ChirurgischeKomplikationen.ClavienDindoGrad",
+        "short": "Clavien-Dindo Grad",
+        "definition": "Graduierung postoperativer Komplikationen nach Clavien-Dindo.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept"
+          },
+          {
+            "identity": "oBDS",
+            "map": "P5.1",
+            "comment": "Clavien-Dindo Klassifikation postoperativer Komplikationen"
+          }
+        ]
+      },
+      {
+        "id": "OrganspezifischeZusatzmodule.Prostata.ChirurgischeKomplikationen.KomplikationsArt",
+        "path": "OrganspezifischeZusatzmodule.Prostata.ChirurgischeKomplikationen.KomplikationsArt",
+        "short": "Komplikationsart",
+        "definition": "Spezifische Art der postoperativen Komplikation.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component.where(code.coding.system='http://loinc.org' and code.coding.code='LA462-5').valueCodeableConcept"
+          },
+          {
+            "identity": "oBDS",
+            "map": "P5.2",
+            "comment": "Spezifische Art der postoperativen Komplikation"
           }
         ]
       },

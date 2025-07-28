@@ -19,7 +19,7 @@ Description: "Dieses Profil beschreibt den (prätherapeutischen) Menopausenstatu
 * code 1..1 
 * code ^definition = "Prätherapeutischer Menopausenstatus einer Patientin mit Mamma-Karzinom"
 * code ^short = "Status der Menopause"
-* code.coding = $SCT#161712005 "Menopause, function (observable entity)" 
+* code.coding = $SCT#161712005 "Menopause, function (observable entity)"  // no LOINC code available
 
 
 // M1 Menopausenstatus

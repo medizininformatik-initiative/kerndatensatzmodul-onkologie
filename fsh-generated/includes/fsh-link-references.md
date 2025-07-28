@@ -34,6 +34,7 @@
 [mii-cm-onko-verlauf-gesamtbeurteilung-sct]: ConceptMap-mii-cm-onko-verlauf-gesamtbeurteilung-sct.html
 [mii-cm-onko-verlauf-lymphknoten-sct]: ConceptMap-mii-cm-onko-verlauf-lymphknoten-sct.html
 [mii-cm-onko-verlauf-primaertumor-sct]: ConceptMap-mii-cm-onko-verlauf-primaertumor-sct.html
+[mii-cm-onko-krk-asa-obds-loinc]: ConceptMap-mii-cm-onko-krk-asa-obds-loinc.html
 [MII-CM-Onkologie-to-MVGenomSeq]: ConceptMap-MII-CM-Onkologie-to-MVGenomSeq.html
 [mii-cps-onko-capabilitystatement]: CapabilityStatement-mii-cps-onko-capabilitystatement.html
 [MII_CS_Onko_Nebenwirkung_CTCAE_Grad]: CodeSystem-mii-cs-onko-nebenwirkung-ctcae-grad.html
@@ -45,6 +46,7 @@
 [MII_CS_Onko_Grading]: CodeSystem-mii-cs-onko-grading.html
 [MII_CS_Onko_Intention]: CodeSystem-mii-cs-onko-intention.html
 [MII_CS_Onko_KRK_Anastomoseninsuffizienz]: CodeSystem-mii-cs-onko-krk-anastomoseninsuffizienz.html
+[MII_CS_Onko_KRK_ASA_oBDS]: CodeSystem-mii-cs-onko-krk-asa-obds.html
 [MII_CS_Onko_KRK_Operationstyp]: CodeSystem-mii-cs-onko-krk-operationstyp.html
 [MII_CS_Onko_Mamma_Rezeptorstatus_Leitlinie]: CodeSystem-mii-cs-onko-mamma-rezeptorstatus-leitlinie.html
 [MII_CS_Onko_Melanom_Ulzeration]: CodeSystem-mii-cs-onko-melanom-ulzeration.html
@@ -94,6 +96,7 @@
 [mii-exa-onko-krk-operation]: Procedure-mii-exa-onko-krk-operation.html
 [mii-exa-onko-krk-specimen]: Specimen-mii-exa-onko-krk-specimen.html
 [mii-exa-onko-krk-stoma-markierung]: Procedure-mii-exa-onko-krk-stoma-markierung.html
+[mii-exa-onko-mamma-example-bundle-1]: Bundle-mii-exa-onko-mamma-example-bundle-1.html
 [mii-exa-onko-melanom-breslow-tiefe]: Observation-mii-exa-onko-melanom-breslow-tiefe.html
 [mii-exa-onko-melanom-ldh]: Observation-mii-exa-onko-melanom-ldh.html
 [mii-exa-onko-melanom-sicherheitsabstand]: Observation-mii-exa-onko-melanom-sicherheitsabstand.html
@@ -120,6 +123,7 @@
 [MII_PR_Onko_Grading]: StructureDefinition-mii-pr-onko-grading.html
 [MII_PR_Onko_Histologie_ICDO3]: StructureDefinition-mii-pr-onko-histologie-icdo3.html
 [MII_PR_Onko_KRK_Anastomoseninsuffizienz]: StructureDefinition-mii-pr-onko-krk-anastomoseninsuffizienz.html
+[MII_PR_Onko_KRK_ASA_Klassifikation]: StructureDefinition-mii-pr-onko-krk-asa-klassifikation.html
 [MII_PR_Onko_KRK_MRT_Mesorektale_Faszie]: StructureDefinition-mii-pr-onko-krk-mrt-mesorektale-faszie.html
 [MII_PR_Onko_KRK_Stoma_Markierung]: StructureDefinition-mii-pr-onko-krk-stoma-markierung.html
 [MII_PR_Onko_Mamma_Operation]: StructureDefinition-mii-pr-onko-mamma-operation.html
@@ -239,10 +243,13 @@
 [mii-exa-onko-genetische-variante-braf]: Observation-mii-exa-onko-genetische-variante-braf.html
 [mii-exa-onko-grading-1]: Observation-mii-exa-onko-grading-1.html
 [mii-exa-onko-histologie-icdo3]: Observation-mii-exa-onko-histologie-icdo3.html
-[mii-exa-onko-krk-example-encounter]: Encounter-mii-exa-onko-krk-example-encounter.html
-[mii-exa-onko-krk-example-patient]: Patient-mii-exa-onko-krk-example-patient.html
-[mii-exa-onko-mamma-example-bundle-1]: Bundle-mii-exa-onko-mamma-example-bundle-1.html
-[mii-exa-onko-mamma-example-patient]: Patient-mii-exa-onko-mamma-example-patient.html
+[mii-exa-onko-krk-asa-klassifikation]: Observation-mii-exa-onko-krk-asa-klassifikation.html
+[mii-exa-onko-krk-bundle-encounter]: Encounter-mii-exa-onko-krk-bundle-encounter.html
+[mii-exa-onko-krk-bundle-patient]: Patient-mii-exa-onko-krk-bundle-patient.html
+[mii-exa-onko-krk-diagnose]: Condition-mii-exa-onko-krk-diagnose.html
+[mii-exa-onko-mamma-bundle-encounter]: Encounter-mii-exa-onko-mamma-bundle-encounter.html
+[mii-exa-onko-mamma-bundle-patient]: Patient-mii-exa-onko-mamma-bundle-patient.html
+[mii-exa-onko-mamma-diagnose]: Condition-mii-exa-onko-mamma-diagnose.html
 [mii-exa-onko-mamma-menopause-status-1]: Observation-mii-exa-onko-mamma-menopause-status-1.html
 [mii-exa-onko-mamma-praeoperative-markierung-1]: Procedure-mii-exa-onko-mamma-praeoperative-markierung-1.html
 [mii-exa-onko-mamma-rezeptorstatus-estrogen-1]: Observation-mii-exa-onko-mamma-rezeptorstatus-estrogen-1.html
@@ -251,8 +258,6 @@
 [mii-exa-onko-prostata-anzahl-positiver-stanzen-1]: Observation-mii-exa-onko-prostata-anzahl-positiver-stanzen-1.html
 [mii-exa-onko-prostata-anzahl-stanzen-1]: Observation-mii-exa-onko-prostata-anzahl-stanzen-1.html
 [mii-exa-onko-prostata-ca-befall-stanze-1]: Observation-mii-exa-onko-prostata-ca-befall-stanze-1.html
-[mii-exa-onko-prostata-example-bundle-1]: Bundle-mii-exa-onko-prostata-example-bundle-1.html
-[mii-exa-onko-prostata-example-patient]: Patient-mii-exa-onko-prostata-example-patient.html
 [mii-exa-onko-prostata-gleason-pattern-grade-group-1]: Observation-mii-exa-onko-prostata-gleason-pattern-grade-group-1.html
 [mii-exa-onko-prostata-gleason-pattern-primary-1]: Observation-mii-exa-onko-prostata-gleason-pattern-primary-1.html
 [mii-exa-onko-prostata-gleason-pattern-secondary-1]: Observation-mii-exa-onko-prostata-gleason-pattern-secondary-1.html
@@ -311,6 +316,8 @@
 [MII_VS_Onko_KRK_Abstand_Circumferelle_Resektionsrand]: ValueSet-mii-vs-onko-krk-abstand-circumferelle-resektionsrand.html
 [MII_VS_Onko_KRK_Abstand_Resektionslinie_Aboral]: ValueSet-mii-vs-onko-krk-abstand-resektionslinie-aboral.html
 [MII_VS_Onko_KRK_Anastomoseninsuffizienz]: ValueSet-mii-vs-onko-krk-anastomoseninsuffizienz.html
+[MII_VS_Onko_KRK_ASA_LOINC]: ValueSet-mii-vs-onko-krk-asa-loinc.html
+[MII_VS_Onko_KRK_ASA_oBDS]: ValueSet-mii-vs-onko-krk-asa-obds.html
 [MII_VS_Onko_KRK_MRT_Mesorektale_Faszie_Status]: ValueSet-mii-vs-onko-krk-mrt-mesorektale-faszie-status.html
 [MII_VS_Onko_KRK_Stoma_Anzeichnung]: ValueSet-mii-vs-onko-krk-stoma-anzeichnung.html
 [MII_VS_Onko_KRK_Stoma_Status_Reason]: ValueSet-mii-vs-onko-krk-stoma-status-reason.html

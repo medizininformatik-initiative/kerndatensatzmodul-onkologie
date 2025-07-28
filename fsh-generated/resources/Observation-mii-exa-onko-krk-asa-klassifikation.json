@@ -1,0 +1,37 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-krk-asa-klassifikation",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-asa-klassifikation"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "97816-3",
+        "system": "http://loinc.org",
+        "display": "American Society of Anesthesiologists physical status score"
+      }
+    ]
+  },
+  "status": "final",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "focus": [
+    {
+      "reference": "Condition/primaertumor-example"
+    }
+  ],
+  "effectiveDateTime": "2024-03-15T08:30:00+01:00",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "2",
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-asa-obds",
+        "display": "ASA II"
+      }
+    ]
+  }
+}

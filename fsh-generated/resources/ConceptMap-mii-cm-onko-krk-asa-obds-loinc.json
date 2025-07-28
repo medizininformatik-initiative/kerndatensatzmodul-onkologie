@@ -1,0 +1,97 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "mii-cm-onko-krk-asa-obds-loinc",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-krk-asa-obds-loinc",
+  "version": "2025.1.0",
+  "name": "MII_CM_Onko_KRK_ASA_oBDS_LOINC",
+  "title": "MII CM Onkologie KRK ASA oBDS zu LOINC",
+  "description": "Mapping von oBDS ASA-Klassifikation (KR9) zu LOINC ASA Physical Status",
+  "status": "active",
+  "experimental": false,
+  "sourceCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-asa-obds",
+  "targetCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-asa-loinc",
+  "group": [
+    {
+      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-asa-obds",
+      "target": "http://loinc.org",
+      "element": [
+        {
+          "code": "1",
+          "display": "ASA I",
+          "target": [
+            {
+              "code": "LA28813-6",
+              "display": "ASA I",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "2",
+          "display": "ASA II",
+          "target": [
+            {
+              "code": "LA28814-4",
+              "display": "ASA II",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "3",
+          "display": "ASA III",
+          "target": [
+            {
+              "code": "LA28815-1",
+              "display": "ASA III",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "4",
+          "display": "ASA IV",
+          "target": [
+            {
+              "code": "LA28816-9",
+              "display": "ASA IV",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "5",
+          "display": "ASA V",
+          "target": [
+            {
+              "code": "LA28817-7",
+              "display": "ASA V",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "6",
+          "display": "ASA VI",
+          "target": [
+            {
+              "code": "LA28818-5",
+              "display": "ASA VI",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "U",
+          "display": "Unbekannt",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "Kein entsprechender LOINC-Code für 'Unbekannt' verfügbar"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

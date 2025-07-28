@@ -94,8 +94,8 @@ Mapping Datensatz zu FHIR
 
 @```
 from StructureDefinition 
-where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/Onkologie'
-    for differential.element where id.contains('Mamma.Menopause')
+where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/OrganspezifischeZusatzmodule'
+    for differential.element where id.contains('Mamma.Menopausenstatus')
     select 
         Datensatz: short,
         Erklaerung: definition, 

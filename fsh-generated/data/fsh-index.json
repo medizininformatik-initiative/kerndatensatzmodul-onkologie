@@ -20,24 +20,16 @@
     "fshName": "mii-exa-onko-krk-bundle",
     "fshType": "Instance",
     "fshFile": "oBDS\\Organspezifische Module\\KolorektalesKarzinom\\mii-exa-onko-krk-bundle.fsh",
-    "startLine": 15,
-    "endLine": 92
+    "startLine": 34,
+    "endLine": 107
   },
   {
     "outputFile": "Bundle-mii-exa-onko-mamma-example-bundle-1.json",
     "fshName": "mii-exa-onko-mamma-example-bundle-1",
     "fshType": "Instance",
     "fshFile": "oBDS\\Organspezifische Module\\Mamma\\mii-exa-mamma-bundle.fsh",
-    "startLine": 1,
-    "endLine": 20
-  },
-  {
-    "outputFile": "Bundle-mii-exa-onko-prostata-example-bundle-1.json",
-    "fshName": "mii-exa-onko-prostata-example-bundle-1",
-    "fshType": "Instance",
-    "fshFile": "oBDS\\Organspezifische Module\\Prostata\\mii-exa-prostata-bundle.fsh",
-    "startLine": 7,
-    "endLine": 14
+    "startLine": 33,
+    "endLine": 90
   },
   {
     "outputFile": "CapabilityStatement-mii-cps-onko-capabilitystatement.json",
@@ -45,7 +37,7 @@
     "fshType": "Instance",
     "fshFile": "capability-statement.fsh",
     "startLine": 33,
-    "endLine": 266
+    "endLine": 304
   },
   {
     "outputFile": "CarePlan-PatientKimMusterperson-Tumorkonferenz-1.json",
@@ -150,6 +142,14 @@
     "fshFile": "oBDS\\Organspezifische Module\\KolorektalesKarzinom\\mii-cs-onko-krk-anastomoseninsuffizienz.fsh",
     "startLine": 1,
     "endLine": 16
+  },
+  {
+    "outputFile": "CodeSystem-mii-cs-onko-krk-asa-obds.json",
+    "fshName": "MII_CS_Onko_KRK_ASA_oBDS",
+    "fshType": "CodeSystem",
+    "fshFile": "oBDS\\Organspezifische Module\\KolorektalesKarzinom\\mii-cs-onko-krk-asa-obds.fsh",
+    "startLine": 1,
+    "endLine": 20
   },
   {
     "outputFile": "CodeSystem-mii-cs-onko-krk-mrt-mesorektale-faszie-status.json",
@@ -448,6 +448,14 @@
     "endLine": 59
   },
   {
+    "outputFile": "ConceptMap-mii-cm-onko-krk-asa-obds-loinc.json",
+    "fshName": "mii-cm-onko-krk-asa-obds-loinc",
+    "fshType": "Instance",
+    "fshFile": "oBDS\\Organspezifische Module\\KolorektalesKarzinom\\mii-cm-onko-krk-asa-obds-loinc.fsh",
+    "startLine": 1,
+    "endLine": 72
+  },
+  {
     "outputFile": "ConceptMap-mii-cm-onko-krk-stoma-obds-sct.json",
     "fshName": "mii-cm-onko-krk-stoma-obds-sct",
     "fshType": "Instance",
@@ -660,8 +668,8 @@
     "fshName": "mii-exa-onko-diagnose-primaertumor-krk",
     "fshType": "Instance",
     "fshFile": "oBDS\\Organspezifische Module\\KolorektalesKarzinom\\mii-exa-onko-krk-bundle.fsh",
-    "startLine": 94,
-    "endLine": 106
+    "startLine": 109,
+    "endLine": 121
   },
   {
     "outputFile": "Condition-mii-exa-onko-diagnose.json",
@@ -670,6 +678,22 @@
     "fshFile": "oBDS\\05_Diagnose\\mii-exa-onko-diagnose.fsh",
     "startLine": 1,
     "endLine": 15
+  },
+  {
+    "outputFile": "Condition-mii-exa-onko-krk-diagnose.json",
+    "fshName": "mii-exa-onko-krk-diagnose",
+    "fshType": "Instance",
+    "fshFile": "oBDS\\Organspezifische Module\\KolorektalesKarzinom\\mii-exa-onko-krk-bundle.fsh",
+    "startLine": 19,
+    "endLine": 28
+  },
+  {
+    "outputFile": "Condition-mii-exa-onko-mamma-diagnose.json",
+    "fshName": "mii-exa-onko-mamma-diagnose",
+    "fshType": "Instance",
+    "fshFile": "oBDS\\Organspezifische Module\\Mamma\\mii-exa-mamma-bundle.fsh",
+    "startLine": 18,
+    "endLine": 27
   },
   {
     "outputFile": "DiagnosticReport-PatientKimMusterperson-PathoReport-1.json",
@@ -688,12 +712,20 @@
     "endLine": 18
   },
   {
-    "outputFile": "Encounter-mii-exa-onko-krk-example-encounter.json",
-    "fshName": "mii-exa-onko-krk-example-encounter",
+    "outputFile": "Encounter-mii-exa-onko-krk-bundle-encounter.json",
+    "fshName": "mii-exa-onko-krk-bundle-encounter",
     "fshType": "Instance",
     "fshFile": "oBDS\\Organspezifische Module\\KolorektalesKarzinom\\mii-exa-onko-krk-bundle.fsh",
-    "startLine": 8,
-    "endLine": 13
+    "startLine": 12,
+    "endLine": 17
+  },
+  {
+    "outputFile": "Encounter-mii-exa-onko-mamma-bundle-encounter.json",
+    "fshName": "mii-exa-onko-mamma-bundle-encounter",
+    "fshType": "Instance",
+    "fshFile": "oBDS\\Organspezifische Module\\Mamma\\mii-exa-mamma-bundle.fsh",
+    "startLine": 11,
+    "endLine": 16
   },
   {
     "outputFile": "List-mii-exa-onko-liste-evidenz-erstdiagnose-1.json",
@@ -944,36 +976,44 @@
     "endLine": 18
   },
   {
+    "outputFile": "Observation-mii-exa-onko-krk-asa-klassifikation.json",
+    "fshName": "mii-exa-onko-krk-asa-klassifikation",
+    "fshType": "Instance",
+    "fshFile": "oBDS\\Organspezifische Module\\KolorektalesKarzinom\\mii-exa-onko-krk-asa-klassifikation.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
     "outputFile": "Observation-mii-exa-onko-mamma-menopause-status-1.json",
     "fshName": "mii-exa-onko-mamma-menopause-status-1",
     "fshType": "Instance",
     "fshFile": "oBDS\\Organspezifische Module\\Mamma\\mii-exa-mamma-bundle.fsh",
-    "startLine": 40,
-    "endLine": 47
+    "startLine": 97,
+    "endLine": 104
   },
   {
     "outputFile": "Observation-mii-exa-onko-mamma-rezeptorstatus-estrogen-1.json",
     "fshName": "mii-exa-onko-mamma-rezeptorstatus-estrogen-1",
     "fshType": "Instance",
     "fshFile": "oBDS\\Organspezifische Module\\Mamma\\mii-exa-mamma-bundle.fsh",
-    "startLine": 49,
-    "endLine": 60
+    "startLine": 106,
+    "endLine": 117
   },
   {
     "outputFile": "Observation-mii-exa-onko-mamma-rezeptorstatus-progesteron-1.json",
     "fshName": "mii-exa-onko-mamma-rezeptorstatus-progesteron-1",
     "fshType": "Instance",
     "fshFile": "oBDS\\Organspezifische Module\\Mamma\\mii-exa-mamma-bundle.fsh",
-    "startLine": 62,
-    "endLine": 73
+    "startLine": 119,
+    "endLine": 130
   },
   {
     "outputFile": "Observation-mii-exa-onko-mamma-tumorgroesse-1.json",
     "fshName": "mii-exa-onko-mamma-tumorgroesse-1",
     "fshType": "Instance",
     "fshFile": "oBDS\\Organspezifische Module\\Mamma\\mii-exa-mamma-bundle.fsh",
-    "startLine": 86,
-    "endLine": 100
+    "startLine": 143,
+    "endLine": 155
   },
   {
     "outputFile": "Observation-mii-exa-onko-melanom-breslow-tiefe.json",
@@ -1256,28 +1296,20 @@
     "endLine": 16
   },
   {
-    "outputFile": "Patient-mii-exa-onko-krk-example-patient.json",
-    "fshName": "mii-exa-onko-krk-example-patient",
+    "outputFile": "Patient-mii-exa-onko-krk-bundle-patient.json",
+    "fshName": "mii-exa-onko-krk-bundle-patient",
     "fshType": "Instance",
     "fshFile": "oBDS\\Organspezifische Module\\KolorektalesKarzinom\\mii-exa-onko-krk-bundle.fsh",
-    "startLine": 2,
-    "endLine": 6
+    "startLine": 6,
+    "endLine": 10
   },
   {
-    "outputFile": "Patient-mii-exa-onko-mamma-example-patient.json",
-    "fshName": "mii-exa-onko-mamma-example-patient",
+    "outputFile": "Patient-mii-exa-onko-mamma-bundle-patient.json",
+    "fshName": "mii-exa-onko-mamma-bundle-patient",
     "fshType": "Instance",
     "fshFile": "oBDS\\Organspezifische Module\\Mamma\\mii-exa-mamma-bundle.fsh",
-    "startLine": 23,
-    "endLine": 27
-  },
-  {
-    "outputFile": "Patient-mii-exa-onko-prostata-example-patient.json",
-    "fshName": "mii-exa-onko-prostata-example-patient",
-    "fshType": "Instance",
-    "fshFile": "oBDS\\Organspezifische Module\\Prostata\\mii-exa-prostata-bundle.fsh",
-    "startLine": 1,
-    "endLine": 5
+    "startLine": 5,
+    "endLine": 9
   },
   {
     "outputFile": "Procedure-PatientKimMusterperson-Procedure-1.json",
@@ -1388,8 +1420,8 @@
     "fshName": "mii-exa-onko-mamma-praeoperative-markierung-1",
     "fshType": "Instance",
     "fshFile": "oBDS\\Organspezifische Module\\Mamma\\mii-exa-mamma-bundle.fsh",
-    "startLine": 77,
-    "endLine": 83
+    "startLine": 134,
+    "endLine": 140
   },
   {
     "outputFile": "Procedure-mii-exa-onko-operation-1.json",
@@ -1741,7 +1773,7 @@
     "fshType": "Logical",
     "fshFile": "oBDS\\Organspezifische Module\\mii-lm-onko-organspezifische-zusatzmodule.fsh",
     "startLine": 1,
-    "endLine": 35
+    "endLine": 61
   },
   {
     "outputFile": "StructureDefinition-mii-lm-onko.json",
@@ -1878,6 +1910,14 @@
     "fshFile": "oBDS\\Organspezifische Module\\KolorektalesKarzinom\\mii-pr-onko-krk-anastomoseninsuffizienz.fsh",
     "startLine": 1,
     "endLine": 37
+  },
+  {
+    "outputFile": "StructureDefinition-mii-pr-onko-krk-asa-klassifikation.json",
+    "fshName": "MII_PR_Onko_KRK_ASA_Klassifikation",
+    "fshType": "Profile",
+    "fshFile": "oBDS\\Organspezifische Module\\KolorektalesKarzinom\\mii-pr-onko-krk-asa-klassifikation.fsh",
+    "startLine": 1,
+    "endLine": 35
   },
   {
     "outputFile": "StructureDefinition-mii-pr-onko-krk-mrt-mesorektale-faszie.json",
@@ -2388,6 +2428,22 @@
     "fshName": "MII_VS_Onko_KRK_Anastomoseninsuffizienz",
     "fshType": "ValueSet",
     "fshFile": "oBDS\\Organspezifische Module\\KolorektalesKarzinom\\mii-vs-onko-krk-anastomoseninsuffizienz.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "ValueSet-mii-vs-onko-krk-asa-loinc.json",
+    "fshName": "MII_VS_Onko_KRK_ASA_LOINC",
+    "fshType": "ValueSet",
+    "fshFile": "oBDS\\Organspezifische Module\\KolorektalesKarzinom\\mii-vs-onko-krk-asa-loinc.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
+    "outputFile": "ValueSet-mii-vs-onko-krk-asa-obds.json",
+    "fshName": "MII_VS_Onko_KRK_ASA_oBDS",
+    "fshType": "ValueSet",
+    "fshFile": "oBDS\\Organspezifische Module\\KolorektalesKarzinom\\mii-vs-onko-krk-asa-obds.fsh",
     "startLine": 1,
     "endLine": 10
   },
