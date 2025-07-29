@@ -119,22 +119,6 @@
       },
       {
         "reference": {
-          "reference": "ServiceRequest/mii-exa-onko-service-request-genetic-testing"
-        },
-        "name": "Genetic Testing ServiceRequest",
-        "description": "Request for comprehensive genomic profiling",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "CarePlan/mii-exa-onko-tumorkonferenz-legacy"
-        },
-        "name": "Legacy Coded Tumorboard Example",
-        "description": "Traditional approach using coded therapy recommendations from cancer registry",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
-      },
-      {
-        "reference": {
           "reference": "List/mii-exa-onko-liste-evidenz-erstdiagnose-1"
         },
         "name": "Liste der Evidenz zum Erstdiagnosezeitpunkt",
@@ -379,6 +363,14 @@
         },
         "name": "MII CM Onkologie KRK ASA oBDS zu LOINC",
         "description": "Mapping von oBDS ASA-Klassifikation (KR9) zu LOINC ASA Physical Status",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-weitere-klassifikationen-obds"
+        },
+        "name": "MII CodeSystem Onkologie - Weitere Klassifikationen oBDS",
+        "description": "oBDS-specific classification systems and scoring systems not yet covered by international terminologies (SNOMED CT, NCI Thesaurus). These codes supplement the existing ValueSet for additional classifications. Research required: Check if SNOMED CT or LOINC codes exist for these scoring systems before using oBDS-specific codes.",
         "exampleBoolean": false
       },
       {
@@ -1498,7 +1490,7 @@
           "reference": "ValueSet/mii-vs-onko-weitere-klassifikationen"
         },
         "name": "MII Value Set Onkologie - Weitere Klassifikationen",
-        "description": "Cancer staging systems that may be used in staging assertions, such as those defined by AJCC, FIGO, and other specialized staging systems. Based on mCODE STU4 and German oBDS catalogue",
+        "description": "Comprehensive collection of cancer staging systems and classification schemes used in oncology beyond TNM classification. This includes AJCC, FIGO, hematological classifications, and specialized organ-specific systems. Based on mCODE STU4 and German oBDS catalogue. Covers entity-specific classifications (e.g., FIGO for gynecological tumors), hematological classifications, and WHO classifications for CNS tumors.",
         "exampleBoolean": false
       },
       {
@@ -2780,22 +2772,6 @@
       },
       {
         "reference": {
-          "reference": "CarePlan/mii-exa-onko-tumorkonferenz-mixed"
-        },
-        "name": "Mixed Approach Tumorboard",
-        "description": "Combination of legacy coded and structured references in same CarePlan",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
-      },
-      {
-        "reference": {
-          "reference": "CarePlan/mii-exa-onko-tumorkonferenz-structured"
-        },
-        "name": "Molecular Tumor Board with Structured References",
-        "description": "Modern approach using references to complete MedicationRequest and ServiceRequest resources",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
-      },
-      {
-        "reference": {
           "reference": "Patient/PatientKimMusterperson"
         },
         "name": "PatientKimMusterperson",
@@ -3016,14 +2992,6 @@
         "name": "Strahlentherapie: Beispiel einer Strahlentherapie mit allgemeinem OPS-Code 8-52",
         "description": "Example radiation therapy conformant with MII Prozedur as bracket for radiation and nuclear therapy",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie"
-      },
-      {
-        "reference": {
-          "reference": "MedicationRequest/mii-exa-onko-medication-request-targeted-therapy"
-        },
-        "name": "Targeted Therapy MedicationRequest",
-        "description": "Complete medication request with dosing, schedule, and monitoring",
-        "exampleBoolean": true
       },
       {
         "reference": {

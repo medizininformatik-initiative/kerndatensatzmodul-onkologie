@@ -6,18 +6,72 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 
 ## {{page-title}}
 
-Dieses Profil beschreibt weitere Tumorklassifikationen neben TMN. Neben entitätsspezifischen Klassifikationen (z.B. FIGO-Klassifikation bei gynäkologischen Tumoren) sind hier v.a. die hämatologischen Klassifikationen und die WHO-Klassifikation bei Tumoren des ZNS zu nennen. 
+Dieses Profil beschreibt weitere Tumorklassifikationen neben TNM. 
 
-Die Plattform §65c stellt einen Katalog bereit, wie die häufigsten Klassifikationen aus Harmonisierungsgründen **für die Krebsregistermeldung** zu kodieren sind. 
+### Abgrenzung: Staging, Grading und Risikobewertung
+
+Die "Weiteren Klassifikationen" umfassen verschiedene Arten von Bewertungssystemen:
+
+- **Staging-Systeme**: Bestimmen die anatomische Ausbreitung des Tumors (z.B. FIGO, Ann Arbor, AJCC)
+- **Grading-Systeme**: Bewerten die histologische Differenzierung und biologische Aggressivität 
+- **Risikobewertungssysteme**: Prognostische Scores basierend auf multiplen klinischen Parametern (z.B. IPI, FLIPI, IPSS)
+- **Molekulare Klassifikationen**: Basieren auf genetischen/molekularen Markern (z.B. p16-Status, ELN-Klassifikation)
+
+### Staging-Systeme (Anatomische Ausbreitung)
+- **FIGO-Klassifikation** bei gynäkologischen Tumoren
+- **AJCC-Klassifikationen** verschiedener Editionen (6., 7., 8. Edition)
+- **Ann Arbor-Klassifikation** für Lymphome (Hodgkin und Non-Hodgkin)
+- **Durie-Salmon Staging** für Multiples Myelom
+- **Bismuth-Klassifikation** für Hiläres Cholangiokarzinom
+
+### Grading- und Bewertungssysteme
+- **Breslow/Clark-System** für Melanome (Tumordicke und Invasionstiefe)
+- **GIST-Mitoserate** (Gastrointestinale Stromatumoren)
+- **p16-Status** (Molekularer Marker, besonders bei HPV-assoziierten Karzinomen)
+
+### Prognostische Risiko-Scores
+- **Lymphome**: 
+  - IPI (International Prognostic Index) für aggressive Non-Hodgkin-Lymphome
+  - FLIPI für Follikuläre Lymphome
+  - MIPI für Mantelzell-Lymphome
+  - GHSG-Risikoklassifikation für Hodgkin-Lymphome
+- **Leukämien**: 
+  - European LeukemiaNet Classification (AML)
+  - EUTOS Score (Chronische myeloische Leukämie)
+  - Sanz Score (Akute Promyelozytenleukämie)
+- **Myelodysplastisches Syndrom**: IPSS (International Prognostic Scoring System)
+- **Multiple Myelom**: ISS/R-ISS (International Staging System)
+- **Waldenström Makroglobulinämie**: ISSWM
+
+Die Plattform §65c stellt einen Katalog bereit, wie die häufigsten Klassifikationen aus Harmonisierungsgründen **für die Krebsregistermeldung** zu kodieren sind:
 https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532511/Weitere+Klassifikationen
 
+### Implementierungshinweise
 
-Aufgrund der Vielzahl der möglichen Skalen und Scores ist es nich tmöglich, hier einen umfassenden und allgemeingültigen Katalog zu hinterlegen, so dass die konkrete Ausgestaltung den Herstellern und Systemen überlassen bleibt. HL7 Deutschland stellt dazu unter folgendem Link Hinweise bereit: https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Observation-Skalen-und-Scores.html  
+Aufgrund der Vielzahl der möglichen Skalen und Scores ist es nicht möglich, hier einen umfassenden und allgemeingültigen Katalog zu hinterlegen, so dass die konkrete Ausgestaltung den Herstellern und Systemen überlassen bleibt. HL7 Deutschland stellt dazu unter folgendem Link Hinweise bereit: https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Observation-Skalen-und-Scores.html
 
-Folgende Klassifikation werden im Zukunft über die organspezifischen Module abgedeckt und sollen nicht mehr über weitere Klassifikationen kodiert werden: 
-* Gleasson-Score (Prostata) 
+**Wichtiger Hinweis**: Für oBDS-spezifische Klassifikationen sollte zunächst geprüft werden, ob entsprechende SNOMED CT oder LOINC Codes verfügbar sind, bevor eigene oBDS-Codes verwendet werden.
 
+### Abgrenzung zu organspezifischen Modulen
 
+Folgende Klassifikationen werden in Zukunft über die organspezifischen Module abgedeckt und sollen nicht mehr über weitere Klassifikationen kodiert werden:
+- **Gleason-Score** (Prostata-Modul)
+- **Weitere organspezifische Scores** werden sukzessive in die entsprechenden Module überführt
+
+### Terminologie-Binding
+
+Das Profil verwendet **preferred binding** für das ValueSet `MII_VS_Onko_Weitere_Klassifikationen`, wodurch sowohl internationale Terminologien (SNOMED CT, NCI Thesaurus) als auch oBDS-spezifische Codes unterstützt werden.
+
+#### Verfügbare Klassifikationssysteme
+
+@```
+from
+    ValueSet
+where
+    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-weitere-klassifikationen'
+select
+    "Expansion der verfügbaren Klassifikationssysteme"
+```
 
 @```
 from 

@@ -4,8 +4,6 @@
 [mii-exa-onko-strahlentherapie-strahlentherapie-1]: Procedure-mii-exa-onko-strahlentherapie-strahlentherapie-1.html
 [mii-exa-onko-operation-1]: Procedure-mii-exa-onko-operation-1.html
 [mii-exa-onko-systemische-therapie-1]: Procedure-mii-exa-onko-systemische-therapie-1.html
-[mii-exa-onko-service-request-genetic-testing]: ServiceRequest-mii-exa-onko-service-request-genetic-testing.html
-[mii-exa-onko-tumorkonferenz-legacy]: CarePlan-mii-exa-onko-tumorkonferenz-legacy.html
 [mii-exa-onko-liste-evidenz-erstdiagnose-1]: List-mii-exa-onko-liste-evidenz-erstdiagnose-1.html
 [mii-cm-onko-krk-stoma-obds-sct]: ConceptMap-mii-cm-onko-krk-stoma-obds-sct.html
 [mii-cm-onko-allgemeiner-leistungszustand-sct]: ConceptMap-mii-cm-onko-allgemeiner-leistungszustand-sct.html
@@ -37,6 +35,7 @@
 [mii-cm-onko-verlauf-lymphknoten-sct]: ConceptMap-mii-cm-onko-verlauf-lymphknoten-sct.html
 [mii-cm-onko-verlauf-primaertumor-sct]: ConceptMap-mii-cm-onko-verlauf-primaertumor-sct.html
 [mii-cm-onko-krk-asa-obds-loinc]: ConceptMap-mii-cm-onko-krk-asa-obds-loinc.html
+[MII_CS_Onko_Weitere_Klassifikationen_OBDS]: CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html
 [MII-CM-Onkologie-to-MVGenomSeq]: ConceptMap-MII-CM-Onkologie-to-MVGenomSeq.html
 [mii-cps-onko-capabilitystatement]: CapabilityStatement-mii-cps-onko-capabilitystatement.html
 [MII_CS_Onko_Nebenwirkung_CTCAE_Grad]: CodeSystem-mii-cs-onko-nebenwirkung-ctcae-grad.html
@@ -345,8 +344,6 @@
 [MII_VS_Onko_Prostata_Gleason_PrimarySecondaryTertiary]: ValueSet-mii-vs-onko-prostata-gleason-primary-secondary-tertiary.html
 [MII_VS_Onko_Prostata_Gleason_Score]: ValueSet-mii-vs-onko-prostata-gleason-score.html
 [MII_VS_Onko_Prostata_Postsurgical_Complications]: ValueSet-mii-vs-onko-prostata-postsurgical-complications.html
-[mii-exa-onko-tumorkonferenz-mixed]: CarePlan-mii-exa-onko-tumorkonferenz-mixed.html
-[mii-exa-onko-tumorkonferenz-structured]: CarePlan-mii-exa-onko-tumorkonferenz-structured.html
 [PatientKimMusterperson]: Patient-PatientKimMusterperson.html
 [PatientKimMusterperson-Diagnosis-1]: Condition-PatientKimMusterperson-Diagnosis-1.html
 [PatientKimMusterperson-PathoReport-1]: DiagnosticReport-PatientKimMusterperson-PathoReport-1.html
@@ -375,7 +372,6 @@
 [PatientKimMusterperson-Verlauf-2022-01-22]: Observation-PatientKimMusterperson-Verlauf-2022-01-22.html
 [mii-exa-onko-strahlentherapie-bestrahlung-nuklearmedizin-1]: Procedure-mii-exa-onko-strahlentherapie-bestrahlung-nuklearmedizin-1.html
 [mii-exa-onko-strahlentherapie-bestrahlung-strahlentherapie-1]: Procedure-mii-exa-onko-strahlentherapie-bestrahlung-strahlentherapie-1.html
-[mii-exa-onko-medication-request-targeted-therapy]: MedicationRequest-mii-exa-onko-medication-request-targeted-therapy.html
 [TNM-Klassifikation-Observation-2]: Observation-TNM-Klassifikation-Observation-2.html
 [TNM-L-Observation-2]: Observation-TNM-L-Observation-2.html
 [TNM-M-Observation-2]: Observation-TNM-M-Observation-2.html

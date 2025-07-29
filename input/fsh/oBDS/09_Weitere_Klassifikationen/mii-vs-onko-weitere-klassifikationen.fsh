@@ -1,11 +1,13 @@
 ValueSet: MII_VS_Onko_Weitere_Klassifikationen
 Id: mii-vs-onko-weitere-klassifikationen
 Title: "MII Value Set Onkologie - Weitere Klassifikationen"
-Description: "Cancer staging systems that may be used in staging assertions, such as those defined by AJCC, FIGO, and other specialized staging systems. Based on mCODE STU4 and German oBDS catalogue"
+Description: "Comprehensive collection of cancer staging systems and classification schemes used in oncology beyond TNM classification. This includes AJCC, FIGO, hematological classifications, and specialized organ-specific systems. Based on mCODE STU4 and German oBDS catalogue. Covers entity-specific classifications (e.g., FIGO for gynecological tumors), hematological classifications, and WHO classifications for CNS tumors."
 * ^status = #active
 * ^experimental = true
 * insert Publisher
 * insert PR_CS_VS_Version
+* ^contact.telecom.system = #url
+* ^contact.telecom.value = "https://www.medizininformatik-initiative.de"
 
 // SNOMED CT
 * $SCT#444256004 "American Joint Commission on Cancer, Cancer Staging Manual, 6th edition neoplasm staging system (tumor staging)"
@@ -58,6 +60,9 @@ Description: "Cancer staging systems that may be used in staging assertions, suc
 * $NCIT#C115132 "Hepatocellular Carcinoma by BCLC Stage"
 * $NCIT#C111073 "International Germ Cell Consensus Risk Classification"
 * $NCIT#C141168 "Lugano Classification Hodgkin Lymphoma by AJCC v8 Stage"
+* $NCIT#C141189 "Lugano Classification Adult Hodgkin Lymphoma by AJCC v8 Stage"
+* $NCIT#C141178 "Lugano Classification Childhood Hodgkin Lymphoma by AJCC v8 Stage"
+* $NCIT#C141158 "Lugano Classification Adult Non-Hodgkin Lymphoma by AJCC v8 Stage"
 * $NCIT#C186520 "Medulloblastoma Staging System"
 * $NCIT#C198826 "Modified Chang Staging System for Medulloblastoma"
 * $NCIT#C177308 "Non-Seminomatous Germ Cell Tumor International Germ Cell Consensus Risk Classification"
@@ -68,3 +73,21 @@ Description: "Cancer staging systems that may be used in staging assertions, suc
 * $NCIT#C18008 "TNM Ovary Neoplasm Staging"
 * $NCIT#C141685 "Veterans Administration Lung Study Group Clinical Classification"
 * $NCIT#C18214 "Whitmore-Jewett Staging System"
+
+// oBDS-specific classification systems from GitHub issue #206
+* MII_CS_Onko_Weitere_Klassifikationen_OBDS#durie-salmon "Durie-Salmon Staging System"
+* MII_CS_Onko_Weitere_Klassifikationen_OBDS#isswm "International Scoring System for Waldenström's Macroglobulinemia"  
+* MII_CS_Onko_Weitere_Klassifikationen_OBDS#eln "European LeukemiaNet Classification"
+* MII_CS_Onko_Weitere_Klassifikationen_OBDS#eutos "EUTOS Score"
+* MII_CS_Onko_Weitere_Klassifikationen_OBDS#sanz "Sanz Score"
+* MII_CS_Onko_Weitere_Klassifikationen_OBDS#ipi "International Prognostic Index"
+* MII_CS_Onko_Weitere_Klassifikationen_OBDS#flipi "Follicular Lymphoma International Prognostic Index"
+* MII_CS_Onko_Weitere_Klassifikationen_OBDS#mipi "Mantle Cell Lymphoma International Prognostic Index"
+* MII_CS_Onko_Weitere_Klassifikationen_OBDS#ghsg "German Hodgkin Study Group Risk Classification"
+* MII_CS_Onko_Weitere_Klassifikationen_OBDS#ipss "International Prognostic Scoring System"
+* MII_CS_Onko_Weitere_Klassifikationen_OBDS#p16-status "p16 Status"
+* MII_CS_Onko_Weitere_Klassifikationen_OBDS#gist-mitosis "GIST Mitosis Rate Assessment"
+* MII_CS_Onko_Weitere_Klassifikationen_OBDS#bismuth "Bismuth Classification"
+* MII_CS_Onko_Weitere_Klassifikationen_OBDS#ipss-r "Revised International Prognostic Scoring System"
+* MII_CS_Onko_Weitere_Klassifikationen_OBDS#ipss-m "Molecular International Prognostic Scoring System"
+* MII_CS_Onko_Weitere_Klassifikationen_OBDS#flipi2 "Follicular Lymphoma International Prognostic Index 2"

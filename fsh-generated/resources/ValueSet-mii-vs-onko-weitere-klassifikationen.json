@@ -4,7 +4,7 @@
   "name": "MII_VS_Onko_Weitere_Klassifikationen",
   "id": "mii-vs-onko-weitere-klassifikationen",
   "title": "MII Value Set Onkologie - Weitere Klassifikationen",
-  "description": "Cancer staging systems that may be used in staging assertions, such as those defined by AJCC, FIGO, and other specialized staging systems. Based on mCODE STU4 and German oBDS catalogue",
+  "description": "Comprehensive collection of cancer staging systems and classification schemes used in oncology beyond TNM classification. This includes AJCC, FIGO, hematological classifications, and specialized organ-specific systems. Based on mCODE STU4 and German oBDS catalogue. Covers entity-specific classifications (e.g., FIGO for gynecological tumors), hematological classifications, and WHO classifications for CNS tumors.",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-weitere-klassifikationen",
   "experimental": true,
   "publisher": "Medizininformatik Initiative",
@@ -222,6 +222,18 @@
             "display": "Lugano Classification Hodgkin Lymphoma by AJCC v8 Stage"
           },
           {
+            "code": "C141189",
+            "display": "Lugano Classification Adult Hodgkin Lymphoma by AJCC v8 Stage"
+          },
+          {
+            "code": "C141178",
+            "display": "Lugano Classification Childhood Hodgkin Lymphoma by AJCC v8 Stage"
+          },
+          {
+            "code": "C141158",
+            "display": "Lugano Classification Adult Non-Hodgkin Lymphoma by AJCC v8 Stage"
+          },
+          {
             "code": "C186520",
             "display": "Medulloblastoma Staging System"
           },
@@ -260,6 +272,75 @@
           {
             "code": "C18214",
             "display": "Whitmore-Jewett Staging System"
+          }
+        ]
+      },
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds",
+        "concept": [
+          {
+            "code": "durie-salmon",
+            "display": "Durie-Salmon Staging System"
+          },
+          {
+            "code": "isswm",
+            "display": "International Scoring System for Waldenström's Macroglobulinemia"
+          },
+          {
+            "code": "eln",
+            "display": "European LeukemiaNet Classification"
+          },
+          {
+            "code": "eutos",
+            "display": "EUTOS Score"
+          },
+          {
+            "code": "sanz",
+            "display": "Sanz Score"
+          },
+          {
+            "code": "ipi",
+            "display": "International Prognostic Index"
+          },
+          {
+            "code": "flipi",
+            "display": "Follicular Lymphoma International Prognostic Index"
+          },
+          {
+            "code": "mipi",
+            "display": "Mantle Cell Lymphoma International Prognostic Index"
+          },
+          {
+            "code": "ghsg",
+            "display": "German Hodgkin Study Group Risk Classification"
+          },
+          {
+            "code": "ipss",
+            "display": "International Prognostic Scoring System"
+          },
+          {
+            "code": "p16-status",
+            "display": "p16 Status"
+          },
+          {
+            "code": "gist-mitosis",
+            "display": "GIST Mitosis Rate Assessment"
+          },
+          {
+            "code": "bismuth",
+            "display": "Bismuth Classification"
+          },
+          {
+            "code": "ipss-r",
+            "display": "Revised International Prognostic Scoring System"
+          },
+          {
+            "code": "ipss-m",
+            "display": "Molecular International Prognostic Scoring System"
+          },
+          {
+            "code": "flipi2",
+            "display": "Follicular Lymphoma International Prognostic Index 2"
           }
         ]
       }

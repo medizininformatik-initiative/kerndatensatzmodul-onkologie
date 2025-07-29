@@ -209,61 +209,10 @@
       {
         "id": "CarePlan.activity",
         "path": "CarePlan.activity",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "exists",
-              "path": "extension.where(url='http://hl7.org/fhir/5.0/StructureDefinition/extension-CarePlan.activity.plannedActivityReference')"
-            }
-          ],
-          "rules": "open",
-          "description": "Slice by legacy coded approach vs structured references for Molecular Tumor Board"
-        },
         "mustSupport": true
       },
       {
-        "id": "CarePlan.activity.detail.code.coding.code",
-        "path": "CarePlan.activity.detail.code.coding.code",
-        "mapping": [
-          {
-            "identity": "oBDS",
-            "map": "19.1",
-            "comment": "Tumorkonferenz Therapieempfehlung Typ"
-          }
-        ]
-      },
-      {
-        "id": "CarePlan.activity.detail.status",
-        "path": "CarePlan.activity.detail.status",
-        "mapping": [
-          {
-            "identity": "oBDS",
-            "map": "19.2",
-            "comment": "Tumorkonferenz/Therapieempfehlung Therapieabweichung auf Wunsch des Patienten"
-          }
-        ]
-      },
-      {
-        "id": "CarePlan.activity.detail.statusReason.coding",
-        "path": "CarePlan.activity.detail.statusReason.coding",
-        "mapping": [
-          {
-            "identity": "oBDS",
-            "map": "19.2",
-            "comment": "Tumorkonferenz/Therapieempfehlung Therapieabweichung auf Wunsch des Patienten"
-          }
-        ]
-      },
-      {
-        "id": "CarePlan.activity:coded",
-        "path": "CarePlan.activity",
-        "sliceName": "coded",
-        "min": 0,
-        "max": "*",
-        "mustSupport": true
-      },
-      {
-        "id": "CarePlan.activity:coded.detail",
+        "id": "CarePlan.activity.detail",
         "path": "CarePlan.activity.detail",
         "min": 1,
         "constraint": [
@@ -278,7 +227,7 @@
         "mustSupport": true
       },
       {
-        "id": "CarePlan.activity:coded.detail.code",
+        "id": "CarePlan.activity.detail.code",
         "path": "CarePlan.activity.detail.code",
         "min": 1,
         "mustSupport": true,
@@ -288,7 +237,7 @@
         }
       },
       {
-        "id": "CarePlan.activity:coded.detail.code.coding",
+        "id": "CarePlan.activity.detail.code.coding",
         "path": "CarePlan.activity.detail.code.coding",
         "short": "Typ der Therapieempfehlung",
         "_short": {
@@ -328,20 +277,27 @@
         }
       },
       {
-        "id": "CarePlan.activity:coded.detail.code.coding.system",
+        "id": "CarePlan.activity.detail.code.coding.system",
         "path": "CarePlan.activity.detail.code.coding.system",
         "min": 1,
         "patternUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ",
         "mustSupport": true
       },
       {
-        "id": "CarePlan.activity:coded.detail.code.coding.code",
+        "id": "CarePlan.activity.detail.code.coding.code",
         "path": "CarePlan.activity.detail.code.coding.code",
         "min": 1,
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "19.1",
+            "comment": "Tumorkonferenz Therapieempfehlung Typ"
+          }
+        ]
       },
       {
-        "id": "CarePlan.activity:coded.detail.status",
+        "id": "CarePlan.activity.detail.status",
         "path": "CarePlan.activity.detail.status",
         "short": "Status der Therapieempfehlung",
         "_short": {
@@ -379,10 +335,17 @@
             }
           ]
         },
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "19.2",
+            "comment": "Tumorkonferenz/Therapieempfehlung Therapieabweichung auf Wunsch des Patienten"
+          }
+        ]
       },
       {
-        "id": "CarePlan.activity:coded.detail.statusReason",
+        "id": "CarePlan.activity.detail.statusReason",
         "path": "CarePlan.activity.detail.statusReason",
         "short": "Therapieabweichung aufgrund Patientenwunsch der Therapieempfehlung",
         "_short": {
@@ -427,41 +390,26 @@
         }
       },
       {
-        "id": "CarePlan.activity:coded.detail.statusReason.coding",
+        "id": "CarePlan.activity.detail.statusReason.coding",
         "path": "CarePlan.activity.detail.statusReason.coding",
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "19.2",
+            "comment": "Tumorkonferenz/Therapieempfehlung Therapieabweichung auf Wunsch des Patienten"
+          }
+        ]
       },
       {
-        "id": "CarePlan.activity:coded.detail.statusReason.coding.system",
+        "id": "CarePlan.activity.detail.statusReason.coding.system",
         "path": "CarePlan.activity.detail.statusReason.coding.system",
         "patternUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieabweichung"
       },
       {
-        "id": "CarePlan.activity:coded.detail.statusReason.coding.code",
+        "id": "CarePlan.activity.detail.statusReason.coding.code",
         "path": "CarePlan.activity.detail.statusReason.coding.code",
         "mustSupport": true
-      },
-      {
-        "id": "CarePlan.activity:structured",
-        "path": "CarePlan.activity",
-        "sliceName": "structured",
-        "min": 0,
-        "max": "*",
-        "mustSupport": true
-      },
-      {
-        "id": "CarePlan.activity:structured.extension",
-        "path": "CarePlan.activity.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
       }
     ]
   }

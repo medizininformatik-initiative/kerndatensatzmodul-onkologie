@@ -1,0 +1,106 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "MII_CS_Onko_Weitere_Klassifikationen_OBDS",
+  "id": "mii-cs-onko-weitere-klassifikationen-obds",
+  "title": "MII CodeSystem Onkologie - Weitere Klassifikationen oBDS",
+  "description": "oBDS-specific classification systems and scoring systems not yet covered by international terminologies (SNOMED CT, NCI Thesaurus). These codes supplement the existing ValueSet for additional classifications. Research required: Check if SNOMED CT or LOINC codes exist for these scoring systems before using oBDS-specific codes.",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds",
+  "concept": [
+    {
+      "code": "durie-salmon",
+      "display": "Durie-Salmon Staging System",
+      "definition": "Multiple myeloma staging system based on tumor burden and organ function. Assesses M-protein levels, hemoglobin, calcium, bone lesions, and renal function."
+    },
+    {
+      "code": "isswm",
+      "display": "International Scoring System for Waldenström's Macroglobulinemia",
+      "definition": "Prognostic scoring system for Waldenström's macroglobulinemia based on age, beta-2 microglobulin, and albumin levels."
+    },
+    {
+      "code": "eln",
+      "display": "European LeukemiaNet Classification",
+      "definition": "Risk stratification system for acute myeloid leukemia based on cytogenetic and molecular genetic abnormalities."
+    },
+    {
+      "code": "eutos",
+      "display": "EUTOS Score",
+      "definition": "European Treatment and Outcome Study prognostic score for chronic myeloid leukemia patients in chronic phase."
+    },
+    {
+      "code": "sanz",
+      "display": "Sanz Score",
+      "definition": "Risk assessment score for acute promyelocytic leukemia based on white blood cell count and platelet count."
+    },
+    {
+      "code": "ipi",
+      "display": "International Prognostic Index",
+      "definition": "Prognostic index for aggressive non-Hodgkin lymphoma based on age, performance status, LDH, extranodal sites, and stage. Research: Check for existing SNOMED CT code."
+    },
+    {
+      "code": "flipi",
+      "display": "Follicular Lymphoma International Prognostic Index",
+      "definition": "Prognostic index for follicular lymphoma based on age, stage, hemoglobin, LDH, and number of nodal areas. Research: Check latest SNOMED CT release."
+    },
+    {
+      "code": "mipi",
+      "display": "Mantle Cell Lymphoma International Prognostic Index",
+      "definition": "Prognostic index for mantle cell lymphoma based on age, performance status, LDH, and leukocyte count. Research: Check latest SNOMED CT release."
+    },
+    {
+      "code": "ghsg",
+      "display": "German Hodgkin Study Group Risk Classification",
+      "definition": "Risk stratification for Hodgkin lymphoma distinguishing early favorable, early unfavorable, and advanced stages."
+    },
+    {
+      "code": "ipss",
+      "display": "International Prognostic Scoring System",
+      "definition": "Prognostic scoring system for myelodysplastic syndromes based on bone marrow blast percentage, karyotype, and cytopenia. Research: Check for LOINC/SNOMED CT codes."
+    },
+    {
+      "code": "p16-status",
+      "display": "p16 Status",
+      "definition": "p16 protein expression status assessment, particularly relevant for HPV-associated cancers and risk stratification."
+    },
+    {
+      "code": "gist-mitosis",
+      "display": "GIST Mitosis Rate Assessment",
+      "definition": "Mitotic rate assessment for gastrointestinal stromal tumors measured as mitoses per 50 high power fields."
+    },
+    {
+      "code": "bismuth",
+      "display": "Bismuth Classification",
+      "definition": "Classification system for hilar cholangiocarcinoma based on the extent of biliary involvement and resectability."
+    },
+    {
+      "code": "ipss-r",
+      "display": "Revised International Prognostic Scoring System",
+      "definition": "Revised IPSS for myelodysplastic syndromes with enhanced prognostic accuracy."
+    },
+    {
+      "code": "ipss-m",
+      "display": "Molecular International Prognostic Scoring System",
+      "definition": "Molecular-enhanced prognostic scoring system for myelodysplastic syndromes."
+    },
+    {
+      "code": "flipi2",
+      "display": "Follicular Lymphoma International Prognostic Index 2",
+      "definition": "Updated prognostic index for follicular lymphoma incorporating beta-2 microglobulin."
+    }
+  ],
+  "experimental": true,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2025.1.0",
+  "count": 16
+}
