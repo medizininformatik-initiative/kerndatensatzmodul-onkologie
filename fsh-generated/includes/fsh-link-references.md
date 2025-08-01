@@ -297,6 +297,8 @@
 [mii-exa-onko-verlauf-tumor]: Observation-mii-exa-onko-verlauf-tumor.html
 [mii-exa-onko-weitere-klassifikationen-1]: Observation-mii-exa-onko-weitere-klassifikationen-1.html
 [mii-exa-onko-weitere-klassifikationen-2]: Observation-mii-exa-onko-weitere-klassifikationen-2.html
+[mii-exa-onko-weitere-klassifikationen-3]: Observation-mii-exa-onko-weitere-klassifikationen-3.html
+[mii-exa-onko-weitere-klassifikationen-4]: Observation-mii-exa-onko-weitere-klassifikationen-4.html
 [mii-pr-onko-nebenwirkung-0]: AdverseEvent-mii-pr-onko-nebenwirkung-0.html
 [mii-pr-onko-nebenwirkung-text]: AdverseEvent-mii-pr-onko-nebenwirkung-text.html
 [mii-sp-onko-condition-ext-morphology-behavior-icdo3]: SearchParameter-mii-sp-onko-condition-ext-morphology-behavior-icdo3.html

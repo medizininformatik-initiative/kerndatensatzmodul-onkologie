@@ -167,6 +167,34 @@
           {
             "code": "1287646007",
             "display": "International Germ Cell Consensus Classification (tumor staging)"
+          },
+          {
+            "code": "716567001",
+            "display": "International Prognostic Index (assessment scale)"
+          },
+          {
+            "code": "708736003",
+            "display": "Follicular Lymphoma International Prognostic Index (assessment scale)"
+          },
+          {
+            "code": "763236005",
+            "display": "Mantle Cell Lymphoma International Prognostic Index (assessment scale)"
+          },
+          {
+            "code": "1290294004",
+            "display": "International Federation of Gynecology and Obstetrics grading system (qualifier value)"
+          },
+          {
+            "code": "1290302009",
+            "display": "International Federation of Gynecology and Obstetrics grading system grade 1 (qualifier value)"
+          },
+          {
+            "code": "1290303004",
+            "display": "International Federation of Gynecology and Obstetrics grading system grade 2 (qualifier value)"
+          },
+          {
+            "code": "1290304005",
+            "display": "International Federation of Gynecology and Obstetrics grading system grade 3 (qualifier value)"
           }
         ]
       },
@@ -277,70 +305,201 @@
       },
       {
         "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds",
-        "concept": [
+        "filter": [
           {
-            "code": "durie-salmon",
-            "display": "Durie-Salmon Staging System"
-          },
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "binet"
+          }
+        ]
+      },
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds",
+        "filter": [
           {
-            "code": "isswm",
-            "display": "International Scoring System for Waldenström's Macroglobulinemia"
-          },
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "ann-arbor-stadium"
+          }
+        ]
+      },
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds",
+        "filter": [
           {
-            "code": "eln",
-            "display": "European LeukemiaNet Classification"
-          },
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "iss"
+          }
+        ]
+      },
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds",
+        "filter": [
           {
-            "code": "eutos",
-            "display": "EUTOS Score"
-          },
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "isswm"
+          }
+        ]
+      },
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds",
+        "filter": [
           {
-            "code": "sanz",
-            "display": "Sanz Score"
-          },
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "who-grad"
+          }
+        ]
+      },
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds",
+        "filter": [
           {
-            "code": "ipi",
-            "display": "International Prognostic Index"
-          },
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "formen"
+          }
+        ]
+      },
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds",
+        "filter": [
           {
-            "code": "flipi",
-            "display": "Follicular Lymphoma International Prognostic Index"
-          },
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "eln-klassifikation"
+          }
+        ]
+      },
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds",
+        "filter": [
           {
-            "code": "mipi",
-            "display": "Mantle Cell Lymphoma International Prognostic Index"
-          },
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "durie-salmon-stadium"
+          }
+        ]
+      },
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds",
+        "filter": [
           {
-            "code": "ghsg",
-            "display": "German Hodgkin Study Group Risk Classification"
-          },
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "bismuth"
+          }
+        ]
+      },
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds",
+        "filter": [
           {
-            "code": "ipss",
-            "display": "International Prognostic Scoring System"
-          },
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "masaoka"
+          }
+        ]
+      },
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds",
+        "filter": [
           {
-            "code": "p16-status",
-            "display": "p16 Status"
-          },
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "mitoserate-gist"
+          }
+        ]
+      },
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds",
+        "filter": [
           {
-            "code": "gist-mitosis",
-            "display": "GIST Mitosis Rate Assessment"
-          },
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "p16"
+          }
+        ]
+      },
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds",
+        "filter": [
           {
-            "code": "bismuth",
-            "display": "Bismuth Classification"
-          },
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "eutos-score"
+          }
+        ]
+      },
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds",
+        "filter": [
           {
-            "code": "ipss-r",
-            "display": "Revised International Prognostic Scoring System"
-          },
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "sanz-score"
+          }
+        ]
+      },
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds",
+        "filter": [
           {
-            "code": "ipss-m",
-            "display": "Molecular International Prognostic Scoring System"
-          },
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "ipi"
+          }
+        ]
+      },
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds",
+        "filter": [
           {
-            "code": "flipi2",
-            "display": "Follicular Lymphoma International Prognostic Index 2"
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "flipi"
+          }
+        ]
+      },
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "mipi"
+          }
+        ]
+      },
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "risikogruppen-ghsg"
+          }
+        ]
+      },
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "ipss"
+          }
+        ]
+      },
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "her2-neu"
           }
         ]
       }

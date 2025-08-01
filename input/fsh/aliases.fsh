@@ -67,6 +67,9 @@ Alias: $mii-ex-onko-systemische-therapie-stellungzurop = https://www.medizininfo
 Alias: $mii-cs-onko-fernmetastasen = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen
 
 //12
+
+//09
+Alias: $mii-cs-onko-weitere-klassifikationen-obds = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds
 Alias: $mii-cs-onko-allgemeiner-leistungszustand-ecog = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-ecog
 Alias: $mii-cs-onko-allgemeiner-leistungszustand-karnofsky = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-karnofsky
 

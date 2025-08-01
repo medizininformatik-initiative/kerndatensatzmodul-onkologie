@@ -48,9 +48,41 @@ https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532511/Weitere+Klassi
 
 ### Implementierungshinweise
 
+#### FHIR Modellierung nach mCODE STU4 Pattern
+
+Dieses Profil folgt dem **mCODE STU4 Build Pattern** für Staging-Systeme mit einer dreiteiligen Struktur:
+
+- **`Observation.code`**: Allgemeines Staging-Konzept (z.B. "FIGO Stage", "Ann Arbor Stage", "BINET Stage")
+- **`Observation.method`**: Spezifisches Klassifikationssystem/Bewertungsmethode (Must Support)
+- **`Observation.value`**: Konkreter Klassifikationswert aus entsprechendem ValueSet
+
+**Beispiel FIGO-Klassifikation:**
+```
+code: 385361009 "FIGO Stage" (allgemeines Konzept)
+method: "FIGO staging of cervical carcinoma" (spezifische Methode)
+value: "Stage IIA" (konkreter Wert)
+```
+
+**Beispiel Hämatologische Klassifikation:**
+```
+code: "BINET staging system" (allgemeines Konzept) 
+method: "BINET staging for chronic lymphocytic leukemia" (spezifische Methode)
+value: "BINET A" (konkreter Wert)
+```
+
+Diese Struktur ermöglicht es, verschiedene Staging-Systeme innerhalb derselben Tumorentität zu unterscheiden und klar zu identifizieren, welches spezifische Bewertungsverfahren verwendet wurde.
+
+#### Terminologie-Integration
+
 Aufgrund der Vielzahl der möglichen Skalen und Scores ist es nicht möglich, hier einen umfassenden und allgemeingültigen Katalog zu hinterlegen, so dass die konkrete Ausgestaltung den Herstellern und Systemen überlassen bleibt. HL7 Deutschland stellt dazu unter folgendem Link Hinweise bereit: https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Observation-Skalen-und-Scores.html
 
 **Wichtiger Hinweis**: Für oBDS-spezifische Klassifikationen sollte zunächst geprüft werden, ob entsprechende SNOMED CT oder LOINC Codes verfügbar sind, bevor eigene oBDS-Codes verwendet werden.
+
+**Priorisierung bei Terminologie-Auswahl:**
+1. **SNOMED CT** für etablierte Klassifikationssysteme (bevorzugt)
+2. **LOINC** für laborbasierte und quantitative Bewertungen
+3. **NCI Thesaurus** für spezielle onkologische Konzepte
+4. **oBDS-spezifische Codes** nur wenn keine internationalen Standards verfügbar sind
 
 ### Abgrenzung zu organspezifischen Modulen
 
@@ -199,10 +231,22 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "date" finden sich in der FHIR-Basisspezifikation - Abschnitt "date".
 
+7. Der Suchparameter "method" SOLLTE unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/Observation?method=http://snomed.info/sct|254373007```
+
+    Anwendungshinweise: Ermöglicht die Suche nach spezifischen Klassifikationsmethoden (z.B. FIGO, Ann Arbor Hodgkin vs. Non-Hodgkin). Weitere Informationen zur Suche nach "method" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
+
 **Beispiele**
 
 {{json:mii-exa-onko-weitere-klassifikationen-1}}
 
 {{json:mii-exa-onko-weitere-klassifikationen-2}}
+
+{{json:mii-exa-onko-weitere-klassifikationen-3}}
+
+{{json:mii-exa-onko-weitere-klassifikationen-4}}
 
 ---

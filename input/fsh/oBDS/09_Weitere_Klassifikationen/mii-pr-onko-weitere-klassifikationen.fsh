@@ -40,6 +40,14 @@ Description: "Weitere Tumor Staging Klassifikation neben TMN (Hämatoonkologisch
 * insert Translation(code.coding.code ^short, de-DE, Klassifikation Name Kodierung  )
 * insert Translation(code.coding.code ^definition, de-DE, Name der Klassifikation kodiert in internationalem Standard - falls vorhanden )
 
+// Method - following mCODE STU4 approach for staging system specification
+* method MS
+* method ^short = "Staging system or classification method used"
+* method ^definition = "The specific staging system or classification method used to determine the stage/classification value. This allows the same observation to distinguish between different staging systems (e.g., FIGO vs Ann Arbor vs BINET)."
+* method from MII_VS_Onko_Weitere_Klassifikationen (preferred)
+* insert Translation(method ^short, de-DE, Verwendetes Klassifikationssystem)
+* insert Translation(method ^definition, de-DE, Das spezifische Klassifikationssystem oder die Bewertungsmethode zur Bestimmung des Klassifikationswertes)
+
 
 // 9.3 Hämatoonkologische und sonstige Klassifikationen Einstufung 
 * value[x] 0..1 MS 

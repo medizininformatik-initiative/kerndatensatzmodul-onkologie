@@ -9,7 +9,7 @@ Description: "Comprehensive collection of cancer staging systems and classificat
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "https://www.medizininformatik-initiative.de"
 
-// SNOMED CT
+// SNOMED CT from mCODE
 * $SCT#444256004 "American Joint Commission on Cancer, Cancer Staging Manual, 6th edition neoplasm staging system (tumor staging)"
 * $SCT#443830009 "American Joint Commission on Cancer, Cancer Staging Manual, 7th edition neoplasm staging system (tumor staging)"
 * $SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition tumor staging system"
@@ -47,7 +47,7 @@ Description: "Comprehensive collection of cancer staging systems and classificat
 * $SCT#1287643004 "INRG (International Neuroblastoma Risk Group) staging system"
 * $SCT#1287646007 "International Germ Cell Consensus Classification (tumor staging)"
 
-// NCIt
+// NCIt from mCODE
 * $NCIT#C188404 "Union for International Cancer Control Stage"
 * $NCIT#C186527 "Atypical Teratoid/Rhabdoid Tumor Staging System"
 * $NCIT#C141206 "Chronic Lymphocytic Leukemia- Modified Rai Staging System"
@@ -74,20 +74,35 @@ Description: "Comprehensive collection of cancer staging systems and classificat
 * $NCIT#C141685 "Veterans Administration Lung Study Group Clinical Classification"
 * $NCIT#C18214 "Whitmore-Jewett Staging System"
 
-// oBDS-specific classification systems from GitHub issue #206
-* MII_CS_Onko_Weitere_Klassifikationen_OBDS#durie-salmon "Durie-Salmon Staging System"
-* MII_CS_Onko_Weitere_Klassifikationen_OBDS#isswm "International Scoring System for Waldenström's Macroglobulinemia"  
-* MII_CS_Onko_Weitere_Klassifikationen_OBDS#eln "European LeukemiaNet Classification"
-* MII_CS_Onko_Weitere_Klassifikationen_OBDS#eutos "EUTOS Score"
-* MII_CS_Onko_Weitere_Klassifikationen_OBDS#sanz "Sanz Score"
-* MII_CS_Onko_Weitere_Klassifikationen_OBDS#ipi "International Prognostic Index"
-* MII_CS_Onko_Weitere_Klassifikationen_OBDS#flipi "Follicular Lymphoma International Prognostic Index"
-* MII_CS_Onko_Weitere_Klassifikationen_OBDS#mipi "Mantle Cell Lymphoma International Prognostic Index"
-* MII_CS_Onko_Weitere_Klassifikationen_OBDS#ghsg "German Hodgkin Study Group Risk Classification"
-* MII_CS_Onko_Weitere_Klassifikationen_OBDS#ipss "International Prognostic Scoring System"
-* MII_CS_Onko_Weitere_Klassifikationen_OBDS#p16-status "p16 Status"
-* MII_CS_Onko_Weitere_Klassifikationen_OBDS#gist-mitosis "GIST Mitosis Rate Assessment"
-* MII_CS_Onko_Weitere_Klassifikationen_OBDS#bismuth "Bismuth Classification"
-* MII_CS_Onko_Weitere_Klassifikationen_OBDS#ipss-r "Revised International Prognostic Scoring System"
-* MII_CS_Onko_Weitere_Klassifikationen_OBDS#ipss-m "Molecular International Prognostic Scoring System"
-* MII_CS_Onko_Weitere_Klassifikationen_OBDS#flipi2 "Follicular Lymphoma International Prognostic Index 2"
+// oBDS-specific classification systems - include only descendant values, not parent concepts - GitHub issue #206
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #binet
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #ann-arbor-stadium
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #iss
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #isswm
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #who-grad
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #formen
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #eln-klassifikation
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #durie-salmon-stadium
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #bismuth
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #masaoka
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #mitoserate-gist
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #p16
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #eutos-score
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #sanz-score
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #ipi
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #flipi
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #mipi
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #risikogruppen-ghsg
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #ipss
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #her2-neu
+
+// SNOMED CT codes for established scoring systems  
+* $SCT#716567001 "International Prognostic Index (assessment scale)"
+* $SCT#708736003 "Follicular Lymphoma International Prognostic Index (assessment scale)"
+* $SCT#763236005 "Mantle Cell Lymphoma International Prognostic Index (assessment scale)"
+
+// FIGO Grading System for gynecological tumors - histological grading
+* $SCT#1290294004 "International Federation of Gynecology and Obstetrics grading system (qualifier value)"
+* $SCT#1290302009 "International Federation of Gynecology and Obstetrics grading system grade 1 (qualifier value)"
+* $SCT#1290303004 "International Federation of Gynecology and Obstetrics grading system grade 2 (qualifier value)"  
+* $SCT#1290304005 "International Federation of Gynecology and Obstetrics grading system grade 3 (qualifier value)"
