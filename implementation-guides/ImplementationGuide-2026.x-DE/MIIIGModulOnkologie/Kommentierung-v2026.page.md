@@ -29,3 +29,19 @@ Diese Seite sammelt spezifische Punkte, für die gezieltes Feedback in der Komme
 * **Terminologie-Priorisierung**: Basierend auf der mCODE STU4 Analyse fehlen noch SNOMED CT Codes für viele konkrete Klassifikationswerte. Soll systematisch nach fehlenden SNOMED CT/LOINC Codes gesucht werden, bevor die oBDS-spezifischen Codes finalisiert werden?
 
 * **Integration bestehender SNOMED CT Codes**: Für etablierte Scores wie IPI (SCTID: 716567001), FLIPI (708736003), MIPI (763236005) existieren bereits SNOMED CT Codes. Sollen die entsprechenden oBDS-Codes entfernt oder als alternative Kodierung beibehalten werden? 
+
+### Molekulare Tumorboards und detaillierte Therapieempfehlungen
+
+* **ServiceRequest-Profiling für spezifische Therapieempfehlungen**: Das neue CarePlan-Profil für detaillierte Therapieempfehlungen kann neben RequestGroup auch MedicationRequest und ServiceRequest referenzieren. Benötigen wir spezifische onkologische Profile für ServiceRequest-basierte Therapieempfehlungen?
+  - Spezifische ServiceRequest-Profile für onkologische Operationen (z.B. tumorspezifische Eingriffe)
+  - Spezifische ServiceRequest-Profile für Strahlentherapie-Empfehlungen
+  - **Radioaktive Metaboliten**: Sollten diese als MedicationRequest (da es sich um Substanzen handelt) oder als ServiceRequest (da es sich um eine spezialisierte Therapieprozedur handelt) modelliert werden?
+  
+  **Hintergrund**: Krebsregister dokumentieren zunächst die Tumorboard-Planung und erfassen später die tatsächlich durchgeführten Maßnahmen. Diese Lücke zwischen geplanter und dokumentierter Therapie könnte eine Über-Spezifikation darstellen.
+
+* **CarePlan vs. RequestGroup für Tumorboard-Dokumentation**: Ist die gewählte CarePlan-basierte Architektur für molekulare Tumorboards angemessen? 
+  - **Pro CarePlan**: Entspricht der realen Dokumentationspraxis - Krebsregister dokumentieren Tumorboard-Empfehlungen als durchgeführte "Therapieplanung" (oBDS-konforme Dokumentation)
+  - **Alternative RequestGroup-first**: RequestGroup als primäre Tumorboard-Empfehlung, CarePlan später als `basedOn`-Referenz durch behandelnde Ärzte
+  - **Praktische Überlegung**: Nicht alle behandelnden Einrichtungen können FHIR implementieren - die Krebsregister-Dokumentation erfolgt primär über CarePlans als "realisierte Therapieplanung"
+  
+  **Kernfrage**: Soll die FHIR-Modellierung die praktische Dokumentationsrealität (CarePlan-basiert) oder die konzeptuelle Workflow-Logik (RequestGroup-first) abbilden?

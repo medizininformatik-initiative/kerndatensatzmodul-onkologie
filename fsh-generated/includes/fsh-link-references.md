@@ -173,6 +173,7 @@
 [MII_PR_Onko_Tod]: StructureDefinition-mii-pr-onko-tod.html
 [MII_PR_Onko_Tumorgroesse]: StructureDefinition-mii-pr-onko-tumorgroesse.html
 [MII_PR_Onko_Tumorkonferenz]: StructureDefinition-mii-pr-onko-tumorkonferenz.html
+[MII_PR_Onko_Tumorkonferenz_Detailed_Recommendations]: StructureDefinition-mii-pr-onko-tumorkonferenz-detailed-recommendations.html
 [MII_PR_Onko_Verlauf]: StructureDefinition-mii-pr-onko-verlauf.html
 [MII_PR_Onko_Weitere_Klassifikationen]: StructureDefinition-mii-pr-onko-weitere-klassifikationen.html
 [MII_VS_Onko_Weitere_Klassifikationen]: ValueSet-mii-vs-onko-weitere-klassifikationen.html
@@ -240,10 +241,13 @@
 [mii-exa-onko-anzahl-untersuchte-lymphknoten-23]: Observation-mii-exa-onko-anzahl-untersuchte-lymphknoten-23.html
 [mii-exa-onko-anzahl-untersuchte-sentinel-lymphknoten-0]: Observation-mii-exa-onko-anzahl-untersuchte-sentinel-lymphknoten-0.html
 [mii-exa-onko-befund-1]: DiagnosticReport-mii-exa-onko-befund-1.html
+[mii-exa-onko-cdk46-class-medication]: Procedure-mii-exa-onko-cdk46-class-medication.html
+[mii-exa-onko-cdk46-class-recommendation]: RequestGroup-mii-exa-onko-cdk46-class-recommendation.html
 [mii-exa-onko-diagnose]: Condition-mii-exa-onko-diagnose.html
 [mii-exa-onko-fernmetastasen-1]: Observation-mii-exa-onko-fernmetastasen-1.html
 [mii-exa-onko-genetische-variante-braf]: Observation-mii-exa-onko-genetische-variante-braf.html
 [mii-exa-onko-grading-1]: Observation-mii-exa-onko-grading-1.html
+[mii-exa-onko-her2-specific-choices]: RequestGroup-mii-exa-onko-her2-specific-choices.html
 [mii-exa-onko-histologie-icdo3]: Observation-mii-exa-onko-histologie-icdo3.html
 [mii-exa-onko-krk-asa-klassifikation]: Observation-mii-exa-onko-krk-asa-klassifikation.html
 [mii-exa-onko-krk-bundle-encounter]: Encounter-mii-exa-onko-krk-bundle-encounter.html
@@ -260,6 +264,8 @@
 [mii-exa-onko-melanom-bundle-encounter]: Encounter-mii-exa-onko-melanom-bundle-encounter.html
 [mii-exa-onko-melanom-bundle-patient]: Patient-mii-exa-onko-melanom-bundle-patient.html
 [mii-exa-onko-melanom-diagnose]: Condition-mii-exa-onko-melanom-diagnose.html
+[mii-exa-onko-palbociclib-therapie]: Procedure-mii-exa-onko-palbociclib-therapie.html
+[mii-exa-onko-pertuzumab-therapie]: Procedure-mii-exa-onko-pertuzumab-therapie.html
 [mii-exa-onko-prostata-anzahl-positiver-stanzen-1]: Observation-mii-exa-onko-prostata-anzahl-positiver-stanzen-1.html
 [mii-exa-onko-prostata-anzahl-stanzen-1]: Observation-mii-exa-onko-prostata-anzahl-stanzen-1.html
 [mii-exa-onko-prostata-bundle-encounter]: Encounter-mii-exa-onko-prostata-bundle-encounter.html
@@ -276,6 +282,7 @@
 [mii-exa-onko-residualstatus-1]: Observation-mii-exa-onko-residualstatus-1.html
 [mii-exa-onko-specimen-1]: Specimen-mii-exa-onko-specimen-1.html
 [mii-exa-onko-studienteilnahme]: Observation-mii-exa-onko-studienteilnahme.html
+[mii-exa-onko-tdm1-option]: Procedure-mii-exa-onko-tdm1-option.html
 [mii-exa-onko-tnm-klassifikation-TisN0M0]: Observation-mii-exa-onko-tnm-klassifikation-TisN0M0.html
 [mii-exa-onko-tnm-klassifikation-uT2a2pN0023i-sncM1]: Observation-mii-exa-onko-tnm-klassifikation-uT2a2pN0023i-sncM1.html
 [mii-exa-onko-tnm-l-kategorie-L]: Observation-mii-exa-onko-tnm-l-kategorie-L.html
@@ -292,8 +299,14 @@
 [mii-exa-onko-tod-j]: Observation-mii-exa-onko-tod-j.html
 [mii-exa-onko-tod-n]: Observation-mii-exa-onko-tod-n.html
 [mii-exa-onko-tod-u]: Observation-mii-exa-onko-tod-u.html
+[mii-exa-onko-trastuzumab-option]: Procedure-mii-exa-onko-trastuzumab-option.html
+[mii-exa-onko-trastuzumab-therapie]: Procedure-mii-exa-onko-trastuzumab-therapie.html
+[mii-exa-onko-tucatinib-option]: Procedure-mii-exa-onko-tucatinib-option.html
 [mii-exa-onko-tumorkonferenz-01]: CarePlan-mii-exa-onko-tumorkonferenz-01.html
 [mii-exa-onko-tumorkonferenz-02]: CarePlan-mii-exa-onko-tumorkonferenz-02.html
+[mii-exa-onko-tumorkonferenz-class-recommendation]: CarePlan-mii-exa-onko-tumorkonferenz-class-recommendation.html
+[mii-exa-onko-tumorkonferenz-molekular]: CarePlan-mii-exa-onko-tumorkonferenz-molekular.html
+[mii-exa-onko-tumorkonferenz-specific-choices]: CarePlan-mii-exa-onko-tumorkonferenz-specific-choices.html
 [mii-exa-onko-verlauf-tumor]: Observation-mii-exa-onko-verlauf-tumor.html
 [mii-exa-onko-weitere-klassifikationen-1]: Observation-mii-exa-onko-weitere-klassifikationen-1.html
 [mii-exa-onko-weitere-klassifikationen-2]: Observation-mii-exa-onko-weitere-klassifikationen-2.html

@@ -1471,6 +1471,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-tumorkonferenz-detailed-recommendations"
+        },
+        "name": "MII PR Onkologie Tumorkonferenz - Detailed Recommendations",
+        "description": "Dieses Profil beschreibt strukturierte Therapieempfehlungen mit detaillierten RequestGroup-basierten Protokollen für Multi-Agent-Therapien und molekulare Tumorboards",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-verlauf"
         },
         "name": "MII PR Onkologie Verlauf",
@@ -1999,6 +2007,20 @@
       },
       {
         "reference": {
+          "reference": "Procedure/mii-exa-onko-cdk46-class-medication"
+        },
+        "name": "mii-exa-onko-cdk46-class-medication",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
+      },
+      {
+        "reference": {
+          "reference": "RequestGroup/mii-exa-onko-cdk46-class-recommendation"
+        },
+        "name": "mii-exa-onko-cdk46-class-recommendation",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie"
+      },
+      {
+        "reference": {
           "reference": "Condition/mii-exa-onko-diagnose"
         },
         "name": "mii-exa-onko-diagnose",
@@ -2024,6 +2046,13 @@
         },
         "name": "mii-exa-onko-grading-1",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading"
+      },
+      {
+        "reference": {
+          "reference": "RequestGroup/mii-exa-onko-her2-specific-choices"
+        },
+        "name": "mii-exa-onko-her2-specific-choices",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie"
       },
       {
         "reference": {
@@ -2139,6 +2168,20 @@
       },
       {
         "reference": {
+          "reference": "Procedure/mii-exa-onko-palbociclib-therapie"
+        },
+        "name": "mii-exa-onko-palbociclib-therapie",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-pertuzumab-therapie"
+        },
+        "name": "mii-exa-onko-pertuzumab-therapie",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-onko-prostata-anzahl-positiver-stanzen-1"
         },
         "name": "mii-exa-onko-prostata-anzahl-positiver-stanzen-1",
@@ -2248,6 +2291,13 @@
         },
         "name": "mii-exa-onko-studienteilnahme",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-studienteilnahme"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-tdm1-option"
+        },
+        "name": "mii-exa-onko-tdm1-option",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
       },
       {
         "reference": {
@@ -2363,6 +2413,27 @@
       },
       {
         "reference": {
+          "reference": "Procedure/mii-exa-onko-trastuzumab-option"
+        },
+        "name": "mii-exa-onko-trastuzumab-option",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-trastuzumab-therapie"
+        },
+        "name": "mii-exa-onko-trastuzumab-therapie",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-tucatinib-option"
+        },
+        "name": "mii-exa-onko-tucatinib-option",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
+      },
+      {
+        "reference": {
           "reference": "CarePlan/mii-exa-onko-tumorkonferenz-01"
         },
         "name": "mii-exa-onko-tumorkonferenz-01",
@@ -2374,6 +2445,27 @@
         },
         "name": "mii-exa-onko-tumorkonferenz-02",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
+      },
+      {
+        "reference": {
+          "reference": "CarePlan/mii-exa-onko-tumorkonferenz-class-recommendation"
+        },
+        "name": "mii-exa-onko-tumorkonferenz-class-recommendation",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz-detailed-recommendations"
+      },
+      {
+        "reference": {
+          "reference": "CarePlan/mii-exa-onko-tumorkonferenz-molekular"
+        },
+        "name": "mii-exa-onko-tumorkonferenz-molekular",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
+      },
+      {
+        "reference": {
+          "reference": "CarePlan/mii-exa-onko-tumorkonferenz-specific-choices"
+        },
+        "name": "mii-exa-onko-tumorkonferenz-specific-choices",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz-detailed-recommendations"
       },
       {
         "reference": {
