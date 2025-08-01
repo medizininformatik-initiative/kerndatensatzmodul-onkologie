@@ -6,6 +6,32 @@ parent:
 Hier sind alle Änderungen aufgelistet. 
 
 ## Änderungen Version 2026 (geplante Kommentierung September 2025 )
+
+### Weitere Klassifikationen und Molekulare Tumorboards
+- **Hierarchische Klassifikationssysteme**: Implementierung weiterer Klassifikationssysteme (BINET, Ann Arbor, ISS, WHO-Grad, etc.) als hierarchisches CodeSystem
+  - **Grund**: Unterstützung hämatologischer und anderer spezifischer Klassifikationssysteme gemäß oBDS-Anforderungen
+  - **Technische Umsetzung**: Parent-Child-Konzepte mit `descendant-of` ValueSet-Filtern für wartbare Terminologien
+  - **mCODE-Kompatibilität**: Integration des mCODE STU4 code+method+value Patterns für Staging-Observationen
+
+- **CarePlan Activity Slicing**: Erweiterte Tumorkonferenz-Profile zur Unterstützung sowohl traditioneller als auch molekularer Tumorboard-Workflows
+  - **Grund**: FHIR R4 Invariant cpl-3 verhindert gleichzeitige Nutzung von `activity.detail.code` und `activity.reference`
+  - **Lösung**: Activity-Slicing mit `obds` (Standard oBDS 19.1 Kategorisierung) und `extended` (RequestGroup-basierte Protokolle) Slices
+  - **Rückwärtskompatibilität**: Bestehende oBDS-Implementierungen unverändert unterstützt
+
+- **RequestGroup für Kombinationstherapien**: Neues Profil zur strukturierten Abbildung von Multi-Agent-Therapieprotokollen
+  - **Grund**: Molekulare Tumorboards benötigen detaillierte Medikamentenempfehlungen über oBDS-Kategorisierung hinaus
+  - **Anwendungsfälle**: Pharmazeutische Klassen ("beliebiger CDK4/6 Inhibitor") und spezifische Medikamentenauswahl mit Alternativen
+
+### Verlauf-Profil Anpassungen
+- **Component-Kardinalität**: Änderung von `component 1..*` zu `component 0..*`
+  - **Grund**: GitHub Issue #202 - Unterstützung für "K - keine Änderung" Fälle und hämatologische Krebsarten ohne TNM-Anwendbarkeit
+  - **Betroffene Felder**: Tumor_Verlauf, Lymphknoten_Verlauf, Fernmetastasen_Verlauf bleiben 0..1
+
+### Kommentierungspunkte für v2026
+- **ServiceRequest-Profiling**: Diskussion über Bedarf onkologie-spezifischer ServiceRequest-Profile für operative und strahlentherapeutische Empfehlungen
+- **Radioaktive Metaboliten**: Klärung der Zuordnung zu MedicationRequest oder ServiceRequest
+- **Architektur-Diskussion**: CarePlan-basierte vs RequestGroup-first Modellierung für Tumorboard-Empfehlungen
+
 - Neue Profile zur Abdeckung der organspezifischen Module
     - **Mamma**: Vollständige Implementierung des Mamma-Moduls
         - **Estrogen-Rezeptorstatus**: Profil mit dualer Kodierung (oBDS/S3-Leitlinien) und Komponenten für Anteil positiver Zellen und Färbeintensität
