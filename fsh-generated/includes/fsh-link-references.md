@@ -264,6 +264,9 @@
 [mii-exa-onko-melanom-bundle-encounter]: Encounter-mii-exa-onko-melanom-bundle-encounter.html
 [mii-exa-onko-melanom-bundle-patient]: Patient-mii-exa-onko-melanom-bundle-patient.html
 [mii-exa-onko-melanom-diagnose]: Condition-mii-exa-onko-melanom-diagnose.html
+[mii-exa-onko-molecular-cdk46-protocol]: RequestGroup-mii-exa-onko-molecular-cdk46-protocol.html
+[mii-exa-onko-molecular-her2-alternatives]: RequestGroup-mii-exa-onko-molecular-her2-alternatives.html
+[mii-exa-onko-molecular-surgery-request]: ServiceRequest-mii-exa-onko-molecular-surgery-request.html
 [mii-exa-onko-palbociclib-therapie]: Procedure-mii-exa-onko-palbociclib-therapie.html
 [mii-exa-onko-pertuzumab-therapie]: Procedure-mii-exa-onko-pertuzumab-therapie.html
 [mii-exa-onko-prostata-anzahl-positiver-stanzen-1]: Observation-mii-exa-onko-prostata-anzahl-positiver-stanzen-1.html
@@ -305,7 +308,9 @@
 [mii-exa-onko-tumorkonferenz-01]: CarePlan-mii-exa-onko-tumorkonferenz-01.html
 [mii-exa-onko-tumorkonferenz-02]: CarePlan-mii-exa-onko-tumorkonferenz-02.html
 [mii-exa-onko-tumorkonferenz-class-recommendation]: CarePlan-mii-exa-onko-tumorkonferenz-class-recommendation.html
+[mii-exa-onko-tumorkonferenz-mixed-approach]: CarePlan-mii-exa-onko-tumorkonferenz-mixed-approach.html
 [mii-exa-onko-tumorkonferenz-molekular]: CarePlan-mii-exa-onko-tumorkonferenz-molekular.html
+[mii-exa-onko-tumorkonferenz-pure-molecular]: CarePlan-mii-exa-onko-tumorkonferenz-pure-molecular.html
 [mii-exa-onko-tumorkonferenz-specific-choices]: CarePlan-mii-exa-onko-tumorkonferenz-specific-choices.html
 [mii-exa-onko-verlauf-tumor]: Observation-mii-exa-onko-verlauf-tumor.html
 [mii-exa-onko-weitere-klassifikationen-1]: Observation-mii-exa-onko-weitere-klassifikationen-1.html

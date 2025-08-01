@@ -18,6 +18,16 @@
       "text": "Molekulares Tumorboard"
     }
   ],
+  "status": "active",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "created": "2024-01-15",
+  "addresses": [
+    {
+      "reference": "Condition/primaertumor-example"
+    }
+  ],
   "activity": [
     {
       "detail": {
@@ -63,16 +73,6 @@
         "status": "not-started",
         "description": "Adjuvante Bestrahlung nach Operation"
       }
-    }
-  ],
-  "status": "active",
-  "subject": {
-    "reference": "Patient/example"
-  },
-  "created": "2024-01-15",
-  "addresses": [
-    {
-      "reference": "Condition/primaertumor-example"
     }
   ]
 }

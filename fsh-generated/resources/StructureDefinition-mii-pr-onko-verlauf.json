@@ -269,9 +269,8 @@
             }
           ],
           "rules": "open",
-          "description": "Slice based on the component.code pattern"
+          "description": "Specific tumor status components (0..* to support cases with no changes, hematological cancers where TNM doesn't apply, or impossible assessments)"
         },
-        "min": 1,
         "mustSupport": true
       },
       {

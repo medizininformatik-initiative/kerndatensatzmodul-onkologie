@@ -1,0 +1,58 @@
+{
+  "resourceType": "CarePlan",
+  "id": "mii-exa-onko-tumorkonferenz-pure-molecular",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
+    ]
+  },
+  "intent": "plan",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ",
+          "code": "MOL"
+        }
+      ],
+      "text": "Molekulares Tumorboard - Precision Medicine"
+    }
+  ],
+  "identifier": [
+    {
+      "value": "Tumorkonferenz_Molecular_002"
+    }
+  ],
+  "status": "active",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "created": "2024-01-16",
+  "addresses": [
+    {
+      "reference": "Condition/primaertumor-example"
+    }
+  ],
+  "activity": [
+    {
+      "reference": {
+        "reference": "RequestGroup/mii-exa-onko-molecular-her2-alternatives"
+      },
+      "progress": [
+        {
+          "text": "HER2+ with T790M mutation and brain metastases - specific agent sequence based on resistance profile"
+        }
+      ]
+    },
+    {
+      "reference": {
+        "reference": "ServiceRequest/mii-exa-onko-molecular-surgery-request"
+      },
+      "progress": [
+        {
+          "text": "Neurosurgical consultation recommended for brain metastases management"
+        }
+      ]
+    }
+  ]
+}
