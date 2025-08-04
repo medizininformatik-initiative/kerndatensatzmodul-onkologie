@@ -45,3 +45,10 @@ Diese Seite sammelt spezifische Punkte, für die gezieltes Feedback in der Komme
   - **Praktische Überlegung**: Nicht alle behandelnden Einrichtungen können FHIR implementieren - die Krebsregister-Dokumentation erfolgt primär über CarePlans als "realisierte Therapieplanung"
   
   **Kernfrage**: Soll die FHIR-Modellierung die praktische Dokumentationsrealität (CarePlan-basiert) oder die konzeptuelle Workflow-Logik (RequestGroup-first) abbilden?
+
+* **Strahlentherapie Zielgebiet - oBDS 2014/2021 Architekturänderung**: Die Integration von oBDS 2014 Zielgebiet-Codes ist aufgrund der grundlegenden Architekturänderung zwischen den Versionen erforderlich.
+  - **2014 Ansatz**: Kombinierte Organ+Lymphknoten-Kodierung mit `+`/`-` Suffixen (z.B. `"3.1.+"` = "Mamma mit Lymphknoten", `"3.1.-"` = "Mamma ohne Lymphknoten")
+  - **2021 Änderung**: Separate Kodierung von Organen (Sektionen 1-8) und dedizierten Lymphknotenregionen (Sektion 9)
+  - **Technische Lösung**: Separates CodeSystem für oBDS 2014 mit eigener URI - semantische Konflikte über Versionskennzeichnung vermeidbar
+  
+  **Kommentierungsfrage**: Ist die gewählte Lösung (separate CodeSystems mit kombiniertem ValueSet) für die Abwärtskompatibilität angemessen, oder sollten alternative Migrationsansätze betrachtet werden?

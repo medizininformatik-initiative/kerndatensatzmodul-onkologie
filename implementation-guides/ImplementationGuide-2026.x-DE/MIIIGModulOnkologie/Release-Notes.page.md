@@ -27,6 +27,15 @@ Hier sind alle Änderungen aufgelistet.
   - **Grund**: GitHub Issue #202 - Unterstützung für "K - keine Änderung" Fälle und hämatologische Krebsarten ohne TNM-Anwendbarkeit
   - **Betroffene Felder**: Tumor_Verlauf, Lymphknoten_Verlauf, Fernmetastasen_Verlauf bleiben 0..1
 
+### Strahlentherapie Zielgebiet - oBDS 2014/2021 Kompatibilität
+- **oBDS 2014 CodeSystem Integration**: Unterstützung für oBDS 2014 Zielgebiet-Definitionen zur Abwärtskompatibilität
+  - **Grund**: oBDS 2021 führte architektonische Änderung ein - Trennung von Organ- und Lymphknotenkodierung
+  - **oBDS 2014 Ansatz**: Kombinierte Kodierung mit `+`/`-` Suffixen (z.B. `"3.1.+"` = "Mamma mit Lymphknoten")
+  - **oBDS 2021 Änderung**: Separate Kodierung - Organe (Sektionen 1-8) und dedizierte Lymphknotenregionen (Sektion 9)
+  - **Technische Umsetzung**: Separates CodeSystem `mii-cs-onko-strahlentherapie-zielgebiet-2014` - semantische Konflikte über Angabe der Version vermeidbar (2014 vs 2021)
+  - **ValueSet Integration**: Erweiterte `MII_VS_Onko_Strahlentherapie_Zielgebiet` unterstützt beide CodeSystems
+  - **Migration Pattern**: 2014 Einzelkodes → 2021 Mehrfachkodierung (z.B. `"3.1.+"` → `#3.1` + `#9.3`)
+
 ### Kommentierungspunkte für v2026
 - **ServiceRequest-Profiling**: Diskussion über Bedarf onkologie-spezifischer ServiceRequest-Profile für operative und strahlentherapeutische Empfehlungen
 - **Radioaktive Metaboliten**: Klärung der Zuordnung zu MedicationRequest oder ServiceRequest
