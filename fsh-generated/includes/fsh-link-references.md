@@ -1,3 +1,6 @@
+[mii-exa-onko-strahlentherapie-2014-mamma-mit-lk]: Procedure-mii-exa-onko-strahlentherapie-2014-mamma-mit-lk.html
+[mii-exa-onko-strahlentherapie-2021-mamma-lymphknoten]: Procedure-mii-exa-onko-strahlentherapie-2021-mamma-lymphknoten.html
+[mii-exa-onko-strahlentherapie-2021-mamma-primaer]: Procedure-mii-exa-onko-strahlentherapie-2021-mamma-primaer.html
 [mii-exa-onko-systemische-therapie-medikation1]: MedicationStatement-mii-exa-onko-systemische-therapie-medikation1.html
 [mii-exa-onko-systemische-therapie-medikation2]: MedicationStatement-mii-exa-onko-systemische-therapie-medikation2.html
 [mii-exa-onko-strahlentherapie-nuklearmedizin-1]: Procedure-mii-exa-onko-strahlentherapie-nuklearmedizin-1.html
@@ -6,6 +9,7 @@
 [mii-exa-onko-systemische-therapie-1]: Procedure-mii-exa-onko-systemische-therapie-1.html
 [mii-exa-onko-liste-evidenz-erstdiagnose-1]: List-mii-exa-onko-liste-evidenz-erstdiagnose-1.html
 [mii-cm-onko-krk-stoma-obds-sct]: ConceptMap-mii-cm-onko-krk-stoma-obds-sct.html
+[mii-exa-onko-strahlentherapie-2014-prostata-mit-lk]: Procedure-mii-exa-onko-strahlentherapie-2014-prostata-mit-lk.html
 [mii-cm-onko-allgemeiner-leistungszustand-sct]: ConceptMap-mii-cm-onko-allgemeiner-leistungszustand-sct.html
 [mii-cm-onko-tnm-uicc-sct-clinical]: ConceptMap-mii-cm-onko-tnm-uicc-sct-clinical.html
 [mii-cm-onko-fernmetastasen-sct]: ConceptMap-mii-cm-onko-fernmetastasen-sct.html
@@ -61,6 +65,7 @@
 [MII_CS_Onko_Therapie_Ende_Grund]: CodeSystem-mii-cs-onko-therapie-ende-grund.html
 [MII_CS_Onko_Strahlentherapie_Strahlenart]: CodeSystem-mii-cs-onko-strahlentherapie-strahlenart.html
 [MII_CS_Onko_Strahlentherapie_Zielgebiet]: CodeSystem-mii-cs-onko-strahlentherapie-zielgebiet.html
+[MII_CS_Onko_Strahlentherapie_Zielgebiet_2014]: CodeSystem-mii-cs-onko-strahlentherapie-zielgebiet-2014.html
 [Studienteilnahme]: CodeSystem-mii-cs-onko-studienteilnahme.html
 [MII_CS_Onko_Therapie_StellungZurOp]: CodeSystem-mii-cs-onko-therapie-stellungzurop.html
 [MII_CS_Onko_Therapieabweichung]: CodeSystem-mii-cs-onko-therapieabweichung.html
