@@ -7,6 +7,7 @@
 [mii-exa-onko-strahlentherapie-strahlentherapie-1]: Procedure-mii-exa-onko-strahlentherapie-strahlentherapie-1.html
 [mii-exa-onko-operation-1]: Procedure-mii-exa-onko-operation-1.html
 [mii-exa-onko-systemische-therapie-1]: Procedure-mii-exa-onko-systemische-therapie-1.html
+[PatientKimMusterperson-Procedure-4]: Procedure-PatientKimMusterperson-Procedure-4.html
 [mii-exa-onko-liste-evidenz-erstdiagnose-1]: List-mii-exa-onko-liste-evidenz-erstdiagnose-1.html
 [mii-cm-onko-krk-stoma-obds-sct]: ConceptMap-mii-cm-onko-krk-stoma-obds-sct.html
 [mii-exa-onko-medikation-iberdomide-unii]: MedicationStatement-mii-exa-onko-medikation-iberdomide-unii.html
@@ -389,7 +390,6 @@
 [PatientKimMusterperson-Procedure-1]: Procedure-PatientKimMusterperson-Procedure-1.html
 [PatientKimMusterperson-Procedure-2]: Procedure-PatientKimMusterperson-Procedure-2.html
 [PatientKimMusterperson-Procedure-3]: Procedure-PatientKimMusterperson-Procedure-3.html
-[PatientKimMusterperson-Procedure-4]: Procedure-PatientKimMusterperson-Procedure-4.html
 [PatientKimMusterperson-Procedure-4a]: Procedure-PatientKimMusterperson-Procedure-4a.html
 [PatientKimMusterperson-Procedure-4b]: Procedure-PatientKimMusterperson-Procedure-4b.html
 [PatientKimMusterperson-Procedure-4c]: Procedure-PatientKimMusterperson-Procedure-4c.html

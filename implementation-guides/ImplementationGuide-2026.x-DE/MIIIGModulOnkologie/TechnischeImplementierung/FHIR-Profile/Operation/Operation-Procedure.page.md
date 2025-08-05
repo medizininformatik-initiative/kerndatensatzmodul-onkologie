@@ -13,9 +13,163 @@ Dieses Profil beschreibt eine Operation in der Onkologie.
 ### Kategorie und Code
 
 - Die MII-Prozedur empfiehlt die Abbildung der Kategorie mittels der in SNOMED übertragenen OPS-Hauptkategorien (https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/ValueSet/procedures-category-sct) , wobei der SNOMED-Code `38771300` der OPS-Kategorie "5 - Operationen" entspricht. Laut oBDS kann hier aber in begründeten Fällen auch ein andere Kodierung (z.B. `103693007`	 für "1 - Diagnostische Maßnahmen") eigetragen werden. Die Kategorie wird aus diesem Grund nicht weiter eingeschränkt. 
-- Die genaue Art der Prozedur wird im Feld `Procedure.code` als OPS kodiert. Laut oBDS soll dabei möglichst präzise kodiert werden. 
-- Es SOLL genau ein OPS-Wert kodiert werden. Zusätzliche Prozeduren werden als einzelne Procedure-Ressourcen abgebildet. Eine OPS-Kodierung KANN durch eine SNOMED-CT-Kodierung ergänzt werden.   
-- Achtung: Innerhalb des Erweiterungsmoduls Onkologie wird die übergeorndete MII-Prozedur auch für die Abbildung der Strahlen- und Systemischen/abwartenden Therapie genutzt. Für die Besondheiten bei Kategorien und Code - siehe [Strahlentherapie:Procedure  ](https://simplifier.net/guide/mii-ig-modul-onkologie-2024-de/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Strahlentherapie/Strahlentherapie-Procedure.page.md?version=current) und [Systemische Therapie: Procedure](https://simplifier.net/guide/mii-ig-modul-onkologie-2024-de/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Systemische-Therapie/Systemische-Therapie-Procedure.page.md?version=current).  
+- Die genaue Art der Prozedur wird im Feld `Procedure.code` kodiert. **WICHTIG**: Jede Procedure MUSS einen Code haben - entweder OPS oder SNOMED CT.
+- Primär SOLL ein OPS-Code verwendet werden. Wenn kein passender OPS-Code existiert, MUSS ein SNOMED CT Code gewählt werden.
+- Pro Procedure-Ressource SOLL maximal ein OPS-Wert kodiert werden. Zusätzliche Prozeduren werden als einzelne Procedure-Ressourcen abgebildet.   
+- Achtung: Innerhalb des Erweiterungsmoduls Onkologie wird die übergeorndete MII-Prozedur auch für die Abbildung der Strahlen- und Systemischen/abwartenden Therapie genutzt. Für die Besondheiten bei Kategorien und Code - siehe [Strahlentherapie:Procedure  ](https://simplifier.net/guide/mii-ig-modul-onkologie-2024-de/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Strahlentherapie/Strahlentherapie-Procedure.page.md?version=current) und [Systemische Therapie: Procedure](https://simplifier.net/guide/mii-ig-modul-onkologie-2024-de/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Systemische-Therapie/Systemische-Therapie-Procedure.page.md?version=current).
+
+### Mehrteilige Eingriffe und zusammenhängende Operationen
+
+Bei komplexen onkologischen Eingriffen werden häufig mehrere operative Prozeduren in einer Sitzung durchgeführt. Da pro Procedure-Ressource nur ein OPS-Code kodiert werden sollte, werden zwei Modellierungsansätze unterstützt:
+
+#### Ansatz 1: Übergeordnete Procedure mit allgemeinem Code
+
+**WICHTIG**: Eine Procedure MUSS entweder einen OPS-Code ODER einen SNOMED CT Code haben. Wenn kein passender OPS-Code für die übergeordnete Procedure existiert, MUSS ein geeigneter SNOMED CT Code gewählt werden.
+
+1. **Übergeordnete Procedure**: Eine Haupt-Procedure mit allgemeinem SNOMED CT Code für die Lokation/Art des Eingriffs
+   - `Procedure.code`: SNOMED CT Code (z.B. 86481000 "Laparotomy (procedure)")
+   - `Procedure.code.coding[ops]`: Bleibt leer, da kein spezifischer OPS-Code existiert
+   - Diese Procedure SOLLTE das MII_PR_Onko_Operation Profil erfüllen
+   - **Hinweis**: Der SNOMED CT Code muss aus verfügbaren SNOMED CT Konzepten gewählt werden
+
+2. **Detaillierte Teil-Procedures**: Einzelne Procedure-Ressourcen für jeden spezifischen OPS-Code
+   - Verknüpfung über `Procedure.partOf` zur übergeordneten Procedure
+   - Jede mit ihrem spezifischen OPS-Code
+
+**Beispiel:**
+```
+Procedure/haupteingriff (SNOMED: 176282005 "Resektion des Rektums")
+├── Procedure/teileingriff1 (partOf → haupteingriff) 
+│   └── OPS: 5-484.35 "Rektumresektion mit Anastomose"
+└── Procedure/teileingriff2 (partOf → haupteingriff)
+    └── OPS: 5-469.21 "Andere Operationen am Darm"
+```
+
+#### Ansatz 2: Gleichberechtigte Procedures
+
+Bei komplexen Tumoroperationen, wo die Hierarchie nicht eindeutig ist:
+
+1. **Alle Procedures gleichberechtigt**: Jede Procedure repräsentiert einen OPS-Code
+2. **Gemeinsame übergeordnete Procedure optional**: Kann als Gruppierung dienen
+3. **Alternative**: Eine der Procedures als "Haupt-Procedure" wählen (Entscheidung kann arbiträr sein)
+
+**Hinweis zur Harmonisierung**: Die Entscheidung, welche Procedure als "Haupt-Procedure" gilt, kann bei komplexen Tumoroperationen schwierig und post-hoc kaum harmonisierbar sein.
+
+#### Gemeinsame Aspekte bei mehrteiligen Eingriffen:
+
+- **Zeitpunkt**: Alle verknüpften Prozeduren sollten dasselbe `performedDateTime` haben, wenn sie in einer Sitzung durchgeführt wurden
+- **Intention**: Die Extension für die OP-Intention sollte bei allen verknüpften Prozeduren konsistent sein
+- **Komplikationen**: Können bei der betroffenen Einzelprozedur oder bei der übergeordneten Procedure dokumentiert werden
+- **Residualstatus**: Der lokale Residualstatus wird bei der resezierenden Prozedur dokumentiert
+- **Referenzen**: Alle Procedures sollten auf dieselbe Primärdiagnose (`reasonReference`) und ggf. Tumorboard-Empfehlung (`basedOn`) verweisen
+
+#### Visualisierung am Beispiel Kim Musterperson
+
+@```plantuml
+@startuml MII_Onko_MultiPartSurgery_Example
+
+title Multi-Part Surgery Example: Kim Musterperson
+
+package "Übergeordnete Operation" {
+  object "**Procedure-4**" as main {
+    Profile: MII_PR_Onko_Operation
+    code: SNOMED CT 86481000
+    "Laparotomy (procedure)"
+    performedDateTime: 2021-09-30
+    outcome: R0
+    extension[Intention]: kurativ
+    --
+    <b>WICHTIG:</b> SNOMED Code verwendet,
+    da kein einzelner OPS-Code die
+    gesamte Operation abdeckt
+  }
+}
+
+package "Teil-Operationen mit OPS-Codes" {
+  object "**Procedure-4a**" as p4a {
+    Profile: MII Procedure
+    code: OPS 5-547.0
+    "Resektion von Gewebe in der
+    Bauchregion ohne sichere
+    Organzuordnung"
+    performedDateTime: 2021-09-30
+    partOf: → Procedure-4
+  }
+  
+  object "**Procedure-4b**" as p4b {
+    Profile: MII Procedure
+    code: OPS 5-683
+    "Uterusexstirpation
+    [Hysterektomie]"
+    performedDateTime: 2021-09-30
+    partOf: → Procedure-4
+  }
+  
+  object "**Procedure-4c**" as p4c {
+    Profile: MII Procedure
+    code: OPS 5-661
+    "Salpingektomie"
+    performedDateTime: 2021-09-30
+    partOf: → Procedure-4
+  }
+  
+  object "**Procedure-4d**" as p4d {
+    Profile: MII Procedure
+    code: OPS 5-502.1
+    "Anatomische (typische)
+    Leberresektion"
+    performedDateTime: 2021-09-30
+    partOf: → Procedure-4
+  }
+}
+
+package "Gemeinsame Referenzen" {
+  object "**Condition**" as cond {
+    Primärdiagnose
+    Ovarialkarzinom
+  }
+  
+  object "**CarePlan**" as cp {
+    Tumorboard-
+    empfehlung
+  }
+}
+
+main -down-> cond : reasonReference
+main -down-> cp : basedOn
+
+p4a -up-> main : partOf
+p4b -up-> main : partOf
+p4c -up-> main : partOf
+p4d -up-> main : partOf
+
+"Teil-Operationen mit OPS-Codes" ..> cond
+"Teil-Operationen mit OPS-Codes" ..> cp
+
+note right of main
+  <b>Code-Anforderung:</b>
+  Jede Procedure MUSS einen Code haben!
+  - Primär: OPS-Code verwenden
+  - Fallback: SNOMED CT Code
+  
+  Bei der übergeordneten Procedure:
+  - OPS optional (0..1)
+  - Wenn kein OPS → SNOMED CT pflicht
+end note
+
+note bottom
+  <b>Komplexe Tumorchirurgie (Intervalldebulking):</b>
+  • Längsschnittlaparotomie
+  • Hysterektomie + bilaterale Adnexektomie
+  • Atypische Lebersegmentresektion (Seg. II und V)
+  • Postoperativ: R0
+  
+  Alle Teil-Procedures haben dasselbe performedDateTime
+  und verweisen via partOf auf die Hauptprocedure
+end note
+
+@enduml
+@```  
 
 
 ### Extensions

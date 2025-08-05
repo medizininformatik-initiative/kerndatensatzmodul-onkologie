@@ -56,6 +56,19 @@ Hier sind alle Änderungen aufgelistet.
   - **Originaltext erhalten**: Im `medicationCodeableConcept.text` Element
   - **Kommentierungspunkt hinzugefügt**: Explizit als "EXTREM KONTROVERS" markiert
 
+### Operation-Profil Erweiterungen
+
+#### Mehrteilige Eingriffe Unterstützung
+- **OPS-Code Kardinalität**: Änderung von `code.coding[ops] 1..1` zu `code.coding[ops] 0..1`
+  - **Grund**: GitHub Issue #194 - Unterstützung für mehrteilige Operationen mit mehreren OPS-Codes
+  - **Lösung**: Zwei Modellierungsansätze dokumentiert:
+    - Übergeordnete Procedure mit SNOMED CT Code + Teil-Procedures mit OPS-Codes
+    - Gleichberechtigte Procedures bei unklarer Hierarchie
+  - **Code-Anforderung**: Klarstellung dass jede Procedure MUSS einen Code haben (OPS oder SNOMED CT)
+  - **Beispiel aktualisiert**: Kim Musterperson 4-teilige Operation demonstriert Ansatz mit SNOMED CT für Hauptprocedure
+  - **Dokumentation**: Ausführliche Anleitung für `partOf`-Verknüpfung und gemeinsame Aspekte
+  - **Harmonisierung**: Hinweis auf Schwierigkeit der post-hoc Harmonisierung bei komplexen Tumoroperationen
+
 ### Verlauf-Profil Anpassungen
 - **Component-Kardinalität**: Änderung von `component 1..*` zu `component 0..*`
   - **Grund**: GitHub Issue #202 - Unterstützung für "K - keine Änderung" Fälle und hämatologische Krebsarten ohne TNM-Anwendbarkeit
