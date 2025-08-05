@@ -7,8 +7,7 @@ Description: "Example surgical therapy"
 * encounter = Reference(Encounter/example)
 * basedOn = Reference(CarePlan/example)
 * status = #completed
-* extension[0].valueCodeableConcept = $mii-cs-onko-intention#K // kurativ
-* extension[0].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention"
+* extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K // kurativ
 * category = $SCT#387713003 "Surgical procedure (procedure)"
 * code.coding[ops] = $OPS#5-870 "Partielle (brusterhaltende) Exzision der Mamma und Destruktion von Mammagewebe"
 * code.coding[ops].version = "2021"

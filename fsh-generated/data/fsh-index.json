@@ -1576,12 +1576,28 @@
     "endLine": 140
   },
   {
+    "outputFile": "Procedure-mii-exa-onko-melanom-exzision-oberarm.json",
+    "fshName": "mii-exa-onko-melanom-exzision-oberarm",
+    "fshType": "Instance",
+    "fshFile": "oBDS\\Organspezifische Module\\Melanom\\mii-exa-onko-melanom-exzision.fsh",
+    "startLine": 1,
+    "endLine": 16
+  },
+  {
+    "outputFile": "Procedure-mii-exa-onko-melanom-exzision-ruecken.json",
+    "fshName": "mii-exa-onko-melanom-exzision-ruecken",
+    "fshType": "Instance",
+    "fshFile": "oBDS\\Organspezifische Module\\Melanom\\mii-exa-onko-melanom-exzision.fsh",
+    "startLine": 18,
+    "endLine": 34
+  },
+  {
     "outputFile": "Procedure-mii-exa-onko-operation-1.json",
     "fshName": "mii-exa-onko-operation-1",
     "fshType": "Instance",
     "fshFile": "oBDS\\13_OP\\mii-exa-onko-operation.fsh",
     "startLine": 1,
-    "endLine": 18
+    "endLine": 17
   },
   {
     "outputFile": "Procedure-mii-exa-onko-palbociclib-therapie.json",
@@ -1598,6 +1614,22 @@
     "fshFile": "oBDS\\18_19_Tumorkonferenz\\mii-exa-onko-tumorkonferenz-molekular.fsh",
     "startLine": 52,
     "endLine": 63
+  },
+  {
+    "outputFile": "Procedure-mii-exa-onko-prostata-operation-prostatektomie.json",
+    "fshName": "mii-exa-onko-prostata-operation-prostatektomie",
+    "fshType": "Instance",
+    "fshFile": "oBDS\\Organspezifische Module\\Prostata\\mii-exa-onko-prostata-operation.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
+    "outputFile": "Procedure-mii-exa-onko-prostata-operation-turp.json",
+    "fshName": "mii-exa-onko-prostata-operation-turp",
+    "fshType": "Instance",
+    "fshFile": "oBDS\\Organspezifische Module\\Prostata\\mii-exa-onko-prostata-operation.fsh",
+    "startLine": 17,
+    "endLine": 31
   },
   {
     "outputFile": "Procedure-mii-exa-onko-prostata-surgery-1.json",
@@ -1764,8 +1796,8 @@
     "fshName": "mii-sp-onko-ext-systemischetherapie-stellungzurop",
     "fshType": "Instance",
     "fshFile": "searchParameter.fsh",
-    "startLine": 296,
-    "endLine": 309
+    "startLine": 279,
+    "endLine": 292
   },
   {
     "outputFile": "SearchParameter-mii-sp-onko-observation-ext-tnm-m-cppraefix.json",
@@ -1816,60 +1848,28 @@
     "endLine": 123
   },
   {
-    "outputFile": "SearchParameter-mii-sp-onko-procedure-ext-strahlentherapie-bs-applikationsart.json",
-    "fshName": "mii-sp-onko-procedure-ext-strahlentherapie-bs-applikationsart",
-    "fshType": "Instance",
-    "fshFile": "searchParameter.fsh",
-    "startLine": 157,
-    "endLine": 172
-  },
-  {
     "outputFile": "SearchParameter-mii-sp-onko-procedure-ext-strahlentherapie-bs-boost.json",
     "fshName": "mii-sp-onko-procedure-ext-strahlentherapie-bs-boost",
-    "fshType": "Instance",
-    "fshFile": "searchParameter.fsh",
-    "startLine": 262,
-    "endLine": 277
-  },
-  {
-    "outputFile": "SearchParameter-mii-sp-onko-procedure-ext-strahlentherapie-bs-einzeldosis.json",
-    "fshName": "mii-sp-onko-procedure-ext-strahlentherapie-bs-einzeldosis",
     "fshType": "Instance",
     "fshFile": "searchParameter.fsh",
     "startLine": 245,
     "endLine": 260
   },
   {
-    "outputFile": "SearchParameter-mii-sp-onko-procedure-ext-strahlentherapie-bs-gesamtdosis.json",
-    "fshName": "mii-sp-onko-procedure-ext-strahlentherapie-bs-gesamtdosis",
+    "outputFile": "SearchParameter-mii-sp-onko-procedure-ext-strahlentherapie-bs-einzeldosis.json",
+    "fshName": "mii-sp-onko-procedure-ext-strahlentherapie-bs-einzeldosis",
     "fshType": "Instance",
     "fshFile": "searchParameter.fsh",
     "startLine": 228,
     "endLine": 243
   },
   {
-    "outputFile": "SearchParameter-mii-sp-onko-procedure-ext-strahlentherapie-bs-lateralitaet.json",
-    "fshName": "mii-sp-onko-procedure-ext-strahlentherapie-bs-lateralitaet",
+    "outputFile": "SearchParameter-mii-sp-onko-procedure-ext-strahlentherapie-bs-gesamtdosis.json",
+    "fshName": "mii-sp-onko-procedure-ext-strahlentherapie-bs-gesamtdosis",
     "fshType": "Instance",
     "fshFile": "searchParameter.fsh",
-    "startLine": 209,
-    "endLine": 224
-  },
-  {
-    "outputFile": "SearchParameter-mii-sp-onko-procedure-ext-strahlentherapie-bs-strahlenart.json",
-    "fshName": "mii-sp-onko-procedure-ext-strahlentherapie-bs-strahlenart",
-    "fshType": "Instance",
-    "fshFile": "searchParameter.fsh",
-    "startLine": 174,
-    "endLine": 189
-  },
-  {
-    "outputFile": "SearchParameter-mii-sp-onko-procedure-ext-strahlentherapie-bs-zielgebiet.json",
-    "fshName": "mii-sp-onko-procedure-ext-strahlentherapie-bs-zielgebiet",
-    "fshType": "Instance",
-    "fshFile": "searchParameter.fsh",
-    "startLine": 191,
-    "endLine": 206
+    "startLine": 211,
+    "endLine": 226
   },
   {
     "outputFile": "SearchParameter-mii-sp-onko-procedure-ext-strahlentherapie-intention.json",
@@ -1884,8 +1884,32 @@
     "fshName": "mii-sp-onko-procedure-ext-systemischetherapie-intention",
     "fshType": "Instance",
     "fshFile": "searchParameter.fsh",
-    "startLine": 279,
-    "endLine": 294
+    "startLine": 262,
+    "endLine": 277
+  },
+  {
+    "outputFile": "SearchParameter-mii-sp-onko-procedure-strahlentherapie-applikationsart.json",
+    "fshName": "mii-sp-onko-procedure-strahlentherapie-applikationsart",
+    "fshType": "Instance",
+    "fshFile": "searchParameter.fsh",
+    "startLine": 157,
+    "endLine": 172
+  },
+  {
+    "outputFile": "SearchParameter-mii-sp-onko-procedure-strahlentherapie-lateralitaet.json",
+    "fshName": "mii-sp-onko-procedure-strahlentherapie-lateralitaet",
+    "fshType": "Instance",
+    "fshFile": "searchParameter.fsh",
+    "startLine": 192,
+    "endLine": 207
+  },
+  {
+    "outputFile": "SearchParameter-mii-sp-onko-procedure-strahlentherapie-strahlenart.json",
+    "fshName": "mii-sp-onko-procedure-strahlentherapie-strahlenart",
+    "fshType": "Instance",
+    "fshFile": "searchParameter.fsh",
+    "startLine": 174,
+    "endLine": 189
   },
   {
     "outputFile": "ServiceRequest-mii-exa-onko-molecular-surgery-request.json",
@@ -2288,6 +2312,14 @@
     "endLine": 51
   },
   {
+    "outputFile": "StructureDefinition-mii-pr-onko-melanom-exzision.json",
+    "fshName": "MII_PR_Onko_Melanom_Exzision",
+    "fshType": "Profile",
+    "fshFile": "oBDS\\Organspezifische Module\\Melanom\\mii-pr-onko-melanom-exzision.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
     "outputFile": "StructureDefinition-mii-pr-onko-melanom-ldh.json",
     "fshName": "MII_PR_Onko_Melanom_LDH",
     "fshType": "Profile",
@@ -2326,6 +2358,14 @@
     "fshFile": "oBDS\\13_OP\\mii-pr-onko-operation.fsh",
     "startLine": 1,
     "endLine": 85
+  },
+  {
+    "outputFile": "StructureDefinition-mii-pr-onko-prostata-operation.json",
+    "fshName": "MII_PR_Onko_Prostata_Operation",
+    "fshType": "Profile",
+    "fshFile": "oBDS\\Organspezifische Module\\Prostata\\mii-pr-onko-prostata-operation.fsh",
+    "startLine": 1,
+    "endLine": 12
   },
   {
     "outputFile": "StructureDefinition-mii-pr-onko-prostate-anzahl-positive-stanzen.json",
@@ -2824,6 +2864,14 @@
     "endLine": 12
   },
   {
+    "outputFile": "ValueSet-mii-vs-onko-melanom-exzision-snomedct.json",
+    "fshName": "MII_VS_Onko_Melanom_Exzision_SNOMEDCT",
+    "fshType": "ValueSet",
+    "fshFile": "oBDS\\Organspezifische Module\\Melanom\\mii-vs-onko-melanom-exzision-snomedct.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
     "outputFile": "ValueSet-mii-vs-onko-melanom-ldh.json",
     "fshName": "MII_VS_Onko_Melanom_LDH",
     "fshType": "ValueSet",
@@ -2934,6 +2982,14 @@
     "fshFile": "oBDS\\Organspezifische Module\\Prostata\\mii-vs-onko-prostata-gleason-score-and-grade.fsh",
     "startLine": 1,
     "endLine": 19
+  },
+  {
+    "outputFile": "ValueSet-mii-vs-onko-prostata-operation-snomedct.json",
+    "fshName": "MII_VS_Onko_Prostata_Operation_SNOMEDCT",
+    "fshType": "ValueSet",
+    "fshFile": "oBDS\\Organspezifische Module\\Prostata\\mii-vs-onko-prostata-operation-snomedct.fsh",
+    "startLine": 1,
+    "endLine": 12
   },
   {
     "outputFile": "ValueSet-mii-vs-onko-prostata-postsurgical-complications.json",

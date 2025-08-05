@@ -220,10 +220,10 @@ Description: "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie,
 // Übergeordnete Procedure mit allgemeinem SNOMED CT Code für Laparotomie
 * code = $SCT#86481000 "Laparotomy (procedure)" // Allgemeiner Code für offene Bauchoperation
 // OPS-Code kann bei übergeordneter Procedure leer bleiben (0..1 Kardinalität)
-* extension[Intention].valueCodeableConcept = $mii-cs-onko-operation-intention#K "kurativ"
+* extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K "kurativ"
 * performedDateTime = 2021-09-30
 * outcome = $mii-cs-onko-residualstatus#R0
-* reasonReference = Reference(Condition-PatientKimMusterperson-Diagnosis-1)
+* reasonReference = Reference(PatientKimMusterperson-Diagnosis-1)
 
 Instance: PatientKimMusterperson-Procedure-4a
 InstanceOf: $mii-procedure

@@ -11,6 +11,8 @@
 [mii-exa-onko-liste-evidenz-erstdiagnose-1]: List-mii-exa-onko-liste-evidenz-erstdiagnose-1.html
 [mii-cm-onko-krk-stoma-obds-sct]: ConceptMap-mii-cm-onko-krk-stoma-obds-sct.html
 [mii-exa-onko-medikation-iberdomide-unii]: MedicationStatement-mii-exa-onko-medikation-iberdomide-unii.html
+[mii-exa-onko-melanom-exzision-oberarm]: Procedure-mii-exa-onko-melanom-exzision-oberarm.html
+[mii-exa-onko-melanom-exzision-ruecken]: Procedure-mii-exa-onko-melanom-exzision-ruecken.html
 [mii-exa-onko-strahlentherapie-2014-prostata-mit-lk]: Procedure-mii-exa-onko-strahlentherapie-2014-prostata-mit-lk.html
 [mii-cm-onko-allgemeiner-leistungszustand-sct]: ConceptMap-mii-cm-onko-allgemeiner-leistungszustand-sct.html
 [mii-cm-onko-tnm-uicc-sct-clinical]: ConceptMap-mii-cm-onko-tnm-uicc-sct-clinical.html
@@ -114,6 +116,8 @@
 [MII_LM_MVGenomSeq_Onkologie]: StructureDefinition-mii-lm-mvgenomseq-onkologie.html
 [MII_LM_Onko]: StructureDefinition-mii-lm-onko.html
 [MII_LM_Onko_Organspezifische_Zusatzmodule]: StructureDefinition-mii-lm-onko-organspezifische-zusatzmodule.html
+[MII_PR_Onko_Melanom_Exzision]: StructureDefinition-mii-pr-onko-melanom-exzision.html
+[MII_PR_Onko_Prostata_Operation]: StructureDefinition-mii-pr-onko-prostata-operation.html
 [MII_PR_Onko_KRK_Abstand_Aboral]: StructureDefinition-mii-pr-onko-krk-abstand-aboral.html
 [MII_PR_Onko_KRK_Abstand_Anokutan]: StructureDefinition-mii-pr-onko-krk-abstand-anokutan.html
 [MII_PR_Onko_KRK_Abstand_Circumferelle_Resektionsebene]: StructureDefinition-mii-pr-onko-krk-abstand-circumferelle-resektionsebene.html
@@ -185,6 +189,8 @@
 [MII_PR_Onko_Verlauf]: StructureDefinition-mii-pr-onko-verlauf.html
 [MII_PR_Onko_Weitere_Klassifikationen]: StructureDefinition-mii-pr-onko-weitere-klassifikationen.html
 [MII_VS_Onko_Weitere_Klassifikationen]: ValueSet-mii-vs-onko-weitere-klassifikationen.html
+[MII_VS_Onko_Melanom_Exzision_SNOMEDCT]: ValueSet-mii-vs-onko-melanom-exzision-snomedct.html
+[MII_VS_Onko_Prostata_Operation_SNOMEDCT]: ValueSet-mii-vs-onko-prostata-operation-snomedct.html
 [MII_VS_Onko_Allgemeiner_Leistungszustand_ECOG]: ValueSet-mii-vs-onko-allgemeiner-leistungszustand-ecog.html
 [MII_VS_Onko_Allgemeiner_Leistungszustand_Karnofsky]: ValueSet-mii-vs-onko-allgemeiner-leistungszustand-karnofsky.html
 [MII_VS_Onko_Beurteilung_Lokaler_Residualstatus]: ValueSet-mii-vs-onko-beurteilung-lokaler-residualstatus.html
@@ -347,15 +353,14 @@
 [mii-sp-onko-observation-ext-tnm-n-sn-suffix]: SearchParameter-mii-sp-onko-observation-ext-tnm-n-sn-suffix.html
 [mii-sp-onko-observation-ext-tnm-t-cppraefix]: SearchParameter-mii-sp-onko-observation-ext-tnm-t-cppraefix.html
 [mii-sp-onko-procedure-ext-operation-intention]: SearchParameter-mii-sp-onko-procedure-ext-operation-intention.html
-[mii-sp-onko-procedure-ext-strahlentherapie-bs-applikationsart]: SearchParameter-mii-sp-onko-procedure-ext-strahlentherapie-bs-applikationsart.html
 [mii-sp-onko-procedure-ext-strahlentherapie-bs-boost]: SearchParameter-mii-sp-onko-procedure-ext-strahlentherapie-bs-boost.html
 [mii-sp-onko-procedure-ext-strahlentherapie-bs-einzeldosis]: SearchParameter-mii-sp-onko-procedure-ext-strahlentherapie-bs-einzeldosis.html
 [mii-sp-onko-procedure-ext-strahlentherapie-bs-gesamtdosis]: SearchParameter-mii-sp-onko-procedure-ext-strahlentherapie-bs-gesamtdosis.html
-[mii-sp-onko-procedure-ext-strahlentherapie-bs-lateralitaet]: SearchParameter-mii-sp-onko-procedure-ext-strahlentherapie-bs-lateralitaet.html
-[mii-sp-onko-procedure-ext-strahlentherapie-bs-strahlenart]: SearchParameter-mii-sp-onko-procedure-ext-strahlentherapie-bs-strahlenart.html
-[mii-sp-onko-procedure-ext-strahlentherapie-bs-zielgebiet]: SearchParameter-mii-sp-onko-procedure-ext-strahlentherapie-bs-zielgebiet.html
 [mii-sp-onko-procedure-ext-strahlentherapie-intention]: SearchParameter-mii-sp-onko-procedure-ext-strahlentherapie-intention.html
 [mii-sp-onko-procedure-ext-systemischetherapie-intention]: SearchParameter-mii-sp-onko-procedure-ext-systemischetherapie-intention.html
+[mii-sp-onko-procedure-strahlentherapie-applikationsart]: SearchParameter-mii-sp-onko-procedure-strahlentherapie-applikationsart.html
+[mii-sp-onko-procedure-strahlentherapie-lateralitaet]: SearchParameter-mii-sp-onko-procedure-strahlentherapie-lateralitaet.html
+[mii-sp-onko-procedure-strahlentherapie-strahlenart]: SearchParameter-mii-sp-onko-procedure-strahlentherapie-strahlenart.html
 [MII_CS_Onko_KRK_MRT_Mesorektale_Faszie_Status]: CodeSystem-mii-cs-onko-krk-mrt-mesorektale-faszie-status.html
 [MII_CS_Onko_KRK_Stoma_Anzeichnung]: CodeSystem-mii-cs-onko-krk-stoma-anzeichnung.html
 [MII_CS_Onko_Operation_Urgency]: CodeSystem-mii-cs-onko-operation-urgency.html
@@ -408,6 +413,8 @@
 [PatientKimMusterperson-Tumorkonferenz-3]: CarePlan-PatientKimMusterperson-Tumorkonferenz-3.html
 [PatientKimMusterperson-Tumorkonferenz-4]: CarePlan-PatientKimMusterperson-Tumorkonferenz-4.html
 [PatientKimMusterperson-Verlauf-2022-01-22]: Observation-PatientKimMusterperson-Verlauf-2022-01-22.html
+[mii-exa-onko-prostata-operation-prostatektomie]: Procedure-mii-exa-onko-prostata-operation-prostatektomie.html
+[mii-exa-onko-prostata-operation-turp]: Procedure-mii-exa-onko-prostata-operation-turp.html
 [mii-exa-onko-strahlentherapie-bestrahlung-nuklearmedizin-1]: Procedure-mii-exa-onko-strahlentherapie-bestrahlung-nuklearmedizin-1.html
 [mii-exa-onko-strahlentherapie-bestrahlung-strahlentherapie-1]: Procedure-mii-exa-onko-strahlentherapie-bestrahlung-strahlentherapie-1.html
 [TNM-Klassifikation-Observation-2]: Observation-TNM-Klassifikation-Observation-2.html

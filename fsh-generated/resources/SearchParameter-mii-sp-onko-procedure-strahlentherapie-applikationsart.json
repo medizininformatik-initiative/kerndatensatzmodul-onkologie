@@ -1,12 +1,12 @@
 {
   "resourceType": "SearchParameter",
-  "id": "mii-sp-onko-procedure-ext-strahlentherapie-bs-lateralitaet",
+  "id": "mii-sp-onko-procedure-strahlentherapie-applikationsart",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-pr-meta-searchparameter"
     ]
   },
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-lateralitaet",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-strahlentherapie-applikationsart",
   "publisher": "Medizininformatik Initiative",
   "contact": [
     {
@@ -33,15 +33,15 @@
     }
   ],
   "version": "2025.1.0",
-  "name": "MII_SP_Procedure_Extension_Strahlentherapie_Bestrahlung_Zielgebiet_Lateralitaet",
-  "description": "SearchParameter for Procedure.extension:bestrahlung.extension:zielgebiet_Lateralitaet",
+  "name": "MII_SP_Procedure_Strahlentherapie_Applikationsart",
+  "description": "SearchParameter for Procedure.usedCode:Applikationsart",
   "status": "active",
   "experimental": true,
-  "date": "2025-05-17",
-  "code": "bestrahlung-zielgebiet-lateralitaet",
+  "date": "2024-04-15",
+  "code": "bestrahlung-applikationsart",
   "base": [
     "Procedure"
   ],
   "type": "token",
-  "expression": "Procedure.bodySite.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation').value"
+  "expression": "Procedure.usedCode.coding.where(system='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart')"
 }

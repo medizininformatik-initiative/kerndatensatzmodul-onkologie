@@ -1,0 +1,120 @@
+@startuml MII_Onko_Melanom_Module
+title MII Onkologie - Melanom Modul
+skinparam defaultFontSize 16
+skinparam objectFontSize 16
+skinparam packageFontSize 18
+skinparam noteFontSize 14
+
+' Zentrale Diagnose
+object MII_Diagnose_Primaertumor #FFFF66 {
+    "Primärtumor Diagnose"
+}
+
+' Zentrale Exzision
+object Melanom_Exzision #9999FF {
+    Base_Profile = MII_PR_Onko_Operation
+    **Procedure.reasonReference** → Diagnosis
+    code = OPS oder SNOMED CT
+    "Melanom-Exzision"
+}
+
+' Pathologische Befunde
+package "Pathologische Befunde" as pathologie #E8F5E8 {
+    object Melanom_Breslow_Tiefe #22FF22 {
+        oBDS_Code = MM2
+        **Observation.focus** → Diagnosis
+        valueQuantity = mm
+        "Breslow-Tumordicke"
+        Kritische_Werte = "≤1, 1-2, 2-4, >4mm"
+    }
+
+    object Melanom_Ulzeration #22FF22 {
+        oBDS_Code = MM4
+        **Observation.focus** → Diagnosis
+        valueCodeableConcept = Ja/Nein
+        "Pathologische Ulzeration"
+        T-Stadium_Modifikator
+    }
+}
+
+' Chirurgische Qualität
+object Melanom_Sicherheitsabstand #22FF22 {
+    oBDS_Code = MM1
+    **Observation.focus** → Operation
+    valueQuantity = mm
+    "Minimaler Sicherheitsabstand"
+    "zum Primärtumor"
+}
+
+' Systemischer Marker
+object Melanom_LDH #22FF22 {
+    oBDS_Code = MM3
+    **Observation.focus** → Diagnosis
+    valueQuantity = U/L
+    "Laktatdehydrogenase"
+    "Normal vs. Erhöht"
+}
+
+' Specimen
+object "Specimen" as specimen #44FFFF {
+    "→ Siehe Pathologie-Modul"
+    "- Exzidat Primärtumor"
+    "- Nachexzidat"
+    "- Sentinel-Lymphknoten"
+}
+
+' Beziehungen
+MII_Diagnose_Primaertumor <--- pathologie : focus
+MII_Diagnose_Primaertumor <--- Melanom_LDH : focus
+MII_Diagnose_Primaertumor <--- Melanom_Exzision : reasonReference
+Melanom_Exzision <--- Melanom_Sicherheitsabstand : focus
+
+' Klinische Logik
+Melanom_Breslow_Tiefe ..> Melanom_Sicherheitsabstand : "bestimmt Abstand"
+pathologie --> specimen : specimen
+
+legend right 
+|Farbe|Typ|
+|<#FFFF66>|Condition|
+|<#CCCCFF>|CarePlan|
+|<#9999FF>|Procedure|
+|<#DDFFDD>|ServiceRequest|
+|<#88FF88>|DiagnosticReport|
+|<#22FF22>|Observation|
+|<#FFCCFF>|Medication|
+|<#FF9999>|AdverseEvent|
+|<#44FFFF>|Specimen|
+|<#EEEEEE>|Bundle|
+endlegend
+
+note bottom of pathologie
+**AJCC 8. Edition Staging:**
+- Breslow-Dicke: Primärer T-Faktor
+- Ulzeration: T-Stadium Modifikator
+→ Internationale Standardisierung
+end note
+
+note left of Melanom_Exzision
+**Chirurgische Standards:**
+- Primärexzision
+- Nachexzision mit
+  Sicherheitsabstand
+- Sentinel-Lymphknoten-
+  biopsie optional
+end note
+
+note right of Melanom_Sicherheitsabstand
+**Leitlinienbasiert:**
+Sicherheitsabstand abhängig
+von Breslow-Dicke
+(ESMO/NCCN Empfehlungen)
+end note
+
+note bottom of Melanom_LDH
+**Systemischer Marker:**
+Erhöhte LDH → M1c Stadium
+Prognostische Bedeutung bei
+metastasiertem Melanom
+end note
+
+@enduml

@@ -67,35 +67,7 @@ select
 
 ---
 
-Mapping Datensatz zu FHIR<tabs>
-  <tab title="Darstellung">{{tree, buttons}}</tab>
-  <tab title="Beschreibung"> 
-        @```
-        from
-	        StructureDefinition
-        where
-	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie'
-        select
-	        Beschreibung: description
-        with
-            no header
-        ```
-        @```
-        from 
-            StructureDefinition 
-        where 
-            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie' 
-        for 
-            differential.element 
-            where 
-                mustSupport = true 
-            select Feldname: id, Kurzbeschreibung: short, Hinweise: comment
-        ```
-  </tab>
-  <tab title="XML">{{xml}}</tab>
-  <tab title="JSON">{{json}}</tab>
-  <tab title="Link">{{link}}</tab>
-</tabs>
+Mapping Datensatz zu FHIR
 
 @```
 from StructureDefinition 
@@ -114,7 +86,7 @@ Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensa
 
 @```
 from StructureDefinition 
-where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie'  
+where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie'  
     for differential.element
     where mapping.identity='oBDS'
     select 
@@ -251,69 +223,59 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
 
 
 
-1.  Der Suchparameter "extension-bestrahlung-applikationsart" MUSS unterstützt werden:
+1.  Der Suchparameter "bestrahlung-applikationsart" MUSS unterstützt werden:
 
     Beispiele:
 
-    ```GET [base]/Procedure?extension-bestrahlung-applikationsart=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-bestrahlung-applikationsart|KLDR```
+    ```GET [base]/Procedure?bestrahlung-applikationsart=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart|KLDR```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.extension:Stellung" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).    
-
-
-1.  Der Suchparameter "extension-bestrahlung-strahlenart" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Procedure?extension-bestrahlung-strahlenart=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-bestrahlung-strahlenarart|PN```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.extension:Stellung" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).    
+    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.usedCode" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).    
 
 
-1.  Der Suchparameter "extension-bestrahlung-zielgebiet" MUSS unterstützt werden:
+1.  Der Suchparameter "bestrahlung-strahlenart" MUSS unterstützt werden:
 
     Beispiele:
 
-    ```GET [base]/Procedure?extension-bestrahlung-zielgebiet=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-bestrahlung-zielgebiet|4.9```
+    ```GET [base]/Procedure?bestrahlung-strahlenart=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart|PN```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.extension:Bestrahlung.extension:Applikationsart" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).
-
-1.  Der Suchparameter "extension-bestrahlung-zielgebiet-Lateralitaet" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Procedure?extension-bestrahlung-zielgebiet-Lateralitaet=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation|L```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.extension:Bestrahlung.extension:Zielgebiet_Lateralitaet" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"]
-(http://hl7.org/fhir/R4/search.html#token).
+    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.usedCode" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).    
 
 
-1.  Der Suchparameter "extension-bestrahlung-boost" MUSS unterstützt werden:
+1.  Der Suchparameter "bestrahlung-zielgebiet-lateralitaet" MUSS unterstützt werden:
 
     Beispiele:
 
-    ```GET [base]/Procedure?extension-bestrahlung-boost=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost|SIB```
+    ```GET [base]/Procedure?bestrahlung-zielgebiet-lateralitaet=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation|L```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.extension:Bestrahlung.extension:Boost" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"]
+    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.bodySite.extension:Seitenlokalisation" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
-1.  Der Suchparameter "extension-bestrahlung-einzeldosis" MUSS unterstützt werden:
 
-    Beispiele:
-
-    ```GET [base]/Procedure?extension-bestrahlung-einzeldosis=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-bestrahlung-einzeldosis```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.extension:Bestrahlung.extension:Einzeldosis" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Quantity Search"]
-
-1.  Der Suchparameter "extension-bestrahlung-gesamtdosis
-" MUSS unterstützt werden:
+1.  Der Suchparameter "bestrahlung-boost" MUSS unterstützt werden:
 
     Beispiele:
 
-    ```GET [base]/Procedure?extension-bestrahlung-gesamtdosis=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-bestrahlung-gesamtdosis```
+    ```GET [base]/Procedure?bestrahlung-boost=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost|SIB```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.extension:Bestrahlung.extension:Gesamtdosis" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Quantity Search"]
+    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.extension:Boost" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).
+
+1.  Der Suchparameter "bestrahlung-einzeldosis" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/Procedure?bestrahlung-einzeldosis=2|http://unitsofmeasure.org|Gy```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.extension:Einzeldosis" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Quantity Search"](http://hl7.org/fhir/R4/search.html#quantity).
+
+1.  Der Suchparameter "bestrahlung-gesamtdosis" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/Procedure?bestrahlung-gesamtdosis=ge50|http://unitsofmeasure.org|Gy```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.extension:Gesamtdosis" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Quantity Search"](http://hl7.org/fhir/R4/search.html#quantity).
 
 **Beispiele**
 
-{{json:mii-exa-onko-strahlentherapie}}
+{{json:mii-exa-onko-strahlentherapie-strahlentherapie-1}}
 
 ---

@@ -8,7 +8,16 @@
   },
   "extension": [
     {
-      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention"
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "K",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention",
+            "display": "kurativ"
+          }
+        ]
+      }
     }
   ],
   "status": "completed",
@@ -44,7 +53,7 @@
   },
   "reasonReference": [
     {
-      "reference": "Condition-PatientKimMusterperson-Diagnosis-1"
+      "reference": "Condition/PatientKimMusterperson-Diagnosis-1"
     }
   ]
 }

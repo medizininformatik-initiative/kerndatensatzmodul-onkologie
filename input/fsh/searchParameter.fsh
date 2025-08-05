@@ -154,67 +154,50 @@ Usage: #definition
 * type = #token
 * expression = "Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop').value"
 
-Instance: mii-sp-onko-procedure-ext-strahlentherapie-bs-applikationsart
+Instance: mii-sp-onko-procedure-strahlentherapie-applikationsart
 InstanceOf: SearchParameter
 Usage: #definition
 * insert SP_Publisher
 * insert LicenseCodeableCCBY40Instance
 * insert SP_Profile
 * insert Version
-* name = "MII_SP_Procedure_Extension_Strahlentherapie_Bestrahlung_Applikationsart"
-* description = "SearchParameter for Procedure.usedCode:applikationsart"
+* name = "MII_SP_Procedure_Strahlentherapie_Applikationsart"
+* description = "SearchParameter for Procedure.usedCode:Applikationsart"
 * status = #active 
 * experimental = true
 * date = 2024-04-15
 * code = #bestrahlung-applikationsart
 * base = #Procedure
 * type = #token
-* expression = "Procedure.usedCode.coding.where(system='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-cs-onko-strahlentherapie-bestrahlung-applikationsart')"
+* expression = "Procedure.usedCode.coding.where(system='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart')"
 
-Instance: mii-sp-onko-procedure-ext-strahlentherapie-bs-strahlenart
+Instance: mii-sp-onko-procedure-strahlentherapie-strahlenart
 InstanceOf: SearchParameter
 Usage: #definition
 * insert SP_Publisher
 * insert LicenseCodeableCCBY40Instance
 * insert SP_Profile
 * insert Version
-* name = "MII_SP_Procedure_Extension_Strahlentherapie_Bestrahlung_Strahlenart"
-* description = "SearchParameter for Procedure.usedCode:strahlenart"
+* name = "MII_SP_Procedure_Strahlentherapie_Strahlenart"
+* description = "SearchParameter for Procedure.usedCode:Strahlenart"
 * status = #active 
 * date = 2024-04-15
 * experimental = true
 * code = #bestrahlung-strahlenart
 * base = #Procedure
 * type = #token
-* expression = "Procedure.usedCode.coding.where(system='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-cs-onko-strahlentherapie-bestrahlung-strahlenart')"
+* expression = "Procedure.usedCode.coding.where(system='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart')"
 
-Instance: mii-sp-onko-procedure-ext-strahlentherapie-bs-zielgebiet
+// Removed mii-sp-onko-procedure-ext-strahlentherapie-bs-zielgebiet as bodySite is covered by MII-wide search parameters
+Instance: mii-sp-onko-procedure-strahlentherapie-lateralitaet
 InstanceOf: SearchParameter
 Usage: #definition
 * insert SP_Publisher
 * insert LicenseCodeableCCBY40Instance
 * insert SP_Profile
 * insert Version
-* name = "MII_SP_Procedure_Extension_Strahlentherapie_Bestrahlung_Zielgebiet"
-* description = "SearchParameter for Procedure.bodySite.coding:zielgebiet"
-* status = #active 
-* experimental = true
-* date = 2025-05-17
-* code = #bestrahlung-zielgebiet
-* base = #Procedure
-* type = #token
-* expression = "Procedure.bodySite.coding.where(system='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet')"
-
-// brauchen wir das oder ist das über BodySite ggfs. schon erfasst?
-Instance: mii-sp-onko-procedure-ext-strahlentherapie-bs-lateralitaet
-InstanceOf: SearchParameter
-Usage: #definition
-* insert SP_Publisher
-* insert LicenseCodeableCCBY40Instance
-* insert SP_Profile
-* insert Version
-* name = "MII_SP_Procedure_Extension_Strahlentherapie_Bestrahlung_Zielgebiet_Lateralitaet"
-* description = "SearchParameter for Procedure.extension:bestrahlung.extension:zielgebiet_Lateralitaet"
+* name = "MII_SP_Procedure_Strahlentherapie_Lateralitaet"
+* description = "SearchParameter for Procedure.bodySite.extension:Seitenlokalisation"
 * status = #active 
 * experimental = true
 * date = 2025-05-17
