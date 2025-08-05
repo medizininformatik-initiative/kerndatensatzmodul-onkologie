@@ -22,6 +22,40 @@ Hier sind alle Änderungen aufgelistet.
   - **Grund**: Molekulare Tumorboards benötigen detaillierte Medikamentenempfehlungen über oBDS-Kategorisierung hinaus
   - **Anwendungsfälle**: Pharmazeutische Klassen ("beliebiger CDK4/6 Inhibitor") und spezifische Medikamentenauswahl mit Alternativen
 
+### Systemische Therapie Erweiterungen
+
+#### Protokoll-Implementierung
+- **usedCode-Implementierung**: Strukturierte Dokumentation von Therapieprotokollen in SystemischeTherapie-Procedure
+  - **Grund**: Ablösung der unstrukturierten `note.text` Protokollangaben durch standardisierte Kodierung
+  - **Umfang**: Vollständiges CodeSystem mit 96 Protokollen aus oBDS Umsetzungsleitfaden (FOLFOX, R-CHOP, AC, etc.)
+  - **Technische Umsetzung**: `Procedure.usedCode` mit extensible Binding an `mii-vs-onko-systemische-therapie-protokolle`
+  - **Substanzkombinationen**: Jedes Protokoll dokumentiert enthaltene Wirkstoffe (z.B. "AC" → "Cyclophosphamid, Doxorubicin")
+  - **oBDS-Mapping**: Protokollfeld 16.6 im oBDS-Mapping hinzugefügt
+  - **Suchparameter**: Neuer `used-code` SearchParameter für protokollbasierte Recherchen
+  - **Community-Prozess**: Neue Protokolle über GitHub Issues beantragbar zur standortübergreifenden Harmonisierung
+
+#### UNII-Kodierung für experimentelle Substanzen
+- **Dual-Coding-Support**: MedicationStatement-Profil erweitert um UNII-Slice zusätzlich zum bestehenden ATC-Slice
+  - **Grund**: Unterstützung experimenteller/neuerer Substanzen ohne etablierte ATC-Codes
+  - **Technische Umsetzung**: 
+    - Markierung des bestehenden `atcClassDe` Slice als Must Support
+    - Neuer `unii` Slice mit extensible Binding an UNII-ValueSet
+  - **ValueSet**: `mii-vs-onko-systemische-therapie-substanzen-unii` mit 100+ UNII-Codes
+  - **Beispiel**: Iberdomide (UNII: 8V66F27X44) als experimenteller Immunmodulator
+  - **Duplikate bereinigt**: ALNUCTAMAB und AMATUXIMAB aus allgemeiner Sektion entfernt (verbleiben in IM-Kategorie)
+
+#### ATC-Code Transitionen und Post-hoc Mapping
+- **Dokumentation temporaler ATC-Änderungen**: Neue IG-Seite für Terminologie-Besonderheiten
+  - **Quizartinib-Beispiel**: L01XE52 (bis 2020) → L01EX11 (ab 2021)
+  - **Weitere Transitionen**: Abemaciclib, Acalabrutinib, Adalimumab dokumentiert
+  - **Jahresspezifische ValueSets**: Unterstützung historischer Validierung
+
+- **Post-hoc Mapping (KONTROVERS)**: Empfehlung für DIZ-basierte Freitext-zu-ATC-Annotation
+  - **Erlaubt wenn**: Klare Provenance-Dokumentation vorhanden
+  - **Verwendung aktueller Codes**: Bei Post-Annotation aktuelle ATC-Codes verwenden
+  - **Originaltext erhalten**: Im `medicationCodeableConcept.text` Element
+  - **Kommentierungspunkt hinzugefügt**: Explizit als "EXTREM KONTROVERS" markiert
+
 ### Verlauf-Profil Anpassungen
 - **Component-Kardinalität**: Änderung von `component 1..*` zu `component 0..*`
   - **Grund**: GitHub Issue #202 - Unterstützung für "K - keine Änderung" Fälle und hämatologische Krebsarten ohne TNM-Anwendbarkeit

@@ -52,3 +52,33 @@ Diese Seite sammelt spezifische Punkte, für die gezieltes Feedback in der Komme
   - **Technische Lösung**: Separates CodeSystem für oBDS 2014 mit eigener URI - semantische Konflikte über Versionskennzeichnung vermeidbar
   
   **Kommentierungsfrage**: Ist die gewählte Lösung (separate CodeSystems mit kombiniertem ValueSet) für die Abwärtskompatibilität angemessen, oder sollten alternative Migrationsansätze betrachtet werden?
+
+### Post-hoc ATC-Kodierung durch Datenintegrationszentren (KONTROVERS)
+
+* **Freitext-zu-ATC-Mapping**: Dürfen Datenintegrationszentren (DIZ) nachträglich Freitext-Medikationsdaten aus historischen oBDS-Daten auf ATC-Codes mappen?
+  
+  **Vorgeschlagener Ansatz (EXTREM KONTROVERS)**:
+  - DIZ **dürfen** Post-Annotation durchführen, wenn sie dies klar als solche kennzeichnen
+  - Bei Post-Annotation sollten **aktuelle** ATC-Codes verwendet werden, nicht historische
+  - Die originale Freitextinformation muss erhalten bleiben
+  - Provenance-Dokumentation ist zwingend erforderlich
+  
+  **Pro-Argumente**:
+  - Verbesserte Datenqualität für Analysen
+  - Einheitlichere Kodierung über Standorte hinweg
+  - Vermeidung von Informationsverlust bei Altdaten
+  - Pragmatische Lösung für reale Datenintegrationsprobleme
+  
+  **Contra-Argumente**:
+  - Verfälschung historischer Dokumentation
+  - Inkonsistenz mit Original-Therapiezeitpunkt (z.B. Quizartinib 2020 mit Code von 2021)
+  - Potenzielle Fehlinterpretationen bei retrospektiven Analysen
+  - Abweichung von etablierten Dokumentationsstandards
+  
+  **Beispiel-Kontroverse**: Ein Patient erhielt 2020 Quizartinib (damals ATC L01XE52). Das DIZ kodiert 2024 nachträglich mit dem aktuellen Code L01EX11. Ist dies akzeptabel mit entsprechender Provenance-Markierung?
+  
+  **Kernfragen für Kommentierung**:
+  1. Ist Post-Annotation von Freitext zu ATC-Codes grundsätzlich erlaubt?
+  2. Falls ja, welche ATC-Version soll verwendet werden (historisch korrekt vs. aktuell)?
+  3. Welche Provenance-Standards sind minimal erforderlich?
+  4. Sollte es eine zentrale Mapping-Tabelle für häufige Freitext-Einträge geben?

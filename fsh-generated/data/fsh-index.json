@@ -360,6 +360,14 @@
     "endLine": 15
   },
   {
+    "outputFile": "CodeSystem-mii-cs-onko-systemische-therapie-protokolle.json",
+    "fshName": "MII_CS_Onko_Systemische_Therapie_Protokolle",
+    "fshType": "CodeSystem",
+    "fshFile": "oBDS\\16_SystemischeTherapie\\mii-cs-onko-systemische-therapie-protokolle.fsh",
+    "startLine": 1,
+    "endLine": 179
+  },
+  {
     "outputFile": "CodeSystem-mii-cs-onko-therapie-ende-grund.json",
     "fshName": "MII_CS_Onko_Therapie_Ende_Grund",
     "fshType": "CodeSystem",
@@ -872,20 +880,28 @@
     "endLine": 561
   },
   {
+    "outputFile": "MedicationStatement-mii-exa-onko-medikation-iberdomide-unii.json",
+    "fshName": "mii-exa-onko-medikation-iberdomide-unii",
+    "fshType": "Instance",
+    "fshFile": "oBDS\\16_SystemischeTherapie\\mii-exa-onko-medikation-iberdomide-unii.fsh",
+    "startLine": 2,
+    "endLine": 15
+  },
+  {
     "outputFile": "MedicationStatement-mii-exa-onko-systemische-therapie-medikation1.json",
     "fshName": "mii-exa-onko-systemische-therapie-medikation1",
     "fshType": "Instance",
     "fshFile": "oBDS\\16_SystemischeTherapie\\mii-exa-onko-systemische-therapie.fsh",
-    "startLine": 20,
-    "endLine": 35
+    "startLine": 21,
+    "endLine": 36
   },
   {
     "outputFile": "MedicationStatement-mii-exa-onko-systemische-therapie-medikation2.json",
     "fshName": "mii-exa-onko-systemische-therapie-medikation2",
     "fshType": "Instance",
     "fshFile": "oBDS\\16_SystemischeTherapie\\mii-exa-onko-systemische-therapie.fsh",
-    "startLine": 37,
-    "endLine": 52
+    "startLine": 38,
+    "endLine": 53
   },
   {
     "outputFile": "Observation-PatientKimMusterperson-Verlauf-2022-01-22.json",
@@ -1661,7 +1677,7 @@
     "fshType": "Instance",
     "fshFile": "oBDS\\16_SystemischeTherapie\\mii-exa-onko-systemische-therapie.fsh",
     "startLine": 1,
-    "endLine": 18
+    "endLine": 19
   },
   {
     "outputFile": "Procedure-mii-exa-onko-tdm1-option.json",
@@ -2421,7 +2437,7 @@
     "fshType": "Profile",
     "fshFile": "oBDS\\16_SystemischeTherapie\\mii-pr-onko-systemische-therapie-medikation.fsh",
     "startLine": 1,
-    "endLine": 55
+    "endLine": 65
   },
   {
     "outputFile": "StructureDefinition-mii-pr-onko-systemische-therapie.json",
@@ -2429,7 +2445,7 @@
     "fshType": "Profile",
     "fshFile": "oBDS\\16_SystemischeTherapie\\mii-pr-onko-systemische-therapie.fsh",
     "startLine": 1,
-    "endLine": 77
+    "endLine": 86
   },
   {
     "outputFile": "StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie.json",
@@ -3032,12 +3048,100 @@
     "endLine": 14
   },
   {
+    "outputFile": "ValueSet-mii-vs-onko-systemische-therapie-protokolle.json",
+    "fshName": "MII_VS_Onko_Systemische_Therapie_Protokolle",
+    "fshType": "ValueSet",
+    "fshFile": "oBDS\\16_SystemischeTherapie\\mii-vs-onko-systemische-therapie-protokolle.fsh",
+    "startLine": 1,
+    "endLine": 11
+  },
+  {
     "outputFile": "ValueSet-mii-vs-onko-systemische-therapie-stellungzurop.json",
     "fshName": "MII_VS_Onko_Systemische_Therapie_StellungZurOp",
     "fshType": "ValueSet",
     "fshFile": "oBDS\\16_SystemischeTherapie\\mii-vs-onko-systemische-therapie-stellungzurop.fsh",
     "startLine": 1,
     "endLine": 15
+  },
+  {
+    "outputFile": "ValueSet-mii-vs-onko-systemische-therapie-substanzen-2018.json",
+    "fshName": "MII_VS_Onko_Systemische_Therapie_Substanzen_2018",
+    "fshType": "ValueSet",
+    "fshFile": "oBDS\\16_SystemischeTherapie\\mii-vs-onko-systemische-therapie-substanzen-2018.fsh",
+    "startLine": 10,
+    "endLine": 315
+  },
+  {
+    "outputFile": "ValueSet-mii-vs-onko-systemische-therapie-substanzen-2019.json",
+    "fshName": "MII_VS_Onko_Systemische_Therapie_Substanzen_2019",
+    "fshType": "ValueSet",
+    "fshFile": "oBDS\\16_SystemischeTherapie\\mii-vs-onko-systemische-therapie-substanzen-2019.fsh",
+    "startLine": 10,
+    "endLine": 326
+  },
+  {
+    "outputFile": "ValueSet-mii-vs-onko-systemische-therapie-substanzen-2020.json",
+    "fshName": "MII_VS_Onko_Systemische_Therapie_Substanzen_2020",
+    "fshType": "ValueSet",
+    "fshFile": "oBDS\\16_SystemischeTherapie\\mii-vs-onko-systemische-therapie-substanzen-2020.fsh",
+    "startLine": 10,
+    "endLine": 339
+  },
+  {
+    "outputFile": "ValueSet-mii-vs-onko-systemische-therapie-substanzen-2021.json",
+    "fshName": "MII_VS_Onko_Systemische_Therapie_Substanzen_2021",
+    "fshType": "ValueSet",
+    "fshFile": "oBDS\\16_SystemischeTherapie\\mii-vs-onko-systemische-therapie-substanzen-2021.fsh",
+    "startLine": 10,
+    "endLine": 360
+  },
+  {
+    "outputFile": "ValueSet-mii-vs-onko-systemische-therapie-substanzen-2022.json",
+    "fshName": "MII_VS_Onko_Systemische_Therapie_Substanzen_2022",
+    "fshType": "ValueSet",
+    "fshFile": "oBDS\\16_SystemischeTherapie\\mii-vs-onko-systemische-therapie-substanzen-2022.fsh",
+    "startLine": 10,
+    "endLine": 414
+  },
+  {
+    "outputFile": "ValueSet-mii-vs-onko-systemische-therapie-substanzen-2023.json",
+    "fshName": "MII_VS_Onko_Systemische_Therapie_Substanzen_2023",
+    "fshType": "ValueSet",
+    "fshFile": "oBDS\\16_SystemischeTherapie\\mii-vs-onko-systemische-therapie-substanzen-2023.fsh",
+    "startLine": 10,
+    "endLine": 430
+  },
+  {
+    "outputFile": "ValueSet-mii-vs-onko-systemische-therapie-substanzen-2024.json",
+    "fshName": "MII_VS_Onko_Systemische_Therapie_Substanzen_2024",
+    "fshType": "ValueSet",
+    "fshFile": "oBDS\\16_SystemischeTherapie\\mii-vs-onko-systemische-therapie-substanzen-2024.fsh",
+    "startLine": 10,
+    "endLine": 438
+  },
+  {
+    "outputFile": "ValueSet-mii-vs-onko-systemische-therapie-substanzen-2025.json",
+    "fshName": "MII_VS_Onko_Systemische_Therapie_Substanzen_2025",
+    "fshType": "ValueSet",
+    "fshFile": "oBDS\\16_SystemischeTherapie\\mii-vs-onko-systemische-therapie-substanzen-2025.fsh",
+    "startLine": 10,
+    "endLine": 442
+  },
+  {
+    "outputFile": "ValueSet-mii-vs-onko-systemische-therapie-substanzen-unii.json",
+    "fshName": "MII_VS_Onko_Systemische_Therapie_Substanzen_UNII",
+    "fshType": "ValueSet",
+    "fshFile": "oBDS\\16_SystemischeTherapie\\mii-vs-onko-systemische-therapie-substanzen-unii.fsh",
+    "startLine": 1,
+    "endLine": 118
+  },
+  {
+    "outputFile": "ValueSet-mii-vs-onko-systemische-therapie-substanzen.json",
+    "fshName": "MII_VS_Onko_Systemische_Therapie_Substanzen",
+    "fshType": "ValueSet",
+    "fshFile": "oBDS\\16_SystemischeTherapie\\mii-vs-onko-systemische-therapie-substanzen.fsh",
+    "startLine": 8,
+    "endLine": 518
   },
   {
     "outputFile": "ValueSet-mii-vs-onko-therapieabweichung.json",

@@ -159,6 +159,14 @@
       },
       {
         "reference": {
+          "reference": "MedicationStatement/mii-exa-onko-medikation-iberdomide-unii"
+        },
+        "name": "Medikation Iberdomide (UNII)",
+        "description": "Beispiel einer systemischen Therapie Medikation mit UNII-Code für experimentellen Wirkstoff ohne ATC-Code",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
+      },
+      {
+        "reference": {
           "reference": "Procedure/mii-exa-onko-strahlentherapie-2014-prostata-mit-lk"
         },
         "name": "Migration Beispiel: Prostata mit Lymphknoten (oBDS 2014 → 2021)",
@@ -619,6 +627,14 @@
         },
         "name": "MII CS Onkologie Studienteilnahme",
         "description": "oBDS-spezifisches Codesystem den Status der Studienteilnahme",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-systemische-therapie-protokolle"
+        },
+        "name": "MII CS Onkologie Systemische Therapie Protokolle",
+        "description": "oBDS-spezifisches Codesystem für Protokolle systemischer Therapien",
         "exampleBoolean": false
       },
       {
@@ -1783,10 +1799,98 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-onko-systemische-therapie-protokolle"
+        },
+        "name": "MII VS Onkologie Systemische Therapie Protokolle",
+        "description": "oBDS-spezifisches ValueSet für Protokolle systemischer Therapien",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-systemische-therapie-stellungzurop"
         },
         "name": "MII VS Onkologie Systemische Therapie Stellung",
         "description": "oBDS-spezifisches ValueSet für Klassifikation von Stellung zur OP",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-systemische-therapie-substanzen"
+        },
+        "name": "MII VS Onkologie Systemische Therapie Substanzen",
+        "description": "Validierte ATC-Codes für Substanzen der systemischen Therapie basierend auf oBDS Umsetzungsleitfaden. Automatisch generiert und gegen MII-Terminologieserver validiert.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-systemische-therapie-substanzen-unii"
+        },
+        "name": "MII VS Onkologie Systemische Therapie Substanzen (UNII)",
+        "description": "UNII-Codes für Substanzen der systemischen Therapie ohne ATC-Code. Ergänzung zum ATC-basierten Haupt-ValueSet für neuere und experimentelle onkologische Wirkstoffe.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-systemische-therapie-substanzen-2018"
+        },
+        "name": "MII VS Onkologie Systemische Therapie Substanzen ATC 2018",
+        "description": "ATC-Codes für Substanzen der systemischen Therapie, validiert gegen ATC-DE Version 2018. Für historische Datenvalidierung.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-systemische-therapie-substanzen-2019"
+        },
+        "name": "MII VS Onkologie Systemische Therapie Substanzen ATC 2019",
+        "description": "ATC-Codes für Substanzen der systemischen Therapie, validiert gegen ATC-DE Version 2019. Für historische Datenvalidierung.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-systemische-therapie-substanzen-2020"
+        },
+        "name": "MII VS Onkologie Systemische Therapie Substanzen ATC 2020",
+        "description": "ATC-Codes für Substanzen der systemischen Therapie, validiert gegen ATC-DE Version 2020. Für historische Datenvalidierung.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-systemische-therapie-substanzen-2021"
+        },
+        "name": "MII VS Onkologie Systemische Therapie Substanzen ATC 2021",
+        "description": "ATC-Codes für Substanzen der systemischen Therapie, validiert gegen ATC-DE Version 2021. Für historische Datenvalidierung.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-systemische-therapie-substanzen-2022"
+        },
+        "name": "MII VS Onkologie Systemische Therapie Substanzen ATC 2022",
+        "description": "ATC-Codes für Substanzen der systemischen Therapie, validiert gegen ATC-DE Version 2022. Für historische Datenvalidierung.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-systemische-therapie-substanzen-2023"
+        },
+        "name": "MII VS Onkologie Systemische Therapie Substanzen ATC 2023",
+        "description": "ATC-Codes für Substanzen der systemischen Therapie, validiert gegen ATC-DE Version 2023. Für historische Datenvalidierung.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-systemische-therapie-substanzen-2024"
+        },
+        "name": "MII VS Onkologie Systemische Therapie Substanzen ATC 2024",
+        "description": "ATC-Codes für Substanzen der systemischen Therapie, validiert gegen ATC-DE Version 2024. Für historische Datenvalidierung.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-systemische-therapie-substanzen-2025"
+        },
+        "name": "MII VS Onkologie Systemische Therapie Substanzen ATC 2025",
+        "description": "ATC-Codes für Substanzen der systemischen Therapie, validiert gegen ATC-DE Version 2025. Für historische Datenvalidierung.",
         "exampleBoolean": false
       },
       {
