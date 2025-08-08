@@ -118,6 +118,12 @@
         }
       },
       {
+        "id": "Observation.value[x].coding:DefinitionOBDS.system",
+        "path": "Observation.value[x].coding.system",
+        "min": 1,
+        "patternUri": "http://loinc.org"
+      },
+      {
         "id": "Observation.value[x].coding:DefinitionLeitlinie",
         "path": "Observation.value[x].coding",
         "sliceName": "DefinitionLeitlinie",
@@ -128,6 +134,12 @@
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-rezeptorstatus-leitlinie"
         }
+      },
+      {
+        "id": "Observation.value[x].coding:DefinitionLeitlinie.system",
+        "path": "Observation.value[x].coding.system",
+        "min": 1,
+        "patternUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-rezeptorstatus-leitlinie"
       },
       {
         "id": "Observation.component",

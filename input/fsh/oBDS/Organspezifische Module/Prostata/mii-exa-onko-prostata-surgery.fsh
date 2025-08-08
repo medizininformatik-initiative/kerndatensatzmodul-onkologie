@@ -1,4 +1,4 @@
-Instance: mii-exa-onko-prostata-surgery-1
+Instance: mii-exa-onko-prostata-surgery-2
 InstanceOf: MII_PR_Onko_Operation
 Usage: #example
 Title: "MII EXA Onko Prostata Operation"
@@ -16,7 +16,7 @@ Description: "Beispiel für eine Prostatektomie in der Onkologie"
 
 * reasonReference = Reference(mii-exa-onko-prostata-diagnose)
 
-* extension[OPIntention].valueCodeableConcept = $mii-cs-onko-intention#K "kurativ"
-* extension[OPKomplikation].valueCodeableConcept = $mii-cs-onko-operation-komplikation#K "keine Komplikationen"
+* extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K "kurativ"
+* complication[compl_obds].coding = $mii-cs-onko-operation-komplikation#N "nein"
 
 * outcome.coding = $mii-cs-onko-residualstatus#R0 "Kein Residualtumor"

@@ -1,7 +1,7 @@
 Instance: mii-exa-onko-prostata-surgery-1
 InstanceOf: MII_PR_Onko_Operation
 Usage: #example
-* status = #final
+* status = #completed
 * category.coding = $SCT#387713003 "Surgical procedure"
 * code.coding[ops] = $OPS#5-604 "Radikale Prostatovesikulektomie"
 * code.coding[ops].version = "OPS 2024"

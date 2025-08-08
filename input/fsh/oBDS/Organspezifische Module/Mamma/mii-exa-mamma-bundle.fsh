@@ -18,6 +18,7 @@ Usage: #example
 Instance: mii-exa-onko-mamma-diagnose
 InstanceOf: MII_PR_Onko_Diagnose_Primaertumor
 Usage: #example
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
 * clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed
 * code.coding[icd10-gm] = $ICD10GM#C50.3 "Bösartige Neubildung: Unterer innerer Quadrant der Brustdrüse"

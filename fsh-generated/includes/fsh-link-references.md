@@ -113,6 +113,7 @@
 [mii-exa-onko-melanom-sicherheitsabstand]: Observation-mii-exa-onko-melanom-sicherheitsabstand.html
 [mii-exa-onko-melanom-ulzeration]: Observation-mii-exa-onko-melanom-ulzeration.html
 [mii-exa-onko-prostata-example-bundle-1]: Bundle-mii-exa-onko-prostata-example-bundle-1.html
+[mii-exa-onko-prostata-surgery-2]: Procedure-mii-exa-onko-prostata-surgery-2.html
 [MII_LM_MVGenomSeq_Onkologie]: StructureDefinition-mii-lm-mvgenomseq-onkologie.html
 [MII_LM_Onko]: StructureDefinition-mii-lm-onko.html
 [MII_LM_Onko_Organspezifische_Zusatzmodule]: StructureDefinition-mii-lm-onko-organspezifische-zusatzmodule.html

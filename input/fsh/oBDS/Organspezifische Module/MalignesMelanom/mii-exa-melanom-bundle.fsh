@@ -44,38 +44,38 @@ Description: "Beispiel-Bundle für Malignes Melanom mit allen spezifischen Profi
 * timestamp = "2024-03-25T10:00:00+01:00"
 
 // Core Resources
-* entry[0].fullUrl = "Patient/mii-exa-onko-melanom-bundle-patient"
+* entry[0].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-melanom-bundle-patient"
 * entry[=].resource = mii-exa-onko-melanom-bundle-patient
 * entry[=].request.method = #POST
 * entry[=].request.url = "Patient"
 
-* entry[+].fullUrl = "Condition/mii-exa-onko-melanom-diagnose"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-melanom-diagnose"
 * entry[=].resource = mii-exa-onko-melanom-diagnose
 * entry[=].request.method = #POST
 * entry[=].request.url = "Condition"
 
-* entry[+].fullUrl = "Encounter/mii-exa-onko-melanom-bundle-encounter"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-melanom-bundle-encounter"
 * entry[=].resource = mii-exa-onko-melanom-bundle-encounter
 * entry[=].request.method = #POST
 * entry[=].request.url = "Encounter"
 
 // Melanom-Specific Examples (using existing individual examples)
-* entry[+].fullUrl = "Observation/mii-exa-onko-melanom-sicherheitsabstand"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-melanom-sicherheitsabstand"
 * entry[=].resource = mii-exa-onko-melanom-sicherheitsabstand
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
 
-* entry[+].fullUrl = "Observation/mii-exa-onko-melanom-breslow-tiefe"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-melanom-breslow-tiefe"
 * entry[=].resource = mii-exa-onko-melanom-breslow-tiefe
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
 
-* entry[+].fullUrl = "Observation/mii-exa-onko-melanom-ulzeration"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-melanom-ulzeration"
 * entry[=].resource = mii-exa-onko-melanom-ulzeration
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
 
-* entry[+].fullUrl = "Observation/mii-exa-onko-melanom-ldh"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-melanom-ldh"
 * entry[=].resource = mii-exa-onko-melanom-ldh
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"

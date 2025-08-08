@@ -15,7 +15,7 @@ Description: "Dieses Profil beschreibt den Clavien-Dindo-Score für die Prostate
 
 * focus MS
 * focus ^slicing.discriminator.type = #profile
-* focus ^slicing.discriminator.path = "$this"
+* focus ^slicing.discriminator.path = "resolve()"
 * focus ^slicing.rules = #open
 * focus ^slicing.description = "Slice to differentiate between focus condition and focus procedure"
 * focus ^slicing.ordered = false

@@ -6,19 +6,19 @@
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
     ]
   },
-  "status": "completed",
-  "subject": {
-    "reference": "Patient/example"
-  },
   "medicationCodeableConcept": {
     "coding": [
       {
-        "code": "8V66F27X44",
         "system": "http://fdasis.nlm.nih.gov/srs/unii",
+        "code": "8V66F27X44",
         "display": "IBERDOMIDE"
       }
     ],
     "text": "Iberdomide (experimenteller Immunmodulator)"
+  },
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/example"
   },
   "partOf": [
     {

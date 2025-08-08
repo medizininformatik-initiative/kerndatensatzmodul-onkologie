@@ -14,7 +14,7 @@
   "timestamp": "2024-03-25T10:00:00+01:00",
   "entry": [
     {
-      "fullUrl": "Patient/mii-exa-onko-prostata-bundle-patient",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-prostata-bundle-patient",
       "resource": {
         "resourceType": "Patient",
         "id": "mii-exa-onko-prostata-bundle-patient",
@@ -33,7 +33,7 @@
       }
     },
     {
-      "fullUrl": "Condition/mii-exa-onko-prostata-diagnose",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-prostata-diagnose",
       "resource": {
         "resourceType": "Condition",
         "id": "mii-exa-onko-prostata-diagnose",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "fullUrl": "Encounter/mii-exa-onko-prostata-bundle-encounter",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-prostata-bundle-encounter",
       "resource": {
         "resourceType": "Encounter",
         "id": "mii-exa-onko-prostata-bundle-encounter",
@@ -105,7 +105,7 @@
       }
     },
     {
-      "fullUrl": "Observation/mii-exa-onko-prostata-psa-diagnose-1",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-psa-diagnose-1",
       "resource": {
         "resourceType": "Observation",
         "id": "mii-exa-onko-prostata-psa-diagnose-1",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "fullUrl": "Observation/mii-exa-onko-prostata-anzahl-stanzen-1",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-anzahl-stanzen-1",
       "resource": {
         "resourceType": "Observation",
         "id": "mii-exa-onko-prostata-anzahl-stanzen-1",
@@ -180,7 +180,7 @@
       }
     },
     {
-      "fullUrl": "Observation/mii-exa-onko-prostata-anzahl-positiver-stanzen-1",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-anzahl-positiver-stanzen-1",
       "resource": {
         "resourceType": "Observation",
         "id": "mii-exa-onko-prostata-anzahl-positiver-stanzen-1",
@@ -216,7 +216,7 @@
       }
     },
     {
-      "fullUrl": "Observation/mii-exa-onko-prostata-ca-befall-stanze-1",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-ca-befall-stanze-1",
       "resource": {
         "resourceType": "Observation",
         "id": "mii-exa-onko-prostata-ca-befall-stanze-1",
@@ -258,7 +258,7 @@
       }
     },
     {
-      "fullUrl": "Observation/mii-exa-onko-prostata-gleason-pattern-grade-group-1",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-gleason-pattern-grade-group-1",
       "resource": {
         "resourceType": "Observation",
         "id": "mii-exa-onko-prostata-gleason-pattern-grade-group-1",
@@ -310,7 +310,7 @@
       }
     },
     {
-      "fullUrl": "Observation/mii-exa-onko-prostata-gleason-pattern-primary-1",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-gleason-pattern-primary-1",
       "resource": {
         "resourceType": "Observation",
         "id": "mii-exa-onko-prostata-gleason-pattern-primary-1",
@@ -354,7 +354,7 @@
       }
     },
     {
-      "fullUrl": "Observation/mii-exa-onko-prostata-gleason-pattern-secondary-1",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-gleason-pattern-secondary-1",
       "resource": {
         "resourceType": "Observation",
         "id": "mii-exa-onko-prostata-gleason-pattern-secondary-1",
@@ -398,7 +398,7 @@
       }
     },
     {
-      "fullUrl": "Observation/mii-exa-onko-prostata-surgical-complication-1",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-surgical-complication-1",
       "resource": {
         "resourceType": "Observation",
         "id": "mii-exa-onko-prostata-surgical-complication-1",
@@ -416,6 +416,20 @@
             }
           ]
         },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "1367522003",
+              "display": "Clavien-Dindo classification grade IIIa (finding)"
+            },
+            {
+              "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-prostata-postsurgical-complications",
+              "code": "J",
+              "display": "Ja"
+            }
+          ]
+        },
         "status": "final",
         "subject": {
           "reference": "Patient/mii-exa-onko-prostata-bundle-patient"
@@ -428,21 +442,7 @@
             "reference": "Procedure/mii-exa-onko-prostata-surgery-1"
           }
         ],
-        "effectiveDateTime": "2024-06-24",
-        "valueCodeableConcept": {
-          "coding": [
-            {
-              "code": "1367522003",
-              "system": "http://snomed.info/sct",
-              "display": "Clavien-Dindo classification grade IIIa (finding)"
-            },
-            {
-              "code": "J",
-              "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-prostata-postsurgical-complications",
-              "display": "Ja"
-            }
-          ]
-        }
+        "effectiveDateTime": "2024-06-24"
       },
       "request": {
         "method": "POST",
@@ -450,7 +450,7 @@
       }
     },
     {
-      "fullUrl": "Procedure/mii-exa-onko-prostata-surgery-1",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-prostata-surgery-1",
       "resource": {
         "resourceType": "Procedure",
         "id": "mii-exa-onko-prostata-surgery-1",
@@ -483,7 +483,7 @@
             }
           ]
         },
-        "status": "final",
+        "status": "completed",
         "category": {
           "coding": [
             {
