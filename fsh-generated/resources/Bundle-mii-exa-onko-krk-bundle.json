@@ -14,7 +14,7 @@
   "timestamp": "2024-03-25T10:00:00+01:00",
   "entry": [
     {
-      "fullUrl": "Patient/mii-exa-onko-krk-bundle-patient",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-krk-bundle-patient",
       "resource": {
         "resourceType": "Patient",
         "id": "mii-exa-onko-krk-bundle-patient",
@@ -33,7 +33,7 @@
       }
     },
     {
-      "fullUrl": "Condition/mii-exa-onko-krk-diagnose",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-krk-diagnose",
       "resource": {
         "resourceType": "Condition",
         "id": "mii-exa-onko-krk-diagnose",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "fullUrl": "Encounter/mii-exa-onko-krk-bundle-encounter",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-krk-bundle-encounter",
       "resource": {
         "resourceType": "Encounter",
         "id": "mii-exa-onko-krk-bundle-encounter",
@@ -105,7 +105,7 @@
       }
     },
     {
-      "fullUrl": "Observation/mii-exa-onko-krk-abstand-tumor-anokutanlinie",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-krk-abstand-tumor-anokutanlinie",
       "resource": {
         "resourceType": "Observation",
         "id": "mii-exa-onko-krk-abstand-tumor-anokutanlinie",
@@ -131,14 +131,14 @@
         },
         "status": "final",
         "subject": {
-          "reference": "Patient/example"
+          "reference": "Patient/mii-exa-onko-krk-bundle-patient"
         },
         "encounter": {
-          "reference": "Encounter/example"
+          "reference": "Encounter/mii-exa-onko-krk-bundle-encounter"
         },
         "focus": [
           {
-            "reference": "Condition/mii-exa-onko-diagnose-primaertumor"
+            "reference": "Condition/mii-exa-onko-krk-diagnose"
           }
         ],
         "effectiveDateTime": "2024-03-10T14:30:00+01:00"
@@ -149,7 +149,7 @@
       }
     },
     {
-      "fullUrl": "Observation/mii-exa-onko-krk-abstand-circumferelle-resektionsebene",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-krk-abstand-circumferelle-resektionsebene",
       "resource": {
         "resourceType": "Observation",
         "id": "mii-exa-onko-krk-abstand-circumferelle-resektionsebene",
@@ -175,14 +175,14 @@
           ]
         },
         "subject": {
-          "reference": "Patient/example"
+          "reference": "Patient/mii-exa-onko-krk-bundle-patient"
         },
         "encounter": {
-          "reference": "Encounter/example"
+          "reference": "Encounter/mii-exa-onko-krk-bundle-encounter"
         },
         "focus": [
           {
-            "reference": "Condition/mii-exa-onko-diagnose-primaertumor"
+            "reference": "Condition/mii-exa-onko-krk-diagnose"
           }
         ],
         "effectiveDateTime": "2024-03-20T10:15:00+01:00"
@@ -193,7 +193,7 @@
       }
     },
     {
-      "fullUrl": "Observation/mii-exa-onko-krk-abstand-resektionsrand-aboral",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-krk-abstand-resektionsrand-aboral",
       "resource": {
         "resourceType": "Observation",
         "id": "mii-exa-onko-krk-abstand-resektionsrand-aboral",
@@ -219,14 +219,14 @@
           ]
         },
         "subject": {
-          "reference": "Patient/example"
+          "reference": "Patient/mii-exa-onko-krk-bundle-patient"
         },
         "encounter": {
-          "reference": "Encounter/example"
+          "reference": "Encounter/mii-exa-onko-krk-bundle-encounter"
         },
         "focus": [
           {
-            "reference": "Condition/mii-exa-onko-diagnose-primaertumor"
+            "reference": "Condition/mii-exa-onko-krk-diagnose"
           }
         ],
         "effectiveDateTime": "2024-03-20T10:15:00+01:00"
@@ -237,7 +237,7 @@
       }
     },
     {
-      "fullUrl": "Observation/mii-exa-onko-krk-abstand-mesorektale-fascie",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-krk-abstand-mesorektale-fascie",
       "resource": {
         "resourceType": "Observation",
         "id": "mii-exa-onko-krk-abstand-mesorektale-fascie",
@@ -263,14 +263,14 @@
         },
         "status": "final",
         "subject": {
-          "reference": "Patient/example"
+          "reference": "Patient/mii-exa-onko-krk-bundle-patient"
         },
         "encounter": {
-          "reference": "Encounter/example"
+          "reference": "Encounter/mii-exa-onko-krk-bundle-encounter"
         },
         "focus": [
           {
-            "reference": "Condition/mii-exa-onko-diagnose-primaertumor"
+            "reference": "Condition/mii-exa-onko-krk-diagnose"
           }
         ],
         "effectiveDateTime": "2024-03-12T16:00:00+01:00"
@@ -281,7 +281,7 @@
       }
     },
     {
-      "fullUrl": "Observation/mii-exa-onko-krk-anastomoseninsuffizienz",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-krk-anastomoseninsuffizienz",
       "resource": {
         "resourceType": "Observation",
         "id": "mii-exa-onko-krk-anastomoseninsuffizienz",
@@ -301,10 +301,10 @@
         },
         "status": "final",
         "subject": {
-          "reference": "Patient/example"
+          "reference": "Patient/mii-exa-onko-krk-bundle-patient"
         },
         "encounter": {
-          "reference": "Encounter/example"
+          "reference": "Encounter/mii-exa-onko-krk-bundle-encounter"
         },
         "focus": [
           {
@@ -328,7 +328,7 @@
       }
     },
     {
-      "fullUrl": "Observation/mii-exa-onko-krk-asa-klassifikation",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-krk-asa-klassifikation",
       "resource": {
         "resourceType": "Observation",
         "id": "mii-exa-onko-krk-asa-klassifikation",
@@ -342,17 +342,17 @@
             {
               "code": "97816-3",
               "system": "http://loinc.org",
-              "display": "American Society of Anesthesiologists physical status score"
+              "display": "American society of anesthesiologists morbidity state"
             }
           ]
         },
         "status": "final",
         "subject": {
-          "reference": "Patient/example"
+          "reference": "Patient/mii-exa-onko-krk-bundle-patient"
         },
         "focus": [
           {
-            "reference": "Condition/primaertumor-example"
+            "reference": "Condition/mii-exa-onko-krk-diagnose"
           }
         ],
         "effectiveDateTime": "2024-03-15T08:30:00+01:00",
@@ -372,7 +372,7 @@
       }
     },
     {
-      "fullUrl": "Procedure/mii-exa-onko-krk-stoma-markierung",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-krk-stoma-markierung",
       "resource": {
         "resourceType": "Procedure",
         "id": "mii-exa-onko-krk-stoma-markierung",
@@ -410,14 +410,14 @@
           ]
         },
         "subject": {
-          "reference": "Patient/example"
+          "reference": "Patient/mii-exa-onko-krk-bundle-patient"
         },
         "encounter": {
-          "reference": "Encounter/example"
+          "reference": "Encounter/mii-exa-onko-krk-bundle-encounter"
         },
         "reasonReference": [
           {
-            "reference": "Condition/mii-exa-onko-diagnose-primaertumor"
+            "reference": "Condition/mii-exa-onko-krk-diagnose"
           }
         ],
         "performedDateTime": "2024-03-15T09:30:00+01:00",
@@ -433,7 +433,7 @@
       }
     },
     {
-      "fullUrl": "Procedure/mii-exa-onko-krk-operation",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-krk-operation",
       "resource": {
         "resourceType": "Procedure",
         "id": "mii-exa-onko-krk-operation",
@@ -462,7 +462,7 @@
               "system": "http://fhir.de/CodeSystem/bfarm/ops",
               "code": "5-484.55",
               "display": "Tiefe anteriore Resektion : Laparoskopisch mit Anastomose",
-              "version": "OPS 2024"
+              "version": "2024"
             }
           ]
         },
@@ -477,14 +477,14 @@
           ]
         },
         "subject": {
-          "reference": "Patient/example"
+          "reference": "Patient/mii-exa-onko-krk-bundle-patient"
         },
         "encounter": {
-          "reference": "Encounter/example"
+          "reference": "Encounter/mii-exa-onko-krk-bundle-encounter"
         },
         "reasonReference": [
           {
-            "reference": "Condition/mii-exa-onko-diagnose-primaertumor-krk"
+            "reference": "Condition/mii-exa-onko-krk-diagnose"
           }
         ],
         "performedDateTime": "2024-03-22T08:00:00+01:00",
@@ -500,7 +500,7 @@
       }
     },
     {
-      "fullUrl": "Specimen/mii-exa-onko-krk-specimen",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Specimen/mii-exa-onko-krk-specimen",
       "resource": {
         "resourceType": "Specimen",
         "id": "mii-exa-onko-krk-specimen",
@@ -520,7 +520,7 @@
           ]
         },
         "subject": {
-          "reference": "Patient/example"
+          "reference": "Patient/mii-exa-onko-krk-bundle-patient"
         },
         "collection": {
           "collectedDateTime": "2024-03-22T08:30:00+01:00"

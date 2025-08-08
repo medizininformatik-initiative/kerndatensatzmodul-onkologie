@@ -1,13 +1,15 @@
 ValueSet: MII_VS_Onko_Weitere_Klassifikationen
 Id: mii-vs-onko-weitere-klassifikationen
 Title: "MII Value Set Onkologie - Weitere Klassifikationen"
-Description: "Cancer staging systems that may be used in staging assertions, such as those defined by AJCC, FIGO, and other specialized staging systems. Based on mCODE STU4 and German oBDS catalogue"
+Description: "Comprehensive collection of cancer staging systems and classification schemes used in oncology beyond TNM classification. This includes AJCC, FIGO, hematological classifications, and specialized organ-specific systems. Based on mCODE STU4 and German oBDS catalogue. Covers entity-specific classifications (e.g., FIGO for gynecological tumors), hematological classifications, and WHO classifications for CNS tumors."
 * ^status = #active
 * ^experimental = true
 * insert Publisher
 * insert PR_CS_VS_Version
+* ^contact.telecom.system = #url
+* ^contact.telecom.value = "https://www.medizininformatik-initiative.de"
 
-// SNOMED CT
+// SNOMED CT from mCODE
 * $SCT#444256004 "American Joint Commission on Cancer, Cancer Staging Manual, 6th edition neoplasm staging system (tumor staging)"
 * $SCT#443830009 "American Joint Commission on Cancer, Cancer Staging Manual, 7th edition neoplasm staging system (tumor staging)"
 * $SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition tumor staging system"
@@ -45,7 +47,7 @@ Description: "Cancer staging systems that may be used in staging assertions, suc
 * $SCT#1287643004 "INRG (International Neuroblastoma Risk Group) staging system"
 * $SCT#1287646007 "International Germ Cell Consensus Classification (tumor staging)"
 
-// NCIt
+// NCIt from mCODE
 * $NCIT#C188404 "Union for International Cancer Control Stage"
 * $NCIT#C186527 "Atypical Teratoid/Rhabdoid Tumor Staging System"
 * $NCIT#C141206 "Chronic Lymphocytic Leukemia- Modified Rai Staging System"
@@ -58,6 +60,9 @@ Description: "Cancer staging systems that may be used in staging assertions, suc
 * $NCIT#C115132 "Hepatocellular Carcinoma by BCLC Stage"
 * $NCIT#C111073 "International Germ Cell Consensus Risk Classification"
 * $NCIT#C141168 "Lugano Classification Hodgkin Lymphoma by AJCC v8 Stage"
+* $NCIT#C141189 "Lugano Classification Adult Hodgkin Lymphoma by AJCC v8 Stage"
+* $NCIT#C141178 "Lugano Classification Childhood Hodgkin Lymphoma by AJCC v8 Stage"
+* $NCIT#C141158 "Lugano Classification Adult Non-Hodgkin Lymphoma by AJCC v8 Stage"
 * $NCIT#C186520 "Medulloblastoma Staging System"
 * $NCIT#C198826 "Modified Chang Staging System for Medulloblastoma"
 * $NCIT#C177308 "Non-Seminomatous Germ Cell Tumor International Germ Cell Consensus Risk Classification"
@@ -68,3 +73,36 @@ Description: "Cancer staging systems that may be used in staging assertions, suc
 * $NCIT#C18008 "TNM Ovary Neoplasm Staging"
 * $NCIT#C141685 "Veterans Administration Lung Study Group Clinical Classification"
 * $NCIT#C18214 "Whitmore-Jewett Staging System"
+
+// oBDS-specific classification systems - include only descendant values, not parent concepts - GitHub issue #206
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #binet
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #ann-arbor-stadium
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #iss
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #isswm
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #who-grad
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #formen
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #eln-klassifikation
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #durie-salmon-stadium
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #bismuth
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #masaoka
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #mitoserate-gist
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #p16
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #eutos-score
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #sanz-score
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #ipi
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #flipi
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #mipi
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #risikogruppen-ghsg
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #ipss
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #her2-neu
+
+// SNOMED CT codes for established scoring systems  
+* $SCT#716567001 "International Prognostic Index (assessment scale)"
+* $SCT#708736003 "Follicular Lymphoma International Prognostic Index (assessment scale)"
+* $SCT#763236005 "Mantle Cell Lymphoma International Prognostic Index (assessment scale)"
+
+// FIGO Grading System for gynecological tumors - histological grading
+* $SCT#1290294004 "International Federation of Gynecology and Obstetrics grading system (qualifier value)"
+* $SCT#1290302009 "International Federation of Gynecology and Obstetrics grading system grade 1 (qualifier value)"
+* $SCT#1290303004 "International Federation of Gynecology and Obstetrics grading system grade 2 (qualifier value)"  
+* $SCT#1290304005 "International Federation of Gynecology and Obstetrics grading system grade 3 (qualifier value)"

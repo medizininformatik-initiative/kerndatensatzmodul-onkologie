@@ -14,7 +14,7 @@
   "timestamp": "2024-03-25T10:00:00+01:00",
   "entry": [
     {
-      "fullUrl": "Patient/mii-exa-onko-mamma-bundle-patient",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-mamma-bundle-patient",
       "resource": {
         "resourceType": "Patient",
         "id": "mii-exa-onko-mamma-bundle-patient",
@@ -33,7 +33,7 @@
       }
     },
     {
-      "fullUrl": "Condition/mii-exa-onko-mamma-diagnose",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-mamma-diagnose",
       "resource": {
         "resourceType": "Condition",
         "id": "mii-exa-onko-mamma-diagnose",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "fullUrl": "Encounter/mii-exa-onko-mamma-bundle-encounter",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-mamma-bundle-encounter",
       "resource": {
         "resourceType": "Encounter",
         "id": "mii-exa-onko-mamma-bundle-encounter",
@@ -105,7 +105,7 @@
       }
     },
     {
-      "fullUrl": "Observation/mii-exa-onko-mamma-menopause-status-1",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-mamma-menopause-status-1",
       "resource": {
         "resourceType": "Observation",
         "id": "mii-exa-onko-mamma-menopause-status-1",
@@ -148,7 +148,7 @@
       }
     },
     {
-      "fullUrl": "Observation/mii-exa-onko-mamma-rezeptorstatus-estrogen-1",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-mamma-rezeptorstatus-estrogen-1",
       "resource": {
         "resourceType": "Observation",
         "id": "mii-exa-onko-mamma-rezeptorstatus-estrogen-1",
@@ -229,7 +229,7 @@
       }
     },
     {
-      "fullUrl": "Observation/mii-exa-onko-mamma-rezeptorstatus-progesteron-1",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-mamma-rezeptorstatus-progesteron-1",
       "resource": {
         "resourceType": "Observation",
         "id": "mii-exa-onko-mamma-rezeptorstatus-progesteron-1",
@@ -244,6 +244,15 @@
               "code": "85339-0",
               "system": "http://loinc.org",
               "display": "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+            }
+          ]
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "LA6576-8",
+              "display": "Positive"
             }
           ]
         },
@@ -293,16 +302,7 @@
           {
             "reference": "Condition/mii-exa-onko-mamma-diagnose"
           }
-        ],
-        "valueCodeableConcept": {
-          "coding": [
-            {
-              "code": "LA6576-8",
-              "system": "http://loinc.org",
-              "display": "Positive"
-            }
-          ]
-        }
+        ]
       },
       "request": {
         "method": "POST",
@@ -310,7 +310,7 @@
       }
     },
     {
-      "fullUrl": "Observation/mii-exa-onko-mamma-tumorgroesse-1",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-mamma-tumorgroesse-1",
       "resource": {
         "resourceType": "Observation",
         "id": "mii-exa-onko-mamma-tumorgroesse-1",
@@ -365,7 +365,7 @@
       }
     },
     {
-      "fullUrl": "Procedure/mii-exa-onko-mamma-praeoperative-markierung-1",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-mamma-praeoperative-markierung-1",
       "resource": {
         "resourceType": "Procedure",
         "id": "mii-exa-onko-mamma-praeoperative-markierung-1",
@@ -378,9 +378,9 @@
         "code": {
           "coding": [
             {
-              "code": "LA6576-8",
-              "system": "http://loinc.org",
-              "display": "Positive"
+              "code": "433222002",
+              "system": "http://snomed.info/sct",
+              "display": "Insertion of guide wire into breast using ultrasound guidance (procedure)"
             }
           ]
         },
@@ -391,7 +391,8 @@
           {
             "reference": "Condition/mii-exa-onko-mamma-diagnose"
           }
-        ]
+        ],
+        "performedDateTime": "2024-01-15T09:00:00+01:00"
       },
       "request": {
         "method": "POST",

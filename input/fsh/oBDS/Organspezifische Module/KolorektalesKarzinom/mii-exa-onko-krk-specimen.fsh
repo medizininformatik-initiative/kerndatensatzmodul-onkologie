@@ -9,7 +9,7 @@ Description: "Beispiel für ein Histologie-Specimen beim Kolorektalen Karzinom"
 
 * type.coding = $SCT#122652004 "Specimen from colon obtained by rectal/rectosigmoid (low anterior) resection (specimen)"
 
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-onko-krk-bundle-patient)
 
 * collection.collectedDateTime = "2024-03-22T08:30:00+01:00"
 

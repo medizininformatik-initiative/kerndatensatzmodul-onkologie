@@ -44,11 +44,11 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
 * insert Translation(valueCodeableConcept.coding ^definition, de-DE, Gesamtbeurteilung im Verlauf gemäß 17.2 oBDS 2021. )
 
 * component MS
-* component 1..*
+* component 0..*
 * component ^slicing.discriminator.type = #pattern
 * component ^slicing.discriminator.path = "code.coding"
 * component ^slicing.rules = #open
-* component ^slicing.description = "Slice based on the component.code pattern"
+* component ^slicing.description = "Specific tumor status components (0..* to support cases with no changes, hematological cancers where TNM doesn't apply, or impossible assessments)"
 * component contains 
     Tumor_Verlauf 0..1 and 
     Lymphknoten_Verlauf 0..1 and 

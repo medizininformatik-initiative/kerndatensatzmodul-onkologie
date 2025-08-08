@@ -9,9 +9,9 @@ Description: "Beispiel für die Messung der Breslow-Tumordicke beim Malignen Mel
 
 * code.coding = $SCT#106243009 "Breslow depth staging for melanoma of skin (observable entity)"
 
-* subject = Reference(Patient/example)
-* encounter = Reference(Encounter/example)
-* focus = Reference(Condition/mii-exa-onko-diagnose-primaertumor)
+* subject = Reference(mii-exa-onko-melanom-bundle-patient)
+* encounter = Reference(mii-exa-onko-melanom-bundle-encounter)
+* focus = Reference(mii-exa-onko-melanom-diagnose)
 
 * effectiveDateTime = "2024-03-20T14:30:00+01:00"
 

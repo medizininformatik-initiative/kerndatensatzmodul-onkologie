@@ -25,6 +25,7 @@ Alias: $LNC = http://loinc.org
 Alias: $UICC = https://www.uicc.org/resources/tnm
 Alias: $UCUM =  http://unitsofmeasure.org
 Alias: $ATC_DE = http://fhir.de/CodeSystem/bfarm/atc
+Alias: $UNII = http://fdasis.nlm.nih.gov
 Alias: $NCIT =  http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
 Alias: $RADLEX = http://radlex.org
 //MII Onko
@@ -52,12 +53,14 @@ Alias: $mii-cs-onko-operation-urgency = https://www.medizininformatik-initiative
 Alias: $mii-cs-onko-strahlentherapie-strahlenart = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart
 Alias: $mii-cs-onko-strahlentherapie-applikationsart = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart
 Alias: $mii-cs-onko-strahlentherapie-zielgebiet = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet
+Alias: $mii-cs-onko-strahlentherapie-zielgebiet-2014 = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet-2014
 Alias: $mii-cs-onko-strahlentherapie-boost = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost
 Alias: $mii-ex-onko-strahlentherapie-intention = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention
 Alias: $mii-ex-onko-strahlentherapie-bestrahlung = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung
 Alias: $mii-ex-onko-strahlentherapie-stellungzurop = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop
 
 //16
+Alias: $mii-cs-onko-systemische-therapie-protokolle = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle
 Alias: $mii-ex-onko-systemische-therapie-intention = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention
 Alias: $mii-ex-onko-systemische-therapie-stellungzurop = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellungzurop
 
@@ -67,6 +70,9 @@ Alias: $mii-ex-onko-systemische-therapie-stellungzurop = https://www.medizininfo
 Alias: $mii-cs-onko-fernmetastasen = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen
 
 //12
+
+//09
+Alias: $mii-cs-onko-weitere-klassifikationen-obds = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds
 Alias: $mii-cs-onko-allgemeiner-leistungszustand-ecog = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-ecog
 Alias: $mii-cs-onko-allgemeiner-leistungszustand-karnofsky = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-karnofsky
 

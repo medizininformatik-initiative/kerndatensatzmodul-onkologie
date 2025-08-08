@@ -27,7 +27,7 @@ Description: "Dieses Profil beschreibt einen Gleasonscore in der Onkologie"
 * value[x] only CodeableConcept
 * valueCodeableConcept MS
 * valueCodeableConcept 1..1
-* valueCodeableConcept from $mii-vs-onko-prostata-gleason-patterns (extensible)
+* valueCodeableConcept from MII_VS_Onko_Prostata_Gleason_Score (extensible)
 * valueCodeableConcept.coding.code 1.. MS
 * insert Label(valueCodeableConcept.coding,  Gleason-Score und Grade Group,  Gleason-Score und Grade Group einer Prostata-Biopsie oder Operation)
 * insert Translation(valueCodeableConcept.coding ^short, de-DE, Gleason-Score und Grade Group )

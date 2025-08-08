@@ -1,7 +1,7 @@
 //=========================
 // Bundle Core Resources 
 //=========================
-/*
+
 Instance: mii-exa-onko-prostata-bundle-patient
 InstanceOf: Patient
 Usage: #example
@@ -44,55 +44,64 @@ Description: "Beispiel-Bundle für Prostata-Karzinom mit allen spezifischen Prof
 * timestamp = "2024-03-25T10:00:00+01:00"
 
 // Core Resources
-* entry[0].fullUrl = "Patient/mii-exa-onko-prostata-bundle-patient"
+* entry[0].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-prostata-bundle-patient"
 * entry[=].resource = mii-exa-onko-prostata-bundle-patient
 * entry[=].request.method = #POST
 * entry[=].request.url = "Patient"
 
-* entry[+].fullUrl = "Condition/mii-exa-onko-prostata-diagnose"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-prostata-diagnose"
 * entry[=].resource = mii-exa-onko-prostata-diagnose
 * entry[=].request.method = #POST
 * entry[=].request.url = "Condition"
 
-* entry[+].fullUrl = "Encounter/mii-exa-onko-prostata-bundle-encounter"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-prostata-bundle-encounter"
 * entry[=].resource = mii-exa-onko-prostata-bundle-encounter
 * entry[=].request.method = #POST
 * entry[=].request.url = "Encounter"
 
 // Prostata-Specific Examples (using existing individual examples)
-* entry[+].fullUrl = "Observation/mii-exa-onko-prostata-psa-diagnose-1"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-psa-diagnose-1"
 * entry[=].resource = mii-exa-onko-prostata-psa-diagnose-1
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
 
-* entry[+].fullUrl = "Observation/mii-exa-onko-prostata-anzahl-stanzen-1"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-anzahl-stanzen-1"
 * entry[=].resource = mii-exa-onko-prostata-anzahl-stanzen-1
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
 
-* entry[+].fullUrl = "Observation/mii-exa-onko-prostata-anzahl-positive-stanzen-1"
-* entry[=].resource = mii-exa-onko-prostata-anzahl-positive-stanzen-1
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-anzahl-positiver-stanzen-1"
+* entry[=].resource = mii-exa-onko-prostata-anzahl-positiver-stanzen-1
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
 
-* entry[+].fullUrl = "Observation/mii-exa-onko-prostata-karzinom-befall-stanze-1"
-* entry[=].resource = mii-exa-onko-prostata-karzinom-befall-stanze-1
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-ca-befall-stanze-1"
+* entry[=].resource = mii-exa-onko-prostata-ca-befall-stanze-1
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
 
-* entry[+].fullUrl = "Observation/mii-exa-onko-prostata-gleason-score-grade-group-1"
-* entry[=].resource = mii-exa-onko-prostata-gleason-score-grade-group-1
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-gleason-pattern-grade-group-1"
+* entry[=].resource = mii-exa-onko-prostata-gleason-pattern-grade-group-1
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
 
-* entry[+].fullUrl = "Observation/mii-exa-onko-prostata-gleason-patterns-1"
-* entry[=].resource = mii-exa-onko-prostata-gleason-patterns-1
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-gleason-pattern-primary-1"
+* entry[=].resource = mii-exa-onko-prostata-gleason-pattern-primary-1
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
 
-* entry[+].fullUrl = "Observation/mii-exa-onko-prostata-clavien-dindo-1"
-* entry[=].resource = mii-exa-onko-prostata-clavien-dindo-1
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-gleason-pattern-secondary-1"
+* entry[=].resource = mii-exa-onko-prostata-gleason-pattern-secondary-1
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
 
-*/
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-surgical-complication-1"
+* entry[=].resource = mii-exa-onko-prostata-surgical-complication-1
+* entry[=].request.method = #POST
+* entry[=].request.url = "Observation"
+
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-prostata-surgery-1"
+* entry[=].resource = mii-exa-onko-prostata-surgery-1
+* entry[=].request.method = #POST
+* entry[=].request.url = "Procedure"
+

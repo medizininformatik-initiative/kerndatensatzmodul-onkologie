@@ -5,10 +5,10 @@ Usage: #example
 
 * status = #final
 
-* code.coding = $LNC#97816-3 "American Society of Anesthesiologists physical status score"
+* code.coding = $LNC#97816-3 "American society of anesthesiologists morbidity state"
 
-* subject = Reference(Patient/example)
-* focus = Reference(Condition/primaertumor-example)
+* subject = Reference(mii-exa-onko-krk-bundle-patient)
+* focus = Reference(mii-exa-onko-krk-diagnose)
 
 * effectiveDateTime = "2024-03-15T08:30:00+01:00"
 

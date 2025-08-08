@@ -31,7 +31,7 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 * performed[x] MS
 * performed[x] only dateTime 
 // OP-Prozedur 
-* code.coding[ops] 1..1 MS 
+* code.coding[ops] 0..1 MS 
 * code.coding[ops] ^definition =  "OPS-Kodierung. Nur ein Kode erlaubt, bei mehreren kodierten Prozeduren sind mehrere Einzelprozeduren anzulegen."
 * insert Label(code.coding[ops], OPS-Kode der Operation, OPS-Kode der Operation gemäß 13.3 oBDS 2021)
 * insert Translation(code.coding[ops] ^short, de-DE, OPS-Kode der Operation )

@@ -12,10 +12,10 @@ Description: "Beispiel für eine präoperative Stoma-Markierung beim Kolorektale
 
 * code.coding = $SCT#225134005 "Marking position of planned stoma site (procedure)"
 
-* subject = Reference(Patient/example)
-* encounter = Reference(Encounter/example)
+* subject = Reference(mii-exa-onko-krk-bundle-patient)
+* encounter = Reference(mii-exa-onko-krk-bundle-encounter)
 
-* reasonReference = Reference(Condition/mii-exa-onko-diagnose-primaertumor)
+* reasonReference = Reference(mii-exa-onko-krk-diagnose)
 
 * performedDateTime = "2024-03-15T09:30:00+01:00"
 

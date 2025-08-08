@@ -18,23 +18,11 @@ Description: "Das vorliegende Profil beschreibt eine präoperativ durchgeführte
 * code 1..1 
 * code ^definition = "Präoperative Markierung von Tumorgewebe in der Brust zur exakten Lokalisation während der Operation"
 * code ^short = "Präoperative Tumormarkierung"
-* code.coding MS // OPS-2025 Code einfach, oder 
+* code.coding MS 
+* code.coding from  mii-vs-onko-mamma-praeoperative-markierung-modalitaet (extensible)
 
 * partOf MS
 * partOf only Reference(MII_PR_Onko_Operation) 
-* usedCode
-* usedCode only CodeableConcept
-* usedCode 0..*
-* usedCode.coding MS
-
-* usedCode.coding ^slicing.discriminator.type = #value
-* usedCode.coding ^slicing.discriminator.path = "code"
-* usedCode.coding ^slicing.rules = #open
-* usedCode.coding ^slicing.description = "Slicing für die Modalität der präoperativen Markierung, sowie für verschiedene Seed-Markierungen"
-* usedCode.coding ^slicing.ordered = false
-
-* usedCode.coding contains PraeoperativeMarkierung 0..1 MS 
-* usedCode.coding[PraeoperativeMarkierung] from mii-vs-onko-mamma-praeoperative-markierung-modalitaet (extensible)
 
 
 

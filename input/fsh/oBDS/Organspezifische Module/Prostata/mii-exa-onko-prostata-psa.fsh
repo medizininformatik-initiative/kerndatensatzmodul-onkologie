@@ -3,8 +3,8 @@ InstanceOf: MII_PR_Onko_Prostata_PSA
 Usage: #example
 * status = #final
 * code.coding = $LNC#2857-1 "Prostate specific Ag [Mass/volume] in Serum or Plasma"
-* subject = Reference(Patient/example)
-* focus = Reference (Condition/exampleOncologicCondition)
+* subject = Reference(mii-exa-onko-prostata-bundle-patient)
+* focus = Reference(mii-exa-onko-prostata-diagnose)
 
 * effectiveDateTime = "2024-01-02"
 * valueQuantity.value = 12
@@ -15,8 +15,8 @@ InstanceOf: MII_PR_Onko_Prostata_PSA
 Usage: #example
 * status = #final
 * code.coding = $LNC#2857-1 "Prostate specific Ag [Mass/volume] in Serum or Plasma"
-* subject = Reference(Patient/example)
-* focus = Reference (Condition/exampleOncologicCondition)
+* subject = Reference(mii-exa-onko-prostata-bundle-patient)
+* focus = Reference(mii-exa-onko-prostata-diagnose)
 
 * effectiveDateTime = "2024-06-24"
 * valueQuantity.value = 3.4

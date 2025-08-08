@@ -21,11 +21,11 @@ Description: "Dieses Profil beschreibt eine Empfehlung für eine Operation im Ra
 * subject 1..1
 * subject only Reference(Patient)
 
-// Spezifikation der Empfehlung als Operation
-
-
-
-
+// Therapy type classification using oBDS therapy types
+* code MS  
+* code from mii-vs-onko-therapieempfehlung-typ (preferred)
+* code ^short = "Type of therapy recommendation"
+* code ^definition = "Classification of the therapy recommendation using oBDS therapy types (CH, HO, IM, ZS, etc.) to specify the kind of therapy being recommended."
 
 // Therapieplanung Datum
 * authoredOn 1..1 MS

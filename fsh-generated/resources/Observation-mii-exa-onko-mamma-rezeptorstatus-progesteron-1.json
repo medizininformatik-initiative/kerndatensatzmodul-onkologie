@@ -15,6 +15,15 @@
       }
     ]
   },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "LA6576-8",
+        "display": "Positive"
+      }
+    ]
+  },
   "component": [
     {
       "valueQuantity": {
@@ -61,14 +70,5 @@
     {
       "reference": "Condition/mii-exa-onko-mamma-diagnose"
     }
-  ],
-  "valueCodeableConcept": {
-    "coding": [
-      {
-        "code": "LA6576-8",
-        "system": "http://loinc.org",
-        "display": "Positive"
-      }
-    ]
-  }
+  ]
 }

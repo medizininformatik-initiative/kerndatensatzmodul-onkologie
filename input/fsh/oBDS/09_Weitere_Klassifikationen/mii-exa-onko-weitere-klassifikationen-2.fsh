@@ -2,14 +2,15 @@ Instance: mii-exa-onko-weitere-klassifikationen-2
 InstanceOf: mii-pr-onko-weitere-klassifikationen
 Usage: #example
 * status = #final
-* code = $SCT#254373007 "Ann Arbor Hodgkin's disease tumor staging system (tumor staging)"
-* code.text = "Ann Arbor Klassifkation"
+* code = $SCT#254372002 "Ann Arbor lymphoma staging system"
+* code.text = "Ann Arbor Klassifikation"
+* method = $SCT#254373007 "Ann Arbor Hodgkin's disease tumor staging system"
 * subject = Reference(Patient/example)
+* focus = Reference(Condition/primaertumor-example)
 * effectiveDateTime = "2024-01-12"
-* valueCodeableConcept.coding.code = #IIIX
-
-// System cant be added, since no uri exists
-// * valueCodeableConcept.coding.system = 
+* valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds"
+* valueCodeableConcept.coding.code = #ann-arbor-iiix
+* valueCodeableConcept.text = "Ann Arbor Stadium IIIX"
 
 
 

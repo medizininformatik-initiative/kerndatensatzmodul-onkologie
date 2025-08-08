@@ -11,9 +11,9 @@ Description: "Beispiel für einen LDH Laborwert beim Malignen Melanom"
 
 * code.coding = $LNC#14804-9 "Lactate dehydrogenase [Enzymatic activity/volume] in Serum or Plasma by Lactate to pyruvate reaction"
 
-* subject = Reference(Patient/example)
-* encounter = Reference(Encounter/example)
-* focus = Reference(Condition/mii-exa-onko-diagnose-primaertumor)
+* subject = Reference(mii-exa-onko-melanom-bundle-patient)
+* encounter = Reference(mii-exa-onko-melanom-bundle-encounter)
+* focus = Reference(mii-exa-onko-melanom-diagnose)
 
 * effectiveDateTime = "2024-03-18T08:30:00+01:00"
 

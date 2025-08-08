@@ -1,0 +1,42 @@
+{
+  "resourceType": "MedicationStatement",
+  "id": "mii-exa-onko-medikation-iberdomide-unii",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
+    ]
+  },
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://fdasis.nlm.nih.gov/srs/unii",
+        "code": "8V66F27X44",
+        "display": "IBERDOMIDE"
+      }
+    ],
+    "text": "Iberdomide (experimenteller Immunmodulator)"
+  },
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "partOf": [
+    {
+      "reference": "Procedure/systemische-therapie-example"
+    }
+  ],
+  "note": [
+    {
+      "text": "Experimentelles Protokoll"
+    }
+  ],
+  "effectivePeriod": {
+    "start": "2024-06-01",
+    "end": "2024-08-30"
+  },
+  "basedOn": [
+    {
+      "reference": "CarePlan/example"
+    }
+  ]
+}

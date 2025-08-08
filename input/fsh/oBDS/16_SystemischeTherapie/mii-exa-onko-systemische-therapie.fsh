@@ -13,6 +13,7 @@ Description: "Example systemic therapy"
 * code.coding[+] = $mii-cs-onko-therapie-typ#CH // Chemotherapie , ggfs. hier auch ein slice, weil OPS mit angegeben werden kann
 * code.coding[+] = $OPS#8-52 // Chemotherapie nach OPS
 * code.coding[=].version = "2021"
+* usedCode = $mii-cs-onko-systemische-therapie-protokolle#AC "AC" // AC Protokoll (Cyclophosphamid und Doxorubicin)
 
 * performedPeriod.start = "2021-12-04"
 * performedPeriod.end = "2022-04-06"

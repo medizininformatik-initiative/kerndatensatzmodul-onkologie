@@ -209,10 +209,34 @@
       {
         "id": "CarePlan.activity",
         "path": "CarePlan.activity",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "exists",
+              "path": "detail"
+            }
+          ],
+          "rules": "open"
+        },
+        "short": "Therapy recommendations - either oBDS standard categorization or extended molecular protocols",
         "mustSupport": true
       },
       {
-        "id": "CarePlan.activity.detail",
+        "id": "CarePlan.activity:obds",
+        "path": "CarePlan.activity",
+        "sliceName": "obds",
+        "short": "Standard oBDS therapy recommendation with category only",
+        "definition": "Standard tumor board recommendation using oBDS 19.1 therapy type categorization",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CarePlan.activity:obds.reference",
+        "path": "CarePlan.activity.reference",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity:obds.detail",
         "path": "CarePlan.activity.detail",
         "min": 1,
         "constraint": [
@@ -227,7 +251,7 @@
         "mustSupport": true
       },
       {
-        "id": "CarePlan.activity.detail.code",
+        "id": "CarePlan.activity:obds.detail.code",
         "path": "CarePlan.activity.detail.code",
         "min": 1,
         "mustSupport": true,
@@ -237,7 +261,7 @@
         }
       },
       {
-        "id": "CarePlan.activity.detail.code.coding",
+        "id": "CarePlan.activity:obds.detail.code.coding",
         "path": "CarePlan.activity.detail.code.coding",
         "short": "Typ der Therapieempfehlung",
         "_short": {
@@ -277,14 +301,14 @@
         }
       },
       {
-        "id": "CarePlan.activity.detail.code.coding.system",
+        "id": "CarePlan.activity:obds.detail.code.coding.system",
         "path": "CarePlan.activity.detail.code.coding.system",
         "min": 1,
         "patternUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ",
         "mustSupport": true
       },
       {
-        "id": "CarePlan.activity.detail.code.coding.code",
+        "id": "CarePlan.activity:obds.detail.code.coding.code",
         "path": "CarePlan.activity.detail.code.coding.code",
         "min": 1,
         "mustSupport": true,
@@ -297,7 +321,7 @@
         ]
       },
       {
-        "id": "CarePlan.activity.detail.status",
+        "id": "CarePlan.activity:obds.detail.status",
         "path": "CarePlan.activity.detail.status",
         "short": "Status der Therapieempfehlung",
         "_short": {
@@ -345,7 +369,7 @@
         ]
       },
       {
-        "id": "CarePlan.activity.detail.statusReason",
+        "id": "CarePlan.activity:obds.detail.statusReason",
         "path": "CarePlan.activity.detail.statusReason",
         "short": "Therapieabweichung aufgrund Patientenwunsch der Therapieempfehlung",
         "_short": {
@@ -390,7 +414,7 @@
         }
       },
       {
-        "id": "CarePlan.activity.detail.statusReason.coding",
+        "id": "CarePlan.activity:obds.detail.statusReason.coding",
         "path": "CarePlan.activity.detail.statusReason.coding",
         "mustSupport": true,
         "mapping": [
@@ -402,14 +426,59 @@
         ]
       },
       {
-        "id": "CarePlan.activity.detail.statusReason.coding.system",
+        "id": "CarePlan.activity:obds.detail.statusReason.coding.system",
         "path": "CarePlan.activity.detail.statusReason.coding.system",
         "patternUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieabweichung"
       },
       {
-        "id": "CarePlan.activity.detail.statusReason.coding.code",
+        "id": "CarePlan.activity:obds.detail.statusReason.coding.code",
         "path": "CarePlan.activity.detail.statusReason.coding.code",
         "mustSupport": true
+      },
+      {
+        "id": "CarePlan.activity:extended",
+        "path": "CarePlan.activity",
+        "sliceName": "extended",
+        "short": "Extended molecular tumor board recommendation with detailed protocols",
+        "definition": "Detailed molecular tumor board recommendation using RequestGroup for structured multi-agent protocols and specific medication choices",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CarePlan.activity:extended.progress",
+        "path": "CarePlan.activity.progress",
+        "short": "Progress notes for recommendation implementation",
+        "mustSupport": true
+      },
+      {
+        "id": "CarePlan.activity:extended.reference",
+        "path": "CarePlan.activity.reference",
+        "short": "Detailed therapy recommendation - RequestGroup, MedicationRequest, or ServiceRequest",
+        "definition": "Reference to detailed therapy recommendations: RequestGroup for complex multi-agent protocols, MedicationRequest for specific medication orders, or ServiceRequest for therapy referrals (surgery, radiation, etc.)",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie",
+              "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+              "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
+            ]
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "RequestGroup with 19.1",
+            "comment": "Tumorkonferenz Therapieempfehlung Typ and specific agents"
+          }
+        ]
+      },
+      {
+        "id": "CarePlan.activity:extended.detail",
+        "path": "CarePlan.activity.detail",
+        "max": "0"
       }
     ]
   }

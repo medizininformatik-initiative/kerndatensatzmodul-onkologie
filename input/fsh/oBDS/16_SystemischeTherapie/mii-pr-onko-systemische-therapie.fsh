@@ -40,6 +40,15 @@ Description: "Systemische Therapie. Dieses Profil beschreibt eine Systemische Th
 * insert Translation(code.coding[systemische_therapie_art] ^definition, de-DE, Art der systemischen oder abwartenden Therapie gemäß 16.3 oBDS 2021. )
 // Die Translation-Labels für OPS und SNOMED werden im MII-Basismodul Prozedur verwaltet
 
+// Systemische Therapie Protokoll
+* usedCode 0..* MS
+* usedCode from mii-vs-onko-systemische-therapie-protokolle (extensible)
+* usedCode.coding.code 1..1 MS
+* usedCode.coding.system 1..1 MS
+* insert Label(usedCode.coding, Protokoll der systemischen Therapie, Protokoll der systemischen Therapie gemäß oBDS Umsetzungsleitfaden.)
+* insert Translation(usedCode.coding ^short, de-DE, Protokoll der systemischen Therapie)
+* insert Translation(usedCode.coding ^definition, de-DE, Protokoll der systemischen Therapie gemäß oBDS Umsetzungsleitfaden mit Substanzkombinationen.)
+
 // Systemische Therapie Beginn und  Ende--> ggfs. dupliziert im MedicationStatement oder MedicationAdministration
 * performed[x] MS
 * performed[x] only Period // wird über Period.start und Period.stop des MII Prozedurmoduls erfasst
@@ -86,6 +95,7 @@ Source: MII_PR_Onko_Systemische_Therapie
 * extension[Intention].valueCodeableConcept.coding.code -> "16.1" "Intention der systemischen Therapie"
 * extension[StellungZurOp].valueCodeableConcept.coding.code -> "16.2" "Systemische Therapie Stellung zu operativer Therapie"
 * code.coding.code -> "16.3" "Art der systemischen oder abwartenden Therapie"
+* usedCode.coding.code -> "16.4" "Protokoll der systemischen Therapie"
 * performed[x].start -> "16.6" "Systemische Therapie Beginn"
 * performed[x].end -> "16.8" "Systemische Therapie Ende"
 * outcome.coding.code -> "16.7" "Systemische Therapie Ende Grund"

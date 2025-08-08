@@ -18,6 +18,7 @@ Usage: #example
 Instance: mii-exa-onko-mamma-diagnose
 InstanceOf: MII_PR_Onko_Diagnose_Primaertumor
 Usage: #example
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
 * clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed
 * code.coding[icd10-gm] = $ICD10GM#C50.3 "Bösartige Neubildung: Unterer innerer Quadrant der Brustdrüse"
@@ -44,47 +45,47 @@ Description: "Beispiel-Bundle für Mamma-Karzinom mit allen spezifischen Profile
 * timestamp = "2024-03-25T10:00:00+01:00"
 
 // Core Resources
-* entry[0].fullUrl = "Patient/mii-exa-onko-mamma-bundle-patient"
+* entry[0].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-mamma-bundle-patient"
 * entry[=].resource = mii-exa-onko-mamma-bundle-patient
 * entry[=].request.method = #POST
 * entry[=].request.url = "Patient"
 
-* entry[+].fullUrl = "Condition/mii-exa-onko-mamma-diagnose"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-mamma-diagnose"
 * entry[=].resource = mii-exa-onko-mamma-diagnose
 * entry[=].request.method = #POST
 * entry[=].request.url = "Condition"
 
-* entry[+].fullUrl = "Encounter/mii-exa-onko-mamma-bundle-encounter"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-mamma-bundle-encounter"
 * entry[=].resource = mii-exa-onko-mamma-bundle-encounter
 * entry[=].request.method = #POST
 * entry[=].request.url = "Encounter"
 
 // Menopause status
-* entry[+].fullUrl = "Observation/mii-exa-onko-mamma-menopause-status-1"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-mamma-menopause-status-1"
 * entry[=].resource = mii-exa-onko-mamma-menopause-status-1
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
 
 // Estrogen receptor status
-* entry[+].fullUrl = "Observation/mii-exa-onko-mamma-rezeptorstatus-estrogen-1"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-mamma-rezeptorstatus-estrogen-1"
 * entry[=].resource = mii-exa-onko-mamma-rezeptorstatus-estrogen-1
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
 
 // Progesteron receptor status
-* entry[+].fullUrl = "Observation/mii-exa-onko-mamma-rezeptorstatus-progesteron-1"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-mamma-rezeptorstatus-progesteron-1"
 * entry[=].resource = mii-exa-onko-mamma-rezeptorstatus-progesteron-1
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
 
 // Tumor size
-* entry[+].fullUrl = "Observation/mii-exa-onko-mamma-tumorgroesse-1"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-mamma-tumorgroesse-1"
 * entry[=].resource = mii-exa-onko-mamma-tumorgroesse-1
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
 
 // Preoperative marking
-* entry[+].fullUrl = "Procedure/mii-exa-onko-mamma-praeoperative-markierung-1"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-mamma-praeoperative-markierung-1"
 * entry[=].resource = mii-exa-onko-mamma-praeoperative-markierung-1
 * entry[=].request.method = #POST
 * entry[=].request.url = "Procedure"
@@ -135,9 +136,10 @@ Instance: mii-exa-onko-mamma-praeoperative-markierung-1
 InstanceOf: MII_PR_Onko_Mamma_Praeoperative_Markierung
 Usage: #example
 * status = #completed
-* code.coding = $LNC#LA6576-8 "Positive"
+* code.coding = $SCT#433222002 "Insertion of guide wire into breast using ultrasound guidance (procedure)"
 * subject = Reference(mii-exa-onko-mamma-bundle-patient)
 * reasonReference = Reference(Condition/mii-exa-onko-mamma-diagnose)
+* performedDateTime = "2024-01-15T09:00:00+01:00"
 
 
 Instance: mii-exa-onko-mamma-tumorgroesse-1

@@ -1,0 +1,57 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-pr-onko-melanom-exzision",
+  "extension": [
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/spdx-license",
+            "code": "CC-BY-4.0",
+            "display": "Creative Commons Attribution 4.0 International"
+          }
+        ]
+      }
+    }
+  ],
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-exzision",
+  "version": "2025.1.0",
+  "name": "MII_PR_Onko_Melanom_Exzision",
+  "title": "MII PR Onko Melanom Exzision",
+  "status": "active",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "description": "Melanom-spezifische Exzision. Dieses Profil spezialisiert die allgemeine onkologische Operation für Melanom-Exzisionen mit einem präferierten ValueSet basierend auf SNOMED CT Codes für Hautexzisionen.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Procedure",
+  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Procedure.code.coding:sct",
+        "path": "Procedure.code.coding",
+        "sliceName": "sct",
+        "short": "SNOMED CT Code für Melanom-Exzision",
+        "definition": "SNOMED CT Code für die spezifische Melanom-Exzision. Bevorzugt werden Codes für Hautexzisionen und Melanom-spezifische Eingriffe.",
+        "min": 1,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-melanom-exzision-snomedct"
+        }
+      }
+    ]
+  }
+}

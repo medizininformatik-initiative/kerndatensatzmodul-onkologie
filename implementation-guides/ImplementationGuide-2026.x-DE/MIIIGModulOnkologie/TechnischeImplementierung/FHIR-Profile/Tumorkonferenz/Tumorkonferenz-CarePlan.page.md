@@ -10,40 +10,85 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 
 
 
-Dieses Profil beschreibt die Tumorkonferenz und die Therapieempfehlungen.
-Die Datenfelder sind seit der Version 2021 Teil des oBDS und werden in zwei verschiedenen Modulen erfasst. Da alle beteiligten Felder sehr gut über die FHIR CarePlan-Ressource abbildbar sind, wurden alle die Tumorkonferenz- und Therapieemfpehlungsfelder im Tumorkonferenz-Profil zusammengefasst.  
+Dieses Profil beschreibt die Tumorkonferenz und die Therapieempfehlungen für sowohl traditionelle als auch molekulare Tumorboard-Workflows.
+Die Datenfelder sind seit der Version 2021 Teil des oBDS und werden in zwei verschiedenen Modulen erfasst. Da alle beteiligten Felder sehr gut über die FHIR CarePlan-Ressource abbildbar sind, wurden alle die Tumorkonferenz- und Therapieemfpehlungsfelder im Tumorkonferenz-Profil zusammengefasst.
 
-Das Tumorkonferenz-Profil umfasst daher
-* die Referenz auf Patient über `subject`
-* die Referenz auf die Primärdiagnose über `addresses`.
-* die Kategorie des Plans nach oBDS über `category`
-* das Datum über `created`
-* einzelne Empfehlungen (`activity`)mit jeweils den folgenden Elementen: 
-    * die oBDS-Kodierung der vorgeschlagenen Therapiemaßnahme`code`
-    * Der Status der einzelnen Aktivitäten unter`status` gemäß den HL7 FHIR status codes
-    * Bei Abbruch: Die Angabe, ob therapiespezifisch auf Wunsch des Patienten abgebrochen wurde, unter `statusReason`
+### Unified Activity Slicing Architecture
 
-Die CarePlan-Ressource sieht eine verpflichtende Angabe des `status`-Elements einer `activity` vor. Diese Informationen sind in dieser Form nicht im oBDS  enthalten. Die tatsächlich erfolgten Therapien werden jedoch in den Krebsregisterdaten erfasst und SOLLEN  über `Procedure.basedOn(Reference(CarePlan))` auf die Tumorkonferenz-Ressource verweisen. 
+Das Profil unterstützt **zwei verschiedene Implementierungsansätze** über Activity-Slicing:
 
-Die Statusangaben geben den tatsächlichen Stand der Therapieempfehlung wieder. Für alle Statusangaben gilt das offizielle FHIR CarePlanActivityStatus-CodeSet.  
-https://www.hl7.org/fhir/R4/valueset-care-plan-activity-status.html  
-Es SOLLTEN folgende Status-Codes verwendet werden: 
-- `completed` bei abgeschlossener Therapie,
-- `on-hold` bei Therapieunterbrechung für noch nicht gestartete Therapie
-- `stopped` bei Therapieunterbrechung für bereits gestarteter Therapie
-- `unknown` für unbekannt, soweit keine Informationen über den Status vorliegen. 
+#### **obds Slice**: Standard oBDS-Therapiekategorisierung
+Für traditionelle Tumorboards mit oBDS 19.1 Kategorisierung:
+- **Verwendung**: `activity[obds].detail.code` für Therapietyp (CH, HO, IM, ZS, etc.)
+- **Status-Tracking**: `activity[obds].detail.status` und `activity[obds].detail.statusReason` für Therapieabweichungen
+- **oBDS-Konformität**: Vollständige Abbildung der oBDS-Felder 19.1 und 19.2
 
-Bei den Statusangaben `on-hold` und `stopped` SOLL das Feld `statusReason` mit den Angaben aus dem oBDS-Feld 'Therapieabweichung auf Wunsch des Patienten'  befüllt werden.
+#### **extended Slice**: Molekulare Tumorboard-Protokolle  
+Für detaillierte molekulare Tumorboards mit strukturierten Therapieprotokollen:
+- **Verwendung**: `activity[extended].reference` → RequestGroup/MedicationRequest/ServiceRequest
+- **Anwendungsfälle**: Multi-Agent-Protokolle, pharmazeutische Klassen, spezifische Medikamentenauswahl
+- **Erweiterte Funktionalität**: Über oBDS-Kategorisierung hinausgehende Detaillierung
+
+### Gemeinsame Profilstruktur
+
+Beide Slices teilen die gemeinsamen CarePlan-Elemente:
+* **Patient-Referenz**: `subject`
+* **Primärdiagnose-Referenz**: `addresses`
+* **Tumorboard-Kategorie**: `category` nach oBDS 18.2
+* **Datum**: `created` gemäß oBDS 18.1
+* **Zusätzliche Informationen**: `supportingInfo` für relevante Verlaufs-Stagings
+
+### Status-Management
+
+#### Für obds Slice (traditionelle Tumorboards):
+Die CarePlan-Ressource sieht eine verpflichtende Angabe des `status`-Elements einer `activity` vor. Die tatsächlich erfolgten Therapien werden in den Krebsregisterdaten erfasst und SOLLEN über `Procedure.basedOn(Reference(CarePlan))` auf die Tumorkonferenz-Ressource verweisen.
+
+**Empfohlene Status-Codes** nach FHIR CarePlanActivityStatus:
+- `completed`: Abgeschlossene Therapie
+- `on-hold`: Therapieunterbrechung für noch nicht gestartete Therapie  
+- `stopped`: Therapieunterbrechung für bereits gestartete Therapie
+- `unknown`: Unbekannt, keine Statusinformationen verfügbar
+
+**Therapieabweichungen**: Bei `on-hold` und `stopped` SOLL `statusReason` mit oBDS-Feld 'Therapieabweichung auf Wunsch des Patienten' befüllt werden.
+
+#### Für extended Slice (molekulare Tumorboards):
+Status-Tracking erfolgt in den referenzierten Ressourcen (RequestGroup, MedicationRequest, ServiceRequest). `activity.progress` kann für narrative Fortschrittsnotizen verwendet werden.
 
 Jede Tumorkonferenz mit Therapieempfehlung SOLL als einzelne Ressource gespeichert und über `CarePlan.addresses(Reference(Condition))` auf die Primärdiagnose referenzieren. 
 
-### Zukünftige Entwicklungen
-Im Rahmen des MII-Erweiterungsmoduls Molekulares Tumorboard wurden die Modellierung der Therapieempfehlungen nochmal überarbeitet. In der derzzeitigen Profilierung werden die Empfehlungen alle explizit unter CarePlan.activity kodiert. Für die spätere Verwendung ist das insofern unpraktikabel, als dass diese nicht von außen logisch referenziert werden können. Es ist daher geplant, Änderungen an der CarePlan-Ressource aus der FHIR-Version R5 zu übernehmen, so dass die Empfehlungen nicht mehr explizit gelistet sind, sondern über `CarePlan.plannedActivityReference`als konkrete `ServiceRequests` bzw. `MedicationRequest` referenziert werden können. Auf die gleiche Art und Weise können tatsächlich stattgefundene Prozeduren und Medikationen unter `CarePlan.performedActivity`.
+### FHIR Invariant Management
 
-Es wird hier in der nächsten Version zu einer Umprofilierung kommen, die keinen breaking change vorraussetzt, aber die Informationen anders strukturiert und die Erschließung von neuen FHIR-Ressourcen und Suchparametern erfordert.
-- Erstellung von Extensions für die Verwendung der R5-Elemente in R4 
-- Erstellung von Profile für Therapieempfehlungen (ServiceRequest / MedicationRequest)
-- Erstellung eines RequestGroup-Profils zur Abbildung von Kombinationstherapien
+**Problem**: FHIR R4 Invariant cpl-3 verhindert gleichzeitige Nutzung von `activity.detail.code` und `activity.reference`
+
+**Lösung**: Slice-spezifische Element-Deaktivierung:
+- **obds slice**: `activity.detail` aktiviert, `activity.reference` deaktiviert (0..0)
+- **extended slice**: `activity.reference` aktiviert, `activity.detail` deaktiviert (0..0)
+
+### Implementierungsflexibilität
+
+- **Rückwärtskompatibilität**: Bestehende oBDS-Implementierungen funktionieren unverändert
+- **Hybride Ansätze**: Einzelne CarePlans können beide Slice-Typen verwenden
+- **Schrittweise Adoption**: Start mit obds slice, Erweiterung zu extended slice bei Bedarf
+
+### Anwendungsbeispiele
+
+#### Traditionelles Tumorboard (obds slice):
+```fsh
+* activity[obds].detail.code.coding = #OP "Operation"
+* activity[obds].detail.status = #completed
+```
+
+#### Molekulares Tumorboard (extended slice):
+```fsh  
+* activity[extended].reference = Reference(RequestGroup/molecular-protocol)
+* activity[extended].progress.text = "HR+/HER2- mit PI3K-Aktivierung - CDK4/6 Inhibitor empfohlen"
+```
+
+#### Gemischter Ansatz:
+```fsh
+* activity[obds].detail.code.coding = #OP "Operation"
+* activity[extended].reference = Reference(RequestGroup/precision-medicine-protocol)
+```
 
 
 @```
@@ -192,6 +237,16 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
 
 **Beispiele**
 
+### Traditionelle oBDS-Tumorkonferenz (obds slice):
+
 {{json:mii-exa-onko-tumorkonferenz-01}}
+
+### Molekulares Tumorboard (extended slice):
+
+{{json:mii-exa-onko-tumorkonferenz-pure-molecular}}
+
+### Gemischter Ansatz (beide slices):
+
+{{json:mii-exa-onko-tumorkonferenz-mixed-approach}}
 
 ---

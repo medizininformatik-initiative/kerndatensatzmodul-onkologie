@@ -36,7 +36,8 @@ Im oBDS werden mehrere klinische Konzepte innerhalb der Systemische Therapie abb
 Zu diesen einzelnen Therapien werden im oBDS weitere Datenelemente erfasst und hier abgebildet, darunter: 
 - Start und Endezeitpunkt der Therapie 
 - Zusammenhang zur OP und Intention der Therapie
-- der Grund der Beendigung (unabhängig ob erfolgreich oder nicht erfolgreich).
+- der Grund der Beendigung (unabhängig ob erfolgreich oder nicht erfolgreich)
+- das verwendete Therapieprotokoll mit Substanzkombinationen (gemäß oBDS Umsetzungsleitfaden).
 
 #### Kategorie 
 - Die verwendete MII-Prozedur empfiehlt die Abbildung der **Kategorie** mittels der in SNOMED übertragenen OPS-Hauptkategorien (https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/ValueSet/procedures-category-sct)
@@ -47,6 +48,13 @@ Zu diesen einzelnen Therapien werden im oBDS weitere Datenelemente erfasst und h
 - Die medikationsbasierten systemischen Therapien werden je nach Art der Therapie durch unterschiedlichen OPS-Kategorien kodiert. 
 - Für die abwartenden Therapien sind keine OPS-Codes im aktuellen Katalog hinterlegt.  
 - In der MII-Prozedur SOLL genau eine Kodierung (OPS oder SNOMED CT) für genau eine Therapie verwendet werden. Zusätzliche Prozeduren werden als einzelne Procedure-Ressourcen abgebildet. 
+
+#### Therapieprotokoll
+- Als **usedCode** werden die spezifischen Therapieprotokolle dokumentiert, die in der systemischen Therapie verwendet werden.
+- Die Protokolle basieren auf dem [oBDS Umsetzungsleitfaden](https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532385/Systemische+Therapie+SYST+Protokolle) und enthalten standardisierte Substanzkombinationen.
+- Jedes Protokoll ist mit seiner charakteristischen Bezeichnung (z.B. "FOLFOX", "R-CHOP", "AC") und den enthaltenen Wirkstoffen dokumentiert.
+- Die Kodierung erfolgt über das **MII CodeSystem Systemische Therapie Protokolle**, das alle gängigen onkologischen Therapieprotokolle umfasst.
+- Nicht enthaltene Protokolle können trotzdem dokumentiert werden - hier ist jedoch eine Harmonisierung über die Standorte entscheidend. Neue Protokolle sind daher bitte unter [GitHub Issues](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues) einzureichen.
 
 #### Implementierungsempfehlung
 Aus den oben genannten Punkten ergibt sich folgende Kodierempfehlung für die Systemische / abwartende Therapie aus dem oBDS:
@@ -243,6 +251,14 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
     ```GET [base]/Procedure?extension-intention=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention|K```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.extension:Durchfuehrungsabsicht" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).   
+
+1.  Der Suchparameter "used-code" SOLLTE unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/Procedure?used-code=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle|FOLFOX4```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.usedCode" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
 **Beispiele**
 

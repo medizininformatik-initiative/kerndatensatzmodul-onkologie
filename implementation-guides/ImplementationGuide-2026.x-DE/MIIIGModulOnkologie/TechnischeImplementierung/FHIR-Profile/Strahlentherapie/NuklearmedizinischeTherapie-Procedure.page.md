@@ -342,6 +342,6 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
 
 **Beispiele**
 
-{{json:mii-exa-onko-strahlentherapie}}
+{{json:mii-exa-onko-strahlentherapie-bestrahlung-nuklearmedizin-1}}
 
 ---

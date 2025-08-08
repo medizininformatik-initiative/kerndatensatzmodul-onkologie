@@ -40,29 +40,51 @@ Description: "Dieses Profil beschreibt die Tumorkonferenz und die Therapieempfeh
 
 * activity 0..* MS
 
-* activity.detail 1..1 MS
-* activity.detail.code 1..1 MS
-* activity.detail.code from mii-vs-onko-therapieempfehlung-typ
-* activity.detail.code.coding.system = $mii-cs-onko-therapie-typ
-* activity.detail.code.coding.system 1..1 MS
-* activity.detail.code.coding.code 1..1 MS
-* insert Label(activity.detail.code.coding, Typ der Therapieempfehlung, Typ der Therapieempfehlung der Tumorkonferenz gemäß 19.1 oBDS 2021.)
-* insert Translation(activity.detail.code.coding ^short, de-DE, Typ der Therapieempfehlung  )
-* insert Translation(activity.detail.code.coding ^definition, de-DE, Typ der Therapieempfehlung der Tumorkonferenz gemäß 19.1 oBDS 2021. )
+// Activity slicing: support both oBDS standard and extended molecular recommendations
+* activity ^slicing.discriminator.type = #exists
+* activity ^slicing.discriminator.path = "detail"
+* activity ^slicing.rules = #open
+* activity ^short = "Therapy recommendations - either oBDS standard categorization or extended molecular protocols"
 
-* activity.detail obeys tumorkonferenz-empfehlung-entscheidung-patient
-* activity.detail.status MS
-* activity.detail.statusReason MS
-* activity.detail.statusReason from mii-vs-onko-therapieabweichung
-* activity.detail.statusReason.coding MS
-* activity.detail.statusReason.coding.system = $mii-cs-onko-therapieabweichung
-* activity.detail.statusReason.coding.code MS
-* insert Label(activity.detail.status, Status der Therapieempfehlung, Status der Therapieempfehlung nach HL7 FHIR CarePlanActivityStatus | not-started | scheduled | in-progress | on-hold | completed | cancelled | stopped | unknown | entered-in-error |)
-* insert Translation(activity.detail.status ^short, de-DE, Status der Therapieempfehlung )
-* insert Translation(activity.detail.status ^definition, de-DE, Status der Therapieempfehlung nach HL7 FHIR CarePlanActivityStatus | not-started | scheduled | in-progress | on-hold | completed | cancelled | stopped | unknown | entered-in-error |   )
-* insert Label(activity.detail.statusReason, Therapieabweichung aufgrund Patientenwunsch der Therapieempfehlung, wenn Therapieabweichung - z.B. status = cancelled - Aussage ob dies durch Patientenwunsch erfolgt ist gemäß 19.2 oBDS 2021.)
-* insert Translation(activity.detail.statusReason ^short, de-DE, Therapieabweichung aufgrund Patientenwunsch der Therapieempfehlung )
-* insert Translation(activity.detail.statusReason ^definition, de-DE, wenn Therapieabweichung - z.B. status = cancelled - Aussage ob dies durch Patientenwunsch erfolgt ist gemäß 19.2 oBDS 2021. )
+// Slice 1: Standard oBDS therapy planning (19.1 field mapping)
+* activity contains obds 0..*
+* activity[obds] ^short = "Standard oBDS therapy recommendation with category only"
+* activity[obds] ^definition = "Standard tumor board recommendation using oBDS 19.1 therapy type categorization"
+* activity[obds].detail 1..1 MS
+* activity[obds].detail.code 1..1 MS
+* activity[obds].detail.code from mii-vs-onko-therapieempfehlung-typ
+* activity[obds].detail.code.coding.system = $mii-cs-onko-therapie-typ
+* activity[obds].detail.code.coding.system 1..1 MS
+* activity[obds].detail.code.coding.code 1..1 MS
+* insert Label(activity[obds].detail.code.coding, Typ der Therapieempfehlung, Typ der Therapieempfehlung der Tumorkonferenz gemäß 19.1 oBDS 2021.)
+* insert Translation(activity[obds].detail.code.coding ^short, de-DE, Typ der Therapieempfehlung  )
+* insert Translation(activity[obds].detail.code.coding ^definition, de-DE, Typ der Therapieempfehlung der Tumorkonferenz gemäß 19.1 oBDS 2021. )
+* activity[obds].detail obeys tumorkonferenz-empfehlung-entscheidung-patient
+* activity[obds].detail.status MS
+* activity[obds].detail.statusReason MS
+* activity[obds].detail.statusReason from mii-vs-onko-therapieabweichung
+* activity[obds].detail.statusReason.coding MS
+* activity[obds].detail.statusReason.coding.system = $mii-cs-onko-therapieabweichung
+* activity[obds].detail.statusReason.coding.code MS
+* insert Label(activity[obds].detail.status, Status der Therapieempfehlung, Status der Therapieempfehlung nach HL7 FHIR CarePlanActivityStatus | not-started | scheduled | in-progress | on-hold | completed | cancelled | stopped | unknown | entered-in-error |)
+* insert Translation(activity[obds].detail.status ^short, de-DE, Status der Therapieempfehlung )
+* insert Translation(activity[obds].detail.status ^definition, de-DE, Status der Therapieempfehlung nach HL7 FHIR CarePlanActivityStatus | not-started | scheduled | in-progress | on-hold | completed | cancelled | stopped | unknown | entered-in-error |   )
+* insert Label(activity[obds].detail.statusReason, Therapieabweichung aufgrund Patientenwunsch der Therapieempfehlung, wenn Therapieabweichung - z.B. status = cancelled - Aussage ob dies durch Patientenwunsch erfolgt ist gemäß 19.2 oBDS 2021.)
+* insert Translation(activity[obds].detail.statusReason ^short, de-DE, Therapieabweichung aufgrund Patientenwunsch der Therapieempfehlung )
+* insert Translation(activity[obds].detail.statusReason ^definition, de-DE, wenn Therapieabweichung - z.B. status = cancelled - Aussage ob dies durch Patientenwunsch erfolgt ist gemäß 19.2 oBDS 2021. )
+* activity[obds].reference 0..0  // Disabled to avoid FHIR invariant cpl-3
+
+// Slice 2: Extended molecular recommendations (beyond oBDS requirements)
+* activity contains extended 0..*
+* activity[extended] ^short = "Extended molecular tumor board recommendation with detailed protocols"
+* activity[extended] ^definition = "Detailed molecular tumor board recommendation using RequestGroup for structured multi-agent protocols and specific medication choices"
+* activity[extended].reference 1..1 MS
+* activity[extended].reference only Reference(MII_PR_Onko_Therapieempfehlung_Kombinationstherapie or MedicationRequest or ServiceRequest)
+* activity[extended].reference ^short = "Detailed therapy recommendation - RequestGroup, MedicationRequest, or ServiceRequest"
+* activity[extended].reference ^definition = "Reference to detailed therapy recommendations: RequestGroup for complex multi-agent protocols, MedicationRequest for specific medication orders, or ServiceRequest for therapy referrals (surgery, radiation, etc.)"
+* activity[extended].detail 0..0  // Disabled to avoid FHIR invariant cpl-3
+* activity[extended].progress MS
+* activity[extended].progress ^short = "Progress notes for recommendation implementation"
 
 
 Mapping: FHIR-oBDS-Therapieplanung-Tumorkonferenz
@@ -71,6 +93,7 @@ Title: "Mapping FHIR zu oBDS"
 Source: MII_PR_Onko_Tumorkonferenz
 * created -> "18.1" "Tumorkonferenz Therapieplanung Datum"
 * category.coding.code -> "18.2" "Tumorkonferenz Therapieplanung Typ"
-* activity.detail.code.coding.code -> "19.1" "Tumorkonferenz Therapieempfehlung Typ"
-* activity.detail.status -> "19.2" "Tumorkonferenz/Therapieempfehlung Therapieabweichung auf Wunsch des Patienten"
-* activity.detail.statusReason.coding -> "19.2" "Tumorkonferenz/Therapieempfehlung Therapieabweichung auf Wunsch des Patienten"
+* activity[obds].detail.code.coding.code -> "19.1" "Tumorkonferenz Therapieempfehlung Typ"
+* activity[obds].detail.status -> "19.2" "Tumorkonferenz/Therapieempfehlung Therapieabweichung auf Wunsch des Patienten"
+* activity[obds].detail.statusReason.coding -> "19.2" "Tumorkonferenz/Therapieempfehlung Therapieabweichung auf Wunsch des Patienten"
+* activity[extended].reference -> "RequestGroup with 19.1" "Tumorkonferenz Therapieempfehlung Typ and specific agents"

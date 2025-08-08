@@ -1,0 +1,39 @@
+{
+  "resourceType": "ServiceRequest",
+  "id": "mii-exa-onko-molecular-surgery-request",
+  "status": "active",
+  "intent": "proposal",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "387713003"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "11429006"
+      }
+    ],
+    "text": "Neurochirurgische Konsultation für Hirnmetastasen"
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "authoredOn": "2024-01-16",
+  "reasonReference": [
+    {
+      "reference": "Condition/primaertumor-example"
+    }
+  ],
+  "note": [
+    {
+      "text": "Molekulares Tumorboard empfiehlt neurochirurgische Evaluation für stereotaktische Radiochirurgie bei oligometastatischen Hirnläsionen"
+    }
+  ]
+}

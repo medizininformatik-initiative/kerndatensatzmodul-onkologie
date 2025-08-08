@@ -71,6 +71,30 @@
     "resource": [
       {
         "reference": {
+          "reference": "Procedure/mii-exa-onko-strahlentherapie-2014-mamma-mit-lk"
+        },
+        "name": "Beispiel Strahlentherapie oBDS 2014 - Mamma mit Lymphknoten (3.1.+)",
+        "description": "oBDS 2014: Ein Bestrahlungsverfahren für Mamma inklusive Lymphknoten als kombinierter Code",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-strahlentherapie-2021-mamma-lymphknoten"
+        },
+        "name": "Beispiel Strahlentherapie oBDS 2021 - Axilläre Lymphknoten",
+        "description": "oBDS 2021: Bestrahlung der axillären Lymphknoten (entspricht 2014 '3.1.+' Lymphknotenanteil)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-strahlentherapie-2021-mamma-primaer"
+        },
+        "name": "Beispiel Strahlentherapie oBDS 2021 - Mamma Primärzielgebiet",
+        "description": "oBDS 2021: Bestrahlung der Mamma als Primärzielgebiet (entspricht 2014 '3.1.+' Organanteil)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie"
+      },
+      {
+        "reference": {
           "reference": "MedicationStatement/mii-exa-onko-systemische-therapie-medikation1"
         },
         "name": "Example chemotherapy 1",
@@ -119,6 +143,14 @@
       },
       {
         "reference": {
+          "reference": "Procedure/PatientKimMusterperson-Procedure-4"
+        },
+        "name": "Hauptprocedure: Komplexe abdominale Tumorchirurgie",
+        "description": "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie, Tumorresektion mittels Hysterektomie, bilateraler Adnexektomie, und atpyischer Lebersegmentresektion (Seg. II und V). Postoperativ: R0.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation"
+      },
+      {
+        "reference": {
           "reference": "List/mii-exa-onko-liste-evidenz-erstdiagnose-1"
         },
         "name": "Liste der Evidenz zum Erstdiagnosezeitpunkt",
@@ -132,6 +164,38 @@
         "name": "Mapping oBDS Stoma-Anzeichnung zu SNOMED CT",
         "description": "Mapping der oBDS-Codes für präoperative Stoma-Anzeichnung zu SNOMED CT",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "MedicationStatement/mii-exa-onko-medikation-iberdomide-unii"
+        },
+        "name": "Medikation Iberdomide (UNII)",
+        "description": "Beispiel einer systemischen Therapie Medikation mit UNII-Code für experimentellen Wirkstoff ohne ATC-Code",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-melanom-exzision-oberarm"
+        },
+        "name": "Melanom Exzision Oberarm Beispiel",
+        "description": "Beispiel einer Melanom-Exzision am linken Oberarm mit Sicherheitsabstand",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-exzision"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-melanom-exzision-ruecken"
+        },
+        "name": "Melanom Exzision Rücken Beispiel",
+        "description": "Beispiel einer Melanom-Nachexzision am oberen Rücken",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-exzision"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-strahlentherapie-2014-prostata-mit-lk"
+        },
+        "name": "Migration Beispiel: Prostata mit Lymphknoten (oBDS 2014 → 2021)",
+        "description": "Zeigt Migration von 2014 '5.4.+' zu 2021 separaten Prozeduren",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie"
       },
       {
         "reference": {
@@ -367,6 +431,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-onko-weitere-klassifikationen-obds"
+        },
+        "name": "MII CodeSystem Onkologie - Weitere Klassifikationen oBDS",
+        "description": "oBDS-specific classification systems and scoring systems not yet covered by international terminologies (SNOMED CT, NCI Thesaurus). These codes supplement the existing ValueSet for additional classifications. Research required: Check if SNOMED CT or LOINC codes exist for these scoring systems before using oBDS-specific codes.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ConceptMap/MII-CM-Onkologie-to-MVGenomSeq"
         },
         "name": "MII Concept Map Modellvorhaben Genomsequenzierung Onkologie",
@@ -511,7 +583,7 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/mii-cs-onko-prostata-postoperative-complications"
+          "reference": "CodeSystem/mii-cs-onko-prostata-postsurgical-complications"
         },
         "name": "MII CS Onkologie Prostata Postoperative Komplikationen",
         "description": "CodeSystem zur Darstellung des Vorhandenseins von postoperativen Komplikationen nach Prostatektomie in der Onkologie",
@@ -567,10 +639,26 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet-2014"
+        },
+        "name": "MII CS Onkologie Strahlentherapie Zielgebiet oBDS 2014 (Legacy)",
+        "description": "oBDS 2014 Legacy-Codesystem für Klassifikation von Zielgebiet von Strahlentherapie - nur für Datenimport und Migration",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-onko-studienteilnahme"
         },
         "name": "MII CS Onkologie Studienteilnahme",
         "description": "oBDS-spezifisches Codesystem den Status der Studienteilnahme",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-systemische-therapie-protokolle"
+        },
+        "name": "MII CS Onkologie Systemische Therapie Protokolle",
+        "description": "oBDS-spezifisches Codesystem für Protokolle systemischer Therapien",
         "exampleBoolean": false
       },
       {
@@ -823,14 +911,6 @@
       },
       {
         "reference": {
-          "reference": "Condition/mii-exa-onko-diagnose-primaertumor-krk"
-        },
-        "name": "MII EXA Onko KRK Diagnose Primaertumor",
-        "description": "Beispiel für eine Primärtumor-Diagnose beim Kolorektalen Karzinom",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
-      },
-      {
-        "reference": {
           "reference": "Procedure/mii-exa-onko-krk-operation"
         },
         "name": "MII EXA Onko KRK Operation",
@@ -871,6 +951,14 @@
       },
       {
         "reference": {
+          "reference": "Bundle/mii-exa-onko-melanom-bundle"
+        },
+        "name": "MII EXA Onko Melanom Bundle",
+        "description": "Beispiel-Bundle für Malignes Melanom mit allen spezifischen Profilen",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-onko-melanom-ldh"
         },
         "name": "MII EXA Onko Melanom LDH",
@@ -895,6 +983,22 @@
       },
       {
         "reference": {
+          "reference": "Bundle/mii-exa-onko-prostata-example-bundle-1"
+        },
+        "name": "MII EXA Onko Prostata Bundle",
+        "description": "Beispiel-Bundle für Prostata-Karzinom mit allen spezifischen Profilen",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-prostata-surgery-2"
+        },
+        "name": "MII EXA Onko Prostata Operation",
+        "description": "Beispiel für eine Prostatektomie in der Onkologie",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-lm-mvgenomseq-onkologie"
         },
         "name": "MII LM Modellvorhaben Genomsequenzierung Onkologie",
@@ -915,6 +1019,22 @@
         },
         "name": "MII LM Onkologie Organspezifische Zusatzmodule",
         "description": "Logisches Modell für die organspezifischen Zusatzmodule des oBDS",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-melanom-exzision"
+        },
+        "name": "MII PR Onko Melanom Exzision",
+        "description": "Melanom-spezifische Exzision. Dieses Profil spezialisiert die allgemeine onkologische Operation für Melanom-Exzisionen mit einem präferierten ValueSet basierend auf SNOMED CT Codes für Hautexzisionen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-prostata-operation"
+        },
+        "name": "MII PR Onko Prostata Operation",
+        "description": "Prostata-spezifische Operation. Dieses Profil spezialisiert die allgemeine onkologische Operation für Prostata-spezifische Eingriffe mit einem präferierten ValueSet basierend auf SNOMED CT 118877007 und dessen Kindern.",
         "exampleBoolean": false
       },
       {
@@ -1455,6 +1575,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-tumorkonferenz-detailed-recommendations"
+        },
+        "name": "MII PR Onkologie Tumorkonferenz - Detailed Recommendations",
+        "description": "Dieses Profil beschreibt strukturierte Therapieempfehlungen mit detaillierten RequestGroup-basierten Protokollen für Multi-Agent-Therapien und molekulare Tumorboards",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-verlauf"
         },
         "name": "MII PR Onkologie Verlauf",
@@ -1474,7 +1602,23 @@
           "reference": "ValueSet/mii-vs-onko-weitere-klassifikationen"
         },
         "name": "MII Value Set Onkologie - Weitere Klassifikationen",
-        "description": "Cancer staging systems that may be used in staging assertions, such as those defined by AJCC, FIGO, and other specialized staging systems. Based on mCODE STU4 and German oBDS catalogue",
+        "description": "Comprehensive collection of cancer staging systems and classification schemes used in oncology beyond TNM classification. This includes AJCC, FIGO, hematological classifications, and specialized organ-specific systems. Based on mCODE STU4 and German oBDS catalogue. Covers entity-specific classifications (e.g., FIGO for gynecological tumors), hematological classifications, and WHO classifications for CNS tumors.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-melanom-exzision-snomedct"
+        },
+        "name": "MII VS Onko Melanom Exzision SNOMED CT",
+        "description": "Value Set für Melanom-spezifische Exzisionen basierend auf SNOMED CT. Enthält den Code für Melanom-Exzision. Weitere anatomische Details können über bodySite kodiert werden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-prostata-operation-snomedct"
+        },
+        "name": "MII VS Onko Prostata Operation SNOMED CT",
+        "description": "Value Set für Prostata-spezifische Operationen basierend auf SNOMED CT. Enthält alle Kinder von 118877007 |Procedure on prostate (procedure)|",
         "exampleBoolean": false
       },
       {
@@ -1682,7 +1826,7 @@
           "reference": "ValueSet/mii-vs-onko-strahlentherapie-zielgebiet"
         },
         "name": "MII VS Onkologie Strahlentherapie Zielgebiet",
-        "description": "oBDS-spezifisches ValueSet für Klassifikation von Zielgebiet bei Strahlentherapie",
+        "description": "oBDS-spezifisches ValueSet für Klassifikation von Zielgebiet bei Strahlentherapie - unterstützt sowohl oBDS 2021 als auch oBDS 2014 Legacy-Codes",
         "exampleBoolean": false
       },
       {
@@ -1719,10 +1863,98 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-onko-systemische-therapie-protokolle"
+        },
+        "name": "MII VS Onkologie Systemische Therapie Protokolle",
+        "description": "oBDS-spezifisches ValueSet für Protokolle systemischer Therapien",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-systemische-therapie-stellungzurop"
         },
         "name": "MII VS Onkologie Systemische Therapie Stellung",
         "description": "oBDS-spezifisches ValueSet für Klassifikation von Stellung zur OP",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-systemische-therapie-substanzen"
+        },
+        "name": "MII VS Onkologie Systemische Therapie Substanzen",
+        "description": "Validierte ATC-Codes für Substanzen der systemischen Therapie basierend auf oBDS Umsetzungsleitfaden. Automatisch generiert und gegen MII-Terminologieserver validiert.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-systemische-therapie-substanzen-unii"
+        },
+        "name": "MII VS Onkologie Systemische Therapie Substanzen (UNII)",
+        "description": "UNII-Codes für Substanzen der systemischen Therapie ohne ATC-Code. Ergänzung zum ATC-basierten Haupt-ValueSet für neuere und experimentelle onkologische Wirkstoffe.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-systemische-therapie-substanzen-2018"
+        },
+        "name": "MII VS Onkologie Systemische Therapie Substanzen ATC 2018",
+        "description": "ATC-Codes für Substanzen der systemischen Therapie, validiert gegen ATC-DE Version 2018. Für historische Datenvalidierung.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-systemische-therapie-substanzen-2019"
+        },
+        "name": "MII VS Onkologie Systemische Therapie Substanzen ATC 2019",
+        "description": "ATC-Codes für Substanzen der systemischen Therapie, validiert gegen ATC-DE Version 2019. Für historische Datenvalidierung.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-systemische-therapie-substanzen-2020"
+        },
+        "name": "MII VS Onkologie Systemische Therapie Substanzen ATC 2020",
+        "description": "ATC-Codes für Substanzen der systemischen Therapie, validiert gegen ATC-DE Version 2020. Für historische Datenvalidierung.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-systemische-therapie-substanzen-2021"
+        },
+        "name": "MII VS Onkologie Systemische Therapie Substanzen ATC 2021",
+        "description": "ATC-Codes für Substanzen der systemischen Therapie, validiert gegen ATC-DE Version 2021. Für historische Datenvalidierung.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-systemische-therapie-substanzen-2022"
+        },
+        "name": "MII VS Onkologie Systemische Therapie Substanzen ATC 2022",
+        "description": "ATC-Codes für Substanzen der systemischen Therapie, validiert gegen ATC-DE Version 2022. Für historische Datenvalidierung.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-systemische-therapie-substanzen-2023"
+        },
+        "name": "MII VS Onkologie Systemische Therapie Substanzen ATC 2023",
+        "description": "ATC-Codes für Substanzen der systemischen Therapie, validiert gegen ATC-DE Version 2023. Für historische Datenvalidierung.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-systemische-therapie-substanzen-2024"
+        },
+        "name": "MII VS Onkologie Systemische Therapie Substanzen ATC 2024",
+        "description": "ATC-Codes für Substanzen der systemischen Therapie, validiert gegen ATC-DE Version 2024. Für historische Datenvalidierung.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-systemische-therapie-substanzen-2025"
+        },
+        "name": "MII VS Onkologie Systemische Therapie Substanzen ATC 2025",
+        "description": "ATC-Codes für Substanzen der systemischen Therapie, validiert gegen ATC-DE Version 2025. Für historische Datenvalidierung.",
         "exampleBoolean": false
       },
       {
@@ -1983,6 +2215,20 @@
       },
       {
         "reference": {
+          "reference": "Procedure/mii-exa-onko-cdk46-class-medication"
+        },
+        "name": "mii-exa-onko-cdk46-class-medication",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
+      },
+      {
+        "reference": {
+          "reference": "RequestGroup/mii-exa-onko-cdk46-class-recommendation"
+        },
+        "name": "mii-exa-onko-cdk46-class-recommendation",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie"
+      },
+      {
+        "reference": {
           "reference": "Condition/mii-exa-onko-diagnose"
         },
         "name": "mii-exa-onko-diagnose",
@@ -2008,6 +2254,13 @@
         },
         "name": "mii-exa-onko-grading-1",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading"
+      },
+      {
+        "reference": {
+          "reference": "RequestGroup/mii-exa-onko-her2-specific-choices"
+        },
+        "name": "mii-exa-onko-her2-specific-choices",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie"
       },
       {
         "reference": {
@@ -2102,6 +2355,62 @@
       },
       {
         "reference": {
+          "reference": "Encounter/mii-exa-onko-melanom-bundle-encounter"
+        },
+        "name": "mii-exa-onko-melanom-bundle-encounter",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/mii-exa-onko-melanom-bundle-patient"
+        },
+        "name": "mii-exa-onko-melanom-bundle-patient",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-onko-melanom-diagnose"
+        },
+        "name": "mii-exa-onko-melanom-diagnose",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+      },
+      {
+        "reference": {
+          "reference": "RequestGroup/mii-exa-onko-molecular-cdk46-protocol"
+        },
+        "name": "mii-exa-onko-molecular-cdk46-protocol",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie"
+      },
+      {
+        "reference": {
+          "reference": "RequestGroup/mii-exa-onko-molecular-her2-alternatives"
+        },
+        "name": "mii-exa-onko-molecular-her2-alternatives",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie"
+      },
+      {
+        "reference": {
+          "reference": "ServiceRequest/mii-exa-onko-molecular-surgery-request"
+        },
+        "name": "mii-exa-onko-molecular-surgery-request",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-palbociclib-therapie"
+        },
+        "name": "mii-exa-onko-palbociclib-therapie",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-pertuzumab-therapie"
+        },
+        "name": "mii-exa-onko-pertuzumab-therapie",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-onko-prostata-anzahl-positiver-stanzen-1"
         },
         "name": "mii-exa-onko-prostata-anzahl-positiver-stanzen-1",
@@ -2116,10 +2425,31 @@
       },
       {
         "reference": {
+          "reference": "Encounter/mii-exa-onko-prostata-bundle-encounter"
+        },
+        "name": "mii-exa-onko-prostata-bundle-encounter",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/mii-exa-onko-prostata-bundle-patient"
+        },
+        "name": "mii-exa-onko-prostata-bundle-patient",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-onko-prostata-ca-befall-stanze-1"
         },
         "name": "mii-exa-onko-prostata-ca-befall-stanze-1",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-ca-befall-stanze"
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-onko-prostata-diagnose"
+        },
+        "name": "mii-exa-onko-prostata-diagnose",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
       },
       {
         "reference": {
@@ -2190,6 +2520,13 @@
         },
         "name": "mii-exa-onko-studienteilnahme",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-studienteilnahme"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-tdm1-option"
+        },
+        "name": "mii-exa-onko-tdm1-option",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
       },
       {
         "reference": {
@@ -2305,6 +2642,27 @@
       },
       {
         "reference": {
+          "reference": "Procedure/mii-exa-onko-trastuzumab-option"
+        },
+        "name": "mii-exa-onko-trastuzumab-option",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-trastuzumab-therapie"
+        },
+        "name": "mii-exa-onko-trastuzumab-therapie",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-tucatinib-option"
+        },
+        "name": "mii-exa-onko-tucatinib-option",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
+      },
+      {
+        "reference": {
           "reference": "CarePlan/mii-exa-onko-tumorkonferenz-01"
         },
         "name": "mii-exa-onko-tumorkonferenz-01",
@@ -2316,6 +2674,41 @@
         },
         "name": "mii-exa-onko-tumorkonferenz-02",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
+      },
+      {
+        "reference": {
+          "reference": "CarePlan/mii-exa-onko-tumorkonferenz-class-recommendation"
+        },
+        "name": "mii-exa-onko-tumorkonferenz-class-recommendation",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz-detailed-recommendations"
+      },
+      {
+        "reference": {
+          "reference": "CarePlan/mii-exa-onko-tumorkonferenz-mixed-approach"
+        },
+        "name": "mii-exa-onko-tumorkonferenz-mixed-approach",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
+      },
+      {
+        "reference": {
+          "reference": "CarePlan/mii-exa-onko-tumorkonferenz-molekular"
+        },
+        "name": "mii-exa-onko-tumorkonferenz-molekular",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
+      },
+      {
+        "reference": {
+          "reference": "CarePlan/mii-exa-onko-tumorkonferenz-pure-molecular"
+        },
+        "name": "mii-exa-onko-tumorkonferenz-pure-molecular",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
+      },
+      {
+        "reference": {
+          "reference": "CarePlan/mii-exa-onko-tumorkonferenz-specific-choices"
+        },
+        "name": "mii-exa-onko-tumorkonferenz-specific-choices",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz-detailed-recommendations"
       },
       {
         "reference": {
@@ -2336,6 +2729,20 @@
           "reference": "Observation/mii-exa-onko-weitere-klassifikationen-2"
         },
         "name": "mii-exa-onko-weitere-klassifikationen-2",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-weitere-klassifikationen-3"
+        },
+        "name": "mii-exa-onko-weitere-klassifikationen-3",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-weitere-klassifikationen-4"
+        },
+        "name": "mii-exa-onko-weitere-klassifikationen-4",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen"
       },
       {
@@ -2426,14 +2833,6 @@
       },
       {
         "reference": {
-          "reference": "SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-applikationsart"
-        },
-        "name": "mii-sp-onko-procedure-ext-strahlentherapie-bs-applikationsart",
-        "description": "SearchParameter for Procedure.usedCode:applikationsart",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-boost"
         },
         "name": "mii-sp-onko-procedure-ext-strahlentherapie-bs-boost",
@@ -2458,30 +2857,6 @@
       },
       {
         "reference": {
-          "reference": "SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-lateralitaet"
-        },
-        "name": "mii-sp-onko-procedure-ext-strahlentherapie-bs-lateralitaet",
-        "description": "SearchParameter for Procedure.extension:bestrahlung.extension:zielgebiet_Lateralitaet",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-strahlenart"
-        },
-        "name": "mii-sp-onko-procedure-ext-strahlentherapie-bs-strahlenart",
-        "description": "SearchParameter for Procedure.usedCode:strahlenart",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-zielgebiet"
-        },
-        "name": "mii-sp-onko-procedure-ext-strahlentherapie-bs-zielgebiet",
-        "description": "SearchParameter for Procedure.bodySite.coding:zielgebiet",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-intention"
         },
         "name": "mii-sp-onko-procedure-ext-strahlentherapie-intention",
@@ -2494,6 +2869,30 @@
         },
         "name": "mii-sp-onko-procedure-ext-systemischetherapie-intention",
         "description": "SearchParameter for Procedure.extension[intention]",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-onko-procedure-strahlentherapie-applikationsart"
+        },
+        "name": "mii-sp-onko-procedure-strahlentherapie-applikationsart",
+        "description": "SearchParameter for Procedure.usedCode:Applikationsart",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-onko-procedure-strahlentherapie-lateralitaet"
+        },
+        "name": "mii-sp-onko-procedure-strahlentherapie-lateralitaet",
+        "description": "SearchParameter for Procedure.bodySite.extension:Seitenlokalisation",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-onko-procedure-strahlentherapie-strahlenart"
+        },
+        "name": "mii-sp-onko-procedure-strahlentherapie-strahlenart",
+        "description": "SearchParameter for Procedure.usedCode:Strahlenart",
         "exampleBoolean": false
       },
       {
@@ -2618,14 +3017,6 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/mii-vs-onko-mamma-operationen"
-        },
-        "name": "MII_VS_Onko_Mamma_Operationen",
-        "description": "Value Set für oBDS-Rezeptorstatus Mamma",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "ValueSet/mii-vs-onko-mamma-operation-ops"
         },
         "name": "MII_VS_Onko_Mamma_Operation_OPS",
@@ -2645,7 +3036,7 @@
           "reference": "ValueSet/mii-vs-onko-mamma-praeoperative-markierung-modalitaet"
         },
         "name": "MII_VS_Onko_Mamma_Praeoperative_Markierung_Modalitaet",
-        "description": "Value Set für Imagingmodalität der präopertiven Markierung bei Mamma-Karzinom",
+        "description": "Value Set für Imagingmodalität der präoperativen Markierung bei Mamma-Karzinom",
         "exampleBoolean": false
       },
       {
@@ -2765,14 +3156,6 @@
         },
         "name": "PatientKimMusterperson-Procedure-3",
         "description": "22.06.2021 CT Thorax: kein Hinweis auf Metastasen.",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Procedure/PatientKimMusterperson-Procedure-4"
-        },
-        "name": "PatientKimMusterperson-Procedure-4",
-        "description": "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie, Tumorresektion mittels Hysterektomie, bilateraler Adnexektomie, und atpyischer Lebersegmentresektion (Seg. II und V). Postoperativ: R0.",
         "exampleBoolean": true
       },
       {
@@ -2918,6 +3301,22 @@
         "name": "PatientKimMusterperson-Verlauf-2022-01-22",
         "description": ". ",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-prostata-operation-prostatektomie"
+        },
+        "name": "Prostata Operation Prostatektomie Beispiel",
+        "description": "Beispiel einer radikalen Prostatektomie",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostata-operation"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-prostata-operation-turp"
+        },
+        "name": "Prostata Operation TURP Beispiel",
+        "description": "Beispiel einer transurethralen Resektion der Prostata",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostata-operation"
       },
       {
         "reference": {

@@ -54,6 +54,17 @@
         "mustSupport": true
       },
       {
+        "id": "RequestGroup.code",
+        "path": "RequestGroup.code",
+        "short": "Type of therapy recommendation",
+        "definition": "Classification of the therapy recommendation using oBDS therapy types (CH, HO, IM, ZS, etc.) to specify the kind of therapy being recommended.",
+        "mustSupport": true,
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieempfehlung-typ"
+        }
+      },
+      {
         "id": "RequestGroup.subject",
         "path": "RequestGroup.subject",
         "min": 1,

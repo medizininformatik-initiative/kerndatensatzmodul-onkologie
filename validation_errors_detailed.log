@@ -1,0 +1,196 @@
+# FHIR Validation Errors - Detailed Log
+# Generated: 2025-08-08
+# Purpose: Quick reference for specific error messages and their locations
+# 
+# STATUS LEGEND:
+# [FIXED] - Error has been fixed in code, pending validation
+# [EXTERNAL] - External dependency, cannot fix
+# [PENDING] - Not yet addressed
+
+## 1. TERMINOLOGY SYSTEM URI ERRORS [Critical]
+
+[EXTERNAL - MedDRA not available in validator - MARK FOR LATER]
+FILE: AdverseEvent-mii-pr-onko-nebenwirkung-0.json
+PATH: AdverseEvent.event.coding[0].code (l13/c27)
+ERROR: The System URI could not be determined for the code '10016256' in the ValueSet 'mii-vs-onko-nebenwirkung-art'
+---
+
+[FIXED - Created Procedure with status='completed']
+FILE: Bundle-mii-exa-onko-prostata-example-bundle-1.json
+PATH: Bundle.entry[11].resource/*Procedure/mii-exa-onko-prostata-surgery-1*/.status (l486/c26)
+ERROR: The value provided ('final') was not found in the value set 'EventStatus' - System URI could not be determined
+---
+
+## 2. PROFILE REFERENCE MATCHING ERRORS [Critical]
+
+[FIXED - Added meta.profile to KRK diagnose]
+FILE: Bundle-mii-exa-onko-krk-bundle.json
+PATH: Bundle.entry[3].resource/*Observation/mii-exa-onko-krk-abstand-tumor-anokutanlinie*/.focus[0]
+ERROR: Unable to find a profile match for Condition/mii-exa-onko-krk-diagnose among choices: mii-pr-onko-diagnose-primaertumor
+---
+
+[KRK operation already has meta.profile set]
+FILE: Bundle-mii-exa-onko-krk-bundle.json
+PATH: Bundle.entry[7].resource/*Observation/mii-exa-onko-krk-anastomoseninsuffizienz*/.focus[0]
+ERROR: Unable to find a profile match for Procedure/mii-exa-onko-krk-operation among choices: mii-pr-onko-krk-operation
+---
+
+[FIXED - Added meta.profile to Mamma diagnose]
+FILE: Bundle-mii-exa-onko-mamma-example-bundle-1.json
+PATH: Bundle.entry[3].resource/*Observation/mii-exa-onko-mamma-menopause-status-1*/.focus[0]
+ERROR: Unable to find a profile match for Condition/mii-exa-onko-mamma-diagnose among choices: mii-pr-onko-diagnose-primaertumor
+---
+
+[FIXED - Changed discriminator path from "$this" to "resolve()"]
+FILE: Bundle-mii-exa-onko-prostata-example-bundle-1.json
+PATH: Bundle.entry[10].resource/*Observation/mii-exa-onko-prostata-surgical-complication-1*/.focus[1]
+ERROR: Invalid Resource target type. Found Procedure, but expected one of ([Condition])
+---
+
+## 3. SLICING DISCRIMINATOR FAILURES [Critical]
+
+[FIXED - Added fixed system values to slices]
+FILE: Bundle-mii-exa-onko-mamma-example-bundle-1.json
+PATH: Bundle.entry[5].resource/*Observation/mii-exa-onko-mamma-rezeptorstatus-progesteron-1*/.value.ofType(CodeableConcept).coding[0]
+ERROR: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.value[x].coding:DefinitionOBDS - discriminator does not have fixed value
+---
+
+[FIXED - Added fixed system values to slices]
+FILE: Bundle-mii-exa-onko-prostata-example-bundle-1.json
+PATH: Bundle.entry[10].resource/*Observation/mii-exa-onko-prostata-surgical-complication-1*/.value.ofType(CodeableConcept).coding[0]
+ERROR: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.value[x].coding:ClavienDindo - discriminator does not have fixed value
+---
+
+[FIXED - Added system cardinality to unii slice]
+FILE: MedicationStatement-mii-exa-onko-systemische-therapie-medikation.json
+PATH: MedicationStatement.medication.ofType(CodeableConcept).coding[0]
+ERROR: Slicing cannot be evaluated: Could not match discriminator ($this) for slice MedicationStatement.medication[x]:medicationCodeableConcept.coding:unii
+---
+
+## 4. BUNDLE STRUCTURE ERRORS [Medium]
+
+[FIXED - Changed to absolute URLs with canonical base]
+FILE: Bundle-mii-exa-onko-krk-bundle.json
+PATH: Bundle.entry[0] (l16/c6)
+ERROR: The fullUrl must be an absolute URL (not 'Patient/mii-exa-onko-krk-bundle-patient')
+---
+
+[FIXED - Changed to absolute URLs with canonical base]
+FILE: Bundle-mii-exa-onko-krk-bundle.json
+PATH: Bundle.entry[1] (l35/c6)
+ERROR: The fullUrl must be an absolute URL (not 'Condition/mii-exa-onko-krk-diagnose')
+---
+
+[FIXED - Changed to absolute URLs with canonical base]
+FILE: Bundle-mii-exa-onko-krk-bundle.json
+PATH: Bundle.entry[2] (l87/c6)
+ERROR: The fullUrl must be an absolute URL (not 'Encounter/mii-exa-onko-krk-bundle-encounter')
+---
+
+## 5. UNKNOWN CODE IN CODESYSTEM [Critical]
+
+[EXTERNAL - RadLex terminology not available in validator]
+FILE: Bundle-mii-exa-onko-krk-bundle.json
+PATH: Bundle.entry[6].resource/*Observation/mii-exa-onko-krk-abstand-mesorektale-faszie*/.code.coding[0].code
+ERROR: Unknown code 'RDE96' in the CodeSystem 'http://radlex.org' version '4.2'
+---
+
+[FIXED - Changed 'MOL' to 'praeth' (prätherapeutisch)]
+FILE: CarePlan-mii-exa-onko-tumorkonferenz-class-recommendation.json
+PATH: CarePlan.category[0].coding[0].code
+ERROR: Unknown code 'MOL' in the CodeSystem 'mii-cs-onko-therapieplanung-typ' version '2025.1.0'
+---
+
+## 6. PROFILE SNAPSHOT MISSING [Critical]
+
+[FIXED - SUSHI compilation generates snapshots]
+FILE: Bundle-mii-exa-onko-mamma-example-bundle-1.json
+PATH: Bundle.entry[4].resource/*Observation/mii-exa-onko-mamma-rezeptorstatus-estrogen-1*/
+ERROR: StructureDefinition mii-pr-onko-mamma-rezeptorstatus-estrogen has no snapshot - validation is against the snapshot
+---
+
+## 7. VALUESET BINDING WARNINGS [Medium]
+
+FILE: Bundle-mii-exa-onko-mamma-example-bundle-1.json
+PATH: Bundle.entry[5].resource/*Observation/mii-exa-onko-mamma-rezeptorstatus-progesteron-1*/.component[1].value
+ERROR: None of the codings provided are in the value set 'LOINC Answer Codes for LL4358-9' (codes = http://loinc.org#LA13034-6)
+---
+
+[FIXED - Changed ValueSet binding to MII_VS_Onko_Prostata_Gleason_Score]
+FILE: Bundle-mii-exa-onko-prostata-example-bundle-1.json
+PATH: Bundle.entry[7].resource/*Observation/mii-exa-onko-prostata-gleason-pattern-grade-group-1*/.value
+ERROR: None of the codings provided are in the value set 'mii-vs-onko-prostata-gleason-patterns' (codes = http://snomed.info/sct#1279714001)
+---
+
+## 8. DISPLAY NAME MISMATCHES [Low]
+
+[FIXED - Updated LOINC display name]
+FILE: Bundle-mii-exa-onko-krk-bundle.json
+PATH: Bundle.entry[8].resource/*Observation/mii-exa-onko-krk-asa-klassifikation*/.code.coding[0].display
+ERROR: Wrong Display Name 'American Society of Anesthesiologists physical status score' for http://loinc.org#97816-3
+CORRECT: 'American society of anesthesiologists morbidity state'
+---
+
+## 9. EXTERNAL CODESYSTEM VERSION ERRORS [External/WontFix]
+
+FILE: Bundle-mii-exa-onko-krk-bundle.json
+PATH: Bundle.entry[1].resource/*Condition/mii-exa-onko-krk-diagnose*/.code.coding[0]
+ERROR: CodeSystem 'http://fhir.de/CodeSystem/bfarm/icd-10-gm' version '2024' could not be found
+AVAILABLE: [2012, 2021, 2022, 2023, 2010, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2009, 2011]
+---
+
+FILE: Bundle-mii-exa-onko-krk-bundle.json
+PATH: Bundle.entry[10].resource/*Procedure/mii-exa-onko-krk-operation*/.code.coding[0]
+ERROR: CodeSystem 'http://fhir.de/CodeSystem/bfarm/ops' version 'OPS 2024' could not be found
+AVAILABLE: [2017, 2011, 2022, 2023, 2024, 2025, 2014, 2015, 2018, 2020, 2010, 2012, 2013, 2016, 2019, 2021]
+---
+
+## QUICK FIX PRIORITIES:
+
+### IMMEDIATE (Bundle References):
+1. KRK Bundle: Ensure Condition/mii-exa-onko-krk-diagnose exists and is properly profiled
+2. Mamma Bundle: Ensure Condition/mii-exa-onko-mamma-diagnose exists and is properly profiled
+3. Prostata Bundle: Fix Observation.focus to reference Condition not Procedure
+
+### IMMEDIATE (Slicing):
+[PARTIALLY FIXED]
+1. mii-pr-onko-mamma-rezeptorstatus-progesteron: FIXED - Added system discriminators
+2. mii-pr-onko-mamma-rezeptorstatus-estrogen: FIXED - Added system discriminators  
+3. mii-pr-onko-prostate-clavien-dindo: FIXED - Added system discriminators
+4. mii-pr-onko-systemische-therapie-medikation: PENDING - Fix unii slice discriminator
+
+### IMMEDIATE (Codes):
+[PARTIALLY FIXED]
+1. 'MOL' code: FIXED - Changed to 'praeth' (prätherapeutisch)
+2. RadLex code 'RDE96': EXTERNAL - RadLex terminology not available in validator
+3. Procedure.status = 'final': FIXED - Created Procedure with status='completed'
+
+### MEDIUM (Bundle Structure):
+[FIXED - All bundles now use canonical base URLs]
+1. Change all bundle entry fullUrls from relative to absolute format
+   FROM: "Patient/mii-exa-onko-krk-bundle-patient"
+   TO: "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-krk-bundle-patient"
+   - KRK Bundle: FIXED
+   - Mamma Bundle: FIXED
+   - Prostata Bundle: FIXED
+
+### LOW (Display Names):
+[FIXED]
+1. LOINC 97816-3: FIXED - Updated to 'American society of anesthesiologists morbidity state'
+
+## GREP COMMANDS FOR QUICK CHECKS:
+
+# Find all System URI errors:
+grep -n "System URI could not be determined" validation.html
+
+# Find all profile matching errors:
+grep -n "Unable to find a profile match" validation.html
+
+# Find all slicing errors:
+grep -n "Slicing cannot be evaluated" validation.html
+
+# Find all bundle URL errors:
+grep -n "fullUrl must be an absolute URL" validation.html
+
+# Find all unknown code errors:
+grep -n "Unknown code" validation.html

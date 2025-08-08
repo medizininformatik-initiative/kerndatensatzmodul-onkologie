@@ -46,6 +46,116 @@ Aus den oben genannten Punkten ergibt sich folgende Kodierempfehlung für die oB
     - Strahlentherapie als OPS `8-52 Strahlentherapie` (oder genauer wenn vorhanden)
     - Nuklearmedizinische Therapie als OPS `8-53 Nuklearmedizinische Therapie` (oder genauer wenn vorhanden)
 
+### oBDS 2014 zu 2021 Zielgebiet Migration
+
+Die Strahlentherapie Zielgebiet-Kodierung hat sich zwischen oBDS 2014 und 2021 grundlegend geändert:
+
+<plantuml>
+@startuml MII_Onko_Strahlentherapie_Zielgebiet_Migration
+!theme plain
+skinparam defaultFontSize 10
+skinparam classFontSize 9
+skinparam packageFontSize 11
+skinparam stereotypeFontSize 8
+
+title **oBDS 2014 → 2021 Strahlentherapie Zielgebiet Migration**\n//Architekturänderung: Kombinierte Codes → Separate Prozeduren//
+
+package "oBDS 2014 Ansatz" as pkg2014 <<Legacy>> {
+  
+  class "**Strahlentherapie**\n//Übergeordnete Prozedur//" as ST2014 <<Procedure>> {
+    + status: completed
+    + code: OPS 8-522
+    + subject: Patient
+    + performedPeriod: 2023-03-15 to 2023-04-20
+  }
+  
+  class "**Bestrahlung Mamma+LK**\n//Eine Prozedur//" as B2014 <<Procedure>> {
+    + **bodySite.coding.system**: zielgebiet-2014
+    + **bodySite.coding.code**: "3.1.+"
+    + **bodySite.display**: "Mamma als Ganzbrust mit Lk"
+    + extension[Gesamtdosis]: 50 Gy
+    + extension[Einzeldosis]: 2 Gy
+    --
+    **Kombinierte Information:**
+    ✓ Organ: Mamma als Ganzbrust
+    ✓ Lymphknoten: Implizit enthalten
+    ✓ Lateralität: Über Extension
+  }
+  
+  ST2014 ||--|| B2014 : partOf
+}
+
+package "oBDS 2021 Ansatz" as pkg2021 <<Current>> {
+  
+  class "**Strahlentherapie**\n//Übergeordnete Prozedur//" as ST2021 <<Procedure>> {
+    + status: completed
+    + code: OPS 8-522
+    + subject: Patient
+    + performedPeriod: 2023-03-15 to 2023-04-20
+  }
+  
+  class "**Bestrahlung Mamma**\n//Primärzielgebiet//" as B2021_Organ <<Procedure>> {
+    + **bodySite.coding.system**: zielgebiet
+    + **bodySite.coding.code**: #3.1
+    + **bodySite.display**: "Mamma als Ganzbrust (r, l)"
+    + extension[Seitenlokalisation]: "rechts"
+    + extension[Gesamtdosis]: 50 Gy
+    + extension[Einzeldosis]: 2 Gy
+    --
+    **Sektion 3: Thorax**
+  }
+  
+  class "**Bestrahlung Lymphknoten**\n//Lymphabflussregion//" as B2021_LK <<Procedure>> {
+    + **bodySite.coding.system**: zielgebiet
+    + **bodySite.coding.code**: #9.3
+    + **bodySite.display**: "Axilläre Lymphknoten (r, l)"
+    + extension[Seitenlokalisation]: "rechts"
+    + extension[Gesamtdosis]: 46 Gy
+    + extension[Einzeldosis]: 2 Gy
+    --
+    **Sektion 9: Lymphabflussregionen**
+  }
+  
+  ST2021 ||--|| B2021_Organ : partOf
+  ST2021 ||--|| B2021_LK : partOf
+}
+
+note top of pkg2014 : **oBDS 2014 Paradigma**\n• Kombinierte Organ+Lymphknoten-Kodierung\n• Suffixe: + (mit LK), - (ohne LK), . (o.n.A.)\n• Eine Prozedur pro Zielgebietskombination
+
+note top of pkg2021 : **oBDS 2021 Paradigma**\n• Getrennte Organ- und Lymphknotenkodierung\n• Organe: Sektionen 1-8\n• Lymphknoten: Sektion 9\n• Separate Prozeduren pro Zielgebiet
+
+note bottom of ST2014 : Gleiche übergeordnete\nStrahlentherapie-Struktur
+
+note bottom of ST2021 : Gleiche übergeordnete\nStrahlentherapie-Struktur
+
+' Migration arrow
+pkg2014 -[#red,thickness=3]-> pkg2021 : **Migration**\n//2014 "3.1.+" →//\n//2021 "#3.1" + "#9.3"//
+
+' ValueSet box
+note as VS
+  **ValueSet Integration**
+  MII_VS_Onko_Strahlentherapie_Zielgebiet
+  ├── system: zielgebiet (oBDS 2021)
+  └── system: zielgebiet-2014 (oBDS 2014)
+  
+  **Semantische Trennung:**
+  • "3.1." (2014) ≠ #3.1 (2021)
+  • Verschiedene CodeSystem URIs
+  • Keine Konflikte durch Versionskennzeichnung
+end note
+
+VS -[hidden]- pkg2021
+
+@enduml
+</plantuml>
+
+#### Migrationsstrategie
+
+- **oBDS 2014**: Verwendete kombinierte Codes mit Suffixen (`+` mit Lymphknoten, `-` ohne Lymphknoten, `.` ohne nähere Angabe)
+- **oBDS 2021**: Trennt Organe (Sektionen 1-8) und Lymphabflussregionen (Sektion 9) in separate Bestrahlungen
+- **Beispiel**: oBDS 2014 Code `"3.1.+"` (Mamma mit Lymphknoten) wird zu zwei separaten Codes: `#3.1` (Mamma) und `#9.3` (Axilläre Lymphknoten)
+- **ValueSet**: Unterstützt beide CodeSystems für Abwärtskompatibilität
+
 ---
 
 ### Konformität 

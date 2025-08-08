@@ -9,9 +9,9 @@ Description: "Beispiel für den minimalen Abstand des Tumorrandes zur circumfere
 
 * code.coding = $LNC#81176-0 "Distance of tumor from circumferential resection margin [Length] in Specimen by Macroscopy"
 
-* subject = Reference(Patient/example)
-* encounter = Reference(Encounter/example)
-* focus = Reference(Condition/mii-exa-onko-diagnose-primaertumor)
+* subject = Reference(mii-exa-onko-krk-bundle-patient)
+* encounter = Reference(mii-exa-onko-krk-bundle-encounter)
+* focus = Reference(mii-exa-onko-krk-diagnose)
 
 * effectiveDateTime = "2024-03-20T10:15:00+01:00"
 

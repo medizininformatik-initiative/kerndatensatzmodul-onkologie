@@ -1,0 +1,44 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "MII_CS_Onko_Prostata_Postsurgical_Complications",
+  "id": "mii-cs-onko-prostata-postsurgical-complications",
+  "title": "MII CS Onkologie Prostata Postoperative Komplikationen",
+  "description": "CodeSystem zur Darstellung des Vorhandenseins von postoperativen Komplikationen nach Prostatektomie in der Onkologie",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-prostata-postsurgical-complications",
+  "concept": [
+    {
+      "code": "J",
+      "display": "Ja"
+    },
+    {
+      "code": "N",
+      "display": "keine oder höchstens Grad II"
+    },
+    {
+      "code": "U",
+      "display": "Unbekannt"
+    }
+  ],
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2025.1.0",
+  "caseSensitive": true,
+  "count": 3
+}

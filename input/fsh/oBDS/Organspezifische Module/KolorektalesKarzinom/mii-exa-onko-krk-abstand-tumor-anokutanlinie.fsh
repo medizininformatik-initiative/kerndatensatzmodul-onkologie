@@ -9,9 +9,9 @@ Description: "Beispiel für den Abstand des Tumorunterrandes zur Anokutanlinie b
 
 * code.coding = $LNC#33748-5 "Distance from anal verge"
 
-* subject = Reference(Patient/example)
-* encounter = Reference(Encounter/example)
-* focus = Reference(Condition/mii-exa-onko-diagnose-primaertumor)
+* subject = Reference(mii-exa-onko-krk-bundle-patient)
+* encounter = Reference(mii-exa-onko-krk-bundle-encounter)
+* focus = Reference(mii-exa-onko-krk-diagnose)
 
 * effectiveDateTime = "2024-03-10T14:30:00+01:00"
 

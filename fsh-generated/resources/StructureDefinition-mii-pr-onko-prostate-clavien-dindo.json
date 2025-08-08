@@ -68,7 +68,7 @@
           "discriminator": [
             {
               "type": "profile",
-              "path": "$this"
+              "path": "resolve()"
             }
           ],
           "rules": "open",
@@ -191,6 +191,12 @@
         }
       },
       {
+        "id": "Observation.value[x].coding:ClavienDindo.system",
+        "path": "Observation.value[x].coding.system",
+        "min": 1,
+        "patternUri": "http://snomed.info/sct"
+      },
+      {
         "id": "Observation.value[x].coding:OBDSPostOPKompl",
         "path": "Observation.value[x].coding",
         "sliceName": "OBDSPostOPKompl",
@@ -201,6 +207,12 @@
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-postsurgical-complications"
         }
+      },
+      {
+        "id": "Observation.value[x].coding:OBDSPostOPKompl.system",
+        "path": "Observation.value[x].coding.system",
+        "min": 1,
+        "patternUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-prostata-postsurgical-complications"
       },
       {
         "id": "Observation.method",

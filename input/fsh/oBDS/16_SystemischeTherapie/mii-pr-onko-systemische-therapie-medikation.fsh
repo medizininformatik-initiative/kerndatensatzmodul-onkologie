@@ -21,6 +21,18 @@ Description: "Medikation der Systemische Therapie. Dieses Profil beschreibt die 
 * insert Translation(medicationCodeableConcept.coding ^short, de-DE, Wirkstoff/ Substanz der systemischen Medikation)
 * insert Translation(medicationCodeableConcept.coding ^definition, de-DE, Wirkstoff / Substanz der systemischen onkologischen Medikation gemäß 16.4  oBDS 2021. )
 
+// Set existing ATC slice from parent profile as Must Support
+* medicationCodeableConcept.coding[atcClassDe] MS
+
+// Add UNII slice for substances without ATC codes  
+// The parent profile already defines slicing, so we only need to add the new slice
+* medicationCodeableConcept.coding contains unii 0..* MS
+* medicationCodeableConcept.coding[unii] from MII_VS_Onko_Systemische_Therapie_Substanzen_UNII (extensible)
+* medicationCodeableConcept.coding[unii].system 1..1
+* medicationCodeableConcept.coding[unii].system = "http://fdasis.nlm.nih.gov/srs/unii"
+* medicationCodeableConcept.coding[unii] ^short = "UNII-Code für Substanzen ohne ATC-Code"
+* medicationCodeableConcept.coding[unii] ^definition = "UNII-Code für onkologische Substanzen, die keinen etablierten ATC-Code haben (z.B. neuere oder experimentelle Wirkstoffe)"
+
 * partOf 1..* MS 
 * partOf ^slicing.discriminator[0].type = #profile
 * partOf ^slicing.discriminator[=].path = "resolve()"
