@@ -136,9 +136,10 @@ Instance: mii-exa-onko-mamma-praeoperative-markierung-1
 InstanceOf: MII_PR_Onko_Mamma_Praeoperative_Markierung
 Usage: #example
 * status = #completed
-* code.coding = $LNC#LA6576-8 "Positive"
+* code.coding = $SCT#433222002 "Insertion of guide wire into breast using ultrasound guidance (procedure)"
 * subject = Reference(mii-exa-onko-mamma-bundle-patient)
 * reasonReference = Reference(Condition/mii-exa-onko-mamma-diagnose)
+* performedDateTime = "2024-01-15T09:00:00+01:00"
 
 
 Instance: mii-exa-onko-mamma-tumorgroesse-1

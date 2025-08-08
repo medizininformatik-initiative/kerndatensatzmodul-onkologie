@@ -5,22 +5,18 @@ parent:
 ## {{page-title}}
 Hier sind alle Änderungen aufgelistet. 
 
-## Änderungen Version 2026 (geplante Kommentierung September 2025 )
+## Änderungen Kommentierungs Version 2026
 
 ### Weitere Klassifikationen und Molekulare Tumorboards
 - **Hierarchische Klassifikationssysteme**: Implementierung weiterer Klassifikationssysteme (BINET, Ann Arbor, ISS, WHO-Grad, etc.) als hierarchisches CodeSystem
   - **Grund**: Unterstützung hämatologischer und anderer spezifischer Klassifikationssysteme gemäß oBDS-Anforderungen
-  - **Technische Umsetzung**: Parent-Child-Konzepte mit `descendant-of` ValueSet-Filtern für wartbare Terminologien
-  - **mCODE-Kompatibilität**: Integration des mCODE STU4 code+method+value Patterns für Staging-Observationen
+  - **Technische Umsetzung**: Weitere Klassifikation-CodeSystem mit `descendant-of` ValueSet-Filtern für die jeweiligen Antwortmöglichkeiten, um hohe Anzahl eigener Profile zu vermeiden
+  - **mCODE-Kompatibilität**: Integration des mCODE STU4 code+method+value Patterns für Staging-Observationen 
 
-- **CarePlan Activity Slicing**: Erweiterte Tumorkonferenz-Profile zur Unterstützung sowohl traditioneller als auch molekularer Tumorboard-Workflows
+- **Tumorkonferenz-Erweiterung**: Erweiterte Tumorkonferenz-Profile zur Unterstützung sowohl bisheriger oBDS-Darstellung der Tumorkonferenzen als auch komplexere Darstellung von Therapieempfehlungen wie im Modul Molekulares Tumorboard
   - **Grund**: FHIR R4 Invariant cpl-3 verhindert gleichzeitige Nutzung von `activity.detail.code` und `activity.reference`
   - **Lösung**: Activity-Slicing mit `obds` (Standard oBDS 19.1 Kategorisierung) und `extended` (RequestGroup-basierte Protokolle) Slices
-  - **Rückwärtskompatibilität**: Bestehende oBDS-Implementierungen unverändert unterstützt
-
-- **RequestGroup für Kombinationstherapien**: Neues Profil zur strukturierten Abbildung von Multi-Agent-Therapieprotokollen
-  - **Grund**: Molekulare Tumorboards benötigen detaillierte Medikamentenempfehlungen über oBDS-Kategorisierung hinaus
-  - **Anwendungsfälle**: Pharmazeutische Klassen ("beliebiger CDK4/6 Inhibitor") und spezifische Medikamentenauswahl mit Alternativen
+  - **Rückwärtskompatibilität**: Bestehende oBDS-Implementierungen werden unverändert unterstützt
 
 ### Systemische Therapie Erweiterungen
 
@@ -30,31 +26,25 @@ Hier sind alle Änderungen aufgelistet.
   - **Umfang**: Vollständiges CodeSystem mit 96 Protokollen aus oBDS Umsetzungsleitfaden (FOLFOX, R-CHOP, AC, etc.)
   - **Technische Umsetzung**: `Procedure.usedCode` mit extensible Binding an `mii-vs-onko-systemische-therapie-protokolle`
   - **Substanzkombinationen**: Jedes Protokoll dokumentiert enthaltene Wirkstoffe (z.B. "AC" → "Cyclophosphamid, Doxorubicin")
-  - **oBDS-Mapping**: Protokollfeld 16.6 im oBDS-Mapping hinzugefügt
-  - **Suchparameter**: Neuer `used-code` SearchParameter für protokollbasierte Recherchen
-  - **Community-Prozess**: Neue Protokolle über GitHub Issues beantragbar zur standortübergreifenden Harmonisierung
+  - **oBDS-Mapping**: Protokollfeld 16.6 im oBDS-Mapping nun auch zur Systemischen Therapie hinzugefügt (vorher nur in MedicationStatements)
 
 #### UNII-Kodierung für experimentelle Substanzen
 - **Dual-Coding-Support**: MedicationStatement-Profil erweitert um UNII-Slice zusätzlich zum bestehenden ATC-Slice
   - **Grund**: Unterstützung experimenteller/neuerer Substanzen ohne etablierte ATC-Codes
   - **Technische Umsetzung**: 
-    - Markierung des bestehenden `atcClassDe` Slice als Must Support
-    - Neuer `unii` Slice mit extensible Binding an UNII-ValueSet
+    - Neuer `unii` Slice auf MedicationStatement.medication mit extensible Binding an UNII-ValueSet
   - **ValueSet**: `mii-vs-onko-systemische-therapie-substanzen-unii` mit 100+ UNII-Codes
   - **Beispiel**: Iberdomide (UNII: 8V66F27X44) als experimenteller Immunmodulator
-  - **Duplikate bereinigt**: ALNUCTAMAB und AMATUXIMAB aus allgemeiner Sektion entfernt (verbleiben in IM-Kategorie)
 
 #### ATC-Code Transitionen und Post-hoc Mapping
 - **Dokumentation temporaler ATC-Änderungen**: Neue IG-Seite für Terminologie-Besonderheiten
   - **Quizartinib-Beispiel**: L01XE52 (bis 2020) → L01EX11 (ab 2021)
   - **Weitere Transitionen**: Abemaciclib, Acalabrutinib, Adalimumab dokumentiert
-  - **Jahresspezifische ValueSets**: Unterstützung historischer Validierung
 
-- **Post-hoc Mapping (KONTROVERS)**: Empfehlung für DIZ-basierte Freitext-zu-ATC-Annotation
+- **Post-hoc Mapping (kontrovers, daher optional)**: Empfehlung zur DIZ-basierte Freitext-zu-ATC-Annotation
   - **Erlaubt wenn**: Klare Provenance-Dokumentation vorhanden
-  - **Verwendung aktueller Codes**: Bei Post-Annotation aktuelle ATC-Codes verwenden
+  - **Verwendung aktueller Codes**: Bei Post-Annotation aktuelle ATC-Codes verwenden (nicht zwingend die historischen)
   - **Originaltext erhalten**: Im `medicationCodeableConcept.text` Element
-  - **Kommentierungspunkt hinzugefügt**: Explizit als "EXTREM KONTROVERS" markiert
 
 ### Operation-Profil Erweiterungen
 
@@ -64,7 +54,7 @@ Hier sind alle Änderungen aufgelistet.
   - **Lösung**: Zwei Modellierungsansätze dokumentiert:
     - Übergeordnete Procedure mit SNOMED CT Code + Teil-Procedures mit OPS-Codes
     - Gleichberechtigte Procedures bei unklarer Hierarchie
-  - **Code-Anforderung**: Klarstellung dass jede Procedure MUSS einen Code haben (OPS oder SNOMED CT)
+  - **Code-Anforderung**: Klarstellung dass jede Procedure einen Code haben MUSS (OPS oder SNOMED CT)
   - **Beispiel aktualisiert**: Kim Musterperson 4-teilige Operation demonstriert Ansatz mit SNOMED CT für Hauptprocedure
   - **Dokumentation**: Ausführliche Anleitung für `partOf`-Verknüpfung und gemeinsame Aspekte
   - **Harmonisierung**: Hinweis auf Schwierigkeit der post-hoc Harmonisierung bei komplexen Tumoroperationen
@@ -122,16 +112,7 @@ Hier sind alle Änderungen aufgelistet.
 
 - **Bundle-Beispiele**: Für alle organspezifischen Module (Mamma, Prostata, KRK) stehen vollständige Transaktions-Bundles zur Verfügung, die alle zugehörigen Profile in einem server-konsumierbaren Format demonstrieren
 
-- Hinterlegen eines preferred-Binding-ValueSets für Weitere Klassifikationen, basierend auf der oBDS-
 
-- Ermöglichen der optionalen Darstellung von Therapieempfehlungen mittels Referenzen als 
-    - MedicationRequests
-    - RequestGroups
-    - ServiceRequests
-
-- hinterlegen der CTCAE-Liste zum Abgleich der Dokumentation von Nebenwirkungen. 
-
-## Änderungen in 2026.0.0-ballot-release
 
 ## Änderungen in 2025.1.0 (veröffentlicht 12.06.2025)
 - Umprofilierung des Strahlentherapie-Profils (BREAKING CHANGE!)

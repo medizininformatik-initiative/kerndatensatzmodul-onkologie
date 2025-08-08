@@ -7,7 +7,7 @@ Description: "Beispiel für eine Prostatektomie in der Onkologie"
 * status = #completed  // Valid Procedure status: completed
 * category = $SCT#387713003 "Surgical procedure"
 * code.coding[ops] = $OPS#5-604.02 "Radikale Prostatovesikulektomie, retropubisch, mit regionaler Lymphadenektomie"
-* code.coding[ops].version = "OPS 2024"
+* code.coding[ops].version = "2024"
 
 * subject = Reference(mii-exa-onko-prostata-bundle-patient)
 * encounter = Reference(mii-exa-onko-prostata-bundle-encounter)

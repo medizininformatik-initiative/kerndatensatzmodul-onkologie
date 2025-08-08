@@ -11,7 +11,7 @@ Description: "Beispiel für eine Operation beim Kolorektalen Karzinom"
 * category.coding = $SCT#387713003 "Surgical procedure"
 
 * code.coding[ops] = $OPS#5-484.55 "Tiefe anteriore Resektion : Laparoskopisch mit Anastomose"
-* code.coding[ops].version = "OPS 2024"
+* code.coding[ops].version = "2024"
 
 * subject = Reference(mii-exa-onko-krk-bundle-patient)
 * encounter = Reference(mii-exa-onko-krk-bundle-encounter)

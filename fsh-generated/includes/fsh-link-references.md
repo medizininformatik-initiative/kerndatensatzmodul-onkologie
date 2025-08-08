@@ -62,7 +62,7 @@
 [MII_CS_Onko_Operation_Komplikationen]: CodeSystem-mii-cs-onko-operation-komplikation.html
 [MII_CS_Onko_Primaertumor_Diagnosesicherung]: CodeSystem-mii-cs-onko-primaertumor-diagnosesicherung.html
 [MII_CS_Onko_Seitenlokalisation]: CodeSystem-mii-cs-onko-seitenlokalisation.html
-[MII_CS_Onko_Prostata_Postoperative_Complications]: CodeSystem-mii-cs-onko-prostata-postoperative-complications.html
+[MII_CS_Onko_Prostata_Postsurgical_Complications]: CodeSystem-mii-cs-onko-prostata-postsurgical-complications.html
 [MII_CS_Onko_Residualstatus]: CodeSystem-mii-cs-onko-residualstatus.html
 [MII_CS_Onko_Strahlentherapie_Applikationsart]: CodeSystem-mii-cs-onko-strahlentherapie-applikationsart.html
 [MII_CS_Onko_Strahlentherapie_Boost]: CodeSystem-mii-cs-onko-strahlentherapie-boost.html
@@ -377,7 +377,6 @@
 [MII_VS_Onko_KRK_TME_Qualitaet]: ValueSet-mii-vs-onko-krk-tme-qualitaet.html
 [MII_VS_Onko_Mamma_Intraoperatives_Imaging_Praeparat]: ValueSet-mii-vs-onko-mamma-intraoperatives-imaging-praeparat.html
 [MII_VS_Onko_Mamma_Menopause_Status]: ValueSet-mii-vs-onko-mamma-menopause-status.html
-[MII_VS_Onko_Mamma_Operationen]: ValueSet-mii-vs-onko-mamma-operationen.html
 [MII_VS_Onko_Mamma_Operation_OPS]: ValueSet-mii-vs-onko-mamma-operation-ops.html
 [MII_VS_Onko_Mamma_Operation_SCT]: ValueSet-mii-vs-onko-mamma-operation-sct.html
 [MII_VS_Onko_Mamma_Praeoperative_Markierung_Modalitaet]: ValueSet-mii-vs-onko-mamma-praeoperative-markierung-modalitaet.html

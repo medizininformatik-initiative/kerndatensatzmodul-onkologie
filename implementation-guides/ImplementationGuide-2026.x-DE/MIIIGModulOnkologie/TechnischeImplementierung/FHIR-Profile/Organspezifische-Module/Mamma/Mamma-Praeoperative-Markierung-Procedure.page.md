@@ -35,15 +35,21 @@ Das Profil implementiert **Mamma-spezifische Markierungsverfahren** als Erweiter
 - **Nachexzision**: Markierung bei R1-Resektionen
 - **Qualitätssicherung**: Dokumentation der Markierungsqualität
 
-**Markierungsmodalitäten:**
-- **Drahtmarkierung**: Klassische Methode mit Führungsdraht
-- **Seed-Markierung**: Radioaktive Seeds zur Lokalisation
-- **Magnetische Markierung**: Moderne drahtlose Verfahren
+**Markierungsmodalitäten (aktuell im ValueSet):**
+- **Drahtmarkierung mit Ultraschall-Führung**: SNOMED CT 433222002
+- **Marker-Insertion mit Röntgen-Führung**: SNOMED CT 836381000000102  
+- **Drahtmarkierung mit MRT-Führung**: SNOMED CT 911831000000104
+
+**Weitere klinisch relevante Modalitäten (noch nicht im ValueSet):**
+- **Radioaktive Seed-Markierung**: Radioaktive Seeds zur Lokalisation
+- **Magnetische Seed-Markierung**: Moderne drahtlose Verfahren (z.B. Magseed®)
 - **Clip-Markierung**: Metallclips zur Orientierung
+
+*Hinweis: Das aktuelle ValueSet fokussiert auf bildgebungsgeführte Draht- und Markerverfahren. Moderne Seed-basierte Verfahren könnten in zukünftigen Versionen ergänzt werden.*
 
 ### Terminologie-Binding
 
-Das Profil verwendet **extensible Binding** für Markierungsmodalitäten:
+Das Profil verwendet **extensible Binding** für Markierungsmodalitäten direkt auf `Procedure.code`:
 
 #### ValueSet: MII VS Onko Mamma Präoperative Markierung Modalität
 

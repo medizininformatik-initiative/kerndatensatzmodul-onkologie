@@ -22,7 +22,6 @@ Description: "Dieses Profil beschreibt den diagnostischen Estrogen-Rezeptorstatu
 * code.coding = $LNC#40556-3 "Estrogen receptor Ag [Presence] in Tissue by Immune stain" 
 
 
-// M2 Menopausenstatus
 
 
 * value[x] MS
