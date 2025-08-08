@@ -51,7 +51,9 @@ Description: "Dieses Profil beschreibt den Clavien-Dindo-Score für die Prostate
 
 * valueCodeableConcept.coding contains ClavienDindo 0..1 MS and OBDSPostOPKompl 0..1 MS
 * valueCodeableConcept.coding[ClavienDindo] from $mii-vs-onko-prostata-clavien-dindo (required)
+* valueCodeableConcept.coding[ClavienDindo].system = "http://snomed.info/sct"
 * valueCodeableConcept.coding[OBDSPostOPKompl] from $mii-vs-onko-prostata-postsurgical-complications (required)
+* valueCodeableConcept.coding[OBDSPostOPKompl].system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-prostata-postsurgical-complications"
 
 * insert Label(valueCodeableConcept.coding[ClavienDindo], PSA-Wert, PSA-Wert aus Blut/Plasma in ng/ml)
 * insert Translation(valueCodeableConcept.coding ^short, de-DE, PSA-Wert )

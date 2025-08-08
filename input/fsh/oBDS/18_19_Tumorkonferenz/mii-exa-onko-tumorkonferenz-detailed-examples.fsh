@@ -10,7 +10,7 @@ Usage: #example
 * status = #active
 * intent = #plan
 * category.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ"
-* category.coding.code = #MOL // Molekulares Tumorboard
+* category.coding.code = #praeth // Molekulares Tumorboard (prätherapeutisch)
 * category.text = "Molekulares Tumorboard"
 * subject = Reference(Patient/example)
 * created = "2024-01-15"
@@ -67,7 +67,7 @@ Usage: #example
 * status = #active
 * intent = #plan
 * category.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ"
-* category.coding.code = #MOL // Molekulares Tumorboard
+* category.coding.code = #praeth // Molekulares Tumorboard (prätherapeutisch)
 * category.text = "Molekulares Tumorboard"
 * subject = Reference(Patient/example)
 * created = "2024-01-16"

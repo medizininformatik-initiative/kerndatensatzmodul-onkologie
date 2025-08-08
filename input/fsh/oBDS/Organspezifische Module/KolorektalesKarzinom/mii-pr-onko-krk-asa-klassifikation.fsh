@@ -19,7 +19,7 @@ Description: "Dieses Profil beschreibt die ASA-Klassifikation (American Society 
 * code 1..1 
 * code ^definition = "ASA-Klassifikation zur Bewertung des präoperativen Risikos gemäß American Society of Anesthesiologists Physical Status Classification System. oBDS KR9"
 * code ^short = "ASA-Klassifikation"
-* code.coding = $LNC#97816-3 "American Society of Anesthesiologists physical status score"
+* code.coding = $LNC#97816-3 "American society of anesthesiologists morbidity state"
 
 * value[x] MS
 * value[x] only CodeableConcept

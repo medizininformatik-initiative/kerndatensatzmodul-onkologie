@@ -5,7 +5,7 @@ Usage: #example
 
 * status = #final
 
-* code.coding = $LNC#97816-3 "American Society of Anesthesiologists physical status score"
+* code.coding = $LNC#97816-3 "American society of anesthesiologists morbidity state"
 
 * subject = Reference(mii-exa-onko-krk-bundle-patient)
 * focus = Reference(mii-exa-onko-krk-diagnose)

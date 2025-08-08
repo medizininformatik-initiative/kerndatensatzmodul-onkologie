@@ -36,7 +36,9 @@ Description: "Dieses Profil beschreibt den diagnostischen Estrogen-Rezeptorstatu
 * valueCodeableConcept.coding ^slicing.ordered = false
 * valueCodeableConcept.coding contains DefinitionOBDS 0..1 MS and DefinitionLeitlinie 0..1 MS
 * valueCodeableConcept.coding[DefinitionOBDS] from mii-vs-onko-mamma-rezeptorstatus-obds (extensible)
+* valueCodeableConcept.coding[DefinitionOBDS].system = "http://loinc.org"
 * valueCodeableConcept.coding[DefinitionLeitlinie] from mii-vs-onko-mamma-rezeptorstatus-leitlinie (extensible)
+* valueCodeableConcept.coding[DefinitionLeitlinie].system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-rezeptorstatus-leitlinie"
 
 * valueCodeableConcept.coding.code 1.. MS
 
