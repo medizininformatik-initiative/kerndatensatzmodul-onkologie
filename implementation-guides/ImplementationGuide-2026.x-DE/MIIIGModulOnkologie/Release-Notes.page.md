@@ -1,5 +1,6 @@
 ---
 parent: 
+topic: ReleaseNotes
 ---
 
 ## {{page-title}}
@@ -10,18 +11,18 @@ Hier sind alle Änderungen aufgelistet.
 ### Weitere Klassifikationen und Molekulare Tumorboards
 - **Hierarchische Klassifikationssysteme**: Implementierung weiterer Klassifikationssysteme (BINET, Ann Arbor, ISS, WHO-Grad, etc.) als hierarchisches CodeSystem
   - **Grund**: Unterstützung hämatologischer und anderer spezifischer Klassifikationssysteme gemäß oBDS-Anforderungen
-  - **Technische Umsetzung**: Weitere Klassifikation-CodeSystem mit `descendant-of` ValueSet-Filtern für die jeweiligen Antwortmöglichkeiten, um hohe Anzahl eigener Profile zu vermeiden
+  - **Technische Umsetzung**: {{pagelink:WeitereKlassifikationenObservation}} mit `descendant-of` ValueSet-Filtern für die jeweiligen Antwortmöglichkeiten, um hohe Anzahl eigener Profile zu vermeiden
   - **mCODE-Kompatibilität**: Integration des mCODE STU4 code+method+value Patterns für Staging-Observationen 
 
-- **Tumorkonferenz-Erweiterung**: Erweiterte Tumorkonferenz-Profile zur Unterstützung sowohl bisheriger oBDS-Darstellung der Tumorkonferenzen als auch komplexere Darstellung von Therapieempfehlungen wie im Modul Molekulares Tumorboard
+- **Tumorkonferenz-Erweiterung**: Erweiterte {{pagelink:TumorkonferenzCarePlan}} zur Unterstützung sowohl bisheriger oBDS-Darstellung der Tumorkonferenzen als auch komplexere Darstellung von Therapieempfehlungen wie im Modul Molekulares Tumorboard
   - **Grund**: FHIR R4 Invariant cpl-3 verhindert gleichzeitige Nutzung von `activity.detail.code` und `activity.reference`
-  - **Lösung**: Activity-Slicing mit `obds` (Standard oBDS 19.1 Kategorisierung) und `extended` (RequestGroup-basierte Protokolle) Slices
+  - **Lösung**: Activity-Slicing mit `obds` (Standard oBDS 19.1 Kategorisierung) und `extended` ({{pagelink:TumorkonferenzDetailedRecommendationsCarePlan}} für RequestGroup-basierte Protokolle) Slices
   - **Rückwärtskompatibilität**: Bestehende oBDS-Implementierungen werden unverändert unterstützt
 
 ### Systemische Therapie Erweiterungen
 
 #### Protokoll-Implementierung
-- **usedCode-Implementierung**: Strukturierte Dokumentation von Therapieprotokollen in SystemischeTherapie-Procedure
+- **usedCode-Implementierung**: Strukturierte Dokumentation von Therapieprotokollen in {{pagelink:SystemischeTherapieProcedure}}
   - **Grund**: Ablösung der unstrukturierten `note.text` Protokollangaben durch standardisierte Kodierung
   - **Umfang**: Vollständiges CodeSystem mit 96 Protokollen aus oBDS Umsetzungsleitfaden (FOLFOX, R-CHOP, AC, etc.)
   - **Technische Umsetzung**: `Procedure.usedCode` mit extensible Binding an `mii-vs-onko-systemische-therapie-protokolle`
@@ -46,7 +47,7 @@ Hier sind alle Änderungen aufgelistet.
   - **Verwendung aktueller Codes**: Bei Post-Annotation aktuelle ATC-Codes verwenden (nicht zwingend die historischen)
   - **Originaltext erhalten**: Im `medicationCodeableConcept.text` Element
 
-### Operation-Profil Erweiterungen
+### {{pagelink:OperationProcedure}} Erweiterungen
 
 #### Mehrteilige Eingriffe Unterstützung
 - **OPS-Code Kardinalität**: Änderung von `code.coding[ops] 1..1` zu `code.coding[ops] 0..1`
@@ -59,12 +60,12 @@ Hier sind alle Änderungen aufgelistet.
   - **Dokumentation**: Ausführliche Anleitung für `partOf`-Verknüpfung und gemeinsame Aspekte
   - **Harmonisierung**: Hinweis auf Schwierigkeit der post-hoc Harmonisierung bei komplexen Tumoroperationen
 
-### Verlauf-Profil Anpassungen
+### {{pagelink:VerlaufObservation}} Anpassungen
 - **Component-Kardinalität**: Änderung von `component 1..*` zu `component 0..*`
   - **Grund**: GitHub Issue #202 - Unterstützung für "K - keine Änderung" Fälle und hämatologische Krebsarten ohne TNM-Anwendbarkeit
   - **Betroffene Felder**: Tumor_Verlauf, Lymphknoten_Verlauf, Fernmetastasen_Verlauf bleiben 0..1
 
-### Strahlentherapie Zielgebiet - oBDS 2014/2021 Kompatibilität
+### {{pagelink:StrahlentherapieProcedure}} Zielgebiet - oBDS 2014/2021 Kompatibilität
 - **oBDS 2014 CodeSystem Integration**: Unterstützung für oBDS 2014 Zielgebiet-Definitionen zur Abwärtskompatibilität
   - **Grund**: oBDS 2021 führte architektonische Änderung ein - Trennung von Organ- und Lymphknotenkodierung
   - **oBDS 2014 Ansatz**: Kombinierte Kodierung mit `+`/`-` Suffixen (z.B. `"3.1.+"` = "Mamma mit Lymphknoten")
@@ -79,14 +80,14 @@ Hier sind alle Änderungen aufgelistet.
 - **Architektur-Diskussion**: CarePlan-basierte vs RequestGroup-first Modellierung für Tumorboard-Empfehlungen
 
 - Neue Profile zur Abdeckung der organspezifischen Module
-    - **Mamma**: Vollständige Implementierung des Mamma-Moduls
+    - **{{pagelink:MammaModule}}**: Vollständige Implementierung des Mamma-Moduls
         - **Estrogen-Rezeptorstatus**: Profil mit dualer Kodierung (oBDS/S3-Leitlinien) und Komponenten für Anteil positiver Zellen und Färbeintensität
         - **Progesteron-Rezeptorstatus**: Entsprechendes Profil mit identischer Struktur zum Estrogen-Status
         - **Menopause-Status**: Prätherapeutische Bestimmung mit oBDS 2021-konformer Subsumierung (perimenopausal → prämenopausal)
         - **Präoperative Markierung**: Profil für verschiedene Markierungsmodalitäten (Draht, Seeds, magnetisch)
         - **Mamma-Operation**: Spezialisiertes Operationsprofil mit SNOMED CT und OPS ValueSets
         - **Hinweise**: Her2Neu im Molecular Tumorboard-Profil; Tumorgröße im Histologie-Modul; Studienteilnahme in oBDS 2021 abgedeckt
-    - **Prostata**: Vollständige Implementierung des Prostata-Moduls
+    - **{{pagelink:ProstataModule}}**: Vollständige Implementierung des Prostata-Moduls
         - **PSA**: Prostata-spezifisches Antigen mit LOINC 2857-1 Kodierung
         - **Anzahl Stanzen**: Gesamtzahl der entnommenen Biopsie-Stanzen (LOINC 33743-6)
         - **Anzahl positive Stanzen**: Anzahl der Stanzen mit Adenokarzinom (LOINC 33746-9)
@@ -94,7 +95,7 @@ Hier sind alle Änderungen aufgelistet.
         - **Gleason Score/Grade Group**: Modernes ISUP-Graduierungssystem (LOINC 44648-7)
         - **Gleason Patterns**: Primäre und sekundäre Gleason-Grad-Komponenten
         - **Clavien-Dindo**: Chirurgische Komplikationsklassifikation mit dualer Kodierung (SNOMED CT + oBDS)
-    - **Kolorektales Karzinom**: Vollständige Implementierung des KRK-Moduls
+    - **{{pagelink:KRKModule}}**: Vollständige Implementierung des Kolorektales Karzinom-Moduls
         - **Abstand Anokutanlinie**: Tumorsitz-Messung ab Anokutanlinie in cm (oBDS KR1, LOINC 33748-5)
         - **Circumferelle Resektionsebene**: Minimaler Abstand zur circumferellen Resektionsebene in mm (oBDS KR3)
         - **Aboraler Resektionsrand**: Minimaler Abstand zum aboralen Resektionsrand in mm (oBDS KR2)
@@ -108,9 +109,13 @@ Hier sind alle Änderungen aufgelistet.
         - **Implementation Guide**: Vollständige Dokumentation mit 10 Seiten (9 Profile + Bundle)
         - **Bundle-Beispiel**: Transaktions-Bundle demonstriert vollständigen KRK-Workflow
         - **CapabilityStatement**: Alle KRK-Profile für Implementierungsabdeckung deklariert
-    - Malignes Melanom
+    - **{{pagelink:MelanomModule}}**: Vollständige Implementierung des Malignes Melanom-Moduls
+        - **Breslow-Tiefe**: Vertikale Tumordicke als wichtigster prognostischer Faktor
+        - **Ulzeration**: Vorhandensein einer Ulzeration des Primärtumors
+        - **Sicherheitsabstand**: Chirurgischer Sicherheitsabstand bei der Exzision
+        - **LDH**: Serummarker für Tumorlast und Staging
 
-- **Bundle-Beispiele**: Für alle organspezifischen Module (Mamma, Prostata, KRK) stehen vollständige Transaktions-Bundles zur Verfügung, die alle zugehörigen Profile in einem server-konsumierbaren Format demonstrieren
+- **Bundle-Beispiele**: Für alle organspezifischen Module ({{pagelink:MammaBundle}}, {{pagelink:ProstataBundle}}, {{pagelink:KRKBundle}}, {{pagelink:MelanomBundle}}) stehen vollständige Transaktions-Bundles zur Verfügung, die alle zugehörigen Profile in einem server-konsumierbaren Format demonstrieren
 
 
 

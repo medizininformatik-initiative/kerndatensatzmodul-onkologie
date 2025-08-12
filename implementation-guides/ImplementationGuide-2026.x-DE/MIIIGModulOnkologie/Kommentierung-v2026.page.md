@@ -9,19 +9,19 @@ Diese Seite sammelt spezifische Punkte, für die gezieltes Feedback in der Komme
 
 ### Organspezifische Module
 
-#### Mamma
-  * Brauchen wir ein extra Profil für präoperative Drahtmarkierung (derzeitige Umsetzung), oder "reicht" die Darstellung über einen usedCode-Slice ( ggfs. mit Extension für Kontext prä-intra-postoperativ?) 
+#### {{pagelink:MammaModule}}
+  * Brauchen wir ein extra Profil für {{pagelink:MammaPraeoperativeMarkierung}} (derzeitige Umsetzung), oder "reicht" die Darstellung über einen usedCode-Slice ( ggfs. mit Extension für Kontext prä-intra-postoperativ?) 
 
-#### Prostata
-* Korrekte semantische Annotation PSA-Level (frei vs. total, oder einzelne Profile für beides, oder ein Profil mit mehreren Möglichen Codes?) Wie damit umgehen, dass LOINC bald verpflichtend wird, aber im Tumpordokumentationssystem vsl. nicht kodiert
+#### {{pagelink:ProstataModule}}
+* Korrekte semantische Annotation {{pagelink:ProstataPSA}} (frei vs. total, oder einzelne Profile für beides, oder ein Profil mit mehreren Möglichen Codes?) Wie damit umgehen, dass LOINC bald verpflichtend wird, aber im Tumordokumentationssystem vsl. nicht kodiert
 
-* Clavien-Dindo Graduierung: Sollte das Clavien-Dindo System für postoperative Komplikationen möglicherweise ins allgemeine Operation/Surgery-Modul verschoben werden, da es sich um ein universelles chirurgisches Klassifikationssystem handelt und nicht prostata-spezifisch ist?
+* {{pagelink:ProstataClavienDindo}} Graduierung: Sollte das Clavien-Dindo System für postoperative Komplikationen möglicherweise ins allgemeine {{pagelink:OperationProcedure}} verschoben werden, da es sich um ein universelles chirurgisches Klassifikationssystem handelt und nicht prostata-spezifisch ist?
 
 * Clavien-Dindo als AdverseEvent: Sollte die Clavien-Dindo-Klassifikation möglicherweise als FHIR AdverseEvent-Ressource modelliert werden statt als Observation, da es sich um die Bewertung unerwünschter postoperativer Ereignisse handelt? Dies würde eine direktere semantische Zuordnung ermöglichen und die Verknüpfung zu auslösenden Procedures unterstützen.
 
 * Clavien-Dindo in Procedure.complication: Alternativ könnte die Clavien-Dindo-Bewertung direkt als `Procedure.complication` in der entsprechenden Operation modelliert werden, da es sich um ein chirurgisches Komplikations-Klassifikationssystem handelt. Dies würde die direkte Zuordnung zur auslösenden Procedure ermöglichen, könnte aber bei seltener Anwendbarkeit zu leeren Feldern führen. Zu beachten ist, dass `Procedure.complication` bereits für oBDS/ICD-10 gemappte operative Komplikationen verwendet wird (siehe https://www.basisdatensatz.de/feld/194/op-komplikationen).
 
-### Weitere Klassifikationen - mCODE STU4 Pattern Integration
+### {{pagelink:WeitereKlassifikationenObservation}} - mCODE STU4 Pattern Integration
 
 * **Method-Element Binding**: Das `Observation.method` Element wurde als Must Support hinzugefügt, um dem mCODE STU4 Pattern zu folgen. Welches ValueSet soll für `method` verwendet werden? 
   - Option 1: Dasselbe ValueSet wie für `code` (aktuell implementiert)
@@ -33,7 +33,7 @@ Diese Seite sammelt spezifische Punkte, für die gezieltes Feedback in der Komme
   - Oder soll die aktuelle hierarchische oBDS-CodeSystem-Struktur mit `descendant-of` Filtern beibehalten werden?
 
 
-### Molekulare Tumorboards und detaillierte Therapieempfehlungen
+### Molekulare Tumorboards und detaillierte Therapieempfehlungen ({{pagelink:TumorkonferenzDetailedRecommendationsCarePlan}})
 
 * **ServiceRequest-Profiling für spezifische Therapieempfehlungen**: Das neue CarePlan-Profil für detaillierte Therapieempfehlungen kann neben RequestGroup auch MedicationRequest und ServiceRequest referenzieren. Benötigen wir spezifische onkologische Profile für ServiceRequest-basierte Therapieempfehlungen?
   - Spezifische ServiceRequest-Profile für onkologische Operationen (z.B. tumorspezifische Eingriffe)
@@ -42,19 +42,37 @@ Diese Seite sammelt spezifische Punkte, für die gezieltes Feedback in der Komme
   
   **Hintergrund**: Krebsregister dokumentieren zunächst die Tumorboard-Planung und erfassen später die tatsächlich durchgeführten Maßnahmen. Diese Lücke zwischen geplanter und dokumentierter Therapie könnte eine Über-Spezifikation darstellen.
 
-* **CarePlan vs. RequestGroup für Tumorboard-Dokumentation**: Ist die gewählte CarePlan-basierte Architektur für molekulare Tumorboards angemessen? 
+* **{{pagelink:TumorkonferenzCarePlan}} vs. RequestGroup für Tumorboard-Dokumentation**: Ist die gewählte CarePlan-basierte Architektur für molekulare Tumorboards angemessen? 
   - **Pro CarePlan**: Entspricht der realen Dokumentationspraxis - Krebsregister dokumentieren Tumorboard-Empfehlungen als durchgeführte "Therapieplanung" (oBDS-konforme Dokumentation)
   - **Alternative RequestGroup-first**: RequestGroup als primäre Tumorboard-Empfehlung, CarePlan später als `basedOn`-Referenz durch behandelnde Ärzte
   - **Praktische Überlegung**: Nicht alle behandelnden Einrichtungen können FHIR implementieren - die Krebsregister-Dokumentation erfolgt primär über CarePlans als "realisierte Therapieplanung"
   
   **Kernfrage**: Soll die FHIR-Modellierung die praktische Dokumentationsrealität (CarePlan-basiert) oder die konzeptuelle Workflow-Logik (RequestGroup-first) abbilden?
 
-* **Strahlentherapie Zielgebiet - oBDS 2014/2021 Architekturänderung**: Die Integration von oBDS 2014 Zielgebiet-Codes ist aufgrund der grundlegenden Architekturänderung zwischen den Versionen erforderlich.
+* **{{pagelink:StrahlentherapieProcedure}} Zielgebiet - oBDS 2014/2021 Architekturänderung**: Die Integration von oBDS 2014 Zielgebiet-Codes ist aufgrund der grundlegenden Architekturänderung zwischen den Versionen erforderlich.
   - **2014 Ansatz**: Kombinierte Organ+Lymphknoten-Kodierung mit `+`/`-` Suffixen (z.B. `"3.1.+"` = "Mamma mit Lymphknoten", `"3.1.-"` = "Mamma ohne Lymphknoten")
   - **2021 Änderung**: Separate Kodierung von Organen (Sektionen 1-8) und dedizierten Lymphknotenregionen (Sektion 9)
   - **Technische Lösung**: Separates CodeSystem für oBDS 2014 mit eigener URI - semantische Konflikte über Versionskennzeichnung vermeidbar
   
   **Kommentierungsfrage**: Ist die gewählte Lösung (separate CodeSystems mit kombiniertem ValueSet) für die Abwärtskompatibilität angemessen, oder sollten alternative Migrationsansätze betrachtet werden?
+
+### Systemische Therapie - Vollständigkeit der Terminologien
+
+* **Protokoll-Vollständigkeit**: Das CodeSystem für {{pagelink:SystemischeTherapieTerminologien}} enthält 96 Therapieprotokolle aus dem oBDS Umsetzungsleitfaden
+  - **Kommentierungsfrage**: Fehlen wichtige Protokolle, die in der klinischen Praxis verwendet werden?
+  - **Erweiterungsbedarf**: Welche zusätzlichen Protokolle sollten aufgenommen werden?
+  - **Regionale Varianten**: Gibt es standortspezifische Protokollbezeichnungen, die berücksichtigt werden sollten?
+
+* **Substanz-Vollständigkeit**: Die Substanz-ValueSets enthalten ATC und UNII Codes für onkologische Therapeutika
+  - **ATC-Substanzen**: Sind alle relevanten onkologischen Wirkstoffe erfasst?
+  - **UNII-Codes**: Welche experimentellen/neuen Substanzen fehlen noch?
+  - **Biosimilars**: Wie sollen Biosimilars gehandhabt werden - eigene Codes oder Referenz zum Originator?
+  
+* **Terminologie-Transitions**: Die {{pagelink:SystemischeTherapieTerminologien}} dokumentiert ATC-Code-Änderungen mit jahresspezifischen ValueSets (2018-2025)
+  - **Implementierung**: Separate ValueSets pro Jahr erfassen zeitliche ATC-Code-Änderungen (z.B. Quizartinib: L01XE52 in 2020, L01EX11 ab 2021)
+  - **Fehlende Transitionen**: Welche weiteren ATC-Code-Änderungen sollten in der Dokumentation hervorgehoben werden?
+  - **Praktische Anwendung**: Wie sollen Implementierer die jahresspezifischen ValueSets nutzen - nach Therapiezeitpunkt oder nach Dokumentationszeitpunkt?
+  - **Update-Frequenz**: Sollen weiterhin jährliche ValueSets erstellt werden, oder reicht ein kombiniertes ValueSet mit allen historischen Codes?
 
 ### Post-hoc ATC-Kodierung durch Datenintegrationszentren (KONTROVERS)
 

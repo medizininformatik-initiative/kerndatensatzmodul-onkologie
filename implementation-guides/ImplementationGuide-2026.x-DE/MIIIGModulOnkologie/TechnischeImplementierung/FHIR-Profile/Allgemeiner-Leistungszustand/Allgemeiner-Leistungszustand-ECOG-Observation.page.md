@@ -1,6 +1,6 @@
 ---
 parent: 
-topic: AllgemeinerLeistungszustandObservation
+topic: AllgemeinerLeistungszustandECOG
 subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog
 ---
 

@@ -15,6 +15,10 @@
 [mii-exa-onko-melanom-exzision-ruecken]: Procedure-mii-exa-onko-melanom-exzision-ruecken.html
 [mii-exa-onko-strahlentherapie-2014-prostata-mit-lk]: Procedure-mii-exa-onko-strahlentherapie-2014-prostata-mit-lk.html
 [mii-cm-onko-allgemeiner-leistungszustand-sct]: ConceptMap-mii-cm-onko-allgemeiner-leistungszustand-sct.html
+[mii-cm-onko-atc-transitions-2021]: ConceptMap-mii-cm-onko-atc-transitions-2021.html
+[mii-cm-onko-atc-transitions-2023]: ConceptMap-mii-cm-onko-atc-transitions-2023.html
+[mii-cm-onko-atc-transitions-2024]: ConceptMap-mii-cm-onko-atc-transitions-2024.html
+[mii-cm-onko-atc-transitions-2025]: ConceptMap-mii-cm-onko-atc-transitions-2025.html
 [mii-cm-onko-tnm-uicc-sct-clinical]: ConceptMap-mii-cm-onko-tnm-uicc-sct-clinical.html
 [mii-cm-onko-fernmetastasen-sct]: ConceptMap-mii-cm-onko-fernmetastasen-sct.html
 [mii-cm-onko-genetische-variante-auspraegung-sct]: ConceptMap-mii-cm-onko-genetische-variante-auspraegung-sct.html

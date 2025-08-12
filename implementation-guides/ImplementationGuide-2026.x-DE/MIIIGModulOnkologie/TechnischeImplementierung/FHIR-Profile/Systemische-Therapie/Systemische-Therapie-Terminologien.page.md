@@ -59,6 +59,112 @@ select
 
 Die deutsche ATC-Klassifikation wird jährlich aktualisiert, wobei Substanzen neue Codes erhalten können. Dies stellt besondere Herausforderungen für die retrospektive Dokumentation dar.
 
+##### ConceptMaps für ATC-Code-Änderungen
+
+Die folgenden ConceptMaps dokumentieren alle ATC-Code-Änderungen zwischen aufeinanderfolgenden Jahren:
+
+###### **2020 → 2021: Große Reorganisation (65 Substanzen)**
+
+Die bedeutendste Umstrukturierung der ATC-Klassifikation für onkologische Substanzen. Proteinkinase-Inhibitoren wurden in spezifische Untergruppen aufgeteilt:
+
+@```
+from 
+    ConceptMap 
+where 
+    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-atc-transitions-2021'
+select 
+    Name: name,
+    Titel: title,
+    Anzahl_Änderungen: group[0].element.count(),
+    Beschreibung: description
+```
+
+{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-atc-transitions-2021, expand:3}}
+
+<details>
+<summary>Neue ATC-Kategorien 2021</summary>
+
+- **L01EA**: BCR-ABL Tyrosinkinase-Inhibitoren
+- **L01EB**: EGFR Tyrosinkinase-Inhibitoren  
+- **L01EC**: BRAF-Inhibitoren
+- **L01ED**: ALK-Inhibitoren
+- **L01EE**: MEK-Inhibitoren
+- **L01EF**: CDK4/6-Inhibitoren
+- **L01EG**: mTOR-Inhibitoren
+- **L01EH**: HER2-Inhibitoren
+- **L01EJ**: JAK-Inhibitoren
+- **L01EK**: VEGFR-Inhibitoren
+- **L01EL**: BTK-Inhibitoren
+- **L01EM**: PI3K-Inhibitoren
+- **L01EX**: Andere Proteinkinase-Inhibitoren
+- **L01XF**: Retinoide
+- **L01XG**: Proteasom-Inhibitoren
+- **L01XH**: Histon-Deacetylase-Inhibitoren
+- **L01XJ**: Hedgehog-Signalweg-Inhibitoren
+- **L01XK**: PARP-Inhibitoren
+</details>
+
+###### **2022 → 2023: CAR-T-Zelltherapien (3 Substanzen)**
+
+Einführung der neuen Kategorie L01XL für CAR-T-Zelltherapien und onkolytische Viren:
+
+@```
+from 
+    ConceptMap 
+where 
+    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-atc-transitions-2023'
+select 
+    Name: name,
+    Titel: title,
+    Anzahl_Änderungen: group[0].element.count(),
+    Beschreibung: description
+```
+
+{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-atc-transitions-2023, expand:5}}
+
+###### **2023 → 2024: Immunmodulatorische Substanzen (14 Substanzen)**
+
+Reorganisation von Immunsuppressiva und Kombinationspräparaten:
+
+@```
+from 
+    ConceptMap 
+where 
+    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-atc-transitions-2024'
+select 
+    Name: name,
+    Titel: title,
+    Anzahl_Änderungen: group[0].element.count(),
+    Beschreibung: description
+```
+
+{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-atc-transitions-2024, expand:5}}
+
+###### **2024 → 2025: IDH-Inhibitoren (2 Substanzen)**
+
+Neue Kategorie L01XM für IDH-Inhibitoren:
+
+@```
+from 
+    ConceptMap 
+where 
+    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-atc-transitions-2025'
+select 
+    Name: name,
+    Titel: title,
+    Anzahl_Änderungen: group[0].element.count(),
+    Beschreibung: description
+```
+
+{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-atc-transitions-2025, expand:5}}
+
+##### Implementierungshinweise für ATC-Transitionen
+
+- **Historische Daten**: Bei der Migration historischer Daten müssen die jeweiligen ATC-Codes entsprechend dem Erfassungsjahr verwendet werden
+- **Duale Kodierung**: Einige Substanzen (z.B. Everolimus, Ofatumumab) können mehrere ATC-Codes haben, je nach Indikation
+- **ConceptMap-Nutzung**: Die ConceptMaps können für automatisierte Migrationen zwischen ATC-Versionen verwendet werden
+- **Zeitliche Gültigkeit**: Die jährlichen ValueSets (mii-vs-onko-systemische-therapie-substanzen-20XX) enthalten die jeweils gültigen Codes
+
 ##### Beispiel: Quizartinib
 
 Quizartinib ist ein FLT3-Inhibitor zur Behandlung der akuten myeloischen Leukämie (AML), der einen ATC-Code-Wechsel durchlaufen hat:

@@ -1,5 +1,6 @@
 ---
 parent: 
+topic: MelanomModule
 ---
 
 ## {{page-title}}
@@ -8,60 +9,21 @@ Die Melanom-spezifischen Profile erweitern das MII KDS Onkologie Modul um spezie
 
 ### Übersicht der Melanom-spezifischen Profile
 
-<plantuml>
-@startuml
-!define OBSERVATION_COLOR #E8F4FD
-!define BUNDLE_COLOR #FFF9E6
-!define PATIENT_COLOR #F0F0F0
-!define CONDITION_COLOR #FFE8E8
+<style>
+    .responsive-img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 20px auto;
+    }
+</style>
 
-skinparam backgroundcolor white
-skinparam component {
-  BackgroundColor<<observation>> OBSERVATION_COLOR
-  BackgroundColor<<bundle>> BUNDLE_COLOR
-  BackgroundColor<<patient>> PATIENT_COLOR
-  BackgroundColor<<condition>> CONDITION_COLOR
-  BorderColor Black
-  ArrowColor Black
-}
-
-title Melanom-spezifische Profile und ihre Beziehungen
-
-package "Melanom-spezifische Profile" {
-  component "Melanom\nBreslow-Tiefe\n(Observation)" as breslow <<observation>>
-  component "Melanom\nUlzeration\n(Observation)" as ulzeration <<observation>>
-  component "Melanom\nSicherheitsabstand\n(Observation)" as sicherheit <<observation>>
-  component "Melanom\nLDH\n(Observation)" as ldh <<observation>>
-}
-
-package "Bundle" {
-  component "Melanom Bundle\n(Bundle)" as bundle <<bundle>>
-}
-
-package "Core Resources" {
-  component "Patient" as patient <<patient>>
-  component "Melanom Diagnose\n(Condition)" as diagnose <<condition>>
-}
-
-' Relationships
-breslow --> patient : subject
-breslow --> diagnose : focus
-ulzeration --> patient : subject
-ulzeration --> diagnose : focus
-sicherheit --> patient : subject
-sicherheit --> diagnose : focus
-ldh --> patient : subject
-ldh --> diagnose : focus
-
-bundle ..> breslow : contains
-bundle ..> ulzeration : contains
-bundle ..> sicherheit : contains
-bundle ..> ldh : contains
-bundle ..> patient : contains
-bundle ..> diagnose : contains
-
-@enduml
-</plantuml>
+<div class="diagram-container">
+    <img class="responsive-img" 
+         src="https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/release/v2026-draft/implementation-guides/ImplementationGuide-2026.x-DE/Images/MII_Onko_Melanom_Module/MII_Onko_Melanom_Module.svg" 
+         alt="MII Onkologie - Malignes Melanom Modul Architektur" 
+         title="MII Onkologie - Malignes Melanom Modul">
+</div>
 
 ### Melanom-spezifische Datenelemente
 
