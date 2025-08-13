@@ -36,11 +36,10 @@ from
 where 
     url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen'
 for concept
-where code contains '-' = false
+where code.contains('-') = false
 select
     Code: code,
-    Display: display,
-    Definition: definition
+    Display: display
 ```
 
 #### BINET System mit allen Werten
@@ -54,8 +53,7 @@ for concept
 where code.startsWith('binet')
 select
     Code: code,
-    Display: display,
-    "Typ": iif(code = 'binet', 'Klassifikationssystem', 'Klassifikationswert')
+    Display: display
 ```
 
 #### Ann Arbor System mit allen Werten
@@ -69,8 +67,7 @@ for concept
 where code.startsWith('ann-arbor')
 select
     Code: code,
-    Display: display,
-    "Typ": iif(code = 'ann-arbor-stadium', 'Klassifikationssystem', 'Klassifikationswert')
+    Display: display
 ```
 
 ### ValueSets mit descendant-of Filter
@@ -167,9 +164,8 @@ where
 for concept
 select
     Code: code,
-    Display: display,
-    "Hierarchie": iif(code contains '-', 'Wert', 'System')
-order by "Hierarchie" desc, code
+    Display: display
+order by code
 ```
 
 ### Mapping zu oBDS
@@ -195,16 +191,15 @@ Für einige Klassifikationssysteme existieren SNOMED CT Äquivalente:
 - Ann Arbor → SNOMED CT: 254373007 (Ann Arbor lymphoma staging)
 - WHO Grade → SNOMED CT: 277612008 (WHO tumor grade)
 
-
 ### Beispiele
 
-#### BINET Stadium A
-{{json:mii-exa-onko-weitere-klassifikationen-binet-a}}
+#### FIGO Stadium IVB (Ovariale Tumore)
+{{json:mii-exa-onko-weitere-klassifikationen-1}}
 
-#### Ann Arbor Stadium II
-{{json:mii-exa-onko-weitere-klassifikationen-ann-arbor-ii}}
+#### Ann Arbor Stadium IIIX
+{{json:mii-exa-onko-weitere-klassifikationen-2}}
 
-#### WHO Grad III
-{{json:mii-exa-onko-weitere-klassifikationen-who-grad-iii}}
+#### FIGO Grad 2
+{{json:mii-exa-onko-weitere-klassifikationen-3}}
 
 ---
