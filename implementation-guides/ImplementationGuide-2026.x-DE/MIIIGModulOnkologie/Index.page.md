@@ -8,8 +8,8 @@ Im Folgenden werden die Use Cases des Moduls, sowie die dazugehörigen FHIR-Prof
 
 | Veröffentlichung   |   |
 |---------|---|
-| Datum   | 31.03.2025 |
-| Version | 2025.0.4        |
+| Datum   | 21.08.2025 |
+| Version | 2026.0.0-ballot        |
 | Status  | Active       |
 | Realm   | DE          | 
 
@@ -21,7 +21,6 @@ Dieser Leitfaden ist im Rahmen der Medizininformatik Initative erstellt wurden u
 
 ## Ansprechpartner
 * Thomas Debertshäuser, Berlin Institute of Health (Charité) 
-* Jori Kern (DKFZ Heidelberg)
 * Martin Boeker (DIFUTURE) 
 * Sylvia Thun, Berlin Institute of Health (Charité) 
 * Karoline Buckow, TMF – Technologie- und Methodenplattform für die vernetzte medizinische Forschung e.V.
@@ -32,6 +31,7 @@ Fragen zu der vorliegenden Publikation können jederzeit unter [chat.fhir.org](h
 Anmerkungen und Kritik wird in Form von 'Issues' im [GitHub-Projekt](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues) stets gern entgegengenommen: .
 
 ## Autoren (in alphabetischer Reihenfolge)
+* Christian Gulden (BZKF / Erlangen)
 * Jori Kern (DKFZ Heidelberg)
 * Julian Saß, Berlin Institute of Health (Charité) 
 * Margaux Gatrio, Berlin Institute of Health (Charité) 

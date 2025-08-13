@@ -65,7 +65,7 @@ Bei komplexen Tumoroperationen, wo die Hierarchie nicht eindeutig ist:
 
 #### Visualisierung am Beispiel Kim Musterperson
 
-@```plantuml
+<plantuml>
 @startuml MII_Onko_MultiPartSurgery_Example
 
 title Multi-Part Surgery Example: Kim Musterperson
@@ -169,7 +169,7 @@ note bottom
 end note
 
 @enduml
-@```  
+</plantuml>  
 
 
 ### Extensions

@@ -49,7 +49,7 @@ Ein Mapping der Datenelemente auf den MII KDS ist derzeit in Arbeit, hier ein er
 @```
 
 from ConceptMap 
-where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onkologie/ConceptMap/mii-cm-onkologie-to-mvgenomseq' 
+where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onkologie-to-mvgenomseq' 
     for group
         for group.element
             select 

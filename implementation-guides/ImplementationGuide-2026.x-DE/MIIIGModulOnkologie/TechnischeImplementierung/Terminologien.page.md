@@ -32,6 +32,19 @@ https://www.bfarm.de/DE/Kodiersysteme/Klassifikationen/ATC/_node.html
 
 ---
 
+### **UNII (Unique Ingredient Identifier)**
+Zur Unterstützung experimenteller und neuartiger Substanzen, die noch keine etablierten ATC-Codes besitzen, wurde das UNII-System der FDA (U.S. Food and Drug Administration) integriert. UNII-Codes ermöglichen die eindeutige Identifikation von Wirkstoffen auf molekularer Ebene und sind besonders relevant für:
+- Experimentelle Substanzen in klinischen Studien (z.B. Iberdomide mit UNII: 8V66F27X44)
+- Neuartige Immunmodulatoren und zielgerichtete Therapien
+- Substanzen in der frühen Entwicklungsphase vor ATC-Klassifikation
+
+Das SystemischeTherapie-MedicationStatement-Profil unterstützt daher eine duale Kodierung mit sowohl ATC als auch UNII-Codes, um eine vollständige Abdeckung aller onkologischen Therapiesubstanzen zu gewährleisten.
+
+UNII-Datenbank: https://precision.fda.gov/uniisearch
+UNII-CodeSystem in FHIR: http://fdasis.nlm.nih.gov
+
+---
+
 ### **TNM-Klassifikation** 
 Die TNM-Klassifikation maligner Tumore ist das weltweit verwendete System für die klinische Beschreibung einer Tumorerkrankung. Die aktuelle 8. Auflage dokumentiert lückenlos die aktuellen Standards und wird in Zusammenarbeit mit der Union for International Cancer Control (UICC) herausgegeben.
 

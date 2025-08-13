@@ -44,7 +44,7 @@
 [mii-cm-onko-verlauf-primaertumor-sct]: ConceptMap-mii-cm-onko-verlauf-primaertumor-sct.html
 [mii-cm-onko-krk-asa-obds-loinc]: ConceptMap-mii-cm-onko-krk-asa-obds-loinc.html
 [MII_CS_Onko_Weitere_Klassifikationen_OBDS]: CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html
-[MII-CM-Onkologie-to-MVGenomSeq]: ConceptMap-MII-CM-Onkologie-to-MVGenomSeq.html
+[mii-cm-onkologie-to-mvgenomseq]: ConceptMap-mii-cm-onkologie-to-mvgenomseq.html
 [mii-cps-onko-capabilitystatement]: CapabilityStatement-mii-cps-onko-capabilitystatement.html
 [MII_CS_Onko_Nebenwirkung_CTCAE_Grad]: CodeSystem-mii-cs-onko-nebenwirkung-ctcae-grad.html
 [MII_CS_Onko_Therapie_Typ]: CodeSystem-mii-cs-onko-therapie-typ.html

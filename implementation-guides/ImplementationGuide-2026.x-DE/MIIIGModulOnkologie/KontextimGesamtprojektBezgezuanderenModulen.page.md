@@ -11,7 +11,7 @@ Für eine weitergehende Verknüpfung der onkologischen Registerdaten sind besond
 * [Pathologiebefundbericht][1] 
 * [Biobank][2] 
 * [Molekulargenetischer Befundbericht][3]
-* [Bildgebung][4] (noch im Aufbau)
+* [Bildgebung][4] (noch nicht umgesetzt, Integration geplant für Version 2027)
 
 [1]: https://simplifier.net/medizininformatikinitiative-modulpathologie "MII KDS-Modul Pathologiebefundbericht"
 [2]: https://simplifier.net/medizininformatikinitiative-modulbiobank "MII KDS-Modul Biobank"
@@ -22,8 +22,7 @@ Für eine weitergehende Verknüpfung der onkologischen Registerdaten sind besond
 [7]: https://simplifier.net/mii-basismodul-medikation-2024 "MII KDS-Modul Medikation"
 [8]: https://simplifier.net/mii-erweiterungsmodul-molekulares-tumorboard "MII KDS-Modul Molekulares Tumorboard"
 
-Langfristig ist eine enge Verzahnung mit den oben genannten Modulen geplant. In der ersten Version ist diese jedoch komplett optional. Das hat zwei primäre Gründe: 
-1. Die einzelnen MII-Module wurden zu unterschiedlichen Zeitpunkten entwickelt und nutzen daher teilweise unterschiedliche Versionen der gleichen Packages (insb. Basisprofile DE). Eine Harmonisierung wird für den nächsten KDS-Release 2026 angestrebt. 
-2. Die Erzeugung von FHIR-Ressourcen aus anderen Modulen erfordert teilweise die Existenz von Daten, die in dieser Form nicht Teil des oBDS sind. (Beispiel: Das Modul Bioprobe erfordert bei der Erstellung zwingend die Angabe der Verfügbarkeit).  Da FHIR-Ressourcen derzeit (Stand April 2024) noch nicht flächendeckend aus Primärsystemen ausgespielt werden können, und nicht jeder  DIZ-Standorte zwingenderweise alle Erweiterungsmodule ganz oder teilweise in ETL-Strecken erzeugen können, ist die Verwendung von anderen MII-Modulen angedacht, aber optional. 
+Langfristig ist eine enge Verzahnung mit den oben genannten Modulen geplant. In den ersten Versionen 2025 und 2026 ist diese jedoch komplett optional. Das hat vor allem einen Grund: 
+2. Die Erzeugung von FHIR-Ressourcen aus anderen Modulen erfordert teilweise die Existenz von Daten, die in dieser Form nicht Teil des oBDS sind. (Beispiel: Das Modul Bioprobe erfordert bei der Erstellung zwingend die Angabe der Verfügbarkeit).  Da FHIR-Ressourcen derzeit (Stand Juli 2025) noch nicht flächendeckend aus Primärsystemen ausgespielt werden können, und nicht jeder  DIZ-Standorte zwingenderweise alle Erweiterungsmodule ganz oder teilweise in ETL-Strecken erzeugen können, ist die Verwendung von anderen MII-Modulen angedacht, aber optional. 
 
-Das Erweiterungsmodul Onkologie bildet darüber hinaus die Grundlage für das [Erweiterungsmodul Molekulares Tumorboard][8], in dem tiefergehende onkologisch relevante Fragestellungen wie Leitlinien-Behandlung,  Next-Generation-Sequencing und personalisierte Therapien detailliert abgebildet werden können.    
+Das Erweiterungsmodul Onkologie bildet darüber hinaus die Grundlage für das [Erweiterungsmodul Molekulares Tumorboard][8], in dem tiefergehende onkologisch relevante Fragestellungen wie Leitlinien-Behandlung,  Next-Generation-Sequencing und personalisierte Therapien detailliert abgebildet werden können. Benötigte Anpassungen (z.B. genauere Anpassung der Therapieempfehlungen) wurden für das MTB-Modul ausspezifiziert und in die Version v2026 übernommen.    

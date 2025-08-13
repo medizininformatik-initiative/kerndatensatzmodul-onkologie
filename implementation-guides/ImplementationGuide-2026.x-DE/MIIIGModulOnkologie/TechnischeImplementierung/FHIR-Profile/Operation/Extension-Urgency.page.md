@@ -38,11 +38,13 @@ for concept select
 
 ### Verwendung
 
-```fsh
+Die Extension wird direkt am Procedure-Element hinzugefügt:
+
+```
 // Beispiel: Elektiveingriff
 * extension[urgency].valueCodeableConcept = $mii-cs-onko-operation-urgency#E "Elektiveingriff"
 
-// Beispiel: Notfalleingriff
+// Beispiel: Notfalleingriff  
 * extension[urgency].valueCodeableConcept = $mii-cs-onko-operation-urgency#N "Notfalleingriff"
 
 // Beispiel: Unbekannt

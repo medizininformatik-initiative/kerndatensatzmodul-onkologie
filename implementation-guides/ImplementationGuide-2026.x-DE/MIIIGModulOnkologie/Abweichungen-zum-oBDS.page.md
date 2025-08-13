@@ -18,9 +18,8 @@ Daher wurden mehrere Gruppen **nicht** in FHIR implementiert. Das umfasst:
     - Gruppe 1: Meldung
     - Gruppe 2: Zentrum
     - Gruppe 21: Anmerkungen
-    - Gruppe 24: Studienteilnahme
 
-Ebenfalls wurde entschieden, in der ersten Profilierung den Fokus auf die technische Implementierung der Hauptinhalte zu setzen, und damit die organspezifischen Module erst in einem späteren Schritt zu integrieren. 
+Die organspezifischen Module waren nicht Teil der ersten Profilierung, sind aber seit der Version 2026 Teil des Moduls Onkologie. 
 - Dazu gehören: 
     - Modul Prostata
     - Modul Mamma
@@ -30,7 +29,7 @@ Ebenfalls wurde entschieden, in der ersten Profilierung den Fokus auf die techni
 ### Kardinalitäten
 Der oBDS ist hauptsächlich für die Datenmeldung an die Krebsregister optimiert worden. 
 
-In der ersten Version wurden die Kardinalitäten größtenteils aus dem oBDS übernommen, sind teilweise aber "weicher" eingestellt, um gerade in einem ersten Schritt Zugang zu einer breiteren Datenbasis zu bekommen.  
+In den ersten Versionen wurden die Kardinalitäten größtenteils aus dem oBDS übernommen, sind teilweise aber "weicher" eingestellt, um gerade in einem ersten Schritt Zugang zu einer breiteren Datenbasis zu bekommen.  
 
 
 ### Einbindung von Terminologien und Codesystemen 
@@ -44,4 +43,4 @@ Im oBDS sind die Datenfelder an die Meldestruktur gebunden. Gruppen, die untersc
 
 - die Diagnose enthält Teile des Histologie-Gruppe (ICD-O Topologie, ICD-O Morphologie)
 - die Tumorkonferenz-Gruppe wurden in der Gruppe Tumorkonferenz/Therapieempfehlung zusammengelegt
-- der Allgemeine Leistungszustand soll nur als ECOG kodiert werden können(und nicht mehr optional auch als Karnofksy), was für zukünfitge oBDS-Versionen ebenfalls angedacht ist. 
+- der Allgemeine Leistungszustand kann sowohl als ECOG als auch als Karnofsky kodiert werden (eine ursprüngliche Zusammenlegung der Datenpunkte wurde nach der Kommentierungsphase verworfen).

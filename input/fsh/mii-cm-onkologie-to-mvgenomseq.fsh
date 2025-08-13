@@ -1,9 +1,10 @@
-Instance: MII-CM-Onkologie-to-MVGenomSeq
+// ACHTUNG bei ConceptMaps ist der InstanceName gleich der ID, daher klein und mit Bindestrich
+Instance: mii-cm-onkologie-to-mvgenomseq
 InstanceOf: ConceptMap
 Title: "MII Concept Map Modellvorhaben Genomsequenzierung Onkologie"
 Description: "MII LogicalModel Modellvorhaben Genomsequenzierung Onkologie"
 Usage: #definition
-//* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onkologie-to-mvgenomseq"
+* url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onkologie-to-mvgenomseq"
 * version = "0.1.0"
 * name = "MII_CM_MVGenomSeq_Onkologie"
 * status = #draft
