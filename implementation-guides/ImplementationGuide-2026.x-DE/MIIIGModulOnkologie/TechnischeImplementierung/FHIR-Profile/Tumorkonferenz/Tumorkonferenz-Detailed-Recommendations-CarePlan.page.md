@@ -36,7 +36,7 @@ Dieses CarePlan-Profil ermöglicht die Abbildung komplexer Therapieempfehlungen,
 ### Technische Implementierung
 
 #### **FHIR Invarianten-Management**
-```fsh
+```
 * activity.detail 0..0  // Deaktiviert um FHIR Invariant cpl-3 zu vermeiden
 * activity.reference 1..1  // Referenz auf RequestGroup mit Therapiedetails
 ```

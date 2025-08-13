@@ -190,7 +190,7 @@ Die Extension unterscheidet zwischen:
 Diese Extension ist besonders relevant für die Qualitätssicherung und statistische Auswertungen, da Notfalleingriffe oft andere Ergebnisse und Komplikationsraten aufweisen als geplante Eingriffe. Obwohl ursprünglich für kolorektale Eingriffe definiert, ist die Unterscheidung zwischen elektiven und Notfalleingriffen für alle chirurgischen Prozeduren klinisch relevant.
 
 **Verwendung:**
-```fsh
+```
 * extension[urgency].valueCodeableConcept = $mii-cs-onko-operation-urgency#E "Elektiveingriff"
 ```
 

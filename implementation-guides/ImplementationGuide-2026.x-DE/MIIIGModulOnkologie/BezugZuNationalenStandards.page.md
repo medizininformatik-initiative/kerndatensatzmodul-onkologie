@@ -47,16 +47,14 @@ Es gibt einen ähnlichen Datenkranz für Seltene Erkrankungen, der zukünftig im
 
 Ein Mapping der Datenelemente auf den MII KDS ist derzeit in Arbeit, hier ein erster Ausschnitt. 
 @```
-
 from ConceptMap 
 where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onkologie-to-mvgenomseq' 
-    for group
-        for group.element
-            select 
-                MII-KDS: code, 
-                MII: display, 
-                SNOMED_CT_ID: target.code, 
-                SNOMED_CT_Name: target.display, 
-                Aequivalenzlevel: target.equivalence, 
-                Kommentar: target.comment  
+    for group.element
+        select 
+            MII_KDS: code, 
+            MII_Display: display, 
+            MVGenomSeq: target[0].code, 
+            MVGenomSeq_Display: target[0].display, 
+            Aequivalenz: target[0].equivalence, 
+            Kommentar: target[0].comment  
 ```

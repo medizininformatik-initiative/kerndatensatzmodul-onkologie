@@ -71,12 +71,12 @@ Quizartinib ist ein FLT3-Inhibitor zur Behandlung der akuten myeloischen Leukäm
 Für die korrekte Kodierung ist der Therapiezeitpunkt entscheidend:
 
 1. **Patient behandelt vor 2021**: 
-   ```fsh
+   ```
    * medicationCodeableConcept.coding[atcClassDe] = $atc-de#L01XE52 "Quizartinib"
    ```
 
 2. **Patient behandelt ab 2021**:
-   ```fsh
+   ```
    * medicationCodeableConcept.coding[atcClassDe] = $atc-de#L01EX11 "Quizartinib"
    ```
 
@@ -104,24 +104,39 @@ DIZ **dürfen** Freitext-Medikationsdaten nachträglich auf ATC-Codes mappen, we
 2. **Verwendung aktueller Codes**: Bei Post-Annotation sollten die **aktuellen** ATC-Codes verwendet werden (nicht die historischen)
 3. **Transparenz**: Die Mapping-Logik und verwendeten Referenzen müssen dokumentiert werden
 
-**Beispiel für Post-Annotation mit Provenance:**
+#### Beispiel für Post-Annotation mit Provenance
 
-```fsh
+Das folgende Beispiel zeigt, wie Quizartinib mit dem aktuellen ATC-Code annotiert wird, obwohl die Therapie 2020 stattfand:
+
+```
 Instance: mii-exa-onko-medikation-quizartinib-postannotated
 InstanceOf: MII_PR_Onko_Systemische_Therapie_Medikation
+
+// Status der Medikation
 * status = #completed
 * subject = Reference(Patient/example)
+
+// Kodierung mit aktuellem ATC-Code (2021+)
 * medicationCodeableConcept.coding[atcClassDe] = $atc-de#L01EX11 "Quizartinib"
+
+// Originaltext wird erhalten für Transparenz
 * medicationCodeableConcept.text = "Quizartinib (Original: Freitext aus oBDS)"
-* effectivePeriod.start = "2020-09-15"  // Therapie war 2020, aber aktueller Code verwendet
+
+// Therapiezeitraum war 2020 (historisch)
+* effectivePeriod.start = "2020-09-15"
 * effectivePeriod.end = "2020-12-15"
 ```
 
-**Rationale:** Diese pragmatische Herangehensweise ermöglicht:
-- Bessere Datenqualität für Analysen
-- Einheitliche Kodierung über Standorte hinweg
-- Nachvollziehbarkeit der Datenverarbeitung
-- Vermeidung von Informationsverlust
+**Hinweis**: Die Therapie fand 2020 statt (damals Code L01XE52), wird aber mit dem aktuellen Code L01EX11 annotiert.
+
+#### Rationale für Post-hoc Annotation
+
+Diese pragmatische Herangehensweise ermöglicht:
+
+- **Bessere Datenqualität**: Strukturierte Codes statt Freitext für Analysen
+- **Einheitliche Kodierung**: Konsistenz über verschiedene Standorte hinweg
+- **Nachvollziehbarkeit**: Originaltext bleibt erhalten, Mapping ist transparent
+- **Vermeidung von Informationsverlust**: Historische Daten werden nutzbar gemacht
 
 **Wichtig:** Die originale Freitextinformation sollte im `medicationCodeableConcept.text` Element erhalten bleiben.
 
@@ -182,7 +197,7 @@ Diese ermöglichen die korrekte Validierung von ATC-Codes basierend auf dem Doku
 
 #### SystemischeTherapie (Procedure)
 
-```fsh
+```
 * usedCode from MII_VS_Onko_Systemische_Therapie_Protokolle (extensible)
 * usedCode ^short = "Verwendetes Therapieprotokoll"
 * usedCode ^definition = "Das verwendete systemische Therapieprotokoll gemäß oBDS Umsetzungsleitfaden"
@@ -190,7 +205,7 @@ Diese ermöglichen die korrekte Validierung von ATC-Codes basierend auf dem Doku
 
 #### SystemischeTherapie (MedicationStatement)
 
-```fsh
+```
 * medicationCodeableConcept from MII_VS_Onko_Systemische_Therapie_Substanzen (extensible)
 * medicationCodeableConcept ^short = "ATC-Code der Substanz"
 * medicationCodeableConcept ^definition = "ATC-Code der verwendeten Substanz"

@@ -10,35 +10,35 @@ Hier sind alle Änderungen aufgelistet.
 ### Weitere Klassifikationen und Molekulare Tumorboards
 - **Hierarchische Klassifikationssysteme**: Implementierung weiterer Klassifikationssysteme (BINET, Ann Arbor, ISS, WHO-Grad, etc.) als hierarchisches CodeSystem
   - **Grund**: Unterstützung hämatologischer und anderer spezifischer Klassifikationssysteme gemäß oBDS-Anforderungen
-  - **Technische Umsetzung**: {{pagelink:TechnischeImplementierung/Terminologien/WeitereKlassifikationen-CodeSystem}} mit `descendant-of` ValueSet-Filtern für die jeweiligen Antwortmöglichkeiten, um hohe Anzahl eigener Profile zu vermeiden
+  - **Technische Umsetzung**: CodeSystem mit `descendant-of` ValueSet-Filtern für die jeweiligen Antwortmöglichkeiten, um hohe Anzahl eigener Profile zu vermeiden
   - **mCODE-Kompatibilität**: Integration des mCODE STU4 code+method+value Patterns für Staging-Observationen 
 
 ### Tumorkonferenz-Erweiterung
-  - **Erweiterte {{pagelink:TechnischeImplementierung/FHIR-Profile/Tumorkonferenz/Tumorkonferenz-CarePlan}}** zur Unterstützung sowohl bisheriger oBDS-Darstellung der Tumorkonferenzen als auch komplexere Darstellung von Therapieempfehlungen wie im Modul Molekulares Tumorboard
+  - **Erweiterte {{pagelink:CarePlan}}** zur Unterstützung sowohl bisheriger oBDS-Darstellung der Tumorkonferenzen als auch komplexere Darstellung von Therapieempfehlungen wie im Modul Molekulares Tumorboard
   - **Grund**: FHIR R4 Invariant cpl-3 verhindert gleichzeitige Nutzung von `activity.detail.code` und `activity.reference`
-  - **Lösung**: Activity-Slicing mit `obds` (Standard oBDS 19.1 Kategorisierung) und `extended` ({{pagelink:TechnischeImplementierung/FHIR-Profile/Tumorkonferenz/Tumorkonferenz-RequestGroup}}-basierte Protokolle) Slices
+  - **Lösung**: Activity-Slicing mit `obds` (Standard oBDS 19.1 Kategorisierung) und `extended` ({{pagelink:TherapieempfehlungKombinationstherapieRequestGroup}}-basierte Protokolle) Slices
   - **Rückwärtskompatibilität**: Bestehende oBDS-Implementierungen werden unverändert unterstützt
 
 ### Systemische Therapie Erweiterungen
 
 #### Protokoll-Implementierung
-- **usedCode-Implementierung**: Strukturierte Dokumentation von Therapieprotokollen in {{pagelink:TechnischeImplementierung/FHIR-Profile/SystemischeTherapie/SystemischeTherapie-Procedure}}
+- **usedCode-Implementierung**: Strukturierte Dokumentation von Therapieprotokollen in {{pagelink:SystemischeTherapieProcedure}}
   - **Grund**: Ablösung der unstrukturierten `note.text` Protokollangaben durch standardisierte Kodierung
-  - **Umfang**: Vollständiges {{pagelink:TechnischeImplementierung/Terminologien/SystemischeTherapie-Protokolle-CodeSystem}} mit 96 Protokollen aus oBDS Umsetzungsleitfaden (FOLFOX, R-CHOP, AC, etc.)
-  - **Technische Umsetzung**: `Procedure.usedCode` mit extensible Binding an {{pagelink:TechnischeImplementierung/Terminologien/SystemischeTherapie-Protokolle-ValueSet}}
+  - **Umfang**: Vollständiges CodeSystem mit 96 Protokollen aus oBDS Umsetzungsleitfaden (FOLFOX, R-CHOP, AC, etc.)
+  - **Technische Umsetzung**: `Procedure.usedCode` mit extensible Binding an Protokolle-ValueSet
   - **Substanzkombinationen**: Jedes Protokoll dokumentiert enthaltene Wirkstoffe (z.B. "AC" → "Cyclophosphamid, Doxorubicin")
   - **oBDS-Mapping**: Protokollfeld 16.6 im oBDS-Mapping nun auch zur Systemischen Therapie hinzugefügt (vorher nur in MedicationStatements)
 
 #### UNII-Kodierung für experimentelle Substanzen
-- **Dual-Coding-Support**: {{pagelink:TechnischeImplementierung/FHIR-Profile/SystemischeTherapie/SystemischeTherapie-MedicationStatement}} erweitert um UNII-Slice zusätzlich zum bestehenden ATC-Slice
+- **Dual-Coding-Support**: {{pagelink:SystemischeTherapieMedicationStatement}} erweitert um UNII-Slice zusätzlich zum bestehenden ATC-Slice
   - **Grund**: Unterstützung experimenteller/neuerer Substanzen ohne etablierte ATC-Codes
   - **Technische Umsetzung**: 
     - Neuer `unii` Slice auf MedicationStatement.medication mit extensible Binding an UNII-ValueSet
-  - **ValueSet**: {{pagelink:TechnischeImplementierung/Terminologien/SystemischeTherapie-Substanzen-UNII-ValueSet}} mit 100+ UNII-Codes
+  - **ValueSet**: UNII-ValueSet mit 100+ UNII-Codes
   - **Beispiel**: Iberdomide (UNII: 8V66F27X44) als experimenteller Immunmodulator
 
 #### ATC-Code Transitionen und Post-hoc Mapping
-- **Dokumentation temporaler ATC-Änderungen**: Neue {{pagelink:TechnischeImplementierung/Terminologien/Terminologie-Besonderheiten}} für Terminologie-Besonderheiten
+- **Dokumentation temporaler ATC-Änderungen**: Neue Dokumentation für Terminologie-Besonderheiten
   - **Quizartinib-Beispiel**: L01XE52 (bis 2020) → L01EX11 (ab 2021)
   - **Weitere Transitionen**: Abemaciclib, Acalabrutinib, Adalimumab dokumentiert
 
@@ -61,55 +61,55 @@ Hier sind alle Änderungen aufgelistet.
   - **Harmonisierung**: Hinweis auf Schwierigkeit der post-hoc Harmonisierung bei komplexen Tumoroperationen
 
 #### Urgency Extension (Art des Eingriffs)
-- **Neue Extension**: {{pagelink:TechnischeImplementierung/Extensions/ExtensionUrgencyOperation}} zur Erfassung der Eingriffsmodalität
+- **Neue Extension**: {{pagelink:ExtensionUrgencyOperation}} zur Erfassung der Eingriffsmodalität
   - **Herkunft**: Ursprünglich aus KRK 6 oBDS 2021, aber universell auf alle Procedures anwendbar
   - **Wertebereich**: Elektiveingriff (E), Notfalleingriff (N), Unbekannt (U)
   - **Grund**: Qualitätssicherung und Risikostratifizierung - Notfalleingriffe haben andere Komplikationsraten
-  - **Integration**: Extension in allgemeines {{pagelink:TechnischeImplementierung/FHIR-Profile/Operation/Operation-Procedure}} Profil integriert für breite Anwendbarkeit
+  - **Integration**: Extension in allgemeines {{pagelink:OperationProcedure}} Profil integriert für breite Anwendbarkeit
 
 ### Verlauf-Profil Anpassungen
-- **Component-Kardinalität**: Änderung von `component 1..*` zu `component 0..*` im {{pagelink:TechnischeImplementierung/FHIR-Profile/Verlauf/Verlauf-Observation}}
+- **Component-Kardinalität**: Änderung von `component 1..*` zu `component 0..*` im {{pagelink:AllgemeinerObservation}}
   - **Grund**: GitHub Issue #202 - Unterstützung für "K - keine Änderung" Fälle und hämatologische Krebsarten ohne TNM-Anwendbarkeit
   - **Betroffene Felder**: Tumor_Verlauf, Lymphknoten_Verlauf, Fernmetastasen_Verlauf bleiben 0..1
 
 ### Strahlentherapie Zielgebiet - oBDS 2014/2021 Kompatibilität
-- **oBDS 2014 CodeSystem Integration**: Unterstützung für oBDS 2014 Zielgebiet-Definitionen zur Abwärtskompatibilität
+- **oBDS 2014 CodeSystem Integration**: Unterstützung für oBDS 2014 Zielgebiet-Definitionen zur Abwärtskompatibilität in {{pagelink:StrahlentherapieProcedure}}
   - **Grund**: oBDS 2021 führte architektonische Änderung ein - Trennung von Organ- und Lymphknotenkodierung
   - **oBDS 2014 Ansatz**: Kombinierte Kodierung mit `+`/`-` Suffixen (z.B. `"3.1.+"` = "Mamma mit Lymphknoten")
   - **oBDS 2021 Änderung**: Separate Kodierung - Organe (Sektionen 1-8) und dedizierte Lymphknotenregionen (Sektion 9)
-  - **Technische Umsetzung**: Separates {{pagelink:TechnischeImplementierung/Terminologien/Strahlentherapie-Zielgebiet-2014-CodeSystem}} - semantische Konflikte über Angabe der Version vermeidbar (2014 vs 2021)
-  - **ValueSet Integration**: Erweiterte {{pagelink:TechnischeImplementierung/Terminologien/Strahlentherapie-Zielgebiet-ValueSet}} unterstützt beide CodeSystems
+  - **Technische Umsetzung**: Separates CodeSystem für Strahlentherapie-Zielgebiet-2014 - semantische Konflikte über Angabe der Version vermeidbar (2014 vs 2021)
+  - **ValueSet Integration**: Erweiterte ValueSet für Strahlentherapie-Zielgebiet unterstützt beide CodeSystems
   - **Migration Pattern**: 2014 Einzelkodes → 2021 Mehrfachkodierung (z.B. `"3.1.+"` → `#3.1` + `#9.3`)
 
 ### Neue Profile zur Abdeckung der organspezifischen Module
-    - **Mamma** : Vollständige Implementierung des {{pagelink:TechnischeImplementierung/Organspezifische-Module/Mamma/Index}}
-        - **Estrogen-Rezeptorstatus**: {{pagelink:TechnischeImplementierung/Organspezifische-Module/Mamma/Mamma-Rezeptorstatus-Estrogen}} mit dualer Kodierung (oBDS/S3-Leitlinien) und Komponenten für Anteil positiver Zellen und Färbeintensität
-        - **Progesteron-Rezeptorstatus**: {{pagelink:TechnischeImplementierung/Organspezifische-Module/Mamma/Mamma-Rezeptorstatus-Progesteron}} mit identischer Struktur zum Estrogen-Status
-        - **Menopause-Status**: {{pagelink:TechnischeImplementierung/Organspezifische-Module/Mamma/Mamma-Menopause-Status}} mit oBDS 2021-konformer Subsumierung (perimenopausal → prämenopausal)
-        - **Präoperative Markierung**: {{pagelink:TechnischeImplementierung/Organspezifische-Module/Mamma/Mamma-Praeoperative-Markierung}} für verschiedene Markierungsmodalitäten (Draht, Seeds, magnetisch)
-        - **Mamma-Operation**: {{pagelink:TechnischeImplementierung/Organspezifische-Module/Mamma/Mamma-Operation}} mit SNOMED CT und OPS ValueSets
+    - **Mamma** : Vollständige Implementierung des {{pagelink:MammaModule}}
+        - **Estrogen-Rezeptorstatus**: {{pagelink:MammaEstrogenRezeptorstatus}} mit dualer Kodierung (oBDS/S3-Leitlinien) und Komponenten für Anteil positiver Zellen und Färbeintensität
+        - **Progesteron-Rezeptorstatus**: {{pagelink:MammaProgesteronRezeptorstatus}} mit identischer Struktur zum Estrogen-Status
+        - **Menopause-Status**: {{pagelink:MammaMenopauseStatus}} mit oBDS 2021-konformer Subsumierung (perimenopausal → prämenopausal)
+        - **Präoperative Markierung**: {{pagelink:MammaPraeoperativeMarkierung}} für verschiedene Markierungsmodalitäten (Draht, Seeds, magnetisch)
+        - **Mamma-Operation**: {{pagelink:MammaOperation}} mit SNOMED CT und OPS ValueSets
         - **Hinweise**: Her2Neu im Molecular Tumorboard-Profil; Tumorgröße im Histologie-Modul; Studienteilnahme in oBDS 2021 abgedeckt
-    - **Prostata**: Vollständige Implementierung des {{pagelink:TechnischeImplementierung/Organspezifische-Module/Prostata/Index}}
-        - **PSA**: {{pagelink:TechnischeImplementierung/Organspezifische-Module/Prostata/Prostata-PSA}} mit LOINC 2857-1 Kodierung
-        - **Anzahl Stanzen**: {{pagelink:TechnischeImplementierung/Organspezifische-Module/Prostata/Prostata-Anzahl-Stanzen}} (LOINC 33743-6)
-        - **Anzahl positive Stanzen**: {{pagelink:TechnischeImplementierung/Organspezifische-Module/Prostata/Prostata-Anzahl-Positive-Stanzen}} (LOINC 33746-9)
-        - **Karzinom-Befall Stanze**: {{pagelink:TechnischeImplementierung/Organspezifische-Module/Prostata/Prostata-Karzinom-Befall-Stanze}} (LOINC 33748-5)
-        - **Gleason Score/Grade Group**: {{pagelink:TechnischeImplementierung/Organspezifische-Module/Prostata/Prostata-Gleason-Score}} (LOINC 44648-7)
+    - **Prostata**: Vollständige Implementierung des {{pagelink:ProstataModule}}
+        - **PSA**: {{pagelink:ProstataPSA}} mit LOINC 2857-1 Kodierung
+        - **Anzahl Stanzen**: {{pagelink:ProstataAnzahlStanzen}} (LOINC 33743-6)
+        - **Anzahl positive Stanzen**: {{pagelink:ProstataAnzahlPositiveStanzen}} (LOINC 33746-9)
+        - **Karzinom-Befall Stanze**: {{pagelink:ProstataKarzinomBefallStanze}} (LOINC 33748-5)
+        - **Gleason Score/Grade Group**: {{pagelink:ProstataGleasonScoreGradeGroup}} (LOINC 44648-7)
         - **Gleason Patterns**: Primäre und sekundäre Gleason-Grad-Komponenten
-        - **Clavien-Dindo**: {{pagelink:TechnischeImplementierung/Organspezifische-Module/Prostata/Prostata-Clavien-Dindo}} mit dualer Kodierung (SNOMED CT + oBDS)
-    - **Kolorektales Karzinom**: Vollständige Implementierung des {{pagelink:TechnischeImplementierung/Organspezifische-Module/KolorektalesKarzinom/Index}}
-        - **Abstand Anokutanlinie**: {{pagelink:TechnischeImplementierung/Organspezifische-Module/KolorektalesKarzinom/KRK-Abstand-Anokutanlinie}} (oBDS KR1, LOINC 33748-5)
-        - **Circumferelle Resektionsebene**: {{pagelink:TechnischeImplementierung/Organspezifische-Module/KolorektalesKarzinom/KRK-Circumferelle-Resektionsebene}} (oBDS KR3)
-        - **Aboraler Resektionsrand**: {{pagelink:TechnischeImplementierung/Organspezifische-Module/KolorektalesKarzinom/KRK-Aboraler-Resektionsrand}} (oBDS KR2)
-        - **MRT Mesorektale Faszie**: {{pagelink:TechnischeImplementierung/Organspezifische-Module/KolorektalesKarzinom/KRK-MRT-Mesorektale-Faszie}} mit Abstandsmessung (oBDS KR2)
-        - **ASA-Klassifikation**: {{pagelink:TechnischeImplementierung/Organspezifische-Module/KolorektalesKarzinom/KRK-ASA-Klassifikation}} (oBDS KR9, LOINC 97816-3)
-        - **Anastomoseninsuffizienz**: {{pagelink:TechnischeImplementierung/Organspezifische-Module/KolorektalesKarzinom/KRK-Anastomoseninsuffizienz}} (oBDS KR8, SNOMED CT 235919008)
-        - **KRK-Operation**: {{pagelink:TechnischeImplementierung/Organspezifische-Module/KolorektalesKarzinom/KRK-Operation}} mit TME-Qualitätsbewertung (oBDS KR4)
-        - **KRK-Specimen**: {{pagelink:TechnischeImplementierung/Organspezifische-Module/KolorektalesKarzinom/KRK-Specimen}} mit pathologischer TME-Qualität
-        - **Stoma-Markierung**: {{pagelink:TechnischeImplementierung/Organspezifische-Module/KolorektalesKarzinom/KRK-Stoma-Markierung}} (oBDS KR7)
+        - **Clavien-Dindo**: {{pagelink:ProstataClavienDindo}} mit dualer Kodierung (SNOMED CT + oBDS)
+    - **Kolorektales Karzinom**: Vollständige Implementierung des {{pagelink:KRKModule}}
+        - **Abstand Anokutanlinie**: {{pagelink:KRKAbstandTumorAnokutanlinie}} (oBDS KR1, LOINC 33748-5)
+        - **Circumferelle Resektionsebene**: {{pagelink:KRKAbstandCircumferelleResektionsebene}} (oBDS KR3)
+        - **Aboraler Resektionsrand**: {{pagelink:KRKAbstandResektionsrandAboral}} (oBDS KR2)
+        - **MRT Mesorektale Faszie**: {{pagelink:KRKMRTMesorektale}} mit Abstandsmessung (oBDS KR2)
+        - **ASA-Klassifikation**: {{pagelink:KRKASAKlassifikation}} (oBDS KR9, LOINC 97816-3)
+        - **Anastomoseninsuffizienz**: {{pagelink:KRKAnastomoseninsuffizienz}} (oBDS KR8, SNOMED CT 235919008)
+        - **KRK-Operation**: {{pagelink:KRKOperation}} mit TME-Qualitätsbewertung (oBDS KR4)
+        - **KRK-Specimen**: {{pagelink:KRKSpecimen}} mit pathologischer TME-Qualität
+        - **Stoma-Markierung**: {{pagelink:KRKStomaMarkierung}} (oBDS KR7)
         - **Logical Model Integration**: Umfassendes KRK-Logisches-Modell mit präzisen FHIR-Mappings
         - **Implementation Guide**: Vollständige Dokumentation mit 10 Seiten (9 Profile + Bundle)
-        - **Bundle-Beispiel**: {{pagelink:TechnischeImplementierung/Organspezifische-Module/KolorektalesKarzinom/KRK-Bundle}} demonstriert vollständigen KRK-Workflow
+        - **Bundle-Beispiel**: {{pagelink:KRKBundle}} demonstriert vollständigen KRK-Workflow
         - **CapabilityStatement**: Alle KRK-Profile für Implementierungsabdeckung deklariert
     - Malignes Melanom
 
