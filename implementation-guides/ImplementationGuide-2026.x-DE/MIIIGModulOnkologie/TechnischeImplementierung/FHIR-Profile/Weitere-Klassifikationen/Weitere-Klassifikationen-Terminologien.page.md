@@ -21,7 +21,6 @@ where
 select
     Name: name,
     Status: status,
-    Version: version,
     "Anzahl Konzepte": concept.count(),
     Publisher: publisher
 ```
@@ -83,7 +82,7 @@ where
     url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-weitere-klassifikationen'
 select
     Name: name,
-    Titel: title,
+    Status: status,
     "Anzahl inkludierter Codes": compose.include.concept.count()
 ```
 
@@ -116,10 +115,10 @@ for differential.element
 where id in ('Observation.code' | 'Observation.method' | 'Observation.value[x]:valueCodeableConcept')
 select
     Element: id,
-    Kardinalität: min.toString() & '..' & max,
+    Min: min,
+    Max: max,
     Kurzbeschreibung: short,
-    "Binding Stärke": binding.strength,
-    "Binding ValueSet": binding.valueSet
+    "Binding Stärke": binding.strength
 ```
 
 #### Beispiel-Implementierung
