@@ -20,9 +20,7 @@ where
     url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen'
 select
     Name: name,
-    Status: status,
-    "Anzahl Konzepte": concept.count(),
-    Publisher: publisher
+    "Anzahl Konzepte": concept.count()
 ```
 
 ### Struktur des hierarchischen Ansatzes
@@ -82,7 +80,6 @@ where
     url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-weitere-klassifikationen'
 select
     Name: name,
-    Status: status,
     "Anzahl inkludierter Codes": compose.include.concept.count()
 ```
 
