@@ -19,8 +19,7 @@ from
 where
     url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen'
 select
-    Name: name,
-    "Anzahl Konzepte": concept.count()
+    "CodeSystem"
 ```
 
 ### Struktur des hierarchischen Ansatzes
@@ -33,10 +32,10 @@ from
 where 
     url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen'
 for concept
-where code.contains('-') = false
 select
     Code: code,
-    Display: display
+    Display: display,
+    "Hat Unterkonzepte": concept.exists()
 ```
 
 #### BINET System mit allen Werten
@@ -47,7 +46,8 @@ from
 where 
     url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen'
 for concept
-where code.startsWith('binet')
+where code = 'binet'
+for concept
 select
     Code: code,
     Display: display
@@ -61,7 +61,8 @@ from
 where 
     url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen'
 for concept  
-where code.startsWith('ann-arbor')
+where code = 'ann-arbor-stadium'
+for concept
 select
     Code: code,
     Display: display
@@ -79,8 +80,7 @@ from
 where
     url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-weitere-klassifikationen'
 select
-    Name: name,
-    "Anzahl inkludierter Codes": compose.include.concept.count()
+    "ValueSet"
 ```
 
 #### Inhalt des Haupt-ValueSets
@@ -152,6 +152,7 @@ select
 
 ### Gesamtes CodeSystem - Übersicht aller MII-definierten Codes
 
+#### Hauptkonzepte
 @```
 from
     CodeSystem
@@ -159,9 +160,20 @@ where
     url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen'
 for concept
 select
-    Code: code,
-    Display: display
-order by code
+    "Klassifikationssystem": code,
+    Bezeichnung: display
+```
+
+#### Alle Unterkonzepte (Klassifikationswerte)
+@```
+from
+    CodeSystem
+where 
+    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen'
+for concept.concept
+select
+    Wert: code,
+    Bezeichnung: display
 ```
 
 ### Mapping zu oBDS
