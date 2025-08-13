@@ -59,6 +59,13 @@ Hier sind alle Änderungen aufgelistet.
   - **Dokumentation**: Ausführliche Anleitung für `partOf`-Verknüpfung und gemeinsame Aspekte
   - **Harmonisierung**: Hinweis auf Schwierigkeit der post-hoc Harmonisierung bei komplexen Tumoroperationen
 
+#### Urgency Extension (Art des Eingriffs)
+- **Neue Extension**: {{pagelink:ExtensionUrgencyOperation}} zur Erfassung der Eingriffsmodalität
+  - **Herkunft**: Ursprünglich aus KRK 6 oBDS 2021, aber universell auf alle Procedures anwendbar
+  - **Wertebereich**: Elektiveingriff (E), Notfalleingriff (N), Unbekannt (U)
+  - **Grund**: Qualitätssicherung und Risikostratifizierung - Notfalleingriffe haben andere Komplikationsraten
+  - **Integration**: Extension in allgemeines {{pagelink:OperationProcedure}} Profil integriert für breite Anwendbarkeit
+
 ### Verlauf-Profil Anpassungen
 - **Component-Kardinalität**: Änderung von `component 1..*` zu `component 0..*`
   - **Grund**: GitHub Issue #202 - Unterstützung für "K - keine Änderung" Fälle und hämatologische Krebsarten ohne TNM-Anwendbarkeit

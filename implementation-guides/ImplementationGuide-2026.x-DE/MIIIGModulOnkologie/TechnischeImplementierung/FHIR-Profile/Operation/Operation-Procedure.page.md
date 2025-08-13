@@ -174,7 +174,27 @@ end note
 
 ### Extensions
 
+#### Intention
 Das MII-Modul Prozedur besitzt bereits eine Extension [Durchführungsabsicht](https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht) mit Binding auf SNOMED-CT Codes. Da die Intention der OP im oBDS jedoch durch ein oBDS-spezifisches Antwortspektrum erfasst wird, wurde die Prozedur um eine zusätzliches Element "Intention" erweitert. Vorhandene Erweiterungen des MII-Moduls Prozedur sind optional und für das Mapping von oBDS nicht direkt relevant.
+
+Weitere Informationen: {{pagelink:ExtensionIntentionOperation}}
+
+#### Urgency (Art des Eingriffs)
+Die Extension "Urgency" erfasst die Modalität der Eingriffsdurchführung. Dieser Datenpunkt stammt ursprünglich aus dem organspezifischen Modul Kolorektales Karzinom (KRK 6 oBDS 2021), ist aber **universell auf alle Procedures anwendbar** und wurde daher in das allgemeine Operation-Profil integriert.
+
+Die Extension unterscheidet zwischen:
+- **E**: Elektiveingriff (geplanter Eingriff)
+- **N**: Notfalleingriff
+- **U**: Unbekannt
+
+Diese Extension ist besonders relevant für die Qualitätssicherung und statistische Auswertungen, da Notfalleingriffe oft andere Ergebnisse und Komplikationsraten aufweisen als geplante Eingriffe. Obwohl ursprünglich für kolorektale Eingriffe definiert, ist die Unterscheidung zwischen elektiven und Notfalleingriffen für alle chirurgischen Prozeduren klinisch relevant.
+
+**Verwendung:**
+```fsh
+* extension[urgency].valueCodeableConcept = $mii-cs-onko-operation-urgency#E "Elektiveingriff"
+```
+
+Weitere Informationen: {{pagelink:ExtensionUrgencyOperation}}
 
 ### Residualstatus und weitere Beobachtungen
 Der oBDS sieht bei Resektion von Tumorgewebe eine Erfassung des R-Status vor. 
