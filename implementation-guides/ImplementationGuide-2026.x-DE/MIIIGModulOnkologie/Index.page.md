@@ -1,7 +1,7 @@
 ---
 parent: 
 ---
-# Kerndatensatz Erweiterungsmodul Onkologie
+# Kerndatensatz Modul Onkologie
 
 Die vorliegende Spezifikation beschreibt die FHIR-Repräsentation des Kerndatensatz Moduls Onkologie der Medizininformatik-Initiative.
 Im Folgenden werden die Use Cases des Moduls, sowie die dazugehörigen FHIR-Profile und Terminologie-Ressourcen in ihrer verbindlichen Form beschrieben.
@@ -10,7 +10,7 @@ Im Folgenden werden die Use Cases des Moduls, sowie die dazugehörigen FHIR-Prof
 |---------|---|
 | Datum   | 21.08.2025 |
 | Version | 2026.0.0-ballot        |
-| Status  | Active       |
+| Status  | ballot       |
 | Realm   | DE          | 
 
 ## Inhaltsverzeichnis
