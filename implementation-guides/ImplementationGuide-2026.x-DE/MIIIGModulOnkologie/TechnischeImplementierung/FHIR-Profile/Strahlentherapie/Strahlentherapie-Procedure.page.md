@@ -4,6 +4,13 @@ topic: StrahlentherapieProcedure
 subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie
 ---
 
+<style>
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+
 ## Strahlentherapie
 
 Dieses Profil beschreibt eine Strahlentherapie in der Onkologie. Das Strahlentherapieprofil für die Onkologie basiert auf dem Prozedurenmodul der MII. Es übernimmt damit die zwingende Angabe von OPS als Kodierung für die Art der Prozedur. Da die Details der Prozedur in den einzelnen Bestrahlungselementen hinterlegt sind, soll hier die OPS für Strahlentherapie kodiert werden.
@@ -50,7 +57,9 @@ Aus den oben genannten Punkten ergibt sich folgende Kodierempfehlung für die oB
 
 Die Strahlentherapie Zielgebiet-Kodierung hat sich zwischen oBDS 2014 und 2021 grundlegend geändert:
 
-<plantuml>
+<img src="https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/dev/implementation-guides/ImplementationGuide-2026.x-DE/Images/MII_Onko_Strahlentherapie_Zielgebiet_Migration/MII_Onko_Strahlentherapie_Zielgebiet_Migration.png" alt="oBDS 2014 → 2021 Strahlentherapie Zielgebiet Migration">
+
+<!-- Original PlantUML removed for brevity
 @startuml MII_Onko_Strahlentherapie_Zielgebiet_Migration
 !theme plain
 skinparam defaultFontSize 10
@@ -147,7 +156,7 @@ end note
 VS -[hidden]- pkg2021
 
 @enduml
-</plantuml>
+-->
 
 #### Migrationsstrategie
 

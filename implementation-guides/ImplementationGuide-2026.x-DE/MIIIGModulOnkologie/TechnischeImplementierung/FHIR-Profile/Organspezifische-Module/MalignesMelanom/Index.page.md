@@ -17,7 +17,7 @@ Die Melanom-spezifischen Profile erweitern das MII KDS Onkologie Modul um spezie
 
 ### Übersicht der Melanom-spezifischen Profile
 
-<img src="../../../../Images/MII_Onko_Melanom_Module/MII_Onko_Melanom_Module.png" alt="MII Onkologie - Melanom Modul Architektur und Beziehungen">
+<img src="https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/dev/implementation-guides/ImplementationGuide-2026.x-DE/Images/MII_Onko_Melanom_Module/MII_Onko_Melanom_Module.png" alt="MII Onkologie - Melanom Modul Architektur und Beziehungen">
 
 ### Melanom-spezifische Datenelemente
 

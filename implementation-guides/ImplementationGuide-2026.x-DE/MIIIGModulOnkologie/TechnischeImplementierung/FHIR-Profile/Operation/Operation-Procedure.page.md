@@ -4,6 +4,13 @@ topic: OperationProcedure
 subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation
 ---
 
+<style>
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+
 ## Operation
 
 Dieses Profil beschreibt eine Operation in der Onkologie. 
@@ -65,111 +72,7 @@ Bei komplexen Tumoroperationen, wo die Hierarchie nicht eindeutig ist:
 
 #### Visualisierung am Beispiel Kim Musterperson
 
-<plantuml>
-@startuml MII_Onko_MultiPartSurgery_Example
-
-title Multi-Part Surgery Example: Kim Musterperson
-
-package "Übergeordnete Operation" {
-  object "**Procedure-4**" as main {
-    Profile: MII_PR_Onko_Operation
-    code: SNOMED CT 86481000
-    "Laparotomy (procedure)"
-    performedDateTime: 2021-09-30
-    outcome: R0
-    extension[Intention]: kurativ
-    --
-    <b>WICHTIG:</b> SNOMED Code verwendet,
-    da kein einzelner OPS-Code die
-    gesamte Operation abdeckt
-  }
-}
-
-package "Teil-Operationen mit OPS-Codes" {
-  object "**Procedure-4a**" as p4a {
-    Profile: MII Procedure
-    code: OPS 5-547.0
-    "Resektion von Gewebe in der
-    Bauchregion ohne sichere
-    Organzuordnung"
-    performedDateTime: 2021-09-30
-    partOf: → Procedure-4
-  }
-  
-  object "**Procedure-4b**" as p4b {
-    Profile: MII Procedure
-    code: OPS 5-683
-    "Uterusexstirpation
-    [Hysterektomie]"
-    performedDateTime: 2021-09-30
-    partOf: → Procedure-4
-  }
-  
-  object "**Procedure-4c**" as p4c {
-    Profile: MII Procedure
-    code: OPS 5-661
-    "Salpingektomie"
-    performedDateTime: 2021-09-30
-    partOf: → Procedure-4
-  }
-  
-  object "**Procedure-4d**" as p4d {
-    Profile: MII Procedure
-    code: OPS 5-502.1
-    "Anatomische (typische)
-    Leberresektion"
-    performedDateTime: 2021-09-30
-    partOf: → Procedure-4
-  }
-}
-
-package "Gemeinsame Referenzen" {
-  object "**Condition**" as cond {
-    Primärdiagnose
-    Ovarialkarzinom
-  }
-  
-  object "**CarePlan**" as cp {
-    Tumorboard-
-    empfehlung
-  }
-}
-
-main -down-> cond : reasonReference
-main -down-> cp : basedOn
-
-p4a -up-> main : partOf
-p4b -up-> main : partOf
-p4c -up-> main : partOf
-p4d -up-> main : partOf
-
-"Teil-Operationen mit OPS-Codes" ..> cond
-"Teil-Operationen mit OPS-Codes" ..> cp
-
-note right of main
-  <b>Code-Anforderung:</b>
-  Jede Procedure MUSS einen Code haben!
-  - Primär: OPS-Code verwenden
-  - Fallback: SNOMED CT Code
-  
-  Bei der übergeordneten Procedure:
-  - OPS optional (0..1)
-  - Wenn kein OPS → SNOMED CT pflicht
-end note
-
-note bottom
-  <b>Komplexe Tumorchirurgie (Intervalldebulking):</b>
-  • Längsschnittlaparotomie
-  • Hysterektomie + bilaterale Adnexektomie
-  • Atypische Lebersegmentresektion (Seg. II und V)
-  • Postoperativ: R0
-  
-  Alle Teil-Procedures haben dasselbe performedDateTime
-  und verweisen via partOf auf die Hauptprocedure
-end note
-
-@enduml
-</plantuml>  
+<img src="https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/dev/implementation-guides/ImplementationGuide-2026.x-DE/Images/MII_Onko_MultiPartSurgery_Example/MII_Onko_MultiPartSurgery_Example.png" alt="Multi-Part Surgery Example: Kim Musterperson">  
 
 
 ### Extensions

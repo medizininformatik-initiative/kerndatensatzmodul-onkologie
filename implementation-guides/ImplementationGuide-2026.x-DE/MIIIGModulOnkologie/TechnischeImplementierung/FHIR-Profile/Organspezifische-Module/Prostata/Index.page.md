@@ -29,7 +29,7 @@ Das Modul umfasst spezialisierte Profile für die charakteristischen Aspekte der
 
 Die folgende Abbildung zeigt die Struktur des Prostata-Moduls und die Beziehungen zwischen den verschiedenen FHIR-Ressourcen:
 
-<img src="../../../../Images/MII_Onko_Prostata_Module/MII_Onko_Prostata_Module.png" alt="MII Onkologie - Prostatakarzinom Modul Architektur">
+<img src="https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/dev/implementation-guides/ImplementationGuide-2026.x-DE/Images/MII_Onko_Prostata_Module/MII_Onko_Prostata_Module.png" alt="MII Onkologie - Prostatakarzinom Modul Architektur">
 
 ## Verknüpfungen zu anderen Ressourcen
 
