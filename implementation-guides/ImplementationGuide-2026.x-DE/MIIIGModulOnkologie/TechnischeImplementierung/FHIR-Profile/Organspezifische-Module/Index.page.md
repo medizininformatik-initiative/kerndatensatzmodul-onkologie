@@ -13,21 +13,21 @@ Die organspezifischen Module erweitern das MII KDS Onkologie Basismodul um **ent
 
 Das Erweiterungsmodul Onkologie umfasst derzeit folgende organspezifische Module:
 
-#### {{pagelink:TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/Mamma/Index}}
+#### {{pagelink:MammaModule}}
 Spezialisierte Profile für die Dokumentation von Mammakarzinomen mit Fokus auf:
 - Hormonrezeptorstatus (Estrogen, Progesteron)
 - Menopausenstatus
 - Präoperative Markierungsverfahren
 - Mamma-spezifische Operationsverfahren
 
-#### {{pagelink:TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/Prostata/Index}}
+#### {{pagelink:ProstataModule}}
 Umfassende Abbildung prostataspezifischer Parameter:
 - PSA-Werte und Verlauf
 - Gleason Score und Grade Groups nach ISUP
 - Biopsie-Dokumentation (Anzahl Stanzen, Tumorbefall)
 - Clavien-Dindo Komplikationsklassifikation
 
-#### {{pagelink:TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/KolorektalesKarzinom/Index}}
+#### {{pagelink:KRKModule}}
 Detaillierte Erfassung kolorektaler Karzinome mit:
 - Tumorlokalisation (Abstand zur Anokutanlinie)
 - Resektionsränder und TME-Qualität
@@ -35,7 +35,7 @@ Detaillierte Erfassung kolorektaler Karzinome mit:
 - Perioperative Komplikationen (Anastomoseninsuffizienz)
 - ASA-Klassifikation
 
-#### {{pagelink:TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/MalignesMelanom/Index}}
+#### {{pagelink:MalignesMelanomModule}}
 Spezifische Melanom-Parameter:
 - Breslow-Tumordicke
 - Ulzerationsstatus

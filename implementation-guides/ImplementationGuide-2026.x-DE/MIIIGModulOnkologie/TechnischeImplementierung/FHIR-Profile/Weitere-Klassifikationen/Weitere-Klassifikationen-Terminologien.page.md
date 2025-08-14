@@ -7,66 +7,40 @@ topic: WeitereKlassifikationenTerminologien
 
 Diese Seite dokumentiert die Terminologien für weitere Klassifikationen in der Onkologie, einschließlich hämatologischer und organspezifischer Staging-Systeme.
 
+### Hintergrund
+Der oBDS definiert hauptsächlich TNM als Stagingsystem aus, viele weitere krankheits- ode rorganspezifischen Staging- und Gradingsysteme werden im oBDS über das Freitextfeld Weitere Klassifikationen abgebildet. Dazu gehören z.B. das Nottigham Grading beim Brustkrebs oder Ann Arbor bei 
+Die Plattform 65c stellt 
+Einige der Staging-Systeme sind international gebräuchlich und bereits in CodeSystems wie SNOMED-CT und NCIt/UMLS enthalten, während andere primär im deutschen/deutschsprachigen Kontext verwendet werden. 
+
+Auch wenn für einige Staging-Systeme ein SNOMED-Code vorhanden ist und dieser für die Interoperabilität besser ist als ein eigenen CodeSystem, haben wir uns für die Abbildung gemäß des oBDS entschieden, da ggfs. die Daten an den Standorten direkt in diesem Format vorliegen. Eine SNOMED-Annotierung kann hier in zukünftigen Versionen via ConceptMaps angestrebt werden. 
+
 ### Hierarchisches CodeSystem für Klassifikationssysteme
 
 Das **Weitere Klassifikationen CodeSystem** nutzt eine hierarchische Struktur zur Organisation verschiedener Staging- und Klassifikationssysteme:
 
-#### CodeSystem: mii-cs-onko-weitere-klassifikationen
+#### CodeSystem: mii-cs-onko-weitere-klassifikationen-obds
 
 @```
 from
     CodeSystem
 where
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen'
-select
-    "CodeSystem"
-```
+    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds'
+
+for concept select 
+    Code: code,
+    Display: display, 
+    for concept select
+        ChildCodes: code, 
+        ChildDisplay: display
+       ```
+
+
 
 ### Struktur des hierarchischen Ansatzes
 
 #### Alle Klassifikationssysteme (Elternkonzepte)
 
-@```
-from
-    CodeSystem
-where 
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen'
-for concept
-select
-    Code: code,
-    Display: display,
-    "Hat Unterkonzepte": concept.exists()
-```
 
-#### BINET System mit allen Werten
-
-@```
-from
-    CodeSystem  
-where 
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen'
-for concept
-where code = 'binet'
-for concept
-select
-    Code: code,
-    Display: display
-```
-
-#### Ann Arbor System mit allen Werten
-
-@```
-from
-    CodeSystem
-where 
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen'
-for concept  
-where code = 'ann-arbor-stadium'
-for concept
-select
-    Code: code,
-    Display: display
-```
 
 ### ValueSets mit descendant-of Filter
 

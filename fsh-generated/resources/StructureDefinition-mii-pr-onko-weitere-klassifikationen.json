@@ -303,6 +303,19 @@
         "mustSupport": true
       },
       {
+        "id": "Observation.value[x]:valueCodeableConcept.coding",
+        "path": "Observation.value[x].coding",
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-weitere-klassifikationen-auspraegungen"
+        }
+      },
+      {
+        "id": "Observation.value[x]:valueCodeableConcept.text",
+        "path": "Observation.value[x].text",
+        "mustSupport": true
+      },
+      {
         "id": "Observation.method",
         "path": "Observation.method",
         "short": "Staging system or classification method used",

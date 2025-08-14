@@ -54,6 +54,8 @@ Description: "Weitere Tumor Staging Klassifikation neben TMN (Hämatoonkologisch
 * value[x] ^short = "Wert/ Einstufung in jeweiliger Klassifikation"
 * value[x] ^definition = "Einstufung nach jeweiliger Klassifikation. Je nach ausgewählter Systematik kann hier eine Klassifikation/Kategorisierung, ein Puntkwert oder ein anderer Datentyp auftauchen"
 * valueCodeableConcept MS
+* valueCodeableConcept.coding from MII_VS_Onko_Weitere_Klassifikationen_Auspraegungen (preferred)
+* valueCodeableConcept.text MS 
 
 * insert Translation(value[x] ^short, de-DE, Wert der weiteren Klassifikation )
 * insert Translation(value[x] ^definition, de-DE, Wert in oben ausgewählter Klassifikation )

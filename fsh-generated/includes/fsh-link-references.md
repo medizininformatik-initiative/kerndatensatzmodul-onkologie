@@ -190,6 +190,7 @@
 [MII_PR_Onko_Verlauf]: StructureDefinition-mii-pr-onko-verlauf.html
 [MII_PR_Onko_Weitere_Klassifikationen]: StructureDefinition-mii-pr-onko-weitere-klassifikationen.html
 [MII_VS_Onko_Weitere_Klassifikationen]: ValueSet-mii-vs-onko-weitere-klassifikationen.html
+[MII_VS_Onko_Weitere_Klassifikationen_Auspraegungen]: ValueSet-mii-vs-onko-weitere-klassifikationen-auspraegungen.html
 [MII_VS_Onko_Melanom_Exzision_SNOMEDCT]: ValueSet-mii-vs-onko-melanom-exzision-snomedct.html
 [MII_VS_Onko_Prostata_Operation_SNOMEDCT]: ValueSet-mii-vs-onko-prostata-operation-snomedct.html
 [MII_VS_Onko_Allgemeiner_Leistungszustand_ECOG]: ValueSet-mii-vs-onko-allgemeiner-leistungszustand-ecog.html

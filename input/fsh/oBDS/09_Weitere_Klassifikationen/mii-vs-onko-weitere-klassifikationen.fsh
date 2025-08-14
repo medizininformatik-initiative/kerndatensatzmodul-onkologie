@@ -74,35 +74,8 @@ Description: "Comprehensive collection of cancer staging systems and classificat
 * $NCIT#C141685 "Veterans Administration Lung Study Group Clinical Classification"
 * $NCIT#C18214 "Whitmore-Jewett Staging System"
 
-// oBDS-specific classification systems - include only descendant values, not parent concepts - GitHub issue #206
-* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #binet
-* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #ann-arbor-stadium
-* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #iss
-* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #isswm
-* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #who-grad
-* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #formen
-* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #eln-klassifikation
-* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #durie-salmon-stadium
-* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #bismuth
-* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #masaoka
-* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #mitoserate-gist
-* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #p16
-* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #eutos-score
-* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #sanz-score
-* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #ipi
-* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #flipi
-* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #mipi
-* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #risikogruppen-ghsg
-* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #ipss
-* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept descendant-of #her2-neu
-
 // SNOMED CT codes for established scoring systems  
 * $SCT#716567001 "International Prognostic Index (assessment scale)"
 * $SCT#708736003 "Follicular Lymphoma International Prognostic Index (assessment scale)"
 * $SCT#763236005 "Mantle Cell Lymphoma International Prognostic Index (assessment scale)"
 
-// FIGO Grading System for gynecological tumors - histological grading
-* $SCT#1290294004 "International Federation of Gynecology and Obstetrics grading system (qualifier value)"
-* $SCT#1290302009 "International Federation of Gynecology and Obstetrics grading system grade 1 (qualifier value)"
-* $SCT#1290303004 "International Federation of Gynecology and Obstetrics grading system grade 2 (qualifier value)"  
-* $SCT#1290304005 "International Federation of Gynecology and Obstetrics grading system grade 3 (qualifier value)"
