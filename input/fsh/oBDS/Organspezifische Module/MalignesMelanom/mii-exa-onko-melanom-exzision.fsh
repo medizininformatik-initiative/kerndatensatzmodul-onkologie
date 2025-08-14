@@ -9,10 +9,10 @@ Description: "Beispiel einer Melanom-Exzision am linken Oberarm mit Sicherheitsa
 * code.coding[ops].version = "2024"
 * code.coding[sct] = $SCT#177281002 "Excision of melanoma (procedure)"
 * bodySite = $SCT#368208006 "Left upper arm structure"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-onko-melanom-bundle-patient)
 * performedDateTime = "2024-03-20"
 * extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K "kurativ"
-* reasonReference = Reference(Condition/example)
+* reasonReference = Reference(mii-exa-onko-melanom-diagnose)
 * outcome = $mii-cs-onko-residualstatus#R0 "Kein Residualtumor"
 
 Instance: mii-exa-onko-melanom-exzision-ruecken
@@ -26,9 +26,9 @@ Description: "Beispiel einer Melanom-Nachexzision am oberen Rücken"
 * code.coding[ops].version = "2024"
 * code.coding[sct] = $SCT#177281002 "Excision of melanoma (procedure)"
 * bodySite = $SCT#304036007 "Structure of back of thorax"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-onko-melanom-bundle-patient)
 * performedDateTime = "2024-04-05"
 * extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K "kurativ"
-* reasonReference = Reference(Condition/example)
+* reasonReference = Reference(mii-exa-onko-melanom-diagnose)
 * outcome = $mii-cs-onko-residualstatus#R0 "Kein Residualtumor"
 * note.text = "Nachexzision mit 2cm Sicherheitsabstand"

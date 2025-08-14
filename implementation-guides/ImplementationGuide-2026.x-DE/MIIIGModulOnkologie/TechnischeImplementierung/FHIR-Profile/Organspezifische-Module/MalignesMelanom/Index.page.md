@@ -4,13 +4,20 @@ topic: MalignesMelanomModule
 subject: 
 ---
 
+<style>
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+
 ## {{page-title}}
 
 Die Melanom-spezifischen Profile erweitern das MII KDS Onkologie Modul um spezielle Datenelemente für das maligne Melanom gemäß den Anforderungen der organspezifischen Module der ADT/GEKID-Basisdokumentation.
 
 ### Übersicht der Melanom-spezifischen Profile
 
-<img src="../../../../Images/MII_Onko_Melanom_Module/MII_Onko_Melanom_Module.svg" alt="MII Onkologie - Melanom Modul Architektur und Beziehungen" style="width: 100%;">
+<img src="../../../../Images/MII_Onko_Melanom_Module/MII_Onko_Melanom_Module.png" alt="MII Onkologie - Melanom Modul Architektur und Beziehungen">
 
 ### Melanom-spezifische Datenelemente
 
@@ -27,14 +34,14 @@ Die Melanom-Module umfassen folgende spezifische klinische Parameter:
 - SNOMED CT: 385324008 "Tumor ulceration present"
 
 #### **Sicherheitsabstand**
-- Chirurgischer Sicherheitsabstand bei der Exzision
+- Chirurgischer horizontaler Sicherheitsabstand bei der Exzision
 - In Millimetern dokumentiert
 - Qualitätsindikator für die operative Therapie
 
 #### **LDH (Laktatdehydrogenase)**
 - Serummarker für Tumorlast
 - Wichtig für Stadiumseinteilung (M1c/M1d)
-- LOINC: 14804-9 "Lactate dehydrogenase"
+- LOINC: 2532-0 "Lactate dehydrogenase[Enyzmatic activity/volume] in Serum or Plasma"
 
 ### Klinische Verwendung
 

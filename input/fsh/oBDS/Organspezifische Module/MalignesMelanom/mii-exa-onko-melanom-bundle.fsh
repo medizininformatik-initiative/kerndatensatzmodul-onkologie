@@ -79,3 +79,9 @@ Description: "Beispiel-Bundle für Malignes Melanom mit allen spezifischen Profi
 * entry[=].resource = mii-exa-onko-melanom-ldh
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
+
+// Melanom Exzision Procedure
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-melanom-exzision-oberarm"
+* entry[=].resource = mii-exa-onko-melanom-exzision-oberarm
+* entry[=].request.method = #POST
+* entry[=].request.url = "Procedure"

@@ -4,6 +4,13 @@ topic: MammaModule
 subject: 
 ---
 
+<style>
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+
 # {{page-title}}
 
 ## Inhalt
@@ -24,7 +31,7 @@ Das Modul umfasst spezialisierte Profile für die charakteristischen Aspekte der
 
 Die folgende Abbildung zeigt die Struktur des Mamma-Moduls und die Beziehungen zwischen den verschiedenen FHIR-Ressourcen:
 
-<img src="../../../../Images/MII_Onko_Mamma_Module/MII_Onko_Mamma_Module.svg" alt="MII Onkologie - Mammakarzinom Modul Architektur" style="width: 100%;">
+<img src="../../../../Images/MII_Onko_Mamma_Module/MII_Onko_Mamma_Module.png" alt="MII Onkologie - Mammakarzinom Modul Architektur">
 
 ## Verknüpfungen zu anderen Ressourcen
 
