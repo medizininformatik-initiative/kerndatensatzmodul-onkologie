@@ -12,9 +12,9 @@ Die Bildatei kann [hier (Github)](https://github.com/medizininformatik-initiativ
 
 Zusätzlich zu dem übergreifenden UML-Diagramm verfügt jedes organspezifische Modul über eigene detaillierte Architekturdiagramme:
 
-- **{{pagelink:TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/Mamma/Index}}** - Mammakarzinom-spezifische Profile und deren Beziehungen
-- **{{pagelink:TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/Prostata/Index}}** - Prostatakarzinom-spezifische Profile und deren Beziehungen  
-- **{{pagelink:TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/KolorektalesKarzinom/Index}}** - Kolorektales Karzinom-spezifische Profile und deren Beziehungen
-- **{{pagelink:TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/MalignesMelanom/Index}}** - Malignes Melanom-spezifische Profile und deren Beziehungen
+- **{{pagelink:Mamma/Index}}** - Mammakarzinom-spezifische Profile und deren Beziehungen
+- **{{pagelink:Prostata/Index}}** - Prostatakarzinom-spezifische Profile und deren Beziehungen  
+- **{{pagelink:KolorektalesKarzinom/Index}}** - Kolorektales Karzinom-spezifische Profile und deren Beziehungen
+- **{{pagelink:MalignesMelanom/Index}}** - Malignes Melanom-spezifische Profile und deren Beziehungen
 
-Die Struktur aller organspezifischen Module ist zusätzlich im **{{pagelink:TechnischeImplementierung/LogischesModell/OrganspezifischeZusatzmodule}}** formal definiert, welches die FHIR-Mappings für alle entitätsspezifischen Datenelemente bereitstellt.
+Die Struktur aller organspezifischen Module ist zusätzlich im Logical Model formal definiert, welches die FHIR-Mappings für alle entitätsspezifischen Datenelemente bereitstellt.

@@ -82,36 +82,39 @@ Hier sind alle Änderungen aufgelistet.
   - **Migration Pattern**: 2014 Einzelkodes → 2021 Mehrfachkodierung (z.B. `"3.1.+"` → `#3.1` + `#9.3`)
 
 ### Neue Profile zur Abdeckung der organspezifischen Module
-    - **Mamma** : Vollständige Implementierung des {{pagelink:MammaModule}}
-        - **Estrogen-Rezeptorstatus**: {{pagelink:MammaEstrogenRezeptorstatus}} mit dualer Kodierung (oBDS/S3-Leitlinien) und Komponenten für Anteil positiver Zellen und Färbeintensität
-        - **Progesteron-Rezeptorstatus**: {{pagelink:MammaProgesteronRezeptorstatus}} mit identischer Struktur zum Estrogen-Status
-        - **Menopause-Status**: {{pagelink:MammaMenopauseStatus}} mit oBDS 2021-konformer Subsumierung (perimenopausal → prämenopausal)
-        - **Präoperative Markierung**: {{pagelink:MammaPraeoperativeMarkierung}} für verschiedene Markierungsmodalitäten (Draht, Seeds, magnetisch)
-        - **Mamma-Operation**: {{pagelink:MammaOperation}} mit SNOMED CT und OPS ValueSets
-        - **Hinweise**: Her2Neu im Molecular Tumorboard-Profil; Tumorgröße im Histologie-Modul; Studienteilnahme in oBDS 2021 abgedeckt
-    - **Prostata**: Vollständige Implementierung des {{pagelink:ProstataModule}}
-        - **PSA**: {{pagelink:ProstataPSA}} mit LOINC 2857-1 Kodierung
-        - **Anzahl Stanzen**: {{pagelink:ProstataAnzahlStanzen}} (LOINC 33743-6)
-        - **Anzahl positive Stanzen**: {{pagelink:ProstataAnzahlPositiveStanzen}} (LOINC 33746-9)
-        - **Karzinom-Befall Stanze**: {{pagelink:ProstataKarzinomBefallStanze}} (LOINC 33748-5)
-        - **Gleason Score/Grade Group**: {{pagelink:ProstataGleasonScoreGradeGroup}} (LOINC 44648-7)
-        - **Gleason Patterns**: Primäre und sekundäre Gleason-Grad-Komponenten
-        - **Clavien-Dindo**: {{pagelink:ProstataClavienDindo}} mit dualer Kodierung (SNOMED CT + oBDS)
-    - **Kolorektales Karzinom**: Vollständige Implementierung des {{pagelink:KRKModule}}
-        - **Abstand Anokutanlinie**: {{pagelink:KRKAbstandTumorAnokutanlinie}} (oBDS KR1, LOINC 33748-5)
-        - **Circumferelle Resektionsebene**: {{pagelink:KRKAbstandCircumferelleResektionsebene}} (oBDS KR3)
-        - **Aboraler Resektionsrand**: {{pagelink:KRKAbstandResektionsrandAboral}} (oBDS KR2)
-        - **MRT Mesorektale Faszie**: {{pagelink:KRKMRTMesorektale}} mit Abstandsmessung (oBDS KR2)
-        - **ASA-Klassifikation**: {{pagelink:KRKASAKlassifikation}} (oBDS KR9, LOINC 97816-3)
-        - **Anastomoseninsuffizienz**: {{pagelink:KRKAnastomoseninsuffizienz}} (oBDS KR8, SNOMED CT 235919008)
-        - **KRK-Operation**: {{pagelink:KRKOperation}} mit TME-Qualitätsbewertung (oBDS KR4)
-        - **KRK-Specimen**: {{pagelink:KRKSpecimen}} mit pathologischer TME-Qualität
-        - **Stoma-Markierung**: {{pagelink:KRKStomaMarkierung}} (oBDS KR7)
-        - **Logical Model Integration**: Umfassendes KRK-Logisches-Modell mit präzisen FHIR-Mappings
-        - **Implementation Guide**: Vollständige Dokumentation mit 10 Seiten (9 Profile + Bundle)
-        - **Bundle-Beispiel**: {{pagelink:KRKBundle}} demonstriert vollständigen KRK-Workflow
-        - **CapabilityStatement**: Alle KRK-Profile für Implementierungsabdeckung deklariert
-    - Malignes Melanom
+- **Mamma**: Vollständige Implementierung des {{pagelink:MammaModule}}
+  - **Estrogen-Rezeptorstatus**: {{pagelink:MammaEstrogenRezeptorstatus}} mit dualer Kodierung (oBDS/S3-Leitlinien) und Komponenten für Anteil positiver Zellen und Färbeintensität
+  - **Progesteron-Rezeptorstatus**: {{pagelink:MammaProgesteronRezeptorstatus}} mit identischer Struktur zum Estrogen-Status
+  - **Menopause-Status**: {{pagelink:MammaMenopauseStatus}} mit oBDS 2021-konformer Subsumierung (perimenopausal → prämenopausal)
+  - **Präoperative Markierung**: {{pagelink:MammaPraeoperativeMarkierung}} für verschiedene Markierungsmodalitäten (Draht, Seeds, magnetisch)
+  - **Mamma-Operation**: {{pagelink:MammaOperation}} mit SNOMED CT und OPS ValueSets
+  - **Hinweise**: Her2Neu im Molecular Tumorboard-Profil; Tumorgröße im Histologie-Modul; Studienteilnahme in oBDS 2021 abgedeckt
+- **Prostata**: Vollständige Implementierung des {{pagelink:ProstataModule}}
+  - **PSA**: {{pagelink:ProstataPSA}} mit LOINC 2857-1 Kodierung
+  - **Anzahl Stanzen**: {{pagelink:ProstataAnzahlStanzen}} (LOINC 33743-6)
+  - **Anzahl positive Stanzen**: {{pagelink:ProstataAnzahlPositiveStanzen}} (LOINC 33746-9)
+  - **Karzinom-Befall Stanze**: {{pagelink:ProstataKarzinomBefallStanze}} (LOINC 33748-5)
+  - **Gleason Score/Grade Group**: {{pagelink:ProstataGleasonScoreGradeGroup}} (LOINC 44648-7)
+  - **Gleason Patterns**: Primäre und sekundäre Gleason-Grad-Komponenten
+  - **Clavien-Dindo**: {{pagelink:ProstataClavienDindo}} mit dualer Kodierung (SNOMED CT + oBDS)
+- **Kolorektales Karzinom**: Vollständige Implementierung des {{pagelink:KRKModule}}
+  - **Abstand Anokutanlinie**: {{pagelink:KRKAbstandTumorAnokutanlinie}} (oBDS KR1, LOINC 33748-5)
+  - **Circumferelle Resektionsebene**: {{pagelink:KRKAbstandCircumferelleResektionsebene}} (oBDS KR3)
+  - **Aboraler Resektionsrand**: {{pagelink:KRKAbstandResektionsrandAboral}} (oBDS KR2)
+  - **MRT Mesorektale Faszie**: {{pagelink:KRKMRTMesorektale}} mit Abstandsmessung (oBDS KR2)
+  - **ASA-Klassifikation**: {{pagelink:KRKASAKlassifikation}} (oBDS KR9, LOINC 97816-3)
+  - **Anastomoseninsuffizienz**: {{pagelink:KRKAnastomoseninsuffizienz}} (oBDS KR8, SNOMED CT 235919008)
+  - **KRK-Operation**: {{pagelink:KRKOperation}} mit TME-Qualitätsbewertung (oBDS KR4)
+  - **KRK-Specimen**: {{pagelink:KRKSpecimen}} mit pathologischer TME-Qualität
+  - **Stoma-Markierung**: {{pagelink:KRKStomaMarkierung}} (oBDS KR7)
+  - **Bundle-Beispiel**: {{pagelink:KRKBundle}} demonstriert vollständigen KRK-Workflow
+- **Malignes Melanom**: Vollständige Implementierung des {{pagelink:MelanomModule}}
+  - **Breslow-Tiefe**: {{pagelink:MelanomBreslowTiefe}} (SNOMED CT 106243009)
+  - **Ulzeration**: {{pagelink:MelanomUlzeration}} (oBDS MM4) 
+  - **Sicherheitsabstand**: {{pagelink:MelanomSicherheitsabstand}} (oBDS MM1)
+  - **LDH**: {{pagelink:MelanomLDH}} Laktatdehydrogenase als prognostischer Marker
+  - **Melanom-Exzision**: {{pagelink:MelanomExzision}} mit SNOMED CT Codes für Hautexzisionen
+  - **Bundle-Beispiel**: {{pagelink:MelanomBundle}} demonstriert vollständigen Melanom-Workflow
 
 - **Bundle-Beispiele**: Für alle organspezifischen Module (Mamma, Prostata, KRK) stehen vollständige Transaktions-Bundles zur Verfügung, die alle zugehörigen Profile in einem server-konsumierbaren Format demonstrieren
 

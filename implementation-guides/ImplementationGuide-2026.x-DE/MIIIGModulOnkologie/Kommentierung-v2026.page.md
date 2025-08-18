@@ -21,7 +21,7 @@ Diese Seite sammelt spezifische Punkte, für die gezieltes Feedback in der Komme
 
 * Clavien-Dindo in Procedure.complication: Alternativ könnte die Clavien-Dindo-Bewertung direkt als `Procedure.complication` in der entsprechenden {{pagelink:ProstataOperation}} modelliert werden, da es sich um ein chirurgisches Komplikations-Klassifikationssystem handelt. Dies würde die direkte Zuordnung zur auslösenden Procedure ermöglichen, könnte aber bei seltener Anwendbarkeit zu leeren Feldern führen. Zu beachten ist, dass `Procedure.complication` bereits für oBDS/ICD-10 gemappte operative Komplikationen verwendet wird (siehe https://www.basisdatensatz.de/feld/194/op-komplikationen).
 
-### {{pagelink:WeitereKlassifikationen}} - mCODE STU4 Pattern Integration
+### {{pagelink:Weitere-Klassifikationen-Observation}} - mCODE STU4 Pattern Integration
 
 * **Method-Element Binding**: Das `Observation.method` Element wurde als Must Support hinzugefügt, um dem mCODE STU4 Pattern zu folgen. Welches ValueSet soll für `method` verwendet werden? 
   - Option 1: Dasselbe ValueSet wie für `code` (aktuell implementiert)
