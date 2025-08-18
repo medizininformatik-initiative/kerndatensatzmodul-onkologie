@@ -108,7 +108,7 @@ Hier sind alle Änderungen aufgelistet.
   - **KRK-Specimen**: {{pagelink:KRKSpecimen}} mit pathologischer TME-Qualität
   - **Stoma-Markierung**: {{pagelink:KRKStomaMarkierung}} (oBDS KR7)
   - **Bundle-Beispiel**: {{pagelink:KRKBundle}} demonstriert vollständigen KRK-Workflow
-- **Malignes Melanom**: Vollständige Implementierung des {{pagelink:MelanomModule}}
+- **Malignes Melanom**: Vollständige Implementierung des {{pagelink:MalignesMelanomModule}}
   - **Breslow-Tiefe**: {{pagelink:MelanomBreslowTiefe}} (SNOMED CT 106243009)
   - **Ulzeration**: {{pagelink:MelanomUlzeration}} (oBDS MM4) 
   - **Sicherheitsabstand**: {{pagelink:MelanomSicherheitsabstand}} (oBDS MM1)
