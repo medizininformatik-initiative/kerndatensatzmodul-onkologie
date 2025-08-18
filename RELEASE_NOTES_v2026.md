@@ -10,7 +10,7 @@
 ### 🏥 Tumorkonferenz-Erweiterung
 - Erweiterte CarePlan-Ressource für oBDS und komplexe Therapieempfehlungen
 - Activity-Slicing mit `obds` (Standard oBDS 19.1) und `extended` (RequestGroup-basierte Protokolle) Slices
-- Vollständige Rückwärtskompatibilität
+- Vollständige Rückwärtskompatibilität und Kombatibilität mit MTB-Modul
 
 ### 💊 Systemische Therapie Erweiterungen
 
