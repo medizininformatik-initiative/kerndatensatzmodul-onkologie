@@ -1,0 +1,52 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-tnm-mixed-pT4cN1cM0",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "399588009",
+        "system": "http://snomed.info/sct",
+        "display": "Pathologic TNM stage grouping"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "effectiveDateTime": "2024-02-15",
+  "method": {
+    "coding": [
+      {
+        "code": "8",
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+        "display": "8. Auflage"
+      }
+    ]
+  },
+  "hasMember": [
+    {
+      "reference": "Observation/mii-exa-onko-tnm-t-kategorie-pT4"
+    },
+    {
+      "reference": "Observation/mii-exa-onko-tnm-n-kategorie-cN1"
+    },
+    {
+      "reference": "Observation/mii-exa-onko-tnm-m-kategorie-cM0"
+    }
+  ],
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "IIIB",
+        "system": "https://www.uicc.org/resources/tnm",
+        "display": "Stadium IIIB"
+      }
+    ]
+  }
+}
