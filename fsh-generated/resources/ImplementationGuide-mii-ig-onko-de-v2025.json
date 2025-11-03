@@ -842,7 +842,7 @@
           "reference": "StructureDefinition/mii-ex-onko-tnm-cp-praefix"
         },
         "name": "MII EX Onkologie TNM c/p Präfix",
-        "description": "Die Extension verleiht einer TNM T-, N- oder M-Kategorie ein c, p oder u Präfix.",
+        "description": "Die Extension verleiht einer TNM T-, N- oder M-Kategorie ein c, p oder u Präfix zur Angabe der Klassifikationsmethode: 'c' = klinische Klassifikation (basierend auf klinischen Angaben), 'p' = pathologische Klassifikation (basierend auf pathohistologischer Untersuchung), 'u' = Ultraschall-basierte Klassifikation.",
         "exampleBoolean": false
       },
       {
@@ -1034,7 +1034,7 @@
           "reference": "StructureDefinition/mii-pr-onko-prostata-operation"
         },
         "name": "MII PR Onko Prostata Operation",
-        "description": "Prostata-spezifische Operation. Dieses Profil spezialisiert die allgemeine onkologische Operation für Prostata-spezifische Eingriffe mit einem präferierten ValueSet basierend auf SNOMED CT 118877007 und dessen Kindern.",
+        "description": "Prostata-spezifische Operation. Dieses Profil spezialisiert die allgemeine onkologische Operation für Prostata-spezifische Eingriffe mit einem required Binding zu einem ValueSet basierend auf SNOMED CT 118877007 und dessen Kindern.",
         "exampleBoolean": false
       },
       {
@@ -1138,7 +1138,7 @@
           "reference": "StructureDefinition/mii-pr-onko-diagnose-primaertumor"
         },
         "name": "MII PR Onkologie Diagnose Primärtumor",
-        "description": "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der primären hämatologisch-myeloneoplastischen Erkrankung)",
+        "description": "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der primären hämatologisch-myeloneoplastischen Erkrankung) und basiert auf dem MII KDS Modul Diagnose.",
         "exampleBoolean": false
       },
       {
@@ -1994,7 +1994,7 @@
           "reference": "ValueSet/mii-vs-onko-tnm-cp-praefix"
         },
         "name": "MII VS Onkologie TNM cpu Praefix",
-        "description": "Codes für TNM c/p-Präfix. Gibt an, ob die Klassifikation klinisch oder pathologisch erfolgte.",
+        "description": "Codes für TNM c/p/u-Präfix. Gibt an, ob die Klassifikation klinisch (c), pathologisch (p) oder mittels Ultraschall (u) erfolgte.",
         "exampleBoolean": false
       },
       {
