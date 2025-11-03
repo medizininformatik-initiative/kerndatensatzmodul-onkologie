@@ -26,6 +26,14 @@ Die Sicherheitsabstandsmessung ist eine wichtige chirurgische Beobachtung beim M
 ### oBDS-Kontext
 Die Sicherheitsabstandsmessung entspricht dem oBDS-Datenfeld MM1 "Minimaler Sicherheitsabstand zum Primärtumor" und wird in Millimetern dokumentiert. Diese Messung ist essentiell für die Beurteilung der Vollständigkeit der Tumorresektion und der Prognose beim Melanom.
 
+**Hinweis zur Kodierung von nicht beurteilbaren Fällen:**
+Gemäß oBDS kann der Sicherheitsabstand folgende Werte annehmen:
+- **-1**: nicht beurteilbar → In FHIR wird `dataAbsentReason` verwendet (z.B. "unknown" oder "not-asked") statt `valueQuantity`
+- **0**: kein Sicherheitsabstand (R1/R2-Resektion) → `valueQuantity.value = 0`
+- **n**: Sicherheitsabstand in mm → `valueQuantity.value = n`
+
+Das Profil enthält eine Invariante, die sicherstellt, dass entweder `valueQuantity` oder `dataAbsentReason` vorhanden sein muss.
+
 ### Terminologie-Binding
 Das Profil verwendet SNOMED CT Code 396511007 "Distance of in situ melanoma from closest lateral surgical margin in excised specimen of skin (observable entity)" zur standardisierten Kodierung der Sicherheitsabstandsmessung. Der Wert wird als UCUM-konforme Quantity in Millimetern (mm) angegeben.
 
