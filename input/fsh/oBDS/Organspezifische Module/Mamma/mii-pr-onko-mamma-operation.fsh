@@ -30,15 +30,23 @@ Description: "Das vorliegende Profil beschreibt operative Eingriffe an der Brust
 * usedCode MS
 * usedCode only CodeableConcept
 * usedCode 0..*
-* usedCode.coding MS
-* usedCode.coding ^slicing.discriminator.type = #value
-* usedCode.coding ^slicing.discriminator.path = "code"
-* usedCode.coding ^slicing.rules = #open
-* usedCode.coding ^slicing.description = "Slicing für die intraoperative Verwendung von z.B. Drahtmarkierungen, Markierungsclips oder Seed-Markierungen. Hier existiert noch kein vollständiges ValueSet"
+* usedCode ^slicing.discriminator.type = #pattern
+* usedCode ^slicing.discriminator.path = "$this"
+* usedCode ^slicing.rules = #open
+* usedCode contains
+    IntraoperativesImaging 0..* MS and
+    PraeoperativeMarkierung 0..* MS
+
+* usedCode[IntraoperativesImaging] ^short = "Intraoperatives Präparateröntgen/Sonografie"
+* usedCode[IntraoperativesImaging] ^definition = "Bildgebende Verfahren zur intraoperativen Beurteilung des Resektats (Mammografie, Sonografie, etc.)"
+* usedCode[IntraoperativesImaging] from MII_VS_Onko_Mamma_Intraoperatives_Imaging_Praeparat (extensible)
+
+* usedCode[PraeoperativeMarkierung] ^short = "Präoperative Markierung"
+* usedCode[PraeoperativeMarkierung] ^definition = "Modalität der präoperativen Markierung (Drahtmarkierung, Markierungsclips, Seed-Markierung)"
+* usedCode[PraeoperativeMarkierung] from MII_VS_Onko_Mamma_Praeoperative_Markierung_Modalitaet (extensible)
 
 
 
-/*
 Mapping: FHIR-oBDS-MammaOperation
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
@@ -46,7 +54,6 @@ Source: MII_PR_Onko_Mamma_Operation
 * -> "13" "Operation"
 * code.coding[ops].code -> "13.3" "OPS - Mamma-spezifische Operationen"
 * code.coding[sct].code -> "13.3" "SNOMED CT - Mamma-spezifische Operationen"
-* usedCode.coding -> "13.6" "Intraoperative Hilfsmittel und Markierungen"
+* usedCode[IntraoperativesImaging] -> "M6" "Intraoperatives Präparatröntgen/Sonografie"
+* usedCode[PraeoperativeMarkierung] -> "M5" "Präoperative Drahtmarkierung durch Bildgebung gesteuert"
 * performedDateTime -> "13.2" "OP Datum"
-
-*/
