@@ -26,6 +26,7 @@ Das Profil unterstützt optionale LOINC-Kodierung zusätzlich zur verpflichtende
 - **`valueCodeableConcept.coding`**: Neben der verpflichtenden oBDS-Kodierung können optional LOINC Answer List Codes angegeben werden
 
 Zur Übersetzung zwischen oBDS- und LOINC-Codes steht folgende ConceptMap zur Verfügung:
+- `https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc`
 
 @```
 from ConceptMap
