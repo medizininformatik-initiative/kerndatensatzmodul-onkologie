@@ -37,4 +37,4 @@ Description: "Example radiation therapy conformant with MII Prozedur as bracket 
 * performedPeriod.start = "2019-07-04"
 * performedPeriod.end = "2019-09-14"
 * usedCode[Strahlenart] = $mii-cs-onko-strahlentherapie-strahlenart#Lu-177
-* usedCode[Applikationsart] = $mii-cs-onko-strahlentherapie-applikationsart#MPSMA
+* extension[Applikationsart].valueCodeableConcept = $mii-cs-onko-strahlentherapie-applikationsart#MPSMA
