@@ -20,6 +20,7 @@ Hier sind alle Änderungen aufgelistet.
 - `documentation` UCUM Hinweistext in Lymphknoten-Zählprofilen verbessert für bessere Klarheit über verpflichtenden UCUM Code 1. [[HDB-700](https://hl7germany.atlassian.net/browse/HDB-700), [#228](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/228)]
 - `improve` LOINC Slices zu Karnofsky und ECOG Leistungszustand Profilen hinzugefügt für bessere internationale Interoperabilität. [[HDB-689](https://hl7germany.atlassian.net/browse/HDB-689), [#236](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/236)]
 - `improve` Strahlentherapie Applikationsart von `Procedure.usedCode` zu Standard-Extension `procedure-method` verschoben für semantisch korrektere Modellierung. [[HDB-682](https://hl7germany.atlassian.net/browse/HDB-682), [#238](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/238)]
+- `documentation` MII Modul Forschungsvorhaben zum UML-Diagramm "Profile - Beziehungen und Referenzen" hinzugefügt zur Darstellung der optionalen Integration mit Forschungsprojekten. [[HDB-715](https://hl7germany.atlassian.net/browse/HDB-715), [#232](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/232)]
 
 ## Änderungen Kommentierungs-Version 2026 (veröffentlicht 21.08.2025)
 

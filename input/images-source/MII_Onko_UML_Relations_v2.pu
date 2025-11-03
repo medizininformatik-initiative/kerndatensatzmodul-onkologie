@@ -80,7 +80,12 @@ rectangle "Modul Biobank" {
     object MII_Bioprobe #44FFFF
 }
 
-
+rectangle "Modul Forschungsvorhaben" {
+    object MII_ResearchStudy #CCFFCC
+    object MII_ResearchSubject #CCFFCC
+}
+MII_ResearchSubject <-- MII_ResearchStudy: study
+MII_ResearchSubject ...> Diagnose_Primaertumor: condition
 
 MII_MolGenBefund ....> Onko_Variante: result[variant]
 MII_PathoAnforderung  ....> PrimaerDiagnose : reasonReference
@@ -94,7 +99,7 @@ object AdverseEvent #FF9999
 Onko_SystemischeTherapie <--- AdverseEvent: suspectEntity.instance
 Onko_Strahlentherapie <--- AdverseEvent: suspectEntity.instance
 
-legend right 
+legend right
 |Color|Type|
 |<#FFFF66>|Condition|
 |<#CCCCFF>|CarePlan|
@@ -105,6 +110,7 @@ legend right
 |<#FFCCFF>|Medication|
 |<#FF9999>|AdverseEvent|
 |<#44FFFF>|Specimen|
+|<#CCFFCC>|ResearchStudy / ResearchSubject|
 endlegend
 
 
