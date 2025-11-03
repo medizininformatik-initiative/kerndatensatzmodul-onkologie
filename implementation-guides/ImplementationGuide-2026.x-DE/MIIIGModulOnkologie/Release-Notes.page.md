@@ -16,6 +16,7 @@ Hier sind alle Änderungen aufgelistet.
 - `documentation` Hinweis auf Vererbung vom MII KDS Modul Diagnose zur Beschreibung des Diagnose Primärtumor Profils hinzugefügt. [[HDB-701](https://hl7germany.atlassian.net/browse/HDB-701), [#227](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/227)]
 - `documentation` Beschreibungen der TNM c/p/u-Präfix Extension und ValueSet verbessert mit Erklärungen der Klassifikationsmethoden. [[HDB-699](https://hl7germany.atlassian.net/browse/HDB-699), [#229](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/229)]
 - `fix` SNOMED CT Versions-URI-Syntax in ConceptMap mii-cm-onko-krk-stoma-obds-sct korrigiert: Versionierte URI von `target` nach `targetVersion` verschoben. [[HDB-702](https://hl7germany.atlassian.net/browse/HDB-702), [#226](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/226)]
+- `documentation` Beschreibung und Definition im Prostata Operation Profil korrigiert um Binding-Stärke korrekt als `required` (statt `preferred`) zu reflektieren. [[HDB-706](https://hl7germany.atlassian.net/browse/HDB-706), [#224](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/224)]
 
 ## Änderungen Kommentierungs-Version 2026 (veröffentlicht 21.08.2025)
 
