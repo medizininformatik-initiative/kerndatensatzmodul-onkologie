@@ -23,9 +23,8 @@ Link zum konkreten Profil EPA MedicationStatement https://simplifier.net/epa-med
 
 ### Nationale Vorarbeiten 
 
-#### German OncoLogical Data Standard (GOLD) 
-Das Projekt GOLD befasst sich als Teil der Vison Zero Oncology oncology . Das Datenmodell und die dazugehörigen Profile wurden von existierenden Datenmodellen abgeleitet und mit deutschen Experten abgestimmt. Gleichzeitig wurden Anstrengungen in Richtung einer semantischen Harmonisierung von verschiedenen Datenmodellen aus Forschung und Industrie unternommen. 
-Die ersten Profile haben den Fokus auf Diagnose und Klassifikationen, wie die TNM-Klassifikation. Die aktuelle Version ist hier zu finden: https://vision-zero-oncology.github.io/GOLD/
+#### German OncoLogical Data Standard (GOLD)
+Das Projekt GOLD wurde vom Vision-Zero e.V. initiiert und zielt auf die Abbildung einer kompletten onkologischen Patient Journey ab. Das Datenmodell und die dazugehörigen Profile wurden von existierenden Datenmodellen aus Versorgung, Forschung und Industrie in Deutschland und Ausland abgeleitet. Es wurden Vorschläge für Harmonisierung verschiedener Spezifikationen erarbeitet und mit deutschen Experten abgestimmt. Die ersten FHIR-Profile mit Fokus auf Diagnose und Klassifikationen, wie die TNM-Klassifikation, sowie Bildgebung und Verlauf sind in mehrere weitere Projekte eingeflossen, z.B. Basisprofile Onkologie von HL7 Deutschland und das MII-Modul Befunde bildgebender Verfahren. Die aktuelle Version ist hier zu finden: https://vision-zero-oncology.github.io/GOLD/
 
 
 
