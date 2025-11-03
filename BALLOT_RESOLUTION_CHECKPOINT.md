@@ -6,7 +6,7 @@
 
 ---
 
-## ✅ Completed Tickets (6/45)
+## ✅ Completed Tickets (14/45)
 
 ### Successfully Implemented & Committed
 
@@ -18,6 +18,15 @@
 | HDB-705 | `95363f8` | `documentation` | Melanom Sicherheitsabstand completion with invariant and dataAbsentReason handling | ✅ Committed |
 | HDB-711 | `c2b5ef7` | `documentation` | GOLD project description updated on national standards page | ✅ Committed |
 | HDB-712 | `dc34cb2` | `improve` | Genetische Variante optional specimen reference (0..1) + UML TODO comment | ✅ Committed |
+| HDB-701 | `fa4ed45` | `documentation` | Diagnosis Primärtumor description - inheritance hint from KDS Diagnose | ✅ Committed |
+| HDB-699 | `a758423` | `documentation` | TNM c/p/u-Präfix Extension - improved explanations | ✅ Committed |
+| HDB-702 | `3395697` | `fix` | ConceptMap KRK Stoma - SNOMED URI syntax correction (target → targetVersion) | ✅ Committed |
+| HDB-706 | `e0403ad` | `documentation` | Prostata Operation - binding strength text correction | ✅ Committed |
+| HDB-700 | `c363356` | `documentation` | Lymphknoten profiles - improved UCUM hint text | ✅ Committed |
+| HDB-689 | `b2e4ce7` | `improve` | Karnofsky & ECOG - LOINC slices + ConceptMaps for international interoperability | ✅ Committed |
+| HDB-682 | `cdd52fe` | `improve` | Strahlentherapie - moved Applikationsart to procedure-method extension | ✅ Committed |
+| HDB-715 | `57a93e5` | `documentation` | UML diagram - added MII Research Project module | ✅ Committed |
+| HDB-653 | `8c3c28a` | `improve` | Mamma Operation - added usedCode slices for intraoperative aids (M6, M5) | ✅ Committed |
 
 ### Commit Details
 
@@ -34,8 +43,9 @@ Each commit includes:
 
 ### Jira Overview
 - **Total tickets:** 45
-- **Completed:** 6
-- **Remaining:** 39
+- **Completed:** 14
+- **Remaining:** 31
+- **Accepted tickets completed:** 12/~15
 - **In GitHub milestone 2:** 28
 
 ### Breakdown by Status (from Jira.csv)
@@ -44,14 +54,10 @@ Each commit includes:
 - 10 Open without resolution
 - 8 Work in progress without resolution
 
-**Accepted - Need Implementation (9 remaining):**
-- HDB-703: SNOMED versions (Accepted with mods)
-- HDB-702: ConceptMap sourceUri/targetUri (Accepted with mods)
-- HDB-701: Diagnosis description inheritance hints (Accepted)
-- HDB-700: Lymphknoten comments UCUM (Accepted with mods)
-- HDB-699: c/p prefix explanation (Accepted)
-- HDB-706: Prostata operation binding text (Not accepted in comments, but needs text fix)
-- And more...
+**Accepted - Remaining Implementation (3 tickets):**
+- HDB-703: SNOMED versions - alignment to 20250701 (Accepted with mods) - Deferred
+- HDB-688/651: PSA LOINC codes - comprehensive ValueSet needed (Accepted with mods) - Deferred (needs external script)
+- HDB-674: OP Procedure umbrella approach (Accepted) - Marked as Done in Jira
 
 **Waiting for Feedback (4 tickets):**
 - HDB-697, HDB-694, HDB-690, HDB-677
