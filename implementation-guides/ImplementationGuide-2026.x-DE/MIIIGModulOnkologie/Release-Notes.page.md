@@ -5,6 +5,12 @@ parent:
 ## {{page-title}}
 Hier sind alle Änderungen aufgelistet. 
 
+## Änderungen finale Version v2026.0.0 (noch nicht veröffentlicht)
+
+- `fix` Canonical URL des Strahlentherapie Applikationsart ValueSets von `mii-vs-onko-sstrahlentherapie-applikationsart` auf `mii-vs-onko-strahlentherapie-applikationsart` korrigiert (Breaking Change). [[HDB-708](https://hl7germany.atlassian.net/browse/HDB-708), [#219](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/219)]
+- `improve` Kardinalität von `Observation.code` im Residualstatus-Profil explizit auf `1..1` gesetzt für bessere Verständlichkeit. [[HDB-707](https://hl7germany.atlassian.net/browse/HDB-707), [#220](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/220)]
+- `fix` Canonical URL des Mamma Rezeptorstatus Leitlinie CodeSystems korrigiert um fehlenden `-leitlinie` Suffix. [[HDB-704](https://hl7germany.atlassian.net/browse/HDB-704), [#223](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/223)]
+
 ## Änderungen Kommentierungs-Version 2026 (veröffentlicht 21.08.2025)
 
 ### Weitere Klassifikationen und Molekulare Tumorboards
@@ -118,7 +124,7 @@ Hier sind alle Änderungen aufgelistet.
 
 - **Bundle-Beispiele**: Für alle organspezifischen Module (Mamma, Prostata, KRK) stehen vollständige Transaktions-Bundles zur Verfügung, die alle zugehörigen Profile in einem server-konsumierbaren Format demonstrieren
 
---- 
+---
 
 ## Änderungen in 2025.1.0 (veröffentlicht 12.06.2025)
 - Umprofilierung des Strahlentherapie-Profils (BREAKING CHANGE!)
