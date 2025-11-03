@@ -9,6 +9,8 @@
 [mii-exa-onko-systemische-therapie-1]: Procedure-mii-exa-onko-systemische-therapie-1.html
 [PatientKimMusterperson-Procedure-4]: Procedure-PatientKimMusterperson-Procedure-4.html
 [mii-exa-onko-liste-evidenz-erstdiagnose-1]: List-mii-exa-onko-liste-evidenz-erstdiagnose-1.html
+[mii-cm-onko-allgemeiner-leistungszustand-ecog-loinc]: ConceptMap-mii-cm-onko-allgemeiner-leistungszustand-ecog-loinc.html
+[mii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc]: ConceptMap-mii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc.html
 [mii-cm-onko-krk-stoma-obds-sct]: ConceptMap-mii-cm-onko-krk-stoma-obds-sct.html
 [mii-exa-onko-medikation-iberdomide-unii]: MedicationStatement-mii-exa-onko-medikation-iberdomide-unii.html
 [mii-exa-onko-melanom-exzision-oberarm]: Procedure-mii-exa-onko-melanom-exzision-oberarm.html

@@ -56,7 +56,24 @@
       {
         "id": "Observation.code.coding",
         "path": "Observation.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
         "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code.coding:snomed",
+        "path": "Observation.code.coding",
+        "sliceName": "snomed",
+        "min": 1,
+        "max": "1",
         "patternCoding": {
           "code": "761869008",
           "system": "http://snomed.info/sct"
@@ -64,12 +81,36 @@
         "mustSupport": true
       },
       {
-        "id": "Observation.code.coding.system",
+        "id": "Observation.code.coding:snomed.system",
+        "path": "Observation.code.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code.coding:snomed.code",
+        "path": "Observation.code.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code.coding:loinc",
+        "path": "Observation.code.coding",
+        "sliceName": "loinc",
+        "min": 0,
+        "max": "*",
+        "patternCoding": {
+          "code": "89243-0",
+          "system": "http://loinc.org"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code.coding:loinc.system",
         "path": "Observation.code.coding.system",
         "min": 1
       },
       {
-        "id": "Observation.code.coding.code",
+        "id": "Observation.code.coding:loinc.code",
         "path": "Observation.code.coding.code",
         "min": 1
       },
@@ -106,6 +147,15 @@
       {
         "id": "Observation.value[x].coding",
         "path": "Observation.value[x].coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        },
         "short": "Leistungszustand nach Karnofsky",
         "_short": {
           "extension": [
@@ -143,12 +193,7 @@
           ]
         },
         "min": 1,
-        "max": "1",
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-karnofsky"
-        }
+        "mustSupport": true
       },
       {
         "id": "Observation.value[x].coding.code",
@@ -160,6 +205,49 @@
             "comment": "Allgemeiner Leistungszustand"
           }
         ]
+      },
+      {
+        "id": "Observation.value[x].coding:obds",
+        "path": "Observation.value[x].coding",
+        "sliceName": "obds",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-karnofsky"
+        }
+      },
+      {
+        "id": "Observation.value[x].coding:obds.system",
+        "path": "Observation.value[x].coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x].coding:obds.code",
+        "path": "Observation.value[x].coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x].coding:loinc",
+        "path": "Observation.value[x].coding",
+        "sliceName": "loinc",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x].coding:loinc.system",
+        "path": "Observation.value[x].coding.system",
+        "min": 1,
+        "fixedUri": "http://loinc.org"
+      },
+      {
+        "id": "Observation.value[x].coding:loinc.code",
+        "path": "Observation.value[x].coding.code",
+        "min": 1
       }
     ]
   }

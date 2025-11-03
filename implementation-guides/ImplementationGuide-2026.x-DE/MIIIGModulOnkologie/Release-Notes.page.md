@@ -18,6 +18,7 @@ Hier sind alle Änderungen aufgelistet.
 - `fix` SNOMED CT Versions-URI-Syntax in ConceptMap mii-cm-onko-krk-stoma-obds-sct korrigiert: Versionierte URI von `target` nach `targetVersion` verschoben. [[HDB-702](https://hl7germany.atlassian.net/browse/HDB-702), [#226](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/226)]
 - `documentation` Beschreibung und Definition im Prostata Operation Profil korrigiert um Binding-Stärke korrekt als `required` (statt `preferred`) zu reflektieren. [[HDB-706](https://hl7germany.atlassian.net/browse/HDB-706), [#224](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/224)]
 - `documentation` UCUM Hinweistext in Lymphknoten-Zählprofilen verbessert für bessere Klarheit über verpflichtenden UCUM Code 1. [[HDB-700](https://hl7germany.atlassian.net/browse/HDB-700), [#228](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/228)]
+- `improve` LOINC Slices zu Karnofsky und ECOG Leistungszustand Profilen hinzugefügt für bessere internationale Interoperabilität. [[HDB-689](https://hl7germany.atlassian.net/browse/HDB-689), [#236](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/236)]
 
 ## Änderungen Kommentierungs-Version 2026 (veröffentlicht 21.08.2025)
 
