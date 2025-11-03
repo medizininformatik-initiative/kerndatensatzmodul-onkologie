@@ -23,9 +23,10 @@ Diagnose_Primaertumor --left--> Evidenz_Erstdiagnose : evidence.detail
 
 rectangle "Onkologie Observations"{
     object Onko_Variante #22FF22
+    ' TODO: Add connection Onko_Variante ..> Onko_Specimen: specimen (0..1) - see HDB-712
     object Fernmetastasen #22FF22
     object TNM_Klassifikation #22FF22
-    object WeitereKlassifikation #22FF22 
+    object WeitereKlassifikation #22FF22
     object Lymphknotenuntersuchung #22FF22
     object HistologieGrading #22FF22
     object Residualstatus #22FF22

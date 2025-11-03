@@ -12,6 +12,7 @@ Hier sind alle Änderungen aufgelistet.
 - `fix` Canonical URL des Mamma Rezeptorstatus Leitlinie CodeSystems korrigiert um fehlenden `-leitlinie` Suffix. [[HDB-704](https://hl7germany.atlassian.net/browse/HDB-704), [#223](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/223)]
 - `documentation` Beschreibung des Melanom Sicherheitsabstand Profils vervollständigt und Handhabung von nicht beurteilbaren Fällen dokumentiert. [[HDB-705](https://hl7germany.atlassian.net/browse/HDB-705), [#222](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/222)]
 - `documentation` GOLD-Projektbeschreibung auf Seite "Bezug zu nationalen Standards" aktualisiert. [[HDB-711](https://hl7germany.atlassian.net/browse/HDB-711), [#216](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/216)]
+- `improve` Optionale Specimen-Referenz (0..1) zum Genetische Variante Profil hinzugefügt. [[HDB-712](https://hl7germany.atlassian.net/browse/HDB-712), [#215](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/215)]
 
 ## Änderungen Kommentierungs-Version 2026 (veröffentlicht 21.08.2025)
 
