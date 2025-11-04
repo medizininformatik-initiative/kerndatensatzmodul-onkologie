@@ -59,6 +59,8 @@
 [MII_CS_Onko_KRK_Anastomoseninsuffizienz]: CodeSystem-mii-cs-onko-krk-anastomoseninsuffizienz.html
 [MII_CS_Onko_KRK_ASA_oBDS]: CodeSystem-mii-cs-onko-krk-asa-obds.html
 [MII_CS_Onko_KRK_Operationstyp]: CodeSystem-mii-cs-onko-krk-operationstyp.html
+[MII_CS_Onko_Mamma_Her2neu_Status_Leitlinie]: CodeSystem-mii-cs-onko-mamma-her2neu-status-leitlinie.html
+[MII_CS_Onko_Mamma_Her2neu_Status_oBDS]: CodeSystem-mii-cs-onko-mamma-her2neu-status-obds.html
 [MII_CS_Onko_Mamma_Rezeptorstatus_Leitlinie]: CodeSystem-mii-cs-onko-mamma-rezeptorstatus-leitlinie.html
 [MII_CS_Onko_Melanom_Ulzeration]: CodeSystem-mii-cs-onko-melanom-ulzeration.html
 [MII_CS_Onko_Operation_Komplikationen]: CodeSystem-mii-cs-onko-operation-komplikation.html
@@ -109,6 +111,7 @@
 [mii-exa-onko-krk-specimen]: Specimen-mii-exa-onko-krk-specimen.html
 [mii-exa-onko-krk-stoma-markierung]: Procedure-mii-exa-onko-krk-stoma-markierung.html
 [mii-exa-onko-mamma-example-bundle-1]: Bundle-mii-exa-onko-mamma-example-bundle-1.html
+[mii-exa-onko-mamma-her2neu-status]: Observation-mii-exa-onko-mamma-her2neu-status.html
 [mii-exa-onko-melanom-breslow-tiefe]: Observation-mii-exa-onko-melanom-breslow-tiefe.html
 [mii-exa-onko-melanom-bundle]: Bundle-mii-exa-onko-melanom-bundle.html
 [mii-exa-onko-melanom-ldh]: Observation-mii-exa-onko-melanom-ldh.html
@@ -138,6 +141,7 @@
 [MII_PR_Onko_Fernmetastasen]: StructureDefinition-mii-pr-onko-fernmetastasen.html
 [MII_PR_Onko_Genetische_Variante]: StructureDefinition-mii-pr-onko-genetische-variante.html
 [MII_PR_Onko_Grading]: StructureDefinition-mii-pr-onko-grading.html
+[MII_PR_Onko_Mamma_Her2neu_Status]: StructureDefinition-mii-pr-onko-mamma-her2neu-status.html
 [MII_PR_Onko_Histologie_ICDO3]: StructureDefinition-mii-pr-onko-histologie-icdo3.html
 [MII_PR_Onko_KRK_Anastomoseninsuffizienz]: StructureDefinition-mii-pr-onko-krk-anastomoseninsuffizienz.html
 [MII_PR_Onko_KRK_ASA_Klassifikation]: StructureDefinition-mii-pr-onko-krk-asa-klassifikation.html
@@ -203,6 +207,8 @@
 [MII_VS_Onko_Grading]: ValueSet-mii-vs-onko-grading.html
 [MII_VS_Onko_ICDO3_Morphologie]: ValueSet-mii-vs-onko-icdo3-morphologie.html
 [MII_VS_Onko_ICDO3_Topographie]: ValueSet-mii-vs-onko-icdo3-topographie.html
+[MII_VS_Onko_Mamma_Her2neu_Status_Leitlinie]: ValueSet-mii-vs-onko-mamma-her2neu-status-leitlinie.html
+[MII_VS_Onko_Mamma_Her2neu_Status_oBDS]: ValueSet-mii-vs-onko-mamma-her2neu-status-obds.html
 [MII_VS_Onko_Melanom_Ulzeration]: ValueSet-mii-vs-onko-melanom-ulzeration.html
 [MII_VS_Onko_Nebenwirkung_Art]: ValueSet-mii-vs-onko-nebenwirkung-art.html
 [MII_VS_Onko_Nebenwirkung_CTCAE_Grad]: ValueSet-mii-vs-onko-nebenwirkung-ctcae-grad.html

@@ -559,6 +559,22 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-onko-mamma-her2neu-status-leitlinie"
+        },
+        "name": "MII CS Onkologie Mamma Her2neu Status Leitlinie",
+        "description": "Codesystem für Her2neu Status basierend auf der S3-Leitlinie Mammakarzinom und ASCO/CAP Guidelines mit erweiterten Klassifikationen (HER2-low, HER2-ultralow)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-mamma-her2neu-status-obds"
+        },
+        "name": "MII CS Onkologie Mamma Her2neu Status oBDS",
+        "description": "oBDS-spezifisches Codesystem für Her2neu Status gemäß oBDS Feld M4 (243)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-onko-mamma-rezeptorstatus-leitlinie"
         },
         "name": "MII CS Onkologie Mamma Rezeptorstatus",
@@ -959,6 +975,14 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-onko-mamma-her2neu-status"
+        },
+        "name": "MII EXA Onko Mamma Her2neu Status",
+        "description": "Beispiel für Her2neu Status bei Mammakarzinom - HER2-positiv (IHC 3+)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-her2neu-status"
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-onko-melanom-breslow-tiefe"
         },
         "name": "MII EXA Onko Melanom Breslow Tiefe",
@@ -1187,6 +1211,14 @@
         },
         "name": "MII PR Onkologie Grading",
         "description": "Histologie: Tumor Grading. Gibt den Differenzierungsgrad des Tumors entsprechend der aktuellen TNM-Auflage an.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-mamma-her2neu-status"
+        },
+        "name": "MII PR Onkologie Her2neu Status",
+        "description": "Dieses Profil beschreibt den Her2neu Status einer pathologisch untersuchten Probe beim Mamma-Karzinom in der Onkologie",
         "exampleBoolean": false
       },
       {
@@ -1707,6 +1739,22 @@
         },
         "name": "MII VS Onkologie ICD-O-3 Topographie",
         "description": "Codes für Topographie einer neoplastischen Veränderung",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-her2neu-status-leitlinie"
+        },
+        "name": "MII VS Onkologie Mamma Her2neu Status Leitlinie",
+        "description": "Value Set für Her2neu Status nach S3-Leitlinie und ASCO/CAP Guidelines",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-her2neu-status-obds"
+        },
+        "name": "MII VS Onkologie Mamma Her2neu Status oBDS",
+        "description": "Value Set für Her2neu Status nach oBDS",
         "exampleBoolean": false
       },
       {
