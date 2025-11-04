@@ -41,10 +41,9 @@
       {
         "id": "Observation.code.coding",
         "path": "Observation.code.coding",
-        "patternCoding": {
-          "code": "2857-1",
-          "system": "http://loinc.org",
-          "display": "Prostate specific Ag [Mass/volume] in Serum or Plasma"
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-psa-loinc"
         }
       },
       {
@@ -145,11 +144,6 @@
         "id": "Observation.value[x].code",
         "path": "Observation.value[x].code",
         "patternCode": "ng/mL"
-      },
-      {
-        "id": "Observation.specimen",
-        "path": "Observation.specimen",
-        "mustSupport": true
       }
     ]
   }
