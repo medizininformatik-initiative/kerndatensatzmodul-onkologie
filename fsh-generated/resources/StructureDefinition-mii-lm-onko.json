@@ -2034,6 +2034,25 @@
             "map": "Observation.effectiveDateTime"
           }
         ]
+      },
+      {
+        "id": "Onkologie.Studienteilnahme.StudienteilnahmeStudienreferenz",
+        "path": "Onkologie.Studienteilnahme.StudienteilnahmeStudienreferenz",
+        "short": "Studienteilnahme Studienreferenz",
+        "definition": "Referenz zur konkreten Studie (ResearchStudy)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.focus.where(resolve() is ResearchStudy)"
+          }
+        ]
       }
     ]
   }

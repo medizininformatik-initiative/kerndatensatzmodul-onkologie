@@ -19,9 +19,9 @@ Diese Seite sammelt spezifische Punkte, für die gezieltes Feedback in der Komme
 
 * Clavien-Dindo als AdverseEvent: Sollte die {{pagelink:ProstataClavienDindo}} möglicherweise als FHIR AdverseEvent-Ressource modelliert werden statt als Observation, da es sich um die Bewertung unerwünschter postoperativer Ereignisse handelt? Dies würde eine direktere semantische Zuordnung ermöglichen und die Verknüpfung zu auslösenden Procedures unterstützen.
 
-* Clavien-Dindo in Procedure.complication: Alternativ könnte die Clavien-Dindo-Bewertung direkt als `Procedure.complication` in der entsprechenden {{pagelink:ProstataOperation}} modelliert werden, da es sich um ein chirurgisches Komplikations-Klassifikationssystem handelt. Dies würde die direkte Zuordnung zur auslösenden Procedure ermöglichen, könnte aber bei seltener Anwendbarkeit zu leeren Feldern führen. Zu beachten ist, dass `Procedure.complication` bereits für oBDS/ICD-10 gemappte operative Komplikationen verwendet wird (siehe https://www.basisdatensatz.de/feld/194/op-komplikationen).
+* Clavien-Dindo in Procedure.complication: Alternativ könnte die Clavien-Dindo-Bewertung direkt als `Procedure.complication` in der entsprechenden {{pagelink:OperationProcedure}} modelliert werden, da es sich um ein chirurgisches Komplikations-Klassifikationssystem handelt. Dies würde die direkte Zuordnung zur auslösenden Procedure ermöglichen, könnte aber bei seltener Anwendbarkeit zu leeren Feldern führen. Zu beachten ist, dass `Procedure.complication` bereits für oBDS/ICD-10 gemappte operative Komplikationen verwendet wird (siehe https://www.basisdatensatz.de/feld/194/op-komplikationen).
 
-### {{pagelink:Weitere-Klassifikationen-Observation}} - mCODE STU4 Pattern Integration
+### {{pagelink:WeitereKlassifikationenObservation}} - mCODE STU4 Pattern Integration
 
 * **Method-Element Binding**: Das `Observation.method` Element wurde als Must Support hinzugefügt, um dem mCODE STU4 Pattern zu folgen. Welches ValueSet soll für `method` verwendet werden? 
   - Option 1: Dasselbe ValueSet wie für `code` (aktuell implementiert)
@@ -35,14 +35,14 @@ Diese Seite sammelt spezifische Punkte, für die gezieltes Feedback in der Komme
 
 ### Molekulare Tumorboards und detaillierte Therapieempfehlungen
 
-* **ServiceRequest-Profiling für spezifische Therapieempfehlungen**: Das neue {{pagelink:TumorkonferenzCarePlan}} für detaillierte Therapieempfehlungen kann neben {{pagelink:TherapieempfehlungKombinationstherapieRequestGroup}} auch MedicationRequest und ServiceRequest referenzieren. Benötigen wir spezifische onkologische Profile für ServiceRequest-basierte Therapieempfehlungen?
+* **ServiceRequest-Profiling für spezifische Therapieempfehlungen**: Das neue {{pagelink:TumorkonferenzDetailedRecommendationsCarePlan}} für detaillierte Therapieempfehlungen kann neben {{pagelink:TherapieempfehlungKombinationstherapieRequestGroup}} auch MedicationRequest und ServiceRequest referenzieren. Benötigen wir spezifische onkologische Profile für ServiceRequest-basierte Therapieempfehlungen?
   - Spezifische ServiceRequest-Profile für onkologische Operationen (z.B. tumorspezifische Eingriffe)
   - Spezifische ServiceRequest-Profile für Strahlentherapie-Empfehlungen
   - **Radioaktive Metaboliten**: Sollten diese als MedicationRequest (da es sich um Substanzen handelt) oder als ServiceRequest (da es sich um eine spezialisierte Therapieprozedur handelt) modelliert werden?
   
   **Hintergrund**: Krebsregister dokumentieren zunächst die Tumorboard-Planung und erfassen später die tatsächlich durchgeführten Maßnahmen. Diese Lücke zwischen geplanter und dokumentierter Therapie könnte eine Über-Spezifikation darstellen.
 
-* **{{pagelink:TumorkonferenzCarePlan}} vs. {{pagelink:TherapieempfehlungKombinationstherapieRequestGroup}} für Tumorboard-Dokumentation**: Ist die gewählte CarePlan-basierte Architektur für molekulare Tumorboards angemessen? 
+* **{{pagelink:TumorkonferenzDetailedRecommendationsCarePlan}} vs. {{pagelink:TherapieempfehlungKombinationstherapieRequestGroup}} für Tumorboard-Dokumentation**: Ist die gewählte CarePlan-basierte Architektur für molekulare Tumorboards angemessen? 
   - **Pro CarePlan**: Entspricht der realen Dokumentationspraxis - Krebsregister dokumentieren Tumorboard-Empfehlungen als durchgeführte "Therapieplanung" (oBDS-konforme Dokumentation)
   - **Alternative RequestGroup-first**: RequestGroup als primäre Tumorboard-Empfehlung, CarePlan später als `basedOn`-Referenz durch behandelnde Ärzte
   - **Praktische Überlegung**: Nicht alle behandelnden Einrichtungen können FHIR implementieren - die Krebsregister-Dokumentation erfolgt primär über CarePlans als "realisierte Therapieplanung"

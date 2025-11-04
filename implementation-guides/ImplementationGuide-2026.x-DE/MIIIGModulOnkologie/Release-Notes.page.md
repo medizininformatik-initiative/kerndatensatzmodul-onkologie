@@ -7,6 +7,8 @@ Hier sind alle Änderungen aufgelistet.
 
 ## Änderungen finale Version v2026.0.0 (noch nicht veröffentlicht)
 
+- `improve` Dinatriumfolinat/Natriumfolinat zu Systemische Therapie Substanzen ValueSets hinzugefügt: UNII-Code für Leucovorin Sodium (4MXU9LJS4Q) und ATC-Code V03AF06 (Natriumfolinat). Dokumentation auf Terminologie-Seite aktualisiert. [[HDB-628](https://hl7germany.atlassian.net/browse/HDB-628)]
+- `documentation` Fehlerhafte interne Dokumentationslinks (pagelinks) korrigiert, die nach Export von Simplifier zur MII-Homepage nicht funktionierten: Topic-Namen in Kommentierungs-Seite, Operation-Profile und Extension-Dokumentation aktualisiert. [[HDB-646](https://hl7germany.atlassian.net/browse/HDB-646)]
 - `fix` Canonical URL des Strahlentherapie Applikationsart ValueSets von `mii-vs-onko-sstrahlentherapie-applikationsart` auf `mii-vs-onko-strahlentherapie-applikationsart` korrigiert (Breaking Change). [[HDB-708](https://hl7germany.atlassian.net/browse/HDB-708), [#219](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/219)]
 - `improve` Kardinalität von `Observation.code` im Residualstatus-Profil explizit auf `1..1` gesetzt für bessere Verständlichkeit. [[HDB-707](https://hl7germany.atlassian.net/browse/HDB-707), [#220](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/220)]
 - `fix` Canonical URL des Mamma Rezeptorstatus Leitlinie CodeSystems korrigiert um fehlenden `-leitlinie` Suffix. [[HDB-704](https://hl7germany.atlassian.net/browse/HDB-704), [#223](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/223)]

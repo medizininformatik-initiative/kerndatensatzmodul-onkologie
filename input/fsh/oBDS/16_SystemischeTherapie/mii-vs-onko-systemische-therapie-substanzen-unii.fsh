@@ -116,6 +116,7 @@ Description: "UNII-Codes für Substanzen der systemischen Therapie ohne ATC-Code
 // SO (Sonstiges) category substances
 * include $UNII#Z8R4A37V9Q "ARFOLITIXORIN"
 * include $UNII#BNO1JG5MZC "BEMPEGALDESLEUKIN"
+* include $UNII#4MXU9LJS4Q "LEUCOVORIN SODIUM" // Dinatriumfolinat - HDB-628
 
 // Documentation
 // This ValueSet contains UNII codes for oncology substances that do not have

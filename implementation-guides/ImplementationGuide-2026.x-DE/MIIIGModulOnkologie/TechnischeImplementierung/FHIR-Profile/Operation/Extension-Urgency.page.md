@@ -120,4 +120,4 @@ where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Str
 ### Verwandte Profile
 
 - {{pagelink:OperationProcedure}}
-- {{pagelink:ExtensionIntentionOperation}}
+- {{pagelink:OperationIntention}}

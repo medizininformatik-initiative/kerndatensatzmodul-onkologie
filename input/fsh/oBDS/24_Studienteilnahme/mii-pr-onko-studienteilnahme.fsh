@@ -13,7 +13,18 @@ Description: "Dieses Profil beschreibt Studienteilnahmen in der Onkologie"
 * encounter 0..1 MS
 
 * focus MS
-* focus only Reference(MII_PR_Onko_Diagnose_Primaertumor)
+* focus ^slicing.discriminator.type = #type
+* focus ^slicing.discriminator.path = "$this.resolve()"
+* focus ^slicing.rules = #open
+* focus contains
+    primaertumor 0..1 MS and
+    studie 0..1 MS
+* focus[primaertumor] only Reference(MII_PR_Onko_Diagnose_Primaertumor)
+* focus[primaertumor] ^short = "Referenz zum Primärtumor"
+* focus[primaertumor] ^definition = "Referenz zur Primärtumordiagnose, auf die sich die Studienteilnahme bezieht"
+* focus[studie] only Reference(ResearchStudy)
+* focus[studie] ^short = "Referenz zur Studie"
+* focus[studie] ^definition = "Referenz zur konkreten Studie (ResearchStudy), an der der Patient teilnimmt"
 
 * code MS
 * code 1..1 
