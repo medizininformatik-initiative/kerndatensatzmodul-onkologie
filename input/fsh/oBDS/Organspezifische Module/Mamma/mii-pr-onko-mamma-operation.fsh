@@ -17,15 +17,19 @@ Description: "Das vorliegende Profil beschreibt operative Eingriffe an der Brust
 
 * status MS
 * code MS
-* code 1..1 
+* code 1..1
 * code ^definition = "Operation der Brust, z.B. Exzision eines Tumors, Entfernung eines Lymphknotens"
 * code ^short = "Operation der Brust"
+* code.coding[ops] 0..1 MS
 * code.coding[ops] from mii-vs-onko-mamma-operation-ops (required)
+* code.coding[sct] 0..1 MS
 * code.coding[sct] from mii-vs-onko-mamma-operation-sct (required)
 
 * partOf MS
 
 * partOf only Reference(MII_PR_Onko_Operation) 
+* performed[x] MS
+* performedDateTime 0..1 MS
 
 * usedCode MS
 * usedCode only CodeableConcept
@@ -39,14 +43,14 @@ Description: "Das vorliegende Profil beschreibt operative Eingriffe an der Brust
 
 * usedCode[IntraoperativesImaging] ^short = "Intraoperatives Präparateröntgen/Sonografie"
 * usedCode[IntraoperativesImaging] ^definition = "Bildgebende Verfahren zur intraoperativen Beurteilung des Resektats (Mammografie, Sonografie, etc.)"
-* usedCode[IntraoperativesImaging] from MII_VS_Onko_Mamma_Intraoperatives_Imaging_Praeparat (extensible)
+* usedCode[IntraoperativesImaging].coding from MII_VS_Onko_Mamma_Intraoperatives_Imaging_Praeparat (extensible)
 
 * usedCode[PraeoperativeMarkierung] ^short = "Präoperative Markierung"
 * usedCode[PraeoperativeMarkierung] ^definition = "Modalität der präoperativen Markierung (Drahtmarkierung, Markierungsclips, Seed-Markierung)"
-* usedCode[PraeoperativeMarkierung] from MII_VS_Onko_Mamma_Praeoperative_Markierung_Modalitaet (extensible)
+* usedCode[PraeoperativeMarkierung].coding from MII_VS_Onko_Mamma_Praeoperative_Markierung_Modalitaet (extensible)
 
-
-
+/*
+Some error, likely due to mapping duplication of the parent profile. Not necessary here. 
 Mapping: FHIR-oBDS-MammaOperation
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
@@ -54,6 +58,8 @@ Source: MII_PR_Onko_Mamma_Operation
 * -> "13" "Operation"
 * code.coding[ops].code -> "13.3" "OPS - Mamma-spezifische Operationen"
 * code.coding[sct].code -> "13.3" "SNOMED CT - Mamma-spezifische Operationen"
-* usedCode[IntraoperativesImaging] -> "M6" "Intraoperatives Präparatröntgen/Sonografie"
-* usedCode[PraeoperativeMarkierung] -> "M5" "Präoperative Drahtmarkierung durch Bildgebung gesteuert"
+* usedCode[IntraoperativesImaging].coding.code -> "M6" "Intraoperatives Präparatröntgen/Sonografie"
+* usedCode[PraeoperativeMarkierung].coding.code -> "M5" "Präoperative Drahtmarkierung durch Bildgebung gesteuert"
 * performedDateTime -> "13.2" "OP Datum"
+
+*/

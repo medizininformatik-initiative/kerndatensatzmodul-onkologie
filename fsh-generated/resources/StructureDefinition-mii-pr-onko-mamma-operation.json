@@ -77,6 +77,17 @@
         }
       },
       {
+        "id": "Procedure.performed[x]:performedDateTime",
+        "path": "Procedure.performed[x]",
+        "sliceName": "performedDateTime",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Procedure.reasonReference",
         "path": "Procedure.reasonReference",
         "type": [
@@ -91,22 +102,52 @@
       {
         "id": "Procedure.usedCode",
         "path": "Procedure.usedCode",
-        "mustSupport": true
-      },
-      {
-        "id": "Procedure.usedCode.coding",
-        "path": "Procedure.usedCode.coding",
         "slicing": {
           "discriminator": [
             {
-              "type": "value",
-              "path": "code"
+              "type": "pattern",
+              "path": "$this"
             }
           ],
-          "rules": "open",
-          "description": "Slicing für die intraoperative Verwendung von z.B. Drahtmarkierungen, Markierungsclips oder Seed-Markierungen. Hier existiert noch kein vollständiges ValueSet"
+          "rules": "open"
         },
         "mustSupport": true
+      },
+      {
+        "id": "Procedure.usedCode:IntraoperativesImaging",
+        "path": "Procedure.usedCode",
+        "sliceName": "IntraoperativesImaging",
+        "short": "Intraoperatives Präparateröntgen/Sonografie",
+        "definition": "Bildgebende Verfahren zur intraoperativen Beurteilung des Resektats (Mammografie, Sonografie, etc.)",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.usedCode:IntraoperativesImaging.coding",
+        "path": "Procedure.usedCode.coding",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-intraoperatives-imaging-praeparat"
+        }
+      },
+      {
+        "id": "Procedure.usedCode:PraeoperativeMarkierung",
+        "path": "Procedure.usedCode",
+        "sliceName": "PraeoperativeMarkierung",
+        "short": "Präoperative Markierung",
+        "definition": "Modalität der präoperativen Markierung (Drahtmarkierung, Markierungsclips, Seed-Markierung)",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.usedCode:PraeoperativeMarkierung.coding",
+        "path": "Procedure.usedCode.coding",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-praeoperative-markierung-modalitaet"
+        }
       }
     ]
   }

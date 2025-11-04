@@ -49,6 +49,7 @@ Die Her2neu-Bestimmung erfolgt mehrstufig:
 - **Negativ**: HER2/CEP17-Ratio <2,0 und HER2-Kopienzahl <4,0 pro Zelle
 - **Equivocal**: Grenzwertige Befunde, die eine Nachtestung erfordern
 
+Das Modul Molekulares Tumorboard bietet feingranulärereProfile zur Abbildung der IHC- und ISH-Datenpunkte innerhalb eines molekularpathologisch Befundberichts.
 ---
 
 ### Verknüpfungen zu anderen Ressourcen
@@ -64,13 +65,13 @@ Das Profil ist eng mit anderen onkologischen Ressourcen verknüpft:
 
 Das Profil implementiert die **oBDS-Datenfelder für den Her2neu Status** (Feld M4, Nr. 243) beim Mammakarzinom. Dabei wird eine **duale Kodierungsstrategie** verwendet, um sowohl der gefrorenen oBDS-Spezifikation als auch den neueren S3-Leitlinien und ASCO/CAP Guidelines gerecht zu werden.
 
-#### oBDS-Definition (gefrorene Spezifikation):
+#### oBDS-Definition (basierend auf Leitlinie 3.0 Spezifikation):
 Die oBDS-Kodierung verwendet Buchstaben-Codes, die exakt der publizierten Spezifikation entsprechen:
 - **P** = Positiv (IHC 3+ oder IHC 2+ und ISH positiv)
 - **N** = Negativ
 - **U** = Unbekannt
 
-#### S3-Leitlinie/ASCO-CAP Definition (aktuelle klinische Praxis):
+#### S3-Leitlinie/ASCO-CAP Definition (aktuelle Leitlinienversion 5.1):
 Die moderne Klassifikation berücksichtigt zusätzlich **HER2-low** und **HER2-ultralow** Kategorien:
 - **HER2-positiv**: IHC 3+ oder IHC 2+ und ISH-positiv
 - **HER2-low**: IHC 1+ oder IHC 2+ und ISH-negativ
