@@ -6,7 +6,7 @@
 
 ---
 
-## ✅ Completed Tickets (14/45)
+## ✅ Completed Tickets (15/45)
 
 ### Successfully Implemented & Committed
 
@@ -27,6 +27,7 @@
 | HDB-682 | `cdd52fe` | `improve` | Strahlentherapie - moved Applikationsart to procedure-method extension | ✅ Committed |
 | HDB-715 | `57a93e5` | `documentation` | UML diagram - added MII Research Project module | ✅ Committed |
 | HDB-653 | `8c3c28a` | `improve` | Mamma Operation - added usedCode slices for intraoperative aids (M6, M5) | ✅ Committed |
+| HDB-688 | `0a29e9e` | `improve` | PSA LOINC codes ValueSet with correct labels (Total-PSA, Free PSA) | ✅ Committed |
 
 ### Commit Details
 
