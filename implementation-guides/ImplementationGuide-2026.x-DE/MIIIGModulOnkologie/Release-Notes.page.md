@@ -22,6 +22,7 @@ Hier sind alle Änderungen aufgelistet.
 - `improve` Strahlentherapie Applikationsart von `Procedure.usedCode` zu Standard-Extension `procedure-method` verschoben für semantisch korrektere Modellierung. [[HDB-682](https://hl7germany.atlassian.net/browse/HDB-682), [#238](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/238)]
 - `documentation` MII Modul Forschungsvorhaben zum UML-Diagramm "Profile - Beziehungen und Referenzen" hinzugefügt zur Darstellung der optionalen Integration mit Forschungsprojekten. [[HDB-715](https://hl7germany.atlassian.net/browse/HDB-715), [#232](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/232)]
 - `improve` Mamma Operation Profil um strukturierte `usedCode` Slices für intraoperatives Präparatröntgen/Sonografie (M6) und präoperative Drahtmarkierung (M5) mit entsprechenden ValueSets erweitert. [[HDB-653](https://hl7germany.atlassian.net/browse/HDB-653), [#243](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/243)]
+- `improve` Her2neu Status Profil für Mamma-Modul mit dualer Kodierungsstrategie implementiert: oBDS-Spezifikation (P/N/U) und S3-Leitlinie/ASCO-CAP Guidelines (positiv/low/ultralow/negativ/equivocal) mit IHC Score und ISH Result Komponenten für moderne HER2-low Therapieansätze.
 
 ## Änderungen Kommentierungs-Version 2026 (veröffentlicht 21.08.2025)
 
