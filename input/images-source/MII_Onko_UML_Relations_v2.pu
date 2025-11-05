@@ -23,7 +23,6 @@ Diagnose_Primaertumor --left--> Evidenz_Erstdiagnose : evidence.detail
 
 rectangle "Onkologie Observations"{
     object Onko_Variante #22FF22
-    ' TODO: Add connection Onko_Variante ..> Onko_Specimen: specimen (0..1) - see HDB-712
     object Fernmetastasen #22FF22
     object TNM_Klassifikation #22FF22
     object WeitereKlassifikation #22FF22
@@ -94,6 +93,7 @@ MII_PathoAnforderung ...> MII_Bioprobe: specimen
 MII_PathoAnforderung <... MII_Bioprobe: request
 MII_MolGenAnforderung ...> MII_Bioprobe: specimen
 MII_MolGenAnforderung <... MII_Bioprobe: request
+Onko_Variante ...> MII_Bioprobe: specimen (0..1)
 
 object AdverseEvent #FF9999
 Onko_SystemischeTherapie <--- AdverseEvent: suspectEntity.instance

@@ -1,9 +1,10 @@
 @startuml MII_Onko_13-16_Prozeduren
 object MII_Prozedur_2024 #9999FF
 Map Onko_Operation #9999FF{
-13.1 Intention der Operation => Procedure. extension[Intention].valueCodeableConcept.coding.code
+13.1 Intention der Operation => Procedure.extension[Intention].valueCodeableConcept.coding.code
+KR6 Operation Urgency => Procedure.extension[Urgency].valueCodeableConcept.coding.code
 13.2 OP Datum => Procedure.performedDateTime
-13.3 OPS => Procedure.code.coding.code 
+13.3 OPS => Procedure.code.coding.code
 13.4 OPS Version => Procedure.code.coding.version
 13.5 OP Komplikationen => Procedure.complication
 10.1 Lokaler Resektionsstatus => Procedure.outcome
