@@ -28,7 +28,8 @@ R4_Observation <|-down--- 11_Fernmetastasen
 
 
 Map 12_Allgemeiner_Leistungszustand #22FF22{
-    12. 1 Allgemeiner_Leistungszustand => Observation.component[ecog / karnofsky].valueCodeableConcept
+    12.1 Allgemeiner_Leistungszustand => Observation.component[ecog / karnofsky].valueCodeableConcept
+    KR9 ASA_Klassifikation => Observation.valueCodeableConcept
 
 }
 R4_Observation <|-down---- 12_Allgemeiner_Leistungszustand

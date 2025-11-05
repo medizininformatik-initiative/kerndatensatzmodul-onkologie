@@ -1,0 +1,75 @@
+name: Render PlantUML Diagrams
+
+on:
+  pull_request:
+    paths:
+      - 'input/images-source/**/*.puml'
+      - 'input/images-source/**/*.pu'
+  push:
+    branches: [dev, main, master]
+    paths:
+      - 'input/images-source/**/*.puml'
+      - 'input/images-source/**/*.pu'
+  workflow_dispatch:
+
+jobs:
+  render-plantuml:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup PlantUML
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y plantuml graphviz
+
+      - name: Render PlantUML diagrams
+        run: |
+          # Find all .puml and .pu files and render them
+          for ext in puml pu; do
+            find input/images-source -name "*.$ext" | while read puml_file; do
+              filename=$(basename "$puml_file" .$ext)
+              echo "Rendering $puml_file to SVG..."
+
+              # Check if this is a module diagram (contains "_Module" in filename)
+              if [[ "$filename" == *"_Module"* ]]; then
+                # Create subdirectory for module diagrams
+                output_dir="../../implementation-guides/ImplementationGuide-2026.x-DE/Images/$filename"
+                mkdir -p "$(dirname "$puml_file")/$output_dir"
+                plantuml -tsvg "$puml_file" -o "$output_dir"
+                echo "✓ Rendered $filename.svg to $filename/ subdirectory"
+              else
+                # Render flat to root Images directory for non-module diagrams
+                plantuml -tsvg "$puml_file" -o "../../implementation-guides/ImplementationGuide-2026.x-DE/Images/"
+                echo "✓ Rendered $filename.svg to root Images/ directory"
+              fi
+            done
+          done
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          git diff --exit-code implementation-guides/ImplementationGuide-2026.x-DE/Images/ || echo "changes=true" >> $GITHUB_OUTPUT
+
+      - name: Commit rendered diagrams
+        if: steps.git-check.outputs.changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add implementation-guides/ImplementationGuide-2026.x-DE/Images/
+          git commit -m "chore: Auto-render PlantUML diagrams [skip ci]"
+
+      - name: Push changes
+        if: steps.git-check.outputs.changes == 'true'
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.head_ref }}

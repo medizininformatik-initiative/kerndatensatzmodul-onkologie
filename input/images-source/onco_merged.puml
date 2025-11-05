@@ -25,6 +25,7 @@ object Diagnose #FFFF66 {
 
 object Allgemeiner_Leistungszustand  #22FF22 {
   Allgemeiner_Leistungszustand : Code
+  ASA_Klassifikation : Code
 
 }
 
@@ -116,6 +117,7 @@ object Histologie #22FF22 {
   Morphologie_ICD_O_Version : Code
   Morphologie_Freitext : String
   Grading : Cod
+  Tumorgroesse : Float
   Anzahl_der_untersuchten_Lymphknoten : Integer
   Anzahl_der_befallenen_Lymphknoten : Integer
   Anzahl_der_untersuchten_Sentinel-Lymphknoten : Integer
@@ -214,6 +216,7 @@ Residualstatus "0..1" -- "1" Strahlentherapie
 Residualstatus "0..1" -- "1" Systemische_Therapie
 Tumorkonferenz_Therapieplanung "0..1" -- "1" Diagnose
 Genetische_Variante "0..*" -- "1" Diagnose
+Genetische_Variante "0..*" -- "0..*" Specimen
 
 legend left
 

@@ -40,13 +40,6 @@ package "Pre-operative Observations" as preop #E8F5E8 {
         valueQuantity = mm
         "Distance to mesorectal fascia"
     }
-    
-    object KRK_ASA_Klassifikation #22FF22 {
-        oBDS_Code = KR4
-        **Observation.focus** → Diagnosis
-        code = LOINC 97816-3
-        valueCodeableConcept = ASA I-VI
-    }
 }
 
 ' Post-operative Assessments  
@@ -120,11 +113,16 @@ note right of KRK_Operation
 end note
 
 note bottom of preop
-**Pre-operative Planning**
-Informs surgical approach:
-- Tumor location (KR1)
-- MRI staging (KR5)
-- Anesthesia risk (KR4)
+**Präoperative Planung**
+Informiert chirurgisches Vorgehen:
+- Tumorlokalisation (KR1)
+- MRT-Staging (KR5)
+
+**Hinweis:** ASA-Klassifikation (urspr. KR9)
+und Operation Urgency (urspr. KR6) wurden
+generalisiert und in allgemeine Profile
+verschoben. Sie können in KRK und anderen
+Kontexten verwendet werden.
 end note
 
 note bottom of postop

@@ -43,6 +43,12 @@ Map Onko_Grading #22FF22 {
 
 R4_Observation <|-- Onko_Grading
 
+Map Onko_Tumorgroesse #22FF22 {
+M7/M8 Tumorgröße => Observation.valueQuantity.value
+}
+
+R4_Observation <|-- Onko_Tumorgroesse
+
 Map Onko_Befund #AAFFAA{
 6.11 Befund => DiagnosticReport.conclusion
 }
