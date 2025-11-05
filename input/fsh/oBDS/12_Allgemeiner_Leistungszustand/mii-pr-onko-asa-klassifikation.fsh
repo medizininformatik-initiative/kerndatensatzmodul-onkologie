@@ -1,11 +1,11 @@
-Profile: MII_PR_Onko_KRK_ASA_Klassifikation
+Profile: MII_PR_Onko_ASA_Klassifikation
 Parent: Observation
-Id: mii-pr-onko-krk-asa-klassifikation
-Title: "MII PR Onkologie KRK ASA-Klassifikation"
-Description: "Dieses Profil beschreibt die ASA-Klassifikation (American Society of Anesthesiologists Physical Status Classification) beim Kolorektalen Karzinom gemäß oBDS KR9"
+Id: mii-pr-onko-asa-klassifikation
+Title: "MII PR Onkologie ASA-Klassifikation"
+Description: "Dieses Profil beschreibt die ASA-Klassifikation (American Society of Anesthesiologists Physical Status Classification) in der Onkologie. Die ASA-Klassifikation dient primär der präoperativen Risikobewertung, kann aber auch als Komorbidätsindex für systemische Therapieentscheidungen verwendet werden. Ursprünglich aus oBDS KR9 (Kolorektales Karzinom), nun generalisiert für alle onkologischen Indikationen."
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 
 * meta.profile 0..* MS
 * subject 1..1 MS
@@ -25,7 +25,7 @@ Description: "Dieses Profil beschreibt die ASA-Klassifikation (American Society 
 * value[x] only CodeableConcept
 * valueCodeableConcept MS
 * valueCodeableConcept 1..1
-* valueCodeableConcept from MII_VS_Onko_KRK_ASA_oBDS (required)
+* valueCodeableConcept from MII_VS_Onko_ASA_oBDS (required)
 
 * insert Label(valueCodeableConcept, ASA-Klassifikation, ASA-Klassifikation zur präoperativen Risikobewertung - ASA I-VI)
 * insert Translation(valueCodeableConcept ^short, de-DE, ASA-Klassifikation)
@@ -34,10 +34,10 @@ Description: "Dieses Profil beschreibt die ASA-Klassifikation (American Society 
 * effective[x] only dateTime
 * effectiveDateTime 0..1 MS
 
-Mapping: FHIR-oBDS-KRK-ASA
+Mapping: FHIR-oBDS-ASA
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
-Source: MII_PR_Onko_KRK_ASA_Klassifikation
-* -> "KR9" "ASA-Klassifikation"
+Source: MII_PR_Onko_ASA_Klassifikation
+* -> "KR9" "ASA-Klassifikation (ursprünglich Kolorektales Karzinom Modul, generalisiert für alle Entitäten)"
 * valueCodeableConcept.coding.code -> "KR9" "ASA-Klassifikation (ASA I bis VI, U = Unbekannt)"
 * effectiveDateTime -> "KR9" "Datum der ASA-Bewertung"

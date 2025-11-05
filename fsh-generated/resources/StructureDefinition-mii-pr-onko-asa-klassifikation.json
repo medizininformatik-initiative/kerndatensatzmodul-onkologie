@@ -1,11 +1,11 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "mii-pr-onko-krk-asa-klassifikation",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-asa-klassifikation",
+  "id": "mii-pr-onko-asa-klassifikation",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-asa-klassifikation",
   "version": "2026.0.0-ballot",
-  "name": "MII_PR_Onko_KRK_ASA_Klassifikation",
-  "title": "MII PR Onkologie KRK ASA-Klassifikation",
-  "status": "draft",
+  "name": "MII_PR_Onko_ASA_Klassifikation",
+  "title": "MII PR Onkologie ASA-Klassifikation",
+  "status": "active",
   "publisher": "Medizininformatik Initiative",
   "contact": [
     {
@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Dieses Profil beschreibt die ASA-Klassifikation (American Society of Anesthesiologists Physical Status Classification) beim Kolorektalen Karzinom gemäß oBDS KR9",
+  "description": "Dieses Profil beschreibt die ASA-Klassifikation (American Society of Anesthesiologists Physical Status Classification) in der Onkologie. Die ASA-Klassifikation dient primär der präoperativen Risikobewertung, kann aber auch als Komorbidätsindex für systemische Therapieentscheidungen verwendet werden. Ursprünglich aus oBDS KR9 (Kolorektales Karzinom), nun generalisiert für alle onkologischen Indikationen.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -39,7 +39,7 @@
           {
             "identity": "oBDS",
             "map": "KR9",
-            "comment": "ASA-Klassifikation"
+            "comment": "ASA-Klassifikation (ursprünglich Kolorektales Karzinom Modul, generalisiert für alle Entitäten)"
           }
         ]
       },
@@ -161,7 +161,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-asa-obds"
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-asa-obds"
         }
       },
       {

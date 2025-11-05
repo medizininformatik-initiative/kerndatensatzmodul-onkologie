@@ -1,19 +1,19 @@
-Instance: mii-cm-onko-krk-asa-obds-loinc
+Instance: mii-cm-onko-asa-obds-loinc
 InstanceOf: ConceptMap
 Usage: #definition
 * insert Version
-* url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-krk-asa-obds-loinc"
-* name = "MII_CM_Onko_KRK_ASA_oBDS_LOINC"
-* title = "MII CM Onkologie KRK ASA oBDS zu LOINC"
-* description = "Mapping von oBDS ASA-Klassifikation (KR9) zu LOINC ASA Physical Status"
+* url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-asa-obds-loinc"
+* name = "MII_CM_Onko_ASA_oBDS_LOINC"
+* title = "MII CM Onkologie ASA oBDS zu LOINC"
+* description = "Mapping von oBDS ASA-Klassifikation (ursprünglich KR9, generalisiert für alle onkologischen Indikationen) zu LOINC ASA Physical Status"
 * status = #active
 * experimental = false
 
-* sourceCanonical = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-asa-obds"
-* targetCanonical = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-asa-loinc"
+* sourceCanonical = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-asa-obds"
+* targetCanonical = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-asa-loinc"
 
 * group[+]
-  * source = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-asa-obds"
+  * source = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-asa-obds"
   * target = "http://loinc.org"
   
   * element[+]

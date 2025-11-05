@@ -1,9 +1,9 @@
-CodeSystem: MII_CS_Onko_KRK_ASA_oBDS
-Id: mii-cs-onko-krk-asa-obds
-Title: "MII CS Onkologie KRK ASA-Klassifikation oBDS"
-Description: "oBDS-basiertes CodeSystem für ASA-Klassifikation beim Kolorektalen Karzinom (KR9)"
+CodeSystem: MII_CS_Onko_ASA_oBDS
+Id: mii-cs-onko-asa-obds
+Title: "MII CS Onkologie ASA-Klassifikation oBDS"
+Description: "oBDS-basiertes CodeSystem für ASA-Klassifikation (ursprünglich KR9 aus Kolorektales Karzinom Modul, generalisiert für alle onkologischen Indikationen)"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-asa-obds"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-asa-obds"
 * ^status = #active
 * ^experimental = false
 * insert Publisher

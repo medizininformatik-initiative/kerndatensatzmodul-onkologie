@@ -1,7 +1,7 @@
 ---
-parent: 
-topic: KRKASAKlassifikation
-subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-asa-klassifikation
+parent:
+topic: ASAKlassifikation
+subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-asa-klassifikation
 ---
 
 ## {{page-title}}
@@ -9,7 +9,9 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 ---
 
 ### Inhalt
-Dieses Profil beschreibt die ASA-Klassifikation (American Society of Anesthesiologists Physical Status Classification) beim Kolorektalen Karzinom gemäß oBDS KR9. Die ASA-Klassifikation dient der präoperativen Risikobewertung und wird zur Einschätzung des allgemeinen körperlichen Zustands von Patienten vor operativen Eingriffen verwendet.
+Dieses Profil beschreibt die ASA-Klassifikation (American Society of Anesthesiologists Physical Status Classification) in der Onkologie. Die ASA-Klassifikation dient primär der präoperativen Risikobewertung und wird zur Einschätzung des allgemeinen körperlichen Zustands von Patienten vor operativen Eingriffen verwendet. Sie kann aber auch als Komorbidätsindex für systemische Therapieentscheidungen herangezogen werden.
+
+Ursprünglich aus oBDS KR9 (Kolorektales Karzinom Modul), wurde dieses Profil für alle onkologischen Indikationen generalisiert, da die ASA-Klassifikation ein universelles präoperatives Assessment-Tool ist.
 
 Das Profil basiert auf einer FHIR Observation-Ressource und verwendet LOINC zur standardisierten Kodierung der ASA-Klassifikation. Die spezifischen ASA-Klassen (ASA I bis VI) werden über ein dediziertes oBDS-ValueSet definiert.
 
@@ -29,18 +31,18 @@ Die ASA-Klassifikation entspricht dem oBDS-Datenfeld KR9 "ASA-Klassifikation" un
 ### Terminologie-Binding
 Das ValueSet für die ASA-Klassifikation ist **required** gebunden. Dies bedeutet, dass ausschließlich die Codes aus dem definierten oBDS-ValueSet verwendet werden MÜSSEN.
 
-#### ValueSet: MII VS Onko KRK ASA oBDS
+#### ValueSet: MII VS Onko ASA oBDS
 
 @```
-from ValueSet 
-where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-asa-obds'
+from ValueSet
+where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-asa-obds'
 select
     Name: name, Status: status, Version: version, Canonical: url
 ```
 
 @```
 from ValueSet 
-where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-asa-obds'
+where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-asa-obds'
     for expansion.contains
     select
         Code: code, Display: display, System: system
@@ -50,7 +52,7 @@ where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Val
 from 
     StructureDefinition 
 where 
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-asa-klassifikation' 
+    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-asa-klassifikation' 
 select 
     Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 
@@ -65,7 +67,7 @@ select
         from
 	        StructureDefinition
         where
-	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-asa-klassifikation'
+	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-asa-klassifikation'
         select
 	        Beschreibung: description
         with
@@ -75,7 +77,7 @@ select
         from 
             StructureDefinition 
         where 
-            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-asa-klassifikation' 
+            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-asa-klassifikation' 
         for 
             differential.element 
             where 
@@ -109,7 +111,7 @@ Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensa
 
 @```
 from StructureDefinition 
-where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-asa-klassifikation'  
+where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-asa-klassifikation'  
     for differential.element
     where mapping.identity='oBDS'
     select 
@@ -122,7 +124,7 @@ where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Str
 
 **Suchparameter**
 
-Folgende Suchparameter sind für das KRK-ASA-Klassifikation Profil relevant, auch in Kombination:
+Folgende Suchparameter sind für das ASA-Klassifikation Profil relevant, auch in Kombination:
 
 1. Der Suchparameter "_id" MUSS unterstützt werden:
 
@@ -136,7 +138,7 @@ Folgende Suchparameter sind für das KRK-ASA-Klassifikation Profil relevant, auc
 
     Beispiele:
 
-    ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-asa-klassifikation```
+    ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-asa-klassifikation```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
@@ -168,13 +170,13 @@ Folgende Suchparameter sind für das KRK-ASA-Klassifikation Profil relevant, auc
 
     Beispiele:
 
-    ```GET [base]/Observation?value-concept=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-asa-obds|2```
+    ```GET [base]/Observation?value-concept=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-asa-obds|2```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "Observation.value[x]" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
 ---
 **Beispiele**
 
-{{json:mii-exa-onko-krk-asa-klassifikation}}
+{{json:mii-exa-onko-asa-klassifikation}}
 
 ---

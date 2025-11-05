@@ -1,6 +1,6 @@
-ValueSet: MII_VS_Onko_KRK_ASA_LOINC
-Id: mii-vs-onko-krk-asa-loinc
-Description: "Value Set für LOINC ASA Physical Status Classification"
+ValueSet: MII_VS_Onko_ASA_LOINC
+Id: mii-vs-onko-asa-loinc
+Description: "Value Set für LOINC ASA Physical Status Classification (generalisiert für alle onkologischen Indikationen)"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 * ^status = #active
 * ^experimental = false

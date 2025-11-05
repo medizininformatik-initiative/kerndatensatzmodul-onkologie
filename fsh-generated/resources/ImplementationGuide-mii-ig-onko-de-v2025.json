@@ -445,10 +445,10 @@
       },
       {
         "reference": {
-          "reference": "ConceptMap/mii-cm-onko-krk-asa-obds-loinc"
+          "reference": "ConceptMap/mii-cm-onko-asa-obds-loinc"
         },
-        "name": "MII CM Onkologie KRK ASA oBDS zu LOINC",
-        "description": "Mapping von oBDS ASA-Klassifikation (KR9) zu LOINC ASA Physical Status",
+        "name": "MII CM Onkologie ASA oBDS zu LOINC",
+        "description": "Mapping von oBDS ASA-Klassifikation (ursprünglich KR9, generalisiert für alle onkologischen Indikationen) zu LOINC ASA Physical Status",
         "exampleBoolean": false
       },
       {
@@ -509,6 +509,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-onko-asa-obds"
+        },
+        "name": "MII CS Onkologie ASA-Klassifikation oBDS",
+        "description": "oBDS-basiertes CodeSystem für ASA-Klassifikation (ursprünglich KR9 aus Kolorektales Karzinom Modul, generalisiert für alle onkologischen Indikationen)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-onko-fernmetastasen"
         },
         "name": "MII CS Onkologie Fernmetastasen",
@@ -545,14 +553,6 @@
         },
         "name": "MII CS Onkologie KRK Anastomoseninsuffizienz",
         "description": "oBDS-spezifisches Codesystem für Anastomoseninsuffizienz beim Kolorektalen Karzinom",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/mii-cs-onko-krk-asa-obds"
-        },
-        "name": "MII CS Onkologie KRK ASA-Klassifikation oBDS",
-        "description": "oBDS-basiertes CodeSystem für ASA-Klassifikation beim Kolorektalen Karzinom (KR9)",
         "exampleBoolean": false
       },
       {
@@ -1157,6 +1157,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-asa-klassifikation"
+        },
+        "name": "MII PR Onkologie ASA-Klassifikation",
+        "description": "Dieses Profil beschreibt die ASA-Klassifikation (American Society of Anesthesiologists Physical Status Classification) in der Onkologie. Die ASA-Klassifikation dient primär der präoperativen Risikobewertung, kann aber auch als Komorbidätsindex für systemische Therapieentscheidungen verwendet werden. Ursprünglich aus oBDS KR9 (Kolorektales Karzinom), nun generalisiert für alle onkologischen Indikationen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-befund"
         },
         "name": "MII PR Onkologie Befund",
@@ -1241,14 +1249,6 @@
         },
         "name": "MII PR Onkologie KRK Anastomoseninsuffizienz",
         "description": "Dieses Profil beschreibt die Bewertung der Anastomoseninsuffizienz nach einer Operation beim Kolorektalen Karzinom",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/mii-pr-onko-krk-asa-klassifikation"
-        },
-        "name": "MII PR Onkologie KRK ASA-Klassifikation",
-        "description": "Dieses Profil beschreibt die ASA-Klassifikation (American Society of Anesthesiologists Physical Status Classification) beim Kolorektalen Karzinom gemäß oBDS KR9",
         "exampleBoolean": false
       },
       {
@@ -2294,6 +2294,13 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-onko-asa-klassifikation"
+        },
+        "name": "mii-exa-onko-asa-klassifikation",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-asa-klassifikation"
+      },
+      {
+        "reference": {
           "reference": "DiagnosticReport/mii-exa-onko-befund-1"
         },
         "name": "mii-exa-onko-befund-1",
@@ -2354,13 +2361,6 @@
         },
         "name": "mii-exa-onko-histologie-icdo3",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-histologie-icdo3"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-onko-krk-asa-klassifikation"
-        },
-        "name": "mii-exa-onko-krk-asa-klassifikation",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-asa-klassifikation"
       },
       {
         "reference": {
@@ -3015,6 +3015,22 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-onko-asa-loinc"
+        },
+        "name": "MII_VS_Onko_ASA_LOINC",
+        "description": "Value Set für LOINC ASA Physical Status Classification (generalisiert für alle onkologischen Indikationen)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-asa-obds"
+        },
+        "name": "MII_VS_Onko_ASA_oBDS",
+        "description": "Value Set für oBDS ASA-Klassifikation (ursprünglich KR9 aus Kolorektales Karzinom Modul, generalisiert für alle onkologischen Indikationen)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-krk-abstand-circumferelle-resektionsrand"
         },
         "name": "MII_VS_Onko_KRK_Abstand_Circumferelle_Resektionsrand",
@@ -3035,22 +3051,6 @@
         },
         "name": "MII_VS_Onko_KRK_Anastomoseninsuffizienz",
         "description": "Value Set für die Bewertung der Anastomoseninsuffizienz beim Kolorektalen Karzinom",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-krk-asa-loinc"
-        },
-        "name": "MII_VS_Onko_KRK_ASA_LOINC",
-        "description": "Value Set für LOINC ASA Physical Status Classification",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-krk-asa-obds"
-        },
-        "name": "MII_VS_Onko_KRK_ASA_oBDS",
-        "description": "Value Set für oBDS ASA-Klassifikation beim Kolorektalen Karzinom (KR9)",
         "exampleBoolean": false
       },
       {
