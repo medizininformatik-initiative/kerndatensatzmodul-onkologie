@@ -52,6 +52,42 @@
         "id": "Specimen.collection.collected[x]:collectedDateTime",
         "path": "Specimen.collection.collected[x]",
         "sliceName": "collectedDateTime",
+        "short": "Tumor Histologiedatum",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Tumor Histologiedatum"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Histologiedatum nach 6.1 oBDS 2021",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Histologiedatum nach 6.1 oBDS 2021"
+                }
+              ]
+            }
+          ]
+        },
         "type": [
           {
             "code": "dateTime"
