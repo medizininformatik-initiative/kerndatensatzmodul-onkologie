@@ -2,7 +2,9 @@
 object R4_Observation #22FF22
 Map 09_WeitereKlassifikation #22FF22 {
  09.1 Hämatoonkologische und sonstige Klassifikationen Datum => Observation.effectiveDateTime
- 09.2 Hämatoonkologische und sonstige Klassifikationen Name => Observation.code.text
+ 09.2 Hämatoonkologische und sonstige Klassifikationen Name (Freitext) => Observation.code.text
+ 09.2 Hämatoonkologische und sonstige Klassifikationen Name (Code) => Observation.code.coding.code
+ Klassifikationssystem => Observation.method
  09.3 Hämatoonkologische und sonstige Klassifikationen Einstufung => Observation.value[x]
 } 
 R4_Observation <|-down- 09_WeitereKlassifikation
