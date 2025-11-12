@@ -113,43 +113,43 @@ Usage: #example
 
 // MedicationRequest instances for specific options
 Instance: mii-exa-onko-trastuzumab-option
-InstanceOf: mii-pr-onko-systemische-therapie
+InstanceOf: MII_PR_Onko_Therapieempfehlung_Medikation
 Usage: #example
-* status = #preparation
+* status = #active
+* intent = #proposal
 * subject = Reference(Patient/example)
-* basedOn = Reference(mii-exa-onko-tumorkonferenz-specific-choices)
-* extension[Intention].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention"
-* extension[Intention].valueCodeableConcept.coding.code = #K
-* code.coding[systemische_therapie_art].system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art"
-* code.coding[systemische_therapie_art].code = #ZS
-* code.text = "Trastuzumab"
-* performedPeriod.start = "2024-02-01"
+* authoredOn = "2024-01-15"
+* reasonReference = Reference(Condition/example-breast-cancer)
+* medicationCodeableConcept.coding[atcClassDe].system = "http://fhir.de/CodeSystem/bfarm/atc"
+* medicationCodeableConcept.coding[atcClassDe].code = #L01FD01
+* medicationCodeableConcept.coding[atcClassDe].display = "Trastuzumab"
+* medicationCodeableConcept.text = "Trastuzumab + Pertuzumab"
 * note.text = "First-line option for HER2+ breast cancer, preferred if treatment-naive"
 
 Instance: mii-exa-onko-tdm1-option
-InstanceOf: mii-pr-onko-systemische-therapie
+InstanceOf: MII_PR_Onko_Therapieempfehlung_Medikation
 Usage: #example
-* status = #preparation
+* status = #active
+* intent = #proposal
 * subject = Reference(Patient/example)
-* basedOn = Reference(mii-exa-onko-tumorkonferenz-specific-choices)
-* extension[Intention].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention"
-* extension[Intention].valueCodeableConcept.coding.code = #K
-* code.coding[systemische_therapie_art].system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art"
-* code.coding[systemische_therapie_art].code = #ZS
-* code.text = "Trastuzumab Emtansine (T-DM1)"
-* performedPeriod.start = "2024-02-15"
+* authoredOn = "2024-01-15"
+* reasonReference = Reference(Condition/example-breast-cancer)
+* medicationCodeableConcept.coding[atcClassDe].system = "http://fhir.de/CodeSystem/bfarm/atc"
+* medicationCodeableConcept.coding[atcClassDe].code = #L01FD03
+* medicationCodeableConcept.coding[atcClassDe].display = "Trastuzumab emtansine"
+* medicationCodeableConcept.text = "Trastuzumab Emtansine (T-DM1)"
 * note.text = "Second-line option, recommended if progression on trastuzumab-based therapy"
 
 Instance: mii-exa-onko-tucatinib-option
-InstanceOf: mii-pr-onko-systemische-therapie
+InstanceOf: MII_PR_Onko_Therapieempfehlung_Medikation
 Usage: #example
-* status = #preparation
+* status = #active
+* intent = #proposal
 * subject = Reference(Patient/example)
-* basedOn = Reference(mii-exa-onko-tumorkonferenz-specific-choices)
-* extension[Intention].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention"
-* extension[Intention].valueCodeableConcept.coding.code = #K
-* code.coding[systemische_therapie_art].system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art"
-* code.coding[systemische_therapie_art].code = #CZ // Combination
-* code.text = "Tucatinib + Trastuzumab + Capecitabine"
-* performedPeriod.start = "2024-03-01"
+* authoredOn = "2024-01-15"
+* reasonReference = Reference(Condition/example-breast-cancer)
+* medicationCodeableConcept.coding[atcClassDe].system = "http://fhir.de/CodeSystem/bfarm/atc"
+* medicationCodeableConcept.coding[atcClassDe].code = #L01EH03
+* medicationCodeableConcept.coding[atcClassDe].display = "Tucatinib"
+* medicationCodeableConcept.text = "Tucatinib + Trastuzumab + Capecitabine"
 * note.text = "Third-line combination for brain metastases or multiply-resistant HER2+ disease"
