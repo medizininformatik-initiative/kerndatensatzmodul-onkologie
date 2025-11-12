@@ -29,10 +29,13 @@ Usage: #example
 Title: "Kolonkarzinom Primärdiagnose - Colon ascendens"
 Description: "Stage III ascending colon adenocarcinoma, diagnosed January 2024"
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
-* clinicalStatus = $CLINSTAT#active
-* verificationStatus = $VERSTAT#confirmed
-* category = $DIAGCAT#encounter-diagnosis
+* clinicalStatus = $condition-clinical#active
+* verificationStatus = $condition-ver-status#confirmed
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/condition-category"
+* category.coding.code = #encounter-diagnosis
 * code.coding[icd10-gm] = $ICD10GM#C18.2 "Bösartige Neubildung: Colon ascendens"
+* code.coding[icd10-gm].version = "2024"
+* extension[Feststellungsdatum].valueDateTime = "2024-01-20"
 * subject = Reference(Patient/example-modification)
 * encounter = Reference(Encounter/example-diagnosis-modification)
 * onsetDateTime = "2024-01-20"
@@ -47,9 +50,11 @@ Title: "Hemikolektomie rechts"
 Description: "Laparoscopic right hemicolectomy with lymph node dissection"
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation"
 * status = #completed
-* category = $SNOMEDCT#387713003 "Surgical procedure"
-* code.coding[snomed] = $SNOMEDCT#26390003 "Total colectomy"
-* code.coding[snomed].display = "Total colectomy"
+* category = $SCT#387713003 "Surgical procedure"
+* code.coding[ops].system = "http://fhir.de/CodeSystem/bfarm/ops"
+* code.coding[ops].version = "2024"
+* code.coding[ops].code = #5-455.75
+* code.coding[ops].display = "Partielle Resektion des Dickdarmes: Hemikolektomie rechts mit Coecum und Colon ascendens"
 * code.text = "Laparoskopische Hemikolektomie rechts mit Lymphknotendissektion"
 * subject = Reference(Patient/example-modification)
 * encounter = Reference(Encounter/example-surgery-modification)
@@ -58,33 +63,75 @@ Description: "Laparoscopic right hemicolectomy with lymph node dissection"
 * extension[Intention].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention"
 * extension[Intention].valueCodeableConcept.coding.code = #K
 * extension[Intention].valueCodeableConcept.coding.display = "Kurativ"
-* outcome.coding = $SNOMEDCT#385669000 "Successful"
+* outcome.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus"
+* outcome.coding.code = #R0
+* outcome.coding.display = "R0"
 * note.text = "Laparoscopic right hemicolectomy performed. Tumor completely resected with clear margins (R0). 22 lymph nodes removed, 4 positive."
 
-// TNM Classification
-Instance: mii-exa-onko-ascending-colon-tnm
-InstanceOf: MII_PR_Onko_TNM
+// TNM Classification - T Category (pathological)
+Instance: mii-exa-onko-ascending-colon-tnm-t
+InstanceOf: MII_PR_Onko_TNM_T_Kategorie
 Usage: #example
-Title: "TNM Klassifikation - pT3 pN1 M0"
-Description: "Postoperative pathological TNM staging for ascending colon cancer"
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm"
+Title: "TNM T-Kategorie - pT3"
 * status = #final
 * subject = Reference(Patient/example-modification)
 * focus = Reference(mii-exa-onko-ascending-colon-cancer-diagnosis)
 * effectiveDateTime = "2024-02-25"
-* code.coding = $SNOMEDCT#258235000 "UICC - Union Internationale Contre le Cancer tumor staging"
-* method.coding.version = "8"
-* component[T-Kategorie].code = $SNOMEDCT#78873005 "T category"
-* component[T-Kategorie].valueCodeableConcept.coding = $UICC-TNM#pT3
-* component[N-Kategorie].code = $SNOMEDCT#277206009 "N category"
-* component[N-Kategorie].valueCodeableConcept.coding = $UICC-TNM#pN1
-* component[M-Kategorie].code = $SNOMEDCT#277208005 "M category"
-* component[M-Kategorie].valueCodeableConcept.coding = $UICC-TNM#M0
-* component[UICC-Stadium].code = $LOINC#21914-7 "Stage group.pathology Cancer"
-* component[UICC-Stadium].valueCodeableConcept.coding.code = #IIIB
-* extension[TNM-c-p-u-Praefix-T].valueCodeableConcept.coding.code = #p
-* extension[TNM-c-p-u-Praefix-N].valueCodeableConcept.coding.code = #p
-* extension[TNM-c-p-u-Praefix-M].valueCodeableConcept.coding.code = #c
+* valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-uicc"
+* valueCodeableConcept.coding.code = #T3
+* extension[TNM-c-p-u-Praefix].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-cpu-praefix"
+* extension[TNM-c-p-u-Praefix].valueCodeableConcept.coding.code = #p
+
+// TNM Classification - N Category (pathological)
+Instance: mii-exa-onko-ascending-colon-tnm-n
+InstanceOf: MII_PR_Onko_TNM_N_Kategorie
+Usage: #example
+Title: "TNM N-Kategorie - pN1"
+* status = #final
+* subject = Reference(Patient/example-modification)
+* focus = Reference(mii-exa-onko-ascending-colon-cancer-diagnosis)
+* effectiveDateTime = "2024-02-25"
+* valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-uicc"
+* valueCodeableConcept.coding.code = #N1
+* extension[TNM-c-p-u-Praefix].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-cpu-praefix"
+* extension[TNM-c-p-u-Praefix].valueCodeableConcept.coding.code = #p
+
+// TNM Classification - M Category (clinical)
+Instance: mii-exa-onko-ascending-colon-tnm-m
+InstanceOf: MII_PR_Onko_TNM_M_Kategorie
+Usage: #example
+Title: "TNM M-Kategorie - cM0"
+* status = #final
+* subject = Reference(Patient/example-modification)
+* focus = Reference(mii-exa-onko-ascending-colon-cancer-diagnosis)
+* effectiveDateTime = "2024-02-25"
+* valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-uicc"
+* valueCodeableConcept.coding.code = #M0
+* extension[TNM-c-p-u-Praefix].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-cpu-praefix"
+* extension[TNM-c-p-u-Praefix].valueCodeableConcept.coding.code = #c
+
+// TNM Classification - Overall staging (groups T, N, M)
+Instance: mii-exa-onko-ascending-colon-tnm
+InstanceOf: MII_PR_Onko_TNM_Klassifikation
+Usage: #example
+Title: "TNM Klassifikation - Stadium IIIB"
+Description: "Postoperative pathological TNM staging for ascending colon cancer (pT3 pN1 cM0 = Stage IIIB)"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
+* status = #final
+* subject = Reference(Patient/example-modification)
+* focus = Reference(mii-exa-onko-ascending-colon-cancer-diagnosis)
+* effectiveDateTime = "2024-02-25"
+* code.coding.system = "http://loinc.org"
+* code.coding.code = #21908-9
+* code.coding.display = "Stage group.pathology Cancer"
+* method.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"
+* method.coding.code = #8
+* method.coding.display = "8. Auflage"
+* valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-uicc"
+* valueCodeableConcept.coding.code = #IIIB
+* hasMember[0] = Reference(mii-exa-onko-ascending-colon-tnm-t)
+* hasMember[1] = Reference(mii-exa-onko-ascending-colon-tnm-n)
+* hasMember[2] = Reference(mii-exa-onko-ascending-colon-tnm-m)
 
 // -----------------------------------------------------
 // STEP 1: TUMOR BOARD RECOMMENDATION
@@ -178,7 +225,7 @@ Usage: #example
 Title: "MedicationRequest - Oxaliplatin (abgebrochen wegen Neuropathie)"
 Description: "Oxaliplatin recommendation - stopped after cycle 6 due to grade 3 peripheral neuropathy"
 * status = #stopped
-* statusReason.coding = $SNOMEDCT#281647001 "Adverse reaction (disorder)"
+* statusReason.coding = $SCT#281647001 "Adverse reaction (disorder)"
 * statusReason.text = "Oxaliplatin discontinued after cycle 6 due to grade 3 peripheral neuropathy (CTCAE). Patient continued with 5-FU + Leucovorin only for remaining 6 cycles."
 * intent = #proposal
 * subject = Reference(Patient/example-modification)
@@ -275,7 +322,7 @@ Title: "Oxaliplatin Phase 1 (Zyklen 1-6, dann abgebrochen)"
 Description: "Oxaliplatin administered for 6 cycles, then discontinued due to neuropathy"
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
 * status = #stopped
-* statusReason.coding = $SNOMEDCT#281647001 "Adverse reaction (disorder)"
+* statusReason.coding = $SCT#281647001 "Adverse reaction (disorder)"
 * statusReason.text = "Grade 3 peripheral neuropathy (CTCAE) - cumulative neurotoxicity from oxaliplatin"
 * subject = Reference(Patient/example-modification)
 * partOf[systemischeTherapie] = Reference(mii-exa-onko-folfox-phase1)
@@ -292,28 +339,28 @@ Description: "Oxaliplatin administered for 6 cycles, then discontinued due to ne
 // STEP 2B: ADVERSE EVENT DOCUMENTATION (Optional but Recommended)
 // -----------------------------------------------------
 
-// AdverseEvent - Oxaliplatin-induced neuropathy
+// AdverseEvent - Oxaliplatin-induced neuropathy (FHIR R4)
 Instance: mii-exa-onko-oxaliplatin-neuropathy
 InstanceOf: AdverseEvent
 Usage: #example
 Title: "Unerwünschtes Ereignis - Oxaliplatin-induzierte Neuropathie"
 Description: "Grade 3 peripheral neuropathy caused by oxaliplatin, leading to treatment modification"
+* actuality = #actual
 * subject = Reference(Patient/example-modification)
 * date = "2024-06-10"
 * detected = "2024-06-05"
 * recordedDate = "2024-06-10"
-* seriousness = $ADJ-EVENT-SERIOUS#non-serious
+* seriousness.coding.system = "http://terminology.hl7.org/CodeSystem/adverse-event-seriousness"
+* seriousness.coding.code = #non-serious
 * severity.coding.system = "http://terminology.hl7.org/CodeSystem/adverse-event-severity"
 * severity.coding.code = #severe
 * severity.coding.display = "Severe"
-* event.coding = $SNOMEDCT#128188008 "Peripheral sensory neuropathy"
+* event.coding = $SCT#128188008 "Peripheral sensory neuropathy"
 * event.text = "Oxaliplatin-induced peripheral neuropathy, grade 3 (CTCAE v5.0)"
 * suspectEntity.instance = Reference(mii-exa-onko-modification-oxaliplatin-phase1)
-* suspectEntity.causality.entityRelatedness.coding.system = "http://terminology.hl7.org/CodeSystem/adverse-event-causality-assess"
-* suspectEntity.causality.entityRelatedness.coding.code = #certain
-* suspectEntity.causality.entityRelatedness.coding.display = "Certain"
-* outcome = #ongoing
-* note.text = "Patient developed cumulative peripheral neuropathy after 6 cycles of oxaliplatin. Symptoms: bilateral numbness and paresthesias in fingers and toes, difficulty with fine motor tasks (buttoning clothes), cold sensitivity. CTCAE grade 3. Decision made to discontinue oxaliplatin and continue with 5-FU/Leucovorin only."
+* suspectEntity.causality.assessment.coding.system = "http://terminology.hl7.org/CodeSystem/adverse-event-causality-assess"
+* suspectEntity.causality.assessment.coding.code = #certain
+* suspectEntity.causality.assessment.coding.display = "Certain"
 
 // -----------------------------------------------------
 // STEP 3: TREATMENT PHASE 2 - Modified Protocol (Cycles 7-12)
@@ -399,28 +446,28 @@ Description: "Leucovorin continued for cycles 7-12 as part of modified FUFOL pro
 
 // Verlauf Observation - 6-month follow-up
 Instance: mii-exa-onko-modification-verlauf-6months
-InstanceOf: MII_PR_Onko_Allgemeiner_Leistungszustand_Verlauf
+InstanceOf: MII_PR_Onko_Verlauf
 Usage: #example
 Title: "Verlauf - 6 Monate nach modifizierter Therapie"
 Description: "6-month follow-up showing complete response despite protocol modification"
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-verlauf"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf"
 * status = #final
 * subject = Reference(Patient/example-modification)
 * focus = Reference(mii-exa-onko-ascending-colon-cancer-diagnosis)
 * effectiveDateTime = "2025-03-10"
-* code.coding = $LOINC#88040-1 "Response to cancer treatment"
+* code.coding = $LNC#88040-1 "Response to cancer treatment"
 * valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-gesamtbeurteilung-tumorstatus"
 * valueCodeableConcept.coding.code = #V
 * valueCodeableConcept.coding.display = "Vollremission/Vollständiges Ansprechen"
-* component[Tumor].code = $SNOMEDCT#445200009 "Status of residual neoplasm (observable entity)"
+* component[Tumor].code = $SCT#445200009 "Status of residual neoplasm (observable entity)"
 * component[Tumor].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-lokaler-tumorstatus"
 * component[Tumor].valueCodeableConcept.coding.code = #K
 * component[Tumor].valueCodeableConcept.coding.display = "Kein Tumor nachweisbar"
-* component[Lymphknoten].code = $LOINC#21906-3 "Lymph nodes.pathology [Interpretation] Cancer"
+* component[Lymphknoten].code = $LNC#21906-3 "Lymph nodes.pathology [Interpretation] Cancer"
 * component[Lymphknoten].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-lymphknoten-tumorstatus"
 * component[Lymphknoten].valueCodeableConcept.coding.code = #K
 * component[Lymphknoten].valueCodeableConcept.coding.display = "Keine Lymphknoten befallen"
-* component[Fernmetastasen].code = $LOINC#21907-1 "Distant metastases.pathology [Interpretation] Cancer"
+* component[Fernmetastasen].code = $LNC#21907-1 "Distant metastases.pathology [Interpretation] Cancer"
 * component[Fernmetastasen].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen-tumorstatus"
 * component[Fernmetastasen].valueCodeableConcept.coding.code = #K
 * component[Fernmetastasen].valueCodeableConcept.coding.display = "Keine Fernmetastasen nachweisbar"

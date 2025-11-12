@@ -22,10 +22,13 @@ Usage: #example
 Title: "Kolonkarzinom Primärdiagnose"
 Description: "Stage III sigmoid colon adenocarcinoma, diagnosed January 2024"
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
-* clinicalStatus = $CLINSTAT#active
-* verificationStatus = $VERSTAT#confirmed
-* category = $DIAGCAT#encounter-diagnosis
+* clinicalStatus = $condition-clinical#active
+* verificationStatus = $condition-ver-status#confirmed
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/condition-category"
+* category.coding.code = #encounter-diagnosis
 * code.coding[icd10-gm] = $ICD10GM#C18.7 "Bösartige Neubildung: Colon sigmoideum"
+* code.coding[icd10-gm].version = "2024"
+* extension[Feststellungsdatum].valueDateTime = "2024-01-15"
 * subject = Reference(Patient/example)
 * encounter = Reference(Encounter/example-diagnosis)
 * onsetDateTime = "2024-01-15"
@@ -45,11 +48,13 @@ Title: "Sigmaresektion - Haupteingriff"
 Description: "Main surgical procedure: Laparoscopic sigmoid resection with lymph node dissection - using SNOMED code"
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation"
 * status = #completed
-* category = $SNOMEDCT#387713003 "Surgical procedure"
+* category = $SCT#387713003 "Surgical procedure"
 
-// Main procedure uses SNOMED code
-* code.coding[snomed] = $SNOMEDCT#235331005 "Laparoscopic sigmoid colectomy"
-* code.coding[snomed].display = "Laparoscopic sigmoid colectomy"
+// Main procedure uses OPS code
+* code.coding[ops].system = "http://fhir.de/CodeSystem/bfarm/ops"
+* code.coding[ops].version = "2024"
+* code.coding[ops].code = #5-484.5
+* code.coding[ops].display = "Rektosigmoidresektion"
 * code.text = "Laparoskopische Sigmaresektion mit TME und Lymphknotendissektion"
 
 * subject = Reference(Patient/example)
@@ -62,8 +67,10 @@ Description: "Main surgical procedure: Laparoscopic sigmoid resection with lymph
 * extension[Intention].valueCodeableConcept.coding.code = #K
 * extension[Intention].valueCodeableConcept.coding.display = "Kurativ"
 
-// Outcome
-* outcome.coding = $SNOMEDCT#385669000 "Successful"
+// Residual status (R0)
+* outcome.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus"
+* outcome.coding.code = #R0
+* outcome.coding.display = "R0"
 * note.text = "Laparoscopic sigmoid resection with TME and lymphadenectomy. No intraoperative complications. Tumor completely resected with clear margins (R0). 18 lymph nodes removed, 3 positive. Surgery performed in 3 components: resection, anastomosis, and lymph node dissection."
 
 // Component Procedure 1 - Sigmoid resection with anastomosis (OPS code)
@@ -74,7 +81,7 @@ Title: "Sigmaresektion Teil 1 - Resektion und Anastomose"
 Description: "Component procedure 1: Sigmoid resection with anastomosis"
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation"
 * status = #completed
-* category = $SNOMEDCT#387713003 "Surgical procedure"
+* category = $SCT#387713003 "Surgical procedure"
 
 // Component uses OPS code
 * code.coding[ops].system = "http://fhir.de/CodeSystem/bfarm/ops"
@@ -105,7 +112,7 @@ Title: "Sigmaresektion Teil 2 - Lymphknotendissektion"
 Description: "Component procedure 2: Regional lymph node dissection"
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation"
 * status = #completed
-* category = $SNOMEDCT#387713003 "Surgical procedure"
+* category = $SCT#387713003 "Surgical procedure"
 
 // Component uses OPS code
 * code.coding[ops].system = "http://fhir.de/CodeSystem/bfarm/ops"
@@ -136,7 +143,7 @@ Title: "Sigmaresektion Teil 3 - Port-Anlage"
 Description: "Component procedure 3: Laparoscopic port placement"
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation"
 * status = #completed
-* category = $SNOMEDCT#387713003 "Surgical procedure"
+* category = $SCT#387713003 "Surgical procedure"
 
 // Component uses OPS code
 * code.coding[ops].system = "http://fhir.de/CodeSystem/bfarm/ops"
@@ -172,23 +179,23 @@ Description: "Postoperative pathological TNM staging"
 * effectiveDateTime = "2024-02-20"
 
 // TNM Version
-* code.coding = $SNOMEDCT#258235000 "UICC - Union Internationale Contre le Cancer tumor staging"
+* code.coding = $SCT#258235000 "UICC - Union Internationale Contre le Cancer tumor staging"
 * method.coding.version = "8"
 
 // pT3
-* component[T-Kategorie].code = $SNOMEDCT#78873005 "T category"
-* component[T-Kategorie].valueCodeableConcept.coding = $UICC-TNM#pT3
+* component[T-Kategorie].code = $SCT#78873005 "T category"
+* component[T-Kategorie].valueCodeableConcept.coding = $UICC#pT3
 
 // pN1
-* component[N-Kategorie].code = $SNOMEDCT#277206009 "N category"
-* component[N-Kategorie].valueCodeableConcept.coding = $UICC-TNM#pN1
+* component[N-Kategorie].code = $SCT#277206009 "N category"
+* component[N-Kategorie].valueCodeableConcept.coding = $UICC#pN1
 
 // M0
-* component[M-Kategorie].code = $SNOMEDCT#277208005 "M category"
-* component[M-Kategorie].valueCodeableConcept.coding = $UICC-TNM#M0
+* component[M-Kategorie].code = $SCT#277208005 "M category"
+* component[M-Kategorie].valueCodeableConcept.coding = $UICC#M0
 
 // UICC Stage III
-* component[UICC-Stadium].code = $LOINC#21914-7 "Stage group.pathology Cancer"
+* component[UICC-Stadium].code = $LNC#21914-7 "Stage group.pathology Cancer"
 * component[UICC-Stadium].valueCodeableConcept.coding.code = #IIIB
 
 // c/p prefix
@@ -468,7 +475,7 @@ Description: "6-month follow-up examination showing no evidence of disease"
 * effectiveDateTime = "2025-03-15"
 
 // Overall tumor status assessment
-* code.coding = $LOINC#88040-1 "Response to cancer treatment"
+* code.coding = $LNC#88040-1 "Response to cancer treatment"
 
 // Gesamtbeurteilung Tumorstatus - Complete Response
 * valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-gesamtbeurteilung-tumorstatus"
@@ -476,19 +483,19 @@ Description: "6-month follow-up examination showing no evidence of disease"
 * valueCodeableConcept.coding.display = "Vollremission/Vollständiges Ansprechen"
 
 // Component: Local tumor status
-* component[Tumor].code = $SNOMEDCT#445200009 "Status of residual neoplasm (observable entity)"
+* component[Tumor].code = $SCT#445200009 "Status of residual neoplasm (observable entity)"
 * component[Tumor].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-lokaler-tumorstatus"
 * component[Tumor].valueCodeableConcept.coding.code = #K
 * component[Tumor].valueCodeableConcept.coding.display = "Kein Tumor nachweisbar"
 
 // Component: Lymph node status
-* component[Lymphknoten].code = $LOINC#21906-3 "Lymph nodes.pathology [Interpretation] Cancer"
+* component[Lymphknoten].code = $LNC#21906-3 "Lymph nodes.pathology [Interpretation] Cancer"
 * component[Lymphknoten].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-lymphknoten-tumorstatus"
 * component[Lymphknoten].valueCodeableConcept.coding.code = #K
 * component[Lymphknoten].valueCodeableConcept.coding.display = "Keine Lymphknoten befallen"
 
 // Component: Distant metastases status
-* component[Fernmetastasen].code = $LOINC#21907-1 "Distant metastases.pathology [Interpretation] Cancer"
+* component[Fernmetastasen].code = $LNC#21907-1 "Distant metastases.pathology [Interpretation] Cancer"
 * component[Fernmetastasen].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen-tumorstatus"
 * component[Fernmetastasen].valueCodeableConcept.coding.code = #K
 * component[Fernmetastasen].valueCodeableConcept.coding.display = "Keine Fernmetastasen nachweisbar"
