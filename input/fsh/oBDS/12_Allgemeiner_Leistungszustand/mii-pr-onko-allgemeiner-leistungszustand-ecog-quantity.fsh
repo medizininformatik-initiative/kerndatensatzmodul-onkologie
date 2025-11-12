@@ -120,7 +120,7 @@ Source: MII_PR_Onko_Allgemeiner_Leistungszustand_ECOG_Quantity
 // Invariant for valid ECOG values
 Invariant: ecog-valid-value
 Description: "ECOG value must be an integer between 0 and 4"
-Expression: "value >= 0 and value <= 4 and value.toString().matches('^[0-4]$')"
+Expression: "value >= 0 and value <= 4 and (value - value.floor()) = 0"
 Severity: #error
 
 // Example demonstrating usage
@@ -159,7 +159,6 @@ Description: "Beispiel für ECOG Performance Status 2 mit valueQuantity und Refe
 * referenceRange[=].high.system = $UCUM
 * referenceRange[=].high.code = #{score}
 * referenceRange[=].text = "ECOG 1 (Karnofsky 70-80%): Symptome, aber gehfähig; leichte Arbeit möglich"
-* referenceRange[=].appliesTo = $SCT#373066001 "Patient currently being treated (finding)"
 
 * referenceRange[+].low.value = 2
 * referenceRange[=].low.unit = "{score}"

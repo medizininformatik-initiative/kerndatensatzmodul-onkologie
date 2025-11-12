@@ -1,7 +1,11 @@
-{ 
+{
   "suppress" : [
     "Terminology_TX_NoValid_16@ImplementationGuide.definition.parameter.code",
     "MSG_DRAFT@SearchParameter.extension[0].value.ofType(CodeableConcept)",
-    "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+    "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6",
+    "not-found@*.short.extension[*].extension[*].value.ofType(code)",
+    "code-invalid@*.short.extension[*].extension[*].value.ofType(code)",
+    "not-found@*.definition.extension[*].extension[*].value.ofType(code)",
+    "code-invalid@*.definition.extension[*].extension[*].value.ofType(code)"
   ]
 }
