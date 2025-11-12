@@ -19,10 +19,9 @@ Description: "Dieses Profil beschreibt den diagnostischen Progesteron-Rezeptorst
 * code 1..1 
 * code ^definition = "Rezeptorstatus Progesteron, abgeleitet aus der Immunhistochemie der Mamma-Biopsie oder des Mamma-Exzisionspräparates, basierend auf Zahl der positiven Zellen und Färbeintensität"
 * code ^short = "Rezeptorstatus Progesteron"
-* code.coding = $LNC#85339-0 "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain" 
+* code.coding = $LNC#85339-0 // "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain" 
 // achtung bei Metastasen ggfs. nicht zutreffend, da kein breast cancer specimen, dann 40557-1 "Progesterone receptor Ag [Presence] in Tissue by Immune stain"
 
-// M2 Menopausenstatus
 
 
 * value[x] MS

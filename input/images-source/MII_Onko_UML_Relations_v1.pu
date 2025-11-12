@@ -56,8 +56,9 @@ Verlauf ---> Fernmetastasen: hasMember
 Verlauf ---> Residualstatus:  hasMember
 Verlauf ---> Onko_Variante: hasMember
 
-object Onko_Bioprobe #44FFFF 
+object Onko_Bioprobe #44FFFF
 Onko_Bioprobe <-- Onko_Befund : specimen
+Onko_Variante ...> Onko_Bioprobe: specimen (0..1)
 
 object AdverseEvent #FF9999
 Onko_SystemischeTherapie <--- AdverseEvent: suspectEntity.instance

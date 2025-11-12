@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-onko-histologie-icdo3",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-histologie-icdo3",
-  "version": "2025.1.0",
+  "version": "2026.0.0-ballot",
   "name": "MII_PR_Onko_Histologie_ICDO3",
   "title": "MII PR Onkologie Histologie ICD-O-3",
   "status": "active",
@@ -87,7 +87,7 @@
       {
         "id": "Observation.effective[x]",
         "path": "Observation.effective[x]",
-        "short": "Tumor Histologiedatum",
+        "short": "Datum der histologischen Untersuchung",
         "_short": {
           "extension": [
             {
@@ -99,13 +99,13 @@
                 },
                 {
                   "url": "content",
-                  "valueString": "Tumor Histologiedatum"
+                  "valueString": "Datum der histologischen Untersuchung"
                 }
               ]
             }
           ]
         },
-        "definition": "Tumor Histologiedatum im Krankheitsverlauf",
+        "definition": "Datum der histologischen Untersuchung im Krankheitsverlauf",
         "_definition": {
           "extension": [
             {
@@ -117,7 +117,7 @@
                 },
                 {
                   "url": "content",
-                  "valueString": "Tumor Histologiedatum im Krankheitsverlauf"
+                  "valueString": "Datum der histologischen Untersuchung im Krankheitsverlauf"
                 }
               ]
             }
@@ -133,7 +133,7 @@
           {
             "identity": "oBDS",
             "map": "6.1",
-            "comment": "Tumor Histologiedatum"
+            "comment": "Datum der histologischen Untersuchung (oBDS 6.1 'Tumor Histologiedatum' = Probenentnahme ist im Specimen.collection.collectedDateTime abgebildet)"
           }
         ]
       },
@@ -416,7 +416,14 @@
             ]
           }
         ],
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "6.1",
+            "comment": "Tumor Histologiedatum = Datum der Probenentnahme (siehe Specimen.collection.collectedDateTime)"
+          }
+        ]
       }
     ]
   }

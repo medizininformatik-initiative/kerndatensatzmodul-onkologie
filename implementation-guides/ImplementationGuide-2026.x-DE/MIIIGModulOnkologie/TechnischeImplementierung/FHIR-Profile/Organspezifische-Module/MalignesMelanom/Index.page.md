@@ -1,7 +1,15 @@
 ---
 parent: 
-topic: MelanomModule
+topic: MalignesMelanomModule
+subject: 
 ---
+
+<style>
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
 
 ## {{page-title}}
 
@@ -9,21 +17,7 @@ Die Melanom-spezifischen Profile erweitern das MII KDS Onkologie Modul um spezie
 
 ### Übersicht der Melanom-spezifischen Profile
 
-<style>
-    .responsive-img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: 20px auto;
-    }
-</style>
-
-<div class="diagram-container">
-    <img class="responsive-img" 
-         src="https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/release/v2026-draft/implementation-guides/ImplementationGuide-2026.x-DE/Images/MII_Onko_Melanom_Module/MII_Onko_Melanom_Module.svg" 
-         alt="MII Onkologie - Malignes Melanom Modul Architektur" 
-         title="MII Onkologie - Malignes Melanom Modul">
-</div>
+<img src="https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/dev/implementation-guides/ImplementationGuide-2026.x-DE/Images/MII_Onko_Melanom_Module/MII_Onko_Melanom_Module.png" alt="MII Onkologie - Melanom Modul Architektur und Beziehungen">
 
 ### Melanom-spezifische Datenelemente
 
@@ -40,14 +34,14 @@ Die Melanom-Module umfassen folgende spezifische klinische Parameter:
 - SNOMED CT: 385324008 "Tumor ulceration present"
 
 #### **Sicherheitsabstand**
-- Chirurgischer Sicherheitsabstand bei der Exzision
+- Chirurgischer horizontaler Sicherheitsabstand bei der Exzision
 - In Millimetern dokumentiert
 - Qualitätsindikator für die operative Therapie
 
 #### **LDH (Laktatdehydrogenase)**
 - Serummarker für Tumorlast
 - Wichtig für Stadiumseinteilung (M1c/M1d)
-- LOINC: 14804-9 "Lactate dehydrogenase"
+- LOINC: 2532-0 "Lactate dehydrogenase[Enyzmatic activity/volume] in Serum or Plasma"
 
 ### Klinische Verwendung
 

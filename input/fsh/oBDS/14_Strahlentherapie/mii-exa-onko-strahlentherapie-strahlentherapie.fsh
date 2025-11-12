@@ -32,7 +32,7 @@ Description: "Example radiation therapy conformant with MII Prozedur as bracket 
 * performedPeriod.start = "2019-07-04"
 * performedPeriod.end = "2019-09-14"
 * usedCode[Strahlenart] = $mii-cs-onko-strahlentherapie-strahlenart#PN
-* usedCode[Applikationsart] = $mii-cs-onko-strahlentherapie-applikationsart#PRCJ
+* extension[Applikationsart].valueCodeableConcept = $mii-cs-onko-strahlentherapie-applikationsart#PRCJ
 * extension[Gesamtdosis].valueQuantity.value =  60.0
 * extension[Gesamtdosis].valueQuantity.unit =  $UCUM#Gy
 * extension[Einzeldosis].valueQuantity.value =  12.0

@@ -1,0 +1,37 @@
+{
+  "resourceType": "Observation",
+  "id": "Example-Karnofsky-Baseline",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-karnofsky-quantity"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "761869008",
+        "system": "http://snomed.info/sct"
+      },
+      {
+        "code": "89243-0",
+        "system": "http://loinc.org"
+      }
+    ]
+  },
+  "valueQuantity": {
+    "unit": "%",
+    "system": "http://unitsofmeasure.org",
+    "code": "%",
+    "value": 90
+  },
+  "status": "final",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "effectiveDateTime": "2025-10-01",
+  "note": [
+    {
+      "text": "Baseline: ECOG 1 Äquivalent - Patient ist symptomatisch aber gehfähig"
+    }
+  ]
+}

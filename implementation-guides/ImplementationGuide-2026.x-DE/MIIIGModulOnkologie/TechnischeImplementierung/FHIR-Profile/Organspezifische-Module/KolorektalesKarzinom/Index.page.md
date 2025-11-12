@@ -4,6 +4,13 @@ topic: KRKModule
 subject: 
 ---
 
+<style>
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+
 # {{page-title}}
 
 ## Inhalt
@@ -22,21 +29,7 @@ Das Modul umfasst spezialisierte Profile für die charakteristischen Aspekte der
 
 Die folgende Abbildung zeigt die Struktur des KRK-Moduls und die Beziehungen zwischen den verschiedenen FHIR-Ressourcen:
 
-<style>
-    .responsive-img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: 20px auto;
-    }
-</style>
-
-<div class="diagram-container">
-    <img class="responsive-img" 
-         src="https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/release/v2026-draft/implementation-guides/ImplementationGuide-2026.x-DE/Images/MII_Onko_KRK_Module/MII_Onko_KRK_Module.svg" 
-         alt="MII Onkologie - Kolorektales Karzinom Modul Architektur" 
-         title="MII Onkologie - Kolorektales Karzinom Modul">
-</div>
+<img src="https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/dev/implementation-guides/ImplementationGuide-2026.x-DE/Images/MII_Onko_KRK_Module/MII_Onko_KRK_Module.png" alt="MII Onkologie - Kolorektales Karzinom Modul Architektur">
 
 ## Verknüpfungen zu anderen Ressourcen
 

@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-ex-onko-operation-urgency",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-urgency",
-  "version": "2025.1.0",
+  "version": "2026.0.0-ballot",
   "name": "MII_EX_Onko_Operation_Urgency",
   "title": "MII EX Onko Operation Urgency",
   "status": "active",
@@ -19,6 +19,12 @@
   ],
   "description": "Modalität der Eingriffsdurchführung (Art des Eingriffs) im Rahmen des oBDS (KR6)",
   "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "oBDS",
+      "name": "Mapping FHIR zu oBDS"
+    }
+  ],
   "kind": "complex-type",
   "abstract": false,
   "context": [
@@ -60,7 +66,14 @@
         "binding": {
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-operation-urgency"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "KR6",
+            "comment": "Art des Eingriffs (Modalität der Eingriffsdurchführung: E=Elektiveingriff, N=Notfalleingriff, U=Unbekannt)"
+          }
+        ]
       },
       {
         "id": "Extension.value[x].coding.system",

@@ -22,8 +22,8 @@ Description: "Umfang eines Residualtumors nach einer Therapie"
 * focus MS
 * focus only Reference(MII_PR_Onko_Diagnose_Primaertumor)
 
-// Gesamtbeurteilung des Residualstatus 
-* code MS
+// Gesamtbeurteilung des Residualstatus
+* code 1..1 MS
 * code.coding 1..* MS
 * code.coding ^slicing.discriminator.type = #pattern
 * code.coding ^slicing.discriminator.path = "$this"

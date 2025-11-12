@@ -6,17 +6,41 @@ topic: ReleaseNotes
 ## {{page-title}}
 Hier sind alle Änderungen aufgelistet. 
 
-## Änderungen Kommentierungs Version 2026
+## Änderungen finale Version v2026.0.0 (noch nicht veröffentlicht)
+
+- `improve` Dinatriumfolinat/Natriumfolinat zu Systemische Therapie Substanzen ValueSets hinzugefügt: UNII-Code für Leucovorin Sodium (4MXU9LJS4Q) und ATC-Code V03AF06 (Natriumfolinat). Dokumentation auf Terminologie-Seite aktualisiert. [[HDB-628](https://hl7germany.atlassian.net/browse/HDB-628)]
+- `documentation` Fehlerhafte interne Dokumentationslinks (pagelinks) korrigiert, die nach Export von Simplifier zur MII-Homepage nicht funktionierten: Topic-Namen in Kommentierungs-Seite, Operation-Profile und Extension-Dokumentation aktualisiert. [[HDB-646](https://hl7germany.atlassian.net/browse/HDB-646)]
+- `fix` Canonical URL des Strahlentherapie Applikationsart ValueSets von `mii-vs-onko-sstrahlentherapie-applikationsart` auf `mii-vs-onko-strahlentherapie-applikationsart` korrigiert (Breaking Change). [[HDB-708](https://hl7germany.atlassian.net/browse/HDB-708), [#219](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/219)]
+- `improve` Kardinalität von `Observation.code` im Residualstatus-Profil explizit auf `1..1` gesetzt für bessere Verständlichkeit. [[HDB-707](https://hl7germany.atlassian.net/browse/HDB-707), [#220](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/220)]
+- `fix` Canonical URL des Mamma Rezeptorstatus Leitlinie CodeSystems korrigiert um fehlenden `-leitlinie` Suffix. [[HDB-704](https://hl7germany.atlassian.net/browse/HDB-704), [#223](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/223)]
+- `documentation` Beschreibung des Melanom Sicherheitsabstand Profils vervollständigt und Handhabung von nicht beurteilbaren Fällen dokumentiert. [[HDB-705](https://hl7germany.atlassian.net/browse/HDB-705), [#222](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/222)]
+- `documentation` GOLD-Projektbeschreibung auf Seite "Bezug zu nationalen Standards" aktualisiert. [[HDB-711](https://hl7germany.atlassian.net/browse/HDB-711), [#216](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/216)]
+- `improve` Optionale Specimen-Referenz (0..1) zum Genetische Variante Profil hinzugefügt. [[HDB-712](https://hl7germany.atlassian.net/browse/HDB-712), [#215](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/215)]
+- `improve` Klarstellung der Datums-Semantik in Verlaufshistologie und Specimen Profilen: `Observation.effectiveDateTime` bezeichnet "Datum der histologischen Untersuchung", während `Specimen.collection.collectedDateTime` das "Datum der Probenentnahme" (oBDS 6.1 "Tumor Histologiedatum") darstellt. Labels, oBDS-Mappings und UML-Diagramme entsprechend aktualisiert. Verpflichtende 1..1 Specimen-Referenz im UML-Diagramm visualisiert. [[HDB-714](https://hl7germany.atlassian.net/browse/HDB-714), [#233](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/233)]
+- `documentation` Hinweis auf Vererbung vom MII KDS Modul Diagnose zur Beschreibung des Diagnose Primärtumor Profils hinzugefügt. [[HDB-701](https://hl7germany.atlassian.net/browse/HDB-701), [#227](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/227)]
+- `documentation` Beschreibungen der TNM c/p/u-Präfix Extension und ValueSet verbessert mit Erklärungen der Klassifikationsmethoden. [[HDB-699](https://hl7germany.atlassian.net/browse/HDB-699), [#229](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/229)]
+- `fix` SNOMED CT Versions-URI-Syntax in ConceptMap mii-cm-onko-krk-stoma-obds-sct korrigiert: Versionierte URI von `target` nach `targetVersion` verschoben. [[HDB-702](https://hl7germany.atlassian.net/browse/HDB-702), [#226](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/226)]
+- `documentation` Beschreibung und Definition im Prostata Operation Profil korrigiert um Binding-Stärke korrekt als `required` (statt `preferred`) zu reflektieren. [[HDB-706](https://hl7germany.atlassian.net/browse/HDB-706), [#224](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/224)]
+- `documentation` UCUM Hinweistext in Lymphknoten-Zählprofilen verbessert für bessere Klarheit über verpflichtenden UCUM Code 1. [[HDB-700](https://hl7germany.atlassian.net/browse/HDB-700), [#228](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/228)]
+- `improve` LOINC Slices zu Karnofsky und ECOG Leistungszustand Profilen hinzugefügt für bessere internationale Interoperabilität. [[HDB-689](https://hl7germany.atlassian.net/browse/HDB-689), [#236](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/236)]
+- `improve` Strahlentherapie Applikationsart von `Procedure.usedCode` zu Standard-Extension `procedure-method` verschoben für semantisch korrektere Modellierung. [[HDB-682](https://hl7germany.atlassian.net/browse/HDB-682), [#238](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/238)]
+- `documentation` MII Modul Forschungsvorhaben zum UML-Diagramm "Profile - Beziehungen und Referenzen" hinzugefügt zur Darstellung der optionalen Integration mit Forschungsprojekten. [[HDB-715](https://hl7germany.atlassian.net/browse/HDB-715), [#232](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/232)]
+- `improve` Mamma Operation Profil um strukturierte `usedCode` Slices für intraoperatives Präparatröntgen/Sonografie (M6) und präoperative Drahtmarkierung (M5) mit entsprechenden ValueSets erweitert. [[HDB-653](https://hl7germany.atlassian.net/browse/HDB-653), [#243](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/243)]
+- `improve` Prostata PSA LOINC ValueSet mit korrekten LOINC Display-Namen erstellt: Total-PSA (generisch und per Immunoassay), freies PSA (generisch und per Immunoassay) und ultrasensitives PSA (Nachweisgrenze ≤ 0.01 ng/mL). [[HDB-688](https://hl7germany.atlassian.net/browse/HDB-688), [#235](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/235)]
+- `improve` Her2neu Status Profil für Mamma-Modul mit dualer Kodierungsstrategie implementiert: oBDS-Spezifikation (P/N/U) und S3-Leitlinie/ASCO-CAP Guidelines (positiv/low/ultralow/negativ/equivocal) mit IHC Score und ISH Result Komponenten für moderne HER2-low Therapieansätze.
+
+## Änderungen Kommentierungs-Version 2026 (veröffentlicht 21.08.2025)
 
 ### Weitere Klassifikationen und Molekulare Tumorboards
 - **Hierarchische Klassifikationssysteme**: Implementierung weiterer Klassifikationssysteme (BINET, Ann Arbor, ISS, WHO-Grad, etc.) als hierarchisches CodeSystem
   - **Grund**: Unterstützung hämatologischer und anderer spezifischer Klassifikationssysteme gemäß oBDS-Anforderungen
-  - **Technische Umsetzung**: {{pagelink:WeitereKlassifikationenObservation}} mit `descendant-of` ValueSet-Filtern für die jeweiligen Antwortmöglichkeiten, um hohe Anzahl eigener Profile zu vermeiden
+  - **Technische Umsetzung**: CodeSystem mit `descendant-of` ValueSet-Filtern für die jeweiligen Antwortmöglichkeiten, um hohe Anzahl eigener Profile zu vermeiden
   - **mCODE-Kompatibilität**: Integration des mCODE STU4 code+method+value Patterns für Staging-Observationen 
 
-- **Tumorkonferenz-Erweiterung**: Erweiterte {{pagelink:TumorkonferenzCarePlan}} zur Unterstützung sowohl bisheriger oBDS-Darstellung der Tumorkonferenzen als auch komplexere Darstellung von Therapieempfehlungen wie im Modul Molekulares Tumorboard
+### Tumorkonferenz-Erweiterung
+  - **Erweiterte {{pagelink:CarePlan}}** zur Unterstützung sowohl bisheriger oBDS-Darstellung der Tumorkonferenzen als auch komplexere Darstellung von Therapieempfehlungen wie im Modul Molekulares Tumorboard
   - **Grund**: FHIR R4 Invariant cpl-3 verhindert gleichzeitige Nutzung von `activity.detail.code` und `activity.reference`
-  - **Lösung**: Activity-Slicing mit `obds` (Standard oBDS 19.1 Kategorisierung) und `extended` ({{pagelink:TumorkonferenzDetailedRecommendationsCarePlan}} für RequestGroup-basierte Protokolle) Slices
+  - **Lösung**: Activity-Slicing mit `obds` (Standard oBDS 19.1 Kategorisierung) und `extended` ({{pagelink:TherapieempfehlungKombinationstherapieRequestGroup}}-basierte Protokolle) Slices
   - **Rückwärtskompatibilität**: Bestehende oBDS-Implementierungen werden unverändert unterstützt
 
 ### Systemische Therapie Erweiterungen
@@ -25,20 +49,20 @@ Hier sind alle Änderungen aufgelistet.
 - **usedCode-Implementierung**: Strukturierte Dokumentation von Therapieprotokollen in {{pagelink:SystemischeTherapieProcedure}}
   - **Grund**: Ablösung der unstrukturierten `note.text` Protokollangaben durch standardisierte Kodierung
   - **Umfang**: Vollständiges CodeSystem mit 96 Protokollen aus oBDS Umsetzungsleitfaden (FOLFOX, R-CHOP, AC, etc.)
-  - **Technische Umsetzung**: `Procedure.usedCode` mit extensible Binding an `mii-vs-onko-systemische-therapie-protokolle`
+  - **Technische Umsetzung**: `Procedure.usedCode` mit extensible Binding an Protokolle-ValueSet
   - **Substanzkombinationen**: Jedes Protokoll dokumentiert enthaltene Wirkstoffe (z.B. "AC" → "Cyclophosphamid, Doxorubicin")
   - **oBDS-Mapping**: Protokollfeld 16.6 im oBDS-Mapping nun auch zur Systemischen Therapie hinzugefügt (vorher nur in MedicationStatements)
 
 #### UNII-Kodierung für experimentelle Substanzen
-- **Dual-Coding-Support**: MedicationStatement-Profil erweitert um UNII-Slice zusätzlich zum bestehenden ATC-Slice
+- **Dual-Coding-Support**: {{pagelink:SystemischeTherapieMedicationStatement}} erweitert um UNII-Slice zusätzlich zum bestehenden ATC-Slice
   - **Grund**: Unterstützung experimenteller/neuerer Substanzen ohne etablierte ATC-Codes
   - **Technische Umsetzung**: 
     - Neuer `unii` Slice auf MedicationStatement.medication mit extensible Binding an UNII-ValueSet
-  - **ValueSet**: `mii-vs-onko-systemische-therapie-substanzen-unii` mit 100+ UNII-Codes
+  - **ValueSet**: UNII-ValueSet mit 100+ UNII-Codes
   - **Beispiel**: Iberdomide (UNII: 8V66F27X44) als experimenteller Immunmodulator
 
 #### ATC-Code Transitionen und Post-hoc Mapping
-- **Dokumentation temporaler ATC-Änderungen**: Neue IG-Seite für Terminologie-Besonderheiten
+- **Dokumentation temporaler ATC-Änderungen**: Neue Dokumentation für Terminologie-Besonderheiten
   - **Quizartinib-Beispiel**: L01XE52 (bis 2020) → L01EX11 (ab 2021)
   - **Weitere Transitionen**: Abemaciclib, Acalabrutinib, Adalimumab dokumentiert
 
@@ -60,64 +84,65 @@ Hier sind alle Änderungen aufgelistet.
   - **Dokumentation**: Ausführliche Anleitung für `partOf`-Verknüpfung und gemeinsame Aspekte
   - **Harmonisierung**: Hinweis auf Schwierigkeit der post-hoc Harmonisierung bei komplexen Tumoroperationen
 
-### {{pagelink:VerlaufObservation}} Anpassungen
-- **Component-Kardinalität**: Änderung von `component 1..*` zu `component 0..*`
+#### Urgency Extension (Art des Eingriffs)
+- **Neue Extension**: {{pagelink:ExtensionUrgencyOperation}} zur Erfassung der Eingriffsmodalität
+  - **Herkunft**: Ursprünglich aus KRK 6 oBDS 2021, aber universell auf alle Procedures anwendbar
+  - **Wertebereich**: Elektiveingriff (E), Notfalleingriff (N), Unbekannt (U)
+  - **Grund**: Qualitätssicherung und Risikostratifizierung - Notfalleingriffe haben andere Komplikationsraten
+  - **Integration**: Extension in allgemeines {{pagelink:OperationProcedure}} Profil integriert für breite Anwendbarkeit
+
+### Verlauf-Profil Anpassungen
+- **Component-Kardinalität**: Änderung von `component 1..*` zu `component 0..*` im {{pagelink:AllgemeinerObservation}}
   - **Grund**: GitHub Issue #202 - Unterstützung für "K - keine Änderung" Fälle und hämatologische Krebsarten ohne TNM-Anwendbarkeit
   - **Betroffene Felder**: Tumor_Verlauf, Lymphknoten_Verlauf, Fernmetastasen_Verlauf bleiben 0..1
 
-### {{pagelink:StrahlentherapieProcedure}} Zielgebiet - oBDS 2014/2021 Kompatibilität
-- **oBDS 2014 CodeSystem Integration**: Unterstützung für oBDS 2014 Zielgebiet-Definitionen zur Abwärtskompatibilität
+### Strahlentherapie Zielgebiet - oBDS 2014/2021 Kompatibilität
+- **oBDS 2014 CodeSystem Integration**: Unterstützung für oBDS 2014 Zielgebiet-Definitionen zur Abwärtskompatibilität in {{pagelink:StrahlentherapieProcedure}}
   - **Grund**: oBDS 2021 führte architektonische Änderung ein - Trennung von Organ- und Lymphknotenkodierung
   - **oBDS 2014 Ansatz**: Kombinierte Kodierung mit `+`/`-` Suffixen (z.B. `"3.1.+"` = "Mamma mit Lymphknoten")
   - **oBDS 2021 Änderung**: Separate Kodierung - Organe (Sektionen 1-8) und dedizierte Lymphknotenregionen (Sektion 9)
-  - **Technische Umsetzung**: Separates CodeSystem `mii-cs-onko-strahlentherapie-zielgebiet-2014` - semantische Konflikte über Angabe der Version vermeidbar (2014 vs 2021)
-  - **ValueSet Integration**: Erweiterte `MII_VS_Onko_Strahlentherapie_Zielgebiet` unterstützt beide CodeSystems
+  - **Technische Umsetzung**: Separates CodeSystem für Strahlentherapie-Zielgebiet-2014 - semantische Konflikte über Angabe der Version vermeidbar (2014 vs 2021)
+  - **ValueSet Integration**: Erweiterte ValueSet für Strahlentherapie-Zielgebiet unterstützt beide CodeSystems
   - **Migration Pattern**: 2014 Einzelkodes → 2021 Mehrfachkodierung (z.B. `"3.1.+"` → `#3.1` + `#9.3`)
 
-### Kommentierungspunkte für v2026
-- **ServiceRequest-Profiling**: Diskussion über Bedarf onkologie-spezifischer ServiceRequest-Profile für operative und strahlentherapeutische Empfehlungen
-- **Radioaktive Metaboliten**: Klärung der Zuordnung zu MedicationRequest oder ServiceRequest
-- **Architektur-Diskussion**: CarePlan-basierte vs RequestGroup-first Modellierung für Tumorboard-Empfehlungen
-
-- Neue Profile zur Abdeckung der organspezifischen Module
-    - **{{pagelink:MammaModule}}**: Vollständige Implementierung des Mamma-Moduls
-        - **Estrogen-Rezeptorstatus**: Profil mit dualer Kodierung (oBDS/S3-Leitlinien) und Komponenten für Anteil positiver Zellen und Färbeintensität
-        - **Progesteron-Rezeptorstatus**: Entsprechendes Profil mit identischer Struktur zum Estrogen-Status
-        - **Menopause-Status**: Prätherapeutische Bestimmung mit oBDS 2021-konformer Subsumierung (perimenopausal → prämenopausal)
-        - **Präoperative Markierung**: Profil für verschiedene Markierungsmodalitäten (Draht, Seeds, magnetisch)
-        - **Mamma-Operation**: Spezialisiertes Operationsprofil mit SNOMED CT und OPS ValueSets
-        - **Hinweise**: Her2Neu im Molecular Tumorboard-Profil; Tumorgröße im Histologie-Modul; Studienteilnahme in oBDS 2021 abgedeckt
-    - **{{pagelink:ProstataModule}}**: Vollständige Implementierung des Prostata-Moduls
-        - **PSA**: Prostata-spezifisches Antigen mit LOINC 2857-1 Kodierung
-        - **Anzahl Stanzen**: Gesamtzahl der entnommenen Biopsie-Stanzen (LOINC 33743-6)
-        - **Anzahl positive Stanzen**: Anzahl der Stanzen mit Adenokarzinom (LOINC 33746-9)
-        - **Karzinom-Befall Stanze**: Tumorbefall in Prozent pro Stanze (LOINC 33748-5)
-        - **Gleason Score/Grade Group**: Modernes ISUP-Graduierungssystem (LOINC 44648-7)
-        - **Gleason Patterns**: Primäre und sekundäre Gleason-Grad-Komponenten
-        - **Clavien-Dindo**: Chirurgische Komplikationsklassifikation mit dualer Kodierung (SNOMED CT + oBDS)
-    - **{{pagelink:KRKModule}}**: Vollständige Implementierung des Kolorektales Karzinom-Moduls
-        - **Abstand Anokutanlinie**: Tumorsitz-Messung ab Anokutanlinie in cm (oBDS KR1, LOINC 33748-5)
-        - **Circumferelle Resektionsebene**: Minimaler Abstand zur circumferellen Resektionsebene in mm (oBDS KR3)
-        - **Aboraler Resektionsrand**: Minimaler Abstand zum aboralen Resektionsrand in mm (oBDS KR2)
-        - **MRT Mesorektale Faszie**: Bildgebende Bewertung der mesorektalen Faszie mit Abstandsmessung (oBDS KR2)
-        - **ASA-Klassifikation**: Präoperative Risikobewertung ASA I-VI + hirntote Organspender (oBDS KR9, LOINC 97816-3)
-        - **Anastomoseninsuffizienz**: Postoperative Komplikationsbewertung (oBDS KR8, SNOMED CT 235919008)
-        - **KRK-Operation**: Operative Eingriffe mit TME-Qualitätsbewertung (oBDS KR4)
-        - **KRK-Specimen**: Operationspräparate mit pathologischer TME-Qualität
-        - **Stoma-Markierung**: Präoperative Stomapositionsmarkierung (oBDS KR7)
-        - **Logical Model Integration**: Umfassendes KRK-Logisches-Modell mit präzisen FHIR-Mappings
-        - **Implementation Guide**: Vollständige Dokumentation mit 10 Seiten (9 Profile + Bundle)
-        - **Bundle-Beispiel**: Transaktions-Bundle demonstriert vollständigen KRK-Workflow
-        - **CapabilityStatement**: Alle KRK-Profile für Implementierungsabdeckung deklariert
-    - **{{pagelink:MelanomModule}}**: Vollständige Implementierung des Malignes Melanom-Moduls
-        - **Breslow-Tiefe**: Vertikale Tumordicke als wichtigster prognostischer Faktor
-        - **Ulzeration**: Vorhandensein einer Ulzeration des Primärtumors
-        - **Sicherheitsabstand**: Chirurgischer Sicherheitsabstand bei der Exzision
-        - **LDH**: Serummarker für Tumorlast und Staging
+### Neue Profile zur Abdeckung der organspezifischen Module
+- **Mamma**: Vollständige Implementierung des {{pagelink:MammaModule}}
+  - **Estrogen-Rezeptorstatus**: {{pagelink:MammaEstrogenRezeptorstatus}} mit dualer Kodierung (oBDS/S3-Leitlinien) und Komponenten für Anteil positiver Zellen und Färbeintensität
+  - **Progesteron-Rezeptorstatus**: {{pagelink:MammaProgesteronRezeptorstatus}} mit identischer Struktur zum Estrogen-Status
+  - **Menopause-Status**: {{pagelink:MammaMenopauseStatus}} mit oBDS 2021-konformer Subsumierung (perimenopausal → prämenopausal)
+  - **Präoperative Markierung**: {{pagelink:MammaPraeoperativeMarkierung}} für verschiedene Markierungsmodalitäten (Draht, Seeds, magnetisch)
+  - **Mamma-Operation**: {{pagelink:MammaOperation}} mit SNOMED CT und OPS ValueSets
+  - **Hinweise**: Her2Neu im Molecular Tumorboard-Profil; Tumorgröße im Histologie-Modul; Studienteilnahme in oBDS 2021 abgedeckt
+- **Prostata**: Vollständige Implementierung des {{pagelink:ProstataModule}}
+  - **PSA**: {{pagelink:ProstataPSA}} mit LOINC 2857-1 Kodierung
+  - **Anzahl Stanzen**: {{pagelink:ProstataAnzahlStanzen}} (LOINC 33743-6)
+  - **Anzahl positive Stanzen**: {{pagelink:ProstataAnzahlPositiveStanzen}} (LOINC 33746-9)
+  - **Karzinom-Befall Stanze**: {{pagelink:ProstataKarzinomBefallStanze}} (LOINC 33748-5)
+  - **Gleason Score/Grade Group**: {{pagelink:ProstataGleasonScoreGradeGroup}} (LOINC 44648-7)
+  - **Gleason Patterns**: Primäre und sekundäre Gleason-Grad-Komponenten
+  - **Clavien-Dindo**: {{pagelink:ProstataClavienDindo}} mit dualer Kodierung (SNOMED CT + oBDS)
+- **Kolorektales Karzinom**: Vollständige Implementierung des {{pagelink:KRKModule}}
+  - **Abstand Anokutanlinie**: {{pagelink:KRKAbstandTumorAnokutanlinie}} (oBDS KR1, LOINC 33748-5)
+  - **Circumferelle Resektionsebene**: {{pagelink:KRKAbstandCircumferelleResektionsebene}} (oBDS KR3)
+  - **Aboraler Resektionsrand**: {{pagelink:KRKAbstandResektionsrandAboral}} (oBDS KR2)
+  - **MRT Mesorektale Faszie**: {{pagelink:KRKMRTMesorektale}} mit Abstandsmessung (oBDS KR2)
+  - **ASA-Klassifikation**: {{pagelink:KRKASAKlassifikation}} (oBDS KR9, LOINC 97816-3)
+  - **Anastomoseninsuffizienz**: {{pagelink:KRKAnastomoseninsuffizienz}} (oBDS KR8, SNOMED CT 235919008)
+  - **KRK-Operation**: {{pagelink:KRKOperation}} mit TME-Qualitätsbewertung (oBDS KR4)
+  - **KRK-Specimen**: {{pagelink:KRKSpecimen}} mit pathologischer TME-Qualität
+  - **Stoma-Markierung**: {{pagelink:KRKStomaMarkierung}} (oBDS KR7)
+  - **Bundle-Beispiel**: {{pagelink:KRKBundle}} demonstriert vollständigen KRK-Workflow
+- **Malignes Melanom**: Vollständige Implementierung des {{pagelink:MalignesMelanomModule}}
+  - **Breslow-Tiefe**: {{pagelink:MelanomBreslowTiefe}} (SNOMED CT 106243009)
+  - **Ulzeration**: {{pagelink:MelanomUlzeration}} (oBDS MM4) 
+  - **Sicherheitsabstand**: {{pagelink:MelanomSicherheitsabstand}} (oBDS MM1)
+  - **LDH**: {{pagelink:MelanomLDH}} Laktatdehydrogenase als prognostischer Marker
+  - **Melanom-Exzision**: {{pagelink:MelanomExzision}} mit SNOMED CT Codes für Hautexzisionen
+  - **Bundle-Beispiel**: {{pagelink:MelanomBundle}} demonstriert vollständigen Melanom-Workflow
 
 - **Bundle-Beispiele**: Für alle organspezifischen Module ({{pagelink:MammaBundle}}, {{pagelink:ProstataBundle}}, {{pagelink:KRKBundle}}, {{pagelink:MelanomBundle}}) stehen vollständige Transaktions-Bundles zur Verfügung, die alle zugehörigen Profile in einem server-konsumierbaren Format demonstrieren
 
-
+---
 
 ## Änderungen in 2025.1.0 (veröffentlicht 12.06.2025)
 - Umprofilierung des Strahlentherapie-Profils (BREAKING CHANGE!)

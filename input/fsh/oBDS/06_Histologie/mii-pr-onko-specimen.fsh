@@ -12,9 +12,9 @@ Description: "Histologie: Dieses Profil beschreibt eine Gewebeprobe in der Onkol
 * subject only Reference(Patient)
 * collection MS
 * collection.collectedDateTime 0..1 MS
-* insert Label (collection.collectedDateTime, Tumor Histologiedatum, Histologiedatum nach 6.1 oBDS 2021)
-* insert Translation(collection.collectedDateTime ^short, de-DE, Tumor Histologiedatum)
-* insert Translation(collection.collectedDateTime ^definition, de-DE, Histologiedatum nach 6.1 oBDS 2021 )
+* insert Label (collection.collectedDateTime, Datum der Probenentnahme, Datum der Probenentnahme - oBDS 6.1 Tumor Histologiedatum)
+* insert Translation(collection.collectedDateTime ^short, de-DE, Datum der Probenentnahme)
+* insert Translation(collection.collectedDateTime ^definition, de-DE, Datum der Probenentnahme entspricht oBDS 6.1 Tumor Histologiedatum)
 
 * accessionIdentifier MS
 * accessionIdentifier.value 0..1 MS
@@ -27,5 +27,5 @@ Id: oBDS
 Title: "Mapping FHIR zu oBDS"
 Source: MII_PR_Onko_Specimen
 * -> "6" "Histologie"
-* collection.collectedDateTime -> "6.1" "Tumor Histologiedatum"
+* collection.collectedDateTime -> "6.1" "Tumor Histologiedatum (Datum der Probenentnahme)"
 * accessionIdentifier.value -> "6.2" "Histologie-Einsendenummer"

@@ -87,8 +87,8 @@ Description: "Beispiel-Bundle für Kolorektales Karzinom mit allen spezifischen 
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
 
-* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-krk-asa-klassifikation"
-* entry[=].resource = mii-exa-onko-krk-asa-klassifikation
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-asa-klassifikation"
+* entry[=].resource = mii-exa-onko-asa-klassifikation
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
 

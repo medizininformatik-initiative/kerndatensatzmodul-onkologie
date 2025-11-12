@@ -44,6 +44,11 @@ Description: "Genetische Variante wie im oBDS beschrieben"
 * focus MS
 * focus only Reference(MII_PR_Onko_Diagnose_Primaertumor)
 
+// Referenz zu Specimen (optional)
+* specimen 0..1 MS
+* specimen only Reference(MII_PR_Onko_Specimen)
+* specimen ^short = "Tumor-Specimen aus dem die Variante bestimmt wurde"
+* specimen ^definition = "Referenz auf die Tumorprobe (Specimen), aus der die genetische Variante bestimmt wurde. Optional, da die Methodik auch über GenomicStudy abgebildet werden kann."
 
 Mapping: FHIR-oBDSGenetischeVariante
 Id: oBDS

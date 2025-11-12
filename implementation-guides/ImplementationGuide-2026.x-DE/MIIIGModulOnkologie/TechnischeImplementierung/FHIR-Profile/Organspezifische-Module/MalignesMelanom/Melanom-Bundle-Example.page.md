@@ -82,19 +82,6 @@ Jeder Bundle-Entry enthält:
 
 ---
 
-### Verknüpfungsmuster
-
-Das Bundle demonstriert die **konsistente Referenzstruktur** zwischen Melanom-spezifischen Ressourcen:
-
-```
-Patient ← subject ← Condition (Primärtumor)
-                        ↑ focus
-                 Observations (Breslow-Tiefe, Sicherheitsabstand, Ulzeration, LDH)
-                        ↑ reasonReference
-                   Procedures (Melanom-Exzision)
-                        ↑ collection.procedure
-                    Specimen (Exzisionspräparat)
-```
 
 ---
 
@@ -103,14 +90,14 @@ Patient ← subject ← Condition (Primärtumor)
 Das Bundle demonstriert die vollständige Abbildung der oBDS-Datenfelder für Malignes Melanom:
 
 #### Histopathologische Bewertung
-- **Breslow**: Breslow-Tiefe → `Observation/mii-exa-onko-melanom-breslow-tiefe`
+- **MM2**: Breslow-Tiefe → `Observation/mii-exa-onko-melanom-breslow-tiefe`
 - **MM4**: Ulzeration → `Observation/mii-exa-onko-melanom-ulzeration`
 
 #### Chirurgische Bewertung
 - **MM1**: Sicherheitsabstand → `Observation/mii-exa-onko-melanom-sicherheitsabstand`
 
 #### Laborparameter
-- **LDH**: Laktatdehydrogenase → `Observation/mii-exa-onko-melanom-ldh`
+- **MM3**: Laktatdehydrogenase → `Observation/mii-exa-onko-melanom-ldh`
 
 ---
 

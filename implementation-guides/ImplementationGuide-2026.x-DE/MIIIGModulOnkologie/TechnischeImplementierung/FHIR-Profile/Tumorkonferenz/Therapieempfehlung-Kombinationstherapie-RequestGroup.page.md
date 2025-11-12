@@ -50,7 +50,7 @@ Das **RequestGroup.code** Element enthält die **oBDS-Therapietyp-Klassifikation
 #### **Option 1: Pharmazeutische Klassen**
 Für **Klassen-basierte Empfehlungen** (z.B. "beliebiger CDK4/6 Inhibitor"):
 
-```fsh
+```
 RequestGroup
 ├── code: "CZ" (Chemotherapie + zielgerichtete Substanzen)
 └── action[0].resource: Reference(SystemischeTherapie)
@@ -62,7 +62,7 @@ RequestGroup
 #### **Option 2: Spezifische Medikamentenauswahl**
 Für **spezifische Optionen** mit Auswahllogik:
 
-```fsh
+```
 RequestGroup
 ├── code: "ZS" (Zielgerichtete Substanzen)
 ├── action[0].selectionBehavior: #any

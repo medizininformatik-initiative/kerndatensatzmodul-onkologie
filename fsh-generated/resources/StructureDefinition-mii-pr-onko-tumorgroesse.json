@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-onko-tumorgroesse",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorgroesse",
-  "version": "2025.1.0",
+  "version": "2026.0.0-ballot",
   "name": "MII_PR_Onko_Tumorgroesse",
   "title": "MII PR Onkologie Tumorgröße",
   "status": "active",
@@ -19,6 +19,12 @@
   ],
   "description": "Tumorgröße in mm. Gibt die Größe des Tumors in der größten Dimension an. Basierend auf dem oBDS-Modul Mamma. ",
   "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "oBDS",
+      "name": "Mapping FHIR zu oBDS"
+    }
+  ],
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
@@ -34,7 +40,19 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "M7",
+            "comment": "Tumorgröße Invasives Karzinom"
+          },
+          {
+            "identity": "oBDS",
+            "map": "M8",
+            "comment": "Tumorgröße DCIS"
+          }
+        ]
       },
       {
         "id": "Observation.code.coding",
@@ -193,7 +211,19 @@
         "id": "Observation.value[x].value",
         "path": "Observation.value[x].value",
         "min": 1,
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "M7",
+            "comment": "Tumorgröße Invasives Karzinom (Maximaler Durchmesser des invasiven Karzinoms in mm)"
+          },
+          {
+            "identity": "oBDS",
+            "map": "M8",
+            "comment": "Tumorgröße DCIS (Maximaler Durchmesser des DCIS in mm, wenn keine invasive Komponente vorhanden)"
+          }
+        ]
       },
       {
         "id": "Observation.value[x].unit",

@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-onko-prostate-psa",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-psa",
-  "version": "2025.1.0",
+  "version": "2026.0.0-ballot",
   "name": "MII_PR_Onko_Prostata_PSA",
   "title": "MII PR Onkologie PSA-Wert",
   "status": "draft",
@@ -19,6 +19,12 @@
   ],
   "description": "Dieses Profil beschreibt den PSA-Wert sowohl beim Monitoring als auch in der Verlaufskontrolle in der Onkologie",
   "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "oBDS",
+      "name": "Mapping FHIR zu oBDS"
+    }
+  ],
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
@@ -26,6 +32,17 @@
   "derivation": "constraint",
   "differential": {
     "element": [
+      {
+        "id": "Observation",
+        "path": "Observation",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "P7",
+            "comment": "PSA-Wert"
+          }
+        ]
+      },
       {
         "id": "Observation.meta.profile",
         "path": "Observation.meta.profile",
@@ -41,10 +58,9 @@
       {
         "id": "Observation.code.coding",
         "path": "Observation.code.coding",
-        "patternCoding": {
-          "code": "2857-1",
-          "system": "http://loinc.org",
-          "display": "Prostate specific Ag [Mass/volume] in Serum or Plasma"
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-psa-loinc"
         }
       },
       {
@@ -78,6 +94,39 @@
         "id": "Observation.encounter",
         "path": "Observation.encounter",
         "mustSupport": true
+      },
+      {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Observation.effective[x]:effectiveDateTime",
+        "path": "Observation.effective[x]",
+        "sliceName": "effectiveDateTime",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "P8",
+            "comment": "Datum PSA-Wert (oBDS 238)"
+          }
+        ]
       },
       {
         "id": "Observation.value[x]",
@@ -129,7 +178,14 @@
       {
         "id": "Observation.value[x].value",
         "path": "Observation.value[x].value",
-        "min": 1
+        "min": 1,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "P7",
+            "comment": "PSA-Wert (oBDS 237)"
+          }
+        ]
       },
       {
         "id": "Observation.value[x].unit",
@@ -145,11 +201,6 @@
         "id": "Observation.value[x].code",
         "path": "Observation.value[x].code",
         "patternCode": "ng/mL"
-      },
-      {
-        "id": "Observation.specimen",
-        "path": "Observation.specimen",
-        "mustSupport": true
       }
     ]
   }

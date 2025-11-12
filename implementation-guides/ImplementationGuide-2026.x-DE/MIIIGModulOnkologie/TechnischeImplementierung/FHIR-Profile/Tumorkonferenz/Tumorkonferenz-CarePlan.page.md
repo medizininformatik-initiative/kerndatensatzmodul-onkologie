@@ -73,19 +73,19 @@ Jede Tumorkonferenz mit Therapieempfehlung SOLL als einzelne Ressource gespeiche
 ### Anwendungsbeispiele
 
 #### Traditionelles Tumorboard (obds slice):
-```fsh
+```
 * activity[obds].detail.code.coding = #OP "Operation"
 * activity[obds].detail.status = #completed
 ```
 
 #### Molekulares Tumorboard (extended slice):
-```fsh  
+```  
 * activity[extended].reference = Reference(RequestGroup/molecular-protocol)
 * activity[extended].progress.text = "HR+/HER2- mit PI3K-Aktivierung - CDK4/6 Inhibitor empfohlen"
 ```
 
 #### Gemischter Ansatz:
-```fsh
+```
 * activity[obds].detail.code.coding = #OP "Operation"
 * activity[extended].reference = Reference(RequestGroup/precision-medicine-protocol)
 ```

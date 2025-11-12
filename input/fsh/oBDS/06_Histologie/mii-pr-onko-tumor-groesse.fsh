@@ -56,11 +56,11 @@ Description: "Tumorgröße in mm. Gibt die Größe des Tumors in der größten D
 * focus MS
 * focus only Reference(MII_PR_Onko_Diagnose_Primaertumor)
 
-/*
-
-Mapping: FHIR-oBDS-Histologie-Anzahl-Befallene-Lymphknoten
+Mapping: FHIR-oBDS-Mamma-Tumorgroesse
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
-Source: MII_PR_Onko_Anzahl_Befallene_Lymphknoten
-* valueQuantity.value -> "6.8" "Anzahl der befallenen Lymphknoten"
-*/
+Source: MII_PR_Onko_Tumorgroesse
+* valueQuantity.value -> "M7" "Tumorgröße Invasives Karzinom (Maximaler Durchmesser des invasiven Karzinoms in mm)"
+* valueQuantity.value -> "M8" "Tumorgröße DCIS (Maximaler Durchmesser des DCIS in mm, wenn keine invasive Komponente vorhanden)"
+* code -> "M7" "Tumorgröße Invasives Karzinom"
+* code -> "M8" "Tumorgröße DCIS"

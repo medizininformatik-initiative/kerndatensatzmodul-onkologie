@@ -1,0 +1,137 @@
+{
+  "resourceType": "Observation",
+  "id": "Example-Karnofsky-Quantity-80",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-karnofsky-quantity"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "761869008",
+        "system": "http://snomed.info/sct",
+        "display": "Karnofsky Performance Status score (observable entity)"
+      },
+      {
+        "code": "89243-0",
+        "system": "http://loinc.org",
+        "display": "Karnofsky Performance Status score"
+      }
+    ]
+  },
+  "valueQuantity": {
+    "unit": "%",
+    "system": "http://unitsofmeasure.org",
+    "code": "%",
+    "value": 80
+  },
+  "status": "final",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "effectiveDateTime": "2025-11-05",
+  "referenceRange": [
+    {
+      "low": {
+        "value": 90,
+        "unit": "%",
+        "system": "http://unitsofmeasure.org",
+        "code": "%"
+      },
+      "high": {
+        "value": 100,
+        "unit": "%",
+        "system": "http://unitsofmeasure.org",
+        "code": "%"
+      },
+      "text": "ECOG 0: Normale Aktivität ohne Einschränkung"
+    },
+    {
+      "low": {
+        "value": 70,
+        "unit": "%",
+        "system": "http://unitsofmeasure.org",
+        "code": "%"
+      },
+      "high": {
+        "value": 80,
+        "unit": "%",
+        "system": "http://unitsofmeasure.org",
+        "code": "%"
+      },
+      "text": "ECOG 1: Symptome, aber gehfähig; leichte Arbeit möglich",
+      "appliesTo": [
+        {
+          "coding": [
+            {
+              "code": "373066001",
+              "system": "http://snomed.info/sct",
+              "display": "Patient currently being treated (finding)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "low": {
+        "value": 50,
+        "unit": "%",
+        "system": "http://unitsofmeasure.org",
+        "code": "%"
+      },
+      "high": {
+        "value": 60,
+        "unit": "%",
+        "system": "http://unitsofmeasure.org",
+        "code": "%"
+      },
+      "text": "ECOG 2: Gehfähig, Selbstversorgung, nicht arbeitsfähig; >50% Wachzeit aufrecht"
+    },
+    {
+      "low": {
+        "value": 30,
+        "unit": "%",
+        "system": "http://unitsofmeasure.org",
+        "code": "%"
+      },
+      "high": {
+        "value": 40,
+        "unit": "%",
+        "system": "http://unitsofmeasure.org",
+        "code": "%"
+      },
+      "text": "ECOG 3: Begrenzte Selbstversorgung; ≥50% an Bett/Stuhl gebunden"
+    },
+    {
+      "low": {
+        "value": 10,
+        "unit": "%",
+        "system": "http://unitsofmeasure.org",
+        "code": "%"
+      },
+      "high": {
+        "value": 20,
+        "unit": "%",
+        "system": "http://unitsofmeasure.org",
+        "code": "%"
+      },
+      "text": "ECOG 4: Vollständig pflegebedürftig, keine Selbstversorgung möglich"
+    },
+    {
+      "low": {
+        "value": 0,
+        "unit": "%",
+        "system": "http://unitsofmeasure.org",
+        "code": "%"
+      },
+      "high": {
+        "value": 0,
+        "unit": "%",
+        "system": "http://unitsofmeasure.org",
+        "code": "%"
+      },
+      "text": "ECOG 5: Tod"
+    }
+  ]
+}

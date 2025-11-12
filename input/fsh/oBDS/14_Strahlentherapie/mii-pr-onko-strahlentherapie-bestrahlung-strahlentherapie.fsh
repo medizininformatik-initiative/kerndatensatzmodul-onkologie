@@ -17,18 +17,18 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 * code from MII_VS_Onko_OPS_Strahlentherapie (extensible)
 
 
-* extension contains 
+* extension contains
     MII_EX_Onko_Strahlentherapie_Bestrahlung_Gesamtdosis named Gesamtdosis 0..1 MS and
     MII_EX_Onko_Strahlentherapie_Bestrahlung_Einzeldosis named Einzeldosis 0..1 MS and
-    MII_EX_Onko_Strahlentherapie_Bestrahlung_Boost named Boost 0..1 MS
+    MII_EX_Onko_Strahlentherapie_Bestrahlung_Boost named Boost 0..1 MS and
+    http://hl7.org/fhir/StructureDefinition/procedure-method named Applikationsart 0..1 MS
 
 * usedCode 0..* MS
 * usedCode ^slicing.discriminator.type = #pattern
 * usedCode ^slicing.discriminator.path = "coding.system"
 * usedCode ^slicing.rules = #open
-* usedCode contains 
-    Strahlenart 0..1 MS and
-    Applikationsart 0..1 MS
+* usedCode contains
+    Strahlenart 0..1 MS
 
 * usedCode[Strahlenart] ^short = "Strahlentherapie Strahlenart" 
 * usedCode[Strahlenart] ^definition = "Gibt an, mit welcher Strahlenart (sowohl Strahlung als auch Metabolite) die Strahlentherapie durchgeführt wurde."
@@ -36,20 +36,19 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 * usedCode[Strahlenart].coding.code 1..1 MS
 * usedCode[Strahlenart].coding.system 1..1 MS
 * usedCode[Strahlenart].coding.system = $mii-cs-onko-strahlentherapie-strahlenart
-* insert Label(usedCode[Strahlenart], Strahlenart, Strahlenart der Bestrahlung gemäß 14.7 oBDS 2021.)
-* insert Translation(usedCode[Strahlenart] ^short, de-DE, Applikationsart)
-* insert Translation(usedCode[Strahlenart] ^definition, de-DE, Applikationsart der Bestrahlung gemäß 14.7 oBDS 2021. )
+* insert Label(usedCode[Strahlenart], Strahlenart, Strahlenart der Bestrahlung gemäß 14.8 oBDS 2021.)
+* insert Translation(usedCode[Strahlenart] ^short, de-DE, Strahlenart)
+* insert Translation(usedCode[Strahlenart] ^definition, de-DE, Strahlenart der Bestrahlung gemäß 14.8 oBDS 2021. )
 
-
-* usedCode[Applikationsart] ^short = "Strahlentherapie Applikationsart"
-* usedCode[Applikationsart] ^definition = "Gibt an, mit welcher Technik die Strahlentherapie durchgeführt wurde."
-* usedCode[Applikationsart] from MII_VS_Onko_Strahlentherapie_Applikationsart (extensible)
-* usedCode[Applikationsart].coding.code 1..1 MS
-* usedCode[Applikationsart].coding.system 1..1 MS
-* usedCode[Applikationsart].coding.system = $mii-cs-onko-strahlentherapie-applikationsart
-* insert Label(usedCode[Applikationsart], Applikationsart, Applikationsart der Bestrahlung gemäß 14.7 oBDS 2021.)
-* insert Translation(usedCode[Applikationsart] ^short, de-DE, Applikationsart)
-* insert Translation(usedCode[Applikationsart] ^definition, de-DE, Applikationsart der Bestrahlung gemäß 14.7 oBDS 2021. )
+* extension[Applikationsart] ^short = "Strahlentherapie Applikationsart"
+* extension[Applikationsart] ^definition = "Gibt an, mit welcher Technik die Strahlentherapie durchgeführt wurde."
+* extension[Applikationsart].valueCodeableConcept from MII_VS_Onko_Strahlentherapie_Applikationsart (extensible)
+* extension[Applikationsart].valueCodeableConcept.coding.code 1..1 MS
+* extension[Applikationsart].valueCodeableConcept.coding.system 1..1 MS
+* extension[Applikationsart].valueCodeableConcept.coding.system = $mii-cs-onko-strahlentherapie-applikationsart
+* insert Label(extension[Applikationsart], Applikationsart, Applikationsart der Bestrahlung gemäß 14.7 oBDS 2021.)
+* insert Translation(extension[Applikationsart] ^short, de-DE, Applikationsart)
+* insert Translation(extension[Applikationsart] ^definition, de-DE, Applikationsart der Bestrahlung gemäß 14.7 oBDS 2021. )
 
 
 
@@ -99,7 +98,7 @@ Source: MII_PR_Onko_Strahlentherapie_Bestrahlung_Strahlentherapie
 * bodySite.extension[Seitenlokalisation].valueCodeableConcept.coding.code -> "14.4" "Strahlentherapie Seite Zielgebiet"
 * performed[x].start -> "14.5" "Strahlentherapie Beginn"
 * performed[x].end -> "14.6" "Strahlentherapie Ende"
-* usedCode[Applikationsart].coding.code -> "14.7" "Strahlentherapie Applikationsart"
+* extension[Applikationsart].valueCodeableConcept.coding.code -> "14.7" "Strahlentherapie Applikationsart"
 * usedCode[Strahlenart].coding.code -> "14.8" "Strahlentherapie Strahlenart"
 * extension[Gesamtdosis].valueQuantity.value -> "14.9" "Strahlentherapie Gesamtdosis"
 * extension[Gesamtdosis].valueQuantity.unit -> "14.11" "Strahlentherapie Einheit"

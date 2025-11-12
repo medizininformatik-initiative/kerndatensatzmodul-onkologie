@@ -41,7 +41,7 @@ Description: "Histologie: Anzahl der befallenen Sentinel-Lymphknoten. Gibt an, w
 * valueQuantity MS
 * valueQuantity.code 1.. MS
 * valueQuantity.code = #1
-* valueQuantity.code ^comment = "The mandatory system is UCUM."
+* valueQuantity.code ^comment = "This quantity must be mandatorily coded with the UCUM code 1."
 * valueQuantity.system 1.. MS
 * valueQuantity.system = $UCUM (exactly)
 * valueQuantity.unit 1.. MS

@@ -3,7 +3,7 @@
   "id": "mii-ig-onko-de-v2025",
   "language": "de-DE",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/mii-ig-onko-de-v2025",
-  "version": "2025.0.4",
+  "version": "2026.0.0-ballot",
   "name": "MII_IG_Onko_DE",
   "title": "MII IG Onkologie",
   "status": "active",
@@ -33,7 +33,7 @@
     {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.meta",
       "version": "2025.0.x",
-      "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.meta/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.meta",
+      "uri": "https://www.medizininformatik-initiative.de/fhir/modul-meta/ImplementationGuide/mii-ig-meta",
       "id": "de_medizininformatikinitiative_kerndatensatz_meta"
     },
     {
@@ -65,6 +65,12 @@
       "version": "2025.0.x",
       "uri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ImplementationGuide/mii-ig-molgen-v2025-DE",
       "id": "de_medizininformatikinitiative_kerndatensatz_molgen"
+    },
+    {
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.studie",
+      "version": "2025.0.x",
+      "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.studie/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.studie",
+      "id": "de_medizininformatikinitiative_kerndatensatz_studie"
     }
   ],
   "definition": {
@@ -92,6 +98,38 @@
         "name": "Beispiel Strahlentherapie oBDS 2021 - Mamma Primärzielgebiet",
         "description": "oBDS 2021: Bestrahlung der Mamma als Primärzielgebiet (entspricht 2014 '3.1.+' Organanteil)",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/Example-ECOG-Quantity-2"
+        },
+        "name": "Beispiel: ECOG 2 als Quantity",
+        "description": "Beispiel für ECOG Performance Status 2 mit valueQuantity und Reference Ranges für Karnofsky-Äquivalente",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog-quantity"
+      },
+      {
+        "reference": {
+          "reference": "Bundle/Example-ECOG-Comparison-Set"
+        },
+        "name": "Beispiel: ECOG Verlauf - Vergleichbarkeit durch Quantity",
+        "description": "Demonstriert wie valueQuantity Vergleiche ermöglicht: Patient verschlechtert sich von ECOG 1 auf ECOG 3",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Example-Karnofsky-Quantity-80"
+        },
+        "name": "Beispiel: Karnofsky 80% als Quantity",
+        "description": "Beispiel für Karnofsky Performance Status 80% mit valueQuantity und Reference Ranges für ECOG-Äquivalente",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-karnofsky-quantity"
+      },
+      {
+        "reference": {
+          "reference": "Bundle/Example-Karnofsky-Comparison-Set"
+        },
+        "name": "Beispiel: Karnofsky Verlauf - Vergleichbarkeit durch Quantity",
+        "description": "Demonstriert wie valueQuantity Vergleiche ermöglicht: Patient verschlechtert sich von 90% auf 60%",
+        "exampleBoolean": true
       },
       {
         "reference": {
@@ -143,6 +181,34 @@
       },
       {
         "reference": {
+          "reference": "Observation/Example-ECOG-Baseline"
+        },
+        "name": "Example-ECOG-Baseline",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog-quantity"
+      },
+      {
+        "reference": {
+          "reference": "Observation/Example-ECOG-Followup"
+        },
+        "name": "Example-ECOG-Followup",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog-quantity"
+      },
+      {
+        "reference": {
+          "reference": "Observation/Example-Karnofsky-Baseline"
+        },
+        "name": "Example-Karnofsky-Baseline",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-karnofsky-quantity"
+      },
+      {
+        "reference": {
+          "reference": "Observation/Example-Karnofsky-Followup"
+        },
+        "name": "Example-Karnofsky-Followup",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-karnofsky-quantity"
+      },
+      {
+        "reference": {
           "reference": "Procedure/PatientKimMusterperson-Procedure-4"
         },
         "name": "Hauptprocedure: Komplexe abdominale Tumorchirurgie",
@@ -156,6 +222,22 @@
         "name": "Liste der Evidenz zum Erstdiagnosezeitpunkt",
         "description": "Eine Beispielliste, welche Observations zur Diagnosestellung präsent waren",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-liste-evidenz-erstdiagnose"
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/mii-cm-onko-allgemeiner-leistungszustand-ecog-loinc"
+        },
+        "name": "Mapping oBDS ECOG zu LOINC",
+        "description": "Mapping der oBDS-Codes für ECOG Performance Status zu LOINC Answer List LA29179-1",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/mii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc"
+        },
+        "name": "Mapping oBDS Karnofsky zu LOINC",
+        "description": "Mapping der oBDS-Codes für Karnofsky Performance Status zu LOINC Answer List LA29175-9",
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -455,10 +537,10 @@
       },
       {
         "reference": {
-          "reference": "ConceptMap/mii-cm-onko-krk-asa-obds-loinc"
+          "reference": "ConceptMap/mii-cm-onko-asa-obds-loinc"
         },
-        "name": "MII CM Onkologie KRK ASA oBDS zu LOINC",
-        "description": "Mapping von oBDS ASA-Klassifikation (KR9) zu LOINC ASA Physical Status",
+        "name": "MII CM Onkologie ASA oBDS zu LOINC",
+        "description": "Mapping von oBDS ASA-Klassifikation (ursprünglich KR9, generalisiert für alle onkologischen Indikationen) zu LOINC ASA Physical Status",
         "exampleBoolean": false
       },
       {
@@ -471,7 +553,7 @@
       },
       {
         "reference": {
-          "reference": "ConceptMap/MII-CM-Onkologie-to-MVGenomSeq"
+          "reference": "ConceptMap/mii-cm-onkologie-to-mvgenomseq"
         },
         "name": "MII Concept Map Modellvorhaben Genomsequenzierung Onkologie",
         "description": "MII LogicalModel Modellvorhaben Genomsequenzierung Onkologie",
@@ -519,6 +601,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-onko-asa-obds"
+        },
+        "name": "MII CS Onkologie ASA-Klassifikation oBDS",
+        "description": "oBDS-basiertes CodeSystem für ASA-Klassifikation (ursprünglich KR9 aus Kolorektales Karzinom Modul, generalisiert für alle onkologischen Indikationen)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-onko-fernmetastasen"
         },
         "name": "MII CS Onkologie Fernmetastasen",
@@ -559,18 +649,26 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/mii-cs-onko-krk-asa-obds"
-        },
-        "name": "MII CS Onkologie KRK ASA-Klassifikation oBDS",
-        "description": "oBDS-basiertes CodeSystem für ASA-Klassifikation beim Kolorektalen Karzinom (KR9)",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "CodeSystem/mii-cs-onko-krk-operationstyp"
         },
         "name": "MII CS Onkologie KRK Operationstyp",
         "description": "oBDS-spezifisches Codesystem TME-Präparat, basierend auf der S3-Leitlinie Mammakarzinom v",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-mamma-her2neu-status-leitlinie"
+        },
+        "name": "MII CS Onkologie Mamma Her2neu Status Leitlinie",
+        "description": "Codesystem für Her2neu Status basierend auf der S3-Leitlinie Mammakarzinom und ASCO/CAP Guidelines mit erweiterten Klassifikationen (HER2-low, HER2-ultralow)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-mamma-her2neu-status-obds"
+        },
+        "name": "MII CS Onkologie Mamma Her2neu Status oBDS",
+        "description": "oBDS-spezifisches Codesystem für Her2neu Status gemäß oBDS Feld M4 (243)",
         "exampleBoolean": false
       },
       {
@@ -874,7 +972,7 @@
           "reference": "StructureDefinition/mii-ex-onko-tnm-cp-praefix"
         },
         "name": "MII EX Onkologie TNM c/p Präfix",
-        "description": "Die Extension verleiht einer TNM T-, N- oder M-Kategorie ein c, p oder u Präfix.",
+        "description": "Die Extension verleiht einer TNM T-, N- oder M-Kategorie ein c, p oder u Präfix zur Angabe der Klassifikationsmethode: 'c' = klinische Klassifikation (basierend auf klinischen Angaben), 'p' = pathologische Klassifikation (basierend auf pathohistologischer Untersuchung), 'u' = Ultraschall-basierte Klassifikation.",
         "exampleBoolean": false
       },
       {
@@ -975,6 +1073,14 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-onko-mamma-her2neu-status"
+        },
+        "name": "MII EXA Onko Mamma Her2neu Status",
+        "description": "Beispiel für Her2neu Status bei Mammakarzinom - HER2-positiv (IHC 3+)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-her2neu-status"
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-onko-melanom-breslow-tiefe"
         },
         "name": "MII EXA Onko Melanom Breslow Tiefe",
@@ -1066,7 +1172,7 @@
           "reference": "StructureDefinition/mii-pr-onko-prostata-operation"
         },
         "name": "MII PR Onko Prostata Operation",
-        "description": "Prostata-spezifische Operation. Dieses Profil spezialisiert die allgemeine onkologische Operation für Prostata-spezifische Eingriffe mit einem präferierten ValueSet basierend auf SNOMED CT 118877007 und dessen Kindern.",
+        "description": "Prostata-spezifische Operation. Dieses Profil spezialisiert die allgemeine onkologische Operation für Prostata-spezifische Eingriffe mit einem required Binding zu einem ValueSet basierend auf SNOMED CT 118877007 und dessen Kindern.",
         "exampleBoolean": false
       },
       {
@@ -1103,10 +1209,26 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog-quantity"
+        },
+        "name": "MII PR Onkologie Allgemeiner Leistungszustand ECOG (Quantity - Trial Use v2026)",
+        "description": "**Status: TRIAL USE in Version 2026**\n\nExperimentelles Profil für die Version 2026: Beschreibung des allgemeinen Leistungszustandes\nnach ECOG als Quantity (Integer 0-4).\n\nDieses Profil wird parallel zum Standard-CodeableConcept-Profil (mii-pr-onko-allgemeiner-leistungszustand-ecog)\nangeboten, um Implementierungserfahrungen zu sammeln. Feedback von Implementierern während der\nv2026-Nutzung wird verwendet, um zu entscheiden, ob das Profil in v2027+ zum Standard wird\noder angepasst werden muss.\n\n**Vorteile der Quantity-Modellierung:**\n- Unterstützung von Vergleichsoperatoren (>, <, >=, <=) für Queries\n- Bessere Analysemöglichkeiten: Median, Mittelwert, Trendanalysen\n- Natürliche Integer-Skala (0, 1, 2, 3, 4) ohne Unit-Ambiguität\n- Ausrichtung an FHIR Score-Modellierungsrichtlinien der Basisprofile DE\n- Reference Ranges mit Karnofsky-Äquivalenten für klinische Interpretation\n\n**Validierung:**\nBeide Profile (CodeableConcept und Quantity) validieren gegen die gleiche\nObservationDefinition (ObsDef-ECOG-Performance-Status), die beide\nDatentypen als permittedDataType erlaubt.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-karnofsky"
         },
         "name": "MII PR Onkologie Allgemeiner Leistungszustand nach Karnofsky",
         "description": "OBDS Beschreibung des allgemeines Leistungszustandes nach Karnofsky",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-karnofsky-quantity"
+        },
+        "name": "MII PR Onkologie Allgemeiner Leistungszustand nach Karnofsky (Quantity - Trial Use v2026)",
+        "description": "**Status: TRIAL USE in Version 2026**\n\nExperimentelles Profil für die Version 2026: Beschreibung des allgemeinen Leistungszustandes\nnach Karnofsky als Quantity mit Reference Ranges.\n\nDieses Profil wird parallel zum Standard-CodeableConcept-Profil (mii-pr-onko-allgemeiner-leistungszustand-karnofsky)\nangeboten, um Implementierungserfahrungen zu sammeln. Feedback von Implementierern während der\nv2026-Nutzung wird verwendet, um zu entscheiden, ob das Profil in v2027+ zum Standard wird\noder angepasst werden muss.\n\n**Vorteile der Quantity-Modellierung:**\n- Unterstützung von Vergleichsoperatoren (>, <, >=, <=) für Queries\n- Bessere Analysemöglichkeiten und Trenddarstellung\n- Ausrichtung an FHIR Score-Modellierungsrichtlinien der Basisprofile DE\n- Reference Ranges mit ECOG-Äquivalenten für klinische Interpretation\n\n**Validierung:**\nBeide Profile (CodeableConcept und Quantity) validieren gegen die gleiche\nObservationDefinition (ObsDef-Karnofsky-Performance-Status), die beide\nDatentypen als permittedDataType erlaubt.",
         "exampleBoolean": false
       },
       {
@@ -1143,6 +1265,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-asa-klassifikation"
+        },
+        "name": "MII PR Onkologie ASA-Klassifikation",
+        "description": "Dieses Profil beschreibt die ASA-Klassifikation (American Society of Anesthesiologists Physical Status Classification) in der Onkologie. Die ASA-Klassifikation dient primär der präoperativen Risikobewertung, kann aber auch als Komorbidätsindex für systemische Therapieentscheidungen verwendet werden. Ursprünglich aus oBDS KR9 (Kolorektales Karzinom), nun generalisiert für alle onkologischen Indikationen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-befund"
         },
         "name": "MII PR Onkologie Befund",
@@ -1170,7 +1300,7 @@
           "reference": "StructureDefinition/mii-pr-onko-diagnose-primaertumor"
         },
         "name": "MII PR Onkologie Diagnose Primärtumor",
-        "description": "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der primären hämatologisch-myeloneoplastischen Erkrankung)",
+        "description": "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der primären hämatologisch-myeloneoplastischen Erkrankung) und basiert auf dem MII KDS Modul Diagnose.",
         "exampleBoolean": false
       },
       {
@@ -1207,6 +1337,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-mamma-her2neu-status"
+        },
+        "name": "MII PR Onkologie Her2neu Status",
+        "description": "Dieses Profil beschreibt den Her2neu Status einer pathologisch untersuchten Probe beim Mamma-Karzinom in der Onkologie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-histologie-icdo3"
         },
         "name": "MII PR Onkologie Histologie ICD-O-3",
@@ -1219,14 +1357,6 @@
         },
         "name": "MII PR Onkologie KRK Anastomoseninsuffizienz",
         "description": "Dieses Profil beschreibt die Bewertung der Anastomoseninsuffizienz nach einer Operation beim Kolorektalen Karzinom",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/mii-pr-onko-krk-asa-klassifikation"
-        },
-        "name": "MII PR Onkologie KRK ASA-Klassifikation",
-        "description": "Dieses Profil beschreibt die ASA-Klassifikation (American Society of Anesthesiologists Physical Status Classification) beim Kolorektalen Karzinom gemäß oBDS KR9",
         "exampleBoolean": false
       },
       {
@@ -1274,7 +1404,7 @@
           "reference": "StructureDefinition/mii-pr-onko-melanom-sicherheitsabstand"
         },
         "name": "MII PR Onkologie Melanom Sicherheitsabstand",
-        "description": "Dieses Profil beschreibt den minimalen Sicherheitsabstand zum Primärtumor beim Malignen Melanom basierend oBDS Feld MM1. Abweichend ",
+        "description": "Dieses Profil beschreibt den minimalen Sicherheitsabstand zum Primärtumor beim Malignen Melanom basierend auf oBDS Feld MM1. Bei nicht beurteilbaren Fällen (oBDS Wert -1) wird dataAbsentReason verwendet statt valueQuantity.",
         "exampleBoolean": false
       },
       {
@@ -1639,6 +1769,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-onko-weitere-klassifikationen-auspraegungen"
+        },
+        "name": "MII Value Set Onkologie - Weitere Klassifikationen - Auspraegungen",
+        "description": "Comprehensive collection of cancer staging systems and classification schemes used in oncology beyond TNM classification. This includes AJCC, FIGO, hematological classifications, and specialized organ-specific systems. Based on mCODE STU4 and German oBDS catalogue. Covers entity-specific classifications (e.g., FIGO for gynecological tumors), hematological classifications, and WHO classifications for CNS tumors.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-melanom-exzision-snomedct"
         },
         "name": "MII VS Onko Melanom Exzision SNOMED CT",
@@ -1651,6 +1789,14 @@
         },
         "name": "MII VS Onko Prostata Operation SNOMED CT",
         "description": "Value Set für Prostata-spezifische Operationen basierend auf SNOMED CT. Enthält alle Kinder von 118877007 |Procedure on prostate (procedure)|",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-prostata-psa-loinc"
+        },
+        "name": "MII VS Onko Prostata PSA LOINC",
+        "description": "Value Set für Prostata-spezifisches Antigen (PSA) LOINC Codes. Enthält LOINC Codes für Total-PSA und freies PSA, exkludiert gebundenes PSA Messungen.",
         "exampleBoolean": false
       },
       {
@@ -1715,6 +1861,22 @@
         },
         "name": "MII VS Onkologie ICD-O-3 Topographie",
         "description": "Codes für Topographie einer neoplastischen Veränderung",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-her2neu-status-leitlinie"
+        },
+        "name": "MII VS Onkologie Mamma Her2neu Status Leitlinie",
+        "description": "Value Set für Her2neu Status nach S3-Leitlinie und ASCO/CAP Guidelines",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-her2neu-status-obds"
+        },
+        "name": "MII VS Onkologie Mamma Her2neu Status oBDS",
+        "description": "Value Set für Her2neu Status nach oBDS",
         "exampleBoolean": false
       },
       {
@@ -2018,7 +2180,7 @@
           "reference": "ValueSet/mii-vs-onko-tnm-cp-praefix"
         },
         "name": "MII VS Onkologie TNM cpu Praefix",
-        "description": "Codes für TNM c/p-Präfix. Gibt an, ob die Klassifikation klinisch oder pathologisch erfolgte.",
+        "description": "Codes für TNM c/p/u-Präfix. Gibt an, ob die Klassifikation klinisch (c), pathologisch (p) oder mittels Ultraschall (u) erfolgte.",
         "exampleBoolean": false
       },
       {
@@ -2240,6 +2402,13 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-onko-asa-klassifikation"
+        },
+        "name": "mii-exa-onko-asa-klassifikation",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-asa-klassifikation"
+      },
+      {
+        "reference": {
           "reference": "DiagnosticReport/mii-exa-onko-befund-1"
         },
         "name": "mii-exa-onko-befund-1",
@@ -2300,13 +2469,6 @@
         },
         "name": "mii-exa-onko-histologie-icdo3",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-histologie-icdo3"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-onko-krk-asa-klassifikation"
-        },
-        "name": "mii-exa-onko-krk-asa-klassifikation",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-asa-klassifikation"
       },
       {
         "reference": {
@@ -2961,6 +3123,22 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-onko-asa-loinc"
+        },
+        "name": "MII_VS_Onko_ASA_LOINC",
+        "description": "Value Set für LOINC ASA Physical Status Classification (generalisiert für alle onkologischen Indikationen)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-asa-obds"
+        },
+        "name": "MII_VS_Onko_ASA_oBDS",
+        "description": "Value Set für oBDS ASA-Klassifikation (ursprünglich KR9 aus Kolorektales Karzinom Modul, generalisiert für alle onkologischen Indikationen)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-krk-abstand-circumferelle-resektionsrand"
         },
         "name": "MII_VS_Onko_KRK_Abstand_Circumferelle_Resektionsrand",
@@ -2981,22 +3159,6 @@
         },
         "name": "MII_VS_Onko_KRK_Anastomoseninsuffizienz",
         "description": "Value Set für die Bewertung der Anastomoseninsuffizienz beim Kolorektalen Karzinom",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-krk-asa-loinc"
-        },
-        "name": "MII_VS_Onko_KRK_ASA_LOINC",
-        "description": "Value Set für LOINC ASA Physical Status Classification",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-krk-asa-obds"
-        },
-        "name": "MII_VS_Onko_KRK_ASA_oBDS",
-        "description": "Value Set für oBDS ASA-Klassifikation beim Kolorektalen Karzinom (KR9)",
         "exampleBoolean": false
       },
       {
@@ -3133,6 +3295,22 @@
         },
         "name": "MII_VS_Onko_Prostata_Postsurgical_Complications",
         "description": "Value Set für Clavien-Dindo Klassifikation",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ObservationDefinition/ObsDef-ECOG-Performance-Status"
+        },
+        "name": "ObservationDefinition: ECOG Performance Status",
+        "description": "Canonical definition for ECOG (Eastern Cooperative Oncology Group) Performance Status observations.\n\nSupports both CodeableConcept (codes 0-4) and Quantity (integer 0-4) representations,\nallowing implementers to choose based on their use case while ensuring consistent validation.\n\nECOG to Karnofsky mapping (according to oBDS 12.1):\n- ECOG 0 = Karnofsky 90-100%: Normale Aktivität ohne Einschränkung\n- ECOG 1 = Karnofsky 70-80%: Symptome, aber gehfähig; leichte Arbeit möglich\n- ECOG 2 = Karnofsky 50-60%: Gehfähig, Selbstversorgung, nicht arbeitsfähig; >50% Wachzeit aufrecht\n- ECOG 3 = Karnofsky 30-40%: Begrenzte Selbstversorgung; ≥50% an Bett/Stuhl gebunden\n- ECOG 4 = Karnofsky 10-20%: Vollständig pflegebedürftig, keine Selbstversorgung möglich",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ObservationDefinition/ObsDef-Karnofsky-Performance-Status"
+        },
+        "name": "ObservationDefinition: Karnofsky Performance Status",
+        "description": "Canonical definition for Karnofsky Performance Status observations.\n\nSupports both CodeableConcept (codes 0%, 10%, ..., 100%) and Quantity (0-100 with unit %)\nrepresentations, allowing implementers to choose based on their use case while ensuring\nconsistent validation.\n\nKarnofsky to ECOG mapping (according to oBDS 12.1):\n- Karnofsky 90-100% = ECOG 0: Normale Aktivität ohne Einschränkung\n- Karnofsky 70-80% = ECOG 1: Symptome, aber gehfähig; leichte Arbeit möglich\n- Karnofsky 50-60% = ECOG 2: Gehfähig, Selbstversorgung, nicht arbeitsfähig; >50% Wachzeit aufrecht\n- Karnofsky 30-40% = ECOG 3: Begrenzte Selbstversorgung; ≥50% an Bett/Stuhl gebunden\n- Karnofsky 10-20% = ECOG 4: Vollständig pflegebedürftig, keine Selbstversorgung möglich\n- Karnofsky 0% = ECOG 5: Tod",
         "exampleBoolean": false
       },
       {

@@ -102,6 +102,7 @@ Description: "Validierte ATC-Codes für Substanzen der systemischen Therapie bas
 * include http://fhir.de/CodeSystem/bfarm/atc#L01XE26 "Cabozantinib"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01EX07 "Cabozantinib"
 * include http://fhir.de/CodeSystem/bfarm/atc#V03AF04 "Calciumlevofolinat"
+* include http://fhir.de/CodeSystem/bfarm/atc#V03AF06 "Natriumfolinat"
 * include http://fhir.de/CodeSystem/bfarm/atc#L04AC08 "Canakinumab"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01BC06 "Capecitabin"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01EX27 "Capivasertib"
