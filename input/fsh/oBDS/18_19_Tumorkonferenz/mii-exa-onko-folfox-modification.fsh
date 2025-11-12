@@ -74,13 +74,14 @@ InstanceOf: MII_PR_Onko_TNM_T_Kategorie
 Usage: #example
 Title: "TNM T-Kategorie - pT3"
 * status = #final
+* code = $SCT#384625004 "pT category (observable entity)"
+* code.extension[cpPraefix].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-cpu-praefix"
+* code.extension[cpPraefix].valueCodeableConcept.coding.code = #p
 * subject = Reference(Patient/example-modification)
 * focus = Reference(mii-exa-onko-ascending-colon-cancer-diagnosis)
 * effectiveDateTime = "2024-02-25"
 * valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-uicc"
 * valueCodeableConcept.coding.code = #T3
-* extension[TNM-c-p-u-Praefix].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-cpu-praefix"
-* extension[TNM-c-p-u-Praefix].valueCodeableConcept.coding.code = #p
 
 // TNM Classification - N Category (pathological)
 Instance: mii-exa-onko-ascending-colon-tnm-n
@@ -88,13 +89,14 @@ InstanceOf: MII_PR_Onko_TNM_N_Kategorie
 Usage: #example
 Title: "TNM N-Kategorie - pN1"
 * status = #final
+* code = $SCT#371494008 "pN category (observable entity)"
+* code.extension[cpPraefix].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-cpu-praefix"
+* code.extension[cpPraefix].valueCodeableConcept.coding.code = #p
 * subject = Reference(Patient/example-modification)
 * focus = Reference(mii-exa-onko-ascending-colon-cancer-diagnosis)
 * effectiveDateTime = "2024-02-25"
 * valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-uicc"
 * valueCodeableConcept.coding.code = #N1
-* extension[TNM-c-p-u-Praefix].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-cpu-praefix"
-* extension[TNM-c-p-u-Praefix].valueCodeableConcept.coding.code = #p
 
 // TNM Classification - M Category (clinical)
 Instance: mii-exa-onko-ascending-colon-tnm-m
@@ -102,13 +104,14 @@ InstanceOf: MII_PR_Onko_TNM_M_Kategorie
 Usage: #example
 Title: "TNM M-Kategorie - cM0"
 * status = #final
+* code = $SCT#399387003 "cM category (observable entity)"
+* code.extension[cpPraefix].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-cpu-praefix"
+* code.extension[cpPraefix].valueCodeableConcept.coding.code = #c
 * subject = Reference(Patient/example-modification)
 * focus = Reference(mii-exa-onko-ascending-colon-cancer-diagnosis)
 * effectiveDateTime = "2024-02-25"
 * valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-uicc"
 * valueCodeableConcept.coding.code = #M0
-* extension[TNM-c-p-u-Praefix].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-cpu-praefix"
-* extension[TNM-c-p-u-Praefix].valueCodeableConcept.coding.code = #c
 
 // TNM Classification - Overall staging (groups T, N, M)
 Instance: mii-exa-onko-ascending-colon-tnm
@@ -256,7 +259,7 @@ Description: "First phase: Full FOLFOX4 protocol for 6 cycles before dose modifi
 * extension[Intention].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention"
 * extension[Intention].valueCodeableConcept.coding.code = #K
 * extension[Intention].valueCodeableConcept.coding.display = "Kurativ"
-* extension[StellungZurOp].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-stellung-op"
+* extension[StellungZurOp].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-stellungzurop"
 * extension[StellungZurOp].valueCodeableConcept.coding.code = #A
 * extension[StellungZurOp].valueCodeableConcept.coding.display = "Adjuvant"
 * code.coding[systemische_therapie_art].system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art"
@@ -382,7 +385,7 @@ Description: "Second phase: Modified protocol with 5-FU + Leucovorin only (no Ox
 * extension[Intention].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention"
 * extension[Intention].valueCodeableConcept.coding.code = #K
 * extension[Intention].valueCodeableConcept.coding.display = "Kurativ"
-* extension[StellungZurOp].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-stellung-op"
+* extension[StellungZurOp].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-stellungzurop"
 * extension[StellungZurOp].valueCodeableConcept.coding.code = #A
 * extension[StellungZurOp].valueCodeableConcept.coding.display = "Adjuvant"
 * code.coding[systemische_therapie_art].system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art"
@@ -452,23 +455,23 @@ Title: "Verlauf - 6 Monate nach modifizierter Therapie"
 Description: "6-month follow-up showing complete response despite protocol modification"
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf"
 * status = #final
+* code.coding = $SCT#396432002 "Status of regression of tumor (observable entity)"
 * subject = Reference(Patient/example-modification)
 * focus = Reference(mii-exa-onko-ascending-colon-cancer-diagnosis)
 * effectiveDateTime = "2025-03-10"
-* code.coding = $LNC#88040-1 "Response to cancer treatment"
-* valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-gesamtbeurteilung-tumorstatus"
+* valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung"
 * valueCodeableConcept.coding.code = #V
 * valueCodeableConcept.coding.display = "Vollremission/Vollständiges Ansprechen"
-* component[Tumor].code = $SCT#445200009 "Status of residual neoplasm (observable entity)"
-* component[Tumor].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-lokaler-tumorstatus"
-* component[Tumor].valueCodeableConcept.coding.code = #K
-* component[Tumor].valueCodeableConcept.coding.display = "Kein Tumor nachweisbar"
-* component[Lymphknoten].code = $LNC#21906-3 "Lymph nodes.pathology [Interpretation] Cancer"
-* component[Lymphknoten].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-lymphknoten-tumorstatus"
-* component[Lymphknoten].valueCodeableConcept.coding.code = #K
-* component[Lymphknoten].valueCodeableConcept.coding.display = "Keine Lymphknoten befallen"
-* component[Fernmetastasen].code = $LNC#21907-1 "Distant metastases.pathology [Interpretation] Cancer"
-* component[Fernmetastasen].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen-tumorstatus"
-* component[Fernmetastasen].valueCodeableConcept.coding.code = #K
-* component[Fernmetastasen].valueCodeableConcept.coding.display = "Keine Fernmetastasen nachweisbar"
+* component[Tumor_Verlauf].code.coding = $SCT#445200009 "Status of residual neoplasm (observable entity)"
+* component[Tumor_Verlauf].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-primaertumor"
+* component[Tumor_Verlauf].valueCodeableConcept.coding.code = #K
+* component[Tumor_Verlauf].valueCodeableConcept.coding.display = "Kein Tumor nachweisbar"
+* component[Lymphknoten_Verlauf].code.coding = $SCT#399656008 "Presence of metastatic neoplasm in regional lymph node (observable entity)"
+* component[Lymphknoten_Verlauf].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-lymphknoten"
+* component[Lymphknoten_Verlauf].valueCodeableConcept.coding.code = #K
+* component[Lymphknoten_Verlauf].valueCodeableConcept.coding.display = "Keine Lymphknoten befallen"
+* component[Fernmetastasen_Verlauf].code.coding = $SCT#399608002 "Status of distant metastasis (observable entity)"
+* component[Fernmetastasen_Verlauf].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen"
+* component[Fernmetastasen_Verlauf].valueCodeableConcept.coding.code = #K
+* component[Fernmetastasen_Verlauf].valueCodeableConcept.coding.display = "Keine Fernmetastasen nachweisbar"
 * note.text = "Patient completed modified chemotherapy protocol (6 cycles FOLFOX4 + 6 cycles FUFOL). Despite early discontinuation of oxaliplatin due to neuropathy, patient achieved complete response. CT scan and colonoscopy show no evidence of recurrence. CEA normal (1.8 ng/mL). Peripheral neuropathy has improved to grade 1 but persists. Patient is disease-free at 6-month follow-up."

@@ -1,4 +1,4 @@
-E// ObservationDefinitions for Performance Status Scores
+// ObservationDefinitions for Performance Status Scores
 //
 // These define the canonical specifications for ECOG and Karnofsky performance status
 // assessments. Both CodeableConcept and Quantity profile variants validate against

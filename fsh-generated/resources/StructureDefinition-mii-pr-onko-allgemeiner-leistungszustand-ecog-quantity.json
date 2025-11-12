@@ -169,7 +169,7 @@
             "key": "ecog-valid-value",
             "severity": "error",
             "human": "ECOG value must be an integer between 0 and 4",
-            "expression": "value >= 0 and value <= 4 and value.toString().matches('^[0-4]$')",
+            "expression": "value >= 0 and value <= 4 and (value - value.floor()) = 0",
             "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog-quantity"
           }
         ],

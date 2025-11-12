@@ -1,0 +1,70 @@
+{
+  "resourceType": "RequestGroup",
+  "id": "mii-exa-onko-folfox-requestgroup",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie"
+    ]
+  },
+  "intent": "proposal",
+  "status": "active",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "authoredOn": "2024-03-10",
+  "reasonReference": [
+    {
+      "reference": "Condition/example-colorectal-cancer"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ",
+        "code": "CH",
+        "display": "Chemotherapie"
+      }
+    ],
+    "text": "Chemotherapie"
+  },
+  "action": [
+    {
+      "title": "FOLFOX4 Protocol",
+      "description": "FOLFOX4 chemotherapy protocol: Fluorouracil + Folinsäure + Oxaliplatin",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle",
+              "code": "FOLFOX4",
+              "display": "FOLFOX4"
+            }
+          ]
+        }
+      ],
+      "action": [
+        {
+          "title": "Fluorouracil (5-FU)",
+          "description": "5-Fluorouracil - pyrimidine analog, antineoplastic",
+          "resource": {
+            "reference": "MedicationRequest/mii-exa-onko-folfox-5fu-request"
+          }
+        },
+        {
+          "title": "Folinsäure (Leucovorin)",
+          "description": "Folinic acid - enhances 5-FU efficacy",
+          "resource": {
+            "reference": "MedicationRequest/mii-exa-onko-folfox-leucovorin-request"
+          }
+        },
+        {
+          "title": "Oxaliplatin",
+          "description": "Platinum-based chemotherapy agent",
+          "resource": {
+            "reference": "MedicationRequest/mii-exa-onko-folfox-oxaliplatin-request"
+          }
+        }
+      ]
+    }
+  ]
+}

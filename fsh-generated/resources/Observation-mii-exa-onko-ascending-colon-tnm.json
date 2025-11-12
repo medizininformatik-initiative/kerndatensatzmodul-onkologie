@@ -1,0 +1,56 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-ascending-colon-tnm",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
+    ]
+  },
+  "status": "final",
+  "subject": {
+    "reference": "Patient/example-modification"
+  },
+  "focus": [
+    {
+      "reference": "Condition/mii-exa-onko-ascending-colon-cancer-diagnosis"
+    }
+  ],
+  "effectiveDateTime": "2024-02-25",
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "21908-9",
+        "display": "Stage group.pathology Cancer"
+      }
+    ]
+  },
+  "method": {
+    "coding": [
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+        "code": "8",
+        "display": "8. Auflage"
+      }
+    ]
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-uicc",
+        "code": "IIIB"
+      }
+    ]
+  },
+  "hasMember": [
+    {
+      "reference": "Observation/mii-exa-onko-ascending-colon-tnm-t"
+    },
+    {
+      "reference": "Observation/mii-exa-onko-ascending-colon-tnm-n"
+    },
+    {
+      "reference": "Observation/mii-exa-onko-ascending-colon-tnm-m"
+    }
+  ]
+}

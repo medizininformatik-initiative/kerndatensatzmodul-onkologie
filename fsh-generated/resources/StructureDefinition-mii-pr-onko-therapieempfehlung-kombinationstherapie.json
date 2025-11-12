@@ -101,6 +101,81 @@
           }
         ],
         "mustSupport": true
+      },
+      {
+        "id": "RequestGroup.action",
+        "path": "RequestGroup.action",
+        "mustSupport": true
+      },
+      {
+        "id": "RequestGroup.action.code",
+        "path": "RequestGroup.action.code",
+        "short": "Empfohlenes Therapieprotokoll",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Empfohlenes Therapieprotokoll"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Empfohlenes Therapieprotokoll gemäß Tumorkonferenz",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Spezifisches Therapieprotokoll empfohlen durch Tumorkonferenz. Bei Kombinationstherapien repräsentiert dies das Gesamtprotokoll mit einzelnen Medikamenten als Sub-Actions."
+                }
+              ]
+            }
+          ]
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-protokolle"
+        }
+      },
+      {
+        "id": "RequestGroup.action.action",
+        "path": "RequestGroup.action.action",
+        "short": "Individual medications in protocol",
+        "definition": "For combination therapy protocols, each sub-action references an individual MedicationRequest with ATC/UNII coding",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "RequestGroup.action.action.resource",
+        "path": "RequestGroup.action.action.resource",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation"
+            ]
+          }
+        ],
+        "mustSupport": true
       }
     ]
   }

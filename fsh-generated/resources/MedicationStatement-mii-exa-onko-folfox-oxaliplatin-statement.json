@@ -1,0 +1,42 @@
+{
+  "resourceType": "MedicationStatement",
+  "id": "mii-exa-onko-folfox-oxaliplatin-statement",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
+    ]
+  },
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/atc",
+        "code": "L01XA03",
+        "display": "Oxaliplatin"
+      }
+    ],
+    "text": "Oxaliplatin"
+  },
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "partOf": [
+    {
+      "reference": "Procedure/mii-exa-onko-folfox-procedure"
+    }
+  ],
+  "basedOn": [
+    {
+      "reference": "CarePlan/mii-exa-onko-tumorkonferenz-folfox"
+    }
+  ],
+  "effectivePeriod": {
+    "start": "2024-03-20",
+    "end": "2024-09-15"
+  },
+  "note": [
+    {
+      "text": "FOLFOX4"
+    }
+  ]
+}

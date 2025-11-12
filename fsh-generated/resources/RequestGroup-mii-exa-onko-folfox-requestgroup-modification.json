@@ -1,0 +1,70 @@
+{
+  "resourceType": "RequestGroup",
+  "id": "mii-exa-onko-folfox-requestgroup-modification",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie"
+    ]
+  },
+  "intent": "proposal",
+  "status": "active",
+  "subject": {
+    "reference": "Patient/example-modification"
+  },
+  "authoredOn": "2024-03-05",
+  "reasonReference": [
+    {
+      "reference": "Condition/mii-exa-onko-ascending-colon-cancer-diagnosis"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ",
+        "code": "CH",
+        "display": "Chemotherapie"
+      }
+    ],
+    "text": "Chemotherapie"
+  },
+  "action": [
+    {
+      "title": "FOLFOX4 Protocol",
+      "description": "FOLFOX4 chemotherapy protocol: Fluorouracil + Folinsäure + Oxaliplatin, 12 cycles planned",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle",
+              "code": "FOLFOX4",
+              "display": "FOLFOX4"
+            }
+          ]
+        }
+      ],
+      "action": [
+        {
+          "title": "Fluorouracil (5-FU)",
+          "description": "5-Fluorouracil - pyrimidine analog",
+          "resource": {
+            "reference": "MedicationRequest/mii-exa-onko-modification-5fu-request"
+          }
+        },
+        {
+          "title": "Folinsäure (Leucovorin)",
+          "description": "Folinic acid - enhances 5-FU efficacy",
+          "resource": {
+            "reference": "MedicationRequest/mii-exa-onko-modification-leucovorin-request"
+          }
+        },
+        {
+          "title": "Oxaliplatin",
+          "description": "Platinum-based chemotherapy agent",
+          "resource": {
+            "reference": "MedicationRequest/mii-exa-onko-modification-oxaliplatin-request"
+          }
+        }
+      ]
+    }
+  ]
+}

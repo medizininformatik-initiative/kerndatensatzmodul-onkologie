@@ -1,0 +1,58 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-colorectal-tnm-m",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie"
+    ]
+  },
+  "code": {
+    "extension": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-cpu-praefix",
+              "code": "c"
+            }
+          ]
+        }
+      }
+    ],
+    "coding": [
+      {
+        "code": "399387003",
+        "system": "http://snomed.info/sct",
+        "display": "cM category (observable entity)"
+      }
+    ]
+  },
+  "status": "final",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "focus": [
+    {
+      "reference": "Condition/mii-exa-onko-colorectal-cancer-diagnosis"
+    }
+  ],
+  "effectiveDateTime": "2024-02-20",
+  "method": {
+    "coding": [
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+        "code": "8",
+        "version": "8"
+      }
+    ]
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-uicc",
+        "code": "M0"
+      }
+    ]
+  }
+}

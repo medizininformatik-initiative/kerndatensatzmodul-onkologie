@@ -1,0 +1,56 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-colorectal-tnm",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "258235000",
+        "system": "http://snomed.info/sct",
+        "display": "UICC - Union Internationale Contre le Cancer tumor staging"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "focus": [
+    {
+      "reference": "Condition/mii-exa-onko-colorectal-cancer-diagnosis"
+    }
+  ],
+  "effectiveDateTime": "2024-02-20",
+  "method": {
+    "coding": [
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+        "code": "8",
+        "version": "8"
+      }
+    ]
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-uicc",
+        "code": "IIIB"
+      }
+    ]
+  },
+  "hasMember": [
+    {
+      "reference": "Observation/mii-exa-onko-colorectal-tnm-t"
+    },
+    {
+      "reference": "Observation/mii-exa-onko-colorectal-tnm-n"
+    },
+    {
+      "reference": "Observation/mii-exa-onko-colorectal-tnm-m"
+    }
+  ]
+}

@@ -77,6 +77,22 @@
     "resource": [
       {
         "reference": {
+          "reference": "MedicationStatement/mii-exa-onko-modification-5fu-phase1"
+        },
+        "name": "5-FU Phase 1 (Zyklen 1-6)",
+        "description": "Fluorouracil administered during FOLFOX4 phase",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
+      },
+      {
+        "reference": {
+          "reference": "MedicationStatement/mii-exa-onko-modification-5fu-phase2"
+        },
+        "name": "5-FU Phase 2 (Zyklen 7-12)",
+        "description": "Fluorouracil continued for cycles 7-12 as part of modified FUFOL protocol",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
+      },
+      {
+        "reference": {
           "reference": "Procedure/mii-exa-onko-strahlentherapie-2014-mamma-mit-lk"
         },
         "name": "Beispiel Strahlentherapie oBDS 2014 - Mamma mit Lymphknoten (3.1.+)",
@@ -209,11 +225,136 @@
       },
       {
         "reference": {
+          "reference": "MedicationRequest/mii-exa-onko-folfox-5fu-request"
+        },
+        "name": "FOLFOX - Fluorouracil MedicationRequest",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation"
+      },
+      {
+        "reference": {
+          "reference": "MedicationStatement/mii-exa-onko-folfox-5fu-statement"
+        },
+        "name": "FOLFOX - Fluorouracil tatsächlich verabreicht",
+        "description": "5-Fluorouracil medication statement as part of FOLFOX4 protocol",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
+      },
+      {
+        "reference": {
+          "reference": "MedicationRequest/mii-exa-onko-folfox-leucovorin-request"
+        },
+        "name": "FOLFOX - Folinsäure MedicationRequest",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation"
+      },
+      {
+        "reference": {
+          "reference": "MedicationStatement/mii-exa-onko-folfox-leucovorin-statement"
+        },
+        "name": "FOLFOX - Folinsäure tatsächlich verabreicht",
+        "description": "Folinic acid (Leucovorin) medication statement as part of FOLFOX4 protocol",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
+      },
+      {
+        "reference": {
+          "reference": "MedicationRequest/mii-exa-onko-folfox-oxaliplatin-request"
+        },
+        "name": "FOLFOX - Oxaliplatin MedicationRequest",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation"
+      },
+      {
+        "reference": {
+          "reference": "MedicationStatement/mii-exa-onko-folfox-oxaliplatin-statement"
+        },
+        "name": "FOLFOX - Oxaliplatin tatsächlich verabreicht",
+        "description": "Oxaliplatin medication statement as part of FOLFOX4 protocol",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-folfox-procedure"
+        },
+        "name": "FOLFOX Systemische Therapie (tatsächlich durchgeführt)",
+        "description": "Actual FOLFOX chemotherapy given, linked back to tumor board recommendation",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
+      },
+      {
+        "reference": {
+          "reference": "RequestGroup/mii-exa-onko-folfox-requestgroup"
+        },
+        "name": "FOLFOX Therapieempfehlung (RequestGroup)",
+        "description": "Tumor board recommendation for FOLFOX protocol with therapy type and protocol coding",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-folfox-phase1"
+        },
+        "name": "FOLFOX4 Therapie - Phase 1 (Zyklen 1-6)",
+        "description": "First phase: Full FOLFOX4 protocol for 6 cycles before dose modification",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
+      },
+      {
+        "reference": {
+          "reference": "RequestGroup/mii-exa-onko-folfox-requestgroup-modification"
+        },
+        "name": "FOLFOX4 Therapieempfehlung",
+        "description": "Original tumor board recommendation for FOLFOX4 protocol (later modified due to toxicity)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie"
+      },
+      {
+        "reference": {
+          "reference": "MedicationStatement/mii-exa-onko-modification-leucovorin-phase1"
+        },
+        "name": "Folinsäure Phase 1 (Zyklen 1-6)",
+        "description": "Leucovorin administered during FOLFOX4 phase",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
+      },
+      {
+        "reference": {
+          "reference": "MedicationStatement/mii-exa-onko-modification-leucovorin-phase2"
+        },
+        "name": "Folinsäure Phase 2 (Zyklen 7-12)",
+        "description": "Leucovorin continued for cycles 7-12 as part of modified FUFOL protocol",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-fufol-phase2"
+        },
+        "name": "FUFOL Therapie - Phase 2 (Zyklen 7-12)",
+        "description": "Second phase: Modified protocol with 5-FU + Leucovorin only (no Oxaliplatin) for remaining 6 cycles",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
+      },
+      {
+        "reference": {
           "reference": "Procedure/PatientKimMusterperson-Procedure-4"
         },
         "name": "Hauptprocedure: Komplexe abdominale Tumorchirurgie",
         "description": "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie, Tumorresektion mittels Hysterektomie, bilateraler Adnexektomie, und atpyischer Lebersegmentresektion (Seg. II und V). Postoperativ: R0.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-right-hemicolectomy"
+        },
+        "name": "Hemikolektomie rechts",
+        "description": "Laparoscopic right hemicolectomy with lymph node dissection",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation"
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-onko-colorectal-cancer-diagnosis"
+        },
+        "name": "Kolonkarzinom Primärdiagnose",
+        "description": "Stage III sigmoid colon adenocarcinoma, diagnosed January 2024",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-onko-ascending-colon-cancer-diagnosis"
+        },
+        "name": "Kolonkarzinom Primärdiagnose - Colon ascendens",
+        "description": "Stage III ascending colon adenocarcinoma, diagnosed January 2024",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
       },
       {
         "reference": {
@@ -246,6 +387,30 @@
         "name": "Mapping oBDS Stoma-Anzeichnung zu SNOMED CT",
         "description": "Mapping der oBDS-Codes für präoperative Stoma-Anzeichnung zu SNOMED CT",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "MedicationRequest/mii-exa-onko-modification-5fu-request"
+        },
+        "name": "MedicationRequest - Fluorouracil (vollständig verabreicht)",
+        "description": "Fluorouracil recommendation - completed for all 12 cycles",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation"
+      },
+      {
+        "reference": {
+          "reference": "MedicationRequest/mii-exa-onko-modification-leucovorin-request"
+        },
+        "name": "MedicationRequest - Folinsäure (vollständig verabreicht)",
+        "description": "Leucovorin recommendation - completed for all 12 cycles",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation"
+      },
+      {
+        "reference": {
+          "reference": "MedicationRequest/mii-exa-onko-modification-oxaliplatin-request"
+        },
+        "name": "MedicationRequest - Oxaliplatin (abgebrochen wegen Neuropathie)",
+        "description": "Oxaliplatin recommendation - stopped after cycle 6 due to grade 3 peripheral neuropathy",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation"
       },
       {
         "reference": {
@@ -2857,6 +3022,13 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-onko-tumorgroesse"
+        },
+        "name": "mii-exa-onko-tumorgroesse",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorgroesse"
+      },
+      {
+        "reference": {
           "reference": "CarePlan/mii-exa-onko-tumorkonferenz-01"
         },
         "name": "mii-exa-onko-tumorkonferenz-01",
@@ -3315,6 +3487,14 @@
       },
       {
         "reference": {
+          "reference": "MedicationStatement/mii-exa-onko-modification-oxaliplatin-phase1"
+        },
+        "name": "Oxaliplatin Phase 1 (Zyklen 1-6, dann abgebrochen)",
+        "description": "Oxaliplatin administered for 6 cycles, then discontinued due to neuropathy",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
+      },
+      {
+        "reference": {
           "reference": "Patient/PatientKimMusterperson"
         },
         "name": "PatientKimMusterperson",
@@ -3530,6 +3710,38 @@
       },
       {
         "reference": {
+          "reference": "Procedure/mii-exa-onko-sigmoid-resection"
+        },
+        "name": "Sigmaresektion - Haupteingriff",
+        "description": "Main surgical procedure: Laparoscopic sigmoid resection with lymph node dissection - using SNOMED code",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-sigmoid-resection-part1"
+        },
+        "name": "Sigmaresektion Teil 1 - Resektion und Anastomose",
+        "description": "Component procedure 1: Sigmoid resection with anastomosis",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-sigmoid-resection-part2"
+        },
+        "name": "Sigmaresektion Teil 2 - Lymphknotendissektion",
+        "description": "Component procedure 2: Regional lymph node dissection",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-sigmoid-resection-part3"
+        },
+        "name": "Sigmaresektion Teil 3 - Port-Anlage",
+        "description": "Component procedure 3: Laparoscopic port placement",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation"
+      },
+      {
+        "reference": {
           "reference": "Procedure/mii-exa-onko-strahlentherapie-bestrahlung-nuklearmedizin-1"
         },
         "name": "Strahlentherapie: Beispiel einer Nuklearmedizinischen Bestrahlungstherapie",
@@ -3543,6 +3755,64 @@
         "name": "Strahlentherapie: Beispiel einer Strahlentherapie mit allgemeinem OPS-Code 8-52",
         "description": "Example radiation therapy conformant with MII Prozedur as bracket for radiation and nuclear therapy",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-colorectal-tnm"
+        },
+        "name": "TNM Klassifikation - pT3 pN1 cM0, UICC Stage IIIB",
+        "description": "Postoperative pathological TNM staging with UICC stage group IIIB",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-ascending-colon-tnm"
+        },
+        "name": "TNM Klassifikation - Stadium IIIB",
+        "description": "Postoperative pathological TNM staging for ascending colon cancer (pT3 pN1 cM0 = Stage IIIB)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-ascending-colon-tnm-m"
+        },
+        "name": "TNM M-Kategorie - cM0",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-colorectal-tnm-m"
+        },
+        "name": "TNM M-Kategorie - cM0",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-ascending-colon-tnm-n"
+        },
+        "name": "TNM N-Kategorie - pN1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-colorectal-tnm-n"
+        },
+        "name": "TNM N-Kategorie - pN1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-ascending-colon-tnm-t"
+        },
+        "name": "TNM T-Kategorie - pT3",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-colorectal-tnm-t"
+        },
+        "name": "TNM T-Kategorie - pT3",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
       },
       {
         "reference": {
@@ -3599,6 +3869,46 @@
         "name": "TNM-y-Symbol-Observation-2",
         "description": ".",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-y-symbol"
+      },
+      {
+        "reference": {
+          "reference": "CarePlan/mii-exa-onko-tumorkonferenz-folfox-modification"
+        },
+        "name": "Tumorkonferenz - FOLFOX Empfehlung",
+        "description": "Tumor board recommends FOLFOX4 protocol for adjuvant treatment",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz-detailed-recommendations"
+      },
+      {
+        "reference": {
+          "reference": "CarePlan/mii-exa-onko-tumorkonferenz-folfox"
+        },
+        "name": "Tumorkonferenz - FOLFOX Empfehlung bei Kolorektalkarzinom",
+        "description": "Tumor board recommends FOLFOX protocol for colorectal cancer patient",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz-detailed-recommendations"
+      },
+      {
+        "reference": {
+          "reference": "AdverseEvent/mii-exa-onko-oxaliplatin-neuropathy"
+        },
+        "name": "Unerwünschtes Ereignis - Oxaliplatin-induzierte Neuropathie",
+        "description": "Grade 3 peripheral neuropathy caused by oxaliplatin, leading to treatment modification",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-folfox-verlauf-6months"
+        },
+        "name": "Verlauf - 6 Monate nach FOLFOX",
+        "description": "6-month follow-up examination showing no evidence of disease",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-modification-verlauf-6months"
+        },
+        "name": "Verlauf - 6 Monate nach modifizierter Therapie",
+        "description": "6-month follow-up showing complete response despite protocol modification",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf"
       }
     ],
     "page": {

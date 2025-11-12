@@ -1,0 +1,49 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-ascending-colon-tnm-t",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
+    ]
+  },
+  "code": {
+    "extension": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-cpu-praefix",
+              "code": "p"
+            }
+          ]
+        }
+      }
+    ],
+    "coding": [
+      {
+        "code": "384625004",
+        "system": "http://snomed.info/sct",
+        "display": "pT category (observable entity)"
+      }
+    ]
+  },
+  "status": "final",
+  "subject": {
+    "reference": "Patient/example-modification"
+  },
+  "focus": [
+    {
+      "reference": "Condition/mii-exa-onko-ascending-colon-cancer-diagnosis"
+    }
+  ],
+  "effectiveDateTime": "2024-02-25",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-uicc",
+        "code": "T3"
+      }
+    ]
+  }
+}
