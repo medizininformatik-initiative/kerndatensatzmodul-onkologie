@@ -197,8 +197,10 @@ Usage: #example
 Title: "Beispiel: ECOG Verlauf - Vergleichbarkeit durch Quantity"
 Description: "Demonstriert wie valueQuantity Vergleiche ermöglicht: Patient verschlechtert sich von ECOG 1 auf ECOG 3"
 * type = #collection
-* entry[+].resource = Example-ECOG-Baseline
-* entry[+].resource = Example-ECOG-Followup
+* entry[+].fullUrl = "http://example.org/Observation/Example-ECOG-Baseline"
+* entry[=].resource = Example-ECOG-Baseline
+* entry[+].fullUrl = "http://example.org/Observation/Example-ECOG-Followup"
+* entry[=].resource = Example-ECOG-Followup
 
 Instance: Example-ECOG-Baseline
 InstanceOf: MII_PR_Onko_Allgemeiner_Leistungszustand_ECOG_Quantity

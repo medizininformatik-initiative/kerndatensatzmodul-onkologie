@@ -206,8 +206,10 @@ Usage: #example
 Title: "Beispiel: Karnofsky Verlauf - Vergleichbarkeit durch Quantity"
 Description: "Demonstriert wie valueQuantity Vergleiche ermöglicht: Patient verschlechtert sich von 90% auf 60%"
 * type = #collection
-* entry[+].resource = Example-Karnofsky-Baseline
-* entry[+].resource = Example-Karnofsky-Followup
+* entry[+].fullUrl = "http://example.org/Observation/Example-Karnofsky-Baseline"
+* entry[=].resource = Example-Karnofsky-Baseline
+* entry[+].fullUrl = "http://example.org/Observation/Example-Karnofsky-Followup"
+* entry[=].resource = Example-Karnofsky-Followup
 
 Instance: Example-Karnofsky-Baseline
 InstanceOf: MII_PR_Onko_Allgemeiner_Leistungszustand_Karnofsky_Quantity
