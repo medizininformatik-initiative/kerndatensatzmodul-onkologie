@@ -120,7 +120,7 @@ Source: MII_PR_Onko_Allgemeiner_Leistungszustand_ECOG_Quantity
 // Invariant for valid ECOG values
 Invariant: ecog-valid-value
 Description: "ECOG value must be an integer between 0 and 4"
-Expression: "value >= 0 and value <= 4 and (value - value.floor()) = 0"
+Expression: "value >= 0.0 and value <= 4.0 and (value - value.floor()) = 0.0"
 Severity: #error
 
 // Example demonstrating usage

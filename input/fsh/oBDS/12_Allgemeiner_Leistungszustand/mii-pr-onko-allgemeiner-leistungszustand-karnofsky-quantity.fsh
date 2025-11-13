@@ -118,7 +118,7 @@ Source: MII_PR_Onko_Allgemeiner_Leistungszustand_Karnofsky_Quantity
 // Invariant for valid Karnofsky values
 Invariant: karnofsky-valid-value
 Description: "Karnofsky value must be between 0 and 100 in steps of 10"
-Expression: "value >= 0 and value <= 100 and (value mod 10) = 0"
+Expression: "value >= 0.0 and value <= 100.0 and (value mod 10.0) = 0.0"
 Severity: #error
 
 // Example demonstrating usage
