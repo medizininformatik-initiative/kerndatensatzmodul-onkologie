@@ -53,7 +53,7 @@ jobs:
         run: fhir restore
 
       - name: Generate depended FHIR packages snapshots
-        run: fhir deps | tr ' ' '@' | xargs -I% fhir inflate --package % --snapshot --expand --force
+        run: fhir deps | while read -r package; do fhir inflate --package "$package" --snapshot --expand --force; done
 
       - name: Build FHIR profiles
         run: sushi .
