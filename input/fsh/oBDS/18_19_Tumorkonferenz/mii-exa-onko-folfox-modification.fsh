@@ -75,12 +75,12 @@ Usage: #example
 Title: "TNM T-Kategorie - pT3"
 * status = #final
 * code = $SCT#384625004 "pT category (observable entity)"
-* code.extension[cpPraefix].valueCodeableConcept.coding.system = "https://www.uicc.org/resources/tnm"
+* code.extension[cpPraefix].valueCodeableConcept.coding.system = $UICC
 * code.extension[cpPraefix].valueCodeableConcept.coding.code = #p
 * subject = Reference(Patient/example-modification)
 * focus = Reference(mii-exa-onko-ascending-colon-cancer-diagnosis)
 * effectiveDateTime = "2024-02-25"
-* valueCodeableConcept.coding.system = "https://www.uicc.org/resources/tnm"
+* valueCodeableConcept.coding.system = $UICC
 * valueCodeableConcept.coding.code = #T3
 
 // TNM Classification - N Category (pathological)
