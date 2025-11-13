@@ -80,7 +80,7 @@ Title: "TNM T-Kategorie - pT3"
 * subject = Reference(Patient/example-modification)
 * focus = Reference(mii-exa-onko-ascending-colon-cancer-diagnosis)
 * effectiveDateTime = "2024-02-25"
-* valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-uicc"
+* valueCodeableConcept.coding.system = "https://www.uicc.org/resources/tnm"
 * valueCodeableConcept.coding.code = #T3
 
 // TNM Classification - N Category (pathological)
@@ -95,7 +95,7 @@ Title: "TNM N-Kategorie - pN1"
 * subject = Reference(Patient/example-modification)
 * focus = Reference(mii-exa-onko-ascending-colon-cancer-diagnosis)
 * effectiveDateTime = "2024-02-25"
-* valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-uicc"
+* valueCodeableConcept.coding.system = "https://www.uicc.org/resources/tnm"
 * valueCodeableConcept.coding.code = #N1
 
 // TNM Classification - M Category (clinical)
@@ -110,7 +110,7 @@ Title: "TNM M-Kategorie - cM0"
 * subject = Reference(Patient/example-modification)
 * focus = Reference(mii-exa-onko-ascending-colon-cancer-diagnosis)
 * effectiveDateTime = "2024-02-25"
-* valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-uicc"
+* valueCodeableConcept.coding.system = "https://www.uicc.org/resources/tnm"
 * valueCodeableConcept.coding.code = #M0
 
 // TNM Classification - Overall staging (groups T, N, M)
@@ -130,7 +130,7 @@ Description: "Postoperative pathological TNM staging for ascending colon cancer 
 * method.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"
 * method.coding.code = #8
 * method.coding.display = "8. Auflage"
-* valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-uicc"
+* valueCodeableConcept.coding.system = "https://www.uicc.org/resources/tnm"
 * valueCodeableConcept.coding.code = #IIIB
 * hasMember[0] = Reference(mii-exa-onko-ascending-colon-tnm-t)
 * hasMember[1] = Reference(mii-exa-onko-ascending-colon-tnm-n)

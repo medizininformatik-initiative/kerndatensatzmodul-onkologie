@@ -181,7 +181,7 @@ Title: "TNM T-Kategorie - pT3"
 * method.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"
 * method.coding.code = #8
 * method.coding.version = "8"
-* valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-uicc"
+* valueCodeableConcept.coding.system = "https://www.uicc.org/resources/tnm"
 * valueCodeableConcept.coding.code = #T3
 
 // TNM Classification - N Category (pathological)
@@ -199,7 +199,7 @@ Title: "TNM N-Kategorie - pN1"
 * method.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"
 * method.coding.code = #8
 * method.coding.version = "8"
-* valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-uicc"
+* valueCodeableConcept.coding.system = "https://www.uicc.org/resources/tnm"
 * valueCodeableConcept.coding.code = #N1
 
 // TNM Classification - M Category (clinical)
@@ -217,7 +217,7 @@ Title: "TNM M-Kategorie - cM0"
 * method.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"
 * method.coding.code = #8
 * method.coding.version = "8"
-* valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-uicc"
+* valueCodeableConcept.coding.system = "https://www.uicc.org/resources/tnm"
 * valueCodeableConcept.coding.code = #M0
 
 // TNM Classification - Overall staging (groups T, N, M)
@@ -235,7 +235,7 @@ Description: "Postoperative pathological TNM staging with UICC stage group IIIB"
 * method.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"
 * method.coding.code = #8
 * method.coding.version = "8"
-* valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-uicc"
+* valueCodeableConcept.coding.system = "https://www.uicc.org/resources/tnm"
 * valueCodeableConcept.coding.code = #IIIB
 * hasMember[0] = Reference(mii-exa-onko-colorectal-tnm-t)
 * hasMember[1] = Reference(mii-exa-onko-colorectal-tnm-n)
