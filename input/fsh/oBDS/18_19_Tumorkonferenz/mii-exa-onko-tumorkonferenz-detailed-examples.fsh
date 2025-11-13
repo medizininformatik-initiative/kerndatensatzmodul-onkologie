@@ -136,7 +136,7 @@ Usage: #example
 * reasonReference = Reference(Condition/example-breast-cancer)
 * medicationCodeableConcept.coding[atcClassDe].system = "http://fhir.de/CodeSystem/bfarm/atc"
 * medicationCodeableConcept.coding[atcClassDe].code = #L01FD03
-* medicationCodeableConcept.coding[atcClassDe].display = "Trastuzumab emtansine"
+* medicationCodeableConcept.coding[atcClassDe].display = "Trastuzumab emtansin"
 * medicationCodeableConcept.text = "Trastuzumab Emtansine (T-DM1)"
 * note.text = "Second-line option, recommended if progression on trastuzumab-based therapy"
 

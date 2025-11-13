@@ -137,7 +137,7 @@ Description: "ATC-Codes für Substanzen der systemischen Therapie, validiert geg
 * include http://fhir.de/CodeSystem/bfarm/atc#L01BC02 "Fluorouracil"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01BC52 "Fluorouracil, Kombinationen"
 * include http://fhir.de/CodeSystem/bfarm/atc#L02BB01 "Flutamid"
-* include http://fhir.de/CodeSystem/bfarm/atc#V03AF03 "Folinsäure"
+* include http://fhir.de/CodeSystem/bfarm/atc#V03AF03 "Calciumfolinat"
 * include http://fhir.de/CodeSystem/bfarm/atc#L02BG02 "Formestan"
 * include http://fhir.de/CodeSystem/bfarm/atc#L02AA04 "Fosfestrol"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01AD05 "Fotemustin"
