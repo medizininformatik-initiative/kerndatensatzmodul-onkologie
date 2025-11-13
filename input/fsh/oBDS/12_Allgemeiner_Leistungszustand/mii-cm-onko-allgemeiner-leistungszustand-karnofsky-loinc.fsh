@@ -8,7 +8,7 @@ Description: "Mapping der oBDS-Codes für Karnofsky Performance Status zu LOINC 
 * insert Version
 
 * sourceCanonical = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-karnofsky"
-* targetCanonical = "http://loinc.org"
+* targetCanonical = "http://loinc.org/vs/LL4986-7"
 
 * group[+].source = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-karnofsky"
 * group[=].target = "http://loinc.org"

@@ -8,7 +8,7 @@ Description: "Mapping der oBDS-Codes für ECOG Performance Status zu LOINC Answe
 * insert Version
 
 * sourceCanonical = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-ecog"
-* targetCanonical = "http://loinc.org"
+* targetCanonical = "http://loinc.org/vs/LL529-9"
 
 * group[+].source = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-ecog"
 * group[=].target = "http://loinc.org"
