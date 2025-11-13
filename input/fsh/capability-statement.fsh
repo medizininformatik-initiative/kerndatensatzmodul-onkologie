@@ -6,9 +6,9 @@ RuleSet: SupportResource (resource, expectation)
 * rest.resource[=].extension[0].valueCode = {expectation}
 
 RuleSet: Profile (profile, expectation)
-// Note: CapabilityStatement.rest.resource.profile is a canonical URL and cannot have extensions
-// Use SupportProfile for profiles that need expectation extensions
 * rest.resource[=].profile[+] = "{profile}"
+* rest.resource[=].profile[=].extension[0].url = $exp
+* rest.resource[=].profile[=].extension[0].valueCode = {expectation}
 
 RuleSet: SupportProfile (profile, expectation)
 // This rule set must follow a SupportResource rule set, and applies to that resource.
