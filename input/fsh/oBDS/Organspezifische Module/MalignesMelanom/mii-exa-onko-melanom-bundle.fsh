@@ -20,7 +20,7 @@ InstanceOf: MII_PR_Onko_Diagnose_Primaertumor
 Usage: #example
 * clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed
-* code.coding = $ICD10GM#C43.9 "Bösartige Neubildung: Haut, nicht näher bezeichnet"
+* code.coding = $ICD10GM#C43.9 "Bösartiges Melanom der Haut, nicht näher bezeichnet"
 * code.coding.version = "2024"
 * subject = Reference(mii-exa-onko-melanom-bundle-patient)
 * recordedDate = "2024-01-02"

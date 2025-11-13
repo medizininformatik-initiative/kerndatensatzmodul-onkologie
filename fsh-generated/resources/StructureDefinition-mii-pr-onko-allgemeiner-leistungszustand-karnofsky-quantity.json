@@ -169,7 +169,7 @@
             "key": "karnofsky-valid-value",
             "severity": "error",
             "human": "Karnofsky value must be between 0 and 100 in steps of 10",
-            "expression": "value >= 0 and value <= 100 and (value mod 10) = 0",
+            "expression": "value >= 0.0 and value <= 100.0 and (value mod 10.0) = 0.0",
             "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-karnofsky-quantity"
           }
         ],
