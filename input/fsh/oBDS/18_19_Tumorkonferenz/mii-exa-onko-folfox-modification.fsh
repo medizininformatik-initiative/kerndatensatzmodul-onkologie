@@ -75,7 +75,7 @@ Usage: #example
 Title: "TNM T-Kategorie - pT3"
 * status = #final
 * code = $SCT#384625004 "pT category (observable entity)"
-* code.extension[cpPraefix].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-cpu-praefix"
+* code.extension[cpPraefix].valueCodeableConcept.coding.system = "https://www.uicc.org/resources/tnm"
 * code.extension[cpPraefix].valueCodeableConcept.coding.code = #p
 * subject = Reference(Patient/example-modification)
 * focus = Reference(mii-exa-onko-ascending-colon-cancer-diagnosis)
@@ -90,7 +90,7 @@ Usage: #example
 Title: "TNM N-Kategorie - pN1"
 * status = #final
 * code = $SCT#371494008 "pN category (observable entity)"
-* code.extension[cpPraefix].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-cpu-praefix"
+* code.extension[cpPraefix].valueCodeableConcept.coding.system = "https://www.uicc.org/resources/tnm"
 * code.extension[cpPraefix].valueCodeableConcept.coding.code = #p
 * subject = Reference(Patient/example-modification)
 * focus = Reference(mii-exa-onko-ascending-colon-cancer-diagnosis)
@@ -105,7 +105,7 @@ Usage: #example
 Title: "TNM M-Kategorie - cM0"
 * status = #final
 * code = $SCT#399387003 "cM category (observable entity)"
-* code.extension[cpPraefix].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-cpu-praefix"
+* code.extension[cpPraefix].valueCodeableConcept.coding.system = "https://www.uicc.org/resources/tnm"
 * code.extension[cpPraefix].valueCodeableConcept.coding.code = #c
 * subject = Reference(Patient/example-modification)
 * focus = Reference(mii-exa-onko-ascending-colon-cancer-diagnosis)
