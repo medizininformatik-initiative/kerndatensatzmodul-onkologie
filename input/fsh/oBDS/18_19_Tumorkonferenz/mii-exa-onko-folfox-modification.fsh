@@ -150,7 +150,7 @@ Description: "Tumor board recommends FOLFOX4 protocol for adjuvant treatment"
 * intent = #plan
 * category.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ"
 * category.coding.code = #praeth
-* category.coding.display = "Prätherapeutische Tumorkonferenz"
+* category.coding.display = "prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie)"
 * subject = Reference(Patient/example-modification)
 * created = "2024-03-05"
 * addresses = Reference(mii-exa-onko-ascending-colon-cancer-diagnosis)

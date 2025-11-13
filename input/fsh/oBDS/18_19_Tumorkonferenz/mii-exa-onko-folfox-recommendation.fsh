@@ -255,7 +255,7 @@ Description: "Tumor board recommends FOLFOX protocol for colorectal cancer patie
 * intent = #plan
 * category.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ"
 * category.coding.code = #praeth // Prätherapeutische Tumorkonferenz
-* category.coding.display = "Prätherapeutische Tumorkonferenz"
+* category.coding.display = "prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie)"
 * subject = Reference(Patient/example)
 * created = "2024-03-10"
 * addresses = Reference(Condition/example-colorectal-cancer)

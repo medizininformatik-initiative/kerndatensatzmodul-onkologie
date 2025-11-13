@@ -12,15 +12,22 @@ Description: "oBDS 2014 Legacy-Codesystem für Klassifikation von Zielgebiet von
 * ^valueSet = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-zielgebiet-2014"
 * ^content = #complete
 * ^property[0].code = #deprecated
-* ^property[=].uri = "http://hl7.org/fhir/concept-properties#deprecated"
 * ^property[=].type = #boolean
 * ^property[=].description = "Legacy oBDS 2014 code - use oBDS 2021 equivalent"
 
 // Bereich: ZNS
 * #"1." "ZNS"
+* #"1." ^property.code = #deprecated
+* #"1." ^property.valueBoolean = true
 * #"1.1." "Ganzhirn"
+* #"1.1." ^property.code = #deprecated
+* #"1.1." ^property.valueBoolean = true
 * #"1.2." "Teilhirn"
+* #"1.2." ^property.code = #deprecated
+* #"1.2." ^property.valueBoolean = true
 * #"1.3." "Neuroachse"
+* #"1.3." ^property.code = #deprecated
+* #"1.3." ^property.valueBoolean = true
 
 // Bereich: Kopf-Hals
 * #"2." "Kopf-Hals"
