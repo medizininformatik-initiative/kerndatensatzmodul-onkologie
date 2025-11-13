@@ -196,7 +196,7 @@ InstanceOf: Bundle
 Usage: #example
 Title: "Beispiel: ECOG Verlauf - Vergleichbarkeit durch Quantity"
 Description: "Demonstriert wie valueQuantity Vergleiche ermöglicht: Patient verschlechtert sich von ECOG 1 auf ECOG 3"
-* type = #collection
+* type = #transaction
 * entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/Example-ECOG-Baseline"
 * entry[=].resource = Example-ECOG-Baseline
 * entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/Example-ECOG-Followup"

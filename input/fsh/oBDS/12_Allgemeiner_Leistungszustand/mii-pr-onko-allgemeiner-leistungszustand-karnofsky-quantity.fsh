@@ -205,7 +205,7 @@ InstanceOf: Bundle
 Usage: #example
 Title: "Beispiel: Karnofsky Verlauf - Vergleichbarkeit durch Quantity"
 Description: "Demonstriert wie valueQuantity Vergleiche ermöglicht: Patient verschlechtert sich von 90% auf 60%"
-* type = #collection
+* type = #transaction
 * entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/Example-Karnofsky-Baseline"
 * entry[=].resource = Example-Karnofsky-Baseline
 * entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/Example-Karnofsky-Followup"
