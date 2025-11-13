@@ -157,7 +157,7 @@ Description: "Beispiel für Karnofsky Performance Status 80% mit valueQuantity u
 * referenceRange[=].high.system = $UCUM
 * referenceRange[=].high.code = #%
 * referenceRange[=].text = "ECOG 1: Symptome, aber gehfähig; leichte Arbeit möglich"
-* referenceRange[=].appliesTo = $SCT#373066001 "Patient currently being treated (finding)"
+* referenceRange[=].appliesTo = $SCT#373066001 "Yes"
 
 * referenceRange[+].low.value = 50
 * referenceRange[=].low.unit = "%"
