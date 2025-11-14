@@ -368,7 +368,7 @@ Description: "Actual FOLFOX chemotherapy given, linked back to tumor board recom
 * extension[Intention].valueCodeableConcept.coding.display = "Kurativ"
 
 // Stellung zur OP - Adjuvant (nach Operation)
-* extension[StellungZurOp].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-stellungzurop"
+* extension[StellungZurOp].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop"
 * extension[StellungZurOp].valueCodeableConcept.coding.code = #A
 * extension[StellungZurOp].valueCodeableConcept.coding.display = "Adjuvant"
 

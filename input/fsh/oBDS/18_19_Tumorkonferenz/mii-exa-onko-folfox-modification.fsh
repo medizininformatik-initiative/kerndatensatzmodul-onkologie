@@ -259,9 +259,10 @@ Description: "First phase: Full FOLFOX4 protocol for 6 cycles before dose modifi
 * extension[Intention].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention"
 * extension[Intention].valueCodeableConcept.coding.code = #K
 * extension[Intention].valueCodeableConcept.coding.display = "Kurativ"
-* extension[StellungZurOp].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-stellungzurop"
+* extension[StellungZurOp].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop"
 * extension[StellungZurOp].valueCodeableConcept.coding.code = #A
 * extension[StellungZurOp].valueCodeableConcept.coding.display = "Adjuvant"
+* category = $SCT#18629005	// Administration of drug or medicament
 * code.coding[systemische_therapie_art].system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art"
 * code.coding[systemische_therapie_art].code = #CH
 * code.coding[systemische_therapie_art].display = "Chemotherapie"
@@ -385,7 +386,7 @@ Description: "Second phase: Modified protocol with 5-FU + Leucovorin only (no Ox
 * extension[Intention].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention"
 * extension[Intention].valueCodeableConcept.coding.code = #K
 * extension[Intention].valueCodeableConcept.coding.display = "Kurativ"
-* extension[StellungZurOp].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-stellungzurop"
+* extension[StellungZurOp].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop"
 * extension[StellungZurOp].valueCodeableConcept.coding.code = #A
 * extension[StellungZurOp].valueCodeableConcept.coding.display = "Adjuvant"
 * category = $SCT#18629005	// Administration of drug or medicament
