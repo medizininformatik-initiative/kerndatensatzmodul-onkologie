@@ -12,6 +12,8 @@
 // ObservationDefinition (see below), giving implementers flexibility while ensuring
 // semantic consistency.
 
+// COMMENTED OUT FOR NOW - Karnofsky Quantity profile and examples
+/*
 Profile: MII_PR_Onko_Allgemeiner_Leistungszustand_Karnofsky_Quantity
 Parent: Observation
 Id: mii-pr-onko-allgemeiner-leistungszustand-karnofsky-quantity
@@ -238,3 +240,4 @@ Usage: #example
 * valueQuantity.system = $UCUM
 * valueQuantity.code = #%
 * note.text = "Follow-up: ECOG 2 Äquivalent - Verschlechterung um 30 Prozentpunkte. Mit Quantity: valueQuantity.value < previousValue ermöglicht direkte Vergleiche."
+*/

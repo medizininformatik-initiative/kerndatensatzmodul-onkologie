@@ -117,38 +117,6 @@
       },
       {
         "reference": {
-          "reference": "Observation/Example-ECOG-Quantity-2"
-        },
-        "name": "Beispiel: ECOG 2 als Quantity",
-        "description": "Beispiel für ECOG Performance Status 2 mit valueQuantity und Reference Ranges für Karnofsky-Äquivalente",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog-quantity"
-      },
-      {
-        "reference": {
-          "reference": "Bundle/Example-ECOG-Comparison-Set"
-        },
-        "name": "Beispiel: ECOG Verlauf - Vergleichbarkeit durch Quantity",
-        "description": "Demonstriert wie valueQuantity Vergleiche ermöglicht: Patient verschlechtert sich von ECOG 1 auf ECOG 3",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Observation/Example-Karnofsky-Quantity-80"
-        },
-        "name": "Beispiel: Karnofsky 80% als Quantity",
-        "description": "Beispiel für Karnofsky Performance Status 80% mit valueQuantity und Reference Ranges für ECOG-Äquivalente",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-karnofsky-quantity"
-      },
-      {
-        "reference": {
-          "reference": "Bundle/Example-Karnofsky-Comparison-Set"
-        },
-        "name": "Beispiel: Karnofsky Verlauf - Vergleichbarkeit durch Quantity",
-        "description": "Demonstriert wie valueQuantity Vergleiche ermöglicht: Patient verschlechtert sich von 90% auf 60%",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
           "reference": "MedicationStatement/mii-exa-onko-systemische-therapie-medikation1"
         },
         "name": "Example chemotherapy 1",
@@ -194,34 +162,6 @@
         "name": "Example systemic therapy",
         "description": "Example systemic therapy",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
-      },
-      {
-        "reference": {
-          "reference": "Observation/Example-ECOG-Baseline"
-        },
-        "name": "Example-ECOG-Baseline",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog-quantity"
-      },
-      {
-        "reference": {
-          "reference": "Observation/Example-ECOG-Followup"
-        },
-        "name": "Example-ECOG-Followup",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog-quantity"
-      },
-      {
-        "reference": {
-          "reference": "Observation/Example-Karnofsky-Baseline"
-        },
-        "name": "Example-Karnofsky-Baseline",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-karnofsky-quantity"
-      },
-      {
-        "reference": {
-          "reference": "Observation/Example-Karnofsky-Followup"
-        },
-        "name": "Example-Karnofsky-Followup",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-karnofsky-quantity"
       },
       {
         "reference": {
@@ -1374,26 +1314,10 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog-quantity"
-        },
-        "name": "MII PR Onkologie Allgemeiner Leistungszustand ECOG (Quantity - Trial Use v2026)",
-        "description": "**Status: TRIAL USE in Version 2026**\n\nExperimentelles Profil für die Version 2026: Beschreibung des allgemeinen Leistungszustandes\nnach ECOG als Quantity (Integer 0-4).\n\nDieses Profil wird parallel zum Standard-CodeableConcept-Profil (mii-pr-onko-allgemeiner-leistungszustand-ecog)\nangeboten, um Implementierungserfahrungen zu sammeln. Feedback von Implementierern während der\nv2026-Nutzung wird verwendet, um zu entscheiden, ob das Profil in v2027+ zum Standard wird\noder angepasst werden muss.\n\n**Vorteile der Quantity-Modellierung:**\n- Unterstützung von Vergleichsoperatoren (>, <, >=, <=) für Queries\n- Bessere Analysemöglichkeiten: Median, Mittelwert, Trendanalysen\n- Natürliche Integer-Skala (0, 1, 2, 3, 4) ohne Unit-Ambiguität\n- Ausrichtung an FHIR Score-Modellierungsrichtlinien der Basisprofile DE\n- Reference Ranges mit Karnofsky-Äquivalenten für klinische Interpretation\n\n**Validierung:**\nBeide Profile (CodeableConcept und Quantity) validieren gegen die gleiche\nObservationDefinition (ObsDef-ECOG-Performance-Status), die beide\nDatentypen als permittedDataType erlaubt.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-karnofsky"
         },
         "name": "MII PR Onkologie Allgemeiner Leistungszustand nach Karnofsky",
         "description": "OBDS Beschreibung des allgemeines Leistungszustandes nach Karnofsky",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-karnofsky-quantity"
-        },
-        "name": "MII PR Onkologie Allgemeiner Leistungszustand nach Karnofsky (Quantity - Trial Use v2026)",
-        "description": "**Status: TRIAL USE in Version 2026**\n\nExperimentelles Profil für die Version 2026: Beschreibung des allgemeinen Leistungszustandes\nnach Karnofsky als Quantity mit Reference Ranges.\n\nDieses Profil wird parallel zum Standard-CodeableConcept-Profil (mii-pr-onko-allgemeiner-leistungszustand-karnofsky)\nangeboten, um Implementierungserfahrungen zu sammeln. Feedback von Implementierern während der\nv2026-Nutzung wird verwendet, um zu entscheiden, ob das Profil in v2027+ zum Standard wird\noder angepasst werden muss.\n\n**Vorteile der Quantity-Modellierung:**\n- Unterstützung von Vergleichsoperatoren (>, <, >=, <=) für Queries\n- Bessere Analysemöglichkeiten und Trenddarstellung\n- Ausrichtung an FHIR Score-Modellierungsrichtlinien der Basisprofile DE\n- Reference Ranges mit ECOG-Äquivalenten für klinische Interpretation\n\n**Validierung:**\nBeide Profile (CodeableConcept und Quantity) validieren gegen die gleiche\nObservationDefinition (ObsDef-Karnofsky-Performance-Status), die beide\nDatentypen als permittedDataType erlaubt.",
         "exampleBoolean": false
       },
       {

@@ -13,6 +13,8 @@
 // ObservationDefinition (see ObsDef-ECOG-Performance-Status), giving implementers
 // flexibility while ensuring semantic consistency.
 
+// COMMENTED OUT FOR NOW - ECOG Quantity profile and examples
+/*
 Profile: MII_PR_Onko_Allgemeiner_Leistungszustand_ECOG_Quantity
 Parent: Observation
 Id: mii-pr-onko-allgemeiner-leistungszustand-ecog-quantity
@@ -229,3 +231,4 @@ Usage: #example
 * valueQuantity.system = $UCUM
 * valueQuantity.code = #{score}
 * note.text = "Follow-up: ECOG 3 - Verschlechterung um 2 Punkte (Karnofsky 30-40%). Mit Quantity: valueQuantity.value > previousValue ermöglicht direkte Vergleiche."
+*/
