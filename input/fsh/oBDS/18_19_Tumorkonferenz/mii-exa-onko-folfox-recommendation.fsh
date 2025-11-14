@@ -225,7 +225,7 @@ Title: "TNM Klassifikation - pT3 pN1 cM0, UICC Stage IIIB"
 Description: "Postoperative pathological TNM staging with UICC stage group IIIB"
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
 * status = #final
-* code.coding = $SCT#258235000 "UICC"
+* code.coding = $SCT#399588009 "Pathologic TNM stage grouping"
 * subject = Reference(Patient/example)
 * focus = Reference(mii-exa-onko-colorectal-cancer-diagnosis)
 * effectiveDateTime = "2024-02-20"
@@ -512,7 +512,7 @@ Description: "6-month follow-up examination showing no evidence of disease"
 // Gesamtbeurteilung Tumorstatus - Complete Response
 * valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung"
 * valueCodeableConcept.coding.code = #V
-* valueCodeableConcept.coding.display = "Vollremission/Vollständiges Ansprechen"
+* valueCodeableConcept.coding.display = "Vollremission (complete remission, CR)"
 
 // Component: Local tumor status
 * component[Tumor_Verlauf].code.coding = $SCT#445200009 "Status of residual neoplasm (observable entity)"
