@@ -54,7 +54,7 @@ Description: "Main surgical procedure: Laparoscopic sigmoid resection with lymph
 * code.coding[ops].system = "http://fhir.de/CodeSystem/bfarm/ops"
 * code.coding[ops].version = "2024"
 * code.coding[ops].code = #5-484.5
-* code.coding[ops].display = "Rektosigmoidresektion"
+* code.coding[ops].display = "Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion"
 * code.text = "Laparoskopische Sigmaresektion mit TME und Lymphknotendissektion"
 
 * subject = Reference(Patient/example)
@@ -70,7 +70,7 @@ Description: "Main surgical procedure: Laparoscopic sigmoid resection with lymph
 // Residual status (R0)
 * outcome.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus"
 * outcome.coding.code = #R0
-* outcome.coding.display = "R0"
+* outcome.coding.display = "Kein Residualtumor"
 * note.text = "Laparoscopic sigmoid resection with TME and lymphadenectomy. No intraoperative complications. Tumor completely resected with clear margins (R0). 18 lymph nodes removed, 3 positive. Surgery performed in 3 components: resection, anastomosis, and lymph node dissection."
 
 // Component Procedure 1 - Sigmoid resection with anastomosis (OPS code)
@@ -87,7 +87,7 @@ Description: "Component procedure 1: Sigmoid resection with anastomosis"
 * code.coding[ops].system = "http://fhir.de/CodeSystem/bfarm/ops"
 * code.coding[ops].version = "2024"
 * code.coding[ops].code = #5-484.5
-* code.coding[ops].display = "Rektosigmoidresektion"
+* code.coding[ops].display = "Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion"
 
 * subject = Reference(Patient/example)
 * encounter = Reference(Encounter/example-surgery)
@@ -118,7 +118,7 @@ Description: "Component procedure 2: Regional lymph node dissection"
 * code.coding[ops].system = "http://fhir.de/CodeSystem/bfarm/ops"
 * code.coding[ops].version = "2024"
 * code.coding[ops].code = #5-407.0
-* code.coding[ops].display = "Radikale Lymphknotendissektion"
+* code.coding[ops].display = "Radikale (systematische) Lymphadenektomie im Rahmen einer anderen Operation: Axillär"
 
 * subject = Reference(Patient/example)
 * encounter = Reference(Encounter/example-surgery)
@@ -149,7 +149,7 @@ Description: "Component procedure 3: Laparoscopic port placement"
 * code.coding[ops].system = "http://fhir.de/CodeSystem/bfarm/ops"
 * code.coding[ops].version = "2024"
 * code.coding[ops].code = #5-986.x
-* code.coding[ops].display = "Minimalinvasive Operationstechnik"
+* code.coding[ops].display = "Minimalinvasive Technik: Sonstige"
 
 * subject = Reference(Patient/example)
 * encounter = Reference(Encounter/example-surgery)

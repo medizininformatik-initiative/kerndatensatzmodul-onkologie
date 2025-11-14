@@ -53,6 +53,7 @@ Instance: mii-exa-onko-pertuzumab-therapie
 InstanceOf: mii-pr-onko-systemische-therapie
 Usage: #example
 * status = #preparation
+* category = $SCT#18629005	// Administration of drug or medicament
 * code.coding[systemische_therapie_art].system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art"
 * code.coding[systemische_therapie_art].code = #ZS
 * code.text = "Pertuzumab"
@@ -67,6 +68,7 @@ Instance: mii-exa-onko-palbociclib-therapie
 InstanceOf: mii-pr-onko-systemische-therapie
 Usage: #example
 * status = #preparation
+* category = $SCT#18629005	// Administration of drug or medicament
 * code.coding[systemische_therapie_art].system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art"
 * code.coding[systemische_therapie_art].code = #ZS
 * code.text = "Palbociclib"

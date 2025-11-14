@@ -23,7 +23,7 @@
       "valueCodeableConcept": {
         "coding": [
           {
-            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-stellungzurop",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop",
             "code": "A",
             "display": "Adjuvant"
           }
@@ -73,6 +73,14 @@
       "reference": "CarePlan/mii-exa-onko-tumorkonferenz-folfox-modification"
     }
   ],
+  "category": {
+    "coding": [
+      {
+        "code": "18629005",
+        "system": "http://snomed.info/sct"
+      }
+    ]
+  },
   "usedCode": [
     {
       "coding": [
