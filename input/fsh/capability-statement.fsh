@@ -5,10 +5,9 @@ RuleSet: SupportResource (resource, expectation)
 * rest.resource[=].extension[0].url = $exp
 * rest.resource[=].extension[0].valueCode = {expectation}
 
-RuleSet: Profile (profile, expectation)
+RuleSet: Profile (profile)
 * rest.resource[=].profile[+] = "{profile}"
-* rest.resource[=].profile[=].extension[0].url = $exp
-* rest.resource[=].profile[=].extension[0].valueCode = {expectation}
+// Note: capabilitystatement-expectation extension not allowed on .profile element
 
 RuleSet: SupportProfile (profile, expectation)
 // This rule set must follow a SupportResource rule set, and applies to that resource.
@@ -53,7 +52,7 @@ Usage: #definition
 
 // Condition requirements
 * insert SupportResource(Condition, #SHALL)
-* insert Profile(http://hl7.org/fhir/StructureDefinition/Condition, #SHALL)
+* insert Profile(http://hl7.org/fhir/StructureDefinition/Condition)
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
@@ -72,7 +71,7 @@ Usage: #definition
 
 // Specimen requirements
 * insert SupportResource(Specimen, #SHALL)
-* insert Profile(http://hl7.org/fhir/StructureDefinition/Specimen, #SHALL)
+* insert Profile(http://hl7.org/fhir/StructureDefinition/Specimen)
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-specimen, #SHALL)
 
 // KRK-specific Specimens
@@ -88,7 +87,7 @@ Usage: #definition
 
 // DiagnosticReport requirements
 * insert SupportResource(DiagnosticReport, #SHALL)
-* insert Profile(http://hl7.org/fhir/StructureDefinition/DiagnosticReport, #SHALL)
+* insert Profile(http://hl7.org/fhir/StructureDefinition/DiagnosticReport)
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-befund, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
@@ -104,7 +103,7 @@ Usage: #definition
 
 // Observation requirements
 * insert SupportResource(Observation, #SHALL)
-* insert Profile(http://hl7.org/fhir/StructureDefinition/Observation, #SHALL)
+* insert Profile(http://hl7.org/fhir/StructureDefinition/Observation)
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-befallene-lymphknoten, #SHALL)
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-untersuchte-lymphknoten, #SHALL)
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-untersuchte-sentinel-lymphknoten, #SHALL)
@@ -192,7 +191,7 @@ Usage: #definition
 
 // List requirements
 * insert SupportResource(List, #SHALL)
-* insert Profile(http://hl7.org/fhir/StructureDefinition/List, #SHALL)
+* insert Profile(http://hl7.org/fhir/StructureDefinition/List)
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-liste-evidenz-erstdiagnose, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
@@ -209,7 +208,7 @@ Usage: #definition
 
 // Procedure requirements
 * insert SupportResource(Procedure, #SHALL)
-* insert Profile(http://hl7.org/fhir/StructureDefinition/Procedure, #SHALL)
+* insert Profile(http://hl7.org/fhir/StructureDefinition/Procedure)
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation, #SHALL)
 
 // Mamma-specific Procedures
@@ -258,7 +257,7 @@ Usage: #definition
 
 // AdverseEvent requirements
 * insert SupportResource(AdverseEvent, #SHALL)
-* insert Profile(http://hl7.org/fhir/StructureDefinition/AdverseEvent, #SHALL)
+* insert Profile(http://hl7.org/fhir/StructureDefinition/AdverseEvent)
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
@@ -273,7 +272,7 @@ Usage: #definition
 
 // Medication Statement requirements
 * insert SupportResource(MedicationStatement, #SHALL)
-* insert Profile(http://hl7.org/fhir/StructureDefinition/MedicationStatement, #SHALL)
+* insert Profile(http://hl7.org/fhir/StructureDefinition/MedicationStatement)
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-systemische-therapie-medikation, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
@@ -289,7 +288,7 @@ Usage: #definition
 
 // CarePlan requirements
 * insert SupportResource(CarePlan, #SHALL)
-* insert Profile(http://hl7.org/fhir/StructureDefinition/CarePlan, #SHALL)
+* insert Profile(http://hl7.org/fhir/StructureDefinition/CarePlan)
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-tumorkonferenz, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
