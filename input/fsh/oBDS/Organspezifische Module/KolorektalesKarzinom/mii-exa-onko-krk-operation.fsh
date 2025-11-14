@@ -12,6 +12,7 @@ Description: "Beispiel für eine Operation beim Kolorektalen Karzinom"
 
 * code.coding[ops] = $OPS#5-484.55 "Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion: Laparoskopisch mit Anastomose"
 * code.coding[ops].version = "2024"
+* code.coding[sct] = $SCT#80146002 "Excision of colon (procedure)"
 
 * subject = Reference(mii-exa-onko-krk-bundle-patient)
 * encounter = Reference(mii-exa-onko-krk-bundle-encounter)

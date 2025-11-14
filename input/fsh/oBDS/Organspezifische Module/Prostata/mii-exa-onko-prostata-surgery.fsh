@@ -8,6 +8,7 @@ Description: "Beispiel für eine Prostatektomie in der Onkologie"
 * category = $SCT#387713003 "Surgical procedure"
 * code.coding[ops] = $OPS#5-604.02 "Radikale Prostatovesikulektomie: Retropubisch: Mit regionaler Lymphadenektomie"
 * code.coding[ops].version = "2024"
+* code.coding[sct] = $SCT#26294005 "Radical prostatectomy (procedure)"
 
 * subject = Reference(mii-exa-onko-prostata-bundle-patient)
 * encounter = Reference(mii-exa-onko-prostata-bundle-encounter)

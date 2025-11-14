@@ -136,6 +136,7 @@ Instance: mii-exa-onko-mamma-praeoperative-markierung-1
 InstanceOf: MII_PR_Onko_Mamma_Praeoperative_Markierung
 Usage: #example
 * status = #completed
+* category = $SCT#103693007 "Diagnostic procedure (procedure)"
 * code.coding = $SCT#433222002 "Insertion of guide wire into breast using ultrasound guidance (procedure)"
 * subject = Reference(mii-exa-onko-mamma-bundle-patient)
 * reasonReference = Reference(Condition/mii-exa-onko-mamma-diagnose)
