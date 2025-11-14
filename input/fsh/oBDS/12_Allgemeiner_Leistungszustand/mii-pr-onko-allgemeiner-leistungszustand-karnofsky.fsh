@@ -39,7 +39,8 @@ Description: "OBDS Beschreibung des allgemeines Leistungszustandes nach Karnofsk
     obds 1..1 MS and
     loinc 0..* MS
 * valueCodeableConcept.coding[obds] from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-karnofsky
-* valueCodeableConcept.coding[obds].system 1.. MS
+* valueCodeableConcept.coding[obds].system 1..
+* valueCodeableConcept.coding[obds].system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-karnofsky"
 * valueCodeableConcept.coding[obds].code 1.. MS
 * valueCodeableConcept.coding[loinc].system 1..
 * valueCodeableConcept.coding[loinc].system = $LNC (exactly)
