@@ -208,12 +208,16 @@
         "mustSupport": true
       },
       {
-        "id": "Observation.component:IHCScore.code.coding",
-        "path": "Observation.component.code.coding",
-        "patternCoding": {
-          "code": "85319-2",
-          "system": "http://loinc.org",
-          "display": "HER2 [Presence] in Breast cancer specimen by Immune stain"
+        "id": "Observation.component:IHCScore.code",
+        "path": "Observation.component.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "85319-2",
+              "system": "http://loinc.org",
+              "display": "HER2 [Presence] in Breast cancer specimen by Immune stain"
+            }
+          ]
         }
       },
       {
@@ -239,12 +243,16 @@
         "mustSupport": true
       },
       {
-        "id": "Observation.component:ISHResult.code.coding",
-        "path": "Observation.component.code.coding",
-        "patternCoding": {
-          "code": "32996-1",
-          "system": "http://loinc.org",
-          "display": "ERBB2 gene duplication [Presence] in Tissue by FISH"
+        "id": "Observation.component:ISHResult.code",
+        "path": "Observation.component.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "32996-1",
+              "system": "http://loinc.org",
+              "display": "ERBB2 gene duplication [Presence] in Tissue by FISH"
+            }
+          ]
         }
       },
       {

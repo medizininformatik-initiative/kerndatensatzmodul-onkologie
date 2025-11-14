@@ -18,7 +18,7 @@ Usage: #example
 * focus = Reference(mii-exa-onko-prostata-diagnose)
 
 * effectiveDateTime = "2024-01-02"
-* valueCodeableConcept.coding = $SCT#369773008 "Gleason pattern 4 (finding)"
+* valueCodeableConcept.coding = $SCT#369773008 "Gleason Pattern 4"
 
 Instance: mii-exa-onko-prostata-gleason-pattern-grade-group-1
 InstanceOf: MII_PR_Onko_Prostata_Gleason_Grade_Group

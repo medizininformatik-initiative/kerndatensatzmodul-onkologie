@@ -19,5 +19,3 @@ Usage: #example
 * valueQuantity.unit = "mm"
 
 * bodySite.coding = $SCT#80248007 "Left breast structure (body structure)"
-
-* method.coding = $SCT#67151002 "Histologic examination (procedure)"

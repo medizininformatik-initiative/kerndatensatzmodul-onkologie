@@ -180,7 +180,6 @@ Title: "TNM T-Kategorie - pT3"
 * effectiveDateTime = "2024-02-20"
 * method.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"
 * method.coding.code = #8
-* method.coding.version = "8"
 * valueCodeableConcept.coding.system = "https://www.uicc.org/resources/tnm"
 * valueCodeableConcept.coding.code = #T3
 
@@ -198,7 +197,6 @@ Title: "TNM N-Kategorie - pN1"
 * effectiveDateTime = "2024-02-20"
 * method.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"
 * method.coding.code = #8
-* method.coding.version = "8"
 * valueCodeableConcept.coding.system = "https://www.uicc.org/resources/tnm"
 * valueCodeableConcept.coding.code = #N1
 
@@ -216,7 +214,6 @@ Title: "TNM M-Kategorie - cM0"
 * effectiveDateTime = "2024-02-20"
 * method.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"
 * method.coding.code = #8
-* method.coding.version = "8"
 * valueCodeableConcept.coding.system = "https://www.uicc.org/resources/tnm"
 * valueCodeableConcept.coding.code = #M0
 
@@ -228,13 +225,12 @@ Title: "TNM Klassifikation - pT3 pN1 cM0, UICC Stage IIIB"
 Description: "Postoperative pathological TNM staging with UICC stage group IIIB"
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
 * status = #final
-* code.coding = $SCT#258235000 "UICC - Union Internationale Contre le Cancer tumor staging"
+* code.coding = $SCT#258235000 "UICC"
 * subject = Reference(Patient/example)
 * focus = Reference(mii-exa-onko-colorectal-cancer-diagnosis)
 * effectiveDateTime = "2024-02-20"
 * method.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"
 * method.coding.code = #8
-* method.coding.version = "8"
 * valueCodeableConcept.coding.system = "https://www.uicc.org/resources/tnm"
 * valueCodeableConcept.coding.code = #IIIB
 * hasMember[0] = Reference(mii-exa-onko-colorectal-tnm-t)
@@ -329,7 +325,7 @@ Title: "FOLFOX - Folinsäure MedicationRequest"
 * reasonReference = Reference(Condition/example-colorectal-cancer)
 * medicationCodeableConcept.coding[atcClassDe].system = "http://fhir.de/CodeSystem/bfarm/atc"
 * medicationCodeableConcept.coding[atcClassDe].code = #V03AF03
-* medicationCodeableConcept.coding[atcClassDe].display = "Folinsäure"
+* medicationCodeableConcept.coding[atcClassDe].display = "Calciumfolinat"
 * medicationCodeableConcept.text = "Leucovorin (Folinsäure)"
 
 // MedicationRequest 3: Oxaliplatin
@@ -457,7 +453,7 @@ Description: "Folinic acid (Leucovorin) medication statement as part of FOLFOX4 
 // Medication coding with ATC
 * medicationCodeableConcept.coding[atcClassDe].system = "http://fhir.de/CodeSystem/bfarm/atc"
 * medicationCodeableConcept.coding[atcClassDe].code = #V03AF03
-* medicationCodeableConcept.coding[atcClassDe].display = "Folinsäure"
+* medicationCodeableConcept.coding[atcClassDe].display = "Calciumfolinat"
 * medicationCodeableConcept.text = "Leucovorin (Folinsäure)"
 
 // Treatment period
@@ -528,7 +524,7 @@ Description: "6-month follow-up examination showing no evidence of disease"
 * component[Lymphknoten_Verlauf].code.coding = $SCT#399656008 "Presence of metastatic neoplasm in regional lymph node (observable entity)"
 * component[Lymphknoten_Verlauf].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-lymphknoten"
 * component[Lymphknoten_Verlauf].valueCodeableConcept.coding.code = #K
-* component[Lymphknoten_Verlauf].valueCodeableConcept.coding.display = "Keine Lymphknoten befallen"
+* component[Lymphknoten_Verlauf].valueCodeableConcept.coding.display = "kein Lymphknotenbefall nachweisbar"
 
 // Component: Distant metastases status
 * component[Fernmetastasen_Verlauf].code.coding = $SCT#399608002 "Status of distant metastasis (observable entity)"

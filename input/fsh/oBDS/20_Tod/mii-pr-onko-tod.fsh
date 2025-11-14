@@ -37,7 +37,7 @@ Description: "Tumorbedingter Tod"
 * value[x] only CodeableConcept
 * valueCodeableConcept MS
 * valueCodeableConcept 0..1
-* valueCodeableConcept from http://fhir.de/ValueSet/bfarm/icd-10-gm
+* valueCodeableConcept from https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-icd10gm
 * valueCodeableConcept.coding.code 1.. MS
 * valueCodeableConcept.coding.system 1.. MS
 * valueCodeableConcept.coding.system = $ICD10GM

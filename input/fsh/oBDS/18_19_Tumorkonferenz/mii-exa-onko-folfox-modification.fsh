@@ -124,9 +124,9 @@ Description: "Postoperative pathological TNM staging for ascending colon cancer 
 * subject = Reference(Patient/example-modification)
 * focus = Reference(mii-exa-onko-ascending-colon-cancer-diagnosis)
 * effectiveDateTime = "2024-02-25"
-* code.coding.system = "http://loinc.org"
-* code.coding.code = #21908-9
-* code.coding.display = "Stage group.pathology Cancer"
+* code.coding.system = "http://snomed.info/sct"
+* code.coding.code = #399588009
+* code.coding.display = "Pathologic TNM stage grouping"
 * method.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"
 * method.coding.code = #8
 * method.coding.display = "8. Auflage"
@@ -217,7 +217,7 @@ Description: "Leucovorin recommendation - completed for all 12 cycles"
 * reasonReference = Reference(mii-exa-onko-ascending-colon-cancer-diagnosis)
 * medicationCodeableConcept.coding[atcClassDe].system = "http://fhir.de/CodeSystem/bfarm/atc"
 * medicationCodeableConcept.coding[atcClassDe].code = #V03AF03
-* medicationCodeableConcept.coding[atcClassDe].display = "Folinsäure"
+* medicationCodeableConcept.coding[atcClassDe].display = "Calciumfolinat"
 * medicationCodeableConcept.text = "Leucovorin (Folinsäure)"
 * note.text = "Completed as planned for all 12 cycles"
 
@@ -311,7 +311,7 @@ Description: "Leucovorin administered during FOLFOX4 phase"
 * basedOn = Reference(mii-exa-onko-tumorkonferenz-folfox-modification)
 * medicationCodeableConcept.coding[atcClassDe].system = "http://fhir.de/CodeSystem/bfarm/atc"
 * medicationCodeableConcept.coding[atcClassDe].code = #V03AF03
-* medicationCodeableConcept.coding[atcClassDe].display = "Folinsäure"
+* medicationCodeableConcept.coding[atcClassDe].display = "Calciumfolinat"
 * medicationCodeableConcept.text = "Leucovorin (Folinsäure)"
 * effectivePeriod.start = "2024-03-15"
 * effectivePeriod.end = "2024-06-10"
@@ -437,7 +437,7 @@ Description: "Leucovorin continued for cycles 7-12 as part of modified FUFOL pro
 * basedOn = Reference(mii-exa-onko-tumorkonferenz-folfox-modification)
 * medicationCodeableConcept.coding[atcClassDe].system = "http://fhir.de/CodeSystem/bfarm/atc"
 * medicationCodeableConcept.coding[atcClassDe].code = #V03AF03
-* medicationCodeableConcept.coding[atcClassDe].display = "Folinsäure"
+* medicationCodeableConcept.coding[atcClassDe].display = "Calciumfolinat"
 * medicationCodeableConcept.text = "Leucovorin (Folinsäure)"
 * effectivePeriod.start = "2024-06-17"
 * effectivePeriod.end = "2024-09-10"
@@ -461,7 +461,7 @@ Description: "6-month follow-up showing complete response despite protocol modif
 * effectiveDateTime = "2025-03-10"
 * valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung"
 * valueCodeableConcept.coding.code = #V
-* valueCodeableConcept.coding.display = "Vollremission/Vollständiges Ansprechen"
+* valueCodeableConcept.coding.display = "Vollremission (complete remission, CR)"
 * component[Tumor_Verlauf].code.coding = $SCT#445200009 "Status of residual neoplasm (observable entity)"
 * component[Tumor_Verlauf].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-primaertumor"
 * component[Tumor_Verlauf].valueCodeableConcept.coding.code = #K
@@ -469,7 +469,7 @@ Description: "6-month follow-up showing complete response despite protocol modif
 * component[Lymphknoten_Verlauf].code.coding = $SCT#399656008 "Presence of metastatic neoplasm in regional lymph node (observable entity)"
 * component[Lymphknoten_Verlauf].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-lymphknoten"
 * component[Lymphknoten_Verlauf].valueCodeableConcept.coding.code = #K
-* component[Lymphknoten_Verlauf].valueCodeableConcept.coding.display = "Keine Lymphknoten befallen"
+* component[Lymphknoten_Verlauf].valueCodeableConcept.coding.display = "kein Lymphknotenbefall nachweisbar"
 * component[Fernmetastasen_Verlauf].code.coding = $SCT#399608002 "Status of distant metastasis (observable entity)"
 * component[Fernmetastasen_Verlauf].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen"
 * component[Fernmetastasen_Verlauf].valueCodeableConcept.coding.code = #K
