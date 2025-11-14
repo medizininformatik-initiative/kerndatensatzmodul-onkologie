@@ -10,7 +10,7 @@
 // - Define quantitative details (units, ranges)
 // - Provide reference ranges with clinical interpretation
 // - Enable validation of observations against canonical specification
-
+/*
 Instance: ObsDef-ECOG-Performance-Status
 InstanceOf: ObservationDefinition
 Usage: #definition
@@ -29,7 +29,7 @@ ECOG to Karnofsky mapping (according to oBDS 12.1):
 - ECOG 4 = Karnofsky 10-20%: Vollständig pflegebedürftig, keine Selbstversorgung möglich
 """
 * code = $SCT#423740007 "Eastern Cooperative Oncology Group performance status (observable entity)"
-* code.coding[+] = $LNC#89262-0 "ECOG Performance Status score"
+* code.coding[+] = $LNC#89262-0 "ECOG Performance Status [Interpretation]"
 
 // Support both CodeableConcept and Quantity
 * permittedDataType[+] = #CodeableConcept
@@ -198,3 +198,4 @@ Karnofsky to ECOG mapping (according to oBDS 12.1):
 * qualifiedInterval[=].range.high.system = $UCUM
 * qualifiedInterval[=].range.high.code = #%
 * qualifiedInterval[=].condition = "Karnofsky 0% (ECOG 5): Tod"
+*/
