@@ -47,6 +47,15 @@
       }
     ]
   },
+  "outcome": {
+    "coding": [
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund",
+        "code": "E",
+        "display": "Reguläres Ende"
+      }
+    ]
+  },
   "status": "completed",
   "subject": {
     "reference": "Patient/example"
@@ -78,15 +87,6 @@
   "performedPeriod": {
     "start": "2024-03-20",
     "end": "2024-09-15"
-  },
-  "outcome": {
-    "coding": [
-      {
-        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund",
-        "code": "E",
-        "display": "Reguläres Ende"
-      }
-    ]
   },
   "note": [
     {

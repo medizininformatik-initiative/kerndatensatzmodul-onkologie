@@ -88,7 +88,7 @@
           "reference": "MedicationStatement/mii-exa-onko-modification-5fu-phase2"
         },
         "name": "5-FU Phase 2 (Zyklen 7-12)",
-        "description": "Fluorouracil continued for cycles 7-12 as part of modified FUFOL protocol",
+        "description": "Fluorouracil continued for cycles 7-12 as part of modified LV5FU2 protocol",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
       },
       {
@@ -253,16 +253,8 @@
           "reference": "MedicationStatement/mii-exa-onko-modification-leucovorin-phase2"
         },
         "name": "Folinsäure Phase 2 (Zyklen 7-12)",
-        "description": "Leucovorin continued for cycles 7-12 as part of modified FUFOL protocol",
+        "description": "Leucovorin continued for cycles 7-12 as part of modified LV5FU2 protocol",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
-      },
-      {
-        "reference": {
-          "reference": "Procedure/mii-exa-onko-fufol-phase2"
-        },
-        "name": "FUFOL Therapie - Phase 2 (Zyklen 7-12)",
-        "description": "Second phase: Modified protocol with 5-FU + Leucovorin only (no Oxaliplatin) for remaining 6 cycles",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
       },
       {
         "reference": {
@@ -303,6 +295,14 @@
         "name": "Liste der Evidenz zum Erstdiagnosezeitpunkt",
         "description": "Eine Beispielliste, welche Observations zur Diagnosestellung präsent waren",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-liste-evidenz-erstdiagnose"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-lv5fu2-phase2"
+        },
+        "name": "LV5FU2 Therapie - Phase 2 (Zyklen 7-12)",
+        "description": "Second phase: Modified protocol with 5-FU + Leucovorin only (no Oxaliplatin) for remaining 6 cycles",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
       },
       {
         "reference": {

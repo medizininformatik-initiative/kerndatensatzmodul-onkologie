@@ -1,6 +1,6 @@
 // =====================================================
-// PROTOCOL MODIFICATION EXAMPLE - FOLFOX → FUFOL
-// Timeline: Diagnosis → Surgery → Tumor Board → FOLFOX (6 cycles) → Neuropathy → FUFOL (6 cycles) → Follow-up
+// PROTOCOL MODIFICATION EXAMPLE - FOLFOX → LV5FU2
+// Timeline: Diagnosis → Surgery → Tumor Board → FOLFOX (6 cycles) → Neuropathy → LV5FU2 (6 cycles) → Follow-up
 // =====================================================
 //
 // Clinical Scenario:
@@ -8,7 +8,7 @@
 // - Tumor location: Ascending colon (C18.2)
 // - Treatment plan: Right hemicolectomy → Adjuvant FOLFOX4
 // - Complication: Grade 3 peripheral neuropathy after cycle 6
-// - Modification: Continue with 5-FU + Leucovorin only (FUFOL) for remaining 6 cycles
+// - Modification: Continue with 5-FU + Leucovorin only (LV5FU2) for remaining 6 cycles
 // - Outcome: Complete treatment, disease-free at 6-month follow-up
 //
 // This example demonstrates:
@@ -369,11 +369,11 @@ Description: "Grade 3 peripheral neuropathy caused by oxaliplatin, leading to tr
 // STEP 3: TREATMENT PHASE 2 - Modified Protocol (Cycles 7-12)
 // -----------------------------------------------------
 
-// Systemische Therapie Procedure - Phase 2: FUFOL (5-FU + Leucovorin only)
-Instance: mii-exa-onko-fufol-phase2
+// Systemische Therapie Procedure - Phase 2: LV5FU2 (5-FU + Leucovorin only)
+Instance: mii-exa-onko-lv5fu2-phase2
 InstanceOf: MII_PR_Onko_Systemische_Therapie
 Usage: #example
-Title: "FUFOL Therapie - Phase 2 (Zyklen 7-12)"
+Title: "LV5FU2 Therapie - Phase 2 (Zyklen 7-12)"
 Description: "Second phase: Modified protocol with 5-FU + Leucovorin only (no Oxaliplatin) for remaining 6 cycles"
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
 * status = #completed
@@ -388,6 +388,7 @@ Description: "Second phase: Modified protocol with 5-FU + Leucovorin only (no Ox
 * extension[StellungZurOp].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-stellungzurop"
 * extension[StellungZurOp].valueCodeableConcept.coding.code = #A
 * extension[StellungZurOp].valueCodeableConcept.coding.display = "Adjuvant"
+* category = $SCT#18629005	// Administration of drug or medicament
 * code.coding[systemische_therapie_art].system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art"
 * code.coding[systemische_therapie_art].code = #CH
 * code.coding[systemische_therapie_art].display = "Chemotherapie"
@@ -396,25 +397,25 @@ Description: "Second phase: Modified protocol with 5-FU + Leucovorin only (no Ox
 * code.coding[ops].code = #8-542
 * code.coding[ops].display = "Nicht komplexe Chemotherapie"
 * usedCode.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle"
-* usedCode.coding.code = #FUFOL
-* usedCode.coding.display = "5-FU/Folinsäure (de Gramont)"
+* usedCode.coding.code = #LV5FU2
+* usedCode.coding.display = "LV5FU2"
 * performedPeriod.start = "2024-06-17"
 * performedPeriod.end = "2024-09-10"
 * outcome.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund"
 * outcome.coding.code = #E
 * outcome.coding.display = "Reguläres Ende"
-* note.text = "Modified protocol: 5-FU/Leucovorin only for cycles 7-12. Oxaliplatin omitted due to persistent neuropathy. Patient tolerated modified regimen well. Completed all planned cycles."
+* note.text = "Modified protocol: LV5FU2 (5-FU/Leucovorin) for cycles 7-12. Oxaliplatin omitted due to persistent neuropathy. Patient tolerated modified regimen well. Completed all planned cycles."
 
 // MedicationStatement - Phase 2: Fluorouracil (cycles 7-12)
 Instance: mii-exa-onko-modification-5fu-phase2
 InstanceOf: MII_PR_Onko_Systemische_Therapie_Medikation
 Usage: #example
 Title: "5-FU Phase 2 (Zyklen 7-12)"
-Description: "Fluorouracil continued for cycles 7-12 as part of modified FUFOL protocol"
+Description: "Fluorouracil continued for cycles 7-12 as part of modified LV5FU2 protocol"
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
 * status = #completed
 * subject = Reference(Patient/example-modification)
-* partOf[systemischeTherapie] = Reference(mii-exa-onko-fufol-phase2)
+* partOf[systemischeTherapie] = Reference(mii-exa-onko-lv5fu2-phase2)
 * basedOn = Reference(mii-exa-onko-tumorkonferenz-folfox-modification)
 * medicationCodeableConcept.coding[atcClassDe].system = "http://fhir.de/CodeSystem/bfarm/atc"
 * medicationCodeableConcept.coding[atcClassDe].code = #L01BC02
@@ -422,18 +423,18 @@ Description: "Fluorouracil continued for cycles 7-12 as part of modified FUFOL p
 * medicationCodeableConcept.text = "5-Fluorouracil (5-FU)"
 * effectivePeriod.start = "2024-06-17"
 * effectivePeriod.end = "2024-09-10"
-* note.text = "FUFOL (modified protocol) - Cycles 7-12"
+* note.text = "LV5FU2 (modified protocol) - Cycles 7-12"
 
 // MedicationStatement - Phase 2: Leucovorin (cycles 7-12)
 Instance: mii-exa-onko-modification-leucovorin-phase2
 InstanceOf: MII_PR_Onko_Systemische_Therapie_Medikation
 Usage: #example
 Title: "Folinsäure Phase 2 (Zyklen 7-12)"
-Description: "Leucovorin continued for cycles 7-12 as part of modified FUFOL protocol"
+Description: "Leucovorin continued for cycles 7-12 as part of modified LV5FU2 protocol"
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
 * status = #completed
 * subject = Reference(Patient/example-modification)
-* partOf[systemischeTherapie] = Reference(mii-exa-onko-fufol-phase2)
+* partOf[systemischeTherapie] = Reference(mii-exa-onko-lv5fu2-phase2)
 * basedOn = Reference(mii-exa-onko-tumorkonferenz-folfox-modification)
 * medicationCodeableConcept.coding[atcClassDe].system = "http://fhir.de/CodeSystem/bfarm/atc"
 * medicationCodeableConcept.coding[atcClassDe].code = #V03AF03
@@ -441,7 +442,7 @@ Description: "Leucovorin continued for cycles 7-12 as part of modified FUFOL pro
 * medicationCodeableConcept.text = "Leucovorin (Folinsäure)"
 * effectivePeriod.start = "2024-06-17"
 * effectivePeriod.end = "2024-09-10"
-* note.text = "FUFOL (modified protocol) - Cycles 7-12"
+* note.text = "LV5FU2 (modified protocol) - Cycles 7-12"
 
 // -----------------------------------------------------
 // STEP 4: FOLLOW-UP (VERLAUF)
@@ -474,4 +475,4 @@ Description: "6-month follow-up showing complete response despite protocol modif
 * component[Fernmetastasen_Verlauf].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen"
 * component[Fernmetastasen_Verlauf].valueCodeableConcept.coding.code = #K
 * component[Fernmetastasen_Verlauf].valueCodeableConcept.coding.display = "Keine Fernmetastasen nachweisbar"
-* note.text = "Patient completed modified chemotherapy protocol (6 cycles FOLFOX4 + 6 cycles FUFOL). Despite early discontinuation of oxaliplatin due to neuropathy, patient achieved complete response. CT scan and colonoscopy show no evidence of recurrence. CEA normal (1.8 ng/mL). Peripheral neuropathy has improved to grade 1 but persists. Patient is disease-free at 6-month follow-up."
+* note.text = "Patient completed modified chemotherapy protocol (6 cycles FOLFOX4 + 6 cycles LV5FU2). Despite early discontinuation of oxaliplatin due to neuropathy, patient achieved complete response. CT scan and colonoscopy show no evidence of recurrence. CEA normal (1.8 ng/mL). Peripheral neuropathy has improved to grade 1 but persists. Patient is disease-free at 6-month follow-up."

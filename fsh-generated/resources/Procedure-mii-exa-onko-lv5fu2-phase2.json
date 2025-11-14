@@ -1,6 +1,6 @@
 {
   "resourceType": "Procedure",
-  "id": "mii-exa-onko-fufol-phase2",
+  "id": "mii-exa-onko-lv5fu2-phase2",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
@@ -47,6 +47,15 @@
       }
     ]
   },
+  "outcome": {
+    "coding": [
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund",
+        "code": "E",
+        "display": "Reguläres Ende"
+      }
+    ]
+  },
   "status": "completed",
   "subject": {
     "reference": "Patient/example-modification"
@@ -69,13 +78,21 @@
       "reference": "Procedure/mii-exa-onko-folfox-phase1"
     }
   ],
+  "category": {
+    "coding": [
+      {
+        "code": "18629005",
+        "system": "http://snomed.info/sct"
+      }
+    ]
+  },
   "usedCode": [
     {
       "coding": [
         {
           "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle",
-          "code": "FUFOL",
-          "display": "5-FU/Folinsäure (de Gramont)"
+          "code": "LV5FU2",
+          "display": "LV5FU2"
         }
       ]
     }
@@ -84,18 +101,9 @@
     "start": "2024-06-17",
     "end": "2024-09-10"
   },
-  "outcome": {
-    "coding": [
-      {
-        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund",
-        "code": "E",
-        "display": "Reguläres Ende"
-      }
-    ]
-  },
   "note": [
     {
-      "text": "Modified protocol: 5-FU/Leucovorin only for cycles 7-12. Oxaliplatin omitted due to persistent neuropathy. Patient tolerated modified regimen well. Completed all planned cycles."
+      "text": "Modified protocol: LV5FU2 (5-FU/Leucovorin) for cycles 7-12. Oxaliplatin omitted due to persistent neuropathy. Patient tolerated modified regimen well. Completed all planned cycles."
     }
   ]
 }
