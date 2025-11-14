@@ -3395,22 +3395,6 @@
       },
       {
         "reference": {
-          "reference": "ObservationDefinition/ObsDef-ECOG-Performance-Status"
-        },
-        "name": "ObservationDefinition: ECOG Performance Status",
-        "description": "Canonical definition for ECOG (Eastern Cooperative Oncology Group) Performance Status observations.\n\nSupports both CodeableConcept (codes 0-4) and Quantity (integer 0-4) representations,\nallowing implementers to choose based on their use case while ensuring consistent validation.\n\nECOG to Karnofsky mapping (according to oBDS 12.1):\n- ECOG 0 = Karnofsky 90-100%: Normale Aktivität ohne Einschränkung\n- ECOG 1 = Karnofsky 70-80%: Symptome, aber gehfähig; leichte Arbeit möglich\n- ECOG 2 = Karnofsky 50-60%: Gehfähig, Selbstversorgung, nicht arbeitsfähig; >50% Wachzeit aufrecht\n- ECOG 3 = Karnofsky 30-40%: Begrenzte Selbstversorgung; ≥50% an Bett/Stuhl gebunden\n- ECOG 4 = Karnofsky 10-20%: Vollständig pflegebedürftig, keine Selbstversorgung möglich",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ObservationDefinition/ObsDef-Karnofsky-Performance-Status"
-        },
-        "name": "ObservationDefinition: Karnofsky Performance Status",
-        "description": "Canonical definition for Karnofsky Performance Status observations.\n\nSupports both CodeableConcept (codes 0%, 10%, ..., 100%) and Quantity (0-100 with unit %)\nrepresentations, allowing implementers to choose based on their use case while ensuring\nconsistent validation.\n\nKarnofsky to ECOG mapping (according to oBDS 12.1):\n- Karnofsky 90-100% = ECOG 0: Normale Aktivität ohne Einschränkung\n- Karnofsky 70-80% = ECOG 1: Symptome, aber gehfähig; leichte Arbeit möglich\n- Karnofsky 50-60% = ECOG 2: Gehfähig, Selbstversorgung, nicht arbeitsfähig; >50% Wachzeit aufrecht\n- Karnofsky 30-40% = ECOG 3: Begrenzte Selbstversorgung; ≥50% an Bett/Stuhl gebunden\n- Karnofsky 10-20% = ECOG 4: Vollständig pflegebedürftig, keine Selbstversorgung möglich\n- Karnofsky 0% = ECOG 5: Tod",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "MedicationStatement/mii-exa-onko-modification-oxaliplatin-phase1"
         },
         "name": "Oxaliplatin Phase 1 (Zyklen 1-6, dann abgebrochen)",
