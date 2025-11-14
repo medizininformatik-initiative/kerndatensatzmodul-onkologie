@@ -25,7 +25,7 @@ Description: "Beispiel einer Melanom-Nachexzision am oberen Rücken"
 * code.coding[ops] = $OPS#5-894.0a "Lokale Exzision von erkranktem Gewebe an Haut und Unterhaut: Ohne primären Wundverschluss: Brustwand und Rücken"
 * code.coding[ops].version = "2024"
 * code.coding[sct] = $SCT#177281002 "Excision of melanoma (procedure)"
-* bodySite = $SCT#304036007 "Structure of back of thorax"
+* bodySite = $SCT#304036007 "Structure of posterior region of neck"
 * subject = Reference(mii-exa-onko-melanom-bundle-patient)
 * performedDateTime = "2024-04-05"
 * extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K "kurativ"
