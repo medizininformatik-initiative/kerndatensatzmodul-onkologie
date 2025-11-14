@@ -135,7 +135,7 @@ Description: "Beispiel für ECOG Performance Status 2 mit valueQuantity und Refe
 * subject = Reference(Patient/example)
 * effectiveDateTime = "2025-11-05"
 * code.coding[snomed] = $SCT#423740007 "Eastern Cooperative Oncology Group performance status (observable entity)"
-* code.coding[loinc] = $LNC#89262-0 "ECOG Performance Status score"
+* code.coding[loinc] = $LNC#89262-0 "ECOG Performance Status [Interpretation]"
 * valueQuantity.value = 2
 * valueQuantity.unit = "{score}"
 * valueQuantity.system = $UCUM
