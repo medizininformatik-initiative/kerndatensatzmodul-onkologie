@@ -55,7 +55,7 @@ Description: "Dieses Profil beschreibt den Her2neu Status einer pathologisch unt
 * component[IHCScore].valueCodeableConcept 0..1
 * component[IHCScore].valueCodeableConcept from http://loinc.org/vs/LL4396-9 (extensible) // 0, 1+, 2+, 3+
 
-* component[ISHResult].code = $LNC#32996-1 "ERBB2 gene duplication [Presence] in Tissue by FISH"
+* component[ISHResult].code = $LNC#96893-3 "ERBB2 gene duplication in Tumor by FISH"
 * component[ISHResult].value[x] MS
 * component[ISHResult].value[x] only CodeableConcept
 * component[ISHResult].valueCodeableConcept MS
