@@ -54,7 +54,7 @@ Description: "Laparoscopic right hemicolectomy with lymph node dissection"
 * code.coding[ops].system = "http://fhir.de/CodeSystem/bfarm/ops"
 * code.coding[ops].version = "2024"
 * code.coding[ops].code = #5-455.75
-* code.coding[ops].display = "Partielle Resektion des Dickdarmes: Hemikolektomie rechts mit Coecum und Colon ascendens"
+* code.coding[ops].display = "Partielle Resektion des Dickdarmes: Sigmaresektion: Laparoskopisch mit Anastomose"
 * code.text = "Laparoskopische Hemikolektomie rechts mit Lymphknotendissektion"
 * subject = Reference(Patient/example-modification)
 * encounter = Reference(Encounter/example-surgery-modification)
@@ -65,7 +65,7 @@ Description: "Laparoscopic right hemicolectomy with lymph node dissection"
 * extension[Intention].valueCodeableConcept.coding.display = "Kurativ"
 * outcome.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus"
 * outcome.coding.code = #R0
-* outcome.coding.display = "R0"
+* outcome.coding.display = "Kein Residualtumor"
 * note.text = "Laparoscopic right hemicolectomy performed. Tumor completely resected with clear margins (R0). 22 lymph nodes removed, 4 positive."
 
 // TNM Classification - T Category (pathological)
