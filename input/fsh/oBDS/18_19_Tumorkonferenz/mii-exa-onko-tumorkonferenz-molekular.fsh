@@ -76,6 +76,7 @@ Usage: #example
 * code.coding[systemische_therapie_art].system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art"
 * code.coding[systemische_therapie_art].code = #ZS
 * code.coding[ops] = $OPS#8-54 "Zytostatische Chemotherapie, Immuntherapie und antiretrovirale Therapie"
+* code.coding[ops].version = "2024"
 * code.text = "Palbociclib"
 * subject = Reference(Patient/example)
 * basedOn = Reference(mii-exa-onko-tumorkonferenz-molekular) // ❌ PROBLEM: Cannot distinguish from anti-HER2 recommendation
