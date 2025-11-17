@@ -41,7 +41,9 @@ Usage: #example
 * status = #preparation
 * code.coding[systemische_therapie_art].system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art"
 * code.coding[systemische_therapie_art].code = #ZS
+* code.coding[ops] = $OPS|2024#6-001.k "Trastuzumab, intravenös"
 * code.text = "Trastuzumab"
+
 * subject = Reference(Patient/example)
 * basedOn = Reference(mii-exa-onko-tumorkonferenz-molekular) // ❌ PROBLEM: Can only reference whole CarePlan
 * extension[Intention].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention"
@@ -73,6 +75,7 @@ Usage: #example
 * category = $SCT#18629005	// Administration of drug or medicament
 * code.coding[systemische_therapie_art].system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art"
 * code.coding[systemische_therapie_art].code = #ZS
+* code.coding[ops] = $OPS#8-54 "Zytostatische Chemotherapie, Immuntherapie und antiretrovirale Therapie"
 * code.text = "Palbociclib"
 * subject = Reference(Patient/example)
 * basedOn = Reference(mii-exa-onko-tumorkonferenz-molekular) // ❌ PROBLEM: Cannot distinguish from anti-HER2 recommendation
