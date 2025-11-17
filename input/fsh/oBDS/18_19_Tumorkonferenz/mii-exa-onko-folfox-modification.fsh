@@ -359,7 +359,9 @@ Description: "Grade 3 peripheral neuropathy caused by oxaliplatin, leading to tr
 * severity.coding.system = "http://terminology.hl7.org/CodeSystem/adverse-event-severity"
 * severity.coding.code = #severe
 * severity.coding.display = "Severe"
-* event.coding = $SCT#128188008 "Peripheral sensory neuropathy"
+* event.coding.system = "https://www.meddra.org"
+* event.coding.code = #10034620
+* event.coding.display = "Peripheral sensory neuropathy"
 * event.text = "Oxaliplatin-induced peripheral neuropathy, grade 3 (CTCAE v5.0)"
 * suspectEntity.instance = Reference(mii-exa-onko-modification-oxaliplatin-phase1)
 * suspectEntity.causality.assessment.coding.system = "http://terminology.hl7.org/CodeSystem/adverse-event-causality-assess"
