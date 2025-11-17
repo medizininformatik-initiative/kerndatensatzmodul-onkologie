@@ -56,6 +56,8 @@ Usage: #example
 * category = $SCT#18629005	// Administration of drug or medicament
 * code.coding[systemische_therapie_art].system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art"
 * code.coding[systemische_therapie_art].code = #ZS
+* code.coding[ops] = $OPS#8-543 "Mittelgradig komplexe und intensive Blockchemotherapie"
+* code.coding[ops].version = "2024"
 * code.text = "Pertuzumab"
 * subject = Reference(Patient/example)
 * basedOn = Reference(mii-exa-onko-tumorkonferenz-molekular) // ❌ PROBLEM: Same CarePlan reference, no way to specify activity[0]
