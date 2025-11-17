@@ -6,6 +6,16 @@
       "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure"
     ]
   },
+  "code": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/ops",
+        "code": "3-225",
+        "display": "Computertomographie des Abdomens mit Kontrastmittel",
+        "version": "2021"
+      }
+    ]
+  },
   "status": "completed",
   "subject": {
     "reference": "Patient/PatientKimMusterperson"
@@ -16,16 +26,6 @@
         "code": "363679005",
         "system": "http://snomed.info/sct",
         "display": "Imaging (procedure)"
-      }
-    ]
-  },
-  "code": {
-    "coding": [
-      {
-        "code": "3-225",
-        "system": "http://fhir.de/CodeSystem/bfarm/ops",
-        "display": "Computertomographie des Abdomens mit Kontrastmittel",
-        "version": "2021"
       }
     ]
   },
