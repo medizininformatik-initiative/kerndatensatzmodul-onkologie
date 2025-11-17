@@ -9,4 +9,4 @@ Description: "oBDS-spezifisches ValueSet für Nebenwirkung nach CTCAE oder MedDR
 * ^status = #active
 * ^experimental = false
 
-* include codes from system $mii-cs-onko-meddra-de
+* include codes from system $MEDDRA

@@ -1,0 +1,35 @@
+{
+  "resourceType": "MedicationRequest",
+  "id": "mii-exa-onko-cdk46-class-medication",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation"
+    ]
+  },
+  "intent": "proposal",
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/atc",
+        "code": "L01XE",
+        "display": "CDK4/6 Inhibitoren"
+      }
+    ],
+    "text": "CDK4/6 Inhibitor (Klasse L01XE) - Palbociclib, Ribociclib oder Abemaciclib"
+  },
+  "status": "active",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "authoredOn": "2024-01-15",
+  "reasonReference": [
+    {
+      "reference": "Condition/primaertumor-example"
+    }
+  ],
+  "note": [
+    {
+      "text": "Molecular tumor board recommends any CDK4/6 inhibitor based on HR+/HER2- profile. Final agent selection at prescriber discretion."
+    }
+  ]
+}

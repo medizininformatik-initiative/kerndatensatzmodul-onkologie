@@ -16,7 +16,6 @@ Alias: $care-plan-activity-status = http://hl7.org/fhir/care-plan-activity-statu
 Alias: $observation-interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
 // Code Systems
 Alias: $CTCAE = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
-Alias: $MDRAE = http://terminology.hl7.org/CodeSystem/MDRGER
 Alias: $OPS = http://fhir.de/CodeSystem/bfarm/ops
 Alias: $SCT = http://snomed.info/sct
 Alias: $ICD10GM = http://fhir.de/CodeSystem/bfarm/icd-10-gm
@@ -28,6 +27,8 @@ Alias: $ATC_DE = http://fhir.de/CodeSystem/bfarm/atc
 Alias: $UNII = http://fdasis.nlm.nih.gov
 Alias: $NCIT =  http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
 Alias: $RADLEX = http://radlex.org
+Alias: $MEDDRA = https://www.meddra.org
+
 //MII Onko
 //Allgemeines CodeSystem
 Alias: $mii-cs-onko-intention = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention
@@ -78,7 +79,6 @@ Alias: $mii-cs-onko-allgemeiner-leistungszustand-karnofsky = https://www.medizin
 
 //15
 Alias: $mii-cs-onko-nebenwirkung-ctcae-grad = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad
-Alias: $mii-cs-onko-meddra-de = https://www.meddra.org
 
 //20
 Alias: $mii-cs-onko-tod = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tod
