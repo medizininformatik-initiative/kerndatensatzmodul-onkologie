@@ -40,19 +40,17 @@ Usage: #example
 
 // MedicationRequest using pharmaceutical class coding
 Instance: mii-exa-onko-cdk46-class-medication
-InstanceOf: mii-pr-onko-systemische-therapie
+InstanceOf: MII_PR_Onko_Therapieempfehlung_Medikation
 Usage: #example
-* status = #preparation
+* status = #active
+* intent = #proposal
 * subject = Reference(Patient/example)
-* basedOn = Reference(mii-exa-onko-tumorkonferenz-class-recommendation)
-* extension[Intention].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention"
-* extension[Intention].valueCodeableConcept.coding.code = #K // Kurativ
-
-// OPTION 1: Class-level coding with ATC class code
-* code.coding[systemische_therapie_art].system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art"
-* code.coding[systemische_therapie_art].code = #ZS
-* code.text = "CDK4/6 Inhibitor (Klasse L01XE) - Palbociclib, Ribociclib oder Abemaciclib"
-* performedPeriod.start = "2024-02-01"
+* authoredOn = "2024-01-15"
+* reasonReference = Reference(Condition/primaertumor-example)
+* medicationCodeableConcept.coding[atcClassDe].system = "http://fhir.de/CodeSystem/bfarm/atc"
+* medicationCodeableConcept.coding[atcClassDe].code = #L01XE
+* medicationCodeableConcept.coding[atcClassDe].display = "CDK4/6 Inhibitoren"
+* medicationCodeableConcept.text = "CDK4/6 Inhibitor (Klasse L01XE) - Palbociclib, Ribociclib oder Abemaciclib"
 * note.text = "Molecular tumor board recommends any CDK4/6 inhibitor based on HR+/HER2- profile. Final agent selection at prescriber discretion."
 
 // =====================================================
