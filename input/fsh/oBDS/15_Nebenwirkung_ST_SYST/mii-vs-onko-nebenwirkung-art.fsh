@@ -9,4 +9,10 @@ Description: "oBDS-spezifisches ValueSet für Nebenwirkung nach CTCAE oder MedDR
 * ^status = #active
 * ^experimental = false
 
+// Include all codes from MedDRA system
 * include codes from system $MEDDRA
+
+// Explicitly include commonly used MedDRA codes for testing/validation
+// This may help validators that cannot access the full MedDRA terminology server
+* $MEDDRA#10016256 "Fatigue"
+* $MEDDRA#10034620 "Peripheral sensory neuropathy"
