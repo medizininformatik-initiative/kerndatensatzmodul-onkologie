@@ -372,7 +372,7 @@ Description: "Actual FOLFOX chemotherapy given, linked back to tumor board recom
 * extension[StellungZurOp].valueCodeableConcept.coding.code = #A
 * extension[StellungZurOp].valueCodeableConcept.coding.display = "Adjuvant"
 
-* category = $OPS#8-54 "Zytostatische Chemotherapie, Immuntherapie und antiretrovirale Therapie"
+* category = $SCT#277132007	"Therapeutic procedure"
 
 // Art der systemischen Therapie - Chemotherapie
 * code.coding[systemische_therapie_art].system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art"
