@@ -30,7 +30,7 @@ Description: "Beispiel einer früheren Tumorerkrankung (Mammakarzinom links) aus
 * code.text = "Mamma-Ca, links"
 * bodySite.coding[icd-o-3].system = $ICDO3
 * bodySite.coding[icd-o-3].code = #C50.9
-* bodySite.coding[icd-o-3].display = "Breast, NOS"
+* bodySite.coding[icd-o-3].display = "Brust o.n.A."
 * subject = Reference(Patient/example)
 * extension[assertedDate].valueDateTime = "2013"
 * recordedDate = "2024-06-14"
@@ -52,7 +52,7 @@ Description: "Beispiel einer früheren Tumorerkrankung (Prostatakarzinom) aus de
 * code.text = "Prostatakarzinom"
 * bodySite.coding[icd-o-3].system = $ICDO3
 * bodySite.coding[icd-o-3].code = #C61.9
-* bodySite.coding[icd-o-3].display = "Prostate gland"
+* bodySite.coding[icd-o-3].display = "Prostata"
 * subject = Reference(Patient/example)
 * extension[assertedDate].valueDateTime = "2018-03-15"
 * recordedDate = "2024-06-14"
