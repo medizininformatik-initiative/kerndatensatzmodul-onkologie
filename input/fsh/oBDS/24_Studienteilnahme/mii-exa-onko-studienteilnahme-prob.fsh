@@ -15,7 +15,7 @@ Description: "PRO-B: Alarm-basiertes Patient-Reported Outcome Monitoring bei Pat
 * status = #active
 * primaryPurposeType = http://terminology.hl7.org/CodeSystem/research-study-prim-purp-type#health-services-research "Health Services Research"
 * category = http://terminology.hl7.org/CodeSystem/research-study-classif#interventional "Interventional"
-* focus.coding = $SCT#225831004 "Patient reported outcome (observable entity)"
+* focus.coding = $SCT#399427004 "Monitoring of patient with cancer (regime/therapy)"
 * condition.coding = $SCT#315004001 "Metastasis from malignant tumor of breast"
 
 // Study participation observation for a patient enrolled in PRO-B
