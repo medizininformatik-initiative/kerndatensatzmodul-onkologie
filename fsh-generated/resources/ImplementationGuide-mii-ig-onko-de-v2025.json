@@ -258,6 +258,38 @@
       },
       {
         "reference": {
+          "reference": "Condition/mii-exa-onko-fruehere-tumorerkrankung-cervix"
+        },
+        "name": "Frühere Tumorerkrankung Cervix in situ",
+        "description": "Beispiel einer früheren Tumorerkrankung (Carcinoma in situ der Cervix uteri) aus dem Jahr 2013",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung"
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-onko-fruehere-tumorerkrankung-mamma"
+        },
+        "name": "Frühere Tumorerkrankung Mamma",
+        "description": "Beispiel einer früheren Tumorerkrankung (Mammakarzinom links) aus dem Jahr 2013",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung"
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-onko-fruehere-tumorerkrankung-freetext"
+        },
+        "name": "Frühere Tumorerkrankung nur Freitext",
+        "description": "Beispiel einer früheren Tumorerkrankung mit nur Freitextangabe, ohne ICD-10-GM Kodierung (typisch bei anamnestischen Angaben)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung"
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-onko-fruehere-tumorerkrankung-prostata"
+        },
+        "name": "Frühere Tumorerkrankung Prostata",
+        "description": "Beispiel einer früheren Tumorerkrankung (Prostatakarzinom) aus dem Jahr 2018",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung"
+      },
+      {
+        "reference": {
           "reference": "Procedure/PatientKimMusterperson-Procedure-4"
         },
         "name": "Hauptprocedure: Komplexe abdominale Tumorchirurgie",
@@ -1414,6 +1446,14 @@
         },
         "name": "MII PR Onkologie Fernmetastasen",
         "description": "OBDS Beschreibung von Fernmetastasen (Lokalisation und Datum)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung"
+        },
+        "name": "MII PR Onkologie Frühere Tumorerkrankung",
+        "description": "Dieses Profil beschreibt frühere Tumorerkrankungen, die in der Anamnese zu einem früheren Zeitpunkt diagnostiziert/behandelt wurden. Basiert auf FHIR Condition, da historische Daten oft nur als Freitext vorliegen.",
         "exampleBoolean": false
       },
       {
