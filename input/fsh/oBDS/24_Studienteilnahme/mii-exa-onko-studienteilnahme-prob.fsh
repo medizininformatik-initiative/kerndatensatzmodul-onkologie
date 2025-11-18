@@ -3,7 +3,7 @@
 
 // ResearchStudy instance for PRO-B trial
 Instance: mii-exa-onko-studie-prob
-InstanceOf: https://www.medizininformatik-initiative.de/fhir/core/modul-studie/StructureDefinition/mii-pr-studie-studie
+InstanceOf: https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie
 Usage: #example
 Title: "Studie PRO-B"
 Description: "PRO-B: Alarm-basiertes Patient-Reported Outcome Monitoring bei Patientinnen mit metastasiertem Mammakarzinom (Innovationsfonds 01NVF19013)"

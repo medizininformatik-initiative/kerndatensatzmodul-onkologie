@@ -1,0 +1,63 @@
+{
+  "resourceType": "ResearchStudy",
+  "id": "mii-exa-onko-studie-prob",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "https://drks.de",
+      "value": "DRKS00024015"
+    },
+    {
+      "system": "http://innovationsfonds.g-ba.de",
+      "value": "01NVF19013"
+    }
+  ],
+  "title": "PRO-B: Evaluating the effect of an alarm-based patient-reported outcome monitoring compared with usual care in metastatic breast cancer patients",
+  "status": "active",
+  "primaryPurposeType": {
+    "coding": [
+      {
+        "code": "health-services-research",
+        "system": "http://terminology.hl7.org/CodeSystem/research-study-prim-purp-type",
+        "display": "Health Services Research"
+      }
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "interventional",
+          "system": "http://terminology.hl7.org/CodeSystem/research-study-classif",
+          "display": "Interventional"
+        }
+      ]
+    }
+  ],
+  "focus": [
+    {
+      "coding": [
+        {
+          "code": "225831004",
+          "system": "http://snomed.info/sct",
+          "display": "Patient reported outcome (observable entity)"
+        }
+      ]
+    }
+  ],
+  "condition": [
+    {
+      "coding": [
+        {
+          "code": "315004001",
+          "system": "http://snomed.info/sct",
+          "display": "Metastatic malignant neoplasm to breast (disorder)"
+        }
+      ]
+    }
+  ]
+}

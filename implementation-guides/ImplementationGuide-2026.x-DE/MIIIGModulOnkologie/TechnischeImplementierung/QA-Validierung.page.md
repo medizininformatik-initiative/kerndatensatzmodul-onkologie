@@ -22,6 +22,8 @@ Viele dieser Meldungen werden durch Filter in `advisor.json` unterdrückt, da si
 
 ## Terminologie-Server und Validierungskonfiguration
 
+Die betreffenden Validierung betreffen die aktuelle Packageversion 2026.0.0-rc2. 
+
 **MII Terminology Server**: [https://termserv.mii.medizininformatik-initiative.de/fhir](https://termserv.mii.medizininformatik-initiative.de/fhir)
 
 **Validierungskonfiguration**: [`advisor.json`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/blob/dev/advisor.json)
