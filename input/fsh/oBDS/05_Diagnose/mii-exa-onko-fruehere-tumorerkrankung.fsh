@@ -8,7 +8,7 @@ Description: "Beispiel einer früheren Tumorerkrankung (Carcinoma in situ der Ce
 * code.coding[icd10-gm].system = "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
 * code.coding[icd10-gm].version = "2013"
 * code.coding[icd10-gm].code = #D06.9
-* code.coding[icd10-gm].display = "Carcinoma in situ der Cervix uteri, nicht näher bezeichnet"
+* code.coding[icd10-gm].display = "Carcinoma in situ: Cervix uteri, nicht näher bezeichnet"
 * code.text = "Cervix-Ca in situ"
 * subject = Reference(Patient/example)
 * extension[assertedDate].valueDateTime = "2013"

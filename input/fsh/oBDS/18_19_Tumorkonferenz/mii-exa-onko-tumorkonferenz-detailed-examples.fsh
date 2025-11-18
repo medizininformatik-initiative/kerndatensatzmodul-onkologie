@@ -49,8 +49,8 @@ Usage: #example
 * reasonReference = Reference(Condition/primaertumor-example)
 * medicationCodeableConcept.coding[atcClassDe].system = "http://fhir.de/CodeSystem/bfarm/atc"
 * medicationCodeableConcept.coding[atcClassDe].code = #L01EF
-* medicationCodeableConcept.coding[atcClassDe].display = "Proteinkinase-Inhibitoren"
-* medicationCodeableConcept.text = "CDK4/6 Inhibitor (Proteinkinase-Inhibitor Klasse L01XE) - Palbociclib, Ribociclib oder Abemaciclib"
+* medicationCodeableConcept.coding[atcClassDe].display = "Cyclin-abhängige Kinasen (CDK)-Inhibitoren"
+* medicationCodeableConcept.text = "CDK4/6 Inhibitor (Cyclin-abhängige Kinasen-Inhibitor Klasse L01EF) - Palbociclib, Ribociclib oder Abemaciclib"
 * note.text = "Molecular tumor board recommends any CDK4/6 inhibitor based on HR+/HER2- profile. Final agent selection at prescriber discretion."
 
 // =====================================================
