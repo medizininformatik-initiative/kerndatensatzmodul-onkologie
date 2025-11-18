@@ -64,10 +64,16 @@ Description: "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der 
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
-* extension contains MII_EX_Onko_Histology_Morphology_Behavior_ICDO3 named morphology-behavior-icdo3 0..1 MS
+* extension contains
+    MII_EX_Onko_Histology_Morphology_Behavior_ICDO3 named morphology-behavior-icdo3 0..1 MS and
+    http://hl7.org/fhir/StructureDefinition/condition-occurredFollowing named occurredFollowing 0..* MS
 * insert Label (extension[morphology-behavior-icdo3], ICD-O-Morphologie, Morphologie des Primärtumors nach ICD-O-3 nach 6.3 oBDS)
 * insert Translation(extension[morphology-behavior-icdo3] ^short, de-DE, ICD-O-Morphologie)
 * insert Translation(extension[morphology-behavior-icdo3] ^definition, de-DE, Morphologie des Primärtumors nach ICD-O-3 nach 6.3 oBDS)
+
+* extension[occurredFollowing] ^short = "Frühere Tumorerkrankungen"
+* extension[occurredFollowing] ^definition = "Verweis auf frühere Tumorerkrankungen, nach denen die aktuelle Diagnose aufgetreten ist"
+* extension[occurredFollowing].valueReference only Reference(MII_PR_Onko_Fruehere_Tumorerkrankung)
 
 * extension[Feststellungsdatum] 1..1 MS
 
@@ -88,4 +94,4 @@ Source: MII_PR_Onko_Diagnose_Primaertumor
 * extension[morphology-behavior-icdo3].valueCodeableConcept.coding.code -> "6.3" "Morphologie-Code"
 * extension[morphology-behavior-icdo3].valueCodeableConcept.coding.version -> "6.4" "Morphologie ICD-O/Blue Book Version"
 * extension[morphology-behavior-icdo3].valueCodeableConcept.text -> "6.5" "Morphologie-Freitext"
-* -> "5.9" "Frühere Tumorerkrankungen"
+* extension[occurredFollowing].valueReference -> "5.9" "Frühere Tumorerkrankungen"
