@@ -23,9 +23,20 @@ Es beinhaltet:
 * den Status zur Studienteilnahme (Ja, Nein, Unbekannt)
 
 
-Im Falle einer pharmakologischen Studie SOLLTE am besten eine Referenz zu einer Procedure / Systemischen Therapie bestehen, entweder über Observation.partOf = Reference (SystemischeTherapie), Observation.basedOn = Reference (MedicationRequest); oder Procedure.basedOn. 
+Im Falle einer pharmakologischen Studie SOLLTE am besten eine Referenz zu einer Procedure / Systemischen Therapie bestehen, entweder über Observation.partOf = Reference (SystemischeTherapie), Observation.basedOn = Reference (MedicationRequest); oder Procedure.basedOn.
 
-Außerdem fehlen noch Informationen über die genaue Studie (Organisation, StudienID etc). 
+### Referenzierung von Studien
+
+Informationen über die genaue Studie (Organisation, StudienID, Studienphase, etc.) KÖNNEN über das Element `Observation.focus[studie]` mit einer Referenz auf eine ResearchStudy-Ressource aus dem [MII Modul Studie](https://simplifier.net/medizininformatikinitiative-modul-studie) bereitgestellt werden.
+
+Die ResearchStudy-Ressource ermöglicht die strukturierte Erfassung von:
+* Studienidentifikatoren (DRKS, ClinicalTrials.gov, EudraCT, Innovationsfonds-Projektnummer)
+* Studientyp und -phase
+* Primäre Studienziele
+* Studienkontext und Indikation
+* Studienstatus
+
+Ein vollständiges Beispiel findet sich in der PRO-B Studienteilnahme, die eine ResearchStudy mit DRKS-Registrierung (DRKS00024015) und Innovationsfonds-Projektnummer (01NVF19013) referenziert. 
 
 @```
 from 
@@ -171,6 +182,20 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
 
 **Beispiele**
 
+Beispiel 1: Einfache Studienteilnahme
+
 {{json:mii-exa-onko-studienteilnahme}}
+
+---
+
+Beispiel 2: Studienteilnahme mit ResearchStudy-Referenz (PRO-B Studie)
+
+Dieses Beispiel zeigt die Dokumentation einer Studienteilnahme mit Referenz auf eine ResearchStudy-Ressource, die detaillierte Studieninformationen inkl. DRKS-Registrierung und Innovationsfonds-Projektnummer enthält.
+
+{{json:mii-exa-onko-studienteilnahme-prob}}
+
+ResearchStudy-Ressource:
+
+{{json:mii-exa-onko-studie-prob}}
 
 ---
