@@ -27,9 +27,14 @@ Diese Änderungen erfordern möglicherweise Anpassungen in bestehenden Implement
 - `feat` PRO-B Studienteilnahme-Beispiel mit ResearchStudy-Referenz zur Demonstration der Integration mit dem Forschungsvorhaben-Modul
 - `feat` QA Validierungsseite zur Dokumentation der Qualitätssicherungsprozesse hinzugefügt
 
+### Refaktorierungen
+
+- `refactor` **ASA-Klassifikation**: Vom KRK-Modul in das Allgemeiner Leistungszustand Profil verschoben für breitere Anwendbarkeit über verschiedene Tumorentitäten hinweg
+
 ### Validierung und Qualitätsverbesserungen
 
 - `fix` Package-Abhängigkeiten auf 2026.0.0-ballot Versionen aktualisiert (studie, biobank, molgen) um fehlende Snapshots zu beheben
+- `fix` advisor.json Suppressionen für IG Parameter-Code Validierung erweitert
 - `fix` MedDRA-Slice zum AdverseEvent-Profil hinzugefügt und explizite MedDRA-Codes zum ValueSet für Validierung ergänzt
 - `fix` SNOMED-Code durch MedDRA-Code für Neuropathie-AdverseEvent ersetzt (präzisere Kodierung von Nebenwirkungen)
 - `fix` HER2 ISH LOINC-Code auf korrekten FISH-Test geändert für präzisere Laborwerterfassung
@@ -45,23 +50,42 @@ Diese Änderungen erfordern möglicherweise Anpassungen in bestehenden Implement
 - `fix` Residualstatus Display-Namen korrigiert
 - `fix` FUFOL durch LV5FU2 ersetzt mit korrektem OPS Display-Namen
 
+### oBDS-Mapping Verbesserungen
+
+- `fix` oBDS-Mapping zur Operation Urgency Extension und Dokumentation hinzugefügt
+- `fix` Korrektes oBDS-Mapping zum Tumorgröße-Profil hinzugefügt und Dokumentationsseite erstellt
+- `fix` oBDS-Mapping zum Prostata PSA-Profil hinzugefügt
+
 ### Beispieldaten-Korrekturen
 
-- `fix` Fehlende OPS-Versionen zu diversen Procedure-Instanzen hinzugefügt (palbociclib-therapie, pertuzumab-therapie, etc.)
+- `fix` Fehlende OPS-Versionen zu diversen Procedure-Instanzen hinzugefügt (palbociclib-therapie, pertuzumab-therapie, Strahlentherapie-Beispiele, etc.)
 - `fix` [ops] Slice-Notation zu allen OPS code.coding in example-patient-1 hinzugefügt
 - `fix` Fehlende SNOMED-CT Codes und Kategorien zu Procedure-Beispielen hinzugefügt
 - `fix` Instanztyp von Procedure zu MedicationRequest für Tumorkonferenz-Beispiele korrigiert
 - `fix` Ungültige SNOMED-Codes aus KRK-Operation entfernt
+- `fix` Bundle-Typ von collection zu transaction für ECOG und Karnofsky Beispiele geändert
+- `fix` Verpflichtende fullUrl zu Bundle-Einträgen in Beispielen hinzugefügt
+- `fix` Verpflichtende diagnostic certainty und encounter zu Melanom-Diagnose hinzugefügt
+- `fix` ICD-O-3 Display-Namen in Frühere Tumorerkrankung Beispielen korrigiert
+- `fix` PRO-B ResearchStudy focus auf korrekten SNOMED-Code aktualisiert
+- `fix` TKI-Beispiel Therapieempfehlung korrigiert
+- `fix` Systemische Therapie Beispiel-Kategorie korrigiert
 
 ### ATC-Code Transitionen
 
 - `feat` ATC-Code Transitionsbeispiele hinzugefügt und Display-Namen korrigiert zur Demonstration temporaler ATC-Änderungen (z.B. Imatinib, Quizartinib)
+- `feat` Umfassende ATC-Code Transitions-Dokumentation und ConceptMaps hinzugefügt
+- `feat` Protokoll- und Medikations-Tracking für Kombinationstherapie-Empfehlungen ergänzt
 
 ### Technische Verbesserungen
 
 - `chore` Version auf 2026.0.0-rc.1 aktualisiert
 - `chore` .validation-history zu gitignore hinzugefügt
 - `chore` Generierte CapabilityStatement und ECOG-Dateien aktualisiert
+- `feat` UML-Diagramme aktualisiert und PlantUML Auto-Rendering Workflow hinzugefügt
+- `fix` FHIRPath Typ-Vergleich in ECOG und Karnofsky Constraints korrigiert
+- `fix` ECOG und Karnofsky Constraint Validierungsausdrücke verbessert
+- `chore` Simplifier Build-Skript hinzugefügt und molgen Dependency aktualisiert
 
 ### Weitere Verbesserungen
 
