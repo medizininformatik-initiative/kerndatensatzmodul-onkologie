@@ -17,6 +17,11 @@ move-conformance-resources:
   - delete: /**/*implementationguide*.json
   - delete: /**/*implementationguide-1.x-en.json
   - delete: /**/*MII_IG_*.json
+  - delete: /**/*mii-ig-*.json
+  - delete: /**/*-ig-*.json
+  - delete: /**/*onGenerate*.json
+  - delete: /**/*onLoad*.json
+  - delete: /**/*onCheck*.json
   - move: /package/
   - target: output
 
@@ -31,6 +36,12 @@ move-examples:
   - source: staging
   - category: Instance
   - delete: /**/*ConceptMap*.json
+  - delete: /**/*validation*.json
+  - delete: /**/*qa*.json
+  - delete: /**/*expansions*.json
+  - delete: /**/*.terminologyCapabilities*.json
+  - delete: /**/*onGenerate*.json
+  - delete: /**/*onCheck*.json
   - move: /package/examples
   - target: output
 
