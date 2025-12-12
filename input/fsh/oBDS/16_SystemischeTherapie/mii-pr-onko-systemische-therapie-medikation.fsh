@@ -60,7 +60,9 @@ Description: "Medikation der Systemische Therapie. Dieses Profil beschreibt die 
 * insert Translation(effectivePeriod.end ^short, de-DE, Enddatum der systemischen Medikation)
 * insert Translation(effectivePeriod.end ^definition, de-DE, Enddatum der systemischen Medikation gemäß 16.9 oBDS 2021. )
 * basedOn MS
-* basedOn only Reference(CarePlan)
+* basedOn only Reference(CarePlan or MedicationRequest)
+* basedOn ^short = "Therapieplan oder Therapieempfehlung"
+* basedOn ^definition = "Referenz auf den CarePlan (Therapieplan) oder MedicationRequest (Therapieempfehlung) auf dem diese Medikation basiert."
 
 
 Mapping: FHIR-oBDS-Systemische_Therapie_Medikation

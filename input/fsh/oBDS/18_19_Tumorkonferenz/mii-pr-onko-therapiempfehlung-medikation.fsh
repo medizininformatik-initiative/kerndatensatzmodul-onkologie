@@ -14,7 +14,8 @@ Description: "Dieses Profil beschreibt eine Medikations-Tumorempfehlung"
 
 
 * intent MS
-* intent = #proposal
+* intent ^short = "proposal | option"
+* intent ^definition = "Verwenden Sie 'proposal' für eigenständige Therapieempfehlungen. Verwenden Sie 'option' wenn die MedicationRequest Teil einer RequestGroup ist (z.B. Kombinationstherapie)."
 
 
 * subject MS

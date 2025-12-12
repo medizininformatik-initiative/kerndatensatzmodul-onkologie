@@ -49,11 +49,14 @@
       {
         "id": "MedicationStatement.basedOn",
         "path": "MedicationStatement.basedOn",
+        "short": "Therapieplan oder Therapieempfehlung",
+        "definition": "Referenz auf den CarePlan (Therapieplan) oder MedicationRequest (Therapieempfehlung) auf dem diese Medikation basiert.",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/CarePlan"
+              "http://hl7.org/fhir/StructureDefinition/CarePlan",
+              "http://hl7.org/fhir/StructureDefinition/MedicationRequest"
             ]
           }
         ]

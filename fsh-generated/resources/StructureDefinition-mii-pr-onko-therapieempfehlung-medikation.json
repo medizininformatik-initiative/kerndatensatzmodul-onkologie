@@ -49,7 +49,8 @@
       {
         "id": "MedicationRequest.intent",
         "path": "MedicationRequest.intent",
-        "patternCode": "proposal"
+        "short": "proposal | option",
+        "definition": "Verwenden Sie 'proposal' für eigenständige Therapieempfehlungen. Verwenden Sie 'option' wenn die MedicationRequest Teil einer RequestGroup ist (z.B. Kombinationstherapie)."
       },
       {
         "id": "MedicationRequest.medication[x]:medicationCodeableConcept",
