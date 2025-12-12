@@ -18,6 +18,7 @@ Usage: #example
 Instance: mii-exa-onko-mamma-diagnose
 InstanceOf: MII_PR_Onko_Diagnose_Primaertumor
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
 * clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed
@@ -98,6 +99,7 @@ Description: "Beispiel-Bundle für Mamma-Karzinom mit allen spezifischen Profile
 Instance: mii-exa-onko-mamma-menopause-status-1
 InstanceOf: MII_PR_Onko_Mamma_Menopausenstatus
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-menopausenstatus)
 * status = #final
 * code.coding = $SCT#161712005 "Menopause, function (observable entity)"
 * subject = Reference(mii-exa-onko-mamma-bundle-patient)
@@ -107,6 +109,7 @@ Usage: #example
 Instance: mii-exa-onko-mamma-rezeptorstatus-estrogen-1
 InstanceOf: MII_PR_Onko_Mamma_Rezeptorstatus_Estrogen
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-rezeptorstatus-estrogen)
 * status = #final
 * subject = Reference(mii-exa-onko-mamma-bundle-patient)
 * focus = Reference(Condition/mii-exa-onko-mamma-diagnose)
@@ -120,6 +123,7 @@ Usage: #example
 Instance: mii-exa-onko-mamma-rezeptorstatus-progesteron-1
 InstanceOf: MII_PR_Onko_Mamma_Rezeptorstatus_Progesteron
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-rezeptorstatus-progesteron)
 * status = #final
 * code.coding = $LNC#85339-0 "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"
 * subject = Reference(mii-exa-onko-mamma-bundle-patient)
@@ -135,6 +139,7 @@ Usage: #example
 Instance: mii-exa-onko-mamma-praeoperative-markierung-1
 InstanceOf: MII_PR_Onko_Mamma_Praeoperative_Markierung
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-praeoperative-markierung)
 * status = #completed
 * category = $SCT#103693007 "Diagnostic procedure (procedure)"
 * code.coding = $SCT#433222002 "Insertion of guide wire into breast using ultrasound guidance (procedure)"
@@ -146,6 +151,7 @@ Usage: #example
 Instance: mii-exa-onko-mamma-tumorgroesse-1
 InstanceOf: MII_PR_Onko_Tumorgroesse
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorgroesse)
 * status = #final
 * code.coding[loinc] = $LNC#21889-1 "Size Tumor"
 * code.coding[snomed] = $SCT#371479009 "Tumor size, largest dimension (observable entity)"

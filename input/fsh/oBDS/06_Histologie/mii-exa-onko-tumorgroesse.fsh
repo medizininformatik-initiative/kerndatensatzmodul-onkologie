@@ -1,6 +1,7 @@
 Instance: mii-exa-onko-tumorgroesse
 InstanceOf: MII_PR_Onko_Tumorgroesse
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorgroesse)
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorgroesse"
 
 * status = #final

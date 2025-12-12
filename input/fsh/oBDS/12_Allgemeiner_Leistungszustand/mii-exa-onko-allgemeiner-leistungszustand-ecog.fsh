@@ -1,6 +1,7 @@
 Instance: mii-exa-onko-allgemeiner-leistungszustand-ecog
 InstanceOf: mii-pr-onko-allgemeiner-leistungszustand-ecog
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog)
 * status = #final
 * code.coding[snomed] = $SCT#423740007
 * code.coding[loinc] = $LNC#89262-0

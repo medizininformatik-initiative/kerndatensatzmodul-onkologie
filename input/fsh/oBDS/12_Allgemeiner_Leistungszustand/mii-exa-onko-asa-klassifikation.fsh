@@ -1,6 +1,7 @@
 Instance: mii-exa-onko-asa-klassifikation
 InstanceOf: MII_PR_Onko_ASA_Klassifikation
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-asa-klassifikation)
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-asa-klassifikation"
 
 * status = #final

@@ -1,6 +1,7 @@
 Instance: mii-exa-onko-residualstatus-1
 InstanceOf: mii-pr-onko-residualstatus
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-residualstatus)
 * status = #final
 * code = $LNC#84892-9
 * subject = Reference(Patient/example)

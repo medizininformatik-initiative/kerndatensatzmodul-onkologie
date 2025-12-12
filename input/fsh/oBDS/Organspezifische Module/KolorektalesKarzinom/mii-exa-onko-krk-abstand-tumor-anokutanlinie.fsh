@@ -3,6 +3,7 @@ InstanceOf: MII_PR_Onko_KRK_Abstand_Anokutan
 Usage: #example
 Title: "MII EXA Onko KRK Abstand Tumor Anokutanlinie"
 Description: "Beispiel für den Abstand des Tumorunterrandes zur Anokutanlinie beim Rektumkarzinom"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-anokutan)
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-anokutan"
 
 * status = #final

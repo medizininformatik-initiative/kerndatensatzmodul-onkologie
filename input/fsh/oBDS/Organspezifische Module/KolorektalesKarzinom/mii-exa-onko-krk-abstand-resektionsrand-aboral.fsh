@@ -3,6 +3,7 @@ InstanceOf: MII_PR_Onko_KRK_Abstand_Aboral
 Usage: #example
 Title: "MII EXA Onko KRK Abstand Resektionsrand Aboral"
 Description: "Beispiel für den minimalen Abstand des Tumorrandes zur aboralen Dissektionslinie"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-aboral)
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-aboral"
 
 * status = #final

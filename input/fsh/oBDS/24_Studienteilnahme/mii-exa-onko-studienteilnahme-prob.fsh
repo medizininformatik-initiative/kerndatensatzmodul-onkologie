@@ -24,6 +24,7 @@ InstanceOf: mii-pr-onko-studienteilnahme
 Usage: #example
 Title: "Studienteilnahme PRO-B"
 Description: "Beispiel einer Studienteilnahme an der PRO-B Studie für eine Patientin mit metastasiertem Mammakarzinom"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-studienteilnahme)
 * status = #final
 * code.coding = $SCT#709491003 "Enrollment in clinical trial (procedure)"
 * subject = Reference(Patient/example)

@@ -3,7 +3,7 @@ InstanceOf: MII_PR_Onko_Operation
 Usage: #example
 Title: "MII EXA Onko Prostata Operation"
 Description: "Beispiel für eine Prostatektomie in der Onkologie"
-
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation)
 * status = #completed  // Valid Procedure status: completed
 * category = $SCT#387713003 "Surgical procedure"
 * code.coding[ops] = $OPS#5-604.02 "Radikale Prostatovesikulektomie: Retropubisch: Mit regionaler Lymphadenektomie"

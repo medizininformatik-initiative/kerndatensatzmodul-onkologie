@@ -2,6 +2,7 @@ Instance: mii-exa-onko-liste-evidenz-erstdiagnose-1
 InstanceOf: mii-pr-onko-liste-evidenz-erstdiagnose
 Usage: #example
 Description: "Eine Beispielliste, welche Observations zur Diagnosestellung präsent waren"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-liste-evidenz-erstdiagnose)
 * status = #current
 * mode = #snapshot
 * title = "Liste der Evidenz zum Erstdiagnosezeitpunkt"

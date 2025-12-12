@@ -3,6 +3,7 @@ InstanceOf: MII_PR_Onko_Prostata_Operation
 Usage: #example
 Title: "Prostata Operation Prostatektomie Beispiel"
 Description: "Beispiel einer radikalen Prostatektomie"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostata-operation)
 * status = #completed
 * category = $SCT#387713003 "Surgical procedure"
 * code.coding[ops] = $OPS#5-604.02 "Radikale Prostatovesikulektomie: Retropubisch: Mit regionaler Lymphadenektomie"
@@ -19,6 +20,7 @@ InstanceOf: MII_PR_Onko_Prostata_Operation
 Usage: #example
 Title: "Prostata Operation TURP Beispiel"
 Description: "Beispiel einer transurethralen Resektion der Prostata"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostata-operation)
 * status = #completed
 * category = $SCT#387713003 "Surgical procedure"
 * code.coding[ops] = $OPS#5-601.0 "Transurethrale Exzision und Destruktion von Prostatagewebe: Elektroresektion"

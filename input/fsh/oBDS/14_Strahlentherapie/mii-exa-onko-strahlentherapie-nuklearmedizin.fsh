@@ -3,6 +3,7 @@ InstanceOf: MII_PR_Onko_Strahlentherapie
 Usage: #example
 Title: "Example radiation therapy"
 Description: "Example radiation therapy conformant with MII Prozedur as bracket for radiation and nuclear therapy"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie)
 * subject = Reference(Patient/example)
 * status = #completed
 
@@ -21,6 +22,7 @@ InstanceOf: MII_PR_Onko_Strahlentherapie_Bestrahlung_Nuklearmedizin
 Usage: #example
 Title: "Strahlentherapie: Beispiel einer Nuklearmedizinischen Bestrahlungstherapie"
 Description: "Example radiation therapy conformant with MII Prozedur as bracket for radiation and nuclear therapy"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin)
 * subject = Reference(Patient/example)
 * status = #completed
 

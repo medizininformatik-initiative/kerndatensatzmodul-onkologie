@@ -1,6 +1,7 @@
 Instance: mii-exa-onko-tnm-pn-kategorie-Pn1
 InstanceOf: mii-pr-onko-tnm-pn-kategorie
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-pn-kategorie)
 * status = #final
 
 * code = $SCT#371513001 "Presence of direct invasion by primary malignant neoplasm to nerve (observable entity)"
