@@ -99,7 +99,7 @@ Description: "Beispiel-Bundle für Mamma-Karzinom mit allen spezifischen Profile
 Instance: mii-exa-onko-mamma-menopause-status-1
 InstanceOf: MII_PR_Onko_Mamma_Menopausenstatus
 Usage: #example
-* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-menopausenstatus)
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-menopause-status)
 * status = #final
 * code.coding = $SCT#161712005 "Menopause, function (observable entity)"
 * subject = Reference(mii-exa-onko-mamma-bundle-patient)

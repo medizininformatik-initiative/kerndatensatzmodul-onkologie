@@ -1,7 +1,6 @@
 Instance: mii-pr-onko-nebenwirkung-0
 InstanceOf: mii-pr-onko-nebenwirkung-adverse-event
 Usage: #example
-* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event)
 
 * actuality = #actual
 * event.coding[meddra].system = "https://www.meddra.org"
