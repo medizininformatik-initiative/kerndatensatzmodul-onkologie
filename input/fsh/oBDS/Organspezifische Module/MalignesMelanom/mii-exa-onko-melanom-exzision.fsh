@@ -3,6 +3,7 @@ InstanceOf: MII_PR_Onko_Melanom_Exzision
 Usage: #example
 Title: "Melanom Exzision Oberarm Beispiel"
 Description: "Beispiel einer Melanom-Exzision am linken Oberarm mit Sicherheitsabstand"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-exzision)
 * status = #completed
 * category = $SCT#387713003 "Surgical procedure"
 * code.coding[ops] = $OPS#5-894.06 "Lokale Exzision von erkranktem Gewebe an Haut und Unterhaut: Ohne primären Wundverschluss: Schulter und Axilla"
@@ -20,6 +21,7 @@ InstanceOf: MII_PR_Onko_Melanom_Exzision
 Usage: #example
 Title: "Melanom Exzision Rücken Beispiel"
 Description: "Beispiel einer Melanom-Nachexzision am oberen Rücken"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-exzision)
 * status = #completed
 * category = $SCT#387713003 "Surgical procedure"
 * code.coding[ops] = $OPS#5-894.0a "Lokale Exzision von erkranktem Gewebe an Haut und Unterhaut: Ohne primären Wundverschluss: Brustwand und Rücken"

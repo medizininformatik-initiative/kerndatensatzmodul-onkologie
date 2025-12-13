@@ -1,6 +1,7 @@
 Instance: mii-exa-onko-prostata-gleason-pattern-primary-1
 InstanceOf: MII_PR_Onko_Prostata_Gleason_Pattern
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns)
 * status = #final
 * code.coding = $SCT#384994009 "Primary Gleason pattern (observable entity)" 
 * subject = Reference(mii-exa-onko-prostata-bundle-patient)
@@ -12,6 +13,7 @@ Usage: #example
 Instance: mii-exa-onko-prostata-gleason-pattern-secondary-1
 InstanceOf: MII_PR_Onko_Prostata_Gleason_Pattern
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns)
 * status = #final
 * code.coding = $SCT#384995005 "Secondary Gleason pattern (observable entity)"
 * subject = Reference(mii-exa-onko-prostata-bundle-patient)
@@ -23,6 +25,7 @@ Usage: #example
 Instance: mii-exa-onko-prostata-gleason-pattern-grade-group-1
 InstanceOf: MII_PR_Onko_Prostata_Gleason_Grade_Group
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-grade-group)
 * status = #final
 * code.coding = $SCT#1812491000004107 "Histologic grade of primary malignant neoplasm of prostate by International Society of Urological Pathology technique (observable entity)"
 * effectiveDateTime = "2024-01-02"

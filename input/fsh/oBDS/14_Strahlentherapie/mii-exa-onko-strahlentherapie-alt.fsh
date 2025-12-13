@@ -4,6 +4,7 @@ InstanceOf: MII_PR_Onko_Strahlentherapie
 Usage: #example
 Title: "Example radiation therapy"
 Description: "Example radiation therapy"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie)
 * subject = Reference(Patient/example)
 * status = #completed
 

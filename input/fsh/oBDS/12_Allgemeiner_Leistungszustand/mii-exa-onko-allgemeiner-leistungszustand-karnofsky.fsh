@@ -1,6 +1,7 @@
 Instance: mii-exa-onko-allgemeiner-leistungszustand-karnofsky
 InstanceOf: mii-pr-onko-allgemeiner-leistungszustand-karnofsky
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-karnofsky)
 * status = #final
 * code.coding[snomed] = $SCT#761869008
 * code.coding[loinc] = $LNC#89243-0

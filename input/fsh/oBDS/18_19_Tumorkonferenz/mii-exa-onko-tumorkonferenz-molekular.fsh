@@ -2,6 +2,7 @@
 Instance: mii-exa-onko-tumorkonferenz-molekular
 InstanceOf: mii-pr-onko-tumorkonferenz
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz)
 * status = #active
 * intent = #plan
 * category.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ"
@@ -38,6 +39,7 @@ Usage: #example
 Instance: mii-exa-onko-trastuzumab-therapie
 InstanceOf: mii-pr-onko-systemische-therapie
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie)
 * status = #preparation
 * code.coding[systemische_therapie_art].system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art"
 * code.coding[systemische_therapie_art].code = #ZS
@@ -55,6 +57,7 @@ Usage: #example
 Instance: mii-exa-onko-pertuzumab-therapie
 InstanceOf: mii-pr-onko-systemische-therapie
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie)
 * status = #preparation
 * category = $SCT#18629005	// Administration of drug or medicament
 * code.coding[systemische_therapie_art].system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art"
@@ -72,6 +75,7 @@ Usage: #example
 Instance: mii-exa-onko-palbociclib-therapie
 InstanceOf: mii-pr-onko-systemische-therapie
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie)
 * status = #preparation
 * category = $SCT#18629005	// Administration of drug or medicament
 * code.coding[systemische_therapie_art].system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art"

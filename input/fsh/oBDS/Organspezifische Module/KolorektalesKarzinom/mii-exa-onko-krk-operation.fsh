@@ -3,6 +3,7 @@ InstanceOf: MII_PR_Onko_KRK_Operation
 Usage: #example
 Title: "MII EXA Onko KRK Operation"
 Description: "Beispiel für eine Operation beim Kolorektalen Karzinom"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-operation)
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-operation"
 
 * extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K "kurativ"

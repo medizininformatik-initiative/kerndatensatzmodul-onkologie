@@ -3,6 +3,7 @@ InstanceOf: MII_PR_Onko_KRK_Anastomoseninsuffizienz
 Usage: #example
 Title: "MII EXA Onko KRK Anastomoseninsuffizienz"
 Description: "Beispiel für die Bewertung einer Anastomoseninsuffizienz beim Kolorektalen Karzinom"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-anastomoseninsuffizienz)
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-anastomoseninsuffizienz"
 
 * status = #final

@@ -1,6 +1,7 @@
 Instance: mii-exa-onko-tnm-klassifikation-TisN0M0
 InstanceOf: mii-pr-onko-tnm-klassifikation
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation)
 * status = #final
 * code = $SCT#399537006 "Clinical TNM stage grouping"
 * subject = Reference(Patient/example)

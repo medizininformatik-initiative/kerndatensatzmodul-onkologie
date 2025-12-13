@@ -3,6 +3,7 @@ InstanceOf: MII_PR_Onko_Operation
 Usage: #example
 Title: "Example surgical therapy"
 Description: "Example surgical therapy"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation)
 * subject = Reference(Patient/example)
 * encounter = Reference(Encounter/example)
 * basedOn = Reference(CarePlan/example)

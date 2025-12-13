@@ -28,6 +28,7 @@ InstanceOf: MII_PR_Onko_Diagnose_Primaertumor
 Usage: #example
 Title: "Kolonkarzinom Primärdiagnose - Colon ascendens"
 Description: "Stage III ascending colon adenocarcinoma, diagnosed January 2024"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
@@ -48,6 +49,7 @@ InstanceOf: MII_PR_Onko_Operation
 Usage: #example
 Title: "Hemikolektomie rechts"
 Description: "Laparoscopic right hemicolectomy with lymph node dissection"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation)
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation"
 * status = #completed
 * category = $SCT#387713003 "Surgical procedure"
@@ -73,6 +75,7 @@ Instance: mii-exa-onko-ascending-colon-tnm-t
 InstanceOf: MII_PR_Onko_TNM_T_Kategorie
 Usage: #example
 Title: "TNM T-Kategorie - pT3"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie)
 * status = #final
 * code = $SCT#384625004 "pT category (observable entity)"
 * code.extension[cpPraefix].valueCodeableConcept.coding.system = $UICC
@@ -88,6 +91,7 @@ Instance: mii-exa-onko-ascending-colon-tnm-n
 InstanceOf: MII_PR_Onko_TNM_N_Kategorie
 Usage: #example
 Title: "TNM N-Kategorie - pN1"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie)
 * status = #final
 * code = $SCT#371494008 "pN category (observable entity)"
 * code.extension[cpPraefix].valueCodeableConcept.coding.system = "https://www.uicc.org/resources/tnm"
@@ -103,6 +107,7 @@ Instance: mii-exa-onko-ascending-colon-tnm-m
 InstanceOf: MII_PR_Onko_TNM_M_Kategorie
 Usage: #example
 Title: "TNM M-Kategorie - cM0"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie)
 * status = #final
 * code = $SCT#399387003 "cM category (observable entity)"
 * code.extension[cpPraefix].valueCodeableConcept.coding.system = "https://www.uicc.org/resources/tnm"
@@ -119,6 +124,7 @@ InstanceOf: MII_PR_Onko_TNM_Klassifikation
 Usage: #example
 Title: "TNM Klassifikation - Stadium IIIB"
 Description: "Postoperative pathological TNM staging for ascending colon cancer (pT3 pN1 cM0 = Stage IIIB)"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation)
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
 * status = #final
 * subject = Reference(Patient/example-modification)
@@ -146,6 +152,7 @@ InstanceOf: MII_PR_Onko_Tumorkonferenz_Detailed_Recommendations
 Usage: #example
 Title: "Tumorkonferenz - FOLFOX Empfehlung"
 Description: "Tumor board recommends FOLFOX4 protocol for adjuvant treatment"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz-detailed-recommendations)
 * status = #active
 * intent = #plan
 * category.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ"
@@ -163,6 +170,7 @@ InstanceOf: MII_PR_Onko_Therapieempfehlung_Kombinationstherapie
 Usage: #example
 Title: "FOLFOX4 Therapieempfehlung"
 Description: "Original tumor board recommendation for FOLFOX4 protocol (later modified due to toxicity)"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie)
 * status = #active
 * intent = #proposal
 * subject = Reference(Patient/example-modification)
@@ -193,6 +201,7 @@ InstanceOf: MII_PR_Onko_Therapieempfehlung_Medikation
 Usage: #example
 Title: "MedicationRequest - Fluorouracil (vollständig verabreicht)"
 Description: "Fluorouracil recommendation - completed for all 12 cycles"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation)
 * status = #completed
 * intent = #proposal
 * subject = Reference(Patient/example-modification)
@@ -210,6 +219,7 @@ InstanceOf: MII_PR_Onko_Therapieempfehlung_Medikation
 Usage: #example
 Title: "MedicationRequest - Folinsäure (vollständig verabreicht)"
 Description: "Leucovorin recommendation - completed for all 12 cycles"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation)
 * status = #completed
 * intent = #proposal
 * subject = Reference(Patient/example-modification)
@@ -227,6 +237,7 @@ InstanceOf: MII_PR_Onko_Therapieempfehlung_Medikation
 Usage: #example
 Title: "MedicationRequest - Oxaliplatin (abgebrochen wegen Neuropathie)"
 Description: "Oxaliplatin recommendation - stopped after cycle 6 due to grade 3 peripheral neuropathy"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation)
 * status = #stopped
 * statusReason.coding = $SCT#281647001 "Adverse reaction (disorder)"
 * statusReason.text = "Oxaliplatin discontinued after cycle 6 due to grade 3 peripheral neuropathy (CTCAE). Patient continued with 5-FU + Leucovorin only for remaining 6 cycles."
@@ -250,6 +261,7 @@ InstanceOf: MII_PR_Onko_Systemische_Therapie
 Usage: #example
 Title: "FOLFOX4 Therapie - Phase 1 (Zyklen 1-6)"
 Description: "First phase: Full FOLFOX4 protocol for 6 cycles before dose modification"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie)
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
 * status = #completed
 * subject = Reference(Patient/example-modification)
@@ -286,6 +298,7 @@ InstanceOf: MII_PR_Onko_Systemische_Therapie_Medikation
 Usage: #example
 Title: "5-FU Phase 1 (Zyklen 1-6)"
 Description: "Fluorouracil administered during FOLFOX4 phase"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation)
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
 * status = #completed
 * subject = Reference(Patient/example-modification)
@@ -305,6 +318,7 @@ InstanceOf: MII_PR_Onko_Systemische_Therapie_Medikation
 Usage: #example
 Title: "Folinsäure Phase 1 (Zyklen 1-6)"
 Description: "Leucovorin administered during FOLFOX4 phase"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation)
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
 * status = #completed
 * subject = Reference(Patient/example-modification)
@@ -324,6 +338,7 @@ InstanceOf: MII_PR_Onko_Systemische_Therapie_Medikation
 Usage: #example
 Title: "Oxaliplatin Phase 1 (Zyklen 1-6, dann abgebrochen)"
 Description: "Oxaliplatin administered for 6 cycles, then discontinued due to neuropathy"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation)
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
 * status = #stopped
 * statusReason.coding = $SCT#281647001 "Adverse reaction (disorder)"
@@ -378,6 +393,7 @@ InstanceOf: MII_PR_Onko_Systemische_Therapie
 Usage: #example
 Title: "LV5FU2 Therapie - Phase 2 (Zyklen 7-12)"
 Description: "Second phase: Modified protocol with 5-FU + Leucovorin only (no Oxaliplatin) for remaining 6 cycles"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie)
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
 * status = #completed
 * subject = Reference(Patient/example-modification)
@@ -415,6 +431,7 @@ InstanceOf: MII_PR_Onko_Systemische_Therapie_Medikation
 Usage: #example
 Title: "5-FU Phase 2 (Zyklen 7-12)"
 Description: "Fluorouracil continued for cycles 7-12 as part of modified LV5FU2 protocol"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation)
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
 * status = #completed
 * subject = Reference(Patient/example-modification)
@@ -434,6 +451,7 @@ InstanceOf: MII_PR_Onko_Systemische_Therapie_Medikation
 Usage: #example
 Title: "Folinsäure Phase 2 (Zyklen 7-12)"
 Description: "Leucovorin continued for cycles 7-12 as part of modified LV5FU2 protocol"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation)
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
 * status = #completed
 * subject = Reference(Patient/example-modification)
@@ -457,6 +475,7 @@ InstanceOf: MII_PR_Onko_Verlauf
 Usage: #example
 Title: "Verlauf - 6 Monate nach modifizierter Therapie"
 Description: "6-month follow-up showing complete response despite protocol modification"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf)
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf"
 * status = #final
 * code.coding = $SCT#396432002 "Status of regression of tumor (observable entity)"

@@ -1,6 +1,7 @@
 Instance: mii-exa-onko-genetische-variante-braf
 InstanceOf: mii-pr-onko-genetische-variante
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-genetische-variante)
 * status = #final
 * subject = Reference(Patient/example)
 

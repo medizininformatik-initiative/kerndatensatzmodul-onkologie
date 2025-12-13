@@ -3,6 +3,7 @@ InstanceOf: MII_PR_Onko_Melanom_Sicherheitsabstand
 Usage: #example
 Title: "MII EXA Onko Melanom Sicherheitsabstand"
 Description: "Beispiel für die Messung des Sicherheitsabstands beim Malignen Melanom"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-sicherheitsabstand)
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-sicherheitsabstand"
 
 * status = #final

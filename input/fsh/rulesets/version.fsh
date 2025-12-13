@@ -1,6 +1,9 @@
 // switch version of all conformance resources here
 RuleSet: Version
-* version = "2026.0.0-rc.1"
+* version = "2026.0.0-rc.2"
 
 RuleSet: PR_CS_VS_Version
-* ^version = "2026.0.0-rc.1"
+* ^version = "2026.0.0-rc.2"
+
+RuleSet: MetaProfile(canonical)
+* meta.profile[+] = "{canonical}|2026.0.0-rc.2"

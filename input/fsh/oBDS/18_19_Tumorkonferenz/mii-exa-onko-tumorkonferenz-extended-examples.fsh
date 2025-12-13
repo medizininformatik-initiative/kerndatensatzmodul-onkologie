@@ -11,6 +11,7 @@
 Instance: mii-exa-onko-tumorkonferenz-mixed-approach
 InstanceOf: mii-pr-onko-tumorkonferenz
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz)
 * identifier.value = "Tumorkonferenz_Mixed_001"
 * status = #active
 * intent = #plan
@@ -38,6 +39,7 @@ Usage: #example
 Instance: mii-exa-onko-tumorkonferenz-pure-molecular
 InstanceOf: mii-pr-onko-tumorkonferenz
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz)
 * identifier.value = "Tumorkonferenz_Molecular_002"
 * status = #active
 * intent = #plan
@@ -63,6 +65,7 @@ Usage: #example
 Instance: mii-exa-onko-molecular-cdk46-protocol
 InstanceOf: mii-pr-onko-therapieempfehlung-kombinationstherapie
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie)
 * status = #active
 * intent = #proposal
 * code.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ"
@@ -79,6 +82,7 @@ Usage: #example
 Instance: mii-exa-onko-molecular-her2-alternatives
 InstanceOf: mii-pr-onko-therapieempfehlung-kombinationstherapie
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie)
 * status = #active
 * intent = #proposal
 * code.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ"

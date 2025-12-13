@@ -7,6 +7,7 @@
 Instance: mii-exa-onko-tumorkonferenz-class-recommendation
 InstanceOf: mii-pr-onko-tumorkonferenz-detailed-recommendations
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz-detailed-recommendations)
 * status = #active
 * intent = #plan
 * category.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ"
@@ -24,6 +25,7 @@ Usage: #example
 Instance: mii-exa-onko-cdk46-class-recommendation
 InstanceOf: mii-pr-onko-therapieempfehlung-kombinationstherapie
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie)
 * status = #active
 * intent = #proposal
 * code.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ"
@@ -42,6 +44,7 @@ Usage: #example
 Instance: mii-exa-onko-cdk46-class-medication
 InstanceOf: MII_PR_Onko_Therapieempfehlung_Medikation
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation)
 * status = #active
 * intent = #proposal
 * subject = Reference(Patient/example)
@@ -62,6 +65,7 @@ Usage: #example
 Instance: mii-exa-onko-tumorkonferenz-specific-choices
 InstanceOf: mii-pr-onko-tumorkonferenz-detailed-recommendations
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz-detailed-recommendations)
 * status = #active
 * intent = #plan
 * category.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ"
@@ -79,6 +83,7 @@ Usage: #example
 Instance: mii-exa-onko-her2-specific-choices
 InstanceOf: mii-pr-onko-therapieempfehlung-kombinationstherapie
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie)
 * status = #active
 * intent = #proposal
 * code.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ"
@@ -113,6 +118,7 @@ Usage: #example
 Instance: mii-exa-onko-trastuzumab-option
 InstanceOf: MII_PR_Onko_Therapieempfehlung_Medikation
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation)
 * status = #active
 * intent = #proposal
 * subject = Reference(Patient/example)
@@ -127,6 +133,7 @@ Usage: #example
 Instance: mii-exa-onko-tdm1-option
 InstanceOf: MII_PR_Onko_Therapieempfehlung_Medikation
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation)
 * status = #active
 * intent = #proposal
 * subject = Reference(Patient/example)
@@ -141,6 +148,7 @@ Usage: #example
 Instance: mii-exa-onko-tucatinib-option
 InstanceOf: MII_PR_Onko_Therapieempfehlung_Medikation
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation)
 * status = #active
 * intent = #proposal
 * subject = Reference(Patient/example)
