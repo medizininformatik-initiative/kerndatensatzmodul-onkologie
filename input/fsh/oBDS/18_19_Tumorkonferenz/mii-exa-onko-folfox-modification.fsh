@@ -148,11 +148,12 @@ Description: "Postoperative pathological TNM staging for ascending colon cancer 
 
 // CarePlan - Tumor Board Meeting
 Instance: mii-exa-onko-tumorkonferenz-folfox-modification
-InstanceOf: MII_PR_Onko_Tumorkonferenz_Detailed_Recommendations
+InstanceOf: mii-pr-onko-tumorkonferenz
 Usage: #example
 Title: "Tumorkonferenz - FOLFOX Empfehlung"
 Description: "Tumor board recommends FOLFOX4 protocol for adjuvant treatment"
-* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz-detailed-recommendations)
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz)
+* identifier.value = "Tumorkonferenz_FOLFOX_Modification_001"
 * status = #active
 * intent = #plan
 * category.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ"
@@ -161,8 +162,8 @@ Description: "Tumor board recommends FOLFOX4 protocol for adjuvant treatment"
 * subject = Reference(Patient/example-modification)
 * created = "2024-03-05"
 * addresses = Reference(mii-exa-onko-ascending-colon-cancer-diagnosis)
-* activity.reference = Reference(mii-exa-onko-folfox-requestgroup-modification)
-* activity.progress.text = "Tumor board recommends FOLFOX4 chemotherapy protocol for stage III colon cancer, adjuvant setting"
+* activity[extended].reference = Reference(mii-exa-onko-folfox-requestgroup-modification)
+* activity[extended].progress.text = "Tumor board recommends FOLFOX4 chemotherapy protocol for stage III colon cancer, adjuvant setting"
 
 // RequestGroup - FOLFOX4 Combination Therapy Recommendation
 Instance: mii-exa-onko-folfox-requestgroup-modification

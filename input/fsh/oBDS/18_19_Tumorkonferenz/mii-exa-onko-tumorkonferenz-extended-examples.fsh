@@ -115,3 +115,56 @@ Usage: #example
 * authoredOn = "2024-01-16"
 * reasonReference = Reference(Condition/primaertumor-example)
 * note.text = "Molekulares Tumorboard empfiehlt neurochirurgische Evaluation für stereotaktische Radiochirurgie bei oligometastatischen Hirnläsionen"
+
+// =====================================================
+// MEDICATIONREQUEST INSTANCES (used by RequestGroups above)
+// Note: intent = #option because these are components of RequestGroups
+// =====================================================
+
+// MedicationRequest for CDK4/6 inhibitor class (pharmaceutical class approach)
+Instance: mii-exa-onko-cdk46-class-medication
+InstanceOf: MII_PR_Onko_Therapieempfehlung_Medikation
+Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation)
+* status = #active
+* intent = #option  // Part of RequestGroup, so use 'option' not 'proposal'
+* subject = Reference(Patient/example)
+* authoredOn = "2024-01-15"
+* reasonReference = Reference(Condition/primaertumor-example)
+* medicationCodeableConcept.coding[atcClassDe].system = "http://fhir.de/CodeSystem/bfarm/atc"
+* medicationCodeableConcept.coding[atcClassDe].code = #L01EF
+* medicationCodeableConcept.coding[atcClassDe].display = "Cyclin-abhängige Kinasen (CDK)-Inhibitoren"
+* medicationCodeableConcept.text = "CDK4/6 Inhibitor (Klasse L01EF) - Palbociclib, Ribociclib oder Abemaciclib"
+* note.text = "Molekulares Tumorboard empfiehlt beliebigen CDK4/6 Inhibitor basierend auf HR+/HER2- Profil. Konkrete Wirkstoffauswahl nach Verfügbarkeit und Patientenfaktoren."
+
+// MedicationRequest for T-DM1 (specific medication choice)
+Instance: mii-exa-onko-tdm1-option
+InstanceOf: MII_PR_Onko_Therapieempfehlung_Medikation
+Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation)
+* status = #active
+* intent = #option  // Part of RequestGroup, so use 'option' not 'proposal'
+* subject = Reference(Patient/example)
+* authoredOn = "2024-01-16"
+* reasonReference = Reference(Condition/primaertumor-example)
+* medicationCodeableConcept.coding[atcClassDe].system = "http://fhir.de/CodeSystem/bfarm/atc"
+* medicationCodeableConcept.coding[atcClassDe].code = #L01FD03
+* medicationCodeableConcept.coding[atcClassDe].display = "Trastuzumab emtansin"
+* medicationCodeableConcept.text = "Trastuzumab Emtansine (T-DM1)"
+* note.text = "Zweitlinien-Option, empfohlen bei Progression unter Trastuzumab-basierter Therapie"
+
+// MedicationRequest for Tucatinib combination (specific medication choice)
+Instance: mii-exa-onko-tucatinib-option
+InstanceOf: MII_PR_Onko_Therapieempfehlung_Medikation
+Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation)
+* status = #active
+* intent = #option  // Part of RequestGroup, so use 'option' not 'proposal'
+* subject = Reference(Patient/example)
+* authoredOn = "2024-01-16"
+* reasonReference = Reference(Condition/primaertumor-example)
+* medicationCodeableConcept.coding[atcClassDe].system = "http://fhir.de/CodeSystem/bfarm/atc"
+* medicationCodeableConcept.coding[atcClassDe].code = #L01EH03
+* medicationCodeableConcept.coding[atcClassDe].display = "Tucatinib"
+* medicationCodeableConcept.text = "Tucatinib + Trastuzumab + Capecitabin"
+* note.text = "Drittlinien-Kombination für Hirnmetastasen oder mehrfach resistente HER2+ Erkrankung"
