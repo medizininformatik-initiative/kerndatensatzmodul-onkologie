@@ -22,8 +22,12 @@ Description: "Comprehensive Bundle demonstrating complete FOLFOX workflow from t
 * type = #collection
 * timestamp = "2024-03-15T10:00:00Z"
 
+// ENTRY: PATIENT
+* entry[0].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-folfox-patient"
+* entry[=].resource = mii-exa-onko-folfox-patient
+
 // ENTRY: COLORECTAL CANCER DIAGNOSIS
-* entry[0].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-colorectal-cancer-diagnosis"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-colorectal-cancer-diagnosis"
 * entry[=].resource = mii-exa-onko-colorectal-cancer-diagnosis
 
 // ENTRY: TNM T

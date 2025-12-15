@@ -133,6 +133,14 @@
       },
       {
         "reference": {
+          "reference": "Condition/primaertumor-example"
+        },
+        "name": "Example Primaertumor Condition for Extended Examples",
+        "description": "Minimal primaertumor condition for referencing in molecular tumor board examples",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+      },
+      {
+        "reference": {
           "reference": "Procedure/mii-exa-onko-strahlentherapie-nuklearmedizin-1"
         },
         "name": "Example radiation therapy",
@@ -207,6 +215,14 @@
         "name": "FOLFOX - Oxaliplatin tatsächlich verabreicht",
         "description": "Oxaliplatin medication statement as part of FOLFOX4 protocol",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
+      },
+      {
+        "reference": {
+          "reference": "Patient/mii-exa-onko-folfox-patient"
+        },
+        "name": "FOLFOX Patient - 65-jähriger mit Kolonkarzinom",
+        "description": "Patient for FOLFOX colorectal cancer treatment example",
+        "exampleBoolean": true
       },
       {
         "reference": {
@@ -3405,6 +3421,14 @@
         "name": "MII_VS_Onko_Prostata_Postsurgical_Complications",
         "description": "Value Set für Clavien-Dindo Klassifikation",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Patient/mii-exa-onko-molecular-board-patient"
+        },
+        "name": "Molecular Tumor Board Patient",
+        "description": "Patient for molecular tumor board examples",
+        "exampleBoolean": true
       },
       {
         "reference": {

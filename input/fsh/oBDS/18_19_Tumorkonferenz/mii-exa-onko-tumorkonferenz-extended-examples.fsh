@@ -4,6 +4,38 @@
 // =====================================================
 
 // =====================================================
+// SUPPORTING RESOURCES
+// =====================================================
+
+// Patient
+Instance: mii-exa-onko-molecular-board-patient
+InstanceOf: Patient
+Usage: #example
+Title: "Molecular Tumor Board Patient"
+Description: "Patient for molecular tumor board examples"
+* identifier.system = "http://example.org/fhir/sid/patients"
+* identifier.value = "MTB-2024-001"
+* name.family = "Müller"
+* name.given = "Maria"
+* gender = #female
+* birthDate = "1968-07-22"
+
+// Primaertumor Condition
+Instance: primaertumor-example
+InstanceOf: MII_PR_Onko_Diagnose_Primaertumor
+Usage: #example
+Title: "Example Primaertumor Condition for Extended Examples"
+Description: "Minimal primaertumor condition for referencing in molecular tumor board examples"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)
+* clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active
+* verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed
+* code.coding = $ICD10GM#C50.9 "Bösartige Neubildung: Brustdrüse, nicht näher bezeichnet"
+* code.coding.version = "2024"
+* subject = Reference(mii-exa-onko-molecular-board-patient)
+* recordedDate = "2024-01-10"
+* extension[Feststellungsdatum].valueDateTime = "2024-01-10"
+
+// =====================================================
 // EXAMPLE 1: TRADITIONAL oBDS + EXTENDED MOLECULAR RECOMMENDATION
 // Mixed approach: Standard oBDS categorization + detailed molecular protocol
 // =====================================================
@@ -15,7 +47,7 @@ Usage: #example
 * identifier.value = "Tumorkonferenz_Mixed_001"
 * status = #active
 * intent = #plan
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-onko-molecular-board-patient)
 * category.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ"
 * category.coding.code = #praeth // Molekulares Tumorboard
 * category.text = "Molekulares Tumorboard"
@@ -43,7 +75,7 @@ Usage: #example
 * identifier.value = "Tumorkonferenz_Molecular_002"
 * status = #active
 * intent = #plan
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-onko-molecular-board-patient)
 * category.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ"
 * category.coding.code = #praeth
 * category.text = "Molekulares Tumorboard - Precision Medicine"
@@ -71,7 +103,7 @@ Usage: #example
 * code.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ"
 * code.coding.code = #CZ // Chemotherapie + zielgerichtete Substanzen
 * code.text = "CDK4/6 Inhibitor + Hormontherapie Kombination"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-onko-molecular-board-patient)
 * authoredOn = "2024-01-15"
 * reasonReference = Reference(Condition/primaertumor-example)
 * action[0].resource = Reference(mii-exa-onko-cdk46-class-medication)
@@ -88,7 +120,7 @@ Usage: #example
 * code.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ"
 * code.coding.code = #ZS // Zielgerichtete Substanzen
 * code.text = "HER2-gerichtete Therapie - Resistenz-basierte Auswahl"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-onko-molecular-board-patient)
 * authoredOn = "2024-01-16"
 * reasonReference = Reference(Condition/primaertumor-example)
 * action[0].title = "HER2-Therapie Optionen"
@@ -111,7 +143,7 @@ Usage: #example
 * code.coding.system = "http://snomed.info/sct"
 * code.coding.code = #11429006 "Consultation"
 * code.text = "Neurochirurgische Konsultation für Hirnmetastasen"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-onko-molecular-board-patient)
 * authoredOn = "2024-01-16"
 * reasonReference = Reference(Condition/primaertumor-example)
 * note.text = "Molekulares Tumorboard empfiehlt neurochirurgische Evaluation für stereotaktische Radiochirurgie bei oligometastatischen Hirnläsionen"
@@ -128,7 +160,7 @@ Usage: #example
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation)
 * status = #active
 * intent = #option  // Part of RequestGroup, so use 'option' not 'proposal'
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-onko-molecular-board-patient)
 * authoredOn = "2024-01-15"
 * reasonReference[Primaertumor] = Reference(Condition/primaertumor-example)
 * medicationCodeableConcept.coding[atcClassDe].system = "http://fhir.de/CodeSystem/bfarm/atc"
@@ -144,7 +176,7 @@ Usage: #example
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation)
 * status = #active
 * intent = #option  // Part of RequestGroup, so use 'option' not 'proposal'
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-onko-molecular-board-patient)
 * authoredOn = "2024-01-16"
 * reasonReference[Primaertumor] = Reference(Condition/primaertumor-example)
 * medicationCodeableConcept.coding[atcClassDe].system = "http://fhir.de/CodeSystem/bfarm/atc"
@@ -160,7 +192,7 @@ Usage: #example
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation)
 * status = #active
 * intent = #option  // Part of RequestGroup, so use 'option' not 'proposal'
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-onko-molecular-board-patient)
 * authoredOn = "2024-01-16"
 * reasonReference[Primaertumor] = Reference(Condition/primaertumor-example)
 * medicationCodeableConcept.coding[atcClassDe].system = "http://fhir.de/CodeSystem/bfarm/atc"

@@ -12,8 +12,21 @@
 // =====================================================
 
 // -----------------------------------------------------
-// STEP 0: DIAGNOSIS AND SURGICAL PROCEDURE
+// STEP 0: PATIENT AND DIAGNOSIS
 // -----------------------------------------------------
+
+// Patient
+Instance: mii-exa-onko-folfox-patient
+InstanceOf: Patient
+Usage: #example
+Title: "FOLFOX Patient - 65-jähriger mit Kolonkarzinom"
+Description: "Patient for FOLFOX colorectal cancer treatment example"
+* identifier.system = "http://example.org/fhir/sid/patients"
+* identifier.value = "FOLFOX-2024-001"
+* name.family = "Schmidt"
+* name.given = "Hans"
+* gender = #male
+* birthDate = "1959-03-15"
 
 // Primary Diagnosis - Stage III Sigmoid Colon Cancer
 Instance: mii-exa-onko-colorectal-cancer-diagnosis
@@ -30,7 +43,7 @@ Description: "Stage III sigmoid colon adenocarcinoma, diagnosed January 2024"
 * code.coding[icd10-gm] = $ICD10GM#C18.7 "Bösartige Neubildung: Colon sigmoideum"
 * code.coding[icd10-gm].version = "2024"
 * extension[Feststellungsdatum].valueDateTime = "2024-01-15"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-onko-folfox-patient)
 * encounter = Reference(Encounter/example-diagnosis)
 * onsetDateTime = "2024-01-15"
 * recordedDate = "2024-01-15"
@@ -59,7 +72,7 @@ Description: "Main surgical procedure: Laparoscopic sigmoid resection with lymph
 * code.coding[ops].display = "Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion"
 * code.text = "Laparoskopische Sigmaresektion mit TME und Lymphknotendissektion"
 
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-onko-folfox-patient)
 * encounter = Reference(Encounter/example-surgery)
 * performedDateTime = "2024-02-15"
 * reasonReference = Reference(mii-exa-onko-colorectal-cancer-diagnosis)
@@ -92,7 +105,7 @@ Description: "Component procedure 1: Sigmoid resection with anastomosis"
 * code.coding[ops].code = #5-484.5
 * code.coding[ops].display = "Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion"
 
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-onko-folfox-patient)
 * encounter = Reference(Encounter/example-surgery)
 * performedDateTime = "2024-02-15"
 * reasonReference = Reference(mii-exa-onko-colorectal-cancer-diagnosis)
@@ -124,7 +137,7 @@ Description: "Component procedure 2: Regional lymph node dissection"
 * code.coding[ops].code = #5-407.0
 * code.coding[ops].display = "Radikale (systematische) Lymphadenektomie im Rahmen einer anderen Operation: Axillär"
 
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-onko-folfox-patient)
 * encounter = Reference(Encounter/example-surgery)
 * performedDateTime = "2024-02-15"
 * reasonReference = Reference(mii-exa-onko-colorectal-cancer-diagnosis)
@@ -156,7 +169,7 @@ Description: "Component procedure 3: Laparoscopic port placement"
 * code.coding[ops].code = #5-986.x
 * code.coding[ops].display = "Minimalinvasive Technik: Sonstige"
 
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-onko-folfox-patient)
 * encounter = Reference(Encounter/example-surgery)
 * performedDateTime = "2024-02-15"
 * reasonReference = Reference(mii-exa-onko-colorectal-cancer-diagnosis)
@@ -181,7 +194,7 @@ Title: "TNM T-Kategorie - pT3"
 * code = $SCT#384625004 "pT category (observable entity)"
 * code.extension[cpPraefix].valueCodeableConcept.coding.system = "https://www.uicc.org/resources/tnm"
 * code.extension[cpPraefix].valueCodeableConcept.coding.code = #p
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-onko-folfox-patient)
 * focus = Reference(mii-exa-onko-colorectal-cancer-diagnosis)
 * effectiveDateTime = "2024-02-20"
 * method.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"
@@ -199,7 +212,7 @@ Title: "TNM N-Kategorie - pN1"
 * code = $SCT#371494008 "pN category (observable entity)"
 * code.extension[cpPraefix].valueCodeableConcept.coding.system = "https://www.uicc.org/resources/tnm"
 * code.extension[cpPraefix].valueCodeableConcept.coding.code = #p
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-onko-folfox-patient)
 * focus = Reference(mii-exa-onko-colorectal-cancer-diagnosis)
 * effectiveDateTime = "2024-02-20"
 * method.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"
@@ -217,7 +230,7 @@ Title: "TNM M-Kategorie - cM0"
 * code = $SCT#399387003 "cM category (observable entity)"
 * code.extension[cpPraefix].valueCodeableConcept.coding.system = "https://www.uicc.org/resources/tnm"
 * code.extension[cpPraefix].valueCodeableConcept.coding.code = #c
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-onko-folfox-patient)
 * focus = Reference(mii-exa-onko-colorectal-cancer-diagnosis)
 * effectiveDateTime = "2024-02-20"
 * method.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"
@@ -235,7 +248,7 @@ Description: "Postoperative pathological TNM staging with UICC stage group IIIB"
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
 * status = #final
 * code.coding = $SCT#399588009 "Pathologic TNM stage grouping"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-onko-folfox-patient)
 * focus = Reference(mii-exa-onko-colorectal-cancer-diagnosis)
 * effectiveDateTime = "2024-02-20"
 * method.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"
@@ -263,9 +276,9 @@ Description: "Tumor board recommends FOLFOX protocol for colorectal cancer patie
 * category.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ"
 * category.coding.code = #praeth // Prätherapeutische Tumorkonferenz
 * category.coding.display = "prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie)"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-onko-folfox-patient)
 * created = "2024-03-10"
-* addresses = Reference(Condition/example-colorectal-cancer)
+* addresses = Reference(mii-exa-onko-colorectal-cancer-diagnosis)
 * activity[extended].reference = Reference(mii-exa-onko-folfox-requestgroup)
 * activity[extended].progress.text = "Tumor board recommends FOLFOX chemotherapy protocol for stage III colon cancer, adjuvant setting"
 
@@ -278,9 +291,9 @@ Description: "Tumor board recommendation for FOLFOX protocol with therapy type a
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie)
 * status = #active
 * intent = #proposal
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-onko-folfox-patient)
 * authoredOn = "2024-03-10"
-* reasonReference = Reference(Condition/example-colorectal-cancer)
+* reasonReference = Reference(mii-exa-onko-colorectal-cancer-diagnosis)
 
 // Code: Therapy type (category)
 * code.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ"
@@ -318,9 +331,9 @@ Title: "FOLFOX - Fluorouracil MedicationRequest"
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation)
 * status = #active
 * intent = #proposal
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-onko-folfox-patient)
 * authoredOn = "2024-03-10"
-* reasonReference[Primaertumor] = Reference(Condition/example-colorectal-cancer)
+* reasonReference[Primaertumor] = Reference(mii-exa-onko-colorectal-cancer-diagnosis)
 * medicationCodeableConcept.coding[atcClassDe].system = "http://fhir.de/CodeSystem/bfarm/atc"
 * medicationCodeableConcept.coding[atcClassDe].code = #L01BC02
 * medicationCodeableConcept.coding[atcClassDe].display = "Fluorouracil"
@@ -334,9 +347,9 @@ Title: "FOLFOX - Folinsäure MedicationRequest"
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation)
 * status = #active
 * intent = #proposal
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-onko-folfox-patient)
 * authoredOn = "2024-03-10"
-* reasonReference[Primaertumor] = Reference(Condition/example-colorectal-cancer)
+* reasonReference[Primaertumor] = Reference(mii-exa-onko-colorectal-cancer-diagnosis)
 * medicationCodeableConcept.coding[atcClassDe].system = "http://fhir.de/CodeSystem/bfarm/atc"
 * medicationCodeableConcept.coding[atcClassDe].code = #V03AF03
 * medicationCodeableConcept.coding[atcClassDe].display = "Calciumfolinat"
@@ -350,9 +363,9 @@ Title: "FOLFOX - Oxaliplatin MedicationRequest"
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation)
 * status = #active
 * intent = #proposal
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-onko-folfox-patient)
 * authoredOn = "2024-03-10"
-* reasonReference[Primaertumor] = Reference(Condition/example-colorectal-cancer)
+* reasonReference[Primaertumor] = Reference(mii-exa-onko-colorectal-cancer-diagnosis)
 * medicationCodeableConcept.coding[atcClassDe].system = "http://fhir.de/CodeSystem/bfarm/atc"
 * medicationCodeableConcept.coding[atcClassDe].code = #L01XA03
 * medicationCodeableConcept.coding[atcClassDe].display = "Oxaliplatin"
@@ -371,9 +384,9 @@ Description: "Actual FOLFOX chemotherapy given, linked back to tumor board recom
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie)
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
 * status = #completed
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-onko-folfox-patient)
 * encounter = Reference(Encounter/example)
-* reasonReference = Reference(Condition/example-colorectal-cancer)
+* reasonReference = Reference(mii-exa-onko-colorectal-cancer-diagnosis)
 
 // Links back to tumor board recommendation
 * basedOn = Reference(mii-exa-onko-tumorkonferenz-folfox)
@@ -432,7 +445,7 @@ Description: "5-Fluorouracil medication statement as part of FOLFOX4 protocol"
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation)
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
 * status = #completed
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-onko-folfox-patient)
 
 // Links to the systemic therapy procedure
 * partOf[systemischeTherapie] = Reference(mii-exa-onko-folfox-procedure)
@@ -462,7 +475,7 @@ Description: "Folinic acid (Leucovorin) medication statement as part of FOLFOX4 
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation)
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
 * status = #completed
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-onko-folfox-patient)
 
 // Links to the systemic therapy procedure
 * partOf[systemischeTherapie] = Reference(mii-exa-onko-folfox-procedure)
@@ -492,7 +505,7 @@ Description: "Oxaliplatin medication statement as part of FOLFOX4 protocol"
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation)
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
 * status = #completed
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-onko-folfox-patient)
 
 // Links to the systemic therapy procedure
 * partOf[systemischeTherapie] = Reference(mii-exa-onko-folfox-procedure)
@@ -527,7 +540,7 @@ Description: "6-month follow-up examination showing no evidence of disease"
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf"
 * status = #final
 * code.coding = $SCT#396432002 "Status of regression of tumor (observable entity)"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-onko-folfox-patient)
 * focus = Reference(mii-exa-onko-colorectal-cancer-diagnosis)
 * effectiveDateTime = "2025-03-15"
 

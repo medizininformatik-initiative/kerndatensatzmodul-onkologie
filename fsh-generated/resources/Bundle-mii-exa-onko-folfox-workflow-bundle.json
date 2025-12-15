@@ -5,6 +5,29 @@
   "timestamp": "2024-03-15T10:00:00Z",
   "entry": [
     {
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-folfox-patient",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "mii-exa-onko-folfox-patient",
+        "identifier": [
+          {
+            "system": "http://example.org/fhir/sid/patients",
+            "value": "FOLFOX-2024-001"
+          }
+        ],
+        "name": [
+          {
+            "family": "Schmidt",
+            "given": [
+              "Hans"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1959-03-15"
+      }
+    },
+    {
       "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-colorectal-cancer-diagnosis",
       "resource": {
         "resourceType": "Condition",
@@ -57,7 +80,7 @@
           }
         ],
         "subject": {
-          "reference": "Patient/example"
+          "reference": "Patient/mii-exa-onko-folfox-patient"
         },
         "encounter": {
           "reference": "Encounter/example-diagnosis"
@@ -105,7 +128,7 @@
         },
         "status": "final",
         "subject": {
-          "reference": "Patient/example"
+          "reference": "Patient/mii-exa-onko-folfox-patient"
         },
         "focus": [
           {
@@ -165,7 +188,7 @@
         },
         "status": "final",
         "subject": {
-          "reference": "Patient/example"
+          "reference": "Patient/mii-exa-onko-folfox-patient"
         },
         "focus": [
           {
@@ -225,7 +248,7 @@
         },
         "status": "final",
         "subject": {
-          "reference": "Patient/example"
+          "reference": "Patient/mii-exa-onko-folfox-patient"
         },
         "focus": [
           {
@@ -272,7 +295,7 @@
           ]
         },
         "subject": {
-          "reference": "Patient/example"
+          "reference": "Patient/mii-exa-onko-folfox-patient"
         },
         "focus": [
           {
@@ -338,12 +361,12 @@
         ],
         "status": "active",
         "subject": {
-          "reference": "Patient/example"
+          "reference": "Patient/mii-exa-onko-folfox-patient"
         },
         "created": "2024-03-10",
         "addresses": [
           {
-            "reference": "Condition/example-colorectal-cancer"
+            "reference": "Condition/mii-exa-onko-colorectal-cancer-diagnosis"
           }
         ],
         "activity": [
@@ -373,12 +396,12 @@
         "intent": "proposal",
         "status": "active",
         "subject": {
-          "reference": "Patient/example"
+          "reference": "Patient/mii-exa-onko-folfox-patient"
         },
         "authoredOn": "2024-03-10",
         "reasonReference": [
           {
-            "reference": "Condition/example-colorectal-cancer"
+            "reference": "Condition/mii-exa-onko-colorectal-cancer-diagnosis"
           }
         ],
         "code": {
@@ -456,12 +479,12 @@
         "status": "active",
         "intent": "proposal",
         "subject": {
-          "reference": "Patient/example"
+          "reference": "Patient/mii-exa-onko-folfox-patient"
         },
         "authoredOn": "2024-03-10",
         "reasonReference": [
           {
-            "reference": "Condition/example-colorectal-cancer"
+            "reference": "Condition/mii-exa-onko-colorectal-cancer-diagnosis"
           }
         ]
       }
@@ -489,12 +512,12 @@
         "status": "active",
         "intent": "proposal",
         "subject": {
-          "reference": "Patient/example"
+          "reference": "Patient/mii-exa-onko-folfox-patient"
         },
         "authoredOn": "2024-03-10",
         "reasonReference": [
           {
-            "reference": "Condition/example-colorectal-cancer"
+            "reference": "Condition/mii-exa-onko-colorectal-cancer-diagnosis"
           }
         ]
       }
@@ -522,12 +545,12 @@
         "status": "active",
         "intent": "proposal",
         "subject": {
-          "reference": "Patient/example"
+          "reference": "Patient/mii-exa-onko-folfox-patient"
         },
         "authoredOn": "2024-03-10",
         "reasonReference": [
           {
-            "reference": "Condition/example-colorectal-cancer"
+            "reference": "Condition/mii-exa-onko-colorectal-cancer-diagnosis"
           }
         ]
       }
@@ -587,7 +610,7 @@
           ]
         },
         "subject": {
-          "reference": "Patient/example"
+          "reference": "Patient/mii-exa-onko-folfox-patient"
         },
         "encounter": {
           "reference": "Encounter/example-surgery"
@@ -650,7 +673,7 @@
           ]
         },
         "subject": {
-          "reference": "Patient/example"
+          "reference": "Patient/mii-exa-onko-folfox-patient"
         },
         "encounter": {
           "reference": "Encounter/example-surgery"
@@ -718,7 +741,7 @@
           ]
         },
         "subject": {
-          "reference": "Patient/example"
+          "reference": "Patient/mii-exa-onko-folfox-patient"
         },
         "encounter": {
           "reference": "Encounter/example-surgery"
@@ -786,7 +809,7 @@
           ]
         },
         "subject": {
-          "reference": "Patient/example"
+          "reference": "Patient/mii-exa-onko-folfox-patient"
         },
         "encounter": {
           "reference": "Encounter/example-surgery"
@@ -871,14 +894,14 @@
         },
         "status": "completed",
         "subject": {
-          "reference": "Patient/example"
+          "reference": "Patient/mii-exa-onko-folfox-patient"
         },
         "encounter": {
           "reference": "Encounter/example"
         },
         "reasonReference": [
           {
-            "reference": "Condition/example-colorectal-cancer"
+            "reference": "Condition/mii-exa-onko-colorectal-cancer-diagnosis"
           }
         ],
         "basedOn": [
@@ -939,7 +962,7 @@
         },
         "status": "completed",
         "subject": {
-          "reference": "Patient/example"
+          "reference": "Patient/mii-exa-onko-folfox-patient"
         },
         "partOf": [
           {
@@ -984,7 +1007,7 @@
         },
         "status": "completed",
         "subject": {
-          "reference": "Patient/example"
+          "reference": "Patient/mii-exa-onko-folfox-patient"
         },
         "partOf": [
           {
@@ -1029,7 +1052,7 @@
         },
         "status": "completed",
         "subject": {
-          "reference": "Patient/example"
+          "reference": "Patient/mii-exa-onko-folfox-patient"
         },
         "partOf": [
           {
@@ -1135,7 +1158,7 @@
         ],
         "status": "final",
         "subject": {
-          "reference": "Patient/example"
+          "reference": "Patient/mii-exa-onko-folfox-patient"
         },
         "focus": [
           {
