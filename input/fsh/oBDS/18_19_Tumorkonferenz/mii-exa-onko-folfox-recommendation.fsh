@@ -21,7 +21,7 @@ InstanceOf: Patient
 Usage: #example
 Title: "FOLFOX Patient - 65-jähriger mit Kolonkarzinom"
 Description: "Patient for FOLFOX colorectal cancer treatment example"
-* identifier.system = "http://example.org/fhir/sid/patients"
+* identifier.system = "https://www.medizininformatik-initiative.de/fhir/sid/patienten"
 * identifier.value = "FOLFOX-2024-001"
 * name.family = "Schmidt"
 * name.given = "Hans"

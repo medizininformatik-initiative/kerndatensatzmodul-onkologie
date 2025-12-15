@@ -13,7 +13,7 @@ InstanceOf: Patient
 Usage: #example
 Title: "Molecular Tumor Board Patient"
 Description: "Patient for molecular tumor board examples"
-* identifier.system = "http://example.org/fhir/sid/patients"
+* identifier.system = "https://www.medizininformatik-initiative.de/fhir/sid/patienten"
 * identifier.value = "MTB-2024-001"
 * name.family = "Müller"
 * name.given = "Maria"
