@@ -130,7 +130,7 @@ Usage: #example
 * intent = #option  // Part of RequestGroup, so use 'option' not 'proposal'
 * subject = Reference(Patient/example)
 * authoredOn = "2024-01-15"
-* reasonReference = Reference(Condition/primaertumor-example)
+* reasonReference[Primaertumor] = Reference(Condition/primaertumor-example)
 * medicationCodeableConcept.coding[atcClassDe].system = "http://fhir.de/CodeSystem/bfarm/atc"
 * medicationCodeableConcept.coding[atcClassDe].code = #L01EF
 * medicationCodeableConcept.coding[atcClassDe].display = "Cyclin-abhängige Kinasen (CDK)-Inhibitoren"
@@ -146,7 +146,7 @@ Usage: #example
 * intent = #option  // Part of RequestGroup, so use 'option' not 'proposal'
 * subject = Reference(Patient/example)
 * authoredOn = "2024-01-16"
-* reasonReference = Reference(Condition/primaertumor-example)
+* reasonReference[Primaertumor] = Reference(Condition/primaertumor-example)
 * medicationCodeableConcept.coding[atcClassDe].system = "http://fhir.de/CodeSystem/bfarm/atc"
 * medicationCodeableConcept.coding[atcClassDe].code = #L01FD03
 * medicationCodeableConcept.coding[atcClassDe].display = "Trastuzumab emtansin"
@@ -162,7 +162,7 @@ Usage: #example
 * intent = #option  // Part of RequestGroup, so use 'option' not 'proposal'
 * subject = Reference(Patient/example)
 * authoredOn = "2024-01-16"
-* reasonReference = Reference(Condition/primaertumor-example)
+* reasonReference[Primaertumor] = Reference(Condition/primaertumor-example)
 * medicationCodeableConcept.coding[atcClassDe].system = "http://fhir.de/CodeSystem/bfarm/atc"
 * medicationCodeableConcept.coding[atcClassDe].code = #L01EH03
 * medicationCodeableConcept.coding[atcClassDe].display = "Tucatinib"

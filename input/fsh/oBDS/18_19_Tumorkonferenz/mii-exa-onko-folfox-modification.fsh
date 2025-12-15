@@ -207,7 +207,7 @@ Description: "Fluorouracil recommendation - completed for all 12 cycles"
 * intent = #proposal
 * subject = Reference(Patient/example-modification)
 * authoredOn = "2024-03-05"
-* reasonReference = Reference(mii-exa-onko-ascending-colon-cancer-diagnosis)
+* reasonReference[Primaertumor] = Reference(mii-exa-onko-ascending-colon-cancer-diagnosis)
 * medicationCodeableConcept.coding[atcClassDe].system = "http://fhir.de/CodeSystem/bfarm/atc"
 * medicationCodeableConcept.coding[atcClassDe].code = #L01BC02
 * medicationCodeableConcept.coding[atcClassDe].display = "Fluorouracil"
@@ -225,7 +225,7 @@ Description: "Leucovorin recommendation - completed for all 12 cycles"
 * intent = #proposal
 * subject = Reference(Patient/example-modification)
 * authoredOn = "2024-03-05"
-* reasonReference = Reference(mii-exa-onko-ascending-colon-cancer-diagnosis)
+* reasonReference[Primaertumor] = Reference(mii-exa-onko-ascending-colon-cancer-diagnosis)
 * medicationCodeableConcept.coding[atcClassDe].system = "http://fhir.de/CodeSystem/bfarm/atc"
 * medicationCodeableConcept.coding[atcClassDe].code = #V03AF03
 * medicationCodeableConcept.coding[atcClassDe].display = "Calciumfolinat"
@@ -245,7 +245,7 @@ Description: "Oxaliplatin recommendation - stopped after cycle 6 due to grade 3 
 * intent = #proposal
 * subject = Reference(Patient/example-modification)
 * authoredOn = "2024-03-05"
-* reasonReference = Reference(mii-exa-onko-ascending-colon-cancer-diagnosis)
+* reasonReference[Primaertumor] = Reference(mii-exa-onko-ascending-colon-cancer-diagnosis)
 * medicationCodeableConcept.coding[atcClassDe].system = "http://fhir.de/CodeSystem/bfarm/atc"
 * medicationCodeableConcept.coding[atcClassDe].code = #L01XA03
 * medicationCodeableConcept.coding[atcClassDe].display = "Oxaliplatin"

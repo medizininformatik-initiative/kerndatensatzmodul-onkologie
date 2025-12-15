@@ -320,7 +320,7 @@ Title: "FOLFOX - Fluorouracil MedicationRequest"
 * intent = #proposal
 * subject = Reference(Patient/example)
 * authoredOn = "2024-03-10"
-* reasonReference = Reference(Condition/example-colorectal-cancer)
+* reasonReference[Primaertumor] = Reference(Condition/example-colorectal-cancer)
 * medicationCodeableConcept.coding[atcClassDe].system = "http://fhir.de/CodeSystem/bfarm/atc"
 * medicationCodeableConcept.coding[atcClassDe].code = #L01BC02
 * medicationCodeableConcept.coding[atcClassDe].display = "Fluorouracil"
@@ -336,7 +336,7 @@ Title: "FOLFOX - Folinsäure MedicationRequest"
 * intent = #proposal
 * subject = Reference(Patient/example)
 * authoredOn = "2024-03-10"
-* reasonReference = Reference(Condition/example-colorectal-cancer)
+* reasonReference[Primaertumor] = Reference(Condition/example-colorectal-cancer)
 * medicationCodeableConcept.coding[atcClassDe].system = "http://fhir.de/CodeSystem/bfarm/atc"
 * medicationCodeableConcept.coding[atcClassDe].code = #V03AF03
 * medicationCodeableConcept.coding[atcClassDe].display = "Calciumfolinat"
@@ -352,7 +352,7 @@ Title: "FOLFOX - Oxaliplatin MedicationRequest"
 * intent = #proposal
 * subject = Reference(Patient/example)
 * authoredOn = "2024-03-10"
-* reasonReference = Reference(Condition/example-colorectal-cancer)
+* reasonReference[Primaertumor] = Reference(Condition/example-colorectal-cancer)
 * medicationCodeableConcept.coding[atcClassDe].system = "http://fhir.de/CodeSystem/bfarm/atc"
 * medicationCodeableConcept.coding[atcClassDe].code = #L01XA03
 * medicationCodeableConcept.coding[atcClassDe].display = "Oxaliplatin"
