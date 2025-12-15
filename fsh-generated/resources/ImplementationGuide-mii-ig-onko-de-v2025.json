@@ -226,6 +226,14 @@
       },
       {
         "reference": {
+          "reference": "Bundle/mii-exa-onko-folfox-workflow-bundle"
+        },
+        "name": "FOLFOX Workflow Bundle - Komplettes Beispiel von Tumorkonferenz bis Therapie",
+        "description": "Comprehensive Bundle demonstrating complete FOLFOX workflow from tumor board recommendation through actual treatment, with all resources for reference resolution validation",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "Procedure/mii-exa-onko-folfox-phase1"
         },
         "name": "FOLFOX4 Therapie - Phase 1 (Zyklen 1-6)",
@@ -3703,13 +3711,6 @@
       },
       {
         "reference": {
-          "reference": "Observation/mii-exa-onko-ascending-colon-tnm-m"
-        },
-        "name": "TNM M-Kategorie - cM0",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie"
-      },
-      {
-        "reference": {
           "reference": "Observation/mii-exa-onko-colorectal-tnm-m"
         },
         "name": "TNM M-Kategorie - cM0",
@@ -3717,10 +3718,10 @@
       },
       {
         "reference": {
-          "reference": "Observation/mii-exa-onko-ascending-colon-tnm-n"
+          "reference": "Observation/mii-exa-onko-ascending-colon-tnm-m"
         },
-        "name": "TNM N-Kategorie - pN1",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie"
+        "name": "TNM M-Kategorie - cM0",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie"
       },
       {
         "reference": {
@@ -3731,14 +3732,21 @@
       },
       {
         "reference": {
-          "reference": "Observation/mii-exa-onko-ascending-colon-tnm-t"
+          "reference": "Observation/mii-exa-onko-ascending-colon-tnm-n"
+        },
+        "name": "TNM N-Kategorie - pN1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-colorectal-tnm-t"
         },
         "name": "TNM T-Kategorie - pT3",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
       },
       {
         "reference": {
-          "reference": "Observation/mii-exa-onko-colorectal-tnm-t"
+          "reference": "Observation/mii-exa-onko-ascending-colon-tnm-t"
         },
         "name": "TNM T-Kategorie - pT3",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
