@@ -77,6 +77,10 @@ Diese Änderungen erfordern möglicherweise Anpassungen in bestehenden Implement
 - `feat` Umfassende ATC-Code Transitions-Dokumentation und ConceptMaps hinzugefügt
 - `feat` Protokoll- und Medikations-Tracking für Kombinationstherapie-Empfehlungen ergänzt
 
+### Therapieempfehlung Medikation Erweiterung
+
+- `improve` **reasonReference erweitert**: `MII_PR_Onko_Therapieempfehlung_Medikation` (MedicationRequest) erlaubt nun neben der Pflicht-Referenz auf `MII_PR_Onko_Diagnose_Primaertumor` auch Referenzen auf `Condition` und `Observation` zur Unterstützung zusätzlicher klinischer Begründungen für Therapieempfehlungen
+
 ### Technische Verbesserungen
 
 - `chore` Version auf 2026.0.0-rc.1 aktualisiert

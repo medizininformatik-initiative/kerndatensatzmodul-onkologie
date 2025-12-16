@@ -5,7 +5,7 @@ Title: "MII PR Onkologie Prostata Anzahl positiver Stanzen"
 Description: "Dieses Profil beschreibt die Anzahl positiver Stanzen einer Prostata-Biopsie in der Onkologie"
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 
 * meta.profile 0..* MS
 * subject 1..1 MS

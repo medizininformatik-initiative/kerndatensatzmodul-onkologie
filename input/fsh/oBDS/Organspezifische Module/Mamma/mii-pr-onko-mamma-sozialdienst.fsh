@@ -5,7 +5,7 @@ Title: "MII PR Onkologie Präoperative Drahtmarkierung Mamma"
 Description: "Das vorliegende Profil beschreibt eine radiologisch durchgeführte Markierung von Tumorgewebe mittels  der Brust. Dabei können verschiedene Methoden gewählt werden. Die  "
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 
 * meta.profile 0..* MS
 * subject 1..1 MS

@@ -5,7 +5,7 @@ Title: "MII PR Onkologie Abstand Circumferelle Resektionsebene"
 Description: "Dieses Profil beschreibt den minimalen Abstand des Tumorrandes zur circumferellen Dissektionlinie beim Kolorektalen Karzinom"
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 
 * meta.profile 0..* MS
 * subject 1..1 MS

@@ -1,8 +1,8 @@
 Profile: MII_PR_Onko_Therapieempfehlung_Kombinationstherapie
 Parent: RequestGroup
 Id: mii-pr-onko-therapieempfehlung-kombinationstherapie
-Title: "MII PR Onkologie Therapieempfehlung Operation"
-Description: "Dieses Profil beschreibt eine Empfehlung für eine Operation im Rahmen der Tumorkonferenz"
+Title: "MII PR Onkologie Therapieempfehlung Kombinationstherapie"
+Description: "Dieses Profil beschreibt eine Empfehlung für eine Kombinationstherapie im Rahmen der Tumorkonferenz"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

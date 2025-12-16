@@ -5,7 +5,7 @@ Title: "MII PR Onkologie Abstand Anokutan"
 Description: "Dieses Profil beschreibt den Abstand des Tumorunterrandes zur Anokutanlinie im Kolorektalen Karzinom"
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 
 * meta.profile 0..* MS
 * subject 1..1 MS
