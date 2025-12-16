@@ -39,6 +39,7 @@ Description: "Dieses Profil beschreibt eine Medikations-Tumorempfehlung"
 
 // die Referenz zu Tumorerkrankung und weiteren Befunden
 * reasonReference 1..* MS
+* reasonReference only Reference(MII_PR_Onko_Diagnose_Primaertumor or Condition or Observation)
 * reasonReference ^slicing.discriminator.type = #profile
 * reasonReference ^slicing.discriminator.path = "$this.resolve()"
 * reasonReference ^slicing.rules = #open
