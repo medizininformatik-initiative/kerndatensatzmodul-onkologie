@@ -3,7 +3,7 @@
   "id": "mii-exa-onko-cdk46-class-medication",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation|2026.0.0-rc.2"
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation|2026.0.0-rc.3"
     ]
   },
   "medicationCodeableConcept": {
@@ -14,12 +14,12 @@
         "display": "Cyclin-abhängige Kinasen (CDK)-Inhibitoren"
       }
     ],
-    "text": "CDK4/6 Inhibitor (Cyclin-abhängige Kinasen-Inhibitor Klasse L01EF) - Palbociclib, Ribociclib oder Abemaciclib"
+    "text": "CDK4/6 Inhibitor (Klasse L01EF) - Palbociclib, Ribociclib oder Abemaciclib"
   },
   "status": "active",
-  "intent": "proposal",
+  "intent": "option",
   "subject": {
-    "reference": "Patient/example"
+    "reference": "Patient/mii-exa-onko-molecular-board-patient"
   },
   "authoredOn": "2024-01-15",
   "reasonReference": [
@@ -29,7 +29,7 @@
   ],
   "note": [
     {
-      "text": "Molecular tumor board recommends any CDK4/6 inhibitor based on HR+/HER2- profile. Final agent selection at prescriber discretion."
+      "text": "Molekulares Tumorboard empfiehlt beliebigen CDK4/6 Inhibitor basierend auf HR+/HER2- Profil. Konkrete Wirkstoffauswahl nach Verfügbarkeit und Patientenfaktoren."
     }
   ]
 }

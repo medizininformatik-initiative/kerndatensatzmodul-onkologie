@@ -3,7 +3,7 @@
   "id": "mii-ig-onko-de-v2025",
   "language": "de-DE",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/mii-ig-onko-de-v2025",
-  "version": "2026.0.0-rc.2",
+  "version": "2026.0.0-rc.3",
   "name": "MII_IG_Onko_DE",
   "title": "MII IG Onkologie",
   "status": "active",
@@ -37,16 +37,10 @@
       "id": "de_medizininformatikinitiative_kerndatensatz_meta"
     },
     {
-      "packageId": "de.medizininformatikinitiative.kerndatensatz.diagnose",
-      "version": "2025.0.x",
-      "uri": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ImplementationGuide/mii-ig-diagnose",
-      "id": "de_medizininformatikinitiative_kerndatensatz_diagnose"
-    },
-    {
-      "packageId": "de.medizininformatikinitiative.kerndatensatz.prozedur",
-      "version": "2025.0.x",
-      "uri": "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/ImplementationGuide/mii-ig-prozedur",
-      "id": "de_medizininformatikinitiative_kerndatensatz_prozedur"
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.base",
+      "version": "2026.0.x",
+      "uri": "https://www.medizininformatik-initiative.de/fhir/modul-base/ImplementationGuide/mii-ig-base",
+      "id": "de_medizininformatikinitiative_kerndatensatz_base"
     },
     {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.biobank",
@@ -133,6 +127,14 @@
       },
       {
         "reference": {
+          "reference": "Condition/primaertumor-example"
+        },
+        "name": "Example Primaertumor Condition for Extended Examples",
+        "description": "Minimal primaertumor condition for referencing in molecular tumor board examples",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+      },
+      {
+        "reference": {
           "reference": "Procedure/mii-exa-onko-strahlentherapie-nuklearmedizin-1"
         },
         "name": "Example radiation therapy",
@@ -210,6 +212,14 @@
       },
       {
         "reference": {
+          "reference": "Patient/mii-exa-onko-folfox-patient"
+        },
+        "name": "FOLFOX Patient - 65-jähriger mit Kolonkarzinom",
+        "description": "Patient for FOLFOX colorectal cancer treatment example",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "Procedure/mii-exa-onko-folfox-procedure"
         },
         "name": "FOLFOX Systemische Therapie (tatsächlich durchgeführt)",
@@ -223,6 +233,14 @@
         "name": "FOLFOX Therapieempfehlung (RequestGroup)",
         "description": "Tumor board recommendation for FOLFOX protocol with therapy type and protocol coding",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie"
+      },
+      {
+        "reference": {
+          "reference": "Bundle/mii-exa-onko-folfox-workflow-bundle"
+        },
+        "name": "FOLFOX Workflow Bundle - Komplettes Beispiel von Tumorkonferenz bis Therapie",
+        "description": "Comprehensive Bundle demonstrating complete FOLFOX workflow from tumor board recommendation through actual treatment, with all resources for reference resolution validation",
+        "exampleBoolean": true
       },
       {
         "reference": {
@@ -1874,14 +1892,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-onko-tumorkonferenz-detailed-recommendations"
-        },
-        "name": "MII PR Onkologie Tumorkonferenz - Detailed Recommendations",
-        "description": "Dieses Profil beschreibt strukturierte Therapieempfehlungen mit detaillierten RequestGroup-basierten Protokollen für Multi-Agent-Therapien und molekulare Tumorboards",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/mii-pr-onko-verlauf"
         },
         "name": "MII PR Onkologie Verlauf",
@@ -2560,13 +2570,6 @@
       },
       {
         "reference": {
-          "reference": "RequestGroup/mii-exa-onko-cdk46-class-recommendation"
-        },
-        "name": "mii-exa-onko-cdk46-class-recommendation",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie"
-      },
-      {
-        "reference": {
           "reference": "Condition/mii-exa-onko-diagnose"
         },
         "name": "mii-exa-onko-diagnose",
@@ -2592,13 +2595,6 @@
         },
         "name": "mii-exa-onko-grading-1",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading"
-      },
-      {
-        "reference": {
-          "reference": "RequestGroup/mii-exa-onko-her2-specific-choices"
-        },
-        "name": "mii-exa-onko-her2-specific-choices",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie"
       },
       {
         "reference": {
@@ -2973,13 +2969,6 @@
       },
       {
         "reference": {
-          "reference": "MedicationRequest/mii-exa-onko-trastuzumab-option"
-        },
-        "name": "mii-exa-onko-trastuzumab-option",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation"
-      },
-      {
-        "reference": {
           "reference": "Procedure/mii-exa-onko-trastuzumab-therapie"
         },
         "name": "mii-exa-onko-trastuzumab-therapie",
@@ -3015,13 +3004,6 @@
       },
       {
         "reference": {
-          "reference": "CarePlan/mii-exa-onko-tumorkonferenz-class-recommendation"
-        },
-        "name": "mii-exa-onko-tumorkonferenz-class-recommendation",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz-detailed-recommendations"
-      },
-      {
-        "reference": {
           "reference": "CarePlan/mii-exa-onko-tumorkonferenz-mixed-approach"
         },
         "name": "mii-exa-onko-tumorkonferenz-mixed-approach",
@@ -3040,13 +3022,6 @@
         },
         "name": "mii-exa-onko-tumorkonferenz-pure-molecular",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
-      },
-      {
-        "reference": {
-          "reference": "CarePlan/mii-exa-onko-tumorkonferenz-specific-choices"
-        },
-        "name": "mii-exa-onko-tumorkonferenz-specific-choices",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz-detailed-recommendations"
       },
       {
         "reference": {
@@ -3443,6 +3418,14 @@
       },
       {
         "reference": {
+          "reference": "Patient/mii-exa-onko-molecular-board-patient"
+        },
+        "name": "Molecular Tumor Board Patient",
+        "description": "Patient for molecular tumor board examples",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "MedicationStatement/mii-exa-onko-modification-oxaliplatin-phase1"
         },
         "name": "Oxaliplatin Phase 1 (Zyklen 1-6, dann abgebrochen)",
@@ -3746,13 +3729,6 @@
       },
       {
         "reference": {
-          "reference": "Observation/mii-exa-onko-ascending-colon-tnm-m"
-        },
-        "name": "TNM M-Kategorie - cM0",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie"
-      },
-      {
-        "reference": {
           "reference": "Observation/mii-exa-onko-colorectal-tnm-m"
         },
         "name": "TNM M-Kategorie - cM0",
@@ -3760,10 +3736,10 @@
       },
       {
         "reference": {
-          "reference": "Observation/mii-exa-onko-ascending-colon-tnm-n"
+          "reference": "Observation/mii-exa-onko-ascending-colon-tnm-m"
         },
-        "name": "TNM N-Kategorie - pN1",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie"
+        "name": "TNM M-Kategorie - cM0",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie"
       },
       {
         "reference": {
@@ -3774,14 +3750,21 @@
       },
       {
         "reference": {
-          "reference": "Observation/mii-exa-onko-ascending-colon-tnm-t"
+          "reference": "Observation/mii-exa-onko-ascending-colon-tnm-n"
+        },
+        "name": "TNM N-Kategorie - pN1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-colorectal-tnm-t"
         },
         "name": "TNM T-Kategorie - pT3",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
       },
       {
         "reference": {
-          "reference": "Observation/mii-exa-onko-colorectal-tnm-t"
+          "reference": "Observation/mii-exa-onko-ascending-colon-tnm-t"
         },
         "name": "TNM T-Kategorie - pT3",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
@@ -3848,7 +3831,7 @@
         },
         "name": "Tumorkonferenz - FOLFOX Empfehlung",
         "description": "Tumor board recommends FOLFOX4 protocol for adjuvant treatment",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz-detailed-recommendations"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
       },
       {
         "reference": {
@@ -3856,7 +3839,7 @@
         },
         "name": "Tumorkonferenz - FOLFOX Empfehlung bei Kolorektalkarzinom",
         "description": "Tumor board recommends FOLFOX protocol for colorectal cancer patient",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz-detailed-recommendations"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
       },
       {
         "reference": {
