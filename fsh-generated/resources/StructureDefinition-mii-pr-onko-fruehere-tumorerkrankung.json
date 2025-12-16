@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-onko-fruehere-tumorerkrankung",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung",
-  "version": "2026.0.0-rc.3",
+  "version": "2026.0.0-rc.4",
   "name": "MII_PR_Onko_Fruehere_Tumorerkrankung",
   "title": "MII PR Onkologie Frühere Tumorerkrankung",
   "_title": {
@@ -68,6 +68,15 @@
       {
         "id": "Condition.extension",
         "path": "Condition.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
         "mustSupport": true
       },
       {
