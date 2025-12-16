@@ -59,10 +59,27 @@ Optionale Referenzen auf unterstützende klinische Informationen:
 - **Bildgebung**: Relevante diagnostische Befunde
 - **Laborwerte**: Tumormarker oder andere relevante Parameter
 
+### Verwendung mit Extended CarePlan
+
+Dieses Profil ist primär für die Verwendung mit dem **{{pagelink:TumorkonferenzDetailedRecommendationsCarePlan}}** konzipiert:
+
+- **Standard-oBDS**: Krebsregister erfassen nur "Operation geplant" (Therapieempfehlung Typ "OP") ohne Details zur Art der Operation
+- **Extended CarePlan**: Ermöglicht spezifische Operationsempfehlungen mit SNOMED CT Kodierung
+
+**Integration**:
+```
+CarePlan (Detailed Recommendations)
+└── activity.reference → ServiceRequest
+    ├── code: SNOMED CT (spezifische OP)
+    └── reasonReference: Reference(Primärtumor)
+```
+
 ### oBDS-Kontext
 
 Dieses Profil unterstützt die Erfassung von Therapieempfehlungen gemäß oBDS-Kapitel 19:
 - **19.1 Therapieempfehlung Typ**: "OP" (Operation)
+
+**Hinweis**: Die Standard-oBDS-Erfassung erfolgt über `CarePlan.activity.detail.code`. Dieses ServiceRequest-Profil bietet erweiterte Strukturierung für molekulare Tumorboards und spezialisierte Anwendungsfälle.
 
 Die detaillierte Planung und Durchführung der Operation wird im separaten {{pagelink:OperationProcedure}} erfasst.
 

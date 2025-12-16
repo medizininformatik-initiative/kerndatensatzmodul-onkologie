@@ -59,11 +59,30 @@ reasonReference (Slicing: open, profile-based)
 └── [weitere]: Reference(Condition or Observation)
 ```
 
+### Verwendung mit Extended CarePlan
+
+Dieses Profil ist primär für die Verwendung mit dem **{{pagelink:TumorkonferenzDetailedRecommendationsCarePlan}}** und der **{{pagelink:TherapieempfehlungKombinationstherapieRequestGroup}}** konzipiert:
+
+- **Standard-oBDS**: Krebsregister erfassen nur Therapietyp (z.B. "CH" für Chemotherapie) ohne Details zu spezifischen Medikamenten
+- **Extended CarePlan**: Ermöglicht spezifische Medikationsempfehlungen mit ATC/PZN Kodierung
+
+**Integration mit RequestGroup (Kombinationstherapie)**:
+```
+CarePlan (Detailed Recommendations)
+└── activity.reference → RequestGroup
+    ├── code: "CZ" (Chemo + zielgerichtete Substanzen)
+    └── action.action.resource → MedicationRequest
+        ├── medication: ATC L01XE (Trastuzumab)
+        └── reasonReference: Reference(Primärtumor)
+```
+
 ### oBDS-Kontext
 
 Dieses Profil unterstützt die Erfassung von Therapieempfehlungen gemäß oBDS-Kapitel 19:
 - **19.1 Therapieempfehlung Typ**: Über RequestGroup.code (bei Kombinationstherapien)
 - **Medikamentendetails**: Strukturierte Erfassung über MedicationRequest
+
+**Hinweis**: Die Standard-oBDS-Erfassung erfolgt über `CarePlan.activity.detail.code` (nur Therapietyp). Dieses MedicationRequest-Profil bietet erweiterte Strukturierung für molekulare Tumorboards, Kombinationstherapie-Protokolle und spezialisierte Anwendungsfälle.
 
 ### Terminologie-Binding
 
