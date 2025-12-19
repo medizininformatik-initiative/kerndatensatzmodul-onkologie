@@ -41,8 +41,11 @@ Description: "Dieses Profil beschreibt die Tumorkonferenz und die Therapieempfeh
 * activity 0..* MS
 
 // Activity slicing: support both oBDS standard and extended molecular recommendations
-* activity ^slicing.discriminator.type = #exists
-* activity ^slicing.discriminator.path = "detail"
+* activity ^slicing.discriminator[0].type = #exists
+* activity ^slicing.discriminator[0].path = "detail"
+// Additional discriminator for child profiles (e.g., MTB) to differentiate by referenced profile
+* activity ^slicing.discriminator[1].type = #profile
+* activity ^slicing.discriminator[1].path = "reference.resolve()"
 * activity ^slicing.rules = #open
 * activity ^short = "Therapy recommendations - either oBDS standard categorization or extended molecular protocols"
 
