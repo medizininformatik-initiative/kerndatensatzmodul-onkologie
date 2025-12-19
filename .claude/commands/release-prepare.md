@@ -31,6 +31,8 @@ Update version numbers in these files:
 2. **sushi-config.yaml**: Update the `version` parameter (may already be done)
 3. **qc/custom.rules.yaml**: Add the new version to the `version-filled` predicate list (line 25)
 4. **input/fsh/rulesets/version.fsh**: Update version (may already be done via PR_CS_VS_Version RuleSet)
+5. **guide.yaml** (Simplifier IG config): Find the latest using pattern `implementation-guides/ImplementationGuide-202*.x-DE/guide.yaml` (sort descending, pick first) and update:
+   - `version` field to match new release version
 
 IMPORTANT: Read each file first to verify current state before making changes.
 
