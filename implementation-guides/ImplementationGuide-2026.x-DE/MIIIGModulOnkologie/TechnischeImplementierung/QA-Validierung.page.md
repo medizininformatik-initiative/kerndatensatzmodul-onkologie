@@ -11,7 +11,7 @@ Diese Seite dokumentiert den aktuellen Stand der FHIR-Validierung für das MII M
 
 Das Modul wird kontinuierlich gegen den FHIR R4 Standard und die definierten Profile validiert. Da Simplifier keinen öffentlichen QA-Report bereitstellt wie bei klassischen FHIR IG Publisher Builds, dokumentieren wir hier transparent den Validierungsstatus.
 
-**Aktuelle Statistik** (Stand: 2025-12-16, Version 2026.0.0-rc.10):
+**Aktuelle Statistik** (Stand: 2025-12-16, Version 2026.0.0):
 - **Actionable Fehler**: 9
 - **Gefilterte Meldungen**: ~700+ (via advisor.json)
 
@@ -21,7 +21,7 @@ Die meisten ursprünglichen Meldungen werden durch Filter in `advisor.json` unte
 
 ## Terminologie-Server und Validierungskonfiguration
 
-Die betreffende Validierung betrifft die aktuelle Packageversion **2026.0.0-rc.10**. 
+Die betreffende Validierung betrifft die aktuelle Packageversion **2026.0.0**. 
 
 **MII Terminology Server**: [https://termserv.mii.medizininformatik-initiative.de/fhir](https://termserv.mii.medizininformatik-initiative.de/fhir)
 
