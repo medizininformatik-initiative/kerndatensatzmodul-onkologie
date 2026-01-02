@@ -11,18 +11,17 @@ Diese Seite dokumentiert den aktuellen Stand der FHIR-Validierung für das MII M
 
 Das Modul wird kontinuierlich gegen den FHIR R4 Standard und die definierten Profile validiert. Da Simplifier keinen öffentlichen QA-Report bereitstellt wie bei klassischen FHIR IG Publisher Builds, dokumentieren wir hier transparent den Validierungsstatus.
 
-**Aktuelle Statistik** (vor Filterung):
-- **Fehler**: ~772
-- **Warnungen**: ~2006
-- **Hinweise**: ~389
+**Aktuelle Statistik** (Stand: 2025-12-16, Version 2026.0.0-rc.10):
+- **Actionable Fehler**: 9
+- **Gefilterte Meldungen**: ~700+ (via advisor.json)
 
-Viele dieser Meldungen werden durch Filter in `advisor.json` unterdrückt, da sie false-positives oder externe Abhängigkeiten betreffen.
+Die meisten ursprünglichen Meldungen werden durch Filter in `advisor.json` unterdrückt, da sie false-positives oder externe Abhängigkeiten betreffen.
 
 ---
 
 ## Terminologie-Server und Validierungskonfiguration
 
-Die betreffenden Validierung betreffen die aktuelle Packageversion 2026.0.0-rc2. 
+Die betreffende Validierung betrifft die aktuelle Packageversion **2026.0.0-rc.10**. 
 
 **MII Terminology Server**: [https://termserv.mii.medizininformatik-initiative.de/fhir](https://termserv.mii.medizininformatik-initiative.de/fhir)
 
@@ -50,22 +49,26 @@ Diese Meldungen werden durch `advisor.json` unterdrückt. Die Tabelle zeigt die 
 
 Diese Fehler werden **nicht** gefiltert und sollten behoben werden:
 
-### Kritische Probleme (TODO)
+### Aktuelle Fehler (Stand: 2025-12-16)
 
-| Kategorie | ~Anzahl | Beschreibung | Geplante Lösung |
-|-----------|---------|--------------|-----------------|
-| **MedDRA Terminologie** | ~10 | MedDRA-Codes können nicht validiert werden | 🔵 EXTERNAL: MedDRA ist proprietär, nicht auf öffentlichen TX-Servern verfügbar |
-| **Bundle-Referenzen** | ~24 | Profile-Matches in Bundles nicht gefunden | 🔴 TODO: Bundle-Strukturen korrigieren |
-| **Slicing-Discriminator** | ~20 | Discriminator ohne fixe Werte | 🔴 TODO: Slice-Definitionen vervollständigen |
-| **ValueSet Bindings** | ~10 | Codes nicht im gebundenen ValueSet | 🟡 TODO: ValueSets prüfen und erweitern |
+| Kategorie | Anzahl | Betroffene Dateien | Status |
+|-----------|--------|-------------------|--------|
+| **Unknown_Code** | 3 | HER2-Status, Rezeptorstatus Estrogen/Progesteron | 🟡 TODO: Code-Bindings prüfen |
+| **Reference_Not_Found** | 1 | AdverseEvent (MedDRA) | 🔵 EXTERNAL: MedDRA proprietär |
+| **Profile-Match** | 1 | KRK-Bundle (Operation) | 🟡 TODO: Bundle-Struktur korrigieren |
+| **TX-Server** | 2 | Mamma-Bundle, MRT-Faszie | 🔵 EXTERNAL: Terminology-Server-Limitation |
+| **Sonstige** | 2 | KRK-Observation, Mamma-HER2 | 🟡 TODO: Review |
 
-### Moderate Probleme (MONITOR)
+### Betroffene Dateien
 
-| Kategorie | ~Anzahl | Beschreibung | Status |
-|-----------|---------|--------------|--------|
-| **Profile Metadata** | ~80 | Profile-Struktur-Probleme (nach Filterung) | 🟡 MONITOR: Review benötigt |
-| **Bundle Entry URLs** | ~39 | Inkonsistente URL-Formate | 🟡 TODO: Standardisierung |
-| **ConceptMap** | ~65 | oBDS→SNOMED CT Mapping-Probleme | 🟡 MONITOR: Funktional prüfen |
+- `Bundle-mii-exa-onko-mamma-example-bundle-1.json` (2 Fehler)
+- `AdverseEvent-mii-pr-onko-nebenwirkung-0.json` (1 Fehler)
+- `Bundle-mii-exa-onko-krk-bundle.json` (1 Fehler)
+- `Observation-mii-exa-onko-krk-abstand-mesorektale-fascie.json` (1 Fehler)
+- `Observation-mii-exa-onko-mamma-her2neu-status.json` (1 Fehler)
+- `Observation-mii-exa-onko-mamma-rezeptorstatus-estrogen-1.json` (1 Fehler)
+- `Observation-mii-exa-onko-mamma-rezeptorstatus-progesteron-1.json` (1 Fehler)
+- `StructureDefinition-mii-pr-onko-krk-mrt-mesorektale-faszie.json` (1 Fehler)
 
 ### Externe Abhängigkeiten (EXTERNAL)
 
@@ -97,15 +100,9 @@ Die FHIR-Validierung läuft automatisch bei jedem Push über GitHub Actions:
 
 🔗 [Aktuelle CI-Runs anzeigen](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/actions)
 
-Die Validierungsergebnisse inkl. detailliertem Output sind als Artefakte in den Workflow-Runs verfügbar.
-
----
-
-## Detaillierte Fehlerübersicht
-
-Eine vollständige technische Dokumentation aller bekannten Validierungsprobleme mit Details und Lösungsstrategien:
-
-📄 [`known_errors.txt`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/blob/dev/known_errors.txt)
+Die Validierungsergebnisse sind direkt im Repository verfügbar:
+- [`validation.html`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/blob/dev/validation.html) - HTML-Report
+- [`validation.json`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/blob/dev/validation.json) - Maschinenlesbare Ergebnisse
 
 ---
 
@@ -113,11 +110,10 @@ Eine vollständige technische Dokumentation aller bekannten Validierungsprobleme
 
 Wenn Sie zur Verbesserung der Validierung beitragen möchten:
 
-1. **Prüfen Sie** `known_errors.txt` für bekannte Probleme
-2. **Suchen Sie** nach einem `TODO`-markierten Fehler, der Sie interessiert
+1. **Prüfen Sie** die TODO-markierten Fehler oben
+2. **Laden Sie** die Validierungs-Artefakte aus den [CI-Runs](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/actions) herunter
 3. **Erstellen Sie** einen Issue oder Pull Request im [GitHub Repository](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie)
-4. **Diskutieren Sie** in der MII-Community bei komplexen Validierungsfragen
 
 ---
 
-**Hinweis**: Diese Seite wird manuell gepflegt. Für den aktuellsten technischen Stand siehe die CI-Runs und `known_errors.txt` im Repository.
+**Hinweis**: Diese Seite wird manuell gepflegt. Für den aktuellsten technischen Stand siehe die CI-Runs im Repository.
