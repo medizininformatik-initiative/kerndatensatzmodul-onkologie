@@ -181,14 +181,50 @@ sed -i '' 's|artifacts/package/CodeSystem-\(mii-cs-onko-[^.#"]*\)\.json\([^"]*\)
 sed -i '' 's|artifacts/fsh-generated/resources/CodeSystem-\(mii-cs-onko-[^.#"]*\)\.json\([^"]*\)|https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0\&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/\1\&fhirVersion=R4|g' *.html
 
 # =============================================================================
-# Step 13: Fix internal Extension references -> Simplifier resolve (with scope)
+# Step 13: Fix internal Extension references -> Local HTML pages
 # =============================================================================
 echo "13. Fixing internal Extension references..."
 
-# Generic pattern: artifacts/package/StructureDefinition-mii-ex-onko-*.json -> Simplifier resolve with scope
-sed -i '' 's|artifacts/package/StructureDefinition-\(mii-ex-onko-[^.#"]*\)\.json\([^"]*\)|https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0\&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/\1\&fhirVersion=R4|g' *.html
+# --- Diagnose Extensions ---
+sed -i '' 's|artifacts/package/StructureDefinition-mii-ex-onko-histology-morphology-behavior-icdo3\.json|MIIIGModulOnkologie-TechnischeImplementierung-FHIR-Profile-Diagnose-Extension-ICD-O-3-Morphologie.html|g' *.html
+sed -i '' 's|artifacts/fsh-generated/resources/StructureDefinition-mii-ex-onko-histology-morphology-behavior-icdo3\.json|MIIIGModulOnkologie-TechnischeImplementierung-FHIR-Profile-Diagnose-Extension-ICD-O-3-Morphologie.html|g' *.html
 
-# Also fix artifacts/fsh-generated/resources/ path variant
+# --- Operation Extensions ---
+sed -i '' 's|artifacts/package/StructureDefinition-mii-ex-onko-operation-intention\.json|MIIIGModulOnkologie-TechnischeImplementierung-FHIR-Profile-Operation-Extension-Intention.html|g' *.html
+sed -i '' 's|artifacts/fsh-generated/resources/StructureDefinition-mii-ex-onko-operation-intention\.json|MIIIGModulOnkologie-TechnischeImplementierung-FHIR-Profile-Operation-Extension-Intention.html|g' *.html
+sed -i '' 's|artifacts/package/StructureDefinition-mii-ex-onko-operation-urgency\.json|MIIIGModulOnkologie-TechnischeImplementierung-FHIR-Profile-Operation-Extension-Urgency.html|g' *.html
+sed -i '' 's|artifacts/fsh-generated/resources/StructureDefinition-mii-ex-onko-operation-urgency\.json|MIIIGModulOnkologie-TechnischeImplementierung-FHIR-Profile-Operation-Extension-Urgency.html|g' *.html
+
+# --- Strahlentherapie Extensions (all bestrahlung-* map to Extension-Bestrahlung) ---
+sed -i '' 's|artifacts/package/StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-boost\.json|MIIIGModulOnkologie-TechnischeImplementierung-FHIR-Profile-Strahlentherapie-Extension-Bestrahlung.html|g' *.html
+sed -i '' 's|artifacts/fsh-generated/resources/StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-boost\.json|MIIIGModulOnkologie-TechnischeImplementierung-FHIR-Profile-Strahlentherapie-Extension-Bestrahlung.html|g' *.html
+sed -i '' 's|artifacts/package/StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis\.json|MIIIGModulOnkologie-TechnischeImplementierung-FHIR-Profile-Strahlentherapie-Extension-Bestrahlung.html|g' *.html
+sed -i '' 's|artifacts/fsh-generated/resources/StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis\.json|MIIIGModulOnkologie-TechnischeImplementierung-FHIR-Profile-Strahlentherapie-Extension-Bestrahlung.html|g' *.html
+sed -i '' 's|artifacts/package/StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis\.json|MIIIGModulOnkologie-TechnischeImplementierung-FHIR-Profile-Strahlentherapie-Extension-Bestrahlung.html|g' *.html
+sed -i '' 's|artifacts/fsh-generated/resources/StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis\.json|MIIIGModulOnkologie-TechnischeImplementierung-FHIR-Profile-Strahlentherapie-Extension-Bestrahlung.html|g' *.html
+sed -i '' 's|artifacts/package/StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation\.json|MIIIGModulOnkologie-TechnischeImplementierung-FHIR-Profile-Strahlentherapie-Extension-Bestrahlung.html|g' *.html
+sed -i '' 's|artifacts/fsh-generated/resources/StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation\.json|MIIIGModulOnkologie-TechnischeImplementierung-FHIR-Profile-Strahlentherapie-Extension-Bestrahlung.html|g' *.html
+sed -i '' 's|artifacts/package/StructureDefinition-mii-ex-onko-strahlentherapie-intention\.json|MIIIGModulOnkologie-TechnischeImplementierung-FHIR-Profile-Strahlentherapie-Extension-Intention.html|g' *.html
+sed -i '' 's|artifacts/fsh-generated/resources/StructureDefinition-mii-ex-onko-strahlentherapie-intention\.json|MIIIGModulOnkologie-TechnischeImplementierung-FHIR-Profile-Strahlentherapie-Extension-Intention.html|g' *.html
+sed -i '' 's|artifacts/package/StructureDefinition-mii-ex-onko-strahlentherapie-stellungzurop\.json|MIIIGModulOnkologie-TechnischeImplementierung-FHIR-Profile-Strahlentherapie-Extension-Stellung.html|g' *.html
+sed -i '' 's|artifacts/fsh-generated/resources/StructureDefinition-mii-ex-onko-strahlentherapie-stellungzurop\.json|MIIIGModulOnkologie-TechnischeImplementierung-FHIR-Profile-Strahlentherapie-Extension-Stellung.html|g' *.html
+
+# --- Systemische Therapie Extensions (map to Operation extensions as they share the same structure) ---
+sed -i '' 's|artifacts/package/StructureDefinition-mii-ex-onko-systemische-therapie-intention\.json|MIIIGModulOnkologie-TechnischeImplementierung-FHIR-Profile-Operation-Extension-Intention.html|g' *.html
+sed -i '' 's|artifacts/fsh-generated/resources/StructureDefinition-mii-ex-onko-systemische-therapie-intention\.json|MIIIGModulOnkologie-TechnischeImplementierung-FHIR-Profile-Operation-Extension-Intention.html|g' *.html
+sed -i '' 's|artifacts/package/StructureDefinition-mii-ex-onko-systemische-therapie-stellungzurop\.json|MIIIGModulOnkologie-TechnischeImplementierung-FHIR-Profile-Strahlentherapie-Extension-Stellung.html|g' *.html
+sed -i '' 's|artifacts/fsh-generated/resources/StructureDefinition-mii-ex-onko-systemische-therapie-stellungzurop\.json|MIIIGModulOnkologie-TechnischeImplementierung-FHIR-Profile-Strahlentherapie-Extension-Stellung.html|g' *.html
+
+# --- TNM Extensions ---
+sed -i '' 's|artifacts/package/StructureDefinition-mii-ex-onko-tnm-cp-praefix\.json|MIIIGModulOnkologie-TechnischeImplementierung-FHIR-Profile-TNM-Klassifikation-Extension-TNM-Prefix-c-p.html|g' *.html
+sed -i '' 's|artifacts/fsh-generated/resources/StructureDefinition-mii-ex-onko-tnm-cp-praefix\.json|MIIIGModulOnkologie-TechnischeImplementierung-FHIR-Profile-TNM-Klassifikation-Extension-TNM-Prefix-c-p.html|g' *.html
+sed -i '' 's|artifacts/package/StructureDefinition-mii-ex-onko-tnm-itc-suffix\.json|MIIIGModulOnkologie-TechnischeImplementierung-FHIR-Profile-TNM-Klassifikation-Extension-TNM-Prefix-c-p.html|g' *.html
+sed -i '' 's|artifacts/fsh-generated/resources/StructureDefinition-mii-ex-onko-tnm-itc-suffix\.json|MIIIGModulOnkologie-TechnischeImplementierung-FHIR-Profile-TNM-Klassifikation-Extension-TNM-Prefix-c-p.html|g' *.html
+sed -i '' 's|artifacts/package/StructureDefinition-mii-ex-onko-tnm-sn-suffix\.json|MIIIGModulOnkologie-TechnischeImplementierung-FHIR-Profile-TNM-Klassifikation-Extension-TNM-Prefix-c-p.html|g' *.html
+sed -i '' 's|artifacts/fsh-generated/resources/StructureDefinition-mii-ex-onko-tnm-sn-suffix\.json|MIIIGModulOnkologie-TechnischeImplementierung-FHIR-Profile-TNM-Klassifikation-Extension-TNM-Prefix-c-p.html|g' *.html
+
+# Fallback: any remaining mii-ex-onko extensions -> Simplifier resolve (online)
+sed -i '' 's|artifacts/package/StructureDefinition-\(mii-ex-onko-[^.#"]*\)\.json\([^"]*\)|https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0\&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/\1\&fhirVersion=R4|g' *.html
 sed -i '' 's|artifacts/fsh-generated/resources/StructureDefinition-\(mii-ex-onko-[^.#"]*\)\.json\([^"]*\)|https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0\&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/\1\&fhirVersion=R4|g' *.html
 
 # =============================================================================
