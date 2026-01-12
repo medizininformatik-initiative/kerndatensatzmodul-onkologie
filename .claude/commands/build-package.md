@@ -43,7 +43,32 @@ Clean output directories to ensure fresh build:
 rm -rf output/ staging/ .bake/
 ```
 
-### Step 4: Run Firely Bake to Build Package Structure
+### Step 4: Restore Dependencies
+**CRITICAL**: Download and cache all dependency packages before baking. This ensures correct snapshot generation with proper base definitions and proper IG export rendering.
+
+```bash
+fhir restore
+```
+
+**What this does**:
+- Downloads all packages listed in `sushi-config.yaml` dependencies
+- Caches them locally for snapshot generation
+- Required for correct profile hierarchies and element definitions in IG export
+
+**Expected Output**:
+```
+info: Restoring packages...
+info: Downloading de.basisprofil.r4#1.5.4...
+info: Downloading de.medizininformatikinitiative.kerndatensatz.base#2026.0.0...
+info: All dependencies restored to cache
+```
+
+**Skipping this step causes**:
+- Incomplete or incorrect snapshots
+- Missing base definition links in IG export
+- Profile hierarchy rendering issues
+
+### Step 5: Run Firely Bake to Build Package Structure
 Execute Firely Bake to:
 - Compile FSH to FHIR resources (if not already compiled)
 - Transform resources to JSON
@@ -73,7 +98,7 @@ info: Processing move-examples action...
 info: Package structure created in .bake/package/
 ```
 
-### Step 5: Create Package Tarball
+### Step 6: Create Package Tarball
 Create a tarball from the built package structure using config values:
 
 ```bash
@@ -92,7 +117,7 @@ cd ..
 cd .bake && tar -czf ../de.medizininformatikinitiative.kerndatensatz.molgen-2026.0.4.tgz package/ && cd ..
 ```
 
-### Step 6: Verify Package Contents
+### Step 7: Verify Package Contents
 Verify the package tarball contains the correct structure and resources:
 
 ```bash
@@ -141,7 +166,7 @@ tar -tzf $TARBALL | grep -E '\.fsh$|\.claude|input/fsh'
 # Should return nothing (exit code 1)
 ```
 
-### Step 7: Extract and Verify Key Resources
+### Step 8: Extract and Verify Key Resources
 Verify critical resources are present with correct URLs and versions:
 
 ```bash
@@ -166,7 +191,7 @@ echo "Examples: $EX_COUNT"
 rm -rf /tmp/package-verify
 ```
 
-### Step 8: Package Information Summary
+### Step 9: Package Information Summary
 Display package build summary using config values:
 
 ```
@@ -189,7 +214,7 @@ Display package build summary using config values:
 ✓ Size within expected range for $MODULE_ID module
 ```
 
-### Step 9: Next Steps Suggestions
+### Step 10: Next Steps Suggestions
 Ask user if they want to:
 - Publish to FHIR package registry (`fhir publish-package [tarball]`)
 - Create GitHub release with package attached
