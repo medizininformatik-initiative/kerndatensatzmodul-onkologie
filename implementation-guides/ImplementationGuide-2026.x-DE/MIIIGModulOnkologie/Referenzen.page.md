@@ -4,7 +4,7 @@ parent:
 
 ## {{page-title}}
 
-Das Erweiterungsmodul Onkologie basiert auf dem onkologischen Basisdatensatz (oBDS) in der im Bundesanzeiger 2021 veröffentlichten Version. Die Inhalte sind öffentlich verfügbar. 
+Das KDS-Modul Onkologie basiert auf dem onkologischen Basisdatensatz (oBDS) in der im Bundesanzeiger 2021 veröffentlichten Version. Die Inhalte sind öffentlich verfügbar. 
 
 * Webseite des oBDS mit allen relevanten Datenfeldern, Beschreibungen und Antwortmöglichkeiten: https://basisdatensatz.de/basisdatensatz 
 * Das oBDS: XML-Schema in der Version 3.03; hier insbesondere die Angaben zur Hierarchie, den Feld-Ids und Datenvalidierung

@@ -11,7 +11,7 @@ Die organspezifischen Module erweitern das MII KDS Onkologie Basismodul um **ent
 
 ### Verfügbare Module
 
-Das Erweiterungsmodul Onkologie umfasst derzeit folgende organspezifische Module:
+Das KDS-Modul Onkologie umfasst derzeit folgende organspezifische Module:
 
 #### {{pagelink:MammaModule}}
 Spezialisierte Profile für die Dokumentation von Mammakarzinomen mit Fokus auf:

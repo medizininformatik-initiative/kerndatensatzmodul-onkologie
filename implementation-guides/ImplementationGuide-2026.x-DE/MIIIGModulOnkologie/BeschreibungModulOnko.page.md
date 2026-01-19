@@ -8,7 +8,7 @@ In seiner ersten Version orientiert sich das Modul am ADT/GEKID Basisdatensatz, 
 
 
 ### Inhalt und Zweck der Modellierung
-Das Erweiterungsmodul Onkologie hat das Ziel, die onkologischen Daten, die in der Primärversorgung und bei der Krebsregistermeldung anfallen, korrekt abzubilden und mit anderen Datenquellen in Beziehung zu bringen.  
+Das KDS-Modul Onkologie hat das Ziel, die onkologischen Daten, die in der Primärversorgung und bei der Krebsregistermeldung anfallen, korrekt abzubilden und mit anderen Datenquellen in Beziehung zu bringen.  
 
 Fokus der ersten Implementierungsversion ist die Überführung der im oBDS anfallenden Registerdaten für die Sekundärdatennutzung mit dem FDPG und anderen Projekten im Rahmen von PM4Onko. Daher sind in dieser ersten Version nur die Datenpunkte enthalten, die klinisch-diagnostische oder therapeutischen Charakter haben. Administrative (z.B. Meldung, Melder) oder personenidentifizierende (Person, Tumorzuordnung) Datenpunkte sind nicht innerhalb des Betrachtungsrahmens. 
 
