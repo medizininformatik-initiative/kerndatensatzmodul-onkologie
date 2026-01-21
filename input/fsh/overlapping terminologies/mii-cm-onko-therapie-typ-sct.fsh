@@ -29,7 +29,7 @@ Usage: #definition
 
 * group[=].element[+].code = #IM
 * group[=].element[=].display = "Immun-/Antikörpertherapie"
-* group[=].element[=].target.code = #897713009
+* group[=].element[=].target.code = #76334006
 * group[=].element[=].target.display = "Immunotherapy (procedure)"
 * group[=].element[=].target.equivalence = #equivalent
 
