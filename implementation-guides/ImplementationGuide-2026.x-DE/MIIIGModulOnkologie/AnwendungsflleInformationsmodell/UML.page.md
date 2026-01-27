@@ -1,6 +1,6 @@
 ## {{page-title}}
 
-Das folgende UML-Diagramm zeigt die umgesetzten Inhalte und Kardinalitäten des oBDS, die gemäß dessen Vorgaben durch das Erweiterungsmodul Onkologie umgesetzt wurden.
+Das folgende UML-Diagramm zeigt die umgesetzten Inhalte und Kardinalitäten des oBDS, die gemäß dessen Vorgaben durch das KDS-Modul Onkologie umgesetzt wurden.
 
 <div style="width: 100%; overflow-x: auto;">
 <img src="https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/dev/implementation-guides/ImplementationGuide-2026.x-DE/Images/onco_merged.svg" style="width: 100%; height: auto;" />

@@ -13,7 +13,6 @@ Hier sind alle Änderungen aufgelistet.
 Diese Änderungen erfordern möglicherweise Anpassungen in bestehenden Implementierungen:
 
 - **`BREAKING`** Canonical URL des Strahlentherapie Applikationsart ValueSets von `mii-vs-onko-sstrahlentherapie-applikationsart` auf `mii-vs-onko-strahlentherapie-applikationsart` korrigiert (Tippfehler-Korrektur). Bestehende Referenzen müssen aktualisiert werden. [[HDB-708](https://hl7germany.atlassian.net/browse/HDB-708), [#219](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/219)]
-- **`BREAKING`** Canonical URL des Mamma Rezeptorstatus Leitlinie CodeSystems korrigiert um fehlenden `-leitlinie` Suffix. Bestehende Referenzen müssen aktualisiert werden. [[HDB-704](https://hl7germany.atlassian.net/browse/HDB-704), [#223](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/223)]
 - **`BREAKING`** CodeSystem-URLs für therapie-ende-grund und therapie-stellungzurop korrigiert. Bestehende Referenzen müssen aktualisiert werden.
 
 ### Neue Profile und Funktionalität

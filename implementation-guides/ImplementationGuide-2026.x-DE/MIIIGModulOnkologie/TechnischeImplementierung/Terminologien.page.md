@@ -7,7 +7,7 @@ parent:
 Die International Statistical Classification of Diseases and Related Health Problems Version 10 German Modification (ICD-10-GM) wird für die Beschreibung der Primärdiagnose, für Vorerkrankungen und für die Kodierung der Todesursache verwendet. Das BfArM gibt die ICD-10-GM jährlich im Auftrag des Bundesministeriums für Gesundheit heraus.  Die aktuelle Version ist hier verfügbar: https://www.bfarm.de/DE/Kodiersysteme/Klassifikationen/ICD/ICD-10-GM/_node.html
 
 Hinweis: Im oBDS ist eine Todesursachenmeldung mittels ICD-10-GM vorgesehen. Laut BfArM soll eine Todesursache mit ICD-10-WHO kodiert werden (siehe hier).
-Das Erweiterungsmodul Onkologie folgt hier den Vorgaben des oBDS und kodiert mit ICD-10-GM. 
+Das KDS-Modul Onkologie folgt hier den Vorgaben des oBDS und kodiert mit ICD-10-GM. 
 
 ---
 
