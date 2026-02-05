@@ -1,11 +1,11 @@
 ---
 parent: 
-topic: MII IG Modul Onkologie
+topic: Kerndatensatz-Modul Onkologie
 ---
 
 ## {{page-title}}
 
-Die vorliegende Spezifikation beschreibt die FHIR-Repräsentation des Kerndatensatz Moduls Onkologie der Medizininformatik-Initiative.
+Die vorliegende Spezifikation beschreibt die FHIR-Repräsentation des Kerndatensatz-Moduls Onkologie der Medizininformatik-Initiative.
 Im Folgenden werden die Use Cases des Moduls, sowie die dazugehörigen FHIR-Profile und Terminologie-Ressourcen in ihrer verbindlichen Form beschrieben.
 
 | Veröffentlichung   |   |
