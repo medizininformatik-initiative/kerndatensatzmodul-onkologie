@@ -6,6 +6,21 @@ topic: ReleaseNotes
 ## {{page-title}}
 Hier sind alle Änderungen aufgelistet. 
 
+## Änderungen v2026.0.1
+
+### Abhängigkeiten
+
+- `fix` Modul-Studie Abhängigkeit auf 2026.0.2 aktualisiert
+- `fix` ResearchStudy Beispiel wiederhergestellt
+
+### Technische Verbesserungen
+
+- `fix` ig.ini an umbenannte IG-Ressource angepasst (v2025→v2026)
+- `fix` MII IG Namenskonventionen für 2026 Release angewendet
+- `fix` Bezeichnung 'Erweiterungsmodul' durch 'KDS-Modul' gemäß MII-Richtlinien ersetzt
+
+---
+
 ## Änderungen finale Version v2026.0.0 (noch nicht veröffentlicht)
 
 ### ⚠️ Breaking Changes
