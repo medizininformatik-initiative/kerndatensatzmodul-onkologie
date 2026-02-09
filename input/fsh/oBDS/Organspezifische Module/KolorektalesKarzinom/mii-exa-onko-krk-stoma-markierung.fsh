@@ -3,6 +3,7 @@ InstanceOf: MII_PR_Onko_KRK_Stoma_Markierung
 Usage: #example
 Title: "MII EXA Onko KRK Stoma-Markierung"
 Description: "Beispiel für eine präoperative Stoma-Markierung beim Kolorektalen Karzinom"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-stoma-markierung)
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-stoma-markierung"
 
 * status = #completed

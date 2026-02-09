@@ -16,7 +16,7 @@
     }
   ],
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation",
-  "version": "2026.0.0-ballot",
+  "version": "2026.0.1",
   "name": "MII_PR_Onko_Therapieempfehlung_Medikation",
   "title": "MII PR Onkologie Therapieempfehlung Medikation",
   "status": "active",
@@ -49,7 +49,8 @@
       {
         "id": "MedicationRequest.intent",
         "path": "MedicationRequest.intent",
-        "patternCode": "proposal"
+        "short": "proposal | option",
+        "definition": "Verwenden Sie 'proposal' für eigenständige Therapieempfehlungen. Verwenden Sie 'option' wenn die MedicationRequest Teil einer RequestGroup ist (z.B. Kombinationstherapie)."
       },
       {
         "id": "MedicationRequest.medication[x]:medicationCodeableConcept",
@@ -92,6 +93,36 @@
       {
         "id": "MedicationRequest.reasonReference",
         "path": "MedicationRequest.reasonReference",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "profile",
+              "path": "$this.resolve()"
+            }
+          ],
+          "rules": "open",
+          "ordered": false
+        },
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor",
+              "http://hl7.org/fhir/StructureDefinition/Condition",
+              "http://hl7.org/fhir/StructureDefinition/Observation"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.reasonReference:Primaertumor",
+        "path": "MedicationRequest.reasonReference",
+        "sliceName": "Primaertumor",
+        "short": "Tumorerkrankung (Pflicht)",
+        "definition": "Referenz auf die Primärtumor-Diagnose, auf die sich diese Therapieempfehlung bezieht.",
+        "min": 1,
+        "max": "1",
         "type": [
           {
             "code": "Reference",
@@ -99,7 +130,8 @@
               "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       }
     ]
   }

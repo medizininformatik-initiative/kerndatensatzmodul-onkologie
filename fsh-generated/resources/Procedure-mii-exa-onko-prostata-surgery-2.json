@@ -3,7 +3,7 @@
   "id": "mii-exa-onko-prostata-surgery-2",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation"
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation|2026.0.1"
     ]
   },
   "extension": [
@@ -25,8 +25,13 @@
       {
         "system": "http://fhir.de/CodeSystem/bfarm/ops",
         "code": "5-604.02",
-        "display": "Radikale Prostatovesikulektomie, retropubisch, mit regionaler Lymphadenektomie",
+        "display": "Radikale Prostatovesikulektomie: Retropubisch: Mit regionaler Lymphadenektomie",
         "version": "2024"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "26294005",
+        "display": "Radical prostatectomy (procedure)"
       }
     ]
   },

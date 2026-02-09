@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-onko-tumorkonferenz",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz",
-  "version": "2026.0.0-ballot",
+  "version": "2026.0.1",
   "name": "MII_PR_Onko_Tumorkonferenz",
   "title": "MII PR Onkologie Tumorkonferenz",
   "status": "active",
@@ -214,6 +214,10 @@
             {
               "type": "exists",
               "path": "detail"
+            },
+            {
+              "type": "profile",
+              "path": "reference.resolve()"
             }
           ],
           "rules": "open"

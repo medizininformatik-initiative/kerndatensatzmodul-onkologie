@@ -39,7 +39,7 @@
         "id": "mii-exa-onko-melanom-diagnose",
         "meta": {
           "profile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor|2026.0.1"
           ]
         },
         "extension": [
@@ -48,6 +48,19 @@
             "valueDateTime": "2024-01-02"
           }
         ],
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            },
+            {
+              "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung",
+              "code": "7.1",
+              "display": "histologische Untersuchung eines Primärtumors"
+            }
+          ]
+        },
         "clinicalStatus": {
           "coding": [
             {
@@ -56,26 +69,21 @@
             }
           ]
         },
-        "verificationStatus": {
-          "coding": [
-            {
-              "code": "confirmed",
-              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
-            }
-          ]
-        },
         "code": {
           "coding": [
             {
               "code": "C43.9",
               "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-              "display": "Bösartige Neubildung: Haut, nicht näher bezeichnet",
+              "display": "Bösartiges Melanom der Haut, nicht näher bezeichnet",
               "version": "2024"
             }
           ]
         },
         "subject": {
           "reference": "Patient/mii-exa-onko-melanom-bundle-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/mii-exa-onko-melanom-bundle-encounter"
         },
         "recordedDate": "2024-01-02"
       },
@@ -347,7 +355,7 @@
         "id": "mii-exa-onko-melanom-exzision-oberarm",
         "meta": {
           "profile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-exzision"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-exzision|2026.0.1"
           ]
         },
         "extension": [
@@ -368,8 +376,8 @@
           "coding": [
             {
               "system": "http://fhir.de/CodeSystem/bfarm/ops",
-              "code": "5-212.6",
-              "display": "Exzision und Destruktion von erkranktem Gewebe der Haut und der Unterhaut, Exzision, ohne primären Wundverschluss, Schulter und Axilla",
+              "code": "5-894.06",
+              "display": "Lokale Exzision von erkranktem Gewebe an Haut und Unterhaut: Ohne primären Wundverschluss: Schulter und Axilla",
               "version": "2024"
             },
             {

@@ -14,7 +14,8 @@ Description: "Dieses Profil beschreibt eine Medikations-Tumorempfehlung"
 
 
 * intent MS
-* intent = #proposal
+* intent ^short = "proposal | option"
+* intent ^definition = "Verwenden Sie 'proposal' für eigenständige Therapieempfehlungen. Verwenden Sie 'option' wenn die MedicationRequest Teil einer RequestGroup ist (z.B. Kombinationstherapie)."
 
 
 * subject MS
@@ -36,9 +37,17 @@ Description: "Dieses Profil beschreibt eine Medikations-Tumorempfehlung"
 // Therapieplanung Datum
 * authoredOn 1..1 MS
 
-// die Referenz zu Tumorerkrankung
-* reasonReference MS
-* reasonReference only Reference(MII_PR_Onko_Diagnose_Primaertumor)
+// die Referenz zu Tumorerkrankung und weiteren Befunden
+* reasonReference 1..* MS
+* reasonReference only Reference(MII_PR_Onko_Diagnose_Primaertumor or Condition or Observation)
+* reasonReference ^slicing.discriminator.type = #profile
+* reasonReference ^slicing.discriminator.path = "$this.resolve()"
+* reasonReference ^slicing.rules = #open
+* reasonReference ^slicing.ordered = false
+* reasonReference contains Primaertumor 1..1 MS
+* reasonReference[Primaertumor] only Reference(MII_PR_Onko_Diagnose_Primaertumor)
+* reasonReference[Primaertumor] ^short = "Tumorerkrankung (Pflicht)"
+* reasonReference[Primaertumor] ^definition = "Referenz auf die Primärtumor-Diagnose, auf die sich diese Therapieempfehlung bezieht."
 
 // Referenz zu relevanten Verlaufs-Stagings oder anderen Observationen
 * supportingInformation MS

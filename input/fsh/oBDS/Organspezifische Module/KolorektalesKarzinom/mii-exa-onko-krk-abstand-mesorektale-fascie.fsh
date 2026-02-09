@@ -3,6 +3,7 @@ InstanceOf: MII_PR_Onko_KRK_MRT_Mesorektale_Faszie
 Usage: #example
 Title: "MII EXA Onko KRK Abstand Mesorektale Fascie"
 Description: "Beispiel für den Abstand des Tumors zur mesorektalen Faszie bei MRT-Untersuchung"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-mrt-mesorektale-faszie)
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-mrt-mesorektale-faszie"
 
 * status = #final

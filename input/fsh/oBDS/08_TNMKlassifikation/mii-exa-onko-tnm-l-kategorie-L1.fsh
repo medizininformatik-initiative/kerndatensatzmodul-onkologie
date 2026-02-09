@@ -1,6 +1,7 @@
 Instance: mii-exa-onko-tnm-l-kategorie-L1
 InstanceOf: mii-pr-onko-tnm-l-kategorie
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-l-kategorie)
 * status = #final
 
 * code = $SCT#395715009 "Status of lymphatic (small vessel) invasion by tumor (observable entity)"

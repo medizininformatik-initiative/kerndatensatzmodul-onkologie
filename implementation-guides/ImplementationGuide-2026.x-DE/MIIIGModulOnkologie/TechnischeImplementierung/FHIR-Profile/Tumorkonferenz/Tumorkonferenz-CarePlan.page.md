@@ -183,57 +183,57 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
     
     ```GET [base]/CarePlan?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz```
     
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
+    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
 
 3. Der Suchparameter ```identifier``` MUSS unterstützt werden:
 
     Beispiele:
-    
+
     ```GET [base]/CarePlan?identifier=Tumorkonferenz_1```
-    
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"].
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "identifier" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
 
 4. Der Suchparameter ```category``` MUSS unterstützt werden:
     Beispiele:
 
     ```GET [base]/CarePlan?category=http://snomed.info/sct|734163000```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"].
+    Anwendungshinweise: Weitere Informationen zur Suche nach "category" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
 
 5. Der Suchparameter ```subject``` MUSS unterstützt werden:
     Beispiele:
-    
+
     ```GET [base]/CarePlan?subject=Patient/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "identifier" oder Abschnitt "[type]"].
+    Anwendungshinweise: Weitere Informationen zur Suche nach "subject" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
 
 6. Der Suchparameter ```period``` MUSS unterstützt werden:
     Beispiele:
-    
+
     ```GET [base]/CarePlan?date=eq2022-01-01```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "date"].
+    Anwendungshinweise: Weitere Informationen zur Suche nach "period" finden sich in der [FHIR-Basisspezifikation - Abschnitt "date"](http://hl7.org/fhir/R4/search.html#date).
 
 7. Der Suchparameter ```contributor``` MUSS unterstützt werden:
     Beispiele:
-    
+
     ```GET [base]/CarePlan?contributor=Practitioner/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "identifier" oder Abschnitt "[type]"].
+    Anwendungshinweise: Weitere Informationen zur Suche nach "contributor" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
 
 8. Der Suchparameter ```addresses``` MUSS unterstützt werden:
     Beispiele:
-    
+
     ```GET [base]/CarePlan?addresses=Condition/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "identifier" oder Abschnitt "[type]"].
+    Anwendungshinweise: Weitere Informationen zur Suche nach "addresses" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
 
 9. Der Suchparameter ```activity-code``` MUSS unterstützt werden:
     Beispiele:
-    
+
     ```GET [base]/CarePlan?activity-code=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapieempfehlung-typ|OP```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"].
+    Anwendungshinweise: Weitere Informationen zur Suche nach "activity-code" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
 
 **Beispiele**
 

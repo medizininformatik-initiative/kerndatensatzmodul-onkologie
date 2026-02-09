@@ -1,6 +1,7 @@
 Instance: mii-exa-onko-befund-1
 InstanceOf: mii-pr-onko-befund
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-befund)
 * status = #final
 
 /*

@@ -39,7 +39,7 @@
         "id": "mii-exa-onko-prostata-diagnose",
         "meta": {
           "profile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor|2026.0.1"
           ]
         },
         "extension": [
@@ -111,9 +111,14 @@
         "id": "mii-exa-onko-prostata-psa-diagnose-1",
         "meta": {
           "profile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-psa"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-psa|2026.0.1"
           ]
         },
+        "valueQuantity": {
+          "unit": "ng/ml",
+          "value": 12
+        },
+        "status": "final",
         "code": {
           "coding": [
             {
@@ -123,11 +128,6 @@
             }
           ]
         },
-        "valueQuantity": {
-          "unit": "ng/ml",
-          "value": 12
-        },
-        "status": "final",
         "subject": {
           "reference": "Patient/mii-exa-onko-prostata-bundle-patient"
         },
@@ -150,7 +150,7 @@
         "id": "mii-exa-onko-prostata-anzahl-stanzen-1",
         "meta": {
           "profile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-anzahl-stanzen"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-anzahl-stanzen|2026.0.1"
           ]
         },
         "code": {
@@ -186,7 +186,7 @@
         "id": "mii-exa-onko-prostata-anzahl-positiver-stanzen-1",
         "meta": {
           "profile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-anzahl-positive-stanzen"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-anzahl-positive-stanzen|2026.0.1"
           ]
         },
         "code": {
@@ -222,7 +222,7 @@
         "id": "mii-exa-onko-prostata-ca-befall-stanze-1",
         "meta": {
           "profile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-ca-befall-stanze"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-ca-befall-stanze|2026.0.1"
           ]
         },
         "code": {
@@ -264,7 +264,7 @@
         "id": "mii-exa-onko-prostata-gleason-pattern-grade-group-1",
         "meta": {
           "profile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-grade-group"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-grade-group|2026.0.1"
           ]
         },
         "code": {
@@ -316,7 +316,7 @@
         "id": "mii-exa-onko-prostata-gleason-pattern-primary-1",
         "meta": {
           "profile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns|2026.0.1"
           ]
         },
         "status": "final",
@@ -360,7 +360,7 @@
         "id": "mii-exa-onko-prostata-gleason-pattern-secondary-1",
         "meta": {
           "profile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns|2026.0.1"
           ]
         },
         "status": "final",
@@ -387,7 +387,7 @@
             {
               "code": "369773008",
               "system": "http://snomed.info/sct",
-              "display": "Gleason pattern 4 (finding)"
+              "display": "Gleason Pattern 4"
             }
           ]
         }
@@ -404,7 +404,7 @@
         "id": "mii-exa-onko-prostata-surgical-complication-1",
         "meta": {
           "profile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-clavien-dindo"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-clavien-dindo|2026.0.1"
           ]
         },
         "code": {
@@ -456,7 +456,7 @@
         "id": "mii-exa-onko-prostata-surgery-1",
         "meta": {
           "profile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation|2026.0.1"
           ]
         },
         "extension": [

@@ -2,9 +2,9 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-onko-therapieempfehlung-kombinationstherapie",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie",
-  "version": "2026.0.0-ballot",
+  "version": "2026.0.1",
   "name": "MII_PR_Onko_Therapieempfehlung_Kombinationstherapie",
-  "title": "MII PR Onkologie Therapieempfehlung Operation",
+  "title": "MII PR Onkologie Therapieempfehlung Kombinationstherapie",
   "status": "active",
   "publisher": "Medizininformatik Initiative",
   "contact": [
@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Dieses Profil beschreibt eine Empfehlung für eine Operation im Rahmen der Tumorkonferenz",
+  "description": "Dieses Profil beschreibt eine Empfehlung für eine Kombinationstherapie im Rahmen der Tumorkonferenz",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -97,6 +97,81 @@
             "code": "Reference",
             "targetProfile": [
               "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "RequestGroup.action",
+        "path": "RequestGroup.action",
+        "mustSupport": true
+      },
+      {
+        "id": "RequestGroup.action.code",
+        "path": "RequestGroup.action.code",
+        "short": "Empfohlenes Therapieprotokoll",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Empfohlenes Therapieprotokoll"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Empfohlenes Therapieprotokoll gemäß Tumorkonferenz",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Spezifisches Therapieprotokoll empfohlen durch Tumorkonferenz. Bei Kombinationstherapien repräsentiert dies das Gesamtprotokoll mit einzelnen Medikamenten als Sub-Actions."
+                }
+              ]
+            }
+          ]
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-protokolle"
+        }
+      },
+      {
+        "id": "RequestGroup.action.action",
+        "path": "RequestGroup.action.action",
+        "short": "Individual medications in protocol",
+        "definition": "For combination therapy protocols, each sub-action references an individual MedicationRequest with ATC/UNII coding",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "RequestGroup.action.action.resource",
+        "path": "RequestGroup.action.action.resource",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation"
             ]
           }
         ],

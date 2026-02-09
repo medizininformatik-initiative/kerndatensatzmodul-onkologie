@@ -15,9 +15,9 @@ Description: "Histologie-Kodierung nach ICD-0 für die Verwendung von Folgediagn
 * code.coding = $LNC#59847-4 
 * effective[x] MS
 * effective[x] only dateTime
-* insert Label (effectiveDateTime, Tumor Histologiedatum, Tumor Histologiedatum im Krankheitsverlauf)
-* insert Translation(effectiveDateTime ^short, de-DE, Tumor Histologiedatum )
-* insert Translation(effectiveDateTime ^definition, de-DE, Tumor Histologiedatum im Krankheitsverlauf )
+* insert Label (effectiveDateTime, Datum der histologischen Untersuchung, Datum der histologischen Untersuchung im Krankheitsverlauf)
+* insert Translation(effectiveDateTime ^short, de-DE, Datum der histologischen Untersuchung)
+* insert Translation(effectiveDateTime ^definition, de-DE, Datum der histologischen Untersuchung im Krankheitsverlauf)
 * subject 1.. MS
 * subject only Reference(Patient)
 * value[x] 1..1 MS
@@ -71,7 +71,8 @@ Mapping: FHIR-oBDS-Histologie-ICD-O-3
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
 Source: MII_PR_Onko_Histologie_ICDO3
-* effectiveDateTime -> "6.1" "Tumor Histologiedatum"
+* effectiveDateTime -> "6.1" "Datum der histologischen Untersuchung (oBDS 6.1 'Tumor Histologiedatum' = Probenentnahme ist im Specimen.collection.collectedDateTime abgebildet)"
+* specimen -> "6.1" "Tumor Histologiedatum = Datum der Probenentnahme (siehe Specimen.collection.collectedDateTime)"
 * valueCodeableConcept.coding.code -> "6.3" "Morphologie-Code"
 * valueCodeableConcept.coding.version -> "6.4" "Morphologie ICD-O/Blue Book Version"
 * valueCodeableConcept.text -> "6.5" "Morphologie Freitext"

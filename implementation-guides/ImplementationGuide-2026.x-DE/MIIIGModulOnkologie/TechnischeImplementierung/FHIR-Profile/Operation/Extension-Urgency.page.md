@@ -12,7 +12,7 @@ Diese Extension erfasst die **Modalität der Eingriffsdurchführung** (Art des E
 
 ### Herkunft und Anwendungsbereich
 
-Dieser Datenpunkt stammt ursprünglich aus dem organspezifischen Modul **Kolorektales Karzinom (KRK 6)** gemäß oBDS 2021. Da die Unterscheidung zwischen elektiven und Notfalleingriffen jedoch für alle chirurgischen Prozeduren klinisch relevant ist, wurde die Extension in das allgemeine Operation-Profil integriert und ist **universell auf alle Procedures anwendbar**.
+Dieser Datenpunkt stammt ursprünglich aus dem organspezifischen Modul **Kolorektales Karzinom (KRK 6)** gemäß oBDS 2021. Da die Unterscheidung zwischen elektiven und Notfalleingriffen jedoch für alle chirurgischen Prozeduren klinisch relevant ist, wurde die Extension in das allgemeine Operation-Profil integriert und kann **universell auf alle onkologischen Operationen angewandt werden**.
 
 ### Klinische Relevanz
 
@@ -36,52 +36,11 @@ for concept select
     Definition: definition
 ```
 
-### Verwendung
 
-Die Extension wird direkt am Procedure-Element hinzugefügt:
-
-```
-// Beispiel: Elektiveingriff
-* extension[urgency].valueCodeableConcept = $mii-cs-onko-operation-urgency#E "Elektiveingriff"
-
-// Beispiel: Notfalleingriff  
-* extension[urgency].valueCodeableConcept = $mii-cs-onko-operation-urgency#N "Notfalleingriff"
-
-// Beispiel: Unbekannt
-* extension[urgency].valueCodeableConcept = $mii-cs-onko-operation-urgency#U "Unbekannt"
-```
 
 ### Beispiel im Kontext
 
-```json
-{
-  "resourceType": "Procedure",
-  "extension": [
-    {
-      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-urgency",
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-urgency",
-            "code": "N",
-            "display": "Notfalleingriff"
-          }
-        ]
-      }
-    }
-  ],
-  "status": "completed",
-  "code": {
-    "coding": [
-      {
-        "system": "http://fhir.de/CodeSystem/bfarm/ops",
-        "code": "5-484.35",
-        "display": "Rektumresektion mit Anastomose"
-      }
-    ]
-  }
-}
-```
+
 
 ### Technische Details
 
@@ -106,18 +65,23 @@ Die Extension wird direkt am Procedure-Element hinzugefügt:
 
 ### Mapping
 
+Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensatz.de/basisdatensatz) zu FHIR
+
+Dieses Extension mappt auf das **KRK-Modul** Feld:
+- **KR6**: Art des Eingriffs (Modalität der Eingriffsdurchführung)
+
 @```
-from StructureDefinition 
-where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation'  
+from StructureDefinition
+where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-urgency'
     for differential.element
-    where path.contains('urgency')
-    select 
-        FHIR: path,
-        oBDS: mapping[0].map,
-        Definition: mapping[0].comment
+    where mapping.identity='oBDS'
+    select
+        oBDS: mapping.map,
+        Definition: mapping.comment,
+        FHIR: path
 ```
 
 ### Verwandte Profile
 
 - {{pagelink:OperationProcedure}}
-- {{pagelink:ExtensionIntentionOperation}}
+- {{pagelink:OperationIntention}}

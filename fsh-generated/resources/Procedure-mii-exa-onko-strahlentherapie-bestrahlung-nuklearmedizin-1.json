@@ -3,7 +3,7 @@
   "id": "mii-exa-onko-strahlentherapie-bestrahlung-nuklearmedizin-1",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin"
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin|2026.0.1"
     ]
   },
   "category": {
@@ -57,6 +57,17 @@
           }
         ]
       }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/procedure-method",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "MPSMA",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart"
+          }
+        ]
+      }
     }
   ],
   "subject": {
@@ -83,14 +94,6 @@
         {
           "code": "Lu-177",
           "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart"
-        }
-      ]
-    },
-    {
-      "coding": [
-        {
-          "code": "MPSMA",
-          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart"
         }
       ]
     }

@@ -3,6 +3,7 @@ InstanceOf: MII_PR_Onko_Systemische_Therapie
 Usage: #example
 Title: "Example systemic therapy"
 Description: "Example systemic therapy"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie)
 * subject = Reference(Patient/example)
 * status = #completed
 * extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K // kurativ
@@ -23,6 +24,7 @@ InstanceOf: MII_PR_Onko_Systemische_Therapie_Medikation
 Usage: #example
 Title: "Example chemotherapy 1"
 Description: "Example for the FHIR profile systemic therapy based on German "
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation)
 * subject = Reference(Patient/example)
 * status = #completed
 * effectivePeriod.start = "2021-12-04" // identical to the Procedure.performedPeriod
@@ -40,6 +42,7 @@ InstanceOf: MII_PR_Onko_Systemische_Therapie_Medikation
 Usage: #example
 Title: "Example chemotherapy 2"
 Description: "Example for the FHIR profile systemic therapy based on German "
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation)
 * subject = Reference(Patient/example)
 * status = #completed
 * effectivePeriod.start = "2021-12-04"

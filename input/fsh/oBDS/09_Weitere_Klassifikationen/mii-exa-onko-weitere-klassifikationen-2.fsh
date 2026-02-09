@@ -1,6 +1,7 @@
 Instance: mii-exa-onko-weitere-klassifikationen-2
 InstanceOf: mii-pr-onko-weitere-klassifikationen
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen)
 * status = #final
 * code = $SCT#254372002 "Ann Arbor lymphoma staging system"
 * code.text = "Ann Arbor Klassifikation"

@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "version": "2026.0.0-ballot",
+  "version": "2026.0.1",
   "meta": {
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
@@ -28,6 +28,19 @@
     "include": [
       {
         "system": "https://www.meddra.org"
+      },
+      {
+        "system": "https://www.meddra.org",
+        "concept": [
+          {
+            "code": "10016256",
+            "display": "Fatigue"
+          },
+          {
+            "code": "10034620",
+            "display": "Peripheral sensory neuropathy"
+          }
+        ]
       }
     ]
   }

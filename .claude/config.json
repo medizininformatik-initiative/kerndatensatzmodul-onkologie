@@ -1,0 +1,30 @@
+{
+  "ig_export": {
+    "module_id": "onkologie",
+    "package_name": "de.medizininformatikinitiative.kerndatensatz.onkologie",
+    "canonical_base": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko",
+    "guide_name": "mii-ig-modul-onkologie-v2026-de",
+    "version": "2026.0.0",
+    "resource_prefix": "mii-pr-onko",
+    "dependencies": {
+      "hl7.fhir.r4.core": "4.0.1",
+      "hl7.terminology.r4": "7.0.0",
+      "de.basisprofil.r4": "1.5.4",
+      "de.fhir.medication": "1.0.3",
+      "de.medizininformatikinitiative.kerndatensatz.base": "2026.0.0",
+      "de.medizininformatikinitiative.kerndatensatz.medikation": "2026.0.0",
+      "de.medizininformatikinitiative.kerndatensatz.molgen": "2026.0.4"
+    }
+  },
+  "version_files": {
+    "fsh_path": "input/fsh/rulesets/version.fsh",
+    "rulesets": ["PR_CS_VS_Version", "Version", "MetaProfile"],
+    "files": {
+      "package_json": true,
+      "package_json_description": false,
+      "sushi_config": true,
+      "qc_rules": true,
+      "guide_yaml": "implementation-guides/ImplementationGuide-202*.x-DE/guide.yaml"
+    }
+  }
+}

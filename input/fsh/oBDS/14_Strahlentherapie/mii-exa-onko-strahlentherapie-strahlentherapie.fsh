@@ -3,6 +3,7 @@ InstanceOf: MII_PR_Onko_Strahlentherapie
 Usage: #example
 Title: "Example radiation therapy"
 Description: "Example radiation therapy conformant with MII Prozedur as bracket for radiation and nuclear therapy"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie)
 * subject = Reference(Patient/example)
 * status = #completed
 
@@ -21,6 +22,7 @@ InstanceOf: MII_PR_Onko_Strahlentherapie_Bestrahlung_Strahlentherapie
 Usage: #example
 Title: "Strahlentherapie: Beispiel einer Strahlentherapie mit allgemeinem OPS-Code 8-52"
 Description: "Example radiation therapy conformant with MII Prozedur as bracket for radiation and nuclear therapy"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie)
 * subject = Reference(Patient/example)
 * status = #completed
 * bodySite.coding =  $mii-cs-onko-strahlentherapie-zielgebiet#3.4
@@ -32,7 +34,7 @@ Description: "Example radiation therapy conformant with MII Prozedur as bracket 
 * performedPeriod.start = "2019-07-04"
 * performedPeriod.end = "2019-09-14"
 * usedCode[Strahlenart] = $mii-cs-onko-strahlentherapie-strahlenart#PN
-* usedCode[Applikationsart] = $mii-cs-onko-strahlentherapie-applikationsart#PRCJ
+* extension[Applikationsart].valueCodeableConcept = $mii-cs-onko-strahlentherapie-applikationsart#PRCJ
 * extension[Gesamtdosis].valueQuantity.value =  60.0
 * extension[Gesamtdosis].valueQuantity.unit =  $UCUM#Gy
 * extension[Einzeldosis].valueQuantity.value =  12.0

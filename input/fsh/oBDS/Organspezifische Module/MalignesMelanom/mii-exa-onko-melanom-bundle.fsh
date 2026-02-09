@@ -18,11 +18,14 @@ Usage: #example
 Instance: mii-exa-onko-melanom-diagnose
 InstanceOf: MII_PR_Onko_Diagnose_Primaertumor
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)
 * clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active
-* verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed
-* code.coding = $ICD10GM#C43.9 "Bösartige Neubildung: Haut, nicht näher bezeichnet"
+* verificationStatus.coding[condition-ver-status] = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed
+* verificationStatus.coding[primaertumorDiagnosesicherung] = $mii-cs-onko-primaertumor-diagnosesicherung#7.1 "histologische Untersuchung eines Primärtumors"
+* code.coding = $ICD10GM#C43.9 "Bösartiges Melanom der Haut, nicht näher bezeichnet"
 * code.coding.version = "2024"
 * subject = Reference(mii-exa-onko-melanom-bundle-patient)
+* encounter = Reference(mii-exa-onko-melanom-bundle-encounter)
 * recordedDate = "2024-01-02"
 * extension[Feststellungsdatum].valueDateTime = "2024-01-02"
 

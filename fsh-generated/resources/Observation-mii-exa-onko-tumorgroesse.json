@@ -1,0 +1,48 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-tumorgroesse",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorgroesse"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "21889-1",
+        "system": "http://loinc.org",
+        "display": "Size Tumor"
+      },
+      {
+        "code": "371479009",
+        "system": "http://snomed.info/sct",
+        "display": "Tumor size, largest dimension (observable entity)"
+      }
+    ]
+  },
+  "valueQuantity": {
+    "unit": "mm",
+    "system": "http://unitsofmeasure.org",
+    "code": "mm",
+    "value": 25
+  },
+  "status": "final",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "focus": [
+    {
+      "reference": "Condition/exampleOncologicCondition"
+    }
+  ],
+  "effectiveDateTime": "2024-03-15",
+  "bodySite": {
+    "coding": [
+      {
+        "code": "80248007",
+        "system": "http://snomed.info/sct",
+        "display": "Left breast structure (body structure)"
+      }
+    ]
+  }
+}

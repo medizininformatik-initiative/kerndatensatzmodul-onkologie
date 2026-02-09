@@ -5,7 +5,7 @@ Title: "MII PR Onkologie KRK MRT/CT Abstand Mesorektale Faszie"
 Description: "Dieses Profil beschreibt den Abstand des Tumors zur mesorektalen Faszie bei MRT oder Dünnschicht-CT Untersuchung beim Kolorektalen Karzinom (oBDS KR5)"
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 
 * meta.profile 0..* MS
 * subject 1..1 MS

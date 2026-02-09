@@ -3,7 +3,7 @@ Id: mii-cs-onko-therapie-stellungzurop
 Title: "MII CS Onkologie Therapie Stellung"
 Description: "oBDS-spezifisches Codesystem für Klassifikation von Stellung zur OP"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-stellungzurop"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop"
 * ^status = #active
 * ^experimental = false
 * insert Publisher

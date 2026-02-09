@@ -9,7 +9,7 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 ---
 
 ### Inhalt
-Dieses Profil beschreibt eine Diagnose in der Onkologie. Es basiert auf dem MII-Diagnosemodul. 
+Dieses Profil beschreibt eine Diagnose in der Onkologie. Es basiert auf dem MII KDS Modul Diagnose. 
 
 Der oBDS erwartet die Kodierung der Diagnose via ICD-10 sowie die Kodierung der Topographie des Primärtumors und der histologischen Morphologie über ICD-O-3. In FHIR kann diese Kombination bereits vollständig über die MII-Diagnose abgebildet werden: 
 * ICD-10-GM über `Condition.code[icd10-gm]`, (abgeleitet von MII-Diagnose)

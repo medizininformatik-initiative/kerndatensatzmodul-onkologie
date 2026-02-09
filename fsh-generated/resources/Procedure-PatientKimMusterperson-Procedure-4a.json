@@ -6,6 +6,16 @@
       "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure"
     ]
   },
+  "code": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/ops",
+        "code": "5-547.0",
+        "display": "Resektion von Gewebe in der Bauchregion ohne sichere Organzuordnung: Intraperitoneal",
+        "version": "2021"
+      }
+    ]
+  },
   "status": "completed",
   "subject": {
     "reference": "Patient/PatientKimMusterperson"
@@ -16,16 +26,6 @@
         "code": "387713003",
         "system": "http://snomed.info/sct",
         "display": "Surgical procedure"
-      }
-    ]
-  },
-  "code": {
-    "coding": [
-      {
-        "code": "5-547.0",
-        "system": "http://fhir.de/CodeSystem/bfarm/ops",
-        "display": "Resektion von Gewebe in der Bauchregion ohne sichere Organzuordnung: Intraperitoneal",
-        "version": "2021"
       }
     ]
   },

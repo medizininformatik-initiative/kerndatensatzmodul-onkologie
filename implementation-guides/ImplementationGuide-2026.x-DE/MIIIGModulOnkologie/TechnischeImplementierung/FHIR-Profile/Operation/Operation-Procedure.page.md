@@ -23,7 +23,7 @@ Dieses Profil beschreibt eine Operation in der Onkologie.
 - Die genaue Art der Prozedur wird im Feld `Procedure.code` kodiert. **WICHTIG**: Jede Procedure MUSS einen Code haben - entweder OPS oder SNOMED CT.
 - Primär SOLL ein OPS-Code verwendet werden. Wenn kein passender OPS-Code existiert, MUSS ein SNOMED CT Code gewählt werden.
 - Pro Procedure-Ressource SOLL maximal ein OPS-Wert kodiert werden. Zusätzliche Prozeduren werden als einzelne Procedure-Ressourcen abgebildet.   
-- Achtung: Innerhalb des Erweiterungsmoduls Onkologie wird die übergeorndete MII-Prozedur auch für die Abbildung der Strahlen- und Systemischen/abwartenden Therapie genutzt. Für die Besondheiten bei Kategorien und Code - siehe [Strahlentherapie:Procedure  ](https://simplifier.net/guide/mii-ig-modul-onkologie-2024-de/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Strahlentherapie/Strahlentherapie-Procedure.page.md?version=current) und [Systemische Therapie: Procedure](https://simplifier.net/guide/mii-ig-modul-onkologie-2024-de/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Systemische-Therapie/Systemische-Therapie-Procedure.page.md?version=current).
+- Achtung: Innerhalb des KDS-Moduls Onkologie wird die übergeorndete MII-Prozedur auch für die Abbildung der Strahlen- und Systemischen/abwartenden Therapie genutzt. Für die Besondheiten bei Kategorien und Code - siehe [Strahlentherapie:Procedure  ](https://simplifier.net/guide/mii-ig-modul-onkologie-2024-de/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Strahlentherapie/Strahlentherapie-Procedure.page.md?version=current) und [Systemische Therapie: Procedure](https://simplifier.net/guide/mii-ig-modul-onkologie-2024-de/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Systemische-Therapie/Systemische-Therapie-Procedure.page.md?version=current).
 
 ### Mehrteilige Eingriffe und zusammenhängende Operationen
 
@@ -80,7 +80,7 @@ Bei komplexen Tumoroperationen, wo die Hierarchie nicht eindeutig ist:
 #### Intention
 Das MII-Modul Prozedur besitzt bereits eine Extension [Durchführungsabsicht](https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht) mit Binding auf SNOMED-CT Codes. Da die Intention der OP im oBDS jedoch durch ein oBDS-spezifisches Antwortspektrum erfasst wird, wurde die Prozedur um eine zusätzliches Element "Intention" erweitert. Vorhandene Erweiterungen des MII-Moduls Prozedur sind optional und für das Mapping von oBDS nicht direkt relevant.
 
-Weitere Informationen: {{pagelink:ExtensionIntentionOperation}}
+Weitere Informationen: {{pagelink:OperationIntention}}
 
 #### Urgency (Art des Eingriffs)
 Die Extension "Urgency" erfasst die Modalität der Eingriffsdurchführung. Dieser Datenpunkt stammt ursprünglich aus dem organspezifischen Modul Kolorektales Karzinom (KRK 6 oBDS 2021), ist aber **universell auf alle Procedures anwendbar** und wurde daher in das allgemeine Operation-Profil integriert.

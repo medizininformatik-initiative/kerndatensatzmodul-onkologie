@@ -1,6 +1,6 @@
 ---
 parent: 
-topic: Specimen
+topic: GradingObservation
 subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading
 ---
 

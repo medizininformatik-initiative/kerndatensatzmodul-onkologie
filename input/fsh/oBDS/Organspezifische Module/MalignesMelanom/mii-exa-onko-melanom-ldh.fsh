@@ -3,6 +3,7 @@ InstanceOf: MII_PR_Onko_Melanom_LDH
 Usage: #example
 Title: "MII EXA Onko Melanom LDH"
 Description: "Beispiel für einen LDH Laborwert beim Malignen Melanom"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-ldh)
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-ldh"
 
 * status = #final

@@ -2,6 +2,7 @@
 Instance: mii-exa-onko-tnm-klassifikation-uT2a2pN0023i-sncM1
 InstanceOf: mii-pr-onko-tnm-klassifikation
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation)
 * status = #final
 * code = $SCT#399588009 "Pathologic TNM stage grouping"
 * subject = Reference(Patient/example)

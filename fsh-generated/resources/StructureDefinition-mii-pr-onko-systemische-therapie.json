@@ -16,7 +16,7 @@
     }
   ],
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie",
-  "version": "2026.0.0-ballot",
+  "version": "2026.0.1",
   "name": "MII_PR_Onko_Systemische_Therapie",
   "title": "MII PR Onkologie Systemische Therapie",
   "status": "active",
@@ -305,11 +305,6 @@
         ]
       },
       {
-        "id": "Procedure.encounter",
-        "path": "Procedure.encounter",
-        "mustSupport": true
-      },
-      {
         "id": "Procedure.performed[x]",
         "path": "Procedure.performed[x]",
         "type": [
@@ -499,7 +494,7 @@
       {
         "id": "Procedure.outcome.coding.system",
         "path": "Procedure.outcome.coding.system",
-        "mustSupport": true
+        "patternUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund"
       },
       {
         "id": "Procedure.outcome.coding.code",

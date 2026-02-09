@@ -19,6 +19,7 @@ Usage: #example
 Instance: mii-exa-onko-krk-diagnose
 InstanceOf: MII_PR_Onko_Diagnose_Primaertumor
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
 * clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed
@@ -87,8 +88,8 @@ Description: "Beispiel-Bundle für Kolorektales Karzinom mit allen spezifischen 
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
 
-* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-krk-asa-klassifikation"
-* entry[=].resource = mii-exa-onko-krk-asa-klassifikation
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-asa-klassifikation"
+* entry[=].resource = mii-exa-onko-asa-klassifikation
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
 

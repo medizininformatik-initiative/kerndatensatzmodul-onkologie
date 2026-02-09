@@ -3,7 +3,7 @@
   "id": "mii-exa-onko-allgemeiner-leistungszustand-ecog",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog"
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog|2026.0.1"
     ]
   },
   "code": {
@@ -11,20 +11,24 @@
       {
         "code": "423740007",
         "system": "http://snomed.info/sct"
+      },
+      {
+        "code": "89262-0",
+        "system": "http://loinc.org"
+      }
+    ]
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-ecog",
+        "code": "2",
+        "display": "Gehfähig, Selbstversorgung möglich, aber nicht arbeitsfähig; kann mehr als 50 % der Wachzeit aufstehen (50 - 60 % nach Karnofsky)"
       }
     ]
   },
   "status": "final",
   "subject": {
     "reference": "Patient/example"
-  },
-  "valueCodeableConcept": {
-    "coding": [
-      {
-        "code": "2",
-        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-ecog",
-        "display": "Gehfähig, Selbstversorgung möglich, aber nicht arbeitsfähig; kann mehr als 50 % der Wachzeit aufstehen (50 - 60 % nach Karnofsky)"
-      }
-    ]
   }
 }

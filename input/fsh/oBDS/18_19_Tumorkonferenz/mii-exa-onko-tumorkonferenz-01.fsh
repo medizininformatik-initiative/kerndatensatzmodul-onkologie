@@ -1,6 +1,7 @@
 Instance: mii-exa-onko-tumorkonferenz-01
 InstanceOf: mii-pr-onko-tumorkonferenz
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz)
 * identifier.value = "Tumorkonferenz_1"
 * status = $request-status#active
 * intent = $request-intent#plan
@@ -13,6 +14,7 @@ Usage: #example
 Instance: mii-exa-onko-tumorkonferenz-02
 InstanceOf: mii-pr-onko-tumorkonferenz
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz)
 * identifier.value = "Tumorkonferenz_2"
 * status = $request-status#completed
 * intent = $request-intent#plan

@@ -25,11 +25,13 @@ object Diagnose #FFFF66 {
 
 object Allgemeiner_Leistungszustand  #22FF22 {
   Allgemeiner_Leistungszustand : Code
+  ASA_Klassifikation : Code
 
 }
 
 object OP #9999FF {
   OP_Intention : Code
+  OP_Dringlichkeit : Code
   OP_Datum : String
   OPS: Code
   OPS_Version : Code
@@ -95,6 +97,8 @@ object Tumorkonferenz_Therapieplanung #CCCCFF {
 
 object Therapieempfehlung #CCCCFF {
   Tumorkonferenz_Therapieempfehlung_Typ : Code
+  Tumorkonferenz_Therapieempfehlung_Protokoll : Code
+  Tumorkonferenz_Therapieempfehlung_Medikation : Code
   Tumorkonferenz/Therapieempfehlung_Therapieabweichung_auf_Wunsch_des_Patienten : Code
 }
 
@@ -116,6 +120,7 @@ object Histologie #22FF22 {
   Morphologie_ICD_O_Version : Code
   Morphologie_Freitext : String
   Grading : Cod
+  Tumorgroesse : Float
   Anzahl_der_untersuchten_Lymphknoten : Integer
   Anzahl_der_befallenen_Lymphknoten : Integer
   Anzahl_der_untersuchten_Sentinel-Lymphknoten : Integer
@@ -148,8 +153,10 @@ object TNM_Klassifikation #22FF22 {
 
 object Weitere_Klassifikation  #22FF22 {
   Hämatoonkologische_und_sonstige_Klassifikationen_Datum : Date
-  Hämatoonkologische_und_sonstige_Klassifikationen_Name : String
-  Hämatoonkologische_und_sonstige_Klassifikationen_Einstufung  : String
+  Hämatoonkologische_und_sonstige_Klassifikationen_Name_Freitext : String
+  Hämatoonkologische_und_sonstige_Klassifikationen_Name_Code : Code
+  Hämatoonkologische_und_sonstige_Klassifikationen_Klassifikationssystem : Code
+  Hämatoonkologische_und_sonstige_Klassifikationen_Einstufung : Code
 }
 
 object Residualstatus  #22FF22 {
@@ -168,6 +175,12 @@ object Genetische_Variante  #22FF22 {
 
   Genetische_Variante_Name : String
   Genetische_Variante_Ausprägung : String
+
+}
+
+object Studienteilnahme  #22FF22 {
+  Studienteilnahme_Status : Code
+  Studienteilnahme_Datum : Date
 
 }
 
@@ -214,6 +227,8 @@ Residualstatus "0..1" -- "1" Strahlentherapie
 Residualstatus "0..1" -- "1" Systemische_Therapie
 Tumorkonferenz_Therapieplanung "0..1" -- "1" Diagnose
 Genetische_Variante "0..*" -- "1" Diagnose
+Genetische_Variante "0..*" -- "0..*" Specimen
+Studienteilnahme "0..*" -- "1" Diagnose
 
 legend left
 

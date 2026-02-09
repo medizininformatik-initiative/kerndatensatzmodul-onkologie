@@ -23,18 +23,17 @@ Link zum konkreten Profil EPA MedicationStatement https://simplifier.net/epa-med
 
 ### Nationale Vorarbeiten 
 
-#### German OncoLogical Data Standard (GOLD) 
-Das Projekt GOLD befasst sich als Teil der Vison Zero Oncology oncology . Das Datenmodell und die dazugehörigen Profile wurden von existierenden Datenmodellen abgeleitet und mit deutschen Experten abgestimmt. Gleichzeitig wurden Anstrengungen in Richtung einer semantischen Harmonisierung von verschiedenen Datenmodellen aus Forschung und Industrie unternommen. 
-Die ersten Profile haben den Fokus auf Diagnose und Klassifikationen, wie die TNM-Klassifikation. Die aktuelle Version ist hier zu finden: https://vision-zero-oncology.github.io/GOLD/
+#### German OncoLogical Data Standard (GOLD)
+Das Projekt GOLD wurde vom Vision-Zero e.V. initiiert und zielt auf die Abbildung einer kompletten onkologischen Patient Journey ab. Das Datenmodell und die dazugehörigen Profile wurden von existierenden Datenmodellen aus Versorgung, Forschung und Industrie in Deutschland und Ausland abgeleitet. Es wurden Vorschläge für Harmonisierung verschiedener Spezifikationen erarbeitet und mit deutschen Experten abgestimmt. Die ersten FHIR-Profile mit Fokus auf Diagnose und Klassifikationen, wie die TNM-Klassifikation, sowie Bildgebung und Verlauf sind in mehrere weitere Projekte eingeflossen, z.B. Basisprofile Onkologie von HL7 Deutschland und das MII-Modul Befunde bildgebender Verfahren. Die aktuelle Version ist hier zu finden: https://vision-zero-oncology.github.io/GOLD/
 
 
 
 #### Basisprofile Onkologie von HL7 Deutschland
 In den Basisprofilen Deutschland wurden insb. 2022 Profilierungsarbeiten für eine Grundlage der einheitlichen Verwendung von FHIR-Ressourcen im onkologischen Sektor geliefert. https://simplifier.net/BasisprofileOnkologie
-Die Arbeiten an den Basisprofilen ruhen seit der Kommentierung 2022. Mittlerweile verweisen die Basisprofile Onkologie der HL7 auf das hier vorliegende Erweiterungsmodul Onkologie der MII.  
+Die Arbeiten an den Basisprofilen ruhen seit der Kommentierung 2022. Mittlerweile verweisen die Basisprofile Onkologie der HL7 auf das hier vorliegende KDS-Modul Onkologie der MII.  
 
 #### Deutsches Konsortium für Translationale Krebsforschung
-Das interne Datenmodell der DKTK nutzt aus den Tumordokumentationssystemen aufbereitete oBDS-Daten im FHIR-Format als Austauschmedium. (erreichbar unter https://simplifier.net/oncology)  Das ursprüngliche Informationsmodell des Erweiterungsmoduls Onkologie war stark am DKTK-Modell orientiert. Die Profilierung unterscheidet sich jedoch insofern, als dass die DKTK-Profile in sich abgeschlossen sind, während ein MII-Modul möglichst gut mit den MII-Basismodulen (v.a. Diagnose, Prozedur, Medikation) und bereits bestehenden Erweiterungsmodulen arbeiten soll. Daher war einer der Hauptmodellierungsentscheidungen die Verwendung der MII-Diagnose und MII-Medikation, sowie die Darstellung von OPs, Strahlentherapien und Systemischen / abwartenden Therapien als MII-Prozeduren.  
+Das interne Datenmodell der DKTK nutzt aus den Tumordokumentationssystemen aufbereitete oBDS-Daten im FHIR-Format als Austauschmedium. (erreichbar unter https://simplifier.net/oncology)  Das ursprüngliche Informationsmodell des KDS-Moduls Onkologie war stark am DKTK-Modell orientiert. Die Profilierung unterscheidet sich jedoch insofern, als dass die DKTK-Profile in sich abgeschlossen sind, während ein MII-Modul möglichst gut mit den MII-Basismodulen (v.a. Diagnose, Prozedur, Medikation) und bereits bestehenden KDS-Modulen arbeiten soll. Daher war einer der Hauptmodellierungsentscheidungen die Verwendung der MII-Diagnose und MII-Medikation, sowie die Darstellung von OPs, Strahlentherapien und Systemischen / abwartenden Therapien als MII-Prozeduren.  
 
 #### Modellvorhaben Genomsequenzierung
 

@@ -7,17 +7,11 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 ## {{page-title}}
 
 
-
-
-
-
 Dieses Profil beschreibt ob und wann ein Patient tumorbedingt verstorben ist. Es ist Teil des oBDS-Tumorregister-Datensatzes. 
 
 Das Todesdatum kann im MII Kerndatensatz ebenfalls über die Patienten-Ressource abgebildet werden, wurde hier aber aus Gründen der Datenstruktur und -zusammengehörigkeit zusätzlich als Observation hinzugefügt. 
 
-
-Seit der Version MII-Patient(2024) ist  auch ein Sterbegrund direkt in der Patientenressource vorhanden. Im Unterschied zu der oBDS-Todesursache, die mittels ICD-10-GM erfasst wird, bezieht sich das MII-Patient-Sterbeursache auf die ICD-10-WHO.
-
+Seit der Version MII-Patient(2024) ist auch ein Sterbegrund direkt in der Patientenressource vorhanden. Im Unterschied zu der oBDS-Todesursache, die mittels ICD-10-GM erfasst wird, bezieht sich das MII-Patient-Sterbeursache auf die ICD-10-WHO.
 
 
 Es beinhaltet: 
@@ -28,6 +22,8 @@ Es beinhaltet:
 * eine Interpretation des Zusammenhanges zwischen Tumorerkrankung und Todesursache 
 
 Im oBDS wird die Todesmeldung als eigenständige Entität übermittelt. Da es nur eine Todesmeldung für jeden Patient geben sollte, ist in der FHIR-Profilierung daher keine direkte Verknüpfung zur Primärdiagnose oder den einzelnen Verlaufs-Stagings hinterlegt, sondern ausschließlich zum Patienten. 
+
+
 
 @```
 from 

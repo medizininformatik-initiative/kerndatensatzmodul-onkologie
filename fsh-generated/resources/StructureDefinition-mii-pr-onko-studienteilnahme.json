@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-onko-studienteilnahme",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-studienteilnahme",
-  "version": "2026.0.0-ballot",
+  "version": "2026.0.1",
   "name": "MII_PR_Onko_Studienteilnahme",
   "title": "MII PR Onkologie Studienteilnahme",
   "status": "active",
@@ -80,11 +80,48 @@
       {
         "id": "Observation.focus",
         "path": "Observation.focus",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this.resolve()"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.focus:primaertumor",
+        "path": "Observation.focus",
+        "sliceName": "primaertumor",
+        "short": "Referenz zum Primärtumor",
+        "definition": "Referenz zur Primärtumordiagnose, auf die sich die Studienteilnahme bezieht",
+        "min": 0,
+        "max": "1",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
               "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.focus:studie",
+        "path": "Observation.focus",
+        "sliceName": "studie",
+        "short": "Referenz zur Studie",
+        "definition": "Referenz zur konkreten Studie (ResearchStudy), an der der Patient teilnimmt",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/ResearchStudy"
             ]
           }
         ],

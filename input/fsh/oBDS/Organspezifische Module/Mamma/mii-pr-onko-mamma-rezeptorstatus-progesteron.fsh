@@ -5,7 +5,7 @@ Title: "MII PR Onkologie Rezeptorstatus Progesteron"
 Description: "Dieses Profil beschreibt den diagnostischen Progesteron-Rezeptorstatus eines pathologisch untersuchten Probe beim Mamma-Karzinom in der Onkologie"
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 
 * meta.profile 0..* MS
 * subject 1..1 MS
@@ -19,10 +19,9 @@ Description: "Dieses Profil beschreibt den diagnostischen Progesteron-Rezeptorst
 * code 1..1 
 * code ^definition = "Rezeptorstatus Progesteron, abgeleitet aus der Immunhistochemie der Mamma-Biopsie oder des Mamma-Exzisionspräparates, basierend auf Zahl der positiven Zellen und Färbeintensität"
 * code ^short = "Rezeptorstatus Progesteron"
-* code.coding = $LNC#85339-0 "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain" 
+* code.coding = $LNC#85339-0 // "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain" 
 // achtung bei Metastasen ggfs. nicht zutreffend, da kein breast cancer specimen, dann 40557-1 "Progesterone receptor Ag [Presence] in Tissue by Immune stain"
 
-// M2 Menopausenstatus
 
 
 * value[x] MS

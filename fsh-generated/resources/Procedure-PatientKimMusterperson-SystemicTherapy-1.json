@@ -24,13 +24,23 @@
         "coding": [
           {
             "code": "N",
-            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-stellungzurop",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop",
             "display": "neoadjuvant"
           }
         ]
       }
     }
   ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/ops",
+        "code": "8-54",
+        "display": "Zytostatische Chemotherapie, Immuntherapie und antiretrovirale Therapie",
+        "version": "2021"
+      }
+    ]
+  },
   "subject": {
     "reference": "Patient/PatientKimMusterperson"
   },
@@ -40,16 +50,6 @@
       {
         "code": "18629005",
         "system": "http://snomed.info/sct"
-      }
-    ]
-  },
-  "code": {
-    "coding": [
-      {
-        "code": "8-54",
-        "system": "http://fhir.de/CodeSystem/bfarm/ops",
-        "display": "Zytostatische Chemotherapie, Immuntherapie und antiretrovirale Therapie",
-        "version": "2021"
       }
     ]
   },

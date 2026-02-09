@@ -1,8 +1,8 @@
 {
   "name": "de.medizininformatikinitiative.kerndatensatz.onkologie",
-  "version": "2026.0.0-ballot",
-  "description": "Medizininformatik Initiative - Modul Onkologie",
-  "author": "juliansass",
+  "version": "2026.0.1",
+  "description": "MII Kerndatensatz Modul Onkologie v2026.0.1 - Finale Version basierend auf oBDS 3.0.2. Enthält Profile für Diagnose, Histologie, TNM, Therapien (OP, Strahlentherapie, Systemische Therapie), Verlauf und organspezifische Module (Mamma, Prostata, KRK, Melanom). Release Notes: https://simplifier.net/guide/mii-ig-modul-onkologie-v2026-de/MIIIGModulOnkologie/Release-Notes",
+  "author": "thomasdebertshaeuser",
   "fhirVersions": [
     "4.0.1"
   ],
@@ -20,19 +20,18 @@
   "title": "MII IG Onkologie",
   "maintainers": [
     {
-      "name": "Medizininformatik Initiative",
-      "url": "https://www.medizininformatik-initiative.de/"
+      "name": "Medizininformatik Initiative"
     }
   ],
   "canonicals": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/mii-ig-onko-de-v2025",
   "jurisdiction": "http://unstats.un.org/unsd/methods/m49/m49.htm#276",
   "dependencies": {
     "de.basisprofil.r4": "1.5.x",
-    "de.medizininformatikinitiative.kerndatensatz.biobank": "2025.0.x",
-    "de.medizininformatikinitiative.kerndatensatz.diagnose": "2025.0.x",
-    "de.medizininformatikinitiative.kerndatensatz.medikation": "2025.0.x",
-    "de.medizininformatikinitiative.kerndatensatz.meta": "2025.0.x",
-    "de.medizininformatikinitiative.kerndatensatz.molgen": "2025.0.x",
-    "de.medizininformatikinitiative.kerndatensatz.prozedur": "2025.0.x"
+    "de.medizininformatikinitiative.kerndatensatz.biobank": "2026.0.0",
+    "de.medizininformatikinitiative.kerndatensatz.medikation": "2026.0.x",
+    "de.medizininformatikinitiative.kerndatensatz.meta": "2026.0.x",
+    "de.medizininformatikinitiative.kerndatensatz.molgen": "2026.0.x",
+    "de.medizininformatikinitiative.kerndatensatz.base": "2026.0.x",
+    "de.medizininformatikinitiative.kerndatensatz.studie": "2026.0.2"
   }
 }

@@ -80,7 +80,7 @@ Description: "Systemische Therapie. Dieses Profil beschreibt eine Systemische Th
 * outcome 0..1
 * outcome from MII_VS_Onko_Systemische_Therapie_Ende_Grund (required)
 * outcome.coding.code MS
-* outcome.coding.system MS
+* outcome.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund"
 * insert Label(outcome.coding, Grund für Ende der systemischen oder abwartenden Therapie, Grund für Ende der systemischen oder abwartenden Therapie gemäß 16.7 oBDS 2021.)
 * insert Translation(outcome.coding ^short, de-DE, Grund für Ende der systemischen oder abwartenden Therapie )
 * insert Translation(outcome.coding ^definition, de-DE, Grund für Ende der systemischen oder abwartenden Therapie gemäß 16.7 oBDS 2021. )

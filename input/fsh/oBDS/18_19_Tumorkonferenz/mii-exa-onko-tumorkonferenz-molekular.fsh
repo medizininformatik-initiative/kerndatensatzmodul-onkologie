@@ -2,6 +2,7 @@
 Instance: mii-exa-onko-tumorkonferenz-molekular
 InstanceOf: mii-pr-onko-tumorkonferenz
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz)
 * status = #active
 * intent = #plan
 * category.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ"
@@ -38,10 +39,14 @@ Usage: #example
 Instance: mii-exa-onko-trastuzumab-therapie
 InstanceOf: mii-pr-onko-systemische-therapie
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie)
 * status = #preparation
 * code.coding[systemische_therapie_art].system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art"
 * code.coding[systemische_therapie_art].code = #ZS
+* category = $SCT#18629005	//"Administration of drug or medicament"
+* code.coding[ops] = $OPS|2024#6-001.k "Applikation von Medikamenten, Liste 1: Trastuzumab, intravenös"
 * code.text = "Trastuzumab"
+
 * subject = Reference(Patient/example)
 * basedOn = Reference(mii-exa-onko-tumorkonferenz-molekular) // ❌ PROBLEM: Can only reference whole CarePlan
 * extension[Intention].valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention"
@@ -52,9 +57,13 @@ Usage: #example
 Instance: mii-exa-onko-pertuzumab-therapie
 InstanceOf: mii-pr-onko-systemische-therapie
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie)
 * status = #preparation
+* category = $SCT#18629005	// Administration of drug or medicament
 * code.coding[systemische_therapie_art].system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art"
 * code.coding[systemische_therapie_art].code = #ZS
+* code.coding[ops] = $OPS#8-543 "Mittelgradig komplexe und intensive Blockchemotherapie"
+* code.coding[ops].version = "2024"
 * code.text = "Pertuzumab"
 * subject = Reference(Patient/example)
 * basedOn = Reference(mii-exa-onko-tumorkonferenz-molekular) // ❌ PROBLEM: Same CarePlan reference, no way to specify activity[0]
@@ -66,9 +75,13 @@ Usage: #example
 Instance: mii-exa-onko-palbociclib-therapie
 InstanceOf: mii-pr-onko-systemische-therapie
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie)
 * status = #preparation
+* category = $SCT#18629005	// Administration of drug or medicament
 * code.coding[systemische_therapie_art].system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art"
 * code.coding[systemische_therapie_art].code = #ZS
+* code.coding[ops] = $OPS#8-54 "Zytostatische Chemotherapie, Immuntherapie und antiretrovirale Therapie"
+* code.coding[ops].version = "2024"
 * code.text = "Palbociclib"
 * subject = Reference(Patient/example)
 * basedOn = Reference(mii-exa-onko-tumorkonferenz-molekular) // ❌ PROBLEM: Cannot distinguish from anti-HER2 recommendation

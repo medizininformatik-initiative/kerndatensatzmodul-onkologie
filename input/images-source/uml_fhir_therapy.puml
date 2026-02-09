@@ -22,6 +22,7 @@ package Modul_Onkologie {
 
   class Operation << ADT-Procedure-Surgery >> {
     Intention : Intention
+    Urgency : OperationUrgency
     performedDateTime : dateTime
     code : Code
     complication : OpKomplikationen

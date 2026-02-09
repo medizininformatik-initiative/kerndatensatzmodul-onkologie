@@ -1,6 +1,7 @@
 Instance: mii-exa-onko-tod-n
 InstanceOf: mii-pr-onko-tod
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tod)
 * status = #final
 * code.coding = $SCT#184305005 
 * subject = Reference(Patient/example)

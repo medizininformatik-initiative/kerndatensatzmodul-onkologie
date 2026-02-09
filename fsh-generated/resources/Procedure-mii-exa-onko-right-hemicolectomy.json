@@ -1,0 +1,70 @@
+{
+  "resourceType": "Procedure",
+  "id": "mii-exa-onko-right-hemicolectomy",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation"
+    ]
+  },
+  "extension": [
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention",
+            "code": "K",
+            "display": "Kurativ"
+          }
+        ]
+      }
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/ops",
+        "version": "2024",
+        "code": "5-455.75",
+        "display": "Partielle Resektion des Dickdarmes: Sigmaresektion: Laparoskopisch mit Anastomose"
+      }
+    ],
+    "text": "Laparoskopische Hemikolektomie rechts mit Lymphknotendissektion"
+  },
+  "outcome": {
+    "coding": [
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus",
+        "code": "R0",
+        "display": "Kein Residualtumor"
+      }
+    ]
+  },
+  "status": "completed",
+  "category": {
+    "coding": [
+      {
+        "code": "387713003",
+        "system": "http://snomed.info/sct",
+        "display": "Surgical procedure"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example-modification"
+  },
+  "encounter": {
+    "reference": "Encounter/example-surgery-modification"
+  },
+  "performedDateTime": "2024-02-20",
+  "reasonReference": [
+    {
+      "reference": "Condition/mii-exa-onko-ascending-colon-cancer-diagnosis"
+    }
+  ],
+  "note": [
+    {
+      "text": "Laparoscopic right hemicolectomy performed. Tumor completely resected with clear margins (R0). 22 lymph nodes removed, 4 positive."
+    }
+  ]
+}

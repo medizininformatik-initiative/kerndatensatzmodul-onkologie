@@ -3,6 +3,7 @@ InstanceOf: MII_PR_Onko_Melanom_Breslow_Tiefe
 Usage: #example
 Title: "MII EXA Onko Melanom Breslow Tiefe"
 Description: "Beispiel für die Messung der Breslow-Tumordicke beim Malignen Melanom"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-breslow-tiefe)
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-breslow-tiefe"
 
 * status = #final

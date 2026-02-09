@@ -1,0 +1,386 @@
+# Claude Code Configuration for MII Onkologie Module
+# This file contains repository-specific configuration values used by slash commands
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Config Metadata
+# ═══════════════════════════════════════════════════════════════════════════════
+_meta:
+  # Config schema version (NOT module version)
+  # Semantic versioning: MAJOR.MINOR.PATCH
+  # - MAJOR: Breaking changes (commands must update)
+  # - MINOR: New fields added (backwards compatible)
+  # - PATCH: Documentation/value updates only
+  version: "1.0.0"
+
+  # Last updated date
+  last_updated: "2025-12-11"
+
+  # Compatible with these command versions
+  min_command_version: "1.0.0"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Repository Identification
+# ═══════════════════════════════════════════════════════════════════════════════
+repository:
+  # GitHub repository name
+  name: "kerndatensatzmodul-onkologie"
+
+  # GitHub organization/owner
+  owner: "medizininformatik-initiative"
+
+  # Human-readable module name
+  module: "Onkologie"
+  module_long: "Modul Onkologie"
+
+  # FHIR package ID (must match package.json)
+  package_id: "de.medizininformatikinitiative.kerndatensatz.onkologie"
+
+  # Canonical URL base
+  canonical: "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"
+
+  # Implementation Guide ID (from sushi-config.yaml)
+  ig_id: "mii-ig-onko-de-v2025"
+
+  # Short name for profile prefixes
+  prefix: "onko"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Git Branch Configuration
+# ═══════════════════════════════════════════════════════════════════════════════
+branches:
+  # Main/production branch (tagged releases)
+  main: "main"
+
+  # Development branch (default working branch)
+  development: "dev"
+
+  # Release branch prefix
+  release_prefix: "release/v"
+
+  # Feature branch prefix
+  feature_prefix: "feature/"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Build System Configuration
+# ═══════════════════════════════════════════════════════════════════════════════
+build:
+  # Build system: "firely-bake" or "sushi-only"
+  system: "firely-bake"
+
+  # SUSHI compilation command
+  sushi_command: "sushi ."
+
+  # IG Publisher command (if used)
+  ig_publisher_command: "./_genonce.sh"
+
+  # Firely Bake configuration file
+  bake_config: "package.bake.yaml"
+
+  # Expected package file count (for verification)
+  expected_file_count:
+    min: 400
+    max: 600
+
+  # Expected package size in KB (for verification)
+  expected_size_kb:
+    min: 1500
+    max: 2000
+
+  # Directories to exclude from package
+  exclude_from_package:
+    - ".claude/"
+    - ".bake/"
+    - "input/fsh/"
+    - "implementation-guides/"
+    - ".git/"
+    - "node_modules/"
+    - "output/"
+    - "staging/"
+    - "package.bake.yaml"
+    - "*.pdf"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Version Management
+# ═══════════════════════════════════════════════════════════════════════════════
+versioning:
+  # Version format pattern
+  pattern: "YYYY.0.0"
+
+  # Files that contain version information and must be updated on release
+  version_files:
+    - path: "package.json"
+      field: "version"
+      format: "json"
+
+    - path: "sushi-config.yaml"
+      field: "version"
+      format: "yaml"
+
+    - path: "input/fsh/rulesets/version.fsh"
+      format: "fsh"
+      rulesets:
+        - "Version"
+        - "PR_CS_VS_Version"
+        - "MetaProfile"
+      comment: "Update version in all three RuleSets"
+
+    - path: "qc/custom.rules.yaml"
+      field: "version-filled"
+      format: "yaml"
+      action: "append"
+      comment: "Add new version to the list (line ~25)"
+
+  # Release labels (corresponds to releaseLabel in sushi-config.yaml)
+  release_labels:
+    development: "ci-build"
+    ballot: "ballot"
+    release_candidate: "trial-use"
+    production: "release"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# CI/CD Configuration
+# ═══════════════════════════════════════════════════════════════════════════════
+ci:
+  # GitHub Actions workflow name for FHIR validation
+  workflow_name: "CI (FHIR Validation)"
+
+  # Artifact name containing validation results
+  artifact_name: "validation-output"
+
+  # Timeout for waiting on CI completion (minutes)
+  timeout_minutes: 10
+
+  # Polling interval when waiting for CI (seconds)
+  poll_interval_seconds: 30
+
+  # Validation history directory
+  validation_history_dir: ".validation-history"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# File Paths
+# ═══════════════════════════════════════════════════════════════════════════════
+paths:
+  # FSH source files
+  fsh_source: "input/fsh"
+
+  # SUSHI output directory
+  fsh_generated: "fsh-generated"
+
+  # IG Publisher output
+  output: "output"
+
+  # Bake staging directory
+  staging: "staging"
+
+  # Bake output directory
+  bake_output: ".bake"
+
+  # Implementation Guide pages
+  ig_pages: "implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulOnkologie"
+
+  # Release notes file
+  release_notes: "implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulOnkologie/Release-Notes.page.md"
+
+  # Technical implementation docs
+  tech_docs: "implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulOnkologie/TechnischeImplementierung"
+
+  # Profile documentation
+  profile_docs: "implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile"
+
+  # PlantUML source files
+  plantuml_source: "input/images-source"
+
+  # oBDS FSH files organized by chapter
+  obds_chapters: "input/fsh/oBDS"
+
+  # Examples directory
+  examples: "examples"
+
+  # QA rules
+  qa_rules: "qc/custom.rules.yaml"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Simplifier Publishing
+# ═══════════════════════════════════════════════════════════════════════════════
+simplifier:
+  # Simplifier project URL
+  project_url: "https://simplifier.net/MedizininformatikInitiative-ModulOnkologie"
+
+  # Base URL for implementation guide on Simplifier
+  guide_base_url: "https://simplifier.net/guide/MII-IG-Modul-Onkologie-v2026-DE"
+
+  # Direct guide URL (may need updating per version)
+  guide_url: "https://simplifier.net/guide/medizininformatikinitiative-modulonkologie"
+
+  # Package registry URL
+  package_registry: "https://packages.simplifier.net/de.medizininformatikinitiative.kerndatensatz.onkologie"
+
+  # Organization on Simplifier
+  organization: "Medizininformatik Initiative"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Terminology Services
+# ═══════════════════════════════════════════════════════════════════════════════
+terminology:
+  # MII terminology server
+  server: "https://termserv.mii.medizininformatik-initiative.de/fhir"
+
+  # FHIR version
+  fhir_version: "4.0.1"
+
+  # Key code systems used
+  code_systems:
+    - "http://snomed.info/sct"
+    - "http://loinc.org"
+    - "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
+    - "http://fhir.de/CodeSystem/bfarm/ops"
+    - "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Module-Specific Configuration
+# ═══════════════════════════════════════════════════════════════════════════════
+module:
+  # oBDS specification version
+  obds_version: "3.0.2"
+
+  # Base specification
+  base_specification: "oBDS (Onkologischer Basisdatensatz)"
+
+  # Key dependencies (MII modules)
+  key_dependencies:
+    - "de.basisprofil.r4"
+    - "de.medizininformatikinitiative.kerndatensatz.meta"
+    - "de.medizininformatikinitiative.kerndatensatz.diagnose"
+    - "de.medizininformatikinitiative.kerndatensatz.prozedur"
+    - "de.medizininformatikinitiative.kerndatensatz.biobank"
+    - "de.medizininformatikinitiative.kerndatensatz.medikation"
+    - "de.medizininformatikinitiative.kerndatensatz.molgen"
+    - "de.medizininformatikinitiative.kerndatensatz.studie"
+
+  # Language
+  language: "de-DE"
+
+  # Primary contact
+  maintainer:
+    name: "Medizininformatik Initiative"
+    url: "https://www.medizininformatik-initiative.de/"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Naming Conventions
+# ═══════════════════════════════════════════════════════════════════════════════
+naming:
+  # Profile naming pattern
+  profile_pattern: "MII_PR_Onko_{ConceptName}"
+  profile_id_pattern: "mii-pr-onko-{concept-name}"
+  profile_title_pattern: "MII PR Onkologie {Human Name}"
+
+  # Extension naming pattern
+  extension_pattern: "MII_EX_Onko_{ConceptName}"
+  extension_id_pattern: "mii-ex-onko-{concept-name}"
+
+  # ValueSet naming pattern
+  valueset_pattern: "mii-vs-onko-{concept-name}"
+  valueset_title_pattern: "MII VS Onkologie {Human Name}"
+
+  # CodeSystem naming pattern
+  codesystem_pattern: "mii-cs-onko-{concept-name}"
+  codesystem_title_pattern: "MII CS Onkologie {Human Name}"
+
+  # Example naming pattern
+  example_pattern: "mii-exa-onko-{concept-name}"
+  example_title_pattern: "MII EXA Onkologie {Human Name}"
+
+  # File naming pattern
+  file_pattern: "mii-{type}-onko-{concept-name}.fsh"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Validation Configuration
+# ═══════════════════════════════════════════════════════════════════════════════
+validation:
+  # Advisor configuration file (for suppressing known issues)
+  advisor_config: "input/data/advisor.json"
+
+  # Validation commands
+  commands:
+    sushi: "sushi ."
+    ig_publisher: "./_genonce.sh"
+    firely_terminal: "fhir validate output/ --version 4.0.1 --tx https://termserv.mii.medizininformatik-initiative.de/fhir"
+
+  # Known acceptable error categories
+  acceptable_errors:
+    - "Terminology_TX_Display"
+    - "Wrong_Display_Name"
+
+  # Expected error count thresholds (for tracking improvements)
+  error_thresholds:
+    critical: 0
+    high: 10
+    medium: 50
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Release Workflow
+# ═══════════════════════════════════════════════════════════════════════════════
+release:
+  # Workflow phases (for tracking)
+  phases:
+    - name: "Create Release Branch"
+      command: "/release-prepare"
+
+    - name: "Update Version Files"
+      automated: true
+
+    - name: "Run SUSHI"
+      automated: true
+
+    - name: "Update Release Notes"
+      command: "/update-release-notes"
+
+    - name: "Create PR and Wait for CI"
+      manual: true
+
+    - name: "Merge and Create Tag"
+      command: "/release-finalize"
+
+    - name: "Build Package"
+      command: "/build-package"
+
+    - name: "Publish to Simplifier"
+      command: "/publish-simplifier"
+
+  # Commit message templates
+  commit_messages:
+    prepare: "chore: Prepare release v{VERSION}"
+    finalize: "chore: Release v{VERSION}"
+    hotfix: "fix: Hotfix v{VERSION}"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# External Resources
+# ═══════════════════════════════════════════════════════════════════════════════
+resources:
+  # oBDS specification
+  obds_spec_url: "https://www.basisdatensatz.de/"
+
+  # MII Initiative
+  mii_url: "https://www.medizininformatik-initiative.de/"
+
+  # GitHub repository
+  github_url: "https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie"
+
+  # FHIR specification
+  fhir_spec: "http://hl7.org/fhir/R4/"
+
+  # MII release workflow wiki
+  release_workflow: "https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Module-Release-Workflow"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Notes
+# ═══════════════════════════════════════════════════════════════════════════════
+# This configuration file is used by:
+# - Slash commands in .claude/commands/
+# - CI/CD automation scripts
+# - Release management workflows
+#
+# When adding new MII modules, copy this file and update repo-specific values.
+# Shared command logic should read from this file rather than hardcoding values.
+#
+# See CLAUDE.md for comprehensive documentation on workflows and conventions.

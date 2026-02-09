@@ -1,6 +1,7 @@
 Instance: mii-exa-onko-anzahl-untersuchte-lymphknoten-23
 InstanceOf: mii-pr-onko-anzahl-untersuchte-lymphknoten
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-untersuchte-lymphknoten)
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 * code.coding[loinc] = $LNC#21894-1 "Regional lymph nodes examined [#] Specimen"

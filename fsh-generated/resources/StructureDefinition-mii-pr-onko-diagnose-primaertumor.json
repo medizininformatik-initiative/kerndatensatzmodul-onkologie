@@ -16,7 +16,7 @@
     }
   ],
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor",
-  "version": "2026.0.0-ballot",
+  "version": "2026.0.1",
   "name": "MII_PR_Onko_Diagnose_Primaertumor",
   "title": "MII PR Onkologie Diagnose Primärtumor",
   "_title": {
@@ -48,7 +48,7 @@
       ]
     }
   ],
-  "description": "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der primären hämatologisch-myeloneoplastischen Erkrankung)",
+  "description": "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der primären hämatologisch-myeloneoplastischen Erkrankung) und basiert auf dem MII KDS Modul Diagnose.",
   "_description": {
     "extension": [
       {
@@ -60,7 +60,7 @@
           },
           {
             "url": "content",
-            "valueString": "Diagnose des Primärtumors bzw. der primären hämatologisch-myeloneoplastischen Erkrankung im Rahmen einer onkologischen Erkrankung"
+            "valueString": "Diagnose des Primärtumors bzw. der primären hämatologisch-myeloneoplastischen Erkrankung im Rahmen einer onkologischen Erkrankung, basierend auf dem MII KDS Modul Diagnose"
           }
         ]
       }
@@ -96,11 +96,6 @@
             "identity": "oBDS",
             "map": "5",
             "comment": "Diagnose"
-          },
-          {
-            "identity": "oBDS",
-            "map": "5.9",
-            "comment": "Frühere Tumorerkrankungen"
           }
         ]
       },
@@ -205,6 +200,60 @@
             "identity": "oBDS",
             "map": "6.5",
             "comment": "Morphologie-Freitext"
+          }
+        ]
+      },
+      {
+        "id": "Condition.extension:occurredFollowing",
+        "path": "Condition.extension",
+        "sliceName": "occurredFollowing",
+        "short": "Frühere Tumorerkrankungen",
+        "definition": "Verweis auf frühere Tumorerkrankungen, nach denen die aktuelle Diagnose aufgetreten ist",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/condition-occurredFollowing"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.extension:occurredFollowing.value[x]",
+        "path": "Condition.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Condition.extension:occurredFollowing.value[x]:valueReference",
+        "path": "Condition.extension.value[x]",
+        "sliceName": "valueReference",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung"
+            ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "5.9",
+            "comment": "Frühere Tumorerkrankungen"
           }
         ]
       },

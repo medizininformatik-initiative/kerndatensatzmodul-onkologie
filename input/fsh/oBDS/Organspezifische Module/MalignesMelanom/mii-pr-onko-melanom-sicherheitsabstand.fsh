@@ -2,7 +2,7 @@ Profile: MII_PR_Onko_Melanom_Sicherheitsabstand
 Parent: Observation
 Id: mii-pr-onko-melanom-sicherheitsabstand
 Title: "MII PR Onkologie Melanom Sicherheitsabstand"
-Description: "Dieses Profil beschreibt den minimalen Sicherheitsabstand zum Primärtumor beim Malignen Melanom basierend oBDS Feld MM1. Abweichend "
+Description: "Dieses Profil beschreibt den minimalen Sicherheitsabstand zum Primärtumor beim Malignen Melanom basierend auf oBDS Feld MM1. Bei nicht beurteilbaren Fällen (oBDS Wert -1) wird dataAbsentReason verwendet statt valueQuantity."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active
@@ -44,7 +44,14 @@ Description: "Dieses Profil beschreibt den minimalen Sicherheitsabstand zum Prim
 
 * dataAbsentReason MS
 * dataAbsentReason ^short = "Grund für fehlende Messung"
-* dataAbsentReason ^definition = "Grund warum der Sicherheitsabstand nicht bestimmt werden konnte (z.B. nicht beurteilbar)"
+* dataAbsentReason ^definition = "Grund warum der Sicherheitsabstand nicht bestimmt werden konnte (z.B. nicht beurteilbar). Wird verwendet wenn oBDS Wert -1 (nicht beurteilbar) vorliegt."
+
+* obeys mii-onko-melanom-sicherheitsabstand-1
+
+Invariant: mii-onko-melanom-sicherheitsabstand-1
+Description: "Entweder muss valueQuantity oder dataAbsentReason vorhanden sein"
+Severity: #error
+Expression: "valueQuantity.exists() or dataAbsentReason.exists()"
 
 Mapping: FHIR-oBDS-Melanom-Sicherheitsabstand
 Id: oBDS

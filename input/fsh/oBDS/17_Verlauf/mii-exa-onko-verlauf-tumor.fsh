@@ -1,6 +1,7 @@
 Instance: mii-exa-onko-verlauf-tumor
 InstanceOf: mii-pr-onko-verlauf
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf)
 * status = #final
 * code = $SCT#396432002 "Status of regression of tumor (observable entity)"
 * subject = Reference(Patient/example)

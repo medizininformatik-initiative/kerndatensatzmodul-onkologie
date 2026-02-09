@@ -1,6 +1,6 @@
 ---
 parent: 
-topic: AllgemeinerObservation
+topic: VerlaufObservation
 subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf
 ---
 

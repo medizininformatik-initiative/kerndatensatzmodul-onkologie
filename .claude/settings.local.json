@@ -1,8 +1,17 @@
 {
   "permissions": {
     "allow": [
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "mcp__fhir-terminology__search_codes",
+      "mcp__fhir-terminology__lookup_code",
+      "SlashCommand(/commit-push-track-evaluate)",
+      "Bash(git push:*)",
+      "Bash(curl:*)",
+      "Bash(gh api:*)"
     ],
     "deny": []
-  }
+  },
+  "enabledMcpjsonServers": [
+    "fhir-terminology"
+  ]
 }

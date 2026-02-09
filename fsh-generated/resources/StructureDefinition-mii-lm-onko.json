@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-lm-onko",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/Onkologie",
-  "version": "2026.0.0-ballot",
+  "version": "2026.0.1",
   "name": "MII_LM_Onko",
   "title": "MII LM Onkologie",
   "status": "active",
@@ -1798,7 +1798,7 @@
         "id": "Onkologie.Tumorkonferenz.TumorkonferenzTherapieempfehlungTyp",
         "path": "Onkologie.Tumorkonferenz.TumorkonferenzTherapieempfehlungTyp",
         "short": "Tumorkonferenz Therapieempfehlung Typ",
-        "definition": "Typ der Therapieempfehlung der Tumorkonferenz.",
+        "definition": "Typ der Therapieempfehlung der Tumorkonferenz (z.B. CH, OP, ST).",
         "min": 1,
         "max": "*",
         "type": [
@@ -1809,7 +1809,45 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "CarePlan.activity.detail.code"
+            "map": "RequestGroup.code (Therapy type: CH, OP, ST, etc.)"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Tumorkonferenz.TumorkonferenzTherapieempfehlungProtokoll",
+        "path": "Onkologie.Tumorkonferenz.TumorkonferenzTherapieempfehlungProtokoll",
+        "short": "Tumorkonferenz Therapieempfehlung Protokoll",
+        "definition": "Empfohlenes Therapieprotokoll bei systemischer Therapie (z.B. FOLFOX4, R-CHOP, AC). Optional, insbesondere bei Kombinationstherapien.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "RequestGroup.action.code (Protocol: FOLFOX4, R-CHOP, etc.)"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Tumorkonferenz.TumorkonferenzTherapieempfehlungMedikation",
+        "path": "Onkologie.Tumorkonferenz.TumorkonferenzTherapieempfehlungMedikation",
+        "short": "Tumorkonferenz Therapieempfehlung Medikation",
+        "definition": "Einzelne empfohlene Medikamente/Substanzen der Therapie (z.B. ATC-kodiert). Bei Kombinationstherapien werden mehrere Medikamente angegeben.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "MedicationRequest.medicationCodeableConcept (referenced from RequestGroup.action.action.resource)"
           }
         ]
       },
@@ -2032,6 +2070,25 @@
           {
             "identity": "FHIR",
             "map": "Observation.effectiveDateTime"
+          }
+        ]
+      },
+      {
+        "id": "Onkologie.Studienteilnahme.StudienteilnahmeStudienreferenz",
+        "path": "Onkologie.Studienteilnahme.StudienteilnahmeStudienreferenz",
+        "short": "Studienteilnahme Studienreferenz",
+        "definition": "Referenz zur konkreten Studie (ResearchStudy)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.focus.where(resolve() is ResearchStudy)"
           }
         ]
       }

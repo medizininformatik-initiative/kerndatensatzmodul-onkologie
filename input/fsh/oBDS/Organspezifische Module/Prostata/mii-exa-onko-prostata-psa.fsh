@@ -1,6 +1,7 @@
 Instance: mii-exa-onko-prostata-psa-diagnose-1
 InstanceOf: MII_PR_Onko_Prostata_PSA
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-psa)
 * status = #final
 * code.coding = $LNC#2857-1 "Prostate specific Ag [Mass/volume] in Serum or Plasma"
 * subject = Reference(mii-exa-onko-prostata-bundle-patient)
@@ -13,6 +14,7 @@ Usage: #example
 Instance: mii-exa-onko-prostata-psa-verlauf-1
 InstanceOf: MII_PR_Onko_Prostata_PSA
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-psa)
 * status = #final
 * code.coding = $LNC#2857-1 "Prostate specific Ag [Mass/volume] in Serum or Plasma"
 * subject = Reference(mii-exa-onko-prostata-bundle-patient)

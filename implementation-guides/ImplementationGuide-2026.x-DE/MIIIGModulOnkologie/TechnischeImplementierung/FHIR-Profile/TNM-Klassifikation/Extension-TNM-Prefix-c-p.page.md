@@ -6,7 +6,11 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 
 ## {{page-title}}
 
-Der c/p Präfix wird in der TNM-Klassifikation benutzt, um klinische von pathologischer Erhebung zu unterscheiden. 
+Der c/p/u Präfix wird in der TNM-Klassifikation benutzt, um die Methode der Klassifikation anzugeben:
+- **c** (clinical): Klinische Klassifikation, basierend auf klinischen Angaben vor Therapiebeginn
+- **p** (pathological): Pathologische Klassifikation, basierend auf pathohistologischer Untersuchung nach operativer Entfernung
+- **u** (ultrasound): Klassifikation mittels Ultraschall (z.B. endoskopischer Ultraschall)
+
 In der vorliegenden Profilierung nutzen die Profile der T-,N- und M-Kategorie alle die gleiche Extension. 
 
 ### Inhalt

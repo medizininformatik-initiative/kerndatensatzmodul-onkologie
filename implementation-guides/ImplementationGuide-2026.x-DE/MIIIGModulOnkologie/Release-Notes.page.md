@@ -1,9 +1,130 @@
 ---
 parent: 
+topic: ReleaseNotes
 ---
 
 ## {{page-title}}
 Hier sind alle Änderungen aufgelistet. 
+
+## Änderungen v2026.0.1
+
+### Abhängigkeiten
+
+- `fix` Modul-Studie Abhängigkeit auf 2026.0.2 aktualisiert
+- `fix` ResearchStudy Beispiel wiederhergestellt
+
+### Technische Verbesserungen
+
+- `fix` ig.ini an umbenannte IG-Ressource angepasst (v2025→v2026)
+- `fix` MII IG Namenskonventionen für 2026 Release angewendet
+- `fix` Bezeichnung 'Erweiterungsmodul' durch 'KDS-Modul' gemäß MII-Richtlinien ersetzt
+
+---
+
+## Änderungen finale Version v2026.0.0 (noch nicht veröffentlicht)
+
+### ⚠️ Breaking Changes
+
+Diese Änderungen erfordern möglicherweise Anpassungen in bestehenden Implementierungen:
+
+- **`BREAKING`** Canonical URL des Strahlentherapie Applikationsart ValueSets von `mii-vs-onko-sstrahlentherapie-applikationsart` auf `mii-vs-onko-strahlentherapie-applikationsart` korrigiert (Tippfehler-Korrektur). Bestehende Referenzen müssen aktualisiert werden. [[HDB-708](https://hl7germany.atlassian.net/browse/HDB-708), [#219](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/219)]
+- **`BREAKING`** CodeSystem-URLs für therapie-ende-grund und therapie-stellungzurop korrigiert. Bestehende Referenzen müssen aktualisiert werden.
+
+### Neue Profile und Funktionalität
+
+- `feat` **Frühere Tumorerkrankungen Profil**: Neues {{pagelink:FruehereTumorerkrankungCondition}} Profil zur Erfassung anamnestischer Tumorerkrankungen mit Mapping zu oBDS 5.9
+  - **Basis**: FHIR Condition (nicht MII Diagnose) für flexible Freitexterfassung
+  - **Kodierung**: code.text verpflichtend (1..1), code.coding[icd10-gm] optional (0..1)
+  - **Optionale Elemente**: ICD-O-3 Topographie, Morphologie-Extension, assertedDate, clinicalStatus
+  - **Integration**: condition-occurredFollowing Extension im Primärtumor-Profil für Verlinkung zu früheren Tumorerkrankungen
+  - **Beispiele**: Vier Instanzen demonstrieren verschiedene Szenarien inklusive reiner Freitext-Dokumentation
+- `feat` PRO-B Studienteilnahme-Beispiel mit ResearchStudy-Referenz zur Demonstration der Integration mit dem Forschungsvorhaben-Modul
+- `feat` QA Validierungsseite zur Dokumentation der Qualitätssicherungsprozesse hinzugefügt
+
+### Refaktorierungen
+
+- `refactor` **ASA-Klassifikation**: Vom KRK-Modul in das Allgemeiner Leistungszustand Profil verschoben für breitere Anwendbarkeit über verschiedene Tumorentitäten hinweg
+
+### Validierung und Qualitätsverbesserungen
+
+- `fix` Package-Abhängigkeiten auf 2026.0.0-ballot Versionen aktualisiert (studie, biobank, molgen) um fehlende Snapshots zu beheben
+- `fix` advisor.json Suppressionen für IG Parameter-Code Validierung erweitert
+- `fix` MedDRA-Slice zum AdverseEvent-Profil hinzugefügt und explizite MedDRA-Codes zum ValueSet für Validierung ergänzt
+- `fix` SNOMED-Code durch MedDRA-Code für Neuropathie-AdverseEvent ersetzt (präzisere Kodierung von Nebenwirkungen)
+- `fix` HER2 ISH LOINC-Code auf korrekten FISH-Test geändert für präzisere Laborwerterfassung
+- `fix` Neun fehlende Profile zum CapabilityStatement hinzugefügt für vollständige Server-Capability-Dokumentation
+- `fix` capabilitystatement-expectation Extension aus Profile RuleSet entfernt (verursachte Validierungsfehler)
+
+### Display-Namen und Terminologie-Korrekturen
+
+- `fix` OPS- und SNOMED-CT Display-Namen in diversen Beispielen korrigiert (Sigmoidresektion, Right-Hemikolektomie, KRK-Operation, etc.)
+- `fix` CodeSystem-URLs für therapie-ende-grund und therapie-stellungzurop korrigiert
+- `fix` ATC Display-Namen für Folinsäure und Trastuzumab korrigiert
+- `fix` TNM-Code und Verlauf Display-Namen korrigiert
+- `fix` Residualstatus Display-Namen korrigiert
+- `fix` FUFOL durch LV5FU2 ersetzt mit korrektem OPS Display-Namen
+
+### oBDS-Mapping Verbesserungen
+
+- `fix` oBDS-Mapping zur Operation Urgency Extension und Dokumentation hinzugefügt
+- `fix` Korrektes oBDS-Mapping zum Tumorgröße-Profil hinzugefügt und Dokumentationsseite erstellt
+- `fix` oBDS-Mapping zum Prostata PSA-Profil hinzugefügt
+
+### Beispieldaten-Korrekturen
+
+- `fix` Fehlende OPS-Versionen zu diversen Procedure-Instanzen hinzugefügt (palbociclib-therapie, pertuzumab-therapie, Strahlentherapie-Beispiele, etc.)
+- `fix` [ops] Slice-Notation zu allen OPS code.coding in example-patient-1 hinzugefügt
+- `fix` Fehlende SNOMED-CT Codes und Kategorien zu Procedure-Beispielen hinzugefügt
+- `fix` Instanztyp von Procedure zu MedicationRequest für Tumorkonferenz-Beispiele korrigiert
+- `fix` Ungültige SNOMED-Codes aus KRK-Operation entfernt
+- `fix` Bundle-Typ von collection zu transaction für ECOG und Karnofsky Beispiele geändert
+- `fix` Verpflichtende fullUrl zu Bundle-Einträgen in Beispielen hinzugefügt
+- `fix` Verpflichtende diagnostic certainty und encounter zu Melanom-Diagnose hinzugefügt
+- `fix` ICD-O-3 Display-Namen in Frühere Tumorerkrankung Beispielen korrigiert
+- `fix` PRO-B ResearchStudy focus auf korrekten SNOMED-Code aktualisiert
+- `fix` TKI-Beispiel Therapieempfehlung korrigiert
+- `fix` Systemische Therapie Beispiel-Kategorie korrigiert
+
+### ATC-Code Transitionen
+
+- `feat` ATC-Code Transitionsbeispiele hinzugefügt und Display-Namen korrigiert zur Demonstration temporaler ATC-Änderungen (z.B. Imatinib, Quizartinib)
+- `feat` Umfassende ATC-Code Transitions-Dokumentation und ConceptMaps hinzugefügt
+- `feat` Protokoll- und Medikations-Tracking für Kombinationstherapie-Empfehlungen ergänzt
+
+### Therapieempfehlung Medikation Erweiterung
+
+- `improve` **reasonReference erweitert**: `MII_PR_Onko_Therapieempfehlung_Medikation` (MedicationRequest) erlaubt nun neben der Pflicht-Referenz auf `MII_PR_Onko_Diagnose_Primaertumor` auch Referenzen auf `Condition` und `Observation` zur Unterstützung zusätzlicher klinischer Begründungen für Therapieempfehlungen
+
+### Technische Verbesserungen
+
+- `chore` Version auf 2026.0.0-rc.1 aktualisiert
+- `chore` .validation-history zu gitignore hinzugefügt
+- `chore` Generierte CapabilityStatement und ECOG-Dateien aktualisiert
+- `feat` UML-Diagramme aktualisiert und PlantUML Auto-Rendering Workflow hinzugefügt
+- `fix` FHIRPath Typ-Vergleich in ECOG und Karnofsky Constraints korrigiert
+- `fix` ECOG und Karnofsky Constraint Validierungsausdrücke verbessert
+- `chore` Simplifier Build-Skript hinzugefügt und molgen Dependency aktualisiert
+
+### Weitere Verbesserungen
+
+- `improve` Dinatriumfolinat/Natriumfolinat zu Systemische Therapie Substanzen ValueSets hinzugefügt: UNII-Code für Leucovorin Sodium (4MXU9LJS4Q) und ATC-Code V03AF06 (Natriumfolinat). Dokumentation auf Terminologie-Seite aktualisiert. [[HDB-628](https://hl7germany.atlassian.net/browse/HDB-628)]
+- `documentation` Fehlerhafte interne Dokumentationslinks (pagelinks) korrigiert, die nach Export von Simplifier zur MII-Homepage nicht funktionierten: Topic-Namen in Kommentierungs-Seite, Operation-Profile und Extension-Dokumentation aktualisiert. [[HDB-646](https://hl7germany.atlassian.net/browse/HDB-646)]
+- `improve` Kardinalität von `Observation.code` im Residualstatus-Profil explizit auf `1..1` gesetzt für bessere Verständlichkeit. [[HDB-707](https://hl7germany.atlassian.net/browse/HDB-707), [#220](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/220)]
+- `documentation` Beschreibung des Melanom Sicherheitsabstand Profils vervollständigt und Handhabung von nicht beurteilbaren Fällen dokumentiert. [[HDB-705](https://hl7germany.atlassian.net/browse/HDB-705), [#222](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/222)]
+- `documentation` GOLD-Projektbeschreibung auf Seite "Bezug zu nationalen Standards" aktualisiert. [[HDB-711](https://hl7germany.atlassian.net/browse/HDB-711), [#216](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/216)]
+- `improve` Optionale Specimen-Referenz (0..1) zum Genetische Variante Profil hinzugefügt. [[HDB-712](https://hl7germany.atlassian.net/browse/HDB-712), [#215](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/215)]
+- `improve` Klarstellung der Datums-Semantik in Verlaufshistologie und Specimen Profilen: `Observation.effectiveDateTime` bezeichnet "Datum der histologischen Untersuchung", während `Specimen.collection.collectedDateTime` das "Datum der Probenentnahme" (oBDS 6.1 "Tumor Histologiedatum") darstellt. Labels, oBDS-Mappings und UML-Diagramme entsprechend aktualisiert. Verpflichtende 1..1 Specimen-Referenz im UML-Diagramm visualisiert. [[HDB-714](https://hl7germany.atlassian.net/browse/HDB-714), [#233](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/233)]
+- `documentation` Hinweis auf Vererbung vom MII KDS Modul Diagnose zur Beschreibung des Diagnose Primärtumor Profils hinzugefügt. [[HDB-701](https://hl7germany.atlassian.net/browse/HDB-701), [#227](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/227)]
+- `documentation` Beschreibungen der TNM c/p/u-Präfix Extension und ValueSet verbessert mit Erklärungen der Klassifikationsmethoden. [[HDB-699](https://hl7germany.atlassian.net/browse/HDB-699), [#229](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/229)]
+- `fix` SNOMED CT Versions-URI-Syntax in ConceptMap mii-cm-onko-krk-stoma-obds-sct korrigiert: Versionierte URI von `target` nach `targetVersion` verschoben. [[HDB-702](https://hl7germany.atlassian.net/browse/HDB-702), [#226](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/226)]
+- `documentation` Beschreibung und Definition im Prostata Operation Profil korrigiert um Binding-Stärke korrekt als `required` (statt `preferred`) zu reflektieren. [[HDB-706](https://hl7germany.atlassian.net/browse/HDB-706), [#224](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/224)]
+- `documentation` UCUM Hinweistext in Lymphknoten-Zählprofilen verbessert für bessere Klarheit über verpflichtenden UCUM Code 1. [[HDB-700](https://hl7germany.atlassian.net/browse/HDB-700), [#228](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/228)]
+- `improve` LOINC Slices zu Karnofsky und ECOG Leistungszustand Profilen hinzugefügt für bessere internationale Interoperabilität. [[HDB-689](https://hl7germany.atlassian.net/browse/HDB-689), [#236](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/236)]
+- `improve` Strahlentherapie Applikationsart von `Procedure.usedCode` zu Standard-Extension `procedure-method` verschoben für semantisch korrektere Modellierung. [[HDB-682](https://hl7germany.atlassian.net/browse/HDB-682), [#238](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/238)]
+- `documentation` MII Modul Forschungsvorhaben zum UML-Diagramm "Profile - Beziehungen und Referenzen" hinzugefügt zur Darstellung der optionalen Integration mit Forschungsprojekten. [[HDB-715](https://hl7germany.atlassian.net/browse/HDB-715), [#232](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/232)]
+- `improve` Mamma Operation Profil um strukturierte `usedCode` Slices für intraoperatives Präparatröntgen/Sonografie (M6) und präoperative Drahtmarkierung (M5) mit entsprechenden ValueSets erweitert. [[HDB-653](https://hl7germany.atlassian.net/browse/HDB-653), [#243](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/243)]
+- `improve` Prostata PSA LOINC ValueSet mit korrekten LOINC Display-Namen erstellt: Total-PSA (generisch und per Immunoassay), freies PSA (generisch und per Immunoassay) und ultrasensitives PSA (Nachweisgrenze ≤ 0.01 ng/mL). [[HDB-688](https://hl7germany.atlassian.net/browse/HDB-688), [#235](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/235)]
+- `improve` Her2neu Status Profil für Mamma-Modul mit dualer Kodierungsstrategie implementiert: oBDS-Spezifikation (P/N/U) und S3-Leitlinie/ASCO-CAP Guidelines (positiv/low/ultralow/negativ/equivocal) mit IHC Score und ISH Result Komponenten für moderne HER2-low Therapieansätze.
 
 ## Änderungen Kommentierungs-Version 2026 (veröffentlicht 21.08.2025)
 
@@ -47,7 +168,7 @@ Hier sind alle Änderungen aufgelistet.
   - **Verwendung aktueller Codes**: Bei Post-Annotation aktuelle ATC-Codes verwenden (nicht zwingend die historischen)
   - **Originaltext erhalten**: Im `medicationCodeableConcept.text` Element
 
-### Operation-Profil Erweiterungen
+### {{pagelink:OperationProcedure}} Erweiterungen
 
 #### Mehrteilige Eingriffe Unterstützung
 - **OPS-Code Kardinalität**: Änderung von `code.coding[ops] 1..1` zu `code.coding[ops] 0..1`
@@ -116,9 +237,9 @@ Hier sind alle Änderungen aufgelistet.
   - **Melanom-Exzision**: {{pagelink:MelanomExzision}} mit SNOMED CT Codes für Hautexzisionen
   - **Bundle-Beispiel**: {{pagelink:MelanomBundle}} demonstriert vollständigen Melanom-Workflow
 
-- **Bundle-Beispiele**: Für alle organspezifischen Module (Mamma, Prostata, KRK) stehen vollständige Transaktions-Bundles zur Verfügung, die alle zugehörigen Profile in einem server-konsumierbaren Format demonstrieren
+- **Bundle-Beispiele**: Für alle organspezifischen Module ({{pagelink:MammaBundle}}, {{pagelink:ProstataBundle}}, {{pagelink:KRKBundle}}, {{pagelink:MelanomBundle}}) stehen vollständige Transaktions-Bundles zur Verfügung, die alle zugehörigen Profile in einem server-konsumierbaren Format demonstrieren
 
---- 
+---
 
 ## Änderungen in 2025.1.0 (veröffentlicht 12.06.2025)
 - Umprofilierung des Strahlentherapie-Profils (BREAKING CHANGE!)

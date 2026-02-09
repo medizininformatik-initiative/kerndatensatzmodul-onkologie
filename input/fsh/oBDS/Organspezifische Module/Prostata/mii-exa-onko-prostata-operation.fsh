@@ -3,9 +3,10 @@ InstanceOf: MII_PR_Onko_Prostata_Operation
 Usage: #example
 Title: "Prostata Operation Prostatektomie Beispiel"
 Description: "Beispiel einer radikalen Prostatektomie"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostata-operation)
 * status = #completed
 * category = $SCT#387713003 "Surgical procedure"
-* code.coding[ops] = $OPS#5-604.02 "Radikale Prostatovesikulektomie retropubisch, mit regionaler Lymphadenektomie"
+* code.coding[ops] = $OPS#5-604.02 "Radikale Prostatovesikulektomie: Retropubisch: Mit regionaler Lymphadenektomie"
 * code.coding[ops].version = "2024"
 * code.coding[sct] = $SCT#26294005 "Radical prostatectomy (procedure)"
 * subject = Reference(Patient/example)
@@ -19,11 +20,12 @@ InstanceOf: MII_PR_Onko_Prostata_Operation
 Usage: #example
 Title: "Prostata Operation TURP Beispiel"
 Description: "Beispiel einer transurethralen Resektion der Prostata"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostata-operation)
 * status = #completed
 * category = $SCT#387713003 "Surgical procedure"
 * code.coding[ops] = $OPS#5-601.0 "Transurethrale Exzision und Destruktion von Prostatagewebe: Elektroresektion"
 * code.coding[ops].version = "2024"
-* code.coding[sct] = $SCT#20899002 "Transurethral resection of prostate (procedure)"
+* code.coding[sct] = $SCT#90199006 "Transurethral prostatectomy (procedure)"
 * subject = Reference(Patient/example)
 * performedDateTime = "2024-02-20"
 * extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#D "diagnostisch"

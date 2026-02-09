@@ -1,6 +1,7 @@
 Instance: mii-exa-onko-prostata-surgery-1
 InstanceOf: MII_PR_Onko_Operation
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation)
 * status = #completed
 * category.coding = $SCT#387713003 "Surgical procedure"
 * code.coding[ops] = $OPS#5-604 "Radikale Prostatovesikulektomie"
@@ -13,6 +14,7 @@ Usage: #example
 Instance: mii-exa-onko-prostata-surgical-complication-1
 InstanceOf: MII_PR_Onko_Prostata_Clavien_Dindo
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-clavien-dindo)
 * status = #final
 * code.coding = $SCT#789279006 "Clavien-Dindo classification grade (observable entity)"
 * subject = Reference(mii-exa-onko-prostata-bundle-patient)

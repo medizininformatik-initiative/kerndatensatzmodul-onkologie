@@ -1,0 +1,35 @@
+{
+  "resourceType": "MedicationRequest",
+  "id": "mii-exa-onko-tucatinib-option",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation|2026.0.1"
+    ]
+  },
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/atc",
+        "code": "L01EH03",
+        "display": "Tucatinib"
+      }
+    ],
+    "text": "Tucatinib + Trastuzumab + Capecitabin"
+  },
+  "status": "active",
+  "intent": "option",
+  "subject": {
+    "reference": "Patient/mii-exa-onko-molecular-board-patient"
+  },
+  "authoredOn": "2024-01-16",
+  "reasonReference": [
+    {
+      "reference": "Condition/primaertumor-example"
+    }
+  ],
+  "note": [
+    {
+      "text": "Drittlinien-Kombination für Hirnmetastasen oder mehrfach resistente HER2+ Erkrankung"
+    }
+  ]
+}

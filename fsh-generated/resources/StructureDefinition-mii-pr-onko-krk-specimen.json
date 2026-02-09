@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-onko-krk-specimen",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-specimen",
-  "version": "2026.0.0-ballot",
+  "version": "2026.0.1",
   "name": "MII_PR_Onko_KRK_Specimen",
   "title": "MII PR Onkologie Specimen",
   "status": "active",
@@ -52,6 +52,42 @@
         "id": "Specimen.collection.collected[x]:collectedDateTime",
         "path": "Specimen.collection.collected[x]",
         "sliceName": "collectedDateTime",
+        "short": "Tumor Histologiedatum",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Tumor Histologiedatum"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Histologiedatum nach 6.1 oBDS 2021",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Histologiedatum nach 6.1 oBDS 2021"
+                }
+              ]
+            }
+          ]
+        },
         "type": [
           {
             "code": "dateTime"

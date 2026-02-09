@@ -1,6 +1,6 @@
 ---
 parent: 
-topic: CarePlan
+topic: GenetischeVarianteObservation
 subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-genetische-variante
 ---
 

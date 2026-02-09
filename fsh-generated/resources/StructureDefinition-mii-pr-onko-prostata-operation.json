@@ -16,7 +16,7 @@
     }
   ],
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostata-operation",
-  "version": "2026.0.0-ballot",
+  "version": "2026.0.1",
   "name": "MII_PR_Onko_Prostata_Operation",
   "title": "MII PR Onko Prostata Operation",
   "status": "active",
@@ -31,7 +31,7 @@
       ]
     }
   ],
-  "description": "Prostata-spezifische Operation. Dieses Profil spezialisiert die allgemeine onkologische Operation für Prostata-spezifische Eingriffe mit einem präferierten ValueSet basierend auf SNOMED CT 118877007 und dessen Kindern.",
+  "description": "Prostata-spezifische Operation. Dieses Profil spezialisiert die allgemeine onkologische Operation für Prostata-spezifische Eingriffe mit einem required Binding zu einem ValueSet basierend auf SNOMED CT 118877007 und dessen Kindern.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -45,7 +45,7 @@
         "path": "Procedure.code.coding",
         "sliceName": "sct",
         "short": "SNOMED CT Code für Prostata-Operation",
-        "definition": "SNOMED CT Code für die spezifische Prostata-Operation. Bevorzugt werden Codes aus der Hierarchie 118877007 |Procedure on prostate (procedure)|",
+        "definition": "SNOMED CT Code für die spezifische Prostata-Operation. Erforderlich sind Codes aus der Hierarchie 118877007 |Procedure on prostate (procedure)|",
         "min": 1,
         "binding": {
           "strength": "required",

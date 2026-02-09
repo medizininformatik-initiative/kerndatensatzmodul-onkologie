@@ -25,8 +25,8 @@ Description: "10.06.2021 CT Abdomen mit KM"
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
 * category = $SCT#363679005 "Imaging (procedure)"
-* code.coding = $OPS#3-225 "Computertomographie des Abdomens mit Kontrastmittel"
-* code.coding.version = "2021"
+* code.coding[ops] = $OPS#3-225 "Computertomographie des Abdomens mit Kontrastmittel"
+* code.coding[ops].version = "2021"
 * performedDateTime = 2021-06-10
 
 Instance: PatientKimMusterperson-PrimaryDiagnosis-2
@@ -73,8 +73,8 @@ Description: "15.06.2021 Aszitespunktion"
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
 * category = $SCT#165197003 "Diagnostic assessment (procedure)"
-* code.coding = $OPS#1-853.2 "Diagnostische (perkutane) Punktion und Aspiration der Bauchhöhle: Aszitespunktion"
-* code.coding.version = "2021"
+* code.coding[ops] = $OPS#1-853.2 "Diagnostische (perkutane) Punktion und Aspiration der Bauchhöhle: Aszitespunktion"
+* code.coding[ops].version = "2021"
 * performedDateTime = 2021-06-15
 
 //22.06.2021 CT Thorax: kein Hinweis auf Metastasen. 
@@ -87,8 +87,8 @@ Description: "22.06.2021 CT Thorax: kein Hinweis auf Metastasen."
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
 * category = $SCT#363679005 "Imaging (procedure)"
-* code.coding = $OPS#3-202 "Native Computertomographie des Thorax"
-* code.coding.version = "2021"
+* code.coding[ops] = $OPS#3-202 "Native Computertomographie des Thorax"
+* code.coding[ops].version = "2021"
 * performedDateTime = 2021-06-22
 
 
@@ -123,8 +123,8 @@ Description: "."
 * subject = Reference(PatientKimMusterperson)
 * status = #completed
 * category = $SCT#18629005 // Administration of drug or medicament (procedure)
-* code.coding = $OPS#8-54 "Zytostatische Chemotherapie, Immuntherapie und antiretrovirale Therapie" // bei Bedarf spezifischer?
-* code.coding.version = "2021"
+* code.coding[ops] = $OPS#8-54 "Zytostatische Chemotherapie, Immuntherapie und antiretrovirale Therapie" // bei Bedarf spezifischer?
+* code.coding[ops].version = "2021"
 * extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K // impliziert 
 * extension[StellungZurOp].valueCodeableConcept = $mii-cs-onko-therapie-stellungzurop#N "neoadjuvant"
 * performedPeriod.start = 2021-07-05
@@ -232,8 +232,8 @@ Description: "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie,
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
 * category = $SCT#387713003 "Surgical procedure"
-* code.coding = $OPS#5-547.0 "Resektion von Gewebe in der Bauchregion ohne sichere Organzuordnung: Intraperitoneal" // alternativ 5-590.8 Resektion von Gewebe ohne sichere Organzuordnung
-* code.coding.version = "2021"
+* code.coding[ops] = $OPS#5-547.0 "Resektion von Gewebe in der Bauchregion ohne sichere Organzuordnung: Intraperitoneal" // alternativ 5-590.8 Resektion von Gewebe ohne sichere Organzuordnung
+* code.coding[ops].version = "2021"
 * performedDateTime = 2021-09-30
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
 * outcome = $mii-cs-onko-residualstatus#R0
@@ -245,8 +245,8 @@ Description: "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie,
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
 * category = $SCT#387713003 "Surgical procedure"
-* code.coding = $OPS#5-683 "Uterusexstirpation [Hysterektomie]"
-* code.coding.version = "2021"
+* code.coding[ops] = $OPS#5-683 "Uterusexstirpation [Hysterektomie]"
+* code.coding[ops].version = "2021"
 * performedDateTime = 2021-09-30
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
 * outcome = $mii-cs-onko-residualstatus#R0
@@ -258,8 +258,8 @@ Description: "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie,
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
 * category = $SCT#387713003 "Surgical procedure"
-* code.coding = $OPS#5-661 "Salpingektomie"
-* code.coding.version = "2021"
+* code.coding[ops] = $OPS#5-661 "Salpingektomie"
+* code.coding[ops].version = "2021"
 * performedDateTime = 2021-09-30
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
 * outcome = $mii-cs-onko-residualstatus#R0
@@ -271,8 +271,8 @@ Description: "30.09.2021 OP Intervalldebulking mittels Längsschnittlaparotomie,
 * status = #completed
 * subject = Reference(PatientKimMusterperson)
 * category = $SCT#387713003 "Surgical procedure"
-* code.coding = $OPS#5-501 "Lokale Exzision und Destruktion von erkranktem Gewebe der Leber (atypische Leberresektion)"
-* code.coding.version = "2021"
+* code.coding[ops] = $OPS#5-501 "Lokale Exzision und Destruktion von erkranktem Gewebe der Leber (atypische Leberresektion)"
+* code.coding[ops].version = "2021"
 * performedDateTime = 2021-09-30
 * partOf = Reference(PatientKimMusterperson-Procedure-4)
 * outcome = $mii-cs-onko-residualstatus#R0
@@ -450,8 +450,8 @@ Description: "."
 * subject = Reference(PatientKimMusterperson)
 * status = #completed
 * category = $SCT#18629005 // Administration of drug or medicament (procedure)
-* code.coding = $OPS#8-54 "Zytostatische Chemotherapie, Immuntherapie und antiretrovirale Therapie" // bei Bedarf spezifischer?
-* code.coding.version = "2021"
+* code.coding[ops] = $OPS#8-54 "Zytostatische Chemotherapie, Immuntherapie und antiretrovirale Therapie" // bei Bedarf spezifischer?
+* code.coding[ops].version = "2021"
 * extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K // impliziert 
 * extension[StellungZurOp].valueCodeableConcept = $mii-cs-onko-therapie-stellungzurop#A "adjuvant"
 * performedPeriod.start = 2021-11-08
@@ -549,8 +549,8 @@ Description: "."
 * subject = Reference(PatientKimMusterperson)
 * status = #completed
 * category = $SCT#18629005 // Administration of drug or medicament (procedure)
-* code.coding = $OPS#8-54 "Zytostatische Chemotherapie, Immuntherapie und antiretrovirale Therapie" // bei Bedarf spezifischer?
-* code.coding.version = "2022"
+* code.coding[ops] = $OPS#8-54 "Zytostatische Chemotherapie, Immuntherapie und antiretrovirale Therapie" // bei Bedarf spezifischer?
+* code.coding[ops].version = "2022"
 * extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K // impliziert 
 * extension[StellungZurOp].valueCodeableConcept = $mii-cs-onko-therapie-stellungzurop#A "adjuvant"
 * performedPeriod.start = 2022-01-25

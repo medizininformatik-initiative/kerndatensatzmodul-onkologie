@@ -1,0 +1,49 @@
+{
+  "resourceType": "MedicationStatement",
+  "id": "mii-exa-onko-medikation-imatinib-atc-version-transition",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation|2026.0.1"
+    ]
+  },
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/atc",
+        "version": "2020",
+        "code": "L01XE01",
+        "display": "Imatinib"
+      },
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/atc",
+        "version": "2021",
+        "code": "L01EA01",
+        "display": "Imatinib"
+      }
+    ],
+    "text": "Imatinib (BCR-ABL Tyrosinkinase-Inhibitor)"
+  },
+  "partOf": [
+    {
+      "reference": "Procedure/systemische-therapie-example"
+    }
+  ],
+  "note": [
+    {
+      "text": "CML-Protokoll mit Imatinib"
+    }
+  ],
+  "effectivePeriod": {
+    "start": "2020-12-01",
+    "end": "2024-08-30"
+  },
+  "basedOn": [
+    {
+      "reference": "CarePlan/example"
+    }
+  ]
+}

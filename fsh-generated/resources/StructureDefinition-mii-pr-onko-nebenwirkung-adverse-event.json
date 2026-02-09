@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-onko-nebenwirkung-adverse-event",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event",
-  "version": "2026.0.0-ballot",
+  "version": "2026.0.1",
   "name": "MII_PR_Onko_Nebenwirkung_Adverse_Event",
   "title": "MII PR Onkologie Nebenwirkung von Strahlentherapie und systemische Therapie",
   "status": "active",
@@ -46,6 +46,15 @@
       {
         "id": "AdverseEvent.event.coding",
         "path": "AdverseEvent.event.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        },
         "mustSupport": true,
         "binding": {
           "strength": "required",
@@ -153,6 +162,32 @@
             "comment": "Nebenwirkungen nach CTCAE Art"
           }
         ]
+      },
+      {
+        "id": "AdverseEvent.event.coding:meddra",
+        "path": "AdverseEvent.event.coding",
+        "sliceName": "meddra",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "AdverseEvent.event.coding:meddra.system",
+        "path": "AdverseEvent.event.coding.system",
+        "min": 1,
+        "patternUri": "https://www.meddra.org",
+        "mustSupport": true
+      },
+      {
+        "id": "AdverseEvent.event.coding:meddra.version",
+        "path": "AdverseEvent.event.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "AdverseEvent.event.coding:meddra.code",
+        "path": "AdverseEvent.event.coding.code",
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "AdverseEvent.event.text",

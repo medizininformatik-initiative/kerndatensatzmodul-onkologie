@@ -3,7 +3,7 @@
   "id": "mii-exa-onko-molecular-cdk46-protocol",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie"
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie|2026.0.1"
     ]
   },
   "intent": "proposal",
@@ -18,7 +18,7 @@
     "text": "CDK4/6 Inhibitor + Hormontherapie Kombination"
   },
   "subject": {
-    "reference": "Patient/example"
+    "reference": "Patient/mii-exa-onko-molecular-board-patient"
   },
   "authoredOn": "2024-01-15",
   "reasonReference": [
@@ -29,7 +29,7 @@
   "action": [
     {
       "resource": {
-        "reference": "Procedure/mii-exa-onko-cdk46-class-medication"
+        "reference": "MedicationRequest/mii-exa-onko-cdk46-class-medication"
       },
       "title": "CDK4/6 Inhibitor (pharmazeutische Klasse)",
       "description": "Beliebiger CDK4/6 Inhibitor: Palbociclib, Ribociclib oder Abemaciclib je nach Verfügbarkeit und Patientenfaktoren"

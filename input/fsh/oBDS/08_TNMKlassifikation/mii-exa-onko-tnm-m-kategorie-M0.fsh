@@ -1,6 +1,7 @@
 Instance: mii-exa-onko-tnm-m-kategorie-M0
 InstanceOf: mii-pr-onko-tnm-m-kategorie
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie)
 * status = #final
 * code.extension[0].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix"
 * code.extension[0].valueCodeableConcept = $UICC#c "c"

@@ -10,19 +10,43 @@
   "concept": [
     {
       "code": "1.",
-      "display": "ZNS"
+      "display": "ZNS",
+      "property": [
+        {
+          "code": "deprecated",
+          "valueBoolean": true
+        }
+      ]
     },
     {
       "code": "1.1.",
-      "display": "Ganzhirn"
+      "display": "Ganzhirn",
+      "property": [
+        {
+          "code": "deprecated",
+          "valueBoolean": true
+        }
+      ]
     },
     {
       "code": "1.2.",
-      "display": "Teilhirn"
+      "display": "Teilhirn",
+      "property": [
+        {
+          "code": "deprecated",
+          "valueBoolean": true
+        }
+      ]
     },
     {
       "code": "1.3.",
-      "display": "Neuroachse"
+      "display": "Neuroachse",
+      "property": [
+        {
+          "code": "deprecated",
+          "valueBoolean": true
+        }
+      ]
     },
     {
       "code": "2.",
@@ -626,13 +650,12 @@
       ]
     }
   ],
-  "version": "2026.0.0-ballot",
+  "version": "2026.0.1",
   "caseSensitive": true,
   "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-zielgebiet-2014",
   "property": [
     {
       "code": "deprecated",
-      "uri": "http://hl7.org/fhir/concept-properties#deprecated",
       "type": "boolean",
       "description": "Legacy oBDS 2014 code - use oBDS 2021 equivalent"
     }

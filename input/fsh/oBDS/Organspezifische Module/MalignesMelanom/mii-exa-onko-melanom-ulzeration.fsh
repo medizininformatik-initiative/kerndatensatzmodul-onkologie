@@ -3,6 +3,7 @@ InstanceOf: MII_PR_Onko_Melanom_Ulzeration
 Usage: #example
 Title: "MII EXA Onko Melanom Ulzeration"
 Description: "Beispiel für die Bestimmung der Ulzeration beim Malignen Melanom"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-ulzeration)
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-ulzeration"
 
 * status = #final
