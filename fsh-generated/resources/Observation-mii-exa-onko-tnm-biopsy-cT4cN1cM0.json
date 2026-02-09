@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "mii-exa-onko-tnm-mixed-pT4cN1cM0",
+  "id": "mii-exa-onko-tnm-biopsy-cT4cN1cM0",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
@@ -10,9 +10,9 @@
   "code": {
     "coding": [
       {
-        "code": "399588009",
+        "code": "399537006",
         "system": "http://snomed.info/sct",
-        "display": "Pathologic TNM stage grouping"
+        "display": "Clinical TNM stage grouping"
       }
     ]
   },
@@ -31,7 +31,7 @@
   },
   "hasMember": [
     {
-      "reference": "Observation/mii-exa-onko-tnm-t-kategorie-pT4"
+      "reference": "Observation/mii-exa-onko-tnm-t-kategorie-cT4"
     },
     {
       "reference": "Observation/mii-exa-onko-tnm-n-kategorie-cN1"

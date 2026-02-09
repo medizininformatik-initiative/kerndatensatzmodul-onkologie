@@ -13,10 +13,10 @@ skinparam defaultFontSize 11
 skinparam defaultFontName "DejaVu Sans"
 skinparam shadowing false
 
-title TNM Klassifikation - Mammakarzinom Patientenreise (Issue #189) - Fuenf Staging-Zeitpunkte ueber 3 Jahre
+title TNM Klassifikation - Mammakarzinom Patientenreise (Issue #189) - Klinisches Review: Therese Pross (Brustzentrum Berlin)
 
 map "**2024-01-11**\n**Initiale Diagnose**" as TP1 #FFE6E6 {
-  TNM => **cT3N1M0**
+  TNM => **cT3cN1cM0**
   Stadium => **IIIA**
   T: cT3 => SCT 1352966002
   N: cN1 => SCT 1353043007
@@ -25,12 +25,12 @@ map "**2024-01-11**\n**Initiale Diagnose**" as TP1 #FFE6E6 {
 }
 
 map "**2024-02-15**\n**Nach Biopsie**" as TP2 #FFD4B8 {
-  TNM => **pT4cN1cM0**
+  TNM => **cT4cN1cM0**
   Stadium => **IIIB**
-  T: pT4 NEU => SCT 1352553009
+  T: cT4 NEU => SCT 1352997003
   N: cN1 <U+2190> => (reused)
   M: cM0 <U+2190> => (reused)
-  Kontext => //Gemischtes TNM://\n//pT path., cN/cM klin.//
+  Kontext => //T bleibt klinisch!//\n//Biopsie: keine pT-Groesse//
 }
 
 map "**2024-05-20**\n**Nach Chemotherapie**" as TP3 #E6F3FF {
@@ -48,16 +48,18 @@ map "**2024-06-15**\n**Nach Operation**" as TP4 #D4EDDA {
   T: ypT0 => SCT 1352552004
   N: ypN0 => SCT 1352621009
   M: cM0 <U+2190> => (reused)
-  Kontext => //Pathologische//\n//Komplettremission//
+  L0 / V0 / Pn0 => Zusatzkategorien
+  R0 => Kein Residualtumor
+  Kontext => //Pathol. Komplettremission//\n//+ L, V, Pn, R//
 }
 
 map "**2027-06-20**\n**Rezidiv**" as TP5 #FFB6B6 {
-  TNM => **rcT2N1M1**
+  TNM => **rcT2cN1cM1**
   Stadium => **IV**
   T: rcT2 => SCT 1352993004
   N: rcN1 => SCT 1353043007
   M: rcM1 NEU => SCT 1352513006
-  Kontext => //r-Praefix: Recurrence//\n//neue Baseline//
+  Kontext => //r-Praefix: Recurrence//\n//neue Baseline mit Mets//
 }
 
 TP1 --> TP2 : 5 Wochen
@@ -71,6 +73,7 @@ legend bottom
   | **NEU** | Neue Observation erstellt |
   | **Praefixe** | c=Klinisch, p=Pathologisch, y=Post-Therapie, r=Rezidiv |
   | **SCT** | SNOMED CT Codes (UICC + SCT Dual-Kodierung) |
+  | **L/V/Pn/R** | Zusatzkategorien nach chirurgischer Resektion |
 end legend
 
 @enduml
