@@ -67,7 +67,7 @@ Usage: #example
 * method = $mii-cs-onko-tnm-version#8 "8. Auflage"
 * valueCodeableConcept = $UICC#M0 "M0"
 // Additional SNOMED CT code for specific cM0 value
-* valueCodeableConcept.coding[+] = $SCT#1353048003 "Union for International Cancer Control cM0 (qualifier value)"
+* valueCodeableConcept.coding[+] = $SCT#1352512001 "Union for International Cancer Control cM0 (qualifier value)"
 
 // ============================================
 // 2. MIXED STAGING AFTER BIOPSY - pT4cN1cM0

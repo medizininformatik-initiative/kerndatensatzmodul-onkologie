@@ -1,0 +1,76 @@
+@startuml TNM_Breast_Cancer_Journey
+
+left to right direction
+
+<style>
+title {
+  FontSize 14
+  FontStyle bold
+}
+</style>
+
+skinparam defaultFontSize 11
+skinparam defaultFontName "DejaVu Sans"
+skinparam shadowing false
+
+title TNM Klassifikation - Mammakarzinom Patientenreise (Issue #189) - Fuenf Staging-Zeitpunkte ueber 3 Jahre
+
+map "**2024-01-11**\n**Initiale Diagnose**" as TP1 #FFE6E6 {
+  TNM => **cT3N1M0**
+  Stadium => **IIIA**
+  T: cT3 => SCT 1352966002
+  N: cN1 => SCT 1353043007
+  M: cM0 <U+2190> => SCT 1352512001
+  Kontext => //Klinisches TNM//\n//via Bildgebung//
+}
+
+map "**2024-02-15**\n**Nach Biopsie**" as TP2 #FFD4B8 {
+  TNM => **pT4cN1cM0**
+  Stadium => **IIIB**
+  T: pT4 NEU => SCT 1352553009
+  N: cN1 <U+2190> => (reused)
+  M: cM0 <U+2190> => (reused)
+  Kontext => //Gemischtes TNM://\n//pT path., cN/cM klin.//
+}
+
+map "**2024-05-20**\n**Nach Chemotherapie**" as TP3 #E6F3FF {
+  TNM => **ycT2ycN0cM0**
+  Stadium => **IIA**
+  T: ycT2 => SCT 1352993004
+  N: ycN0 => SCT 1353041009
+  M: cM0 <U+2190> => (reused)
+  Kontext => //y-Praefix: Post-Therapie//\n//Downstaging//
+}
+
+map "**2024-06-15**\n**Nach Operation**" as TP4 #D4EDDA {
+  TNM => **ypT0ypN0cM0**
+  Stadium => **Complete Response**
+  T: ypT0 => SCT 1352552004
+  N: ypN0 => SCT 1352621009
+  M: cM0 <U+2190> => (reused)
+  Kontext => //Pathologische//\n//Komplettremission//
+}
+
+map "**2027-06-20**\n**Rezidiv**" as TP5 #FFB6B6 {
+  TNM => **rcT2N1M1**
+  Stadium => **IV**
+  T: rcT2 => SCT 1352993004
+  N: rcN1 => SCT 1353043007
+  M: rcM1 NEU => SCT 1352513006
+  Kontext => //r-Praefix: Recurrence//\n//neue Baseline//
+}
+
+TP1 --> TP2 : 5 Wochen
+TP2 --> TP3 : 3 Monate
+TP3 --> TP4 : 4 Wochen
+TP4 --> TP5 : 3 Jahre
+
+legend bottom
+  | Symbol | Bedeutung |
+  | **<U+2190>** | Wiederverwendung der cM0 Observation aus 2024-01-11 |
+  | **NEU** | Neue Observation erstellt |
+  | **Praefixe** | c=Klinisch, p=Pathologisch, y=Post-Therapie, r=Rezidiv |
+  | **SCT** | SNOMED CT Codes (UICC + SCT Dual-Kodierung) |
+end legend
+
+@enduml

@@ -10,6 +10,12 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 
 Dieses umfassende Beispiel demonstriert die vollständige TNM-Staging-Journey einer Brustkrebspatientin über fünf kritische Zeitpunkte hinweg. Es illustriert die Komplexität realer onkologischer Befundung und zeigt, wie die FHIR-Architektur mit verlinkten Observations die klinische Realität abbildet.
 
+### Grafische Darstellung
+
+<img src="https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/refs/heads/dev/implementation-guides/ImplementationGuide-2026.x-DE/Images/TNM_Breast_Cancer_Journey.svg" width="100%"></br>
+
+Die Bildatei kann [hier (Github)](https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/refs/heads/dev/implementation-guides/ImplementationGuide-2026.x-DE/Images/TNM_Breast_Cancer_Journey.svg) zur besseren Darstellung einzeln betrachtet und heruntergeladen werden (Bereitstellung als `.svg`).
+
 ### Klinischer Kontext
 
 Die Patientin durchläuft folgende Staging-Phasen:
