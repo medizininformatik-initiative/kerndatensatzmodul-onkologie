@@ -179,7 +179,9 @@ Usage: #example
 * hasMember[3] = Reference(mii-exa-onko-tnm-journey-l-kategorie-L0)
 * hasMember[4] = Reference(mii-exa-onko-tnm-journey-v-kategorie-V0)
 * hasMember[5] = Reference(mii-exa-onko-tnm-journey-pn-kategorie-Pn0)
-* valueCodeableConcept.text = "Complete pathological response"
+// Note: ypT0ypN0cM0 after neoadjuvant therapy = pathological complete response (pCR).
+// pCR has no standard UICC stage assignment; the Verlauf observation carries the response assessment.
+* valueCodeableConcept = $UICC#okk "Stadium X"
 
 // T Category - ypT0 (no residual tumor after therapy)
 Instance: mii-exa-onko-tnm-t-kategorie-ypT0
@@ -334,6 +336,65 @@ Usage: #example
 * valueCodeableConcept.coding[+] = $SCT#1352513006 "Union for International Cancer Control cM1 (qualifier value)"
 
 // ============================================
+// 6. VERLAUFSBEURTEILUNGEN (oBDS 17 - Treatment Response)
+// ============================================
+// Three response assessments parallel to TNM time points
+
+// 6a. Verlauf nach Chemotherapie - Teilremission (PR)
+// Tumor shrunk from cT3 to ycT2 = partial response
+Instance: mii-exa-onko-verlauf-journey-post-chemo
+InstanceOf: mii-pr-onko-verlauf
+Usage: #example
+* status = #final
+* code = $SCT#396432002 "Status of regression of tumor (observable entity)"
+* subject = Reference(Patient/example)
+* focus = Reference(Condition/exampleOncologicCondition)
+* effectiveDateTime = "2024-05-20"
+* valueCodeableConcept = $mii-cs-onko-verlauf-gesamtbeurteilung#T "Teilremission (partial remission, PR)"
+* component[Tumor_Verlauf].code.coding = $SCT#445200009 "Status of residual neoplasm (observable entity)"
+* component[Tumor_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-primaertumor#T "Tumorreste (Residualtumor)"
+* component[Lymphknoten_Verlauf].code.coding = $SCT#399656008 "Presence of metastatic neoplasm in regional lymph node (observable entity)"
+* component[Lymphknoten_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-lymphknoten#K "kein Lymphknotenbefall nachweisbar"
+* component[Fernmetastasen_Verlauf].code.coding = $SCT#399608002 "Status of distant metastasis (observable entity)"
+* component[Fernmetastasen_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-fernmetastasen#K "keine Fernmetastasen nachweisbar"
+
+// 6b. Verlauf nach Operation - Vollremission (CR)
+// ypT0ypN0 = pathological complete response, R0 resection
+Instance: mii-exa-onko-verlauf-journey-post-surgery
+InstanceOf: mii-pr-onko-verlauf
+Usage: #example
+* status = #final
+* code = $SCT#396432002 "Status of regression of tumor (observable entity)"
+* subject = Reference(Patient/example)
+* focus = Reference(Condition/exampleOncologicCondition)
+* effectiveDateTime = "2024-06-15"
+* valueCodeableConcept = $mii-cs-onko-verlauf-gesamtbeurteilung#V "Vollremission (complete remission, CR)"
+* component[Tumor_Verlauf].code.coding = $SCT#445200009 "Status of residual neoplasm (observable entity)"
+* component[Tumor_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-primaertumor#K "kein Tumor nachweisbar"
+* component[Lymphknoten_Verlauf].code.coding = $SCT#399656008 "Presence of metastatic neoplasm in regional lymph node (observable entity)"
+* component[Lymphknoten_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-lymphknoten#K "kein Lymphknotenbefall nachweisbar"
+* component[Fernmetastasen_Verlauf].code.coding = $SCT#399608002 "Status of distant metastasis (observable entity)"
+* component[Fernmetastasen_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-fernmetastasen#K "keine Fernmetastasen nachweisbar"
+
+// 6c. Verlauf bei Rezidiv - Progression (PD)
+// rcT2cN1cM1 = local recurrence + new distant metastases
+Instance: mii-exa-onko-verlauf-journey-recurrence
+InstanceOf: mii-pr-onko-verlauf
+Usage: #example
+* status = #final
+* code = $SCT#396432002 "Status of regression of tumor (observable entity)"
+* subject = Reference(Patient/example)
+* focus = Reference(Condition/exampleOncologicCondition)
+* effectiveDateTime = "2027-06-20"
+* valueCodeableConcept = $mii-cs-onko-verlauf-gesamtbeurteilung#P "Progression"
+* component[Tumor_Verlauf].code.coding = $SCT#445200009 "Status of residual neoplasm (observable entity)"
+* component[Tumor_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-primaertumor#R "Lokalrezidiv"
+* component[Lymphknoten_Verlauf].code.coding = $SCT#399656008 "Presence of metastatic neoplasm in regional lymph node (observable entity)"
+* component[Lymphknoten_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-lymphknoten#R "neu aufgetretenes Lymphknotenrezidiv"
+* component[Fernmetastasen_Verlauf].code.coding = $SCT#399608002 "Status of distant metastasis (observable entity)"
+* component[Fernmetastasen_Verlauf].valueCodeableConcept = $mii-cs-onko-verlauf-fernmetastasen#R "neu aufgetretene Fernmetastase(n) bzw. Metastasenrezidiv"
+
+// ============================================
 // KEY INSIGHTS DEMONSTRATED:
 // ============================================
 // 1. Component reuse: The original cM0 from January 2024 is referenced in multiple later classifications
@@ -344,3 +405,5 @@ Usage: #example
 // 6. Explicit c-prefix: All clinical categories should show c-prefix explicitly (cT, cN, cM)
 // 7. Temporal coherence: Each category observation has its own assessment date
 // 8. Flexibility: The architecture supports any combination of assessment types
+// 9. Verlauf parallel to TNM: Response assessment (oBDS 17) runs parallel to TNM staging (oBDS 8)
+// 10. pCR in Verlauf: "Complete pathological response" is captured as Verlauf V (CR), not as UICC stage

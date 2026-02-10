@@ -13,7 +13,11 @@ skinparam defaultFontSize 11
 skinparam defaultFontName "DejaVu Sans"
 skinparam shadowing false
 
-title TNM Klassifikation - Mammakarzinom Patientenreise (Issue #189) - Klinisches Review: Therese Pross (Brustzentrum Berlin)
+title TNM Klassifikation & Verlauf - Mammakarzinom Patientenreise (Issue #189) - Klinisches Review: Therese Pross (Brustzentrum Berlin)
+
+' ============================================
+' TNM STAGING (oBDS Kapitel 8)
+' ============================================
 
 map "**2024-01-11**\n**Initiale Diagnose**" as TP1 #FFE6E6 {
   TNM => **cT3cN1cM0**
@@ -44,7 +48,7 @@ map "**2024-05-20**\n**Nach Chemotherapie**" as TP3 #E6F3FF {
 
 map "**2024-06-15**\n**Nach Operation**" as TP4 #D4EDDA {
   TNM => **ypT0ypN0cM0**
-  Stadium => **Complete Response**
+  Stadium => **X** (pCR)
   T: ypT0 => SCT 1352552004
   N: ypN0 => SCT 1352621009
   M: cM0 <U+2190> => (reused)
@@ -67,6 +71,45 @@ TP2 --> TP3 : 3 Monate
 TP3 --> TP4 : 4 Wochen
 TP4 --> TP5 : 3 Jahre
 
+' ============================================
+' VERLAUF / RESPONSE (oBDS Kapitel 17)
+' ============================================
+
+map "**2024-05-20**\n**Verlauf: Nach Chemo**" as VL1 #E6E6FF {
+  Gesamt => **T** (Teilremission / PR)
+  Primaertumor => T (Tumorreste)
+  Lymphknoten => K (kein Befall)
+  Fernmetastasen => K (keine)
+  Kontext => //Tumor geschrumpft//\n//cT3 -> ycT2//
+}
+
+map "**2024-06-15**\n**Verlauf: Nach OP**" as VL2 #D4F5D4 {
+  Gesamt => **V** (Vollremission / CR)
+  Primaertumor => K (kein Tumor)
+  Lymphknoten => K (kein Befall)
+  Fernmetastasen => K (keine)
+  Kontext => //pCR: ypT0ypN0//\n//R0-Resektion//
+}
+
+map "**2027-06-20**\n**Verlauf: Rezidiv**" as VL3 #FFD4D4 {
+  Gesamt => **P** (Progression)
+  Primaertumor => R (Lokalrezidiv)
+  Lymphknoten => R (LK-Rezidiv)
+  Fernmetastasen => R (neue Mets)
+  Kontext => //Lokal + Fern//\n//neue Baseline//
+}
+
+VL1 --> VL2 : 4 Wochen
+VL2 --> VL3 : 3 Jahre
+
+' ============================================
+' VERTICAL ALIGNMENT: TNM <-> Verlauf
+' ============================================
+
+TP3 -[hidden]-> VL1
+TP4 -[hidden]-> VL2
+TP5 -[hidden]-> VL3
+
 legend bottom
   | Symbol | Bedeutung |
   | **<U+2190>** | Wiederverwendung der cM0 Observation aus 2024-01-11 |
@@ -74,6 +117,9 @@ legend bottom
   | **Praefixe** | c=Klinisch, p=Pathologisch, y=Post-Therapie, r=Rezidiv |
   | **SCT** | SNOMED CT Codes (UICC + SCT Dual-Kodierung) |
   | **L/V/Pn/R** | Zusatzkategorien nach chirurgischer Resektion |
+  | **oBDS 8** | TNM-Klassifikation (obere Reihe) |
+  | **oBDS 17** | Verlaufsbeurteilung (untere Reihe) |
+  | **V/T/K/P/R** | Verlauf: Vollremission, Teilremission, Kein Befund, Progression, Rezidiv |
 end legend
 
 @enduml
