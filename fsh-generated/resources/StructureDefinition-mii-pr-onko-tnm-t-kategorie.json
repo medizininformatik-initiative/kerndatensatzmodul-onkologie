@@ -33,6 +33,19 @@
   "differential": {
     "element": [
       {
+        "id": "Observation",
+        "path": "Observation",
+        "constraint": [
+          {
+            "key": "tnm-sct-uicc-konsistenz",
+            "severity": "error",
+            "human": "Wenn ein SNOMED CT Code auf valueCodeableConcept vorhanden ist, muss dessen Display den c/p-Präfix und den UICC-Code enthalten (z.B. 'cT3' bei Präfix 'c' und Code 'T3').",
+            "expression": "valueCodeableConcept.coding.where(system = 'http://snomed.info/sct').empty() or valueCodeableConcept.coding.where(system = 'http://snomed.info/sct').display.contains(iif(code.extension('https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix').exists(), code.extension('https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix').value.coding.code.first(), '') + valueCodeableConcept.coding.where(system = 'https://www.uicc.org/resources/tnm').code.first() + ' ')",
+            "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
+          }
+        ]
+      },
+      {
         "id": "Observation.meta.profile",
         "path": "Observation.meta.profile",
         "mustSupport": true

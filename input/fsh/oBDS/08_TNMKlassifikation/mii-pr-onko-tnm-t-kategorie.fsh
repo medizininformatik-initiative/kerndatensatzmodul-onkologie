@@ -6,6 +6,7 @@ Description: "TNM-Klassifikation: TNM T-Kategorie. Ausbreitung des Primärtumors
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active
+* obeys tnm-sct-uicc-konsistenz
 * meta.profile 0..* MS
 * encounter 0..1 MS
 
