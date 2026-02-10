@@ -46,14 +46,25 @@ Description: "TNM-Klassifikation: TNM N-Kategorie. Ausbreitung von regionären L
     MII_EX_Onko_TNM_SN_Suffix named snSuffix 0..1 MS
 * valueCodeableConcept.extension[MII_EX_Onko_TNM_ITC_Suffix] ^short = "isolierte Tumorzellen (ITC) Suffix"
 * valueCodeableConcept.extension[MII_EX_Onko_TNM_SN_Suffix] ^short = "Schildwächterlymphknoten (Sentinel Lymph Node) Suffix"
-* valueCodeableConcept from MII_VS_Onko_TNM_N_Kategorie_Werte (required)
+* valueCodeableConcept.coding ^slicing.discriminator.type = #pattern
+* valueCodeableConcept.coding ^slicing.discriminator.path = "$this"
+* valueCodeableConcept.coding ^slicing.rules = #open
 * valueCodeableConcept.coding ^short = "TNM N-Kategorie"
 * valueCodeableConcept.coding ^definition = "Ausbreitung von regionären Lymphknotenmetastasen, erfolgt gemäß Tumorentität nach TNM."
 * valueCodeableConcept.coding ^comment = "Entitätsspezifisch, siehe auch allgemeine Bemerkungen zu TNM."
-* valueCodeableConcept.coding.code 1.. MS
-* valueCodeableConcept.coding.system 1.. MS
 * insert Translation(valueCodeableConcept.coding ^short, de-DE, TNM N-Kategorie )
 * insert Translation(valueCodeableConcept.coding ^definition, de-DE, TNM Lymphknotenbefall nach 8.11 oBDS 2021 )
+* valueCodeableConcept.coding contains
+    uicc 1..1 MS and
+    snomed-ct 0..1 MS
+* valueCodeableConcept.coding[uicc] from MII_VS_Onko_TNM_N_Kategorie_Werte (required)
+* valueCodeableConcept.coding[uicc].system 1.. MS
+* valueCodeableConcept.coding[uicc].system = $UICC
+* valueCodeableConcept.coding[uicc].code 1.. MS
+* valueCodeableConcept.coding[snomed-ct] from MII_VS_Onko_TNM_N_Kategorie_Werte_SCT (required)
+* valueCodeableConcept.coding[snomed-ct].system 1.. MS
+* valueCodeableConcept.coding[snomed-ct].system = $SCT
+* valueCodeableConcept.coding[snomed-ct].code 1.. MS
 
 
 

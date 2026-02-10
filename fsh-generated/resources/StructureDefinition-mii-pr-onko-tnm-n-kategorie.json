@@ -195,11 +195,7 @@
             "code": "CodeableConcept"
           }
         ],
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-n-kategorie-werte"
-        }
+        "mustSupport": true
       },
       {
         "id": "Observation.value[x].extension:itcSuffix",
@@ -238,6 +234,15 @@
       {
         "id": "Observation.value[x].coding",
         "path": "Observation.value[x].coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
         "short": "TNM N-Kategorie",
         "_short": {
           "extension": [
@@ -274,19 +279,12 @@
             }
           ]
         },
-        "comment": "Entitätsspezifisch, siehe auch allgemeine Bemerkungen zu TNM."
-      },
-      {
-        "id": "Observation.value[x].coding.system",
-        "path": "Observation.value[x].coding.system",
-        "min": 1,
-        "mustSupport": true
+        "comment": "Entitätsspezifisch, siehe auch allgemeine Bemerkungen zu TNM.",
+        "min": 1
       },
       {
         "id": "Observation.value[x].coding.code",
         "path": "Observation.value[x].coding.code",
-        "min": 1,
-        "mustSupport": true,
         "mapping": [
           {
             "identity": "oBDS",
@@ -294,6 +292,56 @@
             "comment": "TNM N-Kategorie"
           }
         ]
+      },
+      {
+        "id": "Observation.value[x].coding:uicc",
+        "path": "Observation.value[x].coding",
+        "sliceName": "uicc",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-n-kategorie-werte"
+        }
+      },
+      {
+        "id": "Observation.value[x].coding:uicc.system",
+        "path": "Observation.value[x].coding.system",
+        "min": 1,
+        "patternUri": "https://www.uicc.org/resources/tnm",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x].coding:uicc.code",
+        "path": "Observation.value[x].coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x].coding:snomed-ct",
+        "path": "Observation.value[x].coding",
+        "sliceName": "snomed-ct",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-n-kategorie-werte-sct"
+        }
+      },
+      {
+        "id": "Observation.value[x].coding:snomed-ct.system",
+        "path": "Observation.value[x].coding.system",
+        "min": 1,
+        "patternUri": "http://snomed.info/sct",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x].coding:snomed-ct.code",
+        "path": "Observation.value[x].coding.code",
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Observation.method",

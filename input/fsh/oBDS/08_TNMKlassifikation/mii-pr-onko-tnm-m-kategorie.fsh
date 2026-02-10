@@ -46,14 +46,25 @@ Description: "TNM-Klassifikation: TNM M-Kategorie. Fehlen oder Vorhandensein von
 * valueCodeableConcept.extension contains 
     MII_EX_Onko_TNM_ITC_Suffix named itcSuffix 0..1 MS
 * valueCodeableConcept.extension[MII_EX_Onko_TNM_ITC_Suffix] ^short = "isolierte Tumorzellen (ITC) Suffix"
-* valueCodeableConcept from MII_VS_Onko_TNM_M_Kategorie_Werte (required)
+* valueCodeableConcept.coding ^slicing.discriminator.type = #pattern
+* valueCodeableConcept.coding ^slicing.discriminator.path = "$this"
+* valueCodeableConcept.coding ^slicing.rules = #open
 * valueCodeableConcept.coding ^short = "TNM M-Kategorie"
 * valueCodeableConcept.coding ^definition = "Fehlen oder Vorhandensein von Fernmetastasen, gemäß Tumorentität nach TNM."
 * valueCodeableConcept.coding ^comment = "Teilweise entitätsspezifisch, einschließlich Zusatzangaben wie (i+/-) und (mol+/-)"
-* valueCodeableConcept.coding.code 1.. MS
-* valueCodeableConcept.coding.system 1.. MS
 * insert Translation(valueCodeableConcept.coding ^short, de-DE, TNM M-Kategorie )
 * insert Translation(valueCodeableConcept.coding ^definition, de-DE, TNM Fernmetastasierung nach 8.12 oBDS 2021 )
+* valueCodeableConcept.coding contains
+    uicc 1..1 MS and
+    snomed-ct 0..1 MS
+* valueCodeableConcept.coding[uicc] from MII_VS_Onko_TNM_M_Kategorie_Werte (required)
+* valueCodeableConcept.coding[uicc].system 1.. MS
+* valueCodeableConcept.coding[uicc].system = $UICC
+* valueCodeableConcept.coding[uicc].code 1.. MS
+* valueCodeableConcept.coding[snomed-ct] from MII_VS_Onko_TNM_M_Kategorie_Werte_SCT (required)
+* valueCodeableConcept.coding[snomed-ct].system 1.. MS
+* valueCodeableConcept.coding[snomed-ct].system = $SCT
+* valueCodeableConcept.coding[snomed-ct].code 1.. MS
 
 
 

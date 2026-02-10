@@ -6,6 +6,20 @@
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie"
     ]
   },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "https://www.uicc.org/resources/tnm",
+        "code": "N1",
+        "display": "N1"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1353043007",
+        "display": "Union for International Cancer Control cN1 (qualifier value)"
+      }
+    ]
+  },
   "status": "final",
   "code": {
     "extension": [
@@ -52,15 +66,6 @@
         "code": "8",
         "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
         "display": "8. Auflage"
-      }
-    ]
-  },
-  "valueCodeableConcept": {
-    "coding": [
-      {
-        "code": "1353043007",
-        "system": "http://snomed.info/sct",
-        "display": "Union for International Cancer Control cN1 (qualifier value)"
       }
     ]
   }

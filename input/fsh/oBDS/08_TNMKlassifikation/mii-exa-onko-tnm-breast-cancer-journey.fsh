@@ -37,9 +37,8 @@ Usage: #example
 * subject = Reference(Patient/example)
 * effectiveDateTime = "2024-01-11"
 * method = $mii-cs-onko-tnm-version#8 "8. Auflage"
-* valueCodeableConcept = $UICC#T3 "T3"
-// Additional SNOMED CT code for specific cT3 value
-* valueCodeableConcept.coding[+] = $SCT#1352966002 "Union for International Cancer Control cT3 (qualifier value)"
+* valueCodeableConcept.coding[uicc] = $UICC#T3 "T3"
+* valueCodeableConcept.coding[snomed-ct] = $SCT#1352966002 "Union for International Cancer Control cT3 (qualifier value)"
 
 // N Category - cN1
 Instance: mii-exa-onko-tnm-n-kategorie-cN1
@@ -52,9 +51,8 @@ Usage: #example
 * subject = Reference(Patient/example)
 * effectiveDateTime = "2024-01-11"
 * method = $mii-cs-onko-tnm-version#8 "8. Auflage"
-* valueCodeableConcept = $UICC#N1 "N1"
-// Additional SNOMED CT code for specific cN1 value
-* valueCodeableConcept.coding[+] = $SCT#1353043007 "Union for International Cancer Control cN1 (qualifier value)"
+* valueCodeableConcept.coding[uicc] = $UICC#N1 "N1"
+* valueCodeableConcept.coding[snomed-ct] = $SCT#1353043007 "Union for International Cancer Control cN1 (qualifier value)"
 
 // M Category - cM0 (Will be REUSED in later classifications!)
 Instance: mii-exa-onko-tnm-m-kategorie-cM0
@@ -67,9 +65,8 @@ Usage: #example
 * subject = Reference(Patient/example)
 * effectiveDateTime = "2024-01-11"
 * method = $mii-cs-onko-tnm-version#8 "8. Auflage"
-* valueCodeableConcept = $UICC#M0 "M0"
-// Additional SNOMED CT code for specific cM0 value
-* valueCodeableConcept.coding[+] = $SCT#1352512001 "Union for International Cancer Control cM0 (qualifier value)"
+* valueCodeableConcept.coding[uicc] = $UICC#M0 "M0"
+* valueCodeableConcept.coding[snomed-ct] = $SCT#1352512001 "Union for International Cancer Control cM0 (qualifier value)"
 
 // ============================================
 // 2. CLINICAL RESTAGING AFTER BIOPSY - cT4cN1cM0
@@ -103,9 +100,8 @@ Usage: #example
 * subject = Reference(Patient/example)
 * effectiveDateTime = "2024-02-15"
 * method = $mii-cs-onko-tnm-version#8 "8. Auflage"
-* valueCodeableConcept = $UICC#T4 "T4"
-// SNOMED CT code for cT4 (clinical, not pathological!)
-* valueCodeableConcept.coding[+] = $SCT#1352997003 "Union for International Cancer Control cT4 (qualifier value)"
+* valueCodeableConcept.coding[uicc] = $UICC#T4 "T4"
+* valueCodeableConcept.coding[snomed-ct] = $SCT#1352997003 "Union for International Cancer Control cT4 (qualifier value)"
 
 // ============================================
 // 3. CLINICAL STAGING AFTER NEOADJUVANT THERAPY - ycT2ycN0cM0
@@ -138,9 +134,8 @@ Usage: #example
 * subject = Reference(Patient/example)
 * effectiveDateTime = "2024-05-20"
 * method = $mii-cs-onko-tnm-version#8 "8. Auflage"
-* valueCodeableConcept = $UICC#T2 "T2"
-// Additional SNOMED CT code for specific cT2 value
-* valueCodeableConcept.coding[+] = $SCT#1352993004 "Union for International Cancer Control cT2 (qualifier value)"
+* valueCodeableConcept.coding[uicc] = $UICC#T2 "T2"
+* valueCodeableConcept.coding[snomed-ct] = $SCT#1352993004 "Union for International Cancer Control cT2 (qualifier value)"
 
 // N Category - ycN0 (clinical after therapy)
 Instance: mii-exa-onko-tnm-n-kategorie-ycN0
@@ -155,9 +150,8 @@ Usage: #example
 * subject = Reference(Patient/example)
 * effectiveDateTime = "2024-05-20"
 * method = $mii-cs-onko-tnm-version#8 "8. Auflage"
-* valueCodeableConcept = $UICC#N0 "N0"
-// Additional SNOMED CT code for specific cN0 value
-* valueCodeableConcept.coding[+] = $SCT#1353041009 "Union for International Cancer Control cN0 (qualifier value)"
+* valueCodeableConcept.coding[uicc] = $UICC#N0 "N0"
+* valueCodeableConcept.coding[snomed-ct] = $SCT#1353041009 "Union for International Cancer Control cN0 (qualifier value)"
 
 // ============================================
 // 4. PATHOLOGICAL STAGING AFTER SURGERY - ypT0ypN0cM0
@@ -196,9 +190,8 @@ Usage: #example
 * subject = Reference(Patient/example)
 * effectiveDateTime = "2024-06-15"
 * method = $mii-cs-onko-tnm-version#8 "8. Auflage"
-* valueCodeableConcept = $UICC#T0 "T0"
-// Additional SNOMED CT code for specific pT0 value
-* valueCodeableConcept.coding[+] = $SCT#1352552004 "Union for International Cancer Control pT0 (qualifier value)"
+* valueCodeableConcept.coding[uicc] = $UICC#T0 "T0"
+* valueCodeableConcept.coding[snomed-ct] = $SCT#1352552004 "Union for International Cancer Control pT0 (qualifier value)"
 
 // N Category - ypN0 (no lymph node metastases after therapy)
 Instance: mii-exa-onko-tnm-n-kategorie-ypN0
@@ -213,9 +206,8 @@ Usage: #example
 * subject = Reference(Patient/example)
 * effectiveDateTime = "2024-06-15"
 * method = $mii-cs-onko-tnm-version#8 "8. Auflage"
-* valueCodeableConcept = $UICC#N0 "N0"
-// Additional SNOMED CT code for specific pN0 value
-* valueCodeableConcept.coding[+] = $SCT#1352621009 "Union for International Cancer Control pN0 (qualifier value)"
+* valueCodeableConcept.coding[uicc] = $UICC#N0 "N0"
+* valueCodeableConcept.coding[snomed-ct] = $SCT#1352621009 "Union for International Cancer Control pN0 (qualifier value)"
 
 // ============================================
 // 4b. POST-SURGERY ADDITIONAL CATEGORIES - L0, V0, Pn0, R0
@@ -297,9 +289,8 @@ Usage: #example
 * subject = Reference(Patient/example)
 * effectiveDateTime = "2027-06-20"
 * method = $mii-cs-onko-tnm-version#8 "8. Auflage"
-* valueCodeableConcept = $UICC#T2 "T2"
-// Additional SNOMED CT code for specific cT2 value (recurrence)
-* valueCodeableConcept.coding[+] = $SCT#1352993004 "Union for International Cancer Control cT2 (qualifier value)"
+* valueCodeableConcept.coding[uicc] = $UICC#T2 "T2"
+* valueCodeableConcept.coding[snomed-ct] = $SCT#1352993004 "Union for International Cancer Control cT2 (qualifier value)"
 
 // N Category - rcN1 (recurrence - clinical assessment)
 Instance: mii-exa-onko-tnm-n-kategorie-rcN1
@@ -314,9 +305,8 @@ Usage: #example
 * subject = Reference(Patient/example)
 * effectiveDateTime = "2027-06-20"
 * method = $mii-cs-onko-tnm-version#8 "8. Auflage"
-* valueCodeableConcept = $UICC#N1 "N1"
-// Additional SNOMED CT code for specific cN1 value (recurrence)
-* valueCodeableConcept.coding[+] = $SCT#1353043007 "Union for International Cancer Control cN1 (qualifier value)"
+* valueCodeableConcept.coding[uicc] = $UICC#N1 "N1"
+* valueCodeableConcept.coding[snomed-ct] = $SCT#1353043007 "Union for International Cancer Control cN1 (qualifier value)"
 
 // M Category - rcM1 (recurrence - NEW distant metastases detected!)
 Instance: mii-exa-onko-tnm-m-kategorie-rcM1
@@ -331,9 +321,8 @@ Usage: #example
 * subject = Reference(Patient/example)
 * effectiveDateTime = "2027-06-20"
 * method = $mii-cs-onko-tnm-version#8 "8. Auflage"
-* valueCodeableConcept = $UICC#M1 "M1"
-// Additional SNOMED CT code for specific cM1 value (recurrence)
-* valueCodeableConcept.coding[+] = $SCT#1352513006 "Union for International Cancer Control cM1 (qualifier value)"
+* valueCodeableConcept.coding[uicc] = $UICC#M1 "M1"
+* valueCodeableConcept.coding[snomed-ct] = $SCT#1352513006 "Union for International Cancer Control cM1 (qualifier value)"
 
 // ============================================
 // 6. VERLAUFSBEURTEILUNGEN (oBDS 17 - Treatment Response)
