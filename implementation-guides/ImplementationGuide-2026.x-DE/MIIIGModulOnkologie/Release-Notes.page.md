@@ -6,6 +6,21 @@ topic: ReleaseNotes
 ## {{page-title}}
 Hier sind alle Änderungen aufgelistet. 
 
+## Änderungen v2026.0.2
+
+### Canonical URL Korrekturen
+
+- **`BREAKING`** Fehlenden `-onko-` Prefix in 7 ValueSet canonical URLs korrigiert. Betroffen sind ausschließlich ValueSets in Strahlentherapie und Systemische Therapie. Bestehende Referenzen auf die alten URLs müssen aktualisiert werden.
+  - `mii-vs-strahlentherapie-stellungzurop` → `mii-vs-onko-strahlentherapie-stellungzurop`
+  - `mii-vs-strahlentherapie-ende-grund` → `mii-vs-onko-strahlentherapie-ende-grund`
+  - `mii-vs-strahlentherapie-strahlenart` → `mii-vs-onko-strahlentherapie-strahlenart`
+  - `mii-vs-strahlentherapie-strahlungseinheit` → `mii-vs-onko-strahlentherapie-strahlungseinheit`
+  - `mii-vs-strahlentherapie-zielgebiet` → `mii-vs-onko-strahlentherapie-zielgebiet`
+  - `mii-vs-systemische-therapie-stellungzurop` → `mii-vs-onko-systemische-therapie-stellungzurop`
+  - `mii-vs-systemische-therapie-ende-grund` → `mii-vs-onko-systemische-therapie-ende-grund`
+
+---
+
 ## Änderungen v2026.0.1
 
 ### Abhängigkeiten
