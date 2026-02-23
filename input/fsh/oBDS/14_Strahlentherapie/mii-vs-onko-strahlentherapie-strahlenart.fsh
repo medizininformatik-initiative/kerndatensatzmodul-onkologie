@@ -3,7 +3,7 @@ Id: mii-vs-onko-strahlentherapie-strahlenart
 Title: "MII VS Onkologie Strahlentherapie Strahlenart"
 Description: "oBDS-spezifisches ValueSet für Klassifikation von Strahlenart bei Strahlentherapie"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-strahlenart"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-strahlenart"
 * ^status = #active
 * ^experimental = false
 * insert Publisher

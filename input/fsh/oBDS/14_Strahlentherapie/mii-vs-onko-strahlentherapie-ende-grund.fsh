@@ -3,7 +3,7 @@ Id: mii-vs-onko-strahlentherapie-ende-grund
 Title: "MII VS Onkologie Strahlentherapie Ende Grund"
 Description: "oBDS-spezifisches ValueSet für Klassifikation des Grundes der Beendigung der Strahlentherapie"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-ende-grund"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-ende-grund"
 * ^status = #active
 * ^experimental = false
 * insert Publisher

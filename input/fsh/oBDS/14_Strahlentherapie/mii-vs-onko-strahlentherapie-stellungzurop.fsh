@@ -3,7 +3,7 @@ Id: mii-vs-onko-strahlentherapie-stellungzurop
 Title: "MII VS Onkologie Strahlentherapie Stellung zur OP"
 Description: "oBDS-spezifisches ValueSet für Klassifikation von Stellung zur OP"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-stellungzurop"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-stellungzurop"
 * ^status = #active
 * ^experimental = false
 * insert Publisher
