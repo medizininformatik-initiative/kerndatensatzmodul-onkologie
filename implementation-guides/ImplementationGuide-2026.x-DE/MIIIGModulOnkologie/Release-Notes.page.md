@@ -6,6 +6,16 @@ topic: ReleaseNotes
 ## {{page-title}}
 Hier sind alle Änderungen aufgelistet. 
 
+## Änderungen v2026.0.3 (veröffentlicht 27.03.2026)
+
+### Technische Verbesserungen
+
+- `fix` Package-Erstellung auf macOS korrigiert: `COPYFILE_DISABLE=1` beim tar-Aufruf verhindert AppleDouble (`._`)-Datei-Kontamination (v2026.0.2 enthielt 490 solcher Dateien)
+- `fix` Abhängigkeiten aktualisiert: biobank `2026.0.1`, medikation `2026.0.1`, studie `2026.0.2`
+- `chore` Firely Terminal auf 3.5.0 aktualisiert
+
+---
+
 ## Änderungen v2026.0.2 (veröffentlicht 10.03.2026)
 
 ### Terminologie
