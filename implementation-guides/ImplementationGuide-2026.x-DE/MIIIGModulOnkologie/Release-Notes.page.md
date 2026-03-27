@@ -6,7 +6,21 @@ topic: ReleaseNotes
 ## {{page-title}}
 Hier sind alle Änderungen aufgelistet. 
 
-## Änderungen v2026.0.1
+## Änderungen v2026.0.2 (veröffentlicht 10.03.2026)
+
+### Terminologie
+
+- `feat` ATC-DE 2026 ValueSet aktualisiert: 23 neue Codes hinzugefügt, neue Substanzklasse L01EP (c-MET-Inhibitoren)
+- `fix` 27 ATC Display-Namen korrigiert (WIdO-validiert)
+- `feat` ATC-Code Transitions-ConceptMap für 2026 aktualisiert
+
+### Technische Verbesserungen
+
+- `fix` advisor.json Suppressionen für externe TX-Server Fehler erweitert
+
+---
+
+## Änderungen v2026.0.1 (veröffentlicht 05.02.2026)
 
 ### Abhängigkeiten
 
@@ -21,7 +35,7 @@ Hier sind alle Änderungen aufgelistet.
 
 ---
 
-## Änderungen finale Version v2026.0.0 (noch nicht veröffentlicht)
+## Änderungen v2026.0.0 (veröffentlicht 03.01.2026)
 
 ### ⚠️ Breaking Changes
 
