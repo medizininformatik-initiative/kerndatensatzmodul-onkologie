@@ -533,3 +533,98 @@ def synthesize_klassifikation(
         filtered_sources=filtered_log,
         phase_audit=audit,
     )
+
+
+# -----------------------------------------------------------------------------
+# Provenance helper
+# -----------------------------------------------------------------------------
+
+
+def make_synthesis_provenance(
+    *,
+    target_observation_ids: list[str],
+    source_observation_ids: list[str],
+    agent_who: str,
+    algorithm_version: str,
+    algorithm_canonical: str,
+    occurred_period_start: str | None = None,
+    occurred_period_end: str | None = None,
+    recorded_iso: str | None = None,
+    provenance_id: str | None = None,
+) -> dict:
+    """Build one Provenance resource for an ETL run that produced one or
+    more synthesized Klassifikation Observations.
+
+    Following the same pattern as the enrichment Provenance: ONE Provenance
+    per run, multiple targets — keeps the FHIR server from being flooded
+    with auxiliary writes during backfills.
+
+    The algorithm itself is recorded as a versioned source ``entity``
+    referencing the FHIR Library resource ``mii-lib-onko-synthesize-tnm``.
+    Algorithm version pinning is achieved via ``identifier`` (canonical URL
+    + version), making the run reproducible.
+    """
+    from datetime import datetime, timezone
+    from uuid import uuid4
+
+    if recorded_iso is None:
+        recorded_iso = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    if provenance_id is None:
+        provenance_id = str(uuid4())
+
+    prov: dict = {
+        "resourceType": "Provenance",
+        "id": provenance_id,
+        "target": [{"reference": f"Observation/{oid}"} for oid in target_observation_ids],
+        "recorded": recorded_iso,
+        "activity": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+                    "code": "DERIVE",
+                    "display": "derive",
+                }
+            ],
+            "text": f"TNM-Klassifikations-Synthese (synthesize_tnm v{algorithm_version})",
+        },
+        "agent": [
+            {
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+                            "code": "performer",
+                        }
+                    ]
+                },
+                "who": {"display": agent_who},
+            }
+        ],
+        "entity": [
+            # The algorithm itself, version-pinned via identifier
+            {
+                "role": "source",
+                "what": {
+                    "reference": "Library/mii-lib-onko-synthesize-tnm",
+                    "display": f"synthesize_tnm v{algorithm_version}",
+                    "identifier": {
+                        "system": algorithm_canonical,
+                        "value": algorithm_version,
+                    },
+                },
+            },
+            # All input source Klassifikationen
+            *[
+                {"role": "source", "what": {"reference": f"Observation/{sid}"}}
+                for sid in source_observation_ids
+            ],
+        ],
+    }
+    if occurred_period_start or occurred_period_end:
+        period: dict = {}
+        if occurred_period_start:
+            period["start"] = occurred_period_start
+        if occurred_period_end:
+            period["end"] = occurred_period_end
+        prov["occurredPeriod"] = period
+    return prov
