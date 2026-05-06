@@ -1,0 +1,62 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-kim-synth1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert|2026.0.3"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "399390009",
+        "system": "http://snomed.info/sct",
+        "display": "TNM stage grouping"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/mii-exa-onko-kim-synth-patient"
+  },
+  "effectiveDateTime": "2021-06-25",
+  "method": {
+    "coding": [
+      {
+        "code": "8",
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+        "display": "8. Auflage"
+      }
+    ]
+  },
+  "focus": [
+    {
+      "reference": "Condition/mii-exa-onko-kim-synth-diagnose"
+    }
+  ],
+  "derivedFrom": [
+    {
+      "reference": "Observation/mii-exa-onko-kim-klass1"
+    }
+  ],
+  "hasMember": [
+    {
+      "reference": "Observation/mii-exa-onko-kim-klass1-cT3c"
+    },
+    {
+      "reference": "Observation/mii-exa-onko-kim-klass1-cN1"
+    },
+    {
+      "reference": "Observation/mii-exa-onko-kim-klass1-cM1"
+    }
+  ],
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "IV",
+        "system": "https://www.uicc.org/resources/tnm",
+        "display": "Stadium IV"
+      }
+    ]
+  }
+}

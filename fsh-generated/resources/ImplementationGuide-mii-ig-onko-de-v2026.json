@@ -1164,6 +1164,14 @@
       },
       {
         "reference": {
+          "reference": "Bundle/mii-exa-onko-kim-musterperson-synthesized"
+        },
+        "name": "MII EXA Onko Kim Musterperson — Multi-CarePlan TNM Synthese",
+        "description": "Vollständige Multi-Tumorkonferenz-Demo am Beispiel Kim Musterperson (Ovarial-CA, Intervalldebulking). Drei Source-Klassifikationen über die Zeit (Diagnose 2021-06-22, post-Chemo 2021-09-15, post-OP 2021-10-15), vier Tumorkonferenzen mit jeweils eigener synthetisierter TNM-Stage, Provenance pinnt Algorithmus auf mii-lib-onko-synthesize-tnm v1.0.0.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-onko-krk-abstand-circumferelle-resektionsebene"
         },
         "name": "MII EXA Onko KRK Abstand Circumferelle Resektionsebene",
@@ -1352,6 +1360,14 @@
         },
         "name": "MII LM Onkologie Organspezifische Zusatzmodule",
         "description": "Logisches Modell für die organspezifischen Zusatzmodule des oBDS",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Library/mii-lib-onko-synthesize-tnm"
+        },
+        "name": "MII Onkologie TNM-Synthese Algorithmus",
+        "description": "Deterministischer Algorithmus zur Synthese einer TNM-Klassifikation aus mehreren Meldungs-bezogenen Quell-Klassifikationen. Implementiert UICC General Rules nach Manual der Krebsregistrierung Kap. 6 (Stegmaier 2019). Drei Phasen: primary (kein y/r), post-neoadjuvant (y), recurrence (r). Symbol-Lesen aus hasMember (mii-pr-onko-tnm-{y,r,a,m}-symbol). Pre-therapeutic intentional NICHT Phase: nicht aus TNM-Daten ableitbar (Biopsien können pTNM ergeben), gehört in Workflow-Kontext (Tumorkonferenz.category=praeth).",
         "exampleBoolean": false
       },
       {
@@ -2674,6 +2690,195 @@
         },
         "name": "mii-exa-onko-histologie-icdo3",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-histologie-icdo3"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-klass1"
+        },
+        "name": "mii-exa-onko-kim-klass1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-klass1-cM1"
+        },
+        "name": "mii-exa-onko-kim-klass1-cM1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-klass1-cN1"
+        },
+        "name": "mii-exa-onko-kim-klass1-cN1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-klass1-cT3c"
+        },
+        "name": "mii-exa-onko-kim-klass1-cT3c",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-klass2"
+        },
+        "name": "mii-exa-onko-kim-klass2",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-klass2-ycM1b"
+        },
+        "name": "mii-exa-onko-kim-klass2-ycM1b",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-klass2-ycN1"
+        },
+        "name": "mii-exa-onko-kim-klass2-ycN1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-klass2-ycT3c"
+        },
+        "name": "mii-exa-onko-kim-klass2-ycT3c",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-klass2-ysym"
+        },
+        "name": "mii-exa-onko-kim-klass2-ysym",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-y-symbol"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-klass3"
+        },
+        "name": "mii-exa-onko-kim-klass3",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-klass3-L1"
+        },
+        "name": "mii-exa-onko-kim-klass3-L1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-l-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-klass3-Pn0"
+        },
+        "name": "mii-exa-onko-kim-klass3-Pn0",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-pn-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-klass3-V0"
+        },
+        "name": "mii-exa-onko-kim-klass3-V0",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-v-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-klass3-ypM1b"
+        },
+        "name": "mii-exa-onko-kim-klass3-ypM1b",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-klass3-ypT3c"
+        },
+        "name": "mii-exa-onko-kim-klass3-ypT3c",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-klass3-ysym"
+        },
+        "name": "mii-exa-onko-kim-klass3-ysym",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-y-symbol"
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-onko-kim-synth-diagnose"
+        },
+        "name": "mii-exa-onko-kim-synth-diagnose",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+      },
+      {
+        "reference": {
+          "reference": "Patient/mii-exa-onko-kim-synth-patient"
+        },
+        "name": "mii-exa-onko-kim-synth-patient",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-synth1"
+        },
+        "name": "mii-exa-onko-kim-synth1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-synth2"
+        },
+        "name": "mii-exa-onko-kim-synth2",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-synth3"
+        },
+        "name": "mii-exa-onko-kim-synth3",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-synth4"
+        },
+        "name": "mii-exa-onko-kim-synth4",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert"
+      },
+      {
+        "reference": {
+          "reference": "Provenance/mii-exa-onko-kim-synthesis-provenance"
+        },
+        "name": "mii-exa-onko-kim-synthesis-provenance",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "CarePlan/mii-exa-onko-kim-tk1"
+        },
+        "name": "mii-exa-onko-kim-tk1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
+      },
+      {
+        "reference": {
+          "reference": "CarePlan/mii-exa-onko-kim-tk2"
+        },
+        "name": "mii-exa-onko-kim-tk2",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
+      },
+      {
+        "reference": {
+          "reference": "CarePlan/mii-exa-onko-kim-tk3"
+        },
+        "name": "mii-exa-onko-kim-tk3",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
+      },
+      {
+        "reference": {
+          "reference": "CarePlan/mii-exa-onko-kim-tk4"
+        },
+        "name": "mii-exa-onko-kim-tk4",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
       },
       {
         "reference": {
