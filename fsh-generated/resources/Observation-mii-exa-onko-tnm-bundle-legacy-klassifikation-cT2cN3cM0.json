@@ -1,0 +1,57 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-tnm-bundle-legacy-klassifikation-cT2cN3cM0",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation|2026.0.1"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "399537006",
+        "system": "http://snomed.info/sct",
+        "display": "Clinical TNM stage grouping"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/mii-exa-onko-tnm-bundle-legacy-patient"
+  },
+  "effectiveDateTime": "2024-01-11",
+  "method": {
+    "coding": [
+      {
+        "code": "8",
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+        "display": "8. Auflage"
+      }
+    ]
+  },
+  "focus": [
+    {
+      "reference": "Condition/mii-exa-onko-tnm-bundle-legacy-diagnose"
+    }
+  ],
+  "hasMember": [
+    {
+      "reference": "Observation/mii-exa-onko-tnm-bundle-legacy-t-cT2"
+    },
+    {
+      "reference": "Observation/mii-exa-onko-tnm-bundle-legacy-n-cN3"
+    },
+    {
+      "reference": "Observation/mii-exa-onko-tnm-bundle-legacy-m-cM0"
+    }
+  ],
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "IIIB",
+        "system": "https://www.uicc.org/resources/tnm",
+        "display": "Stadium IIIB"
+      }
+    ]
+  }
+}

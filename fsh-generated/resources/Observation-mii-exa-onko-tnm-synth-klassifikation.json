@@ -1,0 +1,65 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-tnm-synth-klassifikation",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert|2026.0.1"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "399390009",
+        "system": "http://snomed.info/sct",
+        "display": "TNM stage grouping"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/mii-exa-onko-tnm-synth-patient"
+  },
+  "effectiveDateTime": "2024-04-02",
+  "method": {
+    "coding": [
+      {
+        "code": "8",
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+        "display": "8. Auflage"
+      }
+    ]
+  },
+  "focus": [
+    {
+      "reference": "Condition/mii-exa-onko-tnm-synth-diagnose"
+    }
+  ],
+  "derivedFrom": [
+    {
+      "reference": "Observation/mii-exa-onko-tnm-synth-meldung1-klassifikation"
+    },
+    {
+      "reference": "Observation/mii-exa-onko-tnm-synth-meldung2-klassifikation"
+    }
+  ],
+  "hasMember": [
+    {
+      "reference": "Observation/mii-exa-onko-tnm-synth-meldung2-t-pT2"
+    },
+    {
+      "reference": "Observation/mii-exa-onko-tnm-synth-meldung2-n-pN1"
+    },
+    {
+      "reference": "Observation/mii-exa-onko-tnm-synth-meldung1-m-cM0"
+    }
+  ],
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "IIIA",
+        "system": "https://www.uicc.org/resources/tnm",
+        "display": "Stadium IIIA"
+      }
+    ]
+  }
+}

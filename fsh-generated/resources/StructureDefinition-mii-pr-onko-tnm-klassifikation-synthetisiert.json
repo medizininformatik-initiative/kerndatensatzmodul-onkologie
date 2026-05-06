@@ -1,0 +1,127 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-pr-onko-tnm-klassifikation-synthetisiert",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert",
+  "version": "2026.0.1",
+  "name": "MII_PR_Onko_TNM_Klassifikation_Synthetisiert",
+  "title": "MII PR Onkologie TNM-Klassifikation (synthetisiert)",
+  "status": "active",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "description": "Synthetisierte TNM-Klassifikation: Aggregat aus mehreren Meldungs-bezogenen TNM-Klassifikationen, das den Stand zum Entscheidungszeitpunkt (z. B. Tumorkonferenz) zusammenfasst. UICC-Regeln zur Stage-Auswahl (pTNM > cTNM, jüngste Bewertung innerhalb derselben Krankheitsphase, r-Präfix als Bruchpunkt) werden vom erzeugenden System angewendet. Provenienz wird über derivedFrom auf die Quell-Klassifikationen abgebildet.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "short": "Entscheidungsdatum",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Entscheidungsdatum"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Datum, zu dem die synthetisierte TNM-Klassifikation gilt — typischerweise das Datum der Tumorkonferenz oder Therapieentscheidung.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Datum der Tumorkonferenz oder Therapieentscheidung"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.hasMember",
+        "path": "Observation.hasMember",
+        "short": "Auswahl der gewinnenden T/N/M/L/V/Pn/S/a/r/y-Beobachtungen",
+        "definition": "Referenzen auf die per UICC-Regel ausgewählten Per-Kategorie-Beobachtungen aus den derivedFrom-Quellen."
+      },
+      {
+        "id": "Observation.derivedFrom",
+        "path": "Observation.derivedFrom",
+        "short": "Quell-Klassifikationen",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Quell-Klassifikationen"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Pflicht-Referenzen auf die zugrunde liegenden Meldungs-bezogenen TNM-Klassifikationen, aus denen die synthetisierte Klassifikation abgeleitet wurde.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Pflicht-Referenzen auf die zugrunde liegenden Meldungs-bezogenen TNM-Klassifikationen"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  }
+}

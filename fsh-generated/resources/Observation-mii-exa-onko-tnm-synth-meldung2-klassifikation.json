@@ -1,0 +1,54 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-tnm-synth-meldung2-klassifikation",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation|2026.0.1"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "399588009",
+        "system": "http://snomed.info/sct",
+        "display": "Pathologic TNM stage grouping"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/mii-exa-onko-tnm-synth-patient"
+  },
+  "effectiveDateTime": "2024-03-15",
+  "method": {
+    "coding": [
+      {
+        "code": "8",
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+        "display": "8. Auflage"
+      }
+    ]
+  },
+  "focus": [
+    {
+      "reference": "Condition/mii-exa-onko-tnm-synth-diagnose"
+    }
+  ],
+  "hasMember": [
+    {
+      "reference": "Observation/mii-exa-onko-tnm-synth-meldung2-t-pT2"
+    },
+    {
+      "reference": "Observation/mii-exa-onko-tnm-synth-meldung2-n-pN1"
+    }
+  ],
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "IIIA",
+        "system": "https://www.uicc.org/resources/tnm",
+        "display": "Stadium IIIA"
+      }
+    ]
+  }
+}
