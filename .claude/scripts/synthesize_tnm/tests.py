@@ -34,8 +34,28 @@ from synthesize_tnm.core import (  # noqa: E402
     PROFILE_SYNTHESIZED,
     CATEGORY_PROFILES,
     CP_PRAEFIX_URL,
+    KLASSIFIKATIONS_SCOPE_SYMBOLS,
+    T_MODIFIER_SYMBOLS,
+    PHASE_PRIMARY,
+    PHASE_POST_NEOADJUVANT,
+    PHASE_RECURRENCE,
     synthesize_klassifikation,
 )
+
+
+def make_symbol_obs(*, obs_id: str, symbol: str, date: str) -> dict:
+    """Build a y/r/a/m symbol Observation. Uses the project's profile URL."""
+    profile = KLASSIFIKATIONS_SCOPE_SYMBOLS.get(symbol) or T_MODIFIER_SYMBOLS.get(symbol)
+    if not profile:
+        raise ValueError(f"Unknown symbol: {symbol!r}")
+    return {
+        "resourceType": "Observation",
+        "id": obs_id,
+        "meta": {"profile": [profile]},
+        "status": "final",
+        "subject": {"reference": "Patient/test"},
+        "effectiveDateTime": date,
+    }
 
 
 # =============================================================================
@@ -181,47 +201,107 @@ class TestPrimaryStaging(unittest.TestCase):
         self.assertEqual(winner_for(result, "M").observation["id"], "cM0")
 
 
-class TestKnownGaps(unittest.TestCase):
-    """Tests that document KNOWN gaps in the v0 synthesis library.
+class TestPhaseSemantics(unittest.TestCase):
+    """[Manual S. 89] 'cTNM beschreibt die Tumorausbreitung zum
+    Diagnosezeitpunkt in der Regel besser als ypTNM' — y-flagged sources
+    must NOT contribute to the primary-disease-stage synthesis.
 
-    These should be addressed in a v1 phase-aware refactor — see
-    repo issue Mapping-Support / Phase 2.
+    Symbols (y/r/a/m) are read from hasMember Observations as defined in
+    mii-pr-onko-tnm-{y,r,a,m}-symbol — the official data model.
     """
 
-    @unittest.expectedFailure
-    def test_ypTNM_should_NOT_overwrite_cTNM_for_initial_diagnosis_stage(self):
-        """[Manual S. 89] 'cTNM beschreibt die Tumorausbreitung zum
-        Diagnosezeitpunkt in der Regel besser als ypTNM'.
-
-        For a 'primary disease stage' synthesis, ypTNM (post-neoadjuvant) must NOT
-        win over cTNM. v0 currently treats yp as p (highest priority) — gap.
-        """
+    def test_ypTNM_excluded_from_primary_phase(self):
         cT = make_category_obs(obs_id="cT3", category="T", cp_praefix="c", value="T3", date="2024-01-11")
-        # ypT2: cp-Praefix=p AND y-symbol present (modeled here via p only — y-symbol
-        # is a separate Observation in the actual data model, currently not detected)
         ypT = make_category_obs(obs_id="ypT2", category="T", cp_praefix="p", value="T2", date="2024-05-15")
+        y_symbol = make_symbol_obs(obs_id="ysym", symbol="y", date="2024-05-15")
+
         k_diag = make_klassifikation(obs_id="kd", code="399537006", date="2024-01-11", member_ids=["cT3"])
-        k_yp = make_klassifikation(obs_id="ky", code="399588009", date="2024-05-15", member_ids=["ypT2"])
+        k_yp = make_klassifikation(obs_id="ky", code="399588009", date="2024-05-15", member_ids=["ypT2", "ysym"])
 
         result = synthesize_klassifikation(
-            [k_diag, k_yp], [cT, ypT, k_diag, k_yp],
+            [k_diag, k_yp], [cT, ypT, y_symbol, k_diag, k_yp],
             decision_date="2024-06-01",
             synthesized_id="synth",
             patient_reference="Patient/test",
+            phase=PHASE_PRIMARY,
         )
-        # EXPECTATION (per Manual S. 89): cT3 should win for primary-diagnosis-stage
-        # ACTUAL (v0): ypT2 wins because cp=p > cp=c. Hence expectedFailure.
-        self.assertEqual(winner_for(result, "T").observation["id"], "cT3")
+        self.assertEqual(winner_for(result, "T").observation["id"], "cT3",
+                         "[Manual S. 89] y-flagged source must not contribute to primary stage")
 
-    @unittest.skip("Cannot be expressed in v0: r-symbol is a separate Observation "
-                   "profile (mii-pr-onko-tnm-r-symbol) linked via hasMember on the "
-                   "Klassifikation grouper. v0 only inspects cp-Präfix on category "
-                   "Observations, which never carries 'r'. Implementing this requires "
-                   "a v1 helper that reads r/y/a/m symbol Observations from each source "
-                   "Klassifikation's hasMember pool. Tracked in Mapping-Support phase 2.")
-    def test_recurrence_r_symbol_chain_break(self):
-        """[Manual S. 89 + UICC General Rules] r-prefix marks a new staging baseline."""
-        pass
+    def test_post_neoadjuvant_phase_uses_only_y_sources(self):
+        cT = make_category_obs(obs_id="cT3", category="T", cp_praefix="c", value="T3", date="2024-01-11")
+        ypT = make_category_obs(obs_id="ypT2", category="T", cp_praefix="p", value="T2", date="2024-05-15")
+        y_symbol = make_symbol_obs(obs_id="ysym", symbol="y", date="2024-05-15")
+
+        k_diag = make_klassifikation(obs_id="kd", code="399537006", date="2024-01-11", member_ids=["cT3"])
+        k_yp = make_klassifikation(obs_id="ky", code="399588009", date="2024-05-15", member_ids=["ypT2", "ysym"])
+
+        result = synthesize_klassifikation(
+            [k_diag, k_yp], [cT, ypT, y_symbol, k_diag, k_yp],
+            decision_date="2024-06-01",
+            synthesized_id="synth",
+            patient_reference="Patient/test",
+            phase=PHASE_POST_NEOADJUVANT,
+        )
+        self.assertEqual(winner_for(result, "T").observation["id"], "ypT2")
+        self.assertIn("y", result.source_symbols)
+
+    def test_recurrence_phase_uses_only_r_sources(self):
+        cT_initial = make_category_obs(obs_id="cT2_init", category="T", cp_praefix="c", value="T2", date="2021-01-11")
+        cT_recur = make_category_obs(obs_id="rcT3", category="T", cp_praefix="c", value="T3", date="2024-06-01")
+        r_symbol = make_symbol_obs(obs_id="rsym", symbol="r", date="2024-06-01")
+
+        k_init = make_klassifikation(obs_id="ki", code="399537006", date="2021-01-11", member_ids=["cT2_init"])
+        k_rec = make_klassifikation(obs_id="kr", code="399537006", date="2024-06-01", member_ids=["rcT3", "rsym"])
+
+        result = synthesize_klassifikation(
+            [k_init, k_rec], [cT_initial, cT_recur, r_symbol, k_init, k_rec],
+            decision_date="2024-07-01",
+            synthesized_id="synth",
+            patient_reference="Patient/test",
+            phase=PHASE_RECURRENCE,
+        )
+        self.assertEqual(winner_for(result, "T").observation["id"], "rcT3")
+        self.assertIn("r", result.source_symbols)
+
+    def test_klass_scope_y_propagated_to_synthesized_hasMember(self):
+        ypT = make_category_obs(obs_id="ypT2", category="T", cp_praefix="p", value="T2", date="2024-05-15")
+        y_symbol = make_symbol_obs(obs_id="ysym", symbol="y", date="2024-05-15")
+        k_yp = make_klassifikation(obs_id="ky", code="399588009", date="2024-05-15", member_ids=["ypT2", "ysym"])
+
+        result = synthesize_klassifikation(
+            [k_yp], [ypT, y_symbol, k_yp],
+            decision_date="2024-06-01",
+            synthesized_id="synth",
+            patient_reference="Patient/test",
+            phase=PHASE_POST_NEOADJUVANT,
+        )
+        member_refs = {m["reference"] for m in result.synthesized["hasMember"]}
+        self.assertIn("Observation/ysym", member_refs,
+                      "y-symbol must be propagated to synthesized hasMember")
+
+    def test_t_modifier_m_only_propagates_when_T_winner_came_from_m_source(self):
+        """m is a T-Kategorie modifier, not a phase marker. Propagate only
+        when the chosen T winner came from a source flagged with m."""
+        # Source A: pT2 with m-symbol (multifocal)
+        pT_A = make_category_obs(obs_id="pT2_A", category="T", cp_praefix="p", value="T2", date="2024-03-15")
+        m_symbol = make_symbol_obs(obs_id="msym", symbol="m", date="2024-03-15")
+        # Source B: cT2 without m-symbol — older, doesn't win
+        cT_B = make_category_obs(obs_id="cT2_B", category="T", cp_praefix="c", value="T2", date="2024-01-11")
+
+        k_A = make_klassifikation(obs_id="ka", code="399588009", date="2024-03-15", member_ids=["pT2_A", "msym"])
+        k_B = make_klassifikation(obs_id="kb", code="399537006", date="2024-01-11", member_ids=["cT2_B"])
+
+        result = synthesize_klassifikation(
+            [k_A, k_B], [pT_A, m_symbol, cT_B, k_A, k_B],
+            decision_date="2024-04-01",
+            synthesized_id="synth",
+            patient_reference="Patient/test",
+        )
+        member_refs = {m["reference"] for m in result.synthesized["hasMember"]}
+        self.assertEqual(winner_for(result, "T").observation["id"], "pT2_A")
+        self.assertIn("Observation/msym", member_refs,
+                      "m-symbol must propagate when T winner came from m-flagged source")
 
 
 class TestSourceTracking(unittest.TestCase):
@@ -267,18 +347,13 @@ class TestSourceTracking(unittest.TestCase):
 
 
 class TestDecisionDateSemantics(unittest.TestCase):
-    """[Manual S. 87] 'TNM-Angaben, die im weiteren Verlauf erhoben werden,
+    """[Manual S. 87/89] 'TNM-Angaben, die im weiteren Verlauf erhoben werden,
     dürfen die TNM-Klassifizierung zum Diagnosezeitpunkt nicht überschreiben.'
 
-    Decision-date semantics: only sources at-or-before decision_date should
-    be considered. Future Klassifikationen do not retroactively change history.
-
-    NOTE: v0 does NOT filter by decision_date — caller must pre-filter.
-    Documented as a known limitation here (xfail) until v1.
+    Sources with effectiveDateTime > decision_date must be filtered out.
     """
 
-    @unittest.expectedFailure
-    def test_decision_date_filters_sources(self):
+    def test_decision_date_filters_future_sources(self):
         cT_pre = make_category_obs(obs_id="cT2_pre", category="T", cp_praefix="c", value="T2", date="2024-01-11")
         cT_post = make_category_obs(obs_id="cT3_post", category="T", cp_praefix="c", value="T3", date="2024-06-01")
         k_pre = make_klassifikation(obs_id="kpre", code="399537006", date="2024-01-11", member_ids=["cT2_pre"])
@@ -291,9 +366,36 @@ class TestDecisionDateSemantics(unittest.TestCase):
             synthesized_id="synth",
             patient_reference="Patient/test",
         )
-        # EXPECTATION: only cT2_pre considered. ACTUAL (v0): both included; cT3_post
-        # wins by latest-date rule. Hence expectedFailure.
         self.assertEqual(winner_for(result, "T").observation["id"], "cT2_pre")
+        # Audit must record the filtered-out source
+        filtered_ids = [a.source_id for a in result.phase_audit if a.classification == "filtered-by-date"]
+        self.assertIn("kpost", filtered_ids)
+
+
+class TestPhaseAudit(unittest.TestCase):
+    """phase_audit must be populated descriptively for every source — kept,
+    filtered-by-date, or filtered-by-phase — so callers can audit the synthesis."""
+
+    def test_audit_records_all_sources(self):
+        cT = make_category_obs(obs_id="cT3", category="T", cp_praefix="c", value="T3", date="2024-01-11")
+        ypT = make_category_obs(obs_id="ypT2", category="T", cp_praefix="p", value="T2", date="2024-05-15")
+        y_symbol = make_symbol_obs(obs_id="ysym", symbol="y", date="2024-05-15")
+
+        k_diag = make_klassifikation(obs_id="kd", code="399537006", date="2024-01-11", member_ids=["cT3"])
+        k_yp = make_klassifikation(obs_id="ky", code="399588009", date="2024-05-15", member_ids=["ypT2", "ysym"])
+
+        result = synthesize_klassifikation(
+            [k_diag, k_yp], [cT, ypT, y_symbol, k_diag, k_yp],
+            decision_date="2024-06-01",
+            synthesized_id="synth",
+            patient_reference="Patient/test",
+            phase=PHASE_PRIMARY,
+        )
+        audit_by_id = {a.source_id: a for a in result.phase_audit}
+        self.assertEqual(audit_by_id["kd"].classification, "kept")
+        self.assertEqual(audit_by_id["ky"].classification, "filtered-by-phase")
+        self.assertEqual(audit_by_id["ky"].klass_scope_symbols, {"y"})
+        self.assertEqual(audit_by_id["ky"].grouper_code, "399588009")
 
 
 if __name__ == "__main__":
