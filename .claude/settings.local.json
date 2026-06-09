@@ -7,7 +7,11 @@
       "SlashCommand(/commit-push-track-evaluate)",
       "Bash(git push:*)",
       "Bash(curl:*)",
-      "Bash(gh api:*)"
+      "Bash(gh api:*)",
+      "Bash(python3 -c \"import json; sd=json.load\\(open\\('$HOME/.fhir/packages/de.medizininformatikinitiative.kerndatensatz.base#2026.0.0/package/StructureDefinition-Procedure.json'\\)\\); print\\('has snapshot:', 'snapshot' in sd\\); print\\('has differential:', 'differential' in sd\\)\" 2>/dev/null || echo \"File not found, checking structure...\")",
+      "Bash(cd ~/code/fhir-profiling/kerndatensatzmodul-onkologie && sushi . --snapshot 2>&1 | tail -3)",
+      "Bash(cd ~/code/fhir-profiling/kerndatensatzmodul-onkologie && mv input/fsh/oBDS/10_Residualstatus input/fsh/oBDS/11_Fernmetastasen input/fsh/oBDS/12_Allgemeiner_Leistungszustand input/fsh/oBDS/13_OP /tmp/fsh-bisect/ && sushi . --snapshot 2>&1 | tail -3)",
+      "Bash(cd ~/code/fhir-profiling/kerndatensatzmodul-onkologie && for dir in /tmp/fsh-bisect/05_Diagnose /tmp/fsh-bisect/06_Histologie /tmp/fsh-bisect/08_TNMKlassifikation /tmp/fsh-bisect/09_Weitere_Klassifikationen /tmp/fsh-bisect/10_Residualstatus /tmp/fsh-bisect/11_Fernmetastasen /tmp/fsh-bisect/12_Allgemeiner_Leistungszustand /tmp/fsh-bisect/13_OP; do echo \"=== Adding back $\\(basename $dir\\) ===\"; mv \"$dir\" input/fsh/oBDS/; sushi . --snapshot 2>&1 | tail -2; done)"
     ],
     "deny": []
   },

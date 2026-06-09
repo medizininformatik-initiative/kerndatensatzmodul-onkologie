@@ -1,11 +1,11 @@
 {
   "resourceType": "ImplementationGuide",
-  "id": "mii-ig-onko-de-v2025",
+  "id": "mii-ig-onko-de-v2026",
   "language": "de-DE",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/mii-ig-onko-de-v2025",
-  "version": "2026.0.0",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/mii-ig-onko-de-v2026",
+  "version": "2026.0.3",
   "name": "MII_IG_Onko_DE",
-  "title": "MII IG Onkologie",
+  "title": "MII IG Kerndatensatz-Modul Onkologie",
   "status": "active",
   "publisher": "Medizininformatik Initiative",
   "contact": [
@@ -19,7 +19,7 @@
       ]
     }
   ],
-  "packageId": "mii-ig-onko-de-v2025",
+  "packageId": "mii-ig-onko-de-v2026",
   "fhirVersion": [
     "4.0.1"
   ],
@@ -62,7 +62,7 @@
     },
     {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.studie",
-      "version": "2026.0.0-ballot",
+      "version": "2026.0.2",
       "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.studie/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.studie",
       "id": "de_medizininformatikinitiative_kerndatensatz_studie"
     }
@@ -480,6 +480,14 @@
         },
         "name": "MII CM Onko ATC Code Changes 2024 to 2025",
         "description": "Diese ConceptMap dokumentiert die ATC-Code-Änderungen von 2024 zu 2025. IDH-Inhibitoren wurden in eine neue spezifische Kategorie umklassifiziert.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/mii-cm-onko-atc-transitions-2026"
+        },
+        "name": "MII CM Onko ATC Code Changes 2025 to 2026",
+        "description": "Diese ConceptMap dokumentiert die ATC-Code-Änderungen von 2025 zu 2026. c-MET-Kinase-Inhibitoren wurden in die neue Untergruppe L01EP umklassifiziert.",
         "exampleBoolean": false
       },
       {
@@ -2300,6 +2308,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-onko-systemische-therapie-substanzen-2026"
+        },
+        "name": "MII VS Onkologie Systemische Therapie Substanzen ATC 2026",
+        "description": "ATC-Codes für Substanzen der systemischen Therapie, validiert gegen ATC-DE Version 2026. Für historische Datenvalidierung.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-therapieabweichung"
         },
         "name": "MII VS Onkologie Therapieabweichung",
@@ -3885,7 +3901,7 @@
       },
       {
         "code": "releaselabel",
-        "value": "ci-build"
+        "value": "release"
       }
     ]
   }

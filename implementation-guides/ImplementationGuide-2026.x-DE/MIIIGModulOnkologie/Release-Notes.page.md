@@ -6,14 +6,52 @@ topic: ReleaseNotes
 ## {{page-title}}
 Hier sind alle Änderungen aufgelistet. 
 
-## Änderungen finale Version v2026.0.0 (noch nicht veröffentlicht)
+## Änderungen v2026.0.3 (veröffentlicht 27.03.2026)
+
+### Technische Verbesserungen
+
+- `fix` Package-Erstellung auf macOS korrigiert: `COPYFILE_DISABLE=1` beim tar-Aufruf verhindert AppleDouble (`._`)-Datei-Kontamination (v2026.0.2 enthielt 490 solcher Dateien)
+- `fix` Abhängigkeiten aktualisiert: biobank `2026.0.1`, medikation `2026.0.1`, studie `2026.0.2`
+- `chore` Firely Terminal auf 3.5.0 aktualisiert
+
+---
+
+## Änderungen v2026.0.2 (veröffentlicht 10.03.2026)
+
+### Terminologie
+
+- `feat` ATC-DE 2026 ValueSet aktualisiert: 23 neue Codes hinzugefügt, neue Substanzklasse L01EP (c-MET-Inhibitoren)
+- `fix` 27 ATC Display-Namen korrigiert (WIdO-validiert)
+- `feat` ATC-Code Transitions-ConceptMap für 2026 aktualisiert
+
+### Technische Verbesserungen
+
+- `fix` advisor.json Suppressionen für externe TX-Server Fehler erweitert
+
+---
+
+## Änderungen v2026.0.1 (veröffentlicht 05.02.2026)
+
+### Abhängigkeiten
+
+- `fix` Modul-Studie Abhängigkeit auf 2026.0.2 aktualisiert
+- `fix` ResearchStudy Beispiel wiederhergestellt
+
+### Technische Verbesserungen
+
+- `fix` ig.ini an umbenannte IG-Ressource angepasst (v2025→v2026)
+- `fix` MII IG Namenskonventionen für 2026 Release angewendet
+- `fix` Bezeichnung 'Erweiterungsmodul' durch 'KDS-Modul' gemäß MII-Richtlinien ersetzt
+
+---
+
+## Änderungen v2026.0.0 (veröffentlicht 03.01.2026)
 
 ### ⚠️ Breaking Changes
 
 Diese Änderungen erfordern möglicherweise Anpassungen in bestehenden Implementierungen:
 
 - **`BREAKING`** Canonical URL des Strahlentherapie Applikationsart ValueSets von `mii-vs-onko-sstrahlentherapie-applikationsart` auf `mii-vs-onko-strahlentherapie-applikationsart` korrigiert (Tippfehler-Korrektur). Bestehende Referenzen müssen aktualisiert werden. [[HDB-708](https://hl7germany.atlassian.net/browse/HDB-708), [#219](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/219)]
-- **`BREAKING`** Canonical URL des Mamma Rezeptorstatus Leitlinie CodeSystems korrigiert um fehlenden `-leitlinie` Suffix. Bestehende Referenzen müssen aktualisiert werden. [[HDB-704](https://hl7germany.atlassian.net/browse/HDB-704), [#223](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/223)]
 - **`BREAKING`** CodeSystem-URLs für therapie-ende-grund und therapie-stellungzurop korrigiert. Bestehende Referenzen müssen aktualisiert werden.
 
 ### Neue Profile und Funktionalität
