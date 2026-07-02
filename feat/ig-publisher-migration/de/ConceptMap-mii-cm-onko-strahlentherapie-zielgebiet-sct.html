@@ -1,0 +1,422 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>MII CM Onko Strahlentherapie Zielgebiet SNOMED Mapping - MII IG Kerndatensatz-Modul Onkologie v2026.0.3</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"7.273"}
+    h3,h4,h5,h6{--heading-prefix:"7.273"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Onkologie</span>
+            <br/>
+            <span style="display:inline-block;">2026.0.3 - release
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Start</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Beschreibung
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="beschreibung-modul.html">Beschreibung Modul Onkologie</a>
+      </li>
+      <li>
+        <a href="kontext.html">Kontext im Gesamtprojekt</a>
+      </li>
+      <li>
+        <a href="abweichungen-obds.html">Abweichungen zum oBDS</a>
+      </li>
+      <li>
+        <a href="bezug-nationale-standards.html">Bezug zu nationalen Standards</a>
+      </li>
+      <li>
+        <a href="bezug-internationale-standards.html">Bezug zu internationalen Standards</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsfälle
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="anwendungsfaelle.html">Übersicht</a>
+      </li>
+      <li>
+        <a href="szenarien.html">Szenarien</a>
+      </li>
+      <li>
+        <a href="datensaetze.html">Datensätze inkl. Beschreibungen</a>
+      </li>
+      <li>
+        <a href="uml.html">UML</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Technische Implementierung
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="technische-implementierung.html">Übersicht</a>
+      </li>
+      <li>
+        <a href="profile-inhalt-vererbung.html">Profile - Inhalt und Vererbung</a>
+      </li>
+      <li>
+        <a href="profile-beziehungen.html">Profile - Beziehungen und Referenzen</a>
+      </li>
+      <li>
+        <a href="verwendung-extensions.html">Verwendung von Extensions</a>
+      </li>
+      <li>
+        <a href="fhir-profile.html">FHIR-Profile</a>
+      </li>
+      <li>
+        <a href="organspezifische-module.html">Organspezifische Module</a>
+      </li>
+      <li>
+        <a href="terminologien.html">Terminologien</a>
+      </li>
+      <li>
+        <a href="capability-statement.html">CapabilityStatement</a>
+      </li>
+      <li>
+        <a href="qa-validierung.html">QA und Validierung</a>
+      </li>
+      <li>
+        <a href="obds-snomed-mapping.html">oBDS-SNOMED-CT Mapping</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefakte</a>
+  </li>
+  <li>
+    <a href="referenzen.html">Referenzen</a>
+  </li>
+  <li>
+    <a href="release-notes.html">Release Notes</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-de.png"/>Deutsch</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag de" src="assets/images/lang-de.png"/>Deutsch</div>
+
+    <div><a href="../en/ConceptMap-mii-cm-onko-strahlentherapie-zielgebiet-sct.html"><img class="flag" src="assets/images/lang-en.png" alt="flag en"/>English</a></div>
+
+  </div>
+</div>
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artefaktübersicht</b></a></li><li><b>MII CM Onko Strahlentherapie Zielgebiet SNOMED Mapping</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<!-- layouts\layout-canonical -->
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Onkologie - Local Development build (v2026.0.3) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrativer Inhalt</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="ConceptMap-mii-cm-onko-strahlentherapie-zielgebiet-sct.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ConceptMap-mii-cm-onko-strahlentherapie-zielgebiet-sct.json.html">JSON</a>
+    </li>
+  
+
+
+
+
+</ul>
+
+  <a name="root"> </a>
+
+
+  <h2 id="root">ConceptMap: MII CM Onko Strahlentherapie Zielgebiet SNOMED Mapping
+
+  </h2>
+
+  <table class="colsi" data-fhir="generated">
+
+    <tr>
+      <td colspan="4"><i>Offizielle URL</i>: <span class="copy-text">https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-strahlentherapie-zielgebiet-sct<button title="Klicken zum Kopieren der URL" class="btn-copy" data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-strahlentherapie-zielgebiet-sct"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">2026.0.3<button title="Klicken zum Kopieren der versionierten URL" class="btn-copy" data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-strahlentherapie-zielgebiet-sct|2026.0.3"/></span>
+      </td>
+      <td style="text-align: right;border-left-style: hidden" title="Enable this to see changes since the last official release">
+        <span id="toggle-change-display"><label style="margin:0;font-weight:normal" for="showChanges">Highlight text changes?</label>
+  
+        <input style="margin:0" type="checkbox" id="showChanges" onchange="toggleChanges()"/>
+  
+      </span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="5">
+        
+          Active
+          
+
+            Stand: 
+2024-04-11
+
+          
+        
+      </td>
+
+
+
+      <td><i>Maschinenlesbarer Name</i>: <span style="font-family: monospace;">MII CM Onko Strahlentherapie Zielstellung SCT Mapping</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+
+<p>
+<p>Mapping Strahlentherapie Zielgebiet Codes zu SNOMED-CT</p>
+
+</p>
+
+
+<p>
+
+
+</p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+<div style="display:inline-block" markdown="1">
+
+<p>Die anatomischen Strukturen lassen sich gut über SNOMED abbilden. Bei manchen Datenfeldern soll eine Spezifizierung der Seite vorgenommen werden.</p>
+
+<p>Für viele Datenpunkte existieren bereits fertig ausdefinierte SNOMED-Konzepte für links und rechts. Der Einfachheit halber sind hier vor allem die nicht-seitenspezifischen Konzepte aufgeführt.</p>
+
+
+</div>
+
+
+
+
+<!--  <p>
+  Formats: <a href="ConceptMap-mii-cm-onko-strahlentherapie-zielgebiet-sct.xml.html">XML</a>, <a href="ConceptMap-mii-cm-onko-strahlentherapie-zielgebiet-sct.json.html">JSON</a>, <a href="ConceptMap-mii-cm-onko-strahlentherapie-zielgebiet-sct.ttl.html">Turtle</a>
+  </p>-->
+
+  
+
+
+  <div data-fhir="generated"><p class="res-header-id"/><a name="mii-cm-onko-strahlentherapie-zielgebiet-sct"> </a><a name="hcmii-cm-onko-strahlentherapie-zielgebiet-sct"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p></div><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <a href="CodeSystem-mii-cs-onko-strahlentherapie-zielgebiet.html">MII CS Onkologie Strahlentherapie Zielgebiet</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>1.1 (Ganzhirn (Neurokranium, inklusive Meningen))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>258335003 (Entire brain (body structure))</td><td/></tr><tr><td>1.2 (Teilhirn (frontal/parietal/occipital/temporal/Kleinhirn))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>119235005 (Brain part (body structure))</td><td/></tr><tr><td>1.3 (Neuroachse/Rückenmark)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>389079005 (Brain and spinal cord structure (body structure))</td><td/></tr><tr><td>1.4 (Hypophyse)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>56329008 (Pituitary structure (body structure))</td><td/></tr><tr><td>1.5 (Hirn sonstiges)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>74964007 (Other (qualifier value))</td><td>ggfs. über Postkoordination besser darstellbar</td></tr><tr><td>2.1 (Auge (r, l))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>81745001 (Structure of eye proper (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>2.2 (Nase/Nasennebenhöhle)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>1286894002 (Structure of nasal cavity and/or nasal sinus (body structure))</td><td/></tr><tr><td>2.3 (Mundhöhle inklusive Mundhöhlenvorhof)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>74262004 (Oral cavity structure (body structure))</td><td/></tr><tr><td>2.4 (Ohr (r, l))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>117590005 (Ear structure (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>2.5 (Speicheldrüse (r, l))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>385294005 (Salivary gland structure (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>2.6 (Pharynx)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>54066008 (Pharyngeal structure (body structure))</td><td/></tr><tr><td>2.7 (Nasopharynx)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>71836000 (Nasopharyngeal structure (body structure))</td><td/></tr><tr><td>2.8 (Oropharynx)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>31389004 (Oropharyngeal structure (body structure))</td><td/></tr><tr><td>2.9 (Hypopharynx)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>81502006 (Hypopharyngeal structure (body structure))</td><td/></tr><tr><td>2.10 (Larynx)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>4596009 (Laryngeal structure (body structure))</td><td/></tr><tr><td>2.11 (Schilddrüse)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>69748006 (Thyroid structure (body structure))</td><td/></tr><tr><td>2.12 (Kopf-Hals sonstige)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>774007 (Structure of head and/or neck (body structure))</td><td/></tr><tr><td>3.1 (Mamma als Ganzbrust (r, l))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>181131000 (Entire breast (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>3.2 (Mamma als Teilbrust (r, l))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>119184005 (Breast part (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>3.3 (Thoraxwand, gegebenenfalls r, l)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>78904004 (Chest wall structure (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>3.4 (Lunge (r, l))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>39607008 (Lung structure (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>3.5 (Ösophagus)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>32849002 (Esophageal structure (body structure))</td><td/></tr><tr><td>3.6 (Mediastinum (mediastinaler Lymphabfluss ist in Nummer 9 zu kodieren))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>72410000 (Mediastinal structure (body structure))</td><td/></tr><tr><td>3.7 (Thymus)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>9875009 (Thymus gland structure (body structure))</td><td/></tr><tr><td>3.8 (Thorax sonstige)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>51185008 (Thoracic structure (body structure))</td><td/></tr><tr><td>4.1 (Magen)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>69695003 (Stomach structure (body structure))</td><td/></tr><tr><td>4.2 (Pankreas)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>15776009 (Pancreatic structure (body structure))</td><td/></tr><tr><td>4.3 (Leber, auch bei Teilbestrahlung)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider" title="wider">maps to wider concept</a></td><td>10200004 (Liver structure (body structure))</td><td/></tr><tr><td>4.4 (Milz)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>78961009 (Splenic structure (body structure))</td><td/></tr><tr><td>4.5 (Niere (r, l))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>64033007 (Kidney structure (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>4.6 (Nebenniere (r, l))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>23451007 (Adrenal structure (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>4.7 (Retroperitoneum (z. B. Sarkome))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>82849001 (Retroperitoneal compartment structure (body structure))</td><td/></tr><tr><td>4.8 (Ureter (r, l))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>87953007 (Ureteric structure (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>4.9 (Bauchwand (z. B. Sarkome))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>822992007 (Structure of wall of abdominal proper segment of trunk (body structure))</td><td/></tr><tr><td>4.10 (Oberbauch)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>80581009 (Upper abdomen structure (body structure))</td><td/></tr><tr><td>4.11 (Gallengänge)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>28273000 (Bile duct structure (body structure))</td><td/></tr><tr><td>4.12 (Gallenblase)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>28231008 (Gallbladder structure (body structure))</td><td/></tr><tr><td>4.13 (Abdomen sonstige)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>818983003 (Structure of abdominopelvic cavity and/or content of abdominopelvic cavity and/or anterior abdominal wall (body structure))</td><td/></tr><tr><td>5.1 (Rektum)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>34402009 (Rectum structure (body structure))</td><td/></tr><tr><td>5.2 (Analbereich)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>53505006 (Anal structure (body structure))</td><td/></tr><tr><td>5.3 (Harnblase)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>89837001 (Urinary bladder structure (body structure))</td><td/></tr><tr><td>5.4 (Prostata)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>41216001 (Prostatic structure (body structure))</td><td/></tr><tr><td>5.5 (Hoden (r, l))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>40689003 (Testis structure (body structure))</td><td/></tr><tr><td>5.6 (Penis)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>18911002 (Penile structure (body structure))</td><td/></tr><tr><td>5.7 (Uterus)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>35039007 (Uterine structure (body structure))</td><td/></tr><tr><td>5.8 (Zervix)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>71252005 (Cervix uteri structure (body structure))</td><td/></tr><tr><td>5.9 (Vulva)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>45292006 (Vulval structure (body structure))</td><td/></tr><tr><td>5.10 (Vagina)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>76784001 (Vaginal structure (body structure))</td><td/></tr><tr><td>5.11 (Beckenwand)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>3665003 (Pelvic wall structure (body structure))</td><td/></tr><tr><td>5.12 (Becken sonstige)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>826984001 (Structure of cavity and/or content of true pelvis (body structure))</td><td/></tr><tr><td>6.1 (Schädel)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>89546000 (Bone structure of cranium (body structure))</td><td/></tr><tr><td>6.2 (Schädelbasis)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>31467002 (Base of skull structure (body structure))</td><td/></tr><tr><td>6.3 (Orbita (r, l))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>363654007 (Structure of orbit proper (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>6.4 (Halswirbelsäule)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>84667006 (Bone structure of cervical vertebra (body structure))</td><td/></tr><tr><td>6.5 (Brustwirbelsäule)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>35769007 (Bone structure of thoracic vertebra (body structure))</td><td/></tr><tr><td>6.6 (Lendenwirbelsäule)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>73903008 (Bone structure of lumbar vertebra (body structure))</td><td/></tr><tr><td>6.7 (Sacrum /Coccygeum)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>699698002 (Structure of sacral vertebral column (body structure))</td><td/></tr><tr><td>6.8 (Rippen (r, l))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>113197003 (Bone structure of rib (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>6.9 (Sternum)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>56873002 (Bone structure of sternum (body structure))</td><td/></tr><tr><td>6.10 (Schulter (r, l))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider" title="wider">maps to wider concept</a></td><td>896747000 (Bone structure of shoulder girdle and/or proximal humerus (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>6.11 (Oberarm (r, l))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>85050009 (Bone structure of humerus (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>6.12 (Unterarm (r, l))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>299701004 (Structure of bone of forearm (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>6.13 (Hand (r, l))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>24097009 (Bone structure of hand (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>6.14 (Becken (r, l))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>12921003 (Structure of pelvis (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>6.15 (Hüfte (r, l))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>28254004 (Innominate bone structure (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>6.16 (Oberschenkel (r, l))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>71341001 (Bone structure of femur (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>6.17 (Unterschenkel (r, l))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>702468001 (Bone structure of lower leg (body structure))</td><td/></tr><tr><td>6.18 (Fuß (r, l))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>84167007 (Bone structure of foot (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>6.19 (Knochen sonstige)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider" title="wider">maps to wider concept</a></td><td>74964007 (Other (qualifier value))</td><td/></tr><tr><td>7.1 (Kopf, Gesicht, Hals)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>774007 (Structure of head and/or neck (body structure))</td><td/></tr><tr><td>7.2 (obere Extremität ink* #lusive Schulter (r, l))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>53120007 (Upper limb structure (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>7.3 (untere Extremität und Hüfte (r, l))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>61685007 (Lower limb structure (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>7.4 (Thorax)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>51185008 (Thoracic structure (body structure))</td><td/></tr><tr><td>7.5 (Abdomen)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>302553009 (Entire abdomen (body structure))</td><td/></tr><tr><td>7.6 (Becken)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>12921003 (Structure of pelvis (body structure))</td><td/></tr><tr><td>7.7 (Stammes o. n. A.)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>1490004 (Structure of soft tissue of trunk (body structure))</td><td/></tr><tr><td>7.8 (mehrere Bereiche überlappend)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>276825009 (Overlapping sites (qualifier value))</td><td/></tr><tr><td>7.9 (sonstige Weichteile o. n. A.)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider" title="wider">maps to wider concept</a></td><td>74964007 (Other (qualifier value))</td><td/></tr><tr><td>8.1 (Ganzhaut)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>181469002 (Entire skin (body structure))</td><td/></tr><tr><td>8.2 (Teilbereiche)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>119181002 (Skin part (body structure))</td><td/></tr><tr><td>9.1 (Cervikale Lymphknoten (r, l))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>81105003 (Cervical lymph node structure (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>9.2 (Supra-/infraclavikuläre Lymphknoten (r, l))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>9659009 (Structure of infraclavicular lymph node (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>9.3 (Axilläre Lymphknoten (r, l))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>245269009 (Axillary lymph node group (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>9.4 (Retrosternale/sternale/Mammaria interna Lymphknoten)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#narrower" title="narrower">narrower</a></td><td>245282001 (Internal mammary lymph node group (body structure))</td><td>Mapping umfasst nur Mammaria-interna-Lokalisation der Lymphknoten.</td></tr><tr><td>9.5 (Mediastinale Lymphknoten)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>62683002 (Mediastinal lymph node structure (body structure))</td><td/></tr><tr><td>9.6 (Hiläre Lymphknoten)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>264016003 (Hilar lymph node group (body structure))</td><td/></tr><tr><td>9.7 (Intraabdominale Lymphknoten (z. B. subphrenisch, perigastrisch, peripankreatisch, Leber-, Milzhilus))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>818991007 (Structure of abdominal lymph node (body structure))</td><td/></tr><tr><td>9.8 (Paraaortale/paracavale Lymphknoten)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#narrower" title="narrower">narrower</a></td><td>245285004 (Para-aortic lymph node group (body structure))</td><td>Mapping umfasst nur para-aortale Lokalisation der Lymphknoten.</td></tr><tr><td>9.9 (Retroperitoneale Lymphknoten)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>91394001 (Structure of retroperitoneal lymph node (body structure))</td><td/></tr><tr><td>9.10 (Beckenlymphabfluss (r, l) (Iliakal commun, extern, intern, obturatorisch, präsakral))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>54268001 (Pelvic lymph node structure (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>9.11 (Inguinale Lymphknoten (r, l))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>8928004 (Inguinal lymph node structure (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>9.12 (Involved Node)</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr><tr><td>9.13 (Involved Site)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>397440000 (Anatomic location of excised lymph node containing metastatic neoplasm (observable entity))</td><td/></tr><tr><td>9.14 (Involved Field)</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr><tr><td>9.15 (Sonstige Lymphknoten)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider" title="wider">maps to wider concept</a></td><td>59441001 (Structure of lymph node (body structure))</td><td/></tr><tr><td>10.1 (Ganzkörperbestrahlung bei allogener Stammzelltransplantation)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider" title="wider">maps to wider concept</a></td><td>38266002 (Entire body as a whole (body structure))</td><td/></tr><tr><td>10.2 (operative Zugangswege)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>309795001 (Surgical access values (qualifier value))</td><td/></tr><tr><td>10.3 (Sonstige, nicht genannte Zielgebiete)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>74964007 (Other (qualifier value))</td><td/></tr></table></div>
+
+  <!-- insert notes if present -->
+  
+
+
+
+  
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
+          Package mii-ig-onko-de-v2026#2026.0.3 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt 
+  <span title="2026-07-02 11:24:00 +0000">
+    2026-07-02
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-Bericht</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

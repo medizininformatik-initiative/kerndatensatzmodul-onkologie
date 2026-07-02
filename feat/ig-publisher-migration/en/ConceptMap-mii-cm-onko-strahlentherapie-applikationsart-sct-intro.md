@@ -1,0 +1,1 @@
+Die verschiedenen Applikationsarten sind teilweise in Kombination aufgeführt und in dieser Form schwer in SNOMED abbildbar. Ebenso zeigt sich, dass manche spezialisierte Methodiken (wie PSMA-Therapie) nicht in SNOMED-CT abgebildet sind.

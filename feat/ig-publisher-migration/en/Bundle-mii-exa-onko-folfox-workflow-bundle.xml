@@ -1,0 +1,1012 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-folfox-workflow-bundle"/>
+  <language value="en"/>
+  <type value="collection"/>
+  <timestamp value="2024-03-15T10:00:00Z"/>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-folfox-patient"/>
+    <resource>
+      <Patient>
+        <id value="mii-exa-onko-folfox-patient"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <identifier>
+          <system value="https://www.medizininformatik-initiative.de/fhir/sid/patienten"/>
+          <value value="FOLFOX-2024-001"/>
+        </identifier>
+        <name>
+          <family value="Schmidt"/>
+          <given value="Hans"/>
+        </name>
+        <gender value="male"/>
+        <birthDate value="1959-03-15"/>
+      </Patient>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-colorectal-cancer-diagnosis"/>
+    <resource>
+      <Condition>
+        <id value="mii-exa-onko-colorectal-cancer-diagnosis"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/condition-assertedDate">
+          <valueDateTime value="2024-01-15"/>
+        </extension>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+          </coding>
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <code value="confirmed"/>
+          </coding>
+        </verificationStatus>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+            <code value="encounter-diagnosis"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://fhir.de/CodeSystem/bfarm/icd-10-gm"/>
+            <version value="2024"/>
+            <code value="C18.7"/>
+            <display value="Bösartige Neubildung: Colon sigmoideum"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-folfox-patient"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/example-diagnosis"/>
+        </encounter>
+        <onsetDateTime value="2024-01-15"/>
+        <recordedDate value="2024-01-15"/>
+        <note>
+          <text value="Adenokarzinom des Colon sigmoideum, Stadium III (T3N1M0)"/>
+        </note>
+      </Condition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-colorectal-tnm-t"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-colorectal-tnm-t"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie|2026.0.3"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix">
+            <valueCodeableConcept>
+              <coding>
+                <system value="https://www.uicc.org/resources/tnm"/>
+                <code value="p"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="384625004"/>
+            <display value="pT category (observable entity)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-folfox-patient"/>
+        </subject>
+        <focus>
+          <reference value="Condition/mii-exa-onko-colorectal-cancer-diagnosis"/>
+        </focus>
+        <effectiveDateTime value="2024-02-20"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://www.uicc.org/resources/tnm"/>
+            <code value="T3"/>
+          </coding>
+        </valueCodeableConcept>
+        <method>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"/>
+            <code value="8"/>
+          </coding>
+        </method>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-colorectal-tnm-n"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-colorectal-tnm-n"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie|2026.0.3"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix">
+            <valueCodeableConcept>
+              <coding>
+                <system value="https://www.uicc.org/resources/tnm"/>
+                <code value="p"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="371494008"/>
+            <display value="pN category (observable entity)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-folfox-patient"/>
+        </subject>
+        <focus>
+          <reference value="Condition/mii-exa-onko-colorectal-cancer-diagnosis"/>
+        </focus>
+        <effectiveDateTime value="2024-02-20"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://www.uicc.org/resources/tnm"/>
+            <code value="N1"/>
+          </coding>
+        </valueCodeableConcept>
+        <method>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"/>
+            <code value="8"/>
+          </coding>
+        </method>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-colorectal-tnm-m"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-colorectal-tnm-m"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie|2026.0.3"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix">
+            <valueCodeableConcept>
+              <coding>
+                <system value="https://www.uicc.org/resources/tnm"/>
+                <code value="c"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="399387003"/>
+            <display value="cM category (observable entity)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-folfox-patient"/>
+        </subject>
+        <focus>
+          <reference value="Condition/mii-exa-onko-colorectal-cancer-diagnosis"/>
+        </focus>
+        <effectiveDateTime value="2024-02-20"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://www.uicc.org/resources/tnm"/>
+            <code value="M0"/>
+          </coding>
+        </valueCodeableConcept>
+        <method>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"/>
+            <code value="8"/>
+          </coding>
+        </method>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-colorectal-tnm"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-colorectal-tnm"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="399588009"/>
+            <display value="Pathologic TNM stage grouping"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-folfox-patient"/>
+        </subject>
+        <focus>
+          <reference value="Condition/mii-exa-onko-colorectal-cancer-diagnosis"/>
+        </focus>
+        <effectiveDateTime value="2024-02-20"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://www.uicc.org/resources/tnm"/>
+            <code value="IIIB"/>
+          </coding>
+        </valueCodeableConcept>
+        <method>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"/>
+            <code value="8"/>
+          </coding>
+        </method>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-colorectal-tnm-t"/>
+        </hasMember>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-colorectal-tnm-n"/>
+        </hasMember>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-colorectal-tnm-m"/>
+        </hasMember>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CarePlan/mii-exa-onko-tumorkonferenz-folfox"/>
+    <resource>
+      <CarePlan>
+        <id value="mii-exa-onko-tumorkonferenz-folfox"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz|2026.0.3"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <identifier>
+          <value value="Tumorkonferenz_FOLFOX_001"/>
+        </identifier>
+        <status value="active"/>
+        <intent value="plan"/>
+        <category>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ"/>
+            <code value="praeth"/>
+            <display value="prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie)"/>
+          </coding>
+        </category>
+        <subject>
+          <reference value="Patient/mii-exa-onko-folfox-patient"/>
+        </subject>
+        <created value="2024-03-10"/>
+        <addresses>
+          <reference value="Condition/mii-exa-onko-colorectal-cancer-diagnosis"/>
+        </addresses>
+        <activity>
+          <progress>
+            <text value="Tumor board recommends FOLFOX chemotherapy protocol for stage III colon cancer, adjuvant setting"/>
+          </progress>
+          <reference>
+            <reference value="RequestGroup/mii-exa-onko-folfox-requestgroup"/>
+          </reference>
+        </activity>
+      </CarePlan>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/RequestGroup/mii-exa-onko-folfox-requestgroup"/>
+    <resource>
+      <RequestGroup>
+        <id value="mii-exa-onko-folfox-requestgroup"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie|2026.0.3"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="active"/>
+        <intent value="proposal"/>
+        <code>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ"/>
+            <code value="CH"/>
+            <display value="Chemotherapie"/>
+          </coding>
+          <text value="Chemotherapie"/>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-folfox-patient"/>
+        </subject>
+        <authoredOn value="2024-03-10"/>
+        <reasonReference>
+          <reference value="Condition/mii-exa-onko-colorectal-cancer-diagnosis"/>
+        </reasonReference>
+        <action>
+          <title value="FOLFOX4 Protocol"/>
+          <description value="FOLFOX4 chemotherapy protocol: Fluorouracil + Folinsäure + Oxaliplatin"/>
+          <code>
+            <coding>
+              <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle"/>
+              <code value="FOLFOX4"/>
+              <display value="FOLFOX4"/>
+            </coding>
+          </code>
+          <action>
+            <title value="Fluorouracil (5-FU)"/>
+            <description value="5-Fluorouracil - pyrimidine analog, antineoplastic"/>
+            <resource>
+              <reference value="MedicationRequest/mii-exa-onko-folfox-5fu-request"/>
+            </resource>
+          </action>
+          <action>
+            <title value="Folinsäure (Leucovorin)"/>
+            <description value="Folinic acid - enhances 5-FU efficacy"/>
+            <resource>
+              <reference value="MedicationRequest/mii-exa-onko-folfox-leucovorin-request"/>
+            </resource>
+          </action>
+          <action>
+            <title value="Oxaliplatin"/>
+            <description value="Platinum-based chemotherapy agent"/>
+            <resource>
+              <reference value="MedicationRequest/mii-exa-onko-folfox-oxaliplatin-request"/>
+            </resource>
+          </action>
+        </action>
+      </RequestGroup>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/MedicationRequest/mii-exa-onko-folfox-5fu-request"/>
+    <resource>
+      <MedicationRequest>
+        <id value="mii-exa-onko-folfox-5fu-request"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation|2026.0.3"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="active"/>
+        <intent value="proposal"/>
+        <medicationCodeableConcept>
+          <coding>
+            <system value="http://fhir.de/CodeSystem/bfarm/atc"/>
+            <code value="L01BC02"/>
+            <display value="Fluorouracil"/>
+          </coding>
+          <text value="5-Fluorouracil (5-FU)"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="Patient/mii-exa-onko-folfox-patient"/>
+        </subject>
+        <authoredOn value="2024-03-10"/>
+        <reasonReference>
+          <reference value="Condition/mii-exa-onko-colorectal-cancer-diagnosis"/>
+        </reasonReference>
+      </MedicationRequest>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/MedicationRequest/mii-exa-onko-folfox-leucovorin-request"/>
+    <resource>
+      <MedicationRequest>
+        <id value="mii-exa-onko-folfox-leucovorin-request"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation|2026.0.3"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="active"/>
+        <intent value="proposal"/>
+        <medicationCodeableConcept>
+          <coding>
+            <system value="http://fhir.de/CodeSystem/bfarm/atc"/>
+            <code value="V03AF03"/>
+            <display value="Calciumfolinat"/>
+          </coding>
+          <text value="Leucovorin (Folinsäure)"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="Patient/mii-exa-onko-folfox-patient"/>
+        </subject>
+        <authoredOn value="2024-03-10"/>
+        <reasonReference>
+          <reference value="Condition/mii-exa-onko-colorectal-cancer-diagnosis"/>
+        </reasonReference>
+      </MedicationRequest>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/MedicationRequest/mii-exa-onko-folfox-oxaliplatin-request"/>
+    <resource>
+      <MedicationRequest>
+        <id value="mii-exa-onko-folfox-oxaliplatin-request"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation|2026.0.3"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="active"/>
+        <intent value="proposal"/>
+        <medicationCodeableConcept>
+          <coding>
+            <system value="http://fhir.de/CodeSystem/bfarm/atc"/>
+            <code value="L01XA03"/>
+            <display value="Oxaliplatin"/>
+          </coding>
+          <text value="Oxaliplatin"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="Patient/mii-exa-onko-folfox-patient"/>
+        </subject>
+        <authoredOn value="2024-03-10"/>
+        <reasonReference>
+          <reference value="Condition/mii-exa-onko-colorectal-cancer-diagnosis"/>
+        </reasonReference>
+      </MedicationRequest>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-sigmoid-resection"/>
+    <resource>
+      <Procedure>
+        <id value="mii-exa-onko-sigmoid-resection"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention">
+          <valueCodeableConcept>
+            <coding>
+              <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention"/>
+              <code value="K"/>
+              <display value="Kurativ"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <status value="completed"/>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="387713003"/>
+            <display value="Surgical procedure"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://fhir.de/CodeSystem/bfarm/ops"/>
+            <version value="2024"/>
+            <code value="5-484.5"/>
+            <display value="Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion"/>
+          </coding>
+          <text value="Laparoskopische Sigmaresektion mit TME und Lymphknotendissektion"/>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-folfox-patient"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/example-surgery"/>
+        </encounter>
+        <performedDateTime value="2024-02-15"/>
+        <reasonReference>
+          <reference value="Condition/mii-exa-onko-colorectal-cancer-diagnosis"/>
+        </reasonReference>
+        <outcome>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus"/>
+            <code value="R0"/>
+            <display value="Kein Residualtumor"/>
+          </coding>
+        </outcome>
+        <note>
+          <text value="Laparoscopic sigmoid resection with TME and lymphadenectomy. No intraoperative complications. Tumor completely resected with clear margins (R0). 18 lymph nodes removed, 3 positive. Surgery performed in 3 components: resection, anastomosis, and lymph node dissection."/>
+        </note>
+      </Procedure>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-sigmoid-resection-part1"/>
+    <resource>
+      <Procedure>
+        <id value="mii-exa-onko-sigmoid-resection-part1"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention">
+          <valueCodeableConcept>
+            <coding>
+              <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention"/>
+              <code value="K"/>
+              <display value="Kurativ"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <partOf>
+          <reference value="Procedure/mii-exa-onko-sigmoid-resection"/>
+        </partOf>
+        <status value="completed"/>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="387713003"/>
+            <display value="Surgical procedure"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://fhir.de/CodeSystem/bfarm/ops"/>
+            <version value="2024"/>
+            <code value="5-484.5"/>
+            <display value="Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-folfox-patient"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/example-surgery"/>
+        </encounter>
+        <performedDateTime value="2024-02-15"/>
+        <reasonReference>
+          <reference value="Condition/mii-exa-onko-colorectal-cancer-diagnosis"/>
+        </reasonReference>
+        <note>
+          <text value="Sigmoid colon resected including tumor. End-to-end anastomosis created."/>
+        </note>
+      </Procedure>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-sigmoid-resection-part2"/>
+    <resource>
+      <Procedure>
+        <id value="mii-exa-onko-sigmoid-resection-part2"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention">
+          <valueCodeableConcept>
+            <coding>
+              <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention"/>
+              <code value="K"/>
+              <display value="Kurativ"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <partOf>
+          <reference value="Procedure/mii-exa-onko-sigmoid-resection"/>
+        </partOf>
+        <status value="completed"/>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="387713003"/>
+            <display value="Surgical procedure"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://fhir.de/CodeSystem/bfarm/ops"/>
+            <version value="2024"/>
+            <code value="5-407.0"/>
+            <display value="Radikale (systematische) Lymphadenektomie im Rahmen einer anderen Operation: Axillär"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-folfox-patient"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/example-surgery"/>
+        </encounter>
+        <performedDateTime value="2024-02-15"/>
+        <reasonReference>
+          <reference value="Condition/mii-exa-onko-colorectal-cancer-diagnosis"/>
+        </reasonReference>
+        <note>
+          <text value="Regional lymph node dissection performed. 18 lymph nodes removed from mesenteric and para-aortic regions."/>
+        </note>
+      </Procedure>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-sigmoid-resection-part3"/>
+    <resource>
+      <Procedure>
+        <id value="mii-exa-onko-sigmoid-resection-part3"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention">
+          <valueCodeableConcept>
+            <coding>
+              <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention"/>
+              <code value="K"/>
+              <display value="Kurativ"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <partOf>
+          <reference value="Procedure/mii-exa-onko-sigmoid-resection"/>
+        </partOf>
+        <status value="completed"/>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="387713003"/>
+            <display value="Surgical procedure"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://fhir.de/CodeSystem/bfarm/ops"/>
+            <version value="2024"/>
+            <code value="5-986.x"/>
+            <display value="Minimalinvasive Technik: Sonstige"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-folfox-patient"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/example-surgery"/>
+        </encounter>
+        <performedDateTime value="2024-02-15"/>
+        <reasonReference>
+          <reference value="Condition/mii-exa-onko-colorectal-cancer-diagnosis"/>
+        </reasonReference>
+        <note>
+          <text value="Four laparoscopic ports placed for minimally invasive approach."/>
+        </note>
+      </Procedure>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-folfox-procedure"/>
+    <resource>
+      <Procedure>
+        <id value="mii-exa-onko-folfox-procedure"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention">
+          <valueCodeableConcept>
+            <coding>
+              <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention"/>
+              <code value="K"/>
+              <display value="Kurativ"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellungzurop">
+          <valueCodeableConcept>
+            <coding>
+              <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop"/>
+              <code value="A"/>
+              <display value="Adjuvant"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <basedOn>
+          <reference value="CarePlan/mii-exa-onko-tumorkonferenz-folfox"/>
+        </basedOn>
+        <status value="completed"/>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="277132007"/>
+            <display value="Therapeutic procedure"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://fhir.de/CodeSystem/bfarm/ops"/>
+            <version value="2024"/>
+            <code value="8-542"/>
+            <display value="Nicht komplexe Chemotherapie"/>
+          </coding>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art"/>
+            <code value="CH"/>
+            <display value="Chemotherapie"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-folfox-patient"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/example"/>
+        </encounter>
+        <performedPeriod>
+          <start value="2024-03-20"/>
+          <end value="2024-09-15"/>
+        </performedPeriod>
+        <reasonReference>
+          <reference value="Condition/mii-exa-onko-colorectal-cancer-diagnosis"/>
+        </reasonReference>
+        <outcome>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund"/>
+            <code value="E"/>
+            <display value="Reguläres Ende"/>
+          </coding>
+        </outcome>
+        <note>
+          <text value="Patient received 12 cycles of adjuvant FOLFOX4 chemotherapy for stage III colon cancer. Treatment completed without major complications."/>
+        </note>
+        <usedCode>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle"/>
+            <code value="FOLFOX4"/>
+            <display value="FOLFOX4"/>
+          </coding>
+        </usedCode>
+      </Procedure>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/MedicationStatement/mii-exa-onko-folfox-5fu-statement"/>
+    <resource>
+      <MedicationStatement>
+        <id value="mii-exa-onko-folfox-5fu-statement"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <basedOn>
+          <reference value="CarePlan/mii-exa-onko-tumorkonferenz-folfox"/>
+        </basedOn>
+        <partOf>
+          <reference value="Procedure/mii-exa-onko-folfox-procedure"/>
+        </partOf>
+        <status value="completed"/>
+        <medicationCodeableConcept>
+          <coding>
+            <system value="http://fhir.de/CodeSystem/bfarm/atc"/>
+            <code value="L01BC02"/>
+            <display value="Fluorouracil"/>
+          </coding>
+          <text value="5-Fluorouracil (5-FU)"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="Patient/mii-exa-onko-folfox-patient"/>
+        </subject>
+        <effectivePeriod>
+          <start value="2024-03-20"/>
+          <end value="2024-09-15"/>
+        </effectivePeriod>
+        <note>
+          <text value="FOLFOX4"/>
+        </note>
+      </MedicationStatement>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/MedicationStatement/mii-exa-onko-folfox-leucovorin-statement"/>
+    <resource>
+      <MedicationStatement>
+        <id value="mii-exa-onko-folfox-leucovorin-statement"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <basedOn>
+          <reference value="CarePlan/mii-exa-onko-tumorkonferenz-folfox"/>
+        </basedOn>
+        <partOf>
+          <reference value="Procedure/mii-exa-onko-folfox-procedure"/>
+        </partOf>
+        <status value="completed"/>
+        <medicationCodeableConcept>
+          <coding>
+            <system value="http://fhir.de/CodeSystem/bfarm/atc"/>
+            <code value="V03AF03"/>
+            <display value="Calciumfolinat"/>
+          </coding>
+          <text value="Leucovorin (Folinsäure)"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="Patient/mii-exa-onko-folfox-patient"/>
+        </subject>
+        <effectivePeriod>
+          <start value="2024-03-20"/>
+          <end value="2024-09-15"/>
+        </effectivePeriod>
+        <note>
+          <text value="FOLFOX4"/>
+        </note>
+      </MedicationStatement>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/MedicationStatement/mii-exa-onko-folfox-oxaliplatin-statement"/>
+    <resource>
+      <MedicationStatement>
+        <id value="mii-exa-onko-folfox-oxaliplatin-statement"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <basedOn>
+          <reference value="CarePlan/mii-exa-onko-tumorkonferenz-folfox"/>
+        </basedOn>
+        <partOf>
+          <reference value="Procedure/mii-exa-onko-folfox-procedure"/>
+        </partOf>
+        <status value="completed"/>
+        <medicationCodeableConcept>
+          <coding>
+            <system value="http://fhir.de/CodeSystem/bfarm/atc"/>
+            <code value="L01XA03"/>
+            <display value="Oxaliplatin"/>
+          </coding>
+          <text value="Oxaliplatin"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="Patient/mii-exa-onko-folfox-patient"/>
+        </subject>
+        <effectivePeriod>
+          <start value="2024-03-20"/>
+          <end value="2024-09-15"/>
+        </effectivePeriod>
+        <note>
+          <text value="FOLFOX4"/>
+        </note>
+      </MedicationStatement>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-folfox-verlauf-6months"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-folfox-verlauf-6months"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="396432002"/>
+            <display value="Status of regression of tumor (observable entity)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-folfox-patient"/>
+        </subject>
+        <focus>
+          <reference value="Condition/mii-exa-onko-colorectal-cancer-diagnosis"/>
+        </focus>
+        <effectiveDateTime value="2025-03-15"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung"/>
+            <code value="V"/>
+            <display value="Vollremission (complete remission, CR)"/>
+          </coding>
+        </valueCodeableConcept>
+        <note>
+          <text value="Patient completed 12 cycles of adjuvant FOLFOX4. CT scan and colonoscopy show no evidence of recurrence. CEA level normal (2.1 ng/mL). Patient is disease-free at 6-month follow-up. Plan: Continue surveillance with CEA and imaging every 3-6 months."/>
+        </note>
+        <component>
+          <code>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="445200009"/>
+              <display value="Status of residual neoplasm (observable entity)"/>
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <coding>
+              <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-primaertumor"/>
+              <code value="K"/>
+              <display value="Kein Tumor nachweisbar"/>
+            </coding>
+          </valueCodeableConcept>
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="399656008"/>
+              <display value="Presence of metastatic neoplasm in regional lymph node (observable entity)"/>
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <coding>
+              <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-lymphknoten"/>
+              <code value="K"/>
+              <display value="kein Lymphknotenbefall nachweisbar"/>
+            </coding>
+          </valueCodeableConcept>
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="399608002"/>
+              <display value="Status of distant metastasis (observable entity)"/>
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <coding>
+              <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen"/>
+              <code value="K"/>
+              <display value="Keine Fernmetastasen nachweisbar"/>
+            </coding>
+          </valueCodeableConcept>
+        </component>
+      </Observation>
+    </resource>
+  </entry>
+</Bundle>

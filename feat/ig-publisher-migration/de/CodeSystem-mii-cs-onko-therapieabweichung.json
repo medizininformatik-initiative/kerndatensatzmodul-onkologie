@@ -1,0 +1,43 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "mii-cs-onko-therapieabweichung",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablecodesystem"]
+  },
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-onko-therapieabweichung</b></p><a name=\"mii-cs-onko-therapieabweichung\"> </a><a name=\"hcmii-cs-onko-therapieabweichung\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieabweichung</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">J<a name=\"mii-cs-onko-therapieabweichung-J\"> </a></td><td>ja</td></tr><tr><td style=\"white-space:nowrap\">N<a name=\"mii-cs-onko-therapieabweichung-N\"> </a></td><td>nein</td></tr><tr><td style=\"white-space:nowrap\">U<a name=\"mii-cs-onko-therapieabweichung-U\"> </a></td><td>unbekannt</td></tr></table></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieabweichung",
+  "version" : "2026.0.3",
+  "name" : "MII_CS_Onko_Therapieabweichung",
+  "title" : "MII CS Onkologie Therapieabweichung",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-07-02T11:24:18+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "oBDS-spezifisches Codesystem für die Therapieabweichung auf Wunsch des Patients.",
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 3,
+  "concept" : [{
+    "code" : "J",
+    "display" : "ja"
+  },
+  {
+    "code" : "N",
+    "display" : "nein"
+  },
+  {
+    "code" : "U",
+    "display" : "unbekannt"
+  }]
+}

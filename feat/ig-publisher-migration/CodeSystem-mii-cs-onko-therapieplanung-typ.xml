@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="mii-cs-onko-therapieplanung-typ"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem mii-cs-onko-therapieplanung-typ</b></p><a name="mii-cs-onko-therapieplanung-typ"> </a><a name="hcmii-cs-onko-therapieplanung-typ"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org/fhir/R4/shareablecodesystem.html">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">praeth<a name="mii-cs-onko-therapieplanung-typ-praeth"> </a></td><td>prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie)</td></tr><tr><td style="white-space:nowrap">postop<a name="mii-cs-onko-therapieplanung-typ-postop"> </a></td><td>postoperative Tumorkonferenz (Planung der postoperativen Therapie, z. B. zur Frage adjuvante Therapie)</td></tr><tr><td style="white-space:nowrap">postth<a name="mii-cs-onko-therapieplanung-typ-postth"> </a></td><td>posttherapeutische Tumorkonferenz (manche Tumore werden nicht operiert)</td></tr><tr><td style="white-space:nowrap">ther<a name="mii-cs-onko-therapieplanung-typ-ther"> </a></td><td>Therapieplanung ohne Tumorkonferenz</td></tr></table></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem mii-cs-onko-therapieplanung-typ</b></p><a name="en-mii-cs-onko-therapieplanung-typ"> </a><a name="en-hcmii-cs-onko-therapieplanung-typ"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org/fhir/R4/shareablecodesystem.html">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">praeth<a name="en-mii-cs-onko-therapieplanung-typ-praeth"> </a></td><td>prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie)</td></tr><tr><td style="white-space:nowrap">postop<a name="en-mii-cs-onko-therapieplanung-typ-postop"> </a></td><td>postoperative Tumorkonferenz (Planung der postoperativen Therapie, z. B. zur Frage adjuvante Therapie)</td></tr><tr><td style="white-space:nowrap">postth<a name="en-mii-cs-onko-therapieplanung-typ-postth"> </a></td><td>posttherapeutische Tumorkonferenz (manche Tumore werden nicht operiert)</td></tr><tr><td style="white-space:nowrap">ther<a name="en-mii-cs-onko-therapieplanung-typ-ther"> </a></td><td>Therapieplanung ohne Tumorkonferenz</td></tr></table></div></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ"/>
+  <version value="2026.0.3"/>
+  <name value="MII_CS_Onko_Therapieplanung_Typ"/>
+  <title value="MII CS Onkologie Therapieplanung Typ"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-07-02T11:24:18+00:00"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="oBDS-spezifisches Codesystem für den Therapieplanungstyp"/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="4"/>
+  <concept>
+    <code value="praeth"/>
+    <display value="prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie)"/>
+  </concept>
+  <concept>
+    <code value="postop"/>
+    <display value="postoperative Tumorkonferenz (Planung der postoperativen Therapie, z. B. zur Frage adjuvante Therapie)"/>
+  </concept>
+  <concept>
+    <code value="postth"/>
+    <display value="posttherapeutische Tumorkonferenz (manche Tumore werden nicht operiert)"/>
+  </concept>
+  <concept>
+    <code value="ther"/>
+    <display value="Therapieplanung ohne Tumorkonferenz"/>
+  </concept>
+</CodeSystem>

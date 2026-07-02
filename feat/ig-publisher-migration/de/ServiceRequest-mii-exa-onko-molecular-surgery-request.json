@@ -1,0 +1,34 @@
+{
+  "resourceType" : "ServiceRequest",
+  "id" : "mii-exa-onko-molecular-surgery-request",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest mii-exa-onko-molecular-surgery-request</b></p><a name=\"mii-exa-onko-molecular-surgery-request\"> </a><a name=\"hcmii-exa-onko-molecular-surgery-request\"> </a><p><b>status</b>: Active</p><p><b>intent</b>: Proposal</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 387713003}\">Surgical procedure</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 11429006}\">Neurochirurgische Konsultation für Hirnmetastasen</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-molecular-board-patient.html\">Maria Müller  Female, DoB: 1968-07-22 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#MTB-2024-001)</a></p><p><b>authoredOn</b>: 2024-01-16</p><p><b>reasonReference</b>: <a href=\"Condition-primaertumor-example.html\">Condition Bösartige Neubildung: Brustdrüse, nicht näher bezeichnet</a></p><p><b>note</b>: </p><blockquote><div><p>Molekulares Tumorboard empfiehlt neurochirurgische Evaluation für stereotaktische Radiochirurgie bei oligometastatischen Hirnläsionen</p>\n</div></blockquote></div>"
+  },
+  "status" : "active",
+  "intent" : "proposal",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "387713003"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "11429006"
+    }],
+    "text" : "Neurochirurgische Konsultation für Hirnmetastasen"
+  },
+  "subject" : {
+    "reference" : "Patient/mii-exa-onko-molecular-board-patient"
+  },
+  "authoredOn" : "2024-01-16",
+  "reasonReference" : [{
+    "reference" : "Condition/primaertumor-example"
+  }],
+  "note" : [{
+    "text" : "Molekulares Tumorboard empfiehlt neurochirurgische Evaluation für stereotaktische Radiochirurgie bei oligometastatischen Hirnläsionen"
+  }]
+}

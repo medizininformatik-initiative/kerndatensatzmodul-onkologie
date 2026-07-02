@@ -1,0 +1,56 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "mii-cs-onko-krk-stoma-anzeichnung",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablecodesystem"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-onko-krk-stoma-anzeichnung</b></p><a name=\"en-mii-cs-onko-krk-stoma-anzeichnung\"> </a><a name=\"en-hcmii-cs-onko-krk-stoma-anzeichnung\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-stoma-anzeichnung</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">D<a name=\"en-mii-cs-onko-krk-stoma-anzeichnung-D\"> </a></td><td>Anzeichnung durchgeführt</td><td>Präoperative Anzeichnung der Stoma-Position wurde durchgeführt</td></tr><tr><td style=\"white-space:nowrap\">N<a name=\"en-mii-cs-onko-krk-stoma-anzeichnung-N\"> </a></td><td>Anzeichnung nicht durchgeführt</td><td>Präoperative Anzeichnung der Stoma-Position wurde nicht durchgeführt</td></tr><tr><td style=\"white-space:nowrap\">K<a name=\"en-mii-cs-onko-krk-stoma-anzeichnung-K\"> </a></td><td>Kein Stoma</td><td>Kein Stoma geplant oder erforderlich</td></tr><tr><td style=\"white-space:nowrap\">S<a name=\"en-mii-cs-onko-krk-stoma-anzeichnung-S\"> </a></td><td>Stoma angelegt, Anzeichnungsstatus unbekannt</td><td>Stoma wurde angelegt, aber der Status der präoperativen Anzeichnung ist unbekannt</td></tr><tr><td style=\"white-space:nowrap\">U<a name=\"en-mii-cs-onko-krk-stoma-anzeichnung-U\"> </a></td><td>Unbekannt</td><td>Status der präoperativen Stoma-Anzeichnung ist unbekannt</td></tr></table></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-stoma-anzeichnung",
+  "version" : "2026.0.3",
+  "name" : "MII_CS_Onko_KRK_Stoma_Anzeichnung",
+  "status" : "active",
+  "experimental" : true,
+  "date" : "2026-07-02T11:24:18+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "oBDS-basiertes Codesystem für die präoperative Anzeichnung der Stoma-Position beim Rektumkarzinom",
+  "caseSensitive" : true,
+  "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-stoma-anzeichnung",
+  "content" : "complete",
+  "count" : 5,
+  "concept" : [{
+    "code" : "D",
+    "display" : "Anzeichnung durchgeführt",
+    "definition" : "Präoperative Anzeichnung der Stoma-Position wurde durchgeführt"
+  },
+  {
+    "code" : "N",
+    "display" : "Anzeichnung nicht durchgeführt",
+    "definition" : "Präoperative Anzeichnung der Stoma-Position wurde nicht durchgeführt"
+  },
+  {
+    "code" : "K",
+    "display" : "Kein Stoma",
+    "definition" : "Kein Stoma geplant oder erforderlich"
+  },
+  {
+    "code" : "S",
+    "display" : "Stoma angelegt, Anzeichnungsstatus unbekannt",
+    "definition" : "Stoma wurde angelegt, aber der Status der präoperativen Anzeichnung ist unbekannt"
+  },
+  {
+    "code" : "U",
+    "display" : "Unbekannt",
+    "definition" : "Status der präoperativen Stoma-Anzeichnung ist unbekannt"
+  }]
+}

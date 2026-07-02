@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Terminologien: Systemische Therapie - MII IG Kerndatensatz-Modul Onkologie v2026.0.3</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"4.17"}
+    h3,h4,h5,h6{--heading-prefix:"4.17"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Onkologie</span>
+            <br/>
+            <span style="display:inline-block;">2026.0.3 - release
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Start</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Beschreibung
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="beschreibung-modul.html">Beschreibung Modul Onkologie</a>
+      </li>
+      <li>
+        <a href="kontext.html">Kontext im Gesamtprojekt</a>
+      </li>
+      <li>
+        <a href="abweichungen-obds.html">Abweichungen zum oBDS</a>
+      </li>
+      <li>
+        <a href="bezug-nationale-standards.html">Bezug zu nationalen Standards</a>
+      </li>
+      <li>
+        <a href="bezug-internationale-standards.html">Bezug zu internationalen Standards</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsfälle
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="anwendungsfaelle.html">Übersicht</a>
+      </li>
+      <li>
+        <a href="szenarien.html">Szenarien</a>
+      </li>
+      <li>
+        <a href="datensaetze.html">Datensätze inkl. Beschreibungen</a>
+      </li>
+      <li>
+        <a href="uml.html">UML</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Technische Implementierung
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="technische-implementierung.html">Übersicht</a>
+      </li>
+      <li>
+        <a href="profile-inhalt-vererbung.html">Profile - Inhalt und Vererbung</a>
+      </li>
+      <li>
+        <a href="profile-beziehungen.html">Profile - Beziehungen und Referenzen</a>
+      </li>
+      <li>
+        <a href="verwendung-extensions.html">Verwendung von Extensions</a>
+      </li>
+      <li>
+        <a href="fhir-profile.html">FHIR-Profile</a>
+      </li>
+      <li>
+        <a href="organspezifische-module.html">Organspezifische Module</a>
+      </li>
+      <li>
+        <a href="terminologien.html">Terminologien</a>
+      </li>
+      <li>
+        <a href="capability-statement.html">CapabilityStatement</a>
+      </li>
+      <li>
+        <a href="qa-validierung.html">QA und Validierung</a>
+      </li>
+      <li>
+        <a href="obds-snomed-mapping.html">oBDS-SNOMED-CT Mapping</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefakte</a>
+  </li>
+  <li>
+    <a href="referenzen.html">Referenzen</a>
+  </li>
+  <li>
+    <a href="release-notes.html">Release Notes</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-de.png"/>Deutsch</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag de" src="assets/images/lang-de.png"/>Deutsch</div>
+
+    <div><a href="../en/terminologien-systemische-therapie.html"><img class="flag" src="assets/images/lang-en.png" alt="flag en"/>English</a></div>
+
+  </div>
+</div>
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='technische-implementierung.html'><b>Technische Implementierung</b></a></li><li><b>Terminologien: Systemische Therapie</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Onkologie - Local Development build (v2026.0.3) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Terminologien: Systemische Therapie</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#übersicht" id="markdown-toc-übersicht">Übersicht</a></li>
+  <li><a href="#therapieprotokolle" id="markdown-toc-therapieprotokolle">Therapieprotokolle</a></li>
+  <li><a href="#atc-substanzen" id="markdown-toc-atc-substanzen">ATC-Substanzen</a></li>
+  <li><a href="#unii-substanzen" id="markdown-toc-unii-substanzen">UNII-Substanzen</a></li>
+  <li><a href="#terminologie-binding-in-profilen" id="markdown-toc-terminologie-binding-in-profilen">Terminologie-Binding in Profilen</a></li>
+</ul>
+
+</div>
+<h3 id="übersicht">Übersicht</h3>
+
+<p>Die MII stellt <strong>kuratierte, onkologierelevante Terminologien</strong> für systemische Therapien bereit:</p>
+
+<ul>
+  <li><strong>Therapieprotokolle</strong>: 96 oBDS-basierte Standardprotokolle (<a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle">CodeSystem</a>)</li>
+  <li><strong>ATC-Substanzen</strong>: Haupt-ValueSet + 8 jahresspezifische ValueSets (2018-2025)</li>
+  <li><strong>UNII-Substanzen</strong>: Für Wirkstoffe ohne ATC-Code (<a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-unii">ValueSet</a>)</li>
+</ul>
+
+<p><strong>Wichtig</strong>: Die ValueSets enthalten nur onkologisch relevante Substanzen, nicht die vollständige ATC-Klassifikation.</p>
+
+<hr />
+
+<h3 id="therapieprotokolle">Therapieprotokolle</h3>
+
+<p><strong>Beispiele häufiger Protokolle</strong>: FOLFOX, R-CHOP, AC, BEACOPP, ICE</p>
+
+<p>Neue Protokolle bitte unter <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues">GitHub Issues</a> einreichen.</p>
+
+<hr />
+
+<h3 id="atc-substanzen">ATC-Substanzen</h3>
+
+<h4 id="haupt-valueset-aktuelle-codes">Haupt-ValueSet (Aktuelle Codes)</h4>
+
+<h4 id="jahresspezifische-valuesets">Jahresspezifische ValueSets</h4>
+
+<p>Für die Validierung historischer Daten stehen jahresspezifische ValueSets zur Verfügung:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Jahr</th>
+      <th>ValueSet</th>
+      <th>Canonical URL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2025</td>
+      <td>mii-vs-onko-systemische-therapie-substanzen-2025</td>
+      <td><a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2025">Link</a></td>
+    </tr>
+    <tr>
+      <td>2024</td>
+      <td>mii-vs-onko-systemische-therapie-substanzen-2024</td>
+      <td><a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2024">Link</a></td>
+    </tr>
+    <tr>
+      <td>2023</td>
+      <td>mii-vs-onko-systemische-therapie-substanzen-2023</td>
+      <td><a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2023">Link</a></td>
+    </tr>
+    <tr>
+      <td>2022</td>
+      <td>mii-vs-onko-systemische-therapie-substanzen-2022</td>
+      <td><a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2022">Link</a></td>
+    </tr>
+    <tr>
+      <td>2021</td>
+      <td>mii-vs-onko-systemische-therapie-substanzen-2021</td>
+      <td><a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2021">Link</a></td>
+    </tr>
+    <tr>
+      <td>2020</td>
+      <td>mii-vs-onko-systemische-therapie-substanzen-2020</td>
+      <td><a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2020">Link</a></td>
+    </tr>
+    <tr>
+      <td>2019</td>
+      <td>mii-vs-onko-systemische-therapie-substanzen-2019</td>
+      <td><a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2019">Link</a></td>
+    </tr>
+    <tr>
+      <td>2018</td>
+      <td>mii-vs-onko-systemische-therapie-substanzen-2018</td>
+      <td><a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2018">Link</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="atc-code-transitionen">ATC-Code Transitionen</h4>
+
+<p>Die deutsche ATC-Klassifikation wird jährlich aktualisiert. <strong>Beispiel Quizartinib</strong> (FLT3-Inhibitor):</p>
+
+<ul>
+  <li><strong>Bis 31.12.2020</strong>: <code class="language-plaintext highlighter-rouge">L01XE52</code></li>
+  <li><strong>Ab 01.01.2021</strong>: <code class="language-plaintext highlighter-rouge">L01EX11</code></li>
+</ul>
+
+<p><strong>Kodierungsempfehlung</strong>: Verwenden Sie den ATC-Code, der zum Therapiezeitpunkt gültig war. Bei Unsicherheit kann alternativ der UNII-Code verwendet werden.</p>
+
+<p>Weitere Beispiele: Abemaciclib (L01XE50 → L01EF03), Acalabrutinib (L01XE51 → L01EL02).</p>
+
+<h4 id="post-hoc-annotation-von-freitext">Post-hoc Annotation von Freitext</h4>
+
+<p>DIZ <strong>dürfen</strong> historische Freitext-Medikationsdaten nachträglich auf ATC-Codes mappen, wenn:</p>
+
+<ol>
+  <li><strong>Provenance dokumentiert</strong> wird (nachträgliche Kodierung kennzeichnen)</li>
+  <li><strong>Aktuelle ATC-Codes</strong> verwendet werden (nicht historische)</li>
+  <li><strong>Originaltext erhalten</strong> bleibt in <code class="language-plaintext highlighter-rouge">medicationCodeableConcept.text</code></li>
+</ol>
+
+<details>
+<summary>Beispiel: Post-Annotation</summary>
+
+```fsh
+Instance: mii-exa-onko-medikation-quizartinib-postannotated
+InstanceOf: MII_PR_Onko_Systemische_Therapie_Medikation
+
+* status = #completed
+* subject = Reference(Patient/example)
+* medicationCodeableConcept.coding[atcClassDe] = $atc-de#L01EX11 "Quizartinib"
+* medicationCodeableConcept.text = "Quizartinib (Original: Freitext aus oBDS)"
+* effectivePeriod.start = "2020-09-15"  // Therapie vor Code-Änderung
+* effectivePeriod.end = "2020-12-15"
+```
+
+</details>
+
+<hr />
+
+<h3 id="unii-substanzen">UNII-Substanzen</h3>
+
+<h4 id="substanzen-ohne-verfügbare-codes">Substanzen ohne verfügbare Codes</h4>
+
+<p>Die folgenden oBDS-Einträge haben weder ATC- noch UNII-Codes:</p>
+
+<ul>
+  <li><strong>EmboCept, Embozene, Hepasphere</strong>: Embolisations-Mikrosphären</li>
+  <li><strong>GcMAF</strong>: Gc protein-derived macrophage activating factor</li>
+  <li><strong>G-CSF</strong>: Granulocyte colony-stimulating factor (generische Bezeichnung)</li>
+  <li><strong>Studienmedikament</strong>: Generische Platzhalter-Bezeichnung</li>
+</ul>
+
+<p>→ Verwenden Sie <code class="language-plaintext highlighter-rouge">Coding.text</code> mit Freitext.</p>
+
+<p><strong>Neu verfügbar:</strong> <strong>Dinatriumfolinat</strong> ist nun als <strong>LEUCOVORIN SODIUM</strong> (UNII: 4MXU9LJS4Q) im UNII ValueSet und als <strong>Natriumfolinat</strong> (ATC: V03AF06) in den ATC ValueSets verfügbar.</p>
+
+<details>
+<summary>Besondere Hinweise zu UNII-Substanzen (Klicken zum Aufklappen)</summary>
+
+- **OLAPTESED PEGOL** (UNII: MTM792B442): Oft nur als "Olaptesed" dokumentiert
+- **GEBASAXTUREV** (UNII: 4B57CWT710): Auch bekannt als "Coxsackievirus A21"
+- **Daromun**: Entspricht **DARLEUKIN** (UNII: 2OQ3OPV2F8) oder **ONFEKAFUSP ALFA** (UNII: 6HXC0O6JMV)
+- **Fibromun**: Entspricht **ONFEKAFUSP ALFA** (UNII: 6HXC0O6JMV)
+- **LONCASTUXIMAB TESIRINE** (UNII: 7K5O7P6QIU): oBDS-Tippfehler "Ioncastuzimab tesiren"
+- **NIDANILIMAB** (UNII: ND296JF21I): In oBDS als "Nadunolimab" gelistet
+- **HUMAN PARVOVIRUS B19** (UNII: 94N635564T): Möglicherweise nicht identisch mit "Parvovirus H1"
+- **PACLITAXEL** (UNII: P88XT4IS4D): oBDS meint wahrscheinlich "nab-Paclitaxel" (separate UNII möglich)
+- **CYTARABINE** (UNII: 04079A1RDZ): oBDS meint wahrscheinlich liposomale Formulierung
+- **DEPATUXIZUMAB** (UNII: W984C353CG): Ohne "mafodotin"-Teil (Toxin)
+
+</details>
+
+<hr />
+
+<h3 id="terminologie-binding-in-profilen">Terminologie-Binding in Profilen</h3>
+
+<p><strong>Procedure (Protokoll)</strong>:</p>
+<pre><code class="language-fsh">* usedCode from MII_VS_Onko_Systemische_Therapie_Protokolle (extensible)
+</code></pre>
+
+<p><strong>MedicationStatement (Substanz)</strong>:</p>
+<pre><code class="language-fsh">* medicationCodeableConcept from MII_VS_Onko_Systemische_Therapie_Substanzen (extensible)
+</code></pre>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
+          Package mii-ig-onko-de-v2026#2026.0.3 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt 
+  <span title="2026-07-02 11:24:00 +0000">
+    2026-07-02
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-Bericht</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

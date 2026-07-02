@@ -1,0 +1,421 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>MII_VS_Onko_Mamma_Operation_OPS - MII IG Kerndatensatz-Modul Onkologie v2026.0.3</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"7.196"}
+    h3,h4,h5,h6{--heading-prefix:"7.196"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Onkologie</span>
+            <br/>
+            <span style="display:inline-block;">2026.0.3 - release
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Start</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Beschreibung
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="beschreibung-modul.html">Beschreibung Modul Onkologie</a>
+      </li>
+      <li>
+        <a href="kontext.html">Kontext im Gesamtprojekt</a>
+      </li>
+      <li>
+        <a href="abweichungen-obds.html">Abweichungen zum oBDS</a>
+      </li>
+      <li>
+        <a href="bezug-nationale-standards.html">Bezug zu nationalen Standards</a>
+      </li>
+      <li>
+        <a href="bezug-internationale-standards.html">Bezug zu internationalen Standards</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsfälle
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="anwendungsfaelle.html">Übersicht</a>
+      </li>
+      <li>
+        <a href="szenarien.html">Szenarien</a>
+      </li>
+      <li>
+        <a href="datensaetze.html">Datensätze inkl. Beschreibungen</a>
+      </li>
+      <li>
+        <a href="uml.html">UML</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Technische Implementierung
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="technische-implementierung.html">Übersicht</a>
+      </li>
+      <li>
+        <a href="profile-inhalt-vererbung.html">Profile - Inhalt und Vererbung</a>
+      </li>
+      <li>
+        <a href="profile-beziehungen.html">Profile - Beziehungen und Referenzen</a>
+      </li>
+      <li>
+        <a href="verwendung-extensions.html">Verwendung von Extensions</a>
+      </li>
+      <li>
+        <a href="fhir-profile.html">FHIR-Profile</a>
+      </li>
+      <li>
+        <a href="organspezifische-module.html">Organspezifische Module</a>
+      </li>
+      <li>
+        <a href="terminologien.html">Terminologien</a>
+      </li>
+      <li>
+        <a href="capability-statement.html">CapabilityStatement</a>
+      </li>
+      <li>
+        <a href="qa-validierung.html">QA und Validierung</a>
+      </li>
+      <li>
+        <a href="obds-snomed-mapping.html">oBDS-SNOMED-CT Mapping</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefakte</a>
+  </li>
+  <li>
+    <a href="referenzen.html">Referenzen</a>
+  </li>
+  <li>
+    <a href="release-notes.html">Release Notes</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-de.png"/>Deutsch</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag de" src="assets/images/lang-de.png"/>Deutsch</div>
+
+    <div><a href="../en/ValueSet-mii-vs-onko-mamma-operation-ops.html"><img class="flag" src="assets/images/lang-en.png" alt="flag en"/>English</a></div>
+
+  </div>
+</div>
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artefaktübersicht</b></a></li><li><b>MII_VS_Onko_Mamma_Operation_OPS</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<!-- layouts\layout-valueset -->
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Onkologie - Local Development build (v2026.0.3) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrativer Inhalt</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="ValueSet-mii-vs-onko-mamma-operation-ops.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ValueSet-mii-vs-onko-mamma-operation-ops.json.html">JSON</a>
+    </li>
+  
+
+
+
+
+</ul>
+
+  <a name="root"> </a>
+  <h2 id="root">ValueSet: 
+(Experimentell)
+  </h2>
+  <table class="colsi" data-fhir="generated">
+
+    <tr>
+      <td colspan="4"><i>Offizielle URL</i>: <span class="copy-text">https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-operation-ops<button title="Klicken zum Kopieren der URL" class="btn-copy" data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-operation-ops"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">2026.0.3<button title="Klicken zum Kopieren der versionierten URL" class="btn-copy" data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-operation-ops|2026.0.3"/></span>
+      </td>
+      <td style="text-align: right;border-left-style: hidden" title="Enable this to see changes since the last official release">
+        <span id="toggle-change-display"><label style="margin:0;font-weight:normal" for="showChanges">Highlight text changes?</label>
+  
+        <input style="margin:0" type="checkbox" id="showChanges" onchange="toggleChanges()"/>
+  
+      </span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="5">
+        
+          Active
+          
+
+            Stand: 
+2026-07-02
+
+          
+        
+      </td>
+
+
+
+      <td><i>Maschinenlesbarer Name</i>: <span style="font-family: monospace;">MII_VS_Onko_Mamma_Operation_OPS</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+<p>
+<p>Value Set für Mamma-Operationen basierend auf OPS</p>
+
+</p>
+
+
+  <p>
+    <b>References</b>
+  </p>
+  
+<ul>
+ <li><a href="StructureDefinition-mii-pr-onko-mamma-operation.html">MII PR Onkologie Mamma Operation</a></li>
+</ul>
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <a name="definition"> </a>
+
+<!-- Content Logical Definition heading in the fragment -->
+  <h3>Logical Definition (CLD)</h3>
+<div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated"><p class="res-header-id"></p><a name="mii-vs-onko-mamma-operation-ops"> </a><a name="hcmii-vs-onko-mamma-operation-ops"> </a>
+<div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"></p><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org/fhir/R4/shareablevalueset.html">Shareable ValueSet</a></p></div>
+<ul><li>Include codes from<a href="https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.de/CodeSystem/bfarm/ops"><code>http://fhir.de/CodeSystem/bfarm/ops</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span> where code  is-a 5-87 (Exzision und Resektion der Mamma)</li></ul></div>
+
+  <p>&#160;</p>
+  <a name="expansion"> </a>
+  <h3 id="expansion">Expansion</h3>
+
+  <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated"><p class="res-header-id"/><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion from 127.0.0.1 based on codesystem OPS version 2026<span class="copy-text-inline"><button data-clipboard-text="http://fhir.de/CodeSystem/bfarm/ops|2026" title="Click to Copy URL" class="btn-copy"> </button></span></p><p>This value set contains 61 concepts</p><table class="codes" data-fhir="generated"><tr><td><b>System</b></td><td style="white-space:nowrap"><b>Code</b></td><td><b>Display (de)</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-872"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-872</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-872&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-872&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-872.1"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-872.1</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-872.1&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-872.1&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-872.y"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-872.y</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-872.y&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-872.y&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-872.0"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-872.0</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-872.0&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-872.0&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-872.x"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-872.x</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-872.x&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-872.x&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-879"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-879</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-879&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-879&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-879.0"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-879.0</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-879.0&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-879.0&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-879.y"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-879.y</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-879.y&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-879.y&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-879.1"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-879.1</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-879.1&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-879.1&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-879.x"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-879.x</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-879.x&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-879.x&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-874"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-874</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-874&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-874&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-874.2"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-874.2</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-874.2&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-874.2&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-874.5"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-874.5</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-874.5&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-874.5&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-874.6"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-874.6</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-874.6&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-874.6&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-874.7"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-874.7</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-874.7&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-874.7&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-874.1"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-874.1</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-874.1&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-874.1&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-874.0"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-874.0</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-874.0&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-874.0&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-874.4"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-874.4</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-874.4&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-874.4&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-874.8"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-874.8</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-874.8&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-874.8&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-874.y"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-874.y</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-874.y&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-874.y&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-874.x"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-874.x</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-874.x&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-874.x&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-87"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-87</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-87&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-87&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-870"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-870</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-870&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-870&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-870.2"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-870.2</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-870.2&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-870.2&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-870.21"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-870.21</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-870.21&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-870.21&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-870.20"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-870.20</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-870.20&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-870.20&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-870.7"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-870.7</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-870.7&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-870.7&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-870.71"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-870.71</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-870.71&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-870.71&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-870.70"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-870.70</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-870.70&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-870.70&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-870.6"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-870.6</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-870.6&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-870.6&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-870.61"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-870.61</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-870.61&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-870.61&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-870.60"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-870.60</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-870.60&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-870.60&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-870.9"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-870.9</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-870.9&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-870.9&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-870.91"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-870.91</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-870.91&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-870.91&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-870.90"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-870.90</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-870.90&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-870.90&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-870.y"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-870.y</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-870.y&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-870.y&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-870.a"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-870.a</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-870.a&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-870.a&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-870.a7"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-870.a7</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-870.a7&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-870.a7&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-870.a6"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-870.a6</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-870.a6&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-870.a6&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-870.a4"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-870.a4</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-870.a4&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-870.a4&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-870.a1"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-870.a1</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-870.a1&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-870.a1&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-870.a2"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-870.a2</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-870.a2&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-870.a2&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-870.a5"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-870.a5</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-870.a5&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-870.a5&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-870.a3"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-870.a3</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-870.a3&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-870.a3&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-870.a0"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-870.a0</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-870.a0&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-870.a0&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-870.ax"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-870.ax</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-870.ax&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-870.ax&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-870.x"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-870.x</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-870.x&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-870.x&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-877"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-877</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-877&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-877&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-877.1"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-877.1</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-877.1&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-877.1&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-877.11"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-877.11</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-877.11&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-877.11&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-877.12"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-877.12</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-877.12&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-877.12&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-877.10"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-877.10</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-877.10&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-877.10&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-877.1x"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-877.1x</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-877.1x&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-877.1x&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-877.2"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-877.2</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-877.2&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-877.2&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-877.21"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-877.21</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-877.21&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-877.21&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-877.22"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-877.22</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-877.22&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-877.22&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-877.20"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-877.20</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-877.20&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-877.20&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-877.2x"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-877.2x</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-877.2x&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-877.2x&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-877.y"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-877.y</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-877.y&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-877.y&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-877.x"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-877.x</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-877.x&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-877.x&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhir.de/CodeSystem/bfarm/ops-5-877.0"> </a><code>http://fhir.de/CodeSystem/bfarm/ops</code></td><td style="white-space:nowrap">  5-877.0</td><td/><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.de/CodeSystem/bfarm/ops&quot;, &quot;version&quot;: &quot;2026&quot;, &quot;code&quot;: &quot;5-877.0&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.de/CodeSystem/bfarm/ops&quot;&gt;&lt;version value=&quot;2026&quot;&gt;&lt;code value=&quot;5-877.0&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr></table></div>
+
+  <hr/>
+  <p>
+    <a href="http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology">Beschreibung der obigen Tabelle(n)</a>.
+  </p>
+
+  
+
+  <!-- insert notes if present -->
+  
+
+
+
+  
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
+          Package mii-ig-onko-de-v2026#2026.0.3 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt 
+  <span title="2026-07-02 11:24:00 +0000">
+    2026-07-02
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-Bericht</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Procedure xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-folfox-phase1"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Procedure mii-exa-onko-folfox-phase1</b></p><a name="mii-exa-onko-folfox-phase1"> </a><a name="hcmii-exa-onko-folfox-phase1"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-systemische-therapie.html">MII PR Onkologie Systemische Therapie</a></p></div><p><b>MII EX Onko Systemische Therapie Intention</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}">Kurativ</span></p><p><b>MII EX Onko Systemische Therapie Stellung zur OP</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop A}">Adjuvant</span></p><p><b>basedOn</b>: <a href="CarePlan-mii-exa-onko-tumorkonferenz-folfox-modification.html">CarePlan: identifier = Tumorkonferenz_FOLFOX_Modification_001; status = active; intent = plan; category = prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie); created = 2024-03-05</a></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 18629005}">Administration of medication</span></p><p><b>code</b>: <span title="Codes:{http://fhir.de/CodeSystem/bfarm/ops 8-542}, {https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art CH}">Nicht komplexe Chemotherapie</span></p><p><b>subject</b>: <a href="https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example-modification">Patient/example-modification</a></p><p><b>encounter</b>: <a href="https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Encounter/example-chemo-phase1">Encounter/example-chemo-phase1</a></p><p><b>performed</b>: 2024-03-15 --&gt; 2024-06-10</p><p><b>reasonReference</b>: <a href="Condition-mii-exa-onko-ascending-colon-cancer-diagnosis.html">Condition Bösartige Neubildung: Colon ascendens</a></p><p><b>outcome</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund A}">Abbruch wegen Nebenwirkungen</span></p><p><b>note</b>: </p><blockquote><div><p>Patient received 6 cycles of FOLFOX4. Treatment modified after cycle 6 due to severe peripheral neuropathy. Continued with 5-FU/Leucovorin only.</p>
+</div></blockquote><p><b>usedCode</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle FOLFOX4}">FOLFOX4</span></p></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Procedure mii-exa-onko-folfox-phase1</b></p><a name="en-mii-exa-onko-folfox-phase1"> </a><a name="en-hcmii-exa-onko-folfox-phase1"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-systemische-therapie.html">MII PR Onkologie Systemische Therapie</a></p></div><p><b>MII EX Onko Systemische Therapie Intention</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}">Kurativ</span></p><p><b>MII EX Onko Systemische Therapie Stellung zur OP</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop A}">Adjuvant</span></p><p><b>basedOn</b>: <a href="CarePlan-mii-exa-onko-tumorkonferenz-folfox-modification.html">CarePlan: identifier = Tumorkonferenz_FOLFOX_Modification_001; status = active; intent = plan; category = prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie); created = 2024-03-05</a></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 18629005}">Administration of medication</span></p><p><b>code</b>: <span title="Codes:{http://fhir.de/CodeSystem/bfarm/ops 8-542}, {https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art CH}">Nicht komplexe Chemotherapie</span></p><p><b>subject</b>: <a href="https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example-modification">Patient/example-modification</a></p><p><b>encounter</b>: <a href="https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Encounter/example-chemo-phase1">Encounter/example-chemo-phase1</a></p><p><b>performed</b>: 2024-03-15 --&gt; 2024-06-10</p><p><b>reasonReference</b>: <a href="Condition-mii-exa-onko-ascending-colon-cancer-diagnosis.html">Condition Bösartige Neubildung: Colon ascendens</a></p><p><b>outcome</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund A}">Abbruch wegen Nebenwirkungen</span></p><p><b>note</b>: </p><blockquote><div><p>Patient received 6 cycles of FOLFOX4. Treatment modified after cycle 6 due to severe peripheral neuropathy. Continued with 5-FU/Leucovorin only.</p>
+</div></blockquote><p><b>usedCode</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle FOLFOX4}">FOLFOX4</span></p></div></div>
+  </text>
+  <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention">
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention"/>
+        <code value="K"/>
+        <display value="Kurativ"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellungzurop">
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop"/>
+        <code value="A"/>
+        <display value="Adjuvant"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <basedOn>
+    <reference value="CarePlan/mii-exa-onko-tumorkonferenz-folfox-modification"/>
+  </basedOn>
+  <status value="completed"/>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="18629005"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://fhir.de/CodeSystem/bfarm/ops"/>
+      <version value="2024"/>
+      <code value="8-542"/>
+      <display value="Nicht komplexe Chemotherapie"/>
+    </coding>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art"/>
+      <code value="CH"/>
+      <display value="Chemotherapie"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/example-modification"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/example-chemo-phase1"/>
+  </encounter>
+  <performedPeriod>
+    <start value="2024-03-15"/>
+    <end value="2024-06-10"/>
+  </performedPeriod>
+  <reasonReference>
+    <reference value="Condition/mii-exa-onko-ascending-colon-cancer-diagnosis"/>
+  </reasonReference>
+  <outcome>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund"/>
+      <code value="A"/>
+      <display value="Abbruch wegen Nebenwirkungen"/>
+    </coding>
+  </outcome>
+  <note>
+    <text value="Patient received 6 cycles of FOLFOX4. Treatment modified after cycle 6 due to severe peripheral neuropathy. Continued with 5-FU/Leucovorin only."/>
+  </note>
+  <usedCode>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle"/>
+      <code value="FOLFOX4"/>
+      <display value="FOLFOX4"/>
+    </coding>
+  </usedCode>
+</Procedure>

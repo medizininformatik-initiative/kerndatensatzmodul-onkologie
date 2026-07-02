@@ -1,0 +1,32 @@
+{
+  "resourceType" : "MedicationStatement",
+  "id" : "PatientKimMusterperson-SystemicTherapyMedication-1a",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: MedicationStatement PatientKimMusterperson-SystemicTherapyMedication-1a</b></p><a name=\"PatientKimMusterperson-SystemicTherapyMedication-1a\"> </a><a name=\"hcPatientKimMusterperson-SystemicTherapyMedication-1a\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-systemische-therapie-medikation.html\">MII PR Onkologie Systemische Therapie Medikation</a></p></div><p><b>partOf</b>: <a href=\"Procedure-PatientKimMusterperson-SystemicTherapy-1.html\">Procedure Zytostatische Chemotherapie, Immuntherapie und antiretrovirale Therapie</a></p><p><b>status</b>: Completed</p><p><b>medication</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/atc L01CD01}\">Paclitaxel</span></p><p><b>subject</b>: <a href=\"Patient-PatientKimMusterperson.html\">Kim Musterperson  (no stated gender), DoB: 1956-03-14</a></p><p><b>effective</b>: 2021-07-05 --&gt; 2021-09-05</p><p><b>note</b>: </p><blockquote><div><p>CarboTax</p>\n</div></blockquote></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: MedicationStatement PatientKimMusterperson-SystemicTherapyMedication-1a</b></p><a name=\"en-PatientKimMusterperson-SystemicTherapyMedication-1a\"> </a><a name=\"en-hcPatientKimMusterperson-SystemicTherapyMedication-1a\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-systemische-therapie-medikation.html\">MII PR Onkologie Systemische Therapie Medikation</a></p></div><p><b>partOf</b>: <a href=\"Procedure-PatientKimMusterperson-SystemicTherapy-1.html\">Procedure Zytostatische Chemotherapie, Immuntherapie und antiretrovirale Therapie</a></p><p><b>status</b>: Completed</p><p><b>medication</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/atc L01CD01}\">Paclitaxel</span></p><p><b>subject</b>: <a href=\"Patient-PatientKimMusterperson.html\">Kim Musterperson  (no stated gender), DoB: 1956-03-14</a></p><p><b>effective</b>: 2021-07-05 --&gt; 2021-09-05</p><p><b>note</b>: </p><blockquote><div><p>CarboTax</p>\n</div></blockquote></div></div>"
+  },
+  "partOf" : [{
+    "reference" : "Procedure/PatientKimMusterperson-SystemicTherapy-1"
+  }],
+  "status" : "completed",
+  "medicationCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://fhir.de/CodeSystem/bfarm/atc",
+      "code" : "L01CD01",
+      "display" : "Paclitaxel"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/PatientKimMusterperson"
+  },
+  "effectivePeriod" : {
+    "start" : "2021-07-05",
+    "end" : "2021-09-05"
+  },
+  "note" : [{
+    "text" : "CarboTax"
+  }]
+}

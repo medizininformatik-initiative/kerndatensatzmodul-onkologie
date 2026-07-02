@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Beispiel: Mamma-Bundle - MII IG Kerndatensatz-Modul Onkologie v2026.0.3</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"4.13"}
+    h3,h4,h5,h6{--heading-prefix:"4.13"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Onkologie</span>
+            <br/>
+            <span style="display:inline-block;">2026.0.3 - release
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Start</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Beschreibung
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="beschreibung-modul.html">Beschreibung Modul Onkologie</a>
+      </li>
+      <li>
+        <a href="kontext.html">Kontext im Gesamtprojekt</a>
+      </li>
+      <li>
+        <a href="abweichungen-obds.html">Abweichungen zum oBDS</a>
+      </li>
+      <li>
+        <a href="bezug-nationale-standards.html">Bezug zu nationalen Standards</a>
+      </li>
+      <li>
+        <a href="bezug-internationale-standards.html">Bezug zu internationalen Standards</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsfälle
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="anwendungsfaelle.html">Übersicht</a>
+      </li>
+      <li>
+        <a href="szenarien.html">Szenarien</a>
+      </li>
+      <li>
+        <a href="datensaetze.html">Datensätze inkl. Beschreibungen</a>
+      </li>
+      <li>
+        <a href="uml.html">UML</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Technische Implementierung
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="technische-implementierung.html">Übersicht</a>
+      </li>
+      <li>
+        <a href="profile-inhalt-vererbung.html">Profile - Inhalt und Vererbung</a>
+      </li>
+      <li>
+        <a href="profile-beziehungen.html">Profile - Beziehungen und Referenzen</a>
+      </li>
+      <li>
+        <a href="verwendung-extensions.html">Verwendung von Extensions</a>
+      </li>
+      <li>
+        <a href="fhir-profile.html">FHIR-Profile</a>
+      </li>
+      <li>
+        <a href="organspezifische-module.html">Organspezifische Module</a>
+      </li>
+      <li>
+        <a href="terminologien.html">Terminologien</a>
+      </li>
+      <li>
+        <a href="capability-statement.html">CapabilityStatement</a>
+      </li>
+      <li>
+        <a href="qa-validierung.html">QA und Validierung</a>
+      </li>
+      <li>
+        <a href="obds-snomed-mapping.html">oBDS-SNOMED-CT Mapping</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefakte</a>
+  </li>
+  <li>
+    <a href="referenzen.html">Referenzen</a>
+  </li>
+  <li>
+    <a href="release-notes.html">Release Notes</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-de.png"/>Deutsch</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag de" src="assets/images/lang-de.png"/>Deutsch</div>
+
+    <div><a href="../en/example-mamma-bundle.html"><img class="flag" src="assets/images/lang-en.png" alt="flag en"/>English</a></div>
+
+  </div>
+</div>
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='technische-implementierung.html'><b>Technische Implementierung</b></a></li><li><b>Beispiel: Mamma-Bundle</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Onkologie - Local Development build (v2026.0.3) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Beispiel: Mamma-Bundle</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#inhalt" id="markdown-toc-inhalt">Inhalt</a></li>
+  <li><a href="#bundle-struktur" id="markdown-toc-bundle-struktur">Bundle-Struktur</a></li>
+  <li><a href="#klinisches-szenario" id="markdown-toc-klinisches-szenario">Klinisches Szenario</a></li>
+  <li><a href="#technische-implementation" id="markdown-toc-technische-implementation">Technische Implementation</a></li>
+  <li><a href="#verknüpfungsmuster" id="markdown-toc-verknüpfungsmuster">Verknüpfungsmuster</a></li>
+  <li><a href="#valueset-verwendung" id="markdown-toc-valueset-verwendung">ValueSet-Verwendung</a></li>
+  <li><a href="#bundle-beispiel" id="markdown-toc-bundle-beispiel">Bundle-Beispiel</a></li>
+  <li><a href="#einzelne-ressourcen-beispiele" id="markdown-toc-einzelne-ressourcen-beispiele">Einzelne Ressourcen-Beispiele</a></li>
+</ul>
+
+</div>
+<h3 id="inhalt">Inhalt</h3>
+
+<p>Das <strong>Mamma Bundle Beispiel</strong> demonstriert die strukturierte Zusammenstellung aller Mamma-spezifischen FHIR-Ressourcen in einem einheitlichen Transaktions-Bundle. Dieses Bundle zeigt die praktische Anwendung der Mamma-Profile und deren Verknüpfungen untereinander in einem realistischen klinischen Szenario.</p>
+
+<p>Das Bundle implementiert das <strong>Transaction-Pattern</strong> und ist server-konsumierbar, wodurch alle enthaltenen Ressourcen als atomare Operation übertragen werden können.</p>
+
+<hr />
+
+<h3 id="bundle-struktur">Bundle-Struktur</h3>
+
+<p>Das Mamma-Bundle umfasst folgende Ressourcen:</p>
+
+<h4 id="primäre-ressourcen">Primäre Ressourcen</h4>
+<ul>
+  <li><strong>Patient</strong>: Mamma-Karzinom Patientin (Martha MammaCa)</li>
+  <li><strong>Condition</strong>: Primärtumor-Diagnose (C50.3 - Unterer innerer Quadrant der Brustdrüse)</li>
+</ul>
+
+<h4 id="mamma-spezifische-observations">Mamma-spezifische Observations</h4>
+<ul>
+  <li><strong>Menopause Status</strong>: Prämenopausaler Status der Patientin</li>
+  <li><strong>Estrogen-Rezeptorstatus</strong>: Positiver Befund mit 5% positiven Zellen, schwache Färbeintensität</li>
+  <li><strong>Progesteron-Rezeptorstatus</strong>: Positiver Befund mit 25% positiven Zellen, schwache Färbeintensität</li>
+</ul>
+
+<h4 id="zusätzliche-elemente">Zusätzliche Elemente</h4>
+<ul>
+  <li><strong>Tumorgrößenbestimmung</strong>: Größte Dimension 25mm</li>
+  <li><strong>Präoperative Markierung</strong>: Beispiel für Markierungsverfahren</li>
+</ul>
+
+<hr />
+
+<h3 id="klinisches-szenario">Klinisches Szenario</h3>
+
+<p>Das Bundle repräsentiert eine <strong>prämenopausale Patientin</strong> mit einem <strong>hormonrezeptor-positiven Mammakarzinom</strong> im unteren inneren Quadranten der Brustdrüse:</p>
+
+<p><strong>Patientencharakteristika:</strong></p>
+<ul>
+  <li><strong>Alter/Status</strong>: Prämenopausal (wichtig für Therapieplanung)</li>
+  <li><strong>Tumorlokalisation</strong>: C50.3 (Unterer innerer Quadrant)</li>
+  <li><strong>Tumorgröße</strong>: 25mm (T2-Kategorie)</li>
+</ul>
+
+<p><strong>Rezeptorstatus:</strong></p>
+<ul>
+  <li><strong>Estrogen-Rezeptor</strong>: Positiv (5% positive Zellen, schwache Intensität)</li>
+  <li><strong>Progesteron-Rezeptor</strong>: Positiv (25% positive Zellen, schwache Intensität)</li>
+  <li><strong>Therapeutische Konsequenz</strong>: Kandidatin für antihormonelle Therapie</li>
+</ul>
+
+<hr />
+
+<h3 id="technische-implementation">Technische Implementation</h3>
+
+<h4 id="bundle-typ-und-struktur">Bundle-Typ und Struktur</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* type = #transaction
+</code></pre></div></div>
+<ul>
+  <li><strong>Transaction Bundle</strong>: Atomare Übertragung aller Ressourcen</li>
+  <li><strong>Server-konsumierbar</strong>: Alle Entries mit vollständigen Request-Informationen</li>
+</ul>
+
+<h4 id="entry-pattern">Entry-Pattern</h4>
+<p>Jeder Bundle-Entry enthält:</p>
+<ul>
+  <li><strong>fullUrl</strong>: Eindeutige Referenz-URL</li>
+  <li><strong>resource</strong>: Die eigentliche FHIR-Ressource</li>
+  <li><strong>request.method</strong>: HTTP POST für Erstellung</li>
+  <li><strong>request.url</strong>: Ziel-Ressourcentyp</li>
+</ul>
+
+<h4 id="referenz-integrität">Referenz-Integrität</h4>
+<ul>
+  <li><strong>Condition</strong>: Referenziert Patient über <code class="language-plaintext highlighter-rouge">subject</code></li>
+  <li><strong>Observations</strong>: Referenzieren sowohl Patient (<code class="language-plaintext highlighter-rouge">subject</code>) als auch Condition (<code class="language-plaintext highlighter-rouge">focus</code>)</li>
+  <li><strong>Procedures</strong>: Referenzieren Patient (<code class="language-plaintext highlighter-rouge">subject</code>) und Condition (<code class="language-plaintext highlighter-rouge">reasonReference</code>)</li>
+</ul>
+
+<hr />
+
+<h3 id="verknüpfungsmuster">Verknüpfungsmuster</h3>
+
+<p>Das Bundle demonstriert die <strong>konsistente Referenzstruktur</strong> zwischen Mamma-spezifischen Ressourcen:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Patient ← subject ← Condition (Primärtumor)
+                        ↑ focus
+                 Observations (Menopause, Rezeptorstatus)
+                        ↑ reasonReference
+                   Procedures (Markierung)
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="valueset-verwendung">ValueSet-Verwendung</h3>
+
+<p>Das Bundle zeigt die praktische Anwendung verschiedener Terminologien:</p>
+
+<h4 id="snomed-ct">SNOMED CT</h4>
+<ul>
+  <li><strong>Menopause Status</strong>: <code class="language-plaintext highlighter-rouge">22636003</code> "Premenopausal state"</li>
+  <li><strong>Anatomische Lokalisation</strong>: <code class="language-plaintext highlighter-rouge">110494001</code> "Structure of upper inner quadrant of right breast"</li>
+</ul>
+
+<h4 id="loinc">LOINC</h4>
+<ul>
+  <li><strong>Estrogen-Rezeptor</strong>: <code class="language-plaintext highlighter-rouge">40556-3</code> "Estrogen receptor Ag [Presence] in Tissue by Immune stain"</li>
+  <li><strong>Progesteron-Rezeptor</strong>: <code class="language-plaintext highlighter-rouge">85339-0</code> "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"</li>
+  <li><strong>Tumorgröße</strong>: <code class="language-plaintext highlighter-rouge">21889-1</code> "Size Tumor"</li>
+  <li><strong>Rezeptorstatus</strong>: <code class="language-plaintext highlighter-rouge">LA6576-8</code> "Positive"</li>
+</ul>
+
+<h4 id="icd-10-gm">ICD-10-GM</h4>
+<ul>
+  <li><strong>Diagnose</strong>: <code class="language-plaintext highlighter-rouge">C50.3</code> "Bösartige Neubildung: Unterer innerer Quadrant der Brustdrüse"</li>
+</ul>
+
+<hr />
+
+<h3 id="bundle-beispiel">Bundle-Beispiel</h3>
+
+<p><a href="Bundle-mii-exa-onko-mamma-example-bundle-1.html">Beispiel: mii-exa-onko-mamma-example-bundle-1</a></p>
+
+<hr />
+
+<h3 id="einzelne-ressourcen-beispiele">Einzelne Ressourcen-Beispiele</h3>
+
+<h4 id="patient">Patient</h4>
+<p><a href="Patient-mii-exa-onko-mamma-bundle-patient.html">Beispiel: mii-exa-onko-mamma-bundle-patient</a></p>
+
+<h4 id="primärtumor-condition">Primärtumor-Condition</h4>
+<p><a href="Condition-mii-exa-onko-mamma-diagnose.html">Beispiel: mii-exa-onko-mamma-diagnose</a></p>
+
+<h4 id="menopause-status">Menopause Status</h4>
+<p><a href="Observation-mii-exa-onko-mamma-menopause-status-1.html">Beispiel: mii-exa-onko-mamma-menopause-status-1</a></p>
+
+<h4 id="estrogen-rezeptorstatus">Estrogen-Rezeptorstatus</h4>
+<p><a href="Observation-mii-exa-onko-mamma-rezeptorstatus-estrogen-1.html">Beispiel: mii-exa-onko-mamma-rezeptorstatus-estrogen-1</a></p>
+
+<h4 id="progesteron-rezeptorstatus">Progesteron-Rezeptorstatus</h4>
+<p><a href="Observation-mii-exa-onko-mamma-rezeptorstatus-progesteron-1.html">Beispiel: mii-exa-onko-mamma-rezeptorstatus-progesteron-1</a></p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
+          Package mii-ig-onko-de-v2026#2026.0.3 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt 
+  <span title="2026-07-02 11:24:00 +0000">
+    2026-07-02
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-Bericht</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>QA und Validierung - MII IG Kerndatensatz-Modul Onkologie v2026.0.3</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"4.20"}
+    h3,h4,h5,h6{--heading-prefix:"4.20"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Onkologie</span>
+            <br/>
+            <span style="display:inline-block;">2026.0.3 - release
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Start</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Beschreibung
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="beschreibung-modul.html">Beschreibung Modul Onkologie</a>
+      </li>
+      <li>
+        <a href="kontext.html">Kontext im Gesamtprojekt</a>
+      </li>
+      <li>
+        <a href="abweichungen-obds.html">Abweichungen zum oBDS</a>
+      </li>
+      <li>
+        <a href="bezug-nationale-standards.html">Bezug zu nationalen Standards</a>
+      </li>
+      <li>
+        <a href="bezug-internationale-standards.html">Bezug zu internationalen Standards</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsfälle
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="anwendungsfaelle.html">Übersicht</a>
+      </li>
+      <li>
+        <a href="szenarien.html">Szenarien</a>
+      </li>
+      <li>
+        <a href="datensaetze.html">Datensätze inkl. Beschreibungen</a>
+      </li>
+      <li>
+        <a href="uml.html">UML</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Technische Implementierung
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="technische-implementierung.html">Übersicht</a>
+      </li>
+      <li>
+        <a href="profile-inhalt-vererbung.html">Profile - Inhalt und Vererbung</a>
+      </li>
+      <li>
+        <a href="profile-beziehungen.html">Profile - Beziehungen und Referenzen</a>
+      </li>
+      <li>
+        <a href="verwendung-extensions.html">Verwendung von Extensions</a>
+      </li>
+      <li>
+        <a href="fhir-profile.html">FHIR-Profile</a>
+      </li>
+      <li>
+        <a href="organspezifische-module.html">Organspezifische Module</a>
+      </li>
+      <li>
+        <a href="terminologien.html">Terminologien</a>
+      </li>
+      <li>
+        <a href="capability-statement.html">CapabilityStatement</a>
+      </li>
+      <li>
+        <a href="qa-validierung.html">QA und Validierung</a>
+      </li>
+      <li>
+        <a href="obds-snomed-mapping.html">oBDS-SNOMED-CT Mapping</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefakte</a>
+  </li>
+  <li>
+    <a href="referenzen.html">Referenzen</a>
+  </li>
+  <li>
+    <a href="release-notes.html">Release Notes</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-de.png"/>Deutsch</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag de" src="assets/images/lang-de.png"/>Deutsch</div>
+
+    <div><a href="../en/qa-validierung.html"><img class="flag" src="assets/images/lang-en.png" alt="flag en"/>English</a></div>
+
+  </div>
+</div>
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='technische-implementierung.html'><b>Technische Implementierung</b></a></li><li><b>QA und Validierung</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Onkologie - Local Development build (v2026.0.3) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>QA und Validierung</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#validierungsübersicht" id="markdown-toc-validierungsübersicht">Validierungsübersicht</a></li>
+  <li><a href="#terminologie-server-und-validierungskonfiguration" id="markdown-toc-terminologie-server-und-validierungskonfiguration">Terminologie-Server und Validierungskonfiguration</a></li>
+  <li><a href="#gefilterte-validierungsmeldungen" id="markdown-toc-gefilterte-validierungsmeldungen">Gefilterte Validierungsmeldungen</a></li>
+  <li><a href="#verbleibende-aktive-validierungsprobleme" id="markdown-toc-verbleibende-aktive-validierungsprobleme">Verbleibende aktive Validierungsprobleme</a>    <ul>
+      <li><a href="#aktuelle-fehler-stand-2025-12-16" id="markdown-toc-aktuelle-fehler-stand-2025-12-16">Aktuelle Fehler (Stand: 2025-12-16)</a></li>
+      <li><a href="#betroffene-dateien" id="markdown-toc-betroffene-dateien">Betroffene Dateien</a></li>
+      <li><a href="#externe-abhängigkeiten-external" id="markdown-toc-externe-abhängigkeiten-external">Externe Abhängigkeiten (EXTERNAL)</a></li>
+    </ul>
+  </li>
+  <li><a href="#status-legende" id="markdown-toc-status-legende">Status-Legende</a></li>
+  <li><a href="#continuous-integration" id="markdown-toc-continuous-integration">Continuous Integration</a></li>
+  <li><a href="#wie-kann-ich-helfen" id="markdown-toc-wie-kann-ich-helfen">Wie kann ich helfen?</a></li>
+</ul>
+
+</div>
+<p>Diese Seite dokumentiert den aktuellen Stand der FHIR-Validierung für das MII Modul Onkologie.</p>
+
+<h3 id="validierungsübersicht">Validierungsübersicht</h3>
+
+<p>Das Modul wird kontinuierlich gegen den FHIR R4 Standard und die definierten Profile validiert. Da Simplifier keinen öffentlichen QA-Report bereitstellt wie bei klassischen FHIR IG Publisher Builds, dokumentieren wir hier transparent den Validierungsstatus.</p>
+
+<p><strong>Aktuelle Statistik</strong> (Stand: 2025-12-16, Version 2026.0.0):</p>
+<ul>
+  <li><strong>Actionable Fehler</strong>: 9</li>
+  <li><strong>Gefilterte Meldungen</strong>: ~700+ (via advisor.json)</li>
+</ul>
+
+<p>Die meisten ursprünglichen Meldungen werden durch Filter in <code class="language-plaintext highlighter-rouge">advisor.json</code> unterdrückt, da sie false-positives oder externe Abhängigkeiten betreffen.</p>
+
+<hr />
+
+<h2 id="terminologie-server-und-validierungskonfiguration">Terminologie-Server und Validierungskonfiguration</h2>
+
+<p>Die betreffende Validierung betrifft die aktuelle Packageversion <strong>2026.0.0</strong>.</p>
+
+<p><strong>MII Terminology Server</strong>: <a href="https://termserv.mii.medizininformatik-initiative.de/fhir">https://termserv.mii.medizininformatik-initiative.de/fhir</a></p>
+
+<p><strong>Validierungskonfiguration</strong>: <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/blob/dev/advisor.json"><code class="language-plaintext highlighter-rouge">advisor.json</code></a></p>
+
+<hr />
+
+<h2 id="gefilterte-validierungsmeldungen">Gefilterte Validierungsmeldungen</h2>
+
+<p>Diese Meldungen werden durch <code class="language-plaintext highlighter-rouge">advisor.json</code> unterdrückt. Die Tabelle zeigt die geschätzte Anzahl der Vorkommnisse und den Grund für die Filterung:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fehlercode</th>
+      <th>~Anzahl</th>
+      <th>Filter (advisor.json)</th>
+      <th>Begründung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Terminology_TX_NoValid_16</code></td>
+      <td>~310</td>
+      <td>Zeile 3, 10-12</td>
+      <td>Betrifft ImplementationGuide Parameter und alle StructureDefinitions/ValueSets/CodeSystems. Externe Terminologie-Server-Limitation.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">MSG_DRAFT</code></td>
+      <td>~14</td>
+      <td>Zeile 4</td>
+      <td>Erwartete Warnung während Entwicklungsphase. Löst sich bei finalem Release.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dom-6</code></td>
+      <td>?</td>
+      <td>Zeile 5</td>
+      <td>FHIR Basisregel für DomainResource. Bekanntes Validator-Artefakt.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">eld-20</code></td>
+      <td>~294</td>
+      <td>Zeile 6</td>
+      <td>ElementDefinition Constraint. Strukturelle Validator-Limitation.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">UNABLE_TO_INFER_CODESYSTEM</code></td>
+      <td>~100</td>
+      <td>Zeilen 7-9</td>
+      <td>System URI kann bei bestimmten Codes nicht inferiert werden (betrifft StructureDefinition, ValueSet, CodeSystem).</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Gesamte Suppressionen</strong>: ~700+ Meldungen werden gefiltert</p>
+
+<hr />
+
+<h2 id="verbleibende-aktive-validierungsprobleme">Verbleibende aktive Validierungsprobleme</h2>
+
+<p>Diese Fehler werden <strong>nicht</strong> gefiltert und sollten behoben werden:</p>
+
+<h3 id="aktuelle-fehler-stand-2025-12-16">Aktuelle Fehler (Stand: 2025-12-16)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Kategorie</th>
+      <th>Anzahl</th>
+      <th>Betroffene Dateien</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Unknown_Code</strong></td>
+      <td>3</td>
+      <td>HER2-Status, Rezeptorstatus Estrogen/Progesteron</td>
+      <td>🟡 TODO: Code-Bindings prüfen</td>
+    </tr>
+    <tr>
+      <td><strong>Reference_Not_Found</strong></td>
+      <td>1</td>
+      <td>AdverseEvent (MedDRA)</td>
+      <td>🔵 EXTERNAL: MedDRA proprietär</td>
+    </tr>
+    <tr>
+      <td><strong>Profile-Match</strong></td>
+      <td>1</td>
+      <td>KRK-Bundle (Operation)</td>
+      <td>🟡 TODO: Bundle-Struktur korrigieren</td>
+    </tr>
+    <tr>
+      <td><strong>TX-Server</strong></td>
+      <td>2</td>
+      <td>Mamma-Bundle, MRT-Faszie</td>
+      <td>🔵 EXTERNAL: Terminology-Server-Limitation</td>
+    </tr>
+    <tr>
+      <td><strong>Sonstige</strong></td>
+      <td>2</td>
+      <td>KRK-Observation, Mamma-HER2</td>
+      <td>🟡 TODO: Review</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="betroffene-dateien">Betroffene Dateien</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Bundle-mii-exa-onko-mamma-example-bundle-1.json</code> (2 Fehler)</li>
+  <li><code class="language-plaintext highlighter-rouge">AdverseEvent-mii-pr-onko-nebenwirkung-0.json</code> (1 Fehler)</li>
+  <li><code class="language-plaintext highlighter-rouge">Bundle-mii-exa-onko-krk-bundle.json</code> (1 Fehler)</li>
+  <li><code class="language-plaintext highlighter-rouge">Observation-mii-exa-onko-krk-abstand-mesorektale-fascie.json</code> (1 Fehler)</li>
+  <li><code class="language-plaintext highlighter-rouge">Observation-mii-exa-onko-mamma-her2neu-status.json</code> (1 Fehler)</li>
+  <li><code class="language-plaintext highlighter-rouge">Observation-mii-exa-onko-mamma-rezeptorstatus-estrogen-1.json</code> (1 Fehler)</li>
+  <li><code class="language-plaintext highlighter-rouge">Observation-mii-exa-onko-mamma-rezeptorstatus-progesteron-1.json</code> (1 Fehler)</li>
+  <li><code class="language-plaintext highlighter-rouge">StructureDefinition-mii-pr-onko-krk-mrt-mesorektale-faszie.json</code> (1 Fehler)</li>
+</ul>
+
+<h3 id="externe-abhängigkeiten-external">Externe Abhängigkeiten (EXTERNAL)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Problem</th>
+      <th>Beschreibung</th>
+      <th>Auswirkung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>MedDRA</strong></td>
+      <td>Proprietäre Terminologie, nicht öffentlich validierbar</td>
+      <td>Adverse Events können nicht vollständig validiert werden</td>
+    </tr>
+    <tr>
+      <td><strong>ICD-O-3</strong></td>
+      <td>Morphologie-Codes limitiert verfügbar in FHIR TX-Servern</td>
+      <td>Histologie-Codierung teilweise nicht validierbar</td>
+    </tr>
+    <tr>
+      <td><strong>OPS Versionen</strong></td>
+      <td>Multiple OPS-Versionen führen zu Warnungen</td>
+      <td>Procedure-Validierung zeigt Warnungen bei Versionsmix</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="status-legende">Status-Legende</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Symbol</th>
+      <th>Status</th>
+      <th>Bedeutung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>🔴</td>
+      <td><strong>TODO</strong></td>
+      <td>Aktiv zu behebende Fehler</td>
+    </tr>
+    <tr>
+      <td>🟡</td>
+      <td><strong>MONITOR</strong></td>
+      <td>Beobachten, ggf. Aktion erforderlich</td>
+    </tr>
+    <tr>
+      <td>🔵</td>
+      <td><strong>EXTERNAL</strong></td>
+      <td>Externes Problem, löst sich durch Updates von Abhängigkeiten</td>
+    </tr>
+    <tr>
+      <td>⚪</td>
+      <td><strong>FILTERED</strong></td>
+      <td>Durch advisor.json gefiltert</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="continuous-integration">Continuous Integration</h2>
+
+<p>Die FHIR-Validierung läuft automatisch bei jedem Push über GitHub Actions:</p>
+
+<ul>
+  <li><strong>JAVA_FHIR_VALIDATION</strong>: HL7 FHIR Validator (offiziell)</li>
+  <li><strong>DOTNET_FHIR_VALIDATION</strong>: Firely .NET Validator (alternativ)</li>
+</ul>
+
+<p>🔗 <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/actions">Aktuelle CI-Runs anzeigen</a></p>
+
+<p>Die Validierungsergebnisse sind direkt im Repository verfügbar:</p>
+<ul>
+  <li><a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/blob/dev/validation.html"><code class="language-plaintext highlighter-rouge">validation.html</code></a> - HTML-Report</li>
+  <li><a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/blob/dev/validation.json"><code class="language-plaintext highlighter-rouge">validation.json</code></a> - Maschinenlesbare Ergebnisse</li>
+</ul>
+
+<hr />
+
+<h2 id="wie-kann-ich-helfen">Wie kann ich helfen?</h2>
+
+<p>Wenn Sie zur Verbesserung der Validierung beitragen möchten:</p>
+
+<ol>
+  <li><strong>Prüfen Sie</strong> die TODO-markierten Fehler oben</li>
+  <li><strong>Laden Sie</strong> die Validierungs-Artefakte aus den <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/actions">CI-Runs</a> herunter</li>
+  <li><strong>Erstellen Sie</strong> einen Issue oder Pull Request im <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie">GitHub Repository</a></li>
+</ol>
+
+<hr />
+
+<p><strong>Hinweis</strong>: Diese Seite wird manuell gepflegt. Für den aktuellsten technischen Stand siehe die CI-Runs im Repository.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
+          Package mii-ig-onko-de-v2026#2026.0.3 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt 
+  <span title="2026-07-02 11:24:00 +0000">
+    2026-07-02
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-Bericht</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

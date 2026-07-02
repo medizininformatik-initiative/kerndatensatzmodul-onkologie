@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Tumorkonferenz: Detaillierte Therapieempfehlungen - MII IG Kerndatensatz-Modul Onkologie v2026.0.3</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"4.15"}
+    h3,h4,h5,h6{--heading-prefix:"4.15"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Onkologie</span>
+            <br/>
+            <span style="display:inline-block;">2026.0.3 - release
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Start</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Beschreibung
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="beschreibung-modul.html">Beschreibung Modul Onkologie</a>
+      </li>
+      <li>
+        <a href="kontext.html">Kontext im Gesamtprojekt</a>
+      </li>
+      <li>
+        <a href="abweichungen-obds.html">Abweichungen zum oBDS</a>
+      </li>
+      <li>
+        <a href="bezug-nationale-standards.html">Bezug zu nationalen Standards</a>
+      </li>
+      <li>
+        <a href="bezug-internationale-standards.html">Bezug zu internationalen Standards</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsfälle
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="anwendungsfaelle.html">Übersicht</a>
+      </li>
+      <li>
+        <a href="szenarien.html">Szenarien</a>
+      </li>
+      <li>
+        <a href="datensaetze.html">Datensätze inkl. Beschreibungen</a>
+      </li>
+      <li>
+        <a href="uml.html">UML</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Technische Implementierung
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="technische-implementierung.html">Übersicht</a>
+      </li>
+      <li>
+        <a href="profile-inhalt-vererbung.html">Profile - Inhalt und Vererbung</a>
+      </li>
+      <li>
+        <a href="profile-beziehungen.html">Profile - Beziehungen und Referenzen</a>
+      </li>
+      <li>
+        <a href="verwendung-extensions.html">Verwendung von Extensions</a>
+      </li>
+      <li>
+        <a href="fhir-profile.html">FHIR-Profile</a>
+      </li>
+      <li>
+        <a href="organspezifische-module.html">Organspezifische Module</a>
+      </li>
+      <li>
+        <a href="terminologien.html">Terminologien</a>
+      </li>
+      <li>
+        <a href="capability-statement.html">CapabilityStatement</a>
+      </li>
+      <li>
+        <a href="qa-validierung.html">QA und Validierung</a>
+      </li>
+      <li>
+        <a href="obds-snomed-mapping.html">oBDS-SNOMED-CT Mapping</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefakte</a>
+  </li>
+  <li>
+    <a href="referenzen.html">Referenzen</a>
+  </li>
+  <li>
+    <a href="release-notes.html">Release Notes</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-de.png"/>Deutsch</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag de" src="assets/images/lang-de.png"/>Deutsch</div>
+
+    <div><a href="../en/tumorkonferenz-detailed-recommendations.html"><img class="flag" src="assets/images/lang-en.png" alt="flag en"/>English</a></div>
+
+  </div>
+</div>
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='technische-implementierung.html'><b>Technische Implementierung</b></a></li><li><b>Tumorkonferenz: Detaillierte Therapieempfehlungen</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Onkologie - Local Development build (v2026.0.3) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Tumorkonferenz: Detaillierte Therapieempfehlungen</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#inhalt" id="markdown-toc-inhalt">Inhalt</a></li>
+  <li><a href="#abgrenzung-zum-standard-tumorkonferenz-profil" id="markdown-toc-abgrenzung-zum-standard-tumorkonferenz-profil">Abgrenzung zum Standard-Tumorkonferenz-Profil</a></li>
+  <li><a href="#anwendungsfälle" id="markdown-toc-anwendungsfälle">Anwendungsfälle</a></li>
+  <li><a href="#technische-implementierung" id="markdown-toc-technische-implementierung">Technische Implementierung</a></li>
+  <li><a href="#implementierungsoptionen" id="markdown-toc-implementierungsoptionen">Implementierungsoptionen</a></li>
+  <li><a href="#obds-kontext" id="markdown-toc-obds-kontext">oBDS-Kontext</a></li>
+  <li><a href="#terminologie-binding" id="markdown-toc-terminologie-binding">Terminologie-Binding</a></li>
+</ul>
+
+</div>
+<p>Dieses Profil beschreibt strukturierte Therapieempfehlungen für <strong>molekulare Tumorboards</strong> und andere Tumorkonferenzen mit detaillierten, RequestGroup-basierten Protokollen für Multi-Agent-Therapien.</p>
+
+<h3 id="inhalt">Inhalt</h3>
+
+<p>Dieses CarePlan-Profil ermöglicht die Abbildung komplexer Therapieempfehlungen, die über einfache Kategorisierungen hinausgehen und spezifische Medikamentenkombinationen oder Therapieoptionen erfordern.</p>
+
+<h3 id="abgrenzung-zum-standard-tumorkonferenz-profil">Abgrenzung zum Standard-Tumorkonferenz-Profil</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Aspekt</th>
+      <th>Standard CarePlan</th>
+      <th>Detailed Recommendations CarePlan</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Verwendung</strong></td>
+      <td>Traditionelle Tumorboards</td>
+      <td>Molekulare Tumorboards, komplexe Protokolle</td>
+    </tr>
+    <tr>
+      <td><strong>Therapieempfehlung</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">activity.detail.code</code> (19.1 oBDS)</td>
+      <td><code class="language-plaintext highlighter-rouge">activity.reference</code> → RequestGroup</td>
+    </tr>
+    <tr>
+      <td><strong>Multi-Agent-Therapien</strong></td>
+      <td>Einzelne Kategorisierung</td>
+      <td>Detaillierte Protokolle mit spezifischen Agenten</td>
+    </tr>
+    <tr>
+      <td><strong>FHIR Invarianten</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">activity.detail</code> verwendet</td>
+      <td><code class="language-plaintext highlighter-rouge">activity.detail</code> deaktiviert (0..0)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="anwendungsfälle">Anwendungsfälle</h3>
+
+<h4 id="molekulare-tumorboards"><strong>Molekulare Tumorboards</strong></h4>
+<ul>
+  <li><strong>Pharmakogenomische Empfehlungen</strong>: Basierend auf Mutationsprofilen</li>
+  <li><strong>Resistenzmuster</strong>: Spezifische Alternativen bei bekannten Resistenzen</li>
+  <li><strong>Kombinationstherapien</strong>: Multi-Agent-Protokolle mit präzisen Dosierungen</li>
+</ul>
+
+<h4 id="komplexe-therapieprotokolle"><strong>Komplexe Therapieprotokolle</strong></h4>
+<ul>
+  <li><strong>Optionale Medikamente</strong>: "CDK4/6 Inhibitor (beliebiger)" vs. spezifische Auswahl</li>
+  <li><strong>Sequenzielle Therapien</strong>: Erste-, Zweite-, Drittlinienoptionen</li>
+  <li><strong>Personalisierte Medizin</strong>: Biomarker-basierte Therapieauswahl</li>
+</ul>
+
+<h3 id="technische-implementierung">Technische Implementierung</h3>
+
+<h4 id="fhir-invarianten-management"><strong>FHIR Invarianten-Management</strong></h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* activity.detail 0..0  // Deaktiviert um FHIR Invariant cpl-3 zu vermeiden
+* activity.reference 1..1  // Referenz auf RequestGroup mit Therapiedetails
+</code></pre></div></div>
+
+<p><strong>Grund</strong>: FHIR R4 Invariant <code class="language-plaintext highlighter-rouge">cpl-3</code> verhindert die gleichzeitige Verwendung von <code class="language-plaintext highlighter-rouge">activity.detail.code</code> und <code class="language-plaintext highlighter-rouge">activity.reference</code>. Dieses Profil wählt <code class="language-plaintext highlighter-rouge">activity.reference</code> für maximale Strukturierung.</p>
+
+<h4 id="requestgroup-integration"><strong>RequestGroup Integration</strong></h4>
+<p>Das referenzierte RequestGroup enthält:</p>
+<ul>
+  <li><strong>Therapietyp-Klassifikation</strong> (<code class="language-plaintext highlighter-rouge">code</code> mit oBDS-Therapietypen)</li>
+  <li><strong>Spezifische Medikamente</strong> (<code class="language-plaintext highlighter-rouge">action.resource</code> → SystemischeTherapie)</li>
+  <li><strong>Auswahllogik</strong> (<code class="language-plaintext highlighter-rouge">selectionBehavior</code> für Optionen)</li>
+</ul>
+
+<h3 id="implementierungsoptionen">Implementierungsoptionen</h3>
+
+<h4 id="option-1-pharmazeutische-klassen"><strong>Option 1: Pharmazeutische Klassen</strong></h4>
+<p>Für Empfehlungen wie "beliebiger CDK4/6 Inhibitor":</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CarePlan.activity.reference → RequestGroup
+├── code: "CZ" (Chemotherapie + zielgerichtete Substanzen)  
+└── action.resource → SystemischeTherapie
+    └── code.text: "CDK4/6 Inhibitor (Klasse) - Palbociclib, Ribociclib oder Abemaciclib"
+</code></pre></div></div>
+
+<h4 id="option-2-spezifische-medikamentenauswahl"><strong>Option 2: Spezifische Medikamentenauswahl</strong></h4>
+<p>Für präzise Optionen basierend auf Resistenzmustern:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CarePlan.activity.reference → RequestGroup
+├── code: "ZS" (Zielgerichtete Substanzen)
+├── selectionBehavior: #any
+├── action[0]: Trastuzumab (erste Wahl)
+├── action[1]: T-DM1 (bei Progression)
+└── action[2]: Tucatinib-Kombination (bei Hirnmetastasen)
+</code></pre></div></div>
+
+<h3 id="obds-kontext">oBDS-Kontext</h3>
+
+<p><strong>Wichtig</strong>: Das oBDS-Datenfeld <strong>19.1 "Therapieempfehlung Typ"</strong> wird in diesem Profil <strong>nicht direkt</strong> in <code class="language-plaintext highlighter-rouge">CarePlan.activity.detail.code</code> erfasst, sondern in der referenzierten <strong>RequestGroup.code</strong>.</p>
+
+<p><strong>Vorteile</strong>:</p>
+<ul>
+  <li><strong>Bessere Strukturierung</strong> komplexer Therapieempfehlungen</li>
+  <li><strong>FHIR-konforme</strong> Implementierung ohne Invarianten-Verletzungen</li>
+  <li><strong>Erweiterte Traceability</strong> zwischen Empfehlung und spezifischen Medikamenten</li>
+</ul>
+
+<h3 id="terminologie-binding">Terminologie-Binding</h3>
+
+<p>Die Therapietyp-Klassifikation erfolgt über:</p>
+<ul>
+  <li><strong>RequestGroup.code</strong> bound to <code class="language-plaintext highlighter-rouge">mii-vs-onko-therapieempfehlung-typ</code></li>
+  <li><strong>Enthält</strong>: CH, HO, IM, ZS, CZ, CIZ, IZ, OP, ST, etc. (oBDS-Therapietypen)</li>
+</ul>
+
+<hr />
+
+<p>Mapping Datensatz zu FHIR</p>
+
+<hr />
+
+<p>Mapping <a href="https://basisdatensatz.de/basisdatensatz">Einheitlicher onkologischer Basisdatensatz (oBDS)</a> zu FHIR</p>
+
+<hr />
+
+<p><strong>Suchparameter</strong></p>
+
+<p>Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombination:</p>
+
+<ol>
+  <li>
+    <p>Der Suchparameter <code class="language-plaintext highlighter-rouge">_id</code> MUSS unterstützt werden:
+ <code class="language-plaintext highlighter-rouge">GET [base]/CarePlan?_id=1234</code></p>
+  </li>
+  <li>
+    <p>Der Suchparameter "_profile" MUSS unterstützt werden:
+ <code class="language-plaintext highlighter-rouge">GET [base]/CarePlan?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz-detailed-recommendations</code></p>
+  </li>
+  <li>
+    <p>Der Suchparameter "subject" MUSS unterstützt werden:
+ <code class="language-plaintext highlighter-rouge">GET [base]/CarePlan?subject=Patient/example</code></p>
+  </li>
+  <li>
+    <p>Der Suchparameter "category" MUSS unterstützt werden:
+ <code class="language-plaintext highlighter-rouge">GET [base]/CarePlan?category=MOL</code></p>
+  </li>
+</ol>
+
+<p><strong>Beispiele</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">mii-exa-onko-tumorkonferenz-class-recommendation</code> <!-- TODO:REVIEW Beispiel nicht im Package: mii-exa-onko-tumorkonferenz-class-recommendation --></p>
+
+<p><code class="language-plaintext highlighter-rouge">mii-exa-onko-tumorkonferenz-specific-choices</code> <!-- TODO:REVIEW Beispiel nicht im Package: mii-exa-onko-tumorkonferenz-specific-choices --></p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
+          Package mii-ig-onko-de-v2026#2026.0.3 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt 
+  <span title="2026-07-02 11:24:00 +0000">
+    2026-07-02
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-Bericht</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

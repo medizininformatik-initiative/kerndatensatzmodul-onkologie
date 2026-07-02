@@ -1,0 +1,3 @@
+## Extensions von Operation
+
+Die Extension der Operation war notwendig, da sonst die oBDS-eigenen Codes nicht abgebildet werden können, weil das Binding der von der MII zum gleichen Zweck eingeführten Extension [Durchführungsabsicht](https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht) zu stark ist.

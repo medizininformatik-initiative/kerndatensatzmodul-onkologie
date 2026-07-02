@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationStatement xmlns="http://hl7.org/fhir">
+  <id value="PatientKimMusterperson-SystemicTherapyMedication-2b"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: MedicationStatement PatientKimMusterperson-SystemicTherapyMedication-2b</b></p><a name="PatientKimMusterperson-SystemicTherapyMedication-2b"> </a><a name="hcPatientKimMusterperson-SystemicTherapyMedication-2b"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-systemische-therapie-medikation.html">MII PR Onkologie Systemische Therapie Medikation</a></p></div><p><b>partOf</b>: <a href="Procedure-PatientKimMusterperson-SystemicTherapy-2.html">Procedure Zytostatische Chemotherapie, Immuntherapie und antiretrovirale Therapie</a></p><p><b>status</b>: Completed</p><p><b>medication</b>: <span title="Codes:{http://fhir.de/CodeSystem/bfarm/atc L01XA02}">Carboplatin</span></p><p><b>subject</b>: <a href="Patient-PatientKimMusterperson.html">Kim Musterperson  (no stated gender), DoB: 1956-03-14</a></p><p><b>effective</b>: 2021-11-08 --&gt; 2022-01-09</p><p><b>note</b>: </p><blockquote><div><p>Gem-Carbo</p>
+</div></blockquote></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: MedicationStatement PatientKimMusterperson-SystemicTherapyMedication-2b</b></p><a name="en-PatientKimMusterperson-SystemicTherapyMedication-2b"> </a><a name="en-hcPatientKimMusterperson-SystemicTherapyMedication-2b"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-systemische-therapie-medikation.html">MII PR Onkologie Systemische Therapie Medikation</a></p></div><p><b>partOf</b>: <a href="Procedure-PatientKimMusterperson-SystemicTherapy-2.html">Procedure Zytostatische Chemotherapie, Immuntherapie und antiretrovirale Therapie</a></p><p><b>status</b>: Completed</p><p><b>medication</b>: <span title="Codes:{http://fhir.de/CodeSystem/bfarm/atc L01XA02}">Carboplatin</span></p><p><b>subject</b>: <a href="Patient-PatientKimMusterperson.html">Kim Musterperson  (no stated gender), DoB: 1956-03-14</a></p><p><b>effective</b>: 2021-11-08 --&gt; 2022-01-09</p><p><b>note</b>: </p><blockquote><div><p>Gem-Carbo</p>
+</div></blockquote></div></div>
+  </text>
+  <partOf>
+    <reference value="Procedure/PatientKimMusterperson-SystemicTherapy-2"/>
+  </partOf>
+  <status value="completed"/>
+  <medicationCodeableConcept>
+    <coding>
+      <system value="http://fhir.de/CodeSystem/bfarm/atc"/>
+      <code value="L01XA02"/>
+      <display value="Carboplatin"/>
+    </coding>
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="Patient/PatientKimMusterperson"/>
+  </subject>
+  <effectivePeriod>
+    <start value="2021-11-08"/>
+    <end value="2022-01-09"/>
+  </effectivePeriod>
+  <note>
+    <text value="Gem-Carbo"/>
+  </note>
+</MedicationStatement>

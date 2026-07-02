@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="mii-cm-onko-allgemeiner-leistungszustand-ecog-loinc"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap mii-cm-onko-allgemeiner-leistungszustand-ecog-loinc</b></p><a name="en-mii-cm-onko-allgemeiner-leistungszustand-ecog-loinc"> </a><a name="en-hcmii-cm-onko-allgemeiner-leistungszustand-ecog-loinc"> </a><p>Mapping from <a href="ValueSet-mii-vs-onko-allgemeiner-leistungszustand-ecog.html">MII VS Onkologie Allgemeiner Leistungszustand nach ECOG</a> to <a href="https://loinc.org/LL529-9">LOINC Answer Codes for LL529-9</a></p><br/><p>Mapping from <a href="CodeSystem-mii-cs-onko-allgemeiner-leistungszustand-ecog.html">MII CS Onkologie Allgemeiner Leistungszustand ECOG</a> to <a href="http://terminology.hl7.org/6.5.0/CodeSystem-v3-loinc.html">Logical Observation Identifiers, Names and Codes (LOINC)</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>0 (Normale, uneingeschränkte Aktivität wie vor der Erkrankung (90 - 100 % nach Karnofsky))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>LA9622-2 (Fully active, able to carry on all pre-disease performance without restriction)</td><td/></tr><tr><td>1 (Einschränkung bei körperlicher Anstrengung, aber gehfähig; leichte körperliche Arbeit bzw. Arbeit im Sitzen (z. B. leichte Hausarbeit oder Büroarbeit) möglich (70 - 80 % nach Karnofsky))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>LA9623-0 (Restricted in physically strenuous activity but ambulatory and able to carry out work of a light or sedentary nature, e.g., light house work, office work)</td><td/></tr><tr><td>2 (Gehfähig, Selbstversorgung möglich, aber nicht arbeitsfähig; kann mehr als 50 % der Wachzeit aufstehen (50 - 60 % nach Karnofsky))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>LA9624-8 (Ambulatory and capable of all selfcare but unable to carry out any work activities; up and about more than 50% of waking hours)</td><td/></tr><tr><td>3 (Nur begrenzte Selbstversorgung möglich; ist 50 % oder mehr der Wachzeit an Bett oder Stuhl gebunden (30  40 % nach Karnofsky))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>LA9625-5 (Capable of only limited selfcare; confined to bed or chair more than 50% of waking hours)</td><td/></tr><tr><td>4 (Völlig pflegebedürftig, keinerlei Selbstversorgung möglich; völlig an Bett oder Stuhl gebunden (10 - 20 % nach Karnofsky))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>LA9626-3 (Completely disabled; cannot carry on any selfcare; totally confined to bed or chair)</td><td/></tr><tr><td>U (Unbekannt)</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">No corresponding LOINC code for 'Unknown' available</td></tr></table></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-allgemeiner-leistungszustand-ecog-loinc"/>
+  <version value="2026.0.3"/>
+  <title value="Mapping oBDS ECOG zu LOINC"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-07-02T11:24:18+00:00"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="Mapping der oBDS-Codes für ECOG Performance Status zu LOINC Answer List LA29179-1"/>
+  <sourceCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-ecog"/>
+  <targetCanonical value="http://loinc.org/vs/LL529-9"/>
+  <group>
+    <source value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-ecog"/>
+    <target value="http://loinc.org"/>
+    <element>
+      <code value="0"/>
+      <display value="Normale, uneingeschränkte Aktivität wie vor der Erkrankung (90 - 100 % nach Karnofsky)"/>
+      <target>
+        <code value="LA9622-2"/>
+        <display value="Fully active, able to carry on all pre-disease performance without restriction"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="1"/>
+      <display value="Einschränkung bei körperlicher Anstrengung, aber gehfähig; leichte körperliche Arbeit bzw. Arbeit im Sitzen (z. B. leichte Hausarbeit oder Büroarbeit) möglich (70 - 80 % nach Karnofsky)"/>
+      <target>
+        <code value="LA9623-0"/>
+        <display value="Restricted in physically strenuous activity but ambulatory and able to carry out work of a light or sedentary nature, e.g., light house work, office work"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="2"/>
+      <display value="Gehfähig, Selbstversorgung möglich, aber nicht arbeitsfähig; kann mehr als 50 % der Wachzeit aufstehen (50 - 60 % nach Karnofsky)"/>
+      <target>
+        <code value="LA9624-8"/>
+        <display value="Ambulatory and capable of all selfcare but unable to carry out any work activities; up and about more than 50% of waking hours"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="3"/>
+      <display value="Nur begrenzte Selbstversorgung möglich; ist 50 % oder mehr der Wachzeit an Bett oder Stuhl gebunden (30  40 % nach Karnofsky)"/>
+      <target>
+        <code value="LA9625-5"/>
+        <display value="Capable of only limited selfcare; confined to bed or chair more than 50% of waking hours"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="4"/>
+      <display value="Völlig pflegebedürftig, keinerlei Selbstversorgung möglich; völlig an Bett oder Stuhl gebunden (10 - 20 % nach Karnofsky)"/>
+      <target>
+        <code value="LA9626-3"/>
+        <display value="Completely disabled; cannot carry on any selfcare; totally confined to bed or chair"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="U"/>
+      <display value="Unbekannt"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="No corresponding LOINC code for 'Unknown' available"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

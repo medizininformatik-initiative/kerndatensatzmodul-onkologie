@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Beispiel: KRK-Bundle - MII IG Kerndatensatz-Modul Onkologie v2026.0.3</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"4.12"}
+    h3,h4,h5,h6{--heading-prefix:"4.12"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Onkologie</span>
+            <br/>
+            <span style="display:inline-block;">2026.0.3 - release
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Start</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Beschreibung
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="beschreibung-modul.html">Beschreibung Modul Onkologie</a>
+      </li>
+      <li>
+        <a href="kontext.html">Kontext im Gesamtprojekt</a>
+      </li>
+      <li>
+        <a href="abweichungen-obds.html">Abweichungen zum oBDS</a>
+      </li>
+      <li>
+        <a href="bezug-nationale-standards.html">Bezug zu nationalen Standards</a>
+      </li>
+      <li>
+        <a href="bezug-internationale-standards.html">Bezug zu internationalen Standards</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsfälle
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="anwendungsfaelle.html">Übersicht</a>
+      </li>
+      <li>
+        <a href="szenarien.html">Szenarien</a>
+      </li>
+      <li>
+        <a href="datensaetze.html">Datensätze inkl. Beschreibungen</a>
+      </li>
+      <li>
+        <a href="uml.html">UML</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Technische Implementierung
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="technische-implementierung.html">Übersicht</a>
+      </li>
+      <li>
+        <a href="profile-inhalt-vererbung.html">Profile - Inhalt und Vererbung</a>
+      </li>
+      <li>
+        <a href="profile-beziehungen.html">Profile - Beziehungen und Referenzen</a>
+      </li>
+      <li>
+        <a href="verwendung-extensions.html">Verwendung von Extensions</a>
+      </li>
+      <li>
+        <a href="fhir-profile.html">FHIR-Profile</a>
+      </li>
+      <li>
+        <a href="organspezifische-module.html">Organspezifische Module</a>
+      </li>
+      <li>
+        <a href="terminologien.html">Terminologien</a>
+      </li>
+      <li>
+        <a href="capability-statement.html">CapabilityStatement</a>
+      </li>
+      <li>
+        <a href="qa-validierung.html">QA und Validierung</a>
+      </li>
+      <li>
+        <a href="obds-snomed-mapping.html">oBDS-SNOMED-CT Mapping</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefakte</a>
+  </li>
+  <li>
+    <a href="referenzen.html">Referenzen</a>
+  </li>
+  <li>
+    <a href="release-notes.html">Release Notes</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-de.png"/>Deutsch</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag de" src="assets/images/lang-de.png"/>Deutsch</div>
+
+    <div><a href="../en/example-krk-bundle.html"><img class="flag" src="assets/images/lang-en.png" alt="flag en"/>English</a></div>
+
+  </div>
+</div>
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='technische-implementierung.html'><b>Technische Implementierung</b></a></li><li><b>Beispiel: KRK-Bundle</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Onkologie - Local Development build (v2026.0.3) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Beispiel: KRK-Bundle</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#inhalt" id="markdown-toc-inhalt">Inhalt</a></li>
+  <li><a href="#bundle-struktur" id="markdown-toc-bundle-struktur">Bundle-Struktur</a></li>
+  <li><a href="#klinisches-szenario" id="markdown-toc-klinisches-szenario">Klinisches Szenario</a></li>
+  <li><a href="#technische-implementation" id="markdown-toc-technische-implementation">Technische Implementation</a></li>
+  <li><a href="#verknüpfungsmuster" id="markdown-toc-verknüpfungsmuster">Verknüpfungsmuster</a></li>
+  <li><a href="#obds-zuordnung" id="markdown-toc-obds-zuordnung">oBDS-Zuordnung</a></li>
+  <li><a href="#valueset-verwendung" id="markdown-toc-valueset-verwendung">ValueSet-Verwendung</a></li>
+  <li><a href="#bundle-beispiel" id="markdown-toc-bundle-beispiel">Bundle-Beispiel</a></li>
+  <li><a href="#einzelne-ressourcen-beispiele" id="markdown-toc-einzelne-ressourcen-beispiele">Einzelne Ressourcen-Beispiele</a></li>
+</ul>
+
+</div>
+<h3 id="inhalt">Inhalt</h3>
+
+<p>Das <strong>KRK Bundle Beispiel</strong> demonstriert die strukturierte Zusammenstellung aller Kolorektales-Karzinom-spezifischen FHIR-Ressourcen in einem einheitlichen Transaktions-Bundle. Dieses Bundle zeigt die praktische Anwendung der KRK-Profile und deren Verknüpfungen untereinander in einem realistischen klinischen Szenario eines Rektumkarzinoms.</p>
+
+<p>Das Bundle implementiert das <strong>Transaction-Pattern</strong> und ist server-konsumierbar, wodurch alle enthaltenen Ressourcen als atomare Operation übertragen werden können.</p>
+
+<hr />
+
+<h3 id="bundle-struktur">Bundle-Struktur</h3>
+
+<p>Das KRK-Bundle umfasst folgende Ressourcen:</p>
+
+<h4 id="primäre-ressourcen">Primäre Ressourcen</h4>
+<ul>
+  <li><strong>Patient</strong>: KRK-Patient (Klaus KolorektalCa)</li>
+  <li><strong>Condition</strong>: Primärtumor-Diagnose (C18 - Bösartige Neubildung des Kolons)</li>
+  <li><strong>Encounter</strong>: Stationärer Behandlungsfall</li>
+</ul>
+
+<h4 id="krk-spezifische-observations">KRK-spezifische Observations</h4>
+<ul>
+  <li><strong>Abstand zur Anokutanlinie</strong>: Tumorsitz 6cm ab Anokutanlinie (KR1)</li>
+  <li><strong>Circumferelle Resektionsebene</strong>: Minimaler Abstand 2mm (KR3)</li>
+  <li><strong>Aboraler Resektionsrand</strong>: Minimaler Abstand 15mm (KR2)</li>
+  <li><strong>MRT Mesorektale Faszie</strong>: Bildgebende Bewertung des Abstands (KR2)</li>
+  <li><strong>Anastomoseninsuffizienz</strong>: Postoperative Komplikationsbewertung (KR8)</li>
+  <li><strong>ASA-Klassifikation</strong>: Präoperative Risikobewertung ASA II (KR9)</li>
+</ul>
+
+<h4 id="therapeutische-ressourcen">Therapeutische Ressourcen</h4>
+<ul>
+  <li><strong>Stoma-Markierung</strong>: Präoperative Stomapositionsmarkierung (KR7)</li>
+  <li><strong>KRK-Operation</strong>: Operative Resektion mit TME-Qualitätsbewertung (KR4)</li>
+  <li><strong>KRK-Specimen</strong>: Operationspräparat mit pathologischer Aufarbeitung</li>
+</ul>
+
+<hr />
+
+<h3 id="klinisches-szenario">Klinisches Szenario</h3>
+
+<p>Das Bundle repräsentiert einen <strong>Patienten mit Rektumkarzinom</strong> mit kompletter präoperativer Diagnostik und operativer Therapie:</p>
+
+<p><strong>Patientencharakteristika:</strong></p>
+<ul>
+  <li><strong>Diagnose</strong>: C18 Kolonkarzinom</li>
+  <li><strong>ASA-Status</strong>: ASA II (mäßiges Operationsrisiko)</li>
+  <li><strong>Tumorlokalisation</strong>: 6cm ab Anokutanlinie (tiefes Rektum)</li>
+</ul>
+
+<p><strong>Präoperative Diagnostik:</strong></p>
+<ul>
+  <li><strong>MRT-Staging</strong>: Bewertung der mesorektalen Faszie</li>
+  <li><strong>Präoperative Vorbereitung</strong>: Stomamarkierung durchgeführt</li>
+</ul>
+
+<p><strong>Operative Therapie:</strong></p>
+<ul>
+  <li><strong>Rektumresektion</strong>: Mit TME-Technik (Totale mesorektale Exzision)</li>
+  <li><strong>Resektionsränder</strong>: R0-Resektion mit ausreichenden Sicherheitsabständen</li>
+  <li><strong>Postoperative Komplikationen</strong>: Keine Anastomoseninsuffizienz</li>
+</ul>
+
+<hr />
+
+<h3 id="technische-implementation">Technische Implementation</h3>
+
+<h4 id="bundle-typ-und-struktur">Bundle-Typ und Struktur</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* type = #transaction
+</code></pre></div></div>
+<ul>
+  <li><strong>Transaction Bundle</strong>: Atomare Übertragung aller Ressourcen</li>
+  <li><strong>Server-konsumierbar</strong>: Alle Entries mit vollständigen Request-Informationen</li>
+</ul>
+
+<h4 id="entry-pattern">Entry-Pattern</h4>
+<p>Jeder Bundle-Entry enthält:</p>
+<ul>
+  <li><strong>fullUrl</strong>: Eindeutige Referenz-URL</li>
+  <li><strong>resource</strong>: Die eigentliche FHIR-Ressource</li>
+  <li><strong>request.method</strong>: HTTP POST für Erstellung</li>
+  <li><strong>request.url</strong>: Ziel-Ressourcentyp</li>
+</ul>
+
+<h4 id="referenz-integrität">Referenz-Integrität</h4>
+<ul>
+  <li><strong>Condition</strong>: Referenziert Patient über <code class="language-plaintext highlighter-rouge">subject</code></li>
+  <li><strong>Observations</strong>: Referenzieren sowohl Patient (<code class="language-plaintext highlighter-rouge">subject</code>) als auch Condition (<code class="language-plaintext highlighter-rouge">focus</code>)</li>
+  <li><strong>Procedures</strong>: Referenzieren Patient (<code class="language-plaintext highlighter-rouge">subject</code>) und Condition (<code class="language-plaintext highlighter-rouge">reasonReference</code>)</li>
+  <li><strong>Specimen</strong>: Referenziert Patient (<code class="language-plaintext highlighter-rouge">subject</code>) und Collection-Procedure</li>
+</ul>
+
+<hr />
+
+<h3 id="verknüpfungsmuster">Verknüpfungsmuster</h3>
+
+<p>Das Bundle demonstriert die <strong>konsistente Referenzstruktur</strong> zwischen KRK-spezifischen Ressourcen:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Patient ← subject ← Condition (Primärtumor)
+                        ↑ focus
+                 Observations (Abstände, ASA, Anastomoseninsuffizienz)
+                        ↑ reasonReference
+                   Procedures (Stoma-Markierung, Operation)
+                        ↑ collection.procedure
+                    Specimen (Operationspräparat)
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="obds-zuordnung">oBDS-Zuordnung</h3>
+
+<p>Das Bundle demonstriert die vollständige Abbildung der oBDS-Datenfelder für Kolorektales Karzinom:</p>
+
+<h4 id="tumor-lokalisation">Tumor-Lokalisation</h4>
+<ul>
+  <li><strong>KR1</strong>: Abstand Anokutanlinie → <code class="language-plaintext highlighter-rouge">Observation/mii-exa-onko-krk-abstand-tumor-anokutanlinie</code></li>
+</ul>
+
+<h4 id="pathologische-bewertung">Pathologische Bewertung</h4>
+<ul>
+  <li><strong>KR2</strong>: Abstand Resektionsrand aboral → <code class="language-plaintext highlighter-rouge">Observation/mii-exa-onko-krk-abstand-resektionsrand-aboral</code></li>
+  <li><strong>KR3</strong>: Abstand circumferelle Resektionsebene → <code class="language-plaintext highlighter-rouge">Observation/mii-exa-onko-krk-abstand-circumferelle-resektionsebene</code></li>
+  <li><strong>KR4</strong>: TME-Qualität → <code class="language-plaintext highlighter-rouge">Specimen/mii-exa-onko-krk-specimen</code></li>
+</ul>
+
+<h4 id="bildgebende-verfahren">Bildgebende Verfahren</h4>
+<ul>
+  <li><strong>KR5</strong>: MRT/CT Mesorektale Faszie → <code class="language-plaintext highlighter-rouge">Observation/mii-exa-onko-krk-abstand-mesorektale-fascie</code></li>
+</ul>
+
+<h4 id="operative-daten">Operative Daten</h4>
+<ul>
+  <li><strong>KR7</strong>: Stomamarkierung → <code class="language-plaintext highlighter-rouge">Procedure/mii-exa-onko-krk-stoma-markierung</code></li>
+  <li><strong>KR8</strong>: Anastomoseninsuffizienz → <code class="language-plaintext highlighter-rouge">Observation/mii-exa-onko-krk-anastomoseninsuffizienz</code></li>
+  <li><strong>KR9</strong>: ASA-Klassifikation → <code class="language-plaintext highlighter-rouge">Observation/mii-exa-onko-krk-asa-klassifikation</code></li>
+</ul>
+
+<hr />
+
+<h3 id="valueset-verwendung">ValueSet-Verwendung</h3>
+
+<p>Das Bundle zeigt die praktische Anwendung verschiedener Terminologien:</p>
+
+<h4 id="loinc">LOINC</h4>
+<ul>
+  <li><strong>Abstand Anokutanlinie</strong>: <code class="language-plaintext highlighter-rouge">33748-5</code> "Distance from anal verge"</li>
+  <li><strong>ASA-Klassifikation</strong>: <code class="language-plaintext highlighter-rouge">97816-3</code> "American Society of Anesthesiologists physical status score"</li>
+</ul>
+
+<h4 id="snomed-ct">SNOMED CT</h4>
+<ul>
+  <li><strong>Anastomoseninsuffizienz</strong>: <code class="language-plaintext highlighter-rouge">235919008</code> "Anastomotic leak"</li>
+  <li><strong>Operative Eingriffe</strong>: Verschiedene SNOMED CT Codes für kolorektale Operationen</li>
+</ul>
+
+<h4 id="icd-10-gm">ICD-10-GM</h4>
+<ul>
+  <li><strong>Diagnose</strong>: <code class="language-plaintext highlighter-rouge">C18</code> "Bösartige Neubildung des Kolons"</li>
+</ul>
+
+<h4 id="obds-codesystems">oBDS CodeSystems</h4>
+<ul>
+  <li><strong>ASA-Klassifikation</strong>: <code class="language-plaintext highlighter-rouge">mii-cs-onko-krk-asa-obds#2</code> "ASA II"</li>
+  <li><strong>Stomamarkierung</strong>: <code class="language-plaintext highlighter-rouge">mii-cs-onko-krk-stoma-anzeichnung#durchgefuehrt</code> "Durchgeführt"</li>
+  <li><strong>TME-Qualität</strong>: <code class="language-plaintext highlighter-rouge">mii-cs-onko-krk-tme-qualitaet#komplett</code> "Komplett"</li>
+</ul>
+
+<hr />
+
+<h3 id="bundle-beispiel">Bundle-Beispiel</h3>
+
+<p><a href="Bundle-mii-exa-onko-krk-bundle.html">Beispiel: mii-exa-onko-krk-bundle</a></p>
+
+<hr />
+
+<h3 id="einzelne-ressourcen-beispiele">Einzelne Ressourcen-Beispiele</h3>
+
+<h4 id="patient">Patient</h4>
+<p><a href="Patient-mii-exa-onko-krk-bundle-patient.html">Beispiel: mii-exa-onko-krk-bundle-patient</a></p>
+
+<h4 id="primärtumor-condition">Primärtumor-Condition</h4>
+<p><a href="Condition-mii-exa-onko-krk-diagnose.html">Beispiel: mii-exa-onko-krk-diagnose</a></p>
+
+<h4 id="abstand-anokutanlinie">Abstand Anokutanlinie</h4>
+<p><a href="Observation-mii-exa-onko-krk-abstand-tumor-anokutanlinie.html">Beispiel: mii-exa-onko-krk-abstand-tumor-anokutanlinie</a></p>
+
+<h4 id="circumferelle-resektionsebene">Circumferelle Resektionsebene</h4>
+<p><a href="Observation-mii-exa-onko-krk-abstand-circumferelle-resektionsebene.html">Beispiel: mii-exa-onko-krk-abstand-circumferelle-resektionsebene</a></p>
+
+<h4 id="aboraler-resektionsrand">Aboraler Resektionsrand</h4>
+<p><a href="Observation-mii-exa-onko-krk-abstand-resektionsrand-aboral.html">Beispiel: mii-exa-onko-krk-abstand-resektionsrand-aboral</a></p>
+
+<h4 id="mrt-mesorektale-faszie">MRT Mesorektale Faszie</h4>
+<p><a href="Observation-mii-exa-onko-krk-abstand-mesorektale-fascie.html">Beispiel: mii-exa-onko-krk-abstand-mesorektale-fascie</a></p>
+
+<h4 id="asa-klassifikation">ASA-Klassifikation</h4>
+<p><code class="language-plaintext highlighter-rouge">mii-exa-onko-krk-asa-klassifikation</code> <!-- TODO:REVIEW Beispiel nicht im Package: mii-exa-onko-krk-asa-klassifikation --></p>
+
+<h4 id="anastomoseninsuffizienz">Anastomoseninsuffizienz</h4>
+<p><a href="Observation-mii-exa-onko-krk-anastomoseninsuffizienz.html">Beispiel: mii-exa-onko-krk-anastomoseninsuffizienz</a></p>
+
+<h4 id="stoma-markierung">Stoma-Markierung</h4>
+<p><a href="Procedure-mii-exa-onko-krk-stoma-markierung.html">Beispiel: mii-exa-onko-krk-stoma-markierung</a></p>
+
+<h4 id="krk-operation">KRK-Operation</h4>
+<p><a href="Procedure-mii-exa-onko-krk-operation.html">Beispiel: mii-exa-onko-krk-operation</a></p>
+
+<h4 id="krk-specimen">KRK-Specimen</h4>
+<p><a href="Specimen-mii-exa-onko-krk-specimen.html">Beispiel: mii-exa-onko-krk-specimen</a></p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
+          Package mii-ig-onko-de-v2026#2026.0.3 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt 
+  <span title="2026-07-02 11:24:00 +0000">
+    2026-07-02
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-Bericht</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

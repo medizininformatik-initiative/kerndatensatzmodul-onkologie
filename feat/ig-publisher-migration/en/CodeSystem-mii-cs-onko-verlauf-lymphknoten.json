@@ -1,0 +1,63 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "mii-cs-onko-verlauf-lymphknoten",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablecodesystem"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-onko-verlauf-lymphknoten</b></p><a name=\"en-mii-cs-onko-verlauf-lymphknoten\"> </a><a name=\"en-hcmii-cs-onko-verlauf-lymphknoten\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-lymphknoten</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">K<a name=\"en-mii-cs-onko-verlauf-lymphknoten-K\"> </a></td><td>kein Lymphknotenbefall nachweisbar</td></tr><tr><td style=\"white-space:nowrap\">R<a name=\"en-mii-cs-onko-verlauf-lymphknoten-R\"> </a></td><td>neu aufgetretenes Lymphknotenrezidiv</td></tr><tr><td style=\"white-space:nowrap\">T<a name=\"en-mii-cs-onko-verlauf-lymphknoten-T\"> </a></td><td>bekannter Lymphknotenbefall Residuen</td></tr><tr><td style=\"white-space:nowrap\">P<a name=\"en-mii-cs-onko-verlauf-lymphknoten-P\"> </a></td><td>bekannter Lymphknotenbefall Progress</td></tr><tr><td style=\"white-space:nowrap\">N<a name=\"en-mii-cs-onko-verlauf-lymphknoten-N\"> </a></td><td>bekannter Lymphknotenbefall No Change</td></tr><tr><td style=\"white-space:nowrap\">F<a name=\"en-mii-cs-onko-verlauf-lymphknoten-F\"> </a></td><td>fraglicher Befund</td></tr><tr><td style=\"white-space:nowrap\">U<a name=\"en-mii-cs-onko-verlauf-lymphknoten-U\"> </a></td><td>unbekannt</td></tr><tr><td style=\"white-space:nowrap\">X<a name=\"en-mii-cs-onko-verlauf-lymphknoten-X\"> </a></td><td>fehlende Angabe</td></tr></table></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-lymphknoten",
+  "version" : "2026.0.3",
+  "name" : "MII_CS_Onko_Verlauf_Lymphknoten",
+  "title" : "MII CS Onkologie Verlauf Lymphknoten",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-07-02T11:24:18+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "oBDS-spezifisches Codesystem für die Beurteilung von Lymphknoten im Behandlungsverlauf ",
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 8,
+  "concept" : [{
+    "code" : "K",
+    "display" : "kein Lymphknotenbefall nachweisbar"
+  },
+  {
+    "code" : "R",
+    "display" : "neu aufgetretenes Lymphknotenrezidiv"
+  },
+  {
+    "code" : "T",
+    "display" : "bekannter Lymphknotenbefall Residuen"
+  },
+  {
+    "code" : "P",
+    "display" : "bekannter Lymphknotenbefall Progress"
+  },
+  {
+    "code" : "N",
+    "display" : "bekannter Lymphknotenbefall No Change"
+  },
+  {
+    "code" : "F",
+    "display" : "fraglicher Befund"
+  },
+  {
+    "code" : "U",
+    "display" : "unbekannt"
+  },
+  {
+    "code" : "X",
+    "display" : "fehlende Angabe"
+  }]
+}

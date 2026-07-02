@@ -1,0 +1,138 @@
+# Mapping oBDS Karnofsky zu LOINC - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+
+## ConceptMap: Mapping oBDS Karnofsky zu LOINC 
+
+ 
+Mapping der oBDS-Codes für Karnofsky Performance Status zu LOINC Answer List LA29175-9 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "ConceptMap",
+  "id" : "mii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc",
+  "version" : "2026.0.3",
+  "title" : "Mapping oBDS Karnofsky zu LOINC",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-07-02T11:24:18+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Mapping der oBDS-Codes für Karnofsky Performance Status zu LOINC Answer List LA29175-9",
+  "sourceCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-karnofsky",
+  "targetCanonical" : "http://loinc.org/vs/LL4986-7",
+  "group" : [{
+    "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-karnofsky",
+    "target" : "http://loinc.org",
+    "element" : [{
+      "code" : "100%",
+      "display" : "100%",
+      "target" : [{
+        "code" : "LA29165-0",
+        "display" : "Normal; no complaints; no evidence of disease",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "90%",
+      "display" : "90%",
+      "target" : [{
+        "code" : "LA29166-8",
+        "display" : "Able to carry on normal activity; minor signs or symptoms of disease",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "80%",
+      "display" : "80%",
+      "target" : [{
+        "code" : "LA29167-6",
+        "display" : "Normal activity with effort; some signs or symptoms of disease",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "70%",
+      "display" : "70%",
+      "target" : [{
+        "code" : "LA29168-4",
+        "display" : "Cares for self; unable to carry on normal activity or to do active work",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "60%",
+      "display" : "60%",
+      "target" : [{
+        "code" : "LA29169-2",
+        "display" : "Requires occasional assistance, but is able to care for most needs",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "50%",
+      "display" : "50%",
+      "target" : [{
+        "code" : "LA29170-0",
+        "display" : "Requires considerable assistance and frequent medical care",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "40%",
+      "display" : "40%",
+      "target" : [{
+        "code" : "LA29171-8",
+        "display" : "Disabled; requires special care and assistance",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "30%",
+      "display" : "30%",
+      "target" : [{
+        "code" : "LA29172-6",
+        "display" : "Severely disabled; hospitalization is indicated, although death not imminent",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "20%",
+      "display" : "20%",
+      "target" : [{
+        "code" : "LA29173-4",
+        "display" : "Very sick; hospitalization necessary; active supportive treatment necessary",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "10%",
+      "display" : "10%",
+      "target" : [{
+        "code" : "LA29174-2",
+        "display" : "Moribund; fatal processes progressing rapidly",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "0%",
+      "display" : "0%",
+      "target" : [{
+        "code" : "LA9627-1",
+        "display" : "Dead",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}
+
+```

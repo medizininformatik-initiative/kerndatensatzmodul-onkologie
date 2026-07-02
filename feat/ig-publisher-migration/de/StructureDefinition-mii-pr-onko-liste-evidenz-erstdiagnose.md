@@ -1,0 +1,201 @@
+# MII PR Onkologie Evidenz Diagnose Primärtumor - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+
+## Ressourcenprofil: MII PR Onkologie Evidenz Diagnose Primärtumor 
+
+ 
+Dieses Profil beschreibt eine Liste, die alle Observationen und Berichte enthält, die für eine Erstdiagnostik relevant waren. (synchrone Observationen im Sinne der Krebsregister) 
+
+Die List-Ressource ist eine flache Sammlung von Ressourcen und bietet Funktionen für die Verwaltung der Sammlung. In diesem Fall dient die Ressource als Sammlung der Observationen und Befundberichte, die zum Zeitpunkt der onkologischen Erstdiagnose bekannt sind. Dazu gehören beispielsweise eine TNM-Klassifikation sowie weitere diagnostisch relevante Klassifikationen, Fernmetastasen, Histologien etc.
+
+Die Evidenz-Liste selbst ist nicht Teil des oBDS, sondern soll den Stand zum Zeitpunkt der Erstdiagnose dauerhaft festhalten.
+
+* Die Liste **SOLLTE** auf Basis der Inhalte erstellt werden, die vor bzw. zum Zeitpunkt der Erstdiagnosestellung bekannt waren.
+* Dazu **KÖNNEN** die Einträge direkt aus der Diagnosemeldung übernommen werden.
+
+-------
+
+**Suchparameter**
+
+Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombination:
+
+1. Der Suchparameter `_id` MUSS unterstützt werden:Beispiele:`GET [base]/Condition?_id=1234`Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+1. Der Suchparameter "_profile" MUSS unterstützt werden:Beispiele:`GET [base]/Condition?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose`Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
+1. Der Suchparameter `_id` MUSS unterstützt werden:Beispiele:`GET [base]/Condition?_id=1234`Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+1. Der Suchparameter "_profile" MUSS unterstützt werden:Beispiele:`GET [base]/Condition?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose`Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
+1. Der Suchparameter `_id` MUSS unterstützt werden:Beispiele:`GET [base]/Condition?_id=1234`Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+1. Der Suchparameter "_profile" MUSS unterstützt werden:Beispiele:`GET [base]/Condition?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose`Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
+
+**Beispiele**
+
+[Beispiel: mii-exa-onko-liste-evidenz-erstdiagnose-1](List-mii-exa-onko-liste-evidenz-erstdiagnose-1.md)
+
+**Usages:**
+
+* Refer to this Profile: [MII PR Onkologie Diagnose Primärtumor](StructureDefinition-mii-pr-onko-diagnose-primaertumor.md)
+* Examples for this Profile: [List/mii-exa-onko-liste-evidenz-erstdiagnose-1](List-mii-exa-onko-liste-evidenz-erstdiagnose-1.md)
+* CapabilityStatements using this Profile: [MII CPS Onkology CapabilityStatement](CapabilityStatement-mii-cps-onko-capabilitystatement.md)
+
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/mii-ig-onko-de-v2026|current/StructureDefinition/StructureDefinition-mii-pr-onko-liste-evidenz-erstdiagnose.json)
+
+### Formale Ansichten des Profilinhalts
+
+ [Beschreibung von Profilen, Differentials, Snapshots und deren Repräsentationen](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
+
+*  [Schlüsselelemente-Tabelle](#tabs-key) 
+*  [Differential-Tabelle](#tabs-diff) 
+*  [Snapshot-Tabelle](#tabs-snap) 
+*  [Statistiken/Referenzen](#tabs-summ) 
+*  [Alle](#tabs-all) 
+
+#### Terminology Bindings
+
+#### Constraints
+
+Diese Struktur ist abgeleitet von [List](http://hl7.org/fhir/R4/list.html) 
+
+#### Terminology Bindings
+
+#### Constraints
+
+Diese Struktur ist abgeleitet von [List](http://hl7.org/fhir/R4/list.html) 
+
+** Summary **
+
+Mandatory: 3 elements
+ Must-Support: 9 elements
+
+ **Schlüsselelemente-Ansicht** 
+
+#### Terminology Bindings
+
+#### Constraints
+
+ **Differential-Ansicht** 
+
+Diese Struktur ist abgeleitet von [List](http://hl7.org/fhir/R4/list.html) 
+
+ **Snapshot-AnsichtView** 
+
+#### Terminology Bindings
+
+#### Constraints
+
+Diese Struktur ist abgeleitet von [List](http://hl7.org/fhir/R4/list.html) 
+
+** Summary **
+
+Mandatory: 3 elements
+ Must-Support: 9 elements
+
+ 
+
+Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-liste-evidenz-erstdiagnose.csv), [Excel](../StructureDefinition-mii-pr-onko-liste-evidenz-erstdiagnose.xlsx), [Schematron](../StructureDefinition-mii-pr-onko-liste-evidenz-erstdiagnose.sch) 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "mii-pr-onko-liste-evidenz-erstdiagnose",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-liste-evidenz-erstdiagnose",
+  "version" : "2026.0.3",
+  "name" : "MII_PR_Onko_Liste_Evidenz_Erstdiagnose",
+  "title" : "MII PR Onkologie Evidenz Diagnose Primärtumor",
+  "status" : "active",
+  "date" : "2026-07-02T11:24:18+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Dieses Profil beschreibt eine Liste, die alle Observationen und Berichte enthält, die für eine Erstdiagnostik relevant waren.  (synchrone Observationen im Sinne der Krebsregister)",
+  "fhirVersion" : "4.0.1",
+  "mapping" : [{
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  }],
+  "kind" : "resource",
+  "abstract" : false,
+  "type" : "List",
+  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/List",
+  "derivation" : "constraint",
+  "differential" : {
+    "element" : [{
+      "id" : "List",
+      "path" : "List"
+    },
+    {
+      "id" : "List.meta.profile",
+      "path" : "List.meta.profile",
+      "mustSupport" : true
+    },
+    {
+      "id" : "List.status",
+      "path" : "List.status",
+      "patternCode" : "current",
+      "mustSupport" : true
+    },
+    {
+      "id" : "List.mode",
+      "path" : "List.mode",
+      "patternCode" : "snapshot",
+      "mustSupport" : true
+    },
+    {
+      "id" : "List.title",
+      "path" : "List.title",
+      "min" : 1,
+      "patternString" : "Liste der Evidenz zum Erstdiagnosezeitpunkt",
+      "mustSupport" : true
+    },
+    {
+      "id" : "List.subject",
+      "path" : "List.subject",
+      "min" : 1,
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Patient"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "List.encounter",
+      "path" : "List.encounter",
+      "mustSupport" : true
+    },
+    {
+      "id" : "List.entry",
+      "path" : "List.entry",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "List.entry.flag",
+      "path" : "List.entry.flag",
+      "mustSupport" : true
+    },
+    {
+      "id" : "List.entry.item",
+      "path" : "List.entry.item",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Observation",
+        "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"]
+      }],
+      "mustSupport" : true
+    }]
+  }
+}
+
+```

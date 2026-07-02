@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RequestGroup xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-molecular-cdk46-protocol"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie|2026.0.3"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: RequestGroup mii-exa-onko-molecular-cdk46-protocol</b></p><a name="en-mii-exa-onko-molecular-cdk46-protocol"> </a><a name="en-hcmii-exa-onko-molecular-cdk46-protocol"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie.html">MII PR Onkologie Therapieempfehlung Kombinationstherapie</a> version: 2026.0.3</p></div><p><b>status</b>: Active</p><p><b>intent</b>: Proposal</p><p><b>code</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ CZ}">CDK4/6 Inhibitor + Hormontherapie Kombination</span></p><p><b>subject</b>: <a href="Patient-mii-exa-onko-molecular-board-patient.html">Maria Müller  Female, DoB: 1968-07-22 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#MTB-2024-001)</a></p><p><b>authoredOn</b>: 2024-01-15</p><p><b>reasonReference</b>: <a href="Condition-primaertumor-example.html">Condition Bösartige Neubildung: Brustdrüse, nicht näher bezeichnet</a></p><h3>Actions</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Title</b></td><td><b>Description</b></td><td><b>Resource</b></td></tr><tr><td style="display: none">*</td><td>CDK4/6 Inhibitor (pharmazeutische Klasse)</td><td>Beliebiger CDK4/6 Inhibitor: Palbociclib, Ribociclib oder Abemaciclib je nach Verfügbarkeit und Patientenfaktoren</td><td><a href="MedicationRequest-mii-exa-onko-cdk46-class-medication.html">MedicationRequest: status = active; intent = option; medication[x] = Cyclin-abhängige Kinasen (CDK)-Inhibitoren; authoredOn = 2024-01-15; note = Molekulares Tumorboard empfiehlt beliebigen CDK4/6 Inhibitor basierend auf HR+/HER2- Profil. Konkrete Wirkstoffauswahl nach Verfügbarkeit und Patientenfaktoren.</a></td></tr></table></div>
+  </text>
+  <status value="active"/>
+  <intent value="proposal"/>
+  <code>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ"/>
+      <code value="CZ"/>
+    </coding>
+    <text value="CDK4/6 Inhibitor + Hormontherapie Kombination"/>
+  </code>
+  <subject>
+    <reference value="Patient/mii-exa-onko-molecular-board-patient"/>
+  </subject>
+  <authoredOn value="2024-01-15"/>
+  <reasonReference>
+    <reference value="Condition/primaertumor-example"/>
+  </reasonReference>
+  <action>
+    <title value="CDK4/6 Inhibitor (pharmazeutische Klasse)"/>
+    <description value="Beliebiger CDK4/6 Inhibitor: Palbociclib, Ribociclib oder Abemaciclib je nach Verfügbarkeit und Patientenfaktoren"/>
+    <resource>
+      <reference value="MedicationRequest/mii-exa-onko-cdk46-class-medication"/>
+    </resource>
+  </action>
+</RequestGroup>

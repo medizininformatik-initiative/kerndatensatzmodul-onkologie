@@ -1,0 +1,827 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>MII CS Onkologie TNM UICC - MII IG Kerndatensatz-Modul Onkologie v2026.0.3</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"7.240"}
+    h3,h4,h5,h6{--heading-prefix:"7.240"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Onkologie</span>
+            <br/>
+            <span style="display:inline-block;">2026.0.3 - release
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Start</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Beschreibung
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="beschreibung-modul.html">Beschreibung Modul Onkologie</a>
+      </li>
+      <li>
+        <a href="kontext.html">Kontext im Gesamtprojekt</a>
+      </li>
+      <li>
+        <a href="abweichungen-obds.html">Abweichungen zum oBDS</a>
+      </li>
+      <li>
+        <a href="bezug-nationale-standards.html">Bezug zu nationalen Standards</a>
+      </li>
+      <li>
+        <a href="bezug-internationale-standards.html">Bezug zu internationalen Standards</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsfälle
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="anwendungsfaelle.html">Übersicht</a>
+      </li>
+      <li>
+        <a href="szenarien.html">Szenarien</a>
+      </li>
+      <li>
+        <a href="datensaetze.html">Datensätze inkl. Beschreibungen</a>
+      </li>
+      <li>
+        <a href="uml.html">UML</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Technische Implementierung
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="technische-implementierung.html">Übersicht</a>
+      </li>
+      <li>
+        <a href="profile-inhalt-vererbung.html">Profile - Inhalt und Vererbung</a>
+      </li>
+      <li>
+        <a href="profile-beziehungen.html">Profile - Beziehungen und Referenzen</a>
+      </li>
+      <li>
+        <a href="verwendung-extensions.html">Verwendung von Extensions</a>
+      </li>
+      <li>
+        <a href="fhir-profile.html">FHIR-Profile</a>
+      </li>
+      <li>
+        <a href="organspezifische-module.html">Organspezifische Module</a>
+      </li>
+      <li>
+        <a href="terminologien.html">Terminologien</a>
+      </li>
+      <li>
+        <a href="capability-statement.html">CapabilityStatement</a>
+      </li>
+      <li>
+        <a href="qa-validierung.html">QA und Validierung</a>
+      </li>
+      <li>
+        <a href="obds-snomed-mapping.html">oBDS-SNOMED-CT Mapping</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefakte</a>
+  </li>
+  <li>
+    <a href="referenzen.html">Referenzen</a>
+  </li>
+  <li>
+    <a href="release-notes.html">Release Notes</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+
+    <div><a href="../de/CodeSystem-mii-cs-onko-tnm-uicc.html"><img class="flag" src="assets/images/lang-de.png" alt="flag de"/>Deutsch</a></div>
+
+  </div>
+</div>
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>MII CS Onkologie TNM UICC</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<!-- layouts\layout-codesystem -->
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Onkologie - Local Development build (v2026.0.3) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="CodeSystem-mii-cs-onko-tnm-uicc.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="CodeSystem-mii-cs-onko-tnm-uicc.json.html">JSON</a>
+    </li>
+  
+
+
+
+
+</ul>
+
+  <a name="root"> </a>
+
+  <h2 id="root">CodeSystem: MII CS Onkologie TNM UICC
+
+  </h2>
+
+  <table class="colsi" data-fhir="generated">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">https://www.uicc.org/resources/tnm<button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://www.uicc.org/resources/tnm"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">2026.0.3<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="https://www.uicc.org/resources/tnm|2026.0.3"/></span>
+      </td>
+      <td style="text-align: right;border-left-style: hidden" title="Enable this to see changes since the last official release">
+        <span id="toggle-change-display"><label style="margin:0;font-weight:normal" for="showChanges">Highlight text changes?</label>
+  
+        <input style="margin:0" type="checkbox" id="showChanges" onchange="toggleChanges()"/>
+  
+      </span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="5">
+        
+          Active
+          
+
+            as of 
+2026-07-02
+
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">MII_CS_Onko_TNM_UICC</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+<p>
+<p>Codes für TNM UICC Ausprägungen.</p>
+
+</p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <p>This Code system is referenced in the definition of the following value sets:</p>
+
+  
+<ul>
+ <li><a href="ValueSet-mii-vs-onko-tnm-cp-praefix.html">MII_VS_Onko_TNM_cp_Praefix</a></li>
+ <li><a href="ValueSet-mii-vs-onko-tnm-itc-suffix.html">MII_VS_Onko_TNM_ITC_Suffix</a></li>
+ <li><a href="ValueSet-mii-vs-onko-tnm-l-kategorie-werte.html">MII_VS_Onko_TNM_L_Kategorie_Werte</a></li>
+ <li><a href="ValueSet-mii-vs-onko-tnm-m-kategorie-werte.html">MII_VS_Onko_TNM_M_Kategorie_Werte</a></li>
+ <li><a href="ValueSet-mii-vs-onko-tnm-m-symbol.html">MII_VS_Onko_TNM_m_Symbol</a></li>
+ <li><a href="ValueSet-mii-vs-onko-tnm-n-kategorie-werte.html">MII_VS_Onko_TNM_N_Kategorie_Werte</a></li>
+ <li><a href="ValueSet-mii-vs-onko-tnm-pn-kategorie-werte.html">MII_VS_Onko_TNM_Pn_Kategorie_Werte</a></li>
+ <li><a href="ValueSet-mii-vs-onko-tnm-s-kategorie-werte.html">MII_VS_Onko_TNM_S_Kategorie_Werte</a></li>
+ <li><a href="ValueSet-mii-vs-onko-tnm-sn-suffix.html">MII_VS_Onko_TNM_SN_Suffix</a></li>
+ <li><a href="ValueSet-mii-vs-onko-tnm-t-kategorie-werte.html">MII_VS_Onko_TNM_T_Kategorie_Werte</a></li>
+ <li><a href="ValueSet-mii-vs-onko-tnm-uicc-stadium.html">MII_VS_Onko_TNM_UICC_Stadium</a></li>
+ <li><a href="ValueSet-mii-vs-onko-tnm-v-kategorie-werte.html">MII_VS_Onko_TNM_V_Kategorie_Werte</a></li>
+</ul>
+
+
+  <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated"><p class="res-header-id"></p><a name="mii-cs-onko-tnm-uicc"> </a><a name="hcmii-cs-onko-tnm-uicc"> </a>
+<div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"></p><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org/fhir/R4/shareablecodesystem.html">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.uicc.org/resources/tnm</code> defines the following codes:</p>
+<table class="codes" data-fhir="generated"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr>
+<tr><td style="white-space:nowrap">y<a name="mii-cs-onko-tnm-uicc-y"> </a></td>
+<td>y</td>
+<td>Klassifikation erfolgte während oder nach initialer multimodaler Therapie</td></tr>
+<tr><td style="white-space:nowrap">r<a name="mii-cs-onko-tnm-uicc-r"> </a></td>
+<td>r</td>
+<td>Klassifikation erfolgte zur Beurteilung eines Rezidivs</td></tr>
+<tr><td style="white-space:nowrap">a<a name="mii-cs-onko-tnm-uicc-a"> </a></td>
+<td>a</td>
+<td>Klassifikation erfolgte durch Autopsie</td></tr>
+<tr><td style="white-space:nowrap">c<a name="mii-cs-onko-tnm-uicc-c"> </a></td>
+<td>c</td>
+<td>Kategorie wurde durch klinische Angaben festgestellt.</td></tr>
+<tr><td style="white-space:nowrap">p<a name="mii-cs-onko-tnm-uicc-p"> </a></td>
+<td>p</td>
+<td>Feststellung der Kategorie erfolgte durch eine pathohistologische Untersuchung, mit der auch der höchste Grad der jeweiligen Kategorie hätte festgestellt werden können.</td></tr>
+<tr><td style="white-space:nowrap">u<a name="mii-cs-onko-tnm-uicc-u"> </a></td>
+<td>u</td>
+<td>Feststellung mit Ultraschall</td></tr>
+<tr><td style="white-space:nowrap">TX<a name="mii-cs-onko-tnm-uicc-TX"> </a></td>
+<td>TX</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">T0<a name="mii-cs-onko-tnm-uicc-T0"> </a></td>
+<td>T0</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">Ta<a name="mii-cs-onko-tnm-uicc-Ta"> </a></td>
+<td>Ta</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">Tis<a name="mii-cs-onko-tnm-uicc-Tis"> </a></td>
+<td>Tis</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">Tis(LAMN)<a name="mii-cs-onko-tnm-uicc-Tis.40LAMN.41"> </a></td>
+<td>Tis(LAMN)</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">Tis(DCIS)<a name="mii-cs-onko-tnm-uicc-Tis.40DCIS.41"> </a></td>
+<td>Tis(DCIS)</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">Tis(LCIS)<a name="mii-cs-onko-tnm-uicc-Tis.40LCIS.41"> </a></td>
+<td>Tis(LCIS)</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">Tis(Paget)<a name="mii-cs-onko-tnm-uicc-Tis.40Paget.41"> </a></td>
+<td>Tis(Paget)</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">Tis(pu)<a name="mii-cs-onko-tnm-uicc-Tis.40pu.41"> </a></td>
+<td>Tis(pu)</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">Tis(pd)<a name="mii-cs-onko-tnm-uicc-Tis.40pd.41"> </a></td>
+<td>Tis(pd)</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">T1<a name="mii-cs-onko-tnm-uicc-T1"> </a></td>
+<td>T1</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">T1mi<a name="mii-cs-onko-tnm-uicc-T1mi"> </a></td>
+<td>T1mi</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">T1a<a name="mii-cs-onko-tnm-uicc-T1a"> </a></td>
+<td>T1a</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">T1a1<a name="mii-cs-onko-tnm-uicc-T1a1"> </a></td>
+<td>T1a1</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">T1a2<a name="mii-cs-onko-tnm-uicc-T1a2"> </a></td>
+<td>T1a2</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">T1b<a name="mii-cs-onko-tnm-uicc-T1b"> </a></td>
+<td>T1b</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">T1b1<a name="mii-cs-onko-tnm-uicc-T1b1"> </a></td>
+<td>T1b1</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">T1b2<a name="mii-cs-onko-tnm-uicc-T1b2"> </a></td>
+<td>T1b2</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">T1c<a name="mii-cs-onko-tnm-uicc-T1c"> </a></td>
+<td>T1c</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">T1c1<a name="mii-cs-onko-tnm-uicc-T1c1"> </a></td>
+<td>T1c1</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">T1c2<a name="mii-cs-onko-tnm-uicc-T1c2"> </a></td>
+<td>T1c2</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">T1c3<a name="mii-cs-onko-tnm-uicc-T1c3"> </a></td>
+<td>T1c3</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">T1d<a name="mii-cs-onko-tnm-uicc-T1d"> </a></td>
+<td>T1d</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">T2<a name="mii-cs-onko-tnm-uicc-T2"> </a></td>
+<td>T2</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">T2a<a name="mii-cs-onko-tnm-uicc-T2a"> </a></td>
+<td>T2a</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">T2a1<a name="mii-cs-onko-tnm-uicc-T2a1"> </a></td>
+<td>T2a1</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">T2a2<a name="mii-cs-onko-tnm-uicc-T2a2"> </a></td>
+<td>T2a2</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">T2b<a name="mii-cs-onko-tnm-uicc-T2b"> </a></td>
+<td>T2b</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">T2c<a name="mii-cs-onko-tnm-uicc-T2c"> </a></td>
+<td>T2c</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">T2d<a name="mii-cs-onko-tnm-uicc-T2d"> </a></td>
+<td>T2d</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">T3<a name="mii-cs-onko-tnm-uicc-T3"> </a></td>
+<td>T3</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">T3a<a name="mii-cs-onko-tnm-uicc-T3a"> </a></td>
+<td>T3a</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">T3b<a name="mii-cs-onko-tnm-uicc-T3b"> </a></td>
+<td>T3b</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">T3c<a name="mii-cs-onko-tnm-uicc-T3c"> </a></td>
+<td>T3c</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">T3d<a name="mii-cs-onko-tnm-uicc-T3d"> </a></td>
+<td>T3d</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">T3e<a name="mii-cs-onko-tnm-uicc-T3e"> </a></td>
+<td>T3e</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">T4<a name="mii-cs-onko-tnm-uicc-T4"> </a></td>
+<td>T4</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">T4a<a name="mii-cs-onko-tnm-uicc-T4a"> </a></td>
+<td>T4a</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">T4b<a name="mii-cs-onko-tnm-uicc-T4b"> </a></td>
+<td>T4b</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">T4c<a name="mii-cs-onko-tnm-uicc-T4c"> </a></td>
+<td>T4c</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">T4d<a name="mii-cs-onko-tnm-uicc-T4d"> </a></td>
+<td>T4d</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">T4e<a name="mii-cs-onko-tnm-uicc-T4e"> </a></td>
+<td>T4e</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">m<a name="mii-cs-onko-tnm-uicc-m"> </a></td>
+<td>(m)</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">2<a name="mii-cs-onko-tnm-uicc-2"> </a></td>
+<td>(2)</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">3<a name="mii-cs-onko-tnm-uicc-3"> </a></td>
+<td>(3)</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">4<a name="mii-cs-onko-tnm-uicc-4"> </a></td>
+<td>(4)</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">5<a name="mii-cs-onko-tnm-uicc-5"> </a></td>
+<td>(5)</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">6<a name="mii-cs-onko-tnm-uicc-6"> </a></td>
+<td>(6)</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">7<a name="mii-cs-onko-tnm-uicc-7"> </a></td>
+<td>(7)</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">8<a name="mii-cs-onko-tnm-uicc-8"> </a></td>
+<td>(8)</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">9<a name="mii-cs-onko-tnm-uicc-9"> </a></td>
+<td>(9)</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">10<a name="mii-cs-onko-tnm-uicc-10"> </a></td>
+<td>(10)</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">NX<a name="mii-cs-onko-tnm-uicc-NX"> </a></td>
+<td>Nx</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">N0<a name="mii-cs-onko-tnm-uicc-N0"> </a></td>
+<td>N0</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">N1<a name="mii-cs-onko-tnm-uicc-N1"> </a></td>
+<td>N1</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">N1mi<a name="mii-cs-onko-tnm-uicc-N1mi"> </a></td>
+<td>N1(mi)</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">N1a<a name="mii-cs-onko-tnm-uicc-N1a"> </a></td>
+<td>N1a</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">N1b<a name="mii-cs-onko-tnm-uicc-N1b"> </a></td>
+<td>N1b</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">N1c<a name="mii-cs-onko-tnm-uicc-N1c"> </a></td>
+<td>N1c</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">N2<a name="mii-cs-onko-tnm-uicc-N2"> </a></td>
+<td>N2</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">N2a<a name="mii-cs-onko-tnm-uicc-N2a"> </a></td>
+<td>N2a</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">N2b<a name="mii-cs-onko-tnm-uicc-N2b"> </a></td>
+<td>N2b</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">N2c<a name="mii-cs-onko-tnm-uicc-N2c"> </a></td>
+<td>N2c</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">N3<a name="mii-cs-onko-tnm-uicc-N3"> </a></td>
+<td>N3</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">N3a<a name="mii-cs-onko-tnm-uicc-N3a"> </a></td>
+<td>N3a</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">N3b<a name="mii-cs-onko-tnm-uicc-N3b"> </a></td>
+<td>N3b</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">N3c<a name="mii-cs-onko-tnm-uicc-N3c"> </a></td>
+<td>N3c</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">M0<a name="mii-cs-onko-tnm-uicc-M0"> </a></td>
+<td>M0</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">M1<a name="mii-cs-onko-tnm-uicc-M1"> </a></td>
+<td>M1</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">M1a<a name="mii-cs-onko-tnm-uicc-M1a"> </a></td>
+<td>M1a</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">M1b<a name="mii-cs-onko-tnm-uicc-M1b"> </a></td>
+<td>M1b</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">M1c<a name="mii-cs-onko-tnm-uicc-M1c"> </a></td>
+<td>M1c</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">M1d<a name="mii-cs-onko-tnm-uicc-M1d"> </a></td>
+<td>M1d</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">MX<a name="mii-cs-onko-tnm-uicc-MX"> </a></td>
+<td>MX</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">i+<a name="mii-cs-onko-tnm-uicc-i.43"> </a></td>
+<td>(i+)</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">i-<a name="mii-cs-onko-tnm-uicc-i-"> </a></td>
+<td>(i-)</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">mol+<a name="mii-cs-onko-tnm-uicc-mol.43"> </a></td>
+<td>(mol+)</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">mol-<a name="mii-cs-onko-tnm-uicc-mol-"> </a></td>
+<td>(mol-)</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">sn<a name="mii-cs-onko-tnm-uicc-sn"> </a></td>
+<td>(sn)</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">L0<a name="mii-cs-onko-tnm-uicc-L0"> </a></td>
+<td>L0</td>
+<td>Keine Lymphgefäßinvasion</td></tr>
+<tr><td style="white-space:nowrap">L1<a name="mii-cs-onko-tnm-uicc-L1"> </a></td>
+<td>L1</td>
+<td>Lymphgefäßinvasion</td></tr>
+<tr><td style="white-space:nowrap">LX<a name="mii-cs-onko-tnm-uicc-LX"> </a></td>
+<td>LX</td>
+<td>Lymphgefäßinvasion kann nicht beurteilt werden</td></tr>
+<tr><td style="white-space:nowrap">V0<a name="mii-cs-onko-tnm-uicc-V0"> </a></td>
+<td>V0</td>
+<td>Keine Veneninvasion</td></tr>
+<tr><td style="white-space:nowrap">V1<a name="mii-cs-onko-tnm-uicc-V1"> </a></td>
+<td>V1</td>
+<td>Mikroskopische Veneninvasion</td></tr>
+<tr><td style="white-space:nowrap">V2<a name="mii-cs-onko-tnm-uicc-V2"> </a></td>
+<td>V2</td>
+<td>Makroskopische Veneninvasion</td></tr>
+<tr><td style="white-space:nowrap">VX<a name="mii-cs-onko-tnm-uicc-VX"> </a></td>
+<td>VX</td>
+<td>Veneninvasion kann nicht beurteilt werden</td></tr>
+<tr><td style="white-space:nowrap">Pn0<a name="mii-cs-onko-tnm-uicc-Pn0"> </a></td>
+<td>Pn0</td>
+<td>Keine perineurale Invasion</td></tr>
+<tr><td style="white-space:nowrap">Pn1<a name="mii-cs-onko-tnm-uicc-Pn1"> </a></td>
+<td>Pn1</td>
+<td>Perineurale Invasion</td></tr>
+<tr><td style="white-space:nowrap">PnX<a name="mii-cs-onko-tnm-uicc-PnX"> </a></td>
+<td>PnX</td>
+<td>Perineurale Invasion kann nicht beurteilt werden</td></tr>
+<tr><td style="white-space:nowrap">S0<a name="mii-cs-onko-tnm-uicc-S0"> </a></td>
+<td>S0</td>
+<td>Serumtumormarker innerhalb der normalen Grenzen</td></tr>
+<tr><td style="white-space:nowrap">S1<a name="mii-cs-onko-tnm-uicc-S1"> </a></td>
+<td>S1</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">S2<a name="mii-cs-onko-tnm-uicc-S2"> </a></td>
+<td>S2</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">S3<a name="mii-cs-onko-tnm-uicc-S3"> </a></td>
+<td>S3</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">SX<a name="mii-cs-onko-tnm-uicc-SX"> </a></td>
+<td>SX</td>
+<td>Werte der Serumtumormarker nicht verfügbar oder entspre- chende Untersuchungen nicht vorgenommen</td></tr>
+<tr><td style="white-space:nowrap">okk<a name="mii-cs-onko-tnm-uicc-okk"> </a></td>
+<td>Stadium X</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">0<a name="mii-cs-onko-tnm-uicc-0"> </a></td>
+<td>Stadium 0</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">0a<a name="mii-cs-onko-tnm-uicc-0a"> </a></td>
+<td>Stadium 0a</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">0is<a name="mii-cs-onko-tnm-uicc-0is"> </a></td>
+<td>Stadium 0is</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">I<a name="mii-cs-onko-tnm-uicc-I"> </a></td>
+<td>Stadium I</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">IA<a name="mii-cs-onko-tnm-uicc-IA"> </a></td>
+<td>Stadium IA</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">IA1<a name="mii-cs-onko-tnm-uicc-IA1"> </a></td>
+<td>Stadium IA1</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">IA2<a name="mii-cs-onko-tnm-uicc-IA2"> </a></td>
+<td>Stadium IA2</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">IA3<a name="mii-cs-onko-tnm-uicc-IA3"> </a></td>
+<td>Stadium IA3</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">IB<a name="mii-cs-onko-tnm-uicc-IB"> </a></td>
+<td>Stadium IB</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">IB1<a name="mii-cs-onko-tnm-uicc-IB1"> </a></td>
+<td>Stadium IB1</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">IB2<a name="mii-cs-onko-tnm-uicc-IB2"> </a></td>
+<td>Stadium IB2</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">IC<a name="mii-cs-onko-tnm-uicc-IC"> </a></td>
+<td>Stadium IC</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">IS<a name="mii-cs-onko-tnm-uicc-IS"> </a></td>
+<td>Stadium IS</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">II<a name="mii-cs-onko-tnm-uicc-II"> </a></td>
+<td>Stadium II</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">IIA<a name="mii-cs-onko-tnm-uicc-IIA"> </a></td>
+<td>Stadium IIA</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">IIA1<a name="mii-cs-onko-tnm-uicc-IIA1"> </a></td>
+<td>Stadium IIA1</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">IIA2<a name="mii-cs-onko-tnm-uicc-IIA2"> </a></td>
+<td>Stadium IIA2</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">IIB<a name="mii-cs-onko-tnm-uicc-IIB"> </a></td>
+<td>Stadium IIB</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">IIC<a name="mii-cs-onko-tnm-uicc-IIC"> </a></td>
+<td>Stadium IIC</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">III<a name="mii-cs-onko-tnm-uicc-III"> </a></td>
+<td>Stadium III</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">IIIA<a name="mii-cs-onko-tnm-uicc-IIIA"> </a></td>
+<td>Stadium IIIA</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">IIIA1<a name="mii-cs-onko-tnm-uicc-IIIA1"> </a></td>
+<td>Stadium IIIA1</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">IIIA2<a name="mii-cs-onko-tnm-uicc-IIIA2"> </a></td>
+<td>Stadium IIIA2</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">IIIB<a name="mii-cs-onko-tnm-uicc-IIIB"> </a></td>
+<td>Stadium IIIB</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">IIIC<a name="mii-cs-onko-tnm-uicc-IIIC"> </a></td>
+<td>Stadium IIIC</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">IIIC1<a name="mii-cs-onko-tnm-uicc-IIIC1"> </a></td>
+<td>Stadium IIIC1</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">IIIC2<a name="mii-cs-onko-tnm-uicc-IIIC2"> </a></td>
+<td>Stadium IIIC2</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">IIID<a name="mii-cs-onko-tnm-uicc-IIID"> </a></td>
+<td>Stadium IIID</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">IV<a name="mii-cs-onko-tnm-uicc-IV"> </a></td>
+<td>Stadium IV</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">IVA<a name="mii-cs-onko-tnm-uicc-IVA"> </a></td>
+<td>Stadium IVA</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">IVA1<a name="mii-cs-onko-tnm-uicc-IVA1"> </a></td>
+<td>Stadium IVA1</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">IVA2<a name="mii-cs-onko-tnm-uicc-IVA2"> </a></td>
+<td>Stadium IVA2</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">IVB<a name="mii-cs-onko-tnm-uicc-IVB"> </a></td>
+<td>Stadium IVB</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">IVC<a name="mii-cs-onko-tnm-uicc-IVC"> </a></td>
+<td>Stadium IVC</td>
+<td></td></tr></table></div>
+
+  <hr/>
+  <p>
+    <a href="http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology">Description of the above table(s)</a>.
+  </p>
+  
+
+  <!-- insert notes if present -->
+  
+
+
+
+  
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
+          Package mii-ig-onko-de-v2026#2026.0.3 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-07-02 11:24:00 +0000">
+    2026-07-02
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="mii-cs-onko-krk-tme-qualitaet"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem mii-cs-onko-krk-tme-qualitaet</b></p><a name="mii-cs-onko-krk-tme-qualitaet"> </a><a name="hcmii-cs-onko-krk-tme-qualitaet"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org/fhir/R4/shareablecodesystem.html">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-tme-qualitaet</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">1<a name="mii-cs-onko-krk-tme-qualitaet-1"> </a></td><td>Grad 1 (gut)</td></tr><tr><td style="white-space:nowrap">2<a name="mii-cs-onko-krk-tme-qualitaet-2"> </a></td><td>Grad 2 (moderat)</td></tr><tr><td style="white-space:nowrap">3<a name="mii-cs-onko-krk-tme-qualitaet-3"> </a></td><td>Grad 3 (schlecht)</td></tr></table></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-tme-qualitaet"/>
+  <version value="2026.0.3"/>
+  <name value="MII_CS_Onko_KRK_TME_Qualitaet"/>
+  <title value="MII CS Onkologie TME Qualität"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-07-02T11:24:18+00:00"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="oBDS-spezifisches Codesystem TME-Präparat, basierend auf der S3-Leitlinie Mammakarzinom v"/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="3"/>
+  <concept>
+    <code value="1"/>
+    <display value="Grad 1 (gut)"/>
+  </concept>
+  <concept>
+    <code value="2"/>
+    <display value="Grad 2 (moderat)"/>
+  </concept>
+  <concept>
+    <code value="3"/>
+    <display value="Grad 3 (schlecht)"/>
+  </concept>
+</CodeSystem>

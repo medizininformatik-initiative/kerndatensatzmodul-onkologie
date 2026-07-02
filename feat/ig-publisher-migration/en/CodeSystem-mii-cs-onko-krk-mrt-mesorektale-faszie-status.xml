@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="mii-cs-onko-krk-mrt-mesorektale-faszie-status"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem mii-cs-onko-krk-mrt-mesorektale-faszie-status</b></p><a name="en-mii-cs-onko-krk-mrt-mesorektale-faszie-status"> </a><a name="en-hcmii-cs-onko-krk-mrt-mesorektale-faszie-status"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org/fhir/R4/shareablecodesystem.html">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-mrt-mesorektale-faszie-status</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">D<a name="en-mii-cs-onko-krk-mrt-mesorektale-faszie-status-D"> </a></td><td>Durchgeführt, aber Abstand nicht angegeben</td><td>MRT oder Dünnschicht-CT wurde durchgeführt, aber der Abstand zur mesorektalen Faszie wurde nicht angegeben</td></tr><tr><td style="white-space:nowrap">N<a name="en-mii-cs-onko-krk-mrt-mesorektale-faszie-status-N"> </a></td><td>Nein (MRT/CT nicht durchgeführt)</td><td>MRT oder Dünnschicht-CT wurde nicht durchgeführt</td></tr><tr><td style="white-space:nowrap">U<a name="en-mii-cs-onko-krk-mrt-mesorektale-faszie-status-U"> </a></td><td>Unbekannt</td><td>Es ist unbekannt, ob eine MRT oder Dünnschicht-CT durchgeführt wurde</td></tr></table></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-mrt-mesorektale-faszie-status"/>
+  <version value="2026.0.3"/>
+  <name value="MII_CS_Onko_KRK_MRT_Mesorektale_Faszie_Status"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2026-07-02T11:24:18+00:00"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="oBDS-basiertes Codesystem für den Status der MRT/CT Untersuchung zur mesorektalen Faszie beim Kolorektalen Karzinom (KR5)"/>
+  <caseSensitive value="true"/>
+  <valueSet value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-mrt-mesorektale-faszie-status"/>
+  <content value="complete"/>
+  <count value="3"/>
+  <concept>
+    <code value="D"/>
+    <display value="Durchgeführt, aber Abstand nicht angegeben"/>
+    <definition value="MRT oder Dünnschicht-CT wurde durchgeführt, aber der Abstand zur mesorektalen Faszie wurde nicht angegeben"/>
+  </concept>
+  <concept>
+    <code value="N"/>
+    <display value="Nein (MRT/CT nicht durchgeführt)"/>
+    <definition value="MRT oder Dünnschicht-CT wurde nicht durchgeführt"/>
+  </concept>
+  <concept>
+    <code value="U"/>
+    <display value="Unbekannt"/>
+    <definition value="Es ist unbekannt, ob eine MRT oder Dünnschicht-CT durchgeführt wurde"/>
+  </concept>
+</CodeSystem>

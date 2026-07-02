@@ -1,0 +1,115 @@
+# MII CM Onko Verlauf Primaertumor SNOMED Mapping - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+
+## ConceptMap: MII CM Onko Verlauf Primaertumor SNOMED Mapping 
+
+ 
+Mapping Verlauf-Primaertumor Codes zu SNOMED-CT 
+
+Der Zustand des Primärtumors im Verlauf wird über dieses CodeSystem beschrieben. Insgesamt ist es durch SNOMED-CT gut abbildbar.
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "ConceptMap",
+  "id" : "mii-cm-onko-verlauf-primaertumor-sct",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-verlauf-primaertumor-sct",
+  "version" : "2026.0.3",
+  "name" : "MII CM Onko Verlauf Primaertumor SCT Mapping",
+  "title" : "MII CM Onko Verlauf Primaertumor SNOMED Mapping",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2024-04-10",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Mapping Verlauf-Primaertumor Codes zu SNOMED-CT",
+  "purpose" : "Technical mapping to transform oBDS-Data into SNOMED",
+  "sourceUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
+  "targetUri" : "http://snomed.info/sct/900000000000207008/version/20240401",
+  "group" : [{
+    "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-primaertumor",
+    "target" : "http://snomed.info/sct/900000000000207008/version/20240401",
+    "element" : [{
+      "code" : "K",
+      "display" : "kein Tumor nachweisbar",
+      "target" : [{
+        "code" : "58899004",
+        "display" : "No evidence of neoplasm (finding)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "T",
+      "display" : "Tumorreste (Residualtumor)",
+      "target" : [{
+        "code" : "65320000",
+        "display" : "Residual (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "P",
+      "display" : "Tumorreste (Residualtumor) Progress",
+      "target" : [{
+        "code" : "255314001",
+        "display" : "Progressive (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "N",
+      "display" : "Tumorreste (Residualtumor) No Change",
+      "target" : [{
+        "code" : "260388006",
+        "display" : "No status change (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "R",
+      "display" : "Lokalrezidiv",
+      "target" : [{
+        "code" : "1259237005",
+        "display" : "Recurrent malignant neoplasm (disorder)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "F",
+      "display" : "fraglicher Befund",
+      "target" : [{
+        "code" : "64957009",
+        "display" : "Uncertain (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "U",
+      "display" : "unbekannt",
+      "target" : [{
+        "code" : "261665006",
+        "display" : "Unknown (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "X",
+      "display" : "fehlende Angabe",
+      "target" : [{
+        "code" : "1287211007",
+        "display" : "No information available (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}
+
+```

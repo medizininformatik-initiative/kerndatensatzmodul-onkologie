@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Beispiel: Melanom-Bundle - MII IG Kerndatensatz-Modul Onkologie v2026.0.3</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"4.14"}
+    h3,h4,h5,h6{--heading-prefix:"4.14"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Onkologie</span>
+            <br/>
+            <span style="display:inline-block;">2026.0.3 - release
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Start</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Beschreibung
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="beschreibung-modul.html">Beschreibung Modul Onkologie</a>
+      </li>
+      <li>
+        <a href="kontext.html">Kontext im Gesamtprojekt</a>
+      </li>
+      <li>
+        <a href="abweichungen-obds.html">Abweichungen zum oBDS</a>
+      </li>
+      <li>
+        <a href="bezug-nationale-standards.html">Bezug zu nationalen Standards</a>
+      </li>
+      <li>
+        <a href="bezug-internationale-standards.html">Bezug zu internationalen Standards</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsfälle
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="anwendungsfaelle.html">Übersicht</a>
+      </li>
+      <li>
+        <a href="szenarien.html">Szenarien</a>
+      </li>
+      <li>
+        <a href="datensaetze.html">Datensätze inkl. Beschreibungen</a>
+      </li>
+      <li>
+        <a href="uml.html">UML</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Technische Implementierung
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="technische-implementierung.html">Übersicht</a>
+      </li>
+      <li>
+        <a href="profile-inhalt-vererbung.html">Profile - Inhalt und Vererbung</a>
+      </li>
+      <li>
+        <a href="profile-beziehungen.html">Profile - Beziehungen und Referenzen</a>
+      </li>
+      <li>
+        <a href="verwendung-extensions.html">Verwendung von Extensions</a>
+      </li>
+      <li>
+        <a href="fhir-profile.html">FHIR-Profile</a>
+      </li>
+      <li>
+        <a href="organspezifische-module.html">Organspezifische Module</a>
+      </li>
+      <li>
+        <a href="terminologien.html">Terminologien</a>
+      </li>
+      <li>
+        <a href="capability-statement.html">CapabilityStatement</a>
+      </li>
+      <li>
+        <a href="qa-validierung.html">QA und Validierung</a>
+      </li>
+      <li>
+        <a href="obds-snomed-mapping.html">oBDS-SNOMED-CT Mapping</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefakte</a>
+  </li>
+  <li>
+    <a href="referenzen.html">Referenzen</a>
+  </li>
+  <li>
+    <a href="release-notes.html">Release Notes</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+
+    <div><a href="../de/example-melanom-bundle.html"><img class="flag" src="assets/images/lang-de.png" alt="flag de"/>Deutsch</a></div>
+
+  </div>
+</div>
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='technische-implementierung.html'><b>Technische Implementierung</b></a></li><li><b>Beispiel: Melanom-Bundle</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Onkologie - Local Development build (v2026.0.3) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Beispiel: Melanom-Bundle</h2>
+  
+
+
+
+
+<p style="border:var(--translation-box-border);background-color:var(--translation-background-color);padding: 5px 5px 5px 5px;">
+
+<p>There is no translation page available for the current page, so it has been rendered in the default language</p>
+
+
+</p>
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#inhalt" id="markdown-toc-inhalt">Inhalt</a></li>
+  <li><a href="#bundle-struktur" id="markdown-toc-bundle-struktur">Bundle-Struktur</a></li>
+  <li><a href="#klinisches-szenario" id="markdown-toc-klinisches-szenario">Klinisches Szenario</a></li>
+  <li><a href="#technische-implementation" id="markdown-toc-technische-implementation">Technische Implementation</a></li>
+  <li><a href="#obds-zuordnung" id="markdown-toc-obds-zuordnung">oBDS-Zuordnung</a></li>
+  <li><a href="#valueset-verwendung" id="markdown-toc-valueset-verwendung">ValueSet-Verwendung</a></li>
+  <li><a href="#bundle-beispiel" id="markdown-toc-bundle-beispiel">Bundle-Beispiel</a></li>
+  <li><a href="#einzelne-ressourcen-beispiele" id="markdown-toc-einzelne-ressourcen-beispiele">Einzelne Ressourcen-Beispiele</a></li>
+</ul>
+
+</div>
+<h3 id="inhalt">Inhalt</h3>
+
+<p>Das <strong>Melanom Bundle Beispiel</strong> demonstriert die strukturierte Zusammenstellung aller Melanom-spezifischen FHIR-Ressourcen in einem einheitlichen Transaktions-Bundle. Dieses Bundle zeigt die praktische Anwendung der Melanom-Profile und deren Verknüpfungen untereinander in einem realistischen klinischen Szenario eines Malignen Melanoms der Haut.</p>
+
+<p>Das Bundle implementiert das <strong>Transaction-Pattern</strong> und ist server-konsumierbar, wodurch alle enthaltenen Ressourcen als atomare Operation übertragen werden können.</p>
+
+<hr />
+
+<h3 id="bundle-struktur">Bundle-Struktur</h3>
+
+<p>Das Melanom-Bundle umfasst folgende Ressourcen:</p>
+
+<h4 id="primäre-ressourcen">Primäre Ressourcen</h4>
+<ul>
+  <li><strong>Patient</strong>: Melanom-Patient (Maria Melanom)</li>
+  <li><strong>Condition</strong>: Primärtumor-Diagnose (C43.9 - Bösartige Neubildung: Haut, nicht näher bezeichnet)</li>
+  <li><strong>Encounter</strong>: Stationärer Behandlungsfall</li>
+</ul>
+
+<h4 id="melanom-spezifische-observations">Melanom-spezifische Observations</h4>
+<ul>
+  <li><strong>Breslow-Tiefe</strong>: Tumordicke 2.1mm von Granularschicht bis tiefste Invasion (Breslow)</li>
+  <li><strong>Sicherheitsabstand</strong>: Minimaler Abstand zum Resektionsrand 5mm (MM1)</li>
+  <li><strong>Ulzeration</strong>: Nachweis einer Ulzeration der Epidermis (MM4)</li>
+  <li><strong>LDH</strong>: Laktatdehydrogenase-Wert 280 U/L als prognostischer Marker (LDH)</li>
+</ul>
+
+<h4 id="bundle-spezifische-merkmale">Bundle-spezifische Merkmale</h4>
+<ul>
+  <li><strong>Transaction Bundle</strong>: Server-konsumierbare atomare Operation</li>
+  <li><strong>Referenz-Konsistenz</strong>: Alle Einzelressourcen referenzieren Bundle-Kernressourcen</li>
+  <li><strong>Vollständige Abdeckung</strong>: Alle 4 Melanom-Profile sind enthalten</li>
+</ul>
+
+<hr />
+
+<h3 id="klinisches-szenario">Klinisches Szenario</h3>
+
+<p>Das Bundle repräsentiert eine <strong>Patientin mit Malignem Melanom</strong> mit kompletter histopathologischer Diagnostik und operativer Therapie:</p>
+
+<p><strong>Patientencharakteristika:</strong></p>
+<ul>
+  <li><strong>Diagnose</strong>: C43.9 Malignes Melanom der Haut</li>
+  <li><strong>Breslow-Tiefe</strong>: 2.1mm (prognostisch wichtig)</li>
+  <li><strong>Tumorlokalisation</strong>: Haut, nicht näher bezeichnet</li>
+</ul>
+
+<p><strong>Histopathologische Diagnostik:</strong></p>
+<ul>
+  <li><strong>Ulzeration</strong>: Nachweis einer Ulzeration der Epidermis</li>
+  <li><strong>LDH</strong>: Erhöhter Wert (280 U/L) als prognostischer Marker</li>
+</ul>
+
+<p><strong>Operative Therapie:</strong></p>
+<ul>
+  <li><strong>Exzision</strong>: Mit ausreichendem Sicherheitsabstand</li>
+  <li><strong>Sicherheitsabstand</strong>: Minimaler Abstand 5mm zum Resektionsrand</li>
+  <li><strong>Resektionsstatus</strong>: R0-Resektion erreicht</li>
+</ul>
+
+<hr />
+
+<h3 id="technische-implementation">Technische Implementation</h3>
+
+<h4 id="bundle-typ-und-struktur">Bundle-Typ und Struktur</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* type = #transaction
+</code></pre></div></div>
+<ul>
+  <li><strong>Transaction Bundle</strong>: Atomare Übertragung aller Ressourcen</li>
+  <li><strong>Server-konsumierbar</strong>: Alle Entries mit vollständigen Request-Informationen</li>
+</ul>
+
+<h4 id="entry-pattern">Entry-Pattern</h4>
+<p>Jeder Bundle-Entry enthält:</p>
+<ul>
+  <li><strong>fullUrl</strong>: Eindeutige Referenz-URL</li>
+  <li><strong>resource</strong>: Die eigentliche FHIR-Ressource</li>
+  <li><strong>request.method</strong>: HTTP POST für Erstellung</li>
+  <li><strong>request.url</strong>: Ziel-Ressourcentyp</li>
+</ul>
+
+<h4 id="referenz-integrität">Referenz-Integrität</h4>
+<ul>
+  <li><strong>Condition</strong>: Referenziert Patient über <code class="language-plaintext highlighter-rouge">subject</code></li>
+  <li><strong>Observations</strong>: Referenzieren sowohl Patient (<code class="language-plaintext highlighter-rouge">subject</code>) als auch Condition (<code class="language-plaintext highlighter-rouge">focus</code>)</li>
+  <li><strong>Procedures</strong>: Referenzieren Patient (<code class="language-plaintext highlighter-rouge">subject</code>) und Condition (<code class="language-plaintext highlighter-rouge">reasonReference</code>)</li>
+  <li><strong>Specimen</strong>: Referenziert Patient (<code class="language-plaintext highlighter-rouge">subject</code>) und Collection-Procedure</li>
+</ul>
+
+<hr />
+<h3 id="obds-zuordnung">oBDS-Zuordnung</h3>
+
+<p>Das Bundle demonstriert die vollständige Abbildung der oBDS-Datenfelder für Malignes Melanom:</p>
+
+<h4 id="histopathologische-bewertung">Histopathologische Bewertung</h4>
+<ul>
+  <li><strong>MM2</strong>: Breslow-Tiefe → <code class="language-plaintext highlighter-rouge">Observation/mii-exa-onko-melanom-breslow-tiefe</code></li>
+  <li><strong>MM4</strong>: Ulzeration → <code class="language-plaintext highlighter-rouge">Observation/mii-exa-onko-melanom-ulzeration</code></li>
+</ul>
+
+<h4 id="chirurgische-bewertung">Chirurgische Bewertung</h4>
+<ul>
+  <li><strong>MM1</strong>: Sicherheitsabstand → <code class="language-plaintext highlighter-rouge">Observation/mii-exa-onko-melanom-sicherheitsabstand</code></li>
+</ul>
+
+<h4 id="laborparameter">Laborparameter</h4>
+<ul>
+  <li><strong>MM3</strong>: Laktatdehydrogenase → <code class="language-plaintext highlighter-rouge">Observation/mii-exa-onko-melanom-ldh</code></li>
+</ul>
+
+<hr />
+
+<h3 id="valueset-verwendung">ValueSet-Verwendung</h3>
+
+<p>Das Bundle zeigt die praktische Anwendung verschiedener Terminologien:</p>
+
+<h4 id="loinc">LOINC</h4>
+<ul>
+  <li><strong>LDH</strong>: <code class="language-plaintext highlighter-rouge">14805-6</code> "Lactate dehydrogenase activity in Serum or Plasma"</li>
+</ul>
+
+<h4 id="snomed-ct">SNOMED CT</h4>
+<ul>
+  <li><strong>Breslow-Tiefe</strong>: <code class="language-plaintext highlighter-rouge">106243009</code> "Breslow depth staging for melanoma of skin"</li>
+  <li><strong>Sicherheitsabstand</strong>: <code class="language-plaintext highlighter-rouge">396511007</code> "Distance of in situ melanoma from closest lateral surgical margin"</li>
+  <li><strong>Ulzeration</strong>: <code class="language-plaintext highlighter-rouge">97816-3</code> "Ulceration present in melanoma of skin"</li>
+</ul>
+
+<h4 id="icd-10-gm">ICD-10-GM</h4>
+<ul>
+  <li><strong>Diagnose</strong>: <code class="language-plaintext highlighter-rouge">C43.9</code> "Bösartige Neubildung: Haut, nicht näher bezeichnet"</li>
+</ul>
+
+<h4 id="obds-codesystems">oBDS CodeSystems</h4>
+<ul>
+  <li><strong>Ulzeration</strong>: <code class="language-plaintext highlighter-rouge">mii-cs-onko-melanom-ulzeration#J</code> "Ja"</li>
+  <li><strong>LDH-Bewertung</strong>: `mii-cs-onko-melanom-ldh-bewertung#erhoeht" "Erhöht"</li>
+</ul>
+
+<hr />
+
+<h3 id="bundle-beispiel">Bundle-Beispiel</h3>
+
+<p><a href="Bundle-mii-exa-onko-melanom-bundle.html">Beispiel: mii-exa-onko-melanom-bundle</a></p>
+
+<hr />
+
+<h3 id="einzelne-ressourcen-beispiele">Einzelne Ressourcen-Beispiele</h3>
+
+<h4 id="patient">Patient</h4>
+<p><a href="Patient-mii-exa-onko-melanom-bundle-patient.html">Beispiel: mii-exa-onko-melanom-bundle-patient</a></p>
+
+<h4 id="primärtumor-condition">Primärtumor-Condition</h4>
+<p><a href="Condition-mii-exa-onko-melanom-diagnose.html">Beispiel: mii-exa-onko-melanom-diagnose</a></p>
+
+<h4 id="breslow-tiefe">Breslow-Tiefe</h4>
+<p><a href="Observation-mii-exa-onko-melanom-breslow-tiefe.html">Beispiel: mii-exa-onko-melanom-breslow-tiefe</a></p>
+
+<h4 id="sicherheitsabstand">Sicherheitsabstand</h4>
+<p><a href="Observation-mii-exa-onko-melanom-sicherheitsabstand.html">Beispiel: mii-exa-onko-melanom-sicherheitsabstand</a></p>
+
+<h4 id="ulzeration">Ulzeration</h4>
+<p><a href="Observation-mii-exa-onko-melanom-ulzeration.html">Beispiel: mii-exa-onko-melanom-ulzeration</a></p>
+
+<h4 id="ldh">LDH</h4>
+<p><a href="Observation-mii-exa-onko-melanom-ldh.html">Beispiel: mii-exa-onko-melanom-ldh</a></p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
+          Package mii-ig-onko-de-v2026#2026.0.3 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-07-02 11:24:00 +0000">
+    2026-07-02
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="mii-cs-onko-mamma-her2neu-status-obds"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem mii-cs-onko-mamma-her2neu-status-obds</b></p><a name="mii-cs-onko-mamma-her2neu-status-obds"> </a><a name="hcmii-cs-onko-mamma-her2neu-status-obds"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org/fhir/R4/shareablecodesystem.html">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">P<a name="mii-cs-onko-mamma-her2neu-status-obds-P"> </a></td><td>positiv</td><td>Positiv: IHC +++ (Score 3+) oder IHC ++ (Score 2+) und ISH (FISH, CISH o. Ä.) positiv</td></tr><tr><td style="white-space:nowrap">N<a name="mii-cs-onko-mamma-her2neu-status-obds-N"> </a></td><td>negativ</td><td>Negativ</td></tr><tr><td style="white-space:nowrap">U<a name="mii-cs-onko-mamma-her2neu-status-obds-U"> </a></td><td>unbekannt</td><td>Unbekannt</td></tr></table></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem mii-cs-onko-mamma-her2neu-status-obds</b></p><a name="en-mii-cs-onko-mamma-her2neu-status-obds"> </a><a name="en-hcmii-cs-onko-mamma-her2neu-status-obds"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org/fhir/R4/shareablecodesystem.html">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">P<a name="en-mii-cs-onko-mamma-her2neu-status-obds-P"> </a></td><td>positiv</td><td>Positiv: IHC +++ (Score 3+) oder IHC ++ (Score 2+) und ISH (FISH, CISH o. Ä.) positiv</td></tr><tr><td style="white-space:nowrap">N<a name="en-mii-cs-onko-mamma-her2neu-status-obds-N"> </a></td><td>negativ</td><td>Negativ</td></tr><tr><td style="white-space:nowrap">U<a name="en-mii-cs-onko-mamma-her2neu-status-obds-U"> </a></td><td>unbekannt</td><td>Unbekannt</td></tr></table></div></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds"/>
+  <version value="2026.0.3"/>
+  <name value="MII_CS_Onko_Mamma_Her2neu_Status_oBDS"/>
+  <title value="MII CS Onkologie Mamma Her2neu Status oBDS"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-07-02T11:24:18+00:00"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="oBDS-spezifisches Codesystem für Her2neu Status gemäß oBDS Feld M4 (243)"/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="3"/>
+  <concept>
+    <code value="P"/>
+    <display value="positiv"/>
+    <definition value="Positiv: IHC +++ (Score 3+) oder IHC ++ (Score 2+) und ISH (FISH, CISH o. Ä.) positiv"/>
+  </concept>
+  <concept>
+    <code value="N"/>
+    <display value="negativ"/>
+    <definition value="Negativ"/>
+  </concept>
+  <concept>
+    <code value="U"/>
+    <display value="unbekannt"/>
+    <definition value="Unbekannt"/>
+  </concept>
+</CodeSystem>

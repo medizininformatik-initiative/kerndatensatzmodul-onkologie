@@ -1,0 +1,44 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-onko-ops-strahlentherapie",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-onko-ops-strahlentherapie</b></p><a name=\"en-mii-vs-onko-ops-strahlentherapie\"> </a><a name=\"en-hcmii-vs-onko-ops-strahlentherapie\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablevalueset.html\">Shareable ValueSet</a></p></div><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.de/CodeSystem/bfarm/ops\"><code>http://fhir.de/CodeSystem/bfarm/ops</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>8-52</td><td style=\"color: #cccccc\">Strahlentherapie</td></tr></table></li><li>Include codes from<a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.de/CodeSystem/bfarm/ops\"><code>http://fhir.de/CodeSystem/bfarm/ops</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span> where concept  descends from 8-52 (Strahlentherapie)</li></ul></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-ops-strahlentherapie",
+  "version" : "2026.0.3",
+  "name" : "MII_VS_Onko_OPS_Strahlentherapie",
+  "title" : "MII VS Onkologie OPS Strahlentherapie",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-07-02T11:24:18+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "OPS-Codes für Strahlentherapie",
+  "compose" : {
+    "include" : [{
+      "system" : "http://fhir.de/CodeSystem/bfarm/ops",
+      "concept" : [{
+        "code" : "8-52"
+      }]
+    },
+    {
+      "system" : "http://fhir.de/CodeSystem/bfarm/ops",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "descendent-of",
+        "value" : "8-52"
+      }]
+    }]
+  }
+}

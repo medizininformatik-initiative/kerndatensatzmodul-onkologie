@@ -1,0 +1,156 @@
+# MII EX Onko Operation Urgency - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+
+## Extension: MII EX Onko Operation Urgency 
+
+Modalität der Eingriffsdurchführung (Art des Eingriffs) im Rahmen des oBDS (KR6)
+
+**Context of Use**
+
+### Inhalt
+
+Diese Extension erfasst die **Modalität der Eingriffsdurchführung** (Art des Eingriffs) und unterscheidet zwischen elektiven und Notfalleingriffen.
+
+### Herkunft und Anwendungsbereich
+
+Dieser Datenpunkt stammt ursprünglich aus dem organspezifischen Modul **Kolorektales Karzinom (KRK 6)** gemäß oBDS 2021. Da die Unterscheidung zwischen elektiven und Notfalleingriffen jedoch für alle chirurgischen Prozeduren klinisch relevant ist, wurde die Extension in das allgemeine Operation-Profil integriert und kann **universell auf alle onkologischen Operationen angewandt werden**.
+
+### Klinische Relevanz
+
+Die Erfassung der Eingriffsmodalität ist aus mehreren Gründen wichtig:
+
+* **Qualitätssicherung**: Notfalleingriffe weisen oft andere Komplikationsraten auf als geplante Eingriffe
+* **Risikostratifizierung**: Die Dringlichkeit beeinflusst die perioperative Morbidität und Mortalität
+* **Statistische Auswertungen**: Faire Vergleiche zwischen Zentren erfordern die Berücksichtigung des Notfallanteils
+* **Ressourcenplanung**: Unterscheidung zwischen planbaren und ungeplanten Eingriffen
+
+### Wertebereich
+
+### Beispiel im Kontext
+
+### Technische Details
+
+### Mapping
+
+Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensatz.de/basisdatensatz) zu FHIR
+
+Dieses Extension mappt auf das **KRK-Modul** Feld:
+
+* **KR6**: Art des Eingriffs (Modalität der Eingriffsdurchführung)
+
+### Verwandte Profile
+
+* [MII PR Onkologie Operation](StructureDefinition-mii-pr-onko-operation.md)
+* [MII EX Onko Operation Intention](StructureDefinition-mii-ex-onko-operation-intention.md)
+
+**Usage info**
+
+**Usages:**
+
+* Use this Extension: [MII PR Onkologie Operation](StructureDefinition-mii-pr-onko-operation.md)
+
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/mii-ig-onko-de-v2026|current/StructureDefinition/StructureDefinition-mii-ex-onko-operation-urgency.json)
+
+### Formal Views of Extension Content
+
+ [Description Differentials, Snapshots, and other representations](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
+
+ 
+
+Other representations of profile: [CSV](../StructureDefinition-mii-ex-onko-operation-urgency.csv), [Excel](../StructureDefinition-mii-ex-onko-operation-urgency.xlsx), [Schematron](../StructureDefinition-mii-ex-onko-operation-urgency.sch) 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "mii-ex-onko-operation-urgency",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-urgency",
+  "version" : "2026.0.3",
+  "name" : "MII_EX_Onko_Operation_Urgency",
+  "title" : "MII EX Onko Operation Urgency",
+  "status" : "active",
+  "date" : "2026-07-02T11:24:18+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Modalität der Eingriffsdurchführung (Art des Eingriffs) im Rahmen des oBDS (KR6)",
+  "fhirVersion" : "4.0.1",
+  "mapping" : [{
+    "identity" : "oBDS",
+    "name" : "Mapping FHIR zu oBDS"
+  },
+  {
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  }],
+  "kind" : "complex-type",
+  "abstract" : false,
+  "context" : [{
+    "type" : "element",
+    "expression" : "Procedure"
+  }],
+  "type" : "Extension",
+  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation" : "constraint",
+  "differential" : {
+    "element" : [{
+      "id" : "Extension",
+      "path" : "Extension",
+      "short" : "MII EX Onko Operation Urgency",
+      "definition" : "Modalität der Eingriffsdurchführung (Art des Eingriffs) im Rahmen des oBDS (KR6)"
+    },
+    {
+      "id" : "Extension.extension",
+      "path" : "Extension.extension",
+      "max" : "0"
+    },
+    {
+      "id" : "Extension.url",
+      "path" : "Extension.url",
+      "fixedUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-urgency"
+    },
+    {
+      "id" : "Extension.value[x]",
+      "path" : "Extension.value[x]",
+      "min" : 1,
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-operation-urgency"
+      },
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "KR6",
+        "comment" : "Art des Eingriffs (Modalität der Eingriffsdurchführung: E=Elektiveingriff, N=Notfalleingriff, U=Unbekannt)"
+      }]
+    },
+    {
+      "id" : "Extension.value[x].coding.system",
+      "path" : "Extension.value[x].coding.system",
+      "min" : 1,
+      "fixedUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-urgency"
+    },
+    {
+      "id" : "Extension.value[x].coding.code",
+      "path" : "Extension.value[x].coding.code",
+      "min" : 1
+    },
+    {
+      "id" : "Extension.value[x].text",
+      "path" : "Extension.value[x].text",
+      "mustSupport" : true
+    }]
+  }
+}
+
+```

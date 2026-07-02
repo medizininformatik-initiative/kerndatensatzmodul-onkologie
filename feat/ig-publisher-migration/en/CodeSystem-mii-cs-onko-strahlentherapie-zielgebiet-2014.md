@@ -1,0 +1,670 @@
+# MII CS Onkologie Strahlentherapie Zielgebiet oBDS 2014 (Legacy) - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+
+## CodeSystem: MII CS Onkologie Strahlentherapie Zielgebiet oBDS 2014 (Legacy) 
+
+ 
+oBDS 2014 Legacy-Codesystem für Klassifikation von Zielgebiet von Strahlentherapie - nur für Datenimport und Migration 
+
+This Code system is referenced in the definition of the following value sets:
+
+* [MII_VS_Onko_Strahlentherapie_Zielgebiet](ValueSet-mii-vs-onko-strahlentherapie-zielgebiet.md)
+
+-------
+
+ [Description of the above table(s)](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology). 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "CodeSystem",
+  "id" : "mii-cs-onko-strahlentherapie-zielgebiet-2014",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablecodesystem"]
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet-2014",
+  "version" : "2026.0.3",
+  "name" : "MII_CS_Onko_Strahlentherapie_Zielgebiet_2014",
+  "title" : "MII CS Onkologie Strahlentherapie Zielgebiet oBDS 2014 (Legacy)",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-07-02T11:24:18+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "oBDS 2014 Legacy-Codesystem für Klassifikation von Zielgebiet von Strahlentherapie - nur für Datenimport und Migration",
+  "caseSensitive" : true,
+  "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-zielgebiet-2014",
+  "content" : "complete",
+  "count" : 150,
+  "property" : [{
+    "code" : "deprecated",
+    "description" : "Legacy oBDS 2014 code - use oBDS 2021 equivalent",
+    "type" : "boolean"
+  }],
+  "concept" : [{
+    "code" : "1.",
+    "display" : "ZNS",
+    "property" : [{
+      "code" : "deprecated",
+      "valueBoolean" : true
+    }]
+  },
+  {
+    "code" : "1.1.",
+    "display" : "Ganzhirn",
+    "property" : [{
+      "code" : "deprecated",
+      "valueBoolean" : true
+    }]
+  },
+  {
+    "code" : "1.2.",
+    "display" : "Teilhirn",
+    "property" : [{
+      "code" : "deprecated",
+      "valueBoolean" : true
+    }]
+  },
+  {
+    "code" : "1.3.",
+    "display" : "Neuroachse",
+    "property" : [{
+      "code" : "deprecated",
+      "valueBoolean" : true
+    }]
+  },
+  {
+    "code" : "2.",
+    "display" : "Kopf-Hals"
+  },
+  {
+    "code" : "2.+",
+    "display" : "Kopf-Hals mit Lk"
+  },
+  {
+    "code" : "2.-",
+    "display" : "Kopf-Hals ohne Lk"
+  },
+  {
+    "code" : "2.1.",
+    "display" : "Orbita, o.n.A."
+  },
+  {
+    "code" : "2.1.+",
+    "display" : "Orbita mit Lk"
+  },
+  {
+    "code" : "2.1.-",
+    "display" : "Orbita ohne Lk"
+  },
+  {
+    "code" : "2.2.",
+    "display" : "Nase/ Nasennebenhöhle, o.n.A."
+  },
+  {
+    "code" : "2.2.+",
+    "display" : "Nase/ Nasennebenhöhle mit Lk"
+  },
+  {
+    "code" : "2.2.-",
+    "display" : "Nase/ Nasennebenhöhle ohne Lk"
+  },
+  {
+    "code" : "2.3.",
+    "display" : "Mundhöhle, o.n.A."
+  },
+  {
+    "code" : "2.3.+",
+    "display" : "Mundhöhle mit Lk"
+  },
+  {
+    "code" : "2.3.-",
+    "display" : "Mundhöhle ohne Lk"
+  },
+  {
+    "code" : "2.4.",
+    "display" : "Ohr, o.n.A."
+  },
+  {
+    "code" : "2.4.+",
+    "display" : "Ohr mit Lk"
+  },
+  {
+    "code" : "2.4.-",
+    "display" : "Ohr ohne Lk"
+  },
+  {
+    "code" : "2.5.",
+    "display" : "Speicheldrüse, o.n.A."
+  },
+  {
+    "code" : "2.5.+",
+    "display" : "Speicheldrüse mit Lk"
+  },
+  {
+    "code" : "2.5.-",
+    "display" : "Speicheldrüse ohne Lk"
+  },
+  {
+    "code" : "2.6.",
+    "display" : "Pharynx, o.n.A."
+  },
+  {
+    "code" : "2.6.+",
+    "display" : "Pharynx mit Lk"
+  },
+  {
+    "code" : "2.6.-",
+    "display" : "Pharynx ohne Lk"
+  },
+  {
+    "code" : "2.7.",
+    "display" : "Larynx, o.n.A."
+  },
+  {
+    "code" : "2.7.+",
+    "display" : "Larynx mit Lk"
+  },
+  {
+    "code" : "2.7.-",
+    "display" : "Larynx ohne Lk"
+  },
+  {
+    "code" : "2.8.",
+    "display" : "Schilddrüse, o.n.A."
+  },
+  {
+    "code" : "2.8.+",
+    "display" : "Schilddrüse mit Lk"
+  },
+  {
+    "code" : "2.8.-",
+    "display" : "Schilddrüse ohne Lk"
+  },
+  {
+    "code" : "2.9.",
+    "display" : "Halslymphknoten"
+  },
+  {
+    "code" : "3.",
+    "display" : "Thorax"
+  },
+  {
+    "code" : "3.+",
+    "display" : "Thorax mit Lk"
+  },
+  {
+    "code" : "3.-",
+    "display" : "Thorax ohne Lk"
+  },
+  {
+    "code" : "3.1.",
+    "display" : "Mamma als Ganzbrust, o.n.A."
+  },
+  {
+    "code" : "3.1.+",
+    "display" : "Mamma als Ganzbrust mit Lk"
+  },
+  {
+    "code" : "3.1.-",
+    "display" : "Mamma als Ganzbrust ohne Lk"
+  },
+  {
+    "code" : "3.2.",
+    "display" : "Mamma als Teilbrust, o.n.A."
+  },
+  {
+    "code" : "3.2.+",
+    "display" : "Mamma als Teilbrust mit Lk"
+  },
+  {
+    "code" : "3.2.-",
+    "display" : "Mamma als Teilbrust ohne Lk"
+  },
+  {
+    "code" : "3.3.",
+    "display" : "Brustwand"
+  },
+  {
+    "code" : "3.3.+",
+    "display" : "Brustwand mit Lk"
+  },
+  {
+    "code" : "3.3.-",
+    "display" : "Brustwand ohne Lk"
+  },
+  {
+    "code" : "3.4.",
+    "display" : "Lunge, o.n.A."
+  },
+  {
+    "code" : "3.4.+",
+    "display" : "Lunge mit Lk"
+  },
+  {
+    "code" : "3.4.-",
+    "display" : "Lunge ohne Lk"
+  },
+  {
+    "code" : "3.5.",
+    "display" : "Ösophagus, o.n.A."
+  },
+  {
+    "code" : "3.5.+",
+    "display" : "Ösophagus mit Lk"
+  },
+  {
+    "code" : "3.5.-",
+    "display" : "Ösophagus ohne Lk"
+  },
+  {
+    "code" : "3.6.",
+    "display" : "Thymus, o.n.A."
+  },
+  {
+    "code" : "3.6.+",
+    "display" : "Thymus mit Lk"
+  },
+  {
+    "code" : "3.6.-",
+    "display" : "Thymus ohne Lk"
+  },
+  {
+    "code" : "3.7.",
+    "display" : "Mediastinale Lymphknoten"
+  },
+  {
+    "code" : "4.",
+    "display" : "Abdomen (ohne Becken)"
+  },
+  {
+    "code" : "4.+",
+    "display" : "Abdomen (ohne Becken) mit Lk"
+  },
+  {
+    "code" : "4.-",
+    "display" : "Abdomen (ohne Becken) ohne Lk"
+  },
+  {
+    "code" : "4.1.",
+    "display" : "Magen, o.n.A."
+  },
+  {
+    "code" : "4.1.+",
+    "display" : "Magen mit Lk"
+  },
+  {
+    "code" : "4.1.-",
+    "display" : "Magen ohne Lk"
+  },
+  {
+    "code" : "4.2.",
+    "display" : "Pankreas, o.n.A."
+  },
+  {
+    "code" : "4.2.+",
+    "display" : "Pankreas mit Lk"
+  },
+  {
+    "code" : "4.2.-",
+    "display" : "Pankreas ohne Lk"
+  },
+  {
+    "code" : "4.3.",
+    "display" : "Leber, o.n.A."
+  },
+  {
+    "code" : "4.3.+",
+    "display" : "Leber mit Lk"
+  },
+  {
+    "code" : "4.3.-",
+    "display" : "Leber ohne Lk"
+  },
+  {
+    "code" : "4.4.",
+    "display" : "Milz, o.n.A."
+  },
+  {
+    "code" : "4.4.+",
+    "display" : "Milz mit Lk"
+  },
+  {
+    "code" : "4.4.-",
+    "display" : "Milz ohne Lk"
+  },
+  {
+    "code" : "4.5.",
+    "display" : "Niere, o.n.A."
+  },
+  {
+    "code" : "4.5.+",
+    "display" : "Niere mit Lk"
+  },
+  {
+    "code" : "4.5.-",
+    "display" : "Niere ohne Lk"
+  },
+  {
+    "code" : "4.6.",
+    "display" : "Nebenniere, o.n.A."
+  },
+  {
+    "code" : "4.6.+",
+    "display" : "Nebenniere mit Lk"
+  },
+  {
+    "code" : "4.6.-",
+    "display" : "Nebenniere ohne Lk"
+  },
+  {
+    "code" : "4.7.",
+    "display" : "Retroperitoneale Lymphknoten"
+  },
+  {
+    "code" : "4.8.",
+    "display" : "Retroperitoneum, o.n.A."
+  },
+  {
+    "code" : "4.8.+",
+    "display" : "Retroperitoneum mit Lk"
+  },
+  {
+    "code" : "4.8.-",
+    "display" : "Retroperitoneum ohne Lk"
+  },
+  {
+    "code" : "4.9.",
+    "display" : "Bauchwand, o.n.A."
+  },
+  {
+    "code" : "4.9.+",
+    "display" : "Bauchwand mit Lk"
+  },
+  {
+    "code" : "4.9.-",
+    "display" : "Bauchwand ohne Lk"
+  },
+  {
+    "code" : "5.",
+    "display" : "Becken"
+  },
+  {
+    "code" : "5.+",
+    "display" : "Becken mit Lk"
+  },
+  {
+    "code" : "5.-",
+    "display" : "Becken ohne Lk"
+  },
+  {
+    "code" : "5.1.",
+    "display" : "Rektum, o.n.A."
+  },
+  {
+    "code" : "5.1.+",
+    "display" : "Rektum mit Lk"
+  },
+  {
+    "code" : "5.1.-",
+    "display" : "Rektum ohne Lk"
+  },
+  {
+    "code" : "5.2.",
+    "display" : "Analbereich, o.n.A."
+  },
+  {
+    "code" : "5.2.-",
+    "display" : "Analbereich ohne Lk"
+  },
+  {
+    "code" : "5.2.+",
+    "display" : "Analbereich mit Lk"
+  },
+  {
+    "code" : "5.3.",
+    "display" : "Harnblase, o.n.A."
+  },
+  {
+    "code" : "5.3.-",
+    "display" : "Harnblase ohne Lk"
+  },
+  {
+    "code" : "5.3.+",
+    "display" : "Harnblase mit Lk"
+  },
+  {
+    "code" : "5.4.",
+    "display" : "Prostata, o.n.A."
+  },
+  {
+    "code" : "5.4.+",
+    "display" : "Prostata mit Lk"
+  },
+  {
+    "code" : "5.4.-",
+    "display" : "Prostata ohne Lk"
+  },
+  {
+    "code" : "5.5.",
+    "display" : "Hoden, o.n.A."
+  },
+  {
+    "code" : "5.5.+",
+    "display" : "Hoden mit Lk"
+  },
+  {
+    "code" : "5.5.-",
+    "display" : "Hoden ohne Lk"
+  },
+  {
+    "code" : "5.6.",
+    "display" : "Penis, o.n.A."
+  },
+  {
+    "code" : "5.6.+",
+    "display" : "Penis mit Lk"
+  },
+  {
+    "code" : "5.6.-",
+    "display" : "Penis ohne Lk"
+  },
+  {
+    "code" : "5.7.",
+    "display" : "Uterus und Zervix, o.n.A."
+  },
+  {
+    "code" : "5.7.+",
+    "display" : "Uterus und Zervix mit Lk"
+  },
+  {
+    "code" : "5.7.-",
+    "display" : "Uterus und Zervix ohne Lk"
+  },
+  {
+    "code" : "5.7.1.",
+    "display" : "Uterus"
+  },
+  {
+    "code" : "5.7.1.+",
+    "display" : "Uterus mit Lymphknoten"
+  },
+  {
+    "code" : "5.7.1.-",
+    "display" : "Uterus ohne Lymphknoten"
+  },
+  {
+    "code" : "5.7.2.",
+    "display" : "Zervix"
+  },
+  {
+    "code" : "5.7.2.+",
+    "display" : "Zervix mit Lymphknoten"
+  },
+  {
+    "code" : "5.7.2.-",
+    "display" : "Zervix ohne Lymphknoten"
+  },
+  {
+    "code" : "5.8.",
+    "display" : "Ovar, o.n.A."
+  },
+  {
+    "code" : "5.8.-",
+    "display" : "Ovar ohne Lk"
+  },
+  {
+    "code" : "5.8.+",
+    "display" : "Ovar mit Lk"
+  },
+  {
+    "code" : "5.9.",
+    "display" : "Vulva, o.n.A."
+  },
+  {
+    "code" : "5.9.-",
+    "display" : "Vulva ohne Lk"
+  },
+  {
+    "code" : "5.9.+",
+    "display" : "Vulva mit Lk"
+  },
+  {
+    "code" : "5.10.",
+    "display" : "Vagina, o.n.A."
+  },
+  {
+    "code" : "5.10.+",
+    "display" : "Vagina mit Lk"
+  },
+  {
+    "code" : "5.10.-",
+    "display" : "Vagina ohne Lk"
+  },
+  {
+    "code" : "5.11.",
+    "display" : "Beckenwand, o.n.A."
+  },
+  {
+    "code" : "5.11.+",
+    "display" : "Beckenwand mit Lk"
+  },
+  {
+    "code" : "5.11.-",
+    "display" : "Beckenwand ohne Lk"
+  },
+  {
+    "code" : "5.12.",
+    "display" : "Beckenlymphkn. (ohne Primtu.)"
+  },
+  {
+    "code" : "6.",
+    "display" : "Stütz-/Bewegungsapparat"
+  },
+  {
+    "code" : "6.1.",
+    "display" : "Schädelknochen"
+  },
+  {
+    "code" : "6.2.",
+    "display" : "Rippen"
+  },
+  {
+    "code" : "6.3.",
+    "display" : "Sternum"
+  },
+  {
+    "code" : "6.4.",
+    "display" : "HWS"
+  },
+  {
+    "code" : "6.5.",
+    "display" : "BWS"
+  },
+  {
+    "code" : "6.6.",
+    "display" : "LWS"
+  },
+  {
+    "code" : "6.7.",
+    "display" : "knöchernes Becken"
+  },
+  {
+    "code" : "6.8.",
+    "display" : "Hüfte"
+  },
+  {
+    "code" : "6.9.",
+    "display" : "Schulter"
+  },
+  {
+    "code" : "6.10.",
+    "display" : "Oberarm"
+  },
+  {
+    "code" : "6.11.",
+    "display" : "Unterarm"
+  },
+  {
+    "code" : "6.12.",
+    "display" : "Hand"
+  },
+  {
+    "code" : "6.13.",
+    "display" : "Leiste"
+  },
+  {
+    "code" : "6.14.",
+    "display" : "Oberschenkel"
+  },
+  {
+    "code" : "6.15.",
+    "display" : "Unterschenkel"
+  },
+  {
+    "code" : "6.16.",
+    "display" : "Fuß"
+  },
+  {
+    "code" : "7.",
+    "display" : "Haut"
+  },
+  {
+    "code" : "7.+",
+    "display" : "Haut mit Lymphknoten"
+  },
+  {
+    "code" : "7.-",
+    "display" : "Haut ohne Lymphknoten"
+  },
+  {
+    "code" : "7.1.",
+    "display" : "Primärer Hauttumor"
+  },
+  {
+    "code" : "7.2.",
+    "display" : "Hautmetastasen"
+  },
+  {
+    "code" : "8.",
+    "display" : "Sonstiges"
+  },
+  {
+    "code" : "8.1.",
+    "display" : "Ganzkörperbestrahlung"
+  },
+  {
+    "code" : "8.2.",
+    "display" : "Mantelfeldbestrahlung"
+  }]
+}
+
+```

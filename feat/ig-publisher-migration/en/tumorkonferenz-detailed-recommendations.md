@@ -1,0 +1,126 @@
+# Tumorkonferenz: Detaillierte Therapieempfehlungen - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+
+## Tumorkonferenz: Detaillierte Therapieempfehlungen
+
+ 
+There is no translation page available for the current page, so it has been rendered in the default language 
+
+Dieses Profil beschreibt strukturierte Therapieempfehlungen für **molekulare Tumorboards** und andere Tumorkonferenzen mit detaillierten, RequestGroup-basierten Protokollen für Multi-Agent-Therapien.
+
+### Inhalt
+
+Dieses CarePlan-Profil ermöglicht die Abbildung komplexer Therapieempfehlungen, die über einfache Kategorisierungen hinausgehen und spezifische Medikamentenkombinationen oder Therapieoptionen erfordern.
+
+### Abgrenzung zum Standard-Tumorkonferenz-Profil
+
+| | | |
+| :--- | :--- | :--- |
+| **Verwendung** | Traditionelle Tumorboards | Molekulare Tumorboards, komplexe Protokolle |
+| **Therapieempfehlung** | `activity.detail.code`(19.1 oBDS) | `activity.reference`→ RequestGroup |
+| **Multi-Agent-Therapien** | Einzelne Kategorisierung | Detaillierte Protokolle mit spezifischen Agenten |
+| **FHIR Invarianten** | `activity.detail`verwendet | `activity.detail`deaktiviert (0..0) |
+
+### Anwendungsfälle
+
+#### Molekulare Tumorboards
+
+* **Pharmakogenomische Empfehlungen**: Basierend auf Mutationsprofilen
+* **Resistenzmuster**: Spezifische Alternativen bei bekannten Resistenzen
+* **Kombinationstherapien**: Multi-Agent-Protokolle mit präzisen Dosierungen
+
+#### Komplexe Therapieprotokolle
+
+* **Optionale Medikamente**: "CDK4/6 Inhibitor (beliebiger)" vs. spezifische Auswahl
+* **Sequenzielle Therapien**: Erste-, Zweite-, Drittlinienoptionen
+* **Personalisierte Medizin**: Biomarker-basierte Therapieauswahl
+
+### Technische Implementierung
+
+#### FHIR Invarianten-Management
+
+```
+* activity.detail 0..0  // Deaktiviert um FHIR Invariant cpl-3 zu vermeiden
+* activity.reference 1..1  // Referenz auf RequestGroup mit Therapiedetails
+
+```
+
+**Grund**: FHIR R4 Invariant `cpl-3` verhindert die gleichzeitige Verwendung von `activity.detail.code` und `activity.reference`. Dieses Profil wählt `activity.reference` für maximale Strukturierung.
+
+#### RequestGroup Integration
+
+Das referenzierte RequestGroup enthält:
+
+* **Therapietyp-Klassifikation** (`code` mit oBDS-Therapietypen)
+* **Spezifische Medikamente** (`action.resource` → SystemischeTherapie)
+* **Auswahllogik** (`selectionBehavior` für Optionen)
+
+### Implementierungsoptionen
+
+#### Option 1: Pharmazeutische Klassen
+
+Für Empfehlungen wie "beliebiger CDK4/6 Inhibitor":
+
+```
+CarePlan.activity.reference → RequestGroup
+├── code: "CZ" (Chemotherapie + zielgerichtete Substanzen)  
+└── action.resource → SystemischeTherapie
+    └── code.text: "CDK4/6 Inhibitor (Klasse) - Palbociclib, Ribociclib oder Abemaciclib"
+
+```
+
+#### Option 2: Spezifische Medikamentenauswahl
+
+Für präzise Optionen basierend auf Resistenzmustern:
+
+```
+CarePlan.activity.reference → RequestGroup
+├── code: "ZS" (Zielgerichtete Substanzen)
+├── selectionBehavior: #any
+├── action[0]: Trastuzumab (erste Wahl)
+├── action[1]: T-DM1 (bei Progression)
+└── action[2]: Tucatinib-Kombination (bei Hirnmetastasen)
+
+```
+
+### oBDS-Kontext
+
+**Wichtig**: Das oBDS-Datenfeld **19.1 "Therapieempfehlung Typ"** wird in diesem Profil **nicht direkt** in `CarePlan.activity.detail.code` erfasst, sondern in der referenzierten **RequestGroup.code**.
+
+**Vorteile**:
+
+* **Bessere Strukturierung** komplexer Therapieempfehlungen
+* **FHIR-konforme** Implementierung ohne Invarianten-Verletzungen
+* **Erweiterte Traceability** zwischen Empfehlung und spezifischen Medikamenten
+
+### Terminologie-Binding
+
+Die Therapietyp-Klassifikation erfolgt über:
+
+* **RequestGroup.code** bound to `mii-vs-onko-therapieempfehlung-typ`
+* **Enthält**: CH, HO, IM, ZS, CZ, CIZ, IZ, OP, ST, etc. (oBDS-Therapietypen)
+
+-------
+
+Mapping Datensatz zu FHIR
+
+-------
+
+Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensatz.de/basisdatensatz) zu FHIR
+
+-------
+
+**Suchparameter**
+
+Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombination:
+
+1. Der Suchparameter `_id` MUSS unterstützt werden: `GET [base]/CarePlan?_id=1234`
+1. Der Suchparameter "_profile" MUSS unterstützt werden: `GET [base]/CarePlan?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz-detailed-recommendations`
+1. Der Suchparameter "subject" MUSS unterstützt werden: `GET [base]/CarePlan?subject=Patient/example`
+1. Der Suchparameter "category" MUSS unterstützt werden: `GET [base]/CarePlan?category=MOL`
+
+**Beispiele**
+
+`mii-exa-onko-tumorkonferenz-class-recommendation` 
+
+`mii-exa-onko-tumorkonferenz-specific-choices` 
+

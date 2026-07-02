@@ -1,0 +1,607 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>MII CS Onkologie Strahlentherapie Zielgebiet - MII IG Kerndatensatz-Modul Onkologie v2026.0.3</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"7.232"}
+    h3,h4,h5,h6{--heading-prefix:"7.232"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Onkologie</span>
+            <br/>
+            <span style="display:inline-block;">2026.0.3 - release
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Start</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Beschreibung
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="beschreibung-modul.html">Beschreibung Modul Onkologie</a>
+      </li>
+      <li>
+        <a href="kontext.html">Kontext im Gesamtprojekt</a>
+      </li>
+      <li>
+        <a href="abweichungen-obds.html">Abweichungen zum oBDS</a>
+      </li>
+      <li>
+        <a href="bezug-nationale-standards.html">Bezug zu nationalen Standards</a>
+      </li>
+      <li>
+        <a href="bezug-internationale-standards.html">Bezug zu internationalen Standards</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsfälle
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="anwendungsfaelle.html">Übersicht</a>
+      </li>
+      <li>
+        <a href="szenarien.html">Szenarien</a>
+      </li>
+      <li>
+        <a href="datensaetze.html">Datensätze inkl. Beschreibungen</a>
+      </li>
+      <li>
+        <a href="uml.html">UML</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Technische Implementierung
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="technische-implementierung.html">Übersicht</a>
+      </li>
+      <li>
+        <a href="profile-inhalt-vererbung.html">Profile - Inhalt und Vererbung</a>
+      </li>
+      <li>
+        <a href="profile-beziehungen.html">Profile - Beziehungen und Referenzen</a>
+      </li>
+      <li>
+        <a href="verwendung-extensions.html">Verwendung von Extensions</a>
+      </li>
+      <li>
+        <a href="fhir-profile.html">FHIR-Profile</a>
+      </li>
+      <li>
+        <a href="organspezifische-module.html">Organspezifische Module</a>
+      </li>
+      <li>
+        <a href="terminologien.html">Terminologien</a>
+      </li>
+      <li>
+        <a href="capability-statement.html">CapabilityStatement</a>
+      </li>
+      <li>
+        <a href="qa-validierung.html">QA und Validierung</a>
+      </li>
+      <li>
+        <a href="obds-snomed-mapping.html">oBDS-SNOMED-CT Mapping</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefakte</a>
+  </li>
+  <li>
+    <a href="referenzen.html">Referenzen</a>
+  </li>
+  <li>
+    <a href="release-notes.html">Release Notes</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-de.png"/>Deutsch</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag de" src="assets/images/lang-de.png"/>Deutsch</div>
+
+    <div><a href="../en/CodeSystem-mii-cs-onko-strahlentherapie-zielgebiet.html"><img class="flag" src="assets/images/lang-en.png" alt="flag en"/>English</a></div>
+
+  </div>
+</div>
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artefaktübersicht</b></a></li><li><b>MII CS Onkologie Strahlentherapie Zielgebiet</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<!-- layouts\layout-codesystem -->
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Onkologie - Local Development build (v2026.0.3) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrativer Inhalt</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="CodeSystem-mii-cs-onko-strahlentherapie-zielgebiet.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="CodeSystem-mii-cs-onko-strahlentherapie-zielgebiet.json.html">JSON</a>
+    </li>
+  
+
+
+
+
+</ul>
+
+  <a name="root"> </a>
+
+  <h2 id="root">CodeSystem: MII CS Onkologie Strahlentherapie Zielgebiet
+
+  </h2>
+
+  <table class="colsi" data-fhir="generated">
+
+    <tr>
+      <td colspan="4"><i>Offizielle URL</i>: <span class="copy-text">https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet<button title="Klicken zum Kopieren der URL" class="btn-copy" data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">2026.0.3<button title="Klicken zum Kopieren der versionierten URL" class="btn-copy" data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet|2026.0.3"/></span>
+      </td>
+      <td style="text-align: right;border-left-style: hidden" title="Enable this to see changes since the last official release">
+        <span id="toggle-change-display"><label style="margin:0;font-weight:normal" for="showChanges">Highlight text changes?</label>
+  
+        <input style="margin:0" type="checkbox" id="showChanges" onchange="toggleChanges()"/>
+  
+      </span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="5">
+        
+          Active
+          
+
+            Stand: 
+2026-07-02
+
+          
+        
+      </td>
+
+
+
+      <td><i>Maschinenlesbarer Name</i>: <span style="font-family: monospace;">MII_CS_Onko_Strahlentherapie_Zielgebiet</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+<p>
+<p>oBDS-spezifisches Codesystem für Klassifikation von Zielgebiet von Strahlentherapie</p>
+
+</p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <p>Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:</p>
+
+  
+<ul>
+ <li><a href="ValueSet-mii-vs-onko-strahlentherapie-zielgebiet.html">MII_VS_Onko_Strahlentherapie_Zielgebiet</a></li>
+</ul>
+
+
+  <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated"><p class="res-header-id"></p><a name="mii-cs-onko-strahlentherapie-zielgebiet"> </a><a name="hcmii-cs-onko-strahlentherapie-zielgebiet"> </a>
+<div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"></p><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org/fhir/R4/shareablecodesystem.html">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet</code> defines the following codes:</p>
+<table class="codes" data-fhir="generated"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr>
+<tr><td style="white-space:nowrap">1.1<a name="mii-cs-onko-strahlentherapie-zielgebiet-1.461"> </a></td>
+<td>Ganzhirn (Neurokranium, inklusive Meningen)</td></tr>
+<tr><td style="white-space:nowrap">1.2<a name="mii-cs-onko-strahlentherapie-zielgebiet-1.462"> </a></td>
+<td>Teilhirn (frontal/parietal/occipital/temporal/Kleinhirn)</td></tr>
+<tr><td style="white-space:nowrap">1.3<a name="mii-cs-onko-strahlentherapie-zielgebiet-1.463"> </a></td>
+<td>Neuroachse/Rückenmark</td></tr>
+<tr><td style="white-space:nowrap">1.4<a name="mii-cs-onko-strahlentherapie-zielgebiet-1.464"> </a></td>
+<td>Hypophyse</td></tr>
+<tr><td style="white-space:nowrap">1.5<a name="mii-cs-onko-strahlentherapie-zielgebiet-1.465"> </a></td>
+<td>Hirn sonstiges</td></tr>
+<tr><td style="white-space:nowrap">2.1<a name="mii-cs-onko-strahlentherapie-zielgebiet-2.461"> </a></td>
+<td>Auge (r, l)</td></tr>
+<tr><td style="white-space:nowrap">2.2<a name="mii-cs-onko-strahlentherapie-zielgebiet-2.462"> </a></td>
+<td>Nase/Nasennebenhöhle</td></tr>
+<tr><td style="white-space:nowrap">2.3<a name="mii-cs-onko-strahlentherapie-zielgebiet-2.463"> </a></td>
+<td>Mundhöhle inklusive Mundhöhlenvorhof</td></tr>
+<tr><td style="white-space:nowrap">2.4<a name="mii-cs-onko-strahlentherapie-zielgebiet-2.464"> </a></td>
+<td>Ohr (r, l)</td></tr>
+<tr><td style="white-space:nowrap">2.5<a name="mii-cs-onko-strahlentherapie-zielgebiet-2.465"> </a></td>
+<td>Speicheldrüse (r, l)</td></tr>
+<tr><td style="white-space:nowrap">2.6<a name="mii-cs-onko-strahlentherapie-zielgebiet-2.466"> </a></td>
+<td>Pharynx</td></tr>
+<tr><td style="white-space:nowrap">2.7<a name="mii-cs-onko-strahlentherapie-zielgebiet-2.467"> </a></td>
+<td>Nasopharynx</td></tr>
+<tr><td style="white-space:nowrap">2.8<a name="mii-cs-onko-strahlentherapie-zielgebiet-2.468"> </a></td>
+<td>Oropharynx</td></tr>
+<tr><td style="white-space:nowrap">2.9<a name="mii-cs-onko-strahlentherapie-zielgebiet-2.469"> </a></td>
+<td>Hypopharynx</td></tr>
+<tr><td style="white-space:nowrap">2.10<a name="mii-cs-onko-strahlentherapie-zielgebiet-2.4610"> </a></td>
+<td>Larynx</td></tr>
+<tr><td style="white-space:nowrap">2.11<a name="mii-cs-onko-strahlentherapie-zielgebiet-2.4611"> </a></td>
+<td>Schilddrüse</td></tr>
+<tr><td style="white-space:nowrap">2.12<a name="mii-cs-onko-strahlentherapie-zielgebiet-2.4612"> </a></td>
+<td>Kopf-Hals sonstige</td></tr>
+<tr><td style="white-space:nowrap">3.1<a name="mii-cs-onko-strahlentherapie-zielgebiet-3.461"> </a></td>
+<td>Mamma als Ganzbrust (r, l)</td></tr>
+<tr><td style="white-space:nowrap">3.2<a name="mii-cs-onko-strahlentherapie-zielgebiet-3.462"> </a></td>
+<td>Mamma als Teilbrust (r, l)</td></tr>
+<tr><td style="white-space:nowrap">3.3<a name="mii-cs-onko-strahlentherapie-zielgebiet-3.463"> </a></td>
+<td>Thoraxwand, gegebenenfalls r, l</td></tr>
+<tr><td style="white-space:nowrap">3.4<a name="mii-cs-onko-strahlentherapie-zielgebiet-3.464"> </a></td>
+<td>Lunge (r, l)</td></tr>
+<tr><td style="white-space:nowrap">3.5<a name="mii-cs-onko-strahlentherapie-zielgebiet-3.465"> </a></td>
+<td>Ösophagus</td></tr>
+<tr><td style="white-space:nowrap">3.6<a name="mii-cs-onko-strahlentherapie-zielgebiet-3.466"> </a></td>
+<td>Mediastinum (mediastinaler Lymphabfluss ist in Nummer 9 zu kodieren)</td></tr>
+<tr><td style="white-space:nowrap">3.7<a name="mii-cs-onko-strahlentherapie-zielgebiet-3.467"> </a></td>
+<td>Thymus</td></tr>
+<tr><td style="white-space:nowrap">3.8<a name="mii-cs-onko-strahlentherapie-zielgebiet-3.468"> </a></td>
+<td>Thorax sonstige</td></tr>
+<tr><td style="white-space:nowrap">4.1<a name="mii-cs-onko-strahlentherapie-zielgebiet-4.461"> </a></td>
+<td>Magen</td></tr>
+<tr><td style="white-space:nowrap">4.2<a name="mii-cs-onko-strahlentherapie-zielgebiet-4.462"> </a></td>
+<td>Pankreas</td></tr>
+<tr><td style="white-space:nowrap">4.3<a name="mii-cs-onko-strahlentherapie-zielgebiet-4.463"> </a></td>
+<td>Leber, auch bei Teilbestrahlung</td></tr>
+<tr><td style="white-space:nowrap">4.4<a name="mii-cs-onko-strahlentherapie-zielgebiet-4.464"> </a></td>
+<td>Milz</td></tr>
+<tr><td style="white-space:nowrap">4.5<a name="mii-cs-onko-strahlentherapie-zielgebiet-4.465"> </a></td>
+<td>Niere (r, l)</td></tr>
+<tr><td style="white-space:nowrap">4.6<a name="mii-cs-onko-strahlentherapie-zielgebiet-4.466"> </a></td>
+<td>Nebenniere (r, l)</td></tr>
+<tr><td style="white-space:nowrap">4.7<a name="mii-cs-onko-strahlentherapie-zielgebiet-4.467"> </a></td>
+<td>Retroperitoneum (z. B. Sarkome)</td></tr>
+<tr><td style="white-space:nowrap">4.8<a name="mii-cs-onko-strahlentherapie-zielgebiet-4.468"> </a></td>
+<td>Ureter (r, l)</td></tr>
+<tr><td style="white-space:nowrap">4.9<a name="mii-cs-onko-strahlentherapie-zielgebiet-4.469"> </a></td>
+<td>Bauchwand (z. B. Sarkome)</td></tr>
+<tr><td style="white-space:nowrap">4.10<a name="mii-cs-onko-strahlentherapie-zielgebiet-4.4610"> </a></td>
+<td>Oberbauch</td></tr>
+<tr><td style="white-space:nowrap">4.11<a name="mii-cs-onko-strahlentherapie-zielgebiet-4.4611"> </a></td>
+<td>Gallengänge</td></tr>
+<tr><td style="white-space:nowrap">4.12<a name="mii-cs-onko-strahlentherapie-zielgebiet-4.4612"> </a></td>
+<td>Gallenblase</td></tr>
+<tr><td style="white-space:nowrap">4.13<a name="mii-cs-onko-strahlentherapie-zielgebiet-4.4613"> </a></td>
+<td>Abdomen sonstige</td></tr>
+<tr><td style="white-space:nowrap">5.1<a name="mii-cs-onko-strahlentherapie-zielgebiet-5.461"> </a></td>
+<td>Rektum</td></tr>
+<tr><td style="white-space:nowrap">5.2<a name="mii-cs-onko-strahlentherapie-zielgebiet-5.462"> </a></td>
+<td>Analbereich</td></tr>
+<tr><td style="white-space:nowrap">5.3<a name="mii-cs-onko-strahlentherapie-zielgebiet-5.463"> </a></td>
+<td>Harnblase</td></tr>
+<tr><td style="white-space:nowrap">5.4<a name="mii-cs-onko-strahlentherapie-zielgebiet-5.464"> </a></td>
+<td>Prostata</td></tr>
+<tr><td style="white-space:nowrap">5.5<a name="mii-cs-onko-strahlentherapie-zielgebiet-5.465"> </a></td>
+<td>Hoden (r, l)</td></tr>
+<tr><td style="white-space:nowrap">5.6<a name="mii-cs-onko-strahlentherapie-zielgebiet-5.466"> </a></td>
+<td>Penis</td></tr>
+<tr><td style="white-space:nowrap">5.7<a name="mii-cs-onko-strahlentherapie-zielgebiet-5.467"> </a></td>
+<td>Uterus</td></tr>
+<tr><td style="white-space:nowrap">5.8<a name="mii-cs-onko-strahlentherapie-zielgebiet-5.468"> </a></td>
+<td>Zervix</td></tr>
+<tr><td style="white-space:nowrap">5.9<a name="mii-cs-onko-strahlentherapie-zielgebiet-5.469"> </a></td>
+<td>Vulva</td></tr>
+<tr><td style="white-space:nowrap">5.10<a name="mii-cs-onko-strahlentherapie-zielgebiet-5.4610"> </a></td>
+<td>Vagina</td></tr>
+<tr><td style="white-space:nowrap">5.11<a name="mii-cs-onko-strahlentherapie-zielgebiet-5.4611"> </a></td>
+<td>Beckenwand</td></tr>
+<tr><td style="white-space:nowrap">5.12<a name="mii-cs-onko-strahlentherapie-zielgebiet-5.4612"> </a></td>
+<td>Becken sonstige</td></tr>
+<tr><td style="white-space:nowrap">6.1<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.461"> </a></td>
+<td>Schädel</td></tr>
+<tr><td style="white-space:nowrap">6.2<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.462"> </a></td>
+<td>Schädelbasis</td></tr>
+<tr><td style="white-space:nowrap">6.3<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.463"> </a></td>
+<td>Orbita (r, l)</td></tr>
+<tr><td style="white-space:nowrap">6.4<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.464"> </a></td>
+<td>Halswirbelsäule</td></tr>
+<tr><td style="white-space:nowrap">6.5<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.465"> </a></td>
+<td>Brustwirbelsäule</td></tr>
+<tr><td style="white-space:nowrap">6.6<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.466"> </a></td>
+<td>Lendenwirbelsäule</td></tr>
+<tr><td style="white-space:nowrap">6.7<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.467"> </a></td>
+<td>Sacrum /Coccygeum</td></tr>
+<tr><td style="white-space:nowrap">6.8<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.468"> </a></td>
+<td>Rippen (r, l)</td></tr>
+<tr><td style="white-space:nowrap">6.9<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.469"> </a></td>
+<td>Sternum</td></tr>
+<tr><td style="white-space:nowrap">6.10<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.4610"> </a></td>
+<td>Schulter (r, l)</td></tr>
+<tr><td style="white-space:nowrap">6.11<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.4611"> </a></td>
+<td>Oberarm (r, l)</td></tr>
+<tr><td style="white-space:nowrap">6.12<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.4612"> </a></td>
+<td>Unterarm (r, l)</td></tr>
+<tr><td style="white-space:nowrap">6.13<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.4613"> </a></td>
+<td>Hand (r, l)</td></tr>
+<tr><td style="white-space:nowrap">6.14<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.4614"> </a></td>
+<td>Becken (r, l)</td></tr>
+<tr><td style="white-space:nowrap">6.15<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.4615"> </a></td>
+<td>Hüfte (r, l)</td></tr>
+<tr><td style="white-space:nowrap">6.16<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.4616"> </a></td>
+<td>Oberschenkel (r, l)</td></tr>
+<tr><td style="white-space:nowrap">6.17<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.4617"> </a></td>
+<td>Unterschenkel (r, l)</td></tr>
+<tr><td style="white-space:nowrap">6.18<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.4618"> </a></td>
+<td>Fuß (r, l)</td></tr>
+<tr><td style="white-space:nowrap">6.19<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.4619"> </a></td>
+<td>Knochen sonstige</td></tr>
+<tr><td style="white-space:nowrap">7.1<a name="mii-cs-onko-strahlentherapie-zielgebiet-7.461"> </a></td>
+<td>Kopf, Gesicht, Hals</td></tr>
+<tr><td style="white-space:nowrap">7.2<a name="mii-cs-onko-strahlentherapie-zielgebiet-7.462"> </a></td>
+<td>obere Extremität ink* #lusive Schulter (r, l)</td></tr>
+<tr><td style="white-space:nowrap">7.3<a name="mii-cs-onko-strahlentherapie-zielgebiet-7.463"> </a></td>
+<td>untere Extremität und Hüfte (r, l)</td></tr>
+<tr><td style="white-space:nowrap">7.4<a name="mii-cs-onko-strahlentherapie-zielgebiet-7.464"> </a></td>
+<td>Thorax</td></tr>
+<tr><td style="white-space:nowrap">7.5<a name="mii-cs-onko-strahlentherapie-zielgebiet-7.465"> </a></td>
+<td>Abdomen</td></tr>
+<tr><td style="white-space:nowrap">7.6<a name="mii-cs-onko-strahlentherapie-zielgebiet-7.466"> </a></td>
+<td>Becken</td></tr>
+<tr><td style="white-space:nowrap">7.7<a name="mii-cs-onko-strahlentherapie-zielgebiet-7.467"> </a></td>
+<td>Stammes o. n. A.</td></tr>
+<tr><td style="white-space:nowrap">7.8<a name="mii-cs-onko-strahlentherapie-zielgebiet-7.468"> </a></td>
+<td>mehrere Bereiche überlappend</td></tr>
+<tr><td style="white-space:nowrap">7.9<a name="mii-cs-onko-strahlentherapie-zielgebiet-7.469"> </a></td>
+<td>sonstige Weichteile o. n. A.</td></tr>
+<tr><td style="white-space:nowrap">8.1<a name="mii-cs-onko-strahlentherapie-zielgebiet-8.461"> </a></td>
+<td>Ganzhaut</td></tr>
+<tr><td style="white-space:nowrap">8.2<a name="mii-cs-onko-strahlentherapie-zielgebiet-8.462"> </a></td>
+<td>Teilbereiche</td></tr>
+<tr><td style="white-space:nowrap">9.1<a name="mii-cs-onko-strahlentherapie-zielgebiet-9.461"> </a></td>
+<td>Cervikale Lymphknoten (r, l)</td></tr>
+<tr><td style="white-space:nowrap">9.2<a name="mii-cs-onko-strahlentherapie-zielgebiet-9.462"> </a></td>
+<td>Supra-/infraclavikuläre Lymphknoten (r, l)</td></tr>
+<tr><td style="white-space:nowrap">9.3<a name="mii-cs-onko-strahlentherapie-zielgebiet-9.463"> </a></td>
+<td>Axilläre Lymphknoten (r, l)</td></tr>
+<tr><td style="white-space:nowrap">9.4<a name="mii-cs-onko-strahlentherapie-zielgebiet-9.464"> </a></td>
+<td>Retrosternale/sternale/Mammaria interna Lymphknoten</td></tr>
+<tr><td style="white-space:nowrap">9.5<a name="mii-cs-onko-strahlentherapie-zielgebiet-9.465"> </a></td>
+<td>Mediastinale Lymphknoten</td></tr>
+<tr><td style="white-space:nowrap">9.6<a name="mii-cs-onko-strahlentherapie-zielgebiet-9.466"> </a></td>
+<td>Hiläre Lymphknoten</td></tr>
+<tr><td style="white-space:nowrap">9.7<a name="mii-cs-onko-strahlentherapie-zielgebiet-9.467"> </a></td>
+<td>Intraabdominale Lymphknoten (z. B. subphrenisch, perigastrisch, peripankreatisch, Leber-, Milzhilus)</td></tr>
+<tr><td style="white-space:nowrap">9.8<a name="mii-cs-onko-strahlentherapie-zielgebiet-9.468"> </a></td>
+<td>Paraaortale/paracavale Lymphknoten</td></tr>
+<tr><td style="white-space:nowrap">9.9<a name="mii-cs-onko-strahlentherapie-zielgebiet-9.469"> </a></td>
+<td>Retroperitoneale Lymphknoten</td></tr>
+<tr><td style="white-space:nowrap">9.10<a name="mii-cs-onko-strahlentherapie-zielgebiet-9.4610"> </a></td>
+<td>Beckenlymphabfluss (r, l) (Iliakal commun, extern, intern, obturatorisch, präsakral)</td></tr>
+<tr><td style="white-space:nowrap">9.11<a name="mii-cs-onko-strahlentherapie-zielgebiet-9.4611"> </a></td>
+<td>Inguinale Lymphknoten (r, l)</td></tr>
+<tr><td style="white-space:nowrap">9.12<a name="mii-cs-onko-strahlentherapie-zielgebiet-9.4612"> </a></td>
+<td>Involved Node</td></tr>
+<tr><td style="white-space:nowrap">9.13<a name="mii-cs-onko-strahlentherapie-zielgebiet-9.4613"> </a></td>
+<td>Involved Site</td></tr>
+<tr><td style="white-space:nowrap">9.14<a name="mii-cs-onko-strahlentherapie-zielgebiet-9.4614"> </a></td>
+<td>Involved Field</td></tr>
+<tr><td style="white-space:nowrap">9.15<a name="mii-cs-onko-strahlentherapie-zielgebiet-9.4615"> </a></td>
+<td>Sonstige Lymphknoten</td></tr>
+<tr><td style="white-space:nowrap">10.1<a name="mii-cs-onko-strahlentherapie-zielgebiet-10.461"> </a></td>
+<td>Ganzkörperbestrahlung bei allogener Stammzelltransplantation</td></tr>
+<tr><td style="white-space:nowrap">10.2<a name="mii-cs-onko-strahlentherapie-zielgebiet-10.462"> </a></td>
+<td>operative Zugangswege</td></tr>
+<tr><td style="white-space:nowrap">10.3<a name="mii-cs-onko-strahlentherapie-zielgebiet-10.463"> </a></td>
+<td>Sonstige, nicht genannte Zielgebiete</td></tr></table></div>
+
+  <hr/>
+  <p>
+    <a href="http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology">Beschreibung der obigen Tabelle(n)</a>.
+  </p>
+  
+
+  <!-- insert notes if present -->
+  
+
+
+
+  
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
+          Package mii-ig-onko-de-v2026#2026.0.3 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt 
+  <span title="2026-07-02 11:24:00 +0000">
+    2026-07-02
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-Bericht</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SearchParameter xmlns="http://hl7.org/fhir">
+  <id value="mii-sp-onko-procedure-ext-strahlentherapie-bs-gesamtdosis"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-pr-meta-searchparameter"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: SearchParameter mii-sp-onko-procedure-ext-strahlentherapie-bs-gesamtdosis</b></p><a name="en-mii-sp-onko-procedure-ext-strahlentherapie-bs-gesamtdosis"> </a><a name="en-hcmii-sp-onko-procedure-ext-strahlentherapie-bs-gesamtdosis"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-pr-meta-searchparameter">MII PR Meta SearchParameter</a></p></div><h2>MII_SP_Procedure_Extension_Strahlentherapie_Bestrahlung_Gesamtdosis</h2><p>Parameter <code>bestrahlung-gesamtdosis</code>:<code>quantity</code></p><div><p>SearchParameter for Procedure.extension:gesamtdosis</p>
+</div><table class="grid"><tr><td>Resource</td><td><a href="http://hl7.org/fhir/R4/procedure.html">Procedure</a></td></tr><tr><td>Expression</td><td><code>Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis').value</code></td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd: It's up to the server whether the parameter may repeat in order to specify multiple values that must all be true</li><li>multipleOr: It's up to the server whether the parameter can have multiple values (separated by comma) where at least one must be true</li></ul></td></tr></table></div>
+  </text>
+  <extension url="https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://hl7.org/fhir/spdx-license"/>
+        <code value="CC-BY-4.0"/>
+        <display value="Creative Commons Attribution 4.0 International"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-gesamtdosis"/>
+  <version value="2026.0.3"/>
+  <name value="MII_SP_Procedure_Extension_Strahlentherapie_Bestrahlung_Gesamtdosis"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2024-04-15"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="SearchParameter for Procedure.extension:gesamtdosis"/>
+  <code value="bestrahlung-gesamtdosis"/>
+  <base value="Procedure"/>
+  <type value="quantity"/>
+  <expression value="Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis').value"/>
+</SearchParameter>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="mii-cs-onko-therapie-stellungzurop"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem mii-cs-onko-therapie-stellungzurop</b></p><a name="mii-cs-onko-therapie-stellungzurop"> </a><a name="hcmii-cs-onko-therapie-stellungzurop"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org/fhir/R4/shareablecodesystem.html">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">O<a name="mii-cs-onko-therapie-stellungzurop-O"> </a></td><td>ohne Bezug zur operativen Therapie</td></tr><tr><td style="white-space:nowrap">A<a name="mii-cs-onko-therapie-stellungzurop-A"> </a></td><td>adjuvant</td></tr><tr><td style="white-space:nowrap">N<a name="mii-cs-onko-therapie-stellungzurop-N"> </a></td><td>neoadjuvant</td></tr><tr><td style="white-space:nowrap">I<a name="mii-cs-onko-therapie-stellungzurop-I"> </a></td><td>intraoperativ</td></tr><tr><td style="white-space:nowrap">Z<a name="mii-cs-onko-therapie-stellungzurop-Z"> </a></td><td>additiv</td></tr><tr><td style="white-space:nowrap">S<a name="mii-cs-onko-therapie-stellungzurop-S"> </a></td><td>Sonstiges</td></tr></table></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem mii-cs-onko-therapie-stellungzurop</b></p><a name="en-mii-cs-onko-therapie-stellungzurop"> </a><a name="en-hcmii-cs-onko-therapie-stellungzurop"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org/fhir/R4/shareablecodesystem.html">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">O<a name="en-mii-cs-onko-therapie-stellungzurop-O"> </a></td><td>ohne Bezug zur operativen Therapie</td></tr><tr><td style="white-space:nowrap">A<a name="en-mii-cs-onko-therapie-stellungzurop-A"> </a></td><td>adjuvant</td></tr><tr><td style="white-space:nowrap">N<a name="en-mii-cs-onko-therapie-stellungzurop-N"> </a></td><td>neoadjuvant</td></tr><tr><td style="white-space:nowrap">I<a name="en-mii-cs-onko-therapie-stellungzurop-I"> </a></td><td>intraoperativ</td></tr><tr><td style="white-space:nowrap">Z<a name="en-mii-cs-onko-therapie-stellungzurop-Z"> </a></td><td>additiv</td></tr><tr><td style="white-space:nowrap">S<a name="en-mii-cs-onko-therapie-stellungzurop-S"> </a></td><td>Sonstiges</td></tr></table></div></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop"/>
+  <version value="2026.0.3"/>
+  <name value="MII_CS_Onko_Therapie_StellungZurOp"/>
+  <title value="MII CS Onkologie Therapie Stellung"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-07-02T11:24:18+00:00"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="oBDS-spezifisches Codesystem für Klassifikation von Stellung zur OP"/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="6"/>
+  <concept>
+    <code value="O"/>
+    <display value="ohne Bezug zur operativen Therapie"/>
+  </concept>
+  <concept>
+    <code value="A"/>
+    <display value="adjuvant"/>
+  </concept>
+  <concept>
+    <code value="N"/>
+    <display value="neoadjuvant"/>
+  </concept>
+  <concept>
+    <code value="I"/>
+    <display value="intraoperativ"/>
+  </concept>
+  <concept>
+    <code value="Z"/>
+    <display value="additiv"/>
+  </concept>
+  <concept>
+    <code value="S"/>
+    <display value="Sonstiges"/>
+  </concept>
+</CodeSystem>

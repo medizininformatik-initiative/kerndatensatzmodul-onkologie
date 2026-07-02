@@ -1,0 +1,332 @@
+# MII PR Onkologie Therapieempfehlung Medikation - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+
+## Ressourcenprofil: MII PR Onkologie Therapieempfehlung Medikation 
+
+ 
+Dieses Profil beschreibt eine Medikations-Tumorempfehlung 
+
+Dieses Profil beschreibt eine **Medikations-Therapieempfehlung** im Rahmen der Tumorkonferenz. Es basiert auf dem FHIR MedicationRequest und wird typischerweise als Teil einer Kombinationstherapie (RequestGroup) oder als eigenständige Empfehlung verwendet.
+
+### Inhalt
+
+Das MedicationRequest-Profil ermöglicht die strukturierte Erfassung von Medikationsempfehlungen mit:
+
+* **Medikamentenkodierung**: PZN (Arzneimittel) und/oder ATC-DE (Wirkstoffe)
+* **Tumorerkrankungsbezug**: Pflicht-Referenz auf die Primärtumor-Diagnose
+* **Zusätzliche Begründungen**: Optionale Referenzen auf weitere Conditions oder Observations
+
+### Anwendungsfälle
+
+#### Eigenständige Medikationsempfehlung
+
+Für Einzelsubstanz-Empfehlungen ohne Kombinationsprotokoll:
+
+```
+MedicationRequest
+├── intent: #proposal
+├── medicationCodeableConcept: ATC L01XE27 (Ibrutinib)
+├── authoredOn: 2024-01-15
+└── reasonReference: Reference(Primärtumor)
+
+```
+
+#### Teil einer Kombinationstherapie
+
+Als Komponente einer RequestGroup-basierten Kombinationstherapie:
+
+```
+RequestGroup (FOLFOX-Protokoll)
+├── action[0].resource: MedicationRequest (5-FU)
+├── action[1].resource: MedicationRequest (Oxaliplatin)
+└── action[2].resource: MedicationRequest (Leucovorin)
+
+```
+
+### Technische Implementierung
+
+#### Intent-Semantik
+
+* **`#proposal`**: Eigenständige Therapieempfehlung der Tumorkonferenz
+* **`#option`**: Teil einer RequestGroup (Kombinationstherapie)
+
+#### Medikamentenkodierung
+
+Das `medicationCodeableConcept` Element unterstützt:
+
+* **ATC-DE**: Für Wirkstoff-basierte Empfehlungen
+* **PZN**: Für spezifische Arzneimittel-Empfehlungen
+* **Freitext**: Für experimentelle oder nicht-kodierbare Substanzen
+
+#### reasonReference Erweiterung
+
+Das Profil erlaubt neben der Pflicht-Referenz auf den Primärtumor auch:
+
+* **Condition**: Weitere relevante Erkrankungen als Begründung
+* **Observation**: Unterstützende Befunde (z.B. Biomarker, Staging)
+
+```
+reasonReference (Slicing: open, profile-based)
+├── Primaertumor (1..1 MS): Reference(MII_PR_Onko_Diagnose_Primaertumor)
+└── [weitere]: Reference(Condition or Observation)
+
+```
+
+### Verwendung mit Extended CarePlan
+
+Dieses Profil ist primär für die Verwendung mit dem **[Tumorkonferenz Detailed Recommendations Care Plan](tumorkonferenz-detailed-recommendations.md)** und der **[MII PR Onkologie Therapieempfehlung Kombinationstherapie](StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie.md)** konzipiert:
+
+* **Standard-oBDS**: Krebsregister erfassen nur Therapietyp (z.B. "CH" für Chemotherapie) ohne Details zu spezifischen Medikamenten
+* **Extended CarePlan**: Ermöglicht spezifische Medikationsempfehlungen mit ATC/PZN Kodierung
+
+**Integration mit RequestGroup (Kombinationstherapie)**:
+
+```
+CarePlan (Detailed Recommendations)
+└── activity.reference → RequestGroup
+    ├── code: "CZ" (Chemo + zielgerichtete Substanzen)
+    └── action.action.resource → MedicationRequest
+        ├── medication: ATC L01XE (Trastuzumab)
+        └── reasonReference: Reference(Primärtumor)
+
+```
+
+### oBDS-Kontext
+
+Dieses Profil unterstützt die Erfassung von Therapieempfehlungen gemäß oBDS-Kapitel 19:
+
+* **19.1 Therapieempfehlung Typ**: Über RequestGroup.code (bei Kombinationstherapien)
+* **Medikamentendetails**: Strukturierte Erfassung über MedicationRequest
+
+**Hinweis**: Die Standard-oBDS-Erfassung erfolgt über `CarePlan.activity.detail.code` (nur Therapietyp). Dieses MedicationRequest-Profil bietet erweiterte Strukturierung für molekulare Tumorboards, Kombinationstherapie-Protokolle und spezialisierte Anwendungsfälle.
+
+### Terminologie-Binding
+
+**medicationCodeableConcept.coding**:
+
+* Mindestens eine Kodierung erforderlich (1..*)
+* ATC-DE oder PZN empfohlen
+* Freitext über `.text` möglich
+
+-------
+
+Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensatz.de/basisdatensatz) zu FHIR
+
+-------
+
+**Suchparameter**
+
+1. Der Suchparameter `_id` MUSS unterstützt werden: `GET [base]/MedicationRequest?_id=1234`
+1. Der Suchparameter "_profile" MUSS unterstützt werden: `GET [base]/MedicationRequest?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation`
+1. Der Suchparameter "subject" MUSS unterstützt werden: `GET [base]/MedicationRequest?subject=Patient/example`
+1. Der Suchparameter "intent" SOLLTE unterstützt werden: `GET [base]/MedicationRequest?intent=proposal`
+1. Der Suchparameter "medication" SOLLTE unterstützt werden: `GET [base]/MedicationRequest?medication=http://fhir.de/CodeSystem/bfarm/atc|L01XE27`
+
+**Usages:**
+
+* Refer to this Profile: [MII PR Onkologie Therapieempfehlung Kombinationstherapie](StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie.md)
+* Examples for this Profile: [MedicationRequest/mii-exa-onko-cdk46-class-medication](MedicationRequest-mii-exa-onko-cdk46-class-medication.md), [MedicationRequest/mii-exa-onko-folfox-5fu-request](MedicationRequest-mii-exa-onko-folfox-5fu-request.md), [MedicationRequest/mii-exa-onko-folfox-leucovorin-request](MedicationRequest-mii-exa-onko-folfox-leucovorin-request.md), [MedicationRequest/mii-exa-onko-folfox-oxaliplatin-request](MedicationRequest-mii-exa-onko-folfox-oxaliplatin-request.md)... Show 5 more, [MedicationRequest/mii-exa-onko-modification-5fu-request](MedicationRequest-mii-exa-onko-modification-5fu-request.md), [MedicationRequest/mii-exa-onko-modification-leucovorin-request](MedicationRequest-mii-exa-onko-modification-leucovorin-request.md), [MedicationRequest/mii-exa-onko-modification-oxaliplatin-request](MedicationRequest-mii-exa-onko-modification-oxaliplatin-request.md), [MedicationRequest/mii-exa-onko-tdm1-option](MedicationRequest-mii-exa-onko-tdm1-option.md) and [MedicationRequest/mii-exa-onko-tucatinib-option](MedicationRequest-mii-exa-onko-tucatinib-option.md)
+* CapabilityStatements using this Profile: [MII CPS Onkology CapabilityStatement](CapabilityStatement-mii-cps-onko-capabilitystatement.md)
+
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/mii-ig-onko-de-v2026|current/StructureDefinition/StructureDefinition-mii-pr-onko-therapieempfehlung-medikation.json)
+
+### Formale Ansichten des Profilinhalts
+
+ [Beschreibung von Profilen, Differentials, Snapshots und deren Repräsentationen](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
+
+*  [Schlüsselelemente-Tabelle](#tabs-key) 
+*  [Differential-Tabelle](#tabs-diff) 
+*  [Snapshot-Tabelle](#tabs-snap) 
+*  [Statistiken/Referenzen](#tabs-summ) 
+*  [Alle](#tabs-all) 
+
+#### Terminology Bindings
+
+#### Constraints
+
+Diese Struktur ist abgeleitet von [MII_PR_Medikation_MedicationRequest](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.medikation@2026.0.1&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest) 
+
+#### Terminology Bindings
+
+#### Constraints
+
+Diese Struktur ist abgeleitet von [MII_PR_Medikation_MedicationRequest](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.medikation@2026.0.1&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest) 
+
+** Summary **
+
+Mandatory: 5 elements
+ Must-Support: 2 elements
+
+**Structures**
+
+This structure refers to these other structures:
+
+* [MII PR Onkologie Diagnose Primärtumor (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)](StructureDefinition-mii-pr-onko-diagnose-primaertumor.md)
+
+**Slices**
+
+This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+
+* The element 1 is sliced based on the value of MedicationRequest.reasonReference
+
+ **Schlüsselelemente-Ansicht** 
+
+#### Terminology Bindings
+
+#### Constraints
+
+ **Differential-Ansicht** 
+
+Diese Struktur ist abgeleitet von [MII_PR_Medikation_MedicationRequest](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.medikation@2026.0.1&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest) 
+
+ **Snapshot-AnsichtView** 
+
+#### Terminology Bindings
+
+#### Constraints
+
+Diese Struktur ist abgeleitet von [MII_PR_Medikation_MedicationRequest](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.medikation@2026.0.1&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest) 
+
+** Summary **
+
+Mandatory: 5 elements
+ Must-Support: 2 elements
+
+**Structures**
+
+This structure refers to these other structures:
+
+* [MII PR Onkologie Diagnose Primärtumor (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)](StructureDefinition-mii-pr-onko-diagnose-primaertumor.md)
+
+**Slices**
+
+This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+
+* The element 1 is sliced based on the value of MedicationRequest.reasonReference
+
+ 
+
+Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-therapieempfehlung-medikation.csv), [Excel](../StructureDefinition-mii-pr-onko-therapieempfehlung-medikation.xlsx), [Schematron](../StructureDefinition-mii-pr-onko-therapieempfehlung-medikation.sch) 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "mii-pr-onko-therapieempfehlung-medikation",
+  "extension" : [{
+    "url" : "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/spdx-license",
+        "code" : "CC-BY-4.0",
+        "display" : "Creative Commons Attribution 4.0 International"
+      }]
+    }
+  }],
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation",
+  "version" : "2026.0.3",
+  "name" : "MII_PR_Onko_Therapieempfehlung_Medikation",
+  "title" : "MII PR Onkologie Therapieempfehlung Medikation",
+  "status" : "active",
+  "date" : "2026-07-02T11:24:18+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Dieses Profil beschreibt eine Medikations-Tumorempfehlung",
+  "fhirVersion" : "4.0.1",
+  "mapping" : [{
+    "identity" : "oBDS",
+    "name" : "Mapping FHIR zu oBDS"
+  }],
+  "kind" : "resource",
+  "abstract" : false,
+  "type" : "MedicationRequest",
+  "baseDefinition" : "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest",
+  "derivation" : "constraint",
+  "differential" : {
+    "element" : [{
+      "id" : "MedicationRequest",
+      "path" : "MedicationRequest"
+    },
+    {
+      "id" : "MedicationRequest.intent",
+      "path" : "MedicationRequest.intent",
+      "short" : "proposal | option",
+      "definition" : "Verwenden Sie 'proposal' für eigenständige Therapieempfehlungen. Verwenden Sie 'option' wenn die MedicationRequest Teil einer RequestGroup ist (z.B. Kombinationstherapie)."
+    },
+    {
+      "id" : "MedicationRequest.medication[x]:medicationCodeableConcept",
+      "path" : "MedicationRequest.medication[x]",
+      "sliceName" : "medicationCodeableConcept",
+      "min" : 1,
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "MedicationRequest.medication[x]:medicationCodeableConcept.coding",
+      "path" : "MedicationRequest.medication[x].coding",
+      "min" : 1
+    },
+    {
+      "id" : "MedicationRequest.subject",
+      "path" : "MedicationRequest.subject",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Patient"]
+      }]
+    },
+    {
+      "id" : "MedicationRequest.supportingInformation",
+      "path" : "MedicationRequest.supportingInformation",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationRequest.authoredOn",
+      "path" : "MedicationRequest.authoredOn",
+      "min" : 1
+    },
+    {
+      "id" : "MedicationRequest.reasonReference",
+      "path" : "MedicationRequest.reasonReference",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "profile",
+          "path" : "$this.resolve()"
+        }],
+        "ordered" : false,
+        "rules" : "open"
+      },
+      "min" : 1,
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor",
+        "http://hl7.org/fhir/StructureDefinition/Condition",
+        "http://hl7.org/fhir/StructureDefinition/Observation"]
+      }]
+    },
+    {
+      "id" : "MedicationRequest.reasonReference:Primaertumor",
+      "path" : "MedicationRequest.reasonReference",
+      "sliceName" : "Primaertumor",
+      "short" : "Tumorerkrankung (Pflicht)",
+      "definition" : "Referenz auf die Primärtumor-Diagnose, auf die sich diese Therapieempfehlung bezieht.",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"]
+      }],
+      "mustSupport" : true
+    }]
+  }
+}
+
+```

@@ -1,0 +1,66 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "mii-cs-onko-asa-obds",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablecodesystem"]
+  },
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-onko-asa-obds</b></p><a name=\"mii-cs-onko-asa-obds\"> </a><a name=\"hcmii-cs-onko-asa-obds\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-asa-obds</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"mii-cs-onko-asa-obds-1\"> </a></td><td>ASA I</td><td>Gesunder Patient ohne organische, physiologische, biochemische oder psychiatrische Störung</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"mii-cs-onko-asa-obds-2\"> </a></td><td>ASA II</td><td>Patient mit leichter Allgemeinerkrankung</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"mii-cs-onko-asa-obds-3\"> </a></td><td>ASA III</td><td>Patient mit schwerer Allgemeinerkrankung und Leistungsminderung</td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"mii-cs-onko-asa-obds-4\"> </a></td><td>ASA IV</td><td>Patient mit schwerer Allgemeinerkrankung, die eine ständige Lebensbedrohung darstellt</td></tr><tr><td style=\"white-space:nowrap\">5<a name=\"mii-cs-onko-asa-obds-5\"> </a></td><td>ASA V</td><td>Moribunder Patient, der ohne Operation voraussichtlich nicht die nächsten 24 Stunden überleben wird</td></tr><tr><td style=\"white-space:nowrap\">6<a name=\"mii-cs-onko-asa-obds-6\"> </a></td><td>ASA VI</td><td>Hirntoter Patient zur Organspende</td></tr><tr><td style=\"white-space:nowrap\">U<a name=\"mii-cs-onko-asa-obds-U\"> </a></td><td>Unbekannt</td><td>ASA-Klassifikation unbekannt</td></tr></table></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-asa-obds",
+  "version" : "2026.0.3",
+  "name" : "MII_CS_Onko_ASA_oBDS",
+  "title" : "MII CS Onkologie ASA-Klassifikation oBDS",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-07-02T11:24:18+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "oBDS-basiertes CodeSystem für ASA-Klassifikation (ursprünglich KR9 aus Kolorektales Karzinom Modul, generalisiert für alle onkologischen Indikationen)",
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 7,
+  "concept" : [{
+    "code" : "1",
+    "display" : "ASA I",
+    "definition" : "Gesunder Patient ohne organische, physiologische, biochemische oder psychiatrische Störung"
+  },
+  {
+    "code" : "2",
+    "display" : "ASA II",
+    "definition" : "Patient mit leichter Allgemeinerkrankung"
+  },
+  {
+    "code" : "3",
+    "display" : "ASA III",
+    "definition" : "Patient mit schwerer Allgemeinerkrankung und Leistungsminderung"
+  },
+  {
+    "code" : "4",
+    "display" : "ASA IV",
+    "definition" : "Patient mit schwerer Allgemeinerkrankung, die eine ständige Lebensbedrohung darstellt"
+  },
+  {
+    "code" : "5",
+    "display" : "ASA V",
+    "definition" : "Moribunder Patient, der ohne Operation voraussichtlich nicht die nächsten 24 Stunden überleben wird"
+  },
+  {
+    "code" : "6",
+    "display" : "ASA VI",
+    "definition" : "Hirntoter Patient zur Organspende"
+  },
+  {
+    "code" : "U",
+    "display" : "Unbekannt",
+    "definition" : "ASA-Klassifikation unbekannt"
+  }]
+}

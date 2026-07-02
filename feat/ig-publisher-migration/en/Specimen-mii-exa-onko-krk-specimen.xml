@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Specimen xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-krk-specimen"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-specimen"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Specimen mii-exa-onko-krk-specimen</b></p><a name="en-mii-exa-onko-krk-specimen"> </a><a name="en-hcmii-exa-onko-krk-specimen"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-krk-specimen.html">MII PR Onkologie Specimen</a></p></div><p><b>accessionIdentifier</b>: KRK-2024-001234</p><p><b>status</b>: Available</p><p><b>type</b>: <span title="Codes:{http://snomed.info/sct 122652004}">Specimen from colon obtained by rectal/rectosigmoid (low anterior) resection (specimen)</span></p><p><b>subject</b>: <a href="Patient-mii-exa-onko-krk-bundle-patient.html">Klaus KolorektalCa  (no stated gender), DoB Unknown</a></p><h3>Collections</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Collected[x]</b></td></tr><tr><td style="display: none">*</td><td>2024-03-22 08:30:00+0100</td></tr></table><p><b>condition</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-tme-qualitaet 1}">Grad 1 (gut)</span></p><p><b>note</b>: </p><blockquote><div><p>Sigmaresekat mit Primärtumor und regionären Lymphknoten</p>
+</div></blockquote></div>
+  </text>
+  <accessionIdentifier>
+    <value value="KRK-2024-001234"/>
+  </accessionIdentifier>
+  <status value="available"/>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="122652004"/>
+      <display value="Specimen from colon obtained by rectal/rectosigmoid (low anterior) resection (specimen)"/>
+    </coding>
+  </type>
+  <subject>
+    <reference value="Patient/mii-exa-onko-krk-bundle-patient"/>
+  </subject>
+  <collection>
+    <collectedDateTime value="2024-03-22T08:30:00+01:00"/>
+  </collection>
+  <condition>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-tme-qualitaet"/>
+      <code value="1"/>
+      <display value="Grad 1 (gut)"/>
+    </coding>
+  </condition>
+  <note>
+    <text value="Sigmaresekat mit Primärtumor und regionären Lymphknoten"/>
+  </note>
+</Specimen>

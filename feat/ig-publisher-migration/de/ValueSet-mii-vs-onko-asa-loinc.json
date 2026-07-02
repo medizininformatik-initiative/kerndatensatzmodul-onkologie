@@ -1,0 +1,56 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-onko-asa-loinc",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
+  },
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-onko-asa-loinc</b></p><a name=\"mii-vs-onko-asa-loinc\"> </a><a name=\"hcmii-vs-onko-asa-loinc\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablevalueset.html\">Shareable ValueSet</a></p></div><ul><li>Include these codes as defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"https://loinc.org/LA28813-6/\">LA28813-6</a></td><td>ASA I</td></tr><tr><td><a href=\"https://loinc.org/LA28814-4/\">LA28814-4</a></td><td>ASA II</td></tr><tr><td><a href=\"https://loinc.org/LA28815-1/\">LA28815-1</a></td><td>ASA III</td></tr><tr><td><a href=\"https://loinc.org/LA28816-9/\">LA28816-9</a></td><td>ASA IV</td></tr><tr><td><a href=\"https://loinc.org/LA28817-7/\">LA28817-7</a></td><td>ASA V</td></tr><tr><td><a href=\"https://loinc.org/LA28818-5/\">LA28818-5</a></td><td>ASA VI</td></tr></table></li></ul></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-asa-loinc",
+  "version" : "2026.0.3",
+  "name" : "MII_VS_Onko_ASA_LOINC",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-07-02T11:24:18+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Value Set für LOINC ASA Physical Status Classification (generalisiert für alle onkologischen Indikationen)",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "LA28813-6",
+        "display" : "ASA I"
+      },
+      {
+        "code" : "LA28814-4",
+        "display" : "ASA II"
+      },
+      {
+        "code" : "LA28815-1",
+        "display" : "ASA III"
+      },
+      {
+        "code" : "LA28816-9",
+        "display" : "ASA IV"
+      },
+      {
+        "code" : "LA28817-7",
+        "display" : "ASA V"
+      },
+      {
+        "code" : "LA28818-5",
+        "display" : "ASA VI"
+      }]
+    }]
+  }
+}

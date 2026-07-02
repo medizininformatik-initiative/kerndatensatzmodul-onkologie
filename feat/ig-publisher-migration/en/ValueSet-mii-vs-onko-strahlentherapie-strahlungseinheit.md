@@ -1,0 +1,73 @@
+# MII VS Onkologie Strahlentherapie Strahlungseinheit - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+
+## ValueSet: MII VS Onkologie Strahlentherapie Strahlungseinheit 
+
+ 
+oBDS-spezifisches ValueSet für Strahlungseinheit en für Strahlen- und Nuklearmedizinische Therapie 
+
+ **References** 
+
+* [MII EX Onko Strahlentherapie Bestrahlung Einzeldosis](StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis.md)
+* [MII EX Onko Strahlentherapie Bestrahlung Gesamtdosis](StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis.md)
+
+### Logical Definition (CLD)
+
+ 
+
+### Expansion
+
+-------
+
+ [Description of the above table(s)](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology). 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-onko-strahlentherapie-strahlungseinheit",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-strahlungseinheit",
+  "version" : "2026.0.3",
+  "name" : "MII_VS_Onko_Strahlentherapie_Strahlungseinheit",
+  "title" : "MII VS Onkologie Strahlentherapie Strahlungseinheit",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-07-02T11:24:18+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "oBDS-spezifisches ValueSet für Strahlungseinheit en für Strahlen- und Nuklearmedizinische Therapie",
+  "compose" : {
+    "include" : [{
+      "system" : "http://unitsofmeasure.org",
+      "concept" : [{
+        "code" : "Gy",
+        "display" : "Gy"
+      },
+      {
+        "code" : "kBq",
+        "display" : "kBq"
+      },
+      {
+        "code" : "MBq",
+        "display" : "MBq"
+      },
+      {
+        "code" : "GBq",
+        "display" : "GBq"
+      }]
+    }]
+  }
+}
+
+```

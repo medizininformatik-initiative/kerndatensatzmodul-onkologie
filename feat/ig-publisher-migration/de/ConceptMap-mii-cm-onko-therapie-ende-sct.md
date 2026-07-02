@@ -1,0 +1,133 @@
+# MII CM Onko Therapie Ende SNOMED Mapping - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+
+## ConceptMap: MII CM Onko Therapie Ende SNOMED Mapping 
+
+ 
+Mapping Therapie Ende Codes zu SNOMED-CT 
+
+Das Feld Therapie Ende Grund wird sowohl von Strahlentherapie als auch von Systemischer Therapie angegeben.
+
+Problematisch beim Mappen war hier vor allem das Zusammenspiel aus Outcome und Grund/Modifikator, so dass fast immer zwei Konzepte in einer Antwortmöglichkeit gemeinsam auftreten.
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "ConceptMap",
+  "id" : "mii-cm-onko-therapie-ende-sct",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-therapie-ende-sct",
+  "version" : "2026.0.3",
+  "name" : "MII CM Onko Therapie Ende SNOMED Mapping",
+  "title" : "MII CM Onko Therapie Ende SNOMED Mapping",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2024-04-11",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Mapping Therapie Ende Codes zu SNOMED-CT",
+  "purpose" : "Technical mapping to transform oBDS-Data into SNOMED",
+  "sourceUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
+  "targetUri" : "http://snomed.info/sct/900000000000207008/version/20240401",
+  "group" : [{
+    "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende",
+    "target" : "http://snomed.info/sct/900000000000207008/version/20240401",
+    "element" : [{
+      "code" : "E",
+      "display" : "reguläres Ende",
+      "target" : [{
+        "code" : "385656004",
+        "display" : "Ended (qualifier value)",
+        "equivalence" : "equivalent",
+        "comment" : "keine Postkoordination zu andernen End-Konzepten möglich"
+      }]
+    },
+    {
+      "code" : "R",
+      "display" : "reguläres Ende mit Dosisreduktion",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "ggfs. Postkoordination von Dosisreduktion, aber keine Postkoordination mit 'qualifier value' möglich."
+      }]
+    },
+    {
+      "code" : "W",
+      "display" : "reguläres Ende mit Substanzwechsel",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "ggfs. Postkoordination von Substanzwechsel, aber keine Postkoordination mit 'qualifier value' möglich."
+      }]
+    },
+    {
+      "code" : "A",
+      "display" : "Abbruch wegen Nebenwirkungen",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "ggfs. Postkoordination von Nebnwirkungen, aber keine Postkoordination mit 'qualifier value' möglich."
+      }]
+    },
+    {
+      "code" : "P",
+      "display" : "Abbruch wegen Progress",
+      "target" : [{
+        "code" : "419835002",
+        "display" : "Tumor progression (finding)",
+        "equivalence" : "wider",
+        "comment" : "ggfs. Postkoordination von Abbruch"
+      }]
+    },
+    {
+      "code" : "S",
+      "display" : "Abbruch aus sonstigen Gründen",
+      "target" : [{
+        "code" : "74964007",
+        "display" : "Other (qualifier value)",
+        "equivalence" : "wider",
+        "comment" : "ggfs. Postkoordination"
+      }]
+    },
+    {
+      "code" : "V",
+      "display" : "Patient verweigert weitere Therapie",
+      "target" : [{
+        "code" : "183948000",
+        "display" : " Procedure declined by parent (situation)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "T",
+      "display" : "Patient verstorben",
+      "target" : [{
+        "code" : "419099009",
+        "display" : "Dead (finding)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "F",
+      "display" : "Zieldosis erreicht mit Unterbrechung > 3 Kalendertage",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "U",
+      "display" : "unbekannt",
+      "target" : [{
+        "code" : "261665006",
+        "display" : "Unknown (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}
+
+```

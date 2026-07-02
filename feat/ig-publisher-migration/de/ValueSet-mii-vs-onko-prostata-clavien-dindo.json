@@ -1,0 +1,68 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-onko-prostata-clavien-dindo",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
+  },
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-onko-prostata-clavien-dindo</b></p><a name=\"mii-vs-onko-prostata-clavien-dindo\"> </a><a name=\"hcmii-vs-onko-prostata-clavien-dindo\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablevalueset.html\">Shareable ValueSet</a></p></div><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/1367519000\">1367519000</a></td><td>Clavien-Dindo classification grade I (finding)</td></tr><tr><td><a href=\"http://snomed.info/id/1367520006\">1367520006</a></td><td>Clavien-Dindo classification grade II (finding)</td></tr><tr><td><a href=\"http://snomed.info/id/1367521005\">1367521005</a></td><td>Clavien-Dindo classification grade III (finding)</td></tr><tr><td><a href=\"http://snomed.info/id/1367522003\">1367522003</a></td><td>Clavien-Dindo classification grade IIIa (finding)</td></tr><tr><td><a href=\"http://snomed.info/id/1367523008\">1367523008</a></td><td>Clavien-Dindo classification grade IIIb (finding)</td></tr><tr><td><a href=\"http://snomed.info/id/1367524002\">1367524002</a></td><td>Clavien-Dindo classification grade IV (finding)</td></tr><tr><td><a href=\"http://snomed.info/id/1367525001\">1367525001</a></td><td>Clavien-Dindo classification grade IVa (finding)</td></tr><tr><td><a href=\"http://snomed.info/id/1367526000\">1367526000</a></td><td>Clavien-Dindo classification grade IVb (finding)</td></tr><tr><td><a href=\"http://snomed.info/id/1367527009\">1367527009</a></td><td>Clavien-Dindo classification grade V (finding)</td></tr></table></li></ul></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-clavien-dindo",
+  "version" : "2026.0.3",
+  "name" : "MII_VS_Onko_Prostata_Clavien_Dindo",
+  "status" : "active",
+  "experimental" : true,
+  "date" : "2026-07-02T11:24:18+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Value Set für Gleason Score",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "1367519000",
+        "display" : "Clavien-Dindo classification grade I (finding)"
+      },
+      {
+        "code" : "1367520006",
+        "display" : "Clavien-Dindo classification grade II (finding)"
+      },
+      {
+        "code" : "1367521005",
+        "display" : "Clavien-Dindo classification grade III (finding)"
+      },
+      {
+        "code" : "1367522003",
+        "display" : "Clavien-Dindo classification grade IIIa (finding)"
+      },
+      {
+        "code" : "1367523008",
+        "display" : "Clavien-Dindo classification grade IIIb (finding)"
+      },
+      {
+        "code" : "1367524002",
+        "display" : "Clavien-Dindo classification grade IV (finding)"
+      },
+      {
+        "code" : "1367525001",
+        "display" : "Clavien-Dindo classification grade IVa (finding)"
+      },
+      {
+        "code" : "1367526000",
+        "display" : "Clavien-Dindo classification grade IVb (finding)"
+      },
+      {
+        "code" : "1367527009",
+        "display" : "Clavien-Dindo classification grade V (finding)"
+      }]
+    }]
+  }
+}
