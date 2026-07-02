@@ -3889,7 +3889,178 @@
       "page": [
         {
           "nameUrl": "index.html",
-          "title": "Home",
+          "title": "Start",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "beschreibung-modul.html",
+          "title": "Beschreibung Modul Onkologie",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "kontext.html",
+              "title": "Kontext im Gesamtprojekt / Bezüge zu anderen Modulen",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "abweichungen-obds.html",
+              "title": "Abweichungen zum oBDS",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "bezug-nationale-standards.html",
+              "title": "Bezug zu nationalen Standards",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "bezug-internationale-standards.html",
+              "title": "Bezug zu internationalen Standards",
+              "generation": "markdown"
+            }
+          ]
+        },
+        {
+          "nameUrl": "anwendungsfaelle.html",
+          "title": "Anwendungsfälle / Informationsmodell",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "szenarien.html",
+              "title": "Beschreibung von Szenarien für die Anwendung der Module",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "datensaetze.html",
+              "title": "Datensätze inkl. Beschreibungen",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "uml.html",
+              "title": "UML",
+              "generation": "markdown"
+            }
+          ]
+        },
+        {
+          "nameUrl": "technische-implementierung.html",
+          "title": "Technische Implementierung",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "profile-inhalt-vererbung.html",
+              "title": "Profile - Inhalt und Vererbung",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "profile-beziehungen.html",
+              "title": "Profile - Beziehungen und Referenzen",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "verwendung-extensions.html",
+              "title": "Verwendung von Extensions",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "extension-bestrahlung.html",
+              "title": "Extensions Strahlentherapie: Bestrahlung",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "fhir-profile.html",
+              "title": "FHIR-Profile",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "fhir-profil-ressourcentyp.html",
+              "title": "FHIR-Profil (Ressourcentyp)",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "organspezifische-module.html",
+              "title": "Organspezifische Module",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "organspezifische-krk.html",
+              "title": "Kolorektales Karzinom (KRK)",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "organspezifische-mamma.html",
+              "title": "Mammakarzinom",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "organspezifische-melanom.html",
+              "title": "Malignes Melanom",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "organspezifische-prostata.html",
+              "title": "Prostatakarzinom",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "example-krk-bundle.html",
+              "title": "Beispiel: KRK-Bundle",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "example-mamma-bundle.html",
+              "title": "Beispiel: Mamma-Bundle",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "example-melanom-bundle.html",
+              "title": "Beispiel: Melanom-Bundle",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "tumorkonferenz-detailed-recommendations.html",
+              "title": "Tumorkonferenz: Detaillierte Therapieempfehlungen",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "terminologien.html",
+              "title": "Terminologien",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "terminologien-systemische-therapie.html",
+              "title": "Terminologien: Systemische Therapie",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "terminologien-weitere-klassifikationen.html",
+              "title": "Terminologien: Weitere Klassifikationen",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "capability-statement.html",
+              "title": "CapabilityStatement",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "qa-validierung.html",
+              "title": "QA und Validierung",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "obds-snomed-mapping.html",
+              "title": "oBDS-SNOMED-CT Mapping",
+              "generation": "markdown"
+            }
+          ]
+        },
+        {
+          "nameUrl": "referenzen.html",
+          "title": "Referenzen",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "release-notes.html",
+          "title": "Release Notes",
           "generation": "markdown"
         }
       ]
@@ -3902,6 +4073,38 @@
       {
         "code": "releaselabel",
         "value": "release"
+      },
+      {
+        "code": "path-pages",
+        "value": "input/intro-notes"
+      },
+      {
+        "code": "i18n-default-lang",
+        "value": "de"
+      },
+      {
+        "code": "i18n-lang",
+        "value": "en"
+      },
+      {
+        "code": "translation-sources",
+        "value": "input/translations/en"
+      },
+      {
+        "code": "excludexml",
+        "value": "false"
+      },
+      {
+        "code": "excludejson",
+        "value": "false"
+      },
+      {
+        "code": "excludettl",
+        "value": "true"
+      },
+      {
+        "code": "special-url",
+        "value": "https://www.medizininformatik-initiative.de/fhir/modul-onko/CapabilityStatement/metadata"
       }
     ]
   }
