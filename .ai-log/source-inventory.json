@@ -1,0 +1,69 @@
+{
+  "source": {
+    "rendered_ig_url": "https://simplifier.net/guide/mii-ig-modul-onkologie-v2026-de",
+    "repo_url": "https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie",
+    "branch": "dev",
+    "narrative_source_dir": "implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulOnkologie",
+    "note": "2025er Ordner (DE/EN) bewusst NICHT migriert (nur aktuelle 2026.x-DE)."
+  },
+  "module_metadata": {
+    "id": "mii-ig-onko-de-v2026",
+    "canonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko",
+    "package_id": "de.medizininformatikinitiative.kerndatensatz.onkologie",
+    "version": "2026.0.3",
+    "status": "active",
+    "releaseLabel": "release",
+    "publisher": "Medizininformatik Initiative",
+    "language_source_fsh": "de-DE",
+    "note": "Bestandsschutz: id/canonical/packageId/version/dependencies unverändert aus Quelle übernommen."
+  },
+  "dependencies": {
+    "de.basisprofil.r4": "1.5.x",
+    "de.medizininformatikinitiative.kerndatensatz.meta": "2026.0.x",
+    "de.medizininformatikinitiative.kerndatensatz.base": "2026.0.x",
+    "de.medizininformatikinitiative.kerndatensatz.biobank": "2026.0.0",
+    "de.medizininformatikinitiative.kerndatensatz.medikation": "2026.0.x",
+    "de.medizininformatikinitiative.kerndatensatz.molgen": "2026.0.x",
+    "de.medizininformatikinitiative.kerndatensatz.studie": "2026.0.2"
+  },
+  "artifacts_generated": {
+    "StructureDefinition": 90,
+    "ValueSet": 98,
+    "CodeSystem": 43,
+    "ConceptMap": 39,
+    "CapabilityStatement": 1,
+    "SearchParameter": 17,
+    "example_instances": "~200 (Patient, Condition, Observation, Procedure, MedicationStatement, Bundle, ...)",
+    "total_resources": 489
+  },
+  "logical_models": [
+    "mii-lm-onko (Basis-Onkologie)",
+    "mii-lm-onko-organspezifische-zusatzmodule",
+    "mii-lm-mvgenomseq-onkologie"
+  ],
+  "narrative_structure": {
+    "manteldokument_toplevel": [
+      "Index.page.md -> index.md (Impressum/Autoren/Ansprechpartner)",
+      "BeschreibungModulOnko.page.md -> index.md (Beschreibung/Scope)",
+      "KontextimGesamtprojektBezgezuanderenModulen.page.md -> context.md",
+      "Referenzen.page.md -> references.md",
+      "Abweichungen-zum-oBDS.page.md -> abweichungen-obds.md (Zusatzseite)",
+      "BezugZuNationalenStandards.page.md -> bezug-nationale-standards.md (Zusatzseite)",
+      "BezugZuInternationalenStandards.page.md -> bezug-internationale-standards.md (Zusatzseite)",
+      "Release-Notes.page.md -> changes.md"
+    ],
+    "anwendungsfaelle_informationsmodell": [
+      "BeschreibungvonSzenarienfrdieAnwendungderModule.page.md -> use-cases.md",
+      "Datenstzeinkl.Beschreibungen.page.md -> data-sets.md",
+      "UML.page.md -> uml.md"
+    ],
+    "technische_implementierung": {
+      "count_pages": "~130",
+      "handling": "Pro-Profil-Seiten (FHIR-Profile/*, oBDS-SNOMED-CT-Mapping/*) sind in Simplifier handgeschrieben, weil Simplifier keine Artefaktseiten generiert. Im IG Publisher werden pro StructureDefinition/ValueSet/CodeSystem/ConceptMap AUTOMATISCH Artefaktseiten (Artifacts-Tab) generiert; die beschreibenden Texte liegen in den FSH ^description/^definition. Diese Seiten werden daher NICHT als separate pagecontent-Narrative dupliziert (faithful migration). Übergreifende Technik-Übersichtsseiten (Terminologien, Extensions, Konformität, QA) sind in conformance.md konsolidiert. TODO:REVIEW durch Fachvertretung."
+    }
+  },
+  "directive_inventory": {
+    "total_directives_all_2026_pages": 2109,
+    "note": "Grossteil (<tab>=500, @```=454, {{json=201, {{tree=88, {{xml=83, {{link=83) liegt auf den Pro-Profil-Artefaktseiten -> im IG Publisher generiert. Verbliebene Direktiven auf den migrierten Manteldokument-Seiten werden gemaess fql-rules.tsv transformiert und via tools/fql-scan.sh geprueft (Ziel: 0 Rest, 0 UNBEKANNT)."
+  }
+}

@@ -1,0 +1,134 @@
+name: Build IG (HL7 IG Publisher)
+
+# Baut den IG-Publisher-basierten Implementierungsleitfaden (SUSHI + IG Publisher).
+# - Loest bei Push auf hl7-ig-build* sowie bei Pull Requests aus.
+# - Bei Pull Requests wird output/ als Artifact hochgeladen (KEIN Pages-Deploy).
+# - Terminologie-Proxy (NGINX + Client-Zertifikat) nach dem Vorbild der MII-Module
+#   (z. B. kerndatensatzmodul-labor). Sind die Proxy-Secrets nicht gesetzt, faellt
+#   der Build auf einen oeffentlichen Terminologieserver zurueck.
+# Bestehende Modul-Workflows (main.yml, render-plantuml.yml) bleiben unberuehrt.
+
+on:
+  push:
+    branches:
+      - 'hl7-ig-build*'
+  pull_request:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Graphviz
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y graphviz
+
+      - name: Determine terminology backend
+        id: tx
+        shell: bash
+        env:
+          CDS_DEV_CLIENT_CERT: ${{ secrets.CDS_DEV_CLIENT_CERT }}
+        run: |
+          if [ -n "${CDS_DEV_CLIENT_CERT}" ]; then
+            echo "proxy=true" >> "$GITHUB_OUTPUT"
+            echo "tx_url=http://127.0.0.1:8090/fhir" >> "$GITHUB_OUTPUT"
+            echo "Terminologie: MII-Proxy (Client-Zertifikat vorhanden)."
+          else
+            echo "proxy=false" >> "$GITHUB_OUTPUT"
+            echo "tx_url=https://tx.fhir.org" >> "$GITHUB_OUTPUT"
+            echo "Terminologie: oeffentlicher Fallback (tx.fhir.org) — Proxy-Secrets fehlen."
+          fi
+
+      - name: Create NGINX config and certificates
+        if: steps.tx.outputs.proxy == 'true'
+        shell: bash
+        env:
+          CDS_DEV_CLIENT_CERT: ${{ secrets.CDS_DEV_CLIENT_CERT }}
+          CDS_DEV_CLIENT_KEY: ${{ secrets.CDS_DEV_CLIENT_KEY }}
+          CDS_DEV_CLIENT_CERT_PASSWORD: ${{ secrets.CDS_DEV_CLIENT_CERT_PASSWORD }}
+        run: |
+          mkdir -p nginx/certs
+          curl -sSL -o nginx/nginx.conf https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatz-meta/refs/heads/master/.github/workflows/nginx.conf
+          echo "$CDS_DEV_CLIENT_CERT" | base64 -d > nginx/certs/client-cert.pem
+          echo "$CDS_DEV_CLIENT_KEY" | base64 -d > nginx/certs/client-key-encrypted.key
+          openssl rsa -in nginx/certs/client-key-encrypted.key -out nginx/certs/client-key.key -passin env:CDS_DEV_CLIENT_CERT_PASSWORD
+
+      - name: Start NGINX Proxy
+        if: steps.tx.outputs.proxy == 'true'
+        run: |
+          docker run -d --name nginx-proxy \
+            -v $PWD/nginx/nginx.conf:/etc/nginx/nginx.conf:ro \
+            -v $PWD/nginx/certs:/etc/nginx/certs:ro \
+            -p 8090:80 \
+            nginx:alpine
+          sleep 5
+          for i in {1..10}; do
+            if curl --head --silent --fail http://localhost:8090; then
+              echo "NGINX is responding."
+              break
+            else
+              echo "NGINX not responding. Attempt $i"
+              sleep 2
+              if [ $i -eq 10 ]; then
+                echo "NGINX still not responding."
+                docker logs nginx-proxy
+                exit 1
+              fi
+            fi
+          done
+
+      # SUSHI (FSH -> FHIR), inkl. Snapshot-Unterstuetzung (MII-Image)
+      - name: Run SUSHI
+        run: docker run --rm --network host -v $PWD:/workspace -v /usr/bin/dot:/usr/local/bin/dot:ro -v /usr/lib/x86_64-linux-gnu:/usr/host/lib:ro -e LD_LIBRARY_PATH="/usr/host/lib:$LD_LIBRARY_PATH" -w /workspace ghcr.io/gefyra/ig-publisher-with-snapshot-support:latest sushi .
+
+      # HL7 FHIR IG Publisher
+      - name: Build IG
+        env:
+          TX_URL: ${{ steps.tx.outputs.tx_url }}
+        run: |
+          docker run --rm --network host -v $PWD:/workspace -v /usr/bin/dot:/usr/local/bin/dot:ro -v /usr/lib/x86_64-linux-gnu:/usr/host/lib:ro -e LD_LIBRARY_PATH="/usr/host/lib:$LD_LIBRARY_PATH" -w /workspace ghcr.io/gefyra/ig-publisher-with-snapshot-support:latest sh -c "igpublisher -ig ig.ini -tx ${TX_URL} || true"
+          if [ -d "output" ] && [ "$(ls -A output)" ]; then
+            echo "IG build produced output."
+            exit 0
+          else
+            echo "IG build failed to produce output."
+            exit 1
+          fi
+
+      - name: Cleanup NGINX
+        if: always() && steps.tx.outputs.proxy == 'true'
+        run: |
+          docker stop nginx-proxy || true
+          docker rm nginx-proxy || true
+
+      - name: Fix output directory permissions
+        if: always()
+        run: sudo chown -R $USER:$USER output || true
+
+      - name: Publish QA summary
+        if: always()
+        shell: bash
+        run: |
+          if [ -f output/qa.txt ]; then
+            echo '### IG Publisher QA' >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+            head -n 20 output/qa.txt >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      # Bei Pull Requests: output/ als Artifact hochladen (kein Pages-Deploy)
+      - name: Upload IG output (PR artifact)
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: fhir-ig-output
+          path: output
+          retention-days: 14

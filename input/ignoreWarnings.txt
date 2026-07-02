@@ -1,0 +1,13 @@
+# Bekannte / abgenommene QA-Hinweise. Pro Zeile ein Muster.
+# Matching ist Glob (KEIN Regex): %text% = enthaelt, text% = beginnt mit,
+# %text = endet mit, text = exakt; case-insensitiv (HL7 IG Publisher).
+# Beispiel:
+# == Suppressed Messages ==
+# The codeSystem 'https://www.medizininformatik-initiative.de/...' could not be resolved
+# %(de-DE)%   # i18n-Sprach-Mismatch de-DE vs. de (locale-stabiles Token)
+
+== Suppressed Messages ==
+# i18n-Sprach-Mismatch: Quell-FSH setzt teils ^language = #de-DE, IG-Sprache ist de.
+# Kosmetisch (BCP 47: de-DE ist Subtag von de), durch das i18n-Feature bedingt.
+# FSH bleibt unveraendert (Guardrail 1 Bestandsschutz). Locale-stabiles Token:
+%(de-DE)%

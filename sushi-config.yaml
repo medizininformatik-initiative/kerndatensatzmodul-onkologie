@@ -19,7 +19,22 @@ publisher:
   name: Medizininformatik Initiative
   url: https://www.medizininformatik-initiative.de/
   # email: test@example.org
-language: "de-DE"
+# Sprache: Deutsch ist fuehrend/verbindlich (KDS-Governance). Fuer die i18n-Mechanik
+# des IG Publishers wird 'de' (nicht 'de-DE') gesetzt; FSH bleibt unveraendert.
+language: de
+
+# --- Mehrsprachigkeit & HL7-Best-Practice-Parameter (deutsch fuehrend, Englisch optional) ---
+parameters:
+  i18n-default-lang: de
+  i18n-lang:
+    - en
+  translation-sources:
+    - input/translations/en
+  apply-contact: "true"
+  apply-jurisdiction: "true"
+  apply-publisher: "true"
+  autoload-resources: "true"
+  shownav: "true"
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (or dev/current). For advanced
@@ -82,9 +97,58 @@ dependencies:
 # │ input/includes. To use a provided input/includes/menu.xml file, delete the "menu"              │
 # │ property below.                                                                                │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+# --- Narrative Seiten (deutsch gefuehrt) ---
+pages:
+  index.md:
+    title: "Start"
+  use-cases.md:
+    title: "Anwendungsfälle / Szenarien"
+  data-sets.md:
+    title: "Datensätze und Beschreibungen"
+  uml.md:
+    title: "Informationsmodell (UML)"
+  conformance.md:
+    title: "Konformität (Technische Implementierung)"
+  abweichungen-obds.md:
+    title: "Abweichungen zum oBDS"
+  context.md:
+    title: "Kontext / Bezüge zu anderen Modulen"
+  bezug-nationale-standards.md:
+    title: "Bezug zu nationalen Standards"
+  bezug-internationale-standards.md:
+    title: "Bezug zu internationalen Standards"
+  security-privacy.md:
+    title: "Sicherheit und Datenschutz"
+  references.md:
+    title: "Referenzen"
+  downloads.md:
+    title: "Downloads"
+  changes.md:
+    title: "Release Notes / Änderungen"
+  translationinfo.md:
+    title: "Hinweise zur Mehrsprachigkeit"
+
+# --- Menue (deutsch gefuehrt) ---
 menu:
-  Home: index.html
-  Artifacts: artifacts.html
+  Start: index.html
+  Beschreibung:
+    Modulbeschreibung: index.html
+    Abweichungen zum oBDS: abweichungen-obds.html
+    Bezüge zu anderen Modulen: context.html
+    Nationale Standards: bezug-nationale-standards.html
+    Internationale Standards: bezug-internationale-standards.html
+  Anwendungsfälle / Informationsmodell:
+    Szenarien: use-cases.html
+    Datensätze: data-sets.html
+    Informationsmodell (UML): uml.html
+  Technische Implementierung:
+    Konformität: conformance.html
+    Sicherheit & Datenschutz: security-privacy.html
+  Artefakte: artifacts.html
+  Referenzen: references.html
+  Downloads: downloads.html
+  Release Notes: changes.html
+  Mehrsprachigkeit: translationinfo.html
 
 #   Guidance:
 #     Information Model: information_model.html
