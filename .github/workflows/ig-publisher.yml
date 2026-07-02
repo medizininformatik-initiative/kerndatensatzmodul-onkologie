@@ -144,6 +144,10 @@ jobs:
             cd ..
           fi
 
+          # GitHub blocks files >100 MB; Onko's full-ig.zip is ~132 MB.
+          # The full package remains available as workflow artifact.
+          find output -type f -size +99M -print -delete
+
           # Publish main/master branch to root, other branches to subdirectories
           if [[ "${GITHUB_REF_NAME}" == "main" ]] || [[ "${GITHUB_REF_NAME}" == "master" ]]; then
             # Main branch: publish to root
