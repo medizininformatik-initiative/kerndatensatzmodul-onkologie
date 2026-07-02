@@ -1,0 +1,95 @@
+# MII CM Onko Seitenlokalisation SNOMED Mapping - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+
+## ConceptMap: MII CM Onko Seitenlokalisation SNOMED Mapping 
+
+ 
+Mapping Seitenlokalisation Codes zu SNOMED-CT 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "ConceptMap",
+  "id" : "mii-cm-onko-seitenlokalisation-sct",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-seitenlokalisation-sct",
+  "version" : "2026.0.3",
+  "name" : "MII CM Onko Seitenlokalisation SNOMED Mapping",
+  "title" : "MII CM Onko Seitenlokalisation SNOMED Mapping",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2024-04-10",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Mapping Seitenlokalisation Codes zu SNOMED-CT",
+  "purpose" : "Technical mapping to transform oBDS-Data into SNOMED",
+  "sourceUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
+  "targetUri" : "http://snomed.info/sct/900000000000207008/version/20240401",
+  "group" : [{
+    "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation",
+    "target" : "http://snomed.info/sct/900000000000207008/version/20240401",
+    "element" : [{
+      "code" : "L",
+      "display" : "links",
+      "target" : [{
+        "code" : "7771000",
+        "display" : "Left (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "R",
+      "display" : "rechts",
+      "target" : [{
+        "code" : "24028007",
+        "display" : "Right (qualifier value) ",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "B",
+      "display" : "beidseitig",
+      "target" : [{
+        "code" : "51440002",
+        "display" : "Right and left (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "M",
+      "display" : "Mittellinie/mittig",
+      "target" : [{
+        "code" : "260528009",
+        "display" : "Median (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "U",
+      "display" : "unbekannt",
+      "target" : [{
+        "code" : "261665006",
+        "display" : "Unknown (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "T",
+      "display" : "trifft nicht zu",
+      "target" : [{
+        "code" : "385432009",
+        "display" : "Not applicable (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}
+
+```

@@ -1,0 +1,148 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-therapie-ende-sct> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-cm-onko-therapie-ende-sct"] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap mii-cm-onko-therapie-ende-sct</b></p><a name=\"mii-cm-onko-therapie-ende-sct\"> </a><a name=\"hcmii-cm-onko-therapie-ende-sct\"> </a><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende</code> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>E (reguläres Ende)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>385656004 (Ended (qualifier value))</td><td>keine Postkoordination zu andernen End-Konzepten möglich</td></tr><tr><td>R (reguläres Ende mit Dosisreduktion)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">ggfs. Postkoordination von Dosisreduktion, aber keine Postkoordination mit 'qualifier value' möglich.</td></tr><tr><td>W (reguläres Ende mit Substanzwechsel)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">ggfs. Postkoordination von Substanzwechsel, aber keine Postkoordination mit 'qualifier value' möglich.</td></tr><tr><td>A (Abbruch wegen Nebenwirkungen)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">ggfs. Postkoordination von Nebnwirkungen, aber keine Postkoordination mit 'qualifier value' möglich.</td></tr><tr><td>P (Abbruch wegen Progress)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>419835002 (Tumor progression (finding))</td><td>ggfs. Postkoordination von Abbruch</td></tr><tr><td>S (Abbruch aus sonstigen Gründen)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>74964007 (Other (qualifier value))</td><td>ggfs. Postkoordination</td></tr><tr><td>V (Patient verweigert weitere Therapie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>183948000 ( Procedure declined by parent (situation))</td><td/></tr><tr><td>T (Patient verstorben)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>419099009 (Dead (finding))</td><td/></tr><tr><td>F (Zieldosis erreicht mit Unterbrechung &gt; 3 Kalendertage)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>U (unbekannt)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>261665006 (Unknown (qualifier value))</td><td/></tr></table></div>"
+  ] ;
+  fhir:ConceptMap.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-therapie-ende-sct"] ;
+  fhir:ConceptMap.version [ fhir:value "2026.0.3"] ;
+  fhir:ConceptMap.name [ fhir:value "MII CM Onko Therapie Ende SNOMED Mapping"] ;
+  fhir:ConceptMap.title [ fhir:value "MII CM Onko Therapie Ende SNOMED Mapping"] ;
+  fhir:ConceptMap.status [ fhir:value "active"] ;
+  fhir:ConceptMap.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ConceptMap.date [ fhir:value "2024-04-11"^^xsd:date] ;
+  fhir:ConceptMap.publisher [ fhir:value "Medizininformatik Initiative"] ;
+  fhir:ConceptMap.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "Medizininformatik Initiative" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.medizininformatik-initiative.de/" ]
+     ]
+  ] ;
+  fhir:ConceptMap.description [ fhir:value "Mapping Therapie Ende Codes zu SNOMED-CT"] ;
+  fhir:ConceptMap.purpose [ fhir:value "Technical mapping to transform oBDS-Data into SNOMED"] ;
+  fhir:ConceptMap.sourceUri [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/"] ;
+  fhir:ConceptMap.targetUri [ fhir:value "http://snomed.info/sct/900000000000207008/version/20240401"] ;
+  fhir:ConceptMap.group [
+     fhir:index -1 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "http://snomed.info/sct/900000000000207008/version/20240401" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "E" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "reguläres Ende" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "385656004" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Ended (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "keine Postkoordination zu andernen End-Konzepten möglich" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "R" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "reguläres Ende mit Dosisreduktion" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "ggfs. Postkoordination von Dosisreduktion, aber keine Postkoordination mit 'qualifier value' möglich." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "W" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "reguläres Ende mit Substanzwechsel" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "ggfs. Postkoordination von Substanzwechsel, aber keine Postkoordination mit 'qualifier value' möglich." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "A" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Abbruch wegen Nebenwirkungen" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "ggfs. Postkoordination von Nebnwirkungen, aber keine Postkoordination mit 'qualifier value' möglich." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "P" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Abbruch wegen Progress" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "419835002" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Tumor progression (finding)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "wider" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "ggfs. Postkoordination von Abbruch" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "S" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Abbruch aus sonstigen Gründen" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "74964007" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Other (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "wider" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "ggfs. Postkoordination" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "V" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Patient verweigert weitere Therapie" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "183948000" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value " Procedure declined by parent (situation)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "T" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Patient verstorben" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "419099009" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Dead (finding)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "F" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Zieldosis erreicht mit Unterbrechung > 3 Kalendertage" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "U" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "unbekannt" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "261665006" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Unknown (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-therapie-ende-sct.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

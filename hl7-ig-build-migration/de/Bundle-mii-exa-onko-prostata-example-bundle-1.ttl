@@ -1,0 +1,617 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Bundle/mii-exa-onko-prostata-example-bundle-1> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-prostata-example-bundle-1"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/Bundle" ;
+       fhir:index -1 ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/Bundle>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:Bundle.identifier [
+     fhir:Identifier.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko" ] ;
+     fhir:Identifier.value [ fhir:value "prostata-example-bundle-2024-001" ]
+  ] ;
+  fhir:Bundle.type [ fhir:value "transaction"] ;
+  fhir:Bundle.timestamp [ fhir:value "2024-03-25T10:00:00+01:00"^^xsd:dateTime] ;
+  fhir:Bundle.entry [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-prostata-bundle-patient" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-prostata-bundle-patient> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Patient" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-prostata-diagnose" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-prostata-diagnose> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Condition" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-prostata-bundle-encounter" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-prostata-bundle-encounter> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Encounter" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-psa-diagnose-1" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-psa-diagnose-1> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Observation" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-anzahl-stanzen-1" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-anzahl-stanzen-1> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Observation" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-anzahl-positiver-stanzen-1" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-anzahl-positiver-stanzen-1> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Observation" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-ca-befall-stanze-1" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-ca-befall-stanze-1> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Observation" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-gleason-pattern-grade-group-1" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-gleason-pattern-grade-group-1> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Observation" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-gleason-pattern-primary-1" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-gleason-pattern-primary-1> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Observation" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-gleason-pattern-secondary-1" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-gleason-pattern-secondary-1> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Observation" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-surgical-complication-1" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-surgical-complication-1> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Observation" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-prostata-surgery-1" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-prostata-surgery-1> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Procedure" ]
+     ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-prostata-bundle-patient> a fhir:Patient ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-prostata-bundle-patient"] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Patient_mii-exa-onko-prostata-bundle-patient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient mii-exa-onko-prostata-bundle-patient</b></p><a name=\"mii-exa-onko-prostata-bundle-patient\"> </a><a name=\"hcmii-exa-onko-prostata-bundle-patient\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Peter ProstataCa  (no stated gender), DoB Unknown</p><hr/></div>"
+  ] ;
+  fhir:Patient.name [
+     fhir:index -1 ;
+     fhir:HumanName.family [ fhir:value "ProstataCa" ] ;
+     fhir:HumanName.given [
+       fhir:value "Peter" ;
+       fhir:index -1
+     ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-prostata-diagnose> a fhir:Condition ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-prostata-diagnose"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor|2026.0.3" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor|2026.0.3>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Condition_mii-exa-onko-prostata-diagnose\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition mii-exa-onko-prostata-diagnose</b></p><a name=\"mii-exa-onko-prostata-diagnose\"> </a><a name=\"hcmii-exa-onko-prostata-diagnose\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-diagnose-primaertumor.html\">MII PR Onkologie Diagnose Primärtumor</a> version: 2026.0.3</p></div><p><b>Condition Asserted Date</b>: 2020-03-07</p><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm C61}\">Bösartige Neubildung der Prostata</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-prostata-bundle-patient.html\">Peter ProstataCa  (no stated gender), DoB Unknown</a></p><p><b>recordedDate</b>: 2024-01-02</p></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/condition-assertedDate" ] ;
+     fhir:Extension.valueDateTime [ fhir:value "2020-03-07"^^xsd:date ]
+  ] ;
+  fhir:Condition.clinicalStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-clinical" ] ;
+       fhir:Coding.code [ fhir:value "active" ]
+     ]
+  ] ;
+  fhir:Condition.verificationStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-ver-status" ] ;
+       fhir:Coding.code [ fhir:value "confirmed" ]
+     ]
+  ] ;
+  fhir:Condition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/icd-10-gm" ] ;
+       fhir:Coding.version [ fhir:value "2024" ] ;
+       fhir:Coding.code [ fhir:value "C61" ] ;
+       fhir:Coding.display [ fhir:value "Bösartige Neubildung der Prostata" ]
+     ]
+  ] ;
+  fhir:Condition.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-prostata-bundle-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-prostata-bundle-patient" ]
+  ] ;
+  fhir:Condition.recordedDate [ fhir:value "2024-01-02"^^xsd:date] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-prostata-bundle-encounter> a fhir:Encounter ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-prostata-bundle-encounter"] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Encounter_mii-exa-onko-prostata-bundle-encounter\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Encounter mii-exa-onko-prostata-bundle-encounter</b></p><a name=\"mii-exa-onko-prostata-bundle-encounter\"> </a><a name=\"hcmii-exa-onko-prostata-bundle-encounter\"> </a><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.2.0/CodeSystem-v3-ActCode.html#v3-ActCode-IMP\">ActCode: IMP</a> (inpatient encounter)</p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-prostata-bundle-patient.html\">Peter ProstataCa  (no stated gender), DoB Unknown</a></p></div>"
+  ] ;
+  fhir:Encounter.status [ fhir:value "finished"] ;
+  fhir:Encounter.class [
+     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ] ;
+     fhir:Coding.code [ fhir:value "IMP" ] ;
+     fhir:Coding.display [ fhir:value "inpatient encounter" ]
+  ] ;
+  fhir:Encounter.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-prostata-bundle-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-prostata-bundle-patient" ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-psa-diagnose-1> a fhir:Observation ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-prostata-psa-diagnose-1"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-psa|2026.0.3" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-psa|2026.0.3>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Observation_mii-exa-onko-prostata-psa-diagnose-1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-prostata-psa-diagnose-1</b></p><a name=\"mii-exa-onko-prostata-psa-diagnose-1\"> </a><a name=\"hcmii-exa-onko-prostata-psa-diagnose-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-prostate-psa.html\">MII PR Onkologie PSA-Wert</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 2857-1}\">Prostate specific Ag [Mass/volume] in Serum or Plasma</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-prostata-bundle-patient.html\">Peter ProstataCa  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: <a href=\"Condition-mii-exa-onko-prostata-diagnose.html\">Condition Bösartige Neubildung der Prostata</a></p><p><b>effective</b>: 2024-01-02</p><p><b>value</b>: 12 ng/ml</p></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a loinc:2857-1 ;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+       fhir:Coding.code [ fhir:value "2857-1" ] ;
+       fhir:Coding.display [ fhir:value "Prostate specific Ag [Mass/volume] in Serum or Plasma" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-prostata-bundle-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-prostata-bundle-patient" ]
+  ] ;
+  fhir:Observation.focus [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-prostata-diagnose> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-prostata-diagnose" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2024-01-02"^^xsd:date] ;
+  fhir:Observation.valueQuantity [
+     fhir:Quantity.value [ fhir:value "12"^^xsd:decimal ] ;
+     fhir:Quantity.unit [ fhir:value "ng/ml" ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-anzahl-stanzen-1> a fhir:Observation ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-prostata-anzahl-stanzen-1"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-anzahl-stanzen|2026.0.3" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-anzahl-stanzen|2026.0.3>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Observation_mii-exa-onko-prostata-anzahl-stanzen-1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-prostata-anzahl-stanzen-1</b></p><a name=\"mii-exa-onko-prostata-anzahl-stanzen-1\"> </a><a name=\"hcmii-exa-onko-prostata-anzahl-stanzen-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-prostate-anzahl-stanzen.html\">MII PR Onkologie Prostata Anzahl Stanzen</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 44652-6}\">Total number of cores in Tissue core</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-prostata-bundle-patient.html\">Peter ProstataCa  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: <a href=\"Condition-mii-exa-onko-prostata-diagnose.html\">Condition Bösartige Neubildung der Prostata</a></p><p><b>effective</b>: 2024-01-02</p><p><b>value</b>: 12</p></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a loinc:44652-6 ;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+       fhir:Coding.code [ fhir:value "44652-6" ] ;
+       fhir:Coding.display [ fhir:value "Total number of cores in Tissue core" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-prostata-bundle-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-prostata-bundle-patient" ]
+  ] ;
+  fhir:Observation.focus [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-prostata-diagnose> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-prostata-diagnose" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2024-01-02"^^xsd:date] ;
+  fhir:Observation.valueInteger [ fhir:value "12"^^xsd:integer] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-anzahl-positiver-stanzen-1> a fhir:Observation ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-prostata-anzahl-positiver-stanzen-1"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-anzahl-positive-stanzen|2026.0.3" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-anzahl-positive-stanzen|2026.0.3>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Observation_mii-exa-onko-prostata-anzahl-positiver-stanzen-1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-prostata-anzahl-positiver-stanzen-1</b></p><a name=\"mii-exa-onko-prostata-anzahl-positiver-stanzen-1\"> </a><a name=\"hcmii-exa-onko-prostata-anzahl-positiver-stanzen-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-prostate-anzahl-positive-stanzen.html\">MII PR Onkologie Prostata Anzahl positiver Stanzen</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 44651-8}\">Tissue cores.positive.carcinoma in Tissue core</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-prostata-bundle-patient.html\">Peter ProstataCa  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: <a href=\"Condition-mii-exa-onko-prostata-diagnose.html\">Condition Bösartige Neubildung der Prostata</a></p><p><b>effective</b>: 2024-01-02</p><p><b>value</b>: 8</p></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a loinc:44651-8 ;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+       fhir:Coding.code [ fhir:value "44651-8" ] ;
+       fhir:Coding.display [ fhir:value "Tissue cores.positive.carcinoma in Tissue core" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-prostata-bundle-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-prostata-bundle-patient" ]
+  ] ;
+  fhir:Observation.focus [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-prostata-diagnose> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-prostata-diagnose" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2024-01-02"^^xsd:date] ;
+  fhir:Observation.valueInteger [ fhir:value "8"^^xsd:integer] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-ca-befall-stanze-1> a fhir:Observation ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-prostata-ca-befall-stanze-1"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-ca-befall-stanze|2026.0.3" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-ca-befall-stanze|2026.0.3>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Observation_mii-exa-onko-prostata-ca-befall-stanze-1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-prostata-ca-befall-stanze-1</b></p><a name=\"mii-exa-onko-prostata-ca-befall-stanze-1\"> </a><a name=\"hcmii-exa-onko-prostata-ca-befall-stanze-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-prostate-ca-befall-stanze.html\">MII PR Onkologie Ca-Befall Stanze</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 44654-2}\">Tissue involved by tumor in Prostate tumor</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-prostata-bundle-patient.html\">Peter ProstataCa  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: <a href=\"Condition-mii-exa-onko-prostata-diagnose.html\">Condition Bösartige Neubildung der Prostata</a></p><p><b>effective</b>: 2024-01-02</p><p><b>value</b>: 80 %</p><p><b>specimen</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Specimen/exampleProstateBiopsySlide\">Specimen/exampleProstateBiopsySlide</a></p></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a loinc:44654-2 ;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+       fhir:Coding.code [ fhir:value "44654-2" ] ;
+       fhir:Coding.display [ fhir:value "Tissue involved by tumor in Prostate tumor" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-prostata-bundle-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-prostata-bundle-patient" ]
+  ] ;
+  fhir:Observation.focus [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-prostata-diagnose> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-prostata-diagnose" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2024-01-02"^^xsd:date] ;
+  fhir:Observation.valueQuantity [
+     fhir:Quantity.value [ fhir:value "80"^^xsd:decimal ] ;
+     fhir:Quantity.unit [ fhir:value "%" ]
+  ] ;
+  fhir:Observation.specimen [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Specimen/exampleProstateBiopsySlide> ;
+     fhir:Reference.reference [ fhir:value "Specimen/exampleProstateBiopsySlide" ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-gleason-pattern-grade-group-1> a fhir:Observation ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-prostata-gleason-pattern-grade-group-1"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-grade-group|2026.0.3" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-grade-group|2026.0.3>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Observation_mii-exa-onko-prostata-gleason-pattern-grade-group-1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-prostata-gleason-pattern-grade-group-1</b></p><a name=\"mii-exa-onko-prostata-gleason-pattern-grade-group-1\"> </a><a name=\"hcmii-exa-onko-prostata-gleason-pattern-grade-group-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-prostate-gleason-grade-group.html\">MII PR Onkologie Prostata Gleason Grade Group</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 1812491000004107}\">Histologic grade of primary malignant neoplasm of prostate by International Society of Urological Pathology technique (observable entity)</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-prostata-bundle-patient.html\">Peter ProstataCa  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: <a href=\"Condition-mii-exa-onko-prostata-diagnose.html\">Condition Bösartige Neubildung der Prostata</a></p><p><b>effective</b>: 2024-01-02</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 1279714001}\">International Society of Urological Pathology grade group 2 (Gleason score 3 + 4 = 7) (qualifier value)</span></p><p><b>derivedFrom</b>: </p><ul><li><a href=\"Observation-mii-exa-onko-prostata-gleason-pattern-primary-1.html\">Observation Primary Gleason pattern (observable entity)</a></li><li><a href=\"Observation-mii-exa-onko-prostata-gleason-pattern-secondary-1.html\">Observation Secondary Gleason pattern (observable entity)</a></li></ul></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:1812491000004107 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "1812491000004107" ] ;
+       fhir:Coding.display [ fhir:value "Histologic grade of primary malignant neoplasm of prostate by International Society of Urological Pathology technique (observable entity)" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-prostata-bundle-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-prostata-bundle-patient" ]
+  ] ;
+  fhir:Observation.focus [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-prostata-diagnose> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-prostata-diagnose" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2024-01-02"^^xsd:date] ;
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:1279714001 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "1279714001" ] ;
+       fhir:Coding.display [ fhir:value "International Society of Urological Pathology grade group 2 (Gleason score 3 + 4 = 7) (qualifier value)" ]
+     ]
+  ] ;
+  fhir:Observation.derivedFrom [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-gleason-pattern-primary-1> ;
+     fhir:Reference.reference [ fhir:value "Observation/mii-exa-onko-prostata-gleason-pattern-primary-1" ]
+  ], [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-gleason-pattern-secondary-1> ;
+     fhir:Reference.reference [ fhir:value "Observation/mii-exa-onko-prostata-gleason-pattern-secondary-1" ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-gleason-pattern-primary-1> a fhir:Observation ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-prostata-gleason-pattern-primary-1"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns|2026.0.3" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns|2026.0.3>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Observation_mii-exa-onko-prostata-gleason-pattern-primary-1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-prostata-gleason-pattern-primary-1</b></p><a name=\"mii-exa-onko-prostata-gleason-pattern-primary-1\"> </a><a name=\"hcmii-exa-onko-prostata-gleason-pattern-primary-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-prostate-gleason-patterns.html\">MII PR Onkologie Prostata Gleason Primär</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 384994009}\">Primary Gleason pattern (observable entity)</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-prostata-bundle-patient.html\">Peter ProstataCa  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: <a href=\"Condition-mii-exa-onko-prostata-diagnose.html\">Condition Bösartige Neubildung der Prostata</a></p><p><b>effective</b>: 2024-01-02</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 369772003}\">Gleason Pattern 3</span></p></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:384994009 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "384994009" ] ;
+       fhir:Coding.display [ fhir:value "Primary Gleason pattern (observable entity)" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-prostata-bundle-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-prostata-bundle-patient" ]
+  ] ;
+  fhir:Observation.focus [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-prostata-diagnose> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-prostata-diagnose" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2024-01-02"^^xsd:date] ;
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:369772003 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "369772003" ] ;
+       fhir:Coding.display [ fhir:value "Gleason Pattern 3" ]
+     ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-gleason-pattern-secondary-1> a fhir:Observation ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-prostata-gleason-pattern-secondary-1"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns|2026.0.3" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns|2026.0.3>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Observation_mii-exa-onko-prostata-gleason-pattern-secondary-1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-prostata-gleason-pattern-secondary-1</b></p><a name=\"mii-exa-onko-prostata-gleason-pattern-secondary-1\"> </a><a name=\"hcmii-exa-onko-prostata-gleason-pattern-secondary-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-prostate-gleason-patterns.html\">MII PR Onkologie Prostata Gleason Primär</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 384995005}\">Secondary Gleason pattern (observable entity)</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-prostata-bundle-patient.html\">Peter ProstataCa  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: <a href=\"Condition-mii-exa-onko-prostata-diagnose.html\">Condition Bösartige Neubildung der Prostata</a></p><p><b>effective</b>: 2024-01-02</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 369773008}\">Gleason Pattern 4</span></p></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:384995005 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "384995005" ] ;
+       fhir:Coding.display [ fhir:value "Secondary Gleason pattern (observable entity)" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-prostata-bundle-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-prostata-bundle-patient" ]
+  ] ;
+  fhir:Observation.focus [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-prostata-diagnose> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-prostata-diagnose" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2024-01-02"^^xsd:date] ;
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:369773008 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "369773008" ] ;
+       fhir:Coding.display [ fhir:value "Gleason Pattern 4" ]
+     ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-surgical-complication-1> a fhir:Observation ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-prostata-surgical-complication-1"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-clavien-dindo|2026.0.3" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-clavien-dindo|2026.0.3>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Observation_mii-exa-onko-prostata-surgical-complication-1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-prostata-surgical-complication-1</b></p><a name=\"mii-exa-onko-prostata-surgical-complication-1\"> </a><a name=\"hcmii-exa-onko-prostata-surgical-complication-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-prostate-clavien-dindo.html\">MII PR Onkologie Clavien Dindo</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 789279006}\">Clavien-Dindo classification grade (observable entity)</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-prostata-bundle-patient.html\">Peter ProstataCa  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: </p><ul><li><a href=\"Condition-mii-exa-onko-prostata-diagnose.html\">Condition Bösartige Neubildung der Prostata</a></li><li><a href=\"Procedure-mii-exa-onko-prostata-surgery-1.html\">Procedure Radikale Prostatovesikulektomie</a></li></ul><p><b>effective</b>: 2024-06-24</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 1367522003}, {https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-prostata-postsurgical-complications J}\">Clavien-Dindo classification grade IIIa (finding)</span></p></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:789279006 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "789279006" ] ;
+       fhir:Coding.display [ fhir:value "Clavien-Dindo classification grade (observable entity)" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-prostata-bundle-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-prostata-bundle-patient" ]
+  ] ;
+  fhir:Observation.focus [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-prostata-diagnose> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-prostata-diagnose" ]
+  ], [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-prostata-surgery-1> ;
+     fhir:Reference.reference [ fhir:value "Procedure/mii-exa-onko-prostata-surgery-1" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2024-06-24"^^xsd:date] ;
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:1367522003 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "1367522003" ] ;
+       fhir:Coding.display [ fhir:value "Clavien-Dindo classification grade IIIa (finding)" ]
+     ], [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-prostata-postsurgical-complications" ] ;
+       fhir:Coding.code [ fhir:value "J" ] ;
+       fhir:Coding.display [ fhir:value "Ja" ]
+     ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-prostata-surgery-1> a fhir:Procedure ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-prostata-surgery-1"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation|2026.0.3" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation|2026.0.3>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Procedure_mii-exa-onko-prostata-surgery-1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Procedure mii-exa-onko-prostata-surgery-1</b></p><a name=\"mii-exa-onko-prostata-surgery-1\"> </a><a name=\"hcmii-exa-onko-prostata-surgery-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-operation.html\">MII PR Onkologie Operation</a> version: 2026.0.3</p></div><p><b>MII EX Onko Operation Intention</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}\">Kurativ</span></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 387713003}\">Surgical procedure</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/ops 5-604}\">Radikale Prostatovesikulektomie</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-prostata-bundle-patient.html\">Peter ProstataCa  (no stated gender), DoB Unknown</a></p><p><b>performed</b>: 2024-06-24</p><p><b>reasonReference</b>: <a href=\"Condition-mii-exa-onko-prostata-diagnose.html\">Condition Bösartige Neubildung der Prostata</a></p></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention" ] ;
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention" ] ;
+         fhir:Coding.code [ fhir:value "K" ] ;
+         fhir:Coding.display [ fhir:value "Kurativ" ]
+       ]
+     ]
+  ] ;
+  fhir:Procedure.status [ fhir:value "completed"] ;
+  fhir:Procedure.category [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:387713003 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "387713003" ] ;
+       fhir:Coding.display [ fhir:value "Surgical procedure" ]
+     ]
+  ] ;
+  fhir:Procedure.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/ops" ] ;
+       fhir:Coding.version [ fhir:value "2024" ] ;
+       fhir:Coding.code [ fhir:value "5-604" ] ;
+       fhir:Coding.display [ fhir:value "Radikale Prostatovesikulektomie" ]
+     ]
+  ] ;
+  fhir:Procedure.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-prostata-bundle-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-prostata-bundle-patient" ]
+  ] ;
+  fhir:Procedure.performedDateTime [ fhir:value "2024-06-24"^^xsd:date] ;
+  fhir:Procedure.reasonReference [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-prostata-diagnose> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-prostata-diagnose" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Bundle/mii-exa-onko-prostata-example-bundle-1.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

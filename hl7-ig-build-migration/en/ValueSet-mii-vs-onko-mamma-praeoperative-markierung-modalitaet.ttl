@@ -1,0 +1,70 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-praeoperative-markierung-modalitaet> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-vs-onko-mamma-praeoperative-markierung-modalitaet"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/shareablevalueset" ;
+       fhir:index -1 ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablevalueset>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-onko-mamma-praeoperative-markierung-modalitaet</b></p><a name=\"en-mii-vs-onko-mamma-praeoperative-markierung-modalitaet\"> </a><a name=\"en-hcmii-vs-onko-mamma-praeoperative-markierung-modalitaet\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablevalueset.html\">Shareable ValueSet</a></p></div><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/1269000008\">1269000008</a></td><td>Insertion of guide wire into breast using mammography guidance (procedure)</td></tr><tr><td><a href=\"http://snomed.info/id/433222002\">433222002</a></td><td>Insertion of guide wire into breast using ultrasound guidance (procedure)</td></tr><tr><td><a href=\"http://snomed.info/id/836381000000102\">836381000000102</a></td><td>Insertion of marker into breast using plain X-ray guidance (procedure)</td></tr><tr><td><a href=\"http://snomed.info/id/911831000000104\">911831000000104</a></td><td>Wire guided localization of lesion of breast using magnetic resonance imaging guidance (procedure)</td></tr></table></li></ul></div>"
+  ] ;
+  fhir:ValueSet.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-praeoperative-markierung-modalitaet"] ;
+  fhir:ValueSet.version [ fhir:value "2026.0.3"] ;
+  fhir:ValueSet.name [ fhir:value "MII_VS_Onko_Mamma_Praeoperative_Markierung_Modalitaet"] ;
+  fhir:ValueSet.status [ fhir:value "active"] ;
+  fhir:ValueSet.experimental [ fhir:value "true"^^xsd:boolean] ;
+  fhir:ValueSet.date [ fhir:value "2026-07-02T12:18:38+00:00"^^xsd:dateTime] ;
+  fhir:ValueSet.publisher [ fhir:value "Medizininformatik Initiative"] ;
+  fhir:ValueSet.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "Medizininformatik Initiative" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.medizininformatik-initiative.de/" ]
+     ]
+  ] ;
+  fhir:ValueSet.description [ fhir:value "Value Set für Imagingmodalität der präoperativen Markierung bei Mamma-Karzinom"] ;
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index -1 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:ValueSet.compose.include.concept [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1269000008" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Insertion of guide wire into breast using mammography guidance (procedure)" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "433222002" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Insertion of guide wire into breast using ultrasound guidance (procedure)" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "836381000000102" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Insertion of marker into breast using plain X-ray guidance (procedure)" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "911831000000104" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Wire guided localization of lesion of breast using magnetic resonance imaging guidance (procedure)" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-praeoperative-markierung-modalitaet.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

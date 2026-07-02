@@ -1,0 +1,496 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Bundle/mii-exa-onko-melanom-bundle> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-melanom-bundle"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/Bundle" ;
+       fhir:index -1 ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/Bundle>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:Bundle.identifier [
+     fhir:Identifier.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko" ] ;
+     fhir:Identifier.value [ fhir:value "melanom-example-bundle-2024-001" ]
+  ] ;
+  fhir:Bundle.type [ fhir:value "transaction"] ;
+  fhir:Bundle.timestamp [ fhir:value "2024-03-25T10:00:00+01:00"^^xsd:dateTime] ;
+  fhir:Bundle.entry [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-melanom-bundle-patient" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-melanom-bundle-patient> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Patient" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-melanom-diagnose" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-melanom-diagnose> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Condition" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-melanom-bundle-encounter" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-melanom-bundle-encounter> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Encounter" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-melanom-sicherheitsabstand" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-melanom-sicherheitsabstand> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Observation" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-melanom-breslow-tiefe" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-melanom-breslow-tiefe> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Observation" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-melanom-ulzeration" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-melanom-ulzeration> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Observation" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-melanom-ldh" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-melanom-ldh> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Observation" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-melanom-exzision-oberarm" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-melanom-exzision-oberarm> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Procedure" ]
+     ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-melanom-bundle-patient> a fhir:Patient ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-melanom-bundle-patient"] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ] ;
+  fhir:Patient.name [
+     fhir:index -1 ;
+     fhir:HumanName.family [ fhir:value "Melanom" ] ;
+     fhir:HumanName.given [
+       fhir:value "Maria" ;
+       fhir:index -1
+     ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-melanom-diagnose> a fhir:Condition ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-melanom-diagnose"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor|2026.0.3" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor|2026.0.3>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ]
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/condition-assertedDate" ] ;
+     fhir:Extension.valueDateTime [ fhir:value "2024-01-02"^^xsd:date ]
+  ] ;
+  fhir:Condition.clinicalStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-clinical" ] ;
+       fhir:Coding.code [ fhir:value "active" ]
+     ]
+  ] ;
+  fhir:Condition.verificationStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-ver-status" ] ;
+       fhir:Coding.code [ fhir:value "confirmed" ]
+     ], [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung" ] ;
+       fhir:Coding.code [ fhir:value "7.1" ] ;
+       fhir:Coding.display [ fhir:value "histologische Untersuchung eines Primärtumors" ]
+     ]
+  ] ;
+  fhir:Condition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/icd-10-gm" ] ;
+       fhir:Coding.version [ fhir:value "2024" ] ;
+       fhir:Coding.code [ fhir:value "C43.9" ] ;
+       fhir:Coding.display [ fhir:value "Bösartiges Melanom der Haut, nicht näher bezeichnet" ]
+     ]
+  ] ;
+  fhir:Condition.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-melanom-bundle-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-melanom-bundle-patient" ]
+  ] ;
+  fhir:Condition.encounter [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-melanom-bundle-encounter> ;
+     fhir:Reference.reference [ fhir:value "Encounter/mii-exa-onko-melanom-bundle-encounter" ]
+  ] ;
+  fhir:Condition.recordedDate [ fhir:value "2024-01-02"^^xsd:date] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-melanom-bundle-encounter> a fhir:Encounter ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-melanom-bundle-encounter"] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ] ;
+  fhir:Encounter.status [ fhir:value "finished"] ;
+  fhir:Encounter.class [
+     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ] ;
+     fhir:Coding.code [ fhir:value "IMP" ] ;
+     fhir:Coding.display [ fhir:value "inpatient encounter" ]
+  ] ;
+  fhir:Encounter.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-melanom-bundle-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-melanom-bundle-patient" ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-melanom-sicherheitsabstand> a fhir:Observation ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-melanom-sicherheitsabstand"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-sicherheitsabstand" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-sicherheitsabstand>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:396511007 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "396511007" ] ;
+       fhir:Coding.display [ fhir:value "Distance of in situ melanoma from closest lateral surgical margin in excised specimen of skin (observable entity)" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-melanom-bundle-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-melanom-bundle-patient" ]
+  ] ;
+  fhir:Observation.focus [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-melanom-diagnose> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-melanom-diagnose" ]
+  ] ;
+  fhir:Observation.encounter [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-melanom-bundle-encounter> ;
+     fhir:Reference.reference [ fhir:value "Encounter/mii-exa-onko-melanom-bundle-encounter" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2024-03-25T10:00:00+01:00"^^xsd:dateTime] ;
+  fhir:Observation.valueQuantity [
+     fhir:Quantity.value [ fhir:value "5"^^xsd:decimal ] ;
+     fhir:Quantity.unit [ fhir:value "mm" ] ;
+     fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+     fhir:Quantity.code [ fhir:value "mm" ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-melanom-breslow-tiefe> a fhir:Observation ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-melanom-breslow-tiefe"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-breslow-tiefe" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-breslow-tiefe>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:106243009 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "106243009" ] ;
+       fhir:Coding.display [ fhir:value "Breslow depth staging for melanoma of skin (observable entity)" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-melanom-bundle-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-melanom-bundle-patient" ]
+  ] ;
+  fhir:Observation.focus [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-melanom-diagnose> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-melanom-diagnose" ]
+  ] ;
+  fhir:Observation.encounter [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-melanom-bundle-encounter> ;
+     fhir:Reference.reference [ fhir:value "Encounter/mii-exa-onko-melanom-bundle-encounter" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2024-03-20T14:30:00+01:00"^^xsd:dateTime] ;
+  fhir:Observation.valueQuantity [
+     fhir:Quantity.value [ fhir:value "2.1"^^xsd:decimal ] ;
+     fhir:Quantity.unit [ fhir:value "mm" ] ;
+     fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+     fhir:Quantity.code [ fhir:value "mm" ]
+  ] ;
+  fhir:Observation.method [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:117617002 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "117617002" ] ;
+       fhir:Coding.display [ fhir:value "Immunohistochemistry procedure" ]
+     ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-melanom-ulzeration> a fhir:Observation ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-melanom-ulzeration"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-ulzeration" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-ulzeration>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:6270001000004106 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "6270001000004106" ] ;
+       fhir:Coding.display [ fhir:value "Presence of ulcer in primary malignant melanoma of skin (observable entity)" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-melanom-bundle-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-melanom-bundle-patient" ]
+  ] ;
+  fhir:Observation.focus [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-melanom-diagnose> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-melanom-diagnose" ]
+  ] ;
+  fhir:Observation.encounter [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-melanom-bundle-encounter> ;
+     fhir:Reference.reference [ fhir:value "Encounter/mii-exa-onko-melanom-bundle-encounter" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2024-03-20T14:30:00+01:00"^^xsd:dateTime] ;
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-melanom-ulzeration" ] ;
+       fhir:Coding.code [ fhir:value "J" ] ;
+       fhir:Coding.display [ fhir:value "Ja" ]
+     ]
+  ] ;
+  fhir:Observation.method [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:117617002 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "117617002" ] ;
+       fhir:Coding.display [ fhir:value "Immunohistochemistry procedure" ]
+     ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-melanom-ldh> a fhir:Observation ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-melanom-ldh"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-ldh" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-ldh>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.category [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/observation-category" ] ;
+       fhir:Coding.code [ fhir:value "laboratory" ] ;
+       fhir:Coding.display [ fhir:value "Laboratory" ]
+     ]
+  ] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a loinc:14804-9 ;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+       fhir:Coding.code [ fhir:value "14804-9" ] ;
+       fhir:Coding.display [ fhir:value "Lactate dehydrogenase [Enzymatic activity/volume] in Serum or Plasma by Lactate to pyruvate reaction" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-melanom-bundle-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-melanom-bundle-patient" ]
+  ] ;
+  fhir:Observation.focus [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-melanom-diagnose> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-melanom-diagnose" ]
+  ] ;
+  fhir:Observation.encounter [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-melanom-bundle-encounter> ;
+     fhir:Reference.reference [ fhir:value "Encounter/mii-exa-onko-melanom-bundle-encounter" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2024-03-18T08:30:00+01:00"^^xsd:dateTime] ;
+  fhir:Observation.valueQuantity [
+     fhir:Quantity.value [ fhir:value "280"^^xsd:decimal ] ;
+     fhir:Quantity.unit [ fhir:value "U/L" ] ;
+     fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+     fhir:Quantity.code [ fhir:value "U/L" ]
+  ] ;
+  fhir:Observation.interpretation [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" ] ;
+       fhir:Coding.code [ fhir:value "H" ] ;
+       fhir:Coding.display [ fhir:value "High" ]
+     ]
+  ] ;
+  fhir:Observation.referenceRange [
+     fhir:index -1 ;
+     fhir:Observation.referenceRange.low [
+       fhir:Quantity.value [ fhir:value "135"^^xsd:decimal ] ;
+       fhir:Quantity.unit [ fhir:value "U/L" ] ;
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+       fhir:Quantity.code [ fhir:value "U/L" ]
+     ] ;
+     fhir:Observation.referenceRange.high [
+       fhir:Quantity.value [ fhir:value "250"^^xsd:decimal ] ;
+       fhir:Quantity.unit [ fhir:value "U/L" ] ;
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+       fhir:Quantity.code [ fhir:value "U/L" ]
+     ] ;
+     fhir:Observation.referenceRange.text [ fhir:value "135-250 U/L" ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-melanom-exzision-oberarm> a fhir:Procedure ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-melanom-exzision-oberarm"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-exzision|2026.0.3" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-exzision|2026.0.3>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ]
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention" ] ;
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention" ] ;
+         fhir:Coding.code [ fhir:value "K" ] ;
+         fhir:Coding.display [ fhir:value "kurativ" ]
+       ]
+     ]
+  ] ;
+  fhir:Procedure.status [ fhir:value "completed"] ;
+  fhir:Procedure.category [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:387713003 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "387713003" ] ;
+       fhir:Coding.display [ fhir:value "Surgical procedure" ]
+     ]
+  ] ;
+  fhir:Procedure.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/ops" ] ;
+       fhir:Coding.version [ fhir:value "2024" ] ;
+       fhir:Coding.code [ fhir:value "5-894.06" ] ;
+       fhir:Coding.display [ fhir:value "Lokale Exzision von erkranktem Gewebe an Haut und Unterhaut: Ohne primären Wundverschluss: Schulter und Axilla" ]
+     ], [
+       fhir:index -1 ;
+       a sct:177281002 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "177281002" ] ;
+       fhir:Coding.display [ fhir:value "Excision of melanoma (procedure)" ]
+     ]
+  ] ;
+  fhir:Procedure.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-melanom-bundle-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-melanom-bundle-patient" ]
+  ] ;
+  fhir:Procedure.performedDateTime [ fhir:value "2024-03-20"^^xsd:date] ;
+  fhir:Procedure.reasonReference [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-melanom-diagnose> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-melanom-diagnose" ]
+  ] ;
+  fhir:Procedure.bodySite [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:368208006 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "368208006" ] ;
+       fhir:Coding.display [ fhir:value "Left upper arm structure" ]
+     ]
+  ] ;
+  fhir:Procedure.outcome [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus" ] ;
+       fhir:Coding.code [ fhir:value "R0" ] ;
+       fhir:Coding.display [ fhir:value "Kein Residualtumor" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Bundle/mii-exa-onko-melanom-bundle.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

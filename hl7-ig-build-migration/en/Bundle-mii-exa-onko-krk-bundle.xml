@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-krk-bundle"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
+  </meta>
+  <language value="en"/>
+  <identifier>
+    <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"/>
+    <value value="krk-example-bundle-2024-001"/>
+  </identifier>
+  <type value="transaction"/>
+  <timestamp value="2024-03-25T10:00:00+01:00"/>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-krk-bundle-patient"/>
+    <resource>
+      <Patient>
+        <id value="mii-exa-onko-krk-bundle-patient"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <name>
+          <family value="KolorektalCa"/>
+          <given value="Klaus"/>
+        </name>
+      </Patient>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Patient"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-krk-diagnose"/>
+    <resource>
+      <Condition>
+        <id value="mii-exa-onko-krk-diagnose"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/condition-assertedDate">
+          <valueDateTime value="2020-03-07"/>
+        </extension>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+          </coding>
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <code value="confirmed"/>
+          </coding>
+        </verificationStatus>
+        <code>
+          <coding>
+            <system value="http://fhir.de/CodeSystem/bfarm/icd-10-gm"/>
+            <version value="2024"/>
+            <code value="C18"/>
+            <display value="Bösartige Neubildung des Kolons"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-krk-bundle-patient"/>
+        </subject>
+        <recordedDate value="2024-01-02"/>
+      </Condition>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Condition"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-krk-bundle-encounter"/>
+    <resource>
+      <Encounter>
+        <id value="mii-exa-onko-krk-bundle-encounter"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="finished"/>
+        <class>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+          <code value="IMP"/>
+          <display value="inpatient encounter"/>
+        </class>
+        <subject>
+          <reference value="Patient/mii-exa-onko-krk-bundle-patient"/>
+        </subject>
+      </Encounter>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Encounter"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-krk-abstand-tumor-anokutanlinie"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-krk-abstand-tumor-anokutanlinie"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-anokutan"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="33748-5"/>
+            <display value="Distance from anal verge"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-krk-bundle-patient"/>
+        </subject>
+        <focus>
+          <reference value="Condition/mii-exa-onko-krk-diagnose"/>
+        </focus>
+        <encounter>
+          <reference value="Encounter/mii-exa-onko-krk-bundle-encounter"/>
+        </encounter>
+        <effectiveDateTime value="2024-03-10T14:30:00+01:00"/>
+        <valueQuantity>
+          <value value="8.5"/>
+          <unit value="cm"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="cm"/>
+        </valueQuantity>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-krk-abstand-circumferelle-resektionsebene"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-krk-abstand-circumferelle-resektionsebene"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-circumferelle-resektionsebene"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="81176-0"/>
+            <display value="Distance of tumor from circumferential resection margin [Length] in Specimen by Macroscopy"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-krk-bundle-patient"/>
+        </subject>
+        <focus>
+          <reference value="Condition/mii-exa-onko-krk-diagnose"/>
+        </focus>
+        <encounter>
+          <reference value="Encounter/mii-exa-onko-krk-bundle-encounter"/>
+        </encounter>
+        <effectiveDateTime value="2024-03-20T10:15:00+01:00"/>
+        <valueQuantity>
+          <value value="2.5"/>
+          <unit value="mm"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mm"/>
+        </valueQuantity>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-krk-abstand-resektionsrand-aboral"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-krk-abstand-resektionsrand-aboral"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-aboral"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="81175-2"/>
+            <display value="Distance of tumor from closest margin [Length] in Specimen by Macroscopy"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-krk-bundle-patient"/>
+        </subject>
+        <focus>
+          <reference value="Condition/mii-exa-onko-krk-diagnose"/>
+        </focus>
+        <encounter>
+          <reference value="Encounter/mii-exa-onko-krk-bundle-encounter"/>
+        </encounter>
+        <effectiveDateTime value="2024-03-20T10:15:00+01:00"/>
+        <valueQuantity>
+          <value value="15"/>
+          <unit value="mm"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mm"/>
+        </valueQuantity>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-krk-abstand-mesorektale-fascie"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-krk-abstand-mesorektale-fascie"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-mrt-mesorektale-faszie"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://radlex.org"/>
+            <code value="RDE96"/>
+            <display value="Distance to MRF"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-krk-bundle-patient"/>
+        </subject>
+        <focus>
+          <reference value="Condition/mii-exa-onko-krk-diagnose"/>
+        </focus>
+        <encounter>
+          <reference value="Encounter/mii-exa-onko-krk-bundle-encounter"/>
+        </encounter>
+        <effectiveDateTime value="2024-03-12T16:00:00+01:00"/>
+        <valueQuantity>
+          <value value="3.2"/>
+          <unit value="mm"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mm"/>
+        </valueQuantity>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-krk-anastomoseninsuffizienz"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-krk-anastomoseninsuffizienz"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-anastomoseninsuffizienz"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="236091002"/>
+            <display value="Large intestine anastomotic leak (disorder)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-krk-bundle-patient"/>
+        </subject>
+        <focus>
+          <reference value="Procedure/mii-exa-onko-krk-operation"/>
+        </focus>
+        <encounter>
+          <reference value="Encounter/mii-exa-onko-krk-bundle-encounter"/>
+        </encounter>
+        <effectiveDateTime value="2024-03-25T08:00:00+01:00"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-anastomoseninsuffizienz"/>
+            <code value="B"/>
+            <display value="Anastomoseninsuffizienz Grad B"/>
+          </coding>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-asa-klassifikation"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-asa-klassifikation"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-asa-klassifikation"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="97816-3"/>
+            <display value="American society of anesthesiologists morbidity state"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-krk-bundle-patient"/>
+        </subject>
+        <focus>
+          <reference value="Condition/mii-exa-onko-krk-diagnose"/>
+        </focus>
+        <effectiveDateTime value="2024-03-15T08:30:00+01:00"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-asa-obds"/>
+            <code value="2"/>
+            <display value="ASA II"/>
+          </coding>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-krk-stoma-markierung"/>
+    <resource>
+      <Procedure>
+        <id value="mii-exa-onko-krk-stoma-markierung"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-stoma-markierung"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="completed"/>
+        <statusReason>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="262008008"/>
+            <display value="Not performed (qualifier value)"/>
+          </coding>
+        </statusReason>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="387713003"/>
+            <display value="Surgical procedure"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="225134005"/>
+            <display value="Marking position of planned stoma site (procedure)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-krk-bundle-patient"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/mii-exa-onko-krk-bundle-encounter"/>
+        </encounter>
+        <performedDateTime value="2024-03-15T09:30:00+01:00"/>
+        <reasonReference>
+          <reference value="Condition/mii-exa-onko-krk-diagnose"/>
+        </reasonReference>
+        <note>
+          <text value="Präoperative Markierung der geplanten Stoma-Position im rechten Hemiabdomen nach Rücksprache mit dem Patienten"/>
+        </note>
+      </Procedure>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Procedure"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-krk-operation"/>
+    <resource>
+      <Procedure>
+        <id value="mii-exa-onko-krk-operation"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-operation"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention">
+          <valueCodeableConcept>
+            <coding>
+              <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention"/>
+              <code value="K"/>
+              <display value="kurativ"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <status value="completed"/>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="387713003"/>
+            <display value="Surgical procedure"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://fhir.de/CodeSystem/bfarm/ops"/>
+            <version value="2024"/>
+            <code value="5-484.55"/>
+            <display value="Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion: Laparoskopisch mit Anastomose"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-krk-bundle-patient"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/mii-exa-onko-krk-bundle-encounter"/>
+        </encounter>
+        <performedDateTime value="2024-03-22T08:00:00+01:00"/>
+        <reasonReference>
+          <reference value="Condition/mii-exa-onko-krk-diagnose"/>
+        </reasonReference>
+        <note>
+          <text value="Laparoskopische Resektion beim kolorektalen Karzinom"/>
+        </note>
+      </Procedure>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Procedure"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Specimen/mii-exa-onko-krk-specimen"/>
+    <resource>
+      <Specimen>
+        <id value="mii-exa-onko-krk-specimen"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-specimen"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <accessionIdentifier>
+          <value value="KRK-2024-001234"/>
+        </accessionIdentifier>
+        <status value="available"/>
+        <type>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="122652004"/>
+            <display value="Specimen from colon obtained by rectal/rectosigmoid (low anterior) resection (specimen)"/>
+          </coding>
+        </type>
+        <subject>
+          <reference value="Patient/mii-exa-onko-krk-bundle-patient"/>
+        </subject>
+        <collection>
+          <collectedDateTime value="2024-03-22T08:30:00+01:00"/>
+        </collection>
+        <condition>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-tme-qualitaet"/>
+            <code value="1"/>
+            <display value="Grad 1 (gut)"/>
+          </coding>
+        </condition>
+        <note>
+          <text value="Sigmaresekat mit Primärtumor und regionären Lymphknoten"/>
+        </note>
+      </Specimen>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Specimen"/>
+    </request>
+  </entry>
+</Bundle>

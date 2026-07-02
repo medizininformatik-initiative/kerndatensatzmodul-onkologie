@@ -1,0 +1,586 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>MII CS Onkologie Operation Komplikationen - MII IG Kerndatensatz-Modul Onkologie v2026.0.3</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"15.223"}
+    h3,h4,h5,h6{--heading-prefix:"15.223"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Onkologie</span>
+            <br/>
+            <span style="display:inline-block;">2026.0.3 - release
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Start</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Beschreibung
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="index.html">Modulbeschreibung</a>
+      </li>
+      <li>
+        <a href="abweichungen-obds.html">Abweichungen zum oBDS</a>
+      </li>
+      <li>
+        <a href="context.html">Bezüge zu anderen Modulen</a>
+      </li>
+      <li>
+        <a href="bezug-nationale-standards.html">Nationale Standards</a>
+      </li>
+      <li>
+        <a href="bezug-internationale-standards.html">Internationale Standards</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsfälle / Informationsmodell
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="use-cases.html">Szenarien</a>
+      </li>
+      <li>
+        <a href="data-sets.html">Datensätze</a>
+      </li>
+      <li>
+        <a href="uml.html">Informationsmodell (UML)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Technische Implementierung
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="conformance.html">Konformität</a>
+      </li>
+      <li>
+        <a href="security-privacy.html">Sicherheit &amp; Datenschutz</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefakte</a>
+  </li>
+  <li>
+    <a href="references.html">Referenzen</a>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+  <li>
+    <a href="changes.html">Release Notes</a>
+  </li>
+  <li>
+    <a href="translationinfo.html">Mehrsprachigkeit</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+
+    <div><a href="../de/CodeSystem-mii-cs-onko-operation-komplikation.html"><img class="flag" src="assets/images/lang-de.png" alt="flag de"/>Deutsch</a></div>
+
+  </div>
+</div>
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>MII CS Onkologie Operation Komplikationen</b></li>
+
+          <span style="float: var(--ig-right);">
+
+            <a href="CodeSystem-mii-cs-onko-melanom-ulzeration.ttl.html">&lt; prev</a> | 
+
+            <a href="#bottom">bottom</a>
+
+          | <a href="CodeSystem-mii-cs-onko-operation-komplikation-testing.html">next &gt;</a>
+
+          </span>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<!-- layouts\layout-codesystem -->
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Onkologie - Local Development build (v2026.0.3) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="CodeSystem-mii-cs-onko-operation-komplikation.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="CodeSystem-mii-cs-onko-operation-komplikation.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="CodeSystem-mii-cs-onko-operation-komplikation.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+  <a name="root"> </a>
+
+  <h2 id="root">CodeSystem: MII CS Onkologie Operation Komplikationen
+
+  </h2>
+
+  <table class="colsi" data-fhir="generated">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation<button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">2026.0.3<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation|2026.0.3"/></span>
+      </td>
+      <td style="text-align: right;border-left-style: hidden" title="Enable this to see changes since the last official release">
+        <span id="toggle-change-display"><label style="margin:0;font-weight:normal" for="showChanges">Highlight text changes?</label>
+  
+        <input style="margin:0" type="checkbox" id="showChanges" onchange="toggleChanges()"/>
+  
+      </span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="5">
+        
+          Active
+          
+
+            as of 
+2026-07-02
+
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">MII_CS_Onko_Operation_Komplikationen</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+<p>
+<p>oBDS-spezifisches Codesystem für Klassifikation von Komplikationen während der OP</p>
+
+</p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <p>This Code system is referenced in the definition of the following value sets:</p>
+
+  
+<ul>
+ <li><a href="ValueSet-mii-vs-onko-operation-komplikation.html">MII_VS_Onko_Operation_Komplikation</a></li>
+</ul>
+
+
+  <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated"><p class="res-header-id"></p><a name="mii-cs-onko-operation-komplikation"> </a><a name="hcmii-cs-onko-operation-komplikation"> </a>
+<div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"></p><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org/fhir/R4/shareablecodesystem.html">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation</code> defines the following codes:</p>
+<table class="codes" data-fhir="generated"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr>
+<tr><td style="white-space:nowrap">N<a name="mii-cs-onko-operation-komplikation-N"> </a></td>
+<td>nein</td></tr>
+<tr><td style="white-space:nowrap">U<a name="mii-cs-onko-operation-komplikation-U"> </a></td>
+<td>unbekannt</td></tr>
+<tr><td style="white-space:nowrap">ABD<a name="mii-cs-onko-operation-komplikation-ABD"> </a></td>
+<td>Abszess in einem Drainagekanal</td></tr>
+<tr><td style="white-space:nowrap">ABS<a name="mii-cs-onko-operation-komplikation-ABS"> </a></td>
+<td>Abszess, intraabdominaler oder intrathorakaler</td></tr>
+<tr><td style="white-space:nowrap">ASF<a name="mii-cs-onko-operation-komplikation-ASF"> </a></td>
+<td>Abszess, subfaszialer</td></tr>
+<tr><td style="white-space:nowrap">ANI<a name="mii-cs-onko-operation-komplikation-ANI"> </a></td>
+<td>Akute Niereninsuffizienz</td></tr>
+<tr><td style="white-space:nowrap">AEP<a name="mii-cs-onko-operation-komplikation-AEP"> </a></td>
+<td>Alkoholentzugspsychose</td></tr>
+<tr><td style="white-space:nowrap">ALR<a name="mii-cs-onko-operation-komplikation-ALR"> </a></td>
+<td>Allergische Reaktion ohne Schocksymptomatik</td></tr>
+<tr><td style="white-space:nowrap">ANS<a name="mii-cs-onko-operation-komplikation-ANS"> </a></td>
+<td>Anaphylaktischer Schock</td></tr>
+<tr><td style="white-space:nowrap">AEE<a name="mii-cs-onko-operation-komplikation-AEE"> </a></td>
+<td>Anastomoseninsuffizienz einer Enterostomie</td></tr>
+<tr><td style="white-space:nowrap">API<a name="mii-cs-onko-operation-komplikation-API"> </a></td>
+<td>Apoplektischer Insult</td></tr>
+<tr><td style="white-space:nowrap">BIF<a name="mii-cs-onko-operation-komplikation-BIF"> </a></td>
+<td>Biliäre Fistel</td></tr>
+<tr><td style="white-space:nowrap">BOG<a name="mii-cs-onko-operation-komplikation-BOG"> </a></td>
+<td>Blutung, obere gastrointestinale (z. B „Stressulkus“)</td></tr>
+<tr><td style="white-space:nowrap">BOE<a name="mii-cs-onko-operation-komplikation-BOE"> </a></td>
+<td>Bolusverlegung eines Endotubus</td></tr>
+<tr><td style="white-space:nowrap">BSI<a name="mii-cs-onko-operation-komplikation-BSI"> </a></td>
+<td>Bronchusstumpfinsuffizienz</td></tr>
+<tr><td style="white-space:nowrap">CHI<a name="mii-cs-onko-operation-komplikation-CHI"> </a></td>
+<td>Cholangitis</td></tr>
+<tr><td style="white-space:nowrap">DAI<a name="mii-cs-onko-operation-komplikation-DAI"> </a></td>
+<td>Darmanastomoseninsuffizienz</td></tr>
+<tr><td style="white-space:nowrap">DPS<a name="mii-cs-onko-operation-komplikation-DPS"> </a></td>
+<td>Darmpassagestörungen (z. B. protrahierte Atonie, Subileus, Ileus)</td></tr>
+<tr><td style="white-space:nowrap">DIC<a name="mii-cs-onko-operation-komplikation-DIC"> </a></td>
+<td>Disseminierte intravasale Koagulopathie</td></tr>
+<tr><td style="white-space:nowrap">DEP<a name="mii-cs-onko-operation-komplikation-DEP"> </a></td>
+<td>Drogenentzugspsychose</td></tr>
+<tr><td style="white-space:nowrap">DLU<a name="mii-cs-onko-operation-komplikation-DLU"> </a></td>
+<td>Druck- und Lagerungsschäden, z. B. Dekubitalulzera</td></tr>
+<tr><td style="white-space:nowrap">DSI<a name="mii-cs-onko-operation-komplikation-DSI"> </a></td>
+<td>Duodenalstumpfinsuffizienz</td></tr>
+<tr><td style="white-space:nowrap">ENF<a name="mii-cs-onko-operation-komplikation-ENF"> </a></td>
+<td>Enterale Fistel</td></tr>
+<tr><td style="white-space:nowrap">GER<a name="mii-cs-onko-operation-komplikation-GER"> </a></td>
+<td>Gerinnungsstörung</td></tr>
+<tr><td style="white-space:nowrap">HEM<a name="mii-cs-onko-operation-komplikation-HEM"> </a></td>
+<td>Hämatemesis</td></tr>
+<tr><td style="white-space:nowrap">HUR<a name="mii-cs-onko-operation-komplikation-HUR"> </a></td>
+<td>Hämaturie</td></tr>
+<tr><td style="white-space:nowrap">HAE<a name="mii-cs-onko-operation-komplikation-HAE"> </a></td>
+<td>Hämorrhagischer Schock</td></tr>
+<tr><td style="white-space:nowrap">HFI<a name="mii-cs-onko-operation-komplikation-HFI"> </a></td>
+<td>Harnfistel</td></tr>
+<tr><td style="white-space:nowrap">HNK<a name="mii-cs-onko-operation-komplikation-HNK"> </a></td>
+<td>Hautnekrose im Operationsbereich</td></tr>
+<tr><td style="white-space:nowrap">HZI<a name="mii-cs-onko-operation-komplikation-HZI"> </a></td>
+<td>Herzinsuffizienz</td></tr>
+<tr><td style="white-space:nowrap">HRS<a name="mii-cs-onko-operation-komplikation-HRS"> </a></td>
+<td>Herzrhythmusstörungen</td></tr>
+<tr><td style="white-space:nowrap">HNA<a name="mii-cs-onko-operation-komplikation-HNA"> </a></td>
+<td>Hirnnervenausfälle</td></tr>
+<tr><td style="white-space:nowrap">HOP<a name="mii-cs-onko-operation-komplikation-HOP"> </a></td>
+<td>Hirnorganisches Psychosyndrom (z. B. „Durchgangssyndrom“)</td></tr>
+<tr><td style="white-space:nowrap">HYB<a name="mii-cs-onko-operation-komplikation-HYB"> </a></td>
+<td>Hyperbilirubinämie</td></tr>
+<tr><td style="white-space:nowrap">HYF<a name="mii-cs-onko-operation-komplikation-HYF"> </a></td>
+<td>Hypopharynxfistel</td></tr>
+<tr><td style="white-space:nowrap">IFV<a name="mii-cs-onko-operation-komplikation-IFV"> </a></td>
+<td>Ileofemorale Venenthrombose</td></tr>
+<tr><td style="white-space:nowrap">KAS<a name="mii-cs-onko-operation-komplikation-KAS"> </a></td>
+<td>Kardiogener Schock</td></tr>
+<tr><td style="white-space:nowrap">KES<a name="mii-cs-onko-operation-komplikation-KES"> </a></td>
+<td>Komplikationen einer Stomaanlage</td></tr>
+<tr><td style="white-space:nowrap">KIM<a name="mii-cs-onko-operation-komplikation-KIM"> </a></td>
+<td>Komplikation eines Implantates (Gefäßprothese, Totalendoprothese, Katheter), z. B. Dislokation</td></tr>
+<tr><td style="white-space:nowrap">KRA<a name="mii-cs-onko-operation-komplikation-KRA"> </a></td>
+<td>Krampfanfall</td></tr>
+<tr><td style="white-space:nowrap">KDS<a name="mii-cs-onko-operation-komplikation-KDS"> </a></td>
+<td>Kurzdarmsyndrom</td></tr>
+<tr><td style="white-space:nowrap">LEV<a name="mii-cs-onko-operation-komplikation-LEV"> </a></td>
+<td>Leberversagen</td></tr>
+<tr><td style="white-space:nowrap">LOE<a name="mii-cs-onko-operation-komplikation-LOE"> </a></td>
+<td>Lungenödem</td></tr>
+<tr><td style="white-space:nowrap">LYF<a name="mii-cs-onko-operation-komplikation-LYF"> </a></td>
+<td>Lymphfistel</td></tr>
+<tr><td style="white-space:nowrap">LYE<a name="mii-cs-onko-operation-komplikation-LYE"> </a></td>
+<td>Lymphozele</td></tr>
+<tr><td style="white-space:nowrap">MES<a name="mii-cs-onko-operation-komplikation-MES"> </a></td>
+<td>Magenentleerungsstörung</td></tr>
+<tr><td style="white-space:nowrap">MIL<a name="mii-cs-onko-operation-komplikation-MIL"> </a></td>
+<td>Mechanischer Ileus</td></tr>
+<tr><td style="white-space:nowrap">MED<a name="mii-cs-onko-operation-komplikation-MED"> </a></td>
+<td>Mediastinitis</td></tr>
+<tr><td style="white-space:nowrap">MAT<a name="mii-cs-onko-operation-komplikation-MAT"> </a></td>
+<td>Mesenterialarterien- oder -venenthrombose</td></tr>
+<tr><td style="white-space:nowrap">MYI<a name="mii-cs-onko-operation-komplikation-MYI"> </a></td>
+<td>Myokardinfarkt</td></tr>
+<tr><td style="white-space:nowrap">RNB<a name="mii-cs-onko-operation-komplikation-RNB"> </a></td>
+<td>Nachblutung, revisionsbedürftig, anderweitig nicht erwähnt</td></tr>
+<tr><td style="white-space:nowrap">NAB<a name="mii-cs-onko-operation-komplikation-NAB"> </a></td>
+<td>Nachblutung, nicht revisionsbedürftig, anderweitig nicht erwähnt</td></tr>
+<tr><td style="white-space:nowrap">NIN<a name="mii-cs-onko-operation-komplikation-NIN"> </a></td>
+<td>Nahtinsuffizienz, anderweitig nicht erwähnt</td></tr>
+<tr><td style="white-space:nowrap">OES<a name="mii-cs-onko-operation-komplikation-OES"> </a></td>
+<td>Ösophagitis</td></tr>
+<tr><td style="white-space:nowrap">OSM<a name="mii-cs-onko-operation-komplikation-OSM"> </a></td>
+<td>Osteitis, Osteomyelitis</td></tr>
+<tr><td style="white-space:nowrap">PAF<a name="mii-cs-onko-operation-komplikation-PAF"> </a></td>
+<td>Pankreasfistel</td></tr>
+<tr><td style="white-space:nowrap">PIT<a name="mii-cs-onko-operation-komplikation-PIT"> </a></td>
+<td>Pankreatitis</td></tr>
+<tr><td style="white-space:nowrap">PAB<a name="mii-cs-onko-operation-komplikation-PAB"> </a></td>
+<td>Peranale Blutung</td></tr>
+<tr><td style="white-space:nowrap">PPA<a name="mii-cs-onko-operation-komplikation-PPA"> </a></td>
+<td>Periphere Parese</td></tr>
+<tr><td style="white-space:nowrap">PAV<a name="mii-cs-onko-operation-komplikation-PAV"> </a></td>
+<td>Peripherer arterieller Verschluss (Embolie, Thrombose)</td></tr>
+<tr><td style="white-space:nowrap">PER<a name="mii-cs-onko-operation-komplikation-PER"> </a></td>
+<td>Peritonitis</td></tr>
+<tr><td style="white-space:nowrap">PLB<a name="mii-cs-onko-operation-komplikation-PLB"> </a></td>
+<td>Platzbauch</td></tr>
+<tr><td style="white-space:nowrap">PEY<a name="mii-cs-onko-operation-komplikation-PEY"> </a></td>
+<td>Pleuraempyem</td></tr>
+<tr><td style="white-space:nowrap">PLE<a name="mii-cs-onko-operation-komplikation-PLE"> </a></td>
+<td>Pleuraerguss</td></tr>
+<tr><td style="white-space:nowrap">PMN<a name="mii-cs-onko-operation-komplikation-PMN"> </a></td>
+<td>Pneumonie</td></tr>
+<tr><td style="white-space:nowrap">PNT<a name="mii-cs-onko-operation-komplikation-PNT"> </a></td>
+<td>Pneumothorax</td></tr>
+<tr><td style="white-space:nowrap">PDA<a name="mii-cs-onko-operation-komplikation-PDA"> </a></td>
+<td>Protrahierte Darmatonie (paralytischer Ileus)</td></tr>
+<tr><td style="white-space:nowrap">PAE<a name="mii-cs-onko-operation-komplikation-PAE"> </a></td>
+<td>Pulmonalarterienembolie</td></tr>
+<tr><td style="white-space:nowrap">RPA<a name="mii-cs-onko-operation-komplikation-RPA"> </a></td>
+<td>Rekurrensparese</td></tr>
+<tr><td style="white-space:nowrap">RIN<a name="mii-cs-onko-operation-komplikation-RIN"> </a></td>
+<td>Respiratorische Insuffizienz</td></tr>
+<tr><td style="white-space:nowrap">SKI<a name="mii-cs-onko-operation-komplikation-SKI"> </a></td>
+<td>Septische Komplikation eines Implantates</td></tr>
+<tr><td style="white-space:nowrap">SES<a name="mii-cs-onko-operation-komplikation-SES"> </a></td>
+<td>Septischer Schock</td></tr>
+<tr><td style="white-space:nowrap">SFH<a name="mii-cs-onko-operation-komplikation-SFH"> </a></td>
+<td>Störungen des Flüssigkeits-, Elektrolyt- und Säurebasenhaushaltes</td></tr>
+<tr><td style="white-space:nowrap">STK<a name="mii-cs-onko-operation-komplikation-STK"> </a></td>
+<td>Stomakomplikation (z. B. Blutung, Nekrose, Stenose)</td></tr>
+<tr><td style="white-space:nowrap">TZP<a name="mii-cs-onko-operation-komplikation-TZP"> </a></td>
+<td>Thrombozytopenie</td></tr>
+<tr><td style="white-space:nowrap">TIA<a name="mii-cs-onko-operation-komplikation-TIA"> </a></td>
+<td>TIA(transitorische ischämische Attacke) oder RIND(reversibles ischämisches neurologisches Defizit)</td></tr>
+<tr><td style="white-space:nowrap">TRZ<a name="mii-cs-onko-operation-komplikation-TRZ"> </a></td>
+<td>Transfusionszwischenfall</td></tr>
+<tr><td style="white-space:nowrap">WUH<a name="mii-cs-onko-operation-komplikation-WUH"> </a></td>
+<td>Wundhämatom (konservativ therapiert)</td></tr>
+<tr><td style="white-space:nowrap">WSS<a name="mii-cs-onko-operation-komplikation-WSS"> </a></td>
+<td>Wundheilungsstörung, subkutane</td></tr></table></div>
+
+  <hr/>
+  <p>
+    <a href="http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology">Description of the above table(s)</a>.
+  </p>
+  
+
+  <!-- insert notes if present -->
+  
+
+
+
+  
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:var(--ig-left);">&#xA0;
+
+                <a href="CodeSystem-mii-cs-onko-melanom-ulzeration.ttl.html">&lt; prev</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">top</a>
+              </td>
+              <td style="text-align:var(--ig-right);">&#xA0;
+
+                <a href="CodeSystem-mii-cs-onko-operation-komplikation-testing.html">next ></a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
+          Package mii-ig-onko-de-v2026#2026.0.3 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-07-02 12:18:00 +0000">
+    2026-07-02
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

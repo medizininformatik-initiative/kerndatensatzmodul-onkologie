@@ -1,0 +1,122 @@
+# MII CM Onko Verlauf Fernmetastasen SNOMED Mapping - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+
+## ConceptMap: MII CM Onko Verlauf Fernmetastasen SNOMED Mapping 
+
+ 
+Mapping Verlauf Fernmetastasen Codes zu SNOMED-CT 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "ConceptMap",
+  "id" : "mii-cm-onko-verlauf-fernmetastasen-sct",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-verlauf-fernmetastasen-sct",
+  "version" : "2026.0.3",
+  "name" : "MII CM Onko Verlauf Fernmetastasen SCT Mapping",
+  "title" : "MII CM Onko Verlauf Fernmetastasen SNOMED Mapping",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2024-04-10",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Mapping Verlauf Fernmetastasen Codes zu SNOMED-CT",
+  "purpose" : "Technical mapping to transform oBDS-Data into SNOMED",
+  "sourceUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
+  "targetUri" : "http://snomed.info/sct/900000000000207008/version/20240401",
+  "group" : [{
+    "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen",
+    "target" : "http://snomed.info/sct/900000000000207008/version/20240401",
+    "element" : [{
+      "code" : "K",
+      "display" : "kein Fernmetastasen nachweisbar",
+      "target" : [{
+        "code" : "261985008",
+        "display" : "No metastases (tumor staging)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "R",
+      "display" : "neu aufgetretene Fernmetastase(n) bzw. Metastasenrezidiv",
+      "target" : [{
+        "code" : "7147002",
+        "display" : "New (qualifier value)",
+        "equivalence" : "narrower",
+        "comment" : "Kodierung für neu aufgetretene Fernmetastasen"
+      }]
+    },
+    {
+      "target" : [{
+        "code" : "263855007",
+        "display" : "Relapse phase (qualifier value)",
+        "equivalence" : "narrower",
+        "comment" : "Kodierung für Metastasenrezidiv"
+      }]
+    },
+    {
+      "code" : "T",
+      "display" : "Fernmetastasen Residuen",
+      "target" : [{
+        "code" : "65320000",
+        "display" : "Residual (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "P",
+      "display" : "Fernmetastasen Progress",
+      "target" : [{
+        "code" : "255314001",
+        "display" : "Progressive (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "N",
+      "display" : "Fernmetastasen No Change",
+      "target" : [{
+        "code" : "260388006",
+        "display" : "No status change (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "F",
+      "display" : "fraglicher Befund",
+      "target" : [{
+        "code" : "64957009",
+        "display" : "Uncertain (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "U",
+      "display" : "unbekannt",
+      "target" : [{
+        "code" : "261665006",
+        "display" : "Unknown (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "X",
+      "display" : "fehlende Angabe",
+      "target" : [{
+        "code" : "1287211007",
+        "display" : "No information available (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}
+
+```

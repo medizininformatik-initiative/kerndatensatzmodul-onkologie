@@ -1,0 +1,68 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-studienteilnahme-prob> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-studienteilnahme-prob"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-studienteilnahme|2026.0.3" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-studienteilnahme|2026.0.3>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-studienteilnahme-prob</b></p><a name=\"en-mii-exa-onko-studienteilnahme-prob\"> </a><a name=\"en-hcmii-exa-onko-studienteilnahme-prob\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-studienteilnahme.html\">MII PR Onkologie Studienteilnahme</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 709491003}\">Enrollment in clinical trial (procedure)</span></p><p><b>subject</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example\">Patient/example</a></p><p><b>focus</b>: </p><ul><li><a href=\"Condition-primaertumor-example.html\">Condition Bösartige Neubildung: Brustdrüse, nicht näher bezeichnet</a></li><li><a href=\"ResearchStudy-mii-exa-onko-studie-prob.html\">ResearchStudy PRO-B: Evaluating the effect of an alarm-based patient-reported outcome monitoring compared with usual care in metastatic breast cancer patients</a></li></ul><p><b>effective</b>: 2021-06-20</p><p><b>value</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-studienteilnahme J}\">Patientin wurde in PRO-B Studie eingeschlossen</span></p><p><b>note</b>: </p><blockquote><div><p>Patientin mit metastasiertem Mammakarzinom in PRO-B Studie randomisiert. Teilnahme am alarm-basierten PROMs-Monitoring zur Erfassung von Symptomen und Nebenwirkungen.</p>\n</div></blockquote></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:709491003 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "709491003" ] ;
+       fhir:Coding.display [ fhir:value "Enrollment in clinical trial (procedure)" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/example> ;
+     fhir:Reference.reference [ fhir:value "Patient/example" ]
+  ] ;
+  fhir:Observation.focus [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/primaertumor-example> ;
+     fhir:Reference.reference [ fhir:value "Condition/primaertumor-example" ]
+  ], [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ResearchStudy/mii-exa-onko-studie-prob> ;
+     fhir:Reference.reference [ fhir:value "ResearchStudy/mii-exa-onko-studie-prob" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2021-06-20"^^xsd:date] ;
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-studienteilnahme" ] ;
+       fhir:Coding.code [ fhir:value "J" ] ;
+       fhir:Coding.display [ fhir:value "Ja" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Patientin wurde in PRO-B Studie eingeschlossen" ]
+  ] ;
+  fhir:Observation.note [
+     fhir:index -1 ;
+     fhir:Annotation.text [ fhir:value "Patientin mit metastasiertem Mammakarzinom in PRO-B Studie randomisiert. Teilnahme am alarm-basierten PROMs-Monitoring zur Erfassung von Symptomen und Nebenwirkungen." ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-studienteilnahme-prob.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

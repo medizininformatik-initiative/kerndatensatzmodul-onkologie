@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-melanom-bundle"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
+  </meta>
+  <language value="en"/>
+  <identifier>
+    <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"/>
+    <value value="melanom-example-bundle-2024-001"/>
+  </identifier>
+  <type value="transaction"/>
+  <timestamp value="2024-03-25T10:00:00+01:00"/>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-melanom-bundle-patient"/>
+    <resource>
+      <Patient>
+        <id value="mii-exa-onko-melanom-bundle-patient"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <name>
+          <family value="Melanom"/>
+          <given value="Maria"/>
+        </name>
+      </Patient>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Patient"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-melanom-diagnose"/>
+    <resource>
+      <Condition>
+        <id value="mii-exa-onko-melanom-diagnose"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor|2026.0.3"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/condition-assertedDate">
+          <valueDateTime value="2024-01-02"/>
+        </extension>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+          </coding>
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <code value="confirmed"/>
+          </coding>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung"/>
+            <code value="7.1"/>
+            <display value="histologische Untersuchung eines Primärtumors"/>
+          </coding>
+        </verificationStatus>
+        <code>
+          <coding>
+            <system value="http://fhir.de/CodeSystem/bfarm/icd-10-gm"/>
+            <version value="2024"/>
+            <code value="C43.9"/>
+            <display value="Bösartiges Melanom der Haut, nicht näher bezeichnet"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-melanom-bundle-patient"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/mii-exa-onko-melanom-bundle-encounter"/>
+        </encounter>
+        <recordedDate value="2024-01-02"/>
+      </Condition>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Condition"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-melanom-bundle-encounter"/>
+    <resource>
+      <Encounter>
+        <id value="mii-exa-onko-melanom-bundle-encounter"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="finished"/>
+        <class>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+          <code value="IMP"/>
+          <display value="inpatient encounter"/>
+        </class>
+        <subject>
+          <reference value="Patient/mii-exa-onko-melanom-bundle-patient"/>
+        </subject>
+      </Encounter>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Encounter"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-melanom-sicherheitsabstand"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-melanom-sicherheitsabstand"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-sicherheitsabstand"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="396511007"/>
+            <display value="Distance of in situ melanoma from closest lateral surgical margin in excised specimen of skin (observable entity)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-melanom-bundle-patient"/>
+        </subject>
+        <focus>
+          <reference value="Condition/mii-exa-onko-melanom-diagnose"/>
+        </focus>
+        <encounter>
+          <reference value="Encounter/mii-exa-onko-melanom-bundle-encounter"/>
+        </encounter>
+        <effectiveDateTime value="2024-03-25T10:00:00+01:00"/>
+        <valueQuantity>
+          <value value="5"/>
+          <unit value="mm"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mm"/>
+        </valueQuantity>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-melanom-breslow-tiefe"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-melanom-breslow-tiefe"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-breslow-tiefe"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="106243009"/>
+            <display value="Breslow depth staging for melanoma of skin (observable entity)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-melanom-bundle-patient"/>
+        </subject>
+        <focus>
+          <reference value="Condition/mii-exa-onko-melanom-diagnose"/>
+        </focus>
+        <encounter>
+          <reference value="Encounter/mii-exa-onko-melanom-bundle-encounter"/>
+        </encounter>
+        <effectiveDateTime value="2024-03-20T14:30:00+01:00"/>
+        <valueQuantity>
+          <value value="2.1"/>
+          <unit value="mm"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mm"/>
+        </valueQuantity>
+        <method>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="117617002"/>
+            <display value="Immunohistochemistry procedure"/>
+          </coding>
+        </method>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-melanom-ulzeration"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-melanom-ulzeration"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-ulzeration"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="6270001000004106"/>
+            <display value="Presence of ulcer in primary malignant melanoma of skin (observable entity)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-melanom-bundle-patient"/>
+        </subject>
+        <focus>
+          <reference value="Condition/mii-exa-onko-melanom-diagnose"/>
+        </focus>
+        <encounter>
+          <reference value="Encounter/mii-exa-onko-melanom-bundle-encounter"/>
+        </encounter>
+        <effectiveDateTime value="2024-03-20T14:30:00+01:00"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-melanom-ulzeration"/>
+            <code value="J"/>
+            <display value="Ja"/>
+          </coding>
+        </valueCodeableConcept>
+        <method>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="117617002"/>
+            <display value="Immunohistochemistry procedure"/>
+          </coding>
+        </method>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-melanom-ldh"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-melanom-ldh"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-ldh"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="14804-9"/>
+            <display value="Lactate dehydrogenase [Enzymatic activity/volume] in Serum or Plasma by Lactate to pyruvate reaction"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-melanom-bundle-patient"/>
+        </subject>
+        <focus>
+          <reference value="Condition/mii-exa-onko-melanom-diagnose"/>
+        </focus>
+        <encounter>
+          <reference value="Encounter/mii-exa-onko-melanom-bundle-encounter"/>
+        </encounter>
+        <effectiveDateTime value="2024-03-18T08:30:00+01:00"/>
+        <valueQuantity>
+          <value value="280"/>
+          <unit value="U/L"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="U/L"/>
+        </valueQuantity>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="H"/>
+            <display value="High"/>
+          </coding>
+        </interpretation>
+        <referenceRange>
+          <low>
+            <value value="135"/>
+            <unit value="U/L"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="U/L"/>
+          </low>
+          <high>
+            <value value="250"/>
+            <unit value="U/L"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="U/L"/>
+          </high>
+          <text value="135-250 U/L"/>
+        </referenceRange>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-melanom-exzision-oberarm"/>
+    <resource>
+      <Procedure>
+        <id value="mii-exa-onko-melanom-exzision-oberarm"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-exzision|2026.0.3"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention">
+          <valueCodeableConcept>
+            <coding>
+              <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention"/>
+              <code value="K"/>
+              <display value="kurativ"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <status value="completed"/>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="387713003"/>
+            <display value="Surgical procedure"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://fhir.de/CodeSystem/bfarm/ops"/>
+            <version value="2024"/>
+            <code value="5-894.06"/>
+            <display value="Lokale Exzision von erkranktem Gewebe an Haut und Unterhaut: Ohne primären Wundverschluss: Schulter und Axilla"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="177281002"/>
+            <display value="Excision of melanoma (procedure)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-melanom-bundle-patient"/>
+        </subject>
+        <performedDateTime value="2024-03-20"/>
+        <reasonReference>
+          <reference value="Condition/mii-exa-onko-melanom-diagnose"/>
+        </reasonReference>
+        <bodySite>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="368208006"/>
+            <display value="Left upper arm structure"/>
+          </coding>
+        </bodySite>
+        <outcome>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus"/>
+            <code value="R0"/>
+            <display value="Kein Residualtumor"/>
+          </coding>
+        </outcome>
+      </Procedure>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Procedure"/>
+    </request>
+  </entry>
+</Bundle>

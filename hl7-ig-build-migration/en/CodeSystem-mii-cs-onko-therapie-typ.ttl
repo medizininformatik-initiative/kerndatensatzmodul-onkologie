@@ -1,0 +1,116 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-cs-onko-therapie-typ"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/shareablecodesystem" ;
+       fhir:index -1 ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-onko-therapie-typ</b></p><a name=\"en-mii-cs-onko-therapie-typ\"> </a><a name=\"en-hcmii-cs-onko-therapie-typ\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">CH<a name=\"en-mii-cs-onko-therapie-typ-CH\"> </a></td><td>Chemotherapie</td></tr><tr><td style=\"white-space:nowrap\">HO<a name=\"en-mii-cs-onko-therapie-typ-HO\"> </a></td><td>Hormontherapie</td></tr><tr><td style=\"white-space:nowrap\">IM<a name=\"en-mii-cs-onko-therapie-typ-IM\"> </a></td><td>Immun-/Antikörpertherapie</td></tr><tr><td style=\"white-space:nowrap\">ZS<a name=\"en-mii-cs-onko-therapie-typ-ZS\"> </a></td><td>zielgerichtete Substanzen</td></tr><tr><td style=\"white-space:nowrap\">SZ<a name=\"en-mii-cs-onko-therapie-typ-SZ\"> </a></td><td>Stammzelltransplantation (inklusive Knochenmarktransplantation)</td></tr><tr><td style=\"white-space:nowrap\">CI<a name=\"en-mii-cs-onko-therapie-typ-CI\"> </a></td><td>Chemo- + Immun-/Antikörpertherapie</td></tr><tr><td style=\"white-space:nowrap\">CZ<a name=\"en-mii-cs-onko-therapie-typ-CZ\"> </a></td><td>Chemotherapie + zielgerichtete Substanzen</td></tr><tr><td style=\"white-space:nowrap\">CIZ<a name=\"en-mii-cs-onko-therapie-typ-CIZ\"> </a></td><td>Chemo- + Immun-/Antikörpertherapie + zielgerichtete Substanzen</td></tr><tr><td style=\"white-space:nowrap\">IZ<a name=\"en-mii-cs-onko-therapie-typ-IZ\"> </a></td><td>Immun-/Antikörpertherapie + zielgerichtete Substanzen</td></tr><tr><td style=\"white-space:nowrap\">WW<a name=\"en-mii-cs-onko-therapie-typ-WW\"> </a></td><td>Watchful Waiting</td></tr><tr><td style=\"white-space:nowrap\">AS<a name=\"en-mii-cs-onko-therapie-typ-AS\"> </a></td><td>Active Surveillance</td></tr><tr><td style=\"white-space:nowrap\">WS<a name=\"en-mii-cs-onko-therapie-typ-WS\"> </a></td><td>Wait and see</td></tr><tr><td style=\"white-space:nowrap\">OP<a name=\"en-mii-cs-onko-therapie-typ-OP\"> </a></td><td>Operation</td></tr><tr><td style=\"white-space:nowrap\">ST<a name=\"en-mii-cs-onko-therapie-typ-ST\"> </a></td><td>Strahlentherapie</td></tr><tr><td style=\"white-space:nowrap\">KW<a name=\"en-mii-cs-onko-therapie-typ-KW\"> </a></td><td>keine weitere tumorspezifische Therapie empfohlen</td></tr><tr><td style=\"white-space:nowrap\">SO<a name=\"en-mii-cs-onko-therapie-typ-SO\"> </a></td><td>Sonstiges</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ"] ;
+  fhir:CodeSystem.version [ fhir:value "2026.0.3"] ;
+  fhir:CodeSystem.name [ fhir:value "MII_CS_Onko_Therapie_Typ"] ;
+  fhir:CodeSystem.title [ fhir:value "MII CS Onko Therapie Typ"] ;
+  fhir:CodeSystem.status [ fhir:value "active"] ;
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-07-02T12:18:38+00:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "Medizininformatik Initiative"] ;
+  fhir:CodeSystem.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "Medizininformatik Initiative" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.medizininformatik-initiative.de/" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "Typ der Therapie"] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "16"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "CH" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Chemotherapie" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "HO" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hormontherapie" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IM" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Immun-/Antikörpertherapie" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "ZS" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "zielgerichtete Substanzen" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "SZ" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stammzelltransplantation (inklusive Knochenmarktransplantation)" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "CI" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Chemo- + Immun-/Antikörpertherapie" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "CZ" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Chemotherapie + zielgerichtete Substanzen" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "CIZ" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Chemo- + Immun-/Antikörpertherapie + zielgerichtete Substanzen" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IZ" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Immun-/Antikörpertherapie + zielgerichtete Substanzen" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "WW" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Watchful Waiting" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "AS" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Active Surveillance" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "WS" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Wait and see" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "OP" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Operation" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "ST" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Strahlentherapie" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "KW" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "keine weitere tumorspezifische Therapie empfohlen" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "SO" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sonstiges" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

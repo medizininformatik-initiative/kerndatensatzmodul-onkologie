@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="mii-cm-onko-therapieplanung-sct"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap mii-cm-onko-therapieplanung-sct</b></p><a name="mii-cm-onko-therapieplanung-sct"> </a><a name="hcmii-cm-onko-therapieplanung-sct"> </a><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <a href="CodeSystem-mii-cs-onko-therapieplanung-typ.html">MII CS Onkologie Therapieplanung Typ</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>praeth (prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider" title="wider">maps to wider concept</a></td><td>307153007 (Before procedure (qualifier value))</td></tr><tr><td>postop (postoperative Tumorkonferenz (Planung der postoperativen Therapie, z. B. zur Frage adjuvante Therapie))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider" title="wider">maps to wider concept</a></td><td>262061000 (Postoperative period (qualifier value))</td></tr><tr><td>postth (posttherapeutische Tumorkonferenz (manche Tumore werden nicht operiert))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider" title="wider">maps to wider concept</a></td><td>303110006 (Postprocedural period (qualifier value))</td></tr><tr><td>ther (Therapieplanung ohne Tumorkonferenz)</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr></table></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap mii-cm-onko-therapieplanung-sct</b></p><a name="en-mii-cm-onko-therapieplanung-sct"> </a><a name="en-hcmii-cm-onko-therapieplanung-sct"> </a><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <a href="CodeSystem-mii-cs-onko-therapieplanung-typ.html">MII CS Onkologie Therapieplanung Typ</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>praeth (prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider" title="wider">maps to wider concept</a></td><td>307153007 (Before procedure (qualifier value))</td></tr><tr><td>postop (postoperative Tumorkonferenz (Planung der postoperativen Therapie, z. B. zur Frage adjuvante Therapie))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider" title="wider">maps to wider concept</a></td><td>262061000 (Postoperative period (qualifier value))</td></tr><tr><td>postth (posttherapeutische Tumorkonferenz (manche Tumore werden nicht operiert))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider" title="wider">maps to wider concept</a></td><td>303110006 (Postprocedural period (qualifier value))</td></tr><tr><td>ther (Therapieplanung ohne Tumorkonferenz)</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr></table></div></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-therapieplanung-sct"/>
+  <version value="2026.0.3"/>
+  <name value="MII CM Onko Therapieplanung SCT Mapping"/>
+  <title value="MII CM Onko Therapieplanung SNOMED Mapping"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2024-04-11"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="Mapping Therapieplanung Codes zu SNOMED-CT"/>
+  <purpose value="Technical mapping to transform oBDS-Data into SNOMED"/>
+  <sourceUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/"/>
+  <targetUri value="http://snomed.info/sct/900000000000207008/version/20240401"/>
+  <group>
+    <source value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ"/>
+    <target value="http://snomed.info/sct/900000000000207008/version/20240401"/>
+    <element>
+      <code value="praeth"/>
+      <display value="prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie)"/>
+      <target>
+        <code value="307153007"/>
+        <display value="Before procedure (qualifier value)"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="postop"/>
+      <display value="postoperative Tumorkonferenz (Planung der postoperativen Therapie, z. B. zur Frage adjuvante Therapie)"/>
+      <target>
+        <code value="262061000"/>
+        <display value="Postoperative period (qualifier value)"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="postth"/>
+      <display value="posttherapeutische Tumorkonferenz (manche Tumore werden nicht operiert)"/>
+      <target>
+        <code value="303110006"/>
+        <display value="Postprocedural period (qualifier value)"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="ther"/>
+      <display value="Therapieplanung ohne Tumorkonferenz"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

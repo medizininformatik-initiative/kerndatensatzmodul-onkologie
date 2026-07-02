@@ -1,0 +1,230 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-therapie-typ-sct> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-cm-onko-therapie-typ-sct"] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap mii-cm-onko-therapie-typ-sct</b></p><a name=\"mii-cm-onko-therapie-typ-sct\"> </a><a name=\"hcmii-cm-onko-therapie-typ-sct\"> </a><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <a href=\"CodeSystem-mii-cs-onko-therapie-typ.html\">MII CS Onko Therapie Typ</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>CH (Chemotherapie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>367336001 (Chemotherapy (procedure))</td><td/></tr><tr><td>HO (Hormontherapie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>169413002 (Hormone therapy (procedure))</td><td/></tr><tr><td>IM (Immun-/Antikörpertherapie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>897713009 (Immunotherapy (procedure))</td><td/></tr><tr><td>ZS (zielgerichtete Substanzen)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1255831008 (Chemotherapy for malignant neoplastic disease using targeted agent (procedure))</td><td/></tr><tr><td>SZ (Stammzelltransplantation (inklusive Knochenmarktransplantation))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1269349006 (Transplantation of stem cell (procedure))</td><td/></tr><tr><td>CI (Chemo- + Immun-/Antikörpertherapie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>897713009 (Antineoplastic chemoimmunotherapy (regime/therapy))</td><td/></tr><tr><td>CZ (Chemotherapie + zielgerichtete Substanzen)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1255831008 (Chemotherapy for malignant neoplastic disease using targeted agent (procedure))</td><td/></tr><tr><td>CIZ (Chemo- + Immun-/Antikörpertherapie + zielgerichtete Substanzen)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#narrower\" title=\"narrower\">narrower</a></td><td>897713009 (Antineoplastic chemoimmunotherapy (regime/therapy))</td><td>Spezifische Kombination für Chemo- und Immuntherapie, aber ohne zielgerichtete Substanzen</td></tr><tr><td/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#narrower\" title=\"narrower\">narrower</a></td><td>1255831008 (Chemotherapy for malignant neoplastic disease using targeted agent (procedure))</td><td>Spezifischer Code für zielgerichtete Substanzen</td></tr><tr><td>IZ (Immun-/Antikörpertherapie + zielgerichtete Substanzen)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#narrower\" title=\"narrower\">narrower</a></td><td>76334006 (Immunotherapy (procedure))</td><td>Spezifischer Code Immuntherapie, aber ohne zielgerichtete Substanzen</td></tr><tr><td/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#narrower\" title=\"narrower\">narrower</a></td><td>1255831008 (Chemotherapy for malignant neoplastic disease using targeted agent (procedure))</td><td>Spezifischer Code für zielgerichtete Substanzen</td></tr><tr><td>WW (Watchful Waiting)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>373818007 (No anti-cancer treatment - watchful waiting (finding))</td><td/></tr><tr><td>AS (Active Surveillance)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>424313000 (Active surveillance (regime/therapy))</td><td/></tr><tr><td>WS (Wait and see)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>310341009 (Follow-up (wait and see) (finding))</td><td/></tr><tr><td>OP (Operation)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>387713003 (Surgical procedure (procedure))</td><td/></tr><tr><td>ST (Strahlentherapie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1287742003 (Radiotherapy (procedure))</td><td/></tr><tr><td>KW (keine weitere tumorspezifische Therapie empfohlen)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>897016006 (Not recommended (qualifier value))</td><td/></tr><tr><td>SO (Sonstiges)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>74964007 (Other (qualifier value))</td><td/></tr></table></div>"
+  ] ;
+  fhir:ConceptMap.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-therapie-typ-sct"] ;
+  fhir:ConceptMap.version [ fhir:value "2026.0.3"] ;
+  fhir:ConceptMap.name [ fhir:value "MII CM Onko Therapie Typ SNOMED Mapping"] ;
+  fhir:ConceptMap.title [ fhir:value "MII CM Onko Therapie Typ SNOMED Mapping"] ;
+  fhir:ConceptMap.status [ fhir:value "active"] ;
+  fhir:ConceptMap.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ConceptMap.date [ fhir:value "2024-04-10"^^xsd:date] ;
+  fhir:ConceptMap.publisher [ fhir:value "Medizininformatik Initiative"] ;
+  fhir:ConceptMap.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "Medizininformatik Initiative" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.medizininformatik-initiative.de/" ]
+     ]
+  ] ;
+  fhir:ConceptMap.description [ fhir:value "Mapping Therapie Typ Codes zu SNOMED-CT"] ;
+  fhir:ConceptMap.purpose [ fhir:value "Technical mapping to transform oBDS-Data into SNOMED"] ;
+  fhir:ConceptMap.sourceUri [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/"] ;
+  fhir:ConceptMap.targetUri [ fhir:value "http://snomed.info/sct/900000000000207008/version/20240401"] ;
+  fhir:ConceptMap.group [
+     fhir:index -1 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "http://snomed.info/sct/900000000000207008/version/20240401" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "CH" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Chemotherapie" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "367336001" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Chemotherapy (procedure)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "HO" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Hormontherapie" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "169413002" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Hormone therapy (procedure)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "IM" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Immun-/Antikörpertherapie" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "897713009" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Immunotherapy (procedure)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "ZS" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "zielgerichtete Substanzen" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1255831008" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Chemotherapy for malignant neoplastic disease using targeted agent (procedure)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "SZ" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Stammzelltransplantation (inklusive Knochenmarktransplantation)" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1269349006" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Transplantation of stem cell (procedure)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "CI" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Chemo- + Immun-/Antikörpertherapie" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "897713009" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Antineoplastic chemoimmunotherapy (regime/therapy)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "CZ" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Chemotherapie + zielgerichtete Substanzen" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1255831008" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Chemotherapy for malignant neoplastic disease using targeted agent (procedure)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "CIZ" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Chemo- + Immun-/Antikörpertherapie + zielgerichtete Substanzen" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "897713009" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Antineoplastic chemoimmunotherapy (regime/therapy)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "narrower" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Spezifische Kombination für Chemo- und Immuntherapie, aber ohne zielgerichtete Substanzen" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1255831008" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Chemotherapy for malignant neoplastic disease using targeted agent (procedure)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "narrower" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Spezifischer Code für zielgerichtete Substanzen" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "IZ" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Immun-/Antikörpertherapie + zielgerichtete Substanzen" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "76334006" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Immunotherapy (procedure)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "narrower" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Spezifischer Code Immuntherapie, aber ohne zielgerichtete Substanzen" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1255831008" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Chemotherapy for malignant neoplastic disease using targeted agent (procedure)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "narrower" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Spezifischer Code für zielgerichtete Substanzen" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "WW" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Watchful Waiting" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "373818007" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "No anti-cancer treatment - watchful waiting (finding)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "AS" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Active Surveillance" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "424313000" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Active surveillance (regime/therapy)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "WS" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Wait and see" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "310341009" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Follow-up (wait and see) (finding)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "OP" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Operation" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "387713003" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Surgical procedure (procedure)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "ST" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Strahlentherapie" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1287742003" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Radiotherapy (procedure)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "KW" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "keine weitere tumorspezifische Therapie empfohlen" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "897016006" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Not recommended (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "SO" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Sonstiges" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "74964007" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Other (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-therapie-typ-sct.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

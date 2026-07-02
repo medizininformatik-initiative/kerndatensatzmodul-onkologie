@@ -1,0 +1,59 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "mii-cm-onko-studienteilnahme-sct",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap mii-cm-onko-studienteilnahme-sct</b></p><a name=\"mii-cm-onko-studienteilnahme-sct\"> </a><a name=\"hcmii-cm-onko-studienteilnahme-sct\"> </a><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <a href=\"CodeSystem-mii-cs-onko-studienteilnahme.html\">MII CS Onkologie Studienteilnahme</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>J (Ja)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>373066001 (Yes (qualifier value))</td></tr><tr><td>N (Nein)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>373067005 (No (qualifier value))</td></tr><tr><td>U (Unbekannt)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>261665006 (Unknown (qualifier value))</td></tr></table></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-studienteilnahme-sct",
+  "version" : "2026.0.3",
+  "name" : "MII CM Onko Studienteilnahme SCT Mapping",
+  "title" : "MII CM Onko Studienteilnahme SNOMED Mapping",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2024-08-01",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Mapping Studienteilnahme Status Codes zu SNOMED-CT",
+  "purpose" : "Technical mapping to transform oBDS-Data into SNOMED",
+  "sourceUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
+  "targetUri" : "http://snomed.info/sct/900000000000207008/version/20240401",
+  "group" : [{
+    "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-studienteilnahme",
+    "target" : "http://snomed.info/sct/900000000000207008/version/20240401",
+    "element" : [{
+      "code" : "J",
+      "display" : "Ja",
+      "target" : [{
+        "code" : "373066001",
+        "display" : "Yes (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "N",
+      "display" : "Nein",
+      "target" : [{
+        "code" : "373067005",
+        "display" : "No (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "U",
+      "display" : "Unbekannt",
+      "target" : [{
+        "code" : "261665006",
+        "display" : "Unknown (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

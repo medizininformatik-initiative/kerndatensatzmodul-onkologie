@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-onko-melanom-ulzeration"/>
+  <language value="de"/>
+  <text>
+    <status value="extensions"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-onko-melanom-ulzeration</b></p><a name="mii-vs-onko-melanom-ulzeration"> </a><a name="hcmii-vs-onko-melanom-ulzeration"> </a><ul><li>Include these codes as defined in <a href="CodeSystem-mii-cs-onko-melanom-ulzeration.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-melanom-ulzeration</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="CodeSystem-mii-cs-onko-melanom-ulzeration.html#mii-cs-onko-melanom-ulzeration-J">J</a></td><td>Ja</td><td>Ulzeration ist vorhanden</td></tr><tr><td><a href="CodeSystem-mii-cs-onko-melanom-ulzeration.html#mii-cs-onko-melanom-ulzeration-N">N</a></td><td>Nein</td><td>Keine Ulzeration</td></tr><tr><td><a href="CodeSystem-mii-cs-onko-melanom-ulzeration.html#mii-cs-onko-melanom-ulzeration-U">U</a></td><td>Unbekannt</td><td>Ulzeration unbekannt oder nicht bestimmbar</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-melanom-ulzeration"/>
+  <version value="2026.0.3"/>
+  <name value="MII_VS_Onko_Melanom_Ulzeration"/>
+  <title value="MII VS Onkologie Melanom Ulzeration"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-07-02T12:18:38+00:00"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="Codes für die Ulzeration beim Malignen Melanom der Haut"/>
+  <compose>
+    <include>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-melanom-ulzeration"/>
+      <concept>
+        <code value="J"/>
+        <display value="Ja"/>
+      </concept>
+      <concept>
+        <code value="N"/>
+        <display value="Nein"/>
+      </concept>
+      <concept>
+        <code value="U"/>
+        <display value="Unbekannt"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

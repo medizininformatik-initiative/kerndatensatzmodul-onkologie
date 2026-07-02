@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="mii-cm-onko-verlauf-gesamtbeurteilung-sct"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap mii-cm-onko-verlauf-gesamtbeurteilung-sct</b></p><a name="mii-cm-onko-verlauf-gesamtbeurteilung-sct"> </a><a name="hcmii-cm-onko-verlauf-gesamtbeurteilung-sct"> </a><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <a href="CodeSystem-mii-cs-onko-verlauf-gesamtbeurteilung.html">MII CS Onkologie Verlauf Gesamtbeurteilung</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>V (Vollremission (complete remission, CR))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>550991000124107 (Malignant neoplasm in full remission (disorder))</td><td/></tr><tr><td>T (Teilremission (partial remission, PR))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>551001000124108 (Malignant neoplasm in partial remission (disorder))</td><td/></tr><tr><td>K (keine Änderung (no change, NC) = stable disease)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>260388006 (No status change (qualifier value))</td><td/></tr><tr><td>P (Progression)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>419835002 (Tumor progression (finding))</td><td/></tr><tr><td>D (divergentes Geschehen)</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">kein SNOMED-Term für divergentes Geschehen</td></tr><tr><td>B (klinische Besserung des Zustandes, Teilremissionkriterien jedoch nicht erfüllt (minimal response, MR))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>84190002 (Minimal therapeutic response (finding))</td><td/></tr><tr><td>R (Vollremission mit residualen Auffälligkeiten (CRr))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider" title="wider">maps to wider concept</a></td><td>550991000124107 (Malignant neoplasm in full remission (disorder))</td><td>Residuale Auffälligkeiten ggfs. über Postkoordination kodierbar</td></tr><tr><td>Y (Rezidiv)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>1259237005 (Recurrent malignant neoplasm (disorder))</td><td/></tr><tr><td>U (Beurteilung unmöglich)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>385432009 (Not applicable (qualifier value))</td><td/></tr><tr><td>X (fehlende Angabe)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>1287211007 (No information available (qualifier value))</td><td/></tr></table></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap mii-cm-onko-verlauf-gesamtbeurteilung-sct</b></p><a name="en-mii-cm-onko-verlauf-gesamtbeurteilung-sct"> </a><a name="en-hcmii-cm-onko-verlauf-gesamtbeurteilung-sct"> </a><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <a href="CodeSystem-mii-cs-onko-verlauf-gesamtbeurteilung.html">MII CS Onkologie Verlauf Gesamtbeurteilung</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>V (Vollremission (complete remission, CR))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>550991000124107 (Malignant neoplasm in full remission (disorder))</td><td/></tr><tr><td>T (Teilremission (partial remission, PR))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>551001000124108 (Malignant neoplasm in partial remission (disorder))</td><td/></tr><tr><td>K (keine Änderung (no change, NC) = stable disease)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>260388006 (No status change (qualifier value))</td><td/></tr><tr><td>P (Progression)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>419835002 (Tumor progression (finding))</td><td/></tr><tr><td>D (divergentes Geschehen)</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">kein SNOMED-Term für divergentes Geschehen</td></tr><tr><td>B (klinische Besserung des Zustandes, Teilremissionkriterien jedoch nicht erfüllt (minimal response, MR))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>84190002 (Minimal therapeutic response (finding))</td><td/></tr><tr><td>R (Vollremission mit residualen Auffälligkeiten (CRr))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider" title="wider">maps to wider concept</a></td><td>550991000124107 (Malignant neoplasm in full remission (disorder))</td><td>Residuale Auffälligkeiten ggfs. über Postkoordination kodierbar</td></tr><tr><td>Y (Rezidiv)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>1259237005 (Recurrent malignant neoplasm (disorder))</td><td/></tr><tr><td>U (Beurteilung unmöglich)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>385432009 (Not applicable (qualifier value))</td><td/></tr><tr><td>X (fehlende Angabe)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>1287211007 (No information available (qualifier value))</td><td/></tr></table></div></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-verlauf-gesamtbeurteilung-sct"/>
+  <version value="2026.0.3"/>
+  <name value="MII CM Onko Verlauf Gesamtbeurteilung SCT Mapping"/>
+  <title value="MII CM Onko Verlauf Gesamtbeurteilung SNOMED Mapping"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2024-04-10"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="Mapping Gesamtbeurteilung Codes zu SNOMED-CT"/>
+  <purpose value="Technical mapping to transform oBDS-Data into SNOMED"/>
+  <sourceUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/"/>
+  <targetUri value="http://snomed.info/sct/900000000000207008/version/20240401"/>
+  <group>
+    <source value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung"/>
+    <target value="http://snomed.info/sct/900000000000207008/version/20240401"/>
+    <element>
+      <code value="V"/>
+      <display value="Vollremission (complete remission, CR)"/>
+      <target>
+        <code value="550991000124107"/>
+        <display value="Malignant neoplasm in full remission (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="T"/>
+      <display value="Teilremission (partial remission, PR)"/>
+      <target>
+        <code value="551001000124108"/>
+        <display value="Malignant neoplasm in partial remission (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="K"/>
+      <display value="keine Änderung (no change, NC) = stable disease"/>
+      <target>
+        <code value="260388006"/>
+        <display value="No status change (qualifier value)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="P"/>
+      <display value="Progression"/>
+      <target>
+        <code value="419835002"/>
+        <display value="Tumor progression (finding)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="D"/>
+      <display value="divergentes Geschehen"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="kein SNOMED-Term für divergentes Geschehen"/>
+      </target>
+    </element>
+    <element>
+      <code value="B"/>
+      <display value="klinische Besserung des Zustandes, Teilremissionkriterien jedoch nicht erfüllt (minimal response, MR)"/>
+      <target>
+        <code value="84190002"/>
+        <display value="Minimal therapeutic response (finding)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="R"/>
+      <display value="Vollremission mit residualen Auffälligkeiten (CRr)"/>
+      <target>
+        <code value="550991000124107"/>
+        <display value="Malignant neoplasm in full remission (disorder)"/>
+        <equivalence value="wider"/>
+        <comment value="Residuale Auffälligkeiten ggfs. über Postkoordination kodierbar"/>
+      </target>
+    </element>
+    <element>
+      <code value="Y"/>
+      <display value="Rezidiv"/>
+      <target>
+        <code value="1259237005"/>
+        <display value="Recurrent malignant neoplasm (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="U"/>
+      <display value="Beurteilung unmöglich"/>
+      <target>
+        <code value="385432009"/>
+        <display value="Not applicable (qualifier value)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="X"/>
+      <display value="fehlende Angabe"/>
+      <target>
+        <code value="1287211007"/>
+        <display value="No information available (qualifier value)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

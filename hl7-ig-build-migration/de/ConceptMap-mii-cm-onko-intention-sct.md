@@ -1,0 +1,105 @@
+# MII CM Onko Intention SNOMED Mapping - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+
+## ConceptMap: MII CM Onko Intention SNOMED Mapping 
+
+ 
+Mapping Intention Codes zu SNOMED-CT 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "ConceptMap",
+  "id" : "mii-cm-onko-intention-sct",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-intention-sct",
+  "version" : "2026.0.3",
+  "name" : "MII CM Onko Intention SNOMED Mapping",
+  "title" : "MII CM Onko Intention SNOMED Mapping",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2024-04-10",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Mapping Intention Codes zu SNOMED-CT",
+  "purpose" : "Technical mapping to transform oBDS-Data into SNOMED",
+  "sourceUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
+  "targetUri" : "http://snomed.info/sct/900000000000207008/version/20240401",
+  "group" : [{
+    "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention",
+    "target" : "http://snomed.info/sct/900000000000207008/version/20240401",
+    "element" : [{
+      "code" : "K",
+      "display" : "kurativ",
+      "target" : [{
+        "code" : "373808002",
+        "display" : "Curative - procedure intent (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "P",
+      "display" : "palliativ",
+      "target" : [{
+        "code" : "363676003",
+        "display" : "Palliative - procedure intent (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "D",
+      "display" : "diagnostisch",
+      "target" : [{
+        "code" : "261004008",
+        "display" : "Diagnostic intent (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "R",
+      "display" : "Revision/Komplikation",
+      "target" : [{
+        "code" : "255231005",
+        "display" : "Revision - value (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "S",
+      "display" : "Sonstiges",
+      "target" : [{
+        "code" : "74964007",
+        "display" : "Other (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "X",
+      "display" : "fehlende Angabe",
+      "target" : [{
+        "code" : "1287211007",
+        "display" : "No information available (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "O",
+      "display" : "lokal kurativ bei Oligometastasierung",
+      "target" : [{
+        "code" : "373808002",
+        "display" : "Curative - procedure intent (qualifier value)",
+        "equivalence" : "wider",
+        "comment" : "ggfs. Postkoordination mit 1255358009 | Oligometastatic malignant neoplasm (disorder) |"
+      }]
+    }]
+  }]
+}
+
+```

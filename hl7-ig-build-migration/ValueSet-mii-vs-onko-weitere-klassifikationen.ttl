@@ -1,0 +1,307 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-weitere-klassifikationen> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-vs-onko-weitere-klassifikationen"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-onko-weitere-klassifikationen</b></p><a name=\"mii-vs-onko-weitere-klassifikationen\"> </a><a name=\"hcmii-vs-onko-weitere-klassifikationen\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/444256004\">444256004</a></td><td>American Joint Commission on Cancer, Cancer Staging Manual, 6th edition neoplasm staging system (tumor staging)</td></tr><tr><td><a href=\"http://snomed.info/id/443830009\">443830009</a></td><td>American Joint Commission on Cancer, Cancer Staging Manual, 7th edition neoplasm staging system (tumor staging)</td></tr><tr><td><a href=\"http://snomed.info/id/897275008\">897275008</a></td><td>American Joint Commission on Cancer, Cancer Staging Manual, 8th edition tumor staging system</td></tr><tr><td><a href=\"http://snomed.info/id/254381008\">254381008</a></td><td>American Urological Association staging system for prostate cancer</td></tr><tr><td><a href=\"http://snomed.info/id/254373007\">254373007</a></td><td>Ann Arbor Hodgkin's disease tumor staging system</td></tr><tr><td><a href=\"http://snomed.info/id/254372002\">254372002</a></td><td>Ann Arbor lymphoma staging system</td></tr><tr><td><a href=\"http://snomed.info/id/254374001\">254374001</a></td><td>Ann Arbor non-Hodgkin's lymphoma tumour staging system</td></tr><tr><td><a href=\"http://snomed.info/id/254361007\">254361007</a></td><td>Astler-Coller staging system</td></tr><tr><td><a href=\"http://snomed.info/id/1149164009\">1149164009</a></td><td>ACPS (Australian Clinico-pathological Staging) System for colorectal cancer</td></tr><tr><td><a href=\"http://snomed.info/id/1149099005\">1149099005</a></td><td>Binet staging classification for chronic lymphocytic leukaemia</td></tr><tr><td><a href=\"http://snomed.info/id/385346008\">385346008</a></td><td>Breslow system for melanoma staging (tumor staging)</td></tr><tr><td><a href=\"http://snomed.info/id/385345007\">385345007</a></td><td>Clark system for melanoma staging (tumor staging)</td></tr><tr><td><a href=\"http://snomed.info/id/254375000\">254375000</a></td><td>Cotswolds Hodgkin's disease tumor staging system</td></tr><tr><td><a href=\"http://snomed.info/id/254360008\">254360008</a></td><td>Dukes staging system</td></tr><tr><td><a href=\"http://snomed.info/id/254379006\">254379006</a></td><td>Indiana University testicular tumour staging system</td></tr><tr><td><a href=\"http://snomed.info/id/254386003\">254386003</a></td><td>Federation Internationale de gynecologie et d'obstetrique staging of ovarian malignancy</td></tr><tr><td><a href=\"http://snomed.info/id/106250008\">106250008</a></td><td>FIGO staging of cervical carcinoma</td></tr><tr><td><a href=\"http://snomed.info/id/106244003\">106244003</a></td><td>FIGO staging of endometrial carcinoma</td></tr><tr><td><a href=\"http://snomed.info/id/106247005\">106247005</a></td><td>FIGO staging for epithelial tumor of ovary</td></tr><tr><td><a href=\"http://snomed.info/id/106245002\">106245002</a></td><td>FIGO staging of vulvar carcinoma</td></tr><tr><td><a href=\"http://snomed.info/id/106246001\">106246001</a></td><td>FIGO staging of vulvar melanoma</td></tr><tr><td><a href=\"http://snomed.info/id/254383006\">254383006</a></td><td>Federation internationale de gynecologie et d'obstetrique staging of gynaecological malignancy</td></tr><tr><td><a href=\"http://snomed.info/id/254385004\">254385004</a></td><td>Federation internationale de gynecologie et d'obstetrique staging of corpus uteri malignancy</td></tr><tr><td><a href=\"http://snomed.info/id/254384000\">254384000</a></td><td>FIGO Vaginal tumor staging</td></tr><tr><td><a href=\"http://snomed.info/id/1149162008\">1149162008</a></td><td>International Staging System for multiple myeloma (staging scale)</td></tr><tr><td><a href=\"http://snomed.info/id/254380009\">254380009</a></td><td>Marshall Modification of Jewett-Strong staging system for urinary bladder tumor</td></tr><tr><td><a href=\"http://snomed.info/id/254362000\">254362000</a></td><td>Modified Astler-Coller staging system</td></tr><tr><td><a href=\"http://snomed.info/id/385359000\">385359000</a></td><td>Modified Dukes staging system (tumor staging)</td></tr><tr><td><a href=\"http://snomed.info/id/1149131009\">1149131009</a></td><td>Rai staging system for chronic lymphocytic leukaemia</td></tr><tr><td><a href=\"http://snomed.info/id/1149163003\">1149163003</a></td><td>Revised International Staging System for multiple myeloma (staging scale)</td></tr><tr><td><a href=\"http://snomed.info/id/254366002\">254366002</a></td><td>Stannard staging system for retinoblastoma</td></tr><tr><td><a href=\"http://snomed.info/id/254382001\">254382001</a></td><td>Trophoblastic malignancy staging system</td></tr><tr><td><a href=\"http://snomed.info/id/254378003\">254378003</a></td><td>Walter Reed testicular tumor staging system</td></tr><tr><td><a href=\"http://snomed.info/id/1287648008\">1287648008</a></td><td>Masaoka-Koga stage classification for thymic malignancies (tumor staging)</td></tr><tr><td><a href=\"http://snomed.info/id/1287643004\">1287643004</a></td><td>INRG (International Neuroblastoma Risk Group) staging system</td></tr><tr><td><a href=\"http://snomed.info/id/1287646007\">1287646007</a></td><td>International Germ Cell Consensus Classification (tumor staging)</td></tr><tr><td><a href=\"http://snomed.info/id/716567001\">716567001</a></td><td>International Prognostic Index (assessment scale)</td></tr><tr><td><a href=\"http://snomed.info/id/708736003\">708736003</a></td><td>Follicular Lymphoma International Prognostic Index (assessment scale)</td></tr><tr><td><a href=\"http://snomed.info/id/763236005\">763236005</a></td><td>Mantle Cell Lymphoma International Prognostic Index (assessment scale)</td></tr></table></li><li>Include these codes as defined in <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-nciThesaurus.html\"><code>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>C188404</td><td>Union for International Cancer Control Stage</td></tr><tr><td>C186527</td><td>Atypical Teratoid/Rhabdoid Tumor Staging System</td></tr><tr><td>C141206</td><td>Chronic Lymphocytic Leukemia- Modified Rai Staging System</td></tr><tr><td>C62575</td><td>Collaborative Staging</td></tr><tr><td>C128932</td><td>Derkay Staging System</td></tr><tr><td>C186536</td><td>Embryonal Tumor with Multilayered Rosettes Staging System</td></tr><tr><td>C140258</td><td>Enneking Staging System</td></tr><tr><td>C85407</td><td>Evans Staging System</td></tr><tr><td>C99408</td><td>FIGO Staging System and Modified World Health Organization [WHO] Prognostic Scoring System for Gestational Trophoblastic Neoplasms</td></tr><tr><td>C115132</td><td>Hepatocellular Carcinoma by BCLC Stage</td></tr><tr><td>C111073</td><td>International Germ Cell Consensus Risk Classification</td></tr><tr><td>C141168</td><td>Lugano Classification Hodgkin Lymphoma by AJCC v8 Stage</td></tr><tr><td>C141189</td><td>Lugano Classification Adult Hodgkin Lymphoma by AJCC v8 Stage</td></tr><tr><td>C141178</td><td>Lugano Classification Childhood Hodgkin Lymphoma by AJCC v8 Stage</td></tr><tr><td>C141158</td><td>Lugano Classification Adult Non-Hodgkin Lymphoma by AJCC v8 Stage</td></tr><tr><td>C186520</td><td>Medulloblastoma Staging System</td></tr><tr><td>C198826</td><td>Modified Chang Staging System for Medulloblastoma</td></tr><tr><td>C177308</td><td>Non-Seminomatous Germ Cell Tumor International Germ Cell Consensus Risk Classification</td></tr><tr><td>C186567</td><td>Pineoblastoma Staging System</td></tr><tr><td>C123333</td><td>Reese-Ellsworth Staging System</td></tr><tr><td>C177309</td><td>Seminoma International Germ Cell Tumor Consensus Risk Classification</td></tr><tr><td>C112006</td><td>Thymoma by Masaoka-Koga Stage</td></tr><tr><td>C18008</td><td>TNM Ovary Neoplasm Staging</td></tr><tr><td>C141685</td><td>Veterans Administration Lung Study Group Clinical Classification</td></tr><tr><td>C18214</td><td>Whitmore-Jewett Staging System</td></tr></table></li></ul></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-onko-weitere-klassifikationen</b></p><a name=\"en-mii-vs-onko-weitere-klassifikationen\"> </a><a name=\"en-hcmii-vs-onko-weitere-klassifikationen\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/444256004\">444256004</a></td><td>American Joint Commission on Cancer, Cancer Staging Manual, 6th edition neoplasm staging system (tumor staging)</td></tr><tr><td><a href=\"http://snomed.info/id/443830009\">443830009</a></td><td>American Joint Commission on Cancer, Cancer Staging Manual, 7th edition neoplasm staging system (tumor staging)</td></tr><tr><td><a href=\"http://snomed.info/id/897275008\">897275008</a></td><td>American Joint Commission on Cancer, Cancer Staging Manual, 8th edition tumor staging system</td></tr><tr><td><a href=\"http://snomed.info/id/254381008\">254381008</a></td><td>American Urological Association staging system for prostate cancer</td></tr><tr><td><a href=\"http://snomed.info/id/254373007\">254373007</a></td><td>Ann Arbor Hodgkin's disease tumor staging system</td></tr><tr><td><a href=\"http://snomed.info/id/254372002\">254372002</a></td><td>Ann Arbor lymphoma staging system</td></tr><tr><td><a href=\"http://snomed.info/id/254374001\">254374001</a></td><td>Ann Arbor non-Hodgkin's lymphoma tumour staging system</td></tr><tr><td><a href=\"http://snomed.info/id/254361007\">254361007</a></td><td>Astler-Coller staging system</td></tr><tr><td><a href=\"http://snomed.info/id/1149164009\">1149164009</a></td><td>ACPS (Australian Clinico-pathological Staging) System for colorectal cancer</td></tr><tr><td><a href=\"http://snomed.info/id/1149099005\">1149099005</a></td><td>Binet staging classification for chronic lymphocytic leukaemia</td></tr><tr><td><a href=\"http://snomed.info/id/385346008\">385346008</a></td><td>Breslow system for melanoma staging (tumor staging)</td></tr><tr><td><a href=\"http://snomed.info/id/385345007\">385345007</a></td><td>Clark system for melanoma staging (tumor staging)</td></tr><tr><td><a href=\"http://snomed.info/id/254375000\">254375000</a></td><td>Cotswolds Hodgkin's disease tumor staging system</td></tr><tr><td><a href=\"http://snomed.info/id/254360008\">254360008</a></td><td>Dukes staging system</td></tr><tr><td><a href=\"http://snomed.info/id/254379006\">254379006</a></td><td>Indiana University testicular tumour staging system</td></tr><tr><td><a href=\"http://snomed.info/id/254386003\">254386003</a></td><td>Federation Internationale de gynecologie et d'obstetrique staging of ovarian malignancy</td></tr><tr><td><a href=\"http://snomed.info/id/106250008\">106250008</a></td><td>FIGO staging of cervical carcinoma</td></tr><tr><td><a href=\"http://snomed.info/id/106244003\">106244003</a></td><td>FIGO staging of endometrial carcinoma</td></tr><tr><td><a href=\"http://snomed.info/id/106247005\">106247005</a></td><td>FIGO staging for epithelial tumor of ovary</td></tr><tr><td><a href=\"http://snomed.info/id/106245002\">106245002</a></td><td>FIGO staging of vulvar carcinoma</td></tr><tr><td><a href=\"http://snomed.info/id/106246001\">106246001</a></td><td>FIGO staging of vulvar melanoma</td></tr><tr><td><a href=\"http://snomed.info/id/254383006\">254383006</a></td><td>Federation internationale de gynecologie et d'obstetrique staging of gynaecological malignancy</td></tr><tr><td><a href=\"http://snomed.info/id/254385004\">254385004</a></td><td>Federation internationale de gynecologie et d'obstetrique staging of corpus uteri malignancy</td></tr><tr><td><a href=\"http://snomed.info/id/254384000\">254384000</a></td><td>FIGO Vaginal tumor staging</td></tr><tr><td><a href=\"http://snomed.info/id/1149162008\">1149162008</a></td><td>International Staging System for multiple myeloma (staging scale)</td></tr><tr><td><a href=\"http://snomed.info/id/254380009\">254380009</a></td><td>Marshall Modification of Jewett-Strong staging system for urinary bladder tumor</td></tr><tr><td><a href=\"http://snomed.info/id/254362000\">254362000</a></td><td>Modified Astler-Coller staging system</td></tr><tr><td><a href=\"http://snomed.info/id/385359000\">385359000</a></td><td>Modified Dukes staging system (tumor staging)</td></tr><tr><td><a href=\"http://snomed.info/id/1149131009\">1149131009</a></td><td>Rai staging system for chronic lymphocytic leukaemia</td></tr><tr><td><a href=\"http://snomed.info/id/1149163003\">1149163003</a></td><td>Revised International Staging System for multiple myeloma (staging scale)</td></tr><tr><td><a href=\"http://snomed.info/id/254366002\">254366002</a></td><td>Stannard staging system for retinoblastoma</td></tr><tr><td><a href=\"http://snomed.info/id/254382001\">254382001</a></td><td>Trophoblastic malignancy staging system</td></tr><tr><td><a href=\"http://snomed.info/id/254378003\">254378003</a></td><td>Walter Reed testicular tumor staging system</td></tr><tr><td><a href=\"http://snomed.info/id/1287648008\">1287648008</a></td><td>Masaoka-Koga stage classification for thymic malignancies (tumor staging)</td></tr><tr><td><a href=\"http://snomed.info/id/1287643004\">1287643004</a></td><td>INRG (International Neuroblastoma Risk Group) staging system</td></tr><tr><td><a href=\"http://snomed.info/id/1287646007\">1287646007</a></td><td>International Germ Cell Consensus Classification (tumor staging)</td></tr><tr><td><a href=\"http://snomed.info/id/716567001\">716567001</a></td><td>International Prognostic Index (assessment scale)</td></tr><tr><td><a href=\"http://snomed.info/id/708736003\">708736003</a></td><td>Follicular Lymphoma International Prognostic Index (assessment scale)</td></tr><tr><td><a href=\"http://snomed.info/id/763236005\">763236005</a></td><td>Mantle Cell Lymphoma International Prognostic Index (assessment scale)</td></tr></table></li><li>Include these codes as defined in <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-nciThesaurus.html\"><code>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>C188404</td><td>Union for International Cancer Control Stage</td></tr><tr><td>C186527</td><td>Atypical Teratoid/Rhabdoid Tumor Staging System</td></tr><tr><td>C141206</td><td>Chronic Lymphocytic Leukemia- Modified Rai Staging System</td></tr><tr><td>C62575</td><td>Collaborative Staging</td></tr><tr><td>C128932</td><td>Derkay Staging System</td></tr><tr><td>C186536</td><td>Embryonal Tumor with Multilayered Rosettes Staging System</td></tr><tr><td>C140258</td><td>Enneking Staging System</td></tr><tr><td>C85407</td><td>Evans Staging System</td></tr><tr><td>C99408</td><td>FIGO Staging System and Modified World Health Organization [WHO] Prognostic Scoring System for Gestational Trophoblastic Neoplasms</td></tr><tr><td>C115132</td><td>Hepatocellular Carcinoma by BCLC Stage</td></tr><tr><td>C111073</td><td>International Germ Cell Consensus Risk Classification</td></tr><tr><td>C141168</td><td>Lugano Classification Hodgkin Lymphoma by AJCC v8 Stage</td></tr><tr><td>C141189</td><td>Lugano Classification Adult Hodgkin Lymphoma by AJCC v8 Stage</td></tr><tr><td>C141178</td><td>Lugano Classification Childhood Hodgkin Lymphoma by AJCC v8 Stage</td></tr><tr><td>C141158</td><td>Lugano Classification Adult Non-Hodgkin Lymphoma by AJCC v8 Stage</td></tr><tr><td>C186520</td><td>Medulloblastoma Staging System</td></tr><tr><td>C198826</td><td>Modified Chang Staging System for Medulloblastoma</td></tr><tr><td>C177308</td><td>Non-Seminomatous Germ Cell Tumor International Germ Cell Consensus Risk Classification</td></tr><tr><td>C186567</td><td>Pineoblastoma Staging System</td></tr><tr><td>C123333</td><td>Reese-Ellsworth Staging System</td></tr><tr><td>C177309</td><td>Seminoma International Germ Cell Tumor Consensus Risk Classification</td></tr><tr><td>C112006</td><td>Thymoma by Masaoka-Koga Stage</td></tr><tr><td>C18008</td><td>TNM Ovary Neoplasm Staging</td></tr><tr><td>C141685</td><td>Veterans Administration Lung Study Group Clinical Classification</td></tr><tr><td>C18214</td><td>Whitmore-Jewett Staging System</td></tr></table></li></ul></div></div>"
+  ] ;
+  fhir:ValueSet.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-weitere-klassifikationen"] ;
+  fhir:ValueSet.version [ fhir:value "2026.0.3"] ;
+  fhir:ValueSet.name [ fhir:value "MII_VS_Onko_Weitere_Klassifikationen"] ;
+  fhir:ValueSet.title [ fhir:value "MII Value Set Onkologie - Weitere Klassifikationen"] ;
+  fhir:ValueSet.status [ fhir:value "active"] ;
+  fhir:ValueSet.experimental [ fhir:value "true"^^xsd:boolean] ;
+  fhir:ValueSet.date [ fhir:value "2026-07-02T12:18:38+00:00"^^xsd:dateTime] ;
+  fhir:ValueSet.publisher [ fhir:value "Medizininformatik Initiative"] ;
+  fhir:ValueSet.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Medizininformatik Initiative" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.medizininformatik-initiative.de/" ]
+     ]
+  ] ;
+  fhir:ValueSet.description [ fhir:value "Comprehensive collection of cancer staging systems and classification schemes used in oncology beyond TNM classification. This includes AJCC, FIGO, hematological classifications, and specialized organ-specific systems. Based on mCODE STU4 and German oBDS catalogue. Covers entity-specific classifications (e.g., FIGO for gynecological tumors), hematological classifications, and WHO classifications for CNS tumors."] ;
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "444256004" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "American Joint Commission on Cancer, Cancer Staging Manual, 6th edition neoplasm staging system (tumor staging)" ]
+       ], [
+         fhir:index 1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "443830009" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "American Joint Commission on Cancer, Cancer Staging Manual, 7th edition neoplasm staging system (tumor staging)" ]
+       ], [
+         fhir:index 2 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "897275008" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition tumor staging system" ]
+       ], [
+         fhir:index 3 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "254381008" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "American Urological Association staging system for prostate cancer" ]
+       ], [
+         fhir:index 4 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "254373007" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ann Arbor Hodgkin's disease tumor staging system" ]
+       ], [
+         fhir:index 5 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "254372002" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ann Arbor lymphoma staging system" ]
+       ], [
+         fhir:index 6 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "254374001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ann Arbor non-Hodgkin's lymphoma tumour staging system" ]
+       ], [
+         fhir:index 7 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "254361007" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Astler-Coller staging system" ]
+       ], [
+         fhir:index 8 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1149164009" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "ACPS (Australian Clinico-pathological Staging) System for colorectal cancer" ]
+       ], [
+         fhir:index 9 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1149099005" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Binet staging classification for chronic lymphocytic leukaemia" ]
+       ], [
+         fhir:index 10 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "385346008" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Breslow system for melanoma staging (tumor staging)" ]
+       ], [
+         fhir:index 11 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "385345007" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Clark system for melanoma staging (tumor staging)" ]
+       ], [
+         fhir:index 12 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "254375000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cotswolds Hodgkin's disease tumor staging system" ]
+       ], [
+         fhir:index 13 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "254360008" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dukes staging system" ]
+       ], [
+         fhir:index 14 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "254379006" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Indiana University testicular tumour staging system" ]
+       ], [
+         fhir:index 15 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "254386003" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Federation Internationale de gynecologie et d'obstetrique staging of ovarian malignancy" ]
+       ], [
+         fhir:index 16 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "106250008" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "FIGO staging of cervical carcinoma" ]
+       ], [
+         fhir:index 17 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "106244003" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "FIGO staging of endometrial carcinoma" ]
+       ], [
+         fhir:index 18 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "106247005" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "FIGO staging for epithelial tumor of ovary" ]
+       ], [
+         fhir:index 19 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "106245002" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "FIGO staging of vulvar carcinoma" ]
+       ], [
+         fhir:index 20 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "106246001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "FIGO staging of vulvar melanoma" ]
+       ], [
+         fhir:index 21 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "254383006" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Federation internationale de gynecologie et d'obstetrique staging of gynaecological malignancy" ]
+       ], [
+         fhir:index 22 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "254385004" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Federation internationale de gynecologie et d'obstetrique staging of corpus uteri malignancy" ]
+       ], [
+         fhir:index 23 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "254384000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "FIGO Vaginal tumor staging" ]
+       ], [
+         fhir:index 24 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1149162008" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "International Staging System for multiple myeloma (staging scale)" ]
+       ], [
+         fhir:index 25 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "254380009" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Marshall Modification of Jewett-Strong staging system for urinary bladder tumor" ]
+       ], [
+         fhir:index 26 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "254362000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Modified Astler-Coller staging system" ]
+       ], [
+         fhir:index 27 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "385359000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Modified Dukes staging system (tumor staging)" ]
+       ], [
+         fhir:index 28 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1149131009" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Rai staging system for chronic lymphocytic leukaemia" ]
+       ], [
+         fhir:index 29 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1149163003" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Revised International Staging System for multiple myeloma (staging scale)" ]
+       ], [
+         fhir:index 30 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "254366002" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stannard staging system for retinoblastoma" ]
+       ], [
+         fhir:index 31 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "254382001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Trophoblastic malignancy staging system" ]
+       ], [
+         fhir:index 32 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "254378003" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Walter Reed testicular tumor staging system" ]
+       ], [
+         fhir:index 33 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1287648008" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Masaoka-Koga stage classification for thymic malignancies (tumor staging)" ]
+       ], [
+         fhir:index 34 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1287643004" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "INRG (International Neuroblastoma Risk Group) staging system" ]
+       ], [
+         fhir:index 35 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1287646007" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "International Germ Cell Consensus Classification (tumor staging)" ]
+       ], [
+         fhir:index 36 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "716567001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "International Prognostic Index (assessment scale)" ]
+       ], [
+         fhir:index 37 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "708736003" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Follicular Lymphoma International Prognostic Index (assessment scale)" ]
+       ], [
+         fhir:index 38 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "763236005" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mantle Cell Lymphoma International Prognostic Index (assessment scale)" ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl" ] ;
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C188404" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Union for International Cancer Control Stage" ]
+       ], [
+         fhir:index 1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C186527" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Atypical Teratoid/Rhabdoid Tumor Staging System" ]
+       ], [
+         fhir:index 2 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C141206" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Chronic Lymphocytic Leukemia- Modified Rai Staging System" ]
+       ], [
+         fhir:index 3 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C62575" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Collaborative Staging" ]
+       ], [
+         fhir:index 4 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C128932" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Derkay Staging System" ]
+       ], [
+         fhir:index 5 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C186536" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Embryonal Tumor with Multilayered Rosettes Staging System" ]
+       ], [
+         fhir:index 6 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C140258" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Enneking Staging System" ]
+       ], [
+         fhir:index 7 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C85407" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Evans Staging System" ]
+       ], [
+         fhir:index 8 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C99408" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "FIGO Staging System and Modified World Health Organization [WHO] Prognostic Scoring System for Gestational Trophoblastic Neoplasms" ]
+       ], [
+         fhir:index 9 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C115132" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hepatocellular Carcinoma by BCLC Stage" ]
+       ], [
+         fhir:index 10 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C111073" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "International Germ Cell Consensus Risk Classification" ]
+       ], [
+         fhir:index 11 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C141168" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lugano Classification Hodgkin Lymphoma by AJCC v8 Stage" ]
+       ], [
+         fhir:index 12 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C141189" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lugano Classification Adult Hodgkin Lymphoma by AJCC v8 Stage" ]
+       ], [
+         fhir:index 13 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C141178" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lugano Classification Childhood Hodgkin Lymphoma by AJCC v8 Stage" ]
+       ], [
+         fhir:index 14 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C141158" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lugano Classification Adult Non-Hodgkin Lymphoma by AJCC v8 Stage" ]
+       ], [
+         fhir:index 15 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C186520" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Medulloblastoma Staging System" ]
+       ], [
+         fhir:index 16 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C198826" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Modified Chang Staging System for Medulloblastoma" ]
+       ], [
+         fhir:index 17 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C177308" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Non-Seminomatous Germ Cell Tumor International Germ Cell Consensus Risk Classification" ]
+       ], [
+         fhir:index 18 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C186567" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pineoblastoma Staging System" ]
+       ], [
+         fhir:index 19 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C123333" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Reese-Ellsworth Staging System" ]
+       ], [
+         fhir:index 20 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C177309" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Seminoma International Germ Cell Tumor Consensus Risk Classification" ]
+       ], [
+         fhir:index 21 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C112006" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Thymoma by Masaoka-Koga Stage" ]
+       ], [
+         fhir:index 22 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C18008" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "TNM Ovary Neoplasm Staging" ]
+       ], [
+         fhir:index 23 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C141685" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Veterans Administration Lung Study Group Clinical Classification" ]
+       ], [
+         fhir:index 24 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C18214" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Whitmore-Jewett Staging System" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-weitere-klassifikationen.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

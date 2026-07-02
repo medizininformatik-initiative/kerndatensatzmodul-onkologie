@@ -1,0 +1,90 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-clavien-dindo> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-vs-onko-prostata-clavien-dindo"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/shareablevalueset" ;
+       fhir:index -1 ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablevalueset>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-onko-prostata-clavien-dindo</b></p><a name=\"mii-vs-onko-prostata-clavien-dindo\"> </a><a name=\"hcmii-vs-onko-prostata-clavien-dindo\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablevalueset.html\">Shareable ValueSet</a></p></div><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/1367519000\">1367519000</a></td><td>Clavien-Dindo classification grade I (finding)</td></tr><tr><td><a href=\"http://snomed.info/id/1367520006\">1367520006</a></td><td>Clavien-Dindo classification grade II (finding)</td></tr><tr><td><a href=\"http://snomed.info/id/1367521005\">1367521005</a></td><td>Clavien-Dindo classification grade III (finding)</td></tr><tr><td><a href=\"http://snomed.info/id/1367522003\">1367522003</a></td><td>Clavien-Dindo classification grade IIIa (finding)</td></tr><tr><td><a href=\"http://snomed.info/id/1367523008\">1367523008</a></td><td>Clavien-Dindo classification grade IIIb (finding)</td></tr><tr><td><a href=\"http://snomed.info/id/1367524002\">1367524002</a></td><td>Clavien-Dindo classification grade IV (finding)</td></tr><tr><td><a href=\"http://snomed.info/id/1367525001\">1367525001</a></td><td>Clavien-Dindo classification grade IVa (finding)</td></tr><tr><td><a href=\"http://snomed.info/id/1367526000\">1367526000</a></td><td>Clavien-Dindo classification grade IVb (finding)</td></tr><tr><td><a href=\"http://snomed.info/id/1367527009\">1367527009</a></td><td>Clavien-Dindo classification grade V (finding)</td></tr></table></li></ul></div>"
+  ] ;
+  fhir:ValueSet.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-clavien-dindo"] ;
+  fhir:ValueSet.version [ fhir:value "2026.0.3"] ;
+  fhir:ValueSet.name [ fhir:value "MII_VS_Onko_Prostata_Clavien_Dindo"] ;
+  fhir:ValueSet.status [ fhir:value "active"] ;
+  fhir:ValueSet.experimental [ fhir:value "true"^^xsd:boolean] ;
+  fhir:ValueSet.date [ fhir:value "2026-07-02T12:18:38+00:00"^^xsd:dateTime] ;
+  fhir:ValueSet.publisher [ fhir:value "Medizininformatik Initiative"] ;
+  fhir:ValueSet.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "Medizininformatik Initiative" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.medizininformatik-initiative.de/" ]
+     ]
+  ] ;
+  fhir:ValueSet.description [ fhir:value "Value Set für Gleason Score"] ;
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index -1 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:ValueSet.compose.include.concept [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1367519000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Clavien-Dindo classification grade I (finding)" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1367520006" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Clavien-Dindo classification grade II (finding)" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1367521005" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Clavien-Dindo classification grade III (finding)" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1367522003" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Clavien-Dindo classification grade IIIa (finding)" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1367523008" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Clavien-Dindo classification grade IIIb (finding)" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1367524002" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Clavien-Dindo classification grade IV (finding)" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1367525001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Clavien-Dindo classification grade IVa (finding)" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1367526000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Clavien-Dindo classification grade IVb (finding)" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1367527009" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Clavien-Dindo classification grade V (finding)" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-clavien-dindo.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

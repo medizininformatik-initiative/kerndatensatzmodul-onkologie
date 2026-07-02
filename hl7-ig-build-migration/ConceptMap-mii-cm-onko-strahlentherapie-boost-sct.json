@@ -1,0 +1,76 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "mii-cm-onko-strahlentherapie-boost-sct",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap mii-cm-onko-strahlentherapie-boost-sct</b></p><a name=\"mii-cm-onko-strahlentherapie-boost-sct\"> </a><a name=\"hcmii-cm-onko-strahlentherapie-boost-sct\"> </a><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <a href=\"CodeSystem-mii-cs-onko-strahlentherapie-boost.html\">MII CS Onkologie Strahlentherapie Boost</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>J (ja, mit Boost o. n. A.)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>445232009 (Boost radiation therapy (procedure))</td></tr><tr><td>SIB (simultan integrierter Boost)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>445232009 (Boost radiation therapy (procedure))</td></tr><tr><td>SEQ (sequentieller Boost)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>445232009 (Boost radiation therapy (procedure))</td></tr><tr><td>KON (konkomitanter Boost)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>445232009 (Boost radiation therapy (procedure))</td></tr><tr><td>N (nein, ohne Boost)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>373067005 (No (qualifier value))</td></tr></table></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap mii-cm-onko-strahlentherapie-boost-sct</b></p><a name=\"en-mii-cm-onko-strahlentherapie-boost-sct\"> </a><a name=\"en-hcmii-cm-onko-strahlentherapie-boost-sct\"> </a><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <a href=\"CodeSystem-mii-cs-onko-strahlentherapie-boost.html\">MII CS Onkologie Strahlentherapie Boost</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>J (ja, mit Boost o. n. A.)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>445232009 (Boost radiation therapy (procedure))</td></tr><tr><td>SIB (simultan integrierter Boost)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>445232009 (Boost radiation therapy (procedure))</td></tr><tr><td>SEQ (sequentieller Boost)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>445232009 (Boost radiation therapy (procedure))</td></tr><tr><td>KON (konkomitanter Boost)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>445232009 (Boost radiation therapy (procedure))</td></tr><tr><td>N (nein, ohne Boost)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>373067005 (No (qualifier value))</td></tr></table></div></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-strahlentherapie-boost-sct",
+  "version" : "2026.0.3",
+  "name" : "MII CM Onko Strahlentherapie Boost SCT Mapping",
+  "title" : "MII CM Onko Strahlentherapie Boost SNOMED Mapping",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2024-04-11",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Mapping Strahlentherapie Boost Codes zu SNOMED-CT",
+  "purpose" : "Technical mapping to transform oBDS-Data into SNOMED",
+  "sourceUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
+  "targetUri" : "http://snomed.info/sct/900000000000207008/version/20240401",
+  "group" : [{
+    "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost",
+    "target" : "http://snomed.info/sct/900000000000207008/version/20240401",
+    "element" : [{
+      "code" : "J",
+      "display" : "ja, mit Boost o. n. A.",
+      "target" : [{
+        "code" : "445232009",
+        "display" : "Boost radiation therapy (procedure)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "SIB",
+      "display" : "simultan integrierter Boost",
+      "target" : [{
+        "code" : "445232009",
+        "display" : "Boost radiation therapy (procedure)",
+        "equivalence" : "wider"
+      }]
+    },
+    {
+      "code" : "SEQ",
+      "display" : "sequentieller Boost",
+      "target" : [{
+        "code" : "445232009",
+        "display" : "Boost radiation therapy (procedure)",
+        "equivalence" : "wider"
+      }]
+    },
+    {
+      "code" : "KON",
+      "display" : "konkomitanter Boost",
+      "target" : [{
+        "code" : "445232009",
+        "display" : "Boost radiation therapy (procedure)",
+        "equivalence" : "wider"
+      }]
+    },
+    {
+      "code" : "N",
+      "display" : "nein, ohne Boost",
+      "target" : [{
+        "code" : "373067005",
+        "display" : "No (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

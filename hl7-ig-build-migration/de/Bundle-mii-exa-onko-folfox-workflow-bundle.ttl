@@ -1,0 +1,1298 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Bundle/mii-exa-onko-folfox-workflow-bundle> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-folfox-workflow-bundle"] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:Bundle.type [ fhir:value "collection"] ;
+  fhir:Bundle.timestamp [ fhir:value "2024-03-15T10:00:00Z"^^xsd:dateTime] ;
+  fhir:Bundle.entry [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-folfox-patient" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-folfox-patient>
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-colorectal-cancer-diagnosis" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-colorectal-cancer-diagnosis>
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-colorectal-tnm-t" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-colorectal-tnm-t>
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-colorectal-tnm-n" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-colorectal-tnm-n>
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-colorectal-tnm-m" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-colorectal-tnm-m>
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-colorectal-tnm" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-colorectal-tnm>
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CarePlan/mii-exa-onko-tumorkonferenz-folfox" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CarePlan/mii-exa-onko-tumorkonferenz-folfox>
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/RequestGroup/mii-exa-onko-folfox-requestgroup" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/RequestGroup/mii-exa-onko-folfox-requestgroup>
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/MedicationRequest/mii-exa-onko-folfox-5fu-request" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/MedicationRequest/mii-exa-onko-folfox-5fu-request>
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/MedicationRequest/mii-exa-onko-folfox-leucovorin-request" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/MedicationRequest/mii-exa-onko-folfox-leucovorin-request>
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/MedicationRequest/mii-exa-onko-folfox-oxaliplatin-request" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/MedicationRequest/mii-exa-onko-folfox-oxaliplatin-request>
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-sigmoid-resection" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-sigmoid-resection>
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-sigmoid-resection-part1" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-sigmoid-resection-part1>
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-sigmoid-resection-part2" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-sigmoid-resection-part2>
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-sigmoid-resection-part3" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-sigmoid-resection-part3>
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-folfox-procedure" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-folfox-procedure>
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/MedicationStatement/mii-exa-onko-folfox-5fu-statement" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/MedicationStatement/mii-exa-onko-folfox-5fu-statement>
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/MedicationStatement/mii-exa-onko-folfox-leucovorin-statement" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/MedicationStatement/mii-exa-onko-folfox-leucovorin-statement>
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/MedicationStatement/mii-exa-onko-folfox-oxaliplatin-statement" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/MedicationStatement/mii-exa-onko-folfox-oxaliplatin-statement>
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-folfox-verlauf-6months" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-folfox-verlauf-6months>
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-folfox-patient> a fhir:Patient ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-folfox-patient"] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Patient_mii-exa-onko-folfox-patient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient mii-exa-onko-folfox-patient</b></p><a name=\"mii-exa-onko-folfox-patient\"> </a><a name=\"hcmii-exa-onko-folfox-patient\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</p><hr/></div>"
+  ] ;
+  fhir:Patient.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/sid/patienten" ] ;
+     fhir:Identifier.value [ fhir:value "FOLFOX-2024-001" ]
+  ] ;
+  fhir:Patient.name [
+     fhir:index -1 ;
+     fhir:HumanName.family [ fhir:value "Schmidt" ] ;
+     fhir:HumanName.given [
+       fhir:value "Hans" ;
+       fhir:index -1
+     ]
+  ] ;
+  fhir:Patient.gender [ fhir:value "male"] ;
+  fhir:Patient.birthDate [ fhir:value "1959-03-15"^^xsd:date] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-colorectal-cancer-diagnosis> a fhir:Condition ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-colorectal-cancer-diagnosis"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Condition_mii-exa-onko-colorectal-cancer-diagnosis\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition mii-exa-onko-colorectal-cancer-diagnosis</b></p><a name=\"mii-exa-onko-colorectal-cancer-diagnosis\"> </a><a name=\"hcmii-exa-onko-colorectal-cancer-diagnosis\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-diagnose-primaertumor.html\">MII PR Onkologie Diagnose Primärtumor</a></p></div><p><b>Condition Asserted Date</b>: 2024-01-15</p><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category encounter-diagnosis}\">Encounter Diagnosis</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm C18.7}\">Bösartige Neubildung: Colon sigmoideum</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p><p><b>encounter</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Encounter/example-diagnosis\">Encounter/example-diagnosis</a></p><p><b>onset</b>: 2024-01-15</p><p><b>recordedDate</b>: 2024-01-15</p><p><b>note</b>: </p><blockquote><div><p>Adenokarzinom des Colon sigmoideum, Stadium III (T3N1M0)</p>\n</div></blockquote></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/condition-assertedDate" ] ;
+     fhir:Extension.valueDateTime [ fhir:value "2024-01-15"^^xsd:date ]
+  ] ;
+  fhir:Condition.clinicalStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-clinical" ] ;
+       fhir:Coding.code [ fhir:value "active" ]
+     ]
+  ] ;
+  fhir:Condition.verificationStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-ver-status" ] ;
+       fhir:Coding.code [ fhir:value "confirmed" ]
+     ]
+  ] ;
+  fhir:Condition.category [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-category" ] ;
+       fhir:Coding.code [ fhir:value "encounter-diagnosis" ]
+     ]
+  ] ;
+  fhir:Condition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/icd-10-gm" ] ;
+       fhir:Coding.version [ fhir:value "2024" ] ;
+       fhir:Coding.code [ fhir:value "C18.7" ] ;
+       fhir:Coding.display [ fhir:value "Bösartige Neubildung: Colon sigmoideum" ]
+     ]
+  ] ;
+  fhir:Condition.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-folfox-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-folfox-patient" ]
+  ] ;
+  fhir:Condition.encounter [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/example-diagnosis> ;
+     fhir:Reference.reference [ fhir:value "Encounter/example-diagnosis" ]
+  ] ;
+  fhir:Condition.onsetDateTime [ fhir:value "2024-01-15"^^xsd:date] ;
+  fhir:Condition.recordedDate [ fhir:value "2024-01-15"^^xsd:date] ;
+  fhir:Condition.note [
+     fhir:index -1 ;
+     fhir:Annotation.text [ fhir:value "Adenokarzinom des Colon sigmoideum, Stadium III (T3N1M0)" ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-colorectal-tnm-t> a fhir:Observation ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-colorectal-tnm-t"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie|2026.0.3" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie|2026.0.3>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Observation_mii-exa-onko-colorectal-tnm-t\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-colorectal-tnm-t</b></p><a name=\"mii-exa-onko-colorectal-tnm-t\"> </a><a name=\"hcmii-exa-onko-colorectal-tnm-t\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-tnm-t-kategorie.html\">MII PR Onkologie TNM T-Kategorie</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 384625004}\">pT category (observable entity)</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p><p><b>focus</b>: <a href=\"Condition-mii-exa-onko-colorectal-cancer-diagnosis.html\">Condition Bösartige Neubildung: Colon sigmoideum</a></p><p><b>effective</b>: 2024-02-20</p><p><b>value</b>: <span title=\"Codes:{https://www.uicc.org/resources/tnm T3}\">T3</span></p><p><b>method</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version 8}\">8. Auflage</span></p></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.code [
+     fhir:Element.extension [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix" ] ;
+       fhir:Extension.valueCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index -1 ;
+           fhir:Coding.system [ fhir:value "https://www.uicc.org/resources/tnm" ] ;
+           fhir:Coding.code [ fhir:value "p" ]
+         ]
+       ]
+     ] ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:384625004 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "384625004" ] ;
+       fhir:Coding.display [ fhir:value "pT category (observable entity)" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-folfox-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-folfox-patient" ]
+  ] ;
+  fhir:Observation.focus [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-colorectal-cancer-diagnosis> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-colorectal-cancer-diagnosis" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2024-02-20"^^xsd:date] ;
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://www.uicc.org/resources/tnm" ] ;
+       fhir:Coding.code [ fhir:value "T3" ]
+     ]
+  ] ;
+  fhir:Observation.method [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version" ] ;
+       fhir:Coding.code [ fhir:value "8" ]
+     ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-colorectal-tnm-n> a fhir:Observation ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-colorectal-tnm-n"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie|2026.0.3" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie|2026.0.3>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Observation_mii-exa-onko-colorectal-tnm-n\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-colorectal-tnm-n</b></p><a name=\"mii-exa-onko-colorectal-tnm-n\"> </a><a name=\"hcmii-exa-onko-colorectal-tnm-n\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-tnm-n-kategorie.html\">MII PR Onkologie TNM N-Kategorie</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 371494008}\">pN category (observable entity)</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p><p><b>focus</b>: <a href=\"Condition-mii-exa-onko-colorectal-cancer-diagnosis.html\">Condition Bösartige Neubildung: Colon sigmoideum</a></p><p><b>effective</b>: 2024-02-20</p><p><b>value</b>: <span title=\"Codes:{https://www.uicc.org/resources/tnm N1}\">N1</span></p><p><b>method</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version 8}\">8. Auflage</span></p></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.code [
+     fhir:Element.extension [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix" ] ;
+       fhir:Extension.valueCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index -1 ;
+           fhir:Coding.system [ fhir:value "https://www.uicc.org/resources/tnm" ] ;
+           fhir:Coding.code [ fhir:value "p" ]
+         ]
+       ]
+     ] ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:371494008 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "371494008" ] ;
+       fhir:Coding.display [ fhir:value "pN category (observable entity)" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-folfox-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-folfox-patient" ]
+  ] ;
+  fhir:Observation.focus [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-colorectal-cancer-diagnosis> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-colorectal-cancer-diagnosis" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2024-02-20"^^xsd:date] ;
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://www.uicc.org/resources/tnm" ] ;
+       fhir:Coding.code [ fhir:value "N1" ]
+     ]
+  ] ;
+  fhir:Observation.method [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version" ] ;
+       fhir:Coding.code [ fhir:value "8" ]
+     ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-colorectal-tnm-m> a fhir:Observation ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-colorectal-tnm-m"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie|2026.0.3" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie|2026.0.3>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Observation_mii-exa-onko-colorectal-tnm-m\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-colorectal-tnm-m</b></p><a name=\"mii-exa-onko-colorectal-tnm-m\"> </a><a name=\"hcmii-exa-onko-colorectal-tnm-m\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-tnm-m-kategorie.html\">MII PR Onkologie TNM M-Kategorie</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 399387003}\">cM category (observable entity)</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p><p><b>focus</b>: <a href=\"Condition-mii-exa-onko-colorectal-cancer-diagnosis.html\">Condition Bösartige Neubildung: Colon sigmoideum</a></p><p><b>effective</b>: 2024-02-20</p><p><b>value</b>: <span title=\"Codes:{https://www.uicc.org/resources/tnm M0}\">M0</span></p><p><b>method</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version 8}\">8. Auflage</span></p></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.code [
+     fhir:Element.extension [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix" ] ;
+       fhir:Extension.valueCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index -1 ;
+           fhir:Coding.system [ fhir:value "https://www.uicc.org/resources/tnm" ] ;
+           fhir:Coding.code [ fhir:value "c" ]
+         ]
+       ]
+     ] ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:399387003 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "399387003" ] ;
+       fhir:Coding.display [ fhir:value "cM category (observable entity)" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-folfox-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-folfox-patient" ]
+  ] ;
+  fhir:Observation.focus [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-colorectal-cancer-diagnosis> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-colorectal-cancer-diagnosis" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2024-02-20"^^xsd:date] ;
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://www.uicc.org/resources/tnm" ] ;
+       fhir:Coding.code [ fhir:value "M0" ]
+     ]
+  ] ;
+  fhir:Observation.method [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version" ] ;
+       fhir:Coding.code [ fhir:value "8" ]
+     ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-colorectal-tnm> a fhir:Observation ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-colorectal-tnm"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Observation_mii-exa-onko-colorectal-tnm\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-colorectal-tnm</b></p><a name=\"mii-exa-onko-colorectal-tnm\"> </a><a name=\"hcmii-exa-onko-colorectal-tnm\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-tnm-klassifikation.html\">MII PR Onkologie TNM-Klassifikation</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 399588009}\">Pathologic TNM stage grouping</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p><p><b>focus</b>: <a href=\"Condition-mii-exa-onko-colorectal-cancer-diagnosis.html\">Condition Bösartige Neubildung: Colon sigmoideum</a></p><p><b>effective</b>: 2024-02-20</p><p><b>value</b>: <span title=\"Codes:{https://www.uicc.org/resources/tnm IIIB}\">Stadium IIIB</span></p><p><b>method</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version 8}\">8. Auflage</span></p><p><b>hasMember</b>: </p><ul><li><a href=\"Observation-mii-exa-onko-colorectal-tnm-t.html\">Observation pT category (observable entity)</a></li><li><a href=\"Observation-mii-exa-onko-colorectal-tnm-n.html\">Observation pN category (observable entity)</a></li><li><a href=\"Observation-mii-exa-onko-colorectal-tnm-m.html\">Observation cM category (observable entity)</a></li></ul></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:399588009 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "399588009" ] ;
+       fhir:Coding.display [ fhir:value "Pathologic TNM stage grouping" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-folfox-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-folfox-patient" ]
+  ] ;
+  fhir:Observation.focus [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-colorectal-cancer-diagnosis> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-colorectal-cancer-diagnosis" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2024-02-20"^^xsd:date] ;
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://www.uicc.org/resources/tnm" ] ;
+       fhir:Coding.code [ fhir:value "IIIB" ]
+     ]
+  ] ;
+  fhir:Observation.method [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version" ] ;
+       fhir:Coding.code [ fhir:value "8" ]
+     ]
+  ] ;
+  fhir:Observation.hasMember [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-colorectal-tnm-t> ;
+     fhir:Reference.reference [ fhir:value "Observation/mii-exa-onko-colorectal-tnm-t" ]
+  ], [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-colorectal-tnm-n> ;
+     fhir:Reference.reference [ fhir:value "Observation/mii-exa-onko-colorectal-tnm-n" ]
+  ], [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-colorectal-tnm-m> ;
+     fhir:Reference.reference [ fhir:value "Observation/mii-exa-onko-colorectal-tnm-m" ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CarePlan/mii-exa-onko-tumorkonferenz-folfox> a fhir:CarePlan ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-tumorkonferenz-folfox"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz|2026.0.3" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz|2026.0.3>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"CarePlan_mii-exa-onko-tumorkonferenz-folfox\"> </a><p class=\"res-header-id\"><b>Generated Narrative: CarePlan mii-exa-onko-tumorkonferenz-folfox</b></p><a name=\"mii-exa-onko-tumorkonferenz-folfox\"> </a><a name=\"hcmii-exa-onko-tumorkonferenz-folfox\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-tumorkonferenz.html\">MII PR Onkologie Tumorkonferenz</a> version: 2026.0.3</p></div><p><b>identifier</b>: Tumorkonferenz_FOLFOX_001</p><p><b>status</b>: Active</p><p><b>intent</b>: Plan</p><p><b>category</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ praeth}\">prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie)</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p><p><b>created</b>: 2024-03-10</p><p><b>addresses</b>: <a href=\"Condition-mii-exa-onko-colorectal-cancer-diagnosis.html\">Condition Bösartige Neubildung: Colon sigmoideum</a></p><h3>Activities</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Progress</b></td><td><b>Reference</b></td></tr><tr><td style=\"display: none\">*</td><td><blockquote><div><p>Tumor board recommends FOLFOX chemotherapy protocol for stage III colon cancer, adjuvant setting</p>\n</div></blockquote></td><td><a href=\"RequestGroup-mii-exa-onko-folfox-requestgroup.html\">RequestGroup Chemotherapie</a></td></tr></table></div>"
+  ] ;
+  fhir:CarePlan.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.value [ fhir:value "Tumorkonferenz_FOLFOX_001" ]
+  ] ;
+  fhir:CarePlan.status [ fhir:value "active"] ;
+  fhir:CarePlan.intent [ fhir:value "plan"] ;
+  fhir:CarePlan.category [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ" ] ;
+       fhir:Coding.code [ fhir:value "praeth" ] ;
+       fhir:Coding.display [ fhir:value "prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie)" ]
+     ]
+  ] ;
+  fhir:CarePlan.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-folfox-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-folfox-patient" ]
+  ] ;
+  fhir:CarePlan.created [ fhir:value "2024-03-10"^^xsd:date] ;
+  fhir:CarePlan.addresses [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-colorectal-cancer-diagnosis> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-colorectal-cancer-diagnosis" ]
+  ] ;
+  fhir:CarePlan.activity [
+     fhir:index -1 ;
+     fhir:CarePlan.activity.progress [
+       fhir:index -1 ;
+       fhir:Annotation.text [ fhir:value "Tumor board recommends FOLFOX chemotherapy protocol for stage III colon cancer, adjuvant setting" ]
+     ] ;
+     fhir:CarePlan.activity.reference [
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/RequestGroup/mii-exa-onko-folfox-requestgroup> ;
+       fhir:Reference.reference [ fhir:value "RequestGroup/mii-exa-onko-folfox-requestgroup" ]
+     ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/RequestGroup/mii-exa-onko-folfox-requestgroup> a fhir:RequestGroup ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-folfox-requestgroup"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie|2026.0.3" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie|2026.0.3>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"RequestGroup_mii-exa-onko-folfox-requestgroup\"> </a><p class=\"res-header-id\"><b>Generated Narrative: RequestGroup mii-exa-onko-folfox-requestgroup</b></p><a name=\"mii-exa-onko-folfox-requestgroup\"> </a><a name=\"hcmii-exa-onko-folfox-requestgroup\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie.html\">MII PR Onkologie Therapieempfehlung Kombinationstherapie</a> version: 2026.0.3</p></div><p><b>status</b>: Active</p><p><b>intent</b>: Proposal</p><p><b>code</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ CH}\">Chemotherapie</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p><p><b>authoredOn</b>: 2024-03-10</p><p><b>reasonReference</b>: <a href=\"Condition-mii-exa-onko-colorectal-cancer-diagnosis.html\">Condition Bösartige Neubildung: Colon sigmoideum</a></p><blockquote><p><b>action</b></p><p><b>title</b>: FOLFOX4 Protocol</p><p><b>description</b>: FOLFOX4 chemotherapy protocol: Fluorouracil + Folinsäure + Oxaliplatin</p><p><b>code</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle FOLFOX4}\">FOLFOX4</span></p><h3>Actions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Title</b></td><td><b>Description</b></td><td><b>Resource</b></td></tr><tr><td style=\"display: none\">*</td><td>Fluorouracil (5-FU)</td><td>5-Fluorouracil - pyrimidine analog, antineoplastic</td><td><a href=\"MedicationRequest-mii-exa-onko-folfox-5fu-request.html\">MedicationRequest: status = active; intent = proposal; medication[x] = Fluorouracil; authoredOn = 2024-03-10</a></td></tr><tr><td style=\"display: none\">*</td><td>Folinsäure (Leucovorin)</td><td>Folinic acid - enhances 5-FU efficacy</td><td><a href=\"MedicationRequest-mii-exa-onko-folfox-leucovorin-request.html\">MedicationRequest: status = active; intent = proposal; medication[x] = Calciumfolinat; authoredOn = 2024-03-10</a></td></tr><tr><td style=\"display: none\">*</td><td>Oxaliplatin</td><td>Platinum-based chemotherapy agent</td><td><a href=\"MedicationRequest-mii-exa-onko-folfox-oxaliplatin-request.html\">MedicationRequest: status = active; intent = proposal; medication[x] = Oxaliplatin; authoredOn = 2024-03-10</a></td></tr></table></blockquote></div>"
+  ] ;
+  fhir:RequestGroup.status [ fhir:value "active"] ;
+  fhir:RequestGroup.intent [ fhir:value "proposal"] ;
+  fhir:RequestGroup.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ" ] ;
+       fhir:Coding.code [ fhir:value "CH" ] ;
+       fhir:Coding.display [ fhir:value "Chemotherapie" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Chemotherapie" ]
+  ] ;
+  fhir:RequestGroup.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-folfox-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-folfox-patient" ]
+  ] ;
+  fhir:RequestGroup.authoredOn [ fhir:value "2024-03-10"^^xsd:date] ;
+  fhir:RequestGroup.reasonReference [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-colorectal-cancer-diagnosis> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-colorectal-cancer-diagnosis" ]
+  ] ;
+  fhir:RequestGroup.action [
+     fhir:index -1 ;
+     fhir:RequestGroup.action.title [ fhir:value "FOLFOX4 Protocol" ] ;
+     fhir:RequestGroup.action.description [ fhir:value "FOLFOX4 chemotherapy protocol: Fluorouracil + Folinsäure + Oxaliplatin" ] ;
+     fhir:RequestGroup.action.code [
+       fhir:index -1 ;
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle" ] ;
+         fhir:Coding.code [ fhir:value "FOLFOX4" ] ;
+         fhir:Coding.display [ fhir:value "FOLFOX4" ]
+       ]
+     ] ;
+     fhir:RequestGroup.action.action [
+       fhir:index -1 ;
+       fhir:RequestGroup.action.title [ fhir:value "Fluorouracil (5-FU)" ] ;
+       fhir:RequestGroup.action.description [ fhir:value "5-Fluorouracil - pyrimidine analog, antineoplastic" ] ;
+       fhir:RequestGroup.action.resource [
+         fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/MedicationRequest/mii-exa-onko-folfox-5fu-request> ;
+         fhir:Reference.reference [ fhir:value "MedicationRequest/mii-exa-onko-folfox-5fu-request" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:RequestGroup.action.title [ fhir:value "Folinsäure (Leucovorin)" ] ;
+       fhir:RequestGroup.action.description [ fhir:value "Folinic acid - enhances 5-FU efficacy" ] ;
+       fhir:RequestGroup.action.resource [
+         fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/MedicationRequest/mii-exa-onko-folfox-leucovorin-request> ;
+         fhir:Reference.reference [ fhir:value "MedicationRequest/mii-exa-onko-folfox-leucovorin-request" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:RequestGroup.action.title [ fhir:value "Oxaliplatin" ] ;
+       fhir:RequestGroup.action.description [ fhir:value "Platinum-based chemotherapy agent" ] ;
+       fhir:RequestGroup.action.resource [
+         fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/MedicationRequest/mii-exa-onko-folfox-oxaliplatin-request> ;
+         fhir:Reference.reference [ fhir:value "MedicationRequest/mii-exa-onko-folfox-oxaliplatin-request" ]
+       ]
+     ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/MedicationRequest/mii-exa-onko-folfox-5fu-request> a fhir:MedicationRequest ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-folfox-5fu-request"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation|2026.0.3" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation|2026.0.3>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"MedicationRequest_mii-exa-onko-folfox-5fu-request\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest mii-exa-onko-folfox-5fu-request</b></p><a name=\"mii-exa-onko-folfox-5fu-request\"> </a><a name=\"hcmii-exa-onko-folfox-5fu-request\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-therapieempfehlung-medikation.html\">MII PR Onkologie Therapieempfehlung Medikation</a> version: 2026.0.3</p></div><p><b>status</b>: Active</p><p><b>intent</b>: Proposal</p><p><b>medication</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/atc L01BC02}\">5-Fluorouracil (5-FU)</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p><p><b>authoredOn</b>: 2024-03-10</p><p><b>reasonReference</b>: <a href=\"Condition-mii-exa-onko-colorectal-cancer-diagnosis.html\">Condition Bösartige Neubildung: Colon sigmoideum</a></p></div>"
+  ] ;
+  fhir:MedicationRequest.status [ fhir:value "active"] ;
+  fhir:MedicationRequest.intent [ fhir:value "proposal"] ;
+  fhir:MedicationRequest.medicationCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/atc" ] ;
+       fhir:Coding.code [ fhir:value "L01BC02" ] ;
+       fhir:Coding.display [ fhir:value "Fluorouracil" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "5-Fluorouracil (5-FU)" ]
+  ] ;
+  fhir:MedicationRequest.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-folfox-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-folfox-patient" ]
+  ] ;
+  fhir:MedicationRequest.authoredOn [ fhir:value "2024-03-10"^^xsd:date] ;
+  fhir:MedicationRequest.reasonReference [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-colorectal-cancer-diagnosis> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-colorectal-cancer-diagnosis" ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/MedicationRequest/mii-exa-onko-folfox-leucovorin-request> a fhir:MedicationRequest ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-folfox-leucovorin-request"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation|2026.0.3" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation|2026.0.3>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"MedicationRequest_mii-exa-onko-folfox-leucovorin-request\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest mii-exa-onko-folfox-leucovorin-request</b></p><a name=\"mii-exa-onko-folfox-leucovorin-request\"> </a><a name=\"hcmii-exa-onko-folfox-leucovorin-request\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-therapieempfehlung-medikation.html\">MII PR Onkologie Therapieempfehlung Medikation</a> version: 2026.0.3</p></div><p><b>status</b>: Active</p><p><b>intent</b>: Proposal</p><p><b>medication</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/atc V03AF03}\">Leucovorin (Folinsäure)</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p><p><b>authoredOn</b>: 2024-03-10</p><p><b>reasonReference</b>: <a href=\"Condition-mii-exa-onko-colorectal-cancer-diagnosis.html\">Condition Bösartige Neubildung: Colon sigmoideum</a></p></div>"
+  ] ;
+  fhir:MedicationRequest.status [ fhir:value "active"] ;
+  fhir:MedicationRequest.intent [ fhir:value "proposal"] ;
+  fhir:MedicationRequest.medicationCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/atc" ] ;
+       fhir:Coding.code [ fhir:value "V03AF03" ] ;
+       fhir:Coding.display [ fhir:value "Calciumfolinat" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Leucovorin (Folinsäure)" ]
+  ] ;
+  fhir:MedicationRequest.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-folfox-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-folfox-patient" ]
+  ] ;
+  fhir:MedicationRequest.authoredOn [ fhir:value "2024-03-10"^^xsd:date] ;
+  fhir:MedicationRequest.reasonReference [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-colorectal-cancer-diagnosis> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-colorectal-cancer-diagnosis" ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/MedicationRequest/mii-exa-onko-folfox-oxaliplatin-request> a fhir:MedicationRequest ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-folfox-oxaliplatin-request"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation|2026.0.3" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation|2026.0.3>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"MedicationRequest_mii-exa-onko-folfox-oxaliplatin-request\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest mii-exa-onko-folfox-oxaliplatin-request</b></p><a name=\"mii-exa-onko-folfox-oxaliplatin-request\"> </a><a name=\"hcmii-exa-onko-folfox-oxaliplatin-request\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-therapieempfehlung-medikation.html\">MII PR Onkologie Therapieempfehlung Medikation</a> version: 2026.0.3</p></div><p><b>status</b>: Active</p><p><b>intent</b>: Proposal</p><p><b>medication</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/atc L01XA03}\">Oxaliplatin</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p><p><b>authoredOn</b>: 2024-03-10</p><p><b>reasonReference</b>: <a href=\"Condition-mii-exa-onko-colorectal-cancer-diagnosis.html\">Condition Bösartige Neubildung: Colon sigmoideum</a></p></div>"
+  ] ;
+  fhir:MedicationRequest.status [ fhir:value "active"] ;
+  fhir:MedicationRequest.intent [ fhir:value "proposal"] ;
+  fhir:MedicationRequest.medicationCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/atc" ] ;
+       fhir:Coding.code [ fhir:value "L01XA03" ] ;
+       fhir:Coding.display [ fhir:value "Oxaliplatin" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Oxaliplatin" ]
+  ] ;
+  fhir:MedicationRequest.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-folfox-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-folfox-patient" ]
+  ] ;
+  fhir:MedicationRequest.authoredOn [ fhir:value "2024-03-10"^^xsd:date] ;
+  fhir:MedicationRequest.reasonReference [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-colorectal-cancer-diagnosis> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-colorectal-cancer-diagnosis" ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-sigmoid-resection> a fhir:Procedure ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-sigmoid-resection"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Procedure_mii-exa-onko-sigmoid-resection\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Procedure mii-exa-onko-sigmoid-resection</b></p><a name=\"mii-exa-onko-sigmoid-resection\"> </a><a name=\"hcmii-exa-onko-sigmoid-resection\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-operation.html\">MII PR Onkologie Operation</a></p></div><p><b>MII EX Onko Operation Intention</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}\">Kurativ</span></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 387713003}\">Surgical procedure</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/ops 5-484.5}\">Laparoskopische Sigmaresektion mit TME und Lymphknotendissektion</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p><p><b>encounter</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Encounter/example-surgery\">Encounter/example-surgery</a></p><p><b>performed</b>: 2024-02-15</p><p><b>reasonReference</b>: <a href=\"Condition-mii-exa-onko-colorectal-cancer-diagnosis.html\">Condition Bösartige Neubildung: Colon sigmoideum</a></p><p><b>outcome</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus R0}\">Kein Residualtumor</span></p><p><b>note</b>: </p><blockquote><div><p>Laparoscopic sigmoid resection with TME and lymphadenectomy. No intraoperative complications. Tumor completely resected with clear margins (R0). 18 lymph nodes removed, 3 positive. Surgery performed in 3 components: resection, anastomosis, and lymph node dissection.</p>\n</div></blockquote></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention" ] ;
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention" ] ;
+         fhir:Coding.code [ fhir:value "K" ] ;
+         fhir:Coding.display [ fhir:value "Kurativ" ]
+       ]
+     ]
+  ] ;
+  fhir:Procedure.status [ fhir:value "completed"] ;
+  fhir:Procedure.category [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:387713003 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "387713003" ] ;
+       fhir:Coding.display [ fhir:value "Surgical procedure" ]
+     ]
+  ] ;
+  fhir:Procedure.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/ops" ] ;
+       fhir:Coding.version [ fhir:value "2024" ] ;
+       fhir:Coding.code [ fhir:value "5-484.5" ] ;
+       fhir:Coding.display [ fhir:value "Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Laparoskopische Sigmaresektion mit TME und Lymphknotendissektion" ]
+  ] ;
+  fhir:Procedure.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-folfox-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-folfox-patient" ]
+  ] ;
+  fhir:Procedure.encounter [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/example-surgery> ;
+     fhir:Reference.reference [ fhir:value "Encounter/example-surgery" ]
+  ] ;
+  fhir:Procedure.performedDateTime [ fhir:value "2024-02-15"^^xsd:date] ;
+  fhir:Procedure.reasonReference [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-colorectal-cancer-diagnosis> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-colorectal-cancer-diagnosis" ]
+  ] ;
+  fhir:Procedure.outcome [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus" ] ;
+       fhir:Coding.code [ fhir:value "R0" ] ;
+       fhir:Coding.display [ fhir:value "Kein Residualtumor" ]
+     ]
+  ] ;
+  fhir:Procedure.note [
+     fhir:index -1 ;
+     fhir:Annotation.text [ fhir:value "Laparoscopic sigmoid resection with TME and lymphadenectomy. No intraoperative complications. Tumor completely resected with clear margins (R0). 18 lymph nodes removed, 3 positive. Surgery performed in 3 components: resection, anastomosis, and lymph node dissection." ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-sigmoid-resection-part1> a fhir:Procedure ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-sigmoid-resection-part1"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Procedure_mii-exa-onko-sigmoid-resection-part1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Procedure mii-exa-onko-sigmoid-resection-part1</b></p><a name=\"mii-exa-onko-sigmoid-resection-part1\"> </a><a name=\"hcmii-exa-onko-sigmoid-resection-part1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-operation.html\">MII PR Onkologie Operation</a></p></div><p><b>MII EX Onko Operation Intention</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}\">Kurativ</span></p><p><b>partOf</b>: <a href=\"Procedure-mii-exa-onko-sigmoid-resection.html\">Procedure Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion</a></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 387713003}\">Surgical procedure</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/ops 5-484.5}\">Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p><p><b>encounter</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Encounter/example-surgery\">Encounter/example-surgery</a></p><p><b>performed</b>: 2024-02-15</p><p><b>reasonReference</b>: <a href=\"Condition-mii-exa-onko-colorectal-cancer-diagnosis.html\">Condition Bösartige Neubildung: Colon sigmoideum</a></p><p><b>note</b>: </p><blockquote><div><p>Sigmoid colon resected including tumor. End-to-end anastomosis created.</p>\n</div></blockquote></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention" ] ;
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention" ] ;
+         fhir:Coding.code [ fhir:value "K" ] ;
+         fhir:Coding.display [ fhir:value "Kurativ" ]
+       ]
+     ]
+  ] ;
+  fhir:Procedure.partOf [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-sigmoid-resection> ;
+     fhir:Reference.reference [ fhir:value "Procedure/mii-exa-onko-sigmoid-resection" ]
+  ] ;
+  fhir:Procedure.status [ fhir:value "completed"] ;
+  fhir:Procedure.category [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:387713003 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "387713003" ] ;
+       fhir:Coding.display [ fhir:value "Surgical procedure" ]
+     ]
+  ] ;
+  fhir:Procedure.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/ops" ] ;
+       fhir:Coding.version [ fhir:value "2024" ] ;
+       fhir:Coding.code [ fhir:value "5-484.5" ] ;
+       fhir:Coding.display [ fhir:value "Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion" ]
+     ]
+  ] ;
+  fhir:Procedure.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-folfox-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-folfox-patient" ]
+  ] ;
+  fhir:Procedure.encounter [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/example-surgery> ;
+     fhir:Reference.reference [ fhir:value "Encounter/example-surgery" ]
+  ] ;
+  fhir:Procedure.performedDateTime [ fhir:value "2024-02-15"^^xsd:date] ;
+  fhir:Procedure.reasonReference [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-colorectal-cancer-diagnosis> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-colorectal-cancer-diagnosis" ]
+  ] ;
+  fhir:Procedure.note [
+     fhir:index -1 ;
+     fhir:Annotation.text [ fhir:value "Sigmoid colon resected including tumor. End-to-end anastomosis created." ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-sigmoid-resection-part2> a fhir:Procedure ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-sigmoid-resection-part2"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Procedure_mii-exa-onko-sigmoid-resection-part2\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Procedure mii-exa-onko-sigmoid-resection-part2</b></p><a name=\"mii-exa-onko-sigmoid-resection-part2\"> </a><a name=\"hcmii-exa-onko-sigmoid-resection-part2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-operation.html\">MII PR Onkologie Operation</a></p></div><p><b>MII EX Onko Operation Intention</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}\">Kurativ</span></p><p><b>partOf</b>: <a href=\"Procedure-mii-exa-onko-sigmoid-resection.html\">Procedure Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion</a></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 387713003}\">Surgical procedure</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/ops 5-407.0}\">Radikale (systematische) Lymphadenektomie im Rahmen einer anderen Operation: Axillär</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p><p><b>encounter</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Encounter/example-surgery\">Encounter/example-surgery</a></p><p><b>performed</b>: 2024-02-15</p><p><b>reasonReference</b>: <a href=\"Condition-mii-exa-onko-colorectal-cancer-diagnosis.html\">Condition Bösartige Neubildung: Colon sigmoideum</a></p><p><b>note</b>: </p><blockquote><div><p>Regional lymph node dissection performed. 18 lymph nodes removed from mesenteric and para-aortic regions.</p>\n</div></blockquote></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention" ] ;
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention" ] ;
+         fhir:Coding.code [ fhir:value "K" ] ;
+         fhir:Coding.display [ fhir:value "Kurativ" ]
+       ]
+     ]
+  ] ;
+  fhir:Procedure.partOf [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-sigmoid-resection> ;
+     fhir:Reference.reference [ fhir:value "Procedure/mii-exa-onko-sigmoid-resection" ]
+  ] ;
+  fhir:Procedure.status [ fhir:value "completed"] ;
+  fhir:Procedure.category [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:387713003 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "387713003" ] ;
+       fhir:Coding.display [ fhir:value "Surgical procedure" ]
+     ]
+  ] ;
+  fhir:Procedure.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/ops" ] ;
+       fhir:Coding.version [ fhir:value "2024" ] ;
+       fhir:Coding.code [ fhir:value "5-407.0" ] ;
+       fhir:Coding.display [ fhir:value "Radikale (systematische) Lymphadenektomie im Rahmen einer anderen Operation: Axillär" ]
+     ]
+  ] ;
+  fhir:Procedure.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-folfox-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-folfox-patient" ]
+  ] ;
+  fhir:Procedure.encounter [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/example-surgery> ;
+     fhir:Reference.reference [ fhir:value "Encounter/example-surgery" ]
+  ] ;
+  fhir:Procedure.performedDateTime [ fhir:value "2024-02-15"^^xsd:date] ;
+  fhir:Procedure.reasonReference [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-colorectal-cancer-diagnosis> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-colorectal-cancer-diagnosis" ]
+  ] ;
+  fhir:Procedure.note [
+     fhir:index -1 ;
+     fhir:Annotation.text [ fhir:value "Regional lymph node dissection performed. 18 lymph nodes removed from mesenteric and para-aortic regions." ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-sigmoid-resection-part3> a fhir:Procedure ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-sigmoid-resection-part3"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Procedure_mii-exa-onko-sigmoid-resection-part3\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Procedure mii-exa-onko-sigmoid-resection-part3</b></p><a name=\"mii-exa-onko-sigmoid-resection-part3\"> </a><a name=\"hcmii-exa-onko-sigmoid-resection-part3\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-operation.html\">MII PR Onkologie Operation</a></p></div><p><b>MII EX Onko Operation Intention</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}\">Kurativ</span></p><p><b>partOf</b>: <a href=\"Procedure-mii-exa-onko-sigmoid-resection.html\">Procedure Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion</a></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 387713003}\">Surgical procedure</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/ops 5-986.x}\">Minimalinvasive Technik: Sonstige</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p><p><b>encounter</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Encounter/example-surgery\">Encounter/example-surgery</a></p><p><b>performed</b>: 2024-02-15</p><p><b>reasonReference</b>: <a href=\"Condition-mii-exa-onko-colorectal-cancer-diagnosis.html\">Condition Bösartige Neubildung: Colon sigmoideum</a></p><p><b>note</b>: </p><blockquote><div><p>Four laparoscopic ports placed for minimally invasive approach.</p>\n</div></blockquote></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention" ] ;
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention" ] ;
+         fhir:Coding.code [ fhir:value "K" ] ;
+         fhir:Coding.display [ fhir:value "Kurativ" ]
+       ]
+     ]
+  ] ;
+  fhir:Procedure.partOf [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-sigmoid-resection> ;
+     fhir:Reference.reference [ fhir:value "Procedure/mii-exa-onko-sigmoid-resection" ]
+  ] ;
+  fhir:Procedure.status [ fhir:value "completed"] ;
+  fhir:Procedure.category [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:387713003 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "387713003" ] ;
+       fhir:Coding.display [ fhir:value "Surgical procedure" ]
+     ]
+  ] ;
+  fhir:Procedure.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/ops" ] ;
+       fhir:Coding.version [ fhir:value "2024" ] ;
+       fhir:Coding.code [ fhir:value "5-986.x" ] ;
+       fhir:Coding.display [ fhir:value "Minimalinvasive Technik: Sonstige" ]
+     ]
+  ] ;
+  fhir:Procedure.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-folfox-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-folfox-patient" ]
+  ] ;
+  fhir:Procedure.encounter [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/example-surgery> ;
+     fhir:Reference.reference [ fhir:value "Encounter/example-surgery" ]
+  ] ;
+  fhir:Procedure.performedDateTime [ fhir:value "2024-02-15"^^xsd:date] ;
+  fhir:Procedure.reasonReference [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-colorectal-cancer-diagnosis> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-colorectal-cancer-diagnosis" ]
+  ] ;
+  fhir:Procedure.note [
+     fhir:index -1 ;
+     fhir:Annotation.text [ fhir:value "Four laparoscopic ports placed for minimally invasive approach." ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-folfox-procedure> a fhir:Procedure ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-folfox-procedure"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Procedure_mii-exa-onko-folfox-procedure\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Procedure mii-exa-onko-folfox-procedure</b></p><a name=\"mii-exa-onko-folfox-procedure\"> </a><a name=\"hcmii-exa-onko-folfox-procedure\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-systemische-therapie.html\">MII PR Onkologie Systemische Therapie</a></p></div><p><b>MII EX Onko Systemische Therapie Intention</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}\">Kurativ</span></p><p><b>MII EX Onko Systemische Therapie Stellung zur OP</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop A}\">Adjuvant</span></p><p><b>basedOn</b>: <a href=\"CarePlan-mii-exa-onko-tumorkonferenz-folfox.html\">CarePlan: identifier = Tumorkonferenz_FOLFOX_001; status = active; intent = plan; category = prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie); created = 2024-03-10</a></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 277132007}\">Therapeutic procedure</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/ops 8-542}, {https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art CH}\">Nicht komplexe Chemotherapie</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p><p><b>encounter</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Encounter/example\">Encounter/example</a></p><p><b>performed</b>: 2024-03-20 --&gt; 2024-09-15</p><p><b>reasonReference</b>: <a href=\"Condition-mii-exa-onko-colorectal-cancer-diagnosis.html\">Condition Bösartige Neubildung: Colon sigmoideum</a></p><p><b>outcome</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund E}\">Reguläres Ende</span></p><p><b>note</b>: </p><blockquote><div><p>Patient received 12 cycles of adjuvant FOLFOX4 chemotherapy for stage III colon cancer. Treatment completed without major complications.</p>\n</div></blockquote><p><b>usedCode</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle FOLFOX4}\">FOLFOX4</span></p></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention" ] ;
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention" ] ;
+         fhir:Coding.code [ fhir:value "K" ] ;
+         fhir:Coding.display [ fhir:value "Kurativ" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellungzurop" ] ;
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop" ] ;
+         fhir:Coding.code [ fhir:value "A" ] ;
+         fhir:Coding.display [ fhir:value "Adjuvant" ]
+       ]
+     ]
+  ] ;
+  fhir:Procedure.basedOn [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CarePlan/mii-exa-onko-tumorkonferenz-folfox> ;
+     fhir:Reference.reference [ fhir:value "CarePlan/mii-exa-onko-tumorkonferenz-folfox" ]
+  ] ;
+  fhir:Procedure.status [ fhir:value "completed"] ;
+  fhir:Procedure.category [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:277132007 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "277132007" ] ;
+       fhir:Coding.display [ fhir:value "Therapeutic procedure" ]
+     ]
+  ] ;
+  fhir:Procedure.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/ops" ] ;
+       fhir:Coding.version [ fhir:value "2024" ] ;
+       fhir:Coding.code [ fhir:value "8-542" ] ;
+       fhir:Coding.display [ fhir:value "Nicht komplexe Chemotherapie" ]
+     ], [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art" ] ;
+       fhir:Coding.code [ fhir:value "CH" ] ;
+       fhir:Coding.display [ fhir:value "Chemotherapie" ]
+     ]
+  ] ;
+  fhir:Procedure.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-folfox-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-folfox-patient" ]
+  ] ;
+  fhir:Procedure.encounter [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/example> ;
+     fhir:Reference.reference [ fhir:value "Encounter/example" ]
+  ] ;
+  fhir:Procedure.performedPeriod [
+     fhir:Period.start [ fhir:value "2024-03-20"^^xsd:date ] ;
+     fhir:Period.end [ fhir:value "2024-09-15"^^xsd:date ]
+  ] ;
+  fhir:Procedure.reasonReference [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-colorectal-cancer-diagnosis> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-colorectal-cancer-diagnosis" ]
+  ] ;
+  fhir:Procedure.outcome [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund" ] ;
+       fhir:Coding.code [ fhir:value "E" ] ;
+       fhir:Coding.display [ fhir:value "Reguläres Ende" ]
+     ]
+  ] ;
+  fhir:Procedure.note [
+     fhir:index -1 ;
+     fhir:Annotation.text [ fhir:value "Patient received 12 cycles of adjuvant FOLFOX4 chemotherapy for stage III colon cancer. Treatment completed without major complications." ]
+  ] ;
+  fhir:Procedure.usedCode [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle" ] ;
+       fhir:Coding.code [ fhir:value "FOLFOX4" ] ;
+       fhir:Coding.display [ fhir:value "FOLFOX4" ]
+     ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/MedicationStatement/mii-exa-onko-folfox-5fu-statement> a fhir:MedicationStatement ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-folfox-5fu-statement"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"MedicationStatement_mii-exa-onko-folfox-5fu-statement\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationStatement mii-exa-onko-folfox-5fu-statement</b></p><a name=\"mii-exa-onko-folfox-5fu-statement\"> </a><a name=\"hcmii-exa-onko-folfox-5fu-statement\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-systemische-therapie-medikation.html\">MII PR Onkologie Systemische Therapie Medikation</a></p></div><p><b>basedOn</b>: <a href=\"CarePlan-mii-exa-onko-tumorkonferenz-folfox.html\">CarePlan: identifier = Tumorkonferenz_FOLFOX_001; status = active; intent = plan; category = prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie); created = 2024-03-10</a></p><p><b>partOf</b>: <a href=\"Procedure-mii-exa-onko-folfox-procedure.html\">Procedure Nicht komplexe Chemotherapie</a></p><p><b>status</b>: Completed</p><p><b>medication</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/atc L01BC02}\">5-Fluorouracil (5-FU)</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p><p><b>effective</b>: 2024-03-20 --&gt; 2024-09-15</p><p><b>note</b>: </p><blockquote><div><p>FOLFOX4</p>\n</div></blockquote></div>"
+  ] ;
+  fhir:MedicationStatement.basedOn [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CarePlan/mii-exa-onko-tumorkonferenz-folfox> ;
+     fhir:Reference.reference [ fhir:value "CarePlan/mii-exa-onko-tumorkonferenz-folfox" ]
+  ] ;
+  fhir:MedicationStatement.partOf [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-folfox-procedure> ;
+     fhir:Reference.reference [ fhir:value "Procedure/mii-exa-onko-folfox-procedure" ]
+  ] ;
+  fhir:MedicationStatement.status [ fhir:value "completed"] ;
+  fhir:MedicationStatement.medicationCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/atc" ] ;
+       fhir:Coding.code [ fhir:value "L01BC02" ] ;
+       fhir:Coding.display [ fhir:value "Fluorouracil" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "5-Fluorouracil (5-FU)" ]
+  ] ;
+  fhir:MedicationStatement.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-folfox-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-folfox-patient" ]
+  ] ;
+  fhir:MedicationStatement.effectivePeriod [
+     fhir:Period.start [ fhir:value "2024-03-20"^^xsd:date ] ;
+     fhir:Period.end [ fhir:value "2024-09-15"^^xsd:date ]
+  ] ;
+  fhir:MedicationStatement.note [
+     fhir:index -1 ;
+     fhir:Annotation.text [ fhir:value "FOLFOX4" ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/MedicationStatement/mii-exa-onko-folfox-leucovorin-statement> a fhir:MedicationStatement ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-folfox-leucovorin-statement"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"MedicationStatement_mii-exa-onko-folfox-leucovorin-statement\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationStatement mii-exa-onko-folfox-leucovorin-statement</b></p><a name=\"mii-exa-onko-folfox-leucovorin-statement\"> </a><a name=\"hcmii-exa-onko-folfox-leucovorin-statement\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-systemische-therapie-medikation.html\">MII PR Onkologie Systemische Therapie Medikation</a></p></div><p><b>basedOn</b>: <a href=\"CarePlan-mii-exa-onko-tumorkonferenz-folfox.html\">CarePlan: identifier = Tumorkonferenz_FOLFOX_001; status = active; intent = plan; category = prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie); created = 2024-03-10</a></p><p><b>partOf</b>: <a href=\"Procedure-mii-exa-onko-folfox-procedure.html\">Procedure Nicht komplexe Chemotherapie</a></p><p><b>status</b>: Completed</p><p><b>medication</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/atc V03AF03}\">Leucovorin (Folinsäure)</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p><p><b>effective</b>: 2024-03-20 --&gt; 2024-09-15</p><p><b>note</b>: </p><blockquote><div><p>FOLFOX4</p>\n</div></blockquote></div>"
+  ] ;
+  fhir:MedicationStatement.basedOn [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CarePlan/mii-exa-onko-tumorkonferenz-folfox> ;
+     fhir:Reference.reference [ fhir:value "CarePlan/mii-exa-onko-tumorkonferenz-folfox" ]
+  ] ;
+  fhir:MedicationStatement.partOf [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-folfox-procedure> ;
+     fhir:Reference.reference [ fhir:value "Procedure/mii-exa-onko-folfox-procedure" ]
+  ] ;
+  fhir:MedicationStatement.status [ fhir:value "completed"] ;
+  fhir:MedicationStatement.medicationCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/atc" ] ;
+       fhir:Coding.code [ fhir:value "V03AF03" ] ;
+       fhir:Coding.display [ fhir:value "Calciumfolinat" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Leucovorin (Folinsäure)" ]
+  ] ;
+  fhir:MedicationStatement.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-folfox-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-folfox-patient" ]
+  ] ;
+  fhir:MedicationStatement.effectivePeriod [
+     fhir:Period.start [ fhir:value "2024-03-20"^^xsd:date ] ;
+     fhir:Period.end [ fhir:value "2024-09-15"^^xsd:date ]
+  ] ;
+  fhir:MedicationStatement.note [
+     fhir:index -1 ;
+     fhir:Annotation.text [ fhir:value "FOLFOX4" ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/MedicationStatement/mii-exa-onko-folfox-oxaliplatin-statement> a fhir:MedicationStatement ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-folfox-oxaliplatin-statement"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"MedicationStatement_mii-exa-onko-folfox-oxaliplatin-statement\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationStatement mii-exa-onko-folfox-oxaliplatin-statement</b></p><a name=\"mii-exa-onko-folfox-oxaliplatin-statement\"> </a><a name=\"hcmii-exa-onko-folfox-oxaliplatin-statement\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-systemische-therapie-medikation.html\">MII PR Onkologie Systemische Therapie Medikation</a></p></div><p><b>basedOn</b>: <a href=\"CarePlan-mii-exa-onko-tumorkonferenz-folfox.html\">CarePlan: identifier = Tumorkonferenz_FOLFOX_001; status = active; intent = plan; category = prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie); created = 2024-03-10</a></p><p><b>partOf</b>: <a href=\"Procedure-mii-exa-onko-folfox-procedure.html\">Procedure Nicht komplexe Chemotherapie</a></p><p><b>status</b>: Completed</p><p><b>medication</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/atc L01XA03}\">Oxaliplatin</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p><p><b>effective</b>: 2024-03-20 --&gt; 2024-09-15</p><p><b>note</b>: </p><blockquote><div><p>FOLFOX4</p>\n</div></blockquote></div>"
+  ] ;
+  fhir:MedicationStatement.basedOn [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CarePlan/mii-exa-onko-tumorkonferenz-folfox> ;
+     fhir:Reference.reference [ fhir:value "CarePlan/mii-exa-onko-tumorkonferenz-folfox" ]
+  ] ;
+  fhir:MedicationStatement.partOf [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-folfox-procedure> ;
+     fhir:Reference.reference [ fhir:value "Procedure/mii-exa-onko-folfox-procedure" ]
+  ] ;
+  fhir:MedicationStatement.status [ fhir:value "completed"] ;
+  fhir:MedicationStatement.medicationCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/atc" ] ;
+       fhir:Coding.code [ fhir:value "L01XA03" ] ;
+       fhir:Coding.display [ fhir:value "Oxaliplatin" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Oxaliplatin" ]
+  ] ;
+  fhir:MedicationStatement.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-folfox-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-folfox-patient" ]
+  ] ;
+  fhir:MedicationStatement.effectivePeriod [
+     fhir:Period.start [ fhir:value "2024-03-20"^^xsd:date ] ;
+     fhir:Period.end [ fhir:value "2024-09-15"^^xsd:date ]
+  ] ;
+  fhir:MedicationStatement.note [
+     fhir:index -1 ;
+     fhir:Annotation.text [ fhir:value "FOLFOX4" ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-folfox-verlauf-6months> a fhir:Observation ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-folfox-verlauf-6months"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Observation_mii-exa-onko-folfox-verlauf-6months\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-folfox-verlauf-6months</b></p><a name=\"mii-exa-onko-folfox-verlauf-6months\"> </a><a name=\"hcmii-exa-onko-folfox-verlauf-6months\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-verlauf.html\">MII PR Onkologie Verlauf</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 396432002}\">Status of regression of tumor (observable entity)</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p><p><b>focus</b>: <a href=\"Condition-mii-exa-onko-colorectal-cancer-diagnosis.html\">Condition Bösartige Neubildung: Colon sigmoideum</a></p><p><b>effective</b>: 2025-03-15</p><p><b>value</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung V}\">Vollremission (complete remission, CR)</span></p><p><b>note</b>: </p><blockquote><div><p>Patient completed 12 cycles of adjuvant FOLFOX4. CT scan and colonoscopy show no evidence of recurrence. CEA level normal (2.1 ng/mL). Patient is disease-free at 6-month follow-up. Plan: Continue surveillance with CEA and imaging every 3-6 months.</p>\n</div></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 445200009}\">Status of residual neoplasm (observable entity)</span></p><p><b>value</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-primaertumor K}\">Kein Tumor nachweisbar</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 399656008}\">Presence of metastatic neoplasm in regional lymph node (observable entity)</span></p><p><b>value</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-lymphknoten K}\">kein Lymphknotenbefall nachweisbar</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 399608002}\">Status of distant metastasis (observable entity)</span></p><p><b>value</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen K}\">Keine Fernmetastasen nachweisbar</span></p></blockquote></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:396432002 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "396432002" ] ;
+       fhir:Coding.display [ fhir:value "Status of regression of tumor (observable entity)" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-folfox-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-folfox-patient" ]
+  ] ;
+  fhir:Observation.focus [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-colorectal-cancer-diagnosis> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-colorectal-cancer-diagnosis" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2025-03-15"^^xsd:date] ;
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung" ] ;
+       fhir:Coding.code [ fhir:value "V" ] ;
+       fhir:Coding.display [ fhir:value "Vollremission (complete remission, CR)" ]
+     ]
+  ] ;
+  fhir:Observation.note [
+     fhir:index -1 ;
+     fhir:Annotation.text [ fhir:value "Patient completed 12 cycles of adjuvant FOLFOX4. CT scan and colonoscopy show no evidence of recurrence. CEA level normal (2.1 ng/mL). Patient is disease-free at 6-month follow-up. Plan: Continue surveillance with CEA and imaging every 3-6 months." ]
+  ] ;
+  fhir:Observation.component [
+     fhir:index -1 ;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         a sct:445200009 ;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+         fhir:Coding.code [ fhir:value "445200009" ] ;
+         fhir:Coding.display [ fhir:value "Status of residual neoplasm (observable entity)" ]
+       ]
+     ] ;
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-primaertumor" ] ;
+         fhir:Coding.code [ fhir:value "K" ] ;
+         fhir:Coding.display [ fhir:value "Kein Tumor nachweisbar" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         a sct:399656008 ;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+         fhir:Coding.code [ fhir:value "399656008" ] ;
+         fhir:Coding.display [ fhir:value "Presence of metastatic neoplasm in regional lymph node (observable entity)" ]
+       ]
+     ] ;
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-lymphknoten" ] ;
+         fhir:Coding.code [ fhir:value "K" ] ;
+         fhir:Coding.display [ fhir:value "kein Lymphknotenbefall nachweisbar" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         a sct:399608002 ;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+         fhir:Coding.code [ fhir:value "399608002" ] ;
+         fhir:Coding.display [ fhir:value "Status of distant metastasis (observable entity)" ]
+       ]
+     ] ;
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen" ] ;
+         fhir:Coding.code [ fhir:value "K" ] ;
+         fhir:Coding.display [ fhir:value "Keine Fernmetastasen nachweisbar" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Bundle/mii-exa-onko-folfox-workflow-bundle.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

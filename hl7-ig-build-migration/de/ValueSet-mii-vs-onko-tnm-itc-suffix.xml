@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-onko-tnm-itc-suffix"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-onko-tnm-itc-suffix</b></p><a name="mii-vs-onko-tnm-itc-suffix"> </a><a name="hcmii-vs-onko-tnm-itc-suffix"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org/fhir/R4/shareablevalueset.html">Shareable ValueSet</a></p></div><ul><li>Include these codes as defined in <a href="CodeSystem-mii-cs-onko-tnm-uicc.html"><code>https://www.uicc.org/resources/tnm</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-i.43">i+</a></td><td>(i+)</td></tr><tr><td><a href="CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-i-">i-</a></td><td>(i-)</td></tr><tr><td><a href="CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-mol.43">mol+</a></td><td>(mol+)</td></tr><tr><td><a href="CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-mol-">mol-</a></td><td>(mol-)</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-itc-suffix"/>
+  <version value="2026.0.3"/>
+  <name value="MII_VS_Onko_TNM_ITC_Suffix"/>
+  <title value="MII VS Onkologie TNM ITC Suffix"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-07-02T12:18:38+00:00"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="Das ValueSet enthält die isolierten Tumorzellen (ITC) Suffixe für die N- und M-Kategorien aus der UICC TNM - Klassifikation maligner Tumoren Achte Auflage."/>
+  <compose>
+    <include>
+      <system value="https://www.uicc.org/resources/tnm"/>
+      <concept>
+        <code value="i+"/>
+        <display value="(i+)"/>
+      </concept>
+      <concept>
+        <code value="i-"/>
+        <display value="(i-)"/>
+      </concept>
+      <concept>
+        <code value="mol+"/>
+        <display value="(mol+)"/>
+      </concept>
+      <concept>
+        <code value="mol-"/>
+        <display value="(mol-)"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

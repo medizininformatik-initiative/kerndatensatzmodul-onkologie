@@ -1,0 +1,55 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/MedicationRequest/mii-exa-onko-tdm1-option> a fhir:MedicationRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-tdm1-option"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation|2026.0.3" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation|2026.0.3>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest mii-exa-onko-tdm1-option</b></p><a name=\"en-mii-exa-onko-tdm1-option\"> </a><a name=\"en-hcmii-exa-onko-tdm1-option\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-therapieempfehlung-medikation.html\">MII PR Onkologie Therapieempfehlung Medikation</a> version: 2026.0.3</p></div><p><b>status</b>: Active</p><p><b>intent</b>: Option</p><p><b>medication</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/atc L01FD03}\">Trastuzumab Emtansine (T-DM1)</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-molecular-board-patient.html\">Maria Müller  Female, DoB: 1968-07-22 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#MTB-2024-001)</a></p><p><b>authoredOn</b>: 2024-01-16</p><p><b>reasonReference</b>: <a href=\"Condition-primaertumor-example.html\">Condition Bösartige Neubildung: Brustdrüse, nicht näher bezeichnet</a></p><p><b>note</b>: </p><blockquote><div><p>Zweitlinien-Option, empfohlen bei Progression unter Trastuzumab-basierter Therapie</p>\n</div></blockquote></div>"
+  ] ;
+  fhir:MedicationRequest.status [ fhir:value "active"] ;
+  fhir:MedicationRequest.intent [ fhir:value "option"] ;
+  fhir:MedicationRequest.medicationCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/atc" ] ;
+       fhir:Coding.code [ fhir:value "L01FD03" ] ;
+       fhir:Coding.display [ fhir:value "Trastuzumab emtansin" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Trastuzumab Emtansine (T-DM1)" ]
+  ] ;
+  fhir:MedicationRequest.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-molecular-board-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-molecular-board-patient" ]
+  ] ;
+  fhir:MedicationRequest.authoredOn [ fhir:value "2024-01-16"^^xsd:date] ;
+  fhir:MedicationRequest.reasonReference [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/primaertumor-example> ;
+     fhir:Reference.reference [ fhir:value "Condition/primaertumor-example" ]
+  ] ;
+  fhir:MedicationRequest.note [
+     fhir:index -1 ;
+     fhir:Annotation.text [ fhir:value "Zweitlinien-Option, empfohlen bei Progression unter Trastuzumab-basierter Therapie" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/MedicationRequest/mii-exa-onko-tdm1-option.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

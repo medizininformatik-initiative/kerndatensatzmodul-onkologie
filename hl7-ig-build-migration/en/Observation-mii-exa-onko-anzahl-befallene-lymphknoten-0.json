@@ -1,0 +1,36 @@
+{
+  "resourceType" : "Observation",
+  "id" : "mii-exa-onko-anzahl-befallene-lymphknoten-0",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-befallene-lymphknoten|2026.0.3"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-anzahl-befallene-lymphknoten-0</b></p><a name=\"en-mii-exa-onko-anzahl-befallene-lymphknoten-0\"> </a><a name=\"en-hcmii-exa-onko-anzahl-befallene-lymphknoten-0\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-anzahl-befallene-lymphknoten.html\">MII PR Onkologie Anzahl der befallenen Lymphknoten</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 21893-3}\">Regional lymph nodes positive [#] Specimen</span></p><p><b>subject</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example\">Patient/example</a></p><p><b>effective</b>: 2024-01-11</p><p><b>value</b>: 0 #<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code1 = '1')</span></p></div>"
+  },
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "laboratory"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "21893-3",
+      "display" : "Regional lymph nodes positive [#] Specimen"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/example"
+  },
+  "effectiveDateTime" : "2024-01-11",
+  "valueQuantity" : {
+    "value" : 0,
+    "unit" : "#",
+    "system" : "http://unitsofmeasure.org",
+    "code" : "1"
+  }
+}

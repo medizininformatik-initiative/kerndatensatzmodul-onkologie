@@ -1,0 +1,694 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-atc-transitions-2021> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-cm-onko-atc-transitions-2021"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap mii-cm-onko-atc-transitions-2021</b></p><a name=\"mii-cm-onko-atc-transitions-2021\"> </a><a name=\"hcmii-cm-onko-atc-transitions-2021\"> </a><p>Mapping from <a href=\"ValueSet-mii-vs-onko-systemische-therapie-substanzen-2020.html\">MII VS Onkologie Systemische Therapie Substanzen ATC 2020</a> to <a href=\"ValueSet-mii-vs-onko-systemische-therapie-substanzen-2021.html\">MII VS Onkologie Systemische Therapie Substanzen ATC 2021</a></p><br/><p>Mapping from <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.de/CodeSystem/bfarm/atc\">ATC</a> to <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.de/CodeSystem/bfarm/atc\">ATC</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>L01XE01 (Imatinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EA01 (Imatinib)</td><td>Reklassifizierung zu BCR-ABL Tyrosinkinase-Inhibitoren</td></tr><tr><td>L01XE06 (Dasatinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EA02 (Dasatinib)</td><td/></tr><tr><td>L01XE08 (Nilotinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EA03 (Nilotinib)</td><td/></tr><tr><td>L01XE14 (Bosutinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EA04 (Bosutinib)</td><td/></tr><tr><td>L01XE24 (Ponatinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EA05 (Ponatinib)</td><td/></tr><tr><td>L01XE02 (Gefitinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EB01 (Gefitinib)</td><td>Reklassifizierung zu EGFR Tyrosinkinase-Inhibitoren</td></tr><tr><td>L01XE03 (Erlotinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EB02 (Erlotinib)</td><td/></tr><tr><td>L01XE13 (Afatinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EB03 (Afatinib)</td><td/></tr><tr><td>L01XE35 (Osimertinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EB04 (Osimertinib)</td><td/></tr><tr><td>L01XE15 (Vemurafenib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EC01 (Vemurafenib)</td><td>Reklassifizierung zu BRAF-Inhibitoren</td></tr><tr><td>L01XE23 (Dabrafenib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EC02 (Dabrafenib)</td><td/></tr><tr><td>L01XE46 (Encorafenib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EC03 (Encorafenib)</td><td/></tr><tr><td>L01XE16 (Crizotinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01ED01 (Crizotinib)</td><td>Reklassifizierung zu ALK-Inhibitoren</td></tr><tr><td>L01XE28 (Ceritinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01ED02 (Ceritinib)</td><td/></tr><tr><td>L01XE36 (Alectinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01ED03 (Alectinib)</td><td/></tr><tr><td>L01XE43 (Brigatinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01ED04 (Brigatinib)</td><td/></tr><tr><td>L01XE44 (Lorlatinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01ED05 (Lorlatinib)</td><td/></tr><tr><td>L01XE25 (Trametinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EE01 (Trametinib)</td><td>Reklassifizierung zu MEK-Inhibitoren</td></tr><tr><td>L01XE38 (Cobimetinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EE02 (Cobimetinib)</td><td/></tr><tr><td>L01XE41 (Binimetinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EE03 (Binimetinib)</td><td/></tr><tr><td>L01XE33 (Palbociclib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EF01 (Palbociclib)</td><td>Reklassifizierung zu CDK4/6-Inhibitoren</td></tr><tr><td>L01XE42 (Ribociclib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EF02 (Ribociclib)</td><td/></tr><tr><td>L01XE50 (Abemaciclib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EF03 (Abemaciclib)</td><td/></tr><tr><td>L01XE09 (Temsirolimus)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EG01 (Temsirolimus)</td><td>Reklassifizierung zu mTOR-Inhibitoren</td></tr><tr><td>L01XE10 (Everolimus)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EG02 (Everolimus)</td><td/></tr><tr><td>L01XE07 (Lapatinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EH01 (Lapatinib)</td><td>Reklassifizierung zu HER2-Inhibitoren</td></tr><tr><td>L01XE45 (Neratinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EH02 (Neratinib)</td><td/></tr><tr><td>L01XE18 (Ruxolitinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EJ01 (Ruxolitinib)</td><td>Reklassifizierung zu JAK-Inhibitoren</td></tr><tr><td>L01XE17 (Axitinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EK01 (Axitinib)</td><td>Reklassifizierung zu VEGFR-Inhibitoren</td></tr><tr><td>L01XE34 (Tivozanib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EK03 (Tivozanib)</td><td/></tr><tr><td>L01XE27 (Ibrutinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EL01 (Ibrutinib)</td><td>Reklassifizierung zu BTK-Inhibitoren</td></tr><tr><td>L01XE51 (Acalabrutinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EL02 (Acalabrutinib)</td><td/></tr><tr><td>L01XX47 (Idelalisib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EM01 (Idelalisib)</td><td>Reklassifizierung zu PI3K-Inhibitoren</td></tr><tr><td>L01XX61 (Copanlisib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EM02 (Copanlisib)</td><td/></tr><tr><td>L01XE04 (Sunitinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EX01 (Sunitinib)</td><td>Reklassifizierung zu andere Proteinkinase-Inhibitoren</td></tr><tr><td>L01XE05 (Sorafenib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EX02 (Sorafenib)</td><td/></tr><tr><td>L01XE12 (Vandetanib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EX04 (Vandetanib)</td><td/></tr><tr><td>L01XE21 (Regorafenib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EX05 (Regorafenib)</td><td/></tr><tr><td>L01XE26 (Cabozantinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EX07 (Cabozantinib)</td><td/></tr><tr><td>L01XE29 (Lenvatinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EX08 (Lenvatinib)</td><td/></tr><tr><td>L01XE31 (Nintedanib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EX09 (Nintedanib)</td><td/></tr><tr><td>L01XE39 (Midostaurin)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EX10 (Midostaurin)</td><td/></tr><tr><td>L01XE52 (Quizartinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EX11 (Quizartinib)</td><td/></tr><tr><td>L01XE53 (Larotrectinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EX12 (Larotrectinib)</td><td/></tr><tr><td>L01XE54 (Gilteritinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EX13 (Gilteritinib)</td><td/></tr><tr><td>L01XX14 (Tretinoin)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XF01 (Tretinoin)</td><td>Reklassifizierung zu Retinoide</td></tr><tr><td>L01XX22 (Alitretinoin)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XF02 (Alitretinoin)</td><td/></tr><tr><td>L01XX25 (Bexaroten)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XF03 (Bexaroten)</td><td/></tr><tr><td>L01XX32 (Bortezomib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XG01 (Bortezomib)</td><td>Reklassifizierung zu Proteasom-Inhibitoren</td></tr><tr><td>L01XX45 (Carfilzomib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XG02 (Carfilzomib)</td><td/></tr><tr><td>L01XX50 (Ixazomib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XG03 (Ixazomib)</td><td/></tr><tr><td>L01XX38 (Vorinostat)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XH01 (Vorinostat)</td><td>Reklassifizierung zu Histon-Deacetylase-Inhibitoren</td></tr><tr><td>L01XX39 (Romidepsin)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XH02 (Romidepsin)</td><td/></tr><tr><td>L01XX42 (Panobinostat)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XH03 (Panobinostat)</td><td/></tr><tr><td>L01XX49 (Belinostat)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XH04 (Belinostat)</td><td/></tr><tr><td>L01XX43 (Vismodegib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XJ01 (Vismodegib)</td><td>Reklassifizierung zu Hedgehog-Signalweg-Inhibitoren</td></tr><tr><td>L01XX63 (Glasdegib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XJ03 (Glasdegib)</td><td/></tr><tr><td>L01XX46 (Olaparib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XK01 (Olaparib)</td><td>Reklassifizierung zu PARP-Inhibitoren</td></tr><tr><td>L01XX54 (Niraparib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XK02 (Niraparib)</td><td/></tr><tr><td>L01XX60 (Talazoparib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XK04 (Talazoparib)</td><td/></tr><tr><td>L01XX17 (Topotecan)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01CE01 (Topotecan)</td><td>Reklassifizierung zu Topoisomerase-I-Inhibitoren</td></tr><tr><td>L01XX19 (Irinotecan)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01CE02 (Irinotecan)</td><td/></tr></table></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap mii-cm-onko-atc-transitions-2021</b></p><a name=\"en-mii-cm-onko-atc-transitions-2021\"> </a><a name=\"en-hcmii-cm-onko-atc-transitions-2021\"> </a><p>Mapping from <a href=\"ValueSet-mii-vs-onko-systemische-therapie-substanzen-2020.html\">MII VS Onkologie Systemische Therapie Substanzen ATC 2020</a> to <a href=\"ValueSet-mii-vs-onko-systemische-therapie-substanzen-2021.html\">MII VS Onkologie Systemische Therapie Substanzen ATC 2021</a></p><br/><p>Mapping from <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.de/CodeSystem/bfarm/atc\">ATC</a> to <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.de/CodeSystem/bfarm/atc\">ATC</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>L01XE01 (Imatinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EA01 (Imatinib)</td><td>Reklassifizierung zu BCR-ABL Tyrosinkinase-Inhibitoren</td></tr><tr><td>L01XE06 (Dasatinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EA02 (Dasatinib)</td><td/></tr><tr><td>L01XE08 (Nilotinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EA03 (Nilotinib)</td><td/></tr><tr><td>L01XE14 (Bosutinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EA04 (Bosutinib)</td><td/></tr><tr><td>L01XE24 (Ponatinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EA05 (Ponatinib)</td><td/></tr><tr><td>L01XE02 (Gefitinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EB01 (Gefitinib)</td><td>Reklassifizierung zu EGFR Tyrosinkinase-Inhibitoren</td></tr><tr><td>L01XE03 (Erlotinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EB02 (Erlotinib)</td><td/></tr><tr><td>L01XE13 (Afatinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EB03 (Afatinib)</td><td/></tr><tr><td>L01XE35 (Osimertinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EB04 (Osimertinib)</td><td/></tr><tr><td>L01XE15 (Vemurafenib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EC01 (Vemurafenib)</td><td>Reklassifizierung zu BRAF-Inhibitoren</td></tr><tr><td>L01XE23 (Dabrafenib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EC02 (Dabrafenib)</td><td/></tr><tr><td>L01XE46 (Encorafenib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EC03 (Encorafenib)</td><td/></tr><tr><td>L01XE16 (Crizotinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01ED01 (Crizotinib)</td><td>Reklassifizierung zu ALK-Inhibitoren</td></tr><tr><td>L01XE28 (Ceritinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01ED02 (Ceritinib)</td><td/></tr><tr><td>L01XE36 (Alectinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01ED03 (Alectinib)</td><td/></tr><tr><td>L01XE43 (Brigatinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01ED04 (Brigatinib)</td><td/></tr><tr><td>L01XE44 (Lorlatinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01ED05 (Lorlatinib)</td><td/></tr><tr><td>L01XE25 (Trametinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EE01 (Trametinib)</td><td>Reklassifizierung zu MEK-Inhibitoren</td></tr><tr><td>L01XE38 (Cobimetinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EE02 (Cobimetinib)</td><td/></tr><tr><td>L01XE41 (Binimetinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EE03 (Binimetinib)</td><td/></tr><tr><td>L01XE33 (Palbociclib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EF01 (Palbociclib)</td><td>Reklassifizierung zu CDK4/6-Inhibitoren</td></tr><tr><td>L01XE42 (Ribociclib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EF02 (Ribociclib)</td><td/></tr><tr><td>L01XE50 (Abemaciclib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EF03 (Abemaciclib)</td><td/></tr><tr><td>L01XE09 (Temsirolimus)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EG01 (Temsirolimus)</td><td>Reklassifizierung zu mTOR-Inhibitoren</td></tr><tr><td>L01XE10 (Everolimus)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EG02 (Everolimus)</td><td/></tr><tr><td>L01XE07 (Lapatinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EH01 (Lapatinib)</td><td>Reklassifizierung zu HER2-Inhibitoren</td></tr><tr><td>L01XE45 (Neratinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EH02 (Neratinib)</td><td/></tr><tr><td>L01XE18 (Ruxolitinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EJ01 (Ruxolitinib)</td><td>Reklassifizierung zu JAK-Inhibitoren</td></tr><tr><td>L01XE17 (Axitinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EK01 (Axitinib)</td><td>Reklassifizierung zu VEGFR-Inhibitoren</td></tr><tr><td>L01XE34 (Tivozanib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EK03 (Tivozanib)</td><td/></tr><tr><td>L01XE27 (Ibrutinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EL01 (Ibrutinib)</td><td>Reklassifizierung zu BTK-Inhibitoren</td></tr><tr><td>L01XE51 (Acalabrutinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EL02 (Acalabrutinib)</td><td/></tr><tr><td>L01XX47 (Idelalisib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EM01 (Idelalisib)</td><td>Reklassifizierung zu PI3K-Inhibitoren</td></tr><tr><td>L01XX61 (Copanlisib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EM02 (Copanlisib)</td><td/></tr><tr><td>L01XE04 (Sunitinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EX01 (Sunitinib)</td><td>Reklassifizierung zu andere Proteinkinase-Inhibitoren</td></tr><tr><td>L01XE05 (Sorafenib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EX02 (Sorafenib)</td><td/></tr><tr><td>L01XE12 (Vandetanib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EX04 (Vandetanib)</td><td/></tr><tr><td>L01XE21 (Regorafenib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EX05 (Regorafenib)</td><td/></tr><tr><td>L01XE26 (Cabozantinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EX07 (Cabozantinib)</td><td/></tr><tr><td>L01XE29 (Lenvatinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EX08 (Lenvatinib)</td><td/></tr><tr><td>L01XE31 (Nintedanib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EX09 (Nintedanib)</td><td/></tr><tr><td>L01XE39 (Midostaurin)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EX10 (Midostaurin)</td><td/></tr><tr><td>L01XE52 (Quizartinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EX11 (Quizartinib)</td><td/></tr><tr><td>L01XE53 (Larotrectinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EX12 (Larotrectinib)</td><td/></tr><tr><td>L01XE54 (Gilteritinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EX13 (Gilteritinib)</td><td/></tr><tr><td>L01XX14 (Tretinoin)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XF01 (Tretinoin)</td><td>Reklassifizierung zu Retinoide</td></tr><tr><td>L01XX22 (Alitretinoin)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XF02 (Alitretinoin)</td><td/></tr><tr><td>L01XX25 (Bexaroten)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XF03 (Bexaroten)</td><td/></tr><tr><td>L01XX32 (Bortezomib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XG01 (Bortezomib)</td><td>Reklassifizierung zu Proteasom-Inhibitoren</td></tr><tr><td>L01XX45 (Carfilzomib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XG02 (Carfilzomib)</td><td/></tr><tr><td>L01XX50 (Ixazomib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XG03 (Ixazomib)</td><td/></tr><tr><td>L01XX38 (Vorinostat)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XH01 (Vorinostat)</td><td>Reklassifizierung zu Histon-Deacetylase-Inhibitoren</td></tr><tr><td>L01XX39 (Romidepsin)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XH02 (Romidepsin)</td><td/></tr><tr><td>L01XX42 (Panobinostat)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XH03 (Panobinostat)</td><td/></tr><tr><td>L01XX49 (Belinostat)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XH04 (Belinostat)</td><td/></tr><tr><td>L01XX43 (Vismodegib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XJ01 (Vismodegib)</td><td>Reklassifizierung zu Hedgehog-Signalweg-Inhibitoren</td></tr><tr><td>L01XX63 (Glasdegib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XJ03 (Glasdegib)</td><td/></tr><tr><td>L01XX46 (Olaparib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XK01 (Olaparib)</td><td>Reklassifizierung zu PARP-Inhibitoren</td></tr><tr><td>L01XX54 (Niraparib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XK02 (Niraparib)</td><td/></tr><tr><td>L01XX60 (Talazoparib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XK04 (Talazoparib)</td><td/></tr><tr><td>L01XX17 (Topotecan)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01CE01 (Topotecan)</td><td>Reklassifizierung zu Topoisomerase-I-Inhibitoren</td></tr><tr><td>L01XX19 (Irinotecan)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01CE02 (Irinotecan)</td><td/></tr></table></div></div>"
+  ] ;
+  fhir:ConceptMap.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-atc-transitions-2021"] ;
+  fhir:ConceptMap.version [ fhir:value "2026.0.3"] ;
+  fhir:ConceptMap.name [ fhir:value "MII_CM_Onko_ATC_Transitions_2021"] ;
+  fhir:ConceptMap.title [ fhir:value "MII CM Onko ATC Code Changes 2020 to 2021"] ;
+  fhir:ConceptMap.status [ fhir:value "active"] ;
+  fhir:ConceptMap.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ConceptMap.date [ fhir:value "2024-12-12"^^xsd:date] ;
+  fhir:ConceptMap.publisher [ fhir:value "Medizininformatik Initiative"] ;
+  fhir:ConceptMap.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Medizininformatik Initiative" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.medizininformatik-initiative.de/" ]
+     ]
+  ] ;
+  fhir:ConceptMap.description [ fhir:value "Diese ConceptMap dokumentiert ausschließlich die ATC-Code-Änderungen von 2020 zu 2021. Im Jahr 2021 erfolgte eine umfassende Reorganisation der ATC-Klassifikation für onkologische Substanzen mit Umkodierung von über 60 Wirkstoffen."] ;
+  fhir:ConceptMap.purpose [ fhir:value "Migration von ATC-Codes für Substanzen, die 2021 umkodiert wurden. Enthält nur geänderte Codes, keine neuen oder unveränderten Einträge."] ;
+  fhir:ConceptMap.sourceCanonical [
+     fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2020" ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2020>
+  ] ;
+  fhir:ConceptMap.targetCanonical [
+     fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2021" ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2021>
+  ] ;
+  fhir:ConceptMap.group [
+     fhir:index 0 ;
+     fhir:ConceptMap.group.source [ fhir:value "http://fhir.de/CodeSystem/bfarm/atc" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "http://fhir.de/CodeSystem/bfarm/atc" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index 0 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE01" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Imatinib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EA01" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Imatinib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Reklassifizierung zu BCR-ABL Tyrosinkinase-Inhibitoren" ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE06" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Dasatinib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EA02" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Dasatinib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 2 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE08" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Nilotinib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EA03" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Nilotinib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 3 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE14" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Bosutinib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EA04" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Bosutinib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 4 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE24" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Ponatinib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EA05" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Ponatinib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 5 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE02" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Gefitinib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EB01" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Gefitinib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Reklassifizierung zu EGFR Tyrosinkinase-Inhibitoren" ]
+       ]
+     ], [
+       fhir:index 6 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE03" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Erlotinib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EB02" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Erlotinib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 7 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE13" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Afatinib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EB03" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Afatinib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 8 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE35" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Osimertinib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EB04" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Osimertinib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 9 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE15" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Vemurafenib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EC01" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Vemurafenib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Reklassifizierung zu BRAF-Inhibitoren" ]
+       ]
+     ], [
+       fhir:index 10 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE23" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Dabrafenib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EC02" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Dabrafenib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 11 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE46" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Encorafenib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EC03" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Encorafenib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 12 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE16" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Crizotinib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01ED01" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Crizotinib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Reklassifizierung zu ALK-Inhibitoren" ]
+       ]
+     ], [
+       fhir:index 13 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE28" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Ceritinib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01ED02" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Ceritinib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 14 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE36" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Alectinib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01ED03" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Alectinib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 15 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE43" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Brigatinib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01ED04" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Brigatinib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 16 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE44" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Lorlatinib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01ED05" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Lorlatinib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 17 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE25" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Trametinib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EE01" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Trametinib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Reklassifizierung zu MEK-Inhibitoren" ]
+       ]
+     ], [
+       fhir:index 18 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE38" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Cobimetinib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EE02" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Cobimetinib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 19 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE41" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Binimetinib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EE03" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Binimetinib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 20 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE33" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Palbociclib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EF01" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Palbociclib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Reklassifizierung zu CDK4/6-Inhibitoren" ]
+       ]
+     ], [
+       fhir:index 21 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE42" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Ribociclib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EF02" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Ribociclib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 22 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE50" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Abemaciclib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EF03" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Abemaciclib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 23 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE09" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Temsirolimus" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EG01" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Temsirolimus" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Reklassifizierung zu mTOR-Inhibitoren" ]
+       ]
+     ], [
+       fhir:index 24 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE10" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Everolimus" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EG02" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Everolimus" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 25 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE07" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Lapatinib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EH01" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Lapatinib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Reklassifizierung zu HER2-Inhibitoren" ]
+       ]
+     ], [
+       fhir:index 26 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE45" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Neratinib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EH02" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Neratinib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 27 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE18" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Ruxolitinib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EJ01" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Ruxolitinib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Reklassifizierung zu JAK-Inhibitoren" ]
+       ]
+     ], [
+       fhir:index 28 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE17" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Axitinib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EK01" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Axitinib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Reklassifizierung zu VEGFR-Inhibitoren" ]
+       ]
+     ], [
+       fhir:index 29 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE34" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Tivozanib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EK03" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Tivozanib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 30 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE27" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Ibrutinib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EL01" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Ibrutinib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Reklassifizierung zu BTK-Inhibitoren" ]
+       ]
+     ], [
+       fhir:index 31 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE51" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Acalabrutinib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EL02" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Acalabrutinib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 32 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XX47" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Idelalisib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EM01" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Idelalisib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Reklassifizierung zu PI3K-Inhibitoren" ]
+       ]
+     ], [
+       fhir:index 33 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XX61" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Copanlisib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EM02" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Copanlisib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 34 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE04" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Sunitinib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EX01" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Sunitinib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Reklassifizierung zu andere Proteinkinase-Inhibitoren" ]
+       ]
+     ], [
+       fhir:index 35 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE05" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Sorafenib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EX02" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Sorafenib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 36 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE12" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Vandetanib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EX04" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Vandetanib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 37 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE21" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Regorafenib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EX05" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Regorafenib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 38 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE26" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Cabozantinib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EX07" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Cabozantinib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 39 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE29" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Lenvatinib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EX08" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Lenvatinib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 40 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE31" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Nintedanib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EX09" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Nintedanib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 41 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE39" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Midostaurin" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EX10" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Midostaurin" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 42 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE52" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Quizartinib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EX11" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Quizartinib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 43 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE53" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Larotrectinib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EX12" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Larotrectinib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 44 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XE54" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Gilteritinib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01EX13" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Gilteritinib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 45 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XX14" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Tretinoin" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01XF01" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Tretinoin" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Reklassifizierung zu Retinoide" ]
+       ]
+     ], [
+       fhir:index 46 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XX22" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Alitretinoin" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01XF02" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Alitretinoin" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 47 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XX25" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Bexaroten" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01XF03" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Bexaroten" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 48 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XX32" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Bortezomib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01XG01" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Bortezomib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Reklassifizierung zu Proteasom-Inhibitoren" ]
+       ]
+     ], [
+       fhir:index 49 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XX45" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Carfilzomib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01XG02" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Carfilzomib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 50 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XX50" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Ixazomib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01XG03" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Ixazomib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 51 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XX38" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Vorinostat" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01XH01" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Vorinostat" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Reklassifizierung zu Histon-Deacetylase-Inhibitoren" ]
+       ]
+     ], [
+       fhir:index 52 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XX39" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Romidepsin" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01XH02" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Romidepsin" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 53 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XX42" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Panobinostat" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01XH03" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Panobinostat" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 54 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XX49" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Belinostat" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01XH04" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Belinostat" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 55 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XX43" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Vismodegib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01XJ01" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Vismodegib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Reklassifizierung zu Hedgehog-Signalweg-Inhibitoren" ]
+       ]
+     ], [
+       fhir:index 56 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XX63" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Glasdegib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01XJ03" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Glasdegib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 57 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XX46" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Olaparib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01XK01" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Olaparib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Reklassifizierung zu PARP-Inhibitoren" ]
+       ]
+     ], [
+       fhir:index 58 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XX54" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Niraparib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01XK02" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Niraparib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 59 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XX60" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Talazoparib" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01XK04" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Talazoparib" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 60 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XX17" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Topotecan" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01CE01" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Topotecan" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Reklassifizierung zu Topoisomerase-I-Inhibitoren" ]
+       ]
+     ], [
+       fhir:index 61 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XX19" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Irinotecan" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01CE02" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Irinotecan" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-atc-transitions-2021.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

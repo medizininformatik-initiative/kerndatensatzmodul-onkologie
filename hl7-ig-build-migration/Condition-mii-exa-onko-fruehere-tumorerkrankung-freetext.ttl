@@ -1,0 +1,64 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-fruehere-tumorerkrankung-freetext> a fhir:Condition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-fruehere-tumorerkrankung-freetext"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung|2026.0.3" ;
+       fhir:index 0 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung|2026.0.3>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Condition mii-exa-onko-fruehere-tumorerkrankung-freetext</b></p><a name=\"mii-exa-onko-fruehere-tumorerkrankung-freetext\"> </a><a name=\"hcmii-exa-onko-fruehere-tumorerkrankung-freetext\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-fruehere-tumorerkrankung.html\">MII PR Onkologie Frühere Tumorerkrankung</a> version: 2026.0.3</p></div><p><b>Condition Asserted Date</b>: 2010</p><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical resolved}\">Resolved</span></p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 394593009}\">Medical oncology (qualifier value)</span></p><p><b>code</b>: <span title=\"Codes:\">Hautkrebs am Rücken, ca. 2010</span></p><p><b>subject</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example\">Patient/example</a></p><p><b>recordedDate</b>: 2024-06-14</p><p><b>note</b>: </p><blockquote><div><p>Patient berichtet von operativ entferntem Hautkrebs vor ca. 14 Jahren, keine weiteren Details verfügbar</p>\n</div></blockquote></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Condition mii-exa-onko-fruehere-tumorerkrankung-freetext</b></p><a name=\"en-mii-exa-onko-fruehere-tumorerkrankung-freetext\"> </a><a name=\"en-hcmii-exa-onko-fruehere-tumorerkrankung-freetext\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-fruehere-tumorerkrankung.html\">MII PR Onkologie Frühere Tumorerkrankung</a> version: 2026.0.3</p></div><p><b>Condition Asserted Date</b>: 2010</p><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical resolved}\">Resolved</span></p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 394593009}\">Medical oncology (qualifier value)</span></p><p><b>code</b>: <span title=\"Codes:\">Hautkrebs am Rücken, ca. 2010</span></p><p><b>subject</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example\">Patient/example</a></p><p><b>recordedDate</b>: 2024-06-14</p><p><b>note</b>: </p><blockquote><div><p>Patient berichtet von operativ entferntem Hautkrebs vor ca. 14 Jahren, keine weiteren Details verfügbar</p>\n</div></blockquote></div></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/condition-assertedDate" ] ;
+     fhir:Extension.valueDateTime [ fhir:value "2010"^^xsd:gYear ]
+  ] ;
+  fhir:Condition.clinicalStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-clinical" ] ;
+       fhir:Coding.code [ fhir:value "resolved" ]
+     ]
+  ] ;
+  fhir:Condition.category [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a sct:394593009 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "394593009" ] ;
+       fhir:Coding.display [ fhir:value "Medical oncology (qualifier value)" ]
+     ]
+  ] ;
+  fhir:Condition.code [
+     fhir:CodeableConcept.text [ fhir:value "Hautkrebs am Rücken, ca. 2010" ]
+  ] ;
+  fhir:Condition.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/example> ;
+     fhir:Reference.reference [ fhir:value "Patient/example" ]
+  ] ;
+  fhir:Condition.recordedDate [ fhir:value "2024-06-14"^^xsd:date] ;
+  fhir:Condition.note [
+     fhir:index 0 ;
+     fhir:Annotation.text [ fhir:value "Patient berichtet von operativ entferntem Hautkrebs vor ca. 14 Jahren, keine weiteren Details verfügbar" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-fruehere-tumorerkrankung-freetext.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,164 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-cs-onko-strahlentherapie-applikationsart"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/shareablecodesystem" ;
+       fhir:index -1 ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-onko-strahlentherapie-applikationsart</b></p><a name=\"en-mii-cs-onko-strahlentherapie-applikationsart\"> </a><a name=\"en-hcmii-cs-onko-strahlentherapie-applikationsart\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">P<a name=\"en-mii-cs-onko-strahlentherapie-applikationsart-P\"> </a></td><td>perkutan (Teletherapie)</td></tr><tr><td style=\"white-space:nowrap\">P-ST<a name=\"en-mii-cs-onko-strahlentherapie-applikationsart-P-ST\"> </a></td><td>perkutan stereotaktisch</td></tr><tr><td style=\"white-space:nowrap\">P-4D<a name=\"en-mii-cs-onko-strahlentherapie-applikationsart-P-4D\"> </a></td><td>perkutan, atemgetriggert</td></tr><tr><td style=\"white-space:nowrap\">P-ST4D<a name=\"en-mii-cs-onko-strahlentherapie-applikationsart-P-ST4D\"> </a></td><td>perkutan, stereotaktisch, atemgetriggert</td></tr><tr><td style=\"white-space:nowrap\">PRCN<a name=\"en-mii-cs-onko-strahlentherapie-applikationsart-PRCN\"> </a></td><td>perkutan ohne Chemotherapie/Sensitizer</td></tr><tr><td style=\"white-space:nowrap\">PRCN-ST<a name=\"en-mii-cs-onko-strahlentherapie-applikationsart-PRCN-ST\"> </a></td><td>perkutan, stereotaktisch ohne Chemotherapie/Sensitizer</td></tr><tr><td style=\"white-space:nowrap\">PRCN-4D<a name=\"en-mii-cs-onko-strahlentherapie-applikationsart-PRCN-4D\"> </a></td><td>perkutan, atemgetriggert, ohne Chemotherapie/Sensitizer</td></tr><tr><td style=\"white-space:nowrap\">PRCN-ST4D<a name=\"en-mii-cs-onko-strahlentherapie-applikationsart-PRCN-ST4D\"> </a></td><td>perkutan, stereotaktisch, atemgetriggert, ohne Chemotherapie/Sensitizer</td></tr><tr><td style=\"white-space:nowrap\">PRCJ<a name=\"en-mii-cs-onko-strahlentherapie-applikationsart-PRCJ\"> </a></td><td>perkutan mit Chemotherapie/Sensitizer</td></tr><tr><td style=\"white-space:nowrap\">PRCJ-ST<a name=\"en-mii-cs-onko-strahlentherapie-applikationsart-PRCJ-ST\"> </a></td><td>perkutan, stereotaktisch mit Chemotherapie/Sensitizer</td></tr><tr><td style=\"white-space:nowrap\">PRCJ-4D<a name=\"en-mii-cs-onko-strahlentherapie-applikationsart-PRCJ-4D\"> </a></td><td>perkutan, atemgetriggert, mit Chemotherapie/Sensitizer</td></tr><tr><td style=\"white-space:nowrap\">PRCJ-ST4D<a name=\"en-mii-cs-onko-strahlentherapie-applikationsart-PRCJ-ST4D\"> </a></td><td>perkutan, stereotaktisch, atemgetriggert, mit Chemotherapie/Sensitizer</td></tr><tr><td style=\"white-space:nowrap\">K<a name=\"en-mii-cs-onko-strahlentherapie-applikationsart-K\"> </a></td><td>endokavitäre Kontakttherapie</td></tr><tr><td style=\"white-space:nowrap\">KHDR<a name=\"en-mii-cs-onko-strahlentherapie-applikationsart-KHDR\"> </a></td><td>endokavitäre Kontakttherapie, high dose rate therapy</td></tr><tr><td style=\"white-space:nowrap\">KLDR<a name=\"en-mii-cs-onko-strahlentherapie-applikationsart-KLDR\"> </a></td><td>endokavitäre Kontakttherapie, low dose rate therapy</td></tr><tr><td style=\"white-space:nowrap\">KPDR<a name=\"en-mii-cs-onko-strahlentherapie-applikationsart-KPDR\"> </a></td><td>endokavitäre Kontakttherapie, pulsed dose rate therapy</td></tr><tr><td style=\"white-space:nowrap\">I<a name=\"en-mii-cs-onko-strahlentherapie-applikationsart-I\"> </a></td><td>intersitielle Kontakttherapie</td></tr><tr><td style=\"white-space:nowrap\">IHDR<a name=\"en-mii-cs-onko-strahlentherapie-applikationsart-IHDR\"> </a></td><td>intersitielle Kontakttherapie, high dose rate therapy</td></tr><tr><td style=\"white-space:nowrap\">ILDR<a name=\"en-mii-cs-onko-strahlentherapie-applikationsart-ILDR\"> </a></td><td>intersitielle Kontakttherapie, low dose rate therapy</td></tr><tr><td style=\"white-space:nowrap\">IPDR<a name=\"en-mii-cs-onko-strahlentherapie-applikationsart-IPDR\"> </a></td><td>intersitielle Kontakttherapie, pulsed dose rate therapy</td></tr><tr><td style=\"white-space:nowrap\">MSIRT<a name=\"en-mii-cs-onko-strahlentherapie-applikationsart-MSIRT\"> </a></td><td>selektive interne Radio-Therapie</td></tr><tr><td style=\"white-space:nowrap\">MPRRT<a name=\"en-mii-cs-onko-strahlentherapie-applikationsart-MPRRT\"> </a></td><td>Peptid-Radio-Rezeptor-Therapie</td></tr><tr><td style=\"white-space:nowrap\">MPSMA<a name=\"en-mii-cs-onko-strahlentherapie-applikationsart-MPSMA\"> </a></td><td>PSMA-Therapie</td></tr><tr><td style=\"white-space:nowrap\">MRJT<a name=\"en-mii-cs-onko-strahlentherapie-applikationsart-MRJT\"> </a></td><td>Radiojod-Therapie</td></tr><tr><td style=\"white-space:nowrap\">MRIT<a name=\"en-mii-cs-onko-strahlentherapie-applikationsart-MRIT\"> </a></td><td>Radioimmun-Therapie</td></tr><tr><td style=\"white-space:nowrap\">M<a name=\"en-mii-cs-onko-strahlentherapie-applikationsart-M\"> </a></td><td>sonstige metabolische Radionuklidtherapie</td></tr><tr><td style=\"white-space:nowrap\">S<a name=\"en-mii-cs-onko-strahlentherapie-applikationsart-S\"> </a></td><td>Sonstiges</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart"] ;
+  fhir:CodeSystem.version [ fhir:value "2026.0.3"] ;
+  fhir:CodeSystem.name [ fhir:value "MII_CS_Onko_Strahlentherapie_Applikationsart"] ;
+  fhir:CodeSystem.title [ fhir:value "MII CS Onkologie Strahlentherapie Applikationsart"] ;
+  fhir:CodeSystem.status [ fhir:value "active"] ;
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-07-02T12:18:38+00:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "Medizininformatik Initiative"] ;
+  fhir:CodeSystem.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "Medizininformatik Initiative" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.medizininformatik-initiative.de/" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "oBDS-spezifisches Codesystem für Klassifikation von Intention der OP"] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.valueSet [
+     fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-applikationsart" ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-applikationsart>
+  ] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "27"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "perkutan (Teletherapie)" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P-ST" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "perkutan stereotaktisch" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P-4D" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "perkutan, atemgetriggert" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P-ST4D" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "perkutan, stereotaktisch, atemgetriggert" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PRCN" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "perkutan ohne Chemotherapie/Sensitizer" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PRCN-ST" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "perkutan, stereotaktisch ohne Chemotherapie/Sensitizer" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PRCN-4D" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "perkutan, atemgetriggert, ohne Chemotherapie/Sensitizer" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PRCN-ST4D" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "perkutan, stereotaktisch, atemgetriggert, ohne Chemotherapie/Sensitizer" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PRCJ" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "perkutan mit Chemotherapie/Sensitizer" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PRCJ-ST" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "perkutan, stereotaktisch mit Chemotherapie/Sensitizer" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PRCJ-4D" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "perkutan, atemgetriggert, mit Chemotherapie/Sensitizer" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PRCJ-ST4D" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "perkutan, stereotaktisch, atemgetriggert, mit Chemotherapie/Sensitizer" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "endokavitäre Kontakttherapie" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "KHDR" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "endokavitäre Kontakttherapie, high dose rate therapy" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "KLDR" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "endokavitäre Kontakttherapie, low dose rate therapy" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "KPDR" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "endokavitäre Kontakttherapie, pulsed dose rate therapy" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "I" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "intersitielle Kontakttherapie" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IHDR" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "intersitielle Kontakttherapie, high dose rate therapy" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "ILDR" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "intersitielle Kontakttherapie, low dose rate therapy" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IPDR" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "intersitielle Kontakttherapie, pulsed dose rate therapy" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "MSIRT" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "selektive interne Radio-Therapie" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "MPRRT" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Peptid-Radio-Rezeptor-Therapie" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "MPSMA" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "PSMA-Therapie" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "MRJT" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Radiojod-Therapie" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "MRIT" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Radioimmun-Therapie" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "M" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "sonstige metabolische Radionuklidtherapie" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sonstiges" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,969 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-cs-onko-weitere-klassifikationen-obds"] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-onko-weitere-klassifikationen-obds</b></p><a name=\"mii-cs-onko-weitere-klassifikationen-obds\"> </a><a name=\"hcmii-cs-onko-weitere-klassifikationen-obds\"> </a><p>This  code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code> defines the following codes in an undefined hierarchy:</p><table class=\"codes\"><tr><td><b>Lvl</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>1</td><td style=\"white-space:nowrap\">binet<a name=\"mii-cs-onko-weitere-klassifikationen-obds-binet\"> </a></td><td>BINET Staging System</td><td>Staging system for chronic lymphocytic leukemia based on lymph node involvement and organ enlargement.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  binet-a<a name=\"mii-cs-onko-weitere-klassifikationen-obds-binet-a\"> </a></td><td>BINET A</td><td>Early stage CLL: lymphocytosis in blood and bone marrow only</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  binet-b<a name=\"mii-cs-onko-weitere-klassifikationen-obds-binet-b\"> </a></td><td>BINET B</td><td>Intermediate stage CLL: lymphocytosis with enlarged lymph nodes or spleen/liver</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  binet-c<a name=\"mii-cs-onko-weitere-klassifikationen-obds-binet-c\"> </a></td><td>BINET C</td><td>Advanced stage CLL: lymphocytosis with anemia or thrombocytopenia</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">ann-arbor-stadium<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-stadium\"> </a></td><td>Ann-Arbor Stadium</td><td>Staging system for Hodgkin and Non-Hodgkin lymphomas based on anatomical extent of disease.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-i<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-i\"> </a></td><td>I</td><td>Single lymph node region or single extralymphatic organ</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ia<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ia\"> </a></td><td>IA</td><td>Single lymph node region, asymptomatic</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iae<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iae\"> </a></td><td>IAE</td><td>Single lymph node region with extranodal extension, asymptomatic</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ib<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ib\"> </a></td><td>IB</td><td>Single lymph node region with B symptoms</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ibe<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ibe\"> </a></td><td>IBE</td><td>Single lymph node region with extranodal extension and B symptoms</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ie<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ie\"> </a></td><td>IE</td><td>Single extralymphatic organ involvement</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ix<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ix\"> </a></td><td>IX</td><td>Single lymph node region, symptoms unclear</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ixa<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ixa\"> </a></td><td>IXA</td><td>Single lymph node region, symptoms unclear, asymptomatic features</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ixae<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ixae\"> </a></td><td>IXAE</td><td>Single lymph node region with extranodal extension, symptoms unclear, asymptomatic features</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ixb<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ixb\"> </a></td><td>IXB</td><td>Single lymph node region, symptoms unclear, B symptom features</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ixbe<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ixbe\"> </a></td><td>IXBE</td><td>Single lymph node region with extranodal extension, symptoms unclear, B symptom features</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ixe<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ixe\"> </a></td><td>IXE</td><td>Single extralymphatic organ, symptoms unclear</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ii<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii\"> </a></td><td>II</td><td>Two or more lymph node regions on same side of diaphragm</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ii1<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1\"> </a></td><td>II1</td><td>Two lymph node regions on same side of diaphragm</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ii1a<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1a\"> </a></td><td>II1A</td><td>Two lymph node regions on same side of diaphragm, asymptomatic</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ii1ae<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1ae\"> </a></td><td>II1AE</td><td>Two lymph node regions on same side of diaphragm with extranodal extension, asymptomatic</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ii1b<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1b\"> </a></td><td>II1B</td><td>Two lymph node regions on same side of diaphragm with B symptoms</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ii1be<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1be\"> </a></td><td>II1BE</td><td>Two lymph node regions on same side of diaphragm with extranodal extension and B symptoms</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ii1e<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1e\"> </a></td><td>II1E</td><td>Two lymph node regions on same side of diaphragm with extranodal extension</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ii1x<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1x\"> </a></td><td>II1X</td><td>Two lymph node regions on same side of diaphragm, symptoms unclear</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ii1xa<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1xa\"> </a></td><td>II1XA</td><td>Two lymph node regions on same side of diaphragm, symptoms unclear, asymptomatic features</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ii1xae<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1xae\"> </a></td><td>II1XAE</td><td>Two lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, asymptomatic features</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ii1xb<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1xb\"> </a></td><td>II1XB</td><td>Two lymph node regions on same side of diaphragm, symptoms unclear, B symptom features</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ii1xbe<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1xbe\"> </a></td><td>II1XBE</td><td>Two lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, B symptom features</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ii1xe<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1xe\"> </a></td><td>II1XE</td><td>Two lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ii2<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2\"> </a></td><td>II2</td><td>Multiple lymph node regions on same side of diaphragm</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ii2a<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2a\"> </a></td><td>II2A</td><td>Multiple lymph node regions on same side of diaphragm, asymptomatic</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ii2ae<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2ae\"> </a></td><td>II2AE</td><td>Multiple lymph node regions on same side of diaphragm with extranodal extension, asymptomatic</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ii2b<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2b\"> </a></td><td>II2B</td><td>Multiple lymph node regions on same side of diaphragm with B symptoms</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ii2be<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2be\"> </a></td><td>II2BE</td><td>Multiple lymph node regions on same side of diaphragm with extranodal extension and B symptoms</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ii2e<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2e\"> </a></td><td>II2E</td><td>Multiple lymph node regions on same side of diaphragm with extranodal extension</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ii2x<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2x\"> </a></td><td>II2X</td><td>Multiple lymph node regions on same side of diaphragm, symptoms unclear</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ii2xa<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2xa\"> </a></td><td>II2XA</td><td>Multiple lymph node regions on same side of diaphragm, symptoms unclear, asymptomatic features</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ii2xae<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2xae\"> </a></td><td>II2XAE</td><td>Multiple lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, asymptomatic features</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ii2xb<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2xb\"> </a></td><td>II2XB</td><td>Multiple lymph node regions on same side of diaphragm, symptoms unclear, B symptom features</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ii2xbe<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2xbe\"> </a></td><td>II2XBE</td><td>Multiple lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, B symptom features</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ii2xe<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2xe\"> </a></td><td>II2XE</td><td>Multiple lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iia<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iia\"> </a></td><td>IIA</td><td>Two or more lymph node regions on same side of diaphragm, asymptomatic</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iiae<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiae\"> </a></td><td>IIAE</td><td>Two or more lymph node regions on same side of diaphragm with extranodal extension, asymptomatic</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iib<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iib\"> </a></td><td>IIB</td><td>Two or more lymph node regions on same side of diaphragm with B symptoms</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iibe<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iibe\"> </a></td><td>IIBE</td><td>Two or more lymph node regions on same side of diaphragm with extranodal extension and B symptoms</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iie<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iie\"> </a></td><td>IIE</td><td>Two or more lymph node regions on same side of diaphragm with extranodal extension</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iix<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iix\"> </a></td><td>IIX</td><td>Two or more lymph node regions on same side of diaphragm, symptoms unclear</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iixa<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iixa\"> </a></td><td>IIXA</td><td>Two or more lymph node regions on same side of diaphragm, symptoms unclear, asymptomatic features</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iixae<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iixae\"> </a></td><td>IIXAE</td><td>Two or more lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, asymptomatic features</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iixb<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iixb\"> </a></td><td>IIXB</td><td>Two or more lymph node regions on same side of diaphragm, symptoms unclear, B symptom features</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iixbe<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iixbe\"> </a></td><td>IIXBE</td><td>Two or more lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, B symptom features</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iixe<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iixe\"> </a></td><td>IIXE</td><td>Two or more lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iii<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iii\"> </a></td><td>III</td><td>Lymph node regions on both sides of diaphragm</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iiia<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiia\"> </a></td><td>IIIA</td><td>Lymph node regions on both sides of diaphragm, asymptomatic</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iiiae<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiiae\"> </a></td><td>IIIAE</td><td>Lymph node regions on both sides of diaphragm with extranodal extension, asymptomatic</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iiiaes<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiiaes\"> </a></td><td>IIIAES</td><td>Lymph node regions on both sides of diaphragm with extranodal extension and spleen involvement, asymptomatic</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iiias<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiias\"> </a></td><td>IIIAS</td><td>Lymph node regions on both sides of diaphragm with spleen involvement, asymptomatic</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iiib<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiib\"> </a></td><td>IIIB</td><td>Lymph node regions on both sides of diaphragm with B symptoms</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iiibe<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiibe\"> </a></td><td>IIIBE</td><td>Lymph node regions on both sides of diaphragm with extranodal extension and B symptoms</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iiibes<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiibes\"> </a></td><td>IIIBES</td><td>Lymph node regions on both sides of diaphragm with extranodal extension, spleen involvement, and B symptoms</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iiibs<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiibs\"> </a></td><td>IIIBS</td><td>Lymph node regions on both sides of diaphragm with spleen involvement and B symptoms</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iiie<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiie\"> </a></td><td>IIIE</td><td>Lymph node regions on both sides of diaphragm with extranodal extension</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iiies<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiies\"> </a></td><td>IIIES</td><td>Lymph node regions on both sides of diaphragm with extranodal extension and spleen involvement</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iiis<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiis\"> </a></td><td>IIIS</td><td>Lymph node regions on both sides of diaphragm with spleen involvement</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iiix<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiix\"> </a></td><td>IIIX</td><td>Lymph node regions on both sides of diaphragm, symptoms unclear</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iiixa<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiixa\"> </a></td><td>IIIXA</td><td>Lymph node regions on both sides of diaphragm, symptoms unclear, asymptomatic features</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iiixae<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiixae\"> </a></td><td>IIIXAE</td><td>Lymph node regions on both sides of diaphragm with extranodal extension, symptoms unclear, asymptomatic features</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iiixaes<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiixaes\"> </a></td><td>IIIXAES</td><td>Lymph node regions on both sides of diaphragm with extranodal extension and spleen involvement, symptoms unclear, asymptomatic features</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iiixas<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiixas\"> </a></td><td>IIIXAS</td><td>Lymph node regions on both sides of diaphragm with spleen involvement, symptoms unclear, asymptomatic features</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iiixb<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiixb\"> </a></td><td>IIIXB</td><td>Lymph node regions on both sides of diaphragm, symptoms unclear, B symptom features</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iiixbe<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiixbe\"> </a></td><td>IIIXBE</td><td>Lymph node regions on both sides of diaphragm with extranodal extension, symptoms unclear, B symptom features</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iiixbes<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiixbes\"> </a></td><td>IIIXBES</td><td>Lymph node regions on both sides of diaphragm with extranodal extension and spleen involvement, symptoms unclear, B symptom features</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iiixbs<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiixbs\"> </a></td><td>IIIXBS</td><td>Lymph node regions on both sides of diaphragm with spleen involvement, symptoms unclear, B symptom features</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iiixe<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiixe\"> </a></td><td>IIIXE</td><td>Lymph node regions on both sides of diaphragm with extranodal extension, symptoms unclear</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iiixes<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiixes\"> </a></td><td>IIIXES</td><td>Lymph node regions on both sides of diaphragm with extranodal extension and spleen involvement, symptoms unclear</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iiixs<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiixs\"> </a></td><td>IIIXS</td><td>Lymph node regions on both sides of diaphragm with spleen involvement, symptoms unclear</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iii1<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iii1\"> </a></td><td>III1</td><td>Limited lymph node regions on both sides of diaphragm</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iii1a<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iii1a\"> </a></td><td>III1A</td><td>Limited lymph node regions on both sides of diaphragm, asymptomatic</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iii1b<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iii1b\"> </a></td><td>III1B</td><td>Limited lymph node regions on both sides of diaphragm with B symptoms</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iii2<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iii2\"> </a></td><td>III2</td><td>Multiple lymph node regions on both sides of diaphragm</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iii2a<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iii2a\"> </a></td><td>III2A</td><td>Multiple lymph node regions on both sides of diaphragm, asymptomatic</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iii2b<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iii2b\"> </a></td><td>III2B</td><td>Multiple lymph node regions on both sides of diaphragm with B symptoms</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iv<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iv\"> </a></td><td>IV</td><td>Disseminated involvement of one or more extralymphatic organs</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-iva<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iva\"> </a></td><td>IVA</td><td>Disseminated involvement of extralymphatic organs, asymptomatic</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ivae<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ivae\"> </a></td><td>IVAE</td><td>Disseminated involvement of extralymphatic organs with additional extranodal extension, asymptomatic</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ivb<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ivb\"> </a></td><td>IVB</td><td>Disseminated involvement of extralymphatic organs with B symptoms</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ivbe<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ivbe\"> </a></td><td>IVBE</td><td>Disseminated involvement of extralymphatic organs with additional extranodal extension and B symptoms</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ive<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ive\"> </a></td><td>IVE</td><td>Disseminated involvement of extralymphatic organs with extranodal extension</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ivx<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ivx\"> </a></td><td>IVX</td><td>Disseminated involvement of extralymphatic organs, symptoms unclear</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ivxa<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ivxa\"> </a></td><td>IVXA</td><td>Disseminated involvement of extralymphatic organs, symptoms unclear, asymptomatic features</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ivxae<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ivxae\"> </a></td><td>IVXAE</td><td>Disseminated involvement of extralymphatic organs with additional extranodal extension, symptoms unclear, asymptomatic features</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ivxb<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ivxb\"> </a></td><td>IVXB</td><td>Disseminated involvement of extralymphatic organs, symptoms unclear, B symptom features</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ivxbe<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ivxbe\"> </a></td><td>IVXBE</td><td>Disseminated involvement of extralymphatic organs with additional extranodal extension, symptoms unclear, B symptom features</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ann-arbor-ivxe<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ivxe\"> </a></td><td>IVXE</td><td>Disseminated involvement of extralymphatic organs with extranodal extension, symptoms unclear</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">iss<a name=\"mii-cs-onko-weitere-klassifikationen-obds-iss\"> </a></td><td>International Staging System</td><td>Staging system for multiple myeloma based on serum beta-2 microglobulin and albumin levels.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  iss-i<a name=\"mii-cs-onko-weitere-klassifikationen-obds-iss-i\"> </a></td><td>ISS I</td><td>Beta-2 microglobulin &lt;3.5 mg/L and albumin ≥3.5 g/dL</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  iss-ii<a name=\"mii-cs-onko-weitere-klassifikationen-obds-iss-ii\"> </a></td><td>ISS II</td><td>Not ISS I or ISS III</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  iss-iii<a name=\"mii-cs-onko-weitere-klassifikationen-obds-iss-iii\"> </a></td><td>ISS III</td><td>Beta-2 microglobulin ≥5.5 mg/L</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">isswm<a name=\"mii-cs-onko-weitere-klassifikationen-obds-isswm\"> </a></td><td>International Scoring System for Waldenström's Macroglobulinemia</td><td>Prognostic scoring system for Waldenström's macroglobulinemia based on age, beta-2 microglobulin, and albumin levels.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  isswm-n<a name=\"mii-cs-onko-weitere-klassifikationen-obds-isswm-n\"> </a></td><td>ISSWM Niedrig</td><td>Low risk: age ≤65 years, beta-2 microglobulin ≤3 mg/L, albumin &gt;3.5 g/dL</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  isswm-i<a name=\"mii-cs-onko-weitere-klassifikationen-obds-isswm-i\"> </a></td><td>ISSWM Intermediär</td><td>Intermediate risk: one adverse factor</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  isswm-h<a name=\"mii-cs-onko-weitere-klassifikationen-obds-isswm-h\"> </a></td><td>ISSWM Hoch</td><td>High risk: age &gt;65 years or beta-2 microglobulin &gt;3 mg/L, or albumin ≤3.5 g/dL (≥2 factors)</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">who-grad<a name=\"mii-cs-onko-weitere-klassifikationen-obds-who-grad\"> </a></td><td>WHO Grade</td><td>World Health Organization grading system for central nervous system tumors based on histological features.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  who-grad-i<a name=\"mii-cs-onko-weitere-klassifikationen-obds-who-grad-i\"> </a></td><td>WHO Grad I</td><td>Well-differentiated, slow-growing, low proliferative potential</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  who-grad-ii<a name=\"mii-cs-onko-weitere-klassifikationen-obds-who-grad-ii\"> </a></td><td>WHO Grad II</td><td>Moderately differentiated, infiltrative, low proliferative potential</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  who-grad-iii<a name=\"mii-cs-onko-weitere-klassifikationen-obds-who-grad-iii\"> </a></td><td>WHO Grad III</td><td>Poorly differentiated, anaplastic, high proliferative potential</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  who-grad-iv<a name=\"mii-cs-onko-weitere-klassifikationen-obds-who-grad-iv\"> </a></td><td>WHO Grad IV</td><td>Poorly differentiated, high mitotic activity, necrosis, microvascular proliferation</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">formen<a name=\"mii-cs-onko-weitere-klassifikationen-obds-formen\"> </a></td><td>Formen</td><td>Classification of lymphoma forms distinguishing classical and variant presentations.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  formen-k<a name=\"mii-cs-onko-weitere-klassifikationen-obds-formen-k\"> </a></td><td>Klassisch</td><td>Classical form of lymphoma presentation</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  formen-v<a name=\"mii-cs-onko-weitere-klassifikationen-obds-formen-v\"> </a></td><td>Variante</td><td>Variant form of lymphoma presentation</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">eln-klassifikation<a name=\"mii-cs-onko-weitere-klassifikationen-obds-eln-klassifikation\"> </a></td><td>ELN-Klassifikation</td><td>European LeukemiaNet risk stratification for acute myeloid leukemia based on cytogenetic and molecular genetic abnormalities.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  eln-g<a name=\"mii-cs-onko-weitere-klassifikationen-obds-eln-g\"> </a></td><td>ELN Günstig</td><td>Favorable risk: good prognosis cytogenetic/molecular markers</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  eln-i1<a name=\"mii-cs-onko-weitere-klassifikationen-obds-eln-i1\"> </a></td><td>ELN Intermediär I</td><td>Intermediate risk I: intermediate prognosis markers</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  eln-i2<a name=\"mii-cs-onko-weitere-klassifikationen-obds-eln-i2\"> </a></td><td>ELN Intermediär II</td><td>Intermediate risk II: intermediate prognosis markers</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  eln-u<a name=\"mii-cs-onko-weitere-klassifikationen-obds-eln-u\"> </a></td><td>ELN Ungünstig</td><td>Unfavorable risk: poor prognosis cytogenetic/molecular markers</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  eln-cp<a name=\"mii-cs-onko-weitere-klassifikationen-obds-eln-cp\"> </a></td><td>ELN Chronische Phase</td><td>Chronic phase (CML context)</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  eln-ap<a name=\"mii-cs-onko-weitere-klassifikationen-obds-eln-ap\"> </a></td><td>ELN Akzelierte Phase</td><td>Accelerated phase (CML context)</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  eln-bk<a name=\"mii-cs-onko-weitere-klassifikationen-obds-eln-bk\"> </a></td><td>ELN Blastenkrise</td><td>Blast crisis phase (CML context)</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">durie-salmon-stadium<a name=\"mii-cs-onko-weitere-klassifikationen-obds-durie-salmon-stadium\"> </a></td><td>Durie-Salmon Stadium</td><td>Multiple myeloma staging system based on tumor burden and organ function.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  durie-salmon-i<a name=\"mii-cs-onko-weitere-klassifikationen-obds-durie-salmon-i\"> </a></td><td>Durie-Salmon I</td><td>Low tumor burden: hemoglobin &gt;10 g/dL, calcium normal, no bone lesions</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  durie-salmon-ia<a name=\"mii-cs-onko-weitere-klassifikationen-obds-durie-salmon-ia\"> </a></td><td>Durie-Salmon IA</td><td>Low tumor burden with normal renal function</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  durie-salmon-ib<a name=\"mii-cs-onko-weitere-klassifikationen-obds-durie-salmon-ib\"> </a></td><td>Durie-Salmon IB</td><td>Low tumor burden with abnormal renal function</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  durie-salmon-ii<a name=\"mii-cs-onko-weitere-klassifikationen-obds-durie-salmon-ii\"> </a></td><td>Durie-Salmon II</td><td>Intermediate tumor burden: neither stage I nor III criteria</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  durie-salmon-iia<a name=\"mii-cs-onko-weitere-klassifikationen-obds-durie-salmon-iia\"> </a></td><td>Durie-Salmon IIA</td><td>Intermediate tumor burden with normal renal function</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  durie-salmon-iib<a name=\"mii-cs-onko-weitere-klassifikationen-obds-durie-salmon-iib\"> </a></td><td>Durie-Salmon IIB</td><td>Intermediate tumor burden with abnormal renal function</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  durie-salmon-iii<a name=\"mii-cs-onko-weitere-klassifikationen-obds-durie-salmon-iii\"> </a></td><td>Durie-Salmon III</td><td>High tumor burden: hemoglobin &lt;8.5 g/dL, calcium elevated, extensive bone lesions</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  durie-salmon-iiia<a name=\"mii-cs-onko-weitere-klassifikationen-obds-durie-salmon-iiia\"> </a></td><td>Durie-Salmon IIIA</td><td>High tumor burden with normal renal function</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  durie-salmon-iiib<a name=\"mii-cs-onko-weitere-klassifikationen-obds-durie-salmon-iiib\"> </a></td><td>Durie-Salmon IIIB</td><td>High tumor burden with abnormal renal function</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">bismuth<a name=\"mii-cs-onko-weitere-klassifikationen-obds-bismuth\"> </a></td><td>Bismuth</td><td>Classification system for hilar cholangiocarcinoma based on the extent of biliary involvement and resectability.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  bismuth-i<a name=\"mii-cs-onko-weitere-klassifikationen-obds-bismuth-i\"> </a></td><td>Bismuth I</td><td>Tumor below confluence of left and right hepatic ducts</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  bismuth-ii<a name=\"mii-cs-onko-weitere-klassifikationen-obds-bismuth-ii\"> </a></td><td>Bismuth II</td><td>Tumor reaching confluence but not involving secondary ducts</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  bismuth-iii<a name=\"mii-cs-onko-weitere-klassifikationen-obds-bismuth-iii\"> </a></td><td>Bismuth III</td><td>Tumor involving confluence and either right or left secondary ducts</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  bismuth-iiia<a name=\"mii-cs-onko-weitere-klassifikationen-obds-bismuth-iiia\"> </a></td><td>Bismuth IIIA</td><td>Tumor involving confluence and right secondary ducts</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  bismuth-iiib<a name=\"mii-cs-onko-weitere-klassifikationen-obds-bismuth-iiib\"> </a></td><td>Bismuth IIIB</td><td>Tumor involving confluence and left secondary ducts</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  bismuth-iv<a name=\"mii-cs-onko-weitere-klassifikationen-obds-bismuth-iv\"> </a></td><td>Bismuth IV</td><td>Tumor involving confluence and both right and left secondary ducts</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">masaoka<a name=\"mii-cs-onko-weitere-klassifikationen-obds-masaoka\"> </a></td><td>Masaoka</td><td>Staging system for thymomas based on invasiveness and extent of disease.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  masaoka-i<a name=\"mii-cs-onko-weitere-klassifikationen-obds-masaoka-i\"> </a></td><td>Masaoka I</td><td>Encapsulated tumor without invasion</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  masaoka-ii<a name=\"mii-cs-onko-weitere-klassifikationen-obds-masaoka-ii\"> </a></td><td>Masaoka II</td><td>Invasion into surrounding fatty tissue or mediastinal pleura</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  masaoka-iii<a name=\"mii-cs-onko-weitere-klassifikationen-obds-masaoka-iii\"> </a></td><td>Masaoka III</td><td>Invasion into neighboring organs</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  masaoka-iv<a name=\"mii-cs-onko-weitere-klassifikationen-obds-masaoka-iv\"> </a></td><td>Masaoka IV</td><td>Pleural or pericardial dissemination</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  masaoka-iva<a name=\"mii-cs-onko-weitere-klassifikationen-obds-masaoka-iva\"> </a></td><td>Masaoka IVA</td><td>Pleural or pericardial implants</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  masaoka-ivb<a name=\"mii-cs-onko-weitere-klassifikationen-obds-masaoka-ivb\"> </a></td><td>Masaoka IVB</td><td>Lymphogenous or hematogenous metastasis</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">mitoserate-gist<a name=\"mii-cs-onko-weitere-klassifikationen-obds-mitoserate-gist\"> </a></td><td>Mitoserate-GIST</td><td>Mitotic rate assessment for gastrointestinal stromal tumors.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  mitoserate-gist-n<a name=\"mii-cs-onko-weitere-klassifikationen-obds-mitoserate-gist-n\"> </a></td><td>Mitoserate-GIST Niedrig</td><td>Low mitotic rate: ≤5 mitoses per 50 HPF</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  mitoserate-gist-h<a name=\"mii-cs-onko-weitere-klassifikationen-obds-mitoserate-gist-h\"> </a></td><td>Mitoserate-GIST Hoch</td><td>High mitotic rate: &gt;5 mitoses per 50 HPF</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">p16<a name=\"mii-cs-onko-weitere-klassifikationen-obds-p16\"> </a></td><td>p16</td><td>p16 protein expression status assessment.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  p16-p<a name=\"mii-cs-onko-weitere-klassifikationen-obds-p16-p\"> </a></td><td>p16 Positiv</td><td>Positive p16 protein expression</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  p16-n<a name=\"mii-cs-onko-weitere-klassifikationen-obds-p16-n\"> </a></td><td>p16 Negativ</td><td>Negative p16 protein expression</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">eutos-score<a name=\"mii-cs-onko-weitere-klassifikationen-obds-eutos-score\"> </a></td><td>EUTOS-Score</td><td>European Treatment and Outcome Study prognostic score for chronic myeloid leukemia.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  eutos-score-n<a name=\"mii-cs-onko-weitere-klassifikationen-obds-eutos-score-n\"> </a></td><td>EUTOS-Score Niedrigrisiko</td><td>Low risk EUTOS score: ≤87</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  eutos-score-h<a name=\"mii-cs-onko-weitere-klassifikationen-obds-eutos-score-h\"> </a></td><td>EUTOS-Score Hochrisiko</td><td>High risk EUTOS score: &gt;87</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">sanz-score<a name=\"mii-cs-onko-weitere-klassifikationen-obds-sanz-score\"> </a></td><td>Sanz-Score</td><td>Risk assessment score for acute promyelocytic leukemia.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  sanz-score-n<a name=\"mii-cs-onko-weitere-klassifikationen-obds-sanz-score-n\"> </a></td><td>Sanz-Score Niedrig</td><td>Low risk: WBC &lt;10x10⁹/L and platelets &gt;40x10⁹/L</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  sanz-score-i<a name=\"mii-cs-onko-weitere-klassifikationen-obds-sanz-score-i\"> </a></td><td>Sanz-Score Intermediär</td><td>Intermediate risk: WBC &lt;10x10⁹/L and platelets ≤40x10⁹/L</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  sanz-score-h<a name=\"mii-cs-onko-weitere-klassifikationen-obds-sanz-score-h\"> </a></td><td>Sanz-Score Hoch</td><td>High risk: WBC ≥10x10⁹/L</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">ipi<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ipi\"> </a></td><td>IPI</td><td>International Prognostic Index for aggressive non-Hodgkin lymphoma.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ipi-n<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ipi-n\"> </a></td><td>IPI Niedrig</td><td>Low risk: 0-1 risk factors</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ipi-ni<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ipi-ni\"> </a></td><td>IPI Niedrig-Intermediär</td><td>Low-intermediate risk: 2 risk factors</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ipi-hi<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ipi-hi\"> </a></td><td>IPI Hoch-Intermediär</td><td>High-intermediate risk: 3 risk factors</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ipi-h<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ipi-h\"> </a></td><td>IPI Hoch</td><td>High risk: 4-5 risk factors</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">flipi<a name=\"mii-cs-onko-weitere-klassifikationen-obds-flipi\"> </a></td><td>FLIPI</td><td>Follicular Lymphoma International Prognostic Index.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  flipi-l<a name=\"mii-cs-onko-weitere-klassifikationen-obds-flipi-l\"> </a></td><td>FLIPI Low risk</td><td>Low risk: 0-1 risk factors</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  flipi-i<a name=\"mii-cs-onko-weitere-klassifikationen-obds-flipi-i\"> </a></td><td>FLIPI Intermediate risk</td><td>Intermediate risk: 2 risk factors</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  flipi-h<a name=\"mii-cs-onko-weitere-klassifikationen-obds-flipi-h\"> </a></td><td>FLIPI High risk</td><td>High risk: ≥3 risk factors</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">mipi<a name=\"mii-cs-onko-weitere-klassifikationen-obds-mipi\"> </a></td><td>MIPI</td><td>Mantle Cell Lymphoma International Prognostic Index.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  mipi-n<a name=\"mii-cs-onko-weitere-klassifikationen-obds-mipi-n\"> </a></td><td>MIPI Niedrig</td><td>Low risk MIPI score</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  mipi-i<a name=\"mii-cs-onko-weitere-klassifikationen-obds-mipi-i\"> </a></td><td>MIPI Intermediär</td><td>Intermediate risk MIPI score</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  mipi-h<a name=\"mii-cs-onko-weitere-klassifikationen-obds-mipi-h\"> </a></td><td>MIPI Hoch</td><td>High risk MIPI score</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">risikogruppen-ghsg<a name=\"mii-cs-onko-weitere-klassifikationen-obds-risikogruppen-ghsg\"> </a></td><td>Risikogruppen GHSG</td><td>German Hodgkin Study Group risk stratification.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  risikogruppen-ghsg-fr<a name=\"mii-cs-onko-weitere-klassifikationen-obds-risikogruppen-ghsg-fr\"> </a></td><td>GHSG Frühe</td><td>Early favorable risk group</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  risikogruppen-ghsg-i<a name=\"mii-cs-onko-weitere-klassifikationen-obds-risikogruppen-ghsg-i\"> </a></td><td>GHSG Intermediär</td><td>Intermediate risk group</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  risikogruppen-ghsg-fo<a name=\"mii-cs-onko-weitere-klassifikationen-obds-risikogruppen-ghsg-fo\"> </a></td><td>GHSG Fortgeschritten</td><td>Advanced risk group</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">ipss<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ipss\"> </a></td><td>IPSS</td><td>International Prognostic Scoring System for myelodysplastic syndromes.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ipss-l<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ipss-l\"> </a></td><td>IPSS Low</td><td>Low risk: score 0</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ipss-i1<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ipss-i1\"> </a></td><td>IPSS Intermediate-I</td><td>Intermediate-1 risk: score 0.5-1.0</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ipss-i2<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ipss-i2\"> </a></td><td>IPSS Intermediate-II</td><td>Intermediate-2 risk: score 1.5-2.0</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ipss-h<a name=\"mii-cs-onko-weitere-klassifikationen-obds-ipss-h\"> </a></td><td>IPSS High risk</td><td>High risk: score ≥2.5</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">her2-neu<a name=\"mii-cs-onko-weitere-klassifikationen-obds-her2-neu\"> </a></td><td>HER2-neu</td><td>HER2-neu protein expression and gene amplification status.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  her2-neu-p<a name=\"mii-cs-onko-weitere-klassifikationen-obds-her2-neu-p\"> </a></td><td>HER2-neu Positiv</td><td>Positive HER2-neu status (IHC 3+ or FISH amplified)</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  her2-neu-n<a name=\"mii-cs-onko-weitere-klassifikationen-obds-her2-neu-n\"> </a></td><td>HER2-neu Negativ</td><td>Negative HER2-neu status (IHC 0-1+ or FISH not amplified)</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds"] ;
+  fhir:CodeSystem.version [ fhir:value "2026.0.3"] ;
+  fhir:CodeSystem.name [ fhir:value "MII_CS_Onko_Weitere_Klassifikationen_OBDS"] ;
+  fhir:CodeSystem.title [ fhir:value "MII CodeSystem Onkologie - Weitere Klassifikationen oBDS"] ;
+  fhir:CodeSystem.status [ fhir:value "active"] ;
+  fhir:CodeSystem.experimental [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-07-02T12:18:38+00:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "Medizininformatik Initiative"] ;
+  fhir:CodeSystem.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "Medizininformatik Initiative" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.medizininformatik-initiative.de/" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "oBDS-specific classification systems and scoring systems not yet covered by international terminologies (SNOMED CT, NCI Thesaurus). These codes supplement the existing ValueSet for additional classifications. Research required: Check if SNOMED CT or LOINC codes exist for these scoring systems before using oBDS-specific codes."] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "181"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "binet" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "BINET Staging System" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Staging system for chronic lymphocytic leukemia based on lymph node involvement and organ enlargement." ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "binet-a" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "BINET A" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Early stage CLL: lymphocytosis in blood and bone marrow only" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "binet-b" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "BINET B" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Intermediate stage CLL: lymphocytosis with enlarged lymph nodes or spleen/liver" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "binet-c" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "BINET C" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Advanced stage CLL: lymphocytosis with anemia or thrombocytopenia" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-stadium" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Ann-Arbor Stadium" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Staging system for Hodgkin and Non-Hodgkin lymphomas based on anatomical extent of disease." ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-i" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "I" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Single lymph node region or single extralymphatic organ" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ia" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IA" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Single lymph node region, asymptomatic" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iae" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IAE" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Single lymph node region with extranodal extension, asymptomatic" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ib" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IB" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Single lymph node region with B symptoms" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ibe" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IBE" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Single lymph node region with extranodal extension and B symptoms" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ie" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IE" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Single extralymphatic organ involvement" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ix" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IX" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Single lymph node region, symptoms unclear" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ixa" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IXA" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Single lymph node region, symptoms unclear, asymptomatic features" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ixae" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IXAE" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Single lymph node region with extranodal extension, symptoms unclear, asymptomatic features" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ixb" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IXB" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Single lymph node region, symptoms unclear, B symptom features" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ixbe" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IXBE" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Single lymph node region with extranodal extension, symptoms unclear, B symptom features" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ixe" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IXE" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Single extralymphatic organ, symptoms unclear" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ii" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "II" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Two or more lymph node regions on same side of diaphragm" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ii1" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "II1" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Two lymph node regions on same side of diaphragm" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ii1a" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "II1A" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Two lymph node regions on same side of diaphragm, asymptomatic" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ii1ae" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "II1AE" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Two lymph node regions on same side of diaphragm with extranodal extension, asymptomatic" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ii1b" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "II1B" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Two lymph node regions on same side of diaphragm with B symptoms" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ii1be" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "II1BE" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Two lymph node regions on same side of diaphragm with extranodal extension and B symptoms" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ii1e" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "II1E" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Two lymph node regions on same side of diaphragm with extranodal extension" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ii1x" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "II1X" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Two lymph node regions on same side of diaphragm, symptoms unclear" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ii1xa" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "II1XA" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Two lymph node regions on same side of diaphragm, symptoms unclear, asymptomatic features" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ii1xae" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "II1XAE" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Two lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, asymptomatic features" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ii1xb" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "II1XB" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Two lymph node regions on same side of diaphragm, symptoms unclear, B symptom features" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ii1xbe" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "II1XBE" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Two lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, B symptom features" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ii1xe" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "II1XE" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Two lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ii2" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "II2" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Multiple lymph node regions on same side of diaphragm" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ii2a" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "II2A" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Multiple lymph node regions on same side of diaphragm, asymptomatic" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ii2ae" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "II2AE" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Multiple lymph node regions on same side of diaphragm with extranodal extension, asymptomatic" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ii2b" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "II2B" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Multiple lymph node regions on same side of diaphragm with B symptoms" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ii2be" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "II2BE" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Multiple lymph node regions on same side of diaphragm with extranodal extension and B symptoms" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ii2e" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "II2E" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Multiple lymph node regions on same side of diaphragm with extranodal extension" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ii2x" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "II2X" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Multiple lymph node regions on same side of diaphragm, symptoms unclear" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ii2xa" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "II2XA" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Multiple lymph node regions on same side of diaphragm, symptoms unclear, asymptomatic features" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ii2xae" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "II2XAE" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Multiple lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, asymptomatic features" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ii2xb" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "II2XB" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Multiple lymph node regions on same side of diaphragm, symptoms unclear, B symptom features" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ii2xbe" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "II2XBE" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Multiple lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, B symptom features" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ii2xe" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "II2XE" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Multiple lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iia" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IIA" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Two or more lymph node regions on same side of diaphragm, asymptomatic" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iiae" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IIAE" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Two or more lymph node regions on same side of diaphragm with extranodal extension, asymptomatic" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iib" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IIB" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Two or more lymph node regions on same side of diaphragm with B symptoms" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iibe" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IIBE" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Two or more lymph node regions on same side of diaphragm with extranodal extension and B symptoms" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iie" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IIE" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Two or more lymph node regions on same side of diaphragm with extranodal extension" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iix" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IIX" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Two or more lymph node regions on same side of diaphragm, symptoms unclear" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iixa" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IIXA" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Two or more lymph node regions on same side of diaphragm, symptoms unclear, asymptomatic features" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iixae" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IIXAE" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Two or more lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, asymptomatic features" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iixb" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IIXB" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Two or more lymph node regions on same side of diaphragm, symptoms unclear, B symptom features" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iixbe" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IIXBE" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Two or more lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, B symptom features" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iixe" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IIXE" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Two or more lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iii" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "III" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Lymph node regions on both sides of diaphragm" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iiia" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IIIA" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Lymph node regions on both sides of diaphragm, asymptomatic" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iiiae" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IIIAE" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Lymph node regions on both sides of diaphragm with extranodal extension, asymptomatic" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iiiaes" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IIIAES" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Lymph node regions on both sides of diaphragm with extranodal extension and spleen involvement, asymptomatic" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iiias" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IIIAS" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Lymph node regions on both sides of diaphragm with spleen involvement, asymptomatic" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iiib" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IIIB" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Lymph node regions on both sides of diaphragm with B symptoms" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iiibe" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IIIBE" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Lymph node regions on both sides of diaphragm with extranodal extension and B symptoms" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iiibes" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IIIBES" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Lymph node regions on both sides of diaphragm with extranodal extension, spleen involvement, and B symptoms" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iiibs" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IIIBS" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Lymph node regions on both sides of diaphragm with spleen involvement and B symptoms" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iiie" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IIIE" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Lymph node regions on both sides of diaphragm with extranodal extension" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iiies" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IIIES" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Lymph node regions on both sides of diaphragm with extranodal extension and spleen involvement" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iiis" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IIIS" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Lymph node regions on both sides of diaphragm with spleen involvement" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iiix" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IIIX" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Lymph node regions on both sides of diaphragm, symptoms unclear" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iiixa" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IIIXA" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Lymph node regions on both sides of diaphragm, symptoms unclear, asymptomatic features" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iiixae" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IIIXAE" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Lymph node regions on both sides of diaphragm with extranodal extension, symptoms unclear, asymptomatic features" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iiixaes" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IIIXAES" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Lymph node regions on both sides of diaphragm with extranodal extension and spleen involvement, symptoms unclear, asymptomatic features" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iiixas" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IIIXAS" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Lymph node regions on both sides of diaphragm with spleen involvement, symptoms unclear, asymptomatic features" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iiixb" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IIIXB" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Lymph node regions on both sides of diaphragm, symptoms unclear, B symptom features" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iiixbe" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IIIXBE" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Lymph node regions on both sides of diaphragm with extranodal extension, symptoms unclear, B symptom features" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iiixbes" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IIIXBES" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Lymph node regions on both sides of diaphragm with extranodal extension and spleen involvement, symptoms unclear, B symptom features" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iiixbs" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IIIXBS" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Lymph node regions on both sides of diaphragm with spleen involvement, symptoms unclear, B symptom features" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iiixe" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IIIXE" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Lymph node regions on both sides of diaphragm with extranodal extension, symptoms unclear" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iiixes" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IIIXES" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Lymph node regions on both sides of diaphragm with extranodal extension and spleen involvement, symptoms unclear" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iiixs" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IIIXS" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Lymph node regions on both sides of diaphragm with spleen involvement, symptoms unclear" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iii1" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "III1" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Limited lymph node regions on both sides of diaphragm" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iii1a" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "III1A" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Limited lymph node regions on both sides of diaphragm, asymptomatic" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iii1b" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "III1B" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Limited lymph node regions on both sides of diaphragm with B symptoms" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iii2" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "III2" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Multiple lymph node regions on both sides of diaphragm" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iii2a" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "III2A" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Multiple lymph node regions on both sides of diaphragm, asymptomatic" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iii2b" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "III2B" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Multiple lymph node regions on both sides of diaphragm with B symptoms" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iv" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IV" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Disseminated involvement of one or more extralymphatic organs" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-iva" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IVA" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Disseminated involvement of extralymphatic organs, asymptomatic" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ivae" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IVAE" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Disseminated involvement of extralymphatic organs with additional extranodal extension, asymptomatic" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ivb" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IVB" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Disseminated involvement of extralymphatic organs with B symptoms" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ivbe" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IVBE" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Disseminated involvement of extralymphatic organs with additional extranodal extension and B symptoms" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ive" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IVE" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Disseminated involvement of extralymphatic organs with extranodal extension" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ivx" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IVX" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Disseminated involvement of extralymphatic organs, symptoms unclear" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ivxa" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IVXA" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Disseminated involvement of extralymphatic organs, symptoms unclear, asymptomatic features" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ivxae" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IVXAE" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Disseminated involvement of extralymphatic organs with additional extranodal extension, symptoms unclear, asymptomatic features" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ivxb" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IVXB" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Disseminated involvement of extralymphatic organs, symptoms unclear, B symptom features" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ivxbe" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IVXBE" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Disseminated involvement of extralymphatic organs with additional extranodal extension, symptoms unclear, B symptom features" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ann-arbor-ivxe" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IVXE" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Disseminated involvement of extralymphatic organs with extranodal extension, symptoms unclear" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "iss" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "International Staging System" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Staging system for multiple myeloma based on serum beta-2 microglobulin and albumin levels." ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "iss-i" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "ISS I" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Beta-2 microglobulin <3.5 mg/L and albumin ≥3.5 g/dL" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "iss-ii" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "ISS II" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Not ISS I or ISS III" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "iss-iii" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "ISS III" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Beta-2 microglobulin ≥5.5 mg/L" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "isswm" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "International Scoring System for Waldenström's Macroglobulinemia" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Prognostic scoring system for Waldenström's macroglobulinemia based on age, beta-2 microglobulin, and albumin levels." ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "isswm-n" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "ISSWM Niedrig" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Low risk: age ≤65 years, beta-2 microglobulin ≤3 mg/L, albumin >3.5 g/dL" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "isswm-i" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "ISSWM Intermediär" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Intermediate risk: one adverse factor" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "isswm-h" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "ISSWM Hoch" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "High risk: age >65 years or beta-2 microglobulin >3 mg/L, or albumin ≤3.5 g/dL (≥2 factors)" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "who-grad" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "WHO Grade" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "World Health Organization grading system for central nervous system tumors based on histological features." ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "who-grad-i" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "WHO Grad I" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Well-differentiated, slow-growing, low proliferative potential" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "who-grad-ii" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "WHO Grad II" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Moderately differentiated, infiltrative, low proliferative potential" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "who-grad-iii" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "WHO Grad III" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Poorly differentiated, anaplastic, high proliferative potential" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "who-grad-iv" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "WHO Grad IV" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Poorly differentiated, high mitotic activity, necrosis, microvascular proliferation" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "formen" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Formen" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Classification of lymphoma forms distinguishing classical and variant presentations." ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "formen-k" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Klassisch" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Classical form of lymphoma presentation" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "formen-v" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Variante" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Variant form of lymphoma presentation" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "eln-klassifikation" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "ELN-Klassifikation" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "European LeukemiaNet risk stratification for acute myeloid leukemia based on cytogenetic and molecular genetic abnormalities." ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "eln-g" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "ELN Günstig" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Favorable risk: good prognosis cytogenetic/molecular markers" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "eln-i1" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "ELN Intermediär I" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Intermediate risk I: intermediate prognosis markers" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "eln-i2" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "ELN Intermediär II" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Intermediate risk II: intermediate prognosis markers" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "eln-u" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "ELN Ungünstig" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Unfavorable risk: poor prognosis cytogenetic/molecular markers" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "eln-cp" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "ELN Chronische Phase" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Chronic phase (CML context)" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "eln-ap" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "ELN Akzelierte Phase" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Accelerated phase (CML context)" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "eln-bk" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "ELN Blastenkrise" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Blast crisis phase (CML context)" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "durie-salmon-stadium" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Durie-Salmon Stadium" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Multiple myeloma staging system based on tumor burden and organ function." ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "durie-salmon-i" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Durie-Salmon I" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Low tumor burden: hemoglobin >10 g/dL, calcium normal, no bone lesions" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "durie-salmon-ia" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Durie-Salmon IA" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Low tumor burden with normal renal function" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "durie-salmon-ib" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Durie-Salmon IB" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Low tumor burden with abnormal renal function" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "durie-salmon-ii" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Durie-Salmon II" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Intermediate tumor burden: neither stage I nor III criteria" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "durie-salmon-iia" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Durie-Salmon IIA" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Intermediate tumor burden with normal renal function" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "durie-salmon-iib" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Durie-Salmon IIB" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Intermediate tumor burden with abnormal renal function" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "durie-salmon-iii" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Durie-Salmon III" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "High tumor burden: hemoglobin <8.5 g/dL, calcium elevated, extensive bone lesions" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "durie-salmon-iiia" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Durie-Salmon IIIA" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "High tumor burden with normal renal function" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "durie-salmon-iiib" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Durie-Salmon IIIB" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "High tumor burden with abnormal renal function" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "bismuth" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Bismuth" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Classification system for hilar cholangiocarcinoma based on the extent of biliary involvement and resectability." ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "bismuth-i" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Bismuth I" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Tumor below confluence of left and right hepatic ducts" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "bismuth-ii" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Bismuth II" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Tumor reaching confluence but not involving secondary ducts" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "bismuth-iii" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Bismuth III" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Tumor involving confluence and either right or left secondary ducts" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "bismuth-iiia" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Bismuth IIIA" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Tumor involving confluence and right secondary ducts" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "bismuth-iiib" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Bismuth IIIB" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Tumor involving confluence and left secondary ducts" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "bismuth-iv" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Bismuth IV" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Tumor involving confluence and both right and left secondary ducts" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "masaoka" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Masaoka" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Staging system for thymomas based on invasiveness and extent of disease." ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "masaoka-i" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Masaoka I" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Encapsulated tumor without invasion" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "masaoka-ii" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Masaoka II" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Invasion into surrounding fatty tissue or mediastinal pleura" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "masaoka-iii" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Masaoka III" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Invasion into neighboring organs" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "masaoka-iv" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Masaoka IV" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Pleural or pericardial dissemination" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "masaoka-iva" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Masaoka IVA" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Pleural or pericardial implants" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "masaoka-ivb" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Masaoka IVB" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Lymphogenous or hematogenous metastasis" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "mitoserate-gist" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Mitoserate-GIST" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Mitotic rate assessment for gastrointestinal stromal tumors." ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "mitoserate-gist-n" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Mitoserate-GIST Niedrig" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Low mitotic rate: ≤5 mitoses per 50 HPF" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "mitoserate-gist-h" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Mitoserate-GIST Hoch" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "High mitotic rate: >5 mitoses per 50 HPF" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "p16" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "p16" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "p16 protein expression status assessment." ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "p16-p" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "p16 Positiv" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Positive p16 protein expression" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "p16-n" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "p16 Negativ" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Negative p16 protein expression" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "eutos-score" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "EUTOS-Score" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "European Treatment and Outcome Study prognostic score for chronic myeloid leukemia." ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "eutos-score-n" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "EUTOS-Score Niedrigrisiko" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Low risk EUTOS score: ≤87" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "eutos-score-h" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "EUTOS-Score Hochrisiko" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "High risk EUTOS score: >87" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "sanz-score" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sanz-Score" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Risk assessment score for acute promyelocytic leukemia." ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "sanz-score-n" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Sanz-Score Niedrig" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Low risk: WBC <10x10⁹/L and platelets >40x10⁹/L" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "sanz-score-i" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Sanz-Score Intermediär" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Intermediate risk: WBC <10x10⁹/L and platelets ≤40x10⁹/L" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "sanz-score-h" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Sanz-Score Hoch" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "High risk: WBC ≥10x10⁹/L" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "ipi" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "IPI" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "International Prognostic Index for aggressive non-Hodgkin lymphoma." ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ipi-n" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IPI Niedrig" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Low risk: 0-1 risk factors" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ipi-ni" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IPI Niedrig-Intermediär" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Low-intermediate risk: 2 risk factors" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ipi-hi" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IPI Hoch-Intermediär" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "High-intermediate risk: 3 risk factors" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ipi-h" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IPI Hoch" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "High risk: 4-5 risk factors" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "flipi" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "FLIPI" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Follicular Lymphoma International Prognostic Index." ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "flipi-l" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "FLIPI Low risk" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Low risk: 0-1 risk factors" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "flipi-i" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "FLIPI Intermediate risk" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Intermediate risk: 2 risk factors" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "flipi-h" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "FLIPI High risk" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "High risk: ≥3 risk factors" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "mipi" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "MIPI" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Mantle Cell Lymphoma International Prognostic Index." ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "mipi-n" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "MIPI Niedrig" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Low risk MIPI score" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "mipi-i" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "MIPI Intermediär" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Intermediate risk MIPI score" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "mipi-h" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "MIPI Hoch" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "High risk MIPI score" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "risikogruppen-ghsg" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Risikogruppen GHSG" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "German Hodgkin Study Group risk stratification." ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "risikogruppen-ghsg-fr" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "GHSG Frühe" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Early favorable risk group" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "risikogruppen-ghsg-i" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "GHSG Intermediär" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Intermediate risk group" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "risikogruppen-ghsg-fo" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "GHSG Fortgeschritten" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Advanced risk group" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "ipss" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "IPSS" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "International Prognostic Scoring System for myelodysplastic syndromes." ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ipss-l" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IPSS Low" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Low risk: score 0" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ipss-i1" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IPSS Intermediate-I" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Intermediate-1 risk: score 0.5-1.0" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ipss-i2" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IPSS Intermediate-II" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Intermediate-2 risk: score 1.5-2.0" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ipss-h" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "IPSS High risk" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "High risk: score ≥2.5" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "her2-neu" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "HER2-neu" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "HER2-neu protein expression and gene amplification status." ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "her2-neu-p" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "HER2-neu Positiv" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Positive HER2-neu status (IHC 3+ or FISH amplified)" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "her2-neu-n" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "HER2-neu Negativ" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Negative HER2-neu status (IHC 0-1+ or FISH not amplified)" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

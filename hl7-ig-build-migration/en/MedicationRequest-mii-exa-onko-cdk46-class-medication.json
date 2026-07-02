@@ -1,0 +1,32 @@
+{
+  "resourceType" : "MedicationRequest",
+  "id" : "mii-exa-onko-cdk46-class-medication",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation|2026.0.3"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest mii-exa-onko-cdk46-class-medication</b></p><a name=\"en-mii-exa-onko-cdk46-class-medication\"> </a><a name=\"en-hcmii-exa-onko-cdk46-class-medication\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-therapieempfehlung-medikation.html\">MII PR Onkologie Therapieempfehlung Medikation</a> version: 2026.0.3</p></div><p><b>status</b>: Active</p><p><b>intent</b>: Option</p><p><b>medication</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/atc L01EF}\">CDK4/6 Inhibitor (Klasse L01EF) - Palbociclib, Ribociclib oder Abemaciclib</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-molecular-board-patient.html\">Maria Müller  Female, DoB: 1968-07-22 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#MTB-2024-001)</a></p><p><b>authoredOn</b>: 2024-01-15</p><p><b>reasonReference</b>: <a href=\"Condition-primaertumor-example.html\">Condition Bösartige Neubildung: Brustdrüse, nicht näher bezeichnet</a></p><p><b>note</b>: </p><blockquote><div><p>Molekulares Tumorboard empfiehlt beliebigen CDK4/6 Inhibitor basierend auf HR+/HER2- Profil. Konkrete Wirkstoffauswahl nach Verfügbarkeit und Patientenfaktoren.</p>\n</div></blockquote></div>"
+  },
+  "status" : "active",
+  "intent" : "option",
+  "medicationCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://fhir.de/CodeSystem/bfarm/atc",
+      "code" : "L01EF",
+      "display" : "Cyclin-abhängige Kinasen (CDK)-Inhibitoren"
+    }],
+    "text" : "CDK4/6 Inhibitor (Klasse L01EF) - Palbociclib, Ribociclib oder Abemaciclib"
+  },
+  "subject" : {
+    "reference" : "Patient/mii-exa-onko-molecular-board-patient"
+  },
+  "authoredOn" : "2024-01-15",
+  "reasonReference" : [{
+    "reference" : "Condition/primaertumor-example"
+  }],
+  "note" : [{
+    "text" : "Molekulares Tumorboard empfiehlt beliebigen CDK4/6 Inhibitor basierend auf HR+/HER2- Profil. Konkrete Wirkstoffauswahl nach Verfügbarkeit und Patientenfaktoren."
+  }]
+}

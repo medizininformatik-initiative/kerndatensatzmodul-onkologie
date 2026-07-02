@@ -1,0 +1,33 @@
+{
+  "resourceType" : "Procedure",
+  "id" : "mii-exa-onko-mamma-praeoperative-markierung-1",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-praeoperative-markierung|2026.0.3"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Procedure mii-exa-onko-mamma-praeoperative-markierung-1</b></p><a name=\"mii-exa-onko-mamma-praeoperative-markierung-1\"> </a><a name=\"hcmii-exa-onko-mamma-praeoperative-markierung-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-mamma-praeoperative-markierung.html\">MII PR Onkologie Präoperative Markierung Mamma</a> version: 2026.0.3</p></div><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 103693007}\">Diagnostic procedure (procedure)</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 433222002}\">Insertion of guide wire into breast using ultrasound guidance (procedure)</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-mamma-bundle-patient.html\">Martha MammaCa  (no stated gender), DoB Unknown</a></p><p><b>performed</b>: 2024-01-15 09:00:00+0100</p><p><b>reasonReference</b>: <a href=\"Condition-mii-exa-onko-mamma-diagnose.html\">Condition Bösartige Neubildung: Unterer innerer Quadrant der Brustdrüse</a></p></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Procedure mii-exa-onko-mamma-praeoperative-markierung-1</b></p><a name=\"en-mii-exa-onko-mamma-praeoperative-markierung-1\"> </a><a name=\"en-hcmii-exa-onko-mamma-praeoperative-markierung-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-mamma-praeoperative-markierung.html\">MII PR Onkologie Präoperative Markierung Mamma</a> version: 2026.0.3</p></div><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 103693007}\">Diagnostic procedure (procedure)</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 433222002}\">Insertion of guide wire into breast using ultrasound guidance (procedure)</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-mamma-bundle-patient.html\">Martha MammaCa  (no stated gender), DoB Unknown</a></p><p><b>performed</b>: 2024-01-15 09:00:00+0100</p><p><b>reasonReference</b>: <a href=\"Condition-mii-exa-onko-mamma-diagnose.html\">Condition Bösartige Neubildung: Unterer innerer Quadrant der Brustdrüse</a></p></div></div>"
+  },
+  "status" : "completed",
+  "category" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "103693007",
+      "display" : "Diagnostic procedure (procedure)"
+    }]
+  },
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "433222002",
+      "display" : "Insertion of guide wire into breast using ultrasound guidance (procedure)"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/mii-exa-onko-mamma-bundle-patient"
+  },
+  "performedDateTime" : "2024-01-15T09:00:00+01:00",
+  "reasonReference" : [{
+    "reference" : "Condition/mii-exa-onko-mamma-diagnose"
+  }]
+}

@@ -1,0 +1,230 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "mii-cm-onko-strahlentherapie-applikationsart-sct",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap mii-cm-onko-strahlentherapie-applikationsart-sct</b></p><a name=\"mii-cm-onko-strahlentherapie-applikationsart-sct\"> </a><a name=\"hcmii-cm-onko-strahlentherapie-applikationsart-sct\"> </a><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <a href=\"CodeSystem-mii-cs-onko-strahlentherapie-applikationsart.html\">MII CS Onkologie Strahlentherapie Applikationsart</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>P (perkutan (Teletherapie))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>33195004 (External beam radiation therapy procedure (procedure))</td><td/></tr><tr><td>P-ST (perkutan stereotaktisch)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>395096001 (Stereotactic radiotherapy (procedure))</td><td/></tr><tr><td>P-4D (perkutan, atemgetriggert)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>721061000124106 (External beam radiotherapy with respiratory gating (procedure))</td><td/></tr><tr><td>P-ST4D (perkutan, stereotaktisch, atemgetriggert)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Einzelkonzepte über SNOMED abbildbar</td></tr><tr><td>PRCN-ST (perkutan, stereotaktisch ohne Chemotherapie/Sensitizer)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>PRCN-4D (perkutan, atemgetriggert, ohne Chemotherapie/Sensitizer)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>PRCN-ST4D (perkutan, stereotaktisch, atemgetriggert, ohne Chemotherapie/Sensitizer)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>PRCJ (perkutan mit Chemotherapie/Sensitizer)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>PRCJ-4D (perkutan, atemgetriggert, mit Chemotherapie/Sensitizer)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>K (endokavitäre Kontakttherapie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>384692006 (Intracavitary brachytherapy (procedure))</td><td/></tr><tr><td>KHDR (endokavitäre Kontakttherapie, high dose rate therapy)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>384692006 (Intracavitary brachytherapy (procedure))</td><td/></tr><tr><td>KLDR (endokavitäre Kontakttherapie, low dose rate therapy)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>384692006 (Intracavitary brachytherapy (procedure))</td><td/></tr><tr><td>KPDR (endokavitäre Kontakttherapie, pulsed dose rate therapy)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>384692006 (Intracavitary brachytherapy (procedure))</td><td/></tr><tr><td>I (intersitielle Kontakttherapie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>113120007 (Intracavitary brachytherapy (procedure))</td><td/></tr><tr><td>IHDR (intersitielle Kontakttherapie, high dose rate therapy)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>113120007 (Intracavitary brachytherapy (procedure))</td><td/></tr><tr><td>ILDR (intersitielle Kontakttherapie, low dose rate therapy)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>113120007 (Intracavitary brachytherapy (procedure))</td><td/></tr><tr><td>IPDR (intersitielle Kontakttherapie, pulsed dose rate therapy)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>113120007 (Intracavitary brachytherapy (procedure))</td><td/></tr><tr><td>MSIRT (selektive interne Radio-Therapie)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>MPRRT (Peptid-Radio-Rezeptor-Therapie)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>MPSMA (PSMA-Therapie)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>MRJT (Radiojod-Therapie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>64291000052106 (Radioactive iodine therapy (procedure))</td><td/></tr><tr><td>MRIT (Radioimmun-Therapie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>118640001 (Radioimmunotherapy (procedure))</td><td/></tr><tr><td>M (sonstige metabolische Radionuklidtherapie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>399315003 (Radionuclide therapy (procedure))</td><td/></tr><tr><td>S (Sonstiges)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>74964007 (Other (qualifier value))</td><td/></tr></table></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap mii-cm-onko-strahlentherapie-applikationsart-sct</b></p><a name=\"en-mii-cm-onko-strahlentherapie-applikationsart-sct\"> </a><a name=\"en-hcmii-cm-onko-strahlentherapie-applikationsart-sct\"> </a><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <a href=\"CodeSystem-mii-cs-onko-strahlentherapie-applikationsart.html\">MII CS Onkologie Strahlentherapie Applikationsart</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>P (perkutan (Teletherapie))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>33195004 (External beam radiation therapy procedure (procedure))</td><td/></tr><tr><td>P-ST (perkutan stereotaktisch)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>395096001 (Stereotactic radiotherapy (procedure))</td><td/></tr><tr><td>P-4D (perkutan, atemgetriggert)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>721061000124106 (External beam radiotherapy with respiratory gating (procedure))</td><td/></tr><tr><td>P-ST4D (perkutan, stereotaktisch, atemgetriggert)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Einzelkonzepte über SNOMED abbildbar</td></tr><tr><td>PRCN-ST (perkutan, stereotaktisch ohne Chemotherapie/Sensitizer)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>PRCN-4D (perkutan, atemgetriggert, ohne Chemotherapie/Sensitizer)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>PRCN-ST4D (perkutan, stereotaktisch, atemgetriggert, ohne Chemotherapie/Sensitizer)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>PRCJ (perkutan mit Chemotherapie/Sensitizer)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>PRCJ-4D (perkutan, atemgetriggert, mit Chemotherapie/Sensitizer)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>K (endokavitäre Kontakttherapie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>384692006 (Intracavitary brachytherapy (procedure))</td><td/></tr><tr><td>KHDR (endokavitäre Kontakttherapie, high dose rate therapy)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>384692006 (Intracavitary brachytherapy (procedure))</td><td/></tr><tr><td>KLDR (endokavitäre Kontakttherapie, low dose rate therapy)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>384692006 (Intracavitary brachytherapy (procedure))</td><td/></tr><tr><td>KPDR (endokavitäre Kontakttherapie, pulsed dose rate therapy)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>384692006 (Intracavitary brachytherapy (procedure))</td><td/></tr><tr><td>I (intersitielle Kontakttherapie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>113120007 (Intracavitary brachytherapy (procedure))</td><td/></tr><tr><td>IHDR (intersitielle Kontakttherapie, high dose rate therapy)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>113120007 (Intracavitary brachytherapy (procedure))</td><td/></tr><tr><td>ILDR (intersitielle Kontakttherapie, low dose rate therapy)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>113120007 (Intracavitary brachytherapy (procedure))</td><td/></tr><tr><td>IPDR (intersitielle Kontakttherapie, pulsed dose rate therapy)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>113120007 (Intracavitary brachytherapy (procedure))</td><td/></tr><tr><td>MSIRT (selektive interne Radio-Therapie)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>MPRRT (Peptid-Radio-Rezeptor-Therapie)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>MPSMA (PSMA-Therapie)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>MRJT (Radiojod-Therapie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>64291000052106 (Radioactive iodine therapy (procedure))</td><td/></tr><tr><td>MRIT (Radioimmun-Therapie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>118640001 (Radioimmunotherapy (procedure))</td><td/></tr><tr><td>M (sonstige metabolische Radionuklidtherapie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>399315003 (Radionuclide therapy (procedure))</td><td/></tr><tr><td>S (Sonstiges)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>74964007 (Other (qualifier value))</td><td/></tr></table></div></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-strahlentherapie-applikationsart-sct",
+  "version" : "2026.0.3",
+  "name" : "MII CM Onko Strahlentherapie Applikationsart SCT Mapping",
+  "title" : "MII CM Onko Strahlentherapie Applikationsart SNOMED Mapping",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2024-04-11",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Mapping Strahlentherapie Applikationsart Codes zu SNOMED-CT",
+  "purpose" : "Technical mapping to transform oBDS-Data into SNOMED",
+  "sourceUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
+  "targetUri" : "http://snomed.info/sct/900000000000207008/version/20240401",
+  "group" : [{
+    "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart",
+    "target" : "http://snomed.info/sct/900000000000207008/version/20240401",
+    "element" : [{
+      "code" : "P",
+      "display" : "perkutan (Teletherapie)",
+      "target" : [{
+        "code" : "33195004",
+        "display" : "External beam radiation therapy procedure (procedure)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "P-ST",
+      "display" : "perkutan stereotaktisch",
+      "target" : [{
+        "code" : "395096001",
+        "display" : "Stereotactic radiotherapy (procedure)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "P-4D",
+      "display" : "perkutan, atemgetriggert",
+      "target" : [{
+        "code" : "721061000124106",
+        "display" : "External beam radiotherapy with respiratory gating (procedure)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "P-ST4D",
+      "display" : "perkutan, stereotaktisch, atemgetriggert",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Einzelkonzepte über SNOMED abbildbar"
+      }]
+    },
+    {
+      "code" : "PRCN-ST",
+      "display" : "perkutan, stereotaktisch ohne Chemotherapie/Sensitizer",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "PRCN-4D",
+      "display" : "perkutan, atemgetriggert, ohne Chemotherapie/Sensitizer",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "PRCN-ST4D",
+      "display" : "perkutan, stereotaktisch, atemgetriggert, ohne Chemotherapie/Sensitizer",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "PRCJ",
+      "display" : "perkutan mit Chemotherapie/Sensitizer",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "PRCJ-4D",
+      "display" : "perkutan, atemgetriggert, mit Chemotherapie/Sensitizer",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "K",
+      "display" : "endokavitäre Kontakttherapie",
+      "target" : [{
+        "code" : "384692006",
+        "display" : "Intracavitary brachytherapy (procedure)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "KHDR",
+      "display" : "endokavitäre Kontakttherapie, high dose rate therapy",
+      "target" : [{
+        "code" : "384692006",
+        "display" : "Intracavitary brachytherapy (procedure)",
+        "equivalence" : "wider"
+      }]
+    },
+    {
+      "code" : "KLDR",
+      "display" : "endokavitäre Kontakttherapie, low dose rate therapy",
+      "target" : [{
+        "code" : "384692006",
+        "display" : "Intracavitary brachytherapy (procedure)",
+        "equivalence" : "wider"
+      }]
+    },
+    {
+      "code" : "KPDR",
+      "display" : "endokavitäre Kontakttherapie, pulsed dose rate therapy",
+      "target" : [{
+        "code" : "384692006",
+        "display" : "Intracavitary brachytherapy (procedure)",
+        "equivalence" : "wider"
+      }]
+    },
+    {
+      "code" : "I",
+      "display" : "intersitielle Kontakttherapie",
+      "target" : [{
+        "code" : "113120007",
+        "display" : "Intracavitary brachytherapy (procedure)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "IHDR",
+      "display" : "intersitielle Kontakttherapie, high dose rate therapy",
+      "target" : [{
+        "code" : "113120007",
+        "display" : "Intracavitary brachytherapy (procedure)",
+        "equivalence" : "wider"
+      }]
+    },
+    {
+      "code" : "ILDR",
+      "display" : "intersitielle Kontakttherapie, low dose rate therapy",
+      "target" : [{
+        "code" : "113120007",
+        "display" : "Intracavitary brachytherapy (procedure)",
+        "equivalence" : "wider"
+      }]
+    },
+    {
+      "code" : "IPDR",
+      "display" : "intersitielle Kontakttherapie, pulsed dose rate therapy",
+      "target" : [{
+        "code" : "113120007",
+        "display" : "Intracavitary brachytherapy (procedure)",
+        "equivalence" : "wider"
+      }]
+    },
+    {
+      "code" : "MSIRT",
+      "display" : "selektive interne Radio-Therapie",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "MPRRT",
+      "display" : "Peptid-Radio-Rezeptor-Therapie",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "MPSMA",
+      "display" : "PSMA-Therapie",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "MRJT",
+      "display" : "Radiojod-Therapie",
+      "target" : [{
+        "code" : "64291000052106",
+        "display" : "Radioactive iodine therapy (procedure)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "MRIT",
+      "display" : "Radioimmun-Therapie",
+      "target" : [{
+        "code" : "118640001",
+        "display" : "Radioimmunotherapy (procedure)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "M",
+      "display" : "sonstige metabolische Radionuklidtherapie",
+      "target" : [{
+        "code" : "399315003",
+        "display" : "Radionuclide therapy (procedure)",
+        "equivalence" : "wider"
+      }]
+    },
+    {
+      "code" : "S",
+      "display" : "Sonstiges",
+      "target" : [{
+        "code" : "74964007",
+        "display" : "Other (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

@@ -1,0 +1,53 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-onko-tnm-s-kategorie-werte",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
+  },
+  "language" : "de",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-onko-tnm-s-kategorie-werte</b></p><a name=\"mii-vs-onko-tnm-s-kategorie-werte\"> </a><a name=\"hcmii-vs-onko-tnm-s-kategorie-werte\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablevalueset.html\">Shareable ValueSet</a></p></div><ul><li>Include these codes as defined in <a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html\"><code>https://www.uicc.org/resources/tnm</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;2026.0.3</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-S0\">S0</a></td><td>S0</td><td>Serumtumormarker innerhalb der normalen Grenzen</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-S1\">S1</a></td><td>S1</td><td/></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-S2\">S2</a></td><td>S2</td><td/></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-S3\">S3</a></td><td>S3</td><td/></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-SX\">SX</a></td><td>SX</td><td>Werte der Serumtumormarker nicht verfügbar oder entspre- chende Untersuchungen nicht vorgenommen</td></tr></table></li></ul></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-s-kategorie-werte",
+  "version" : "2026.0.3",
+  "name" : "MII_VS_Onko_TNM_S_Kategorie_Werte",
+  "title" : "MII VS Onkologie TNM S Kategorie Werte",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-07-02T12:18:38+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Das ValueSet enthält die TNM Codes für Serumtumormarker aus der UICC TNM - Klassifikation maligner Tumoren Achte Auflage.",
+  "compose" : {
+    "include" : [{
+      "system" : "https://www.uicc.org/resources/tnm",
+      "concept" : [{
+        "code" : "S0",
+        "display" : "S0"
+      },
+      {
+        "code" : "S1",
+        "display" : "S1"
+      },
+      {
+        "code" : "S2",
+        "display" : "S2"
+      },
+      {
+        "code" : "S3",
+        "display" : "S3"
+      },
+      {
+        "code" : "SX",
+        "display" : "SX"
+      }]
+    }]
+  }
+}

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="mii-cm-onko-seitenlokalisation-sct"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap mii-cm-onko-seitenlokalisation-sct</b></p><a name="en-mii-cm-onko-seitenlokalisation-sct"> </a><a name="en-hcmii-cm-onko-seitenlokalisation-sct"> </a><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <a href="CodeSystem-mii-cs-onko-seitenlokalisation.html">MII CS Onkologie Primärtumor Seitenlokalisation</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>L (links)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>7771000 (Left (qualifier value))</td></tr><tr><td>R (rechts)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>24028007 (Right (qualifier value) )</td></tr><tr><td>B (beidseitig)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>51440002 (Right and left (qualifier value))</td></tr><tr><td>M (Mittellinie/mittig)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>260528009 (Median (qualifier value))</td></tr><tr><td>U (unbekannt)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>261665006 (Unknown (qualifier value))</td></tr><tr><td>T (trifft nicht zu)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>385432009 (Not applicable (qualifier value))</td></tr></table></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-seitenlokalisation-sct"/>
+  <version value="2026.0.3"/>
+  <name value="MII CM Onko Seitenlokalisation SNOMED Mapping"/>
+  <title value="MII CM Onko Seitenlokalisation SNOMED Mapping"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2024-04-10"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="Mapping Seitenlokalisation Codes zu SNOMED-CT"/>
+  <purpose value="Technical mapping to transform oBDS-Data into SNOMED"/>
+  <sourceUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/"/>
+  <targetUri value="http://snomed.info/sct/900000000000207008/version/20240401"/>
+  <group>
+    <source value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation"/>
+    <target value="http://snomed.info/sct/900000000000207008/version/20240401"/>
+    <element>
+      <code value="L"/>
+      <display value="links"/>
+      <target>
+        <code value="7771000"/>
+        <display value="Left (qualifier value)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="R"/>
+      <display value="rechts"/>
+      <target>
+        <code value="24028007"/>
+        <display value="Right (qualifier value) "/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="B"/>
+      <display value="beidseitig"/>
+      <target>
+        <code value="51440002"/>
+        <display value="Right and left (qualifier value)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="M"/>
+      <display value="Mittellinie/mittig"/>
+      <target>
+        <code value="260528009"/>
+        <display value="Median (qualifier value)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="U"/>
+      <display value="unbekannt"/>
+      <target>
+        <code value="261665006"/>
+        <display value="Unknown (qualifier value)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="T"/>
+      <display value="trifft nicht zu"/>
+      <target>
+        <code value="385432009"/>
+        <display value="Not applicable (qualifier value)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SearchParameter xmlns="http://hl7.org/fhir">
+  <id value="mii-sp-onko-ext-strahlentherapie-stellungzurop"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: SearchParameter mii-sp-onko-ext-strahlentherapie-stellungzurop</b></p><a name="mii-sp-onko-ext-strahlentherapie-stellungzurop"> </a><a name="hcmii-sp-onko-ext-strahlentherapie-stellungzurop"> </a><h2>MII_SP_Procedure_Extension_Strahlentherapie_StellungZurOp</h2><p>Parameter <code>strahlentherapie-stellungzurop</code>:<code>token</code></p><div><p>SearchParameter for Procedure.extension[StellungZurOp]</p>
+</div><table class="grid"><tr><td>Resource</td><td><a href="http://hl7.org/fhir/R4/procedure.html">Procedure</a></td></tr><tr><td>Expression</td><td><code>Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop').value</code></td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd: It's up to the server whether the parameter may repeat in order to specify multiple values that must all be true</li><li>multipleOr: It's up to the server whether the parameter can have multiple values (separated by comma) where at least one must be true</li></ul></td></tr></table></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-ext-strahlentherapie-stellungzurop"/>
+  <version value="2026.0.3"/>
+  <name value="MII_SP_Procedure_Extension_Strahlentherapie_StellungZurOp"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2024-04-15"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="SearchParameter for Procedure.extension[StellungZurOp]"/>
+  <code value="strahlentherapie-stellungzurop"/>
+  <base value="Procedure"/>
+  <type value="token"/>
+  <expression value="Procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop').value"/>
+</SearchParameter>

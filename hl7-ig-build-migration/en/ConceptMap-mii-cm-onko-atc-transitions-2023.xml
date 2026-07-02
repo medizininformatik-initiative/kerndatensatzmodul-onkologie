@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="mii-cm-onko-atc-transitions-2023"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap mii-cm-onko-atc-transitions-2023</b></p><a name="en-mii-cm-onko-atc-transitions-2023"> </a><a name="en-hcmii-cm-onko-atc-transitions-2023"> </a><p>Mapping from <a href="ValueSet-mii-vs-onko-systemische-therapie-substanzen-2022.html">MII VS Onkologie Systemische Therapie Substanzen ATC 2022</a> to <a href="ValueSet-mii-vs-onko-systemische-therapie-substanzen-2023.html">MII VS Onkologie Systemische Therapie Substanzen ATC 2023</a></p><br/><p>Mapping from <a href="https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.de/CodeSystem/bfarm/atc">ATC</a> to <a href="https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.de/CodeSystem/bfarm/atc">ATC</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>L01XX70 (Axicabtagen Ciloleucel)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>L01XL03 (Axicabtagen Ciloleucel)</td><td>Reklassifizierung zu CAR-T-Zelltherapien</td></tr><tr><td>L01XX51 (Talimogen laherparepvec)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>L01XL02 (Talimogen laherparepvec)</td><td>Reklassifizierung zu onkolytische Viren</td></tr><tr><td>L01XX71 (Tisagenlecleucel)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>L01XL04 (Tisagenlecleucel)</td><td>Reklassifizierung zu CAR-T-Zelltherapien</td></tr></table></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-atc-transitions-2023"/>
+  <version value="2026.0.3"/>
+  <name value="MII_CM_Onko_ATC_Transitions_2023"/>
+  <title value="MII CM Onko ATC Code Changes 2022 to 2023"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2024-12-12"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="Diese ConceptMap dokumentiert die ATC-Code-Änderungen von 2022 zu 2023. In diesem Jahr wurden CAR-T-Zelltherapien und onkolytische Viren in neue spezifische ATC-Kategorien umklassifiziert."/>
+  <purpose value="Migration von ATC-Codes für CAR-T-Zelltherapien und onkolytische Viren, die 2023 umkodiert wurden."/>
+  <sourceCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2022"/>
+  <targetCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2023"/>
+  <group>
+    <source value="http://fhir.de/CodeSystem/bfarm/atc"/>
+    <target value="http://fhir.de/CodeSystem/bfarm/atc"/>
+    <element>
+      <code value="L01XX70"/>
+      <display value="Axicabtagen Ciloleucel"/>
+      <target>
+        <code value="L01XL03"/>
+        <display value="Axicabtagen Ciloleucel"/>
+        <equivalence value="equivalent"/>
+        <comment value="Reklassifizierung zu CAR-T-Zelltherapien"/>
+      </target>
+    </element>
+    <element>
+      <code value="L01XX51"/>
+      <display value="Talimogen laherparepvec"/>
+      <target>
+        <code value="L01XL02"/>
+        <display value="Talimogen laherparepvec"/>
+        <equivalence value="equivalent"/>
+        <comment value="Reklassifizierung zu onkolytische Viren"/>
+      </target>
+    </element>
+    <element>
+      <code value="L01XX71"/>
+      <display value="Tisagenlecleucel"/>
+      <target>
+        <code value="L01XL04"/>
+        <display value="Tisagenlecleucel"/>
+        <equivalence value="equivalent"/>
+        <comment value="Reklassifizierung zu CAR-T-Zelltherapien"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

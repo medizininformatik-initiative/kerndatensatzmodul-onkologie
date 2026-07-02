@@ -1,0 +1,91 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-cs-onko-tnm-version"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/shareablecodesystem" ;
+       fhir:index 0 ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-onko-tnm-version</b></p><a name=\"mii-cs-onko-tnm-version\"> </a><a name=\"hcmii-cs-onko-tnm-version\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"mii-cs-onko-tnm-version-1\"> </a></td><td>1. Auflage</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"mii-cs-onko-tnm-version-2\"> </a></td><td>2. Auflage</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"mii-cs-onko-tnm-version-3\"> </a></td><td>3. Auflage</td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"mii-cs-onko-tnm-version-4\"> </a></td><td>4. Auflage</td></tr><tr><td style=\"white-space:nowrap\">5<a name=\"mii-cs-onko-tnm-version-5\"> </a></td><td>5. Auflage</td></tr><tr><td style=\"white-space:nowrap\">6<a name=\"mii-cs-onko-tnm-version-6\"> </a></td><td>6. Auflage</td></tr><tr><td style=\"white-space:nowrap\">7<a name=\"mii-cs-onko-tnm-version-7\"> </a></td><td>7. Auflage</td></tr><tr><td style=\"white-space:nowrap\">8<a name=\"mii-cs-onko-tnm-version-8\"> </a></td><td>8. Auflage</td></tr><tr><td style=\"white-space:nowrap\">9<a name=\"mii-cs-onko-tnm-version-9\"> </a></td><td>9. Auflage</td></tr></table></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-onko-tnm-version</b></p><a name=\"en-mii-cs-onko-tnm-version\"> </a><a name=\"en-hcmii-cs-onko-tnm-version\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"en-mii-cs-onko-tnm-version-1\"> </a></td><td>1. Auflage</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"en-mii-cs-onko-tnm-version-2\"> </a></td><td>2. Auflage</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"en-mii-cs-onko-tnm-version-3\"> </a></td><td>3. Auflage</td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"en-mii-cs-onko-tnm-version-4\"> </a></td><td>4. Auflage</td></tr><tr><td style=\"white-space:nowrap\">5<a name=\"en-mii-cs-onko-tnm-version-5\"> </a></td><td>5. Auflage</td></tr><tr><td style=\"white-space:nowrap\">6<a name=\"en-mii-cs-onko-tnm-version-6\"> </a></td><td>6. Auflage</td></tr><tr><td style=\"white-space:nowrap\">7<a name=\"en-mii-cs-onko-tnm-version-7\"> </a></td><td>7. Auflage</td></tr><tr><td style=\"white-space:nowrap\">8<a name=\"en-mii-cs-onko-tnm-version-8\"> </a></td><td>8. Auflage</td></tr><tr><td style=\"white-space:nowrap\">9<a name=\"en-mii-cs-onko-tnm-version-9\"> </a></td><td>9. Auflage</td></tr></table></div></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"] ;
+  fhir:CodeSystem.version [ fhir:value "2026.0.3"] ;
+  fhir:CodeSystem.name [ fhir:value "MII_CS_Onko_TNM_Version"] ;
+  fhir:CodeSystem.title [ fhir:value "MII CS Onkologie TNM Version"] ;
+  fhir:CodeSystem.status [ fhir:value "active"] ;
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-07-02T12:18:38+00:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "Medizininformatik Initiative"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Medizininformatik Initiative" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.medizininformatik-initiative.de/" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "Codes für TNM Version/Auflage nach welcher Version des TNM klassifiziert wird."] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.valueSet [
+     fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-version" ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-version>
+  ] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "9"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "1" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "1. Auflage" ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "2. Auflage" ]
+  ], [
+     fhir:index 2 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "3. Auflage" ]
+  ], [
+     fhir:index 3 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "4. Auflage" ]
+  ], [
+     fhir:index 4 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "5. Auflage" ]
+  ], [
+     fhir:index 5 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "6. Auflage" ]
+  ], [
+     fhir:index 6 ;
+     fhir:CodeSystem.concept.code [ fhir:value "7" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "7. Auflage" ]
+  ], [
+     fhir:index 7 ;
+     fhir:CodeSystem.concept.code [ fhir:value "8" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "8. Auflage" ]
+  ], [
+     fhir:index 8 ;
+     fhir:CodeSystem.concept.code [ fhir:value "9" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "9. Auflage" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

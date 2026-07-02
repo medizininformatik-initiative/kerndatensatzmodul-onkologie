@@ -1,0 +1,62 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ResearchStudy/mii-exa-onko-studie-prob> a fhir:ResearchStudy ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-studie-prob"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ResearchStudy mii-exa-onko-studie-prob</b></p><a name=\"mii-exa-onko-studie-prob\"> </a><a name=\"hcmii-exa-onko-studie-prob\"> </a><p><b>identifier</b>: <code>https://drks.de</code>/DRKS00024015, <code>http://innovationsfonds.g-ba.de</code>/01NVF19013</p><p><b>title</b>: PRO-B: Evaluating the effect of an alarm-based patient-reported outcome monitoring compared with usual care in metastatic breast cancer patients</p><p><b>status</b>: Active</p><p><b>primaryPurposeType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/research-study-prim-purp-type health-services-research}\">Health Services Research</span></p><p><b>focus</b>: <span title=\"Codes:{http://snomed.info/sct 399427004}\">Monitoring of patient with cancer (regime/therapy)</span></p><p><b>condition</b>: <span title=\"Codes:{http://snomed.info/sct 254838004}\">Carcinoma of breast</span></p></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ResearchStudy mii-exa-onko-studie-prob</b></p><a name=\"en-mii-exa-onko-studie-prob\"> </a><a name=\"en-hcmii-exa-onko-studie-prob\"> </a><p><b>identifier</b>: <code>https://drks.de</code>/DRKS00024015, <code>http://innovationsfonds.g-ba.de</code>/01NVF19013</p><p><b>title</b>: PRO-B: Evaluating the effect of an alarm-based patient-reported outcome monitoring compared with usual care in metastatic breast cancer patients</p><p><b>status</b>: Active</p><p><b>primaryPurposeType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/research-study-prim-purp-type health-services-research}\">Health Services Research</span></p><p><b>focus</b>: <span title=\"Codes:{http://snomed.info/sct 399427004}\">Monitoring of patient with cancer (regime/therapy)</span></p><p><b>condition</b>: <span title=\"Codes:{http://snomed.info/sct 254838004}\">Carcinoma of breast</span></p></div></div>"
+  ] ;
+  fhir:ResearchStudy.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "https://drks.de" ] ;
+     fhir:Identifier.value [ fhir:value "DRKS00024015" ]
+  ], [
+     fhir:index 1 ;
+     fhir:Identifier.system [ fhir:value "http://innovationsfonds.g-ba.de" ] ;
+     fhir:Identifier.value [ fhir:value "01NVF19013" ]
+  ] ;
+  fhir:ResearchStudy.title [ fhir:value "PRO-B: Evaluating the effect of an alarm-based patient-reported outcome monitoring compared with usual care in metastatic breast cancer patients"] ;
+  fhir:ResearchStudy.status [ fhir:value "active"] ;
+  fhir:ResearchStudy.primaryPurposeType [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/research-study-prim-purp-type" ] ;
+       fhir:Coding.code [ fhir:value "health-services-research" ] ;
+       fhir:Coding.display [ fhir:value "Health Services Research" ]
+     ]
+  ] ;
+  fhir:ResearchStudy.focus [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a sct:399427004 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "399427004" ] ;
+       fhir:Coding.display [ fhir:value "Monitoring of patient with cancer (regime/therapy)" ]
+     ]
+  ] ;
+  fhir:ResearchStudy.condition [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a sct:254838004 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "254838004" ] ;
+       fhir:Coding.display [ fhir:value "Carcinoma of breast" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ResearchStudy/mii-exa-onko-studie-prob.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

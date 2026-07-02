@@ -1,0 +1,178 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-uicc-stadium> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-vs-onko-tnm-uicc-stadium"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/shareablevalueset" ;
+       fhir:index 0 ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablevalueset>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-onko-tnm-uicc-stadium</b></p><a name=\"mii-vs-onko-tnm-uicc-stadium\"> </a><a name=\"hcmii-vs-onko-tnm-uicc-stadium\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablevalueset.html\">Shareable ValueSet</a></p></div><ul><li>Include these codes as defined in <a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html\"><code>https://www.uicc.org/resources/tnm</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?2026.0.3</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-okk\">okk</a></td><td>Stadium X</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-0\">0</a></td><td>Stadium 0</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-0a\">0a</a></td><td>Stadium 0a</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-0is\">0is</a></td><td>Stadium 0is</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-I\">I</a></td><td>Stadium I</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IA1\">IA1</a></td><td>Stadium IA1</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IA2\">IA2</a></td><td>Stadium IA2</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IA3\">IA3</a></td><td>Stadium IA3</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IB\">IB</a></td><td>Stadium IB</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IB1\">IB1</a></td><td>Stadium IB1</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IB2\">IB2</a></td><td>Stadium IB2</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IC\">IC</a></td><td>Stadium IC</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IS\">IS</a></td><td>Stadium IS</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-II\">II</a></td><td>Stadium II</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIA\">IIA</a></td><td>Stadium IIA</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIA1\">IIA1</a></td><td>Stadium IIA1</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIA2\">IIA2</a></td><td>Stadium IIA2</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIB\">IIB</a></td><td>Stadium IIB</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIC\">IIC</a></td><td>Stadium IIC</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-III\">III</a></td><td>Stadium III</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIIA\">IIIA</a></td><td>Stadium IIIA</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIIA1\">IIIA1</a></td><td>Stadium IIIA1</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIIA2\">IIIA2</a></td><td>Stadium IIIA2</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIIB\">IIIB</a></td><td>Stadium IIIB</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIIC\">IIIC</a></td><td>Stadium IIIC</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIIC1\">IIIC1</a></td><td>Stadium IIIC1</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIIC2\">IIIC2</a></td><td>Stadium IIIC2</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IV\">IV</a></td><td>Stadium IV</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IVA\">IVA</a></td><td>Stadium IVA</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IVB\">IVB</a></td><td>Stadium IVB</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IVC\">IVC</a></td><td>Stadium IVC</td></tr></table></li></ul></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-onko-tnm-uicc-stadium</b></p><a name=\"en-mii-vs-onko-tnm-uicc-stadium\"> </a><a name=\"en-hcmii-vs-onko-tnm-uicc-stadium\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablevalueset.html\">Shareable ValueSet</a></p></div><ul><li>Include these codes as defined in <a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html\"><code>https://www.uicc.org/resources/tnm</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?2026.0.3</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-okk\">okk</a></td><td>Stadium X</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-0\">0</a></td><td>Stadium 0</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-0a\">0a</a></td><td>Stadium 0a</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-0is\">0is</a></td><td>Stadium 0is</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-I\">I</a></td><td>Stadium I</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IA1\">IA1</a></td><td>Stadium IA1</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IA2\">IA2</a></td><td>Stadium IA2</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IA3\">IA3</a></td><td>Stadium IA3</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IB\">IB</a></td><td>Stadium IB</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IB1\">IB1</a></td><td>Stadium IB1</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IB2\">IB2</a></td><td>Stadium IB2</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IC\">IC</a></td><td>Stadium IC</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IS\">IS</a></td><td>Stadium IS</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-II\">II</a></td><td>Stadium II</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIA\">IIA</a></td><td>Stadium IIA</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIA1\">IIA1</a></td><td>Stadium IIA1</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIA2\">IIA2</a></td><td>Stadium IIA2</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIB\">IIB</a></td><td>Stadium IIB</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIC\">IIC</a></td><td>Stadium IIC</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-III\">III</a></td><td>Stadium III</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIIA\">IIIA</a></td><td>Stadium IIIA</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIIA1\">IIIA1</a></td><td>Stadium IIIA1</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIIA2\">IIIA2</a></td><td>Stadium IIIA2</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIIB\">IIIB</a></td><td>Stadium IIIB</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIIC\">IIIC</a></td><td>Stadium IIIC</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIIC1\">IIIC1</a></td><td>Stadium IIIC1</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIIC2\">IIIC2</a></td><td>Stadium IIIC2</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IV\">IV</a></td><td>Stadium IV</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IVA\">IVA</a></td><td>Stadium IVA</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IVB\">IVB</a></td><td>Stadium IVB</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IVC\">IVC</a></td><td>Stadium IVC</td></tr></table></li></ul></div></div>"
+  ] ;
+  fhir:ValueSet.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-uicc-stadium"] ;
+  fhir:ValueSet.version [ fhir:value "2026.0.3"] ;
+  fhir:ValueSet.name [ fhir:value "MII_VS_Onko_TNM_UICC_Stadium"] ;
+  fhir:ValueSet.title [ fhir:value "MII VS Onkologie TNM UICC Stadium"] ;
+  fhir:ValueSet.status [ fhir:value "active"] ;
+  fhir:ValueSet.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ValueSet.date [ fhir:value "2026-07-02T12:18:38+00:00"^^xsd:dateTime] ;
+  fhir:ValueSet.publisher [ fhir:value "Medizininformatik Initiative"] ;
+  fhir:ValueSet.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Medizininformatik Initiative" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.medizininformatik-initiative.de/" ]
+     ]
+  ] ;
+  fhir:ValueSet.description [ fhir:value "The ValueSet enthält Codes für die TNM-Stadien zur prognostischen Gruppeneinteilung von Patienten."] ;
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "https://www.uicc.org/resources/tnm" ] ;
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "okk" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stadium X" ]
+       ], [
+         fhir:index 1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stadium 0" ]
+       ], [
+         fhir:index 2 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0a" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stadium 0a" ]
+       ], [
+         fhir:index 3 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0is" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stadium 0is" ]
+       ], [
+         fhir:index 4 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "I" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stadium I" ]
+       ], [
+         fhir:index 5 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "IA1" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stadium IA1" ]
+       ], [
+         fhir:index 6 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "IA2" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stadium IA2" ]
+       ], [
+         fhir:index 7 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "IA3" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stadium IA3" ]
+       ], [
+         fhir:index 8 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "IB" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stadium IB" ]
+       ], [
+         fhir:index 9 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "IB1" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stadium IB1" ]
+       ], [
+         fhir:index 10 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "IB2" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stadium IB2" ]
+       ], [
+         fhir:index 11 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "IC" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stadium IC" ]
+       ], [
+         fhir:index 12 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "IS" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stadium IS" ]
+       ], [
+         fhir:index 13 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "II" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stadium II" ]
+       ], [
+         fhir:index 14 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "IIA" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stadium IIA" ]
+       ], [
+         fhir:index 15 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "IIA1" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stadium IIA1" ]
+       ], [
+         fhir:index 16 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "IIA2" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stadium IIA2" ]
+       ], [
+         fhir:index 17 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "IIB" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stadium IIB" ]
+       ], [
+         fhir:index 18 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "IIC" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stadium IIC" ]
+       ], [
+         fhir:index 19 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "III" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stadium III" ]
+       ], [
+         fhir:index 20 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "IIIA" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stadium IIIA" ]
+       ], [
+         fhir:index 21 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "IIIA1" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stadium IIIA1" ]
+       ], [
+         fhir:index 22 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "IIIA2" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stadium IIIA2" ]
+       ], [
+         fhir:index 23 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "IIIB" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stadium IIIB" ]
+       ], [
+         fhir:index 24 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "IIIC" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stadium IIIC" ]
+       ], [
+         fhir:index 25 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "IIIC1" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stadium IIIC1" ]
+       ], [
+         fhir:index 26 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "IIIC2" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stadium IIIC2" ]
+       ], [
+         fhir:index 27 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "IV" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stadium IV" ]
+       ], [
+         fhir:index 28 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "IVA" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stadium IVA" ]
+       ], [
+         fhir:index 29 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "IVB" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stadium IVB" ]
+       ], [
+         fhir:index 30 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "IVC" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stadium IVC" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-uicc-stadium.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

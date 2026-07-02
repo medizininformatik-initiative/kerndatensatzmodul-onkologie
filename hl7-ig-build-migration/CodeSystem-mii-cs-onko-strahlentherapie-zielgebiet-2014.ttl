@@ -1,0 +1,681 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet-2014> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-cs-onko-strahlentherapie-zielgebiet-2014"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/shareablecodesystem" ;
+       fhir:index 0 ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-onko-strahlentherapie-zielgebiet-2014</b></p><a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014\"> </a><a name=\"hcmii-cs-onko-strahlentherapie-zielgebiet-2014\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p><b>Properties</b></p><p><b>This code system defines the following properties for its concepts</b></p><table class=\"grid\"><tr><td><b>Name</b></td><td><b>Code</b></td><td><b>Type</b></td><td><b>Description</b></td></tr><tr><td>deprecated</td><td>deprecated</td><td>boolean</td><td>Legacy oBDS 2014 code - use oBDS 2021 equivalent</td></tr></table><p><b>Concepts</b></p><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet-2014</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Deprecated</b></td><td><b>deprecated</b></td></tr><tr style=\"background-color: #ffeeee\"><td style=\"white-space:nowrap\">1.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-1.46\"> </a></td><td>ZNS</td><td>Deprecated</td><td>true</td></tr><tr style=\"background-color: #ffeeee\"><td style=\"white-space:nowrap\">1.1.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-1.461.46\"> </a></td><td>Ganzhirn</td><td>Deprecated</td><td>true</td></tr><tr style=\"background-color: #ffeeee\"><td style=\"white-space:nowrap\">1.2.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-1.462.46\"> </a></td><td>Teilhirn</td><td>Deprecated</td><td>true</td></tr><tr style=\"background-color: #ffeeee\"><td style=\"white-space:nowrap\">1.3.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-1.463.46\"> </a></td><td>Neuroachse</td><td>Deprecated</td><td>true</td></tr><tr><td style=\"white-space:nowrap\">2.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-2.46\"> </a></td><td>Kopf-Hals</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-2.46.43\"> </a></td><td>Kopf-Hals mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-2.46-\"> </a></td><td>Kopf-Hals ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.1.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-2.461.46\"> </a></td><td>Orbita, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.1.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-2.461.46.43\"> </a></td><td>Orbita mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.1.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-2.461.46-\"> </a></td><td>Orbita ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.2.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-2.462.46\"> </a></td><td>Nase/ Nasennebenhöhle, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.2.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-2.462.46.43\"> </a></td><td>Nase/ Nasennebenhöhle mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.2.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-2.462.46-\"> </a></td><td>Nase/ Nasennebenhöhle ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.3.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-2.463.46\"> </a></td><td>Mundhöhle, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.3.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-2.463.46.43\"> </a></td><td>Mundhöhle mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.3.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-2.463.46-\"> </a></td><td>Mundhöhle ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.4.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-2.464.46\"> </a></td><td>Ohr, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.4.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-2.464.46.43\"> </a></td><td>Ohr mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.4.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-2.464.46-\"> </a></td><td>Ohr ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.5.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-2.465.46\"> </a></td><td>Speicheldrüse, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.5.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-2.465.46.43\"> </a></td><td>Speicheldrüse mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.5.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-2.465.46-\"> </a></td><td>Speicheldrüse ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.6.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-2.466.46\"> </a></td><td>Pharynx, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.6.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-2.466.46.43\"> </a></td><td>Pharynx mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.6.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-2.466.46-\"> </a></td><td>Pharynx ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.7.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-2.467.46\"> </a></td><td>Larynx, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.7.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-2.467.46.43\"> </a></td><td>Larynx mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.7.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-2.467.46-\"> </a></td><td>Larynx ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.8.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-2.468.46\"> </a></td><td>Schilddrüse, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.8.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-2.468.46.43\"> </a></td><td>Schilddrüse mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.8.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-2.468.46-\"> </a></td><td>Schilddrüse ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.9.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-2.469.46\"> </a></td><td>Halslymphknoten</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-3.46\"> </a></td><td>Thorax</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-3.46.43\"> </a></td><td>Thorax mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-3.46-\"> </a></td><td>Thorax ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.1.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-3.461.46\"> </a></td><td>Mamma als Ganzbrust, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.1.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-3.461.46.43\"> </a></td><td>Mamma als Ganzbrust mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.1.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-3.461.46-\"> </a></td><td>Mamma als Ganzbrust ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.2.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-3.462.46\"> </a></td><td>Mamma als Teilbrust, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.2.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-3.462.46.43\"> </a></td><td>Mamma als Teilbrust mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.2.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-3.462.46-\"> </a></td><td>Mamma als Teilbrust ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.3.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-3.463.46\"> </a></td><td>Brustwand</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.3.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-3.463.46.43\"> </a></td><td>Brustwand mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.3.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-3.463.46-\"> </a></td><td>Brustwand ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.4.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-3.464.46\"> </a></td><td>Lunge, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.4.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-3.464.46.43\"> </a></td><td>Lunge mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.4.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-3.464.46-\"> </a></td><td>Lunge ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.5.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-3.465.46\"> </a></td><td>Ösophagus, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.5.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-3.465.46.43\"> </a></td><td>Ösophagus mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.5.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-3.465.46-\"> </a></td><td>Ösophagus ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.6.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-3.466.46\"> </a></td><td>Thymus, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.6.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-3.466.46.43\"> </a></td><td>Thymus mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.6.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-3.466.46-\"> </a></td><td>Thymus ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.7.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-3.467.46\"> </a></td><td>Mediastinale Lymphknoten</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-4.46\"> </a></td><td>Abdomen (ohne Becken)</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-4.46.43\"> </a></td><td>Abdomen (ohne Becken) mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-4.46-\"> </a></td><td>Abdomen (ohne Becken) ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.1.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-4.461.46\"> </a></td><td>Magen, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.1.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-4.461.46.43\"> </a></td><td>Magen mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.1.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-4.461.46-\"> </a></td><td>Magen ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.2.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-4.462.46\"> </a></td><td>Pankreas, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.2.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-4.462.46.43\"> </a></td><td>Pankreas mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.2.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-4.462.46-\"> </a></td><td>Pankreas ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.3.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-4.463.46\"> </a></td><td>Leber, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.3.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-4.463.46.43\"> </a></td><td>Leber mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.3.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-4.463.46-\"> </a></td><td>Leber ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.4.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-4.464.46\"> </a></td><td>Milz, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.4.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-4.464.46.43\"> </a></td><td>Milz mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.4.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-4.464.46-\"> </a></td><td>Milz ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.5.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-4.465.46\"> </a></td><td>Niere, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.5.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-4.465.46.43\"> </a></td><td>Niere mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.5.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-4.465.46-\"> </a></td><td>Niere ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.6.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-4.466.46\"> </a></td><td>Nebenniere, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.6.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-4.466.46.43\"> </a></td><td>Nebenniere mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.6.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-4.466.46-\"> </a></td><td>Nebenniere ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.7.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-4.467.46\"> </a></td><td>Retroperitoneale Lymphknoten</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.8.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-4.468.46\"> </a></td><td>Retroperitoneum, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.8.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-4.468.46.43\"> </a></td><td>Retroperitoneum mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.8.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-4.468.46-\"> </a></td><td>Retroperitoneum ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.9.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-4.469.46\"> </a></td><td>Bauchwand, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.9.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-4.469.46.43\"> </a></td><td>Bauchwand mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.9.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-4.469.46-\"> </a></td><td>Bauchwand ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.46\"> </a></td><td>Becken</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.46.43\"> </a></td><td>Becken mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.46-\"> </a></td><td>Becken ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.1.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.461.46\"> </a></td><td>Rektum, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.1.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.461.46.43\"> </a></td><td>Rektum mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.1.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.461.46-\"> </a></td><td>Rektum ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.2.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.462.46\"> </a></td><td>Analbereich, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.2.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.462.46-\"> </a></td><td>Analbereich ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.2.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.462.46.43\"> </a></td><td>Analbereich mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.3.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.463.46\"> </a></td><td>Harnblase, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.3.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.463.46-\"> </a></td><td>Harnblase ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.3.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.463.46.43\"> </a></td><td>Harnblase mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.4.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.464.46\"> </a></td><td>Prostata, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.4.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.464.46.43\"> </a></td><td>Prostata mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.4.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.464.46-\"> </a></td><td>Prostata ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.5.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.465.46\"> </a></td><td>Hoden, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.5.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.465.46.43\"> </a></td><td>Hoden mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.5.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.465.46-\"> </a></td><td>Hoden ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.6.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.466.46\"> </a></td><td>Penis, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.6.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.466.46.43\"> </a></td><td>Penis mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.6.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.466.46-\"> </a></td><td>Penis ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.7.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.467.46\"> </a></td><td>Uterus und Zervix, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.7.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.467.46.43\"> </a></td><td>Uterus und Zervix mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.7.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.467.46-\"> </a></td><td>Uterus und Zervix ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.7.1.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.467.461.46\"> </a></td><td>Uterus</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.7.1.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.467.461.46.43\"> </a></td><td>Uterus mit Lymphknoten</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.7.1.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.467.461.46-\"> </a></td><td>Uterus ohne Lymphknoten</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.7.2.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.467.462.46\"> </a></td><td>Zervix</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.7.2.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.467.462.46.43\"> </a></td><td>Zervix mit Lymphknoten</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.7.2.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.467.462.46-\"> </a></td><td>Zervix ohne Lymphknoten</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.8.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.468.46\"> </a></td><td>Ovar, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.8.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.468.46-\"> </a></td><td>Ovar ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.8.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.468.46.43\"> </a></td><td>Ovar mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.9.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.469.46\"> </a></td><td>Vulva, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.9.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.469.46-\"> </a></td><td>Vulva ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.9.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.469.46.43\"> </a></td><td>Vulva mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.10.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.4610.46\"> </a></td><td>Vagina, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.10.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.4610.46.43\"> </a></td><td>Vagina mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.10.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.4610.46-\"> </a></td><td>Vagina ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.11.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.4611.46\"> </a></td><td>Beckenwand, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.11.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.4611.46.43\"> </a></td><td>Beckenwand mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.11.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.4611.46-\"> </a></td><td>Beckenwand ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.12.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-5.4612.46\"> </a></td><td>Beckenlymphkn. (ohne Primtu.)</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">6.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-6.46\"> </a></td><td>Stütz-/Bewegungsapparat</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">6.1.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-6.461.46\"> </a></td><td>Schädelknochen</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">6.2.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-6.462.46\"> </a></td><td>Rippen</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">6.3.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-6.463.46\"> </a></td><td>Sternum</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">6.4.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-6.464.46\"> </a></td><td>HWS</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">6.5.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-6.465.46\"> </a></td><td>BWS</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">6.6.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-6.466.46\"> </a></td><td>LWS</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">6.7.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-6.467.46\"> </a></td><td>knöchernes Becken</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">6.8.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-6.468.46\"> </a></td><td>Hüfte</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">6.9.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-6.469.46\"> </a></td><td>Schulter</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">6.10.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-6.4610.46\"> </a></td><td>Oberarm</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">6.11.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-6.4611.46\"> </a></td><td>Unterarm</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">6.12.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-6.4612.46\"> </a></td><td>Hand</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">6.13.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-6.4613.46\"> </a></td><td>Leiste</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">6.14.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-6.4614.46\"> </a></td><td>Oberschenkel</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">6.15.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-6.4615.46\"> </a></td><td>Unterschenkel</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">6.16.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-6.4616.46\"> </a></td><td>Fuß</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">7.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-7.46\"> </a></td><td>Haut</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">7.+<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-7.46.43\"> </a></td><td>Haut mit Lymphknoten</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">7.-<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-7.46-\"> </a></td><td>Haut ohne Lymphknoten</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">7.1.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-7.461.46\"> </a></td><td>Primärer Hauttumor</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">7.2.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-7.462.46\"> </a></td><td>Hautmetastasen</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">8.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-8.46\"> </a></td><td>Sonstiges</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">8.1.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-8.461.46\"> </a></td><td>Ganzkörperbestrahlung</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">8.2.<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2014-8.462.46\"> </a></td><td>Mantelfeldbestrahlung</td><td/><td/></tr></table></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-onko-strahlentherapie-zielgebiet-2014</b></p><a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014\"> </a><a name=\"en-hcmii-cs-onko-strahlentherapie-zielgebiet-2014\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p><b>Properties</b></p><p><b>This code system defines the following properties for its concepts</b></p><table class=\"grid\"><tr><td><b>Name</b></td><td><b>Code</b></td><td><b>Type</b></td><td><b>Description</b></td></tr><tr><td>deprecated</td><td>deprecated</td><td>boolean</td><td>Legacy oBDS 2014 code - use oBDS 2021 equivalent</td></tr></table><p><b>Concepts</b></p><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet-2014</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Deprecated</b></td><td><b>deprecated</b></td></tr><tr style=\"background-color: #ffeeee\"><td style=\"white-space:nowrap\">1.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-1.46\"> </a></td><td>ZNS</td><td>Deprecated</td><td>true</td></tr><tr style=\"background-color: #ffeeee\"><td style=\"white-space:nowrap\">1.1.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-1.461.46\"> </a></td><td>Ganzhirn</td><td>Deprecated</td><td>true</td></tr><tr style=\"background-color: #ffeeee\"><td style=\"white-space:nowrap\">1.2.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-1.462.46\"> </a></td><td>Teilhirn</td><td>Deprecated</td><td>true</td></tr><tr style=\"background-color: #ffeeee\"><td style=\"white-space:nowrap\">1.3.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-1.463.46\"> </a></td><td>Neuroachse</td><td>Deprecated</td><td>true</td></tr><tr><td style=\"white-space:nowrap\">2.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-2.46\"> </a></td><td>Kopf-Hals</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-2.46.43\"> </a></td><td>Kopf-Hals mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-2.46-\"> </a></td><td>Kopf-Hals ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.1.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-2.461.46\"> </a></td><td>Orbita, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.1.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-2.461.46.43\"> </a></td><td>Orbita mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.1.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-2.461.46-\"> </a></td><td>Orbita ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.2.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-2.462.46\"> </a></td><td>Nase/ Nasennebenhöhle, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.2.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-2.462.46.43\"> </a></td><td>Nase/ Nasennebenhöhle mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.2.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-2.462.46-\"> </a></td><td>Nase/ Nasennebenhöhle ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.3.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-2.463.46\"> </a></td><td>Mundhöhle, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.3.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-2.463.46.43\"> </a></td><td>Mundhöhle mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.3.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-2.463.46-\"> </a></td><td>Mundhöhle ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.4.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-2.464.46\"> </a></td><td>Ohr, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.4.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-2.464.46.43\"> </a></td><td>Ohr mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.4.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-2.464.46-\"> </a></td><td>Ohr ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.5.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-2.465.46\"> </a></td><td>Speicheldrüse, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.5.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-2.465.46.43\"> </a></td><td>Speicheldrüse mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.5.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-2.465.46-\"> </a></td><td>Speicheldrüse ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.6.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-2.466.46\"> </a></td><td>Pharynx, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.6.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-2.466.46.43\"> </a></td><td>Pharynx mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.6.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-2.466.46-\"> </a></td><td>Pharynx ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.7.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-2.467.46\"> </a></td><td>Larynx, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.7.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-2.467.46.43\"> </a></td><td>Larynx mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.7.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-2.467.46-\"> </a></td><td>Larynx ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.8.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-2.468.46\"> </a></td><td>Schilddrüse, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.8.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-2.468.46.43\"> </a></td><td>Schilddrüse mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.8.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-2.468.46-\"> </a></td><td>Schilddrüse ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">2.9.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-2.469.46\"> </a></td><td>Halslymphknoten</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-3.46\"> </a></td><td>Thorax</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-3.46.43\"> </a></td><td>Thorax mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-3.46-\"> </a></td><td>Thorax ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.1.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-3.461.46\"> </a></td><td>Mamma als Ganzbrust, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.1.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-3.461.46.43\"> </a></td><td>Mamma als Ganzbrust mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.1.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-3.461.46-\"> </a></td><td>Mamma als Ganzbrust ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.2.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-3.462.46\"> </a></td><td>Mamma als Teilbrust, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.2.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-3.462.46.43\"> </a></td><td>Mamma als Teilbrust mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.2.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-3.462.46-\"> </a></td><td>Mamma als Teilbrust ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.3.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-3.463.46\"> </a></td><td>Brustwand</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.3.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-3.463.46.43\"> </a></td><td>Brustwand mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.3.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-3.463.46-\"> </a></td><td>Brustwand ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.4.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-3.464.46\"> </a></td><td>Lunge, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.4.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-3.464.46.43\"> </a></td><td>Lunge mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.4.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-3.464.46-\"> </a></td><td>Lunge ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.5.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-3.465.46\"> </a></td><td>Ösophagus, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.5.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-3.465.46.43\"> </a></td><td>Ösophagus mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.5.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-3.465.46-\"> </a></td><td>Ösophagus ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.6.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-3.466.46\"> </a></td><td>Thymus, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.6.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-3.466.46.43\"> </a></td><td>Thymus mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.6.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-3.466.46-\"> </a></td><td>Thymus ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">3.7.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-3.467.46\"> </a></td><td>Mediastinale Lymphknoten</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-4.46\"> </a></td><td>Abdomen (ohne Becken)</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-4.46.43\"> </a></td><td>Abdomen (ohne Becken) mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-4.46-\"> </a></td><td>Abdomen (ohne Becken) ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.1.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-4.461.46\"> </a></td><td>Magen, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.1.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-4.461.46.43\"> </a></td><td>Magen mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.1.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-4.461.46-\"> </a></td><td>Magen ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.2.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-4.462.46\"> </a></td><td>Pankreas, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.2.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-4.462.46.43\"> </a></td><td>Pankreas mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.2.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-4.462.46-\"> </a></td><td>Pankreas ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.3.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-4.463.46\"> </a></td><td>Leber, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.3.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-4.463.46.43\"> </a></td><td>Leber mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.3.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-4.463.46-\"> </a></td><td>Leber ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.4.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-4.464.46\"> </a></td><td>Milz, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.4.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-4.464.46.43\"> </a></td><td>Milz mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.4.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-4.464.46-\"> </a></td><td>Milz ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.5.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-4.465.46\"> </a></td><td>Niere, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.5.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-4.465.46.43\"> </a></td><td>Niere mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.5.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-4.465.46-\"> </a></td><td>Niere ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.6.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-4.466.46\"> </a></td><td>Nebenniere, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.6.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-4.466.46.43\"> </a></td><td>Nebenniere mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.6.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-4.466.46-\"> </a></td><td>Nebenniere ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.7.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-4.467.46\"> </a></td><td>Retroperitoneale Lymphknoten</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.8.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-4.468.46\"> </a></td><td>Retroperitoneum, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.8.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-4.468.46.43\"> </a></td><td>Retroperitoneum mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.8.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-4.468.46-\"> </a></td><td>Retroperitoneum ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.9.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-4.469.46\"> </a></td><td>Bauchwand, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.9.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-4.469.46.43\"> </a></td><td>Bauchwand mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">4.9.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-4.469.46-\"> </a></td><td>Bauchwand ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.46\"> </a></td><td>Becken</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.46.43\"> </a></td><td>Becken mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.46-\"> </a></td><td>Becken ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.1.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.461.46\"> </a></td><td>Rektum, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.1.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.461.46.43\"> </a></td><td>Rektum mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.1.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.461.46-\"> </a></td><td>Rektum ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.2.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.462.46\"> </a></td><td>Analbereich, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.2.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.462.46-\"> </a></td><td>Analbereich ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.2.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.462.46.43\"> </a></td><td>Analbereich mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.3.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.463.46\"> </a></td><td>Harnblase, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.3.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.463.46-\"> </a></td><td>Harnblase ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.3.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.463.46.43\"> </a></td><td>Harnblase mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.4.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.464.46\"> </a></td><td>Prostata, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.4.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.464.46.43\"> </a></td><td>Prostata mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.4.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.464.46-\"> </a></td><td>Prostata ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.5.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.465.46\"> </a></td><td>Hoden, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.5.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.465.46.43\"> </a></td><td>Hoden mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.5.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.465.46-\"> </a></td><td>Hoden ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.6.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.466.46\"> </a></td><td>Penis, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.6.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.466.46.43\"> </a></td><td>Penis mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.6.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.466.46-\"> </a></td><td>Penis ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.7.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.467.46\"> </a></td><td>Uterus und Zervix, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.7.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.467.46.43\"> </a></td><td>Uterus und Zervix mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.7.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.467.46-\"> </a></td><td>Uterus und Zervix ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.7.1.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.467.461.46\"> </a></td><td>Uterus</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.7.1.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.467.461.46.43\"> </a></td><td>Uterus mit Lymphknoten</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.7.1.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.467.461.46-\"> </a></td><td>Uterus ohne Lymphknoten</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.7.2.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.467.462.46\"> </a></td><td>Zervix</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.7.2.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.467.462.46.43\"> </a></td><td>Zervix mit Lymphknoten</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.7.2.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.467.462.46-\"> </a></td><td>Zervix ohne Lymphknoten</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.8.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.468.46\"> </a></td><td>Ovar, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.8.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.468.46-\"> </a></td><td>Ovar ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.8.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.468.46.43\"> </a></td><td>Ovar mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.9.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.469.46\"> </a></td><td>Vulva, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.9.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.469.46-\"> </a></td><td>Vulva ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.9.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.469.46.43\"> </a></td><td>Vulva mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.10.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.4610.46\"> </a></td><td>Vagina, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.10.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.4610.46.43\"> </a></td><td>Vagina mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.10.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.4610.46-\"> </a></td><td>Vagina ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.11.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.4611.46\"> </a></td><td>Beckenwand, o.n.A.</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.11.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.4611.46.43\"> </a></td><td>Beckenwand mit Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.11.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.4611.46-\"> </a></td><td>Beckenwand ohne Lk</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">5.12.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-5.4612.46\"> </a></td><td>Beckenlymphkn. (ohne Primtu.)</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">6.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-6.46\"> </a></td><td>Stütz-/Bewegungsapparat</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">6.1.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-6.461.46\"> </a></td><td>Schädelknochen</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">6.2.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-6.462.46\"> </a></td><td>Rippen</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">6.3.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-6.463.46\"> </a></td><td>Sternum</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">6.4.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-6.464.46\"> </a></td><td>HWS</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">6.5.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-6.465.46\"> </a></td><td>BWS</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">6.6.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-6.466.46\"> </a></td><td>LWS</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">6.7.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-6.467.46\"> </a></td><td>knöchernes Becken</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">6.8.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-6.468.46\"> </a></td><td>Hüfte</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">6.9.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-6.469.46\"> </a></td><td>Schulter</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">6.10.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-6.4610.46\"> </a></td><td>Oberarm</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">6.11.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-6.4611.46\"> </a></td><td>Unterarm</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">6.12.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-6.4612.46\"> </a></td><td>Hand</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">6.13.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-6.4613.46\"> </a></td><td>Leiste</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">6.14.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-6.4614.46\"> </a></td><td>Oberschenkel</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">6.15.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-6.4615.46\"> </a></td><td>Unterschenkel</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">6.16.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-6.4616.46\"> </a></td><td>Fuß</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">7.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-7.46\"> </a></td><td>Haut</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">7.+<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-7.46.43\"> </a></td><td>Haut mit Lymphknoten</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">7.-<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-7.46-\"> </a></td><td>Haut ohne Lymphknoten</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">7.1.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-7.461.46\"> </a></td><td>Primärer Hauttumor</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">7.2.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-7.462.46\"> </a></td><td>Hautmetastasen</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">8.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-8.46\"> </a></td><td>Sonstiges</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">8.1.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-8.461.46\"> </a></td><td>Ganzkörperbestrahlung</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">8.2.<a name=\"en-mii-cs-onko-strahlentherapie-zielgebiet-2014-8.462.46\"> </a></td><td>Mantelfeldbestrahlung</td><td/><td/></tr></table></div></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet-2014"] ;
+  fhir:CodeSystem.version [ fhir:value "2026.0.3"] ;
+  fhir:CodeSystem.name [ fhir:value "MII_CS_Onko_Strahlentherapie_Zielgebiet_2014"] ;
+  fhir:CodeSystem.title [ fhir:value "MII CS Onkologie Strahlentherapie Zielgebiet oBDS 2014 (Legacy)"] ;
+  fhir:CodeSystem.status [ fhir:value "active"] ;
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-07-02T12:18:38+00:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "Medizininformatik Initiative"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Medizininformatik Initiative" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.medizininformatik-initiative.de/" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "oBDS 2014 Legacy-Codesystem für Klassifikation von Zielgebiet von Strahlentherapie - nur für Datenimport und Migration"] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.valueSet [
+     fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-zielgebiet-2014" ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-zielgebiet-2014>
+  ] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "150"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.property [
+     fhir:index 0 ;
+     fhir:CodeSystem.property.code [ fhir:value "deprecated" ] ;
+     fhir:CodeSystem.property.description [ fhir:value "Legacy oBDS 2014 code - use oBDS 2021 equivalent" ] ;
+     fhir:CodeSystem.property.type [ fhir:value "boolean" ]
+  ] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "1." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "ZNS" ] ;
+     fhir:CodeSystem.concept.property [
+       fhir:index 0 ;
+       fhir:CodeSystem.concept.property.code [ fhir:value "deprecated" ] ;
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "1.1." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Ganzhirn" ] ;
+     fhir:CodeSystem.concept.property [
+       fhir:index 0 ;
+       fhir:CodeSystem.concept.property.code [ fhir:value "deprecated" ] ;
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+     ]
+  ], [
+     fhir:index 2 ;
+     fhir:CodeSystem.concept.code [ fhir:value "1.2." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Teilhirn" ] ;
+     fhir:CodeSystem.concept.property [
+       fhir:index 0 ;
+       fhir:CodeSystem.concept.property.code [ fhir:value "deprecated" ] ;
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+     ]
+  ], [
+     fhir:index 3 ;
+     fhir:CodeSystem.concept.code [ fhir:value "1.3." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neuroachse" ] ;
+     fhir:CodeSystem.concept.property [
+       fhir:index 0 ;
+       fhir:CodeSystem.concept.property.code [ fhir:value "deprecated" ] ;
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+     ]
+  ], [
+     fhir:index 4 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Kopf-Hals" ]
+  ], [
+     fhir:index 5 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Kopf-Hals mit Lk" ]
+  ], [
+     fhir:index 6 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Kopf-Hals ohne Lk" ]
+  ], [
+     fhir:index 7 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.1." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Orbita, o.n.A." ]
+  ], [
+     fhir:index 8 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.1.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Orbita mit Lk" ]
+  ], [
+     fhir:index 9 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.1.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Orbita ohne Lk" ]
+  ], [
+     fhir:index 10 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.2." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Nase/ Nasennebenhöhle, o.n.A." ]
+  ], [
+     fhir:index 11 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.2.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Nase/ Nasennebenhöhle mit Lk" ]
+  ], [
+     fhir:index 12 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.2.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Nase/ Nasennebenhöhle ohne Lk" ]
+  ], [
+     fhir:index 13 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.3." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Mundhöhle, o.n.A." ]
+  ], [
+     fhir:index 14 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.3.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Mundhöhle mit Lk" ]
+  ], [
+     fhir:index 15 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.3.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Mundhöhle ohne Lk" ]
+  ], [
+     fhir:index 16 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.4." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Ohr, o.n.A." ]
+  ], [
+     fhir:index 17 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.4.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Ohr mit Lk" ]
+  ], [
+     fhir:index 18 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.4.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Ohr ohne Lk" ]
+  ], [
+     fhir:index 19 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.5." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Speicheldrüse, o.n.A." ]
+  ], [
+     fhir:index 20 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.5.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Speicheldrüse mit Lk" ]
+  ], [
+     fhir:index 21 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.5.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Speicheldrüse ohne Lk" ]
+  ], [
+     fhir:index 22 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.6." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Pharynx, o.n.A." ]
+  ], [
+     fhir:index 23 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.6.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Pharynx mit Lk" ]
+  ], [
+     fhir:index 24 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.6.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Pharynx ohne Lk" ]
+  ], [
+     fhir:index 25 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.7." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Larynx, o.n.A." ]
+  ], [
+     fhir:index 26 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.7.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Larynx mit Lk" ]
+  ], [
+     fhir:index 27 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.7.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Larynx ohne Lk" ]
+  ], [
+     fhir:index 28 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.8." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Schilddrüse, o.n.A." ]
+  ], [
+     fhir:index 29 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.8.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Schilddrüse mit Lk" ]
+  ], [
+     fhir:index 30 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.8.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Schilddrüse ohne Lk" ]
+  ], [
+     fhir:index 31 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.9." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Halslymphknoten" ]
+  ], [
+     fhir:index 32 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Thorax" ]
+  ], [
+     fhir:index 33 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Thorax mit Lk" ]
+  ], [
+     fhir:index 34 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Thorax ohne Lk" ]
+  ], [
+     fhir:index 35 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3.1." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Mamma als Ganzbrust, o.n.A." ]
+  ], [
+     fhir:index 36 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3.1.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Mamma als Ganzbrust mit Lk" ]
+  ], [
+     fhir:index 37 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3.1.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Mamma als Ganzbrust ohne Lk" ]
+  ], [
+     fhir:index 38 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3.2." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Mamma als Teilbrust, o.n.A." ]
+  ], [
+     fhir:index 39 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3.2.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Mamma als Teilbrust mit Lk" ]
+  ], [
+     fhir:index 40 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3.2.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Mamma als Teilbrust ohne Lk" ]
+  ], [
+     fhir:index 41 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3.3." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Brustwand" ]
+  ], [
+     fhir:index 42 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3.3.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Brustwand mit Lk" ]
+  ], [
+     fhir:index 43 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3.3.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Brustwand ohne Lk" ]
+  ], [
+     fhir:index 44 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3.4." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Lunge, o.n.A." ]
+  ], [
+     fhir:index 45 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3.4.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Lunge mit Lk" ]
+  ], [
+     fhir:index 46 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3.4.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Lunge ohne Lk" ]
+  ], [
+     fhir:index 47 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3.5." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Ösophagus, o.n.A." ]
+  ], [
+     fhir:index 48 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3.5.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Ösophagus mit Lk" ]
+  ], [
+     fhir:index 49 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3.5.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Ösophagus ohne Lk" ]
+  ], [
+     fhir:index 50 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3.6." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Thymus, o.n.A." ]
+  ], [
+     fhir:index 51 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3.6.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Thymus mit Lk" ]
+  ], [
+     fhir:index 52 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3.6.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Thymus ohne Lk" ]
+  ], [
+     fhir:index 53 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3.7." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Mediastinale Lymphknoten" ]
+  ], [
+     fhir:index 54 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Abdomen (ohne Becken)" ]
+  ], [
+     fhir:index 55 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Abdomen (ohne Becken) mit Lk" ]
+  ], [
+     fhir:index 56 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Abdomen (ohne Becken) ohne Lk" ]
+  ], [
+     fhir:index 57 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.1." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Magen, o.n.A." ]
+  ], [
+     fhir:index 58 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.1.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Magen mit Lk" ]
+  ], [
+     fhir:index 59 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.1.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Magen ohne Lk" ]
+  ], [
+     fhir:index 60 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.2." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Pankreas, o.n.A." ]
+  ], [
+     fhir:index 61 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.2.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Pankreas mit Lk" ]
+  ], [
+     fhir:index 62 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.2.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Pankreas ohne Lk" ]
+  ], [
+     fhir:index 63 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.3." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Leber, o.n.A." ]
+  ], [
+     fhir:index 64 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.3.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Leber mit Lk" ]
+  ], [
+     fhir:index 65 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.3.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Leber ohne Lk" ]
+  ], [
+     fhir:index 66 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.4." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Milz, o.n.A." ]
+  ], [
+     fhir:index 67 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.4.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Milz mit Lk" ]
+  ], [
+     fhir:index 68 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.4.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Milz ohne Lk" ]
+  ], [
+     fhir:index 69 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.5." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Niere, o.n.A." ]
+  ], [
+     fhir:index 70 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.5.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Niere mit Lk" ]
+  ], [
+     fhir:index 71 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.5.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Niere ohne Lk" ]
+  ], [
+     fhir:index 72 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.6." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Nebenniere, o.n.A." ]
+  ], [
+     fhir:index 73 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.6.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Nebenniere mit Lk" ]
+  ], [
+     fhir:index 74 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.6.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Nebenniere ohne Lk" ]
+  ], [
+     fhir:index 75 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.7." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Retroperitoneale Lymphknoten" ]
+  ], [
+     fhir:index 76 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.8." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Retroperitoneum, o.n.A." ]
+  ], [
+     fhir:index 77 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.8.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Retroperitoneum mit Lk" ]
+  ], [
+     fhir:index 78 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.8.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Retroperitoneum ohne Lk" ]
+  ], [
+     fhir:index 79 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.9." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Bauchwand, o.n.A." ]
+  ], [
+     fhir:index 80 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.9.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Bauchwand mit Lk" ]
+  ], [
+     fhir:index 81 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.9.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Bauchwand ohne Lk" ]
+  ], [
+     fhir:index 82 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Becken" ]
+  ], [
+     fhir:index 83 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Becken mit Lk" ]
+  ], [
+     fhir:index 84 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Becken ohne Lk" ]
+  ], [
+     fhir:index 85 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.1." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Rektum, o.n.A." ]
+  ], [
+     fhir:index 86 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.1.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Rektum mit Lk" ]
+  ], [
+     fhir:index 87 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.1.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Rektum ohne Lk" ]
+  ], [
+     fhir:index 88 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.2." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Analbereich, o.n.A." ]
+  ], [
+     fhir:index 89 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.2.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Analbereich ohne Lk" ]
+  ], [
+     fhir:index 90 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.2.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Analbereich mit Lk" ]
+  ], [
+     fhir:index 91 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.3." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Harnblase, o.n.A." ]
+  ], [
+     fhir:index 92 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.3.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Harnblase ohne Lk" ]
+  ], [
+     fhir:index 93 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.3.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Harnblase mit Lk" ]
+  ], [
+     fhir:index 94 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.4." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Prostata, o.n.A." ]
+  ], [
+     fhir:index 95 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.4.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Prostata mit Lk" ]
+  ], [
+     fhir:index 96 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.4.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Prostata ohne Lk" ]
+  ], [
+     fhir:index 97 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.5." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hoden, o.n.A." ]
+  ], [
+     fhir:index 98 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.5.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hoden mit Lk" ]
+  ], [
+     fhir:index 99 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.5.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hoden ohne Lk" ]
+  ], [
+     fhir:index 100 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.6." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Penis, o.n.A." ]
+  ], [
+     fhir:index 101 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.6.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Penis mit Lk" ]
+  ], [
+     fhir:index 102 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.6.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Penis ohne Lk" ]
+  ], [
+     fhir:index 103 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.7." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Uterus und Zervix, o.n.A." ]
+  ], [
+     fhir:index 104 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.7.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Uterus und Zervix mit Lk" ]
+  ], [
+     fhir:index 105 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.7.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Uterus und Zervix ohne Lk" ]
+  ], [
+     fhir:index 106 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.7.1." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Uterus" ]
+  ], [
+     fhir:index 107 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.7.1.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Uterus mit Lymphknoten" ]
+  ], [
+     fhir:index 108 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.7.1.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Uterus ohne Lymphknoten" ]
+  ], [
+     fhir:index 109 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.7.2." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Zervix" ]
+  ], [
+     fhir:index 110 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.7.2.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Zervix mit Lymphknoten" ]
+  ], [
+     fhir:index 111 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.7.2.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Zervix ohne Lymphknoten" ]
+  ], [
+     fhir:index 112 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.8." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Ovar, o.n.A." ]
+  ], [
+     fhir:index 113 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.8.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Ovar ohne Lk" ]
+  ], [
+     fhir:index 114 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.8.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Ovar mit Lk" ]
+  ], [
+     fhir:index 115 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.9." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Vulva, o.n.A." ]
+  ], [
+     fhir:index 116 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.9.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Vulva ohne Lk" ]
+  ], [
+     fhir:index 117 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.9.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Vulva mit Lk" ]
+  ], [
+     fhir:index 118 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.10." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Vagina, o.n.A." ]
+  ], [
+     fhir:index 119 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.10.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Vagina mit Lk" ]
+  ], [
+     fhir:index 120 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.10.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Vagina ohne Lk" ]
+  ], [
+     fhir:index 121 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.11." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Beckenwand, o.n.A." ]
+  ], [
+     fhir:index 122 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.11.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Beckenwand mit Lk" ]
+  ], [
+     fhir:index 123 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.11.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Beckenwand ohne Lk" ]
+  ], [
+     fhir:index 124 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.12." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Beckenlymphkn. (ohne Primtu.)" ]
+  ], [
+     fhir:index 125 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stütz-/Bewegungsapparat" ]
+  ], [
+     fhir:index 126 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6.1." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Schädelknochen" ]
+  ], [
+     fhir:index 127 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6.2." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Rippen" ]
+  ], [
+     fhir:index 128 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6.3." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sternum" ]
+  ], [
+     fhir:index 129 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6.4." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "HWS" ]
+  ], [
+     fhir:index 130 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6.5." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "BWS" ]
+  ], [
+     fhir:index 131 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6.6." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "LWS" ]
+  ], [
+     fhir:index 132 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6.7." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "knöchernes Becken" ]
+  ], [
+     fhir:index 133 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6.8." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hüfte" ]
+  ], [
+     fhir:index 134 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6.9." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Schulter" ]
+  ], [
+     fhir:index 135 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6.10." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Oberarm" ]
+  ], [
+     fhir:index 136 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6.11." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Unterarm" ]
+  ], [
+     fhir:index 137 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6.12." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hand" ]
+  ], [
+     fhir:index 138 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6.13." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Leiste" ]
+  ], [
+     fhir:index 139 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6.14." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Oberschenkel" ]
+  ], [
+     fhir:index 140 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6.15." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Unterschenkel" ]
+  ], [
+     fhir:index 141 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6.16." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Fuß" ]
+  ], [
+     fhir:index 142 ;
+     fhir:CodeSystem.concept.code [ fhir:value "7." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Haut" ]
+  ], [
+     fhir:index 143 ;
+     fhir:CodeSystem.concept.code [ fhir:value "7.+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Haut mit Lymphknoten" ]
+  ], [
+     fhir:index 144 ;
+     fhir:CodeSystem.concept.code [ fhir:value "7.-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Haut ohne Lymphknoten" ]
+  ], [
+     fhir:index 145 ;
+     fhir:CodeSystem.concept.code [ fhir:value "7.1." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Primärer Hauttumor" ]
+  ], [
+     fhir:index 146 ;
+     fhir:CodeSystem.concept.code [ fhir:value "7.2." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hautmetastasen" ]
+  ], [
+     fhir:index 147 ;
+     fhir:CodeSystem.concept.code [ fhir:value "8." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sonstiges" ]
+  ], [
+     fhir:index 148 ;
+     fhir:CodeSystem.concept.code [ fhir:value "8.1." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Ganzkörperbestrahlung" ]
+  ], [
+     fhir:index 149 ;
+     fhir:CodeSystem.concept.code [ fhir:value "8.2." ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Mantelfeldbestrahlung" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet-2014.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="mii-cs-onko-studienteilnahme"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem mii-cs-onko-studienteilnahme</b></p><a name="en-mii-cs-onko-studienteilnahme"> </a><a name="en-hcmii-cs-onko-studienteilnahme"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org/fhir/R4/shareablecodesystem.html">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-studienteilnahme</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">J<a name="en-mii-cs-onko-studienteilnahme-J"> </a></td><td>Ja</td></tr><tr><td style="white-space:nowrap">N<a name="en-mii-cs-onko-studienteilnahme-N"> </a></td><td>Nein</td></tr><tr><td style="white-space:nowrap">U<a name="en-mii-cs-onko-studienteilnahme-U"> </a></td><td>Unbekannt</td></tr></table></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-studienteilnahme"/>
+  <version value="2026.0.3"/>
+  <name value="Studienteilnahme"/>
+  <title value="MII CS Onkologie Studienteilnahme"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-07-02T12:18:38+00:00"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="oBDS-spezifisches Codesystem den Status der Studienteilnahme"/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="3"/>
+  <concept>
+    <code value="J"/>
+    <display value="Ja"/>
+  </concept>
+  <concept>
+    <code value="N"/>
+    <display value="Nein"/>
+  </concept>
+  <concept>
+    <code value="U"/>
+    <display value="Unbekannt"/>
+  </concept>
+</CodeSystem>

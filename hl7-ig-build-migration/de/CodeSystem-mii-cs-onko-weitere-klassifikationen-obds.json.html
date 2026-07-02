@@ -1,0 +1,1360 @@
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>MII CodeSystem Onkologie - Weitere Klassifikationen oBDS - JSON Representation - MII IG Kerndatensatz-Modul Onkologie v2026.0.3</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"15.207"}
+    h3,h4,h5,h6{--heading-prefix:"15.207"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Onkologie</span>
+            <br/>
+            <span style="display:inline-block;">2026.0.3 - release
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Start</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Beschreibung
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="index.html">Modulbeschreibung</a>
+      </li>
+      <li>
+        <a href="abweichungen-obds.html">Abweichungen zum oBDS</a>
+      </li>
+      <li>
+        <a href="context.html">Bezüge zu anderen Modulen</a>
+      </li>
+      <li>
+        <a href="bezug-nationale-standards.html">Nationale Standards</a>
+      </li>
+      <li>
+        <a href="bezug-internationale-standards.html">Internationale Standards</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsfälle / Informationsmodell
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="use-cases.html">Szenarien</a>
+      </li>
+      <li>
+        <a href="data-sets.html">Datensätze</a>
+      </li>
+      <li>
+        <a href="uml.html">Informationsmodell (UML)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Technische Implementierung
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="conformance.html">Konformität</a>
+      </li>
+      <li>
+        <a href="security-privacy.html">Sicherheit &amp; Datenschutz</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefakte</a>
+  </li>
+  <li>
+    <a href="references.html">Referenzen</a>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+  <li>
+    <a href="changes.html">Release Notes</a>
+  </li>
+  <li>
+    <a href="translationinfo.html">Mehrsprachigkeit</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-de.png"/>Deutsch</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag de" src="assets/images/lang-de.png"/>Deutsch</div>
+
+    <div><a href="../en/CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.json.html"><img class="flag" src="assets/images/lang-en.png" alt="flag en"/>English</a></div>
+
+  </div>
+</div>
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artefaktübersicht</b></a></li><li><b>MII CodeSystem Onkologie - Weitere Klassifikationen oBDS</b></li>
+
+          <span style="float: var(--ig-right);">
+
+            <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.xml.html">&lt; zurück</a> | 
+
+            <a href="#bottom">Ende</a>
+
+          | <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.ttl.html">weiter &gt;</a>
+
+          </span>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<!-- layouts\layout-instance-format -->
+<div style="counter-reset: section 8" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Onkologie - Local Development build (v2026.0.3) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html">Narrativer Inhalt</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+
+<h2 id="root">: MII CodeSystem Onkologie - Weitere Klassifikationen oBDS</h2>
+
+  <table class="colsi" data-fhir="generated">
+    <tr>
+
+      <td colspan="2">
+        
+          Active
+          
+
+            Stand: 
+2026-07-02
+
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p><a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.json" no-download="true">Raw json</a> | <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.json" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code style="white-space: pre; text-wrap: nowrap;">{
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem">resourceType</a>" : "CodeSystem",
+  "<a href="http://hl7.org/fhir/R4/resource.html#CodeSystem.id">id</a>" : "mii-cs-onko-weitere-klassifikationen-obds",
+  "<a href="http://hl7.org/fhir/R4/resource.html#CodeSystem.language">language</a>" : "de",
+  "<a href="http://hl7.org/fhir/R4/domainresource.html#CodeSystem.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xml:lang=\&quot;de\&quot; lang=\&quot;de\&quot;&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;German&lt;/b&gt;&lt;/p&gt;&lt;hr/&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: CodeSystem mii-cs-onko-weitere-klassifikationen-obds&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcmii-cs-onko-weitere-klassifikationen-obds\&quot;&gt; &lt;/a&gt;&lt;p&gt;This  code system &lt;code&gt;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds&lt;/code&gt; defines the following codes in an undefined hierarchy:&lt;/p&gt;&lt;table class=\&quot;codes\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Lvl&lt;/b&gt;&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;binet&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-binet\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;BINET Staging System&lt;/td&gt;&lt;td&gt;Staging system for chronic lymphocytic leukemia based on lymph node involvement and organ enlargement.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0binet-a&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-binet-a\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;BINET A&lt;/td&gt;&lt;td&gt;Early stage CLL: lymphocytosis in blood and bone marrow only&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0binet-b&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-binet-b\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;BINET B&lt;/td&gt;&lt;td&gt;Intermediate stage CLL: lymphocytosis with enlarged lymph nodes or spleen/liver&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0binet-c&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-binet-c\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;BINET C&lt;/td&gt;&lt;td&gt;Advanced stage CLL: lymphocytosis with anemia or thrombocytopenia&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;ann-arbor-stadium&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-stadium\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ann-Arbor Stadium&lt;/td&gt;&lt;td&gt;Staging system for Hodgkin and Non-Hodgkin lymphomas based on anatomical extent of disease.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-i&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-i\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;I&lt;/td&gt;&lt;td&gt;Single lymph node region or single extralymphatic organ&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ia&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ia\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IA&lt;/td&gt;&lt;td&gt;Single lymph node region, asymptomatic&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iae&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iae\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IAE&lt;/td&gt;&lt;td&gt;Single lymph node region with extranodal extension, asymptomatic&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ib&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ib\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IB&lt;/td&gt;&lt;td&gt;Single lymph node region with B symptoms&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ibe&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ibe\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IBE&lt;/td&gt;&lt;td&gt;Single lymph node region with extranodal extension and B symptoms&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ie&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ie\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IE&lt;/td&gt;&lt;td&gt;Single extralymphatic organ involvement&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ix&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ix\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IX&lt;/td&gt;&lt;td&gt;Single lymph node region, symptoms unclear&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ixa&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ixa\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IXA&lt;/td&gt;&lt;td&gt;Single lymph node region, symptoms unclear, asymptomatic features&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ixae&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ixae\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IXAE&lt;/td&gt;&lt;td&gt;Single lymph node region with extranodal extension, symptoms unclear, asymptomatic features&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ixb&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ixb\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IXB&lt;/td&gt;&lt;td&gt;Single lymph node region, symptoms unclear, B symptom features&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ixbe&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ixbe\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IXBE&lt;/td&gt;&lt;td&gt;Single lymph node region with extranodal extension, symptoms unclear, B symptom features&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ixe&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ixe\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IXE&lt;/td&gt;&lt;td&gt;Single extralymphatic organ, symptoms unclear&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ii&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;II&lt;/td&gt;&lt;td&gt;Two or more lymph node regions on same side of diaphragm&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ii1&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;II1&lt;/td&gt;&lt;td&gt;Two lymph node regions on same side of diaphragm&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ii1a&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1a\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;II1A&lt;/td&gt;&lt;td&gt;Two lymph node regions on same side of diaphragm, asymptomatic&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ii1ae&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1ae\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;II1AE&lt;/td&gt;&lt;td&gt;Two lymph node regions on same side of diaphragm with extranodal extension, asymptomatic&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ii1b&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1b\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;II1B&lt;/td&gt;&lt;td&gt;Two lymph node regions on same side of diaphragm with B symptoms&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ii1be&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1be\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;II1BE&lt;/td&gt;&lt;td&gt;Two lymph node regions on same side of diaphragm with extranodal extension and B symptoms&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ii1e&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1e\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;II1E&lt;/td&gt;&lt;td&gt;Two lymph node regions on same side of diaphragm with extranodal extension&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ii1x&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1x\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;II1X&lt;/td&gt;&lt;td&gt;Two lymph node regions on same side of diaphragm, symptoms unclear&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ii1xa&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1xa\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;II1XA&lt;/td&gt;&lt;td&gt;Two lymph node regions on same side of diaphragm, symptoms unclear, asymptomatic features&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ii1xae&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1xae\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;II1XAE&lt;/td&gt;&lt;td&gt;Two lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, asymptomatic features&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ii1xb&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1xb\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;II1XB&lt;/td&gt;&lt;td&gt;Two lymph node regions on same side of diaphragm, symptoms unclear, B symptom features&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ii1xbe&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1xbe\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;II1XBE&lt;/td&gt;&lt;td&gt;Two lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, B symptom features&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ii1xe&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1xe\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;II1XE&lt;/td&gt;&lt;td&gt;Two lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ii2&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;II2&lt;/td&gt;&lt;td&gt;Multiple lymph node regions on same side of diaphragm&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ii2a&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2a\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;II2A&lt;/td&gt;&lt;td&gt;Multiple lymph node regions on same side of diaphragm, asymptomatic&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ii2ae&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2ae\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;II2AE&lt;/td&gt;&lt;td&gt;Multiple lymph node regions on same side of diaphragm with extranodal extension, asymptomatic&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ii2b&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2b\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;II2B&lt;/td&gt;&lt;td&gt;Multiple lymph node regions on same side of diaphragm with B symptoms&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ii2be&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2be\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;II2BE&lt;/td&gt;&lt;td&gt;Multiple lymph node regions on same side of diaphragm with extranodal extension and B symptoms&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ii2e&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2e\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;II2E&lt;/td&gt;&lt;td&gt;Multiple lymph node regions on same side of diaphragm with extranodal extension&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ii2x&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2x\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;II2X&lt;/td&gt;&lt;td&gt;Multiple lymph node regions on same side of diaphragm, symptoms unclear&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ii2xa&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2xa\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;II2XA&lt;/td&gt;&lt;td&gt;Multiple lymph node regions on same side of diaphragm, symptoms unclear, asymptomatic features&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ii2xae&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2xae\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;II2XAE&lt;/td&gt;&lt;td&gt;Multiple lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, asymptomatic features&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ii2xb&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2xb\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;II2XB&lt;/td&gt;&lt;td&gt;Multiple lymph node regions on same side of diaphragm, symptoms unclear, B symptom features&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ii2xbe&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2xbe\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;II2XBE&lt;/td&gt;&lt;td&gt;Multiple lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, B symptom features&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ii2xe&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2xe\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;II2XE&lt;/td&gt;&lt;td&gt;Multiple lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iia&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iia\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IIA&lt;/td&gt;&lt;td&gt;Two or more lymph node regions on same side of diaphragm, asymptomatic&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iiae&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiae\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IIAE&lt;/td&gt;&lt;td&gt;Two or more lymph node regions on same side of diaphragm with extranodal extension, asymptomatic&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iib&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iib\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IIB&lt;/td&gt;&lt;td&gt;Two or more lymph node regions on same side of diaphragm with B symptoms&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iibe&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iibe\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IIBE&lt;/td&gt;&lt;td&gt;Two or more lymph node regions on same side of diaphragm with extranodal extension and B symptoms&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iie&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iie\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IIE&lt;/td&gt;&lt;td&gt;Two or more lymph node regions on same side of diaphragm with extranodal extension&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iix&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iix\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IIX&lt;/td&gt;&lt;td&gt;Two or more lymph node regions on same side of diaphragm, symptoms unclear&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iixa&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iixa\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IIXA&lt;/td&gt;&lt;td&gt;Two or more lymph node regions on same side of diaphragm, symptoms unclear, asymptomatic features&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iixae&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iixae\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IIXAE&lt;/td&gt;&lt;td&gt;Two or more lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, asymptomatic features&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iixb&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iixb\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IIXB&lt;/td&gt;&lt;td&gt;Two or more lymph node regions on same side of diaphragm, symptoms unclear, B symptom features&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iixbe&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iixbe\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IIXBE&lt;/td&gt;&lt;td&gt;Two or more lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, B symptom features&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iixe&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iixe\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IIXE&lt;/td&gt;&lt;td&gt;Two or more lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iii&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iii\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;III&lt;/td&gt;&lt;td&gt;Lymph node regions on both sides of diaphragm&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iiia&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiia\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IIIA&lt;/td&gt;&lt;td&gt;Lymph node regions on both sides of diaphragm, asymptomatic&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iiiae&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiiae\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IIIAE&lt;/td&gt;&lt;td&gt;Lymph node regions on both sides of diaphragm with extranodal extension, asymptomatic&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iiiaes&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiiaes\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IIIAES&lt;/td&gt;&lt;td&gt;Lymph node regions on both sides of diaphragm with extranodal extension and spleen involvement, asymptomatic&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iiias&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiias\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IIIAS&lt;/td&gt;&lt;td&gt;Lymph node regions on both sides of diaphragm with spleen involvement, asymptomatic&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iiib&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiib\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IIIB&lt;/td&gt;&lt;td&gt;Lymph node regions on both sides of diaphragm with B symptoms&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iiibe&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiibe\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IIIBE&lt;/td&gt;&lt;td&gt;Lymph node regions on both sides of diaphragm with extranodal extension and B symptoms&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iiibes&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiibes\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IIIBES&lt;/td&gt;&lt;td&gt;Lymph node regions on both sides of diaphragm with extranodal extension, spleen involvement, and B symptoms&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iiibs&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiibs\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IIIBS&lt;/td&gt;&lt;td&gt;Lymph node regions on both sides of diaphragm with spleen involvement and B symptoms&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iiie&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiie\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IIIE&lt;/td&gt;&lt;td&gt;Lymph node regions on both sides of diaphragm with extranodal extension&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iiies&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiies\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IIIES&lt;/td&gt;&lt;td&gt;Lymph node regions on both sides of diaphragm with extranodal extension and spleen involvement&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iiis&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiis\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IIIS&lt;/td&gt;&lt;td&gt;Lymph node regions on both sides of diaphragm with spleen involvement&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iiix&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiix\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IIIX&lt;/td&gt;&lt;td&gt;Lymph node regions on both sides of diaphragm, symptoms unclear&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iiixa&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiixa\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IIIXA&lt;/td&gt;&lt;td&gt;Lymph node regions on both sides of diaphragm, symptoms unclear, asymptomatic features&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iiixae&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiixae\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IIIXAE&lt;/td&gt;&lt;td&gt;Lymph node regions on both sides of diaphragm with extranodal extension, symptoms unclear, asymptomatic features&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iiixaes&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiixaes\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IIIXAES&lt;/td&gt;&lt;td&gt;Lymph node regions on both sides of diaphragm with extranodal extension and spleen involvement, symptoms unclear, asymptomatic features&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iiixas&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiixas\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IIIXAS&lt;/td&gt;&lt;td&gt;Lymph node regions on both sides of diaphragm with spleen involvement, symptoms unclear, asymptomatic features&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iiixb&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiixb\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IIIXB&lt;/td&gt;&lt;td&gt;Lymph node regions on both sides of diaphragm, symptoms unclear, B symptom features&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iiixbe&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiixbe\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IIIXBE&lt;/td&gt;&lt;td&gt;Lymph node regions on both sides of diaphragm with extranodal extension, symptoms unclear, B symptom features&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iiixbes&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiixbes\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IIIXBES&lt;/td&gt;&lt;td&gt;Lymph node regions on both sides of diaphragm with extranodal extension and spleen involvement, symptoms unclear, B symptom features&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iiixbs&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiixbs\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IIIXBS&lt;/td&gt;&lt;td&gt;Lymph node regions on both sides of diaphragm with spleen involvement, symptoms unclear, B symptom features&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iiixe&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiixe\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IIIXE&lt;/td&gt;&lt;td&gt;Lymph node regions on both sides of diaphragm with extranodal extension, symptoms unclear&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iiixes&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiixes\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IIIXES&lt;/td&gt;&lt;td&gt;Lymph node regions on both sides of diaphragm with extranodal extension and spleen involvement, symptoms unclear&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iiixs&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiixs\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IIIXS&lt;/td&gt;&lt;td&gt;Lymph node regions on both sides of diaphragm with spleen involvement, symptoms unclear&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iii1&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iii1\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;III1&lt;/td&gt;&lt;td&gt;Limited lymph node regions on both sides of diaphragm&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iii1a&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iii1a\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;III1A&lt;/td&gt;&lt;td&gt;Limited lymph node regions on both sides of diaphragm, asymptomatic&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iii1b&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iii1b\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;III1B&lt;/td&gt;&lt;td&gt;Limited lymph node regions on both sides of diaphragm with B symptoms&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iii2&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iii2\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;III2&lt;/td&gt;&lt;td&gt;Multiple lymph node regions on both sides of diaphragm&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iii2a&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iii2a\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;III2A&lt;/td&gt;&lt;td&gt;Multiple lymph node regions on both sides of diaphragm, asymptomatic&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iii2b&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iii2b\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;III2B&lt;/td&gt;&lt;td&gt;Multiple lymph node regions on both sides of diaphragm with B symptoms&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iv&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iv\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IV&lt;/td&gt;&lt;td&gt;Disseminated involvement of one or more extralymphatic organs&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-iva&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iva\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IVA&lt;/td&gt;&lt;td&gt;Disseminated involvement of extralymphatic organs, asymptomatic&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ivae&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ivae\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IVAE&lt;/td&gt;&lt;td&gt;Disseminated involvement of extralymphatic organs with additional extranodal extension, asymptomatic&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ivb&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ivb\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IVB&lt;/td&gt;&lt;td&gt;Disseminated involvement of extralymphatic organs with B symptoms&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ivbe&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ivbe\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IVBE&lt;/td&gt;&lt;td&gt;Disseminated involvement of extralymphatic organs with additional extranodal extension and B symptoms&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ive&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ive\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IVE&lt;/td&gt;&lt;td&gt;Disseminated involvement of extralymphatic organs with extranodal extension&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ivx&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ivx\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IVX&lt;/td&gt;&lt;td&gt;Disseminated involvement of extralymphatic organs, symptoms unclear&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ivxa&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ivxa\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IVXA&lt;/td&gt;&lt;td&gt;Disseminated involvement of extralymphatic organs, symptoms unclear, asymptomatic features&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ivxae&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ivxae\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IVXAE&lt;/td&gt;&lt;td&gt;Disseminated involvement of extralymphatic organs with additional extranodal extension, symptoms unclear, asymptomatic features&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ivxb&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ivxb\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IVXB&lt;/td&gt;&lt;td&gt;Disseminated involvement of extralymphatic organs, symptoms unclear, B symptom features&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ivxbe&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ivxbe\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IVXBE&lt;/td&gt;&lt;td&gt;Disseminated involvement of extralymphatic organs with additional extranodal extension, symptoms unclear, B symptom features&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ann-arbor-ivxe&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ivxe\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IVXE&lt;/td&gt;&lt;td&gt;Disseminated involvement of extralymphatic organs with extranodal extension, symptoms unclear&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;iss&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-iss\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;International Staging System&lt;/td&gt;&lt;td&gt;Staging system for multiple myeloma based on serum beta-2 microglobulin and albumin levels.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0iss-i&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-iss-i\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ISS I&lt;/td&gt;&lt;td&gt;Beta-2 microglobulin &amp;lt;3.5 mg/L and albumin ≥3.5 g/dL&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0iss-ii&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-iss-ii\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ISS II&lt;/td&gt;&lt;td&gt;Not ISS I or ISS III&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0iss-iii&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-iss-iii\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ISS III&lt;/td&gt;&lt;td&gt;Beta-2 microglobulin ≥5.5 mg/L&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;isswm&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-isswm\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;International Scoring System for Waldenström's Macroglobulinemia&lt;/td&gt;&lt;td&gt;Prognostic scoring system for Waldenström's macroglobulinemia based on age, beta-2 microglobulin, and albumin levels.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0isswm-n&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-isswm-n\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ISSWM Niedrig&lt;/td&gt;&lt;td&gt;Low risk: age ≤65 years, beta-2 microglobulin ≤3 mg/L, albumin &amp;gt;3.5 g/dL&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0isswm-i&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-isswm-i\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ISSWM Intermediär&lt;/td&gt;&lt;td&gt;Intermediate risk: one adverse factor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0isswm-h&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-isswm-h\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ISSWM Hoch&lt;/td&gt;&lt;td&gt;High risk: age &amp;gt;65 years or beta-2 microglobulin &amp;gt;3 mg/L, or albumin ≤3.5 g/dL (≥2 factors)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;who-grad&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-who-grad\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;WHO Grade&lt;/td&gt;&lt;td&gt;World Health Organization grading system for central nervous system tumors based on histological features.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0who-grad-i&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-who-grad-i\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;WHO Grad I&lt;/td&gt;&lt;td&gt;Well-differentiated, slow-growing, low proliferative potential&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0who-grad-ii&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-who-grad-ii\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;WHO Grad II&lt;/td&gt;&lt;td&gt;Moderately differentiated, infiltrative, low proliferative potential&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0who-grad-iii&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-who-grad-iii\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;WHO Grad III&lt;/td&gt;&lt;td&gt;Poorly differentiated, anaplastic, high proliferative potential&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0who-grad-iv&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-who-grad-iv\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;WHO Grad IV&lt;/td&gt;&lt;td&gt;Poorly differentiated, high mitotic activity, necrosis, microvascular proliferation&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;formen&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-formen\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Formen&lt;/td&gt;&lt;td&gt;Classification of lymphoma forms distinguishing classical and variant presentations.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0formen-k&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-formen-k\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Klassisch&lt;/td&gt;&lt;td&gt;Classical form of lymphoma presentation&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0formen-v&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-formen-v\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Variante&lt;/td&gt;&lt;td&gt;Variant form of lymphoma presentation&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;eln-klassifikation&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-eln-klassifikation\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ELN-Klassifikation&lt;/td&gt;&lt;td&gt;European LeukemiaNet risk stratification for acute myeloid leukemia based on cytogenetic and molecular genetic abnormalities.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0eln-g&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-eln-g\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ELN Günstig&lt;/td&gt;&lt;td&gt;Favorable risk: good prognosis cytogenetic/molecular markers&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0eln-i1&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-eln-i1\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ELN Intermediär I&lt;/td&gt;&lt;td&gt;Intermediate risk I: intermediate prognosis markers&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0eln-i2&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-eln-i2\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ELN Intermediär II&lt;/td&gt;&lt;td&gt;Intermediate risk II: intermediate prognosis markers&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0eln-u&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-eln-u\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ELN Ungünstig&lt;/td&gt;&lt;td&gt;Unfavorable risk: poor prognosis cytogenetic/molecular markers&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0eln-cp&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-eln-cp\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ELN Chronische Phase&lt;/td&gt;&lt;td&gt;Chronic phase (CML context)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0eln-ap&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-eln-ap\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ELN Akzelierte Phase&lt;/td&gt;&lt;td&gt;Accelerated phase (CML context)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0eln-bk&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-eln-bk\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ELN Blastenkrise&lt;/td&gt;&lt;td&gt;Blast crisis phase (CML context)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;durie-salmon-stadium&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-durie-salmon-stadium\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Durie-Salmon Stadium&lt;/td&gt;&lt;td&gt;Multiple myeloma staging system based on tumor burden and organ function.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0durie-salmon-i&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-durie-salmon-i\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Durie-Salmon I&lt;/td&gt;&lt;td&gt;Low tumor burden: hemoglobin &amp;gt;10 g/dL, calcium normal, no bone lesions&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0durie-salmon-ia&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-durie-salmon-ia\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Durie-Salmon IA&lt;/td&gt;&lt;td&gt;Low tumor burden with normal renal function&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0durie-salmon-ib&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-durie-salmon-ib\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Durie-Salmon IB&lt;/td&gt;&lt;td&gt;Low tumor burden with abnormal renal function&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0durie-salmon-ii&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-durie-salmon-ii\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Durie-Salmon II&lt;/td&gt;&lt;td&gt;Intermediate tumor burden: neither stage I nor III criteria&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0durie-salmon-iia&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-durie-salmon-iia\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Durie-Salmon IIA&lt;/td&gt;&lt;td&gt;Intermediate tumor burden with normal renal function&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0durie-salmon-iib&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-durie-salmon-iib\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Durie-Salmon IIB&lt;/td&gt;&lt;td&gt;Intermediate tumor burden with abnormal renal function&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0durie-salmon-iii&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-durie-salmon-iii\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Durie-Salmon III&lt;/td&gt;&lt;td&gt;High tumor burden: hemoglobin &amp;lt;8.5 g/dL, calcium elevated, extensive bone lesions&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0durie-salmon-iiia&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-durie-salmon-iiia\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Durie-Salmon IIIA&lt;/td&gt;&lt;td&gt;High tumor burden with normal renal function&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0durie-salmon-iiib&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-durie-salmon-iiib\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Durie-Salmon IIIB&lt;/td&gt;&lt;td&gt;High tumor burden with abnormal renal function&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;bismuth&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-bismuth\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Bismuth&lt;/td&gt;&lt;td&gt;Classification system for hilar cholangiocarcinoma based on the extent of biliary involvement and resectability.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0bismuth-i&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-bismuth-i\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Bismuth I&lt;/td&gt;&lt;td&gt;Tumor below confluence of left and right hepatic ducts&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0bismuth-ii&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-bismuth-ii\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Bismuth II&lt;/td&gt;&lt;td&gt;Tumor reaching confluence but not involving secondary ducts&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0bismuth-iii&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-bismuth-iii\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Bismuth III&lt;/td&gt;&lt;td&gt;Tumor involving confluence and either right or left secondary ducts&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0bismuth-iiia&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-bismuth-iiia\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Bismuth IIIA&lt;/td&gt;&lt;td&gt;Tumor involving confluence and right secondary ducts&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0bismuth-iiib&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-bismuth-iiib\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Bismuth IIIB&lt;/td&gt;&lt;td&gt;Tumor involving confluence and left secondary ducts&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0bismuth-iv&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-bismuth-iv\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Bismuth IV&lt;/td&gt;&lt;td&gt;Tumor involving confluence and both right and left secondary ducts&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;masaoka&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-masaoka\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Masaoka&lt;/td&gt;&lt;td&gt;Staging system for thymomas based on invasiveness and extent of disease.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0masaoka-i&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-masaoka-i\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Masaoka I&lt;/td&gt;&lt;td&gt;Encapsulated tumor without invasion&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0masaoka-ii&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-masaoka-ii\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Masaoka II&lt;/td&gt;&lt;td&gt;Invasion into surrounding fatty tissue or mediastinal pleura&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0masaoka-iii&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-masaoka-iii\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Masaoka III&lt;/td&gt;&lt;td&gt;Invasion into neighboring organs&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0masaoka-iv&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-masaoka-iv\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Masaoka IV&lt;/td&gt;&lt;td&gt;Pleural or pericardial dissemination&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0masaoka-iva&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-masaoka-iva\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Masaoka IVA&lt;/td&gt;&lt;td&gt;Pleural or pericardial implants&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0masaoka-ivb&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-masaoka-ivb\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Masaoka IVB&lt;/td&gt;&lt;td&gt;Lymphogenous or hematogenous metastasis&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;mitoserate-gist&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-mitoserate-gist\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Mitoserate-GIST&lt;/td&gt;&lt;td&gt;Mitotic rate assessment for gastrointestinal stromal tumors.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0mitoserate-gist-n&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-mitoserate-gist-n\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Mitoserate-GIST Niedrig&lt;/td&gt;&lt;td&gt;Low mitotic rate: ≤5 mitoses per 50 HPF&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0mitoserate-gist-h&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-mitoserate-gist-h\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Mitoserate-GIST Hoch&lt;/td&gt;&lt;td&gt;High mitotic rate: &amp;gt;5 mitoses per 50 HPF&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;p16&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-p16\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;p16&lt;/td&gt;&lt;td&gt;p16 protein expression status assessment.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0p16-p&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-p16-p\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;p16 Positiv&lt;/td&gt;&lt;td&gt;Positive p16 protein expression&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0p16-n&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-p16-n\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;p16 Negativ&lt;/td&gt;&lt;td&gt;Negative p16 protein expression&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;eutos-score&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-eutos-score\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;EUTOS-Score&lt;/td&gt;&lt;td&gt;European Treatment and Outcome Study prognostic score for chronic myeloid leukemia.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0eutos-score-n&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-eutos-score-n\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;EUTOS-Score Niedrigrisiko&lt;/td&gt;&lt;td&gt;Low risk EUTOS score: ≤87&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0eutos-score-h&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-eutos-score-h\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;EUTOS-Score Hochrisiko&lt;/td&gt;&lt;td&gt;High risk EUTOS score: &amp;gt;87&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;sanz-score&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-sanz-score\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Sanz-Score&lt;/td&gt;&lt;td&gt;Risk assessment score for acute promyelocytic leukemia.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0sanz-score-n&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-sanz-score-n\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Sanz-Score Niedrig&lt;/td&gt;&lt;td&gt;Low risk: WBC &amp;lt;10x10⁹/L and platelets &amp;gt;40x10⁹/L&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0sanz-score-i&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-sanz-score-i\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Sanz-Score Intermediär&lt;/td&gt;&lt;td&gt;Intermediate risk: WBC &amp;lt;10x10⁹/L and platelets ≤40x10⁹/L&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0sanz-score-h&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-sanz-score-h\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Sanz-Score Hoch&lt;/td&gt;&lt;td&gt;High risk: WBC ≥10x10⁹/L&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;ipi&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ipi\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IPI&lt;/td&gt;&lt;td&gt;International Prognostic Index for aggressive non-Hodgkin lymphoma.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ipi-n&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ipi-n\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IPI Niedrig&lt;/td&gt;&lt;td&gt;Low risk: 0-1 risk factors&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ipi-ni&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ipi-ni\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IPI Niedrig-Intermediär&lt;/td&gt;&lt;td&gt;Low-intermediate risk: 2 risk factors&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ipi-hi&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ipi-hi\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IPI Hoch-Intermediär&lt;/td&gt;&lt;td&gt;High-intermediate risk: 3 risk factors&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ipi-h&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ipi-h\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IPI Hoch&lt;/td&gt;&lt;td&gt;High risk: 4-5 risk factors&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;flipi&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-flipi\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;FLIPI&lt;/td&gt;&lt;td&gt;Follicular Lymphoma International Prognostic Index.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0flipi-l&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-flipi-l\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;FLIPI Low risk&lt;/td&gt;&lt;td&gt;Low risk: 0-1 risk factors&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0flipi-i&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-flipi-i\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;FLIPI Intermediate risk&lt;/td&gt;&lt;td&gt;Intermediate risk: 2 risk factors&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0flipi-h&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-flipi-h\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;FLIPI High risk&lt;/td&gt;&lt;td&gt;High risk: ≥3 risk factors&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;mipi&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-mipi\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MIPI&lt;/td&gt;&lt;td&gt;Mantle Cell Lymphoma International Prognostic Index.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0mipi-n&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-mipi-n\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MIPI Niedrig&lt;/td&gt;&lt;td&gt;Low risk MIPI score&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0mipi-i&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-mipi-i\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MIPI Intermediär&lt;/td&gt;&lt;td&gt;Intermediate risk MIPI score&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0mipi-h&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-mipi-h\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MIPI Hoch&lt;/td&gt;&lt;td&gt;High risk MIPI score&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;risikogruppen-ghsg&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-risikogruppen-ghsg\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Risikogruppen GHSG&lt;/td&gt;&lt;td&gt;German Hodgkin Study Group risk stratification.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0risikogruppen-ghsg-fr&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-risikogruppen-ghsg-fr\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;GHSG Frühe&lt;/td&gt;&lt;td&gt;Early favorable risk group&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0risikogruppen-ghsg-i&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-risikogruppen-ghsg-i\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;GHSG Intermediär&lt;/td&gt;&lt;td&gt;Intermediate risk group&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0risikogruppen-ghsg-fo&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-risikogruppen-ghsg-fo\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;GHSG Fortgeschritten&lt;/td&gt;&lt;td&gt;Advanced risk group&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;ipss&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ipss\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IPSS&lt;/td&gt;&lt;td&gt;International Prognostic Scoring System for myelodysplastic syndromes.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ipss-l&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ipss-l\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IPSS Low&lt;/td&gt;&lt;td&gt;Low risk: score 0&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ipss-i1&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ipss-i1\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IPSS Intermediate-I&lt;/td&gt;&lt;td&gt;Intermediate-1 risk: score 0.5-1.0&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ipss-i2&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ipss-i2\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IPSS Intermediate-II&lt;/td&gt;&lt;td&gt;Intermediate-2 risk: score 1.5-2.0&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0ipss-h&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-ipss-h\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IPSS High risk&lt;/td&gt;&lt;td&gt;High risk: score ≥2.5&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;her2-neu&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-her2-neu\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;HER2-neu&lt;/td&gt;&lt;td&gt;HER2-neu protein expression and gene amplification status.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0her2-neu-p&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-her2-neu-p\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;HER2-neu Positiv&lt;/td&gt;&lt;td&gt;Positive HER2-neu status (IHC 3+ or FISH amplified)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;\u00a0\u00a0her2-neu-n&lt;a name=\&quot;mii-cs-onko-weitere-klassifikationen-obds-her2-neu-n\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;HER2-neu Negativ&lt;/td&gt;&lt;td&gt;Negative HER2-neu status (IHC 0-1+ or FISH not amplified)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
+  },
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.url">url</a>" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.version">version</a>" : "2026.0.3",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.name">name</a>" : "MII_CS_Onko_Weitere_Klassifikationen_OBDS",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.title">title</a>" : "MII CodeSystem Onkologie - Weitere Klassifikationen oBDS",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.experimental">experimental</a>" : true,
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.date">date</a>" : "2026-07-02T12:18:38+00:00",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.publisher">publisher</a>" : "Medizininformatik Initiative",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.contact">contact</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "Medizininformatik Initiative",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "url",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "https://www.medizininformatik-initiative.de/"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.description">description</a>" : "oBDS-specific classification systems and scoring systems not yet covered by international terminologies (SNOMED CT, NCI Thesaurus). These codes supplement the existing ValueSet for additional classifications. Research required: Check if SNOMED CT or LOINC codes exist for these scoring systems before using oBDS-specific codes.",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.content">content</a>" : "complete",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.count">count</a>" : 181,
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "binet",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "BINET Staging System",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Staging system for chronic lymphocytic leukemia based on lymph node involvement and organ enlargement.",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">concept</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "binet-a",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "BINET A",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Early stage CLL: lymphocytosis in blood and bone marrow only"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "binet-b",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "BINET B",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Intermediate stage CLL: lymphocytosis with enlarged lymph nodes or spleen/liver"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "binet-c",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "BINET C",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Advanced stage CLL: lymphocytosis with anemia or thrombocytopenia"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-stadium",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Ann-Arbor Stadium",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Staging system for Hodgkin and Non-Hodgkin lymphomas based on anatomical extent of disease.",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">concept</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-i",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "I",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Single lymph node region or single extralymphatic organ"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ia",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IA",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Single lymph node region, asymptomatic"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iae",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IAE",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Single lymph node region with extranodal extension, asymptomatic"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ib",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IB",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Single lymph node region with B symptoms"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ibe",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IBE",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Single lymph node region with extranodal extension and B symptoms"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ie",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IE",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Single extralymphatic organ involvement"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ix",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IX",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Single lymph node region, symptoms unclear"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ixa",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IXA",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Single lymph node region, symptoms unclear, asymptomatic features"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ixae",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IXAE",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Single lymph node region with extranodal extension, symptoms unclear, asymptomatic features"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ixb",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IXB",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Single lymph node region, symptoms unclear, B symptom features"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ixbe",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IXBE",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Single lymph node region with extranodal extension, symptoms unclear, B symptom features"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ixe",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IXE",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Single extralymphatic organ, symptoms unclear"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ii",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "II",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Two or more lymph node regions on same side of diaphragm"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ii1",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "II1",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Two lymph node regions on same side of diaphragm"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ii1a",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "II1A",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Two lymph node regions on same side of diaphragm, asymptomatic"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ii1ae",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "II1AE",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Two lymph node regions on same side of diaphragm with extranodal extension, asymptomatic"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ii1b",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "II1B",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Two lymph node regions on same side of diaphragm with B symptoms"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ii1be",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "II1BE",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Two lymph node regions on same side of diaphragm with extranodal extension and B symptoms"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ii1e",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "II1E",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Two lymph node regions on same side of diaphragm with extranodal extension"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ii1x",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "II1X",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Two lymph node regions on same side of diaphragm, symptoms unclear"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ii1xa",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "II1XA",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Two lymph node regions on same side of diaphragm, symptoms unclear, asymptomatic features"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ii1xae",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "II1XAE",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Two lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, asymptomatic features"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ii1xb",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "II1XB",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Two lymph node regions on same side of diaphragm, symptoms unclear, B symptom features"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ii1xbe",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "II1XBE",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Two lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, B symptom features"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ii1xe",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "II1XE",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Two lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ii2",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "II2",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Multiple lymph node regions on same side of diaphragm"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ii2a",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "II2A",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Multiple lymph node regions on same side of diaphragm, asymptomatic"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ii2ae",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "II2AE",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Multiple lymph node regions on same side of diaphragm with extranodal extension, asymptomatic"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ii2b",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "II2B",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Multiple lymph node regions on same side of diaphragm with B symptoms"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ii2be",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "II2BE",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Multiple lymph node regions on same side of diaphragm with extranodal extension and B symptoms"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ii2e",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "II2E",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Multiple lymph node regions on same side of diaphragm with extranodal extension"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ii2x",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "II2X",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Multiple lymph node regions on same side of diaphragm, symptoms unclear"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ii2xa",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "II2XA",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Multiple lymph node regions on same side of diaphragm, symptoms unclear, asymptomatic features"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ii2xae",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "II2XAE",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Multiple lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, asymptomatic features"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ii2xb",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "II2XB",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Multiple lymph node regions on same side of diaphragm, symptoms unclear, B symptom features"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ii2xbe",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "II2XBE",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Multiple lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, B symptom features"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ii2xe",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "II2XE",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Multiple lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iia",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IIA",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Two or more lymph node regions on same side of diaphragm, asymptomatic"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iiae",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IIAE",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Two or more lymph node regions on same side of diaphragm with extranodal extension, asymptomatic"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iib",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IIB",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Two or more lymph node regions on same side of diaphragm with B symptoms"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iibe",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IIBE",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Two or more lymph node regions on same side of diaphragm with extranodal extension and B symptoms"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iie",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IIE",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Two or more lymph node regions on same side of diaphragm with extranodal extension"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iix",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IIX",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Two or more lymph node regions on same side of diaphragm, symptoms unclear"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iixa",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IIXA",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Two or more lymph node regions on same side of diaphragm, symptoms unclear, asymptomatic features"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iixae",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IIXAE",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Two or more lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, asymptomatic features"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iixb",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IIXB",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Two or more lymph node regions on same side of diaphragm, symptoms unclear, B symptom features"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iixbe",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IIXBE",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Two or more lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, B symptom features"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iixe",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IIXE",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Two or more lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iii",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "III",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lymph node regions on both sides of diaphragm"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iiia",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IIIA",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lymph node regions on both sides of diaphragm, asymptomatic"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iiiae",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IIIAE",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lymph node regions on both sides of diaphragm with extranodal extension, asymptomatic"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iiiaes",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IIIAES",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lymph node regions on both sides of diaphragm with extranodal extension and spleen involvement, asymptomatic"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iiias",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IIIAS",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lymph node regions on both sides of diaphragm with spleen involvement, asymptomatic"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iiib",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IIIB",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lymph node regions on both sides of diaphragm with B symptoms"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iiibe",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IIIBE",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lymph node regions on both sides of diaphragm with extranodal extension and B symptoms"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iiibes",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IIIBES",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lymph node regions on both sides of diaphragm with extranodal extension, spleen involvement, and B symptoms"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iiibs",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IIIBS",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lymph node regions on both sides of diaphragm with spleen involvement and B symptoms"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iiie",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IIIE",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lymph node regions on both sides of diaphragm with extranodal extension"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iiies",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IIIES",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lymph node regions on both sides of diaphragm with extranodal extension and spleen involvement"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iiis",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IIIS",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lymph node regions on both sides of diaphragm with spleen involvement"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iiix",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IIIX",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lymph node regions on both sides of diaphragm, symptoms unclear"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iiixa",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IIIXA",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lymph node regions on both sides of diaphragm, symptoms unclear, asymptomatic features"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iiixae",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IIIXAE",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lymph node regions on both sides of diaphragm with extranodal extension, symptoms unclear, asymptomatic features"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iiixaes",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IIIXAES",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lymph node regions on both sides of diaphragm with extranodal extension and spleen involvement, symptoms unclear, asymptomatic features"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iiixas",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IIIXAS",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lymph node regions on both sides of diaphragm with spleen involvement, symptoms unclear, asymptomatic features"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iiixb",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IIIXB",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lymph node regions on both sides of diaphragm, symptoms unclear, B symptom features"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iiixbe",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IIIXBE",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lymph node regions on both sides of diaphragm with extranodal extension, symptoms unclear, B symptom features"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iiixbes",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IIIXBES",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lymph node regions on both sides of diaphragm with extranodal extension and spleen involvement, symptoms unclear, B symptom features"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iiixbs",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IIIXBS",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lymph node regions on both sides of diaphragm with spleen involvement, symptoms unclear, B symptom features"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iiixe",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IIIXE",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lymph node regions on both sides of diaphragm with extranodal extension, symptoms unclear"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iiixes",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IIIXES",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lymph node regions on both sides of diaphragm with extranodal extension and spleen involvement, symptoms unclear"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iiixs",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IIIXS",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lymph node regions on both sides of diaphragm with spleen involvement, symptoms unclear"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iii1",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "III1",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Limited lymph node regions on both sides of diaphragm"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iii1a",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "III1A",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Limited lymph node regions on both sides of diaphragm, asymptomatic"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iii1b",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "III1B",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Limited lymph node regions on both sides of diaphragm with B symptoms"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iii2",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "III2",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Multiple lymph node regions on both sides of diaphragm"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iii2a",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "III2A",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Multiple lymph node regions on both sides of diaphragm, asymptomatic"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iii2b",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "III2B",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Multiple lymph node regions on both sides of diaphragm with B symptoms"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iv",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IV",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Disseminated involvement of one or more extralymphatic organs"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-iva",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IVA",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Disseminated involvement of extralymphatic organs, asymptomatic"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ivae",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IVAE",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Disseminated involvement of extralymphatic organs with additional extranodal extension, asymptomatic"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ivb",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IVB",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Disseminated involvement of extralymphatic organs with B symptoms"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ivbe",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IVBE",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Disseminated involvement of extralymphatic organs with additional extranodal extension and B symptoms"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ive",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IVE",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Disseminated involvement of extralymphatic organs with extranodal extension"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ivx",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IVX",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Disseminated involvement of extralymphatic organs, symptoms unclear"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ivxa",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IVXA",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Disseminated involvement of extralymphatic organs, symptoms unclear, asymptomatic features"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ivxae",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IVXAE",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Disseminated involvement of extralymphatic organs with additional extranodal extension, symptoms unclear, asymptomatic features"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ivxb",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IVXB",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Disseminated involvement of extralymphatic organs, symptoms unclear, B symptom features"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ivxbe",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IVXBE",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Disseminated involvement of extralymphatic organs with additional extranodal extension, symptoms unclear, B symptom features"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ann-arbor-ivxe",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IVXE",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Disseminated involvement of extralymphatic organs with extranodal extension, symptoms unclear"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "iss",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "International Staging System",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Staging system for multiple myeloma based on serum beta-2 microglobulin and albumin levels.",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">concept</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "iss-i",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "ISS I",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Beta-2 microglobulin &lt;3.5 mg/L and albumin ≥3.5 g/dL"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "iss-ii",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "ISS II",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Not ISS I or ISS III"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "iss-iii",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "ISS III",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Beta-2 microglobulin ≥5.5 mg/L"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "isswm",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "International Scoring System for Waldenström's Macroglobulinemia",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Prognostic scoring system for Waldenström's macroglobulinemia based on age, beta-2 microglobulin, and albumin levels.",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">concept</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "isswm-n",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "ISSWM Niedrig",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Low risk: age ≤65 years, beta-2 microglobulin ≤3 mg/L, albumin &gt;3.5 g/dL"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "isswm-i",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "ISSWM Intermediär",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Intermediate risk: one adverse factor"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "isswm-h",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "ISSWM Hoch",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "High risk: age &gt;65 years or beta-2 microglobulin &gt;3 mg/L, or albumin ≤3.5 g/dL (≥2 factors)"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "who-grad",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "WHO Grade",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "World Health Organization grading system for central nervous system tumors based on histological features.",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">concept</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "who-grad-i",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "WHO Grad I",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Well-differentiated, slow-growing, low proliferative potential"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "who-grad-ii",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "WHO Grad II",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Moderately differentiated, infiltrative, low proliferative potential"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "who-grad-iii",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "WHO Grad III",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Poorly differentiated, anaplastic, high proliferative potential"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "who-grad-iv",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "WHO Grad IV",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Poorly differentiated, high mitotic activity, necrosis, microvascular proliferation"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "formen",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Formen",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Classification of lymphoma forms distinguishing classical and variant presentations.",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">concept</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "formen-k",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Klassisch",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Classical form of lymphoma presentation"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "formen-v",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Variante",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Variant form of lymphoma presentation"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "eln-klassifikation",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "ELN-Klassifikation",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "European LeukemiaNet risk stratification for acute myeloid leukemia based on cytogenetic and molecular genetic abnormalities.",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">concept</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "eln-g",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "ELN Günstig",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Favorable risk: good prognosis cytogenetic/molecular markers"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "eln-i1",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "ELN Intermediär I",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Intermediate risk I: intermediate prognosis markers"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "eln-i2",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "ELN Intermediär II",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Intermediate risk II: intermediate prognosis markers"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "eln-u",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "ELN Ungünstig",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Unfavorable risk: poor prognosis cytogenetic/molecular markers"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "eln-cp",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "ELN Chronische Phase",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Chronic phase (CML context)"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "eln-ap",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "ELN Akzelierte Phase",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Accelerated phase (CML context)"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "eln-bk",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "ELN Blastenkrise",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Blast crisis phase (CML context)"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "durie-salmon-stadium",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Durie-Salmon Stadium",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Multiple myeloma staging system based on tumor burden and organ function.",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">concept</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "durie-salmon-i",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Durie-Salmon I",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Low tumor burden: hemoglobin &gt;10 g/dL, calcium normal, no bone lesions"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "durie-salmon-ia",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Durie-Salmon IA",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Low tumor burden with normal renal function"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "durie-salmon-ib",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Durie-Salmon IB",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Low tumor burden with abnormal renal function"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "durie-salmon-ii",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Durie-Salmon II",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Intermediate tumor burden: neither stage I nor III criteria"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "durie-salmon-iia",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Durie-Salmon IIA",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Intermediate tumor burden with normal renal function"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "durie-salmon-iib",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Durie-Salmon IIB",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Intermediate tumor burden with abnormal renal function"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "durie-salmon-iii",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Durie-Salmon III",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "High tumor burden: hemoglobin &lt;8.5 g/dL, calcium elevated, extensive bone lesions"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "durie-salmon-iiia",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Durie-Salmon IIIA",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "High tumor burden with normal renal function"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "durie-salmon-iiib",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Durie-Salmon IIIB",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "High tumor burden with abnormal renal function"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "bismuth",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Bismuth",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Classification system for hilar cholangiocarcinoma based on the extent of biliary involvement and resectability.",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">concept</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "bismuth-i",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Bismuth I",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Tumor below confluence of left and right hepatic ducts"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "bismuth-ii",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Bismuth II",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Tumor reaching confluence but not involving secondary ducts"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "bismuth-iii",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Bismuth III",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Tumor involving confluence and either right or left secondary ducts"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "bismuth-iiia",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Bismuth IIIA",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Tumor involving confluence and right secondary ducts"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "bismuth-iiib",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Bismuth IIIB",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Tumor involving confluence and left secondary ducts"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "bismuth-iv",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Bismuth IV",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Tumor involving confluence and both right and left secondary ducts"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "masaoka",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Masaoka",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Staging system for thymomas based on invasiveness and extent of disease.",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">concept</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "masaoka-i",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Masaoka I",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Encapsulated tumor without invasion"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "masaoka-ii",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Masaoka II",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Invasion into surrounding fatty tissue or mediastinal pleura"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "masaoka-iii",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Masaoka III",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Invasion into neighboring organs"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "masaoka-iv",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Masaoka IV",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Pleural or pericardial dissemination"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "masaoka-iva",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Masaoka IVA",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Pleural or pericardial implants"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "masaoka-ivb",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Masaoka IVB",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lymphogenous or hematogenous metastasis"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "mitoserate-gist",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Mitoserate-GIST",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Mitotic rate assessment for gastrointestinal stromal tumors.",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">concept</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "mitoserate-gist-n",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Mitoserate-GIST Niedrig",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Low mitotic rate: ≤5 mitoses per 50 HPF"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "mitoserate-gist-h",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Mitoserate-GIST Hoch",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "High mitotic rate: &gt;5 mitoses per 50 HPF"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "p16",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "p16",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "p16 protein expression status assessment.",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">concept</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "p16-p",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "p16 Positiv",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Positive p16 protein expression"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "p16-n",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "p16 Negativ",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Negative p16 protein expression"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "eutos-score",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "EUTOS-Score",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "European Treatment and Outcome Study prognostic score for chronic myeloid leukemia.",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">concept</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "eutos-score-n",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "EUTOS-Score Niedrigrisiko",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Low risk EUTOS score: ≤87"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "eutos-score-h",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "EUTOS-Score Hochrisiko",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "High risk EUTOS score: &gt;87"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "sanz-score",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sanz-Score",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Risk assessment score for acute promyelocytic leukemia.",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">concept</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "sanz-score-n",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sanz-Score Niedrig",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Low risk: WBC &lt;10x10⁹/L and platelets &gt;40x10⁹/L"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "sanz-score-i",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sanz-Score Intermediär",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Intermediate risk: WBC &lt;10x10⁹/L and platelets ≤40x10⁹/L"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "sanz-score-h",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sanz-Score Hoch",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "High risk: WBC ≥10x10⁹/L"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ipi",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IPI",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "International Prognostic Index for aggressive non-Hodgkin lymphoma.",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">concept</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ipi-n",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IPI Niedrig",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Low risk: 0-1 risk factors"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ipi-ni",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IPI Niedrig-Intermediär",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Low-intermediate risk: 2 risk factors"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ipi-hi",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IPI Hoch-Intermediär",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "High-intermediate risk: 3 risk factors"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ipi-h",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IPI Hoch",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "High risk: 4-5 risk factors"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "flipi",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "FLIPI",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Follicular Lymphoma International Prognostic Index.",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">concept</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "flipi-l",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "FLIPI Low risk",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Low risk: 0-1 risk factors"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "flipi-i",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "FLIPI Intermediate risk",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Intermediate risk: 2 risk factors"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "flipi-h",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "FLIPI High risk",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "High risk: ≥3 risk factors"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "mipi",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "MIPI",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Mantle Cell Lymphoma International Prognostic Index.",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">concept</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "mipi-n",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "MIPI Niedrig",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Low risk MIPI score"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "mipi-i",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "MIPI Intermediär",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Intermediate risk MIPI score"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "mipi-h",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "MIPI Hoch",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "High risk MIPI score"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "risikogruppen-ghsg",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Risikogruppen GHSG",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "German Hodgkin Study Group risk stratification.",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">concept</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "risikogruppen-ghsg-fr",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "GHSG Frühe",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Early favorable risk group"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "risikogruppen-ghsg-i",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "GHSG Intermediär",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Intermediate risk group"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "risikogruppen-ghsg-fo",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "GHSG Fortgeschritten",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Advanced risk group"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ipss",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IPSS",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "International Prognostic Scoring System for myelodysplastic syndromes.",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">concept</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ipss-l",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IPSS Low",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Low risk: score 0"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ipss-i1",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IPSS Intermediate-I",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Intermediate-1 risk: score 0.5-1.0"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ipss-i2",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IPSS Intermediate-II",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Intermediate-2 risk: score 1.5-2.0"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ipss-h",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "IPSS High risk",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "High risk: score ≥2.5"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "her2-neu",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "HER2-neu",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "HER2-neu protein expression and gene amplification status.",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">concept</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "her2-neu-p",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "HER2-neu Positiv",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Positive HER2-neu status (IHC 3+ or FISH amplified)"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "her2-neu-n",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "HER2-neu Negativ",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Negative HER2-neu status (IHC 0-1+ or FISH not amplified)"
+        }
+      ]
+    }
+  ]
+}</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:var(--ig-left);">&#xA0;
+
+                <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.xml.html">&lt; zurück</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">Anfang</a>
+              </td>
+              <td style="text-align:var(--ig-right);">&#xA0;
+
+                <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.ttl.html">weiter ></a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
+          Package mii-ig-onko-de-v2026#2026.0.3 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt 
+  <span title="2026-07-02 12:18:00 +0000">
+    2026-07-02
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-Bericht</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

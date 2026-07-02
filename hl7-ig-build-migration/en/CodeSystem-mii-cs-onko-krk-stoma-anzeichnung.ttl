@@ -1,0 +1,80 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-stoma-anzeichnung> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-cs-onko-krk-stoma-anzeichnung"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/shareablecodesystem" ;
+       fhir:index -1 ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-onko-krk-stoma-anzeichnung</b></p><a name=\"en-mii-cs-onko-krk-stoma-anzeichnung\"> </a><a name=\"en-hcmii-cs-onko-krk-stoma-anzeichnung\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-stoma-anzeichnung</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">D<a name=\"en-mii-cs-onko-krk-stoma-anzeichnung-D\"> </a></td><td>Anzeichnung durchgeführt</td><td>Präoperative Anzeichnung der Stoma-Position wurde durchgeführt</td></tr><tr><td style=\"white-space:nowrap\">N<a name=\"en-mii-cs-onko-krk-stoma-anzeichnung-N\"> </a></td><td>Anzeichnung nicht durchgeführt</td><td>Präoperative Anzeichnung der Stoma-Position wurde nicht durchgeführt</td></tr><tr><td style=\"white-space:nowrap\">K<a name=\"en-mii-cs-onko-krk-stoma-anzeichnung-K\"> </a></td><td>Kein Stoma</td><td>Kein Stoma geplant oder erforderlich</td></tr><tr><td style=\"white-space:nowrap\">S<a name=\"en-mii-cs-onko-krk-stoma-anzeichnung-S\"> </a></td><td>Stoma angelegt, Anzeichnungsstatus unbekannt</td><td>Stoma wurde angelegt, aber der Status der präoperativen Anzeichnung ist unbekannt</td></tr><tr><td style=\"white-space:nowrap\">U<a name=\"en-mii-cs-onko-krk-stoma-anzeichnung-U\"> </a></td><td>Unbekannt</td><td>Status der präoperativen Stoma-Anzeichnung ist unbekannt</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-stoma-anzeichnung"] ;
+  fhir:CodeSystem.version [ fhir:value "2026.0.3"] ;
+  fhir:CodeSystem.name [ fhir:value "MII_CS_Onko_KRK_Stoma_Anzeichnung"] ;
+  fhir:CodeSystem.status [ fhir:value "active"] ;
+  fhir:CodeSystem.experimental [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-07-02T12:18:38+00:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "Medizininformatik Initiative"] ;
+  fhir:CodeSystem.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "Medizininformatik Initiative" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.medizininformatik-initiative.de/" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "oBDS-basiertes Codesystem für die präoperative Anzeichnung der Stoma-Position beim Rektumkarzinom"] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.valueSet [
+     fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-stoma-anzeichnung" ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-stoma-anzeichnung>
+  ] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "5"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Anzeichnung durchgeführt" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Präoperative Anzeichnung der Stoma-Position wurde durchgeführt" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Anzeichnung nicht durchgeführt" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Präoperative Anzeichnung der Stoma-Position wurde nicht durchgeführt" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Kein Stoma" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Kein Stoma geplant oder erforderlich" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stoma angelegt, Anzeichnungsstatus unbekannt" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Stoma wurde angelegt, aber der Status der präoperativen Anzeichnung ist unbekannt" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "U" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Unbekannt" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Status der präoperativen Stoma-Anzeichnung ist unbekannt" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-stoma-anzeichnung.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

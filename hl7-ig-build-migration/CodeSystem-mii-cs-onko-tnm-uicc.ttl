@@ -1,0 +1,609 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-uicc> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-cs-onko-tnm-uicc"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/shareablecodesystem" ;
+       fhir:index 0 ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-onko-tnm-uicc</b></p><a name=\"mii-cs-onko-tnm-uicc\"> </a><a name=\"hcmii-cs-onko-tnm-uicc\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.uicc.org/resources/tnm</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">y<a name=\"mii-cs-onko-tnm-uicc-y\"> </a></td><td>y</td><td>Klassifikation erfolgte während oder nach initialer multimodaler Therapie</td></tr><tr><td style=\"white-space:nowrap\">r<a name=\"mii-cs-onko-tnm-uicc-r\"> </a></td><td>r</td><td>Klassifikation erfolgte zur Beurteilung eines Rezidivs</td></tr><tr><td style=\"white-space:nowrap\">a<a name=\"mii-cs-onko-tnm-uicc-a\"> </a></td><td>a</td><td>Klassifikation erfolgte durch Autopsie</td></tr><tr><td style=\"white-space:nowrap\">c<a name=\"mii-cs-onko-tnm-uicc-c\"> </a></td><td>c</td><td>Kategorie wurde durch klinische Angaben festgestellt.</td></tr><tr><td style=\"white-space:nowrap\">p<a name=\"mii-cs-onko-tnm-uicc-p\"> </a></td><td>p</td><td>Feststellung der Kategorie erfolgte durch eine pathohistologische Untersuchung, mit der auch der höchste Grad der jeweiligen Kategorie hätte festgestellt werden können.</td></tr><tr><td style=\"white-space:nowrap\">u<a name=\"mii-cs-onko-tnm-uicc-u\"> </a></td><td>u</td><td>Feststellung mit Ultraschall</td></tr><tr><td style=\"white-space:nowrap\">TX<a name=\"mii-cs-onko-tnm-uicc-TX\"> </a></td><td>TX</td><td/></tr><tr><td style=\"white-space:nowrap\">T0<a name=\"mii-cs-onko-tnm-uicc-T0\"> </a></td><td>T0</td><td/></tr><tr><td style=\"white-space:nowrap\">Ta<a name=\"mii-cs-onko-tnm-uicc-Ta\"> </a></td><td>Ta</td><td/></tr><tr><td style=\"white-space:nowrap\">Tis<a name=\"mii-cs-onko-tnm-uicc-Tis\"> </a></td><td>Tis</td><td/></tr><tr><td style=\"white-space:nowrap\">Tis(LAMN)<a name=\"mii-cs-onko-tnm-uicc-Tis.40LAMN.41\"> </a></td><td>Tis(LAMN)</td><td/></tr><tr><td style=\"white-space:nowrap\">Tis(DCIS)<a name=\"mii-cs-onko-tnm-uicc-Tis.40DCIS.41\"> </a></td><td>Tis(DCIS)</td><td/></tr><tr><td style=\"white-space:nowrap\">Tis(LCIS)<a name=\"mii-cs-onko-tnm-uicc-Tis.40LCIS.41\"> </a></td><td>Tis(LCIS)</td><td/></tr><tr><td style=\"white-space:nowrap\">Tis(Paget)<a name=\"mii-cs-onko-tnm-uicc-Tis.40Paget.41\"> </a></td><td>Tis(Paget)</td><td/></tr><tr><td style=\"white-space:nowrap\">Tis(pu)<a name=\"mii-cs-onko-tnm-uicc-Tis.40pu.41\"> </a></td><td>Tis(pu)</td><td/></tr><tr><td style=\"white-space:nowrap\">Tis(pd)<a name=\"mii-cs-onko-tnm-uicc-Tis.40pd.41\"> </a></td><td>Tis(pd)</td><td/></tr><tr><td style=\"white-space:nowrap\">T1<a name=\"mii-cs-onko-tnm-uicc-T1\"> </a></td><td>T1</td><td/></tr><tr><td style=\"white-space:nowrap\">T1mi<a name=\"mii-cs-onko-tnm-uicc-T1mi\"> </a></td><td>T1mi</td><td/></tr><tr><td style=\"white-space:nowrap\">T1a<a name=\"mii-cs-onko-tnm-uicc-T1a\"> </a></td><td>T1a</td><td/></tr><tr><td style=\"white-space:nowrap\">T1a1<a name=\"mii-cs-onko-tnm-uicc-T1a1\"> </a></td><td>T1a1</td><td/></tr><tr><td style=\"white-space:nowrap\">T1a2<a name=\"mii-cs-onko-tnm-uicc-T1a2\"> </a></td><td>T1a2</td><td/></tr><tr><td style=\"white-space:nowrap\">T1b<a name=\"mii-cs-onko-tnm-uicc-T1b\"> </a></td><td>T1b</td><td/></tr><tr><td style=\"white-space:nowrap\">T1b1<a name=\"mii-cs-onko-tnm-uicc-T1b1\"> </a></td><td>T1b1</td><td/></tr><tr><td style=\"white-space:nowrap\">T1b2<a name=\"mii-cs-onko-tnm-uicc-T1b2\"> </a></td><td>T1b2</td><td/></tr><tr><td style=\"white-space:nowrap\">T1c<a name=\"mii-cs-onko-tnm-uicc-T1c\"> </a></td><td>T1c</td><td/></tr><tr><td style=\"white-space:nowrap\">T1c1<a name=\"mii-cs-onko-tnm-uicc-T1c1\"> </a></td><td>T1c1</td><td/></tr><tr><td style=\"white-space:nowrap\">T1c2<a name=\"mii-cs-onko-tnm-uicc-T1c2\"> </a></td><td>T1c2</td><td/></tr><tr><td style=\"white-space:nowrap\">T1c3<a name=\"mii-cs-onko-tnm-uicc-T1c3\"> </a></td><td>T1c3</td><td/></tr><tr><td style=\"white-space:nowrap\">T1d<a name=\"mii-cs-onko-tnm-uicc-T1d\"> </a></td><td>T1d</td><td/></tr><tr><td style=\"white-space:nowrap\">T2<a name=\"mii-cs-onko-tnm-uicc-T2\"> </a></td><td>T2</td><td/></tr><tr><td style=\"white-space:nowrap\">T2a<a name=\"mii-cs-onko-tnm-uicc-T2a\"> </a></td><td>T2a</td><td/></tr><tr><td style=\"white-space:nowrap\">T2a1<a name=\"mii-cs-onko-tnm-uicc-T2a1\"> </a></td><td>T2a1</td><td/></tr><tr><td style=\"white-space:nowrap\">T2a2<a name=\"mii-cs-onko-tnm-uicc-T2a2\"> </a></td><td>T2a2</td><td/></tr><tr><td style=\"white-space:nowrap\">T2b<a name=\"mii-cs-onko-tnm-uicc-T2b\"> </a></td><td>T2b</td><td/></tr><tr><td style=\"white-space:nowrap\">T2c<a name=\"mii-cs-onko-tnm-uicc-T2c\"> </a></td><td>T2c</td><td/></tr><tr><td style=\"white-space:nowrap\">T2d<a name=\"mii-cs-onko-tnm-uicc-T2d\"> </a></td><td>T2d</td><td/></tr><tr><td style=\"white-space:nowrap\">T3<a name=\"mii-cs-onko-tnm-uicc-T3\"> </a></td><td>T3</td><td/></tr><tr><td style=\"white-space:nowrap\">T3a<a name=\"mii-cs-onko-tnm-uicc-T3a\"> </a></td><td>T3a</td><td/></tr><tr><td style=\"white-space:nowrap\">T3b<a name=\"mii-cs-onko-tnm-uicc-T3b\"> </a></td><td>T3b</td><td/></tr><tr><td style=\"white-space:nowrap\">T3c<a name=\"mii-cs-onko-tnm-uicc-T3c\"> </a></td><td>T3c</td><td/></tr><tr><td style=\"white-space:nowrap\">T3d<a name=\"mii-cs-onko-tnm-uicc-T3d\"> </a></td><td>T3d</td><td/></tr><tr><td style=\"white-space:nowrap\">T3e<a name=\"mii-cs-onko-tnm-uicc-T3e\"> </a></td><td>T3e</td><td/></tr><tr><td style=\"white-space:nowrap\">T4<a name=\"mii-cs-onko-tnm-uicc-T4\"> </a></td><td>T4</td><td/></tr><tr><td style=\"white-space:nowrap\">T4a<a name=\"mii-cs-onko-tnm-uicc-T4a\"> </a></td><td>T4a</td><td/></tr><tr><td style=\"white-space:nowrap\">T4b<a name=\"mii-cs-onko-tnm-uicc-T4b\"> </a></td><td>T4b</td><td/></tr><tr><td style=\"white-space:nowrap\">T4c<a name=\"mii-cs-onko-tnm-uicc-T4c\"> </a></td><td>T4c</td><td/></tr><tr><td style=\"white-space:nowrap\">T4d<a name=\"mii-cs-onko-tnm-uicc-T4d\"> </a></td><td>T4d</td><td/></tr><tr><td style=\"white-space:nowrap\">T4e<a name=\"mii-cs-onko-tnm-uicc-T4e\"> </a></td><td>T4e</td><td/></tr><tr><td style=\"white-space:nowrap\">m<a name=\"mii-cs-onko-tnm-uicc-m\"> </a></td><td>(m)</td><td/></tr><tr><td style=\"white-space:nowrap\">2<a name=\"mii-cs-onko-tnm-uicc-2\"> </a></td><td>(2)</td><td/></tr><tr><td style=\"white-space:nowrap\">3<a name=\"mii-cs-onko-tnm-uicc-3\"> </a></td><td>(3)</td><td/></tr><tr><td style=\"white-space:nowrap\">4<a name=\"mii-cs-onko-tnm-uicc-4\"> </a></td><td>(4)</td><td/></tr><tr><td style=\"white-space:nowrap\">5<a name=\"mii-cs-onko-tnm-uicc-5\"> </a></td><td>(5)</td><td/></tr><tr><td style=\"white-space:nowrap\">6<a name=\"mii-cs-onko-tnm-uicc-6\"> </a></td><td>(6)</td><td/></tr><tr><td style=\"white-space:nowrap\">7<a name=\"mii-cs-onko-tnm-uicc-7\"> </a></td><td>(7)</td><td/></tr><tr><td style=\"white-space:nowrap\">8<a name=\"mii-cs-onko-tnm-uicc-8\"> </a></td><td>(8)</td><td/></tr><tr><td style=\"white-space:nowrap\">9<a name=\"mii-cs-onko-tnm-uicc-9\"> </a></td><td>(9)</td><td/></tr><tr><td style=\"white-space:nowrap\">10<a name=\"mii-cs-onko-tnm-uicc-10\"> </a></td><td>(10)</td><td/></tr><tr><td style=\"white-space:nowrap\">NX<a name=\"mii-cs-onko-tnm-uicc-NX\"> </a></td><td>Nx</td><td/></tr><tr><td style=\"white-space:nowrap\">N0<a name=\"mii-cs-onko-tnm-uicc-N0\"> </a></td><td>N0</td><td/></tr><tr><td style=\"white-space:nowrap\">N1<a name=\"mii-cs-onko-tnm-uicc-N1\"> </a></td><td>N1</td><td/></tr><tr><td style=\"white-space:nowrap\">N1mi<a name=\"mii-cs-onko-tnm-uicc-N1mi\"> </a></td><td>N1(mi)</td><td/></tr><tr><td style=\"white-space:nowrap\">N1a<a name=\"mii-cs-onko-tnm-uicc-N1a\"> </a></td><td>N1a</td><td/></tr><tr><td style=\"white-space:nowrap\">N1b<a name=\"mii-cs-onko-tnm-uicc-N1b\"> </a></td><td>N1b</td><td/></tr><tr><td style=\"white-space:nowrap\">N1c<a name=\"mii-cs-onko-tnm-uicc-N1c\"> </a></td><td>N1c</td><td/></tr><tr><td style=\"white-space:nowrap\">N2<a name=\"mii-cs-onko-tnm-uicc-N2\"> </a></td><td>N2</td><td/></tr><tr><td style=\"white-space:nowrap\">N2a<a name=\"mii-cs-onko-tnm-uicc-N2a\"> </a></td><td>N2a</td><td/></tr><tr><td style=\"white-space:nowrap\">N2b<a name=\"mii-cs-onko-tnm-uicc-N2b\"> </a></td><td>N2b</td><td/></tr><tr><td style=\"white-space:nowrap\">N2c<a name=\"mii-cs-onko-tnm-uicc-N2c\"> </a></td><td>N2c</td><td/></tr><tr><td style=\"white-space:nowrap\">N3<a name=\"mii-cs-onko-tnm-uicc-N3\"> </a></td><td>N3</td><td/></tr><tr><td style=\"white-space:nowrap\">N3a<a name=\"mii-cs-onko-tnm-uicc-N3a\"> </a></td><td>N3a</td><td/></tr><tr><td style=\"white-space:nowrap\">N3b<a name=\"mii-cs-onko-tnm-uicc-N3b\"> </a></td><td>N3b</td><td/></tr><tr><td style=\"white-space:nowrap\">N3c<a name=\"mii-cs-onko-tnm-uicc-N3c\"> </a></td><td>N3c</td><td/></tr><tr><td style=\"white-space:nowrap\">M0<a name=\"mii-cs-onko-tnm-uicc-M0\"> </a></td><td>M0</td><td/></tr><tr><td style=\"white-space:nowrap\">M1<a name=\"mii-cs-onko-tnm-uicc-M1\"> </a></td><td>M1</td><td/></tr><tr><td style=\"white-space:nowrap\">M1a<a name=\"mii-cs-onko-tnm-uicc-M1a\"> </a></td><td>M1a</td><td/></tr><tr><td style=\"white-space:nowrap\">M1b<a name=\"mii-cs-onko-tnm-uicc-M1b\"> </a></td><td>M1b</td><td/></tr><tr><td style=\"white-space:nowrap\">M1c<a name=\"mii-cs-onko-tnm-uicc-M1c\"> </a></td><td>M1c</td><td/></tr><tr><td style=\"white-space:nowrap\">M1d<a name=\"mii-cs-onko-tnm-uicc-M1d\"> </a></td><td>M1d</td><td/></tr><tr><td style=\"white-space:nowrap\">MX<a name=\"mii-cs-onko-tnm-uicc-MX\"> </a></td><td>MX</td><td/></tr><tr><td style=\"white-space:nowrap\">i+<a name=\"mii-cs-onko-tnm-uicc-i.43\"> </a></td><td>(i+)</td><td/></tr><tr><td style=\"white-space:nowrap\">i-<a name=\"mii-cs-onko-tnm-uicc-i-\"> </a></td><td>(i-)</td><td/></tr><tr><td style=\"white-space:nowrap\">mol+<a name=\"mii-cs-onko-tnm-uicc-mol.43\"> </a></td><td>(mol+)</td><td/></tr><tr><td style=\"white-space:nowrap\">mol-<a name=\"mii-cs-onko-tnm-uicc-mol-\"> </a></td><td>(mol-)</td><td/></tr><tr><td style=\"white-space:nowrap\">sn<a name=\"mii-cs-onko-tnm-uicc-sn\"> </a></td><td>(sn)</td><td/></tr><tr><td style=\"white-space:nowrap\">L0<a name=\"mii-cs-onko-tnm-uicc-L0\"> </a></td><td>L0</td><td>Keine Lymphgefäßinvasion</td></tr><tr><td style=\"white-space:nowrap\">L1<a name=\"mii-cs-onko-tnm-uicc-L1\"> </a></td><td>L1</td><td>Lymphgefäßinvasion</td></tr><tr><td style=\"white-space:nowrap\">LX<a name=\"mii-cs-onko-tnm-uicc-LX\"> </a></td><td>LX</td><td>Lymphgefäßinvasion kann nicht beurteilt werden</td></tr><tr><td style=\"white-space:nowrap\">V0<a name=\"mii-cs-onko-tnm-uicc-V0\"> </a></td><td>V0</td><td>Keine Veneninvasion</td></tr><tr><td style=\"white-space:nowrap\">V1<a name=\"mii-cs-onko-tnm-uicc-V1\"> </a></td><td>V1</td><td>Mikroskopische Veneninvasion</td></tr><tr><td style=\"white-space:nowrap\">V2<a name=\"mii-cs-onko-tnm-uicc-V2\"> </a></td><td>V2</td><td>Makroskopische Veneninvasion</td></tr><tr><td style=\"white-space:nowrap\">VX<a name=\"mii-cs-onko-tnm-uicc-VX\"> </a></td><td>VX</td><td>Veneninvasion kann nicht beurteilt werden</td></tr><tr><td style=\"white-space:nowrap\">Pn0<a name=\"mii-cs-onko-tnm-uicc-Pn0\"> </a></td><td>Pn0</td><td>Keine perineurale Invasion</td></tr><tr><td style=\"white-space:nowrap\">Pn1<a name=\"mii-cs-onko-tnm-uicc-Pn1\"> </a></td><td>Pn1</td><td>Perineurale Invasion</td></tr><tr><td style=\"white-space:nowrap\">PnX<a name=\"mii-cs-onko-tnm-uicc-PnX\"> </a></td><td>PnX</td><td>Perineurale Invasion kann nicht beurteilt werden</td></tr><tr><td style=\"white-space:nowrap\">S0<a name=\"mii-cs-onko-tnm-uicc-S0\"> </a></td><td>S0</td><td>Serumtumormarker innerhalb der normalen Grenzen</td></tr><tr><td style=\"white-space:nowrap\">S1<a name=\"mii-cs-onko-tnm-uicc-S1\"> </a></td><td>S1</td><td/></tr><tr><td style=\"white-space:nowrap\">S2<a name=\"mii-cs-onko-tnm-uicc-S2\"> </a></td><td>S2</td><td/></tr><tr><td style=\"white-space:nowrap\">S3<a name=\"mii-cs-onko-tnm-uicc-S3\"> </a></td><td>S3</td><td/></tr><tr><td style=\"white-space:nowrap\">SX<a name=\"mii-cs-onko-tnm-uicc-SX\"> </a></td><td>SX</td><td>Werte der Serumtumormarker nicht verfügbar oder entspre- chende Untersuchungen nicht vorgenommen</td></tr><tr><td style=\"white-space:nowrap\">okk<a name=\"mii-cs-onko-tnm-uicc-okk\"> </a></td><td>Stadium X</td><td/></tr><tr><td style=\"white-space:nowrap\">0<a name=\"mii-cs-onko-tnm-uicc-0\"> </a></td><td>Stadium 0</td><td/></tr><tr><td style=\"white-space:nowrap\">0a<a name=\"mii-cs-onko-tnm-uicc-0a\"> </a></td><td>Stadium 0a</td><td/></tr><tr><td style=\"white-space:nowrap\">0is<a name=\"mii-cs-onko-tnm-uicc-0is\"> </a></td><td>Stadium 0is</td><td/></tr><tr><td style=\"white-space:nowrap\">I<a name=\"mii-cs-onko-tnm-uicc-I\"> </a></td><td>Stadium I</td><td/></tr><tr><td style=\"white-space:nowrap\">IA<a name=\"mii-cs-onko-tnm-uicc-IA\"> </a></td><td>Stadium IA</td><td/></tr><tr><td style=\"white-space:nowrap\">IA1<a name=\"mii-cs-onko-tnm-uicc-IA1\"> </a></td><td>Stadium IA1</td><td/></tr><tr><td style=\"white-space:nowrap\">IA2<a name=\"mii-cs-onko-tnm-uicc-IA2\"> </a></td><td>Stadium IA2</td><td/></tr><tr><td style=\"white-space:nowrap\">IA3<a name=\"mii-cs-onko-tnm-uicc-IA3\"> </a></td><td>Stadium IA3</td><td/></tr><tr><td style=\"white-space:nowrap\">IB<a name=\"mii-cs-onko-tnm-uicc-IB\"> </a></td><td>Stadium IB</td><td/></tr><tr><td style=\"white-space:nowrap\">IB1<a name=\"mii-cs-onko-tnm-uicc-IB1\"> </a></td><td>Stadium IB1</td><td/></tr><tr><td style=\"white-space:nowrap\">IB2<a name=\"mii-cs-onko-tnm-uicc-IB2\"> </a></td><td>Stadium IB2</td><td/></tr><tr><td style=\"white-space:nowrap\">IC<a name=\"mii-cs-onko-tnm-uicc-IC\"> </a></td><td>Stadium IC</td><td/></tr><tr><td style=\"white-space:nowrap\">IS<a name=\"mii-cs-onko-tnm-uicc-IS\"> </a></td><td>Stadium IS</td><td/></tr><tr><td style=\"white-space:nowrap\">II<a name=\"mii-cs-onko-tnm-uicc-II\"> </a></td><td>Stadium II</td><td/></tr><tr><td style=\"white-space:nowrap\">IIA<a name=\"mii-cs-onko-tnm-uicc-IIA\"> </a></td><td>Stadium IIA</td><td/></tr><tr><td style=\"white-space:nowrap\">IIA1<a name=\"mii-cs-onko-tnm-uicc-IIA1\"> </a></td><td>Stadium IIA1</td><td/></tr><tr><td style=\"white-space:nowrap\">IIA2<a name=\"mii-cs-onko-tnm-uicc-IIA2\"> </a></td><td>Stadium IIA2</td><td/></tr><tr><td style=\"white-space:nowrap\">IIB<a name=\"mii-cs-onko-tnm-uicc-IIB\"> </a></td><td>Stadium IIB</td><td/></tr><tr><td style=\"white-space:nowrap\">IIC<a name=\"mii-cs-onko-tnm-uicc-IIC\"> </a></td><td>Stadium IIC</td><td/></tr><tr><td style=\"white-space:nowrap\">III<a name=\"mii-cs-onko-tnm-uicc-III\"> </a></td><td>Stadium III</td><td/></tr><tr><td style=\"white-space:nowrap\">IIIA<a name=\"mii-cs-onko-tnm-uicc-IIIA\"> </a></td><td>Stadium IIIA</td><td/></tr><tr><td style=\"white-space:nowrap\">IIIA1<a name=\"mii-cs-onko-tnm-uicc-IIIA1\"> </a></td><td>Stadium IIIA1</td><td/></tr><tr><td style=\"white-space:nowrap\">IIIA2<a name=\"mii-cs-onko-tnm-uicc-IIIA2\"> </a></td><td>Stadium IIIA2</td><td/></tr><tr><td style=\"white-space:nowrap\">IIIB<a name=\"mii-cs-onko-tnm-uicc-IIIB\"> </a></td><td>Stadium IIIB</td><td/></tr><tr><td style=\"white-space:nowrap\">IIIC<a name=\"mii-cs-onko-tnm-uicc-IIIC\"> </a></td><td>Stadium IIIC</td><td/></tr><tr><td style=\"white-space:nowrap\">IIIC1<a name=\"mii-cs-onko-tnm-uicc-IIIC1\"> </a></td><td>Stadium IIIC1</td><td/></tr><tr><td style=\"white-space:nowrap\">IIIC2<a name=\"mii-cs-onko-tnm-uicc-IIIC2\"> </a></td><td>Stadium IIIC2</td><td/></tr><tr><td style=\"white-space:nowrap\">IIID<a name=\"mii-cs-onko-tnm-uicc-IIID\"> </a></td><td>Stadium IIID</td><td/></tr><tr><td style=\"white-space:nowrap\">IV<a name=\"mii-cs-onko-tnm-uicc-IV\"> </a></td><td>Stadium IV</td><td/></tr><tr><td style=\"white-space:nowrap\">IVA<a name=\"mii-cs-onko-tnm-uicc-IVA\"> </a></td><td>Stadium IVA</td><td/></tr><tr><td style=\"white-space:nowrap\">IVA1<a name=\"mii-cs-onko-tnm-uicc-IVA1\"> </a></td><td>Stadium IVA1</td><td/></tr><tr><td style=\"white-space:nowrap\">IVA2<a name=\"mii-cs-onko-tnm-uicc-IVA2\"> </a></td><td>Stadium IVA2</td><td/></tr><tr><td style=\"white-space:nowrap\">IVB<a name=\"mii-cs-onko-tnm-uicc-IVB\"> </a></td><td>Stadium IVB</td><td/></tr><tr><td style=\"white-space:nowrap\">IVC<a name=\"mii-cs-onko-tnm-uicc-IVC\"> </a></td><td>Stadium IVC</td><td/></tr></table></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-onko-tnm-uicc</b></p><a name=\"en-mii-cs-onko-tnm-uicc\"> </a><a name=\"en-hcmii-cs-onko-tnm-uicc\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.uicc.org/resources/tnm</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">y<a name=\"en-mii-cs-onko-tnm-uicc-y\"> </a></td><td>y</td><td>Klassifikation erfolgte während oder nach initialer multimodaler Therapie</td></tr><tr><td style=\"white-space:nowrap\">r<a name=\"en-mii-cs-onko-tnm-uicc-r\"> </a></td><td>r</td><td>Klassifikation erfolgte zur Beurteilung eines Rezidivs</td></tr><tr><td style=\"white-space:nowrap\">a<a name=\"en-mii-cs-onko-tnm-uicc-a\"> </a></td><td>a</td><td>Klassifikation erfolgte durch Autopsie</td></tr><tr><td style=\"white-space:nowrap\">c<a name=\"en-mii-cs-onko-tnm-uicc-c\"> </a></td><td>c</td><td>Kategorie wurde durch klinische Angaben festgestellt.</td></tr><tr><td style=\"white-space:nowrap\">p<a name=\"en-mii-cs-onko-tnm-uicc-p\"> </a></td><td>p</td><td>Feststellung der Kategorie erfolgte durch eine pathohistologische Untersuchung, mit der auch der höchste Grad der jeweiligen Kategorie hätte festgestellt werden können.</td></tr><tr><td style=\"white-space:nowrap\">u<a name=\"en-mii-cs-onko-tnm-uicc-u\"> </a></td><td>u</td><td>Feststellung mit Ultraschall</td></tr><tr><td style=\"white-space:nowrap\">TX<a name=\"en-mii-cs-onko-tnm-uicc-TX\"> </a></td><td>TX</td><td/></tr><tr><td style=\"white-space:nowrap\">T0<a name=\"en-mii-cs-onko-tnm-uicc-T0\"> </a></td><td>T0</td><td/></tr><tr><td style=\"white-space:nowrap\">Ta<a name=\"en-mii-cs-onko-tnm-uicc-Ta\"> </a></td><td>Ta</td><td/></tr><tr><td style=\"white-space:nowrap\">Tis<a name=\"en-mii-cs-onko-tnm-uicc-Tis\"> </a></td><td>Tis</td><td/></tr><tr><td style=\"white-space:nowrap\">Tis(LAMN)<a name=\"en-mii-cs-onko-tnm-uicc-Tis.40LAMN.41\"> </a></td><td>Tis(LAMN)</td><td/></tr><tr><td style=\"white-space:nowrap\">Tis(DCIS)<a name=\"en-mii-cs-onko-tnm-uicc-Tis.40DCIS.41\"> </a></td><td>Tis(DCIS)</td><td/></tr><tr><td style=\"white-space:nowrap\">Tis(LCIS)<a name=\"en-mii-cs-onko-tnm-uicc-Tis.40LCIS.41\"> </a></td><td>Tis(LCIS)</td><td/></tr><tr><td style=\"white-space:nowrap\">Tis(Paget)<a name=\"en-mii-cs-onko-tnm-uicc-Tis.40Paget.41\"> </a></td><td>Tis(Paget)</td><td/></tr><tr><td style=\"white-space:nowrap\">Tis(pu)<a name=\"en-mii-cs-onko-tnm-uicc-Tis.40pu.41\"> </a></td><td>Tis(pu)</td><td/></tr><tr><td style=\"white-space:nowrap\">Tis(pd)<a name=\"en-mii-cs-onko-tnm-uicc-Tis.40pd.41\"> </a></td><td>Tis(pd)</td><td/></tr><tr><td style=\"white-space:nowrap\">T1<a name=\"en-mii-cs-onko-tnm-uicc-T1\"> </a></td><td>T1</td><td/></tr><tr><td style=\"white-space:nowrap\">T1mi<a name=\"en-mii-cs-onko-tnm-uicc-T1mi\"> </a></td><td>T1mi</td><td/></tr><tr><td style=\"white-space:nowrap\">T1a<a name=\"en-mii-cs-onko-tnm-uicc-T1a\"> </a></td><td>T1a</td><td/></tr><tr><td style=\"white-space:nowrap\">T1a1<a name=\"en-mii-cs-onko-tnm-uicc-T1a1\"> </a></td><td>T1a1</td><td/></tr><tr><td style=\"white-space:nowrap\">T1a2<a name=\"en-mii-cs-onko-tnm-uicc-T1a2\"> </a></td><td>T1a2</td><td/></tr><tr><td style=\"white-space:nowrap\">T1b<a name=\"en-mii-cs-onko-tnm-uicc-T1b\"> </a></td><td>T1b</td><td/></tr><tr><td style=\"white-space:nowrap\">T1b1<a name=\"en-mii-cs-onko-tnm-uicc-T1b1\"> </a></td><td>T1b1</td><td/></tr><tr><td style=\"white-space:nowrap\">T1b2<a name=\"en-mii-cs-onko-tnm-uicc-T1b2\"> </a></td><td>T1b2</td><td/></tr><tr><td style=\"white-space:nowrap\">T1c<a name=\"en-mii-cs-onko-tnm-uicc-T1c\"> </a></td><td>T1c</td><td/></tr><tr><td style=\"white-space:nowrap\">T1c1<a name=\"en-mii-cs-onko-tnm-uicc-T1c1\"> </a></td><td>T1c1</td><td/></tr><tr><td style=\"white-space:nowrap\">T1c2<a name=\"en-mii-cs-onko-tnm-uicc-T1c2\"> </a></td><td>T1c2</td><td/></tr><tr><td style=\"white-space:nowrap\">T1c3<a name=\"en-mii-cs-onko-tnm-uicc-T1c3\"> </a></td><td>T1c3</td><td/></tr><tr><td style=\"white-space:nowrap\">T1d<a name=\"en-mii-cs-onko-tnm-uicc-T1d\"> </a></td><td>T1d</td><td/></tr><tr><td style=\"white-space:nowrap\">T2<a name=\"en-mii-cs-onko-tnm-uicc-T2\"> </a></td><td>T2</td><td/></tr><tr><td style=\"white-space:nowrap\">T2a<a name=\"en-mii-cs-onko-tnm-uicc-T2a\"> </a></td><td>T2a</td><td/></tr><tr><td style=\"white-space:nowrap\">T2a1<a name=\"en-mii-cs-onko-tnm-uicc-T2a1\"> </a></td><td>T2a1</td><td/></tr><tr><td style=\"white-space:nowrap\">T2a2<a name=\"en-mii-cs-onko-tnm-uicc-T2a2\"> </a></td><td>T2a2</td><td/></tr><tr><td style=\"white-space:nowrap\">T2b<a name=\"en-mii-cs-onko-tnm-uicc-T2b\"> </a></td><td>T2b</td><td/></tr><tr><td style=\"white-space:nowrap\">T2c<a name=\"en-mii-cs-onko-tnm-uicc-T2c\"> </a></td><td>T2c</td><td/></tr><tr><td style=\"white-space:nowrap\">T2d<a name=\"en-mii-cs-onko-tnm-uicc-T2d\"> </a></td><td>T2d</td><td/></tr><tr><td style=\"white-space:nowrap\">T3<a name=\"en-mii-cs-onko-tnm-uicc-T3\"> </a></td><td>T3</td><td/></tr><tr><td style=\"white-space:nowrap\">T3a<a name=\"en-mii-cs-onko-tnm-uicc-T3a\"> </a></td><td>T3a</td><td/></tr><tr><td style=\"white-space:nowrap\">T3b<a name=\"en-mii-cs-onko-tnm-uicc-T3b\"> </a></td><td>T3b</td><td/></tr><tr><td style=\"white-space:nowrap\">T3c<a name=\"en-mii-cs-onko-tnm-uicc-T3c\"> </a></td><td>T3c</td><td/></tr><tr><td style=\"white-space:nowrap\">T3d<a name=\"en-mii-cs-onko-tnm-uicc-T3d\"> </a></td><td>T3d</td><td/></tr><tr><td style=\"white-space:nowrap\">T3e<a name=\"en-mii-cs-onko-tnm-uicc-T3e\"> </a></td><td>T3e</td><td/></tr><tr><td style=\"white-space:nowrap\">T4<a name=\"en-mii-cs-onko-tnm-uicc-T4\"> </a></td><td>T4</td><td/></tr><tr><td style=\"white-space:nowrap\">T4a<a name=\"en-mii-cs-onko-tnm-uicc-T4a\"> </a></td><td>T4a</td><td/></tr><tr><td style=\"white-space:nowrap\">T4b<a name=\"en-mii-cs-onko-tnm-uicc-T4b\"> </a></td><td>T4b</td><td/></tr><tr><td style=\"white-space:nowrap\">T4c<a name=\"en-mii-cs-onko-tnm-uicc-T4c\"> </a></td><td>T4c</td><td/></tr><tr><td style=\"white-space:nowrap\">T4d<a name=\"en-mii-cs-onko-tnm-uicc-T4d\"> </a></td><td>T4d</td><td/></tr><tr><td style=\"white-space:nowrap\">T4e<a name=\"en-mii-cs-onko-tnm-uicc-T4e\"> </a></td><td>T4e</td><td/></tr><tr><td style=\"white-space:nowrap\">m<a name=\"en-mii-cs-onko-tnm-uicc-m\"> </a></td><td>(m)</td><td/></tr><tr><td style=\"white-space:nowrap\">2<a name=\"en-mii-cs-onko-tnm-uicc-2\"> </a></td><td>(2)</td><td/></tr><tr><td style=\"white-space:nowrap\">3<a name=\"en-mii-cs-onko-tnm-uicc-3\"> </a></td><td>(3)</td><td/></tr><tr><td style=\"white-space:nowrap\">4<a name=\"en-mii-cs-onko-tnm-uicc-4\"> </a></td><td>(4)</td><td/></tr><tr><td style=\"white-space:nowrap\">5<a name=\"en-mii-cs-onko-tnm-uicc-5\"> </a></td><td>(5)</td><td/></tr><tr><td style=\"white-space:nowrap\">6<a name=\"en-mii-cs-onko-tnm-uicc-6\"> </a></td><td>(6)</td><td/></tr><tr><td style=\"white-space:nowrap\">7<a name=\"en-mii-cs-onko-tnm-uicc-7\"> </a></td><td>(7)</td><td/></tr><tr><td style=\"white-space:nowrap\">8<a name=\"en-mii-cs-onko-tnm-uicc-8\"> </a></td><td>(8)</td><td/></tr><tr><td style=\"white-space:nowrap\">9<a name=\"en-mii-cs-onko-tnm-uicc-9\"> </a></td><td>(9)</td><td/></tr><tr><td style=\"white-space:nowrap\">10<a name=\"en-mii-cs-onko-tnm-uicc-10\"> </a></td><td>(10)</td><td/></tr><tr><td style=\"white-space:nowrap\">NX<a name=\"en-mii-cs-onko-tnm-uicc-NX\"> </a></td><td>Nx</td><td/></tr><tr><td style=\"white-space:nowrap\">N0<a name=\"en-mii-cs-onko-tnm-uicc-N0\"> </a></td><td>N0</td><td/></tr><tr><td style=\"white-space:nowrap\">N1<a name=\"en-mii-cs-onko-tnm-uicc-N1\"> </a></td><td>N1</td><td/></tr><tr><td style=\"white-space:nowrap\">N1mi<a name=\"en-mii-cs-onko-tnm-uicc-N1mi\"> </a></td><td>N1(mi)</td><td/></tr><tr><td style=\"white-space:nowrap\">N1a<a name=\"en-mii-cs-onko-tnm-uicc-N1a\"> </a></td><td>N1a</td><td/></tr><tr><td style=\"white-space:nowrap\">N1b<a name=\"en-mii-cs-onko-tnm-uicc-N1b\"> </a></td><td>N1b</td><td/></tr><tr><td style=\"white-space:nowrap\">N1c<a name=\"en-mii-cs-onko-tnm-uicc-N1c\"> </a></td><td>N1c</td><td/></tr><tr><td style=\"white-space:nowrap\">N2<a name=\"en-mii-cs-onko-tnm-uicc-N2\"> </a></td><td>N2</td><td/></tr><tr><td style=\"white-space:nowrap\">N2a<a name=\"en-mii-cs-onko-tnm-uicc-N2a\"> </a></td><td>N2a</td><td/></tr><tr><td style=\"white-space:nowrap\">N2b<a name=\"en-mii-cs-onko-tnm-uicc-N2b\"> </a></td><td>N2b</td><td/></tr><tr><td style=\"white-space:nowrap\">N2c<a name=\"en-mii-cs-onko-tnm-uicc-N2c\"> </a></td><td>N2c</td><td/></tr><tr><td style=\"white-space:nowrap\">N3<a name=\"en-mii-cs-onko-tnm-uicc-N3\"> </a></td><td>N3</td><td/></tr><tr><td style=\"white-space:nowrap\">N3a<a name=\"en-mii-cs-onko-tnm-uicc-N3a\"> </a></td><td>N3a</td><td/></tr><tr><td style=\"white-space:nowrap\">N3b<a name=\"en-mii-cs-onko-tnm-uicc-N3b\"> </a></td><td>N3b</td><td/></tr><tr><td style=\"white-space:nowrap\">N3c<a name=\"en-mii-cs-onko-tnm-uicc-N3c\"> </a></td><td>N3c</td><td/></tr><tr><td style=\"white-space:nowrap\">M0<a name=\"en-mii-cs-onko-tnm-uicc-M0\"> </a></td><td>M0</td><td/></tr><tr><td style=\"white-space:nowrap\">M1<a name=\"en-mii-cs-onko-tnm-uicc-M1\"> </a></td><td>M1</td><td/></tr><tr><td style=\"white-space:nowrap\">M1a<a name=\"en-mii-cs-onko-tnm-uicc-M1a\"> </a></td><td>M1a</td><td/></tr><tr><td style=\"white-space:nowrap\">M1b<a name=\"en-mii-cs-onko-tnm-uicc-M1b\"> </a></td><td>M1b</td><td/></tr><tr><td style=\"white-space:nowrap\">M1c<a name=\"en-mii-cs-onko-tnm-uicc-M1c\"> </a></td><td>M1c</td><td/></tr><tr><td style=\"white-space:nowrap\">M1d<a name=\"en-mii-cs-onko-tnm-uicc-M1d\"> </a></td><td>M1d</td><td/></tr><tr><td style=\"white-space:nowrap\">MX<a name=\"en-mii-cs-onko-tnm-uicc-MX\"> </a></td><td>MX</td><td/></tr><tr><td style=\"white-space:nowrap\">i+<a name=\"en-mii-cs-onko-tnm-uicc-i.43\"> </a></td><td>(i+)</td><td/></tr><tr><td style=\"white-space:nowrap\">i-<a name=\"en-mii-cs-onko-tnm-uicc-i-\"> </a></td><td>(i-)</td><td/></tr><tr><td style=\"white-space:nowrap\">mol+<a name=\"en-mii-cs-onko-tnm-uicc-mol.43\"> </a></td><td>(mol+)</td><td/></tr><tr><td style=\"white-space:nowrap\">mol-<a name=\"en-mii-cs-onko-tnm-uicc-mol-\"> </a></td><td>(mol-)</td><td/></tr><tr><td style=\"white-space:nowrap\">sn<a name=\"en-mii-cs-onko-tnm-uicc-sn\"> </a></td><td>(sn)</td><td/></tr><tr><td style=\"white-space:nowrap\">L0<a name=\"en-mii-cs-onko-tnm-uicc-L0\"> </a></td><td>L0</td><td>Keine Lymphgefäßinvasion</td></tr><tr><td style=\"white-space:nowrap\">L1<a name=\"en-mii-cs-onko-tnm-uicc-L1\"> </a></td><td>L1</td><td>Lymphgefäßinvasion</td></tr><tr><td style=\"white-space:nowrap\">LX<a name=\"en-mii-cs-onko-tnm-uicc-LX\"> </a></td><td>LX</td><td>Lymphgefäßinvasion kann nicht beurteilt werden</td></tr><tr><td style=\"white-space:nowrap\">V0<a name=\"en-mii-cs-onko-tnm-uicc-V0\"> </a></td><td>V0</td><td>Keine Veneninvasion</td></tr><tr><td style=\"white-space:nowrap\">V1<a name=\"en-mii-cs-onko-tnm-uicc-V1\"> </a></td><td>V1</td><td>Mikroskopische Veneninvasion</td></tr><tr><td style=\"white-space:nowrap\">V2<a name=\"en-mii-cs-onko-tnm-uicc-V2\"> </a></td><td>V2</td><td>Makroskopische Veneninvasion</td></tr><tr><td style=\"white-space:nowrap\">VX<a name=\"en-mii-cs-onko-tnm-uicc-VX\"> </a></td><td>VX</td><td>Veneninvasion kann nicht beurteilt werden</td></tr><tr><td style=\"white-space:nowrap\">Pn0<a name=\"en-mii-cs-onko-tnm-uicc-Pn0\"> </a></td><td>Pn0</td><td>Keine perineurale Invasion</td></tr><tr><td style=\"white-space:nowrap\">Pn1<a name=\"en-mii-cs-onko-tnm-uicc-Pn1\"> </a></td><td>Pn1</td><td>Perineurale Invasion</td></tr><tr><td style=\"white-space:nowrap\">PnX<a name=\"en-mii-cs-onko-tnm-uicc-PnX\"> </a></td><td>PnX</td><td>Perineurale Invasion kann nicht beurteilt werden</td></tr><tr><td style=\"white-space:nowrap\">S0<a name=\"en-mii-cs-onko-tnm-uicc-S0\"> </a></td><td>S0</td><td>Serumtumormarker innerhalb der normalen Grenzen</td></tr><tr><td style=\"white-space:nowrap\">S1<a name=\"en-mii-cs-onko-tnm-uicc-S1\"> </a></td><td>S1</td><td/></tr><tr><td style=\"white-space:nowrap\">S2<a name=\"en-mii-cs-onko-tnm-uicc-S2\"> </a></td><td>S2</td><td/></tr><tr><td style=\"white-space:nowrap\">S3<a name=\"en-mii-cs-onko-tnm-uicc-S3\"> </a></td><td>S3</td><td/></tr><tr><td style=\"white-space:nowrap\">SX<a name=\"en-mii-cs-onko-tnm-uicc-SX\"> </a></td><td>SX</td><td>Werte der Serumtumormarker nicht verfügbar oder entspre- chende Untersuchungen nicht vorgenommen</td></tr><tr><td style=\"white-space:nowrap\">okk<a name=\"en-mii-cs-onko-tnm-uicc-okk\"> </a></td><td>Stadium X</td><td/></tr><tr><td style=\"white-space:nowrap\">0<a name=\"en-mii-cs-onko-tnm-uicc-0\"> </a></td><td>Stadium 0</td><td/></tr><tr><td style=\"white-space:nowrap\">0a<a name=\"en-mii-cs-onko-tnm-uicc-0a\"> </a></td><td>Stadium 0a</td><td/></tr><tr><td style=\"white-space:nowrap\">0is<a name=\"en-mii-cs-onko-tnm-uicc-0is\"> </a></td><td>Stadium 0is</td><td/></tr><tr><td style=\"white-space:nowrap\">I<a name=\"en-mii-cs-onko-tnm-uicc-I\"> </a></td><td>Stadium I</td><td/></tr><tr><td style=\"white-space:nowrap\">IA<a name=\"en-mii-cs-onko-tnm-uicc-IA\"> </a></td><td>Stadium IA</td><td/></tr><tr><td style=\"white-space:nowrap\">IA1<a name=\"en-mii-cs-onko-tnm-uicc-IA1\"> </a></td><td>Stadium IA1</td><td/></tr><tr><td style=\"white-space:nowrap\">IA2<a name=\"en-mii-cs-onko-tnm-uicc-IA2\"> </a></td><td>Stadium IA2</td><td/></tr><tr><td style=\"white-space:nowrap\">IA3<a name=\"en-mii-cs-onko-tnm-uicc-IA3\"> </a></td><td>Stadium IA3</td><td/></tr><tr><td style=\"white-space:nowrap\">IB<a name=\"en-mii-cs-onko-tnm-uicc-IB\"> </a></td><td>Stadium IB</td><td/></tr><tr><td style=\"white-space:nowrap\">IB1<a name=\"en-mii-cs-onko-tnm-uicc-IB1\"> </a></td><td>Stadium IB1</td><td/></tr><tr><td style=\"white-space:nowrap\">IB2<a name=\"en-mii-cs-onko-tnm-uicc-IB2\"> </a></td><td>Stadium IB2</td><td/></tr><tr><td style=\"white-space:nowrap\">IC<a name=\"en-mii-cs-onko-tnm-uicc-IC\"> </a></td><td>Stadium IC</td><td/></tr><tr><td style=\"white-space:nowrap\">IS<a name=\"en-mii-cs-onko-tnm-uicc-IS\"> </a></td><td>Stadium IS</td><td/></tr><tr><td style=\"white-space:nowrap\">II<a name=\"en-mii-cs-onko-tnm-uicc-II\"> </a></td><td>Stadium II</td><td/></tr><tr><td style=\"white-space:nowrap\">IIA<a name=\"en-mii-cs-onko-tnm-uicc-IIA\"> </a></td><td>Stadium IIA</td><td/></tr><tr><td style=\"white-space:nowrap\">IIA1<a name=\"en-mii-cs-onko-tnm-uicc-IIA1\"> </a></td><td>Stadium IIA1</td><td/></tr><tr><td style=\"white-space:nowrap\">IIA2<a name=\"en-mii-cs-onko-tnm-uicc-IIA2\"> </a></td><td>Stadium IIA2</td><td/></tr><tr><td style=\"white-space:nowrap\">IIB<a name=\"en-mii-cs-onko-tnm-uicc-IIB\"> </a></td><td>Stadium IIB</td><td/></tr><tr><td style=\"white-space:nowrap\">IIC<a name=\"en-mii-cs-onko-tnm-uicc-IIC\"> </a></td><td>Stadium IIC</td><td/></tr><tr><td style=\"white-space:nowrap\">III<a name=\"en-mii-cs-onko-tnm-uicc-III\"> </a></td><td>Stadium III</td><td/></tr><tr><td style=\"white-space:nowrap\">IIIA<a name=\"en-mii-cs-onko-tnm-uicc-IIIA\"> </a></td><td>Stadium IIIA</td><td/></tr><tr><td style=\"white-space:nowrap\">IIIA1<a name=\"en-mii-cs-onko-tnm-uicc-IIIA1\"> </a></td><td>Stadium IIIA1</td><td/></tr><tr><td style=\"white-space:nowrap\">IIIA2<a name=\"en-mii-cs-onko-tnm-uicc-IIIA2\"> </a></td><td>Stadium IIIA2</td><td/></tr><tr><td style=\"white-space:nowrap\">IIIB<a name=\"en-mii-cs-onko-tnm-uicc-IIIB\"> </a></td><td>Stadium IIIB</td><td/></tr><tr><td style=\"white-space:nowrap\">IIIC<a name=\"en-mii-cs-onko-tnm-uicc-IIIC\"> </a></td><td>Stadium IIIC</td><td/></tr><tr><td style=\"white-space:nowrap\">IIIC1<a name=\"en-mii-cs-onko-tnm-uicc-IIIC1\"> </a></td><td>Stadium IIIC1</td><td/></tr><tr><td style=\"white-space:nowrap\">IIIC2<a name=\"en-mii-cs-onko-tnm-uicc-IIIC2\"> </a></td><td>Stadium IIIC2</td><td/></tr><tr><td style=\"white-space:nowrap\">IIID<a name=\"en-mii-cs-onko-tnm-uicc-IIID\"> </a></td><td>Stadium IIID</td><td/></tr><tr><td style=\"white-space:nowrap\">IV<a name=\"en-mii-cs-onko-tnm-uicc-IV\"> </a></td><td>Stadium IV</td><td/></tr><tr><td style=\"white-space:nowrap\">IVA<a name=\"en-mii-cs-onko-tnm-uicc-IVA\"> </a></td><td>Stadium IVA</td><td/></tr><tr><td style=\"white-space:nowrap\">IVA1<a name=\"en-mii-cs-onko-tnm-uicc-IVA1\"> </a></td><td>Stadium IVA1</td><td/></tr><tr><td style=\"white-space:nowrap\">IVA2<a name=\"en-mii-cs-onko-tnm-uicc-IVA2\"> </a></td><td>Stadium IVA2</td><td/></tr><tr><td style=\"white-space:nowrap\">IVB<a name=\"en-mii-cs-onko-tnm-uicc-IVB\"> </a></td><td>Stadium IVB</td><td/></tr><tr><td style=\"white-space:nowrap\">IVC<a name=\"en-mii-cs-onko-tnm-uicc-IVC\"> </a></td><td>Stadium IVC</td><td/></tr></table></div></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "https://www.uicc.org/resources/tnm"] ;
+  fhir:CodeSystem.version [ fhir:value "2026.0.3"] ;
+  fhir:CodeSystem.name [ fhir:value "MII_CS_Onko_TNM_UICC"] ;
+  fhir:CodeSystem.title [ fhir:value "MII CS Onkologie TNM UICC"] ;
+  fhir:CodeSystem.status [ fhir:value "active"] ;
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-07-02T12:18:38+00:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "Medizininformatik Initiative"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Medizininformatik Initiative" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.medizininformatik-initiative.de/" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "Codes für TNM UICC Ausprägungen."] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "135"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "y" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "y" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Klassifikation erfolgte während oder nach initialer multimodaler Therapie" ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "r" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "r" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Klassifikation erfolgte zur Beurteilung eines Rezidivs" ]
+  ], [
+     fhir:index 2 ;
+     fhir:CodeSystem.concept.code [ fhir:value "a" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "a" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Klassifikation erfolgte durch Autopsie" ]
+  ], [
+     fhir:index 3 ;
+     fhir:CodeSystem.concept.code [ fhir:value "c" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "c" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Kategorie wurde durch klinische Angaben festgestellt." ]
+  ], [
+     fhir:index 4 ;
+     fhir:CodeSystem.concept.code [ fhir:value "p" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "p" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Feststellung der Kategorie erfolgte durch eine pathohistologische Untersuchung, mit der auch der höchste Grad der jeweiligen Kategorie hätte festgestellt werden können." ]
+  ], [
+     fhir:index 5 ;
+     fhir:CodeSystem.concept.code [ fhir:value "u" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "u" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Feststellung mit Ultraschall" ]
+  ], [
+     fhir:index 6 ;
+     fhir:CodeSystem.concept.code [ fhir:value "TX" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "TX" ]
+  ], [
+     fhir:index 7 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T0" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "T0" ]
+  ], [
+     fhir:index 8 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Ta" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Ta" ]
+  ], [
+     fhir:index 9 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Tis" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Tis" ]
+  ], [
+     fhir:index 10 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Tis(LAMN)" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Tis(LAMN)" ]
+  ], [
+     fhir:index 11 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Tis(DCIS)" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Tis(DCIS)" ]
+  ], [
+     fhir:index 12 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Tis(LCIS)" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Tis(LCIS)" ]
+  ], [
+     fhir:index 13 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Tis(Paget)" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Tis(Paget)" ]
+  ], [
+     fhir:index 14 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Tis(pu)" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Tis(pu)" ]
+  ], [
+     fhir:index 15 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Tis(pd)" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Tis(pd)" ]
+  ], [
+     fhir:index 16 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T1" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "T1" ]
+  ], [
+     fhir:index 17 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T1mi" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "T1mi" ]
+  ], [
+     fhir:index 18 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T1a" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "T1a" ]
+  ], [
+     fhir:index 19 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T1a1" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "T1a1" ]
+  ], [
+     fhir:index 20 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T1a2" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "T1a2" ]
+  ], [
+     fhir:index 21 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T1b" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "T1b" ]
+  ], [
+     fhir:index 22 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T1b1" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "T1b1" ]
+  ], [
+     fhir:index 23 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T1b2" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "T1b2" ]
+  ], [
+     fhir:index 24 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T1c" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "T1c" ]
+  ], [
+     fhir:index 25 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T1c1" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "T1c1" ]
+  ], [
+     fhir:index 26 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T1c2" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "T1c2" ]
+  ], [
+     fhir:index 27 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T1c3" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "T1c3" ]
+  ], [
+     fhir:index 28 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T1d" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "T1d" ]
+  ], [
+     fhir:index 29 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T2" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "T2" ]
+  ], [
+     fhir:index 30 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T2a" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "T2a" ]
+  ], [
+     fhir:index 31 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T2a1" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "T2a1" ]
+  ], [
+     fhir:index 32 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T2a2" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "T2a2" ]
+  ], [
+     fhir:index 33 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T2b" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "T2b" ]
+  ], [
+     fhir:index 34 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T2c" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "T2c" ]
+  ], [
+     fhir:index 35 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T2d" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "T2d" ]
+  ], [
+     fhir:index 36 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T3" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "T3" ]
+  ], [
+     fhir:index 37 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T3a" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "T3a" ]
+  ], [
+     fhir:index 38 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T3b" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "T3b" ]
+  ], [
+     fhir:index 39 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T3c" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "T3c" ]
+  ], [
+     fhir:index 40 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T3d" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "T3d" ]
+  ], [
+     fhir:index 41 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T3e" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "T3e" ]
+  ], [
+     fhir:index 42 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T4" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "T4" ]
+  ], [
+     fhir:index 43 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T4a" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "T4a" ]
+  ], [
+     fhir:index 44 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T4b" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "T4b" ]
+  ], [
+     fhir:index 45 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T4c" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "T4c" ]
+  ], [
+     fhir:index 46 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T4d" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "T4d" ]
+  ], [
+     fhir:index 47 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T4e" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "T4e" ]
+  ], [
+     fhir:index 48 ;
+     fhir:CodeSystem.concept.code [ fhir:value "m" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "(m)" ]
+  ], [
+     fhir:index 49 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "(2)" ]
+  ], [
+     fhir:index 50 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "(3)" ]
+  ], [
+     fhir:index 51 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "(4)" ]
+  ], [
+     fhir:index 52 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "(5)" ]
+  ], [
+     fhir:index 53 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "(6)" ]
+  ], [
+     fhir:index 54 ;
+     fhir:CodeSystem.concept.code [ fhir:value "7" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "(7)" ]
+  ], [
+     fhir:index 55 ;
+     fhir:CodeSystem.concept.code [ fhir:value "8" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "(8)" ]
+  ], [
+     fhir:index 56 ;
+     fhir:CodeSystem.concept.code [ fhir:value "9" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "(9)" ]
+  ], [
+     fhir:index 57 ;
+     fhir:CodeSystem.concept.code [ fhir:value "10" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "(10)" ]
+  ], [
+     fhir:index 58 ;
+     fhir:CodeSystem.concept.code [ fhir:value "NX" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Nx" ]
+  ], [
+     fhir:index 59 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N0" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "N0" ]
+  ], [
+     fhir:index 60 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N1" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "N1" ]
+  ], [
+     fhir:index 61 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N1mi" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "N1(mi)" ]
+  ], [
+     fhir:index 62 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N1a" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "N1a" ]
+  ], [
+     fhir:index 63 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N1b" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "N1b" ]
+  ], [
+     fhir:index 64 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N1c" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "N1c" ]
+  ], [
+     fhir:index 65 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N2" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "N2" ]
+  ], [
+     fhir:index 66 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N2a" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "N2a" ]
+  ], [
+     fhir:index 67 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N2b" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "N2b" ]
+  ], [
+     fhir:index 68 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N2c" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "N2c" ]
+  ], [
+     fhir:index 69 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N3" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "N3" ]
+  ], [
+     fhir:index 70 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N3a" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "N3a" ]
+  ], [
+     fhir:index 71 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N3b" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "N3b" ]
+  ], [
+     fhir:index 72 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N3c" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "N3c" ]
+  ], [
+     fhir:index 73 ;
+     fhir:CodeSystem.concept.code [ fhir:value "M0" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "M0" ]
+  ], [
+     fhir:index 74 ;
+     fhir:CodeSystem.concept.code [ fhir:value "M1" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "M1" ]
+  ], [
+     fhir:index 75 ;
+     fhir:CodeSystem.concept.code [ fhir:value "M1a" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "M1a" ]
+  ], [
+     fhir:index 76 ;
+     fhir:CodeSystem.concept.code [ fhir:value "M1b" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "M1b" ]
+  ], [
+     fhir:index 77 ;
+     fhir:CodeSystem.concept.code [ fhir:value "M1c" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "M1c" ]
+  ], [
+     fhir:index 78 ;
+     fhir:CodeSystem.concept.code [ fhir:value "M1d" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "M1d" ]
+  ], [
+     fhir:index 79 ;
+     fhir:CodeSystem.concept.code [ fhir:value "MX" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "MX" ]
+  ], [
+     fhir:index 80 ;
+     fhir:CodeSystem.concept.code [ fhir:value "i+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "(i+)" ]
+  ], [
+     fhir:index 81 ;
+     fhir:CodeSystem.concept.code [ fhir:value "i-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "(i-)" ]
+  ], [
+     fhir:index 82 ;
+     fhir:CodeSystem.concept.code [ fhir:value "mol+" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "(mol+)" ]
+  ], [
+     fhir:index 83 ;
+     fhir:CodeSystem.concept.code [ fhir:value "mol-" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "(mol-)" ]
+  ], [
+     fhir:index 84 ;
+     fhir:CodeSystem.concept.code [ fhir:value "sn" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "(sn)" ]
+  ], [
+     fhir:index 85 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L0" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "L0" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Keine Lymphgefäßinvasion" ]
+  ], [
+     fhir:index 86 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L1" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "L1" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Lymphgefäßinvasion" ]
+  ], [
+     fhir:index 87 ;
+     fhir:CodeSystem.concept.code [ fhir:value "LX" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "LX" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Lymphgefäßinvasion kann nicht beurteilt werden" ]
+  ], [
+     fhir:index 88 ;
+     fhir:CodeSystem.concept.code [ fhir:value "V0" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "V0" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Keine Veneninvasion" ]
+  ], [
+     fhir:index 89 ;
+     fhir:CodeSystem.concept.code [ fhir:value "V1" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "V1" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Mikroskopische Veneninvasion" ]
+  ], [
+     fhir:index 90 ;
+     fhir:CodeSystem.concept.code [ fhir:value "V2" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "V2" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Makroskopische Veneninvasion" ]
+  ], [
+     fhir:index 91 ;
+     fhir:CodeSystem.concept.code [ fhir:value "VX" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "VX" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Veneninvasion kann nicht beurteilt werden" ]
+  ], [
+     fhir:index 92 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Pn0" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Pn0" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Keine perineurale Invasion" ]
+  ], [
+     fhir:index 93 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Pn1" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Pn1" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Perineurale Invasion" ]
+  ], [
+     fhir:index 94 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PnX" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "PnX" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Perineurale Invasion kann nicht beurteilt werden" ]
+  ], [
+     fhir:index 95 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S0" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "S0" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Serumtumormarker innerhalb der normalen Grenzen" ]
+  ], [
+     fhir:index 96 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S1" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "S1" ]
+  ], [
+     fhir:index 97 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S2" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "S2" ]
+  ], [
+     fhir:index 98 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S3" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "S3" ]
+  ], [
+     fhir:index 99 ;
+     fhir:CodeSystem.concept.code [ fhir:value "SX" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "SX" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Werte der Serumtumormarker nicht verfügbar oder entspre- chende Untersuchungen nicht vorgenommen" ]
+  ], [
+     fhir:index 100 ;
+     fhir:CodeSystem.concept.code [ fhir:value "okk" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stadium X" ]
+  ], [
+     fhir:index 101 ;
+     fhir:CodeSystem.concept.code [ fhir:value "0" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stadium 0" ]
+  ], [
+     fhir:index 102 ;
+     fhir:CodeSystem.concept.code [ fhir:value "0a" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stadium 0a" ]
+  ], [
+     fhir:index 103 ;
+     fhir:CodeSystem.concept.code [ fhir:value "0is" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stadium 0is" ]
+  ], [
+     fhir:index 104 ;
+     fhir:CodeSystem.concept.code [ fhir:value "I" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stadium I" ]
+  ], [
+     fhir:index 105 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IA" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stadium IA" ]
+  ], [
+     fhir:index 106 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IA1" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stadium IA1" ]
+  ], [
+     fhir:index 107 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IA2" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stadium IA2" ]
+  ], [
+     fhir:index 108 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IA3" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stadium IA3" ]
+  ], [
+     fhir:index 109 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IB" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stadium IB" ]
+  ], [
+     fhir:index 110 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IB1" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stadium IB1" ]
+  ], [
+     fhir:index 111 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IB2" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stadium IB2" ]
+  ], [
+     fhir:index 112 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IC" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stadium IC" ]
+  ], [
+     fhir:index 113 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IS" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stadium IS" ]
+  ], [
+     fhir:index 114 ;
+     fhir:CodeSystem.concept.code [ fhir:value "II" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stadium II" ]
+  ], [
+     fhir:index 115 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IIA" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stadium IIA" ]
+  ], [
+     fhir:index 116 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IIA1" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stadium IIA1" ]
+  ], [
+     fhir:index 117 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IIA2" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stadium IIA2" ]
+  ], [
+     fhir:index 118 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IIB" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stadium IIB" ]
+  ], [
+     fhir:index 119 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IIC" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stadium IIC" ]
+  ], [
+     fhir:index 120 ;
+     fhir:CodeSystem.concept.code [ fhir:value "III" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stadium III" ]
+  ], [
+     fhir:index 121 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IIIA" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stadium IIIA" ]
+  ], [
+     fhir:index 122 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IIIA1" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stadium IIIA1" ]
+  ], [
+     fhir:index 123 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IIIA2" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stadium IIIA2" ]
+  ], [
+     fhir:index 124 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IIIB" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stadium IIIB" ]
+  ], [
+     fhir:index 125 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IIIC" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stadium IIIC" ]
+  ], [
+     fhir:index 126 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IIIC1" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stadium IIIC1" ]
+  ], [
+     fhir:index 127 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IIIC2" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stadium IIIC2" ]
+  ], [
+     fhir:index 128 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IIID" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stadium IIID" ]
+  ], [
+     fhir:index 129 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IV" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stadium IV" ]
+  ], [
+     fhir:index 130 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IVA" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stadium IVA" ]
+  ], [
+     fhir:index 131 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IVA1" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stadium IVA1" ]
+  ], [
+     fhir:index 132 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IVA2" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stadium IVA2" ]
+  ], [
+     fhir:index 133 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IVB" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stadium IVB" ]
+  ], [
+     fhir:index 134 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IVC" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stadium IVC" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-uicc.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

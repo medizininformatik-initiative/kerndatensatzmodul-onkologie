@@ -1,0 +1,49 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-onko-strahlentherapie-strahlungseinheit",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-onko-strahlentherapie-strahlungseinheit</b></p><a name=\"en-mii-vs-onko-strahlentherapie-strahlungseinheit\"> </a><a name=\"en-hcmii-vs-onko-strahlentherapie-strahlungseinheit\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablevalueset.html\">Shareable ValueSet</a></p></div><ul><li>Include these codes as defined in <a href=\"http://unitsofmeasure.org\"><code>http://unitsofmeasure.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>Gy</td><td>Gy</td></tr><tr><td>kBq</td><td>kBq</td></tr><tr><td>MBq</td><td>MBq</td></tr><tr><td>GBq</td><td>GBq</td></tr></table></li></ul></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-strahlungseinheit",
+  "version" : "2026.0.3",
+  "name" : "MII_VS_Onko_Strahlentherapie_Strahlungseinheit",
+  "title" : "MII VS Onkologie Strahlentherapie Strahlungseinheit",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-07-02T12:18:38+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "oBDS-spezifisches ValueSet für Strahlungseinheit en für Strahlen- und Nuklearmedizinische Therapie",
+  "compose" : {
+    "include" : [{
+      "system" : "http://unitsofmeasure.org",
+      "concept" : [{
+        "code" : "Gy",
+        "display" : "Gy"
+      },
+      {
+        "code" : "kBq",
+        "display" : "kBq"
+      },
+      {
+        "code" : "MBq",
+        "display" : "MBq"
+      },
+      {
+        "code" : "GBq",
+        "display" : "GBq"
+      }]
+    }]
+  }
+}

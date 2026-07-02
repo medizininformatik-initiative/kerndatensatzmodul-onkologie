@@ -1,0 +1,1280 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-tnm-uicc-sct-clinical> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-cm-onko-tnm-uicc-sct-clinical"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap mii-cm-onko-tnm-uicc-sct-clinical</b></p><a name=\"mii-cm-onko-tnm-uicc-sct-clinical\"> </a><a name=\"hcmii-cm-onko-tnm-uicc-sct-clinical\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p>Mapping from <a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html\">MII CS Onkologie TNM UICC</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>y</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>421755005 (Tumor staging descriptor y (tumor staging))</td></tr><tr><td>r</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>421188008 (Tumor staging descriptor r (tumor staging))</td></tr><tr><td>a</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>421426001 (Tumor staging descriptor a (tumor staging))</td></tr><tr><td>c</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>p</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>u</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>TX</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352975000 (Union for International Cancer Control cTX (qualifier value))</td></tr><tr><td>T0</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352986003 (Union for International Cancer Control cT0 (qualifier value))</td></tr><tr><td>Ta</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352961007 (Union for International Cancer Control cTa (qualifier value))</td></tr><tr><td>Tis</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352984000 (Union for International Cancer Control cTis (qualifier value))</td></tr><tr><td>Tis(LAMN)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352964004 (Union for International Cancer Control cTis(LAMN) (qualifier value))</td></tr><tr><td>Tis(DCIS)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352965003 (Union for International Cancer Control cTis(DCIS) (qualifier value))</td></tr><tr><td>Tis(LCIS)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1351846009 (Union for International Cancer Control cTis(LCIS) (qualifier value))</td></tr><tr><td>Tis(Paget)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352987007 (Union for International Cancer Control cTis(Paget) (qualifier value))</td></tr><tr><td>Tis(pu)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>Tis(pd)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>T1</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352996007 (Union for International Cancer Control cT1 (qualifier value))</td></tr><tr><td>T1mi</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352979006 (Union for International Cancer Control cT1mi (qualifier value))</td></tr><tr><td>T1a</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352983006 (Union for International Cancer Control cT1a (qualifier value))</td></tr><tr><td>T1a1</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352959003 (Union for International Cancer Control cT1a1 (qualifier value))</td></tr><tr><td>T1a2</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352988002 (Union for International Cancer Control cT1a2 (qualifier value))</td></tr><tr><td>T1b</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352968001 (Union for International Cancer Control cT1b (qualifier value))</td></tr><tr><td>T1b1</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352985004 (Union for International Cancer Control cT1b1 (qualifier value))</td></tr><tr><td>T1b2</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352992009 (Union for International Cancer Control cT1b2 (qualifier value))</td></tr><tr><td>T1c</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352973007 (Union for International Cancer Control cT1c (qualifier value))</td></tr><tr><td>T1c1</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352995006 (Union for International Cancer Control cT1c1 (qualifier value))</td></tr><tr><td>T1c2</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352977008 (Union for International Cancer Control cT1c2 (qualifier value))</td></tr><tr><td>T1c3</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352958006 (Union for International Cancer Control cT1c3 (qualifier value))</td></tr><tr><td>T1d</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352978003 (Union for International Cancer Control cT1d (qualifier value))</td></tr><tr><td>T2</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352993004 (Union for International Cancer Control cT2 (qualifier value))</td></tr><tr><td>T2a</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352962000 (Union for International Cancer Control cT2a (qualifier value))</td></tr><tr><td>T2a1</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352990001 (Union for International Cancer Control cT2a1 (qualifier value))</td></tr><tr><td>T2a2</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352967006 (Union for International Cancer Control cT2a2 (qualifier value))</td></tr><tr><td>T2b</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352972002 (Union for International Cancer Control cT2b (qualifier value))</td></tr><tr><td>T2c (T2c2)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352969009 (Union for International Cancer Control cT2c (qualifier value))</td></tr><tr><td>T2d</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352971009 (Union for International Cancer Control cT2d (qualifier value))</td></tr><tr><td>T3</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352966002 (Union for International Cancer Control cT3 (qualifier value))</td></tr><tr><td>T3a</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352989005 (Union for International Cancer Control cT3a (qualifier value))</td></tr><tr><td>T3b</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352991002 (Union for International Cancer Control cT3b (qualifier value))</td></tr><tr><td>T3c</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352976004 (Union for International Cancer Control cT3c (qualifier value))</td></tr><tr><td>T3d (Td3)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352994005 (Union for International Cancer Control cT3d (qualifier value))</td></tr><tr><td>T3e</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352974001 (Union for International Cancer Control cT3e (qualifier value))</td></tr><tr><td>T4</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352997003 (Union for International Cancer Control cT4 (qualifier value))</td></tr><tr><td>T4a</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352982001 (Union for International Cancer Control cT4a (qualifier value))</td></tr><tr><td>T4b</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352960008 (Union for International Cancer Control cT4b (qualifier value))</td></tr><tr><td>T4c</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352980009 (Union for International Cancer Control cT4c (qualifier value))</td></tr><tr><td>T4d</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352963005 (Union for International Cancer Control cT4d (qualifier value))</td></tr><tr><td>T4e</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352981008 (Union for International Cancer Control cT4e (qualifier value))</td></tr><tr><td>m</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>2</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>3</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>4</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>5</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>6</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>7</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>8</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>9</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>10</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>NX</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1353039008 (Union for International Cancer Control cNX (qualifier value))</td></tr><tr><td>N0</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1353041009 (Union for International Cancer Control cN0 (qualifier value))</td></tr><tr><td>N1</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1353043007 (Union for International Cancer Control cN1 (qualifier value))</td></tr><tr><td>N1mi (N1(mi))</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>N1a</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1353046004 (Union for International Cancer Control cN1a (qualifier value))</td></tr><tr><td>N1b</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1353048003 (Union for International Cancer Control cN1b (qualifier value))</td></tr><tr><td>N1c</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1353044001 (Union for International Cancer Control cN1c (qualifier value))</td></tr><tr><td>N2</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1353047008 (Union for International Cancer Control cN2 (qualifier value))</td></tr><tr><td>N2a</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1353050006 (Union for International Cancer Control cN2a (qualifier value))</td></tr><tr><td>N2b</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1353055001 (Union for International Cancer Control cN2b (qualifier value))</td></tr><tr><td>N2c</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1353049006 (Union for International Cancer Control cN2c (qualifier value))</td></tr><tr><td>N3</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1353053008 (Union for International Cancer Control cN3 (qualifier value))</td></tr><tr><td>N3a</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1353057009 (Union for International Cancer Control cN3a (qualifier value))</td></tr><tr><td>N3b</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1353054002 (Union for International Cancer Control cN3b (qualifier value))</td></tr><tr><td>N3c</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1353051005 (Union for International Cancer Control cN3c (qualifier value))</td></tr><tr><td>M0</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352512001 (Union for International Cancer Control cM0 (qualifier value))</td></tr><tr><td>M1</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352513006 (Union for International Cancer Control cM1 (qualifier value))</td></tr><tr><td>M1a</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352517007 (Union for International Cancer Control cM1a (qualifier value))</td></tr><tr><td>M1b</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352514000 (Union for International Cancer Control cM1b (qualifier value))</td></tr><tr><td>M1c</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352516003 (Union for International Cancer Control cM1c (qualifier value))</td></tr><tr><td>M1d</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352510009 (Union for International Cancer Control cM1d (qualifier value))</td></tr><tr><td>MX</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>i+</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>i-</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>mol+</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>mol-</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>sn</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>L0</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>L1</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>LX</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>V0</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>V1</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>V2</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>VX</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>Pn0</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>Pn1</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>PnX</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>S0</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>S1</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>S2</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>S3</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>SX</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>okk (Stadium X)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>0 (Stadium 0)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352916008 (Union for International Cancer Control stage 0 (qualifier value))</td></tr><tr><td>0a (Stadium 0a)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352825003 (Union for International Cancer Control stage 0a (qualifier value))</td></tr><tr><td>0is (Stadium 0is)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352895007 (Union for International Cancer Control stage 0is (qualifier value))</td></tr><tr><td>I (Stadium I)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352927005 (Union for International Cancer Control stage I (qualifier value))</td></tr><tr><td>IA1 (Stadium IA1)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352890002 (Union for International Cancer Control stage IA1 (qualifier value))</td></tr><tr><td>IA2 (Stadium IA2)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352945005 (Union for International Cancer Control stage IA2 (qualifier value))</td></tr><tr><td>IA3 (Stadium IA3)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352854009 (Union for International Cancer Control stage IA3 (qualifier value))</td></tr><tr><td>IB (Stadium IB)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352911003 (Union for International Cancer Control stage IB (qualifier value))</td></tr><tr><td>IB1 (Stadium IB1)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352816009 (Union for International Cancer Control stage IB1 (qualifier value))</td></tr><tr><td>IB2 (Stadium IB2)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352864000 (Union for International Cancer Control stage IB2 (qualifier value))</td></tr><tr><td>IC (Stadium IC)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352919001 (Union for International Cancer Control stage IC (qualifier value))</td></tr><tr><td>IS (Stadium IS)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352880005 (Union for International Cancer Control stage IS (qualifier value))</td></tr><tr><td>II (Stadium II)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352944009 (Union for International Cancer Control stage II (qualifier value))</td></tr><tr><td>IIA (Stadium IIA)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352856006 (Union for International Cancer Control stage IIA (qualifier value))</td></tr><tr><td>IIA1 (Stadium IIA1)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352829009 (Union for International Cancer Control stage IIA1 (qualifier value))</td></tr><tr><td>IIA2 (Stadium IIA2)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352892005 (Union for International Cancer Control stage IIA2 (qualifier value))</td></tr><tr><td>IIB (Stadium IIB)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352861008 (Union for International Cancer Control stage IIB (qualifier value))</td></tr><tr><td>IIC (Stadium IIC)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352831000 (Union for International Cancer Control stage IIC (qualifier value))</td></tr><tr><td>III (Stadium III)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352871005 (Union for International Cancer Control stage III (qualifier value))</td></tr><tr><td>IIIA (Stadium IIIA)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352915007 (Union for International Cancer Control stage IIIA (qualifier value))</td></tr><tr><td>IIIA1 (Stadium IIIA1)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352935008 (Union for International Cancer Control stage IIIA1 (qualifier value))</td></tr><tr><td>IIIA2 (Stadium IIIA2)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352882002 (Union for International Cancer Control stage IIIA2 (qualifier value))</td></tr><tr><td>IIIB (Stadium IIIB)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352896008 (Union for International Cancer Control stage IIIB (qualifier value))</td></tr><tr><td>IIIC (Stadium IIIC)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352848008 (Union for International Cancer Control stage IIIC (qualifier value))</td></tr><tr><td>IIIC1 (Stadium IIIC1)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352862001 (Union for International Cancer Control stage IIIC1 (qualifier value))</td></tr><tr><td>IIIC2 (Stadium IIIC2)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352833002 (Union for International Cancer Control stage IIIC2 (qualifier value))</td></tr><tr><td>IV (Stadium IV)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352913000 (Union for International Cancer Control stage IV (qualifier value))</td></tr><tr><td>IVA (Stadium IVA)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352822000 (Union for International Cancer Control stage IVA (qualifier value))</td></tr><tr><td>IVB (Stadium IVB)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352836005 (Union for International Cancer Control stage IVB (qualifier value))</td></tr><tr><td>IVC (Stadium IVC)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352921006 (Union for International Cancer Control stage IVC (qualifier value))</td></tr></table></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap mii-cm-onko-tnm-uicc-sct-clinical</b></p><a name=\"en-mii-cm-onko-tnm-uicc-sct-clinical\"> </a><a name=\"en-hcmii-cm-onko-tnm-uicc-sct-clinical\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p>Mapping from <a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html\">MII CS Onkologie TNM UICC</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>y</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>421755005 (Tumor staging descriptor y (tumor staging))</td></tr><tr><td>r</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>421188008 (Tumor staging descriptor r (tumor staging))</td></tr><tr><td>a</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>421426001 (Tumor staging descriptor a (tumor staging))</td></tr><tr><td>c</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>p</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>u</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>TX</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352975000 (Union for International Cancer Control cTX (qualifier value))</td></tr><tr><td>T0</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352986003 (Union for International Cancer Control cT0 (qualifier value))</td></tr><tr><td>Ta</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352961007 (Union for International Cancer Control cTa (qualifier value))</td></tr><tr><td>Tis</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352984000 (Union for International Cancer Control cTis (qualifier value))</td></tr><tr><td>Tis(LAMN)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352964004 (Union for International Cancer Control cTis(LAMN) (qualifier value))</td></tr><tr><td>Tis(DCIS)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352965003 (Union for International Cancer Control cTis(DCIS) (qualifier value))</td></tr><tr><td>Tis(LCIS)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1351846009 (Union for International Cancer Control cTis(LCIS) (qualifier value))</td></tr><tr><td>Tis(Paget)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352987007 (Union for International Cancer Control cTis(Paget) (qualifier value))</td></tr><tr><td>Tis(pu)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>Tis(pd)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>T1</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352996007 (Union for International Cancer Control cT1 (qualifier value))</td></tr><tr><td>T1mi</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352979006 (Union for International Cancer Control cT1mi (qualifier value))</td></tr><tr><td>T1a</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352983006 (Union for International Cancer Control cT1a (qualifier value))</td></tr><tr><td>T1a1</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352959003 (Union for International Cancer Control cT1a1 (qualifier value))</td></tr><tr><td>T1a2</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352988002 (Union for International Cancer Control cT1a2 (qualifier value))</td></tr><tr><td>T1b</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352968001 (Union for International Cancer Control cT1b (qualifier value))</td></tr><tr><td>T1b1</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352985004 (Union for International Cancer Control cT1b1 (qualifier value))</td></tr><tr><td>T1b2</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352992009 (Union for International Cancer Control cT1b2 (qualifier value))</td></tr><tr><td>T1c</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352973007 (Union for International Cancer Control cT1c (qualifier value))</td></tr><tr><td>T1c1</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352995006 (Union for International Cancer Control cT1c1 (qualifier value))</td></tr><tr><td>T1c2</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352977008 (Union for International Cancer Control cT1c2 (qualifier value))</td></tr><tr><td>T1c3</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352958006 (Union for International Cancer Control cT1c3 (qualifier value))</td></tr><tr><td>T1d</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352978003 (Union for International Cancer Control cT1d (qualifier value))</td></tr><tr><td>T2</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352993004 (Union for International Cancer Control cT2 (qualifier value))</td></tr><tr><td>T2a</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352962000 (Union for International Cancer Control cT2a (qualifier value))</td></tr><tr><td>T2a1</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352990001 (Union for International Cancer Control cT2a1 (qualifier value))</td></tr><tr><td>T2a2</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352967006 (Union for International Cancer Control cT2a2 (qualifier value))</td></tr><tr><td>T2b</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352972002 (Union for International Cancer Control cT2b (qualifier value))</td></tr><tr><td>T2c (T2c2)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352969009 (Union for International Cancer Control cT2c (qualifier value))</td></tr><tr><td>T2d</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352971009 (Union for International Cancer Control cT2d (qualifier value))</td></tr><tr><td>T3</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352966002 (Union for International Cancer Control cT3 (qualifier value))</td></tr><tr><td>T3a</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352989005 (Union for International Cancer Control cT3a (qualifier value))</td></tr><tr><td>T3b</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352991002 (Union for International Cancer Control cT3b (qualifier value))</td></tr><tr><td>T3c</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352976004 (Union for International Cancer Control cT3c (qualifier value))</td></tr><tr><td>T3d (Td3)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352994005 (Union for International Cancer Control cT3d (qualifier value))</td></tr><tr><td>T3e</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352974001 (Union for International Cancer Control cT3e (qualifier value))</td></tr><tr><td>T4</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352997003 (Union for International Cancer Control cT4 (qualifier value))</td></tr><tr><td>T4a</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352982001 (Union for International Cancer Control cT4a (qualifier value))</td></tr><tr><td>T4b</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352960008 (Union for International Cancer Control cT4b (qualifier value))</td></tr><tr><td>T4c</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352980009 (Union for International Cancer Control cT4c (qualifier value))</td></tr><tr><td>T4d</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352963005 (Union for International Cancer Control cT4d (qualifier value))</td></tr><tr><td>T4e</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352981008 (Union for International Cancer Control cT4e (qualifier value))</td></tr><tr><td>m</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>2</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>3</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>4</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>5</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>6</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>7</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>8</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>9</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>10</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>NX</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1353039008 (Union for International Cancer Control cNX (qualifier value))</td></tr><tr><td>N0</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1353041009 (Union for International Cancer Control cN0 (qualifier value))</td></tr><tr><td>N1</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1353043007 (Union for International Cancer Control cN1 (qualifier value))</td></tr><tr><td>N1mi (N1(mi))</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>N1a</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1353046004 (Union for International Cancer Control cN1a (qualifier value))</td></tr><tr><td>N1b</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1353048003 (Union for International Cancer Control cN1b (qualifier value))</td></tr><tr><td>N1c</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1353044001 (Union for International Cancer Control cN1c (qualifier value))</td></tr><tr><td>N2</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1353047008 (Union for International Cancer Control cN2 (qualifier value))</td></tr><tr><td>N2a</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1353050006 (Union for International Cancer Control cN2a (qualifier value))</td></tr><tr><td>N2b</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1353055001 (Union for International Cancer Control cN2b (qualifier value))</td></tr><tr><td>N2c</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1353049006 (Union for International Cancer Control cN2c (qualifier value))</td></tr><tr><td>N3</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1353053008 (Union for International Cancer Control cN3 (qualifier value))</td></tr><tr><td>N3a</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1353057009 (Union for International Cancer Control cN3a (qualifier value))</td></tr><tr><td>N3b</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1353054002 (Union for International Cancer Control cN3b (qualifier value))</td></tr><tr><td>N3c</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1353051005 (Union for International Cancer Control cN3c (qualifier value))</td></tr><tr><td>M0</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352512001 (Union for International Cancer Control cM0 (qualifier value))</td></tr><tr><td>M1</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352513006 (Union for International Cancer Control cM1 (qualifier value))</td></tr><tr><td>M1a</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352517007 (Union for International Cancer Control cM1a (qualifier value))</td></tr><tr><td>M1b</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352514000 (Union for International Cancer Control cM1b (qualifier value))</td></tr><tr><td>M1c</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352516003 (Union for International Cancer Control cM1c (qualifier value))</td></tr><tr><td>M1d</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352510009 (Union for International Cancer Control cM1d (qualifier value))</td></tr><tr><td>MX</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>i+</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>i-</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>mol+</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>mol-</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>sn</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>L0</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>L1</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>LX</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>V0</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>V1</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>V2</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>VX</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>Pn0</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>Pn1</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>PnX</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>S0</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>S1</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>S2</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>S3</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>SX</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>okk (Stadium X)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>0 (Stadium 0)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352916008 (Union for International Cancer Control stage 0 (qualifier value))</td></tr><tr><td>0a (Stadium 0a)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352825003 (Union for International Cancer Control stage 0a (qualifier value))</td></tr><tr><td>0is (Stadium 0is)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352895007 (Union for International Cancer Control stage 0is (qualifier value))</td></tr><tr><td>I (Stadium I)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352927005 (Union for International Cancer Control stage I (qualifier value))</td></tr><tr><td>IA1 (Stadium IA1)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352890002 (Union for International Cancer Control stage IA1 (qualifier value))</td></tr><tr><td>IA2 (Stadium IA2)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352945005 (Union for International Cancer Control stage IA2 (qualifier value))</td></tr><tr><td>IA3 (Stadium IA3)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352854009 (Union for International Cancer Control stage IA3 (qualifier value))</td></tr><tr><td>IB (Stadium IB)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352911003 (Union for International Cancer Control stage IB (qualifier value))</td></tr><tr><td>IB1 (Stadium IB1)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352816009 (Union for International Cancer Control stage IB1 (qualifier value))</td></tr><tr><td>IB2 (Stadium IB2)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352864000 (Union for International Cancer Control stage IB2 (qualifier value))</td></tr><tr><td>IC (Stadium IC)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352919001 (Union for International Cancer Control stage IC (qualifier value))</td></tr><tr><td>IS (Stadium IS)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352880005 (Union for International Cancer Control stage IS (qualifier value))</td></tr><tr><td>II (Stadium II)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352944009 (Union for International Cancer Control stage II (qualifier value))</td></tr><tr><td>IIA (Stadium IIA)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352856006 (Union for International Cancer Control stage IIA (qualifier value))</td></tr><tr><td>IIA1 (Stadium IIA1)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352829009 (Union for International Cancer Control stage IIA1 (qualifier value))</td></tr><tr><td>IIA2 (Stadium IIA2)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352892005 (Union for International Cancer Control stage IIA2 (qualifier value))</td></tr><tr><td>IIB (Stadium IIB)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352861008 (Union for International Cancer Control stage IIB (qualifier value))</td></tr><tr><td>IIC (Stadium IIC)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352831000 (Union for International Cancer Control stage IIC (qualifier value))</td></tr><tr><td>III (Stadium III)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352871005 (Union for International Cancer Control stage III (qualifier value))</td></tr><tr><td>IIIA (Stadium IIIA)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352915007 (Union for International Cancer Control stage IIIA (qualifier value))</td></tr><tr><td>IIIA1 (Stadium IIIA1)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352935008 (Union for International Cancer Control stage IIIA1 (qualifier value))</td></tr><tr><td>IIIA2 (Stadium IIIA2)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352882002 (Union for International Cancer Control stage IIIA2 (qualifier value))</td></tr><tr><td>IIIB (Stadium IIIB)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352896008 (Union for International Cancer Control stage IIIB (qualifier value))</td></tr><tr><td>IIIC (Stadium IIIC)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352848008 (Union for International Cancer Control stage IIIC (qualifier value))</td></tr><tr><td>IIIC1 (Stadium IIIC1)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352862001 (Union for International Cancer Control stage IIIC1 (qualifier value))</td></tr><tr><td>IIIC2 (Stadium IIIC2)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352833002 (Union for International Cancer Control stage IIIC2 (qualifier value))</td></tr><tr><td>IV (Stadium IV)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352913000 (Union for International Cancer Control stage IV (qualifier value))</td></tr><tr><td>IVA (Stadium IVA)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352822000 (Union for International Cancer Control stage IVA (qualifier value))</td></tr><tr><td>IVB (Stadium IVB)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352836005 (Union for International Cancer Control stage IVB (qualifier value))</td></tr><tr><td>IVC (Stadium IVC)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352921006 (Union for International Cancer Control stage IVC (qualifier value))</td></tr></table></div></div>"
+  ] ;
+  fhir:ConceptMap.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-tnm-uicc-sct-clinical"] ;
+  fhir:ConceptMap.version [ fhir:value "2026.0.3"] ;
+  fhir:ConceptMap.name [ fhir:value "MII CM Onko Clincal TNM UICC SCT Mapping"] ;
+  fhir:ConceptMap.title [ fhir:value "MII CM Onko Clincal TNM UICC SNOMED"] ;
+  fhir:ConceptMap.status [ fhir:value "active"] ;
+  fhir:ConceptMap.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ConceptMap.date [ fhir:value "2024-01-05"^^xsd:date] ;
+  fhir:ConceptMap.publisher [ fhir:value "Medizininformatik Initiative"] ;
+  fhir:ConceptMap.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Medizininformatik Initiative" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.medizininformatik-initiative.de/" ]
+     ]
+  ] ;
+  fhir:ConceptMap.description [ fhir:value "Mapping clincal TNM UICC Codes zu SNOMED-CT"] ;
+  fhir:ConceptMap.group [
+     fhir:index 0 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://www.uicc.org/resources/tnm" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "http://snomed.info/sct/900000000000207008/version/20240401" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index 0 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "y" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "y" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "421755005" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Tumor staging descriptor y (tumor staging)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "r" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "r" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "421188008" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Tumor staging descriptor r (tumor staging)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 2 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "a" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "a" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "421426001" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Tumor staging descriptor a (tumor staging)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 3 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "c" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "c" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 4 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "p" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "p" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 5 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "u" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "u" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 6 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "TX" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "TX" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352975000" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cTX (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 7 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "T0" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "T0" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352986003" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cT0 (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 8 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Ta" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Ta" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352961007" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cTa (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 9 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Tis" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Tis" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352984000" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cTis (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 10 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Tis(LAMN)" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Tis(LAMN)" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352964004" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cTis(LAMN) (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 11 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Tis(DCIS)" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Tis(DCIS)" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352965003" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cTis(DCIS) (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 12 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Tis(LCIS)" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Tis(LCIS)" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1351846009" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cTis(LCIS) (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 13 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Tis(Paget)" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Tis(Paget)" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352987007" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cTis(Paget) (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 14 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Tis(pu)" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Tis(pu)" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 15 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Tis(pd)" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Tis(pd)" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 16 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "T1" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "T1" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352996007" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cT1 (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 17 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "T1mi" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "T1mi" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352979006" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cT1mi (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 18 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "T1a" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "T1a" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352983006" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cT1a (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 19 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "T1a1" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "T1a1" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352959003" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cT1a1 (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 20 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "T1a2" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "T1a2" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352988002" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cT1a2 (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 21 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "T1b" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "T1b" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352968001" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cT1b (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 22 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "T1b1" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "T1b1" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352985004" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cT1b1 (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 23 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "T1b2" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "T1b2" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352992009" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cT1b2 (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 24 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "T1c" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "T1c" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352973007" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cT1c (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 25 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "T1c1" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "T1c1" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352995006" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cT1c1 (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 26 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "T1c2" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "T1c2" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352977008" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cT1c2 (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 27 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "T1c3" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "T1c3" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352958006" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cT1c3 (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 28 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "T1d" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "T1d" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352978003" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cT1d (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 29 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "T2" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "T2" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352993004" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cT2 (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 30 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "T2a" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "T2a" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352962000" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cT2a (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 31 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "T2a1" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "T2a1" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352990001" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cT2a1 (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 32 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "T2a2" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "T2a2" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352967006" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cT2a2 (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 33 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "T2b" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "T2b" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352972002" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cT2b (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 34 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "T2c" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "T2c2" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352969009" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cT2c (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 35 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "T2d" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "T2d" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352971009" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cT2d (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 36 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "T3" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "T3" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352966002" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cT3 (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 37 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "T3a" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "T3a" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352989005" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cT3a (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 38 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "T3b" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "T3b" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352991002" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cT3b (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 39 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "T3c" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "T3c" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352976004" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cT3c (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 40 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "T3d" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Td3" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352994005" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cT3d (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 41 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "T3e" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "T3e" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352974001" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cT3e (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 42 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "T4" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "T4" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352997003" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cT4 (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 43 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "T4a" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "T4a" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352982001" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cT4a (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 44 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "T4b" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "T4b" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352960008" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cT4b (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 45 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "T4c" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "T4c" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352980009" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cT4c (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 46 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "T4d" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "T4d" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352963005" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cT4d (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 47 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "T4e" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "T4e" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352981008" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cT4e (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 48 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "m" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "m" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 49 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "2" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "2" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 50 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "3" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "3" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 51 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "4" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "4" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 52 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "5" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "5" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 53 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "6" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "6" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 54 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "7" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "7" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 55 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "8" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "8" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 56 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "9" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "9" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 57 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "10" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "10" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 58 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "NX" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Nx" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1353039008" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cNX (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 59 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "N0" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "N0" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1353041009" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cN0 (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 60 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "N1" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "N1" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1353043007" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cN1 (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 61 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "N1mi" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "N1(mi)" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 62 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "N1a" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "N1a" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1353046004" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cN1a (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 63 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "N1b" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "N1b" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1353048003" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cN1b (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 64 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "N1c" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "N1c" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1353044001" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cN1c (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 65 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "N2" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "N2" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1353047008" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cN2 (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 66 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "N2a" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "N2a" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1353050006" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cN2a (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 67 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "N2b" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "N2b" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1353055001" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cN2b (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 68 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "N2c" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "N2c" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1353049006" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cN2c (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 69 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "N3" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "N3" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1353053008" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cN3 (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 70 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "N3a" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "N3a" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1353057009" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cN3a (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 71 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "N3b" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "N3b" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1353054002" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cN3b (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 72 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "N3c" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "N3c" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1353051005" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cN3c (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 73 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "M0" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "M0" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352512001" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cM0 (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 74 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "M1" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "M1" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352513006" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cM1 (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 75 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "M1a" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "M1a" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352517007" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cM1a (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 76 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "M1b" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "M1b" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352514000" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cM1b (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 77 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "M1c" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "M1c" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352516003" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cM1c (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 78 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "M1d" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "M1d" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352510009" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control cM1d (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 79 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "MX" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "MX" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 80 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "i+" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "i+" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 81 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "i-" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "i-" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 82 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "mol+" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "mol+" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 83 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "mol-" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "mol-" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 84 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "sn" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "sn" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 85 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L0" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "L0" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 86 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L1" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "L1" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 87 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "LX" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "LX" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 88 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "V0" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "V0" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 89 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "V1" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "V1" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 90 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "V2" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "V2" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 91 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "VX" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "VX" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 92 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Pn0" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Pn0" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 93 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Pn1" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Pn1" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 94 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "PnX" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "PnX" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 95 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "S0" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "S0" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 96 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "S1" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "S1" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 97 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "S2" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "S2" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 98 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "S3" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "S3" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 99 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "SX" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "SX" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 100 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "okk" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Stadium X" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 101 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "0" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Stadium 0" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352916008" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control stage 0 (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 102 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "0a" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Stadium 0a" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352825003" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control stage 0a (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 103 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "0is" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Stadium 0is" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352895007" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control stage 0is (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 104 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "I" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Stadium I" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352927005" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control stage I (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 105 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "IA1" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Stadium IA1" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352890002" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control stage IA1 (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 106 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "IA2" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Stadium IA2" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352945005" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control stage IA2 (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 107 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "IA3" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Stadium IA3" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352854009" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control stage IA3 (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 108 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "IB" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Stadium IB" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352911003" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control stage IB (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 109 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "IB1" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Stadium IB1" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352816009" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control stage IB1 (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 110 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "IB2" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Stadium IB2" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352864000" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control stage IB2 (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 111 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "IC" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Stadium IC" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352919001" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control stage IC (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 112 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "IS" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Stadium IS" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352880005" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control stage IS (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 113 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "II" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Stadium II" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352944009" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control stage II (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 114 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "IIA" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Stadium IIA" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352856006" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control stage IIA (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 115 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "IIA1" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Stadium IIA1" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352829009" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control stage IIA1 (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 116 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "IIA2" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Stadium IIA2" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352892005" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control stage IIA2 (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 117 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "IIB" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Stadium IIB" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352861008" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control stage IIB (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 118 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "IIC" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Stadium IIC" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352831000" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control stage IIC (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 119 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "III" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Stadium III" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352871005" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control stage III (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 120 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "IIIA" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Stadium IIIA" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352915007" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control stage IIIA (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 121 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "IIIA1" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Stadium IIIA1" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352935008" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control stage IIIA1 (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 122 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "IIIA2" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Stadium IIIA2" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352882002" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control stage IIIA2 (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 123 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "IIIB" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Stadium IIIB" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352896008" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control stage IIIB (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 124 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "IIIC" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Stadium IIIC" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352848008" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control stage IIIC (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 125 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "IIIC1" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Stadium IIIC1" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352862001" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control stage IIIC1 (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 126 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "IIIC2" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Stadium IIIC2" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352833002" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control stage IIIC2 (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 127 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "IV" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Stadium IV" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352913000" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control stage IV (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 128 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "IVA" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Stadium IVA" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352822000" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control stage IVA (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 129 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "IVB" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Stadium IVB" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352836005" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control stage IVB (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 130 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "IVC" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Stadium IVC" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352921006" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control stage IVC (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-tnm-uicc-sct-clinical.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

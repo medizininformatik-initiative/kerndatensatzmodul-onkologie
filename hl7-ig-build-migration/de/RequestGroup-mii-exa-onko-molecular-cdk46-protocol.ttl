@@ -1,0 +1,59 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/RequestGroup/mii-exa-onko-molecular-cdk46-protocol> a fhir:RequestGroup ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-molecular-cdk46-protocol"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie|2026.0.3" ;
+       fhir:index -1 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie|2026.0.3>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: RequestGroup mii-exa-onko-molecular-cdk46-protocol</b></p><a name=\"mii-exa-onko-molecular-cdk46-protocol\"> </a><a name=\"hcmii-exa-onko-molecular-cdk46-protocol\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie.html\">MII PR Onkologie Therapieempfehlung Kombinationstherapie</a> version: 2026.0.3</p></div><p><b>status</b>: Active</p><p><b>intent</b>: Proposal</p><p><b>code</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ CZ}\">CDK4/6 Inhibitor + Hormontherapie Kombination</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-molecular-board-patient.html\">Maria Müller  Female, DoB: 1968-07-22 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#MTB-2024-001)</a></p><p><b>authoredOn</b>: 2024-01-15</p><p><b>reasonReference</b>: <a href=\"Condition-primaertumor-example.html\">Condition Bösartige Neubildung: Brustdrüse, nicht näher bezeichnet</a></p><h3>Actions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Title</b></td><td><b>Description</b></td><td><b>Resource</b></td></tr><tr><td style=\"display: none\">*</td><td>CDK4/6 Inhibitor (pharmazeutische Klasse)</td><td>Beliebiger CDK4/6 Inhibitor: Palbociclib, Ribociclib oder Abemaciclib je nach Verfügbarkeit und Patientenfaktoren</td><td><a href=\"MedicationRequest-mii-exa-onko-cdk46-class-medication.html\">MedicationRequest: status = active; intent = option; medication[x] = Cyclin-abhängige Kinasen (CDK)-Inhibitoren; authoredOn = 2024-01-15; note = Molekulares Tumorboard empfiehlt beliebigen CDK4/6 Inhibitor basierend auf HR+/HER2- Profil. Konkrete Wirkstoffauswahl nach Verfügbarkeit und Patientenfaktoren.</a></td></tr></table></div>"
+  ] ;
+  fhir:RequestGroup.status [ fhir:value "active"] ;
+  fhir:RequestGroup.intent [ fhir:value "proposal"] ;
+  fhir:RequestGroup.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ" ] ;
+       fhir:Coding.code [ fhir:value "CZ" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "CDK4/6 Inhibitor + Hormontherapie Kombination" ]
+  ] ;
+  fhir:RequestGroup.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-molecular-board-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-molecular-board-patient" ]
+  ] ;
+  fhir:RequestGroup.authoredOn [ fhir:value "2024-01-15"^^xsd:date] ;
+  fhir:RequestGroup.reasonReference [
+     fhir:index -1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/primaertumor-example> ;
+     fhir:Reference.reference [ fhir:value "Condition/primaertumor-example" ]
+  ] ;
+  fhir:RequestGroup.action [
+     fhir:index -1 ;
+     fhir:RequestGroup.action.title [ fhir:value "CDK4/6 Inhibitor (pharmazeutische Klasse)" ] ;
+     fhir:RequestGroup.action.description [ fhir:value "Beliebiger CDK4/6 Inhibitor: Palbociclib, Ribociclib oder Abemaciclib je nach Verfügbarkeit und Patientenfaktoren" ] ;
+     fhir:RequestGroup.action.resource [
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/MedicationRequest/mii-exa-onko-cdk46-class-medication> ;
+       fhir:Reference.reference [ fhir:value "MedicationRequest/mii-exa-onko-cdk46-class-medication" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/RequestGroup/mii-exa-onko-molecular-cdk46-protocol.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

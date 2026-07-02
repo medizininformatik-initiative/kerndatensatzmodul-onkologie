@@ -1,0 +1,33 @@
+{
+  "resourceType" : "MedicationStatement",
+  "id" : "PatientKimMusterperson-SystemicTherapyMedication-2a",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"]
+  },
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: MedicationStatement PatientKimMusterperson-SystemicTherapyMedication-2a</b></p><a name=\"PatientKimMusterperson-SystemicTherapyMedication-2a\"> </a><a name=\"hcPatientKimMusterperson-SystemicTherapyMedication-2a\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-systemische-therapie-medikation.html\">MII PR Onkologie Systemische Therapie Medikation</a></p></div><p><b>partOf</b>: <a href=\"Procedure-PatientKimMusterperson-SystemicTherapy-2.html\">Procedure Zytostatische Chemotherapie, Immuntherapie und antiretrovirale Therapie</a></p><p><b>status</b>: Completed</p><p><b>medication</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/atc L01BC05}\">Gemcitabin</span></p><p><b>subject</b>: <a href=\"Patient-PatientKimMusterperson.html\">Kim Musterperson  (no stated gender), DoB: 1956-03-14</a></p><p><b>effective</b>: 2021-11-08 --&gt; 2022-01-09</p><p><b>note</b>: </p><blockquote><div><p>Gem-Carbo</p>\n</div></blockquote></div>"
+  },
+  "partOf" : [{
+    "reference" : "Procedure/PatientKimMusterperson-SystemicTherapy-2"
+  }],
+  "status" : "completed",
+  "medicationCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://fhir.de/CodeSystem/bfarm/atc",
+      "code" : "L01BC05",
+      "display" : "Gemcitabin"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/PatientKimMusterperson"
+  },
+  "effectivePeriod" : {
+    "start" : "2021-11-08",
+    "end" : "2022-01-09"
+  },
+  "note" : [{
+    "text" : "Gem-Carbo"
+  }]
+}

@@ -1,0 +1,84 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-sigmoid-resection-part1> a fhir:Procedure ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-sigmoid-resection-part1"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation" ;
+       fhir:index 0 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Procedure mii-exa-onko-sigmoid-resection-part1</b></p><a name=\"mii-exa-onko-sigmoid-resection-part1\"> </a><a name=\"hcmii-exa-onko-sigmoid-resection-part1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-operation.html\">MII PR Onkologie Operation</a></p></div><p><b>MII EX Onko Operation Intention</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}\">Kurativ</span></p><p><b>partOf</b>: <a href=\"Procedure-mii-exa-onko-sigmoid-resection.html\">Procedure Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion</a></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 387713003}\">Surgical procedure</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/ops 5-484.5}\">Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p><p><b>encounter</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Encounter/example-surgery\">Encounter/example-surgery</a></p><p><b>performed</b>: 2024-02-15</p><p><b>reasonReference</b>: <a href=\"Condition-mii-exa-onko-colorectal-cancer-diagnosis.html\">Condition Bösartige Neubildung: Colon sigmoideum</a></p><p><b>note</b>: </p><blockquote><div><p>Sigmoid colon resected including tumor. End-to-end anastomosis created.</p>\n</div></blockquote></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Procedure mii-exa-onko-sigmoid-resection-part1</b></p><a name=\"en-mii-exa-onko-sigmoid-resection-part1\"> </a><a name=\"en-hcmii-exa-onko-sigmoid-resection-part1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-operation.html\">MII PR Onkologie Operation</a></p></div><p><b>MII EX Onko Operation Intention</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}\">Kurativ</span></p><p><b>partOf</b>: <a href=\"Procedure-mii-exa-onko-sigmoid-resection.html\">Procedure Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion</a></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 387713003}\">Surgical procedure</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/ops 5-484.5}\">Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p><p><b>encounter</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Encounter/example-surgery\">Encounter/example-surgery</a></p><p><b>performed</b>: 2024-02-15</p><p><b>reasonReference</b>: <a href=\"Condition-mii-exa-onko-colorectal-cancer-diagnosis.html\">Condition Bösartige Neubildung: Colon sigmoideum</a></p><p><b>note</b>: </p><blockquote><div><p>Sigmoid colon resected including tumor. End-to-end anastomosis created.</p>\n</div></blockquote></div></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention" ] ;
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention" ] ;
+         fhir:Coding.code [ fhir:value "K" ] ;
+         fhir:Coding.display [ fhir:value "Kurativ" ]
+       ]
+     ]
+  ] ;
+  fhir:Procedure.partOf [
+     fhir:index 0 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-sigmoid-resection> ;
+     fhir:Reference.reference [ fhir:value "Procedure/mii-exa-onko-sigmoid-resection" ]
+  ] ;
+  fhir:Procedure.status [ fhir:value "completed"] ;
+  fhir:Procedure.category [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a sct:387713003 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "387713003" ] ;
+       fhir:Coding.display [ fhir:value "Surgical procedure" ]
+     ]
+  ] ;
+  fhir:Procedure.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/ops" ] ;
+       fhir:Coding.version [ fhir:value "2024" ] ;
+       fhir:Coding.code [ fhir:value "5-484.5" ] ;
+       fhir:Coding.display [ fhir:value "Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion" ]
+     ]
+  ] ;
+  fhir:Procedure.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-folfox-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-folfox-patient" ]
+  ] ;
+  fhir:Procedure.encounter [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/example-surgery> ;
+     fhir:Reference.reference [ fhir:value "Encounter/example-surgery" ]
+  ] ;
+  fhir:Procedure.performedDateTime [ fhir:value "2024-02-15"^^xsd:date] ;
+  fhir:Procedure.reasonReference [
+     fhir:index 0 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-colorectal-cancer-diagnosis> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-colorectal-cancer-diagnosis" ]
+  ] ;
+  fhir:Procedure.note [
+     fhir:index 0 ;
+     fhir:Annotation.text [ fhir:value "Sigmoid colon resected including tumor. End-to-end anastomosis created." ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-sigmoid-resection-part1.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

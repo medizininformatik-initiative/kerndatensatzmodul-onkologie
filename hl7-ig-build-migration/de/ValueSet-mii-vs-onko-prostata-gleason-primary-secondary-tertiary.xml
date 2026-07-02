@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-onko-prostata-gleason-primary-secondary-tertiary"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-onko-prostata-gleason-primary-secondary-tertiary</b></p><a name="mii-vs-onko-prostata-gleason-primary-secondary-tertiary"> </a><a name="hcmii-vs-onko-prostata-gleason-primary-secondary-tertiary"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org/fhir/R4/shareablevalueset.html">Shareable ValueSet</a></p></div><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/384994009">384994009</a></td><td>Primary Gleason pattern (observable entity)</td></tr><tr><td><a href="http://snomed.info/id/384995005">384995005</a></td><td>Secondary Gleason pattern (observable entity)</td></tr><tr><td><a href="http://snomed.info/id/385002007">385002007</a></td><td>Tertiary Gleason pattern (observable entity)</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-primary-secondary-tertiary"/>
+  <version value="2026.0.3"/>
+  <name value="MII_VS_Onko_Prostata_Gleason_PrimarySecondaryTertiary"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2026-07-02T12:18:38+00:00"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="Value Set für Primär-, Sekundär- und Tertiär-Gleason Patterns in der Onkologie Prostata. Der häufigste Gleason Pattern wird als primär, der zweithäufigste als sekundär und (seltener, meistens bei Gleason Pattern 5) der dritthäufigste als tertiär bezeichnet. Diese Value Set wird verwendet, um die verschiedenen Gleason Patterns zu kodieren, die bei der Beurteilung von Prostatakarzinomen auftreten können."/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="384994009"/>
+        <display value="Primary Gleason pattern (observable entity)"/>
+      </concept>
+      <concept>
+        <code value="384995005"/>
+        <display value="Secondary Gleason pattern (observable entity)"/>
+      </concept>
+      <concept>
+        <code value="385002007"/>
+        <display value="Tertiary Gleason pattern (observable entity)"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

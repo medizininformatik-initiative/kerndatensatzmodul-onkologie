@@ -1,0 +1,1626 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2022> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-vs-onko-systemische-therapie-substanzen-2022"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/shareablevalueset" ;
+       fhir:index 0 ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablevalueset>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-onko-systemische-therapie-substanzen-2022</b></p><a name=\"mii-vs-onko-systemische-therapie-substanzen-2022\"> </a><a name=\"hcmii-vs-onko-systemische-therapie-substanzen-2022\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablevalueset.html\">Shareable ValueSet</a></p></div><ul><li>Include these codes as defined in <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.de/CodeSystem/bfarm/atc\"><code>http://fhir.de/CodeSystem/bfarm/atc</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b><a href=\"ValueSet-mii-vs-onko-systemische-therapie-substanzen-2023.html\">MII CM Onko ATC Code Changes 2022 to 2023</a></b></td></tr><tr><td>L02BX01</td><td>Abarelix</td><td/></tr><tr><td>L04AA24</td><td>Abatacept</td><td/></tr><tr><td>L01EF03</td><td>Abemaciclib</td><td/></tr><tr><td>L04AA22</td><td>Abetimus</td><td/></tr><tr><td>L02BX03</td><td>Abirateron</td><td/></tr><tr><td>L01EL02</td><td>Acalabrutinib</td><td/></tr><tr><td>L01DB04</td><td>Aclarubicin</td><td/></tr><tr><td>L04AB04</td><td>Adalimumab</td><td/></tr><tr><td>L01EB03</td><td>Afatinib</td><td/></tr><tr><td>L04AB03</td><td>Afelimomab</td><td/></tr><tr><td>L01XX44</td><td>Aflibercept</td><td/></tr><tr><td>L03AC01</td><td>Aldesleukin</td><td/></tr><tr><td>L01ED03</td><td>Alectinib</td><td/></tr><tr><td>L04AA15</td><td>Alefacept</td><td/></tr><tr><td>L04AA34</td><td>Alemtuzumab</td><td/></tr><tr><td>M05BA04</td><td>Alendronsäure</td><td/></tr><tr><td>L01XF02</td><td>Alitretinoin</td><td/></tr><tr><td>L01EM03</td><td>Alpelisib</td><td/></tr><tr><td>L01XX03</td><td>Altretamin</td><td/></tr><tr><td>V03AM01</td><td>Amilomer</td><td/></tr><tr><td>L02BG01</td><td>Aminoglutethimid</td><td/></tr><tr><td>L01XD04</td><td>Aminolevulinsäure</td><td/></tr><tr><td>L01FX18</td><td>Amivantamab</td><td/></tr><tr><td>L01DB10</td><td>Amrubicin</td><td/></tr><tr><td>L01XX01</td><td>Amsacrin</td><td/></tr><tr><td>L01XX35</td><td>Anagrelid</td><td/></tr><tr><td>L04AC03</td><td>Anakinra</td><td/></tr><tr><td>L02BG03</td><td>Anastrozol</td><td/></tr><tr><td>L04AA04</td><td>Antithymozytäres Immunglobulin (Kaninchen)</td><td/></tr><tr><td>L02BB05</td><td>Apalutamid</td><td/></tr><tr><td>L01XX27</td><td>Arsentrioxid</td><td/></tr><tr><td>P01BE03</td><td>Artesunat</td><td/></tr><tr><td>L01EA06</td><td>Asciminib</td><td/></tr><tr><td>L01XX02</td><td>Asparaginase</td><td/></tr><tr><td>L01FF05</td><td>Atezolizumab</td><td/></tr><tr><td>L01EX18</td><td>Avapritinib</td><td/></tr><tr><td>L01FF04</td><td>Avelumab</td><td/></tr><tr><td>L01XX70</td><td>Axicabtagen Ciloleucel</td><td><span title=\"EQUIVALENT\">~</span>L01XL03<i>(Reklassifizierung zu CAR-T-Zelltherapien)</i></td></tr><tr><td>L01EK01</td><td>Axitinib</td><td/></tr><tr><td>L01BC07</td><td>Azacitidin</td><td/></tr><tr><td>L04AX01</td><td>Azathioprin</td><td/></tr><tr><td>L04AC02</td><td>Basiliximab</td><td/></tr><tr><td>L03AX03</td><td>BCG-Impfstoff</td><td/></tr><tr><td>L01FX15</td><td>Belantamab mafodotin</td><td/></tr><tr><td>L04AA28</td><td>Belatacept</td><td/></tr><tr><td>L04AA26</td><td>Belimumab</td><td/></tr><tr><td>L01XH04</td><td>Belinostat</td><td/></tr><tr><td>L01AA09</td><td>Bendamustin</td><td/></tr><tr><td>L01FG01</td><td>Bevacizumab</td><td/></tr><tr><td>L01XF03</td><td>Bexaroten</td><td/></tr><tr><td>L02BB03</td><td>Bicalutamid</td><td/></tr><tr><td>L01EE03</td><td>Binimetinib</td><td/></tr><tr><td>L01DC01</td><td>Bleomycin</td><td/></tr><tr><td>L01FX07</td><td>Blinatumomab</td><td/></tr><tr><td>L01XG01</td><td>Bortezomib</td><td/></tr><tr><td>L01EA04</td><td>Bosutinib</td><td/></tr><tr><td>L01FX05</td><td>Brentuximab vedotin</td><td/></tr><tr><td>L04AC09</td><td>Briakinumab</td><td/></tr><tr><td>L01ED04</td><td>Brigatinib</td><td/></tr><tr><td>N04BC01</td><td>Bromocriptin</td><td/></tr><tr><td>L02AE01</td><td>Buserelin</td><td/></tr><tr><td>L01AB01</td><td>Busulfan</td><td/></tr><tr><td>L01CD04</td><td>Cabazitaxel</td><td/></tr><tr><td>N04BC06</td><td>Cabergolin</td><td/></tr><tr><td>L01EX07</td><td>Cabozantinib</td><td/></tr><tr><td>V03AF04</td><td>Calciumlevofolinat</td><td/></tr><tr><td>L04AC08</td><td>Canakinumab</td><td/></tr><tr><td>L01BC06</td><td>Capecitabin</td><td/></tr><tr><td>L01EX17</td><td>Capmatinib</td><td/></tr><tr><td>L01XA02</td><td>Carboplatin</td><td/></tr><tr><td>L01AC03</td><td>Carboquon</td><td/></tr><tr><td>L01XG02</td><td>Carfilzomib</td><td/></tr><tr><td>L01BC04</td><td>Carmofur</td><td/></tr><tr><td>L01AD01</td><td>Carmustin</td><td/></tr><tr><td>L01FX03</td><td>Catumaxomab</td><td/></tr><tr><td>L01FF06</td><td>Cemiplimab</td><td/></tr><tr><td>L01ED02</td><td>Ceritinib</td><td/></tr><tr><td>L04AB05</td><td>Certolizumab pegol</td><td/></tr><tr><td>H01CC02</td><td>Cetrorelix</td><td/></tr><tr><td>L01FE01</td><td>Cetuximab</td><td/></tr><tr><td>L01AA02</td><td>Chlorambucil</td><td/></tr><tr><td>G03DB06</td><td>Chlormadinon</td><td/></tr><tr><td>L01AA05</td><td>Chlormethin</td><td/></tr><tr><td>L04AD01</td><td>Ciclosporin</td><td/></tr><tr><td>L01XA01</td><td>Cisplatin</td><td/></tr><tr><td>L01BB04</td><td>Cladribin</td><td/></tr><tr><td>M05BA02</td><td>Clodronsäure</td><td/></tr><tr><td>L01BB06</td><td>Clofarabin</td><td/></tr><tr><td>L01EE02</td><td>Cobimetinib</td><td/></tr><tr><td>L01EM02</td><td>Copanlisib</td><td/></tr><tr><td>L01ED01</td><td>Crizotinib</td><td/></tr><tr><td>L01AA01</td><td>Cyclophosphamid</td><td/></tr><tr><td>G03HA01</td><td>Cyproteron</td><td/></tr><tr><td>L01BC01</td><td>Cytarabin</td><td/></tr><tr><td>L01XY01</td><td>Cytarabin und Daunorubicin</td><td/></tr><tr><td>L01EC02</td><td>Dabrafenib</td><td/></tr><tr><td>L01AX04</td><td>Dacarbazin</td><td/></tr><tr><td>L04AC01</td><td>Daclizumab</td><td/></tr><tr><td>L01EB07</td><td>Dacomitinib</td><td/></tr><tr><td>L01DA01</td><td>Dactinomycin</td><td/></tr><tr><td>L01FC01</td><td>Daratumumab</td><td/></tr><tr><td>B03XA02</td><td>Darbepoetin alfa</td><td/></tr><tr><td>L02BB06</td><td>Darolutamid</td><td/></tr><tr><td>L01EA02</td><td>Dasatinib</td><td/></tr><tr><td>L01DB02</td><td>Daunorubicin</td><td/></tr><tr><td>L01BC08</td><td>Decitabin</td><td/></tr><tr><td>L02BX02</td><td>Degarelix</td><td/></tr><tr><td>L01CC01</td><td>Demecolcin</td><td/></tr><tr><td>L01XX29</td><td>Denileukindiftitox</td><td/></tr><tr><td>M05BX04</td><td>Denosumab</td><td/></tr><tr><td>H02AB02</td><td>Dexamethason</td><td/></tr><tr><td>L01FX06</td><td>Dinutuximab beta</td><td/></tr><tr><td>L01CD02</td><td>Docetaxel</td><td/></tr><tr><td>L01FF07</td><td>Dostarlimab</td><td/></tr><tr><td>L01DB01</td><td>Doxorubicin</td><td/></tr><tr><td>L01FF03</td><td>Durvalumab</td><td/></tr><tr><td>G04CB02</td><td>Dutasterid</td><td/></tr><tr><td>L01EM04</td><td>Duvelisib</td><td/></tr><tr><td>L04AA25</td><td>Eculizumab</td><td/></tr><tr><td>L01FX01</td><td>Edrecolomab</td><td/></tr><tr><td>L04AA21</td><td>Efalizumab</td><td/></tr><tr><td>L01XD06</td><td>Efaproxiral</td><td/></tr><tr><td>L01FX08</td><td>Elotuzumab</td><td/></tr><tr><td>B02BX05</td><td>Eltrombopag</td><td/></tr><tr><td>L01XX59</td><td>Enasidenib</td><td/></tr><tr><td>L01EC03</td><td>Encorafenib</td><td/></tr><tr><td>L01FX13</td><td>Enfortumab vedotin</td><td/></tr><tr><td>L01EX14</td><td>Entrectinib</td><td/></tr><tr><td>L02BB04</td><td>Enzalutamid</td><td/></tr><tr><td>L01DB03</td><td>Epirubicin</td><td/></tr><tr><td>L01EN01</td><td>Erdafitinib</td><td/></tr><tr><td>L01XX41</td><td>Eribulin</td><td/></tr><tr><td>L01EB02</td><td>Erlotinib</td><td/></tr><tr><td>B03XA01</td><td>Erythropoietin</td><td/></tr><tr><td>L01XX11</td><td>Estramustin</td><td/></tr><tr><td>L04AB01</td><td>Etanercept</td><td/></tr><tr><td>M05BA01</td><td>Etidronsäure</td><td/></tr><tr><td>L01AG01</td><td>Etoglucid</td><td/></tr><tr><td>L01CB01</td><td>Etoposid</td><td/></tr><tr><td>L01EG02</td><td>Everolimus</td><td/></tr><tr><td>L02BG06</td><td>Exemestan</td><td/></tr><tr><td>L01EJ02</td><td>Fedratinib</td><td/></tr><tr><td>L03AA02</td><td>Filgrastim</td><td/></tr><tr><td>G04CB01</td><td>Finasterid</td><td/></tr><tr><td>L04AA27</td><td>Fingolimod</td><td/></tr><tr><td>L01BC09</td><td>Floxuridin</td><td/></tr><tr><td>L01BB05</td><td>Fludarabin</td><td/></tr><tr><td>L01BC02</td><td>Fluorouracil</td><td/></tr><tr><td>L01BC52</td><td>Fluorouracil, Kombinationen</td><td/></tr><tr><td>L02BB01</td><td>Flutamid</td><td/></tr><tr><td>V03AF03</td><td>Calciumfolinat</td><td/></tr><tr><td>L02BG02</td><td>Formestan</td><td/></tr><tr><td>L02AA04</td><td>Fosfestrol</td><td/></tr><tr><td>B02BX09</td><td>Fostamatinib</td><td/></tr><tr><td>L01AD05</td><td>Fotemustin</td><td/></tr><tr><td>L02BA03</td><td>Fulvestrant</td><td/></tr><tr><td>L01EN04</td><td>Futibatinib</td><td/></tr><tr><td>L01EB01</td><td>Gefitinib</td><td/></tr><tr><td>L01BC05</td><td>Gemcitabin</td><td/></tr><tr><td>L01FX02</td><td>Gemtuzumab ozogamicin</td><td/></tr><tr><td>L02AB03</td><td>Gestonoron</td><td/></tr><tr><td>L01EX13</td><td>Gilteritinib</td><td/></tr><tr><td>L01XJ03</td><td>Glasdegib</td><td/></tr><tr><td>L04AB06</td><td>Golimumab</td><td/></tr><tr><td>H01CA01</td><td>Gonadorelin</td><td/></tr><tr><td>L02AE03</td><td>Goserelin</td><td/></tr><tr><td>L04AA19</td><td>Gusperimus</td><td/></tr><tr><td>L03AX14</td><td>Histamindihydrochlorid</td><td/></tr><tr><td>L02AE05</td><td>Histrelin</td><td/></tr><tr><td>L01XX05</td><td>Hydroxycarbamid</td><td/></tr><tr><td>M05BA06</td><td>Ibandronsäure</td><td/></tr><tr><td>V10XX02</td><td>(90Y)Ibritumomabtiuxetan</td><td/></tr><tr><td>L01EL01</td><td>Ibrutinib</td><td/></tr><tr><td>L01DB06</td><td>Idarubicin</td><td/></tr><tr><td>L01EM01</td><td>Idelalisib</td><td/></tr><tr><td>L01AA06</td><td>Ifosfamid</td><td/></tr><tr><td>L01EA01</td><td>Imatinib</td><td/></tr><tr><td>D06BB10</td><td>Imiquimod</td><td/></tr><tr><td>L04AB02</td><td>Infliximab</td><td/></tr><tr><td>D06BX02</td><td>Ingenolmebutat</td><td/></tr><tr><td>L01FB01</td><td>Inotuzumab ozogamicin</td><td/></tr><tr><td>L03AB01</td><td>Interferon alfa, natürlich</td><td/></tr><tr><td>L03AB04</td><td>Interferon alfa-2a</td><td/></tr><tr><td>L03AB05</td><td>Interferon alfa-2b</td><td/></tr><tr><td>L03AB18</td><td>Interferon gamma-1b</td><td/></tr><tr><td>L01FX04</td><td>Ipilimumab</td><td/></tr><tr><td>L01CE02</td><td>Irinotecan</td><td/></tr><tr><td>L01FC02</td><td>Isatuximab</td><td/></tr><tr><td>L01XX62</td><td>Ivosidenib</td><td/></tr><tr><td>L01DC04</td><td>Ixabepilon</td><td/></tr><tr><td>L01XG03</td><td>Ixazomib</td><td/></tr><tr><td>H02CA03</td><td>Ketoconazol</td><td/></tr><tr><td>H01CB03</td><td>Lanreotid</td><td/></tr><tr><td>L01EH01</td><td>Lapatinib</td><td/></tr><tr><td>L01EX12</td><td>Larotrectinib</td><td/></tr><tr><td>L04AA13</td><td>Leflunomid</td><td/></tr><tr><td>L04AX04</td><td>Lenalidomid</td><td/></tr><tr><td>L03AA10</td><td>Lenograstim</td><td/></tr><tr><td>L01EX08</td><td>Lenvatinib</td><td/></tr><tr><td>L02BG04</td><td>Letrozol</td><td/></tr><tr><td>L02AE02</td><td>Leuprorelin</td><td/></tr><tr><td>L03AA14</td><td>Lipegfilgrastim</td><td/></tr><tr><td>L01AD02</td><td>Lomustin</td><td/></tr><tr><td>A16AX20</td><td>Lonafarnib</td><td/></tr><tr><td>L01XX07</td><td>Lonidamin</td><td/></tr><tr><td>L01ED05</td><td>Lorlatinib</td><td/></tr><tr><td>L01XX69</td><td>Lurbinectedin</td><td/></tr><tr><td>B03XA06</td><td>Luspatercept</td><td/></tr><tr><td>G03DC03</td><td>Lynestrenol</td><td/></tr><tr><td>L01AB03</td><td>Mannosulfan</td><td/></tr><tr><td>J05AX09</td><td>Maraviroc</td><td/></tr><tr><td>L01XX10</td><td>Masoprocol</td><td/></tr><tr><td>L02AB02</td><td>Medroxyprogesteron</td><td/></tr><tr><td>L02AB01</td><td>Megestrol</td><td/></tr><tr><td>L01AA03</td><td>Melphalan</td><td/></tr><tr><td>R03DX09</td><td>Mepolizumab</td><td/></tr><tr><td>L01BB02</td><td>Mercaptopurin</td><td/></tr><tr><td>V03AF01</td><td>Mesna</td><td/></tr><tr><td>N07BC02</td><td>Methadon</td><td/></tr><tr><td>L01BA01</td><td>Methotrexat</td><td/></tr><tr><td>L01XD10</td><td>Methoxsalen</td><td/></tr><tr><td>B03XA03</td><td>Methoxy-Polyethylenglycol-Epoetin beta</td><td/></tr><tr><td>L01XD03</td><td>Methylaminolevulinat</td><td/></tr><tr><td>H02AB04</td><td>Methylprednisolon</td><td/></tr><tr><td>L01EX10</td><td>Midostaurin</td><td/></tr><tr><td>L03AX15</td><td>Mifamurtid</td><td/></tr><tr><td>L01XX09</td><td>Miltefosin</td><td/></tr><tr><td>L01CH01</td><td>Mistelkraut</td><td/></tr><tr><td>L01CP01</td><td>Mistelkraut</td><td/></tr><tr><td>L01AX01</td><td>Mitobronitol</td><td/></tr><tr><td>L01XX16</td><td>Mitoguazon</td><td/></tr><tr><td>L01DC03</td><td>Mitomycin</td><td/></tr><tr><td>L01XX23</td><td>Mitotan</td><td/></tr><tr><td>L01DB07</td><td>Mitoxantron</td><td/></tr><tr><td>L01FX09</td><td>Mogamulizumab</td><td/></tr><tr><td>L03AA03</td><td>Molgramostim</td><td/></tr><tr><td>L01FB02</td><td>Moxetumomab pasudotox</td><td/></tr><tr><td>L04AA02</td><td>Muromonab-CD3</td><td/></tr><tr><td>L04AA06</td><td>Mycophenolsäure</td><td/></tr><tr><td>L04AA23</td><td>Natalizumab</td><td/></tr><tr><td>V03AF10</td><td>Natriumlevofolinat</td><td/></tr><tr><td>L01FE03</td><td>Necitumumab</td><td/></tr><tr><td>L01BB07</td><td>Nelarabin</td><td/></tr><tr><td>L01EH02</td><td>Neratinib</td><td/></tr><tr><td>L01EA03</td><td>Nilotinib</td><td/></tr><tr><td>L02BB02</td><td>Nilutamid</td><td/></tr><tr><td>L01AD06</td><td>Nimustin</td><td/></tr><tr><td>L01EX09</td><td>Nintedanib</td><td/></tr><tr><td>L01XK02</td><td>Niraparib</td><td/></tr><tr><td>L01FF01</td><td>Nivolumab</td><td/></tr><tr><td>L01FA03</td><td>Obinutuzumab</td><td/></tr><tr><td>L01XX36</td><td>Oblimersen</td><td/></tr><tr><td>H01CB02</td><td>Octreotid</td><td/></tr><tr><td>L01FA02</td><td>Ofatumumab</td><td/></tr><tr><td>L01XK01</td><td>Olaparib</td><td/></tr><tr><td>L01FX10</td><td>Olaratumab</td><td/></tr><tr><td>L01XX40</td><td>Omacetaxinmepesuccinat</td><td/></tr><tr><td>L01FX16</td><td>Oportuzumab monatox</td><td/></tr><tr><td>L03AC02</td><td>Oprelvekin</td><td/></tr><tr><td>L01EB04</td><td>Osimertinib</td><td/></tr><tr><td>L01XA03</td><td>Oxaliplatin</td><td/></tr><tr><td>L01CD01</td><td>Paclitaxel</td><td/></tr><tr><td>L01CD03</td><td>Paclitaxelpoliglumex</td><td/></tr><tr><td>L01EF01</td><td>Palbociclib</td><td/></tr><tr><td>V03AF08</td><td>Palifermin</td><td/></tr><tr><td>M05BA03</td><td>Pamidronsäure</td><td/></tr><tr><td>L01FE02</td><td>Panitumumab</td><td/></tr><tr><td>L01XH03</td><td>Panobinostat</td><td/></tr><tr><td>L01EX03</td><td>Pazopanib</td><td/></tr><tr><td>L01XX24</td><td>Pegaspargase</td><td/></tr><tr><td>L03AA13</td><td>Pegfilgrastim</td><td/></tr><tr><td>L03AB11</td><td>Peginterferon alfa-2a</td><td/></tr><tr><td>L03AB10</td><td>Peginterferon alfa-2b</td><td/></tr><tr><td>L01FF02</td><td>Pembrolizumab</td><td/></tr><tr><td>L01BA04</td><td>Pemetrexed</td><td/></tr><tr><td>L01EN02</td><td>Pemigatinib</td><td/></tr><tr><td>L01XX08</td><td>Pentostatin</td><td/></tr><tr><td>L01FD02</td><td>Pertuzumab</td><td/></tr><tr><td>L01XY02</td><td>Pertuzumab und Trastuzumab</td><td/></tr><tr><td>L01AX02</td><td>Pipobroman</td><td/></tr><tr><td>L01DB08</td><td>Pirarubicin</td><td/></tr><tr><td>L01DB11</td><td>Pixantron</td><td/></tr><tr><td>V03AX10</td><td>Placebo</td><td/></tr><tr><td>L03AX16</td><td>Plerixafor</td><td/></tr><tr><td>L01DC02</td><td>Plicamycin</td><td/></tr><tr><td>L01FX14</td><td>Polatuzumab vedotin</td><td/></tr><tr><td>L03AX08</td><td>Poly ICLC</td><td/></tr><tr><td>L02AA02</td><td>Polyestradiolphosphat</td><td/></tr><tr><td>L01XA05</td><td>Polyplatillen</td><td/></tr><tr><td>L04AX06</td><td>Pomalidomid</td><td/></tr><tr><td>L01EA05</td><td>Ponatinib</td><td/></tr><tr><td>L01XD01</td><td>Porfimer natrium</td><td/></tr><tr><td>L01BA05</td><td>Pralatrexat</td><td/></tr><tr><td>L01EX23</td><td>Pralsetinib</td><td/></tr><tr><td>D07AC18</td><td>Prednicarbat</td><td/></tr><tr><td>L01AA08</td><td>Prednimustin</td><td/></tr><tr><td>H02AB06</td><td>Prednisolon</td><td/></tr><tr><td>H02AB07</td><td>Prednison</td><td/></tr><tr><td>L01XB01</td><td>Procarbazin</td><td/></tr><tr><td>D05AD</td><td>Psoralene zur topischen Anwendung</td><td/></tr><tr><td>D05BA</td><td>Psoralene zur systemischen Anwendung</td><td/></tr><tr><td>L01EX11</td><td>Quizartinib</td><td/></tr><tr><td>G03XC01</td><td>Raloxifen</td><td/></tr><tr><td>L01BA03</td><td>Raltitrexed</td><td/></tr><tr><td>L01FG02</td><td>Ramucirumab</td><td/></tr><tr><td>L01AD07</td><td>Ranimustin</td><td/></tr><tr><td>L01EX05</td><td>Regorafenib</td><td/></tr><tr><td>L01FF10</td><td>Retifanlimab</td><td/></tr><tr><td>L01EF02</td><td>Ribociclib</td><td/></tr><tr><td>L04AC04</td><td>Rilonacept</td><td/></tr><tr><td>L01EX19</td><td>Ripretinib</td><td/></tr><tr><td>M05BA07</td><td>Risedronsäure</td><td/></tr><tr><td>L01FA01</td><td>Rituximab</td><td/></tr><tr><td>L01XH02</td><td>Romidepsin</td><td/></tr><tr><td>B02BX04</td><td>Romiplostim</td><td/></tr><tr><td>L03AB15</td><td>Ropeginterferon alfa-2b</td><td/></tr><tr><td>L01XK03</td><td>Rucaparib</td><td/></tr><tr><td>L01EJ01</td><td>Ruxolitinib</td><td/></tr><tr><td>L01FX17</td><td>Sacituzumab govitecan</td><td/></tr><tr><td>L01XA04</td><td>Satraplatin</td><td/></tr><tr><td>L01XX66</td><td>Selinexor</td><td/></tr><tr><td>L01EX22</td><td>Selpercatinib</td><td/></tr><tr><td>L01EE04</td><td>Selumetinib</td><td/></tr><tr><td>L01AD03</td><td>Semustin</td><td/></tr><tr><td>L04AC11</td><td>Siltuximab</td><td/></tr><tr><td>L04AA10</td><td>Sirolimus</td><td/></tr><tr><td>H01CB01</td><td>Somatostatin</td><td/></tr><tr><td>L01XJ02</td><td>Sonidegib</td><td/></tr><tr><td>L01EX02</td><td>Sorafenib</td><td/></tr><tr><td>L01XX73</td><td>Sotorasib</td><td/></tr><tr><td>L01AD04</td><td>Streptozocin</td><td/></tr><tr><td>L01EX01</td><td>Sunitinib</td><td/></tr><tr><td>L04AD02</td><td>Tacrolimus</td><td/></tr><tr><td>L01FX12</td><td>Tafasitamab</td><td/></tr><tr><td>L01XX67</td><td>Tagraxofusp</td><td/></tr><tr><td>L01XK04</td><td>Talazoparib</td><td/></tr><tr><td>L01XX51</td><td>Talimogen laherparepvec</td><td><span title=\"EQUIVALENT\">~</span>L01XL02<i>(Reklassifizierung zu onkolytische Viren)</i></td></tr><tr><td>L02BA01</td><td>Tamoxifen</td><td/></tr><tr><td>L03AX11</td><td>Tasonermin</td><td/></tr><tr><td>L01XX72</td><td>Tazemetostat</td><td/></tr><tr><td>L01BC53</td><td>Tegafur, Kombinationen</td><td/></tr><tr><td>L01BC63</td><td>Tegafur und Uracil</td><td/></tr><tr><td>L01BC73</td><td>Tegafur, Gimeracil und Oteracil</td><td/></tr><tr><td>L01XD05</td><td>Temoporfin</td><td/></tr><tr><td>L01AX03</td><td>Temozolomid</td><td/></tr><tr><td>L01EG01</td><td>Temsirolimus</td><td/></tr><tr><td>L01CB02</td><td>Teniposid</td><td/></tr><tr><td>L01EX21</td><td>Tepotinib</td><td/></tr><tr><td>L04AX02</td><td>Thalidomid</td><td/></tr><tr><td>L01AC01</td><td>Thiotepa</td><td/></tr><tr><td>L01XX18</td><td>Tiazofurin</td><td/></tr><tr><td>M05BA05</td><td>Tiludronsäure</td><td/></tr><tr><td>L01BB03</td><td>Tioguanin</td><td/></tr><tr><td>L01XX71</td><td>Tisagenlecleucel</td><td><span title=\"EQUIVALENT\">~</span>L01XL04<i>(Reklassifizierung zu CAR-T-Zelltherapien)</i></td></tr><tr><td>L01FF09</td><td>Tislelizumab</td><td/></tr><tr><td>L01EK03</td><td>Tivozanib</td><td/></tr><tr><td>L04AC07</td><td>Tocilizumab</td><td/></tr><tr><td>L01CE01</td><td>Topotecan</td><td/></tr><tr><td>L02BA02</td><td>Toremifen</td><td/></tr><tr><td>V10XA53</td><td>Tositumomab/(131I)Iodtositumomab</td><td/></tr><tr><td>L01CX01</td><td>Trabectedin</td><td/></tr><tr><td>L01EE01</td><td>Trametinib</td><td/></tr><tr><td>L01FD01</td><td>Trastuzumab</td><td/></tr><tr><td>L01FD04</td><td>Trastuzumab deruxtecan</td><td/></tr><tr><td>L01FD05</td><td>Trastuzumab duocarmazin</td><td/></tr><tr><td>L01FD03</td><td>Trastuzumab emtansin</td><td/></tr><tr><td>L01AB02</td><td>Treosulfan</td><td/></tr><tr><td>L01XF01</td><td>Tretinoin</td><td/></tr><tr><td>L01AC02</td><td>Triaziquon</td><td/></tr><tr><td>L01BC59</td><td>Trifluridin, Kombinationen</td><td/></tr><tr><td>L02AE04</td><td>Triptorelin</td><td/></tr><tr><td>L01AA07</td><td>Trofosfamid</td><td/></tr><tr><td>L01EH03</td><td>Tucatinib</td><td/></tr><tr><td>L01AD08</td><td>Uramustin</td><td/></tr><tr><td>N03AG01</td><td>Valproinsäure</td><td/></tr><tr><td>L01DB09</td><td>Valrubicin</td><td/></tr><tr><td>L01EX04</td><td>Vandetanib</td><td/></tr><tr><td>L01XK05</td><td>Veliparib</td><td/></tr><tr><td>L01EC01</td><td>Vemurafenib</td><td/></tr><tr><td>L01XX52</td><td>Venetoclax</td><td/></tr><tr><td>L01CA01</td><td>Vinblastin</td><td/></tr><tr><td>L01CA02</td><td>Vincristin</td><td/></tr><tr><td>L01CA03</td><td>Vindesin</td><td/></tr><tr><td>L01CA05</td><td>Vinflunin</td><td/></tr><tr><td>L01CA04</td><td>Vinorelbin</td><td/></tr><tr><td>L01XJ01</td><td>Vismodegib</td><td/></tr><tr><td>L04AD03</td><td>Voclosporin</td><td/></tr><tr><td>L01XH01</td><td>Vorinostat</td><td/></tr><tr><td>L02BG05</td><td>Vorozol</td><td/></tr><tr><td>L01XX53</td><td>Vosaroxin</td><td/></tr><tr><td>L01EL03</td><td>Zanubrutinib</td><td/></tr><tr><td>M05BA08</td><td>Zoledronsäure</td><td/></tr><tr><td>L01DB05</td><td>Zorubicin</td><td/></tr></table></li></ul></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-onko-systemische-therapie-substanzen-2022</b></p><a name=\"en-mii-vs-onko-systemische-therapie-substanzen-2022\"> </a><a name=\"en-hcmii-vs-onko-systemische-therapie-substanzen-2022\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablevalueset.html\">Shareable ValueSet</a></p></div><ul><li>Include these codes as defined in <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.de/CodeSystem/bfarm/atc\"><code>http://fhir.de/CodeSystem/bfarm/atc</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b><a href=\"ValueSet-mii-vs-onko-systemische-therapie-substanzen-2023.html\">MII CM Onko ATC Code Changes 2022 to 2023</a></b></td></tr><tr><td>L02BX01</td><td>Abarelix</td><td/></tr><tr><td>L04AA24</td><td>Abatacept</td><td/></tr><tr><td>L01EF03</td><td>Abemaciclib</td><td/></tr><tr><td>L04AA22</td><td>Abetimus</td><td/></tr><tr><td>L02BX03</td><td>Abirateron</td><td/></tr><tr><td>L01EL02</td><td>Acalabrutinib</td><td/></tr><tr><td>L01DB04</td><td>Aclarubicin</td><td/></tr><tr><td>L04AB04</td><td>Adalimumab</td><td/></tr><tr><td>L01EB03</td><td>Afatinib</td><td/></tr><tr><td>L04AB03</td><td>Afelimomab</td><td/></tr><tr><td>L01XX44</td><td>Aflibercept</td><td/></tr><tr><td>L03AC01</td><td>Aldesleukin</td><td/></tr><tr><td>L01ED03</td><td>Alectinib</td><td/></tr><tr><td>L04AA15</td><td>Alefacept</td><td/></tr><tr><td>L04AA34</td><td>Alemtuzumab</td><td/></tr><tr><td>M05BA04</td><td>Alendronsäure</td><td/></tr><tr><td>L01XF02</td><td>Alitretinoin</td><td/></tr><tr><td>L01EM03</td><td>Alpelisib</td><td/></tr><tr><td>L01XX03</td><td>Altretamin</td><td/></tr><tr><td>V03AM01</td><td>Amilomer</td><td/></tr><tr><td>L02BG01</td><td>Aminoglutethimid</td><td/></tr><tr><td>L01XD04</td><td>Aminolevulinsäure</td><td/></tr><tr><td>L01FX18</td><td>Amivantamab</td><td/></tr><tr><td>L01DB10</td><td>Amrubicin</td><td/></tr><tr><td>L01XX01</td><td>Amsacrin</td><td/></tr><tr><td>L01XX35</td><td>Anagrelid</td><td/></tr><tr><td>L04AC03</td><td>Anakinra</td><td/></tr><tr><td>L02BG03</td><td>Anastrozol</td><td/></tr><tr><td>L04AA04</td><td>Antithymozytäres Immunglobulin (Kaninchen)</td><td/></tr><tr><td>L02BB05</td><td>Apalutamid</td><td/></tr><tr><td>L01XX27</td><td>Arsentrioxid</td><td/></tr><tr><td>P01BE03</td><td>Artesunat</td><td/></tr><tr><td>L01EA06</td><td>Asciminib</td><td/></tr><tr><td>L01XX02</td><td>Asparaginase</td><td/></tr><tr><td>L01FF05</td><td>Atezolizumab</td><td/></tr><tr><td>L01EX18</td><td>Avapritinib</td><td/></tr><tr><td>L01FF04</td><td>Avelumab</td><td/></tr><tr><td>L01XX70</td><td>Axicabtagen Ciloleucel</td><td><span title=\"EQUIVALENT\">~</span>L01XL03<i>(Reklassifizierung zu CAR-T-Zelltherapien)</i></td></tr><tr><td>L01EK01</td><td>Axitinib</td><td/></tr><tr><td>L01BC07</td><td>Azacitidin</td><td/></tr><tr><td>L04AX01</td><td>Azathioprin</td><td/></tr><tr><td>L04AC02</td><td>Basiliximab</td><td/></tr><tr><td>L03AX03</td><td>BCG-Impfstoff</td><td/></tr><tr><td>L01FX15</td><td>Belantamab mafodotin</td><td/></tr><tr><td>L04AA28</td><td>Belatacept</td><td/></tr><tr><td>L04AA26</td><td>Belimumab</td><td/></tr><tr><td>L01XH04</td><td>Belinostat</td><td/></tr><tr><td>L01AA09</td><td>Bendamustin</td><td/></tr><tr><td>L01FG01</td><td>Bevacizumab</td><td/></tr><tr><td>L01XF03</td><td>Bexaroten</td><td/></tr><tr><td>L02BB03</td><td>Bicalutamid</td><td/></tr><tr><td>L01EE03</td><td>Binimetinib</td><td/></tr><tr><td>L01DC01</td><td>Bleomycin</td><td/></tr><tr><td>L01FX07</td><td>Blinatumomab</td><td/></tr><tr><td>L01XG01</td><td>Bortezomib</td><td/></tr><tr><td>L01EA04</td><td>Bosutinib</td><td/></tr><tr><td>L01FX05</td><td>Brentuximab vedotin</td><td/></tr><tr><td>L04AC09</td><td>Briakinumab</td><td/></tr><tr><td>L01ED04</td><td>Brigatinib</td><td/></tr><tr><td>N04BC01</td><td>Bromocriptin</td><td/></tr><tr><td>L02AE01</td><td>Buserelin</td><td/></tr><tr><td>L01AB01</td><td>Busulfan</td><td/></tr><tr><td>L01CD04</td><td>Cabazitaxel</td><td/></tr><tr><td>N04BC06</td><td>Cabergolin</td><td/></tr><tr><td>L01EX07</td><td>Cabozantinib</td><td/></tr><tr><td>V03AF04</td><td>Calciumlevofolinat</td><td/></tr><tr><td>L04AC08</td><td>Canakinumab</td><td/></tr><tr><td>L01BC06</td><td>Capecitabin</td><td/></tr><tr><td>L01EX17</td><td>Capmatinib</td><td/></tr><tr><td>L01XA02</td><td>Carboplatin</td><td/></tr><tr><td>L01AC03</td><td>Carboquon</td><td/></tr><tr><td>L01XG02</td><td>Carfilzomib</td><td/></tr><tr><td>L01BC04</td><td>Carmofur</td><td/></tr><tr><td>L01AD01</td><td>Carmustin</td><td/></tr><tr><td>L01FX03</td><td>Catumaxomab</td><td/></tr><tr><td>L01FF06</td><td>Cemiplimab</td><td/></tr><tr><td>L01ED02</td><td>Ceritinib</td><td/></tr><tr><td>L04AB05</td><td>Certolizumab pegol</td><td/></tr><tr><td>H01CC02</td><td>Cetrorelix</td><td/></tr><tr><td>L01FE01</td><td>Cetuximab</td><td/></tr><tr><td>L01AA02</td><td>Chlorambucil</td><td/></tr><tr><td>G03DB06</td><td>Chlormadinon</td><td/></tr><tr><td>L01AA05</td><td>Chlormethin</td><td/></tr><tr><td>L04AD01</td><td>Ciclosporin</td><td/></tr><tr><td>L01XA01</td><td>Cisplatin</td><td/></tr><tr><td>L01BB04</td><td>Cladribin</td><td/></tr><tr><td>M05BA02</td><td>Clodronsäure</td><td/></tr><tr><td>L01BB06</td><td>Clofarabin</td><td/></tr><tr><td>L01EE02</td><td>Cobimetinib</td><td/></tr><tr><td>L01EM02</td><td>Copanlisib</td><td/></tr><tr><td>L01ED01</td><td>Crizotinib</td><td/></tr><tr><td>L01AA01</td><td>Cyclophosphamid</td><td/></tr><tr><td>G03HA01</td><td>Cyproteron</td><td/></tr><tr><td>L01BC01</td><td>Cytarabin</td><td/></tr><tr><td>L01XY01</td><td>Cytarabin und Daunorubicin</td><td/></tr><tr><td>L01EC02</td><td>Dabrafenib</td><td/></tr><tr><td>L01AX04</td><td>Dacarbazin</td><td/></tr><tr><td>L04AC01</td><td>Daclizumab</td><td/></tr><tr><td>L01EB07</td><td>Dacomitinib</td><td/></tr><tr><td>L01DA01</td><td>Dactinomycin</td><td/></tr><tr><td>L01FC01</td><td>Daratumumab</td><td/></tr><tr><td>B03XA02</td><td>Darbepoetin alfa</td><td/></tr><tr><td>L02BB06</td><td>Darolutamid</td><td/></tr><tr><td>L01EA02</td><td>Dasatinib</td><td/></tr><tr><td>L01DB02</td><td>Daunorubicin</td><td/></tr><tr><td>L01BC08</td><td>Decitabin</td><td/></tr><tr><td>L02BX02</td><td>Degarelix</td><td/></tr><tr><td>L01CC01</td><td>Demecolcin</td><td/></tr><tr><td>L01XX29</td><td>Denileukindiftitox</td><td/></tr><tr><td>M05BX04</td><td>Denosumab</td><td/></tr><tr><td>H02AB02</td><td>Dexamethason</td><td/></tr><tr><td>L01FX06</td><td>Dinutuximab beta</td><td/></tr><tr><td>L01CD02</td><td>Docetaxel</td><td/></tr><tr><td>L01FF07</td><td>Dostarlimab</td><td/></tr><tr><td>L01DB01</td><td>Doxorubicin</td><td/></tr><tr><td>L01FF03</td><td>Durvalumab</td><td/></tr><tr><td>G04CB02</td><td>Dutasterid</td><td/></tr><tr><td>L01EM04</td><td>Duvelisib</td><td/></tr><tr><td>L04AA25</td><td>Eculizumab</td><td/></tr><tr><td>L01FX01</td><td>Edrecolomab</td><td/></tr><tr><td>L04AA21</td><td>Efalizumab</td><td/></tr><tr><td>L01XD06</td><td>Efaproxiral</td><td/></tr><tr><td>L01FX08</td><td>Elotuzumab</td><td/></tr><tr><td>B02BX05</td><td>Eltrombopag</td><td/></tr><tr><td>L01XX59</td><td>Enasidenib</td><td/></tr><tr><td>L01EC03</td><td>Encorafenib</td><td/></tr><tr><td>L01FX13</td><td>Enfortumab vedotin</td><td/></tr><tr><td>L01EX14</td><td>Entrectinib</td><td/></tr><tr><td>L02BB04</td><td>Enzalutamid</td><td/></tr><tr><td>L01DB03</td><td>Epirubicin</td><td/></tr><tr><td>L01EN01</td><td>Erdafitinib</td><td/></tr><tr><td>L01XX41</td><td>Eribulin</td><td/></tr><tr><td>L01EB02</td><td>Erlotinib</td><td/></tr><tr><td>B03XA01</td><td>Erythropoietin</td><td/></tr><tr><td>L01XX11</td><td>Estramustin</td><td/></tr><tr><td>L04AB01</td><td>Etanercept</td><td/></tr><tr><td>M05BA01</td><td>Etidronsäure</td><td/></tr><tr><td>L01AG01</td><td>Etoglucid</td><td/></tr><tr><td>L01CB01</td><td>Etoposid</td><td/></tr><tr><td>L01EG02</td><td>Everolimus</td><td/></tr><tr><td>L02BG06</td><td>Exemestan</td><td/></tr><tr><td>L01EJ02</td><td>Fedratinib</td><td/></tr><tr><td>L03AA02</td><td>Filgrastim</td><td/></tr><tr><td>G04CB01</td><td>Finasterid</td><td/></tr><tr><td>L04AA27</td><td>Fingolimod</td><td/></tr><tr><td>L01BC09</td><td>Floxuridin</td><td/></tr><tr><td>L01BB05</td><td>Fludarabin</td><td/></tr><tr><td>L01BC02</td><td>Fluorouracil</td><td/></tr><tr><td>L01BC52</td><td>Fluorouracil, Kombinationen</td><td/></tr><tr><td>L02BB01</td><td>Flutamid</td><td/></tr><tr><td>V03AF03</td><td>Calciumfolinat</td><td/></tr><tr><td>L02BG02</td><td>Formestan</td><td/></tr><tr><td>L02AA04</td><td>Fosfestrol</td><td/></tr><tr><td>B02BX09</td><td>Fostamatinib</td><td/></tr><tr><td>L01AD05</td><td>Fotemustin</td><td/></tr><tr><td>L02BA03</td><td>Fulvestrant</td><td/></tr><tr><td>L01EN04</td><td>Futibatinib</td><td/></tr><tr><td>L01EB01</td><td>Gefitinib</td><td/></tr><tr><td>L01BC05</td><td>Gemcitabin</td><td/></tr><tr><td>L01FX02</td><td>Gemtuzumab ozogamicin</td><td/></tr><tr><td>L02AB03</td><td>Gestonoron</td><td/></tr><tr><td>L01EX13</td><td>Gilteritinib</td><td/></tr><tr><td>L01XJ03</td><td>Glasdegib</td><td/></tr><tr><td>L04AB06</td><td>Golimumab</td><td/></tr><tr><td>H01CA01</td><td>Gonadorelin</td><td/></tr><tr><td>L02AE03</td><td>Goserelin</td><td/></tr><tr><td>L04AA19</td><td>Gusperimus</td><td/></tr><tr><td>L03AX14</td><td>Histamindihydrochlorid</td><td/></tr><tr><td>L02AE05</td><td>Histrelin</td><td/></tr><tr><td>L01XX05</td><td>Hydroxycarbamid</td><td/></tr><tr><td>M05BA06</td><td>Ibandronsäure</td><td/></tr><tr><td>V10XX02</td><td>(90Y)Ibritumomabtiuxetan</td><td/></tr><tr><td>L01EL01</td><td>Ibrutinib</td><td/></tr><tr><td>L01DB06</td><td>Idarubicin</td><td/></tr><tr><td>L01EM01</td><td>Idelalisib</td><td/></tr><tr><td>L01AA06</td><td>Ifosfamid</td><td/></tr><tr><td>L01EA01</td><td>Imatinib</td><td/></tr><tr><td>D06BB10</td><td>Imiquimod</td><td/></tr><tr><td>L04AB02</td><td>Infliximab</td><td/></tr><tr><td>D06BX02</td><td>Ingenolmebutat</td><td/></tr><tr><td>L01FB01</td><td>Inotuzumab ozogamicin</td><td/></tr><tr><td>L03AB01</td><td>Interferon alfa, natürlich</td><td/></tr><tr><td>L03AB04</td><td>Interferon alfa-2a</td><td/></tr><tr><td>L03AB05</td><td>Interferon alfa-2b</td><td/></tr><tr><td>L03AB18</td><td>Interferon gamma-1b</td><td/></tr><tr><td>L01FX04</td><td>Ipilimumab</td><td/></tr><tr><td>L01CE02</td><td>Irinotecan</td><td/></tr><tr><td>L01FC02</td><td>Isatuximab</td><td/></tr><tr><td>L01XX62</td><td>Ivosidenib</td><td/></tr><tr><td>L01DC04</td><td>Ixabepilon</td><td/></tr><tr><td>L01XG03</td><td>Ixazomib</td><td/></tr><tr><td>H02CA03</td><td>Ketoconazol</td><td/></tr><tr><td>H01CB03</td><td>Lanreotid</td><td/></tr><tr><td>L01EH01</td><td>Lapatinib</td><td/></tr><tr><td>L01EX12</td><td>Larotrectinib</td><td/></tr><tr><td>L04AA13</td><td>Leflunomid</td><td/></tr><tr><td>L04AX04</td><td>Lenalidomid</td><td/></tr><tr><td>L03AA10</td><td>Lenograstim</td><td/></tr><tr><td>L01EX08</td><td>Lenvatinib</td><td/></tr><tr><td>L02BG04</td><td>Letrozol</td><td/></tr><tr><td>L02AE02</td><td>Leuprorelin</td><td/></tr><tr><td>L03AA14</td><td>Lipegfilgrastim</td><td/></tr><tr><td>L01AD02</td><td>Lomustin</td><td/></tr><tr><td>A16AX20</td><td>Lonafarnib</td><td/></tr><tr><td>L01XX07</td><td>Lonidamin</td><td/></tr><tr><td>L01ED05</td><td>Lorlatinib</td><td/></tr><tr><td>L01XX69</td><td>Lurbinectedin</td><td/></tr><tr><td>B03XA06</td><td>Luspatercept</td><td/></tr><tr><td>G03DC03</td><td>Lynestrenol</td><td/></tr><tr><td>L01AB03</td><td>Mannosulfan</td><td/></tr><tr><td>J05AX09</td><td>Maraviroc</td><td/></tr><tr><td>L01XX10</td><td>Masoprocol</td><td/></tr><tr><td>L02AB02</td><td>Medroxyprogesteron</td><td/></tr><tr><td>L02AB01</td><td>Megestrol</td><td/></tr><tr><td>L01AA03</td><td>Melphalan</td><td/></tr><tr><td>R03DX09</td><td>Mepolizumab</td><td/></tr><tr><td>L01BB02</td><td>Mercaptopurin</td><td/></tr><tr><td>V03AF01</td><td>Mesna</td><td/></tr><tr><td>N07BC02</td><td>Methadon</td><td/></tr><tr><td>L01BA01</td><td>Methotrexat</td><td/></tr><tr><td>L01XD10</td><td>Methoxsalen</td><td/></tr><tr><td>B03XA03</td><td>Methoxy-Polyethylenglycol-Epoetin beta</td><td/></tr><tr><td>L01XD03</td><td>Methylaminolevulinat</td><td/></tr><tr><td>H02AB04</td><td>Methylprednisolon</td><td/></tr><tr><td>L01EX10</td><td>Midostaurin</td><td/></tr><tr><td>L03AX15</td><td>Mifamurtid</td><td/></tr><tr><td>L01XX09</td><td>Miltefosin</td><td/></tr><tr><td>L01CH01</td><td>Mistelkraut</td><td/></tr><tr><td>L01CP01</td><td>Mistelkraut</td><td/></tr><tr><td>L01AX01</td><td>Mitobronitol</td><td/></tr><tr><td>L01XX16</td><td>Mitoguazon</td><td/></tr><tr><td>L01DC03</td><td>Mitomycin</td><td/></tr><tr><td>L01XX23</td><td>Mitotan</td><td/></tr><tr><td>L01DB07</td><td>Mitoxantron</td><td/></tr><tr><td>L01FX09</td><td>Mogamulizumab</td><td/></tr><tr><td>L03AA03</td><td>Molgramostim</td><td/></tr><tr><td>L01FB02</td><td>Moxetumomab pasudotox</td><td/></tr><tr><td>L04AA02</td><td>Muromonab-CD3</td><td/></tr><tr><td>L04AA06</td><td>Mycophenolsäure</td><td/></tr><tr><td>L04AA23</td><td>Natalizumab</td><td/></tr><tr><td>V03AF10</td><td>Natriumlevofolinat</td><td/></tr><tr><td>L01FE03</td><td>Necitumumab</td><td/></tr><tr><td>L01BB07</td><td>Nelarabin</td><td/></tr><tr><td>L01EH02</td><td>Neratinib</td><td/></tr><tr><td>L01EA03</td><td>Nilotinib</td><td/></tr><tr><td>L02BB02</td><td>Nilutamid</td><td/></tr><tr><td>L01AD06</td><td>Nimustin</td><td/></tr><tr><td>L01EX09</td><td>Nintedanib</td><td/></tr><tr><td>L01XK02</td><td>Niraparib</td><td/></tr><tr><td>L01FF01</td><td>Nivolumab</td><td/></tr><tr><td>L01FA03</td><td>Obinutuzumab</td><td/></tr><tr><td>L01XX36</td><td>Oblimersen</td><td/></tr><tr><td>H01CB02</td><td>Octreotid</td><td/></tr><tr><td>L01FA02</td><td>Ofatumumab</td><td/></tr><tr><td>L01XK01</td><td>Olaparib</td><td/></tr><tr><td>L01FX10</td><td>Olaratumab</td><td/></tr><tr><td>L01XX40</td><td>Omacetaxinmepesuccinat</td><td/></tr><tr><td>L01FX16</td><td>Oportuzumab monatox</td><td/></tr><tr><td>L03AC02</td><td>Oprelvekin</td><td/></tr><tr><td>L01EB04</td><td>Osimertinib</td><td/></tr><tr><td>L01XA03</td><td>Oxaliplatin</td><td/></tr><tr><td>L01CD01</td><td>Paclitaxel</td><td/></tr><tr><td>L01CD03</td><td>Paclitaxelpoliglumex</td><td/></tr><tr><td>L01EF01</td><td>Palbociclib</td><td/></tr><tr><td>V03AF08</td><td>Palifermin</td><td/></tr><tr><td>M05BA03</td><td>Pamidronsäure</td><td/></tr><tr><td>L01FE02</td><td>Panitumumab</td><td/></tr><tr><td>L01XH03</td><td>Panobinostat</td><td/></tr><tr><td>L01EX03</td><td>Pazopanib</td><td/></tr><tr><td>L01XX24</td><td>Pegaspargase</td><td/></tr><tr><td>L03AA13</td><td>Pegfilgrastim</td><td/></tr><tr><td>L03AB11</td><td>Peginterferon alfa-2a</td><td/></tr><tr><td>L03AB10</td><td>Peginterferon alfa-2b</td><td/></tr><tr><td>L01FF02</td><td>Pembrolizumab</td><td/></tr><tr><td>L01BA04</td><td>Pemetrexed</td><td/></tr><tr><td>L01EN02</td><td>Pemigatinib</td><td/></tr><tr><td>L01XX08</td><td>Pentostatin</td><td/></tr><tr><td>L01FD02</td><td>Pertuzumab</td><td/></tr><tr><td>L01XY02</td><td>Pertuzumab und Trastuzumab</td><td/></tr><tr><td>L01AX02</td><td>Pipobroman</td><td/></tr><tr><td>L01DB08</td><td>Pirarubicin</td><td/></tr><tr><td>L01DB11</td><td>Pixantron</td><td/></tr><tr><td>V03AX10</td><td>Placebo</td><td/></tr><tr><td>L03AX16</td><td>Plerixafor</td><td/></tr><tr><td>L01DC02</td><td>Plicamycin</td><td/></tr><tr><td>L01FX14</td><td>Polatuzumab vedotin</td><td/></tr><tr><td>L03AX08</td><td>Poly ICLC</td><td/></tr><tr><td>L02AA02</td><td>Polyestradiolphosphat</td><td/></tr><tr><td>L01XA05</td><td>Polyplatillen</td><td/></tr><tr><td>L04AX06</td><td>Pomalidomid</td><td/></tr><tr><td>L01EA05</td><td>Ponatinib</td><td/></tr><tr><td>L01XD01</td><td>Porfimer natrium</td><td/></tr><tr><td>L01BA05</td><td>Pralatrexat</td><td/></tr><tr><td>L01EX23</td><td>Pralsetinib</td><td/></tr><tr><td>D07AC18</td><td>Prednicarbat</td><td/></tr><tr><td>L01AA08</td><td>Prednimustin</td><td/></tr><tr><td>H02AB06</td><td>Prednisolon</td><td/></tr><tr><td>H02AB07</td><td>Prednison</td><td/></tr><tr><td>L01XB01</td><td>Procarbazin</td><td/></tr><tr><td>D05AD</td><td>Psoralene zur topischen Anwendung</td><td/></tr><tr><td>D05BA</td><td>Psoralene zur systemischen Anwendung</td><td/></tr><tr><td>L01EX11</td><td>Quizartinib</td><td/></tr><tr><td>G03XC01</td><td>Raloxifen</td><td/></tr><tr><td>L01BA03</td><td>Raltitrexed</td><td/></tr><tr><td>L01FG02</td><td>Ramucirumab</td><td/></tr><tr><td>L01AD07</td><td>Ranimustin</td><td/></tr><tr><td>L01EX05</td><td>Regorafenib</td><td/></tr><tr><td>L01FF10</td><td>Retifanlimab</td><td/></tr><tr><td>L01EF02</td><td>Ribociclib</td><td/></tr><tr><td>L04AC04</td><td>Rilonacept</td><td/></tr><tr><td>L01EX19</td><td>Ripretinib</td><td/></tr><tr><td>M05BA07</td><td>Risedronsäure</td><td/></tr><tr><td>L01FA01</td><td>Rituximab</td><td/></tr><tr><td>L01XH02</td><td>Romidepsin</td><td/></tr><tr><td>B02BX04</td><td>Romiplostim</td><td/></tr><tr><td>L03AB15</td><td>Ropeginterferon alfa-2b</td><td/></tr><tr><td>L01XK03</td><td>Rucaparib</td><td/></tr><tr><td>L01EJ01</td><td>Ruxolitinib</td><td/></tr><tr><td>L01FX17</td><td>Sacituzumab govitecan</td><td/></tr><tr><td>L01XA04</td><td>Satraplatin</td><td/></tr><tr><td>L01XX66</td><td>Selinexor</td><td/></tr><tr><td>L01EX22</td><td>Selpercatinib</td><td/></tr><tr><td>L01EE04</td><td>Selumetinib</td><td/></tr><tr><td>L01AD03</td><td>Semustin</td><td/></tr><tr><td>L04AC11</td><td>Siltuximab</td><td/></tr><tr><td>L04AA10</td><td>Sirolimus</td><td/></tr><tr><td>H01CB01</td><td>Somatostatin</td><td/></tr><tr><td>L01XJ02</td><td>Sonidegib</td><td/></tr><tr><td>L01EX02</td><td>Sorafenib</td><td/></tr><tr><td>L01XX73</td><td>Sotorasib</td><td/></tr><tr><td>L01AD04</td><td>Streptozocin</td><td/></tr><tr><td>L01EX01</td><td>Sunitinib</td><td/></tr><tr><td>L04AD02</td><td>Tacrolimus</td><td/></tr><tr><td>L01FX12</td><td>Tafasitamab</td><td/></tr><tr><td>L01XX67</td><td>Tagraxofusp</td><td/></tr><tr><td>L01XK04</td><td>Talazoparib</td><td/></tr><tr><td>L01XX51</td><td>Talimogen laherparepvec</td><td><span title=\"EQUIVALENT\">~</span>L01XL02<i>(Reklassifizierung zu onkolytische Viren)</i></td></tr><tr><td>L02BA01</td><td>Tamoxifen</td><td/></tr><tr><td>L03AX11</td><td>Tasonermin</td><td/></tr><tr><td>L01XX72</td><td>Tazemetostat</td><td/></tr><tr><td>L01BC53</td><td>Tegafur, Kombinationen</td><td/></tr><tr><td>L01BC63</td><td>Tegafur und Uracil</td><td/></tr><tr><td>L01BC73</td><td>Tegafur, Gimeracil und Oteracil</td><td/></tr><tr><td>L01XD05</td><td>Temoporfin</td><td/></tr><tr><td>L01AX03</td><td>Temozolomid</td><td/></tr><tr><td>L01EG01</td><td>Temsirolimus</td><td/></tr><tr><td>L01CB02</td><td>Teniposid</td><td/></tr><tr><td>L01EX21</td><td>Tepotinib</td><td/></tr><tr><td>L04AX02</td><td>Thalidomid</td><td/></tr><tr><td>L01AC01</td><td>Thiotepa</td><td/></tr><tr><td>L01XX18</td><td>Tiazofurin</td><td/></tr><tr><td>M05BA05</td><td>Tiludronsäure</td><td/></tr><tr><td>L01BB03</td><td>Tioguanin</td><td/></tr><tr><td>L01XX71</td><td>Tisagenlecleucel</td><td><span title=\"EQUIVALENT\">~</span>L01XL04<i>(Reklassifizierung zu CAR-T-Zelltherapien)</i></td></tr><tr><td>L01FF09</td><td>Tislelizumab</td><td/></tr><tr><td>L01EK03</td><td>Tivozanib</td><td/></tr><tr><td>L04AC07</td><td>Tocilizumab</td><td/></tr><tr><td>L01CE01</td><td>Topotecan</td><td/></tr><tr><td>L02BA02</td><td>Toremifen</td><td/></tr><tr><td>V10XA53</td><td>Tositumomab/(131I)Iodtositumomab</td><td/></tr><tr><td>L01CX01</td><td>Trabectedin</td><td/></tr><tr><td>L01EE01</td><td>Trametinib</td><td/></tr><tr><td>L01FD01</td><td>Trastuzumab</td><td/></tr><tr><td>L01FD04</td><td>Trastuzumab deruxtecan</td><td/></tr><tr><td>L01FD05</td><td>Trastuzumab duocarmazin</td><td/></tr><tr><td>L01FD03</td><td>Trastuzumab emtansin</td><td/></tr><tr><td>L01AB02</td><td>Treosulfan</td><td/></tr><tr><td>L01XF01</td><td>Tretinoin</td><td/></tr><tr><td>L01AC02</td><td>Triaziquon</td><td/></tr><tr><td>L01BC59</td><td>Trifluridin, Kombinationen</td><td/></tr><tr><td>L02AE04</td><td>Triptorelin</td><td/></tr><tr><td>L01AA07</td><td>Trofosfamid</td><td/></tr><tr><td>L01EH03</td><td>Tucatinib</td><td/></tr><tr><td>L01AD08</td><td>Uramustin</td><td/></tr><tr><td>N03AG01</td><td>Valproinsäure</td><td/></tr><tr><td>L01DB09</td><td>Valrubicin</td><td/></tr><tr><td>L01EX04</td><td>Vandetanib</td><td/></tr><tr><td>L01XK05</td><td>Veliparib</td><td/></tr><tr><td>L01EC01</td><td>Vemurafenib</td><td/></tr><tr><td>L01XX52</td><td>Venetoclax</td><td/></tr><tr><td>L01CA01</td><td>Vinblastin</td><td/></tr><tr><td>L01CA02</td><td>Vincristin</td><td/></tr><tr><td>L01CA03</td><td>Vindesin</td><td/></tr><tr><td>L01CA05</td><td>Vinflunin</td><td/></tr><tr><td>L01CA04</td><td>Vinorelbin</td><td/></tr><tr><td>L01XJ01</td><td>Vismodegib</td><td/></tr><tr><td>L04AD03</td><td>Voclosporin</td><td/></tr><tr><td>L01XH01</td><td>Vorinostat</td><td/></tr><tr><td>L02BG05</td><td>Vorozol</td><td/></tr><tr><td>L01XX53</td><td>Vosaroxin</td><td/></tr><tr><td>L01EL03</td><td>Zanubrutinib</td><td/></tr><tr><td>M05BA08</td><td>Zoledronsäure</td><td/></tr><tr><td>L01DB05</td><td>Zorubicin</td><td/></tr></table></li></ul></div></div>"
+  ] ;
+  fhir:ValueSet.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2022"] ;
+  fhir:ValueSet.version [ fhir:value "2026.0.3"] ;
+  fhir:ValueSet.name [ fhir:value "MII_VS_Onko_Systemische_Therapie_Substanzen_2022"] ;
+  fhir:ValueSet.title [ fhir:value "MII VS Onkologie Systemische Therapie Substanzen ATC 2022"] ;
+  fhir:ValueSet.status [ fhir:value "active"] ;
+  fhir:ValueSet.experimental [ fhir:value "true"^^xsd:boolean] ;
+  fhir:ValueSet.date [ fhir:value "2026-07-02T12:18:38+00:00"^^xsd:dateTime] ;
+  fhir:ValueSet.publisher [ fhir:value "Medizininformatik Initiative"] ;
+  fhir:ValueSet.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Medizininformatik Initiative" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.medizininformatik-initiative.de/" ]
+     ]
+  ] ;
+  fhir:ValueSet.description [ fhir:value "ATC-Codes für Substanzen der systemischen Therapie, validiert gegen ATC-DE Version 2022. Für historische Datenvalidierung."] ;
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/atc" ] ;
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L02BX01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Abarelix" ]
+       ], [
+         fhir:index 1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AA24" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Abatacept" ]
+       ], [
+         fhir:index 2 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EF03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Abemaciclib" ]
+       ], [
+         fhir:index 3 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AA22" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Abetimus" ]
+       ], [
+         fhir:index 4 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L02BX03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Abirateron" ]
+       ], [
+         fhir:index 5 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EL02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Acalabrutinib" ]
+       ], [
+         fhir:index 6 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01DB04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Aclarubicin" ]
+       ], [
+         fhir:index 7 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AB04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Adalimumab" ]
+       ], [
+         fhir:index 8 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EB03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Afatinib" ]
+       ], [
+         fhir:index 9 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AB03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Afelimomab" ]
+       ], [
+         fhir:index 10 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XX44" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Aflibercept" ]
+       ], [
+         fhir:index 11 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L03AC01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Aldesleukin" ]
+       ], [
+         fhir:index 12 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01ED03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alectinib" ]
+       ], [
+         fhir:index 13 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AA15" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alefacept" ]
+       ], [
+         fhir:index 14 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AA34" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alemtuzumab" ]
+       ], [
+         fhir:index 15 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "M05BA04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alendronsäure" ]
+       ], [
+         fhir:index 16 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XF02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alitretinoin" ]
+       ], [
+         fhir:index 17 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EM03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alpelisib" ]
+       ], [
+         fhir:index 18 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XX03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Altretamin" ]
+       ], [
+         fhir:index 19 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "V03AM01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Amilomer" ]
+       ], [
+         fhir:index 20 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L02BG01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Aminoglutethimid" ]
+       ], [
+         fhir:index 21 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XD04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Aminolevulinsäure" ]
+       ], [
+         fhir:index 22 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FX18" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Amivantamab" ]
+       ], [
+         fhir:index 23 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01DB10" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Amrubicin" ]
+       ], [
+         fhir:index 24 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XX01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Amsacrin" ]
+       ], [
+         fhir:index 25 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XX35" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Anagrelid" ]
+       ], [
+         fhir:index 26 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AC03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Anakinra" ]
+       ], [
+         fhir:index 27 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L02BG03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Anastrozol" ]
+       ], [
+         fhir:index 28 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AA04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Antithymozytäres Immunglobulin (Kaninchen)" ]
+       ], [
+         fhir:index 29 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L02BB05" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Apalutamid" ]
+       ], [
+         fhir:index 30 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XX27" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Arsentrioxid" ]
+       ], [
+         fhir:index 31 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "P01BE03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Artesunat" ]
+       ], [
+         fhir:index 32 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EA06" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Asciminib" ]
+       ], [
+         fhir:index 33 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XX02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Asparaginase" ]
+       ], [
+         fhir:index 34 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FF05" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Atezolizumab" ]
+       ], [
+         fhir:index 35 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EX18" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Avapritinib" ]
+       ], [
+         fhir:index 36 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FF04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Avelumab" ]
+       ], [
+         fhir:index 37 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XX70" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Axicabtagen Ciloleucel" ]
+       ], [
+         fhir:index 38 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EK01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Axitinib" ]
+       ], [
+         fhir:index 39 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01BC07" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Azacitidin" ]
+       ], [
+         fhir:index 40 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AX01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Azathioprin" ]
+       ], [
+         fhir:index 41 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AC02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Basiliximab" ]
+       ], [
+         fhir:index 42 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L03AX03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "BCG-Impfstoff" ]
+       ], [
+         fhir:index 43 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FX15" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Belantamab mafodotin" ]
+       ], [
+         fhir:index 44 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AA28" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Belatacept" ]
+       ], [
+         fhir:index 45 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AA26" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Belimumab" ]
+       ], [
+         fhir:index 46 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XH04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Belinostat" ]
+       ], [
+         fhir:index 47 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01AA09" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bendamustin" ]
+       ], [
+         fhir:index 48 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FG01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bevacizumab" ]
+       ], [
+         fhir:index 49 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XF03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bexaroten" ]
+       ], [
+         fhir:index 50 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L02BB03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bicalutamid" ]
+       ], [
+         fhir:index 51 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EE03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Binimetinib" ]
+       ], [
+         fhir:index 52 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01DC01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bleomycin" ]
+       ], [
+         fhir:index 53 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FX07" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Blinatumomab" ]
+       ], [
+         fhir:index 54 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XG01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bortezomib" ]
+       ], [
+         fhir:index 55 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EA04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bosutinib" ]
+       ], [
+         fhir:index 56 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FX05" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Brentuximab vedotin" ]
+       ], [
+         fhir:index 57 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AC09" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Briakinumab" ]
+       ], [
+         fhir:index 58 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01ED04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Brigatinib" ]
+       ], [
+         fhir:index 59 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "N04BC01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bromocriptin" ]
+       ], [
+         fhir:index 60 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L02AE01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Buserelin" ]
+       ], [
+         fhir:index 61 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01AB01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Busulfan" ]
+       ], [
+         fhir:index 62 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01CD04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cabazitaxel" ]
+       ], [
+         fhir:index 63 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "N04BC06" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cabergolin" ]
+       ], [
+         fhir:index 64 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EX07" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cabozantinib" ]
+       ], [
+         fhir:index 65 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "V03AF04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Calciumlevofolinat" ]
+       ], [
+         fhir:index 66 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AC08" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Canakinumab" ]
+       ], [
+         fhir:index 67 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01BC06" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Capecitabin" ]
+       ], [
+         fhir:index 68 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EX17" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Capmatinib" ]
+       ], [
+         fhir:index 69 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XA02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Carboplatin" ]
+       ], [
+         fhir:index 70 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01AC03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Carboquon" ]
+       ], [
+         fhir:index 71 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XG02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Carfilzomib" ]
+       ], [
+         fhir:index 72 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01BC04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Carmofur" ]
+       ], [
+         fhir:index 73 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01AD01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Carmustin" ]
+       ], [
+         fhir:index 74 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FX03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Catumaxomab" ]
+       ], [
+         fhir:index 75 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FF06" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cemiplimab" ]
+       ], [
+         fhir:index 76 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01ED02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ceritinib" ]
+       ], [
+         fhir:index 77 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AB05" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Certolizumab pegol" ]
+       ], [
+         fhir:index 78 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "H01CC02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cetrorelix" ]
+       ], [
+         fhir:index 79 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FE01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cetuximab" ]
+       ], [
+         fhir:index 80 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01AA02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Chlorambucil" ]
+       ], [
+         fhir:index 81 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "G03DB06" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Chlormadinon" ]
+       ], [
+         fhir:index 82 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01AA05" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Chlormethin" ]
+       ], [
+         fhir:index 83 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AD01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ciclosporin" ]
+       ], [
+         fhir:index 84 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XA01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cisplatin" ]
+       ], [
+         fhir:index 85 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01BB04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cladribin" ]
+       ], [
+         fhir:index 86 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "M05BA02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Clodronsäure" ]
+       ], [
+         fhir:index 87 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01BB06" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Clofarabin" ]
+       ], [
+         fhir:index 88 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EE02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cobimetinib" ]
+       ], [
+         fhir:index 89 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EM02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Copanlisib" ]
+       ], [
+         fhir:index 90 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01ED01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Crizotinib" ]
+       ], [
+         fhir:index 91 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01AA01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cyclophosphamid" ]
+       ], [
+         fhir:index 92 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "G03HA01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cyproteron" ]
+       ], [
+         fhir:index 93 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01BC01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cytarabin" ]
+       ], [
+         fhir:index 94 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XY01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cytarabin und Daunorubicin" ]
+       ], [
+         fhir:index 95 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EC02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dabrafenib" ]
+       ], [
+         fhir:index 96 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01AX04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dacarbazin" ]
+       ], [
+         fhir:index 97 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AC01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Daclizumab" ]
+       ], [
+         fhir:index 98 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EB07" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dacomitinib" ]
+       ], [
+         fhir:index 99 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01DA01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dactinomycin" ]
+       ], [
+         fhir:index 100 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FC01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Daratumumab" ]
+       ], [
+         fhir:index 101 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "B03XA02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Darbepoetin alfa" ]
+       ], [
+         fhir:index 102 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L02BB06" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Darolutamid" ]
+       ], [
+         fhir:index 103 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EA02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dasatinib" ]
+       ], [
+         fhir:index 104 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01DB02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Daunorubicin" ]
+       ], [
+         fhir:index 105 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01BC08" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Decitabin" ]
+       ], [
+         fhir:index 106 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L02BX02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Degarelix" ]
+       ], [
+         fhir:index 107 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01CC01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Demecolcin" ]
+       ], [
+         fhir:index 108 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XX29" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Denileukindiftitox" ]
+       ], [
+         fhir:index 109 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "M05BX04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Denosumab" ]
+       ], [
+         fhir:index 110 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "H02AB02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dexamethason" ]
+       ], [
+         fhir:index 111 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FX06" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dinutuximab beta" ]
+       ], [
+         fhir:index 112 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01CD02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Docetaxel" ]
+       ], [
+         fhir:index 113 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FF07" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dostarlimab" ]
+       ], [
+         fhir:index 114 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01DB01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Doxorubicin" ]
+       ], [
+         fhir:index 115 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FF03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Durvalumab" ]
+       ], [
+         fhir:index 116 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "G04CB02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dutasterid" ]
+       ], [
+         fhir:index 117 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EM04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Duvelisib" ]
+       ], [
+         fhir:index 118 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AA25" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Eculizumab" ]
+       ], [
+         fhir:index 119 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FX01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Edrecolomab" ]
+       ], [
+         fhir:index 120 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AA21" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Efalizumab" ]
+       ], [
+         fhir:index 121 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XD06" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Efaproxiral" ]
+       ], [
+         fhir:index 122 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FX08" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Elotuzumab" ]
+       ], [
+         fhir:index 123 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "B02BX05" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Eltrombopag" ]
+       ], [
+         fhir:index 124 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XX59" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Enasidenib" ]
+       ], [
+         fhir:index 125 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EC03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Encorafenib" ]
+       ], [
+         fhir:index 126 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FX13" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Enfortumab vedotin" ]
+       ], [
+         fhir:index 127 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EX14" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Entrectinib" ]
+       ], [
+         fhir:index 128 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L02BB04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Enzalutamid" ]
+       ], [
+         fhir:index 129 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01DB03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Epirubicin" ]
+       ], [
+         fhir:index 130 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EN01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Erdafitinib" ]
+       ], [
+         fhir:index 131 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XX41" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Eribulin" ]
+       ], [
+         fhir:index 132 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EB02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Erlotinib" ]
+       ], [
+         fhir:index 133 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "B03XA01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Erythropoietin" ]
+       ], [
+         fhir:index 134 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XX11" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Estramustin" ]
+       ], [
+         fhir:index 135 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AB01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Etanercept" ]
+       ], [
+         fhir:index 136 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "M05BA01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Etidronsäure" ]
+       ], [
+         fhir:index 137 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01AG01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Etoglucid" ]
+       ], [
+         fhir:index 138 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01CB01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Etoposid" ]
+       ], [
+         fhir:index 139 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EG02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Everolimus" ]
+       ], [
+         fhir:index 140 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L02BG06" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Exemestan" ]
+       ], [
+         fhir:index 141 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EJ02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Fedratinib" ]
+       ], [
+         fhir:index 142 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L03AA02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Filgrastim" ]
+       ], [
+         fhir:index 143 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "G04CB01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Finasterid" ]
+       ], [
+         fhir:index 144 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AA27" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Fingolimod" ]
+       ], [
+         fhir:index 145 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01BC09" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Floxuridin" ]
+       ], [
+         fhir:index 146 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01BB05" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Fludarabin" ]
+       ], [
+         fhir:index 147 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01BC02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Fluorouracil" ]
+       ], [
+         fhir:index 148 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01BC52" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Fluorouracil, Kombinationen" ]
+       ], [
+         fhir:index 149 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L02BB01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Flutamid" ]
+       ], [
+         fhir:index 150 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "V03AF03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Calciumfolinat" ]
+       ], [
+         fhir:index 151 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L02BG02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Formestan" ]
+       ], [
+         fhir:index 152 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L02AA04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Fosfestrol" ]
+       ], [
+         fhir:index 153 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "B02BX09" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Fostamatinib" ]
+       ], [
+         fhir:index 154 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01AD05" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Fotemustin" ]
+       ], [
+         fhir:index 155 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L02BA03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Fulvestrant" ]
+       ], [
+         fhir:index 156 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EN04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Futibatinib" ]
+       ], [
+         fhir:index 157 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EB01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Gefitinib" ]
+       ], [
+         fhir:index 158 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01BC05" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Gemcitabin" ]
+       ], [
+         fhir:index 159 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FX02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Gemtuzumab ozogamicin" ]
+       ], [
+         fhir:index 160 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L02AB03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Gestonoron" ]
+       ], [
+         fhir:index 161 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EX13" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Gilteritinib" ]
+       ], [
+         fhir:index 162 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XJ03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Glasdegib" ]
+       ], [
+         fhir:index 163 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AB06" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Golimumab" ]
+       ], [
+         fhir:index 164 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "H01CA01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Gonadorelin" ]
+       ], [
+         fhir:index 165 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L02AE03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Goserelin" ]
+       ], [
+         fhir:index 166 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AA19" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Gusperimus" ]
+       ], [
+         fhir:index 167 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L03AX14" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Histamindihydrochlorid" ]
+       ], [
+         fhir:index 168 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L02AE05" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Histrelin" ]
+       ], [
+         fhir:index 169 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XX05" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hydroxycarbamid" ]
+       ], [
+         fhir:index 170 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "M05BA06" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ibandronsäure" ]
+       ], [
+         fhir:index 171 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "V10XX02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "(90Y)Ibritumomabtiuxetan" ]
+       ], [
+         fhir:index 172 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EL01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ibrutinib" ]
+       ], [
+         fhir:index 173 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01DB06" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Idarubicin" ]
+       ], [
+         fhir:index 174 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EM01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Idelalisib" ]
+       ], [
+         fhir:index 175 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01AA06" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ifosfamid" ]
+       ], [
+         fhir:index 176 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EA01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Imatinib" ]
+       ], [
+         fhir:index 177 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "D06BB10" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Imiquimod" ]
+       ], [
+         fhir:index 178 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AB02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Infliximab" ]
+       ], [
+         fhir:index 179 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "D06BX02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ingenolmebutat" ]
+       ], [
+         fhir:index 180 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FB01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Inotuzumab ozogamicin" ]
+       ], [
+         fhir:index 181 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L03AB01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Interferon alfa, natürlich" ]
+       ], [
+         fhir:index 182 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L03AB04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Interferon alfa-2a" ]
+       ], [
+         fhir:index 183 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L03AB05" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Interferon alfa-2b" ]
+       ], [
+         fhir:index 184 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L03AB18" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Interferon gamma-1b" ]
+       ], [
+         fhir:index 185 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FX04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ipilimumab" ]
+       ], [
+         fhir:index 186 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01CE02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Irinotecan" ]
+       ], [
+         fhir:index 187 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FC02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Isatuximab" ]
+       ], [
+         fhir:index 188 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XX62" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ivosidenib" ]
+       ], [
+         fhir:index 189 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01DC04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ixabepilon" ]
+       ], [
+         fhir:index 190 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XG03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ixazomib" ]
+       ], [
+         fhir:index 191 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "H02CA03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ketoconazol" ]
+       ], [
+         fhir:index 192 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "H01CB03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lanreotid" ]
+       ], [
+         fhir:index 193 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EH01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lapatinib" ]
+       ], [
+         fhir:index 194 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EX12" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Larotrectinib" ]
+       ], [
+         fhir:index 195 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AA13" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Leflunomid" ]
+       ], [
+         fhir:index 196 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AX04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lenalidomid" ]
+       ], [
+         fhir:index 197 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L03AA10" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lenograstim" ]
+       ], [
+         fhir:index 198 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EX08" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lenvatinib" ]
+       ], [
+         fhir:index 199 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L02BG04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Letrozol" ]
+       ], [
+         fhir:index 200 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L02AE02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Leuprorelin" ]
+       ], [
+         fhir:index 201 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L03AA14" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lipegfilgrastim" ]
+       ], [
+         fhir:index 202 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01AD02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lomustin" ]
+       ], [
+         fhir:index 203 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "A16AX20" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lonafarnib" ]
+       ], [
+         fhir:index 204 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XX07" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lonidamin" ]
+       ], [
+         fhir:index 205 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01ED05" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lorlatinib" ]
+       ], [
+         fhir:index 206 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XX69" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lurbinectedin" ]
+       ], [
+         fhir:index 207 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "B03XA06" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Luspatercept" ]
+       ], [
+         fhir:index 208 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "G03DC03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lynestrenol" ]
+       ], [
+         fhir:index 209 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01AB03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mannosulfan" ]
+       ], [
+         fhir:index 210 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "J05AX09" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Maraviroc" ]
+       ], [
+         fhir:index 211 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XX10" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Masoprocol" ]
+       ], [
+         fhir:index 212 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L02AB02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Medroxyprogesteron" ]
+       ], [
+         fhir:index 213 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L02AB01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Megestrol" ]
+       ], [
+         fhir:index 214 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01AA03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Melphalan" ]
+       ], [
+         fhir:index 215 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "R03DX09" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mepolizumab" ]
+       ], [
+         fhir:index 216 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01BB02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mercaptopurin" ]
+       ], [
+         fhir:index 217 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "V03AF01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mesna" ]
+       ], [
+         fhir:index 218 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "N07BC02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Methadon" ]
+       ], [
+         fhir:index 219 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01BA01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Methotrexat" ]
+       ], [
+         fhir:index 220 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XD10" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Methoxsalen" ]
+       ], [
+         fhir:index 221 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "B03XA03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Methoxy-Polyethylenglycol-Epoetin beta" ]
+       ], [
+         fhir:index 222 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XD03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Methylaminolevulinat" ]
+       ], [
+         fhir:index 223 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "H02AB04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Methylprednisolon" ]
+       ], [
+         fhir:index 224 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EX10" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Midostaurin" ]
+       ], [
+         fhir:index 225 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L03AX15" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mifamurtid" ]
+       ], [
+         fhir:index 226 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XX09" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Miltefosin" ]
+       ], [
+         fhir:index 227 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01CH01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mistelkraut" ]
+       ], [
+         fhir:index 228 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01CP01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mistelkraut" ]
+       ], [
+         fhir:index 229 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01AX01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mitobronitol" ]
+       ], [
+         fhir:index 230 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XX16" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mitoguazon" ]
+       ], [
+         fhir:index 231 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01DC03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mitomycin" ]
+       ], [
+         fhir:index 232 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XX23" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mitotan" ]
+       ], [
+         fhir:index 233 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01DB07" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mitoxantron" ]
+       ], [
+         fhir:index 234 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FX09" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mogamulizumab" ]
+       ], [
+         fhir:index 235 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L03AA03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Molgramostim" ]
+       ], [
+         fhir:index 236 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FB02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Moxetumomab pasudotox" ]
+       ], [
+         fhir:index 237 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AA02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Muromonab-CD3" ]
+       ], [
+         fhir:index 238 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AA06" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mycophenolsäure" ]
+       ], [
+         fhir:index 239 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AA23" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Natalizumab" ]
+       ], [
+         fhir:index 240 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "V03AF10" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Natriumlevofolinat" ]
+       ], [
+         fhir:index 241 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FE03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Necitumumab" ]
+       ], [
+         fhir:index 242 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01BB07" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nelarabin" ]
+       ], [
+         fhir:index 243 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EH02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Neratinib" ]
+       ], [
+         fhir:index 244 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EA03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nilotinib" ]
+       ], [
+         fhir:index 245 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L02BB02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nilutamid" ]
+       ], [
+         fhir:index 246 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01AD06" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nimustin" ]
+       ], [
+         fhir:index 247 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EX09" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nintedanib" ]
+       ], [
+         fhir:index 248 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XK02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Niraparib" ]
+       ], [
+         fhir:index 249 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FF01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nivolumab" ]
+       ], [
+         fhir:index 250 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FA03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Obinutuzumab" ]
+       ], [
+         fhir:index 251 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XX36" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Oblimersen" ]
+       ], [
+         fhir:index 252 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "H01CB02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Octreotid" ]
+       ], [
+         fhir:index 253 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FA02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ofatumumab" ]
+       ], [
+         fhir:index 254 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XK01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Olaparib" ]
+       ], [
+         fhir:index 255 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FX10" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Olaratumab" ]
+       ], [
+         fhir:index 256 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XX40" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Omacetaxinmepesuccinat" ]
+       ], [
+         fhir:index 257 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FX16" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Oportuzumab monatox" ]
+       ], [
+         fhir:index 258 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L03AC02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Oprelvekin" ]
+       ], [
+         fhir:index 259 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EB04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Osimertinib" ]
+       ], [
+         fhir:index 260 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XA03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Oxaliplatin" ]
+       ], [
+         fhir:index 261 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01CD01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Paclitaxel" ]
+       ], [
+         fhir:index 262 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01CD03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Paclitaxelpoliglumex" ]
+       ], [
+         fhir:index 263 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EF01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Palbociclib" ]
+       ], [
+         fhir:index 264 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "V03AF08" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Palifermin" ]
+       ], [
+         fhir:index 265 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "M05BA03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pamidronsäure" ]
+       ], [
+         fhir:index 266 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FE02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Panitumumab" ]
+       ], [
+         fhir:index 267 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XH03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Panobinostat" ]
+       ], [
+         fhir:index 268 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EX03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pazopanib" ]
+       ], [
+         fhir:index 269 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XX24" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pegaspargase" ]
+       ], [
+         fhir:index 270 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L03AA13" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pegfilgrastim" ]
+       ], [
+         fhir:index 271 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L03AB11" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Peginterferon alfa-2a" ]
+       ], [
+         fhir:index 272 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L03AB10" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Peginterferon alfa-2b" ]
+       ], [
+         fhir:index 273 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FF02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pembrolizumab" ]
+       ], [
+         fhir:index 274 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01BA04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pemetrexed" ]
+       ], [
+         fhir:index 275 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EN02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pemigatinib" ]
+       ], [
+         fhir:index 276 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XX08" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pentostatin" ]
+       ], [
+         fhir:index 277 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FD02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pertuzumab" ]
+       ], [
+         fhir:index 278 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XY02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pertuzumab und Trastuzumab" ]
+       ], [
+         fhir:index 279 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01AX02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pipobroman" ]
+       ], [
+         fhir:index 280 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01DB08" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pirarubicin" ]
+       ], [
+         fhir:index 281 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01DB11" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pixantron" ]
+       ], [
+         fhir:index 282 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "V03AX10" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Placebo" ]
+       ], [
+         fhir:index 283 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L03AX16" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Plerixafor" ]
+       ], [
+         fhir:index 284 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01DC02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Plicamycin" ]
+       ], [
+         fhir:index 285 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FX14" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Polatuzumab vedotin" ]
+       ], [
+         fhir:index 286 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L03AX08" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Poly ICLC" ]
+       ], [
+         fhir:index 287 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L02AA02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Polyestradiolphosphat" ]
+       ], [
+         fhir:index 288 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XA05" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Polyplatillen" ]
+       ], [
+         fhir:index 289 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AX06" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pomalidomid" ]
+       ], [
+         fhir:index 290 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EA05" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ponatinib" ]
+       ], [
+         fhir:index 291 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XD01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Porfimer natrium" ]
+       ], [
+         fhir:index 292 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01BA05" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pralatrexat" ]
+       ], [
+         fhir:index 293 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EX23" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pralsetinib" ]
+       ], [
+         fhir:index 294 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "D07AC18" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Prednicarbat" ]
+       ], [
+         fhir:index 295 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01AA08" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Prednimustin" ]
+       ], [
+         fhir:index 296 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "H02AB06" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Prednisolon" ]
+       ], [
+         fhir:index 297 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "H02AB07" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Prednison" ]
+       ], [
+         fhir:index 298 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XB01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Procarbazin" ]
+       ], [
+         fhir:index 299 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "D05AD" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Psoralene zur topischen Anwendung" ]
+       ], [
+         fhir:index 300 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "D05BA" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Psoralene zur systemischen Anwendung" ]
+       ], [
+         fhir:index 301 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EX11" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Quizartinib" ]
+       ], [
+         fhir:index 302 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "G03XC01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Raloxifen" ]
+       ], [
+         fhir:index 303 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01BA03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Raltitrexed" ]
+       ], [
+         fhir:index 304 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FG02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ramucirumab" ]
+       ], [
+         fhir:index 305 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01AD07" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ranimustin" ]
+       ], [
+         fhir:index 306 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EX05" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Regorafenib" ]
+       ], [
+         fhir:index 307 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FF10" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Retifanlimab" ]
+       ], [
+         fhir:index 308 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EF02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ribociclib" ]
+       ], [
+         fhir:index 309 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AC04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Rilonacept" ]
+       ], [
+         fhir:index 310 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EX19" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ripretinib" ]
+       ], [
+         fhir:index 311 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "M05BA07" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Risedronsäure" ]
+       ], [
+         fhir:index 312 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FA01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Rituximab" ]
+       ], [
+         fhir:index 313 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XH02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Romidepsin" ]
+       ], [
+         fhir:index 314 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "B02BX04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Romiplostim" ]
+       ], [
+         fhir:index 315 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L03AB15" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ropeginterferon alfa-2b" ]
+       ], [
+         fhir:index 316 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XK03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Rucaparib" ]
+       ], [
+         fhir:index 317 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EJ01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ruxolitinib" ]
+       ], [
+         fhir:index 318 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FX17" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Sacituzumab govitecan" ]
+       ], [
+         fhir:index 319 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XA04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Satraplatin" ]
+       ], [
+         fhir:index 320 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XX66" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Selinexor" ]
+       ], [
+         fhir:index 321 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EX22" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Selpercatinib" ]
+       ], [
+         fhir:index 322 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EE04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Selumetinib" ]
+       ], [
+         fhir:index 323 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01AD03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Semustin" ]
+       ], [
+         fhir:index 324 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AC11" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Siltuximab" ]
+       ], [
+         fhir:index 325 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AA10" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Sirolimus" ]
+       ], [
+         fhir:index 326 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "H01CB01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Somatostatin" ]
+       ], [
+         fhir:index 327 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XJ02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Sonidegib" ]
+       ], [
+         fhir:index 328 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EX02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Sorafenib" ]
+       ], [
+         fhir:index 329 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XX73" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Sotorasib" ]
+       ], [
+         fhir:index 330 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01AD04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Streptozocin" ]
+       ], [
+         fhir:index 331 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EX01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Sunitinib" ]
+       ], [
+         fhir:index 332 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AD02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tacrolimus" ]
+       ], [
+         fhir:index 333 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FX12" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tafasitamab" ]
+       ], [
+         fhir:index 334 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XX67" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tagraxofusp" ]
+       ], [
+         fhir:index 335 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XK04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Talazoparib" ]
+       ], [
+         fhir:index 336 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XX51" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Talimogen laherparepvec" ]
+       ], [
+         fhir:index 337 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L02BA01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tamoxifen" ]
+       ], [
+         fhir:index 338 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L03AX11" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tasonermin" ]
+       ], [
+         fhir:index 339 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XX72" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tazemetostat" ]
+       ], [
+         fhir:index 340 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01BC53" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tegafur, Kombinationen" ]
+       ], [
+         fhir:index 341 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01BC63" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tegafur und Uracil" ]
+       ], [
+         fhir:index 342 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01BC73" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tegafur, Gimeracil und Oteracil" ]
+       ], [
+         fhir:index 343 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XD05" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Temoporfin" ]
+       ], [
+         fhir:index 344 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01AX03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Temozolomid" ]
+       ], [
+         fhir:index 345 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EG01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Temsirolimus" ]
+       ], [
+         fhir:index 346 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01CB02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Teniposid" ]
+       ], [
+         fhir:index 347 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EX21" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tepotinib" ]
+       ], [
+         fhir:index 348 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AX02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Thalidomid" ]
+       ], [
+         fhir:index 349 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01AC01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Thiotepa" ]
+       ], [
+         fhir:index 350 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XX18" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tiazofurin" ]
+       ], [
+         fhir:index 351 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "M05BA05" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tiludronsäure" ]
+       ], [
+         fhir:index 352 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01BB03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tioguanin" ]
+       ], [
+         fhir:index 353 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XX71" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tisagenlecleucel" ]
+       ], [
+         fhir:index 354 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FF09" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tislelizumab" ]
+       ], [
+         fhir:index 355 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EK03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tivozanib" ]
+       ], [
+         fhir:index 356 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AC07" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tocilizumab" ]
+       ], [
+         fhir:index 357 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01CE01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Topotecan" ]
+       ], [
+         fhir:index 358 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L02BA02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Toremifen" ]
+       ], [
+         fhir:index 359 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "V10XA53" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tositumomab/(131I)Iodtositumomab" ]
+       ], [
+         fhir:index 360 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01CX01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Trabectedin" ]
+       ], [
+         fhir:index 361 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EE01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Trametinib" ]
+       ], [
+         fhir:index 362 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FD01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Trastuzumab" ]
+       ], [
+         fhir:index 363 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FD04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Trastuzumab deruxtecan" ]
+       ], [
+         fhir:index 364 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FD05" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Trastuzumab duocarmazin" ]
+       ], [
+         fhir:index 365 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01FD03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Trastuzumab emtansin" ]
+       ], [
+         fhir:index 366 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01AB02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Treosulfan" ]
+       ], [
+         fhir:index 367 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XF01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tretinoin" ]
+       ], [
+         fhir:index 368 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01AC02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Triaziquon" ]
+       ], [
+         fhir:index 369 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01BC59" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Trifluridin, Kombinationen" ]
+       ], [
+         fhir:index 370 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L02AE04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Triptorelin" ]
+       ], [
+         fhir:index 371 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01AA07" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Trofosfamid" ]
+       ], [
+         fhir:index 372 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EH03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tucatinib" ]
+       ], [
+         fhir:index 373 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01AD08" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Uramustin" ]
+       ], [
+         fhir:index 374 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "N03AG01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Valproinsäure" ]
+       ], [
+         fhir:index 375 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01DB09" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Valrubicin" ]
+       ], [
+         fhir:index 376 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EX04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Vandetanib" ]
+       ], [
+         fhir:index 377 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XK05" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Veliparib" ]
+       ], [
+         fhir:index 378 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EC01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Vemurafenib" ]
+       ], [
+         fhir:index 379 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XX52" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Venetoclax" ]
+       ], [
+         fhir:index 380 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01CA01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Vinblastin" ]
+       ], [
+         fhir:index 381 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01CA02" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Vincristin" ]
+       ], [
+         fhir:index 382 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01CA03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Vindesin" ]
+       ], [
+         fhir:index 383 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01CA05" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Vinflunin" ]
+       ], [
+         fhir:index 384 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01CA04" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Vinorelbin" ]
+       ], [
+         fhir:index 385 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XJ01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Vismodegib" ]
+       ], [
+         fhir:index 386 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L04AD03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Voclosporin" ]
+       ], [
+         fhir:index 387 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XH01" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Vorinostat" ]
+       ], [
+         fhir:index 388 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L02BG05" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Vorozol" ]
+       ], [
+         fhir:index 389 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01XX53" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Vosaroxin" ]
+       ], [
+         fhir:index 390 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01EL03" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Zanubrutinib" ]
+       ], [
+         fhir:index 391 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "M05BA08" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Zoledronsäure" ]
+       ], [
+         fhir:index 392 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "L01DB05" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Zorubicin" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2022.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

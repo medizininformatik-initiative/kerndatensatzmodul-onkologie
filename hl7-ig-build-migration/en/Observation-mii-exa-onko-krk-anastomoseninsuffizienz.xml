@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-krk-anastomoseninsuffizienz"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-anastomoseninsuffizienz"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-onko-krk-anastomoseninsuffizienz</b></p><a name="en-mii-exa-onko-krk-anastomoseninsuffizienz"> </a><a name="en-hcmii-exa-onko-krk-anastomoseninsuffizienz"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-krk-anastomoseninsuffizienz.html">MII PR Onkologie KRK Anastomoseninsuffizienz</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 236091002}">Large intestine anastomotic leak (disorder)</span></p><p><b>subject</b>: <a href="Patient-mii-exa-onko-krk-bundle-patient.html">Klaus KolorektalCa  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: <a href="Procedure-mii-exa-onko-krk-operation.html">Procedure Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion: Laparoskopisch mit Anastomose</a></p><p><b>encounter</b>: <a href="Encounter-mii-exa-onko-krk-bundle-encounter.html">Encounter: status = finished; class = inpatient encounter (ActCode#IMP)</a></p><p><b>effective</b>: 2024-03-25 08:00:00+0100</p><p><b>value</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-anastomoseninsuffizienz B}">Anastomoseninsuffizienz Grad B</span></p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="236091002"/>
+      <display value="Large intestine anastomotic leak (disorder)"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/mii-exa-onko-krk-bundle-patient"/>
+  </subject>
+  <focus>
+    <reference value="Procedure/mii-exa-onko-krk-operation"/>
+  </focus>
+  <encounter>
+    <reference value="Encounter/mii-exa-onko-krk-bundle-encounter"/>
+  </encounter>
+  <effectiveDateTime value="2024-03-25T08:00:00+01:00"/>
+  <valueCodeableConcept>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-anastomoseninsuffizienz"/>
+      <code value="B"/>
+      <display value="Anastomoseninsuffizienz Grad B"/>
+    </coding>
+  </valueCodeableConcept>
+</Observation>

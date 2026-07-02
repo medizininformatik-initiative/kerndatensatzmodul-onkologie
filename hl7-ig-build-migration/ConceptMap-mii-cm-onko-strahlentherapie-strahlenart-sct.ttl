@@ -1,0 +1,249 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-strahlentherapie-strahlenart-sct> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-cm-onko-strahlentherapie-strahlenart-sct"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap mii-cm-onko-strahlentherapie-strahlenart-sct</b></p><a name=\"mii-cm-onko-strahlentherapie-strahlenart-sct\"> </a><a name=\"hcmii-cm-onko-strahlentherapie-strahlenart-sct\"> </a><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <a href=\"CodeSystem-mii-cs-onko-strahlentherapie-strahlenart.html\">MII CS Onkologie Strahlentherapie Strahlenart</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>UH (Photonen (ultraharte Röntgenstrahlen, inklusive Gamma-Strahler))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>290006006 (Photon (substance))</td><td/></tr><tr><td>EL (Elektronen)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>46602004 (Electron (substance))</td><td/></tr><tr><td>NE (Neutronen)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>58607005 (Neutron (substance))</td><td/></tr><tr><td>PN (Protonen (leichte Wasserstoffionen/H1/Leichtionen))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>89177007 (Proton (substance))</td><td/></tr><tr><td>SI (Schwerionen (schwere Kohlenstoff-Ionen/C12/Sauerstoffionen/Heliumionen))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>312253001 (Heavy ion radiation (physical force))</td><td/></tr><tr><td>RO (Weichstrahl (kV))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>286630003 (Soft X-radiation (physical force))</td><td/></tr><tr><td>SO (Sonstige (inklusive Mixed Beams, exklusive Nuklide))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>74964007 (Other (qualifier value))</td><td/></tr><tr><td>Lu-177</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>447553000 (Lutetium-177 (substance))</td><td/></tr><tr><td>Lu-177</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#narrower\" title=\"narrower\">narrower</a></td><td>1263784000 (Radioligand therapy using lutetium (177-Lu) vipivotide tetraxetan (procedure))</td><td>Verwendung einer bestimmten Verbindung. Momentan wird Lu-177 hauptsächlich damit verwendet; es ist aber nicht auszuschließen, dass in Zukunft auch andere Substanzen zum Einsatz kommen.</td></tr><tr><td>J-131</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1368003 (Iodine-131 (substance))</td><td/></tr><tr><td>Y-90</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>14691008 (Yttrium-90 (substance))</td><td/></tr><tr><td>Y-90</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#narrower\" title=\"narrower\">narrower</a></td><td>764677008 (Selective internal radiotherapy of liver using yttrium (90-Y) labeled microspheres (procedure))</td><td>Kombination einer bestimmten Strahlequelle mit einer bestimmten Applikation (Microsphären). Andere Anwendungen sind theoretisch in Zukunft denkbar und werden von diesem Code nicht miterfasst.</td></tr><tr><td>Ra-223</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>24853006 (Radium-223 (substance))</td><td/></tr><tr><td>Ac-225</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>32059002 (Actinium-225 (substance))</td><td/></tr><tr><td>Sm-153</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>419804008 (Samarium-153 (substance))</td><td/></tr><tr><td>Tb-161</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>Sr-89</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>7770004 (Strontium-89 (substance))</td><td/></tr><tr><td>Ir-192</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>48341001 (Iridium-192 (substance))</td><td/></tr><tr><td>Co-60</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>5405008 (Cobalt-60 (substance))</td><td/></tr><tr><td>SONU (Sonstige Nuklide)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>89457008 (Radioactive isotope (substance))</td><td/></tr></table></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap mii-cm-onko-strahlentherapie-strahlenart-sct</b></p><a name=\"en-mii-cm-onko-strahlentherapie-strahlenart-sct\"> </a><a name=\"en-hcmii-cm-onko-strahlentherapie-strahlenart-sct\"> </a><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <a href=\"CodeSystem-mii-cs-onko-strahlentherapie-strahlenart.html\">MII CS Onkologie Strahlentherapie Strahlenart</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>UH (Photonen (ultraharte Röntgenstrahlen, inklusive Gamma-Strahler))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>290006006 (Photon (substance))</td><td/></tr><tr><td>EL (Elektronen)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>46602004 (Electron (substance))</td><td/></tr><tr><td>NE (Neutronen)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>58607005 (Neutron (substance))</td><td/></tr><tr><td>PN (Protonen (leichte Wasserstoffionen/H1/Leichtionen))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>89177007 (Proton (substance))</td><td/></tr><tr><td>SI (Schwerionen (schwere Kohlenstoff-Ionen/C12/Sauerstoffionen/Heliumionen))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>312253001 (Heavy ion radiation (physical force))</td><td/></tr><tr><td>RO (Weichstrahl (kV))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>286630003 (Soft X-radiation (physical force))</td><td/></tr><tr><td>SO (Sonstige (inklusive Mixed Beams, exklusive Nuklide))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>74964007 (Other (qualifier value))</td><td/></tr><tr><td>Lu-177</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>447553000 (Lutetium-177 (substance))</td><td/></tr><tr><td>Lu-177</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#narrower\" title=\"narrower\">narrower</a></td><td>1263784000 (Radioligand therapy using lutetium (177-Lu) vipivotide tetraxetan (procedure))</td><td>Verwendung einer bestimmten Verbindung. Momentan wird Lu-177 hauptsächlich damit verwendet; es ist aber nicht auszuschließen, dass in Zukunft auch andere Substanzen zum Einsatz kommen.</td></tr><tr><td>J-131</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1368003 (Iodine-131 (substance))</td><td/></tr><tr><td>Y-90</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>14691008 (Yttrium-90 (substance))</td><td/></tr><tr><td>Y-90</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#narrower\" title=\"narrower\">narrower</a></td><td>764677008 (Selective internal radiotherapy of liver using yttrium (90-Y) labeled microspheres (procedure))</td><td>Kombination einer bestimmten Strahlequelle mit einer bestimmten Applikation (Microsphären). Andere Anwendungen sind theoretisch in Zukunft denkbar und werden von diesem Code nicht miterfasst.</td></tr><tr><td>Ra-223</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>24853006 (Radium-223 (substance))</td><td/></tr><tr><td>Ac-225</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>32059002 (Actinium-225 (substance))</td><td/></tr><tr><td>Sm-153</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>419804008 (Samarium-153 (substance))</td><td/></tr><tr><td>Tb-161</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>Sr-89</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>7770004 (Strontium-89 (substance))</td><td/></tr><tr><td>Ir-192</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>48341001 (Iridium-192 (substance))</td><td/></tr><tr><td>Co-60</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>5405008 (Cobalt-60 (substance))</td><td/></tr><tr><td>SONU (Sonstige Nuklide)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>89457008 (Radioactive isotope (substance))</td><td/></tr></table></div></div>"
+  ] ;
+  fhir:ConceptMap.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-strahlentherapie-strahlenart-sct"] ;
+  fhir:ConceptMap.version [ fhir:value "2026.0.3"] ;
+  fhir:ConceptMap.name [ fhir:value "MII CM Onko Strahlentherapie Strahlenart SCT Mapping"] ;
+  fhir:ConceptMap.title [ fhir:value "MII CM Onko Strahlentherapie Strahlenart SNOMED Mapping"] ;
+  fhir:ConceptMap.status [ fhir:value "active"] ;
+  fhir:ConceptMap.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ConceptMap.date [ fhir:value "2024-04-11"^^xsd:date] ;
+  fhir:ConceptMap.publisher [ fhir:value "Medizininformatik Initiative"] ;
+  fhir:ConceptMap.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Medizininformatik Initiative" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.medizininformatik-initiative.de/" ]
+     ]
+  ] ;
+  fhir:ConceptMap.description [ fhir:value "Mapping Strahlentherapie Strahlenart Codes zu SNOMED-CT"] ;
+  fhir:ConceptMap.purpose [ fhir:value "Technical mapping to transform oBDS-Data into SNOMED"] ;
+  fhir:ConceptMap.sourceUri [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/"] ;
+  fhir:ConceptMap.targetUri [ fhir:value "http://snomed.info/sct/900000000000207008/version/20240401"] ;
+  fhir:ConceptMap.group [
+     fhir:index 0 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "http://snomed.info/sct/900000000000207008/version/20240401" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index 0 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "UH" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Photonen (ultraharte Röntgenstrahlen, inklusive Gamma-Strahler)" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "290006006" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Photon (substance)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "EL" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Elektronen" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "46602004" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Electron (substance)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 2 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "NE" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Neutronen" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "58607005" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Neutron (substance)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 3 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "PN" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Protonen (leichte Wasserstoffionen/H1/Leichtionen)" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "89177007" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Proton (substance)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 4 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "SI" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Schwerionen (schwere Kohlenstoff-Ionen/C12/Sauerstoffionen/Heliumionen)" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "312253001" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Heavy ion radiation (physical force)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 5 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "RO" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Weichstrahl (kV)" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "286630003" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Soft X-radiation (physical force)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 6 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "SO" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Sonstige (inklusive Mixed Beams, exklusive Nuklide)" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "74964007" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Other (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 7 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Lu-177" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Lu-177" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "447553000" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Lutetium-177 (substance)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 8 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Lu-177" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Lu-177" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1263784000" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Radioligand therapy using lutetium (177-Lu) vipivotide tetraxetan (procedure)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "narrower" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Verwendung einer bestimmten Verbindung. Momentan wird Lu-177 hauptsächlich damit verwendet; es ist aber nicht auszuschließen, dass in Zukunft auch andere Substanzen zum Einsatz kommen." ]
+       ]
+     ], [
+       fhir:index 9 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "J-131" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "J131" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1368003" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Iodine-131 (substance)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 10 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Y-90" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Y-90" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "14691008" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Yttrium-90 (substance)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 11 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Y-90" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Y-90" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "764677008" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Selective internal radiotherapy of liver using yttrium (90-Y) labeled microspheres (procedure)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "narrower" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Kombination einer bestimmten Strahlequelle mit einer bestimmten Applikation (Microsphären). Andere Anwendungen sind theoretisch in Zukunft denkbar und werden von diesem Code nicht miterfasst." ]
+       ]
+     ], [
+       fhir:index 12 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Ra-223" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Ra-223" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "24853006" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Radium-223 (substance)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 13 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Ac-225" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Ac-225" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "32059002" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Actinium-225 (substance)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 14 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Sm-153" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Sm-153" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "419804008" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Samarium-153 (substance)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 15 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Tb-161" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Tb-161" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 16 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Sr-89" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Sr-89" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "7770004" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Strontium-89 (substance)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 17 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Ir-192" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Ir-192" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "48341001" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Iridium-192 (substance)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 18 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Co-60" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Co-60" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "5405008" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Cobalt-60 (substance)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 19 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "SONU" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Sonstige Nuklide" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "89457008" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Radioactive isotope (substance)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-strahlentherapie-strahlenart-sct.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,113 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "mii-cm-onko-verlauf-fernmetastasen-sct",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap mii-cm-onko-verlauf-fernmetastasen-sct</b></p><a name=\"mii-cm-onko-verlauf-fernmetastasen-sct\"> </a><a name=\"hcmii-cm-onko-verlauf-fernmetastasen-sct\"> </a><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <a href=\"CodeSystem-mii-cs-onko-verlauf-fernmetastasen.html\">MII CS Onkologie Verlauf Fernmetastasen</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>K (kein Fernmetastasen nachweisbar)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>261985008 (No metastases (tumor staging))</td><td/></tr><tr><td>R (neu aufgetretene Fernmetastase(n) bzw. Metastasenrezidiv)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#narrower\" title=\"narrower\">narrower</a></td><td>7147002 (New (qualifier value))</td><td>Kodierung für neu aufgetretene Fernmetastasen</td></tr><tr><td/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#narrower\" title=\"narrower\">narrower</a></td><td>263855007 (Relapse phase (qualifier value))</td><td>Kodierung für Metastasenrezidiv</td></tr><tr><td>T (Fernmetastasen Residuen)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>65320000 (Residual (qualifier value))</td><td/></tr><tr><td>P (Fernmetastasen Progress)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>255314001 (Progressive (qualifier value))</td><td/></tr><tr><td>N (Fernmetastasen No Change)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>260388006 (No status change (qualifier value))</td><td/></tr><tr><td>F (fraglicher Befund)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>64957009 (Uncertain (qualifier value))</td><td/></tr><tr><td>U (unbekannt)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>261665006 (Unknown (qualifier value))</td><td/></tr><tr><td>X (fehlende Angabe)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1287211007 (No information available (qualifier value))</td><td/></tr></table></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-verlauf-fernmetastasen-sct",
+  "version" : "2026.0.3",
+  "name" : "MII CM Onko Verlauf Fernmetastasen SCT Mapping",
+  "title" : "MII CM Onko Verlauf Fernmetastasen SNOMED Mapping",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2024-04-10",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Mapping Verlauf Fernmetastasen Codes zu SNOMED-CT",
+  "purpose" : "Technical mapping to transform oBDS-Data into SNOMED",
+  "sourceUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
+  "targetUri" : "http://snomed.info/sct/900000000000207008/version/20240401",
+  "group" : [{
+    "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen",
+    "target" : "http://snomed.info/sct/900000000000207008/version/20240401",
+    "element" : [{
+      "code" : "K",
+      "display" : "kein Fernmetastasen nachweisbar",
+      "target" : [{
+        "code" : "261985008",
+        "display" : "No metastases (tumor staging)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "R",
+      "display" : "neu aufgetretene Fernmetastase(n) bzw. Metastasenrezidiv",
+      "target" : [{
+        "code" : "7147002",
+        "display" : "New (qualifier value)",
+        "equivalence" : "narrower",
+        "comment" : "Kodierung für neu aufgetretene Fernmetastasen"
+      }]
+    },
+    {
+      "target" : [{
+        "code" : "263855007",
+        "display" : "Relapse phase (qualifier value)",
+        "equivalence" : "narrower",
+        "comment" : "Kodierung für Metastasenrezidiv"
+      }]
+    },
+    {
+      "code" : "T",
+      "display" : "Fernmetastasen Residuen",
+      "target" : [{
+        "code" : "65320000",
+        "display" : "Residual (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "P",
+      "display" : "Fernmetastasen Progress",
+      "target" : [{
+        "code" : "255314001",
+        "display" : "Progressive (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "N",
+      "display" : "Fernmetastasen No Change",
+      "target" : [{
+        "code" : "260388006",
+        "display" : "No status change (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "F",
+      "display" : "fraglicher Befund",
+      "target" : [{
+        "code" : "64957009",
+        "display" : "Uncertain (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "U",
+      "display" : "unbekannt",
+      "target" : [{
+        "code" : "261665006",
+        "display" : "Unknown (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "X",
+      "display" : "fehlende Angabe",
+      "target" : [{
+        "code" : "1287211007",
+        "display" : "No information available (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

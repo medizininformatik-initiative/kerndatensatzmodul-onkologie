@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-onko-ops-nuklearmedizin"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-onko-ops-nuklearmedizin</b></p><a name="en-mii-vs-onko-ops-nuklearmedizin"> </a><a name="en-hcmii-vs-onko-ops-nuklearmedizin"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org/fhir/R4/shareablevalueset.html">Shareable ValueSet</a></p></div><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href="https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.de/CodeSystem/bfarm/ops"><code>http://fhir.de/CodeSystem/bfarm/ops</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>8-53</td><td style="color: #cccccc">Nuklearmedizinische Therapie</td></tr></table></li><li>Include codes from<a href="https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.de/CodeSystem/bfarm/ops"><code>http://fhir.de/CodeSystem/bfarm/ops</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span> where concept  descends from 8-53 (Nuklearmedizinische Therapie)</li></ul></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-ops-nuklearmedizin"/>
+  <version value="2026.0.3"/>
+  <name value="MII_VS_Onko_OPS_Nuklearmedizin"/>
+  <title value="MII VS Onkologie OPS Nuklearmedizin"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-07-02T12:18:38+00:00"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="OPS-Codes für Nuklearmedizinische Therapie"/>
+  <compose>
+    <include>
+      <system value="http://fhir.de/CodeSystem/bfarm/ops"/>
+      <concept>
+        <code value="8-53"/>
+      </concept>
+    </include>
+    <include>
+      <system value="http://fhir.de/CodeSystem/bfarm/ops"/>
+      <filter>
+        <property value="concept"/>
+        <op value="descendent-of"/>
+        <value value="8-53"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

@@ -1,0 +1,63 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "mii-cs-onko-verlauf-fernmetastasen",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablecodesystem"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-onko-verlauf-fernmetastasen</b></p><a name=\"en-mii-cs-onko-verlauf-fernmetastasen\"> </a><a name=\"en-hcmii-cs-onko-verlauf-fernmetastasen\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">K<a name=\"en-mii-cs-onko-verlauf-fernmetastasen-K\"> </a></td><td>keine Fernmetastasen nachweisbar</td></tr><tr><td style=\"white-space:nowrap\">R<a name=\"en-mii-cs-onko-verlauf-fernmetastasen-R\"> </a></td><td>neu aufgetretene Fernmetastase(n) bzw. Metastasenrezidiv</td></tr><tr><td style=\"white-space:nowrap\">T<a name=\"en-mii-cs-onko-verlauf-fernmetastasen-T\"> </a></td><td>Fernmetastasen Residuen</td></tr><tr><td style=\"white-space:nowrap\">P<a name=\"en-mii-cs-onko-verlauf-fernmetastasen-P\"> </a></td><td>Fernmetastasen Progress</td></tr><tr><td style=\"white-space:nowrap\">N<a name=\"en-mii-cs-onko-verlauf-fernmetastasen-N\"> </a></td><td>Fernmetastasen No Change</td></tr><tr><td style=\"white-space:nowrap\">F<a name=\"en-mii-cs-onko-verlauf-fernmetastasen-F\"> </a></td><td>fraglicher Befund</td></tr><tr><td style=\"white-space:nowrap\">U<a name=\"en-mii-cs-onko-verlauf-fernmetastasen-U\"> </a></td><td>unbekannt</td></tr><tr><td style=\"white-space:nowrap\">X<a name=\"en-mii-cs-onko-verlauf-fernmetastasen-X\"> </a></td><td>fehlende Angabe</td></tr></table></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen",
+  "version" : "2026.0.3",
+  "name" : "MII_CS_Onko_Verlauf_Fernmetastasen",
+  "title" : "MII CS Onkologie Verlauf Fernmetastasen",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-07-02T12:18:38+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "oBDS-spezifisches Codesystem für die Beurteilung von Fernmetastasen im Behandlungsverlauf ",
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 8,
+  "concept" : [{
+    "code" : "K",
+    "display" : "keine Fernmetastasen nachweisbar"
+  },
+  {
+    "code" : "R",
+    "display" : "neu aufgetretene Fernmetastase(n) bzw. Metastasenrezidiv"
+  },
+  {
+    "code" : "T",
+    "display" : "Fernmetastasen Residuen"
+  },
+  {
+    "code" : "P",
+    "display" : "Fernmetastasen Progress"
+  },
+  {
+    "code" : "N",
+    "display" : "Fernmetastasen No Change"
+  },
+  {
+    "code" : "F",
+    "display" : "fraglicher Befund"
+  },
+  {
+    "code" : "U",
+    "display" : "unbekannt"
+  },
+  {
+    "code" : "X",
+    "display" : "fehlende Angabe"
+  }]
+}

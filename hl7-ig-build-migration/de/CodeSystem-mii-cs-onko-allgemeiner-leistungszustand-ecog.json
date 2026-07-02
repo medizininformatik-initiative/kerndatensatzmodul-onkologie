@@ -1,0 +1,56 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "mii-cs-onko-allgemeiner-leistungszustand-ecog",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablecodesystem"]
+  },
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-onko-allgemeiner-leistungszustand-ecog</b></p><a name=\"mii-cs-onko-allgemeiner-leistungszustand-ecog\"> </a><a name=\"hcmii-cs-onko-allgemeiner-leistungszustand-ecog\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-ecog</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">0<a name=\"mii-cs-onko-allgemeiner-leistungszustand-ecog-0\"> </a></td><td>Normale, uneingeschränkte Aktivität wie vor der Erkrankung (90 - 100 % nach Karnofsky)</td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"mii-cs-onko-allgemeiner-leistungszustand-ecog-1\"> </a></td><td>Einschränkung bei körperlicher Anstrengung, aber gehfähig; leichte körperliche Arbeit bzw. Arbeit im Sitzen (z. B. leichte Hausarbeit oder Büroarbeit) möglich (70 - 80 % nach Karnofsky)</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"mii-cs-onko-allgemeiner-leistungszustand-ecog-2\"> </a></td><td>Gehfähig, Selbstversorgung möglich, aber nicht arbeitsfähig; kann mehr als 50 % der Wachzeit aufstehen (50 - 60 % nach Karnofsky)</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"mii-cs-onko-allgemeiner-leistungszustand-ecog-3\"> </a></td><td>Nur begrenzte Selbstversorgung möglich; ist 50 % oder mehr der Wachzeit an Bett oder Stuhl gebunden (30  40 % nach Karnofsky)</td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"mii-cs-onko-allgemeiner-leistungszustand-ecog-4\"> </a></td><td>Völlig pflegebedürftig, keinerlei Selbstversorgung möglich; völlig an Bett oder Stuhl gebunden (10 - 20 % nach Karnofsky)</td></tr><tr><td style=\"white-space:nowrap\">U<a name=\"mii-cs-onko-allgemeiner-leistungszustand-ecog-U\"> </a></td><td>Unbekannt</td></tr></table></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-ecog",
+  "version" : "2026.0.3",
+  "name" : "MII_CS_Onko_Allgemeiner_Leistungszustand_ECOG",
+  "title" : "MII CS Onkologie Allgemeiner Leistungszustand ECOG",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-07-02T12:18:38+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "oBDS-spezifisches Codesystem für den Allgemeinen Leistungszustand nach ECOG",
+  "caseSensitive" : true,
+  "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-ecog",
+  "content" : "complete",
+  "count" : 6,
+  "concept" : [{
+    "code" : "0",
+    "display" : "Normale, uneingeschränkte Aktivität wie vor der Erkrankung (90 - 100 % nach Karnofsky)"
+  },
+  {
+    "code" : "1",
+    "display" : "Einschränkung bei körperlicher Anstrengung, aber gehfähig; leichte körperliche Arbeit bzw. Arbeit im Sitzen (z. B. leichte Hausarbeit oder Büroarbeit) möglich (70 - 80 % nach Karnofsky)"
+  },
+  {
+    "code" : "2",
+    "display" : "Gehfähig, Selbstversorgung möglich, aber nicht arbeitsfähig; kann mehr als 50 % der Wachzeit aufstehen (50 - 60 % nach Karnofsky)"
+  },
+  {
+    "code" : "3",
+    "display" : "Nur begrenzte Selbstversorgung möglich; ist 50 % oder mehr der Wachzeit an Bett oder Stuhl gebunden (30  40 % nach Karnofsky)"
+  },
+  {
+    "code" : "4",
+    "display" : "Völlig pflegebedürftig, keinerlei Selbstversorgung möglich; völlig an Bett oder Stuhl gebunden (10 - 20 % nach Karnofsky)"
+  },
+  {
+    "code" : "U",
+    "display" : "Unbekannt"
+  }]
+}

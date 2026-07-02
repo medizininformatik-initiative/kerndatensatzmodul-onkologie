@@ -1,0 +1,223 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onkologie-to-mvgenomseq> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-cm-onkologie-to-mvgenomseq"] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap mii-cm-onkologie-to-mvgenomseq</b></p><a name=\"mii-cm-onkologie-to-mvgenomseq\"> </a><a name=\"hcmii-cm-onkologie-to-mvgenomseq\"> </a><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onkologie/ to https://www.bfarm.de/DE/Das-BfArM/Aufgaben/Modellvorhaben-Genomsequenzierung</p><br/><p><b>Group 1 </b>Mapping from <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor|2025.0.4</code> to <code>https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json|1.1.1</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Condition.code (Diagnose Primärtumor)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>diagnosisOd.mainDiagnosis (Haupttumordiagnose)</td><td>Abbildung über ICD-10-GM-Coding Code/System/Version</td></tr><tr><td>Condition.extension:Feststellungsdatum (Feststellungsdatum)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>diagnosisOd.mainDiagnosis.date (Datum der Diagnose)</td><td>Wenn Tag unbekannt, soll auf 15. gesetzt werden</td></tr><tr><td>Condition.bodySite.coding:icd-o-3.code (ICD-O-3 Topographie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>diagnosisOd.mainDiagnosis.icdoTopography (ICD-O-3 Topographie)</td><td/></tr><tr><td>Condition.bodySite.coding:icd-o-3.version (ICD-O-3 Version)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>diagnosisOd.mainDiagnosis.icdoVersion (ICD-O-3 Version)</td><td/></tr><tr><td>Condition.extension:morphology-behavior-icdo3.valueCodeableConcept.coding.code (ICD-O-3 Morphologie-Code)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>DiagnosisOd.mainDiagnosis.icdoMorphology (ICD-O-3 Morphologie)</td><td/></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-diagnose/StructureDefinition/Diagnose|2025.0.0</code> to <code>https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json|1.1.1</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Condition.code.coding (Diagnosecode)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#narrower\" title=\"narrower\">narrower</a></td><td>DiagnosisOd.additionalDiagnoses (Diagnosecode)</td><td>Abbildung über ICD-10-GM/OrphaCode/AlphaID jeweils mit Code/System/Version. Hier hauptsächlich relevante onkologische Begleit- und Vorerkrankungen. Diagnostizierte Keimbahnerkrankungen sollen über </td></tr><tr><td>Condition.extension:Feststellungsdatum (Feststellungsdatum)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>DiagnosisOd.additionalDiagnoses.date (Datum der Diagnose)</td><td>Wenn Tag unbekannt, soll auf 15. gesetzt werden</td></tr><tr><td>Condition.code.coding\" (Diagnosecode)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr></table><hr/><p><b>Group 3 </b>Mapping from <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog|2025.0.4</code> to <code>https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json|1.1.1</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>Observation.valueCodeableConcept.coding.code (ECOG-Performance-Status)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>ecogPerformanceStatusScore (ECOG-Performance-Status)</td></tr></table><hr/><p><b>Group 4 </b>Mapping from <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading|2025.0.4</code> to <code>https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json|1.1.1</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>Observation.valueCodeableConcept.coding.code (Histologisches Grading)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>grading (Histologisches Grading)</td></tr></table><hr/><p><b>Group 5 </b>Mapping from <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation|2025.0.4</code> to <code>https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json|1.1.1</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Observation.valueCodeableConcept.coding.code (TNM-Klassifikation)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>ecogPerformanceStatusScore (TNM-KLassifkation)</td><td>für Primärtherapie entscheidendes TNM(auswerterelevanter TNM)</td></tr><tr><td>Observation.valueCodeableConcept.coding.code (TNM-T-Kategorie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>ecogPerformanceStatusScore (TNM-KLassifkation)</td><td/></tr><tr><td>Observation.valueCodeableConcept.coding.code (TNM-N-Kategorie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>ecogPerformanceStatusScore (TNM-KLassifkation)</td><td/></tr><tr><td>Observation.valueCodeableConcept.coding.code (TNM-M-Kategorie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>ecogPerformanceStatusScore (TNM-KLassifkation)</td><td/></tr></table></div>"
+  ] ;
+  fhir:ConceptMap.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onkologie-to-mvgenomseq"] ;
+  fhir:ConceptMap.version [ fhir:value "2026.0.3"] ;
+  fhir:ConceptMap.name [ fhir:value "MII_CM_MVGenomSeq_Onkologie"] ;
+  fhir:ConceptMap.title [ fhir:value "MII Concept Map Modellvorhaben Genomsequenzierung Onkologie"] ;
+  fhir:ConceptMap.status [ fhir:value "draft"] ;
+  fhir:ConceptMap.experimental [ fhir:value "true"^^xsd:boolean] ;
+  fhir:ConceptMap.date [ fhir:value "2025-04-25"^^xsd:date] ;
+  fhir:ConceptMap.publisher [ fhir:value "Medizininformatik Initiative"] ;
+  fhir:ConceptMap.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "Medizininformatik Initiative" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.medizininformatik-initiative.de/" ]
+     ]
+  ] ;
+  fhir:ConceptMap.description [ fhir:value "Mapping der einzelnen MII-OnkologieProfile auf den Klinischen Datenkranz der MVGenomSeq"] ;
+  fhir:ConceptMap.purpose [ fhir:value "Das Ziel dieser ConceptMap ist die Abbildung der MII-OnkologieProfile auf den MVGenomSeq-Datenkranz. Die ConceptMap ist ein Teil des MII-Onkologiemoduls und soll den Datenintegrationszentren das Erstellen von harmonisierbaren ETL-Strecken erleichtern."] ;
+  fhir:ConceptMap.sourceUri [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onkologie/"] ;
+  fhir:ConceptMap.targetUri [ fhir:value "https://www.bfarm.de/DE/Das-BfArM/Aufgaben/Modellvorhaben-Genomsequenzierung"] ;
+  fhir:ConceptMap.group [
+     fhir:index -1 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor" ] ;
+     fhir:ConceptMap.group.sourceVersion [ fhir:value "2025.0.4" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json" ] ;
+     fhir:ConceptMap.group.targetVersion [ fhir:value "1.1.1" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Condition.code" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Diagnose Primärtumor" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "diagnosisOd.mainDiagnosis" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Haupttumordiagnose" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Abbildung über ICD-10-GM-Coding Code/System/Version" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Condition.extension:Feststellungsdatum" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Feststellungsdatum" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "diagnosisOd.mainDiagnosis.date" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Datum der Diagnose" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Wenn Tag unbekannt, soll auf 15. gesetzt werden" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Condition.bodySite.coding:icd-o-3.code" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "ICD-O-3 Topographie" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "diagnosisOd.mainDiagnosis.icdoTopography" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "ICD-O-3 Topographie" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Condition.bodySite.coding:icd-o-3.version" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "ICD-O-3 Version" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "diagnosisOd.mainDiagnosis.icdoVersion" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "ICD-O-3 Version" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Condition.extension:morphology-behavior-icdo3.valueCodeableConcept.coding.code" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "ICD-O-3 Morphologie-Code" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "DiagnosisOd.mainDiagnosis.icdoMorphology" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "ICD-O-3 Morphologie" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-diagnose/StructureDefinition/Diagnose" ] ;
+     fhir:ConceptMap.group.sourceVersion [ fhir:value "2025.0.0" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json" ] ;
+     fhir:ConceptMap.group.targetVersion [ fhir:value "1.1.1" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Condition.code.coding" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Diagnosecode" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "DiagnosisOd.additionalDiagnoses" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Diagnosecode" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "narrower" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Abbildung über ICD-10-GM/OrphaCode/AlphaID jeweils mit Code/System/Version. Hier hauptsächlich relevante onkologische Begleit- und Vorerkrankungen. Diagnostizierte Keimbahnerkrankungen sollen über " ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Condition.extension:Feststellungsdatum" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Feststellungsdatum" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "DiagnosisOd.additionalDiagnoses.date" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Datum der Diagnose" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Wenn Tag unbekannt, soll auf 15. gesetzt werden" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Condition.code.coding\"" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Diagnosecode" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog" ] ;
+     fhir:ConceptMap.group.sourceVersion [ fhir:value "2025.0.4" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json" ] ;
+     fhir:ConceptMap.group.targetVersion [ fhir:value "1.1.1" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Observation.valueCodeableConcept.coding.code" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "ECOG-Performance-Status" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "ecogPerformanceStatusScore" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "ECOG-Performance-Status" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading" ] ;
+     fhir:ConceptMap.group.sourceVersion [ fhir:value "2025.0.4" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json" ] ;
+     fhir:ConceptMap.group.targetVersion [ fhir:value "1.1.1" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Observation.valueCodeableConcept.coding.code" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Histologisches Grading" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "grading" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Histologisches Grading" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation" ] ;
+     fhir:ConceptMap.group.sourceVersion [ fhir:value "2025.0.4" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json" ] ;
+     fhir:ConceptMap.group.targetVersion [ fhir:value "1.1.1" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Observation.valueCodeableConcept.coding.code" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "TNM-Klassifikation" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "ecogPerformanceStatusScore" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "TNM-KLassifkation" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "für Primärtherapie entscheidendes TNM(auswerterelevanter TNM)" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Observation.valueCodeableConcept.coding.code" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "TNM-T-Kategorie" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "ecogPerformanceStatusScore" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "TNM-KLassifkation" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Observation.valueCodeableConcept.coding.code" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "TNM-N-Kategorie" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "ecogPerformanceStatusScore" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "TNM-KLassifkation" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Observation.valueCodeableConcept.coding.code" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "TNM-M-Kategorie" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "ecogPerformanceStatusScore" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "TNM-KLassifkation" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onkologie-to-mvgenomseq.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

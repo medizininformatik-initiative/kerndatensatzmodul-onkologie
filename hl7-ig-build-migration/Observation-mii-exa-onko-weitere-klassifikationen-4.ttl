@@ -1,0 +1,55 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-weitere-klassifikationen-4> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-weitere-klassifikationen-4"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen|2026.0.3" ;
+       fhir:index 0 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen|2026.0.3>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-weitere-klassifikationen-4</b></p><a name=\"mii-exa-onko-weitere-klassifikationen-4\"> </a><a name=\"hcmii-exa-onko-weitere-klassifikationen-4\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-weitere-klassifikationen.html\">MII PR Onkologie Weitere Klassifikationen</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:\">BINET Klassifikation für chronische lymphatische Leukämie</span></p><p><b>subject</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example\">Patient/example</a></p><p><b>focus</b>: <a href=\"Condition-primaertumor-example.html\">Condition Bösartige Neubildung: Brustdrüse, nicht näher bezeichnet</a></p><p><b>effective</b>: 2024-01-13</p><p><b>value</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds binet-b}\">BINET B - Intermediäres Stadium mit Lymphknotenvergrößerung oder Organomegalie</span></p><p><b>note</b>: </p><blockquote><div><p>BINET-Klassifikation wird spezifisch für chronische lymphatische Leukämie (CLL, ICD-10: C91.1) verwendet. Stadium B indiziert Lymphknotenvergrößerung in ≥3 Regionen oder Splenomegalie/Hepatomegalie ohne Anämie oder Thrombozytopenie.</p>\n</div></blockquote></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-weitere-klassifikationen-4</b></p><a name=\"en-mii-exa-onko-weitere-klassifikationen-4\"> </a><a name=\"en-hcmii-exa-onko-weitere-klassifikationen-4\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-weitere-klassifikationen.html\">MII PR Onkologie Weitere Klassifikationen</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:\">BINET Klassifikation für chronische lymphatische Leukämie</span></p><p><b>subject</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example\">Patient/example</a></p><p><b>focus</b>: <a href=\"Condition-primaertumor-example.html\">Condition Bösartige Neubildung: Brustdrüse, nicht näher bezeichnet</a></p><p><b>effective</b>: 2024-01-13</p><p><b>value</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds binet-b}\">BINET B - Intermediäres Stadium mit Lymphknotenvergrößerung oder Organomegalie</span></p><p><b>note</b>: </p><blockquote><div><p>BINET-Klassifikation wird spezifisch für chronische lymphatische Leukämie (CLL, ICD-10: C91.1) verwendet. Stadium B indiziert Lymphknotenvergrößerung in ≥3 Regionen oder Splenomegalie/Hepatomegalie ohne Anämie oder Thrombozytopenie.</p>\n</div></blockquote></div></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.text [ fhir:value "BINET Klassifikation für chronische lymphatische Leukämie" ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/example> ;
+     fhir:Reference.reference [ fhir:value "Patient/example" ]
+  ] ;
+  fhir:Observation.focus [
+     fhir:index 0 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/primaertumor-example> ;
+     fhir:Reference.reference [ fhir:value "Condition/primaertumor-example" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2024-01-13"^^xsd:date] ;
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds" ] ;
+       fhir:Coding.code [ fhir:value "binet-b" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "BINET B - Intermediäres Stadium mit Lymphknotenvergrößerung oder Organomegalie" ]
+  ] ;
+  fhir:Observation.note [
+     fhir:index 0 ;
+     fhir:Annotation.text [ fhir:value "BINET-Klassifikation wird spezifisch für chronische lymphatische Leukämie (CLL, ICD-10: C91.1) verwendet. Stadium B indiziert Lymphknotenvergrößerung in ≥3 Regionen oder Splenomegalie/Hepatomegalie ohne Anämie oder Thrombozytopenie." ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-weitere-klassifikationen-4.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

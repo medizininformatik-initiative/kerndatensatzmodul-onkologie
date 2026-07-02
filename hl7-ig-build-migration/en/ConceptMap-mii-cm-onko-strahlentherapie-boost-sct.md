@@ -1,0 +1,86 @@
+# MII CM Onko Strahlentherapie Boost SNOMED Mapping - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+
+## ConceptMap: MII CM Onko Strahlentherapie Boost SNOMED Mapping 
+
+ 
+Mapping Strahlentherapie Boost Codes zu SNOMED-CT 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "ConceptMap",
+  "id" : "mii-cm-onko-strahlentherapie-boost-sct",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-strahlentherapie-boost-sct",
+  "version" : "2026.0.3",
+  "name" : "MII CM Onko Strahlentherapie Boost SCT Mapping",
+  "title" : "MII CM Onko Strahlentherapie Boost SNOMED Mapping",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2024-04-11",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Mapping Strahlentherapie Boost Codes zu SNOMED-CT",
+  "purpose" : "Technical mapping to transform oBDS-Data into SNOMED",
+  "sourceUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
+  "targetUri" : "http://snomed.info/sct/900000000000207008/version/20240401",
+  "group" : [{
+    "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost",
+    "target" : "http://snomed.info/sct/900000000000207008/version/20240401",
+    "element" : [{
+      "code" : "J",
+      "display" : "ja, mit Boost o. n. A.",
+      "target" : [{
+        "code" : "445232009",
+        "display" : "Boost radiation therapy (procedure)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "SIB",
+      "display" : "simultan integrierter Boost",
+      "target" : [{
+        "code" : "445232009",
+        "display" : "Boost radiation therapy (procedure)",
+        "equivalence" : "wider"
+      }]
+    },
+    {
+      "code" : "SEQ",
+      "display" : "sequentieller Boost",
+      "target" : [{
+        "code" : "445232009",
+        "display" : "Boost radiation therapy (procedure)",
+        "equivalence" : "wider"
+      }]
+    },
+    {
+      "code" : "KON",
+      "display" : "konkomitanter Boost",
+      "target" : [{
+        "code" : "445232009",
+        "display" : "Boost radiation therapy (procedure)",
+        "equivalence" : "wider"
+      }]
+    },
+    {
+      "code" : "N",
+      "display" : "nein, ohne Boost",
+      "target" : [{
+        "code" : "373067005",
+        "display" : "No (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}
+
+```

@@ -1,0 +1,56 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "mii-cs-onko-mamma-her2neu-status-leitlinie",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablecodesystem"]
+  },
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-onko-mamma-her2neu-status-leitlinie</b></p><a name=\"mii-cs-onko-mamma-her2neu-status-leitlinie\"> </a><a name=\"hcmii-cs-onko-mamma-her2neu-status-leitlinie\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-leitlinie</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">positiv<a name=\"mii-cs-onko-mamma-her2neu-status-leitlinie-positiv\"> </a></td><td>HER2-positiv</td><td>HER2-positiv: IHC 3+ (Score 3+) oder IHC 2+ (Score 2+) und ISH positiv</td></tr><tr><td style=\"white-space:nowrap\">low<a name=\"mii-cs-onko-mamma-her2neu-status-leitlinie-low\"> </a></td><td>HER2-low</td><td>HER2-low: IHC 1+ oder IHC 2+ und ISH negativ</td></tr><tr><td style=\"white-space:nowrap\">ultralow<a name=\"mii-cs-onko-mamma-her2neu-status-leitlinie-ultralow\"> </a></td><td>HER2-ultralow</td><td>HER2-ultralow: IHC 0 mit Membranfärbung</td></tr><tr><td style=\"white-space:nowrap\">negativ<a name=\"mii-cs-onko-mamma-her2neu-status-leitlinie-negativ\"> </a></td><td>HER2-negativ</td><td>HER2-negativ: IHC 0 ohne Membranfärbung</td></tr><tr><td style=\"white-space:nowrap\">equivocal<a name=\"mii-cs-onko-mamma-her2neu-status-leitlinie-equivocal\"> </a></td><td>equivocal</td><td>Equivocal: Grenzwertig/unklarer Befund, weitere Testung erforderlich</td></tr></table></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-leitlinie",
+  "version" : "2026.0.3",
+  "name" : "MII_CS_Onko_Mamma_Her2neu_Status_Leitlinie",
+  "title" : "MII CS Onkologie Mamma Her2neu Status Leitlinie",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-07-02T12:18:38+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Codesystem für Her2neu Status basierend auf der S3-Leitlinie Mammakarzinom und ASCO/CAP Guidelines mit erweiterten Klassifikationen (HER2-low, HER2-ultralow)",
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 5,
+  "concept" : [{
+    "code" : "positiv",
+    "display" : "HER2-positiv",
+    "definition" : "HER2-positiv: IHC 3+ (Score 3+) oder IHC 2+ (Score 2+) und ISH positiv"
+  },
+  {
+    "code" : "low",
+    "display" : "HER2-low",
+    "definition" : "HER2-low: IHC 1+ oder IHC 2+ und ISH negativ"
+  },
+  {
+    "code" : "ultralow",
+    "display" : "HER2-ultralow",
+    "definition" : "HER2-ultralow: IHC 0 mit Membranfärbung"
+  },
+  {
+    "code" : "negativ",
+    "display" : "HER2-negativ",
+    "definition" : "HER2-negativ: IHC 0 ohne Membranfärbung"
+  },
+  {
+    "code" : "equivocal",
+    "display" : "equivocal",
+    "definition" : "Equivocal: Grenzwertig/unklarer Befund, weitere Testung erforderlich"
+  }]
+}

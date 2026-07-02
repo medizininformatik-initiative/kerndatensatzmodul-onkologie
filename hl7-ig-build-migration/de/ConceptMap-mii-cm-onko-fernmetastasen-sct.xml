@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="mii-cm-onko-fernmetastasen-sct"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap mii-cm-onko-fernmetastasen-sct</b></p><a name="mii-cm-onko-fernmetastasen-sct"> </a><a name="hcmii-cm-onko-fernmetastasen-sct"> </a><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <a href="CodeSystem-mii-cs-onko-fernmetastasen.html">MII CS Onkologie Fernmetastasen</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>PUL (Lunge)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>258332000 (PUL (body structure))</td><td/></tr><tr><td>OSS (Knochen)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>258333005 (OSS (body structure))</td><td/></tr><tr><td>HEP (Leber)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>258334004 (HEP (body structure))</td><td/></tr><tr><td>BRA (Hirn)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>313367003 (BRA (body structure))</td><td/></tr><tr><td>LYM (Lymphknoten)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>258336002 (LYM (body structure))</td><td/></tr><tr><td>MAR (Knochenmark)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>14016003 (Bone marrow structure (body structure))</td><td>In TNM 8. Edition ist MAR als Lokalisation mit aufgeführt, in der aktuellen SNOMED-Version so aber nicht enthalten.</td></tr><tr><td>PLE (Pleura)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>258337006 (PLE (body structure))</td><td/></tr><tr><td>PER (Peritoneum)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>258338001 (PER (body structure))</td><td/></tr><tr><td>ADR (Nebennieren)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>258339009 (ADR (body structure))</td><td/></tr><tr><td>SKI (Haut)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>258340006 (SKI (body structure))</td><td/></tr><tr><td>OTH (andere Organe)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>258348004 (OTH (body structure))</td><td/></tr><tr><td>GEN (generalisierte Metastasierung)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>405843009 (Widespread metastatic malignant neoplastic disease (disorder))</td><td>no specific localisation term for generalized (except maybe 60132005 as Generalized (qualifier value)), but this concept is equally valid to describe the condition</td></tr></table></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-fernmetastasen-sct"/>
+  <version value="2026.0.3"/>
+  <name value="mii-cm-onko-fernmetastasen-sct-mapping"/>
+  <title value="Fernmetastasen Mapping"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2026-07-02T12:18:38+00:00"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="Fernmetastasen"/>
+  <purpose value="Technical mapping to transform oBDS-Data into SNOMED"/>
+  <sourceUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/"/>
+  <targetUri value="http://snomed.info/sct/900000000000207008/version/20240401"/>
+  <group>
+    <source value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen"/>
+    <target value="http://snomed.info/sct/900000000000207008/version/20240401"/>
+    <element>
+      <code value="PUL"/>
+      <display value="Lunge"/>
+      <target>
+        <code value="258332000"/>
+        <display value="PUL (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OSS"/>
+      <display value="Knochen"/>
+      <target>
+        <code value="258333005"/>
+        <display value="OSS (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="HEP"/>
+      <display value="Leber"/>
+      <target>
+        <code value="258334004"/>
+        <display value="HEP (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="BRA"/>
+      <display value="Hirn"/>
+      <target>
+        <code value="313367003"/>
+        <display value="BRA (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="LYM"/>
+      <display value="Lymphknoten"/>
+      <target>
+        <code value="258336002"/>
+        <display value="LYM (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="MAR"/>
+      <display value="Knochenmark"/>
+      <target>
+        <code value="14016003"/>
+        <display value="Bone marrow structure (body structure)"/>
+        <equivalence value="equivalent"/>
+        <comment value="In TNM 8. Edition ist MAR als Lokalisation mit aufgeführt, in der aktuellen SNOMED-Version so aber nicht enthalten."/>
+      </target>
+    </element>
+    <element>
+      <code value="PLE"/>
+      <display value="Pleura"/>
+      <target>
+        <code value="258337006"/>
+        <display value="PLE (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="PER"/>
+      <display value="Peritoneum"/>
+      <target>
+        <code value="258338001"/>
+        <display value="PER (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="ADR"/>
+      <display value="Nebennieren"/>
+      <target>
+        <code value="258339009"/>
+        <display value="ADR (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="SKI"/>
+      <display value="Haut"/>
+      <target>
+        <code value="258340006"/>
+        <display value="SKI (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OTH"/>
+      <display value="andere Organe"/>
+      <target>
+        <code value="258348004"/>
+        <display value="OTH (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="GEN"/>
+      <display value="generalisierte Metastasierung"/>
+      <target>
+        <code value="405843009"/>
+        <display value="Widespread metastatic malignant neoplastic disease (disorder)"/>
+        <equivalence value="equivalent"/>
+        <comment value="no specific localisation term for generalized (except maybe 60132005 as Generalized (qualifier value)), but this concept is equally valid to describe the condition"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

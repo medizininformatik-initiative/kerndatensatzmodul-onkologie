@@ -1,0 +1,66 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "mii-cs-onko-nebenwirkung-ctcae-grad",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablecodesystem"]
+  },
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-onko-nebenwirkung-ctcae-grad</b></p><a name=\"mii-cs-onko-nebenwirkung-ctcae-grad\"> </a><a name=\"hcmii-cs-onko-nebenwirkung-ctcae-grad\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"mii-cs-onko-nebenwirkung-ctcae-grad-1\"> </a></td><td>mild</td><td>Mild</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"mii-cs-onko-nebenwirkung-ctcae-grad-2\"> </a></td><td>moderat</td><td>Moderat</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"mii-cs-onko-nebenwirkung-ctcae-grad-3\"> </a></td><td>schwerwiegend</td><td>Schwerwiegend</td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"mii-cs-onko-nebenwirkung-ctcae-grad-4\"> </a></td><td>lebensbedrohlich</td><td>Lebensbedrohlich</td></tr><tr><td style=\"white-space:nowrap\">5<a name=\"mii-cs-onko-nebenwirkung-ctcae-grad-5\"> </a></td><td>tödlich</td><td>Tödlich</td></tr><tr><td style=\"white-space:nowrap\">U<a name=\"mii-cs-onko-nebenwirkung-ctcae-grad-U\"> </a></td><td>unbekannt</td><td>Unbekannt</td></tr><tr><td style=\"white-space:nowrap\">K<a name=\"mii-cs-onko-nebenwirkung-ctcae-grad-K\"> </a></td><td>keine</td><td>Keine</td></tr></table></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad",
+  "version" : "2026.0.3",
+  "name" : "MII_CS_Onko_Nebenwirkung_CTCAE_Grad",
+  "title" : "MII CS Onko Nebenwirkung nach CTCAE-Grad",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-07-02T12:18:38+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Gibt an, zu welchem Schweregrad von Nebenwirkungen es bei der Bestrahlung oder der systemischen Therapie gekommen ist.",
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 7,
+  "concept" : [{
+    "code" : "1",
+    "display" : "mild",
+    "definition" : "Mild"
+  },
+  {
+    "code" : "2",
+    "display" : "moderat",
+    "definition" : "Moderat"
+  },
+  {
+    "code" : "3",
+    "display" : "schwerwiegend",
+    "definition" : "Schwerwiegend"
+  },
+  {
+    "code" : "4",
+    "display" : "lebensbedrohlich",
+    "definition" : "Lebensbedrohlich"
+  },
+  {
+    "code" : "5",
+    "display" : "tödlich",
+    "definition" : "Tödlich"
+  },
+  {
+    "code" : "U",
+    "display" : "unbekannt",
+    "definition" : "Unbekannt"
+  },
+  {
+    "code" : "K",
+    "display" : "keine",
+    "definition" : "Keine"
+  }]
+}

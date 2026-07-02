@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="mii-cm-onko-asa-obds-loinc"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap mii-cm-onko-asa-obds-loinc</b></p><a name="mii-cm-onko-asa-obds-loinc"> </a><a name="hcmii-cm-onko-asa-obds-loinc"> </a><p>Mapping from <a href="ValueSet-mii-vs-onko-asa-obds.html">MII_VS_Onko_ASA_oBDS</a> to <a href="ValueSet-mii-vs-onko-asa-loinc.html">MII_VS_Onko_ASA_LOINC</a></p><br/><p>Mapping from <a href="CodeSystem-mii-cs-onko-asa-obds.html">MII CS Onkologie ASA-Klassifikation oBDS</a> to <a href="http://terminology.hl7.org/6.5.0/CodeSystem-v3-loinc.html">Logical Observation Identifiers, Names and Codes (LOINC)</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>1 (ASA I)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>LA28813-6 (ASA I)</td><td/></tr><tr><td>2 (ASA II)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>LA28814-4 (ASA II)</td><td/></tr><tr><td>3 (ASA III)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>LA28815-1 (ASA III)</td><td/></tr><tr><td>4 (ASA IV)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>LA28816-9 (ASA IV)</td><td/></tr><tr><td>5 (ASA V)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>LA28817-7 (ASA V)</td><td/></tr><tr><td>6 (ASA VI)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>LA28818-5 (ASA VI)</td><td/></tr><tr><td>U (Unbekannt)</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Kein entsprechender LOINC-Code für 'Unbekannt' verfügbar</td></tr></table></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-asa-obds-loinc"/>
+  <version value="2026.0.3"/>
+  <name value="MII_CM_Onko_ASA_oBDS_LOINC"/>
+  <title value="MII CM Onkologie ASA oBDS zu LOINC"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-07-02T12:18:38+00:00"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="Mapping von oBDS ASA-Klassifikation (ursprünglich KR9, generalisiert für alle onkologischen Indikationen) zu LOINC ASA Physical Status"/>
+  <sourceCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-asa-obds"/>
+  <targetCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-asa-loinc"/>
+  <group>
+    <source value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-asa-obds"/>
+    <target value="http://loinc.org"/>
+    <element>
+      <code value="1"/>
+      <display value="ASA I"/>
+      <target>
+        <code value="LA28813-6"/>
+        <display value="ASA I"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="2"/>
+      <display value="ASA II"/>
+      <target>
+        <code value="LA28814-4"/>
+        <display value="ASA II"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="3"/>
+      <display value="ASA III"/>
+      <target>
+        <code value="LA28815-1"/>
+        <display value="ASA III"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="4"/>
+      <display value="ASA IV"/>
+      <target>
+        <code value="LA28816-9"/>
+        <display value="ASA IV"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="5"/>
+      <display value="ASA V"/>
+      <target>
+        <code value="LA28817-7"/>
+        <display value="ASA V"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="6"/>
+      <display value="ASA VI"/>
+      <target>
+        <code value="LA28818-5"/>
+        <display value="ASA VI"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="U"/>
+      <display value="Unbekannt"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="Kein entsprechender LOINC-Code für 'Unbekannt' verfügbar"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

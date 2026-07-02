@@ -1,0 +1,879 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-operation-komplikation-sct> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-cm-onko-operation-komplikation-sct"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap mii-cm-onko-operation-komplikation-sct</b></p><a name=\"mii-cm-onko-operation-komplikation-sct\"> </a><a name=\"hcmii-cm-onko-operation-komplikation-sct\"> </a><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <a href=\"CodeSystem-mii-cs-onko-operation-komplikation.html\">MII CS Onkologie Operation Komplikationen</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>N (nein)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>373067005 (No (qualifier value))</td><td>sollte nicht gemeinsam mit anderen Antworten vergeben werden</td></tr><tr><td>U (unbekannt)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>261665006 (Unknown (qualifier value))</td><td/></tr><tr><td>ABD (Abszess in einem Drainagekanal)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>128477000 (Abscess (disorder))</td><td>Abzsess in Drainagekanal existiert nicht als Konzept, kann ggfs. über Postkoordination konstruiert werden</td></tr><tr><td>ABS (Abszess, intraabdominaler oder intrathorakaler)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#narrower\" title=\"narrower\">narrower</a></td><td>75100008 (Abdominal abscess (disorder))</td><td>kein spezifischer Code für diese 'oder'-Konstruktion, daher spezifisch entweder Abdominal oder thorarical Abzess</td></tr><tr><td/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#narrower\" title=\"narrower\">narrower</a></td><td>405950009 (Abscess of thorax (disorder))</td><td>kein spezifischer Code für diese 'oder'-Konstruktion, daher spezifisch entweder Abdominal oder thorarical Abzess</td></tr><tr><td/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>128477000 (Abscess (disorder))</td><td>weiterfassend als Abszess kodiert</td></tr><tr><td>ASF (Abszess, subfaszialer)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>128477000 (Abscess (disorder))</td><td>keine englische Expression für die Spezifizierung subfaszial gefunden</td></tr><tr><td>ANI (Akute Niereninsuffizienz)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>723189000 (Acute renal insufficiency (disorder))</td><td/></tr><tr><td>AEP (Alkoholentzugspsychose)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>8635005 (Alcohol withdrawal delirium (disorder))</td><td/></tr><tr><td>ALR (Allergische Reaktion ohne Schocksymptomatik)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>419076005 (Allergic reaction (disorder))</td><td/></tr><tr><td>ANS (Anaphylaktischer Schock)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>735173007 (Shock due to anaphylaxis (disorder))</td><td/></tr><tr><td>AEE (Anastomoseninsuffizienz einer Enterostomie)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich</td></tr><tr><td>API (Apoplektischer Insult)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>230690007 (Cerebrovascular accident (disorder))</td><td/></tr><tr><td>BIF (Biliäre Fistel)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>53206008 (Fistula of bile duct (disorder))</td><td/></tr><tr><td>BOG (Blutung, obere gastrointestinale (z. B „Stressulkus“))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>37372002 (Upper gastrointestinal hemorrhage (disorder))</td><td/></tr><tr><td>BOE (Bolusverlegung eines Endotubus)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich</td></tr><tr><td>BSI (Bronchusstumpfinsuffizienz)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich</td></tr><tr><td>CHI (Cholangitis)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>82403002 (Cholangitis (disorder) )</td><td/></tr><tr><td>DAI (Darmanastomoseninsuffizienz)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#narrower\" title=\"narrower\">narrower</a></td><td>236091002 (Large intestine anastomotic leak (disorder))</td><td>kein SNOMED-Term für Gesamtdarm-Anastomoseninsuffizienz</td></tr><tr><td/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>236090001 (Small intestine anastomotic leak (disorder))</td><td>kein SNOMED-Term für Gesamtdarm-Anastomoseninsuffizienz</td></tr><tr><td>DPS (Darmpassagestörungen (z. B. protrahierte Atonie, Subileus, Ileus))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>81060008 (Intestinal obstruction (disorder))</td><td/></tr><tr><td>DIC (Disseminierte intravasale Koagulopathie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>67406007 (Disseminated intravascular coagulation (disorder))</td><td/></tr><tr><td>DEP (Drogenentzugspsychose)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>772133000 (Recreational drug misuse withdrawal (disorder))</td><td/></tr><tr><td>DLU (Druck- und Lagerungsschäden, z. B. Dekubitalulzera)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1163215007 (Pressure injury (disorder))</td><td/></tr><tr><td>DSI (Duodenalstumpfinsuffizienz)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>236089005 (Duodenal stump leak (disorder))</td><td/></tr><tr><td>ENF (Enterale Fistel)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>735426009 (Fistula of digestive system (disorder))</td><td/></tr><tr><td>GER (Gerinnungsstörung)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>64779008 (Blood coagulation disorder (disorder))</td><td/></tr><tr><td>HEM (Hämatemesis)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>8765009 (Hematemesis (disorder))</td><td/></tr><tr><td>HUR (Hämaturie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>34436003 (Blood in urine (finding))</td><td/></tr><tr><td>HAE (Hämorrhagischer Schock)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>355001 (Hemorrhagic shock (disorder))</td><td/></tr><tr><td>HFI (Harnfistel)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>57243009 (Urinary fistula (disorder))</td><td/></tr><tr><td>HNK (Hautnekrose im Operationsbereich)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>95347000 (Skin necrosis (disorder))</td><td>äquivalent insofern, als das im FHIR-Modell nach Komplikationen der OP gefragt wird; ansonsten ggfs. Spezifizierung über Postkoordination</td></tr><tr><td>HZI (Herzinsuffizienz)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>84114007 (Heart failure (disorder))</td><td/></tr><tr><td>HRS (Herzrhythmusstörungen)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>698247007 (Cardiac arrhythmia (disorder))</td><td/></tr><tr><td>HNA (Hirnnervenausfälle)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>73013002 (Cranial nerve disorder (disorder))</td><td/></tr><tr><td>HOP (Hirnorganisches Psychosyndrom (z. B. „Durchgangssyndrom“))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>2776000 (Delirium (disorder))</td><td/></tr><tr><td>HYB (Hyperbilirubinämie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>14783006 (Hyperbilirubinemia (disorder))</td><td/></tr><tr><td>HYF (Hypopharynxfistel)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>126663003 (Disorder of hypopharynx (disorder))</td><td/></tr><tr><td>IFV (Ileofemorale Venenthrombose)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>234044007 (Iliofemoral deep vein thrombosis (disorder))</td><td/></tr><tr><td>KAS (Kardiogener Schock)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>89138009 (Cardiogenic shock (disorder))</td><td/></tr><tr><td>KES (Komplikationen einer Stomaanlage)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich</td></tr><tr><td>KIM (Komplikation eines Implantates (Gefäßprothese, Totalendoprothese, Katheter), z. B. Dislokation)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>19220005 (Complication of implant (disorder))</td><td/></tr><tr><td>KRA (Krampfanfall)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>91175000 (Seizure (finding))</td><td/></tr><tr><td>KDS (Kurzdarmsyndrom)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>26629001 (Short bowel syndrome (disorder))</td><td/></tr><tr><td>LEV (Leberversagen)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>59927004 (Hepatic failure (disorder))</td><td/></tr><tr><td>LOE (Lungenödem)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>19242006 (Pulmonary edema (disorder))</td><td/></tr><tr><td>LYF (Lymphfistel)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>234105001 (Lymph fistula (disorder))</td><td/></tr><tr><td>LYE (Lymphozele)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>234109007 (Lymphocele (disorder))</td><td/></tr><tr><td>MES (Magenentleerungsstörung)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>386211005 (Disorder of function of stomach (disorder))</td><td/></tr><tr><td>MIL (Mechanischer Ileus)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>46420000 (Mechanical ileus (disorder))</td><td/></tr><tr><td>MED (Mediastinitis)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>373409004 (Inflammatory disorder of mediastinum (disorder))</td><td/></tr><tr><td>MAT (Mesenterialarterien- oder -venenthrombose)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#narrower\" title=\"narrower\">narrower</a></td><td>243410003 (Thrombosis of mesenteric artery (disorder))</td><td>es existiert weder das gemeinsame noch ein für Mesenterialvenenthrombose spezifisches Konzept in SNOMED</td></tr><tr><td>NIN (Nahtinsuffizienz, anderweitig nicht erwähnt)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich</td></tr><tr><td>MYI (Myokardinfarkt)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>22298006 (Myocardial infarction (disorder))</td><td/></tr><tr><td>RNB (Nachblutung, revisionsbedürftig, anderweitig nicht erwähnt)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>308896002 (Secondary hemorrhage postprocedure (disorder))</td><td/></tr><tr><td>NAB (Nachblutung, nicht revisionsbedürftig, anderweitig nicht erwähnt)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>110265006 (Postoperative hemorrhage (disorder))</td><td/></tr><tr><td>OES (Ösophagitis)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>16761005 (Esophagitis (disorder))</td><td/></tr><tr><td>PPA (Periphere Parese)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich</td></tr><tr><td>OSM (Osteitis, Osteomyelitis)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#narrower\" title=\"narrower\">narrower</a></td><td>274144001 (Bone inflammatory disease (disorder))</td><td>Spezifische Kodierung für Knochenentzündung</td></tr><tr><td/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#narrower\" title=\"narrower\">narrower</a></td><td>60168000 (Osteomyelitis (disorder))</td><td>Spezifische Kodierung für Knochenmarksentzündung</td></tr><tr><td>PAF (Pankreasfistel)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>25803005 (Pancreatic fistula (disorder))</td><td/></tr><tr><td>PIT (Pankreatitis)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>75694006 (Pancreatitis (disorder))</td><td/></tr><tr><td>PAB (Peranale Blutung)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>6072007 (Bleeding from anus (disorder))</td><td/></tr><tr><td>PAV (Peripherer arterieller Verschluss (Embolie, Thrombose))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>399957001 (Peripheral arterial occlusive disease (disorder))</td><td/></tr><tr><td>PER (Peritonitis)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>48661000 (Peritonitis (disorder))</td><td/></tr><tr><td>PLB (Platzbauch)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>698817002 (Dehiscence of postoperative abdominal wound (disorder))</td><td/></tr><tr><td>PEY (Pleuraempyem)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>58554001 (Empyema of pleura (disorder))</td><td/></tr><tr><td>PLE (Pleuraerguss)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>60046008 (Pleural effusion (disorder))</td><td/></tr><tr><td>PMN (Pneumonie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>233604007 (Pneumonia (disorder))</td><td/></tr><tr><td>PNT (Pneumothorax)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>36118008 (Pneumothorax (disorder))</td><td/></tr><tr><td>PDA (Protrahierte Darmatonie (paralytischer Ileus))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1162567000 (Postoperative paralytic ileus (disorder))</td><td/></tr><tr><td>PAE (Pulmonalarterienembolie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>59282003 (Pulmonary embolism (disorder))</td><td/></tr><tr><td>RPA (Rekurrensparese)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#narrower\" title=\"narrower\">narrower</a></td><td>1052240009 (Paresis of right vocal cord (disorder))</td><td>Kein gemeinsamer Überbegriff</td></tr><tr><td>RIN (Respiratorische Insuffizienz)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>409623005 (Respiratory insufficiency (disorder))</td><td/></tr><tr><td>SKI (Septische Komplikation eines Implantates)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>19220005 (Complication of implant (disorder))</td><td>Komplikation hat keine spezifischen Sepsis-Unterkonzepte, ggfs. über Postkoordination</td></tr><tr><td>SES (Septischer Schock)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>76571007 (Septic shock (disorder))</td><td/></tr><tr><td>SFH (Störungen des Flüssigkeits-, Elektrolyt- und Säurebasenhaushaltes)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>76314005 (Disorder of fluid AND/OR electrolyte (disorder))</td><td/></tr><tr><td>STK (Stomakomplikation (z. B. Blutung, Nekrose, Stenose))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>302918009 (Disorder of stoma (disorder))</td><td/></tr><tr><td>TZP (Thrombozytopenie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>302215000 (Thrombocytopenic disorder (disorder))</td><td/></tr><tr><td>TIA (TIA(transitorische ischämische Attacke) oder RIND(reversibles ischämisches neurologisches Defizit))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>266257000 (Transient ischemic attack (disorder))</td><td/></tr><tr><td>TRZ (Transfusionszwischenfall)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>82545002 (Blood transfusion reaction (disorder))</td><td/></tr><tr><td>WUH (Wundhämatom (konservativ therapiert))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>239160006 (Wound hematoma (finding))</td><td/></tr><tr><td>WSS (Wundheilungsstörung, subkutane)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>271618001 (Impaired wound healing (finding))</td><td/></tr></table></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap mii-cm-onko-operation-komplikation-sct</b></p><a name=\"en-mii-cm-onko-operation-komplikation-sct\"> </a><a name=\"en-hcmii-cm-onko-operation-komplikation-sct\"> </a><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <a href=\"CodeSystem-mii-cs-onko-operation-komplikation.html\">MII CS Onkologie Operation Komplikationen</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>N (nein)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>373067005 (No (qualifier value))</td><td>sollte nicht gemeinsam mit anderen Antworten vergeben werden</td></tr><tr><td>U (unbekannt)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>261665006 (Unknown (qualifier value))</td><td/></tr><tr><td>ABD (Abszess in einem Drainagekanal)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>128477000 (Abscess (disorder))</td><td>Abzsess in Drainagekanal existiert nicht als Konzept, kann ggfs. über Postkoordination konstruiert werden</td></tr><tr><td>ABS (Abszess, intraabdominaler oder intrathorakaler)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#narrower\" title=\"narrower\">narrower</a></td><td>75100008 (Abdominal abscess (disorder))</td><td>kein spezifischer Code für diese 'oder'-Konstruktion, daher spezifisch entweder Abdominal oder thorarical Abzess</td></tr><tr><td/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#narrower\" title=\"narrower\">narrower</a></td><td>405950009 (Abscess of thorax (disorder))</td><td>kein spezifischer Code für diese 'oder'-Konstruktion, daher spezifisch entweder Abdominal oder thorarical Abzess</td></tr><tr><td/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>128477000 (Abscess (disorder))</td><td>weiterfassend als Abszess kodiert</td></tr><tr><td>ASF (Abszess, subfaszialer)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>128477000 (Abscess (disorder))</td><td>keine englische Expression für die Spezifizierung subfaszial gefunden</td></tr><tr><td>ANI (Akute Niereninsuffizienz)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>723189000 (Acute renal insufficiency (disorder))</td><td/></tr><tr><td>AEP (Alkoholentzugspsychose)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>8635005 (Alcohol withdrawal delirium (disorder))</td><td/></tr><tr><td>ALR (Allergische Reaktion ohne Schocksymptomatik)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>419076005 (Allergic reaction (disorder))</td><td/></tr><tr><td>ANS (Anaphylaktischer Schock)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>735173007 (Shock due to anaphylaxis (disorder))</td><td/></tr><tr><td>AEE (Anastomoseninsuffizienz einer Enterostomie)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich</td></tr><tr><td>API (Apoplektischer Insult)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>230690007 (Cerebrovascular accident (disorder))</td><td/></tr><tr><td>BIF (Biliäre Fistel)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>53206008 (Fistula of bile duct (disorder))</td><td/></tr><tr><td>BOG (Blutung, obere gastrointestinale (z. B „Stressulkus“))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>37372002 (Upper gastrointestinal hemorrhage (disorder))</td><td/></tr><tr><td>BOE (Bolusverlegung eines Endotubus)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich</td></tr><tr><td>BSI (Bronchusstumpfinsuffizienz)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich</td></tr><tr><td>CHI (Cholangitis)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>82403002 (Cholangitis (disorder) )</td><td/></tr><tr><td>DAI (Darmanastomoseninsuffizienz)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#narrower\" title=\"narrower\">narrower</a></td><td>236091002 (Large intestine anastomotic leak (disorder))</td><td>kein SNOMED-Term für Gesamtdarm-Anastomoseninsuffizienz</td></tr><tr><td/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>236090001 (Small intestine anastomotic leak (disorder))</td><td>kein SNOMED-Term für Gesamtdarm-Anastomoseninsuffizienz</td></tr><tr><td>DPS (Darmpassagestörungen (z. B. protrahierte Atonie, Subileus, Ileus))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>81060008 (Intestinal obstruction (disorder))</td><td/></tr><tr><td>DIC (Disseminierte intravasale Koagulopathie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>67406007 (Disseminated intravascular coagulation (disorder))</td><td/></tr><tr><td>DEP (Drogenentzugspsychose)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>772133000 (Recreational drug misuse withdrawal (disorder))</td><td/></tr><tr><td>DLU (Druck- und Lagerungsschäden, z. B. Dekubitalulzera)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1163215007 (Pressure injury (disorder))</td><td/></tr><tr><td>DSI (Duodenalstumpfinsuffizienz)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>236089005 (Duodenal stump leak (disorder))</td><td/></tr><tr><td>ENF (Enterale Fistel)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>735426009 (Fistula of digestive system (disorder))</td><td/></tr><tr><td>GER (Gerinnungsstörung)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>64779008 (Blood coagulation disorder (disorder))</td><td/></tr><tr><td>HEM (Hämatemesis)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>8765009 (Hematemesis (disorder))</td><td/></tr><tr><td>HUR (Hämaturie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>34436003 (Blood in urine (finding))</td><td/></tr><tr><td>HAE (Hämorrhagischer Schock)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>355001 (Hemorrhagic shock (disorder))</td><td/></tr><tr><td>HFI (Harnfistel)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>57243009 (Urinary fistula (disorder))</td><td/></tr><tr><td>HNK (Hautnekrose im Operationsbereich)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>95347000 (Skin necrosis (disorder))</td><td>äquivalent insofern, als das im FHIR-Modell nach Komplikationen der OP gefragt wird; ansonsten ggfs. Spezifizierung über Postkoordination</td></tr><tr><td>HZI (Herzinsuffizienz)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>84114007 (Heart failure (disorder))</td><td/></tr><tr><td>HRS (Herzrhythmusstörungen)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>698247007 (Cardiac arrhythmia (disorder))</td><td/></tr><tr><td>HNA (Hirnnervenausfälle)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>73013002 (Cranial nerve disorder (disorder))</td><td/></tr><tr><td>HOP (Hirnorganisches Psychosyndrom (z. B. „Durchgangssyndrom“))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>2776000 (Delirium (disorder))</td><td/></tr><tr><td>HYB (Hyperbilirubinämie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>14783006 (Hyperbilirubinemia (disorder))</td><td/></tr><tr><td>HYF (Hypopharynxfistel)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>126663003 (Disorder of hypopharynx (disorder))</td><td/></tr><tr><td>IFV (Ileofemorale Venenthrombose)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>234044007 (Iliofemoral deep vein thrombosis (disorder))</td><td/></tr><tr><td>KAS (Kardiogener Schock)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>89138009 (Cardiogenic shock (disorder))</td><td/></tr><tr><td>KES (Komplikationen einer Stomaanlage)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich</td></tr><tr><td>KIM (Komplikation eines Implantates (Gefäßprothese, Totalendoprothese, Katheter), z. B. Dislokation)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>19220005 (Complication of implant (disorder))</td><td/></tr><tr><td>KRA (Krampfanfall)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>91175000 (Seizure (finding))</td><td/></tr><tr><td>KDS (Kurzdarmsyndrom)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>26629001 (Short bowel syndrome (disorder))</td><td/></tr><tr><td>LEV (Leberversagen)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>59927004 (Hepatic failure (disorder))</td><td/></tr><tr><td>LOE (Lungenödem)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>19242006 (Pulmonary edema (disorder))</td><td/></tr><tr><td>LYF (Lymphfistel)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>234105001 (Lymph fistula (disorder))</td><td/></tr><tr><td>LYE (Lymphozele)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>234109007 (Lymphocele (disorder))</td><td/></tr><tr><td>MES (Magenentleerungsstörung)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>386211005 (Disorder of function of stomach (disorder))</td><td/></tr><tr><td>MIL (Mechanischer Ileus)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>46420000 (Mechanical ileus (disorder))</td><td/></tr><tr><td>MED (Mediastinitis)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>373409004 (Inflammatory disorder of mediastinum (disorder))</td><td/></tr><tr><td>MAT (Mesenterialarterien- oder -venenthrombose)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#narrower\" title=\"narrower\">narrower</a></td><td>243410003 (Thrombosis of mesenteric artery (disorder))</td><td>es existiert weder das gemeinsame noch ein für Mesenterialvenenthrombose spezifisches Konzept in SNOMED</td></tr><tr><td>NIN (Nahtinsuffizienz, anderweitig nicht erwähnt)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich</td></tr><tr><td>MYI (Myokardinfarkt)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>22298006 (Myocardial infarction (disorder))</td><td/></tr><tr><td>RNB (Nachblutung, revisionsbedürftig, anderweitig nicht erwähnt)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>308896002 (Secondary hemorrhage postprocedure (disorder))</td><td/></tr><tr><td>NAB (Nachblutung, nicht revisionsbedürftig, anderweitig nicht erwähnt)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>110265006 (Postoperative hemorrhage (disorder))</td><td/></tr><tr><td>OES (Ösophagitis)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>16761005 (Esophagitis (disorder))</td><td/></tr><tr><td>PPA (Periphere Parese)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich</td></tr><tr><td>OSM (Osteitis, Osteomyelitis)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#narrower\" title=\"narrower\">narrower</a></td><td>274144001 (Bone inflammatory disease (disorder))</td><td>Spezifische Kodierung für Knochenentzündung</td></tr><tr><td/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#narrower\" title=\"narrower\">narrower</a></td><td>60168000 (Osteomyelitis (disorder))</td><td>Spezifische Kodierung für Knochenmarksentzündung</td></tr><tr><td>PAF (Pankreasfistel)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>25803005 (Pancreatic fistula (disorder))</td><td/></tr><tr><td>PIT (Pankreatitis)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>75694006 (Pancreatitis (disorder))</td><td/></tr><tr><td>PAB (Peranale Blutung)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>6072007 (Bleeding from anus (disorder))</td><td/></tr><tr><td>PAV (Peripherer arterieller Verschluss (Embolie, Thrombose))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>399957001 (Peripheral arterial occlusive disease (disorder))</td><td/></tr><tr><td>PER (Peritonitis)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>48661000 (Peritonitis (disorder))</td><td/></tr><tr><td>PLB (Platzbauch)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>698817002 (Dehiscence of postoperative abdominal wound (disorder))</td><td/></tr><tr><td>PEY (Pleuraempyem)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>58554001 (Empyema of pleura (disorder))</td><td/></tr><tr><td>PLE (Pleuraerguss)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>60046008 (Pleural effusion (disorder))</td><td/></tr><tr><td>PMN (Pneumonie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>233604007 (Pneumonia (disorder))</td><td/></tr><tr><td>PNT (Pneumothorax)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>36118008 (Pneumothorax (disorder))</td><td/></tr><tr><td>PDA (Protrahierte Darmatonie (paralytischer Ileus))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1162567000 (Postoperative paralytic ileus (disorder))</td><td/></tr><tr><td>PAE (Pulmonalarterienembolie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>59282003 (Pulmonary embolism (disorder))</td><td/></tr><tr><td>RPA (Rekurrensparese)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#narrower\" title=\"narrower\">narrower</a></td><td>1052240009 (Paresis of right vocal cord (disorder))</td><td>Kein gemeinsamer Überbegriff</td></tr><tr><td>RIN (Respiratorische Insuffizienz)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>409623005 (Respiratory insufficiency (disorder))</td><td/></tr><tr><td>SKI (Septische Komplikation eines Implantates)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>19220005 (Complication of implant (disorder))</td><td>Komplikation hat keine spezifischen Sepsis-Unterkonzepte, ggfs. über Postkoordination</td></tr><tr><td>SES (Septischer Schock)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>76571007 (Septic shock (disorder))</td><td/></tr><tr><td>SFH (Störungen des Flüssigkeits-, Elektrolyt- und Säurebasenhaushaltes)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>76314005 (Disorder of fluid AND/OR electrolyte (disorder))</td><td/></tr><tr><td>STK (Stomakomplikation (z. B. Blutung, Nekrose, Stenose))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>302918009 (Disorder of stoma (disorder))</td><td/></tr><tr><td>TZP (Thrombozytopenie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>302215000 (Thrombocytopenic disorder (disorder))</td><td/></tr><tr><td>TIA (TIA(transitorische ischämische Attacke) oder RIND(reversibles ischämisches neurologisches Defizit))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>266257000 (Transient ischemic attack (disorder))</td><td/></tr><tr><td>TRZ (Transfusionszwischenfall)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>82545002 (Blood transfusion reaction (disorder))</td><td/></tr><tr><td>WUH (Wundhämatom (konservativ therapiert))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>239160006 (Wound hematoma (finding))</td><td/></tr><tr><td>WSS (Wundheilungsstörung, subkutane)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>271618001 (Impaired wound healing (finding))</td><td/></tr></table></div></div>"
+  ] ;
+  fhir:ConceptMap.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-operation-komplikation-sct"] ;
+  fhir:ConceptMap.version [ fhir:value "2026.0.3"] ;
+  fhir:ConceptMap.name [ fhir:value "MII CM Onko Operation Komplikation SCT Mapping"] ;
+  fhir:ConceptMap.title [ fhir:value "MII CM Onko Operation Komplikation SNOMED Mapping"] ;
+  fhir:ConceptMap.status [ fhir:value "active"] ;
+  fhir:ConceptMap.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ConceptMap.date [ fhir:value "2024-04-10"^^xsd:date] ;
+  fhir:ConceptMap.publisher [ fhir:value "Medizininformatik Initiative"] ;
+  fhir:ConceptMap.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Medizininformatik Initiative" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.medizininformatik-initiative.de/" ]
+     ]
+  ] ;
+  fhir:ConceptMap.description [ fhir:value "Mapping Operation Komplikation Codes zu SNOMED-CT"] ;
+  fhir:ConceptMap.purpose [ fhir:value "Technical mapping to transform oBDS-Data into SNOMED"] ;
+  fhir:ConceptMap.sourceUri [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/"] ;
+  fhir:ConceptMap.targetUri [ fhir:value "http://snomed.info/sct/900000000000207008/version/20240401"] ;
+  fhir:ConceptMap.group [
+     fhir:index 0 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "http://snomed.info/sct/900000000000207008/version/20240401" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index 0 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "N" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "nein" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "373067005" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "No (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "sollte nicht gemeinsam mit anderen Antworten vergeben werden" ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "U" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "unbekannt" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "261665006" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Unknown (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 2 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "ABD" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Abszess in einem Drainagekanal" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "128477000" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Abscess (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "wider" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Abzsess in Drainagekanal existiert nicht als Konzept, kann ggfs. über Postkoordination konstruiert werden" ]
+       ]
+     ], [
+       fhir:index 3 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "ABS" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Abszess, intraabdominaler oder intrathorakaler" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "75100008" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Abdominal abscess (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "narrower" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "kein spezifischer Code für diese 'oder'-Konstruktion, daher spezifisch entweder Abdominal oder thorarical Abzess" ]
+       ]
+     ], [
+       fhir:index 4 ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "405950009" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Abscess of thorax (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "narrower" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "kein spezifischer Code für diese 'oder'-Konstruktion, daher spezifisch entweder Abdominal oder thorarical Abzess" ]
+       ]
+     ], [
+       fhir:index 5 ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "128477000" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Abscess (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "wider" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "weiterfassend als Abszess kodiert" ]
+       ]
+     ], [
+       fhir:index 6 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "ASF" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Abszess, subfaszialer" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "128477000" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Abscess (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "wider" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "keine englische Expression für die Spezifizierung subfaszial gefunden" ]
+       ]
+     ], [
+       fhir:index 7 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "ANI" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Akute Niereninsuffizienz" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "723189000" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Acute renal insufficiency (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 8 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "AEP" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Alkoholentzugspsychose" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "8635005" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Alcohol withdrawal delirium (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 9 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "ALR" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Allergische Reaktion ohne Schocksymptomatik" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "419076005" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Allergic reaction (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 10 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "ANS" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Anaphylaktischer Schock" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "735173007" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Shock due to anaphylaxis (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 11 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "AEE" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Anastomoseninsuffizienz einer Enterostomie" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich" ]
+       ]
+     ], [
+       fhir:index 12 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "API" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Apoplektischer Insult" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "230690007" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Cerebrovascular accident (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 13 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "BIF" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Biliäre Fistel" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "53206008" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Fistula of bile duct (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 14 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "BOG" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Blutung, obere gastrointestinale (z. B „Stressulkus“)" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "37372002" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Upper gastrointestinal hemorrhage (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 15 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "BOE" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Bolusverlegung eines Endotubus" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich" ]
+       ]
+     ], [
+       fhir:index 16 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "BSI" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Bronchusstumpfinsuffizienz" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich" ]
+       ]
+     ], [
+       fhir:index 17 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "CHI" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Cholangitis" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "82403002" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Cholangitis (disorder) " ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 18 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "DAI" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Darmanastomoseninsuffizienz" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "236091002" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Large intestine anastomotic leak (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "narrower" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "kein SNOMED-Term für Gesamtdarm-Anastomoseninsuffizienz" ]
+       ]
+     ], [
+       fhir:index 19 ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "236090001" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Small intestine anastomotic leak (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "kein SNOMED-Term für Gesamtdarm-Anastomoseninsuffizienz" ]
+       ]
+     ], [
+       fhir:index 20 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "DPS" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Darmpassagestörungen (z. B. protrahierte Atonie, Subileus, Ileus)" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "81060008" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Intestinal obstruction (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 21 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "DIC" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Disseminierte intravasale Koagulopathie" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "67406007" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Disseminated intravascular coagulation (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 22 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "DEP" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Drogenentzugspsychose" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "772133000" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Recreational drug misuse withdrawal (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 23 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "DLU" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Druck- und Lagerungsschäden, z. B. Dekubitalulzera" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1163215007" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Pressure injury (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 24 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "DSI" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Duodenalstumpfinsuffizienz" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "236089005" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Duodenal stump leak (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 25 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "ENF" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Enterale Fistel" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "735426009" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Fistula of digestive system (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 26 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "GER" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Gerinnungsstörung" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "64779008" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Blood coagulation disorder (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 27 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "HEM" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Hämatemesis" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "8765009" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Hematemesis (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 28 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "HUR" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Hämaturie" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "34436003" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Blood in urine (finding)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 29 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "HAE" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Hämorrhagischer Schock" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "355001" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Hemorrhagic shock (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 30 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "HFI" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Harnfistel" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "57243009" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Urinary fistula (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 31 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "HNK" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Hautnekrose im Operationsbereich" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "95347000" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Skin necrosis (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "äquivalent insofern, als das im FHIR-Modell nach Komplikationen der OP gefragt wird; ansonsten ggfs. Spezifizierung über Postkoordination" ]
+       ]
+     ], [
+       fhir:index 32 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "HZI" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Herzinsuffizienz" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "84114007" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Heart failure (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 33 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "HRS" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Herzrhythmusstörungen" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "698247007" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Cardiac arrhythmia (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 34 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "HNA" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Hirnnervenausfälle" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "73013002" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Cranial nerve disorder (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 35 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "HOP" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Hirnorganisches Psychosyndrom (z. B. „Durchgangssyndrom“)" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "2776000" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Delirium (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 36 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "HYB" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Hyperbilirubinämie" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "14783006" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Hyperbilirubinemia (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 37 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "HYF" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Hypopharynxfistel" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "126663003" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Disorder of hypopharynx (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 38 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "IFV" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Ileofemorale Venenthrombose" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "234044007" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Iliofemoral deep vein thrombosis (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 39 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "KAS" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Kardiogener Schock" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "89138009" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Cardiogenic shock (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 40 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "KES" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Komplikationen einer Stomaanlage" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich" ]
+       ]
+     ], [
+       fhir:index 41 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "KIM" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Komplikation eines Implantates (Gefäßprothese, Totalendoprothese, Katheter), z. B. Dislokation" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "19220005" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Complication of implant (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 42 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "KRA" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Krampfanfall" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "91175000" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Seizure (finding)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 43 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "KDS" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Kurzdarmsyndrom" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "26629001" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Short bowel syndrome (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 44 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "LEV" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Leberversagen" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "59927004" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Hepatic failure (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 45 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "LOE" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Lungenödem" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "19242006" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Pulmonary edema (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 46 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "LYF" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Lymphfistel" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "234105001" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Lymph fistula (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 47 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "LYE" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Lymphozele" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "234109007" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Lymphocele (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 48 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "MES" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Magenentleerungsstörung" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "386211005" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Disorder of function of stomach (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 49 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "MIL" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Mechanischer Ileus" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "46420000" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Mechanical ileus (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 50 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "MED" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Mediastinitis" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "373409004" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Inflammatory disorder of mediastinum (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 51 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "MAT" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Mesenterialarterien- oder -venenthrombose" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "243410003" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Thrombosis of mesenteric artery (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "narrower" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "es existiert weder das gemeinsame noch ein für Mesenterialvenenthrombose spezifisches Konzept in SNOMED" ]
+       ]
+     ], [
+       fhir:index 52 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "NIN" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Nahtinsuffizienz, anderweitig nicht erwähnt" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich" ]
+       ]
+     ], [
+       fhir:index 53 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "MYI" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Myokardinfarkt" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "22298006" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Myocardial infarction (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 54 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "RNB" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Nachblutung, revisionsbedürftig, anderweitig nicht erwähnt" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "308896002" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Secondary hemorrhage postprocedure (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 55 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "NAB" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Nachblutung, nicht revisionsbedürftig, anderweitig nicht erwähnt" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "110265006" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Postoperative hemorrhage (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 56 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "OES" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Ösophagitis" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "16761005" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Esophagitis (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 57 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "PPA" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Periphere Parese" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich" ]
+       ]
+     ], [
+       fhir:index 58 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "OSM" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Osteitis, Osteomyelitis" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "274144001" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Bone inflammatory disease (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "narrower" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Spezifische Kodierung für Knochenentzündung" ]
+       ]
+     ], [
+       fhir:index 59 ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "60168000" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Osteomyelitis (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "narrower" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Spezifische Kodierung für Knochenmarksentzündung" ]
+       ]
+     ], [
+       fhir:index 60 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "PAF" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Pankreasfistel" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "25803005" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Pancreatic fistula (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 61 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "PIT" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Pankreatitis" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "75694006" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Pancreatitis (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 62 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "PAB" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Peranale Blutung" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "6072007" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Bleeding from anus (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 63 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "PAV" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Peripherer arterieller Verschluss (Embolie, Thrombose)" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "399957001" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Peripheral arterial occlusive disease (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 64 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "PER" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Peritonitis" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "48661000" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Peritonitis (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 65 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "PLB" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Platzbauch" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "698817002" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Dehiscence of postoperative abdominal wound (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 66 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "PEY" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Pleuraempyem" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "58554001" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Empyema of pleura (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 67 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "PLE" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Pleuraerguss" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "60046008" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Pleural effusion (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 68 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "PMN" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Pneumonie" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "233604007" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Pneumonia (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 69 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "PNT" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Pneumothorax" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "36118008" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Pneumothorax (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 70 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "PDA" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Protrahierte Darmatonie (paralytischer Ileus)" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1162567000" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Postoperative paralytic ileus (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 71 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "PAE" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Pulmonalarterienembolie" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "59282003" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Pulmonary embolism (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 72 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "RPA" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Rekurrensparese" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1052240009" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Paresis of right vocal cord (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "narrower" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Kein gemeinsamer Überbegriff" ]
+       ]
+     ], [
+       fhir:index 73 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "RIN" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Respiratorische Insuffizienz" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "409623005" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Respiratory insufficiency (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 74 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "SKI" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Septische Komplikation eines Implantates" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "19220005" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Complication of implant (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "wider" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Komplikation hat keine spezifischen Sepsis-Unterkonzepte, ggfs. über Postkoordination" ]
+       ]
+     ], [
+       fhir:index 75 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "SES" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Septischer Schock" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "76571007" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Septic shock (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 76 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "SFH" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Störungen des Flüssigkeits-, Elektrolyt- und Säurebasenhaushaltes" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "76314005" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Disorder of fluid AND/OR electrolyte (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 77 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "STK" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Stomakomplikation (z. B. Blutung, Nekrose, Stenose)" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "302918009" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Disorder of stoma (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 78 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "TZP" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Thrombozytopenie" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "302215000" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Thrombocytopenic disorder (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 79 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "TIA" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "TIA(transitorische ischämische Attacke) oder RIND(reversibles ischämisches neurologisches Defizit)" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "266257000" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Transient ischemic attack (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 80 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "TRZ" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Transfusionszwischenfall" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "82545002" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Blood transfusion reaction (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 81 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "WUH" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Wundhämatom (konservativ therapiert)" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "239160006" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Wound hematoma (finding)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 82 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "WSS" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Wundheilungsstörung, subkutane" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "271618001" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Impaired wound healing (finding)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-operation-komplikation-sct.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

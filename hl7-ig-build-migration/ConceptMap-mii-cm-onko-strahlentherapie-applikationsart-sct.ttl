@@ -1,0 +1,272 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-strahlentherapie-applikationsart-sct> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-cm-onko-strahlentherapie-applikationsart-sct"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap mii-cm-onko-strahlentherapie-applikationsart-sct</b></p><a name=\"mii-cm-onko-strahlentherapie-applikationsart-sct\"> </a><a name=\"hcmii-cm-onko-strahlentherapie-applikationsart-sct\"> </a><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <a href=\"CodeSystem-mii-cs-onko-strahlentherapie-applikationsart.html\">MII CS Onkologie Strahlentherapie Applikationsart</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>P (perkutan (Teletherapie))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>33195004 (External beam radiation therapy procedure (procedure))</td><td/></tr><tr><td>P-ST (perkutan stereotaktisch)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>395096001 (Stereotactic radiotherapy (procedure))</td><td/></tr><tr><td>P-4D (perkutan, atemgetriggert)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>721061000124106 (External beam radiotherapy with respiratory gating (procedure))</td><td/></tr><tr><td>P-ST4D (perkutan, stereotaktisch, atemgetriggert)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Einzelkonzepte über SNOMED abbildbar</td></tr><tr><td>PRCN-ST (perkutan, stereotaktisch ohne Chemotherapie/Sensitizer)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>PRCN-4D (perkutan, atemgetriggert, ohne Chemotherapie/Sensitizer)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>PRCN-ST4D (perkutan, stereotaktisch, atemgetriggert, ohne Chemotherapie/Sensitizer)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>PRCJ (perkutan mit Chemotherapie/Sensitizer)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>PRCJ-4D (perkutan, atemgetriggert, mit Chemotherapie/Sensitizer)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>K (endokavitäre Kontakttherapie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>384692006 (Intracavitary brachytherapy (procedure))</td><td/></tr><tr><td>KHDR (endokavitäre Kontakttherapie, high dose rate therapy)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>384692006 (Intracavitary brachytherapy (procedure))</td><td/></tr><tr><td>KLDR (endokavitäre Kontakttherapie, low dose rate therapy)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>384692006 (Intracavitary brachytherapy (procedure))</td><td/></tr><tr><td>KPDR (endokavitäre Kontakttherapie, pulsed dose rate therapy)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>384692006 (Intracavitary brachytherapy (procedure))</td><td/></tr><tr><td>I (intersitielle Kontakttherapie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>113120007 (Intracavitary brachytherapy (procedure))</td><td/></tr><tr><td>IHDR (intersitielle Kontakttherapie, high dose rate therapy)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>113120007 (Intracavitary brachytherapy (procedure))</td><td/></tr><tr><td>ILDR (intersitielle Kontakttherapie, low dose rate therapy)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>113120007 (Intracavitary brachytherapy (procedure))</td><td/></tr><tr><td>IPDR (intersitielle Kontakttherapie, pulsed dose rate therapy)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>113120007 (Intracavitary brachytherapy (procedure))</td><td/></tr><tr><td>MSIRT (selektive interne Radio-Therapie)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>MPRRT (Peptid-Radio-Rezeptor-Therapie)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>MPSMA (PSMA-Therapie)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>MRJT (Radiojod-Therapie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>64291000052106 (Radioactive iodine therapy (procedure))</td><td/></tr><tr><td>MRIT (Radioimmun-Therapie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>118640001 (Radioimmunotherapy (procedure))</td><td/></tr><tr><td>M (sonstige metabolische Radionuklidtherapie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>399315003 (Radionuclide therapy (procedure))</td><td/></tr><tr><td>S (Sonstiges)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>74964007 (Other (qualifier value))</td><td/></tr></table></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap mii-cm-onko-strahlentherapie-applikationsart-sct</b></p><a name=\"en-mii-cm-onko-strahlentherapie-applikationsart-sct\"> </a><a name=\"en-hcmii-cm-onko-strahlentherapie-applikationsart-sct\"> </a><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <a href=\"CodeSystem-mii-cs-onko-strahlentherapie-applikationsart.html\">MII CS Onkologie Strahlentherapie Applikationsart</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>P (perkutan (Teletherapie))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>33195004 (External beam radiation therapy procedure (procedure))</td><td/></tr><tr><td>P-ST (perkutan stereotaktisch)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>395096001 (Stereotactic radiotherapy (procedure))</td><td/></tr><tr><td>P-4D (perkutan, atemgetriggert)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>721061000124106 (External beam radiotherapy with respiratory gating (procedure))</td><td/></tr><tr><td>P-ST4D (perkutan, stereotaktisch, atemgetriggert)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Einzelkonzepte über SNOMED abbildbar</td></tr><tr><td>PRCN-ST (perkutan, stereotaktisch ohne Chemotherapie/Sensitizer)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>PRCN-4D (perkutan, atemgetriggert, ohne Chemotherapie/Sensitizer)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>PRCN-ST4D (perkutan, stereotaktisch, atemgetriggert, ohne Chemotherapie/Sensitizer)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>PRCJ (perkutan mit Chemotherapie/Sensitizer)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>PRCJ-4D (perkutan, atemgetriggert, mit Chemotherapie/Sensitizer)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>K (endokavitäre Kontakttherapie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>384692006 (Intracavitary brachytherapy (procedure))</td><td/></tr><tr><td>KHDR (endokavitäre Kontakttherapie, high dose rate therapy)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>384692006 (Intracavitary brachytherapy (procedure))</td><td/></tr><tr><td>KLDR (endokavitäre Kontakttherapie, low dose rate therapy)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>384692006 (Intracavitary brachytherapy (procedure))</td><td/></tr><tr><td>KPDR (endokavitäre Kontakttherapie, pulsed dose rate therapy)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>384692006 (Intracavitary brachytherapy (procedure))</td><td/></tr><tr><td>I (intersitielle Kontakttherapie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>113120007 (Intracavitary brachytherapy (procedure))</td><td/></tr><tr><td>IHDR (intersitielle Kontakttherapie, high dose rate therapy)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>113120007 (Intracavitary brachytherapy (procedure))</td><td/></tr><tr><td>ILDR (intersitielle Kontakttherapie, low dose rate therapy)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>113120007 (Intracavitary brachytherapy (procedure))</td><td/></tr><tr><td>IPDR (intersitielle Kontakttherapie, pulsed dose rate therapy)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>113120007 (Intracavitary brachytherapy (procedure))</td><td/></tr><tr><td>MSIRT (selektive interne Radio-Therapie)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>MPRRT (Peptid-Radio-Rezeptor-Therapie)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>MPSMA (PSMA-Therapie)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>MRJT (Radiojod-Therapie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>64291000052106 (Radioactive iodine therapy (procedure))</td><td/></tr><tr><td>MRIT (Radioimmun-Therapie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>118640001 (Radioimmunotherapy (procedure))</td><td/></tr><tr><td>M (sonstige metabolische Radionuklidtherapie)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>399315003 (Radionuclide therapy (procedure))</td><td/></tr><tr><td>S (Sonstiges)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>74964007 (Other (qualifier value))</td><td/></tr></table></div></div>"
+  ] ;
+  fhir:ConceptMap.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-strahlentherapie-applikationsart-sct"] ;
+  fhir:ConceptMap.version [ fhir:value "2026.0.3"] ;
+  fhir:ConceptMap.name [ fhir:value "MII CM Onko Strahlentherapie Applikationsart SCT Mapping"] ;
+  fhir:ConceptMap.title [ fhir:value "MII CM Onko Strahlentherapie Applikationsart SNOMED Mapping"] ;
+  fhir:ConceptMap.status [ fhir:value "active"] ;
+  fhir:ConceptMap.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ConceptMap.date [ fhir:value "2024-04-11"^^xsd:date] ;
+  fhir:ConceptMap.publisher [ fhir:value "Medizininformatik Initiative"] ;
+  fhir:ConceptMap.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Medizininformatik Initiative" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.medizininformatik-initiative.de/" ]
+     ]
+  ] ;
+  fhir:ConceptMap.description [ fhir:value "Mapping Strahlentherapie Applikationsart Codes zu SNOMED-CT"] ;
+  fhir:ConceptMap.purpose [ fhir:value "Technical mapping to transform oBDS-Data into SNOMED"] ;
+  fhir:ConceptMap.sourceUri [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/"] ;
+  fhir:ConceptMap.targetUri [ fhir:value "http://snomed.info/sct/900000000000207008/version/20240401"] ;
+  fhir:ConceptMap.group [
+     fhir:index 0 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "http://snomed.info/sct/900000000000207008/version/20240401" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index 0 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "P" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "perkutan (Teletherapie)" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "33195004" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "External beam radiation therapy procedure (procedure)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "P-ST" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "perkutan stereotaktisch" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "395096001" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Stereotactic radiotherapy (procedure)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 2 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "P-4D" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "perkutan, atemgetriggert" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "721061000124106" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "External beam radiotherapy with respiratory gating (procedure)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 3 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "P-ST4D" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "perkutan, stereotaktisch, atemgetriggert" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Einzelkonzepte über SNOMED abbildbar" ]
+       ]
+     ], [
+       fhir:index 4 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "PRCN-ST" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "perkutan, stereotaktisch ohne Chemotherapie/Sensitizer" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 5 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "PRCN-4D" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "perkutan, atemgetriggert, ohne Chemotherapie/Sensitizer" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 6 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "PRCN-ST4D" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "perkutan, stereotaktisch, atemgetriggert, ohne Chemotherapie/Sensitizer" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 7 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "PRCJ" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "perkutan mit Chemotherapie/Sensitizer" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 8 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "PRCJ-4D" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "perkutan, atemgetriggert, mit Chemotherapie/Sensitizer" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 9 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "K" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "endokavitäre Kontakttherapie" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "384692006" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Intracavitary brachytherapy (procedure)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 10 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "KHDR" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "endokavitäre Kontakttherapie, high dose rate therapy" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "384692006" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Intracavitary brachytherapy (procedure)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "wider" ]
+       ]
+     ], [
+       fhir:index 11 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "KLDR" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "endokavitäre Kontakttherapie, low dose rate therapy" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "384692006" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Intracavitary brachytherapy (procedure)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "wider" ]
+       ]
+     ], [
+       fhir:index 12 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "KPDR" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "endokavitäre Kontakttherapie, pulsed dose rate therapy" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "384692006" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Intracavitary brachytherapy (procedure)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "wider" ]
+       ]
+     ], [
+       fhir:index 13 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "I" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "intersitielle Kontakttherapie" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "113120007" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Intracavitary brachytherapy (procedure)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 14 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "IHDR" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "intersitielle Kontakttherapie, high dose rate therapy" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "113120007" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Intracavitary brachytherapy (procedure)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "wider" ]
+       ]
+     ], [
+       fhir:index 15 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "ILDR" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "intersitielle Kontakttherapie, low dose rate therapy" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "113120007" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Intracavitary brachytherapy (procedure)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "wider" ]
+       ]
+     ], [
+       fhir:index 16 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "IPDR" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "intersitielle Kontakttherapie, pulsed dose rate therapy" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "113120007" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Intracavitary brachytherapy (procedure)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "wider" ]
+       ]
+     ], [
+       fhir:index 17 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "MSIRT" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "selektive interne Radio-Therapie" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 18 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "MPRRT" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Peptid-Radio-Rezeptor-Therapie" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 19 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "MPSMA" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "PSMA-Therapie" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 20 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "MRJT" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Radiojod-Therapie" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "64291000052106" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Radioactive iodine therapy (procedure)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 21 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "MRIT" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Radioimmun-Therapie" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "118640001" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Radioimmunotherapy (procedure)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 22 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "M" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "sonstige metabolische Radionuklidtherapie" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "399315003" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Radionuclide therapy (procedure)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "wider" ]
+       ]
+     ], [
+       fhir:index 23 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "S" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Sonstiges" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "74964007" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Other (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-strahlentherapie-applikationsart-sct.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

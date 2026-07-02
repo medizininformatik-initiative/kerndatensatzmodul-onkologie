@@ -1,0 +1,71 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "mii-cs-onko-verlauf-gesamtbeurteilung",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablecodesystem"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-onko-verlauf-gesamtbeurteilung</b></p><a name=\"en-mii-cs-onko-verlauf-gesamtbeurteilung\"> </a><a name=\"en-hcmii-cs-onko-verlauf-gesamtbeurteilung\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">V<a name=\"en-mii-cs-onko-verlauf-gesamtbeurteilung-V\"> </a></td><td>Vollremission (complete remission, CR)</td></tr><tr><td style=\"white-space:nowrap\">T<a name=\"en-mii-cs-onko-verlauf-gesamtbeurteilung-T\"> </a></td><td>Teilremission (partial remission, PR)</td></tr><tr><td style=\"white-space:nowrap\">K<a name=\"en-mii-cs-onko-verlauf-gesamtbeurteilung-K\"> </a></td><td>keine Änderung (no change, NC) = stable disease</td></tr><tr><td style=\"white-space:nowrap\">P<a name=\"en-mii-cs-onko-verlauf-gesamtbeurteilung-P\"> </a></td><td>Progression</td></tr><tr><td style=\"white-space:nowrap\">D<a name=\"en-mii-cs-onko-verlauf-gesamtbeurteilung-D\"> </a></td><td>divergentes Geschehen</td></tr><tr><td style=\"white-space:nowrap\">B<a name=\"en-mii-cs-onko-verlauf-gesamtbeurteilung-B\"> </a></td><td>klinische Besserung des Zustandes, Teilremissionkriterien jedoch nicht erfüllt (minimal response, MR)</td></tr><tr><td style=\"white-space:nowrap\">R<a name=\"en-mii-cs-onko-verlauf-gesamtbeurteilung-R\"> </a></td><td>Vollremission mit residualen Auffälligkeiten (CRr)</td></tr><tr><td style=\"white-space:nowrap\">Y<a name=\"en-mii-cs-onko-verlauf-gesamtbeurteilung-Y\"> </a></td><td>Rezidiv</td></tr><tr><td style=\"white-space:nowrap\">U<a name=\"en-mii-cs-onko-verlauf-gesamtbeurteilung-U\"> </a></td><td>Beurteilung unmöglich</td></tr><tr><td style=\"white-space:nowrap\">X<a name=\"en-mii-cs-onko-verlauf-gesamtbeurteilung-X\"> </a></td><td>fehlende Angabe</td></tr></table></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung",
+  "version" : "2026.0.3",
+  "name" : "MII_CS_Onko_Verlauf_Gesamtbeurteilung",
+  "title" : "MII CS Onkologie Verlauf Gesamtbeurteilung",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-07-02T12:18:38+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "oBDS-spezifisches Codesystem für die Gesamtbeurteilung im Behandlungsverlauf ",
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 10,
+  "concept" : [{
+    "code" : "V",
+    "display" : "Vollremission (complete remission, CR)"
+  },
+  {
+    "code" : "T",
+    "display" : "Teilremission (partial remission, PR)"
+  },
+  {
+    "code" : "K",
+    "display" : "keine Änderung (no change, NC) = stable disease"
+  },
+  {
+    "code" : "P",
+    "display" : "Progression"
+  },
+  {
+    "code" : "D",
+    "display" : "divergentes Geschehen"
+  },
+  {
+    "code" : "B",
+    "display" : "klinische Besserung des Zustandes, Teilremissionkriterien jedoch nicht erfüllt (minimal response, MR)"
+  },
+  {
+    "code" : "R",
+    "display" : "Vollremission mit residualen Auffälligkeiten (CRr)"
+  },
+  {
+    "code" : "Y",
+    "display" : "Rezidiv"
+  },
+  {
+    "code" : "U",
+    "display" : "Beurteilung unmöglich"
+  },
+  {
+    "code" : "X",
+    "display" : "fehlende Angabe"
+  }]
+}
