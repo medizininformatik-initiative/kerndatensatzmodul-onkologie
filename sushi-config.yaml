@@ -82,9 +82,117 @@ dependencies:
 # │ input/includes. To use a provided input/includes/menu.xml file, delete the "menu"              │
 # │ property below.                                                                                │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+pages:
+  index.md:
+    title: Start
+  beschreibung-modul.md:
+    title: Beschreibung Modul Onkologie
+    kontext.md:
+      title: Kontext im Gesamtprojekt / Bezüge zu anderen Modulen
+    abweichungen-obds.md:
+      title: Abweichungen zum oBDS
+    bezug-nationale-standards.md:
+      title: Bezug zu nationalen Standards
+    bezug-internationale-standards.md:
+      title: Bezug zu internationalen Standards
+  anwendungsfaelle.md:
+    title: Anwendungsfälle / Informationsmodell
+    szenarien.md:
+      title: Beschreibung von Szenarien für die Anwendung der Module
+    datensaetze.md:
+      title: Datensätze inkl. Beschreibungen
+    uml.md:
+      title: UML
+  technische-implementierung.md:
+    title: Technische Implementierung
+    profile-inhalt-vererbung.md:
+      title: Profile - Inhalt und Vererbung
+    profile-beziehungen.md:
+      title: Profile - Beziehungen und Referenzen
+    verwendung-extensions.md:
+      title: Verwendung von Extensions
+    extension-bestrahlung.md:
+      title: "Extensions Strahlentherapie: Bestrahlung"
+    fhir-profile.md:
+      title: FHIR-Profile
+    fhir-profil-ressourcentyp.md:
+      title: FHIR-Profil (Ressourcentyp)
+    organspezifische-module.md:
+      title: Organspezifische Module
+    organspezifische-krk.md:
+      title: Kolorektales Karzinom (KRK)
+    organspezifische-mamma.md:
+      title: Mammakarzinom
+    organspezifische-melanom.md:
+      title: Malignes Melanom
+    organspezifische-prostata.md:
+      title: Prostatakarzinom
+    example-krk-bundle.md:
+      title: "Beispiel: KRK-Bundle"
+    example-mamma-bundle.md:
+      title: "Beispiel: Mamma-Bundle"
+    example-melanom-bundle.md:
+      title: "Beispiel: Melanom-Bundle"
+    tumorkonferenz-detailed-recommendations.md:
+      title: "Tumorkonferenz: Detaillierte Therapieempfehlungen"
+    terminologien.md:
+      title: Terminologien
+    terminologien-systemische-therapie.md:
+      title: "Terminologien: Systemische Therapie"
+    terminologien-weitere-klassifikationen.md:
+      title: "Terminologien: Weitere Klassifikationen"
+    capability-statement.md:
+      title: CapabilityStatement
+    qa-validierung.md:
+      title: QA und Validierung
+    obds-snomed-mapping.md:
+      title: oBDS-SNOMED-CT Mapping
+  referenzen.md:
+    title: Referenzen
+  release-notes.md:
+    title: Release Notes
+
 menu:
-  Home: index.html
-  Artifacts: artifacts.html
+  Start: index.html
+  Beschreibung:
+    Beschreibung Modul Onkologie: beschreibung-modul.html
+    Kontext im Gesamtprojekt: kontext.html
+    Abweichungen zum oBDS: abweichungen-obds.html
+    Bezug zu nationalen Standards: bezug-nationale-standards.html
+    Bezug zu internationalen Standards: bezug-internationale-standards.html
+  Anwendungsfälle:
+    Übersicht: anwendungsfaelle.html
+    Szenarien: szenarien.html
+    Datensätze inkl. Beschreibungen: datensaetze.html
+    UML: uml.html
+  Technische Implementierung:
+    Übersicht: technische-implementierung.html
+    Profile - Inhalt und Vererbung: profile-inhalt-vererbung.html
+    Profile - Beziehungen und Referenzen: profile-beziehungen.html
+    Verwendung von Extensions: verwendung-extensions.html
+    FHIR-Profile: fhir-profile.html
+    Organspezifische Module: organspezifische-module.html
+    Terminologien: terminologien.html
+    CapabilityStatement: capability-statement.html
+    QA und Validierung: qa-validierung.html
+    oBDS-SNOMED-CT Mapping: obds-snomed-mapping.html
+  Artefakte: artifacts.html
+  Referenzen: referenzen.html
+  Release Notes: release-notes.html
+
+parameters:
+  path-pages:
+    - input/intro-notes
+  i18n-default-lang: de
+  i18n-lang:
+    - en
+  translation-sources:
+    - input/translations/en
+  excludexml: false
+  excludejson: false
+  excludettl: true
+  special-url:
+    - https://www.medizininformatik-initiative.de/fhir/modul-onko/CapabilityStatement/metadata
 
 #   Guidance:
 #     Information Model: information_model.html
