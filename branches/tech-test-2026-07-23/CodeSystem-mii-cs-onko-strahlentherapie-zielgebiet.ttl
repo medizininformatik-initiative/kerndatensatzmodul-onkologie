@@ -1,0 +1,447 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-cs-onko-strahlentherapie-zielgebiet"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/shareablecodesystem" ;
+       fhir:index 0 ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-onko-strahlentherapie-zielgebiet</b></p><a name=\"mii-cs-onko-strahlentherapie-zielgebiet\"> </a><a name=\"hcmii-cs-onko-strahlentherapie-zielgebiet\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">1.1<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-1.461\"> </a></td><td>Ganzhirn (Neurokranium, inklusive Meningen)</td></tr><tr><td style=\"white-space:nowrap\">1.2<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-1.462\"> </a></td><td>Teilhirn (frontal/parietal/occipital/temporal/Kleinhirn)</td></tr><tr><td style=\"white-space:nowrap\">1.3<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-1.463\"> </a></td><td>Neuroachse/Rückenmark</td></tr><tr><td style=\"white-space:nowrap\">1.4<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-1.464\"> </a></td><td>Hypophyse</td></tr><tr><td style=\"white-space:nowrap\">1.5<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-1.465\"> </a></td><td>Hirn sonstiges</td></tr><tr><td style=\"white-space:nowrap\">2.1<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2.461\"> </a></td><td>Auge (r, l)</td></tr><tr><td style=\"white-space:nowrap\">2.2<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2.462\"> </a></td><td>Nase/Nasennebenhöhle</td></tr><tr><td style=\"white-space:nowrap\">2.3<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2.463\"> </a></td><td>Mundhöhle inklusive Mundhöhlenvorhof</td></tr><tr><td style=\"white-space:nowrap\">2.4<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2.464\"> </a></td><td>Ohr (r, l)</td></tr><tr><td style=\"white-space:nowrap\">2.5<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2.465\"> </a></td><td>Speicheldrüse (r, l)</td></tr><tr><td style=\"white-space:nowrap\">2.6<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2.466\"> </a></td><td>Pharynx</td></tr><tr><td style=\"white-space:nowrap\">2.7<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2.467\"> </a></td><td>Nasopharynx</td></tr><tr><td style=\"white-space:nowrap\">2.8<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2.468\"> </a></td><td>Oropharynx</td></tr><tr><td style=\"white-space:nowrap\">2.9<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2.469\"> </a></td><td>Hypopharynx</td></tr><tr><td style=\"white-space:nowrap\">2.10<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2.4610\"> </a></td><td>Larynx</td></tr><tr><td style=\"white-space:nowrap\">2.11<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2.4611\"> </a></td><td>Schilddrüse</td></tr><tr><td style=\"white-space:nowrap\">2.12<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-2.4612\"> </a></td><td>Kopf-Hals sonstige</td></tr><tr><td style=\"white-space:nowrap\">3.1<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-3.461\"> </a></td><td>Mamma als Ganzbrust (r, l)</td></tr><tr><td style=\"white-space:nowrap\">3.2<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-3.462\"> </a></td><td>Mamma als Teilbrust (r, l)</td></tr><tr><td style=\"white-space:nowrap\">3.3<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-3.463\"> </a></td><td>Thoraxwand, gegebenenfalls r, l</td></tr><tr><td style=\"white-space:nowrap\">3.4<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-3.464\"> </a></td><td>Lunge (r, l)</td></tr><tr><td style=\"white-space:nowrap\">3.5<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-3.465\"> </a></td><td>Ösophagus</td></tr><tr><td style=\"white-space:nowrap\">3.6<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-3.466\"> </a></td><td>Mediastinum (mediastinaler Lymphabfluss ist in Nummer 9 zu kodieren)</td></tr><tr><td style=\"white-space:nowrap\">3.7<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-3.467\"> </a></td><td>Thymus</td></tr><tr><td style=\"white-space:nowrap\">3.8<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-3.468\"> </a></td><td>Thorax sonstige</td></tr><tr><td style=\"white-space:nowrap\">4.1<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-4.461\"> </a></td><td>Magen</td></tr><tr><td style=\"white-space:nowrap\">4.2<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-4.462\"> </a></td><td>Pankreas</td></tr><tr><td style=\"white-space:nowrap\">4.3<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-4.463\"> </a></td><td>Leber, auch bei Teilbestrahlung</td></tr><tr><td style=\"white-space:nowrap\">4.4<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-4.464\"> </a></td><td>Milz</td></tr><tr><td style=\"white-space:nowrap\">4.5<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-4.465\"> </a></td><td>Niere (r, l)</td></tr><tr><td style=\"white-space:nowrap\">4.6<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-4.466\"> </a></td><td>Nebenniere (r, l)</td></tr><tr><td style=\"white-space:nowrap\">4.7<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-4.467\"> </a></td><td>Retroperitoneum (z. B. Sarkome)</td></tr><tr><td style=\"white-space:nowrap\">4.8<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-4.468\"> </a></td><td>Ureter (r, l)</td></tr><tr><td style=\"white-space:nowrap\">4.9<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-4.469\"> </a></td><td>Bauchwand (z. B. Sarkome)</td></tr><tr><td style=\"white-space:nowrap\">4.10<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-4.4610\"> </a></td><td>Oberbauch</td></tr><tr><td style=\"white-space:nowrap\">4.11<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-4.4611\"> </a></td><td>Gallengänge</td></tr><tr><td style=\"white-space:nowrap\">4.12<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-4.4612\"> </a></td><td>Gallenblase</td></tr><tr><td style=\"white-space:nowrap\">4.13<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-4.4613\"> </a></td><td>Abdomen sonstige</td></tr><tr><td style=\"white-space:nowrap\">5.1<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-5.461\"> </a></td><td>Rektum</td></tr><tr><td style=\"white-space:nowrap\">5.2<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-5.462\"> </a></td><td>Analbereich</td></tr><tr><td style=\"white-space:nowrap\">5.3<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-5.463\"> </a></td><td>Harnblase</td></tr><tr><td style=\"white-space:nowrap\">5.4<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-5.464\"> </a></td><td>Prostata</td></tr><tr><td style=\"white-space:nowrap\">5.5<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-5.465\"> </a></td><td>Hoden (r, l)</td></tr><tr><td style=\"white-space:nowrap\">5.6<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-5.466\"> </a></td><td>Penis</td></tr><tr><td style=\"white-space:nowrap\">5.7<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-5.467\"> </a></td><td>Uterus</td></tr><tr><td style=\"white-space:nowrap\">5.8<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-5.468\"> </a></td><td>Zervix</td></tr><tr><td style=\"white-space:nowrap\">5.9<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-5.469\"> </a></td><td>Vulva</td></tr><tr><td style=\"white-space:nowrap\">5.10<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-5.4610\"> </a></td><td>Vagina</td></tr><tr><td style=\"white-space:nowrap\">5.11<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-5.4611\"> </a></td><td>Beckenwand</td></tr><tr><td style=\"white-space:nowrap\">5.12<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-5.4612\"> </a></td><td>Becken sonstige</td></tr><tr><td style=\"white-space:nowrap\">6.1<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-6.461\"> </a></td><td>Schädel</td></tr><tr><td style=\"white-space:nowrap\">6.2<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-6.462\"> </a></td><td>Schädelbasis</td></tr><tr><td style=\"white-space:nowrap\">6.3<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-6.463\"> </a></td><td>Orbita (r, l)</td></tr><tr><td style=\"white-space:nowrap\">6.4<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-6.464\"> </a></td><td>Halswirbelsäule</td></tr><tr><td style=\"white-space:nowrap\">6.5<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-6.465\"> </a></td><td>Brustwirbelsäule</td></tr><tr><td style=\"white-space:nowrap\">6.6<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-6.466\"> </a></td><td>Lendenwirbelsäule</td></tr><tr><td style=\"white-space:nowrap\">6.7<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-6.467\"> </a></td><td>Sacrum /Coccygeum</td></tr><tr><td style=\"white-space:nowrap\">6.8<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-6.468\"> </a></td><td>Rippen (r, l)</td></tr><tr><td style=\"white-space:nowrap\">6.9<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-6.469\"> </a></td><td>Sternum</td></tr><tr><td style=\"white-space:nowrap\">6.10<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-6.4610\"> </a></td><td>Schulter (r, l)</td></tr><tr><td style=\"white-space:nowrap\">6.11<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-6.4611\"> </a></td><td>Oberarm (r, l)</td></tr><tr><td style=\"white-space:nowrap\">6.12<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-6.4612\"> </a></td><td>Unterarm (r, l)</td></tr><tr><td style=\"white-space:nowrap\">6.13<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-6.4613\"> </a></td><td>Hand (r, l)</td></tr><tr><td style=\"white-space:nowrap\">6.14<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-6.4614\"> </a></td><td>Becken (r, l)</td></tr><tr><td style=\"white-space:nowrap\">6.15<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-6.4615\"> </a></td><td>Hüfte (r, l)</td></tr><tr><td style=\"white-space:nowrap\">6.16<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-6.4616\"> </a></td><td>Oberschenkel (r, l)</td></tr><tr><td style=\"white-space:nowrap\">6.17<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-6.4617\"> </a></td><td>Unterschenkel (r, l)</td></tr><tr><td style=\"white-space:nowrap\">6.18<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-6.4618\"> </a></td><td>Fuß (r, l)</td></tr><tr><td style=\"white-space:nowrap\">6.19<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-6.4619\"> </a></td><td>Knochen sonstige</td></tr><tr><td style=\"white-space:nowrap\">7.1<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-7.461\"> </a></td><td>Kopf, Gesicht, Hals</td></tr><tr><td style=\"white-space:nowrap\">7.2<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-7.462\"> </a></td><td>obere Extremität ink* #lusive Schulter (r, l)</td></tr><tr><td style=\"white-space:nowrap\">7.3<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-7.463\"> </a></td><td>untere Extremität und Hüfte (r, l)</td></tr><tr><td style=\"white-space:nowrap\">7.4<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-7.464\"> </a></td><td>Thorax</td></tr><tr><td style=\"white-space:nowrap\">7.5<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-7.465\"> </a></td><td>Abdomen</td></tr><tr><td style=\"white-space:nowrap\">7.6<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-7.466\"> </a></td><td>Becken</td></tr><tr><td style=\"white-space:nowrap\">7.7<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-7.467\"> </a></td><td>Stammes o. n. A.</td></tr><tr><td style=\"white-space:nowrap\">7.8<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-7.468\"> </a></td><td>mehrere Bereiche überlappend</td></tr><tr><td style=\"white-space:nowrap\">7.9<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-7.469\"> </a></td><td>sonstige Weichteile o. n. A.</td></tr><tr><td style=\"white-space:nowrap\">8.1<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-8.461\"> </a></td><td>Ganzhaut</td></tr><tr><td style=\"white-space:nowrap\">8.2<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-8.462\"> </a></td><td>Teilbereiche</td></tr><tr><td style=\"white-space:nowrap\">9.1<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-9.461\"> </a></td><td>Cervikale Lymphknoten (r, l)</td></tr><tr><td style=\"white-space:nowrap\">9.2<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-9.462\"> </a></td><td>Supra-/infraclavikuläre Lymphknoten (r, l)</td></tr><tr><td style=\"white-space:nowrap\">9.3<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-9.463\"> </a></td><td>Axilläre Lymphknoten (r, l)</td></tr><tr><td style=\"white-space:nowrap\">9.4<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-9.464\"> </a></td><td>Retrosternale/sternale/Mammaria interna Lymphknoten</td></tr><tr><td style=\"white-space:nowrap\">9.5<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-9.465\"> </a></td><td>Mediastinale Lymphknoten</td></tr><tr><td style=\"white-space:nowrap\">9.6<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-9.466\"> </a></td><td>Hiläre Lymphknoten</td></tr><tr><td style=\"white-space:nowrap\">9.7<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-9.467\"> </a></td><td>Intraabdominale Lymphknoten (z. B. subphrenisch, perigastrisch, peripankreatisch, Leber-, Milzhilus)</td></tr><tr><td style=\"white-space:nowrap\">9.8<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-9.468\"> </a></td><td>Paraaortale/paracavale Lymphknoten</td></tr><tr><td style=\"white-space:nowrap\">9.9<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-9.469\"> </a></td><td>Retroperitoneale Lymphknoten</td></tr><tr><td style=\"white-space:nowrap\">9.10<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-9.4610\"> </a></td><td>Beckenlymphabfluss (r, l) (Iliakal commun, extern, intern, obturatorisch, präsakral)</td></tr><tr><td style=\"white-space:nowrap\">9.11<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-9.4611\"> </a></td><td>Inguinale Lymphknoten (r, l)</td></tr><tr><td style=\"white-space:nowrap\">9.12<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-9.4612\"> </a></td><td>Involved Node</td></tr><tr><td style=\"white-space:nowrap\">9.13<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-9.4613\"> </a></td><td>Involved Site</td></tr><tr><td style=\"white-space:nowrap\">9.14<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-9.4614\"> </a></td><td>Involved Field</td></tr><tr><td style=\"white-space:nowrap\">9.15<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-9.4615\"> </a></td><td>Sonstige Lymphknoten</td></tr><tr><td style=\"white-space:nowrap\">10.1<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-10.461\"> </a></td><td>Ganzkörperbestrahlung bei allogener Stammzelltransplantation</td></tr><tr><td style=\"white-space:nowrap\">10.2<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-10.462\"> </a></td><td>operative Zugangswege</td></tr><tr><td style=\"white-space:nowrap\">10.3<a name=\"mii-cs-onko-strahlentherapie-zielgebiet-10.463\"> </a></td><td>Sonstige, nicht genannte Zielgebiete</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet"] ;
+  fhir:CodeSystem.version [ fhir:value "2026.0.3"] ;
+  fhir:CodeSystem.name [ fhir:value "MII_CS_Onko_Strahlentherapie_Zielgebiet"] ;
+  fhir:CodeSystem.title [ fhir:value "MII CS Onkologie Strahlentherapie Zielgebiet"] ;
+  fhir:CodeSystem.status [ fhir:value "active"] ;
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-07-23T12:42:42+00:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "Medizininformatik Initiative"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Medizininformatik Initiative" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.medizininformatik-initiative.de/" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "oBDS-spezifisches Codesystem für Klassifikation von Zielgebiet von Strahlentherapie"] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.valueSet [
+     fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-zielgebiet" ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-zielgebiet>
+  ] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "98"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "1.1" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Ganzhirn (Neurokranium, inklusive Meningen)" ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "1.2" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Teilhirn (frontal/parietal/occipital/temporal/Kleinhirn)" ]
+  ], [
+     fhir:index 2 ;
+     fhir:CodeSystem.concept.code [ fhir:value "1.3" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neuroachse/Rückenmark" ]
+  ], [
+     fhir:index 3 ;
+     fhir:CodeSystem.concept.code [ fhir:value "1.4" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hypophyse" ]
+  ], [
+     fhir:index 4 ;
+     fhir:CodeSystem.concept.code [ fhir:value "1.5" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hirn sonstiges" ]
+  ], [
+     fhir:index 5 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.1" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Auge (r, l)" ]
+  ], [
+     fhir:index 6 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.2" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Nase/Nasennebenhöhle" ]
+  ], [
+     fhir:index 7 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.3" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Mundhöhle inklusive Mundhöhlenvorhof" ]
+  ], [
+     fhir:index 8 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.4" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Ohr (r, l)" ]
+  ], [
+     fhir:index 9 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.5" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Speicheldrüse (r, l)" ]
+  ], [
+     fhir:index 10 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.6" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Pharynx" ]
+  ], [
+     fhir:index 11 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.7" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Nasopharynx" ]
+  ], [
+     fhir:index 12 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.8" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Oropharynx" ]
+  ], [
+     fhir:index 13 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.9" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hypopharynx" ]
+  ], [
+     fhir:index 14 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.10" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Larynx" ]
+  ], [
+     fhir:index 15 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.11" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Schilddrüse" ]
+  ], [
+     fhir:index 16 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2.12" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Kopf-Hals sonstige" ]
+  ], [
+     fhir:index 17 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3.1" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Mamma als Ganzbrust (r, l)" ]
+  ], [
+     fhir:index 18 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3.2" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Mamma als Teilbrust (r, l)" ]
+  ], [
+     fhir:index 19 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3.3" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Thoraxwand, gegebenenfalls r, l" ]
+  ], [
+     fhir:index 20 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3.4" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Lunge (r, l)" ]
+  ], [
+     fhir:index 21 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3.5" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Ösophagus" ]
+  ], [
+     fhir:index 22 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3.6" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Mediastinum (mediastinaler Lymphabfluss ist in Nummer 9 zu kodieren)" ]
+  ], [
+     fhir:index 23 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3.7" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Thymus" ]
+  ], [
+     fhir:index 24 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3.8" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Thorax sonstige" ]
+  ], [
+     fhir:index 25 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.1" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Magen" ]
+  ], [
+     fhir:index 26 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.2" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Pankreas" ]
+  ], [
+     fhir:index 27 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.3" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Leber, auch bei Teilbestrahlung" ]
+  ], [
+     fhir:index 28 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.4" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Milz" ]
+  ], [
+     fhir:index 29 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.5" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Niere (r, l)" ]
+  ], [
+     fhir:index 30 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.6" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Nebenniere (r, l)" ]
+  ], [
+     fhir:index 31 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.7" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Retroperitoneum (z. B. Sarkome)" ]
+  ], [
+     fhir:index 32 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.8" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Ureter (r, l)" ]
+  ], [
+     fhir:index 33 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.9" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Bauchwand (z. B. Sarkome)" ]
+  ], [
+     fhir:index 34 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.10" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Oberbauch" ]
+  ], [
+     fhir:index 35 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.11" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Gallengänge" ]
+  ], [
+     fhir:index 36 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.12" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Gallenblase" ]
+  ], [
+     fhir:index 37 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4.13" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Abdomen sonstige" ]
+  ], [
+     fhir:index 38 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.1" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Rektum" ]
+  ], [
+     fhir:index 39 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.2" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Analbereich" ]
+  ], [
+     fhir:index 40 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.3" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Harnblase" ]
+  ], [
+     fhir:index 41 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.4" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Prostata" ]
+  ], [
+     fhir:index 42 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.5" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hoden (r, l)" ]
+  ], [
+     fhir:index 43 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.6" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Penis" ]
+  ], [
+     fhir:index 44 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.7" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Uterus" ]
+  ], [
+     fhir:index 45 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.8" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Zervix" ]
+  ], [
+     fhir:index 46 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.9" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Vulva" ]
+  ], [
+     fhir:index 47 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.10" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Vagina" ]
+  ], [
+     fhir:index 48 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.11" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Beckenwand" ]
+  ], [
+     fhir:index 49 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5.12" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Becken sonstige" ]
+  ], [
+     fhir:index 50 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6.1" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Schädel" ]
+  ], [
+     fhir:index 51 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6.2" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Schädelbasis" ]
+  ], [
+     fhir:index 52 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6.3" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Orbita (r, l)" ]
+  ], [
+     fhir:index 53 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6.4" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Halswirbelsäule" ]
+  ], [
+     fhir:index 54 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6.5" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Brustwirbelsäule" ]
+  ], [
+     fhir:index 55 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6.6" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Lendenwirbelsäule" ]
+  ], [
+     fhir:index 56 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6.7" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sacrum /Coccygeum" ]
+  ], [
+     fhir:index 57 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6.8" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Rippen (r, l)" ]
+  ], [
+     fhir:index 58 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6.9" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sternum" ]
+  ], [
+     fhir:index 59 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6.10" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Schulter (r, l)" ]
+  ], [
+     fhir:index 60 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6.11" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Oberarm (r, l)" ]
+  ], [
+     fhir:index 61 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6.12" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Unterarm (r, l)" ]
+  ], [
+     fhir:index 62 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6.13" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hand (r, l)" ]
+  ], [
+     fhir:index 63 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6.14" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Becken (r, l)" ]
+  ], [
+     fhir:index 64 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6.15" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hüfte (r, l)" ]
+  ], [
+     fhir:index 65 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6.16" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Oberschenkel (r, l)" ]
+  ], [
+     fhir:index 66 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6.17" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Unterschenkel (r, l)" ]
+  ], [
+     fhir:index 67 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6.18" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Fuß (r, l)" ]
+  ], [
+     fhir:index 68 ;
+     fhir:CodeSystem.concept.code [ fhir:value "6.19" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Knochen sonstige" ]
+  ], [
+     fhir:index 69 ;
+     fhir:CodeSystem.concept.code [ fhir:value "7.1" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Kopf, Gesicht, Hals" ]
+  ], [
+     fhir:index 70 ;
+     fhir:CodeSystem.concept.code [ fhir:value "7.2" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "obere Extremität ink* #lusive Schulter (r, l)" ]
+  ], [
+     fhir:index 71 ;
+     fhir:CodeSystem.concept.code [ fhir:value "7.3" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "untere Extremität und Hüfte (r, l)" ]
+  ], [
+     fhir:index 72 ;
+     fhir:CodeSystem.concept.code [ fhir:value "7.4" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Thorax" ]
+  ], [
+     fhir:index 73 ;
+     fhir:CodeSystem.concept.code [ fhir:value "7.5" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Abdomen" ]
+  ], [
+     fhir:index 74 ;
+     fhir:CodeSystem.concept.code [ fhir:value "7.6" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Becken" ]
+  ], [
+     fhir:index 75 ;
+     fhir:CodeSystem.concept.code [ fhir:value "7.7" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stammes o. n. A." ]
+  ], [
+     fhir:index 76 ;
+     fhir:CodeSystem.concept.code [ fhir:value "7.8" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "mehrere Bereiche überlappend" ]
+  ], [
+     fhir:index 77 ;
+     fhir:CodeSystem.concept.code [ fhir:value "7.9" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "sonstige Weichteile o. n. A." ]
+  ], [
+     fhir:index 78 ;
+     fhir:CodeSystem.concept.code [ fhir:value "8.1" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Ganzhaut" ]
+  ], [
+     fhir:index 79 ;
+     fhir:CodeSystem.concept.code [ fhir:value "8.2" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Teilbereiche" ]
+  ], [
+     fhir:index 80 ;
+     fhir:CodeSystem.concept.code [ fhir:value "9.1" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Cervikale Lymphknoten (r, l)" ]
+  ], [
+     fhir:index 81 ;
+     fhir:CodeSystem.concept.code [ fhir:value "9.2" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Supra-/infraclavikuläre Lymphknoten (r, l)" ]
+  ], [
+     fhir:index 82 ;
+     fhir:CodeSystem.concept.code [ fhir:value "9.3" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Axilläre Lymphknoten (r, l)" ]
+  ], [
+     fhir:index 83 ;
+     fhir:CodeSystem.concept.code [ fhir:value "9.4" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Retrosternale/sternale/Mammaria interna Lymphknoten" ]
+  ], [
+     fhir:index 84 ;
+     fhir:CodeSystem.concept.code [ fhir:value "9.5" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Mediastinale Lymphknoten" ]
+  ], [
+     fhir:index 85 ;
+     fhir:CodeSystem.concept.code [ fhir:value "9.6" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hiläre Lymphknoten" ]
+  ], [
+     fhir:index 86 ;
+     fhir:CodeSystem.concept.code [ fhir:value "9.7" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Intraabdominale Lymphknoten (z. B. subphrenisch, perigastrisch, peripankreatisch, Leber-, Milzhilus)" ]
+  ], [
+     fhir:index 87 ;
+     fhir:CodeSystem.concept.code [ fhir:value "9.8" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Paraaortale/paracavale Lymphknoten" ]
+  ], [
+     fhir:index 88 ;
+     fhir:CodeSystem.concept.code [ fhir:value "9.9" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Retroperitoneale Lymphknoten" ]
+  ], [
+     fhir:index 89 ;
+     fhir:CodeSystem.concept.code [ fhir:value "9.10" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Beckenlymphabfluss (r, l) (Iliakal commun, extern, intern, obturatorisch, präsakral)" ]
+  ], [
+     fhir:index 90 ;
+     fhir:CodeSystem.concept.code [ fhir:value "9.11" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Inguinale Lymphknoten (r, l)" ]
+  ], [
+     fhir:index 91 ;
+     fhir:CodeSystem.concept.code [ fhir:value "9.12" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Involved Node" ]
+  ], [
+     fhir:index 92 ;
+     fhir:CodeSystem.concept.code [ fhir:value "9.13" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Involved Site" ]
+  ], [
+     fhir:index 93 ;
+     fhir:CodeSystem.concept.code [ fhir:value "9.14" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Involved Field" ]
+  ], [
+     fhir:index 94 ;
+     fhir:CodeSystem.concept.code [ fhir:value "9.15" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sonstige Lymphknoten" ]
+  ], [
+     fhir:index 95 ;
+     fhir:CodeSystem.concept.code [ fhir:value "10.1" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Ganzkörperbestrahlung bei allogener Stammzelltransplantation" ]
+  ], [
+     fhir:index 96 ;
+     fhir:CodeSystem.concept.code [ fhir:value "10.2" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "operative Zugangswege" ]
+  ], [
+     fhir:index 97 ;
+     fhir:CodeSystem.concept.code [ fhir:value "10.3" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sonstige, nicht genannte Zielgebiete" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

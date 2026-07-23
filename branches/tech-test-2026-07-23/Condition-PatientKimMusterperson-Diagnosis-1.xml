@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="PatientKimMusterperson-Diagnosis-1"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Condition PatientKimMusterperson-Diagnosis-1</b></p><a name="PatientKimMusterperson-Diagnosis-1"> </a><a name="hcPatientKimMusterperson-Diagnosis-1"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-diagnose-primaertumor.html">MII PR Onkologie Diagnose Primärtumor</a></p></div><p><b>Condition Asserted Date</b>: 2021-05-09</p><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}">Active</span></p><p><b>verificationStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status unconfirmed}, {https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung 2}">klinische Diagnostik</span></p><p><b>code</b>: <span title="Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm C48.2}">Bösartige Neubildung: Peritoneum, nicht näher bezeichnet</span></p><p><b>bodySite</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/icd-o-3 C56.9}, {http://snomed.info/sct 15497006}">Ovar</span></p><p><b>subject</b>: <a href="Patient-PatientKimMusterperson.html">Kim Musterperson  (no stated gender), DoB: 1956-03-14</a></p><p><b>recordedDate</b>: 2021-06-10</p></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/condition-assertedDate">
+    <valueDateTime value="2021-05-09"/>
+  </extension>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="active"/>
+    </coding>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+      <code value="unconfirmed"/>
+    </coding>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung"/>
+      <code value="2"/>
+      <display value="klinische Diagnostik"/>
+    </coding>
+  </verificationStatus>
+  <code>
+    <coding>
+      <system value="http://fhir.de/CodeSystem/bfarm/icd-10-gm"/>
+      <version value="2020"/>
+      <code value="C48.2"/>
+      <display value="Bösartige Neubildung: Peritoneum, nicht näher bezeichnet"/>
+    </coding>
+  </code>
+  <bodySite>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/icd-o-3"/>
+      <code value="C56.9"/>
+      <display value="Ovar"/>
+    </coding>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="15497006"/>
+      <display value="Ovary"/>
+    </coding>
+  </bodySite>
+  <subject>
+    <reference value="Patient/PatientKimMusterperson"/>
+  </subject>
+  <recordedDate value="2021-06-10"/>
+</Condition>

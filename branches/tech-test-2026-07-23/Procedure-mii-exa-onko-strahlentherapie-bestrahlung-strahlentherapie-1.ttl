@@ -1,0 +1,118 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-strahlentherapie-bestrahlung-strahlentherapie-1> a fhir:Procedure ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-strahlentherapie-bestrahlung-strahlentherapie-1"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie|2026.0.3" ;
+       fhir:index 0 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie|2026.0.3>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Procedure mii-exa-onko-strahlentherapie-bestrahlung-strahlentherapie-1</b></p><a name=\"mii-exa-onko-strahlentherapie-bestrahlung-strahlentherapie-1\"> </a><a name=\"hcmii-exa-onko-strahlentherapie-bestrahlung-strahlentherapie-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.html\">MII PR Onkologie Strahlentherapie</a> version: 2026.0.3</p></div><p><b>Procedure Method</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart PRCJ}\">perkutan mit Chemotherapie/Sensitizer</span></p><p><b>MII EX Onko Strahlentherapie Bestrahlung Gesamtdosis</b>: 60 Gy</p><p><b>MII EX Onko Strahlentherapie Bestrahlung Einzeldosis</b>: 12 Gy</p><p><b>MII EX Onko Strahlentherapie Bestrahlung Boost</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost SIB}\">simultan integrierter Boost</span></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 1287742003}\">Radiotherapy (procedure)</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/ops 8-52}\">Strahlentherapie</span></p><p><b>subject</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example\">Patient/example</a></p><p><b>performed</b>: 2019-07-04 --&gt; 2019-09-14</p><p><b>bodySite</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet 3.4}\">Lunge (r, l)</span></p><p><b>usedCode</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart PN}\">Protonen (leichte Wasserstoffionen/H1/Leichtionen)</span></p></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/procedure-method" ] ;
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart" ] ;
+         fhir:Coding.code [ fhir:value "PRCJ" ]
+       ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:Extension.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis" ] ;
+     fhir:Extension.valueQuantity [
+       fhir:Quantity.value [ fhir:value "60"^^xsd:decimal ] ;
+       fhir:Quantity.unit [ fhir:value "Gy" ]
+     ]
+  ], [
+     fhir:index 2 ;
+     fhir:Extension.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis" ] ;
+     fhir:Extension.valueQuantity [
+       fhir:Quantity.value [ fhir:value "12"^^xsd:decimal ] ;
+       fhir:Quantity.unit [ fhir:value "Gy" ]
+     ]
+  ], [
+     fhir:index 3 ;
+     fhir:Extension.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-boost" ] ;
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost" ] ;
+         fhir:Coding.code [ fhir:value "SIB" ]
+       ]
+     ]
+  ] ;
+  fhir:Procedure.status [ fhir:value "completed"] ;
+  fhir:Procedure.category [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a sct:1287742003 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "1287742003" ] ;
+       fhir:Coding.display [ fhir:value "Radiotherapy (procedure)" ]
+     ]
+  ] ;
+  fhir:Procedure.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/ops" ] ;
+       fhir:Coding.version [ fhir:value "2019" ] ;
+       fhir:Coding.code [ fhir:value "8-52" ]
+     ]
+  ] ;
+  fhir:Procedure.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/example> ;
+     fhir:Reference.reference [ fhir:value "Patient/example" ]
+  ] ;
+  fhir:Procedure.performedPeriod [
+     fhir:Period.start [ fhir:value "2019-07-04"^^xsd:date ] ;
+     fhir:Period.end [ fhir:value "2019-09-14"^^xsd:date ]
+  ] ;
+  fhir:Procedure.bodySite [
+     fhir:index 0 ;
+     fhir:Element.extension [
+       fhir:index 0 ;
+       fhir:Extension.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation" ] ;
+       fhir:Extension.valueCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index 0 ;
+           fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation" ] ;
+           fhir:Coding.code [ fhir:value "L" ]
+         ]
+       ]
+     ] ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet" ] ;
+       fhir:Coding.code [ fhir:value "3.4" ]
+     ]
+  ] ;
+  fhir:Procedure.usedCode [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart" ] ;
+       fhir:Coding.code [ fhir:value "PN" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-strahlentherapie-bestrahlung-strahlentherapie-1.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

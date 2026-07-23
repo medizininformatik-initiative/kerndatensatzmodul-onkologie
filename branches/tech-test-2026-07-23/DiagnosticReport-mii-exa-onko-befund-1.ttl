@@ -1,0 +1,54 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/DiagnosticReport/mii-exa-onko-befund-1> a fhir:DiagnosticReport ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-befund-1"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-befund|2026.0.3" ;
+       fhir:index 0 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-befund|2026.0.3>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: DiagnosticReport mii-exa-onko-befund-1</b></p><a name=\"mii-exa-onko-befund-1\"> </a><a name=\"hcmii-exa-onko-befund-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-befund.html\">MII PR Onkologie Befund</a> version: 2026.0.3</p></div><h2><span title=\"Codes:{http://loinc.org 22034-3}\">Pathology report Cancer Narrative</span> </h2><table class=\"grid\"><tr><td>Subject</td><td>Kim Musterperson  (no stated gender), DoB: 1956-03-14</td></tr></table><p><b>Report Details</b></p><p>Mäßig differenziertes invasiv duktales Karzinom (8500/3), Grading G2 an der rechten Mamma, ...</p></div>"
+  ] ;
+  fhir:DiagnosticReport.basedOn [
+     fhir:index 0 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CarePlan/example-tumorboard-1> ;
+     fhir:Reference.reference [ fhir:value "CarePlan/example-tumorboard-1" ]
+  ] ;
+  fhir:DiagnosticReport.status [ fhir:value "final"] ;
+  fhir:DiagnosticReport.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a loinc:22034-3 ;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+       fhir:Coding.code [ fhir:value "22034-3" ]
+     ]
+  ] ;
+  fhir:DiagnosticReport.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/PatientKimMusterperson> ;
+     fhir:Reference.reference [ fhir:value "Patient/PatientKimMusterperson" ]
+  ] ;
+  fhir:DiagnosticReport.specimen [
+     fhir:index 0 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Specimen/example-specimen-2> ;
+     fhir:Reference.reference [ fhir:value "Specimen/example-specimen-2" ]
+  ] ;
+  fhir:DiagnosticReport.conclusion [ fhir:value "Mäßig differenziertes invasiv duktales Karzinom (8500/3), Grading G2 an der rechten Mamma, ..."] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/DiagnosticReport/mii-exa-onko-befund-1.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

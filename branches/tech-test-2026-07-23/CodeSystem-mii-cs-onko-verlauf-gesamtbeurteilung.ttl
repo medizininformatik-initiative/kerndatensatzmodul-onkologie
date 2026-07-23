@@ -1,0 +1,91 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-cs-onko-verlauf-gesamtbeurteilung"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/shareablecodesystem" ;
+       fhir:index 0 ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-onko-verlauf-gesamtbeurteilung</b></p><a name=\"mii-cs-onko-verlauf-gesamtbeurteilung\"> </a><a name=\"hcmii-cs-onko-verlauf-gesamtbeurteilung\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">V<a name=\"mii-cs-onko-verlauf-gesamtbeurteilung-V\"> </a></td><td>Vollremission (complete remission, CR)</td></tr><tr><td style=\"white-space:nowrap\">T<a name=\"mii-cs-onko-verlauf-gesamtbeurteilung-T\"> </a></td><td>Teilremission (partial remission, PR)</td></tr><tr><td style=\"white-space:nowrap\">K<a name=\"mii-cs-onko-verlauf-gesamtbeurteilung-K\"> </a></td><td>keine Änderung (no change, NC) = stable disease</td></tr><tr><td style=\"white-space:nowrap\">P<a name=\"mii-cs-onko-verlauf-gesamtbeurteilung-P\"> </a></td><td>Progression</td></tr><tr><td style=\"white-space:nowrap\">D<a name=\"mii-cs-onko-verlauf-gesamtbeurteilung-D\"> </a></td><td>divergentes Geschehen</td></tr><tr><td style=\"white-space:nowrap\">B<a name=\"mii-cs-onko-verlauf-gesamtbeurteilung-B\"> </a></td><td>klinische Besserung des Zustandes, Teilremissionkriterien jedoch nicht erfüllt (minimal response, MR)</td></tr><tr><td style=\"white-space:nowrap\">R<a name=\"mii-cs-onko-verlauf-gesamtbeurteilung-R\"> </a></td><td>Vollremission mit residualen Auffälligkeiten (CRr)</td></tr><tr><td style=\"white-space:nowrap\">Y<a name=\"mii-cs-onko-verlauf-gesamtbeurteilung-Y\"> </a></td><td>Rezidiv</td></tr><tr><td style=\"white-space:nowrap\">U<a name=\"mii-cs-onko-verlauf-gesamtbeurteilung-U\"> </a></td><td>Beurteilung unmöglich</td></tr><tr><td style=\"white-space:nowrap\">X<a name=\"mii-cs-onko-verlauf-gesamtbeurteilung-X\"> </a></td><td>fehlende Angabe</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung"] ;
+  fhir:CodeSystem.version [ fhir:value "2026.0.3"] ;
+  fhir:CodeSystem.name [ fhir:value "MII_CS_Onko_Verlauf_Gesamtbeurteilung"] ;
+  fhir:CodeSystem.title [ fhir:value "MII CS Onkologie Verlauf Gesamtbeurteilung"] ;
+  fhir:CodeSystem.status [ fhir:value "active"] ;
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-07-23T12:42:42+00:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "Medizininformatik Initiative"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Medizininformatik Initiative" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.medizininformatik-initiative.de/" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "oBDS-spezifisches Codesystem für die Gesamtbeurteilung im Behandlungsverlauf "] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "10"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "V" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Vollremission (complete remission, CR)" ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Teilremission (partial remission, PR)" ]
+  ], [
+     fhir:index 2 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "keine Änderung (no change, NC) = stable disease" ]
+  ], [
+     fhir:index 3 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Progression" ]
+  ], [
+     fhir:index 4 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "divergentes Geschehen" ]
+  ], [
+     fhir:index 5 ;
+     fhir:CodeSystem.concept.code [ fhir:value "B" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "klinische Besserung des Zustandes, Teilremissionkriterien jedoch nicht erfüllt (minimal response, MR)" ]
+  ], [
+     fhir:index 6 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Vollremission mit residualen Auffälligkeiten (CRr)" ]
+  ], [
+     fhir:index 7 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Rezidiv" ]
+  ], [
+     fhir:index 8 ;
+     fhir:CodeSystem.concept.code [ fhir:value "U" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Beurteilung unmöglich" ]
+  ], [
+     fhir:index 9 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "fehlende Angabe" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

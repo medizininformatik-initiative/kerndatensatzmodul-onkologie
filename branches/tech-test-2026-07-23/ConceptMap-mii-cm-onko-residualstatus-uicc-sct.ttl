@@ -1,0 +1,110 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-residualstatus-uicc-sct> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-cm-onko-residualstatus-uicc-sct"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap mii-cm-onko-residualstatus-uicc-sct</b></p><a name=\"mii-cm-onko-residualstatus-uicc-sct\"> </a><a name=\"hcmii-cm-onko-residualstatus-uicc-sct\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p>Mapping from <code>https://www.uicc.org/resources/r-classification</code> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>R0 (Kein Residualtumor)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352526005 (Union for International Cancer Control R0 (qualifier value))</td></tr><tr><td>R1 (Mikroskopischer Residualtumor)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352529003 (Union for International Cancer Control R1 (qualifier value))</td></tr><tr><td>R1(is) (In-Situ-Rest)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>R1(cy+) (Cytologischer Rest)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>R2 (Makroskopischer Residualtumor)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352528006 (Union for International Cancer Control R2 (qualifier value)	R2 (UICC))</td></tr><tr><td>RX (Vorhandensein von Residualtumor kann nicht beurteilt werden)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352527001 (Union for International Cancer Control RX (qualifier value))</td></tr><tr><td>U (Residualtumorstatus ist nicht bekannt)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr></table></div>"
+  ] ;
+  fhir:ConceptMap.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-residualstatus-uicc-sct"] ;
+  fhir:ConceptMap.version [ fhir:value "2026.0.3"] ;
+  fhir:ConceptMap.name [ fhir:value "MII CM Onko Residualstatus UICC SCT Mapping"] ;
+  fhir:ConceptMap.title [ fhir:value "MII CM Onko Residualstatus UICC SNOMED"] ;
+  fhir:ConceptMap.status [ fhir:value "active"] ;
+  fhir:ConceptMap.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ConceptMap.date [ fhir:value "2024-01-05"^^xsd:date] ;
+  fhir:ConceptMap.publisher [ fhir:value "Medizininformatik Initiative"] ;
+  fhir:ConceptMap.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Medizininformatik Initiative" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.medizininformatik-initiative.de/" ]
+     ]
+  ] ;
+  fhir:ConceptMap.description [ fhir:value "Mapping Residualstatus UICC Codes zu SNOMED-CT"] ;
+  fhir:ConceptMap.group [
+     fhir:index 0 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://www.uicc.org/resources/r-classification" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "http://snomed.info/sct/900000000000207008/version/20240401" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index 0 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "R0" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Kein Residualtumor" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352526005" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control R0 (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "R1" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Mikroskopischer Residualtumor" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352529003" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control R1 (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 2 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "R1(is)" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "In-Situ-Rest" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 3 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "R1(cy+)" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Cytologischer Rest" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 4 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "R2" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Makroskopischer Residualtumor" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352528006" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control R2 (qualifier value)	R2 (UICC)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 5 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "RX" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Vorhandensein von Residualtumor kann nicht beurteilt werden" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1352527001" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Union for International Cancer Control RX (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 6 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "U" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Residualtumorstatus ist nicht bekannt" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-residualstatus-uicc-sct.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

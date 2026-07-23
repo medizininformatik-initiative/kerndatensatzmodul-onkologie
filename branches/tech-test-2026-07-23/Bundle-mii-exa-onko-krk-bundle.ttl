@@ -1,0 +1,642 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Bundle/mii-exa-onko-krk-bundle> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-krk-bundle"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/Bundle" ;
+       fhir:index 0 ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/Bundle>
+     ]
+  ] ;
+  fhir:Bundle.identifier [
+     fhir:Identifier.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko" ] ;
+     fhir:Identifier.value [ fhir:value "krk-example-bundle-2024-001" ]
+  ] ;
+  fhir:Bundle.type [ fhir:value "transaction"] ;
+  fhir:Bundle.timestamp [ fhir:value "2024-03-25T10:00:00+01:00"^^xsd:dateTime] ;
+  fhir:Bundle.entry [
+     fhir:index 0 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-krk-bundle-patient" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-krk-bundle-patient> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Patient" ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-krk-diagnose" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-krk-diagnose> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Condition" ]
+     ]
+  ], [
+     fhir:index 2 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-krk-bundle-encounter" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-krk-bundle-encounter> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Encounter" ]
+     ]
+  ], [
+     fhir:index 3 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-krk-abstand-tumor-anokutanlinie" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-krk-abstand-tumor-anokutanlinie> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Observation" ]
+     ]
+  ], [
+     fhir:index 4 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-krk-abstand-circumferelle-resektionsebene" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-krk-abstand-circumferelle-resektionsebene> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Observation" ]
+     ]
+  ], [
+     fhir:index 5 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-krk-abstand-resektionsrand-aboral" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-krk-abstand-resektionsrand-aboral> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Observation" ]
+     ]
+  ], [
+     fhir:index 6 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-krk-abstand-mesorektale-fascie" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-krk-abstand-mesorektale-fascie> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Observation" ]
+     ]
+  ], [
+     fhir:index 7 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-krk-anastomoseninsuffizienz" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-krk-anastomoseninsuffizienz> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Observation" ]
+     ]
+  ], [
+     fhir:index 8 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-asa-klassifikation" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-asa-klassifikation> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Observation" ]
+     ]
+  ], [
+     fhir:index 9 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-krk-stoma-markierung" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-krk-stoma-markierung> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Procedure" ]
+     ]
+  ], [
+     fhir:index 10 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-krk-operation" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-krk-operation> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Procedure" ]
+     ]
+  ], [
+     fhir:index 11 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Specimen/mii-exa-onko-krk-specimen" ] ;
+     fhir:Bundle.entry.resource <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Specimen/mii-exa-onko-krk-specimen> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Specimen" ]
+     ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-krk-bundle-patient> a fhir:Patient ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-krk-bundle-patient"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_mii-exa-onko-krk-bundle-patient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient mii-exa-onko-krk-bundle-patient</b></p><a name=\"mii-exa-onko-krk-bundle-patient\"> </a><a name=\"hcmii-exa-onko-krk-bundle-patient\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Klaus KolorektalCa  (no stated gender), DoB Unknown</p><hr/></div>"
+  ] ;
+  fhir:Patient.name [
+     fhir:index 0 ;
+     fhir:HumanName.family [ fhir:value "KolorektalCa" ] ;
+     fhir:HumanName.given [
+       fhir:value "Klaus" ;
+       fhir:index 0
+     ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-krk-diagnose> a fhir:Condition ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-krk-diagnose"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor" ;
+       fhir:index 0 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_mii-exa-onko-krk-diagnose\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition mii-exa-onko-krk-diagnose</b></p><a name=\"mii-exa-onko-krk-diagnose\"> </a><a name=\"hcmii-exa-onko-krk-diagnose\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-diagnose-primaertumor.html\">MII PR Onkologie Diagnose Primärtumor</a></p></div><p><b>Condition Asserted Date</b>: 2020-03-07</p><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm C18}\">Bösartige Neubildung des Kolons</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-krk-bundle-patient.html\">Klaus KolorektalCa  (no stated gender), DoB Unknown</a></p><p><b>recordedDate</b>: 2024-01-02</p></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/condition-assertedDate" ] ;
+     fhir:Extension.valueDateTime [ fhir:value "2020-03-07"^^xsd:date ]
+  ] ;
+  fhir:Condition.clinicalStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-clinical" ] ;
+       fhir:Coding.code [ fhir:value "active" ]
+     ]
+  ] ;
+  fhir:Condition.verificationStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-ver-status" ] ;
+       fhir:Coding.code [ fhir:value "confirmed" ]
+     ]
+  ] ;
+  fhir:Condition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/icd-10-gm" ] ;
+       fhir:Coding.version [ fhir:value "2024" ] ;
+       fhir:Coding.code [ fhir:value "C18" ] ;
+       fhir:Coding.display [ fhir:value "Bösartige Neubildung des Kolons" ]
+     ]
+  ] ;
+  fhir:Condition.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-krk-bundle-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-krk-bundle-patient" ]
+  ] ;
+  fhir:Condition.recordedDate [ fhir:value "2024-01-02"^^xsd:date] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-krk-bundle-encounter> a fhir:Encounter ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-krk-bundle-encounter"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Encounter_mii-exa-onko-krk-bundle-encounter\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Encounter mii-exa-onko-krk-bundle-encounter</b></p><a name=\"mii-exa-onko-krk-bundle-encounter\"> </a><a name=\"hcmii-exa-onko-krk-bundle-encounter\"> </a><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.2.0/CodeSystem-v3-ActCode.html#v3-ActCode-IMP\">ActCode: IMP</a> (inpatient encounter)</p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-krk-bundle-patient.html\">Klaus KolorektalCa  (no stated gender), DoB Unknown</a></p></div>"
+  ] ;
+  fhir:Encounter.status [ fhir:value "finished"] ;
+  fhir:Encounter.class [
+     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ] ;
+     fhir:Coding.code [ fhir:value "IMP" ] ;
+     fhir:Coding.display [ fhir:value "inpatient encounter" ]
+  ] ;
+  fhir:Encounter.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-krk-bundle-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-krk-bundle-patient" ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-krk-abstand-tumor-anokutanlinie> a fhir:Observation ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-krk-abstand-tumor-anokutanlinie"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-anokutan" ;
+       fhir:index 0 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-anokutan>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_mii-exa-onko-krk-abstand-tumor-anokutanlinie\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-krk-abstand-tumor-anokutanlinie</b></p><a name=\"mii-exa-onko-krk-abstand-tumor-anokutanlinie\"> </a><a name=\"hcmii-exa-onko-krk-abstand-tumor-anokutanlinie\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-krk-abstand-anokutan.html\">MII PR Onkologie Abstand Anokutan</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 33748-5}\">Distance from anal verge</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-krk-bundle-patient.html\">Klaus KolorektalCa  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: <a href=\"Condition-mii-exa-onko-krk-diagnose.html\">Condition Bösartige Neubildung des Kolons</a></p><p><b>encounter</b>: <a href=\"Encounter-mii-exa-onko-krk-bundle-encounter.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP)</a></p><p><b>effective</b>: 2024-03-10 14:30:00+0100</p><p><b>value</b>: 8.5 cm<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codecm = 'cm')</span></p></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a loinc:33748-5 ;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+       fhir:Coding.code [ fhir:value "33748-5" ] ;
+       fhir:Coding.display [ fhir:value "Distance from anal verge" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-krk-bundle-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-krk-bundle-patient" ]
+  ] ;
+  fhir:Observation.focus [
+     fhir:index 0 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-krk-diagnose> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-krk-diagnose" ]
+  ] ;
+  fhir:Observation.encounter [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-krk-bundle-encounter> ;
+     fhir:Reference.reference [ fhir:value "Encounter/mii-exa-onko-krk-bundle-encounter" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2024-03-10T14:30:00+01:00"^^xsd:dateTime] ;
+  fhir:Observation.valueQuantity [
+     fhir:Quantity.value [ fhir:value "8.5"^^xsd:decimal ] ;
+     fhir:Quantity.unit [ fhir:value "cm" ] ;
+     fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+     fhir:Quantity.code [ fhir:value "cm" ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-krk-abstand-circumferelle-resektionsebene> a fhir:Observation ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-krk-abstand-circumferelle-resektionsebene"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-circumferelle-resektionsebene" ;
+       fhir:index 0 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-circumferelle-resektionsebene>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_mii-exa-onko-krk-abstand-circumferelle-resektionsebene\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-krk-abstand-circumferelle-resektionsebene</b></p><a name=\"mii-exa-onko-krk-abstand-circumferelle-resektionsebene\"> </a><a name=\"hcmii-exa-onko-krk-abstand-circumferelle-resektionsebene\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-krk-abstand-circumferelle-resektionsebene.html\">MII PR Onkologie Abstand Circumferelle Resektionsebene</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 81176-0}\">Distance of tumor from circumferential resection margin [Length] in Specimen by Macroscopy</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-krk-bundle-patient.html\">Klaus KolorektalCa  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: <a href=\"Condition-mii-exa-onko-krk-diagnose.html\">Condition Bösartige Neubildung des Kolons</a></p><p><b>encounter</b>: <a href=\"Encounter-mii-exa-onko-krk-bundle-encounter.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP)</a></p><p><b>effective</b>: 2024-03-20 10:15:00+0100</p><p><b>value</b>: 2.5 mm<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemm = 'mm')</span></p></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a loinc:81176-0 ;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+       fhir:Coding.code [ fhir:value "81176-0" ] ;
+       fhir:Coding.display [ fhir:value "Distance of tumor from circumferential resection margin [Length] in Specimen by Macroscopy" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-krk-bundle-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-krk-bundle-patient" ]
+  ] ;
+  fhir:Observation.focus [
+     fhir:index 0 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-krk-diagnose> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-krk-diagnose" ]
+  ] ;
+  fhir:Observation.encounter [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-krk-bundle-encounter> ;
+     fhir:Reference.reference [ fhir:value "Encounter/mii-exa-onko-krk-bundle-encounter" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2024-03-20T10:15:00+01:00"^^xsd:dateTime] ;
+  fhir:Observation.valueQuantity [
+     fhir:Quantity.value [ fhir:value "2.5"^^xsd:decimal ] ;
+     fhir:Quantity.unit [ fhir:value "mm" ] ;
+     fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+     fhir:Quantity.code [ fhir:value "mm" ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-krk-abstand-resektionsrand-aboral> a fhir:Observation ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-krk-abstand-resektionsrand-aboral"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-aboral" ;
+       fhir:index 0 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-aboral>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_mii-exa-onko-krk-abstand-resektionsrand-aboral\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-krk-abstand-resektionsrand-aboral</b></p><a name=\"mii-exa-onko-krk-abstand-resektionsrand-aboral\"> </a><a name=\"hcmii-exa-onko-krk-abstand-resektionsrand-aboral\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-krk-abstand-aboral.html\">MII PR Onkologie Abstand Aboral</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 81175-2}\">Distance of tumor from closest margin [Length] in Specimen by Macroscopy</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-krk-bundle-patient.html\">Klaus KolorektalCa  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: <a href=\"Condition-mii-exa-onko-krk-diagnose.html\">Condition Bösartige Neubildung des Kolons</a></p><p><b>encounter</b>: <a href=\"Encounter-mii-exa-onko-krk-bundle-encounter.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP)</a></p><p><b>effective</b>: 2024-03-20 10:15:00+0100</p><p><b>value</b>: 15 mm<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemm = 'mm')</span></p></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a loinc:81175-2 ;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+       fhir:Coding.code [ fhir:value "81175-2" ] ;
+       fhir:Coding.display [ fhir:value "Distance of tumor from closest margin [Length] in Specimen by Macroscopy" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-krk-bundle-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-krk-bundle-patient" ]
+  ] ;
+  fhir:Observation.focus [
+     fhir:index 0 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-krk-diagnose> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-krk-diagnose" ]
+  ] ;
+  fhir:Observation.encounter [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-krk-bundle-encounter> ;
+     fhir:Reference.reference [ fhir:value "Encounter/mii-exa-onko-krk-bundle-encounter" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2024-03-20T10:15:00+01:00"^^xsd:dateTime] ;
+  fhir:Observation.valueQuantity [
+     fhir:Quantity.value [ fhir:value "15"^^xsd:decimal ] ;
+     fhir:Quantity.unit [ fhir:value "mm" ] ;
+     fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+     fhir:Quantity.code [ fhir:value "mm" ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-krk-abstand-mesorektale-fascie> a fhir:Observation ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-krk-abstand-mesorektale-fascie"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-mrt-mesorektale-faszie" ;
+       fhir:index 0 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-mrt-mesorektale-faszie>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_mii-exa-onko-krk-abstand-mesorektale-fascie\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-krk-abstand-mesorektale-fascie</b></p><a name=\"mii-exa-onko-krk-abstand-mesorektale-fascie\"> </a><a name=\"hcmii-exa-onko-krk-abstand-mesorektale-fascie\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-krk-mrt-mesorektale-faszie.html\">MII PR Onkologie KRK MRT/CT Abstand Mesorektale Faszie</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://radlex.org RDE96}\">Distance to MRF</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-krk-bundle-patient.html\">Klaus KolorektalCa  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: <a href=\"Condition-mii-exa-onko-krk-diagnose.html\">Condition Bösartige Neubildung des Kolons</a></p><p><b>encounter</b>: <a href=\"Encounter-mii-exa-onko-krk-bundle-encounter.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP)</a></p><p><b>effective</b>: 2024-03-12 16:00:00+0100</p><p><b>value</b>: 3.2 mm<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemm = 'mm')</span></p></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://radlex.org" ] ;
+       fhir:Coding.code [ fhir:value "RDE96" ] ;
+       fhir:Coding.display [ fhir:value "Distance to MRF" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-krk-bundle-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-krk-bundle-patient" ]
+  ] ;
+  fhir:Observation.focus [
+     fhir:index 0 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-krk-diagnose> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-krk-diagnose" ]
+  ] ;
+  fhir:Observation.encounter [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-krk-bundle-encounter> ;
+     fhir:Reference.reference [ fhir:value "Encounter/mii-exa-onko-krk-bundle-encounter" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2024-03-12T16:00:00+01:00"^^xsd:dateTime] ;
+  fhir:Observation.valueQuantity [
+     fhir:Quantity.value [ fhir:value "3.2"^^xsd:decimal ] ;
+     fhir:Quantity.unit [ fhir:value "mm" ] ;
+     fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+     fhir:Quantity.code [ fhir:value "mm" ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-krk-anastomoseninsuffizienz> a fhir:Observation ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-krk-anastomoseninsuffizienz"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-anastomoseninsuffizienz" ;
+       fhir:index 0 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-anastomoseninsuffizienz>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_mii-exa-onko-krk-anastomoseninsuffizienz\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-krk-anastomoseninsuffizienz</b></p><a name=\"mii-exa-onko-krk-anastomoseninsuffizienz\"> </a><a name=\"hcmii-exa-onko-krk-anastomoseninsuffizienz\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-krk-anastomoseninsuffizienz.html\">MII PR Onkologie KRK Anastomoseninsuffizienz</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 236091002}\">Large intestine anastomotic leak (disorder)</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-krk-bundle-patient.html\">Klaus KolorektalCa  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: <a href=\"Procedure-mii-exa-onko-krk-operation.html\">Procedure Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion: Laparoskopisch mit Anastomose</a></p><p><b>encounter</b>: <a href=\"Encounter-mii-exa-onko-krk-bundle-encounter.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP)</a></p><p><b>effective</b>: 2024-03-25 08:00:00+0100</p><p><b>value</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-anastomoseninsuffizienz B}\">Anastomoseninsuffizienz Grad B</span></p></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a sct:236091002 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "236091002" ] ;
+       fhir:Coding.display [ fhir:value "Large intestine anastomotic leak (disorder)" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-krk-bundle-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-krk-bundle-patient" ]
+  ] ;
+  fhir:Observation.focus [
+     fhir:index 0 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-krk-operation> ;
+     fhir:Reference.reference [ fhir:value "Procedure/mii-exa-onko-krk-operation" ]
+  ] ;
+  fhir:Observation.encounter [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-krk-bundle-encounter> ;
+     fhir:Reference.reference [ fhir:value "Encounter/mii-exa-onko-krk-bundle-encounter" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2024-03-25T08:00:00+01:00"^^xsd:dateTime] ;
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-anastomoseninsuffizienz" ] ;
+       fhir:Coding.code [ fhir:value "B" ] ;
+       fhir:Coding.display [ fhir:value "Anastomoseninsuffizienz Grad B" ]
+     ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-asa-klassifikation> a fhir:Observation ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-asa-klassifikation"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-asa-klassifikation" ;
+       fhir:index 0 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-asa-klassifikation>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_mii-exa-onko-asa-klassifikation\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-asa-klassifikation</b></p><a name=\"mii-exa-onko-asa-klassifikation\"> </a><a name=\"hcmii-exa-onko-asa-klassifikation\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-asa-klassifikation.html\">MII PR Onkologie ASA-Klassifikation</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 97816-3}\">American society of anesthesiologists morbidity state</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-krk-bundle-patient.html\">Klaus KolorektalCa  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: <a href=\"Condition-mii-exa-onko-krk-diagnose.html\">Condition Bösartige Neubildung des Kolons</a></p><p><b>effective</b>: 2024-03-15 08:30:00+0100</p><p><b>value</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-asa-obds 2}\">ASA II</span></p></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a loinc:97816-3 ;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+       fhir:Coding.code [ fhir:value "97816-3" ] ;
+       fhir:Coding.display [ fhir:value "American society of anesthesiologists morbidity state" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-krk-bundle-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-krk-bundle-patient" ]
+  ] ;
+  fhir:Observation.focus [
+     fhir:index 0 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-krk-diagnose> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-krk-diagnose" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2024-03-15T08:30:00+01:00"^^xsd:dateTime] ;
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-asa-obds" ] ;
+       fhir:Coding.code [ fhir:value "2" ] ;
+       fhir:Coding.display [ fhir:value "ASA II" ]
+     ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-krk-stoma-markierung> a fhir:Procedure ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-krk-stoma-markierung"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-stoma-markierung" ;
+       fhir:index 0 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-stoma-markierung>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Procedure_mii-exa-onko-krk-stoma-markierung\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Procedure mii-exa-onko-krk-stoma-markierung</b></p><a name=\"mii-exa-onko-krk-stoma-markierung\"> </a><a name=\"hcmii-exa-onko-krk-stoma-markierung\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-krk-stoma-markierung.html\">MII PR Onkologie KRK Stoma-Markierung</a></p></div><p><b>status</b>: Completed</p><p><b>statusReason</b>: <span title=\"Codes:{http://snomed.info/sct 262008008}\">Not performed (qualifier value)</span></p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 387713003}\">Surgical procedure</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 225134005}\">Marking position of planned stoma site (procedure)</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-krk-bundle-patient.html\">Klaus KolorektalCa  (no stated gender), DoB Unknown</a></p><p><b>encounter</b>: <a href=\"Encounter-mii-exa-onko-krk-bundle-encounter.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP)</a></p><p><b>performed</b>: 2024-03-15 09:30:00+0100</p><p><b>reasonReference</b>: <a href=\"Condition-mii-exa-onko-krk-diagnose.html\">Condition Bösartige Neubildung des Kolons</a></p><p><b>note</b>: </p><blockquote><div><p>Präoperative Markierung der geplanten Stoma-Position im rechten Hemiabdomen nach Rücksprache mit dem Patienten</p>\n</div></blockquote></div>"
+  ] ;
+  fhir:Procedure.status [ fhir:value "completed"] ;
+  fhir:Procedure.statusReason [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a sct:262008008 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "262008008" ] ;
+       fhir:Coding.display [ fhir:value "Not performed (qualifier value)" ]
+     ]
+  ] ;
+  fhir:Procedure.category [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a sct:387713003 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "387713003" ] ;
+       fhir:Coding.display [ fhir:value "Surgical procedure" ]
+     ]
+  ] ;
+  fhir:Procedure.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a sct:225134005 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "225134005" ] ;
+       fhir:Coding.display [ fhir:value "Marking position of planned stoma site (procedure)" ]
+     ]
+  ] ;
+  fhir:Procedure.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-krk-bundle-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-krk-bundle-patient" ]
+  ] ;
+  fhir:Procedure.encounter [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-krk-bundle-encounter> ;
+     fhir:Reference.reference [ fhir:value "Encounter/mii-exa-onko-krk-bundle-encounter" ]
+  ] ;
+  fhir:Procedure.performedDateTime [ fhir:value "2024-03-15T09:30:00+01:00"^^xsd:dateTime] ;
+  fhir:Procedure.reasonReference [
+     fhir:index 0 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-krk-diagnose> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-krk-diagnose" ]
+  ] ;
+  fhir:Procedure.note [
+     fhir:index 0 ;
+     fhir:Annotation.text [ fhir:value "Präoperative Markierung der geplanten Stoma-Position im rechten Hemiabdomen nach Rücksprache mit dem Patienten" ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-krk-operation> a fhir:Procedure ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-krk-operation"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-operation" ;
+       fhir:index 0 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-operation>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Procedure_mii-exa-onko-krk-operation\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Procedure mii-exa-onko-krk-operation</b></p><a name=\"mii-exa-onko-krk-operation\"> </a><a name=\"hcmii-exa-onko-krk-operation\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-krk-operation.html\">MII PR Onkologie Präoperative Drahtmarkierung Mamma</a></p></div><p><b>MII EX Onko Operation Intention</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}\">kurativ</span></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 387713003}\">Surgical procedure</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/ops 5-484.55}\">Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion: Laparoskopisch mit Anastomose</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-krk-bundle-patient.html\">Klaus KolorektalCa  (no stated gender), DoB Unknown</a></p><p><b>encounter</b>: <a href=\"Encounter-mii-exa-onko-krk-bundle-encounter.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP)</a></p><p><b>performed</b>: 2024-03-22 08:00:00+0100</p><p><b>reasonReference</b>: <a href=\"Condition-mii-exa-onko-krk-diagnose.html\">Condition Bösartige Neubildung des Kolons</a></p><p><b>note</b>: </p><blockquote><div><p>Laparoskopische Resektion beim kolorektalen Karzinom</p>\n</div></blockquote></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention" ] ;
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention" ] ;
+         fhir:Coding.code [ fhir:value "K" ] ;
+         fhir:Coding.display [ fhir:value "kurativ" ]
+       ]
+     ]
+  ] ;
+  fhir:Procedure.status [ fhir:value "completed"] ;
+  fhir:Procedure.category [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a sct:387713003 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "387713003" ] ;
+       fhir:Coding.display [ fhir:value "Surgical procedure" ]
+     ]
+  ] ;
+  fhir:Procedure.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/ops" ] ;
+       fhir:Coding.version [ fhir:value "2024" ] ;
+       fhir:Coding.code [ fhir:value "5-484.55" ] ;
+       fhir:Coding.display [ fhir:value "Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion: Laparoskopisch mit Anastomose" ]
+     ]
+  ] ;
+  fhir:Procedure.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-krk-bundle-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-krk-bundle-patient" ]
+  ] ;
+  fhir:Procedure.encounter [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-krk-bundle-encounter> ;
+     fhir:Reference.reference [ fhir:value "Encounter/mii-exa-onko-krk-bundle-encounter" ]
+  ] ;
+  fhir:Procedure.performedDateTime [ fhir:value "2024-03-22T08:00:00+01:00"^^xsd:dateTime] ;
+  fhir:Procedure.reasonReference [
+     fhir:index 0 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-krk-diagnose> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-krk-diagnose" ]
+  ] ;
+  fhir:Procedure.note [
+     fhir:index 0 ;
+     fhir:Annotation.text [ fhir:value "Laparoskopische Resektion beim kolorektalen Karzinom" ]
+  ] .
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Specimen/mii-exa-onko-krk-specimen> a fhir:Specimen ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-krk-specimen"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-specimen" ;
+       fhir:index 0 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-specimen>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_mii-exa-onko-krk-specimen\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen mii-exa-onko-krk-specimen</b></p><a name=\"mii-exa-onko-krk-specimen\"> </a><a name=\"hcmii-exa-onko-krk-specimen\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-krk-specimen.html\">MII PR Onkologie Specimen</a></p></div><p><b>accessionIdentifier</b>: KRK-2024-001234</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 122652004}\">Specimen from colon obtained by rectal/rectosigmoid (low anterior) resection (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-krk-bundle-patient.html\">Klaus KolorektalCa  (no stated gender), DoB Unknown</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>2024-03-22 08:30:00+0100</td></tr></table><p><b>condition</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-tme-qualitaet 1}\">Grad 1 (gut)</span></p><p><b>note</b>: </p><blockquote><div><p>Sigmaresekat mit Primärtumor und regionären Lymphknoten</p>\n</div></blockquote></div>"
+  ] ;
+  fhir:Specimen.accessionIdentifier [
+     fhir:Identifier.value [ fhir:value "KRK-2024-001234" ]
+  ] ;
+  fhir:Specimen.status [ fhir:value "available"] ;
+  fhir:Specimen.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a sct:122652004 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "122652004" ] ;
+       fhir:Coding.display [ fhir:value "Specimen from colon obtained by rectal/rectosigmoid (low anterior) resection (specimen)" ]
+     ]
+  ] ;
+  fhir:Specimen.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-krk-bundle-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-krk-bundle-patient" ]
+  ] ;
+  fhir:Specimen.collection [
+     fhir:Specimen.collection.collectedDateTime [ fhir:value "2024-03-22T08:30:00+01:00"^^xsd:dateTime ]
+  ] ;
+  fhir:Specimen.condition [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-tme-qualitaet" ] ;
+       fhir:Coding.code [ fhir:value "1" ] ;
+       fhir:Coding.display [ fhir:value "Grad 1 (gut)" ]
+     ]
+  ] ;
+  fhir:Specimen.note [
+     fhir:index 0 ;
+     fhir:Annotation.text [ fhir:value "Sigmaresekat mit Primärtumor und regionären Lymphknoten" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Bundle/mii-exa-onko-krk-bundle.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

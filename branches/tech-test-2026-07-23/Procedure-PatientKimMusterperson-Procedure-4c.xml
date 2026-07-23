@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Procedure xmlns="http://hl7.org/fhir">
+  <id value="PatientKimMusterperson-Procedure-4c"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Procedure PatientKimMusterperson-Procedure-4c</b></p><a name="PatientKimMusterperson-Procedure-4c"> </a><a name="hcPatientKimMusterperson-Procedure-4c"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="https://medizininformatik-initiative.github.io/kerndatensatz-basis/2026.0.1/StructureDefinition-mii-pr-prozedur-procedure.html">MII PR Prozedur Procedure</a></p></div><p><b>partOf</b>: <a href="Procedure-PatientKimMusterperson-Procedure-4.html">Procedure Laparotomy (procedure)</a></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 387713003}">Surgical procedure</span></p><p><b>code</b>: <span title="Codes:{http://fhir.de/CodeSystem/bfarm/ops 5-661}">Salpingektomie</span></p><p><b>subject</b>: <a href="Patient-PatientKimMusterperson.html">Kim Musterperson  (no stated gender), DoB: 1956-03-14</a></p><p><b>performed</b>: 2021-09-30</p><p><b>outcome</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus R0}">Kein Residualtumor</span></p></div>
+  </text>
+  <partOf>
+    <reference value="Procedure/PatientKimMusterperson-Procedure-4"/>
+  </partOf>
+  <status value="completed"/>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="387713003"/>
+      <display value="Surgical procedure"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://fhir.de/CodeSystem/bfarm/ops"/>
+      <version value="2021"/>
+      <code value="5-661"/>
+      <display value="Salpingektomie"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/PatientKimMusterperson"/>
+  </subject>
+  <performedDateTime value="2021-09-30"/>
+  <outcome>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus"/>
+      <code value="R0"/>
+    </coding>
+  </outcome>
+</Procedure>

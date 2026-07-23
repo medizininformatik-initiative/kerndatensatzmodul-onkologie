@@ -1,0 +1,74 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-tnm-klassifikation-TisN0M0> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-tnm-klassifikation-TisN0M0"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation|2026.0.3" ;
+       fhir:index 0 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation|2026.0.3>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-tnm-klassifikation-TisN0M0</b></p><a name=\"mii-exa-onko-tnm-klassifikation-TisN0M0\"> </a><a name=\"hcmii-exa-onko-tnm-klassifikation-TisN0M0\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-tnm-klassifikation.html\">MII PR Onkologie TNM-Klassifikation</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 399537006}\">Clinical TNM stage grouping</span></p><p><b>subject</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example\">Patient/example</a></p><p><b>effective</b>: 2024-01-11</p><p><b>value</b>: <span title=\"Codes:{https://www.uicc.org/resources/tnm 0}\">Stadium 0</span></p><p><b>method</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version 8}\">8. Auflage</span></p><p><b>hasMember</b>: </p><ul><li><a href=\"Observation-mii-exa-onko-tnm-t-kategorie-Tis.html\">Observation cT category (observable entity)</a></li><li><a href=\"Observation-mii-exa-onko-tnm-n-kategorie-N0.html\">Observation cN category (observable entity)</a></li><li><a href=\"Observation-mii-exa-onko-tnm-m-kategorie-M0.html\">Observation cM category (observable entity)</a></li></ul></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a sct:399537006 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "399537006" ] ;
+       fhir:Coding.display [ fhir:value "Clinical TNM stage grouping" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/example> ;
+     fhir:Reference.reference [ fhir:value "Patient/example" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2024-01-11"^^xsd:date] ;
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://www.uicc.org/resources/tnm" ] ;
+       fhir:Coding.code [ fhir:value "0" ] ;
+       fhir:Coding.display [ fhir:value "Stadium 0" ]
+     ]
+  ] ;
+  fhir:Observation.method [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version" ] ;
+       fhir:Coding.code [ fhir:value "8" ] ;
+       fhir:Coding.display [ fhir:value "8. Auflage" ]
+     ]
+  ] ;
+  fhir:Observation.hasMember [
+     fhir:index 0 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-tnm-t-kategorie-Tis> ;
+     fhir:Reference.reference [ fhir:value "Observation/mii-exa-onko-tnm-t-kategorie-Tis" ]
+  ], [
+     fhir:index 1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-tnm-n-kategorie-N0> ;
+     fhir:Reference.reference [ fhir:value "Observation/mii-exa-onko-tnm-n-kategorie-N0" ]
+  ], [
+     fhir:index 2 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-tnm-m-kategorie-M0> ;
+     fhir:Reference.reference [ fhir:value "Observation/mii-exa-onko-tnm-m-kategorie-M0" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-tnm-klassifikation-TisN0M0.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

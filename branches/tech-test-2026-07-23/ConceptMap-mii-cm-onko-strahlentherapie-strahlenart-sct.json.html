@@ -1,0 +1,500 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>MII CM Onko Strahlentherapie Strahlenart SNOMED Mapping - JSON Representation - MII IG Kerndatensatz-Modul Onkologie v2026.0.3</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"2.271"}
+    h3,h4,h5,h6{--heading-prefix:"2.271"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Onkologie</span>
+            <br/>
+            <span style="display:inline-block;">2026.0.3 - release
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>MII CM Onko Strahlentherapie Strahlenart SNOMED Mapping</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 8" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Onkologie - Local Development build (v2026.0.3) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="ConceptMap-mii-cm-onko-strahlentherapie-strahlenart-sct.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="ConceptMap-mii-cm-onko-strahlentherapie-strahlenart-sct.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ConceptMap-mii-cm-onko-strahlentherapie-strahlenart-sct.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: MII CM Onko Strahlentherapie Strahlenart SNOMED Mapping - JSON Representation</h2>
+
+  <table class="colsi">
+    <tr>
+
+      <td colspan="2">
+        
+          Active
+          
+            as of 2024-04-11
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p><a href="ConceptMap-mii-cm-onko-strahlentherapie-strahlenart-sct.json" no-download="true">Raw json</a> | <a href="ConceptMap-mii-cm-onko-strahlentherapie-strahlenart-sct.json" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap">resourceType</a>" : "ConceptMap",
+  "<a href="http://hl7.org/fhir/R4/resource.html#ConceptMap.id">id</a>" : "mii-cm-onko-strahlentherapie-strahlenart-sct",
+  "<a href="http://hl7.org/fhir/R4/domainresource.html#ConceptMap.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: ConceptMap mii-cm-onko-strahlentherapie-strahlenart-sct&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;mii-cm-onko-strahlentherapie-strahlenart-sct\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcmii-cm-onko-strahlentherapie-strahlenart-sct\&quot;&gt; &lt;/a&gt;&lt;p&gt;Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401&lt;/p&gt;&lt;br/&gt;&lt;p&gt;Mapping from &lt;a href=\&quot;CodeSystem-mii-cs-onko-strahlentherapie-strahlenart.html\&quot;&gt;MII CS Onkologie Strahlentherapie Strahlenart&lt;/a&gt; to &lt;code&gt;http://snomed.info/sct/900000000000207008/version/20240401&lt;/code&gt;&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Source Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Target Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Comment&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;UH (Photonen (ultraharte Röntgenstrahlen, inklusive Gamma-Strahler))&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;290006006 (Photon (substance))&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;EL (Elektronen)&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;46602004 (Electron (substance))&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;NE (Neutronen)&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;58607005 (Neutron (substance))&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PN (Protonen (leichte Wasserstoffionen/H1/Leichtionen))&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;89177007 (Proton (substance))&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;SI (Schwerionen (schwere Kohlenstoff-Ionen/C12/Sauerstoffionen/Heliumionen))&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;312253001 (Heavy ion radiation (physical force))&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;RO (Weichstrahl (kV))&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;286630003 (Soft X-radiation (physical force))&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;SO (Sonstige (inklusive Mixed Beams, exklusive Nuklide))&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;74964007 (Other (qualifier value))&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Lu-177&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;447553000 (Lutetium-177 (substance))&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Lu-177&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#narrower\&quot; title=\&quot;narrower\&quot;&gt;narrower&lt;/a&gt;&lt;/td&gt;&lt;td&gt;1263784000 (Radioligand therapy using lutetium (177-Lu) vipivotide tetraxetan (procedure))&lt;/td&gt;&lt;td&gt;Verwendung einer bestimmten Verbindung. Momentan wird Lu-177 hauptsächlich damit verwendet; es ist aber nicht auszuschließen, dass in Zukunft auch andere Substanzen zum Einsatz kommen.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;J-131&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;1368003 (Iodine-131 (substance))&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Y-90&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;14691008 (Yttrium-90 (substance))&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Y-90&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#narrower\&quot; title=\&quot;narrower\&quot;&gt;narrower&lt;/a&gt;&lt;/td&gt;&lt;td&gt;764677008 (Selective internal radiotherapy of liver using yttrium (90-Y) labeled microspheres (procedure))&lt;/td&gt;&lt;td&gt;Kombination einer bestimmten Strahlequelle mit einer bestimmten Applikation (Microsphären). Andere Anwendungen sind theoretisch in Zukunft denkbar und werden von diesem Code nicht miterfasst.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Ra-223&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;24853006 (Radium-223 (substance))&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Ac-225&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;32059002 (Actinium-225 (substance))&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Sm-153&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;419804008 (Samarium-153 (substance))&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Tb-161&lt;/td&gt;&lt;td colspan=\&quot;3\&quot; style=\&quot;background-color: #efefef\&quot;&gt;(not mapped)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Sr-89&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;7770004 (Strontium-89 (substance))&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Ir-192&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;48341001 (Iridium-192 (substance))&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Co-60&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;5405008 (Cobalt-60 (substance))&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;SONU (Sonstige Nuklide)&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;89457008 (Radioactive isotope (substance))&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
+  },
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.url">url</a>" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-strahlentherapie-strahlenart-sct",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.version">version</a>" : "2026.0.3",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.name">name</a>" : "MII CM Onko Strahlentherapie Strahlenart SCT Mapping",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.title">title</a>" : "MII CM Onko Strahlentherapie Strahlenart SNOMED Mapping",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.experimental">experimental</a>" : false,
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.date">date</a>" : "2024-04-11",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.publisher">publisher</a>" : "Medizininformatik Initiative",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.contact">contact</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "Medizininformatik Initiative",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "url",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "https://www.medizininformatik-initiative.de/"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.description">description</a>" : "Mapping Strahlentherapie Strahlenart Codes zu SNOMED-CT",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.purpose">purpose</a>" : "Technical mapping to transform oBDS-Data into SNOMED",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.source_x_">sourceUri</a>" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.target_x_">targetUri</a>" : "http://snomed.info/sct/900000000000207008/version/20240401",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group">group</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.source">source</a>" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.target">target</a>" : "http://snomed.info/sct/900000000000207008/version/20240401",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "UH",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Photonen (ultraharte Röntgenstrahlen, inklusive Gamma-Strahler)",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "290006006",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Photon (substance)",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "EL",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Elektronen",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "46602004",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Electron (substance)",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "NE",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Neutronen",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "58607005",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Neutron (substance)",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PN",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Protonen (leichte Wasserstoffionen/H1/Leichtionen)",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "89177007",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Proton (substance)",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "SI",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Schwerionen (schwere Kohlenstoff-Ionen/C12/Sauerstoffionen/Heliumionen)",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "312253001",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Heavy ion radiation (physical force)",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "RO",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Weichstrahl (kV)",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "286630003",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Soft X-radiation (physical force)",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "SO",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Sonstige (inklusive Mixed Beams, exklusive Nuklide)",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "74964007",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Other (qualifier value)",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Lu-177",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Lu-177",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "447553000",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Lutetium-177 (substance)",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Lu-177",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Lu-177",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "1263784000",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Radioligand therapy using lutetium (177-Lu) vipivotide tetraxetan (procedure)",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "narrower",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Verwendung einer bestimmten Verbindung. Momentan wird Lu-177 hauptsächlich damit verwendet; es ist aber nicht auszuschließen, dass in Zukunft auch andere Substanzen zum Einsatz kommen."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "J-131",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "J131",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "1368003",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Iodine-131 (substance)",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Y-90",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Y-90",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "14691008",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Yttrium-90 (substance)",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Y-90",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Y-90",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "764677008",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Selective internal radiotherapy of liver using yttrium (90-Y) labeled microspheres (procedure)",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "narrower",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Kombination einer bestimmten Strahlequelle mit einer bestimmten Applikation (Microsphären). Andere Anwendungen sind theoretisch in Zukunft denkbar und werden von diesem Code nicht miterfasst."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Ra-223",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Ra-223",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "24853006",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Radium-223 (substance)",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Ac-225",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Ac-225",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "32059002",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Actinium-225 (substance)",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Sm-153",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Sm-153",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "419804008",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Samarium-153 (substance)",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Tb-161",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Tb-161",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "unmatched"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Sr-89",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Sr-89",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "7770004",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Strontium-89 (substance)",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Ir-192",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Ir-192",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "48341001",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Iridium-192 (substance)",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Co-60",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Co-60",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "5405008",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Cobalt-60 (substance)",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "SONU",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Sonstige Nuklide",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "89457008",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Radioactive isotope (substance)",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  Package mii-ig-onko-de-v2026#2026.0.3 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jul 23, 2026 12:42+0000">2026-07-23</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

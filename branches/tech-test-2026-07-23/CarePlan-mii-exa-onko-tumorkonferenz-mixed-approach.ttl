@@ -1,0 +1,77 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CarePlan/mii-exa-onko-tumorkonferenz-mixed-approach> a fhir:CarePlan ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-tumorkonferenz-mixed-approach"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz|2026.0.3" ;
+       fhir:index 0 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz|2026.0.3>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CarePlan mii-exa-onko-tumorkonferenz-mixed-approach</b></p><a name=\"mii-exa-onko-tumorkonferenz-mixed-approach\"> </a><a name=\"hcmii-exa-onko-tumorkonferenz-mixed-approach\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-tumorkonferenz.html\">MII PR Onkologie Tumorkonferenz</a> version: 2026.0.3</p></div><p><b>identifier</b>: Tumorkonferenz_Mixed_001</p><p><b>status</b>: Active</p><p><b>intent</b>: Plan</p><p><b>category</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ praeth}\">Molekulares Tumorboard</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-molecular-board-patient.html\">Maria Müller  Female, DoB: 1968-07-22 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#MTB-2024-001)</a></p><p><b>created</b>: 2024-01-15</p><p><b>addresses</b>: <a href=\"Condition-primaertumor-example.html\">Condition Bösartige Neubildung: Brustdrüse, nicht näher bezeichnet</a></p><blockquote><p><b>activity</b></p><h3>Details</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>Status</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ OP}\">Operation</span></td><td>Scheduled</td></tr></table></blockquote><blockquote><p><b>activity</b></p><p><b>progress</b>: </p><blockquote><div><p>Molecular profiling shows HR+/HER2- status with PI3K pathway activation - CDK4/6 inhibitor combination recommended</p>\n</div></blockquote><p><b>reference</b>: <a href=\"RequestGroup-mii-exa-onko-molecular-cdk46-protocol.html\">RequestGroup Chemotherapie + zielgerichtete Substanzen</a></p></blockquote></div>"
+  ] ;
+  fhir:CarePlan.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.value [ fhir:value "Tumorkonferenz_Mixed_001" ]
+  ] ;
+  fhir:CarePlan.status [ fhir:value "active"] ;
+  fhir:CarePlan.intent [ fhir:value "plan"] ;
+  fhir:CarePlan.category [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ" ] ;
+       fhir:Coding.code [ fhir:value "praeth" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Molekulares Tumorboard" ]
+  ] ;
+  fhir:CarePlan.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-molecular-board-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-molecular-board-patient" ]
+  ] ;
+  fhir:CarePlan.created [ fhir:value "2024-01-15"^^xsd:date] ;
+  fhir:CarePlan.addresses [
+     fhir:index 0 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/primaertumor-example> ;
+     fhir:Reference.reference [ fhir:value "Condition/primaertumor-example" ]
+  ] ;
+  fhir:CarePlan.activity [
+     fhir:index 0 ;
+     fhir:CarePlan.activity.detail [
+       fhir:CarePlan.activity.detail.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0 ;
+           fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ" ] ;
+           fhir:Coding.code [ fhir:value "OP" ]
+         ]
+       ] ;
+       fhir:CarePlan.activity.detail.status [ fhir:value "scheduled" ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:CarePlan.activity.progress [
+       fhir:index 0 ;
+       fhir:Annotation.text [ fhir:value "Molecular profiling shows HR+/HER2- status with PI3K pathway activation - CDK4/6 inhibitor combination recommended" ]
+     ] ;
+     fhir:CarePlan.activity.reference [
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/RequestGroup/mii-exa-onko-molecular-cdk46-protocol> ;
+       fhir:Reference.reference [ fhir:value "RequestGroup/mii-exa-onko-molecular-cdk46-protocol" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CarePlan/mii-exa-onko-tumorkonferenz-mixed-approach.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

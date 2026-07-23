@@ -1,0 +1,103 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "mii-cs-onko-strahlentherapie-strahlenart",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablecodesystem"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-onko-strahlentherapie-strahlenart</b></p><a name=\"mii-cs-onko-strahlentherapie-strahlenart\"> </a><a name=\"hcmii-cs-onko-strahlentherapie-strahlenart\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">UH<a name=\"mii-cs-onko-strahlentherapie-strahlenart-UH\"> </a></td><td>Photonen (ultraharte Röntgenstrahlen, inklusive Gamma-Strahler)</td></tr><tr><td style=\"white-space:nowrap\">EL<a name=\"mii-cs-onko-strahlentherapie-strahlenart-EL\"> </a></td><td>Elektronen</td></tr><tr><td style=\"white-space:nowrap\">NE<a name=\"mii-cs-onko-strahlentherapie-strahlenart-NE\"> </a></td><td>Neutronen</td></tr><tr><td style=\"white-space:nowrap\">PN<a name=\"mii-cs-onko-strahlentherapie-strahlenart-PN\"> </a></td><td>Protonen (leichte Wasserstoffionen/H1/Leichtionen)</td></tr><tr><td style=\"white-space:nowrap\">SI<a name=\"mii-cs-onko-strahlentherapie-strahlenart-SI\"> </a></td><td>Schwerionen (schwere Kohlenstoff-Ionen/C12/Sauerstoffionen/Heliumionen)</td></tr><tr><td style=\"white-space:nowrap\">RO<a name=\"mii-cs-onko-strahlentherapie-strahlenart-RO\"> </a></td><td>Weichstrahl (kV)</td></tr><tr><td style=\"white-space:nowrap\">SO<a name=\"mii-cs-onko-strahlentherapie-strahlenart-SO\"> </a></td><td>Sonstige (inklusive Mixed Beams, exklusive Nuklide)</td></tr><tr><td style=\"white-space:nowrap\">Lu-177<a name=\"mii-cs-onko-strahlentherapie-strahlenart-Lu-177\"> </a></td><td>Lu-177</td></tr><tr><td style=\"white-space:nowrap\">J-131<a name=\"mii-cs-onko-strahlentherapie-strahlenart-J-131\"> </a></td><td>J131</td></tr><tr><td style=\"white-space:nowrap\">Y-90<a name=\"mii-cs-onko-strahlentherapie-strahlenart-Y-90\"> </a></td><td>Y-90</td></tr><tr><td style=\"white-space:nowrap\">Ra-223<a name=\"mii-cs-onko-strahlentherapie-strahlenart-Ra-223\"> </a></td><td>Ra-223</td></tr><tr><td style=\"white-space:nowrap\">Ac-225<a name=\"mii-cs-onko-strahlentherapie-strahlenart-Ac-225\"> </a></td><td>Ac-225</td></tr><tr><td style=\"white-space:nowrap\">Sm-153<a name=\"mii-cs-onko-strahlentherapie-strahlenart-Sm-153\"> </a></td><td>Sm-153</td></tr><tr><td style=\"white-space:nowrap\">Tb-161<a name=\"mii-cs-onko-strahlentherapie-strahlenart-Tb-161\"> </a></td><td>Tb-161</td></tr><tr><td style=\"white-space:nowrap\">Sr-89<a name=\"mii-cs-onko-strahlentherapie-strahlenart-Sr-89\"> </a></td><td>Sr-89</td></tr><tr><td style=\"white-space:nowrap\">Ir-192<a name=\"mii-cs-onko-strahlentherapie-strahlenart-Ir-192\"> </a></td><td>Ir-192</td></tr><tr><td style=\"white-space:nowrap\">Co-60<a name=\"mii-cs-onko-strahlentherapie-strahlenart-Co-60\"> </a></td><td>Co-60</td></tr><tr><td style=\"white-space:nowrap\">SONU<a name=\"mii-cs-onko-strahlentherapie-strahlenart-SONU\"> </a></td><td>Sonstige Nuklide</td></tr></table></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart",
+  "version" : "2026.0.3",
+  "name" : "MII_CS_Onko_Strahlentherapie_Strahlenart",
+  "title" : "MII CS Onkologie Strahlentherapie Strahlenart",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-07-23T12:42:42+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "oBDS-spezifisches Codesystem für Klassifikation von eingesetzter Strahlenart",
+  "caseSensitive" : true,
+  "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-strahlenart",
+  "content" : "complete",
+  "count" : 18,
+  "concept" : [{
+    "code" : "UH",
+    "display" : "Photonen (ultraharte Röntgenstrahlen, inklusive Gamma-Strahler)"
+  },
+  {
+    "code" : "EL",
+    "display" : "Elektronen"
+  },
+  {
+    "code" : "NE",
+    "display" : "Neutronen"
+  },
+  {
+    "code" : "PN",
+    "display" : "Protonen (leichte Wasserstoffionen/H1/Leichtionen)"
+  },
+  {
+    "code" : "SI",
+    "display" : "Schwerionen (schwere Kohlenstoff-Ionen/C12/Sauerstoffionen/Heliumionen)"
+  },
+  {
+    "code" : "RO",
+    "display" : "Weichstrahl (kV)"
+  },
+  {
+    "code" : "SO",
+    "display" : "Sonstige (inklusive Mixed Beams, exklusive Nuklide)"
+  },
+  {
+    "code" : "Lu-177",
+    "display" : "Lu-177"
+  },
+  {
+    "code" : "J-131",
+    "display" : "J131"
+  },
+  {
+    "code" : "Y-90",
+    "display" : "Y-90"
+  },
+  {
+    "code" : "Ra-223",
+    "display" : "Ra-223"
+  },
+  {
+    "code" : "Ac-225",
+    "display" : "Ac-225"
+  },
+  {
+    "code" : "Sm-153",
+    "display" : "Sm-153"
+  },
+  {
+    "code" : "Tb-161",
+    "display" : "Tb-161"
+  },
+  {
+    "code" : "Sr-89",
+    "display" : "Sr-89"
+  },
+  {
+    "code" : "Ir-192",
+    "display" : "Ir-192"
+  },
+  {
+    "code" : "Co-60",
+    "display" : "Co-60"
+  },
+  {
+    "code" : "SONU",
+    "display" : "Sonstige Nuklide"
+  }]
+}

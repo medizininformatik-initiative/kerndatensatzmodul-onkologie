@@ -1,0 +1,371 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-cs-onko-operation-komplikation"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/shareablecodesystem" ;
+       fhir:index 0 ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-onko-operation-komplikation</b></p><a name=\"mii-cs-onko-operation-komplikation\"> </a><a name=\"hcmii-cs-onko-operation-komplikation\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">N<a name=\"mii-cs-onko-operation-komplikation-N\"> </a></td><td>nein</td></tr><tr><td style=\"white-space:nowrap\">U<a name=\"mii-cs-onko-operation-komplikation-U\"> </a></td><td>unbekannt</td></tr><tr><td style=\"white-space:nowrap\">ABD<a name=\"mii-cs-onko-operation-komplikation-ABD\"> </a></td><td>Abszess in einem Drainagekanal</td></tr><tr><td style=\"white-space:nowrap\">ABS<a name=\"mii-cs-onko-operation-komplikation-ABS\"> </a></td><td>Abszess, intraabdominaler oder intrathorakaler</td></tr><tr><td style=\"white-space:nowrap\">ASF<a name=\"mii-cs-onko-operation-komplikation-ASF\"> </a></td><td>Abszess, subfaszialer</td></tr><tr><td style=\"white-space:nowrap\">ANI<a name=\"mii-cs-onko-operation-komplikation-ANI\"> </a></td><td>Akute Niereninsuffizienz</td></tr><tr><td style=\"white-space:nowrap\">AEP<a name=\"mii-cs-onko-operation-komplikation-AEP\"> </a></td><td>Alkoholentzugspsychose</td></tr><tr><td style=\"white-space:nowrap\">ALR<a name=\"mii-cs-onko-operation-komplikation-ALR\"> </a></td><td>Allergische Reaktion ohne Schocksymptomatik</td></tr><tr><td style=\"white-space:nowrap\">ANS<a name=\"mii-cs-onko-operation-komplikation-ANS\"> </a></td><td>Anaphylaktischer Schock</td></tr><tr><td style=\"white-space:nowrap\">AEE<a name=\"mii-cs-onko-operation-komplikation-AEE\"> </a></td><td>Anastomoseninsuffizienz einer Enterostomie</td></tr><tr><td style=\"white-space:nowrap\">API<a name=\"mii-cs-onko-operation-komplikation-API\"> </a></td><td>Apoplektischer Insult</td></tr><tr><td style=\"white-space:nowrap\">BIF<a name=\"mii-cs-onko-operation-komplikation-BIF\"> </a></td><td>Biliäre Fistel</td></tr><tr><td style=\"white-space:nowrap\">BOG<a name=\"mii-cs-onko-operation-komplikation-BOG\"> </a></td><td>Blutung, obere gastrointestinale (z. B „Stressulkus“)</td></tr><tr><td style=\"white-space:nowrap\">BOE<a name=\"mii-cs-onko-operation-komplikation-BOE\"> </a></td><td>Bolusverlegung eines Endotubus</td></tr><tr><td style=\"white-space:nowrap\">BSI<a name=\"mii-cs-onko-operation-komplikation-BSI\"> </a></td><td>Bronchusstumpfinsuffizienz</td></tr><tr><td style=\"white-space:nowrap\">CHI<a name=\"mii-cs-onko-operation-komplikation-CHI\"> </a></td><td>Cholangitis</td></tr><tr><td style=\"white-space:nowrap\">DAI<a name=\"mii-cs-onko-operation-komplikation-DAI\"> </a></td><td>Darmanastomoseninsuffizienz</td></tr><tr><td style=\"white-space:nowrap\">DPS<a name=\"mii-cs-onko-operation-komplikation-DPS\"> </a></td><td>Darmpassagestörungen (z. B. protrahierte Atonie, Subileus, Ileus)</td></tr><tr><td style=\"white-space:nowrap\">DIC<a name=\"mii-cs-onko-operation-komplikation-DIC\"> </a></td><td>Disseminierte intravasale Koagulopathie</td></tr><tr><td style=\"white-space:nowrap\">DEP<a name=\"mii-cs-onko-operation-komplikation-DEP\"> </a></td><td>Drogenentzugspsychose</td></tr><tr><td style=\"white-space:nowrap\">DLU<a name=\"mii-cs-onko-operation-komplikation-DLU\"> </a></td><td>Druck- und Lagerungsschäden, z. B. Dekubitalulzera</td></tr><tr><td style=\"white-space:nowrap\">DSI<a name=\"mii-cs-onko-operation-komplikation-DSI\"> </a></td><td>Duodenalstumpfinsuffizienz</td></tr><tr><td style=\"white-space:nowrap\">ENF<a name=\"mii-cs-onko-operation-komplikation-ENF\"> </a></td><td>Enterale Fistel</td></tr><tr><td style=\"white-space:nowrap\">GER<a name=\"mii-cs-onko-operation-komplikation-GER\"> </a></td><td>Gerinnungsstörung</td></tr><tr><td style=\"white-space:nowrap\">HEM<a name=\"mii-cs-onko-operation-komplikation-HEM\"> </a></td><td>Hämatemesis</td></tr><tr><td style=\"white-space:nowrap\">HUR<a name=\"mii-cs-onko-operation-komplikation-HUR\"> </a></td><td>Hämaturie</td></tr><tr><td style=\"white-space:nowrap\">HAE<a name=\"mii-cs-onko-operation-komplikation-HAE\"> </a></td><td>Hämorrhagischer Schock</td></tr><tr><td style=\"white-space:nowrap\">HFI<a name=\"mii-cs-onko-operation-komplikation-HFI\"> </a></td><td>Harnfistel</td></tr><tr><td style=\"white-space:nowrap\">HNK<a name=\"mii-cs-onko-operation-komplikation-HNK\"> </a></td><td>Hautnekrose im Operationsbereich</td></tr><tr><td style=\"white-space:nowrap\">HZI<a name=\"mii-cs-onko-operation-komplikation-HZI\"> </a></td><td>Herzinsuffizienz</td></tr><tr><td style=\"white-space:nowrap\">HRS<a name=\"mii-cs-onko-operation-komplikation-HRS\"> </a></td><td>Herzrhythmusstörungen</td></tr><tr><td style=\"white-space:nowrap\">HNA<a name=\"mii-cs-onko-operation-komplikation-HNA\"> </a></td><td>Hirnnervenausfälle</td></tr><tr><td style=\"white-space:nowrap\">HOP<a name=\"mii-cs-onko-operation-komplikation-HOP\"> </a></td><td>Hirnorganisches Psychosyndrom (z. B. „Durchgangssyndrom“)</td></tr><tr><td style=\"white-space:nowrap\">HYB<a name=\"mii-cs-onko-operation-komplikation-HYB\"> </a></td><td>Hyperbilirubinämie</td></tr><tr><td style=\"white-space:nowrap\">HYF<a name=\"mii-cs-onko-operation-komplikation-HYF\"> </a></td><td>Hypopharynxfistel</td></tr><tr><td style=\"white-space:nowrap\">IFV<a name=\"mii-cs-onko-operation-komplikation-IFV\"> </a></td><td>Ileofemorale Venenthrombose</td></tr><tr><td style=\"white-space:nowrap\">KAS<a name=\"mii-cs-onko-operation-komplikation-KAS\"> </a></td><td>Kardiogener Schock</td></tr><tr><td style=\"white-space:nowrap\">KES<a name=\"mii-cs-onko-operation-komplikation-KES\"> </a></td><td>Komplikationen einer Stomaanlage</td></tr><tr><td style=\"white-space:nowrap\">KIM<a name=\"mii-cs-onko-operation-komplikation-KIM\"> </a></td><td>Komplikation eines Implantates (Gefäßprothese, Totalendoprothese, Katheter), z. B. Dislokation</td></tr><tr><td style=\"white-space:nowrap\">KRA<a name=\"mii-cs-onko-operation-komplikation-KRA\"> </a></td><td>Krampfanfall</td></tr><tr><td style=\"white-space:nowrap\">KDS<a name=\"mii-cs-onko-operation-komplikation-KDS\"> </a></td><td>Kurzdarmsyndrom</td></tr><tr><td style=\"white-space:nowrap\">LEV<a name=\"mii-cs-onko-operation-komplikation-LEV\"> </a></td><td>Leberversagen</td></tr><tr><td style=\"white-space:nowrap\">LOE<a name=\"mii-cs-onko-operation-komplikation-LOE\"> </a></td><td>Lungenödem</td></tr><tr><td style=\"white-space:nowrap\">LYF<a name=\"mii-cs-onko-operation-komplikation-LYF\"> </a></td><td>Lymphfistel</td></tr><tr><td style=\"white-space:nowrap\">LYE<a name=\"mii-cs-onko-operation-komplikation-LYE\"> </a></td><td>Lymphozele</td></tr><tr><td style=\"white-space:nowrap\">MES<a name=\"mii-cs-onko-operation-komplikation-MES\"> </a></td><td>Magenentleerungsstörung</td></tr><tr><td style=\"white-space:nowrap\">MIL<a name=\"mii-cs-onko-operation-komplikation-MIL\"> </a></td><td>Mechanischer Ileus</td></tr><tr><td style=\"white-space:nowrap\">MED<a name=\"mii-cs-onko-operation-komplikation-MED\"> </a></td><td>Mediastinitis</td></tr><tr><td style=\"white-space:nowrap\">MAT<a name=\"mii-cs-onko-operation-komplikation-MAT\"> </a></td><td>Mesenterialarterien- oder -venenthrombose</td></tr><tr><td style=\"white-space:nowrap\">MYI<a name=\"mii-cs-onko-operation-komplikation-MYI\"> </a></td><td>Myokardinfarkt</td></tr><tr><td style=\"white-space:nowrap\">RNB<a name=\"mii-cs-onko-operation-komplikation-RNB\"> </a></td><td>Nachblutung, revisionsbedürftig, anderweitig nicht erwähnt</td></tr><tr><td style=\"white-space:nowrap\">NAB<a name=\"mii-cs-onko-operation-komplikation-NAB\"> </a></td><td>Nachblutung, nicht revisionsbedürftig, anderweitig nicht erwähnt</td></tr><tr><td style=\"white-space:nowrap\">NIN<a name=\"mii-cs-onko-operation-komplikation-NIN\"> </a></td><td>Nahtinsuffizienz, anderweitig nicht erwähnt</td></tr><tr><td style=\"white-space:nowrap\">OES<a name=\"mii-cs-onko-operation-komplikation-OES\"> </a></td><td>Ösophagitis</td></tr><tr><td style=\"white-space:nowrap\">OSM<a name=\"mii-cs-onko-operation-komplikation-OSM\"> </a></td><td>Osteitis, Osteomyelitis</td></tr><tr><td style=\"white-space:nowrap\">PAF<a name=\"mii-cs-onko-operation-komplikation-PAF\"> </a></td><td>Pankreasfistel</td></tr><tr><td style=\"white-space:nowrap\">PIT<a name=\"mii-cs-onko-operation-komplikation-PIT\"> </a></td><td>Pankreatitis</td></tr><tr><td style=\"white-space:nowrap\">PAB<a name=\"mii-cs-onko-operation-komplikation-PAB\"> </a></td><td>Peranale Blutung</td></tr><tr><td style=\"white-space:nowrap\">PPA<a name=\"mii-cs-onko-operation-komplikation-PPA\"> </a></td><td>Periphere Parese</td></tr><tr><td style=\"white-space:nowrap\">PAV<a name=\"mii-cs-onko-operation-komplikation-PAV\"> </a></td><td>Peripherer arterieller Verschluss (Embolie, Thrombose)</td></tr><tr><td style=\"white-space:nowrap\">PER<a name=\"mii-cs-onko-operation-komplikation-PER\"> </a></td><td>Peritonitis</td></tr><tr><td style=\"white-space:nowrap\">PLB<a name=\"mii-cs-onko-operation-komplikation-PLB\"> </a></td><td>Platzbauch</td></tr><tr><td style=\"white-space:nowrap\">PEY<a name=\"mii-cs-onko-operation-komplikation-PEY\"> </a></td><td>Pleuraempyem</td></tr><tr><td style=\"white-space:nowrap\">PLE<a name=\"mii-cs-onko-operation-komplikation-PLE\"> </a></td><td>Pleuraerguss</td></tr><tr><td style=\"white-space:nowrap\">PMN<a name=\"mii-cs-onko-operation-komplikation-PMN\"> </a></td><td>Pneumonie</td></tr><tr><td style=\"white-space:nowrap\">PNT<a name=\"mii-cs-onko-operation-komplikation-PNT\"> </a></td><td>Pneumothorax</td></tr><tr><td style=\"white-space:nowrap\">PDA<a name=\"mii-cs-onko-operation-komplikation-PDA\"> </a></td><td>Protrahierte Darmatonie (paralytischer Ileus)</td></tr><tr><td style=\"white-space:nowrap\">PAE<a name=\"mii-cs-onko-operation-komplikation-PAE\"> </a></td><td>Pulmonalarterienembolie</td></tr><tr><td style=\"white-space:nowrap\">RPA<a name=\"mii-cs-onko-operation-komplikation-RPA\"> </a></td><td>Rekurrensparese</td></tr><tr><td style=\"white-space:nowrap\">RIN<a name=\"mii-cs-onko-operation-komplikation-RIN\"> </a></td><td>Respiratorische Insuffizienz</td></tr><tr><td style=\"white-space:nowrap\">SKI<a name=\"mii-cs-onko-operation-komplikation-SKI\"> </a></td><td>Septische Komplikation eines Implantates</td></tr><tr><td style=\"white-space:nowrap\">SES<a name=\"mii-cs-onko-operation-komplikation-SES\"> </a></td><td>Septischer Schock</td></tr><tr><td style=\"white-space:nowrap\">SFH<a name=\"mii-cs-onko-operation-komplikation-SFH\"> </a></td><td>Störungen des Flüssigkeits-, Elektrolyt- und Säurebasenhaushaltes</td></tr><tr><td style=\"white-space:nowrap\">STK<a name=\"mii-cs-onko-operation-komplikation-STK\"> </a></td><td>Stomakomplikation (z. B. Blutung, Nekrose, Stenose)</td></tr><tr><td style=\"white-space:nowrap\">TZP<a name=\"mii-cs-onko-operation-komplikation-TZP\"> </a></td><td>Thrombozytopenie</td></tr><tr><td style=\"white-space:nowrap\">TIA<a name=\"mii-cs-onko-operation-komplikation-TIA\"> </a></td><td>TIA(transitorische ischämische Attacke) oder RIND(reversibles ischämisches neurologisches Defizit)</td></tr><tr><td style=\"white-space:nowrap\">TRZ<a name=\"mii-cs-onko-operation-komplikation-TRZ\"> </a></td><td>Transfusionszwischenfall</td></tr><tr><td style=\"white-space:nowrap\">WUH<a name=\"mii-cs-onko-operation-komplikation-WUH\"> </a></td><td>Wundhämatom (konservativ therapiert)</td></tr><tr><td style=\"white-space:nowrap\">WSS<a name=\"mii-cs-onko-operation-komplikation-WSS\"> </a></td><td>Wundheilungsstörung, subkutane</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation"] ;
+  fhir:CodeSystem.version [ fhir:value "2026.0.3"] ;
+  fhir:CodeSystem.name [ fhir:value "MII_CS_Onko_Operation_Komplikationen"] ;
+  fhir:CodeSystem.title [ fhir:value "MII CS Onkologie Operation Komplikationen"] ;
+  fhir:CodeSystem.status [ fhir:value "active"] ;
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-07-23T12:42:42+00:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "Medizininformatik Initiative"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Medizininformatik Initiative" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.medizininformatik-initiative.de/" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "oBDS-spezifisches Codesystem für Klassifikation von Komplikationen während der OP"] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.valueSet [
+     fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-operation-komplikation" ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-operation-komplikation>
+  ] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "79"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "nein" ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "U" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "unbekannt" ]
+  ], [
+     fhir:index 2 ;
+     fhir:CodeSystem.concept.code [ fhir:value "ABD" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Abszess in einem Drainagekanal" ]
+  ], [
+     fhir:index 3 ;
+     fhir:CodeSystem.concept.code [ fhir:value "ABS" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Abszess, intraabdominaler oder intrathorakaler" ]
+  ], [
+     fhir:index 4 ;
+     fhir:CodeSystem.concept.code [ fhir:value "ASF" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Abszess, subfaszialer" ]
+  ], [
+     fhir:index 5 ;
+     fhir:CodeSystem.concept.code [ fhir:value "ANI" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Akute Niereninsuffizienz" ]
+  ], [
+     fhir:index 6 ;
+     fhir:CodeSystem.concept.code [ fhir:value "AEP" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Alkoholentzugspsychose" ]
+  ], [
+     fhir:index 7 ;
+     fhir:CodeSystem.concept.code [ fhir:value "ALR" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Allergische Reaktion ohne Schocksymptomatik" ]
+  ], [
+     fhir:index 8 ;
+     fhir:CodeSystem.concept.code [ fhir:value "ANS" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Anaphylaktischer Schock" ]
+  ], [
+     fhir:index 9 ;
+     fhir:CodeSystem.concept.code [ fhir:value "AEE" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Anastomoseninsuffizienz einer Enterostomie" ]
+  ], [
+     fhir:index 10 ;
+     fhir:CodeSystem.concept.code [ fhir:value "API" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Apoplektischer Insult" ]
+  ], [
+     fhir:index 11 ;
+     fhir:CodeSystem.concept.code [ fhir:value "BIF" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Biliäre Fistel" ]
+  ], [
+     fhir:index 12 ;
+     fhir:CodeSystem.concept.code [ fhir:value "BOG" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Blutung, obere gastrointestinale (z. B „Stressulkus“)" ]
+  ], [
+     fhir:index 13 ;
+     fhir:CodeSystem.concept.code [ fhir:value "BOE" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Bolusverlegung eines Endotubus" ]
+  ], [
+     fhir:index 14 ;
+     fhir:CodeSystem.concept.code [ fhir:value "BSI" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Bronchusstumpfinsuffizienz" ]
+  ], [
+     fhir:index 15 ;
+     fhir:CodeSystem.concept.code [ fhir:value "CHI" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Cholangitis" ]
+  ], [
+     fhir:index 16 ;
+     fhir:CodeSystem.concept.code [ fhir:value "DAI" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Darmanastomoseninsuffizienz" ]
+  ], [
+     fhir:index 17 ;
+     fhir:CodeSystem.concept.code [ fhir:value "DPS" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Darmpassagestörungen (z. B. protrahierte Atonie, Subileus, Ileus)" ]
+  ], [
+     fhir:index 18 ;
+     fhir:CodeSystem.concept.code [ fhir:value "DIC" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Disseminierte intravasale Koagulopathie" ]
+  ], [
+     fhir:index 19 ;
+     fhir:CodeSystem.concept.code [ fhir:value "DEP" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Drogenentzugspsychose" ]
+  ], [
+     fhir:index 20 ;
+     fhir:CodeSystem.concept.code [ fhir:value "DLU" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Druck- und Lagerungsschäden, z. B. Dekubitalulzera" ]
+  ], [
+     fhir:index 21 ;
+     fhir:CodeSystem.concept.code [ fhir:value "DSI" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Duodenalstumpfinsuffizienz" ]
+  ], [
+     fhir:index 22 ;
+     fhir:CodeSystem.concept.code [ fhir:value "ENF" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Enterale Fistel" ]
+  ], [
+     fhir:index 23 ;
+     fhir:CodeSystem.concept.code [ fhir:value "GER" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Gerinnungsstörung" ]
+  ], [
+     fhir:index 24 ;
+     fhir:CodeSystem.concept.code [ fhir:value "HEM" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hämatemesis" ]
+  ], [
+     fhir:index 25 ;
+     fhir:CodeSystem.concept.code [ fhir:value "HUR" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hämaturie" ]
+  ], [
+     fhir:index 26 ;
+     fhir:CodeSystem.concept.code [ fhir:value "HAE" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hämorrhagischer Schock" ]
+  ], [
+     fhir:index 27 ;
+     fhir:CodeSystem.concept.code [ fhir:value "HFI" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Harnfistel" ]
+  ], [
+     fhir:index 28 ;
+     fhir:CodeSystem.concept.code [ fhir:value "HNK" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hautnekrose im Operationsbereich" ]
+  ], [
+     fhir:index 29 ;
+     fhir:CodeSystem.concept.code [ fhir:value "HZI" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Herzinsuffizienz" ]
+  ], [
+     fhir:index 30 ;
+     fhir:CodeSystem.concept.code [ fhir:value "HRS" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Herzrhythmusstörungen" ]
+  ], [
+     fhir:index 31 ;
+     fhir:CodeSystem.concept.code [ fhir:value "HNA" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hirnnervenausfälle" ]
+  ], [
+     fhir:index 32 ;
+     fhir:CodeSystem.concept.code [ fhir:value "HOP" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hirnorganisches Psychosyndrom (z. B. „Durchgangssyndrom“)" ]
+  ], [
+     fhir:index 33 ;
+     fhir:CodeSystem.concept.code [ fhir:value "HYB" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hyperbilirubinämie" ]
+  ], [
+     fhir:index 34 ;
+     fhir:CodeSystem.concept.code [ fhir:value "HYF" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hypopharynxfistel" ]
+  ], [
+     fhir:index 35 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IFV" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Ileofemorale Venenthrombose" ]
+  ], [
+     fhir:index 36 ;
+     fhir:CodeSystem.concept.code [ fhir:value "KAS" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Kardiogener Schock" ]
+  ], [
+     fhir:index 37 ;
+     fhir:CodeSystem.concept.code [ fhir:value "KES" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Komplikationen einer Stomaanlage" ]
+  ], [
+     fhir:index 38 ;
+     fhir:CodeSystem.concept.code [ fhir:value "KIM" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Komplikation eines Implantates (Gefäßprothese, Totalendoprothese, Katheter), z. B. Dislokation" ]
+  ], [
+     fhir:index 39 ;
+     fhir:CodeSystem.concept.code [ fhir:value "KRA" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Krampfanfall" ]
+  ], [
+     fhir:index 40 ;
+     fhir:CodeSystem.concept.code [ fhir:value "KDS" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Kurzdarmsyndrom" ]
+  ], [
+     fhir:index 41 ;
+     fhir:CodeSystem.concept.code [ fhir:value "LEV" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Leberversagen" ]
+  ], [
+     fhir:index 42 ;
+     fhir:CodeSystem.concept.code [ fhir:value "LOE" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Lungenödem" ]
+  ], [
+     fhir:index 43 ;
+     fhir:CodeSystem.concept.code [ fhir:value "LYF" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Lymphfistel" ]
+  ], [
+     fhir:index 44 ;
+     fhir:CodeSystem.concept.code [ fhir:value "LYE" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Lymphozele" ]
+  ], [
+     fhir:index 45 ;
+     fhir:CodeSystem.concept.code [ fhir:value "MES" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Magenentleerungsstörung" ]
+  ], [
+     fhir:index 46 ;
+     fhir:CodeSystem.concept.code [ fhir:value "MIL" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Mechanischer Ileus" ]
+  ], [
+     fhir:index 47 ;
+     fhir:CodeSystem.concept.code [ fhir:value "MED" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Mediastinitis" ]
+  ], [
+     fhir:index 48 ;
+     fhir:CodeSystem.concept.code [ fhir:value "MAT" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Mesenterialarterien- oder -venenthrombose" ]
+  ], [
+     fhir:index 49 ;
+     fhir:CodeSystem.concept.code [ fhir:value "MYI" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Myokardinfarkt" ]
+  ], [
+     fhir:index 50 ;
+     fhir:CodeSystem.concept.code [ fhir:value "RNB" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Nachblutung, revisionsbedürftig, anderweitig nicht erwähnt" ]
+  ], [
+     fhir:index 51 ;
+     fhir:CodeSystem.concept.code [ fhir:value "NAB" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Nachblutung, nicht revisionsbedürftig, anderweitig nicht erwähnt" ]
+  ], [
+     fhir:index 52 ;
+     fhir:CodeSystem.concept.code [ fhir:value "NIN" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Nahtinsuffizienz, anderweitig nicht erwähnt" ]
+  ], [
+     fhir:index 53 ;
+     fhir:CodeSystem.concept.code [ fhir:value "OES" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Ösophagitis" ]
+  ], [
+     fhir:index 54 ;
+     fhir:CodeSystem.concept.code [ fhir:value "OSM" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Osteitis, Osteomyelitis" ]
+  ], [
+     fhir:index 55 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PAF" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Pankreasfistel" ]
+  ], [
+     fhir:index 56 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PIT" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Pankreatitis" ]
+  ], [
+     fhir:index 57 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PAB" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Peranale Blutung" ]
+  ], [
+     fhir:index 58 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PPA" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Periphere Parese" ]
+  ], [
+     fhir:index 59 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PAV" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Peripherer arterieller Verschluss (Embolie, Thrombose)" ]
+  ], [
+     fhir:index 60 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PER" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Peritonitis" ]
+  ], [
+     fhir:index 61 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PLB" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Platzbauch" ]
+  ], [
+     fhir:index 62 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PEY" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Pleuraempyem" ]
+  ], [
+     fhir:index 63 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PLE" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Pleuraerguss" ]
+  ], [
+     fhir:index 64 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PMN" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Pneumonie" ]
+  ], [
+     fhir:index 65 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PNT" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Pneumothorax" ]
+  ], [
+     fhir:index 66 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PDA" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Protrahierte Darmatonie (paralytischer Ileus)" ]
+  ], [
+     fhir:index 67 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PAE" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Pulmonalarterienembolie" ]
+  ], [
+     fhir:index 68 ;
+     fhir:CodeSystem.concept.code [ fhir:value "RPA" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Rekurrensparese" ]
+  ], [
+     fhir:index 69 ;
+     fhir:CodeSystem.concept.code [ fhir:value "RIN" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Respiratorische Insuffizienz" ]
+  ], [
+     fhir:index 70 ;
+     fhir:CodeSystem.concept.code [ fhir:value "SKI" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Septische Komplikation eines Implantates" ]
+  ], [
+     fhir:index 71 ;
+     fhir:CodeSystem.concept.code [ fhir:value "SES" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Septischer Schock" ]
+  ], [
+     fhir:index 72 ;
+     fhir:CodeSystem.concept.code [ fhir:value "SFH" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Störungen des Flüssigkeits-, Elektrolyt- und Säurebasenhaushaltes" ]
+  ], [
+     fhir:index 73 ;
+     fhir:CodeSystem.concept.code [ fhir:value "STK" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Stomakomplikation (z. B. Blutung, Nekrose, Stenose)" ]
+  ], [
+     fhir:index 74 ;
+     fhir:CodeSystem.concept.code [ fhir:value "TZP" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Thrombozytopenie" ]
+  ], [
+     fhir:index 75 ;
+     fhir:CodeSystem.concept.code [ fhir:value "TIA" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "TIA(transitorische ischämische Attacke) oder RIND(reversibles ischämisches neurologisches Defizit)" ]
+  ], [
+     fhir:index 76 ;
+     fhir:CodeSystem.concept.code [ fhir:value "TRZ" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Transfusionszwischenfall" ]
+  ], [
+     fhir:index 77 ;
+     fhir:CodeSystem.concept.code [ fhir:value "WUH" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Wundhämatom (konservativ therapiert)" ]
+  ], [
+     fhir:index 78 ;
+     fhir:CodeSystem.concept.code [ fhir:value "WSS" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Wundheilungsstörung, subkutane" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

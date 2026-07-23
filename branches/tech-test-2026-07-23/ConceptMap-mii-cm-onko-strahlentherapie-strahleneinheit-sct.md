@@ -1,0 +1,89 @@
+# MII CM Onko Strahlentherapie Strahleneinheit SNOMED Mapping - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **MII CM Onko Strahlentherapie Strahleneinheit SNOMED Mapping**
+
+## ConceptMap: MII CM Onko Strahlentherapie Strahleneinheit SNOMED Mapping 
+
+| | |
+| :--- | :--- |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-strahlentherapie-strahleneinheit-sct | *Version*:2026.0.3 |
+| Active as of 2024-04-11 | *Computable Name*:MII CM Onko Strahlentherapie Strahleneinheit SCT Mapping |
+
+ 
+Mapping Strahlentherapie Strahleneinheit Codes zu SNOMED-CT 
+
+ 
+Technical mapping to transform oBDS-Data into SNOMED 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "ConceptMap",
+  "id" : "mii-cm-onko-strahlentherapie-strahleneinheit-sct",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-strahlentherapie-strahleneinheit-sct",
+  "version" : "2026.0.3",
+  "name" : "MII CM Onko Strahlentherapie Strahleneinheit SCT Mapping",
+  "title" : "MII CM Onko Strahlentherapie Strahleneinheit SNOMED Mapping",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2024-04-11",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Mapping Strahlentherapie Strahleneinheit Codes zu SNOMED-CT",
+  "purpose" : "Technical mapping to transform oBDS-Data into SNOMED",
+  "sourceUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
+  "targetUri" : "http://snomed.info/sct/900000000000207008/version/20240401",
+  "group" : [{
+    "source" : "http://unitsofmeasure.org",
+    "target" : "http://snomed.info/sct/900000000000207008/version/20240401",
+    "element" : [{
+      "code" : "Gy",
+      "display" : "Gy",
+      "target" : [{
+        "code" : "229029004",
+        "display" : "Gray (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "GBq",
+      "display" : "GBq",
+      "target" : [{
+        "code" : "418931004",
+        "display" : "Gigabecquerel (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "MBq",
+      "display" : "MBq",
+      "target" : [{
+        "code" : "229034000",
+        "display" : "Megabecquerel (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "kBq",
+      "display" : "kBq",
+      "target" : [{
+        "code" : "282143001",
+        "display" : "Kilobecquerel (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}
+
+```

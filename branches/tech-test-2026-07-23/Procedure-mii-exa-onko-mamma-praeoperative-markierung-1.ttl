@@ -1,0 +1,59 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-mamma-praeoperative-markierung-1> a fhir:Procedure ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-mamma-praeoperative-markierung-1"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-praeoperative-markierung|2026.0.3" ;
+       fhir:index 0 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-praeoperative-markierung|2026.0.3>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Procedure mii-exa-onko-mamma-praeoperative-markierung-1</b></p><a name=\"mii-exa-onko-mamma-praeoperative-markierung-1\"> </a><a name=\"hcmii-exa-onko-mamma-praeoperative-markierung-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-mamma-praeoperative-markierung.html\">MII PR Onkologie Präoperative Markierung Mamma</a> version: 2026.0.3</p></div><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 103693007}\">Diagnostic procedure (procedure)</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 433222002}\">Insertion of guide wire into breast using ultrasound guidance (procedure)</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-mamma-bundle-patient.html\">Martha MammaCa  (no stated gender), DoB Unknown</a></p><p><b>performed</b>: 2024-01-15 09:00:00+0100</p><p><b>reasonReference</b>: <a href=\"Condition-mii-exa-onko-mamma-diagnose.html\">Condition Bösartige Neubildung: Unterer innerer Quadrant der Brustdrüse</a></p></div>"
+  ] ;
+  fhir:Procedure.status [ fhir:value "completed"] ;
+  fhir:Procedure.category [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a sct:103693007 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "103693007" ] ;
+       fhir:Coding.display [ fhir:value "Diagnostic procedure (procedure)" ]
+     ]
+  ] ;
+  fhir:Procedure.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a sct:433222002 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "433222002" ] ;
+       fhir:Coding.display [ fhir:value "Insertion of guide wire into breast using ultrasound guidance (procedure)" ]
+     ]
+  ] ;
+  fhir:Procedure.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-mamma-bundle-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-mamma-bundle-patient" ]
+  ] ;
+  fhir:Procedure.performedDateTime [ fhir:value "2024-01-15T09:00:00+01:00"^^xsd:dateTime] ;
+  fhir:Procedure.reasonReference [
+     fhir:index 0 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-mamma-diagnose> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-mamma-diagnose" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-mamma-praeoperative-markierung-1.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

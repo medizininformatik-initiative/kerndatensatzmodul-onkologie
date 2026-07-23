@@ -1,0 +1,312 @@
+# MII PR Onkologie TNM Pn-Kategorie - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **MII PR Onkologie TNM Pn-Kategorie**
+
+## Resource Profile: MII PR Onkologie TNM Pn-Kategorie 
+
+| | |
+| :--- | :--- |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-pn-kategorie | *Version*:2026.0.3 |
+| Active as of 2026-07-23 | *Computable Name*:MII_PR_Onko_TNM_Pn_Kategorie |
+
+ 
+TNM-Klassifikation: TNM Pn-Kategorie. Perineuralinvasion. 
+
+**Usages:**
+
+* Refer to this Profile: [MII PR Onkologie TNM-Klassifikation](StructureDefinition-mii-pr-onko-tnm-klassifikation.md)
+* Examples for this Profile: [Observation/TNM-Pn-Observation-2](Observation-TNM-Pn-Observation-2.md) and [Observation/mii-exa-onko-tnm-pn-kategorie-Pn1](Observation-mii-exa-onko-tnm-pn-kategorie-Pn1.md)
+* CapabilityStatements using this Profile: [MII CPS Onkology CapabilityStatement](CapabilityStatement-mii-cps-onko-capabilitystatement.md)
+
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/mii-ig-onko-de-v2026|current/StructureDefinition/StructureDefinition-mii-pr-onko-tnm-pn-kategorie.json)
+
+### Formal Views of Profile Content
+
+ [Description of Profiles, Differentials, Snapshots and how the different presentations work](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
+
+ 
+
+Other representations of profile: [CSV](StructureDefinition-mii-pr-onko-tnm-pn-kategorie.csv), [Excel](StructureDefinition-mii-pr-onko-tnm-pn-kategorie.xlsx), [Schematron](StructureDefinition-mii-pr-onko-tnm-pn-kategorie.sch) 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "mii-pr-onko-tnm-pn-kategorie",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-pn-kategorie",
+  "version" : "2026.0.3",
+  "name" : "MII_PR_Onko_TNM_Pn_Kategorie",
+  "title" : "MII PR Onkologie TNM Pn-Kategorie",
+  "status" : "active",
+  "date" : "2026-07-23T12:42:42+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "TNM-Klassifikation: TNM Pn-Kategorie. Perineuralinvasion.",
+  "fhirVersion" : "4.0.1",
+  "mapping" : [{
+    "identity" : "oBDS",
+    "name" : "Mapping FHIR zu oBDS"
+  },
+  {
+    "identity" : "workflow",
+    "uri" : "http://hl7.org/fhir/workflow",
+    "name" : "Workflow Pattern"
+  },
+  {
+    "identity" : "sct-concept",
+    "uri" : "http://snomed.info/conceptdomain",
+    "name" : "SNOMED CT Concept Domain Binding"
+  },
+  {
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 v2 Mapping"
+  },
+  {
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  },
+  {
+    "identity" : "sct-attr",
+    "uri" : "http://snomed.org/attributebinding",
+    "name" : "SNOMED CT Attribute Binding"
+  }],
+  "kind" : "resource",
+  "abstract" : false,
+  "type" : "Observation",
+  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation" : "constraint",
+  "differential" : {
+    "element" : [{
+      "id" : "Observation",
+      "path" : "Observation"
+    },
+    {
+      "id" : "Observation.meta.profile",
+      "path" : "Observation.meta.profile",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.status",
+      "path" : "Observation.status",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.code",
+      "path" : "Observation.code",
+      "patternCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "371513001"
+        }]
+      },
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.code.coding.system",
+      "path" : "Observation.code.coding.system",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.code.coding.code",
+      "path" : "Observation.code.coding.code",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.subject",
+      "path" : "Observation.subject",
+      "min" : 1,
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Patient"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.focus",
+      "path" : "Observation.focus",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.encounter",
+      "path" : "Observation.encounter",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.effective[x]",
+      "path" : "Observation.effective[x]",
+      "short" : "TNM-Datum",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "TNM-Datum"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Datum der TNM-Klassifikation nach 8.1 oBDS 2021",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Datum der TNM-Klassifikation nach 8.1 oBDS 2021"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "type" : [{
+        "code" : "dateTime"
+      }],
+      "constraint" : [{
+        "key" : "tnm-datum",
+        "severity" : "error",
+        "human" : "TNM Datum: Ein exaktes (taggenaues) Datum ist anzugeben.",
+        "expression" : "$this.toString().length() >= 8",
+        "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-pn-kategorie"
+      }],
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "8.1",
+        "comment" : "TNM Datum"
+      }]
+    },
+    {
+      "id" : "Observation.value[x]",
+      "path" : "Observation.value[x]",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mustSupport" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-pn-kategorie-werte"
+      }
+    },
+    {
+      "id" : "Observation.value[x].coding",
+      "path" : "Observation.value[x].coding",
+      "short" : "TNM Pn-Kategorie",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "TNM Pn-Kategorie"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Perineuralinvasion.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "TNM Perineuralinvasion nach  8.15 oBDS 2021"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      }
+    },
+    {
+      "id" : "Observation.value[x].coding.system",
+      "path" : "Observation.value[x].coding.system",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.value[x].coding.code",
+      "path" : "Observation.value[x].coding.code",
+      "min" : 1,
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "8.15",
+        "comment" : "TNM Pn-Kategorie"
+      }]
+    },
+    {
+      "id" : "Observation.method",
+      "path" : "Observation.method",
+      "mustSupport" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-version"
+      }
+    },
+    {
+      "id" : "Observation.method.coding",
+      "path" : "Observation.method.coding",
+      "short" : "TNM Version",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "TNM Version"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Gibt an, nach welcher Version des TNM klassifiziert wurde.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Version nach 8.2 oBDS 2021"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "mustSupport" : true
+    }]
+  }
+}
+
+```

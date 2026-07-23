@@ -1,0 +1,478 @@
+# MII VS Onkologie Systemische Therapie Substanzen (UNII) - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **MII VS Onkologie Systemische Therapie Substanzen (UNII)**
+
+## ValueSet: MII VS Onkologie Systemische Therapie Substanzen (UNII) 
+
+| | |
+| :--- | :--- |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-unii | *Version*:2026.0.3 |
+| Active as of 2026-07-23 | *Computable Name*:MII_VS_Onko_Systemische_Therapie_Substanzen_UNII |
+
+ 
+UNII-Codes für Substanzen der systemischen Therapie ohne ATC-Code. Ergänzung zum ATC-basierten Haupt-ValueSet für neuere und experimentelle onkologische Wirkstoffe. 
+
+ **References** 
+
+* [MII PR Onkologie Systemische Therapie Medikation](StructureDefinition-mii-pr-onko-systemische-therapie-medikation.md)
+
+### Logical Definition (CLD)
+
+ 
+
+### Expansion
+
+-------
+
+ Explanation of the columns that may appear on this page: 
+
+| | |
+| :--- | :--- |
+| Level | A few code lists that FHIR defines are hierarchical - each code is assigned a level. In this scheme, some codes are under other codes, and imply that the code they are under also applies |
+| System | The source of the definition of the code (when the value set draws in codes defined elsewhere) |
+| Code | The code (used as the code in the resource instance) |
+| Display | The display (used in the*display*element of a[Coding](http://hl7.org/fhir/R4/datatypes.html#Coding)). If there is no display, implementers should not simply display the code, but map the concept into their application |
+| Definition | An explanation of the meaning of the concept |
+| Comments | Additional notes about how to use the code |
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-onko-systemische-therapie-substanzen-unii",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-unii",
+  "version" : "2026.0.3",
+  "name" : "MII_VS_Onko_Systemische_Therapie_Substanzen_UNII",
+  "title" : "MII VS Onkologie Systemische Therapie Substanzen (UNII)",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-07-23T12:42:42+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "UNII-Codes für Substanzen der systemischen Therapie ohne ATC-Code. Ergänzung zum ATC-basierten Haupt-ValueSet für neuere und experimentelle onkologische Wirkstoffe.",
+  "compose" : {
+    "include" : [{
+      "system" : "http://fdasis.nlm.nih.gov",
+      "concept" : [{
+        "code" : "T66ES73M18",
+        "display" : "ALISERTIB"
+      },
+      {
+        "code" : "F333OQQ9UV",
+        "display" : "ASUNERCEPT"
+      },
+      {
+        "code" : "31M3WLJ3KG",
+        "display" : "BELVARAFENIB"
+      },
+      {
+        "code" : "0ICW2LX8AS",
+        "display" : "BEMCENTINIB"
+      },
+      {
+        "code" : "0ZM2Z182GD",
+        "display" : "BUPARLISIB"
+      },
+      {
+        "code" : "85RE35306Z",
+        "display" : "CERALASERTIB"
+      },
+      {
+        "code" : "4EDF46E4GI",
+        "display" : "CILENGITIDE"
+      },
+      {
+        "code" : "923X28214S",
+        "display" : "CRENIGACESTAT"
+      },
+      {
+        "code" : "LQF7I567TQ",
+        "display" : "CRENOLANIB"
+      },
+      {
+        "code" : "N9B0H171MJ",
+        "display" : "DERAZANTINIB"
+      },
+      {
+        "code" : "SJ82PK3HWA",
+        "display" : "EFTILAGIMOD ALFA"
+      },
+      {
+        "code" : "SMA5ZS5B22",
+        "display" : "ENSARTINIB"
+      },
+      {
+        "code" : "6I3O3W6O3B",
+        "display" : "ENTOSPLETINIB"
+      },
+      {
+        "code" : "UC96G28EQF",
+        "display" : "ENZASTAURIN"
+      },
+      {
+        "code" : "2E8412Y946",
+        "display" : "GANETESPIB"
+      },
+      {
+        "code" : "QSQ883V35U",
+        "display" : "IDASANUTLIN"
+      },
+      {
+        "code" : "F60NE4XB53",
+        "display" : "IMETELSTAT"
+      },
+      {
+        "code" : "L4C1UY2NYH",
+        "display" : "INAVOLISIB"
+      },
+      {
+        "code" : "PP449XA4BH",
+        "display" : "LUCITANIB"
+      },
+      {
+        "code" : "703P9YDP7F",
+        "display" : "MARIZOMIB"
+      },
+      {
+        "code" : "5OGS5K699E",
+        "display" : "MERESTINIB"
+      },
+      {
+        "code" : "6O01GMS00P",
+        "display" : "MOMELOTINIB"
+      },
+      {
+        "code" : "15JL80DG6H",
+        "display" : "NAPORAFENIB"
+      },
+      {
+        "code" : "KE7K32EME8",
+        "display" : "NAZARTINIB"
+      },
+      {
+        "code" : "JTZ51LIXN4",
+        "display" : "NEMTABRUTINIB"
+      },
+      {
+        "code" : "MTM792B442",
+        "display" : "OLAPTESED PEGOL"
+      },
+      {
+        "code" : "S3AZD8D215",
+        "display" : "PEVONEDISTAT"
+      },
+      {
+        "code" : "JNA39I7ZVB",
+        "display" : "PIRTOBRUTINIB"
+      },
+      {
+        "code" : "08O3FQ4UNP",
+        "display" : "REPOTRECTINIB"
+      },
+      {
+        "code" : "15KFN616FK",
+        "display" : "RINETERKIB"
+      },
+      {
+        "code" : "67DOW7F9GL",
+        "display" : "RIGOSERTIB"
+      },
+      {
+        "code" : "0282IF4JC8",
+        "display" : "SIREMADLIN"
+      },
+      {
+        "code" : "G287IC9MH3",
+        "display" : "TILSOTOLIMOD"
+      },
+      {
+        "code" : "MAT637500A",
+        "display" : "TIPIFARNIB"
+      },
+      {
+        "code" : "LXG44NDL2T",
+        "display" : "TIRABRUTINIB"
+      },
+      {
+        "code" : "PJ4H73IL17",
+        "display" : "TIVANTINIB"
+      },
+      {
+        "code" : "ZN90E4027M",
+        "display" : "TOVORAFENIB"
+      },
+      {
+        "code" : "X8Y5U6NC7E",
+        "display" : "TREBANANIB"
+      },
+      {
+        "code" : "U36PGF65JH",
+        "display" : "UMIROLIMUS"
+      },
+      {
+        "code" : "6EM57086EA",
+        "display" : "VOLASERTIB"
+      },
+      {
+        "code" : "H4GXR80IZE",
+        "display" : "ZOTAROLIMUS"
+      },
+      {
+        "code" : "7OSV6M6T4D",
+        "display" : "ALNUCTAMAB"
+      },
+      {
+        "code" : "6HP0354G04",
+        "display" : "AMATUXIMAB"
+      },
+      {
+        "code" : "PRC974M49B",
+        "display" : "BALIXAFORTIDE"
+      },
+      {
+        "code" : "Q16CT95N25",
+        "display" : "BAVITUXIMAB"
+      },
+      {
+        "code" : "RJW23BQ0KW",
+        "display" : "BEMARITUZUMAB"
+      },
+      {
+        "code" : "LYK98WP91F",
+        "display" : "CETRELIMAB"
+      },
+      {
+        "code" : "RR5U4UFJ8L",
+        "display" : "CUSATUZUMAB"
+      },
+      {
+        "code" : "2OQ3OPV2F8",
+        "display" : "DARLEUKIN"
+      },
+      {
+        "code" : "GD2OWY1DTK",
+        "display" : "DATOPOTAMAB DERUXTECAN"
+      },
+      {
+        "code" : "W984C353CG",
+        "display" : "DEPATUXIZUMAB"
+      },
+      {
+        "code" : "RB3U3A1S27",
+        "display" : "DISITAMAB VEDOTIN"
+      },
+      {
+        "code" : "L0HR9A577V",
+        "display" : "ELRANATAMAB"
+      },
+      {
+        "code" : "DGK38A42AE",
+        "display" : "ELSILIMOMAB"
+      },
+      {
+        "code" : "VE267FC2UB",
+        "display" : "FIGITUMUMAB"
+      },
+      {
+        "code" : "S9OX9692ZB",
+        "display" : "GALIXIMAB"
+      },
+      {
+        "code" : "85V55ZLV2Z",
+        "display" : "GATIPOTUZUMAB"
+      },
+      {
+        "code" : "4B57CWT710",
+        "display" : "GEBASAXTUREV"
+      },
+      {
+        "code" : "28P3DU6DB3",
+        "display" : "GIREDESTRANT"
+      },
+      {
+        "code" : "539B57DFJF",
+        "display" : "GIRENTUXIMAB"
+      },
+      {
+        "code" : "06P3KLK2J8",
+        "display" : "GLOFITAMAB"
+      },
+      {
+        "code" : "8V66F27X44",
+        "display" : "IBERDOMIDE"
+      },
+      {
+        "code" : "XGL4M23834",
+        "display" : "INDATUXIMAB RAVTANSINE"
+      },
+      {
+        "code" : "GO90DFK14U",
+        "display" : "INOLIMOMAB"
+      },
+      {
+        "code" : "0H2XLR2IKW",
+        "display" : "LEMZOPARLIMAB"
+      },
+      {
+        "code" : "NYM5HO7I39",
+        "display" : "LONCASTUXIMAB"
+      },
+      {
+        "code" : "7K5O7P6QIU",
+        "display" : "LONCASTUXIMAB TESIRINE"
+      },
+      {
+        "code" : "90YIEHRFJ9",
+        "display" : "MAGROLIMAB"
+      },
+      {
+        "code" : "98DE7VN88D",
+        "display" : "MIRVETUXIMAB SORAVTANSINE"
+      },
+      {
+        "code" : "DA9G065962",
+        "display" : "MOTIXAFORTIDE"
+      },
+      {
+        "code" : "ND296JF21I",
+        "display" : "NIDANILIMAB"
+      },
+      {
+        "code" : "W2OR26S7UE",
+        "display" : "NISEVOKITUG"
+      },
+      {
+        "code" : "6HXC0O6JMV",
+        "display" : "ONFEKAFUSP ALFA"
+      },
+      {
+        "code" : "S9J80L3D1U",
+        "display" : "PELAREOREP"
+      },
+      {
+        "code" : "IBS1BZ4E4I",
+        "display" : "PENPULIMAB"
+      },
+      {
+        "code" : "4XG66BMN0D",
+        "display" : "PLOZALIZUMAB"
+      },
+      {
+        "code" : "AF75XOF6W3",
+        "display" : "RELATLIMAB"
+      },
+      {
+        "code" : "51WEW898IJ",
+        "display" : "RILOTUMUMAB"
+      },
+      {
+        "code" : "P256HB60FF",
+        "display" : "ROVALPITUZUMAB TESIRINE"
+      },
+      {
+        "code" : "1N3L70MDFX",
+        "display" : "SERIBANTUMAB"
+      },
+      {
+        "code" : "8FU7FQ8UPK",
+        "display" : "SINTILIMAB"
+      },
+      {
+        "code" : "QOG25L6Z8Z",
+        "display" : "SPARTALIZUMAB"
+      },
+      {
+        "code" : "X8JR0I7JE1",
+        "display" : "TALACOTUZUMAB"
+      },
+      {
+        "code" : "6XG22YQM2Z",
+        "display" : "TIRAGOLUMAB"
+      },
+      {
+        "code" : "T41737F88A",
+        "display" : "TISOTUMAB VEDOTIN"
+      },
+      {
+        "code" : "5P637IXG16",
+        "display" : "TOMUZOTUXIMAB"
+      },
+      {
+        "code" : "8JXN261VVA",
+        "display" : "TORIPALIMAB"
+      },
+      {
+        "code" : "230902QLLC",
+        "display" : "URELUMAB"
+      },
+      {
+        "code" : "5XO3JF0FEK",
+        "display" : "VIBOSTOLIMAB"
+      },
+      {
+        "code" : "IZY9ZSI6FI",
+        "display" : "ZILOVERTAMAB VEDOTIN"
+      },
+      {
+        "code" : "94N635564T",
+        "display" : "HUMAN PARVOVIRUS B19"
+      },
+      {
+        "code" : "1Q8D39N37L",
+        "display" : "AMONAFIDE"
+      },
+      {
+        "code" : "XT3Z54Z28A",
+        "display" : "CAMPTOTHECIN"
+      },
+      {
+        "code" : "04079A1RDZ",
+        "display" : "CYTARABINE"
+      },
+      {
+        "code" : "5L84T2Z6NP",
+        "display" : "DAUNORUBICIN CITRATE"
+      },
+      {
+        "code" : "V1JK16Y2JP",
+        "display" : "DOXIFLURIDINE"
+      },
+      {
+        "code" : "2KT4YN1DP7",
+        "display" : "GUADECITABINE"
+      },
+      {
+        "code" : "P88XT4IS4D",
+        "display" : "PACLITAXEL"
+      },
+      {
+        "code" : "Z8R4A37V9Q",
+        "display" : "ARFOLITIXORIN"
+      },
+      {
+        "code" : "BNO1JG5MZC",
+        "display" : "BEMPEGALDESLEUKIN"
+      },
+      {
+        "code" : "4MXU9LJS4Q",
+        "display" : "LEUCOVORIN SODIUM"
+      }]
+    }]
+  }
+}
+
+```

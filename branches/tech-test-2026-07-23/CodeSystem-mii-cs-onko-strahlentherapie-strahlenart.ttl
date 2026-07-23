@@ -1,0 +1,127 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-cs-onko-strahlentherapie-strahlenart"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/shareablecodesystem" ;
+       fhir:index 0 ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-onko-strahlentherapie-strahlenart</b></p><a name=\"mii-cs-onko-strahlentherapie-strahlenart\"> </a><a name=\"hcmii-cs-onko-strahlentherapie-strahlenart\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">UH<a name=\"mii-cs-onko-strahlentherapie-strahlenart-UH\"> </a></td><td>Photonen (ultraharte Röntgenstrahlen, inklusive Gamma-Strahler)</td></tr><tr><td style=\"white-space:nowrap\">EL<a name=\"mii-cs-onko-strahlentherapie-strahlenart-EL\"> </a></td><td>Elektronen</td></tr><tr><td style=\"white-space:nowrap\">NE<a name=\"mii-cs-onko-strahlentherapie-strahlenart-NE\"> </a></td><td>Neutronen</td></tr><tr><td style=\"white-space:nowrap\">PN<a name=\"mii-cs-onko-strahlentherapie-strahlenart-PN\"> </a></td><td>Protonen (leichte Wasserstoffionen/H1/Leichtionen)</td></tr><tr><td style=\"white-space:nowrap\">SI<a name=\"mii-cs-onko-strahlentherapie-strahlenart-SI\"> </a></td><td>Schwerionen (schwere Kohlenstoff-Ionen/C12/Sauerstoffionen/Heliumionen)</td></tr><tr><td style=\"white-space:nowrap\">RO<a name=\"mii-cs-onko-strahlentherapie-strahlenart-RO\"> </a></td><td>Weichstrahl (kV)</td></tr><tr><td style=\"white-space:nowrap\">SO<a name=\"mii-cs-onko-strahlentherapie-strahlenart-SO\"> </a></td><td>Sonstige (inklusive Mixed Beams, exklusive Nuklide)</td></tr><tr><td style=\"white-space:nowrap\">Lu-177<a name=\"mii-cs-onko-strahlentherapie-strahlenart-Lu-177\"> </a></td><td>Lu-177</td></tr><tr><td style=\"white-space:nowrap\">J-131<a name=\"mii-cs-onko-strahlentherapie-strahlenart-J-131\"> </a></td><td>J131</td></tr><tr><td style=\"white-space:nowrap\">Y-90<a name=\"mii-cs-onko-strahlentherapie-strahlenart-Y-90\"> </a></td><td>Y-90</td></tr><tr><td style=\"white-space:nowrap\">Ra-223<a name=\"mii-cs-onko-strahlentherapie-strahlenart-Ra-223\"> </a></td><td>Ra-223</td></tr><tr><td style=\"white-space:nowrap\">Ac-225<a name=\"mii-cs-onko-strahlentherapie-strahlenart-Ac-225\"> </a></td><td>Ac-225</td></tr><tr><td style=\"white-space:nowrap\">Sm-153<a name=\"mii-cs-onko-strahlentherapie-strahlenart-Sm-153\"> </a></td><td>Sm-153</td></tr><tr><td style=\"white-space:nowrap\">Tb-161<a name=\"mii-cs-onko-strahlentherapie-strahlenart-Tb-161\"> </a></td><td>Tb-161</td></tr><tr><td style=\"white-space:nowrap\">Sr-89<a name=\"mii-cs-onko-strahlentherapie-strahlenart-Sr-89\"> </a></td><td>Sr-89</td></tr><tr><td style=\"white-space:nowrap\">Ir-192<a name=\"mii-cs-onko-strahlentherapie-strahlenart-Ir-192\"> </a></td><td>Ir-192</td></tr><tr><td style=\"white-space:nowrap\">Co-60<a name=\"mii-cs-onko-strahlentherapie-strahlenart-Co-60\"> </a></td><td>Co-60</td></tr><tr><td style=\"white-space:nowrap\">SONU<a name=\"mii-cs-onko-strahlentherapie-strahlenart-SONU\"> </a></td><td>Sonstige Nuklide</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart"] ;
+  fhir:CodeSystem.version [ fhir:value "2026.0.3"] ;
+  fhir:CodeSystem.name [ fhir:value "MII_CS_Onko_Strahlentherapie_Strahlenart"] ;
+  fhir:CodeSystem.title [ fhir:value "MII CS Onkologie Strahlentherapie Strahlenart"] ;
+  fhir:CodeSystem.status [ fhir:value "active"] ;
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-07-23T12:42:42+00:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "Medizininformatik Initiative"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Medizininformatik Initiative" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.medizininformatik-initiative.de/" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "oBDS-spezifisches Codesystem für Klassifikation von eingesetzter Strahlenart"] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.valueSet [
+     fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-strahlenart" ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-strahlenart>
+  ] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "18"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "UH" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Photonen (ultraharte Röntgenstrahlen, inklusive Gamma-Strahler)" ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "EL" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Elektronen" ]
+  ], [
+     fhir:index 2 ;
+     fhir:CodeSystem.concept.code [ fhir:value "NE" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neutronen" ]
+  ], [
+     fhir:index 3 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PN" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Protonen (leichte Wasserstoffionen/H1/Leichtionen)" ]
+  ], [
+     fhir:index 4 ;
+     fhir:CodeSystem.concept.code [ fhir:value "SI" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Schwerionen (schwere Kohlenstoff-Ionen/C12/Sauerstoffionen/Heliumionen)" ]
+  ], [
+     fhir:index 5 ;
+     fhir:CodeSystem.concept.code [ fhir:value "RO" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Weichstrahl (kV)" ]
+  ], [
+     fhir:index 6 ;
+     fhir:CodeSystem.concept.code [ fhir:value "SO" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sonstige (inklusive Mixed Beams, exklusive Nuklide)" ]
+  ], [
+     fhir:index 7 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Lu-177" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Lu-177" ]
+  ], [
+     fhir:index 8 ;
+     fhir:CodeSystem.concept.code [ fhir:value "J-131" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "J131" ]
+  ], [
+     fhir:index 9 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y-90" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Y-90" ]
+  ], [
+     fhir:index 10 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Ra-223" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Ra-223" ]
+  ], [
+     fhir:index 11 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Ac-225" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Ac-225" ]
+  ], [
+     fhir:index 12 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Sm-153" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sm-153" ]
+  ], [
+     fhir:index 13 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Tb-161" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Tb-161" ]
+  ], [
+     fhir:index 14 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Sr-89" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sr-89" ]
+  ], [
+     fhir:index 15 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Ir-192" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Ir-192" ]
+  ], [
+     fhir:index 16 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Co-60" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Co-60" ]
+  ], [
+     fhir:index 17 ;
+     fhir:CodeSystem.concept.code [ fhir:value "SONU" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sonstige Nuklide" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

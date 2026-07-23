@@ -1,0 +1,86 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-cs-onko-nebenwirkung-ctcae-grad"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/shareablecodesystem" ;
+       fhir:index 0 ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-onko-nebenwirkung-ctcae-grad</b></p><a name=\"mii-cs-onko-nebenwirkung-ctcae-grad\"> </a><a name=\"hcmii-cs-onko-nebenwirkung-ctcae-grad\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"mii-cs-onko-nebenwirkung-ctcae-grad-1\"> </a></td><td>mild</td><td>Mild</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"mii-cs-onko-nebenwirkung-ctcae-grad-2\"> </a></td><td>moderat</td><td>Moderat</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"mii-cs-onko-nebenwirkung-ctcae-grad-3\"> </a></td><td>schwerwiegend</td><td>Schwerwiegend</td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"mii-cs-onko-nebenwirkung-ctcae-grad-4\"> </a></td><td>lebensbedrohlich</td><td>Lebensbedrohlich</td></tr><tr><td style=\"white-space:nowrap\">5<a name=\"mii-cs-onko-nebenwirkung-ctcae-grad-5\"> </a></td><td>tödlich</td><td>Tödlich</td></tr><tr><td style=\"white-space:nowrap\">U<a name=\"mii-cs-onko-nebenwirkung-ctcae-grad-U\"> </a></td><td>unbekannt</td><td>Unbekannt</td></tr><tr><td style=\"white-space:nowrap\">K<a name=\"mii-cs-onko-nebenwirkung-ctcae-grad-K\"> </a></td><td>keine</td><td>Keine</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad"] ;
+  fhir:CodeSystem.version [ fhir:value "2026.0.3"] ;
+  fhir:CodeSystem.name [ fhir:value "MII_CS_Onko_Nebenwirkung_CTCAE_Grad"] ;
+  fhir:CodeSystem.title [ fhir:value "MII CS Onko Nebenwirkung nach CTCAE-Grad"] ;
+  fhir:CodeSystem.status [ fhir:value "active"] ;
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-07-23T12:42:42+00:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "Medizininformatik Initiative"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Medizininformatik Initiative" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.medizininformatik-initiative.de/" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "Gibt an, zu welchem Schweregrad von Nebenwirkungen es bei der Bestrahlung oder der systemischen Therapie gekommen ist."] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "7"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "1" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "mild" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Mild" ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "moderat" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Moderat" ]
+  ], [
+     fhir:index 2 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "schwerwiegend" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Schwerwiegend" ]
+  ], [
+     fhir:index 3 ;
+     fhir:CodeSystem.concept.code [ fhir:value "4" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "lebensbedrohlich" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Lebensbedrohlich" ]
+  ], [
+     fhir:index 4 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "tödlich" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Tödlich" ]
+  ], [
+     fhir:index 5 ;
+     fhir:CodeSystem.concept.code [ fhir:value "U" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "unbekannt" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Unbekannt" ]
+  ], [
+     fhir:index 6 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "keine" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Keine" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

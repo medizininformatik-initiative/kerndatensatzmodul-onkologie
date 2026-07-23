@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CarePlan xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-tumorkonferenz-02"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz|2026.0.3"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CarePlan mii-exa-onko-tumorkonferenz-02</b></p><a name="mii-exa-onko-tumorkonferenz-02"> </a><a name="hcmii-exa-onko-tumorkonferenz-02"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-tumorkonferenz.html">MII PR Onkologie Tumorkonferenz</a> version: 2026.0.3</p></div><p><b>identifier</b>: Tumorkonferenz_2</p><p><b>status</b>: Completed</p><p><b>intent</b>: Plan</p><p><b>category</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ postop}">postoperative Tumorkonferenz (Planung der postoperativen Therapie, z. B. zur Frage adjuvante Therapie)</span></p><p><b>subject</b>: <a href="https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example">Patient/example</a></p><p><b>created</b>: 2024-01-11</p><blockquote><p><b>activity</b></p><h3>Details</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td><td><b>Status</b></td><td><b>StatusReason</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ OP}">Operation</span></td><td>Cancelled</td><td><span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieabweichung N}">nein</span></td></tr></table></blockquote><blockquote><p><b>activity</b></p><h3>Details</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td><td><b>Status</b></td><td><b>StatusReason</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ ZS}">Zielgerichtete Substanzen</span></td><td>Cancelled</td><td><span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieabweichung N}">nein</span></td></tr></table></blockquote></div>
+  </text>
+  <identifier>
+    <value value="Tumorkonferenz_2"/>
+  </identifier>
+  <status value="completed"/>
+  <intent value="plan"/>
+  <category>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ"/>
+      <code value="postop"/>
+    </coding>
+  </category>
+  <subject>
+    <reference value="Patient/example"/>
+  </subject>
+  <created value="2024-01-11"/>
+  <activity>
+    <detail>
+      <code>
+        <coding>
+          <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ"/>
+          <code value="OP"/>
+        </coding>
+      </code>
+      <status value="cancelled"/>
+      <statusReason>
+        <coding>
+          <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieabweichung"/>
+          <code value="N"/>
+          <display value="nein"/>
+        </coding>
+      </statusReason>
+    </detail>
+  </activity>
+  <activity>
+    <detail>
+      <code>
+        <coding>
+          <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ"/>
+          <code value="ZS"/>
+          <display value="Zielgerichtete Substanzen"/>
+        </coding>
+      </code>
+      <status value="cancelled"/>
+      <statusReason>
+        <coding>
+          <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieabweichung"/>
+          <code value="N"/>
+          <display value="nein"/>
+        </coding>
+      </statusReason>
+    </detail>
+  </activity>
+</CarePlan>

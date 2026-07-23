@@ -1,0 +1,149 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-verlauf-gesamtbeurteilung-sct> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-cm-onko-verlauf-gesamtbeurteilung-sct"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap mii-cm-onko-verlauf-gesamtbeurteilung-sct</b></p><a name=\"mii-cm-onko-verlauf-gesamtbeurteilung-sct\"> </a><a name=\"hcmii-cm-onko-verlauf-gesamtbeurteilung-sct\"> </a><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <a href=\"CodeSystem-mii-cs-onko-verlauf-gesamtbeurteilung.html\">MII CS Onkologie Verlauf Gesamtbeurteilung</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>V (Vollremission (complete remission, CR))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>550991000124107 (Malignant neoplasm in full remission (disorder))</td><td/></tr><tr><td>T (Teilremission (partial remission, PR))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>551001000124108 (Malignant neoplasm in partial remission (disorder))</td><td/></tr><tr><td>K (keine Änderung (no change, NC) = stable disease)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>260388006 (No status change (qualifier value))</td><td/></tr><tr><td>P (Progression)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>419835002 (Tumor progression (finding))</td><td/></tr><tr><td>D (divergentes Geschehen)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">kein SNOMED-Term für divergentes Geschehen</td></tr><tr><td>B (klinische Besserung des Zustandes, Teilremissionkriterien jedoch nicht erfüllt (minimal response, MR))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>84190002 (Minimal therapeutic response (finding))</td><td/></tr><tr><td>R (Vollremission mit residualen Auffälligkeiten (CRr))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>550991000124107 (Malignant neoplasm in full remission (disorder))</td><td>Residuale Auffälligkeiten ggfs. über Postkoordination kodierbar</td></tr><tr><td>Y (Rezidiv)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1259237005 (Recurrent malignant neoplasm (disorder))</td><td/></tr><tr><td>U (Beurteilung unmöglich)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>385432009 (Not applicable (qualifier value))</td><td/></tr><tr><td>X (fehlende Angabe)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1287211007 (No information available (qualifier value))</td><td/></tr></table></div>"
+  ] ;
+  fhir:ConceptMap.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-verlauf-gesamtbeurteilung-sct"] ;
+  fhir:ConceptMap.version [ fhir:value "2026.0.3"] ;
+  fhir:ConceptMap.name [ fhir:value "MII CM Onko Verlauf Gesamtbeurteilung SCT Mapping"] ;
+  fhir:ConceptMap.title [ fhir:value "MII CM Onko Verlauf Gesamtbeurteilung SNOMED Mapping"] ;
+  fhir:ConceptMap.status [ fhir:value "active"] ;
+  fhir:ConceptMap.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ConceptMap.date [ fhir:value "2024-04-10"^^xsd:date] ;
+  fhir:ConceptMap.publisher [ fhir:value "Medizininformatik Initiative"] ;
+  fhir:ConceptMap.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Medizininformatik Initiative" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.medizininformatik-initiative.de/" ]
+     ]
+  ] ;
+  fhir:ConceptMap.description [ fhir:value "Mapping Gesamtbeurteilung Codes zu SNOMED-CT"] ;
+  fhir:ConceptMap.purpose [ fhir:value "Technical mapping to transform oBDS-Data into SNOMED"] ;
+  fhir:ConceptMap.sourceUri [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/"] ;
+  fhir:ConceptMap.targetUri [ fhir:value "http://snomed.info/sct/900000000000207008/version/20240401"] ;
+  fhir:ConceptMap.group [
+     fhir:index 0 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "http://snomed.info/sct/900000000000207008/version/20240401" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index 0 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "V" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Vollremission (complete remission, CR)" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "550991000124107" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Malignant neoplasm in full remission (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "T" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Teilremission (partial remission, PR)" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "551001000124108" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Malignant neoplasm in partial remission (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 2 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "K" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "keine Änderung (no change, NC) = stable disease" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "260388006" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "No status change (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 3 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "P" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Progression" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "419835002" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Tumor progression (finding)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 4 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "D" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "divergentes Geschehen" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "kein SNOMED-Term für divergentes Geschehen" ]
+       ]
+     ], [
+       fhir:index 5 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "B" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "klinische Besserung des Zustandes, Teilremissionkriterien jedoch nicht erfüllt (minimal response, MR)" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "84190002" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Minimal therapeutic response (finding)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 6 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "R" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Vollremission mit residualen Auffälligkeiten (CRr)" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "550991000124107" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Malignant neoplasm in full remission (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "wider" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Residuale Auffälligkeiten ggfs. über Postkoordination kodierbar" ]
+       ]
+     ], [
+       fhir:index 7 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "Y" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Rezidiv" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1259237005" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Recurrent malignant neoplasm (disorder)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 8 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "U" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Beurteilung unmöglich" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "385432009" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Not applicable (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 9 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "X" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "fehlende Angabe" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "1287211007" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "No information available (qualifier value)" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-verlauf-gesamtbeurteilung-sct.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

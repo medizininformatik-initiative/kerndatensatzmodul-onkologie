@@ -1,0 +1,103 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-diagnose> a fhir:Condition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-diagnose"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor|2026.0.3" ;
+       fhir:index 0 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor|2026.0.3>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Condition mii-exa-onko-diagnose</b></p><a name=\"mii-exa-onko-diagnose\"> </a><a name=\"hcmii-exa-onko-diagnose\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-diagnose-primaertumor.html\">MII PR Onkologie Diagnose Primärtumor</a> version: 2026.0.3</p></div><p><b>Condition Asserted Date</b>: 2021-05-09</p><p><b>MII EX Onko Histology Morphology Behavior ICDO3</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/icd-o-3 8500/3}\">Invasives duktales Karzinom o.n.A.</span></p><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}, {https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung 7}\">histologische Untersuchung eines Primärtumors</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm C50.4}\">Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse</span></p><p><b>bodySite</b>: <span title=\"Codes:{http://snomed.info/sct 76365002}, {http://terminology.hl7.org/CodeSystem/icd-o-3 C50.4}\">Structure of upper outer quadrant of breast (body structure)</span></p><p><b>subject</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example\">Patient/example</a></p><p><b>recordedDate</b>: 2020-02-16</p></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/condition-assertedDate" ] ;
+     fhir:Extension.valueDateTime [ fhir:value "2021-05-09"^^xsd:date ]
+  ], [
+     fhir:index 1 ;
+     fhir:Extension.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3" ] ;
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/icd-o-3" ] ;
+         fhir:Coding.code [ fhir:value "8500/3" ] ;
+         fhir:Coding.display [ fhir:value "Invasives duktales Karzinom o.n.A." ]
+       ]
+     ]
+  ] ;
+  fhir:Condition.clinicalStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-clinical" ] ;
+       fhir:Coding.code [ fhir:value "active" ]
+     ]
+  ] ;
+  fhir:Condition.verificationStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-ver-status" ] ;
+       fhir:Coding.code [ fhir:value "confirmed" ]
+     ], [
+       fhir:index 1 ;
+       fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung" ] ;
+       fhir:Coding.code [ fhir:value "7" ] ;
+       fhir:Coding.display [ fhir:value "histologische Untersuchung eines Primärtumors" ]
+     ]
+  ] ;
+  fhir:Condition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://fhir.de/StructureDefinition/seitenlokalisation" ] ;
+         fhir:Extension.valueCoding [
+           fhir:Coding.system [ fhir:value "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_SEITENLOKALISATION" ] ;
+           fhir:Coding.code [ fhir:value "R" ] ;
+           fhir:Coding.display [ fhir:value "rechts" ]
+         ]
+       ] ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/icd-10-gm" ] ;
+       fhir:Coding.version [ fhir:value "2020" ] ;
+       fhir:Coding.code [ fhir:value "C50.4" ] ;
+       fhir:Coding.display [ fhir:value "Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse" ]
+     ]
+  ] ;
+  fhir:Condition.bodySite [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a sct:76365002 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "76365002" ] ;
+       fhir:Coding.display [ fhir:value "Structure of upper outer quadrant of breast (body structure)" ]
+     ], [
+       fhir:index 1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/icd-o-3" ] ;
+       fhir:Coding.code [ fhir:value "C50.4" ] ;
+       fhir:Coding.display [ fhir:value "Oberer äußerer Quadrant der Brust" ]
+     ]
+  ] ;
+  fhir:Condition.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/example> ;
+     fhir:Reference.reference [ fhir:value "Patient/example" ]
+  ] ;
+  fhir:Condition.recordedDate [ fhir:value "2020-02-16"^^xsd:date] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-diagnose.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

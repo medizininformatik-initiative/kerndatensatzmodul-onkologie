@@ -1,0 +1,844 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>MII EXA Onko Prostata Bundle - TTL Representation - MII IG Kerndatensatz-Modul Onkologie v2026.0.3</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"2.349"}
+    h3,h4,h5,h6{--heading-prefix:"2.349"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Onkologie</span>
+            <br/>
+            <span style="display:inline-block;">2026.0.3 - release
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>MII EXA Onko Prostata Bundle</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 9" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Onkologie - Local Development build (v2026.0.3) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="Bundle-mii-exa-onko-prostata-example-bundle-1.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="Bundle-mii-exa-onko-prostata-example-bundle-1.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Bundle-mii-exa-onko-prostata-example-bundle-1.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: MII EXA Onko Prostata Bundle - TTL Representation</h2>
+
+
+<p><a href="Bundle-mii-exa-onko-prostata-example-bundle-1.ttl" no-download="true">Raw ttl</a> | <a href="Bundle-mii-exa-onko-prostata-example-bundle-1.ttl" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="rdf" data-fhir="generated" style="white-space: pre; overflow: hidden">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix loinc: &lt;http://loinc.org/rdf#&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix sct: &lt;http://snomed.info/id/&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+&lt;http://hl7.org/fhir/Bundle/mii-exa-onko-prostata-example-bundle-1&gt; a fhir:Bundle ;
+  <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot ;
+  <a href="http://hl7.org/fhir/R4/resource.html#Bundle.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;mii-exa-onko-prostata-example-bundle-1&quot;] ;
+  <a href="http://hl7.org/fhir/R4/resource.html#Bundle.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/Bundle&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/StructureDefinition/Bundle&gt;
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.identifier">fhir:Bundle.identifier</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">fhir:Identifier.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">fhir:Identifier.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;prostata-example-bundle-2024-001&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.type">fhir:Bundle.type</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;transaction&quot;] ;
+  <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.timestamp">fhir:Bundle.timestamp</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#instant">fhir:value</a> &quot;2024-03-25T10:00:00+01:00&quot;^^xsd:dateTime] ;
+  <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">fhir:Bundle.entry</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:Bundle.entry.fullUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-prostata-bundle-patient&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/patient.html#Patient">fhir:Bundle.entry.resource</a> &lt;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-prostata-bundle-patient&gt; ;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">fhir:Bundle.entry.request</a> [
+       <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">fhir:Bundle.entry.request.method</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;POST&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">fhir:Bundle.entry.request.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;Patient&quot; ]
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1 ;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:Bundle.entry.fullUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-prostata-diagnose&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/condition.html#Condition">fhir:Bundle.entry.resource</a> &lt;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-prostata-diagnose&gt; ;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">fhir:Bundle.entry.request</a> [
+       <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">fhir:Bundle.entry.request.method</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;POST&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">fhir:Bundle.entry.request.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;Condition&quot; ]
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2 ;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:Bundle.entry.fullUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-prostata-bundle-encounter&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/encounter.html#Encounter">fhir:Bundle.entry.resource</a> &lt;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-prostata-bundle-encounter&gt; ;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">fhir:Bundle.entry.request</a> [
+       <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">fhir:Bundle.entry.request.method</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;POST&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">fhir:Bundle.entry.request.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;Encounter&quot; ]
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 3 ;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:Bundle.entry.fullUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-psa-diagnose-1&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/observation.html#Observation">fhir:Bundle.entry.resource</a> &lt;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-psa-diagnose-1&gt; ;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">fhir:Bundle.entry.request</a> [
+       <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">fhir:Bundle.entry.request.method</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;POST&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">fhir:Bundle.entry.request.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;Observation&quot; ]
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 4 ;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:Bundle.entry.fullUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-anzahl-stanzen-1&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/observation.html#Observation">fhir:Bundle.entry.resource</a> &lt;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-anzahl-stanzen-1&gt; ;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">fhir:Bundle.entry.request</a> [
+       <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">fhir:Bundle.entry.request.method</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;POST&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">fhir:Bundle.entry.request.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;Observation&quot; ]
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 5 ;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:Bundle.entry.fullUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-anzahl-positiver-stanzen-1&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/observation.html#Observation">fhir:Bundle.entry.resource</a> &lt;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-anzahl-positiver-stanzen-1&gt; ;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">fhir:Bundle.entry.request</a> [
+       <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">fhir:Bundle.entry.request.method</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;POST&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">fhir:Bundle.entry.request.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;Observation&quot; ]
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 6 ;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:Bundle.entry.fullUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-ca-befall-stanze-1&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/observation.html#Observation">fhir:Bundle.entry.resource</a> &lt;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-ca-befall-stanze-1&gt; ;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">fhir:Bundle.entry.request</a> [
+       <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">fhir:Bundle.entry.request.method</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;POST&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">fhir:Bundle.entry.request.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;Observation&quot; ]
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 7 ;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:Bundle.entry.fullUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-gleason-pattern-grade-group-1&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/observation.html#Observation">fhir:Bundle.entry.resource</a> &lt;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-gleason-pattern-grade-group-1&gt; ;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">fhir:Bundle.entry.request</a> [
+       <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">fhir:Bundle.entry.request.method</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;POST&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">fhir:Bundle.entry.request.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;Observation&quot; ]
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 8 ;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:Bundle.entry.fullUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-gleason-pattern-primary-1&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/observation.html#Observation">fhir:Bundle.entry.resource</a> &lt;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-gleason-pattern-primary-1&gt; ;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">fhir:Bundle.entry.request</a> [
+       <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">fhir:Bundle.entry.request.method</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;POST&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">fhir:Bundle.entry.request.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;Observation&quot; ]
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 9 ;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:Bundle.entry.fullUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-gleason-pattern-secondary-1&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/observation.html#Observation">fhir:Bundle.entry.resource</a> &lt;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-gleason-pattern-secondary-1&gt; ;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">fhir:Bundle.entry.request</a> [
+       <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">fhir:Bundle.entry.request.method</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;POST&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">fhir:Bundle.entry.request.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;Observation&quot; ]
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 10 ;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:Bundle.entry.fullUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-surgical-complication-1&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/observation.html#Observation">fhir:Bundle.entry.resource</a> &lt;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-surgical-complication-1&gt; ;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">fhir:Bundle.entry.request</a> [
+       <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">fhir:Bundle.entry.request.method</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;POST&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">fhir:Bundle.entry.request.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;Observation&quot; ]
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 11 ;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:Bundle.entry.fullUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-prostata-surgery-1&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/procedure.html#Procedure">fhir:Bundle.entry.resource</a> &lt;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-prostata-surgery-1&gt; ;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">fhir:Bundle.entry.request</a> [
+       <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">fhir:Bundle.entry.request.method</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;POST&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">fhir:Bundle.entry.request.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;Procedure&quot; ]
+     ]
+  ] .
+
+&lt;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-prostata-bundle-patient&gt; <a href="http://hl7.org/fhir/R4/patient.html">a</a> fhir:Patient ;
+  <a href="http://hl7.org/fhir/R4/resource.html#Patient.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;mii-exa-onko-prostata-bundle-patient&quot;] ;
+  <a href="http://hl7.org/fhir/R4/domainresource.html#Patient.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ] ;
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Patient_mii-exa-onko-prostata-bundle-patient\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Patient mii-exa-onko-prostata-bundle-patient&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;mii-exa-onko-prostata-bundle-patient\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcmii-exa-onko-prostata-bundle-patient\&quot;&gt; &lt;/a&gt;&lt;p style=\&quot;border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\&quot;&gt;Peter ProstataCa  (no stated gender), DoB Unknown&lt;/p&gt;&lt;hr/&gt;&lt;/div&gt;&quot;
+  ] ;
+  <a href="http://hl7.org/fhir/R4/patient.html#Patient.name">fhir:Patient.name</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">fhir:HumanName.family</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;ProstataCa&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">fhir:HumanName.given</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Peter&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0
+     ]
+  ] .
+
+&lt;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-prostata-diagnose&gt; <a href="http://hl7.org/fhir/R4/condition.html">a</a> fhir:Condition ;
+  <a href="http://hl7.org/fhir/R4/resource.html#Condition.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mii-exa-onko-prostata-diagnose&quot;] ;
+  <a href="http://hl7.org/fhir/R4/resource.html#Condition.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor|2026.0.3&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor|2026.0.3&gt;
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/domainresource.html#Condition.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;extensions&quot; ] ;
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Condition_mii-exa-onko-prostata-diagnose\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Condition mii-exa-onko-prostata-diagnose&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;mii-exa-onko-prostata-diagnose\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcmii-exa-onko-prostata-diagnose\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-mii-pr-onko-diagnose-primaertumor.html\&quot;&gt;MII PR Onkologie Diagnose Primärtumor&lt;/a&gt; version: 2026.0.3&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;Condition Asserted Date&lt;/b&gt;: 2020-03-07&lt;/p&gt;&lt;p&gt;&lt;b&gt;clinicalStatus&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\&quot;&gt;Active&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;verificationStatus&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\&quot;&gt;Confirmed&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm C61}\&quot;&gt;Bösartige Neubildung der Prostata&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-mii-exa-onko-prostata-bundle-patient.html\&quot;&gt;Peter ProstataCa  (no stated gender), DoB Unknown&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;recordedDate&lt;/b&gt;: 2024-01-02&lt;/p&gt;&lt;/div&gt;&quot;
+  ] ;
+  <a href="http://hl7.org/fhir/R4/domainresource.html#Condition.extension">fhir:DomainResource.extension</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/condition-assertedDate&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueDateTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2020-03-07&quot;^^xsd:date ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/condition.html#Condition.clinicalStatus">fhir:Condition.clinicalStatus</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/condition-clinical&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;active&quot; ]
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/condition.html#Condition.verificationStatus">fhir:Condition.verificationStatus</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/condition-ver-status&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;confirmed&quot; ]
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/condition.html#Condition.code">fhir:Condition.code</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://fhir.de/CodeSystem/bfarm/icd-10-gm&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.version">fhir:Coding.version</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;2024&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;C61&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Bösartige Neubildung der Prostata&quot; ]
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/condition.html#Condition.subject">fhir:Condition.subject</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/Patient/mii-exa-onko-prostata-bundle-patient&gt; ;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Patient/mii-exa-onko-prostata-bundle-patient&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/condition.html#Condition.recordedDate">fhir:Condition.recordedDate</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2024-01-02&quot;^^xsd:date] .
+
+&lt;http://hl7.org/fhir/Patient/mii-exa-onko-prostata-bundle-patient&gt; a fhir:Patient .
+
+&lt;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-prostata-bundle-encounter&gt; <a href="http://hl7.org/fhir/R4/encounter.html">a</a> fhir:Encounter ;
+  <a href="http://hl7.org/fhir/R4/resource.html#Encounter.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;mii-exa-onko-prostata-bundle-encounter&quot;] ;
+  <a href="http://hl7.org/fhir/R4/domainresource.html#Encounter.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ] ;
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Encounter_mii-exa-onko-prostata-bundle-encounter\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Encounter mii-exa-onko-prostata-bundle-encounter&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;mii-exa-onko-prostata-bundle-encounter\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcmii-exa-onko-prostata-bundle-encounter\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Finished&lt;/p&gt;&lt;p&gt;&lt;b&gt;class&lt;/b&gt;: &lt;a href=\&quot;http://terminology.hl7.org/7.2.0/CodeSystem-v3-ActCode.html#v3-ActCode-IMP\&quot;&gt;ActCode: IMP&lt;/a&gt; (inpatient encounter)&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-mii-exa-onko-prostata-bundle-patient.html\&quot;&gt;Peter ProstataCa  (no stated gender), DoB Unknown&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&quot;
+  ] ;
+  <a href="http://hl7.org/fhir/R4/encounter.html#Encounter.status">fhir:Encounter.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;finished&quot;] ;
+  <a href="http://hl7.org/fhir/R4/encounter.html#Encounter.class">fhir:Encounter.class</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/v3-ActCode&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;IMP&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;inpatient encounter&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/encounter.html#Encounter.subject">fhir:Encounter.subject</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/Patient/mii-exa-onko-prostata-bundle-patient&gt; ;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Patient/mii-exa-onko-prostata-bundle-patient&quot; ]
+  ] .
+
+&lt;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-psa-diagnose-1&gt; <a href="http://hl7.org/fhir/R4/observation.html">a</a> fhir:Observation ;
+  <a href="http://hl7.org/fhir/R4/resource.html#Observation.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mii-exa-onko-prostata-psa-diagnose-1&quot;] ;
+  <a href="http://hl7.org/fhir/R4/resource.html#Observation.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-psa|2026.0.3&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-psa|2026.0.3&gt;
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/domainresource.html#Observation.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ] ;
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Observation_mii-exa-onko-prostata-psa-diagnose-1\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Observation mii-exa-onko-prostata-psa-diagnose-1&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;mii-exa-onko-prostata-psa-diagnose-1\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcmii-exa-onko-prostata-psa-diagnose-1\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-mii-pr-onko-prostate-psa.html\&quot;&gt;MII PR Onkologie PSA-Wert&lt;/a&gt; version: 2026.0.3&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Final&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://loinc.org 2857-1}\&quot;&gt;Prostate specific Ag [Mass/volume] in Serum or Plasma&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-mii-exa-onko-prostata-bundle-patient.html\&quot;&gt;Peter ProstataCa  (no stated gender), DoB Unknown&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;focus&lt;/b&gt;: &lt;a href=\&quot;Condition-mii-exa-onko-prostata-diagnose.html\&quot;&gt;Condition Bösartige Neubildung der Prostata&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;effective&lt;/b&gt;: 2024-01-02&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: 12 ng/ml&lt;/p&gt;&lt;/div&gt;&quot;
+  ] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.status">fhir:Observation.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;final&quot;] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.code">fhir:Observation.code</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       a loinc:2857-1 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;2857-1&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Prostate specific Ag [Mass/volume] in Serum or Plasma&quot; ]
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.subject">fhir:Observation.subject</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/Patient/mii-exa-onko-prostata-bundle-patient&gt; ;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Patient/mii-exa-onko-prostata-bundle-patient&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.focus">fhir:Observation.focus</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+     <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/Condition/mii-exa-onko-prostata-diagnose&gt; ;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Condition/mii-exa-onko-prostata-diagnose&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.effective_x_">fhir:Observation.effectiveDateTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2024-01-02&quot;^^xsd:date] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.value_x_">fhir:Observation.valueQuantity</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">fhir:Quantity.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#decimal">fhir:value</a> &quot;12&quot;^^xsd:decimal ] ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.unit">fhir:Quantity.unit</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;ng/ml&quot; ]
+  ] .
+
+&lt;http://hl7.org/fhir/Condition/mii-exa-onko-prostata-diagnose&gt; a fhir:Condition .
+
+&lt;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-anzahl-stanzen-1&gt; <a href="http://hl7.org/fhir/R4/observation.html">a</a> fhir:Observation ;
+  <a href="http://hl7.org/fhir/R4/resource.html#Observation.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mii-exa-onko-prostata-anzahl-stanzen-1&quot;] ;
+  <a href="http://hl7.org/fhir/R4/resource.html#Observation.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-anzahl-stanzen|2026.0.3&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-anzahl-stanzen|2026.0.3&gt;
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/domainresource.html#Observation.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ] ;
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Observation_mii-exa-onko-prostata-anzahl-stanzen-1\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Observation mii-exa-onko-prostata-anzahl-stanzen-1&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;mii-exa-onko-prostata-anzahl-stanzen-1\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcmii-exa-onko-prostata-anzahl-stanzen-1\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-mii-pr-onko-prostate-anzahl-stanzen.html\&quot;&gt;MII PR Onkologie Prostata Anzahl Stanzen&lt;/a&gt; version: 2026.0.3&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Final&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://loinc.org 44652-6}\&quot;&gt;Total number of cores in Tissue core&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-mii-exa-onko-prostata-bundle-patient.html\&quot;&gt;Peter ProstataCa  (no stated gender), DoB Unknown&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;focus&lt;/b&gt;: &lt;a href=\&quot;Condition-mii-exa-onko-prostata-diagnose.html\&quot;&gt;Condition Bösartige Neubildung der Prostata&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;effective&lt;/b&gt;: 2024-01-02&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: 12&lt;/p&gt;&lt;/div&gt;&quot;
+  ] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.status">fhir:Observation.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;final&quot;] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.code">fhir:Observation.code</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       a loinc:44652-6 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;44652-6&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Total number of cores in Tissue core&quot; ]
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.subject">fhir:Observation.subject</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/Patient/mii-exa-onko-prostata-bundle-patient&gt; ;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Patient/mii-exa-onko-prostata-bundle-patient&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.focus">fhir:Observation.focus</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+     <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/Condition/mii-exa-onko-prostata-diagnose&gt; ;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Condition/mii-exa-onko-prostata-diagnose&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.effective_x_">fhir:Observation.effectiveDateTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2024-01-02&quot;^^xsd:date] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.value_x_">fhir:Observation.valueInteger</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;12&quot;^^xsd:integer] .
+
+&lt;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-anzahl-positiver-stanzen-1&gt; <a href="http://hl7.org/fhir/R4/observation.html">a</a> fhir:Observation ;
+  <a href="http://hl7.org/fhir/R4/resource.html#Observation.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mii-exa-onko-prostata-anzahl-positiver-stanzen-1&quot;] ;
+  <a href="http://hl7.org/fhir/R4/resource.html#Observation.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-anzahl-positive-stanzen|2026.0.3&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-anzahl-positive-stanzen|2026.0.3&gt;
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/domainresource.html#Observation.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ] ;
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Observation_mii-exa-onko-prostata-anzahl-positiver-stanzen-1\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Observation mii-exa-onko-prostata-anzahl-positiver-stanzen-1&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;mii-exa-onko-prostata-anzahl-positiver-stanzen-1\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcmii-exa-onko-prostata-anzahl-positiver-stanzen-1\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-mii-pr-onko-prostate-anzahl-positive-stanzen.html\&quot;&gt;MII PR Onkologie Prostata Anzahl positiver Stanzen&lt;/a&gt; version: 2026.0.3&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Final&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://loinc.org 44651-8}\&quot;&gt;Tissue cores.positive.carcinoma in Tissue core&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-mii-exa-onko-prostata-bundle-patient.html\&quot;&gt;Peter ProstataCa  (no stated gender), DoB Unknown&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;focus&lt;/b&gt;: &lt;a href=\&quot;Condition-mii-exa-onko-prostata-diagnose.html\&quot;&gt;Condition Bösartige Neubildung der Prostata&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;effective&lt;/b&gt;: 2024-01-02&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: 8&lt;/p&gt;&lt;/div&gt;&quot;
+  ] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.status">fhir:Observation.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;final&quot;] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.code">fhir:Observation.code</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       a loinc:44651-8 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;44651-8&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Tissue cores.positive.carcinoma in Tissue core&quot; ]
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.subject">fhir:Observation.subject</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/Patient/mii-exa-onko-prostata-bundle-patient&gt; ;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Patient/mii-exa-onko-prostata-bundle-patient&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.focus">fhir:Observation.focus</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+     <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/Condition/mii-exa-onko-prostata-diagnose&gt; ;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Condition/mii-exa-onko-prostata-diagnose&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.effective_x_">fhir:Observation.effectiveDateTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2024-01-02&quot;^^xsd:date] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.value_x_">fhir:Observation.valueInteger</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;8&quot;^^xsd:integer] .
+
+&lt;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-ca-befall-stanze-1&gt; <a href="http://hl7.org/fhir/R4/observation.html">a</a> fhir:Observation ;
+  <a href="http://hl7.org/fhir/R4/resource.html#Observation.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mii-exa-onko-prostata-ca-befall-stanze-1&quot;] ;
+  <a href="http://hl7.org/fhir/R4/resource.html#Observation.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-ca-befall-stanze|2026.0.3&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-ca-befall-stanze|2026.0.3&gt;
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/domainresource.html#Observation.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ] ;
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Observation_mii-exa-onko-prostata-ca-befall-stanze-1\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Observation mii-exa-onko-prostata-ca-befall-stanze-1&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;mii-exa-onko-prostata-ca-befall-stanze-1\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcmii-exa-onko-prostata-ca-befall-stanze-1\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-mii-pr-onko-prostate-ca-befall-stanze.html\&quot;&gt;MII PR Onkologie Ca-Befall Stanze&lt;/a&gt; version: 2026.0.3&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Final&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://loinc.org 44654-2}\&quot;&gt;Tissue involved by tumor in Prostate tumor&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-mii-exa-onko-prostata-bundle-patient.html\&quot;&gt;Peter ProstataCa  (no stated gender), DoB Unknown&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;focus&lt;/b&gt;: &lt;a href=\&quot;Condition-mii-exa-onko-prostata-diagnose.html\&quot;&gt;Condition Bösartige Neubildung der Prostata&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;effective&lt;/b&gt;: 2024-01-02&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: 80 %&lt;/p&gt;&lt;p&gt;&lt;b&gt;specimen&lt;/b&gt;: &lt;a href=\&quot;https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Specimen/exampleProstateBiopsySlide\&quot;&gt;Specimen/exampleProstateBiopsySlide&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&quot;
+  ] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.status">fhir:Observation.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;final&quot;] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.code">fhir:Observation.code</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       a loinc:44654-2 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;44654-2&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Tissue involved by tumor in Prostate tumor&quot; ]
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.subject">fhir:Observation.subject</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/Patient/mii-exa-onko-prostata-bundle-patient&gt; ;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Patient/mii-exa-onko-prostata-bundle-patient&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.focus">fhir:Observation.focus</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+     <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/Condition/mii-exa-onko-prostata-diagnose&gt; ;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Condition/mii-exa-onko-prostata-diagnose&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.effective_x_">fhir:Observation.effectiveDateTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2024-01-02&quot;^^xsd:date] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.value_x_">fhir:Observation.valueQuantity</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">fhir:Quantity.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#decimal">fhir:value</a> &quot;80&quot;^^xsd:decimal ] ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.unit">fhir:Quantity.unit</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;%&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.specimen">fhir:Observation.specimen</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/Specimen/exampleProstateBiopsySlide&gt; ;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Specimen/exampleProstateBiopsySlide&quot; ]
+  ] .
+
+&lt;http://hl7.org/fhir/Specimen/exampleProstateBiopsySlide&gt; a fhir:Specimen .
+
+&lt;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-gleason-pattern-grade-group-1&gt; <a href="http://hl7.org/fhir/R4/observation.html">a</a> fhir:Observation ;
+  <a href="http://hl7.org/fhir/R4/resource.html#Observation.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mii-exa-onko-prostata-gleason-pattern-grade-group-1&quot;] ;
+  <a href="http://hl7.org/fhir/R4/resource.html#Observation.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-grade-group|2026.0.3&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-grade-group|2026.0.3&gt;
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/domainresource.html#Observation.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ] ;
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Observation_mii-exa-onko-prostata-gleason-pattern-grade-group-1\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Observation mii-exa-onko-prostata-gleason-pattern-grade-group-1&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;mii-exa-onko-prostata-gleason-pattern-grade-group-1\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcmii-exa-onko-prostata-gleason-pattern-grade-group-1\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-mii-pr-onko-prostate-gleason-grade-group.html\&quot;&gt;MII PR Onkologie Prostata Gleason Grade Group&lt;/a&gt; version: 2026.0.3&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Final&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://snomed.info/sct 1812491000004107}\&quot;&gt;Histologic grade of primary malignant neoplasm of prostate by International Society of Urological Pathology technique (observable entity)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-mii-exa-onko-prostata-bundle-patient.html\&quot;&gt;Peter ProstataCa  (no stated gender), DoB Unknown&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;focus&lt;/b&gt;: &lt;a href=\&quot;Condition-mii-exa-onko-prostata-diagnose.html\&quot;&gt;Condition Bösartige Neubildung der Prostata&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;effective&lt;/b&gt;: 2024-01-02&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://snomed.info/sct 1279714001}\&quot;&gt;International Society of Urological Pathology grade group 2 (Gleason score 3 + 4 = 7) (qualifier value)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;derivedFrom&lt;/b&gt;: &lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=\&quot;Observation-mii-exa-onko-prostata-gleason-pattern-primary-1.html\&quot;&gt;Observation Primary Gleason pattern (observable entity)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=\&quot;Observation-mii-exa-onko-prostata-gleason-pattern-secondary-1.html\&quot;&gt;Observation Secondary Gleason pattern (observable entity)&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&quot;
+  ] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.status">fhir:Observation.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;final&quot;] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.code">fhir:Observation.code</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       a sct:1812491000004107 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://snomed.info/sct&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1812491000004107&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Histologic grade of primary malignant neoplasm of prostate by International Society of Urological Pathology technique (observable entity)&quot; ]
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.subject">fhir:Observation.subject</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/Patient/mii-exa-onko-prostata-bundle-patient&gt; ;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Patient/mii-exa-onko-prostata-bundle-patient&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.focus">fhir:Observation.focus</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+     <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/Condition/mii-exa-onko-prostata-diagnose&gt; ;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Condition/mii-exa-onko-prostata-diagnose&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.effective_x_">fhir:Observation.effectiveDateTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2024-01-02&quot;^^xsd:date] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.value_x_">fhir:Observation.valueCodeableConcept</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       a sct:1279714001 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://snomed.info/sct&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1279714001&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;International Society of Urological Pathology grade group 2 (Gleason score 3 + 4 = 7) (qualifier value)&quot; ]
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.derivedFrom">fhir:Observation.derivedFrom</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+     <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/Observation/mii-exa-onko-prostata-gleason-pattern-primary-1&gt; ;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Observation/mii-exa-onko-prostata-gleason-pattern-primary-1&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1 ;
+     <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/Observation/mii-exa-onko-prostata-gleason-pattern-secondary-1&gt; ;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Observation/mii-exa-onko-prostata-gleason-pattern-secondary-1&quot; ]
+  ] .
+
+&lt;http://hl7.org/fhir/Observation/mii-exa-onko-prostata-gleason-pattern-primary-1&gt; a fhir:Observation .
+
+&lt;http://hl7.org/fhir/Observation/mii-exa-onko-prostata-gleason-pattern-secondary-1&gt; a fhir:Observation .
+
+&lt;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-gleason-pattern-primary-1&gt; <a href="http://hl7.org/fhir/R4/observation.html">a</a> fhir:Observation ;
+  <a href="http://hl7.org/fhir/R4/resource.html#Observation.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mii-exa-onko-prostata-gleason-pattern-primary-1&quot;] ;
+  <a href="http://hl7.org/fhir/R4/resource.html#Observation.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns|2026.0.3&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns|2026.0.3&gt;
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/domainresource.html#Observation.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ] ;
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Observation_mii-exa-onko-prostata-gleason-pattern-primary-1\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Observation mii-exa-onko-prostata-gleason-pattern-primary-1&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;mii-exa-onko-prostata-gleason-pattern-primary-1\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcmii-exa-onko-prostata-gleason-pattern-primary-1\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-mii-pr-onko-prostate-gleason-patterns.html\&quot;&gt;MII PR Onkologie Prostata Gleason Primär&lt;/a&gt; version: 2026.0.3&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Final&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://snomed.info/sct 384994009}\&quot;&gt;Primary Gleason pattern (observable entity)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-mii-exa-onko-prostata-bundle-patient.html\&quot;&gt;Peter ProstataCa  (no stated gender), DoB Unknown&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;focus&lt;/b&gt;: &lt;a href=\&quot;Condition-mii-exa-onko-prostata-diagnose.html\&quot;&gt;Condition Bösartige Neubildung der Prostata&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;effective&lt;/b&gt;: 2024-01-02&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://snomed.info/sct 369772003}\&quot;&gt;Gleason Pattern 3&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&quot;
+  ] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.status">fhir:Observation.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;final&quot;] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.code">fhir:Observation.code</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       a sct:384994009 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://snomed.info/sct&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;384994009&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Primary Gleason pattern (observable entity)&quot; ]
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.subject">fhir:Observation.subject</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/Patient/mii-exa-onko-prostata-bundle-patient&gt; ;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Patient/mii-exa-onko-prostata-bundle-patient&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.focus">fhir:Observation.focus</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+     <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/Condition/mii-exa-onko-prostata-diagnose&gt; ;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Condition/mii-exa-onko-prostata-diagnose&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.effective_x_">fhir:Observation.effectiveDateTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2024-01-02&quot;^^xsd:date] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.value_x_">fhir:Observation.valueCodeableConcept</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       a sct:369772003 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://snomed.info/sct&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;369772003&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Gleason Pattern 3&quot; ]
+     ]
+  ] .
+
+&lt;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-gleason-pattern-secondary-1&gt; <a href="http://hl7.org/fhir/R4/observation.html">a</a> fhir:Observation ;
+  <a href="http://hl7.org/fhir/R4/resource.html#Observation.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mii-exa-onko-prostata-gleason-pattern-secondary-1&quot;] ;
+  <a href="http://hl7.org/fhir/R4/resource.html#Observation.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns|2026.0.3&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns|2026.0.3&gt;
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/domainresource.html#Observation.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ] ;
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Observation_mii-exa-onko-prostata-gleason-pattern-secondary-1\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Observation mii-exa-onko-prostata-gleason-pattern-secondary-1&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;mii-exa-onko-prostata-gleason-pattern-secondary-1\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcmii-exa-onko-prostata-gleason-pattern-secondary-1\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-mii-pr-onko-prostate-gleason-patterns.html\&quot;&gt;MII PR Onkologie Prostata Gleason Primär&lt;/a&gt; version: 2026.0.3&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Final&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://snomed.info/sct 384995005}\&quot;&gt;Secondary Gleason pattern (observable entity)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-mii-exa-onko-prostata-bundle-patient.html\&quot;&gt;Peter ProstataCa  (no stated gender), DoB Unknown&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;focus&lt;/b&gt;: &lt;a href=\&quot;Condition-mii-exa-onko-prostata-diagnose.html\&quot;&gt;Condition Bösartige Neubildung der Prostata&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;effective&lt;/b&gt;: 2024-01-02&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://snomed.info/sct 369773008}\&quot;&gt;Gleason Pattern 4&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&quot;
+  ] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.status">fhir:Observation.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;final&quot;] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.code">fhir:Observation.code</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       a sct:384995005 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://snomed.info/sct&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;384995005&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Secondary Gleason pattern (observable entity)&quot; ]
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.subject">fhir:Observation.subject</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/Patient/mii-exa-onko-prostata-bundle-patient&gt; ;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Patient/mii-exa-onko-prostata-bundle-patient&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.focus">fhir:Observation.focus</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+     <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/Condition/mii-exa-onko-prostata-diagnose&gt; ;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Condition/mii-exa-onko-prostata-diagnose&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.effective_x_">fhir:Observation.effectiveDateTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2024-01-02&quot;^^xsd:date] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.value_x_">fhir:Observation.valueCodeableConcept</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       a sct:369773008 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://snomed.info/sct&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;369773008&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Gleason Pattern 4&quot; ]
+     ]
+  ] .
+
+&lt;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-surgical-complication-1&gt; <a href="http://hl7.org/fhir/R4/observation.html">a</a> fhir:Observation ;
+  <a href="http://hl7.org/fhir/R4/resource.html#Observation.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mii-exa-onko-prostata-surgical-complication-1&quot;] ;
+  <a href="http://hl7.org/fhir/R4/resource.html#Observation.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-clavien-dindo|2026.0.3&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-clavien-dindo|2026.0.3&gt;
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/domainresource.html#Observation.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ] ;
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Observation_mii-exa-onko-prostata-surgical-complication-1\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Observation mii-exa-onko-prostata-surgical-complication-1&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;mii-exa-onko-prostata-surgical-complication-1\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcmii-exa-onko-prostata-surgical-complication-1\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-mii-pr-onko-prostate-clavien-dindo.html\&quot;&gt;MII PR Onkologie Clavien Dindo&lt;/a&gt; version: 2026.0.3&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Final&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://snomed.info/sct 789279006}\&quot;&gt;Clavien-Dindo classification grade (observable entity)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-mii-exa-onko-prostata-bundle-patient.html\&quot;&gt;Peter ProstataCa  (no stated gender), DoB Unknown&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;focus&lt;/b&gt;: &lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=\&quot;Condition-mii-exa-onko-prostata-diagnose.html\&quot;&gt;Condition Bösartige Neubildung der Prostata&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=\&quot;Procedure-mii-exa-onko-prostata-surgery-1.html\&quot;&gt;Procedure Radikale Prostatovesikulektomie&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;b&gt;effective&lt;/b&gt;: 2024-06-24&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://snomed.info/sct 1367522003}, {https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-prostata-postsurgical-complications J}\&quot;&gt;Clavien-Dindo classification grade IIIa (finding)&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&quot;
+  ] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.status">fhir:Observation.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;final&quot;] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.code">fhir:Observation.code</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       a sct:789279006 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://snomed.info/sct&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;789279006&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Clavien-Dindo classification grade (observable entity)&quot; ]
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.subject">fhir:Observation.subject</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/Patient/mii-exa-onko-prostata-bundle-patient&gt; ;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Patient/mii-exa-onko-prostata-bundle-patient&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.focus">fhir:Observation.focus</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+     <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/Condition/mii-exa-onko-prostata-diagnose&gt; ;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Condition/mii-exa-onko-prostata-diagnose&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1 ;
+     <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/Procedure/mii-exa-onko-prostata-surgery-1&gt; ;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Procedure/mii-exa-onko-prostata-surgery-1&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.effective_x_">fhir:Observation.effectiveDateTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2024-06-24&quot;^^xsd:date] ;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.value_x_">fhir:Observation.valueCodeableConcept</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       a sct:1367522003 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://snomed.info/sct&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1367522003&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Clavien-Dindo classification grade IIIa (finding)&quot; ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-prostata-postsurgical-complications&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;J&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Ja&quot; ]
+     ]
+  ] .
+
+&lt;http://hl7.org/fhir/Procedure/mii-exa-onko-prostata-surgery-1&gt; a fhir:Procedure .
+
+&lt;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-prostata-surgery-1&gt; <a href="http://hl7.org/fhir/R4/procedure.html">a</a> fhir:Procedure ;
+  <a href="http://hl7.org/fhir/R4/resource.html#Procedure.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mii-exa-onko-prostata-surgery-1&quot;] ;
+  <a href="http://hl7.org/fhir/R4/resource.html#Procedure.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation|2026.0.3&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation|2026.0.3&gt;
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/domainresource.html#Procedure.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;extensions&quot; ] ;
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Procedure_mii-exa-onko-prostata-surgery-1\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Procedure mii-exa-onko-prostata-surgery-1&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;mii-exa-onko-prostata-surgery-1\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcmii-exa-onko-prostata-surgery-1\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-mii-pr-onko-operation.html\&quot;&gt;MII PR Onkologie Operation&lt;/a&gt; version: 2026.0.3&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;MII EX Onko Operation Intention&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}\&quot;&gt;Kurativ&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Completed&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://snomed.info/sct 387713003}\&quot;&gt;Surgical procedure&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://fhir.de/CodeSystem/bfarm/ops 5-604}\&quot;&gt;Radikale Prostatovesikulektomie&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-mii-exa-onko-prostata-bundle-patient.html\&quot;&gt;Peter ProstataCa  (no stated gender), DoB Unknown&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;performed&lt;/b&gt;: 2024-06-24&lt;/p&gt;&lt;p&gt;&lt;b&gt;reasonReference&lt;/b&gt;: &lt;a href=\&quot;Condition-mii-exa-onko-prostata-diagnose.html\&quot;&gt;Condition Bösartige Neubildung der Prostata&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&quot;
+  ] ;
+  <a href="http://hl7.org/fhir/R4/domainresource.html#Procedure.extension">fhir:DomainResource.extension</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueCodeableConcept</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;K&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Kurativ&quot; ]
+       ]
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/procedure.html#Procedure.status">fhir:Procedure.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;completed&quot;] ;
+  <a href="http://hl7.org/fhir/R4/procedure.html#Procedure.category">fhir:Procedure.category</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       a sct:387713003 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://snomed.info/sct&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;387713003&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Surgical procedure&quot; ]
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/procedure.html#Procedure.code">fhir:Procedure.code</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://fhir.de/CodeSystem/bfarm/ops&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.version">fhir:Coding.version</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;2024&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;5-604&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Radikale Prostatovesikulektomie&quot; ]
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/procedure.html#Procedure.subject">fhir:Procedure.subject</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/Patient/mii-exa-onko-prostata-bundle-patient&gt; ;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Patient/mii-exa-onko-prostata-bundle-patient&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/procedure.html#Procedure.performed_x_">fhir:Procedure.performedDateTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2024-06-24&quot;^^xsd:date] ;
+  <a href="http://hl7.org/fhir/R4/procedure.html#Procedure.reasonReference">fhir:Procedure.reasonReference</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+     <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/Condition/mii-exa-onko-prostata-diagnose&gt; ;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Condition/mii-exa-onko-prostata-diagnose&quot; ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+&lt;http://hl7.org/fhir/Bundle/mii-exa-onko-prostata-example-bundle-1.ttl&gt; a owl:Ontology ;
+  owl:imports fhir:fhir.ttl ;
+  owl:versionIRI &lt;http://build.fhir.org/Bundle/mii-exa-onko-prostata-example-bundle-1.ttl&gt; .
+
+</pre>
+
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  Package mii-ig-onko-de-v2026#2026.0.3 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jul 23, 2026 12:42+0000">2026-07-23</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

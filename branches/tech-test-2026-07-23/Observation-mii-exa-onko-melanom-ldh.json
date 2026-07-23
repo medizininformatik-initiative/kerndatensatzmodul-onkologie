@@ -1,0 +1,64 @@
+{
+  "resourceType" : "Observation",
+  "id" : "mii-exa-onko-melanom-ldh",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-ldh"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-melanom-ldh</b></p><a name=\"mii-exa-onko-melanom-ldh\"> </a><a name=\"hcmii-exa-onko-melanom-ldh\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-melanom-ldh.html\">MII PR Onkologie Melanom LDH</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 14804-9}\">Lactate dehydrogenase [Enzymatic activity/volume] in Serum or Plasma by Lactate to pyruvate reaction</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-melanom-bundle-patient.html\">Maria Melanom  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: <a href=\"Condition-mii-exa-onko-melanom-diagnose.html\">Condition Bösartiges Melanom der Haut, nicht näher bezeichnet</a></p><p><b>encounter</b>: <a href=\"Encounter-mii-exa-onko-melanom-bundle-encounter.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP)</a></p><p><b>effective</b>: 2024-03-18 08:30:00+0100</p><p><b>value</b>: 280 U/L<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codeU/L = 'U/L')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}\">High</span></p><h3>ReferenceRanges</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Low</b></td><td><b>High</b></td><td><b>Text</b></td></tr><tr><td style=\"display: none\">*</td><td>135 U/L<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codeU/L = 'U/L')</span></td><td>250 U/L<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codeU/L = 'U/L')</span></td><td>135-250 U/L</td></tr></table></div>"
+  },
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "laboratory",
+      "display" : "Laboratory"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "14804-9",
+      "display" : "Lactate dehydrogenase [Enzymatic activity/volume] in Serum or Plasma by Lactate to pyruvate reaction"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/mii-exa-onko-melanom-bundle-patient"
+  },
+  "focus" : [{
+    "reference" : "Condition/mii-exa-onko-melanom-diagnose"
+  }],
+  "encounter" : {
+    "reference" : "Encounter/mii-exa-onko-melanom-bundle-encounter"
+  },
+  "effectiveDateTime" : "2024-03-18T08:30:00+01:00",
+  "valueQuantity" : {
+    "value" : 280,
+    "unit" : "U/L",
+    "system" : "http://unitsofmeasure.org",
+    "code" : "U/L"
+  },
+  "interpretation" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+      "code" : "H",
+      "display" : "High"
+    }]
+  }],
+  "referenceRange" : [{
+    "low" : {
+      "value" : 135,
+      "unit" : "U/L",
+      "system" : "http://unitsofmeasure.org",
+      "code" : "U/L"
+    },
+    "high" : {
+      "value" : 250,
+      "unit" : "U/L",
+      "system" : "http://unitsofmeasure.org",
+      "code" : "U/L"
+    },
+    "text" : "135-250 U/L"
+  }]
+}

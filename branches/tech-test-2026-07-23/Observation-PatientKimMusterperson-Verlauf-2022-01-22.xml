@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="PatientKimMusterperson-Verlauf-2022-01-22"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation PatientKimMusterperson-Verlauf-2022-01-22</b></p><a name="PatientKimMusterperson-Verlauf-2022-01-22"> </a><a name="hcPatientKimMusterperson-Verlauf-2022-01-22"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-verlauf.html">MII PR Onkologie Verlauf</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 396432002}">Status of regression of tumor (observable entity)</span></p><p><b>subject</b>: <a href="Patient-PatientKimMusterperson.html">Kim Musterperson  (no stated gender), DoB: 1956-03-14</a></p><p><b>focus</b>: <a href="Condition-PatientKimMusterperson-PrimaryDiagnosis-2.html">Condition Bösartige Neubildung: Peritoneum, nicht näher bezeichnet</a></p><p><b>effective</b>: 2022-01-22</p><p><b>value</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung V}">Vollremission (complete remission, CR)</span></p><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 445200009}">Status of residual neoplasm (observable entity)</span></p><p><b>value</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-primaertumor T}">Tumorreste (Residualtumor)</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 399608002}">Status of distant metastasis (observable entity)</span></p><p><b>value</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen K}">Keine Fernmetastasen nachweisbar</span></p></blockquote></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="396432002"/>
+      <display value="Status of regression of tumor (observable entity)"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/PatientKimMusterperson"/>
+  </subject>
+  <focus>
+    <reference value="Condition/PatientKimMusterperson-PrimaryDiagnosis-2"/>
+  </focus>
+  <effectiveDateTime value="2022-01-22"/>
+  <valueCodeableConcept>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung"/>
+      <code value="V"/>
+      <display value="Vollremission (complete remission, CR)"/>
+    </coding>
+  </valueCodeableConcept>
+  <component>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="445200009"/>
+        <display value="Status of residual neoplasm (observable entity)"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-primaertumor"/>
+        <code value="T"/>
+        <display value="Tumorreste (Residualtumor)"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="399608002"/>
+        <display value="Status of distant metastasis (observable entity)"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen"/>
+        <code value="K"/>
+        <display value="Keine Fernmetastasen nachweisbar"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+</Observation>

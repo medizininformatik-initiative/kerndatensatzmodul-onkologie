@@ -1,0 +1,163 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap mii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc</b></p><a name=\"mii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc\"> </a><a name=\"hcmii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc\"> </a><p>Mapping from <a href=\"ValueSet-mii-vs-onko-allgemeiner-leistungszustand-karnofsky.html\">MII VS Onkologie Allgemeiner Leistungszustand nach Karnofsky</a> to <a href=\"https://loinc.org/LL4986-7\">LOINC Answer Codes for LL4986-7</a></p><br/><p>Mapping from <a href=\"CodeSystem-mii-cs-onko-allgemeiner-leistungszustand-karnofsky.html\">MII CS Onkologie Allgemeiner Leistungszustand Karnofsky</a> to <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-loinc.html\">Logical Observation Identifiers, Names and Codes (LOINC)</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>100%</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>LA29165-0 (Normal; no complaints; no evidence of disease)</td></tr><tr><td>90%</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>LA29166-8 (Able to carry on normal activity; minor signs or symptoms of disease)</td></tr><tr><td>80%</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>LA29167-6 (Normal activity with effort; some signs or symptoms of disease)</td></tr><tr><td>70%</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>LA29168-4 (Cares for self; unable to carry on normal activity or to do active work)</td></tr><tr><td>60%</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>LA29169-2 (Requires occasional assistance, but is able to care for most needs)</td></tr><tr><td>50%</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>LA29170-0 (Requires considerable assistance and frequent medical care)</td></tr><tr><td>40%</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>LA29171-8 (Disabled; requires special care and assistance)</td></tr><tr><td>30%</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>LA29172-6 (Severely disabled; hospitalization is indicated, although death not imminent)</td></tr><tr><td>20%</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>LA29173-4 (Very sick; hospitalization necessary; active supportive treatment necessary)</td></tr><tr><td>10%</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>LA29174-2 (Moribund; fatal processes progressing rapidly)</td></tr><tr><td>0%</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>LA9627-1 (Dead)</td></tr></table></div>"
+  ] ;
+  fhir:ConceptMap.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc"] ;
+  fhir:ConceptMap.version [ fhir:value "2026.0.3"] ;
+  fhir:ConceptMap.title [ fhir:value "Mapping oBDS Karnofsky zu LOINC"] ;
+  fhir:ConceptMap.status [ fhir:value "active"] ;
+  fhir:ConceptMap.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ConceptMap.date [ fhir:value "2026-07-23T12:42:42+00:00"^^xsd:dateTime] ;
+  fhir:ConceptMap.publisher [ fhir:value "Medizininformatik Initiative"] ;
+  fhir:ConceptMap.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Medizininformatik Initiative" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.medizininformatik-initiative.de/" ]
+     ]
+  ] ;
+  fhir:ConceptMap.description [ fhir:value "Mapping der oBDS-Codes für Karnofsky Performance Status zu LOINC Answer List LA29175-9"] ;
+  fhir:ConceptMap.sourceCanonical [
+     fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-karnofsky" ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-karnofsky>
+  ] ;
+  fhir:ConceptMap.targetCanonical [
+     fhir:value "http://loinc.org/vs/LL4986-7" ;
+     fhir:link <http://loinc.org/vs/LL4986-7>
+  ] ;
+  fhir:ConceptMap.group [
+     fhir:index 0 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-karnofsky" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "http://loinc.org" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index 0 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "100%" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "100%" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "LA29165-0" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Normal; no complaints; no evidence of disease" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "90%" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "90%" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "LA29166-8" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Able to carry on normal activity; minor signs or symptoms of disease" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 2 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "80%" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "80%" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "LA29167-6" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Normal activity with effort; some signs or symptoms of disease" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 3 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "70%" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "70%" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "LA29168-4" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Cares for self; unable to carry on normal activity or to do active work" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 4 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "60%" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "60%" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "LA29169-2" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Requires occasional assistance, but is able to care for most needs" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 5 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "50%" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "50%" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "LA29170-0" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Requires considerable assistance and frequent medical care" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 6 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "40%" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "40%" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "LA29171-8" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Disabled; requires special care and assistance" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 7 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "30%" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "30%" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "LA29172-6" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Severely disabled; hospitalization is indicated, although death not imminent" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 8 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "20%" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "20%" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "LA29173-4" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Very sick; hospitalization necessary; active supportive treatment necessary" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 9 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "10%" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "10%" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "LA29174-2" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Moribund; fatal processes progressing rapidly" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 10 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "0%" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "0%" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "LA9627-1" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Dead" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

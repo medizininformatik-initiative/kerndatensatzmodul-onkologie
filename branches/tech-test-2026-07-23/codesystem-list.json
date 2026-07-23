@@ -1,0 +1,346 @@
+{
+  "codeSystems" : [{
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-ecog",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_Allgemeiner_Leistungszustand_ECOG",
+    "title" : "MII CS Onkologie Allgemeiner Leistungszustand ECOG",
+    "description" : "oBDS-spezifisches Codesystem für den Allgemeinen Leistungszustand nach ECOG"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-karnofsky",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_Allgemeiner_Leistungszustand_Karnofsky",
+    "title" : "MII CS Onkologie Allgemeiner Leistungszustand Karnofsky",
+    "description" : "oBDS-spezifisches Codesystem für den Allgemeinen Leistungszustand nach Karnofsky"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-asa-obds",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_ASA_oBDS",
+    "title" : "MII CS Onkologie ASA-Klassifikation oBDS",
+    "description" : "oBDS-basiertes CodeSystem für ASA-Klassifikation (ursprünglich KR9 aus Kolorektales Karzinom Modul, generalisiert für alle onkologischen Indikationen)"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_Fernmetastasen",
+    "title" : "MII CS Onkologie Fernmetastasen",
+    "description" : "oBDS-spezifisches Codesystem für Fernmetastasen, basierend auf Spezifikation durch TNM-Klassifikation"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-genetische-variante-auspraegung",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_Genetische_Variante_Auspraegung",
+    "title" : "MII CS Onkologie Genetische Variante Ausprägung",
+    "description" : "oBDS-spezifisches Codesystem Konsequenz der genetischen Variante Ausprägung"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_Grading",
+    "title" : "MII CS Onkologie Grading",
+    "description" : "Codes für Histologie Grading. Gibt den Differenzierungsgrad des Tumors entsprechend der aktuellen TNM-Auflage an."
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_Intention",
+    "title" : "MII CS Onkologie Intention",
+    "description" : "oBDS-spezifisches Codesystem für Klassifikation von Intention der OP, der Strahlentherapie und der Systemischen Therapie."
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-anastomoseninsuffizienz",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_KRK_Anastomoseninsuffizienz",
+    "title" : "MII CS Onkologie KRK Anastomoseninsuffizienz",
+    "description" : "oBDS-spezifisches Codesystem für Anastomoseninsuffizienz beim Kolorektalen Karzinom"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-mrt-mesorektale-faszie-status",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_KRK_MRT_Mesorektale_Faszie_Status",
+    "title" : null,
+    "description" : "oBDS-basiertes Codesystem für den Status der MRT/CT Untersuchung zur mesorektalen Faszie beim Kolorektalen Karzinom (KR5)"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-operationstyp",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_KRK_Operationstyp",
+    "title" : "MII CS Onkologie KRK Operationstyp",
+    "description" : "oBDS-spezifisches Codesystem TME-Präparat, basierend auf der S3-Leitlinie Mammakarzinom v"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-stoma-anzeichnung",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_KRK_Stoma_Anzeichnung",
+    "title" : null,
+    "description" : "oBDS-basiertes Codesystem für die präoperative Anzeichnung der Stoma-Position beim Rektumkarzinom"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-tme-qualitaet",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_KRK_TME_Qualitaet",
+    "title" : "MII CS Onkologie TME Qualität",
+    "description" : "oBDS-spezifisches Codesystem TME-Präparat, basierend auf der S3-Leitlinie Mammakarzinom v"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-leitlinie",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_Mamma_Her2neu_Status_Leitlinie",
+    "title" : "MII CS Onkologie Mamma Her2neu Status Leitlinie",
+    "description" : "Codesystem für Her2neu Status basierend auf der S3-Leitlinie Mammakarzinom und ASCO/CAP Guidelines mit erweiterten Klassifikationen (HER2-low, HER2-ultralow)"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_Mamma_Her2neu_Status_oBDS",
+    "title" : "MII CS Onkologie Mamma Her2neu Status oBDS",
+    "description" : "oBDS-spezifisches Codesystem für Her2neu Status gemäß oBDS Feld M4 (243)"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-rezeptorstatus-leitlinie",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_Mamma_Rezeptorstatus_Leitlinie",
+    "title" : "MII CS Onkologie Mamma Rezeptorstatus",
+    "description" : "oBDS-spezifisches Codesystem Mamma-Rezeptorstatus, basierend auf der S3-Leitlinie Mammakarzinom v5.02 Abschnitt 4.5.4"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-melanom-ulzeration",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_Melanom_Ulzeration",
+    "title" : "MII CS Onkologie Melanom Ulzeration",
+    "description" : "Codes für die Ulzeration beim Malignen Melanom der Haut nach oBDS"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_Nebenwirkung_CTCAE_Grad",
+    "title" : "MII CS Onko Nebenwirkung nach CTCAE-Grad",
+    "description" : "Gibt an, zu welchem Schweregrad von Nebenwirkungen es bei der Bestrahlung oder der systemischen Therapie gekommen ist."
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_Operation_Komplikationen",
+    "title" : "MII CS Onkologie Operation Komplikationen",
+    "description" : "oBDS-spezifisches Codesystem für Klassifikation von Komplikationen während der OP"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-urgency",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_Operation_Urgency",
+    "title" : null,
+    "description" : "oBDS-basiertes Codesystem für die Modalität der Eingriffsdurchführung (Art des Eingriffs KR6)"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_Primaertumor_Diagnosesicherung",
+    "title" : "MII CS Onkologie Primärtumor Diagnosesicherung",
+    "description" : "Codes für Primärtumor Diagnosesicherung, d.h. die höchste erreichte Diagnosesicherheit der Diagnose."
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-prostata-postsurgical-complications",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_Prostata_Postsurgical_Complications",
+    "title" : "MII CS Onkologie Prostata Postoperative Komplikationen",
+    "description" : "CodeSystem zur Darstellung des Vorhandenseins von postoperativen Komplikationen nach Prostatektomie in der Onkologie"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_Residualstatus",
+    "title" : "MII CS Onkologie Residualstatus",
+    "description" : "oBDS-spezifisches Codesystem für R-Klassifikation"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_Seitenlokalisation",
+    "title" : "MII CS Onkologie Primärtumor Seitenlokalisation",
+    "description" : "Codes für Seitenlokalisation, d.h. organspezifische Angabe der betroffenen Seite."
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_Strahlentherapie_Applikationsart",
+    "title" : "MII CS Onkologie Strahlentherapie Applikationsart",
+    "description" : "oBDS-spezifisches Codesystem für Klassifikation von Intention der OP"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_Strahlentherapie_Boost",
+    "title" : "MII CS Onkologie Strahlentherapie Boost",
+    "description" : "oBDS-spezifisches Codesystem für Klassifikation von Strahlentherapie-Boosts"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_Strahlentherapie_Strahlenart",
+    "title" : "MII CS Onkologie Strahlentherapie Strahlenart",
+    "description" : "oBDS-spezifisches Codesystem für Klassifikation von eingesetzter Strahlenart"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_Strahlentherapie_Zielgebiet",
+    "title" : "MII CS Onkologie Strahlentherapie Zielgebiet",
+    "description" : "oBDS-spezifisches Codesystem für Klassifikation von Zielgebiet von Strahlentherapie"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet-2014",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_Strahlentherapie_Zielgebiet_2014",
+    "title" : "MII CS Onkologie Strahlentherapie Zielgebiet oBDS 2014 (Legacy)",
+    "description" : "oBDS 2014 Legacy-Codesystem für Klassifikation von Zielgebiet von Strahlentherapie - nur für Datenimport und Migration"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-studienteilnahme",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "Studienteilnahme",
+    "title" : "MII CS Onkologie Studienteilnahme",
+    "description" : "oBDS-spezifisches Codesystem den Status der Studienteilnahme"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_Systemische_Therapie_Protokolle",
+    "title" : "MII CS Onkologie Systemische Therapie Protokolle",
+    "description" : "oBDS-spezifisches Codesystem für Protokolle systemischer Therapien"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_Therapie_Ende_Grund",
+    "title" : "MII CS Onkologie Strahlentherapie Ende Grund",
+    "description" : "oBDS-spezifisches Codesystem für Klassifikation des Grundes der Beendigung der Strahlentherapie oder der systemischen Therapie"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_Therapie_StellungZurOp",
+    "title" : "MII CS Onkologie Therapie Stellung",
+    "description" : "oBDS-spezifisches Codesystem für Klassifikation von Stellung zur OP"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_Therapie_Typ",
+    "title" : "MII CS Onko Therapie Typ",
+    "description" : "Typ der Therapie"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieabweichung",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_Therapieabweichung",
+    "title" : "MII CS Onkologie Therapieabweichung",
+    "description" : "oBDS-spezifisches Codesystem für die Therapieabweichung auf Wunsch des Patients."
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_Therapieplanung_Typ",
+    "title" : "MII CS Onkologie Therapieplanung Typ",
+    "description" : "oBDS-spezifisches Codesystem für den Therapieplanungstyp"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_TNM_Version",
+    "title" : "MII CS Onkologie TNM Version",
+    "description" : "Codes für TNM Version/Auflage nach welcher Version des TNM klassifiziert wird."
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tod",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_Tod",
+    "title" : "MII CS Onkologie Tod",
+    "description" : "oBDS-spezifisches Codesystem tumorbedingter Tod"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_Verlauf_Fernmetastasen",
+    "title" : "MII CS Onkologie Verlauf Fernmetastasen",
+    "description" : "oBDS-spezifisches Codesystem für die Beurteilung von Fernmetastasen im Behandlungsverlauf"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_Verlauf_Gesamtbeurteilung",
+    "title" : "MII CS Onkologie Verlauf Gesamtbeurteilung",
+    "description" : "oBDS-spezifisches Codesystem für die Gesamtbeurteilung im Behandlungsverlauf"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-lymphknoten",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_Verlauf_Lymphknoten",
+    "title" : "MII CS Onkologie Verlauf Lymphknoten",
+    "description" : "oBDS-spezifisches Codesystem für die Beurteilung von Lymphknoten im Behandlungsverlauf"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-primaertumor",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_Verlauf_Primaertumor",
+    "title" : "MII CS Onkologie Verlauf Primärtumor",
+    "description" : "oBDS-spezifisches Codesystem für die Beurteilung des Primärtumors im Behandlungsverlauf"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_Weitere_Klassifikationen_OBDS",
+    "title" : "MII CodeSystem Onkologie - Weitere Klassifikationen oBDS",
+    "description" : "oBDS-specific classification systems and scoring systems not yet covered by international terminologies (SNOMED CT, NCI Thesaurus). These codes supplement the existing ValueSet for additional classifications. Research required: Check if SNOMED CT or LOINC codes exist for these scoring systems before using oBDS-specific codes."
+  },
+  {
+    "url" : "https://www.uicc.org/resources/tnm",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_CS_Onko_TNM_UICC",
+    "title" : "MII CS Onkologie TNM UICC",
+    "description" : "Codes für TNM UICC Ausprägungen."
+  }]
+}

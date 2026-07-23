@@ -1,0 +1,875 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-cs-onko-systemische-therapie-protokolle"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/shareablecodesystem" ;
+       fhir:index 0 ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-onko-systemische-therapie-protokolle</b></p><a name=\"mii-cs-onko-systemische-therapie-protokolle\"> </a><a name=\"hcmii-cs-onko-systemische-therapie-protokolle\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">ABVD<a name=\"mii-cs-onko-systemische-therapie-protokolle-ABVD\"> </a></td><td>ABVD</td><td>Bleomycin, Dacarbazin, Doxorubicin, Vinblastin</td></tr><tr><td style=\"white-space:nowrap\">AC<a name=\"mii-cs-onko-systemische-therapie-protokolle-AC\"> </a></td><td>AC</td><td>Cyclophosphamid, Doxorubicin</td></tr><tr><td style=\"white-space:nowrap\">ACO<a name=\"mii-cs-onko-systemische-therapie-protokolle-ACO\"> </a></td><td>ACO</td><td>Cyclophosphamid, Doxorubicin, Vincristin</td></tr><tr><td style=\"white-space:nowrap\">ADORE<a name=\"mii-cs-onko-systemische-therapie-protokolle-ADORE\"> </a></td><td>ADORE</td><td>Fluorouracil, Folinsäure, Oxaliplatin</td></tr><tr><td style=\"white-space:nowrap\">ADR-IFO<a name=\"mii-cs-onko-systemische-therapie-protokolle-ADR-IFO\"> </a></td><td>ADR-IFO</td><td>Doxorubicin, Ifosfamid, Mesna</td></tr><tr><td style=\"white-space:nowrap\">AIO<a name=\"mii-cs-onko-systemische-therapie-protokolle-AIO\"> </a></td><td>AIO</td><td>Fluorouracil, Folinsäure</td></tr><tr><td style=\"white-space:nowrap\">AIO-04<a name=\"mii-cs-onko-systemische-therapie-protokolle-AIO-04\"> </a></td><td>AIO-04</td><td>Fluorouracil, Folinsäure, Oxaliplatin</td></tr><tr><td style=\"white-space:nowrap\">AIO-Irinotecan<a name=\"mii-cs-onko-systemische-therapie-protokolle-AIO-Irinotecan\"> </a></td><td>AIO-Irinotecan</td><td>Fluorouracil, Folinsäure, Irinotecan</td></tr><tr><td style=\"white-space:nowrap\">ARO<a name=\"mii-cs-onko-systemische-therapie-protokolle-ARO\"> </a></td><td>ARO</td><td>Fluorouracil, Folinsäure, Oxaliplatin</td></tr><tr><td style=\"white-space:nowrap\">AVD<a name=\"mii-cs-onko-systemische-therapie-protokolle-AVD\"> </a></td><td>AVD</td><td>Dacarbazin, Doxorubicin, Vinblastin</td></tr><tr><td style=\"white-space:nowrap\">BCD<a name=\"mii-cs-onko-systemische-therapie-protokolle-BCD\"> </a></td><td>BCD</td><td>Actinomycin D, Bleomycin, Cyclophosphamid</td></tr><tr><td style=\"white-space:nowrap\">BEACOPP-basis<a name=\"mii-cs-onko-systemische-therapie-protokolle-BEACOPP-basis\"> </a></td><td>BEACOPP basis</td><td>Bleomycin, Cyclophosphamid, Doxorubicin, Etoposid, Procarbazin, Vincristin, Prednison</td></tr><tr><td style=\"white-space:nowrap\">BEACOPP-eskaliert<a name=\"mii-cs-onko-systemische-therapie-protokolle-BEACOPP-eskaliert\"> </a></td><td>BEACOPP eskaliert</td><td>Bleomycin, Cyclophosphamid, Doxorubicin, Etoposid, Procarbazin, Vincristin, Prednison</td></tr><tr><td style=\"white-space:nowrap\">BEAM<a name=\"mii-cs-onko-systemische-therapie-protokolle-BEAM\"> </a></td><td>BEAM</td><td>BCNU, Cytarabin, Etoposid, Melphalan</td></tr><tr><td style=\"white-space:nowrap\">BOLD<a name=\"mii-cs-onko-systemische-therapie-protokolle-BOLD\"> </a></td><td>BOLD</td><td>Bleomycin, Dacarbazin, Lomustin, Vincristin</td></tr><tr><td style=\"white-space:nowrap\">BP<a name=\"mii-cs-onko-systemische-therapie-protokolle-BP\"> </a></td><td>BP</td><td>Bendamustin, Prednison</td></tr><tr><td style=\"white-space:nowrap\">BR<a name=\"mii-cs-onko-systemische-therapie-protokolle-BR\"> </a></td><td>BR</td><td>Bendamustin, Rituximab</td></tr><tr><td style=\"white-space:nowrap\">BrECADD<a name=\"mii-cs-onko-systemische-therapie-protokolle-BrECADD\"> </a></td><td>BrECADD</td><td>Brentuximab, Cyclophosphamid, Dacarbacin, Doxorubicin, Etoposid, Dexamethason</td></tr><tr><td style=\"white-space:nowrap\">BuCy<a name=\"mii-cs-onko-systemische-therapie-protokolle-BuCy\"> </a></td><td>BuCy</td><td>Busulfan, Cyclophosphamid</td></tr><tr><td style=\"white-space:nowrap\">CAD<a name=\"mii-cs-onko-systemische-therapie-protokolle-CAD\"> </a></td><td>CAD</td><td>Cyclophosphamid, Doxorubicin, Dexamethason</td></tr><tr><td style=\"white-space:nowrap\">CAO<a name=\"mii-cs-onko-systemische-therapie-protokolle-CAO\"> </a></td><td>CAO</td><td>Fluorouracil, Folinsäure, Oxaliplatin</td></tr><tr><td style=\"white-space:nowrap\">CapeOx<a name=\"mii-cs-onko-systemische-therapie-protokolle-CapeOx\"> </a></td><td>CapeOx</td><td>Capecitabin, Oxaliplatin</td></tr><tr><td style=\"white-space:nowrap\">Cap-Schema<a name=\"mii-cs-onko-systemische-therapie-protokolle-Cap-Schema\"> </a></td><td>Cap-Schema</td><td>Capecitabin</td></tr><tr><td style=\"white-space:nowrap\">CarboTax<a name=\"mii-cs-onko-systemische-therapie-protokolle-CarboTax\"> </a></td><td>CarboTax</td><td>Carboplatin, Paclitaxel</td></tr><tr><td style=\"white-space:nowrap\">CEV<a name=\"mii-cs-onko-systemische-therapie-protokolle-CEV\"> </a></td><td>CEV</td><td>Carboplatin, Etoposid, Vincristin</td></tr><tr><td style=\"white-space:nowrap\">CHOEP<a name=\"mii-cs-onko-systemische-therapie-protokolle-CHOEP\"> </a></td><td>CHOEP</td><td>Cyclophosphamid, Doxorubicin, Etoposid, Vincristin, Prednison</td></tr><tr><td style=\"white-space:nowrap\">CHOEP-14<a name=\"mii-cs-onko-systemische-therapie-protokolle-CHOEP-14\"> </a></td><td>CHOEP-14</td><td>Cyclophosphamid, Doxorubicin, Etoposid, Vincristin, Prednison, G-CSF</td></tr><tr><td style=\"white-space:nowrap\">CHOEP-21<a name=\"mii-cs-onko-systemische-therapie-protokolle-CHOEP-21\"> </a></td><td>CHOEP-21</td><td>Cyclophosphamid, Doxorubicin, Etoposid, Vincristin, Prednison, G-CSF</td></tr><tr><td style=\"white-space:nowrap\">CHOP<a name=\"mii-cs-onko-systemische-therapie-protokolle-CHOP\"> </a></td><td>CHOP</td><td>Cyclophosphamid, Doxorubicin, Vincristin, Prednison</td></tr><tr><td style=\"white-space:nowrap\">CHOP-14<a name=\"mii-cs-onko-systemische-therapie-protokolle-CHOP-14\"> </a></td><td>CHOP-14</td><td>Cyclophosphamid, Doxorubicin, Vincristin, Prednison, G-CSF</td></tr><tr><td style=\"white-space:nowrap\">CHOP-21<a name=\"mii-cs-onko-systemische-therapie-protokolle-CHOP-21\"> </a></td><td>CHOP-21</td><td>Cyclophosphamid, Doxorubicin, Vincristin, Prednison, G-CSF</td></tr><tr><td style=\"white-space:nowrap\">CMF<a name=\"mii-cs-onko-systemische-therapie-protokolle-CMF\"> </a></td><td>CMF</td><td>Cyclophosphamid, Fluorouracil, Methotrexat</td></tr><tr><td style=\"white-space:nowrap\">COPP<a name=\"mii-cs-onko-systemische-therapie-protokolle-COPP\"> </a></td><td>COPP</td><td>Cyclophosphamid, Procarbazin, Vincristin, Prednison</td></tr><tr><td style=\"white-space:nowrap\">CV<a name=\"mii-cs-onko-systemische-therapie-protokolle-CV\"> </a></td><td>CV</td><td>Cisplatin, Vinorelbin</td></tr><tr><td style=\"white-space:nowrap\">DA<a name=\"mii-cs-onko-systemische-therapie-protokolle-DA\"> </a></td><td>DA</td><td>Cytarabin, Daunorubicin</td></tr><tr><td style=\"white-space:nowrap\">DAC<a name=\"mii-cs-onko-systemische-therapie-protokolle-DAC\"> </a></td><td>DAC</td><td>Cyclophosphamid, Docetaxel, Doxorubicin</td></tr><tr><td style=\"white-space:nowrap\">DC-Doce-Carbo<a name=\"mii-cs-onko-systemische-therapie-protokolle-DC-Doce-Carbo\"> </a></td><td>DC (Doce/Carbo)</td><td>Carboplatin, Docetaxel</td></tr><tr><td style=\"white-space:nowrap\">DC-Doce-Cyclo<a name=\"mii-cs-onko-systemische-therapie-protokolle-DC-Doce-Cyclo\"> </a></td><td>DC (Doce/Cyclo)</td><td>Cyclophosphamid, Docetaxel</td></tr><tr><td style=\"white-space:nowrap\">DCbH<a name=\"mii-cs-onko-systemische-therapie-protokolle-DCbH\"> </a></td><td>DCbH</td><td>Carboplatin, Docetaxel, Trastuzumab</td></tr><tr><td style=\"white-space:nowrap\">DeVIC<a name=\"mii-cs-onko-systemische-therapie-protokolle-DeVIC\"> </a></td><td>DeVIC</td><td>Carboplatin, Etoposid, Ifosfamid, Dexamethason</td></tr><tr><td style=\"white-space:nowrap\">Dexa-BEAM<a name=\"mii-cs-onko-systemische-therapie-protokolle-Dexa-BEAM\"> </a></td><td>Dexa-BEAM</td><td>Carmustin, Cytarabin, Etoposid, Melphalan, Dexamethason</td></tr><tr><td style=\"white-space:nowrap\">DHAP<a name=\"mii-cs-onko-systemische-therapie-protokolle-DHAP\"> </a></td><td>DHAP</td><td>Cisplatin, Cytarabin, Dexamethason</td></tr><tr><td style=\"white-space:nowrap\">DRC<a name=\"mii-cs-onko-systemische-therapie-protokolle-DRC\"> </a></td><td>DRC</td><td>Cyclophosphamid, Rituximab, Dexamethason</td></tr><tr><td style=\"white-space:nowrap\">DVP<a name=\"mii-cs-onko-systemische-therapie-protokolle-DVP\"> </a></td><td>DVP</td><td>Cisplatin, Dacarbazin, Vindesin</td></tr><tr><td style=\"white-space:nowrap\">EC<a name=\"mii-cs-onko-systemische-therapie-protokolle-EC\"> </a></td><td>EC</td><td>Cyclophosphamid, Epirubicin</td></tr><tr><td style=\"white-space:nowrap\">EC-D<a name=\"mii-cs-onko-systemische-therapie-protokolle-EC-D\"> </a></td><td>EC-D</td><td>Cyclophosphamid, Docetaxel, Epirubicin</td></tr><tr><td style=\"white-space:nowrap\">ECF<a name=\"mii-cs-onko-systemische-therapie-protokolle-ECF\"> </a></td><td>ECF</td><td>Cisplatin, Epirubicin, Fluorouracil</td></tr><tr><td style=\"white-space:nowrap\">EC-P<a name=\"mii-cs-onko-systemische-therapie-protokolle-EC-P\"> </a></td><td>EC-P</td><td>Cyclophosphamid, Epirubicin, Paclitaxel</td></tr><tr><td style=\"white-space:nowrap\">ELO-Rd<a name=\"mii-cs-onko-systemische-therapie-protokolle-ELO-Rd\"> </a></td><td>ELO-Rd</td><td>Elotuzumab, Lenalidomid, Dexamethason</td></tr><tr><td style=\"white-space:nowrap\">EOX<a name=\"mii-cs-onko-systemische-therapie-protokolle-EOX\"> </a></td><td>EOX</td><td>Capecitabin, Epirubicin, Oxaliplatin</td></tr><tr><td style=\"white-space:nowrap\">EXTREME-mit-Carboplatin<a name=\"mii-cs-onko-systemische-therapie-protokolle-EXTREME-mit-Carboplatin\"> </a></td><td>EXTREME mit Carboplatin</td><td>Carboplatin, Cetuximab, Fluorouracil</td></tr><tr><td style=\"white-space:nowrap\">EXTREME-mit-Cisplatin<a name=\"mii-cs-onko-systemische-therapie-protokolle-EXTREME-mit-Cisplatin\"> </a></td><td>EXTREME mit Cisplatin</td><td>Cetuximab, Cisplatin, Fluorouracil</td></tr><tr><td style=\"white-space:nowrap\">FAC<a name=\"mii-cs-onko-systemische-therapie-protokolle-FAC\"> </a></td><td>FAC</td><td>Cyclophosphamid, Doxorubicin, Fluorouracil</td></tr><tr><td style=\"white-space:nowrap\">FC<a name=\"mii-cs-onko-systemische-therapie-protokolle-FC\"> </a></td><td>FC</td><td>Cyclophosphamid, Fludarabin</td></tr><tr><td style=\"white-space:nowrap\">FCR<a name=\"mii-cs-onko-systemische-therapie-protokolle-FCR\"> </a></td><td>FCR</td><td>Cyclophosphamid, Fludarabin, Rituximab</td></tr><tr><td style=\"white-space:nowrap\">FEC<a name=\"mii-cs-onko-systemische-therapie-protokolle-FEC\"> </a></td><td>FEC</td><td>Cyclophosphamid, Epirubicin, Fluorouracil</td></tr><tr><td style=\"white-space:nowrap\">FEC-Doc<a name=\"mii-cs-onko-systemische-therapie-protokolle-FEC-Doc\"> </a></td><td>FEC-Doc</td><td>Cyclophosphamid, Docetaxel, Epirubicin, Fluorouracil</td></tr><tr><td style=\"white-space:nowrap\">FLAG-Ida<a name=\"mii-cs-onko-systemische-therapie-protokolle-FLAG-Ida\"> </a></td><td>FLAG-Ida</td><td>Cytarabin, Fludarabin, Idarubicin, Lenogastrim</td></tr><tr><td style=\"white-space:nowrap\">FLO<a name=\"mii-cs-onko-systemische-therapie-protokolle-FLO\"> </a></td><td>FLO</td><td>Fluorouracil, Folinsäure, Oxaliplatin</td></tr><tr><td style=\"white-space:nowrap\">FLOT<a name=\"mii-cs-onko-systemische-therapie-protokolle-FLOT\"> </a></td><td>FLOT</td><td>Docetaxel, Fluorouracil, Folinsäure, Oxaliplatin</td></tr><tr><td style=\"white-space:nowrap\">Flu-Cam<a name=\"mii-cs-onko-systemische-therapie-protokolle-Flu-Cam\"> </a></td><td>Flu-Cam</td><td>Alemtuzumab, Fludarabin</td></tr><tr><td style=\"white-space:nowrap\">FOLFIRI<a name=\"mii-cs-onko-systemische-therapie-protokolle-FOLFIRI\"> </a></td><td>FOLFIRI</td><td>Fluorouracil, Folinsäure, Irinotecan</td></tr><tr><td style=\"white-space:nowrap\">Folfirinox<a name=\"mii-cs-onko-systemische-therapie-protokolle-Folfirinox\"> </a></td><td>Folfirinox</td><td>Fluorouracil, Folinsäure, Irinotecan, Oxaliplatin</td></tr><tr><td style=\"white-space:nowrap\">FOLFOX4<a name=\"mii-cs-onko-systemische-therapie-protokolle-FOLFOX4\"> </a></td><td>FOLFOX4</td><td>Fluorouracil, Folinsäure, Oxaliplatin</td></tr><tr><td style=\"white-space:nowrap\">FOLFOX-6<a name=\"mii-cs-onko-systemische-therapie-protokolle-FOLFOX-6\"> </a></td><td>FOLFOX-6</td><td>Fluorouracil, Folinsäure, Oxaliplatin</td></tr><tr><td style=\"white-space:nowrap\">FOLFOXIRI<a name=\"mii-cs-onko-systemische-therapie-protokolle-FOLFOXIRI\"> </a></td><td>FOLFOXIRI</td><td>Fluorouracil, Folinsäure, Irinotecan, Oxaliplatin</td></tr><tr><td style=\"white-space:nowrap\">FUFAMI<a name=\"mii-cs-onko-systemische-therapie-protokolle-FUFAMI\"> </a></td><td>FUFAMI</td><td>Fluorouracil, Folinsäure, Mitomycin</td></tr><tr><td style=\"white-space:nowrap\">FUFIRI<a name=\"mii-cs-onko-systemische-therapie-protokolle-FUFIRI\"> </a></td><td>FUFIRI</td><td>Fluorouracil, Folinsäure, Irinotecan</td></tr><tr><td style=\"white-space:nowrap\">FUFOX<a name=\"mii-cs-onko-systemische-therapie-protokolle-FUFOX\"> </a></td><td>FUFOX</td><td>Fluorouracil, Folinsäure, Oxaliplatin</td></tr><tr><td style=\"white-space:nowrap\">GC-B<a name=\"mii-cs-onko-systemische-therapie-protokolle-GC-B\"> </a></td><td>GC-B</td><td>Bevacizumab, Carboplatin, Gemcitabin</td></tr><tr><td style=\"white-space:nowrap\">GDP-Schema<a name=\"mii-cs-onko-systemische-therapie-protokolle-GDP-Schema\"> </a></td><td>GDP-Schema</td><td>Cisplatin, Gemcitabin, Dexamethason</td></tr><tr><td style=\"white-space:nowrap\">GELOX<a name=\"mii-cs-onko-systemische-therapie-protokolle-GELOX\"> </a></td><td>GELOX</td><td>Asparaginase, Gemcitabin, Oxaliplatin</td></tr><tr><td style=\"white-space:nowrap\">Gem-Carbo<a name=\"mii-cs-onko-systemische-therapie-protokolle-Gem-Carbo\"> </a></td><td>Gem-Carbo</td><td>Carboplatin, Gemcitabin</td></tr><tr><td style=\"white-space:nowrap\">Gem-Cis<a name=\"mii-cs-onko-systemische-therapie-protokolle-Gem-Cis\"> </a></td><td>Gem-Cis</td><td>Cisplatin, Gemcitabin</td></tr><tr><td style=\"white-space:nowrap\">GemTreo<a name=\"mii-cs-onko-systemische-therapie-protokolle-GemTreo\"> </a></td><td>GemTreo</td><td>Gemcitabin, Treosulfan</td></tr><tr><td style=\"white-space:nowrap\">GOP<a name=\"mii-cs-onko-systemische-therapie-protokolle-GOP\"> </a></td><td>GOP</td><td>Gemcitabin, Oxaliplatin, Paclitaxel</td></tr><tr><td style=\"white-space:nowrap\">HAM-Cytarabin<a name=\"mii-cs-onko-systemische-therapie-protokolle-HAM-Cytarabin\"> </a></td><td>HAM-Cytarabin</td><td>Cytarabin, Mitoxantron</td></tr><tr><td style=\"white-space:nowrap\">HD-Protokoll<a name=\"mii-cs-onko-systemische-therapie-protokolle-HD-Protokoll\"> </a></td><td>HD-Protokoll</td><td>BCNU, Rituximab, Thiotepa</td></tr><tr><td style=\"white-space:nowrap\">ICE<a name=\"mii-cs-onko-systemische-therapie-protokolle-ICE\"> </a></td><td>ICE</td><td>Carboplatin, Etoposid, Ifosfamid</td></tr><tr><td style=\"white-space:nowrap\">IEV<a name=\"mii-cs-onko-systemische-therapie-protokolle-IEV\"> </a></td><td>IEV</td><td>Epirubicin, Etoposid, Ifosfamid</td></tr><tr><td style=\"white-space:nowrap\">IMVP-16<a name=\"mii-cs-onko-systemische-therapie-protokolle-IMVP-16\"> </a></td><td>IMVP-16</td><td>Etoposid, Ifosfamid, Methotrexat</td></tr><tr><td style=\"white-space:nowrap\">IRd<a name=\"mii-cs-onko-systemische-therapie-protokolle-IRd\"> </a></td><td>IRd</td><td>Ixazomib, Lenalidomid, Dexamethason</td></tr><tr><td style=\"white-space:nowrap\">Knospe<a name=\"mii-cs-onko-systemische-therapie-protokolle-Knospe\"> </a></td><td>Knospe</td><td>Chlorambucil, Prednison</td></tr><tr><td style=\"white-space:nowrap\">Knospe-modifiziert<a name=\"mii-cs-onko-systemische-therapie-protokolle-Knospe-modifiziert\"> </a></td><td>Knospe modifiziert</td><td>Chlorambucil, Rituximab</td></tr><tr><td style=\"white-space:nowrap\">KRD<a name=\"mii-cs-onko-systemische-therapie-protokolle-KRD\"> </a></td><td>KRD</td><td>Carfilzomib, Lenalidomid, Dexamethason</td></tr><tr><td style=\"white-space:nowrap\">LV5FU2<a name=\"mii-cs-onko-systemische-therapie-protokolle-LV5FU2\"> </a></td><td>LV5FU2</td><td>Fluorouracil, Folinsäure</td></tr><tr><td style=\"white-space:nowrap\">LV5FU2-modif<a name=\"mii-cs-onko-systemische-therapie-protokolle-LV5FU2-modif\"> </a></td><td>LV5FU2 modif.</td><td>Fluorouracil, Folinsäure</td></tr><tr><td style=\"white-space:nowrap\">MAMAC<a name=\"mii-cs-onko-systemische-therapie-protokolle-MAMAC\"> </a></td><td>MAMAC</td><td>Amsacrin, Cytarabin</td></tr><tr><td style=\"white-space:nowrap\">MATRix<a name=\"mii-cs-onko-systemische-therapie-protokolle-MATRix\"> </a></td><td>MATRix</td><td>Cytarabin, Methotrexat, Rituximab, Thiotepa</td></tr><tr><td style=\"white-space:nowrap\">MAV<a name=\"mii-cs-onko-systemische-therapie-protokolle-MAV\"> </a></td><td>MAV</td><td>Cytarabin, Etoposid, Mitoxantron</td></tr><tr><td style=\"white-space:nowrap\">Mayo-Protokoll<a name=\"mii-cs-onko-systemische-therapie-protokolle-Mayo-Protokoll\"> </a></td><td>Mayo-Protokoll</td><td>Fluorouracil, Folinsäure</td></tr><tr><td style=\"white-space:nowrap\">M-Cavi<a name=\"mii-cs-onko-systemische-therapie-protokolle-M-Cavi\"> </a></td><td>M-Cavi</td><td>Carboplatin, Methotrexat, Vinblastin</td></tr><tr><td style=\"white-space:nowrap\">MPT<a name=\"mii-cs-onko-systemische-therapie-protokolle-MPT\"> </a></td><td>MPT</td><td>Melphalan, Thalidomid, Prednison</td></tr><tr><td style=\"white-space:nowrap\">M-VAC<a name=\"mii-cs-onko-systemische-therapie-protokolle-M-VAC\"> </a></td><td>M-VAC</td><td>Cisplatin, Doxorubicin, Methotrexat, Vinblastin</td></tr><tr><td style=\"white-space:nowrap\">PAC<a name=\"mii-cs-onko-systemische-therapie-protokolle-PAC\"> </a></td><td>PAC</td><td>Cisplatin, Cyclophosphamid, Doxorubicin</td></tr><tr><td style=\"white-space:nowrap\">PC<a name=\"mii-cs-onko-systemische-therapie-protokolle-PC\"> </a></td><td>PC</td><td>Bevacizumab, Carboplatin, Paclitaxel</td></tr><tr><td style=\"white-space:nowrap\">PC-mit-Bevacizumab<a name=\"mii-cs-onko-systemische-therapie-protokolle-PC-mit-Bevacizumab\"> </a></td><td>PC mit Bevacizumab</td><td>Bevacizumab, Carboplatin, Paclitaxel</td></tr><tr><td style=\"white-space:nowrap\">PC-ohne-Bevacizumab<a name=\"mii-cs-onko-systemische-therapie-protokolle-PC-ohne-Bevacizumab\"> </a></td><td>PC ohne Bevacizumab</td><td>Carboplatin, Paclitaxel</td></tr><tr><td style=\"white-space:nowrap\">PCV<a name=\"mii-cs-onko-systemische-therapie-protokolle-PCV\"> </a></td><td>PCV</td><td>Lomustin, Procarbazin, Vincristin</td></tr><tr><td style=\"white-space:nowrap\">PE<a name=\"mii-cs-onko-systemische-therapie-protokolle-PE\"> </a></td><td>PE</td><td>Cisplatin, Etoposid</td></tr><tr><td style=\"white-space:nowrap\">PEB<a name=\"mii-cs-onko-systemische-therapie-protokolle-PEB\"> </a></td><td>PEB</td><td>Bleomycin, Cisplatin, Etoposid</td></tr><tr><td style=\"white-space:nowrap\">Peg-DoxC<a name=\"mii-cs-onko-systemische-therapie-protokolle-Peg-DoxC\"> </a></td><td>Peg. DoxC</td><td>Carboplatin, Doxorubicin</td></tr><tr><td style=\"white-space:nowrap\">PEI<a name=\"mii-cs-onko-systemische-therapie-protokolle-PEI\"> </a></td><td>PEI</td><td>Cisplatin, Etoposid, Ifosfamid</td></tr><tr><td style=\"white-space:nowrap\">P-GEMOX<a name=\"mii-cs-onko-systemische-therapie-protokolle-P-GEMOX\"> </a></td><td>P-GEMOX</td><td>Asparaginase (peg), Gemcitabin, Oxaliplatin</td></tr><tr><td style=\"white-space:nowrap\">PLF<a name=\"mii-cs-onko-systemische-therapie-protokolle-PLF\"> </a></td><td>PLF</td><td>Cisplatin, Fluorouracil, Folinsäure</td></tr><tr><td style=\"white-space:nowrap\">PVAG-Schema<a name=\"mii-cs-onko-systemische-therapie-protokolle-PVAG-Schema\"> </a></td><td>PVAG-Schema</td><td>Doxorubicin, Gemcitabin, Vinblastin, Prednison</td></tr><tr><td style=\"white-space:nowrap\">PVBI<a name=\"mii-cs-onko-systemische-therapie-protokolle-PVBI\"> </a></td><td>PVBI</td><td>Cisplatin, Ifosfamid, Vinblastin</td></tr><tr><td style=\"white-space:nowrap\">R-BAC<a name=\"mii-cs-onko-systemische-therapie-protokolle-R-BAC\"> </a></td><td>R-BAC</td><td>Bendamustin, Cytarabin, Rituximab</td></tr><tr><td style=\"white-space:nowrap\">R-Bendamustin<a name=\"mii-cs-onko-systemische-therapie-protokolle-R-Bendamustin\"> </a></td><td>R-Bendamustin</td><td>Bendamustin, Rituximab</td></tr><tr><td style=\"white-space:nowrap\">R-CHOP<a name=\"mii-cs-onko-systemische-therapie-protokolle-R-CHOP\"> </a></td><td>R-CHOP</td><td>Cyclophosphamid, Doxorubicin, Vincristin, Rituximab, Prednison</td></tr><tr><td style=\"white-space:nowrap\">R-DeVIC<a name=\"mii-cs-onko-systemische-therapie-protokolle-R-DeVIC\"> </a></td><td>R-DeVIC</td><td>Carboplatin, Etoposid, Ifosfamid, Rituximab, Dexamethason</td></tr><tr><td style=\"white-space:nowrap\">R-DHAP<a name=\"mii-cs-onko-systemische-therapie-protokolle-R-DHAP\"> </a></td><td>R-DHAP</td><td>Cisplatin, Cytarabin, Rituximab, Dexamethason</td></tr><tr><td style=\"white-space:nowrap\">RD-Schema<a name=\"mii-cs-onko-systemische-therapie-protokolle-RD-Schema\"> </a></td><td>RD-Schema</td><td>Lenalidomid, Dexamethason</td></tr><tr><td style=\"white-space:nowrap\">RevDex<a name=\"mii-cs-onko-systemische-therapie-protokolle-RevDex\"> </a></td><td>Rev/Dex</td><td>Lenalidomid, Dexamethason</td></tr><tr><td style=\"white-space:nowrap\">R-GemOx<a name=\"mii-cs-onko-systemische-therapie-protokolle-R-GemOx\"> </a></td><td>R-GemOx</td><td>Gemcitabin, Oxaliplatin, Rituximab</td></tr><tr><td style=\"white-space:nowrap\">R-HAD<a name=\"mii-cs-onko-systemische-therapie-protokolle-R-HAD\"> </a></td><td>R-HAD</td><td>Cytarabin, Rituximab, Dexamethason</td></tr><tr><td style=\"white-space:nowrap\">R-ICE<a name=\"mii-cs-onko-systemische-therapie-protokolle-R-ICE\"> </a></td><td>R-ICE</td><td>Carboplatin, Etoposid, Ifosfamid, Rituximab</td></tr><tr><td style=\"white-space:nowrap\">R-MCP<a name=\"mii-cs-onko-systemische-therapie-protokolle-R-MCP\"> </a></td><td>R-MCP</td><td>Chlorambucil, Mitoxantron, Rituximab, Prednison</td></tr><tr><td style=\"white-space:nowrap\">R-MP<a name=\"mii-cs-onko-systemische-therapie-protokolle-R-MP\"> </a></td><td>R-MP</td><td>Methotrexat, Procarbazin, Rituximab</td></tr><tr><td style=\"white-space:nowrap\">S-HAI<a name=\"mii-cs-onko-systemische-therapie-protokolle-S-HAI\"> </a></td><td>S-HAI</td><td>Cytarabin, Idarubicin, G-CSF</td></tr><tr><td style=\"white-space:nowrap\">S-HAM<a name=\"mii-cs-onko-systemische-therapie-protokolle-S-HAM\"> </a></td><td>S-HAM</td><td>Cytarabin, Mitoxantron, G-CSF</td></tr><tr><td style=\"white-space:nowrap\">SMILE<a name=\"mii-cs-onko-systemische-therapie-protokolle-SMILE\"> </a></td><td>SMILE</td><td>Asparaginase, Etoposid, Ifosfamid, Methotrexat, Dexamethason</td></tr><tr><td style=\"white-space:nowrap\">TAC<a name=\"mii-cs-onko-systemische-therapie-protokolle-TAC\"> </a></td><td>TAC</td><td>Cyclophosphamid, Docetaxel, Doxorubicin</td></tr><tr><td style=\"white-space:nowrap\">TCED<a name=\"mii-cs-onko-systemische-therapie-protokolle-TCED\"> </a></td><td>TCED</td><td>Cyclophosphamid, Etoposid, Thalidomid, Dexamethason</td></tr><tr><td style=\"white-space:nowrap\">TCH<a name=\"mii-cs-onko-systemische-therapie-protokolle-TCH\"> </a></td><td>TCH</td><td>Carboplatin, Docetaxel, Trastuzumab</td></tr><tr><td style=\"white-space:nowrap\">TIP<a name=\"mii-cs-onko-systemische-therapie-protokolle-TIP\"> </a></td><td>TIP</td><td>Cisplatin, Ifosfamid, Paclitaxel</td></tr><tr><td style=\"white-space:nowrap\">TMZ<a name=\"mii-cs-onko-systemische-therapie-protokolle-TMZ\"> </a></td><td>TMZ</td><td>Temozolomid</td></tr><tr><td style=\"white-space:nowrap\">TPF<a name=\"mii-cs-onko-systemische-therapie-protokolle-TPF\"> </a></td><td>TPF</td><td>Cisplatin, Docetaxel, Fluorouracil</td></tr><tr><td style=\"white-space:nowrap\">VCD<a name=\"mii-cs-onko-systemische-therapie-protokolle-VCD\"> </a></td><td>VCD</td><td>Bortezomib, Cyclophosphamid, Dexamethason</td></tr><tr><td style=\"white-space:nowrap\">VFD<a name=\"mii-cs-onko-systemische-therapie-protokolle-VFD\"> </a></td><td>VFD</td><td>Bortezomib, Panobinostat, Dexamethason</td></tr><tr><td style=\"white-space:nowrap\">VIPD<a name=\"mii-cs-onko-systemische-therapie-protokolle-VIPD\"> </a></td><td>VIPD</td><td>Carboplatin, Etoposid, Ifosfamid, Dexamethason</td></tr><tr><td style=\"white-space:nowrap\">VMP<a name=\"mii-cs-onko-systemische-therapie-protokolle-VMP\"> </a></td><td>VMP</td><td>Bortezomib, Melphalan, Prednison</td></tr><tr><td style=\"white-space:nowrap\">VRD<a name=\"mii-cs-onko-systemische-therapie-protokolle-VRD\"> </a></td><td>VRD</td><td>Bortezomib, Lenalidomid, Dexamethason</td></tr><tr><td style=\"white-space:nowrap\">VTD<a name=\"mii-cs-onko-systemische-therapie-protokolle-VTD\"> </a></td><td>VTD</td><td>Bortezomib, Thalidomid, Dexamethason</td></tr><tr><td style=\"white-space:nowrap\">XELOX<a name=\"mii-cs-onko-systemische-therapie-protokolle-XELOX\"> </a></td><td>XELOX</td><td>Capecitabin, Oxaliplatin</td></tr><tr><td style=\"white-space:nowrap\">XP<a name=\"mii-cs-onko-systemische-therapie-protokolle-XP\"> </a></td><td>XP</td><td>Capecitabin, Cisplatin</td></tr><tr><td style=\"white-space:nowrap\">Konditionierung-aemyeloablativ-MAC<a name=\"mii-cs-onko-systemische-therapie-protokolle-Konditionierung-aemyeloablativ-MAC\"> </a></td><td>Konditionierung, ämyeloablativ (MAC)</td><td>Individuell zu wählende Substanzen</td></tr><tr><td style=\"white-space:nowrap\">Konditionierung-nicht-myeloablativ-NMA<a name=\"mii-cs-onko-systemische-therapie-protokolle-Konditionierung-nicht-myeloablativ-NMA\"> </a></td><td>Konditionierung, nicht myeloablativ (NMA)</td><td>Individuell zu wählende Substanzen</td></tr><tr><td style=\"white-space:nowrap\">Konditionierung-reduzierte-Intensitaet-RIC<a name=\"mii-cs-onko-systemische-therapie-protokolle-Konditionierung-reduzierte-Intensitaet-RIC\"> </a></td><td>Konditionierung, reduzierte Intensität (RIC)</td><td>Individuell zu wählende Substanzen</td></tr><tr><td style=\"white-space:nowrap\">Konditionierung-reduzierte-Toxizitaet-RTC<a name=\"mii-cs-onko-systemische-therapie-protokolle-Konditionierung-reduzierte-Toxizitaet-RTC\"> </a></td><td>Konditionierung, reduzierte Toxizität (RTC)</td><td>Individuell zu wählende Substanzen</td></tr><tr><td style=\"white-space:nowrap\">TACE-Doxorubicin-Mitomycin<a name=\"mii-cs-onko-systemische-therapie-protokolle-TACE-Doxorubicin-Mitomycin\"> </a></td><td>TACE Doxorubicin-Mitomycin</td><td>Doxorubicin, Mitomycin</td></tr><tr><td style=\"white-space:nowrap\">TACE-Doxorubicin<a name=\"mii-cs-onko-systemische-therapie-protokolle-TACE-Doxorubicin\"> </a></td><td>TACE Doxorubicin</td><td>Doxorubicin</td></tr><tr><td style=\"white-space:nowrap\">TACE<a name=\"mii-cs-onko-systemische-therapie-protokolle-TACE\"> </a></td><td>TACE</td><td>Individuell zu wählende Substanzen</td></tr><tr><td style=\"white-space:nowrap\">HIPEC-Cisplatin-Mitomycin<a name=\"mii-cs-onko-systemische-therapie-protokolle-HIPEC-Cisplatin-Mitomycin\"> </a></td><td>HIPEC Cisplatin-Mitomycin</td><td>Cisplatin, Mitomycin</td></tr><tr><td style=\"white-space:nowrap\">HIPEC-Mitomycin<a name=\"mii-cs-onko-systemische-therapie-protokolle-HIPEC-Mitomycin\"> </a></td><td>HIPEC Mitomycin</td><td>Mitomycin</td></tr><tr><td style=\"white-space:nowrap\">HIPEC<a name=\"mii-cs-onko-systemische-therapie-protokolle-HIPEC\"> </a></td><td>HIPEC</td><td>Individuell zu wählende Substanzen</td></tr><tr><td style=\"white-space:nowrap\">HITOC<a name=\"mii-cs-onko-systemische-therapie-protokolle-HITOC\"> </a></td><td>HITOC</td><td>Individuell zu wählende Substanzen</td></tr><tr><td style=\"white-space:nowrap\">PIPAC-Cisplatin-Doxorubicin<a name=\"mii-cs-onko-systemische-therapie-protokolle-PIPAC-Cisplatin-Doxorubicin\"> </a></td><td>PIPAC Cisplatin-Doxorubicin</td><td>Cisplatin, Doxorubicin</td></tr><tr><td style=\"white-space:nowrap\">PIPAC-Cisplatin-Paclitaxel<a name=\"mii-cs-onko-systemische-therapie-protokolle-PIPAC-Cisplatin-Paclitaxel\"> </a></td><td>PIPAC Cisplatin-Paclitaxel</td><td>Cisplatin, Paclitaxel</td></tr><tr><td style=\"white-space:nowrap\">PIPAC<a name=\"mii-cs-onko-systemische-therapie-protokolle-PIPAC\"> </a></td><td>PIPAC</td><td>Individuell zu wählende Substanzen</td></tr><tr><td style=\"white-space:nowrap\">Instillation-Harnblase-Mitomycin<a name=\"mii-cs-onko-systemische-therapie-protokolle-Instillation-Harnblase-Mitomycin\"> </a></td><td>Instillation Harnblase Mitomycin</td><td>Mitomycin</td></tr><tr><td style=\"white-space:nowrap\">Instillation-Harnblase-Doxorubicin<a name=\"mii-cs-onko-systemische-therapie-protokolle-Instillation-Harnblase-Doxorubicin\"> </a></td><td>Instillation Harnblase Doxorubicin</td><td>Doxorubicin</td></tr><tr><td style=\"white-space:nowrap\">Instillation-Harnblase-Chemotherapeutikum<a name=\"mii-cs-onko-systemische-therapie-protokolle-Instillation-Harnblase-Chemotherapeutikum\"> </a></td><td>Instillation Harnblase Chemotherapeutikum</td><td>Individuell zu wählende Substanzen</td></tr><tr><td style=\"white-space:nowrap\">Instillation-Harnblase-BCG<a name=\"mii-cs-onko-systemische-therapie-protokolle-Instillation-Harnblase-BCG\"> </a></td><td>Instillation Harnblase (BCG)</td><td>BCG</td></tr><tr><td style=\"white-space:nowrap\">Instillation-Intrathekal-Tripel<a name=\"mii-cs-onko-systemische-therapie-protokolle-Instillation-Intrathekal-Tripel\"> </a></td><td>Instillation Intrathekal Tripel</td><td>Cytarabin, Methotrexat, Dexamethason</td></tr><tr><td style=\"white-space:nowrap\">Instillation-Intrathekal-Quadrupel<a name=\"mii-cs-onko-systemische-therapie-protokolle-Instillation-Intrathekal-Quadrupel\"> </a></td><td>Instillation Intrathekal Quadrupel</td><td>Cytarabin, Methotrexat, Dexamethason, Rituximab</td></tr><tr><td style=\"white-space:nowrap\">Instillation-intrathekal<a name=\"mii-cs-onko-systemische-therapie-protokolle-Instillation-intrathekal\"> </a></td><td>Instillation intrathekal</td><td>Individuell zu wählende Substanzen</td></tr><tr><td style=\"white-space:nowrap\">PUVA-systemisch-oral<a name=\"mii-cs-onko-systemische-therapie-protokolle-PUVA-systemisch-oral\"> </a></td><td>PUVA systemisch oral</td><td>Psoralen</td></tr><tr><td style=\"white-space:nowrap\">Bade-PUVA-topisch<a name=\"mii-cs-onko-systemische-therapie-protokolle-Bade-PUVA-topisch\"> </a></td><td>(Bade-) PUVA (topisch)</td><td>Psoralen</td></tr><tr><td style=\"white-space:nowrap\">Aderlass<a name=\"mii-cs-onko-systemische-therapie-protokolle-Aderlass\"> </a></td><td>Aderlass</td><td>Aderlass</td></tr><tr><td style=\"white-space:nowrap\">Leukapherese<a name=\"mii-cs-onko-systemische-therapie-protokolle-Leukapherese\"> </a></td><td>Leukapherese</td><td>Leukapherese</td></tr><tr><td style=\"white-space:nowrap\">Plasmapherese<a name=\"mii-cs-onko-systemische-therapie-protokolle-Plasmapherese\"> </a></td><td>Plasmapherese</td><td>Plasmapherese</td></tr><tr><td style=\"white-space:nowrap\">TTFields<a name=\"mii-cs-onko-systemische-therapie-protokolle-TTFields\"> </a></td><td>TTFields</td><td>TTFields</td></tr><tr><td style=\"white-space:nowrap\">CAR-T-Zelltherapie<a name=\"mii-cs-onko-systemische-therapie-protokolle-CAR-T-Zelltherapie\"> </a></td><td>CAR-T-Zelltherapie</td><td>Individuell zu wählende Substanzen</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle"] ;
+  fhir:CodeSystem.version [ fhir:value "2026.0.3"] ;
+  fhir:CodeSystem.name [ fhir:value "MII_CS_Onko_Systemische_Therapie_Protokolle"] ;
+  fhir:CodeSystem.title [ fhir:value "MII CS Onkologie Systemische Therapie Protokolle"] ;
+  fhir:CodeSystem.status [ fhir:value "active"] ;
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-07-23T12:42:42+00:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "Medizininformatik Initiative"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Medizininformatik Initiative" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.medizininformatik-initiative.de/" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "oBDS-spezifisches Codesystem für Protokolle systemischer Therapien"] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.valueSet [
+     fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-protokolle" ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-protokolle>
+  ] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "164"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "ABVD" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "ABVD" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Bleomycin, Dacarbazin, Doxorubicin, Vinblastin" ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "AC" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "AC" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cyclophosphamid, Doxorubicin" ]
+  ], [
+     fhir:index 2 ;
+     fhir:CodeSystem.concept.code [ fhir:value "ACO" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "ACO" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cyclophosphamid, Doxorubicin, Vincristin" ]
+  ], [
+     fhir:index 3 ;
+     fhir:CodeSystem.concept.code [ fhir:value "ADORE" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "ADORE" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Fluorouracil, Folinsäure, Oxaliplatin" ]
+  ], [
+     fhir:index 4 ;
+     fhir:CodeSystem.concept.code [ fhir:value "ADR-IFO" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "ADR-IFO" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Doxorubicin, Ifosfamid, Mesna" ]
+  ], [
+     fhir:index 5 ;
+     fhir:CodeSystem.concept.code [ fhir:value "AIO" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "AIO" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Fluorouracil, Folinsäure" ]
+  ], [
+     fhir:index 6 ;
+     fhir:CodeSystem.concept.code [ fhir:value "AIO-04" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "AIO-04" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Fluorouracil, Folinsäure, Oxaliplatin" ]
+  ], [
+     fhir:index 7 ;
+     fhir:CodeSystem.concept.code [ fhir:value "AIO-Irinotecan" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "AIO-Irinotecan" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Fluorouracil, Folinsäure, Irinotecan" ]
+  ], [
+     fhir:index 8 ;
+     fhir:CodeSystem.concept.code [ fhir:value "ARO" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "ARO" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Fluorouracil, Folinsäure, Oxaliplatin" ]
+  ], [
+     fhir:index 9 ;
+     fhir:CodeSystem.concept.code [ fhir:value "AVD" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "AVD" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Dacarbazin, Doxorubicin, Vinblastin" ]
+  ], [
+     fhir:index 10 ;
+     fhir:CodeSystem.concept.code [ fhir:value "BCD" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "BCD" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Actinomycin D, Bleomycin, Cyclophosphamid" ]
+  ], [
+     fhir:index 11 ;
+     fhir:CodeSystem.concept.code [ fhir:value "BEACOPP-basis" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "BEACOPP basis" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Bleomycin, Cyclophosphamid, Doxorubicin, Etoposid, Procarbazin, Vincristin, Prednison" ]
+  ], [
+     fhir:index 12 ;
+     fhir:CodeSystem.concept.code [ fhir:value "BEACOPP-eskaliert" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "BEACOPP eskaliert" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Bleomycin, Cyclophosphamid, Doxorubicin, Etoposid, Procarbazin, Vincristin, Prednison" ]
+  ], [
+     fhir:index 13 ;
+     fhir:CodeSystem.concept.code [ fhir:value "BEAM" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "BEAM" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "BCNU, Cytarabin, Etoposid, Melphalan" ]
+  ], [
+     fhir:index 14 ;
+     fhir:CodeSystem.concept.code [ fhir:value "BOLD" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "BOLD" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Bleomycin, Dacarbazin, Lomustin, Vincristin" ]
+  ], [
+     fhir:index 15 ;
+     fhir:CodeSystem.concept.code [ fhir:value "BP" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "BP" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Bendamustin, Prednison" ]
+  ], [
+     fhir:index 16 ;
+     fhir:CodeSystem.concept.code [ fhir:value "BR" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "BR" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Bendamustin, Rituximab" ]
+  ], [
+     fhir:index 17 ;
+     fhir:CodeSystem.concept.code [ fhir:value "BrECADD" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "BrECADD" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Brentuximab, Cyclophosphamid, Dacarbacin, Doxorubicin, Etoposid, Dexamethason" ]
+  ], [
+     fhir:index 18 ;
+     fhir:CodeSystem.concept.code [ fhir:value "BuCy" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "BuCy" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Busulfan, Cyclophosphamid" ]
+  ], [
+     fhir:index 19 ;
+     fhir:CodeSystem.concept.code [ fhir:value "CAD" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "CAD" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cyclophosphamid, Doxorubicin, Dexamethason" ]
+  ], [
+     fhir:index 20 ;
+     fhir:CodeSystem.concept.code [ fhir:value "CAO" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "CAO" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Fluorouracil, Folinsäure, Oxaliplatin" ]
+  ], [
+     fhir:index 21 ;
+     fhir:CodeSystem.concept.code [ fhir:value "CapeOx" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "CapeOx" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Capecitabin, Oxaliplatin" ]
+  ], [
+     fhir:index 22 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Cap-Schema" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Cap-Schema" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Capecitabin" ]
+  ], [
+     fhir:index 23 ;
+     fhir:CodeSystem.concept.code [ fhir:value "CarboTax" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "CarboTax" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Carboplatin, Paclitaxel" ]
+  ], [
+     fhir:index 24 ;
+     fhir:CodeSystem.concept.code [ fhir:value "CEV" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "CEV" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Carboplatin, Etoposid, Vincristin" ]
+  ], [
+     fhir:index 25 ;
+     fhir:CodeSystem.concept.code [ fhir:value "CHOEP" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "CHOEP" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cyclophosphamid, Doxorubicin, Etoposid, Vincristin, Prednison" ]
+  ], [
+     fhir:index 26 ;
+     fhir:CodeSystem.concept.code [ fhir:value "CHOEP-14" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "CHOEP-14" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cyclophosphamid, Doxorubicin, Etoposid, Vincristin, Prednison, G-CSF" ]
+  ], [
+     fhir:index 27 ;
+     fhir:CodeSystem.concept.code [ fhir:value "CHOEP-21" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "CHOEP-21" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cyclophosphamid, Doxorubicin, Etoposid, Vincristin, Prednison, G-CSF" ]
+  ], [
+     fhir:index 28 ;
+     fhir:CodeSystem.concept.code [ fhir:value "CHOP" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "CHOP" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cyclophosphamid, Doxorubicin, Vincristin, Prednison" ]
+  ], [
+     fhir:index 29 ;
+     fhir:CodeSystem.concept.code [ fhir:value "CHOP-14" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "CHOP-14" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cyclophosphamid, Doxorubicin, Vincristin, Prednison, G-CSF" ]
+  ], [
+     fhir:index 30 ;
+     fhir:CodeSystem.concept.code [ fhir:value "CHOP-21" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "CHOP-21" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cyclophosphamid, Doxorubicin, Vincristin, Prednison, G-CSF" ]
+  ], [
+     fhir:index 31 ;
+     fhir:CodeSystem.concept.code [ fhir:value "CMF" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "CMF" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cyclophosphamid, Fluorouracil, Methotrexat" ]
+  ], [
+     fhir:index 32 ;
+     fhir:CodeSystem.concept.code [ fhir:value "COPP" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "COPP" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cyclophosphamid, Procarbazin, Vincristin, Prednison" ]
+  ], [
+     fhir:index 33 ;
+     fhir:CodeSystem.concept.code [ fhir:value "CV" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "CV" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cisplatin, Vinorelbin" ]
+  ], [
+     fhir:index 34 ;
+     fhir:CodeSystem.concept.code [ fhir:value "DA" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "DA" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cytarabin, Daunorubicin" ]
+  ], [
+     fhir:index 35 ;
+     fhir:CodeSystem.concept.code [ fhir:value "DAC" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "DAC" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cyclophosphamid, Docetaxel, Doxorubicin" ]
+  ], [
+     fhir:index 36 ;
+     fhir:CodeSystem.concept.code [ fhir:value "DC-Doce-Carbo" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "DC (Doce/Carbo)" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Carboplatin, Docetaxel" ]
+  ], [
+     fhir:index 37 ;
+     fhir:CodeSystem.concept.code [ fhir:value "DC-Doce-Cyclo" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "DC (Doce/Cyclo)" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cyclophosphamid, Docetaxel" ]
+  ], [
+     fhir:index 38 ;
+     fhir:CodeSystem.concept.code [ fhir:value "DCbH" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "DCbH" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Carboplatin, Docetaxel, Trastuzumab" ]
+  ], [
+     fhir:index 39 ;
+     fhir:CodeSystem.concept.code [ fhir:value "DeVIC" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "DeVIC" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Carboplatin, Etoposid, Ifosfamid, Dexamethason" ]
+  ], [
+     fhir:index 40 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Dexa-BEAM" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Dexa-BEAM" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Carmustin, Cytarabin, Etoposid, Melphalan, Dexamethason" ]
+  ], [
+     fhir:index 41 ;
+     fhir:CodeSystem.concept.code [ fhir:value "DHAP" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "DHAP" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cisplatin, Cytarabin, Dexamethason" ]
+  ], [
+     fhir:index 42 ;
+     fhir:CodeSystem.concept.code [ fhir:value "DRC" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "DRC" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cyclophosphamid, Rituximab, Dexamethason" ]
+  ], [
+     fhir:index 43 ;
+     fhir:CodeSystem.concept.code [ fhir:value "DVP" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "DVP" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cisplatin, Dacarbazin, Vindesin" ]
+  ], [
+     fhir:index 44 ;
+     fhir:CodeSystem.concept.code [ fhir:value "EC" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "EC" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cyclophosphamid, Epirubicin" ]
+  ], [
+     fhir:index 45 ;
+     fhir:CodeSystem.concept.code [ fhir:value "EC-D" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "EC-D" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cyclophosphamid, Docetaxel, Epirubicin" ]
+  ], [
+     fhir:index 46 ;
+     fhir:CodeSystem.concept.code [ fhir:value "ECF" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "ECF" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cisplatin, Epirubicin, Fluorouracil" ]
+  ], [
+     fhir:index 47 ;
+     fhir:CodeSystem.concept.code [ fhir:value "EC-P" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "EC-P" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cyclophosphamid, Epirubicin, Paclitaxel" ]
+  ], [
+     fhir:index 48 ;
+     fhir:CodeSystem.concept.code [ fhir:value "ELO-Rd" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "ELO-Rd" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Elotuzumab, Lenalidomid, Dexamethason" ]
+  ], [
+     fhir:index 49 ;
+     fhir:CodeSystem.concept.code [ fhir:value "EOX" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "EOX" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Capecitabin, Epirubicin, Oxaliplatin" ]
+  ], [
+     fhir:index 50 ;
+     fhir:CodeSystem.concept.code [ fhir:value "EXTREME-mit-Carboplatin" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "EXTREME mit Carboplatin" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Carboplatin, Cetuximab, Fluorouracil" ]
+  ], [
+     fhir:index 51 ;
+     fhir:CodeSystem.concept.code [ fhir:value "EXTREME-mit-Cisplatin" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "EXTREME mit Cisplatin" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cetuximab, Cisplatin, Fluorouracil" ]
+  ], [
+     fhir:index 52 ;
+     fhir:CodeSystem.concept.code [ fhir:value "FAC" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "FAC" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cyclophosphamid, Doxorubicin, Fluorouracil" ]
+  ], [
+     fhir:index 53 ;
+     fhir:CodeSystem.concept.code [ fhir:value "FC" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "FC" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cyclophosphamid, Fludarabin" ]
+  ], [
+     fhir:index 54 ;
+     fhir:CodeSystem.concept.code [ fhir:value "FCR" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "FCR" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cyclophosphamid, Fludarabin, Rituximab" ]
+  ], [
+     fhir:index 55 ;
+     fhir:CodeSystem.concept.code [ fhir:value "FEC" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "FEC" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cyclophosphamid, Epirubicin, Fluorouracil" ]
+  ], [
+     fhir:index 56 ;
+     fhir:CodeSystem.concept.code [ fhir:value "FEC-Doc" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "FEC-Doc" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cyclophosphamid, Docetaxel, Epirubicin, Fluorouracil" ]
+  ], [
+     fhir:index 57 ;
+     fhir:CodeSystem.concept.code [ fhir:value "FLAG-Ida" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "FLAG-Ida" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cytarabin, Fludarabin, Idarubicin, Lenogastrim" ]
+  ], [
+     fhir:index 58 ;
+     fhir:CodeSystem.concept.code [ fhir:value "FLO" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "FLO" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Fluorouracil, Folinsäure, Oxaliplatin" ]
+  ], [
+     fhir:index 59 ;
+     fhir:CodeSystem.concept.code [ fhir:value "FLOT" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "FLOT" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Docetaxel, Fluorouracil, Folinsäure, Oxaliplatin" ]
+  ], [
+     fhir:index 60 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Flu-Cam" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Flu-Cam" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Alemtuzumab, Fludarabin" ]
+  ], [
+     fhir:index 61 ;
+     fhir:CodeSystem.concept.code [ fhir:value "FOLFIRI" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "FOLFIRI" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Fluorouracil, Folinsäure, Irinotecan" ]
+  ], [
+     fhir:index 62 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Folfirinox" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Folfirinox" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Fluorouracil, Folinsäure, Irinotecan, Oxaliplatin" ]
+  ], [
+     fhir:index 63 ;
+     fhir:CodeSystem.concept.code [ fhir:value "FOLFOX4" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "FOLFOX4" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Fluorouracil, Folinsäure, Oxaliplatin" ]
+  ], [
+     fhir:index 64 ;
+     fhir:CodeSystem.concept.code [ fhir:value "FOLFOX-6" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "FOLFOX-6" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Fluorouracil, Folinsäure, Oxaliplatin" ]
+  ], [
+     fhir:index 65 ;
+     fhir:CodeSystem.concept.code [ fhir:value "FOLFOXIRI" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "FOLFOXIRI" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Fluorouracil, Folinsäure, Irinotecan, Oxaliplatin" ]
+  ], [
+     fhir:index 66 ;
+     fhir:CodeSystem.concept.code [ fhir:value "FUFAMI" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "FUFAMI" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Fluorouracil, Folinsäure, Mitomycin" ]
+  ], [
+     fhir:index 67 ;
+     fhir:CodeSystem.concept.code [ fhir:value "FUFIRI" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "FUFIRI" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Fluorouracil, Folinsäure, Irinotecan" ]
+  ], [
+     fhir:index 68 ;
+     fhir:CodeSystem.concept.code [ fhir:value "FUFOX" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "FUFOX" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Fluorouracil, Folinsäure, Oxaliplatin" ]
+  ], [
+     fhir:index 69 ;
+     fhir:CodeSystem.concept.code [ fhir:value "GC-B" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "GC-B" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Bevacizumab, Carboplatin, Gemcitabin" ]
+  ], [
+     fhir:index 70 ;
+     fhir:CodeSystem.concept.code [ fhir:value "GDP-Schema" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "GDP-Schema" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cisplatin, Gemcitabin, Dexamethason" ]
+  ], [
+     fhir:index 71 ;
+     fhir:CodeSystem.concept.code [ fhir:value "GELOX" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "GELOX" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Asparaginase, Gemcitabin, Oxaliplatin" ]
+  ], [
+     fhir:index 72 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Gem-Carbo" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Gem-Carbo" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Carboplatin, Gemcitabin" ]
+  ], [
+     fhir:index 73 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Gem-Cis" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Gem-Cis" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cisplatin, Gemcitabin" ]
+  ], [
+     fhir:index 74 ;
+     fhir:CodeSystem.concept.code [ fhir:value "GemTreo" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "GemTreo" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Gemcitabin, Treosulfan" ]
+  ], [
+     fhir:index 75 ;
+     fhir:CodeSystem.concept.code [ fhir:value "GOP" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "GOP" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Gemcitabin, Oxaliplatin, Paclitaxel" ]
+  ], [
+     fhir:index 76 ;
+     fhir:CodeSystem.concept.code [ fhir:value "HAM-Cytarabin" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "HAM-Cytarabin" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cytarabin, Mitoxantron" ]
+  ], [
+     fhir:index 77 ;
+     fhir:CodeSystem.concept.code [ fhir:value "HD-Protokoll" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "HD-Protokoll" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "BCNU, Rituximab, Thiotepa" ]
+  ], [
+     fhir:index 78 ;
+     fhir:CodeSystem.concept.code [ fhir:value "ICE" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "ICE" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Carboplatin, Etoposid, Ifosfamid" ]
+  ], [
+     fhir:index 79 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IEV" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "IEV" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Epirubicin, Etoposid, Ifosfamid" ]
+  ], [
+     fhir:index 80 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IMVP-16" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "IMVP-16" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Etoposid, Ifosfamid, Methotrexat" ]
+  ], [
+     fhir:index 81 ;
+     fhir:CodeSystem.concept.code [ fhir:value "IRd" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "IRd" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Ixazomib, Lenalidomid, Dexamethason" ]
+  ], [
+     fhir:index 82 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Knospe" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Knospe" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Chlorambucil, Prednison" ]
+  ], [
+     fhir:index 83 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Knospe-modifiziert" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Knospe modifiziert" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Chlorambucil, Rituximab" ]
+  ], [
+     fhir:index 84 ;
+     fhir:CodeSystem.concept.code [ fhir:value "KRD" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "KRD" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Carfilzomib, Lenalidomid, Dexamethason" ]
+  ], [
+     fhir:index 85 ;
+     fhir:CodeSystem.concept.code [ fhir:value "LV5FU2" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "LV5FU2" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Fluorouracil, Folinsäure" ]
+  ], [
+     fhir:index 86 ;
+     fhir:CodeSystem.concept.code [ fhir:value "LV5FU2-modif" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "LV5FU2 modif." ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Fluorouracil, Folinsäure" ]
+  ], [
+     fhir:index 87 ;
+     fhir:CodeSystem.concept.code [ fhir:value "MAMAC" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "MAMAC" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Amsacrin, Cytarabin" ]
+  ], [
+     fhir:index 88 ;
+     fhir:CodeSystem.concept.code [ fhir:value "MATRix" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "MATRix" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cytarabin, Methotrexat, Rituximab, Thiotepa" ]
+  ], [
+     fhir:index 89 ;
+     fhir:CodeSystem.concept.code [ fhir:value "MAV" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "MAV" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cytarabin, Etoposid, Mitoxantron" ]
+  ], [
+     fhir:index 90 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Mayo-Protokoll" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Mayo-Protokoll" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Fluorouracil, Folinsäure" ]
+  ], [
+     fhir:index 91 ;
+     fhir:CodeSystem.concept.code [ fhir:value "M-Cavi" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "M-Cavi" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Carboplatin, Methotrexat, Vinblastin" ]
+  ], [
+     fhir:index 92 ;
+     fhir:CodeSystem.concept.code [ fhir:value "MPT" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "MPT" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Melphalan, Thalidomid, Prednison" ]
+  ], [
+     fhir:index 93 ;
+     fhir:CodeSystem.concept.code [ fhir:value "M-VAC" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "M-VAC" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cisplatin, Doxorubicin, Methotrexat, Vinblastin" ]
+  ], [
+     fhir:index 94 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PAC" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "PAC" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cisplatin, Cyclophosphamid, Doxorubicin" ]
+  ], [
+     fhir:index 95 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PC" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "PC" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Bevacizumab, Carboplatin, Paclitaxel" ]
+  ], [
+     fhir:index 96 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PC-mit-Bevacizumab" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "PC mit Bevacizumab" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Bevacizumab, Carboplatin, Paclitaxel" ]
+  ], [
+     fhir:index 97 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PC-ohne-Bevacizumab" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "PC ohne Bevacizumab" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Carboplatin, Paclitaxel" ]
+  ], [
+     fhir:index 98 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PCV" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "PCV" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Lomustin, Procarbazin, Vincristin" ]
+  ], [
+     fhir:index 99 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PE" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "PE" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cisplatin, Etoposid" ]
+  ], [
+     fhir:index 100 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PEB" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "PEB" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Bleomycin, Cisplatin, Etoposid" ]
+  ], [
+     fhir:index 101 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Peg-DoxC" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Peg. DoxC" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Carboplatin, Doxorubicin" ]
+  ], [
+     fhir:index 102 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PEI" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "PEI" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cisplatin, Etoposid, Ifosfamid" ]
+  ], [
+     fhir:index 103 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P-GEMOX" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "P-GEMOX" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Asparaginase (peg), Gemcitabin, Oxaliplatin" ]
+  ], [
+     fhir:index 104 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PLF" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "PLF" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cisplatin, Fluorouracil, Folinsäure" ]
+  ], [
+     fhir:index 105 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PVAG-Schema" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "PVAG-Schema" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Doxorubicin, Gemcitabin, Vinblastin, Prednison" ]
+  ], [
+     fhir:index 106 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PVBI" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "PVBI" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cisplatin, Ifosfamid, Vinblastin" ]
+  ], [
+     fhir:index 107 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R-BAC" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "R-BAC" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Bendamustin, Cytarabin, Rituximab" ]
+  ], [
+     fhir:index 108 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R-Bendamustin" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "R-Bendamustin" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Bendamustin, Rituximab" ]
+  ], [
+     fhir:index 109 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R-CHOP" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "R-CHOP" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cyclophosphamid, Doxorubicin, Vincristin, Rituximab, Prednison" ]
+  ], [
+     fhir:index 110 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R-DeVIC" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "R-DeVIC" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Carboplatin, Etoposid, Ifosfamid, Rituximab, Dexamethason" ]
+  ], [
+     fhir:index 111 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R-DHAP" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "R-DHAP" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cisplatin, Cytarabin, Rituximab, Dexamethason" ]
+  ], [
+     fhir:index 112 ;
+     fhir:CodeSystem.concept.code [ fhir:value "RD-Schema" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "RD-Schema" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Lenalidomid, Dexamethason" ]
+  ], [
+     fhir:index 113 ;
+     fhir:CodeSystem.concept.code [ fhir:value "RevDex" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Rev/Dex" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Lenalidomid, Dexamethason" ]
+  ], [
+     fhir:index 114 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R-GemOx" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "R-GemOx" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Gemcitabin, Oxaliplatin, Rituximab" ]
+  ], [
+     fhir:index 115 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R-HAD" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "R-HAD" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cytarabin, Rituximab, Dexamethason" ]
+  ], [
+     fhir:index 116 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R-ICE" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "R-ICE" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Carboplatin, Etoposid, Ifosfamid, Rituximab" ]
+  ], [
+     fhir:index 117 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R-MCP" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "R-MCP" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Chlorambucil, Mitoxantron, Rituximab, Prednison" ]
+  ], [
+     fhir:index 118 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R-MP" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "R-MP" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Methotrexat, Procarbazin, Rituximab" ]
+  ], [
+     fhir:index 119 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S-HAI" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "S-HAI" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cytarabin, Idarubicin, G-CSF" ]
+  ], [
+     fhir:index 120 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S-HAM" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "S-HAM" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cytarabin, Mitoxantron, G-CSF" ]
+  ], [
+     fhir:index 121 ;
+     fhir:CodeSystem.concept.code [ fhir:value "SMILE" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "SMILE" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Asparaginase, Etoposid, Ifosfamid, Methotrexat, Dexamethason" ]
+  ], [
+     fhir:index 122 ;
+     fhir:CodeSystem.concept.code [ fhir:value "TAC" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "TAC" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cyclophosphamid, Docetaxel, Doxorubicin" ]
+  ], [
+     fhir:index 123 ;
+     fhir:CodeSystem.concept.code [ fhir:value "TCED" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "TCED" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cyclophosphamid, Etoposid, Thalidomid, Dexamethason" ]
+  ], [
+     fhir:index 124 ;
+     fhir:CodeSystem.concept.code [ fhir:value "TCH" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "TCH" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Carboplatin, Docetaxel, Trastuzumab" ]
+  ], [
+     fhir:index 125 ;
+     fhir:CodeSystem.concept.code [ fhir:value "TIP" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "TIP" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cisplatin, Ifosfamid, Paclitaxel" ]
+  ], [
+     fhir:index 126 ;
+     fhir:CodeSystem.concept.code [ fhir:value "TMZ" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "TMZ" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Temozolomid" ]
+  ], [
+     fhir:index 127 ;
+     fhir:CodeSystem.concept.code [ fhir:value "TPF" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "TPF" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cisplatin, Docetaxel, Fluorouracil" ]
+  ], [
+     fhir:index 128 ;
+     fhir:CodeSystem.concept.code [ fhir:value "VCD" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "VCD" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Bortezomib, Cyclophosphamid, Dexamethason" ]
+  ], [
+     fhir:index 129 ;
+     fhir:CodeSystem.concept.code [ fhir:value "VFD" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "VFD" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Bortezomib, Panobinostat, Dexamethason" ]
+  ], [
+     fhir:index 130 ;
+     fhir:CodeSystem.concept.code [ fhir:value "VIPD" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "VIPD" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Carboplatin, Etoposid, Ifosfamid, Dexamethason" ]
+  ], [
+     fhir:index 131 ;
+     fhir:CodeSystem.concept.code [ fhir:value "VMP" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "VMP" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Bortezomib, Melphalan, Prednison" ]
+  ], [
+     fhir:index 132 ;
+     fhir:CodeSystem.concept.code [ fhir:value "VRD" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "VRD" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Bortezomib, Lenalidomid, Dexamethason" ]
+  ], [
+     fhir:index 133 ;
+     fhir:CodeSystem.concept.code [ fhir:value "VTD" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "VTD" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Bortezomib, Thalidomid, Dexamethason" ]
+  ], [
+     fhir:index 134 ;
+     fhir:CodeSystem.concept.code [ fhir:value "XELOX" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "XELOX" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Capecitabin, Oxaliplatin" ]
+  ], [
+     fhir:index 135 ;
+     fhir:CodeSystem.concept.code [ fhir:value "XP" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "XP" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Capecitabin, Cisplatin" ]
+  ], [
+     fhir:index 136 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Konditionierung-aemyeloablativ-MAC" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Konditionierung, ämyeloablativ (MAC)" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Individuell zu wählende Substanzen" ]
+  ], [
+     fhir:index 137 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Konditionierung-nicht-myeloablativ-NMA" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Konditionierung, nicht myeloablativ (NMA)" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Individuell zu wählende Substanzen" ]
+  ], [
+     fhir:index 138 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Konditionierung-reduzierte-Intensitaet-RIC" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Konditionierung, reduzierte Intensität (RIC)" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Individuell zu wählende Substanzen" ]
+  ], [
+     fhir:index 139 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Konditionierung-reduzierte-Toxizitaet-RTC" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Konditionierung, reduzierte Toxizität (RTC)" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Individuell zu wählende Substanzen" ]
+  ], [
+     fhir:index 140 ;
+     fhir:CodeSystem.concept.code [ fhir:value "TACE-Doxorubicin-Mitomycin" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "TACE Doxorubicin-Mitomycin" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Doxorubicin, Mitomycin" ]
+  ], [
+     fhir:index 141 ;
+     fhir:CodeSystem.concept.code [ fhir:value "TACE-Doxorubicin" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "TACE Doxorubicin" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Doxorubicin" ]
+  ], [
+     fhir:index 142 ;
+     fhir:CodeSystem.concept.code [ fhir:value "TACE" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "TACE" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Individuell zu wählende Substanzen" ]
+  ], [
+     fhir:index 143 ;
+     fhir:CodeSystem.concept.code [ fhir:value "HIPEC-Cisplatin-Mitomycin" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "HIPEC Cisplatin-Mitomycin" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cisplatin, Mitomycin" ]
+  ], [
+     fhir:index 144 ;
+     fhir:CodeSystem.concept.code [ fhir:value "HIPEC-Mitomycin" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "HIPEC Mitomycin" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Mitomycin" ]
+  ], [
+     fhir:index 145 ;
+     fhir:CodeSystem.concept.code [ fhir:value "HIPEC" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "HIPEC" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Individuell zu wählende Substanzen" ]
+  ], [
+     fhir:index 146 ;
+     fhir:CodeSystem.concept.code [ fhir:value "HITOC" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "HITOC" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Individuell zu wählende Substanzen" ]
+  ], [
+     fhir:index 147 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PIPAC-Cisplatin-Doxorubicin" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "PIPAC Cisplatin-Doxorubicin" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cisplatin, Doxorubicin" ]
+  ], [
+     fhir:index 148 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PIPAC-Cisplatin-Paclitaxel" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "PIPAC Cisplatin-Paclitaxel" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cisplatin, Paclitaxel" ]
+  ], [
+     fhir:index 149 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PIPAC" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "PIPAC" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Individuell zu wählende Substanzen" ]
+  ], [
+     fhir:index 150 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Instillation-Harnblase-Mitomycin" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Instillation Harnblase Mitomycin" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Mitomycin" ]
+  ], [
+     fhir:index 151 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Instillation-Harnblase-Doxorubicin" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Instillation Harnblase Doxorubicin" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Doxorubicin" ]
+  ], [
+     fhir:index 152 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Instillation-Harnblase-Chemotherapeutikum" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Instillation Harnblase Chemotherapeutikum" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Individuell zu wählende Substanzen" ]
+  ], [
+     fhir:index 153 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Instillation-Harnblase-BCG" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Instillation Harnblase (BCG)" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "BCG" ]
+  ], [
+     fhir:index 154 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Instillation-Intrathekal-Tripel" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Instillation Intrathekal Tripel" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cytarabin, Methotrexat, Dexamethason" ]
+  ], [
+     fhir:index 155 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Instillation-Intrathekal-Quadrupel" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Instillation Intrathekal Quadrupel" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Cytarabin, Methotrexat, Dexamethason, Rituximab" ]
+  ], [
+     fhir:index 156 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Instillation-intrathekal" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Instillation intrathekal" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Individuell zu wählende Substanzen" ]
+  ], [
+     fhir:index 157 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PUVA-systemisch-oral" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "PUVA systemisch oral" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Psoralen" ]
+  ], [
+     fhir:index 158 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Bade-PUVA-topisch" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "(Bade-) PUVA (topisch)" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Psoralen" ]
+  ], [
+     fhir:index 159 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Aderlass" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Aderlass" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Aderlass" ]
+  ], [
+     fhir:index 160 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Leukapherese" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Leukapherese" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Leukapherese" ]
+  ], [
+     fhir:index 161 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Plasmapherese" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Plasmapherese" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Plasmapherese" ]
+  ], [
+     fhir:index 162 ;
+     fhir:CodeSystem.concept.code [ fhir:value "TTFields" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "TTFields" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "TTFields" ]
+  ], [
+     fhir:index 163 ;
+     fhir:CodeSystem.concept.code [ fhir:value "CAR-T-Zelltherapie" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "CAR-T-Zelltherapie" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Individuell zu wählende Substanzen" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

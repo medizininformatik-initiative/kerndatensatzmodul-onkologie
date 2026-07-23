@@ -1,0 +1,54 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/PatientKimMusterperson-Procedure-2> a fhir:Procedure ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "PatientKimMusterperson-Procedure-2"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure" ;
+       fhir:index 0 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Procedure PatientKimMusterperson-Procedure-2</b></p><a name=\"PatientKimMusterperson-Procedure-2\"> </a><a name=\"hcPatientKimMusterperson-Procedure-2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://medizininformatik-initiative.github.io/kerndatensatz-basis/2026.0.1/StructureDefinition-mii-pr-prozedur-procedure.html\">MII PR Prozedur Procedure</a></p></div><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 165197003}\">Diagnostic assessment (procedure)</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/ops 1-853.2}\">Diagnostische (perkutane) Punktion und Aspiration der Bauchhöhle: Aszitespunktion</span></p><p><b>subject</b>: <a href=\"Patient-PatientKimMusterperson.html\">Kim Musterperson  (no stated gender), DoB: 1956-03-14</a></p><p><b>performed</b>: 2021-06-15</p></div>"
+  ] ;
+  fhir:Procedure.status [ fhir:value "completed"] ;
+  fhir:Procedure.category [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a sct:165197003 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "165197003" ] ;
+       fhir:Coding.display [ fhir:value "Diagnostic assessment (procedure)" ]
+     ]
+  ] ;
+  fhir:Procedure.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/ops" ] ;
+       fhir:Coding.version [ fhir:value "2021" ] ;
+       fhir:Coding.code [ fhir:value "1-853.2" ] ;
+       fhir:Coding.display [ fhir:value "Diagnostische (perkutane) Punktion und Aspiration der Bauchhöhle: Aszitespunktion" ]
+     ]
+  ] ;
+  fhir:Procedure.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/PatientKimMusterperson> ;
+     fhir:Reference.reference [ fhir:value "Patient/PatientKimMusterperson" ]
+  ] ;
+  fhir:Procedure.performedDateTime [ fhir:value "2021-06-15"^^xsd:date] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/PatientKimMusterperson-Procedure-2.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

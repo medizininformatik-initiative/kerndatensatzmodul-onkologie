@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-onko-mamma-operation-ops"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-onko-mamma-operation-ops</b></p><a name="mii-vs-onko-mamma-operation-ops"> </a><a name="hcmii-vs-onko-mamma-operation-ops"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablevalueset.html">Shareable ValueSet</a></p></div><ul><li>Include codes from<a href="https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.de/CodeSystem/bfarm/ops"><code>http://fhir.de/CodeSystem/bfarm/ops</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span> where code  is-a 5-87 (Exzision und Resektion der Mamma)</li></ul></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-operation-ops"/>
+  <version value="2026.0.3"/>
+  <name value="MII_VS_Onko_Mamma_Operation_OPS"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2026-07-23T12:42:42+00:00"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="Value Set für Mamma-Operationen basierend auf OPS"/>
+  <compose>
+    <include>
+      <system value="http://fhir.de/CodeSystem/bfarm/ops"/>
+      <filter>
+        <property value="code"/>
+        <op value="is-a"/>
+        <value value="5-87"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

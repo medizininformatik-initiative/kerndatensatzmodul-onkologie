@@ -1,0 +1,85 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-prostata-operation-prostatektomie> a fhir:Procedure ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-prostata-operation-prostatektomie"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostata-operation|2026.0.3" ;
+       fhir:index 0 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostata-operation|2026.0.3>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Procedure mii-exa-onko-prostata-operation-prostatektomie</b></p><a name=\"mii-exa-onko-prostata-operation-prostatektomie\"> </a><a name=\"hcmii-exa-onko-prostata-operation-prostatektomie\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-prostata-operation.html\">MII PR Onko Prostata Operation</a> version: 2026.0.3</p></div><p><b>MII EX Onko Operation Intention</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}\">kurativ</span></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 387713003}\">Surgical procedure</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/ops 5-604.02}, {http://snomed.info/sct 26294005}\">Radikale Prostatovesikulektomie: Retropubisch: Mit regionaler Lymphadenektomie</span></p><p><b>subject</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example\">Patient/example</a></p><p><b>performed</b>: 2024-03-15</p><p><b>reasonReference</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Condition/example\">Condition/example</a></p><p><b>outcome</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus R0}\">Kein Residualtumor</span></p></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention" ] ;
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention" ] ;
+         fhir:Coding.code [ fhir:value "K" ] ;
+         fhir:Coding.display [ fhir:value "kurativ" ]
+       ]
+     ]
+  ] ;
+  fhir:Procedure.status [ fhir:value "completed"] ;
+  fhir:Procedure.category [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a sct:387713003 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "387713003" ] ;
+       fhir:Coding.display [ fhir:value "Surgical procedure" ]
+     ]
+  ] ;
+  fhir:Procedure.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/ops" ] ;
+       fhir:Coding.version [ fhir:value "2024" ] ;
+       fhir:Coding.code [ fhir:value "5-604.02" ] ;
+       fhir:Coding.display [ fhir:value "Radikale Prostatovesikulektomie: Retropubisch: Mit regionaler Lymphadenektomie" ]
+     ], [
+       fhir:index 1 ;
+       a sct:26294005 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "26294005" ] ;
+       fhir:Coding.display [ fhir:value "Radical prostatectomy (procedure)" ]
+     ]
+  ] ;
+  fhir:Procedure.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/example> ;
+     fhir:Reference.reference [ fhir:value "Patient/example" ]
+  ] ;
+  fhir:Procedure.performedDateTime [ fhir:value "2024-03-15"^^xsd:date] ;
+  fhir:Procedure.reasonReference [
+     fhir:index 0 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/example> ;
+     fhir:Reference.reference [ fhir:value "Condition/example" ]
+  ] ;
+  fhir:Procedure.outcome [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus" ] ;
+       fhir:Coding.code [ fhir:value "R0" ] ;
+       fhir:Coding.display [ fhir:value "Kein Residualtumor" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-prostata-operation-prostatektomie.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

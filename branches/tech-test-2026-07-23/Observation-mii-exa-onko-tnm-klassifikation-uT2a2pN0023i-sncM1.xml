@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-tnm-klassifikation-uT2a2pN0023i-sncM1"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation|2026.0.3"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-onko-tnm-klassifikation-uT2a2pN0023i-sncM1</b></p><a name="mii-exa-onko-tnm-klassifikation-uT2a2pN0023i-sncM1"> </a><a name="hcmii-exa-onko-tnm-klassifikation-uT2a2pN0023i-sncM1"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-tnm-klassifikation.html">MII PR Onkologie TNM-Klassifikation</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 399588009}">Pathologic TNM stage grouping</span></p><p><b>subject</b>: <a href="https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example">Patient/example</a></p><p><b>effective</b>: 2024-01-11</p><p><b>value</b>: <span title="Codes:{https://www.uicc.org/resources/tnm IVC}">Stadium IVC</span></p><p><b>method</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version 8}">8. Auflage</span></p><p><b>hasMember</b>: </p><ul><li><a href="Observation-mii-exa-onko-tnm-t-kategorie-uT2a2.html">Observation cT category (observable entity)</a></li><li><a href="Observation-mii-exa-onko-tnm-n-kategorie-pN0i-sn.html">Observation pN category (observable entity)</a></li><li><a href="Observation-mii-exa-onko-anzahl-befallene-lymphknoten-0.html">Observation Regional lymph nodes positive [#] Specimen</a></li><li><a href="Observation-mii-exa-onko-anzahl-untersuchte-lymphknoten-23.html">Observation Regional lymph nodes examined [#] Specimen</a></li><li><a href="Observation-mii-exa-onko-tnm-n-kategorie-pN0i-sn.html">Observation pN category (observable entity)</a></li><li><a href="Observation-mii-exa-onko-tnm-m-kategorie-cM1.html">Observation cM category (observable entity)</a></li></ul></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="399588009"/>
+      <display value="Pathologic TNM stage grouping"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/example"/>
+  </subject>
+  <effectiveDateTime value="2024-01-11"/>
+  <valueCodeableConcept>
+    <coding>
+      <system value="https://www.uicc.org/resources/tnm"/>
+      <code value="IVC"/>
+      <display value="Stadium IVC"/>
+    </coding>
+  </valueCodeableConcept>
+  <method>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"/>
+      <code value="8"/>
+      <display value="8. Auflage"/>
+    </coding>
+  </method>
+  <hasMember>
+    <reference value="Observation/mii-exa-onko-tnm-t-kategorie-uT2a2"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/mii-exa-onko-tnm-n-kategorie-pN0i-sn"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/mii-exa-onko-anzahl-befallene-lymphknoten-0"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/mii-exa-onko-anzahl-untersuchte-lymphknoten-23"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/mii-exa-onko-tnm-n-kategorie-pN0i-sn"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/mii-exa-onko-tnm-m-kategorie-cM1"/>
+  </hasMember>
+</Observation>

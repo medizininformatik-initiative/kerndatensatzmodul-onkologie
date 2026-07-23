@@ -1,0 +1,51 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "mii-cm-onko-atc-transitions-2026",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap mii-cm-onko-atc-transitions-2026</b></p><a name=\"mii-cm-onko-atc-transitions-2026\"> </a><a name=\"hcmii-cm-onko-atc-transitions-2026\"> </a><p>Mapping from <a href=\"ValueSet-mii-vs-onko-systemische-therapie-substanzen-2025.html\">MII VS Onkologie Systemische Therapie Substanzen ATC 2025</a> to <a href=\"ValueSet-mii-vs-onko-systemische-therapie-substanzen-2026.html\">MII VS Onkologie Systemische Therapie Substanzen ATC 2026</a></p><br/><p>Mapping from <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.de/CodeSystem/bfarm/atc\">ATC</a> to <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.de/CodeSystem/bfarm/atc\">ATC</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>L01EX17 (Capmatinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EP01 (Capmatinib)</td><td>Reklassifizierung zu c-MET-Kinase-Inhibitoren (neue Untergruppe L01EP)</td></tr><tr><td>L01EX21 (Tepotinib)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EP02 (Tepotinib)</td><td>Reklassifizierung zu c-MET-Kinase-Inhibitoren (neue Untergruppe L01EP)</td></tr></table></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-atc-transitions-2026",
+  "version" : "2026.0.3",
+  "name" : "MII_CM_Onko_ATC_Transitions_2026",
+  "title" : "MII CM Onko ATC Code Changes 2025 to 2026",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-03-10",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Diese ConceptMap dokumentiert die ATC-Code-Änderungen von 2025 zu 2026. c-MET-Kinase-Inhibitoren wurden in die neue Untergruppe L01EP umklassifiziert.",
+  "purpose" : "Migration von ATC-Codes für c-MET-Kinase-Inhibitoren, die 2026 von L01EX nach L01EP umkodiert wurden.",
+  "sourceCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2025",
+  "targetCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2026",
+  "group" : [{
+    "source" : "http://fhir.de/CodeSystem/bfarm/atc",
+    "target" : "http://fhir.de/CodeSystem/bfarm/atc",
+    "element" : [{
+      "code" : "L01EX17",
+      "display" : "Capmatinib",
+      "target" : [{
+        "code" : "L01EP01",
+        "display" : "Capmatinib",
+        "equivalence" : "equivalent",
+        "comment" : "Reklassifizierung zu c-MET-Kinase-Inhibitoren (neue Untergruppe L01EP)"
+      }]
+    },
+    {
+      "code" : "L01EX21",
+      "display" : "Tepotinib",
+      "target" : [{
+        "code" : "L01EP02",
+        "display" : "Tepotinib",
+        "equivalence" : "equivalent",
+        "comment" : "Reklassifizierung zu c-MET-Kinase-Inhibitoren (neue Untergruppe L01EP)"
+      }]
+    }]
+  }]
+}

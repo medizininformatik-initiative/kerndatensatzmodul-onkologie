@@ -1,0 +1,125 @@
+# MII CM Onko Verlauf Lymphknoten SNOMED Mapping - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **MII CM Onko Verlauf Lymphknoten SNOMED Mapping**
+
+## ConceptMap: MII CM Onko Verlauf Lymphknoten SNOMED Mapping 
+
+| | |
+| :--- | :--- |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-verlauf-lymphknoten-sct | *Version*:2026.0.3 |
+| Active as of 2024-04-10 | *Computable Name*:MII CM Onko Verlauf Lymphknoten SCT Mapping |
+
+ 
+Mapping Lymphknoten Codes zu SNOMED-CT 
+
+ 
+Technical mapping to transform oBDS-Data into SNOMED 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "ConceptMap",
+  "id" : "mii-cm-onko-verlauf-lymphknoten-sct",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-verlauf-lymphknoten-sct",
+  "version" : "2026.0.3",
+  "name" : "MII CM Onko Verlauf Lymphknoten SCT Mapping",
+  "title" : "MII CM Onko Verlauf Lymphknoten SNOMED Mapping",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2024-04-10",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Mapping Lymphknoten Codes zu SNOMED-CT",
+  "purpose" : "Technical mapping to transform oBDS-Data into SNOMED",
+  "sourceUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
+  "targetUri" : "http://snomed.info/sct/900000000000207008/version/20240401",
+  "group" : [{
+    "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-lymphknoten",
+    "target" : "http://snomed.info/sct/900000000000207008/version/20240401",
+    "element" : [{
+      "code" : "K",
+      "display" : "kein Lymphknotenbefall nachweisbar",
+      "target" : [{
+        "code" : "399647000",
+        "display" : "No regional lymph node metastasis (finding)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "R",
+      "display" : "neu aufgetretenes Lymphknotenrezidiv",
+      "target" : [{
+        "code" : "263855007",
+        "display" : "Relapse phase (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "T",
+      "display" : "bekannter Lymphknotenbefall Residuen",
+      "target" : [{
+        "code" : "65320000",
+        "display" : "Residual (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "P",
+      "display" : "bekannter Lymphknotenbefall Progress",
+      "target" : [{
+        "code" : "255314001",
+        "display" : "Progressive (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "N",
+      "display" : "bekannter Lymphknotenbefall No Change",
+      "target" : [{
+        "code" : "260388006",
+        "display" : "No status change (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "F",
+      "display" : "fraglicher Befund",
+      "target" : [{
+        "code" : "64957009",
+        "display" : "Uncertain (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "U",
+      "display" : "unbekannt",
+      "target" : [{
+        "code" : "261665006",
+        "display" : "Unknown (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "X",
+      "display" : "fehlende Angabe",
+      "target" : [{
+        "code" : "1287211007",
+        "display" : "No information available (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}
+
+```

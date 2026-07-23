@@ -1,0 +1,95 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-melanom-exzision-oberarm> a fhir:Procedure ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-melanom-exzision-oberarm"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-exzision|2026.0.3" ;
+       fhir:index 0 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-exzision|2026.0.3>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Procedure mii-exa-onko-melanom-exzision-oberarm</b></p><a name=\"mii-exa-onko-melanom-exzision-oberarm\"> </a><a name=\"hcmii-exa-onko-melanom-exzision-oberarm\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-melanom-exzision.html\">MII PR Onko Melanom Exzision</a> version: 2026.0.3</p></div><p><b>MII EX Onko Operation Intention</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}\">kurativ</span></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 387713003}\">Surgical procedure</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/ops 5-894.06}, {http://snomed.info/sct 177281002}\">Lokale Exzision von erkranktem Gewebe an Haut und Unterhaut: Ohne primären Wundverschluss: Schulter und Axilla</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-melanom-bundle-patient.html\">Maria Melanom  (no stated gender), DoB Unknown</a></p><p><b>performed</b>: 2024-03-20</p><p><b>reasonReference</b>: <a href=\"Condition-mii-exa-onko-melanom-diagnose.html\">Condition Bösartiges Melanom der Haut, nicht näher bezeichnet</a></p><p><b>bodySite</b>: <span title=\"Codes:{http://snomed.info/sct 368208006}\">Left upper arm structure</span></p><p><b>outcome</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus R0}\">Kein Residualtumor</span></p></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention" ] ;
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention" ] ;
+         fhir:Coding.code [ fhir:value "K" ] ;
+         fhir:Coding.display [ fhir:value "kurativ" ]
+       ]
+     ]
+  ] ;
+  fhir:Procedure.status [ fhir:value "completed"] ;
+  fhir:Procedure.category [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a sct:387713003 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "387713003" ] ;
+       fhir:Coding.display [ fhir:value "Surgical procedure" ]
+     ]
+  ] ;
+  fhir:Procedure.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/ops" ] ;
+       fhir:Coding.version [ fhir:value "2024" ] ;
+       fhir:Coding.code [ fhir:value "5-894.06" ] ;
+       fhir:Coding.display [ fhir:value "Lokale Exzision von erkranktem Gewebe an Haut und Unterhaut: Ohne primären Wundverschluss: Schulter und Axilla" ]
+     ], [
+       fhir:index 1 ;
+       a sct:177281002 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "177281002" ] ;
+       fhir:Coding.display [ fhir:value "Excision of melanoma (procedure)" ]
+     ]
+  ] ;
+  fhir:Procedure.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-melanom-bundle-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-melanom-bundle-patient" ]
+  ] ;
+  fhir:Procedure.performedDateTime [ fhir:value "2024-03-20"^^xsd:date] ;
+  fhir:Procedure.reasonReference [
+     fhir:index 0 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-melanom-diagnose> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-melanom-diagnose" ]
+  ] ;
+  fhir:Procedure.bodySite [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a sct:368208006 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "368208006" ] ;
+       fhir:Coding.display [ fhir:value "Left upper arm structure" ]
+     ]
+  ] ;
+  fhir:Procedure.outcome [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus" ] ;
+       fhir:Coding.code [ fhir:value "R0" ] ;
+       fhir:Coding.display [ fhir:value "Kein Residualtumor" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-melanom-exzision-oberarm.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

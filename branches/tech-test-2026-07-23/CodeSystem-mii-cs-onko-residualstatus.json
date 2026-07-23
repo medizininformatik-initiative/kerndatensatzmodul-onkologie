@@ -1,0 +1,59 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "mii-cs-onko-residualstatus",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablecodesystem"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-onko-residualstatus</b></p><a name=\"mii-cs-onko-residualstatus\"> </a><a name=\"hcmii-cs-onko-residualstatus\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">R0<a name=\"mii-cs-onko-residualstatus-R0\"> </a></td><td>Kein Residualtumor</td></tr><tr><td style=\"white-space:nowrap\">R1<a name=\"mii-cs-onko-residualstatus-R1\"> </a></td><td>Mikroskopischer Residualtumor</td></tr><tr><td style=\"white-space:nowrap\">R1(is)<a name=\"mii-cs-onko-residualstatus-R1.40is.41\"> </a></td><td>In-Situ-Rest</td></tr><tr><td style=\"white-space:nowrap\">R1(cy+)<a name=\"mii-cs-onko-residualstatus-R1.40cy.43.41\"> </a></td><td>Cytologischer Rest</td></tr><tr><td style=\"white-space:nowrap\">R2<a name=\"mii-cs-onko-residualstatus-R2\"> </a></td><td>Makroskopischer Residualtumor</td></tr><tr><td style=\"white-space:nowrap\">RX<a name=\"mii-cs-onko-residualstatus-RX\"> </a></td><td>Vorhandensein von Residualtumor kann nicht beurteilt werden</td></tr><tr><td style=\"white-space:nowrap\">U<a name=\"mii-cs-onko-residualstatus-U\"> </a></td><td>Residualtumorstatus ist nicht bekannt</td></tr></table></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus",
+  "version" : "2026.0.3",
+  "name" : "MII_CS_Onko_Residualstatus",
+  "title" : "MII CS Onkologie Residualstatus",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-07-23T12:42:42+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "oBDS-spezifisches Codesystem für R-Klassifikation",
+  "caseSensitive" : true,
+  "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-gesamtbeurteilung-residualstatus",
+  "content" : "complete",
+  "count" : 7,
+  "concept" : [{
+    "code" : "R0",
+    "display" : "Kein Residualtumor"
+  },
+  {
+    "code" : "R1",
+    "display" : "Mikroskopischer Residualtumor"
+  },
+  {
+    "code" : "R1(is)",
+    "display" : "In-Situ-Rest"
+  },
+  {
+    "code" : "R1(cy+)",
+    "display" : "Cytologischer Rest"
+  },
+  {
+    "code" : "R2",
+    "display" : "Makroskopischer Residualtumor"
+  },
+  {
+    "code" : "RX",
+    "display" : "Vorhandensein von Residualtumor kann nicht beurteilt werden"
+  },
+  {
+    "code" : "U",
+    "display" : "Residualtumorstatus ist nicht bekannt"
+  }]
+}

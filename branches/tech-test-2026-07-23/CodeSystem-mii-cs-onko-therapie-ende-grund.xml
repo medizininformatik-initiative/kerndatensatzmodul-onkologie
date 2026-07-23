@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="mii-cs-onko-therapie-ende-grund"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem mii-cs-onko-therapie-ende-grund</b></p><a name="mii-cs-onko-therapie-ende-grund"> </a><a name="hcmii-cs-onko-therapie-ende-grund"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablecodesystem.html">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">E<a name="mii-cs-onko-therapie-ende-grund-E"> </a></td><td>reguläres Ende</td></tr><tr><td style="white-space:nowrap">R<a name="mii-cs-onko-therapie-ende-grund-R"> </a></td><td>reguläres Ende mit Dosisreduktion</td></tr><tr><td style="white-space:nowrap">W<a name="mii-cs-onko-therapie-ende-grund-W"> </a></td><td>reguläres Ende mit Substanzwechsel</td></tr><tr><td style="white-space:nowrap">A<a name="mii-cs-onko-therapie-ende-grund-A"> </a></td><td>Abbruch wegen Nebenwirkungen</td></tr><tr><td style="white-space:nowrap">P<a name="mii-cs-onko-therapie-ende-grund-P"> </a></td><td>Abbruch wegen Progress</td></tr><tr><td style="white-space:nowrap">S<a name="mii-cs-onko-therapie-ende-grund-S"> </a></td><td>Abbruch aus sonstigen Gründen</td></tr><tr><td style="white-space:nowrap">V<a name="mii-cs-onko-therapie-ende-grund-V"> </a></td><td>Patient verweigert weitere Therapie</td></tr><tr><td style="white-space:nowrap">T<a name="mii-cs-onko-therapie-ende-grund-T"> </a></td><td>Patient verstorben</td></tr><tr><td style="white-space:nowrap">F<a name="mii-cs-onko-therapie-ende-grund-F"> </a></td><td>Zieldosis erreicht mit Unterbrechung &gt; 3 Kalendertage</td></tr><tr><td style="white-space:nowrap">U<a name="mii-cs-onko-therapie-ende-grund-U"> </a></td><td>unbekannt</td></tr></table></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund"/>
+  <version value="2026.0.3"/>
+  <name value="MII_CS_Onko_Therapie_Ende_Grund"/>
+  <title value="MII CS Onkologie Strahlentherapie Ende Grund"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-07-23T12:42:42+00:00"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="oBDS-spezifisches Codesystem für Klassifikation des Grundes der Beendigung der Strahlentherapie oder der systemischen Therapie"/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="10"/>
+  <concept>
+    <code value="E"/>
+    <display value="reguläres Ende"/>
+  </concept>
+  <concept>
+    <code value="R"/>
+    <display value="reguläres Ende mit Dosisreduktion"/>
+  </concept>
+  <concept>
+    <code value="W"/>
+    <display value="reguläres Ende mit Substanzwechsel"/>
+  </concept>
+  <concept>
+    <code value="A"/>
+    <display value="Abbruch wegen Nebenwirkungen"/>
+  </concept>
+  <concept>
+    <code value="P"/>
+    <display value="Abbruch wegen Progress"/>
+  </concept>
+  <concept>
+    <code value="S"/>
+    <display value="Abbruch aus sonstigen Gründen"/>
+  </concept>
+  <concept>
+    <code value="V"/>
+    <display value="Patient verweigert weitere Therapie"/>
+  </concept>
+  <concept>
+    <code value="T"/>
+    <display value="Patient verstorben"/>
+  </concept>
+  <concept>
+    <code value="F"/>
+    <display value="Zieldosis erreicht mit Unterbrechung &gt; 3 Kalendertage"/>
+  </concept>
+  <concept>
+    <code value="U"/>
+    <display value="unbekannt"/>
+  </concept>
+</CodeSystem>

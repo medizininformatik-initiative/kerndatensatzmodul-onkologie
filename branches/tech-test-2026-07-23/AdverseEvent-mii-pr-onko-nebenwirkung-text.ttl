@@ -1,0 +1,52 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/AdverseEvent/mii-pr-onko-nebenwirkung-text> a fhir:AdverseEvent ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-pr-onko-nebenwirkung-text"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event" ;
+       fhir:index 0 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: AdverseEvent mii-pr-onko-nebenwirkung-text</b></p><a name=\"mii-pr-onko-nebenwirkung-text\"> </a><a name=\"hcmii-pr-onko-nebenwirkung-text\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-nebenwirkung-adverse-event.html\">MII PR Onkologie Nebenwirkung von Strahlentherapie und systemische Therapie</a></p></div><p><b>actuality</b>: Adverse Event</p><p><b>event</b>: <span title=\"Codes:\">Schüttelfrost</span></p><p><b>subject</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example\">Patient/example</a></p><p><b>seriousness</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad 3}\">schwerwiegend</span></p><h3>SuspectEntities</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Instance</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Procedure/Strahlentherapie\">Procedure/Strahlentherapie</a></td></tr></table></div>"
+  ] ;
+  fhir:AdverseEvent.actuality [ fhir:value "actual"] ;
+  fhir:AdverseEvent.event [
+     fhir:CodeableConcept.text [ fhir:value "Schüttelfrost" ]
+  ] ;
+  fhir:AdverseEvent.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/example> ;
+     fhir:Reference.reference [ fhir:value "Patient/example" ]
+  ] ;
+  fhir:AdverseEvent.seriousness [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad" ] ;
+       fhir:Coding.code [ fhir:value "3" ] ;
+       fhir:Coding.display [ fhir:value "schwerwiegend" ]
+     ]
+  ] ;
+  fhir:AdverseEvent.suspectEntity [
+     fhir:index 0 ;
+     fhir:AdverseEvent.suspectEntity.instance [
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/Strahlentherapie> ;
+       fhir:Reference.reference [ fhir:value "Procedure/Strahlentherapie" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/AdverseEvent/mii-pr-onko-nebenwirkung-text.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

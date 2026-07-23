@@ -1,0 +1,68 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-gleason-pattern-grade-group-1> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-exa-onko-prostata-gleason-pattern-grade-group-1"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-grade-group|2026.0.3" ;
+       fhir:index 0 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-grade-group|2026.0.3>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-prostata-gleason-pattern-grade-group-1</b></p><a name=\"mii-exa-onko-prostata-gleason-pattern-grade-group-1\"> </a><a name=\"hcmii-exa-onko-prostata-gleason-pattern-grade-group-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-prostate-gleason-grade-group.html\">MII PR Onkologie Prostata Gleason Grade Group</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 1812491000004107}\">Histologic grade of primary malignant neoplasm of prostate by International Society of Urological Pathology technique (observable entity)</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-prostata-bundle-patient.html\">Peter ProstataCa  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: <a href=\"Condition-mii-exa-onko-prostata-diagnose.html\">Condition Bösartige Neubildung der Prostata</a></p><p><b>effective</b>: 2024-01-02</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 1279714001}\">International Society of Urological Pathology grade group 2 (Gleason score 3 + 4 = 7) (qualifier value)</span></p><p><b>derivedFrom</b>: </p><ul><li><a href=\"Observation-mii-exa-onko-prostata-gleason-pattern-primary-1.html\">Observation Primary Gleason pattern (observable entity)</a></li><li><a href=\"Observation-mii-exa-onko-prostata-gleason-pattern-secondary-1.html\">Observation Secondary Gleason pattern (observable entity)</a></li></ul></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a sct:1812491000004107 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "1812491000004107" ] ;
+       fhir:Coding.display [ fhir:value "Histologic grade of primary malignant neoplasm of prostate by International Society of Urological Pathology technique (observable entity)" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-prostata-bundle-patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/mii-exa-onko-prostata-bundle-patient" ]
+  ] ;
+  fhir:Observation.focus [
+     fhir:index 0 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-prostata-diagnose> ;
+     fhir:Reference.reference [ fhir:value "Condition/mii-exa-onko-prostata-diagnose" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2024-01-02"^^xsd:date] ;
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a sct:1279714001 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "1279714001" ] ;
+       fhir:Coding.display [ fhir:value "International Society of Urological Pathology grade group 2 (Gleason score 3 + 4 = 7) (qualifier value)" ]
+     ]
+  ] ;
+  fhir:Observation.derivedFrom [
+     fhir:index 0 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-gleason-pattern-primary-1> ;
+     fhir:Reference.reference [ fhir:value "Observation/mii-exa-onko-prostata-gleason-pattern-primary-1" ]
+  ], [
+     fhir:index 1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-gleason-pattern-secondary-1> ;
+     fhir:Reference.reference [ fhir:value "Observation/mii-exa-onko-prostata-gleason-pattern-secondary-1" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-gleason-pattern-grade-group-1.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

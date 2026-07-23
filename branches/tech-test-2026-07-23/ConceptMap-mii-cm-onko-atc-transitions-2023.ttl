@@ -1,0 +1,88 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-atc-transitions-2023> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-cm-onko-atc-transitions-2023"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap mii-cm-onko-atc-transitions-2023</b></p><a name=\"mii-cm-onko-atc-transitions-2023\"> </a><a name=\"hcmii-cm-onko-atc-transitions-2023\"> </a><p>Mapping from <a href=\"ValueSet-mii-vs-onko-systemische-therapie-substanzen-2022.html\">MII VS Onkologie Systemische Therapie Substanzen ATC 2022</a> to <a href=\"ValueSet-mii-vs-onko-systemische-therapie-substanzen-2023.html\">MII VS Onkologie Systemische Therapie Substanzen ATC 2023</a></p><br/><p>Mapping from <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.de/CodeSystem/bfarm/atc\">ATC</a> to <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.de/CodeSystem/bfarm/atc\">ATC</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>L01XX70 (Axicabtagen Ciloleucel)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XL03 (Axicabtagen Ciloleucel)</td><td>Reklassifizierung zu CAR-T-Zelltherapien</td></tr><tr><td>L01XX51 (Talimogen laherparepvec)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XL02 (Talimogen laherparepvec)</td><td>Reklassifizierung zu onkolytische Viren</td></tr><tr><td>L01XX71 (Tisagenlecleucel)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XL04 (Tisagenlecleucel)</td><td>Reklassifizierung zu CAR-T-Zelltherapien</td></tr></table></div>"
+  ] ;
+  fhir:ConceptMap.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-atc-transitions-2023"] ;
+  fhir:ConceptMap.version [ fhir:value "2026.0.3"] ;
+  fhir:ConceptMap.name [ fhir:value "MII_CM_Onko_ATC_Transitions_2023"] ;
+  fhir:ConceptMap.title [ fhir:value "MII CM Onko ATC Code Changes 2022 to 2023"] ;
+  fhir:ConceptMap.status [ fhir:value "active"] ;
+  fhir:ConceptMap.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ConceptMap.date [ fhir:value "2024-12-12"^^xsd:date] ;
+  fhir:ConceptMap.publisher [ fhir:value "Medizininformatik Initiative"] ;
+  fhir:ConceptMap.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Medizininformatik Initiative" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.medizininformatik-initiative.de/" ]
+     ]
+  ] ;
+  fhir:ConceptMap.description [ fhir:value "Diese ConceptMap dokumentiert die ATC-Code-Änderungen von 2022 zu 2023. In diesem Jahr wurden CAR-T-Zelltherapien und onkolytische Viren in neue spezifische ATC-Kategorien umklassifiziert."] ;
+  fhir:ConceptMap.purpose [ fhir:value "Migration von ATC-Codes für CAR-T-Zelltherapien und onkolytische Viren, die 2023 umkodiert wurden."] ;
+  fhir:ConceptMap.sourceCanonical [
+     fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2022" ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2022>
+  ] ;
+  fhir:ConceptMap.targetCanonical [
+     fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2023" ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2023>
+  ] ;
+  fhir:ConceptMap.group [
+     fhir:index 0 ;
+     fhir:ConceptMap.group.source [ fhir:value "http://fhir.de/CodeSystem/bfarm/atc" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "http://fhir.de/CodeSystem/bfarm/atc" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index 0 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XX70" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Axicabtagen Ciloleucel" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01XL03" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Axicabtagen Ciloleucel" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Reklassifizierung zu CAR-T-Zelltherapien" ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XX51" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Talimogen laherparepvec" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01XL02" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Talimogen laherparepvec" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Reklassifizierung zu onkolytische Viren" ]
+       ]
+     ], [
+       fhir:index 2 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "L01XX71" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "Tisagenlecleucel" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L01XL04" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Tisagenlecleucel" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Reklassifizierung zu CAR-T-Zelltherapien" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-atc-transitions-2023.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

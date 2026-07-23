@@ -1,0 +1,95 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "mii-cm-onko-intention-sct",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap mii-cm-onko-intention-sct</b></p><a name=\"mii-cm-onko-intention-sct\"> </a><a name=\"hcmii-cm-onko-intention-sct\"> </a><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <a href=\"CodeSystem-mii-cs-onko-intention.html\">MII CS Onkologie Intention</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>K (kurativ)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>373808002 (Curative - procedure intent (qualifier value))</td><td/></tr><tr><td>P (palliativ)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>363676003 (Palliative - procedure intent (qualifier value))</td><td/></tr><tr><td>D (diagnostisch)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>261004008 (Diagnostic intent (qualifier value))</td><td/></tr><tr><td>R (Revision/Komplikation)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>255231005 (Revision - value (qualifier value))</td><td/></tr><tr><td>S (Sonstiges)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>74964007 (Other (qualifier value))</td><td/></tr><tr><td>X (fehlende Angabe)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1287211007 (No information available (qualifier value))</td><td/></tr><tr><td>O (lokal kurativ bei Oligometastasierung)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>373808002 (Curative - procedure intent (qualifier value))</td><td>ggfs. Postkoordination mit 1255358009 | Oligometastatic malignant neoplasm (disorder) |</td></tr></table></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-intention-sct",
+  "version" : "2026.0.3",
+  "name" : "MII CM Onko Intention SNOMED Mapping",
+  "title" : "MII CM Onko Intention SNOMED Mapping",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2024-04-10",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Mapping Intention Codes zu SNOMED-CT",
+  "purpose" : "Technical mapping to transform oBDS-Data into SNOMED",
+  "sourceUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
+  "targetUri" : "http://snomed.info/sct/900000000000207008/version/20240401",
+  "group" : [{
+    "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention",
+    "target" : "http://snomed.info/sct/900000000000207008/version/20240401",
+    "element" : [{
+      "code" : "K",
+      "display" : "kurativ",
+      "target" : [{
+        "code" : "373808002",
+        "display" : "Curative - procedure intent (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "P",
+      "display" : "palliativ",
+      "target" : [{
+        "code" : "363676003",
+        "display" : "Palliative - procedure intent (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "D",
+      "display" : "diagnostisch",
+      "target" : [{
+        "code" : "261004008",
+        "display" : "Diagnostic intent (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "R",
+      "display" : "Revision/Komplikation",
+      "target" : [{
+        "code" : "255231005",
+        "display" : "Revision - value (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "S",
+      "display" : "Sonstiges",
+      "target" : [{
+        "code" : "74964007",
+        "display" : "Other (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "X",
+      "display" : "fehlende Angabe",
+      "target" : [{
+        "code" : "1287211007",
+        "display" : "No information available (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "O",
+      "display" : "lokal kurativ bei Oligometastasierung",
+      "target" : [{
+        "code" : "373808002",
+        "display" : "Curative - procedure intent (qualifier value)",
+        "equivalence" : "wider",
+        "comment" : "ggfs. Postkoordination mit 1255358009 | Oligometastatic malignant neoplasm (disorder) |"
+      }]
+    }]
+  }]
+}
