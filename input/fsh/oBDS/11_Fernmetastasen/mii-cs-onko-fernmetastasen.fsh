@@ -14,7 +14,7 @@ Description: "oBDS-spezifisches Codesystem für Fernmetastasen, basierend auf Sp
 * #PUL "Lunge"
 * #OSS "Knochen"
 * #HEP "Leber"
-* #BRA "Hirn"
+* #BRA "Hirn" "Gilt für das Hirn (C71). Meningeosis neoplastica / Befall der Hirnhäute (C70) ist NICHT hier, sondern unter #OTH zu kodieren (§65c)."
 * #LYM "Lymphknoten"
 * #MAR "Knochenmark"
 * #PLE "Pleura"

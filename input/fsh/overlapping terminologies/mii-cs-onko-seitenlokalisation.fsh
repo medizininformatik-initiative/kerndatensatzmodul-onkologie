@@ -12,7 +12,7 @@ Description: "Codes für Seitenlokalisation, d.h. organspezifische Angabe der be
 * ^content = #complete
 * #L "links"
 * #R "rechts"
-* #B "beidseitig" "(sollte bei Tumoren in paarigen Organen 2 Meldungen ergeben)"
+* #B "beidseitig" "Bei paarigen Organen i.d.R. als 2 getrennte Tumoren; ABER Ovar (C56), Tube (C57.0) und Adnexe (C57.4) gelten beidseitig als EINE Tumorerkrankung (Best-of, §65c), Ausnahmen: seröses Ovarialkarzinom/Wilms/Retinoblastom."
 * #M "Mittellinie/mittig"
 * #U "unbekannt"
 * #T "trifft nicht zu" "Seitenangabe nicht sinnvoll, einschließlich Systemerkrankungen"

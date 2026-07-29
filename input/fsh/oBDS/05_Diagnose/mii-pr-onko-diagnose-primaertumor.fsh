@@ -10,6 +10,12 @@ Description: "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der 
 * insert Translation(^title, de-DE, Onkologische Diagnose im Rahmen einer onkologischen Erkrankung)
 * insert Translation(^description, de-DE, Diagnose des Primärtumors bzw. der primären hämatologisch-myeloneoplastischen Erkrankung im Rahmen einer onkologischen Erkrankung\, basierend auf dem MII KDS Modul Diagnose)
 * meta.profile 0..* MS
+// Tumor-ID (Tumoridentität) — bündelt alle Ressourcen eines Tumors, ermöglicht Zuordnung bei Mehrfachtumoren
+* identifier 0..* MS
+* identifier ^short = "Tumor-ID (Tumoridentität)"
+* identifier ^definition = "Lokale Tumor-Identität zur Bündelung aller Ressourcen eines Tumors (Therapie/Verlauf via reasonReference/focus) und zur Unterscheidung bei Mehrfachtumoren. In Primärsystemen als Klartext-ID nutzbar; für die MII-Nutzung MUSS dieser Identifier ebenfalls pseudonymisiert werden (analog zur Patienten-Pseudonymisierung, MII Base). Der Wert ist NICHT bundesweit eindeutig — 'system' ist standort-/quellspezifisch zu vergeben."
+* identifier.system 0..1 MS
+* identifier.value 0..1 MS
 * encounter 0..1 MS
 * subject 1..1 MS
 * subject only Reference(Patient)

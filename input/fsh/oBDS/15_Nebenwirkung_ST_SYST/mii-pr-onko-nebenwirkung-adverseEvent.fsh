@@ -6,6 +6,7 @@ Description: "Dieses Profil beschreibt die Nebenwirkung von Strahlentherapie und
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active
+* obeys nebenwirkung-grad3-art
 
 * meta.profile 0..* MS
 * subject 1..1 MS

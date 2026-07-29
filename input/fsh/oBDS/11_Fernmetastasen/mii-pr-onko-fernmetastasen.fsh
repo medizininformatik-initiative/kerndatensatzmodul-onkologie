@@ -47,6 +47,21 @@ Description: "OBDS Beschreibung von Fernmetastasen (Lokalisation und Datum)"
 * focus MS
 * focus only Reference(MII_PR_Onko_Diagnose_Primaertumor)
 
+// Optionaler exakter Ort der Metastase (value = oBDS-Kurzschlüssel/Kategorie; bodySite = exakte Anatomie)
+* bodySite 0..1 MS
+* bodySite.coding ^slicing.discriminator.type = #pattern
+* bodySite.coding ^slicing.discriminator.path = "system"
+* bodySite.coding ^slicing.rules = #open
+* bodySite.coding contains
+    icd-o-3 0..1 MS and
+    snomed 0..1 MS
+* bodySite.coding[icd-o-3].system = $ICDO3
+* bodySite.coding[icd-o-3] from mii-vs-onko-icdo3-topographie (extensible)
+* bodySite.coding[snomed].system = $SCT
+* bodySite.coding[snomed] from mii-vs-onko-koerperstruktur-sct (extensible)
+* bodySite ^short = "Exakter Ort der Fernmetastase (ICD-O-3-Topographie und/oder SNOMED CT)"
+* bodySite ^comment = "Optionale Präzisierung zusätzlich zum oBDS-Kurzschlüssel im value (z.B. Retroperitoneum: value #OTH + bodySite ICD-O-3 #C48.0). ICD-10-Diagnosecodes (C79.x) gehören NICHT hierher."
+
 Mapping: FHIR-oBDS-MII-PR-Onko-Fernmetastasen
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
