@@ -12,6 +12,7 @@ Für eine weitergehende Verknüpfung der onkologischen Registerdaten sind besond
 * [Biobank][2] 
 * [Molekulargenetischer Befundbericht][3]
 * [Bildgebung][4] (noch nicht umgesetzt, Integration geplant für Version 2027)
+* [Dokument][9] (für die Dokumentenebene, siehe Seite *KDL-Dokumentklassen im onkologischen Behandlungspfad*)
 
 [1]: https://simplifier.net/medizininformatikinitiative-modulpathologie "MII KDS-Modul Pathologiebefundbericht"
 [2]: https://simplifier.net/medizininformatikinitiative-modulbiobank "MII KDS-Modul Biobank"
@@ -21,6 +22,7 @@ Für eine weitergehende Verknüpfung der onkologischen Registerdaten sind besond
 [6]: https://simplifier.net/mii-basismodul-prozedur-2024 "MII KDS-Modul Prozedur"
 [7]: https://simplifier.net/mii-basismodul-medikation-2024 "MII KDS-Modul Medikation"
 [8]: https://simplifier.net/mii-erweiterungsmodul-molekulares-tumorboard "MII KDS-Modul Molekulares Tumorboard"
+[9]: https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.dokument "MII KDS-Modul Dokument"
 
 Langfristig ist eine enge Verzahnung mit den oben genannten Modulen geplant. In den ersten Versionen 2025 und 2026 ist diese jedoch komplett optional. Das hat vor allem einen Grund: 
 2. Die Erzeugung von FHIR-Ressourcen aus anderen Modulen erfordert teilweise die Existenz von Daten, die in dieser Form nicht Teil des oBDS sind. (Beispiel: Das Modul Bioprobe erfordert bei der Erstellung zwingend die Angabe der Verfügbarkeit).  Da FHIR-Ressourcen derzeit (Stand Juli 2025) noch nicht flächendeckend aus Primärsystemen ausgespielt werden können, und nicht jeder  DIZ-Standorte zwingenderweise alle KDS-Module ganz oder teilweise in ETL-Strecken erzeugen können, ist die Verwendung von anderen MII-Modulen angedacht, aber optional. 

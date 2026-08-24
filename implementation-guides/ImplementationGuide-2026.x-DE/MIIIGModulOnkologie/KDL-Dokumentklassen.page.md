@@ -50,15 +50,22 @@ Pathologie nach Methode, Therapie nach Verfahren). Die onkologische Semantik ent
   keine Obduktions-/Autopsieklasse. Für diese Fälle ist die jeweils nächstliegende
   fachneutrale Klasse plus `practiceSetting` zu verwenden.
 
-### Verhältnis zum ISiK-Dokumentenaustausch
+### Verhältnis zum MII-KDS-Modul Dokument und zum ISiK-Dokumentenaustausch
 
-Das Modul Onkologie definiert **bewusst keine eigenen DocumentReference-Profile** und leitet auch
-nicht vom ISiK-Modul Dokumentenaustausch ab. Die hier gegebenen Empfehlungen sind jedoch
-**kompatibel zu ISiK** gestaltet: Wer Dokumente austauscht, verwendet wie dort die KDL auf
-`DocumentReference.type` und die IHE-D-Terminologien auf `category` (classCode) und
-`context.practiceSetting`. Onkologische Dokument-Instanzen können damit ohne Anpassung sowohl in
-ISiK-Kontexten (Krankenhaus-interne Systeme) als auch im MII-Kontext verwendet werden; die
-strukturierte Abbildung der Inhalte erfolgt unabhängig davon über die Profile dieses Moduls.
+Das Modul Onkologie definiert **bewusst keine eigenen DocumentReference-Profile**. Für die
+Dokumentenebene wird auf das **[MII-KDS-Modul Dokument][kds-dok]** verwiesen: Dessen Profil
+`MII_PR_Dokument_Dokument` (DocumentReference) sieht die KDL bereits als verpflichtenden Slice auf
+`type.coding` vor (daneben LOINC, SNOMED CT und IHE-XDS), bindet `context.practiceSetting` an ein
+Fachgebiets-ValueSet und `category` u. a. an die IHE-D-classCodes. Die auf dieser Seite
+empfohlenen KDL-Codes sind dort im Slice `type.coding:KDL` anzugeben; die Fachrichtung Onkologie
+gehört in `context.practiceSetting`.
+
+Da das Dokument-Modul dieselben Achsen wie der ISiK-Dokumentenaustausch verwendet (KDL, IHE-D/XDS),
+bleiben onkologische Dokument-Instanzen damit auch **ISiK-kompatibel**, ohne dass dieses Modul von
+einem der beiden ableitet. Die strukturierte Abbildung der Inhalte erfolgt unabhängig davon über
+die Profile dieses Moduls.
+
+[kds-dok]: https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.dokument "MII KDS-Modul Dokument"
 
 Ein kuratiertes ValueSet der onkologie-relevanten KDL-Klassen als Begleitartefakt ist für eine
 Folgeversion vorgesehen.
