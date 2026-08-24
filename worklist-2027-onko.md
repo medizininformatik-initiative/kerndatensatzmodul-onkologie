@@ -34,7 +34,7 @@ Zusätzlich erledigt (nicht im kommunizierten Plan, aber v2027-relevant): §65c-
 
 **Block A — Hausputz (30 min):**
 1. Branch pushen + PR `feat/2027-issues` → `dev` (TNM + CTCAE-Strecke reviewbar machen)
-2. GitHub: #154/#170 schließen mit Verweis auf Commit `a398c6b1`; #302 labeln; Issues für `14w.14` (IG Publisher) + `14w.17` (Bildbefund) anlegen
+2. GitHub: #154/#170 schließen mit Verweis auf Commit `a398c6b1` — Rest ✅ erledigt (2026-08-24): Über-Ticket **#307** „Geplante Changes für Version 2027" + Milestone `2027.0.0` (allen v2027-Issues zugewiesen), neue Issues #304 (IG Publisher), #305 (Bildbefund), #306 (MII-Patient-Aufweichung), #302 gelabelt
 3. ~~Entscheidung examples-source~~ ✅ erledigt (gitignored, 2026-08-24)
 
 **Block B — Quick Wins aus Epic `2a4` (approved Bugs):**
