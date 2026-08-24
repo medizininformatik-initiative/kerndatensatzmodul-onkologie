@@ -740,6 +740,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-onko-nebenwirkung-meddra-de"
+        },
+        "name": "MII CS Onko Nebenwirkung MedDRA Deutsch (Supplement)",
+        "description": "Deutschsprachiges CodeSystem-Supplement für MedDRA-Codes der CTCAE v4.03 Nebenwirkungen. Quelle: §65c-Plattform / Krebsregister-Liste (Deutsche Übersetzung CTCAE Version 4).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad"
         },
         "name": "MII CS Onko Nebenwirkung nach CTCAE-Grad",
@@ -2068,6 +2076,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-onko-koerperstruktur-sct"
+        },
+        "name": "MII VS Onkologie Körperstruktur (SNOMED CT)",
+        "description": "SNOMED CT Körperstrukturen (Body structure) zur optionalen exakten Lokalisationsangabe (z.B. bei Fernmetastasen).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-mamma-her2neu-status-leitlinie"
         },
         "name": "MII VS Onkologie Mamma Her2neu Status Leitlinie",
@@ -2095,7 +2111,7 @@
           "reference": "ValueSet/mii-vs-onko-nebenwirkung-art"
         },
         "name": "MII VS Onkologie Nebenwirkung nach CTCAE Art",
-        "description": "oBDS-spezifisches ValueSet für Nebenwirkung nach CTCAE oder MedDRA code",
+        "description": "Alle MedDRA-Codes der CTCAE v4.03 (Art der Nebenwirkung). Deutsche/englische Displays via CodeSystem-Supplements mii-cs-onko-nebenwirkung-meddra-de/-en.",
         "exampleBoolean": false
       },
       {

@@ -221,6 +221,62 @@
             "comment": "Lokalisation von Fernmetastase(n)"
           }
         ]
+      },
+      {
+        "id": "Observation.bodySite",
+        "path": "Observation.bodySite",
+        "short": "Exakter Ort der Fernmetastase (ICD-O-3-Topographie und/oder SNOMED CT)",
+        "comment": "Optionale Präzisierung zusätzlich zum oBDS-Kurzschlüssel im value (z.B. Retroperitoneum: value #OTH + bodySite ICD-O-3 #C48.0). ICD-10-Diagnosecodes (C79.x) gehören NICHT hierher.",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.bodySite.coding",
+        "path": "Observation.bodySite.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Observation.bodySite.coding:icd-o-3",
+        "path": "Observation.bodySite.coding",
+        "sliceName": "icd-o-3",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-topographie"
+        }
+      },
+      {
+        "id": "Observation.bodySite.coding:icd-o-3.system",
+        "path": "Observation.bodySite.coding.system",
+        "min": 1,
+        "patternUri": "http://terminology.hl7.org/CodeSystem/icd-o-3"
+      },
+      {
+        "id": "Observation.bodySite.coding:snomed",
+        "path": "Observation.bodySite.coding",
+        "sliceName": "snomed",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-koerperstruktur-sct"
+        }
+      },
+      {
+        "id": "Observation.bodySite.coding:snomed.system",
+        "path": "Observation.bodySite.coding.system",
+        "min": 1,
+        "patternUri": "http://snomed.info/sct"
       }
     ]
   }

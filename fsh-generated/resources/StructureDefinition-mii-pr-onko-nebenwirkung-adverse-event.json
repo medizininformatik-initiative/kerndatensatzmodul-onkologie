@@ -33,6 +33,19 @@
   "differential": {
     "element": [
       {
+        "id": "AdverseEvent",
+        "path": "AdverseEvent",
+        "constraint": [
+          {
+            "key": "nebenwirkung-grad3-art",
+            "severity": "warning",
+            "human": "Bei CTCAE-Schweregrad 3, 4 oder 5 muss die Art der Nebenwirkung (event.coding) angegeben sein. Bei Grad 1/2 darf sie fehlen (oBDS 15.2).",
+            "expression": "seriousness.coding.where(system = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad' and (code = '3' or code = '4' or code = '5')).exists() implies event.coding.exists()",
+            "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event"
+          }
+        ]
+      },
+      {
         "id": "AdverseEvent.meta.profile",
         "path": "AdverseEvent.meta.profile",
         "mustSupport": true
