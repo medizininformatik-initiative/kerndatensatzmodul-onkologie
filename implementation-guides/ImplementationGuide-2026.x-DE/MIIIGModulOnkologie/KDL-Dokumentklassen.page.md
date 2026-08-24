@@ -50,5 +50,15 @@ Pathologie nach Methode, Therapie nach Verfahren). Die onkologische Semantik ent
   keine Obduktions-/Autopsieklasse. Für diese Fälle ist die jeweils nächstliegende
   fachneutrale Klasse plus `practiceSetting` zu verwenden.
 
+### Verhältnis zum ISiK-Dokumentenaustausch
+
+Das Modul Onkologie definiert **bewusst keine eigenen DocumentReference-Profile** und leitet auch
+nicht vom ISiK-Modul Dokumentenaustausch ab. Die hier gegebenen Empfehlungen sind jedoch
+**kompatibel zu ISiK** gestaltet: Wer Dokumente austauscht, verwendet wie dort die KDL auf
+`DocumentReference.type` und die IHE-D-Terminologien auf `category` (classCode) und
+`context.practiceSetting`. Onkologische Dokument-Instanzen können damit ohne Anpassung sowohl in
+ISiK-Kontexten (Krankenhaus-interne Systeme) als auch im MII-Kontext verwendet werden; die
+strukturierte Abbildung der Inhalte erfolgt unabhängig davon über die Profile dieses Moduls.
+
 Ein kuratiertes ValueSet der onkologie-relevanten KDL-Klassen als Begleitartefakt ist für eine
 Folgeversion vorgesehen.
