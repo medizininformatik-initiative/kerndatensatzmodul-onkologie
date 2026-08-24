@@ -31,8 +31,8 @@ fachneutrale Klassen — „onkologisch" entsteht erst durch Kombination mit
 ### 3 · Tumorkonferenz (oBDS 18/19)
 | KDL | Klasse | Anmerkung |
 |---|---|---|
-| `SD150103` | Tumorkonferenzprotokoll | ⚠️ Dublette zu `AD060106` (identisches Display, andere Klasse) |
-| `AD060106` | Tumorkonferenzprotokoll | unter „Fallbesprechungen" |
+| `SD150103` | Tumorkonferenzprotokoll | ✅ der gültige Code |
+| `AD060106` | Tumorkonferenzprotokoll | **deprecated** (KDL 2025, status-Property) — Klasse wurde von „Fallbesprechungen" nach `SD1501` verschoben |
 | `AD060103/-04/-10` | Konsilberichte | Zuweisung/Mitbehandlung |
 
 ### 4 · Operation (oBDS 13)
@@ -65,8 +65,9 @@ Tumorpatienten)
 
 ## Lücken / Beobachtungen
 1. **Kein onkologischer Bildbefund** und kein RECIST-/Response-Dokument → bestätigt Profil-Ansatz #305
-2. **Tumorkonferenzprotokoll doppelt** (`SD150103` ↔ `AD060106`) — bei ValueSet-Bau beide aufnehmen
-   oder Vorzugscode festlegen
+2. ~~Tumorkonferenzprotokoll doppelt~~ AUFGEKLÄRT: `AD060106` ist deprecated (Umzug nach `SD1501`);
+   im ValueSet nur `SD150103` aufnehmen. KDL 2025 hat insgesamt 19 deprecated-Codes — beim
+   ValueSet-Bau per status-Property ausfiltern
 3. **Keine Humangenetik-/Keimbahn-Befundklasse** (nur Molekularpathologie) — relevant für oBDS 23
 4. **Keine Obduktions-/Autopsieklasse** (für Autopsie-Meldeanlass nur Pathologie-Auffangklassen)
 5. Psychoonkologie nur als Inklusion in `SD150199`
