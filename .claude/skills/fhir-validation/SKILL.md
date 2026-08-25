@@ -29,11 +29,25 @@ Suppress known validation errors that are **not actionable** — typically cause
 
 ### Suppress Format
 
-Three ways to suppress:
+Two supported ways to suppress:
 
 1. **By message-id**: `"Terminology_TX_Confirm_4a"`
 2. **By message-id + path**: `"Terminology_TX_Confirm_4a@AdverseEvent.event*"`
-3. **By message text prefix**: `"Unknown code 'RDE96' in the CodeSystem 'http://radlex.org'*"`
+
+> ⚠️ **NIEMALS Freitext-Regeln verwenden** (z.B. `"Unknown code 'RDE96' …*"`).
+> Text-Wildcard-Regeln ohne `id@path`-Format crashen validator_cli 6.5.7 mit einer
+> NullPointerException in `RulesDrivenPolicyAdvisor.stringMatches`, sobald ein Issue
+> ohne messageId auftritt — dadurch brach von März bis August 2026 **jeder** CI-Lauf
+> nach ~90 s ab (beads `a5l`). Basis- und Meta-Modul nutzen ausschließlich
+> `MessageID@path`-Regeln — das ist die Konvention. Wenn kein Message-ID-Match
+> möglich ist: Ursache im Repo fixen (z.B. Fragment-CodeSystem mitliefern) statt
+> per Text unterdrücken.
+
+> ⚠️ **Stale-Artefakt-Falle**: `validation.json`/`validation.html` sind committete
+> QA-Dateien. Crasht der Validator, lädt der Upload-Step diese unveränderten Dateien
+> als Artefakt hoch — die Ergebnisse sehen dann plausibel, sind aber alt. Vor jeder
+> Analyse prüfen: MD5 des Artefakts ≠ MD5 der committeten Datei (`md5 -q validation.json`)
+> und `txlog.html` muss im Artefakt vorhanden sein.
 
 ### Syntax Rules
 

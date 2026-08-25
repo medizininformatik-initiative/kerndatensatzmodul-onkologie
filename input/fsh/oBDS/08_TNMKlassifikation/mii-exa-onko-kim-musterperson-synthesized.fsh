@@ -467,7 +467,7 @@ Usage: #example
 * recorded = "2026-05-06T14:00:00+02:00"
 * occurredPeriod.start = "2021-06-25"
 * occurredPeriod.end = "2022-01-15"
-* activity = http://terminology.hl7.org/CodeSystem/v3-DataOperation#DERIVE "derive"
+* activity = http://hl7.org/fhir/w3c-provenance-activity-type#Derivation "wasDerivedFrom"
 * agent[0].type.coding = http://terminology.hl7.org/CodeSystem/provenance-participant-type#performer
 * agent[0].who.display = "ETL-Pipeline (synthesize_tnm v1.0.0)"
 // entity[0]: the algorithm itself, version-pinned via identifier

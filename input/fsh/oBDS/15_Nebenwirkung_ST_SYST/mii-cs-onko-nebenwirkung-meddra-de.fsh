@@ -9,7 +9,6 @@ Description: "Deutschsprachiges CodeSystem-Supplement für MedDRA-Codes der CTCA
 * ^status = #active
 * ^experimental = false
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-meddra-de"
-* ^caseSensitive = true
 * ^language = #de-DE
 * ^content = #supplement
 * ^supplements = "https://www.meddra.org"
