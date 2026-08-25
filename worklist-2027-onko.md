@@ -53,3 +53,79 @@ Zusätzlich erledigt (nicht im kommunizierten Plan, aber v2027-relevant): §65c-
 - 34 offene Issues, 0 in progress · 5 Epics: `1yu` (P1, CTCAE), `2a4` (P1, Bugs), `ehq` (P1, Ballot), `14w` (P2, 2027 — jetzt 21 Kinder), `ioj` (P2, Mapping-Support)
 - Neu angelegt heute: `14w.14`–`14w.24` (11 Roadmap-Lücken) + `2a4.1` (#302) · `bd dolt push` ✓ erledigt
 - Der kommunizierte Plan ist damit **vollständig in beads abgebildet**; `bd ready` liefert morgen direkt die Arbeit.
+
+## 5. Gesamtreihenfolge v2027 — alle Tickets mit Abhängigkeiten (Stand 2026-08-25)
+
+Vollständige Sequenzierung aller 40 offenen beads-Issues in 7 Wellen. Innerhalb einer
+Welle ist alles parallelisierbar; Kanten `A ← B` bedeuten „A braucht B".
+
+> ⚠️ **bd-Defekt:** `bd dep add` ist aktuell kaputt (fehlende `wisp_*`-Tabellen,
+> siehe `kerndatensatzmodul-onkologie-ws6`, Fix-Skript `.claude/scripts/fix-bd-wisp-tables.sql`).
+> Die Kanten unten sind daher hier dokumentiert und nach dem Fix in bd nachzutragen.
+
+### Abhängigkeitskanten (nach bd-Fix als `bd dep add <issue> <depends-on>` anlegen)
+
+```
+qst      ← qg7, v9e        # Beispiele brauchen ConceptMap + Profil-Slices
+14w.3    ← 14w.9           # CUP-Bundle nutzt transformationVon (CUP→Primär, Best-Of-Regel)
+14w.10   ← 14w.9           # ZNS-Doku referenziert Transformation /0→/3
+14w.2    ← 14w.1           # Prädispositions-VS docken an HGNC-/MolGen-Klärung an
+14w.12   ← 14w.4           # OPS-Seitensuffix-Frage wird bei OPS-VS-Arbeit geklärt
+pxy      ← 7kl             # ein Metadaten-Sweep; Lizenztext-Entscheidung zuerst
+pxy      ← ehq(HDB-703)    # CRMI-Manifest pinnt SNOMED-Version → 703 vorher entscheiden
+7kl/pxy  ← 14w.15, 14w.4, 14w.2, 14w.25, qg7, v9e   # Sweeps erst, wenn alle neuen VS/CM existieren
+14w.23   ← 14w.9, 14w.19, 14w.21, 14w.22, 14w.24    # LM-Mappings erst auf finale Profile
+14w.18, 14w.13(Doku), ioj.2(Doku) ← 14w.14 (soft)   # neue IG-Seiten nicht doppelt migrieren
+14w.24   ← Branch-Merge feat/2027-issues → dev
+3bj(Teil 2), 14w.20 ← externe Upstream-Releases (Meta/Basis/Labor/Biobank/Forschungsvorhaben)
+```
+
+### Welle 0 — Vorarbeit sichern (sofort)
+1. `feat/2027-issues` pushen + PR → `dev` (17 Commits TNM + CTCAE)
+2. **`14w.24`** (P1) finales TNM: Review, IG-Aufnahme, Merge — entsperrt Klassifikations-/Beispielthemen
+3. `3bj` Teil 1: Issue beim Meta-Team einreichen (lange Vorlaufzeit, früh anstoßen)
+
+### Welle 1 — Bugfixes (parallel, jederzeit releasbar)
+- **`2a4.1`** (P1) VS-Filter Mamma-Imaging (#302) — Einzeiler
+- **`d8f`** (P1) ATC-Transitions 2022 + L01XC in VS 2018–2021 + Generator-Fix
+- `02q` oBDS-Nummern 16.x Systemische Therapie
+- `rvk` + `eyg` TNM-/Morphologie-SearchParameter (ein Aufschlag; `rvk` braucht Entscheidung a/b)
+- Epic `2a4`-Rest: #265, #262, #260, #213, #290, #280, #278, #277
+- Parallel-Track Epic `ehq`: WU-1 Kat.1 (4 Code-Ergänzungen), Kat.2-Begründungen, Bugs 361/675, **Entscheidung HDB-703** (blockiert `pxy`)
+
+### Welle 2 — Infrastruktur-Weiche
+- **`14w.14`** (P1) Umzug HL7 IG Publisher — bewusst früh, damit alle neuen IG-Seiten (Wellen 4–5) nur einmal geschrieben werden
+
+### Welle 3 — Entschiedene/approved Profiländerungen (klein, parallel)
+- `14w.22` morphology-behavior 0..* + FIGO-Substages (#298/#297, approved)
+- `14w.21` Gleason (#261 approved; #259-Entscheidung einholen)
+- `14w.19` Bindings/Kardinalitäten aufweichen (#288 approved, #306 MII-Patient)
+- **`14w.9`** occurredFollowing + neue Extension transformationVon (Design fertig) — entsperrt `14w.3` + `14w.10`
+- `14w.16` Karnofsky/ECOG auf LOINC (#236, #269)
+
+### Welle 4 — Terminologie-Ausbau (parallel)
+- Epic `1yu`: `qg7` MedDRA→SNOMED-CM ∥ `v9e` AdverseEvent-Slices → danach `qst` Beispiele
+- `14w.15` LOINC-Biomarker (ENCR Table 4, #246)
+- `14w.4` OPS-VS komplettieren + IG-Text Instillationen — entsperrt `14w.12`
+- `14w.1` Genetische Marker (HGNC/LOINC/Cat-VRS, MolGen-Abgleich zuerst) — entsperrt `14w.2`
+- `14w.2` Prädispositionssyndrome/-gene (ORPHA + HGNC)
+- `14w.25` KDL-VS Dokumentklassen
+
+### Welle 5 — Modellierung, Beispiele, Doku
+- `14w.3` CUP-Beispielbundle (nach `14w.9`)
+- `14w.10` ZNS-Sonderregeln-Doku (nach `14w.9`) · `14w.11` Harnblasen-Organmodul (P3)
+- `14w.12` OP-Seitenlokalisation (nach `14w.4`)
+- `14w.8` §65c-Beispielinstanzen · `14w.18` Toronto-Seite (nach `14w.14`)
+- `14w.17` Bildbefund-Modellierung (Scope-Klärung; extern vom Bildgebungs-Modul-Stand abhängig)
+- `14w.13` Phasen-Episodisierung: nur Gap-Doku-Seite (Entscheidung: in diesem Zyklus nicht lösen)
+- `ioj.1` + `ioj.2` DQ-Regeln/Guidance (Zulieferung CQL-Library #292; Doku-Teil nach `14w.14`)
+
+### Welle 6 — Konsolidierung auf finale Profile
+- `14w.23` oBDS-LM + Mappings MII-Onko-LM/MVGenomSeq (#217) — erst wenn Profiländerungen (Wellen 0/3) gemergt sind
+
+### Welle 7 — Querschnitts-Sweeps + Release-Vorbereitung (zwingend zuletzt)
+- `7kl` SNOMED-Copyright in alle VS → danach `pxy` CRMI-Metadaten (ein kombinierter Sweep über alle Artefakte; braucht HDB-703 für den SNOMED-Version-Pin im Manifest)
+- `ehq` Bulk-Kosmetik (696 source/targetUri, 469, 703-Align über ~25–53 Dateien) im selben Sweep
+- `14w.20` Upstream-Änderungen nachziehen + `3bj` Teil 2 (CapabilityStatement verifizieren) — sobald finale 2026er-Releases vorliegen, direkt vor Release
+
+**Kernaussagen:** Die kritische Kette ist Branch-Merge → `14w.24` → `14w.23` → Sweeps (`7kl`/`pxy`) → `14w.20`/Release. Alles andere hängt in breiten, parallelen Wellen daneben. Bewusst früh: `14w.14` (verhindert doppelte Seiten-Migration) und `d8f` (Datenvalidität historischer Medikation). Bewusst zuletzt: alles, was *alle* Artefakte anfasst.
