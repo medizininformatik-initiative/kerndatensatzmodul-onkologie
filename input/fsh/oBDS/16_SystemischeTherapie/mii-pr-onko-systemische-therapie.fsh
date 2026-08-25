@@ -45,18 +45,18 @@ Description: "Systemische Therapie. Dieses Profil beschreibt eine Systemische Th
 * usedCode from mii-vs-onko-systemische-therapie-protokolle (extensible)
 * usedCode.coding.code 1..1 MS
 * usedCode.coding.system 1..1 MS
-* insert Label(usedCode.coding, Protokoll der systemischen Therapie, Protokoll der systemischen Therapie gemäß oBDS Umsetzungsleitfaden.)
+* insert Label(usedCode.coding, Protokoll der systemischen Therapie, Protokoll der systemischen Therapie gemäß 16.4 oBDS 2021.)
 * insert Translation(usedCode.coding ^short, de-DE, Protokoll der systemischen Therapie)
-* insert Translation(usedCode.coding ^definition, de-DE, Protokoll der systemischen Therapie gemäß oBDS Umsetzungsleitfaden mit Substanzkombinationen.)
+* insert Translation(usedCode.coding ^definition, de-DE, Protokoll der systemischen Therapie gemäß 16.4 oBDS 2021 - kodiert nach oBDS Umsetzungsleitfaden mit Substanzkombinationen.)
 
 // Systemische Therapie Beginn und  Ende--> ggfs. dupliziert im MedicationStatement oder MedicationAdministration
 * performed[x] MS
 * performed[x] only Period // wird über Period.start und Period.stop des MII Prozedurmoduls erfasst
 * performedPeriod.start 1..1 MS
 * performedPeriod.end 0..1 MS
-* insert Label(performedPeriod.start, Startdatum der systemischen oder abwartenden Therapie, Startdatum der systemischen oder abwartenden Therapie gemäß 16.6 oBDS 2021.)
+* insert Label(performedPeriod.start, Startdatum der systemischen oder abwartenden Therapie, Startdatum der systemischen oder abwartenden Therapie gemäß 16.5 oBDS 2021.)
 * insert Translation(performedPeriod.start ^short, de-DE, Startdatum der systemischen oder abwartenden Therapie )
-* insert Translation(performedPeriod.start ^definition, de-DE, Startdatum der systemischen oder abwartenden Therapie gemäß 16.6 oBDS 2021. )
+* insert Translation(performedPeriod.start ^definition, de-DE, Startdatum der systemischen oder abwartenden Therapie gemäß 16.5 oBDS 2021. )
 * insert Label(performedPeriod.end, Enddatum der systemischen oder abwartenden Therapie, Enddatum der systemischen oder abwartenden Therapie gemäß 16.8 oBDS 2021.)
 * insert Translation(performedPeriod.end ^short, de-DE, Enddatum der systemischen oder abwartenden Therapie )
 * insert Translation(performedPeriod.end ^definition, de-DE, Enddatum der systemischen oder abwartenden Therapie - wenn vorhanden -  gemäß 16.8 oBDS 2021. )
@@ -96,7 +96,7 @@ Source: MII_PR_Onko_Systemische_Therapie
 * extension[StellungZurOp].valueCodeableConcept.coding.code -> "16.2" "Systemische Therapie Stellung zu operativer Therapie"
 * code.coding.code -> "16.3" "Art der systemischen oder abwartenden Therapie"
 * usedCode.coding.code -> "16.4" "Protokoll der systemischen Therapie"
-* performed[x].start -> "16.6" "Systemische Therapie Beginn"
+* performed[x].start -> "16.5" "Systemische Therapie Beginn"
 * performed[x].end -> "16.8" "Systemische Therapie Ende"
 * outcome.coding.code -> "16.7" "Systemische Therapie Ende Grund"
 

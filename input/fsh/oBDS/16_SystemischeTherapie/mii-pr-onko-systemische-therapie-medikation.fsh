@@ -19,7 +19,7 @@ Description: "Medikation der Systemische Therapie. Dieses Profil beschreibt die 
 * medicationCodeableConcept.coding ^short = "Wirkstoff der systemischen Medikation"
 * medicationCodeableConcept.coding ^definition = "Wirkstoff der systemischen onkologischen Medikation. Nach Möglichkeit als ATC-kodiert anzugeben. Wirkstoffe sind einzeln zu kodieren. Kombinationstherapien können über MedicationStatement.partOf in übergeordneten MedicationStatements gruppiert werden - in diesem Fall ist bei jedem Wirkstoff unter `MedicationStatement.note.text` das Kürzel des (z.B. chemotherapeutischen) Protokolls zu hinterlegen."
 * insert Translation(medicationCodeableConcept.coding ^short, de-DE, Wirkstoff/ Substanz der systemischen Medikation)
-* insert Translation(medicationCodeableConcept.coding ^definition, de-DE, Wirkstoff / Substanz der systemischen onkologischen Medikation gemäß 16.4  oBDS 2021. )
+* insert Translation(medicationCodeableConcept.coding ^definition, de-DE, Wirkstoff / Substanz der systemischen onkologischen Medikation gemäß 16.6 oBDS 2021. )
 
 // Set existing ATC slice from parent profile as Must Support
 * medicationCodeableConcept.coding[atcClassDe] MS
@@ -41,7 +41,7 @@ Description: "Medikation der Systemische Therapie. Dieses Profil beschreibt die 
 * note.text ^short = "Protokoll"
 * note.text ^definition = "Protokoll der systemischen Medikation. Bei Angabe eines Schemas sind alle Wirkstoffe in einzelnen Ressourcen unter MedicationStatement.medication[x] gesondert zu kodieren "
 * insert Translation(note.text ^short, de-DE, Protokoll der systemischen Medikation)
-* insert Translation(note.text ^definition, de-DE, Protokoll der systemischen Medikation gemäß 16.6 oBDS 2021. )
+* insert Translation(note.text ^definition, de-DE, Protokoll der systemischen Medikation gemäß 16.4 oBDS 2021. )
 
 
 // Systemische Therapie Beginn und Ende --> ggfs. dupliziert im MedicationStatement 
@@ -52,13 +52,13 @@ Description: "Medikation der Systemische Therapie. Dieses Profil beschreibt die 
 * effectiveDateTime 0..1 MS  // falls es einmalige Anwendungen / Protokolle gibt
 
 * effectivePeriod.start ^short = "Startdatum der systemischen Medikation"
-* effectivePeriod.start ^definition = "Startdatum der systemischen Medikation gemäß 16.7 oBDS 2021."
+* effectivePeriod.start ^definition = "Startdatum der systemischen Medikation gemäß 16.5 oBDS 2021."
 * effectivePeriod.end ^short = "Enddatum der systemischen Medikation"
-* effectivePeriod.end ^definition = "Enddatum der systemischen Medikation gemäß 16.9 oBDS 2021."
+* effectivePeriod.end ^definition = "Enddatum der systemischen Medikation gemäß 16.8 oBDS 2021."
 * insert Translation(effectivePeriod.start ^short, de-DE, Startdatum der systemischen Medikation)
-* insert Translation(effectivePeriod.start ^definition, de-DE, Startdatum der systemischen Medikation gemäß 16.7 oBDS 2021. )
+* insert Translation(effectivePeriod.start ^definition, de-DE, Startdatum der systemischen Medikation gemäß 16.5 oBDS 2021. )
 * insert Translation(effectivePeriod.end ^short, de-DE, Enddatum der systemischen Medikation)
-* insert Translation(effectivePeriod.end ^definition, de-DE, Enddatum der systemischen Medikation gemäß 16.9 oBDS 2021. )
+* insert Translation(effectivePeriod.end ^definition, de-DE, Enddatum der systemischen Medikation gemäß 16.8 oBDS 2021. )
 * basedOn MS
 * basedOn only Reference(CarePlan or MedicationRequest)
 * basedOn ^short = "Therapieplan oder Therapieempfehlung"
@@ -69,5 +69,5 @@ Mapping: FHIR-oBDS-Systemische_Therapie_Medikation
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
 Source: MII_PR_Onko_Systemische_Therapie_Medikation
-* medicationCodeableConcept.coding.code -> "16.4" "Systemische Therapie Substanz"
-* note.text -> "16.6" "Systemische Therapie Protokoll"
+* medicationCodeableConcept.coding.code -> "16.6" "Systemische Therapie Substanz"
+* note.text -> "16.4" "Systemische Therapie Protokoll"
