@@ -1,12 +1,12 @@
 {
   "resourceType": "SearchParameter",
-  "id": "mii-sp-onko-observation-ext-tnm-t-cppraefix",
+  "id": "mii-sp-onko-observation-tnm-cp-praefix",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-pr-meta-searchparameter"
     ]
   },
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-ext-tnm-t-cppraefix",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-tnm-cp-praefix",
   "publisher": "Medizininformatik Initiative",
   "contact": [
     {
@@ -33,15 +33,15 @@
     }
   ],
   "version": "2026.0.3",
-  "name": "MII_SP_Observation_Extension_TNM_T_CpPraefix",
-  "description": "SearchParameter for Observation.extension[cppraefix]",
+  "name": "MII_SP_Observation_TNM_cp_Praefix",
+  "description": "SearchParameter for Observation.code.extension[cp-praefix]. Die Extension gilt gleichermaßen für T-, N- und M-Kategorien; die Unterscheidung der Kategorie erfolgt über den Kategorie-Code der Observation (Kombination mit dem SearchParameter `code`).",
   "status": "active",
-  "experimental": true,
-  "date": "2024-04-15",
-  "code": "tnm-t-cppraefix",
+  "experimental": false,
+  "date": "2026-08-25",
+  "code": "tnm-cp-praefix",
   "base": [
     "Observation"
   ],
   "type": "token",
-  "expression": "Observation.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-t-cppraefic').value"
+  "expression": "Observation.code.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix').value"
 }

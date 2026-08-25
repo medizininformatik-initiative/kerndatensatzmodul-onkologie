@@ -190,9 +190,9 @@ Usage: #definition
 * insert SupportSearchParam(interpretation, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-observation-interpretation,  #token, #SHALL)
 * insert SupportSearchParam(value-concept, http://hl7.org/fhir/SearchParameter/Observation-value-concept, #token, #SHALL)
 * insert SupportSearchParam(note, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-observation-note, #string, #SHALL)
-* insert SupportSearchParam(tnm-t-cppraefix, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-ext-tnm-t-cppraefix, #token, #SHALL)
-* insert SupportSearchParam(tnm-n-cppraefix, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-ext-tnm-n-cppraefix, #token, #SHALL)
-* insert SupportSearchParam(tnm-m-cppraefix, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-ext-tnm-m-cppraefix, #token, #SHALL)
+* insert SupportSearchParam(tnm-cp-praefix, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-tnm-cp-praefix, #token, #SHALL)
+* insert SupportSearchParam(tnm-y-praefix, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-tnm-y-praefix, #token, #SHALL)
+* insert SupportSearchParam(tnm-r-praefix, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-tnm-r-praefix, #token, #SHALL)
 * insert SupportSearchParam(tnm-n-itc, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-ext-tnm-n-itc, #token, #SHALL)
 * insert SupportSearchParam(tnm-n-sn-suffix, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-ext-tnm-n-sn-suffix, #token, #SHALL)
 

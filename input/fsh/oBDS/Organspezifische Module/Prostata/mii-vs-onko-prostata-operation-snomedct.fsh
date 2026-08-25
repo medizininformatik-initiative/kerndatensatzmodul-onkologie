@@ -10,3 +10,8 @@ Description: "Value Set für Prostata-spezifische Operationen basierend auf SNOM
 * insert PR_CS_VS_Version
 
 * include codes from system $SCT where concept descendent-of #118877007
+
+// TURP: bei Prostatakarzinom u.a. als palliative/desobstruierende Operation eingesetzt.
+// Explizit aufgenommen, da das Konzept je nach SNOMED-Edition nicht zuverlässig unter
+// 118877007 |Procedure on prostate (procedure)| expandiert wird.
+* $SCT#90199006 "Transurethral prostatectomy"

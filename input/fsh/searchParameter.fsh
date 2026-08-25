@@ -10,66 +10,71 @@ Usage: #definition
 * insert LicenseCodeableCCBY40Instance
 * insert SP_Profile
 * insert Version
-* name = "MII_SP_Condition_Extension_Morphology_Behaviour_ICD-O-3"
-* experimental = true
-* date = 2024-04-15
-* description = "SearchParameter for Condition.extension[morphology-behaviour-icdo3]"
+* name = "MII_SP_Condition_Extension_Morphology_Behavior_ICD-O-3"
+* experimental = false
+* date = 2026-08-25
+* description = "SearchParameter for Condition.extension[morphology-behavior-icdo3]"
 * status = #active 
 * code = #morphology-behavior-icdo3
 * base = #Condition
 * type = #token
 * expression = "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3').value"
 
-Instance: mii-sp-onko-observation-ext-tnm-t-cppraefix
+// Ein gemeinsamer SearchParameter für das c/p/u-Präfix aller TNM-Kategorien: die
+// Extension mii-ex-onko-tnm-cp-praefix existiert genau einmal und sitzt auf
+// Observation.code (Kontext CodeableConcept). Die Unterscheidung zwischen T-, N- und
+// M-Kategorie erfolgt über den Kategorie-Code der Observation (SearchParameter `code`).
+// Ersetzt die früheren, defekten SPs tnm-t-/tnm-n-/tnm-m-cppraefix.
+Instance: mii-sp-onko-observation-tnm-cp-praefix
 InstanceOf: SearchParameter
 Usage: #definition
 * insert SP_Publisher
 * insert LicenseCodeableCCBY40Instance
 * insert SP_Profile
 * insert Version
-* name = "MII_SP_Observation_Extension_TNM_T_CpPraefix"
-* description = "SearchParameter for Observation.extension[cppraefix]"
-* status = #active 
-* experimental = true
-* date = 2024-04-15
-* code = #tnm-t-cppraefix
+* name = "MII_SP_Observation_TNM_cp_Praefix"
+* description = "SearchParameter for Observation.code.extension[cp-praefix]. Die Extension gilt gleichermaßen für T-, N- und M-Kategorien; die Unterscheidung der Kategorie erfolgt über den Kategorie-Code der Observation (Kombination mit dem SearchParameter `code`)."
+* status = #active
+* experimental = false
+* date = 2026-08-25
+* code = #tnm-cp-praefix
 * base = #Observation
 * type = #token
-* expression = "Observation.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-t-cppraefic').value"
+* expression = "Observation.code.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix').value"
 
-Instance: mii-sp-onko-observation-ext-tnm-n-cppraefix
+Instance: mii-sp-onko-observation-tnm-y-praefix
 InstanceOf: SearchParameter
 Usage: #definition
 * insert SP_Publisher
 * insert LicenseCodeableCCBY40Instance
 * insert SP_Profile
 * insert Version
-* name = "MII_SP_Observation_Extension_TNM_N_CpPraefix"
-* description = "SearchParameter for Observation.extension[cppraefix]"
-* status = #active 
-* experimental = true
-* date = 2024-04-15
-* code = #tnm-n-cppraefix
+* name = "MII_SP_Observation_TNM_y_Praefix"
+* description = "SearchParameter for Observation.modifierExtension[y-praefix]. Kennzeichnet TNM-Kategorien, die während oder nach initialer multimodaler Therapie festgestellt wurden (UICC y-Präfix). Die Unterscheidung zwischen T-, N- und M-Kategorie erfolgt über den Kategorie-Code der Observation."
+* status = #active
+* experimental = false
+* date = 2026-08-25
+* code = #tnm-y-praefix
 * base = #Observation
 * type = #token
-* expression = "Observation.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-t-cppraefic').value"
+* expression = "Observation.modifierExtension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-y-praefix').value"
 
-Instance: mii-sp-onko-observation-ext-tnm-m-cppraefix
+Instance: mii-sp-onko-observation-tnm-r-praefix
 InstanceOf: SearchParameter
 Usage: #definition
 * insert SP_Publisher
 * insert LicenseCodeableCCBY40Instance
 * insert SP_Profile
 * insert Version
-* name = "MII_SP_Observation_Extension_TNM_M_CpPraefix"
-* description = "SearchParameter for Observation.extension[cppraefix]"
-* status = #active 
-* experimental = true
-* date = 2024-04-15
-* code = #tnm-m-cppraefix
+* name = "MII_SP_Observation_TNM_r_Praefix"
+* description = "SearchParameter for Observation.modifierExtension[r-praefix]. Kennzeichnet TNM-Kategorien, die zur Beurteilung eines Rezidivs festgestellt wurden (UICC r-Präfix). Die Unterscheidung zwischen T-, N- und M-Kategorie erfolgt über den Kategorie-Code der Observation."
+* status = #active
+* experimental = false
+* date = 2026-08-25
+* code = #tnm-r-praefix
 * base = #Observation
 * type = #token
-* expression = "Observation.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-t-cppraefic').value"
+* expression = "Observation.modifierExtension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-r-praefix').value"
 
 Instance: mii-sp-onko-observation-ext-tnm-n-itc
 InstanceOf: SearchParameter

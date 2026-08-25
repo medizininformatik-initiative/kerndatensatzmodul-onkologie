@@ -1,12 +1,12 @@
 {
   "resourceType": "SearchParameter",
-  "id": "mii-sp-onko-observation-ext-tnm-m-cppraefix",
+  "id": "mii-sp-onko-observation-tnm-y-praefix",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-pr-meta-searchparameter"
     ]
   },
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-ext-tnm-m-cppraefix",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-tnm-y-praefix",
   "publisher": "Medizininformatik Initiative",
   "contact": [
     {
@@ -33,15 +33,15 @@
     }
   ],
   "version": "2026.0.3",
-  "name": "MII_SP_Observation_Extension_TNM_M_CpPraefix",
-  "description": "SearchParameter for Observation.extension[cppraefix]",
+  "name": "MII_SP_Observation_TNM_y_Praefix",
+  "description": "SearchParameter for Observation.modifierExtension[y-praefix]. Kennzeichnet TNM-Kategorien, die während oder nach initialer multimodaler Therapie festgestellt wurden (UICC y-Präfix). Die Unterscheidung zwischen T-, N- und M-Kategorie erfolgt über den Kategorie-Code der Observation.",
   "status": "active",
-  "experimental": true,
-  "date": "2024-04-15",
-  "code": "tnm-m-cppraefix",
+  "experimental": false,
+  "date": "2026-08-25",
+  "code": "tnm-y-praefix",
   "base": [
     "Observation"
   ],
   "type": "token",
-  "expression": "Observation.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-t-cppraefic').value"
+  "expression": "Observation.modifierExtension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-y-praefix').value"
 }

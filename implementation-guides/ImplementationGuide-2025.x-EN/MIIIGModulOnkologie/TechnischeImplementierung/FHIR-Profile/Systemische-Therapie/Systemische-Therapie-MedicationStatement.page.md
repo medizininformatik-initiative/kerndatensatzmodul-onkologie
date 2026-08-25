@@ -143,6 +143,6 @@ The following search parameters are relevant for the oncology module, also in co
 
 **Examples**
 
-{{json:mii-exa-onko-systemische-therapie-1}}
+{{json:mii-exa-onko-systemische-therapie-medikation1}}
 
 ---

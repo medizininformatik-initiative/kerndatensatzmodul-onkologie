@@ -3955,7 +3955,7 @@
           "reference": "SearchParameter/mii-sp-onko-condition-ext-morphology-behavior-icdo3"
         },
         "name": "mii-sp-onko-condition-ext-morphology-behavior-icdo3",
-        "description": "SearchParameter for Condition.extension[morphology-behaviour-icdo3]",
+        "description": "SearchParameter for Condition.extension[morphology-behavior-icdo3]",
         "exampleBoolean": false
       },
       {
@@ -3976,22 +3976,6 @@
       },
       {
         "reference": {
-          "reference": "SearchParameter/mii-sp-onko-observation-ext-tnm-m-cppraefix"
-        },
-        "name": "mii-sp-onko-observation-ext-tnm-m-cppraefix",
-        "description": "SearchParameter for Observation.extension[cppraefix]",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "SearchParameter/mii-sp-onko-observation-ext-tnm-n-cppraefix"
-        },
-        "name": "mii-sp-onko-observation-ext-tnm-n-cppraefix",
-        "description": "SearchParameter for Observation.extension[cppraefix]",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "SearchParameter/mii-sp-onko-observation-ext-tnm-n-itc"
         },
         "name": "mii-sp-onko-observation-ext-tnm-n-itc",
@@ -4008,10 +3992,26 @@
       },
       {
         "reference": {
-          "reference": "SearchParameter/mii-sp-onko-observation-ext-tnm-t-cppraefix"
+          "reference": "SearchParameter/mii-sp-onko-observation-tnm-cp-praefix"
         },
-        "name": "mii-sp-onko-observation-ext-tnm-t-cppraefix",
-        "description": "SearchParameter for Observation.extension[cppraefix]",
+        "name": "mii-sp-onko-observation-tnm-cp-praefix",
+        "description": "SearchParameter for Observation.code.extension[cp-praefix]. Die Extension gilt gleichermaßen für T-, N- und M-Kategorien; die Unterscheidung der Kategorie erfolgt über den Kategorie-Code der Observation (Kombination mit dem SearchParameter `code`).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-onko-observation-tnm-r-praefix"
+        },
+        "name": "mii-sp-onko-observation-tnm-r-praefix",
+        "description": "SearchParameter for Observation.modifierExtension[r-praefix]. Kennzeichnet TNM-Kategorien, die zur Beurteilung eines Rezidivs festgestellt wurden (UICC r-Präfix). Die Unterscheidung zwischen T-, N- und M-Kategorie erfolgt über den Kategorie-Code der Observation.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-onko-observation-tnm-y-praefix"
+        },
+        "name": "mii-sp-onko-observation-tnm-y-praefix",
+        "description": "SearchParameter for Observation.modifierExtension[y-praefix]. Kennzeichnet TNM-Kategorien, die während oder nach initialer multimodaler Therapie festgestellt wurden (UICC y-Präfix). Die Unterscheidung zwischen T-, N- und M-Kategorie erfolgt über den Kategorie-Code der Observation.",
         "exampleBoolean": false
       },
       {

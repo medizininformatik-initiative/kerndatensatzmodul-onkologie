@@ -25,7 +25,7 @@ Description: "Beispiel einer transurethralen Resektion der Prostata"
 * category = $SCT#387713003 "Surgical procedure"
 * code.coding[ops] = $OPS#5-601.0 "Transurethrale Exzision und Destruktion von Prostatagewebe: Elektroresektion"
 * code.coding[ops].version = "2024"
-* code.coding[sct] = $SCT#90199006 "Transurethral prostatectomy (procedure)"
+* code.coding[sct] = $SCT#90199006 "Transurethral prostatectomy"
 * subject = Reference(Patient/example)
 * performedDateTime = "2024-02-20"
 * extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#D "diagnostisch"
