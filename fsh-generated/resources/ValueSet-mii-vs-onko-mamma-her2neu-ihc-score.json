@@ -1,0 +1,56 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Onko_Mamma_Her2neu_IHC_Score",
+  "id": "mii-vs-onko-mamma-her2neu-ihc-score",
+  "title": "MII VS Onkologie Mamma Her2neu IHC Score",
+  "description": "HER2-Score der Immunhistochemie (0, 1+, 2+, 3+, Indeterminate). Enumerierte Fassung der LOINC-Answer-List LL4396-9.",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-her2neu-ihc-score",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2026.0.3",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "LA6111-4",
+            "display": "0"
+          },
+          {
+            "code": "LA11841-6",
+            "display": "1+"
+          },
+          {
+            "code": "LA11842-4",
+            "display": "2+"
+          },
+          {
+            "code": "LA11843-2",
+            "display": "3+"
+          },
+          {
+            "code": "LA11884-6",
+            "display": "Indeterminate"
+          }
+        ]
+      }
+    ]
+  }
+}

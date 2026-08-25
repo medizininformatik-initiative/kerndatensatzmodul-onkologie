@@ -62,4 +62,4 @@ Description: "Dieses Profil beschreibt den diagnostischen Progesteron-Rezeptorst
 * component[Faerbeintensitaet].value[x] only CodeableConcept
 * component[Faerbeintensitaet].valueCodeableConcept MS
 * component[Faerbeintensitaet].valueCodeableConcept 0..1
-* component[Faerbeintensitaet].valueCodeableConcept from http://loinc.org/vs/LL4358-9 (extensible) //Weak, Moderate, Strong
+* component[Faerbeintensitaet].valueCodeableConcept from mii-vs-onko-mamma-faerbeintensitaet (extensible) // Weak, Moderate, Strong (≙ LOINC LL4358-9)

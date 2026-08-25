@@ -53,14 +53,14 @@ Description: "Dieses Profil beschreibt den Her2neu Status einer pathologisch unt
 * component[IHCScore].value[x] only CodeableConcept
 * component[IHCScore].valueCodeableConcept MS
 * component[IHCScore].valueCodeableConcept 0..1
-* component[IHCScore].valueCodeableConcept from http://loinc.org/vs/LL4396-9 (extensible) // 0, 1+, 2+, 3+
+* component[IHCScore].valueCodeableConcept from mii-vs-onko-mamma-her2neu-ihc-score (extensible) // 0, 1+, 2+, 3+, Indeterminate (≙ LOINC LL4396-9)
 
 * component[ISHResult].code = $LNC#96893-3 "ERBB2 gene duplication in Tumor by FISH"
 * component[ISHResult].value[x] MS
 * component[ISHResult].value[x] only CodeableConcept
 * component[ISHResult].valueCodeableConcept MS
 * component[ISHResult].valueCodeableConcept 0..1
-* component[ISHResult].valueCodeableConcept from http://loinc.org/vs/LL4678-0 (extensible) // Positive, Negative, Equivocal
+* component[ISHResult].valueCodeableConcept from mii-vs-onko-mamma-ish-ergebnis (extensible) // Positive, Negative, Equivocal (LL4678-0 war fälschlich gebunden: Pflege-Settings-Liste)
 
 
 Mapping: FHIR-oBDS-MammaHer2neuStatus

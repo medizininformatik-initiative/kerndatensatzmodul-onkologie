@@ -1,0 +1,48 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Onko_Mamma_Faerbeintensitaet",
+  "id": "mii-vs-onko-mamma-faerbeintensitaet",
+  "title": "MII VS Onkologie Mamma Färbeintensität",
+  "description": "Färbeintensität der immunhistochemischen Rezeptorbestimmung (Weak, Moderate, Strong). Enumerierte Fassung der LOINC-Answer-List LL4358-9.",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-faerbeintensitaet",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2026.0.3",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "LA13034-6",
+            "display": "Weak"
+          },
+          {
+            "code": "LA6751-7",
+            "display": "Moderate"
+          },
+          {
+            "code": "LA14974-2",
+            "display": "Strong"
+          }
+        ]
+      }
+    ]
+  }
+}

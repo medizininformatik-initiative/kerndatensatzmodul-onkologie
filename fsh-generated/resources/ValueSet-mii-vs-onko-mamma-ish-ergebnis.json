@@ -1,0 +1,48 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Onko_Mamma_ISH_Ergebnis",
+  "id": "mii-vs-onko-mamma-ish-ergebnis",
+  "title": "MII VS Onkologie Mamma ISH Ergebnis",
+  "description": "Ergebnis der In-situ-Hybridisierung (ISH/FISH): Positive, Negative, Equivocal (LOINC-Answer-Codes).",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-ish-ergebnis",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2026.0.3",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "LA6576-8",
+            "display": "Positive"
+          },
+          {
+            "code": "LA6577-6",
+            "display": "Negative"
+          },
+          {
+            "code": "LA11885-3",
+            "display": "Equivocal"
+          }
+        ]
+      }
+    ]
+  }
+}
