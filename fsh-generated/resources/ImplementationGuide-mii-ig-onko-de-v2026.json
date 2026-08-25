@@ -828,10 +828,26 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-onko-krk-mrt-mesorektale-faszie-status"
+        },
+        "name": "MII CS Onkologie KRK MRT Mesorektale Faszie Status",
+        "description": "oBDS-basiertes Codesystem für den Status der MRT/CT Untersuchung zur mesorektalen Faszie beim Kolorektalen Karzinom (KR5)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-onko-krk-operationstyp"
         },
         "name": "MII CS Onkologie KRK Operationstyp",
         "description": "oBDS-spezifisches Codesystem TME-Präparat, basierend auf der S3-Leitlinie Mammakarzinom v",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-krk-stoma-anzeichnung"
+        },
+        "name": "MII CS Onkologie KRK Stoma Anzeichnung",
+        "description": "oBDS-basiertes Codesystem für die präoperative Anzeichnung der Stoma-Position beim Rektumkarzinom",
         "exampleBoolean": false
       },
       {
@@ -872,6 +888,14 @@
         },
         "name": "MII CS Onkologie Operation Komplikationen",
         "description": "oBDS-spezifisches Codesystem für Klassifikation von Komplikationen während der OP",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-operation-urgency"
+        },
+        "name": "MII CS Onkologie Operation Urgency",
+        "description": "oBDS-basiertes Codesystem für die Modalität der Eingriffsdurchführung (Art des Eingriffs KR6)",
         "exampleBoolean": false
       },
       {
@@ -2028,6 +2052,22 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-onko-asa-loinc"
+        },
+        "name": "MII VS Onkologie ASA LOINC",
+        "description": "Value Set für LOINC ASA Physical Status Classification (generalisiert für alle onkologischen Indikationen)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-asa-obds"
+        },
+        "name": "MII VS Onkologie ASA oBDS",
+        "description": "Value Set für oBDS ASA-Klassifikation (ursprünglich KR9 aus Kolorektales Karzinom Modul, generalisiert für alle onkologischen Indikationen)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-beurteilung-lokaler-residualstatus"
         },
         "name": "MII VS Onkologie Beurteilung des lokalen Residualstatus",
@@ -2076,6 +2116,62 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-onko-krk-abstand-circumferelle-resektionsrand"
+        },
+        "name": "MII VS Onkologie KRK Abstand Circumferelle Resektionsrand",
+        "description": "Value Set für semantische Kodierung des oBDS-Abstand des Tumorrandes zur circumferellen Resektionsrand im Kolorektalen Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-krk-abstand-resektionslinie-aboral"
+        },
+        "name": "MII VS Onkologie KRK Abstand Resektionslinie Aboral",
+        "description": "Value Set für semantische Kodierung des oBDS-Abstand des Tumorrandes zur aboralen Resektionslinie im Kolorektalen Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-krk-anastomoseninsuffizienz"
+        },
+        "name": "MII VS Onkologie KRK Anastomoseninsuffizienz",
+        "description": "Value Set für die Bewertung der Anastomoseninsuffizienz beim Kolorektalen Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-krk-mrt-mesorektale-faszie-status"
+        },
+        "name": "MII VS Onkologie KRK MRT Mesorektale Faszie Status",
+        "description": "Value Set für semantische Kodierung des oBDS-Status der MRT/CT Untersuchung zur mesorektalen Faszie beim Kolorektalen Karzinom (KR5)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-krk-stoma-anzeichnung"
+        },
+        "name": "MII VS Onkologie KRK Stoma Anzeichnung",
+        "description": "Value Set für semantische Kodierung der oBDS-präoperativen Stoma-Anzeichnung beim Rektumkarzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-krk-stoma-status-reason"
+        },
+        "name": "MII VS Onkologie KRK Stoma Status Reason",
+        "description": "Value Set für SNOMED CT Codes zur Begründung des Status der präoperativen Stoma-Anzeichnung",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-krk-tme-qualitaet"
+        },
+        "name": "MII VS Onkologie KRK TME Qualität",
+        "description": "Value Set für semantische Kodierung des oBDS-Abstand des Tumorrandes zur aboralen Resektionslinie im Kolorektalen Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-koerperstruktur-sct"
         },
         "name": "MII VS Onkologie Körperstruktur (SNOMED CT)",
@@ -2116,10 +2212,74 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-intraoperatives-imaging-praeparat"
+        },
+        "name": "MII VS Onkologie Mamma Intraoperatives Imaging Präparat",
+        "description": "Value Set für intraoperatives Imaging des Präparats nach Exzision bei Mamma-Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-mamma-ish-ergebnis"
         },
         "name": "MII VS Onkologie Mamma ISH Ergebnis",
         "description": "Ergebnis der In-situ-Hybridisierung (ISH/FISH): Positive, Negative, Equivocal (LOINC-Answer-Codes).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-menopause-status"
+        },
+        "name": "MII VS Onkologie Mamma Menopause Status",
+        "description": "Value Set für (prätherapeutischen) Status der Menopause Score",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-operation-ops"
+        },
+        "name": "MII VS Onkologie Mamma Operation OPS",
+        "description": "Value Set für Mamma-Operationen basierend auf OPS",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-operation-sct"
+        },
+        "name": "MII VS Onkologie Mamma Operation SNOMED CT",
+        "description": "Value Set für Mamma-Operationen basierend auf SNOMED CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-praeoperative-markierung-modalitaet"
+        },
+        "name": "MII VS Onkologie Mamma Präoperative Markierung Modalität",
+        "description": "Value Set für Imagingmodalität der präoperativen Markierung bei Mamma-Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-rezeptorstatus-leitlinie"
+        },
+        "name": "MII VS Onkologie Mamma Rezeptorstatus Leitlinie",
+        "description": "Value Set für oBDS-Rezeptorstatus Mamma",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-rezeptorstatus-obds"
+        },
+        "name": "MII VS Onkologie Mamma Rezeptorstatus oBDS",
+        "description": "Value Set für oBDS-Rezeptorstatus Mamma",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-melanom-ldh"
+        },
+        "name": "MII VS Onkologie Melanom LDH",
+        "description": "Value Set für Laktatdehydrogenase (LDH) Laborwerte beim Malignen Melanom",
         "exampleBoolean": false
       },
       {
@@ -2164,6 +2324,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-onko-operation-urgency"
+        },
+        "name": "MII VS Onkologie Operation Urgency",
+        "description": "Value Set für semantische Kodierung der oBDS-Modalität der Eingriffsdurchführung (Art des Eingriffs KR6)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-ops-nuklearmedizin"
         },
         "name": "MII VS Onkologie OPS Nuklearmedizin",
@@ -2196,10 +2364,42 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-onko-prostata-clavien-dindo"
+        },
+        "name": "MII VS Onkologie Prostata Clavien Dindo",
+        "description": "Value Set für Gleason Score",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-prostata-gleason-patterns"
         },
         "name": "MII VS Onkologie Prostata Gleason Patterns",
         "description": "Value Set für die histopathologische Bewertung von Prostata-Adenokarzinomen mittels Gleason-Patterns. Dieser Value Set wird verwendet, um die verschiedenen Gleason-Patterns zu kodieren, die bei der Beurteilung von Prostatakarzinomen auftreten können.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-prostata-gleason-primary-secondary-tertiary"
+        },
+        "name": "MII VS Onkologie Prostata Gleason Primary Secondary Tertiary",
+        "description": "Value Set für Primär-, Sekundär- und Tertiär-Gleason Patterns in der Onkologie Prostata. Der häufigste Gleason Pattern wird als primär, der zweithäufigste als sekundär und (seltener, meistens bei Gleason Pattern 5) der dritthäufigste als tertiär bezeichnet. Diese Value Set wird verwendet, um die verschiedenen Gleason Patterns zu kodieren, die bei der Beurteilung von Prostatakarzinomen auftreten können.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-prostata-gleason-score"
+        },
+        "name": "MII VS Onkologie Prostata Gleason Score",
+        "description": "Value Set für Gleason Score",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-prostata-postsurgical-complications"
+        },
+        "name": "MII VS Onkologie Prostata Postsurgical Complications",
+        "description": "Value Set für Clavien-Dindo Klassifikation",
         "exampleBoolean": false
       },
       {
@@ -3849,210 +4049,10 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/mii-cs-onko-krk-mrt-mesorektale-faszie-status"
-        },
-        "name": "MII_CS_Onko_KRK_MRT_Mesorektale_Faszie_Status",
-        "description": "oBDS-basiertes Codesystem für den Status der MRT/CT Untersuchung zur mesorektalen Faszie beim Kolorektalen Karzinom (KR5)",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/mii-cs-onko-krk-stoma-anzeichnung"
-        },
-        "name": "MII_CS_Onko_KRK_Stoma_Anzeichnung",
-        "description": "oBDS-basiertes Codesystem für die präoperative Anzeichnung der Stoma-Position beim Rektumkarzinom",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/mii-cs-onko-operation-urgency"
-        },
-        "name": "MII_CS_Onko_Operation_Urgency",
-        "description": "oBDS-basiertes Codesystem für die Modalität der Eingriffsdurchführung (Art des Eingriffs KR6)",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "ValueSet/mii-vs-onko-genetische-variante-auspraegung"
         },
         "name": "MII_VS Onkologie Genetische Variante Ausprägung",
         "description": "Value Set für oBDS-Codes für Ausprägung der Genetischen Variante",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-asa-loinc"
-        },
-        "name": "MII_VS_Onko_ASA_LOINC",
-        "description": "Value Set für LOINC ASA Physical Status Classification (generalisiert für alle onkologischen Indikationen)",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-asa-obds"
-        },
-        "name": "MII_VS_Onko_ASA_oBDS",
-        "description": "Value Set für oBDS ASA-Klassifikation (ursprünglich KR9 aus Kolorektales Karzinom Modul, generalisiert für alle onkologischen Indikationen)",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-krk-abstand-circumferelle-resektionsrand"
-        },
-        "name": "MII_VS_Onko_KRK_Abstand_Circumferelle_Resektionsrand",
-        "description": "Value Set für semantische Kodierung des oBDS-Abstand des Tumorrandes zur circumferellen Resektionsrand im Kolorektalen Karzinom",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-krk-abstand-resektionslinie-aboral"
-        },
-        "name": "MII_VS_Onko_KRK_Abstand_Resektionslinie_Aboral",
-        "description": "Value Set für semantische Kodierung des oBDS-Abstand des Tumorrandes zur aboralen Resektionslinie im Kolorektalen Karzinom",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-krk-anastomoseninsuffizienz"
-        },
-        "name": "MII_VS_Onko_KRK_Anastomoseninsuffizienz",
-        "description": "Value Set für die Bewertung der Anastomoseninsuffizienz beim Kolorektalen Karzinom",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-krk-mrt-mesorektale-faszie-status"
-        },
-        "name": "MII_VS_Onko_KRK_MRT_Mesorektale_Faszie_Status",
-        "description": "Value Set für semantische Kodierung des oBDS-Status der MRT/CT Untersuchung zur mesorektalen Faszie beim Kolorektalen Karzinom (KR5)",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-krk-stoma-anzeichnung"
-        },
-        "name": "MII_VS_Onko_KRK_Stoma_Anzeichnung",
-        "description": "Value Set für semantische Kodierung der oBDS-präoperativen Stoma-Anzeichnung beim Rektumkarzinom",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-krk-stoma-status-reason"
-        },
-        "name": "MII_VS_Onko_KRK_Stoma_Status_Reason",
-        "description": "Value Set für SNOMED CT Codes zur Begründung des Status der präoperativen Stoma-Anzeichnung",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-krk-tme-qualitaet"
-        },
-        "name": "MII_VS_Onko_KRK_TME_Qualitaet",
-        "description": "Value Set für semantische Kodierung des oBDS-Abstand des Tumorrandes zur aboralen Resektionslinie im Kolorektalen Karzinom",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-mamma-intraoperatives-imaging-praeparat"
-        },
-        "name": "MII_VS_Onko_Mamma_Intraoperatives_Imaging_Praeparat",
-        "description": "Value Set für intraoperatives Imaging des Präparats nach Exzision bei Mamma-Karzinom",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-mamma-menopause-status"
-        },
-        "name": "MII_VS_Onko_Mamma_Menopause_Status",
-        "description": "Value Set für (prätherapeutischen) Status der Menopause Score",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-mamma-operation-ops"
-        },
-        "name": "MII_VS_Onko_Mamma_Operation_OPS",
-        "description": "Value Set für Mamma-Operationen basierend auf OPS",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-mamma-operation-sct"
-        },
-        "name": "MII_VS_Onko_Mamma_Operation_SCT",
-        "description": "Value Set für Mamma-Operationen basierend auf SNOMED CT",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-mamma-praeoperative-markierung-modalitaet"
-        },
-        "name": "MII_VS_Onko_Mamma_Praeoperative_Markierung_Modalitaet",
-        "description": "Value Set für Imagingmodalität der präoperativen Markierung bei Mamma-Karzinom",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-mamma-rezeptorstatus-leitlinie"
-        },
-        "name": "MII_VS_Onko_Mamma_Rezeptorstatus_Leitlinie",
-        "description": "Value Set für oBDS-Rezeptorstatus Mamma",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-mamma-rezeptorstatus-obds"
-        },
-        "name": "MII_VS_Onko_Mamma_Rezeptorstatus_oBDS",
-        "description": "Value Set für oBDS-Rezeptorstatus Mamma",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-melanom-ldh"
-        },
-        "name": "MII_VS_Onko_Melanom_LDH",
-        "description": "Value Set für Laktatdehydrogenase (LDH) Laborwerte beim Malignen Melanom",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-operation-urgency"
-        },
-        "name": "MII_VS_Onko_Operation_Urgency",
-        "description": "Value Set für semantische Kodierung der oBDS-Modalität der Eingriffsdurchführung (Art des Eingriffs KR6)",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-prostata-clavien-dindo"
-        },
-        "name": "MII_VS_Onko_Prostata_Clavien_Dindo",
-        "description": "Value Set für Gleason Score",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-prostata-gleason-primary-secondary-tertiary"
-        },
-        "name": "MII_VS_Onko_Prostata_Gleason_PrimarySecondaryTertiary",
-        "description": "Value Set für Primär-, Sekundär- und Tertiär-Gleason Patterns in der Onkologie Prostata. Der häufigste Gleason Pattern wird als primär, der zweithäufigste als sekundär und (seltener, meistens bei Gleason Pattern 5) der dritthäufigste als tertiär bezeichnet. Diese Value Set wird verwendet, um die verschiedenen Gleason Patterns zu kodieren, die bei der Beurteilung von Prostatakarzinomen auftreten können.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-prostata-gleason-score"
-        },
-        "name": "MII_VS_Onko_Prostata_Gleason_Score",
-        "description": "Value Set für Gleason Score",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-prostata-postsurgical-complications"
-        },
-        "name": "MII_VS_Onko_Prostata_Postsurgical_Complications",
-        "description": "Value Set für Clavien-Dindo Klassifikation",
         "exampleBoolean": false
       },
       {

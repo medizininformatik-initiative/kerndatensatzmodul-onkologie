@@ -1,5 +1,6 @@
 ValueSet: MII_VS_Onko_Mamma_Rezeptorstatus_oBDS
 Id: mii-vs-onko-mamma-rezeptorstatus-obds
+Title: "MII VS Onkologie Mamma Rezeptorstatus oBDS"
 Description: "Value Set für oBDS-Rezeptorstatus Mamma"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 * ^status = #active

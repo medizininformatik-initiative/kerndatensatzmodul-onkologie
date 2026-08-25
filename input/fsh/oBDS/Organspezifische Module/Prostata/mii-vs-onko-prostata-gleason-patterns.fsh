@@ -1,5 +1,6 @@
 ValueSet: MII_VS_Onko_Prostata_Gleason_PrimarySecondaryTertiary
 Id: mii-vs-onko-prostata-gleason-primary-secondary-tertiary
+Title: "MII VS Onkologie Prostata Gleason Primary Secondary Tertiary"
 Description: "Value Set für Primär-, Sekundär- und Tertiär-Gleason Patterns in der Onkologie Prostata. Der häufigste Gleason Pattern wird als primär, der zweithäufigste als sekundär und (seltener, meistens bei Gleason Pattern 5) der dritthäufigste als tertiär bezeichnet. Diese Value Set wird verwendet, um die verschiedenen Gleason Patterns zu kodieren, die bei der Beurteilung von Prostatakarzinomen auftreten können."
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-primary-secondary-tertiary"

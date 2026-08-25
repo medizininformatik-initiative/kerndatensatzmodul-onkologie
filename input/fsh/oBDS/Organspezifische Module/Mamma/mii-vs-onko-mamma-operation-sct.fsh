@@ -1,5 +1,6 @@
 ValueSet: MII_VS_Onko_Mamma_Operation_SCT
 Id: mii-vs-onko-mamma-operation-sct
+Title: "MII VS Onkologie Mamma Operation SNOMED CT"
 Description: "Value Set für Mamma-Operationen basierend auf SNOMED CT"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 * ^status = #active
