@@ -556,16 +556,30 @@
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert|2026.0.3"
           ]
         },
-        "status": "final",
         "code": {
           "coding": [
             {
-              "code": "399390009",
+              "code": "399703000",
               "system": "http://snomed.info/sct",
-              "display": "TNM stage grouping"
+              "display": "Integrated TNM category"
             }
           ]
         },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "tnm-formel",
+                  "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-formel",
+                  "display": "TNM-Formel"
+                }
+              ]
+            },
+            "valueString": "pT2 pN1 cM0"
+          }
+        ],
+        "status": "final",
         "subject": {
           "reference": "Patient/mii-exa-onko-tnm-synth-patient"
         },

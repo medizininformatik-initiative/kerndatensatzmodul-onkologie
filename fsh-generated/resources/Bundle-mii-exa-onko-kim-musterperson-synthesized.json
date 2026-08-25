@@ -361,6 +361,20 @@
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie|2026.0.3"
           ]
         },
+        "modifierExtension": [
+          {
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "y",
+                  "system": "https://www.uicc.org/resources/tnm",
+                  "display": "y"
+                }
+              ]
+            },
+            "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-y-praefix"
+          }
+        ],
         "valueCodeableConcept": {
           "coding": [
             {
@@ -428,6 +442,20 @@
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie|2026.0.3"
           ]
         },
+        "modifierExtension": [
+          {
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "y",
+                  "system": "https://www.uicc.org/resources/tnm",
+                  "display": "y"
+                }
+              ]
+            },
+            "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-y-praefix"
+          }
+        ],
         "valueCodeableConcept": {
           "coding": [
             {
@@ -495,6 +523,20 @@
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie|2026.0.3"
           ]
         },
+        "modifierExtension": [
+          {
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "y",
+                  "system": "https://www.uicc.org/resources/tnm",
+                  "display": "y"
+                }
+              ]
+            },
+            "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-y-praefix"
+          }
+        ],
         "valueCodeableConcept": {
           "coding": [
             {
@@ -676,6 +718,20 @@
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie|2026.0.3"
           ]
         },
+        "modifierExtension": [
+          {
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "y",
+                  "system": "https://www.uicc.org/resources/tnm",
+                  "display": "y"
+                }
+              ]
+            },
+            "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-y-praefix"
+          }
+        ],
         "valueCodeableConcept": {
           "coding": [
             {
@@ -743,6 +799,20 @@
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie|2026.0.3"
           ]
         },
+        "modifierExtension": [
+          {
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "y",
+                  "system": "https://www.uicc.org/resources/tnm",
+                  "display": "y"
+                }
+              ]
+            },
+            "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-y-praefix"
+          }
+        ],
         "valueCodeableConcept": {
           "coding": [
             {
@@ -1074,15 +1144,18 @@
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert|2026.0.3"
           ]
         },
-        "status": "final",
         "code": {
           "coding": [
             {
-              "code": "399390009",
+              "code": "399703000",
               "system": "http://snomed.info/sct",
-              "display": "TNM stage grouping"
+              "display": "Integrated TNM category"
             }
           ]
+        },
+        "status": "final",
+        "device": {
+          "reference": "Device/mii-exa-onko-kim-synthesis-device"
         },
         "subject": {
           "reference": "Patient/mii-exa-onko-kim-synth-patient"
@@ -1143,15 +1216,18 @@
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert|2026.0.3"
           ]
         },
-        "status": "final",
         "code": {
           "coding": [
             {
-              "code": "399390009",
+              "code": "399703000",
               "system": "http://snomed.info/sct",
-              "display": "TNM stage grouping"
+              "display": "Integrated TNM category"
             }
           ]
+        },
+        "status": "final",
+        "device": {
+          "reference": "Device/mii-exa-onko-kim-synthesis-device"
         },
         "subject": {
           "reference": "Patient/mii-exa-onko-kim-synth-patient"
@@ -1215,15 +1291,18 @@
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert|2026.0.3"
           ]
         },
-        "status": "final",
         "code": {
           "coding": [
             {
-              "code": "399390009",
+              "code": "399703000",
               "system": "http://snomed.info/sct",
-              "display": "TNM stage grouping"
+              "display": "Integrated TNM category"
             }
           ]
+        },
+        "status": "final",
+        "device": {
+          "reference": "Device/mii-exa-onko-kim-synthesis-device"
         },
         "subject": {
           "reference": "Patient/mii-exa-onko-kim-synth-patient"
@@ -1299,15 +1378,18 @@
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert|2026.0.3"
           ]
         },
-        "status": "final",
         "code": {
           "coding": [
             {
-              "code": "399390009",
+              "code": "399703000",
               "system": "http://snomed.info/sct",
-              "display": "TNM stage grouping"
+              "display": "Integrated TNM category"
             }
           ]
+        },
+        "status": "final",
+        "device": {
+          "reference": "Device/mii-exa-onko-kim-synthesis-device"
         },
         "subject": {
           "reference": "Patient/mii-exa-onko-kim-synth-patient"
@@ -1630,6 +1712,29 @@
       }
     },
     {
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Device/mii-exa-onko-kim-synthesis-device",
+      "resource": {
+        "resourceType": "Device",
+        "id": "mii-exa-onko-kim-synthesis-device",
+        "status": "active",
+        "deviceName": [
+          {
+            "name": "mii-lib-onko-synthesize-tnm",
+            "type": "model-name"
+          }
+        ],
+        "version": [
+          {
+            "value": "1.0.0"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Device"
+      }
+    },
+    {
       "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Provenance/mii-exa-onko-kim-synthesis-provenance",
       "resource": {
         "resourceType": "Provenance",
@@ -1673,6 +1778,7 @@
               ]
             },
             "who": {
+              "reference": "Device/mii-exa-onko-kim-synthesis-device",
               "display": "ETL-Pipeline (synthesize_tnm v1.0.0)"
             }
           }

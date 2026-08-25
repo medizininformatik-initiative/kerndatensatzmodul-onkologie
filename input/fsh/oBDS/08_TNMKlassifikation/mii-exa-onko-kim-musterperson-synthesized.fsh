@@ -132,6 +132,7 @@ Usage: #example
 * status = #final
 * code.extension[0].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix"
 * code.extension[0].valueCodeableConcept = $UICC#c "c"
+* modifierExtension[yPraefix].valueCodeableConcept = $UICC#y "y"
 * code = $SCT#399504009 "cT category (observable entity)"
 * subject = Reference(mii-exa-onko-kim-synth-patient)
 * effectiveDateTime = "2021-09-15"
@@ -146,6 +147,7 @@ Usage: #example
 * status = #final
 * code.extension[0].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix"
 * code.extension[0].valueCodeableConcept = $UICC#c "c"
+* modifierExtension[yPraefix].valueCodeableConcept = $UICC#y "y"
 * code = $SCT#399534004 "cN category (observable entity)"
 * subject = Reference(mii-exa-onko-kim-synth-patient)
 * effectiveDateTime = "2021-09-15"
@@ -160,6 +162,7 @@ Usage: #example
 * status = #final
 * code.extension[0].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix"
 * code.extension[0].valueCodeableConcept = $UICC#c "c"
+* modifierExtension[yPraefix].valueCodeableConcept = $UICC#y "y"
 * code = $SCT#399387003 "cM category (observable entity)"
 * subject = Reference(mii-exa-onko-kim-synth-patient)
 * effectiveDateTime = "2021-09-15"
@@ -208,6 +211,7 @@ Usage: #example
 * status = #final
 * code.extension[0].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix"
 * code.extension[0].valueCodeableConcept = $UICC#p "p"
+* modifierExtension[yPraefix].valueCodeableConcept = $UICC#y "y"
 * code = $SCT#384625004 "pT category (observable entity)"
 * subject = Reference(mii-exa-onko-kim-synth-patient)
 * effectiveDateTime = "2021-10-15"
@@ -222,6 +226,7 @@ Usage: #example
 * status = #final
 * code.extension[0].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix"
 * code.extension[0].valueCodeableConcept = $UICC#p "p"
+* modifierExtension[yPraefix].valueCodeableConcept = $UICC#y "y"
 * code = $SCT#371497001 "pM category (observable entity)"
 * subject = Reference(mii-exa-onko-kim-synth-patient)
 * effectiveDateTime = "2021-10-15"
@@ -302,7 +307,8 @@ InstanceOf: mii-pr-onko-tnm-klassifikation-synthetisiert
 Usage: #example
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert)
 * status = #final
-* code = $SCT#399390009 "TNM stage grouping"
+* code = $SCT#399703000 "Integrated TNM category"
+* device = Reference(mii-exa-onko-kim-synthesis-device)
 * subject = Reference(mii-exa-onko-kim-synth-patient)
 * effectiveDateTime = "2021-06-25"
 * method = $mii-cs-onko-tnm-version#8 "8. Auflage"
@@ -321,7 +327,8 @@ InstanceOf: mii-pr-onko-tnm-klassifikation-synthetisiert
 Usage: #example
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert)
 * status = #final
-* code = $SCT#399390009 "TNM stage grouping"
+* code = $SCT#399703000 "Integrated TNM category"
+* device = Reference(mii-exa-onko-kim-synthesis-device)
 * subject = Reference(mii-exa-onko-kim-synth-patient)
 * effectiveDateTime = "2021-09-16"
 * method = $mii-cs-onko-tnm-version#8 "8. Auflage"
@@ -346,7 +353,8 @@ InstanceOf: mii-pr-onko-tnm-klassifikation-synthetisiert
 Usage: #example
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert)
 * status = #final
-* code = $SCT#399390009 "TNM stage grouping"
+* code = $SCT#399703000 "Integrated TNM category"
+* device = Reference(mii-exa-onko-kim-synthesis-device)
 * subject = Reference(mii-exa-onko-kim-synth-patient)
 * effectiveDateTime = "2021-10-25"
 * method = $mii-cs-onko-tnm-version#8 "8. Auflage"
@@ -370,7 +378,8 @@ InstanceOf: mii-pr-onko-tnm-klassifikation-synthetisiert
 Usage: #example
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert)
 * status = #final
-* code = $SCT#399390009 "TNM stage grouping"
+* code = $SCT#399703000 "Integrated TNM category"
+* device = Reference(mii-exa-onko-kim-synthesis-device)
 * subject = Reference(mii-exa-onko-kim-synth-patient)
 * effectiveDateTime = "2022-01-15"
 * method = $mii-cs-onko-tnm-version#8 "8. Auflage"
@@ -452,6 +461,20 @@ Usage: #example
 * replaces = Reference(mii-exa-onko-kim-tk3)
 
 // =============================================================================
+// DEVICE — das erzeugende System (leichtgewichtige Versionsdokumentation)
+// =============================================================================
+// Referenziert von allen synthetisierten Panels via Observation.device;
+// die Provenance unten ergänzt den vollständigen Audit-Trail (optional).
+
+Instance: mii-exa-onko-kim-synthesis-device
+InstanceOf: Device
+Usage: #example
+* status = #active
+* deviceName.name = "mii-lib-onko-synthesize-tnm"
+* deviceName.type = #model-name
+* version.value = "1.0.0"
+
+// =============================================================================
 // PROVENANCE — eine Provenance dokumentiert den ETL-Lauf
 // =============================================================================
 // Targets alle 4 synthetisierten Stages.
@@ -469,6 +492,7 @@ Usage: #example
 * occurredPeriod.end = "2022-01-15"
 * activity = http://hl7.org/fhir/w3c-provenance-activity-type#Derivation "wasDerivedFrom"
 * agent[0].type.coding = http://terminology.hl7.org/CodeSystem/provenance-participant-type#performer
+* agent[0].who = Reference(mii-exa-onko-kim-synthesis-device)
 * agent[0].who.display = "ETL-Pipeline (synthesize_tnm v1.0.0)"
 // entity[0]: the algorithm itself, version-pinned via identifier
 * entity[0].role = #source
@@ -616,6 +640,11 @@ Description: "Vollständige Multi-Tumorkonferenz-Demo am Beispiel Kim Musterpers
 * entry[=].request.url = "CarePlan"
 
 // Provenance
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Device/mii-exa-onko-kim-synthesis-device"
+* entry[=].resource = mii-exa-onko-kim-synthesis-device
+* entry[=].request.method = #POST
+* entry[=].request.url = "Device"
+
 * entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Provenance/mii-exa-onko-kim-synthesis-provenance"
 * entry[=].resource = mii-exa-onko-kim-synthesis-provenance
 * entry[=].request.method = #POST

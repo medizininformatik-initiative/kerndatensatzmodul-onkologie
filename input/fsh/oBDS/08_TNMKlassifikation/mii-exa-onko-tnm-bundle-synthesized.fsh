@@ -173,7 +173,7 @@ InstanceOf: mii-pr-onko-tnm-klassifikation-synthetisiert
 Usage: #example
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert)
 * status = #final
-* code = $SCT#399390009 "TNM stage grouping"
+* code = $SCT#399703000 "Integrated TNM category"
 * subject = Reference(mii-exa-onko-tnm-synth-patient)
 * effectiveDateTime = "2024-04-02"
 * method = $mii-cs-onko-tnm-version#8 "8. Auflage"
@@ -186,6 +186,9 @@ Usage: #example
 * hasMember[1] = Reference(mii-exa-onko-tnm-synth-meldung2-n-pN1)
 * hasMember[2] = Reference(mii-exa-onko-tnm-synth-meldung1-m-cM0)
 * valueCodeableConcept = $UICC#IIIA "Stadium IIIA"
+// Generierte Gesamtformel (aus den hasMember-Gewinnern: pT2 + pN1 + cM0)
+* component[tnmFormel].code = MII_CS_Onko_TNM_Formel#tnm-formel "TNM-Formel"
+* component[tnmFormel].valueString = "pT2 pN1 cM0"
 
 // =============================================================================
 // TUMORKONFERENZ — 2024-04-02 (postoperative Tumorkonferenz)

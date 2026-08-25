@@ -12,3 +12,8 @@ Description: "Codes für TNM-Klassifikation Typ. Gibt an, ob die Klassifikation 
 * $SCT#399390009 "TNM stage grouping"
 * $SCT#399537006 "Clinical TNM stage grouping"
 * $SCT#399588009 "Pathologic TNM stage grouping"
+// 399703000 komplettiert die Typ-Achse (klinisch/pathologisch/integriert) für die
+// synthetisierte Klassifikation. Bewusste Entscheidung trotz SCT-Hierarchie-Unschärfe:
+// das Konzept sitzt im category-Ast (is-a 399566009), nicht im stage-grouping-Ast —
+// ein Content-Request für 'Integrated TNM stage grouping' an SNOMED Intl ist angeraten.
+* $SCT#399703000 "Integrated TNM category"

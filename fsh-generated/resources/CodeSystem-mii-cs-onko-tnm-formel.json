@@ -1,0 +1,37 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "MII_CS_Onko_TNM_Formel",
+  "id": "mii-cs-onko-tnm-formel",
+  "title": "MII CS Onkologie TNM Formel",
+  "description": "Codes für die Darstellung der zusammengeführten TNM-Gesamtformel als Component der synthetisierten TNM-Klassifikation.",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-formel",
+  "concept": [
+    {
+      "code": "tnm-formel",
+      "display": "TNM-Formel",
+      "definition": "Zusammengeführte TNM-Gesamtformel (z. B. 'ypT0 ypN0 cM0') als generierte Darstellung der gewinnenden Kategorie-Beobachtungen inklusive Präfixe."
+    }
+  ],
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2026.0.3",
+  "caseSensitive": true,
+  "count": 1
+}
