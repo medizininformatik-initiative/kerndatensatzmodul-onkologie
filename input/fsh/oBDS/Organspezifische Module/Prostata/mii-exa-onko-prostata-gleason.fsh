@@ -35,3 +35,16 @@ Usage: #example
 * derivedFrom[+] = Reference(mii-exa-onko-prostata-gleason-pattern-secondary-1)
 
 * valueCodeableConcept.coding = $SCT#1279714001 "International Society of Urological Pathology grade group 2 (Gleason score 3 + 4 = 7) (qualifier value)"
+
+// Nur ScoreErgebnis dokumentiert: Gesamtscore < 6 ohne Primaer-/Sekundaer-Pattern und ohne Grade Group
+Instance: mii-exa-onko-prostata-gleason-score-gesamt-1
+InstanceOf: MII_PR_Onko_Prostata_Gleason_Score_Gesamt
+Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-score-gesamt)
+* status = #final
+* code.coding = $SCT#372278000 "Gleason score (observable entity)"
+* effectiveDateTime = "2024-01-02"
+* subject = Reference(mii-exa-onko-prostata-bundle-patient)
+* focus = Reference(mii-exa-onko-prostata-diagnose)
+
+* valueCodeableConcept.coding = $SCT#74013009 "Gleason grade score 5 out of 10 (finding)"

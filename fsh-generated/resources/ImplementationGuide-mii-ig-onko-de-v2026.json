@@ -1742,8 +1742,16 @@
         "reference": {
           "reference": "StructureDefinition/mii-pr-onko-prostate-gleason-patterns"
         },
-        "name": "MII PR Onkologie Prostata Gleason Primär",
-        "description": "Dieses Profil beschreibt einen primären Gleasonscore in der Onkologie",
+        "name": "MII PR Onkologie Prostata Gleason Pattern",
+        "description": "Dieses Profil beschreibt ein Gleason Pattern in der Onkologie. Es wird für das primäre, das sekundäre und das tertiäre Pattern gleichermaßen verwendet; welches Pattern gemeint ist, ergibt sich aus Observation.code.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-prostate-gleason-score-gesamt"
+        },
+        "name": "MII PR Onkologie Prostata Gleason Score Gesamt",
+        "description": "Dieses Profil beschreibt den Gleason-Gesamtscore als Summe aus primärem und sekundärem Pattern. Es wird verwendet, wenn im Befund nur das Score-Ergebnis dokumentiert ist und keine Aufschlüsselung in Primär-/Sekundär-Pattern und keine ISUP Grade Group vorliegt. Für die detaillierte Dokumentation mit Grade Group ist MII_PR_Onko_Prostata_Gleason_Grade_Group zu verwenden, für die einzelnen Patterns MII_PR_Onko_Prostata_Gleason_Pattern.",
         "exampleBoolean": false
       },
       {
@@ -2431,7 +2439,15 @@
           "reference": "ValueSet/mii-vs-onko-prostata-gleason-score"
         },
         "name": "MII VS Onkologie Prostata Gleason Score",
-        "description": "Value Set für Gleason Score",
+        "description": "Value Set für den Gleason Score in Kombination mit der ISUP Grade Group. Da ISUP Grade Groups erst ab einem Gleason-Gesamtscore von 6 definiert sind, deckt dieses Value Set nur Scores >= 6 ab. Liegt nur das Score-Ergebnis ohne Grade Group vor oder ein Gesamtscore < 6, ist MII_VS_Onko_Prostata_Gleason_Score_Gesamt zu verwenden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-prostata-gleason-score-gesamt"
+        },
+        "name": "MII VS Onkologie Prostata Gleason Score Gesamt",
+        "description": "Value Set für den Gleason-Gesamtscore (Summe aus primärem und sekundärem Pattern) ohne Aufschlüsselung in Primär-/Sekundär-Pattern. Enthält die Scores 2 bis 10 aus der SNOMED-CT-Hierarchie unterhalb von 385377005 (Gleason grade finding for prostatic cancer). Damit sind auch Gesamtscores < 6 abbildbar, wie sie bei TURP-Material und in historischen Befunden vorkommen. Ein Gesamtscore 1 existiert nicht, da sich der Score aus zwei Patterns mit Werten ab 1 zusammensetzt. Die ISUP Grade Groups sind bewusst nicht enthalten; sie werden über MII_VS_Onko_Prostata_Gleason_Score abgebildet.",
         "exampleBoolean": false
       },
       {
@@ -3362,6 +3378,13 @@
         },
         "name": "mii-exa-onko-prostata-gleason-pattern-secondary-1",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-prostata-gleason-score-gesamt-1"
+        },
+        "name": "mii-exa-onko-prostata-gleason-score-gesamt-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-score-gesamt"
       },
       {
         "reference": {

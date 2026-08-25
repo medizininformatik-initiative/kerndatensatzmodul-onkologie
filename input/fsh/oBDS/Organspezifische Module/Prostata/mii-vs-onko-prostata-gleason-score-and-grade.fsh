@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Onko_Prostata_Gleason_Score
 Id: mii-vs-onko-prostata-gleason-score
 Title: "MII VS Onkologie Prostata Gleason Score"
-Description: "Value Set für Gleason Score"
+Description: "Value Set für den Gleason Score in Kombination mit der ISUP Grade Group. Da ISUP Grade Groups erst ab einem Gleason-Gesamtscore von 6 definiert sind, deckt dieses Value Set nur Scores >= 6 ab. Liegt nur das Score-Ergebnis ohne Grade Group vor oder ein Gesamtscore < 6, ist MII_VS_Onko_Prostata_Gleason_Score_Gesamt zu verwenden."
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-score"
 * ^status = #active

@@ -1,10 +1,10 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "mii-pr-onko-prostate-gleason-patterns",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns",
+  "id": "mii-pr-onko-prostate-gleason-score-gesamt",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-score-gesamt",
   "version": "2026.0.3",
-  "name": "MII_PR_Onko_Prostata_Gleason_Pattern",
-  "title": "MII PR Onkologie Prostata Gleason Pattern",
+  "name": "MII_PR_Onko_Prostata_Gleason_Score_Gesamt",
+  "title": "MII PR Onkologie Prostata Gleason Score Gesamt",
   "status": "active",
   "publisher": "Medizininformatik Initiative",
   "contact": [
@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Dieses Profil beschreibt ein Gleason Pattern in der Onkologie. Es wird für das primäre, das sekundäre und das tertiäre Pattern gleichermaßen verwendet; welches Pattern gemeint ist, ergibt sich aus Observation.code.",
+  "description": "Dieses Profil beschreibt den Gleason-Gesamtscore als Summe aus primärem und sekundärem Pattern. Es wird verwendet, wenn im Befund nur das Score-Ergebnis dokumentiert ist und keine Aufschlüsselung in Primär-/Sekundär-Pattern und keine ISUP Grade Group vorliegt. Für die detaillierte Dokumentation mit Grade Group ist MII_PR_Onko_Prostata_Gleason_Grade_Group zu verwenden, für die einzelnen Patterns MII_PR_Onko_Prostata_Gleason_Pattern.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -34,16 +34,17 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "short": "Gleason Pattern (primär, sekundär, tertiär)",
-        "definition": "Primäres, sekundäres oder tertiäres Gleason Pattern. Das Pattern kann einen Wert zwischen 1-5 annehmen, wobei erst Werte ab 3 als maligne gelten. Das primäre Pattern ist das häufigste, das sekundäre das zweithäufigste. In seltenen Fällen wird auch ein tertiäres Pattern angegeben. Der Gleason Score ist ein histopathologisches Klassifikationssystem zur Beurteilung der Morphologie von Adenokarzinomen der Prostata und wird aus der Summe von primären und sekundärem Pattern berechnet.",
+        "short": "Gleason Score (Gesamt)",
+        "definition": "Gleason Score. Der Gleason Score ist ein histopathologisches Klassifikationssystem zur Beurteilung der Morphologie von Adenokarzinomen der Prostata und wird aus der Summe von primärem und sekundärem Pattern berechnet. Der Wertebereich reicht von 2 bis 10.",
         "mustSupport": true
       },
       {
         "id": "Observation.code.coding",
         "path": "Observation.code.coding",
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-primary-secondary-tertiary"
+        "patternCoding": {
+          "code": "372278000",
+          "system": "http://snomed.info/sct",
+          "display": "Gleason score (observable entity)"
         }
       },
       {
@@ -136,13 +137,13 @@
         "mustSupport": true,
         "binding": {
           "strength": "extensible",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-patterns"
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-score-gesamt"
         }
       },
       {
         "id": "Observation.value[x].coding",
         "path": "Observation.value[x].coding",
-        "short": "Gleason-Pattern",
+        "short": "Gleason-Score",
         "_short": {
           "extension": [
             {
@@ -154,13 +155,13 @@
                 },
                 {
                   "url": "content",
-                  "valueString": "Gleason-Pattern"
+                  "valueString": "Gleason-Score"
                 }
               ]
             }
           ]
         },
-        "definition": "Gleason-Pattern einer Prostata-Biopsie oder Operation",
+        "definition": "Gleason-Gesamtscore einer Prostata-Biopsie oder Operation ohne Aufschlüsselung in Primär- und Sekundär-Pattern",
         "_definition": {
           "extension": [
             {
@@ -172,7 +173,7 @@
                 },
                 {
                   "url": "content",
-                  "valueString": "Gleason-Pattern einer Prostata-Biopsie oder Operation"
+                  "valueString": "Gleason-Gesamtscore einer Prostata-Biopsie oder Operation ohne Aufschlüsselung in Primär- und Sekundär-Pattern"
                 }
               ]
             }

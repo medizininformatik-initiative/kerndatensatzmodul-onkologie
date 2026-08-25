@@ -9,7 +9,7 @@ Usage: #example
 * subject = Reference(Patient/example)
 * focus = Reference(Condition/primaertumor-example)
 * effectiveDateTime = "2024-01-11"
-* valueCodeableConcept.coding.code = #IVB
+* valueCodeableConcept.coding = $mii-cs-onko-weitere-klassifikationen-obds#figo-ivb "FIGO IVB"
 * valueCodeableConcept.text = "FIGO Stadium IVB"
 
 Instance: mii-exa-onko-weitere-klassifikationen-3

@@ -71,7 +71,7 @@ Description: "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der 
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 * extension contains
-    MII_EX_Onko_Histology_Morphology_Behavior_ICDO3 named morphology-behavior-icdo3 0..1 MS and
+    MII_EX_Onko_Histology_Morphology_Behavior_ICDO3 named morphology-behavior-icdo3 0..* MS and
     http://hl7.org/fhir/StructureDefinition/condition-occurredFollowing named occurredFollowing 0..* MS
 * insert Label (extension[morphology-behavior-icdo3], ICD-O-Morphologie, Morphologie des Primärtumors nach ICD-O-3 nach 6.3 oBDS)
 * insert Translation(extension[morphology-behavior-icdo3] ^short, de-DE, ICD-O-Morphologie)

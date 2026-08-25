@@ -18,6 +18,7 @@ Description: "Comprehensive collection of cancer staging systems and classificat
 * include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept is-a #formen
 * include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept is-a #eln-klassifikation
 * include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept is-a #durie-salmon-stadium
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept is-a #figo
 * include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept is-a #bismuth
 * include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept is-a #masaoka
 * include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept is-a #mitoserate-gist

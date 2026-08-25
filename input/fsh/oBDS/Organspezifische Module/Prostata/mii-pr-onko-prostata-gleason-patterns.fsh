@@ -1,8 +1,8 @@
 Profile: MII_PR_Onko_Prostata_Gleason_Pattern
 Parent: Observation
 Id: mii-pr-onko-prostate-gleason-patterns
-Title: "MII PR Onkologie Prostata Gleason Primär"
-Description: "Dieses Profil beschreibt einen primären Gleasonscore in der Onkologie"
+Title: "MII PR Onkologie Prostata Gleason Pattern"
+Description: "Dieses Profil beschreibt ein Gleason Pattern in der Onkologie. Es wird für das primäre, das sekundäre und das tertiäre Pattern gleichermaßen verwendet; welches Pattern gemeint ist, ergibt sich aus Observation.code."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active
