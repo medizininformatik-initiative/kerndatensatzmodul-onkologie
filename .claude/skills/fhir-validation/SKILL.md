@@ -35,10 +35,12 @@ Two supported ways to suppress:
 2. **By message-id + path**: `"Terminology_TX_Confirm_4a@AdverseEvent.event*"`
 
 > ⚠️ **NIEMALS Freitext-Regeln verwenden** (z.B. `"Unknown code 'RDE96' …*"`).
-> Text-Wildcard-Regeln ohne `id@path`-Format crashen validator_cli 6.5.7 mit einer
-> NullPointerException in `RulesDrivenPolicyAdvisor.stringMatches`, sobald ein Issue
-> ohne messageId auftritt — dadurch brach von März bis August 2026 **jeder** CI-Lauf
-> nach ~90 s ab (beads `a5l`). Basis- und Meta-Modul nutzen ausschließlich
+> Text-Wildcard-Regeln ohne `id@path`-Format crashen validator_cli (verifiziert bis
+> einschließlich 6.9.11) mit einer NullPointerException in
+> `RulesDrivenPolicyAdvisor.stringMatches`, sobald ein Issue ohne messageId auftritt —
+> dadurch brach von März bis August 2026 **jeder** CI-Lauf nach ~90 s ab (beads `a5l`).
+> Die effektive Validator-Version kommt aus der Org-Variable `JAVA_VALIDATOR_VERSION`
+> (Repo-Variable überschreibt sie; der Workflow-Fallback 6.5.7 greift nur ohne beide). Basis- und Meta-Modul nutzen ausschließlich
 > `MessageID@path`-Regeln — das ist die Konvention. Wenn kein Message-ID-Match
 > möglich ist: Ursache im Repo fixen (z.B. Fragment-CodeSystem mitliefern) statt
 > per Text unterdrücken.
