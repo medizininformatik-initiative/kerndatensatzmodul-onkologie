@@ -1172,6 +1172,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-ex-onko-tnm-a-praefix"
+        },
+        "name": "MII EX Onkologie TNM a-Präfix",
+        "description": "Kennzeichnet eine TNM T-, N- oder M-Kategorie, deren Feststellung erst im Rahmen einer Autopsie erfolgte (UICC a-Präfix). Als modifierExtension zu verwenden, da das a-Präfix die Interpretation des Kategorie-Wertes verändert.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-ex-onko-tnm-cp-praefix"
         },
         "name": "MII EX Onkologie TNM c/p Präfix",
@@ -1188,10 +1196,26 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-ex-onko-tnm-r-praefix"
+        },
+        "name": "MII EX Onkologie TNM r-Präfix",
+        "description": "Kennzeichnet eine TNM T-, N- oder M-Kategorie, deren Feststellung zur Beurteilung eines Rezidivs erfolgte (UICC r-Präfix, z. B. rcT2). Als modifierExtension zu verwenden, da das r-Präfix die Interpretation des Kategorie-Wertes verändert.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-ex-onko-tnm-sn-suffix"
         },
         "name": "MII EX Onkologie TNM SN Suffix",
         "description": "Die Extension verleiht der TNM N-Kategorie das Schildwächterlymphknoten (Sentinel Lymph Node) Suffix.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-onko-tnm-y-praefix"
+        },
+        "name": "MII EX Onkologie TNM y-Präfix",
+        "description": "Kennzeichnet eine TNM T-, N- oder M-Kategorie, deren Feststellung während oder nach initialer multimodaler Therapie erfolgte (UICC y-Präfix, z. B. ycT2, ypN0). Als modifierExtension zu verwenden, da das y-Präfix die Interpretation des Kategorie-Wertes verändert.",
         "exampleBoolean": false
       },
       {

@@ -6,6 +6,20 @@
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
     ]
   },
+  "modifierExtension": [
+    {
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "r",
+            "system": "https://www.uicc.org/resources/tnm",
+            "display": "r"
+          }
+        ]
+      },
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-r-praefix"
+    }
+  ],
   "valueCodeableConcept": {
     "coding": [
       {
@@ -31,18 +45,6 @@
               "code": "c",
               "system": "https://www.uicc.org/resources/tnm",
               "display": "c"
-            }
-          ]
-        }
-      },
-      {
-        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-r-praefix",
-        "valueCodeableConcept": {
-          "coding": [
-            {
-              "code": "r",
-              "system": "https://www.uicc.org/resources/tnm",
-              "display": "r"
             }
           ]
         }

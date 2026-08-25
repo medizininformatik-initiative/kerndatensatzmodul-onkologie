@@ -128,8 +128,7 @@ Usage: #example
 * status = #final
 * code.extension[0].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix"
 * code.extension[0].valueCodeableConcept = $UICC#c "c"
-* code.extension[1].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-y-praefix"
-* code.extension[1].valueCodeableConcept = $UICC#y "y"
+* modifierExtension[yPraefix].valueCodeableConcept = $UICC#y "y"
 * code = $SCT#399504009 "cT category (observable entity)"
 * subject = Reference(Patient/example)
 * effectiveDateTime = "2024-05-20"
@@ -144,8 +143,7 @@ Usage: #example
 * status = #final
 * code.extension[0].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix"
 * code.extension[0].valueCodeableConcept = $UICC#c "c"
-* code.extension[1].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-y-praefix"
-* code.extension[1].valueCodeableConcept = $UICC#y "y"
+* modifierExtension[yPraefix].valueCodeableConcept = $UICC#y "y"
 * code = $SCT#399534004 "cN category (observable entity)"
 * subject = Reference(Patient/example)
 * effectiveDateTime = "2024-05-20"
@@ -184,8 +182,7 @@ Usage: #example
 * status = #final
 * code.extension[0].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix"
 * code.extension[0].valueCodeableConcept = $UICC#p "p"
-* code.extension[1].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-y-praefix"
-* code.extension[1].valueCodeableConcept = $UICC#y "y"
+* modifierExtension[yPraefix].valueCodeableConcept = $UICC#y "y"
 * code = $SCT#384625004 "pT category (observable entity)"
 * subject = Reference(Patient/example)
 * effectiveDateTime = "2024-06-15"
@@ -200,8 +197,7 @@ Usage: #example
 * status = #final
 * code.extension[0].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix"
 * code.extension[0].valueCodeableConcept = $UICC#p "p"
-* code.extension[1].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-y-praefix"
-* code.extension[1].valueCodeableConcept = $UICC#y "y"
+* modifierExtension[yPraefix].valueCodeableConcept = $UICC#y "y"
 * code = $SCT#371494008 "pN category (observable entity)"
 * subject = Reference(Patient/example)
 * effectiveDateTime = "2024-06-15"
@@ -283,8 +279,7 @@ Usage: #example
 * status = #final
 * code.extension[0].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix"
 * code.extension[0].valueCodeableConcept = $UICC#c "c"
-* code.extension[1].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-r-praefix"
-* code.extension[1].valueCodeableConcept = $UICC#r "r"
+* modifierExtension[rPraefix].valueCodeableConcept = $UICC#r "r"
 * code = $SCT#399504009 "cT category (observable entity)"
 * subject = Reference(Patient/example)
 * effectiveDateTime = "2027-06-20"
@@ -299,8 +294,7 @@ Usage: #example
 * status = #final
 * code.extension[0].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix"
 * code.extension[0].valueCodeableConcept = $UICC#c "c"
-* code.extension[1].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-r-praefix"
-* code.extension[1].valueCodeableConcept = $UICC#r "r"
+* modifierExtension[rPraefix].valueCodeableConcept = $UICC#r "r"
 * code = $SCT#399534004 "cN category (observable entity)"
 * subject = Reference(Patient/example)
 * effectiveDateTime = "2027-06-20"
@@ -315,8 +309,7 @@ Usage: #example
 * status = #final
 * code.extension[0].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix"
 * code.extension[0].valueCodeableConcept = $UICC#c "c"
-* code.extension[1].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-r-praefix"
-* code.extension[1].valueCodeableConcept = $UICC#r "r"
+* modifierExtension[rPraefix].valueCodeableConcept = $UICC#r "r"
 * code = $SCT#399387003 "cM category (observable entity)"
 * subject = Reference(Patient/example)
 * effectiveDateTime = "2027-06-20"

@@ -20,6 +20,18 @@ Description: "TNM-Klassifikation: TNM N-Kategorie. Ausbreitung von regionären L
 * code from MII_VS_Onko_TNM_N_Kategorie (preferred)
 * code.coding.code 1.. MS
 * code.coding.system 1.. MS
+
+// UICC-Präfixe y/r/a als modifierExtension: sie verändern die Interpretation des
+// Kategorie-Wertes (ypT2 ist nicht mit pT2 vergleichbar, rT beurteilt das Rezidiv,
+// aT wurde erst bei Autopsie festgestellt) — siehe Extension-Definitionen.
+* modifierExtension contains
+    MII_EX_Onko_TNM_y_Praefix named yPraefix 0..1 MS and
+    MII_EX_Onko_TNM_r_Praefix named rPraefix 0..1 MS and
+    MII_EX_Onko_TNM_a_Praefix named aPraefix 0..1 MS
+* modifierExtension[yPraefix] ^short = "TNM y-Präfix (während/nach multimodaler Therapie)"
+* modifierExtension[rPraefix] ^short = "TNM r-Präfix (Rezidiv)"
+* modifierExtension[aPraefix] ^short = "TNM a-Präfix (Autopsie)"
+
 * subject 1..1 MS
 * subject only Reference(Patient)
 * effective[x] MS
@@ -82,3 +94,6 @@ Source: MII_PR_Onko_TNM_N_Kategorie
 * effectiveDateTime -> "8.1" "TNM Datum"
 * code.extension[MII_EX_Onko_TNM_cp_Praefix].valueCodeableConcept.coding.code -> "8.7" "TNM c/p-Präfix N"
 * valueCodeableConcept.coding.code -> "8.11" "TNM N-Kategorie"
+* modifierExtension[yPraefix].valueCodeableConcept.coding.code -> "8.3" "TNM y-Symbol"
+* modifierExtension[rPraefix].valueCodeableConcept.coding.code -> "8.4" "TNM r-Symbol"
+* modifierExtension[aPraefix].valueCodeableConcept.coding.code -> "8.5" "TNM a-Symbol"

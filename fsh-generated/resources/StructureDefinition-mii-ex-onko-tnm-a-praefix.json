@@ -1,0 +1,72 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-ex-onko-tnm-a-praefix",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-a-praefix",
+  "version": "2026.0.3",
+  "name": "MII_EX_Onko_TNM_a_Praefix",
+  "title": "MII EX Onkologie TNM a-Präfix",
+  "status": "active",
+  "description": "Kennzeichnet eine TNM T-, N- oder M-Kategorie, deren Feststellung erst im Rahmen einer Autopsie erfolgte (UICC a-Präfix). Als modifierExtension zu verwenden, da das a-Präfix die Interpretation des Kategorie-Wertes verändert.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Observation"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "MII EX Onkologie TNM a-Präfix",
+        "definition": "Kennzeichnet eine TNM T-, N- oder M-Kategorie, deren Feststellung erst im Rahmen einer Autopsie erfolgte (UICC a-Präfix). Als modifierExtension zu verwenden, da das a-Präfix die Interpretation des Kategorie-Wertes verändert.",
+        "isModifier": true,
+        "isModifierReason": "Das a-Präfix verändert die Interpretation der TNM-Kategorie: die Klassifikation wurde erst durch eine Autopsie festgestellt und ist nicht mit prämortalen Klassifikationen vergleichbar."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-a-praefix"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "a",
+              "system": "https://www.uicc.org/resources/tnm",
+              "display": "a"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Extension.value[x].coding.system",
+        "path": "Extension.value[x].coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.value[x].coding.code",
+        "path": "Extension.value[x].coding.code",
+        "mustSupport": true
+      }
+    ]
+  }
+}

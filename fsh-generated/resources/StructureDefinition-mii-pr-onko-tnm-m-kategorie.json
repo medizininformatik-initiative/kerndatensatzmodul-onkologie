@@ -51,6 +51,104 @@
         "mustSupport": true
       },
       {
+        "id": "Observation.modifierExtension",
+        "path": "Observation.modifierExtension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Observation.modifierExtension:yPraefix",
+        "path": "Observation.modifierExtension",
+        "sliceName": "yPraefix",
+        "short": "TNM y-Präfix (während/nach multimodaler Therapie)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-y-praefix"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.modifierExtension:yPraefix.value[x].coding.code",
+        "path": "Observation.modifierExtension.value[x].coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "8.3",
+            "comment": "TNM y-Symbol"
+          }
+        ]
+      },
+      {
+        "id": "Observation.modifierExtension:rPraefix",
+        "path": "Observation.modifierExtension",
+        "sliceName": "rPraefix",
+        "short": "TNM r-Präfix (Rezidiv)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-r-praefix"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.modifierExtension:rPraefix.value[x].coding.code",
+        "path": "Observation.modifierExtension.value[x].coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "8.4",
+            "comment": "TNM r-Symbol"
+          }
+        ]
+      },
+      {
+        "id": "Observation.modifierExtension:aPraefix",
+        "path": "Observation.modifierExtension",
+        "sliceName": "aPraefix",
+        "short": "TNM a-Präfix (Autopsie)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-a-praefix"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.modifierExtension:aPraefix.value[x].coding.code",
+        "path": "Observation.modifierExtension.value[x].coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "8.5",
+            "comment": "TNM a-Symbol"
+          }
+        ]
+      },
+      {
         "id": "Observation.partOf",
         "path": "Observation.partOf",
         "type": [

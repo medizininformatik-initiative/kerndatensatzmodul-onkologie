@@ -11,17 +11,26 @@ R4_Observation <|-down- TNM_Klassifikation
 Map TNM_T #22FF22{
     8.6 TNM c/p-Präfix T => code.extension[MII_EX_Onko_TNM_cp_Praefix].valueCodeableConcept.coding.code
     8.9 TNM T-Kategorie => valueCodeableConcept.coding.code
+    8.3 TNM y-Symbol => modifierExtension[yPraefix].valueCodeableConcept.coding.code
+    8.4 TNM r-Symbol => modifierExtension[rPraefix].valueCodeableConcept.coding.code
+    8.5 TNM a-Symbol => modifierExtension[aPraefix].valueCodeableConcept.coding.code
    }
 
 TNM_Klassifikation o-- TNM_T
 Map TNM_N #22FF22{
     8.7 TNM c/p-Präfix N => code.extension[MII_EX_Onko_TNM_cp_Praefix].valueCodeableConcept.coding.code
     8.11 TNM N-Kategorie => valueCodeableConcept.coding.code
+    8.3 TNM y-Symbol => modifierExtension[yPraefix].valueCodeableConcept.coding.code
+    8.4 TNM r-Symbol => modifierExtension[rPraefix].valueCodeableConcept.coding.code
+    8.5 TNM a-Symbol => modifierExtension[aPraefix].valueCodeableConcept.coding.code
    }
 TNM_Klassifikation o--- TNM_N
 Map TNM_M #22FF22{
     8.8 TNM c/p-Präfix M => code.extension[MII_EX_Onko_TNM_cp_Praefix].valueCodeableConcept.coding.code
     8.12 TNM M-Kategorie => valueCodeableConcept.coding.code
+    8.3 TNM y-Symbol => modifierExtension[yPraefix].valueCodeableConcept.coding.code
+    8.4 TNM r-Symbol => modifierExtension[rPraefix].valueCodeableConcept.coding.code
+    8.5 TNM a-Symbol => modifierExtension[aPraefix].valueCodeableConcept.coding.code
    }
 TNM_Klassifikation o---- TNM_M
 Map TNM_m #22FF22{
