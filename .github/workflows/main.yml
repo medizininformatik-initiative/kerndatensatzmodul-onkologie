@@ -134,12 +134,17 @@ jobs:
           RESOURCE_COUNT=$(ls -1 fsh-generated/resources/*.json 2>/dev/null | wc -l)
           echo "Resources to validate: $RESOURCE_COUNT"
 
+          # -output/-html-output überschreiben die committeten (stale) QA-Dateien im Workspace,
+          # damit das validation-output-Artefakt die ECHTEN Ergebnisse dieses Laufs enthält
+          # (Bug: Artefakt enthielt seit Feb. 2026 unverändert die committete validation.json).
           java -jar validator_cli.jar \
             fsh-generated/resources/*.json \
             -version 4.0 \
             ${{ vars.JAVA_VALIDATION_OPTIONS || '-output-style compact' }} \
             $UNESCAPED_IG_DEPENDENCIES \
             -ig fsh-generated/resources \
+            -output validation.json \
+            -html-output validation.html \
             -tx http://127.0.0.1:8090/fhir
 
           VALIDATION_END=$(date +%s)
