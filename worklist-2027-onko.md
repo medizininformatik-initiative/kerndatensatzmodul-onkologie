@@ -77,6 +77,8 @@ pxy      ← ehq(HDB-703)    # CRMI-Manifest pinnt SNOMED-Version → 703 vorher
 14w.23   ← 14w.9, 14w.19, 14w.21, 14w.22, 14w.24    # LM-Mappings erst auf finale Profile
 14w.18, 14w.13(Doku), ioj.2(Doku) ← 14w.14 (soft)   # neue IG-Seiten nicht doppelt migrieren
 14w.24   ← Branch-Merge feat/2027-issues → dev
+14w.26   ← 14w.24          # y/a/r-Symbol-Harmonisierung (pot. breaking) mit TNM-SNOMED-Strecke gemeinsam entscheiden
+14w.27   ← 14w.24 (soft)   # TNM-9-Codes: SNOMED-Slice-Handling mit TNM-SNOMED-Strecke/#242 abstimmen
 3bj(Teil 2), 14w.20 ← externe Upstream-Releases (Meta/Basis/Labor/Biobank/Forschungsvorhaben)
 ```
 
@@ -90,7 +92,8 @@ pxy      ← ehq(HDB-703)    # CRMI-Manifest pinnt SNOMED-Version → 703 vorher
 - **`d8f`** (P1) ATC-Transitions 2022 + L01XC in VS 2018–2021 + Generator-Fix
 - `02q` oBDS-Nummern 16.x Systemische Therapie
 - `rvk` + `eyg` TNM-/Morphologie-SearchParameter (ein Aufschlag; `rvk` braucht Entscheidung a/b)
-- Epic `2a4`-Rest: #265, #262, #260, #213, #290, #280, #278, #277
+- `dq9` ICD-O-3-Morphologie validate-code mit CS-Version 2014 (Meldung Heidelberg) — Reproduktion + Ursachenklärung TX-Server vs. VS-Design, Rückmeldung an UKHD
+- Epic `2a4`-Rest: #265, #262, #260, `2a4.2`/#213 (IG-Beispiel MedicationStatement→Procedure, Community-Remeldung 2026-08-25), #290, #280, #278, #277
 - Parallel-Track Epic `ehq`: WU-1 Kat.1 (4 Code-Ergänzungen), Kat.2-Begründungen, Bugs 361/675, **Entscheidung HDB-703** (blockiert `pxy`)
 
 ### Welle 2 — Infrastruktur-Weiche
@@ -101,6 +104,8 @@ pxy      ← ehq(HDB-703)    # CRMI-Manifest pinnt SNOMED-Version → 703 vorher
 - `14w.21` Gleason (#261 approved; #259-Entscheidung einholen)
 - `14w.19` Bindings/Kardinalitäten aufweichen (#288 approved, #306 MII-Patient)
 - **`14w.9`** occurredFollowing + neue Extension transformationVon (Design fertig) — entsperrt `14w.3` + `14w.10`
+- `14w.26` TNM-Symbole y/a/r: value-Muster vereinheitlichen (Community-Frage 2026-08-25; nach `14w.24`, da pot. breaking — ✅ ENTSCHIEDEN: Dual-Coding, beide Codes vergeben wie bei den Kategorien)
+- `14w.27` TNM 9. Auflage: T1b3/M1c1/M1c2 + vollständiges 8.→9.-Delta in UICC-CS/VS, Binding uicc-Slice → extensible (Zusage an UKHD, Kommentierung 2027; SNOMED-Slice mit `14w.24`/#242 abstimmen)
 - `14w.16` Karnofsky/ECOG auf LOINC (#236, #269)
 
 ### Welle 4 — Terminologie-Ausbau (parallel)
