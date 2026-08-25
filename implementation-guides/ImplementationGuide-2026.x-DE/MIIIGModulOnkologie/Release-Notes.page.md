@@ -6,6 +6,35 @@ topic: ReleaseNotes
 ## {{page-title}}
 Hier sind alle Änderungen aufgelistet. 
 
+## Änderungen v2027.0.0 (noch nicht veröffentlicht)
+
+### ⚠️ Breaking Changes
+
+Diese Änderungen erfordern möglicherweise Anpassungen in bestehenden Implementierungen:
+
+- **`BREAKING`** **UICC-Präfixe y, r und a als modifierExtension auf Kategorie-Ebene**: Die Präfixe werden nicht mehr im Kategorie-Wert mitgeführt, sondern an der jeweiligen T-, N- bzw. M-Beobachtung über die neuen Extensions `mii-ex-onko-tnm-y-praefix`, `mii-ex-onko-tnm-r-praefix` und `mii-ex-onko-tnm-a-praefix` abgebildet.
+  - **Warum modifierExtension**: Die Präfixe verändern die Interpretation des Kategorie-Wertes — `ypT2` (Feststellung während oder nach initialer multimodaler Therapie) ist **nicht** dasselbe wie `pT2`. Verarbeitende Systeme MÜSSEN die Extensions kennen und dürfen eine Kategorie nicht ohne Auswertung des Präfixes interpretieren.
+  - **Abgrenzung**: Das c/p/u-Präfix bleibt als reguläre Extension `mii-ex-onko-tnm-cp-praefix` auf `Observation.code` (es benennt die Feststellungsmethode, nicht eine abweichende Interpretation).
+
+### Neue Profile und Funktionalität
+
+- `feat` **Synthetisierte TNM-Klassifikation finalisiert** (`mii-pr-onko-tnm-klassifikation-synthetisiert`): Zusammenführung mehrerer Meldungs-bezogener TNM-Klassifikationen zu einem kohärenten Stand zum Entscheidungszeitpunkt (z. B. Tumorkonferenz).
+  - **Code fix** auf SNOMED CT `399703000` "Integrated TNM category"; das Typ-ValueSet `mii-vs-onko-tnm-klassifikation-typ` wurde entsprechend erweitert (klinisch / pathologisch / integriert)
+  - **`value` (UICC-Stadium) jetzt 1..1**: Das Stadium ist der Zweck der Synthese; am Meldungs-Panel bleibt `value` unverändert 0..1
+  - **Neues optionales `component[tnmFormel]`** (CodeSystem `mii-cs-onko-tnm-formel`) für die generierte TNM-Gesamtformel (z. B. "ypT0 ypN0 cM0"); sie MUSS zu den `hasMember`-Beobachtungen inklusive Präfixen passen und SOLL generiert, nicht manuell gepflegt werden
+  - **Provenienz**: `derivedFrom` auf die Quell-Klassifikationen ist PFLICHT (1..*), `device` ist MS — bei automatisierter Erzeugung SOLL das erzeugende System inklusive Version dokumentiert werden, eine zusätzliche `Provenance`-Ressource KANN für Audit-Anforderungen ergänzt werden
+- `feat` Neue SearchParameter `tnm-y-praefix` (`mii-sp-onko-observation-tnm-y-praefix`) und `tnm-r-praefix` (`mii-sp-onko-observation-tnm-r-praefix`) zur Suche über die neuen Präfix-modifierExtensions.
+
+### Refaktorierungen
+
+- `refactor` **SearchParameter für das c/p/u-Präfix konsolidiert**: Die drei defekten SearchParameter `tnm-t-cppraefix`, `tnm-n-cppraefix` und `tnm-m-cppraefix` wurden durch den gemeinsamen SearchParameter `mii-sp-onko-observation-tnm-cp-praefix` (Code `tnm-cp-praefix`) ersetzt. Die Extension existiert genau einmal auf `Observation.code`; die Unterscheidung zwischen T-, N- und M-Kategorie erfolgt über den Kategorie-Code der Observation (Kombination mit dem SearchParameter `code`).
+
+### Weitere Verbesserungen
+
+- `documentation` Neuer Guidance-Abschnitt "Erscheinungsformen der TNM-Klassifikation" auf der {{pagelink:TNM-Klassifikation-Observation}}-Seite: beschreibt klinisches Staging, pathologisches Staging, Verlauf und die synthetisierte Klassifikation sowie deren Unterscheidung über Code-Achse und Präfix-Modifier.
+
+---
+
 ## Änderungen v2026.0.3 (veröffentlicht 27.03.2026)
 
 ### Technische Verbesserungen
