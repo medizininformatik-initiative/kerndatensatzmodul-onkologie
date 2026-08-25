@@ -26,7 +26,7 @@ Alias: $UCUM =  http://unitsofmeasure.org
 Alias: $ATC_DE = http://fhir.de/CodeSystem/bfarm/atc
 Alias: $UNII = http://fdasis.nlm.nih.gov
 Alias: $NCIT =  http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
-Alias: $RADLEX = http://radlex.org
+Alias: $RADELEMENT = https://radelement.org
 Alias: $MEDDRA = https://www.meddra.org
 
 //MII Onko

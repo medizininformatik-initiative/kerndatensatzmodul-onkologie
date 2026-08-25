@@ -88,7 +88,7 @@ Source: MII_LM_Onko_Organspezifische_Zusatzmodule
   * TumorLokalisation -> "KRK-spezifische Tumorlokalisation"
     * AbstandAnokutanlinie -> "Observation.where(code.coding.system='http://loinc.org' and code.coding.code='33748-5').valueQuantity"
   * BildgebendeVerfahren -> "KRK-spezifische bildgebende Verfahren"
-    * MRTMesorektale -> "Observation.where(code.coding.system='http://radlex.org' and code.coding.code='RDE96')"
+    * MRTMesorektale -> "Observation.where(code.coding.system='https://radelement.org' and code.coding.code='RDE96')"
       * AbstandMesorektale -> "Observation.valueQuantity"
       * AbstandNichtVerfuegbarGrund -> "Observation.valueCodeableConcept"
   * Operation -> "Procedure.where(meta.profile.contains('https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-operation'))"

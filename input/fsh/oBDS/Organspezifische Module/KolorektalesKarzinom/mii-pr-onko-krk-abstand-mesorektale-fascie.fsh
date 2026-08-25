@@ -20,7 +20,7 @@ Description: "Dieses Profil beschreibt den Abstand des Tumors zur mesorektalen F
 * code 1..1 
 * code ^definition = "Abstand des Tumors zur mesorektalen Faszie bei MRT oder Dünnschicht-CT, gemäß oBDS 2021 KR5"
 * code ^short = "MRT/CT Abstand mesorektale Faszie"
-* code.coding = $RADLEX#RDE96 "Distance to MRF" 
+* code.coding = $RADELEMENT#RDE96 "Distance to MRF"
 // mikroskopisch 
 
 * value[x] MS
