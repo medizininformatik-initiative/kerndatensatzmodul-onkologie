@@ -42,6 +42,13 @@ Breast-Journey (c/yc/yp/r), Verlauf-Beispiele, TNM-to-text-Skript, Feedback Ther
 
 ---
 
+### A8 · ICD-10-Meldepflicht-VS + Warning-Invariante (Nachtrag) — Commit `a0e0edb8`
+Neues VS `mii-vs-onko-icd10-meldepflichtige-tumoren` (is-a auf Blockcodes C00-C97, D00-D09, D32, D33, D35.2–.4, D37-D48) + Warning-Invariante `onko-icd-meldepflicht` (memberOf) am icd10-gm-Slice der Diagnose — extensible-Semantik, ohne das geerbte required-Binding des Basis-Profils anzutasten.
+- **Leitfragen:** Deckt die Blockauswahl exakt die aktuelle §65c-/KFRG-Meldepflicht-Menge (gegen aktuelle Manual-Fassung gegenlesen — historische C44-Sonderregeln?)? Expandieren die ICD-10-GM-Blockcodes als is-a-Anker auf dem Ontoserver (prüft der nächste CI-Lauf)? Warning-Severity die richtige Härte?
+- **Dateien:** `overlapping terminologies/mii-vs-onko-icd10-meldepflichtige-tumoren.fsh`, `invariants/onko-icd-meldepflicht.fsh`, Diagnose-Profil.
+
+---
+
 ## Tier B — Mechanisch + verifiziert (Stichproben genügen)
 
 | Thema | Commit | Verifikation liegt vor |
