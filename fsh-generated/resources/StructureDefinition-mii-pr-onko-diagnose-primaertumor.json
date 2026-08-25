@@ -469,7 +469,16 @@
       {
         "id": "Condition.code.coding:icd10-gm",
         "path": "Condition.code.coding",
-        "sliceName": "icd10-gm"
+        "sliceName": "icd10-gm",
+        "constraint": [
+          {
+            "key": "onko-icd-meldepflicht",
+            "severity": "warning",
+            "human": "Der ICD-10-GM-Code sollte aus der Menge der krebsregister-meldepflichtigen Neubildungen stammen (C00-C97, D00-D09, D32-D33, D35.2-D35.4, D37-D48). Andere Codes sind zulässig, aber untypisch für eine onkologische Primärdiagnose.",
+            "expression": "$this.memberOf('https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icd10-meldepflichtige-tumoren')",
+            "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+          }
+        ]
       },
       {
         "id": "Condition.code.coding:icd10-gm.version",

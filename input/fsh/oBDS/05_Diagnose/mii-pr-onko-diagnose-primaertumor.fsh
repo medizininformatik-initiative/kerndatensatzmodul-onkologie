@@ -19,6 +19,12 @@ Description: "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der 
 * encounter 0..1 MS
 * subject 1..1 MS
 * subject only Reference(Patient)
+
+// Krebsregister-Meldepflicht-Menge als Warning-Invariante (extensible-Semantik):
+// Das required-Binding des Basis-Profils auf das volle ICD-10-GM-VS darf nicht
+// abgeschwächt werden — die Invariante warnt bei Codes außerhalb von
+// C00-C97 / D00-D09 / D32-D33 / D35.2-D35.4 / D37-D48, ohne hart zu invalidieren.
+* code.coding[icd10-gm] obeys onko-icd-meldepflicht
 * verificationStatus 0..1 MS 
 * verificationStatus.coding ^slicing.discriminator.type = #pattern
 * verificationStatus.coding ^slicing.discriminator.path = "$this"
