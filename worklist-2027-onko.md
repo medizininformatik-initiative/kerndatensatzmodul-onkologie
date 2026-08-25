@@ -94,8 +94,9 @@ pxy      ← ehq(HDB-703)    # CRMI-Manifest pinnt SNOMED-Version → 703 vorher
 - `rvk` + `eyg` TNM-/Morphologie-SearchParameter (ein Aufschlag; `rvk` braucht Entscheidung a/b)
 - `dq9` ICD-O-3-Morphologie validate-code mit CS-Version 2014 (Meldung Heidelberg) — Reproduktion + Ursachenklärung TX-Server vs. VS-Design, Rückmeldung an UKHD
 - `2a4.3` medication[x]-Slice ohne Slicing-Definition im Snapshot (HL7-Validator compare, Meldung S. Taupadel) — im selben Aufschlag wie `14w.19`/#288 fixen
-- `2a4.4` KRK: RDE96 mit falschem System radlex.org (ist RSNA RadElement CDE) — aus CI-Analyse PR #310
-- `2a4.5` Mamma: implizite LOINC-Answer-List-VS (LL4396-9/LL4678-0) enumerieren (TermServ expandiert LIST-Filter nicht) — aus CI-Analyse PR #310
+- ~~`2a4.4` KRK RDE96~~ ✅ + ~~`2a4.5` LOINC-Answer-Lists~~ ✅ (2026-08-25 gefixt: radelement.org-Fragment-CS; 3 enumerierte VS, dabei Inhaltsfehler LL4678-0 entdeckt)
+- `a5l` (P1) CI-Validierung war seit Feb/März doppelt defekt (stale Artefakt + Validator-NPE durch Freitext-Suppressions) — Kern gefixt, Resthärtung offen; fhir-validation-Skill um Warnungen ergänzt
+- `2a4.6` Hygiene: 25 CS/VS ohne Title (shareable-Verletzung) · `2a4.7` Prostata-TURP-Beispiel (SNOMED nicht im VS) — aus erster echter CI-Validierung seit Feb (50 Errors real, 7 Cluster; TNM-y/r-praefix-Befund → Review-Notiz an `14w.24`, CRMI-package-Befund → `pxy`)
 - Epic `2a4`-Rest: #265, #262, #260, `2a4.2`/#213 (IG-Beispiel MedicationStatement→Procedure, Community-Remeldung 2026-08-25), #290, #280, #278, #277
 - Parallel-Track Epic `ehq`: WU-1 Kat.1 (4 Code-Ergänzungen), Kat.2-Begründungen, Bugs 361/675, **Entscheidung HDB-703** (blockiert `pxy`)
 
