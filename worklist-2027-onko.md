@@ -83,7 +83,7 @@ pxy      ← ehq(HDB-703)    # CRMI-Manifest pinnt SNOMED-Version → 703 vorher
 ```
 
 ### Welle 0 — Vorarbeit sichern (sofort)
-1. `feat/2027-issues` pushen + PR → `dev` (17 Commits TNM + CTCAE)
+1. ~~`feat/2027-issues` pushen + PR → `dev`~~ ✅ erledigt (2026-08-25): **PR #310** (ersetzt #274, Closes #154/#170); CI läuft über den PR
 2. **`14w.24`** (P1) finales TNM: Review, IG-Aufnahme, Merge — entsperrt Klassifikations-/Beispielthemen
 3. ~~`3bj` Teil 1~~ ✅ erledigt (2026-08-25): direkt als PR — kerndatensatz-meta#234 (SP condition-asserted-date); Nebenbefund CapabilityStatement evidence-detail-URL gefixt. Teil 2 (Dependency + Verifikation) bleibt in Welle 7
 
@@ -94,6 +94,8 @@ pxy      ← ehq(HDB-703)    # CRMI-Manifest pinnt SNOMED-Version → 703 vorher
 - `rvk` + `eyg` TNM-/Morphologie-SearchParameter (ein Aufschlag; `rvk` braucht Entscheidung a/b)
 - `dq9` ICD-O-3-Morphologie validate-code mit CS-Version 2014 (Meldung Heidelberg) — Reproduktion + Ursachenklärung TX-Server vs. VS-Design, Rückmeldung an UKHD
 - `2a4.3` medication[x]-Slice ohne Slicing-Definition im Snapshot (HL7-Validator compare, Meldung S. Taupadel) — im selben Aufschlag wie `14w.19`/#288 fixen
+- `2a4.4` KRK: RDE96 mit falschem System radlex.org (ist RSNA RadElement CDE) — aus CI-Analyse PR #310
+- `2a4.5` Mamma: implizite LOINC-Answer-List-VS (LL4396-9/LL4678-0) enumerieren (TermServ expandiert LIST-Filter nicht) — aus CI-Analyse PR #310
 - Epic `2a4`-Rest: #265, #262, #260, `2a4.2`/#213 (IG-Beispiel MedicationStatement→Procedure, Community-Remeldung 2026-08-25), #290, #280, #278, #277
 - Parallel-Track Epic `ehq`: WU-1 Kat.1 (4 Code-Ergänzungen), Kat.2-Begründungen, Bugs 361/675, **Entscheidung HDB-703** (blockiert `pxy`)
 
