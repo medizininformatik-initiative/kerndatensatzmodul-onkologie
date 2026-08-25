@@ -93,6 +93,7 @@ pxy      ← ehq(HDB-703)    # CRMI-Manifest pinnt SNOMED-Version → 703 vorher
 - `02q` oBDS-Nummern 16.x Systemische Therapie
 - `rvk` + `eyg` TNM-/Morphologie-SearchParameter (ein Aufschlag; `rvk` braucht Entscheidung a/b)
 - `dq9` ICD-O-3-Morphologie validate-code mit CS-Version 2014 (Meldung Heidelberg) — Reproduktion + Ursachenklärung TX-Server vs. VS-Design, Rückmeldung an UKHD
+- `2a4.3` medication[x]-Slice ohne Slicing-Definition im Snapshot (HL7-Validator compare, Meldung S. Taupadel) — im selben Aufschlag wie `14w.19`/#288 fixen
 - Epic `2a4`-Rest: #265, #262, #260, `2a4.2`/#213 (IG-Beispiel MedicationStatement→Procedure, Community-Remeldung 2026-08-25), #290, #280, #278, #277
 - Parallel-Track Epic `ehq`: WU-1 Kat.1 (4 Code-Ergänzungen), Kat.2-Begründungen, Bugs 361/675, **Entscheidung HDB-703** (blockiert `pxy`)
 
@@ -102,7 +103,7 @@ pxy      ← ehq(HDB-703)    # CRMI-Manifest pinnt SNOMED-Version → 703 vorher
 ### Welle 3 — Entschiedene/approved Profiländerungen (klein, parallel)
 - `14w.22` morphology-behavior 0..* + FIGO-Substages (#298/#297, approved)
 - `14w.21` Gleason (#261 approved; #259-Entscheidung einholen)
-- `14w.19` Bindings/Kardinalitäten aufweichen (#288 approved, #306 MII-Patient)
+- `14w.19` Bindings/Kardinalitäten aufweichen (#288 approved, #306 MII-Patient) — Design: medicationCodeableConcept-Aufweichung als Invariante (CodeableConcept ODER Medication-Referenz mit Code); Entscheidung Montag 2026-08-31, danach PR ggf. von chgl; zusammen mit `2a4.3` umsetzen; Rückmeldung an C. Gulden + P. Behrend (FDPG)
 - **`14w.9`** occurredFollowing + neue Extension transformationVon (Design fertig) — entsperrt `14w.3` + `14w.10`
 - `14w.26` TNM-Symbole y/a/r: value-Muster vereinheitlichen (Community-Frage 2026-08-25; nach `14w.24`, da pot. breaking — ✅ ENTSCHIEDEN: Dual-Coding, beide Codes vergeben wie bei den Kategorien)
 - `14w.27` TNM 9. Auflage: T1b3/M1c1/M1c2 + vollständiges 8.→9.-Delta in UICC-CS/VS, Binding uicc-Slice → extensible (Zusage an UKHD, Kommentierung 2027; SNOMED-Slice mit `14w.24`/#242 abstimmen)
