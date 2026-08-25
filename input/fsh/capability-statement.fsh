@@ -68,7 +68,7 @@ Usage: #definition
 * insert SupportSearchParam(encounter, http://hl7.org/fhir/SearchParameter/clinical-encounter, #reference, #SHALL)
 * insert SupportSearchParam(recorded-date, http://hl7.org/fhir/SearchParameter/Condition-recorded-date, #date, #SHALL)
 * insert SupportSearchParam(asserted-date, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-condition-asserted-date, #date, #SHALL)
-* insert SupportSearchParam(evidence-detail, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-condition-evidence, #reference, #SHALL)
+* insert SupportSearchParam(evidence-detail, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-condition-evidence-detail, #reference, #SHALL)
 
 // Specimen requirements
 * insert SupportResource(Specimen, #SHALL)

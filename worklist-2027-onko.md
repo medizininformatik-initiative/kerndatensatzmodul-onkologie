@@ -85,7 +85,7 @@ pxy      ← ehq(HDB-703)    # CRMI-Manifest pinnt SNOMED-Version → 703 vorher
 ### Welle 0 — Vorarbeit sichern (sofort)
 1. `feat/2027-issues` pushen + PR → `dev` (17 Commits TNM + CTCAE)
 2. **`14w.24`** (P1) finales TNM: Review, IG-Aufnahme, Merge — entsperrt Klassifikations-/Beispielthemen
-3. `3bj` Teil 1: Issue beim Meta-Team einreichen (lange Vorlaufzeit, früh anstoßen)
+3. ~~`3bj` Teil 1~~ ✅ erledigt (2026-08-25): direkt als PR — kerndatensatz-meta#234 (SP condition-asserted-date); Nebenbefund CapabilityStatement evidence-detail-URL gefixt. Teil 2 (Dependency + Verifikation) bleibt in Welle 7
 
 ### Welle 1 — Bugfixes (parallel, jederzeit releasbar)
 - **`2a4.1`** (P1) VS-Filter Mamma-Imaging (#302) — Einzeiler
