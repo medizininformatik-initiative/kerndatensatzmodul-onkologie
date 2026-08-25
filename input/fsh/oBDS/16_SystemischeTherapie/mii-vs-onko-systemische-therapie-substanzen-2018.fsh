@@ -47,6 +47,8 @@ Description: "ATC-Codes für Substanzen der systemischen Therapie, validiert geg
 * include http://fhir.de/CodeSystem/bfarm/atc#L01XX27 "Arsentrioxid"
 * include http://fhir.de/CodeSystem/bfarm/atc#P01BE03 "Artesunat"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01XX02 "Asparaginase"
+* include http://fhir.de/CodeSystem/bfarm/atc#L01XC32 "Atezolizumab"
+* include http://fhir.de/CodeSystem/bfarm/atc#L01XC31 "Avelumab"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01XE17 "Axitinib"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01BC07 "Azacitidin"
 * include http://fhir.de/CodeSystem/bfarm/atc#L04AX01 "Azathioprin"
@@ -56,11 +58,14 @@ Description: "ATC-Codes für Substanzen der systemischen Therapie, validiert geg
 * include http://fhir.de/CodeSystem/bfarm/atc#L04AA26 "Belimumab"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01XX49 "Belinostat"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01AA09 "Bendamustin"
+* include http://fhir.de/CodeSystem/bfarm/atc#L01XC07 "Bevacizumab"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01XX25 "Bexaroten"
 * include http://fhir.de/CodeSystem/bfarm/atc#L02BB03 "Bicalutamid"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01DC01 "Bleomycin"
+* include http://fhir.de/CodeSystem/bfarm/atc#L01XC19 "Blinatumomab"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01XX32 "Bortezomib"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01XE14 "Bosutinib"
+* include http://fhir.de/CodeSystem/bfarm/atc#L01XC12 "Brentuximab vedotin"
 * include http://fhir.de/CodeSystem/bfarm/atc#L04AC09 "Briakinumab"
 * include http://fhir.de/CodeSystem/bfarm/atc#N04BC01 "Bromocriptin"
 * include http://fhir.de/CodeSystem/bfarm/atc#L02AE01 "Buserelin"
@@ -69,6 +74,11 @@ Description: "ATC-Codes für Substanzen der systemischen Therapie, validiert geg
 * include http://fhir.de/CodeSystem/bfarm/atc#N04BC06 "Cabergolin"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01XE26 "Cabozantinib"
 * include http://fhir.de/CodeSystem/bfarm/atc#V03AF04 "Calciumlevofolinat"
+* include http://fhir.de/CodeSystem/bfarm/atc#L01XC06 "Cetuximab"
+* include http://fhir.de/CodeSystem/bfarm/atc#L01XC24 "Daratumumab"
+* include http://fhir.de/CodeSystem/bfarm/atc#L01XC28 "Durvalumab"
+* include http://fhir.de/CodeSystem/bfarm/atc#L01XC26 "Inotuzumab ozogamicin"
+* include http://fhir.de/CodeSystem/bfarm/atc#L01XC11 "Ipilimumab"
 * include http://fhir.de/CodeSystem/bfarm/atc#V03AF06 "Natriumfolinat"
 * include http://fhir.de/CodeSystem/bfarm/atc#L04AC08 "Canakinumab"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01BC06 "Capecitabin"
@@ -211,9 +221,12 @@ Description: "ATC-Codes für Substanzen der systemischen Therapie, validiert geg
 * include http://fhir.de/CodeSystem/bfarm/atc#L02BB02 "Nilutamid"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01AD06 "Nimustin"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01XE31 "Nintedanib"
+* include http://fhir.de/CodeSystem/bfarm/atc#L01XC17 "Nivolumab"
+* include http://fhir.de/CodeSystem/bfarm/atc#L01XC15 "Obinutuzumab"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01XX36 "Oblimersen"
 * include http://fhir.de/CodeSystem/bfarm/atc#H01CB02 "Octreotid"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01XX46 "Olaparib"
+* include http://fhir.de/CodeSystem/bfarm/atc#L01XC27 "Olaratumab"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01XX40 "Omacetaxinmepesuccinat"
 * include http://fhir.de/CodeSystem/bfarm/atc#L03AC02 "Oprelvekin"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01XE35 "Osimertinib"
@@ -223,13 +236,16 @@ Description: "ATC-Codes für Substanzen der systemischen Therapie, validiert geg
 * include http://fhir.de/CodeSystem/bfarm/atc#L01XE33 "Palbociclib"
 * include http://fhir.de/CodeSystem/bfarm/atc#V03AF08 "Palifermin"
 * include http://fhir.de/CodeSystem/bfarm/atc#M05BA03 "Pamidronsäure"
+* include http://fhir.de/CodeSystem/bfarm/atc#L01XC08 "Panitumumab"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01XX42 "Panobinostat"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01XX24 "Pegaspargase"
 * include http://fhir.de/CodeSystem/bfarm/atc#L03AA13 "Pegfilgrastim"
 * include http://fhir.de/CodeSystem/bfarm/atc#L03AB11 "Peginterferon alfa-2a"
 * include http://fhir.de/CodeSystem/bfarm/atc#L03AB10 "Peginterferon alfa-2b"
+* include http://fhir.de/CodeSystem/bfarm/atc#L01XC18 "Pembrolizumab"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01BA04 "Pemetrexed"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01XX08 "Pentostatin"
+* include http://fhir.de/CodeSystem/bfarm/atc#L01XC13 "Pertuzumab"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01AX02 "Pipobroman"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01DB08 "Pirarubicin"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01DB11 "Pixantron"
@@ -252,11 +268,13 @@ Description: "ATC-Codes für Substanzen der systemischen Therapie, validiert geg
 * include http://fhir.de/CodeSystem/bfarm/atc#D05BA "Psoralene zur systemischen Anwendung"
 * include http://fhir.de/CodeSystem/bfarm/atc#G03XC01 "Raloxifen"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01BA03 "Raltitrexed"
+* include http://fhir.de/CodeSystem/bfarm/atc#L01XC21 "Ramucirumab"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01AD07 "Ranimustin"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01XE21 "Regorafenib"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01XE42 "Ribociclib"
 * include http://fhir.de/CodeSystem/bfarm/atc#L04AC04 "Rilonacept"
 * include http://fhir.de/CodeSystem/bfarm/atc#M05BA07 "Risedronsäure"
+* include http://fhir.de/CodeSystem/bfarm/atc#L01XC02 "Rituximab"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01XX39 "Romidepsin"
 * include http://fhir.de/CodeSystem/bfarm/atc#B02BX04 "Romiplostim"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01XE18 "Ruxolitinib"
@@ -291,6 +309,8 @@ Description: "ATC-Codes für Substanzen der systemischen Therapie, validiert geg
 * include http://fhir.de/CodeSystem/bfarm/atc#V10XA53 "Tositumomab/(131I)Iodtositumomab"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01CX01 "Trabectedin"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01XE25 "Trametinib"
+* include http://fhir.de/CodeSystem/bfarm/atc#L01XC03 "Trastuzumab"
+* include http://fhir.de/CodeSystem/bfarm/atc#L01XC14 "Trastuzumab emtansin"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01AB02 "Treosulfan"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01XX14 "Tretinoin"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01AC02 "Triaziquon"
@@ -315,6 +335,27 @@ Description: "ATC-Codes für Substanzen der systemischen Therapie, validiert geg
 * include http://fhir.de/CodeSystem/bfarm/atc#M05BA08 "Zoledronsäure"
 * include http://fhir.de/CodeSystem/bfarm/atc#L01DB05 "Zorubicin"
 
+// ---------------------------------------------------------------------------
+// MANUELL ERGÄNZT (Issue #308 / d8f): monoklonale Antikörper L01XC*
+// Der Generator hat die aktuellen L01F*-Codes gegen ATC 2018 validiert und die
+// nicht auflösbaren Codes stillschweigend verworfen. Dadurch fehlte die gesamte
+// Klasse der monoklonalen Antikörper (Rituximab, Trastuzumab, Nivolumab, ...) in
+// diesem historischen ValueSet. Die 20 DDD-relevanten L01XC-Codes sind oben unter
+// ihrer bis 2021 gültigen Kodierung eingefügt; die Displays entsprechen den
+// L01F*-Einträgen des VS 2022. Umschlüsselung siehe
+// ConceptMap mii-cm-onko-atc-transitions-2022.
+//
+// TODO: Für folgende in 2022 vorhandene L01F*-Substanzen ist der L01XC-Vorgänger-
+// code noch nicht gegen den WHO-/BfArM-ATC-Index 2018 verifiziert und daher
+// bewusst NICHT ergänzt:
+// Ofatumumab, Moxetumomab pasudotox, Isatuximab, Trastuzumab deruxtecan,
+// Trastuzumab duocarmazin, Necitumumab, Cemiplimab, Dostarlimab, Tislelizumab,
+// Retifanlimab, Edrecolomab, Gemtuzumab ozogamicin, Catumaxomab,
+// Dinutuximab beta, Elotuzumab, Mogamulizumab, Tafasitamab, Enfortumab vedotin,
+// Polatuzumab vedotin, Belantamab mafodotin, Oportuzumab monatox,
+// Sacituzumab govitecan, Amivantamab
+// ---------------------------------------------------------------------------
+
 // Statistics for ATC 2018:
-// Valid codes in 2018: 298
-// Unique substances: 294
+// Valid codes in 2018: 318
+// Unique substances: 314
