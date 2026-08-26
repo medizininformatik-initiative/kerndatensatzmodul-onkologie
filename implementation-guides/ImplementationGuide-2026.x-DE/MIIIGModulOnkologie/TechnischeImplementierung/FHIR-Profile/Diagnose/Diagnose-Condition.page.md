@@ -18,6 +18,32 @@ Der oBDS erwartet die Kodierung der Diagnose via ICD-10 sowie die Kodierung der 
 
 Weitere histologische Untersuchungen mit abweichenden Morphologien im Therapieverlauf SOLLEN über das Histologie-Profil erfasst werden. 
 
+### Bezüge zu früheren Tumorerkrankungen: zwei Achsen
+
+Eine onkologische Diagnose kann auf zweierlei Weise mit einer früheren
+Tumorerkrankung zusammenhängen — das Profil trennt diese Fälle bewusst in
+**zwei orthogonale Extensions**:
+
+| | `occurredFollowing` (zeitliche Achse) | `transformationVon` (kausale Achse) |
+|---|---|---|
+| Bedeutung | „trat auf **nach**" — unabhängige Zweiterkrankung | „ist **Transformation von**" — dieselbe Tumor-Linie |
+| Extension | HL7-Standard `condition-occurredFollowing` | modul-eigen `mii-ex-onko-transformation-von` |
+| Ziel | registrierte Onko-Diagnose **oder** {{pagelink:FruehereTumorerkrankungCondition}} (anamnestisch/Freitext) | **nur** registrierte Onko-Diagnose (Transformation setzt bekannten Ursprung voraus) |
+| Typische Fälle | Zweitkarzinom Jahre nach behandeltem Ersttumor | MDS → sekundäre AML · ZNS-Tumor /0 → /3 · CUP → identifizierter Primärtumor |
+
+**Warum die Trennung?** Das Manual der Krebsregistrierung fordert bei
+Transformationen und Umklassifizierungen **Nachvollziehbarkeit**: Bei der
+CUP-Auflösung (Manual Kap. 6.2) werden Histologie, Lokalisation und ICD-10 auf
+den gefundenen Primärtumor geändert, das **ursprüngliche Diagnosedatum bleibt
+aber erhalten** — ohne strukturierten Rückverweis wirkte die nach der
+Ursprungsdiagnose begonnene Therapie unplausibel. `transformationVon` liefert
+genau diesen Rückverweis; ein bloßes `occurredFollowing` würde fälschlich eine
+*unabhängige* Zweiterkrankung suggerieren.
+
+Beide Extensions sind kombinierbar (eine Transformation trat immer auch zeitlich
+„danach" auf); Beispiel: `mii-exa-onko-diagnose-aml-transformation`
+(MDS → sekundäre AML).
+
 ---
 
 ### Verknüpfungen zu anderen Ressourcen
