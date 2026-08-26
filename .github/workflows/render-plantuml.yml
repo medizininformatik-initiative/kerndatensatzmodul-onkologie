@@ -27,9 +27,17 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup PlantUML
+        # Das Ubuntu-apt-Paket ist PlantUML 1.2020.2 und scheitert an der
+        # <style>/map-Syntax neuerer Diagramme — daher gepinnte aktuelle Version.
+        env:
+          PLANTUML_VERSION: 1.2025.10
         run: |
           sudo apt-get update
-          sudo apt-get install -y plantuml graphviz
+          sudo apt-get install -y graphviz default-jre
+          curl -sL -o /opt/plantuml.jar "https://github.com/plantuml/plantuml/releases/download/v${PLANTUML_VERSION}/plantuml-${PLANTUML_VERSION}.jar"
+          printf '#!/bin/bash\nexec java -Djava.awt.headless=true -jar /opt/plantuml.jar "$@"\n' | sudo tee /usr/local/bin/plantuml > /dev/null
+          sudo chmod +x /usr/local/bin/plantuml
+          plantuml -version | head -1
 
       - name: Render PlantUML diagrams
         run: |

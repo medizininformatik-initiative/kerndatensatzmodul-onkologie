@@ -2,30 +2,30 @@
 
 object R4_Observation #22FF22
 
-Map  NrUntersuchteLymphknoten #22FF22 {
+map NrUntersuchteLymphknoten #22FF22 {
     6.7 Anzahl unters. Lymphkn. => Observation.valueQuantity.value
 }
 
 R4_Observation <|-down- NrUntersuchteLymphknoten
 
-Map NrBefalleneLymphknoten #22FF22 {
+map NrBefalleneLymphknoten #22FF22 {
 6.8 Anzahl bef. Lymphkn. => Observation.valueQuantity.value
 }
 R4_Observation <|-down-- NrBefalleneLymphknoten
 
 
-Map NrUntersuchteSentinelLymphknoten  #22FF22{
+map NrUntersuchteSentinelLymphknoten  #22FF22 {
 6.9 Anzahl unters. Sent.-Lymphkn. => Observation.valueQuantity.value
 }
 
 R4_Observation <|-down--- NrUntersuchteSentinelLymphknoten
 
-Map NrBefalleneSentinelLymphknoten  #22FF22{
+map NrBefalleneSentinelLymphknoten  #22FF22 {
 6.10 Anzahl bef. Sent.-Lymphkn. => Observation.valueQuantity.value
 }
 R4_Observation <|-down-- NrBefalleneSentinelLymphknoten
 
-Map Onko_Verlaufshistologie #22FF22 {
+map Onko_Verlaufshistologie #22FF22 {
     06.1 Datum der histologischen Untersuchung => Observation.effectiveDateTime
     06.3 Morphologie-Code => Observation.valueCodeableConcept.coding[icd-o-3].code
     06.4 Morphologie ICD-O/Blue Book Version => Observation.valueCodeableConcept.coding[icd-o-3].version
@@ -34,23 +34,22 @@ Map Onko_Verlaufshistologie #22FF22 {
 
 
 R4_Observation <|-down-- Onko_Verlaufshistologie
-Onko_Verlaufshistologie "1..1" --> Onko_Specimen : specimen
 
 
-Map Onko_Grading #22FF22 {
+map Onko_Grading #22FF22 {
 6.6 Grading =>Observation.valueCodeableConcept.coding.code
 }
 
 
 R4_Observation <|-- Onko_Grading
 
-Map Onko_Tumorgroesse #22FF22 {
+map Onko_Tumorgroesse #22FF22 {
 M7/M8 Tumorgröße => Observation.valueQuantity.value
 }
 
 R4_Observation <|-- Onko_Tumorgroesse
 
-Map Onko_Befund #AAFFAA{
+map Onko_Befund #AAFFAA {
 6.11 Befund => DiagnosticReport.conclusion
 }
 
@@ -58,13 +57,14 @@ Map Onko_Befund #AAFFAA{
 object R4_DiagnosticReport #AAFFAA
 R4_DiagnosticReport <|-- Onko_Befund 
 
-Map Onko_Specimen #44FFFF {
+map Onko_Specimen #44FFFF {
 6.1 Datum der Probenentnahme => Specimen.collection.collectedDateTime
 6.2 Histologie-Einsendenummer => Specimen.accessionIdentifier.value
 }
 
 object R4_Specimen #44FFFF
 R4_Specimen <|---- Onko_Specimen
+Onko_Verlaufshistologie "1..1" --> Onko_Specimen : specimen
 
 legend right 
 |Color|Type|
