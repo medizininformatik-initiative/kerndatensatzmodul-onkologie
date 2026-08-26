@@ -61,6 +61,20 @@ aber nicht mehr in `|2026`). Daraus folgen dieselben Regeln wie bei ICD-O
 2. **Instanzen SOLLEN `coding.version`** (das ATC-Jahr) **angeben**, damit
    Validierung und Auswertung den Jahrgang kennen.
 
+#### Kuratiertes Subset — nicht die vollständige ATC
+
+Anders als bei ICD-O (dort ist die gesamte Klassifikation onkologisch relevant
+und die ValueSets umfassen die komplette Achse) sind die ATC-Jahres-ValueSets
+**kuratierte onkologische Subsets** (~320–440 Substanzen je Jahrgang) auf Basis
+der oBDS-Substanzliste. Daraus folgt ein anderer Pflegevertrag: Jeder Jahrgang
+erfordert neben dem Versions-Pin eine **inhaltliche Kuratierung** (neue
+Onkologika-Zulassungen, Reklassifikationen). Kuratierungslücken sind die
+typische Fehlerquelle — so fehlten die L01XC-Antikörper zeitweise in den
+Jahrgängen 2018–2021 (GitHub #308). Fehlende Substanzen bitte als
+[GitHub Issue](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues)
+melden; die systematische Nachführung neuer Zulassungen ist als
+Monitoring-Prozess geplant (GitHub #282–#284).
+
 ---
 
 ### ATC-Substanzen
