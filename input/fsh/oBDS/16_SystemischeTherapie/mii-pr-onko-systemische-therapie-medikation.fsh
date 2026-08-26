@@ -14,6 +14,13 @@ Description: "Medikation der Systemische Therapie. Dieses Profil beschreibt die 
 
 
 * medication[x] 1..1 MS
+// Explizite Type-Slicing-Definition: Ohne sie trägt der Slice
+// medication[x]:medicationCodeableConcept keine slicing-Deklaration am
+// Basis-Element — der HL7-Validator (compare) bricht dann ab mit
+// "Found a slice ... but there was no definition for the slicing" (beads 2a4.3).
+* medication[x] ^slicing.discriminator.type = #type
+* medication[x] ^slicing.discriminator.path = "$this"
+* medication[x] ^slicing.rules = #open
 * medicationCodeableConcept 1..1 MS
 * medicationCodeableConcept.coding 1..* MS
 * medicationCodeableConcept.coding ^short = "Wirkstoff der systemischen Medikation"
