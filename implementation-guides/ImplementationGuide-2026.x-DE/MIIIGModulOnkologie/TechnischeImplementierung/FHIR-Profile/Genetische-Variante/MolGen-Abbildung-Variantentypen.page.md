@@ -7,8 +7,10 @@ topic: MolGenAbbildungVariantentypen
 
 ### Zweck
 
-Das oBDS erfasst genetische Varianten grobkörnig (Freitext-Name + Ausprägung M/W,
-oBDS 23.1/23.2). Für eine **strukturierte, interoperable** Abbildung **SOLLTE** —
+Das oBDS erfasst genetische Varianten grobkörnig (Freitext-Bezeichnung + eine
+Ausprägung aus `M`/`W`/`P`/`N`/`U` oder ersatzweise Freitext, oBDS 23.1/23.2 —
+siehe Abschnitt *Ausprägungen der Genetik-Meldung*). Für eine
+**strukturierte, interoperable** Abbildung **SOLLTE** —
 wo verfügbar — der [MII Molekulargenetische Befundbericht (MolGen)](https://simplifier.net/medizininformatikinitiative-modulomics)
 verwendet werden, der auf dem HL7-Clinical-Genomics *Genomics Reporting* IG basiert
 und internationale Nomenklaturen nutzt (**HGNC**, **HGVS**, **ISCN**, **Sequence Ontology**).
@@ -80,9 +82,59 @@ Basis-Profil `mii-pr-mtb-immunohistochemistry` mit generischem SNOMED-Code plus
 > sich in **Draft/STU/Trial-Use** — diese Zuordnung ist eine Orientierungshilfe und
 > kann sich mit der Reifung von MolGen/MTB noch ändern.
 
+### Ausprägungen der Genetik-Meldung (§65c / oBDS `Menge_Genetik_Typ`)
+
+Der Markertyp (Tabelle oben) ist nur die eine Achse der Meldung. Die zweite Achse
+ist die **Ausprägung** des Befundes. Der oBDS-Typ `Menge_Genetik_Typ` sieht je
+`Genetische_Variante` genau **eine** Angabe vor — entweder einen Code aus der
+Auswahlliste `Auspraegung` **oder** das Freitextfeld `Sonstige_Auspraegung`
+(`xs:choice`). Die Auswahlliste umfasst fünf Codes; die Modul-Terminologie ergänzt
+`S` als Code für den Freitextfall.
+
+| oBDS-Code | Bedeutung (oBDS-XSD) | SNOMED CT (Modul-ConceptMap) | Empfehlung MolGen/FHIR |
+|-----------|----------------------|------------------------------|------------------------|
+| `M` | Mutation/positiv | `55446002` *Genetic mutation (finding)* | `Observation.value[x]` = LOINC `LA9633-4` „Present" (zu `Observation.code` = LOINC `69548-6`) |
+| `W` | Wildtyp/nicht mutiert/negativ | `412730000` *Genetic finding not detected (finding)* | Negativbefund; ergänzend `component:coding-change-type` (LOINC `48019-4`) = SO `SO:0002073` *no_sequence_alteration* (LOINC-Äquivalent `LA9658-1` „Wild type") |
+| `P` | Polymorphismus | `50334000` *Genetic polymorphism (finding)* | Variante vorhanden (`value[x]` = `LA9633-4`); die Bewertung als Polymorphismus gehört nicht in die Variante, sondern in eine eigene Befund-Interpretation (Genomics-Reporting-Profil *diagnostic-implication*) |
+| `N` | nicht bestimmbar | `1156316003` *Cannot be determined (qualifier value)* | kein `value[x]`; stattdessen `Observation.dataAbsentReason`, z. B. `not-performed` |
+| `U` | unbekannt | `261665006` *Unknown (qualifier value)* | kein `value[x]`; `Observation.dataAbsentReason` = `unknown` |
+| `S` | Sonstiges (Modul-Ergänzung für `Sonstige_Auspraegung`) | `74964007` *Other (qualifier value)* | Freitext nach `Observation.note`; strukturiert nur, soweit der Inhalt einem der obigen Fälle entspricht |
+
+Die SNOMED-Spalte gibt die im Modul gepflegte ConceptMap
+`mii-cm-onko-genetische-variante-auspraegung-sct` wieder (dargestellt auf der Seite
+*Genetische Variante: Ausprägung* im Kapitel oBDS-SNOMED-CT-Mapping) und ist damit
+für das Modul verbindlich. Die MolGen-Spalte ist — wie die Markertyp-Tabelle oben —
+eine **nicht normative** Umsetzungsempfehlung.
+
+**Verhältnis zur Beispiel-Markerliste.** In der zugrunde liegenden Markerliste ist
+bei nahezu allen Zeilen nur `M`/`W` vorgesehen; `P`, `N` und `U` kommen dort nicht
+vor, und die immunhistochemischen Zeilen (Scores `0`/`+`/`++`/`+++` bzw.
+`IC`/`TPS`/`CPS`) verweisen bereits auf den Freitextweg `Sonstige_Auspraegung`. Die
+Liste ist damit eine **Teilmenge** der oBDS-Systematik, kein abweichender
+Wertebereich.
+
+**Quellen.** Maßgeblich für die Ausprägungsliste ist der Typ `Menge_Genetik_Typ`
+des oBDS-XML-Schemas (`oBDS_v3.0.4.xsd` / `oBDS_v3.0.5.xsd`, dort unverändert),
+fachlich beschrieben in der §65c-Plattformdokumentation:
+[Menge_Genetik_Typ](https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532120/Menge_Genetik_Typ).
+Gen und Variante werden in `Bezeichnung` derzeit mit dem Trennzeichen `||`
+kombiniert übermittelt — dieser zusammengesetzte Freitext ist der Ausgangspunkt der
+Markertyp-Zuordnung in der Tabelle oben.
+
 ### Fallback (oBDS-Direktmapping)
 
 Ist MolGen an einem Standort **nicht** implementierbar, gilt weiterhin das
 Direktmapping der oBDS-Felder gemäß der
 [Genetische-Variante-Observation](Genetische-Variante-Observation.page.md):
 `Observation.note` (Variante Name) und `Observation.interpretation` (Ausprägung).
+
+### Stand der Umsetzung
+
+Diese Seite ist die **fachliche Dokumentationsgrundlage** für die Abbildung der
+Variantentypen; sie beschreibt Empfehlungen, keine profilierten Constraints. Die
+**strukturierte Codierung der Variantentypen** — Gen-Identität über HGNC,
+Markertyp-Codes über LOINC sowie kategoriale Varianten über GA4GH Cat-VRS, gestuft
+nach Verfügbarkeit (*tiered*) — ist als eigenes Arbeitspaket **in Umsetzung** und
+für eine kommende Modulversion vorgesehen. Der jeweils aktuelle Stand sowie die
+daraus entstehenden Profile und ValueSets werden in den Release Notes des Moduls
+geführt.
