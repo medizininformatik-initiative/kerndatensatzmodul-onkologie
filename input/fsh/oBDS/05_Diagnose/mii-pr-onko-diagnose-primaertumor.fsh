@@ -81,6 +81,7 @@ Description: "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der 
 * extension contains
     MII_EX_Onko_Histology_Morphology_Behavior_ICDO3 named morphology-behavior-icdo3 0..* MS and
     http://hl7.org/fhir/StructureDefinition/condition-occurredFollowing named occurredFollowing 0..* MS and
+    http://hl7.org/fhir/StructureDefinition/condition-dueTo named dueTo 0..* MS and
     MII_EX_Onko_Transformation_Von named transformationVon 0..* MS
 * insert Label (extension[morphology-behavior-icdo3], ICD-O-Morphologie, Morphologie des Primärtumors nach ICD-O-3 nach 6.3 oBDS)
 * insert Translation(extension[morphology-behavior-icdo3] ^short, de-DE, ICD-O-Morphologie)
@@ -96,6 +97,13 @@ Description: "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der 
 * extension[occurredFollowing] ^short = "Frühere Tumorerkrankungen (zeitliche Abfolge)"
 * extension[occurredFollowing] ^definition = "Verweis auf frühere Tumorerkrankungen, nach denen die aktuelle Diagnose aufgetreten ist — als registrierte onkologische Diagnose oder als nur anamnestisch bekannte frühere Tumorerkrankung. Rein zeitliche Abfolge; für Transformationen derselben Tumor-Linie ist die Extension transformationVon zu verwenden."
 * extension[occurredFollowing].valueReference only Reference(MII_PR_Onko_Diagnose_Primaertumor or MII_PR_Onko_Fruehere_Tumorerkrankung)
+// dueTo = KAUSAL "wurde verursacht durch" (HL7-Standard): therapieassoziierte
+// Sekundärmalignome (t-AML nach Chemotherapie, radiogenes Sarkom nach Radiatio).
+// NICHT Teil des oBDS — über die Registermeldung hinausgehender FHIR-Mehrwert,
+// daher ohne oBDS-Mapping.
+* extension[dueTo] ^short = "Verursacht durch (therapieassoziierte Sekundärmalignome)"
+* extension[dueTo] ^definition = "Verursachung dieser Diagnose durch eine frühere Erkrankung oder Therapie (HL7-Standardextension condition-dueTo) — z. B. therapiebedingte myeloische Neoplasie (9920/3) nach Chemotherapie (Verweis auf MedicationStatement) oder radiogenes Sarkom nach Strahlentherapie (Verweis auf Procedure). Nicht Teil des oBDS; Abgrenzung zu transformationVon (Linien-Kontinuität) siehe IG-Seite."
+* insert Translation(extension[dueTo] ^short, de-DE, Verursacht durch — therapieassoziierte Sekundärmalignome)
 * extension[transformationVon] ^short = "Transformation aus registriertem Primärtumor"
 * extension[transformationVon] ^definition = "Kennzeichnet diese Diagnose als Transformation aus einem bereits registrierten Primärtumor derselben Tumor-Linie — für Konstellationen, in denen das Krebsregister-Regelwerk eine neue Tumor-Entität führt (z. B. MDS → sekundäre AML, ZNS-Tumor /0 → /3). Die CUP-Auflösung nach der Best-Of-Regel (Manual Kap. 6.2) ist davon abzugrenzen: Dort wird dieselbe Entität aktualisiert (Tumor-ID und Diagnosedatum bleiben erhalten), es entsteht keine zweite Diagnose-Ressource."
 * insert Translation(extension[transformationVon] ^short, de-DE, Transformation aus registriertem Primärtumor)

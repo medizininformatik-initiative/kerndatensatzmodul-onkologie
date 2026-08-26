@@ -355,6 +355,41 @@
         ]
       },
       {
+        "id": "Condition.extension:dueTo",
+        "path": "Condition.extension",
+        "sliceName": "dueTo",
+        "short": "Verursacht durch (therapieassoziierte Sekundärmalignome)",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Verursacht durch — therapieassoziierte Sekundärmalignome"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Verursachung dieser Diagnose durch eine frühere Erkrankung oder Therapie (HL7-Standardextension condition-dueTo) — z. B. therapiebedingte myeloische Neoplasie (9920/3) nach Chemotherapie (Verweis auf MedicationStatement) oder radiogenes Sarkom nach Strahlentherapie (Verweis auf Procedure). Nicht Teil des oBDS; Abgrenzung zu transformationVon (Linien-Kontinuität) siehe IG-Seite.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/condition-dueTo"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Condition.extension:transformationVon",
         "path": "Condition.extension",
         "sliceName": "transformationVon",

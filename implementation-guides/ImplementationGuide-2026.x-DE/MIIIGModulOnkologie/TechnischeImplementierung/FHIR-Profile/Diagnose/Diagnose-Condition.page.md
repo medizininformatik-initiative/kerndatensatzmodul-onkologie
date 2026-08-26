@@ -31,6 +31,14 @@ Tumorerkrankung zusammenhängen — das Profil trennt diese Fälle bewusst in
 | Ziel | registrierte Onko-Diagnose **oder** {{pagelink:FruehereTumorerkrankungCondition}} | Condition, Procedure, MedicationStatement/-Administration | **nur** registrierte Onko-Diagnose |
 | Typische Fälle | Zweitkarzinom Jahre nach behandeltem Ersttumor | **therapieassoziiertes Sekundärmalignom** (z. B. t-AML `9920/3` nach Chemotherapie → Verweis auf die Therapie) | MDS → sekundäre AML · ZNS /0 → /3 (Register führt eine **neue** Entität) |
 
+**oBDS-Einordnung:** `occurredFollowing` bildet oBDS 5.9 ab; `dueTo` und
+`transformationVon` sind **nicht Teil der Registermeldung** — sie sind über das
+oBDS hinausgehender FHIR-Mehrwert für die strukturierte Verknüpfung (daher ohne
+oBDS-Mapping). Beispiele: `mii-exa-onko-diagnose-taml-nach-chemo` (t-AML `9920/3`
+dueTo Cyclophosphamid-MedicationStatement) und
+`mii-exa-onko-diagnose-angiosarkom-nach-radiatio` (Hämangiosarkom `9120/3` dueTo
+Strahlentherapie-Procedure).
+
 **Warum nicht einfach `condition-dueTo` für Transformationen?** `dueTo` modelliert
 Verursachung — würde man Transformationen darüber abbilden, wären Linien-
 Transformation (MDS → AML) und externe Verursachung (t-AML nach Chemotherapie)
