@@ -15,6 +15,7 @@ Diese Änderungen erfordern möglicherweise Anpassungen in bestehenden Implement
 - **`BREAKING`** **UICC-Präfixe y, r und a als modifierExtension auf Kategorie-Ebene**: Die Präfixe werden nicht mehr im Kategorie-Wert mitgeführt, sondern an der jeweiligen T-, N- bzw. M-Beobachtung über die neuen Extensions `mii-ex-onko-tnm-y-praefix`, `mii-ex-onko-tnm-r-praefix` und `mii-ex-onko-tnm-a-praefix` abgebildet.
   - **Warum modifierExtension**: Die Präfixe verändern die Interpretation des Kategorie-Wertes — `ypT2` (Feststellung während oder nach initialer multimodaler Therapie) ist **nicht** dasselbe wie `pT2`. Verarbeitende Systeme MÜSSEN die Extensions kennen und dürfen eine Kategorie nicht ohne Auswertung des Präfixes interpretieren.
   - **Abgrenzung**: Das c/p/u-Präfix bleibt als reguläre Extension `mii-ex-onko-tnm-cp-praefix` auf `Observation.code` (es benennt die Feststellungsmethode, nicht eine abweichende Interpretation).
+- **`BREAKING`** **Karnofsky-/ECOG-LOINC-ConceptMaps korrigiert** (GH #269): Die bisherigen Ziel-Codes waren systematisch falsch (Karnofsky um zehn LA-Nummern verschoben, ECOG mit falschen Prüfziffern). Systeme, die die alten LA-Codes aus den ConceptMaps übernommen haben, müssen ihre Daten korrigieren. Zusätzlich binden die Leistungszustand-Profile `valueCodeableConcept.coding[loinc]` jetzt required an neue enumerierte Answer-ValueSets (≙ LL4986-7 bzw. LL529-9, GH #236).
 
 ### Neue Profile und Funktionalität
 
@@ -24,6 +25,14 @@ Diese Änderungen erfordern möglicherweise Anpassungen in bestehenden Implement
   - **Neues optionales `component[tnmFormel]`** (CodeSystem `mii-cs-onko-tnm-formel`) für die generierte TNM-Gesamtformel (z. B. "ypT0 ypN0 cM0"); sie MUSS zu den `hasMember`-Beobachtungen inklusive Präfixen passen und SOLL generiert, nicht manuell gepflegt werden
   - **Provenienz**: `derivedFrom` auf die Quell-Klassifikationen ist PFLICHT (1..*), `device` ist MS — bei automatisierter Erzeugung SOLL das erzeugende System inklusive Version dokumentiert werden, eine zusätzliche `Provenance`-Ressource KANN für Audit-Anforderungen ergänzt werden
 - `feat` Neue SearchParameter `tnm-y-praefix` (`mii-sp-onko-observation-tnm-y-praefix`) und `tnm-r-praefix` (`mii-sp-onko-observation-tnm-r-praefix`) zur Suche über die neuen Präfix-modifierExtensions.
+- `feat` **Beziehungsachsen der Diagnose vervollständigt**: Neben `occurredFollowing` (zeitliche Folge, oBDS 5.9 — Ziel jetzt auch Frühere Tumorerkrankung) gibt es die neue Extension `mii-ex-onko-transformation-von` (Linien-Kontinuität, z. B. MDS → AML, Meningeom /0 → /3) und einen Slice auf die HL7-Standard-Extension `condition-dueTo` (Verursachung, z. B. t-AML nach Chemotherapie, radiogenes Angiosarkom). Drei-Achsen-Guidance mit CUP-Abgrenzung auf der Diagnose-Seite; sechs neue Beispielinstanzen inkl. CUP-Beispielbundle mit Best-Of-Auflösung.
+- `feat` **ICD-O-Revisions-Artefakte** (löst u. a. den Heidelberg-Befund zu 2014er-Codes): versionsgepinnte Jahres-ValueSets für Topographie und Morphologie (Erste Revision 2014 / Zweite Revision 2019), Haupt-ValueSet als Union beider Stände, Transitions-ConceptMap `mii-cm-onko-icdo3-transitions-2019` mit allen 55 Umsteigern der Morphologie-Achse.
+- `feat` **ATC-Jahres-ValueSets 2018–2026 versionsgepinnt** (3.422 Einträge) plus Transitions-ConceptMap 2022 (Monoklonale-Antikörper-Umzug L01XC → L01F); behebt die Versionsambiguität des Terminologieservers bei jahresversionierten CodeSystemen.
+- `feat` **Meldepflicht-ValueSet + Warning-Invariante für die ICD-10-Codierung** der Onko-Diagnose (`mii-vs-onko-icd10-meldepflichtige-tumoren`, Blockcodes C00–C97, D00–D09, D32/D33, D35.2–.4, D37–D48): meldet nicht-meldepflichtige Codes als Warnung, ohne sie zu verbieten.
+- `feat` **MedicationStatement Systemische Therapie**: `medicationReference` ist jetzt als Alternative zu `medicationCodeableConcept` zulässig (beide 0..1 bei `medication[x]` 1..1, GH #288) — erleichtert die Nachnutzung bestehender KDS-Medikation-Ressourcen.
+- `feat` **Kuratiertes KDL-ValueSet** `mii-vs-onko-kdl-dokumentklassen` (45 Dokumentklassen entlang des onkologischen Behandlungspfads) als nicht-verpflichtendes Begleitartefakt für die Dokumentenebene.
+- `feat` AdverseEvent: `event.coding` um SNOMED-CT-Slice erweitert (MedDRA-Binding unverändert am MedDRA-Slice).
+- `feat` Approved Community-Changes: Morphologie-Extension `morphology-behavior-icdo3` jetzt 0..* (GH #298), FIGO-Stadien codierbar (GH #297), Gleason-Scores < 6 zulässig und Pattern-Titel korrigiert (GH #260/#261).
 
 ### Refaktorierungen
 
