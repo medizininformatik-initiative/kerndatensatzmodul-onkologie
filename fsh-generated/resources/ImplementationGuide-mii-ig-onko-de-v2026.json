@@ -2240,14 +2240,6 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/mii-vs-onko-biomarker-loinc"
-        },
-        "name": "MII VS Onkologie Biomarker LOINC (ENCR Table 4)",
-        "description": "Allgemeine (methodenunspezifische) LOINC-Codes der Tumormarker, mit denen nach ENCR-Recommendation Basis of Diagnosis (Table 4) in Kombination mit klinischer Untersuchung eine Krebsdiagnose gestellt werden kann (Basis of Diagnosis 4): CEA, AFP, CA 19-9, CA-125, PSA, hCG, Chromogranin A, gastroenteropankreatische Hormone, Calcitonin, Katecholamin-Metabolite, Hypophysenhormone, M-Protein und Immunglobuline.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "ValueSet/mii-vs-onko-fernmetastasen"
         },
         "name": "MII VS Onkologie Fernmetastasen",
@@ -2324,6 +2316,14 @@
         },
         "name": "MII VS Onkologie ICD-O-3 Topographie 2019",
         "description": "Codes für die Topographie einer neoplastischen Veränderung gemäß ICD-O-3 Zweite Revision (deutsche Ausgabe 2019).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-kdl-dokumentklassen"
+        },
+        "name": "MII VS Onkologie KDL Dokumentklassen",
+        "description": "Kuratierte Auswahl der KDL-Dokumentklassen (KDL 2025) entlang des onkologischen Behandlungspfads (oBDS-Kapitel: Diagnose/Pathologie, Staging-Bildgebung, Tumorkonferenz, Operation, Strahlentherapie, Systemische Therapie, Verlauf/Labor, Tod, Studien, übergreifende Dokumente) als Begleitartefakt für DocumentReference.type. Teilmenge des KDL-Bindings im MII-KDS-Modul Dokument; deprecated-Klassen sind ausgeschlossen.",
         "exampleBoolean": false
       },
       {
