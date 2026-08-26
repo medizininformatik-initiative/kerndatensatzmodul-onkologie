@@ -1,0 +1,148 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Onko_Biomarker_LOINC",
+  "id": "mii-vs-onko-biomarker-loinc",
+  "title": "MII VS Onkologie Biomarker LOINC (ENCR Table 4)",
+  "description": "Allgemeine (methodenunspezifische) LOINC-Codes der Tumormarker, mit denen nach ENCR-Recommendation Basis of Diagnosis (Table 4) in Kombination mit klinischer Untersuchung eine Krebsdiagnose gestellt werden kann (Basis of Diagnosis 4): CEA, AFP, CA 19-9, CA-125, PSA, hCG, Chromogranin A, gastroenteropankreatische Hormone, Calcitonin, Katecholamin-Metabolite, Hypophysenhormone, M-Protein und Immunglobuline.",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-biomarker-loinc",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2026.0.3",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "2039-6",
+            "display": "Carcinoembryonic Ag [Mass/volume] in Serum or Plasma"
+          },
+          {
+            "code": "1834-1",
+            "display": "Alpha-1-Fetoprotein [Mass/volume] in Serum or Plasma"
+          },
+          {
+            "code": "24108-3",
+            "display": "Cancer Ag 19-9 [Units/volume] in Serum or Plasma"
+          },
+          {
+            "code": "10334-1",
+            "display": "Cancer Ag 125 [Units/volume] in Serum or Plasma"
+          },
+          {
+            "code": "2857-1",
+            "display": "Prostate specific Ag [Mass/volume] in Serum or Plasma"
+          },
+          {
+            "code": "19080-1",
+            "display": "Choriogonadotropin [Units/volume] in Serum or Plasma"
+          },
+          {
+            "code": "21198-7",
+            "display": "Choriogonadotropin.beta subunit [Units/volume] in Serum or Plasma"
+          },
+          {
+            "code": "9811-1",
+            "display": "Chromogranin A [Mass/volume] in Serum or Plasma"
+          },
+          {
+            "code": "20448-7",
+            "display": "Insulin [Units/volume] in Serum or Plasma"
+          },
+          {
+            "code": "2338-2",
+            "display": "Glucagon [Mass/volume] in Serum or Plasma"
+          },
+          {
+            "code": "2333-3",
+            "display": "Gastrin [Mass/volume] in Serum or Plasma"
+          },
+          {
+            "code": "3125-2",
+            "display": "Vasoactive intestinal peptide [Mass/volume] in Serum or Plasma"
+          },
+          {
+            "code": "2961-1",
+            "display": "Somatostatin [Mass/volume] in Plasma"
+          },
+          {
+            "code": "18253-5",
+            "display": "Serotonin [Mass/time] in 24 hour Urine"
+          },
+          {
+            "code": "2141-0",
+            "display": "Corticotropin [Mass/volume] in Plasma"
+          },
+          {
+            "code": "1992-7",
+            "display": "Calcitonin [Mass/volume] in Serum or Plasma"
+          },
+          {
+            "code": "2436-4",
+            "display": "Homovanillate [Mass/time] in 24 hour Urine"
+          },
+          {
+            "code": "3122-9",
+            "display": "Vanillylmandelate [Mass/time] in 24 hour Urine"
+          },
+          {
+            "code": "27055-3",
+            "display": "Catecholamines Free [Mass/time] in 24 hour Urine"
+          },
+          {
+            "code": "2842-3",
+            "display": "Prolactin [Mass/volume] in Serum or Plasma"
+          },
+          {
+            "code": "2963-7",
+            "display": "Somatotropin [Mass/volume] in Serum or Plasma"
+          },
+          {
+            "code": "15067-2",
+            "display": "Follitropin [Units/volume] in Serum or Plasma"
+          },
+          {
+            "code": "10501-5",
+            "display": "Lutropin [Units/volume] in Serum or Plasma"
+          },
+          {
+            "code": "3016-3",
+            "display": "Thyrotropin [Units/volume] in Serum or Plasma"
+          },
+          {
+            "code": "33358-3",
+            "display": "Protein.monoclonal [Mass/volume] in Serum or Plasma by Electrophoresis"
+          },
+          {
+            "code": "2465-3",
+            "display": "IgG [Mass/volume] in Serum or Plasma"
+          },
+          {
+            "code": "2458-8",
+            "display": "IgA [Mass/volume] in Serum or Plasma"
+          },
+          {
+            "code": "2472-9",
+            "display": "IgM [Mass/volume] in Serum or Plasma"
+          }
+        ]
+      }
+    ]
+  }
+}
