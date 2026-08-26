@@ -7,5 +7,6 @@ Description: "Value Set für Mamma-Operationen basierend auf SNOMED CT"
 * ^experimental = true
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert SNOMEDCopyrightForVS
 
 * include codes from system $SCT where concept is-a #392090004 //Operation of the breast (procedure)

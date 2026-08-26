@@ -6,6 +6,7 @@ Usage: #definition
 * name = "mii-cm-onko-allgemeiner-leistungszustand-sct"
 * title = "MII CM Onko Allgemeiner Leistungszustand SNOMED Mapping"
 * status = #active
+* insert SNOMEDCopyrightForInstance
 * experimental = false
 * date = "2024-04-11"
 * description = "Mapping Allgemeiner Leistungszustand Codes zu SNOMED-CT"

@@ -8,6 +8,7 @@ Description: "SNOMED CT Codes für die TNM T-Kategorie (alle Präfix-Kombination
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert SNOMEDCopyrightForVS
 // UICC clinical T category allowable values
 * include codes from system $SCT where concept is-a #1352957001
 // UICC pathological T category allowable values

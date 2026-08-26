@@ -6,6 +6,7 @@ Description: "Comprehensive collection of cancer staging systems and classificat
 * ^experimental = true
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert SNOMEDCopyrightForVS
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "https://www.medizininformatik-initiative.de"
 

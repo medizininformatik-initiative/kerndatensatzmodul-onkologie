@@ -6,6 +6,7 @@ Usage: #definition
 * name = "MII CM Onko Primaertumor Diagnosesicherung SCT Mapping"
 * title = "MII CM Onko Primaertumor Diagnosesicherung SNOMED Mapping"
 * status = #active
+* insert SNOMEDCopyrightForInstance
 * experimental = false
 * date = "2024-04-10"
 * description = "Mapping Primärtumor Diagnosesicherung Codes zu SNOMED-CT"

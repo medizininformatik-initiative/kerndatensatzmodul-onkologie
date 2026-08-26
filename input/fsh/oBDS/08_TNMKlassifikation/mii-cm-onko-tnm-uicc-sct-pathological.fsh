@@ -6,6 +6,7 @@ Usage: #definition
 * name = "MII CM Onko Pathological TNM UICC SCT Mapping"
 * title = "MII CM Onko Pathological TNM UICC SNOMED"
 * status = #active
+* insert SNOMEDCopyrightForInstance
 * experimental = false
 * date = "2024-01-05"
 * description = "Mapping pathological TNM UICC Codes zu SNOMED-CT"

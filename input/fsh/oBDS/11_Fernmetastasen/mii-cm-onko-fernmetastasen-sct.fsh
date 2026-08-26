@@ -8,6 +8,7 @@ Description: "Mapping der Fernmetastasen-Codesystems  auf SNOMED"
 * name = "mii-cm-onko-fernmetastasen-sct-mapping"					
 * title = "Fernmetastasen Mapping"					
 * status = #active
+* insert SNOMEDCopyrightForInstance
 * experimental = true					
 * description = "Fernmetastasen"					
 * purpose = "Technical mapping to transform oBDS-Data into SNOMED"					

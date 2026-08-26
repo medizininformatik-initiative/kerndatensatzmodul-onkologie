@@ -7,6 +7,7 @@ Description: "Value Set für intraoperatives Imaging des Präparats nach Exzisio
 * ^experimental = true
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert SNOMEDCopyrightForVS
 
 * include codes from system $SCT where concept is-a #1332559003 "Imaging of tissue specimen (procedure)"
 

@@ -6,6 +6,7 @@ Usage: #definition
 * name = "MII CM Onko Studienteilnahme SCT Mapping"
 * title = "MII CM Onko Studienteilnahme SNOMED Mapping"
 * status = #active
+* insert SNOMEDCopyrightForInstance
 * experimental = false
 * date = "2024-08-01"
 * description = "Mapping Studienteilnahme Status Codes zu SNOMED-CT"

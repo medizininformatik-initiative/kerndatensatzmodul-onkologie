@@ -8,6 +8,7 @@ Description: "Codes für Codes zur Differenzierung der TNM T-Kategorie als entwe
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert SNOMEDCopyrightForVS
 * $SCT#78873005 "T category (observable entity)"
 * $SCT#399504009 "cT category (observable entity)"
 * $SCT#384625004 "pT category (observable entity)"

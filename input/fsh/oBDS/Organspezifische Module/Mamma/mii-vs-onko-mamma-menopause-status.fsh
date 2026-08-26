@@ -7,6 +7,7 @@ Description: "Value Set für (prätherapeutischen) Status der Menopause Score"
 * ^experimental = true
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert SNOMEDCopyrightForVS
 
 * include $SCT#22636003 "Premenopausal state (finding)"
 * include $SCT#76498008 "Postmenopausal state (finding)"

@@ -6,6 +6,7 @@ Usage: #definition
 * name = "MII CM Onko Strahlentherapie Boost SCT Mapping"
 * title = "MII CM Onko Strahlentherapie Boost SNOMED Mapping"
 * status = #active
+* insert SNOMEDCopyrightForInstance
 * experimental = false
 * date = "2024-04-11"
 * description = "Mapping Strahlentherapie Boost Codes zu SNOMED-CT"

@@ -8,6 +8,7 @@ Description: "Value Set für Gleason Score"
 * ^experimental = true
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert SNOMEDCopyrightForVS
 
 * include $SCT#1367519000 "Clavien-Dindo classification grade I (finding)"
 * include $SCT#1367520006 "Clavien-Dindo classification grade II (finding)"

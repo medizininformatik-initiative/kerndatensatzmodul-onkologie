@@ -8,6 +8,7 @@ Description: "Value Set für den Gleason-Gesamtscore (Summe aus primärem und se
 * ^experimental = true
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert SNOMEDCopyrightForVS
 
 * include $SCT#49878003 "Gleason grade score 2 out of 10 (finding)"
 * include $SCT#46677009 "Gleason grade score 3 out of 10 (finding)"

@@ -8,6 +8,7 @@ Description: "Value Set für Prostata-spezifische Operationen basierend auf SNOM
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert SNOMEDCopyrightForVS
 
 * include codes from system $SCT where concept descendent-of #118877007
 

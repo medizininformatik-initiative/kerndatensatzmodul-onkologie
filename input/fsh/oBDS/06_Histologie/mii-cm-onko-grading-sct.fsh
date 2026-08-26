@@ -6,6 +6,7 @@ Usage: #definition
 * name = "MII CM Onko Grading SCT Mapping"
 * title = "MII CM Onko Grading SNOMED Mapping"
 * status = #active
+* insert SNOMEDCopyrightForInstance
 * experimental = false
 * date = "2024-04-11"
 * description = "Mapping Grading Codes zu SNOMED-CT"

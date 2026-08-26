@@ -6,6 +6,7 @@ Usage: #definition
 * name = "MII CM Onko Tod SCT Mapping"
 * title = "MII CM Onko Tod SNOMED Mapping"
 * status = #active
+* insert SNOMEDCopyrightForInstance
 * experimental = false
 * date = "2024-04-11"
 * description = "Mapping Tod Codes zu SNOMED-CT"

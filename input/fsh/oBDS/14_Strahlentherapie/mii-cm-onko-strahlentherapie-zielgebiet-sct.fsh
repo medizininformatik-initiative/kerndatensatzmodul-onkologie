@@ -6,6 +6,7 @@ Usage: #definition
 * name = "MII CM Onko Strahlentherapie Zielstellung SCT Mapping"
 * title = "MII CM Onko Strahlentherapie Zielgebiet SNOMED Mapping"
 * status = #active
+* insert SNOMEDCopyrightForInstance
 * experimental = false
 * date = "2024-04-11"
 * description = "Mapping Strahlentherapie Zielgebiet Codes zu SNOMED-CT"

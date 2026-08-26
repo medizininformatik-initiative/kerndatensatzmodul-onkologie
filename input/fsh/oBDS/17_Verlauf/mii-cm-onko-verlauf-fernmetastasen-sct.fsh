@@ -6,6 +6,7 @@ Usage: #definition
 * name = "MII CM Onko Verlauf Fernmetastasen SCT Mapping"
 * title = "MII CM Onko Verlauf Fernmetastasen SNOMED Mapping"
 * status = #active
+* insert SNOMEDCopyrightForInstance
 * experimental = false
 * date = "2024-04-10"
 * description = "Mapping Verlauf Fernmetastasen Codes zu SNOMED-CT"

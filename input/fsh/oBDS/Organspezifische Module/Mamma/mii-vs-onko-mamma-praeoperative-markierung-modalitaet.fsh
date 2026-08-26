@@ -7,6 +7,7 @@ Description: "Value Set für Imagingmodalität der präoperativen Markierung bei
 * ^experimental = true
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert SNOMEDCopyrightForVS
 
 * include $SCT#1269000008 "Insertion of guide wire into breast using mammography guidance (procedure)"
 * include $SCT#433222002 "Insertion of guide wire into breast using ultrasound guidance (procedure)"

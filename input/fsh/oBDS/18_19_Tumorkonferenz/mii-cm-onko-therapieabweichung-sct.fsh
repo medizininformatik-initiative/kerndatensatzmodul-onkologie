@@ -6,6 +6,7 @@ Usage: #definition
 * name = "MII CM Onko Therapieabweichung SCT Mappingg"
 * title = "MII CM Onko Therapieabweichung SNOMED Mapping"
 * status = #active
+* insert SNOMEDCopyrightForInstance
 * experimental = false
 * date = "2024-04-10"
 * description = "Mapping Therapieabweichung Codes zu SNOMED-CT"

@@ -6,6 +6,7 @@ Usage: #definition
 * name = "MII CM Onko Intention SNOMED Mapping"
 * title = "MII CM Onko Intention SNOMED Mapping"
 * status = #active
+* insert SNOMEDCopyrightForInstance
 * experimental = false
 * date = "2024-04-10"
 * description = "Mapping Intention Codes zu SNOMED-CT"

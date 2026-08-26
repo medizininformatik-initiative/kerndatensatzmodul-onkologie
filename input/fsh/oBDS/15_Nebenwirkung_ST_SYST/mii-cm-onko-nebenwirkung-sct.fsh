@@ -6,6 +6,7 @@ Usage: #definition
 * name = "MII CM Onko Nebenwirkung SCT Mapping"
 * title = "MII CM Onko Nebenwirkung SNOMED Mapping"
 * status = #active
+* insert SNOMEDCopyrightForInstance
 * experimental = false
 * date = "2024-04-10"
 * description = "Mapping Nebenwirkung CTCAE Codes zu SNOMED-CT"
