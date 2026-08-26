@@ -14,7 +14,7 @@ Use this skill when:
 
 ## Release Notes Location
 
-**Primary location**: `implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulOnkologie/Release-Notes.page.md`
+**Primary location**: `implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/Release-Notes.page.md`
 
 This is the **single source of truth** for release notes. Content from here should be copied to `package.json` description for Simplifier registry visibility.
 

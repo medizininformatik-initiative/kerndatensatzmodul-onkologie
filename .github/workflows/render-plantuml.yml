@@ -50,13 +50,13 @@ jobs:
               # Check if this is a module diagram (contains "_Module" in filename)
               if [[ "$filename" == *"_Module"* ]]; then
                 # Create subdirectory for module diagrams
-                output_dir="../../implementation-guides/ImplementationGuide-2026.x-DE/Images/$filename"
+                output_dir="../../implementation-guides/ImplementationGuide-2027.x-DE/Images/$filename"
                 mkdir -p "$(dirname "$puml_file")/$output_dir"
                 plantuml -tsvg "$puml_file" -o "$output_dir"
                 echo "✓ Rendered $filename.svg to $filename/ subdirectory"
               else
                 # Render flat to root Images directory for non-module diagrams
-                plantuml -tsvg "$puml_file" -o "../../implementation-guides/ImplementationGuide-2026.x-DE/Images/"
+                plantuml -tsvg "$puml_file" -o "../../implementation-guides/ImplementationGuide-2027.x-DE/Images/"
                 echo "✓ Rendered $filename.svg to root Images/ directory"
               fi
             done
@@ -65,14 +65,14 @@ jobs:
       - name: Check for changes
         id: git-check
         run: |
-          git diff --exit-code implementation-guides/ImplementationGuide-2026.x-DE/Images/ || echo "changes=true" >> $GITHUB_OUTPUT
+          git diff --exit-code implementation-guides/ImplementationGuide-2027.x-DE/Images/ || echo "changes=true" >> $GITHUB_OUTPUT
 
       - name: Commit rendered diagrams
         if: steps.git-check.outputs.changes == 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add implementation-guides/ImplementationGuide-2026.x-DE/Images/
+          git add implementation-guides/ImplementationGuide-2027.x-DE/Images/
           git commit -m "chore: Auto-render PlantUML diagrams [skip ci]"
 
       - name: Push changes

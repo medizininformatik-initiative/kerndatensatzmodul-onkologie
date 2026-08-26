@@ -17,11 +17,6 @@ Die morphologische Beschaffenheit wird über ICD-O-3 Morphologie kodiert.
 Das BfArM gibt die ICD-O-3 im Auftrag des Bundesministeriums für Gesundheit heraus.  Die aktuelle Version ist hier verfügbar:
 https://www.bfarm.de/DE/Kodiersysteme/Klassifikationen/ICD/ICD-O-3/_node.html
 
-Zu den Revisionsständen (Erste Revision 2014 / Zweite Revision 2019), deren
-Auswirkungen auf die Validierung, der Überleitung von Bestandsdaten und dem
-Ausblick auf die ICD-O-4 siehe die eigene Seite
-{{pagelink:ICD-O-Terminologie}}.
-
 ---
 
 ### **OPS**

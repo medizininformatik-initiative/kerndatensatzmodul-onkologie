@@ -1,6 +1,6 @@
 ---
 parent: 
-topic: BestrahlungProcedure
+topic: StrahlentherapieProcedure
 subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie
 ---
 
@@ -21,25 +21,6 @@ Aus den oben genannten Punkten ergibt sich folgende Kodierempfehlung für die oB
 
 ### Konformität 
 Die vorliegenden Profilierungen sind kompatibel mit dem Prozedurenprofil der ISiK-Basismodule Stufe 4. https://simplifier.net/isik-basis-v4/isikprozedur
-
-
-### Dokumentations-Guidance
-
-**Prophylaktische Bestrahlungen (§65c-Beschluss vom 31.05.2022):**
-Tumorspezifische prophylaktische Bestrahlungen — der Hauptfall ist die
-prophylaktische Ganzhirnbestrahlung (PCI) beim kleinzelligen Lungenkarzinom —
-**sind zu dokumentieren**: `StellungZurOp` = `S` (Sonstiges), die `Intention`
-ergibt sich aus dem Gesamtkonzept (kurativ/palliativ), Zielgebiet z. B. `1.1`
-Ganzhirn. **Nicht zu erfassen** sind supportive Bestrahlungen ohne
-Tumorspezifität (z. B. Mamillenbestrahlung zur Gynäkomastie-Prophylaxe unter
-Hormontherapie beim Prostatakarzinom). Beispiel:
-`mii-exa-onko-strahlentherapie-pci-sclc`.
-
-**Permanentstrahler/Seeds (oBDS 14.6):** Bei Seed-Implantationen (typischerweise
-interstitielle LDR-Brachytherapie) ist der **Tag der Applikation als Ende** zu
-dokumentieren — `performedPeriod.start` = `performedPeriod.end` ist dann korrekt
-und valide. Abweichungen davon sind ein Datenqualitäts-Signal (DQ-Regeln siehe
-GitHub #292).
 
 @```
 from 

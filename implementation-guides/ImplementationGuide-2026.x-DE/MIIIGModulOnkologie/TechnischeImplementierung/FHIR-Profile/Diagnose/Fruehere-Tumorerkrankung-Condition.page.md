@@ -11,25 +11,6 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Structu
 ### Inhalt
 Dieses Profil beschreibt frühere Tumorerkrankungen, die in der Anamnese zu einem früheren Zeitpunkt diagnostiziert oder behandelt wurden. Es basiert auf der FHIR Condition-Ressource, da historische anamnestische Daten häufig nur als Freitext vorliegen.
 
-### Abgrenzung und Verweis-Richtung
-
-Dieses Profil ist für Vorerkrankungen gedacht, die **nur anamnestisch** bekannt
-sind (oBDS 5.9, häufig Freitext). Die aktuelle Diagnose verweist darauf über
-die Extension `occurredFollowing` (zeitliche Achse „trat auf nach").
-
-Zwei Fälle gehören bewusst **nicht** hierher:
-
-1. **Die frühere Erkrankung liegt als registrierte onkologische Diagnose vor**
-   (z. B. im selben DIZ dokumentiert): Dann verweist `occurredFollowing` der
-   neuen Diagnose direkt auf die registrierte
-   {{pagelink:DiagnoseCondition}} — ein Freitext-Duplikat in diesem Profil ist
-   nicht anzulegen.
-2. **Die neue Diagnose ist eine Transformation derselben Tumor-Linie**
-   (MDS → AML, ZNS /0 → /3 — das Register führt eine neue Entität): Dann ist an der
-   neuen Diagnose die Extension `mii-ex-onko-transformation-von` (kausale
-   Achse) zu verwenden — Details und Entscheidungstabelle auf der Seite
-   {{pagelink:DiagnoseCondition}}.
-
 ---
 
 ### Abgrenzung zur Primärtumordiagnose
