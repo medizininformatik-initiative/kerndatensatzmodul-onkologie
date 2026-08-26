@@ -24,12 +24,19 @@ Eine onkologische Diagnose kann auf zweierlei Weise mit einer früheren
 Tumorerkrankung zusammenhängen — das Profil trennt diese Fälle bewusst in
 **zwei orthogonale Extensions**:
 
-| | `occurredFollowing` (zeitliche Achse) | `transformationVon` (kausale Achse) |
-|---|---|---|
-| Bedeutung | „trat auf **nach**" — unabhängige Zweiterkrankung | „ist **Transformation von**" — dieselbe Tumor-Linie |
-| Extension | HL7-Standard `condition-occurredFollowing` | modul-eigen `mii-ex-onko-transformation-von` |
-| Ziel | registrierte Onko-Diagnose **oder** {{pagelink:FruehereTumorerkrankungCondition}} (anamnestisch/Freitext) | **nur** registrierte Onko-Diagnose (Transformation setzt bekannten Ursprung voraus) |
-| Typische Fälle | Zweitkarzinom Jahre nach behandeltem Ersttumor | MDS → sekundäre AML · ZNS-Tumor /0 → /3 (Register führt jeweils eine **neue** Tumor-Entität) |
+| | `occurredFollowing` (zeitlich) | `condition-dueTo` (kausal: Verursachung) | `transformationVon` (Linien-Kontinuität) |
+|---|---|---|---|
+| Bedeutung | „trat auf **nach**" — unabhängige Zweiterkrankung | „wurde **verursacht durch**" | „ist **Transformation von**" — dieselbe Tumor-Linie |
+| Extension | HL7-Standard | HL7-Standard | modul-eigen `mii-ex-onko-transformation-von` |
+| Ziel | registrierte Onko-Diagnose **oder** {{pagelink:FruehereTumorerkrankungCondition}} | Condition, Procedure, MedicationStatement/-Administration | **nur** registrierte Onko-Diagnose |
+| Typische Fälle | Zweitkarzinom Jahre nach behandeltem Ersttumor | **therapieassoziiertes Sekundärmalignom** (z. B. t-AML `9920/3` nach Chemotherapie → Verweis auf die Therapie) | MDS → sekundäre AML · ZNS /0 → /3 (Register führt eine **neue** Entität) |
+
+**Warum nicht einfach `condition-dueTo` für Transformationen?** `dueTo` modelliert
+Verursachung — würde man Transformationen darüber abbilden, wären Linien-
+Transformation (MDS → AML) und externe Verursachung (t-AML nach Chemotherapie)
+nicht mehr unterscheidbar. Die drei Achsen sind bewusst getrennt; auch R5/R6
+bieten hierfür kein Core-Element (die Standard-Extensions leben im
+versionsübergreifenden HL7-Extensions-Pack).
 
 **Warum die Trennung?** Ein bloßes `occurredFollowing` würde bei einer
 Transformation fälschlich eine *unabhängige* Zweiterkrankung suggerieren;
