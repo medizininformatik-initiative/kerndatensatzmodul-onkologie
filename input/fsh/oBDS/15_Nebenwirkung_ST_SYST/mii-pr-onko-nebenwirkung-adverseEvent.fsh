@@ -20,11 +20,23 @@ Description: "Dieses Profil beschreibt die Nebenwirkung von Strahlentherapie und
 * event.coding ^slicing.discriminator.type = #pattern
 * event.coding ^slicing.discriminator.path = "system"
 * event.coding ^slicing.rules = #open
-* event.coding contains meddra 0..1 MS
+* event.coding contains
+    meddra 0..1 MS and
+    snomed 0..1 MS
 * event.coding[meddra].system = "https://www.meddra.org"
 * event.coding[meddra].code 1..1 MS
 * event.coding[meddra].version MS
-* event.coding from mii-vs-onko-nebenwirkung-art (required)
+// Binding auf Slice-Ebene (nicht event.coding gesamt): das Art-VS enthält nur
+// MedDRA-Codes — ein Binding über alle Slices würde den snomed-Slice invalidieren.
+* event.coding[meddra] from mii-vs-onko-nebenwirkung-art (required)
+// SNOMED-CT-Übersetzung der Nebenwirkungsart (beads v9e): gespeist aus der
+// ConceptMap mii-cm-onko-nebenwirkung-meddra-sct (qg7); kein VS-Binding, da die
+// Zielmenge durch die ConceptMap kuratiert wird (~61-80% Coverage, Rest MedDRA-only).
+* event.coding[snomed].system = $SCT
+* event.coding[snomed].code 1..1 MS
+* event.coding[snomed] ^short = "Art der Nebenwirkung (SNOMED CT)"
+* event.coding[snomed] ^definition = "SNOMED-CT-Übersetzung der Nebenwirkungsart, abgeleitet über die ConceptMap mii-cm-onko-nebenwirkung-meddra-sct. Optional; nicht jeder MedDRA-/CTCAE-Term hat ein SNOMED-CT-Äquivalent."
+* insert Translation(event.coding[snomed] ^short, de-DE, Art der Nebenwirkung als SNOMED CT)
 * event.coding.code 0..1 MS
 * event.coding.system 1..1 MS
 * event.coding.version MS
