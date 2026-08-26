@@ -60,7 +60,9 @@ Description: "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der 
 * bodySite.coding[icd-o-3].system 1.. MS
 * bodySite.coding[icd-o-3].system = $ICDO3
 * bodySite.coding[icd-o-3].code 1.. MS
-* bodySite.coding[icd-o-3].code from MII_VS_Onko_ICDO3_Topographie (required)
+// Binding auf coding-Ebene (nicht .code): Bei nacktem code kann der Validator das
+// System nicht bestimmen, sobald das VS mehrere Versions-Kanten hat (Union 2014+2019).
+* bodySite.coding[icd-o-3] from MII_VS_Onko_ICDO3_Topographie (required)
 * insert Label (bodySite.coding[icd-o-3], ICD-O-Topographie, Topographie des Primärtumors nach ICD-O-3 nach 5.4 oBDS 2021)
 * insert Translation(bodySite.coding[icd-o-3] ^short, de-DE, ICD-O-Topographie )
 * insert Translation(bodySite.coding[icd-o-3] ^definition, de-DE, Topographie des Primärtumors nach ICD-O-3 nach 5.4 oBDS 2021 )
@@ -78,14 +80,23 @@ Description: "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der 
 * extension ^slicing.rules = #open
 * extension contains
     MII_EX_Onko_Histology_Morphology_Behavior_ICDO3 named morphology-behavior-icdo3 0..* MS and
-    http://hl7.org/fhir/StructureDefinition/condition-occurredFollowing named occurredFollowing 0..* MS
+    http://hl7.org/fhir/StructureDefinition/condition-occurredFollowing named occurredFollowing 0..* MS and
+    MII_EX_Onko_Transformation_Von named transformationVon 0..* MS
 * insert Label (extension[morphology-behavior-icdo3], ICD-O-Morphologie, Morphologie des Primärtumors nach ICD-O-3 nach 6.3 oBDS)
 * insert Translation(extension[morphology-behavior-icdo3] ^short, de-DE, ICD-O-Morphologie)
 * insert Translation(extension[morphology-behavior-icdo3] ^definition, de-DE, Morphologie des Primärtumors nach ICD-O-3 nach 6.3 oBDS)
 
-* extension[occurredFollowing] ^short = "Frühere Tumorerkrankungen"
-* extension[occurredFollowing] ^definition = "Verweis auf frühere Tumorerkrankungen, nach denen die aktuelle Diagnose aufgetreten ist"
-* extension[occurredFollowing].valueReference only Reference(MII_PR_Onko_Fruehere_Tumorerkrankung)
+// Zwei orthogonale Achsen (beads 14w.9):
+// occurredFollowing = rein ZEITLICH "trat auf nach" — Ziel kann eine registrierte
+// Onko-Diagnose ODER eine nur textlich bekannte frühere Tumorerkrankung sein.
+// transformationVon = KAUSAL "ist Transformation von" (gleiche Tumor-Linie:
+// MDS→AML, ZNS /0→/3, CUP→Primärtumor) — Ziel nur registrierte Onko-Diagnose.
+* extension[occurredFollowing] ^short = "Frühere Tumorerkrankungen (zeitliche Abfolge)"
+* extension[occurredFollowing] ^definition = "Verweis auf frühere Tumorerkrankungen, nach denen die aktuelle Diagnose aufgetreten ist — als registrierte onkologische Diagnose oder als nur anamnestisch bekannte frühere Tumorerkrankung. Rein zeitliche Abfolge; für Transformationen derselben Tumor-Linie ist die Extension transformationVon zu verwenden."
+* extension[occurredFollowing].valueReference only Reference(MII_PR_Onko_Diagnose_Primaertumor or MII_PR_Onko_Fruehere_Tumorerkrankung)
+* extension[transformationVon] ^short = "Transformation aus registriertem Primärtumor"
+* extension[transformationVon] ^definition = "Kennzeichnet diese Diagnose als Transformation aus einem bereits registrierten Primärtumor derselben Tumor-Linie (z. B. MDS → AML, ZNS-Tumor /0 → /3, CUP → identifizierter Primärtumor). Das ursprüngliche Diagnosedatum bleibt an der Ursprungsdiagnose erhalten (Nachvollziehbarkeit, vgl. Manual Kap. 6.2)."
+* insert Translation(extension[transformationVon] ^short, de-DE, Transformation aus registriertem Primärtumor)
 
 * extension[Feststellungsdatum] 1..1 MS
 

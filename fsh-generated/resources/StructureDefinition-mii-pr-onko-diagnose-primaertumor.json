@@ -303,8 +303,8 @@
         "id": "Condition.extension:occurredFollowing",
         "path": "Condition.extension",
         "sliceName": "occurredFollowing",
-        "short": "Frühere Tumorerkrankungen",
-        "definition": "Verweis auf frühere Tumorerkrankungen, nach denen die aktuelle Diagnose aufgetreten ist",
+        "short": "Frühere Tumorerkrankungen (zeitliche Abfolge)",
+        "definition": "Verweis auf frühere Tumorerkrankungen, nach denen die aktuelle Diagnose aufgetreten ist — als registrierte onkologische Diagnose oder als nur anamnestisch bekannte frühere Tumorerkrankung. Rein zeitliche Abfolge; für Transformationen derselben Tumor-Linie ist die Extension transformationVon zu verwenden.",
         "min": 0,
         "max": "*",
         "type": [
@@ -341,6 +341,7 @@
           {
             "code": "Reference",
             "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor",
               "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung"
             ]
           }
@@ -352,6 +353,41 @@
             "comment": "Frühere Tumorerkrankungen"
           }
         ]
+      },
+      {
+        "id": "Condition.extension:transformationVon",
+        "path": "Condition.extension",
+        "sliceName": "transformationVon",
+        "short": "Transformation aus registriertem Primärtumor",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Transformation aus registriertem Primärtumor"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Kennzeichnet diese Diagnose als Transformation aus einem bereits registrierten Primärtumor derselben Tumor-Linie (z. B. MDS → AML, ZNS-Tumor /0 → /3, CUP → identifizierter Primärtumor). Das ursprüngliche Diagnosedatum bleibt an der Ursprungsdiagnose erhalten (Nachvollziehbarkeit, vgl. Manual Kap. 6.2).",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-transformation-von"
+            ]
+          }
+        ],
+        "mustSupport": true
       },
       {
         "id": "Condition.identifier",
@@ -623,7 +659,11 @@
         },
         "min": 0,
         "max": "1",
-        "mustSupport": true
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-topographie"
+        }
       },
       {
         "id": "Condition.bodySite.coding:icd-o-3.system",
@@ -648,10 +688,6 @@
         "path": "Condition.bodySite.coding.code",
         "min": 1,
         "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-topographie"
-        },
         "mapping": [
           {
             "identity": "oBDS",

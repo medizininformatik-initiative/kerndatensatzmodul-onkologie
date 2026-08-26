@@ -68,6 +68,15 @@
       {
         "id": "Condition.extension",
         "path": "Condition.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
         "mustSupport": true
       },
       {
@@ -289,7 +298,11 @@
         "definition": "Anatomische Lokalisation nach ICD-O-3",
         "min": 0,
         "max": "1",
-        "mustSupport": true
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-topographie"
+        }
       },
       {
         "id": "Condition.bodySite.coding:icd-o-3.system",
@@ -303,10 +316,6 @@
         "path": "Condition.bodySite.coding.code",
         "min": 1,
         "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-topographie"
-        },
         "mapping": [
           {
             "identity": "oBDS",

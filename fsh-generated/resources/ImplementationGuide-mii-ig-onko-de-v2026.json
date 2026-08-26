@@ -1244,6 +1244,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-ex-onko-transformation-von"
+        },
+        "name": "MII EX Onkologie Transformation von",
+        "description": "Kennzeichnet, dass diese onkologische Diagnose eine Transformation aus einem bereits registrierten Primärtumor derselben Tumor-Linie ist (z. B. MDS → AML, ZNS-Tumor /0 → /3, CUP → identifizierter Primärtumor). Abzugrenzen von occurredFollowing (rein zeitliche Abfolge unabhängiger Erkrankungen).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "Bundle/mii-exa-onko-kim-musterperson-synthesized"
         },
         "name": "MII EXA Onko Kim Musterperson — Multi-CarePlan TNM Synthese",
@@ -1417,6 +1425,20 @@
         "name": "MII EXA Onko TNM Bundle Legacy (cT2 cN3 cM0, UICC-only)",
         "description": "Beispiel-Bundle in der Legacy-Form (vor SNOMED-CT-Dual-Coding): ein TNM-Staging-Ereignis (cT2 cN3 cM0, UICC IIIB), zusammengehalten durch die TNM-Klassifikation als hasMember-Grouper. Demonstriert, dass die Grouper-zentrierte Suchlogik unabhängig vom Wertcoding funktioniert.",
         "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-onko-diagnose-mds"
+        },
+        "name": "MII EXA Onkologie Diagnose MDS (Ursprungsdiagnose)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-onko-diagnose-aml-transformation"
+        },
+        "name": "MII EXA Onkologie Diagnose sekundäre AML (Transformation aus MDS)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
       },
       {
         "reference": {

@@ -1,0 +1,72 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-ex-onko-transformation-von",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-transformation-von",
+  "version": "2026.0.3",
+  "name": "MII_EX_Onko_Transformation_Von",
+  "title": "MII EX Onkologie Transformation von",
+  "status": "active",
+  "description": "Kennzeichnet, dass diese onkologische Diagnose eine Transformation aus einem bereits registrierten Primärtumor derselben Tumor-Linie ist (z. B. MDS → AML, ZNS-Tumor /0 → /3, CUP → identifizierter Primärtumor). Abzugrenzen von occurredFollowing (rein zeitliche Abfolge unabhängiger Erkrankungen).",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Condition"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "MII EX Onkologie Transformation von",
+        "definition": "Kennzeichnet, dass diese onkologische Diagnose eine Transformation aus einem bereits registrierten Primärtumor derselben Tumor-Linie ist (z. B. MDS → AML, ZNS-Tumor /0 → /3, CUP → identifizierter Primärtumor). Abzugrenzen von occurredFollowing (rein zeitliche Abfolge unabhängiger Erkrankungen)."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-transformation-von"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Transformation aus registriertem Primärtumor",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Transformation aus registriertem Primärtumor"
+                }
+              ]
+            }
+          ]
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
