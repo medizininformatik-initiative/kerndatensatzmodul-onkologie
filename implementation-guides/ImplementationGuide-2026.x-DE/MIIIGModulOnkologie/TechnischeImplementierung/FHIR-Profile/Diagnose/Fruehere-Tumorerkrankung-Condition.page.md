@@ -25,7 +25,7 @@ Zwei Fälle gehören bewusst **nicht** hierher:
    {{pagelink:DiagnoseCondition}} — ein Freitext-Duplikat in diesem Profil ist
    nicht anzulegen.
 2. **Die neue Diagnose ist eine Transformation derselben Tumor-Linie**
-   (MDS → AML, ZNS /0 → /3, CUP → identifizierter Primärtumor): Dann ist an der
+   (MDS → AML, ZNS /0 → /3 — das Register führt eine neue Entität): Dann ist an der
    neuen Diagnose die Extension `mii-ex-onko-transformation-von` (kausale
    Achse) zu verwenden — Details und Entscheidungstabelle auf der Seite
    {{pagelink:DiagnoseCondition}}.

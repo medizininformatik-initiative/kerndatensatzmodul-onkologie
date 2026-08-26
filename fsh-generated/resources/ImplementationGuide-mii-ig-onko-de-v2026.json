@@ -1247,7 +1247,7 @@
           "reference": "StructureDefinition/mii-ex-onko-transformation-von"
         },
         "name": "MII EX Onkologie Transformation von",
-        "description": "Kennzeichnet, dass diese onkologische Diagnose eine Transformation aus einem bereits registrierten Primärtumor derselben Tumor-Linie ist (z. B. MDS → AML, ZNS-Tumor /0 → /3, CUP → identifizierter Primärtumor). Abzugrenzen von occurredFollowing (rein zeitliche Abfolge unabhängiger Erkrankungen).",
+        "description": "Kennzeichnet, dass diese onkologische Diagnose eine Transformation aus einem bereits registrierten Primärtumor derselben Tumor-Linie ist — für Fälle, in denen das Krebsregister-Regelwerk eine neue Tumor-Entität führt (z. B. MDS → sekundäre AML, ZNS-Tumor /0 → /3). Abzugrenzen von occurredFollowing (rein zeitliche Abfolge unabhängiger Erkrankungen) und von der CUP-Auflösung nach der Best-Of-Regel, bei der dieselbe Entität aktualisiert wird (keine zweite Ressource).",
         "exampleBoolean": false
       },
       {

@@ -29,16 +29,29 @@ Tumorerkrankung zusammenhängen — das Profil trennt diese Fälle bewusst in
 | Bedeutung | „trat auf **nach**" — unabhängige Zweiterkrankung | „ist **Transformation von**" — dieselbe Tumor-Linie |
 | Extension | HL7-Standard `condition-occurredFollowing` | modul-eigen `mii-ex-onko-transformation-von` |
 | Ziel | registrierte Onko-Diagnose **oder** {{pagelink:FruehereTumorerkrankungCondition}} (anamnestisch/Freitext) | **nur** registrierte Onko-Diagnose (Transformation setzt bekannten Ursprung voraus) |
-| Typische Fälle | Zweitkarzinom Jahre nach behandeltem Ersttumor | MDS → sekundäre AML · ZNS-Tumor /0 → /3 · CUP → identifizierter Primärtumor |
+| Typische Fälle | Zweitkarzinom Jahre nach behandeltem Ersttumor | MDS → sekundäre AML · ZNS-Tumor /0 → /3 (Register führt jeweils eine **neue** Tumor-Entität) |
 
-**Warum die Trennung?** Das Manual der Krebsregistrierung fordert bei
-Transformationen und Umklassifizierungen **Nachvollziehbarkeit**: Bei der
-CUP-Auflösung (Manual Kap. 6.2) werden Histologie, Lokalisation und ICD-10 auf
-den gefundenen Primärtumor geändert, das **ursprüngliche Diagnosedatum bleibt
-aber erhalten** — ohne strukturierten Rückverweis wirkte die nach der
-Ursprungsdiagnose begonnene Therapie unplausibel. `transformationVon` liefert
-genau diesen Rückverweis; ein bloßes `occurredFollowing` würde fälschlich eine
-*unabhängige* Zweiterkrankung suggerieren.
+**Warum die Trennung?** Ein bloßes `occurredFollowing` würde bei einer
+Transformation fälschlich eine *unabhängige* Zweiterkrankung suggerieren;
+`transformationVon` macht die Tumor-Linie strukturiert nachvollziehbar.
+
+**Fachliche Richtigkeit vs. Krebsregister-Vorgaben:** `transformationVon`
+verknüpft zwei Diagnose-Ressourcen und ist daher nur dort einzusetzen, wo das
+**Register-Regelwerk tatsächlich eine neue Tumor-Entität führt** (MDS → AML,
+ZNS /0 → /3). Die **CUP-Auflösung** nach der Best-Of-Regel (Manual Kap. 6.2)
+ist bewusst **kein** Anwendungsfall: Dort wird **dieselbe Entität geändert** —
+Histologie, Lokalisation und ICD-10 werden auf den gefundenen Primärtumor
+umgeschrieben, Tumor-ID und ursprüngliches Diagnosedatum bleiben erhalten.
+Registerkonform ist das die Aktualisierung **derselben** Condition-Ressource
+(FHIR-Versionierung, ggf. mit Provenance); eine zweite Ressource mit
+`transformationVon` entstünde nur, wenn ein System abweichend die alte
+CUP-Fassung eigenständig historisiert.
+
+**Hinweis zur Modellierung:** `transformationVon` ist bewusst eine *normale*
+Extension (keine modifierExtension): Die Diagnose ist auch ohne sie vollständig
+und sicher interpretierbar — die klinische Sekundärität trägt der
+Morphologie-Code selbst (z. B. `9895/3` AML mit myelodysplasieassoziierten
+Veränderungen); die Extension ergänzt nur die Verknüpfung.
 
 Beide Extensions sind kombinierbar (eine Transformation trat immer auch zeitlich
 „danach" auf); Beispiel: `mii-exa-onko-diagnose-aml-transformation`

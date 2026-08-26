@@ -1,12 +1,19 @@
 // Kausale Achse "ist Transformation von" — orthogonal zu occurredFollowing
-// (rein zeitlich "trat auf nach"). Fälle: MDS→AML (hämato), ZNS /0→/3,
-// CUP→identifizierter Primärtumor (Best-Of-Regel Manual Kap. 6.2).
-// Ziel ist bewusst NUR die registrierte Onko-Diagnose: Eine Transformation
-// setzt einen bekannten Ursprung voraus (beads 14w.9).
+// (rein zeitlich "trat auf nach"). Anwendungsfälle sind Transformationen, bei
+// denen das KREBSREGISTER-REGELWERK eine NEUE Tumor-Entität führt (MDS→AML,
+// ZNS /0→/3). NICHT der Normalfall bei CUP-Auflösung: Dort wird nach der
+// Best-Of-Regel (Manual Kap. 6.2) DIESELBE Entität geändert (Tumor-ID und
+// Diagnosedatum bleiben) — registerkonform ist die Aktualisierung derselben
+// Condition (FHIR-Versionierung), nicht eine zweite Ressource.
+// Bewusst KEINE modifierExtension: Die Diagnose ist ohne die Extension
+// vollständig und sicher interpretierbar (die klinische Sekundärität steckt
+// im Morphologie-Code selbst, z. B. 9895/3); die Extension trägt nur die
+// Verknüpfung — gleiche Kategorie wie condition-occurredFollowing.
+// Ziel ist bewusst NUR die registrierte Onko-Diagnose (beads 14w.9).
 Extension: MII_EX_Onko_Transformation_Von
 Id: mii-ex-onko-transformation-von
 Title: "MII EX Onkologie Transformation von"
-Description: "Kennzeichnet, dass diese onkologische Diagnose eine Transformation aus einem bereits registrierten Primärtumor derselben Tumor-Linie ist (z. B. MDS → AML, ZNS-Tumor /0 → /3, CUP → identifizierter Primärtumor). Abzugrenzen von occurredFollowing (rein zeitliche Abfolge unabhängiger Erkrankungen)."
+Description: "Kennzeichnet, dass diese onkologische Diagnose eine Transformation aus einem bereits registrierten Primärtumor derselben Tumor-Linie ist — für Fälle, in denen das Krebsregister-Regelwerk eine neue Tumor-Entität führt (z. B. MDS → sekundäre AML, ZNS-Tumor /0 → /3). Abzugrenzen von occurredFollowing (rein zeitliche Abfolge unabhängiger Erkrankungen) und von der CUP-Auflösung nach der Best-Of-Regel, bei der dieselbe Entität aktualisiert wird (keine zweite Ressource)."
 * insert PR_CS_VS_Version
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-transformation-von"
 * ^context.type = #element

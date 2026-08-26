@@ -89,13 +89,15 @@ Description: "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der 
 // Zwei orthogonale Achsen (beads 14w.9):
 // occurredFollowing = rein ZEITLICH "trat auf nach" — Ziel kann eine registrierte
 // Onko-Diagnose ODER eine nur textlich bekannte frühere Tumorerkrankung sein.
-// transformationVon = KAUSAL "ist Transformation von" (gleiche Tumor-Linie:
-// MDS→AML, ZNS /0→/3, CUP→Primärtumor) — Ziel nur registrierte Onko-Diagnose.
+// transformationVon = KAUSAL "ist Transformation von" (gleiche Tumor-Linie),
+// NUR wenn das Register-Regelwerk eine neue Entität führt (MDS→AML, ZNS /0→/3).
+// CUP-Auflösung (Best-Of) ist KEINE zweite Diagnose: dieselbe Condition wird
+// aktualisiert (Tumor-ID/Datum bleiben) — Ziel nur registrierte Onko-Diagnose.
 * extension[occurredFollowing] ^short = "Frühere Tumorerkrankungen (zeitliche Abfolge)"
 * extension[occurredFollowing] ^definition = "Verweis auf frühere Tumorerkrankungen, nach denen die aktuelle Diagnose aufgetreten ist — als registrierte onkologische Diagnose oder als nur anamnestisch bekannte frühere Tumorerkrankung. Rein zeitliche Abfolge; für Transformationen derselben Tumor-Linie ist die Extension transformationVon zu verwenden."
 * extension[occurredFollowing].valueReference only Reference(MII_PR_Onko_Diagnose_Primaertumor or MII_PR_Onko_Fruehere_Tumorerkrankung)
 * extension[transformationVon] ^short = "Transformation aus registriertem Primärtumor"
-* extension[transformationVon] ^definition = "Kennzeichnet diese Diagnose als Transformation aus einem bereits registrierten Primärtumor derselben Tumor-Linie (z. B. MDS → AML, ZNS-Tumor /0 → /3, CUP → identifizierter Primärtumor). Das ursprüngliche Diagnosedatum bleibt an der Ursprungsdiagnose erhalten (Nachvollziehbarkeit, vgl. Manual Kap. 6.2)."
+* extension[transformationVon] ^definition = "Kennzeichnet diese Diagnose als Transformation aus einem bereits registrierten Primärtumor derselben Tumor-Linie — für Konstellationen, in denen das Krebsregister-Regelwerk eine neue Tumor-Entität führt (z. B. MDS → sekundäre AML, ZNS-Tumor /0 → /3). Die CUP-Auflösung nach der Best-Of-Regel (Manual Kap. 6.2) ist davon abzugrenzen: Dort wird dieselbe Entität aktualisiert (Tumor-ID und Diagnosedatum bleiben erhalten), es entsteht keine zweite Diagnose-Ressource."
 * insert Translation(extension[transformationVon] ^short, de-DE, Transformation aus registriertem Primärtumor)
 
 * extension[Feststellungsdatum] 1..1 MS
