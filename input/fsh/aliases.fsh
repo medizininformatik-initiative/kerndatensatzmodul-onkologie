@@ -108,3 +108,4 @@ Alias: $mii-vs-onko-prostata-postsurgical-complications = https://www.medizininf
 Alias: $mii-vs-onko-prostata-clavien-dindo = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-clavien-dindo
 // licenses
 Alias: $spdx-license = http://hl7.org/fhir/spdx-license
+Alias: $KDL = http://dvmd.de/fhir/CodeSystem/kdl

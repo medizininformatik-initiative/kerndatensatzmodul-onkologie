@@ -67,5 +67,13 @@ die Profile dieses Moduls.
 
 [kds-dok]: https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.dokument "MII KDS-Modul Dokument"
 
-Ein kuratiertes ValueSet der onkologie-relevanten KDL-Klassen als Begleitartefakt ist für eine
-Folgeversion vorgesehen.
+### Begleitartefakt: kuratiertes ValueSet
+
+Die auf dieser Seite hergeleitete Auswahl steht als ValueSet
+**`mii-vs-onko-kdl-dokumentklassen`** zur Verfügung (45 KDL-Klassen entlang der
+Cluster 1–10, KDL 2025). Es ist eine **Teilmenge** des KDL-Bindings im
+Dokument-Modul-Slice `type.coding:KDL` — es definiert keine eigenen Codes und
+schließt deprecated-Klassen aus (insbesondere `AD060106` Tumorkonferenzprotokoll,
+das in KDL 2025 durch `SD150103` ersetzt ist). Das ValueSet ist als
+Auswahlunterstützung und für Abfragen gedacht, nicht als verpflichtende
+Einschränkung: Instanzen dürfen weiterhin jede gültige KDL-Klasse verwenden.
