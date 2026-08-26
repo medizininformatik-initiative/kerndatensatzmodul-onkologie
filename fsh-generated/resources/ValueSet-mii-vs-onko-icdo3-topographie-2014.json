@@ -1,11 +1,11 @@
 {
   "resourceType": "ValueSet",
   "status": "active",
-  "name": "MII_VS_Onko_ICDO3_Morphologie",
-  "id": "mii-vs-onko-icdo3-morphologie",
-  "title": "MII VS Onkologie ICD-O-3 Morphologie",
-  "description": "Codes für histologische Morphologie und Verhalten einer neoplastischen Veränderung",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-morphologie",
+  "name": "MII_VS_Onko_ICDO3_Topographie_2014",
+  "id": "mii-vs-onko-icdo3-topographie-2014",
+  "title": "MII VS Onkologie ICD-O-3 Topographie 2014",
+  "description": "Codes für die Topographie einer neoplastischen Veränderung gemäß ICD-O-3 Erste Revision (deutsche Ausgabe 2014).",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-topographie-2014",
   "meta": {
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
@@ -33,18 +33,7 @@
           {
             "property": "concept",
             "op": "descendent-of",
-            "value": "M"
-          }
-        ]
-      },
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/icd-o-3",
-        "version": "2019",
-        "filter": [
-          {
-            "property": "concept",
-            "op": "descendent-of",
-            "value": "M"
+            "value": "T"
           }
         ]
       }

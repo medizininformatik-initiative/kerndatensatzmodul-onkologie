@@ -28,6 +28,18 @@
     "include": [
       {
         "system": "http://terminology.hl7.org/CodeSystem/icd-o-3",
+        "version": "2014",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "T"
+          }
+        ]
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/icd-o-3",
+        "version": "2019",
         "filter": [
           {
             "property": "concept",
