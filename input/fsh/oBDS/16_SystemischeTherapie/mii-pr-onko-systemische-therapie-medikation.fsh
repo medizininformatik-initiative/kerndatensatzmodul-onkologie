@@ -19,7 +19,20 @@ Description: "Medikation der Systemische Therapie. Dieses Profil beschreibt die 
 // FHIR-Spec implizit, und SUSHI emittiert ^slicing-Regeln auf Choice-Elementen
 // prinzipiell nicht (verifiziert 2026-08-26, beide Syntaxvarianten verworfen).
 // Der Abbruch der HL7-compare-Funktion daran ist eine Tool-Strictness → upstream.
-* medicationCodeableConcept 1..1 MS
+//
+// ENTSCHEIDUNG #288 (2026-08-26): medication[x] bleibt 1..1 — als Choice-Element
+// erzwingt das strukturell GENAU EINE der beiden Formen (keine Invariante nötig):
+//   (a) medicationCodeableConcept mit coding 1..* (reiner .text ist ausgeschlossen;
+//       .text KANN und SOLL ergänzend mitgeführt werden), ODER
+//   (b) medicationReference auf eine MII-Medikation-Medication (Ziel-Profil aus dem
+//       Parent geerbt; die Substanz-Codierung liegt dann in Medication.code/
+//       .ingredient — konsistent zur Modellierung der AG Meona-Medikation).
+// oBDS-Mapping 16.6 (Substanz): bei (b) über die referenzierte Medication.
+* medicationCodeableConcept 0..1 MS
+* medicationReference 0..1 MS
+* medicationReference ^short = "Referenz auf Medication (Alternative zur Inline-Codierung)"
+* medicationReference ^definition = "Alternative zur Inline-Codierung: Referenz auf eine Medication-Ressource gemäß MII-Modul Medikation. Die Substanz ist dort über Medication.code (ATC/UNII) bzw. Medication.ingredient codiert."
+* insert Translation(medicationReference ^short, de-DE, Referenz auf Medication als Alternative zur Inline-Codierung)
 * medicationCodeableConcept.coding 1..* MS
 * medicationCodeableConcept.coding ^short = "Wirkstoff der systemischen Medikation"
 * medicationCodeableConcept.coding ^definition = "Wirkstoff der systemischen onkologischen Medikation. Nach Möglichkeit als ATC-kodiert anzugeben. Wirkstoffe sind einzeln zu kodieren. Kombinationstherapien können über MedicationStatement.partOf in übergeordneten MedicationStatements gruppiert werden - in diesem Fall ist bei jedem Wirkstoff unter `MedicationStatement.note.text` das Kürzel des (z.B. chemotherapeutischen) Protokolls zu hinterlegen."
