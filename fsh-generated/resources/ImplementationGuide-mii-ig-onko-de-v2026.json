@@ -359,7 +359,7 @@
           "reference": "ConceptMap/mii-cm-onko-allgemeiner-leistungszustand-ecog-loinc"
         },
         "name": "Mapping oBDS ECOG zu LOINC",
-        "description": "Mapping der oBDS-Codes für ECOG Performance Status zu LOINC Answer List LA29179-1",
+        "description": "Mapping der oBDS-Codes für ECOG Performance Status zu LOINC Answer List LL529-9",
         "exampleBoolean": false
       },
       {
@@ -367,7 +367,7 @@
           "reference": "ConceptMap/mii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc"
         },
         "name": "Mapping oBDS Karnofsky zu LOINC",
-        "description": "Mapping der oBDS-Codes für Karnofsky Performance Status zu LOINC Answer List LA29175-9",
+        "description": "Mapping der oBDS-Codes für Karnofsky Performance Status zu LOINC Answer List LL4986-7",
         "exampleBoolean": false
       },
       {
@@ -2138,6 +2138,22 @@
         },
         "name": "MII VS Onko Prostata PSA LOINC",
         "description": "Value Set für Prostata-spezifisches Antigen (PSA) LOINC Codes. Enthält LOINC Codes für Total-PSA und freies PSA, exkludiert gebundenes PSA Messungen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-allgemeiner-leistungszustand-ecog-loinc"
+        },
+        "name": "MII VS Onkologie Allgemeiner Leistungszustand ECOG LOINC",
+        "description": "LOINC-Answer-Codes für den ECOG Performance Status. Enumerierte Fassung der LOINC-Answer-List LL529-9.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-allgemeiner-leistungszustand-karnofsky-loinc"
+        },
+        "name": "MII VS Onkologie Allgemeiner Leistungszustand Karnofsky LOINC",
+        "description": "LOINC-Answer-Codes für den Karnofsky Performance Status. Enumerierte Fassung der LOINC-Answer-List LL4986-7.",
         "exampleBoolean": false
       },
       {

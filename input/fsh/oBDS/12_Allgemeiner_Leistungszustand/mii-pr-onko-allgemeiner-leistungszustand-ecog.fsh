@@ -41,6 +41,7 @@ Description: "OBDS Beschreibung des allgemeines Leistungszustandes nach ECOG"
 * valueCodeableConcept.coding[obds].system 1.. MS
 * valueCodeableConcept.coding[obds].system = $mii-cs-onko-allgemeiner-leistungszustand-ecog (exactly)
 * valueCodeableConcept.coding[obds].code 1.. MS
+* valueCodeableConcept.coding[loinc] from MII_VS_Onko_Allgemeiner_Leistungszustand_ECOG_LOINC (required)
 * valueCodeableConcept.coding[loinc].system 1..
 * valueCodeableConcept.coding[loinc].system = $LNC (exactly)
 * valueCodeableConcept.coding[loinc].code 1..
