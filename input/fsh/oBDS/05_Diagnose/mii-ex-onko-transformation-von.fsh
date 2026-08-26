@@ -5,10 +5,13 @@
 // Best-Of-Regel (Manual Kap. 6.2) DIESELBE Entität geändert (Tumor-ID und
 // Diagnosedatum bleiben) — registerkonform ist die Aktualisierung derselben
 // Condition (FHIR-Versionierung), nicht eine zweite Ressource.
-// Bewusst KEINE modifierExtension: Die Diagnose ist ohne die Extension
-// vollständig und sicher interpretierbar (die klinische Sekundärität steckt
-// im Morphologie-Code selbst, z. B. 9895/3); die Extension trägt nur die
-// Verknüpfung — gleiche Kategorie wie condition-occurredFollowing.
+// Bewusst KEINE modifierExtension: Das Fehlen der Extension macht keine
+// Aussage der Ressource falsch — die Diagnose (Code, Morphologie, Datum)
+// bleibt wahr und sicher verarbeitbar, es fehlt lediglich der Herkunfts-
+// Kontext. (Wo die WHO die Herkunft zur Entität macht, trägt sie ohnehin
+// der Code selbst, z. B. 9895/3 AML-MRC — das ist aber nicht garantiert,
+// vgl. sekundäres Glioblastom als 9440/3.) Gleiche Kategorie wie
+// condition-occurredFollowing.
 // Ziel ist bewusst NUR die registrierte Onko-Diagnose (beads 14w.9).
 Extension: MII_EX_Onko_Transformation_Von
 Id: mii-ex-onko-transformation-von

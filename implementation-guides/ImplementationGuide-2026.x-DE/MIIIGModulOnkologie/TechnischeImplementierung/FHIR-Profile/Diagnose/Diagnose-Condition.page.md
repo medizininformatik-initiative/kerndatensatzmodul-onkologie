@@ -48,10 +48,13 @@ Registerkonform ist das die Aktualisierung **derselben** Condition-Ressource
 CUP-Fassung eigenständig historisiert.
 
 **Hinweis zur Modellierung:** `transformationVon` ist bewusst eine *normale*
-Extension (keine modifierExtension): Die Diagnose ist auch ohne sie vollständig
-und sicher interpretierbar — die klinische Sekundärität trägt der
-Morphologie-Code selbst (z. B. `9895/3` AML mit myelodysplasieassoziierten
-Veränderungen); die Extension ergänzt nur die Verknüpfung.
+Extension (keine modifierExtension): Ihr Fehlen macht keine Aussage der
+Ressource falsch — die Diagnose bleibt wahr und sicher verarbeitbar, es fehlt
+lediglich der Herkunfts-Kontext. Wo die WHO die Transformations-Herkunft zur
+eigenen Entität gemacht hat, trägt sie ohnehin der Morphologie-Code selbst
+(z. B. `9895/3` AML-MRC); das ist jedoch nicht garantiert (ein sekundäres
+Glioblastom kann schlicht als `9440/3` codiert sein) — gerade deshalb liefert
+die Extension den strukturierten Herkunfts-Link.
 
 Beide Extensions sind kombinierbar (eine Transformation trat immer auch zeitlich
 „danach" auf); Beispiel: `mii-exa-onko-diagnose-aml-transformation`
