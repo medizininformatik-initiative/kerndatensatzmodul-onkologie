@@ -5,6 +5,10 @@
 // Verwendung: Warning-Invariante onko-icd-meldepflicht auf der Diagnose (extensible-
 // Semantik) — das required-Binding des Basis-Diagnose-Profils bleibt unberührt.
 // Filter nutzen die ICD-10-GM-Gruppen-/Blockcodes der ClaML-Hierarchie (is-a).
+// VERSIONS-PIN |2026 ist notwendig: Der TermServ hält mehrere Jahrgänge parallel,
+// und ohne Version scheitert die is-a-Auflösung an der Ambiguität (verifiziert via
+// $subsumes: C00-C97 ⊒ C18.7 nur mit version=2026 → 'subsumes'). Beim jährlichen
+// ICD-Update mitziehen (analog ATC-Jahres-VS).
 ValueSet: MII_VS_Onko_ICD10_Meldepflichtige_Tumoren
 Id: mii-vs-onko-icd10-meldepflichtige-tumoren
 Title: "MII VS Onkologie ICD-10-GM Meldepflichtige Tumoren"
@@ -15,11 +19,11 @@ Description: "ICD-10-GM-Codes der nach KFRG/§65c krebsregister-meldepflichtigen
 * insert Publisher
 * insert PR_CS_VS_Version
 
-* include codes from system http://fhir.de/CodeSystem/bfarm/icd-10-gm where concept is-a #C00-C97
-* include codes from system http://fhir.de/CodeSystem/bfarm/icd-10-gm where concept is-a #D00-D09
-* include codes from system http://fhir.de/CodeSystem/bfarm/icd-10-gm where concept is-a #D32
-* include codes from system http://fhir.de/CodeSystem/bfarm/icd-10-gm where concept is-a #D33
-* include codes from system http://fhir.de/CodeSystem/bfarm/icd-10-gm where concept is-a #D35.2
-* include codes from system http://fhir.de/CodeSystem/bfarm/icd-10-gm where concept is-a #D35.3
-* include codes from system http://fhir.de/CodeSystem/bfarm/icd-10-gm where concept is-a #D35.4
-* include codes from system http://fhir.de/CodeSystem/bfarm/icd-10-gm where concept is-a #D37-D48
+* include codes from system http://fhir.de/CodeSystem/bfarm/icd-10-gm|2026 where concept is-a #C00-C97
+* include codes from system http://fhir.de/CodeSystem/bfarm/icd-10-gm|2026 where concept is-a #D00-D09
+* include codes from system http://fhir.de/CodeSystem/bfarm/icd-10-gm|2026 where concept is-a #D32
+* include codes from system http://fhir.de/CodeSystem/bfarm/icd-10-gm|2026 where concept is-a #D33
+* include codes from system http://fhir.de/CodeSystem/bfarm/icd-10-gm|2026 where concept is-a #D35.2
+* include codes from system http://fhir.de/CodeSystem/bfarm/icd-10-gm|2026 where concept is-a #D35.3
+* include codes from system http://fhir.de/CodeSystem/bfarm/icd-10-gm|2026 where concept is-a #D35.4
+* include codes from system http://fhir.de/CodeSystem/bfarm/icd-10-gm|2026 where concept is-a #D37-D48
