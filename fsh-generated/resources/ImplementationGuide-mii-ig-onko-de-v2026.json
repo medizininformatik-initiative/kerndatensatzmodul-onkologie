@@ -1428,9 +1428,30 @@
       },
       {
         "reference": {
+          "reference": "Bundle/mii-exa-onko-cup-bundle"
+        },
+        "name": "MII EXA Onkologie CUP Bundle (cTX cNX cM1)",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "Condition/mii-exa-onko-diagnose-meningeom-benigne"
         },
         "name": "MII EXA Onkologie Diagnose benignes Meningeom (Ursprungsdiagnose)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-onko-cup-diagnose"
+        },
+        "name": "MII EXA Onkologie Diagnose CUP (C80.0)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-onko-cup-diagnose-aufgeloest"
+        },
+        "name": "MII EXA Onkologie Diagnose CUP aufgelöst → Pankreaskarzinom (Zustand nach Update derselben Ressource)",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
       },
       {
@@ -1467,6 +1488,13 @@
         },
         "name": "MII EXA Onkologie Diagnose t-AML nach Chemotherapie (dueTo)",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-cup-tnm-klassifikation"
+        },
+        "name": "MII EXA Onkologie TNM Klassifikation CUP (cTX cNX cM1, ohne Stadium)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
       },
       {
         "reference": {
@@ -3065,6 +3093,48 @@
         },
         "name": "mii-exa-onko-cdk46-class-medication",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-cup-fernmetastase-hep"
+        },
+        "name": "mii-exa-onko-cup-fernmetastase-hep",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-cup-fernmetastase-pul"
+        },
+        "name": "mii-exa-onko-cup-fernmetastase-pul",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen"
+      },
+      {
+        "reference": {
+          "reference": "Patient/mii-exa-onko-cup-patient"
+        },
+        "name": "mii-exa-onko-cup-patient",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-cup-tnm-m-cM1"
+        },
+        "name": "mii-exa-onko-cup-tnm-m-cM1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-cup-tnm-n-cNX"
+        },
+        "name": "mii-exa-onko-cup-tnm-n-cNX",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-cup-tnm-t-cTX"
+        },
+        "name": "mii-exa-onko-cup-tnm-t-cTX",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
       },
       {
         "reference": {
