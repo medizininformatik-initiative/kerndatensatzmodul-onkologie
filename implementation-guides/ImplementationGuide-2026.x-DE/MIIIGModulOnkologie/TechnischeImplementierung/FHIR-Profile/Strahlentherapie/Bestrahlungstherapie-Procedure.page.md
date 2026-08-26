@@ -1,6 +1,6 @@
 ---
 parent: 
-topic: StrahlentherapieProcedure
+topic: BestrahlungProcedure
 subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie
 ---
 

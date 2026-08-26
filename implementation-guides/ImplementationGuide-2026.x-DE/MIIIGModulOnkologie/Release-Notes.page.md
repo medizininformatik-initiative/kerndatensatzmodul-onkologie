@@ -40,7 +40,7 @@ Diese Änderungen erfordern möglicherweise Anpassungen in bestehenden Implement
 
 ### Weitere Verbesserungen
 
-- `documentation` Neuer Guidance-Abschnitt "Erscheinungsformen der TNM-Klassifikation" auf der {{pagelink:TNM-Klassifikation-Observation}}-Seite: beschreibt klinisches Staging, pathologisches Staging, Verlauf und die synthetisierte Klassifikation sowie deren Unterscheidung über Code-Achse und Präfix-Modifier.
+- `documentation` Neuer Guidance-Abschnitt "Erscheinungsformen der TNM-Klassifikation" auf der {{pagelink:TNMKlassifikationObservation}}-Seite: beschreibt klinisches Staging, pathologisches Staging, Verlauf und die synthetisierte Klassifikation sowie deren Unterscheidung über Code-Achse und Präfix-Modifier.
 
 ---
 
