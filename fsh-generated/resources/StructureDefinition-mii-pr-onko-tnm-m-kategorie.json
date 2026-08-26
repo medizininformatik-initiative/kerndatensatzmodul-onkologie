@@ -51,6 +51,20 @@
         "mustSupport": true
       },
       {
+        "id": "Observation.modifierExtension",
+        "path": "Observation.modifierExtension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
         "id": "Observation.modifierExtension:yPraefix",
         "path": "Observation.modifierExtension",
         "sliceName": "yPraefix",

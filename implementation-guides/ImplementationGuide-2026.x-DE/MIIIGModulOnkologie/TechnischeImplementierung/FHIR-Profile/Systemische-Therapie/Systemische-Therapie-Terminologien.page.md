@@ -10,7 +10,7 @@ topic: SystemischeTherapieTerminologien
 Die MII stellt **kuratierte, onkologierelevante Terminologien** für systemische Therapien bereit:
 
 - **Therapieprotokolle**: 96 oBDS-basierte Standardprotokolle ([CodeSystem](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle))
-- **ATC-Substanzen**: Haupt-ValueSet + 8 jahresspezifische ValueSets (2018-2025)
+- **ATC-Substanzen**: Haupt-ValueSet + 9 jahresspezifische ValueSets (2018–2026) + 6 Überleitungs-ConceptMaps
 - **UNII-Substanzen**: Für Wirkstoffe ohne ATC-Code ([ValueSet](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-unii))
 
 **Wichtig**: Die ValueSets enthalten nur onkologisch relevante Substanzen, nicht die vollständige ATC-Klassifikation.
@@ -37,6 +37,32 @@ Neue Protokolle bitte unter [GitHub Issues](https://github.com/medizininformatik
 
 ---
 
+### ATC: WHO-Fassung vs. amtliche deutsche Fassung (ATC-DE)
+
+Die ATC-Klassifikation wird international vom **WHO Collaborating Centre for Drug
+Statistics Methodology** (Oslo) jährlich herausgegeben. Für Deutschland gibt das
+**BfArM** jährlich die **amtliche deutsche Fassung** (ATC-DE, mit definierten
+Tagesdosen/DDD) heraus — sie kann in einzelnen Codes und DDD-Festlegungen von der
+WHO-Fassung abweichen. **Dieses Modul verwendet ausschließlich die deutsche
+Fassung** mit der System-URL `http://fhir.de/CodeSystem/bfarm/atc`; die
+WHO-Fassung (`http://www.whocc.no/atc`) wird nicht verwendet.
+
+#### Jahres-CodeSysteme und Validierung
+
+Auf dem MII-Terminologieserver liegt die ATC-DE — wie ICD-10-GM, OPS und ICD-O —
+als **getrennte CodeSystem-Ressource je Jahrgang** unter der gemeinsamen
+System-URL (z. B. existiert `L01XC18` Pembrolizumab in der Ressource `|2021`,
+aber nicht mehr in `|2026`). Daraus folgen dieselben Regeln wie bei ICD-O
+(siehe {{pagelink:ICDOTerminologie}}):
+
+1. **Die jahresspezifischen ValueSets pinnen ihre Codes auf den Jahrgang**
+   (`…atc|2018#…`) — historische Codes validieren damit gegen die
+   CodeSystem-Ressource, in der sie existieren.
+2. **Instanzen SOLLEN `coding.version`** (das ATC-Jahr) **angeben**, damit
+   Validierung und Auswertung den Jahrgang kennen.
+
+---
+
 ### ATC-Substanzen
 
 #### Haupt-ValueSet (Aktuelle Codes)
@@ -59,6 +85,7 @@ Für die Validierung historischer Daten stehen jahresspezifische ValueSets zur V
 
 | Jahr | ValueSet | Canonical URL |
 |------|----------|---------------|
+| 2026 | mii-vs-onko-systemische-therapie-substanzen-2026 | [Link](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2026) |
 | 2025 | mii-vs-onko-systemische-therapie-substanzen-2025 | [Link](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2025) |
 | 2024 | mii-vs-onko-systemische-therapie-substanzen-2024 | [Link](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2024) |
 | 2023 | mii-vs-onko-systemische-therapie-substanzen-2023 | [Link](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2023) |
@@ -68,16 +95,28 @@ Für die Validierung historischer Daten stehen jahresspezifische ValueSets zur V
 | 2019 | mii-vs-onko-systemische-therapie-substanzen-2019 | [Link](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2019) |
 | 2018 | mii-vs-onko-systemische-therapie-substanzen-2018 | [Link](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2018) |
 
-#### ATC-Code Transitionen
+#### Überleitungen (ATC-Transitions-ConceptMaps)
 
-Die deutsche ATC-Klassifikation wird jährlich aktualisiert. **Beispiel Quizartinib** (FLT3-Inhibitor):
+Die deutsche ATC-Klassifikation wird jährlich aktualisiert; Code-Umzüge zwischen
+den Jahrgängen dokumentieren die **Transitions-ConceptMaps** — das Werkzeug für
+ETL-Strecken und die Migration historischer Medikationsdaten:
 
-- **Bis 31.12.2020**: `L01XE52`
-- **Ab 01.01.2021**: `L01EX11`
+| Übergang | ConceptMap | Schwerpunkt |
+|---|---|---|
+| 2020 → 2021 | `mii-cm-onko-atc-transitions-2021` | Kinase-Inhibitoren L01XE → L01E (z. B. Quizartinib `L01XE52` → `L01EX11`, Abemaciclib `L01XE50` → `L01EF03`) |
+| 2021 → 2022 | `mii-cm-onko-atc-transitions-2022` | **Größte Reklassifikation der Onkologie**: 20 monoklonale Antikörper L01XC → L01F* (Trastuzumab, Rituximab, Pembrolizumab, Nivolumab …) |
+| 2022 → 2023 | `mii-cm-onko-atc-transitions-2023` | Folgeanpassungen |
+| 2023 → 2024 | `mii-cm-onko-atc-transitions-2024` | Folgeanpassungen |
+| 2024 → 2025 | `mii-cm-onko-atc-transitions-2025` | Folgeanpassungen |
+| 2025 → 2026 | `mii-cm-onko-atc-transitions-2026` | Folgeanpassungen |
 
-**Kodierungsempfehlung**: Verwenden Sie den ATC-Code, der zum Therapiezeitpunkt gültig war. Bei Unsicherheit kann alternativ der UNII-Code verwendet werden.
+**Kodierungsempfehlung**: Verwenden Sie den ATC-Code, der zum Therapiezeitpunkt
+gültig war, und geben Sie `coding.version` an. Bei Unsicherheit kann alternativ
+der UNII-Code verwendet werden.
 
-Weitere Beispiele: Abemaciclib (L01XE50 → L01EF03), Acalabrutinib (L01XE51 → L01EL02).
+**Beispiel — Imatinib über einen ATC-Versionswechsel hinweg:**
+
+{{json:mii-exa-onko-medikation-imatinib-atc-version-transition}}
 
 #### Post-hoc Annotation von Freitext
 
@@ -119,6 +158,10 @@ select
     Version: version,
     Expansion: expansion.total
 ```
+
+**Beispiel — Substanz nur mit UNII-Code (Iberdomid):**
+
+{{json:mii-exa-onko-medikation-iberdomide-unii}}
 
 #### Substanzen ohne verfügbare Codes
 
