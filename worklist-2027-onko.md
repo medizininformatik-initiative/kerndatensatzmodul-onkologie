@@ -138,3 +138,10 @@ pxy      ← ehq(HDB-703)    # CRMI-Manifest pinnt SNOMED-Version → 703 vorher
 - `14w.20` Upstream-Änderungen nachziehen + `3bj` Teil 2 (CapabilityStatement verifizieren) — sobald finale 2026er-Releases vorliegen, direkt vor Release
 
 **Kernaussagen:** Die kritische Kette ist Branch-Merge → `14w.24` → `14w.23` → Sweeps (`7kl`/`pxy`) → `14w.20`/Release. Alles andere hängt in breiten, parallelen Wellen daneben. Bewusst früh: `14w.14` (verhindert doppelte Seiten-Migration) und `d8f` (Datenvalidität historischer Medikation). Bewusst zuletzt: alles, was *alle* Artefakte anfasst.
+
+## 6. Stand 2026-08-26 (Kurzprotokoll für Session-Übergabe)
+
+**PR #310:** reviewfertig, CI grün, 13 Restfehler alle extern (THO/MedDRA-TermServ). Review-Dossier: `review-dossier-pr310.md` + Artifact.
+**Heute erledigt:** `7kl` (51 Ressourcen Affiliate-Lizenz) · `#288` umgesetzt (medicationReference 0..1, CC 0..1, keine Invariante nötig — GH kommentiert, chgl-PR erledigt) · `14w.30` ICD-O-Paket (4 Jahres-VS + Union-Haupt-VS + transitions-CM mit 55 kuratierten Umsteigern + IG-Seite 'ICD-O — Revisionen und Validierung') · ATC: 9 Jahres-VS versions-gepinnt (3.422 Einträge) + Terminologieseite ausgebaut (WHO vs ATC-DE, Transitions-Tabelle, Kuratierungs-Absatz) · wisp-Fix (bd dep läuft, 11 Kanten live, `ws6` zu) · dq9 vollständig aufgeklärt (Mechanik 1080 + Inhalt 55; Diff: examples-source/icdo/).
+**Wiedereröffnet:** `2a4.3` — SUSHI emittiert Choice-Slicing-Intro by design nicht; compare-Abbruch = HL7-Tool-Strictness (Upstream-Optionen im Ticket).
+**Offen/Nächstes:** Rückmeldungs-Entwürfe (K. Schmitt: Repro+Diff+Fix; S. Taupadel: compare-Einordnung) · BfArM-Aktualisierungsliste manuell gegen die 55 CM-Mappings · dq9/14w.30 nach CI-Bestätigung schließen · Review durch Thomas (Dossier Schritt 1: Beispiele) · Entscheidungen: #259 Gleason-SCT, 14w.19-Rest (#306) · OPS/ICD-10-GM-VS-Pins als Folgekandidaten des Musters.
