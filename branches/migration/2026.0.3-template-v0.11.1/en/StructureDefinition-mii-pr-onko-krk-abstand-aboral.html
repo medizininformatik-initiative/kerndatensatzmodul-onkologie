@@ -502,70 +502,6 @@ MII PR Onkologie Abstand Aboral
   <p>The oBDS mappings are recorded in the artefact view of this profile: <a href="StructureDefinition-mii-pr-onko-krk-abstand-aboral.html">MII PR Onkologie Abstand Aboral</a>.</p>
 </blockquote>
 
-<hr />
-
-<p><strong>Search parameters</strong></p>
-
-<p>The following search parameters are relevant for the KRK distance aboral profile, including in combination:</p>
-
-<ol>
-  <li>
-    <p>The search parameter "_id" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Observation?_id=12345</code></p>
-
-    <p>Usage notes: Further information on searching by "_id" can be found in the <a href="http://hl7.org/fhir/R4/search.html#all">FHIR base specification - section "Parameters for all resources"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter "_profile" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-aboral</code></p>
-
-    <p>Usage notes: Further information on searching by "_profile" can be found in the <a href="http://hl7.org/fhir/R4/search.html#all">FHIR base specification - section "Parameters for all resources"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter "code" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Observation?code=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-abstand-resektionslinie-aboral|aboral</code></p>
-
-    <p>Usage notes: Further information on searching by "Observation.code" can be found in the <a href="http://hl7.org/fhir/R4/search.html#token">FHIR base specification - section "Token Search"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter "subject" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Observation?subject=Patient/test</code></p>
-
-    <p>Usage notes: Further information on searching by "Observation.subject" can be found in the <a href="http://hl7.org/fhir/R4/search.html#reference">FHIR base specification - section "reference"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter "focus" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Observation?focus=Condition/primaertumor</code></p>
-
-    <p>Usage notes: Further information on searching by "Observation.focus" can be found in the <a href="http://hl7.org/fhir/R4/search.html#reference">FHIR base specification - section "reference"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter "value-quantity" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Observation?value-quantity=3|http://unitsofmeasure.org|mm</code></p>
-
-    <p>Usage notes: Further information on searching by "Observation.value[x]" can be found in the <a href="http://hl7.org/fhir/R4/search.html#quantity">FHIR base specification - section "Quantity Search"</a>.</p>
-  </li>
-</ol>
-
-<hr />
 <p><strong>Examples</strong></p>
 
 <p><a href="Observation-mii-exa-onko-krk-abstand-resektionsrand-aboral.html">mii-exa-onko-krk-abstand-resektionsrand-aboral</a></p>
@@ -719,7 +655,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Coded form of the unit<br/><span style="font-weight:bold">Required Pattern: </span><span style="color: darkgreen">mm</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 640acd95-f0cb-4e9e-9f57-7b865c2de0d1
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a0fa2864-f6c5-44ac-92c9-76863e53d564
 document.getElementById('cbmii-pr-onko-krk-abstand-aboralK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-krk-abstand-aboralK'), 'binding', document.getElementById('cbmii-pr-onko-krk-abstand-aboralK-binding').checked, document.getElementById('ppmii-pr-onko-krk-abstand-aboralK'));
 document.getElementById('cbmii-pr-onko-krk-abstand-aboralK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1004,7 +940,7 @@ filterDesc(document.getElementById('mii-pr-onko-krk-abstand-aboralK'), 'obligati
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Coded form of the unit</span><br/><span style="font-weight:bold">Required Pattern: </span><span style="color: darkgreen">mm</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 640acd95-f0cb-4e9e-9f57-7b865c2de0d1
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a0fa2864-f6c5-44ac-92c9-76863e53d564
 document.getElementById('cbmii-pr-onko-krk-abstand-aboralD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-krk-abstand-aboralD'), 'binding', document.getElementById('cbmii-pr-onko-krk-abstand-aboralD-binding').checked, document.getElementById('ppmii-pr-onko-krk-abstand-aboralD'));
 document.getElementById('cbmii-pr-onko-krk-abstand-aboralD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1475,7 +1411,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">See <a href="http://hl7.org/fhir/R4/observation.html#Observation.referenceRange" title="Observation.referenceRange">referenceRange (Observation)</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Provides guide for interpretation of component result<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 640acd95-f0cb-4e9e-9f57-7b865c2de0d1
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a0fa2864-f6c5-44ac-92c9-76863e53d564
 document.getElementById('cbmii-pr-onko-krk-abstand-aboralS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-krk-abstand-aboralS'), 'binding', document.getElementById('cbmii-pr-onko-krk-abstand-aboralS-binding').checked, document.getElementById('ppmii-pr-onko-krk-abstand-aboralS'));
 document.getElementById('cbmii-pr-onko-krk-abstand-aboralS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2121,7 +2057,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Coded form of the unit<br/><span style="font-weight:bold">Required Pattern: </span><span style="color: darkgreen">mm</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 640acd95-f0cb-4e9e-9f57-7b865c2de0d1
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a0fa2864-f6c5-44ac-92c9-76863e53d564
 document.getElementById('cbmii-pr-onko-krk-abstand-aboralKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-krk-abstand-aboralKA'), 'binding', document.getElementById('cbmii-pr-onko-krk-abstand-aboralKA-binding').checked, document.getElementById('ppmii-pr-onko-krk-abstand-aboralKA'));
 document.getElementById('cbmii-pr-onko-krk-abstand-aboralKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2405,7 +2341,7 @@ filterDesc(document.getElementById('mii-pr-onko-krk-abstand-aboralKA'), 'obligat
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Coded form of the unit</span><br/><span style="font-weight:bold">Required Pattern: </span><span style="color: darkgreen">mm</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 640acd95-f0cb-4e9e-9f57-7b865c2de0d1
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a0fa2864-f6c5-44ac-92c9-76863e53d564
 document.getElementById('cbmii-pr-onko-krk-abstand-aboralDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-krk-abstand-aboralDA'), 'binding', document.getElementById('cbmii-pr-onko-krk-abstand-aboralDA-binding').checked, document.getElementById('ppmii-pr-onko-krk-abstand-aboralDA'));
 document.getElementById('cbmii-pr-onko-krk-abstand-aboralDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2873,7 +2809,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">See <a href="http://hl7.org/fhir/R4/observation.html#Observation.referenceRange" title="Observation.referenceRange">referenceRange (Observation)</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Provides guide for interpretation of component result<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 640acd95-f0cb-4e9e-9f57-7b865c2de0d1
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a0fa2864-f6c5-44ac-92c9-76863e53d564
 document.getElementById('cbmii-pr-onko-krk-abstand-aboralSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-krk-abstand-aboralSA'), 'binding', document.getElementById('cbmii-pr-onko-krk-abstand-aboralSA-binding').checked, document.getElementById('ppmii-pr-onko-krk-abstand-aboralSA'));
 document.getElementById('cbmii-pr-onko-krk-abstand-aboralSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -3452,7 +3388,7 @@ Summary
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.onkologie#2026.0.3 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Thu, Aug 27, 2026 15:31+0000">2026-08-27</span>
+          Generated <span title="Thu, Aug 27, 2026 15:57+0000">2026-08-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

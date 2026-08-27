@@ -50,53 +50,6 @@ Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensa
 > Die oBDS-Mappings sind in der Artefaktdarstellung des Profils hinterlegt: [MII PR Onkologie Specimen](StructureDefinition-mii-pr-onko-krk-specimen.html).
 {: .ig-highlight .ig-highlight-grey}
 
----
-
-**Suchparameter**
-
-Folgende Suchparameter sind für das KRK-Specimen Profil relevant, auch in Kombination:
-
-1. Der Suchparameter "_id" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Specimen?_id=12345```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
-
-1. Der Suchparameter "_profile" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Specimen?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-specimen```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
-
-1. Der Suchparameter "subject" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Specimen?subject=Patient/test```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Specimen.subject" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
-
-1. Der Suchparameter "type" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Specimen?type=http://snomed.info/sct|119376003```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Specimen.type" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).
-
-1. Der Suchparameter "status" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Specimen?status=available```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Specimen.status" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).
-
----
 **Beispiele**
 
 [mii-exa-onko-krk-specimen](Specimen-mii-exa-onko-krk-specimen.html)

@@ -556,90 +556,6 @@ The data fields have been part of the oBDS since version 2021 and are captured i
   <p>The oBDS mappings are recorded in the artefact view of this profile: <a href="StructureDefinition-mii-pr-onko-tumorkonferenz.html">MII PR Onkologie Tumorkonferenz</a>.</p>
 </blockquote>
 
-<hr />
-
-<p><strong>Search parameters</strong></p>
-
-<p>The following search parameters are relevant for the Oncology module, including in combination:</p>
-
-<ol>
-  <li>
-    <p>The search parameter <code class="language-plaintext highlighter-rouge">_id</code> MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/CarePlan?_id=1234</code></p>
-
-    <p>Usage notes: Further information on searching by "_id" can be found in the <a href="http://hl7.org/fhir/R4/search.html#all">FHIR base specification - section "Parameters for all resources"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter <code class="language-plaintext highlighter-rouge">_profile</code> MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/CarePlan?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz</code></p>
-
-    <p>Usage notes: Further information on searching by "_profile" can be found in the <a href="http://hl7.org/fhir/R4/search.html#token">FHIR base specification - section "token"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter <code class="language-plaintext highlighter-rouge">identifier</code> MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/CarePlan?identifier=Tumorkonferenz_1</code></p>
-
-    <p>Usage notes: Further information on searching by "identifier" can be found in the <a href="http://hl7.org/fhir/R4/search.html#token">FHIR base specification - section "token"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter <code class="language-plaintext highlighter-rouge">category</code> MUST be supported:
- Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/CarePlan?category=http://snomed.info/sct|734163000</code></p>
-
-    <p>Usage notes: Further information on searching by "category" can be found in the <a href="http://hl7.org/fhir/R4/search.html#token">FHIR base specification - section "token"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter <code class="language-plaintext highlighter-rouge">subject</code> MUST be supported:
- Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/CarePlan?subject=Patient/example</code></p>
-
-    <p>Usage notes: Further information on searching by "subject" can be found in the <a href="http://hl7.org/fhir/R4/search.html#reference">FHIR base specification - section "reference"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter <code class="language-plaintext highlighter-rouge">period</code> MUST be supported:
- Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/CarePlan?date=eq2022-01-01</code></p>
-
-    <p>Usage notes: Further information on searching by "period" can be found in the <a href="http://hl7.org/fhir/R4/search.html#date">FHIR base specification - section "date"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter <code class="language-plaintext highlighter-rouge">contributor</code> MUST be supported:
- Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/CarePlan?contributor=Practitioner/example</code></p>
-
-    <p>Usage notes: Further information on searching by "contributor" can be found in the <a href="http://hl7.org/fhir/R4/search.html#reference">FHIR base specification - section "reference"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter <code class="language-plaintext highlighter-rouge">addresses</code> MUST be supported:
- Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/CarePlan?addresses=Condition/example</code></p>
-
-    <p>Usage notes: Further information on searching by "addresses" can be found in the <a href="http://hl7.org/fhir/R4/search.html#reference">FHIR base specification - section "reference"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter <code class="language-plaintext highlighter-rouge">activity-code</code> MUST be supported:
- Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/CarePlan?activity-code=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapieempfehlung-typ|OP</code></p>
-
-    <p>Usage notes: Further information on searching by "activity-code" can be found in the <a href="http://hl7.org/fhir/R4/search.html#token">FHIR base specification - section "token"</a>.</p>
-  </li>
-</ol>
-
 <p><strong>Examples</strong></p>
 
 <h3 id="traditional-obds-tumor-board-obds-slice">Traditional oBDS tumor board (obds slice):</h3>
@@ -907,7 +823,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie.html">MII PR Onkologie Therapieempfehlung Kombinationstherapie</a> | <a href="http://hl7.org/fhir/R4/medicationrequest.html">MedicationRequest</a> | <a href="http://hl7.org/fhir/R4/servicerequest.html">ServiceRequest</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Detailed therapy recommendation - RequestGroup, MedicationRequest, or ServiceRequest</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 640acd95-f0cb-4e9e-9f57-7b865c2de0d1
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a0fa2864-f6c5-44ac-92c9-76863e53d564
 document.getElementById('cbmii-pr-onko-tumorkonferenzK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-tumorkonferenzK'), 'binding', document.getElementById('cbmii-pr-onko-tumorkonferenzK-binding').checked, document.getElementById('ppmii-pr-onko-tumorkonferenzK'));
 document.getElementById('cbmii-pr-onko-tumorkonferenzK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1333,7 +1249,7 @@ filterDesc(document.getElementById('mii-pr-onko-tumorkonferenzK'), 'obligation',
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="text-decoration:line-through"></span><span style="text-decoration:line-through">0</span><span style="text-decoration:line-through">..</span><span style="text-decoration:line-through">0</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="font-style: italic">In-line definition of activity</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 640acd95-f0cb-4e9e-9f57-7b865c2de0d1
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a0fa2864-f6c5-44ac-92c9-76863e53d564
 document.getElementById('cbmii-pr-onko-tumorkonferenzD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-tumorkonferenzD'), 'binding', document.getElementById('cbmii-pr-onko-tumorkonferenzD-binding').checked, document.getElementById('ppmii-pr-onko-tumorkonferenzD'));
 document.getElementById('cbmii-pr-onko-tumorkonferenzD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2209,7 +2125,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Annotation">Annotation</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Comments about the plan<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 640acd95-f0cb-4e9e-9f57-7b865c2de0d1
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a0fa2864-f6c5-44ac-92c9-76863e53d564
 document.getElementById('cbmii-pr-onko-tumorkonferenzS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-tumorkonferenzS'), 'binding', document.getElementById('cbmii-pr-onko-tumorkonferenzS-binding').checked, document.getElementById('ppmii-pr-onko-tumorkonferenzS'));
 document.getElementById('cbmii-pr-onko-tumorkonferenzS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -3129,7 +3045,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie.html">MII PR Onkologie Therapieempfehlung Kombinationstherapie</a> | <a href="http://hl7.org/fhir/R4/medicationrequest.html">MedicationRequest</a> | <a href="http://hl7.org/fhir/R4/servicerequest.html">ServiceRequest</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Detailed therapy recommendation - RequestGroup, MedicationRequest, or ServiceRequest</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 640acd95-f0cb-4e9e-9f57-7b865c2de0d1
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a0fa2864-f6c5-44ac-92c9-76863e53d564
 document.getElementById('cbmii-pr-onko-tumorkonferenzKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-tumorkonferenzKA'), 'binding', document.getElementById('cbmii-pr-onko-tumorkonferenzKA-binding').checked, document.getElementById('ppmii-pr-onko-tumorkonferenzKA'));
 document.getElementById('cbmii-pr-onko-tumorkonferenzKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -3554,7 +3470,7 @@ filterDesc(document.getElementById('mii-pr-onko-tumorkonferenzKA'), 'obligation'
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="text-decoration:line-through"></span><span style="text-decoration:line-through">0</span><span style="text-decoration:line-through">..</span><span style="text-decoration:line-through">0</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="font-style: italic">In-line definition of activity</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 640acd95-f0cb-4e9e-9f57-7b865c2de0d1
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a0fa2864-f6c5-44ac-92c9-76863e53d564
 document.getElementById('cbmii-pr-onko-tumorkonferenzDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-tumorkonferenzDA'), 'binding', document.getElementById('cbmii-pr-onko-tumorkonferenzDA-binding').checked, document.getElementById('ppmii-pr-onko-tumorkonferenzDA'));
 document.getElementById('cbmii-pr-onko-tumorkonferenzDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -4427,7 +4343,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Annotation">Annotation</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Comments about the plan<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 640acd95-f0cb-4e9e-9f57-7b865c2de0d1
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a0fa2864-f6c5-44ac-92c9-76863e53d564
 document.getElementById('cbmii-pr-onko-tumorkonferenzSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-tumorkonferenzSA'), 'binding', document.getElementById('cbmii-pr-onko-tumorkonferenzSA-binding').checked, document.getElementById('ppmii-pr-onko-tumorkonferenzSA'));
 document.getElementById('cbmii-pr-onko-tumorkonferenzSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -5177,7 +5093,7 @@ Summary
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.onkologie#2026.0.3 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Thu, Aug 27, 2026 15:31+0000">2026-08-27</span>
+          Generated <span title="Thu, Aug 27, 2026 15:57+0000">2026-08-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

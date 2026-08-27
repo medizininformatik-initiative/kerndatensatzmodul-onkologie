@@ -73,32 +73,6 @@ Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensa
 
 > The oBDS mappings are recorded in the artefact view of this profile: [MII PR Onkologie Genetische Variante](StructureDefinition-mii-pr-onko-genetische-variante.md).
 
--------
-
-**Search parameters**
-
-The following search parameters are relevant for the Oncology module, including in combination:
-
-1. The search parameter `_id` MUST be supported:Examples:`GET [base]/Observation?_id=1234`Usage notes: Further information on searching by "_id" can be found in the [FHIR base specification - section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
-1. The search parameter `_profile` MUST be supported:Examples:`GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-genetische-variante`Usage notes: Further information on searching by "_profile" can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#all).
-1. The search parameter "status" MUST be supported:Examples:```GET [base]/Observation?status=finalUsage notes: Further information on searching by "status" can be found in the FHIR base specification - section "token".```
-1. The search parameter "category" MUST be supported:Examples:`GET [base]/Observation?category=http://terminology.hl7.org/CodeSystem/observation-category|laboratory`Usage notes: Further information on searching by "category" can be found in the FHIR base specification - section "token".
-1. The search parameter "code" MUST be supported:Examples:`GET [base]/Observation?code=http://fhir.de/CodeSystem/sct|184305005`Usage notes: Further information on searching by "code" can be found in the FHIR base specification - section "token".
-1. The search parameter "subject" MUST be supported:Examples:`GET [base]/Observation?subject=Patient/example`Usage notes: Further information on searching by "subject" can be found in the FHIR base specification - section "reference".
-1. The search parameter "focus" MUST be supported:Examples:`GET [base]/Observation?focus=Condition/example`Usage notes: Further information on searching by "focus" can be found in the FHIR base specification - section "reference".
-1. The search parameter "encounter" MUST be supported:Examples:`GET [base]/Observation?encounter=Encounter/example`Usage notes: Further information on searching by "encounter" can be found in the FHIR base specification - section "reference".
-1. The search parameter "interpretation" MUST be supported:Examples:`GET [base]/Observation?interpretation=http://snomed.info/sct|55446002`Usage notes: Further information on searching by "interpretation" can be found in the FHIR base specification - section "token".
-1. The search parameter "method" MUST be supported:Examples:
-
-| | |
-| :--- | :--- |
-| ```GET [base]/Observation?method=http://loinc.org | LA26398-0 |
-
-Usage notes: Further information on searching by "method" can be found in the FHIR base specification - section "token".```
-1. The search parameter "specimen" MUST be supported:Examples:`GET [base]/Observation?specimen=Specimen/example`Usage notes: Further information on searching by "specimen" can be found in the FHIR base specification - section "reference".
-1. The search parameter "device" MUST be supported:Examples:`GET [base]/Observation?device-from=Device/example`Usage notes: Further information on searching by "device" can be found in the FHIR base specification - section "reference".
-1. The search parameter "derived-from" MUST be supported:Examples:`GET [base]/Observation?derived-from=Observation/example`Usage notes: Further information on searching by "derived-from" can be found in the FHIR base specification - section "reference".
-
 **Examples**
 
 [mii-exa-onko-genetische-variante-braf](Observation-mii-exa-onko-genetische-variante-braf.md)
@@ -131,7 +105,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-genet
   "name" : "MII_PR_Onko_Genetische_Variante",
   "title" : "MII PR Onkologie Genetische Variante",
   "status" : "active",
-  "date" : "2026-08-27T15:31:43+00:00",
+  "date" : "2026-08-27T15:57:15+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

@@ -53,19 +53,6 @@ Mapping [Uniform Oncological Base Dataset (oBDS)](https://basisdatensatz.de/basi
 
 > The oBDS mappings are recorded in the artefact view of this profile: [MII PR Onkologie Prostata Anzahl positiver Stanzen](StructureDefinition-mii-pr-onko-prostate-anzahl-positive-stanzen.md).
 
--------
-
-**Search parameters**
-
-The following search parameters are relevant for the Prostate Number of Positive Biopsy Cores profile:
-
-1. The search parameter "_id" MUST be supported:`GET [base]/Observation?_id=12345`
-1. The search parameter "_profile" MUST be supported:`GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-anzahl-positive-stanzen`
-1. The search parameter "code" MUST be supported:`GET [base]/Observation?code=http://loinc.org|33746-2`
-1. The search parameter "value-quantity" MUST be supported:`GET [base]/Observation?value-quantity=gt3`
-
--------
-
 **Examples**
 
 [mii-exa-onko-prostata-anzahl-positiver-stanzen-1](Observation-mii-exa-onko-prostata-anzahl-positiver-stanzen-1.md)
@@ -98,7 +85,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-prost
   "name" : "MII_PR_Onko_Prostata_Anzahl_Positive_Stanzen",
   "title" : "MII PR Onkologie Prostata Anzahl positiver Stanzen",
   "status" : "active",
-  "date" : "2026-08-27T15:31:43+00:00",
+  "date" : "2026-08-27T15:57:15+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

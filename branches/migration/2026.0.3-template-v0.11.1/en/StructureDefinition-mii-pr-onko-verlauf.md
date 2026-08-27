@@ -45,21 +45,6 @@ Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensa
 
 > The oBDS mappings are recorded in the artefact view of this profile: [MII PR Onkologie Verlauf](StructureDefinition-mii-pr-onko-verlauf.md).
 
--------
-
-**Search parameters**
-
-The following search parameters are relevant for the Oncology module, including in combination:
-
-1. The search parameter `_id` MUST be supported:Examples:`GET [base]/Observation?_id=1234`Usage notes: Further information on searching by "_id" can be found in the [FHIR base specification - section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
-1. The search parameter "_profile" MUST be supported:Examples:`GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand`Usage notes: Further information on searching by "_profile" can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#all).
-1. The search parameter "identfier" MUST be supported:Examples:`GET [base]/Observation?identfier=http://charite.de/labor/labortests|1234`Usage notes: Further information on searching by "identfier" can be found in the FHIR base specification - section "token".
-1. The search parameter "code" MUST be supported:Examples:`GET [base]/Observation?code=http://fhir.de/CodeSystem/sct|184305005`Usage notes: Further information on searching by "code" can be found in the FHIR base specification - section "token".
-1. The search parameter "subject" MUST be supported:Examples:`GET [base]/Observation?subject=Patient/example`Usage notes: Further information on searching by "subject" can be found in the FHIR base specification - section "reference".
-1. The search parameter "focus" MUST be supported:Examples:`GET [base]/Observation?focus=Condition/example`Usage notes: Further information on searching by "focus" can be found in the FHIR base specification - section "reference".
-1. The search parameter "encounter" MUST be supported:Examples:`GET [base]/Observation?encounter=Encounter/example`Usage notes: Further information on searching by "encounter" can be found in the FHIR base specification - section "reference".
-1. The search parameter "component-code-value-concept" MUST be supported:Examples:`GET [base]/Observation?component-code-value-concept=http://loinc.org|12345-6$http://fhir.de/CodeSystem/sct|12345678`Usage notes: Further information on searching by "components" can be found in the FHIR base specification - section "compodsite".
-
 **Examples**
 
 [mii-exa-onko-verlauf-tumor](Observation-mii-exa-onko-verlauf-tumor.md)
@@ -92,7 +77,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-verla
   "name" : "MII_PR_Onko_Verlauf",
   "title" : "MII PR Onkologie Verlauf",
   "status" : "active",
-  "date" : "2026-08-27T15:31:43+00:00",
+  "date" : "2026-08-27T15:57:15+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

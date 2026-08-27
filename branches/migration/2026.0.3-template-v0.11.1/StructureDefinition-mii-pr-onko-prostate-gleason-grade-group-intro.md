@@ -49,57 +49,6 @@ Mapping [Uniform Oncological Base Dataset (oBDS)](https://basisdatensatz.de/basi
 > The oBDS mappings are recorded in the artefact view of this profile: [MII PR Onkologie Prostata Gleason Grade Group](StructureDefinition-mii-pr-onko-prostate-gleason-grade-group.html).
 {: .ig-highlight .ig-highlight-grey}
 
----
-
-**Search parameters**
-
-The following search parameters are relevant for the Prostate Gleason Score Grade Group profile, including in combination:
-
-1. The search parameter "_id" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/Observation?_id=12345```
-
-1. The search parameter "_profile" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-grade-group```
-
-1. The search parameter "code" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/Observation?code=http://loinc.org|44642-7```
-
-1. The search parameter "subject" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/Observation?subject=Patient/test```
-
-1. The search parameter "focus" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/Observation?focus=Condition/primaertumor```
-
-1. The search parameter "value-concept" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/Observation?value-concept=http://snomed.info/sct|369771007```
-
-1. The search parameter "component-code" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/Observation?component-code=http://loinc.org|79892-6```
-
-    Usage notes: For searching by the Grade Group component.
-
----
 **Examples**
 
 [mii-exa-onko-prostata-gleason-pattern-grade-group-1](Observation-mii-exa-onko-prostata-gleason-pattern-grade-group-1.html)

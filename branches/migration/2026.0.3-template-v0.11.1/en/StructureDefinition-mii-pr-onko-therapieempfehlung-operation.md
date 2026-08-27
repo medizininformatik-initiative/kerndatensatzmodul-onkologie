@@ -121,16 +121,6 @@ Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensa
 
 > The oBDS mappings are recorded in the artefact view of this profile: [MII PR Onkologie Therapieempfehlung Operation](StructureDefinition-mii-pr-onko-therapieempfehlung-operation.md).
 
--------
-
-**Search parameters**
-
-1. The search parameter `_id` MUST be supported: `GET [base]/ServiceRequest?_id=1234`
-1. The search parameter "_profile" MUST be supported: `GET [base]/ServiceRequest?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-operation`
-1. The search parameter "subject" MUST be supported: `GET [base]/ServiceRequest?subject=Patient/example`
-1. The search parameter "intent" SHOULD be supported: `GET [base]/ServiceRequest?intent=proposal`
-1. The search parameter "category" SHOULD be supported: `GET [base]/ServiceRequest?category=surgical-procedure`
-
 **Usages:**
 
 * CapabilityStatements using this Profile: [MII CPS Onkology CapabilityStatement](CapabilityStatement-mii-cps-onko-capabilitystatement.md)
@@ -159,7 +149,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-thera
   "name" : "MII_PR_Onko_Therapieempfehlung_Operation",
   "title" : "MII PR Onkologie Therapieempfehlung Operation",
   "status" : "active",
-  "date" : "2026-08-27T15:31:43+00:00",
+  "date" : "2026-08-27T15:57:15+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

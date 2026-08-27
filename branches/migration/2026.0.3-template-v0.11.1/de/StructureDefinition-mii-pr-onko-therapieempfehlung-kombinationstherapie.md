@@ -156,16 +156,6 @@ Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensa
 
 > Die oBDS-Mappings sind in der Artefaktdarstellung des Profils hinterlegt: [MII PR Onkologie Therapieempfehlung Kombinationstherapie](StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie.md).
 
--------
-
-**Suchparameter**
-
-1. Der Suchparameter `_id` MUSS unterstützt werden: `GET [base]/RequestGroup?_id=1234`
-1. Der Suchparameter "_profile" MUSS unterstützt werden: `GET [base]/RequestGroup?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie`
-1. Der Suchparameter "subject" MUSS unterstützt werden: `GET [base]/RequestGroup?subject=Patient/example`
-1. Der Suchparameter "code" SOLLTE unterstützt werden: `GET [base]/RequestGroup?code=ZS`
-1. Der Suchparameter "based-on" SOLLTE unterstützt werden: `GET [base]/RequestGroup?based-on=CarePlan/tumorkonferenz-example`
-
 **Beispiele**
 
 * Klassen-basierte Empfehlung (CDK4/6-Inhibitor): [mii-exa-onko-molecular-cdk46-protocol](RequestGroup-mii-exa-onko-molecular-cdk46-protocol.md), eingebunden über [mii-exa-onko-tumorkonferenz-mixed-approach](CarePlan-mii-exa-onko-tumorkonferenz-mixed-approach.md)
@@ -265,7 +255,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_Therapieempfehlung_Kombinationstherapie",
   "title" : "MII PR Onkologie Therapieempfehlung Kombinationstherapie",
   "status" : "active",
-  "date" : "2026-08-27T15:31:43+00:00",
+  "date" : "2026-08-27T15:57:15+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

@@ -488,80 +488,6 @@ MII PR Onkologie Clavien Dindo
   <p>Die oBDS-Mappings sind in der Artefaktdarstellung des Profils hinterlegt: <a href="StructureDefinition-mii-pr-onko-prostate-clavien-dindo.html">MII PR Onkologie Clavien Dindo</a>.</p>
 </blockquote>
 
-<hr />
-
-<p><strong>Suchparameter</strong></p>
-
-<p>Folgende Suchparameter sind für das Prostata-Clavien-Dindo Profil relevant, auch in Kombination:</p>
-
-<ol>
-  <li>
-    <p>Der Suchparameter "_id" MUSS unterstützt werden:</p>
-
-    <p>Beispiele:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Observation?_id=12345</code></p>
-
-    <p>Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der <a href="http://hl7.org/fhir/R4/search.html#all">FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"</a>.</p>
-  </li>
-  <li>
-    <p>Der Suchparameter "_profile" MUSS unterstützt werden:</p>
-
-    <p>Beispiele:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-clavien-dindo</code></p>
-
-    <p>Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der <a href="http://hl7.org/fhir/R4/search.html#all">FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"</a>.</p>
-  </li>
-  <li>
-    <p>Der Suchparameter "code" MUSS unterstützt werden:</p>
-
-    <p>Beispiele:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Observation?code=http://snomed.info/sct|789279006</code></p>
-
-    <p>Anwendungshinweise: Weitere Informationen zur Suche nach "Observation.code" finden sich in der <a href="http://hl7.org/fhir/R4/search.html#token">FHIR-Basisspezifikation - Abschnitt "Token Search"</a>.</p>
-  </li>
-  <li>
-    <p>Der Suchparameter "subject" MUSS unterstützt werden:</p>
-
-    <p>Beispiele:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Observation?subject=Patient/test</code></p>
-
-    <p>Anwendungshinweise: Weitere Informationen zur Suche nach "Observation.subject" finden sich in der <a href="http://hl7.org/fhir/R4/search.html#reference">FHIR-Basisspezifikation - Abschnitt "reference"</a>.</p>
-  </li>
-  <li>
-    <p>Der Suchparameter "focus" MUSS unterstützt werden:</p>
-
-    <p>Beispiele:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Observation?focus=Condition/primaertumor</code>
- <code class="language-plaintext highlighter-rouge">GET [base]/Observation?focus=Procedure/prostatektomie</code></p>
-
-    <p>Anwendungshinweise: Weitere Informationen zur Suche nach "Observation.focus" finden sich in der <a href="http://hl7.org/fhir/R4/search.html#reference">FHIR-Basisspezifikation - Abschnitt "reference"</a>.</p>
-  </li>
-  <li>
-    <p>Der Suchparameter "method" MUSS unterstützt werden:</p>
-
-    <p>Beispiele:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Observation?method=http://snomed.info/sct|789278003</code></p>
-
-    <p>Anwendungshinweise: Weitere Informationen zur Suche nach "Observation.method" finden sich in der <a href="http://hl7.org/fhir/R4/search.html#token">FHIR-Basisspezifikation - Abschnitt "Token Search"</a>.</p>
-  </li>
-  <li>
-    <p>Der Suchparameter "value-concept" MUSS unterstützt werden:</p>
-
-    <p>Beispiele:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Observation?value-concept=http://snomed.info/sct|1367521005</code></p>
-
-    <p>Anwendungshinweise: Weitere Informationen zur Suche nach "Observation.value[x]" finden sich in der <a href="http://hl7.org/fhir/R4/search.html#token">FHIR-Basisspezifikation - Abschnitt "Token Search"</a>.</p>
-  </li>
-</ol>
-
-<hr />
 <p><strong>Beispiele</strong></p>
 
 <p><a href="Observation-mii-exa-onko-prostata-surgical-complication-1.html">mii-exa-onko-prostata-surgical-complication-1</a></p>
@@ -820,7 +746,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="http://hl7.org/fhir/R4/specimen.html">Specimen</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Specimen used for this observation</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 640acd95-f0cb-4e9e-9f57-7b865c2de0d1
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a0fa2864-f6c5-44ac-92c9-76863e53d564
 document.getElementById('cbmii-pr-onko-prostate-clavien-dindoK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-prostate-clavien-dindoK'), 'binding', document.getElementById('cbmii-pr-onko-prostate-clavien-dindoK-binding').checked, document.getElementById('ppmii-pr-onko-prostate-clavien-dindoK'));
 document.getElementById('cbmii-pr-onko-prostate-clavien-dindoK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1175,7 +1101,7 @@ filterDesc(document.getElementById('mii-pr-onko-prostate-clavien-dindoK'), 'obli
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/specimen.html">Specimen</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Specimen used for this observation</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 640acd95-f0cb-4e9e-9f57-7b865c2de0d1
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a0fa2864-f6c5-44ac-92c9-76863e53d564
 document.getElementById('cbmii-pr-onko-prostate-clavien-dindoD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-prostate-clavien-dindoD'), 'binding', document.getElementById('cbmii-pr-onko-prostate-clavien-dindoD-binding').checked, document.getElementById('ppmii-pr-onko-prostate-clavien-dindoD'));
 document.getElementById('cbmii-pr-onko-prostate-clavien-dindoD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1844,7 +1770,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">See <a href="http://hl7.org/fhir/R4/observation.html#Observation.referenceRange" title="Observation.referenceRange">referenceRange (Observation)</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Provides guide for interpretation of component result<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 640acd95-f0cb-4e9e-9f57-7b865c2de0d1
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a0fa2864-f6c5-44ac-92c9-76863e53d564
 document.getElementById('cbmii-pr-onko-prostate-clavien-dindoS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-prostate-clavien-dindoS'), 'binding', document.getElementById('cbmii-pr-onko-prostate-clavien-dindoS-binding').checked, document.getElementById('ppmii-pr-onko-prostate-clavien-dindoS'));
 document.getElementById('cbmii-pr-onko-prostate-clavien-dindoS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2631,7 +2557,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="http://hl7.org/fhir/R4/specimen.html">Specimen</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Specimen used for this observation</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 640acd95-f0cb-4e9e-9f57-7b865c2de0d1
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a0fa2864-f6c5-44ac-92c9-76863e53d564
 document.getElementById('cbmii-pr-onko-prostate-clavien-dindoKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-prostate-clavien-dindoKA'), 'binding', document.getElementById('cbmii-pr-onko-prostate-clavien-dindoKA-binding').checked, document.getElementById('ppmii-pr-onko-prostate-clavien-dindoKA'));
 document.getElementById('cbmii-pr-onko-prostate-clavien-dindoKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2985,7 +2911,7 @@ filterDesc(document.getElementById('mii-pr-onko-prostate-clavien-dindoKA'), 'obl
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/specimen.html">Specimen</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Specimen used for this observation</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 640acd95-f0cb-4e9e-9f57-7b865c2de0d1
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a0fa2864-f6c5-44ac-92c9-76863e53d564
 document.getElementById('cbmii-pr-onko-prostate-clavien-dindoDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-prostate-clavien-dindoDA'), 'binding', document.getElementById('cbmii-pr-onko-prostate-clavien-dindoDA-binding').checked, document.getElementById('ppmii-pr-onko-prostate-clavien-dindoDA'));
 document.getElementById('cbmii-pr-onko-prostate-clavien-dindoDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -3651,7 +3577,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">See <a href="http://hl7.org/fhir/R4/observation.html#Observation.referenceRange" title="Observation.referenceRange">referenceRange (Observation)</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Provides guide for interpretation of component result<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 640acd95-f0cb-4e9e-9f57-7b865c2de0d1
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a0fa2864-f6c5-44ac-92c9-76863e53d564
 document.getElementById('cbmii-pr-onko-prostate-clavien-dindoSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-prostate-clavien-dindoSA'), 'binding', document.getElementById('cbmii-pr-onko-prostate-clavien-dindoSA-binding').checked, document.getElementById('ppmii-pr-onko-prostate-clavien-dindoSA'));
 document.getElementById('cbmii-pr-onko-prostate-clavien-dindoSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -4266,7 +4192,7 @@ Summary
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.onkologie#2026.0.3 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Thu, Aug 27, 2026 15:31+0000">2026-08-27</span>
+          Erstellt <span title="Thu, Aug 27, 2026 15:57+0000">2026-08-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

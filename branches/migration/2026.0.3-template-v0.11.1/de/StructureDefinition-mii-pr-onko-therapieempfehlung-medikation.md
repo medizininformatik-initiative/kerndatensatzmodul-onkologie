@@ -122,16 +122,6 @@ Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensa
 
 > Die oBDS-Mappings sind in der Artefaktdarstellung des Profils hinterlegt: [MII PR Onkologie Therapieempfehlung Medikation](StructureDefinition-mii-pr-onko-therapieempfehlung-medikation.md).
 
--------
-
-**Suchparameter**
-
-1. Der Suchparameter `_id` MUSS unterstützt werden: `GET [base]/MedicationRequest?_id=1234`
-1. Der Suchparameter "_profile" MUSS unterstützt werden: `GET [base]/MedicationRequest?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation`
-1. Der Suchparameter "subject" MUSS unterstützt werden: `GET [base]/MedicationRequest?subject=Patient/example`
-1. Der Suchparameter "intent" SOLLTE unterstützt werden: `GET [base]/MedicationRequest?intent=proposal`
-1. Der Suchparameter "medication" SOLLTE unterstützt werden: `GET [base]/MedicationRequest?medication=http://fhir.de/CodeSystem/bfarm/atc|L01XE27`
-
 **Usages:**
 
 * Refer to this Profile: [MII PR Onkologie Therapieempfehlung Kombinationstherapie](StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie.md)
@@ -241,7 +231,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_Therapieempfehlung_Medikation",
   "title" : "MII PR Onkologie Therapieempfehlung Medikation",
   "status" : "active",
-  "date" : "2026-08-27T15:31:43+00:00",
+  "date" : "2026-08-27T15:57:15+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

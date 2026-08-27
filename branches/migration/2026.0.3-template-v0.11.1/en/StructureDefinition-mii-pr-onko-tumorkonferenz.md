@@ -120,22 +120,6 @@ Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensa
 
 > The oBDS mappings are recorded in the artefact view of this profile: [MII PR Onkologie Tumorkonferenz](StructureDefinition-mii-pr-onko-tumorkonferenz.md).
 
--------
-
-**Search parameters**
-
-The following search parameters are relevant for the Oncology module, including in combination:
-
-1. The search parameter `_id` MUST be supported:Examples:`GET [base]/CarePlan?_id=1234`Usage notes: Further information on searching by "_id" can be found in the [FHIR base specification - section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
-1. The search parameter `_profile` MUST be supported:Examples:`GET [base]/CarePlan?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz`Usage notes: Further information on searching by "_profile" can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#token).
-1. The search parameter `identifier` MUST be supported:Examples:`GET [base]/CarePlan?identifier=Tumorkonferenz_1`Usage notes: Further information on searching by "identifier" can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#token).
-1. The search parameter `category` MUST be supported: Examples:`GET [base]/CarePlan?category=http://snomed.info/sct|734163000`Usage notes: Further information on searching by "category" can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#token).
-1. The search parameter `subject` MUST be supported: Examples:`GET [base]/CarePlan?subject=Patient/example`Usage notes: Further information on searching by "subject" can be found in the [FHIR base specification - section "reference"](http://hl7.org/fhir/R4/search.html#reference).
-1. The search parameter `period` MUST be supported: Examples:`GET [base]/CarePlan?date=eq2022-01-01`Usage notes: Further information on searching by "period" can be found in the [FHIR base specification - section "date"](http://hl7.org/fhir/R4/search.html#date).
-1. The search parameter `contributor` MUST be supported: Examples:`GET [base]/CarePlan?contributor=Practitioner/example`Usage notes: Further information on searching by "contributor" can be found in the [FHIR base specification - section "reference"](http://hl7.org/fhir/R4/search.html#reference).
-1. The search parameter `addresses` MUST be supported: Examples:`GET [base]/CarePlan?addresses=Condition/example`Usage notes: Further information on searching by "addresses" can be found in the [FHIR base specification - section "reference"](http://hl7.org/fhir/R4/search.html#reference).
-1. The search parameter `activity-code` MUST be supported: Examples:`GET [base]/CarePlan?activity-code=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapieempfehlung-typ|OP`Usage notes: Further information on searching by "activity-code" can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#token).
-
 **Examples**
 
 ### Traditional oBDS tumor board (obds slice):
@@ -179,7 +163,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tumor
   "name" : "MII_PR_Onko_Tumorkonferenz",
   "title" : "MII PR Onkologie Tumorkonferenz",
   "status" : "active",
-  "date" : "2026-08-27T15:31:43+00:00",
+  "date" : "2026-08-27T15:57:15+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

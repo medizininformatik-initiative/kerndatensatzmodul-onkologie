@@ -52,53 +52,6 @@ Mapping [Uniform Oncological Base Dataset (oBDS)](https://basisdatensatz.de/basi
 > The oBDS mappings are recorded in the artefact view of this profile: [MII PR Onkologie Specimen](StructureDefinition-mii-pr-onko-krk-specimen.html).
 {: .ig-highlight .ig-highlight-grey}
 
----
-
-**Search parameters**
-
-The following search parameters are relevant for the KRK Specimen profile, including in combination:
-
-1. The search parameter "_id" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/Specimen?_id=12345```
-
-    Usage notes: Further information on searching by "_id" can be found in the [FHIR base specification - section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
-
-1. The search parameter "_profile" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/Specimen?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-specimen```
-
-    Usage notes: Further information on searching by "_profile" can be found in the [FHIR base specification - section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
-
-1. The search parameter "subject" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/Specimen?subject=Patient/test```
-
-    Usage notes: Further information on searching by "Specimen.subject" can be found in the [FHIR base specification - section "reference"](http://hl7.org/fhir/R4/search.html#reference).
-
-1. The search parameter "type" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/Specimen?type=http://snomed.info/sct|119376003```
-
-    Usage notes: Further information on searching by "Specimen.type" can be found in the [FHIR base specification - section "Token Search"](http://hl7.org/fhir/R4/search.html#token).
-
-1. The search parameter "status" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/Specimen?status=available```
-
-    Usage notes: Further information on searching by "Specimen.status" can be found in the [FHIR base specification - section "Token Search"](http://hl7.org/fhir/R4/search.html#token).
-
----
 **Examples**
 
 [mii-exa-onko-krk-specimen](Specimen-mii-exa-onko-krk-specimen.html)

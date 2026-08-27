@@ -91,22 +91,3 @@ Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensa
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Tumorkonferenz/Therapieempfehlung-Operation-ServiceRequest.page.md gate=B -->
 > The oBDS mappings are recorded in the artefact view of this profile: [MII PR Onkologie Therapieempfehlung Operation](StructureDefinition-mii-pr-onko-therapieempfehlung-operation.html).
 {: .ig-highlight .ig-highlight-grey}
-
----
-
-**Search parameters**
-
-1. The search parameter ```_id``` MUST be supported:
-    ```GET [base]/ServiceRequest?_id=1234```
-
-2. The search parameter "_profile" MUST be supported:
-    ```GET [base]/ServiceRequest?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-operation```
-
-3. The search parameter "subject" MUST be supported:
-    ```GET [base]/ServiceRequest?subject=Patient/example```
-
-4. The search parameter "intent" SHOULD be supported:
-    ```GET [base]/ServiceRequest?intent=proposal```
-
-5. The search parameter "category" SHOULD be supported:
-    ```GET [base]/ServiceRequest?category=surgical-procedure```

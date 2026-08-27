@@ -489,213 +489,6 @@ MII PR Onkologie Strahlentherapie Nuklearmedizin
   <p>The oBDS mappings are recorded in the artefact view of this profile: <a href="StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin.html">MII PR Onkologie Strahlentherapie Nuklearmedizin</a>.</p>
 </blockquote>
 
-<hr />
-
-<p><strong>Search parameters</strong></p>
-
-<p>The following search parameters are relevant for the Oncology module, including in combination:</p>
-
-<ol>
-  <li>
-    <p>The search parameter "_id" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Procedure?_id=103270</code></p>
-
-    <p>Usage notes: Further information on searching by "_id" can be found in the <a href="http://hl7.org/fhir/R4/search.html#all">FHIR base specification - section "Parameters for all resources"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter "_profile" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Procedure?_profile=https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure</code></p>
-
-    <p>Usage notes: Further information on searching by "_profile" can be found in the <a href="http://hl7.org/fhir/R4/search.html#all">FHIR base specification - section "Parameters for all resources"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter "status" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Procedure?status=completed</code></p>
-
-    <p>Usage notes: Further information on searching by "Procedure.status" can be found in the <a href="http://hl7.org/fhir/R4/search.html#token">FHIR base specification - section "Token Search"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter "category" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Procedure?category=http://snomed.info/sct|103693007</code></p>
-
-    <p>Usage notes: Further information on searching by "Procedure.category" can be found in the <a href="http://hl7.org/fhir/R4/search.html#token">FHIR base specification - section "Token Search"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter "code" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Procedure?code=http://fhir.de/CodeSystem/bfarm/ops|5-37</code></p>
-
-    <p>Usage notes: Further information on searching by "Procedure.code" can be found in the <a href="http://hl7.org/fhir/R4/search.html#token">FHIR base specification - section "Token Search"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter "date" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Procedure?date=2022-01-01</code></p>
-
-    <p>Usage notes: Further information on searching by "Procedure.performed" can be found in the <a href="http://hl7.org/fhir/R4/search.html#date">FHIR base specification - section "Date Search"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter "subject" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Procedure?subject=Patient/test</code></p>
-
-    <p>Usage notes: Further information on searching by "Procedure.subject" can be found in the <a href="http://hl7.org/fhir/R4/search.html#reference">FHIR base specification - section "reference"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter "patient" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Procedure?patient=Patient/test</code></p>
-
-    <p>Usage notes: Further information on searching by "Procedure.subject" can be found in the <a href="http://hl7.org/fhir/R4/search.html#reference">FHIR base specification - section "reference"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter "bodySite" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Procedure?bodySite=http://snomed.info/sct|80891009</code></p>
-
-    <p>Usage notes: Further information on searching by "Procedure.bodySite" can be found in the <a href="http://hl7.org/fhir/R4/search.html#token">FHIR base specification - section "Token Search"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter "dokumentationsdatum" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Procedure?dokumentationsdatum=2022-01-01</code></p>
-
-    <p>Usage notes: Further information on searching by "Procedure.extension:Dokumentationsdatum" can be found in the <a href="http://hl7.org/fhir/R4/search.html#date">FHIR base specification - section "Date Search"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter "durchfuehrungsabsicht" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Procedure?durchfuehrungsabsicht=http://snomed.info/sct|262202000</code></p>
-
-    <p>Usage notes: Further information on searching by "Procedure.extension:Durchfuehrungsabsicht" can be found in the <a href="http://hl7.org/fhir/R4/search.html#token">FHIR base specification - section "Token Search"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter "outcome" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Procedure?outcome=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund|R1</code></p>
-
-    <p>Usage notes: Further information on searching by "Procedure.extension:Durchfuehrungsabsicht" can be found in the <a href="http://hl7.org/fhir/R4/search.html#token">FHIR base specification - section "Token Search"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter "extension-intention" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Procedure?extension-intention=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention|K</code></p>
-
-    <p>Usage notes: Further information on searching by "Procedure.extension:Intention" can be found in the <a href="http://hl7.org/fhir/R4/search.html#token">FHIR base specification - section "Token Search"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter "extension-stellung" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Procedure?extension-stellung=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-stellung|K</code></p>
-
-    <p>Usage notes: Further information on searching by "Procedure.extension:Stellung" can be found in the <a href="http://hl7.org/fhir/R4/search.html#token">FHIR base specification - section "Token Search"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter "extension-stellung" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Procedure?extension-stellung=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-stellung|K</code></p>
-
-    <p>Usage notes: Further information on searching by "Procedure.extension:Stellung" can be found in the <a href="http://hl7.org/fhir/R4/search.html#token">FHIR base specification - section "Token Search"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter "extension-bestrahlung-applikationsart" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Procedure?extension-bestrahlung-applikationsart=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-bestrahlung-applikationsart|KLDR</code></p>
-
-    <p>Usage notes: Further information on searching by "Procedure.extension:Stellung" can be found in the <a href="http://hl7.org/fhir/R4/search.html#token">FHIR base specification - section "Token Search"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter "extension-bestrahlung-strahlenart" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Procedure?extension-bestrahlung-strahlenart=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-bestrahlung-strahlenarart|PN</code></p>
-
-    <p>Usage notes: Further information on searching by "Procedure.extension:Stellung" can be found in the <a href="http://hl7.org/fhir/R4/search.html#token">FHIR base specification - section "Token Search"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter "extension-bestrahlung-zielgebiet" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Procedure?extension-bestrahlung-zielgebiet=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-bestrahlung-zielgebiet|4.9</code></p>
-
-    <p>Usage notes: Further information on searching by "Procedure.extension:Bestrahlung.extension:Applikationsart" can be found in the <a href="http://hl7.org/fhir/R4/search.html#token">FHIR base specification - section "Token Search"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter "extension-bestrahlung-zielgebiet-Lateralitaet" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Procedure?extension-bestrahlung-zielgebiet-Lateralitaet=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation|L</code></p>
-
-    <p>Usage notes: Further information on searching by "Procedure.extension:Bestrahlung.extension:Zielgebiet_Lateralitaet" can be found in the <a href="http://hl7.org/fhir/R4/search.html#token">FHIR base specification - section "Token Search"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter "extension-bestrahlung-boost" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Procedure?extension-bestrahlung-boost=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost|SIB</code></p>
-
-    <p>Usage notes: Further information on searching by "Procedure.extension:Bestrahlung.extension:Boost" can be found in the <a href="http://hl7.org/fhir/R4/search.html#token">FHIR base specification - section "Token Search"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter "extension-bestrahlung-einzeldosis" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Procedure?extension-bestrahlung-einzeldosis=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-bestrahlung-einzeldosis</code></p>
-
-    <p>Usage notes: Further information on searching by "Procedure.extension:Bestrahlung.extension:Einzeldosis" can be found in the <a href="http://hl7.org/fhir/R4/search.html#quantity">FHIR base specification - section "Quantity Search"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter "extension-bestrahlung-gesamtdosis" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Procedure?extension-bestrahlung-gesamtdosis=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-bestrahlung-gesamtdosis</code></p>
-
-    <p>Usage notes: Further information on searching by "Procedure.extension:Bestrahlung.extension:Gesamtdosis" can be found in the <a href="http://hl7.org/fhir/R4/search.html#quantity">FHIR base specification - section "Quantity Search"</a>.</p>
-  </li>
-</ol>
-
 <p><strong>Examples</strong></p>
 
 <p><a href="Procedure-mii-exa-onko-strahlentherapie-bestrahlung-nuklearmedizin-1.html">mii-exa-onko-strahlentherapie-bestrahlung-nuklearmedizin-1</a></p>
@@ -1240,7 +1033,7 @@ Hierdurch wird der Tatsache Rechnung getragen, dass jede der jährlich neu ersch
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Symbol in syntax defined by the system</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 640acd95-f0cb-4e9e-9f57-7b865c2de0d1
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a0fa2864-f6c5-44ac-92c9-76863e53d564
 document.getElementById('cbmii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizinK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizinK'), 'binding', document.getElementById('cbmii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizinK-binding').checked, document.getElementById('ppmii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizinK'));
 document.getElementById('cbmii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizinK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1816,7 +1609,7 @@ filterDesc(document.getElementById('mii-pr-onko-strahlentherapie-bestrahlung-nuk
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Symbol in syntax defined by the system</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 640acd95-f0cb-4e9e-9f57-7b865c2de0d1
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a0fa2864-f6c5-44ac-92c9-76863e53d564
 document.getElementById('cbmii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizinD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizinD'), 'binding', document.getElementById('cbmii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizinD-binding').checked, document.getElementById('ppmii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizinD'));
 document.getElementById('cbmii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizinD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2962,7 +2755,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Plain text representation of the concept</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 640acd95-f0cb-4e9e-9f57-7b865c2de0d1
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a0fa2864-f6c5-44ac-92c9-76863e53d564
 document.getElementById('cbmii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizinS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizinS'), 'binding', document.getElementById('cbmii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizinS-binding').checked, document.getElementById('ppmii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizinS'));
 document.getElementById('cbmii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizinS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -4293,7 +4086,7 @@ Hierdurch wird der Tatsache Rechnung getragen, dass jede der jährlich neu ersch
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Symbol in syntax defined by the system</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 640acd95-f0cb-4e9e-9f57-7b865c2de0d1
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a0fa2864-f6c5-44ac-92c9-76863e53d564
 document.getElementById('cbmii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizinKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizinKA'), 'binding', document.getElementById('cbmii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizinKA-binding').checked, document.getElementById('ppmii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizinKA'));
 document.getElementById('cbmii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizinKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -4868,7 +4661,7 @@ filterDesc(document.getElementById('mii-pr-onko-strahlentherapie-bestrahlung-nuk
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Symbol in syntax defined by the system</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 640acd95-f0cb-4e9e-9f57-7b865c2de0d1
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a0fa2864-f6c5-44ac-92c9-76863e53d564
 document.getElementById('cbmii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizinDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizinDA'), 'binding', document.getElementById('cbmii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizinDA-binding').checked, document.getElementById('ppmii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizinDA'));
 document.getElementById('cbmii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizinDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -6011,7 +5804,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Plain text representation of the concept</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 640acd95-f0cb-4e9e-9f57-7b865c2de0d1
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a0fa2864-f6c5-44ac-92c9-76863e53d564
 document.getElementById('cbmii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizinSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizinSA'), 'binding', document.getElementById('cbmii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizinSA-binding').checked, document.getElementById('ppmii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizinSA'));
 document.getElementById('cbmii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizinSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -6884,7 +6677,7 @@ Summary
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.onkologie#2026.0.3 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Thu, Aug 27, 2026 15:31+0000">2026-08-27</span>
+          Generated <span title="Thu, Aug 27, 2026 15:57+0000">2026-08-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

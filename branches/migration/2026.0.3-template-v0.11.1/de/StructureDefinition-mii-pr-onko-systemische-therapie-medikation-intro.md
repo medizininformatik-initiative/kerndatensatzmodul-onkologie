@@ -32,53 +32,6 @@ Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensa
 > Die oBDS-Mappings sind in der Artefaktdarstellung des Profils hinterlegt: [MII PR Onkologie Systemische Therapie Medikation](StructureDefinition-mii-pr-onko-systemische-therapie-medikation.html).
 {: .ig-highlight .ig-highlight-grey}
 
----
-
-**Suchparameter**
-
-Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombination:
-
-1. Der Suchparameter ```_id``` MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/MedicationStatement?_id=1234```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
-
-2. Der Suchparameter ```_profile``` MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/MedicationStatement?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
-
-3. Der Suchparameter ```medicationCodeableConcept``` MUSS unterstützt werden:
-    Beispiele:
-
-    ```GET [base]/MedicationStatement?code=http://fhir.de/CodeSystem/bfarm/atc|L01AA01```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "token" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
-
-4. Der Suchparameter ```partOf``` MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/MedicationStatement?part-of=Procedure/123```
-
-    Anwendungshinweise: `MedicationStatement.partOf` verweist auf die zugehörige Prozedur der systemischen Therapie, daher ist als Referenz `Procedure/[id]` anzugeben. Weitere Informationen zur Suche nach "part-of" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#all).
-
-5. Der Suchparameter ```effective``` MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/MedicationStatement?effective=gt2019-01-01```
-
-    ```GET [base]/MedicationStatement?effective=ge2019-01-01&effective=le2019-12-01```
-
-    Anwendungshinweise: Der Suchparameter "effective" wertet den Zeitraum der Medikation (`MedicationStatement.effectivePeriod`) aus. Weitere Informationen zur Suche nach "effective" finden sich in der [FHIR-Basisspezifikation - Abschnitt "date"](http://hl7.org/fhir/R4/search.html#all).
-
 **Beispiele**
 
 [mii-exa-onko-systemische-therapie-medikation1](MedicationStatement-mii-exa-onko-systemische-therapie-medikation1.html)

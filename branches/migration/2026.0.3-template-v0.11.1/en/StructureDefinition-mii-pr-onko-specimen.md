@@ -64,7 +64,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-speci
   "name" : "MII_PR_Onko_Specimen",
   "title" : "MII PR Onkologie Specimen",
   "status" : "active",
-  "date" : "2026-08-27T15:31:43+00:00",
+  "date" : "2026-08-27T15:57:15+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

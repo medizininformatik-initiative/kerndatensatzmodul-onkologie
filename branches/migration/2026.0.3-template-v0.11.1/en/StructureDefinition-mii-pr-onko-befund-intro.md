@@ -22,30 +22,6 @@ Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensa
 > The oBDS mappings are recorded in the artefact view of this profile: [MII PR Onkologie Befund](StructureDefinition-mii-pr-onko-befund.html).
 {: .ig-highlight .ig-highlight-grey}
 
----
-
-**Search parameters**
-
-The following search parameters are relevant for the Onkologie module, including in combination:
-
-1. The search parameter ```_id``` MUST be supported:
-
-    Examples:
-
-    ```GET [base]/DiagnosticReport?_id=1234```
-
-    <!-- TODO:REVIEW The source page gave "GET [base]/Condition?_id=1234" here; corrected for a DiagnosticReport profile. -->
-
-    Usage notes: Further information on searching by "_id" can be found in the [FHIR base specification - section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
-
-2. The search parameter "_profile" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/DiagnosticReport?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-befund```
-
-    Usage notes: Further information on searching by "_profile" can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#all).
-
 **Examples**
 
 [mii-exa-onko-befund-1](DiagnosticReport-mii-exa-onko-befund-1.html)

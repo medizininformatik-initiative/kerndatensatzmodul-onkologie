@@ -52,61 +52,6 @@ Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensa
 > The oBDS mappings are recorded in the artefact view of this profile: [MII PR Onkologie Melanom LDH](StructureDefinition-mii-pr-onko-melanom-ldh.html).
 {: .ig-highlight .ig-highlight-grey}
 
----
-
-**Search parameters**
-
-The following search parameters are relevant for the Melanom-LDH profile, including in combination:
-
-1. The search parameter "_id" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/Observation?_id=12345```
-
-    Usage notes: Further information on searching by "_id" can be found in the [FHIR base specification - section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
-
-1. The search parameter "_profile" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-ldh```
-
-    Usage notes: Further information on searching by "_profile" can be found in the [FHIR base specification - section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
-
-1. The search parameter "code" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/Observation?code=http://loinc.org|14805-6```
-
-    Usage notes: Further information on searching by "Observation.code" can be found in the [FHIR base specification - section "Token Search"](http://hl7.org/fhir/R4/search.html#token).
-
-1. The search parameter "subject" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/Observation?subject=Patient/test```
-
-    Usage notes: Further information on searching by "Observation.subject" can be found in the [FHIR base specification - section "reference"](http://hl7.org/fhir/R4/search.html#reference).
-
-1. The search parameter "focus" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/Observation?focus=Condition/primaertumor```
-
-    Usage notes: Further information on searching by "Observation.focus" can be found in the [FHIR base specification - section "reference"](http://hl7.org/fhir/R4/search.html#reference).
-
-1. The search parameter "value-quantity" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/Observation?value-quantity=280|http://unitsofmeasure.org|U/L```
-
-    Usage notes: Further information on searching by "Observation.value[x]" can be found in the [FHIR base specification - section "Quantity Search"](http://hl7.org/fhir/R4/search.html#quantity).
-
----
 **Examples**
 
 [mii-exa-onko-melanom-ldh](Observation-mii-exa-onko-melanom-ldh.html)

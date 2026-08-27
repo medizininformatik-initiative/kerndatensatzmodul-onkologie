@@ -44,18 +44,6 @@ Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensa
 
 > The oBDS mappings are recorded in the artefact view of this profile: [MII PR Onkologie Systemische Therapie Medikation](StructureDefinition-mii-pr-onko-systemische-therapie-medikation.md).
 
--------
-
-**Search parameters**
-
-The following search parameters are relevant for the Oncology module, including in combination:
-
-1. The search parameter `_id` MUST be supported:Examples:`GET [base]/MedicationStatement?_id=1234`Usage notes: Further information on searching by "_id" can be found in the [FHIR base specification - section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
-1. The search parameter `_profile` MUST be supported:Examples:`GET [base]/MedicationStatement?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation`Usage notes: Further information on searching by "_profile" can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#all).
-1. The search parameter `medicationCodeableConcept` MUST be supported: Examples:`GET [base]/MedicationStatement?code=http://fhir.de/CodeSystem/bfarm/atc|L01AA01`Usage notes: Further information on searching by "token" can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#all).
-1. The search parameter `partOf` MUST be supported:Examples:`GET [base]/MedicationStatement?part-of=Procedure/123`Usage notes: `MedicationStatement.partOf` refers to the associated procedure of the systemic therapy, so `Procedure/[id]` must be specified as the reference. Further information on searching by "part-of" can be found in the [FHIR base specification - section "reference"](http://hl7.org/fhir/R4/search.html#all).
-1. The search parameter `effective` MUST be supported:Examples:`GET [base]/MedicationStatement?effective=gt2019-01-01``GET [base]/MedicationStatement?effective=ge2019-01-01&effective=le2019-12-01`Usage notes: The search parameter "effective" evaluates the period of the medication (`MedicationStatement.effectivePeriod`). Further information on searching by "effective" can be found in the [FHIR base specification - section "date"](http://hl7.org/fhir/R4/search.html#all).
-
 **Examples**
 
 [mii-exa-onko-systemische-therapie-medikation1](MedicationStatement-mii-exa-onko-systemische-therapie-medikation1.md)
@@ -98,7 +86,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-syste
   "name" : "MII_PR_Onko_Systemische_Therapie_Medikation",
   "title" : "MII PR Onkologie Systemische Therapie Medikation",
   "status" : "active",
-  "date" : "2026-08-27T15:31:43+00:00",
+  "date" : "2026-08-27T15:57:15+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
