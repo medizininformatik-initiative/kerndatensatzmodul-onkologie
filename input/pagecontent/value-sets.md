@@ -1,35 +1,26 @@
 <!-- markdownlint-disable MD041 -->
-<!-- Split from the former terminology.md per the TF-KDS-agreed menu structure (one
-     page per artifact type); SNOMED CT version policy from the meta wiki page
-     "Terminology Version Policy". The IG Publisher lists the ValueSets on the
-     artifact pages automatically; this page carries the MII notes on them.
-     German mirror: input/translations/de/pagecontent/value-sets.md. -->
-<!-- OPTIONAL-PAGE (0..1) — remove this marker when you KEEP the page; remove
-     the page per docs/optional-pages.md when you don't. The convention check
-     (M9) fails a release while this marker is present. -->
-
-> **Optional page (0..1).** The KDS module menu lists this page as *optional*.
-> Decide for your module: **keep** it — fill it in and delete this banner and
-> the `OPTIONAL-PAGE` marker comment (in this file AND the German mirror) — or
-> **remove** it, following the per-entry procedure in [`docs/optional-pages.md`](https://github.com/{{GITHUB_ORG}}/{{REPO_NAME}}/blob/main/docs/optional-pages.md)
-> of this repository. A release must not ship with this banner (convention
-> check M9).
-{: .ig-highlight .ig-highlight-grey}
+<!-- TODO:REVIEW machine translation of the German original (input/translations/de/pagecontent/value-sets.md) -->
 
 ### Value Sets
 
-This page describes the ValueSets of the **{{MODULE_TITLE}}** module (naming
-convention `MII_VS_<Module>_<Name>`). For general guidance on using codes, see
-[FHIR Terminology](http://hl7.org/fhir/R4/terminologies.html); the code systems
-the sets draw from are described on the [Code Systems](code-systems.html) page.
+This page describes the ValueSets of the Oncology module (naming convention
+`MII_VS_Onko_<Name>`). The complete, automatically generated list can be
+found in the [artifact overview](artifacts.html); the underlying code systems
+are described on the [code systems](code-systems.html) page.
 
-{:.bg-info}
-**Expansions:** ValueSet expansions in this guide are produced by a FHIR
-terminology server — SU-TermServ if the client certificate is configured,
-otherwise the public HL7 server `tx.fhir.org` (in which case some KDS-specific
-ValueSets may not expand completely).
+Particularities of this module's ValueSet landscape:
 
-> [TODO: If your module uses SNOMED CT, state the edition/version used. List
-> the module's own ValueSets, or refer to the automatically generated artifact
-> list — or remove this page if your module defines none.]
-{: .ig-highlight .ig-highlight-grey}
+- **oBDS answer lists**: Most ValueSets represent the oBDS answer lists and
+  bind the module's own CodeSystems (`MII_CS_Onko_…`).
+- **Year-versioned terminologies**: For ATC and ICD-O-3 the module maintains
+  version-pinned annual ValueSets together with transition ConceptMaps — see
+  [ATC — annual versions and transitions](atc-terminologie.html) and
+  [ICD-O — revisions and validation](icd-o-terminologie.html).
+- **Reportable tumors**: The ValueSet
+  [mii-vs-onko-icd10-meldepflichtige-tumoren](ValueSet-mii-vs-onko-icd10-meldepflichtige-tumoren.html)
+  captures the reportable ICD-10-GM block codes; a warning invariant on the
+  diagnosis flags codes outside this list without forbidding them.
+- **Curated companion artifacts**: non-binding curated selection lists such
+  as the [KDL document classes](ValueSet-mii-vs-onko-kdl-dokumentklassen.html)
+  of the oncological treatment path; the curated tumor-marker LOINC codes are
+  documented on the [tumor markers](tumormarker-loinc.html) page.

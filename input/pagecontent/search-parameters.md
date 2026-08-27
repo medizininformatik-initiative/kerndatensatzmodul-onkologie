@@ -1,25 +1,29 @@
 <!-- markdownlint-disable MD041 -->
-<!-- Split from the former combined search-parameters-and-operations.md per the
-     TF-KDS-agreed menu structure (one page per artifact type).
-     German mirror: input/translations/de/pagecontent/search-parameters.md. -->
-<!-- OPTIONAL-PAGE (0..1) — remove this marker when you KEEP the page; remove
-     the page per docs/optional-pages.md when you don't. The convention check
-     (M9) fails a release while this marker is present. -->
+<!-- TODO:REVIEW machine translation of the German original (input/translations/de/pagecontent/search-parameters.md) -->
 
-> **Optional page (0..1).** The KDS module menu lists this page as *optional*.
-> Decide for your module: **keep** it — fill it in and delete this banner and
-> the `OPTIONAL-PAGE` marker comment (in this file AND the German mirror) — or
-> **remove** it, following the per-entry procedure in [`docs/optional-pages.md`](https://github.com/{{GITHUB_ORG}}/{{REPO_NAME}}/blob/main/docs/optional-pages.md)
-> of this repository. A release must not ship with this banner (convention
-> check M9).
-{: .ig-highlight .ig-highlight-grey}
+### Search parameters
 
-### Search Parameters
+The module defines its own SearchParameters (including those for the TNM
+prefix extensions `tnm-cp-praefix`, `tnm-y-praefix` and `tnm-r-praefix`, and
+further extension-based searches). The complete, automatically generated list
+can be found in the [artifact overview](artifacts.html); which search
+parameters a server MUST support is defined by the module's
+[CapabilityStatement](capability-statements.html).
 
-This page lists the module-specific FHIR search parameters of the
-**{{MODULE_TITLE}}** module (naming convention `MII_SP_<Module>_<Name>`), where
-defined. Cross-module search parameters are defined by the Meta module.
+<!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile (Suchparameter-Abschnitte der Profilseiten) gate=B -->
+The profile pages of the Simplifier guide carried a search-parameter section
+with GET examples per profile. These sections were page-spanning identical
+boilerplate with partially broken examples (wrong resource types, broken code
+fences) and were deliberately **consolidated here** during migration instead
+of being repeated on every profile page. The normative core statements:
 
-> [TODO: List the search parameters — or remove this page if your module
-> defines none.]
-{: .ig-highlight .ig-highlight-grey}
+- Servers MUST support the search parameters listed in the
+  CapabilityStatement per resource type (including `_profile`, `status`,
+  `code`, `subject`, `date`/`effective` and reference-based parameters such
+  as `part-of`).
+- Search examples follow the FHIR base specification
+  ([Search](http://hl7.org/fhir/R4/search.html)); token search on codings
+  uses the form `[system]|[code]` (e.g.
+  `GET [base]/MedicationStatement?code=http://fhir.de/CodeSystem/bfarm/atc|L01AA01`).
+- For the extension-based searches (TNM prefixes), the module's
+  SearchParameter artifacts are authoritative.

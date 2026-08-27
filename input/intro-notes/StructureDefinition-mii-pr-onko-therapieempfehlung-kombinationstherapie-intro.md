@@ -8,6 +8,22 @@ This profile describes structured **therapy recommendations for combination ther
 
 The RequestGroup profile serves as a "protocol coordinator" between **CarePlan recommendations** and **specific therapy resources** (SystemischeTherapie, MedicationRequest, etc.).
 
+It enables the representation of complex therapy recommendations for **molecular tumor boards** and other tumor conferences that go beyond simple categorizations and require specific drug combinations or therapy options.
+
+### Delineation from the oBDS standard recommendation
+
+| Aspect | oBDS standard recommendation | Extended recommendation with RequestGroup |
+|--------|------------------------------|-------------------------------------------|
+| **Use** | Traditional tumor boards | Molecular tumor boards, complex protocols |
+| **Therapy recommendation** | `activity.detail.code` (19.1 oBDS) | `activity.reference` → RequestGroup |
+| **Multi-agent therapies** | Single categorization | Detailed protocols with specific agents |
+| **FHIR invariants** | `activity.detail` used | `activity.detail` disabled (0..0) |
+
+**Reason**: The FHIR R4 invariant `cpl-3` prevents the simultaneous use of `activity.detail.code` and `activity.reference`. Both approaches are therefore kept as separate slices.
+
+<!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Tumorkonferenz/Tumorkonferenz-Detailed-Recommendations-CarePlan.page.md gate=B -->
+Both variants are now represented in the Tumorkonferenz profile itself, as the slices `activity:obds` (with `activity.detail.code`, `activity.reference` set to 0..0) and `activity:extended` (with `activity.reference` 1..1, `activity.detail` set to 0..0); a separate "Detailed Recommendations" CarePlan profile no longer exists. The structure is described in the artefact view: [MII PR Onkologie Tumorkonferenz](StructureDefinition-mii-pr-onko-tumorkonferenz.html).
+
 ### Use cases
 
 #### **Multi-agent therapy protocols**
@@ -138,6 +154,8 @@ The oBDS mappings are recorded in the artefact view of this profile: [MII PR Onk
 
 **Examples**
 
-`mii-exa-onko-cdk46-class-recommendation` <!-- TODO:REVIEW Example instance no longer present in the module; check reference -->
+<!-- TODO:REVIEW Example instances matched by content: "class recommendation" -> CDK4/6 class protocol, "specific choices" -> HER2 alternatives. Please confirm clinically. -->
 
-`mii-exa-onko-her2-specific-choices` <!-- TODO:REVIEW Example instance no longer present in the module; check reference -->
+- Class-based recommendation (CDK4/6 inhibitor): [mii-exa-onko-molecular-cdk46-protocol](RequestGroup-mii-exa-onko-molecular-cdk46-protocol.html), referenced from [mii-exa-onko-tumorkonferenz-mixed-approach](CarePlan-mii-exa-onko-tumorkonferenz-mixed-approach.html)
+- Specific drug selection (HER2 alternatives): [mii-exa-onko-molecular-her2-alternatives](RequestGroup-mii-exa-onko-molecular-her2-alternatives.html), referenced from [mii-exa-onko-tumorkonferenz-pure-molecular](CarePlan-mii-exa-onko-tumorkonferenz-pure-molecular.html)
+- Protocol-based recommendation (FOLFOX): [mii-exa-onko-folfox-requestgroup](RequestGroup-mii-exa-onko-folfox-requestgroup.html) and [mii-exa-onko-folfox-requestgroup-modification](RequestGroup-mii-exa-onko-folfox-requestgroup-modification.html)

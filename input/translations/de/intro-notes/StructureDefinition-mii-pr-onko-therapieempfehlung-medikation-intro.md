@@ -55,7 +55,7 @@ reasonReference (Slicing: open, profile-based)
 
 ### Verwendung mit Extended CarePlan
 
-Dieses Profil ist primär für die Verwendung mit dem **Tumorkonferenz: Detaillierte Therapieempfehlungen (CarePlan) <!-- TODO:REVIEW pagelink TumorkonferenzDetailedRecommendationsCarePlan nicht auflösbar -->** und der **[Therapieempfehlung Kombinationstherapie (RequestGroup)](StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie.html)** konzipiert:
+Dieses Profil ist primär für die Verwendung mit dem **[Tumorkonferenz: Detaillierte Therapieempfehlungen (CarePlan)](StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie.html)** und der **[Therapieempfehlung Kombinationstherapie (RequestGroup)](StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie.html)** konzipiert:
 
 - **Standard-oBDS**: Krebsregister erfassen nur Therapietyp (z.B. "CH" für Chemotherapie) ohne Details zu spezifischen Medikamenten
 - **Extended CarePlan**: Ermöglicht spezifische Medikationsempfehlungen mit ATC/PZN Kodierung

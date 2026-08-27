@@ -1,26 +1,67 @@
 <!-- markdownlint-disable MD041 -->
-<!-- Split from the former combined profiles-and-extensions.md per the TF-KDS-agreed
-     menu structure (one page per artifact type).
-     German mirror: input/translations/de/pagecontent/extensions.md. -->
-<!-- OPTIONAL-PAGE (0..1) — remove this marker when you KEEP the page; remove
-     the page per docs/optional-pages.md when you don't. The convention check
-     (M9) fails a release while this marker is present. -->
+<!-- TODO:REVIEW machine translation of the German original (input/translations/de/pagecontent/extensions.md) -->
 
-> **Optional page (0..1).** The KDS module menu lists this page as *optional*.
-> Decide for your module: **keep** it — fill it in and delete this banner and
-> the `OPTIONAL-PAGE` marker comment (in this file AND the German mirror) — or
-> **remove** it, following the per-entry procedure in [`docs/optional-pages.md`](https://github.com/{{GITHUB_ORG}}/{{REPO_NAME}}/blob/main/docs/optional-pages.md)
-> of this repository. A release must not ship with this banner (convention
-> check M9).
-{: .ig-highlight .ig-highlight-grey}
+The complete, automatically generated list of this module's extensions can be
+found in the [artifact overview](artifacts.html). This page documents the
+design decisions: why extensions were needed and which alternatives were
+discussed.
 
-### Extensions
+### Use of extensions
 
-This page lists the FHIR extensions defined by the **{{MODULE_TITLE}}** module
-(naming convention `MII_EX_<Module>_<Name>`). Extensions carry information the
-base resources and profiles cannot express; the profiles that use them are on
-the [Profiles](profiles.html) page.
+The oBDS implementation uses extensions. This is mainly due to the oBDS data
+structure, the oBDS-specific code systems and the attempt to represent them
+with modules of the MII core dataset. The extensions were designed with a
+focus on integration into the MII core dataset and the secondary use of
+cancer registry data via the FDPG.
 
-> [TODO: List and describe your module's extensions — or remove this page if
-> your module defines none.]
-{: .ig-highlight .ig-highlight-grey}
+Since the use of extensions should be avoided in FHIR where sensible
+alternatives exist within the existing FHIR data model, implementation
+alternatives are shown and discussed below.
+
+### Procedure extensions (intention, timing relative to surgery)
+
+**Intention**
+
+- Why the extension is needed:
+  - The FHIR R4 Procedure has no element that can adequately represent the
+    treatment intention.
+  - The MII Procedure therefore contains an extension
+    [Durchführungsabsicht](https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht).
+  - CarePlan does have the `intent` element; however, it describes the
+    bindingness of the resource (plan, option, order etc.) and cannot be used
+    to code the treatment intention in the oBDS sense.
+- Alternative proposal: a consented SNOMED mapping might allow the treatment
+  intention to be captured directly in SNOMED CT and transported via the
+  Durchführungsabsicht extension.
+
+**Timing relative to surgical therapy (Stellung)**
+
+The timing of a radiotherapy or systemic therapy relative to surgery cannot
+be represented with the existing FHIR procedures. Representation via another
+resource (e.g. in CarePlan as part of the tumor conference) was discussed but
+not considered advantageous.
+
+### Radiotherapy irradiation extension
+
+- Why the extension is needed: representing the complex oBDS irradiation type
+  with traditional FHIR resources is currently only partially possible.
+- Individual irradiations cannot be represented as separate MII procedures,
+  as mandatory OPS or SNOMED CT codes would be required that do not exist for
+  all oBDS data fields.
+- Alternative proposal:
+  - keep radiotherapy as an MII procedure,
+  - define the irradiation as an R4 procedure:
+    - `bodySite` for the target volume, with laterality extension,
+    - `code` as application type,
+    - `method` as a slice for the radiation type,
+    - dose and boost still represented via extensions.
+
+### TNM extensions (c/p prefix, itc, sn)
+
+Alternative implementations:
+
+- as individual observations with the existing TNM grouper logic
+  - advantage: behaves exactly like other categories and symbols
+  - disadvantage: does not occur independently; tight coupling to the T/N/M
+    classification profiles required
+- as part of the T/N/M categories (e.g. `component`)

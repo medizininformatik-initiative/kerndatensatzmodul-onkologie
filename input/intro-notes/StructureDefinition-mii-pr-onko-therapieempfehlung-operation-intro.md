@@ -57,7 +57,7 @@ Optional references to supporting clinical information:
 
 ### Use with Extended CarePlan
 
-This profile is primarily designed for use with the **Tumorkonferenz: Detaillierte Therapieempfehlungen (CarePlan) <!-- TODO:REVIEW page link TumorkonferenzDetailedRecommendationsCarePlan not resolvable -->**:
+This profile is primarily designed for use with the **[Tumor board: detailed therapy recommendations (CarePlan)](StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie.html)**:
 
 - **Standard oBDS**: cancer registries only capture "operation planned" (therapy recommendation type "OP") without details on the type of operation
 - **Extended CarePlan**: enables specific operation recommendations with SNOMED CT coding

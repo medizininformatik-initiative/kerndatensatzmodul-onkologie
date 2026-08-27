@@ -1,26 +1,28 @@
 <!-- markdownlint-disable MD041 -->
-<!-- Deutsche Übersetzung von input/pagecontent/search-parameters.md
-     (aufgeteilt aus der früheren Kombi-Seite
-     search-parameters-and-operations.md). -->
-<!-- OPTIONAL-PAGE (0..1) — Marker entfernen, wenn die Seite BLEIBT; andernfalls
-     die Seite gemäß docs/optional-pages.md entfernen. Der Konventions-Check
-     (M9) lässt ein Release mit diesem Marker fehlschlagen. -->
-
-> **Optionale Seite (0..1).** Das KDS-Modulmenü führt diese Seite als
-> *optional*. Entscheiden Sie für Ihr Modul: Seite **behalten** — Inhalte
-> ausfüllen und dieses Banner samt `OPTIONAL-PAGE`-Marker-Kommentar löschen (in
-> dieser Datei UND in der englischen Quellseite) — oder Seite **entfernen**,
-> nach der Schritt-für-Schritt-Anleitung in [`docs/optional-pages.md`](https://github.com/{{GITHUB_ORG}}/{{REPO_NAME}}/blob/main/docs/optional-pages.md) dieses
-> Repositories. Ein Release darf dieses Banner nicht enthalten
-> (Konventions-Check M9).
-{: .ig-highlight .ig-highlight-grey}
 
 ### Suchparameter
 
-Diese Seite listet die modul-spezifischen FHIR-Suchparameter des Moduls
-**{{MODULE_TITLE}}** (Namenskonvention `MII_SP_<Modul>_<Name>`), sofern
-definiert. Modulübergreifende Suchparameter definiert das Meta-Modul.
+Das Modul definiert eigene SearchParameter (u. a. für die
+TNM-Präfix-Extensions `tnm-cp-praefix`, `tnm-y-praefix` und `tnm-r-praefix`
+sowie weitere Extension-basierte Suchen). Die vollständige, automatisch
+generierte Liste findet sich auf der [Artefakt-Übersicht](artifacts.html);
+welche Suchparameter ein Server verpflichtend unterstützen MUSS, definiert
+das [CapabilityStatement](capability-statements.html) des Moduls.
 
-> [TODO: Listen Sie die Suchparameter auf — oder entfernen Sie diese Seite,
-> wenn Ihr Modul keine definiert.]
-{: .ig-highlight .ig-highlight-grey}
+<!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile (Suchparameter-Abschnitte der Profilseiten) gate=B -->
+Die Profilseiten des Simplifier-Leitfadens führten je Profil einen
+Suchparameter-Abschnitt mit GET-Beispielen. Diese Abschnitte waren
+seitenübergreifend identische Boilerplate mit teils fehlerhaften Beispielen
+(falsche Ressourcentypen, defekte Codeblöcke) und wurden bei der Migration
+bewusst **hier konsolidiert** statt auf jeder Profilseite wiederholt. Die
+verbindlichen Kernaussagen:
+
+- Server MÜSSEN die im CapabilityStatement gelisteten Suchparameter je
+  Ressourcentyp unterstützen (u. a. `_profile`, `status`, `code`, `subject`,
+  `date`/`effective` sowie die referenzbasierten Parameter wie `part-of`).
+- Suchbeispiele folgen der FHIR-Basisspezifikation
+  ([Search](http://hl7.org/fhir/R4/search.html)); die Token-Suche auf
+  Codierungen erfolgt in der Form `[system]|[code]` (z. B.
+  `GET [base]/MedicationStatement?code=http://fhir.de/CodeSystem/bfarm/atc|L01AA01`).
+- Für die Extension-basierten Suchen (TNM-Präfixe) sind die
+  SearchParameter-Artefakte des Moduls maßgeblich.
