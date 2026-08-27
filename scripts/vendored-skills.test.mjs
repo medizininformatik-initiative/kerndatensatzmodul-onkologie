@@ -54,7 +54,14 @@ test("the documented install command pins the same ref as the lock", () => {
 
   // Walk the tracked prose. Vendored skill directories are excluded: their
   // content belongs to the catalog and is asserted by the drift check.
-  const skipDirs = new Set(["node_modules", "output", "temp", "input-cache", "fsh-generated", ".git", "ig-template"]);
+  // MODULE-LOCAL ADAPTATION (Onkologie, 2026-08-27): this module's .claude/ and
+  // .agents/ are REAL directories (they host the module's own project skills
+  // plus locally installed catalog working copies), not the template's
+  // symlinks into skills/. Catalog content is drift-checked via skills/ and
+  // sync-skills --check; scanning the working copies here produced false
+  // offenders (the catalog's own migration-spec documents a literal <ref>).
+  // Upstream: forschungsgruppe-digital-health/mii-kds-module-template#165.
+  const skipDirs = new Set(["node_modules", "output", "temp", "input-cache", "fsh-generated", ".git", "ig-template", ".claude", ".agents"]);
   (function walk(dir) {
     for (const name of readdirSync(dir)) {
       const p = path.join(dir, name);

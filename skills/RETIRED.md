@@ -40,7 +40,7 @@ To install them **elsewhere** — globally, or into an unrelated checkout — us
 installer:
 
 ```bash
-CATALOG=https://github.com/forschungsgruppe-digital-health/agent-skills/tree/v0.15.1
+CATALOG=https://github.com/forschungsgruppe-digital-health/agent-skills/tree/v0.23.0
 
 npx skills add "$CATALOG" --list
 npx skills add "$CATALOG" --skill fhir-ig-analysis fhir-ig-translation --agent claude-code codex --global --yes

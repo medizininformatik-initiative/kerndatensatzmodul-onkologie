@@ -43,7 +43,7 @@ the capability from every module created from this template.
 ## Installing catalog skills elsewhere
 
 ```bash
-CATALOG=https://github.com/forschungsgruppe-digital-health/agent-skills/tree/v0.15.1
+CATALOG=https://github.com/forschungsgruppe-digital-health/agent-skills/tree/v0.23.0
 npx skills add "$CATALOG" --list
 npx skills add "$CATALOG" --skill mii-ig-migration --agent claude-code codex --global --yes
 ```
