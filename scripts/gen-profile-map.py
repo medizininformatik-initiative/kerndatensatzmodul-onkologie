@@ -33,7 +33,8 @@ COLORS = {
 }
 
 # (deutscher Gruppentitel, englischer Gruppentitel, [(Label, Profil-Id), ...])
-GRUPPEN = [
+# Zwei Ebenen: der oBDS-Basisdatensatz und die organspezifischen Module.
+BASIS_GRUPPEN = [
     ("Diagnose (oBDS 5)", "Diagnosis (oBDS 5)", [
         ("Diagnose Primärtumor", "mii-pr-onko-diagnose-primaertumor"),
         ("Frühere Tumorerkrankung", "mii-pr-onko-fruehere-tumorerkrankung"),
@@ -82,7 +83,10 @@ GRUPPEN = [
     ("Genetik & Studien (oBDS 23–24)", "Genetics & Studies (oBDS 23–24)", [
         ("Genetische Variante", "mii-pr-onko-genetische-variante"),
         ("Studienteilnahme", "mii-pr-onko-studienteilnahme")]),
-    ("Organmodul Mamma", "Organ module: Breast", [
+]
+
+ORGAN_GRUPPEN = [
+    ("Mamma", "Breast", [
         ("Estrogen-Rezeptor", "mii-pr-onko-mamma-rezeptorstatus-estrogen"),
         ("Progesteron-Rezeptor", "mii-pr-onko-mamma-rezeptorstatus-progesteron"),
         ("HER2/neu", "mii-pr-onko-mamma-her2neu-status"),
@@ -90,7 +94,7 @@ GRUPPEN = [
         ("Präop. Markierung", "mii-pr-onko-mamma-praeoperative-markierung"),
         ("Mamma-OP", "mii-pr-onko-mamma-operation"),
         ("Sozialdienst", "mii-pr-onko-mamma-sozialdienst")]),
-    ("Organmodul Prostata", "Organ module: Prostate", [
+    ("Prostata", "Prostate", [
         ("PSA", "mii-pr-onko-prostate-psa"),
         ("Gleason Patterns", "mii-pr-onko-prostate-gleason-patterns"),
         ("Gleason Score", "mii-pr-onko-prostate-gleason-score-gesamt"),
@@ -100,7 +104,7 @@ GRUPPEN = [
         ("Befall Stanze", "mii-pr-onko-prostate-ca-befall-stanze"),
         ("Clavien-Dindo", "mii-pr-onko-prostate-clavien-dindo"),
         ("Prostata-OP", "mii-pr-onko-prostata-operation")]),
-    ("Organmodul Kolorektal", "Organ module: Colorectal", [
+    ("Kolorektal", "Colorectal", [
         ("Abstand Anokutanlinie", "mii-pr-onko-krk-abstand-anokutan"),
         ("Abstand aboral", "mii-pr-onko-krk-abstand-aboral"),
         ("CRM/Resektionsebene", "mii-pr-onko-krk-abstand-circumferelle-resektionsebene"),
@@ -109,7 +113,7 @@ GRUPPEN = [
         ("KRK-OP", "mii-pr-onko-krk-operation"),
         ("Stoma-Markierung", "mii-pr-onko-krk-stoma-markierung"),
         ("KRK-Specimen", "mii-pr-onko-krk-specimen")]),
-    ("Organmodul Melanom", "Organ module: Melanoma", [
+    ("Melanom", "Melanoma", [
         ("Breslow-Tiefe", "mii-pr-onko-melanom-breslow-tiefe"),
         ("Ulzeration", "mii-pr-onko-melanom-ulzeration"),
         ("Sicherheitsabstand", "mii-pr-onko-melanom-sicherheitsabstand"),
@@ -121,6 +125,12 @@ CSS = '''<style>
 .onko-map{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px;margin:1em 0}
 .onko-map .grp{border:1px solid #b9c4d0;border-radius:8px;padding:10px 12px;background:#fafcfe}
 .onko-map .grp h5{margin:0 0 8px 0;font-size:0.95em;color:#20456b}
+.onko-sec{border:2px solid #4a7ab5;border-radius:10px;padding:12px 14px 6px 14px;margin:1em 0;background:#f4f8fc}
+.onko-sec.organ{border-color:#c98a2b;background:#fdf8f0}
+.onko-sec>.sec-title{font-weight:bold;font-size:1.0em;color:#20456b;margin:0 0 6px 0}
+.onko-sec.organ>.sec-title{color:#7a5211}
+.onko-sec .onko-map{margin:0.4em 0}
+.onko-sec.organ .grp{border-color:#ddc196;background:#fffdf8}
 .onko-map a.chip{display:inline-block;margin:2px;padding:3px 9px;border-radius:5px;border:1px solid rgba(0,0,0,0.18);font-size:0.82em;color:#1a1a1a;text-decoration:none;line-height:1.5}
 .onko-map a.chip:hover{filter:brightness(0.9);text-decoration:none}
 .onko-legend{font-size:0.8em;margin:4px 0 1.5em 0}
@@ -137,9 +147,9 @@ def load_profiles():
     return ids
 
 
-def build(lang, ids):
-    out = [CSS, '<div class="onko-map">']
-    for de_t, en_t, items in GRUPPEN:
+def _grid(groups, lang, ids):
+    out = ['<div class="onko-map">']
+    for de_t, en_t, items in groups:
         title = de_t if lang == 'de' else en_t
         out.append(f'<div class="grp"><h5>{html.escape(title)}</h5>')
         for label, pid in items:
@@ -149,6 +159,20 @@ def build(lang, ids):
                 f'href="StructureDefinition-{pid}.html" title="{ids[pid]}">'
                 f'{html.escape(label)}</a>')
         out.append('</div>')
+    out.append('</div>')
+    return out
+
+
+def build(lang, ids):
+    basis_t = 'oBDS-Basisdatensatz' if lang == 'de' else 'oBDS base dataset'
+    organ_t = ('Organspezifische Module' if lang == 'de'
+               else 'Organ-specific modules')
+    out = [CSS]
+    out.append(f'<div class="onko-sec"><div class="sec-title">{basis_t}</div>')
+    out.extend(_grid(BASIS_GRUPPEN, lang, ids))
+    out.append('</div>')
+    out.append(f'<div class="onko-sec organ"><div class="sec-title">{organ_t}</div>')
+    out.extend(_grid(ORGAN_GRUPPEN, lang, ids))
     out.append('</div>')
     leg = ''.join(
         f'<span style="background:{COLORS[t]}">{t}</span>'
@@ -165,7 +189,7 @@ def main():
                     help='HTML-Block für diese Sprache ausgeben')
     args = ap.parse_args()
     ids = load_profiles()
-    used = {pid for _, _, items in GRUPPEN for _, pid in items}
+    used = {pid for _, _, items in BASIS_GRUPPEN + ORGAN_GRUPPEN for _, pid in items}
     missing = sorted(used - set(ids))
     uncovered = sorted(set(ids) - used)
     if missing:
