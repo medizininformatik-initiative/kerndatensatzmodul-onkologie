@@ -1,7 +1,5 @@
 <!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-therapieempfehlung-medikation-intro.md) -->
 
-##
-
 This profile describes a **medication therapy recommendation** within the context of the tumor board. It is based on FHIR MedicationRequest and is typically used as part of a combination therapy (RequestGroup) or as a standalone recommendation.
 
 ### Content

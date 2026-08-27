@@ -1,5 +1,3 @@
-##
-
 Dieses Profil beschreibt strukturierte **Therapieempfehlungen für Kombinationstherapien** mittels RequestGroup. Es ermöglicht die detaillierte Abbildung von Multi-Agent-Protokollen und alternativen Therapieoptionen für molekulare Tumorboards.
 
 ### Inhalt

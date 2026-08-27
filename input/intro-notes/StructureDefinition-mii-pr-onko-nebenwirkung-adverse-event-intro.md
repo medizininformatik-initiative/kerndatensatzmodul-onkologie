@@ -1,7 +1,5 @@
 <!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-nebenwirkung-adverse-event-intro.md) -->
 
-##
-
 This profile describes the adverse event of radiotherapy and systemic therapy in oncology.
 
 The type of adverse event can be described either as a CTCAE term or as a medDRA number.

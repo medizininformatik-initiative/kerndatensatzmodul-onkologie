@@ -12,7 +12,7 @@
      the published output, not in a local preview of this Markdown file. -->
 
 
-This page links the downloadable artifacts of the **{{MODULE_TITLE}}** module.
+This page links the downloadable artifacts of the **Oncology** module.
 
 #### Package file
 

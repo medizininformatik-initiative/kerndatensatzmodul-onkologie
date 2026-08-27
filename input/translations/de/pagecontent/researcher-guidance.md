@@ -7,14 +7,14 @@
 > *optional*. Entscheiden Sie für Ihr Modul: Seite **behalten** — Inhalte
 > ausfüllen und dieses Banner samt `OPTIONAL-PAGE`-Marker-Kommentar löschen (in
 > dieser Datei UND in der englischen Quellseite) — oder Seite **entfernen**,
-> nach der Schritt-für-Schritt-Anleitung in [`docs/optional-pages.md`](https://github.com/{{GITHUB_ORG}}/{{REPO_NAME}}/blob/main/docs/optional-pages.md) dieses
+> nach der Schritt-für-Schritt-Anleitung in [`docs/optional-pages.md`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/blob/main/docs/optional-pages.md) dieses
 > Repositories. Ein Release darf dieses Banner nicht enthalten
 > (Konventions-Check M9).
 {: .ig-highlight .ig-highlight-grey}
 
 ### Anleitung für Forschende
 
-Hinweise für Forschende, die die Daten des Moduls **{{MODULE_TITLE}}** für Forschungszwecke nutzen — z. B. welche Datenelemente für welche Fragestellungen relevant sind und wie sie interpretiert werden.
+Hinweise für Forschende, die die Daten des Moduls **Onkologie** für Forschungszwecke nutzen — z. B. welche Datenelemente für welche Fragestellungen relevant sind und wie sie interpretiert werden.
 
 > [TODO: Beschreiben Sie die forschungsrelevanten Aspekte des Moduls.]
 {: .ig-highlight .ig-highlight-grey}

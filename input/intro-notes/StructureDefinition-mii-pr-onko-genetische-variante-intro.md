@@ -1,7 +1,5 @@
 <!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-genetische-variante-intro.md) -->
 
-##
-
 ### Context
 
 Information on genetic variants has been captured as part of the oBDS since the 2021 version. A variant is captured via two data fields:

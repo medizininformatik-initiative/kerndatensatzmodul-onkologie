@@ -1,7 +1,5 @@
 <!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-tod-intro.md) -->
 
-##
-
 This profile describes whether and when a patient died of tumor-related causes. It is part of the oBDS cancer registry dataset.
 
 The date of death can also be represented in the MII Kerndatensatz via the Patient resource, but has additionally been added here as an Observation for reasons of data structure and cohesion.

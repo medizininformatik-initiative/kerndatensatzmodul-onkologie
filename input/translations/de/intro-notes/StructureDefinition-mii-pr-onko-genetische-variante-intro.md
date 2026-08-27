@@ -1,5 +1,3 @@
-##
-
 ### Kontext
 
 Die Informationen zu genetischen Varianten werden seit der Version 2021 als Teil des oBDS erfasst. Die Erfassung einer Variante erfolgt dabei über zwei Datenfelder:

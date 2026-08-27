@@ -1,9 +1,5 @@
 <!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-mamma-praeoperative-markierung-intro.md) -->
 
-##
-
----
-
 ### Content
 
 The **Mamma Preoperative Marking Profile** documents radiologically performed markings of tumor tissue in the breast prior to surgical procedures. This profile is based on the FHIR Procedure resource and captures various marking modalities used for the precise localization of tumor tissue.

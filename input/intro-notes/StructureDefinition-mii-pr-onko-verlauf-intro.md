@@ -1,9 +1,5 @@
 <!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-verlauf-intro.md) -->
 
-##
-
----
-
 ### Context
 
 This profile describes a follow-up observation in the context of oncological therapy.

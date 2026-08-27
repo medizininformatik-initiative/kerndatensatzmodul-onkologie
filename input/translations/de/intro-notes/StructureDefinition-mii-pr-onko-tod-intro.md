@@ -1,5 +1,3 @@
-##
-
 Dieses Profil beschreibt ob und wann ein Patient tumorbedingt verstorben ist. Es ist Teil des oBDS-Tumorregister-Datensatzes.
 
 Das Todesdatum kann im MII Kerndatensatz ebenfalls über die Patienten-Ressource abgebildet werden, wurde hier aber aus Gründen der Datenstruktur und -zusammengehörigkeit zusätzlich als Observation hinzugefügt.

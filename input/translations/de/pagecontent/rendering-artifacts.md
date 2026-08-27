@@ -28,7 +28,7 @@ Eine mitgelieferte, lebende Demonstration der Modulvorlage. Lesen Sie den
 Quelltext dieser Seite neben ihrer Darstellung, übernehmen Sie, was Sie
 brauchen, und löschen Sie die Seite anschließend.
 <strong>Die Schritt-für-Schritt-Fassung ist</strong>
-<a href="https://github.com/{{GITHUB_ORG}}/{{REPO_NAME}}/blob/main/docs/recipes/render-existing-artifacts.md"><code>docs/recipes/render-existing-artifacts.md</code></a> in diesem Repository. Dort ist jede Datei aufgeführt, die beim
+<a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/blob/main/docs/recipes/render-existing-artifacts.md"><code>docs/recipes/render-existing-artifacts.md</code></a> in diesem Repository. Dort ist jede Datei aufgeführt, die beim
 Löschen dieser Seite mit entfernt werden muss.
 </div>
 

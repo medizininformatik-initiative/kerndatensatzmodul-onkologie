@@ -1,7 +1,5 @@
 <!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-ex-onko-operation-urgency-intro.md) -->
 
-##
-
 ### Content
 
 This extension captures the **modality of procedure performance** (type of procedure) and distinguishes between elective and emergency procedures.

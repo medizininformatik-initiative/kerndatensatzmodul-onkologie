@@ -1,6 +1,3 @@
-##
-
----
 
 ### Inhalt
 Dieses Profil beschreibt die Laktatdehydrogenase (LDH) Laborwerte beim Malignen Melanom gemäß oBDS "LDH". Die LDH ist ein wichtiger prognostischer Marker beim metastasierten Melanom und wird zur Beurteilung des Krankheitsverlaufs und der Prognose herangezogen. Erhöhte LDH-Werte korrelieren mit schlechterer Prognose.

@@ -1,6 +1,3 @@
-##
-
----
 
 ### Inhalt
 Dieses Profil beschreibt den minimalen Sicherheitsabstand zum Primärtumor beim Malignen Melanom gemäß oBDS MM1. Diese Messung erfolgt nach definitivem operativem Eingriff und gibt den minimalen Abstand des Melanoms zum nächstgelegenen lateralen chirurgischen Resektionsrand in der Exzisionsprobe an. Ein Wert von 0 entspricht einem lokalen R1- oder R2-Resektionsstatus.

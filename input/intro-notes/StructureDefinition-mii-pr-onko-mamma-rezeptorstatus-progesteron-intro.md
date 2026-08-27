@@ -1,9 +1,5 @@
 <!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-mamma-rezeptorstatus-progesteron-intro.md) -->
 
-##
-
----
-
 ### Content
 
 The **Progesterone Receptor Status Profile** documents the diagnostic progesterone receptor status of a pathologically examined sample in breast cancer. This profile enables the detailed capture of both the quantitative measurements (proportion of positive cells, staining intensity) and the interpreted results according to various definitions.

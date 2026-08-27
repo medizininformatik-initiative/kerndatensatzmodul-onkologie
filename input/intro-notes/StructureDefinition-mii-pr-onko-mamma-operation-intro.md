@@ -1,9 +1,5 @@
 <!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-mamma-operation-intro.md) -->
 
-##
-
----
-
 ### Content
 
 The **Breast Operation profile** documents surgical procedures on the breast in the context of breast cancer treatment. This profile extends the general MII_PR_Onko_Operation profile with breast-specific aspects and enables the detailed capture of breast surgery procedures.

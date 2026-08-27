@@ -1,9 +1,5 @@
 <!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-mamma-menopause-status-intro.md) -->
 
-##
-
----
-
 ### Content
 This profile describes the (pretherapeutic) menopausal status of a patient with breast cancer in oncology. Menopausal status is an important prognostic factor for treatment planning and therapy selection in breast cancer.
 

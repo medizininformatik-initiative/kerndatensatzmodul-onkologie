@@ -1,9 +1,5 @@
 <!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-krk-stoma-markierung-intro.md) -->
 
-##
-
----
-
 ### Content
 This profile describes the preoperative stoma site marking for colorectal cancer according to oBDS KR7. Preoperative stoma site marking is an important step in preparing for surgical procedures in which a stoma may be required, and contributes significantly to patients' quality of life.
 

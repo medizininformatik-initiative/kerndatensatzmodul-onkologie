@@ -18,13 +18,13 @@
 > it documents (as, for example, the Base module does). Decide for your module:
 > **keep** it — fill it in and delete this banner and the `OPTIONAL-PAGE`
 > marker comment (in this file AND the German mirror) — or **remove** it,
-> following the per-entry procedure in [`docs/optional-pages.md`](https://github.com/{{GITHUB_ORG}}/{{REPO_NAME}}/blob/main/docs/optional-pages.md) of this
+> following the per-entry procedure in [`docs/optional-pages.md`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/blob/main/docs/optional-pages.md) of this
 > repository. A release must not ship with this banner (convention check M9).
 {: .ig-highlight .ig-highlight-grey}
 
 ### Metadata Overview
 
-This page documents the computable metadata of the **{{MODULE_TITLE}}** module.
+This page documents the computable metadata of the **Oncology** module.
 The metadata exists so that the artifacts of this guide can be discovered,
 evaluated, validated, cited, governed and reused — by people and by software
 alike.
@@ -79,7 +79,7 @@ These may be considered in future release-workflow work.
 #### CRMI metadata declared by this guide
 
 The following CRMI-related metadata is set in
-[`sushi-config.yaml`](https://github.com/{{GITHUB_ORG}}/{{REPO_NAME}}/blob/main/sushi-config.yaml)
+[`sushi-config.yaml`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/blob/main/sushi-config.yaml)
 and ends up in the generated `ImplementationGuide` resource.
 
 | Metadata artifact | CRMI area | Location in this guide | Role in artifact management |
@@ -93,7 +93,7 @@ and ends up in the generated `ImplementationGuide` resource.
 | [Artifact Version Policy](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-artifact-versionPolicy.html) | Artifact lifecycle; versioning | `ImplementationGuide.extension` (`package`) | Declares that artifact versions are managed with the package version — a release can bump an artifact's version even when its content did not change. |
 | [Package Source](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-package-source.html) | Version manifest; packaging; distribution | `ImplementationGuide.extension` (packageId, version, uri) | Declares the package in which an artifact is defined, so evaluation environments resolve namespaces and dependencies in the intended scope. |
 | [Resource Approval Date](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-resource-approvalDate.html) | Artifact lifecycle; publishing; governance | `ImplementationGuide.extension` (`{{APPROVAL_DATE}}`) | Records the date on which the publisher officially approved the content for use. |
-| [Resource Effective Period](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-resource-effectivePeriod.html) | Artifact lifecycle; publishing; implementation | `ImplementationGuide.extension` (start `{{CALVER_YEAR}}`) | Records the period during which the content is planned to be, or has been, effective. |
+| [Resource Effective Period](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-resource-effectivePeriod.html) | Artifact lifecycle; publishing; implementation | `ImplementationGuide.extension` (start `2026`) | Records the period during which the content is planned to be, or has been, effective. |
 | [Artifact Author](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-artifact-author.html)<br/>[Artifact Editor](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-artifact-editor.html)<br/>[Artifact Reviewer](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-artifact-reviewer.html)<br/>[Artifact Endorser](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-artifact-endorser.html) | Publishing; governance; provenance | `ImplementationGuide.extension` | Records the author, the editor responsible for internal coherence, the reviewers, and the bodies that officially endorse the release. For a KDS module the editor, reviewers and endorsers are the governance bodies of the core-dataset process. |
 
 Not enabled in this scaffold, but prepared as commented blocks in
@@ -110,7 +110,7 @@ Not enabled in this scaffold, but prepared as commented blocks in
 > If your module also applies the CRMI shareable/publishable profiles to its own
 > StructureDefinitions, CapabilityStatements, CodeSystems and ValueSets — the
 > `kerndatensatz-basis` idiom is a shared `RuleSet` in
-> [`input/fsh/rulesets/crmi.fsh`](https://github.com/{{GITHUB_ORG}}/{{REPO_NAME}}/blob/main/input/fsh/rulesets/crmi.fsh) — add the corresponding rows here.]
+> [`input/fsh/rulesets/crmi.fsh`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/blob/main/input/fsh/rulesets/crmi.fsh) — add the corresponding rows here.]
 {: .ig-highlight .ig-highlight-grey}
 
 ##### CodeSystem supplements
@@ -130,7 +130,7 @@ The human-readable version scheme is described on the
 is expressed as CRMI metadata.
 
 The module uses calendar versioning in the SemVer-compatible numeric form
-`YYYY.MINOR.PATCH[-label]`, currently `{{CALVER_VERSION}}`. The calendar year
+`YYYY.MINOR.PATCH[-label]`, currently `2026.0.3`. The calendar year
 serves as the CRMI `<major>` component; `MINOR` and `PATCH` keep their usual
 additive and corrective semantics. Stable versions can therefore be compared
 using the declared `semver` version algorithm. Labels carry pre-release or build
@@ -196,7 +196,7 @@ asserted to be a persistently identified FAIR dataset.
 
 | Principle | Indicator | FAIR data maturity indicator | Addressed by |
 | --- | --- | --- | --- |
-| F1 | RDA-F1-01M | Metadata is identified by a persistent identifier | Canonical `url` values, the package id `de.medizininformatikinitiative.kerndatensatz.{{MODULE_SLUG}}`, the package version and `package-source`. Persistence depends on publication governance. |
+| F1 | RDA-F1-01M | Metadata is identified by a persistent identifier | Canonical `url` values, the package id `de.medizininformatikinitiative.kerndatensatz.onko`, the package version and `package-source`. Persistence depends on publication governance. |
 | F1 | RDA-F1-01D | Data is identified by a persistent identifier | For the examples: `Resource.id`, `Bundle.identifier`, resource `identifier` elements and `Bundle.entry.fullUrl` demonstrate the pattern; they are not asserted as persistent data PIDs. Production data must be given persistent business identifiers by the implementing systems. |
 | F1 | RDA-F1-02M | Metadata is identified by a globally unique identifier | Globally scoped canonical `url` values and the package id, within the controlled KDS namespaces. |
 | F1 | RDA-F1-02D | Data is identified by a globally unique identifier | For the examples: `identifier.system` + `identifier.value` demonstrate globally scoped identification. In production this depends on controlled identifier namespaces and local governance. |

@@ -12,7 +12,7 @@ zwischen `/en/` und `/de/`.
 Übersetzte Seiten liegen unter `input/translations/de/pagecontent/` (gleicher
 Dateiname wie die englische Seite); Ressourcen-Übersetzungen als `.po`-Dateien
 unter `input/translations/de/`. Details:
-[`docs/recipes/add-translation.md`](https://github.com/{{GITHUB_ORG}}/{{REPO_NAME}}/blob/main/docs/recipes/add-translation.md) in diesem Repository.
+[`docs/recipes/add-translation.md`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/blob/main/docs/recipes/add-translation.md) in diesem Repository.
 
 > [TODO: Vermerken Sie, welche Teile des Moduls bereits ins Deutsche übersetzt
 > sind.]

@@ -1,5 +1,3 @@
-##
-
 Dieses Profil beschreibt eine **Medikations-Therapieempfehlung** im Rahmen der Tumorkonferenz. Es basiert auf dem FHIR MedicationRequest und wird typischerweise als Teil einer Kombinationstherapie (RequestGroup) oder als eigenständige Empfehlung verwendet.
 
 ### Inhalt

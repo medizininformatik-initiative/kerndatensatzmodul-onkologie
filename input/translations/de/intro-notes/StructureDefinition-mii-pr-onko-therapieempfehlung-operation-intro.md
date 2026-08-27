@@ -1,5 +1,3 @@
-##
-
 Dieses Profil beschreibt eine **Operations-Therapieempfehlung** im Rahmen der Tumorkonferenz. Es basiert auf dem FHIR ServiceRequest und ermöglicht die strukturierte Erfassung von chirurgischen Therapieempfehlungen.
 
 ### Inhalt

@@ -1,5 +1,3 @@
-##
-
 Dieses Profil beschreibt ob und wann ein Patient an einer Studie teilgenommen hat.
 
 Es beinhaltet:

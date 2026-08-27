@@ -9,11 +9,11 @@
 
 #### Versionsschema
 
-Das Modul **{{MODULE_TITLE}}** folgt dem KDS-Schema der Kalender-Versionierung
+Das Modul **Onkologie** folgt dem KDS-Schema der Kalender-Versionierung
 (CalVer) in einer SemVer-kompatiblen numerischen Form:
 
 * Format **`JJJJ.MINOR.PATCH[-label]`** — die aktuelle Version ist
-  `{{CALVER_VERSION}}`;
+  `2026.0.3`;
 * **`JJJJ`** — das Jahr, in dem der Leitfaden gilt und genutzt werden soll; es
   tritt an die Stelle der Major-Version;
 * **`MINOR`** — wird für nicht brechende Ergänzungen und Präzisierungen erhöht;

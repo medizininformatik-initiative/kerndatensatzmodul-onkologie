@@ -1,7 +1,5 @@
 <!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-systemische-therapie-medikation-intro.md) -->
 
-##
-
 This profile describes the specific medications documented for the oBDS within the context of systemic therapy.
 
 Since systemic therapy and watchful waiting are grouped in one field in the oBDS, the data for systemic therapy and watchful waiting are covered both via a FHIR procedure (systemic and watchful waiting) and as FHIR medication.

@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD041 -->
-<!-- German mirror of input/pagecontent/ImplementationGuide-mii-ig-{{MODULE_SLUG}}.md —
+<!-- German mirror of input/pagecontent/ImplementationGuide-mii-ig-onko.md —
      both files must say the same thing. ALL generated fragments (cross-version
      analysis included) are language-selected via lang-fragment: the pinned
      publisher writes _includes/<name>-<lang>.xhtml plus a bare default-language
@@ -10,8 +10,8 @@
 Diese ImplementationGuide-Ressource definiert die technischen Details dieser
 Publikation, einschließlich Abhängigkeiten und Veröffentlichungsparametern.
 
-- [XML](../ImplementationGuide-mii-ig-{{MODULE_SLUG}}.xml)
-- [JSON](../ImplementationGuide-mii-ig-{{MODULE_SLUG}}.json)
+- [XML](../ImplementationGuide-mii-ig-onko.xml)
+- [JSON](../ImplementationGuide-mii-ig-onko.json)
 
 ### Versionsübergreifende Analyse
 
@@ -24,7 +24,7 @@ Dieser IG enthält die folgenden Abhängigkeiten von anderen IGs.
 {% lang-fragment dependency-table.xhtml %}
 
 > **Woher die Versionen kommen.** Jedes Paket der Tabelle ist direkt in
-> [`sushi-config.yaml`](https://github.com/{{GITHUB_ORG}}/{{REPO_NAME}}/blob/main/sushi-config.yaml)
+> [`sushi-config.yaml`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/blob/main/sushi-config.yaml)
 > (`dependencies:`) gepinnt — auch `hl7.terminology.r4` (THO) und
 > `hl7.fhir.uv.extensions.r4`, und diese beiden mit Bedacht: Die
 > [Automatik des IG Publishers](https://build.fhir.org/ig/FHIR/ig-guidance/versions.html#automatic-packages)
@@ -57,7 +57,7 @@ expandiert wird — also wie die vollständige Liste der Codes aus der
 ValueSet-Definition erzeugt wird. Die für diesen IG verwendeten
 [IG-Parameter](https://hl7.org/fhir/tools/en/CodeSystem-ig-parameters.html)
 sind in
-[`sushi-config.yaml`](https://github.com/{{GITHUB_ORG}}/{{REPO_NAME}}/blob/main/sushi-config.yaml)
+[`sushi-config.yaml`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/blob/main/sushi-config.yaml)
 (`parameters:`) deklariert. Ein Modul, das seine Expansionsparameter über ein
 CRMI-Manifest pinnt, verlinkt hier zusätzlich die generierte
 `Parameters`-Ressource (siehe die auskommentierten Manifest-Blöcke in

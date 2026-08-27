@@ -1,7 +1,5 @@
 <!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie-intro.md) -->
 
-##
-
 This profile describes structured **therapy recommendations for combination therapies** using RequestGroup. It enables the detailed representation of multi-agent protocols and alternative therapy options for molecular tumor boards.
 
 ### Content

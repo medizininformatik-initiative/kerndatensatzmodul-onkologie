@@ -1,5 +1,3 @@
-##
-
 Dieses Profil beschreibt die Nebenwirkung von Strahlentherapie und systemische Therapie in der Onkologie.
 
 Die Art Nebenwirkung kann entweder als CTCAE-Terminus oder als medDRA-Nummer beschrieben werden.

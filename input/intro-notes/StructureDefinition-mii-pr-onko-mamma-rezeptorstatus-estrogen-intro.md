@@ -1,9 +1,5 @@
 <!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-mamma-rezeptorstatus-estrogen-intro.md) -->
 
-##
-
----
-
 ### Content
 
 The **estrogen receptor status profile** documents the diagnostic estrogen receptor status of a pathologically examined specimen in breast cancer. This profile enables the detailed recording of both the quantitative measured values (proportion of positive cells, staining intensity) and the interpreted results according to various definitions.

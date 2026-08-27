@@ -1,6 +1,3 @@
-##
-
----
 
 ### Inhalt
 Dieses Profil beschreibt den minimalen Abstand des aboralen Tumorrandes zum aboralen Resektionsrand beim Kolorektalen Karzinom gemäß oBDS KR2. Diese Messung ist entscheidend für die Beurteilung der R-Klassifikation und des Risikos für Lokalrezidive bei Rektumkarzinomen.

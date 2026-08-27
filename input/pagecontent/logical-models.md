@@ -1,9 +1,18 @@
 <!-- markdownlint-disable MD041 -->
-<!-- Source: kerndatensatz-basis input/pagecontent/logical-models.md.
-     German mirror: input/translations/de/pagecontent/logical-models.md. -->
+<!-- TODO:REVIEW machine translation of the German original (input/translations/de/pagecontent/logical-models.md) -->
+
 ### Logical Models
 
-The logical data models of the **{{MODULE_TITLE}}** module describe the domain dataset independently of its concrete FHIR representation.
+The logical data models of the Oncology module describe the domain dataset
+independently of its concrete FHIR representation:
 
-> [TODO: Add the logical models, or delete this page.]
-{: .ig-highlight .ig-highlight-grey}
+- **[oBDS base dataset](StructureDefinition-mii-lm-onko.html)** — the logical
+  model of the German oncology base dataset with the FHIR mappings of the
+  implemented data fields.
+- **[Organ-specific modules](StructureDefinition-mii-lm-onko-organspezifische-zusatzmodule.html)**
+  — the entity-specific data elements of the breast, prostate, colorectal
+  carcinoma and malignant melanoma modules.
+- **[MVGenomSeq dataset](StructureDefinition-mii-lm-mvgenomseq-onkologie.html)**
+  — the oncology dataset of the German model project on genome sequencing
+  (§ 64e SGB V); the mapping to the MII CDS is provided as a
+  [ConceptMap](ConceptMap-mii-cm-onkologie-to-mvgenomseq.html).

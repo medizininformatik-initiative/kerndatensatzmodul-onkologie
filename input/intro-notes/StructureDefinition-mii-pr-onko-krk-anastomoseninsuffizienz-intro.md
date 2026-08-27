@@ -1,9 +1,5 @@
 <!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-krk-anastomoseninsuffizienz-intro.md) -->
 
-##
-
----
-
 ### Content
 This profile describes the occurrence of anastomotic leakage in colorectal carcinoma according to oBDS KR8. Anastomotic leakage is an important postoperative complication after colorectal resections and has an impact on prognosis and further therapy planning.
 

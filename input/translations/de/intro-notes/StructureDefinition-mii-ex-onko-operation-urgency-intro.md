@@ -1,5 +1,3 @@
-##
-
 ### Inhalt
 
 Diese Extension erfasst die **Modalität der Eingriffsdurchführung** (Art des Eingriffs) und unterscheidet zwischen elektiven und Notfalleingriffen.

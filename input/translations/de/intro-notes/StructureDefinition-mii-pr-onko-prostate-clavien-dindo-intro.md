@@ -1,6 +1,3 @@
-##
-
----
 
 ### Inhalt
 Dieses Profil beschreibt den Clavien-Dindo-Score für die Prostatektomie in der Onkologie. Die Clavien-Dindo-Klassifikation ist ein standardisiertes System zur Bewertung postoperativer Komplikationen basierend auf deren Schweregrad und der erforderlichen Therapie.

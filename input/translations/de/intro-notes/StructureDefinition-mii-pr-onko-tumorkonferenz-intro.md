@@ -1,5 +1,3 @@
-##
-
 Dieses Profil beschreibt die Tumorkonferenz und die Therapieempfehlungen für sowohl traditionelle als auch molekulare Tumorboard-Workflows.
 Die Datenfelder sind seit der Version 2021 Teil des oBDS und werden in zwei verschiedenen Modulen erfasst. Da alle beteiligten Felder sehr gut über die FHIR CarePlan-Ressource abbildbar sind, wurden alle die Tumorkonferenz- und Therapieemfpehlungsfelder im Tumorkonferenz-Profil zusammengefasst.
 

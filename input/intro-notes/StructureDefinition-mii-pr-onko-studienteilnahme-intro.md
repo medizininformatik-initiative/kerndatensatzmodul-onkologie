@@ -1,7 +1,5 @@
 <!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-studienteilnahme-intro.md) -->
 
-##
-
 This profile describes whether and when a patient participated in a study.
 
 It includes:

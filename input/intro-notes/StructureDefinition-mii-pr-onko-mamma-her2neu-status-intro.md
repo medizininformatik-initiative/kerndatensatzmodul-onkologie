@@ -1,9 +1,5 @@
 <!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-mamma-her2neu-status-intro.md) -->
 
-##
-
----
-
 ### Content
 
 The **HER2/neu Status Profile** documents the diagnostic HER2/neu status of a pathologically examined specimen in breast cancer. HER2/neu (also HER2 or ERBB2) is an important prognostic and predictive biomarker that determines eligibility for anti-HER2-targeted therapy.
