@@ -100,7 +100,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tod.c
   "name" : "MII_PR_Onko_Tod",
   "title" : "MII PR Onkologie Tod",
   "status" : "active",
-  "date" : "2026-08-27T10:41:09+00:00",
+  "date" : "2026-08-27T11:11:54+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

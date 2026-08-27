@@ -155,7 +155,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_Prostata_Anzahl_Stanzen",
   "title" : "MII PR Onkologie Prostata Anzahl Stanzen",
   "status" : "active",
-  "date" : "2026-08-27T10:41:09+00:00",
+  "date" : "2026-08-27T11:11:54+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
