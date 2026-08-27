@@ -80,7 +80,8 @@ Die Bestrahlungsextensions erfassen alle Informationen, die für einzelne Bestra
 Die Gesamtdosis gibt an, mit welcher Gesamtdosis das Zielgebiet bestrahlt wurde (inklusive Boost).
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Strahlentherapie/Extension-Bestrahlung.page.md gate=B -->
-Struktur und Beschreibung: [MII EX Onko Strahlentherapie Bestrahlung Gesamtdosis](StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis.html).
+> Struktur und Beschreibung: [MII EX Onko Strahlentherapie Bestrahlung Gesamtdosis](StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis.html).
+{: .ig-highlight .ig-highlight-grey}
 
 
 #### Einzeldosis
@@ -88,7 +89,8 @@ Struktur und Beschreibung: [MII EX Onko Strahlentherapie Bestrahlung Gesamtdosis
 Die Einzeldosis gibt an, mit welcher Einzeldosis (häufigste Dosis, nicht Boost) pro Tag das Zielgebiet bestrahlt wurde.
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Strahlentherapie/Extension-Bestrahlung.page.md gate=B -->
-Struktur und Beschreibung: [MII EX Onko Strahlentherapie Bestrahlung Einzeldosis](StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis.html).
+> Struktur und Beschreibung: [MII EX Onko Strahlentherapie Bestrahlung Einzeldosis](StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis.html).
+{: .ig-highlight .ig-highlight-grey}
 
 
 #### Boost
@@ -96,7 +98,8 @@ Struktur und Beschreibung: [MII EX Onko Strahlentherapie Bestrahlung Einzeldosis
 Gibt an, ob ein Boost und falls ja, welche Art von Boost appliziert wurde.
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Strahlentherapie/Extension-Bestrahlung.page.md gate=B -->
-Struktur und Beschreibung: [MII EX Onko Strahlentherapie Bestrahlung Boost](StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-boost.html).
+> Struktur und Beschreibung: [MII EX Onko Strahlentherapie Bestrahlung Boost](StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-boost.html).
+{: .ig-highlight .ig-highlight-grey}
 
 
 #### Seitenlokalisation
@@ -104,6 +107,7 @@ Struktur und Beschreibung: [MII EX Onko Strahlentherapie Bestrahlung Boost](Stru
 Gibt die Seitenlokalisation des Zielgebietes an. Bei beidseitiger Bestrahlung paariger Organe sind die Bestrahlungen einzeln zu melden.
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Strahlentherapie/Extension-Bestrahlung.page.md gate=B -->
-Struktur und Beschreibung: [MII EX Onko Strahlentherapie Bestrahlung Seitenlokalisation](StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation.html).
+> Struktur und Beschreibung: [MII EX Onko Strahlentherapie Bestrahlung Seitenlokalisation](StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation.html).
+{: .ig-highlight .ig-highlight-grey}
 
 *Hinweis: Die frühere komplexe Parent-Extension `mii-ex-onko-strahlentherapie-bestrahlung` ist abgelöst (im FSH auskommentiert); es gelten die vier Einzel-Extensions am Bestrahlungs-Procedure-Profil.*

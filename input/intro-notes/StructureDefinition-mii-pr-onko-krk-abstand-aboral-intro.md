@@ -24,24 +24,28 @@ The ValueSet for the aboral resection line is bound as **extensible** and specif
 #### ValueSet: MII VS Onko KRK Abstand Resektionslinie Aboral
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/KolorektalesKarzinom/KRK-Abstand-Resektionsrand-Aboral-Observation.page.md gate=B -->
-The codes it contains are listed in the artefact view: [MII VS Onkologie KRK Abstand Resektionslinie Aboral](ValueSet-mii-vs-onko-krk-abstand-resektionslinie-aboral.html).
+> The codes it contains are listed in the artefact view: [MII VS Onkologie KRK Abstand Resektionslinie Aboral](ValueSet-mii-vs-onko-krk-abstand-resektionslinie-aboral.html).
+{: .ig-highlight .ig-highlight-grey}
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/KolorektalesKarzinom/KRK-Abstand-Resektionsrand-Aboral-Observation.page.md gate=B -->
-The codes it contains are listed in the artefact view: [MII VS Onkologie KRK Abstand Resektionslinie Aboral](ValueSet-mii-vs-onko-krk-abstand-resektionslinie-aboral.html).
+> The codes it contains are listed in the artefact view: [MII VS Onkologie KRK Abstand Resektionslinie Aboral](ValueSet-mii-vs-onko-krk-abstand-resektionslinie-aboral.html).
+{: .ig-highlight .ig-highlight-grey}
 
 ---
 
 Mapping dataset to FHIR
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/KolorektalesKarzinom/KRK-Abstand-Resektionsrand-Aboral-Observation.page.md gate=B -->
-The mapping of the dataset fields is documented in the logical model: [MII LM Onkologie Organspezifische Zusatzmodule](StructureDefinition-mii-lm-onko-organspezifische-zusatzmodule.html).
+> The mapping of the dataset fields is documented in the logical model: [MII LM Onkologie Organspezifische Zusatzmodule](StructureDefinition-mii-lm-onko-organspezifische-zusatzmodule.html).
+{: .ig-highlight .ig-highlight-grey}
 
 ---
 
 Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensatz.de/basisdatensatz) to FHIR
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/KolorektalesKarzinom/KRK-Abstand-Resektionsrand-Aboral-Observation.page.md gate=B -->
-The oBDS mappings are recorded in the artefact view of this profile: [MII PR Onkologie Abstand Aboral](StructureDefinition-mii-pr-onko-krk-abstand-aboral.html).
+> The oBDS mappings are recorded in the artefact view of this profile: [MII PR Onkologie Abstand Aboral](StructureDefinition-mii-pr-onko-krk-abstand-aboral.html).
+{: .ig-highlight .ig-highlight-grey}
 
 ---
 

@@ -3,4 +3,5 @@
 For this complex concept there is no simple representation in SNOMED CT. The answer options were therefore coded as qualifier values.
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Tod.page.md gate=B -->
-The complete mapping table is generated from the ConceptMap below this introduction.
+> The complete mapping table is generated from the ConceptMap below this introduction.
+{: .ig-highlight .ig-highlight-grey}

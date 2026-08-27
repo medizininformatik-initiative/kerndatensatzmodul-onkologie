@@ -89,7 +89,8 @@ Das Profil verwendet **preferred binding** für das ValueSet `MII_VS_Onko_Weiter
 #### Verfügbare Klassifikationssysteme
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Weitere-Klassifikationen/Weitere-Klassifikationen-Observation.page.md gate=B -->
-Die Expansion der verfügbaren Klassifikationssysteme ist auf der Seite des ValueSets [mii-vs-onko-weitere-klassifikationen](ValueSet-mii-vs-onko-weitere-klassifikationen.html) dargestellt.
+> Die Expansion der verfügbaren Klassifikationssysteme ist auf der Seite des ValueSets [mii-vs-onko-weitere-klassifikationen](ValueSet-mii-vs-onko-weitere-klassifikationen.html) dargestellt.
+{: .ig-highlight .ig-highlight-grey}
 
 ---
 

@@ -15,9 +15,10 @@ Therefore, report-related and person-related data of the oBDS are not included.
 ### Base Oncology Logical Model
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/AnwendungsflleInformationsmodell/Datenstzeinkl.Beschreibungen.page.md gate=B -->
-The structure of the logical model as well as the path and description of each
-data element are shown on the artifact page
-[MII LM Onkologie](StructureDefinition-mii-lm-onko.html).
+> The structure of the logical model as well as the path and description of each
+> data element are shown on the artifact page
+> [MII LM Onkologie](StructureDefinition-mii-lm-onko.html).
+{: .ig-highlight .ig-highlight-grey}
 
 Note that the logical model aims purely at representing the data elements and their description. The data types and cardinalities used are not to be regarded as binding. This is finally determined by the FHIR profiles. For every element within the logical model there is a 1:1 mapping to an element of a concrete FHIR resource.
 
@@ -26,15 +27,17 @@ Note that the logical model aims purely at representing the data elements and th
 The organ-specific modules (breast, prostate, colorectal carcinoma, malignant melanoma) extend the base oncology module with entity-specific data elements in accordance with the ADT/GEKID requirements:
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/AnwendungsflleInformationsmodell/Datenstzeinkl.Beschreibungen.page.md gate=B -->
-The structure of the logical model as well as the path and description of each
-data element are shown on the artifact page
-[MII LM Onkologie Organspezifische Zusatzmodule](StructureDefinition-mii-lm-onko-organspezifische-zusatzmodule.html).
+> The structure of the logical model as well as the path and description of each
+> data element are shown on the artifact page
+> [MII LM Onkologie Organspezifische Zusatzmodule](StructureDefinition-mii-lm-onko-organspezifische-zusatzmodule.html).
+{: .ig-highlight .ig-highlight-grey}
 
 ### Genome Sequencing Pilot Project (Modellvorhaben Genomsequenzierung)
 
 The genome sequencing pilot project under section 64e SGB V defines additional data elements for next-generation sequencing (NGS) in oncology patients:
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/AnwendungsflleInformationsmodell/Datenstzeinkl.Beschreibungen.page.md gate=B -->
-The structure of the logical model as well as the path and description of each
-data element are shown on the artifact page
-[MII LM MV Genomsequenzierung Onkologie](StructureDefinition-mii-lm-mvgenomseq-onkologie.html).
+> The structure of the logical model as well as the path and description of each
+> data element are shown on the artifact page
+> [MII LM MV Genomsequenzierung Onkologie](StructureDefinition-mii-lm-mvgenomseq-onkologie.html).
+{: .ig-highlight .ig-highlight-grey}

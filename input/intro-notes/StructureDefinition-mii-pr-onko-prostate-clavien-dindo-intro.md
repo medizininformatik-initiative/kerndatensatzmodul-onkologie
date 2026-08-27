@@ -33,27 +33,31 @@ The profile uses **required** bindings for both coding systems:
 The ValueSet comprises the SNOMED CT codes for all Clavien-Dindo grades:
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/Prostata/Prostata-Clavien-Dindo-Observation.page.md gate=B -->
-The codes it contains are listed in the artefact view: [MII VS Onkologie Prostata Clavien Dindo](ValueSet-mii-vs-onko-prostata-clavien-dindo.html).
+> The codes it contains are listed in the artefact view: [MII VS Onkologie Prostata Clavien Dindo](ValueSet-mii-vs-onko-prostata-clavien-dindo.html).
+{: .ig-highlight .ig-highlight-grey}
 
 #### oBDS postoperative complications ValueSet
 In addition, oBDS-specific codes for postoperative complications are supported:
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/Prostata/Prostata-Clavien-Dindo-Observation.page.md gate=B -->
-The codes it contains are listed in the artefact view: [MII VS Onkologie Prostata Postsurgical Complications](ValueSet-mii-vs-onko-prostata-postsurgical-complications.html).
+> The codes it contains are listed in the artefact view: [MII VS Onkologie Prostata Postsurgical Complications](ValueSet-mii-vs-onko-prostata-postsurgical-complications.html).
+{: .ig-highlight .ig-highlight-grey}
 
 ---
 
 Mapping dataset to FHIR
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/Prostata/Prostata-Clavien-Dindo-Observation.page.md gate=B -->
-The mapping of the dataset fields is documented in the logical model: [MII LM Onkologie Organspezifische Zusatzmodule](StructureDefinition-mii-lm-onko-organspezifische-zusatzmodule.html).
+> The mapping of the dataset fields is documented in the logical model: [MII LM Onkologie Organspezifische Zusatzmodule](StructureDefinition-mii-lm-onko-organspezifische-zusatzmodule.html).
+{: .ig-highlight .ig-highlight-grey}
 
 ---
 
 Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensatz.de/basisdatensatz) to FHIR
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/Prostata/Prostata-Clavien-Dindo-Observation.page.md gate=B -->
-The oBDS mappings are recorded in the artefact view of this profile: [MII PR Onkologie Clavien Dindo](StructureDefinition-mii-pr-onko-prostate-clavien-dindo.html).
+> The oBDS mappings are recorded in the artefact view of this profile: [MII PR Onkologie Clavien Dindo](StructureDefinition-mii-pr-onko-prostate-clavien-dindo.html).
+{: .ig-highlight .ig-highlight-grey}
 
 ---
 

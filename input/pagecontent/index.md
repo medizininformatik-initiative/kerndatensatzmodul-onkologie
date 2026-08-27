@@ -129,7 +129,7 @@ on the MII Zulip [mii.zulipchat.com](https://mii.zulipchat.com/) in the
 © 2019+ TMF e. V., Charlottenstraße 42, 10117 Berlin
 
 The content of this specification is public and is released under
-**[CC0 1.0 (Public Domain Dedication)](https://creativecommons.org/publicdomain/zero/1.0/)**;
+**[CC0-1.0 (Public Domain Dedication)](https://creativecommons.org/publicdomain/zero/1.0/)**;
 reuse and republication are not restricted.
 
 For the usage rights of the underlying FHIR technology, see the FHIR base

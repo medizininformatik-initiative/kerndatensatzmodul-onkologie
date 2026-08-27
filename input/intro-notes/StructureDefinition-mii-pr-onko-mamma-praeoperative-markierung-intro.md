@@ -46,24 +46,28 @@ The profile uses **extensible binding** for marking modalities directly on `Proc
 #### ValueSet: MII VS Onko Mamma Präoperative Markierung Modalität
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/Mamma/Mamma-Praeoperative-Markierung-Procedure.page.md gate=B -->
-The codes it contains are listed in the artefact view: [MII VS Onkologie Mamma Präoperative Markierung Modalität](ValueSet-mii-vs-onko-mamma-praeoperative-markierung-modalitaet.html).
+> The codes it contains are listed in the artefact view: [MII VS Onkologie Mamma Präoperative Markierung Modalität](ValueSet-mii-vs-onko-mamma-praeoperative-markierung-modalitaet.html).
+{: .ig-highlight .ig-highlight-grey}
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/Mamma/Mamma-Praeoperative-Markierung-Procedure.page.md gate=B -->
-The codes it contains are listed in the artefact view: [MII VS Onkologie Mamma Präoperative Markierung Modalität](ValueSet-mii-vs-onko-mamma-praeoperative-markierung-modalitaet.html).
+> The codes it contains are listed in the artefact view: [MII VS Onkologie Mamma Präoperative Markierung Modalität](ValueSet-mii-vs-onko-mamma-praeoperative-markierung-modalitaet.html).
+{: .ig-highlight .ig-highlight-grey}
 
 ---
 
 Mapping dataset to FHIR
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/Mamma/Mamma-Praeoperative-Markierung-Procedure.page.md gate=B -->
-The mapping of the dataset fields is documented in the logical model: [MII LM Onkologie Organspezifische Zusatzmodule](StructureDefinition-mii-lm-onko-organspezifische-zusatzmodule.html).
+> The mapping of the dataset fields is documented in the logical model: [MII LM Onkologie Organspezifische Zusatzmodule](StructureDefinition-mii-lm-onko-organspezifische-zusatzmodule.html).
+{: .ig-highlight .ig-highlight-grey}
 
 ---
 
 Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensatz.de/basisdatensatz) to FHIR
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/Mamma/Mamma-Praeoperative-Markierung-Procedure.page.md gate=B -->
-The oBDS mappings are recorded in the artefact view of this profile: [MII PR Onkologie Präoperative Markierung Mamma](StructureDefinition-mii-pr-onko-mamma-praeoperative-markierung.html).
+> The oBDS mappings are recorded in the artefact view of this profile: [MII PR Onkologie Präoperative Markierung Mamma](StructureDefinition-mii-pr-onko-mamma-praeoperative-markierung.html).
+{: .ig-highlight .ig-highlight-grey}
 
 ---
 

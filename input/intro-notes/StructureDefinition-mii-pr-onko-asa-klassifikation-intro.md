@@ -25,7 +25,8 @@ The value set for the ASA classification is bound as **required**. This means th
 #### Value set: MII VS Onko ASA oBDS
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Allgemeiner-Leistungszustand/ASA-Klassifikation-Observation.page.md gate=B -->
-The metadata and the expansion of the value set are shown on the page [mii-vs-onko-asa-obds](ValueSet-mii-vs-onko-asa-obds.html).
+> The metadata and the expansion of the value set are shown on the page [mii-vs-onko-asa-obds](ValueSet-mii-vs-onko-asa-obds.html).
+{: .ig-highlight .ig-highlight-grey}
 
 ---
 

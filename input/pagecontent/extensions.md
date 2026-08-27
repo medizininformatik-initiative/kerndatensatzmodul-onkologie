@@ -77,7 +77,8 @@ The radiation extensions capture all information relevant to individual radiatio
 The total dose indicates the total dose with which the target region was irradiated (including boost).
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Strahlentherapie/Extension-Bestrahlung.page.md gate=B -->
-Structure and description: [MII EX Onko Strahlentherapie Bestrahlung Gesamtdosis](StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis.html).
+> Structure and description: [MII EX Onko Strahlentherapie Bestrahlung Gesamtdosis](StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis.html).
+{: .ig-highlight .ig-highlight-grey}
 
 
 #### Single fraction dose
@@ -85,7 +86,8 @@ Structure and description: [MII EX Onko Strahlentherapie Bestrahlung Gesamtdosis
 The single fraction dose indicates the dose (most frequent dose, not boost) per day with which the target region was irradiated.
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Strahlentherapie/Extension-Bestrahlung.page.md gate=B -->
-Structure and description: [MII EX Onko Strahlentherapie Bestrahlung Einzeldosis](StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis.html).
+> Structure and description: [MII EX Onko Strahlentherapie Bestrahlung Einzeldosis](StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis.html).
+{: .ig-highlight .ig-highlight-grey}
 
 
 #### Boost
@@ -93,7 +95,8 @@ Structure and description: [MII EX Onko Strahlentherapie Bestrahlung Einzeldosis
 Indicates whether a boost was applied and, if so, which type of boost.
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Strahlentherapie/Extension-Bestrahlung.page.md gate=B -->
-Structure and description: [MII EX Onko Strahlentherapie Bestrahlung Boost](StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-boost.html).
+> Structure and description: [MII EX Onko Strahlentherapie Bestrahlung Boost](StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-boost.html).
+{: .ig-highlight .ig-highlight-grey}
 
 
 #### Laterality
@@ -101,6 +104,7 @@ Structure and description: [MII EX Onko Strahlentherapie Bestrahlung Boost](Stru
 Indicates the laterality of the target region. For bilateral irradiation of paired organs, the irradiations are to be reported individually.
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Strahlentherapie/Extension-Bestrahlung.page.md gate=B -->
-Structure and description: [MII EX Onko Strahlentherapie Bestrahlung Seitenlokalisation](StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation.html).
+> Structure and description: [MII EX Onko Strahlentherapie Bestrahlung Seitenlokalisation](StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation.html).
+{: .ig-highlight .ig-highlight-grey}
 
 *Note: the former complex parent extension `mii-ex-onko-strahlentherapie-bestrahlung` has been superseded (commented out in FSH); the four individual extensions on the irradiation procedure profile apply.*

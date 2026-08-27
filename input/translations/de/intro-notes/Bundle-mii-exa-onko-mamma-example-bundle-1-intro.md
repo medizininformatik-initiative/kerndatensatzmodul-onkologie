@@ -27,7 +27,8 @@ Das Mamma-Bundle umfasst folgende Ressourcen:
 - **Präoperative Markierung**: Beispiel für Markierungsverfahren
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/Mamma/Mamma-Bundle-Example.page.md gate=B -->
-Zusätzlich enthält das Bundle einen **Encounter** als stationären Behandlungsfall, auf den sich die übrigen Ressourcen beziehen.
+> Zusätzlich enthält das Bundle einen **Encounter** als stationären Behandlungsfall, auf den sich die übrigen Ressourcen beziehen.
+{: .ig-highlight .ig-highlight-grey}
 
 ---
 
@@ -116,7 +117,8 @@ Das Bundle zeigt die praktische Anwendung verschiedener Terminologien:
 ### Einzelne Ressourcen-Beispiele
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/Mamma/Mamma-Bundle-Example.page.md gate=B -->
-Die im Bundle enthaltenen Ressourcen sind zusätzlich als eigenständige Beispielinstanzen ausgeliefert:
+> Die im Bundle enthaltenen Ressourcen sind zusätzlich als eigenständige Beispielinstanzen ausgeliefert:
+{: .ig-highlight .ig-highlight-grey}
 
 - Patient: [mii-exa-onko-mamma-bundle-patient](Patient-mii-exa-onko-mamma-bundle-patient.html)
 - Primärtumor-Condition: [mii-exa-onko-mamma-diagnose](Condition-mii-exa-onko-mamma-diagnose.html)

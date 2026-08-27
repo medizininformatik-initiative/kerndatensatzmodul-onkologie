@@ -4,9 +4,10 @@
      Sprachfassungen synchron halten. -->
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/AnwendungsflleInformationsmodell/Index.page.md gate=B -->
-Die Quellseite dieses Kapitels wurde im bisherigen Leitfaden absichtlich leer
-gelassen. Die Inhalte des Kapitels *Anwendungsfälle / Informationsmodell* finden
-sich auf den folgenden Seiten:
+> Die Quellseite dieses Kapitels wurde im bisherigen Leitfaden absichtlich leer
+> gelassen. Die Inhalte des Kapitels *Anwendungsfälle / Informationsmodell* finden
+> sich auf den folgenden Seiten:
+{: .ig-highlight .ig-highlight-grey}
 
 * **[Datensätze inkl. Beschreibungen](datasets-and-descriptions.html)** — die
   Datenelemente des Moduls als logische Modelle.

@@ -24,14 +24,16 @@ https://plattform65c.atlassian.net/wiki/spaces/Dokumentat/pages/75628552/Verlauf
 Mapping dataset to FHIR
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Verlauf/Verlauf-Observation.page.md gate=B -->
-The mapping of the dataset fields is documented in the logical model: [MII LM Onkologie](StructureDefinition-mii-lm-onko.html).
+> The mapping of the dataset fields is documented in the logical model: [MII LM Onkologie](StructureDefinition-mii-lm-onko.html).
+{: .ig-highlight .ig-highlight-grey}
 
 ---
 
 Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensatz.de/basisdatensatz) to FHIR
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Verlauf/Verlauf-Observation.page.md gate=B -->
-The oBDS mappings are recorded in the artefact view of this profile: [MII PR Onkologie Verlauf](StructureDefinition-mii-pr-onko-verlauf.html).
+> The oBDS mappings are recorded in the artefact view of this profile: [MII PR Onkologie Verlauf](StructureDefinition-mii-pr-onko-verlauf.html).
+{: .ig-highlight .ig-highlight-grey}
 
 ---
 

@@ -24,24 +24,28 @@ The ValueSet for the MRI status of the mesorectal fascia has an **extensible** b
 #### ValueSet: MII VS Onko KRK MRT Mesorektale Faszie Status
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/KolorektalesKarzinom/KRK-MRT-Mesorektale-Faszie-Observation.page.md gate=B -->
-The codes it contains are listed in the artefact view: [MII VS Onkologie KRK MRT Mesorektale Faszie Status](ValueSet-mii-vs-onko-krk-mrt-mesorektale-faszie-status.html).
+> The codes it contains are listed in the artefact view: [MII VS Onkologie KRK MRT Mesorektale Faszie Status](ValueSet-mii-vs-onko-krk-mrt-mesorektale-faszie-status.html).
+{: .ig-highlight .ig-highlight-grey}
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/KolorektalesKarzinom/KRK-MRT-Mesorektale-Faszie-Observation.page.md gate=B -->
-The codes it contains are listed in the artefact view: [MII VS Onkologie KRK MRT Mesorektale Faszie Status](ValueSet-mii-vs-onko-krk-mrt-mesorektale-faszie-status.html).
+> The codes it contains are listed in the artefact view: [MII VS Onkologie KRK MRT Mesorektale Faszie Status](ValueSet-mii-vs-onko-krk-mrt-mesorektale-faszie-status.html).
+{: .ig-highlight .ig-highlight-grey}
 
 ---
 
 Mapping dataset to FHIR
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/KolorektalesKarzinom/KRK-MRT-Mesorektale-Faszie-Observation.page.md gate=B -->
-The mapping of the dataset fields is documented in the logical model: [MII LM Onkologie Organspezifische Zusatzmodule](StructureDefinition-mii-lm-onko-organspezifische-zusatzmodule.html).
+> The mapping of the dataset fields is documented in the logical model: [MII LM Onkologie Organspezifische Zusatzmodule](StructureDefinition-mii-lm-onko-organspezifische-zusatzmodule.html).
+{: .ig-highlight .ig-highlight-grey}
 
 ---
 
 Mapping [Uniform Oncological Basic Dataset (oBDS)](https://basisdatensatz.de/basisdatensatz) to FHIR
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/KolorektalesKarzinom/KRK-MRT-Mesorektale-Faszie-Observation.page.md gate=B -->
-The oBDS mappings are recorded in the artefact view of this profile: [MII PR Onkologie KRK MRT/CT Abstand Mesorektale Faszie](StructureDefinition-mii-pr-onko-krk-mrt-mesorektale-faszie.html).
+> The oBDS mappings are recorded in the artefact view of this profile: [MII PR Onkologie KRK MRT/CT Abstand Mesorektale Faszie](StructureDefinition-mii-pr-onko-krk-mrt-mesorektale-faszie.html).
+{: .ig-highlight .ig-highlight-grey}
 
 ---
 

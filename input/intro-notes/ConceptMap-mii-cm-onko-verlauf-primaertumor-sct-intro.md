@@ -2,4 +2,5 @@
 The state of the primary tumour in the course of disease is described via this CodeSystem. Overall it can be represented well by SNOMED CT.
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Verlauf-Primaertumor.page.md gate=B -->
-The complete mapping table is generated from the ConceptMap below this introduction.
+> The complete mapping table is generated from the ConceptMap below this introduction.
+{: .ig-highlight .ig-highlight-grey}

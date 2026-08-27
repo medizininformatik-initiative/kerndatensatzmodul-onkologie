@@ -14,9 +14,10 @@ Daher sind Meldungs- und personenrelevante Daten des oBDS nicht enthalten.
 ### Basis-Onkologie Logical Model
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/AnwendungsflleInformationsmodell/Datenstzeinkl.Beschreibungen.page.md gate=B -->
-Die Struktur des Logical Models sowie Pfad und Beschreibung der einzelnen
-Datenelemente sind auf der Artefaktseite
-[MII LM Onkologie](StructureDefinition-mii-lm-onko.html) dargestellt.
+> Die Struktur des Logical Models sowie Pfad und Beschreibung der einzelnen
+> Datenelemente sind auf der Artefaktseite
+> [MII LM Onkologie](StructureDefinition-mii-lm-onko.html) dargestellt.
+{: .ig-highlight .ig-highlight-grey}
 
 Es ist zu beachten, dass das Logical Model rein auf die Abbildung der Datenelemente und deren Beschreibung abzielt. Verwendete Datentypen und Kardinalitäten sind nicht als verpflichtend anzusehen. Dies wird abschließend durch die FHIR-Profile festgelegt. Für jedes Element innerhalb des Logical Models existiert ein 1:1 Mapping auf ein Element einer konkreten FHIR Ressource.
 
@@ -25,17 +26,19 @@ Es ist zu beachten, dass das Logical Model rein auf die Abbildung der Dateneleme
 Die organspezifischen Module (Mamma, Prostata, Kolorektales Karzinom, Malignes Melanom) erweitern das Basis-Onkologie-Modul um entitätsspezifische Datenelemente gemäß den ADT/GEKID-Anforderungen:
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/AnwendungsflleInformationsmodell/Datenstzeinkl.Beschreibungen.page.md gate=B -->
-Die Struktur des Logical Models sowie Pfad und Beschreibung der einzelnen
-Datenelemente sind auf der Artefaktseite
-[MII LM Onkologie Organspezifische Zusatzmodule](StructureDefinition-mii-lm-onko-organspezifische-zusatzmodule.html)
-dargestellt.
+> Die Struktur des Logical Models sowie Pfad und Beschreibung der einzelnen
+> Datenelemente sind auf der Artefaktseite
+> [MII LM Onkologie Organspezifische Zusatzmodule](StructureDefinition-mii-lm-onko-organspezifische-zusatzmodule.html)
+> dargestellt.
+{: .ig-highlight .ig-highlight-grey}
 
 ### Modellvorhaben Genomsequenzierung
 
 Das Modellvorhaben Genomsequenzierung nach §64e SGB V definiert zusätzliche Datenelemente für die Next-Generation-Sequenzierung (NGS) bei onkologischen Patienten:
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/AnwendungsflleInformationsmodell/Datenstzeinkl.Beschreibungen.page.md gate=B -->
-Die Struktur des Logical Models sowie Pfad und Beschreibung der einzelnen
-Datenelemente sind auf der Artefaktseite
-[MII LM MV Genomsequenzierung Onkologie](StructureDefinition-mii-lm-mvgenomseq-onkologie.html)
-dargestellt.
+> Die Struktur des Logical Models sowie Pfad und Beschreibung der einzelnen
+> Datenelemente sind auf der Artefaktseite
+> [MII LM MV Genomsequenzierung Onkologie](StructureDefinition-mii-lm-mvgenomseq-onkologie.html)
+> dargestellt.
+{: .ig-highlight .ig-highlight-grey}

@@ -2,4 +2,5 @@
 The lymph node course can be represented well in SNOMED CT.
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Verlauf-Lymphknoten.page.md gate=B -->
-The complete mapping table is generated from the ConceptMap below this introduction.
+> The complete mapping table is generated from the ConceptMap below this introduction.
+{: .ig-highlight .ig-highlight-grey}

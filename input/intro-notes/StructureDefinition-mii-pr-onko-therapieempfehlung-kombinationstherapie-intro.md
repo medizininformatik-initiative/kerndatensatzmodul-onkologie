@@ -20,7 +20,8 @@ It enables the representation of complex therapy recommendations for **molecular
 **Reason**: The FHIR R4 invariant `cpl-3` prevents the simultaneous use of `activity.detail.code` and `activity.reference`. Both approaches are therefore kept as separate slices.
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Tumorkonferenz/Tumorkonferenz-Detailed-Recommendations-CarePlan.page.md gate=B -->
-Both variants are now represented in the Tumorkonferenz profile itself, as the slices `activity:obds` (with `activity.detail.code`, `activity.reference` set to 0..0) and `activity:extended` (with `activity.reference` 1..1, `activity.detail` set to 0..0); a separate "Detailed Recommendations" CarePlan profile no longer exists. The structure is described in the artefact view: [MII PR Onkologie Tumorkonferenz](StructureDefinition-mii-pr-onko-tumorkonferenz.html).
+> Both variants are now represented in the Tumorkonferenz profile itself, as the slices `activity:obds` (with `activity.detail.code`, `activity.reference` set to 0..0) and `activity:extended` (with `activity.reference` 1..1, `activity.detail` set to 0..0); a separate "Detailed Recommendations" CarePlan profile no longer exists. The structure is described in the artefact view: [MII PR Onkologie Tumorkonferenz](StructureDefinition-mii-pr-onko-tumorkonferenz.html).
+{: .ig-highlight .ig-highlight-grey}
 
 ### Use cases
 
@@ -122,14 +123,16 @@ While the oBDS only captures the **therapy type**, RequestGroup additionally ena
 - **Source**: oBDS therapy types from `mii-cs-onko-therapie-typ`
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Tumorkonferenz/Therapieempfehlung-Kombinationstherapie-RequestGroup.page.md gate=B -->
-The codes it contains are listed in the artefact view: [MII VS Onkologie Therapieempfehlung Typ](ValueSet-mii-vs-onko-therapieempfehlung-typ.html).
+> The codes it contains are listed in the artefact view: [MII VS Onkologie Therapieempfehlung Typ](ValueSet-mii-vs-onko-therapieempfehlung-typ.html).
+{: .ig-highlight .ig-highlight-grey}
 
 ---
 
 Mapping [Uniform Oncological Base Dataset (oBDS)](https://basisdatensatz.de/basisdatensatz) to FHIR
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Tumorkonferenz/Therapieempfehlung-Kombinationstherapie-RequestGroup.page.md gate=B -->
-The oBDS mappings are recorded in the artefact view of this profile: [MII PR Onkologie Therapieempfehlung Kombinationstherapie](StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie.html).
+> The oBDS mappings are recorded in the artefact view of this profile: [MII PR Onkologie Therapieempfehlung Kombinationstherapie](StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie.html).
+{: .ig-highlight .ig-highlight-grey}
 
 ---
 

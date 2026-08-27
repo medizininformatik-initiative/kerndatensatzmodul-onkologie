@@ -4,4 +4,5 @@ Die Ausprägung der genetischen Variante. Die Bewertung der Ausprägung wird gem
 Für eine detaillierte Bewertung auf Basis internationaler Klassifikationen kann die MII Variante aus dem Molekulargenetischen Befundbericht genutzt werden (siehe [Genetische Variante: Observation](StructureDefinition-mii-pr-onko-genetische-variante.html)).
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Genetische-Variante-Auspraegung.page.md gate=B -->
-Die vollständige Mapping-Tabelle wird unterhalb dieser Einleitung aus der ConceptMap generiert.
+> Die vollständige Mapping-Tabelle wird unterhalb dieser Einleitung aus der ConceptMap generiert.
+{: .ig-highlight .ig-highlight-grey}

@@ -2,4 +2,5 @@
 Intent is recorded for all procedures. Because the range of answers is almost identical for the various procedures, they are presented and mapped together here.
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Intention.page.md gate=B -->
-The complete mapping table is generated from the ConceptMap below this introduction.
+> The complete mapping table is generated from the ConceptMap below this introduction.
+{: .ig-highlight .ig-highlight-grey}

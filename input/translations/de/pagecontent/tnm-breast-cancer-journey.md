@@ -12,7 +12,8 @@ Dieses umfassende Beispiel demonstriert die vollständige TNM-Staging-Journey ei
 ![TNM-Staging-Journey einer Mammakarzinom-Patientin über fünf Zeitpunkte](TNM_Breast_Cancer_Journey.svg)
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/TNM-Klassifikation/TNM-Breast-Cancer-Journey-Example.page.md gate=B -->
-Die Bilddatei wird als `.svg` bereitgestellt und kann zur besseren Darstellung einzeln geöffnet und heruntergeladen werden: [TNM_Breast_Cancer_Journey.svg](TNM_Breast_Cancer_Journey.svg).
+> Die Bilddatei wird als `.svg` bereitgestellt und kann zur besseren Darstellung einzeln geöffnet und heruntergeladen werden: [TNM_Breast_Cancer_Journey.svg](TNM_Breast_Cancer_Journey.svg).
+{: .ig-highlight .ig-highlight-grey}
 
 ### Klinischer Kontext
 
@@ -112,7 +113,8 @@ Components können nicht:
 ### Beispiel-Instanzen
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/TNM-Klassifikation/TNM-Breast-Cancer-Journey-Example.page.md gate=B -->
-Die fünf Staging-Zeitpunkte sind als eigenständige Beispielinstanzen ausgeliefert; die Strukturdarstellung findet sich jeweils auf der Artefaktseite:
+> Die fünf Staging-Zeitpunkte sind als eigenständige Beispielinstanzen ausgeliefert; die Strukturdarstellung findet sich jeweils auf der Artefaktseite:
+{: .ig-highlight .ig-highlight-grey}
 
 - Initiale klinische Staging (cT3N1M0): [mii-exa-onko-tnm-clinical-cT3cN1cM0](Observation-mii-exa-onko-tnm-clinical-cT3cN1cM0.html)
 - Gemischte Staging nach Biopsie (pT4cN1cM0): [mii-exa-onko-tnm-biopsy-cT4cN1cM0](Observation-mii-exa-onko-tnm-biopsy-cT4cN1cM0.html) <!-- TODO:REVIEW Quellseite verwies auf "mii-exa-onko-tnm-mixed-pT4cN1cM0"; im Modul liegt die Instanz unter "mii-exa-onko-tnm-biopsy-cT4cN1cM0" (Zuordnung ueber Datum 2024-02-15 und Stadium IIIB). -->
@@ -123,7 +125,8 @@ Die fünf Staging-Zeitpunkte sind als eigenständige Beispielinstanzen ausgelief
 ### JSON-Repräsentation
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/TNM-Klassifikation/TNM-Breast-Cancer-Journey-Example.page.md gate=B -->
-Die vollständige JSON- und XML-Repräsentation ist jeweils auf der Artefaktseite der Instanz hinterlegt:
+> Die vollständige JSON- und XML-Repräsentation ist jeweils auf der Artefaktseite der Instanz hinterlegt:
+{: .ig-highlight .ig-highlight-grey}
 
 - Vollständige initiale TNM-Klassifikation: [mii-exa-onko-tnm-clinical-cT3cN1cM0](Observation-mii-exa-onko-tnm-clinical-cT3cN1cM0.html)
 - T-Kategorie mit SNOMED Kodierung: [mii-exa-onko-tnm-t-kategorie-cT3](Observation-mii-exa-onko-tnm-t-kategorie-cT3.html)

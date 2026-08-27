@@ -24,7 +24,8 @@ The ValueSet for the circumferential resection plane is bound as **extensible** 
 #### ValueSet: MII VS Onko KRK Abstand Circumferelle Resektionsrand
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/KolorektalesKarzinom/KRK-Abstand-Circumferelle-Resektionsebene-Observation.page.md gate=B -->
-The codes it contains are listed in the artefact view: [MII VS Onkologie KRK Abstand Circumferelle Resektionsrand](ValueSet-mii-vs-onko-krk-abstand-circumferelle-resektionsrand.html).
+> The codes it contains are listed in the artefact view: [MII VS Onkologie KRK Abstand Circumferelle Resektionsrand](ValueSet-mii-vs-onko-krk-abstand-circumferelle-resektionsrand.html).
+{: .ig-highlight .ig-highlight-grey}
 <!-- TODO:REVIEW source page referred to mii-vs-onko-krk-abstand-circumferelle-resektionsebene; the link points to mii-vs-onko-krk-abstand-circumferelle-resektionsrand -->
 
 ---
@@ -32,14 +33,16 @@ The codes it contains are listed in the artefact view: [MII VS Onkologie KRK Abs
 Mapping dataset to FHIR
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/KolorektalesKarzinom/KRK-Abstand-Circumferelle-Resektionsebene-Observation.page.md gate=B -->
-The mapping of the dataset fields is documented in the logical model: [MII LM Onkologie Organspezifische Zusatzmodule](StructureDefinition-mii-lm-onko-organspezifische-zusatzmodule.html).
+> The mapping of the dataset fields is documented in the logical model: [MII LM Onkologie Organspezifische Zusatzmodule](StructureDefinition-mii-lm-onko-organspezifische-zusatzmodule.html).
+{: .ig-highlight .ig-highlight-grey}
 
 ---
 
 Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensatz.de/basisdatensatz) to FHIR
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/KolorektalesKarzinom/KRK-Abstand-Circumferelle-Resektionsebene-Observation.page.md gate=B -->
-The oBDS mappings are recorded in the artefact view of this profile: [MII PR Onkologie Abstand Circumferelle Resektionsebene](StructureDefinition-mii-pr-onko-krk-abstand-circumferelle-resektionsebene.html).
+> The oBDS mappings are recorded in the artefact view of this profile: [MII PR Onkologie Abstand Circumferelle Resektionsebene](StructureDefinition-mii-pr-onko-krk-abstand-circumferelle-resektionsebene.html).
+{: .ig-highlight .ig-highlight-grey}
 
 ---
 

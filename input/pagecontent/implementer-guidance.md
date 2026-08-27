@@ -102,12 +102,13 @@ publicly available:
 ### Quality assurance and validation
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/QA-Validierung.page.md gate=B -->
-With the move to the HL7 IG Publisher, the authoritative QA report is
-generated automatically on every build (see `qa.html` in the published
-guide). The validation configuration with justified suppressions lives in
-[`advisor.json`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/blob/dev/advisor.json);
-continuous validation runs via
-[GitHub Actions](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/actions).
+> With the move to the HL7 IG Publisher, the authoritative QA report is
+> generated automatically on every build (see `qa.html` in the published
+> guide). The validation configuration with justified suppressions lives in
+> [`advisor.json`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/blob/dev/advisor.json);
+> continuous validation runs via
+> [GitHub Actions](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/actions).
+{: .ig-highlight .ig-highlight-grey}
 
 The following state, last maintained manually for version 2026.0.0
 (2025-12-16), is kept as historical documentation of the Simplifier era:

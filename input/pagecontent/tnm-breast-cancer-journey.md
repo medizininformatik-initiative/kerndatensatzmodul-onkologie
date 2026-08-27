@@ -13,7 +13,8 @@ This comprehensive example demonstrates the complete TNM staging journey of a br
 ![TNM staging journey of a breast cancer patient across five points in time](TNM_Breast_Cancer_Journey.svg)
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/TNM-Klassifikation/TNM-Breast-Cancer-Journey-Example.page.md gate=B -->
-The image is provided as `.svg` and can be opened and downloaded separately for a better view: [TNM_Breast_Cancer_Journey.svg](TNM_Breast_Cancer_Journey.svg).
+> The image is provided as `.svg` and can be opened and downloaded separately for a better view: [TNM_Breast_Cancer_Journey.svg](TNM_Breast_Cancer_Journey.svg).
+{: .ig-highlight .ig-highlight-grey}
 
 ### Clinical context
 
@@ -113,7 +114,8 @@ Components cannot:
 ### Example instances
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/TNM-Klassifikation/TNM-Breast-Cancer-Journey-Example.page.md gate=B -->
-The five staging time points are shipped as separate example instances; the structure view is found on the respective artefact page:
+> The five staging time points are shipped as separate example instances; the structure view is found on the respective artefact page:
+{: .ig-highlight .ig-highlight-grey}
 
 - Initial clinical staging (cT3N1M0): [mii-exa-onko-tnm-clinical-cT3cN1cM0](Observation-mii-exa-onko-tnm-clinical-cT3cN1cM0.html)
 - Mixed staging after biopsy (pT4cN1cM0): [mii-exa-onko-tnm-biopsy-cT4cN1cM0](Observation-mii-exa-onko-tnm-biopsy-cT4cN1cM0.html) <!-- TODO:REVIEW The source page pointed at "mii-exa-onko-tnm-mixed-pT4cN1cM0"; in the module the instance is named "mii-exa-onko-tnm-biopsy-cT4cN1cM0" (matched via date 2024-02-15 and stage IIIB). -->
@@ -124,7 +126,8 @@ The five staging time points are shipped as separate example instances; the stru
 ### JSON representation
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/TNM-Klassifikation/TNM-Breast-Cancer-Journey-Example.page.md gate=B -->
-The full JSON and XML representation is available on each instance's artefact page:
+> The full JSON and XML representation is available on each instance's artefact page:
+{: .ig-highlight .ig-highlight-grey}
 
 - Complete initial TNM classification: [mii-exa-onko-tnm-clinical-cT3cN1cM0](Observation-mii-exa-onko-tnm-clinical-cT3cN1cM0.html)
 - T category with SNOMED coding: [mii-exa-onko-tnm-t-kategorie-cT3](Observation-mii-exa-onko-tnm-t-kategorie-cT3.html)

@@ -2,4 +2,5 @@
 The relation to a surgical therapy is recorded both for radiotherapy and for systemic therapy.
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Therapie-Stellung.page.md gate=B -->
-The complete mapping table is generated from the ConceptMap below this introduction.
+> The complete mapping table is generated from the ConceptMap below this introduction.
+{: .ig-highlight .ig-highlight-grey}

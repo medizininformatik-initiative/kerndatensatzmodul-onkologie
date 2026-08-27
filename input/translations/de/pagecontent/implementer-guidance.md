@@ -103,12 +103,13 @@ der im Bundesanzeiger 2021 veröffentlichten Version. Die Inhalte sind
 ### Qualitätssicherung und Validierung
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/QA-Validierung.page.md gate=B -->
-Mit dem Umzug auf den HL7 IG Publisher entsteht der maßgebliche QA-Report bei
-jedem Build automatisch (siehe `qa.html` im publizierten Guide). Die
-Validierungskonfiguration mit begründeten Unterdrückungen liegt in
-[`advisor.json`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/blob/dev/advisor.json);
-die kontinuierliche Validierung läuft über
-[GitHub Actions](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/actions).
+> Mit dem Umzug auf den HL7 IG Publisher entsteht der maßgebliche QA-Report bei
+> jedem Build automatisch (siehe `qa.html` im publizierten Guide). Die
+> Validierungskonfiguration mit begründeten Unterdrückungen liegt in
+> [`advisor.json`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/blob/dev/advisor.json);
+> die kontinuierliche Validierung läuft über
+> [GitHub Actions](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/actions).
+{: .ig-highlight .ig-highlight-grey}
 
 Der folgende, zuletzt zur Version 2026.0.0 manuell gepflegte Stand
 (2025-12-16) wird als historische Dokumentation der

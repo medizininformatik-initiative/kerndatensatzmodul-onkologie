@@ -1,0 +1,7 @@
+2026-08-27T08:53:24Z  INFO   7  prepost-delta  params  pre=migration-log/preflight-analysis.json post=migration-log/postflight-analysis.json out=migration-log/prepost-delta.md tsv=migration-log/prepost-delta.tsv
+2026-08-27T08:53:24Z  ERROR  7  prepost-delta  delta-regression: licence.contradictory  pre=false post=true
+    why: the target now declares CONTRADICTORY licences (the target declares: cc0-, cc0-1.0) -- one file will be read as the licence by someone, and it will be the wrong one
+2026-08-27T08:53:24Z  INFO   7  prepost-delta  result  rows=37 unchanged=31 improved=1 expected-change=4 regression=1 not-measurable=0 out=migration-log/prepost-delta.md tsv=migration-log/prepost-delta.tsv exit=1
+2026-08-27T08:53:24Z  WARN   7  prepost-delta  prepost-delta: 1 regression(s) -- a property of the module got WORSE between the pre- and post-measurement.
+    Every regression above names its property and both values.
+    The reports were still written: they are the artefact, not the verdict.

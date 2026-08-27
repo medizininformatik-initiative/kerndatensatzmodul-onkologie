@@ -32,7 +32,8 @@ The melanoma bundle comprises the following resources:
 - **Complete coverage**: all 4 melanoma profiles are included
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/MalignesMelanom/Melanom-Bundle-Example.page.md gate=B -->
-As a therapeutic resource, the bundle additionally contains the **excision on the upper arm** as a Procedure.
+> As a therapeutic resource, the bundle additionally contains the **excision on the upper arm** as a Procedure.
+{: .ig-highlight .ig-highlight-grey}
 
 ---
 
@@ -137,7 +138,8 @@ The bundle shows the practical use of various terminologies:
 ### Individual resource examples
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/MalignesMelanom/Melanom-Bundle-Example.page.md gate=B -->
-The resources contained in the bundle are also shipped as standalone example instances:
+> The resources contained in the bundle are also shipped as standalone example instances:
+{: .ig-highlight .ig-highlight-grey}
 
 - Patient: [mii-exa-onko-melanom-bundle-patient](Patient-mii-exa-onko-melanom-bundle-patient.html)
 - Primary tumour Condition: [mii-exa-onko-melanom-diagnose](Condition-mii-exa-onko-melanom-diagnose.html)

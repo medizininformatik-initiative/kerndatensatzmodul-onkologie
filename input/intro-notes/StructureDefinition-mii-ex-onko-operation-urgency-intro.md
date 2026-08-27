@@ -20,7 +20,8 @@ Capturing the modality of the procedure is important for several reasons:
 ### Value range
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Operation/Extension-Urgency.page.md gate=B -->
-The codes it contains are listed in the artefact view: [MII CS Onkologie Operation Urgency](CodeSystem-mii-cs-onko-operation-urgency.html).
+> The codes it contains are listed in the artefact view: [MII CS Onkologie Operation Urgency](CodeSystem-mii-cs-onko-operation-urgency.html).
+{: .ig-highlight .ig-highlight-grey}
 
 ### Mapping
 
@@ -30,7 +31,8 @@ This extension maps to the **KRK module** field:
 - **KR6**: Type of procedure (modality of procedure performance)
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Operation/Extension-Urgency.page.md gate=B -->
-The oBDS mappings are recorded in the artefact view of this profile: [MII EX Onko Operation Urgency](StructureDefinition-mii-ex-onko-operation-urgency.html).
+> The oBDS mappings are recorded in the artefact view of this profile: [MII EX Onko Operation Urgency](StructureDefinition-mii-ex-onko-operation-urgency.html).
+{: .ig-highlight .ig-highlight-grey}
 
 ### Related profiles
 

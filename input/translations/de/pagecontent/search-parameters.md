@@ -10,12 +10,13 @@ welche Suchparameter ein Server verpflichtend unterstützen MUSS, definiert
 das [CapabilityStatement](capability-statements.html) des Moduls.
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile (Suchparameter-Abschnitte der Profilseiten) gate=B -->
-Die Profilseiten des Simplifier-Leitfadens führten je Profil einen
-Suchparameter-Abschnitt mit GET-Beispielen. Diese Abschnitte waren
-seitenübergreifend identische Boilerplate mit teils fehlerhaften Beispielen
-(falsche Ressourcentypen, defekte Codeblöcke) und wurden bei der Migration
-bewusst **hier konsolidiert** statt auf jeder Profilseite wiederholt. Die
-verbindlichen Kernaussagen:
+> Die Profilseiten des Simplifier-Leitfadens führten je Profil einen
+> Suchparameter-Abschnitt mit GET-Beispielen. Diese Abschnitte waren
+> seitenübergreifend identische Boilerplate mit teils fehlerhaften Beispielen
+> (falsche Ressourcentypen, defekte Codeblöcke) und wurden bei der Migration
+> bewusst **hier konsolidiert** statt auf jeder Profilseite wiederholt. Die
+> verbindlichen Kernaussagen:
+{: .ig-highlight .ig-highlight-grey}
 
 - Server MÜSSEN die im CapabilityStatement gelisteten Suchparameter je
   Ressourcentyp unterstützen (u. a. `_profile`, `status`, `code`, `subject`,

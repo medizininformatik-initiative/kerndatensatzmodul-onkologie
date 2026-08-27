@@ -136,7 +136,7 @@ stets gern entgegengenommen.
 © 2019+ TMF e. V., Charlottenstraße 42, 10117 Berlin
 
 Der Inhalt dieser Spezifikation ist öffentlich und steht unter
-**[CC0 1.0 (Public Domain Dedication)](https://creativecommons.org/publicdomain/zero/1.0/)**;
+**[CC0-1.0 (Public Domain Dedication)](https://creativecommons.org/publicdomain/zero/1.0/)**;
 Nachnutzungs- bzw. Veröffentlichungsansprüche sind nicht beschränkt.
 
 Zu den Nutzungsrechten der zugrunde liegenden FHIR-Technologie siehe die

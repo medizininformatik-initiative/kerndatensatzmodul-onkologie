@@ -11,11 +11,12 @@ parameters a server MUST support is defined by the module's
 [CapabilityStatement](capability-statements.html).
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile (Suchparameter-Abschnitte der Profilseiten) gate=B -->
-The profile pages of the Simplifier guide carried a search-parameter section
-with GET examples per profile. These sections were page-spanning identical
-boilerplate with partially broken examples (wrong resource types, broken code
-fences) and were deliberately **consolidated here** during migration instead
-of being repeated on every profile page. The normative core statements:
+> The profile pages of the Simplifier guide carried a search-parameter section
+> with GET examples per profile. These sections were page-spanning identical
+> boilerplate with partially broken examples (wrong resource types, broken code
+> fences) and were deliberately **consolidated here** during migration instead
+> of being repeated on every profile page. The normative core statements:
+{: .ig-highlight .ig-highlight-grey}
 
 - Servers MUST support the search parameters listed in the
   CapabilityStatement per resource type (including `_profile`, `status`,

@@ -90,7 +90,8 @@ The profile uses a **preferred binding** to the value set `MII_VS_Onko_Weitere_K
 #### Available classification systems
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Weitere-Klassifikationen/Weitere-Klassifikationen-Observation.page.md gate=B -->
-The expansion of the available classification systems is shown on the page of the value set [mii-vs-onko-weitere-klassifikationen](ValueSet-mii-vs-onko-weitere-klassifikationen.html).
+> The expansion of the available classification systems is shown on the page of the value set [mii-vs-onko-weitere-klassifikationen](ValueSet-mii-vs-onko-weitere-klassifikationen.html).
+{: .ig-highlight .ig-highlight-grey}
 
 ---
 

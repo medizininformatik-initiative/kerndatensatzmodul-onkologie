@@ -24,7 +24,8 @@ Das ValueSet für die ASA-Klassifikation ist **required** gebunden. Dies bedeute
 #### ValueSet: MII VS Onko ASA oBDS
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Allgemeiner-Leistungszustand/ASA-Klassifikation-Observation.page.md gate=B -->
-Metadaten und Expansion des ValueSets sind auf der Seite [mii-vs-onko-asa-obds](ValueSet-mii-vs-onko-asa-obds.html) dargestellt.
+> Metadaten und Expansion des ValueSets sind auf der Seite [mii-vs-onko-asa-obds](ValueSet-mii-vs-onko-asa-obds.html) dargestellt.
+{: .ig-highlight .ig-highlight-grey}
 
 ---
 

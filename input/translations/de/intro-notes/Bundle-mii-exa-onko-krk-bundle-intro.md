@@ -158,7 +158,8 @@ Das Bundle zeigt die praktische Anwendung verschiedener Terminologien:
 ### Einzelne Ressourcen-Beispiele
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/KolorektalesKarzinom/KRK-Bundle-Example.page.md gate=B -->
-Die im Bundle enthaltenen Ressourcen sind zusätzlich als eigenständige Beispielinstanzen ausgeliefert:
+> Die im Bundle enthaltenen Ressourcen sind zusätzlich als eigenständige Beispielinstanzen ausgeliefert:
+{: .ig-highlight .ig-highlight-grey}
 
 - Patient: [mii-exa-onko-krk-bundle-patient](Patient-mii-exa-onko-krk-bundle-patient.html)
 - Primärtumor-Condition: [mii-exa-onko-krk-diagnose](Condition-mii-exa-onko-krk-diagnose.html)

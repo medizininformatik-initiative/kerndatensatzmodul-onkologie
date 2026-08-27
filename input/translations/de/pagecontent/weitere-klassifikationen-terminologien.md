@@ -21,10 +21,11 @@ Das **Weitere Klassifikationen CodeSystem** nutzt eine hierarchische Struktur zu
 #### CodeSystem: mii-cs-onko-weitere-klassifikationen-obds
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Weitere-Klassifikationen/Weitere-Klassifikationen-Terminologien.page.md gate=B -->
-Die Konzepte mit Code und Bezeichnung sowie deren Unterkonzepte sind auf der
-Artefaktseite
-[`mii-cs-onko-weitere-klassifikationen-obds`](CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html)
-dargestellt.
+> Die Konzepte mit Code und Bezeichnung sowie deren Unterkonzepte sind auf der
+> Artefaktseite
+> [`mii-cs-onko-weitere-klassifikationen-obds`](CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html)
+> dargestellt.
+{: .ig-highlight .ig-highlight-grey}
 
 ### Struktur des hierarchischen Ansatzes
 
@@ -39,10 +40,11 @@ Die ValueSets nutzen **descendant-of Filter** für wartbare Terminologie-Verwalt
 #### Haupt-ValueSet für alle Klassifikationswerte
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Weitere-Klassifikationen/Weitere-Klassifikationen-Terminologien.page.md gate=B -->
-Definition und Inhalt (Codes mit Bezeichnung) des Haupt-ValueSets sind auf der
-Artefaktseite
-[`mii-vs-onko-weitere-klassifikationen`](ValueSet-mii-vs-onko-weitere-klassifikationen.html)
-dargestellt.
+> Definition und Inhalt (Codes mit Bezeichnung) des Haupt-ValueSets sind auf der
+> Artefaktseite
+> [`mii-vs-onko-weitere-klassifikationen`](ValueSet-mii-vs-onko-weitere-klassifikationen.html)
+> dargestellt.
+{: .ig-highlight .ig-highlight-grey}
 
 ### mCODE STU4 Pattern Integration
 
@@ -51,11 +53,12 @@ Die Implementierung folgt dem **mCODE STU4 code+method+value Pattern**:
 #### Profil-Elemente für code+method+value Pattern
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Weitere-Klassifikationen/Weitere-Klassifikationen-Terminologien.page.md gate=B -->
-Kardinalitäten, Kurzbeschreibungen und Binding-Stärken der Elemente
-`Observation.code`, `Observation.method` und
-`Observation.value[x]:valueCodeableConcept` sind auf der Artefaktseite
-[`mii-pr-onko-weitere-klassifikationen`](StructureDefinition-mii-pr-onko-weitere-klassifikationen.html)
-dargestellt.
+> Kardinalitäten, Kurzbeschreibungen und Binding-Stärken der Elemente
+> `Observation.code`, `Observation.method` und
+> `Observation.value[x]:valueCodeableConcept` sind auf der Artefaktseite
+> [`mii-pr-onko-weitere-klassifikationen`](StructureDefinition-mii-pr-onko-weitere-klassifikationen.html)
+> dargestellt.
+{: .ig-highlight .ig-highlight-grey}
 
 #### Beispiel-Implementierung
 
@@ -79,12 +82,13 @@ InstanceOf: MII_PR_Onko_Weitere_Klassifikationen
 #### Alle ValueSets für Weitere Klassifikationen (bereits in SNOMED + MII-definiert)
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Weitere-Klassifikationen/Weitere-Klassifikationen-Terminologien.page.md gate=B -->
-Für die Weiteren Klassifikationen stehen die ValueSets
-[`mii-vs-onko-weitere-klassifikationen`](ValueSet-mii-vs-onko-weitere-klassifikationen.html)
-(Klassifikationssysteme) und
-[`mii-vs-onko-weitere-klassifikationen-auspraegungen`](ValueSet-mii-vs-onko-weitere-klassifikationen-auspraegungen.html)
-(Klassifikationswerte) bereit; Name, Beschreibung und Status sind dort jeweils
-angegeben.
+> Für die Weiteren Klassifikationen stehen die ValueSets
+> [`mii-vs-onko-weitere-klassifikationen`](ValueSet-mii-vs-onko-weitere-klassifikationen.html)
+> (Klassifikationssysteme) und
+> [`mii-vs-onko-weitere-klassifikationen-auspraegungen`](ValueSet-mii-vs-onko-weitere-klassifikationen-auspraegungen.html)
+> (Klassifikationswerte) bereit; Name, Beschreibung und Status sind dort jeweils
+> angegeben.
+{: .ig-highlight .ig-highlight-grey}
 
 ### Gesamtes CodeSystem - Übersicht aller MII-definierten Codes
 
@@ -99,9 +103,10 @@ dargestellt.
 Die Weitere Klassifikationen entsprechen dem **oBDS Feld 9 "Weitere Klassifikationen"**:
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Weitere-Klassifikationen/Weitere-Klassifikationen-Terminologien.page.md gate=B -->
-Die oBDS-Mappings der einzelnen Elemente sind auf der Artefaktseite
-[`mii-pr-onko-weitere-klassifikationen`](StructureDefinition-mii-pr-onko-weitere-klassifikationen.html)
-im Abschnitt *Mappings* dargestellt.
+> Die oBDS-Mappings der einzelnen Elemente sind auf der Artefaktseite
+> [`mii-pr-onko-weitere-klassifikationen`](StructureDefinition-mii-pr-onko-weitere-klassifikationen.html)
+> im Abschnitt *Mappings* dargestellt.
+{: .ig-highlight .ig-highlight-grey}
 
 ### SNOMED CT Mappings
 

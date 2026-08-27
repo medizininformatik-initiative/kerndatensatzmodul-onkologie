@@ -1,3 +1,4 @@
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Allgemeiner-Leistungszustand.page.md gate=B -->
 <!-- TODO:REVIEW Die Quellseite bestand ausschliesslich aus einem FQL-Block, der die Mapping-Tabelle (oBDS-Kodierung, oBDS-Label, SNOMED-CT-ID, SNOMED-CT-Name, Aequivalenzlevel, Kommentar) erzeugte. Der IG Publisher rendert diese Tabelle selbst; der folgende Satz ist neu formuliert und fachlich zu bestaetigen. -->
-Diese ConceptMap bildet die oBDS-Kodierung des allgemeinen Leistungszustands auf SNOMED CT ab. Die nachfolgende Darstellung führt je Eintrag die oBDS-Kodierung und ihr Label, den SNOMED-CT-Code und seinen Namen sowie das Äquivalenzlevel und einen Kommentar auf.
+> Diese ConceptMap bildet die oBDS-Kodierung des allgemeinen Leistungszustands auf SNOMED CT ab. Die nachfolgende Darstellung führt je Eintrag die oBDS-Kodierung und ihr Label, den SNOMED-CT-Code und seinen Namen sowie das Äquivalenzlevel und einen Kommentar auf.
+{: .ig-highlight .ig-highlight-grey}

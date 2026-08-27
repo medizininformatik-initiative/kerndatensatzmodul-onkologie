@@ -18,7 +18,8 @@ Die Erfassung der Eingriffsmodalität ist aus mehreren Gründen wichtig:
 ### Wertebereich
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Operation/Extension-Urgency.page.md gate=B -->
-Die enthaltenen Codes sind in der Artefaktdarstellung aufgeführt: [MII CS Onkologie Operation Urgency](CodeSystem-mii-cs-onko-operation-urgency.html).
+> Die enthaltenen Codes sind in der Artefaktdarstellung aufgeführt: [MII CS Onkologie Operation Urgency](CodeSystem-mii-cs-onko-operation-urgency.html).
+{: .ig-highlight .ig-highlight-grey}
 
 ### Mapping
 
@@ -28,7 +29,8 @@ Dieses Extension mappt auf das **KRK-Modul** Feld:
 - **KR6**: Art des Eingriffs (Modalität der Eingriffsdurchführung)
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Operation/Extension-Urgency.page.md gate=B -->
-Die oBDS-Mappings sind in der Artefaktdarstellung des Profils hinterlegt: [MII EX Onko Operation Urgency](StructureDefinition-mii-ex-onko-operation-urgency.html).
+> Die oBDS-Mappings sind in der Artefaktdarstellung des Profils hinterlegt: [MII EX Onko Operation Urgency](StructureDefinition-mii-ex-onko-operation-urgency.html).
+{: .ig-highlight .ig-highlight-grey}
 
 ### Verwandte Profile
 

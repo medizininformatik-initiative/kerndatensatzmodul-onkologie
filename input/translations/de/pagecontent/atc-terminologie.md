@@ -18,9 +18,10 @@ Die MII stellt **kuratierte, onkologierelevante Terminologien** für systemische
 ### Therapieprotokolle
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Systemische-Therapie/Systemische-Therapie-Terminologien.page.md gate=B -->
-Name, Status, Version und Anzahl der Codes sind auf der Artefaktseite
-[`mii-cs-onko-systemische-therapie-protokolle`](CodeSystem-mii-cs-onko-systemische-therapie-protokolle.html)
-dargestellt.
+> Name, Status, Version und Anzahl der Codes sind auf der Artefaktseite
+> [`mii-cs-onko-systemische-therapie-protokolle`](CodeSystem-mii-cs-onko-systemische-therapie-protokolle.html)
+> dargestellt.
+{: .ig-highlight .ig-highlight-grey}
 
 **Beispiele häufiger Protokolle**: FOLFOX, R-CHOP, AC, BEACOPP, ICE
 
@@ -73,10 +74,11 @@ Monitoring-Prozess geplant (GitHub #282–#284).
 #### Haupt-ValueSet (Aktuelle Codes)
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Systemische-Therapie/Systemische-Therapie-Terminologien.page.md gate=B -->
-Name, Status, Version und Expansion des Haupt-ValueSets sind auf der
-Artefaktseite
-[`mii-vs-onko-systemische-therapie-substanzen`](ValueSet-mii-vs-onko-systemische-therapie-substanzen.html)
-dargestellt.
+> Name, Status, Version und Expansion des Haupt-ValueSets sind auf der
+> Artefaktseite
+> [`mii-vs-onko-systemische-therapie-substanzen`](ValueSet-mii-vs-onko-systemische-therapie-substanzen.html)
+> dargestellt.
+{: .ig-highlight .ig-highlight-grey}
 
 #### Jahresspezifische ValueSets
 
@@ -146,9 +148,10 @@ InstanceOf: MII_PR_Onko_Systemische_Therapie_Medikation
 ### UNII-Substanzen
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Systemische-Therapie/Systemische-Therapie-Terminologien.page.md gate=B -->
-Name, Status, Version und Expansion des UNII-ValueSets sind auf der Artefaktseite
-[`mii-vs-onko-systemische-therapie-substanzen-unii`](ValueSet-mii-vs-onko-systemische-therapie-substanzen-unii.html)
-dargestellt.
+> Name, Status, Version und Expansion des UNII-ValueSets sind auf der Artefaktseite
+> [`mii-vs-onko-systemische-therapie-substanzen-unii`](ValueSet-mii-vs-onko-systemische-therapie-substanzen-unii.html)
+> dargestellt.
+{: .ig-highlight .ig-highlight-grey}
 
 **Beispiel — Substanz nur mit UNII-Code (Iberdomid):**
 [mii-exa-onko-medikation-iberdomide-unii](MedicationStatement-mii-exa-onko-medikation-iberdomide-unii.html)
