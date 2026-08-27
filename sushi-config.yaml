@@ -225,7 +225,7 @@ dependencies:
 # separate scaffolding step); OPTIONAL entries your module does not need are
 # removed per docs/optional-pages.md.
 # Every `title:` below is also a msgid in the IG-level translation catalogue
-# input/translations/de/ImplementationGuide-mii-ig-{{MODULE_SLUG}}.po — if you
+# input/translations/de/ImplementationGuide-mii-ig-onko-de-v2026.po — if you
 # add, rename or delete a page here, update that catalogue in the same commit,
 # or the German rendering falls back to the English title for that page.
 pages:
@@ -296,9 +296,9 @@ pages:
   # (ImplementationGuide-<id>.html); this entry gives it a hand-authored intro
   # — dependency table, cross-version analysis, global profiles, copyrights —
   # the kerndatensatz-basis idiom (ImplementationGuide-mii-ig-base.md there).
-  # BOTH this entry's key and the two source files carry {{MODULE_SLUG}} in
+  # BOTH this entry's key and the two source files carried the module slug in
   # their NAME: like the IG-level .po catalogue, rename
-  # input/pagecontent/ImplementationGuide-mii-ig-{{MODULE_SLUG}}.md and its
+  # input/pagecontent/ImplementationGuide-mii-ig-onko-de-v2026.md and its
   # German mirror under input/translations/de/pagecontent/ when you set your
   # slug (docs/recipes/create-a-new-module.md step 4). The CI self-check
   # substitutes and renames all of them for the template repo's own preview.
@@ -404,7 +404,7 @@ parameters:
   # FHIR validation test cases (for example, kerndatensatz-basis does the same).
   # A minimal working harness ships in
   # tests/profiles/ — see tests/README.md. It stays COMMENTED OUT in the template
-  # repo: the fixtures' canonicals still carry {{MODULE_SLUG}}, which the CI
+  # repo: the fixtures' canonicals still carry the template slug placeholder, which the CI
   # self-check substitution does not reach (it rewrites sushi-config.yaml, ig.ini
   # and the narrative pages only). Replace the placeholders in tests/profiles/,
   # then uncomment:

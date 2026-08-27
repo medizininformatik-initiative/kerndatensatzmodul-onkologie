@@ -115,6 +115,53 @@ not been translated. Do not "fix" it silently, and do not translate the numbers.
    column is dropped (meaningless for one module). Every verdict is counted, none forecast.
    Order matters: the FIRST input is the reference.
 
+## Pre-flight aspects (migration Gate 0)
+
+From v0.17.0 every measurement carries a `preflight` section with
+migration-decisive aspects, measured OFFLINE from the tree alone:
+
+- **Licence evidence, tiered** — every place a licence is declared
+  (sushi-config/package.json, LICENSE file, narrative copyright statements),
+  with absence and contradiction as first-class findings.
+- **Canonical-space census** — resources whose `url` lies outside the IG
+  canonical, plus id↔url mismatches inside it: together the
+  `special_url_prediction`, the publisher's `special-url` list a migration
+  will need; `example.org` canonicals are called out separately. A
+  sushi-config-vs-package.json canonical disagreement is reported as
+  `config_contradiction` (measured live: PROs' package.json carries a
+  modul-dok canonical).
+- **Dependency-pin health** — old-style/virtual packages, whether
+  THO/Extensions-Pack are pinned DIRECTLY (absent → the IG Publisher injects
+  the latest release at build time), and external parent canonicals. The
+  parser reads BOTH SUSHI dependency forms (flat and nested id/version
+  sub-keys); `dependency_block_unparsed: true` flags a block that exists but
+  yielded no entries — a parser finding, never a dependency-free source.
+- **Package layout** — for distributed packages: `.index.json` presence
+  (absent → index-based oracles run dry) and nested resource directories
+  (flat globs lose them; the census here is recursive).
+- **Narrative sources** — which trees carry prose (`pagecontent`,
+  `intro-notes`, `implementation-guides/`); `dual_source: true` plus each
+  tree's last commit date makes the authoritative-copy decision a measured
+  one instead of a rank default.
+- **QA baseline** — a rendered `qa.json` in the tree, if any. `None` means:
+  obtain it (build the unmigrated source, or fetch its rendered qa) — never
+  assume it.
+
+Three census honesty rules sit behind these aspects: instances of canonical
+base types (ConceptMap, Measure, ObservationDefinition, …) are counted in an
+open `artifacts.other` bucket instead of being absorbed as "examples"; where
+FSH declarations AND generated resources both exist, their counts are
+cross-checked and every mismatch is reported (`generated_crosscheck` — the
+generated resourceType census is the authoritative one for page decisions);
+and a repository whose SUSHI project nests below the root (strukturdaten's
+`Resources/`) is re-rooted with a page-one warning instead of yielding an
+empty identity without a finding.
+
+`None` values name what this instrument cannot measure from the tree — the
+consumer obtains it elsewhere, never assumes it (the "a null is not a zero"
+rule). The `mii-ig-migration` skill runs this measurement on the unmigrated
+source as its REQUIRED Gate-0 pre-flight.
+
 ## Verification
 
 ```bash

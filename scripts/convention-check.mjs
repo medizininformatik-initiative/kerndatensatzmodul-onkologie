@@ -155,8 +155,14 @@ export function evaluate({ sushiConfig = null, igIni = null, packageJson = null,
       return { ok: true, parameterized: isPlaceholder(v) };
     });
 
+    // MODULE-LOCAL ADAPTATION (Onkologie, 2026-08-27): the published canonical
+    // of this module lives in the ext namespace (fhir/ext/modul-onko) — a path
+    // segment the template pattern [a-z0-9-] does not admit. The canonical is
+    // published identity and MUST NOT change (migration guardrail 1); the
+    // charset therefore additionally allows "/". Upstream note filed with the
+    // template (affects every MII Erweiterungsmodul under fhir/ext/).
     field("M5 canonical", readTopLevel(sushiConfig, "canonical"), (v) =>
-      checkPrefixed(v, "https://www.medizininformatik-initiative.de/fhir/", "[a-z0-9-]"));
+      checkPrefixed(v, "https://www.medizininformatik-initiative.de/fhir/", "[a-z0-9/-]"));
 
     field("M6 version", readTopLevel(sushiConfig, "version"), (v) => {
       if (isPlaceholder(v)) return { ok: true, parameterized: true };

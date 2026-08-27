@@ -52,6 +52,15 @@ test("scaffold passes in development mode (placeholders are parameterized)", () 
   assert.ok(ids(findings, "skip").includes("Section 1b"));
 });
 
+test("M5 accepts the ext namespace of the Erweiterungsmodule (module-local adaptation, upstream issue filed)", () => {
+  const cfg = CONCRETE.replace(
+    "canonical: https://www.medizininformatik-initiative.de/fhir/modul-base",
+    "canonical: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko");
+  const { findings, ok } = evaluate({ sushiConfig: cfg, igIni: CONCRETE_IGINI, release: true });
+  assert.equal(ok, true, "ext-namespace canonical must pass M5");
+  assert.ok(!ids(findings, "fail").includes("M5 canonical"));
+});
+
 test("scaffold FAILS on a release branch (placeholders unresolved)", () => {
   const { findings, ok } = evaluate({ sushiConfig: SCAFFOLD, igIni: "template = TODO-X", release: true });
   assert.equal(ok, false, "unresolved placeholders must fail a release");

@@ -109,19 +109,38 @@ def sushi_scalar(text, key):
 
 
 def sushi_dependencies(text):
-    deps, in_block = {}, False
-    for ln in text.splitlines():
-        # A trailing comment after the key ('dependencies: # note') is valid YAML
-        # and SUSHI-accepted; tolerating it keeps hand-annotated configs measurable.
-        if re.match(r'^dependencies:\s*(?:#.*)?$', ln):
-            in_block = True
+    """`dependencies:`-Block als {paket: version} — oder None, wenn KEIN Block
+    existiert (None ≠ leer: ein vorhandener, aber unlesbarer Block bleibt {}).
+
+    Beide realen SUSHI-Formen werden gelesen: `paket: 1.0.0` UND die
+    verschachtelte Form `paket:` mit `id:`/`version:`/`uri:`-Unterschlüsseln.
+    Der flache Parser hat auf der verschachtelten Form Phantom-Pakete namens
+    `id` und `version` erfunden (gemessen am PROs-Modul, 2026-08-20); nur
+    `version:` eines Unterblocks ist eine Pin-Angabe, alles andere ist keins."""
+    if not text:
+        return None
+    m = re.search(r'^dependencies:[ \t]*(?:#.*)?$', text, re.M)
+    if not m:
+        return None
+    deps, cur, entry_indent = {}, None, None
+    for ln in text[m.end():].splitlines():
+        if re.match(r'^\S', ln):
+            break
+        if not ln.strip() or ln.lstrip().startswith("#"):
             continue
-        if in_block:
-            if re.match(r'^\S', ln):
-                break
-            m = re.match(r'\s+([A-Za-z0-9._\-]+):\s*([^\s#]+)', ln)
-            if m and not ln.lstrip().startswith("#"):
-                deps[m.group(1)] = m.group(2)
+        mm = re.match(r'^([ \t]+)([A-Za-z0-9._\-]+):[ \t]*([^#\n]*?)[ \t]*(?:#.*)?$', ln)
+        if not mm:
+            continue
+        ind = len(mm.group(1).expandtabs(2))
+        key, val = mm.group(2), mm.group(3).strip().strip('"').strip("'")
+        if entry_indent is None:
+            entry_indent = ind
+        if ind <= entry_indent:
+            cur = key
+            if val:
+                deps[cur] = val
+        elif key == "version" and cur:
+            deps[cur] = val
     return deps
 
 
@@ -148,6 +167,19 @@ def git_commit(d):
 # ---------- FSH-Deklarationen (Provenienz) ------------------------------------
 DECL_RE = re.compile(r'^(Profile|Extension|ValueSet|CodeSystem|Logical|Instance|Mapping|Invariant|RuleSet):\s*([^\s(]+)')
 
+# Kanonische/definitorische R4-Typen OHNE eigene Zähl-Kategorie. Eine Instanz
+# dieser Typen ist KEIN Beispiel: der frühere "alles andere = examples"-Default
+# hat 37 ConceptMaps (Onkologie), Measure/Library/EvidenceVariable (MTB) und
+# 41 ObservationDefinitions (PROs) lautlos als Beispiele gezählt — genau dort,
+# wo der Artefakt-Mix das Migrationsrisiko ist (Census 2026-08-20).
+CANONICAL_INSTANCE_TYPES = frozenset((
+    "ConceptMap", "StructureMap", "NamingSystem", "TerminologyCapabilities",
+    "Measure", "Library", "EvidenceVariable", "Evidence", "ResearchDefinition",
+    "ResearchElementDefinition", "ObservationDefinition", "SpecimenDefinition",
+    "ActivityDefinition", "PlanDefinition", "EventDefinition", "GraphDefinition",
+    "MessageDefinition", "CompartmentDefinition", "ExampleScenario",
+    "ChargeItemDefinition", "TestScript", "ImplementationGuide"))
+
 
 def scan_fsh(igdir, fshdir):
     decls = []
@@ -157,17 +189,26 @@ def scan_fsh(igdir, fshdir):
         for i, ln in enumerate(read(fp).splitlines(), 1):
             m = DECL_RE.match(ln)
             if m:
-                last = {"type": m.group(1), "name": m.group(2), "path": rp, "line": i, "instanceOf": None}
+                last = {"type": m.group(1), "name": m.group(2), "path": rp, "line": i,
+                        "instanceOf": None, "usage": None}
                 decls.append(last)
-            elif last and last["type"] == "Instance" and last["instanceOf"] is None:
-                mi = re.match(r'^InstanceOf:\s*(\S+)', ln)
-                if mi:
-                    last["instanceOf"] = mi.group(1)
+            elif last and last["type"] == "Instance":
+                if last["instanceOf"] is None:
+                    mi = re.match(r'^InstanceOf:\s*(\S+)', ln)
+                    if mi:
+                        last["instanceOf"] = mi.group(1)
+                        continue
+                if last["usage"] is None:
+                    mu = re.match(r'^Usage:\s*(#\S+)', ln)
+                    if mu:
+                        last["usage"] = mu.group(1)
     return decls
 
 
 def _empty_counts():
-    return {k: 0 for k in PUBLISHED_ARTIFACTS + INTERNAL_ARTIFACTS}
+    c = {k: 0 for k in PUBLISHED_ARTIFACTS + INTERNAL_ARTIFACTS}
+    c["other"] = {}
+    return c
 
 
 def counts_from_decls(decls):
@@ -182,10 +223,22 @@ def counts_from_decls(decls):
             key = ("capabilitystatements" if io == "CapabilityStatement" else
                    "searchparameters" if io == "SearchParameter" else
                    "operations" if io == "OperationDefinition" else
-                   "questionnaires" if io == "Questionnaire" else "examples")
+                   "questionnaires" if io == "Questionnaire" else None)
+            # Beispiel ist nur, was #example deklariert ODER ein Modul-Profil
+            # instanziiert. Eine Instanz eines kanonischen Basistyps (ConceptMap,
+            # Measure, ObservationDefinition, ...) ist ein eigenständiges
+            # Artefakt und landet im offenen `other`-Eimer statt bei den
+            # Beispielen (vorher lautlos absorbiert).
+            if key is None:
+                if io in CANONICAL_INSTANCE_TYPES and d.get("usage") != "#example":
+                    c["other"][io] = c["other"].get(io, 0) + 1
+                    key = "other"
+                else:
+                    key = "examples"
         if not key:
             continue
-        c[key] += 1
+        if key != "other":
+            c[key] += 1
         lst.append({"type": t, "name": d["name"], "instanceOf": d.get("instanceOf"),
                     "category": key, "path": d["path"], "line": d["line"]})
     return c, lst
@@ -194,7 +247,10 @@ def counts_from_decls(decls):
 def counts_from_generated(gendir, igdir):
     c = _empty_counts()
     lst = []
-    for fp in sorted(glob.glob(os.path.join(gendir, "*.json"))):
+    # Rekursiv: verteilte Pakete dürfen Unterverzeichnisse tragen (gemessen:
+    # Kardiologie-Alpha mit package/examples/) — ein flacher Glob verliert sie
+    # kommentarlos.
+    for fp in sorted(glob.glob(os.path.join(gendir, "**", "*.json"), recursive=True)):
         try:
             d = json.load(open(fp, encoding="utf-8"))
         except Exception:
@@ -207,26 +263,208 @@ def counts_from_generated(gendir, igdir):
         else:
             key = {"ValueSet": "valuesets", "CodeSystem": "codesystems",
                    "CapabilityStatement": "capabilitystatements", "Questionnaire": "questionnaires",
-                   "SearchParameter": "searchparameters", "OperationDefinition": "operations"}.get(rt, "examples")
-        c[key] += 1
+                   "SearchParameter": "searchparameters", "OperationDefinition": "operations"}.get(rt)
+            if key is None:
+                if rt in CANONICAL_INSTANCE_TYPES:
+                    c["other"][rt] = c["other"].get(rt, 0) + 1
+                    key = "other"
+                else:
+                    key = "examples"
+        if key != "other":
+            c[key] += 1
         lst.append({"type": rt, "name": rid, "instanceOf": None, "category": key,
                     "path": rel(igdir, fp), "line": None})
     return c, lst
 
 
 def find_resource_dir(igdir):
-    """Liefert (dir, kind) für generierte Ressourcen: fsh-generated bevorzugt, sonst package/."""
+    """Liefert (dir, kind) für generierte Ressourcen: fsh-generated bevorzugt, sonst package/.
+
+    package/ wird REKURSIV geprüft: index-lose Pakete mit verschachtelten
+    Unterverzeichnissen (Kardiologie-Fund 2026-08-20) fielen sonst lautlos
+    durch den flachen Glob. Auf Wurzelebene bleibt die Prüfung flach — dort
+    wäre Rekursion ein Streuverlust über das ganze Repo."""
     gen = os.path.join(igdir, "fsh-generated", "resources")
     if os.path.isdir(gen) and glob.glob(os.path.join(gen, "*.json")):
         return gen, "fsh-generated/resources"
-    for cand in (os.path.join(igdir, "package"), igdir):
-        for fp in glob.glob(os.path.join(cand, "*.json"))[:50]:
+    pkg = os.path.join(igdir, "package")
+    for fp in glob.glob(os.path.join(pkg, "**", "*.json"), recursive=True)[:200]:
+        try:
+            if json.load(open(fp, encoding="utf-8")).get("resourceType"):
+                return pkg, rel(igdir, pkg) + " (Package, reduziert)"
+        except Exception:
+            continue
+    for fp in glob.glob(os.path.join(igdir, "*.json"))[:50]:
+        try:
+            if json.load(open(fp, encoding="utf-8")).get("resourceType"):
+                return igdir, rel(igdir, igdir) + " (Package, reduziert)"
+        except Exception:
+            continue
+    return None, None
+
+
+# ---------- Pre-flight (migration Gate 0) --------------------------------------
+def compute_preflight(igdir, identity, deps_items, gendir, genkind=None, deps_block_present=None):
+    """Migration-decisive aspects, measured OFFLINE from the tree alone
+    (2026-08-20, from the Studie try-run review; package-layout and
+    narrative-source aspects added after the module-census gap analysis the
+    same day). Registry lookups, source builds and remote fetches stay OUT of
+    this instrument on purpose - a null is not a zero, and every None below
+    names what a migration pre-flight must obtain elsewhere."""
+    # (a) licence EVIDENCE, tiered: value + where it was read. Absence and
+    # contradiction are first-class findings (Studie: no tier carried one).
+    ev = []
+    if identity.get("license"):
+        ev.append({"source": "sushi-config.yaml/package.json", "value": identity["license"]})
+    lic_file = None
+    for cand in ("LICENSE", "LICENSE.md", "LICENSE.txt"):
+        fp = os.path.join(igdir, cand)
+        if os.path.isfile(fp):
+            first = (read(fp).strip().splitlines() or [""])[0][:80]
+            lic_file = {"source": cand, "value": first}
+            ev.append(lic_file)
+            break
+    lic_pat = re.compile(r"(CC[- ]?BY[- 0-9.]*|CC0[^A-Za-z]|Creative Commons|Apache[- ]2\.0|MIT License)", re.I)
+    hits = []
+    for fp in glob.glob(os.path.join(igdir, "input", "pagecontent", "*.md")) + \
+              glob.glob(os.path.join(igdir, "ImplementationGuide*", "**", "*.md"), recursive=True):
+        m = lic_pat.search(read(fp))
+        if m:
+            hits.append({"source": rel(igdir, fp),
+                         "value": re.sub(r"[^0-9A-Za-z.\-]+$", "", m.group(1).strip())})
+    ev.extend(hits[:5])
+    values = {re.sub(r"[^0-9a-z.\-]+$", "", e["value"].lower().replace(" ", "")) for e in ev}
+    licence = {"evidence": ev, "declared_anywhere": bool(ev),
+               "contradictory": len(values) > 1, "distinct_values": sorted(values)}
+    # (b) canonical-space census - predicts the special-url list and exposes
+    # example.org-type defects. Measured from generated resources only; a
+    # tree without them yields None, never a fabricated zero.
+    canonical = identity.get("canonical")
+    out_of_space = None
+    if gendir and canonical:
+        out_of_space = []
+        for fp in sorted(glob.glob(os.path.join(gendir, "**", "*.json"), recursive=True)):
             try:
-                if json.load(open(fp, encoding="utf-8")).get("resourceType"):
-                    return cand, rel(igdir, cand) + " (Package, reduziert)"
+                d = json.load(open(fp, encoding="utf-8"))
             except Exception:
                 continue
-    return None, None
+            u = d.get("url")
+            if u and d.get("resourceType") != "ImplementationGuide" and not u.startswith(canonical):
+                out_of_space.append({"type": d.get("resourceType"), "id": d.get("id"), "url": u})
+    # id<->url mismatches are the SECOND special-url class: the url lives in
+    # the canonical space but not at <canonical>/<Type>/<id> (measured on the
+    # Studie CapabilityStatement, canonical .../CapabilityStatement/metadata).
+    id_url_mismatch = None
+    if gendir and canonical:
+        id_url_mismatch = []
+        for fp in sorted(glob.glob(os.path.join(gendir, "**", "*.json"), recursive=True)):
+            try:
+                d = json.load(open(fp, encoding="utf-8"))
+            except Exception:
+                continue
+            u, rt, rid = d.get("url"), d.get("resourceType"), d.get("id")
+            if u and rt and rid and rt != "ImplementationGuide" and \
+               u.startswith(canonical) and u != "%s/%s/%s" % (canonical, rt, rid):
+                id_url_mismatch.append({"type": rt, "id": rid, "url": u})
+    # Config-Widerspruch: sushi-config und package.json, die verschiedene
+    # canonicals deklarieren, sind ein Identitäts-Befund (gemessen: PROs'
+    # package.json trägt ein modul-dok-Canonical - Copy-Paste-Altlast).
+    pkg_canon = None
+    try:
+        pkg_canon = (json.load(open(os.path.join(igdir, "package.json"), encoding="utf-8"))
+                     or {}).get("canonical")
+    except Exception:
+        pass
+    canon_prefix = lambda u: (u or "").split("/ImplementationGuide/")[0] or None
+    canon = {"canonical": canonical,
+             "package_json_canonical": pkg_canon,
+             "config_contradiction": bool(canonical and pkg_canon
+                                          and canon_prefix(pkg_canon) != canonical),
+             "out_of_space_count": len(out_of_space) if out_of_space is not None else None,
+             "out_of_space": (out_of_space or [])[:20],
+             "id_url_mismatch": (id_url_mismatch or [])[:10],
+             "special_url_prediction": (len(out_of_space) + len(id_url_mismatch))
+                 if out_of_space is not None and id_url_mismatch is not None else None,
+             "example_org": [x for x in (out_of_space or []) if "example.org" in x["url"]]}
+    # (c) dependency-pin health: old-style/virtual packages the toolchain
+    # rewrites or warns about, and the THO/Extensions-Pack direct-pin gap
+    # (absent -> the IG Publisher injects the LATEST release at build time;
+    # verified in PublisherIGLoader).
+    dep_ids = list(deps_items or {})
+    old_style = [d for d in dep_ids if re.match(r"hl7\.fhir\.extensions\.r\d", d)]
+    has_tho = any("hl7.terminology" in d for d in dep_ids)
+    has_ext = any(d.startswith("hl7.fhir.uv.extensions") for d in dep_ids)
+    parents = None
+    if gendir:
+        parents = set()
+        for fp in glob.glob(os.path.join(gendir, "**", "StructureDefinition-*.json"), recursive=True):
+            try:
+                d = json.load(open(fp, encoding="utf-8"))
+            except Exception:
+                continue
+            b = d.get("baseDefinition") or ""
+            if b and canonical and not b.startswith(canonical) and \
+               not b.startswith("http://hl7.org/fhir/StructureDefinition/"):
+                parents.add(b)
+        parents = sorted(parents)
+    dep_health = {"old_style_packages": old_style,
+                  "tho_pinned_directly": has_tho, "extensions_pinned_directly": has_ext,
+                  "injection_risk": not (has_tho and has_ext),
+                  "external_parents": parents,
+                  # None = kein sushi-config gelesen; False = KEIN dependencies-
+                  # Block; True + leere items = Block vorhanden, aber kein
+                  # Eintrag lesbar - ein Parser-Befund, KEIN Beleg für "keine
+                  # Abhängigkeiten" (PROs-Lehre).
+                  "dependency_block_present": deps_block_present,
+                  "dependency_block_unparsed": bool(deps_block_present) and not dep_ids}
+    # (c2) package LAYOUT - only meaningful when the measured tree IS a
+    # distributed package: a missing package/.index.json silently starves
+    # every index-based oracle downstream, and nested resource directories
+    # defeat flat globs (both measured on the Kardiologie alpha, 2026-08-20).
+    layout = None
+    if gendir and genkind and "Package" in genkind:
+        nested = sorted({os.path.relpath(os.path.dirname(fp), gendir)
+                         for fp in glob.glob(os.path.join(gendir, "**", "*.json"), recursive=True)
+                         if os.path.dirname(fp) != gendir})
+        layout = {"resource_dir": rel(igdir, gendir),
+                  "index_json_present": os.path.isfile(os.path.join(gendir, ".index.json")),
+                  "nested_resource_dirs": [d for d in nested if d != "."]}
+    # (c3) narrative SOURCES - which trees carry prose, and whether TWO carry
+    # it at once (dual source: rank-1 preference without a freshness check
+    # silently migrates the stale copy - Onkologie/ICU class).
+    n_pc = bool(glob.glob(os.path.join(igdir, "input", "pagecontent", "*.md")))
+    n_intro = bool(glob.glob(os.path.join(igdir, "input", "intro-notes", "*.md")))
+    n_guide = bool(glob.glob(os.path.join(igdir, "implementation-guides", "**", "*.md"), recursive=True))
+    def _last_commit(sub):
+        try:
+            r = subprocess.run(["git", "-C", igdir, "log", "-1", "--format=%cI", "--", sub],
+                               capture_output=True, text=True, timeout=15)
+            return r.stdout.strip() or None
+        except Exception:
+            return None
+    nsources = {"pagecontent": n_pc, "intro_notes": n_intro,
+                "implementation_guides_tree": n_guide,
+                "dual_source": n_guide and (n_pc or n_intro),
+                "pagecontent_last_commit": _last_commit("input/pagecontent") if n_pc else None,
+                "implementation_guides_last_commit": _last_commit("implementation-guides") if n_guide else None}
+    # (d) QA baseline: a rendered qa in the tree, if any. None = the migration
+    # pre-flight must build the unmigrated source or fetch its rendered qa -
+    # without it, "pre-existing error" claims have no proof.
+    qa = None
+    for cand in ("output/qa.json", "docs/qa.json", "qa.json"):
+        fp = os.path.join(igdir, cand)
+        if os.path.isfile(fp):
+            try:
+                d = json.load(open(fp, encoding="utf-8"))
+                qa = {"source": cand, "errs": d.get("errs"), "warnings": d.get("warnings"),
+                      "date": d.get("date") or d.get("dateISO8601")}
+            except Exception:
+                qa = {"source": cand, "errs": None, "warnings": None, "date": None}
+            break
+    return {"licence": licence, "canonical_space": canon,
+            "dependency_health": dep_health, "package_layout": layout,
+            "narrative_sources": nsources, "qa_baseline": qa,
+            "_comment": "migration Gate-0 aspects; None = not measurable from this tree (obtain it, never assume it)"}
 
 
 # ---------- Narrative ----------------------------------------------------------
@@ -235,6 +473,13 @@ def narrative_detail(igdir):
     for f in sorted(glob.glob(os.path.join(igdir, "input", "pagecontent", "*.md"))):
         w = len(read(f).split())
         out.append({"path": rel(igdir, f), "words": w, "kind": "target", "stub": w < STUB_MIN_WORDS})
+    # IG-Publisher-native Prosa AUSSERHALB von pagecontent: intro-notes werden
+    # pro Artefakt eingebunden und sind Narrative (Basis-Fund 2026-08-20 - vorher
+    # für den Zensus unsichtbar). Eigener kind-Wert, damit die bestehenden
+    # Seiten-/Wort-Reihen vergleichbar bleiben.
+    for f in sorted(glob.glob(os.path.join(igdir, "input", "intro-notes", "*.md"))):
+        w = len(read(f).split())
+        out.append({"path": rel(igdir, f), "words": w, "kind": "intro", "stub": w < STUB_MIN_WORDS})
     src = set(glob.glob(os.path.join(igdir, "implementation-guides", "**", "*.page.md"), recursive=True)) \
         | set(glob.glob(os.path.join(igdir, "implementation-guides", "**", "*.guide.md"), recursive=True))
     for f in sorted(src):
@@ -502,6 +747,24 @@ def compute_risk(igdir, fsh_text, found_terms, example_decls, narrative, gs, qua
 # ---------- analyze ------------------------------------------------------------
 def analyze(igdir, label, content):
     sushi = read(os.path.join(igdir, "sushi-config.yaml"))
+    # Verschachtelte Projektwurzel: ein Repo, dessen SUSHI-Projekt eine Ebene
+    # tiefer liegt (gemessen: Strukturdaten, Projekt unter Resources/), lieferte
+    # vorher eine komplett leere Identität OHNE Befund. Bis Tiefe 3 suchen und
+    # die Analyse dorthin umwurzeln - sichtbar protokolliert, nie stillschweigend.
+    project_root, project_root_candidates = None, []
+    if not sushi:
+        skip = {".git", "node_modules", "output", "temp", "input-cache",
+                "template", "fsh-generated", "migration-log"}
+        for depth in (1, 2, 3):
+            for c in sorted(glob.glob(os.path.join(igdir, *(["*"] * depth), "sushi-config.yaml"))):
+                if not set(os.path.relpath(c, igdir).split(os.sep)) & skip:
+                    project_root_candidates.append(os.path.relpath(os.path.dirname(c), igdir))
+            if project_root_candidates:
+                break
+        if project_root_candidates:
+            project_root = project_root_candidates[0]
+            igdir = os.path.join(igdir, project_root)
+            sushi = read(os.path.join(igdir, "sushi-config.yaml"))
     try:
         pkg = json.load(open(os.path.join(igdir, "package.json"), encoding="utf-8"))
     except Exception:
@@ -539,22 +802,50 @@ def analyze(igdir, label, content):
             art_source = "(keine FSH/generierten Ressourcen gefunden)"
             analysis_mode = "reduced"
     artifacts["total"] = sum(artifacts[k] for k in PUBLISHED_ARTIFACTS)
+    artifacts["other_total"] = sum((artifacts.get("other") or {}).values())
     artifacts["_source"] = art_source
+    # Gegenprobe generiert-vs-deklariert: die FSH-Typisierung kennt nur
+    # InstanceOf-NAMEN - eine Questionnaire-Instanz über ein Modulprofil zählt
+    # dort als Beispiel. Liegen generierte Ressourcen daneben, wird deren
+    # resourceType-Zählung mitgeführt und jede Abweichung benannt (gemessen:
+    # PROs, 25 SDC-Questionnaires als 'examples' typisiert). Neuheit wird
+    # Residuum, nie stille Absorption.
+    artifacts["generated_crosscheck"] = None
+    if fsh_present:
+        gxdir, gxkind = find_resource_dir(igdir)
+        if gxdir and "fsh-generated" in (gxkind or ""):
+            gc, _gl = counts_from_generated(gxdir, igdir)
+            mism = {k: {"declared": artifacts.get(k, 0), "generated": gc.get(k, 0)}
+                    for k in PUBLISHED_ARTIFACTS if artifacts.get(k, 0) != gc.get(k, 0)}
+            g_other = gc.get("other") or {}
+            d_other = artifacts.get("other") or {}
+            for k in sorted(set(g_other) | set(d_other)):
+                if g_other.get(k, 0) != d_other.get(k, 0):
+                    mism["other:" + k] = {"declared": d_other.get(k, 0), "generated": g_other.get(k, 0)}
+            artifacts["generated_crosscheck"] = {
+                "source": gxkind, "counts": {k: gc.get(k, 0) for k in PUBLISHED_ARTIFACTS},
+                "other": g_other, "mismatches": mism}
 
-    deps = sushi_dependencies(sushi)
+    deps_raw = sushi_dependencies(sushi)
+    deps_block_present = deps_raw is not None
+    deps = deps_raw or {}
     floating = [k for k, v in deps.items() if re.search(r'(x|current|dev|latest)', v)]
     dependencies = {"count": len(deps), "pinned": len(deps) - len(floating), "floating": len(floating),
-                    "items": deps, "floating_items": floating, "_source": "sushi-config.yaml: dependencies"}
+                    "items": deps, "floating_items": floating,
+                    "block_present": deps_block_present,
+                    "_source": "sushi-config.yaml: dependencies"}
 
     ndetail = narrative_detail(igdir)
     ntrans = [x for x in ndetail if x["kind"] == "translation"]
-    ndetail_core = [x for x in ndetail if x["kind"] != "translation"]
+    nintro = [x for x in ndetail if x["kind"] == "intro"]
+    ndetail_core = [x for x in ndetail if x["kind"] not in ("translation", "intro")]
     content_pages = [x for x in ndetail_core if not x["stub"]]
     has_target = any(x["kind"] == "target" and not x["stub"] for x in ndetail_core)
     fmt = "target" if has_target else "source" if ndetail_core else "leer"
     pc_base = {os.path.basename(x["path"])[:-3] for x in ndetail_core if x["kind"] == "target"}
     narrative = {"format": fmt, "pages": len(content_pages), "pages_all": len(ndetail_core),
                  "translation_pages": len(ntrans), "translation_words": sum(x["words"] for x in ntrans),
+                 "intro_note_pages": len(nintro), "intro_note_words": sum(x["words"] for x in nintro),
                  "words": sum(x["words"] for x in content_pages),
                  "words_all_incl_stubs": sum(x["words"] for x in ndetail),
                  "images": len(glob.glob(os.path.join(igdir, "input", "images", "*")))
@@ -604,6 +895,8 @@ def analyze(igdir, label, content):
     doc_health_pct = round(narrative["pages"] / narrative["pages_all"] * 100) if narrative["pages_all"] else None
     maturity = maturity_components(identity, doc_health_pct, example_cov["coverage_pct"], gov["governance_score"])
     maturity.update({"example_coverage": example_cov, "governance": gov, "doc_health_pct": doc_health_pct})
+    gen_for_preflight, _gsrc2 = find_resource_dir(igdir)
+    preflight = compute_preflight(igdir, identity, deps, gen_for_preflight, _gsrc2, deps_block_present)
     portfolio = compute_portfolio(fsh_text, decl_names, artifacts, directives, narrative["pages"], identity,
                                   dependencies["items"], gs)
     risk = compute_risk(igdir, fsh_text, portfolio["terminology_standard_systems"], None, narrative, gs, quality)
@@ -617,8 +910,11 @@ def analyze(igdir, label, content):
     return {"schemaVersion": SCHEMA_VERSION, "tool": "ig-stats.py", "mode": analysis_mode,
             "analyzed": {"path": os.path.abspath(igdir),
                          "label": label or identity["id"] or os.path.basename(os.path.abspath(igdir)),
+                         "project_root_nested": project_root,
+                         "project_root_candidates": project_root_candidates[1:] or None,
                          "git_commit": git_commit(igdir), "timestamp": ts},
             "identity": identity, "artifacts": artifacts, "artifacts_detail": artifact_list,
+            "preflight": preflight,
             "dependencies": dependencies, "narrative": narrative, "linguistics": linguistics,
             "duplication": duplication, "hygiene": hygiene, "i18n": i18n,
             "directives": directives, "quality": quality,
@@ -721,17 +1017,40 @@ def report(stats, content, out):
     if stats["mode"] == "reduced":
         meta += " · ⚠ reduzierte Analyse (nur generierte Ressourcen, kein FSH/Narrative)"
     B.append("_%s_" % meta)
+    if stats["analyzed"].get("project_root_nested"):
+        B.append("**⚠ Verschachtelte Projektwurzel:** das SUSHI-Projekt liegt unter `%s/` — die "
+                 "Analyse wurde dorthin umgewurzelt%s. Eine Migration muss dieselbe Wurzel wählen "
+                 "(Shape `A (nested)`), sonst läuft sie gegen einen leeren Baum." % (
+                     stats["analyzed"]["project_root_nested"],
+                     "; weitere Kandidaten: %s" % ", ".join("`%s`" % c for c in stats["analyzed"]["project_root_candidates"])
+                     if stats["analyzed"].get("project_root_candidates") else ""))
 
     # Kennzahlen-Überblick
     B.append("## Kennzahlen-Überblick")
-    B.append("### Artefakte (Σ %d publiziert)" % a.get("total", 0))
+    other = a.get("other") or {}
+    B.append("### Artefakte (Σ %d publiziert%s)" % (
+        a.get("total", 0),
+        " + %d weitere kanonische Typen" % a.get("other_total", 0) if a.get("other_total") else ""))
     if _intro(content, "artefakte"):
         B.append("_%s_" % _intro(content, "artefakte"))
     art = {k: a.get(k, 0) for k in PUBLISHED_ARTIFACTS if a.get(k, 0)}
+    art.update(other)
     pie = _pie("Artefakte", art, pal)
     if pie:
         B.append(pie)
     B.append(_table(["Typ", "Anzahl"], sorted(art.items(), key=lambda x: -x[1])))
+    if other:
+        B.append("_`%s`: kanonische Basistyp-Instanzen mit eigener Zeile — KEINE Beispiele; "
+                 "jede braucht in einer Migration eine eigene Seiten-/Menü-Entscheidung._"
+                 % "`, `".join(sorted(other)))
+    gx = a.get("generated_crosscheck")
+    if gx and gx.get("mismatches"):
+        B.append("**⚠ Gegenprobe generiert-vs-deklariert** (`%s`): %s — für Seiten-/Menü-"
+                 "Entscheidungen ist die generierte resourceType-Zählung maßgeblich; die "
+                 "FSH-Deklarationstypisierung kennt nur InstanceOf-Namen." % (
+                     gx["source"],
+                     "; ".join("`%s` deklariert %d / generiert %d" % (k, v["declared"], v["generated"])
+                               for k, v in sorted(gx["mismatches"].items()))))
     internal = {k: a.get(k, 0) for k in INTERNAL_ARTIFACTS if a.get(k, 0)}
     if internal:
         B.append("_Interne FSH-Konstrukte (nicht in Σ): %s._" % ", ".join("%d %s" % (v, k) for k, v in internal.items()))
@@ -874,6 +1193,50 @@ def report(stats, content, out):
     else:
         B.append("_keine_")
 
+    pf = stats.get("preflight") or {}
+    if pf:
+        B.append("## Pre-flight (Migration Gate 0)")
+        lic = pf.get("licence") or {}
+        B.append("- Lizenz-Evidenz: %s%s" % (
+            ("; ".join("%s → %s" % (e["source"], e["value"]) for e in lic.get("evidence", [])) or "**KEINE — in keiner Quelle deklariert**"),
+            " — **WIDERSPRÜCHLICH**" if lic.get("contradictory") else ""))
+        cs = pf.get("canonical_space") or {}
+        B.append("- Canonical-Raum: %s außerhalb + %s id/url-abweichend → special-url-Prognose: %s%s" % (
+            _cell(cs.get("out_of_space_count")), len(cs.get("id_url_mismatch") or []),
+            _cell(cs.get("special_url_prediction")),
+            "; example.org-Canonicals: %d" % len(cs.get("example_org") or []) if cs.get("example_org") else ""))
+        if cs.get("config_contradiction"):
+            B.append("- **⚠ Canonical-WIDERSPRUCH in den Configs:** sushi-config `%s` vs package.json `%s` — "
+                     "Identitätsentscheidung VOR der Migration (Upstream-Kandidat)" % (
+                         cs.get("canonical"), cs.get("package_json_canonical")))
+        dh = pf.get("dependency_health") or {}
+        B.append("- Dependency-Gesundheit: old-style=%s; THO direkt gepinnt=%s, Extensions-Pack=%s%s; externe Parents: %s%s" % (
+            ", ".join(dh.get("old_style_packages") or []) or "keine",
+            dh.get("tho_pinned_directly"), dh.get("extensions_pinned_directly"),
+            " — **Injektionsrisiko: der Publisher lädt zur Buildzeit das JEWEILS NEUESTE Release**" if dh.get("injection_risk") else "",
+            len(dh.get("external_parents") or []),
+            " — **Block vorhanden, aber KEIN Eintrag lesbar (Parser-Befund, kein Beleg für Abhängigkeitsfreiheit)**" if dh.get("dependency_block_unparsed") else
+            ("" if dh.get("dependency_block_present") is not False else " — kein dependencies-Block deklariert")))
+        pl = pf.get("package_layout")
+        if pl:
+            B.append("- Paket-Layout: %s — .index.json %s%s" % (
+                pl.get("resource_dir"),
+                "vorhanden" if pl.get("index_json_present") else "**FEHLT — jedes index-basierte Orakel läuft leer**",
+                "; verschachtelte Ressourcen-Verzeichnisse: %s" % ", ".join(pl["nested_resource_dirs"]) if pl.get("nested_resource_dirs") else ""))
+        ns = pf.get("narrative_sources") or {}
+        if ns.get("dual_source"):
+            B.append("- Narrative-Quellen: **DUAL** — implementation-guides/ (letzter Commit %s) UND %s (letzter Commit %s); "
+                     "vor der Migration entscheiden, welche Kopie maßgeblich ist (Frische, nicht Rang)" % (
+                         ns.get("implementation_guides_last_commit") or "?",
+                         "pagecontent+intro-notes" if ns.get("intro_notes") else "pagecontent",
+                         ns.get("pagecontent_last_commit") or "?"))
+        elif ns.get("intro_notes"):
+            B.append("- Narrative-Quellen: IG-Publisher-nativ (pagecontent%s)" %
+                     (" + intro-notes" if ns.get("intro_notes") else ""))
+        qa = pf.get("qa_baseline")
+        B.append("- QA-Baseline: %s" % ("%s → err=%s warn=%s (%s)" % (qa["source"], qa["errs"], qa["warnings"], qa.get("date")) if qa else
+            "**keine im Baum** — für Vorher/Nachher-Beweise die unmigrierte Quelle bauen oder deren gerendertes qa beziehen"))
+        B.append("")
     B.append("## Artefakte (Quelle: %s)" % a.get("_source"))
     if _intro(content, "artefakte_detail"):
         B.append("_%s_" % _intro(content, "artefakte_detail"))
