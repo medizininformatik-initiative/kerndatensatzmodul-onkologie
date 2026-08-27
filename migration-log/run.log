@@ -1,0 +1,74 @@
+2026-08-27T05:46:20Z  INFO   log  run-boundary  ===== run 1 starts  run=1 label=mii-ig-migration Onkologie: Quelle feat/2027-issues@ad04468e, Staging-Korpus implementation-guides/ImplementationGuide-2027.x-DE (User-Entscheid statt Rendered-Guide-Harvest), Template v0.11.1, Shape A hybrid cwd=/Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie log=migration-log/run.log
+    Every line below belongs to run 1; the lines above are earlier invocations.
+    Per-step raw logs (migration-log/<ACTION>.log) hold THIS run only -- `run`
+    truncates each one and rolls the previous attempt over to <ACTION>.prev.log.
+2026-08-27T05:46:21Z  WARN   5.6a  sibling-skill-check  sibling-skill-unavailable: fhir-ig-analysis is not installed  roots_examined=2 ref=v0.23.0 ref_source=skills-lock.json (entry mii-ig-migration)
+    Roots examined (existing directories only): /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills /Users/thome/.claude/skills
+    §5.6 and §7 require its same-module verification (identity, published artifact
+    set, canonical URLs all IDENTISCH). Install it yourself -- ONE command, and it
+    stays visible, pinned, reviewed and yours:
+    
+        npx skills add "https://github.com/forschungsgruppe-digital-health/agent-skills/tree/v0.23.0" --skill fhir-ig-analysis --agent claude-code codex --yes
+    
+    This script does NOT run that command. A tool grant is permission, not a
+    dependency; installing here would write to your project as a side effect of a
+    migration, and would resolve a version nobody reviewed (§5.6a.1). Until it is
+    installed, this is an OPEN Definition-of-Done item for the report's ① decision
+    queue -- not a step to drop quietly.
+    A <ref> placeholder above means no skills-lock.json recorded one: use the
+    catalog release tag you consume, and keep the tree-URL form -- it is the one
+    that pins.
+2026-08-27T05:46:27Z  WARN   5.6a  sibling-skill-check  sibling-skill-unavailable: fhir-ig-analysis is not installed  roots_examined=2 ref=v0.23.0 ref_source=skills-lock.json (entry mii-ig-migration)
+    Roots examined (existing directories only): /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills /Users/thome/.claude/skills
+    §5.6 and §7 require its same-module verification (identity, published artifact
+    set, canonical URLs all IDENTISCH). Install it yourself -- ONE command, and it
+    stays visible, pinned, reviewed and yours:
+    
+        npx skills add "https://github.com/forschungsgruppe-digital-health/agent-skills/tree/v0.23.0" --skill fhir-ig-analysis --agent claude-code codex --yes
+    
+    This script does NOT run that command. A tool grant is permission, not a
+    dependency; installing here would write to your project as a side effect of a
+    migration, and would resolve a version nobody reviewed (§5.6a.1). Until it is
+    installed, this is an OPEN Definition-of-Done item for the report's ① decision
+    queue -- not a step to drop quietly.
+    A <ref> placeholder above means no skills-lock.json recorded one: use the
+    catalog release tag you consume, and keep the tree-URL form -- it is the one
+    that pins.
+2026-08-27T05:47:53Z  INFO   5.6a  sibling-skill-check  sibling-skill-present  skill=fhir-ig-analysis path=/Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/fhir-ig-analysis roots_examined=1 ref=v0.23.0 ref_source=skills-lock.json (entry mii-ig-migration)
+    Identified by its frontmatter name, not by its directory name. §5.6's
+    same-module verification can run; its IDENTISCH lines are the evidence, not
+    this line.
+2026-08-27T05:48:07Z  INFO   1  preflight-analysis  start  cmd=`python3 .claude/skills/fhir-ig-analysis/scripts/ig-stats.py analyze . -o migration-log/preflight-analysis.json`  raw_log=migration-log/preflight-analysis.log
+2026-08-27T05:48:09Z  INFO   1  preflight-analysis  done  cmd=`python3 .claude/skills/fhir-ig-analysis/scripts/ig-stats.py analyze . -o migration-log/preflight-analysis.json`  exit=0 raw_log=migration-log/preflight-analysis.log raw_log_lines=1
+2026-08-27T05:49:15Z  INFO   1  qa-baseline  source-QA = CI-Lauf 'CI (FHIR Validation & Release)' auf 22a2b0dc (success, 2026-08-26): 13 Fehler, alle extern (12x THO artifact-version-policy Validator-bundled 5.2.0, 1x MedDRA-VS rc.3 TermServ) — kein Simplifier-Guide-QA vorhanden
+2026-08-27T05:49:15Z  INFO   1  source-decision  decision: Rendered-Guide-Harvest entfällt — User-Entscheid 2026-08-27: Narrativ-Quelle ist implementation-guides/ImplementationGuide-2027.x-DE (Staging-Korpus, Commit 528e9518, frischer als der gerenderte 2026er Guide); authoritative tree=2027.x-DE, 2025.x-EN=harvest seed (EN), 2025.x-DE+2026.x-DE=retained (eingefroren)
+2026-08-27T05:49:15Z  INFO   1  source-inventory  geschrieben: migration-log/source-inventory.json
+2026-08-27T05:50:05Z  INFO   2.1  read  identity-claim  field=id value=mii-ig-onko-de-v2026 tier=S source=sushi-config.yaml
+2026-08-27T05:50:05Z  INFO   2.1  read  identity-claim  field=canonical value=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko tier=S source=sushi-config.yaml
+2026-08-27T05:50:05Z  INFO   2.1  read  identity-claim  field=packageId value=de.medizininformatikinitiative.kerndatensatz.onkologie tier=S source=package.json
+2026-08-27T05:50:05Z  INFO   2.1  read  identity-claim  field=name value=MII_IG_Onko_DE tier=S source=sushi-config.yaml
+2026-08-27T05:50:05Z  INFO   2.1  read  identity-claim  field=title value=MII IG Kerndatensatz-Modul Onkologie tier=S source=sushi-config.yaml
+2026-08-27T05:50:06Z  INFO   2.1  read  identity-claim  field=version value=2026.0.3 tier=S source=sushi-config.yaml==package.json
+2026-08-27T05:50:06Z  INFO   2.1  read  identity-claim  field=status value=active tier=S source=sushi-config.yaml
+2026-08-27T05:50:06Z  INFO   2.1  read  identity-claim  field=releaseLabel value=release tier=S source=sushi-config.yaml
+2026-08-27T05:50:06Z  INFO   2.1  read  identity-claim  field=license value=CC0-1.0 tier=S source=package.json (sushi-config.yaml trägt kein license-Feld)
+2026-08-27T05:50:06Z  INFO   2.1  read  identity-claim  field=publisher value=Medizininformatik Initiative | https://www.medizininformatik-initiative.de/ tier=S source=sushi-config.yaml
+2026-08-27T05:50:06Z  INFO   2.1  read  identity-claim  field=fhirVersion value=4.0.1 tier=S source=sushi-config.yaml
+2026-08-27T05:50:06Z  INFO   2.1  language-note  top-level language: de-DE in sushi-config = altes Single-Language-Setup, nicht Identität (Skill §Language); Quelle ist deutschsprachig -> Richtungs-Inversion in Schritt 6
+2026-08-27T05:50:22Z  INFO   2.1  floating-pins  Auflösung lt. fhirpkg.lock.json (2026-03-28, v2026.0.3-Ära): basisprofil 1.5.x->1.5.4, meta 2026.0.x->2026.0.0, medikation->2026.0.1, molgen->2026.0.4 (Rest folgt)
+2026-08-27T05:53:37Z  INFO   5.2  vendor-template  kopiert: ig-template/ scripts/ docs/ tests/ skills/ demo/ .github/(13-3 workflows) input/{pagecontent,includes,intro-notes,translations,resources,images,ignoreWarnings.txt} ig.ini publication-request.json CONTRIBUTING SECURITY CODE_OF_CONDUCT — Quelle Template v0.11.1
+2026-08-27T05:53:37Z  INFO   5.2  vendor-skips  bootstrap-äquivalente Skips (REMOVE-Liste): release-please.yml, notify-zulip.yml, release-demo.yml, release-please-config.json, CHANGELOG.md; Modul-gewinnt-Skips: README.md, AGENTS.md, advisor.json, qc/custom.rules.yaml (Template-Fassung mit Platzhaltern -> ①-Queue Abgleich), sushi-config.yaml+skills-lock.json (Merge folgt)
+2026-08-27T05:53:37Z  INFO   5.2  hybrid-retire-later  Retire-erst-nach-Gate-D: _build.*, _gencontinuous.*, _genonce.*, _updatePublisher.*, project.yaml, package.bake.yaml, alte main.yml/render-plantuml.yml (Doppel-CI!), *.tgz-Altpakete, out/, input-cache/; unrecognized top-level: mvgenomseq_schemas(retain), Jira*(retain), BALLOT_*(retain)
+2026-08-27T05:54:13Z  INFO   5.2  fsh-scaffold  kopiert: crmi.fsh, extension-context.fsh, license.fsh, test-data-label.fsh, parameters/manifest.fsh, fsh/README.md; per-File geskippt (Modul gewinnt): cps-rules.fsh, license-terms.fsh, meta-profile.fsh, publisher.fsh, translation.fsh (Verlust Add*CodingTranslation -> ①), version.fsh; aliases.fsh: 44 Template-Definitionen appended; Beispiel-Artefakte NICHT kopiert (Guardrail 5)
+2026-08-27T05:59:15Z  INFO   5.2  placeholder-census  AKTIV alle ersetzt: sushi-config (Identität Quelle-gewinnt: id/canonical ext-modul-onko/CC0-1.0/releaseLabel release; deps Quelle+lockfile-Pins+crmi; special-url radelement+uicc; 3 TODO:REVIEW: EN-description, Autor-E-Mail, NCI-Topic C3262), ig.ini (P5: ImplementationGuide-mii-ig-onko-de-v2026.json), publication-request.json, go-publish.yml, Parameters-manifest, crmi.fsh (Jahr 2022; E-Mail=TODO:REVIEW-String, RuleSets ungenutzt), 3 platzhalter-benannte Dateien nach Modul-ID umbenannt. VERBLEIBEND nur Kommentare/Doku (crmi.fsh 6, go-publish 2, docs/, scripts/, skills/, Template-Starterseiten -> Schritt-5-Material). tests/profiles referenziert geloeschtes example-patient -> ①-Queue (Fixtures auf echtes Modulprofil umstellen)
+2026-08-27T05:59:17Z  INFO   5.2  sushi-skeleton  start  cmd=`npx --yes fsh-sushi@3.20.0 .`  raw_log=migration-log/sushi-skeleton.log
+2026-08-27T05:59:55Z  ERROR  5.2  sushi-skeleton  failed  cmd=`npx --yes fsh-sushi@3.20.0 .`  exit=8 raw_log=migration-log/sushi-skeleton.log raw_log_lines=132
+    The exit status is preserved and returned -- this step did NOT meet its
+    acceptance criterion. Read migration-log/sushi-skeleton.log, then either fix and re-run or take it
+    to the report's decision queue (spec §10.3).
+2026-08-27T06:01:36Z  INFO   5.2  sushi-config-decision  manualSliceOrdering true->false: Template-Default bricht 8 Instanzen (unbenannte uicc-Slice-Zuweisungen); Quellverhalten beibehalten (Guardrail: keine Semantikänderung), Adoption = ①-Queue
+2026-08-27T06:01:36Z  INFO   5.2  skills-lock-decision  skills-lock: vendored skills/ bleiben v0.15.1 (Template-Stand), mii-ig-migration v0.23.0 (nicht vendored, .claude/); sync-skills.sh verweigert (.claude/skills kein Symlink — kollidiert mit Projekt-Skills) -> ①-Queue: Symlink-Konvention vs. Projekt-Skills klären
+2026-08-27T06:01:36Z  INFO   5.2  sushi-skeleton  start  cmd=`npx --yes fsh-sushi@3.20.0 .`  raw_log=migration-log/sushi-skeleton.log prev_raw_log=migration-log/sushi-skeleton.prev.log
+2026-08-27T06:02:13Z  INFO   5.2  sushi-skeleton  done  cmd=`npx --yes fsh-sushi@3.20.0 .`  exit=0 raw_log=migration-log/sushi-skeleton.log raw_log_lines=99
+2026-08-27T06:02:31Z  INFO   5.2  p5-check  ig.ini ig= zeigt auf existierende SUSHI-Ausgabe ImplementationGuide-mii-ig-onko-de-v2026.json (id-abgeleitet, nicht Slug)
+2026-08-27T06:02:31Z  INFO   4  transfer-acceptance  in-place Shape A: comm-3 leer bis auf gelogte Scaffold-Additions (crmi/extension-context/license/test-data-label/manifest); keine Quelldatei fehlt, IDs/URLs unverändert

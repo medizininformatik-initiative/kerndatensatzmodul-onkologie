@@ -1,0 +1,3785 @@
+{
+ "generated_from": "repo@migration branch",
+ "authoritative_tree": "implementation-guides/ImplementationGuide-2027.x-DE",
+ "trees": {
+  "implementation-guides/ImplementationGuide-2025.x-DE": {
+   "pages": 105,
+   "role": "retained-frozen"
+  },
+  "implementation-guides/ImplementationGuide-2025.x-EN": {
+   "pages": 102,
+   "role": "harvest-seed-en"
+  },
+  "implementation-guides/ImplementationGuide-2026.x-DE": {
+   "pages": 149,
+   "role": "retained-frozen"
+  },
+  "implementation-guides/ImplementationGuide-2027.x-DE": {
+   "pages": 155,
+   "role": "authoritative"
+  }
+ },
+ "fsh_files": [
+  "input/fsh/aliases.fsh",
+  "input/fsh/capability-statement.fsh",
+  "input/fsh/example-patient-1.fsh",
+  "input/fsh/invariants/nebenwirkung-grad3-art.fsh",
+  "input/fsh/invariants/onko-icd-meldepflicht.fsh",
+  "input/fsh/invariants/tnm-datum.fsh",
+  "input/fsh/invariants/tnm-sct-uicc-konsistenz.fsh",
+  "input/fsh/invariants/tumorkonferenz-empfehlung-entscheidung-patient.fsh",
+  "input/fsh/mii-cm-onkologie-to-mvgenomseq.fsh",
+  "input/fsh/mii-lib-onko-synthesize-tnm.fsh",
+  "input/fsh/mii-lm-mvgenomseq-onkologie.fsh",
+  "input/fsh/mii-lm-onko.fsh",
+  "input/fsh/oBDS/05_Diagnose/mii-cm-onko-primaertumor-diagnosesicherung-sct.fsh",
+  "input/fsh/oBDS/05_Diagnose/mii-cs-onko-primaertumor-diagnosesicherung.fsh",
+  "input/fsh/oBDS/05_Diagnose/mii-ex-onko-histology-morphology-behavior-icdo3.fsh",
+  "input/fsh/oBDS/05_Diagnose/mii-ex-onko-transformation-von.fsh",
+  "input/fsh/oBDS/05_Diagnose/mii-exa-onko-cup-bundle.fsh",
+  "input/fsh/oBDS/05_Diagnose/mii-exa-onko-diagnose-therapieassoziiert.fsh",
+  "input/fsh/oBDS/05_Diagnose/mii-exa-onko-diagnose-transformation-aml.fsh",
+  "input/fsh/oBDS/05_Diagnose/mii-exa-onko-diagnose-transformation-meningeom.fsh",
+  "input/fsh/oBDS/05_Diagnose/mii-exa-onko-diagnose.fsh",
+  "input/fsh/oBDS/05_Diagnose/mii-exa-onko-fruehere-tumorerkrankung.fsh",
+  "input/fsh/oBDS/05_Diagnose/mii-exa-onko-liste-evidenz-erstdiagnose.fsh",
+  "input/fsh/oBDS/05_Diagnose/mii-pr-onko-diagnose-primaertumor.fsh",
+  "input/fsh/oBDS/05_Diagnose/mii-pr-onko-fruehere-tumorerkrankung.fsh",
+  "input/fsh/oBDS/05_Diagnose/mii-pr-onko-liste-evidenz-erstdiagnose.fsh",
+  "input/fsh/oBDS/05_Diagnose/mii-vs-onko-primaertumor-diagnosesicherung.fsh",
+  "input/fsh/oBDS/06_Histologie/mii-cm-onko-grading-sct.fsh",
+  "input/fsh/oBDS/06_Histologie/mii-cs-onko-grading.fsh",
+  "input/fsh/oBDS/06_Histologie/mii-exa-onko-anzahl-befallene-lymphknoten-0.fsh",
+  "input/fsh/oBDS/06_Histologie/mii-exa-onko-anzahl-befallene-sentinel-lymphknoten-1.fsh",
+  "input/fsh/oBDS/06_Histologie/mii-exa-onko-anzahl-untersuchte-lymphknoten-23.fsh",
+  "input/fsh/oBDS/06_Histologie/mii-exa-onko-anzahl-untersuchte-sentinel-lymphknoten-2 .fsh",
+  "input/fsh/oBDS/06_Histologie/mii-exa-onko-befund-1.fsh",
+  "input/fsh/oBDS/06_Histologie/mii-exa-onko-grading-1.fsh",
+  "input/fsh/oBDS/06_Histologie/mii-exa-onko-histologie-icdo3.fsh",
+  "input/fsh/oBDS/06_Histologie/mii-exa-onko-specimen-1.fsh",
+  "input/fsh/oBDS/06_Histologie/mii-exa-onko-tumorgroesse.fsh",
+  "input/fsh/oBDS/06_Histologie/mii-pr-onko-anzahl-befallene-lymphknoten.fsh",
+  "input/fsh/oBDS/06_Histologie/mii-pr-onko-anzahl-befallene-sentinel-lymphknoten.fsh",
+  "input/fsh/oBDS/06_Histologie/mii-pr-onko-anzahl-untersuchte-lymphknoten.fsh",
+  "input/fsh/oBDS/06_Histologie/mii-pr-onko-anzahl-untersuchte-sentinel-lymphknoten.fsh",
+  "input/fsh/oBDS/06_Histologie/mii-pr-onko-befund.fsh",
+  "input/fsh/oBDS/06_Histologie/mii-pr-onko-grading.fsh",
+  "input/fsh/oBDS/06_Histologie/mii-pr-onko-histologie-icdo3.fsh",
+  "input/fsh/oBDS/06_Histologie/mii-pr-onko-specimen.fsh",
+  "input/fsh/oBDS/06_Histologie/mii-pr-onko-tumor-groesse.fsh",
+  "input/fsh/oBDS/06_Histologie/mii-vs-onko-grading.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-cm-onko-tnm-uicc-sct-clinical.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-cm-onko-tnm-uicc-sct-pathological.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-cs-onko-tnm-formel.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-cs-onko-tnm-uicc.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-cs-onko-tnm-version.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-ex-onko-tnm-a-praefix.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-ex-onko-tnm-cp-praefix.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-ex-onko-tnm-itc-suffix.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-ex-onko-tnm-r-praefix.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-ex-onko-tnm-sn-suffix.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-ex-onko-tnm-y-praefix.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-kim-musterperson-synthesized.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-breast-cancer-journey.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-bundle-legacy.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-bundle-synthesized.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-bundle.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-klassifikation-TisN0M0.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-klassifikation-uT2a2pN0023i-sncM1.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-l-kategorie-L0.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-l-kategorie-L1.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-m-kategorie-M0.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-m-kategorie-cM1.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-n-kategorie-N0.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-n-kategorie-pN0i-sn.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-pn-kategroie-Pn1.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-s-kategorie-S1.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-t-kategorie-Tis.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-t-kategorie-uT2a2.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-v-kategorie-V1.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-a-symbol.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-klassifikation-synthetisiert.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-klassifikation.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-l-kategorie.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-m-kategorie.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-m-symbol.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-n-kategorie.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-pn-kategorie.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-r-symbol.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-s-kategorie.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-t-kategorie.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-v-kategorie.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-y-symbol.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-cp-praefix.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-itc-suffix.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-klassifikation-typ.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-l-kategorie-werte.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-m-kategorie-werte-sct.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-m-kategorie-werte.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-m-kategorie.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-m-symbol.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-n-kategorie-werte-sct.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-n-kategorie-werte.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-n-kategorie.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-pn-kategorie-werte.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-s-kategorie-werte.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-sn-suffix.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-t-kategorie-werte-sct.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-t-kategorie-werte.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-t-kategorie.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-uicc-stadium.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-v-kategorie-werte.fsh",
+  "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-version.fsh",
+  "input/fsh/oBDS/09_Weitere_Klassifikationen/mii-cs-onko-weitere-klassifikationen-obds.fsh",
+  "input/fsh/oBDS/09_Weitere_Klassifikationen/mii-exa-onko-weitere-klassifikationen-1.fsh",
+  "input/fsh/oBDS/09_Weitere_Klassifikationen/mii-exa-onko-weitere-klassifikationen-2.fsh",
+  "input/fsh/oBDS/09_Weitere_Klassifikationen/mii-exa-onko-weitere-klassifikationen-4.fsh",
+  "input/fsh/oBDS/09_Weitere_Klassifikationen/mii-pr-onko-weitere-klassifikationen.fsh",
+  "input/fsh/oBDS/09_Weitere_Klassifikationen/mii-vs-onko-weitere-klassifikationen-auspraegungen.fsh",
+  "input/fsh/oBDS/09_Weitere_Klassifikationen/mii-vs-onko-weitere-klassifikationen.fsh",
+  "input/fsh/oBDS/10_Residualstatus/mii-cm-onko-residualstatus-uicc-sct.fsh",
+  "input/fsh/oBDS/10_Residualstatus/mii-cs-onko-residualstatus.fsh",
+  "input/fsh/oBDS/10_Residualstatus/mii-exa-onko-residualstatus-1.fsh",
+  "input/fsh/oBDS/10_Residualstatus/mii-pr-onko-residualstatus.fsh",
+  "input/fsh/oBDS/10_Residualstatus/mii-vs-onko-gesamtbeurteilung-residualstatus.fsh",
+  "input/fsh/oBDS/11_Fernmetastasen/mii-cm-onko-fernmetastasen-sct.fsh",
+  "input/fsh/oBDS/11_Fernmetastasen/mii-cs-onko-fernmetastasen.fsh",
+  "input/fsh/oBDS/11_Fernmetastasen/mii-exa-onko-fernmetastasen-1.fsh",
+  "input/fsh/oBDS/11_Fernmetastasen/mii-pr-onko-fernmetastasen.fsh",
+  "input/fsh/oBDS/11_Fernmetastasen/mii-vs-onko-fernmetastasen.fsh",
+  "input/fsh/oBDS/11_Fernmetastasen/mii-vs-onko-koerperstruktur-sct.fsh",
+  "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-cm-onko-allgemeiner-leistungszustand-ecog-loinc.fsh",
+  "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc.fsh",
+  "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-cm-onko-allgemeiner-leistungszustand-sct.fsh",
+  "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-cm-onko-asa-obds-loinc.fsh",
+  "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-cs-onko-allgemeiner-leistungszustand-ecog.fsh",
+  "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-cs-onko-allgemeiner-leistungszustand-karnofsky.fsh",
+  "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-cs-onko-asa-obds.fsh",
+  "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-exa-onko-allgemeiner-leistungszustand-ecog.fsh",
+  "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-exa-onko-allgemeiner-leistungszustand-karnofsky.fsh",
+  "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-exa-onko-asa-klassifikation.fsh",
+  "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-obsdef-allgemeiner-leistungszustand.fsh",
+  "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-pr-onko-allgemeiner-leistungszustand-ecog-quantity.fsh",
+  "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-pr-onko-allgemeiner-leistungszustand-ecog.fsh",
+  "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-pr-onko-allgemeiner-leistungszustand-karnofsky-quantity.fsh",
+  "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-pr-onko-allgemeiner-leistungszustand-karnofsky.fsh",
+  "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-pr-onko-asa-klassifikation.fsh",
+  "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-vs-onko-allgemeiner-leistungszustand-ecog-loinc.fsh",
+  "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-vs-onko-allgemeiner-leistungszustand-ecog.fsh",
+  "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-vs-onko-allgemeiner-leistungszustand-karnofsky-loinc.fsh",
+  "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-vs-onko-allgemeiner-leistungszustand-karnofsky.fsh",
+  "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-vs-onko-asa-loinc.fsh",
+  "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-vs-onko-asa-obds.fsh",
+  "input/fsh/oBDS/13_OP/mii-cm-onko-operation-komplikation-sct.fsh",
+  "input/fsh/oBDS/13_OP/mii-cs-onko-operation-komplikation.fsh",
+  "input/fsh/oBDS/13_OP/mii-cs-onko-operation-urgency.fsh",
+  "input/fsh/oBDS/13_OP/mii-ex-onko-operation-intention.fsh",
+  "input/fsh/oBDS/13_OP/mii-ex-onko-operation-urgency.fsh",
+  "input/fsh/oBDS/13_OP/mii-exa-onko-operation.fsh",
+  "input/fsh/oBDS/13_OP/mii-pr-onko-operation.fsh",
+  "input/fsh/oBDS/13_OP/mii-vs-onko-beurteilung-lokaler-residualstatus.fsh",
+  "input/fsh/oBDS/13_OP/mii-vs-onko-operation-intention.fsh",
+  "input/fsh/oBDS/13_OP/mii-vs-onko-operation-komplikation.fsh",
+  "input/fsh/oBDS/13_OP/mii-vs-onko-operation-urgency.fsh",
+  "input/fsh/oBDS/14_Strahlentherapie/mii-cm-onko-strahlentheapie-strahleneinheit-sct.fsh",
+  "input/fsh/oBDS/14_Strahlentherapie/mii-cm-onko-strahlentherapie-applikationsart-sct.fsh",
+  "input/fsh/oBDS/14_Strahlentherapie/mii-cm-onko-strahlentherapie-boost-sct.fsh",
+  "input/fsh/oBDS/14_Strahlentherapie/mii-cm-onko-strahlentherapie-strahlenart-sct.fsh",
+  "input/fsh/oBDS/14_Strahlentherapie/mii-cm-onko-strahlentherapie-zielgebiet-sct.fsh",
+  "input/fsh/oBDS/14_Strahlentherapie/mii-cs-onko-strahlentherapie-applikationsart.fsh",
+  "input/fsh/oBDS/14_Strahlentherapie/mii-cs-onko-strahlentherapie-boost.fsh",
+  "input/fsh/oBDS/14_Strahlentherapie/mii-cs-onko-strahlentherapie-strahlenart.fsh",
+  "input/fsh/oBDS/14_Strahlentherapie/mii-cs-onko-strahlentherapie-zielgebiet-2014.fsh",
+  "input/fsh/oBDS/14_Strahlentherapie/mii-cs-onko-strahlentherapie-zielgebiet.fsh",
+  "input/fsh/oBDS/14_Strahlentherapie/mii-ex-onko-strahlentherapie-bestrahlung-alt.fsh",
+  "input/fsh/oBDS/14_Strahlentherapie/mii-ex-onko-strahlentherapie-bestrahlung.fsh",
+  "input/fsh/oBDS/14_Strahlentherapie/mii-ex-onko-strahlentherapie-intention.fsh",
+  "input/fsh/oBDS/14_Strahlentherapie/mii-ex-onko-strahlentherapie-stellungzurop.fsh",
+  "input/fsh/oBDS/14_Strahlentherapie/mii-exa-onko-strahlentherapie-alt.fsh",
+  "input/fsh/oBDS/14_Strahlentherapie/mii-exa-onko-strahlentherapie-nuklearmedizin.fsh",
+  "input/fsh/oBDS/14_Strahlentherapie/mii-exa-onko-strahlentherapie-strahlentherapie.fsh",
+  "input/fsh/oBDS/14_Strahlentherapie/mii-exa-onko-strahlentherapie-zielgebiet-migration-beispiel.fsh",
+  "input/fsh/oBDS/14_Strahlentherapie/mii-pr-onko-strahlentherapie-alt.fsh",
+  "input/fsh/oBDS/14_Strahlentherapie/mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin.fsh",
+  "input/fsh/oBDS/14_Strahlentherapie/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.fsh",
+  "input/fsh/oBDS/14_Strahlentherapie/mii-pr-onko-strahlentherapie.fsh",
+  "input/fsh/oBDS/14_Strahlentherapie/mii-vs-onko-strahlentherapie-applikationsart.fsh",
+  "input/fsh/oBDS/14_Strahlentherapie/mii-vs-onko-strahlentherapie-boost.fsh",
+  "input/fsh/oBDS/14_Strahlentherapie/mii-vs-onko-strahlentherapie-ende-grund.fsh",
+  "input/fsh/oBDS/14_Strahlentherapie/mii-vs-onko-strahlentherapie-intention.fsh",
+  "input/fsh/oBDS/14_Strahlentherapie/mii-vs-onko-strahlentherapie-stellungzurop.fsh",
+  "input/fsh/oBDS/14_Strahlentherapie/mii-vs-onko-strahlentherapie-strahlenart.fsh",
+  "input/fsh/oBDS/14_Strahlentherapie/mii-vs-onko-strahlentherapie-strahlungseinheit.fsh",
+  "input/fsh/oBDS/14_Strahlentherapie/mii-vs-onko-strahlentherapie-zielgebiet.fsh",
+  "input/fsh/oBDS/15_Nebenwirkung_ST_SYST/mii-cm-onko-nebenwirkung-sct.fsh",
+  "input/fsh/oBDS/15_Nebenwirkung_ST_SYST/mii-cs-onko-nebenwirkung-ctcae-grad.fsh",
+  "input/fsh/oBDS/15_Nebenwirkung_ST_SYST/mii-cs-onko-nebenwirkung-meddra-de.fsh",
+  "input/fsh/oBDS/15_Nebenwirkung_ST_SYST/mii-exa-onko-nebenwirkung-0.fsh",
+  "input/fsh/oBDS/15_Nebenwirkung_ST_SYST/mii-exa-onko-nebenwirkung-text.fsh",
+  "input/fsh/oBDS/15_Nebenwirkung_ST_SYST/mii-pr-onko-nebenwirkung-adverseEvent.fsh",
+  "input/fsh/oBDS/15_Nebenwirkung_ST_SYST/mii-vs-onko-nebenwirkung-art.fsh",
+  "input/fsh/oBDS/15_Nebenwirkung_ST_SYST/mii-vs-onko-nebenwirkung-ctcae-grad.fsh",
+  "input/fsh/oBDS/16_SystemischeTherapie/mii-cm-onko-atc-transitions-2021.fsh",
+  "input/fsh/oBDS/16_SystemischeTherapie/mii-cm-onko-atc-transitions-2022.fsh",
+  "input/fsh/oBDS/16_SystemischeTherapie/mii-cm-onko-atc-transitions-2023.fsh",
+  "input/fsh/oBDS/16_SystemischeTherapie/mii-cm-onko-atc-transitions-2024.fsh",
+  "input/fsh/oBDS/16_SystemischeTherapie/mii-cm-onko-atc-transitions-2025.fsh",
+  "input/fsh/oBDS/16_SystemischeTherapie/mii-cm-onko-atc-transitions-2026.fsh",
+  "input/fsh/oBDS/16_SystemischeTherapie/mii-cs-onko-systemische-therapie-protokolle.fsh",
+  "input/fsh/oBDS/16_SystemischeTherapie/mii-ex-onko-systemische-therapie-intention.fsh",
+  "input/fsh/oBDS/16_SystemischeTherapie/mii-ex-onko-systemische-therapie-stellungzurop.fsh",
+  "input/fsh/oBDS/16_SystemischeTherapie/mii-exa-onko-medikation-iberdomide-unii.fsh",
+  "input/fsh/oBDS/16_SystemischeTherapie/mii-exa-onko-medikation-imatinib-atc-version-transition.fsh",
+  "input/fsh/oBDS/16_SystemischeTherapie/mii-exa-onko-systemische-therapie.fsh",
+  "input/fsh/oBDS/16_SystemischeTherapie/mii-pr-onko-systemische-therapie-medikation.fsh",
+  "input/fsh/oBDS/16_SystemischeTherapie/mii-pr-onko-systemische-therapie.fsh",
+  "input/fsh/oBDS/16_SystemischeTherapie/mii-vs-onko-systemische-therapie-art.fsh",
+  "input/fsh/oBDS/16_SystemischeTherapie/mii-vs-onko-systemische-therapie-ende-grund.fsh",
+  "input/fsh/oBDS/16_SystemischeTherapie/mii-vs-onko-systemische-therapie-intention.fsh",
+  "input/fsh/oBDS/16_SystemischeTherapie/mii-vs-onko-systemische-therapie-protokolle.fsh",
+  "input/fsh/oBDS/16_SystemischeTherapie/mii-vs-onko-systemische-therapie-stellungzurop.fsh",
+  "input/fsh/oBDS/16_SystemischeTherapie/mii-vs-onko-systemische-therapie-substanzen-2018.fsh",
+  "input/fsh/oBDS/16_SystemischeTherapie/mii-vs-onko-systemische-therapie-substanzen-2019.fsh",
+  "input/fsh/oBDS/16_SystemischeTherapie/mii-vs-onko-systemische-therapie-substanzen-2020.fsh",
+  "input/fsh/oBDS/16_SystemischeTherapie/mii-vs-onko-systemische-therapie-substanzen-2021.fsh",
+  "input/fsh/oBDS/16_SystemischeTherapie/mii-vs-onko-systemische-therapie-substanzen-2022.fsh",
+  "input/fsh/oBDS/16_SystemischeTherapie/mii-vs-onko-systemische-therapie-substanzen-2023.fsh",
+  "input/fsh/oBDS/16_SystemischeTherapie/mii-vs-onko-systemische-therapie-substanzen-2024.fsh",
+  "input/fsh/oBDS/16_SystemischeTherapie/mii-vs-onko-systemische-therapie-substanzen-2025.fsh",
+  "input/fsh/oBDS/16_SystemischeTherapie/mii-vs-onko-systemische-therapie-substanzen-2026.fsh",
+  "input/fsh/oBDS/16_SystemischeTherapie/mii-vs-onko-systemische-therapie-substanzen-unii.fsh",
+  "input/fsh/oBDS/16_SystemischeTherapie/mii-vs-onko-systemische-therapie-substanzen.fsh",
+  "input/fsh/oBDS/17_Verlauf/mii-cm-onko-verlauf-fernmetastasen-sct.fsh",
+  "input/fsh/oBDS/17_Verlauf/mii-cm-onko-verlauf-gesamtbeurteilung-sct.fsh",
+  "input/fsh/oBDS/17_Verlauf/mii-cm-onko-verlauf-lymphknoten-sct.fsh",
+  "input/fsh/oBDS/17_Verlauf/mii-cm-onko-verlauf-primaertumor-sct.fsh",
+  "input/fsh/oBDS/17_Verlauf/mii-cs-onko-verlauf-fernmetastasen.fsh",
+  "input/fsh/oBDS/17_Verlauf/mii-cs-onko-verlauf-gesamtbeurteilung.fsh",
+  "input/fsh/oBDS/17_Verlauf/mii-cs-onko-verlauf-lymphknoten.fsh",
+  "input/fsh/oBDS/17_Verlauf/mii-cs-onko-verlauf-primaertumor.fsh",
+  "input/fsh/oBDS/17_Verlauf/mii-exa-onko-verlauf-tumor.fsh",
+  "input/fsh/oBDS/17_Verlauf/mii-pr-onko-verlauf.fsh",
+  "input/fsh/oBDS/17_Verlauf/mii-vs-onko-verlauf-fernmetastasen.fsh",
+  "input/fsh/oBDS/17_Verlauf/mii-vs-onko-verlauf-gesamtbeurteilung.fsh",
+  "input/fsh/oBDS/17_Verlauf/mii-vs-onko-verlauf-lymphknoten.fsh",
+  "input/fsh/oBDS/17_Verlauf/mii-vs-onko-verlauf-primaertumor.fsh",
+  "input/fsh/oBDS/18_19_Tumorkonferenz/mii-cm-onko-therapieabweichung-sct.fsh",
+  "input/fsh/oBDS/18_19_Tumorkonferenz/mii-cm-onko-therapieplanung-sct.fsh",
+  "input/fsh/oBDS/18_19_Tumorkonferenz/mii-cs-onko-therapieabweichung.fsh",
+  "input/fsh/oBDS/18_19_Tumorkonferenz/mii-cs-onko-therapieplanung-typ.fsh",
+  "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-bundle.fsh",
+  "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-modification.fsh",
+  "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-recommendation.fsh",
+  "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-tumorkonferenz-01.fsh",
+  "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-tumorkonferenz-extended-examples.fsh",
+  "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-tumorkonferenz-molekular.fsh",
+  "input/fsh/oBDS/18_19_Tumorkonferenz/mii-pr-onko-therapiempfehlung-kombinationstherapie.fsh",
+  "input/fsh/oBDS/18_19_Tumorkonferenz/mii-pr-onko-therapiempfehlung-medikation.fsh",
+  "input/fsh/oBDS/18_19_Tumorkonferenz/mii-pr-onko-therapiempfehlung-operation.fsh",
+  "input/fsh/oBDS/18_19_Tumorkonferenz/mii-pr-onko-tumorkonferenz.fsh",
+  "input/fsh/oBDS/18_19_Tumorkonferenz/mii-vs-onko-therapieabweichung.fsh",
+  "input/fsh/oBDS/18_19_Tumorkonferenz/mii-vs-onko-therapieempfehlung-typ.fsh",
+  "input/fsh/oBDS/18_19_Tumorkonferenz/mii-vs-onko-therapieplanung-typ.fsh",
+  "input/fsh/oBDS/20_Tod/mii-cm-onko-tod-sct.fsh",
+  "input/fsh/oBDS/20_Tod/mii-cs-onko-tod.fsh",
+  "input/fsh/oBDS/20_Tod/mii-exa-onko-tod-j.fsh",
+  "input/fsh/oBDS/20_Tod/mii-exa-onko-tod-n.fsh",
+  "input/fsh/oBDS/20_Tod/mii-exa-onko-tod-u.fsh",
+  "input/fsh/oBDS/20_Tod/mii-pr-onko-tod.fsh",
+  "input/fsh/oBDS/20_Tod/mii-vs-onko-tod.fsh",
+  "input/fsh/oBDS/23_GenetischeVariante/mii-cm-onko-genetische-variante-auspraegung-sct.fsh",
+  "input/fsh/oBDS/23_GenetischeVariante/mii-cs-onko-genetische-variante-auspraegung.fsh",
+  "input/fsh/oBDS/23_GenetischeVariante/mii-exa-onko-genetische-variante-braf.fsh",
+  "input/fsh/oBDS/23_GenetischeVariante/mii-pr-onko-genetische-variante.fsh",
+  "input/fsh/oBDS/23_GenetischeVariante/mii-vs-onko-tod-genetische-variante-auspraegung.fsh",
+  "input/fsh/oBDS/24_Studienteilnahme/mii-cm-onko-studienteilnahme.fsh",
+  "input/fsh/oBDS/24_Studienteilnahme/mii-cs-onko-studienteilnahme.fsh",
+  "input/fsh/oBDS/24_Studienteilnahme/mii-exa-onko-studienteilnahme-prob.fsh",
+  "input/fsh/oBDS/24_Studienteilnahme/mii-exa-onko-studienteilnahme.fsh",
+  "input/fsh/oBDS/24_Studienteilnahme/mii-pr-onko-studienteilnahme.fsh",
+  "input/fsh/oBDS/24_Studienteilnahme/mii-vs-onko-studienteilnahme.fsh",
+  "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-cm-onko-krk-stoma-obds-sct.fsh",
+  "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-cs-onko-krk-anastomoseninsuffizienz.fsh",
+  "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-cs-onko-krk-mrt-mesorektale-faszie-status.fsh",
+  "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-cs-onko-krk-operationstyp.fsh",
+  "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-cs-onko-krk-stoma-anzeichnung.fsh",
+  "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-cs-onko-krk-tme-qualitaet.fsh",
+  "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-exa-onko-krk-abstand-circumferelle-resektionsebene.fsh",
+  "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-exa-onko-krk-abstand-mesorektale-fascie.fsh",
+  "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-exa-onko-krk-abstand-resektionsrand-aboral.fsh",
+  "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-exa-onko-krk-abstand-tumor-anokutanlinie.fsh",
+  "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-exa-onko-krk-anastomoseninsuffizienz.fsh",
+  "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-exa-onko-krk-bundle.fsh",
+  "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-exa-onko-krk-operation.fsh",
+  "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-exa-onko-krk-specimen.fsh",
+  "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-exa-onko-krk-stoma-markierung.fsh",
+  "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-pr-onko-krk-abstand-circumferelle-resektionsebene.fsh",
+  "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-pr-onko-krk-abstand-mesorektale-fascie.fsh",
+  "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-pr-onko-krk-abstand-resektionsrand-aboral.fsh",
+  "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-pr-onko-krk-abstand-tumor-anokutanlinie.fsh",
+  "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-pr-onko-krk-anastomoseninsuffizienz.fsh",
+  "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-pr-onko-krk-operation.fsh",
+  "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-pr-onko-krk-specimen.fsh",
+  "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-pr-onko-krk-stoma-markierung.fsh",
+  "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-vs-onko-krk-abstand-circumferelle-resektionsebene.fsh",
+  "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-vs-onko-krk-abstand-resektionslinie-aboral.fsh",
+  "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-vs-onko-krk-anastomoseninsuffizienz.fsh",
+  "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-vs-onko-krk-mrt-mesorektale-faszie-status.fsh",
+  "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-vs-onko-krk-stoma-anzeichnung.fsh",
+  "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-vs-onko-krk-stoma-status-reason.fsh",
+  "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-vs-onko-krk-tme-qualitaet.fsh",
+  "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-cs-onko-melanom-ulzeration.fsh",
+  "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-exa-onko-melanom-breslow-tiefe.fsh",
+  "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-exa-onko-melanom-bundle.fsh",
+  "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-exa-onko-melanom-exzision.fsh",
+  "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-exa-onko-melanom-ldh.fsh",
+  "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-exa-onko-melanom-sicherheitsabstand.fsh",
+  "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-exa-onko-melanom-ulzeration.fsh",
+  "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-pr-onko-melanom-breslow-tiefe.fsh",
+  "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-pr-onko-melanom-exzision.fsh",
+  "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-pr-onko-melanom-ldh.fsh",
+  "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-pr-onko-melanom-sicherheitsabstand.fsh",
+  "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-pr-onko-melanom-ulzeration.fsh",
+  "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-vs-onko-melanom-exzision-snomedct.fsh",
+  "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-vs-onko-melanom-ldh.fsh",
+  "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-vs-onko-melanom-ulzeration.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Mamma/mii-cs-onko-mamma-her2neu-status-leitlinie.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Mamma/mii-cs-onko-mamma-her2neu-status-obds.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Mamma/mii-cs-onko-mamma-rezeptorstatus-leitlinie.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Mamma/mii-exa-mamma-bundle.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Mamma/mii-exa-onko-mamma-her2neu-status.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Mamma/mii-pr-onko-mamma-menopause-status.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Mamma/mii-pr-onko-mamma-operation.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Mamma/mii-pr-onko-mamma-praeoperative-markierung-modalitaet.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Mamma/mii-pr-onko-mamma-rezeptorstatus-estrogen.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Mamma/mii-pr-onko-mamma-rezeptorstatus-progesteron.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Mamma/mii-pr-onko-mamma-sozialdienst.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Mamma/mii-pr-onko-mamma-status-her2neu.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Mamma/mii-vs-onko-mamma-faerbeintensitaet.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Mamma/mii-vs-onko-mamma-her2neu-ihc-score.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Mamma/mii-vs-onko-mamma-her2neu-status-leitlinie.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Mamma/mii-vs-onko-mamma-her2neu-status-obds.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Mamma/mii-vs-onko-mamma-intraoperatives-imaging-praeparat.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Mamma/mii-vs-onko-mamma-ish-ergebnis.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Mamma/mii-vs-onko-mamma-menopause-status.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Mamma/mii-vs-onko-mamma-operation-ops.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Mamma/mii-vs-onko-mamma-operation-sct.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Mamma/mii-vs-onko-mamma-praeoperative-markierung-modalitaet.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Mamma/mii-vs-onko-mamma-rezeptorstatus-leitlinie.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Mamma/mii-vs-onko-mamma-rezeptorstatus-obds.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Prostata/mii-cs-onko-prostata-postsurgical-complications.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Prostata/mii-exa-onko-prostata-gleason.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Prostata/mii-exa-onko-prostata-operation.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Prostata/mii-exa-onko-prostata-psa.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Prostata/mii-exa-onko-prostata-stanzen.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Prostata/mii-exa-onko-prostata-surgery.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Prostata/mii-exa-onko-prostata-surgical-complications.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Prostata/mii-exa-prostata-bundle.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Prostata/mii-pr-onko-prostata-anzahl-positiver-stanzen.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Prostata/mii-pr-onko-prostata-anzahl-stanzen.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Prostata/mii-pr-onko-prostata-ca-befall-stanze.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Prostata/mii-pr-onko-prostata-clavien-dindo.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Prostata/mii-pr-onko-prostata-gleason-patterns.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Prostata/mii-pr-onko-prostata-gleason-score-and-grade.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Prostata/mii-pr-onko-prostata-gleason-score-gesamt.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Prostata/mii-pr-onko-prostata-operation.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Prostata/mii-pr-onko-prostata-psa.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Prostata/mii-vs-onko-prostata-clavien-dindo.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Prostata/mii-vs-onko-prostata-gleason-patterns.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Prostata/mii-vs-onko-prostata-gleason-score-and-grade.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Prostata/mii-vs-onko-prostata-gleason-score-gesamt.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Prostata/mii-vs-onko-prostata-operation-snomedct.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Prostata/mii-vs-onko-prostata-postsurgical-complications.fsh",
+  "input/fsh/oBDS/Organspezifische Module/Prostata/mii-vs-onko-prostata-psa-codes.fsh",
+  "input/fsh/oBDS/Organspezifische Module/mii-lm-onko-organspezifische-zusatzmodule.fsh",
+  "input/fsh/overlapping terminologies/mii-cm-onko-icdo3-transitions-2019.fsh",
+  "input/fsh/overlapping terminologies/mii-cm-onko-intention-sct.fsh",
+  "input/fsh/overlapping terminologies/mii-cm-onko-seitenlokalisation-sct.fsh",
+  "input/fsh/overlapping terminologies/mii-cm-onko-therapie-ende-sct.fsh",
+  "input/fsh/overlapping terminologies/mii-cm-onko-therapie-stellung-sct.fsh",
+  "input/fsh/overlapping terminologies/mii-cm-onko-therapie-typ-sct.fsh",
+  "input/fsh/overlapping terminologies/mii-cs-onko-intention.fsh",
+  "input/fsh/overlapping terminologies/mii-cs-onko-seitenlokalisation.fsh",
+  "input/fsh/overlapping terminologies/mii-cs-onko-therapie-ende-grund.fsh",
+  "input/fsh/overlapping terminologies/mii-cs-onko-therapie-stellungzurop.fsh",
+  "input/fsh/overlapping terminologies/mii-cs-onko-therapie-typ.fsh",
+  "input/fsh/overlapping terminologies/mii-vs-onko-icd10-meldepflichtige-tumoren.fsh",
+  "input/fsh/overlapping terminologies/mii-vs-onko-icdo3-morphologie-2014.fsh",
+  "input/fsh/overlapping terminologies/mii-vs-onko-icdo3-morphologie-2019.fsh",
+  "input/fsh/overlapping terminologies/mii-vs-onko-icdo3-morphologie.fsh",
+  "input/fsh/overlapping terminologies/mii-vs-onko-icdo3-topographie-2014.fsh",
+  "input/fsh/overlapping terminologies/mii-vs-onko-icdo3-topographie-2019.fsh",
+  "input/fsh/overlapping terminologies/mii-vs-onko-icdo3-topographie.fsh",
+  "input/fsh/overlapping terminologies/mii-vs-onko-kdl-dokumentklassen.fsh",
+  "input/fsh/overlapping terminologies/mii-vs-onko-ops-nuklearmedizin.fsh",
+  "input/fsh/overlapping terminologies/mii-vs-onko-ops-strahlentherapie.fsh",
+  "input/fsh/overlapping terminologies/mii-vs-onko-seitenlokalisation.fsh",
+  "input/fsh/overlapping terminologies/radelement.fsh",
+  "input/fsh/rulesets/license-terms.fsh",
+  "input/fsh/rulesets/publisher.fsh",
+  "input/fsh/rulesets/searchparam-profile.fsh",
+  "input/fsh/rulesets/snomed-copyright.fsh",
+  "input/fsh/rulesets/translation.fsh",
+  "input/fsh/rulesets/version.fsh",
+  "input/fsh/searchParameter.fsh"
+ ],
+ "fsh_definitions": {
+  "Alias": [
+   {
+    "name": "$mii-procedure",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$EventStatus",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$condition-ver-status",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$verification-status-vs",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$observation-category",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$condition-clinical",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$request-status",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$request-intent",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$care-plan-activity-status",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$observation-interpretation",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$CTCAE",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$OPS",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$SCT",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$ICD10GM",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$ICDO3",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$LNC",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$UICC",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$UCUM",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$ATC_DE",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$UNII",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$NCIT",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$RADELEMENT",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$MEDDRA",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-cs-onko-intention",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-cs-onko-therapie-stellungzurop",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-cs-onko-therapie-ende-grund",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-cs-onko-therapie-typ",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-cs-onko-residualstatus",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-cs-onko-primaertumor-diagnosesicherung",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-cs-onko-seitenlokalisation",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-cs-onko-grading",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-cs-onko-tnm-version",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-cs-onko-operation-komplikation",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-cs-onko-operation-urgency",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-cs-onko-strahlentherapie-strahlenart",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-cs-onko-strahlentherapie-applikationsart",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-cs-onko-strahlentherapie-zielgebiet",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-cs-onko-strahlentherapie-zielgebiet-2014",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-cs-onko-strahlentherapie-boost",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-ex-onko-strahlentherapie-intention",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-ex-onko-strahlentherapie-bestrahlung",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-ex-onko-strahlentherapie-stellungzurop",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-cs-onko-systemische-therapie-protokolle",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-ex-onko-systemische-therapie-intention",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-ex-onko-systemische-therapie-stellungzurop",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-cs-onko-fernmetastasen",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-cs-onko-weitere-klassifikationen-obds",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-cs-onko-allgemeiner-leistungszustand-ecog",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-cs-onko-allgemeiner-leistungszustand-karnofsky",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-cs-onko-nebenwirkung-ctcae-grad",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-cs-onko-tod",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-cs-onko-therapieplanung-typ",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-cs-onko-therapieabweichung",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-cs-onko-verlauf-gesamtbeurteilung",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-cs-onko-verlauf-primaertumor",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-cs-onko-verlauf-lymphknoten",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-cs-onko-verlauf-fernmetastasen",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-cs-onko-genetische-variante-auspraegung",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-cs-onko-studienteilnahme",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-vs-onko-prostata-gleason-primary-secondary-tertiary",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-vs-onko-prostata-gleason-patterns",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-cs-onko-prostata-postsurgical-complications",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-vs-onko-prostata-postsurgical-complications",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$mii-vs-onko-prostata-clavien-dindo",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$spdx-license",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$KDL",
+    "path": "input/fsh/aliases.fsh"
+   },
+   {
+    "name": "$exp",
+    "path": "input/fsh/capability-statement.fsh"
+   }
+  ],
+  "RuleSet": [
+   {
+    "name": "SupportResource",
+    "path": "input/fsh/capability-statement.fsh"
+   },
+   {
+    "name": "Profile",
+    "path": "input/fsh/capability-statement.fsh"
+   },
+   {
+    "name": "SupportProfile",
+    "path": "input/fsh/capability-statement.fsh"
+   },
+   {
+    "name": "SupportInteraction",
+    "path": "input/fsh/capability-statement.fsh"
+   },
+   {
+    "name": "SupportSearchParam",
+    "path": "input/fsh/capability-statement.fsh"
+   },
+   {
+    "name": "LicenseCodeableCCBY40",
+    "path": "input/fsh/rulesets/license-terms.fsh"
+   },
+   {
+    "name": "LicenseCodeableCCBY40Instance",
+    "path": "input/fsh/rulesets/license-terms.fsh"
+   },
+   {
+    "name": "Publisher",
+    "path": "input/fsh/rulesets/publisher.fsh"
+   },
+   {
+    "name": "SP_Publisher",
+    "path": "input/fsh/rulesets/publisher.fsh"
+   },
+   {
+    "name": "SP_Profile",
+    "path": "input/fsh/rulesets/searchparam-profile.fsh"
+   },
+   {
+    "name": "SNOMEDCopyrightForVS",
+    "path": "input/fsh/rulesets/snomed-copyright.fsh"
+   },
+   {
+    "name": "SNOMEDCopyrightForInstance",
+    "path": "input/fsh/rulesets/snomed-copyright.fsh"
+   },
+   {
+    "name": "Translation(path,",
+    "path": "input/fsh/rulesets/translation.fsh"
+   },
+   {
+    "name": "Label(path,",
+    "path": "input/fsh/rulesets/translation.fsh"
+   },
+   {
+    "name": "Version",
+    "path": "input/fsh/rulesets/version.fsh"
+   },
+   {
+    "name": "PR_CS_VS_Version",
+    "path": "input/fsh/rulesets/version.fsh"
+   },
+   {
+    "name": "MetaProfile(canonical)",
+    "path": "input/fsh/rulesets/version.fsh"
+   }
+  ],
+  "Instance": [
+   {
+    "name": "mii-cps-onko-capabilitystatement",
+    "path": "input/fsh/capability-statement.fsh"
+   },
+   {
+    "name": "PatientKimMusterperson",
+    "path": "input/fsh/example-patient-1.fsh"
+   },
+   {
+    "name": "PatientKimMusterperson-Procedure-1",
+    "path": "input/fsh/example-patient-1.fsh"
+   },
+   {
+    "name": "PatientKimMusterperson-PrimaryDiagnosis-2",
+    "path": "input/fsh/example-patient-1.fsh"
+   },
+   {
+    "name": "PatientKimMusterperson-Diagnosis-1",
+    "path": "input/fsh/example-patient-1.fsh"
+   },
+   {
+    "name": "PatientKimMusterperson-Procedure-2",
+    "path": "input/fsh/example-patient-1.fsh"
+   },
+   {
+    "name": "PatientKimMusterperson-Procedure-3",
+    "path": "input/fsh/example-patient-1.fsh"
+   },
+   {
+    "name": "PatientKimMusterperson-Tumorkonferenz-1",
+    "path": "input/fsh/example-patient-1.fsh"
+   },
+   {
+    "name": "PatientKimMusterperson-SystemicTherapy-1",
+    "path": "input/fsh/example-patient-1.fsh"
+   },
+   {
+    "name": "PatientKimMusterperson-SystemicTherapyMedication-1a",
+    "path": "input/fsh/example-patient-1.fsh"
+   },
+   {
+    "name": "PatientKimMusterperson-SystemicTherapyMedication-1b",
+    "path": "input/fsh/example-patient-1.fsh"
+   },
+   {
+    "name": "PatientKimMusterperson-Tumorkonferenz-2",
+    "path": "input/fsh/example-patient-1.fsh"
+   },
+   {
+    "name": "PatientKimMusterperson-Procedure-4",
+    "path": "input/fsh/example-patient-1.fsh"
+   },
+   {
+    "name": "PatientKimMusterperson-Procedure-4a",
+    "path": "input/fsh/example-patient-1.fsh"
+   },
+   {
+    "name": "PatientKimMusterperson-Procedure-4b",
+    "path": "input/fsh/example-patient-1.fsh"
+   },
+   {
+    "name": "PatientKimMusterperson-Procedure-4c",
+    "path": "input/fsh/example-patient-1.fsh"
+   },
+   {
+    "name": "PatientKimMusterperson-Procedure-4d",
+    "path": "input/fsh/example-patient-1.fsh"
+   },
+   {
+    "name": "PatientKimMusterperson-PathoReport-1",
+    "path": "input/fsh/example-patient-1.fsh"
+   },
+   {
+    "name": "PatientKimMusterperson-Specimen-1",
+    "path": "input/fsh/example-patient-1.fsh"
+   },
+   {
+    "name": "TNM-Klassifikation-Observation-2",
+    "path": "input/fsh/example-patient-1.fsh"
+   },
+   {
+    "name": "TNM-T-Observation-2",
+    "path": "input/fsh/example-patient-1.fsh"
+   },
+   {
+    "name": "TNM-M-Observation-2",
+    "path": "input/fsh/example-patient-1.fsh"
+   },
+   {
+    "name": "TNM-y-Symbol-Observation-2",
+    "path": "input/fsh/example-patient-1.fsh"
+   },
+   {
+    "name": "TNM-Pn-Observation-2",
+    "path": "input/fsh/example-patient-1.fsh"
+   },
+   {
+    "name": "TNM-L-Observation-2",
+    "path": "input/fsh/example-patient-1.fsh"
+   },
+   {
+    "name": "TNM-V-Observation-2",
+    "path": "input/fsh/example-patient-1.fsh"
+   },
+   {
+    "name": "PatientKimMusterperson-Tumorkonferenz-3",
+    "path": "input/fsh/example-patient-1.fsh"
+   },
+   {
+    "name": "PatientKimMusterperson-SystemicTherapy-2",
+    "path": "input/fsh/example-patient-1.fsh"
+   },
+   {
+    "name": "PatientKimMusterperson-SystemicTherapyMedication-2a",
+    "path": "input/fsh/example-patient-1.fsh"
+   },
+   {
+    "name": "PatientKimMusterperson-SystemicTherapyMedication-2b",
+    "path": "input/fsh/example-patient-1.fsh"
+   },
+   {
+    "name": "PatientKimMusterperson-Verlauf-2022-01-22",
+    "path": "input/fsh/example-patient-1.fsh"
+   },
+   {
+    "name": "PatientKimMusterperson-Tumorkonferenz-4",
+    "path": "input/fsh/example-patient-1.fsh"
+   },
+   {
+    "name": "PatientKimMusterperson-SystemicTherapy-3",
+    "path": "input/fsh/example-patient-1.fsh"
+   },
+   {
+    "name": "PatientKimMusterperson-SystemicTherapyMedication-3",
+    "path": "input/fsh/example-patient-1.fsh"
+   },
+   {
+    "name": "mii-cm-onkologie-to-mvgenomseq",
+    "path": "input/fsh/mii-cm-onkologie-to-mvgenomseq.fsh"
+   },
+   {
+    "name": "mii-lib-onko-synthesize-tnm",
+    "path": "input/fsh/mii-lib-onko-synthesize-tnm.fsh"
+   },
+   {
+    "name": "mii-cm-mii-to-mvgenomseq-condition-diagnose-primaertumor",
+    "path": "input/fsh/mii-lm-mvgenomseq-onkologie.fsh"
+   },
+   {
+    "name": "mii-cm-onko-primaertumor-diagnosesicherung-sct",
+    "path": "input/fsh/oBDS/05_Diagnose/mii-cm-onko-primaertumor-diagnosesicherung-sct.fsh"
+   },
+   {
+    "name": "mii-exa-onko-cup-patient",
+    "path": "input/fsh/oBDS/05_Diagnose/mii-exa-onko-cup-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-cup-diagnose",
+    "path": "input/fsh/oBDS/05_Diagnose/mii-exa-onko-cup-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-cup-tnm-t-cTX",
+    "path": "input/fsh/oBDS/05_Diagnose/mii-exa-onko-cup-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-cup-tnm-n-cNX",
+    "path": "input/fsh/oBDS/05_Diagnose/mii-exa-onko-cup-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-cup-tnm-m-cM1",
+    "path": "input/fsh/oBDS/05_Diagnose/mii-exa-onko-cup-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-cup-tnm-klassifikation",
+    "path": "input/fsh/oBDS/05_Diagnose/mii-exa-onko-cup-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-cup-fernmetastase-hep",
+    "path": "input/fsh/oBDS/05_Diagnose/mii-exa-onko-cup-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-cup-fernmetastase-pul",
+    "path": "input/fsh/oBDS/05_Diagnose/mii-exa-onko-cup-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-cup-bundle",
+    "path": "input/fsh/oBDS/05_Diagnose/mii-exa-onko-cup-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-cup-diagnose-aufgeloest",
+    "path": "input/fsh/oBDS/05_Diagnose/mii-exa-onko-cup-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-diagnose-taml-nach-chemo",
+    "path": "input/fsh/oBDS/05_Diagnose/mii-exa-onko-diagnose-therapieassoziiert.fsh"
+   },
+   {
+    "name": "mii-exa-onko-diagnose-angiosarkom-nach-radiatio",
+    "path": "input/fsh/oBDS/05_Diagnose/mii-exa-onko-diagnose-therapieassoziiert.fsh"
+   },
+   {
+    "name": "mii-exa-onko-diagnose-mds",
+    "path": "input/fsh/oBDS/05_Diagnose/mii-exa-onko-diagnose-transformation-aml.fsh"
+   },
+   {
+    "name": "mii-exa-onko-diagnose-aml-transformation",
+    "path": "input/fsh/oBDS/05_Diagnose/mii-exa-onko-diagnose-transformation-aml.fsh"
+   },
+   {
+    "name": "mii-exa-onko-diagnose-meningeom-benigne",
+    "path": "input/fsh/oBDS/05_Diagnose/mii-exa-onko-diagnose-transformation-meningeom.fsh"
+   },
+   {
+    "name": "mii-exa-onko-diagnose-meningeom-maligne-transformation",
+    "path": "input/fsh/oBDS/05_Diagnose/mii-exa-onko-diagnose-transformation-meningeom.fsh"
+   },
+   {
+    "name": "mii-exa-onko-diagnose",
+    "path": "input/fsh/oBDS/05_Diagnose/mii-exa-onko-diagnose.fsh"
+   },
+   {
+    "name": "mii-exa-onko-fruehere-tumorerkrankung-cervix",
+    "path": "input/fsh/oBDS/05_Diagnose/mii-exa-onko-fruehere-tumorerkrankung.fsh"
+   },
+   {
+    "name": "mii-exa-onko-fruehere-tumorerkrankung-mamma",
+    "path": "input/fsh/oBDS/05_Diagnose/mii-exa-onko-fruehere-tumorerkrankung.fsh"
+   },
+   {
+    "name": "mii-exa-onko-fruehere-tumorerkrankung-prostata",
+    "path": "input/fsh/oBDS/05_Diagnose/mii-exa-onko-fruehere-tumorerkrankung.fsh"
+   },
+   {
+    "name": "mii-exa-onko-fruehere-tumorerkrankung-freetext",
+    "path": "input/fsh/oBDS/05_Diagnose/mii-exa-onko-fruehere-tumorerkrankung.fsh"
+   },
+   {
+    "name": "mii-exa-onko-liste-evidenz-erstdiagnose-1",
+    "path": "input/fsh/oBDS/05_Diagnose/mii-exa-onko-liste-evidenz-erstdiagnose.fsh"
+   },
+   {
+    "name": "mii-cm-onko-grading-sct",
+    "path": "input/fsh/oBDS/06_Histologie/mii-cm-onko-grading-sct.fsh"
+   },
+   {
+    "name": "mii-exa-onko-anzahl-befallene-lymphknoten-0",
+    "path": "input/fsh/oBDS/06_Histologie/mii-exa-onko-anzahl-befallene-lymphknoten-0.fsh"
+   },
+   {
+    "name": "mii-exa-onko-anzahl-befallene-sentinel-lymphknoten-0",
+    "path": "input/fsh/oBDS/06_Histologie/mii-exa-onko-anzahl-befallene-sentinel-lymphknoten-1.fsh"
+   },
+   {
+    "name": "mii-exa-onko-anzahl-untersuchte-lymphknoten-23",
+    "path": "input/fsh/oBDS/06_Histologie/mii-exa-onko-anzahl-untersuchte-lymphknoten-23.fsh"
+   },
+   {
+    "name": "mii-exa-onko-anzahl-untersuchte-sentinel-lymphknoten-0",
+    "path": "input/fsh/oBDS/06_Histologie/mii-exa-onko-anzahl-untersuchte-sentinel-lymphknoten-2 .fsh"
+   },
+   {
+    "name": "mii-exa-onko-befund-1",
+    "path": "input/fsh/oBDS/06_Histologie/mii-exa-onko-befund-1.fsh"
+   },
+   {
+    "name": "mii-exa-onko-grading-1",
+    "path": "input/fsh/oBDS/06_Histologie/mii-exa-onko-grading-1.fsh"
+   },
+   {
+    "name": "mii-exa-onko-histologie-icdo3",
+    "path": "input/fsh/oBDS/06_Histologie/mii-exa-onko-histologie-icdo3.fsh"
+   },
+   {
+    "name": "mii-exa-onko-specimen-1",
+    "path": "input/fsh/oBDS/06_Histologie/mii-exa-onko-specimen-1.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tumorgroesse",
+    "path": "input/fsh/oBDS/06_Histologie/mii-exa-onko-tumorgroesse.fsh"
+   },
+   {
+    "name": "mii-cm-onko-tnm-uicc-sct-clinical",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-cm-onko-tnm-uicc-sct-clinical.fsh"
+   },
+   {
+    "name": "mii-cm-onko-tnm-uicc-sct-pathological",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-cm-onko-tnm-uicc-sct-pathological.fsh"
+   },
+   {
+    "name": "mii-exa-onko-kim-synth-patient",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-kim-musterperson-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-kim-synth-diagnose",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-kim-musterperson-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-kim-klass1-cT3c",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-kim-musterperson-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-kim-klass1-cN1",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-kim-musterperson-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-kim-klass1-cM1",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-kim-musterperson-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-kim-klass1",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-kim-musterperson-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-kim-klass2-ycT3c",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-kim-musterperson-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-kim-klass2-ycN1",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-kim-musterperson-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-kim-klass2-ycM1b",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-kim-musterperson-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-kim-klass2-ysym",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-kim-musterperson-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-kim-klass2",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-kim-musterperson-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-kim-klass3-ypT3c",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-kim-musterperson-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-kim-klass3-ypM1b",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-kim-musterperson-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-kim-klass3-L1",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-kim-musterperson-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-kim-klass3-V0",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-kim-musterperson-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-kim-klass3-Pn0",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-kim-musterperson-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-kim-klass3-ysym",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-kim-musterperson-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-kim-klass3",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-kim-musterperson-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-kim-synth1",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-kim-musterperson-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-kim-synth2",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-kim-musterperson-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-kim-synth3",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-kim-musterperson-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-kim-synth4",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-kim-musterperson-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-kim-tk1",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-kim-musterperson-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-kim-tk2",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-kim-musterperson-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-kim-tk3",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-kim-musterperson-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-kim-tk4",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-kim-musterperson-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-kim-synthesis-device",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-kim-musterperson-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-kim-synthesis-provenance",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-kim-musterperson-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-kim-musterperson-synthesized",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-kim-musterperson-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-clinical-cT3cN1cM0",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-breast-cancer-journey.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-t-kategorie-cT3",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-breast-cancer-journey.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-n-kategorie-cN1",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-breast-cancer-journey.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-m-kategorie-cM0",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-breast-cancer-journey.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-biopsy-cT4cN1cM0",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-breast-cancer-journey.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-t-kategorie-cT4",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-breast-cancer-journey.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-post-chemo-ycT2ycN0cM0",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-breast-cancer-journey.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-t-kategorie-ycT2",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-breast-cancer-journey.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-n-kategorie-ycN0",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-breast-cancer-journey.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-post-surgery-ypT0ypN0cM0",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-breast-cancer-journey.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-t-kategorie-ypT0",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-breast-cancer-journey.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-n-kategorie-ypN0",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-breast-cancer-journey.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-journey-l-kategorie-L0",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-breast-cancer-journey.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-journey-v-kategorie-V0",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-breast-cancer-journey.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-journey-pn-kategorie-Pn0",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-breast-cancer-journey.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-journey-residualstatus-R0",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-breast-cancer-journey.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-recurrence-rcT2cN1cM1",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-breast-cancer-journey.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-t-kategorie-rcT2",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-breast-cancer-journey.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-n-kategorie-rcN1",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-breast-cancer-journey.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-m-kategorie-rcM1",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-breast-cancer-journey.fsh"
+   },
+   {
+    "name": "mii-exa-onko-verlauf-journey-post-chemo",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-breast-cancer-journey.fsh"
+   },
+   {
+    "name": "mii-exa-onko-verlauf-journey-post-surgery",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-breast-cancer-journey.fsh"
+   },
+   {
+    "name": "mii-exa-onko-verlauf-journey-recurrence",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-breast-cancer-journey.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-bundle-legacy-patient",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-bundle-legacy.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-bundle-legacy-diagnose",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-bundle-legacy.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-bundle-legacy-t-cT2",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-bundle-legacy.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-bundle-legacy-n-cN3",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-bundle-legacy.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-bundle-legacy-m-cM0",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-bundle-legacy.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-bundle-legacy-klassifikation-cT2cN3cM0",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-bundle-legacy.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-bundle-legacy",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-bundle-legacy.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-synth-patient",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-bundle-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-synth-diagnose",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-bundle-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-synth-meldung1-t-cT3",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-bundle-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-synth-meldung1-n-cN2",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-bundle-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-synth-meldung1-m-cM0",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-bundle-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-synth-meldung1-klassifikation",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-bundle-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-synth-meldung2-t-pT2",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-bundle-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-synth-meldung2-n-pN1",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-bundle-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-synth-meldung2-klassifikation",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-bundle-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-synth-klassifikation",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-bundle-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-synth-tumorkonferenz",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-bundle-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-bundle-synthesized",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-bundle-synthesized.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-bundle-patient",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-bundle-diagnose",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-bundle-t-kategorie-cT2",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-bundle-n-kategorie-cN3",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-bundle-m-kategorie-cM0",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-bundle-klassifikation-cT2cN3cM0",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-bundle",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-klassifikation-TisN0M0",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-klassifikation-TisN0M0.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-klassifikation-uT2a2pN0023i-sncM1",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-klassifikation-uT2a2pN0023i-sncM1.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-l-kategorie-L",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-l-kategorie-L0.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-l-kategorie-L1",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-l-kategorie-L1.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-m-kategorie-M0",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-m-kategorie-M0.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-m-kategorie-cM1",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-m-kategorie-cM1.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-n-kategorie-N0",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-n-kategorie-N0.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-n-kategorie-pN0i-sn",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-n-kategorie-pN0i-sn.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-pn-kategorie-Pn1",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-pn-kategroie-Pn1.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-s-kategorie-S1",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-s-kategorie-S1.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-t-kategorie-Tis",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-t-kategorie-Tis.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-t-kategorie-uT2a2",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-t-kategorie-uT2a2.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tnm-v-kategorie-V1",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-v-kategorie-V1.fsh"
+   },
+   {
+    "name": "mii-exa-onko-weitere-klassifikationen-1",
+    "path": "input/fsh/oBDS/09_Weitere_Klassifikationen/mii-exa-onko-weitere-klassifikationen-1.fsh"
+   },
+   {
+    "name": "mii-exa-onko-weitere-klassifikationen-3",
+    "path": "input/fsh/oBDS/09_Weitere_Klassifikationen/mii-exa-onko-weitere-klassifikationen-1.fsh"
+   },
+   {
+    "name": "mii-exa-onko-weitere-klassifikationen-2",
+    "path": "input/fsh/oBDS/09_Weitere_Klassifikationen/mii-exa-onko-weitere-klassifikationen-2.fsh"
+   },
+   {
+    "name": "mii-exa-onko-weitere-klassifikationen-4",
+    "path": "input/fsh/oBDS/09_Weitere_Klassifikationen/mii-exa-onko-weitere-klassifikationen-4.fsh"
+   },
+   {
+    "name": "mii-cm-onko-residualstatus-uicc-sct",
+    "path": "input/fsh/oBDS/10_Residualstatus/mii-cm-onko-residualstatus-uicc-sct.fsh"
+   },
+   {
+    "name": "mii-exa-onko-residualstatus-1",
+    "path": "input/fsh/oBDS/10_Residualstatus/mii-exa-onko-residualstatus-1.fsh"
+   },
+   {
+    "name": "mii-cm-onko-fernmetastasen-sct",
+    "path": "input/fsh/oBDS/11_Fernmetastasen/mii-cm-onko-fernmetastasen-sct.fsh"
+   },
+   {
+    "name": "mii-exa-onko-fernmetastasen-1",
+    "path": "input/fsh/oBDS/11_Fernmetastasen/mii-exa-onko-fernmetastasen-1.fsh"
+   },
+   {
+    "name": "mii-cm-onko-allgemeiner-leistungszustand-ecog-loinc",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-cm-onko-allgemeiner-leistungszustand-ecog-loinc.fsh"
+   },
+   {
+    "name": "mii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc.fsh"
+   },
+   {
+    "name": "mii-cm-onko-allgemeiner-leistungszustand-sct",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-cm-onko-allgemeiner-leistungszustand-sct.fsh"
+   },
+   {
+    "name": "mii-cm-onko-asa-obds-loinc",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-cm-onko-asa-obds-loinc.fsh"
+   },
+   {
+    "name": "mii-exa-onko-allgemeiner-leistungszustand-ecog",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-exa-onko-allgemeiner-leistungszustand-ecog.fsh"
+   },
+   {
+    "name": "mii-exa-onko-allgemeiner-leistungszustand-karnofsky",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-exa-onko-allgemeiner-leistungszustand-karnofsky.fsh"
+   },
+   {
+    "name": "mii-exa-onko-asa-klassifikation",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-exa-onko-asa-klassifikation.fsh"
+   },
+   {
+    "name": "ObsDef-ECOG-Performance-Status",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-obsdef-allgemeiner-leistungszustand.fsh"
+   },
+   {
+    "name": "ObsDef-Karnofsky-Performance-Status",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-obsdef-allgemeiner-leistungszustand.fsh"
+   },
+   {
+    "name": "Example-ECOG-Quantity-2",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-pr-onko-allgemeiner-leistungszustand-ecog-quantity.fsh"
+   },
+   {
+    "name": "Example-ECOG-Comparison-Set",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-pr-onko-allgemeiner-leistungszustand-ecog-quantity.fsh"
+   },
+   {
+    "name": "Example-ECOG-Baseline",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-pr-onko-allgemeiner-leistungszustand-ecog-quantity.fsh"
+   },
+   {
+    "name": "Example-ECOG-Followup",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-pr-onko-allgemeiner-leistungszustand-ecog-quantity.fsh"
+   },
+   {
+    "name": "Example-Karnofsky-Quantity-80",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-pr-onko-allgemeiner-leistungszustand-karnofsky-quantity.fsh"
+   },
+   {
+    "name": "Example-Karnofsky-Comparison-Set",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-pr-onko-allgemeiner-leistungszustand-karnofsky-quantity.fsh"
+   },
+   {
+    "name": "Example-Karnofsky-Baseline",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-pr-onko-allgemeiner-leistungszustand-karnofsky-quantity.fsh"
+   },
+   {
+    "name": "Example-Karnofsky-Followup",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-pr-onko-allgemeiner-leistungszustand-karnofsky-quantity.fsh"
+   },
+   {
+    "name": "mii-cm-onko-operation-komplikation-sct",
+    "path": "input/fsh/oBDS/13_OP/mii-cm-onko-operation-komplikation-sct.fsh"
+   },
+   {
+    "name": "mii-exa-onko-operation-1",
+    "path": "input/fsh/oBDS/13_OP/mii-exa-onko-operation.fsh"
+   },
+   {
+    "name": "mii-cm-onko-strahlentherapie-strahleneinheit-sct",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-cm-onko-strahlentheapie-strahleneinheit-sct.fsh"
+   },
+   {
+    "name": "mii-cm-onko-strahlentherapie-applikationsart-sct",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-cm-onko-strahlentherapie-applikationsart-sct.fsh"
+   },
+   {
+    "name": "mii-cm-onko-strahlentherapie-boost-sct",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-cm-onko-strahlentherapie-boost-sct.fsh"
+   },
+   {
+    "name": "mii-cm-onko-strahlentherapie-strahlenart-sct",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-cm-onko-strahlentherapie-strahlenart-sct.fsh"
+   },
+   {
+    "name": "mii-cm-onko-strahlentherapie-zielgebiet-sct",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-cm-onko-strahlentherapie-zielgebiet-sct.fsh"
+   },
+   {
+    "name": "mii-exa-onko-strahlentherapie",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-exa-onko-strahlentherapie-alt.fsh"
+   },
+   {
+    "name": "mii-exa-onko-strahlentherapie-nuklearmedizin-1",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-exa-onko-strahlentherapie-nuklearmedizin.fsh"
+   },
+   {
+    "name": "mii-exa-onko-strahlentherapie-bestrahlung-nuklearmedizin-1",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-exa-onko-strahlentherapie-nuklearmedizin.fsh"
+   },
+   {
+    "name": "mii-exa-onko-strahlentherapie-strahlentherapie-1",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-exa-onko-strahlentherapie-strahlentherapie.fsh"
+   },
+   {
+    "name": "mii-exa-onko-strahlentherapie-bestrahlung-strahlentherapie-1",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-exa-onko-strahlentherapie-strahlentherapie.fsh"
+   },
+   {
+    "name": "mii-exa-onko-strahlentherapie-pci-sclc",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-exa-onko-strahlentherapie-strahlentherapie.fsh"
+   },
+   {
+    "name": "mii-exa-onko-strahlentherapie-bestrahlung-pci-sclc",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-exa-onko-strahlentherapie-strahlentherapie.fsh"
+   },
+   {
+    "name": "mii-exa-onko-strahlentherapie-2014-mamma-mit-lk",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-exa-onko-strahlentherapie-zielgebiet-migration-beispiel.fsh"
+   },
+   {
+    "name": "mii-exa-onko-strahlentherapie-2021-mamma-primaer",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-exa-onko-strahlentherapie-zielgebiet-migration-beispiel.fsh"
+   },
+   {
+    "name": "mii-exa-onko-strahlentherapie-2021-mamma-lymphknoten",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-exa-onko-strahlentherapie-zielgebiet-migration-beispiel.fsh"
+   },
+   {
+    "name": "mii-exa-onko-strahlentherapie-2014-prostata-mit-lk",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-exa-onko-strahlentherapie-zielgebiet-migration-beispiel.fsh"
+   },
+   {
+    "name": "mii-cm-onko-nebenwirkung-sct",
+    "path": "input/fsh/oBDS/15_Nebenwirkung_ST_SYST/mii-cm-onko-nebenwirkung-sct.fsh"
+   },
+   {
+    "name": "mii-pr-onko-nebenwirkung-0",
+    "path": "input/fsh/oBDS/15_Nebenwirkung_ST_SYST/mii-exa-onko-nebenwirkung-0.fsh"
+   },
+   {
+    "name": "mii-pr-onko-nebenwirkung-text",
+    "path": "input/fsh/oBDS/15_Nebenwirkung_ST_SYST/mii-exa-onko-nebenwirkung-text.fsh"
+   },
+   {
+    "name": "mii-cm-onko-atc-transitions-2021",
+    "path": "input/fsh/oBDS/16_SystemischeTherapie/mii-cm-onko-atc-transitions-2021.fsh"
+   },
+   {
+    "name": "mii-cm-onko-atc-transitions-2022",
+    "path": "input/fsh/oBDS/16_SystemischeTherapie/mii-cm-onko-atc-transitions-2022.fsh"
+   },
+   {
+    "name": "mii-cm-onko-atc-transitions-2023",
+    "path": "input/fsh/oBDS/16_SystemischeTherapie/mii-cm-onko-atc-transitions-2023.fsh"
+   },
+   {
+    "name": "mii-cm-onko-atc-transitions-2024",
+    "path": "input/fsh/oBDS/16_SystemischeTherapie/mii-cm-onko-atc-transitions-2024.fsh"
+   },
+   {
+    "name": "mii-cm-onko-atc-transitions-2025",
+    "path": "input/fsh/oBDS/16_SystemischeTherapie/mii-cm-onko-atc-transitions-2025.fsh"
+   },
+   {
+    "name": "mii-cm-onko-atc-transitions-2026",
+    "path": "input/fsh/oBDS/16_SystemischeTherapie/mii-cm-onko-atc-transitions-2026.fsh"
+   },
+   {
+    "name": "mii-exa-onko-medikation-iberdomide-unii",
+    "path": "input/fsh/oBDS/16_SystemischeTherapie/mii-exa-onko-medikation-iberdomide-unii.fsh"
+   },
+   {
+    "name": "mii-exa-onko-medikation-imatinib-atc-version-transition",
+    "path": "input/fsh/oBDS/16_SystemischeTherapie/mii-exa-onko-medikation-imatinib-atc-version-transition.fsh"
+   },
+   {
+    "name": "mii-exa-onko-systemische-therapie-1",
+    "path": "input/fsh/oBDS/16_SystemischeTherapie/mii-exa-onko-systemische-therapie.fsh"
+   },
+   {
+    "name": "mii-exa-onko-systemische-therapie-medikation1",
+    "path": "input/fsh/oBDS/16_SystemischeTherapie/mii-exa-onko-systemische-therapie.fsh"
+   },
+   {
+    "name": "mii-exa-onko-systemische-therapie-medikation2",
+    "path": "input/fsh/oBDS/16_SystemischeTherapie/mii-exa-onko-systemische-therapie.fsh"
+   },
+   {
+    "name": "mii-cm-onko-verlauf-fernmetastasen-sct",
+    "path": "input/fsh/oBDS/17_Verlauf/mii-cm-onko-verlauf-fernmetastasen-sct.fsh"
+   },
+   {
+    "name": "mii-cm-onko-verlauf-gesamtbeurteilung-sct",
+    "path": "input/fsh/oBDS/17_Verlauf/mii-cm-onko-verlauf-gesamtbeurteilung-sct.fsh"
+   },
+   {
+    "name": "mii-cm-onko-verlauf-lymphknoten-sct",
+    "path": "input/fsh/oBDS/17_Verlauf/mii-cm-onko-verlauf-lymphknoten-sct.fsh"
+   },
+   {
+    "name": "mii-cm-onko-verlauf-primaertumor-sct",
+    "path": "input/fsh/oBDS/17_Verlauf/mii-cm-onko-verlauf-primaertumor-sct.fsh"
+   },
+   {
+    "name": "mii-exa-onko-verlauf-tumor",
+    "path": "input/fsh/oBDS/17_Verlauf/mii-exa-onko-verlauf-tumor.fsh"
+   },
+   {
+    "name": "mii-cm-onko-therapieabweichung-sct",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-cm-onko-therapieabweichung-sct.fsh"
+   },
+   {
+    "name": "mii-cm-onko-therapieplanung-sct",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-cm-onko-therapieplanung-sct.fsh"
+   },
+   {
+    "name": "mii-exa-onko-folfox-workflow-bundle",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-ascending-colon-cancer-diagnosis",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-modification.fsh"
+   },
+   {
+    "name": "mii-exa-onko-right-hemicolectomy",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-modification.fsh"
+   },
+   {
+    "name": "mii-exa-onko-ascending-colon-tnm-t",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-modification.fsh"
+   },
+   {
+    "name": "mii-exa-onko-ascending-colon-tnm-n",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-modification.fsh"
+   },
+   {
+    "name": "mii-exa-onko-ascending-colon-tnm-m",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-modification.fsh"
+   },
+   {
+    "name": "mii-exa-onko-ascending-colon-tnm",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-modification.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tumorkonferenz-folfox-modification",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-modification.fsh"
+   },
+   {
+    "name": "mii-exa-onko-folfox-requestgroup-modification",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-modification.fsh"
+   },
+   {
+    "name": "mii-exa-onko-modification-5fu-request",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-modification.fsh"
+   },
+   {
+    "name": "mii-exa-onko-modification-leucovorin-request",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-modification.fsh"
+   },
+   {
+    "name": "mii-exa-onko-modification-oxaliplatin-request",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-modification.fsh"
+   },
+   {
+    "name": "mii-exa-onko-folfox-phase1",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-modification.fsh"
+   },
+   {
+    "name": "mii-exa-onko-modification-5fu-phase1",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-modification.fsh"
+   },
+   {
+    "name": "mii-exa-onko-modification-leucovorin-phase1",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-modification.fsh"
+   },
+   {
+    "name": "mii-exa-onko-modification-oxaliplatin-phase1",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-modification.fsh"
+   },
+   {
+    "name": "mii-exa-onko-oxaliplatin-neuropathy",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-modification.fsh"
+   },
+   {
+    "name": "mii-exa-onko-lv5fu2-phase2",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-modification.fsh"
+   },
+   {
+    "name": "mii-exa-onko-modification-5fu-phase2",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-modification.fsh"
+   },
+   {
+    "name": "mii-exa-onko-modification-leucovorin-phase2",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-modification.fsh"
+   },
+   {
+    "name": "mii-exa-onko-modification-verlauf-6months",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-modification.fsh"
+   },
+   {
+    "name": "mii-exa-onko-folfox-patient",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-recommendation.fsh"
+   },
+   {
+    "name": "mii-exa-onko-colorectal-cancer-diagnosis",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-recommendation.fsh"
+   },
+   {
+    "name": "mii-exa-onko-sigmoid-resection",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-recommendation.fsh"
+   },
+   {
+    "name": "mii-exa-onko-sigmoid-resection-part1",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-recommendation.fsh"
+   },
+   {
+    "name": "mii-exa-onko-sigmoid-resection-part2",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-recommendation.fsh"
+   },
+   {
+    "name": "mii-exa-onko-sigmoid-resection-part3",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-recommendation.fsh"
+   },
+   {
+    "name": "mii-exa-onko-colorectal-tnm-t",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-recommendation.fsh"
+   },
+   {
+    "name": "mii-exa-onko-colorectal-tnm-n",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-recommendation.fsh"
+   },
+   {
+    "name": "mii-exa-onko-colorectal-tnm-m",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-recommendation.fsh"
+   },
+   {
+    "name": "mii-exa-onko-colorectal-tnm",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-recommendation.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tumorkonferenz-folfox",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-recommendation.fsh"
+   },
+   {
+    "name": "mii-exa-onko-folfox-requestgroup",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-recommendation.fsh"
+   },
+   {
+    "name": "mii-exa-onko-folfox-5fu-request",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-recommendation.fsh"
+   },
+   {
+    "name": "mii-exa-onko-folfox-leucovorin-request",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-recommendation.fsh"
+   },
+   {
+    "name": "mii-exa-onko-folfox-oxaliplatin-request",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-recommendation.fsh"
+   },
+   {
+    "name": "mii-exa-onko-folfox-procedure",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-recommendation.fsh"
+   },
+   {
+    "name": "mii-exa-onko-folfox-5fu-statement",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-recommendation.fsh"
+   },
+   {
+    "name": "mii-exa-onko-folfox-leucovorin-statement",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-recommendation.fsh"
+   },
+   {
+    "name": "mii-exa-onko-folfox-oxaliplatin-statement",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-recommendation.fsh"
+   },
+   {
+    "name": "mii-exa-onko-folfox-verlauf-6months",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-folfox-recommendation.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tumorkonferenz-01",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-tumorkonferenz-01.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tumorkonferenz-02",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-tumorkonferenz-01.fsh"
+   },
+   {
+    "name": "mii-exa-onko-molecular-board-patient",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-tumorkonferenz-extended-examples.fsh"
+   },
+   {
+    "name": "primaertumor-example",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-tumorkonferenz-extended-examples.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tumorkonferenz-mixed-approach",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-tumorkonferenz-extended-examples.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tumorkonferenz-pure-molecular",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-tumorkonferenz-extended-examples.fsh"
+   },
+   {
+    "name": "mii-exa-onko-molecular-cdk46-protocol",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-tumorkonferenz-extended-examples.fsh"
+   },
+   {
+    "name": "mii-exa-onko-molecular-her2-alternatives",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-tumorkonferenz-extended-examples.fsh"
+   },
+   {
+    "name": "mii-exa-onko-molecular-surgery-request",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-tumorkonferenz-extended-examples.fsh"
+   },
+   {
+    "name": "mii-exa-onko-cdk46-class-medication",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-tumorkonferenz-extended-examples.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tdm1-option",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-tumorkonferenz-extended-examples.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tucatinib-option",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-tumorkonferenz-extended-examples.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tumorkonferenz-molekular",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-tumorkonferenz-molekular.fsh"
+   },
+   {
+    "name": "mii-exa-onko-trastuzumab-therapie",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-tumorkonferenz-molekular.fsh"
+   },
+   {
+    "name": "mii-exa-onko-pertuzumab-therapie",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-tumorkonferenz-molekular.fsh"
+   },
+   {
+    "name": "mii-exa-onko-palbociclib-therapie",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-exa-onko-tumorkonferenz-molekular.fsh"
+   },
+   {
+    "name": "mii-cm-onko-tod-sct",
+    "path": "input/fsh/oBDS/20_Tod/mii-cm-onko-tod-sct.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tod-j",
+    "path": "input/fsh/oBDS/20_Tod/mii-exa-onko-tod-j.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tod-n",
+    "path": "input/fsh/oBDS/20_Tod/mii-exa-onko-tod-n.fsh"
+   },
+   {
+    "name": "mii-exa-onko-tod-u",
+    "path": "input/fsh/oBDS/20_Tod/mii-exa-onko-tod-u.fsh"
+   },
+   {
+    "name": "mii-cm-onko-genetische-variante-auspraegung-sct",
+    "path": "input/fsh/oBDS/23_GenetischeVariante/mii-cm-onko-genetische-variante-auspraegung-sct.fsh"
+   },
+   {
+    "name": "mii-exa-onko-genetische-variante-braf",
+    "path": "input/fsh/oBDS/23_GenetischeVariante/mii-exa-onko-genetische-variante-braf.fsh"
+   },
+   {
+    "name": "mii-cm-onko-studienteilnahme-sct",
+    "path": "input/fsh/oBDS/24_Studienteilnahme/mii-cm-onko-studienteilnahme.fsh"
+   },
+   {
+    "name": "mii-exa-onko-studie-prob",
+    "path": "input/fsh/oBDS/24_Studienteilnahme/mii-exa-onko-studienteilnahme-prob.fsh"
+   },
+   {
+    "name": "mii-exa-onko-studienteilnahme-prob",
+    "path": "input/fsh/oBDS/24_Studienteilnahme/mii-exa-onko-studienteilnahme-prob.fsh"
+   },
+   {
+    "name": "mii-exa-onko-studienteilnahme",
+    "path": "input/fsh/oBDS/24_Studienteilnahme/mii-exa-onko-studienteilnahme.fsh"
+   },
+   {
+    "name": "mii-cm-onko-krk-stoma-obds-sct",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-cm-onko-krk-stoma-obds-sct.fsh"
+   },
+   {
+    "name": "mii-exa-onko-krk-abstand-circumferelle-resektionsebene",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-exa-onko-krk-abstand-circumferelle-resektionsebene.fsh"
+   },
+   {
+    "name": "mii-exa-onko-krk-abstand-mesorektale-fascie",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-exa-onko-krk-abstand-mesorektale-fascie.fsh"
+   },
+   {
+    "name": "mii-exa-onko-krk-abstand-resektionsrand-aboral",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-exa-onko-krk-abstand-resektionsrand-aboral.fsh"
+   },
+   {
+    "name": "mii-exa-onko-krk-abstand-tumor-anokutanlinie",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-exa-onko-krk-abstand-tumor-anokutanlinie.fsh"
+   },
+   {
+    "name": "mii-exa-onko-krk-anastomoseninsuffizienz",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-exa-onko-krk-anastomoseninsuffizienz.fsh"
+   },
+   {
+    "name": "mii-exa-onko-krk-bundle-patient",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-exa-onko-krk-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-krk-bundle-encounter",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-exa-onko-krk-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-krk-diagnose",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-exa-onko-krk-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-krk-bundle",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-exa-onko-krk-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-krk-operation",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-exa-onko-krk-operation.fsh"
+   },
+   {
+    "name": "mii-exa-onko-krk-specimen",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-exa-onko-krk-specimen.fsh"
+   },
+   {
+    "name": "mii-exa-onko-krk-stoma-markierung",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-exa-onko-krk-stoma-markierung.fsh"
+   },
+   {
+    "name": "mii-exa-onko-melanom-breslow-tiefe",
+    "path": "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-exa-onko-melanom-breslow-tiefe.fsh"
+   },
+   {
+    "name": "mii-exa-onko-melanom-bundle-patient",
+    "path": "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-exa-onko-melanom-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-melanom-bundle-encounter",
+    "path": "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-exa-onko-melanom-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-melanom-diagnose",
+    "path": "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-exa-onko-melanom-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-melanom-bundle",
+    "path": "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-exa-onko-melanom-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-melanom-exzision-oberarm",
+    "path": "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-exa-onko-melanom-exzision.fsh"
+   },
+   {
+    "name": "mii-exa-onko-melanom-exzision-ruecken",
+    "path": "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-exa-onko-melanom-exzision.fsh"
+   },
+   {
+    "name": "mii-exa-onko-melanom-ldh",
+    "path": "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-exa-onko-melanom-ldh.fsh"
+   },
+   {
+    "name": "mii-exa-onko-melanom-sicherheitsabstand",
+    "path": "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-exa-onko-melanom-sicherheitsabstand.fsh"
+   },
+   {
+    "name": "mii-exa-onko-melanom-ulzeration",
+    "path": "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-exa-onko-melanom-ulzeration.fsh"
+   },
+   {
+    "name": "mii-exa-onko-mamma-bundle-patient",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-exa-mamma-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-mamma-bundle-encounter",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-exa-mamma-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-mamma-diagnose",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-exa-mamma-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-mamma-example-bundle-1",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-exa-mamma-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-mamma-menopause-status-1",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-exa-mamma-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-mamma-rezeptorstatus-estrogen-1",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-exa-mamma-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-mamma-rezeptorstatus-progesteron-1",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-exa-mamma-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-mamma-praeoperative-markierung-1",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-exa-mamma-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-mamma-tumorgroesse-1",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-exa-mamma-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-mamma-her2neu-status",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-exa-onko-mamma-her2neu-status.fsh"
+   },
+   {
+    "name": "mii-exa-onko-prostata-gleason-pattern-primary-1",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-exa-onko-prostata-gleason.fsh"
+   },
+   {
+    "name": "mii-exa-onko-prostata-gleason-pattern-secondary-1",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-exa-onko-prostata-gleason.fsh"
+   },
+   {
+    "name": "mii-exa-onko-prostata-gleason-pattern-grade-group-1",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-exa-onko-prostata-gleason.fsh"
+   },
+   {
+    "name": "mii-exa-onko-prostata-gleason-score-gesamt-1",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-exa-onko-prostata-gleason.fsh"
+   },
+   {
+    "name": "mii-exa-onko-prostata-operation-prostatektomie",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-exa-onko-prostata-operation.fsh"
+   },
+   {
+    "name": "mii-exa-onko-prostata-operation-turp",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-exa-onko-prostata-operation.fsh"
+   },
+   {
+    "name": "mii-exa-onko-prostata-psa-diagnose-1",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-exa-onko-prostata-psa.fsh"
+   },
+   {
+    "name": "mii-exa-onko-prostata-psa-verlauf-1",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-exa-onko-prostata-psa.fsh"
+   },
+   {
+    "name": "mii-exa-onko-prostata-anzahl-stanzen-1",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-exa-onko-prostata-stanzen.fsh"
+   },
+   {
+    "name": "mii-exa-onko-prostata-anzahl-positiver-stanzen-1",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-exa-onko-prostata-stanzen.fsh"
+   },
+   {
+    "name": "mii-exa-onko-prostata-ca-befall-stanze-1",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-exa-onko-prostata-stanzen.fsh"
+   },
+   {
+    "name": "mii-exa-onko-prostata-surgery-2",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-exa-onko-prostata-surgery.fsh"
+   },
+   {
+    "name": "mii-exa-onko-prostata-surgery-1",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-exa-onko-prostata-surgical-complications.fsh"
+   },
+   {
+    "name": "mii-exa-onko-prostata-surgical-complication-1",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-exa-onko-prostata-surgical-complications.fsh"
+   },
+   {
+    "name": "mii-exa-onko-prostata-bundle-patient",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-exa-prostata-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-prostata-bundle-encounter",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-exa-prostata-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-prostata-diagnose",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-exa-prostata-bundle.fsh"
+   },
+   {
+    "name": "mii-exa-onko-prostata-example-bundle-1",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-exa-prostata-bundle.fsh"
+   },
+   {
+    "name": "mii-cm-onko-icdo3-transitions-2019",
+    "path": "input/fsh/overlapping terminologies/mii-cm-onko-icdo3-transitions-2019.fsh"
+   },
+   {
+    "name": "mii-cm-onko-intention-sct",
+    "path": "input/fsh/overlapping terminologies/mii-cm-onko-intention-sct.fsh"
+   },
+   {
+    "name": "mii-cm-onko-seitenlokalisation-sct",
+    "path": "input/fsh/overlapping terminologies/mii-cm-onko-seitenlokalisation-sct.fsh"
+   },
+   {
+    "name": "mii-cm-onko-therapie-ende-sct",
+    "path": "input/fsh/overlapping terminologies/mii-cm-onko-therapie-ende-sct.fsh"
+   },
+   {
+    "name": "mii-cm-onko-therapie-stellung-sct",
+    "path": "input/fsh/overlapping terminologies/mii-cm-onko-therapie-stellung-sct.fsh"
+   },
+   {
+    "name": "mii-cm-onko-therapie-typ-sct",
+    "path": "input/fsh/overlapping terminologies/mii-cm-onko-therapie-typ-sct.fsh"
+   },
+   {
+    "name": "mii-sp-onko-condition-ext-morphology-behavior-icdo3",
+    "path": "input/fsh/searchParameter.fsh"
+   },
+   {
+    "name": "mii-sp-onko-observation-tnm-cp-praefix",
+    "path": "input/fsh/searchParameter.fsh"
+   },
+   {
+    "name": "mii-sp-onko-observation-tnm-y-praefix",
+    "path": "input/fsh/searchParameter.fsh"
+   },
+   {
+    "name": "mii-sp-onko-observation-tnm-r-praefix",
+    "path": "input/fsh/searchParameter.fsh"
+   },
+   {
+    "name": "mii-sp-onko-observation-ext-tnm-n-itc",
+    "path": "input/fsh/searchParameter.fsh"
+   },
+   {
+    "name": "mii-sp-onko-observation-ext-tnm-n-sn-suffix",
+    "path": "input/fsh/searchParameter.fsh"
+   },
+   {
+    "name": "mii-sp-onko-procedure-ext-operation-intention",
+    "path": "input/fsh/searchParameter.fsh"
+   },
+   {
+    "name": "mii-sp-onko-procedure-ext-strahlentherapie-intention",
+    "path": "input/fsh/searchParameter.fsh"
+   },
+   {
+    "name": "mii-sp-onko-ext-strahlentherapie-stellungzurop",
+    "path": "input/fsh/searchParameter.fsh"
+   },
+   {
+    "name": "mii-sp-onko-procedure-strahlentherapie-applikationsart",
+    "path": "input/fsh/searchParameter.fsh"
+   },
+   {
+    "name": "mii-sp-onko-procedure-strahlentherapie-strahlenart",
+    "path": "input/fsh/searchParameter.fsh"
+   },
+   {
+    "name": "mii-sp-onko-procedure-strahlentherapie-lateralitaet",
+    "path": "input/fsh/searchParameter.fsh"
+   },
+   {
+    "name": "mii-sp-onko-procedure-ext-strahlentherapie-bs-gesamtdosis",
+    "path": "input/fsh/searchParameter.fsh"
+   },
+   {
+    "name": "mii-sp-onko-procedure-ext-strahlentherapie-bs-einzeldosis",
+    "path": "input/fsh/searchParameter.fsh"
+   },
+   {
+    "name": "mii-sp-onko-procedure-ext-strahlentherapie-bs-boost",
+    "path": "input/fsh/searchParameter.fsh"
+   },
+   {
+    "name": "mii-sp-onko-procedure-ext-systemischetherapie-intention",
+    "path": "input/fsh/searchParameter.fsh"
+   },
+   {
+    "name": "mii-sp-onko-ext-systemischetherapie-stellungzurop",
+    "path": "input/fsh/searchParameter.fsh"
+   }
+  ],
+  "Invariant": [
+   {
+    "name": "nebenwirkung-grad3-art",
+    "path": "input/fsh/invariants/nebenwirkung-grad3-art.fsh"
+   },
+   {
+    "name": "onko-icd-meldepflicht",
+    "path": "input/fsh/invariants/onko-icd-meldepflicht.fsh"
+   },
+   {
+    "name": "tnm-datum",
+    "path": "input/fsh/invariants/tnm-datum.fsh"
+   },
+   {
+    "name": "tnm-sct-uicc-konsistenz",
+    "path": "input/fsh/invariants/tnm-sct-uicc-konsistenz.fsh"
+   },
+   {
+    "name": "tumorkonferenz-empfehlung-entscheidung-patient",
+    "path": "input/fsh/invariants/tumorkonferenz-empfehlung-entscheidung-patient.fsh"
+   },
+   {
+    "name": "ecog-valid-value",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-pr-onko-allgemeiner-leistungszustand-ecog-quantity.fsh"
+   },
+   {
+    "name": "karnofsky-valid-value",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-pr-onko-allgemeiner-leistungszustand-karnofsky-quantity.fsh"
+   },
+   {
+    "name": "mii-onko-melanom-sicherheitsabstand-1",
+    "path": "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-pr-onko-melanom-sicherheitsabstand.fsh"
+   }
+  ],
+  "Logical": [
+   {
+    "name": "MII_LM_MVGenomSeq_Onkologie",
+    "path": "input/fsh/mii-lm-mvgenomseq-onkologie.fsh"
+   },
+   {
+    "name": "MII_LM_Onko",
+    "path": "input/fsh/mii-lm-onko.fsh"
+   },
+   {
+    "name": "MII_LM_Onko_Organspezifische_Zusatzmodule",
+    "path": "input/fsh/oBDS/Organspezifische Module/mii-lm-onko-organspezifische-zusatzmodule.fsh"
+   }
+  ],
+  "Mapping": [
+   {
+    "name": "MVGenomSeq-to-MII-Onkologie",
+    "path": "input/fsh/mii-lm-mvgenomseq-onkologie.fsh"
+   },
+   {
+    "name": "MII-Onkologie-to-MVGenomSeq-Diagnose-Primaertumor",
+    "path": "input/fsh/mii-lm-mvgenomseq-onkologie.fsh"
+   },
+   {
+    "name": "Onkologie-LogicalModel",
+    "path": "input/fsh/mii-lm-onko.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Diagnose",
+    "path": "input/fsh/oBDS/05_Diagnose/mii-pr-onko-diagnose-primaertumor.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-FruehereTumorerkrankung",
+    "path": "input/fsh/oBDS/05_Diagnose/mii-pr-onko-fruehere-tumorerkrankung.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Histologie-Anzahl-Befallene-Lymphknoten",
+    "path": "input/fsh/oBDS/06_Histologie/mii-pr-onko-anzahl-befallene-lymphknoten.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Histologie-Anzahl-Befallene-Sentinel-Lymphknoten",
+    "path": "input/fsh/oBDS/06_Histologie/mii-pr-onko-anzahl-befallene-sentinel-lymphknoten.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Histologie-Anzahl-Untersuchte-Lymphknoten",
+    "path": "input/fsh/oBDS/06_Histologie/mii-pr-onko-anzahl-untersuchte-lymphknoten.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Histologie-Anzahl-Untersuchte-Sentinel-Lymphknoten",
+    "path": "input/fsh/oBDS/06_Histologie/mii-pr-onko-anzahl-untersuchte-sentinel-lymphknoten.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Histologie-Befund",
+    "path": "input/fsh/oBDS/06_Histologie/mii-pr-onko-befund.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Histologie-Grading",
+    "path": "input/fsh/oBDS/06_Histologie/mii-pr-onko-grading.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Histologie-ICD-O-3",
+    "path": "input/fsh/oBDS/06_Histologie/mii-pr-onko-histologie-icdo3.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Histologie-Specimen",
+    "path": "input/fsh/oBDS/06_Histologie/mii-pr-onko-specimen.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Mamma-Tumorgroesse",
+    "path": "input/fsh/oBDS/06_Histologie/mii-pr-onko-tumor-groesse.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-TNM_a_Symbol",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-a-symbol.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-TNM-Klassifikation",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-klassifikation.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-TNM_L_Kategorie",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-l-kategorie.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-TNM_M_Kategorie",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-m-kategorie.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-TNM_m_Symbol",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-m-symbol.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-TNM_N_Kategorie",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-n-kategorie.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-TNM_Pn_Kategorie",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-pn-kategorie.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-TNM_r_Symbol",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-r-symbol.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-TNM_S_Kategorie",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-s-kategorie.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-TNM_T_Kategorie",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-t-kategorie.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-TNM_V_Kategorie",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-v-kategorie.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-TNM_y_Symbol",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-y-symbol.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Weitere-Klassifikationen",
+    "path": "input/fsh/oBDS/09_Weitere_Klassifikationen/mii-pr-onko-weitere-klassifikationen.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Residualstatus",
+    "path": "input/fsh/oBDS/10_Residualstatus/mii-pr-onko-residualstatus.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-MII-PR-Onko-Fernmetastasen",
+    "path": "input/fsh/oBDS/11_Fernmetastasen/mii-pr-onko-fernmetastasen.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Allgemeiner-Leistungszustand-ECOG-Quantity",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-pr-onko-allgemeiner-leistungszustand-ecog-quantity.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Allgemeiner-Leistungszustand",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-pr-onko-allgemeiner-leistungszustand-ecog.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Allgemeiner-Leistungszustand-Karnofsky-Quantity",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-pr-onko-allgemeiner-leistungszustand-karnofsky-quantity.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Allgemeiner-Leistungszustand-Karnofsky",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-pr-onko-allgemeiner-leistungszustand-karnofsky.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-ASA",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-pr-onko-asa-klassifikation.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Operation-Urgency",
+    "path": "input/fsh/oBDS/13_OP/mii-ex-onko-operation-urgency.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Operation",
+    "path": "input/fsh/oBDS/13_OP/mii-pr-onko-operation.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Strahlentherapie",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-pr-onko-strahlentherapie-alt.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Strahlentherapie-Bestrahlung-Nuklearmedizin",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Strahlentherapie-Bestrahlung-Strahlentherapie",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Strahlentherapie",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-pr-onko-strahlentherapie.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-AdverseEvents",
+    "path": "input/fsh/oBDS/15_Nebenwirkung_ST_SYST/mii-pr-onko-nebenwirkung-adverseEvent.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Systemische_Therapie_Medikation",
+    "path": "input/fsh/oBDS/16_SystemischeTherapie/mii-pr-onko-systemische-therapie-medikation.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Systemische_Therapie",
+    "path": "input/fsh/oBDS/16_SystemischeTherapie/mii-pr-onko-systemische-therapie.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Verlauf",
+    "path": "input/fsh/oBDS/17_Verlauf/mii-pr-onko-verlauf.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Therapieplanung-Kombinationstherapie",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-pr-onko-therapiempfehlung-kombinationstherapie.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Therapieplanung-Medikation",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-pr-onko-therapiempfehlung-medikation.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Therapieplanung-Operation",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-pr-onko-therapiempfehlung-operation.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Therapieplanung-Tumorkonferenz",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-pr-onko-tumorkonferenz.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Tod",
+    "path": "input/fsh/oBDS/20_Tod/mii-pr-onko-tod.fsh"
+   },
+   {
+    "name": "FHIR-oBDSGenetischeVariante",
+    "path": "input/fsh/oBDS/23_GenetischeVariante/mii-pr-onko-genetische-variante.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Studienteilnahme",
+    "path": "input/fsh/oBDS/24_Studienteilnahme/mii-pr-onko-studienteilnahme.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Studienteilnahme",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-pr-onko-krk-abstand-circumferelle-resektionsebene.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-KRK-MRT-Mesorektale-Faszie",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-pr-onko-krk-abstand-mesorektale-fascie.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Studienteilnahme",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-pr-onko-krk-abstand-resektionsrand-aboral.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Studienteilnahme",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-pr-onko-krk-abstand-tumor-anokutanlinie.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-KRK-Anastomoseninsuffizienz",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-pr-onko-krk-anastomoseninsuffizienz.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Studienteilnahme",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-pr-onko-krk-operation.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-KRK-Specimen",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-pr-onko-krk-specimen.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-KRK-Stoma-Markierung",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-pr-onko-krk-stoma-markierung.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Melanom-Breslow-Tiefe",
+    "path": "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-pr-onko-melanom-breslow-tiefe.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Melanom-LDH",
+    "path": "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-pr-onko-melanom-ldh.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Melanom-Sicherheitsabstand",
+    "path": "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-pr-onko-melanom-sicherheitsabstand.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Melanom-Ulzeration",
+    "path": "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-pr-onko-melanom-ulzeration.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Studienteilnahme",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-pr-onko-mamma-menopause-status.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-MammaOperation",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-pr-onko-mamma-operation.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-PraeoperativeMarkierung",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-pr-onko-mamma-praeoperative-markierung-modalitaet.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Studienteilnahme",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-pr-onko-mamma-sozialdienst.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-MammaHer2neuStatus",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-pr-onko-mamma-status-her2neu.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Studienteilnahme",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-pr-onko-prostata-anzahl-positiver-stanzen.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Studienteilnahme",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-pr-onko-prostata-anzahl-stanzen.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Studienteilnahme",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-pr-onko-prostata-ca-befall-stanze.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Studienteilnahme",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-pr-onko-prostata-clavien-dindo.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Studienteilnahme",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-pr-onko-prostata-gleason-patterns.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-Studienteilnahme",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-pr-onko-prostata-gleason-score-and-grade.fsh"
+   },
+   {
+    "name": "FHIR-oBDS-ProstataPSA",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-pr-onko-prostata-psa.fsh"
+   },
+   {
+    "name": "OrganspezifischeZusatzmodule-LogicalModel",
+    "path": "input/fsh/oBDS/Organspezifische Module/mii-lm-onko-organspezifische-zusatzmodule.fsh"
+   },
+   {
+    "name": "oBDS-Mapping",
+    "path": "input/fsh/oBDS/Organspezifische Module/mii-lm-onko-organspezifische-zusatzmodule.fsh"
+   }
+  ],
+  "CodeSystem": [
+   {
+    "name": "MII_CS_Onko_Primaertumor_Diagnosesicherung",
+    "path": "input/fsh/oBDS/05_Diagnose/mii-cs-onko-primaertumor-diagnosesicherung.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_Grading",
+    "path": "input/fsh/oBDS/06_Histologie/mii-cs-onko-grading.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_TNM_Formel",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-cs-onko-tnm-formel.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_TNM_UICC",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-cs-onko-tnm-uicc.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_TNM_Version",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-cs-onko-tnm-version.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_Weitere_Klassifikationen_OBDS",
+    "path": "input/fsh/oBDS/09_Weitere_Klassifikationen/mii-cs-onko-weitere-klassifikationen-obds.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_Residualstatus",
+    "path": "input/fsh/oBDS/10_Residualstatus/mii-cs-onko-residualstatus.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_Fernmetastasen",
+    "path": "input/fsh/oBDS/11_Fernmetastasen/mii-cs-onko-fernmetastasen.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_Allgemeiner_Leistungszustand_ECOG",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-cs-onko-allgemeiner-leistungszustand-ecog.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_Allgemeiner_Leistungszustand_Karnofsky",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-cs-onko-allgemeiner-leistungszustand-karnofsky.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_ASA_oBDS",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-cs-onko-asa-obds.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_Operation_Komplikationen",
+    "path": "input/fsh/oBDS/13_OP/mii-cs-onko-operation-komplikation.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_Operation_Urgency",
+    "path": "input/fsh/oBDS/13_OP/mii-cs-onko-operation-urgency.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_Strahlentherapie_Applikationsart",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-cs-onko-strahlentherapie-applikationsart.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_Strahlentherapie_Boost",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-cs-onko-strahlentherapie-boost.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_Strahlentherapie_Strahlenart",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-cs-onko-strahlentherapie-strahlenart.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_Strahlentherapie_Zielgebiet_2014",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-cs-onko-strahlentherapie-zielgebiet-2014.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_Strahlentherapie_Zielgebiet",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-cs-onko-strahlentherapie-zielgebiet.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_Nebenwirkung_CTCAE_Grad",
+    "path": "input/fsh/oBDS/15_Nebenwirkung_ST_SYST/mii-cs-onko-nebenwirkung-ctcae-grad.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_Nebenwirkung_MedDRA_DE",
+    "path": "input/fsh/oBDS/15_Nebenwirkung_ST_SYST/mii-cs-onko-nebenwirkung-meddra-de.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_Systemische_Therapie_Protokolle",
+    "path": "input/fsh/oBDS/16_SystemischeTherapie/mii-cs-onko-systemische-therapie-protokolle.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_Verlauf_Fernmetastasen",
+    "path": "input/fsh/oBDS/17_Verlauf/mii-cs-onko-verlauf-fernmetastasen.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_Verlauf_Gesamtbeurteilung",
+    "path": "input/fsh/oBDS/17_Verlauf/mii-cs-onko-verlauf-gesamtbeurteilung.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_Verlauf_Lymphknoten",
+    "path": "input/fsh/oBDS/17_Verlauf/mii-cs-onko-verlauf-lymphknoten.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_Verlauf_Primaertumor",
+    "path": "input/fsh/oBDS/17_Verlauf/mii-cs-onko-verlauf-primaertumor.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_Therapieabweichung",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-cs-onko-therapieabweichung.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_Therapieplanung_Typ",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-cs-onko-therapieplanung-typ.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_Tod",
+    "path": "input/fsh/oBDS/20_Tod/mii-cs-onko-tod.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_Genetische_Variante_Auspraegung",
+    "path": "input/fsh/oBDS/23_GenetischeVariante/mii-cs-onko-genetische-variante-auspraegung.fsh"
+   },
+   {
+    "name": "Studienteilnahme",
+    "path": "input/fsh/oBDS/24_Studienteilnahme/mii-cs-onko-studienteilnahme.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_KRK_Anastomoseninsuffizienz",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-cs-onko-krk-anastomoseninsuffizienz.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_KRK_MRT_Mesorektale_Faszie_Status",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-cs-onko-krk-mrt-mesorektale-faszie-status.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_KRK_Operationstyp",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-cs-onko-krk-operationstyp.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_KRK_Stoma_Anzeichnung",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-cs-onko-krk-stoma-anzeichnung.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_KRK_TME_Qualitaet",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-cs-onko-krk-tme-qualitaet.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_Melanom_Ulzeration",
+    "path": "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-cs-onko-melanom-ulzeration.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_Mamma_Her2neu_Status_Leitlinie",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-cs-onko-mamma-her2neu-status-leitlinie.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_Mamma_Her2neu_Status_oBDS",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-cs-onko-mamma-her2neu-status-obds.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_Mamma_Rezeptorstatus_Leitlinie",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-cs-onko-mamma-rezeptorstatus-leitlinie.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_Prostata_Postsurgical_Complications",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-cs-onko-prostata-postsurgical-complications.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_Intention",
+    "path": "input/fsh/overlapping terminologies/mii-cs-onko-intention.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_Seitenlokalisation",
+    "path": "input/fsh/overlapping terminologies/mii-cs-onko-seitenlokalisation.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_Therapie_Ende_Grund",
+    "path": "input/fsh/overlapping terminologies/mii-cs-onko-therapie-ende-grund.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_Therapie_StellungZurOp",
+    "path": "input/fsh/overlapping terminologies/mii-cs-onko-therapie-stellungzurop.fsh"
+   },
+   {
+    "name": "MII_CS_Onko_Therapie_Typ",
+    "path": "input/fsh/overlapping terminologies/mii-cs-onko-therapie-typ.fsh"
+   },
+   {
+    "name": "RadElement",
+    "path": "input/fsh/overlapping terminologies/radelement.fsh"
+   }
+  ],
+  "Extension": [
+   {
+    "name": "MII_EX_Onko_Histology_Morphology_Behavior_ICDO3",
+    "path": "input/fsh/oBDS/05_Diagnose/mii-ex-onko-histology-morphology-behavior-icdo3.fsh"
+   },
+   {
+    "name": "MII_EX_Onko_Transformation_Von",
+    "path": "input/fsh/oBDS/05_Diagnose/mii-ex-onko-transformation-von.fsh"
+   },
+   {
+    "name": "MII_EX_Onko_TNM_a_Praefix",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-ex-onko-tnm-a-praefix.fsh"
+   },
+   {
+    "name": "MII_EX_Onko_TNM_cp_Praefix",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-ex-onko-tnm-cp-praefix.fsh"
+   },
+   {
+    "name": "MII_EX_Onko_TNM_ITC_Suffix",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-ex-onko-tnm-itc-suffix.fsh"
+   },
+   {
+    "name": "MII_EX_Onko_TNM_r_Praefix",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-ex-onko-tnm-r-praefix.fsh"
+   },
+   {
+    "name": "MII_EX_Onko_TNM_SN_Suffix",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-ex-onko-tnm-sn-suffix.fsh"
+   },
+   {
+    "name": "MII_EX_Onko_TNM_y_Praefix",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-ex-onko-tnm-y-praefix.fsh"
+   },
+   {
+    "name": "MII_EX_Onko_Operation_Intention",
+    "path": "input/fsh/oBDS/13_OP/mii-ex-onko-operation-intention.fsh"
+   },
+   {
+    "name": "MII_EX_Onko_Operation_Urgency",
+    "path": "input/fsh/oBDS/13_OP/mii-ex-onko-operation-urgency.fsh"
+   },
+   {
+    "name": "MII_EX_Onko_Strahlentherapie_Bestrahlung_Gesamtdosis",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-ex-onko-strahlentherapie-bestrahlung.fsh"
+   },
+   {
+    "name": "MII_EX_Onko_Strahlentherapie_Bestrahlung_Einzeldosis",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-ex-onko-strahlentherapie-bestrahlung.fsh"
+   },
+   {
+    "name": "MII_EX_Onko_Strahlentherapie_Bestrahlung_Boost",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-ex-onko-strahlentherapie-bestrahlung.fsh"
+   },
+   {
+    "name": "MII_EX_Onko_Strahlentherapie_Bestrahlung_Seitenlokalisation",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-ex-onko-strahlentherapie-bestrahlung.fsh"
+   },
+   {
+    "name": "MII_EX_Onko_Strahlentherapie_Intention",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-ex-onko-strahlentherapie-intention.fsh"
+   },
+   {
+    "name": "MII_EX_Onko_Strahlentherapie_StellungZurOp",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-ex-onko-strahlentherapie-stellungzurop.fsh"
+   },
+   {
+    "name": "MII_EX_Onko_Systemische_Therapie_Intention",
+    "path": "input/fsh/oBDS/16_SystemischeTherapie/mii-ex-onko-systemische-therapie-intention.fsh"
+   },
+   {
+    "name": "MII_EX_Onko_Systemische_Therapie_StellungZurOp",
+    "path": "input/fsh/oBDS/16_SystemischeTherapie/mii-ex-onko-systemische-therapie-stellungzurop.fsh"
+   }
+  ],
+  "Profile": [
+   {
+    "name": "MII_PR_Onko_Diagnose_Primaertumor",
+    "path": "input/fsh/oBDS/05_Diagnose/mii-pr-onko-diagnose-primaertumor.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Fruehere_Tumorerkrankung",
+    "path": "input/fsh/oBDS/05_Diagnose/mii-pr-onko-fruehere-tumorerkrankung.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Liste_Evidenz_Erstdiagnose",
+    "path": "input/fsh/oBDS/05_Diagnose/mii-pr-onko-liste-evidenz-erstdiagnose.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Anzahl_Befallene_Lymphknoten",
+    "path": "input/fsh/oBDS/06_Histologie/mii-pr-onko-anzahl-befallene-lymphknoten.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Anzahl_Befallene_Sentinel_Lymphknoten",
+    "path": "input/fsh/oBDS/06_Histologie/mii-pr-onko-anzahl-befallene-sentinel-lymphknoten.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Anzahl_Untersuchte_Lymphknoten",
+    "path": "input/fsh/oBDS/06_Histologie/mii-pr-onko-anzahl-untersuchte-lymphknoten.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Anzahl_Untersuchte_Sentinel_Lymphknoten",
+    "path": "input/fsh/oBDS/06_Histologie/mii-pr-onko-anzahl-untersuchte-sentinel-lymphknoten.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Befund",
+    "path": "input/fsh/oBDS/06_Histologie/mii-pr-onko-befund.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Grading",
+    "path": "input/fsh/oBDS/06_Histologie/mii-pr-onko-grading.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Histologie_ICDO3",
+    "path": "input/fsh/oBDS/06_Histologie/mii-pr-onko-histologie-icdo3.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Specimen",
+    "path": "input/fsh/oBDS/06_Histologie/mii-pr-onko-specimen.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Tumorgroesse",
+    "path": "input/fsh/oBDS/06_Histologie/mii-pr-onko-tumor-groesse.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_TNM_a_Symbol",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-a-symbol.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_TNM_Klassifikation_Synthetisiert",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-klassifikation-synthetisiert.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_TNM_Klassifikation",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-klassifikation.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_TNM_L_Kategorie",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-l-kategorie.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_TNM_M_Kategorie",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-m-kategorie.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_TNM_m_Symbol",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-m-symbol.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_TNM_N_Kategorie",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-n-kategorie.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_TNM_Pn_Kategorie",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-pn-kategorie.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_TNM_r_Symbol",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-r-symbol.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_TNM_S_Kategorie",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-s-kategorie.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_TNM_T_Kategorie",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-t-kategorie.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_TNM_V_Kategorie",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-v-kategorie.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_TNM_y_Symbol",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-pr-onko-tnm-y-symbol.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Weitere_Klassifikationen",
+    "path": "input/fsh/oBDS/09_Weitere_Klassifikationen/mii-pr-onko-weitere-klassifikationen.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Residualstatus",
+    "path": "input/fsh/oBDS/10_Residualstatus/mii-pr-onko-residualstatus.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Fernmetastasen",
+    "path": "input/fsh/oBDS/11_Fernmetastasen/mii-pr-onko-fernmetastasen.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Allgemeiner_Leistungszustand_ECOG_Quantity",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-pr-onko-allgemeiner-leistungszustand-ecog-quantity.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Allgemeiner_Leistungszustand_ECOG",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-pr-onko-allgemeiner-leistungszustand-ecog.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Allgemeiner_Leistungszustand_Karnofsky_Quantity",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-pr-onko-allgemeiner-leistungszustand-karnofsky-quantity.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Allgemeiner_Leistungszustand_Karnofsky",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-pr-onko-allgemeiner-leistungszustand-karnofsky.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_ASA_Klassifikation",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-pr-onko-asa-klassifikation.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Operation",
+    "path": "input/fsh/oBDS/13_OP/mii-pr-onko-operation.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Strahlentherapie_Bestrahlung_Nuklearmedizin",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Strahlentherapie_Bestrahlung_Strahlentherapie",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Strahlentherapie",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-pr-onko-strahlentherapie.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Nebenwirkung_Adverse_Event",
+    "path": "input/fsh/oBDS/15_Nebenwirkung_ST_SYST/mii-pr-onko-nebenwirkung-adverseEvent.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Systemische_Therapie_Medikation",
+    "path": "input/fsh/oBDS/16_SystemischeTherapie/mii-pr-onko-systemische-therapie-medikation.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Systemische_Therapie",
+    "path": "input/fsh/oBDS/16_SystemischeTherapie/mii-pr-onko-systemische-therapie.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Verlauf",
+    "path": "input/fsh/oBDS/17_Verlauf/mii-pr-onko-verlauf.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Therapieempfehlung_Kombinationstherapie",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-pr-onko-therapiempfehlung-kombinationstherapie.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Therapieempfehlung_Medikation",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-pr-onko-therapiempfehlung-medikation.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Therapieempfehlung_Operation",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-pr-onko-therapiempfehlung-operation.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Tumorkonferenz",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-pr-onko-tumorkonferenz.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Tod",
+    "path": "input/fsh/oBDS/20_Tod/mii-pr-onko-tod.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Genetische_Variante",
+    "path": "input/fsh/oBDS/23_GenetischeVariante/mii-pr-onko-genetische-variante.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Studienteilnahme",
+    "path": "input/fsh/oBDS/24_Studienteilnahme/mii-pr-onko-studienteilnahme.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_KRK_Abstand_Circumferelle_Resektionsebene",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-pr-onko-krk-abstand-circumferelle-resektionsebene.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_KRK_MRT_Mesorektale_Faszie",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-pr-onko-krk-abstand-mesorektale-fascie.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_KRK_Abstand_Aboral",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-pr-onko-krk-abstand-resektionsrand-aboral.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_KRK_Abstand_Anokutan",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-pr-onko-krk-abstand-tumor-anokutanlinie.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_KRK_Anastomoseninsuffizienz",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-pr-onko-krk-anastomoseninsuffizienz.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_KRK_Operation",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-pr-onko-krk-operation.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_KRK_Specimen",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-pr-onko-krk-specimen.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_KRK_Stoma_Markierung",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-pr-onko-krk-stoma-markierung.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Melanom_Breslow_Tiefe",
+    "path": "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-pr-onko-melanom-breslow-tiefe.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Melanom_Exzision",
+    "path": "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-pr-onko-melanom-exzision.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Melanom_LDH",
+    "path": "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-pr-onko-melanom-ldh.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Melanom_Sicherheitsabstand",
+    "path": "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-pr-onko-melanom-sicherheitsabstand.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Melanom_Ulzeration",
+    "path": "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-pr-onko-melanom-ulzeration.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Mamma_Menopausenstatus",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-pr-onko-mamma-menopause-status.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Mamma_Operation",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-pr-onko-mamma-operation.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Mamma_Praeoperative_Markierung",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-pr-onko-mamma-praeoperative-markierung-modalitaet.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Mamma_Rezeptorstatus_Estrogen",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-pr-onko-mamma-rezeptorstatus-estrogen.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Mamma_Rezeptorstatus_Progesteron",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-pr-onko-mamma-rezeptorstatus-progesteron.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Mamma_Sozialdienst",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-pr-onko-mamma-sozialdienst.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Mamma_Her2neu_Status",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-pr-onko-mamma-status-her2neu.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Prostata_Anzahl_Positive_Stanzen",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-pr-onko-prostata-anzahl-positiver-stanzen.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Prostata_Anzahl_Stanzen",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-pr-onko-prostata-anzahl-stanzen.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Prostata_CA_Befall_Stanze",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-pr-onko-prostata-ca-befall-stanze.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Prostata_Clavien_Dindo",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-pr-onko-prostata-clavien-dindo.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Prostata_Gleason_Pattern",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-pr-onko-prostata-gleason-patterns.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Prostata_Gleason_Grade_Group",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-pr-onko-prostata-gleason-score-and-grade.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Prostata_Gleason_Score_Gesamt",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-pr-onko-prostata-gleason-score-gesamt.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Prostata_Operation",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-pr-onko-prostata-operation.fsh"
+   },
+   {
+    "name": "MII_PR_Onko_Prostata_PSA",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-pr-onko-prostata-psa.fsh"
+   }
+  ],
+  "ValueSet": [
+   {
+    "name": "MII_VS_Onko_Primaertumor_Diagnosesicherung",
+    "path": "input/fsh/oBDS/05_Diagnose/mii-vs-onko-primaertumor-diagnosesicherung.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Grading",
+    "path": "input/fsh/oBDS/06_Histologie/mii-vs-onko-grading.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_TNM_cp_Praefix",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-cp-praefix.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_TNM_ITC_Suffix",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-itc-suffix.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_TNM_Klassifikation_Typ",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-klassifikation-typ.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_TNM_L_Kategorie_Werte",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-l-kategorie-werte.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_TNM_M_Kategorie_Werte_SCT",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-m-kategorie-werte-sct.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_TNM_M_Kategorie_Werte",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-m-kategorie-werte.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_TNM_M_Kategorie",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-m-kategorie.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_TNM_m_Symbol",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-m-symbol.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_TNM_N_Kategorie_Werte_SCT",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-n-kategorie-werte-sct.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_TNM_N_Kategorie_Werte",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-n-kategorie-werte.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_TNM_N_Kategorie",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-n-kategorie.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_TNM_Pn_Kategorie_Werte",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-pn-kategorie-werte.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_TNM_S_Kategorie_Werte",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-s-kategorie-werte.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_TNM_SN_Suffix",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-sn-suffix.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_TNM_T_Kategorie_Werte_SCT",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-t-kategorie-werte-sct.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_TNM_T_Kategorie_Werte",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-t-kategorie-werte.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_TNM_T_Kategorie",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-t-kategorie.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_TNM_UICC_Stadium",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-uicc-stadium.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_TNM_V_Kategorie_Werte",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-v-kategorie-werte.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_TNM_Version",
+    "path": "input/fsh/oBDS/08_TNMKlassifikation/mii-vs-onko-tnm-version.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Weitere_Klassifikationen_Auspraegungen",
+    "path": "input/fsh/oBDS/09_Weitere_Klassifikationen/mii-vs-onko-weitere-klassifikationen-auspraegungen.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Weitere_Klassifikationen",
+    "path": "input/fsh/oBDS/09_Weitere_Klassifikationen/mii-vs-onko-weitere-klassifikationen.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Gesamtbeurteilung_Residualstatus",
+    "path": "input/fsh/oBDS/10_Residualstatus/mii-vs-onko-gesamtbeurteilung-residualstatus.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Fernmetastasen",
+    "path": "input/fsh/oBDS/11_Fernmetastasen/mii-vs-onko-fernmetastasen.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Koerperstruktur_SCT",
+    "path": "input/fsh/oBDS/11_Fernmetastasen/mii-vs-onko-koerperstruktur-sct.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Allgemeiner_Leistungszustand_ECOG_LOINC",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-vs-onko-allgemeiner-leistungszustand-ecog-loinc.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Allgemeiner_Leistungszustand_ECOG",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-vs-onko-allgemeiner-leistungszustand-ecog.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Allgemeiner_Leistungszustand_Karnofsky_LOINC",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-vs-onko-allgemeiner-leistungszustand-karnofsky-loinc.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Allgemeiner_Leistungszustand_Karnofsky",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-vs-onko-allgemeiner-leistungszustand-karnofsky.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_ASA_LOINC",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-vs-onko-asa-loinc.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_ASA_oBDS",
+    "path": "input/fsh/oBDS/12_Allgemeiner_Leistungszustand/mii-vs-onko-asa-obds.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Beurteilung_Lokaler_Residualstatus",
+    "path": "input/fsh/oBDS/13_OP/mii-vs-onko-beurteilung-lokaler-residualstatus.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Operation_Intention",
+    "path": "input/fsh/oBDS/13_OP/mii-vs-onko-operation-intention.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Operation_Komplikation",
+    "path": "input/fsh/oBDS/13_OP/mii-vs-onko-operation-komplikation.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Operation_Urgency",
+    "path": "input/fsh/oBDS/13_OP/mii-vs-onko-operation-urgency.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Strahlentherapie_Applikationsart",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-vs-onko-strahlentherapie-applikationsart.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Strahlentherapie_Boosts",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-vs-onko-strahlentherapie-boost.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Strahlentherapie_Ende_Grund",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-vs-onko-strahlentherapie-ende-grund.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Strahlentherapie_Intention",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-vs-onko-strahlentherapie-intention.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Strahlentherapie_StellungZurOp",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-vs-onko-strahlentherapie-stellungzurop.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Strahlentherapie_Strahlenart",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-vs-onko-strahlentherapie-strahlenart.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Strahlentherapie_Strahlungseinheit",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-vs-onko-strahlentherapie-strahlungseinheit.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Strahlentherapie_Zielgebiet",
+    "path": "input/fsh/oBDS/14_Strahlentherapie/mii-vs-onko-strahlentherapie-zielgebiet.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Nebenwirkung_Art",
+    "path": "input/fsh/oBDS/15_Nebenwirkung_ST_SYST/mii-vs-onko-nebenwirkung-art.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Nebenwirkung_CTCAE_Grad",
+    "path": "input/fsh/oBDS/15_Nebenwirkung_ST_SYST/mii-vs-onko-nebenwirkung-ctcae-grad.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Systemische_Therapie_Art",
+    "path": "input/fsh/oBDS/16_SystemischeTherapie/mii-vs-onko-systemische-therapie-art.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Systemische_Therapie_Ende_Grund",
+    "path": "input/fsh/oBDS/16_SystemischeTherapie/mii-vs-onko-systemische-therapie-ende-grund.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Systemische_Therapie_Intention",
+    "path": "input/fsh/oBDS/16_SystemischeTherapie/mii-vs-onko-systemische-therapie-intention.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Systemische_Therapie_Protokolle",
+    "path": "input/fsh/oBDS/16_SystemischeTherapie/mii-vs-onko-systemische-therapie-protokolle.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Systemische_Therapie_StellungZurOp",
+    "path": "input/fsh/oBDS/16_SystemischeTherapie/mii-vs-onko-systemische-therapie-stellungzurop.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Systemische_Therapie_Substanzen_2018",
+    "path": "input/fsh/oBDS/16_SystemischeTherapie/mii-vs-onko-systemische-therapie-substanzen-2018.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Systemische_Therapie_Substanzen_2019",
+    "path": "input/fsh/oBDS/16_SystemischeTherapie/mii-vs-onko-systemische-therapie-substanzen-2019.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Systemische_Therapie_Substanzen_2020",
+    "path": "input/fsh/oBDS/16_SystemischeTherapie/mii-vs-onko-systemische-therapie-substanzen-2020.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Systemische_Therapie_Substanzen_2021",
+    "path": "input/fsh/oBDS/16_SystemischeTherapie/mii-vs-onko-systemische-therapie-substanzen-2021.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Systemische_Therapie_Substanzen_2022",
+    "path": "input/fsh/oBDS/16_SystemischeTherapie/mii-vs-onko-systemische-therapie-substanzen-2022.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Systemische_Therapie_Substanzen_2023",
+    "path": "input/fsh/oBDS/16_SystemischeTherapie/mii-vs-onko-systemische-therapie-substanzen-2023.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Systemische_Therapie_Substanzen_2024",
+    "path": "input/fsh/oBDS/16_SystemischeTherapie/mii-vs-onko-systemische-therapie-substanzen-2024.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Systemische_Therapie_Substanzen_2025",
+    "path": "input/fsh/oBDS/16_SystemischeTherapie/mii-vs-onko-systemische-therapie-substanzen-2025.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Systemische_Therapie_Substanzen_2026",
+    "path": "input/fsh/oBDS/16_SystemischeTherapie/mii-vs-onko-systemische-therapie-substanzen-2026.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Systemische_Therapie_Substanzen_UNII",
+    "path": "input/fsh/oBDS/16_SystemischeTherapie/mii-vs-onko-systemische-therapie-substanzen-unii.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Systemische_Therapie_Substanzen",
+    "path": "input/fsh/oBDS/16_SystemischeTherapie/mii-vs-onko-systemische-therapie-substanzen.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Verlauf_Fernmetastasen",
+    "path": "input/fsh/oBDS/17_Verlauf/mii-vs-onko-verlauf-fernmetastasen.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Verlauf_Gesamtbeurteilung",
+    "path": "input/fsh/oBDS/17_Verlauf/mii-vs-onko-verlauf-gesamtbeurteilung.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Verlauf_Lymphknoten",
+    "path": "input/fsh/oBDS/17_Verlauf/mii-vs-onko-verlauf-lymphknoten.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Verlauf_Primaertumor",
+    "path": "input/fsh/oBDS/17_Verlauf/mii-vs-onko-verlauf-primaertumor.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Therapieabweichung",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-vs-onko-therapieabweichung.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Therapieempfehlung_Typ",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-vs-onko-therapieempfehlung-typ.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Therapieplanung_Typ",
+    "path": "input/fsh/oBDS/18_19_Tumorkonferenz/mii-vs-onko-therapieplanung-typ.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Tod",
+    "path": "input/fsh/oBDS/20_Tod/mii-vs-onko-tod.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Genetische_Variante_Auspraegung",
+    "path": "input/fsh/oBDS/23_GenetischeVariante/mii-vs-onko-tod-genetische-variante-auspraegung.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Studienteilnahme",
+    "path": "input/fsh/oBDS/24_Studienteilnahme/mii-vs-onko-studienteilnahme.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_KRK_Abstand_Circumferelle_Resektionsrand",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-vs-onko-krk-abstand-circumferelle-resektionsebene.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_KRK_Abstand_Resektionslinie_Aboral",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-vs-onko-krk-abstand-resektionslinie-aboral.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_KRK_Anastomoseninsuffizienz",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-vs-onko-krk-anastomoseninsuffizienz.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_KRK_MRT_Mesorektale_Faszie_Status",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-vs-onko-krk-mrt-mesorektale-faszie-status.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_KRK_Stoma_Anzeichnung",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-vs-onko-krk-stoma-anzeichnung.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_KRK_Stoma_Status_Reason",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-vs-onko-krk-stoma-status-reason.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_KRK_TME_Qualitaet",
+    "path": "input/fsh/oBDS/Organspezifische Module/KolorektalesKarzinom/mii-vs-onko-krk-tme-qualitaet.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Melanom_Exzision_SNOMEDCT",
+    "path": "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-vs-onko-melanom-exzision-snomedct.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Melanom_LDH",
+    "path": "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-vs-onko-melanom-ldh.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Melanom_Ulzeration",
+    "path": "input/fsh/oBDS/Organspezifische Module/MalignesMelanom/mii-vs-onko-melanom-ulzeration.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Mamma_Faerbeintensitaet",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-vs-onko-mamma-faerbeintensitaet.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Mamma_Her2neu_IHC_Score",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-vs-onko-mamma-her2neu-ihc-score.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Mamma_Her2neu_Status_Leitlinie",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-vs-onko-mamma-her2neu-status-leitlinie.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Mamma_Her2neu_Status_oBDS",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-vs-onko-mamma-her2neu-status-obds.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Mamma_Intraoperatives_Imaging_Praeparat",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-vs-onko-mamma-intraoperatives-imaging-praeparat.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Mamma_ISH_Ergebnis",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-vs-onko-mamma-ish-ergebnis.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Mamma_Menopause_Status",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-vs-onko-mamma-menopause-status.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Mamma_Operation_OPS",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-vs-onko-mamma-operation-ops.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Mamma_Operation_SCT",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-vs-onko-mamma-operation-sct.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Mamma_Praeoperative_Markierung_Modalitaet",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-vs-onko-mamma-praeoperative-markierung-modalitaet.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Mamma_Rezeptorstatus_Leitlinie",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-vs-onko-mamma-rezeptorstatus-leitlinie.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Mamma_Rezeptorstatus_oBDS",
+    "path": "input/fsh/oBDS/Organspezifische Module/Mamma/mii-vs-onko-mamma-rezeptorstatus-obds.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Prostata_Clavien_Dindo",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-vs-onko-prostata-clavien-dindo.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Prostata_Gleason_PrimarySecondaryTertiary",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-vs-onko-prostata-gleason-patterns.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Prostata_Gleason_Patterns",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-vs-onko-prostata-gleason-patterns.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Prostata_Gleason_Score",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-vs-onko-prostata-gleason-score-and-grade.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Prostata_Gleason_Score_Gesamt",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-vs-onko-prostata-gleason-score-gesamt.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Prostata_Operation_SNOMEDCT",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-vs-onko-prostata-operation-snomedct.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Prostata_Postsurgical_Complications",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-vs-onko-prostata-postsurgical-complications.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Prostata_PSA_LOINC",
+    "path": "input/fsh/oBDS/Organspezifische Module/Prostata/mii-vs-onko-prostata-psa-codes.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_ICD10_Meldepflichtige_Tumoren",
+    "path": "input/fsh/overlapping terminologies/mii-vs-onko-icd10-meldepflichtige-tumoren.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_ICDO3_Morphologie_2014",
+    "path": "input/fsh/overlapping terminologies/mii-vs-onko-icdo3-morphologie-2014.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_ICDO3_Morphologie_2019",
+    "path": "input/fsh/overlapping terminologies/mii-vs-onko-icdo3-morphologie-2019.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_ICDO3_Morphologie",
+    "path": "input/fsh/overlapping terminologies/mii-vs-onko-icdo3-morphologie.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_ICDO3_Topographie_2014",
+    "path": "input/fsh/overlapping terminologies/mii-vs-onko-icdo3-topographie-2014.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_ICDO3_Topographie_2019",
+    "path": "input/fsh/overlapping terminologies/mii-vs-onko-icdo3-topographie-2019.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_ICDO3_Topographie",
+    "path": "input/fsh/overlapping terminologies/mii-vs-onko-icdo3-topographie.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_KDL_Dokumentklassen",
+    "path": "input/fsh/overlapping terminologies/mii-vs-onko-kdl-dokumentklassen.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_OPS_Nuklearmedizin",
+    "path": "input/fsh/overlapping terminologies/mii-vs-onko-ops-nuklearmedizin.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_OPS_Strahlentherapie",
+    "path": "input/fsh/overlapping terminologies/mii-vs-onko-ops-strahlentherapie.fsh"
+   },
+   {
+    "name": "MII_VS_Onko_Seitenlokalisation",
+    "path": "input/fsh/overlapping terminologies/mii-vs-onko-seitenlokalisation.fsh"
+   }
+  ]
+ },
+ "pages": [
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/Abweichungen-zum-oBDS.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/AnwendungsflleInformationsmodell/BeschreibungvonSzenarienfrdieAnwendungderModule.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/AnwendungsflleInformationsmodell/Datenstzeinkl.Beschreibungen.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/AnwendungsflleInformationsmodell/Index.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/AnwendungsflleInformationsmodell/UML.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/BeschreibungModulOnko.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/BezugZuInternationalenStandards.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/BezugZuNationalenStandards.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/Index.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/KDL-Dokumentklassen.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/KontextimGesamtprojektBezgezuanderenModulen.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/Referenzen.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/Release-Notes.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/Biomarker-Tumormarker-LOINC.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/CapabilityStatement.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Allgemeiner-Leistungszustand/ASA-Klassifikation-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Allgemeiner-Leistungszustand/Allgemeiner-Leistungszustand-ECOG-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Allgemeiner-Leistungszustand/Allgemeiner-Leistungszustand-Karnofsky-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Allgemeiner-Leistungszustand/Index.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Diagnose/Diagnose-Condition.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Diagnose/Erstdiagnose-Evidenz-List.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Diagnose/Extension-ICD-O-3-Morphologie.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Diagnose/Fruehere-Tumorerkrankung-Condition.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Diagnose/Index.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/FHIR-Profil--Ressourcentyp.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Fernmetastasen-Observation/Fernmetastasen-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Fernmetastasen-Observation/Index.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Genetische-Variante/Genetische-Variante-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Genetische-Variante/Index.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Genetische-Variante/MolGen-Abbildung-Variantentypen.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Histologie/Grading-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Histologie/Histologiebefund-DiagnosticReport.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Histologie/Index.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Histologie/Lymphknotenuntersuchung-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Histologie/Specimen-Specimen.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Histologie/Tumorgroesse-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Histologie/Verlaufshistologie-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Index.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Nebenwirkung/Index.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Nebenwirkung/Nebenwirkung-AdverseEvent.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Operation/Extension-Intention.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Operation/Extension-Urgency.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Operation/Index.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Operation/Operation-Procedure.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/Index.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/KolorektalesKarzinom/Index.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/KolorektalesKarzinom/KRK-Abstand-Circumferelle-Resektionsebene-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/KolorektalesKarzinom/KRK-Abstand-Resektionsrand-Aboral-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/KolorektalesKarzinom/KRK-Abstand-Tumor-Anokutanlinie-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/KolorektalesKarzinom/KRK-Anastomoseninsuffizienz-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/KolorektalesKarzinom/KRK-Bundle-Example.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/KolorektalesKarzinom/KRK-MRT-Mesorektale-Faszie-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/KolorektalesKarzinom/KRK-Operation-Procedure.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/KolorektalesKarzinom/KRK-Specimen.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/KolorektalesKarzinom/KRK-Stoma-Markierung-Procedure.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/MalignesMelanom/Index.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/MalignesMelanom/Melanom-Breslow-Tiefe-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/MalignesMelanom/Melanom-Bundle-Example.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/MalignesMelanom/Melanom-LDH-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/MalignesMelanom/Melanom-Sicherheitsabstand-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/MalignesMelanom/Melanom-Ulzeration-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/Mamma/Index.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/Mamma/Mamma-Bundle-Example.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/Mamma/Mamma-Estrogen-Rezeptorstatus-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/Mamma/Mamma-Her2neu-Status-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/Mamma/Mamma-Menopause-Status-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/Mamma/Mamma-Operation-Procedure.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/Mamma/Mamma-Praeoperative-Markierung-Procedure.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/Mamma/Mamma-Progesteron-Rezeptorstatus-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/Prostata/Index.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/Prostata/Prostata-Anzahl-Positive-Stanzen-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/Prostata/Prostata-Anzahl-Stanzen-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/Prostata/Prostata-Clavien-Dindo-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/Prostata/Prostata-Gleason-Patterns-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/Prostata/Prostata-Gleason-Score-Grade-Group-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/Prostata/Prostata-Karzinom-Befall-Stanze-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/Prostata/Prostata-PSA-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Residualstatus/Index.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Residualstatus/Residualstatus-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Strahlentherapie/Bestrahlungstherapie-Procedure.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Strahlentherapie/Extension-Bestrahlung.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Strahlentherapie/Extension-Intention.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Strahlentherapie/Extension-Stellung.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Strahlentherapie/Index.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Strahlentherapie/NuklearmedizinischeTherapie-Procedure.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Strahlentherapie/Strahlentherapie-Procedure.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Studienteilnahme/Studienteilnahme-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Systemische-Therapie/Index.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Systemische-Therapie/Systemische-Therapie-MedicationStatement.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Systemische-Therapie/Systemische-Therapie-Procedure.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Systemische-Therapie/Systemische-Therapie-Terminologien.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/TNM-Klassifikation/Extension-TNM-Prefix-c-p.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/TNM-Klassifikation/Index.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/TNM-Klassifikation/TNM-Breast-Cancer-Journey-Example.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/TNM-Klassifikation/TNM-Kategorie-M-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/TNM-Klassifikation/TNM-Kategorie-N-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/TNM-Klassifikation/TNM-Kategorie-Pn-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/TNM-Klassifikation/TNM-Kategorie-S-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/TNM-Klassifikation/TNM-Kategorie-T-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/TNM-Klassifikation/TNM-Kategorie-V-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/TNM-Klassifikation/TNM-Kategorie-l-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/TNM-Klassifikation/TNM-Klassifikation-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/TNM-Klassifikation/TNM-Symbol-a-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/TNM-Klassifikation/TNM-Symbol-m-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/TNM-Klassifikation/TNM-Symbol-r-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/TNM-Klassifikation/TNM-Symbol-y-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Tod/Index.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Tod/Tod-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Tumorkonferenz/Index.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Tumorkonferenz/Therapieempfehlung-Kombinationstherapie-RequestGroup.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Tumorkonferenz/Therapieempfehlung-Medikation-MedicationRequest.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Tumorkonferenz/Therapieempfehlung-Operation-ServiceRequest.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Tumorkonferenz/Tumorkonferenz-CarePlan.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Tumorkonferenz/Tumorkonferenz-Detailed-Recommendations-CarePlan.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Verlauf/Index.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Verlauf/Verlauf-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Weitere-Klassifikationen/Index.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Weitere-Klassifikationen/Weitere-Klassifikationen-Observation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Weitere-Klassifikationen/Weitere-Klassifikationen-Terminologien.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/ICD-O-Terminologie.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/Index.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/Profile-Beziehungen-und-Referenzen.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/Profile-Inhalt-und-Vererbung.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/QA-Validierung.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/Terminologien.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/Toronto-Klassifikation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/Verwendung-von-Extensions.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Allgemeiner-Leistungszustand.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Genetische-Variante-Auspraegung.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Grading.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Index.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Intention.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Lokalisation-Fernmetastasen.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Nebenwirkung.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Operationskomplikation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Primaertumor-Diagnosesicherung.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Seitenlokalisation.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Strahlentherapie-Applikationsart.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Strahlentherapie-Boost.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Strahlentherapie-Strahlenart.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Strahlentherapie-Strahleneinheit.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Strahlentherapie-Zielgebiet.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Studienteilnahme.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/TNM-klinisch.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/TNM-pathologisch.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Therapie-Ende-Grund.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Therapie-Stellung.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Therapieabweichung.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Therapieplanung.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Therapietyp.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Tod.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Verlauf-Fernmetastasen.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Verlauf-Gesamtbeurteilung.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Verlauf-Lymphknoten.page.md",
+  "implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Verlauf-Primaertumor.page.md"
+ ]
+}
