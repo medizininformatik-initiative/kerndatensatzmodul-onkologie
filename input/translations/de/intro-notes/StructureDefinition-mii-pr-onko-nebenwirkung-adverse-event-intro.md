@@ -23,51 +23,6 @@ Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensa
 > Die oBDS-Mappings sind in der Artefaktdarstellung des Profils hinterlegt: [MII PR Onkologie Nebenwirkung von Strahlentherapie und systemische Therapie](StructureDefinition-mii-pr-onko-nebenwirkung-adverse-event.html).
 {: .ig-highlight .ig-highlight-grey}
 
----
-
-**Suchparameter**
-
-Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombination:
-
-1. Der Suchparameter ```_id``` MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/AdverseEvent?_id=1234```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
-
-2. Der Suchparameter ```_profile``` MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/AdverseEvent?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
-
-3. Der Suchparameter ```event``` MUSS unterstützt werden:
-    Beispiele:
-
-    ```GET [base]/AdverseEvent?event=https://www.meddra.org|10016256```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "event" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
-
-4. Der Suchparameter ```seriousness``` MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/AdverseEvent?seriousness=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad|4```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "seriousness" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
-
-5. Der Suchparameter ```suspectEntity.instance``` MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/AdverseEvent?suspectEntity.instance=Patient/example```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "severity" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#all).
-
 **Beispiele**
 
 [mii-pr-onko-nebenwirkung-0](AdverseEvent-mii-pr-onko-nebenwirkung-0.html)

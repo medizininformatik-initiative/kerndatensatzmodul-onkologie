@@ -45,61 +45,6 @@ Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensa
 > Die oBDS-Mappings sind in der Artefaktdarstellung des Profils hinterlegt: [MII PR Onkologie KRK MRT/CT Abstand Mesorektale Faszie](StructureDefinition-mii-pr-onko-krk-mrt-mesorektale-faszie.html).
 {: .ig-highlight .ig-highlight-grey}
 
----
-
-**Suchparameter**
-
-Folgende Suchparameter sind für das KRK-MRT-Mesorektale-Faszie Profil relevant, auch in Kombination:
-
-1. Der Suchparameter "_id" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Observation?_id=12345```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
-
-1. Der Suchparameter "_profile" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-mesorektale-fascie```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
-
-1. Der Suchparameter "code" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Observation?code=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-mrt-mesorektale-faszie-status|befunden```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Observation.code" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).
-
-1. Der Suchparameter "subject" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Observation?subject=Patient/test```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Observation.subject" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
-
-1. Der Suchparameter "focus" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Observation?focus=Condition/primaertumor```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Observation.focus" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
-
-1. Der Suchparameter "value-quantity" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Observation?value-quantity=1.5|http://unitsofmeasure.org|mm```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Observation.value[x]" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Quantity Search"](http://hl7.org/fhir/R4/search.html#quantity).
-
----
 **Beispiele**
 
 [mii-exa-onko-krk-abstand-mesorektale-fascie](Observation-mii-exa-onko-krk-abstand-mesorektale-fascie.html)

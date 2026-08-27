@@ -37,29 +37,6 @@ Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensa
 > The oBDS mappings are recorded in the artefact view of this profile: [MII PR Onkologie Prostata Anzahl Stanzen](StructureDefinition-mii-pr-onko-prostate-anzahl-stanzen.html).
 {: .ig-highlight .ig-highlight-grey}
 
----
-
-**Search parameters**
-
-The following search parameters are relevant for the prostate biopsy core count profile:
-
-1. The search parameter "_id" MUST be supported:
-
-    ```GET [base]/Observation?_id=12345```
-
-1. The search parameter "_profile" MUST be supported:
-
-    ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-anzahl-stanzen```
-
-1. The search parameter "code" MUST be supported:
-
-    ```GET [base]/Observation?code=http://loinc.org|33747-0```
-
-1. The search parameter "value-quantity" MUST be supported:
-
-    ```GET [base]/Observation?value-quantity=gt10```
-
----
 **Examples**
 
 [mii-exa-onko-prostata-anzahl-stanzen-1](Observation-mii-exa-onko-prostata-anzahl-stanzen-1.html)

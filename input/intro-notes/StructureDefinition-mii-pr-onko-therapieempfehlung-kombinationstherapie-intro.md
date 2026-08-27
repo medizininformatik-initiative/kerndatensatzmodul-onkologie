@@ -134,25 +134,6 @@ Mapping [Uniform Oncological Base Dataset (oBDS)](https://basisdatensatz.de/basi
 > The oBDS mappings are recorded in the artefact view of this profile: [MII PR Onkologie Therapieempfehlung Kombinationstherapie](StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie.html).
 {: .ig-highlight .ig-highlight-grey}
 
----
-
-**Search parameters**
-
-1. The search parameter ```_id``` MUST be supported:
-    ```GET [base]/RequestGroup?_id=1234```
-
-2. The search parameter "_profile" MUST be supported:
-    ```GET [base]/RequestGroup?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie```
-
-3. The search parameter "subject" MUST be supported:
-    ```GET [base]/RequestGroup?subject=Patient/example```
-
-4. The search parameter "code" SHOULD be supported:
-    ```GET [base]/RequestGroup?code=ZS```
-
-5. The search parameter "based-on" SHOULD be supported:
-    ```GET [base]/RequestGroup?based-on=CarePlan/tumorkonferenz-example```
-
 **Examples**
 
 <!-- TODO:REVIEW Example instances matched by content: "class recommendation" -> CDK4/6 class protocol, "specific choices" -> HER2 alternatives. Please confirm clinically. -->

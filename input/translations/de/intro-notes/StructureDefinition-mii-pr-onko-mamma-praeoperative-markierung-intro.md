@@ -67,69 +67,6 @@ Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensa
 > Die oBDS-Mappings sind in der Artefaktdarstellung des Profils hinterlegt: [MII PR Onkologie Präoperative Markierung Mamma](StructureDefinition-mii-pr-onko-mamma-praeoperative-markierung.html).
 {: .ig-highlight .ig-highlight-grey}
 
----
-
-**Suchparameter**
-
-Folgende Suchparameter sind für das Mamma-Präoperative Markierung Profil relevant, auch in Kombination:
-
-1. Der Suchparameter "_id" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Procedure?_id=12345```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
-
-1. Der Suchparameter "_profile" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Procedure?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-praeoperative-markierung```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
-
-1. Der Suchparameter "code" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Procedure?code=http://snomed.info/sct|392021009```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.code" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).
-
-1. Der Suchparameter "subject" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Procedure?subject=Patient/test```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.subject" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
-
-1. Der Suchparameter "patient" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Procedure?patient=Patient/test```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.subject" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
-
-1. Der Suchparameter "part-of" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Procedure?part-of=Procedure/hauptoperation```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.partOf" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
-
-1. Der Suchparameter "date" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Procedure?date=2024-01-15```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Procedure.performed[x]" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Date Search"](http://hl7.org/fhir/R4/search.html#date).
-
----
 **Beispiele**
 
 [mii-exa-onko-mamma-praeoperative-markierung-1](Procedure-mii-exa-onko-mamma-praeoperative-markierung-1.html)

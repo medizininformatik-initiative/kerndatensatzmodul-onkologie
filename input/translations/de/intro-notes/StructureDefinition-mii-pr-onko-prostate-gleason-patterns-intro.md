@@ -46,49 +46,6 @@ Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensa
 > Die oBDS-Mappings sind in der Artefaktdarstellung des Profils hinterlegt: [MII PR Onkologie Prostata Gleason Pattern](StructureDefinition-mii-pr-onko-prostate-gleason-patterns.html).
 {: .ig-highlight .ig-highlight-grey}
 
----
-
-**Suchparameter**
-
-Folgende Suchparameter sind für das Prostata-Gleason-Patterns Profil relevant, auch in Kombination:
-
-1. Der Suchparameter "_id" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Observation?_id=12345```
-
-1. Der Suchparameter "_profile" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns```
-
-1. Der Suchparameter "code" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Observation?code=http://loinc.org|44641-9```
-
-1. Der Suchparameter "subject" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Observation?subject=Patient/test```
-
-1. Der Suchparameter "focus" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Observation?focus=Condition/primaertumor```
-
-1. Der Suchparameter "value-concept" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Observation?value-concept=http://snomed.info/sct|369771007```
-
----
 **Beispiele**
 
 [mii-exa-onko-prostata-gleason-pattern-primary-1](Observation-mii-exa-onko-prostata-gleason-pattern-primary-1.html)
