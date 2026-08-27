@@ -1,4 +1,3 @@
-
 ### Inhalt
 
 Das **Her2neu Status Profil** dokumentiert den diagnostischen Her2neu Status einer pathologisch untersuchten Probe beim Mammakarzinom. Her2neu (auch HER2 oder ERBB2) ist ein wichtiger prognostischer und prädiktiver Biomarker, der über die Eignung für eine anti-HER2-gerichtete Therapie entscheidet.

@@ -1,4 +1,3 @@
-
 ### Inhalt
 Dieses Profil beschreibt den Abstand zur mesorektalen Faszie bei bildgebenden Verfahren (MRT/CT) beim Kolorektalen Karzinom gemäß oBDS KR2. Diese präoperative Bildgebungsbeurteilung ist essentiell für die Therapieplanung bei Rektumkarzinomen und die Einschätzung der lokalen Tumorausbreitung.
 

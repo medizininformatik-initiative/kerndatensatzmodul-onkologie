@@ -1,4 +1,3 @@
-
 ### Inhalt
 Dieses Profil beschreibt die Breslow-Tumordicke beim Malignen Melanom der Haut gemäß oBDS MM2 "Breslow". Die Breslow-Tiefe ist der wichtigste prognostische Faktor beim primären Melanom und beschreibt die vertikale Tumordicke in Millimetern von der Granularschicht der Epidermis bis zur tiefsten Stelle der Tumorinvasion.
 

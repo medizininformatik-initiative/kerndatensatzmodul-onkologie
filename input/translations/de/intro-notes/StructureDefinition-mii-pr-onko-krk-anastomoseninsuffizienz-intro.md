@@ -1,4 +1,3 @@
-
 ### Inhalt
 Dieses Profil beschreibt das Auftreten einer Anastomoseninsuffizienz beim Kolorektalen Karzinom gemäß oBDS KR8. Die Anastomoseninsuffizienz ist eine wichtige postoperative Komplikation nach kolorektalen Resektionen und hat Einfluss auf die Prognose und weitere Therapieplanung.
 

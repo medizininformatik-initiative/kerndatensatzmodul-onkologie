@@ -1,4 +1,3 @@
-
 ### Inhalt
 Dieses Profil beschreibt die präoperative Stomamarkierung beim Kolorektalen Karzinom gemäß oBDS KR7. Die präoperative Stomamarkierung ist ein wichtiger Schritt in der Vorbereitung auf operative Eingriffe, bei denen eine Stomaanlage erforderlich werden könnte, und trägt wesentlich zur Lebensqualität der Patienten bei.
 

@@ -1,4 +1,3 @@
-
 ### Inhalt
 Dieses Profil beschreibt die Ulzeration beim Malignen Melanom der Haut gemäß oBDS MM4. Die Ulzeration ist ein wichtiges histopathologisches Kriterium beim Melanom und beschreibt das Vorliegen einer Ulzeration der Epidermis über dem Melanom. Das Vorhandensein einer Ulzeration ist ein unabhängiger prognostischer Faktor und wird bei der TNM-Klassifikation (insbesondere pT1b) benötigt.
 
