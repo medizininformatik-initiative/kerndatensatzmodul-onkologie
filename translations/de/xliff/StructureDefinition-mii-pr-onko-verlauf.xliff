@@ -1,0 +1,211 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="en" target-language="de" id="StructureDefinition-mii-pr-onko-verlauf" original="Resource StructureDefinition-mii-pr-onko-verlauf" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="StructureDefinition-mii-pr-onko-verlauf" resname="StructureDefinition.name">
+             <notes>
+               <note id="n1">A natural language name identifying the structure definition. This name should be usable as an identifier for the module by machine processing applications such as code generation.</note>
+             </notes>
+        <source>MII_PR_Onko_Verlauf</source>
+        <target>MII_PR_Onko_Verlauf</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-onko-verlauf" resname="StructureDefinition.title">
+             <notes>
+               <note id="n1">A short, descriptive, user-friendly title for the structure definition.</note>
+             </notes>
+        <source>MII PR Onkologie Verlauf</source>
+        <target>MII PR Onkologie Verlauf</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-onko-verlauf" resname="StructureDefinition.publisher">
+             <notes>
+               <note id="n1">The name of the organization or individual responsible for the release and ongoing maintenance of the structure definition.</note>
+             </notes>
+        <source>Medizininformatik Initiative</source>
+        <target>Medizininformatik Initiative</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-onko-verlauf" resname="StructureDefinition.contact.name">
+             <notes>
+               <note id="n1">The name of an individual to contact.</note>
+             </notes>
+        <source>Medizininformatik Initiative</source>
+        <target>Medizininformatik Initiative</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-onko-verlauf" resname="StructureDefinition.mapping.oBDS/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>Mapping FHIR zu oBDS</source>
+        <target>Mapping FHIR zu oBDS</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-onko-verlauf" resname="StructureDefinition.mapping.workflow/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>Workflow Pattern</source>
+        <target>Workflow Pattern</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-onko-verlauf" resname="StructureDefinition.mapping.sct-concept/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>SNOMED CT Concept Domain Binding</source>
+        <target>SNOMED CT Concept Domain Binding</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-onko-verlauf" resname="StructureDefinition.mapping.v2/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>HL7 v2 Mapping</source>
+        <target>HL7 v2 Mapping</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-onko-verlauf" resname="StructureDefinition.mapping.w5/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>FiveWs Pattern Mapping</source>
+        <target>FiveWs Pattern Mapping</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-onko-verlauf" resname="StructureDefinition.mapping.sct-attr/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>SNOMED CT Attribute Binding</source>
+        <target>SNOMED CT Attribute Binding</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-onko-verlauf" resname="StructureDefinition.element.Observation.effective[x]:effectiveDateTime/comment">
+             <notes>
+               <note id="n1">Explanatory notes and implementation guidance about the data element, including notes about how to use the data properly, exceptions to proper use, etc. (Note: The text you are reading is specified in ElementDefinition.comment).</note>
+             </notes>
+        <source>In der vorliegenden ersten Version des Moduls Onkologie ist das letzte (= späteste) Datum der verlinkten Observations anzugeben, entsprechend Punkt 17.1 des oBDS 2021. Langfristig ist zu überlegen, hier über eine effectivePeriod eine Datumsrange abzubilden. </source>
+        <target>In der vorliegenden ersten Version des Moduls Onkologie ist das letzte (= späteste) Datum der verlinkten Observations anzugeben, entsprechend Punkt 17.1 des oBDS 2021. Langfristig ist zu überlegen, hier über eine effectivePeriod eine Datumsrange abzubilden. </target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-onko-verlauf" resname="StructureDefinition.element.Observation.effective[x]:effectiveDateTime/mapping/oBDS/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>17.1</source>
+        <target>17.1</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-onko-verlauf" resname="StructureDefinition.element.Observation.effective[x]:effectiveDateTime/mapping/oBDS/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Datum, an dem die letzte Untersuchung durchgeführt wurde, die zur Einschätzung des Tumorstatus geführt hat.</source>
+        <target>Datum, an dem die letzte Untersuchung durchgeführt wurde, die zur Einschätzung des Tumorstatus geführt hat.</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-onko-verlauf" resname="StructureDefinition.element.Observation.value[x]:valueCodeableConcept.coding/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Gesamtbeurteilung im Verlauf</source>
+        <target>Gesamtbeurteilung im Verlauf</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-onko-verlauf" resname="StructureDefinition.element.Observation.value[x]:valueCodeableConcept.coding/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Gesamtbeurteilung im Verlauf gemäß 17.2 oBDS 2021.</source>
+        <target>Gesamtbeurteilung im Verlauf gemäß 17.2 oBDS 2021.</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-onko-verlauf" resname="StructureDefinition.element.Observation.value[x]:valueCodeableConcept.coding.code/mapping/oBDS/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>17.2</source>
+        <target>17.2</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-onko-verlauf" resname="StructureDefinition.element.Observation.value[x]:valueCodeableConcept.coding.code/mapping/oBDS/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Gesamtbeurteilung des Tumorstatus</source>
+        <target>Gesamtbeurteilung des Tumorstatus</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-onko-verlauf" resname="StructureDefinition.element.Observation.component:Tumor_Verlauf.code.coding.code/mapping/oBDS/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>17.3</source>
+        <target>17.3</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-onko-verlauf" resname="StructureDefinition.element.Observation.component:Tumor_Verlauf.code.coding.code/mapping/oBDS/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Tumorstatus Primärtumor</source>
+        <target>Tumorstatus Primärtumor</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-onko-verlauf" resname="StructureDefinition.element.Observation.component:Tumor_Verlauf.value[x].coding/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Gesamtbeurteilung Primärtumor im Verlauf</source>
+        <target>Gesamtbeurteilung Primärtumor im Verlauf</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-onko-verlauf" resname="StructureDefinition.element.Observation.component:Tumor_Verlauf.value[x].coding/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Gesamtbeurteilung des Primärtumors im Verlauf gemäß 17.3 oBDS 2021.</source>
+        <target>Gesamtbeurteilung des Primärtumors im Verlauf gemäß 17.3 oBDS 2021.</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-onko-verlauf" resname="StructureDefinition.element.Observation.component:Lymphknoten_Verlauf.code.coding.code/mapping/oBDS/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>17.4</source>
+        <target>17.4</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-onko-verlauf" resname="StructureDefinition.element.Observation.component:Lymphknoten_Verlauf.code.coding.code/mapping/oBDS/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Tumorstatus Lymphknoten</source>
+        <target>Tumorstatus Lymphknoten</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-onko-verlauf" resname="StructureDefinition.element.Observation.component:Lymphknoten_Verlauf.value[x].coding/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Gesamtbeurteilung Lymphknoten im Verlauf</source>
+        <target>Gesamtbeurteilung Lymphknoten im Verlauf</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-onko-verlauf" resname="StructureDefinition.element.Observation.component:Lymphknoten_Verlauf.value[x].coding/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Gesamtbeurteilung der Lymphknoteninfiltration im Verlauf gemäß 17.4 oBDS 2021.</source>
+        <target>Gesamtbeurteilung der Lymphknoteninfiltration im Verlauf gemäß 17.4 oBDS 2021.</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-onko-verlauf" resname="StructureDefinition.element.Observation.component:Fernmetastasen_Verlauf.code.coding.code/mapping/oBDS/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>17.5</source>
+        <target>17.5</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-onko-verlauf" resname="StructureDefinition.element.Observation.component:Fernmetastasen_Verlauf.code.coding.code/mapping/oBDS/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Tumorstatus Fernmetastasen</source>
+        <target>Tumorstatus Fernmetastasen</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-onko-verlauf" resname="StructureDefinition.element.Observation.component:Fernmetastasen_Verlauf.value[x].coding/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Gesamtbeurteilung Fernmetastasen im Verlauf</source>
+        <target>Gesamtbeurteilung Fernmetastasen im Verlauf</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-onko-verlauf" resname="StructureDefinition.element.Observation.component:Fernmetastasen_Verlauf.value[x].coding/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Gesamtbeurteilung von Fernmetastasen im Verlauf gemäß 17.5 oBDS 2021.</source>
+        <target>Gesamtbeurteilung von Fernmetastasen im Verlauf gemäß 17.5 oBDS 2021.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

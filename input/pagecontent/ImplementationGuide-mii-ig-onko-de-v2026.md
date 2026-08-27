@@ -15,8 +15,8 @@
 This ImplementationGuide resource defines the technical details of this
 publication, including dependencies and publishing parameters.
 
-- [XML](../ImplementationGuide-mii-ig-onko.xml)
-- [JSON](../ImplementationGuide-mii-ig-onko.json)
+- [XML](../ImplementationGuide-mii-ig-onko-de-v2026.xml)
+- [JSON](../ImplementationGuide-mii-ig-onko-de-v2026.json)
 
 ### Cross Version Analysis
 
