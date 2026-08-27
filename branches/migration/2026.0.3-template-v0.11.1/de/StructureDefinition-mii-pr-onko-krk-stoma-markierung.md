@@ -177,7 +177,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_KRK_Stoma_Markierung",
   "title" : "MII PR Onkologie KRK Stoma-Markierung",
   "status" : "active",
-  "date" : "2026-08-27T11:29:36+00:00",
+  "date" : "2026-08-27T12:06:00+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

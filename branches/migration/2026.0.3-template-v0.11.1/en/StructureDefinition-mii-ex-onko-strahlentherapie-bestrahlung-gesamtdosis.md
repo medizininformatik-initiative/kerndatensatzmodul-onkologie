@@ -45,7 +45,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-onko-strah
   "name" : "MII_EX_Onko_Strahlentherapie_Bestrahlung_Gesamtdosis",
   "title" : "MII EX Onko Strahlentherapie Bestrahlung Gesamtdosis",
   "status" : "active",
-  "date" : "2026-08-27T11:29:36+00:00",
+  "date" : "2026-08-27T12:06:00+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
