@@ -49,11 +49,11 @@ were specified for the MTB module and adopted in version v2026.
 
 The following overview shows the references between the resources:
 
-![Overview of profile relationships](MII_Onko_UML_Relations_v1.svg)
+<object type="image/svg+xml" data="MII_Onko_UML_Relations_v1.svg" style="max-width:100%;"><img src="MII_Onko_UML_Relations_v1.svg" alt="Overview of profile relationships" style="max-width:100%;"/></object>
 
 #### Envisaged future integration of the Biobank, MolGen report and pathology report modules
 
-![Future module integration](MII_Onko_UML_Relations_v2.svg)
+<object type="image/svg+xml" data="MII_Onko_UML_Relations_v2.svg" style="max-width:100%;"><img src="MII_Onko_UML_Relations_v2.svg" alt="Future module integration" style="max-width:100%;"/></object>
 
 ### oBDS-SNOMED CT mapping: methodology
 

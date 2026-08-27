@@ -50,11 +50,11 @@ für das MTB-Modul ausspezifiziert und in die Version v2026 übernommen.
 
 Die folgende Übersicht stellt die Referenzen der Ressourcen untereinander dar:
 
-![Übersicht der Profil-Beziehungen](MII_Onko_UML_Relations_v1.svg)
+<object type="image/svg+xml" data="MII_Onko_UML_Relations_v1.svg" style="max-width:100%;"><img src="MII_Onko_UML_Relations_v1.svg" alt="Übersicht der Profil-Beziehungen" style="max-width:100%;"/></object>
 
 #### Zukünftig angedachte Einbindung der Module Biobank, MolGen-Befundbericht und Pathologiebefund
 
-![Zukünftige Modul-Einbindung](MII_Onko_UML_Relations_v2.svg)
+<object type="image/svg+xml" data="MII_Onko_UML_Relations_v2.svg" style="max-width:100%;"><img src="MII_Onko_UML_Relations_v2.svg" alt="Zukünftige Modul-Einbindung" style="max-width:100%;"/></object>
 
 ### oBDS-SNOMED-CT-Mapping: Methodik
 
