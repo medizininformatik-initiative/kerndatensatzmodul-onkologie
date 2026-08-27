@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-tumorkonferenz-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-tumorkonferenz-intro.md (de) -->
 
 This profile describes the tumor board and the therapy recommendations for both traditional and molecular tumor board workflows.
 The data fields have been part of the oBDS since version 2021 and are captured in two different modules. Since all the fields involved can be represented very well via the FHIR CarePlan resource, all the tumor board and therapy recommendation fields were combined in the tumor board profile.

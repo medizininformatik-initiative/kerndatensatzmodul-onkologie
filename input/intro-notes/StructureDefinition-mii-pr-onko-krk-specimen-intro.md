@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-krk-specimen-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-krk-specimen-intro.md (de) -->
 
 ### Content
 This profile describes tissue samples (Specimens) in colorectal cancer that are taken as part of surgical interventions. It covers both the characterization of the tissue and specific pathological aspects such as TME quality (Total Mesorectal Excision) in rectal cancer.

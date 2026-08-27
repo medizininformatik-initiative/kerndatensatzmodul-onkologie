@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-tod-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-tod-intro.md (de) -->
 
 This profile describes whether and when a patient died of tumor-related causes. It is part of the oBDS cancer registry dataset.
 

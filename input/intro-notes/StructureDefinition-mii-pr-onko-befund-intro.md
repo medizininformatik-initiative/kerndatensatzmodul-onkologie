@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-befund-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-befund-intro.md (de) -->
 
 This profile describes a pathology report in the oncology context.
 

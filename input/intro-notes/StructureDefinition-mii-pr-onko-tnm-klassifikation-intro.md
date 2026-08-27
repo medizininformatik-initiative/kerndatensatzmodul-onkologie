@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-tnm-klassifikation-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-tnm-klassifikation-intro.md (de) -->
 This profile is the grouping profile for a TNM classification in oncology.
 
 The profile carries the reference date and serves as the anchor point for all further individual TNM observations at that point in time. The element `hasMember` contains references to all associated individual TNM observations.

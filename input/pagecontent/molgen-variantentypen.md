@@ -1,7 +1,6 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/pagecontent/molgen-variantentypen.md) -->
+<!-- TODO:REVIEW machine translation of source page molgen-variantentypen.md (de) -->
 <!-- markdownlint-disable MD041 -->
 <!-- Source: MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Genetische-Variante/MolGen-Abbildung-Variantentypen.page.md.
-     German original: input/translations/de/pagecontent/molgen-variantentypen.md —
      keep both language versions in step. -->
 
 ### Purpose

@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-nebenwirkung-adverse-event-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-nebenwirkung-adverse-event-intro.md (de) -->
 
 This profile describes the adverse event of radiotherapy and systemic therapy in oncology.
 

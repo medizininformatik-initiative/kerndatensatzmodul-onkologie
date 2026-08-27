@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-melanom-sicherheitsabstand-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-melanom-sicherheitsabstand-intro.md (de) -->
 
 ### Content
 This profile describes the minimal safety margin to the primary tumor in malignant melanoma according to oBDS MM1. This measurement is performed after definitive surgical intervention and indicates the minimal distance of the melanoma to the nearest lateral surgical resection margin in the excision specimen. A value of 0 corresponds to a local R1 or R2 resection status.

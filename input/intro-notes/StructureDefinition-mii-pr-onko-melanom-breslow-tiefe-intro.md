@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-melanom-breslow-tiefe-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-melanom-breslow-tiefe-intro.md (de) -->
 
 ### Content
 This profile describes the Breslow tumor thickness in malignant melanoma of the skin according to oBDS MM2 "Breslow". Breslow depth is the most important prognostic factor for primary melanoma and describes the vertical tumor thickness in millimeters from the granular layer of the epidermis to the deepest point of tumor invasion.

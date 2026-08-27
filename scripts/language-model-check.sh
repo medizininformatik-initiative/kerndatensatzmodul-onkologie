@@ -49,7 +49,14 @@ PATTERNS=(
 # Reviewed exceptions: "<path>|<substring of the offending line>", one per line.
 # A module author writing their own prose can record a legitimate hit here
 # without blanking a whole file from the scan.
-ALLOW=''
+ALLOW='skills/mii-ig-migration/SKILL.md|narrative is German while the target
+skills/mii-ig-migration/references/migration-spec.md|previously German-default
+skills/mii-ig-migration/references/migration-spec.md|German source, English default
+skills/mii-ig-migration/references/migration-spec.md|of the German source
+.claude/skills/mii-ig-migration/SKILL.md|narrative is German while the target
+.claude/skills/mii-ig-migration/references/migration-spec.md|previously German-default
+.claude/skills/mii-ig-migration/references/migration-spec.md|German source, English default
+.claude/skills/mii-ig-migration/references/migration-spec.md|of the German source'
 
 args=()
 for pattern in "${PATTERNS[@]}"; do

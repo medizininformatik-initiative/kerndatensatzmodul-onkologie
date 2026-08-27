@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-specimen-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-specimen-intro.md (de) -->
 This profile describes a biospecimen in the context of oncology.
 
 The two data points of an individual biospecimen that are relevant for the oBDS are:

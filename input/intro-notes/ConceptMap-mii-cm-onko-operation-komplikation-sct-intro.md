@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/ConceptMap-mii-cm-onko-operation-komplikation-sct-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page ConceptMap-mii-cm-onko-operation-komplikation-sct-intro.md (de) -->
 The complications are assigned directly at the time of surgery. If a code
 cannot be represented with this list, the complication should be coded using
 ICD-10.

@@ -1,7 +1,6 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/pagecontent/anwendungsfaelle-informationsmodell.md) -->
+<!-- TODO:REVIEW machine translation of source page anwendungsfaelle-informationsmodell.md (de) -->
 <!-- markdownlint-disable MD041 -->
 <!-- Source: MIIIGModulOnkologie/AnwendungsflleInformationsmodell/Index.page.md.
-     German original: input/translations/de/pagecontent/anwendungsfaelle-informationsmodell.md —
      keep both language versions in step. -->
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/AnwendungsflleInformationsmodell/Index.page.md gate=B -->

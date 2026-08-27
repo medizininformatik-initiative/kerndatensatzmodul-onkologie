@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-prostate-anzahl-positive-stanzen-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-prostate-anzahl-positive-stanzen-intro.md (de) -->
 
 ### Content
 This profile describes the number of tumor-positive biopsy cores in the prostate biopsy. This information is decisive for risk assessment and therapy planning, as it reflects the extent of tumor spread within the prostate.

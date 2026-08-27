@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-asa-klassifikation-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-asa-klassifikation-intro.md (de) -->
 ### Content
 This profile describes the ASA classification (American Society of Anesthesiologists Physical Status Classification) in oncology. The ASA classification primarily serves preoperative risk assessment and is used to estimate the general physical condition of patients before surgical interventions. It can, however, also be used as a comorbidity index for systemic therapy decisions.
 

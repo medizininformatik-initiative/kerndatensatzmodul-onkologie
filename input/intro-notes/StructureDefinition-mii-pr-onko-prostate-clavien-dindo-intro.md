@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-prostate-clavien-dindo-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-prostate-clavien-dindo-intro.md (de) -->
 
 ### Content
 This profile describes the Clavien-Dindo score for prostatectomy in oncology. The Clavien-Dindo classification is a standardized system for assessing postoperative complications based on their severity and the therapy required.

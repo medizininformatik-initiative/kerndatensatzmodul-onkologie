@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-allgemeiner-leistungszustand-karnofsky-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-allgemeiner-leistungszustand-karnofsky-intro.md (de) -->
 ### Context
 This profile describes the general performance status of a patient in oncology according to Karnofsky.
 

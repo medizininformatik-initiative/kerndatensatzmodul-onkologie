@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/ConceptMap-mii-cm-onko-genetische-variante-auspraegung-sct-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page ConceptMap-mii-cm-onko-genetische-variante-auspraegung-sct-intro.md (de) -->
 <!-- TODO:REVIEW The first sentence breaks off incompletely in the source page ("... to the cancer registries"); carried over verbatim. -->
 The expression of the genetic variant. The assessment of the expression is, together with a free-text description of the variant, to the cancer registries
 

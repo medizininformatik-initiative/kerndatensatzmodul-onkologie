@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/ConceptMap-mii-cm-onko-strahlentherapie-zielgebiet-sct-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page ConceptMap-mii-cm-onko-strahlentherapie-zielgebiet-sct-intro.md (de) -->
 The anatomical structures can be represented well via SNOMED. For some data fields the side is to be specified.
 
 For many data points, fully defined SNOMED concepts for left and right already exist. For the sake of simplicity, mainly the non-side-specific concepts are listed here.

@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD041 -->
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/pagecontent/examples.md) -->
+<!-- TODO:REVIEW machine translation of source page examples.md (de) -->
 
 This page describes the example instances of the Oncology module. The
 complete, automatically generated list of all examples can be found in the

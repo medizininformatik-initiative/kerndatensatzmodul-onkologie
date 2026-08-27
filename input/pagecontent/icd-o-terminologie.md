@@ -1,7 +1,6 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/pagecontent/icd-o-terminologie.md) -->
+<!-- TODO:REVIEW machine translation of source page icd-o-terminologie.md (de) -->
 <!-- markdownlint-disable MD041 -->
 <!-- Source: MIIIGModulOnkologie/TechnischeImplementierung/ICD-O-Terminologie.page.md.
-     German original: input/translations/de/pagecontent/icd-o-terminologie.md —
      keep both language versions in step. -->
 
 ### Overview and Governance

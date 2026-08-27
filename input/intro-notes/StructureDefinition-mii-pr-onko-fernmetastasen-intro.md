@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-fernmetastasen-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-fernmetastasen-intro.md (de) -->
 This profile describes distant metastases as they are recorded within the oBDS in oncology for reporting to the cancer registries. The following data fields are to be given individually for each metastasis:
 * date of detection
 * localisation based on the oBDS-specific coding

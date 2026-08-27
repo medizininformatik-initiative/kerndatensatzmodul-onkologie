@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-ex-onko-histology-morphology-behavior-icdo3-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-ex-onko-histology-morphology-behavior-icdo3-intro.md (de) -->
 <!-- TODO:REVIEW The source page carried the heading "Extensions von Operation"; it does not match this extension (presumed copy-paste error) and was therefore not carried over. -->
 
 - This extension replaces the former ICD-O-3 slice in the MII diagnosis.

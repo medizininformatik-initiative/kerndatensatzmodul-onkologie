@@ -1,7 +1,6 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/pagecontent/tumormarker-loinc.md) -->
+<!-- TODO:REVIEW machine translation of source page tumormarker-loinc.md (de) -->
 <!-- markdownlint-disable MD041 -->
 <!-- Source: MIIIGModulOnkologie/TechnischeImplementierung/Biomarker-Tumormarker-LOINC.page.md.
-     German original: input/translations/de/pagecontent/tumormarker-loinc.md —
      keep both language versions in step. -->
 
 ### Context and Purpose

@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-tumorgroesse-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-tumorgroesse-intro.md (de) -->
 This profile describes the tumour size in oncology, in particular in the context of breast carcinoma.
 In the breast module of the oBDS the tumour size is given as the maximum diameter of the tumour in its largest dimension, in millimetres. The profile covers the oBDS breast fields **M7** (tumour size of the invasive carcinoma) and **M8** (tumour size of the DCIS). The distinction between invasive and DCIS results from the linked Condition resource.
 

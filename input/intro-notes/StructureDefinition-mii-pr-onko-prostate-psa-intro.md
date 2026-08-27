@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-prostate-psa-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-prostate-psa-intro.md (de) -->
 
 ### Content
 This profile describes the PSA value (prostate-specific antigen) in patients with prostate carcinoma in oncology. The PSA value is a key tumor marker for diagnostics, follow-up, and therapy monitoring in prostate carcinoma.

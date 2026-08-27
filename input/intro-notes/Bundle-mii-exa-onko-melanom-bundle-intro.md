@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/Bundle-mii-exa-onko-melanom-bundle-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page Bundle-mii-exa-onko-melanom-bundle-intro.md (de) -->
 
 ### Content
 

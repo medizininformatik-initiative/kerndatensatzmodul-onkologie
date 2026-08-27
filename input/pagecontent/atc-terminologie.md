@@ -1,7 +1,6 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/pagecontent/atc-terminologie.md) -->
+<!-- TODO:REVIEW machine translation of source page atc-terminologie.md (de) -->
 <!-- markdownlint-disable MD041 -->
 <!-- Source: MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Systemische-Therapie/Systemische-Therapie-Terminologien.page.md.
-     German original: input/translations/de/pagecontent/atc-terminologie.md —
      keep both language versions in step. -->
 
 ### Overview

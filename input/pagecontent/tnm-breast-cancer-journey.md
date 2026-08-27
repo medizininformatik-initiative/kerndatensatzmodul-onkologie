@@ -1,7 +1,6 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/pagecontent/tnm-breast-cancer-journey.md) -->
+<!-- TODO:REVIEW machine translation of source page tnm-breast-cancer-journey.md (de) -->
 <!-- markdownlint-disable MD041 -->
 <!-- Source: MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/TNM-Klassifikation/TNM-Breast-Cancer-Journey-Example.page.md.
-     German original: input/translations/de/pagecontent/tnm-breast-cancer-journey.md —
      keep both language versions in step. -->
 
 ### Overview

@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-residualstatus-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-residualstatus-intro.md (de) -->
 This profile describes the overall status of the tumour residue after (surgical) therapy in oncology.
 
 Depending on the procedures performed, the oBDS data set provides for either a local or a global determination of the residual status.

@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD041 -->
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/pagecontent/logical-models.md) -->
+<!-- TODO:REVIEW machine translation of source page logical-models.md (de) -->
 
 ### Logical Models
 

@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-systemische-therapie-medikation-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-systemische-therapie-medikation-intro.md (de) -->
 
 This profile describes the specific medications documented for the oBDS within the context of systemic therapy.
 

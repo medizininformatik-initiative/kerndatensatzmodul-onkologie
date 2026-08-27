@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-melanom-ldh-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-melanom-ldh-intro.md (de) -->
 
 ### Content
 This profile describes the lactate dehydrogenase (LDH) laboratory values in malignant melanoma according to oBDS "LDH". LDH is an important prognostic marker in metastatic melanoma and is used to assess disease course and prognosis. Elevated LDH values correlate with a worse prognosis.

@@ -1,7 +1,6 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/pagecontent/datasets-and-descriptions.md) -->
+<!-- TODO:REVIEW machine translation of source page datasets-and-descriptions.md (de) -->
 <!-- markdownlint-disable MD041 -->
 <!-- Source: MIIIGModulOnkologie/AnwendungsflleInformationsmodell/Datenstzeinkl.Beschreibungen.page.md.
-     German original: input/translations/de/pagecontent/datasets-and-descriptions.md —
      keep both language versions in step. -->
 
 The dataset is based on the oncological base dataset (oBDS, see references).

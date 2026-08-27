@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/ConceptMap-mii-cm-onko-grading-sct-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page ConceptMap-mii-cm-onko-grading-sct-intro.md (de) -->
 Grading is part of the histology module.
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Grading.page.md gate=B -->

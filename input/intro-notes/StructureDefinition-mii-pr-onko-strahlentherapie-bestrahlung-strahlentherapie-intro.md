@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie-intro.md (de) -->
 
 This profile describes individual irradiations within radiotherapy in oncology. This profile describes radiotherapy in the narrower sense; brachytherapies and systemic nuclear medicine procedures are represented via the Nuclear Medicine Therapies profile.
 The radiotherapy profile for oncology is based on the MII procedure module.

@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-therapieempfehlung-operation-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-therapieempfehlung-operation-intro.md (de) -->
 
 This profile describes a **surgical therapy recommendation** in the context of the tumor board. It is based on FHIR ServiceRequest and enables the structured recording of surgical therapy recommendations.
 

@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD041 -->
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/pagecontent/search-parameters.md) -->
+<!-- TODO:REVIEW machine translation of source page search-parameters.md (de) -->
 
 ### Search parameters
 

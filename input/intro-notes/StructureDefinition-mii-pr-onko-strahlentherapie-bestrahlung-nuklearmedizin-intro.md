@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin-intro.md (de) -->
 
 This profile describes "individual irradiations" of nuclear medicine therapy in oncology. This profile is intended to cover both brachytherapies and the systemic administration of radioactive metabolites or similar. The profile for oncology is based on the procedure profile of the MII base module Procedure. Each brachytherapeutic procedure or systemic nuclear medicine therapy refers to a parent radiotherapy procedure, which contains overarching information such as intention and outcome.
 

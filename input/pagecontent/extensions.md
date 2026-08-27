@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD041 -->
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/pagecontent/extensions.md) -->
+<!-- TODO:REVIEW machine translation of source page extensions.md (de) -->
 
 The complete, automatically generated list of this module's extensions can be
 found in the [artifact overview](artifacts.html). This page documents the

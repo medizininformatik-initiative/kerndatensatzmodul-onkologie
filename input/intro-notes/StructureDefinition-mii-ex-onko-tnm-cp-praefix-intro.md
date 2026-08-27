@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-ex-onko-tnm-cp-praefix-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-ex-onko-tnm-cp-praefix-intro.md (de) -->
 
 The c/p/u prefix is used in the TNM classification to indicate the method of classification:
 

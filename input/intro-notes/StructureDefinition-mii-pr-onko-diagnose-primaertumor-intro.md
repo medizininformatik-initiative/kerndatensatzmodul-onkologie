@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-diagnose-primaertumor-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-diagnose-primaertumor-intro.md (de) -->
 ### Content
 This profile describes a diagnosis in oncology. It is based on the MII KDS module Diagnose.
 

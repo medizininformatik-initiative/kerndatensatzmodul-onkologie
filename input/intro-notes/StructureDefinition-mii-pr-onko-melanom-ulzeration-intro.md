@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-melanom-ulzeration-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-melanom-ulzeration-intro.md (de) -->
 
 ### Content
 This profile describes ulceration in malignant melanoma of the skin according to oBDS MM4. Ulceration is an important histopathological criterion in melanoma and describes the presence of ulceration of the epidermis over the melanoma. The presence of ulceration is an independent prognostic factor and is required for TNM classification (in particular pT1b).

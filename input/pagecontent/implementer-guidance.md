@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD041 -->
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/pagecontent/implementer-guidance.md) -->
+<!-- TODO:REVIEW machine translation of source page implementer-guidance.md (de) -->
 
 ### Context in the overall project — relationships to other modules
 

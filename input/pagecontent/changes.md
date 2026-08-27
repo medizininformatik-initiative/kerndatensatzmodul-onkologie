@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD041 -->
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/pagecontent/changes.md); pre-v2027 release history is summarized here and fully documented in the German edition. -->
+<!-- TODO:REVIEW machine translation of source page changes.md (de) (input/translations/de/pagecontent/changes.md); pre-v2027 release history is summarized here and fully documented in the German edition. -->
 
 All changes to this module are listed here. The complete, detailed release
 history is maintained in the German edition of this page; the current release

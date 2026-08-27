@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-tnm-n-kategorie-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-tnm-n-kategorie-intro.md (de) -->
 This profile describes the N category of the TNM classification. The N category codes the absence or presence of regional lymph node metastases and is coded entity-specifically.
 
 > **UICC prefixes y/r/a (modifierExtension):** The prefixes y (during/after multimodal

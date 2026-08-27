@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-krk-abstand-circumferelle-resektionsebene-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-krk-abstand-circumferelle-resektionsebene-intro.md (de) -->
 
 ### Content
 This profile describes the minimum distance of the tumor margin to the circumferential resection plane in colorectal carcinoma according to oBDS KR3. This measurement is an important prognostic factor and is determined both macroscopically and microscopically. A small circumferential resection margin is associated with an increased risk of local recurrence.

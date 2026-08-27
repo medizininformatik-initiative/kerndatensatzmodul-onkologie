@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-krk-operation-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-krk-operation-intro.md (de) -->
 
 ### Content
 This profile describes surgical procedures for colorectal cancer according to various oBDS criteria. It covers both the type of surgical procedure and specific colorectal operation types and their quality characteristics, such as TME quality (total mesorectal excision).

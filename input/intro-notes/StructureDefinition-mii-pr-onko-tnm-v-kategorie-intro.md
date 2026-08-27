@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-tnm-v-kategorie-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-tnm-v-kategorie-intro.md (de) -->
 This profile describes the V category of the TNM classification. The V category codes microscopic or macroscopic venous invasion.
 
 ---

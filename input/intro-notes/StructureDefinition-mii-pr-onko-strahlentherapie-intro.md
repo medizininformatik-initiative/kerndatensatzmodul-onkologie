@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-strahlentherapie-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-strahlentherapie-intro.md (de) -->
 
 This profile describes a radiotherapy in oncology. The radiotherapy profile for oncology is based on the MII procedure module. It thus adopts the mandatory specification of OPS as the coding for the type of procedure. Since the details of the procedure are recorded in the individual radiation elements, the OPS for radiotherapy should be coded here.
 

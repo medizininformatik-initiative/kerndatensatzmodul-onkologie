@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-weitere-klassifikationen-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-weitere-klassifikationen-intro.md (de) -->
 This profile describes further tumour classifications besides TNM.
 
 ### Delimitation: staging, grading and risk assessment

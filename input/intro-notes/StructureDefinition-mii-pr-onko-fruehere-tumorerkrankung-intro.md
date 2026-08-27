@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-fruehere-tumorerkrankung-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-fruehere-tumorerkrankung-intro.md (de) -->
 ### Content
 This profile describes previous tumour diseases that were diagnosed or treated at an earlier point in time according to the patient history. It is based on the FHIR Condition resource, because historical anamnestic data are often only available as free text.
 

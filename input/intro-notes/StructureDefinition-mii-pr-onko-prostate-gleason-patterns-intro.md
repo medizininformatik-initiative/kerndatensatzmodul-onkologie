@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-prostate-gleason-patterns-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-prostate-gleason-patterns-intro.md (de) -->
 
 ### Content
 This profile describes the individual Gleason patterns (primary, secondary, tertiary) in the histopathological grading of prostate carcinoma. The Gleason patterns form the basis for calculating the Gleason score and are decisive for prognosis assessment.

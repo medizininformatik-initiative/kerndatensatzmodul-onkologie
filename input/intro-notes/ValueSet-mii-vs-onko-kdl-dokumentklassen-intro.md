@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/ValueSet-mii-vs-onko-kdl-dokumentklassen-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page ValueSet-mii-vs-onko-kdl-dokumentklassen-intro.md (de) -->
 <!-- TODO:REVIEW KDL class designations and MII module names are official German labels and were kept verbatim; only the surrounding prose and the table headers were translated. -->
 Oncological care produces documents across all specialties — pathology reports, imaging reports,
 therapy protocols, tumour board minutes, registry notifications. At the document level

@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/ConceptMap-mii-cm-onko-therapie-stellung-sct-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page ConceptMap-mii-cm-onko-therapie-stellung-sct-intro.md (de) -->
 The relation to a surgical therapy is recorded both for radiotherapy and for systemic therapy.
 
 <!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Therapie-Stellung.page.md gate=B -->

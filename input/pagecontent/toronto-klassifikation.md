@@ -1,7 +1,6 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/pagecontent/toronto-klassifikation.md) -->
+<!-- TODO:REVIEW machine translation of source page toronto-klassifikation.md (de) -->
 <!-- markdownlint-disable MD041 -->
 <!-- Source: MIIIGModulOnkologie/TechnischeImplementierung/Toronto-Klassifikation.page.md.
-     German original: input/translations/de/pagecontent/toronto-klassifikation.md —
      keep both language versions in step. -->
 
 ### Context and Purpose

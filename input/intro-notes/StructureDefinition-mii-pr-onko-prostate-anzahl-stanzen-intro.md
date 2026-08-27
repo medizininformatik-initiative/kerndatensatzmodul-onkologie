@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-prostate-anzahl-stanzen-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-prostate-anzahl-stanzen-intro.md (de) -->
 
 ### Content
 This profile describes the total number of biopsy cores taken during prostate biopsy. This information is important for assessing the representativeness of the biopsy and interpreting the findings.

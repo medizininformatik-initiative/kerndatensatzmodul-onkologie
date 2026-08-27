@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD041 -->
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/pagecontent/capability-statements.md) -->
+<!-- TODO:REVIEW machine translation of source page capability-statements.md (de) -->
 
 ### CapabilityStatement
 

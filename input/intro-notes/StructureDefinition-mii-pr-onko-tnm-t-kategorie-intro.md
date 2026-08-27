@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-tnm-t-kategorie-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-tnm-t-kategorie-intro.md (de) -->
 This profile describes the T category of the TNM classification. The T category codes the tumour size and is coded entity-specifically.
 
 > **UICC prefixes y/r/a (modifierExtension):** The prefixes y (during/after multimodal

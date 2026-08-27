@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/Bundle-mii-exa-onko-mamma-example-bundle-1-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page Bundle-mii-exa-onko-mamma-example-bundle-1-intro.md (de) -->
 
 ### Content
 

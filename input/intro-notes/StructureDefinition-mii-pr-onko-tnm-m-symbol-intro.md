@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-tnm-m-symbol-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-tnm-m-symbol-intro.md (de) -->
 This profile represents the m symbol of a TNM classification.
 The m symbol indicates the presence of multiple tumours.
 

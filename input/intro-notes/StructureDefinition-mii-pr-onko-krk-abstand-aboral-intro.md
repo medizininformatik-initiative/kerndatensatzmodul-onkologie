@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-krk-abstand-aboral-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-krk-abstand-aboral-intro.md (de) -->
 
 ### Content
 This profile describes the minimum distance of the aboral tumor margin to the aboral resection margin in colorectal carcinoma according to oBDS KR2. This measurement is crucial for assessing the R classification and the risk of local recurrence in rectal carcinomas.

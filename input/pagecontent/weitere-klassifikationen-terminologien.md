@@ -1,7 +1,6 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/pagecontent/weitere-klassifikationen-terminologien.md) -->
+<!-- TODO:REVIEW machine translation of source page weitere-klassifikationen-terminologien.md (de) -->
 <!-- markdownlint-disable MD041 -->
 <!-- Source: MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Weitere-Klassifikationen/Weitere-Klassifikationen-Terminologien.page.md.
-     German original: input/translations/de/pagecontent/weitere-klassifikationen-terminologien.md —
      keep both language versions in step. -->
 
 This page documents the terminologies for other classifications in oncology, including haematological and organ-specific staging systems.

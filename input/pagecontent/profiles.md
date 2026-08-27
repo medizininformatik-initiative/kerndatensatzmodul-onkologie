@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD041 -->
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/pagecontent/profiles.md) -->
+<!-- TODO:REVIEW machine translation of source page profiles.md (de) -->
 
 The complete, automatically generated list of all profiles of this module can
 be found in the [artifact overview](artifacts.html); the domain documentation

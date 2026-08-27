@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD041 -->
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/pagecontent/uml-diagrams.md) -->
+<!-- TODO:REVIEW machine translation of source page uml-diagrams.md (de) -->
 
 The following UML diagram shows the implemented content and cardinalities of
 the oBDS as realized by the CDS module Oncology.

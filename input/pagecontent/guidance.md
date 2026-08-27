@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD041 -->
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/pagecontent/guidance.md) -->
+<!-- TODO:REVIEW machine translation of source page guidance.md (de) -->
 
 ### Deviations from the oBDS
 

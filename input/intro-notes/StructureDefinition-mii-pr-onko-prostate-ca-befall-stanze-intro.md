@@ -1,4 +1,4 @@
-<!-- TODO:REVIEW machine translation of the German original (input/translations/de/intro-notes/StructureDefinition-mii-pr-onko-prostate-ca-befall-stanze-intro.md) -->
+<!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-prostate-ca-befall-stanze-intro.md (de) -->
 ### Content
 
 This profile describes the percentage involvement of the most affected core
