@@ -32,11 +32,7 @@ Das KDS-Modul Onkologie bildet darüber hinaus die Grundlage für das [KDS-Modul
 
 Die folgende Übersicht stellt die Referenzen der Ressourcen untereinander dar:
 
-![](MII_Onko_UML_Relations_v1.svg)
-
 #### Zukünftig angedachte Einbindung der Module Biobank, MolGen-Befundbericht und Pathologiebefund
-
-![](MII_Onko_UML_Relations_v2.svg)
 
 ### oBDS-SNOMED-CT-Mapping: Methodik
 

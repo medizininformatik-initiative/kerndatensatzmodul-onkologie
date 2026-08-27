@@ -121,7 +121,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-strah
   "name" : "MII_PR_Onko_Strahlentherapie_Bestrahlung_Strahlentherapie",
   "title" : "MII PR Onkologie Strahlentherapie",
   "status" : "active",
-  "date" : "2026-08-27T11:11:54+00:00",
+  "date" : "2026-08-27T11:29:36+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

@@ -32,11 +32,7 @@ The CDS module Oncology is furthermore the basis for the [CDS module Molecular T
 
 The following overview shows the references between the resources:
 
-![](MII_Onko_UML_Relations_v1.svg)
-
 #### Envisaged future integration of the Biobank, MolGen report and pathology report modules
-
-![](MII_Onko_UML_Relations_v2.svg)
 
 ### oBDS-SNOMED CT mapping: methodology
 
