@@ -1,0 +1,104 @@
+Dieses Profil beschreibt weitere Tumorklassifikationen neben TNM.
+
+### Abgrenzung: Staging, Grading und Risikobewertung
+
+Die "Weiteren Klassifikationen" umfassen verschiedene Arten von Bewertungssystemen:
+
+- **Staging-Systeme**: Bestimmen die anatomische Ausbreitung des Tumors (z.B. FIGO, Ann Arbor, AJCC)
+- **Grading-Systeme**: Bewerten die histologische Differenzierung und biologische Aggressivität
+- **Risikobewertungssysteme**: Prognostische Scores basierend auf multiplen klinischen Parametern (z.B. IPI, FLIPI, IPSS)
+- **Molekulare Klassifikationen**: Basieren auf genetischen/molekularen Markern (z.B. p16-Status, ELN-Klassifikation)
+
+### Staging-Systeme (Anatomische Ausbreitung)
+- **FIGO-Klassifikation** bei gynäkologischen Tumoren
+- **AJCC-Klassifikationen** verschiedener Editionen (6., 7., 8. Edition)
+- **Ann Arbor-Klassifikation** für Lymphome (Hodgkin und Non-Hodgkin)
+- **Durie-Salmon Staging** für Multiples Myelom
+- **Bismuth-Klassifikation** für Hiläres Cholangiokarzinom
+
+### Grading- und Bewertungssysteme
+- **Breslow/Clark-System** für Melanome (Tumordicke und Invasionstiefe)
+- **GIST-Mitoserate** (Gastrointestinale Stromatumoren)
+- **p16-Status** (Molekularer Marker, besonders bei HPV-assoziierten Karzinomen)
+
+### Prognostische Risiko-Scores
+- **Lymphome**:
+  - IPI (International Prognostic Index) für aggressive Non-Hodgkin-Lymphome
+  - FLIPI für Follikuläre Lymphome
+  - MIPI für Mantelzell-Lymphome
+  - GHSG-Risikoklassifikation für Hodgkin-Lymphome
+- **Leukämien**:
+  - European LeukemiaNet Classification (AML)
+  - EUTOS Score (Chronische myeloische Leukämie)
+  - Sanz Score (Akute Promyelozytenleukämie)
+- **Myelodysplastisches Syndrom**: IPSS (International Prognostic Scoring System)
+- **Multiple Myelom**: ISS/R-ISS (International Staging System)
+- **Waldenström Makroglobulinämie**: ISSWM
+
+Die Plattform §65c stellt einen Katalog bereit, wie die häufigsten Klassifikationen aus Harmonisierungsgründen **für die Krebsregistermeldung** zu kodieren sind:
+https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532511/Weitere+Klassifikationen
+
+### Implementierungshinweise
+
+#### FHIR Modellierung nach mCODE STU4 Pattern
+
+Dieses Profil folgt dem **mCODE STU4 Build Pattern** für Staging-Systeme mit einer dreiteiligen Struktur:
+
+- **`Observation.code`**: Allgemeines Staging-Konzept (z.B. "FIGO Stage", "Ann Arbor Stage", "BINET Stage")
+- **`Observation.method`**: Spezifisches Klassifikationssystem/Bewertungsmethode (Must Support)
+- **`Observation.value`**: Konkreter Klassifikationswert aus entsprechendem ValueSet
+
+**Beispiel FIGO-Klassifikation:**
+```
+code: 385361009 "FIGO Stage" (allgemeines Konzept)
+method: "FIGO staging of cervical carcinoma" (spezifische Methode)
+value: "Stage IIA" (konkreter Wert)
+```
+
+**Beispiel Hämatologische Klassifikation:**
+```
+code: "BINET staging system" (allgemeines Konzept) 
+method: "BINET staging for chronic lymphocytic leukemia" (spezifische Methode)
+value: "BINET A" (konkreter Wert)
+```
+
+Diese Struktur ermöglicht es, verschiedene Staging-Systeme innerhalb derselben Tumorentität zu unterscheiden und klar zu identifizieren, welches spezifische Bewertungsverfahren verwendet wurde.
+
+#### Terminologie-Integration
+
+Aufgrund der Vielzahl der möglichen Skalen und Scores ist es nicht möglich, hier einen umfassenden und allgemeingültigen Katalog zu hinterlegen, so dass die konkrete Ausgestaltung den Herstellern und Systemen überlassen bleibt. HL7 Deutschland stellt dazu unter folgendem Link Hinweise bereit: https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Observation-Skalen-und-Scores.html
+
+**Wichtiger Hinweis**: Für oBDS-spezifische Klassifikationen sollte zunächst geprüft werden, ob entsprechende SNOMED CT oder LOINC Codes verfügbar sind, bevor eigene oBDS-Codes verwendet werden.
+
+**Priorisierung bei Terminologie-Auswahl:**
+1. **SNOMED CT** für etablierte Klassifikationssysteme (bevorzugt)
+2. **LOINC** für laborbasierte und quantitative Bewertungen
+3. **NCI Thesaurus** für spezielle onkologische Konzepte
+4. **oBDS-spezifische Codes** nur wenn keine internationalen Standards verfügbar sind
+
+### Abgrenzung zu organspezifischen Modulen
+
+Folgende Klassifikationen werden in Zukunft über die organspezifischen Module abgedeckt und sollen nicht mehr über weitere Klassifikationen kodiert werden:
+- **Gleason-Score** (Prostata-Modul)
+- **Weitere organspezifische Scores** werden sukzessive in die entsprechenden Module überführt
+
+### Terminologie-Binding
+
+Das Profil verwendet **preferred binding** für das ValueSet `MII_VS_Onko_Weitere_Klassifikationen`, wodurch sowohl internationale Terminologien (SNOMED CT, NCI Thesaurus) als auch oBDS-spezifische Codes unterstützt werden.
+
+#### Verfügbare Klassifikationssysteme
+
+<!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Weitere-Klassifikationen/Weitere-Klassifikationen-Observation.page.md gate=B -->
+Die Expansion der verfügbaren Klassifikationssysteme ist auf der Seite des ValueSets [mii-vs-onko-weitere-klassifikationen](ValueSet-mii-vs-onko-weitere-klassifikationen.html) dargestellt.
+
+---
+
+**Beispiele**
+
+[mii-exa-onko-weitere-klassifikationen-1](Observation-mii-exa-onko-weitere-klassifikationen-1.html)
+
+[mii-exa-onko-weitere-klassifikationen-2](Observation-mii-exa-onko-weitere-klassifikationen-2.html)
+
+[mii-exa-onko-weitere-klassifikationen-3](Observation-mii-exa-onko-weitere-klassifikationen-3.html)
+
+[mii-exa-onko-weitere-klassifikationen-4](Observation-mii-exa-onko-weitere-klassifikationen-4.html)

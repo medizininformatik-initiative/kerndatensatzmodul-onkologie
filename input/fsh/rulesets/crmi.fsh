@@ -78,7 +78,7 @@ RuleSet: CRMIArtifactTopicInstance(system, code)
 RuleSet: CRMIArtifactContributors
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-author"
 * ^extension[=].valueContactDetail.telecom[+].system = #email
-* ^extension[=].valueContactDetail.telecom[=].value = "TODO:REVIEW-author-email" // Gate A: Autor-E-Mail unbekannt; RuleSets derzeit ungenutzt (CRMI-Adoption = eigenes Ticket)
+* ^extension[=].valueContactDetail.telecom[=].value = "thomas.debertshaeuser@charite.de"
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-editor"
 * ^extension[=].valueContactDetail.name = "Taskforce Core Data Set"
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-reviewer"
@@ -101,7 +101,7 @@ RuleSet: CRMIArtifactContributors
 RuleSet: CRMIArtifactContributorsInstance
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-author"
 * extension[=].valueContactDetail.telecom[+].system = #email
-* extension[=].valueContactDetail.telecom[=].value = "TODO:REVIEW-author-email" // Gate A: Autor-E-Mail unbekannt; RuleSets derzeit ungenutzt (CRMI-Adoption = eigenes Ticket)
+* extension[=].valueContactDetail.telecom[=].value = "thomas.debertshaeuser@charite.de"
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-editor"
 * extension[=].valueContactDetail.name = "Taskforce Core Data Set"
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-reviewer"

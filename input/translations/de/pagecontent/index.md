@@ -1,80 +1,100 @@
 <!-- markdownlint-disable MD041 -->
-<!--
-  HOME PAGE — GERMAN TRANSLATION of the source page input/pagecontent/index.md
-  (English is the IG's default language). The structure follows the standard MII
-  module IG page set (MII IG template and kerndatensatz-basis). Replace the
-  {{...}} placeholders and the bracketed [TODO ...] prompts with your module's
-  real content, then delete these HTML comments. Keep the section headings — a
-  reviewer expects them. See docs/recipes/add-translation.md; keep this file in
-  step with the English source.
--->
 
-### Einleitung
+### Einführung
 
-Diese Spezifikation beschreibt die FHIR-Repräsentation des
-Kerndatensatz-(KDS-)Moduls **{{MODULE_TITLE}}** der Medizininformatik-Initiative
-(MII). Sie beschreibt die Anwendungsfälle des Moduls sowie die zugehörigen
+Die vorliegende Spezifikation beschreibt die FHIR-Repräsentation des
+Kerndatensatz-Moduls **Onkologie** der Medizininformatik-Initiative (MII).
+Im Folgenden werden die Use Cases des Moduls sowie die dazugehörigen
 FHIR-Profile, Extensions und Terminologie-Ressourcen in ihrer verbindlichen
-Form. Der MII-Kerndatensatz dient der standardisierten Nutzung klinischer
-Routinedaten für die medizinische Forschung.
+Form beschrieben. Der MII-Kerndatensatz ermöglicht die standardisierte
+Sekundärnutzung klinischer Routinedaten für die medizinische Forschung.
 
-> [TODO: Beschreiben Sie in ein bis zwei Sätzen den fachlichen Gegenstand Ihres
-> Moduls — welche Daten es abdeckt und wofür sie genutzt werden.]
-{: .ig-highlight .ig-highlight-grey}
+Das Modul Onkologie orientiert sich am **onkologischen Basisdatensatz (oBDS)**,
+der die Grundlage der nationalen Krebsregistrierung bildet. Das umfasst
+diagnostische und histologische Parameter sowie Angaben zu Behandlung,
+Tumor-Staging zu Beginn und im Verlauf, die Erfassung von Nebenwirkungen und
+die Erkennung von Metastasen.
 
 | Veröffentlichung |               |
 |------------------|---------------|
-| Datum            | {{RELEASE_DATE}} |
-| Version          | {{CALVER_VERSION}} (CalVer `JJJJ.n.n`) |
+| Datum            | 2026-03-27    |
+| Version          | 2026.0.3 (CalVer `YYYY.n.n`) |
 | Status           | active        |
 | Realm            | DE            |
 
-### Zielgruppe
+### Inhalt und Zweck der Modellierung
 
-Dieser Implementierungsleitfaden richtet sich an:
+Das KDS-Modul Onkologie hat das Ziel, die onkologischen Daten, die in der
+Primärversorgung und bei der Krebsregistermeldung anfallen, korrekt abzubilden
+und mit anderen Datenquellen in Beziehung zu bringen.
+
+Fokus der ersten Implementierungsversion ist die Überführung der im oBDS
+anfallenden Registerdaten für die Sekundärdatennutzung mit dem FDPG und anderen
+Projekten im Rahmen von PM4Onko. Daher sind in dieser Version nur die
+Datenpunkte enthalten, die klinisch-diagnostischen oder therapeutischen
+Charakter haben. Administrative (z. B. Meldung, Melder) oder
+personenidentifizierende (Person, Tumorzuordnung) Datenpunkte sind nicht
+innerhalb des Betrachtungsrahmens.
+
+Der oBDS sieht neben dem Basisdatensatz eine Erhebung von organspezifischen
+Datenfeldern vor. Organspezifische Module (u. a. Mamma, Prostata, Kolorektal)
+werden schrittweise ergänzt.
+
+### Mapping auf offene Datenstandards
+
+Der onkologische Basisdatensatz enthält Wertelisten, die primär durch ADT/GEKID
+definiert wurden und keinen direkten Bezug zu offenen Terminologien wie
+SNOMED CT oder LOINC haben. Die Kodierung der Antwortmöglichkeiten wurde so
+übernommen, wie sie auch in den Primärsystemen vorliegt. Gleichzeitig stellt
+dieser Implementierungsleitfaden ein vorläufiges Mapping der Felder und
+Antwortmöglichkeiten auf SNOMED CT (sowie ggf. andere Terminologien) als
+FHIR ConceptMap bereit. Die Landeskrebsregister streben mit dem BfArM die
+Erstellung eines offiziellen nationalen Mappings der oBDS-Krebsregisterdaten
+auf SNOMED CT an; sobald dieses veröffentlicht ist, wird das hier enthaltene
+Mapping entsprechend aktualisiert.
+
+### Zielgruppen
 
 <div class="ig-highlight ig-highlight-blue">
 <h5>Implementierende</h5>
-<p>Datenintegrationszentren (DIZ), Software-Entwickelnde und System-Architekt:innen, die FHIR-basierte Lösungen umsetzen.<br/>
+<p>Datenintegrationszentren (DIZ), Softwareentwickler:innen und Systemarchitekt:innen, die FHIR-basierte Lösungen bauen.<br/>
 → siehe <a href="profiles.html">Profile</a> und <a href="logical-models.html">Logische Modelle</a>.</p>
 </div>
 
 <div class="ig-highlight ig-highlight-green">
 <h5>Forschende</h5>
 <p>Wissenschaftler:innen, die KDS-Daten für die medizinische Forschung nutzen.<br/>
-→ siehe <a href="researcher-guidance.html">Anleitung für Forschende</a>.</p>
+→ siehe <a href="researcher-guidance.html">Hinweise für Forschende</a>.</p>
 </div>
 
-### Inhalt dieses Leitfadens
+### Inhalte
 
-- **[Anleitung](guidance.html)** — Einstieg und fachliche Hinweise.
-- **Konformität** — die KDS-weiten Konformitätsregeln (Anforderungssprache,
-  Must-Support, Umgang mit fehlenden Daten) pflegt zentral das
+- **[Guidance](guidance.html)** — Einstieg und fachliche Hinweise.
+- **Konformität** — die KDS-weiten Konformitätsregeln (Verbindlichkeitssprache,
+  Must Support, Umgang mit fehlenden Daten) pflegt zentral das
   [Meta-Modul](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance);
-  die modul-spezifischen Aspekte zu
+  die modulspezifischen Hinweise zu
   [Sicherheit und Datenschutz](security-and-privacy.html) sind Teil dieses
   Leitfadens.
 - **[Profile](profiles.html)** und die weiteren
   **[Artefakt-Seiten](artifacts.html)** — die technischen Artefakte.
 - **[Beispiele](examples.html)** — Beispielinstanzen.
-- **[Abhängigkeiten](ImplementationGuide-mii-ig-{{MODULE_SLUG}}.html)** — die
-  ImplementationGuide-Ressource mit Abhängigkeitstabelle, versionsübergreifender
-  Analyse und Urheberrechtshinweisen.
+- **[Abhängigkeiten](ImplementationGuide-mii-ig-onko-de-v2026.html)** — die
+  ImplementationGuide-Ressource mit Abhängigkeitstabelle und
+  Copyright-Angaben.
 
 ### Verwandte Leitfäden
 
-Dieses Modul ist Teil des MII-Kerndatensatzes; die weiteren KDS-Module und ihre
-Abhängigkeiten sind unter
+Dieses Modul ist Teil des MII-Kerndatensatzes. Es baut auf den deutschen
+Basisprofilen (`de.basisprofil.r4`) und den KDS-Modulen Meta und Basis auf und
+referenziert die Module Biobank, Medikation, Molekulargenetischer
+Befundbericht (MolGen) und Studie/Forschungsvorhaben; die weiteren KDS-Module
+sind auf
 [medizininformatik-initiative.de](https://www.medizininformatik-initiative.de/)
 beschrieben.
 
-> [TODO: Nennen Sie die formalen Abhängigkeiten (siehe `dependencies` in
-> `sushi-config.yaml`) und verwandte Leitfäden Ihres Moduls.]
-{: .ig-highlight .ig-highlight-grey}
-
-Weitere FHIR-Implementierungsleitfäden finden Sie im offiziellen
-**[FHIR IG Registry](https://fhir.org/guides/registry/)** (Quelle:
-[`FHIR/ig-registry`](https://github.com/FHIR/ig-registry)).
+Weitere FHIR-Implementierungsleitfäden finden sich in der offiziellen
+**[FHIR IG Registry](https://fhir.org/guides/registry/)**.
 
 ### Impressum
 
@@ -84,40 +104,52 @@ Interoperabilitätsforums und der Technischen Komitees von HL7 Deutschland e. V.
 
 ### Ansprechpartner
 
-Fragen zu dieser Publikation können im HL7-FHIR-Zulip
+- Thomas Debertshäuser, Berlin Institute of Health (Charité)
+- Martin Boeker (DIFUTURE)
+- Sylvia Thun, Berlin Institute of Health (Charité)
+- Karoline Buckow, TMF – Technologie- und Methodenplattform für die vernetzte medizinische Forschung e. V.
+- Franziska Klepka, TMF – Technologie- und Methodenplattform für die vernetzte medizinische Forschung e. V.
+
+Fragen zu der vorliegenden Publikation können jederzeit auf
 [chat.fhir.org](https://chat.fhir.org) im Stream `german/mi-initiative` oder im
 MII-Zulip [mii.zulipchat.com](https://mii.zulipchat.com/) im Stream
-`MII-Kerndatensatz` gestellt werden.
-Anmerkungen und Kritik werden als *Issues* auf
-[GitHub](https://github.com/{{GITHUB_ORG}}/{{REPO_NAME}}/issues) entgegengenommen.
+`MII-Kerndatensatz` gestellt werden. Anmerkungen und Kritik werden in Form von
+*Issues* auf
+[GitHub](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues)
+stets gern entgegengenommen.
 
-> [TODO: Nennen Sie die fachlichen Ansprechpartner:innen Ihres Moduls.]
-{: .ig-highlight .ig-highlight-grey}
+### Autoren (in alphabetischer Reihenfolge)
 
-### Autor:innen (in alphabetischer Reihenfolge)
+- Christian Gulden (BZKF / Erlangen)
+- Jori Kern (DKFZ Heidelberg)
+- Julian Saß, Berlin Institute of Health (Charité)
+- Margaux Gatrio, Berlin Institute of Health (Charité)
+- Lotte Schwiening, Berlin Institute of Health (Charité)
+- Paul Müller, Berlin Institute of Health (Charité)
+- Nina Haffer, Berlin Institute of Health (Charité)
+- Sophie Klopfenstein, Berlin Institute of Health (Charité)
+- Thomas Debertshäuser, Berlin Institute of Health (Charité)
+- Yuan Peng, Institut für Medizinische Informatik und Biometrie (TU Dresden)
 
-> [TODO: Listen Sie die Autor:innen des Moduls mit Institution auf.]
-{: .ig-highlight .ig-highlight-grey}
+### Copyright und Lizenz
 
-### Urheberrecht und Lizenz
+© 2019+ TMF e. V., Charlottenstraße 42, 10117 Berlin
 
-© {{COPYRIGHT_START_YEAR}}+ TMF e. V., Charlottenstraße 42, 10117 Berlin
+Der Inhalt dieser Spezifikation ist öffentlich und steht unter
+**[CC0 1.0 (Public Domain Dedication)](https://creativecommons.org/publicdomain/zero/1.0/)**;
+Nachnutzungs- bzw. Veröffentlichungsansprüche sind nicht beschränkt.
 
-Dieses Werk ist lizenziert unter der
-[Creative Commons Namensnennung 4.0 International Lizenz (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.de).
+Zu den Nutzungsrechten der zugrunde liegenden FHIR-Technologie siehe die
+FHIR-Basisspezifikation. Einige verwendete Codesysteme werden von anderen
+Organisationen herausgegeben und gepflegt; es gilt das Copyright der jeweils
+aufgeführten Herausgeber.
 
-Für die Nutzungsrechte der zugrunde liegenden FHIR-Technologie siehe die
-FHIR-Basisspezifikation.
+### Disclaimer
 
-Einige der verwendeten Codesysteme werden von anderen Organisationen
-veröffentlicht und gepflegt; es gilt das Urheberrecht der jeweiligen Herausgeber.
+Der Inhalt dieses Dokuments ist öffentlich. Zu beachten ist, dass Teile dieses
+Dokuments auf FHIR Version R4 beruhen, für die das Copyright von
+HL7 International gilt.
 
-### Haftungsausschluss
-
-Der Inhalt dieses Dokuments ist öffentlich. Bitte beachten Sie, dass Teile
-dieses Dokuments auf FHIR Version R4 basieren, dessen Urheberrecht bei
-HL7 International liegt.
-
-Obwohl diese Publikation mit größter Sorgfalt erstellt wurde, können die
-Autor:innen keine Haftung für direkte oder indirekte Schäden übernehmen, die
-aus dem Inhalt dieser Spezifikation entstehen könnten.
+Trotz größter Sorgfalt bei der Erstellung übernehmen die Autoren keine Haftung
+für direkte oder indirekte Schäden, die aus dem Inhalt dieser Spezifikation
+entstehen könnten.

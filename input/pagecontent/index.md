@@ -1,32 +1,55 @@
 <!-- markdownlint-disable MD041 -->
-<!--
-  HOME PAGE — English is the IG's DEFAULT language, so this file is the source.
-  Structure follows the standard MII module IG page set (kerndatensatz-basis
-  input/pagecontent/index.md). Replace the {{...}} placeholders and the bracketed
-  [TODO ...] prompts with your module's real content, then delete these HTML
-  comments. Keep the section headings — a reviewer expects them. The German
-  translation of this page lives at input/translations/de/pagecontent/index.md
-  (see docs/recipes/add-translation.md) — keep both in step.
--->
+<!-- TODO:REVIEW machine translation of the German original (input/translations/de/pagecontent/index.md) -->
 
 ### Introduction
 
 This specification describes the FHIR representation of the Core Dataset (CDS)
-module **{{MODULE_TITLE}}** of the Medical Informatics Initiative (MII). It
-covers the module's use cases and the associated FHIR profiles, extensions and
-terminology resources in their normative form. The MII Core Dataset enables the
+module **Oncology** of the Medical Informatics Initiative (MII). It covers the
+module's use cases and the associated FHIR profiles, extensions and terminology
+resources in their normative form. The MII Core Dataset enables the
 standardized secondary use of routine clinical data for medical research.
 
-> [TODO: In one or two sentences, describe what your module covers and what the
-> data is used for.]
-{: .ig-highlight .ig-highlight-grey}
+The Oncology module is based on the **German oncology base dataset (oBDS)**,
+which forms the foundation of national cancer registration. It covers
+diagnostic and histological parameters as well as information on treatment,
+tumor staging at baseline and during follow-up, the recording of adverse
+events and the detection of metastases.
 
 | Publication |               |
 |-------------|---------------|
-| Date        | {{RELEASE_DATE}} |
-| Version     | {{CALVER_VERSION}} (CalVer `YYYY.n.n`) |
+| Date        | 2026-03-27    |
+| Version     | 2026.0.3 (CalVer `YYYY.n.n`) |
 | Status      | active        |
 | Realm       | DE            |
+
+### Content and purpose of the modeling
+
+The CDS module Oncology aims to correctly represent the oncological data that
+arises in primary care and in cancer registry reporting, and to relate it to
+other data sources.
+
+The focus of the first implementation version is the transfer of the registry
+data collected under the oBDS for secondary use with the German Portal for
+Medical Research Data (FDPG) and other projects within PM4Onko. This version
+therefore only contains data points of clinical-diagnostic or therapeutic
+character. Administrative (e.g. report, reporter) or person-identifying
+(person, tumor assignment) data points are out of scope.
+
+In addition to the base dataset, the oBDS provides for organ-specific data
+fields. Organ-specific modules (including breast, prostate, colorectal) are
+being added incrementally.
+
+### Mapping to open data standards
+
+The oBDS contains value lists primarily defined by ADT/GEKID without a direct
+relationship to open terminologies such as SNOMED CT or LOINC. The coding of
+the answer options was adopted as it exists in the primary systems. At the
+same time, this implementation guide provides a preliminary mapping of the
+fields and answer options to SNOMED CT (and other terminologies where
+applicable) as FHIR ConceptMaps. The federal state cancer registries and BfArM
+are working towards an official national mapping of oBDS cancer registry data
+to SNOMED CT; once published, the mapping contained here will be updated
+accordingly.
 
 ### Target audience
 
@@ -53,59 +76,65 @@ standardized secondary use of routine clinical data for medical research.
 - **[Profiles](profiles.html)** and the further
   **[artifact pages](artifacts.html)** — the technical artifacts.
 - **[Examples](examples.html)** — example instances.
-- **[Dependencies](ImplementationGuide-mii-ig-{{MODULE_SLUG}}.html)** — the
-  ImplementationGuide resource with the dependency table, cross-version
-  analysis and copyright statements.
+- **[Dependencies](ImplementationGuide-mii-ig-onko-de-v2026.html)** — the
+  ImplementationGuide resource with the dependency table and copyright
+  statements.
 
 ### Related guides
 
-This module is part of the MII Core Dataset; the other KDS modules and their
-dependencies are described at
+This module is part of the MII Core Dataset. It builds on the German base
+profiles (`de.basisprofil.r4`) and the CDS modules Meta and Base, and
+references the modules Biobank, Medication, Molecular Genetics Report (MolGen)
+and Study/Research Project; the other CDS modules are described at
 [medizininformatik-initiative.de](https://www.medizininformatik-initiative.de/).
 
-> [TODO: Name your module's formal dependencies (see `dependencies` in
-> `sushi-config.yaml`) and any related guides.]
-{: .ig-highlight .ig-highlight-grey}
-
 More FHIR implementation guides can be found in the official
-**[FHIR IG Registry](https://fhir.org/guides/registry/)** (source:
-[`FHIR/ig-registry`](https://github.com/FHIR/ig-registry)).
+**[FHIR IG Registry](https://fhir.org/guides/registry/)**.
 
 ### Imprint
 
-This guide was created within the Medical Informatics Initiative and is subject,
-by its governance process, to the coordination procedure of the Interoperability
-Forum and the technical committees of HL7 Germany.
+This guide was created within the Medical Informatics Initiative and is
+subject, by its governance process, to the coordination procedure of the
+Interoperability Forum and the technical committees of HL7 Germany.
 
 ### Contact
+
+- Thomas Debertshäuser, Berlin Institute of Health (Charité)
+- Martin Boeker (DIFUTURE)
+- Sylvia Thun, Berlin Institute of Health (Charité)
+- Karoline Buckow, TMF – Technologie- und Methodenplattform für die vernetzte medizinische Forschung e. V.
+- Franziska Klepka, TMF – Technologie- und Methodenplattform für die vernetzte medizinische Forschung e. V.
 
 Questions about this publication can be asked on the HL7 FHIR Zulip
 [chat.fhir.org](https://chat.fhir.org) in the `german/mi-initiative` stream, or
 on the MII Zulip [mii.zulipchat.com](https://mii.zulipchat.com/) in the
-`MII-Kerndatensatz` stream.
-Comments and issues are welcome as *Issues* on
-[GitHub](https://github.com/{{GITHUB_ORG}}/{{REPO_NAME}}/issues).
-
-> [TODO: Name your module's domain contacts.]
-{: .ig-highlight .ig-highlight-grey}
+`MII-Kerndatensatz` stream. Comments and issues are welcome as *Issues* on
+[GitHub](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues).
 
 ### Authors (in alphabetical order)
 
-> [TODO: List the module's authors with their institution.]
-{: .ig-highlight .ig-highlight-grey}
+- Christian Gulden (BZKF / Erlangen)
+- Jori Kern (DKFZ Heidelberg)
+- Julian Saß, Berlin Institute of Health (Charité)
+- Margaux Gatrio, Berlin Institute of Health (Charité)
+- Lotte Schwiening, Berlin Institute of Health (Charité)
+- Paul Müller, Berlin Institute of Health (Charité)
+- Nina Haffer, Berlin Institute of Health (Charité)
+- Sophie Klopfenstein, Berlin Institute of Health (Charité)
+- Thomas Debertshäuser, Berlin Institute of Health (Charité)
+- Yuan Peng, Institut für Medizinische Informatik und Biometrie (TU Dresden)
 
 ### Copyright and License
 
-© {{COPYRIGHT_START_YEAR}}+ TMF e. V., Charlottenstraße 42, 10117 Berlin
+© 2019+ TMF e. V., Charlottenstraße 42, 10117 Berlin
 
-This work is licensed under the
-[Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+The content of this specification is public and is released under
+**[CC0 1.0 (Public Domain Dedication)](https://creativecommons.org/publicdomain/zero/1.0/)**;
+reuse and republication are not restricted.
 
 For the usage rights of the underlying FHIR technology, see the FHIR base
-specification.
-
-Some of the code systems used are published and maintained by other
-organizations; the copyright of the respective publishers applies.
+specification. Some of the code systems used are published and maintained by
+other organizations; the copyright of the respective publishers applies.
 
 ### Disclaimer
 

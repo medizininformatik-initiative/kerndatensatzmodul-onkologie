@@ -82,7 +82,9 @@ extension:
       start: "2026"
   - url: http://hl7.org/fhir/StructureDefinition/artifact-author
     valueContactDetail:
-      name: Medizininformatik Initiative # TODO:REVIEW Autor-E-Mail unbekannt (Gate A)
+      telecom:
+        - system: email
+          value: "thomas.debertshaeuser@charite.de"
   # The MII-wide governance bodies below apply to every MII KDS module — for
   # example, kerndatensatz-basis records the same National Steering Committee as
   # reviewer and endorser. Adjust only if your module's governance differs.
@@ -157,7 +159,7 @@ extension:
     valueCodeableConcept:
       coding:
         - system: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
-          code: "C3262" # Neoplasm — TODO:REVIEW Themen-Code (Gate A)
+          code: "C3262" # Neoplasm — Gate A bestätigt 2026-08-27
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (for advanced use cases the value
@@ -252,8 +254,6 @@ pages:
     title: Capability Statements
   search-parameters.md: # OPTIONAL (0..1) — see docs/optional-pages.md
     title: Search Parameters
-  operations.md: # OPTIONAL (0..1) — see docs/optional-pages.md
-    title: Operations
   logical-models.md:
     title: Logical Models
   value-sets.md: # OPTIONAL (0..1) — see docs/optional-pages.md
