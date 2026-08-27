@@ -441,6 +441,12 @@ jobs:
           rm -rf "${branch_dir}"
           mkdir -p "${branch_dir}"
           cp -R "output/." "${branch_dir}/"
+          # MODULE-LOCAL ADAPTATION (Onkologie, 2026-08-27): GitHub's pre-receive
+          # hook rejects files >100 MB (measured: full-ig.zip at 160 MB killed the
+          # first preview push of this module). A branch PREVIEW does not need the
+          # downloadable archives; the formal go-publish path is unaffected.
+          # Upstream: forschungsgruppe-digital-health/mii-kds-module-template#165.
+          find "${branch_dir}" -type f -size +99M -print -delete
           # Marker consumed by cleanup-gh-pages.yml to detect deleted branches.
           echo "${BRANCH}" > "${branch_dir}/.branch-name"
           cd gh-pages
