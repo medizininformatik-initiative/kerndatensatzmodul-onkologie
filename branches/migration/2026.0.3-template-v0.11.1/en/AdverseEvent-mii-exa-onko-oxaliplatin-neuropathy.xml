@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<AdverseEvent xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-oxaliplatin-neuropathy"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: AdverseEvent mii-exa-onko-oxaliplatin-neuropathy</b></p><a name="mii-exa-onko-oxaliplatin-neuropathy"> </a><a name="hcmii-exa-onko-oxaliplatin-neuropathy"> </a><p><b>actuality</b>: Adverse Event</p><p><b>event</b>: <span title="Codes:{https://www.meddra.org 10034620}">Oxaliplatin-induced peripheral neuropathy, grade 3 (CTCAE v5.0)</span></p><p><b>subject</b>: <a href="https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example-modification">Patient/example-modification</a></p><p><b>date</b>: 2024-06-10</p><p><b>detected</b>: 2024-06-05</p><p><b>recordedDate</b>: 2024-06-10</p><p><b>seriousness</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/adverse-event-seriousness non-serious}">Non-serious</span></p><p><b>severity</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/adverse-event-severity severe}">Severe</span></p><blockquote><p><b>suspectEntity</b></p><p><b>instance</b>: <a href="MedicationStatement-mii-exa-onko-modification-oxaliplatin-phase1.html">MedicationStatement: status = stopped; statusReason = Adverse reaction (disorder); medication[x] = Oxaliplatin; effective[x] = 2024-03-15 --&gt; 2024-06-10; note = FOLFOX4 - Cycles 1-6 only. Discontinued due to severe peripheral neuropathy. Patient experienced numbness and tingling in hands and feet (grade 3 CTCAE), interfering with daily activities.</a></p><h3>Causalities</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Assessment</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/adverse-event-causality-assess certain}">Certain</span></td></tr></table></blockquote></div>
+  </text>
+  <actuality value="actual"/>
+  <event>
+    <coding>
+      <system value="https://www.meddra.org"/>
+      <code value="10034620"/>
+      <display value="Peripheral sensory neuropathy"/>
+    </coding>
+    <text value="Oxaliplatin-induced peripheral neuropathy, grade 3 (CTCAE v5.0)"/>
+  </event>
+  <subject>
+    <reference value="Patient/example-modification"/>
+  </subject>
+  <date value="2024-06-10"/>
+  <detected value="2024-06-05"/>
+  <recordedDate value="2024-06-10"/>
+  <seriousness>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/adverse-event-seriousness"/>
+      <code value="non-serious"/>
+    </coding>
+  </seriousness>
+  <severity>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/adverse-event-severity"/>
+      <code value="severe"/>
+      <display value="Severe"/>
+    </coding>
+  </severity>
+  <suspectEntity>
+    <instance>
+      <reference value="MedicationStatement/mii-exa-onko-modification-oxaliplatin-phase1"/>
+    </instance>
+    <causality>
+      <assessment>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/adverse-event-causality-assess"/>
+          <code value="certain"/>
+          <display value="Certain"/>
+        </coding>
+      </assessment>
+    </causality>
+  </suspectEntity>
+</AdverseEvent>

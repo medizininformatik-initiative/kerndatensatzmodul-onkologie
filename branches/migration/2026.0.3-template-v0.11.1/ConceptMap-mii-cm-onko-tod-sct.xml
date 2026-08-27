@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="mii-cm-onko-tod-sct"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap mii-cm-onko-tod-sct</b></p><a name="mii-cm-onko-tod-sct"> </a><a name="hcmii-cm-onko-tod-sct"> </a><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <a href="CodeSystem-mii-cs-onko-tod.html">MII CS Onkologie Tod</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>J (Ja, die Person ist an einer Tumorerkrankung oder Folge einer Tumorerkrankung (einschließlich Behandlungskomplikation) verstorben.)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>373066001 (Yes (qualifier value))</td></tr><tr><td>N (Nein, die Person ist nicht an einer Tumorerkrankung oder Folge einer Tumorerkrankung (einschließlich Behandlungskomplikation) verstorben.)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>373067005 (No (qualifier value))</td></tr><tr><td>U (unbekannt)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>261665006 (Unknown (qualifier value))</td></tr></table></div><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap mii-cm-onko-tod-sct</b></p><a name="de-mii-cm-onko-tod-sct"> </a><a name="de-hcmii-cm-onko-tod-sct"> </a><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <a href="CodeSystem-mii-cs-onko-tod.html">MII CS Onkologie Tod</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>J (Ja, die Person ist an einer Tumorerkrankung oder Folge einer Tumorerkrankung (einschließlich Behandlungskomplikation) verstorben.)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>373066001 (Yes (qualifier value))</td></tr><tr><td>N (Nein, die Person ist nicht an einer Tumorerkrankung oder Folge einer Tumorerkrankung (einschließlich Behandlungskomplikation) verstorben.)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>373067005 (No (qualifier value))</td></tr><tr><td>U (unbekannt)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>261665006 (Unknown (qualifier value))</td></tr></table></div></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-tod-sct"/>
+  <version value="2026.0.3"/>
+  <name value="MII CM Onko Tod SCT Mapping"/>
+  <title value="MII CM Onko Tod SNOMED Mapping"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2024-04-11"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="Mapping Tod Codes zu SNOMED-CT"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <purpose value="Technical mapping to transform oBDS-Data into SNOMED"/>
+  <copyright value="This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license."/>
+  <sourceUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/"/>
+  <targetUri value="http://snomed.info/sct/900000000000207008/version/20240401"/>
+  <group>
+    <source value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tod"/>
+    <target value="http://snomed.info/sct/900000000000207008/version/20240401"/>
+    <element>
+      <code value="J"/>
+      <display value="Ja, die Person ist an einer Tumorerkrankung oder Folge einer Tumorerkrankung (einschließlich Behandlungskomplikation) verstorben."/>
+      <target>
+        <code value="373066001"/>
+        <display value="Yes (qualifier value)"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="N"/>
+      <display value="Nein, die Person ist nicht an einer Tumorerkrankung oder Folge einer Tumorerkrankung (einschließlich Behandlungskomplikation) verstorben."/>
+      <target>
+        <code value="373067005"/>
+        <display value="No (qualifier value)"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="U"/>
+      <display value="unbekannt"/>
+      <target>
+        <code value="261665006"/>
+        <display value="Unknown (qualifier value)"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

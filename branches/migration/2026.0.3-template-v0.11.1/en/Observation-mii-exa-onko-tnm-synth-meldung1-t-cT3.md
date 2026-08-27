@@ -1,0 +1,83 @@
+# mii-exa-onko-tnm-synth-meldung1-t-cT3 - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **mii-exa-onko-tnm-synth-meldung1-t-cT3**
+
+## Example Observation: mii-exa-onko-tnm-synth-meldung1-t-cT3
+
+-------
+
+**English**
+
+-------
+
+Profile: [MII PR Onkologie TNM T-Kategorie](StructureDefinition-mii-pr-onko-tnm-t-kategorie.md) version: 2026.0.3
+
+**status**: Final
+
+**code**: cT category (observable entity)
+
+**subject**: [Tobias TNMSynth Male, DoB: 1962-04-18](Patient-mii-exa-onko-tnm-synth-patient.md)
+
+**effective**: 2024-01-11
+
+**value**: T3
+
+**method**: 8. Auflage
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Observation",
+  "id" : "mii-exa-onko-tnm-synth-meldung1-t-cT3",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie|2026.0.3"]
+  },
+  "status" : "final",
+  "code" : {
+    "extension" : [{
+      "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.uicc.org/resources/tnm",
+          "code" : "c",
+          "display" : "c"
+        }]
+      }
+    }],
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "399504009",
+      "display" : "cT category (observable entity)"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/mii-exa-onko-tnm-synth-patient"
+  },
+  "effectiveDateTime" : "2024-01-11",
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "https://www.uicc.org/resources/tnm",
+      "code" : "T3",
+      "display" : "T3"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1352966002",
+      "display" : "Union for International Cancer Control cT3 (qualifier value)"
+    }]
+  },
+  "method" : {
+    "coding" : [{
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+      "code" : "8",
+      "display" : "8. Auflage"
+    }]
+  }
+}
+
+```

@@ -1,0 +1,83 @@
+# mii-exa-onko-tnm-klassifikation-TisN0M0 - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **mii-exa-onko-tnm-klassifikation-TisN0M0**
+
+## Example Observation: mii-exa-onko-tnm-klassifikation-TisN0M0
+
+-------
+
+**English**
+
+-------
+
+Profile: [MII PR Onkologie TNM-Klassifikation](StructureDefinition-mii-pr-onko-tnm-klassifikation.md) version: 2026.0.3
+
+**status**: Final
+
+**code**: Clinical TNM stage grouping
+
+**subject**: [Patient/example](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example)
+
+**effective**: 2024-01-11
+
+**value**: Stadium 0
+
+**method**: 8. Auflage
+
+**hasMember**: 
+
+* [Observation cT category (observable entity)](Observation-mii-exa-onko-tnm-t-kategorie-Tis.md)
+* [Observation cN category (observable entity)](Observation-mii-exa-onko-tnm-n-kategorie-N0.md)
+* [Observation cM category (observable entity)](Observation-mii-exa-onko-tnm-m-kategorie-M0.md)
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Observation",
+  "id" : "mii-exa-onko-tnm-klassifikation-TisN0M0",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation|2026.0.3"]
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "399537006",
+      "display" : "Clinical TNM stage grouping"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/example"
+  },
+  "effectiveDateTime" : "2024-01-11",
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "https://www.uicc.org/resources/tnm",
+      "code" : "0",
+      "display" : "Stadium 0"
+    }]
+  },
+  "method" : {
+    "coding" : [{
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+      "code" : "8",
+      "display" : "8. Auflage"
+    }]
+  },
+  "hasMember" : [{
+    "reference" : "Observation/mii-exa-onko-tnm-t-kategorie-Tis"
+  },
+  {
+    "reference" : "Observation/mii-exa-onko-tnm-n-kategorie-N0"
+  },
+  {
+    "reference" : "Observation/mii-exa-onko-tnm-m-kategorie-M0"
+  }]
+}
+
+```

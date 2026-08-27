@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="mii-cs-onko-tnm-formel"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem mii-cs-onko-tnm-formel</b></p><a name="mii-cs-onko-tnm-formel"> </a><a name="hcmii-cs-onko-tnm-formel"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablecodesystem.html">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-formel</code> defines the following code:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">tnm-formel<a name="mii-cs-onko-tnm-formel-tnm-formel"> </a></td><td>TNM-Formel</td><td>Zusammengeführte TNM-Gesamtformel (z. B. 'ypT0 ypN0 cM0') als generierte Darstellung der gewinnenden Kategorie-Beobachtungen inklusive Präfixe.</td></tr></table></div><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem mii-cs-onko-tnm-formel</b></p><a name="de-mii-cs-onko-tnm-formel"> </a><a name="de-hcmii-cs-onko-tnm-formel"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablecodesystem.html">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-formel</code> defines the following code:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">tnm-formel<a name="de-mii-cs-onko-tnm-formel-tnm-formel"> </a></td><td>TNM-Formel</td><td>Zusammengeführte TNM-Gesamtformel (z. B. 'ypT0 ypN0 cM0') als generierte Darstellung der gewinnenden Kategorie-Beobachtungen inklusive Präfixe.</td></tr></table></div></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-formel"/>
+  <version value="2026.0.3"/>
+  <name value="MII_CS_Onko_TNM_Formel"/>
+  <title value="MII CS Onkologie TNM Formel"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-08-27T10:41:09+00:00"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="Codes für die Darstellung der zusammengeführten TNM-Gesamtformel als Component der synthetisierten TNM-Klassifikation."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="1"/>
+  <concept>
+    <code value="tnm-formel"/>
+    <display value="TNM-Formel"/>
+    <definition value="Zusammengeführte TNM-Gesamtformel (z. B. 'ypT0 ypN0 cM0') als generierte Darstellung der gewinnenden Kategorie-Beobachtungen inklusive Präfixe."/>
+  </concept>
+</CodeSystem>

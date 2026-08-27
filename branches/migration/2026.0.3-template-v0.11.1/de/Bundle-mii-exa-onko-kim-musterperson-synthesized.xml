@@ -1,0 +1,1606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-kim-musterperson-synthesized"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
+  </meta>
+  <language value="de"/>
+  <identifier>
+    <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"/>
+    <value value="kim-musterperson-synthesized-2026-001"/>
+  </identifier>
+  <type value="transaction"/>
+  <timestamp value="2026-05-06T14:00:00+02:00"/>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-kim-synth-patient"/>
+    <resource>
+      <Patient>
+        <id value="mii-exa-onko-kim-synth-patient"/>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <name>
+          <family value="Musterperson"/>
+          <given value="Kim"/>
+        </name>
+        <gender value="female"/>
+        <birthDate value="1956-03-14"/>
+      </Patient>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Patient"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-kim-synth-diagnose"/>
+    <resource>
+      <Condition>
+        <id value="mii-exa-onko-kim-synth-diagnose"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/condition-assertedDate">
+          <valueDateTime value="2021-06-22"/>
+        </extension>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+          </coding>
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <code value="confirmed"/>
+          </coding>
+        </verificationStatus>
+        <code>
+          <coding>
+            <system value="http://fhir.de/CodeSystem/bfarm/icd-10-gm"/>
+            <version value="2024"/>
+            <code value="C48.2"/>
+            <display value="Bösartige Neubildung: Peritoneum, nicht näher bezeichnet"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-kim-synth-patient"/>
+        </subject>
+        <recordedDate value="2021-06-22"/>
+      </Condition>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Condition"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-klass1-cT3c"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-kim-klass1-cT3c"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix">
+            <valueCodeableConcept>
+              <coding>
+                <system value="https://www.uicc.org/resources/tnm"/>
+                <code value="c"/>
+                <display value="c"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="399504009"/>
+            <display value="cT category (observable entity)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-kim-synth-patient"/>
+        </subject>
+        <effectiveDateTime value="2021-06-22"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://www.uicc.org/resources/tnm"/>
+            <code value="T3c"/>
+            <display value="T3c"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1352976004"/>
+            <display value="Union for International Cancer Control cT3c (qualifier value)"/>
+          </coding>
+        </valueCodeableConcept>
+        <method>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"/>
+            <code value="8"/>
+            <display value="8. Auflage"/>
+          </coding>
+        </method>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-klass1-cN1"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-kim-klass1-cN1"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix">
+            <valueCodeableConcept>
+              <coding>
+                <system value="https://www.uicc.org/resources/tnm"/>
+                <code value="c"/>
+                <display value="c"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="399534004"/>
+            <display value="cN category (observable entity)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-kim-synth-patient"/>
+        </subject>
+        <effectiveDateTime value="2021-06-22"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://www.uicc.org/resources/tnm"/>
+            <code value="N1"/>
+            <display value="N1"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1353043007"/>
+            <display value="Union for International Cancer Control cN1 (qualifier value)"/>
+          </coding>
+        </valueCodeableConcept>
+        <method>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"/>
+            <code value="8"/>
+            <display value="8. Auflage"/>
+          </coding>
+        </method>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-klass1-cM1"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-kim-klass1-cM1"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix">
+            <valueCodeableConcept>
+              <coding>
+                <system value="https://www.uicc.org/resources/tnm"/>
+                <code value="c"/>
+                <display value="c"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="399387003"/>
+            <display value="cM category (observable entity)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-kim-synth-patient"/>
+        </subject>
+        <effectiveDateTime value="2021-06-22"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://www.uicc.org/resources/tnm"/>
+            <code value="M1"/>
+            <display value="M1"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1352513006"/>
+            <display value="Union for International Cancer Control cM1 (qualifier value)"/>
+          </coding>
+        </valueCodeableConcept>
+        <method>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"/>
+            <code value="8"/>
+            <display value="8. Auflage"/>
+          </coding>
+        </method>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-klass1"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-kim-klass1"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="399537006"/>
+            <display value="Clinical TNM stage grouping"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-kim-synth-patient"/>
+        </subject>
+        <focus>
+          <reference value="Condition/mii-exa-onko-kim-synth-diagnose"/>
+        </focus>
+        <effectiveDateTime value="2021-06-22"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://www.uicc.org/resources/tnm"/>
+            <code value="IV"/>
+            <display value="Stadium IV"/>
+          </coding>
+        </valueCodeableConcept>
+        <method>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"/>
+            <code value="8"/>
+            <display value="8. Auflage"/>
+          </coding>
+        </method>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-kim-klass1-cT3c"/>
+        </hasMember>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-kim-klass1-cN1"/>
+        </hasMember>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-kim-klass1-cM1"/>
+        </hasMember>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-klass2-ycT3c"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-kim-klass2-ycT3c"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <modifierExtension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-y-praefix">
+          <valueCodeableConcept>
+            <coding>
+              <system value="https://www.uicc.org/resources/tnm"/>
+              <code value="y"/>
+              <display value="y"/>
+            </coding>
+          </valueCodeableConcept>
+        </modifierExtension>
+        <status value="final"/>
+        <code>
+          <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix">
+            <valueCodeableConcept>
+              <coding>
+                <system value="https://www.uicc.org/resources/tnm"/>
+                <code value="c"/>
+                <display value="c"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="399504009"/>
+            <display value="cT category (observable entity)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-kim-synth-patient"/>
+        </subject>
+        <effectiveDateTime value="2021-09-15"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://www.uicc.org/resources/tnm"/>
+            <code value="T3c"/>
+            <display value="T3c"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1352976004"/>
+            <display value="Union for International Cancer Control cT3c (qualifier value)"/>
+          </coding>
+        </valueCodeableConcept>
+        <method>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"/>
+            <code value="8"/>
+            <display value="8. Auflage"/>
+          </coding>
+        </method>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-klass2-ycN1"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-kim-klass2-ycN1"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <modifierExtension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-y-praefix">
+          <valueCodeableConcept>
+            <coding>
+              <system value="https://www.uicc.org/resources/tnm"/>
+              <code value="y"/>
+              <display value="y"/>
+            </coding>
+          </valueCodeableConcept>
+        </modifierExtension>
+        <status value="final"/>
+        <code>
+          <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix">
+            <valueCodeableConcept>
+              <coding>
+                <system value="https://www.uicc.org/resources/tnm"/>
+                <code value="c"/>
+                <display value="c"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="399534004"/>
+            <display value="cN category (observable entity)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-kim-synth-patient"/>
+        </subject>
+        <effectiveDateTime value="2021-09-15"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://www.uicc.org/resources/tnm"/>
+            <code value="N1"/>
+            <display value="N1"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1353043007"/>
+            <display value="Union for International Cancer Control cN1 (qualifier value)"/>
+          </coding>
+        </valueCodeableConcept>
+        <method>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"/>
+            <code value="8"/>
+            <display value="8. Auflage"/>
+          </coding>
+        </method>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-klass2-ycM1b"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-kim-klass2-ycM1b"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <modifierExtension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-y-praefix">
+          <valueCodeableConcept>
+            <coding>
+              <system value="https://www.uicc.org/resources/tnm"/>
+              <code value="y"/>
+              <display value="y"/>
+            </coding>
+          </valueCodeableConcept>
+        </modifierExtension>
+        <status value="final"/>
+        <code>
+          <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix">
+            <valueCodeableConcept>
+              <coding>
+                <system value="https://www.uicc.org/resources/tnm"/>
+                <code value="c"/>
+                <display value="c"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="399387003"/>
+            <display value="cM category (observable entity)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-kim-synth-patient"/>
+        </subject>
+        <effectiveDateTime value="2021-09-15"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://www.uicc.org/resources/tnm"/>
+            <code value="M1b"/>
+            <display value="M1b"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1352514000"/>
+            <display value="Union for International Cancer Control cM1b (qualifier value)"/>
+          </coding>
+        </valueCodeableConcept>
+        <method>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"/>
+            <code value="8"/>
+            <display value="8. Auflage"/>
+          </coding>
+        </method>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-klass2-ysym"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-kim-klass2-ysym"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-y-symbol|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="101658-3"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-kim-synth-patient"/>
+        </subject>
+        <effectiveDateTime value="2021-09-15"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="421755005"/>
+            <display value="Tumor staging descriptor y (tumor staging)"/>
+          </coding>
+        </valueCodeableConcept>
+        <method>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"/>
+            <code value="8"/>
+            <display value="8. Auflage"/>
+          </coding>
+        </method>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-klass2"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-kim-klass2"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="399537006"/>
+            <display value="Clinical TNM stage grouping"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-kim-synth-patient"/>
+        </subject>
+        <focus>
+          <reference value="Condition/mii-exa-onko-kim-synth-diagnose"/>
+        </focus>
+        <effectiveDateTime value="2021-09-15"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://www.uicc.org/resources/tnm"/>
+            <code value="IV"/>
+            <display value="Stadium IV"/>
+          </coding>
+        </valueCodeableConcept>
+        <method>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"/>
+            <code value="8"/>
+            <display value="8. Auflage"/>
+          </coding>
+        </method>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-kim-klass2-ycT3c"/>
+        </hasMember>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-kim-klass2-ycN1"/>
+        </hasMember>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-kim-klass2-ycM1b"/>
+        </hasMember>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-kim-klass2-ysym"/>
+        </hasMember>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-klass3-ypT3c"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-kim-klass3-ypT3c"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <modifierExtension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-y-praefix">
+          <valueCodeableConcept>
+            <coding>
+              <system value="https://www.uicc.org/resources/tnm"/>
+              <code value="y"/>
+              <display value="y"/>
+            </coding>
+          </valueCodeableConcept>
+        </modifierExtension>
+        <status value="final"/>
+        <code>
+          <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix">
+            <valueCodeableConcept>
+              <coding>
+                <system value="https://www.uicc.org/resources/tnm"/>
+                <code value="p"/>
+                <display value="p"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="384625004"/>
+            <display value="pT category (observable entity)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-kim-synth-patient"/>
+        </subject>
+        <effectiveDateTime value="2021-10-15"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://www.uicc.org/resources/tnm"/>
+            <code value="T3c"/>
+            <display value="T3c"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1352556001"/>
+            <display value="Union for International Cancer Control pT3c (qualifier value)"/>
+          </coding>
+        </valueCodeableConcept>
+        <method>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"/>
+            <code value="8"/>
+            <display value="8. Auflage"/>
+          </coding>
+        </method>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-klass3-ypM1b"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-kim-klass3-ypM1b"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <modifierExtension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-y-praefix">
+          <valueCodeableConcept>
+            <coding>
+              <system value="https://www.uicc.org/resources/tnm"/>
+              <code value="y"/>
+              <display value="y"/>
+            </coding>
+          </valueCodeableConcept>
+        </modifierExtension>
+        <status value="final"/>
+        <code>
+          <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix">
+            <valueCodeableConcept>
+              <coding>
+                <system value="https://www.uicc.org/resources/tnm"/>
+                <code value="p"/>
+                <display value="p"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="371497001"/>
+            <display value="pM category (observable entity)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-kim-synth-patient"/>
+        </subject>
+        <effectiveDateTime value="2021-10-15"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://www.uicc.org/resources/tnm"/>
+            <code value="M1b"/>
+            <display value="M1b"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1352578008"/>
+            <display value="Union for International Cancer Control pM1b (qualifier value)"/>
+          </coding>
+        </valueCodeableConcept>
+        <method>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"/>
+            <code value="8"/>
+            <display value="8. Auflage"/>
+          </coding>
+        </method>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-klass3-L1"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-kim-klass3-L1"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-l-kategorie|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="395715009"/>
+            <display value="Status of lymphatic (small vessel) invasion by tumor (observable entity)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-kim-synth-patient"/>
+        </subject>
+        <effectiveDateTime value="2021-10-15"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://www.uicc.org/resources/tnm"/>
+            <code value="L1"/>
+            <display value="L1"/>
+          </coding>
+        </valueCodeableConcept>
+        <method>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"/>
+            <code value="8"/>
+            <display value="8. Auflage"/>
+          </coding>
+        </method>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-klass3-V0"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-kim-klass3-V0"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-v-kategorie|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="371493002"/>
+            <display value="Status of venous (large vessel) invasion by tumor (observable entity)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-kim-synth-patient"/>
+        </subject>
+        <effectiveDateTime value="2021-10-15"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://www.uicc.org/resources/tnm"/>
+            <code value="V0"/>
+            <display value="V0"/>
+          </coding>
+        </valueCodeableConcept>
+        <method>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"/>
+            <code value="8"/>
+            <display value="8. Auflage"/>
+          </coding>
+        </method>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-klass3-Pn0"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-kim-klass3-Pn0"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-pn-kategorie|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="371513001"/>
+            <display value="Presence of direct invasion by primary malignant neoplasm to nerve (observable entity)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-kim-synth-patient"/>
+        </subject>
+        <effectiveDateTime value="2021-10-15"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://www.uicc.org/resources/tnm"/>
+            <code value="Pn0"/>
+            <display value="Pn0"/>
+          </coding>
+        </valueCodeableConcept>
+        <method>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"/>
+            <code value="8"/>
+            <display value="8. Auflage"/>
+          </coding>
+        </method>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-klass3-ysym"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-kim-klass3-ysym"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-y-symbol|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="101658-3"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-kim-synth-patient"/>
+        </subject>
+        <effectiveDateTime value="2021-10-15"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="421755005"/>
+            <display value="Tumor staging descriptor y (tumor staging)"/>
+          </coding>
+        </valueCodeableConcept>
+        <method>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"/>
+            <code value="8"/>
+            <display value="8. Auflage"/>
+          </coding>
+        </method>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-klass3"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-kim-klass3"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="399588009"/>
+            <display value="Pathologic TNM stage grouping"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-kim-synth-patient"/>
+        </subject>
+        <focus>
+          <reference value="Condition/mii-exa-onko-kim-synth-diagnose"/>
+        </focus>
+        <effectiveDateTime value="2021-10-15"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://www.uicc.org/resources/tnm"/>
+            <code value="IV"/>
+            <display value="Stadium IV"/>
+          </coding>
+        </valueCodeableConcept>
+        <method>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"/>
+            <code value="8"/>
+            <display value="8. Auflage"/>
+          </coding>
+        </method>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-kim-klass3-ypT3c"/>
+        </hasMember>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-kim-klass3-ypM1b"/>
+        </hasMember>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-kim-klass3-L1"/>
+        </hasMember>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-kim-klass3-V0"/>
+        </hasMember>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-kim-klass3-Pn0"/>
+        </hasMember>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-kim-klass3-ysym"/>
+        </hasMember>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-synth1"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-kim-synth1"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="399703000"/>
+            <display value="Integrated TNM category"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-kim-synth-patient"/>
+        </subject>
+        <focus>
+          <reference value="Condition/mii-exa-onko-kim-synth-diagnose"/>
+        </focus>
+        <effectiveDateTime value="2021-06-25"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://www.uicc.org/resources/tnm"/>
+            <code value="IV"/>
+            <display value="Stadium IV"/>
+          </coding>
+        </valueCodeableConcept>
+        <method>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"/>
+            <code value="8"/>
+            <display value="8. Auflage"/>
+          </coding>
+        </method>
+        <device>
+          <reference value="Device/mii-exa-onko-kim-synthesis-device"/>
+        </device>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-kim-klass1-cT3c"/>
+        </hasMember>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-kim-klass1-cN1"/>
+        </hasMember>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-kim-klass1-cM1"/>
+        </hasMember>
+        <derivedFrom>
+          <reference value="Observation/mii-exa-onko-kim-klass1"/>
+        </derivedFrom>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-synth2"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-kim-synth2"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="399703000"/>
+            <display value="Integrated TNM category"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-kim-synth-patient"/>
+        </subject>
+        <focus>
+          <reference value="Condition/mii-exa-onko-kim-synth-diagnose"/>
+        </focus>
+        <effectiveDateTime value="2021-09-16"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://www.uicc.org/resources/tnm"/>
+            <code value="IV"/>
+            <display value="Stadium IV"/>
+          </coding>
+        </valueCodeableConcept>
+        <method>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"/>
+            <code value="8"/>
+            <display value="8. Auflage"/>
+          </coding>
+        </method>
+        <device>
+          <reference value="Device/mii-exa-onko-kim-synthesis-device"/>
+        </device>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-kim-klass2-ycT3c"/>
+        </hasMember>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-kim-klass2-ycN1"/>
+        </hasMember>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-kim-klass2-ycM1b"/>
+        </hasMember>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-kim-klass2-ysym"/>
+        </hasMember>
+        <derivedFrom>
+          <reference value="Observation/mii-exa-onko-kim-klass2"/>
+        </derivedFrom>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-synth3"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-kim-synth3"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="399703000"/>
+            <display value="Integrated TNM category"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-kim-synth-patient"/>
+        </subject>
+        <focus>
+          <reference value="Condition/mii-exa-onko-kim-synth-diagnose"/>
+        </focus>
+        <effectiveDateTime value="2021-10-25"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://www.uicc.org/resources/tnm"/>
+            <code value="IV"/>
+            <display value="Stadium IV"/>
+          </coding>
+        </valueCodeableConcept>
+        <method>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"/>
+            <code value="8"/>
+            <display value="8. Auflage"/>
+          </coding>
+        </method>
+        <device>
+          <reference value="Device/mii-exa-onko-kim-synthesis-device"/>
+        </device>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-kim-klass3-ypT3c"/>
+        </hasMember>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-kim-klass2-ycN1"/>
+        </hasMember>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-kim-klass3-ypM1b"/>
+        </hasMember>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-kim-klass3-L1"/>
+        </hasMember>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-kim-klass3-V0"/>
+        </hasMember>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-kim-klass3-Pn0"/>
+        </hasMember>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-kim-klass3-ysym"/>
+        </hasMember>
+        <derivedFrom>
+          <reference value="Observation/mii-exa-onko-kim-klass2"/>
+        </derivedFrom>
+        <derivedFrom>
+          <reference value="Observation/mii-exa-onko-kim-klass3"/>
+        </derivedFrom>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-synth4"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-kim-synth4"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="399703000"/>
+            <display value="Integrated TNM category"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-kim-synth-patient"/>
+        </subject>
+        <focus>
+          <reference value="Condition/mii-exa-onko-kim-synth-diagnose"/>
+        </focus>
+        <effectiveDateTime value="2022-01-15"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://www.uicc.org/resources/tnm"/>
+            <code value="IV"/>
+            <display value="Stadium IV"/>
+          </coding>
+        </valueCodeableConcept>
+        <method>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"/>
+            <code value="8"/>
+            <display value="8. Auflage"/>
+          </coding>
+        </method>
+        <device>
+          <reference value="Device/mii-exa-onko-kim-synthesis-device"/>
+        </device>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-kim-klass3-ypT3c"/>
+        </hasMember>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-kim-klass2-ycN1"/>
+        </hasMember>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-kim-klass3-ypM1b"/>
+        </hasMember>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-kim-klass3-L1"/>
+        </hasMember>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-kim-klass3-V0"/>
+        </hasMember>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-kim-klass3-Pn0"/>
+        </hasMember>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-kim-klass3-ysym"/>
+        </hasMember>
+        <derivedFrom>
+          <reference value="Observation/mii-exa-onko-kim-klass2"/>
+        </derivedFrom>
+        <derivedFrom>
+          <reference value="Observation/mii-exa-onko-kim-klass3"/>
+        </derivedFrom>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CarePlan/mii-exa-onko-kim-tk1"/>
+    <resource>
+      <CarePlan>
+        <id value="mii-exa-onko-kim-tk1"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <identifier>
+          <value value="kim-tk-2021-06-25"/>
+        </identifier>
+        <status value="completed"/>
+        <intent value="plan"/>
+        <category>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ"/>
+            <code value="praeth"/>
+          </coding>
+        </category>
+        <subject>
+          <reference value="Patient/mii-exa-onko-kim-synth-patient"/>
+        </subject>
+        <created value="2021-06-25"/>
+        <addresses>
+          <reference value="Condition/mii-exa-onko-kim-synth-diagnose"/>
+        </addresses>
+        <supportingInfo>
+          <reference value="Observation/mii-exa-onko-kim-synth1"/>
+        </supportingInfo>
+        <activity>
+          <detail>
+            <code>
+              <coding>
+                <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ"/>
+                <code value="CH"/>
+                <display value="Chemotherapie"/>
+              </coding>
+            </code>
+            <status value="completed"/>
+          </detail>
+        </activity>
+      </CarePlan>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="CarePlan"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CarePlan/mii-exa-onko-kim-tk2"/>
+    <resource>
+      <CarePlan>
+        <id value="mii-exa-onko-kim-tk2"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <identifier>
+          <value value="kim-tk-2021-09-16"/>
+        </identifier>
+        <status value="completed"/>
+        <intent value="plan"/>
+        <category>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ"/>
+            <code value="praeth"/>
+          </coding>
+        </category>
+        <subject>
+          <reference value="Patient/mii-exa-onko-kim-synth-patient"/>
+        </subject>
+        <created value="2021-09-16"/>
+        <addresses>
+          <reference value="Condition/mii-exa-onko-kim-synth-diagnose"/>
+        </addresses>
+        <supportingInfo>
+          <reference value="Observation/mii-exa-onko-kim-synth2"/>
+        </supportingInfo>
+        <activity>
+          <detail>
+            <code>
+              <coding>
+                <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ"/>
+                <code value="OP"/>
+              </coding>
+            </code>
+            <status value="completed"/>
+          </detail>
+        </activity>
+      </CarePlan>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="CarePlan"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CarePlan/mii-exa-onko-kim-tk3"/>
+    <resource>
+      <CarePlan>
+        <id value="mii-exa-onko-kim-tk3"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <identifier>
+          <value value="kim-tk-2021-10-25"/>
+        </identifier>
+        <status value="completed"/>
+        <intent value="plan"/>
+        <category>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ"/>
+            <code value="postop"/>
+          </coding>
+        </category>
+        <subject>
+          <reference value="Patient/mii-exa-onko-kim-synth-patient"/>
+        </subject>
+        <created value="2021-10-25"/>
+        <addresses>
+          <reference value="Condition/mii-exa-onko-kim-synth-diagnose"/>
+        </addresses>
+        <supportingInfo>
+          <reference value="Observation/mii-exa-onko-kim-synth3"/>
+        </supportingInfo>
+        <activity>
+          <detail>
+            <code>
+              <coding>
+                <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ"/>
+                <code value="CH"/>
+                <display value="Chemotherapie"/>
+              </coding>
+            </code>
+            <status value="scheduled"/>
+          </detail>
+        </activity>
+      </CarePlan>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="CarePlan"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CarePlan/mii-exa-onko-kim-tk4"/>
+    <resource>
+      <CarePlan>
+        <id value="mii-exa-onko-kim-tk4"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <identifier>
+          <value value="kim-tk-2022-01-15"/>
+        </identifier>
+        <replaces>
+          <reference value="CarePlan/mii-exa-onko-kim-tk3"/>
+        </replaces>
+        <status value="active"/>
+        <intent value="plan"/>
+        <category>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ"/>
+            <code value="postop"/>
+          </coding>
+        </category>
+        <subject>
+          <reference value="Patient/mii-exa-onko-kim-synth-patient"/>
+        </subject>
+        <created value="2022-01-15"/>
+        <addresses>
+          <reference value="Condition/mii-exa-onko-kim-synth-diagnose"/>
+        </addresses>
+        <supportingInfo>
+          <reference value="Observation/mii-exa-onko-kim-synth4"/>
+        </supportingInfo>
+        <activity>
+          <detail>
+            <code>
+              <coding>
+                <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ"/>
+                <code value="CH"/>
+                <display value="Chemotherapie"/>
+              </coding>
+            </code>
+            <status value="in-progress"/>
+          </detail>
+        </activity>
+      </CarePlan>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="CarePlan"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Device/mii-exa-onko-kim-synthesis-device"/>
+    <resource>
+      <Device>
+        <id value="mii-exa-onko-kim-synthesis-device"/>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="active"/>
+        <deviceName>
+          <name value="mii-lib-onko-synthesize-tnm"/>
+          <type value="model-name"/>
+        </deviceName>
+        <version>
+          <value value="1.0.0"/>
+        </version>
+      </Device>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Device"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Provenance/mii-exa-onko-kim-synthesis-provenance"/>
+    <resource>
+      <Provenance>
+        <id value="mii-exa-onko-kim-synthesis-provenance"/>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <target>
+          <reference value="Observation/mii-exa-onko-kim-synth1"/>
+        </target>
+        <target>
+          <reference value="Observation/mii-exa-onko-kim-synth2"/>
+        </target>
+        <target>
+          <reference value="Observation/mii-exa-onko-kim-synth3"/>
+        </target>
+        <target>
+          <reference value="Observation/mii-exa-onko-kim-synth4"/>
+        </target>
+        <occurredPeriod>
+          <start value="2021-06-25"/>
+          <end value="2022-01-15"/>
+        </occurredPeriod>
+        <recorded value="2026-05-06T14:00:00+02:00"/>
+        <activity>
+          <coding>
+            <system value="http://hl7.org/fhir/w3c-provenance-activity-type"/>
+            <code value="Derivation"/>
+            <display value="wasDerivedFrom"/>
+          </coding>
+        </activity>
+        <agent>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/provenance-participant-type"/>
+              <code value="performer"/>
+            </coding>
+          </type>
+          <who>
+            <reference value="Device/mii-exa-onko-kim-synthesis-device"/>
+            <display value="ETL-Pipeline (synthesize_tnm v1.0.0)"/>
+          </who>
+        </agent>
+        <entity>
+          <role value="source"/>
+          <what>
+            <reference value="Library/mii-lib-onko-synthesize-tnm"/>
+            <identifier>
+              <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Library/mii-lib-onko-synthesize-tnm"/>
+              <value value="1.0.0"/>
+            </identifier>
+            <display value="synthesize_tnm v1.0.0"/>
+          </what>
+        </entity>
+        <entity>
+          <role value="source"/>
+          <what>
+            <reference value="Observation/mii-exa-onko-kim-klass1"/>
+          </what>
+        </entity>
+        <entity>
+          <role value="source"/>
+          <what>
+            <reference value="Observation/mii-exa-onko-kim-klass2"/>
+          </what>
+        </entity>
+        <entity>
+          <role value="source"/>
+          <what>
+            <reference value="Observation/mii-exa-onko-kim-klass3"/>
+          </what>
+        </entity>
+      </Provenance>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Provenance"/>
+    </request>
+  </entry>
+</Bundle>

@@ -1,0 +1,57 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-onko-krk-stoma-status-reason",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
+  },
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-onko-krk-stoma-status-reason</b></p><a name=\"de-mii-vs-onko-krk-stoma-status-reason\"> </a><a name=\"de-hcmii-vs-onko-krk-stoma-status-reason\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablevalueset.html\">Shareable ValueSet</a></p></div><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/428119001\">428119001</a></td><td>Procedure not indicated (situation)</td></tr><tr><td><a href=\"http://snomed.info/id/262008008\">262008008</a></td><td>Not performed (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/261665006\">261665006</a></td><td>Unknown</td></tr><tr><td><a href=\"http://snomed.info/id/373068000\">373068000</a></td><td>Undetermined (qualifier value)</td></tr></table></li></ul></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-stoma-status-reason",
+  "version" : "2026.0.3",
+  "name" : "MII_VS_Onko_KRK_Stoma_Status_Reason",
+  "title" : "MII VS Onkologie KRK Stoma Status Reason",
+  "status" : "active",
+  "experimental" : true,
+  "date" : "2026-08-27T10:41:09+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Value Set für SNOMED CT Codes zur Begründung des Status der präoperativen Stoma-Anzeichnung",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "copyright" : "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license.",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "428119001",
+        "display" : "Procedure not indicated (situation)"
+      },
+      {
+        "code" : "262008008",
+        "display" : "Not performed (qualifier value)"
+      },
+      {
+        "code" : "261665006",
+        "display" : "Unknown"
+      },
+      {
+        "code" : "373068000",
+        "display" : "Undetermined (qualifier value)"
+      }]
+    }]
+  }
+}

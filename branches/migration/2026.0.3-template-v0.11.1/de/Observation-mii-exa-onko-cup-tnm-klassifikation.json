@@ -1,0 +1,43 @@
+{
+  "resourceType" : "Observation",
+  "id" : "mii-exa-onko-cup-tnm-klassifikation",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation|2026.0.3"]
+  },
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-cup-tnm-klassifikation</b></p><a name=\"de-mii-exa-onko-cup-tnm-klassifikation\"> </a><a name=\"de-hcmii-exa-onko-cup-tnm-klassifikation\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-tnm-klassifikation.html\">MII PR Onkologie TNM-Klassifikation</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 399537006}\">Clinical TNM stage grouping</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-cup-patient.html\">CUP Musterfall  Male, DoB: 1958-11-02</a></p><p><b>focus</b>: <a href=\"Condition-mii-exa-onko-cup-diagnose.html\">Condition Bösartige Neubildung, primäre Lokalisation unbekannt, so bezeichnet</a></p><p><b>effective</b>: 2026-02-11</p><p><b>method</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version 8}\">8. Auflage</span></p><p><b>hasMember</b>: </p><ul><li><a href=\"Observation-mii-exa-onko-cup-tnm-t-cTX.html\">Observation cT category (observable entity)</a></li><li><a href=\"Observation-mii-exa-onko-cup-tnm-n-cNX.html\">Observation cN category (observable entity)</a></li><li><a href=\"Observation-mii-exa-onko-cup-tnm-m-cM1.html\">Observation cM category (observable entity)</a></li></ul></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "399537006",
+      "display" : "Clinical TNM stage grouping"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/mii-exa-onko-cup-patient"
+  },
+  "focus" : [{
+    "reference" : "Condition/mii-exa-onko-cup-diagnose"
+  }],
+  "effectiveDateTime" : "2026-02-11",
+  "method" : {
+    "coding" : [{
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+      "code" : "8",
+      "display" : "8. Auflage"
+    }]
+  },
+  "hasMember" : [{
+    "reference" : "Observation/mii-exa-onko-cup-tnm-t-cTX"
+  },
+  {
+    "reference" : "Observation/mii-exa-onko-cup-tnm-n-cNX"
+  },
+  {
+    "reference" : "Observation/mii-exa-onko-cup-tnm-m-cM1"
+  }]
+}

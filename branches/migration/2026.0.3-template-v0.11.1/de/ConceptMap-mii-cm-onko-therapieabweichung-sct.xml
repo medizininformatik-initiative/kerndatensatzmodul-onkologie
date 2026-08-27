@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="mii-cm-onko-therapieabweichung-sct"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap mii-cm-onko-therapieabweichung-sct</b></p><a name="de-mii-cm-onko-therapieabweichung-sct"> </a><a name="de-hcmii-cm-onko-therapieabweichung-sct"> </a><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <a href="CodeSystem-mii-cs-onko-therapieabweichung.html">MII CS Onkologie Therapieabweichung</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>J (ja)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>373066001 (Yes (qualifier value))</td></tr><tr><td>N (nein)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>373067005 (No (qualifier value))</td></tr><tr><td>U (unbekannt)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>261665006 (Unknown (qualifier value))</td></tr></table></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-therapieabweichung-sct"/>
+  <version value="2026.0.3"/>
+  <name value="MII CM Onko Therapieabweichung SCT Mappingg"/>
+  <title value="MII CM Onko Therapieabweichung SNOMED Mapping"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2024-04-10"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="Mapping Therapieabweichung Codes zu SNOMED-CT"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <purpose value="Technical mapping to transform oBDS-Data into SNOMED"/>
+  <copyright value="This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license."/>
+  <sourceUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/"/>
+  <targetUri value="http://snomed.info/sct/900000000000207008/version/20240401"/>
+  <group>
+    <source value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieabweichung"/>
+    <target value="http://snomed.info/sct/900000000000207008/version/20240401"/>
+    <element>
+      <code value="J"/>
+      <display value="ja"/>
+      <target>
+        <code value="373066001"/>
+        <display value="Yes (qualifier value)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="N"/>
+      <display value="nein"/>
+      <target>
+        <code value="373067005"/>
+        <display value="No (qualifier value)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="U"/>
+      <display value="unbekannt"/>
+      <target>
+        <code value="261665006"/>
+        <display value="Unknown (qualifier value)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="mii-cm-onko-nebenwirkung-sct"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap mii-cm-onko-nebenwirkung-sct</b></p><a name="mii-cm-onko-nebenwirkung-sct"> </a><a name="hcmii-cm-onko-nebenwirkung-sct"> </a><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <a href="CodeSystem-mii-cs-onko-nebenwirkung-ctcae-grad.html">MII CS Onko Nebenwirkung nach CTCAE-Grad</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>K (keine)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>260413007 (None (qualifier value))</td></tr><tr><td>1 (mild)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>255604002 (Mild (qualifier value))</td></tr><tr><td>2 (moderat)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>1255665007 (Moderate (qualifier value))</td></tr><tr><td>3 (schwerwiegend)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>24484000 (Severe (severity modifier) (qualifier value))</td></tr><tr><td>4 (lebensbedrohlich)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>442452003 (Life threatening severity (qualifier value))</td></tr><tr><td>5 (tödlich)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>399166001 (Fatal (qualifier value))</td></tr><tr><td>U (unbekannt)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>261665006 (Unknown (qualifier value))</td></tr></table></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-nebenwirkung-sct"/>
+  <version value="2026.0.3"/>
+  <name value="MII CM Onko Nebenwirkung SCT Mapping"/>
+  <title value="MII CM Onko Nebenwirkung SNOMED Mapping"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2024-04-10"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="Mapping Nebenwirkung CTCAE Codes zu SNOMED-CT"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <purpose value="Technical mapping to transform oBDS-Data into SNOMED"/>
+  <copyright value="This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license."/>
+  <sourceUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/"/>
+  <targetUri value="http://snomed.info/sct/900000000000207008/version/20240401"/>
+  <group>
+    <source value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad"/>
+    <target value="http://snomed.info/sct/900000000000207008/version/20240401"/>
+    <element>
+      <code value="K"/>
+      <display value="keine"/>
+      <target>
+        <code value="260413007"/>
+        <display value="None (qualifier value)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="1"/>
+      <display value="mild"/>
+      <target>
+        <code value="255604002"/>
+        <display value="Mild (qualifier value)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="2"/>
+      <display value="moderat"/>
+      <target>
+        <code value="1255665007"/>
+        <display value="Moderate (qualifier value)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="3"/>
+      <display value="schwerwiegend"/>
+      <target>
+        <code value="24484000"/>
+        <display value="Severe (severity modifier) (qualifier value)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="4"/>
+      <display value="lebensbedrohlich"/>
+      <target>
+        <code value="442452003"/>
+        <display value="Life threatening severity (qualifier value)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="5"/>
+      <display value="tödlich"/>
+      <target>
+        <code value="399166001"/>
+        <display value="Fatal (qualifier value)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="U"/>
+      <display value="unbekannt"/>
+      <target>
+        <code value="261665006"/>
+        <display value="Unknown (qualifier value)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

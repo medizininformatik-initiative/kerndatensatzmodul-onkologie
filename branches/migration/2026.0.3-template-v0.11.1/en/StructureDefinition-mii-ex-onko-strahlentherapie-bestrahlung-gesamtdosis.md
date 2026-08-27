@@ -1,0 +1,113 @@
+# MII EX Onko Strahlentherapie Bestrahlung Gesamtdosis - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **MII EX Onko Strahlentherapie Bestrahlung Gesamtdosis**
+
+## Extension: MII EX Onko Strahlentherapie Bestrahlung Gesamtdosis 
+
+| | |
+| :--- | :--- |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis | *Version*:2026.0.3 |
+| Active as of 2026-08-27 | *Computable Name*:MII_EX_Onko_Strahlentherapie_Bestrahlung_Gesamtdosis |
+
+Strahlentherapie: Gesamtdosis einer Bestrahlung
+
+**Context of Use**
+
+**Usage info**
+
+**Usages:**
+
+* Use this Extension: [MII PR Onkologie Strahlentherapie Nuklearmedizin](StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin.md) and [MII PR Onkologie Strahlentherapie](StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.md)
+* Examples for this Extension: [Procedure/mii-exa-onko-strahlentherapie-2014-mamma-mit-lk](Procedure-mii-exa-onko-strahlentherapie-2014-mamma-mit-lk.md), [Procedure/mii-exa-onko-strahlentherapie-2014-prostata-mit-lk](Procedure-mii-exa-onko-strahlentherapie-2014-prostata-mit-lk.md), [Procedure/mii-exa-onko-strahlentherapie-2021-mamma-lymphknoten](Procedure-mii-exa-onko-strahlentherapie-2021-mamma-lymphknoten.md), [Procedure/mii-exa-onko-strahlentherapie-2021-mamma-primaer](Procedure-mii-exa-onko-strahlentherapie-2021-mamma-primaer.md)... Show 3 more, [Procedure/mii-exa-onko-strahlentherapie-bestrahlung-nuklearmedizin-1](Procedure-mii-exa-onko-strahlentherapie-bestrahlung-nuklearmedizin-1.md), [Procedure/mii-exa-onko-strahlentherapie-bestrahlung-pci-sclc](Procedure-mii-exa-onko-strahlentherapie-bestrahlung-pci-sclc.md) and [Procedure/mii-exa-onko-strahlentherapie-bestrahlung-strahlentherapie-1](Procedure-mii-exa-onko-strahlentherapie-bestrahlung-strahlentherapie-1.md)
+
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.onkologie|current/StructureDefinition/StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis.json)
+
+### Formal Views of Extension Content
+
+ [Description of Profiles, Differentials, Snapshots, and their representations](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
+
+ 
+
+Other representations of profile: [CSV](../StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis.csv), [Excel](../StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis.xlsx), [Schematron](../StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis.sch) 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis",
+  "version" : "2026.0.3",
+  "name" : "MII_EX_Onko_Strahlentherapie_Bestrahlung_Gesamtdosis",
+  "title" : "MII EX Onko Strahlentherapie Bestrahlung Gesamtdosis",
+  "status" : "active",
+  "date" : "2026-08-27T10:41:09+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Strahlentherapie: Gesamtdosis einer Bestrahlung",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "fhirVersion" : "4.0.1",
+  "kind" : "complex-type",
+  "abstract" : false,
+  "context" : [{
+    "type" : "element",
+    "expression" : "Procedure"
+  }],
+  "type" : "Extension",
+  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation" : "constraint",
+  "differential" : {
+    "element" : [{
+      "id" : "Extension",
+      "path" : "Extension",
+      "short" : "MII EX Onko Strahlentherapie Bestrahlung Gesamtdosis",
+      "definition" : "Strahlentherapie: Gesamtdosis einer Bestrahlung"
+    },
+    {
+      "id" : "Extension.extension",
+      "path" : "Extension.extension",
+      "max" : "0"
+    },
+    {
+      "id" : "Extension.url",
+      "path" : "Extension.url",
+      "fixedUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis"
+    },
+    {
+      "id" : "Extension.value[x]",
+      "path" : "Extension.value[x]",
+      "short" : "Strahlentherapie Gesamtdosis (Dosis)",
+      "definition" : "Gibt an, mit welcher Gesamtdosis da Zielgebiet bestrahlt wurde (inklusive Boost).",
+      "type" : [{
+        "code" : "Quantity"
+      }],
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-strahlungseinheit"
+      }
+    },
+    {
+      "id" : "Extension.value[x].system",
+      "path" : "Extension.value[x].system",
+      "patternUri" : "http://unitsofmeasure.org"
+    }]
+  }
+}
+
+```

@@ -1,0 +1,78 @@
+# Tumorkonferenz - FOLFOX Empfehlung - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+
+* [**Inhaltsverzeichnis**](toc.md)
+* [**Artefaktübersicht**](artifacts.md)
+* **Tumorkonferenz - FOLFOX Empfehlung**
+
+## Beispiel CarePlan: Tumorkonferenz - FOLFOX Empfehlung
+
+-------
+
+**German**
+
+-------
+
+Profile: [MII PR Onkologie Tumorkonferenz](StructureDefinition-mii-pr-onko-tumorkonferenz.md) version: 2026.0.3
+
+**identifier**: Tumorkonferenz_FOLFOX_Modification_001
+
+**status**: Active
+
+**intent**: Plan
+
+**category**: prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie)
+
+**subject**: [Patient/example-modification](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example-modification)
+
+**created**: 2024-03-05
+
+**addresses**: [Condition Bösartige Neubildung: Colon ascendens](Condition-mii-exa-onko-ascending-colon-cancer-diagnosis.md)
+
+### Activities
+
+| | | |
+| :--- | :--- | :--- |
+| - | **Progress** | **Reference** |
+| * | > Tumor board recommends FOLFOX4 chemotherapy protocol for stage III colon cancer, adjuvant setting | [RequestGroup Chemotherapie](RequestGroup-mii-exa-onko-folfox-requestgroup-modification.md) |
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "CarePlan",
+  "id" : "mii-exa-onko-tumorkonferenz-folfox-modification",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz|2026.0.3"]
+  },
+  "identifier" : [{
+    "value" : "Tumorkonferenz_FOLFOX_Modification_001"
+  }],
+  "status" : "active",
+  "intent" : "plan",
+  "category" : [{
+    "coding" : [{
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ",
+      "code" : "praeth",
+      "display" : "prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie)"
+    }]
+  }],
+  "subject" : {
+    "reference" : "Patient/example-modification"
+  },
+  "created" : "2024-03-05",
+  "addresses" : [{
+    "reference" : "Condition/mii-exa-onko-ascending-colon-cancer-diagnosis"
+  }],
+  "activity" : [{
+    "progress" : [{
+      "text" : "Tumor board recommends FOLFOX4 chemotherapy protocol for stage III colon cancer, adjuvant setting"
+    }],
+    "reference" : {
+      "reference" : "RequestGroup/mii-exa-onko-folfox-requestgroup-modification"
+    }
+  }]
+}
+
+```

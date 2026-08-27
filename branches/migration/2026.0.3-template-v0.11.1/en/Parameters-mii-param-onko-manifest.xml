@@ -1,0 +1,1885 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Parameters xmlns="http://hl7.org/fhir">
+  <id value="mii-param-onko-manifest"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-manifestparameters"/>
+  </meta>
+  <language value="en"/>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250701"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes|3.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem|4.0.2"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/shareablevalueset|4.0.2"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-ecog|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-karnofsky|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-asa-obds|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-genetische-variante-auspraegung|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-anastomoseninsuffizienz|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-mrt-mesorektale-faszie-status|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-stoma-anzeichnung|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-tme-qualitaet|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-leitlinie|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-rezeptorstatus-leitlinie|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-melanom-ulzeration|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-urgency|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-prostata-postsurgical-complications|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="http://unitsofmeasure.org|3.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet-2014|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-studienteilnahme|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieabweichung|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.uicc.org/resources/tnm|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tod|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-lymphknoten|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-primaertumor|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="system-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-ecog|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-karnofsky|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-asa-obds|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-asa-loinc|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2020|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2021|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2022|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2023|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2024|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2025|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2026|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-morphologie-2014|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-morphologie-2019|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-stoma-anzeichnung|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-pr-meta-searchparameter|2026.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/Condition|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/Resource-id|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/Resource-lastUpdated|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/Resource-profile|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-condition-verification-status|2026.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-condition-ext-morphology-behavior-icdo3|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/clinical-code|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/Condition-body-site|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/Condition-subject|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/clinical-encounter|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/Condition-recorded-date|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-condition-evidence-detail|2026.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/Specimen|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-specimen|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-specimen|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/Specimen-accession|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/Specimen-collected|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/Specimen-subject|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/DiagnosticReport|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-befund|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/DiagnosticReport-based-on|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/DiagnosticReport-subject|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/DiagnosticReport-specimen|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/DiagnosticReport-conclusion|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/Observation|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-befallene-lymphknoten|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-untersuchte-lymphknoten|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-untersuchte-sentinel-lymphknoten|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-befallene-sentinel-lymphknoten|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-histologie-icdo3|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-a-symbol|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-symbol|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-l-kategorie|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-pn-kategorie|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-r-symbol|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-v-kategorie|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-y-symbol|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-s-kategorie|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-residualstatus|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-karnofsky|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-asa-klassifikation|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tod|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-genetische-variante|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-studienteilnahme|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-menopause-status|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-rezeptorstatus-estrogen|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-rezeptorstatus-progesteron|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-her2neu-status|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-sozialdienst|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-psa|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-grade-group|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-anzahl-stanzen|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-anzahl-positive-stanzen|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-ca-befall-stanze|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-clavien-dindo|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-anokutan|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-mrt-mesorektale-faszie|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-aboral|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-circumferelle-resektionsebene|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-anastomoseninsuffizienz|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-breslow-tiefe|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-sicherheitsabstand|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-ulzeration|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-ldh|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorgroesse|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/Observation-category|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/Observation-subject|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/Observation-focus|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/clinical-date|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/Observation-value-quantity|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/Observation-has-member|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/Observation-status|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/Observation-method|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/Observation-part-of|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/Observation-component-code|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/clinical-identifier|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-observation-interpretation|2026.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/Observation-value-concept|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-tnm-cp-praefix|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-tnm-y-praefix|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-tnm-r-praefix|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-ext-tnm-n-itc|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-ext-tnm-n-sn-suffix|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/List|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-liste-evidenz-erstdiagnose|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/List-status|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/List-title|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/List-subject|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/List-item|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/Procedure|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-operation|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-praeoperative-markierung|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostata-operation|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-operation|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-stoma-markierung|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-exzision|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-operation-intention|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/Procedure-based-on|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/Procedure-part-of|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/Procedure-reason-reference|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-procedure-outcome|2026.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-procedure-complication|2026.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/Procedure-subject|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/Procedure-category|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-intention|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-gesamtdosis|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-einzeldosis|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-boost|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/AdverseEvent|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/AdverseEvent-subject|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/MedicationStatement|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/MedicationStatement-part-of|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/MedicationStatement-subject|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/CarePlan|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-operation|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/CarePlan-status|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/CarePlan-intent|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/CarePlan-category|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/CarePlan-subject|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-careplan-created|2026.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-careplan-addresses|2026.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/SearchParameter/CarePlan-activity-code|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableimplementationguide|2.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableimplementationguide|2.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-implementationguide|2.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-score-gesamt|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/Extension|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/Element|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-morphologie|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-operation-intention|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-operation-urgency|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-boost|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-strahlungseinheit|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-seitenlokalisation|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-intention|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-stellungzurop|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-intention|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-systemische-therapie-stellungzurop|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-cp-praefix|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-itc-suffix|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-sn-suffix|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/DomainResource|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/all-languages|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/Patient|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-ecog-loinc|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-karnofsky-loinc|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose|2026.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/StructureDefinition|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/security-labels|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/common-tags|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/languages|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/condition-related|5.3.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/condition-assertedDate|5.3.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/condition-occurredFollowing|5.3.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/MedicationAdministration|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/Immunization|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/condition-predecessor|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/condition-dueTo|5.3.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-transformation-von|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/condition-ver-status|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-primaertumor-diagnosesicherung|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/condition-category|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/condition-severity|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/condition-code|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://fhir.de/StructureDefinition/CodingICD10GM|1.5.4"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-icd10gm|2026.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://fhir.de/StructureDefinition/icd-10-gm-mehrfachcodierungs-kennzeichen|1.5.4"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://fhir.de/StructureDefinition/seitenlokalisation|1.5.4"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://fhir.de/StructureDefinition/icd-10-gm-diagnosesicherheit|1.5.4"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://fhir.de/StructureDefinition/CodingAlphaID|1.5.4"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-alphaid|2026.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/diagnoses-sct|2026.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-orphanet|2026.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/body-site|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-bodystructure-snomed|2026.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-topographie|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/Reference|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://fhir.de/StructureDefinition/lebensphase|1.5.4"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://fhir.de/ValueSet/lebensphase-de|1.5.4"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/PractitionerRole|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/RelatedPerson|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/condition-stage|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/ClinicalImpression|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/condition-stage-type|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/manifestation-or-symptom|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-fernmetastasen|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-koerperstruktur-sct|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/condition-clinical|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante|2026.0.4"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/observation-secondaryFinding|5.3.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/bodySite|5.3.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/DeviceRequest|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/MedicationRequest|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/NutritionOrder|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/ServiceRequest|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/MedicationDispense|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/ImagingStudy|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study|3.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/observation-category|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/observation-codes|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/Organization|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/CareTeam|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/data-absent-reason|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/observation-interpretation|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-genetische-variante-auspraegung|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/coded-annotation|3.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/annotation-code|3.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/Device|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/DeviceMetric|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/SimpleQuantity|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/Quantity|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/referencerange-meaning|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/referencerange-appliesto|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/Range|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/MolecularSequence|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/DocumentReference|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/Media|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/uv/genomics-reporting/ValueSet/hgnc-vs|3.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/uv/genomics-reporting/ValueSet/hgvs-vs|3.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/uv/genomics-reporting/ValueSet/dna-change-type-vs|3.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/uv/genomics-reporting/ValueSet/variant-confidence-status-vs|3.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/repeat-motif-order|3.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-grading|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-abstand-resektionslinie-aboral|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-abstand-circumferelle-resektionsrand|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-anastomoseninsuffizienz|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-mrt-mesorektale-faszie-status|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure|2026.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://fhir.de/StructureDefinition/ProzedurDokumentationsdatum|1.5.4"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht|2026.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-urgency|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/PlanDefinition|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/ActivityDefinition|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/Measure|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/OperationDefinition|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/Questionnaire|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/procedure-not-performed-reason|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/procedure-category|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/ValueSet/procedures-category-sct|2026.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/procedure-code|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://fhir.de/StructureDefinition/CodingOPS|1.5.4"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/ValueSet/mii-vs-prozedur-ops|2026.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/ValueSet/procedures-sct|2026.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/performer-role|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/Location|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/procedure-reason|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-beurteilung-lokaler-residualstatus|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/Composition|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-operation-komplikation|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://fhir.de/ValueSet/bfarm/icd-10-gm|1.5.4"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/procedure-followup|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/device-action|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/Medication|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/Substance|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/device-kind|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://terminology.hl7.org/ValueSet/v2-0487|3.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://terminology.hl7.org/ValueSet/v2-0916|3.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://terminology.hl7.org/ValueSet/v2-0371|3.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-tme-qualitaet|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-stoma-status-reason|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/procedure-outcome|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-her2neu-status-obds|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-her2neu-status-leitlinie|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-her2neu-ihc-score|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-ish-ergebnis|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-menopause-status|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-operation-ops|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-operation-sct|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-intraoperatives-imaging-praeparat|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-praeoperative-markierung-modalitaet|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-rezeptorstatus-obds|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-rezeptorstatus-leitlinie|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-faerbeintensitaet|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-melanom-exzision-snomedct|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-melanom-ldh|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-melanom-ulzeration|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-nebenwirkung-art|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-nebenwirkung-ctcae-grad|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-operation-snomedct|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-clavien-dindo|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-postsurgical-complications|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-score|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-primary-secondary-tertiary|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-patterns|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-score-gesamt|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-psa-loinc|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-gesamtbeurteilung-residualstatus|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://terminology.hl7.org/ValueSet/v2-0493|3.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/procedure-method|5.3.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-applikationsart|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-boost|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-ops-nuklearmedizin|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-zielgebiet|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-strahlenart|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-ops-strahlentherapie|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-ende-grund|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/ResearchStudy|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-studienteilnahme|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationStatement|2026.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/reason-medication-status-codes|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/medication-statement-category|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/ValueSet/fallkontext|2026.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/medication-codes|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication|2026.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/ValueSet/mii-vs-medikation-atc|2026.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-unii|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/EpisodeOfCare|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/Resource|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://ig.fhir.de/igs/medication/StructureDefinition/DosageDE|1.0.7"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/additional-instruction-codes|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://ig.fhir.de/igs/medication/StructureDefinition/TimingDE|1.0.7"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/Timing|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/timing-abbreviation|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/medication-as-needed-reason|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/approach-site-codes|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/route-codes|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/uv/ips/ValueSet/medicine-route-of-administration|2.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/administration-method-codes|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/dose-rate-type|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://ig.fhir.de/igs/medication/ValueSet/DosageDoseQuantityDE|1.0.7"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/Ratio|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellungzurop|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-art|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-systemische-therapie-ende-grund|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-protokolle|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/RequestGroup|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieempfehlung-typ|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest|2026.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/medicationrequest-status-reason|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/medicationrequest-category|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/medicationrequest-course-of-therapy|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/Coverage|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/ClaimResponse|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/Duration|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/Period|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://terminology.hl7.org/ValueSet/v3-ActSubstanceAdminSubstitutionCode|3.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://terminology.hl7.org/ValueSet/v3-SubstanceAdminSubstitutionReason|3.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/DetectedIssue|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/Provenance|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType|3.0.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-klassifikation-typ|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-uicc-stadium|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-version|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-l-kategorie-werte|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-y-praefix|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-r-praefix|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-a-praefix|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-m-kategorie|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-itc-suffix|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-m-kategorie-werte|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-m-kategorie-werte-sct|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-m-symbol|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-n-kategorie|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-sn-suffix|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-n-kategorie-werte|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-n-kategorie-werte-sct|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-pn-kategorie-werte|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-s-kategorie-werte|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-t-kategorie|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-t-kategorie-werte|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-t-kategorie-werte-sct|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-v-kategorie-werte|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tod|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieplanung-typ|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieabweichung|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-verlauf-gesamtbeurteilung|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-verlauf-primaertumor|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-verlauf-lymphknoten|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-verlauf-fernmetastasen|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-weitere-klassifikationen|2026.0.3"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-weitere-klassifikationen-auspraegungen|2026.0.3"/>
+  </parameter>
+</Parameters>

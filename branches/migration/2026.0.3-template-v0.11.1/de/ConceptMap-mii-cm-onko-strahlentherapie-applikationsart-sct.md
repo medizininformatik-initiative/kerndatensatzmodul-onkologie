@@ -1,0 +1,262 @@
+# MII CM Onko Strahlentherapie Applikationsart SNOMED Mapping - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+
+* [**Inhaltsverzeichnis**](toc.md)
+* [**Artefaktübersicht**](artifacts.md)
+* **MII CM Onko Strahlentherapie Applikationsart SNOMED Mapping**
+
+## ConceptMap: MII CM Onko Strahlentherapie Applikationsart SNOMED Mapping 
+
+| | |
+| :--- | :--- |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-strahlentherapie-applikationsart-sct | *Version*:2026.0.3 |
+| Active Stand: 2024-04-11 | *Maschinenlesbarer Name*:MII CM Onko Strahlentherapie Applikationsart SCT Mapping |
+| **Copyright/Rechtliches**: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. | |
+
+ 
+Mapping Strahlentherapie Applikationsart Codes zu SNOMED-CT 
+
+Die verschiedenen Applikationsarten sind teilweise in Kombination aufgeführt und in dieser Form schwer in SNOMED abbildbar. Ebenso zeigt sich, dass manche spezialisierte Methodiken (wie PSMA-Therapie) nicht in SNOMED-CT abgebildet sind.
+
+> Die vollständige Mapping-Tabelle wird unterhalb dieser Einleitung aus der ConceptMap generiert.
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "ConceptMap",
+  "id" : "mii-cm-onko-strahlentherapie-applikationsart-sct",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-strahlentherapie-applikationsart-sct",
+  "version" : "2026.0.3",
+  "name" : "MII CM Onko Strahlentherapie Applikationsart SCT Mapping",
+  "title" : "MII CM Onko Strahlentherapie Applikationsart SNOMED Mapping",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2024-04-11",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Mapping Strahlentherapie Applikationsart Codes zu SNOMED-CT",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "purpose" : "Technical mapping to transform oBDS-Data into SNOMED",
+  "copyright" : "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license.",
+  "sourceUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
+  "targetUri" : "http://snomed.info/sct/900000000000207008/version/20240401",
+  "group" : [{
+    "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart",
+    "target" : "http://snomed.info/sct/900000000000207008/version/20240401",
+    "element" : [{
+      "code" : "P",
+      "display" : "perkutan (Teletherapie)",
+      "target" : [{
+        "code" : "33195004",
+        "display" : "External beam radiation therapy procedure (procedure)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "P-ST",
+      "display" : "perkutan stereotaktisch",
+      "target" : [{
+        "code" : "395096001",
+        "display" : "Stereotactic radiotherapy (procedure)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "P-4D",
+      "display" : "perkutan, atemgetriggert",
+      "target" : [{
+        "code" : "721061000124106",
+        "display" : "External beam radiotherapy with respiratory gating (procedure)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "P-ST4D",
+      "display" : "perkutan, stereotaktisch, atemgetriggert",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Einzelkonzepte über SNOMED abbildbar"
+      }]
+    },
+    {
+      "code" : "PRCN-ST",
+      "display" : "perkutan, stereotaktisch ohne Chemotherapie/Sensitizer",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "PRCN-4D",
+      "display" : "perkutan, atemgetriggert, ohne Chemotherapie/Sensitizer",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "PRCN-ST4D",
+      "display" : "perkutan, stereotaktisch, atemgetriggert, ohne Chemotherapie/Sensitizer",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "PRCJ",
+      "display" : "perkutan mit Chemotherapie/Sensitizer",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "PRCJ-4D",
+      "display" : "perkutan, atemgetriggert, mit Chemotherapie/Sensitizer",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "K",
+      "display" : "endokavitäre Kontakttherapie",
+      "target" : [{
+        "code" : "384692006",
+        "display" : "Intracavitary brachytherapy (procedure)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "KHDR",
+      "display" : "endokavitäre Kontakttherapie, high dose rate therapy",
+      "target" : [{
+        "code" : "384692006",
+        "display" : "Intracavitary brachytherapy (procedure)",
+        "equivalence" : "wider"
+      }]
+    },
+    {
+      "code" : "KLDR",
+      "display" : "endokavitäre Kontakttherapie, low dose rate therapy",
+      "target" : [{
+        "code" : "384692006",
+        "display" : "Intracavitary brachytherapy (procedure)",
+        "equivalence" : "wider"
+      }]
+    },
+    {
+      "code" : "KPDR",
+      "display" : "endokavitäre Kontakttherapie, pulsed dose rate therapy",
+      "target" : [{
+        "code" : "384692006",
+        "display" : "Intracavitary brachytherapy (procedure)",
+        "equivalence" : "wider"
+      }]
+    },
+    {
+      "code" : "I",
+      "display" : "intersitielle Kontakttherapie",
+      "target" : [{
+        "code" : "113120007",
+        "display" : "Intracavitary brachytherapy (procedure)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "IHDR",
+      "display" : "intersitielle Kontakttherapie, high dose rate therapy",
+      "target" : [{
+        "code" : "113120007",
+        "display" : "Intracavitary brachytherapy (procedure)",
+        "equivalence" : "wider"
+      }]
+    },
+    {
+      "code" : "ILDR",
+      "display" : "intersitielle Kontakttherapie, low dose rate therapy",
+      "target" : [{
+        "code" : "113120007",
+        "display" : "Intracavitary brachytherapy (procedure)",
+        "equivalence" : "wider"
+      }]
+    },
+    {
+      "code" : "IPDR",
+      "display" : "intersitielle Kontakttherapie, pulsed dose rate therapy",
+      "target" : [{
+        "code" : "113120007",
+        "display" : "Intracavitary brachytherapy (procedure)",
+        "equivalence" : "wider"
+      }]
+    },
+    {
+      "code" : "MSIRT",
+      "display" : "selektive interne Radio-Therapie",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "MPRRT",
+      "display" : "Peptid-Radio-Rezeptor-Therapie",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "MPSMA",
+      "display" : "PSMA-Therapie",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "MRJT",
+      "display" : "Radiojod-Therapie",
+      "target" : [{
+        "code" : "64291000052106",
+        "display" : "Radioactive iodine therapy (procedure)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "MRIT",
+      "display" : "Radioimmun-Therapie",
+      "target" : [{
+        "code" : "118640001",
+        "display" : "Radioimmunotherapy (procedure)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "M",
+      "display" : "sonstige metabolische Radionuklidtherapie",
+      "target" : [{
+        "code" : "399315003",
+        "display" : "Radionuclide therapy (procedure)",
+        "equivalence" : "wider"
+      }]
+    },
+    {
+      "code" : "S",
+      "display" : "Sonstiges",
+      "target" : [{
+        "code" : "74964007",
+        "display" : "Other (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}
+
+```

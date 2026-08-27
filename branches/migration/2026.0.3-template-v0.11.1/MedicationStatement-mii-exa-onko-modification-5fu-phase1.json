@@ -1,0 +1,36 @@
+{
+  "resourceType" : "MedicationStatement",
+  "id" : "mii-exa-onko-modification-5fu-phase1",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: MedicationStatement mii-exa-onko-modification-5fu-phase1</b></p><a name=\"mii-exa-onko-modification-5fu-phase1\"> </a><a name=\"hcmii-exa-onko-modification-5fu-phase1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-systemische-therapie-medikation.html\">MII PR Onkologie Systemische Therapie Medikation</a></p></div><p><b>basedOn</b>: <a href=\"CarePlan-mii-exa-onko-tumorkonferenz-folfox-modification.html\">CarePlan: identifier = Tumorkonferenz_FOLFOX_Modification_001; status = active; intent = plan; category = prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie); created = 2024-03-05</a></p><p><b>partOf</b>: <a href=\"Procedure-mii-exa-onko-folfox-phase1.html\">Procedure Nicht komplexe Chemotherapie</a></p><p><b>status</b>: Completed</p><p><b>medication</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/atc L01BC02}\">5-Fluorouracil (5-FU)</span></p><p><b>subject</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example-modification\">Patient/example-modification</a></p><p><b>effective</b>: 2024-03-15 --&gt; 2024-06-10</p><p><b>note</b>: </p><blockquote><div><p>FOLFOX4 - Cycles 1-6</p>\n</div></blockquote></div><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: MedicationStatement mii-exa-onko-modification-5fu-phase1</b></p><a name=\"de-mii-exa-onko-modification-5fu-phase1\"> </a><a name=\"de-hcmii-exa-onko-modification-5fu-phase1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-systemische-therapie-medikation.html\">MII PR Onkologie Systemische Therapie Medikation</a></p></div><p><b>basedOn</b>: <a href=\"CarePlan-mii-exa-onko-tumorkonferenz-folfox-modification.html\">CarePlan: identifier = Tumorkonferenz_FOLFOX_Modification_001; status = active; intent = plan; category = prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie); created = 2024-03-05</a></p><p><b>partOf</b>: <a href=\"Procedure-mii-exa-onko-folfox-phase1.html\">Procedure Nicht komplexe Chemotherapie</a></p><p><b>status</b>: Completed</p><p><b>medication</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/atc L01BC02}\">5-Fluorouracil (5-FU)</span></p><p><b>subject</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example-modification\">Patient/example-modification</a></p><p><b>effective</b>: 2024-03-15 --&gt; 2024-06-10</p><p><b>note</b>: </p><blockquote><div><p>FOLFOX4 - Cycles 1-6</p>\n</div></blockquote></div></div>"
+  },
+  "basedOn" : [{
+    "reference" : "CarePlan/mii-exa-onko-tumorkonferenz-folfox-modification"
+  }],
+  "partOf" : [{
+    "reference" : "Procedure/mii-exa-onko-folfox-phase1"
+  }],
+  "status" : "completed",
+  "medicationCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://fhir.de/CodeSystem/bfarm/atc",
+      "code" : "L01BC02",
+      "display" : "Fluorouracil"
+    }],
+    "text" : "5-Fluorouracil (5-FU)"
+  },
+  "subject" : {
+    "reference" : "Patient/example-modification"
+  },
+  "effectivePeriod" : {
+    "start" : "2024-03-15",
+    "end" : "2024-06-10"
+  },
+  "note" : [{
+    "text" : "FOLFOX4 - Cycles 1-6"
+  }]
+}

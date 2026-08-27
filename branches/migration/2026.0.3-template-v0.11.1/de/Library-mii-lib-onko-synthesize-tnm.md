@@ -1,0 +1,82 @@
+# MII Onkologie TNM-Synthese Algorithmus - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+
+* [**Inhaltsverzeichnis**](toc.md)
+* [**Artefaktübersicht**](artifacts.md)
+* **MII Onkologie TNM-Synthese Algorithmus**
+
+## Library: MII Onkologie TNM-Synthese Algorithmus 
+
+| | |
+| :--- | :--- |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Library/mii-lib-onko-synthesize-tnm | *Version*:2026.0.3 |
+| Active Stand: 2026-08-27 | *Maschinenlesbarer Name*:MIIOnkoSynthesizeTNM |
+
+ 
+Deterministischer Algorithmus zur Synthese einer TNM-Klassifikation aus mehreren Meldungs-bezogenen Quell-Klassifikationen. Implementiert UICC General Rules nach Manual der Krebsregistrierung Kap. 6 (Stegmaier 2019). Drei Phasen: primary (kein y/r), post-neoadjuvant (y), recurrence (r). Symbol-Lesen aus hasMember (mii-pr-onko-tnm-{y,r,a,m}-symbol). Pre-therapeutic intentional NICHT Phase: nicht aus TNM-Daten ableitbar (Biopsien können pTNM ergeben), gehört in Workflow-Kontext (Tumorkonferenz.category=praeth). 
+
+-------
+
+**German**
+
+-------
+
+**Exception parsing generated Narrative (see /tmp/liquid-2fffc146-9a70-48c0-bc82-8638889fdc41.html): unexpected non-end of element null::a at line 124 column 50**
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Library",
+  "id" : "mii-lib-onko-synthesize-tnm",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Library/mii-lib-onko-synthesize-tnm",
+  "version" : "2026.0.3",
+  "name" : "MIIOnkoSynthesizeTNM",
+  "title" : "MII Onkologie TNM-Synthese Algorithmus",
+  "status" : "active",
+  "experimental" : false,
+  "type" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/library-type",
+      "code" : "logic-library"
+    }]
+  },
+  "date" : "2026-08-27T10:41:09+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Deterministischer Algorithmus zur Synthese einer TNM-Klassifikation aus mehreren Meldungs-bezogenen Quell-Klassifikationen. Implementiert UICC General Rules nach Manual der Krebsregistrierung Kap. 6 (Stegmaier 2019). Drei Phasen: primary (kein y/r), post-neoadjuvant (y), recurrence (r). Symbol-Lesen aus hasMember (mii-pr-onko-tnm-{y,r,a,m}-symbol). Pre-therapeutic intentional NICHT Phase: nicht aus TNM-Daten ableitbar (Biopsien können pTNM ergeben), gehört in Workflow-Kontext (Tumorkonferenz.category=praeth).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "relatedArtifact" : [{
+    "type" : "documentation",
+    "label" : "README mit Algorithmus-Doku, ETL-Integration und Performance-Notes",
+    "url" : "https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/blob/main/.claude/scripts/synthesize_tnm/README.md",
+    "document" : {
+      "url" : "https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/blob/main/.claude/scripts/synthesize_tnm/README.md"
+    }
+  },
+  {
+    "type" : "depends-on",
+    "label" : "UICC General Rules / Best-of-Prozess",
+    "citation" : "Stegmaier C, Hentschel S, Hofstädter F, Katalinic A, Tillack A, Klinkhammer-Schalke M (Hg.). Das Manual der Krebsregistrierung. W. Zuckschwerdt Verlag, München. 2019. ISBN 978-3-86371-165-8. Kap. 6 'Datenzusammenführung, -speicherung und Best-of-Prozess'."
+  },
+  {
+    "type" : "depends-on",
+    "label" : "UICC TNM 8th Edition",
+    "citation" : "Brierley JD, Gospodarowicz MK, Wittekind C (Hg.). TNM Classification of Malignant Tumours, 8th Edition. Wiley-Blackwell, Oxford. 2017. ISBN 978-1-119-26357-9."
+  }]
+}
+
+```

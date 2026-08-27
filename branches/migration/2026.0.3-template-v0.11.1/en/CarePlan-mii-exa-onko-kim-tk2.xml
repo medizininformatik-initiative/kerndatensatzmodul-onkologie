@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CarePlan xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-kim-tk2"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz|2026.0.3"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CarePlan mii-exa-onko-kim-tk2</b></p><a name="mii-exa-onko-kim-tk2"> </a><a name="hcmii-exa-onko-kim-tk2"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-tumorkonferenz.html">MII PR Onkologie Tumorkonferenz</a> version: 2026.0.3</p></div><p><b>identifier</b>: kim-tk-2021-09-16</p><p><b>status</b>: Completed</p><p><b>intent</b>: Plan</p><p><b>category</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ praeth}">prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie)</span></p><p><b>subject</b>: <a href="Patient-mii-exa-onko-kim-synth-patient.html">Kim Musterperson  Female, DoB: 1956-03-14</a></p><p><b>created</b>: 2021-09-16</p><p><b>addresses</b>: <a href="Condition-mii-exa-onko-kim-synth-diagnose.html">Condition Bösartige Neubildung: Peritoneum, nicht näher bezeichnet</a></p><p><b>supportingInfo</b>: <a href="Observation-mii-exa-onko-kim-synth2.html">Observation Integrated TNM category</a></p><blockquote><p><b>activity</b></p><h3>Details</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td><td><b>Status</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ OP}">Operation</span></td><td>Completed</td></tr></table></blockquote></div>
+  </text>
+  <identifier>
+    <value value="kim-tk-2021-09-16"/>
+  </identifier>
+  <status value="completed"/>
+  <intent value="plan"/>
+  <category>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ"/>
+      <code value="praeth"/>
+    </coding>
+  </category>
+  <subject>
+    <reference value="Patient/mii-exa-onko-kim-synth-patient"/>
+  </subject>
+  <created value="2021-09-16"/>
+  <addresses>
+    <reference value="Condition/mii-exa-onko-kim-synth-diagnose"/>
+  </addresses>
+  <supportingInfo>
+    <reference value="Observation/mii-exa-onko-kim-synth2"/>
+  </supportingInfo>
+  <activity>
+    <detail>
+      <code>
+        <coding>
+          <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ"/>
+          <code value="OP"/>
+        </coding>
+      </code>
+      <status value="completed"/>
+    </detail>
+  </activity>
+</CarePlan>

@@ -1,0 +1,64 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "mii-cs-onko-seitenlokalisation",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablecodesystem"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-onko-seitenlokalisation</b></p><a name=\"mii-cs-onko-seitenlokalisation\"> </a><a name=\"hcmii-cs-onko-seitenlokalisation\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">L<a name=\"mii-cs-onko-seitenlokalisation-L\"> </a></td><td>links</td><td/></tr><tr><td style=\"white-space:nowrap\">R<a name=\"mii-cs-onko-seitenlokalisation-R\"> </a></td><td>rechts</td><td/></tr><tr><td style=\"white-space:nowrap\">B<a name=\"mii-cs-onko-seitenlokalisation-B\"> </a></td><td>beidseitig</td><td>Bei paarigen Organen i.d.R. als 2 getrennte Tumoren; ABER Ovar (C56), Tube (C57.0) und Adnexe (C57.4) gelten beidseitig als EINE Tumorerkrankung (Best-of, §65c), Ausnahmen: seröses Ovarialkarzinom/Wilms/Retinoblastom.</td></tr><tr><td style=\"white-space:nowrap\">M<a name=\"mii-cs-onko-seitenlokalisation-M\"> </a></td><td>Mittellinie/mittig</td><td/></tr><tr><td style=\"white-space:nowrap\">U<a name=\"mii-cs-onko-seitenlokalisation-U\"> </a></td><td>unbekannt</td><td/></tr><tr><td style=\"white-space:nowrap\">T<a name=\"mii-cs-onko-seitenlokalisation-T\"> </a></td><td>trifft nicht zu</td><td>Seitenangabe nicht sinnvoll, einschließlich Systemerkrankungen</td></tr></table></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation",
+  "version" : "2026.0.3",
+  "name" : "MII_CS_Onko_Seitenlokalisation",
+  "title" : "MII CS Onkologie Primärtumor Seitenlokalisation",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-08-27T10:41:09+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Codes für Seitenlokalisation, d.h. organspezifische Angabe der betroffenen Seite.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 6,
+  "concept" : [{
+    "code" : "L",
+    "display" : "links"
+  },
+  {
+    "code" : "R",
+    "display" : "rechts"
+  },
+  {
+    "code" : "B",
+    "display" : "beidseitig",
+    "definition" : "Bei paarigen Organen i.d.R. als 2 getrennte Tumoren; ABER Ovar (C56), Tube (C57.0) und Adnexe (C57.4) gelten beidseitig als EINE Tumorerkrankung (Best-of, §65c), Ausnahmen: seröses Ovarialkarzinom/Wilms/Retinoblastom."
+  },
+  {
+    "code" : "M",
+    "display" : "Mittellinie/mittig"
+  },
+  {
+    "code" : "U",
+    "display" : "unbekannt"
+  },
+  {
+    "code" : "T",
+    "display" : "trifft nicht zu",
+    "definition" : "Seitenangabe nicht sinnvoll, einschließlich Systemerkrankungen"
+  }]
+}

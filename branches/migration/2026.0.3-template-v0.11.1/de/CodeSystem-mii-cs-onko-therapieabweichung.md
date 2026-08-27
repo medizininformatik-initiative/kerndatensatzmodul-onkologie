@@ -1,0 +1,76 @@
+# MII CS Onkologie Therapieabweichung - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+
+* [**Inhaltsverzeichnis**](toc.md)
+* [**Artefaktübersicht**](artifacts.md)
+* **MII CS Onkologie Therapieabweichung**
+
+## CodeSystem: MII CS Onkologie Therapieabweichung 
+
+| | |
+| :--- | :--- |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieabweichung | *Version*:2026.0.3 |
+| Active Stand: 2026-08-27 | *Maschinenlesbarer Name*:MII_CS_Onko_Therapieabweichung |
+
+ 
+oBDS-spezifisches Codesystem für die Therapieabweichung auf Wunsch des Patients. 
+
+Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
+
+* [MII VS Onkologie Therapieabweichung](ValueSet-mii-vs-onko-therapieabweichung.md)
+
+-------
+
+ [Beschreibung der obigen Tabelle(n)](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology). 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "CodeSystem",
+  "id" : "mii-cs-onko-therapieabweichung",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablecodesystem"]
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieabweichung",
+  "version" : "2026.0.3",
+  "name" : "MII_CS_Onko_Therapieabweichung",
+  "title" : "MII CS Onkologie Therapieabweichung",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-08-27T10:41:09+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "oBDS-spezifisches Codesystem für die Therapieabweichung auf Wunsch des Patients.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 3,
+  "concept" : [{
+    "code" : "J",
+    "display" : "ja"
+  },
+  {
+    "code" : "N",
+    "display" : "nein"
+  },
+  {
+    "code" : "U",
+    "display" : "unbekannt"
+  }]
+}
+
+```

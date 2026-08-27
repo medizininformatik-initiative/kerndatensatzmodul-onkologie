@@ -1,0 +1,552 @@
+# MII EXA Onko Melanom Bundle - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+
+* [**Inhaltsverzeichnis**](toc.md)
+* [**Artefaktübersicht**](artifacts.md)
+* **MII EXA Onko Melanom Bundle**
+
+## Beispiel Bundle: MII EXA Onko Melanom Bundle
+
+### Inhalt
+
+Das **Melanom Bundle Beispiel** demonstriert die strukturierte Zusammenstellung aller Melanom-spezifischen FHIR-Ressourcen in einem einheitlichen Transaktions-Bundle. Dieses Bundle zeigt die praktische Anwendung der Melanom-Profile und deren Verknüpfungen untereinander in einem realistischen klinischen Szenario eines Malignen Melanoms der Haut.
+
+Das Bundle implementiert das **Transaction-Pattern** und ist server-konsumierbar, wodurch alle enthaltenen Ressourcen als atomare Operation übertragen werden können.
+
+-------
+
+### Bundle-Struktur
+
+Das Melanom-Bundle umfasst folgende Ressourcen:
+
+#### Primäre Ressourcen
+
+* **Patient**: Melanom-Patient (Maria Melanom)
+* **Condition**: Primärtumor-Diagnose (C43.9 - Bösartige Neubildung: Haut, nicht näher bezeichnet)
+* **Encounter**: Stationärer Behandlungsfall
+
+#### Melanom-spezifische Observations
+
+* **Breslow-Tiefe**: Tumordicke 2.1mm von Granularschicht bis tiefste Invasion (Breslow)
+* **Sicherheitsabstand**: Minimaler Abstand zum Resektionsrand 5mm (MM1)
+* **Ulzeration**: Nachweis einer Ulzeration der Epidermis (MM4)
+* **LDH**: Laktatdehydrogenase-Wert 280 U/L als prognostischer Marker (LDH)
+
+#### Bundle-spezifische Merkmale
+
+* **Transaction Bundle**: Server-konsumierbare atomare Operation
+* **Referenz-Konsistenz**: Alle Einzelressourcen referenzieren Bundle-Kernressourcen
+* **Vollständige Abdeckung**: Alle 4 Melanom-Profile sind enthalten
+
+> Als therapeutische Ressource enthält das Bundle darüber hinaus die **Exzision am Oberarm** als Procedure.
+
+-------
+
+### Klinisches Szenario
+
+Das Bundle repräsentiert eine **Patientin mit Malignem Melanom** mit kompletter histopathologischer Diagnostik und operativer Therapie:
+
+**Patientencharakteristika:**
+
+* **Diagnose**: C43.9 Malignes Melanom der Haut
+* **Breslow-Tiefe**: 2.1mm (prognostisch wichtig)
+* **Tumorlokalisation**: Haut, nicht näher bezeichnet
+
+**Histopathologische Diagnostik:**
+
+* **Ulzeration**: Nachweis einer Ulzeration der Epidermis
+* **LDH**: Erhöhter Wert (280 U/L) als prognostischer Marker
+
+**Operative Therapie:**
+
+* **Exzision**: Mit ausreichendem Sicherheitsabstand
+* **Sicherheitsabstand**: Minimaler Abstand 5mm zum Resektionsrand
+* **Resektionsstatus**: R0-Resektion erreicht
+
+-------
+
+### Technische Implementation
+
+#### Bundle-Typ und Struktur
+
+```
+* type = #transaction
+
+```
+
+* **Transaction Bundle**: Atomare Übertragung aller Ressourcen
+* **Server-konsumierbar**: Alle Entries mit vollständigen Request-Informationen
+
+#### Entry-Pattern
+
+Jeder Bundle-Entry enthält:
+
+* **fullUrl**: Eindeutige Referenz-URL
+* **resource**: Die eigentliche FHIR-Ressource
+* **request.method**: HTTP POST für Erstellung
+* **request.url**: Ziel-Ressourcentyp
+
+#### Referenz-Integrität
+
+* **Condition**: Referenziert Patient über `subject`
+* **Observations**: Referenzieren sowohl Patient (`subject`) als auch Condition (`focus`)
+* **Procedures**: Referenzieren Patient (`subject`) und Condition (`reasonReference`)
+* **Specimen**: Referenziert Patient (`subject`) und Collection-Procedure
+
+-------
+
+### oBDS-Zuordnung
+
+Das Bundle demonstriert die vollständige Abbildung der oBDS-Datenfelder für Malignes Melanom:
+
+#### Histopathologische Bewertung
+
+* **MM2**: Breslow-Tiefe → [mii-exa-onko-melanom-breslow-tiefe](Observation-mii-exa-onko-melanom-breslow-tiefe.md)
+* **MM4**: Ulzeration → [mii-exa-onko-melanom-ulzeration](Observation-mii-exa-onko-melanom-ulzeration.md)
+
+#### Chirurgische Bewertung
+
+* **MM1**: Sicherheitsabstand → [mii-exa-onko-melanom-sicherheitsabstand](Observation-mii-exa-onko-melanom-sicherheitsabstand.md)
+
+#### Laborparameter
+
+* **MM3**: Laktatdehydrogenase → [mii-exa-onko-melanom-ldh](Observation-mii-exa-onko-melanom-ldh.md)
+
+-------
+
+### ValueSet-Verwendung
+
+Das Bundle zeigt die praktische Anwendung verschiedener Terminologien:
+
+#### LOINC
+
+* **LDH**: `14805-6` "Lactate dehydrogenase activity in Serum or Plasma"
+
+#### SNOMED CT
+
+* **Breslow-Tiefe**: `106243009` "Breslow depth staging for melanoma of skin"
+* **Sicherheitsabstand**: `396511007` "Distance of in situ melanoma from closest lateral surgical margin"
+* **Ulzeration**: `97816-3` "Ulceration present in melanoma of skin"
+
+#### ICD-10-GM
+
+* **Diagnose**: `C43.9` "Bösartige Neubildung: Haut, nicht näher bezeichnet"
+
+#### oBDS CodeSystems
+
+* **Ulzeration**: `mii-cs-onko-melanom-ulzeration#J` "Ja"
+* **LDH-Bewertung**: `mii-cs-onko-melanom-ldh-bewertung#erhoeht` "Erhöht"
+
+-------
+
+### Einzelne Ressourcen-Beispiele
+
+> Die im Bundle enthaltenen Ressourcen sind zusätzlich als eigenständige Beispielinstanzen ausgeliefert:
+
+* Patient: [mii-exa-onko-melanom-bundle-patient](Patient-mii-exa-onko-melanom-bundle-patient.md)
+* Primärtumor-Condition: [mii-exa-onko-melanom-diagnose](Condition-mii-exa-onko-melanom-diagnose.md)
+* Behandlungsfall: [mii-exa-onko-melanom-bundle-encounter](Encounter-mii-exa-onko-melanom-bundle-encounter.md)
+* Breslow-Tiefe: [mii-exa-onko-melanom-breslow-tiefe](Observation-mii-exa-onko-melanom-breslow-tiefe.md)
+* Sicherheitsabstand: [mii-exa-onko-melanom-sicherheitsabstand](Observation-mii-exa-onko-melanom-sicherheitsabstand.md)
+* Ulzeration: [mii-exa-onko-melanom-ulzeration](Observation-mii-exa-onko-melanom-ulzeration.md)
+* LDH: [mii-exa-onko-melanom-ldh](Observation-mii-exa-onko-melanom-ldh.md)
+* Exzision Oberarm: [mii-exa-onko-melanom-exzision-oberarm](Procedure-mii-exa-onko-melanom-exzision-oberarm.md)
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Bundle",
+  "id" : "mii-exa-onko-melanom-bundle",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/Bundle"]
+  },
+  "identifier" : {
+    "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko",
+    "value" : "melanom-example-bundle-2024-001"
+  },
+  "type" : "transaction",
+  "timestamp" : "2024-03-25T10:00:00+01:00",
+  "entry" : [{
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-melanom-bundle-patient",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "mii-exa-onko-melanom-bundle-patient",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Patient_mii-exa-onko-melanom-bundle-patient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient mii-exa-onko-melanom-bundle-patient</b></p><a name=\"mii-exa-onko-melanom-bundle-patient\"> </a><a name=\"hcmii-exa-onko-melanom-bundle-patient\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Maria Melanom  (no stated gender), DoB Unknown</p><hr/></div></div>"
+      },
+      "name" : [{
+        "family" : "Melanom",
+        "given" : ["Maria"]
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Patient"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-melanom-diagnose",
+    "resource" : {
+      "resourceType" : "Condition",
+      "id" : "mii-exa-onko-melanom-diagnose",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor|2026.0.3"]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Condition_mii-exa-onko-melanom-diagnose\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition mii-exa-onko-melanom-diagnose</b></p><a name=\"mii-exa-onko-melanom-diagnose\"> </a><a name=\"hcmii-exa-onko-melanom-diagnose\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-diagnose-primaertumor.html\">MII PR Onkologie Diagnose Primärtumor</a> version: 2026.0.3</p></div><p><b>Condition Asserted Date</b>: 2024-01-02</p><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}, {https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung 7.1}\">histologische Untersuchung eines Primärtumors</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm C43.9}\">Bösartiges Melanom der Haut, nicht näher bezeichnet</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-melanom-bundle-patient.html\">Maria Melanom  (no stated gender), DoB Unknown</a></p><p><b>encounter</b>: <a href=\"Encounter-mii-exa-onko-melanom-bundle-encounter.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP)</a></p><p><b>recordedDate</b>: 2024-01-02</p></div></div>"
+      },
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+        "valueDateTime" : "2024-01-02"
+      }],
+      "clinicalStatus" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code" : "active"
+        }]
+      },
+      "verificationStatus" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+          "code" : "confirmed"
+        },
+        {
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung",
+          "code" : "7.1",
+          "display" : "histologische Untersuchung eines Primärtumors"
+        }]
+      },
+      "code" : {
+        "coding" : [{
+          "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+          "version" : "2024",
+          "code" : "C43.9",
+          "display" : "Bösartiges Melanom der Haut, nicht näher bezeichnet"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-melanom-bundle-patient"
+      },
+      "encounter" : {
+        "reference" : "Encounter/mii-exa-onko-melanom-bundle-encounter"
+      },
+      "recordedDate" : "2024-01-02"
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Condition"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-melanom-bundle-encounter",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "mii-exa-onko-melanom-bundle-encounter",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Encounter_mii-exa-onko-melanom-bundle-encounter\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Encounter mii-exa-onko-melanom-bundle-encounter</b></p><a name=\"mii-exa-onko-melanom-bundle-encounter\"> </a><a name=\"hcmii-exa-onko-melanom-bundle-encounter\"> </a><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html#v3-ActCode-IMP\">ActCode: IMP</a> (inpatient encounter)</p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-melanom-bundle-patient.html\">Maria Melanom  (no stated gender), DoB Unknown</a></p></div></div>"
+      },
+      "status" : "finished",
+      "class" : {
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code" : "IMP",
+        "display" : "inpatient encounter"
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-melanom-bundle-patient"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Encounter"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-melanom-sicherheitsabstand",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-melanom-sicherheitsabstand",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-sicherheitsabstand"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Observation_mii-exa-onko-melanom-sicherheitsabstand\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-melanom-sicherheitsabstand</b></p><a name=\"mii-exa-onko-melanom-sicherheitsabstand\"> </a><a name=\"hcmii-exa-onko-melanom-sicherheitsabstand\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-melanom-sicherheitsabstand.html\">MII PR Onkologie Melanom Sicherheitsabstand</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 396511007}\">Distance of in situ melanoma from closest lateral surgical margin in excised specimen of skin (observable entity)</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-melanom-bundle-patient.html\">Maria Melanom  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: <a href=\"Condition-mii-exa-onko-melanom-diagnose.html\">Condition Bösartiges Melanom der Haut, nicht näher bezeichnet</a></p><p><b>encounter</b>: <a href=\"Encounter-mii-exa-onko-melanom-bundle-encounter.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP)</a></p><p><b>effective</b>: 2024-03-25 10:00:00+0100</p><p><b>value</b>: 5 mm<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemm = 'mm')</span></p></div></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "396511007",
+          "display" : "Distance of in situ melanoma from closest lateral surgical margin in excised specimen of skin (observable entity)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-melanom-bundle-patient"
+      },
+      "focus" : [{
+        "reference" : "Condition/mii-exa-onko-melanom-diagnose"
+      }],
+      "encounter" : {
+        "reference" : "Encounter/mii-exa-onko-melanom-bundle-encounter"
+      },
+      "effectiveDateTime" : "2024-03-25T10:00:00+01:00",
+      "valueQuantity" : {
+        "value" : 5,
+        "unit" : "mm",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "mm"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-melanom-breslow-tiefe",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-melanom-breslow-tiefe",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-breslow-tiefe"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Observation_mii-exa-onko-melanom-breslow-tiefe\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-melanom-breslow-tiefe</b></p><a name=\"mii-exa-onko-melanom-breslow-tiefe\"> </a><a name=\"hcmii-exa-onko-melanom-breslow-tiefe\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-melanom-breslow-tiefe.html\">MII PR Onkologie Melanom Breslow Tiefe</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 106243009}\">Breslow depth staging for melanoma of skin (observable entity)</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-melanom-bundle-patient.html\">Maria Melanom  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: <a href=\"Condition-mii-exa-onko-melanom-diagnose.html\">Condition Bösartiges Melanom der Haut, nicht näher bezeichnet</a></p><p><b>encounter</b>: <a href=\"Encounter-mii-exa-onko-melanom-bundle-encounter.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP)</a></p><p><b>effective</b>: 2024-03-20 14:30:00+0100</p><p><b>value</b>: 2.1 mm<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemm = 'mm')</span></p><p><b>method</b>: <span title=\"Codes:{http://snomed.info/sct 117617002}\">Immunohistochemistry procedure</span></p></div></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "106243009",
+          "display" : "Breslow depth staging for melanoma of skin (observable entity)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-melanom-bundle-patient"
+      },
+      "focus" : [{
+        "reference" : "Condition/mii-exa-onko-melanom-diagnose"
+      }],
+      "encounter" : {
+        "reference" : "Encounter/mii-exa-onko-melanom-bundle-encounter"
+      },
+      "effectiveDateTime" : "2024-03-20T14:30:00+01:00",
+      "valueQuantity" : {
+        "value" : 2.1,
+        "unit" : "mm",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "mm"
+      },
+      "method" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "117617002",
+          "display" : "Immunohistochemistry procedure"
+        }]
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-melanom-ulzeration",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-melanom-ulzeration",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-ulzeration"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Observation_mii-exa-onko-melanom-ulzeration\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-melanom-ulzeration</b></p><a name=\"mii-exa-onko-melanom-ulzeration\"> </a><a name=\"hcmii-exa-onko-melanom-ulzeration\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-melanom-ulzeration.html\">MII PR Onkologie Melanom Ulzeration</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 6270001000004106}\">Presence of ulcer in primary malignant melanoma of skin (observable entity)</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-melanom-bundle-patient.html\">Maria Melanom  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: <a href=\"Condition-mii-exa-onko-melanom-diagnose.html\">Condition Bösartiges Melanom der Haut, nicht näher bezeichnet</a></p><p><b>encounter</b>: <a href=\"Encounter-mii-exa-onko-melanom-bundle-encounter.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP)</a></p><p><b>effective</b>: 2024-03-20 14:30:00+0100</p><p><b>value</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-melanom-ulzeration J}\">Ja</span></p><p><b>method</b>: <span title=\"Codes:{http://snomed.info/sct 117617002}\">Immunohistochemistry procedure</span></p></div></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "6270001000004106",
+          "display" : "Presence of ulcer in primary malignant melanoma of skin (observable entity)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-melanom-bundle-patient"
+      },
+      "focus" : [{
+        "reference" : "Condition/mii-exa-onko-melanom-diagnose"
+      }],
+      "encounter" : {
+        "reference" : "Encounter/mii-exa-onko-melanom-bundle-encounter"
+      },
+      "effectiveDateTime" : "2024-03-20T14:30:00+01:00",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-melanom-ulzeration",
+          "code" : "J",
+          "display" : "Ja"
+        }]
+      },
+      "method" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "117617002",
+          "display" : "Immunohistochemistry procedure"
+        }]
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-melanom-ldh",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-melanom-ldh",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-ldh"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Observation_mii-exa-onko-melanom-ldh\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-melanom-ldh</b></p><a name=\"mii-exa-onko-melanom-ldh\"> </a><a name=\"hcmii-exa-onko-melanom-ldh\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-melanom-ldh.html\">MII PR Onkologie Melanom LDH</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 14804-9}\">Lactate dehydrogenase [Enzymatic activity/volume] in Serum or Plasma by Lactate to pyruvate reaction</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-melanom-bundle-patient.html\">Maria Melanom  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: <a href=\"Condition-mii-exa-onko-melanom-diagnose.html\">Condition Bösartiges Melanom der Haut, nicht näher bezeichnet</a></p><p><b>encounter</b>: <a href=\"Encounter-mii-exa-onko-melanom-bundle-encounter.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP)</a></p><p><b>effective</b>: 2024-03-18 08:30:00+0100</p><p><b>value</b>: 280 U/L<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codeU/L = 'U/L')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}\">High</span></p><h3>ReferenceRanges</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Low</b></td><td><b>High</b></td><td><b>Text</b></td></tr><tr><td style=\"display: none\">*</td><td>135 U/L<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codeU/L = 'U/L')</span></td><td>250 U/L<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codeU/L = 'U/L')</span></td><td>135-250 U/L</td></tr></table></div></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory",
+          "display" : "Laboratory"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "14804-9",
+          "display" : "Lactate dehydrogenase [Enzymatic activity/volume] in Serum or Plasma by Lactate to pyruvate reaction"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-melanom-bundle-patient"
+      },
+      "focus" : [{
+        "reference" : "Condition/mii-exa-onko-melanom-diagnose"
+      }],
+      "encounter" : {
+        "reference" : "Encounter/mii-exa-onko-melanom-bundle-encounter"
+      },
+      "effectiveDateTime" : "2024-03-18T08:30:00+01:00",
+      "valueQuantity" : {
+        "value" : 280,
+        "unit" : "U/L",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "U/L"
+      },
+      "interpretation" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code" : "H",
+          "display" : "High"
+        }]
+      }],
+      "referenceRange" : [{
+        "low" : {
+          "value" : 135,
+          "unit" : "U/L",
+          "system" : "http://unitsofmeasure.org",
+          "code" : "U/L"
+        },
+        "high" : {
+          "value" : 250,
+          "unit" : "U/L",
+          "system" : "http://unitsofmeasure.org",
+          "code" : "U/L"
+        },
+        "text" : "135-250 U/L"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-melanom-exzision-oberarm",
+    "resource" : {
+      "resourceType" : "Procedure",
+      "id" : "mii-exa-onko-melanom-exzision-oberarm",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-exzision|2026.0.3"]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Procedure_mii-exa-onko-melanom-exzision-oberarm\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Procedure mii-exa-onko-melanom-exzision-oberarm</b></p><a name=\"mii-exa-onko-melanom-exzision-oberarm\"> </a><a name=\"hcmii-exa-onko-melanom-exzision-oberarm\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-melanom-exzision.html\">MII PR Onko Melanom Exzision</a> version: 2026.0.3</p></div><p><b>MII EX Onko Operation Intention</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}\">kurativ</span></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 387713003}\">Surgical procedure</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/ops 5-894.06}, {http://snomed.info/sct 177281002}\">Lokale Exzision von erkranktem Gewebe an Haut und Unterhaut: Ohne primären Wundverschluss: Schulter und Axilla</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-melanom-bundle-patient.html\">Maria Melanom  (no stated gender), DoB Unknown</a></p><p><b>performed</b>: 2024-03-20</p><p><b>reasonReference</b>: <a href=\"Condition-mii-exa-onko-melanom-diagnose.html\">Condition Bösartiges Melanom der Haut, nicht näher bezeichnet</a></p><p><b>bodySite</b>: <span title=\"Codes:{http://snomed.info/sct 368208006}\">Left upper arm structure</span></p><p><b>outcome</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus R0}\">Kein Residualtumor</span></p></div></div>"
+      },
+      "extension" : [{
+        "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention",
+            "code" : "K",
+            "display" : "kurativ"
+          }]
+        }
+      }],
+      "status" : "completed",
+      "category" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "387713003",
+          "display" : "Surgical procedure"
+        }]
+      },
+      "code" : {
+        "coding" : [{
+          "system" : "http://fhir.de/CodeSystem/bfarm/ops",
+          "version" : "2024",
+          "code" : "5-894.06",
+          "display" : "Lokale Exzision von erkranktem Gewebe an Haut und Unterhaut: Ohne primären Wundverschluss: Schulter und Axilla"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "177281002",
+          "display" : "Excision of melanoma (procedure)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-melanom-bundle-patient"
+      },
+      "performedDateTime" : "2024-03-20",
+      "reasonReference" : [{
+        "reference" : "Condition/mii-exa-onko-melanom-diagnose"
+      }],
+      "bodySite" : [{
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "368208006",
+          "display" : "Left upper arm structure"
+        }]
+      }],
+      "outcome" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus",
+          "code" : "R0",
+          "display" : "Kein Residualtumor"
+        }]
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Procedure"
+    }
+  }]
+}
+
+```

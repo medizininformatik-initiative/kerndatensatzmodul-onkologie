@@ -1,0 +1,88 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "mii-cs-onko-fernmetastasen",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablecodesystem"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-onko-fernmetastasen</b></p><a name=\"mii-cs-onko-fernmetastasen\"> </a><a name=\"hcmii-cs-onko-fernmetastasen\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">PUL<a name=\"mii-cs-onko-fernmetastasen-PUL\"> </a></td><td>Lunge</td><td/></tr><tr><td style=\"white-space:nowrap\">OSS<a name=\"mii-cs-onko-fernmetastasen-OSS\"> </a></td><td>Knochen</td><td/></tr><tr><td style=\"white-space:nowrap\">HEP<a name=\"mii-cs-onko-fernmetastasen-HEP\"> </a></td><td>Leber</td><td/></tr><tr><td style=\"white-space:nowrap\">BRA<a name=\"mii-cs-onko-fernmetastasen-BRA\"> </a></td><td>Hirn</td><td>Gilt für das Hirn (C71). Meningeosis neoplastica / Befall der Hirnhäute (C70) ist NICHT hier, sondern unter #OTH zu kodieren (§65c).</td></tr><tr><td style=\"white-space:nowrap\">LYM<a name=\"mii-cs-onko-fernmetastasen-LYM\"> </a></td><td>Lymphknoten</td><td/></tr><tr><td style=\"white-space:nowrap\">MAR<a name=\"mii-cs-onko-fernmetastasen-MAR\"> </a></td><td>Knochenmark</td><td/></tr><tr><td style=\"white-space:nowrap\">PLE<a name=\"mii-cs-onko-fernmetastasen-PLE\"> </a></td><td>Pleura</td><td/></tr><tr><td style=\"white-space:nowrap\">PER<a name=\"mii-cs-onko-fernmetastasen-PER\"> </a></td><td>Peritoneum</td><td/></tr><tr><td style=\"white-space:nowrap\">ADR<a name=\"mii-cs-onko-fernmetastasen-ADR\"> </a></td><td>Nebennieren</td><td/></tr><tr><td style=\"white-space:nowrap\">SKI<a name=\"mii-cs-onko-fernmetastasen-SKI\"> </a></td><td>Haut</td><td/></tr><tr><td style=\"white-space:nowrap\">OTH<a name=\"mii-cs-onko-fernmetastasen-OTH\"> </a></td><td>andere Organe</td><td/></tr><tr><td style=\"white-space:nowrap\">GEN<a name=\"mii-cs-onko-fernmetastasen-GEN\"> </a></td><td>generalisierte Metastasierung</td><td/></tr></table></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen",
+  "version" : "2026.0.3",
+  "name" : "MII_CS_Onko_Fernmetastasen",
+  "title" : "MII CS Onkologie Fernmetastasen",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-08-27T10:41:09+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "oBDS-spezifisches Codesystem für Fernmetastasen, basierend auf Spezifikation durch TNM-Klassifikation",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-fernmetastasen",
+  "content" : "complete",
+  "count" : 12,
+  "concept" : [{
+    "code" : "PUL",
+    "display" : "Lunge"
+  },
+  {
+    "code" : "OSS",
+    "display" : "Knochen"
+  },
+  {
+    "code" : "HEP",
+    "display" : "Leber"
+  },
+  {
+    "code" : "BRA",
+    "display" : "Hirn",
+    "definition" : "Gilt für das Hirn (C71). Meningeosis neoplastica / Befall der Hirnhäute (C70) ist NICHT hier, sondern unter #OTH zu kodieren (§65c)."
+  },
+  {
+    "code" : "LYM",
+    "display" : "Lymphknoten"
+  },
+  {
+    "code" : "MAR",
+    "display" : "Knochenmark"
+  },
+  {
+    "code" : "PLE",
+    "display" : "Pleura"
+  },
+  {
+    "code" : "PER",
+    "display" : "Peritoneum"
+  },
+  {
+    "code" : "ADR",
+    "display" : "Nebennieren"
+  },
+  {
+    "code" : "SKI",
+    "display" : "Haut"
+  },
+  {
+    "code" : "OTH",
+    "display" : "andere Organe"
+  },
+  {
+    "code" : "GEN",
+    "display" : "generalisierte Metastasierung"
+  }]
+}

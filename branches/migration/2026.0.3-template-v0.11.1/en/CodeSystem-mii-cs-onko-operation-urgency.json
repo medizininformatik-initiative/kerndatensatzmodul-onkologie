@@ -1,0 +1,54 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "mii-cs-onko-operation-urgency",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablecodesystem"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-onko-operation-urgency</b></p><a name=\"mii-cs-onko-operation-urgency\"> </a><a name=\"hcmii-cs-onko-operation-urgency\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-urgency</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">E<a name=\"mii-cs-onko-operation-urgency-E\"> </a></td><td>Elektiveingriff</td><td>Geplanter Eingriff mit ausreichender Vorbereitungszeit</td></tr><tr><td style=\"white-space:nowrap\">N<a name=\"mii-cs-onko-operation-urgency-N\"> </a></td><td>Notfalleingriff</td><td>Ungeplanter Eingriff aufgrund einer akuten medizinischen Situation</td></tr><tr><td style=\"white-space:nowrap\">U<a name=\"mii-cs-onko-operation-urgency-U\"> </a></td><td>Unbekannt</td><td>Die Modalität der Eingriffsdurchführung ist unbekannt</td></tr></table></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-urgency",
+  "version" : "2026.0.3",
+  "name" : "MII_CS_Onko_Operation_Urgency",
+  "title" : "MII CS Onkologie Operation Urgency",
+  "status" : "active",
+  "experimental" : true,
+  "date" : "2026-08-27T10:41:09+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "oBDS-basiertes Codesystem für die Modalität der Eingriffsdurchführung (Art des Eingriffs KR6)",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-operation-urgency",
+  "content" : "complete",
+  "count" : 3,
+  "concept" : [{
+    "code" : "E",
+    "display" : "Elektiveingriff",
+    "definition" : "Geplanter Eingriff mit ausreichender Vorbereitungszeit"
+  },
+  {
+    "code" : "N",
+    "display" : "Notfalleingriff",
+    "definition" : "Ungeplanter Eingriff aufgrund einer akuten medizinischen Situation"
+  },
+  {
+    "code" : "U",
+    "display" : "Unbekannt",
+    "definition" : "Die Modalität der Eingriffsdurchführung ist unbekannt"
+  }]
+}

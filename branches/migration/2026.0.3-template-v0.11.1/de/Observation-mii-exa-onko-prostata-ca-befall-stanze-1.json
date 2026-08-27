@@ -1,0 +1,34 @@
+{
+  "resourceType" : "Observation",
+  "id" : "mii-exa-onko-prostata-ca-befall-stanze-1",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-ca-befall-stanze|2026.0.3"]
+  },
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-prostata-ca-befall-stanze-1</b></p><a name=\"de-mii-exa-onko-prostata-ca-befall-stanze-1\"> </a><a name=\"de-hcmii-exa-onko-prostata-ca-befall-stanze-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-prostate-ca-befall-stanze.html\">MII PR Onkologie Ca-Befall Stanze</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 44654-2}\">Tissue involved by tumor in Prostate tumor</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-prostata-bundle-patient.html\">Peter ProstataCa  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: <a href=\"Condition-mii-exa-onko-prostata-diagnose.html\">Condition Bösartige Neubildung der Prostata</a></p><p><b>effective</b>: 2024-01-02</p><p><b>value</b>: 80 %</p><p><b>specimen</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Specimen/exampleProstateBiopsySlide\">Specimen/exampleProstateBiopsySlide</a></p></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "44654-2",
+      "display" : "Tissue involved by tumor in Prostate tumor"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/mii-exa-onko-prostata-bundle-patient"
+  },
+  "focus" : [{
+    "reference" : "Condition/mii-exa-onko-prostata-diagnose"
+  }],
+  "effectiveDateTime" : "2024-01-02",
+  "valueQuantity" : {
+    "value" : 80,
+    "unit" : "%"
+  },
+  "specimen" : {
+    "reference" : "Specimen/exampleProstateBiopsySlide"
+  }
+}

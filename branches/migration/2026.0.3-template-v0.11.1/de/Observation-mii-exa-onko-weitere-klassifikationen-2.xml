@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-weitere-klassifikationen-2"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen|2026.0.3"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-onko-weitere-klassifikationen-2</b></p><a name="de-mii-exa-onko-weitere-klassifikationen-2"> </a><a name="de-hcmii-exa-onko-weitere-klassifikationen-2"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-weitere-klassifikationen.html">MII PR Onkologie Weitere Klassifikationen</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 254372002}">Ann Arbor Klassifikation</span></p><p><b>subject</b>: <a href="https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example">Patient/example</a></p><p><b>focus</b>: <a href="Condition-primaertumor-example.html">Condition Bösartige Neubildung: Brustdrüse, nicht näher bezeichnet</a></p><p><b>effective</b>: 2024-01-12</p><p><b>value</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds ann-arbor-iiix}">Ann Arbor Stadium IIIX</span></p><p><b>method</b>: <span title="Codes:{http://snomed.info/sct 254373007}">Ann Arbor Hodgkin's disease tumor staging system</span></p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="254372002"/>
+      <display value="Ann Arbor lymphoma staging system"/>
+    </coding>
+    <text value="Ann Arbor Klassifikation"/>
+  </code>
+  <subject>
+    <reference value="Patient/example"/>
+  </subject>
+  <focus>
+    <reference value="Condition/primaertumor-example"/>
+  </focus>
+  <effectiveDateTime value="2024-01-12"/>
+  <valueCodeableConcept>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds"/>
+      <code value="ann-arbor-iiix"/>
+    </coding>
+    <text value="Ann Arbor Stadium IIIX"/>
+  </valueCodeableConcept>
+  <method>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="254373007"/>
+      <display value="Ann Arbor Hodgkin's disease tumor staging system"/>
+    </coding>
+  </method>
+</Observation>

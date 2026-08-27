@@ -1,0 +1,36 @@
+{
+  "resourceType" : "Observation",
+  "id" : "mii-exa-onko-krk-abstand-circumferelle-resektionsebene",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-circumferelle-resektionsebene"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-krk-abstand-circumferelle-resektionsebene</b></p><a name=\"mii-exa-onko-krk-abstand-circumferelle-resektionsebene\"> </a><a name=\"hcmii-exa-onko-krk-abstand-circumferelle-resektionsebene\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-krk-abstand-circumferelle-resektionsebene.html\">MII PR Onkologie Abstand Circumferelle Resektionsebene</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 81176-0}\">Distance of tumor from circumferential resection margin [Length] in Specimen by Macroscopy</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-krk-bundle-patient.html\">Klaus KolorektalCa  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: <a href=\"Condition-mii-exa-onko-krk-diagnose.html\">Condition Bösartige Neubildung des Kolons</a></p><p><b>encounter</b>: <a href=\"Encounter-mii-exa-onko-krk-bundle-encounter.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP)</a></p><p><b>effective</b>: 2024-03-20 10:15:00+0100</p><p><b>value</b>: 2.5 mm<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemm = 'mm')</span></p></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "81176-0",
+      "display" : "Distance of tumor from circumferential resection margin [Length] in Specimen by Macroscopy"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/mii-exa-onko-krk-bundle-patient"
+  },
+  "focus" : [{
+    "reference" : "Condition/mii-exa-onko-krk-diagnose"
+  }],
+  "encounter" : {
+    "reference" : "Encounter/mii-exa-onko-krk-bundle-encounter"
+  },
+  "effectiveDateTime" : "2024-03-20T10:15:00+01:00",
+  "valueQuantity" : {
+    "value" : 2.5,
+    "unit" : "mm",
+    "system" : "http://unitsofmeasure.org",
+    "code" : "mm"
+  }
+}

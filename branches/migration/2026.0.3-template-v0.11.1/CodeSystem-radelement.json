@@ -1,0 +1,39 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "radelement",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem radelement</b></p><a name=\"radelement\"> </a><a name=\"hcradelement\"> </a><p>This case-sensitive code system <code>https://radelement.org</code> provides <b>a fragment</b> that includes following code:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">RDE96<a name=\"radelement-RDE96\"> </a></td><td>Distance to MRF</td><td>Shortest distance of the definitive tumor border to the mesorectal fascia (MRF). Set RDES11 'MR Rectal Tumor Imaging', Integer 0–99 mm.</td></tr></table></div><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem radelement</b></p><a name=\"de-radelement\"> </a><a name=\"de-hcradelement\"> </a><p>This case-sensitive code system <code>https://radelement.org</code> provides <b>a fragment</b> that includes following code:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">RDE96<a name=\"de-radelement-RDE96\"> </a></td><td>Distance to MRF</td><td>Shortest distance of the definitive tumor border to the mesorectal fascia (MRF). Set RDES11 'MR Rectal Tumor Imaging', Integer 0–99 mm.</td></tr></table></div></div>"
+  },
+  "url" : "https://radelement.org",
+  "version" : "2026.0.3",
+  "name" : "RadElement",
+  "title" : "RSNA RadElement Common Data Elements (Fragment)",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-08-27T10:41:09+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Fragment des RSNA-RadElement-Systems (Common Data Elements, https://www.radelement.org). Enthält nur die im MII-Modul Onkologie verwendeten Datenelemente. Quelle: RSNA RadElement API.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "copyright" : "RadElement Common Data Elements © Radiological Society of North America (RSNA).",
+  "caseSensitive" : true,
+  "content" : "fragment",
+  "concept" : [{
+    "code" : "RDE96",
+    "display" : "Distance to MRF",
+    "definition" : "Shortest distance of the definitive tumor border to the mesorectal fascia (MRF). Set RDES11 'MR Rectal Tumor Imaging', Integer 0–99 mm."
+  }]
+}

@@ -1,0 +1,62 @@
+{
+  "resourceType" : "Condition",
+  "id" : "mii-exa-onko-diagnose-meningeom-benigne",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor|2026.0.3"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Condition mii-exa-onko-diagnose-meningeom-benigne</b></p><a name=\"mii-exa-onko-diagnose-meningeom-benigne\"> </a><a name=\"hcmii-exa-onko-diagnose-meningeom-benigne\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-diagnose-primaertumor.html\">MII PR Onkologie Diagnose Primärtumor</a> version: 2026.0.3</p></div><p><b>Condition Asserted Date</b>: 2022-09-05</p><p><b>MII EX Onko Histology Morphology Behavior ICDO3</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/icd-o-3 9530/0}\">Meningeom o.n.A.</span></p><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}, {https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung 7}\">histologische Untersuchung eines Primärtumors</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm D32.0}\">Gutartige Neubildung: Hirnhäute</span></p><p><b>bodySite</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/icd-o-3 C70.0}\">Hirnhäute</span></p><p><b>subject</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example\">Patient/example</a></p><p><b>recordedDate</b>: 2022-09-05</p></div><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Condition mii-exa-onko-diagnose-meningeom-benigne</b></p><a name=\"de-mii-exa-onko-diagnose-meningeom-benigne\"> </a><a name=\"de-hcmii-exa-onko-diagnose-meningeom-benigne\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-diagnose-primaertumor.html\">MII PR Onkologie Diagnose Primärtumor</a> version: 2026.0.3</p></div><p><b>Condition Asserted Date</b>: 2022-09-05</p><p><b>MII EX Onko Histology Morphology Behavior ICDO3</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/icd-o-3 9530/0}\">Meningeom o.n.A.</span></p><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}, {https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung 7}\">histologische Untersuchung eines Primärtumors</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm D32.0}\">Gutartige Neubildung: Hirnhäute</span></p><p><b>bodySite</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/icd-o-3 C70.0}\">Hirnhäute</span></p><p><b>subject</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example\">Patient/example</a></p><p><b>recordedDate</b>: 2022-09-05</p></div></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+    "valueDateTime" : "2022-09-05"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/icd-o-3",
+        "version" : "2019",
+        "code" : "9530/0",
+        "display" : "Meningeom o.n.A."
+      }]
+    }
+  }],
+  "clinicalStatus" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+      "code" : "active"
+    }]
+  },
+  "verificationStatus" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+      "code" : "confirmed"
+    },
+    {
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung",
+      "code" : "7",
+      "display" : "histologische Untersuchung eines Primärtumors"
+    }]
+  },
+  "code" : {
+    "coding" : [{
+      "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+      "version" : "2022",
+      "code" : "D32.0",
+      "display" : "Gutartige Neubildung: Hirnhäute"
+    }]
+  },
+  "bodySite" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/icd-o-3",
+      "code" : "C70.0",
+      "display" : "Hirnhäute"
+    }]
+  }],
+  "subject" : {
+    "reference" : "Patient/example"
+  },
+  "recordedDate" : "2022-09-05"
+}

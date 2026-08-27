@@ -1,0 +1,397 @@
+# MII PR Onkologie KRK MRT/CT Abstand Mesorektale Faszie - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **MII PR Onkologie KRK MRT/CT Abstand Mesorektale Faszie**
+
+## Resource Profile: MII PR Onkologie KRK MRT/CT Abstand Mesorektale Faszie 
+
+| | |
+| :--- | :--- |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-mrt-mesorektale-faszie | *Version*:2026.0.3 |
+| Active as of 2026-08-27 | *Computable Name*:MII_PR_Onko_KRK_MRT_Mesorektale_Faszie |
+
+ 
+Dieses Profil beschreibt den Abstand des Tumors zur mesorektalen Faszie bei MRT oder Dünnschicht-CT Untersuchung beim Kolorektalen Karzinom (oBDS KR5) 
+
+### Content
+
+This profile describes the distance to the mesorectal fascia on imaging (MRI/CT) in colorectal carcinoma according to oBDS KR2. This preoperative imaging assessment is essential for therapy planning in rectal carcinomas and for assessing local tumor spread.
+
+The profile is based on a FHIR Observation resource and includes both the quantity measurement and the reason for missing distance measurements. The distance is given as a Quantity value in millimeters.
+
+-------
+
+### Links to other resources
+
+The MRI assessment of the mesorectal fascia is an important imaging observation:
+
+* references the primary diagnosis (MII_PR_Onko_Diagnose_Primaertumor) via `Observation.focus`
+* references the patient (Patient resource) via `Observation.subject`
+* can be linked to a specific treatment case via `Observation.encounter`
+
+-------
+
+### oBDS context
+
+The MRI assessment corresponds to the oBDS data field KR2 "MRI/CT: distance to the mesorectal fascia" and includes both the distance measurement in millimeters and codes for situations in which a measurement is not available (AbstandNichtVerfuegbarGrund).
+
+### Terminology binding
+
+The ValueSet for the MRI status of the mesorectal fascia has an **extensible** binding and includes the various status codes for the imaging assessment as well as reasons for missing measurements.
+
+#### ValueSet: MII VS Onko KRK MRT Mesorektale Faszie Status
+
+> The codes it contains are listed in the artefact view: [MII VS Onkologie KRK MRT Mesorektale Faszie Status](ValueSet-mii-vs-onko-krk-mrt-mesorektale-faszie-status.md).
+
+> The codes it contains are listed in the artefact view: [MII VS Onkologie KRK MRT Mesorektale Faszie Status](ValueSet-mii-vs-onko-krk-mrt-mesorektale-faszie-status.md).
+
+-------
+
+Mapping dataset to FHIR
+
+> The mapping of the dataset fields is documented in the logical model: [MII LM Onkologie Organspezifische Zusatzmodule](StructureDefinition-mii-lm-onko-organspezifische-zusatzmodule.md).
+
+-------
+
+Mapping [Uniform Oncological Basic Dataset (oBDS)](https://basisdatensatz.de/basisdatensatz) to FHIR
+
+> The oBDS mappings are recorded in the artefact view of this profile: [MII PR Onkologie KRK MRT/CT Abstand Mesorektale Faszie](StructureDefinition-mii-pr-onko-krk-mrt-mesorektale-faszie.md).
+
+-------
+
+**Search parameters**
+
+The following search parameters are relevant for the KRK-MRT-Mesorektale-Faszie profile, including in combination:
+
+1. The search parameter "_id" MUST be supported:Examples:`GET [base]/Observation?_id=12345`Usage notes: Further information on searching by "_id" can be found in the [FHIR base specification - section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+1. The search parameter "_profile" MUST be supported:Examples:`GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-mesorektale-fascie`Usage notes: Further information on searching by "_profile" can be found in the [FHIR base specification - section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+1. The search parameter "code" MUST be supported:Examples:`GET [base]/Observation?code=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-mrt-mesorektale-faszie-status|befunden`Usage notes: Further information on searching by "Observation.code" can be found in the [FHIR base specification - section "Token Search"](http://hl7.org/fhir/R4/search.html#token).
+1. The search parameter "subject" MUST be supported:Examples:`GET [base]/Observation?subject=Patient/test`Usage notes: Further information on searching by "Observation.subject" can be found in the [FHIR base specification - section "reference"](http://hl7.org/fhir/R4/search.html#reference).
+1. The search parameter "focus" MUST be supported:Examples:`GET [base]/Observation?focus=Condition/primaertumor`Usage notes: Further information on searching by "Observation.focus" can be found in the [FHIR base specification - section "reference"](http://hl7.org/fhir/R4/search.html#reference).
+1. The search parameter "value-quantity" MUST be supported:Examples:`GET [base]/Observation?value-quantity=1.5|http://unitsofmeasure.org|mm`Usage notes: Further information on searching by "Observation.value[x]" can be found in the [FHIR base specification - section "Quantity Search"](http://hl7.org/fhir/R4/search.html#quantity).
+
+-------
+
+**Examples**
+
+[mii-exa-onko-krk-abstand-mesorektale-fascie](Observation-mii-exa-onko-krk-abstand-mesorektale-fascie.md)
+
+**Usages:**
+
+* Examples for this Profile: [Observation/mii-exa-onko-krk-abstand-mesorektale-fascie](Observation-mii-exa-onko-krk-abstand-mesorektale-fascie.md)
+* CapabilityStatements using this Profile: [MII CPS Onkology CapabilityStatement](CapabilityStatement-mii-cps-onko-capabilitystatement.md)
+
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.onkologie|current/StructureDefinition/StructureDefinition-mii-pr-onko-krk-mrt-mesorektale-faszie.json)
+
+### Formal Views of Profile Content
+
+ [Description of Profiles, Differentials, Snapshots, and their representations](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
+
+ 
+
+Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-krk-mrt-mesorektale-faszie.csv), [Excel](../StructureDefinition-mii-pr-onko-krk-mrt-mesorektale-faszie.xlsx), [Schematron](../StructureDefinition-mii-pr-onko-krk-mrt-mesorektale-faszie.sch) 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "mii-pr-onko-krk-mrt-mesorektale-faszie",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-mrt-mesorektale-faszie",
+  "version" : "2026.0.3",
+  "name" : "MII_PR_Onko_KRK_MRT_Mesorektale_Faszie",
+  "title" : "MII PR Onkologie KRK MRT/CT Abstand Mesorektale Faszie",
+  "status" : "active",
+  "date" : "2026-08-27T10:41:09+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Dieses Profil beschreibt den Abstand des Tumors zur mesorektalen Faszie bei MRT oder Dünnschicht-CT Untersuchung beim Kolorektalen Karzinom (oBDS KR5)",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "fhirVersion" : "4.0.1",
+  "mapping" : [{
+    "identity" : "oBDS",
+    "name" : "Mapping FHIR zu oBDS"
+  },
+  {
+    "identity" : "workflow",
+    "uri" : "http://hl7.org/fhir/workflow",
+    "name" : "Workflow Pattern"
+  },
+  {
+    "identity" : "sct-concept",
+    "uri" : "http://snomed.info/conceptdomain",
+    "name" : "SNOMED CT Concept Domain Binding"
+  },
+  {
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 v2 Mapping"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  },
+  {
+    "identity" : "sct-attr",
+    "uri" : "http://snomed.org/attributebinding",
+    "name" : "SNOMED CT Attribute Binding"
+  }],
+  "kind" : "resource",
+  "abstract" : false,
+  "type" : "Observation",
+  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation" : "constraint",
+  "differential" : {
+    "element" : [{
+      "id" : "Observation",
+      "path" : "Observation",
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "KR5",
+        "comment" : "Rektum: MRT oder Dünnschicht-CT durchgeführt mit Angabe Abstand mesorektale Faszie"
+      }]
+    },
+    {
+      "id" : "Observation.meta.profile",
+      "path" : "Observation.meta.profile",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.code",
+      "path" : "Observation.code",
+      "short" : "MRT/CT Abstand mesorektale Faszie",
+      "definition" : "Abstand des Tumors zur mesorektalen Faszie bei MRT oder Dünnschicht-CT, gemäß oBDS 2021 KR5",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.code.coding",
+      "path" : "Observation.code.coding",
+      "patternCoding" : {
+        "system" : "https://radelement.org",
+        "code" : "RDE96",
+        "display" : "Distance to MRF"
+      }
+    },
+    {
+      "id" : "Observation.subject",
+      "path" : "Observation.subject",
+      "min" : 1,
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Patient"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.focus",
+      "path" : "Observation.focus",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.encounter",
+      "path" : "Observation.encounter",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.effective[x]",
+      "path" : "Observation.effective[x]",
+      "short" : "Datum MRT/CT",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Datum MRT/CT"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Datum der MRT/CT Untersuchung",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Datum der MRT oder Dünnschicht-CT Untersuchung"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "type" : [{
+        "code" : "dateTime"
+      }],
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "KR5",
+        "comment" : "Datum der MRT/CT Untersuchung"
+      }]
+    },
+    {
+      "id" : "Observation.value[x]",
+      "path" : "Observation.value[x]",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "type",
+          "path" : "$this"
+        }],
+        "ordered" : false,
+        "rules" : "open"
+      },
+      "type" : [{
+        "code" : "Quantity"
+      },
+      {
+        "code" : "CodeableConcept"
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.value[x]:valueQuantity",
+      "path" : "Observation.value[x]",
+      "sliceName" : "valueQuantity",
+      "short" : "Abstand mesorektale Faszie",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Abstand mesorektale Faszie"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Abstand des Tumors zur mesorektalen Faszie in mm bei MRT/CT gemäß oBDS 2021 KR5",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Abstand des Tumors zur mesorektalen Faszie in mm bei MRT/CT gemäß oBDS 2021 KR5"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Quantity"
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.value[x]:valueQuantity.value",
+      "path" : "Observation.value[x].value",
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "KR5",
+        "comment" : "Abstand zur mesorektalen Faszie in mm (natürliche Zahl)"
+      }]
+    },
+    {
+      "id" : "Observation.value[x]:valueQuantity.unit",
+      "path" : "Observation.value[x].unit",
+      "patternString" : "mm",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.value[x]:valueQuantity.system",
+      "path" : "Observation.value[x].system",
+      "patternUri" : "http://unitsofmeasure.org",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.value[x]:valueQuantity.code",
+      "path" : "Observation.value[x].code",
+      "patternCode" : "mm",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.value[x]:valueCodeableConcept",
+      "path" : "Observation.value[x]",
+      "sliceName" : "valueCodeableConcept",
+      "short" : "MRT/CT Status",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "MRT/CT Status"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Status der MRT/CT Untersuchung gemäß oBDS 2021 KR5",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Status der MRT/CT Untersuchung gemäß oBDS 2021 KR5"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mustSupport" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-mrt-mesorektale-faszie-status"
+      }
+    },
+    {
+      "id" : "Observation.value[x]:valueCodeableConcept.coding.code",
+      "path" : "Observation.value[x].coding.code",
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "KR5",
+        "comment" : "D = durchgeführt, aber Abstand nicht angegeben; N = Nein (MRT/CT nicht durchgeführt); U = Unbekannt"
+      }]
+    }]
+  }
+}
+
+```

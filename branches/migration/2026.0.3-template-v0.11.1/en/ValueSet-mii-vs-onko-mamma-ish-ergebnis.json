@@ -1,0 +1,52 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-onko-mamma-ish-ergebnis",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-onko-mamma-ish-ergebnis</b></p><a name=\"mii-vs-onko-mamma-ish-ergebnis\"> </a><a name=\"hcmii-vs-onko-mamma-ish-ergebnis\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablevalueset.html\">Shareable ValueSet</a></p></div><ul><li>Include these codes as defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"https://loinc.org/LA6576-8/\">LA6576-8</a></td><td>Positive</td></tr><tr><td><a href=\"https://loinc.org/LA6577-6/\">LA6577-6</a></td><td>Negative</td></tr><tr><td><a href=\"https://loinc.org/LA11885-3/\">LA11885-3</a></td><td>Equivocal</td></tr></table></li></ul></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-ish-ergebnis",
+  "version" : "2026.0.3",
+  "name" : "MII_VS_Onko_Mamma_ISH_Ergebnis",
+  "title" : "MII VS Onkologie Mamma ISH Ergebnis",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-08-27T10:41:09+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Ergebnis der In-situ-Hybridisierung (ISH/FISH): Positive, Negative, Equivocal (LOINC-Answer-Codes).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "LA6576-8",
+        "display" : "Positive"
+      },
+      {
+        "code" : "LA6577-6",
+        "display" : "Negative"
+      },
+      {
+        "code" : "LA11885-3",
+        "display" : "Equivocal"
+      }]
+    }]
+  }
+}

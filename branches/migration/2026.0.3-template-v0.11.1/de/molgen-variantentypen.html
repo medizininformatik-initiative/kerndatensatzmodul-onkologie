@@ -1,0 +1,675 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+<html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>MolGen-Abbildung der Variantentypen - MII IG Kerndatensatz-Modul Onkologie v2026.0.3</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Branding override for the fhir2.base.template CSS placeholder
+     (base ships includes/fragment-css.html as a single comment; it is included
+     in <head> AFTER all base stylesheets, so the linked files win the
+     cascade).
+     Load model (docs/styleguide.md §1/§10): bootstrap-accessibility.css
+     (PayPal Bootstrap Accessibility Plugin v1.0.7, vendored + pinned - §8)
+     patches Bootstrap-3 component styling for accessibility (focus outlines,
+     alert contrast) and loads FIRST so the template's own rules can override;
+     then template-base.css carries the
+     brand-INDEPENDENT rule blocks and always loads; then EXACTLY ONE palette
+     file follows - num-diz.css, the DEFAULT design, unless the consuming IG
+     ships input/data/brand.json with { "design": "mii" } (read as
+     site.data.brand.design via the base's input/data -> _data pre-process),
+     which selects mii.css instead. Only the exact value 'mii' selects the
+     MII design; anything else - including no brand.json at all and unknown
+     values - renders NUM-DIZ. Both palettes declare the same variable set
+     (scripts/brand-switch.test.mjs). -->
+<link href="assets/css/bootstrap-accessibility.css" rel="stylesheet"/>
+<link href="assets/css/template-base.css" rel="stylesheet"/>
+
+<link href="assets/css/num-diz.css" rel="stylesheet"/>
+
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"2.5"}
+    h3,h4,h5,h6{--heading-prefix:"2.5"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Branding override for the fhir2.base.template header placeholder
+     (base ships includes/fragment-header.html as a single comment; it is included
+     inside "#segment-header > .container", before the #ig-status block).
+     Language handling: only the asset and its descriptive alt text switch on
+     include.lang (the pattern kerndatensatz-basis uses); no translatable UI
+     strings are hard-coded.
+     Brand handling: the project logo additionally switches on
+     site.data.brand.design (input/data/brand.json in the consuming IG, see
+     docs/styleguide.md §10). Only the exact value 'mii' selects the MII
+     logos - anything else, including no brand.json at all, falls through to
+     the NUM-DIZ default.
+     Two logos, mirroring kerndatensatz-basis: the HL7 FHIR logo (links to the
+     FHIR spec) in #family-nav, and the project logo in #project-nav.
+     fhir-logo-www.png is shipped by fhir2.base.template
+     (content/assets/images/), so it resolves from the inherited assets without
+     shipping it here. -->
+<div id="family-nav">
+  <a id="family-logo" no-external="true" href="https://hl7.org/fhir">
+    <img height="50" alt="HL7 FHIR" src="assets/images/fhir-logo-www.png"/>
+  </a>
+</div>
+<div id="project-nav">
+
+  <a id="project-logo" no-external="true" href="https://www.netzwerk-universitaetsmedizin.de/forschung/num-diz">
+
+    <img height="50" alt="NUM-DIZ (Netzwerk Universitätsmedizin — Datenintegrationszentrum)" src="assets/images/logo-num-diz-de.svg"/>
+
+  </a>
+
+</div>
+<!-- Font-size control (A / A+ / A++): three reader-selectable levels; level A
+     is the untouched default. Logic in assets/js/font-size-control.js, the
+     zoom mapping + button styling in template-base.css ("font-size control"
+     block). All three buttons read "A" — the button's own font size shows the level; labels are language-neutral; only the aria texts switch
+     on include.lang. REMOVAL: delete this block, the js file and the CSS
+     block - one commit, styleguide §5a. -->
+
+<div class="ig-fontsize" role="group" aria-label="Schriftgröße">
+  <button type="button" data-level="0" aria-pressed="true" aria-label="Schriftgröße: Standard">A</button>
+  <button type="button" data-level="1" aria-pressed="false" aria-label="Schriftgröße: größer">A</button>
+  <button type="button" data-level="2" aria-pressed="false" aria-label="Schriftgröße: am größten">A</button>
+</div>
+
+<script src="assets/js/font-size-control.js" defer></script>
+<!-- PayPal Bootstrap Accessibility Plugin v1.0.7 (vendored + pinned, §8):
+     patches the Bootstrap-3 components the publisher renders - navbar
+     dropdowns gain ARIA menu semantics + arrow-key navigation, tab panels
+     (structure-tabs) the full ARIA tabs pattern, alerts live-region
+     announcements. `defer` guarantees it executes AFTER the parser-inserted
+     bootstrap.min.js at the end of the body. Vendored from
+     paypal/bootstrap-accessibility-plugin @ v1.0.7 (the admin-ch fork was
+     evaluated and rejected: 151 commits behind upstream, its 6 deltas are
+     site-specific tab tweaks). REMOVAL: delete this tag, both vendored
+     assets and the fragment-css link - guard test pins the hashes. -->
+<script src="assets/js/bootstrap-accessibility.min.js" defer></script>
+<!-- Back-to-top button: appears after one viewport of scrolling (logic in
+     assets/js/back-to-top.js, styling in template-base.css "back-to-top"
+     block). Rendered here inside #segment-header, which is OUTSIDE the
+     data-fontsize zoom regions, so the fixed button never scales. REMOVAL:
+     this block, the js file and the CSS block - one commit, styleguide §8. -->
+
+<button type="button" class="ig-back-to-top" aria-label="Zurück zum Seitenanfang">↑</button>
+
+<script src="assets/js/back-to-top.js" defer></script>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Onkologie</span>
+            <br/>
+            <span style="display:inline-block;">2026.0.3 - 
+
+
+
+  <img alt="Germany Flagge" src="assets/images/deu.svg" height="16" title="Germany"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- German translation of input/includes/menu.xml.
+     Keep the href targets IDENTICAL to the source menu; translate only labels.
+     Structure notes (OPTIONAL entries, link-only entries, the interim
+     meta-wiki links) are documented in the source menu's header and in
+     docs/page-structure.md / docs/optional-pages.md. -->
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">Startseite</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="guidance.html" class="dropdown-toggle">Anleitung<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="guidance.html">Anleitung</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="researcher-guidance.html">Anleitung für Forschende (optional)</a></li>
+      <li><a href="implementer-guidance.html">Anleitung für Implementierende</a></li>
+      <!-- Nur-Link-Eintrag: die Seite "Logische Modelle" (Begründung im Quell-Menü) -->
+      <li><a href="datasets-and-descriptions.html">Datensätze inkl. Beschreibungen</a></li>
+      <li><a href="uml-diagrams.html">UML-Diagramme</a></li>
+      <li><a href="anwendungsfaelle-informationsmodell.html">Anwendungsfälle und Informationsmodell</a></li>
+      <li><a href="icd-o-terminologie.html">ICD-O: Revisionen und Validierung</a></li>
+      <li><a href="atc-terminologie.html">ATC: Jahresversionen und Überleitungen</a></li>
+      <li><a href="weitere-klassifikationen-terminologien.html">Weitere Klassifikationen: Terminologien</a></li>
+      <li><a href="tumormarker-loinc.html">Tumormarker: kuratierte LOINC-Codes</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <!-- Eltern-Eintrag und die ersten vier Einträge verlinken die KDS-weiten
+         Konformitätsregeln des Meta-Moduls (INTERIM: Meta-Wiki; siehe
+         Quell-Menü). -->
+    <a data-toggle="dropdown" href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance" class="dropdown-toggle">Konformität<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance">Konformität</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#anforderungsdokumentation">Allgemeine Anforderungen</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#must-support-ms">Must-Support</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#fehlende-daten">Umgang mit fehlenden Daten</a></li>
+      <li><a href="security-and-privacy.html">Sicherheit und Datenschutz</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="artifacts.html" class="dropdown-toggle">Artefakte<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="artifacts.html">Artefakt-Übersicht</a></li>
+      <li><a href="profiles.html">Profile</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="extensions.html">Extensions (optional)</a></li>
+      <li><a href="capability-statements.html">CapabilityStatements</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="search-parameters.html">Suchparameter (optional)</a></li>
+      <li><a href="logical-models.html">Logische Modelle</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="value-sets.html">ValueSets (optional)</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="code-systems.html">CodeSystems (optional)</a></li>
+      <li><a href="examples.html">Beispiele</a></li>
+    </ul>
+  </li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li><a href="changes.html">Änderungshistorie</a></li>
+  <li class="dropdown">
+    <!-- Der Eltern-Eintrag verlinkt bewusst das PFLICHT-Kind (Versionierung):
+         die Metadaten-Übersicht ist optional. -->
+    <a data-toggle="dropdown" href="version-history.html" class="dropdown-toggle">Metadaten<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="metadata.html">Metadaten-Übersicht (optional)</a></li>
+      <li><a href="version-history.html">Versionierung</a></li>
+    </ul>
+  </li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-de.png"/>Deutsch</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Sprache:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag de" src="assets/images/lang-de.png"/>Deutsch</div>
+
+    <div><a href="../en/molgen-variantentypen.html"><img class="flag" src="assets/images/lang-en.png" alt="flag en"/>English</a></div>
+
+  </div>
+</div>
+
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Inhaltsverzeichnis</b></a></li><li><a href='guidance.html'><b>Anleitung</b></a></li><li><b>MolGen-Abbildung der Variantentypen</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Onkologie - Local Development build (v2026.0.3) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>MolGen-Abbildung der Variantentypen</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#zweck" id="markdown-toc-zweck">Zweck</a></li>
+  <li><a href="#übersicht-markertyp--molgen-repräsentation" id="markdown-toc-übersicht-markertyp--molgen-repräsentation">Übersicht: Markertyp → MolGen-Repräsentation</a></li>
+  <li><a href="#erläuterungen-zu-sonderfällen" id="markdown-toc-erläuterungen-zu-sonderfällen">Erläuterungen zu Sonderfällen</a></li>
+  <li><a href="#ausprägungen-der-genetik-meldung-65c--obds-menge_genetik_typ" id="markdown-toc-ausprägungen-der-genetik-meldung-65c--obds-menge_genetik_typ">Ausprägungen der Genetik-Meldung (§65c / oBDS <code class="language-plaintext highlighter-rouge">Menge_Genetik_Typ</code>)</a></li>
+  <li><a href="#fallback-obds-direktmapping" id="markdown-toc-fallback-obds-direktmapping">Fallback (oBDS-Direktmapping)</a></li>
+  <li><a href="#stand-der-umsetzung" id="markdown-toc-stand-der-umsetzung">Stand der Umsetzung</a></li>
+</ul>
+
+</div>
+<!-- markdownlint-disable MD041 -->
+<!-- Quelle: MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Genetische-Variante/MolGen-Abbildung-Variantentypen.page.md.
+     Englische Fassung: input/pagecontent/molgen-variantentypen.md — beide
+     Sprachfassungen synchron halten. -->
+
+<h3 id="zweck">Zweck</h3>
+
+<p>Das oBDS erfasst genetische Varianten grobkörnig (Freitext-Bezeichnung + eine
+Ausprägung aus <code class="language-plaintext highlighter-rouge">M</code>/<code class="language-plaintext highlighter-rouge">W</code>/<code class="language-plaintext highlighter-rouge">P</code>/<code class="language-plaintext highlighter-rouge">N</code>/<code class="language-plaintext highlighter-rouge">U</code> oder ersatzweise Freitext, oBDS 23.1/23.2 —
+siehe Abschnitt <em>Ausprägungen der Genetik-Meldung</em>). Für eine
+<strong>strukturierte, interoperable</strong> Abbildung <strong>SOLLTE</strong> —
+wo verfügbar — der <a href="https://simplifier.net/medizininformatikinitiative-modulomics">MII Molekulargenetische Befundbericht (MolGen)</a>
+verwendet werden, der auf dem HL7-Clinical-Genomics <em>Genomics Reporting</em> IG basiert
+und internationale Nomenklaturen nutzt (<strong>HGNC</strong>, <strong>HGVS</strong>, <strong>ISCN</strong>, <strong>Sequence Ontology</strong>).</p>
+
+<p>Diese Seite gibt für die in der onkologischen Praxis typischen Varianten- und
+Markertypen eine <strong>konkrete Empfehlung</strong>, mit welcher MolGen-Struktur (Stand
+<code class="language-plaintext highlighter-rouge">molgen 2026.x</code>, gültig auch für 2027) sie abzubilden sind. Grundlage ist eine
+Beispiel-Markerliste (57 Gene, ~300 Gen×Varianten-Kombinationen); die Empfehlung
+ist bewusst <strong>nicht normativ</strong>, sondern eine Umsetzungshilfe.</p>
+
+<blockquote>
+  <p><strong>Profil-Referenz:</strong> <a href="https://simplifier.net/medizininformatikinitiative-modulomics/sdmiimolgenvariante"><code class="language-plaintext highlighter-rouge">MII_PR_MolGen_Variante</code></a>
+(Parent: <code class="language-plaintext highlighter-rouge">http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant</code>)</p>
+</blockquote>
+
+<h3 id="übersicht-markertyp--molgen-repräsentation">Übersicht: Markertyp → MolGen-Repräsentation</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>oBDS-/Listen-Typ</th>
+      <th>Beispiel</th>
+      <th>Empfohlene MolGen-Abbildung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Gen</strong> (Identität)</td>
+      <td><code class="language-plaintext highlighter-rouge">BRAF</code>, <code class="language-plaintext highlighter-rouge">ALK</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Variante.component:gene-studied</code> → <strong>HGNC</strong> (<code class="language-plaintext highlighter-rouge">http://www.genenames.org/geneId</code>)</td>
+    </tr>
+    <tr>
+      <td><strong>Spezifische Mutation</strong> (Protein)</td>
+      <td><code class="language-plaintext highlighter-rouge">BRAF V600E</code> = p.Val600Glu</td>
+      <td><code class="language-plaintext highlighter-rouge">component:representative-protein-hgvs</code> (<strong>p.HGVS</strong>)</td>
+    </tr>
+    <tr>
+      <td><strong>Spezifische Mutation</strong> (DNA)</td>
+      <td><code class="language-plaintext highlighter-rouge">c.1799T&gt;A</code></td>
+      <td><code class="language-plaintext highlighter-rouge">component:representative-coding-hgvs</code> (<strong>c.HGVS</strong>)</td>
+    </tr>
+    <tr>
+      <td><strong>Formel / HGVS-Freitext</strong></td>
+      <td>beliebige HGVS-Angabe</td>
+      <td>passende <code class="language-plaintext highlighter-rouge">*-hgvs</code>-Komponente; sonst <code class="language-plaintext highlighter-rouge">value</code>/<code class="language-plaintext highlighter-rouge">note</code></td>
+    </tr>
+    <tr>
+      <td><strong>Exon-Angabe</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">EGFR Exon 19</code>, <code class="language-plaintext highlighter-rouge">FGFR2 Exon 12</code></td>
+      <td><code class="language-plaintext highlighter-rouge">component:dna-region</code> (LOINC 47999-8, DNA-Regionsname) ggf. + <code class="language-plaintext highlighter-rouge">exact-start-end</code></td>
+    </tr>
+    <tr>
+      <td><strong>Fusion</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">EML4::ALK</code>, <code class="language-plaintext highlighter-rouge">BCR::ABL1</code></td>
+      <td><code class="language-plaintext highlighter-rouge">component:gene-fusion</code> → <strong>HGNC-Paar</strong> <code class="language-plaintext highlighter-rouge">GEN1::GEN2</code> (ValueSet <code class="language-plaintext highlighter-rouge">hgnc-vs</code>)</td>
+    </tr>
+    <tr>
+      <td><strong>Amplifikation</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">ERBB2</code>/<code class="language-plaintext highlighter-rouge">HER2</code> Amplifikation</td>
+      <td><code class="language-plaintext highlighter-rouge">component:copy-number</code> (Kopienzahl)</td>
+    </tr>
+    <tr>
+      <td><strong>Translokation / Rearrangement</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">del(17)(p13)</code>, ROS1-Rearr.</td>
+      <td><code class="language-plaintext highlighter-rouge">component:cytogenetic-location</code> (<strong>ISCN</strong>)</td>
+    </tr>
+    <tr>
+      <td><strong>LOH / Ko-Deletion</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">LOH 1p/19q</code></td>
+      <td><code class="language-plaintext highlighter-rouge">component:cytogenetic-location</code> bzw. <code class="language-plaintext highlighter-rouge">copy-number</code></td>
+    </tr>
+    <tr>
+      <td><strong>Promoter-Hypermethylierung</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">MGMT</code></td>
+      <td>Sonderfall — eigene Methylierungs-Observation (LOINC), <strong>nicht</strong> als Variante</td>
+    </tr>
+    <tr>
+      <td><strong>Unbekannt</strong></td>
+      <td>Gen ohne Detailangabe</td>
+      <td><code class="language-plaintext highlighter-rouge">component:gene-studied</code> + <code class="language-plaintext highlighter-rouge">value</code> = <em>unbestimmt</em></td>
+    </tr>
+    <tr>
+      <td><strong>IHC-Marker</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">PD-L1</code>, <code class="language-plaintext highlighter-rouge">HER2 IHC</code>, <code class="language-plaintext highlighter-rouge">p16</code>, <code class="language-plaintext highlighter-rouge">p53</code></td>
+      <td><strong>Kein Variant</strong> → <code class="language-plaintext highlighter-rouge">MII_PR_MTB_Immunohistochemistry</code> (Modul Molekulares Tumorboard)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="erläuterungen-zu-sonderfällen">Erläuterungen zu Sonderfällen</h3>
+
+<p><strong>Gen-Identität (HGNC).</strong> Die Gensymbole der Liste sind bereits HGNC-approved
+Symbole. In MolGen wird das Gen strukturiert über <code class="language-plaintext highlighter-rouge">gene-studied</code> (HGNC) geführt;
+die oBDS-Freitextangabe <code class="language-plaintext highlighter-rouge">Observation.note</code> entfällt damit für die strukturierte Sicht.</p>
+
+<p><strong>Exon-Ebene.</strong> Angaben wie „Exon 19" beschreiben keine Einzelvariante, sondern
+eine Region. MolGen/Genomics Reporting bildet dies über <code class="language-plaintext highlighter-rouge">dna-region</code> (benannte
+DNA-Region) ab — ein eigenes GA4GH-<strong>Cat-VRS</strong> ist dafür <strong>nicht</strong> erforderlich.
+Cat-VRS bleibt echten <em>Kategorien</em> vorbehalten (z. B. „jede aktivierende
+EGFR-Mutation") und ist perspektivisch (post-2027) zu betrachten.</p>
+
+<p><strong>Fusionen.</strong> <code class="language-plaintext highlighter-rouge">gene-fusion.value</code> ist an das HGNC-ValueSet gebunden und erwartet
+die Notation <code class="language-plaintext highlighter-rouge">GENSYMBOL1::GENSYMBOL2</code> (z. B. <code class="language-plaintext highlighter-rouge">EML4::ALK</code>). Reine „Fusion ohne
+Partner"-Angaben werden über das untersuchte Gen (<code class="language-plaintext highlighter-rouge">gene-studied</code>) + Fusions-Flag geführt.</p>
+
+<p><strong>IHC-Marker (MTB).</strong> Immunhistochemische Marker (PD-L1, HER2-IHC, p16, p53,
+panTRK, ROS1-IHC …) sind Protein-Expressionsbefunde, keine Sequenzvarianten. Das
+<strong>MII-Erweiterungsmodul Molekulares Tumorboard (MTB)</strong> stellt dafür dedizierte
+Profile bereit (Basis: <code class="language-plaintext highlighter-rouge">MII_PR_MTB_Immunohistochemistry</code>, Parent
+<code class="language-plaintext highlighter-rouge">MII_PR_MTB_Molekularer_Biomarker</code>):</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Marker</th>
+      <th>MTB-Profil</th>
+      <th>Code (autoritativ)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>generisch (alle IHC)</td>
+      <td><code class="language-plaintext highlighter-rouge">mii-pr-mtb-immunohistochemistry</code></td>
+      <td>SNOMED <code class="language-plaintext highlighter-rouge">1234806008</code> „Observation using immunohistochemistry" + Ziel via <code class="language-plaintext highlighter-rouge">component:gene-studied</code></td>
+    </tr>
+    <tr>
+      <td>HER2-IHC</td>
+      <td><code class="language-plaintext highlighter-rouge">mii-pr-mtb-immunohistochemistry-her2</code></td>
+      <td>LOINC <code class="language-plaintext highlighter-rouge">18474-7</code> „HER2 Ag [Presence] in Tissue by Immune stain"</td>
+    </tr>
+    <tr>
+      <td>PD-L1-IHC</td>
+      <td><code class="language-plaintext highlighter-rouge">mii-pr-mtb-immunohistochemistry-pdl1</code></td>
+      <td>Scores: NCIt <code class="language-plaintext highlighter-rouge">C184941</code> (TPS), <code class="language-plaintext highlighter-rouge">C176582</code> (CPS), <code class="language-plaintext highlighter-rouge">C199175</code> (ICS), LOINC <code class="language-plaintext highlighter-rouge">83053-9</code> (TC)</td>
+    </tr>
+    <tr>
+      <td>MMR (dMMR/pMMR)</td>
+      <td><code class="language-plaintext highlighter-rouge">mii-pr-mtb-immunohistochemistry-mmr</code></td>
+      <td>LOINC pro Protein: MLH1 <code class="language-plaintext highlighter-rouge">81691-8</code>, MSH2 <code class="language-plaintext highlighter-rouge">81692-6</code>, MSH6 <code class="language-plaintext highlighter-rouge">81693-4</code>, PMS2 <code class="language-plaintext highlighter-rouge">81694-2</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Für Marker ohne spezifisches Profil (p16, p53, panTRK, ROS1-IHC …) das
+Basis-Profil <code class="language-plaintext highlighter-rouge">mii-pr-mtb-immunohistochemistry</code> mit generischem SNOMED-Code plus
+<code class="language-plaintext highlighter-rouge">component:gene-studied</code> verwenden.</p>
+
+<blockquote>
+  <p><strong>Hinweis (Architektur &amp; Reifegrad):</strong> Das MTB-Modul integriert genetische Befunde
+<strong>oberhalb</strong> von Onkologie und MolGen — es deklariert selbst <code class="language-plaintext highlighter-rouge">kerndatensatz.onkologie</code>
+und <code class="language-plaintext highlighter-rouge">kerndatensatz.molgen</code> als Dependencies. Onkologie kann MTB daher <strong>nicht</strong> als
+Dependency aufnehmen (Zirkelbezug); die MTB-Referenzen hier sind <strong>dokumentarisch</strong>
+(empfohlener Zielort), nicht technisch aufgelöst. Die beteiligten Module befinden
+sich in <strong>Draft/STU/Trial-Use</strong> — diese Zuordnung ist eine Orientierungshilfe und
+kann sich mit der Reifung von MolGen/MTB noch ändern.</p>
+</blockquote>
+
+<h3 id="ausprägungen-der-genetik-meldung-65c--obds-menge_genetik_typ">Ausprägungen der Genetik-Meldung (§65c / oBDS <code class="language-plaintext highlighter-rouge">Menge_Genetik_Typ</code>)</h3>
+
+<p>Der Markertyp (Tabelle oben) ist nur die eine Achse der Meldung. Die zweite Achse
+ist die <strong>Ausprägung</strong> des Befundes. Der oBDS-Typ <code class="language-plaintext highlighter-rouge">Menge_Genetik_Typ</code> sieht je
+<code class="language-plaintext highlighter-rouge">Genetische_Variante</code> genau <strong>eine</strong> Angabe vor — entweder einen Code aus der
+Auswahlliste <code class="language-plaintext highlighter-rouge">Auspraegung</code> <strong>oder</strong> das Freitextfeld <code class="language-plaintext highlighter-rouge">Sonstige_Auspraegung</code>
+(<code class="language-plaintext highlighter-rouge">xs:choice</code>). Die Auswahlliste umfasst fünf Codes; die Modul-Terminologie ergänzt
+<code class="language-plaintext highlighter-rouge">S</code> als Code für den Freitextfall.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>oBDS-Code</th>
+      <th>Bedeutung (oBDS-XSD)</th>
+      <th>SNOMED CT (Modul-ConceptMap)</th>
+      <th>Empfehlung MolGen/FHIR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">M</code></td>
+      <td>Mutation/positiv</td>
+      <td><code class="language-plaintext highlighter-rouge">55446002</code> <em>Genetic mutation (finding)</em></td>
+      <td><code class="language-plaintext highlighter-rouge">Observation.value[x]</code> = LOINC <code class="language-plaintext highlighter-rouge">LA9633-4</code> „Present" (zu <code class="language-plaintext highlighter-rouge">Observation.code</code> = LOINC <code class="language-plaintext highlighter-rouge">69548-6</code>)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">W</code></td>
+      <td>Wildtyp/nicht mutiert/negativ</td>
+      <td><code class="language-plaintext highlighter-rouge">412730000</code> <em>Genetic finding not detected (finding)</em></td>
+      <td>Negativbefund; ergänzend <code class="language-plaintext highlighter-rouge">component:coding-change-type</code> (LOINC <code class="language-plaintext highlighter-rouge">48019-4</code>) = SO <code class="language-plaintext highlighter-rouge">SO:0002073</code> <em>no_sequence_alteration</em> (LOINC-Äquivalent <code class="language-plaintext highlighter-rouge">LA9658-1</code> „Wild type")</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">P</code></td>
+      <td>Polymorphismus</td>
+      <td><code class="language-plaintext highlighter-rouge">50334000</code> <em>Genetic polymorphism (finding)</em></td>
+      <td>Variante vorhanden (<code class="language-plaintext highlighter-rouge">value[x]</code> = <code class="language-plaintext highlighter-rouge">LA9633-4</code>); die Bewertung als Polymorphismus gehört nicht in die Variante, sondern in eine eigene Befund-Interpretation (Genomics-Reporting-Profil <em>diagnostic-implication</em>)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">N</code></td>
+      <td>nicht bestimmbar</td>
+      <td><code class="language-plaintext highlighter-rouge">1156316003</code> <em>Cannot be determined (qualifier value)</em></td>
+      <td>kein <code class="language-plaintext highlighter-rouge">value[x]</code>; stattdessen <code class="language-plaintext highlighter-rouge">Observation.dataAbsentReason</code>, z. B. <code class="language-plaintext highlighter-rouge">not-performed</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">U</code></td>
+      <td>unbekannt</td>
+      <td><code class="language-plaintext highlighter-rouge">261665006</code> <em>Unknown (qualifier value)</em></td>
+      <td>kein <code class="language-plaintext highlighter-rouge">value[x]</code>; <code class="language-plaintext highlighter-rouge">Observation.dataAbsentReason</code> = <code class="language-plaintext highlighter-rouge">unknown</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">S</code></td>
+      <td>Sonstiges (Modul-Ergänzung für <code class="language-plaintext highlighter-rouge">Sonstige_Auspraegung</code>)</td>
+      <td><code class="language-plaintext highlighter-rouge">74964007</code> <em>Other (qualifier value)</em></td>
+      <td>Freitext nach <code class="language-plaintext highlighter-rouge">Observation.note</code>; strukturiert nur, soweit der Inhalt einem der obigen Fälle entspricht</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Die SNOMED-Spalte gibt die im Modul gepflegte ConceptMap
+<a href="ConceptMap-mii-cm-onko-genetische-variante-auspraegung-sct.html"><code class="language-plaintext highlighter-rouge">mii-cm-onko-genetische-variante-auspraegung-sct</code></a>
+wieder und ist damit
+für das Modul verbindlich. Die MolGen-Spalte ist — wie die Markertyp-Tabelle oben —
+eine <strong>nicht normative</strong> Umsetzungsempfehlung.</p>
+
+<p><strong>Verhältnis zur Beispiel-Markerliste.</strong> In der zugrunde liegenden Markerliste ist
+bei nahezu allen Zeilen nur <code class="language-plaintext highlighter-rouge">M</code>/<code class="language-plaintext highlighter-rouge">W</code> vorgesehen; <code class="language-plaintext highlighter-rouge">P</code>, <code class="language-plaintext highlighter-rouge">N</code> und <code class="language-plaintext highlighter-rouge">U</code> kommen dort nicht
+vor, und die immunhistochemischen Zeilen (Scores <code class="language-plaintext highlighter-rouge">0</code>/<code class="language-plaintext highlighter-rouge">+</code>/<code class="language-plaintext highlighter-rouge">++</code>/<code class="language-plaintext highlighter-rouge">+++</code> bzw.
+<code class="language-plaintext highlighter-rouge">IC</code>/<code class="language-plaintext highlighter-rouge">TPS</code>/<code class="language-plaintext highlighter-rouge">CPS</code>) verweisen bereits auf den Freitextweg <code class="language-plaintext highlighter-rouge">Sonstige_Auspraegung</code>. Die
+Liste ist damit eine <strong>Teilmenge</strong> der oBDS-Systematik, kein abweichender
+Wertebereich.</p>
+
+<p><strong>Quellen.</strong> Maßgeblich für die Ausprägungsliste ist der Typ <code class="language-plaintext highlighter-rouge">Menge_Genetik_Typ</code>
+des oBDS-XML-Schemas (<code class="language-plaintext highlighter-rouge">oBDS_v3.0.4.xsd</code> / <code class="language-plaintext highlighter-rouge">oBDS_v3.0.5.xsd</code>, dort unverändert),
+fachlich beschrieben in der §65c-Plattformdokumentation:
+<a href="https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532120/Menge_Genetik_Typ">Menge_Genetik_Typ</a>.
+Gen und Variante werden in <code class="language-plaintext highlighter-rouge">Bezeichnung</code> derzeit mit dem Trennzeichen <code class="language-plaintext highlighter-rouge">||</code>
+kombiniert übermittelt — dieser zusammengesetzte Freitext ist der Ausgangspunkt der
+Markertyp-Zuordnung in der Tabelle oben.</p>
+
+<h3 id="fallback-obds-direktmapping">Fallback (oBDS-Direktmapping)</h3>
+
+<p>Ist MolGen an einem Standort <strong>nicht</strong> implementierbar, gilt weiterhin das
+Direktmapping der oBDS-Felder gemäß dem Profil
+<a href="StructureDefinition-mii-pr-onko-genetische-variante.html">Genetische Variante</a>:
+<code class="language-plaintext highlighter-rouge">Observation.note</code> (Variante Name) und <code class="language-plaintext highlighter-rouge">Observation.interpretation</code> (Ausprägung).</p>
+
+<h3 id="stand-der-umsetzung">Stand der Umsetzung</h3>
+
+<p>Diese Seite ist die <strong>fachliche Dokumentationsgrundlage</strong> für die Abbildung der
+Variantentypen; sie beschreibt Empfehlungen, keine profilierten Constraints. Die
+<strong>strukturierte Codierung der Variantentypen</strong> — Gen-Identität über HGNC,
+Markertyp-Codes über LOINC sowie kategoriale Varianten über GA4GH Cat-VRS, gestuft
+nach Verfügbarkeit (<em>tiered</em>) — ist als eigenes Arbeitspaket <strong>in Umsetzung</strong> und
+für eine kommende Modulversion vorgesehen. Der jeweils aktuelle Stand sowie die
+daraus entstehenden Profile und ValueSets werden in den Release Notes des Moduls
+geführt.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
+          Package de.medizininformatikinitiative.kerndatensatz.onkologie#2026.0.3 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt <span title="Thu, Aug 27, 2026 10:41+0000">2026-08-27</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <!-- Branding override for the fhir2.base.template footer fragment.
+     Unlike header/css, the base footer fragment is NOT an empty placeholder: it
+     renders "Links: Table of Contents | QA Report [| feedback dashboards]".
+     The base uses site.data.stringsBase[include.lang][...] for the labels. The
+     reason this override supplies its own is the Imprint label: the base ships no
+     stringsBase key for it and a child template cannot add one (docs/styleguide.md
+     section 6), and the same include.lang branch then has to carry the other
+     labels too. (The blank-label problem that first motivated this is separately
+     mitigated: this repo vendors the base's own German catalogs into
+     translations/ — see translations/README.md.) The override preserves the base
+     links (TOC, QA, feedback dashboards) and appends the project information links.
+     NUM-DIZ takes over IG development and maintenance when MII funding ends
+     (end-2026), so the NUM-DIZ website link renders BEFORE the MII website link —
+     in BOTH brand designs and both languages; the MII links stay because the
+     modules remain MII content. Both anchors are the SITE ROOTS with the bare
+     domain as anchor text (TF-KDS feedback 2026-08-14: aligned anchor style;
+     domains are language-neutral, styleguide §6).
+     Imprint: points at the NUM-DIZ website's legal pages since 2026-08-14
+     (TF-KDS: NUM-DIZ takes over from MII in 2027, so legal-aspect links use
+     the NUM-DIZ counterpart where one exists) - German /impressum and English
+     /en/legal-notice (both verified HTTP 200 on 2026-08-14). -->
+
+          Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-Bericht</a>
+                 
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.netzwerk-universitaetsmedizin.de/">netzwerk-universitaetsmedizin.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.medizininformatik-initiative.de/">medizininformatik-initiative.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.netzwerk-universitaetsmedizin.de/impressum">Impressum</a>
+                 <br/>
+                 <!-- HL7 trademark attribution (required wherever the FHIR flame
+                      renders - the header shows it on every page; see HL7's
+                      trademark guidelines; permission request tracked in issue #109). The sentence is
+                      HL7's prescribed formula and stays in English on every
+                      language's pages (legal wording, styleguide §6). -->
+                 <span>HL7®, FHIR® and the FHIR flame design are registered trademarks of Health Level Seven International. Their use does not constitute endorsement by HL7.</span>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

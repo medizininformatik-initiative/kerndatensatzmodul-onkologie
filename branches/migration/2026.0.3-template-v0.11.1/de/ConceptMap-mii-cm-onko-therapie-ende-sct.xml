@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="mii-cm-onko-therapie-ende-sct"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap mii-cm-onko-therapie-ende-sct</b></p><a name="de-mii-cm-onko-therapie-ende-sct"> </a><a name="de-hcmii-cm-onko-therapie-ende-sct"> </a><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende</code> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>E (reguläres Ende)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>385656004 (Ended (qualifier value))</td><td>keine Postkoordination zu andernen End-Konzepten möglich</td></tr><tr><td>R (reguläres Ende mit Dosisreduktion)</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">ggfs. Postkoordination von Dosisreduktion, aber keine Postkoordination mit 'qualifier value' möglich.</td></tr><tr><td>W (reguläres Ende mit Substanzwechsel)</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">ggfs. Postkoordination von Substanzwechsel, aber keine Postkoordination mit 'qualifier value' möglich.</td></tr><tr><td>A (Abbruch wegen Nebenwirkungen)</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">ggfs. Postkoordination von Nebnwirkungen, aber keine Postkoordination mit 'qualifier value' möglich.</td></tr><tr><td>P (Abbruch wegen Progress)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>419835002 (Tumor progression (finding))</td><td>ggfs. Postkoordination von Abbruch</td></tr><tr><td>S (Abbruch aus sonstigen Gründen)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>74964007 (Other (qualifier value))</td><td>ggfs. Postkoordination</td></tr><tr><td>V (Patient verweigert weitere Therapie)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>183948000 ( Procedure declined by parent (situation))</td><td/></tr><tr><td>T (Patient verstorben)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>419099009 (Dead (finding))</td><td/></tr><tr><td>F (Zieldosis erreicht mit Unterbrechung &gt; 3 Kalendertage)</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr><tr><td>U (unbekannt)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>261665006 (Unknown (qualifier value))</td><td/></tr></table></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-therapie-ende-sct"/>
+  <version value="2026.0.3"/>
+  <name value="MII CM Onko Therapie Ende SNOMED Mapping"/>
+  <title value="MII CM Onko Therapie Ende SNOMED Mapping"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2024-04-11"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="Mapping Therapie Ende Codes zu SNOMED-CT"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <purpose value="Technical mapping to transform oBDS-Data into SNOMED"/>
+  <copyright value="This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license."/>
+  <sourceUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/"/>
+  <targetUri value="http://snomed.info/sct/900000000000207008/version/20240401"/>
+  <group>
+    <source value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende"/>
+    <target value="http://snomed.info/sct/900000000000207008/version/20240401"/>
+    <element>
+      <code value="E"/>
+      <display value="reguläres Ende"/>
+      <target>
+        <code value="385656004"/>
+        <display value="Ended (qualifier value)"/>
+        <equivalence value="equivalent"/>
+        <comment value="keine Postkoordination zu andernen End-Konzepten möglich"/>
+      </target>
+    </element>
+    <element>
+      <code value="R"/>
+      <display value="reguläres Ende mit Dosisreduktion"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="ggfs. Postkoordination von Dosisreduktion, aber keine Postkoordination mit 'qualifier value' möglich."/>
+      </target>
+    </element>
+    <element>
+      <code value="W"/>
+      <display value="reguläres Ende mit Substanzwechsel"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="ggfs. Postkoordination von Substanzwechsel, aber keine Postkoordination mit 'qualifier value' möglich."/>
+      </target>
+    </element>
+    <element>
+      <code value="A"/>
+      <display value="Abbruch wegen Nebenwirkungen"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="ggfs. Postkoordination von Nebnwirkungen, aber keine Postkoordination mit 'qualifier value' möglich."/>
+      </target>
+    </element>
+    <element>
+      <code value="P"/>
+      <display value="Abbruch wegen Progress"/>
+      <target>
+        <code value="419835002"/>
+        <display value="Tumor progression (finding)"/>
+        <equivalence value="wider"/>
+        <comment value="ggfs. Postkoordination von Abbruch"/>
+      </target>
+    </element>
+    <element>
+      <code value="S"/>
+      <display value="Abbruch aus sonstigen Gründen"/>
+      <target>
+        <code value="74964007"/>
+        <display value="Other (qualifier value)"/>
+        <equivalence value="wider"/>
+        <comment value="ggfs. Postkoordination"/>
+      </target>
+    </element>
+    <element>
+      <code value="V"/>
+      <display value="Patient verweigert weitere Therapie"/>
+      <target>
+        <code value="183948000"/>
+        <display value=" Procedure declined by parent (situation)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="T"/>
+      <display value="Patient verstorben"/>
+      <target>
+        <code value="419099009"/>
+        <display value="Dead (finding)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="F"/>
+      <display value="Zieldosis erreicht mit Unterbrechung &gt; 3 Kalendertage"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="U"/>
+      <display value="unbekannt"/>
+      <target>
+        <code value="261665006"/>
+        <display value="Unknown (qualifier value)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

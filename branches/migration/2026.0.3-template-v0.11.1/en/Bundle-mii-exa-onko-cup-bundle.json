@@ -1,0 +1,411 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "mii-exa-onko-cup-bundle",
+  "language" : "en",
+  "type" : "transaction",
+  "entry" : [{
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-cup-patient",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "mii-exa-onko-cup-patient",
+      "language" : "en",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Patient_mii-exa-onko-cup-patient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient mii-exa-onko-cup-patient</b></p><a name=\"mii-exa-onko-cup-patient\"> </a><a name=\"hcmii-exa-onko-cup-patient\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">CUP Musterfall  Male, DoB: 1958-11-02</p><hr/></div>"
+      },
+      "name" : [{
+        "family" : "Musterfall",
+        "given" : ["CUP"]
+      }],
+      "gender" : "male",
+      "birthDate" : "1958-11-02"
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Patient"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-cup-diagnose",
+    "resource" : {
+      "resourceType" : "Condition",
+      "id" : "mii-exa-onko-cup-diagnose",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor|2026.0.3"]
+      },
+      "language" : "en",
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Condition_mii-exa-onko-cup-diagnose\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition mii-exa-onko-cup-diagnose</b></p><a name=\"mii-exa-onko-cup-diagnose\"> </a><a name=\"hcmii-exa-onko-cup-diagnose\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-diagnose-primaertumor.html\">MII PR Onkologie Diagnose Primärtumor</a> version: 2026.0.3</p></div><p><b>Condition Asserted Date</b>: 2026-02-11</p><p><b>MII EX Onko Histology Morphology Behavior ICDO3</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/icd-o-3 8140/3}\">Adenokarzinom o.n.A.</span></p><p><b>identifier</b>: <code>https://dizmusterstadt.example.org/fhir/sid/tumor-id</code>/TUMOR-CUP-0815</p><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}, {https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung 7}\">histologische Untersuchung eines Primärtumors</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm C80.0}\">Bösartige Neubildung, primäre Lokalisation unbekannt, so bezeichnet</span></p><p><b>bodySite</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/icd-o-3 C80.9}\">Unbekannte Primärlokalisation</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-cup-patient.html\">CUP Musterfall  Male, DoB: 1958-11-02</a></p><p><b>recordedDate</b>: 2026-02-11</p></div>"
+      },
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+        "valueDateTime" : "2026-02-11"
+      },
+      {
+        "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/icd-o-3",
+            "version" : "2019",
+            "code" : "8140/3",
+            "display" : "Adenokarzinom o.n.A."
+          }]
+        }
+      }],
+      "identifier" : [{
+        "system" : "https://dizmusterstadt.example.org/fhir/sid/tumor-id",
+        "value" : "TUMOR-CUP-0815"
+      }],
+      "clinicalStatus" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code" : "active"
+        }]
+      },
+      "verificationStatus" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+          "code" : "confirmed"
+        },
+        {
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung",
+          "code" : "7",
+          "display" : "histologische Untersuchung eines Primärtumors"
+        }]
+      },
+      "code" : {
+        "coding" : [{
+          "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+          "version" : "2026",
+          "code" : "C80.0",
+          "display" : "Bösartige Neubildung, primäre Lokalisation unbekannt, so bezeichnet"
+        }]
+      },
+      "bodySite" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/icd-o-3",
+          "code" : "C80.9",
+          "display" : "Unbekannte Primärlokalisation"
+        }]
+      }],
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-cup-patient"
+      },
+      "recordedDate" : "2026-02-11"
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Condition"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-cup-tnm-t-cTX",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-cup-tnm-t-cTX",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie|2026.0.3"]
+      },
+      "language" : "en",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Observation_mii-exa-onko-cup-tnm-t-cTX\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-cup-tnm-t-cTX</b></p><a name=\"mii-exa-onko-cup-tnm-t-cTX\"> </a><a name=\"hcmii-exa-onko-cup-tnm-t-cTX\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-tnm-t-kategorie.html\">MII PR Onkologie TNM T-Kategorie</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 399504009}\">cT category (observable entity)</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-cup-patient.html\">CUP Musterfall  Male, DoB: 1958-11-02</a></p><p><b>focus</b>: <a href=\"Condition-mii-exa-onko-cup-diagnose.html\">Condition Bösartige Neubildung, primäre Lokalisation unbekannt, so bezeichnet</a></p><p><b>effective</b>: 2026-02-11</p><p><b>value</b>: <span title=\"Codes:{https://www.uicc.org/resources/tnm TX}\">TX</span></p><p><b>method</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version 8}\">8. Auflage</span></p></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "https://www.uicc.org/resources/tnm",
+              "code" : "c",
+              "display" : "c"
+            }]
+          }
+        }],
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "399504009",
+          "display" : "cT category (observable entity)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-cup-patient"
+      },
+      "focus" : [{
+        "reference" : "Condition/mii-exa-onko-cup-diagnose"
+      }],
+      "effectiveDateTime" : "2026-02-11",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.uicc.org/resources/tnm",
+          "code" : "TX",
+          "display" : "TX"
+        }]
+      },
+      "method" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+          "code" : "8",
+          "display" : "8. Auflage"
+        }]
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-cup-tnm-n-cNX",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-cup-tnm-n-cNX",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie|2026.0.3"]
+      },
+      "language" : "en",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Observation_mii-exa-onko-cup-tnm-n-cNX\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-cup-tnm-n-cNX</b></p><a name=\"mii-exa-onko-cup-tnm-n-cNX\"> </a><a name=\"hcmii-exa-onko-cup-tnm-n-cNX\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-tnm-n-kategorie.html\">MII PR Onkologie TNM N-Kategorie</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 399534004}\">cN category (observable entity)</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-cup-patient.html\">CUP Musterfall  Male, DoB: 1958-11-02</a></p><p><b>focus</b>: <a href=\"Condition-mii-exa-onko-cup-diagnose.html\">Condition Bösartige Neubildung, primäre Lokalisation unbekannt, so bezeichnet</a></p><p><b>effective</b>: 2026-02-11</p><p><b>value</b>: <span title=\"Codes:{https://www.uicc.org/resources/tnm NX}\">Nx</span></p><p><b>method</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version 8}\">8. Auflage</span></p></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "https://www.uicc.org/resources/tnm",
+              "code" : "c",
+              "display" : "c"
+            }]
+          }
+        }],
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "399534004",
+          "display" : "cN category (observable entity)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-cup-patient"
+      },
+      "focus" : [{
+        "reference" : "Condition/mii-exa-onko-cup-diagnose"
+      }],
+      "effectiveDateTime" : "2026-02-11",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.uicc.org/resources/tnm",
+          "code" : "NX",
+          "display" : "Nx"
+        }]
+      },
+      "method" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+          "code" : "8",
+          "display" : "8. Auflage"
+        }]
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-cup-tnm-m-cM1",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-cup-tnm-m-cM1",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie|2026.0.3"]
+      },
+      "language" : "en",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Observation_mii-exa-onko-cup-tnm-m-cM1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-cup-tnm-m-cM1</b></p><a name=\"mii-exa-onko-cup-tnm-m-cM1\"> </a><a name=\"hcmii-exa-onko-cup-tnm-m-cM1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-tnm-m-kategorie.html\">MII PR Onkologie TNM M-Kategorie</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 399387003}\">cM category (observable entity)</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-cup-patient.html\">CUP Musterfall  Male, DoB: 1958-11-02</a></p><p><b>focus</b>: <a href=\"Condition-mii-exa-onko-cup-diagnose.html\">Condition Bösartige Neubildung, primäre Lokalisation unbekannt, so bezeichnet</a></p><p><b>effective</b>: 2026-02-11</p><p><b>value</b>: <span title=\"Codes:{https://www.uicc.org/resources/tnm M1}, {http://snomed.info/sct 1352513006}\">M1</span></p><p><b>method</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version 8}\">8. Auflage</span></p></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "https://www.uicc.org/resources/tnm",
+              "code" : "c",
+              "display" : "c"
+            }]
+          }
+        }],
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "399387003",
+          "display" : "cM category (observable entity)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-cup-patient"
+      },
+      "focus" : [{
+        "reference" : "Condition/mii-exa-onko-cup-diagnose"
+      }],
+      "effectiveDateTime" : "2026-02-11",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.uicc.org/resources/tnm",
+          "code" : "M1",
+          "display" : "M1"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "1352513006",
+          "display" : "Union for International Cancer Control cM1 (qualifier value)"
+        }]
+      },
+      "method" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+          "code" : "8",
+          "display" : "8. Auflage"
+        }]
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-cup-tnm-klassifikation",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-cup-tnm-klassifikation",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation|2026.0.3"]
+      },
+      "language" : "en",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Observation_mii-exa-onko-cup-tnm-klassifikation\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-cup-tnm-klassifikation</b></p><a name=\"mii-exa-onko-cup-tnm-klassifikation\"> </a><a name=\"hcmii-exa-onko-cup-tnm-klassifikation\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-tnm-klassifikation.html\">MII PR Onkologie TNM-Klassifikation</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 399537006}\">Clinical TNM stage grouping</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-cup-patient.html\">CUP Musterfall  Male, DoB: 1958-11-02</a></p><p><b>focus</b>: <a href=\"Condition-mii-exa-onko-cup-diagnose.html\">Condition Bösartige Neubildung, primäre Lokalisation unbekannt, so bezeichnet</a></p><p><b>effective</b>: 2026-02-11</p><p><b>method</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version 8}\">8. Auflage</span></p><p><b>hasMember</b>: </p><ul><li><a href=\"Observation-mii-exa-onko-cup-tnm-t-cTX.html\">Observation cT category (observable entity)</a></li><li><a href=\"Observation-mii-exa-onko-cup-tnm-n-cNX.html\">Observation cN category (observable entity)</a></li><li><a href=\"Observation-mii-exa-onko-cup-tnm-m-cM1.html\">Observation cM category (observable entity)</a></li></ul></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "399537006",
+          "display" : "Clinical TNM stage grouping"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-cup-patient"
+      },
+      "focus" : [{
+        "reference" : "Condition/mii-exa-onko-cup-diagnose"
+      }],
+      "effectiveDateTime" : "2026-02-11",
+      "method" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+          "code" : "8",
+          "display" : "8. Auflage"
+        }]
+      },
+      "hasMember" : [{
+        "reference" : "Observation/mii-exa-onko-cup-tnm-t-cTX"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-cup-tnm-n-cNX"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-cup-tnm-m-cM1"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-cup-fernmetastase-hep",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-cup-fernmetastase-hep",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen|2026.0.3"]
+      },
+      "language" : "en",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Observation_mii-exa-onko-cup-fernmetastase-hep\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-cup-fernmetastase-hep</b></p><a name=\"mii-exa-onko-cup-fernmetastase-hep\"> </a><a name=\"hcmii-exa-onko-cup-fernmetastase-hep\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-fernmetastasen.html\">MII PR Onkologie Fernmetastasen</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 385421009}\">385421009</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-cup-patient.html\">CUP Musterfall  Male, DoB: 1958-11-02</a></p><p><b>focus</b>: <a href=\"Condition-mii-exa-onko-cup-diagnose.html\">Condition Bösartige Neubildung, primäre Lokalisation unbekannt, so bezeichnet</a></p><p><b>effective</b>: 2026-02-11</p><p><b>value</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen HEP}\">Leber</span></p></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "385421009"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-cup-patient"
+      },
+      "focus" : [{
+        "reference" : "Condition/mii-exa-onko-cup-diagnose"
+      }],
+      "effectiveDateTime" : "2026-02-11",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen",
+          "code" : "HEP",
+          "display" : "Leber"
+        }]
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-cup-fernmetastase-pul",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-cup-fernmetastase-pul",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen|2026.0.3"]
+      },
+      "language" : "en",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Observation_mii-exa-onko-cup-fernmetastase-pul\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-cup-fernmetastase-pul</b></p><a name=\"mii-exa-onko-cup-fernmetastase-pul\"> </a><a name=\"hcmii-exa-onko-cup-fernmetastase-pul\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-fernmetastasen.html\">MII PR Onkologie Fernmetastasen</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 385421009}\">385421009</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-cup-patient.html\">CUP Musterfall  Male, DoB: 1958-11-02</a></p><p><b>focus</b>: <a href=\"Condition-mii-exa-onko-cup-diagnose.html\">Condition Bösartige Neubildung, primäre Lokalisation unbekannt, so bezeichnet</a></p><p><b>effective</b>: 2026-02-11</p><p><b>value</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen PUL}\">Lunge</span></p></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "385421009"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-cup-patient"
+      },
+      "focus" : [{
+        "reference" : "Condition/mii-exa-onko-cup-diagnose"
+      }],
+      "effectiveDateTime" : "2026-02-11",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen",
+          "code" : "PUL",
+          "display" : "Lunge"
+        }]
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  }]
+}

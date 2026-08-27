@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DiagnosticReport xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-befund-1"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-befund|2026.0.3"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: DiagnosticReport mii-exa-onko-befund-1</b></p><a name="mii-exa-onko-befund-1"> </a><a name="hcmii-exa-onko-befund-1"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-befund.html">MII PR Onkologie Befund</a> version: 2026.0.3</p></div><h2><span title="Codes:{http://loinc.org 22034-3}">Pathology report Cancer Narrative</span> </h2><table class="grid"><tr><td>Subject</td><td>Kim Musterperson  (no stated gender), DoB: 1956-03-14</td></tr></table><p><b>Report Details</b></p><p>Mäßig differenziertes invasiv duktales Karzinom (8500/3), Grading G2 an der rechten Mamma, ...</p></div><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: DiagnosticReport mii-exa-onko-befund-1</b></p><a name="de-mii-exa-onko-befund-1"> </a><a name="de-hcmii-exa-onko-befund-1"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-befund.html">MII PR Onkologie Befund</a> version: 2026.0.3</p></div><h2><span title="Codes:{http://loinc.org 22034-3}">Pathology report Cancer Narrative</span> </h2><table class="grid"><tr><td>Subject</td><td>Kim Musterperson  (no stated gender), DoB: 1956-03-14</td></tr></table><p><b>Report Details</b></p><p>Mäßig differenziertes invasiv duktales Karzinom (8500/3), Grading G2 an der rechten Mamma, ...</p></div></div>
+  </text>
+  <basedOn>
+    <reference value="CarePlan/example-tumorboard-1"/>
+  </basedOn>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="22034-3"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/PatientKimMusterperson"/>
+  </subject>
+  <specimen>
+    <reference value="Specimen/example-specimen-2"/>
+  </specimen>
+  <conclusion value="Mäßig differenziertes invasiv duktales Karzinom (8500/3), Grading G2 an der rechten Mamma, ..."/>
+</DiagnosticReport>

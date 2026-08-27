@@ -1,0 +1,102 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "mii-cs-onko-therapie-typ",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablecodesystem"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-onko-therapie-typ</b></p><a name=\"mii-cs-onko-therapie-typ\"> </a><a name=\"hcmii-cs-onko-therapie-typ\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">CH<a name=\"mii-cs-onko-therapie-typ-CH\"> </a></td><td>Chemotherapie</td></tr><tr><td style=\"white-space:nowrap\">HO<a name=\"mii-cs-onko-therapie-typ-HO\"> </a></td><td>Hormontherapie</td></tr><tr><td style=\"white-space:nowrap\">IM<a name=\"mii-cs-onko-therapie-typ-IM\"> </a></td><td>Immun-/Antikörpertherapie</td></tr><tr><td style=\"white-space:nowrap\">ZS<a name=\"mii-cs-onko-therapie-typ-ZS\"> </a></td><td>zielgerichtete Substanzen</td></tr><tr><td style=\"white-space:nowrap\">SZ<a name=\"mii-cs-onko-therapie-typ-SZ\"> </a></td><td>Stammzelltransplantation (inklusive Knochenmarktransplantation)</td></tr><tr><td style=\"white-space:nowrap\">CI<a name=\"mii-cs-onko-therapie-typ-CI\"> </a></td><td>Chemo- + Immun-/Antikörpertherapie</td></tr><tr><td style=\"white-space:nowrap\">CZ<a name=\"mii-cs-onko-therapie-typ-CZ\"> </a></td><td>Chemotherapie + zielgerichtete Substanzen</td></tr><tr><td style=\"white-space:nowrap\">CIZ<a name=\"mii-cs-onko-therapie-typ-CIZ\"> </a></td><td>Chemo- + Immun-/Antikörpertherapie + zielgerichtete Substanzen</td></tr><tr><td style=\"white-space:nowrap\">IZ<a name=\"mii-cs-onko-therapie-typ-IZ\"> </a></td><td>Immun-/Antikörpertherapie + zielgerichtete Substanzen</td></tr><tr><td style=\"white-space:nowrap\">WW<a name=\"mii-cs-onko-therapie-typ-WW\"> </a></td><td>Watchful Waiting</td></tr><tr><td style=\"white-space:nowrap\">AS<a name=\"mii-cs-onko-therapie-typ-AS\"> </a></td><td>Active Surveillance</td></tr><tr><td style=\"white-space:nowrap\">WS<a name=\"mii-cs-onko-therapie-typ-WS\"> </a></td><td>Wait and see</td></tr><tr><td style=\"white-space:nowrap\">OP<a name=\"mii-cs-onko-therapie-typ-OP\"> </a></td><td>Operation</td></tr><tr><td style=\"white-space:nowrap\">ST<a name=\"mii-cs-onko-therapie-typ-ST\"> </a></td><td>Strahlentherapie</td></tr><tr><td style=\"white-space:nowrap\">KW<a name=\"mii-cs-onko-therapie-typ-KW\"> </a></td><td>keine weitere tumorspezifische Therapie empfohlen</td></tr><tr><td style=\"white-space:nowrap\">SO<a name=\"mii-cs-onko-therapie-typ-SO\"> </a></td><td>Sonstiges</td></tr></table></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ",
+  "version" : "2026.0.3",
+  "name" : "MII_CS_Onko_Therapie_Typ",
+  "title" : "MII CS Onko Therapie Typ",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-08-27T10:41:09+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Typ der Therapie",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 16,
+  "concept" : [{
+    "code" : "CH",
+    "display" : "Chemotherapie"
+  },
+  {
+    "code" : "HO",
+    "display" : "Hormontherapie"
+  },
+  {
+    "code" : "IM",
+    "display" : "Immun-/Antikörpertherapie"
+  },
+  {
+    "code" : "ZS",
+    "display" : "zielgerichtete Substanzen"
+  },
+  {
+    "code" : "SZ",
+    "display" : "Stammzelltransplantation (inklusive Knochenmarktransplantation)"
+  },
+  {
+    "code" : "CI",
+    "display" : "Chemo- + Immun-/Antikörpertherapie"
+  },
+  {
+    "code" : "CZ",
+    "display" : "Chemotherapie + zielgerichtete Substanzen"
+  },
+  {
+    "code" : "CIZ",
+    "display" : "Chemo- + Immun-/Antikörpertherapie + zielgerichtete Substanzen"
+  },
+  {
+    "code" : "IZ",
+    "display" : "Immun-/Antikörpertherapie + zielgerichtete Substanzen"
+  },
+  {
+    "code" : "WW",
+    "display" : "Watchful Waiting"
+  },
+  {
+    "code" : "AS",
+    "display" : "Active Surveillance"
+  },
+  {
+    "code" : "WS",
+    "display" : "Wait and see"
+  },
+  {
+    "code" : "OP",
+    "display" : "Operation"
+  },
+  {
+    "code" : "ST",
+    "display" : "Strahlentherapie"
+  },
+  {
+    "code" : "KW",
+    "display" : "keine weitere tumorspezifische Therapie empfohlen"
+  },
+  {
+    "code" : "SO",
+    "display" : "Sonstiges"
+  }]
+}

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="mii-cm-onko-residualstatus-uicc-sct"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap mii-cm-onko-residualstatus-uicc-sct</b></p><a name="de-mii-cm-onko-residualstatus-uicc-sct"> </a><a name="de-hcmii-cm-onko-residualstatus-uicc-sct"> </a><p>This mapping does not specify any particular context of use.</p><br/><p>Mapping from <code>https://www.uicc.org/resources/r-classification</code> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>R0 (Kein Residualtumor)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>1352526005 (Union for International Cancer Control R0 (qualifier value))</td></tr><tr><td>R1 (Mikroskopischer Residualtumor)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>1352529003 (Union for International Cancer Control R1 (qualifier value))</td></tr><tr><td>R1(is) (In-Situ-Rest)</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>R1(cy+) (Cytologischer Rest)</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>R2 (Makroskopischer Residualtumor)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>1352528006 (Union for International Cancer Control R2 (qualifier value)	R2 (UICC))</td></tr><tr><td>RX (Vorhandensein von Residualtumor kann nicht beurteilt werden)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>1352527001 (Union for International Cancer Control RX (qualifier value))</td></tr><tr><td>U (Residualtumorstatus ist nicht bekannt)</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr></table></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-residualstatus-uicc-sct"/>
+  <version value="2026.0.3"/>
+  <name value="MII CM Onko Residualstatus UICC SCT Mapping"/>
+  <title value="MII CM Onko Residualstatus UICC SNOMED"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2024-01-05"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="Mapping Residualstatus UICC Codes zu SNOMED-CT"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license."/>
+  <group>
+    <source value="https://www.uicc.org/resources/r-classification"/>
+    <target value="http://snomed.info/sct/900000000000207008/version/20240401"/>
+    <element>
+      <code value="R0"/>
+      <display value="Kein Residualtumor"/>
+      <target>
+        <code value="1352526005"/>
+        <display value="Union for International Cancer Control R0 (qualifier value)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="R1"/>
+      <display value="Mikroskopischer Residualtumor"/>
+      <target>
+        <code value="1352529003"/>
+        <display value="Union for International Cancer Control R1 (qualifier value)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="R1(is)"/>
+      <display value="In-Situ-Rest"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="R1(cy+)"/>
+      <display value="Cytologischer Rest"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="R2"/>
+      <display value="Makroskopischer Residualtumor"/>
+      <target>
+        <code value="1352528006"/>
+        <display value="Union for International Cancer Control R2 (qualifier value)&#x9;R2 (UICC)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="RX"/>
+      <display value="Vorhandensein von Residualtumor kann nicht beurteilt werden"/>
+      <target>
+        <code value="1352527001"/>
+        <display value="Union for International Cancer Control RX (qualifier value)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="U"/>
+      <display value="Residualtumorstatus ist nicht bekannt"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

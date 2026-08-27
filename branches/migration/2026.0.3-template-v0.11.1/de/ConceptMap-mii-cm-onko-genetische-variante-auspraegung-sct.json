@@ -1,0 +1,94 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "mii-cm-onko-genetische-variante-auspraegung-sct",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap mii-cm-onko-genetische-variante-auspraegung-sct</b></p><a name=\"de-mii-cm-onko-genetische-variante-auspraegung-sct\"> </a><a name=\"de-hcmii-cm-onko-genetische-variante-auspraegung-sct\"> </a><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <a href=\"CodeSystem-mii-cs-onko-genetische-variante-auspraegung.html\">MII CS Onkologie Genetische Variante Ausprägung</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>M (Mutation/positiv)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>55446002 (Genetic mutation (finding))</td></tr><tr><td>W (Wildtyp/nicht mutiert/ negativ)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>412730000 (Genetic finding not detected (finding))</td></tr><tr><td>P (Polymorphismus)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>50334000 (Genetic polymorphism (finding))</td></tr><tr><td>S (Sonstiges)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>74964007 (Other (qualifier value))</td></tr><tr><td>N (Nicht bestimmbar)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1156316003 (Cannot be determined (qualifier value))</td></tr><tr><td>U (Unbekannt)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>261665006 (Unknown (qualifier value))</td></tr></table></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-genetische-variante-auspraegung-sct",
+  "version" : "2026.0.3",
+  "name" : "MII CM Onko Genetische Variante Auspraegung SCT Mapping",
+  "title" : "MII CM Onko Genetische Variante Auspraegung SNOMED Mapping",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2024-04-10",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Mapping Therapieabweichung Codes zu SNOMED-CT",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "purpose" : "Technical mapping to transform oBDS-Data into SNOMED",
+  "copyright" : "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license.",
+  "sourceUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
+  "targetUri" : "http://snomed.info/sct/900000000000207008/version/20240401",
+  "group" : [{
+    "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-genetische-variante-auspraegung",
+    "target" : "http://snomed.info/sct/900000000000207008/version/20240401",
+    "element" : [{
+      "code" : "M",
+      "display" : "Mutation/positiv",
+      "target" : [{
+        "code" : "55446002",
+        "display" : "Genetic mutation (finding)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "W",
+      "display" : "Wildtyp/nicht mutiert/ negativ",
+      "target" : [{
+        "code" : "412730000",
+        "display" : "Genetic finding not detected (finding)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "P",
+      "display" : "Polymorphismus",
+      "target" : [{
+        "code" : "50334000",
+        "display" : "Genetic polymorphism (finding)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "S",
+      "display" : "Sonstiges",
+      "target" : [{
+        "code" : "74964007",
+        "display" : "Other (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "N",
+      "display" : "Nicht bestimmbar",
+      "target" : [{
+        "code" : "1156316003",
+        "display" : "Cannot be determined (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "U",
+      "display" : "Unbekannt",
+      "target" : [{
+        "code" : "261665006",
+        "display" : "Unknown (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

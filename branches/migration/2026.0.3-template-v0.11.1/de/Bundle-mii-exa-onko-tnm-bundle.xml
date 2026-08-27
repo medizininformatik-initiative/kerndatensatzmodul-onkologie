@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-tnm-bundle"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
+  </meta>
+  <language value="de"/>
+  <identifier>
+    <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"/>
+    <value value="tnm-bundle-2024-001"/>
+  </identifier>
+  <type value="transaction"/>
+  <timestamp value="2024-01-11T10:00:00+01:00"/>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-tnm-bundle-patient"/>
+    <resource>
+      <Patient>
+        <id value="mii-exa-onko-tnm-bundle-patient"/>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <name>
+          <family value="TNMBeispiel"/>
+          <given value="Tobias"/>
+        </name>
+        <gender value="male"/>
+        <birthDate value="1962-04-18"/>
+      </Patient>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Patient"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-tnm-bundle-diagnose"/>
+    <resource>
+      <Condition>
+        <id value="mii-exa-onko-tnm-bundle-diagnose"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/condition-assertedDate">
+          <valueDateTime value="2024-01-11"/>
+        </extension>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+          </coding>
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <code value="confirmed"/>
+          </coding>
+        </verificationStatus>
+        <code>
+          <coding>
+            <system value="http://fhir.de/CodeSystem/bfarm/icd-10-gm"/>
+            <version value="2024"/>
+            <code value="C20"/>
+            <display value="Bösartige Neubildung des Rektums"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-tnm-bundle-patient"/>
+        </subject>
+        <recordedDate value="2024-01-11"/>
+      </Condition>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Condition"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-tnm-bundle-t-kategorie-cT2"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-tnm-bundle-t-kategorie-cT2"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix">
+            <valueCodeableConcept>
+              <coding>
+                <system value="https://www.uicc.org/resources/tnm"/>
+                <code value="c"/>
+                <display value="c"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="399504009"/>
+            <display value="cT category (observable entity)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-tnm-bundle-patient"/>
+        </subject>
+        <effectiveDateTime value="2024-01-11"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://www.uicc.org/resources/tnm"/>
+            <code value="T2"/>
+            <display value="T2"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1352993004"/>
+            <display value="Union for International Cancer Control cT2 (qualifier value)"/>
+          </coding>
+        </valueCodeableConcept>
+        <method>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"/>
+            <code value="8"/>
+            <display value="8. Auflage"/>
+          </coding>
+        </method>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-tnm-bundle-n-kategorie-cN3"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-tnm-bundle-n-kategorie-cN3"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix">
+            <valueCodeableConcept>
+              <coding>
+                <system value="https://www.uicc.org/resources/tnm"/>
+                <code value="c"/>
+                <display value="c"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="399534004"/>
+            <display value="cN category (observable entity)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-tnm-bundle-patient"/>
+        </subject>
+        <effectiveDateTime value="2024-01-11"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://www.uicc.org/resources/tnm"/>
+            <code value="N3"/>
+            <display value="N3"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1353045000"/>
+            <display value="Union for International Cancer Control cN3 (qualifier value)"/>
+          </coding>
+        </valueCodeableConcept>
+        <method>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"/>
+            <code value="8"/>
+            <display value="8. Auflage"/>
+          </coding>
+        </method>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-tnm-bundle-m-kategorie-cM0"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-tnm-bundle-m-kategorie-cM0"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix">
+            <valueCodeableConcept>
+              <coding>
+                <system value="https://www.uicc.org/resources/tnm"/>
+                <code value="c"/>
+                <display value="c"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="399387003"/>
+            <display value="cM category (observable entity)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-tnm-bundle-patient"/>
+        </subject>
+        <effectiveDateTime value="2024-01-11"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://www.uicc.org/resources/tnm"/>
+            <code value="M0"/>
+            <display value="M0"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1352512001"/>
+            <display value="Union for International Cancer Control cM0 (qualifier value)"/>
+          </coding>
+        </valueCodeableConcept>
+        <method>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"/>
+            <code value="8"/>
+            <display value="8. Auflage"/>
+          </coding>
+        </method>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-tnm-bundle-klassifikation-cT2cN3cM0"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-tnm-bundle-klassifikation-cT2cN3cM0"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="399537006"/>
+            <display value="Clinical TNM stage grouping"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-tnm-bundle-patient"/>
+        </subject>
+        <focus>
+          <reference value="Condition/mii-exa-onko-tnm-bundle-diagnose"/>
+        </focus>
+        <effectiveDateTime value="2024-01-11"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://www.uicc.org/resources/tnm"/>
+            <code value="IIIB"/>
+            <display value="Stadium IIIB"/>
+          </coding>
+        </valueCodeableConcept>
+        <method>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"/>
+            <code value="8"/>
+            <display value="8. Auflage"/>
+          </coding>
+        </method>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-tnm-bundle-t-kategorie-cT2"/>
+        </hasMember>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-tnm-bundle-n-kategorie-cN3"/>
+        </hasMember>
+        <hasMember>
+          <reference value="Observation/mii-exa-onko-tnm-bundle-m-kategorie-cM0"/>
+        </hasMember>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+</Bundle>
