@@ -65,3 +65,42 @@ Alternative implementations:
   - disadvantage: does not occur independently; tight coupling to the T/N/M
     classification profiles required
 - as part of the T/N/M categories (e.g. `component`)
+
+### Irradiation extensions (single irradiation)
+
+
+The radiation extensions capture all information relevant to individual radiation units that is not already covered by the parent Strahlentherapie procedure profile.
+
+
+#### Total dose
+
+The total dose indicates the total dose with which the target region was irradiated (including boost).
+
+<!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Strahlentherapie/Extension-Bestrahlung.page.md gate=B -->
+Structure and description: [MII EX Onko Strahlentherapie Bestrahlung Gesamtdosis](StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis.html).
+
+
+#### Single fraction dose
+
+The single fraction dose indicates the dose (most frequent dose, not boost) per day with which the target region was irradiated.
+
+<!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Strahlentherapie/Extension-Bestrahlung.page.md gate=B -->
+Structure and description: [MII EX Onko Strahlentherapie Bestrahlung Einzeldosis](StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis.html).
+
+
+#### Boost
+
+Indicates whether a boost was applied and, if so, which type of boost.
+
+<!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Strahlentherapie/Extension-Bestrahlung.page.md gate=B -->
+Structure and description: [MII EX Onko Strahlentherapie Bestrahlung Boost](StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-boost.html).
+
+
+#### Laterality
+
+Indicates the laterality of the target region. For bilateral irradiation of paired organs, the irradiations are to be reported individually.
+
+<!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Strahlentherapie/Extension-Bestrahlung.page.md gate=B -->
+Structure and description: [MII EX Onko Strahlentherapie Bestrahlung Seitenlokalisation](StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation.html).
+
+*Note: the former complex parent extension `mii-ex-onko-strahlentherapie-bestrahlung` has been superseded (commented out in FSH); the four individual extensions on the irradiation procedure profile apply.*

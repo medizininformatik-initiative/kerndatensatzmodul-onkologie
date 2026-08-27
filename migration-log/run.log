@@ -16565,3 +16565,23 @@
 2026-08-27T07:09:13Z  INFO   5.4  sushi-after-narrative  start  cmd=`npx --yes fsh-sushi@3.20.0 .`  raw_log=migration-log/sushi-narrative.log
 2026-08-27T07:09:53Z  INFO   5.4  sushi-after-narrative  done  cmd=`npx --yes fsh-sushi@3.20.0 .`  exit=0 raw_log=migration-log/sushi-narrative.log raw_log_lines=99
 2026-08-27T07:12:08Z  INFO   5.6  ig-publisher  start  cmd=`java -Xmx6g -Dfile.encoding=UTF-8 -jar /private/tmp/claude-501/-Users-thome-code-fhir-profiling-kerndatensatzmodul-onkologie/62d6b329-4adb-4f6b-9493-1bc8c7c062b9/scratchpad/publisher.jar -ig ig.ini -tx n/a`  raw_log=migration-log/ig-publisher.log
+2026-08-27T07:13:12Z  ERROR  5.6  ig-publisher  failed  cmd=`java -Xmx6g -Dfile.encoding=UTF-8 -jar /private/tmp/claude-501/-Users-thome-code-fhir-profiling-kerndatensatzmodul-onkologie/62d6b329-4adb-4f6b-9493-1bc8c7c062b9/scratchpad/publisher.jar -ig ig.ini -tx n/a`  exit=1 raw_log=migration-log/ig-publisher.log raw_log_lines=148
+    The exit status is preserved and returned -- this step did NOT meet its
+    acceptance criterion. Read migration-log/ig-publisher.log, then either fix and re-run or take it
+    to the report's decision queue (spec §10.3).
+2026-08-27T07:15:44Z  INFO   5.6  tx-cache-seed  fhir2.base.template#0.1.0 per curl vorinstalliert (SHA-verifizierter Publisher verweigert NAT64-Adressen der FHIR-Package-Server in diesem Netz — DNS64/NAT64-Umgebung; Workaround: Cache-Seed, kein Verhaltensunterschied)
+2026-08-27T07:15:54Z  INFO   5.6  ig-publisher  start  cmd=`java -Xmx6g -Dfile.encoding=UTF-8 -jar /private/tmp/claude-501/-Users-thome-code-fhir-profiling-kerndatensatzmodul-onkologie/62d6b329-4adb-4f6b-9493-1bc8c7c062b9/scratchpad/publisher.jar -ig ig.ini -tx n/a`  raw_log=migration-log/ig-publisher.log prev_raw_log=migration-log/ig-publisher.prev.log
+2026-08-27T07:16:18Z  INFO   5.5  gen-page-title-po  start  cmd=`python3 .claude/skills/mii-ig-migration/scripts/gen-page-title-po.py fsh-generated/resources/ImplementationGuide-mii-ig-onko-de-v2026.json migration-log/menu-titles-de.txt de input/translations/de/ImplementationGuide-mii-ig-onko-de-v2026.po`  raw_log=migration-log/gen-page-title-po.log
+2026-08-27T07:16:18Z  INFO   5.5  gen-page-title-po  params  ig=fsh-generated/resources/ImplementationGuide-mii-ig-onko-de-v2026.json seed=migration-log/menu-titles-de.txt lang=de out=input/translations/de/ImplementationGuide-mii-ig-onko-de-v2026.po
+2026-08-27T07:16:18Z  ERROR  5.5  gen-page-title-po  setup: cannot read the ImplementationGuide resource 'fsh-generated/resources/ImplementationGuide-mii-ig-onko-de-v2026.json'  exit=2
+    [Errno 2] No such file or directory: 'fsh-generated/resources/ImplementationGuide-mii-ig-onko-de-v2026.json'
+    Expected fsh-generated/resources/ImplementationGuide-<id>.json --
+    run `npx --yes fsh-sushi@3.20.0 .` before generating the catalogue.
+2026-08-27T07:16:18Z  ERROR  5.5  gen-page-title-po  failed  cmd=`python3 .claude/skills/mii-ig-migration/scripts/gen-page-title-po.py fsh-generated/resources/ImplementationGuide-mii-ig-onko-de-v2026.json migration-log/menu-titles-de.txt de input/translations/de/ImplementationGuide-mii-ig-onko-de-v2026.po`  exit=2 raw_log=migration-log/gen-page-title-po.log raw_log_lines=5
+    The exit status is preserved and returned -- this step did NOT meet its
+    acceptance criterion. Read migration-log/gen-page-title-po.log, then either fix and re-run or take it
+    to the report's decision queue (spec §10.3).
+2026-08-27T07:17:05Z  ERROR  5.6  ig-publisher  failed  cmd=`java -Xmx6g -Dfile.encoding=UTF-8 -jar /private/tmp/claude-501/-Users-thome-code-fhir-profiling-kerndatensatzmodul-onkologie/62d6b329-4adb-4f6b-9493-1bc8c7c062b9/scratchpad/publisher.jar -ig ig.ini -tx n/a`  exit=1 raw_log=migration-log/ig-publisher.log raw_log_lines=3273
+    The exit status is preserved and returned -- this step did NOT meet its
+    acceptance criterion. Read migration-log/ig-publisher.log, then either fix and re-run or take it
+    to the report's decision queue (spec §10.3).
