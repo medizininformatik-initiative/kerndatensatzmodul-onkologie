@@ -46,7 +46,7 @@ oBDS-spezifisches ValueSet für Klassifikation von Strahlenart bei Strahlenthera
   "title" : "MII VS Onkologie Strahlentherapie Strahlenart",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-27T12:06:00+00:00",
+  "date" : "2026-08-27T15:31:43+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

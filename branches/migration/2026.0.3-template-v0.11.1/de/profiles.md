@@ -11,6 +11,8 @@ Die vollständige, automatisch generierte Liste aller Profile dieses Moduls find
 
 Jede Box führt direkt zur Profilseite; Farben nach FHIR-Ressourcentyp, Gruppierung entlang des onkologischen Behandlungspfads (oBDS-Kapitel).
 
+oBDS-Basisdatensatz
+
 ##### Diagnose (oBDS 5)
 
 [Diagnose Primärtumor](StructureDefinition-mii-pr-onko-diagnose-primaertumor.md)
@@ -75,7 +77,9 @@ Jede Box führt direkt zur Profilseite; Farben nach FHIR-Ressourcentyp, Gruppier
 [Genetische Variante](StructureDefinition-mii-pr-onko-genetische-variante.md)
 [Studienteilnahme](StructureDefinition-mii-pr-onko-studienteilnahme.md)
 
-##### Organmodul Mamma
+Organspezifische Module
+
+##### Mamma
 
 [Estrogen-Rezeptor](StructureDefinition-mii-pr-onko-mamma-rezeptorstatus-estrogen.md)
 [Progesteron-Rezeptor](StructureDefinition-mii-pr-onko-mamma-rezeptorstatus-progesteron.md)
@@ -85,7 +89,7 @@ Jede Box führt direkt zur Profilseite; Farben nach FHIR-Ressourcentyp, Gruppier
 [Mamma-OP](StructureDefinition-mii-pr-onko-mamma-operation.md)
 [Sozialdienst](StructureDefinition-mii-pr-onko-mamma-sozialdienst.md)
 
-##### Organmodul Prostata
+##### Prostata
 
 [PSA](StructureDefinition-mii-pr-onko-prostate-psa.md)
 [Gleason Patterns](StructureDefinition-mii-pr-onko-prostate-gleason-patterns.md)
@@ -97,7 +101,7 @@ Jede Box führt direkt zur Profilseite; Farben nach FHIR-Ressourcentyp, Gruppier
 [Clavien-Dindo](StructureDefinition-mii-pr-onko-prostate-clavien-dindo.md)
 [Prostata-OP](StructureDefinition-mii-pr-onko-prostata-operation.md)
 
-##### Organmodul Kolorektal
+##### Kolorektal
 
 [Abstand Anokutanlinie](StructureDefinition-mii-pr-onko-krk-abstand-anokutan.md)
 [Abstand aboral](StructureDefinition-mii-pr-onko-krk-abstand-aboral.md)
@@ -108,7 +112,7 @@ Jede Box führt direkt zur Profilseite; Farben nach FHIR-Ressourcentyp, Gruppier
 [Stoma-Markierung](StructureDefinition-mii-pr-onko-krk-stoma-markierung.md)
 [KRK-Specimen](StructureDefinition-mii-pr-onko-krk-specimen.md)
 
-##### Organmodul Melanom
+##### Melanom
 
 [Breslow-Tiefe](StructureDefinition-mii-pr-onko-melanom-breslow-tiefe.md)
 [Ulzeration](StructureDefinition-mii-pr-onko-melanom-ulzeration.md)
