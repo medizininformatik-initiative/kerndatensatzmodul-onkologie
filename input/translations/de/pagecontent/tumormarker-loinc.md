@@ -115,20 +115,46 @@ Varianten (Methode, Einheit, Probenmaterial) zu navigieren — und damit
 implizite, hierarchisch definierte ValueSets zu bilden, statt Einzelcodes zu
 pflegen.
 
-Für **16 der 28 Marker** ist der Observable-Anker bereits verifiziert
+Für **23 der 28 Marker** ist der Observable-Anker verifiziert
 (z. B. CEA → *Measurement of carcinoembryonic antigen in serum or plasma*
 `723431010000109` mit Mass-/Substance-/Arbitrary-concentration-Kindern).
-Für die übrigen (β-hCG, Gastrin, Calcitonin, HVA, VMA, ACTH, FSH, LH, TSH,
-M-Protein, IgA, IgM) steht der Anker noch aus — die Erstrecherche lieferte
-teils keine oder erkennbar falsche Treffer (etwa den CRF- statt des
-ACTH-Observables), die aussortiert wurden.
+Für die verbleibenden fünf (Gastrin, Calcitonin, M-Protein, IgA, IgM) existiert kein Grouper-Konzept — siehe die Ergänzung unten.
 
 Der vollständige Kurationsreport mit allen Ankern und Kind-Konzepten liegt im
 Repository unter `input/examples-source/biomarker/biomarker-snomed-report.md`.
 
+**Ergänzung 2026-08-28.** Für sieben der zwölf zuvor offenen Marker ist der Anker
+jetzt ermittelt und verifiziert (Snowstorm-Branch `MAIN/SNOMEDCT-LOINC`, ECL über
+`<<363787002 |Observable entity|`):
+
+| Marker | LOINC | SNOMED-Anker | Bezeichnung | Kinder |
+|---|---|---|---|---|
+| beta-hCG | `21198-7` | `727021010000108` | Measurement of human chorionic gonadotropin beta subunit in serum or plasma | 4 |
+| HVA | `2436-4` | `732491010000101` | Measurement of homovanillic acid in urine | 10 |
+| VMA | `3122-9` | `731001010000107` | Measurement of vanillylmandelic acid in urine | 11 |
+| ACTH | `2141-0` | `721541010000101` | Measurement of adrenocorticotropic hormone in plasma | 200 |
+| FSH | `15067-2` | `726901010000101` | Measurement of pituitary follicle stimulating hormone in serum or plasma | 100 |
+| LH | `10501-5` | `724461010000100` | Measurement of pituitary luteinizing hormone in serum or plasma | 96 |
+| TSH | `3016-3` | `727041010000103` | Measurement of thyrotrophin in serum or plasma | 79 |
+
+Für **Gastrin, Calcitonin, M-Protein, IgA und IgM** existiert in der
+LOINC-SNOMED-Ontologie **kein „Measurement of …"-Grouper** für die gesuchte
+Serum-/Plasma-Bestimmung — dort sind ausschließlich die konkreten Messgrößen
+(Mass-/Substance-concentration …) modelliert. Für diese Marker bleibt die
+Navigation über den allgemeinen LOINC-Code die einzige Option; ein Grouper
+wäre bei SNOMED International anzuregen.
+
+{:.bg-info}
+**Methodischer Hinweis:** Die LOINC-SNOMED-Konzepte liegen in einer eigenen
+Snowstorm-Branch (`MAIN/SNOMEDCT-LOINC`) und sind über die FHIR-Standard-Expansion
+der International Edition **nicht** auffindbar. Eine naive Textsuche führt zudem
+zuverlässig in die Irre — sie liefert für ACTH den *Corticotropin releasing factor*
+und für TSH den *Thyrotropin-Rezeptor-Antikörper*. Die hier gelisteten Anker sind
+einzeln über FSN und Kindkonzepte gegengeprüft.
+
 ### Offene Punkte
 
 - Fachliches Review der Kernliste (Codes und Entitäts-Zuordnungen).
-- Vervollständigung der LOINC-SNOMED-Anker (12 Marker offen). Die Ontologie ist auf der eigenen Branch `MAIN/SNOMEDCT-LOINC` einer Snowstorm-Instanz abfragbar (ECL funktioniert dort); die Kuration läuft.
+- LOINC-SNOMED-Anker: 23 von 28 verifiziert; für 5 Marker existiert kein Grouper (Anregung an SNOMED International wäre nötig).
 - ~~Entscheidung zum Binding-Ort~~ **entschieden (2026-08-28):** Laborwerte laufen über das KDS-Modul Laborbefund. Das Modul stellt dafür das Profil [`MII_PR_Onko_Tumormarker`](StructureDefinition-mii-pr-onko-tumormarker.html) bereit — eine Ableitung von `MII_PR_Labor_Laboruntersuchung`, die `Observation.code` extensible an die Union-Liste [`mii-vs-onko-tumormarker-loinc`](ValueSet-mii-vs-onko-tumormarker-loinc.html) bindet und den Bezug zur onkologischen Diagnose (`focus`) ergänzt.
 - Serotonin: Matrix (24h-Urin vs. Serum) und ggf. Ergänzung 5-HIES.
