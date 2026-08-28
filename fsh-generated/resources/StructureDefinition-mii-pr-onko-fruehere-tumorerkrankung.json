@@ -259,7 +259,7 @@
           ],
           "rules": "open"
         },
-        "min": 1,
+        "min": 2,
         "mustSupport": true
       },
       {
@@ -292,6 +292,42 @@
               "code": "394593009",
               "system": "http://snomed.info/sct",
               "display": "Medical oncology (qualifier value)"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.category:onkologie",
+        "path": "Condition.category",
+        "sliceName": "onkologie",
+        "short": "Onkologie-Kennzeichnung",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Onkologie-Kennzeichnung"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Kennzeichnet die Diagnose als onkologische Diagnose des KDS-Moduls Onkologie und macht sie über die category-Suche auffindbar",
+        "min": 1,
+        "max": "1",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "55342001",
+              "system": "http://snomed.info/sct",
+              "display": "Neoplastic disease"
             }
           ]
         },

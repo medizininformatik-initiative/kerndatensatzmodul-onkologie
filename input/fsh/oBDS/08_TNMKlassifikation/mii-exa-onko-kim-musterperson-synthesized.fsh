@@ -48,6 +48,7 @@ Usage: #example
 Instance: mii-exa-onko-kim-synth-diagnose
 InstanceOf: MII_PR_Onko_Diagnose_Primaertumor
 Usage: #example
+* category[onkologie] = $SCT#55342001 "Neoplastic disease"
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)
 * clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed

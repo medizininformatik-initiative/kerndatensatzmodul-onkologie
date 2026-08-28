@@ -26,6 +26,18 @@ Description: "Dieses Profil beschreibt frühere Tumorerkrankungen, die in der An
 * subject 1..1 MS
 * subject only Reference(Patient)
 
+// Onkologie-Kennzeichnung (User-Entscheid 2026-08-28): macht onkologische
+// Diagnosen über Condition?category suchbar. Das extensible-Kern-Binding
+// (problem-list-item/encounter-diagnosis) bleibt gewahrt - weitere Categories
+// sind zulässig (rules #open), "Onkologie" ist dort nicht abgedeckt.
+* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.path = "$this"
+* category ^slicing.rules = #open
+* category contains onkologie 1..1 MS
+* category[onkologie] = $SCT#55342001 "Neoplastic disease"
+* insert Label(category[onkologie], Onkologie-Kennzeichnung, Kennzeichnet die Diagnose als onkologische Diagnose des KDS-Moduls Onkologie und macht sie über die category-Suche auffindbar)
+* insert Translation(category[onkologie] ^short, de-DE, Onkologie-Kennzeichnung)
+
 // Clinical status
 * clinicalStatus 0..1 MS
 * clinicalStatus from http://hl7.org/fhir/ValueSet/condition-clinical (required)

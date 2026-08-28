@@ -7,6 +7,7 @@ Instance: mii-exa-onko-diagnose-meningeom-benigne
 InstanceOf: mii-pr-onko-diagnose-primaertumor
 Usage: #example
 Title: "MII EXA Onkologie Diagnose benignes Meningeom (Ursprungsdiagnose)"
+* category[onkologie] = $SCT#55342001 "Neoplastic disease"
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)
 * clinicalStatus = $condition-clinical#active
 * verificationStatus.coding[condition-ver-status] = $condition-ver-status#confirmed
@@ -25,6 +26,7 @@ Instance: mii-exa-onko-diagnose-meningeom-maligne-transformation
 InstanceOf: mii-pr-onko-diagnose-primaertumor
 Usage: #example
 Title: "MII EXA Onkologie Diagnose malignes Meningeom (Transformation /0 → /3)"
+* category[onkologie] = $SCT#55342001 "Neoplastic disease"
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)
 * clinicalStatus = $condition-clinical#active
 * verificationStatus.coding[condition-ver-status] = $condition-ver-status#confirmed

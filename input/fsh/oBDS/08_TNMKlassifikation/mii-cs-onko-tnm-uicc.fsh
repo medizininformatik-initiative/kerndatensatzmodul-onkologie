@@ -36,6 +36,7 @@ Description: "Codes für TNM UICC Ausprägungen."
 * #T1b	"T1b"
 * #T1b1	"T1b1"
 * #T1b2	"T1b2"
+* #T1b3	"T1b3" // 9. Auflage (Zervix, FIGO-Angleichung)
 * #T1c	"T1c"
 * #T1c1	"T1c1"
 * #T1c2	"T1c2"
@@ -90,6 +91,8 @@ Description: "Codes für TNM UICC Ausprägungen."
 * #M1a "M1a"
 * #M1b "M1b"
 * #M1c "M1c"
+* #M1c1 "M1c1" // 9. Auflage (Lunge: eine extrathorakale Organregion)
+* #M1c2 "M1c2" // 9. Auflage (Lunge: mehrere extrathorakale Organregionen)
 * #M1d "M1d"
 * #MX "MX"
 * #i+ "(i+)"

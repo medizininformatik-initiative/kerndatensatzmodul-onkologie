@@ -33,6 +33,7 @@ Instance: PatientKimMusterperson-PrimaryDiagnosis-2
 InstanceOf: mii-pr-onko-diagnose-primaertumor
 Usage: #example
 Description: "bestätigte Primärdiagnose"
+* category[onkologie] = $SCT#55342001 "Neoplastic disease"
 * extension[Feststellungsdatum].valueDateTime = 2021-06-10
 * recordedDate = 2021-06-10
 * subject = Reference(PatientKimMusterperson)
@@ -52,6 +53,7 @@ Instance: PatientKimMusterperson-Diagnosis-1
 InstanceOf: mii-pr-onko-diagnose-primaertumor
 Usage: #example
 Description: "Diagnose Primärtumor"
+* category[onkologie] = $SCT#55342001 "Neoplastic disease"
 * recordedDate = 2021-06-10
 * subject = Reference(PatientKimMusterperson)
 * clinicalStatus = $condition-clinical#active //zum Zeitpunkt der Diagnosestellung

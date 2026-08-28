@@ -24,6 +24,7 @@ Instance: mii-exa-onko-cup-diagnose
 InstanceOf: mii-pr-onko-diagnose-primaertumor
 Usage: #example
 Title: "MII EXA Onkologie Diagnose CUP (C80.0)"
+* category[onkologie] = $SCT#55342001 "Neoplastic disease"
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)
 // Tumor-ID: bleibt bei späterer CUP-Auflösung IDENTISCH (gleiche Tumor-Entität)
 * identifier.system = "https://dizmusterstadt.example.org/fhir/sid/tumor-id"
@@ -184,6 +185,7 @@ Instance: mii-exa-onko-cup-diagnose-aufgeloest
 InstanceOf: mii-pr-onko-diagnose-primaertumor
 Usage: #example
 Title: "MII EXA Onkologie Diagnose CUP aufgelöst → Pankreaskarzinom (Zustand nach Update derselben Ressource)"
+* category[onkologie] = $SCT#55342001 "Neoplastic disease"
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)
 // Tumor-ID: UNVERÄNDERT — dieselbe Tumor-Entität
 * identifier.system = "https://dizmusterstadt.example.org/fhir/sid/tumor-id"

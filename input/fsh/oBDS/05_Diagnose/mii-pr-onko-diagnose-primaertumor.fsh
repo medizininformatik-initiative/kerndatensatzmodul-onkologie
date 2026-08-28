@@ -21,6 +21,18 @@ Description: "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der 
 * subject 1..1 MS
 * subject only Reference(Patient)
 
+// Onkologie-Kennzeichnung (User-Entscheid 2026-08-28): macht onkologische
+// Diagnosen über Condition?category suchbar. Das extensible-Kern-Binding
+// (problem-list-item/encounter-diagnosis) bleibt gewahrt - weitere Categories
+// sind zulässig (rules #open), "Onkologie" ist dort nicht abgedeckt.
+* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.path = "$this"
+* category ^slicing.rules = #open
+* category contains onkologie 1..1 MS
+* category[onkologie] = $SCT#55342001 "Neoplastic disease"
+* insert Label(category[onkologie], Onkologie-Kennzeichnung, Kennzeichnet die Diagnose als onkologische Diagnose des KDS-Moduls Onkologie und macht sie über die category-Suche auffindbar)
+* insert Translation(category[onkologie] ^short, de-DE, Onkologie-Kennzeichnung)
+
 // Krebsregister-Meldepflicht-Menge als Warning-Invariante (extensible-Semantik):
 // Das required-Binding des Basis-Profils auf das volle ICD-10-GM-VS darf nicht
 // abgeschwächt werden — die Invariante warnt bei Codes außerhalb von

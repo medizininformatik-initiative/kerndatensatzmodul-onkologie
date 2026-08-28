@@ -9,6 +9,7 @@ Instance: mii-exa-onko-diagnose-taml-nach-chemo
 InstanceOf: mii-pr-onko-diagnose-primaertumor
 Usage: #example
 Title: "MII EXA Onkologie Diagnose t-AML nach Chemotherapie (dueTo)"
+* category[onkologie] = $SCT#55342001 "Neoplastic disease"
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)
 * clinicalStatus = $condition-clinical#active
 * verificationStatus.coding[condition-ver-status] = $condition-ver-status#confirmed
@@ -31,6 +32,7 @@ Instance: mii-exa-onko-diagnose-angiosarkom-nach-radiatio
 InstanceOf: mii-pr-onko-diagnose-primaertumor
 Usage: #example
 Title: "MII EXA Onkologie Diagnose radiogenes Angiosarkom nach Strahlentherapie (dueTo)"
+* category[onkologie] = $SCT#55342001 "Neoplastic disease"
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)
 * clinicalStatus = $condition-clinical#active
 * verificationStatus.coding[condition-ver-status] = $condition-ver-status#confirmed
