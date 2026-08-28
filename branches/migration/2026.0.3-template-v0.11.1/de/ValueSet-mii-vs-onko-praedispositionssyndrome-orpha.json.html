@@ -1,0 +1,837 @@
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+<html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>MII VS Onkologie Krebsprädispositionssyndrome ORPHA - JSON Representation - MII IG Kerndatensatz-Modul Onkologie v2026.0.3</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Branding override for the fhir2.base.template CSS placeholder
+     (base ships includes/fragment-css.html as a single comment; it is included
+     in <head> AFTER all base stylesheets, so the linked files win the
+     cascade).
+     Load model (docs/styleguide.md §1/§10): bootstrap-accessibility.css
+     (PayPal Bootstrap Accessibility Plugin v1.0.7, vendored + pinned - §8)
+     patches Bootstrap-3 component styling for accessibility (focus outlines,
+     alert contrast) and loads FIRST so the template's own rules can override;
+     then template-base.css carries the
+     brand-INDEPENDENT rule blocks and always loads; then EXACTLY ONE palette
+     file follows - num-diz.css, the DEFAULT design, unless the consuming IG
+     ships input/data/brand.json with { "design": "mii" } (read as
+     site.data.brand.design via the base's input/data -> _data pre-process),
+     which selects mii.css instead. Only the exact value 'mii' selects the
+     MII design; anything else - including no brand.json at all and unknown
+     values - renders NUM-DIZ. Both palettes declare the same variable set
+     (scripts/brand-switch.test.mjs). -->
+<link href="assets/css/bootstrap-accessibility.css" rel="stylesheet"/>
+<link href="assets/css/template-base.css" rel="stylesheet"/>
+
+<link href="assets/css/num-diz.css" rel="stylesheet"/>
+
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"18.140"}
+    h3,h4,h5,h6{--heading-prefix:"18.140"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Branding override for the fhir2.base.template header placeholder
+     (base ships includes/fragment-header.html as a single comment; it is included
+     inside "#segment-header > .container", before the #ig-status block).
+     Language handling: only the asset and its descriptive alt text switch on
+     include.lang (the pattern kerndatensatz-basis uses); no translatable UI
+     strings are hard-coded.
+     Brand handling: the project logo additionally switches on
+     site.data.brand.design (input/data/brand.json in the consuming IG, see
+     docs/styleguide.md §10). Only the exact value 'mii' selects the MII
+     logos - anything else, including no brand.json at all, falls through to
+     the NUM-DIZ default.
+     Two logos, mirroring kerndatensatz-basis: the HL7 FHIR logo (links to the
+     FHIR spec) in #family-nav, and the project logo in #project-nav.
+     fhir-logo-www.png is shipped by fhir2.base.template
+     (content/assets/images/), so it resolves from the inherited assets without
+     shipping it here. -->
+<div id="family-nav">
+  <a id="family-logo" no-external="true" href="https://hl7.org/fhir">
+    <img height="50" alt="HL7 FHIR" src="assets/images/fhir-logo-www.png"/>
+  </a>
+</div>
+<div id="project-nav">
+
+  <a id="project-logo" no-external="true" href="https://www.netzwerk-universitaetsmedizin.de/forschung/num-diz">
+
+    <img height="50" alt="NUM-DIZ (Netzwerk Universitätsmedizin — Datenintegrationszentrum)" src="assets/images/logo-num-diz-de.svg"/>
+
+  </a>
+
+</div>
+<!-- Font-size control (A / A+ / A++): three reader-selectable levels; level A
+     is the untouched default. Logic in assets/js/font-size-control.js, the
+     zoom mapping + button styling in template-base.css ("font-size control"
+     block). All three buttons read "A" — the button's own font size shows the level; labels are language-neutral; only the aria texts switch
+     on include.lang. REMOVAL: delete this block, the js file and the CSS
+     block - one commit, styleguide §5a. -->
+
+<div class="ig-fontsize" role="group" aria-label="Schriftgröße">
+  <button type="button" data-level="0" aria-pressed="true" aria-label="Schriftgröße: Standard">A</button>
+  <button type="button" data-level="1" aria-pressed="false" aria-label="Schriftgröße: größer">A</button>
+  <button type="button" data-level="2" aria-pressed="false" aria-label="Schriftgröße: am größten">A</button>
+</div>
+
+<script src="assets/js/font-size-control.js" defer></script>
+<!-- PayPal Bootstrap Accessibility Plugin v1.0.7 (vendored + pinned, §8):
+     patches the Bootstrap-3 components the publisher renders - navbar
+     dropdowns gain ARIA menu semantics + arrow-key navigation, tab panels
+     (structure-tabs) the full ARIA tabs pattern, alerts live-region
+     announcements. `defer` guarantees it executes AFTER the parser-inserted
+     bootstrap.min.js at the end of the body. Vendored from
+     paypal/bootstrap-accessibility-plugin @ v1.0.7 (the admin-ch fork was
+     evaluated and rejected: 151 commits behind upstream, its 6 deltas are
+     site-specific tab tweaks). REMOVAL: delete this tag, both vendored
+     assets and the fragment-css link - guard test pins the hashes. -->
+<script src="assets/js/bootstrap-accessibility.min.js" defer></script>
+<!-- Back-to-top button: appears after one viewport of scrolling (logic in
+     assets/js/back-to-top.js, styling in template-base.css "back-to-top"
+     block). Rendered here inside #segment-header, which is OUTSIDE the
+     data-fontsize zoom regions, so the fixed button never scales. REMOVAL:
+     this block, the js file and the CSS block - one commit, styleguide §8. -->
+
+<button type="button" class="ig-back-to-top" aria-label="Zurück zum Seitenanfang">↑</button>
+
+<script src="assets/js/back-to-top.js" defer></script>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Onkologie</span>
+            <br/>
+            <span style="display:inline-block;">2026.0.3 - 
+
+
+
+  <img alt="Germany Flagge" src="assets/images/deu.svg" height="16" title="Germany"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- German translation of input/includes/menu.xml.
+     Keep the href targets IDENTICAL to the source menu; translate only labels.
+     Structure notes (OPTIONAL entries, link-only entries, the interim
+     meta-wiki links) are documented in the source menu's header and in
+     docs/page-structure.md / docs/optional-pages.md. -->
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">Startseite</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="guidance.html" class="dropdown-toggle">Anleitung<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="guidance.html">Anleitung</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="researcher-guidance.html">Anleitung für Forschende (optional)</a></li>
+      <li><a href="implementer-guidance.html">Anleitung für Implementierende</a></li>
+      <!-- Nur-Link-Eintrag: die Seite "Logische Modelle" (Begründung im Quell-Menü) -->
+      <li><a href="datasets-and-descriptions.html">Datensätze inkl. Beschreibungen</a></li>
+      <li><a href="uml-diagrams.html">UML-Diagramme</a></li>
+      <li><a href="anwendungsfaelle-informationsmodell.html">Anwendungsfälle und Informationsmodell</a></li>
+      <li><a href="icd-o-terminologie.html">ICD-O: Revisionen und Validierung</a></li>
+      <li><a href="atc-terminologie.html">ATC: Jahresversionen und Überleitungen</a></li>
+      <li><a href="weitere-klassifikationen-terminologien.html">Weitere Klassifikationen: Terminologien</a></li>
+      <li><a href="tumormarker-loinc.html">Tumormarker: kuratierte LOINC-Codes</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <!-- Eltern-Eintrag und die ersten vier Einträge verlinken die KDS-weiten
+         Konformitätsregeln des Meta-Moduls (INTERIM: Meta-Wiki; siehe
+         Quell-Menü). -->
+    <a data-toggle="dropdown" href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance" class="dropdown-toggle">Konformität<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance">Konformität</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#anforderungsdokumentation">Allgemeine Anforderungen</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#must-support-ms">Must-Support</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#fehlende-daten">Umgang mit fehlenden Daten</a></li>
+      <li><a href="security-and-privacy.html">Sicherheit und Datenschutz</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="artifacts.html" class="dropdown-toggle">Artefakte<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="artifacts.html">Artefakt-Übersicht</a></li>
+      <li><a href="profiles.html">Profile</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="extensions.html">Extensions (optional)</a></li>
+      <li><a href="capability-statements.html">CapabilityStatements</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="search-parameters.html">Suchparameter (optional)</a></li>
+      <li><a href="logical-models.html">Logische Modelle</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="value-sets.html">ValueSets (optional)</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="code-systems.html">CodeSystems (optional)</a></li>
+      <li><a href="examples.html">Beispiele</a></li>
+    </ul>
+  </li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li><a href="changes.html">Änderungshistorie</a></li>
+  <li class="dropdown">
+    <!-- Der Eltern-Eintrag verlinkt bewusst das PFLICHT-Kind (Versionierung):
+         die Metadaten-Übersicht ist optional. -->
+    <a data-toggle="dropdown" href="version-history.html" class="dropdown-toggle">Metadaten<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="metadata.html">Metadaten-Übersicht (optional)</a></li>
+      <li><a href="version-history.html">Versionierung</a></li>
+    </ul>
+  </li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-de.png"/>Deutsch</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Sprache:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag de" src="assets/images/lang-de.png"/>Deutsch</div>
+
+    <div><a href="../en/ValueSet-mii-vs-onko-praedispositionssyndrome-orpha.json.html"><img class="flag" src="assets/images/lang-en.png" alt="flag en"/>English</a></div>
+
+  </div>
+</div>
+
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Inhaltsverzeichnis</b></a></li><li><a href='artifacts.html'><b>Artefaktübersicht</b></a></li><li><b>MII VS Onkologie Krebsprädispositionssyndrome ORPHA</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<!-- layouts\layout-instance-format -->
+<div style="counter-reset: section 8" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Onkologie - Local Development build (v2026.0.3) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="ValueSet-mii-vs-onko-praedispositionssyndrome-orpha.html">Narrativer Inhalt</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="ValueSet-mii-vs-onko-praedispositionssyndrome-orpha.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">JSON</a>
+    </li>
+  
+
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+
+<h2 id="root">: MII VS Onkologie Krebsprädispositionssyndrome ORPHA</h2>
+
+  <table class="colsi">
+    <tr>
+
+      <td colspan="2">
+        
+          Active
+          
+
+            Stand: 
+2026-08-28
+
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p><a href="ValueSet-mii-vs-onko-praedispositionssyndrome-orpha.json" no-download="true">Raw json</a> | <a href="ValueSet-mii-vs-onko-praedispositionssyndrome-orpha.json" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code style="white-space: pre; text-wrap: nowrap;">{
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet">resourceType</a>" : "ValueSet",
+  "<a href="http://hl7.org/fhir/R4/resource.html#ValueSet.id">id</a>" : "mii-vs-onko-praedispositionssyndrome-orpha",
+  "<a href="http://hl7.org/fhir/R4/resource.html#ValueSet.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablevalueset.html" style="color: Maroon">&#x1F517;</a> "http://hl7.org/fhir/StructureDefinition/shareablevalueset"<a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareablevalueset.html" style="color: Maroon">&#x1F517;</a> ,
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"<a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishablevalueset.html" style="color: Maroon">&#x1F517;</a> ,
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"<a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-computablevalueset.html" style="color: Maroon">&#x1F517;</a> ,
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-computablevalueset"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/resource.html#ValueSet.language">language</a>" : "de",
+  "<a href="http://hl7.org/fhir/R4/domainresource.html#ValueSet.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "extensions",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xml:lang=\&quot;de\&quot; lang=\&quot;de\&quot;&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;German&lt;/b&gt;&lt;/p&gt;&lt;hr/&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: ValueSet mii-vs-onko-praedispositionssyndrome-orpha&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;de-mii-vs-onko-praedispositionssyndrome-orpha\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;de-hcmii-vs-onko-praedispositionssyndrome-orpha\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profiles: &lt;a href=\&quot;http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablevalueset.html\&quot;&gt;Shareable ValueSet&lt;/a&gt;, &lt;a href=\&quot;http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareablevalueset.html\&quot;&gt;CRMI Shareable ValueSet&lt;/a&gt;, &lt;a href=\&quot;http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishablevalueset.html\&quot;&gt;CRMI Publishable ValueSet&lt;/a&gt;, &lt;a href=\&quot;http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-computablevalueset.html\&quot;&gt;CRMI Computable ValueSet&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;Include these codes as defined in &lt;a href=\&quot;https://tx.hl7.cz/r4\&quot;&gt;&lt;code&gt;http://www.orpha.net&lt;/code&gt;&lt;/a&gt;&lt;span style=\&quot;opacity: 0.5\&quot; title=\&quot;Version is not explicitly stated. When building this specification, the most recent version 2026 has been used\&quot;&gt; version ⏿2026&lt;/span&gt;&lt;table class=\&quot;none\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-100\&quot;&gt;100&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ataxia-telangiectasia&lt;/td&gt;&lt;td&gt;A rare autosomal recessive cerebellar ataxia due to a DNA repair defect characterized by progressive neurological impairment with cerebellar syndrome, oculocutaneous telangiectasia, defects in B and T cell-mediated immunity, and increased susceptibility to malignancies (mainly lymphoid neoplasms). High sensitivity to ionizing radiation limits patient treatments.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-116\&quot;&gt;116&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Beckwith-Wiedemann syndrome&lt;/td&gt;&lt;td&gt;A rare imprinting disorder characterized by pre- and postnatal overgrowth, macroglossia, abdominal wall defects and an elevated tumor risk. The clinical expression is variable, ranging from lateralised overgrowth to a pronounced clinical presentation.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-125\&quot;&gt;125&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Bloom syndrome&lt;/td&gt;&lt;td&gt;Bloom syndrome is a rare disorder associated with pre- and postnatal growth deficiency, a telangiectatic erythematous rash of the face and other sun-exposed areas, insulin resistance and predisposition to early onset and recurrent cancer of multiple organ systems.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-97297\&quot;&gt;97297&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Bohring-Opitz syndrome&lt;/td&gt;&lt;td&gt;A rare multiple congenital anomalies syndrome characterized by intrauterine growth retardation (IUGR), postnatal failure to thrive, severe feeding difficulties, microcephaly/trigonocephaly, facial dysmorphism, a recognizable upper limb posture and severe developmental delay. The upper limb posture consists of internal rotation of the shoulders, flexion of the elbows, ulnar deviation of wrists and/or metacarpophalangeal joints.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-363972\&quot;&gt;363972&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Noonan syndrome-like disorder with juvenile myelomonocytic leukemia&lt;/td&gt;&lt;td&gt;A rare, genetic, polymalformative syndrome characterized by a Noonan-like phenotype associated with increased risk of developing juvenile myelomonocytic leukemia (JMML). The Noonan-like (NS) phenotype includes dysmorphic facial features (i.e. high forehead, hypertelorism, downslanting palpebral fissures, ptosis, low-set ears, prominent philtrum and short neck with or without pterygium colli), developmental delay, hypotonia and small head circumference. It can be associated with congenital heart defects or cardiomyopathy, ectodermal anomalies, and short stature. The NS phenotype is subtle or even inapparent in a large proportion of subjects, but may occasionally be severe. Leukemia can be the only clinical manifestation of the syndrome.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-319465\&quot;&gt;319465&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Inherited acute myeloid leukemia&lt;/td&gt;&lt;td&gt;Inherited acute myeloid leukemia (AML) is a rare, malignant hematopologic disease characterized by clonal proliferation of myeloid blasts, primarily involving the bone marrow, in association with congenital disorders (e.g. Fanconi anemia, dyskeratosis congenita, Bloom syndrome, Down syndrome, congenital neutropenia, neurofibromatosis, etc.) and genetic defects predisposing to AML. Patients present with signs and symptoms related to ineffective hematopoesis (fatigue, bleeding and bruising, recurrent infections, bone pain) and/or extramedullary site involvement (gingivitis, splenomegaly, etc.). Depending on the underlying genetic defect, there may be additional cancer risks and other health problems present.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-626\&quot;&gt;626&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Large/giant congenital melanocytic nevus&lt;/td&gt;&lt;td&gt;A rare skin hamartoma characterized by at least one pigmented skin lesion present at birth of more than 20 cm (large congenital melanocytic nevus; LCMN) or 40 cm (giant; GCMN) projected adult diameter. The primary lesion is composed of mutated melanocytes and often locally disorganized epidermal annexes or dermis, and presents with an elevated risk of malignant transformation to melanoma or, more rarely, other neoplasms in skin or central nervous system.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-252202\&quot;&gt;252202&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Constitutional mismatch repair deficiency syndrome&lt;/td&gt;&lt;td&gt;Constitutional mismatch repair deficiency syndrome is a rare, inherited cancer-predisposing syndrome characterized by the development of a broad spectrum of malignancies during childhood, including mainly brain, hematological and gastrointestinal cancers, although embryonic and other tumors have also been occasionally reported. Non-neoplastic features, in particular manifestations reminiscent of neurofibromatosis type 1 (e.g., café-au-lait spots, freckling, neurofibromas), as well as premalignant and non-malignant lesions (such as adenomas/polpyps) are frequently present before malignancy development.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-3071\&quot;&gt;3071&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Costello syndrome&lt;/td&gt;&lt;td&gt;A rare syndrome with intellectual disability, characterized by failure to thrive, short stature, joint laxity, soft skin, and distinctive facial features. Cardiac and neurological involvement is common and there is an increased lifetime risk of certain tumors. Costello syndrome belongs to the RASopathies, a group of conditions resulting from germline derived point mutations affecting the RAS-mitogen activated protein kinase pathway.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-1553\&quot;&gt;1553&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Curry-Jones syndrome&lt;/td&gt;&lt;td&gt;Curry-Jones syndrome is a form of syndromic craniosynostosis characterized by unilateral coronal craniosynostosis or multiple suture synostosis associated with complete or partial agenesis of the corpus callosum, preaxial polysyndactyly and syndactyly of hands and/or feet, along with anomalies of the skin (characteristic pearly white areas that become scarred and atrophic, abnormal hair growth around the eyes and/or cheeks, and on the limbs), eyes (iris colobomas, microphthalmia,) and intestine (congenital short gut, malrotation, dysmotility, chronic constipation, bleeding and myofibromas). Developmental delay and variable degrees of intellectual disability may also be observed. Multiple intra-abdominal smooth muscle hamartomas, trichoblastoma of the skin, occipital meningoceles and development of desmoplastic medulloblastoma have been reported.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-124\&quot;&gt;124&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Diamond-Blackfan anemia&lt;/td&gt;&lt;td&gt;Blackfan-Diamond anemia (DBA) is a congenital aregenerative and often macrocytic anemia with erythroblastopenia.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-284343\&quot;&gt;284343&lt;/a&gt;&lt;/td&gt;&lt;td&gt;DICER1 tumor-predisposition syndrome&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-870\&quot;&gt;870&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Down syndrome&lt;/td&gt;&lt;td&gt;A total autosomal trisomy that is caused by the presence of a third (partial or total) copy of chromosome 21 and that is characterized by variable intellectual disability, muscular hypotonia, and joint laxity, often associated with a characteristic facial dysmorphism and various anomalies such as cardiac, gastrointestinal, neurosensorial or endocrine defects.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-733\&quot;&gt;733&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Familial adenomatous polyposis&lt;/td&gt;&lt;td&gt;A rare intestinal polyposis syndrome characterized by the development of up to hundreds to thousands of adenomas in the large bowel. It is a multi-system disorder with important extracolonic manifestations.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-84\&quot;&gt;84&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Fanconi anemia&lt;/td&gt;&lt;td&gt;A rare genetic multisystem disorder characterized by progressive pancytopenia with bone marrow failure, variable congenital malformations and predisposition to develop hematological or solid tumors.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-404476\&quot;&gt;404476&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Global developmental delay-lung cysts-overgrowth-Wilms tumor syndrome&lt;/td&gt;&lt;td&gt;Global developmental delay-lung cysts-overgrowth-Wilms tumor syndrome is a rare, genetic, overgrowth syndrome characterized by global developmental delay, macrosomia with subsequent somatic overgrowth, bilateral cystic lung lesions, congenital nephromegaly and bilateral Wilms tumor. Craniofacial dysmorphism includes macrocephaly, frontal bossing, large anterior fontanelle, mild hypertelorism, ear pit, flat nasal bridge, anteverted nares and mild micrognathia. Additional features may include brain and skeletal anomalies, enlarged protuberant abdomen, fat pads on dorsum of feet and toes, and rugated soles with skin folds, as well as umbilical/inguinal hernia and autistic behavior.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-377\&quot;&gt;377&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Gorlin syndrome&lt;/td&gt;&lt;td&gt;A rare hereditary disorder due to autosomal dominant transmission with hamartosis characterized by multiple early-onset basal cell carcinoma (BCC), multiple jaw keratocysts and skeletal abnormalities.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-29072\&quot;&gt;29072&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Hereditary pheochromocytoma-paraganglioma&lt;/td&gt;&lt;td&gt;A rare, hereditary, pheochromocytoma/paraganglioma tumor arising from neuroendocrine chromaffin cells of the adrenal medulla (pheochromocytoma) or from any paraganglia from the skull base to the pelvic floor (paraganglioma). Clinical manifestations are often linked to excess catecholamines production causing sustained or paroxysmal elevations in blood pressure, headache, episodic profuse sweating, palpitations, pallor and apprehension or anxiety. Hereditary pheochromocytoma/paraganglioma tumors tend to present at younger ages, to be multi-focal, bilateral, and recurrent, or to have multiple synchronous neoplasms.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-357027\&quot;&gt;357027&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Hereditary retinoblastoma&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-2929\&quot;&gt;2929&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Juvenile polyposis syndrome&lt;/td&gt;&lt;td&gt;A rare inherited cancer-predisposing syndrome characterized by the presence of juvenile hamartomatous polyps in the gastrointestinal (GI) tract.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-524\&quot;&gt;524&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Li-Fraumeni syndrome&lt;/td&gt;&lt;td&gt;A rare, inherited, cancer predisposition syndrome characterized by the early-onset of multiple primary cancers including breast cancer, soft tissue and bone sarcomas, brain tumors, adrenal cortical carcinoma (ACC), leukemias, and other cancers.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-144\&quot;&gt;144&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Lynch syndrome&lt;/td&gt;&lt;td&gt;A rare form of hereditary nonpolyposis colon cancer (HNPCC) characterized by predisposition to a wide variety of cancers, including neoplasms of the digestive tract, urinary tract, endometrium, ovary, brain, and prostate, as well as sebaceous skin tumors. LS-associated tumors are typically characterized by the presence of microsatellite instability (MSI) and loss of expression of MMR proteins in tumor tissue.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-634461\&quot;&gt;634461&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Mosaic neurofibromatosis type 1&lt;/td&gt;&lt;td&gt;A rare mosaic form of neurofibromatosis type 1 (NF1) characterized by findings typical of NF1, namely multiple café-au-lait macules (CALMs), cutaneous neurofibromas, skinfold freckling/lentiginous macules, iris Lisch nodules and tumors of the nervous system. Mosaic form is caused by postzygotic pathogenic variants in NF1-gene. In mosaic NF1 the allelic/tissue distribution of the pathogenic NF1-variant clearly suggests mosaicsm and/or the distribution of CALMs and cutaneous neurofibromas is segmental. The phenotype can be milder than in NF1.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-1052\&quot;&gt;1052&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Mosaic variegated aneuploidy syndrome&lt;/td&gt;&lt;td&gt;Mosaic variegated aneuploidy (MVA) syndrome is a chromosomal anomaly characterized by multiple mosaic aneuploidies that leads to a variety of phenotypic abnormalities and cancer predisposition.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-2576\&quot;&gt;2576&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Mulibrey nanism&lt;/td&gt;&lt;td&gt;A rare developmental defect during embryogenesis characterized by growth delay and multiorgan manifestations.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-652\&quot;&gt;652&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Multiple endocrine neoplasia type 1&lt;/td&gt;&lt;td&gt;A rare inherited cancer syndrome, characterized by the development of multiple neuroendocrine tumors of the parathyroids, gastro-entero-pancreatic tract, and anterior pituitary gland, and less commonly the adrenal cortical gland, thymus and bronchi, with other non-endocrine tumors in some patients.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-247698\&quot;&gt;247698&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Multiple endocrine neoplasia type 2A&lt;/td&gt;&lt;td&gt;A form of multiple endocrine neoplasia type 2 (MEN2) syndrome characterized by medullary thyroid carcinoma in association with pheochromocytoma (one or both adrenal glands can be affected) and/or primary hyperparathyroidism (caused by parathyroid adenoma). Onset is typically later than in MEN2B, before 35 years of age. Diarrhea is the most frequent systemic symptom. Patients can develop Hirschsprung disease and, less frequently, cutaneous lichen amyloidosis or excessive production of adrenocorticotropic hormone.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-247709\&quot;&gt;247709&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Multiple endocrine neoplasia type 2B&lt;/td&gt;&lt;td&gt;A rare form of multiple endocrine neoplasia type 2 (MEN2) syndrome characterized by aggressive medullary thyroid carcinoma in association with other endocrine tumors, notably pheochromocytoma (one or both adrenal glands can be affected). Onset is typically in infancy or childhood and patients often have a typical facies (mucosal neuromas of the lips and tongue, and bumpy lips), ophthalmologic abnormalities (alacrima in infancy, thickened and everted eyelids, mild ptosis, and prominent corneal nerves), skeletal anomalies (marfanoid body habitus, narrow long facies, pes cavus, pectus excavatum, high-arched palate, scoliosis, hyperextensible joints and slipped capital femoral epiphyses), and a generalized ganglioneuromatosis throughout the aerodigestive tract. Chronic constipation, abdominal distension, diarrhea, or megacolon at birth are often the initial manifestations.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-636\&quot;&gt;636&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Neurofibromatosis type 1&lt;/td&gt;&lt;td&gt;Neurofibromatosis type 1 (NF1) is a clinically heterogeneous, neurocutaneous genetic disorder characterized by café-au-lait spots, iris Lisch nodules, axillary and inguinal freckling, and multiple neurofibromas.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-647\&quot;&gt;647&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Nijmegen breakage syndrome&lt;/td&gt;&lt;td&gt;A rare, genetic chromosomal instability syndrome presenting at birth with microcephaly, dysmorphic facial features which become more noticeable with age, growth delay, recurring sinopulmonary infections and extremely high frequency of malignancies.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-648\&quot;&gt;648&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Noonan syndrome&lt;/td&gt;&lt;td&gt;A rare, highly variable, multisystemic disorder mainly characterized by short stature, distinctive facial features, congenital heart defects, cardiomyopathy and an increased risk to develop tumors in childhood.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-296\&quot;&gt;296&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ollier disease&lt;/td&gt;&lt;td&gt;A rare primary bone dysplasia characterized by multiple enchondromas (benign cartilage-forming tumors). The lesions are generally unilateral or asymmetrically distributed. The most common affected site is the appendicular skeleton.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-163634\&quot;&gt;163634&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Maffucci syndrome&lt;/td&gt;&lt;td&gt;A rare disorder characterized by multiple enchondromatosis associated with multiple (dark, irregularly shaped) hemangiomas. Less commonly, lymphangiomas are also reported.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-2780\&quot;&gt;2780&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Osteopathia striata-cranial sclerosis syndrome&lt;/td&gt;&lt;td&gt;Osteopathia striata with cranial sclerosis (OS-CS) is a bone dysplasia characterized by longitudinal striations of the metaphyses of the long bones, sclerosis of the craniofacial bones, macrocephaly, cleft palate and hearing loss.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-324299\&quot;&gt;324299&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Multiple paragangliomas associated with polycythemia&lt;/td&gt;&lt;td&gt;A rare, endocrine disease characterized by early onset of polycythemia, and later occuring multiple paragangliomas. Clinical presentation includes hypertension, headaches, fatigue, nausea, anxiety, and high concentration of red blood cells, leading to increased risk of stroke and pulmonary thromboembolism.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-2849\&quot;&gt;2849&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Perlman syndrome&lt;/td&gt;&lt;td&gt;A rare overgrowth syndrome characterized by polyhydramnios, pre- and postnatal macrosomia, muscular hypotonia, renal anomalies, organomegaly, abdominal distension, cryptorchidism, typical facial dysmorphism, neurodevelopmental delay and high neonatal mortality. Individuals surviving infancy show a high risk of developing Wilms tumor.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-2869\&quot;&gt;2869&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Peutz-Jeghers syndrome&lt;/td&gt;&lt;td&gt;A genetic intestinal polyposis syndrome characterized by development of characteristic hamartomatous polyps throughout the gastrointestinal (GI) tract, and by mucocutaneous pigmentation. This disorder carries a considerably increased risk of GI and extra-GI malignancies.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-661\&quot;&gt;661&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Congenital central hypoventilation syndrome&lt;/td&gt;&lt;td&gt;Congenital central hypoventilation syndrome (CCHS) is a rare disease due to a severely impaired central autonomic control of breathing and dysfunction of the autonomous nervous system.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-530313\&quot;&gt;530313&lt;/a&gt;&lt;/td&gt;&lt;td&gt;PIK3CA-related overgrowth syndrome&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-306498\&quot;&gt;306498&lt;/a&gt;&lt;/td&gt;&lt;td&gt;PTEN hamartoma tumor syndrome&lt;/td&gt;&lt;td&gt;A group rare skin tumor or hamartoma diseases characterized by a germline PTEN mutation and clinical manifestations of hamartomas, overgrowth, and increased risk of neoplasia, notably breast carcinomas, epithelial thyroid carcinomas, endometrial carcinomas, renal cell carcinomas, and colorectal carcinoma. Non-malignant manifestations include macrocephaly, benign thyroid pathology (especially Hashimoto thyroiditis), mucocutaneous hamartomas, colonic polyps, and vascular malformations. Diseases in this group include Cowden syndrome, Bannayan-Riley-Ruvalcaba syndrome, Proteus-like syndrome, Lhermitte-Duclos disease, and Segmental outgrowth-lipomatosis-arteriovenous malformation-epidermal nevus syndrome.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-231108\&quot;&gt;231108&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Rhabdoid tumor predisposition syndrome&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-2909\&quot;&gt;2909&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Rothmund-Thomson syndrome&lt;/td&gt;&lt;td&gt;A rare syndrome characterized by facial rash (poikiloderma) associated with short stature due to pre- and postnatal growth delay, sparse scalp hair, sparse or absent eyelashes and/or eyebrows, juvenile cataracts, skeletal abnormalities, radial ray defects, premature aging and cancer susceptibility.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-71290\&quot;&gt;71290&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Familial platelet disorder with associated myeloid malignancy&lt;/td&gt;&lt;td&gt;A rare, genetic, constitutional thrombocytopenia disease characterized by mild to moderate thrombocytopenia, abnormal platelet function and a propensity to develop hematological malignancies, mainly of myeloid origin.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-494433\&quot;&gt;494433&lt;/a&gt;&lt;/td&gt;&lt;td&gt;MIRAGE syndrome&lt;/td&gt;&lt;td&gt;A rare genetic disease characterized by pre- and postnatal growth restriction, developmental delay, adrenal hypoplasia, genital abnormalities (such as microphallus, hypospadias, or cryptorchidism), thrombocytopenia and/or anemia, recurrent severe invasive infections, and enteropathy with chronic diarrhea. Myelodysplastic syndrome and dysmorphic features (including downslanting palpebral fissures, low-set and posteriorly rotated ears, anteverted nares, camptodactyly, and arachnodactyly, among others) may also be observed.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-2585\&quot;&gt;2585&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ataxia-pancytopenia syndrome&lt;/td&gt;&lt;td&gt;A rare genetic disease characterized by cerebellar ataxia, cytopenias and predisposition to bone marrow failure and myeloid leukaemia. Neurologic features variably include slowly progressive cerebellar ataxia or balance impairment with cerebellar atrophy and periventricular white matter T2 hyperintensities in brain MRI, horizontal and vertical nystagmus, dysmetria, dysarthria, pyramidal tract signs and reduced nerve conduction velocity. Hematological abnormalities are variable and may be intermittent and include cytopenias of all cell lineages, immunodeficiency, myelodysplasia and acute myeloid leukemia.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-42738\&quot;&gt;42738&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Severe congenital neutropenia&lt;/td&gt;&lt;td&gt;A rare primary immunodeficiency, without an associated lymphocyte deficit, characterized by impaired neutrophil maturation and/or function, associated with severe infections, diverse comorbidities, and/or an increased risk of leukemic transformation.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-373\&quot;&gt;373&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Simpson-Golabi-Behmel syndrome&lt;/td&gt;&lt;td&gt;A rare X-linked multiple congenital anomalies syndrome characterized by pre- and postnatal overgrowth, distinctive craniofacial features, variable congenital malformations, organomegaly and an increased tumor risk.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-821\&quot;&gt;821&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Sotos syndrome&lt;/td&gt;&lt;td&gt;A rare genetic overgrowth syndrome characterized by a typical facial appearance, overgrowth with macrocephaly and variable intellectual impairment.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-1775\&quot;&gt;1775&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Dyskeratosis congenita&lt;/td&gt;&lt;td&gt;A rare ectodermal dysplasia syndrome that often presents with the classic triad of nail dysplasia, skin pigmentary changes, and oral leukoplakia associated with a high risk of bone marrow failure (BMF) and cancer.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-3380\&quot;&gt;3380&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Trisomy 18 syndrome&lt;/td&gt;&lt;td&gt;A rare chromosomal abnormality characterized by the presence of an extra chromosome&amp;amp;nbsp;18 material and manifesting with severe intellectual disability growth delay, and extremely variable multiple congenital anomalies, including minor malformations (cranio-facial dysmorphia, short sternum, overlapping fingers) and major malformations, especially cardiac and cerebral. Neurological involvement may lead to seizures and hypotonia.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-805\&quot;&gt;805&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Tuberous sclerosis complex&lt;/td&gt;&lt;td&gt;A rare neurocutaneous disorder characterized by multisystem hamartomas, most commonly involving the skin, brain, kidneys, lungs, eye, and heart, and associated with neuropsychiatric disorders.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-892\&quot;&gt;892&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Von Hippel-Lindau disease&lt;/td&gt;&lt;td&gt;A familial cancer predisposition syndrome associated with a variety of malignant and benign neoplasms, most frequently retinal, cerebellar, and spinal hemangioblastoma, renal cell carcinoma (RCC), and pheochromocytoma/paraganglioma.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-893\&quot;&gt;893&lt;/a&gt;&lt;/td&gt;&lt;td&gt;WAGR syndrome&lt;/td&gt;&lt;td&gt;A rare genetic disorder characterized by the association of complete or partial congenital aniridia (and associated eyes abnormalities), genitourinary anomalies (ranging from sexual ambiguity to ectopic testis), variable degrees of intellectual disability and an increased risk of developing Wilms tumors. A minority of patients develop kidney failure. Other variable findings may include obesity and duplicated halluces.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-3447\&quot;&gt;3447&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Weaver syndrome&lt;/td&gt;&lt;td&gt;A rare PRC-2 complex-related overgrowth spectrum disorder characterized by pre- and post-natal overgrowth, facial dysmorphism (including hypertelorism, large fleshy ears and retrognathia with the appearance of a 'stuck-on' chin with associated horizontal skin crease) that is easily recognizable in early childhood. Majority of the patients present with mild intellectual disability. Additional variable features include macrocephaly, joint laxity, scoliosis, pectus excavatum, hypo- and/or hypertonia, poor coordination, soft dough skin, clinodactyly, camptodactyly of the fingers and/or toes, umbilical hernia, and a low hoarse cry in infancy. Many clinical features, including facial dysmorphism, attenuate with age. Patients may also have a higher risk of neuroblastoma.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://tx.hl7.cz/r4/ValueSet/ORPHAdisease#ORPHAdisease-910\&quot;&gt;910&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Xeroderma pigmentosum&lt;/td&gt;&lt;td&gt;Xeroderma pigmentosum (XP) is a rare genodermatosis characterized by extreme sensitivity to ultraviolet (UV)-induced changes in the skin and eyes, and multiple skin cancers. It is subdivided into 8 complementation groups, according to the affected gene: classical XP (XPA to XPG) and XP variant (XPV).&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;"
+  },
+  "<a href="http://hl7.org/fhir/R4/domainresource.html#ValueSet.extension">extension</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "shareable"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "publishable"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "computable"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCodeableConcept</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "package",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Package"
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueDate</a>" : "2026-01-03"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCodeableConcept</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "C3262"
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/artifact-author",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueContactDetail</a>" : {
+        "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "email",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "thomas.debertshaeuser@charite.de"
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/artifact-editor",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueContactDetail</a>" : {
+        "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "Taskforce Core Data Set"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueContactDetail</a>" : {
+        "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "Interoperability Working Group",
+        "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "url",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueContactDetail</a>" : {
+        "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "National Steering Committee",
+        "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "url",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueContactDetail</a>" : {
+        "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "Interoperability Working Group",
+        "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "url",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueContactDetail</a>" : {
+        "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "National Steering Committee",
+        "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "url",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+          }
+        ]
+      }
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.url">url</a>" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-praedispositionssyndrome-orpha",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.version">version</a>" : "2026.0.3",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.name">name</a>" : "MII_VS_Onko_Praedispositionssyndrome_ORPHA",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.title">title</a>" : "MII VS Onkologie Krebsprädispositionssyndrome ORPHA",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.experimental">experimental</a>" : false,
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a>" : "2026-08-28T13:10:09+00:00",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.publisher">publisher</a>" : "Medizininformatik Initiative",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.contact">contact</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "Medizininformatik Initiative",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "url",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "https://www.medizininformatik-initiative.de/"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.description">description</a>" : "Krebsprädispositionssyndrome der §65c-Liste (Manual Plus, Krebsprädispositionssyndrom und -gen) als Orphanet-Codes. Begleitartefakt ohne Profil-Binding (Andockung an die genetischen Profile folgt mit dem Konzept für genetische Marker); 15 genspezifische Prädispositionen der Quell-Liste haben kein Orphanet-Konzept und sind über das Gen-ValueSet mii-vs-onko-praedispositionsgene-hgnc adressierbar. Projektseitige Code-Auflösung ohne Gewähr; fachliche Prüfung vor Produktivnutzung erforderlich.",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.jurisdiction">jurisdiction</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "urn:iso:std:iso:3166",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "DE",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Germany"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose">compose</a>" : {
+    "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include">include</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.system">system</a>" : "http://www.orpha.net",
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept">concept</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "100",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Ataxia-telangiectasia"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "116",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Beckwith-Wiedemann syndrome"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "125",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Bloom syndrome"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "97297",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Bohring-Opitz syndrome"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "363972",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Noonan syndrome-like disorder with juvenile myelomonocytic leukemia"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "319465",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Inherited acute myeloid leukemia"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "626",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Large/giant congenital melanocytic nevus"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "252202",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Constitutional mismatch repair deficiency syndrome"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "3071",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Costello syndrome"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "1553",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Curry-Jones syndrome"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "124",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Diamond-Blackfan anemia"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "284343",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "DICER1 tumor-predisposition syndrome"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "870",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Down syndrome"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "733",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Familial adenomatous polyposis"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "84",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Fanconi anemia"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "404476",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Global developmental delay-lung cysts-overgrowth-Wilms tumor syndrome"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "377",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Gorlin syndrome"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "29072",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hereditary pheochromocytoma-paraganglioma"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "357027",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hereditary retinoblastoma"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "2929",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Juvenile polyposis syndrome"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "524",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Li-Fraumeni syndrome"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "144",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Lynch syndrome"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "634461",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Mosaic neurofibromatosis type 1"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "1052",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Mosaic variegated aneuploidy syndrome"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "2576",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Mulibrey nanism"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "652",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Multiple endocrine neoplasia type 1"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "247698",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Multiple endocrine neoplasia type 2A"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "247709",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Multiple endocrine neoplasia type 2B"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "636",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Neurofibromatosis type 1"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "647",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Nijmegen breakage syndrome"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "648",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Noonan syndrome"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "296",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Ollier disease"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "163634",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Maffucci syndrome"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "2780",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Osteopathia striata-cranial sclerosis syndrome"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "324299",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Multiple paragangliomas associated with polycythemia"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "2849",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Perlman syndrome"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "2869",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Peutz-Jeghers syndrome"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "661",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Congenital central hypoventilation syndrome"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "530313",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "PIK3CA-related overgrowth syndrome"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "306498",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "PTEN hamartoma tumor syndrome"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "231108",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Rhabdoid tumor predisposition syndrome"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "2909",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Rothmund-Thomson syndrome"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "71290",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Familial platelet disorder with associated myeloid malignancy"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "494433",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "MIRAGE syndrome"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "2585",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Ataxia-pancytopenia syndrome"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "42738",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Severe congenital neutropenia"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "373",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Simpson-Golabi-Behmel syndrome"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "821",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Sotos syndrome"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "1775",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Dyskeratosis congenita"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "3380",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Trisomy 18 syndrome"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "805",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Tuberous sclerosis complex"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "892",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Von Hippel-Lindau disease"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "893",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "WAGR syndrome"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "3447",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Weaver syndrome"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "910",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Xeroderma pigmentosum"
+          }
+        ]
+      }
+    ]
+  }
+}</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
+          Package de.medizininformatikinitiative.kerndatensatz.onkologie#2026.0.3 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt <span title="Fri, Aug 28, 2026 13:10+0000">2026-08-28</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <!-- Branding override for the fhir2.base.template footer fragment.
+     Unlike header/css, the base footer fragment is NOT an empty placeholder: it
+     renders "Links: Table of Contents | QA Report [| feedback dashboards]".
+     The base uses site.data.stringsBase[include.lang][...] for the labels. The
+     reason this override supplies its own is the Imprint label: the base ships no
+     stringsBase key for it and a child template cannot add one (docs/styleguide.md
+     section 6), and the same include.lang branch then has to carry the other
+     labels too. (The blank-label problem that first motivated this is separately
+     mitigated: this repo vendors the base's own German catalogs into
+     translations/ — see translations/README.md.) The override preserves the base
+     links (TOC, QA, feedback dashboards) and appends the project information links.
+     NUM-DIZ takes over IG development and maintenance when MII funding ends
+     (end-2026), so the NUM-DIZ website link renders BEFORE the MII website link —
+     in BOTH brand designs and both languages; the MII links stay because the
+     modules remain MII content. Both anchors are the SITE ROOTS with the bare
+     domain as anchor text (TF-KDS feedback 2026-08-14: aligned anchor style;
+     domains are language-neutral, styleguide §6).
+     Imprint: points at the NUM-DIZ website's legal pages since 2026-08-14
+     (TF-KDS: NUM-DIZ takes over from MII in 2027, so legal-aspect links use
+     the NUM-DIZ counterpart where one exists) - German /impressum and English
+     /en/legal-notice (both verified HTTP 200 on 2026-08-14). -->
+
+          Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-Bericht</a>
+                 
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.netzwerk-universitaetsmedizin.de/">netzwerk-universitaetsmedizin.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.medizininformatik-initiative.de/">medizininformatik-initiative.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.netzwerk-universitaetsmedizin.de/impressum">Impressum</a>
+                 <br/>
+                 <!-- HL7 trademark attribution (required wherever the FHIR flame
+                      renders - the header shows it on every page; see HL7's
+                      trademark guidelines; permission request tracked in issue #109). The sentence is
+                      HL7's prescribed formula and stays in English on every
+                      language's pages (legal wording, styleguide §6). -->
+                 <span>HL7®, FHIR® and the FHIR flame design are registered trademarks of Health Level Seven International. Their use does not constitute endorsement by HL7.</span>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

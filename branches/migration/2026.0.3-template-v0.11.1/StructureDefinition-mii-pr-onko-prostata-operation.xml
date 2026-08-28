@@ -109,7 +109,7 @@
   <name value="MII_PR_Onko_Prostata_Operation"/>
   <title value="MII PR Onko Prostata Operation"/>
   <status value="active"/>
-  <date value="2026-08-28T12:47:27+00:00"/>
+  <date value="2026-08-28T13:10:09+00:00"/>
   <publisher value="Medizininformatik Initiative"/>
   <contact>
     <name value="Medizininformatik Initiative"/>
@@ -3743,11 +3743,17 @@
     <element id="Procedure.code.coding:ops.extension:Seitenlokalisation">
       <path value="Procedure.code.coding.extension"/>
       <sliceName value="Seitenlokalisation"/>
-      <short value="Optional Extensions Element"/>
-      <definition value="Optional Extension Element - found in all resources."/>
-      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
-      <alias value="extensions"/>
-      <alias value="user content"/>
+      <short value="Seitenlokalisation (OPS-Seitenzusatz R/L/B)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="de-DE"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Seitenlokalisation - OPS-Seitenzusatz R/L/B"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Seitenangabe bei paarigen Organen und OPS-Codes mit Seitenzusatzpflicht über die Basisprofil-Extension seitenlokalisation (R/L/B). Das oBDS sieht am OP kein eigenes Seitenfeld vor; führend ist der OPS-Seitenzusatz."/>
       <min value="0"/>
       <max value="1"/>
       <base>

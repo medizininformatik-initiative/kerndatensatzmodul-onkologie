@@ -152,7 +152,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-fernm
   "name" : "MII_PR_Onko_Fernmetastasen",
   "title" : "MII PR Onkologie Fernmetastasen",
   "status" : "active",
-  "date" : "2026-08-28T12:47:27+00:00",
+  "date" : "2026-08-28T13:10:09+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

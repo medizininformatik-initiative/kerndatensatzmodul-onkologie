@@ -339,6 +339,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#purpose" id="markdown-toc-purpose">Purpose</a></li>
   <li><a href="#overview-marker-type--molgen-representation" id="markdown-toc-overview-marker-type--molgen-representation">Overview: Marker Type → MolGen Representation</a></li>
+  <li><a href="#transmission-notation-of-the-65c-marker-list" id="markdown-toc-transmission-notation-of-the-65c-marker-list">Transmission notation of the §65c marker list</a></li>
   <li><a href="#notes-on-special-cases" id="markdown-toc-notes-on-special-cases">Notes on Special Cases</a></li>
   <li><a href="#qualifiers-of-the-genetics-report-section-65c--obds-menge_genetik_typ" id="markdown-toc-qualifiers-of-the-genetics-report-section-65c--obds-menge_genetik_typ">Qualifiers of the Genetics Report (section 65c / oBDS <code class="language-plaintext highlighter-rouge">Menge_Genetik_Typ</code>)</a></li>
   <li><a href="#fallback-direct-obds-mapping" id="markdown-toc-fallback-direct-obds-mapping">Fallback (direct oBDS mapping)</a></li>
@@ -446,6 +447,79 @@ recommendation is deliberately <strong>not normative</strong>, but an implementa
     </tr>
   </tbody>
 </table>
+
+<h3 id="transmission-notation-of-the-65c-marker-list">Transmission notation of the §65c marker list</h3>
+
+<p>The §65c platform marker list (<a href="https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/122945632/Genetische+Marker">Genetische Marker</a>,
+as of 2023-11-27, ~300 gene×variant combinations) prescribes a fixed
+<strong>two-position notation</strong> for transmission, combined in <code class="language-plaintext highlighter-rouge">Bezeichnung</code> with <code class="language-plaintext highlighter-rouge">||</code>:</p>
+
+<ul>
+  <li><strong>Position 1 — gene:</strong> HGNC symbol from the list's gene sheet. The sheet also
+carries pseudo-entries that are not genes (IHC markers such as
+<code class="language-plaintext highlighter-rouge">ALK_IHC</code>/<code class="language-plaintext highlighter-rouge">HER2_IHC</code>, and cytogenetic entries such as <code class="language-plaintext highlighter-rouge">del(17)(p13)</code>) — for the
+FHIR representation the special cases of the table above apply (IHC → MTB
+profile, cytogenetics → <code class="language-plaintext highlighter-rouge">cytogenetic-location</code>).</li>
+  <li><strong>Position 2 — additional information</strong>, depending on the kind of entry:</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Kind (list)</th>
+      <th>Position-2 notation</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;Formel&gt;</code></td>
+      <td>formula <strong>"e.g. according to HGVSp or HGVSc"</strong> (official wording)</td>
+      <td><code class="language-plaintext highlighter-rouge">p.Val600Glu</code>, <code class="language-plaintext highlighter-rouge">c.1799T&gt;A</code></td>
+    </tr>
+    <tr>
+      <td>specific mutation</td>
+      <td>codon level: gene symbol-codon</td>
+      <td><code class="language-plaintext highlighter-rouge">BRAF-V600</code></td>
+    </tr>
+    <tr>
+      <td>exon</td>
+      <td><code class="language-plaintext highlighter-rouge">Exon &lt;no&gt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Exon 19</code></td>
+    </tr>
+    <tr>
+      <td>fusion</td>
+      <td><code class="language-plaintext highlighter-rouge">GENE1::GENE2</code>, optionally with a trailing additional mutation</td>
+      <td><code class="language-plaintext highlighter-rouge">EML4::ALK</code>, <code class="language-plaintext highlighter-rouge">BCR::ABL1 T315I</code></td>
+    </tr>
+    <tr>
+      <td>amplification / translocation / rearrangement / promoter hypermethylation</td>
+      <td>literal keyword</td>
+      <td><code class="language-plaintext highlighter-rouge">Amplifikation</code></td>
+    </tr>
+    <tr>
+      <td>IHC</td>
+      <td>empty (score via <code class="language-plaintext highlighter-rouge">Sonstige_Auspraegung</code>)</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;Freitext&gt;</code></td>
+      <td>free text for unlisted alterations</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>unknown</td>
+      <td>empty</td>
+      <td>—</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>For the structured FHIR view this notation is the <strong>parser contract</strong>: position 1
+becomes <code class="language-plaintext highlighter-rouge">gene-studied</code> (HGNC); position 2 maps, depending on its kind, to the
+matching component of the marker-type table above (HGVS formulas to <code class="language-plaintext highlighter-rouge">*-hgvs</code>,
+<code class="language-plaintext highlighter-rouge">GENE1::GENE2</code> to <code class="language-plaintext highlighter-rouge">gene-fusion</code> — a trailing additional mutation such as <code class="language-plaintext highlighter-rouge">T315I</code>
+is carried as a <strong>separate</strong> HGVS component of the same variant).</p>
 
 <h3 id="notes-on-special-cases">Notes on Special Cases</h3>
 
@@ -638,7 +712,7 @@ resulting profiles and ValueSets are tracked in the release notes of the module.
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.onkologie#2026.0.3 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Fri, Aug 28, 2026 12:47+0000">2026-08-28</span>
+          Generated <span title="Fri, Aug 28, 2026 13:10+0000">2026-08-28</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

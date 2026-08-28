@@ -114,7 +114,7 @@
   "name" : "MII_PR_Onko_KRK_Operation",
   "title" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
   "status" : "active",
-  "date" : "2026-08-28T12:47:27+00:00",
+  "date" : "2026-08-28T13:10:09+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -3953,11 +3953,21 @@
       "id" : "Procedure.code.coding:ops.extension:Seitenlokalisation",
       "path" : "Procedure.code.coding.extension",
       "sliceName" : "Seitenlokalisation",
-      "short" : "Optional Extensions Element",
-      "definition" : "Optional Extension Element - found in all resources.",
-      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-      "alias" : ["extensions",
-      "user content"],
+      "short" : "Seitenlokalisation (OPS-Seitenzusatz R/L/B)",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Seitenlokalisation - OPS-Seitenzusatz R/L/B"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Seitenangabe bei paarigen Organen und OPS-Codes mit Seitenzusatzpflicht über die Basisprofil-Extension seitenlokalisation (R/L/B). Das oBDS sieht am OP kein eigenes Seitenfeld vor; führend ist der OPS-Seitenzusatz.",
       "min" : 0,
       "max" : "1",
       "base" : {

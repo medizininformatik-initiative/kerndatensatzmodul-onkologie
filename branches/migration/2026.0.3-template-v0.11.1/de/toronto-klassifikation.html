@@ -314,6 +314,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#relevanz-für-das-modul-onkologie" id="markdown-toc-relevanz-für-das-modul-onkologie">Relevanz für das Modul Onkologie</a></li>
   <li><a href="#status-im-modul-v2027" id="markdown-toc-status-im-modul-v2027">Status im Modul (v2027)</a></li>
   <li><a href="#grenzen-der-aktuellen-abbildung" id="markdown-toc-grenzen-der-aktuellen-abbildung">Grenzen der aktuellen Abbildung</a></li>
+  <li><a href="#übermittlung-an-die-krebsregister-65c-melderportal" id="markdown-toc-übermittlung-an-die-krebsregister-65c-melderportal">Übermittlung an die Krebsregister (§65c-Melderportal)</a></li>
   <li><a href="#ausblick" id="markdown-toc-ausblick">Ausblick</a></li>
   <li><a href="#quellen" id="markdown-toc-quellen">Quellen</a></li>
 </ul>
@@ -537,6 +538,53 @@ referenzierten Diagnose koppeln — Plausibilität ist derzeit nicht
 maschinell prüfbar.</li>
 </ul>
 
+<h3 id="übermittlung-an-die-krebsregister-65c-melderportal">Übermittlung an die Krebsregister (§65c-Melderportal)</h3>
+
+<p>Der Umsetzungsleitfaden der Plattform §65c führt die Toronto-Stadien als
+übermittelbare „Weitere Klassifikation" — als <strong>TNM-Alternative für die meisten
+Diagnosen bei Kindern und Jugendlichen</strong> (gültig für <code class="language-plaintext highlighter-rouge">C00.0–D48.9</code>). Die
+Tier-Stufe wird dabei direkt im Klassifikationsnamen transportiert
+(<code class="language-plaintext highlighter-rouge">tblMeldungDiagnoseWeitereKlass.strKlassifikation</code>):</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Klassifikationsname (Melderportal)</th>
+      <th>Entspricht</th>
+      <th>Zulässige Stadienkürzel</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Toronto Stufe 2</strong></td>
+      <td>Tier 2 (etabliertes entitätsspezifisches System)</td>
+      <td><code class="language-plaintext highlighter-rouge">0</code>, <code class="language-plaintext highlighter-rouge">1</code>, <code class="language-plaintext highlighter-rouge">1A</code>, <code class="language-plaintext highlighter-rouge">1B</code>, <code class="language-plaintext highlighter-rouge">2</code>, <code class="language-plaintext highlighter-rouge">2A</code>, <code class="language-plaintext highlighter-rouge">2B</code>, <code class="language-plaintext highlighter-rouge">3</code>, <code class="language-plaintext highlighter-rouge">3A</code>, <code class="language-plaintext highlighter-rouge">3B</code>, <code class="language-plaintext highlighter-rouge">4</code>, <code class="language-plaintext highlighter-rouge">4A</code>, <code class="language-plaintext highlighter-rouge">4B</code>, <code class="language-plaintext highlighter-rouge">A</code>, <code class="language-plaintext highlighter-rouge">CNS1</code>, <code class="language-plaintext highlighter-rouge">CNS2</code>, <code class="language-plaintext highlighter-rouge">CNS3</code>, <code class="language-plaintext highlighter-rouge">CNS-</code>, <code class="language-plaintext highlighter-rouge">CNS+</code>, <code class="language-plaintext highlighter-rouge">L</code>, <code class="language-plaintext highlighter-rouge">L1</code>, <code class="language-plaintext highlighter-rouge">L2</code>, <code class="language-plaintext highlighter-rouge">M</code>, <code class="language-plaintext highlighter-rouge">M0</code>, <code class="language-plaintext highlighter-rouge">M1</code>, <code class="language-plaintext highlighter-rouge">M2</code>, <code class="language-plaintext highlighter-rouge">M3</code>, <code class="language-plaintext highlighter-rouge">M4</code>, <code class="language-plaintext highlighter-rouge">MS</code>, <code class="language-plaintext highlighter-rouge">y1</code>, <code class="language-plaintext highlighter-rouge">y2</code>, <code class="language-plaintext highlighter-rouge">y3</code>, <code class="language-plaintext highlighter-rouge">X</code>, <code class="language-plaintext highlighter-rouge">ND</code></td>
+    </tr>
+    <tr>
+      <td><strong>Toronto Stufe 1</strong></td>
+      <td>Tier 1 (grobes Staging)</td>
+      <td><code class="language-plaintext highlighter-rouge">1A</code>, <code class="language-plaintext highlighter-rouge">1B</code>, <code class="language-plaintext highlighter-rouge">2A</code>, <code class="language-plaintext highlighter-rouge">2B</code>, <code class="language-plaintext highlighter-rouge">3A</code>, <code class="language-plaintext highlighter-rouge">3B</code>, <code class="language-plaintext highlighter-rouge">4A</code>, <code class="language-plaintext highlighter-rouge">4B</code>, <code class="language-plaintext highlighter-rouge">A</code>, <code class="language-plaintext highlighter-rouge">CNS-</code>, <code class="language-plaintext highlighter-rouge">CNS+</code>, <code class="language-plaintext highlighter-rouge">L</code> (begrenzt/lokalisiert), <code class="language-plaintext highlighter-rouge">LR</code> (lokoregionär), <code class="language-plaintext highlighter-rouge">M</code>, <code class="language-plaintext highlighter-rouge">MS</code>, <code class="language-plaintext highlighter-rouge">R</code> (regionär), <code class="language-plaintext highlighter-rouge">X</code>, <code class="language-plaintext highlighter-rouge">ND</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Regeln aus dem Umsetzungsleitfaden:</p>
+
+<ul>
+  <li><strong>Stufe 2 kann immer zu Stufe 1 zusammengefasst werden</strong> — wer Tier 2 erhebt,
+kann Tier 1 daraus ableiten.</li>
+  <li>Die <strong>Zuordnung zur Tumorentität erfolgt morphologiebasiert</strong>, nicht über die
+ICD-10-Diagnose; die inhaltliche Prüfung (welche Kürzel für welche Entität
+zulässig sind) liegt hinter dem Melderportal.</li>
+  <li>Für die FHIR-Abbildung über <code class="language-plaintext highlighter-rouge">MII_PR_Onko_Weitere_Klassifikationen</code> heißt das:
+<code class="language-plaintext highlighter-rouge">code.text</code> = „Toronto Stufe 1" bzw. „Toronto Stufe 2",
+<code class="language-plaintext highlighter-rouge">valueCodeableConcept.text</code> = Stadienkürzel aus der jeweiligen Liste.</li>
+</ul>
+
+<p>Quelle: <a href="https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532511/Weitere+Klassifikationen">Umsetzungsleitfaden §65c — Weitere Klassifikationen</a>
+(die dort ebenfalls gepflegte Liste der Weiteren Klassifikationen, Stand
+19.05.2025, führt Toronto im Seitentext, nicht in der CSV-Mindestliste).</p>
+
 <h3 id="ausblick">Ausblick</h3>
 
 <p>Die Guidelines von 2014 wurden durch ein internationales Expertengremium an der
@@ -592,7 +640,7 @@ updates to the 2014 Toronto Paediatric Cancer Stage Guidelines</em></li>
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.onkologie#2026.0.3 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Fri, Aug 28, 2026 12:47+0000">2026-08-28</span>
+          Erstellt <span title="Fri, Aug 28, 2026 13:10+0000">2026-08-28</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

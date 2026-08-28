@@ -311,9 +311,8 @@ user content","",0,*,"","","","Extension {[]} {[]}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Procedure.code.coding:ops.extension:Seitenlokalisation","Procedure.code.coding.extension","Seitenlokalisation","extensions
-user content","",0,1,"Y","","","Extension {[CanonicalType[http://fhir.de/StructureDefinition/seitenlokalisation]]} {[]}
-","Optional Extensions Element","Optional Extension Element - found in all resources.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+"Procedure.code.coding:ops.extension:Seitenlokalisation","Procedure.code.coding.extension","Seitenlokalisation","","",0,1,"Y","","","Extension {[CanonicalType[http://fhir.de/StructureDefinition/seitenlokalisation]]} {[]}
+","Seitenlokalisation (OPS-Seitenzusatz R/L/B)","Seitenangabe bei paarigen Organen und OPS-Codes mit Seitenzusatzpflicht über die Basisprofil-Extension seitenlokalisation (R/L/B). Das oBDS sieht am OP kein eigenes Seitenfeld vor; führend ist der OPS-Seitenzusatz.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Procedure.code.coding:ops.system","Procedure.code.coding.system","","","",1,1,"Y","","Y","uri {[]} {[]}

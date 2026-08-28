@@ -138,7 +138,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-onko-tnm-a
   "name" : "MII_EX_Onko_TNM_a_Praefix",
   "title" : "MII EX Onkologie TNM a-Präfix",
   "status" : "active",
-  "date" : "2026-08-28T12:47:27+00:00",
+  "date" : "2026-08-28T13:10:09+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

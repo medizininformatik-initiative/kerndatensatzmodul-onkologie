@@ -274,7 +274,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-opera
   "name" : "MII_PR_Onko_Operation",
   "title" : "MII PR Onkologie Operation",
   "status" : "active",
-  "date" : "2026-08-28T12:47:27+00:00",
+  "date" : "2026-08-28T13:10:09+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -506,6 +506,26 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-opera
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       }
+    },
+    {
+      "id" : "Procedure.code.coding:ops.extension:Seitenlokalisation",
+      "path" : "Procedure.code.coding.extension",
+      "sliceName" : "Seitenlokalisation",
+      "short" : "Seitenlokalisation (OPS-Seitenzusatz R/L/B)",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Seitenlokalisation - OPS-Seitenzusatz R/L/B"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Seitenangabe bei paarigen Organen und OPS-Codes mit Seitenzusatzpflicht über die Basisprofil-Extension seitenlokalisation (R/L/B). Das oBDS sieht am OP kein eigenes Seitenfeld vor; führend ist der OPS-Seitenzusatz."
     },
     {
       "id" : "Procedure.code.coding:ops.version",
