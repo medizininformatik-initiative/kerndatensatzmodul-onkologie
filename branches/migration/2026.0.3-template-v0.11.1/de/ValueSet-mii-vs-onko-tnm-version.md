@@ -145,7 +145,7 @@ Codes für TNM Version/Auflage nach welcher Version des TNM klassifiziert wird.
   "title" : "MII VS Onkologie TNM Version",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-28T13:33:24+00:00",
+  "date" : "2026-08-28T13:57:18+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

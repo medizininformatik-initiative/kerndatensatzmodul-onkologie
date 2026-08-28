@@ -52,8 +52,8 @@ Profile: [MII PR Onkologie Nebenwirkung von Strahlentherapie und systemische The
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "891589671000119104",
-      "display" : "Cytokine storm syndrome"
+      "code" : "710027002",
+      "display" : "Cytokine release syndrome"
     }]
   },
   "subject" : {

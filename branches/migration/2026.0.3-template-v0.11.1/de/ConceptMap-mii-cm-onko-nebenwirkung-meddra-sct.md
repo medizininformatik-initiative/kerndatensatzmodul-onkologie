@@ -47,10 +47,11 @@ Kuratierte Zuordnung der MedDRA-Codes der CTCAE-v4.03-Nebenwirkungsterme zu SNOM
   }],
   "purpose" : "Ableitung der optionalen SNOMED-CT-Zweitkodierung (event.coding[snomed]) aus der MedDRA-Pflichtkodierung der Nebenwirkungsart (oBDS 15.2).",
   "sourceCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-nebenwirkung-art",
-  "targetUri" : "http://snomed.info/sct?fhir_vs",
+  "targetUri" : "http://snomed.info/sct/900000000000207008/version/20250701?fhir_vs",
   "group" : [{
     "source" : "https://www.meddra.org",
     "target" : "http://snomed.info/sct",
+    "targetVersion" : "http://snomed.info/sct/900000000000207008/version/20250701",
     "element" : [{
       "code" : "10000060",
       "display" : "Abdominal distension",
@@ -4952,9 +4953,10 @@ Kuratierte Zuordnung der MedDRA-Codes der CTCAE-v4.03-Nebenwirkungsterme zu SNOM
       "code" : "10050662",
       "display" : "Prostate infection",
       "target" : [{
-        "code" : "1371408008",
-        "display" : "Infection of prostate",
-        "equivalence" : "equivalent"
+        "code" : "9713002",
+        "display" : "Prostatitis",
+        "equivalence" : "wider",
+        "comment" : "Im Pin 20250701 kein spezifisches Konzept Infection of prostate; Prostatitis ist das nächstliegende Konzept, umfasst aber auch nicht-infektiöse Formen."
       }]
     },
     {
@@ -5070,10 +5072,10 @@ Kuratierte Zuordnung der MedDRA-Codes der CTCAE-v4.03-Nebenwirkungsterme zu SNOM
       "code" : "10052015",
       "display" : "Cytokine release syndrome",
       "target" : [{
-        "code" : "891589671000119104",
-        "display" : "Cytokine storm syndrome",
+        "code" : "710027002",
+        "display" : "Cytokine release syndrome",
         "equivalence" : "equivalent",
-        "comment" : "Korrektur aus adversarialer Verifikation"
+        "comment" : "Pin-Version 20250701: 710027002 ist hier aktiv (Inaktivierung erst in einem späteren Release; das Nachfolgekonzept Cytokine storm syndrome existiert im Pin noch nicht)."
       }]
     },
     {
@@ -6419,10 +6421,8 @@ Kuratierte Zuordnung der MedDRA-Codes der CTCAE-v4.03-Nebenwirkungsterme zu SNOM
       "code" : "10065748",
       "display" : "Urostomy site bleeding",
       "target" : [{
-        "code" : "16751421000119105",
-        "display" : "Hemorrhage of incontinent urostomy stoma",
-        "equivalence" : "narrower",
-        "comment" : "SNOMED trennt kontinentes (16751471000119106) und inkontinentes Urostoma; das inkontinente (Ileum-Conduit) ist der Regelfall in der Onkologie."
+        "equivalence" : "unmatched",
+        "comment" : "Kein Konzept im Pin 20250701 (nur Ileostomie-Blutung, andere Lokalisation) — Term verbleibt MedDRA-only."
       }]
     },
     {
@@ -6866,10 +6866,10 @@ Kuratierte Zuordnung der MedDRA-Codes der CTCAE-v4.03-Nebenwirkungsterme zu SNOM
       "code" : "10065826",
       "display" : "Intraoperative arterial injury",
       "target" : [{
-        "code" : "1375944001",
-        "display" : "Traumatic injury to artery during surgery",
-        "equivalence" : "equivalent",
-        "comment" : "Woertliche Entsprechung des intraoperativen Arterienschadens."
+        "code" : "63043004",
+        "display" : "Injury of artery",
+        "equivalence" : "wider",
+        "comment" : "Im Pin 20250701 kein Konzept für die intraoperative Genese; Oberkonzept Arterienverletzung, der operative Kontext ergibt sich aus AdverseEvent.suspectEntity."
       }]
     },
     {
@@ -7006,10 +7006,10 @@ Kuratierte Zuordnung der MedDRA-Codes der CTCAE-v4.03-Nebenwirkungsterme zu SNOM
       "code" : "10065845",
       "display" : "Intraoperative renal injury",
       "target" : [{
-        "code" : "1375936001",
-        "display" : "Traumatic injury to kidney during surgery",
-        "equivalence" : "equivalent",
-        "comment" : "Woertliche Entsprechung."
+        "code" : "40095003",
+        "display" : "Injury of kidney",
+        "equivalence" : "wider",
+        "comment" : "Im Pin 20250701 kein Konzept für die intraoperative Genese; Oberkonzept Nierenverletzung, der operative Kontext ergibt sich aus AdverseEvent.suspectEntity."
       }]
     },
     {
@@ -7034,10 +7034,10 @@ Kuratierte Zuordnung der MedDRA-Codes der CTCAE-v4.03-Nebenwirkungsterme zu SNOM
       "code" : "10065848",
       "display" : "Intraoperative venous injury",
       "target" : [{
-        "code" : "1375937005",
-        "display" : "Traumatic injury to vein during surgery",
-        "equivalence" : "equivalent",
-        "comment" : "Woertliche Entsprechung."
+        "code" : "64583005",
+        "display" : "Injury of vein",
+        "equivalence" : "wider",
+        "comment" : "Im Pin 20250701 kein Konzept für die intraoperative Genese; Oberkonzept Venenverletzung, der operative Kontext ergibt sich aus AdverseEvent.suspectEntity."
       }]
     },
     {
