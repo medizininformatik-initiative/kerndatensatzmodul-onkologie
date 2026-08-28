@@ -39,6 +39,36 @@ ist bewusst **nicht normativ**, sondern eine Umsetzungshilfe.
 | **Unbekannt** | Gen ohne Detailangabe | `component:gene-studied` + `value` = *unbestimmt* |
 | **IHC-Marker** | `PD-L1`, `HER2 IHC`, `p16`, `p53` | **Kein Variant** → `MII_PR_MTB_Immunohistochemistry` (Modul Molekulares Tumorboard) |
 
+### Übermittlungsnotation der §65c-Markerliste
+
+Die Markerliste der §65c-Plattform ([Genetische Marker](https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/122945632/Genetische+Marker),
+Stand 2023-11-27, ~300 Gen×Varianten-Kombinationen) gibt für die Übermittlung eine
+feste **Zwei-Positionen-Notation** vor, die in `Bezeichnung` mit `||` kombiniert wird:
+
+- **1. Position — Gen:** HGNC-Symbol aus der Gen-Liste der Markerliste. Die Liste
+  führt daneben auch Pseudo-Einträge, die keine Gene sind (IHC-Marker wie
+  `ALK_IHC`/`HER2_IHC` sowie zytogenetische Angaben wie `del(17)(p13)`) — für die
+  FHIR-Abbildung gelten die Sonderfälle der Tabelle oben (IHC → MTB-Profil,
+  Zytogenetik → `cytogenetic-location`).
+- **2. Position — Weitere Information**, je nach Art der Angabe:
+
+| Art (Liste) | Notation 2. Position | Beispiel |
+|---|---|---|
+| `<Formel>` | Formel **„beispielsweise nach HGVSp oder HGVSc"** (amtlicher Wortlaut) | `p.Val600Glu`, `c.1799T>A` |
+| spez. Mutation | Codonebene: Gensymbol-Codon | `BRAF-V600` |
+| Exon | `Exon <Nr>` | `Exon 19` |
+| Fusion | `GEN1::GEN2`, optional mit nachgestellter Zusatzmutation | `EML4::ALK`, `BCR::ABL1 T315I` |
+| Amplifikation / Translokation / Rearrangement / Promoter Hypermethylierung | Schlüsselwort wörtlich | `Amplifikation` |
+| IHC | leer (Score über `Sonstige_Auspraegung`) | — |
+| `<Freitext>` | freie Angabe für nicht gelistete Veränderungen | — |
+| Unbekannt | leer | — |
+
+Für die strukturierte FHIR-Sicht ist diese Notation der **Parser-Vertrag**: Aus
+1. Position wird `gene-studied` (HGNC), aus der 2. Position je nach Art die
+passende Komponente der Markertyp-Tabelle oben (HGVS-Formeln nach `*-hgvs`,
+`GEN1::GEN2` nach `gene-fusion` — eine nachgestellte Zusatzmutation wie `T315I`
+wird als **eigene** HGVS-Komponente derselben Variante geführt).
+
 ### Erläuterungen zu Sonderfällen
 
 **Gen-Identität (HGNC).** Die Gensymbole der Liste sind bereits HGNC-approved

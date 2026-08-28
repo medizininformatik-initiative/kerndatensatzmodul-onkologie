@@ -40,6 +40,36 @@ recommendation is deliberately **not normative**, but an implementation aid.
 | **Unknown** | gene without further detail | `component:gene-studied` + `value` = *indeterminate* |
 | **IHC marker** | `PD-L1`, `HER2 IHC`, `p16`, `p53` | **not a variant** → `MII_PR_MTB_Immunohistochemistry` (Molecular Tumour Board module) |
 
+### Transmission notation of the §65c marker list
+
+The §65c platform marker list ([Genetische Marker](https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/122945632/Genetische+Marker),
+as of 2023-11-27, ~300 gene×variant combinations) prescribes a fixed
+**two-position notation** for transmission, combined in `Bezeichnung` with `||`:
+
+- **Position 1 — gene:** HGNC symbol from the list's gene sheet. The sheet also
+  carries pseudo-entries that are not genes (IHC markers such as
+  `ALK_IHC`/`HER2_IHC`, and cytogenetic entries such as `del(17)(p13)`) — for the
+  FHIR representation the special cases of the table above apply (IHC → MTB
+  profile, cytogenetics → `cytogenetic-location`).
+- **Position 2 — additional information**, depending on the kind of entry:
+
+| Kind (list) | Position-2 notation | Example |
+|---|---|---|
+| `<Formel>` | formula **"e.g. according to HGVSp or HGVSc"** (official wording) | `p.Val600Glu`, `c.1799T>A` |
+| specific mutation | codon level: gene symbol-codon | `BRAF-V600` |
+| exon | `Exon <no>` | `Exon 19` |
+| fusion | `GENE1::GENE2`, optionally with a trailing additional mutation | `EML4::ALK`, `BCR::ABL1 T315I` |
+| amplification / translocation / rearrangement / promoter hypermethylation | literal keyword | `Amplifikation` |
+| IHC | empty (score via `Sonstige_Auspraegung`) | — |
+| `<Freitext>` | free text for unlisted alterations | — |
+| unknown | empty | — |
+
+For the structured FHIR view this notation is the **parser contract**: position 1
+becomes `gene-studied` (HGNC); position 2 maps, depending on its kind, to the
+matching component of the marker-type table above (HGVS formulas to `*-hgvs`,
+`GENE1::GENE2` to `gene-fusion` — a trailing additional mutation such as `T315I`
+is carried as a **separate** HGVS component of the same variant).
+
 ### Notes on Special Cases
 
 **Gene identity (HGNC).** The gene symbols in the list are already HGNC-approved
