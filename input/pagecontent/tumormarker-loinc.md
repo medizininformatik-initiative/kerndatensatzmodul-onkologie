@@ -117,10 +117,8 @@ hierarchically defined ValueSets instead of maintaining individual codes.
 For **23 of the 28 markers** the observable anchor has been verified
 (e.g. CEA → *Measurement of carcinoembryonic antigen in serum or plasma*
 `723431010000109` with mass/substance/arbitrary concentration children). For the
-remaining ones (β-hCG, gastrin, calcitonin, HVA, VMA, ACTH, FSH, LH, TSH,
-M protein, IgA, IgM) the anchor is still outstanding — the initial search
-returned either no hits or recognisably wrong ones (for instance the CRF
-observable instead of the ACTH one), which were discarded.
+remaining five (gastrin, calcitonin, M protein, IgA, IgM) no grouper concept
+exists — see the addendum below.
 
 The complete curation report with all anchors and child concepts is located in
 the repository at `input/examples-source/biomarker/biomarker-snomed-report.md`.
