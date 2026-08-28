@@ -77,3 +77,118 @@ codes of its own and excludes deprecated classes (in particular `AD060106`
 Tumorkonferenzprotokoll, which in KDL 2025 is replaced by `SD150103`). The ValueSet is intended
 as selection support and for queries, not as a mandatory restriction: instances may still use
 any valid KDL class.
+
+### Mapping to IHE XDS, SNOMED CT and LOINC
+
+For document-based exchange (XDS infrastructures) and international interoperability,
+the 45 KDL classes are mapped to the corresponding document-type terminologies.
+Legend: ≡ equivalent, ⊃ target concept is broader, ⊂ target concept is narrower,
+— no defensible mapping.
+
+{:.bg-info}
+**Provenance and reliability:** The **IHE XDS column** is official — it is derived
+via `$translate` from the official DVMD ConceptMap (`kdl-ihe-typecode`,
+KDL→IHE-D XDS typeCode) on the MII terminology server. No official KDL→SNOMED CT or
+KDL→LOINC mapping exists; the SNOMED CT column (subtree `229059009 |Report|` /
+`419891008 |Record artifact|`) and the LOINC column (Document Ontology) are a
+**project-side, conservative curation** (as of 2026-08-28, all target codes
+server-verified and active). No guarantee is given for completeness or correctness;
+independent professional review is required before use in production systems.
+German registry and study forms (e.g. cancer registry notification form, CRF) have,
+as expected, no international equivalent and remain KDL-only.
+
+
+**Cluster 1 — Diagnose & Erstmeldung (oBDS 5, 6)**
+
+| KDL | Document class | IHE XDS typeCode (official, DVMD) | SNOMED CT (curated) | LOINC (curated) |
+|---|---|---|---|---|
+| `PT080102` | Histologiebefund | `PATH` Pathologiebefundberichte (⊃) | `371528001` Pathology report (⊃) | `11526-1` Pathology study (⊃) |
+| `PT260102` | Zytologiebefund | `PATH` Pathologiebefundberichte (⊃) | `726738003` Cytology report (≡) | `11526-1` Pathology study (⊃) |
+| `PT130102` | Molekularpathologiebefund | `PATH` Pathologiebefundberichte (⊃) | `371528001` Pathology report (⊃) | `51969-4` Genetic analysis report (⊃) |
+| `SD150102` | Meldebogen Krebsregister | `ONKO` Onkologische Dokumente (⊃) | — | `72134-0` Cancer event report (≡) |
+| `SD150104` | Tumorlokalisationsbogen | `ONKO` Onkologische Dokumente (⊃) | — | — |
+
+**Cluster 2 — Staging & Bildgebung (oBDS 8, 11)**
+
+| KDL | Document class | IHE XDS typeCode (official, DVMD) | SNOMED CT (curated) | LOINC (curated) |
+|---|---|---|---|---|
+| `DG020103` | CT-Befund | `BILD` Ergebnisse bildgebender Diagnostik (⊃) | `4261000179100` Computed tomography imaging report (≡) | `18748-4` Diagnostic imaging study (⊃) |
+| `DG020105` | Endoskopiebefund | `BILD` Ergebnisse bildgebender Diagnostik (⊃) | — | `18751-8` Endoscopy study (≡) |
+| `DG020107` | MRT-Befund | `BILD` Ergebnisse bildgebender Diagnostik (⊃) | `4251000179103` Magnetic resonance imaging report (≡) | `18748-4` Diagnostic imaging study (⊃) |
+| `DG020109` | PET-Befund | `BILD` Ergebnisse bildgebender Diagnostik (⊃) | `4271000179106` Nuclear medicine report (⊃) | `18748-4` Diagnostic imaging study (⊃) |
+| `DG020110` | Röntgenbefund | `BILD` Ergebnisse bildgebender Diagnostik (⊃) | `371527006` Radiology report (⊃) | `18748-4` Diagnostic imaging study (⊃) |
+| `DG020111` | Sonographiebefund | `BILD` Ergebnisse bildgebender Diagnostik (⊃) | `4221000179107` Ultrasound imaging report (≡) | `18748-4` Diagnostic imaging study (⊃) |
+| `DG020112` | SPECT-Befund | `BILD` Ergebnisse bildgebender Diagnostik (⊃) | `4271000179106` Nuclear medicine report (⊃) | `18748-4` Diagnostic imaging study (⊃) |
+| `DG020113` | Szintigraphiebefund | `BILD` Ergebnisse bildgebender Diagnostik (⊃) | `4271000179106` Nuclear medicine report (⊃) | `18748-4` Diagnostic imaging study (⊃) |
+| `DG020114` | Mammographiebefund | `BILD` Ergebnisse bildgebender Diagnostik (⊃) | `4231000179109` Mammography report (≡) | `18748-4` Diagnostic imaging study (⊃) |
+| `DG020199` | Sonstige Dokumentation bildgebende Diagnostik | `BILD` Ergebnisse bildgebender Diagnostik (⊃) | `4201000179104` Imaging report (⊃) | `18748-4` Diagnostic imaging study (⊃) |
+
+**Cluster 3 — Tumorkonferenz (oBDS 18/19); NICHT AD060106 (deprecated)**
+
+| KDL | Document class | IHE XDS typeCode (official, DVMD) | SNOMED CT (curated) | LOINC (curated) |
+|---|---|---|---|---|
+| `SD150103` | Tumorkonferenzprotokoll | `ONKO` Onkologische Dokumente (⊃) | `444804000` Multidisciplinary care conference report (⊃) | `85231-9` Tumor board Note (≡) |
+| `AD060103` | Konsilbericht intern | `FALL` Fallbesprechungen (⊃) | `371530004` Clinical consultation report (⊃) | `11488-4` Consult note (⊃) |
+| `AD060104` | Konsilbericht extern | `FALL` Fallbesprechungen (⊃) | `371530004` Clinical consultation report (⊃) | `11488-4` Consult note (⊃) |
+| `AD060110` | Konsilbericht | `FALL` Fallbesprechungen (⊃) | `371530004` Clinical consultation report (≡) | `11488-4` Consult note (≡) |
+
+**Cluster 4 — Operation (oBDS 13)**
+
+| KDL | Document class | IHE XDS typeCode (official, DVMD) | SNOMED CT (curated) | LOINC (curated) |
+|---|---|---|---|---|
+| `OP150103` | OP-Bericht | `OPDK` OP-Dokumente (⊃) | `371526002` Operative report (≡) | `11504-8` Surgical operation note (≡) |
+| `OP150104` | OP-Bilddokumentation | `OPDK` OP-Dokumente (⊃) | `723394009` Photographic image record (⊃) | `72170-4` Photographic image (⊃) |
+| `OP150106` | OP-Protokoll | `OPDK` OP-Dokumente (⊃) | `416868005` Surgical intraoperative record (≡) | `11504-8` Surgical operation note (⊃) |
+| `AM010303` | Operationsaufklärungsbogen | `EINW` Einwilligungen/Aufklärungen (⊃) | `721914005` Patient consent document (⊃) | `61358-8` Surgical operation consent Document (≡) |
+
+**Cluster 5 — Strahlentherapie (oBDS 14)**
+
+| KDL | Document class | IHE XDS typeCode (official, DVMD) | SNOMED CT (curated) | LOINC (curated) |
+|---|---|---|---|---|
+| `TH020101` | Bestrahlungsplan | `BSTR` Bestrahlungsdokumentation (⊃) | `736249004` Radiotherapy care plan (⊃) | — |
+| `TH020102` | Bestrahlungsprotokoll | `BSTR` Bestrahlungsdokumentation (⊃) | — | `34832-6` Radiation oncology Note (⊃) |
+| `TH020103` | Bestrahlungsverordnung | `BSTR` Bestrahlungsdokumentation (⊃) | — | — |
+| `TH020104` | Radiojodtherapieprotokoll | `BSTR` Bestrahlungsdokumentation (⊃) | — | `90344-3` Nuclear medicine Note (⊃) |
+| `TH020105` | Therapieprotokoll mit Radionukliden | `BSTR` Bestrahlungsdokumentation (⊃) | — | `90344-3` Nuclear medicine Note (⊃) |
+
+**Cluster 6 — Systemische Therapie (oBDS 16)**
+
+| KDL | Document class | IHE XDS typeCode (official, DVMD) | SNOMED CT (curated) | LOINC (curated) |
+|---|---|---|---|---|
+| `TH130102` | Arzneiadministration | `MEDI` Medikamentöse Therapien (⊃) | — | `80565-5` Medication administration record (≡) |
+| `TH130103` | Chemotherapieprotokoll | `MEDI` Medikamentöse Therapien (⊃) | — | `11486-8` Chemotherapy records (⊃) |
+| `TH130104` | Hormontherapieprotokoll | `MEDI` Medikamentöse Therapien (⊃) | — | — |
+| `TH130107` | Medikationsplan | `MEDI` Medikamentöse Therapien (⊃) | `761931002` Medication treatment plan report (≡) | `56445-0` Medication summary Document (≡) |
+| `AM010304` | Aufklärungsbogen Therapie | `EINW` Einwilligungen/Aufklärungen (⊃) | `721914005` Patient consent document (⊃) | `59284-0` Consent Document (⊃) |
+
+**Cluster 7 — Verlauf & Nachsorge (oBDS 17)**
+
+| KDL | Document class | IHE XDS typeCode (official, DVMD) | SNOMED CT (curated) | LOINC (curated) |
+|---|---|---|---|---|
+| `SD150101` | Follow up-Bogen | `ONKO` Onkologische Dokumente (⊃) | — | `72134-0` Cancer event report (⊃) |
+| `LB120102` | Laborbefund extern | `BEFU` Ergebnisse Diagnostik (⊃) | `4241000179101` Laboratory report (⊃) | `11502-2` Laboratory report (⊃) |
+| `LB120103` | Laborbefund intern | `BEFU` Ergebnisse Diagnostik (⊃) | `4241000179101` Laboratory report (⊃) | `11502-2` Laboratory report (⊃) |
+| `LB120106` | Hämatologisches Speziallabor | `BEFU` Ergebnisse Diagnostik (⊃) | `4321000179101` Hematology report (⊃) | `11502-2` Laboratory report (⊃) |
+| `LB120107` | Laborbefund | `BEFU` Ergebnisse Diagnostik (⊃) | `4241000179101` Laboratory report (≡) | `11502-2` Laboratory report (≡) |
+
+**Cluster 8 — Tod (oBDS 20)**
+
+| KDL | Document class | IHE XDS typeCode (official, DVMD) | SNOMED CT (curated) | LOINC (curated) |
+|---|---|---|---|---|
+| `AD020103` | Todesbescheinigung | `BESC` Ärztliche Bescheinigungen (⊃) | `307930005` Death certificate (≡) | `64297-5` Death certificate (≡) |
+
+**Cluster 9 — Studien / Forschungsvorhaben**
+
+| KDL | Document class | IHE XDS typeCode (official, DVMD) | SNOMED CT (curated) | LOINC (curated) |
+|---|---|---|---|---|
+| `SF190101` | CRF-Bogen | `STUD` Studiendokumente (⊃) | — | — |
+| `SF190102` | Einwilligung Studie | `STUD` Studiendokumente (⊃) | `721914005` Patient consent document (⊃) | `77602-1` Research study consent (≡) |
+| `SF190106` | Studienbericht | `STUD` Studiendokumente (⊃) | — | — |
+
+**Cluster 10 — Übergreifend**
+
+| KDL | Document class | IHE XDS typeCode (official, DVMD) | SNOMED CT (curated) | LOINC (curated) |
+|---|---|---|---|---|
+| `AD010103` | Entlassungsbericht intern | `BERI` Arztberichte (⊃) | `373942005` Discharge summary (⊃) | `18842-5` Discharge summary (⊃) |
+| `AD010104` | Entlassungsbericht extern | `BERI` Arztberichte (⊃) | `373942005` Discharge summary (⊃) | `18842-5` Discharge summary (⊃) |
+| `SD150199` | Sonstiger onkologischer Dokumentationsbogen | `ONKO` Onkologische Dokumente (⊃) | — | `34806-0` Oncology Note (⊃) |
