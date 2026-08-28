@@ -8,6 +8,7 @@ Description: "oBDS-spezifisches Codesystem Konsequenz der genetischen Variante A
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMICodeSystem
 * ^caseSensitive = true
 * ^content = #complete
 * #M "Mutation/positiv"

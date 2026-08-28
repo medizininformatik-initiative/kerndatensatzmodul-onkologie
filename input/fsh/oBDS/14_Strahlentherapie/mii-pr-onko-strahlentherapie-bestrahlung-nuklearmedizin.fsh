@@ -5,6 +5,7 @@ Title: "MII PR Onkologie Strahlentherapie Nuklearmedizin"
 Description: "Strahlentherapie. Dieses Profil beschreibt eine Nuklearmedizinische  in der Onkologie."
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfileUK
 * ^status = #active
 
 * meta.profile 0..* MS

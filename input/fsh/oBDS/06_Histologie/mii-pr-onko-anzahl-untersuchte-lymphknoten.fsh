@@ -5,6 +5,7 @@ Title: "MII PR Onkologie Anzahl der untersuchten Lymphknoten"
 Description: "Histologie: Anzahl der untersuchten Lymphknoten. Gibt an, wie viele Lymphknoten untersucht wurden (einschließlich Sentinel)."
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
 * meta.profile 0..* MS
 * encounter 0..1 MS

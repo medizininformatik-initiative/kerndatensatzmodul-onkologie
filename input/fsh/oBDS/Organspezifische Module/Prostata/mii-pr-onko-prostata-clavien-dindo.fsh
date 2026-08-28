@@ -5,6 +5,7 @@ Title: "MII PR Onkologie Clavien Dindo"
 Description: "Dieses Profil beschreibt den Clavien-Dindo-Score für die Prostatektomie in der Onkologie"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
 
 * meta.profile 0..* MS

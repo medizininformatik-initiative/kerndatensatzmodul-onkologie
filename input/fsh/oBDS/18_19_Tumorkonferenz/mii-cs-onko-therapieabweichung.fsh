@@ -8,6 +8,7 @@ Description: "oBDS-spezifisches Codesystem für die Therapieabweichung auf Wunsc
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMICodeSystem
 * ^caseSensitive = true
 * ^content = #complete
 * #J "ja"

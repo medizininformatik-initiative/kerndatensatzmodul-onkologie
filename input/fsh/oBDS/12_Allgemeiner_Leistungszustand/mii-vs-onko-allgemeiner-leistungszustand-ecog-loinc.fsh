@@ -10,6 +10,7 @@ Description: "LOINC-Answer-Codes für den ECOG Performance Status. Enumerierte F
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMIValueSet
 
 * $LNC#LA9622-7 "Fully active, able to carry on all pre-disease performance without restriction"
 * $LNC#LA9623-5 "Restricted in physically strenuous activity but ambulatory and able to carry out work of a light or sedentary nature, e.g., light house work, office work"

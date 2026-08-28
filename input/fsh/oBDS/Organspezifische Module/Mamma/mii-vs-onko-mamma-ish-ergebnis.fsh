@@ -11,6 +11,7 @@ Description: "Ergebnis der In-situ-Hybridisierung (ISH/FISH): Positive, Negative
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMIValueSet
 
 * $LNC#LA6576-8 "Positive"
 * $LNC#LA6577-6 "Negative"

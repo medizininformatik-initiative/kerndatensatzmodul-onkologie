@@ -8,6 +8,7 @@ Description: "oBDS-spezifisches Codesystem für den Therapieplanungstyp"
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMICodeSystem
 * ^caseSensitive = true
 * ^content = #complete
 * #praeth "prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie)"

@@ -8,6 +8,7 @@ Description: "oBDS-spezifisches Codesystem TME-Präparat, basierend auf der S3-L
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMICodeSystem
 * ^caseSensitive = true
 * ^content = #complete
 * #1 "Grad 1 (gut)" 

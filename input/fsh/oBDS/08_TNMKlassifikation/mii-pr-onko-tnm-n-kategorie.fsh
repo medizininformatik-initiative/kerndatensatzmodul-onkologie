@@ -5,6 +5,7 @@ Title: "MII PR Onkologie TNM N-Kategorie"
 Description: "TNM-Klassifikation: TNM N-Kategorie. Ausbreitung von regionären Lymphknotenmetastasen, erfolgt gemäß Tumorentität nach TNM."
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
 * obeys tnm-sct-uicc-konsistenz
 * meta.profile 0..* MS

@@ -18,6 +18,7 @@ Description: "ICD-10-GM-Codes der nach KFRG/§65c krebsregister-meldepflichtigen
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMIValueSet
 
 * include codes from system http://fhir.de/CodeSystem/bfarm/icd-10-gm|2026 where concept is-a #C00-C97
 * include codes from system http://fhir.de/CodeSystem/bfarm/icd-10-gm|2026 where concept is-a #D00-D09

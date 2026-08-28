@@ -16,6 +16,7 @@ Description: "Kuratierte Auswahl der KDL-Dokumentklassen (KDL 2025) entlang des 
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMIValueSet
 
 // Cluster 1 — Diagnose & Erstmeldung (oBDS 5, 6)
 * $KDL#PT080102 "Histologiebefund"

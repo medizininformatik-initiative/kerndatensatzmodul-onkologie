@@ -201,3 +201,102 @@ RuleSet: CRMIKnowledgeCapabilitiesValueSet
 * ^extension[=].valueCode = #publishable
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"
 * ^extension[=].valueCode = #computable
+
+// ── Onko-Aggregate (beads pxy) ───────────────────────────────────────────────
+// Ein Insert pro Artefakt-Deklaration. Parameter zentral festgelegt:
+//   approvalDate 2026-01-03 = Freigabedatum Release v2026.0.0 (git-Tag);
+//   Topic NCI C3262 "Neoplasm" (Gate-A-Entscheid Migration, 2026-08-27).
+// Bei neuen Releases nur HIER das Datum nachziehen.
+
+RuleSet: OnkoCRMIProfile
+* insert CRMIShareableStructureDefinition
+* insert CRMIPublishableStructureDefinition
+* insert CRMIKnowledgeCapabilitiesStructureDefinition
+* insert CRMIArtifactUsageProfile
+* insert CRMIVersionPolicyStrict
+* insert CRMIApprovalDate(2026-01-03)
+* insert CRMIArtifactTopic(http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C3262)
+* insert CRMIArtifactContributors
+
+RuleSet: OnkoCRMIExtension
+* insert CRMIShareableStructureDefinition
+* insert CRMIPublishableStructureDefinition
+* insert CRMIKnowledgeCapabilitiesStructureDefinition
+* insert CRMIArtifactUsageExtension
+* insert CRMIVersionPolicyStrict
+* insert CRMIApprovalDate(2026-01-03)
+* insert CRMIArtifactTopic(http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C3262)
+* insert CRMIArtifactContributors
+
+RuleSet: OnkoCRMILogicalModel
+* insert CRMIShareableStructureDefinition
+* insert CRMIPublishableStructureDefinition
+* insert CRMIKnowledgeCapabilitiesStructureDefinition
+* insert CRMIArtifactUsageLogicalModel
+* insert CRMIVersionPolicyStrict
+* insert CRMIApprovalDate(2026-01-03)
+* insert CRMIArtifactTopic(http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C3262)
+* insert CRMIArtifactContributors
+
+RuleSet: OnkoCRMIValueSet
+* insert CRMIShareableValueSet
+* insert CRMIPublishableValueSet
+* insert CRMIComputableValueSet
+* insert CRMIKnowledgeCapabilitiesValueSet
+* insert CRMIVersionPolicyStrict
+* insert CRMIApprovalDate(2026-01-03)
+* insert CRMIArtifactTopic(http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C3262)
+* insert CRMIArtifactContributors
+
+RuleSet: OnkoCRMICodeSystem
+* insert CRMIShareableCodeSystem
+* insert CRMIPublishableCodeSystem
+* insert CRMIKnowledgeCapabilitiesCodeSystem
+* insert CRMIVersionPolicyStrict
+* insert CRMIApprovalDate(2026-01-03)
+* insert CRMIArtifactTopic(http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C3262)
+* insert CRMIArtifactContributors
+
+RuleSet: OnkoCRMICapabilityStatement
+* insert CRMIShareableCapabilityStatement
+* insert CRMIPublishableCapabilityStatement
+* insert CRMIKnowledgeCapabilitiesCapabilityStatement
+* insert CRMIArtifactUsageCapabilityStatement
+* insert CRMIVersionPolicyStrictInstance
+* insert CRMIApprovalDateInstance(2026-01-03)
+* insert CRMIArtifactTopicInstance(http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C3262)
+* insert CRMIArtifactContributorsInstance
+
+// URL-keyed-Varianten (beads pxy): SUSHI kollidiert bei ^extension[+]-Soft-
+// Indexing, wenn das Parent-Profil bereits StructureDefinition.extension trägt
+// (MII-Basis-Parents mit CRMI bzw. lokale Eltern). URL-Keying umgeht das.
+RuleSet: CRMIMetadataStructureDefinitionUK(approvalDate, topicSystem, topicCode)
+* ^extension[http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability][0].valueCode = #shareable
+* ^extension[http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability][1].valueCode = #publishable
+* ^extension[http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes#package "Package"
+* ^extension[http://hl7.org/fhir/StructureDefinition/resource-approvalDate].valueDate = "{approvalDate}"
+* ^extension[http://hl7.org/fhir/StructureDefinition/artifact-topic].valueCodeableConcept.coding[+] = {topicSystem}#{topicCode}
+* ^extension[http://hl7.org/fhir/StructureDefinition/artifact-author].valueContactDetail.telecom[+].system = #email
+* ^extension[http://hl7.org/fhir/StructureDefinition/artifact-author].valueContactDetail.telecom[=].value = "thomas.debertshaeuser@charite.de"
+* ^extension[http://hl7.org/fhir/StructureDefinition/artifact-editor].valueContactDetail.name = "Taskforce Core Data Set"
+* ^extension[http://hl7.org/fhir/StructureDefinition/artifact-reviewer][0].valueContactDetail.name = "Interoperability Working Group"
+* ^extension[http://hl7.org/fhir/StructureDefinition/artifact-reviewer][0].valueContactDetail.telecom[+].system = #url
+* ^extension[http://hl7.org/fhir/StructureDefinition/artifact-reviewer][0].valueContactDetail.telecom[=].value = "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+* ^extension[http://hl7.org/fhir/StructureDefinition/artifact-reviewer][1].valueContactDetail.name = "National Steering Committee"
+* ^extension[http://hl7.org/fhir/StructureDefinition/artifact-reviewer][1].valueContactDetail.telecom[+].system = #url
+* ^extension[http://hl7.org/fhir/StructureDefinition/artifact-reviewer][1].valueContactDetail.telecom[=].value = "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+* ^extension[http://hl7.org/fhir/StructureDefinition/artifact-endorser][0].valueContactDetail.name = "Interoperability Working Group"
+* ^extension[http://hl7.org/fhir/StructureDefinition/artifact-endorser][0].valueContactDetail.telecom[+].system = #url
+* ^extension[http://hl7.org/fhir/StructureDefinition/artifact-endorser][0].valueContactDetail.telecom[=].value = "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+* ^extension[http://hl7.org/fhir/StructureDefinition/artifact-endorser][1].valueContactDetail.name = "National Steering Committee"
+* ^extension[http://hl7.org/fhir/StructureDefinition/artifact-endorser][1].valueContactDetail.telecom[+].system = #url
+* ^extension[http://hl7.org/fhir/StructureDefinition/artifact-endorser][1].valueContactDetail.telecom[=].value = "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+
+RuleSet: OnkoCRMIProfileUK
+* insert CRMIShareableStructureDefinition
+* insert CRMIPublishableStructureDefinition
+* insert CRMIArtifactUsageProfileUK
+* insert CRMIMetadataStructureDefinitionUK(2026-01-03, http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C3262)
+
+RuleSet: CRMIArtifactUsageProfileUK
+* ^extension[http://hl7.org/fhir/StructureDefinition/artifact-usage].valueMarkdown = "Use this profile as the technical FHIR representation of the corresponding Medical Informatics Initiative logical model. The profile constrains a base FHIR resource for the MII module context by specifying how elements are used, which elements are required or not used, which extensions and terminology bindings apply, and how the resource maps to the module-specific content model. Implementers should produce and consume resource instances that conform to this profile when exchanging data for the corresponding MII module."

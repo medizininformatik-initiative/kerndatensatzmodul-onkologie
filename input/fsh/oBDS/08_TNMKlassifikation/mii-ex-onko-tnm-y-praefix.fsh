@@ -7,6 +7,7 @@ Id: mii-ex-onko-tnm-y-praefix
 Title: "MII EX Onkologie TNM y-Präfix"
 Description: "Kennzeichnet eine TNM T-, N- oder M-Kategorie, deren Feststellung während oder nach initialer multimodaler Therapie erfolgte (UICC y-Präfix, z. B. ycT2, ypN0). Als modifierExtension zu verwenden, da das y-Präfix die Interpretation des Kategorie-Wertes verändert."
 * insert PR_CS_VS_Version
+* insert OnkoCRMIExtension
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-y-praefix"
 * ^context.type = #element
 * ^context.expression = "Observation"

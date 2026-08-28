@@ -6,6 +6,7 @@ Id: mii-ex-onko-tnm-a-praefix
 Title: "MII EX Onkologie TNM a-Präfix"
 Description: "Kennzeichnet eine TNM T-, N- oder M-Kategorie, deren Feststellung erst im Rahmen einer Autopsie erfolgte (UICC a-Präfix). Als modifierExtension zu verwenden, da das a-Präfix die Interpretation des Kategorie-Wertes verändert."
 * insert PR_CS_VS_Version
+* insert OnkoCRMIExtension
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-a-praefix"
 * ^context.type = #element
 * ^context.expression = "Observation"

@@ -7,6 +7,7 @@ Description: "Value Set für LOINC ASA Physical Status Classification (generalis
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMIValueSet
 
 * include $LNC#LA28813-6 "ASA I"
 * include $LNC#LA28814-4 "ASA II"  

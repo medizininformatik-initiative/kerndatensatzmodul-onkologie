@@ -5,6 +5,7 @@ Title: "MII PR Onkologie Allgemeiner Leistungszustand nach Karnofsky"
 Description: "OBDS Beschreibung des allgemeines Leistungszustandes nach Karnofsky"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
 
 * meta.profile 0..* MS

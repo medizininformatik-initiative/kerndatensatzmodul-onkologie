@@ -7,6 +7,7 @@ Description: "Value Set für semantische Kodierung des oBDS-Abstand des Tumorran
 * ^experimental = true
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMIValueSet
 
 * include $LNC#81176-0 "Distance of tumor from circumferential resection margin [Length] in Specimen by Macroscopy"
 * include $LNC#81184-4 "Distance of tumor from circumferential resection margin [Length] by Microscopy"

@@ -5,6 +5,7 @@ Title: "MII PR Onkologie Studienteilnahme"
 Description: "Dieses Profil beschreibt Studienteilnahmen in der Onkologie"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
 
 * meta.profile 0..* MS

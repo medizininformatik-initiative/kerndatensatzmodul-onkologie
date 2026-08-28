@@ -7,5 +7,6 @@ Description: "Value Set für oBDS ASA-Klassifikation (ursprünglich KR9 aus Kolo
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMIValueSet
 
 * include codes from system https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-asa-obds

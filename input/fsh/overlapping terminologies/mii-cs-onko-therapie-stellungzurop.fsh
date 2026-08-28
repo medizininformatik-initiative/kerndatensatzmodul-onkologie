@@ -8,6 +8,7 @@ Description: "oBDS-spezifisches Codesystem für Klassifikation von Stellung zur 
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMICodeSystem
 * ^caseSensitive = true
 * ^content = #complete
 * #O "ohne Bezug zur operativen Therapie"

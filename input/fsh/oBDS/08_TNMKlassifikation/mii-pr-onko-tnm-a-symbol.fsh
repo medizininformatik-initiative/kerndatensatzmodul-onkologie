@@ -5,6 +5,7 @@ Title: "MII PR Onkologie TNM a-Symbol"
 Description: "DEPRECATED seit v2027: Die eigenständigen Symbol-Profile sind abgelöst — das a-Symbol wird als modifierExtension an den T-/N-/M-Kategorien erfasst (oBDS 8.3–8.5). Dieses Profil bleibt zum Lesen von Bestandsdaten definiert. — TNM-Klassifikation: TNM a-Symbol. Gibt an, ob die Klassifikation aus Anlass einer Autopsie erfolgte."
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #retired
 * meta.profile 0..* MS
 * encounter 0..1 MS

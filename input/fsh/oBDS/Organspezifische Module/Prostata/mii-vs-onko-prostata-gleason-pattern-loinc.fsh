@@ -8,6 +8,7 @@ Description: "Value Set der LOINC-Codes für Primär-, Sekundär- und Tertiär-G
 * ^experimental = true
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMIValueSet
 * include $LNC#44641-9 "Gleason pattern.primary in Prostate tumor"
 * include $LNC#44642-7 "Gleason pattern.secondary in Prostate tumor"
 * include $LNC#44643-5 "Gleason pattern.tertiary in Prostate tumor"

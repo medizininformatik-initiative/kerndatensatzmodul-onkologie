@@ -34,6 +34,7 @@ InstanceOf: CapabilityStatement
 Usage: #definition
 * url = "https://www.medizininformatik-initiative.de/fhir/modul-onko/CapabilityStatement/metadata"
 * insert Version
+* insert OnkoCRMICapabilityStatement
 * name = "MII_CPS_Onkology_CapabilityStatement"
 * title = "MII CPS Onkology CapabilityStatement"
 * status = #active

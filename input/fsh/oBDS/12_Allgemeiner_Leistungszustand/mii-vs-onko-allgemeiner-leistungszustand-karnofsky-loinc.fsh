@@ -10,6 +10,7 @@ Description: "LOINC-Answer-Codes für den Karnofsky Performance Status. Enumerie
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMIValueSet
 
 * $LNC#LA29175-9 "Normal; no complaints; no evidence of disease"
 * $LNC#LA29176-7 "Able to carry on normal activity; minor signs or symptoms of disease"

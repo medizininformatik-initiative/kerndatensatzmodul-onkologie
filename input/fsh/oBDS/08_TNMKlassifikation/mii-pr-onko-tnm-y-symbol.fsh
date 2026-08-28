@@ -5,6 +5,7 @@ Title: "MII PR Onkologie TNM y-Symbol"
 Description: "DEPRECATED seit v2027: Die eigenständigen Symbol-Profile sind abgelöst — das y-Symbol wird als modifierExtension an den T-/N-/M-Kategorien erfasst (oBDS 8.3–8.5). Dieses Profil bleibt zum Lesen von Bestandsdaten definiert. — TNM-Klassifikation: TNM y-Symbol. Gibt an, ob die Klassifikation während oder nach initialer multimodaler Therapie erfolgte."
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #retired
 * meta.profile 0..* MS
 * encounter 0..1 MS

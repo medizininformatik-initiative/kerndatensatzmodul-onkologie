@@ -8,6 +8,7 @@ Description: "Codes für Primärtumor Diagnosesicherung, d.h. die höchste errei
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMICodeSystem
 * ^caseSensitive = true
 * ^valueSet = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-primaertumor-diagnosesicherung"
 * ^content = #complete

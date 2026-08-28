@@ -8,6 +8,7 @@ Description: "oBDS-spezifisches Codesystem den Status der Studienteilnahme"
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMICodeSystem
 * ^caseSensitive = true
 * ^content = #complete
 * #J "Ja"

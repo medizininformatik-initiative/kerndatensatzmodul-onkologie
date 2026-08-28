@@ -5,6 +5,7 @@ Title: "MII PR Onko Prostata Operation"
 Description: "Prostata-spezifische Operation. Dieses Profil spezialisiert die allgemeine onkologische Operation für Prostata-spezifische Eingriffe mit einem required Binding zu einem ValueSet basierend auf SNOMED CT 118877007 und dessen Kindern."
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfileUK
 
 * code.coding[sct] 1..1 MS
 * code.coding[sct] from MII_VS_Onko_Prostata_Operation_SNOMEDCT (required)

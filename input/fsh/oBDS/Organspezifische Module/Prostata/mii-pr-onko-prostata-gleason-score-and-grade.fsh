@@ -5,6 +5,7 @@ Title: "MII PR Onkologie Prostata Gleason Grade Group"
 Description: "Dieses Profil beschreibt einen Gleasonscore in der Onkologie"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
 
 * meta.profile 0..* MS

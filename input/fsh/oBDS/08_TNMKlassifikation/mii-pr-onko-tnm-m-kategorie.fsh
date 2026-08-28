@@ -5,6 +5,7 @@ Title: "MII PR Onkologie TNM M-Kategorie"
 Description: "TNM-Klassifikation: TNM M-Kategorie. Fehlen oder Vorhandensein von Fernmetastasen, gemäß Tumorentität nach TNM."
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
 * obeys tnm-sct-uicc-konsistenz
 * meta.profile 0..* MS

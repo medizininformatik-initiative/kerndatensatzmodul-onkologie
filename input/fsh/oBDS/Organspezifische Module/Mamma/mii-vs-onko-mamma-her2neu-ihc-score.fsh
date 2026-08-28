@@ -10,6 +10,7 @@ Description: "HER2-Score der Immunhistochemie (0, 1+, 2+, 3+, Indeterminate). En
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMIValueSet
 
 * $LNC#LA6111-4 "0"
 * $LNC#LA11841-6 "1+"

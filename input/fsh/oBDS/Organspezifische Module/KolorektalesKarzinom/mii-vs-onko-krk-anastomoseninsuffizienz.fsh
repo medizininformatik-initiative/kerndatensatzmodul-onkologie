@@ -7,5 +7,6 @@ Description: "Value Set für die Bewertung der Anastomoseninsuffizienz beim Kolo
 * ^experimental = true
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMIValueSet
 
 * include codes from system MII_CS_Onko_KRK_Anastomoseninsuffizienz

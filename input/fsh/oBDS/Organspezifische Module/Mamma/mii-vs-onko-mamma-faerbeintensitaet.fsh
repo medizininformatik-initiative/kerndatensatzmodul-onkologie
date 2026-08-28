@@ -10,6 +10,7 @@ Description: "Färbeintensität der immunhistochemischen Rezeptorbestimmung (Wea
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMIValueSet
 
 * $LNC#LA13034-6 "Weak"
 * $LNC#LA6751-7 "Moderate"

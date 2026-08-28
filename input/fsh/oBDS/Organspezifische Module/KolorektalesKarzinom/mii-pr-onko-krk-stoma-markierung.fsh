@@ -5,6 +5,7 @@ Title: "MII PR Onkologie KRK Stoma-Markierung"
 Description: "Dieses Profil beschreibt die präoperative Markierung der geplanten Stoma-Position beim Kolorektalen Karzinom"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfileUK
 * ^status = #active
 
 * meta.profile 0..* MS

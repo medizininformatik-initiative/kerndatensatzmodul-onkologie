@@ -5,6 +5,7 @@ Title: "MII PR Onkologie Diagnose Primärtumor"
 Description: "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der primären hämatologisch-myeloneoplastischen Erkrankung) und basiert auf dem MII KDS Modul Diagnose."
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfileUK
 * ^status = #active
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
 * insert Translation(^title, de-DE, Onkologische Diagnose im Rahmen einer onkologischen Erkrankung)

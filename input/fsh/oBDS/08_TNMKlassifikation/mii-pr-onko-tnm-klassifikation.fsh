@@ -5,6 +5,7 @@ Title: "MII PR Onkologie TNM-Klassifikation"
 Description: "TNM-Klassifikation: Grouper-Profil für Komponenten der TNM-Klassifikation."
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
 * meta.profile 0..* MS
 * encounter 0..1 MS

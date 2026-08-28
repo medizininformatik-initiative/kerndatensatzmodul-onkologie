@@ -8,6 +8,7 @@ Description: "Value Set für Primär-, Sekundär- und Tertiär-Gleason Patterns 
 * ^experimental = true
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMIValueSet
 * insert SNOMEDCopyrightForVS
 * include $SCT#384994009 "Primary Gleason pattern (observable entity)"
 * include $SCT#384995005 "Secondary Gleason pattern (observable entity)"
@@ -24,6 +25,7 @@ Description: "Value Set für die histopathologische Bewertung von Prostata-Adeno
 * ^experimental = true
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMIValueSet
 * insert SNOMEDCopyrightForVS
 * include $SCT#369770006 "Gleason Pattern 1"
 * include $SCT#369771005 "Gleason Pattern 2"

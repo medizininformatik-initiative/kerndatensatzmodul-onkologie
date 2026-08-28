@@ -5,6 +5,7 @@ Title: "MII PR Onkologie Abstand Aboral"
 Description: "Dieses Profil beschreibt den minimalen Abstand des Tumorrandes zur aboralen Dissektionlinie im Kolorektalen Karzinom"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
 
 * meta.profile 0..* MS

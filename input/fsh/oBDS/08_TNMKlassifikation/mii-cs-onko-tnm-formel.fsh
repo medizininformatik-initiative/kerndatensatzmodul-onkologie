@@ -11,6 +11,7 @@ Description: "Codes für die Darstellung der zusammengeführten TNM-Gesamtformel
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMICodeSystem
 * ^caseSensitive = true
 * ^content = #complete
 * #tnm-formel "TNM-Formel" "Zusammengeführte TNM-Gesamtformel (z. B. 'ypT0 ypN0 cM0') als generierte Darstellung der gewinnenden Kategorie-Beobachtungen inklusive Präfixe."

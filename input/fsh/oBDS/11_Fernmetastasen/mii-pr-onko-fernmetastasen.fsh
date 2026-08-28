@@ -5,6 +5,7 @@ Title: "MII PR Onkologie Fernmetastasen"
 Description: "OBDS Beschreibung von Fernmetastasen (Lokalisation und Datum)"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
 
 * meta.profile 0..* MS

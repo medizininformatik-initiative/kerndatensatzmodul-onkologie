@@ -5,6 +5,7 @@ Description: "Systemische Therapie Intention"
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIExtension
 * ^context.type = #element
 * ^context.expression = "Procedure"
 

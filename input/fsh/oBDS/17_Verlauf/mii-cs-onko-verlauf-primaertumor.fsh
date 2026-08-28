@@ -8,6 +8,7 @@ Description: "oBDS-spezifisches Codesystem für die Beurteilung des Primärtumor
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMICodeSystem
 * ^caseSensitive = true
 * ^content = #complete
 * #K "kein Tumor nachweisbar"

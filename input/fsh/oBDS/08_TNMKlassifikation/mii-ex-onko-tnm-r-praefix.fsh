@@ -6,6 +6,7 @@ Id: mii-ex-onko-tnm-r-praefix
 Title: "MII EX Onkologie TNM r-Präfix"
 Description: "Kennzeichnet eine TNM T-, N- oder M-Kategorie, deren Feststellung zur Beurteilung eines Rezidivs erfolgte (UICC r-Präfix, z. B. rcT2). Als modifierExtension zu verwenden, da das r-Präfix die Interpretation des Kategorie-Wertes verändert."
 * insert PR_CS_VS_Version
+* insert OnkoCRMIExtension
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-r-praefix"
 * ^context.type = #element
 * ^context.expression = "Observation"

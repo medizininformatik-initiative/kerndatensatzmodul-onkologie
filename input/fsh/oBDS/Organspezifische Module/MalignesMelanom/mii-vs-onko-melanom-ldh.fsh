@@ -7,6 +7,7 @@ Description: "Value Set für Laktatdehydrogenase (LDH) Laborwerte beim Malignen 
 * ^experimental = true
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMIValueSet
 
 * $LNC#2532-0 "Lactate dehydrogenase [Enzymatic activity/volume] in Serum or Plasma"
 * $LNC#14804-9 "Lactate dehydrogenase [Enzymatic activity/volume] in Serum or Plasma by Lactate to pyruvate reaction"

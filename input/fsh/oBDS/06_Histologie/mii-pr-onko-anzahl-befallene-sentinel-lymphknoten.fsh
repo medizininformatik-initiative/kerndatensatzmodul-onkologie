@@ -5,6 +5,7 @@ Title: "MII PR Onkologie Anzahl der befallenen Sentinel-Lymphknoten"
 Description: "Histologie: Anzahl der befallenen Sentinel-Lymphknoten. Gibt an, wie viele Sentinel-Lymphknoten befallen sind."
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
 * meta.profile 0..* MS
 * encounter 0..1 MS

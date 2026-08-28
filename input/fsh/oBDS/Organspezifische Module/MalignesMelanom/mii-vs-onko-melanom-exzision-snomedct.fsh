@@ -8,6 +8,7 @@ Description: "Value Set für Melanom-spezifische Exzisionen basierend auf SNOMED
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMIValueSet
 * insert SNOMEDCopyrightForVS
 
 * $SCT#177281002 "Excision of melanoma (procedure)"

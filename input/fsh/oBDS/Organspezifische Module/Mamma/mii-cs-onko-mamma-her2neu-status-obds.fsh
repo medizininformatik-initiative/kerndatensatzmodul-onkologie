@@ -8,6 +8,7 @@ Description: "oBDS-spezifisches Codesystem für Her2neu Status gemäß oBDS Feld
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMICodeSystem
 * ^caseSensitive = true
 * ^content = #complete
 * #P "positiv" "Positiv: IHC +++ (Score 3+) oder IHC ++ (Score 2+) und ISH (FISH, CISH o. Ä.) positiv"

@@ -4,6 +4,7 @@ Title: "MII CS Onkologie Melanom Ulzeration"
 Description: "Codes für die Ulzeration beim Malignen Melanom der Haut nach oBDS"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMICodeSystem
 * ^status = #active
 * ^experimental = false
 * ^caseSensitive = true

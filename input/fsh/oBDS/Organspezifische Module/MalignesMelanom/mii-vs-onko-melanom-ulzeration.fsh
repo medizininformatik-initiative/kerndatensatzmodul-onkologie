@@ -4,6 +4,7 @@ Title: "MII VS Onkologie Melanom Ulzeration"
 Description: "Codes für die Ulzeration beim Malignen Melanom der Haut"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIValueSet
 * ^status = #active
 * ^experimental = false
 

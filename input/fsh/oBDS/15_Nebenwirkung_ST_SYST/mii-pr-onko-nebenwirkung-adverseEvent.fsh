@@ -5,6 +5,7 @@ Title: "MII PR Onkologie Nebenwirkung von Strahlentherapie und systemische Thera
 Description: "Dieses Profil beschreibt die Nebenwirkung von Strahlentherapie und systemische Therapie in der Onkologie."
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
 * obeys nebenwirkung-grad3-art
 

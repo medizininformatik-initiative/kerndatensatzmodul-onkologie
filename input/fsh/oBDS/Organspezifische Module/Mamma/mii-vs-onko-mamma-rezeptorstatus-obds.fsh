@@ -7,6 +7,7 @@ Description: "Value Set für oBDS-Rezeptorstatus Mamma"
 * ^experimental = true
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMIValueSet
 
 * include $LNC#LA6576-8 "Positive"
 * include $LNC#LA6577-6 "Negative"

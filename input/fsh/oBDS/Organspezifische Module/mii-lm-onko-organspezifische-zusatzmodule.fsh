@@ -5,6 +5,7 @@ Title: "MII LM Onkologie Organspezifische Zusatzmodule"
 Description: "Logisches Modell für die organspezifischen Zusatzmodule des oBDS. Feldnummern und Struktur folgen dem amtlichen oBDS-XML-Schema (oBDS v3.0.5, Modul_Mamma/Darm/Prostata/Malignes_Melanom/Allgemein) sowie dem Feldkatalog auf basisdatensatz.de."
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMILogicalModel
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/OrganspezifischeZusatzmodule"
 
 * Mamma 0..* BackboneElement "Mamma" "Organspezifisches Modul Mammakarzinom, oBDS M1–M8 (XSD Modul_Mamma_Typ)"
