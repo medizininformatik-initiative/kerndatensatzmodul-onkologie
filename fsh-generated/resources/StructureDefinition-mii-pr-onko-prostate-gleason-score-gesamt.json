@@ -19,6 +19,12 @@
   ],
   "description": "Dieses Profil beschreibt den Gleason-Gesamtscore als Summe aus primärem und sekundärem Pattern. Es wird verwendet, wenn im Befund nur das Score-Ergebnis dokumentiert ist und keine Aufschlüsselung in Primär-/Sekundär-Pattern und keine ISUP Grade Group vorliegt. Für die detaillierte Dokumentation mit Grade Group ist MII_PR_Onko_Prostata_Gleason_Grade_Group zu verwenden, für die einzelnen Patterns MII_PR_Onko_Prostata_Gleason_Pattern.",
   "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "oBDS",
+      "name": "Mapping FHIR zu oBDS"
+    }
+  ],
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
@@ -26,6 +32,17 @@
   "derivation": "constraint",
   "differential": {
     "element": [
+      {
+        "id": "Observation",
+        "path": "Observation",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "P1",
+            "comment": "Gleason-Score"
+          }
+        ]
+      },
       {
         "id": "Observation.meta.profile",
         "path": "Observation.meta.profile",
@@ -41,11 +58,66 @@
       {
         "id": "Observation.code.coding",
         "path": "Observation.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Observation.code.coding:snomed",
+        "path": "Observation.code.coding",
+        "sliceName": "snomed",
+        "min": 1,
+        "max": "1",
         "patternCoding": {
           "code": "372278000",
           "system": "http://snomed.info/sct",
           "display": "Gleason score (observable entity)"
-        }
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code.coding:snomed.system",
+        "path": "Observation.code.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code.coding:snomed.code",
+        "path": "Observation.code.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code.coding:loinc",
+        "path": "Observation.code.coding",
+        "sliceName": "loinc",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "code": "35266-6",
+          "system": "http://loinc.org",
+          "display": "Gleason score in Specimen Qualitative"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code.coding:loinc.system",
+        "path": "Observation.code.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code.coding:loinc.code",
+        "path": "Observation.code.coding.code",
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Observation.subject",
@@ -123,7 +195,14 @@
             "code": "dateTime"
           }
         ],
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "P3",
+            "comment": "Datum der Stanzen"
+          }
+        ]
       },
       {
         "id": "Observation.value[x]",
@@ -138,7 +217,14 @@
         "binding": {
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-score-gesamt"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "P1",
+            "comment": "Gleason-Score Gesamtwert (Summe aus primärem und sekundärem Pattern)"
+          }
+        ]
       },
       {
         "id": "Observation.value[x].coding",

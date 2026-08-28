@@ -21,10 +21,21 @@ Description: "Dieses Profil beschreibt den Gleason-Gesamtscore als Summe aus pri
 * code 1..1
 * code ^definition = "Gleason Score. Der Gleason Score ist ein histopathologisches Klassifikationssystem zur Beurteilung der Morphologie von Adenokarzinomen der Prostata und wird aus der Summe von primärem und sekundärem Pattern berechnet. Der Wertebereich reicht von 2 bis 10."
 * code ^short = "Gleason Score (Gesamt)"
-* code.coding = $SCT#372278000 "Gleason score (observable entity)"
-// alternativ * code.coding[+] = $LNC#35266-6 "Gleason score in Specimen Qualitative"
+// GH #259: SNOMED CT verpflichtend, LOINC optional als Zweitkodierung
+* code.coding ^slicing.discriminator.type = #pattern
+* code.coding ^slicing.discriminator.path = "system"
+* code.coding ^slicing.rules = #open
+* code.coding contains
+    snomed 1..1 MS and
+    loinc 0..1 MS
+* code.coding[snomed] = $SCT#372278000 "Gleason score (observable entity)"
+* code.coding[snomed].system 1.. MS
+* code.coding[snomed].code 1.. MS
+* code.coding[loinc] = $LNC#35266-6 "Gleason score in Specimen Qualitative"
+* code.coding[loinc].system 1.. MS
+* code.coding[loinc].code 1.. MS
 
-// P3.1 Gleason Score Gesamtwert
+// P1 Gleason Score Gesamtwert
 * value[x] MS
 * value[x] only CodeableConcept
 * valueCodeableConcept MS
@@ -42,3 +53,12 @@ Description: "Dieses Profil beschreibt den Gleason-Gesamtscore als Summe aus pri
 * insert Label(effectiveDateTime, Datum der Probenentnahme, Datum der Probenentnahme der Prostata-Biopise oder des Prostata-Exzisats )
 * insert Translation(effectiveDateTime ^short, de-DE, Datum der Probenentnahme)
 * insert Translation(effectiveDateTime ^definition, de-DE, Datum der Probenentnahme der Prostata-Biopise oder des Prostata-Exzisats)
+
+
+Mapping: FHIR-oBDS-ProstataGleasonScoreGesamt
+Id: oBDS
+Title: "Mapping FHIR zu oBDS"
+Source: MII_PR_Onko_Prostata_Gleason_Score_Gesamt
+* -> "P1" "Gleason-Score"
+* valueCodeableConcept -> "P1" "Gleason-Score Gesamtwert (Summe aus primärem und sekundärem Pattern)"
+* effectiveDateTime -> "P3" "Datum der Stanzen"

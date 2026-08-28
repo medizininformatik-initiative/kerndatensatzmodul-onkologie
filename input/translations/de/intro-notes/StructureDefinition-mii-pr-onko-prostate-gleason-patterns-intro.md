@@ -15,10 +15,10 @@ Die Gleason Patterns sind wichtige histopathologische Beobachtungen:
 ---
 
 ### oBDS-Kontext
-Gemäß oBDS P2 werden Gleason Patterns als primäres, sekundäres oder tertiäres Pattern dokumentiert. Die Pattern-Werte von 1-5 entsprechen der internationalen Gleason-Graduierung, wobei Pattern ab Grad 3 als maligne klassifiziert werden.
+Als Komponente von oBDS P1 (Gleason-Score) werden Gleason Patterns als primäres, sekundäres oder tertiäres Pattern dokumentiert. Die Pattern-Werte von 1-5 entsprechen der internationalen Gleason-Graduierung, wobei Pattern ab Grad 3 als maligne klassifiziert werden.
 
 ### Terminologie-Binding
-Das ValueSet für Gleason Pattern-Codes ist **required** gebunden, da die LOINC-Codes für Gleason-Patterns standardisiert sind.
+`Observation.code` ist gesliced (GitHub-Issue #259): Ein **SNOMED-CT-Coding ist verpflichtend** (1..1, required gebunden an das ValueSet der Primär-/Sekundär-/Tertiär-Pattern-Observables), ein **LOINC-Coding ist optional** (0..1, Codes 44641-9/44642-7/44643-5) als Zweitkodierung für die Interoperabilität mit LOINC-basierten Systemen (z.B. KDS-Modul Pathologie-Befund).
 
 #### ValueSet: MII VS Onko Prostata Gleason Patterns
 
