@@ -70,6 +70,42 @@ Note on serotonin: the 24-hour urine code was chosen (clinically, 5-HIAA in
 urine or serotonin in serum are also common) — the matrix question is part of
 the open clinical review.
 
+### ENCR Table 4: marker → permissible morphology
+
+**Table 4** of the ENCR recommendation *Basis of Diagnosis* lists the entities that
+may be recorded on the basis of elevated tumour markers (together with clinical
+investigations) when pathological confirmation is unavailable — each with the
+morphology to be assigned in that case. This is the clinical basis of oBDS
+basis-of-diagnosis code `4` "specific tumour markers". All ICD-O codes are verified
+against the MII terminology server (ICD-O-3 second revision 2019).
+
+| Entity | Tumour marker | ICD-O morphology |
+|---|---|---|
+| Kolorektales Karzinom | CEA | `8000/3` Maligne Neoplasie |
+| Hepatozelluläres Karzinom | AFP | `8170/3` Hepatozelluläres Karzinom o.n.A. |
+| Pankreas-, Gallenblasen-/Gallenwegskarzinom | CA 19-9 | `8000/3` Maligne Neoplasie |
+| Ovarialkarzinom | CA-125 | `8000/3` Maligne Neoplasie |
+| Prostatakarzinom | PSA | `8000/3` Maligne Neoplasie |
+| Chorionkarzinom der Plazenta | hCG | `9100/3` Chorionkarzinom o.n.A. |
+| Keimzelltumor | hCG oder AFP (± hCG) | `9064/3` Germinom bzw. `9065/3` Nichtseminomatöser Keimzelltumor |
+| Neuroendokriner Tumor | Chromogranin A | `8240/3` Neuroendokriner Tumor o.n.A. |
+| Funktionelle neuroendokrine Tumoren | Insulin, Glukagon, Gastrin, VIP, Somatostatin, Serotonin, ACTH | `8151/3`–`8158/3` (z. B. `8151/3` Insulinom o.n.A., `8158/3` ACTH-produzierender Tumor) |
+| Medulläres Schilddrüsenkarzinom | Calcitonin | `8345/3` Medulläres Schilddrüsenkarzinom |
+| Neuroblastom | Katecholaminabbauprodukte (HVA, VMA) | `9500/3` Neuroblastom o.n.A. |
+| Prolaktinom | Prolaktin | `8271/0` Laktotrophes Adenom |
+| Andere funktionelle Hypophysentumoren | STH, FSH, LH, ACTH, TSH | `8272/0` Hypophysenadenom o.n.A. |
+| Phäochromozytom | Katecholamine, Chromogranin A | `8700/3` Phäochromozytom o.n.A. |
+| Multiples Myelom | M-Protein (IgG, IgM, IgA) > 30 g/L | `9732/3` Plasmazellmyelom |
+| Morbus Waldenström | IgM | `9761/3` Waldenström-Makroglobulinämie |
+
+**Completeness:** every marker named in Table 4 carries a LOINC code in the core list
+above; the core list goes further (e.g. β-hCG listed separately).
+
+Source: Van Eycken L. et al., *2022 revised European recommendations for the coding of
+the basis of diagnosis of cancer cases in population-based cancer registries*,
+Front Oncol 2023;13:1250549 —
+[doi:10.3389/fonc.2023.1250549](https://doi.org/10.3389/fonc.2023.1250549).
+
 ### Extension via the LOINC-SNOMED Ontology
 
 The **LOINC-SNOMED ontology** (LOINC concepts as SNOMED CT observables in a
@@ -92,7 +128,7 @@ the repository at `input/examples-source/biomarker/biomarker-snomed-report.md`.
 ### Open Points
 
 - Clinical review of the core list (codes and entity assignments).
-- Completion of the LOINC-SNOMED anchors (12 markers outstanding).
+- Completion of the LOINC-SNOMED anchors (12 markers outstanding) — currently **blocked by infrastructure**: on the available servers the LOINC-SNOMED ontology is loaded only as a mapping module; its concepts resolve via `$lookup` but are expandable neither by text search nor by ECL. To be resumed once a server provides the module as a separate edition.
 - Decision on the binding location: a dedicated tumour marker profile in the
   module vs. guidance only with a reference to the KDS Laboratory module.
 - Serotonin: matrix (24-hour urine vs. serum) and possibly the addition of 5-HIAA.
