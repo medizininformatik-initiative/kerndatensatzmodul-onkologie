@@ -62,14 +62,14 @@ MII_MolGen_Variante <|-down- 23_Genetische_Variante
 23_Genetische_Variante --> "0..1" MII_Diagnose : focus
 
 
-object R4_ResearchStudy #EEEEEE
+object MII_Studie_Studie [[https://simplifier.net/medizininformatikinitiative-modulstudie]] #CCFFCC
 Map 24_Studienteilnahme #22FF22 {
     24.1 Studienteilnahme Status => Observation.valueCodeableConcept.coding.code
     24.2 Studienteilnahme Datum => Observation.effectiveDateTime
 }
 R4_Observation <|-down- 24_Studienteilnahme
 24_Studienteilnahme --> MII_Diagnose : focus[primaertumor]
-24_Studienteilnahme --> R4_ResearchStudy : focus[studie]
+24_Studienteilnahme --> MII_Studie_Studie : focus[studie]
 
 
 
@@ -85,7 +85,7 @@ legend right
 |<#FFCCFF>|Medication / MedicationRequest|
 |<#FF9999>|AdverseEvent|
 |<#44FFFF>|Specimen|
-|<#EEEEEE>|ResearchStudy|
+|<#CCFFCC>|ResearchStudy (Modul Forschungsvorhaben)|
 endlegend
 
 @enduml

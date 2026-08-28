@@ -69,8 +69,10 @@ Diagnose_Primaertumor <--- Onko_Strahlentherapie : reasonReference
 Diagnose_Primaertumor <--- Onko_SystemischeTherapie : reasonReference
 
 Diagnose_Primaertumor <--- Studienteilnahme : focus[primaertumor]
-object ResearchStudy #EEEEEE
-ResearchStudy <--- Studienteilnahme : focus[studie]
+rectangle "Modul Medizinisches Forschungsvorhaben" {
+    object MII_Studie_Studie #CCFFCC
+}
+MII_Studie_Studie <--- Studienteilnahme : focus[studie]
 
 Therapieplanung_Tumorkonferenz <-right-- Onko_Befund  : basedOn
 Evidenz_Erstdiagnose ---> Onko_Befund : entry.item
@@ -119,7 +121,8 @@ legend right
 |<#FFCCFF>|MedicationStatement / MedicationRequest|
 |<#FF9999>|AdverseEvent|
 |<#44FFFF>|Specimen|
-|<#EEEEEE>|List / ResearchStudy|
+|<#EEEEEE>|List|
+|<#CCFFCC>|ResearchStudy (Modul Forschungsvorhaben)|
 endlegend
 
 

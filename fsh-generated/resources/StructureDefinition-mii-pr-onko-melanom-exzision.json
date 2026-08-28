@@ -9,20 +9,12 @@
   },
   "extension": [
     {
-      "url": "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable",
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "system": "http://hl7.org/fhir/spdx-license",
-            "code": "CC-BY-4.0",
-            "display": "Creative Commons Attribution 4.0 International"
-          }
-        ]
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+      "valueCoding": {
+        "system": "http://hl7.org/fhir/version-algorithm",
+        "code": "semver",
+        "display": "SemVer"
       }
-    },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/artifact-usage",
-      "valueMarkdown": "Use this profile as the technical FHIR representation of the corresponding Medical Informatics Initiative logical model. The profile constrains a base FHIR resource for the MII module context by specifying how elements are used, which elements are required or not used, which extensions and terminology bindings apply, and how the resource maps to the module-specific content model. Implementers should produce and consume resource instances that conform to this profile when exchanging data for the corresponding MII module."
     },
     {
       "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
@@ -37,20 +29,24 @@
       "valueCodeableConcept": {
         "coding": [
           {
-            "code": "package",
             "system": "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes",
+            "code": "package",
             "display": "Package"
           }
         ]
       }
     },
     {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-usage",
+      "valueMarkdown": "Use this profile as the technical FHIR representation of the corresponding Medical Informatics Initiative logical model. The profile constrains a base FHIR resource for the MII module context by specifying how elements are used, which elements are required or not used, which extensions and terminology bindings apply, and how the resource maps to the module-specific content model. Implementers should produce and consume resource instances that conform to this profile when exchanging data for the corresponding MII module."
+    },
+    {
       "url": "http://hl7.org/fhir/StructureDefinition/artifact-topic",
       "valueCodeableConcept": {
         "coding": [
           {
-            "code": "C3262",
-            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
+            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+            "code": "C3262"
           }
         ]
       }
