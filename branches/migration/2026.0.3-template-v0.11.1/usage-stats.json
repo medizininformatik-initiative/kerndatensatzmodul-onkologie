@@ -291,6 +291,10 @@
   "profiles": {
     "Observation": [
       {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumormarker",
+        "title": "MII PR Onkologie Tumormarker"
+      },
+      {
         "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf",
         "title": "MII PR Onkologie Verlauf"
       },
@@ -486,6 +490,9 @@
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
       "StructureDefinition.snapshot.element"
     ],
+    "http://hl7.org/fhir/StructureDefinition/extension-quantity-translation": [
+      "Observation.value[x]"
+    ],
     "http://hl7.org/fhir/StructureDefinition/observation-secondaryFinding": [
       "Observation"
     ],
@@ -494,6 +501,9 @@
     ],
     "http://hl7.org/fhir/StructureDefinition/procedure-method": [
       "Procedure"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/quantity-precision": [
+      "Observation.value[x].value"
     ],
     "http://hl7.org/fhir/StructureDefinition/regex": [
       "StructureDefinition.snapshot.element.type"
@@ -561,6 +571,12 @@
     ],
     "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/repeat-motif-order": [
       "Observation.component"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/InterpretationsbeeinflussendeEigenschaft": [
+      "Observation"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/QuelleKlinischesBezugsdatum": [
+      "Observation.effective[x]"
     ],
     "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht": [
       "Procedure"

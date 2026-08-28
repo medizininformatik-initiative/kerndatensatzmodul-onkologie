@@ -22,7 +22,7 @@
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-mii-to-mvgenomseq-condition-diagnose-primaertumor",
   "version" : "2026.0.3",
   "status" : "draft",
-  "date" : "2026-08-28T14:57:41+00:00",
+  "date" : "2026-08-28T15:24:04+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

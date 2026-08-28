@@ -84,14 +84,30 @@ Source: Van Eycken L. et al., **2022 revised European recommendations for the co
 
 The **LOINC-SNOMED ontology** (LOINC concepts as SNOMED CT observables in a dedicated extension module) makes it possible, for each marker, to navigate by subsumption from the general "Measurement of …" observable to all more specific variants (method, unit, specimen material) — and thus to form implicit, hierarchically defined ValueSets instead of maintaining individual codes.
 
-For **16 of the 28 markers** the observable anchor has already been verified (e.g. CEA → **Measurement of carcinoembryonic antigen in serum or plasma** `723431010000109` with mass/substance/arbitrary concentration children). For the remaining ones (β-hCG, gastrin, calcitonin, HVA, VMA, ACTH, FSH, LH, TSH, M protein, IgA, IgM) the anchor is still outstanding — the initial search returned either no hits or recognisably wrong ones (for instance the CRF observable instead of the ACTH one), which were discarded.
+For **23 of the 28 markers** the observable anchor has been verified (e.g. CEA → **Measurement of carcinoembryonic antigen in serum or plasma** `723431010000109` with mass/substance/arbitrary concentration children). For the remaining five (gastrin, calcitonin, M protein, IgA, IgM) no grouper concept exists — see the addendum below.
 
 The complete curation report with all anchors and child concepts is located in the repository at `input/examples-source/biomarker/biomarker-snomed-report.md`.
+
+**Addendum 2026-08-28.** For seven of the twelve previously open markers the anchor has now been determined and verified (Snowstorm branch `MAIN/SNOMEDCT-LOINC`, ECL over `<<363787002 |Observable entity|`):
+
+| | | | | |
+| :--- | :--- | :--- | :--- | :--- |
+| beta-hCG | `21198-7` | `727021010000108` | Measurement of human chorionic gonadotropin beta subunit in serum or plasma | 4 |
+| HVA | `2436-4` | `732491010000101` | Measurement of homovanillic acid in urine | 10 |
+| VMA | `3122-9` | `731001010000107` | Measurement of vanillylmandelic acid in urine | 11 |
+| ACTH | `2141-0` | `721541010000101` | Measurement of adrenocorticotropic hormone in plasma | 200 |
+| FSH | `15067-2` | `726901010000101` | Measurement of pituitary follicle stimulating hormone in serum or plasma | 100 |
+| LH | `10501-5` | `724461010000100` | Measurement of pituitary luteinizing hormone in serum or plasma | 96 |
+| TSH | `3016-3` | `727041010000103` | Measurement of thyrotrophin in serum or plasma | 79 |
+
+For **gastrin, calcitonin, M-protein, IgA and IgM** the LOINC-SNOMED ontology holds **no "Measurement of …" grouper** for the serum/plasma determination in question — only the concrete measurands (mass/substance concentration …) are modelled there. For those markers navigation via the general LOINC code remains the only option; a grouper would have to be requested from SNOMED International.
+
+**Methodological note:** the LOINC-SNOMED concepts live in a separate Snowstorm branch (`MAIN/SNOMEDCT-LOINC`) and are **not** discoverable through the standard FHIR expansion of the International Edition. A naive text search is also reliably misleading — it returns **corticotropin releasing factor** for ACTH and the **thyrotropin receptor antibody** for TSH. The anchors listed here were cross-checked individually via FSN and child concepts.
 
 ### Open Points
 
 * Clinical review of the core list (codes and entity assignments).
-* Completion of the LOINC-SNOMED anchors (12 markers outstanding) — currently **blocked by infrastructure**: on the available servers the LOINC-SNOMED ontology is loaded only as a mapping module; its concepts resolve via `$lookup` but are expandable neither by text search nor by ECL. To be resumed once a server provides the module as a separate edition.
-* Decision on the binding location: a dedicated tumour marker profile in the module vs. guidance only with a reference to the KDS Laboratory module.
+* LOINC-SNOMED anchors: 23 of 28 verified; for 5 markers no grouper exists (a request to SNOMED International would be required).
+* Decision on the binding location **decided (2026-08-28):** laboratory values are carried by the CDS module Laboratory Report. This module provides the profile [`MII_PR_Onko_Tumormarker`](StructureDefinition-mii-pr-onko-tumormarker.md) — a derivation of `MII_PR_Labor_Laboruntersuchung` that binds `Observation.code` extensibly to the union list [`mii-vs-onko-tumormarker-loinc`](ValueSet-mii-vs-onko-tumormarker-loinc.md) and adds the link to the oncological diagnosis (`focus`).
 * Serotonin: matrix (24-hour urine vs. serum) and possibly the addition of 5-HIAA.
 

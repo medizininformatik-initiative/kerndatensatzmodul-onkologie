@@ -138,6 +138,7 @@ Diese definieren Einschränkungen für FHIR-Ressourcen für Systeme, die mit dem
 | [ MII PR Onkologie Tod  ](StructureDefinition-mii-pr-onko-tod.md) | Tumorbedingter Tod |
 | [ MII PR Onkologie Tumorgröße  ](StructureDefinition-mii-pr-onko-tumorgroesse.md) | Tumorgröße in mm. Gibt die Größe des Tumors in der größten Dimension an. Basierend auf dem oBDS-Modul Mamma. |
 | [ MII PR Onkologie Tumorkonferenz  ](StructureDefinition-mii-pr-onko-tumorkonferenz.md) | Dieses Profil beschreibt die Tumorkonferenz und die Therapieempfehlungen |
+| [ MII PR Onkologie Tumormarker  ](StructureDefinition-mii-pr-onko-tumormarker.md) | Tumormarker-Bestimmung im Rahmen einer onkologischen Erkrankung. Das Profil leitet vom Laboruntersuchungs-Profil des KDS-Moduls Laborbefund ab und schraenkt den LOINC-Code auf die kuratierte Tumormarker-Liste ein (extensible). Fachlicher Hintergrund und die Zuordnung Marker zu zulaessiger ICD-O-Morphologie nach ENCR Table 4: siehe IG-Seite Tumormarker. |
 | [ MII PR Onkologie Verlauf  ](StructureDefinition-mii-pr-onko-verlauf.md) | Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. auf andere verlaufsrelevante diagnostische Maßnahmen |
 | [ MII PR Onkologie Weitere Klassifikationen  ](StructureDefinition-mii-pr-onko-weitere-klassifikationen.md) | Weitere Tumor Staging Klassifikation neben TMN (Hämatoonkologische und sonstige Klassifikationen) |
 
@@ -286,6 +287,7 @@ Diese definieren Wertemengen, die von Systemen verwendet werden, die mit dem Imp
 | [ MII VS Onkologie Therapieempfehlung Typ  ](ValueSet-mii-vs-onko-therapieempfehlung-typ.md) | oBDS-spezifisches ValueSet für den Therapieempfehlungstyp |
 | [ MII VS Onkologie Therapieplanung Typ  ](ValueSet-mii-vs-onko-therapieplanung-typ.md) | oBDS-spezifisches ValueSet für den Therapieplanungstyp |
 | [ MII VS Onkologie Tod  ](ValueSet-mii-vs-onko-tod.md) | Value Set für oBDS-Codes turmorbedingter Tod |
+| [ MII VS Onkologie Tumormarker LOINC  ](ValueSet-mii-vs-onko-tumormarker-loinc.md) | Kuratierte LOINC-Codes der in der Onkologie gebraeuchlichen Tumormarker (Serum-/Plasma- bzw. Urin-Bestimmungen). Verwendung als Auswahlliste fuer Observation.code im Profil MII_PR_Onko_Tumormarker (Ableitung des KDS-Moduls Laborbefund). Die Liste ist nicht abschliessend gemeint: Weitere Laborwerte werden ueber das KDS-Modul Laborbefund abgebildet. |
 | [ MII VS Onkologie Verlauf Fernmetastasen  ](ValueSet-mii-vs-onko-verlauf-fernmetastasen.md) | oBDS-spezifisches ValueSet für die Beurteilung der Fernmetastasen im Behandlungsverlauf |
 | [ MII VS Onkologie Verlauf Gesamtbeurteilung  ](ValueSet-mii-vs-onko-verlauf-gesamtbeurteilung.md) | oBDS-spezifisches ValueSet für die Gesamtbeurteilung im Behandlungsverlauf |
 | [ MII VS Onkologie Verlauf Lymphknoten  ](ValueSet-mii-vs-onko-verlauf-lymphknoten.md) | oBDS-spezifisches ValueSet für die Beurteilung der Lymphknoten im Behandlungsverlauf |
