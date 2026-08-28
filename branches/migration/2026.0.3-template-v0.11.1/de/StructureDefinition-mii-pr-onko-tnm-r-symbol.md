@@ -9,10 +9,12 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-r-symbol | *Version*:2026.0.3 |
-| Active Stand: 2026-08-28 | *Maschinenlesbarer Name*:MII_PR_Onko_TNM_r_Symbol |
+| Retired Stand: 2026-08-28 | *Maschinenlesbarer Name*:MII_PR_Onko_TNM_r_Symbol |
 
  
-TNM-Klassifikation: TNM r-Symbol. Gibt an, ob die Klassifikation ein Rezidiv beurteilt. 
+DEPRECATED seit v2027: Die eigenständigen Symbol-Profile sind abgelöst — das r-Symbol wird als modifierExtension an den T-/N-/M-Kategorien erfasst (oBDS 8.3–8.5). Dieses Profil bleibt zum Lesen von Bestandsdaten definiert. — TNM-Klassifikation: TNM r-Symbol. Gibt an, ob die Klassifikation ein Rezidiv beurteilt. 
+
+> **DEPRECATED (v2027):** Dieses eigenständige Symbol-Profil ist abgelöst — r-Symbole werden als **modifierExtension an den T-/N-/M-Kategorien** erfasst (oBDS 8.3–8.5). Das Profil bleibt zum Lesen von Bestandsdaten definiert (Status: retired).
 
 Dieses Profil bildet das r-Symbol einer TNM-Klassifikation ab. Mit dem r-Symbol wird die Beurteilung eines Rezidivs kodiert.
 
@@ -105,8 +107,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "version" : "2026.0.3",
   "name" : "MII_PR_Onko_TNM_r_Symbol",
   "title" : "MII PR Onkologie TNM r-Symbol",
-  "status" : "active",
-  "date" : "2026-08-28T06:31:49+00:00",
+  "status" : "retired",
+  "date" : "2026-08-28T06:49:57+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -115,7 +117,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "value" : "https://www.medizininformatik-initiative.de/"
     }]
   }],
-  "description" : "TNM-Klassifikation: TNM r-Symbol. Gibt an, ob die Klassifikation ein Rezidiv beurteilt.",
+  "description" : "DEPRECATED seit v2027: Die eigenständigen Symbol-Profile sind abgelöst — das r-Symbol wird als modifierExtension an den T-/N-/M-Kategorien erfasst (oBDS 8.3–8.5). Dieses Profil bleibt zum Lesen von Bestandsdaten definiert. — TNM-Klassifikation: TNM r-Symbol. Gibt an, ob die Klassifikation ein Rezidiv beurteilt.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

@@ -93,7 +93,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-allge
   "name" : "MII_PR_Onko_Allgemeiner_Leistungszustand_ECOG",
   "title" : "MII PR Onkologie Allgemeiner Leistungszustand ECOG",
   "status" : "active",
-  "date" : "2026-08-28T06:31:49+00:00",
+  "date" : "2026-08-28T06:49:57+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -231,6 +231,15 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-allge
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Patient"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.focus",
+      "path" : "Observation.focus",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"]
       }],
       "mustSupport" : true
     },

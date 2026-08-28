@@ -366,7 +366,7 @@ MII PR Onkologie TNM y-Symbol
 
   </h2>
 
-  <table class="colsi">
+  <table class="colsdp">
 
     <tr>
       <td colspan="4"><i>Offizielle URL</i>: <span class="copy-text">https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-y-symbol<button title="Klicken zum Kopieren der URL" class="btn-copy" data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-y-symbol"/></span>
@@ -386,7 +386,7 @@ MII PR Onkologie TNM y-Symbol
 
       <td colspan="4">
         
-          Active
+          Retired
           
 
             Stand: 
@@ -407,7 +407,7 @@ MII PR Onkologie TNM y-Symbol
   </table>
 
 <p>
-<p>TNM-Klassifikation: TNM y-Symbol. Gibt an, ob die Klassifikation während oder nach initialer multimodaler Therapie erfolgte.</p>
+<p>DEPRECATED seit v2027: Die eigenständigen Symbol-Profile sind abgelöst — das y-Symbol wird als modifierExtension an den T-/N-/M-Kategorien erfasst (oBDS 8.3–8.5). Dieses Profil bleibt zum Lesen von Bestandsdaten definiert. — TNM-Klassifikation: TNM y-Symbol. Gibt an, ob die Klassifikation während oder nach initialer multimodaler Therapie erfolgte.</p>
 
 </p>
 
@@ -418,6 +418,10 @@ MII PR Onkologie TNM y-Symbol
 
 
 <div style="display:inline-block" markdown="1">
+
+<blockquote class="ig-highlight ig-highlight-grey">
+  <p><strong>DEPRECATED (v2027):</strong> Dieses eigenständige Symbol-Profil ist abgelöst — y-Symbole werden als <strong>modifierExtension an den T-/N-/M-Kategorien</strong> erfasst (oBDS 8.3–8.5). Das Profil bleibt zum Lesen von Bestandsdaten definiert (Status: retired).</p>
+</blockquote>
 
 <p>Dieses Profil beschreibt die y-Kategorie der TNM-Klassifikation. Die y-Kategorie kodiert, ob die Klassifikation während oder nach initialer multimodaler Therapie erfolgte.</p>
 
@@ -611,7 +615,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Symbol in syntax defined by the system<br/><span style="font-weight:bold">Fixed Value: </span><span style="color: darkgreen">421755005</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 9ebdfbd8-0313-4c3e-a36a-f4e2582c85cc
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 6c3dd7c9-d0e2-4a27-84ac-1e8713222682
 document.getElementById('cbmii-pr-onko-tnm-y-symbolK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-tnm-y-symbolK'), 'binding', document.getElementById('cbmii-pr-onko-tnm-y-symbolK-binding').checked, document.getElementById('ppmii-pr-onko-tnm-y-symbolK'));
 document.getElementById('cbmii-pr-onko-tnm-y-symbolK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -889,7 +893,7 @@ filterDesc(document.getElementById('mii-pr-onko-tnm-y-symbolK'), 'obligation', d
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Symbol in syntax defined by the system</span><br/><span style="font-weight:bold">Fixed Value: </span><span style="color: darkgreen">421755005</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 9ebdfbd8-0313-4c3e-a36a-f4e2582c85cc
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 6c3dd7c9-d0e2-4a27-84ac-1e8713222682
 document.getElementById('cbmii-pr-onko-tnm-y-symbolD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-tnm-y-symbolD'), 'binding', document.getElementById('cbmii-pr-onko-tnm-y-symbolD-binding').checked, document.getElementById('ppmii-pr-onko-tnm-y-symbolD'));
 document.getElementById('cbmii-pr-onko-tnm-y-symbolD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1412,7 +1416,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">See <a href="http://hl7.org/fhir/R4/observation.html#Observation.referenceRange" title="Observation.referenceRange">referenceRange (Observation)</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Provides guide for interpretation of component result<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 9ebdfbd8-0313-4c3e-a36a-f4e2582c85cc
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 6c3dd7c9-d0e2-4a27-84ac-1e8713222682
 document.getElementById('cbmii-pr-onko-tnm-y-symbolS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-tnm-y-symbolS'), 'binding', document.getElementById('cbmii-pr-onko-tnm-y-symbolS-binding').checked, document.getElementById('ppmii-pr-onko-tnm-y-symbolS'));
 document.getElementById('cbmii-pr-onko-tnm-y-symbolS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2094,7 +2098,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Symbol in syntax defined by the system<br/><span style="font-weight:bold">Fixed Value: </span><span style="color: darkgreen">421755005</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 9ebdfbd8-0313-4c3e-a36a-f4e2582c85cc
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 6c3dd7c9-d0e2-4a27-84ac-1e8713222682
 document.getElementById('cbmii-pr-onko-tnm-y-symbolKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-tnm-y-symbolKA'), 'binding', document.getElementById('cbmii-pr-onko-tnm-y-symbolKA-binding').checked, document.getElementById('ppmii-pr-onko-tnm-y-symbolKA'));
 document.getElementById('cbmii-pr-onko-tnm-y-symbolKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2371,7 +2375,7 @@ filterDesc(document.getElementById('mii-pr-onko-tnm-y-symbolKA'), 'obligation', 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Symbol in syntax defined by the system</span><br/><span style="font-weight:bold">Fixed Value: </span><span style="color: darkgreen">421755005</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 9ebdfbd8-0313-4c3e-a36a-f4e2582c85cc
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 6c3dd7c9-d0e2-4a27-84ac-1e8713222682
 document.getElementById('cbmii-pr-onko-tnm-y-symbolDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-tnm-y-symbolDA'), 'binding', document.getElementById('cbmii-pr-onko-tnm-y-symbolDA-binding').checked, document.getElementById('ppmii-pr-onko-tnm-y-symbolDA'));
 document.getElementById('cbmii-pr-onko-tnm-y-symbolDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2891,7 +2895,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">See <a href="http://hl7.org/fhir/R4/observation.html#Observation.referenceRange" title="Observation.referenceRange">referenceRange (Observation)</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Provides guide for interpretation of component result<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 9ebdfbd8-0313-4c3e-a36a-f4e2582c85cc
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 6c3dd7c9-d0e2-4a27-84ac-1e8713222682
 document.getElementById('cbmii-pr-onko-tnm-y-symbolSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-tnm-y-symbolSA'), 'binding', document.getElementById('cbmii-pr-onko-tnm-y-symbolSA-binding').checked, document.getElementById('ppmii-pr-onko-tnm-y-symbolSA'));
 document.getElementById('cbmii-pr-onko-tnm-y-symbolSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -3466,7 +3470,7 @@ Summary
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.onkologie#2026.0.3 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Fri, Aug 28, 2026 06:31+0000">2026-08-28</span>
+          Erstellt <span title="Fri, Aug 28, 2026 06:49+0000">2026-08-28</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

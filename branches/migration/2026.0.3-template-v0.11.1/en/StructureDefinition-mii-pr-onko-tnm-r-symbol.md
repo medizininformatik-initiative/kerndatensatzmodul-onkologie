@@ -9,10 +9,12 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-r-symbol | *Version*:2026.0.3 |
-| Active as of 2026-08-28 | *Computable Name*:MII_PR_Onko_TNM_r_Symbol |
+| Retired as of 2026-08-28 | *Computable Name*:MII_PR_Onko_TNM_r_Symbol |
 
  
-TNM-Klassifikation: TNM r-Symbol. Gibt an, ob die Klassifikation ein Rezidiv beurteilt. 
+DEPRECATED seit v2027: Die eigenständigen Symbol-Profile sind abgelöst — das r-Symbol wird als modifierExtension an den T-/N-/M-Kategorien erfasst (oBDS 8.3–8.5). Dieses Profil bleibt zum Lesen von Bestandsdaten definiert. — TNM-Klassifikation: TNM r-Symbol. Gibt an, ob die Klassifikation ein Rezidiv beurteilt. 
+
+> **DEPRECATED (v2027):** This standalone symbol profile has been superseded — r symbols are recorded as a **modifierExtension on the T/N/M categories** (oBDS 8.3–8.5). The profile remains defined for reading legacy data (status: retired).
 
 This profile represents the r symbol of a TNM classification. The r symbol codes the assessment of a recurrence.
 
@@ -43,8 +45,8 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tnm-r
   "version" : "2026.0.3",
   "name" : "MII_PR_Onko_TNM_r_Symbol",
   "title" : "MII PR Onkologie TNM r-Symbol",
-  "status" : "active",
-  "date" : "2026-08-28T06:31:49+00:00",
+  "status" : "retired",
+  "date" : "2026-08-28T06:49:57+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -53,7 +55,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tnm-r
       "value" : "https://www.medizininformatik-initiative.de/"
     }]
   }],
-  "description" : "TNM-Klassifikation: TNM r-Symbol. Gibt an, ob die Klassifikation ein Rezidiv beurteilt.",
+  "description" : "DEPRECATED seit v2027: Die eigenständigen Symbol-Profile sind abgelöst — das r-Symbol wird als modifierExtension an den T-/N-/M-Kategorien erfasst (oBDS 8.3–8.5). Dieses Profil bleibt zum Lesen von Bestandsdaten definiert. — TNM-Klassifikation: TNM r-Symbol. Gibt an, ob die Klassifikation ein Rezidiv beurteilt.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

@@ -9,10 +9,12 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-a-symbol | *Version*:2026.0.3 |
-| Active Stand: 2026-08-28 | *Maschinenlesbarer Name*:MII_PR_Onko_TNM_a_Symbol |
+| Retired Stand: 2026-08-28 | *Maschinenlesbarer Name*:MII_PR_Onko_TNM_a_Symbol |
 
  
-TNM-Klassifikation: TNM a-Symbol. Gibt an, ob die Klassifikation aus Anlass einer Autopsie erfolgte. 
+DEPRECATED seit v2027: Die eigenständigen Symbol-Profile sind abgelöst — das a-Symbol wird als modifierExtension an den T-/N-/M-Kategorien erfasst (oBDS 8.3–8.5). Dieses Profil bleibt zum Lesen von Bestandsdaten definiert. — TNM-Klassifikation: TNM a-Symbol. Gibt an, ob die Klassifikation aus Anlass einer Autopsie erfolgte. 
+
+> **DEPRECATED (v2027):** Dieses eigenständige Symbol-Profil ist abgelöst — a-Symbole werden als **modifierExtension an den T-/N-/M-Kategorien** erfasst (oBDS 8.3–8.5). Das Profil bleibt zum Lesen von Bestandsdaten definiert (Status: retired).
 
 Dieses Profil bildet das a-Symbol einer TNM-Klassifikation ab.
 
@@ -107,8 +109,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "version" : "2026.0.3",
   "name" : "MII_PR_Onko_TNM_a_Symbol",
   "title" : "MII PR Onkologie TNM a-Symbol",
-  "status" : "active",
-  "date" : "2026-08-28T06:31:49+00:00",
+  "status" : "retired",
+  "date" : "2026-08-28T06:49:57+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -117,7 +119,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "value" : "https://www.medizininformatik-initiative.de/"
     }]
   }],
-  "description" : "TNM-Klassifikation: TNM a-Symbol. Gibt an, ob die Klassifikation aus Anlass einer Autopsie erfolgte.",
+  "description" : "DEPRECATED seit v2027: Die eigenständigen Symbol-Profile sind abgelöst — das a-Symbol wird als modifierExtension an den T-/N-/M-Kategorien erfasst (oBDS 8.3–8.5). Dieses Profil bleibt zum Lesen von Bestandsdaten definiert. — TNM-Klassifikation: TNM a-Symbol. Gibt an, ob die Klassifikation aus Anlass einer Autopsie erfolgte.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

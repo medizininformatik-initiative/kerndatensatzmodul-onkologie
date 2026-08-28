@@ -9,10 +9,12 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-y-symbol | *Version*:2026.0.3 |
-| Active as of 2026-08-28 | *Computable Name*:MII_PR_Onko_TNM_y_Symbol |
+| Retired as of 2026-08-28 | *Computable Name*:MII_PR_Onko_TNM_y_Symbol |
 
  
-TNM-Klassifikation: TNM y-Symbol. Gibt an, ob die Klassifikation während oder nach initialer multimodaler Therapie erfolgte. 
+DEPRECATED seit v2027: Die eigenständigen Symbol-Profile sind abgelöst — das y-Symbol wird als modifierExtension an den T-/N-/M-Kategorien erfasst (oBDS 8.3–8.5). Dieses Profil bleibt zum Lesen von Bestandsdaten definiert. — TNM-Klassifikation: TNM y-Symbol. Gibt an, ob die Klassifikation während oder nach initialer multimodaler Therapie erfolgte. 
+
+> **DEPRECATED (v2027):** This standalone symbol profile has been superseded — y symbols are recorded as a **modifierExtension on the T/N/M categories** (oBDS 8.3–8.5). The profile remains defined for reading legacy data (status: retired).
 
 This profile describes the y category of the TNM classification. The y category codes whether the classification took place during or after initial multimodal therapy.
 
@@ -44,8 +46,8 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tnm-y
   "version" : "2026.0.3",
   "name" : "MII_PR_Onko_TNM_y_Symbol",
   "title" : "MII PR Onkologie TNM y-Symbol",
-  "status" : "active",
-  "date" : "2026-08-28T06:31:49+00:00",
+  "status" : "retired",
+  "date" : "2026-08-28T06:49:57+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -54,7 +56,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tnm-y
       "value" : "https://www.medizininformatik-initiative.de/"
     }]
   }],
-  "description" : "TNM-Klassifikation: TNM y-Symbol. Gibt an, ob die Klassifikation während oder nach initialer multimodaler Therapie erfolgte.",
+  "description" : "DEPRECATED seit v2027: Die eigenständigen Symbol-Profile sind abgelöst — das y-Symbol wird als modifierExtension an den T-/N-/M-Kategorien erfasst (oBDS 8.3–8.5). Dieses Profil bleibt zum Lesen von Bestandsdaten definiert. — TNM-Klassifikation: TNM y-Symbol. Gibt an, ob die Klassifikation während oder nach initialer multimodaler Therapie erfolgte.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

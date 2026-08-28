@@ -100,8 +100,14 @@ Diese Struktur ist abgeleitet von [Observation](http://hl7.org/fhir/R4/observati
 ** Summary **
 
 Mandatory: 10 elements(4 nested mandatory elements)
- Must-Support: 14 elements
+ Must-Support: 15 elements
  Fixed: 1 element
+
+**Structures**
+
+This structure refers to these other structures:
+
+* [MII PR Onkologie Diagnose Primärtumor (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)](StructureDefinition-mii-pr-onko-diagnose-primaertumor.md)
 
 **Slices**
 
@@ -133,8 +139,14 @@ Diese Struktur ist abgeleitet von [Observation](http://hl7.org/fhir/R4/observati
 ** Summary **
 
 Mandatory: 10 elements(4 nested mandatory elements)
- Must-Support: 14 elements
+ Must-Support: 15 elements
  Fixed: 1 element
+
+**Structures**
+
+This structure refers to these other structures:
+
+* [MII PR Onkologie Diagnose Primärtumor (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)](StructureDefinition-mii-pr-onko-diagnose-primaertumor.md)
 
 **Slices**
 
@@ -160,7 +172,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_Allgemeiner_Leistungszustand_Karnofsky",
   "title" : "MII PR Onkologie Allgemeiner Leistungszustand nach Karnofsky",
   "status" : "active",
-  "date" : "2026-08-28T06:31:49+00:00",
+  "date" : "2026-08-28T06:49:57+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -298,6 +310,15 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Patient"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.focus",
+      "path" : "Observation.focus",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"]
       }],
       "mustSupport" : true
     },
