@@ -25,14 +25,14 @@ Terminologie-Seiten.
 
 ### Überblick: Zuordnungen je Quellsystem
 
-{% sql %}{% endraw %}
+{% sql SELECT CASE WHEN SourceSystem LIKE '%modul-onko/CodeSystem/%' THEN 'MII Onko: ' || replace(SourceSystem, 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-', '') WHEN SourceSystem = 'https://www.meddra.org' THEN 'MedDRA (CTCAE v4.03)' WHEN SourceSystem LIKE '%uicc.org%' THEN 'UICC TNM' WHEN SourceSystem LIKE '%bfarm/atc%' THEN 'ATC (BfArM)' WHEN SourceSystem LIKE '%icd-o-3%' THEN 'ICD-O-3' ELSE SourceSystem END AS Quellsystem, count(*) AS Mappings, sum(CASE WHEN Relationship = 'equivalent' THEN 1 ELSE 0 END) AS Aequivalent, sum(CASE WHEN Relationship = 'source-is-narrower-than-target' THEN 1 ELSE 0 END) AS Enger, sum(CASE WHEN Relationship = 'source-is-broader-than-target' THEN 1 ELSE 0 END) AS Weiter FROM ConceptMappings GROUP BY Quellsystem ORDER BY Mappings DESC %}
 
 ### oBDS-CodeSystems → SNOMED CT / LOINC
 
 Die semantische Annotation der oBDS-Werteslisten. Quellcodes sind die modul-eigenen
 CodeSystems (`mii-cs-onko-*`), Ziele sind internationale Terminologien.
 
-{% sql SELECT CASE WHEN SourceSystem LIKE '%modul-onko/CodeSystem/%' THEN 'MII Onko: ' || replace(SourceSystem, 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-', '') WHEN SourceSystem = 'https://www.meddra.org' THEN 'MedDRA (CTCAE v4.03)' WHEN SourceSystem LIKE '%uicc.org%' THEN 'UICC TNM' WHEN SourceSystem LIKE '%bfarm/atc%' THEN 'ATC (BfArM)' WHEN SourceSystem LIKE '%icd-o-3%' THEN 'ICD-O-3' ELSE SourceSystem END AS Quellsystem, count(*) AS Mappings, sum(CASE WHEN Relationship = 'equivalent' THEN 1 ELSE 0 END) AS Aequivalent, sum(CASE WHEN Relationship = 'source-is-narrower-than-target' THEN 1 ELSE 0 END) AS Enger, sum(CASE WHEN Relationship = 'source-is-broader-than-target' THEN 1 ELSE 0 END) AS Weiter FROM ConceptMappings GROUP BY Quellsystem ORDER BY Mappings DESC %}
+{% sql SELECT replace(SourceSystem, 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-', '') AS Quellsystem, SourceCode AS Code, Relationship AS Beziehung, CASE WHEN TargetSystem LIKE 'http://snomed.info/sct%' THEN 'SNOMED CT' WHEN TargetSystem LIKE 'http://loinc.org%' THEN 'LOINC' ELSE TargetSystem END AS Zielsystem, TargetCode AS Zielcode FROM ConceptMappings WHERE SourceSystem LIKE '%modul-onko/CodeSystem%' ORDER BY Quellsystem, CAST(SourceCode AS INTEGER), SourceCode %}
 
 ### MedDRA (CTCAE v4.03) → SNOMED CT
 
@@ -42,7 +42,7 @@ und Haftungshinweis stehen bei
 Terme ohne vertretbares SNOMED-CT-Äquivalent fehlen hier bewusst und bleiben
 MedDRA-only.
 
-{% sql SELECT replace(SourceSystem, 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-', '') AS Quellsystem, SourceCode AS Code, Relationship AS Beziehung, CASE WHEN TargetSystem LIKE 'http://snomed.info/sct%' THEN 'SNOMED CT' WHEN TargetSystem LIKE 'http://loinc.org%' THEN 'LOINC' ELSE TargetSystem END AS Zielsystem, TargetCode AS Zielcode FROM ConceptMappings WHERE SourceSystem LIKE '%modul-onko/CodeSystem%' ORDER BY Quellsystem, CAST(SourceCode AS INTEGER), SourceCode %}
+{% sql SELECT SourceCode AS MedDRA, Relationship AS Beziehung, TargetCode AS SNOMED FROM ConceptMappings WHERE SourceSystem = 'https://www.meddra.org' ORDER BY CAST(SourceCode AS INTEGER) %}
 
 ### UICC TNM → SNOMED CT
 
@@ -50,7 +50,7 @@ Klinische und pathologische TNM-Kategorien als prä-koordinierte
 SNOMED-CT-Qualifier-Values; siehe
 [TNM](StructureDefinition-mii-pr-onko-tnm-klassifikation.html).
 
-{% sql SELECT SourceCode AS MedDRA, Relationship AS Beziehung, TargetCode AS SNOMED FROM ConceptMappings WHERE SourceSystem = 'https://www.meddra.org' ORDER BY CAST(SourceCode AS INTEGER) %}
+{% sql SELECT SourceCode AS UICC, Relationship AS Beziehung, TargetCode AS SNOMED FROM ConceptMappings WHERE SourceSystem LIKE '%uicc.org%' ORDER BY SourceCode %}
 
 ### Versions-Umsteiger (ATC, ICD-O-3)
 
@@ -58,4 +58,4 @@ Umsteiger-Maps zwischen Jahres- bzw. Revisionsständen — das Werkzeug für die
 von Bestandsdaten. Hintergrund und Regeln: [ATC](atc-terminologie.html) und
 [ICD-O](icd-o-terminologie.html).
 
-{% sql SELECT SourceCode AS UICC, Relationship AS Beziehung, TargetCode AS SNOMED FROM ConceptMappings WHERE SourceSystem LIKE '%uicc.org%' ORDER BY SourceCode %}
+{% sql SELECT CASE WHEN SourceSystem LIKE '%atc%' THEN 'ATC' ELSE 'ICD-O-3' END AS Katalog, SourceCode AS Von, Relationship AS Beziehung, TargetCode AS Nach FROM ConceptMappings WHERE SourceSystem LIKE '%bfarm/atc%' OR SourceSystem LIKE '%icd-o-3%' ORDER BY Katalog, SourceCode %}

@@ -225,14 +225,32 @@
         "id": "Observation.focus:studie",
         "path": "Observation.focus",
         "sliceName": "studie",
-        "short": "Referenz zur Studie",
-        "definition": "Referenz zur konkreten Studie (ResearchStudy), an der der Patient teilnimmt",
+        "short": "Referenz zur Studie (KDS-Modul Medizinisches Forschungsvorhaben)",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Referenz zur Studie - KDS-Modul Medizinisches Forschungsvorhaben"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Referenz zur konkreten Studie, an der die Patientin oder der Patient teilnimmt. SOLL auf das Profil MII_PR_Studie_Studie des KDS-Moduls Medizinisches Forschungsvorhaben verweisen; eine generische ResearchStudy-Ressource ist zulässig, wenn das Modul am Standort nicht geführt wird.",
         "min": 0,
         "max": "1",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie",
               "http://hl7.org/fhir/StructureDefinition/ResearchStudy"
             ]
           }
