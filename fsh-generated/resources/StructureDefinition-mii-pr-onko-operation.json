@@ -418,6 +418,30 @@
         }
       },
       {
+        "id": "Procedure.code.coding:ops.extension:Seitenlokalisation",
+        "path": "Procedure.code.coding.extension",
+        "sliceName": "Seitenlokalisation",
+        "short": "Seitenlokalisation (OPS-Seitenzusatz R/L/B)",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Seitenlokalisation - OPS-Seitenzusatz R/L/B"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Seitenangabe bei paarigen Organen und OPS-Codes mit Seitenzusatzpflicht über die Basisprofil-Extension seitenlokalisation (R/L/B). Das oBDS sieht am OP kein eigenes Seitenfeld vor; führend ist der OPS-Seitenzusatz."
+      },
+      {
         "id": "Procedure.code.coding:ops.version",
         "path": "Procedure.code.coding.version",
         "mapping": [

@@ -37,6 +37,15 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 * insert Label(code.coding[ops], OPS-Kode der Operation, OPS-Kode der Operation gemäß 13.3 oBDS 2021)
 * insert Translation(code.coding[ops] ^short, de-DE, OPS-Kode der Operation )
 * insert Translation(code.coding[ops] ^definition, de-DE, OPS-Kode der Operation gemäß 13.3 oBDS 2021 )
+// Seitenlokalisation bei paarigen Organen (beads 14w.12): Das oBDS führt am OP
+// KEIN eigenes Seitenfeld (XSD OP_Typ, oBDS 13.x) — die Seitenangabe erfolgt
+// über den amtlichen OPS-Seitenzusatz. Die dafür vorgesehene Extension
+// (fhir.de seitenlokalisation, R/L/B) ist über CodingOPS aus der MII-Prozedur
+// geerbt und wird hier als Must-Support sichtbar gemacht.
+* code.coding[ops].extension[Seitenlokalisation] MS
+* code.coding[ops].extension[Seitenlokalisation] ^short = "Seitenlokalisation (OPS-Seitenzusatz R/L/B)"
+* code.coding[ops].extension[Seitenlokalisation] ^definition = "Seitenangabe bei paarigen Organen und OPS-Codes mit Seitenzusatzpflicht über die Basisprofil-Extension seitenlokalisation (R/L/B). Das oBDS sieht am OP kein eigenes Seitenfeld vor; führend ist der OPS-Seitenzusatz."
+* insert Translation(code.coding[ops].extension[Seitenlokalisation] ^short, de-DE, Seitenlokalisation - OPS-Seitenzusatz R/L/B)
 
 * complication MS
 * complication ^slicing.discriminator.type = #pattern
