@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-stoma-anzeichnung | *Version*:2026.0.3 |
-| Active Stand: 2026-08-27 | *Maschinenlesbarer Name*:MII_VS_Onko_KRK_Stoma_Anzeichnung |
+| Active Stand: 2026-08-28 | *Maschinenlesbarer Name*:MII_VS_Onko_KRK_Stoma_Anzeichnung |
 
  
 Value Set für semantische Kodierung der oBDS-präoperativen Stoma-Anzeichnung beim Rektumkarzinom 
@@ -45,7 +45,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "title" : "MII VS Onkologie KRK Stoma Anzeichnung",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-08-27T15:57:15+00:00",
+  "date" : "2026-08-28T06:12:02+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

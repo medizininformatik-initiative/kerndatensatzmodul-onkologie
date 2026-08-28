@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie | *Version*:2026.0.3 |
-| Active as of 2026-08-27 | *Computable Name*:MII_PR_Onko_Strahlentherapie_Bestrahlung_Strahlentherapie |
+| Active as of 2026-08-28 | *Computable Name*:MII_PR_Onko_Strahlentherapie_Bestrahlung_Strahlentherapie |
 
  
 Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie in der Onkologie. 
@@ -93,7 +93,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-strah
   "name" : "MII_PR_Onko_Strahlentherapie_Bestrahlung_Strahlentherapie",
   "title" : "MII PR Onkologie Strahlentherapie",
   "status" : "active",
-  "date" : "2026-08-27T15:57:15+00:00",
+  "date" : "2026-08-28T06:12:02+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

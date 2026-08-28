@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-specimen | *Version*:2026.0.3 |
-| Active Stand: 2026-08-27 | *Maschinenlesbarer Name*:MII_PR_Onko_KRK_Specimen |
+| Active Stand: 2026-08-28 | *Maschinenlesbarer Name*:MII_PR_Onko_KRK_Specimen |
 
  
 Histologie: Dieses Profil beschreibt eine Gewebeprobe in der Onkologie. 
@@ -144,7 +144,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_KRK_Specimen",
   "title" : "MII PR Onkologie Specimen",
   "status" : "active",
-  "date" : "2026-08-27T15:57:15+00:00",
+  "date" : "2026-08-28T06:12:02+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

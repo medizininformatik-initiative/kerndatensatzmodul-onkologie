@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.uicc.org/resources/tnm | *Version*:2026.0.3 |
-| Active Stand: 2026-08-27 | *Maschinenlesbarer Name*:MII_CS_Onko_TNM_UICC |
+| Active Stand: 2026-08-28 | *Maschinenlesbarer Name*:MII_CS_Onko_TNM_UICC |
 
  
 Codes für TNM UICC Ausprägungen. 
@@ -50,7 +50,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "MII CS Onkologie TNM UICC",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-27T15:57:15+00:00",
+  "date" : "2026-08-28T06:12:02+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

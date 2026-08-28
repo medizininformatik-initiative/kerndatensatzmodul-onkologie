@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-kdl-dokumentklassen | *Version*:2026.0.3 |
-| Active as of 2026-08-27 | *Computable Name*:MII_VS_Onko_KDL_Dokumentklassen |
+| Active as of 2026-08-28 | *Computable Name*:MII_VS_Onko_KDL_Dokumentklassen |
 
  
 Kuratierte Auswahl der KDL-Dokumentklassen (KDL 2025) entlang des onkologischen Behandlungspfads (oBDS-Kapitel: Diagnose/Pathologie, Staging-Bildgebung, Tumorkonferenz, Operation, Strahlentherapie, Systemische Therapie, Verlauf/Labor, Tod, Studien, übergreifende Dokumente) als Begleitartefakt für DocumentReference.type. Teilmenge des KDL-Bindings im MII-KDS-Modul Dokument; deprecated-Klassen sind ausgeschlossen. 
@@ -90,7 +90,7 @@ No Expansion for this valueset (Unknown Code System)
   "title" : "MII VS Onkologie KDL Dokumentklassen",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-27T15:57:15+00:00",
+  "date" : "2026-08-28T06:12:02+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

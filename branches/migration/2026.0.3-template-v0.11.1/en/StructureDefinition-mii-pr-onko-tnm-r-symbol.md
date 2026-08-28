@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-r-symbol | *Version*:2026.0.3 |
-| Active as of 2026-08-27 | *Computable Name*:MII_PR_Onko_TNM_r_Symbol |
+| Active as of 2026-08-28 | *Computable Name*:MII_PR_Onko_TNM_r_Symbol |
 
  
 TNM-Klassifikation: TNM r-Symbol. Gibt an, ob die Klassifikation ein Rezidiv beurteilt. 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tnm-r
   "name" : "MII_PR_Onko_TNM_r_Symbol",
   "title" : "MII PR Onkologie TNM r-Symbol",
   "status" : "active",
-  "date" : "2026-08-27T15:57:15+00:00",
+  "date" : "2026-08-28T06:12:02+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

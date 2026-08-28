@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-genetische-variante-auspraegung | *Version*:2026.0.3 |
-| Active Stand: 2026-08-27 | *Maschinenlesbarer Name*:MII_CS_Onko_Genetische_Variante_Auspraegung |
+| Active Stand: 2026-08-28 | *Maschinenlesbarer Name*:MII_CS_Onko_Genetische_Variante_Auspraegung |
 
  
 oBDS-spezifisches Codesystem Konsequenz der genetischen Variante Ausprägung 
@@ -39,7 +39,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "MII CS Onkologie Genetische Variante Ausprägung",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-27T15:57:15+00:00",
+  "date" : "2026-08-28T06:12:02+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor | *Version*:2026.0.3 |
-| Active as of 2026-08-27 | *Computable Name*:MII_PR_Onko_Diagnose_Primaertumor |
+| Active as of 2026-08-28 | *Computable Name*:MII_PR_Onko_Diagnose_Primaertumor |
 
  
 Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der primären hämatologisch-myeloneoplastischen Erkrankung) und basiert auf dem MII KDS Modul Diagnose. 
@@ -131,7 +131,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-diagn
     }]
   },
   "status" : "active",
-  "date" : "2026-08-27T15:57:15+00:00",
+  "date" : "2026-08-28T06:12:02+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-operation | *Version*:2026.0.3 |
-| Active as of 2026-08-27 | *Computable Name*:MII_PR_Onko_Therapieempfehlung_Operation |
+| Active as of 2026-08-28 | *Computable Name*:MII_PR_Onko_Therapieempfehlung_Operation |
 
  
 Dieses Profil beschreibt eine Empfehlung für eine Operation im Rahmen der Tumorkonferenz 
@@ -149,7 +149,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-thera
   "name" : "MII_PR_Onko_Therapieempfehlung_Operation",
   "title" : "MII PR Onkologie Therapieempfehlung Operation",
   "status" : "active",
-  "date" : "2026-08-27T15:57:15+00:00",
+  "date" : "2026-08-28T06:12:02+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

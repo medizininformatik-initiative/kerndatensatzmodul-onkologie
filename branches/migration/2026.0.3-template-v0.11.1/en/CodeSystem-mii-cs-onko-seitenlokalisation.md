@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation | *Version*:2026.0.3 |
-| Active as of 2026-08-27 | *Computable Name*:MII_CS_Onko_Seitenlokalisation |
+| Active as of 2026-08-28 | *Computable Name*:MII_CS_Onko_Seitenlokalisation |
 
  
 Codes für Seitenlokalisation, d.h. organspezifische Angabe der betroffenen Seite. 
@@ -39,7 +39,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "MII CS Onkologie Primärtumor Seitenlokalisation",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-27T15:57:15+00:00",
+  "date" : "2026-08-28T06:12:02+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

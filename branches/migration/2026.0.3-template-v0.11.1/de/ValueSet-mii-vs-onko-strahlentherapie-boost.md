@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-boost | *Version*:2026.0.3 |
-| Active Stand: 2026-08-27 | *Maschinenlesbarer Name*:MII_VS_Onko_Strahlentherapie_Boosts |
+| Active Stand: 2026-08-28 | *Maschinenlesbarer Name*:MII_VS_Onko_Strahlentherapie_Boosts |
 
  
 oBDS-spezifisches ValueSet für Klassifikation von Boosts bei Strahlentherapie 
@@ -45,7 +45,7 @@ oBDS-spezifisches ValueSet für Klassifikation von Boosts bei Strahlentherapie
   "title" : "MII VS Onkologie Strahlentherapie Boost",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-27T15:57:15+00:00",
+  "date" : "2026-08-28T06:12:02+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

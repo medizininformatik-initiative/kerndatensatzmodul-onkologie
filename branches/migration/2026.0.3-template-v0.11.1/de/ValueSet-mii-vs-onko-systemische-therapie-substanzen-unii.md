@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-unii | *Version*:2026.0.3 |
-| Active Stand: 2026-08-27 | *Maschinenlesbarer Name*:MII_VS_Onko_Systemische_Therapie_Substanzen_UNII |
+| Active Stand: 2026-08-28 | *Maschinenlesbarer Name*:MII_VS_Onko_Systemische_Therapie_Substanzen_UNII |
 
  
 UNII-Codes für Substanzen der systemischen Therapie ohne ATC-Code. Ergänzung zum ATC-basierten Haupt-ValueSet für neuere und experimentelle onkologische Wirkstoffe. 
@@ -45,7 +45,7 @@ UNII-Codes für Substanzen der systemischen Therapie ohne ATC-Code. Ergänzung z
   "title" : "MII VS Onkologie Systemische Therapie Substanzen (UNII)",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-27T15:57:15+00:00",
+  "date" : "2026-08-28T06:12:02+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

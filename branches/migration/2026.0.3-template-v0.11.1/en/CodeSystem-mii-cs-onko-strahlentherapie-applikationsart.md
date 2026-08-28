@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart | *Version*:2026.0.3 |
-| Active as of 2026-08-27 | *Computable Name*:MII_CS_Onko_Strahlentherapie_Applikationsart |
+| Active as of 2026-08-28 | *Computable Name*:MII_CS_Onko_Strahlentherapie_Applikationsart |
 
  
 oBDS-spezifisches Codesystem für Klassifikation von Intention der OP 
@@ -39,7 +39,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "MII CS Onkologie Strahlentherapie Applikationsart",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-27T15:57:15+00:00",
+  "date" : "2026-08-28T06:12:02+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-zielgebiet | *Version*:2026.0.3 |
-| Active Stand: 2026-08-27 | *Maschinenlesbarer Name*:MII_VS_Onko_Strahlentherapie_Zielgebiet |
+| Active Stand: 2026-08-28 | *Maschinenlesbarer Name*:MII_VS_Onko_Strahlentherapie_Zielgebiet |
 
  
 oBDS-spezifisches ValueSet für Klassifikation von Zielgebiet bei Strahlentherapie - unterstützt sowohl oBDS 2021 als auch oBDS 2014 Legacy-Codes 
@@ -46,7 +46,7 @@ oBDS-spezifisches ValueSet für Klassifikation von Zielgebiet bei Strahlentherap
   "title" : "MII VS Onkologie Strahlentherapie Zielgebiet",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-27T15:57:15+00:00",
+  "date" : "2026-08-28T06:12:02+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

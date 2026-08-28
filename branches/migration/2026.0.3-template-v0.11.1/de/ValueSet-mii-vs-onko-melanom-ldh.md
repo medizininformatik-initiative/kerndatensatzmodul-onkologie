@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-melanom-ldh | *Version*:2026.0.3 |
-| Active Stand: 2026-08-27 | *Maschinenlesbarer Name*:MII_VS_Onko_Melanom_LDH |
+| Active Stand: 2026-08-28 | *Maschinenlesbarer Name*:MII_VS_Onko_Melanom_LDH |
 
  
 Value Set für Laktatdehydrogenase (LDH) Laborwerte beim Malignen Melanom 
@@ -45,7 +45,7 @@ Value Set für Laktatdehydrogenase (LDH) Laborwerte beim Malignen Melanom
   "title" : "MII VS Onkologie Melanom LDH",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-08-27T15:57:15+00:00",
+  "date" : "2026-08-28T06:12:02+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

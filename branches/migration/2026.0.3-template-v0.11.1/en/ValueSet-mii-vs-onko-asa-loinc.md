@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-asa-loinc | *Version*:2026.0.3 |
-| Active as of 2026-08-27 | *Computable Name*:MII_VS_Onko_ASA_LOINC |
+| Active as of 2026-08-28 | *Computable Name*:MII_VS_Onko_ASA_LOINC |
 
  
 Value Set für LOINC ASA Physical Status Classification (generalisiert für alle onkologischen Indikationen) 
@@ -45,7 +45,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "title" : "MII VS Onkologie ASA LOINC",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-27T15:57:15+00:00",
+  "date" : "2026-08-28T06:12:02+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

@@ -9,12 +9,12 @@
     "systems" : ["http://fhir.de/CodeSystem/bfarm/icd-10-gm"],
     "uses" : {
     },
+    "StructureDefinition-mii-pr-onko-mamma-sozialdienst.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
     "StructureDefinition-mii-pr-onko-krk-operation.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
     "StructureDefinition-mii-pr-onko-operation.html" : "MII PR Onkologie Operation",
-    "StructureDefinition-mii-pr-onko-melanom-exzision.html" : "MII PR Onko Melanom Exzision",
     "StructureDefinition-mii-pr-onko-mamma-operation.html" : "MII PR Onkologie Mamma Operation",
-    "StructureDefinition-mii-pr-onko-prostata-operation.html" : "MII PR Onko Prostata Operation",
-    "StructureDefinition-mii-pr-onko-mamma-sozialdienst.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma"
+    "StructureDefinition-mii-pr-onko-melanom-exzision.html" : "MII PR Onko Melanom Exzision",
+    "StructureDefinition-mii-pr-onko-prostata-operation.html" : "MII PR Onko Prostata Operation"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/condition-clinical",
@@ -43,8 +43,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.166"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-onko-fruehere-tumorerkrankung.html" : "MII PR Onkologie Frühere Tumorerkrankung",
-    "StructureDefinition-mii-pr-onko-diagnose-primaertumor.html" : "MII PR Onkologie Diagnose Primärtumor"
+    "StructureDefinition-mii-pr-onko-diagnose-primaertumor.html" : "MII PR Onkologie Diagnose Primärtumor",
+    "StructureDefinition-mii-pr-onko-fruehere-tumorerkrankung.html" : "MII PR Onkologie Frühere Tumorerkrankung"
   },
   {
     "url" : "http://loinc.org/vs/LL4986-7",
@@ -118,8 +118,8 @@
     "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-karnofsky"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-onko-allgemeiner-leistungszustand-karnofsky.html" : "MII PR Onkologie Allgemeiner Leistungszustand nach Karnofsky",
-    "ConceptMap-mii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc.html" : "Mapping oBDS Karnofsky zu LOINC"
+    "ConceptMap-mii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc.html" : "Mapping oBDS Karnofsky zu LOINC",
+    "StructureDefinition-mii-pr-onko-allgemeiner-leistungszustand-karnofsky.html" : "MII PR Onkologie Allgemeiner Leistungszustand nach Karnofsky"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-karnofsky-loinc",
@@ -168,12 +168,12 @@
     "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus"],
     "uses" : {
     },
+    "StructureDefinition-mii-pr-onko-mamma-sozialdienst.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
     "StructureDefinition-mii-pr-onko-krk-operation.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
     "StructureDefinition-mii-pr-onko-operation.html" : "MII PR Onkologie Operation",
-    "StructureDefinition-mii-pr-onko-melanom-exzision.html" : "MII PR Onko Melanom Exzision",
     "StructureDefinition-mii-pr-onko-mamma-operation.html" : "MII PR Onkologie Mamma Operation",
-    "StructureDefinition-mii-pr-onko-prostata-operation.html" : "MII PR Onko Prostata Operation",
-    "StructureDefinition-mii-pr-onko-mamma-sozialdienst.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma"
+    "StructureDefinition-mii-pr-onko-melanom-exzision.html" : "MII PR Onko Melanom Exzision",
+    "StructureDefinition-mii-pr-onko-prostata-operation.html" : "MII PR Onko Prostata Operation"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-fernmetastasen",
@@ -242,9 +242,9 @@
     "systems" : ["http://terminology.hl7.org/CodeSystem/icd-o-3"],
     "uses" : {
     },
-    "StructureDefinition-mii-ex-onko-histology-morphology-behavior-icdo3.html" : "MII EX Onko Histology Morphology Behavior ICDO3",
     "StructureDefinition-mii-pr-onko-histologie-icdo3.html" : "MII PR Onkologie Histologie ICD-O-3",
-    "StructureDefinition-mii-pr-onko-diagnose-primaertumor.html" : "MII PR Onkologie Diagnose Primärtumor"
+    "StructureDefinition-mii-pr-onko-diagnose-primaertumor.html" : "MII PR Onkologie Diagnose Primärtumor",
+    "StructureDefinition-mii-ex-onko-histology-morphology-behavior-icdo3.html" : "MII EX Onko Histology Morphology Behavior ICDO3"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-morphologie-2014",
@@ -280,10 +280,10 @@
     "systems" : ["http://terminology.hl7.org/CodeSystem/icd-o-3"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-onko-fruehere-tumorerkrankung.html" : "MII PR Onkologie Frühere Tumorerkrankung",
+    "StructureDefinition-mii-pr-onko-fernmetastasen.html" : "MII PR Onkologie Fernmetastasen",
     "StructureDefinition-mii-pr-onko-histologie-icdo3.html" : "MII PR Onkologie Histologie ICD-O-3",
     "StructureDefinition-mii-pr-onko-diagnose-primaertumor.html" : "MII PR Onkologie Diagnose Primärtumor",
-    "StructureDefinition-mii-pr-onko-fernmetastasen.html" : "MII PR Onkologie Fernmetastasen"
+    "StructureDefinition-mii-pr-onko-fruehere-tumorerkrankung.html" : "MII PR Onkologie Frühere Tumorerkrankung"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-topographie-2014",
@@ -626,13 +626,13 @@
     "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-onko-krk-operation.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
-    "StructureDefinition-mii-pr-onko-melanom-exzision.html" : "MII PR Onko Melanom Exzision",
-    "StructureDefinition-mii-pr-onko-operation.html" : "MII PR Onkologie Operation",
+    "StructureDefinition-mii-pr-onko-mamma-sozialdienst.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
     "StructureDefinition-mii-ex-onko-operation-intention.html" : "MII EX Onko Operation Intention",
+    "StructureDefinition-mii-pr-onko-krk-operation.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
     "StructureDefinition-mii-pr-onko-mamma-operation.html" : "MII PR Onkologie Mamma Operation",
-    "StructureDefinition-mii-pr-onko-prostata-operation.html" : "MII PR Onko Prostata Operation",
-    "StructureDefinition-mii-pr-onko-mamma-sozialdienst.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma"
+    "StructureDefinition-mii-pr-onko-operation.html" : "MII PR Onkologie Operation",
+    "StructureDefinition-mii-pr-onko-melanom-exzision.html" : "MII PR Onko Melanom Exzision",
+    "StructureDefinition-mii-pr-onko-prostata-operation.html" : "MII PR Onko Prostata Operation"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-operation-komplikation",
@@ -644,12 +644,12 @@
     "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation"],
     "uses" : {
     },
+    "StructureDefinition-mii-pr-onko-mamma-sozialdienst.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
     "StructureDefinition-mii-pr-onko-krk-operation.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
     "StructureDefinition-mii-pr-onko-operation.html" : "MII PR Onkologie Operation",
-    "StructureDefinition-mii-pr-onko-melanom-exzision.html" : "MII PR Onko Melanom Exzision",
     "StructureDefinition-mii-pr-onko-mamma-operation.html" : "MII PR Onkologie Mamma Operation",
-    "StructureDefinition-mii-pr-onko-prostata-operation.html" : "MII PR Onko Prostata Operation",
-    "StructureDefinition-mii-pr-onko-mamma-sozialdienst.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma"
+    "StructureDefinition-mii-pr-onko-melanom-exzision.html" : "MII PR Onko Melanom Exzision",
+    "StructureDefinition-mii-pr-onko-prostata-operation.html" : "MII PR Onko Prostata Operation"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-operation-urgency",
@@ -661,13 +661,13 @@
     "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-urgency"],
     "uses" : {
     },
-    "StructureDefinition-mii-ex-onko-operation-urgency.html" : "MII EX Onko Operation Urgency",
+    "StructureDefinition-mii-pr-onko-mamma-sozialdienst.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
     "StructureDefinition-mii-pr-onko-krk-operation.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
-    "StructureDefinition-mii-pr-onko-melanom-exzision.html" : "MII PR Onko Melanom Exzision",
-    "StructureDefinition-mii-pr-onko-operation.html" : "MII PR Onkologie Operation",
+    "StructureDefinition-mii-ex-onko-operation-urgency.html" : "MII EX Onko Operation Urgency",
     "StructureDefinition-mii-pr-onko-mamma-operation.html" : "MII PR Onkologie Mamma Operation",
-    "StructureDefinition-mii-pr-onko-prostata-operation.html" : "MII PR Onko Prostata Operation",
-    "StructureDefinition-mii-pr-onko-mamma-sozialdienst.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma"
+    "StructureDefinition-mii-pr-onko-operation.html" : "MII PR Onkologie Operation",
+    "StructureDefinition-mii-pr-onko-melanom-exzision.html" : "MII PR Onko Melanom Exzision",
+    "StructureDefinition-mii-pr-onko-prostata-operation.html" : "MII PR Onko Prostata Operation"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-ops-nuklearmedizin",
@@ -811,9 +811,9 @@
     "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin.html" : "MII PR Onkologie Strahlentherapie Nuklearmedizin",
     "StructureDefinition-mii-pr-onko-histologie-icdo3.html" : "MII PR Onkologie Histologie ICD-O-3",
     "StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.html" : "MII PR Onkologie Strahlentherapie",
+    "StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin.html" : "MII PR Onkologie Strahlentherapie Nuklearmedizin",
     "StructureDefinition-mii-pr-onko-diagnose-primaertumor.html" : "MII PR Onkologie Diagnose Primärtumor",
     "StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation.html" : "MII EX Onko Strahlentherapie Bestrahlung Seitenlokalisation"
   },
@@ -827,8 +827,8 @@
     "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin.html" : "MII PR Onkologie Strahlentherapie Nuklearmedizin",
-    "StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.html" : "MII PR Onkologie Strahlentherapie"
+    "StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.html" : "MII PR Onkologie Strahlentherapie",
+    "StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin.html" : "MII PR Onkologie Strahlentherapie Nuklearmedizin"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-boost",
@@ -840,9 +840,9 @@
     "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost"],
     "uses" : {
     },
+    "StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.html" : "MII PR Onkologie Strahlentherapie",
     "StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin.html" : "MII PR Onkologie Strahlentherapie Nuklearmedizin",
-    "StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-boost.html" : "MII EX Onko Strahlentherapie Bestrahlung Boost",
-    "StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.html" : "MII PR Onkologie Strahlentherapie"
+    "StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-boost.html" : "MII EX Onko Strahlentherapie Bestrahlung Boost"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-intention",
@@ -854,8 +854,8 @@
     "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-onko-strahlentherapie.html" : "MII PR Onkologie Strahlentherapie",
-    "StructureDefinition-mii-ex-onko-strahlentherapie-intention.html" : "MII EX Onko Strahlentherapie Intention"
+    "StructureDefinition-mii-ex-onko-strahlentherapie-intention.html" : "MII EX Onko Strahlentherapie Intention",
+    "StructureDefinition-mii-pr-onko-strahlentherapie.html" : "MII PR Onkologie Strahlentherapie"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-studienteilnahme",
@@ -904,8 +904,8 @@
     "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie.html" : "MII PR Onkologie Therapieempfehlung Kombinationstherapie",
-    "StructureDefinition-mii-pr-onko-systemische-therapie.html" : "MII PR Onkologie Systemische Therapie"
+    "StructureDefinition-mii-pr-onko-systemische-therapie.html" : "MII PR Onkologie Systemische Therapie",
+    "StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie.html" : "MII PR Onkologie Therapieempfehlung Kombinationstherapie"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen",
@@ -1008,8 +1008,8 @@
     "systems" : ["http://fhir.de/CodeSystem/bfarm/atc"],
     "uses" : {
     },
-    "ConceptMap-mii-cm-onko-atc-transitions-2025.html" : "MII CM Onko ATC Code Changes 2024 to 2025",
-    "ConceptMap-mii-cm-onko-atc-transitions-2026.html" : "MII CM Onko ATC Code Changes 2025 to 2026"
+    "ConceptMap-mii-cm-onko-atc-transitions-2026.html" : "MII CM Onko ATC Code Changes 2025 to 2026",
+    "ConceptMap-mii-cm-onko-atc-transitions-2025.html" : "MII CM Onko ATC Code Changes 2024 to 2025"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2026",
@@ -1057,8 +1057,8 @@
     "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie.html" : "MII PR Onkologie Therapieempfehlung Kombinationstherapie",
-    "StructureDefinition-mii-pr-onko-tumorkonferenz.html" : "MII PR Onkologie Tumorkonferenz"
+    "StructureDefinition-mii-pr-onko-tumorkonferenz.html" : "MII PR Onkologie Tumorkonferenz",
+    "StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie.html" : "MII PR Onkologie Therapieempfehlung Kombinationstherapie"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieplanung-typ",
@@ -1082,10 +1082,10 @@
     "systems" : ["https://www.uicc.org/resources/tnm"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-onko-tnm-n-kategorie.html" : "MII PR Onkologie TNM N-Kategorie",
-    "StructureDefinition-mii-pr-onko-tnm-t-kategorie.html" : "MII PR Onkologie TNM T-Kategorie",
+    "StructureDefinition-mii-ex-onko-tnm-cp-praefix.html" : "MII EX Onkologie TNM c/p Präfix",
     "StructureDefinition-mii-pr-onko-tnm-m-kategorie.html" : "MII PR Onkologie TNM M-Kategorie",
-    "StructureDefinition-mii-ex-onko-tnm-cp-praefix.html" : "MII EX Onkologie TNM c/p Präfix"
+    "StructureDefinition-mii-pr-onko-tnm-t-kategorie.html" : "MII PR Onkologie TNM T-Kategorie",
+    "StructureDefinition-mii-pr-onko-tnm-n-kategorie.html" : "MII PR Onkologie TNM N-Kategorie"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-itc-suffix",
@@ -1109,8 +1109,8 @@
     "systems" : ["http://snomed.info/sct"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-onko-tnm-klassifikation-synthetisiert.html" : "MII PR Onkologie TNM-Klassifikation (synthetisiert)",
-    "StructureDefinition-mii-pr-onko-tnm-klassifikation.html" : "MII PR Onkologie TNM-Klassifikation"
+    "StructureDefinition-mii-pr-onko-tnm-klassifikation.html" : "MII PR Onkologie TNM-Klassifikation",
+    "StructureDefinition-mii-pr-onko-tnm-klassifikation-synthetisiert.html" : "MII PR Onkologie TNM-Klassifikation (synthetisiert)"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-l-kategorie-werte",
@@ -1290,8 +1290,8 @@
     "systems" : ["https://www.uicc.org/resources/tnm"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-onko-tnm-klassifikation-synthetisiert.html" : "MII PR Onkologie TNM-Klassifikation (synthetisiert)",
-    "StructureDefinition-mii-pr-onko-tnm-klassifikation.html" : "MII PR Onkologie TNM-Klassifikation"
+    "StructureDefinition-mii-pr-onko-tnm-klassifikation.html" : "MII PR Onkologie TNM-Klassifikation",
+    "StructureDefinition-mii-pr-onko-tnm-klassifikation-synthetisiert.html" : "MII PR Onkologie TNM-Klassifikation (synthetisiert)"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-v-kategorie-werte",
@@ -1315,15 +1315,15 @@
     "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-onko-tnm-v-kategorie.html" : "MII PR Onkologie TNM V-Kategorie",
-    "StructureDefinition-mii-pr-onko-tnm-n-kategorie.html" : "MII PR Onkologie TNM N-Kategorie",
-    "StructureDefinition-mii-pr-onko-tnm-pn-kategorie.html" : "MII PR Onkologie TNM Pn-Kategorie",
-    "StructureDefinition-mii-pr-onko-tnm-t-kategorie.html" : "MII PR Onkologie TNM T-Kategorie",
-    "StructureDefinition-mii-pr-onko-tnm-klassifikation-synthetisiert.html" : "MII PR Onkologie TNM-Klassifikation (synthetisiert)",
+    "StructureDefinition-mii-pr-onko-tnm-l-kategorie.html" : "MII PR Onkologie TNM L-Kategorie",
     "StructureDefinition-mii-pr-onko-tnm-m-kategorie.html" : "MII PR Onkologie TNM M-Kategorie",
-    "StructureDefinition-mii-pr-onko-tnm-klassifikation.html" : "MII PR Onkologie TNM-Klassifikation",
+    "StructureDefinition-mii-pr-onko-tnm-t-kategorie.html" : "MII PR Onkologie TNM T-Kategorie",
+    "StructureDefinition-mii-pr-onko-tnm-n-kategorie.html" : "MII PR Onkologie TNM N-Kategorie",
     "StructureDefinition-mii-pr-onko-tnm-s-kategorie.html" : "MII PR Onkologie TNM S-Kategorie",
-    "StructureDefinition-mii-pr-onko-tnm-l-kategorie.html" : "MII PR Onkologie TNM L-Kategorie"
+    "StructureDefinition-mii-pr-onko-tnm-pn-kategorie.html" : "MII PR Onkologie TNM Pn-Kategorie",
+    "StructureDefinition-mii-pr-onko-tnm-v-kategorie.html" : "MII PR Onkologie TNM V-Kategorie",
+    "StructureDefinition-mii-pr-onko-tnm-klassifikation.html" : "MII PR Onkologie TNM-Klassifikation",
+    "StructureDefinition-mii-pr-onko-tnm-klassifikation-synthetisiert.html" : "MII PR Onkologie TNM-Klassifikation (synthetisiert)"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tod",
@@ -1433,8 +1433,8 @@
     "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop"],
     "uses" : {
     },
-    "StructureDefinition-mii-ex-onko-strahlentherapie-stellungzurop.html" : "MII EX Onko Strahlentherapie Stellung zur OP",
-    "StructureDefinition-mii-pr-onko-strahlentherapie.html" : "MII PR Onkologie Strahlentherapie"
+    "StructureDefinition-mii-pr-onko-strahlentherapie.html" : "MII PR Onkologie Strahlentherapie",
+    "StructureDefinition-mii-ex-onko-strahlentherapie-stellungzurop.html" : "MII EX Onko Strahlentherapie Stellung zur OP"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-strahlenart",
@@ -1446,8 +1446,8 @@
     "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin.html" : "MII PR Onkologie Strahlentherapie Nuklearmedizin",
-    "StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.html" : "MII PR Onkologie Strahlentherapie"
+    "StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.html" : "MII PR Onkologie Strahlentherapie",
+    "StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin.html" : "MII PR Onkologie Strahlentherapie Nuklearmedizin"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-strahlungseinheit",
@@ -1459,9 +1459,9 @@
     "systems" : ["http://unitsofmeasure.org"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin.html" : "MII PR Onkologie Strahlentherapie Nuklearmedizin",
     "StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis.html" : "MII EX Onko Strahlentherapie Bestrahlung Einzeldosis",
     "StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.html" : "MII PR Onkologie Strahlentherapie",
+    "StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin.html" : "MII PR Onkologie Strahlentherapie Nuklearmedizin",
     "StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis.html" : "MII EX Onko Strahlentherapie Bestrahlung Gesamtdosis"
   },
   {
@@ -1475,8 +1475,8 @@
     "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet-2014"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin.html" : "MII PR Onkologie Strahlentherapie Nuklearmedizin",
-    "StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.html" : "MII PR Onkologie Strahlentherapie"
+    "StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.html" : "MII PR Onkologie Strahlentherapie",
+    "StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin.html" : "MII PR Onkologie Strahlentherapie Nuklearmedizin"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-systemische-therapie-ende-grund",

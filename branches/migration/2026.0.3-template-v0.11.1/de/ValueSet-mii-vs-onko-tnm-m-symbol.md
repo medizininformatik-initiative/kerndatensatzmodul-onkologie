@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-m-symbol | *Version*:2026.0.3 |
-| Active Stand: 2026-08-27 | *Maschinenlesbarer Name*:MII_VS_Onko_TNM_m_Symbol |
+| Active Stand: 2026-08-28 | *Maschinenlesbarer Name*:MII_VS_Onko_TNM_m_Symbol |
 
  
 Kennzeichnet Vorhandensein multipler Primärtumoren in einem anatomischen Bezirk. 
@@ -45,7 +45,7 @@ Kennzeichnet Vorhandensein multipler Primärtumoren in einem anatomischen Bezirk
   "title" : "MII VS Onkologie TNM m-Symbol",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-27T15:57:15+00:00",
+  "date" : "2026-08-28T06:12:02+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
