@@ -24,14 +24,14 @@ production systems. Details and version pins: see the linked terminology pages.
 
 ### Overview: mappings per source system
 
-{% sql SELECT CASE WHEN SourceSystem LIKE '%modul-onko/CodeSystem/%' THEN 'MII Onko: ' || replace(SourceSystem, 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-', '') WHEN SourceSystem = 'https://www.meddra.org' THEN 'MedDRA (CTCAE v4.03)' WHEN SourceSystem LIKE '%uicc.org%' THEN 'UICC TNM' WHEN SourceSystem LIKE '%bfarm/atc%' THEN 'ATC (BfArM)' WHEN SourceSystem LIKE '%icd-o-3%' THEN 'ICD-O-3' ELSE SourceSystem END AS Quellsystem, count(*) AS Mappings, sum(CASE WHEN Relationship = 'equivalent' THEN 1 ELSE 0 END) AS Aequivalent, sum(CASE WHEN Relationship = 'source-is-narrower-than-target' THEN 1 ELSE 0 END) AS Enger, sum(CASE WHEN Relationship = 'source-is-broader-than-target' THEN 1 ELSE 0 END) AS Weiter FROM ConceptMappings GROUP BY Quellsystem ORDER BY Mappings DESC %}
+{% sql SELECT CASE WHEN SourceSystem LIKE '%modul-onko/CodeSystem/%' THEN 'oBDS-CS ' || replace(SourceSystem, 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-', '') WHEN SourceSystem = 'https://www.meddra.org' THEN 'MedDRA (CTCAE v4.03)' WHEN SourceSystem LIKE '%uicc.org%' THEN 'UICC TNM' WHEN SourceSystem LIKE '%bfarm/atc%' THEN 'ATC (BfArM)' WHEN SourceSystem LIKE '%icd-o-3%' THEN 'ICD-O-3' ELSE SourceSystem END AS Quellsystem, count(*) AS Mappings, sum(CASE WHEN Relationship = 'equivalent' THEN 1 ELSE 0 END) AS Aequivalent, sum(CASE WHEN Relationship = 'source-is-narrower-than-target' THEN 1 ELSE 0 END) AS Enger, sum(CASE WHEN Relationship = 'source-is-broader-than-target' THEN 1 ELSE 0 END) AS Weiter FROM ConceptMappings GROUP BY Quellsystem ORDER BY Mappings DESC %}
 
 ### oBDS code systems → SNOMED CT / LOINC
 
 The semantic annotation of the oBDS value lists. Source codes are the module's own
 CodeSystems (`mii-cs-onko-*`), targets are international terminologies.
 
-{% sql SELECT replace(SourceSystem, 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-', '') AS Quellsystem, SourceCode AS Code, Relationship AS Beziehung, CASE WHEN TargetSystem LIKE 'http://snomed.info/sct%' THEN 'SNOMED CT' WHEN TargetSystem LIKE 'http://loinc.org%' THEN 'LOINC' ELSE TargetSystem END AS Zielsystem, TargetCode AS Zielcode FROM ConceptMappings WHERE SourceSystem LIKE '%modul-onko/CodeSystem%' ORDER BY Quellsystem, CAST(SourceCode AS INTEGER), SourceCode %}
+{% sql SELECT 'oBDS-CS ' || replace(SourceSystem, 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-', '') AS Quellsystem, SourceCode AS Code, Relationship AS Beziehung, CASE WHEN TargetSystem LIKE 'http://snomed.info/sct%' THEN 'SNOMED CT' WHEN TargetSystem LIKE 'http://loinc.org%' THEN 'LOINC' WHEN TargetSystem LIKE '%bfarm/atc%' THEN 'ATC' WHEN TargetSystem LIKE '%icd-o-3%' THEN 'ICD-O-3' WHEN TargetSystem LIKE '%MVGenomseq%' THEN 'MV Genomsequenzierung (KDK)' ELSE 'sonstiges Zielsystem' END AS Zielsystem, TargetCode AS Zielcode FROM ConceptMappings WHERE SourceSystem LIKE '%modul-onko/CodeSystem%' ORDER BY Quellsystem, CAST(SourceCode AS INTEGER), SourceCode %}
 
 ### MedDRA (CTCAE v4.03) → SNOMED CT
 
