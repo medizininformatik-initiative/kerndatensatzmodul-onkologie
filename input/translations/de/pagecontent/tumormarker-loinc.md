@@ -129,7 +129,6 @@ Repository unter `input/examples-source/biomarker/biomarker-snomed-report.md`.
 ### Offene Punkte
 
 - Fachliches Review der Kernliste (Codes und Entitäts-Zuordnungen).
-- Vervollständigung der LOINC-SNOMED-Anker (12 Marker offen) — derzeit **infrastrukturell blockiert**: Die LOINC-SNOMED-Ontologie ist auf den verfügbaren Servern nur als Mapping-Modul geladen; ihre Konzepte sind per `$lookup` auflösbar, aber weder über die Textsuche noch per ECL expandierbar. Wiederaufnahme, sobald ein Server das Modul als eigene Edition bereitstellt.
-- Entscheidung zum Binding-Ort: eigenes Tumormarker-Profil im Modul vs.
-  reine Guidance mit Verweis auf das KDS-Modul Labor.
+- Vervollständigung der LOINC-SNOMED-Anker (12 Marker offen). Die Ontologie ist auf der eigenen Branch `MAIN/SNOMEDCT-LOINC` einer Snowstorm-Instanz abfragbar (ECL funktioniert dort); die Kuration läuft.
+- ~~Entscheidung zum Binding-Ort~~ **entschieden (2026-08-28):** Laborwerte laufen über das KDS-Modul Laborbefund. Das Modul stellt dafür das Profil [`MII_PR_Onko_Tumormarker`](StructureDefinition-mii-pr-onko-tumormarker.html) bereit — eine Ableitung von `MII_PR_Labor_Laboruntersuchung`, die `Observation.code` extensible an die Union-Liste [`mii-vs-onko-tumormarker-loinc`](ValueSet-mii-vs-onko-tumormarker-loinc.html) bindet und den Bezug zur onkologischen Diagnose (`focus`) ergänzt.
 - Serotonin: Matrix (24h-Urin vs. Serum) und ggf. Ergänzung 5-HIES.

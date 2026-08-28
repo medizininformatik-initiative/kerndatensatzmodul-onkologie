@@ -128,7 +128,6 @@ the repository at `input/examples-source/biomarker/biomarker-snomed-report.md`.
 ### Open Points
 
 - Clinical review of the core list (codes and entity assignments).
-- Completion of the LOINC-SNOMED anchors (12 markers outstanding) — currently **blocked by infrastructure**: on the available servers the LOINC-SNOMED ontology is loaded only as a mapping module; its concepts resolve via `$lookup` but are expandable neither by text search nor by ECL. To be resumed once a server provides the module as a separate edition.
-- Decision on the binding location: a dedicated tumour marker profile in the
-  module vs. guidance only with a reference to the KDS Laboratory module.
+- Completion of the LOINC-SNOMED anchors (12 markers outstanding). The ontology is queryable on the dedicated `MAIN/SNOMEDCT-LOINC` branch of a Snowstorm instance (ECL works there); curation is in progress.
+- ~~Decision on the binding location~~ **decided (2026-08-28):** laboratory values are carried by the CDS module Laboratory Report. This module provides the profile [`MII_PR_Onko_Tumormarker`](StructureDefinition-mii-pr-onko-tumormarker.html) — a derivation of `MII_PR_Labor_Laboruntersuchung` that binds `Observation.code` extensibly to the union list [`mii-vs-onko-tumormarker-loinc`](ValueSet-mii-vs-onko-tumormarker-loinc.html) and adds the link to the oncological diagnosis (`focus`).
 - Serotonin: matrix (24-hour urine vs. serum) and possibly the addition of 5-HIAA.
