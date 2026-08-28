@@ -97,6 +97,7 @@ Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensa
 
 **Usages:**
 
+* Refer to this Profile: [MII PR Onkologie Diagnose Primärtumor](StructureDefinition-mii-pr-onko-diagnose-primaertumor.md) and [MII PR Onkologie Nebenwirkung von Strahlentherapie und systemische Therapie](StructureDefinition-mii-pr-onko-nebenwirkung-adverse-event.md)
 * Examples for this Profile: [Procedure/mii-exa-onko-strahlentherapie-nuklearmedizin-1](Procedure-mii-exa-onko-strahlentherapie-nuklearmedizin-1.md), [Procedure/mii-exa-onko-strahlentherapie-pci-sclc](Procedure-mii-exa-onko-strahlentherapie-pci-sclc.md) and [Procedure/mii-exa-onko-strahlentherapie-strahlentherapie-1](Procedure-mii-exa-onko-strahlentherapie-strahlentherapie-1.md)
 * CapabilityStatements using this Profile: [MII CPS Onkology CapabilityStatement](CapabilityStatement-mii-cps-onko-capabilitystatement.md)
 
@@ -129,12 +130,13 @@ Diese Struktur ist abgeleitet von [MII_PR_Prozedur_Procedure](https://simplifier
 ** Summary **
 
 Mandatory: 2 elements(1 nested mandatory element)
- Must-Support: 11 elements
+ Must-Support: 12 elements
 
 **Structures**
 
 This structure refers to these other structures:
 
+* [MII PR Onkologie Tumorkonferenz (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz)](StructureDefinition-mii-pr-onko-tumorkonferenz.md)
 * [MII PR Onkologie Diagnose Primärtumor (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)](StructureDefinition-mii-pr-onko-diagnose-primaertumor.md)
 
 **Extensions**
@@ -143,6 +145,12 @@ This structure refers to these extensions:
 
 * [https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention](StructureDefinition-mii-ex-onko-strahlentherapie-intention.md)
 * [https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop](StructureDefinition-mii-ex-onko-strahlentherapie-stellungzurop.md)
+
+**Slices**
+
+This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+
+* The element 1 is sliced based on the value of Procedure.basedOn
 
  **Schlüsselelemente-Ansicht** 
 
@@ -167,12 +175,13 @@ Diese Struktur ist abgeleitet von [MII_PR_Prozedur_Procedure](https://simplifier
 ** Summary **
 
 Mandatory: 2 elements(1 nested mandatory element)
- Must-Support: 11 elements
+ Must-Support: 12 elements
 
 **Structures**
 
 This structure refers to these other structures:
 
+* [MII PR Onkologie Tumorkonferenz (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz)](StructureDefinition-mii-pr-onko-tumorkonferenz.md)
 * [MII PR Onkologie Diagnose Primärtumor (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)](StructureDefinition-mii-pr-onko-diagnose-primaertumor.md)
 
 **Extensions**
@@ -181,6 +190,12 @@ This structure refers to these extensions:
 
 * [https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention](StructureDefinition-mii-ex-onko-strahlentherapie-intention.md)
 * [https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop](StructureDefinition-mii-ex-onko-strahlentherapie-stellungzurop.md)
+
+**Slices**
+
+This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+
+* The element 1 is sliced based on the value of Procedure.basedOn
 
  
 
@@ -209,7 +224,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_Strahlentherapie",
   "title" : "MII PR Onkologie Strahlentherapie",
   "status" : "active",
-  "date" : "2026-08-28T07:24:31+00:00",
+  "date" : "2026-08-28T07:40:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -352,9 +367,28 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
     {
       "id" : "Procedure.basedOn",
       "path" : "Procedure.basedOn",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "type",
+          "path" : "$this.resolve()"
+        }],
+        "rules" : "open"
+      },
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/CarePlan"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Procedure.basedOn:tumorkonferenz",
+      "path" : "Procedure.basedOn",
+      "sliceName" : "tumorkonferenz",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"]
       }],
       "mustSupport" : true
     },

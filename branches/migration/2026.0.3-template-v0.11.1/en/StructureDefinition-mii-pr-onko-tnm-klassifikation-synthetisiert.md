@@ -41,7 +41,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tnm-k
   "name" : "MII_PR_Onko_TNM_Klassifikation_Synthetisiert",
   "title" : "MII PR Onkologie TNM-Klassifikation (synthetisiert)",
   "status" : "active",
-  "date" : "2026-08-28T07:24:31+00:00",
+  "date" : "2026-08-28T07:40:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -164,6 +164,10 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tnm-k
         }]
       },
       "definition" : "Referenz auf das erzeugende System (Device) bei automatisierter Erzeugung. Die Algorithmus-/Softwareversion wird in Device.version dokumentiert; eine zusätzliche Provenance-Ressource (activity = Derivation) KANN für Audit-Anforderungen ergänzt werden.",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Device"]
+      }],
       "mustSupport" : true
     },
     {

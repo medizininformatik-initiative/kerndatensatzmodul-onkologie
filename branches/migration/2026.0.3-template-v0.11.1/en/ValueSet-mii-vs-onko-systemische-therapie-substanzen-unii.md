@@ -45,7 +45,7 @@ UNII-Codes für Substanzen der systemischen Therapie ohne ATC-Code. Ergänzung z
   "title" : "MII VS Onkologie Systemische Therapie Substanzen (UNII)",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-28T07:24:31+00:00",
+  "date" : "2026-08-28T07:40:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

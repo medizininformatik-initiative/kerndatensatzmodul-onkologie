@@ -143,7 +143,7 @@ Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensa
 **Usages:**
 
 * Derived from this Profile: [MII PR Onkologie Präoperative Drahtmarkierung Mamma](StructureDefinition-mii-pr-onko-krk-operation.md), [MII PR Onkologie Mamma Operation](StructureDefinition-mii-pr-onko-mamma-operation.md), [MII PR Onkologie Präoperative Drahtmarkierung Mamma](StructureDefinition-mii-pr-onko-mamma-sozialdienst.md), [MII PR Onko Melanom Exzision](StructureDefinition-mii-pr-onko-melanom-exzision.md) and [MII PR Onko Prostata Operation](StructureDefinition-mii-pr-onko-prostata-operation.md)
-* Refer to this Profile: [MII PR Onkologie Präoperative Drahtmarkierung Mamma](StructureDefinition-mii-pr-onko-krk-operation.md), [MII PR Onkologie Mamma Operation](StructureDefinition-mii-pr-onko-mamma-operation.md), [MII PR Onkologie Präoperative Markierung Mamma](StructureDefinition-mii-pr-onko-mamma-praeoperative-markierung.md) and [MII PR Onkologie Clavien Dindo](StructureDefinition-mii-pr-onko-prostate-clavien-dindo.md)
+* Refer to this Profile: [MII PR Onkologie Präoperative Drahtmarkierung Mamma](StructureDefinition-mii-pr-onko-krk-operation.md), [MII PR Onkologie Mamma Operation](StructureDefinition-mii-pr-onko-mamma-operation.md), [MII PR Onkologie Präoperative Markierung Mamma](StructureDefinition-mii-pr-onko-mamma-praeoperative-markierung.md), [MII PR Onkologie Clavien Dindo](StructureDefinition-mii-pr-onko-prostate-clavien-dindo.md) and [MII PR Onkologie Residualstatus](StructureDefinition-mii-pr-onko-residualstatus.md)
 * Examples for this Profile: [Procedure/PatientKimMusterperson-Procedure-4](Procedure-PatientKimMusterperson-Procedure-4.md), [Procedure/mii-exa-onko-operation-1](Procedure-mii-exa-onko-operation-1.md), [Procedure/mii-exa-onko-prostata-surgery-1](Procedure-mii-exa-onko-prostata-surgery-1.md), [Procedure/mii-exa-onko-prostata-surgery-2](Procedure-mii-exa-onko-prostata-surgery-2.md)... Show 5 more, [Procedure/mii-exa-onko-right-hemicolectomy](Procedure-mii-exa-onko-right-hemicolectomy.md), [Procedure/mii-exa-onko-sigmoid-resection-part1](Procedure-mii-exa-onko-sigmoid-resection-part1.md), [Procedure/mii-exa-onko-sigmoid-resection-part2](Procedure-mii-exa-onko-sigmoid-resection-part2.md), [Procedure/mii-exa-onko-sigmoid-resection-part3](Procedure-mii-exa-onko-sigmoid-resection-part3.md) and [Procedure/mii-exa-onko-sigmoid-resection](Procedure-mii-exa-onko-sigmoid-resection.md)
 * CapabilityStatements using this Profile: [MII CPS Onkology CapabilityStatement](CapabilityStatement-mii-cps-onko-capabilitystatement.md)
 
@@ -176,12 +176,13 @@ Diese Struktur ist abgeleitet von [MII_PR_Prozedur_Procedure](https://simplifier
 ** Summary **
 
 Mandatory: 2 elements(3 nested mandatory elements)
- Must-Support: 12 elements
+ Must-Support: 13 elements
 
 **Structures**
 
 This structure refers to these other structures:
 
+* [MII PR Onkologie Tumorkonferenz (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz)](StructureDefinition-mii-pr-onko-tumorkonferenz.md)
 * [MII PR Onkologie Diagnose Primärtumor (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)](StructureDefinition-mii-pr-onko-diagnose-primaertumor.md)
 
 **Extensions**
@@ -195,6 +196,7 @@ This structure refers to these extensions:
 
 This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
 
+* The element 1 is sliced based on the value of Procedure.basedOn
 * The element 1 is sliced based on the value of Procedure.complication
 
  **Schlüsselelemente-Ansicht** 
@@ -220,12 +222,13 @@ Diese Struktur ist abgeleitet von [MII_PR_Prozedur_Procedure](https://simplifier
 ** Summary **
 
 Mandatory: 2 elements(3 nested mandatory elements)
- Must-Support: 12 elements
+ Must-Support: 13 elements
 
 **Structures**
 
 This structure refers to these other structures:
 
+* [MII PR Onkologie Tumorkonferenz (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz)](StructureDefinition-mii-pr-onko-tumorkonferenz.md)
 * [MII PR Onkologie Diagnose Primärtumor (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)](StructureDefinition-mii-pr-onko-diagnose-primaertumor.md)
 
 **Extensions**
@@ -239,6 +242,7 @@ This structure refers to these extensions:
 
 This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
 
+* The element 1 is sliced based on the value of Procedure.basedOn
 * The element 1 is sliced based on the value of Procedure.complication
 
  
@@ -268,7 +272,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_Operation",
   "title" : "MII PR Onkologie Operation",
   "status" : "active",
-  "date" : "2026-08-28T07:24:31+00:00",
+  "date" : "2026-08-28T07:40:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -411,9 +415,28 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
     {
       "id" : "Procedure.basedOn",
       "path" : "Procedure.basedOn",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "type",
+          "path" : "$this.resolve()"
+        }],
+        "rules" : "open"
+      },
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/CarePlan"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Procedure.basedOn:tumorkonferenz",
+      "path" : "Procedure.basedOn",
+      "sliceName" : "tumorkonferenz",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"]
       }],
       "mustSupport" : true
     },

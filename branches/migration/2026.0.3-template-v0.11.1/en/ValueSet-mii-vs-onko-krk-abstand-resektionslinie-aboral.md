@@ -45,7 +45,7 @@ Value Set für semantische Kodierung des oBDS-Abstand des Tumorrandes zur aboral
   "title" : "MII VS Onkologie KRK Abstand Resektionslinie Aboral",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-08-28T07:24:31+00:00",
+  "date" : "2026-08-28T07:40:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

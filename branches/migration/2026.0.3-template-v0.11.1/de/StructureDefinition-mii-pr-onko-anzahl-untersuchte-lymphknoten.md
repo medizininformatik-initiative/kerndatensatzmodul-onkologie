@@ -16,7 +16,7 @@ Histologie: Anzahl der untersuchten Lymphknoten. Gibt an, wie viele Lymphknoten 
 
 **Usages:**
 
-* Refer to this Profile: [MII PR Onkologie TNM N-Kategorie](StructureDefinition-mii-pr-onko-tnm-n-kategorie.md)
+* Refer to this Profile: [MII PR Onkologie TNM N-Kategorie](StructureDefinition-mii-pr-onko-tnm-n-kategorie.md) and [MII PR Onkologie Verlauf](StructureDefinition-mii-pr-onko-verlauf.md)
 * Examples for this Profile: [Observation/mii-exa-onko-anzahl-untersuchte-lymphknoten-23](Observation-mii-exa-onko-anzahl-untersuchte-lymphknoten-23.md)
 * CapabilityStatements using this Profile: [MII CPS Onkology CapabilityStatement](CapabilityStatement-mii-cps-onko-capabilitystatement.md)
 
@@ -117,7 +117,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_Anzahl_Untersuchte_Lymphknoten",
   "title" : "MII PR Onkologie Anzahl der untersuchten Lymphknoten",
   "status" : "active",
-  "date" : "2026-08-28T07:24:31+00:00",
+  "date" : "2026-08-28T07:40:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

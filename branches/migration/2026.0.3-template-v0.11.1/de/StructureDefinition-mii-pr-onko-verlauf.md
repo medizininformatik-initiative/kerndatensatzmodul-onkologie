@@ -90,6 +90,13 @@ Mandatory: 2 elements(3 nested mandatory elements)
 This structure refers to these other structures:
 
 * [MII PR Onkologie Diagnose Primärtumor (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)](StructureDefinition-mii-pr-onko-diagnose-primaertumor.md)
+* [MII PR Onkologie Tod (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tod)](StructureDefinition-mii-pr-onko-tod.md)
+* [MII PR Onkologie TNM-Klassifikation (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation)](StructureDefinition-mii-pr-onko-tnm-klassifikation.md)
+* [MII PR Onkologie Anzahl der untersuchten Lymphknoten (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-untersuchte-lymphknoten)](StructureDefinition-mii-pr-onko-anzahl-untersuchte-lymphknoten.md)
+* [MII PR Onkologie Histologie ICD-O-3 (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-histologie-icdo3)](StructureDefinition-mii-pr-onko-histologie-icdo3.md)
+* [MII PR Onkologie Fernmetastasen (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen)](StructureDefinition-mii-pr-onko-fernmetastasen.md)
+* [MII PR Onkologie Residualstatus (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-residualstatus)](StructureDefinition-mii-pr-onko-residualstatus.md)
+* [MII PR Onkologie Genetische Variante (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-genetische-variante)](StructureDefinition-mii-pr-onko-genetische-variante.md)
 
 **Slices**
 
@@ -129,6 +136,13 @@ Mandatory: 2 elements(3 nested mandatory elements)
 This structure refers to these other structures:
 
 * [MII PR Onkologie Diagnose Primärtumor (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)](StructureDefinition-mii-pr-onko-diagnose-primaertumor.md)
+* [MII PR Onkologie Tod (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tod)](StructureDefinition-mii-pr-onko-tod.md)
+* [MII PR Onkologie TNM-Klassifikation (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation)](StructureDefinition-mii-pr-onko-tnm-klassifikation.md)
+* [MII PR Onkologie Anzahl der untersuchten Lymphknoten (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-untersuchte-lymphknoten)](StructureDefinition-mii-pr-onko-anzahl-untersuchte-lymphknoten.md)
+* [MII PR Onkologie Histologie ICD-O-3 (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-histologie-icdo3)](StructureDefinition-mii-pr-onko-histologie-icdo3.md)
+* [MII PR Onkologie Fernmetastasen (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen)](StructureDefinition-mii-pr-onko-fernmetastasen.md)
+* [MII PR Onkologie Residualstatus (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-residualstatus)](StructureDefinition-mii-pr-onko-residualstatus.md)
+* [MII PR Onkologie Genetische Variante (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-genetische-variante)](StructureDefinition-mii-pr-onko-genetische-variante.md)
 
 **Slices**
 
@@ -155,7 +169,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_Verlauf",
   "title" : "MII PR Onkologie Verlauf",
   "status" : "active",
-  "date" : "2026-08-28T07:24:31+00:00",
+  "date" : "2026-08-28T07:40:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -396,7 +410,13 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "path" : "Observation.hasMember",
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Observation"]
+        "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tod",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-untersuchte-lymphknoten",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-histologie-icdo3",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-residualstatus",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-genetische-variante"]
       }],
       "mustSupport" : true
     },

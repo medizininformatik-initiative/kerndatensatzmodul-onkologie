@@ -28,6 +28,7 @@ Aufgrund des direkten Bezugs wurde die Beurteilung des lokalen Residualstatus na
 
 **Usages:**
 
+* Refer to this Profile: [MII PR Onkologie Verlauf](StructureDefinition-mii-pr-onko-verlauf.md)
 * Examples for this Profile: [Observation/mii-exa-onko-residualstatus-1](Observation-mii-exa-onko-residualstatus-1.md) and [Observation/mii-exa-onko-tnm-journey-residualstatus-R0](Observation-mii-exa-onko-tnm-journey-residualstatus-R0.md)
 * CapabilityStatements using this Profile: [MII CPS Onkology CapabilityStatement](CapabilityStatement-mii-cps-onko-capabilitystatement.md)
 
@@ -66,6 +67,7 @@ Mandatory: 3 elements(6 nested mandatory elements)
 
 This structure refers to these other structures:
 
+* [MII PR Onkologie Operation (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation)](StructureDefinition-mii-pr-onko-operation.md)
 * [MII PR Onkologie Diagnose Primärtumor (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)](StructureDefinition-mii-pr-onko-diagnose-primaertumor.md)
 
 **Slices**
@@ -103,6 +105,7 @@ Mandatory: 3 elements(6 nested mandatory elements)
 
 This structure refers to these other structures:
 
+* [MII PR Onkologie Operation (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation)](StructureDefinition-mii-pr-onko-operation.md)
 * [MII PR Onkologie Diagnose Primärtumor (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)](StructureDefinition-mii-pr-onko-diagnose-primaertumor.md)
 
 **Slices**
@@ -128,7 +131,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_Residualstatus",
   "title" : "MII PR Onkologie Residualstatus",
   "status" : "active",
-  "date" : "2026-08-28T07:24:31+00:00",
+  "date" : "2026-08-28T07:40:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -199,6 +202,10 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "id" : "Observation.partOf",
       "path" : "Observation.partOf",
       "max" : "1",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation"]
+      }],
       "mustSupport" : true
     },
     {

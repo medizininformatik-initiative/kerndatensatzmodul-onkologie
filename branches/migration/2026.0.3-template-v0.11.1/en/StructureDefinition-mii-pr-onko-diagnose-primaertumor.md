@@ -131,7 +131,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-diagn
     }]
   },
   "status" : "active",
-  "date" : "2026-08-28T07:24:31+00:00",
+  "date" : "2026-08-28T07:40:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -346,6 +346,33 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-diagn
         "profile" : ["http://hl7.org/fhir/StructureDefinition/condition-dueTo"]
       }],
       "mustSupport" : true
+    },
+    {
+      "id" : "Condition.extension:dueTo.value[x]",
+      "path" : "Condition.extension.value[x]",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "type",
+          "path" : "$this"
+        }],
+        "ordered" : false,
+        "rules" : "open"
+      }
+    },
+    {
+      "id" : "Condition.extension:dueTo.value[x]:valueReference",
+      "path" : "Condition.extension.value[x]",
+      "sliceName" : "valueReference",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung"]
+      }]
     },
     {
       "id" : "Condition.extension:transformationVon",

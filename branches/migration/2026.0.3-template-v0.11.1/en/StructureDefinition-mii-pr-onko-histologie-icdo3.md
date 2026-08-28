@@ -26,6 +26,7 @@ For histologies that are used to establish the primary diagnosis, the ICD-O-3 co
 
 **Usages:**
 
+* Refer to this Profile: [MII PR Onkologie Verlauf](StructureDefinition-mii-pr-onko-verlauf.md)
 * Examples for this Profile: [Observation/mii-exa-onko-histologie-icdo3](Observation-mii-exa-onko-histologie-icdo3.md)
 * CapabilityStatements using this Profile: [MII CPS Onkology CapabilityStatement](CapabilityStatement-mii-cps-onko-capabilitystatement.md)
 
@@ -52,7 +53,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-histo
   "name" : "MII_PR_Onko_Histologie_ICDO3",
   "title" : "MII PR Onkologie Histologie ICD-O-3",
   "status" : "active",
-  "date" : "2026-08-28T07:24:31+00:00",
+  "date" : "2026-08-28T07:40:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

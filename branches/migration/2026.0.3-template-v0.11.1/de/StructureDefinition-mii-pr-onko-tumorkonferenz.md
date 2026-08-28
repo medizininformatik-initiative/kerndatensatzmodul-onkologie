@@ -136,7 +136,7 @@ Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensa
 
 **Usages:**
 
-* Refer to this Profile: [MII PR Onkologie Befund](StructureDefinition-mii-pr-onko-befund.md)
+* Refer to this Profile: [MII PR Onkologie Befund](StructureDefinition-mii-pr-onko-befund.md), [MII PR Onkologie Operation](StructureDefinition-mii-pr-onko-operation.md), [MII PR Onkologie Strahlentherapie](StructureDefinition-mii-pr-onko-strahlentherapie.md), [MII PR Onkologie Systemische Therapie Medikation](StructureDefinition-mii-pr-onko-systemische-therapie-medikation.md) and [MII PR Onkologie Systemische Therapie](StructureDefinition-mii-pr-onko-systemische-therapie.md)
 * Examples for this Profile: [CarePlan/PatientKimMusterperson-Tumorkonferenz-1](CarePlan-PatientKimMusterperson-Tumorkonferenz-1.md), [CarePlan/PatientKimMusterperson-Tumorkonferenz-2](CarePlan-PatientKimMusterperson-Tumorkonferenz-2.md), [CarePlan/PatientKimMusterperson-Tumorkonferenz-3](CarePlan-PatientKimMusterperson-Tumorkonferenz-3.md), [CarePlan/PatientKimMusterperson-Tumorkonferenz-4](CarePlan-PatientKimMusterperson-Tumorkonferenz-4.md)... Show 12 more, [CarePlan/mii-exa-onko-kim-tk1](CarePlan-mii-exa-onko-kim-tk1.md), [CarePlan/mii-exa-onko-kim-tk2](CarePlan-mii-exa-onko-kim-tk2.md), [CarePlan/mii-exa-onko-kim-tk3](CarePlan-mii-exa-onko-kim-tk3.md), [CarePlan/mii-exa-onko-kim-tk4](CarePlan-mii-exa-onko-kim-tk4.md), [CarePlan/mii-exa-onko-tnm-synth-tumorkonferenz](CarePlan-mii-exa-onko-tnm-synth-tumorkonferenz.md), [CarePlan/mii-exa-onko-tumorkonferenz-01](CarePlan-mii-exa-onko-tumorkonferenz-01.md), [CarePlan/mii-exa-onko-tumorkonferenz-02](CarePlan-mii-exa-onko-tumorkonferenz-02.md), [CarePlan/mii-exa-onko-tumorkonferenz-folfox-modification](CarePlan-mii-exa-onko-tumorkonferenz-folfox-modification.md), [CarePlan/mii-exa-onko-tumorkonferenz-folfox](CarePlan-mii-exa-onko-tumorkonferenz-folfox.md), [CarePlan/mii-exa-onko-tumorkonferenz-mixed-approach](CarePlan-mii-exa-onko-tumorkonferenz-mixed-approach.md), [CarePlan/mii-exa-onko-tumorkonferenz-molekular](CarePlan-mii-exa-onko-tumorkonferenz-molekular.md) and [CarePlan/mii-exa-onko-tumorkonferenz-pure-molecular](CarePlan-mii-exa-onko-tumorkonferenz-pure-molecular.md)
 * CapabilityStatements using this Profile: [MII CPS Onkology CapabilityStatement](CapabilityStatement-mii-cps-onko-capabilitystatement.md)
 
@@ -180,6 +180,8 @@ This structure refers to these other structures:
 
 * [MII PR Onkologie Diagnose Primärtumor (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)](StructureDefinition-mii-pr-onko-diagnose-primaertumor.md)
 * [MII PR Onkologie Therapieempfehlung Kombinationstherapie (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie)](StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie.md)
+* [MII PR Onkologie Therapieempfehlung Medikation (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation)](StructureDefinition-mii-pr-onko-therapieempfehlung-medikation.md)
+* [MII PR Onkologie Therapieempfehlung Operation (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-operation)](StructureDefinition-mii-pr-onko-therapieempfehlung-operation.md)
 
 **Slices**
 
@@ -221,6 +223,8 @@ This structure refers to these other structures:
 
 * [MII PR Onkologie Diagnose Primärtumor (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)](StructureDefinition-mii-pr-onko-diagnose-primaertumor.md)
 * [MII PR Onkologie Therapieempfehlung Kombinationstherapie (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie)](StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie.md)
+* [MII PR Onkologie Therapieempfehlung Medikation (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation)](StructureDefinition-mii-pr-onko-therapieempfehlung-medikation.md)
+* [MII PR Onkologie Therapieempfehlung Operation (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-operation)](StructureDefinition-mii-pr-onko-therapieempfehlung-operation.md)
 
 **Slices**
 
@@ -245,7 +249,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_Tumorkonferenz",
   "title" : "MII PR Onkologie Tumorkonferenz",
   "status" : "active",
-  "date" : "2026-08-28T07:24:31+00:00",
+  "date" : "2026-08-28T07:40:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -656,13 +660,13 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "id" : "CarePlan.activity:extended.reference",
       "path" : "CarePlan.activity.reference",
       "short" : "Detailed therapy recommendation - RequestGroup, MedicationRequest, or ServiceRequest",
-      "definition" : "Reference to detailed therapy recommendations: RequestGroup for complex multi-agent protocols, MedicationRequest for specific medication orders, or ServiceRequest for therapy referrals (surgery, radiation, etc.)",
+      "definition" : "Reference to detailed therapy recommendations: Therapieempfehlung Kombinationstherapie (RequestGroup) for complex multi-agent protocols, Therapieempfehlung Medikation (MedicationRequest) for specific medication orders, or Therapieempfehlung Operation (ServiceRequest) for therapy referrals (surgery, radiation, etc.)",
       "min" : 1,
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie",
-        "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
-        "http://hl7.org/fhir/StructureDefinition/ServiceRequest"]
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-operation"]
       }],
       "mustSupport" : true,
       "mapping" : [{

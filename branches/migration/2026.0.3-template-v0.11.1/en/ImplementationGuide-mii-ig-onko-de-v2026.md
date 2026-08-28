@@ -33,6 +33,8 @@ This IG contains the following dependencies on other IGs.
 
 
 
+
+
 > **Where the versions come from.** Every package in the table is pinned directly in [`sushi-config.yaml`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/blob/main/sushi-config.yaml) (`dependencies:`) — including `hl7.terminology.r4` (THO) and `hl7.fhir.uv.extensions.r4`, and those two deliberately so: the IG Publisher's [automatic-packages rule](https://build.fhir.org/ig/FHIR/ig-guidance/versions.html#automatic-packages) consults only this guide's **own** dependency list, so without a direct pin every build would silently inject the latest THO/extensions release — a version pinned by the MII meta package alone cannot control the build (verified in the publisher source at the pinned release). A weekly check warns when these two pins drift from what the pinned meta package ships, and the exact versions a concrete build used are recorded in its `qa-versions.json` output.
 
 ### Global Profiles
@@ -350,6 +352,12 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
     "uri" : "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.molgen/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.molgen",
     "packageId" : "de.medizininformatikinitiative.kerndatensatz.molgen",
     "version" : "2026.0.4"
+  },
+  {
+    "id" : "hl7_fhir_uv_genomics_reporting",
+    "uri" : "http://hl7.org/fhir/uv/genomics-reporting/ImplementationGuide/hl7.fhir.uv.genomics-reporting",
+    "packageId" : "hl7.fhir.uv.genomics-reporting",
+    "version" : "3.0.0"
   },
   {
     "id" : "de_medizininformatikinitiative_kerndatensatz_studie",

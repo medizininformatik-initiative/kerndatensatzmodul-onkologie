@@ -58,6 +58,7 @@ Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensa
 
 **Usages:**
 
+* Refer to this Profile: [MII PR Onkologie Verlauf](StructureDefinition-mii-pr-onko-verlauf.md)
 * Examples for this Profile: [Observation/mii-exa-onko-tod-j](Observation-mii-exa-onko-tod-j.md), [Observation/mii-exa-onko-tod-n](Observation-mii-exa-onko-tod-n.md) and [Observation/mii-exa-onko-tod-u](Observation-mii-exa-onko-tod-u.md)
 * CapabilityStatements using this Profile: [MII CPS Onkology CapabilityStatement](CapabilityStatement-mii-cps-onko-capabilitystatement.md)
 
@@ -146,7 +147,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_Tod",
   "title" : "MII PR Onkologie Tod",
   "status" : "active",
-  "date" : "2026-08-28T07:24:31+00:00",
+  "date" : "2026-08-28T07:40:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

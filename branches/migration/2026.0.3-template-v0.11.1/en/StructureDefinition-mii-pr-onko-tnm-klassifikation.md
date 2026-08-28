@@ -57,7 +57,7 @@ The prefixes y, r and a are modelled as a **modifierExtension**, because they ch
 **Usages:**
 
 * Derived from this Profile: [MII PR Onkologie TNM-Klassifikation (synthetisiert)](StructureDefinition-mii-pr-onko-tnm-klassifikation-synthetisiert.md)
-* Refer to this Profile: [MII PR Onkologie TNM-Klassifikation (synthetisiert)](StructureDefinition-mii-pr-onko-tnm-klassifikation-synthetisiert.md)
+* Refer to this Profile: [MII PR Onkologie TNM-Klassifikation (synthetisiert)](StructureDefinition-mii-pr-onko-tnm-klassifikation-synthetisiert.md) and [MII PR Onkologie Verlauf](StructureDefinition-mii-pr-onko-verlauf.md)
 * Examples for this Profile: [Observation/TNM-Klassifikation-Observation-2](Observation-TNM-Klassifikation-Observation-2.md), [Observation/mii-exa-onko-ascending-colon-tnm](Observation-mii-exa-onko-ascending-colon-tnm.md), [Observation/mii-exa-onko-colorectal-tnm](Observation-mii-exa-onko-colorectal-tnm.md), [Observation/mii-exa-onko-cup-tnm-klassifikation](Observation-mii-exa-onko-cup-tnm-klassifikation.md)... Show 14 more, [Observation/mii-exa-onko-kim-klass1](Observation-mii-exa-onko-kim-klass1.md), [Observation/mii-exa-onko-kim-klass2](Observation-mii-exa-onko-kim-klass2.md), [Observation/mii-exa-onko-kim-klass3](Observation-mii-exa-onko-kim-klass3.md), [Observation/mii-exa-onko-tnm-biopsy-cT4cN1cM0](Observation-mii-exa-onko-tnm-biopsy-cT4cN1cM0.md), [Observation/mii-exa-onko-tnm-bundle-klassifikation-cT2cN3cM0](Observation-mii-exa-onko-tnm-bundle-klassifikation-cT2cN3cM0.md), [Observation/mii-exa-onko-tnm-bundle-legacy-klassifikation-cT2cN3cM0](Observation-mii-exa-onko-tnm-bundle-legacy-klassifikation-cT2cN3cM0.md), [Observation/mii-exa-onko-tnm-clinical-cT3cN1cM0](Observation-mii-exa-onko-tnm-clinical-cT3cN1cM0.md), [Observation/mii-exa-onko-tnm-klassifikation-TisN0M0](Observation-mii-exa-onko-tnm-klassifikation-TisN0M0.md), [Observation/mii-exa-onko-tnm-klassifikation-uT2a2pN0023i-sncM1](Observation-mii-exa-onko-tnm-klassifikation-uT2a2pN0023i-sncM1.md), [Observation/mii-exa-onko-tnm-post-chemo-ycT2ycN0cM0](Observation-mii-exa-onko-tnm-post-chemo-ycT2ycN0cM0.md), [Observation/mii-exa-onko-tnm-post-surgery-ypT0ypN0cM0](Observation-mii-exa-onko-tnm-post-surgery-ypT0ypN0cM0.md), [Observation/mii-exa-onko-tnm-recurrence-rcT2cN1cM1](Observation-mii-exa-onko-tnm-recurrence-rcT2cN1cM1.md), [Observation/mii-exa-onko-tnm-synth-meldung1-klassifikation](Observation-mii-exa-onko-tnm-synth-meldung1-klassifikation.md) and [Observation/mii-exa-onko-tnm-synth-meldung2-klassifikation](Observation-mii-exa-onko-tnm-synth-meldung2-klassifikation.md)
 * CapabilityStatements using this Profile: [MII CPS Onkology CapabilityStatement](CapabilityStatement-mii-cps-onko-capabilitystatement.md)
 
@@ -84,7 +84,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tnm-k
   "name" : "MII_PR_Onko_TNM_Klassifikation",
   "title" : "MII PR Onkologie TNM-Klassifikation",
   "status" : "active",
-  "date" : "2026-08-28T07:24:31+00:00",
+  "date" : "2026-08-28T07:40:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

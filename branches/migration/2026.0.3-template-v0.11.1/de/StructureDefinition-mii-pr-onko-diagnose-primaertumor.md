@@ -124,6 +124,9 @@ This structure refers to these other structures:
 
 * [MII PR Onkologie Diagnose Primärtumor (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)](StructureDefinition-mii-pr-onko-diagnose-primaertumor.md)
 * [MII PR Onkologie Frühere Tumorerkrankung (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung)](StructureDefinition-mii-pr-onko-fruehere-tumorerkrankung.md)
+* [MII PR Onkologie Strahlentherapie (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie)](StructureDefinition-mii-pr-onko-strahlentherapie.md)
+* [MII PR Onkologie Systemische Therapie (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie)](StructureDefinition-mii-pr-onko-systemische-therapie.md)
+* [MII PR Onkologie Systemische Therapie Medikation (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation)](StructureDefinition-mii-pr-onko-systemische-therapie-medikation.md)
 * [MII PR Onkologie Evidenz Diagnose Primärtumor (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-liste-evidenz-erstdiagnose)](StructureDefinition-mii-pr-onko-liste-evidenz-erstdiagnose.md)
 
 **Extensions**
@@ -175,6 +178,9 @@ This structure refers to these other structures:
 
 * [MII PR Onkologie Diagnose Primärtumor (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)](StructureDefinition-mii-pr-onko-diagnose-primaertumor.md)
 * [MII PR Onkologie Frühere Tumorerkrankung (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung)](StructureDefinition-mii-pr-onko-fruehere-tumorerkrankung.md)
+* [MII PR Onkologie Strahlentherapie (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie)](StructureDefinition-mii-pr-onko-strahlentherapie.md)
+* [MII PR Onkologie Systemische Therapie (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie)](StructureDefinition-mii-pr-onko-systemische-therapie.md)
+* [MII PR Onkologie Systemische Therapie Medikation (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation)](StructureDefinition-mii-pr-onko-systemische-therapie-medikation.md)
 * [MII PR Onkologie Evidenz Diagnose Primärtumor (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-liste-evidenz-erstdiagnose)](StructureDefinition-mii-pr-onko-liste-evidenz-erstdiagnose.md)
 
 **Extensions**
@@ -233,7 +239,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
     }]
   },
   "status" : "active",
-  "date" : "2026-08-28T07:24:31+00:00",
+  "date" : "2026-08-28T07:40:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -448,6 +454,33 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
         "profile" : ["http://hl7.org/fhir/StructureDefinition/condition-dueTo"]
       }],
       "mustSupport" : true
+    },
+    {
+      "id" : "Condition.extension:dueTo.value[x]",
+      "path" : "Condition.extension.value[x]",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "type",
+          "path" : "$this"
+        }],
+        "ordered" : false,
+        "rules" : "open"
+      }
+    },
+    {
+      "id" : "Condition.extension:dueTo.value[x]:valueReference",
+      "path" : "Condition.extension.value[x]",
+      "sliceName" : "valueReference",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung"]
+      }]
     },
     {
       "id" : "Condition.extension:transformationVon",

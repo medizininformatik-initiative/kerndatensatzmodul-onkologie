@@ -31,7 +31,7 @@ Dieses Profil ist konform zum [Patho-Finding-Profil des MII-Pathologiebefundes](
 
 **Usages:**
 
-* Refer to this Profile: [MII PR Onkologie TNM M-Kategorie](StructureDefinition-mii-pr-onko-tnm-m-kategorie.md)
+* Refer to this Profile: [MII PR Onkologie TNM M-Kategorie](StructureDefinition-mii-pr-onko-tnm-m-kategorie.md) and [MII PR Onkologie Verlauf](StructureDefinition-mii-pr-onko-verlauf.md)
 * Examples for this Profile: [Observation/mii-exa-onko-cup-fernmetastase-hep](Observation-mii-exa-onko-cup-fernmetastase-hep.md), [Observation/mii-exa-onko-cup-fernmetastase-pul](Observation-mii-exa-onko-cup-fernmetastase-pul.md) and [Observation/mii-exa-onko-fernmetastasen-1](Observation-mii-exa-onko-fernmetastasen-1.md)
 * CapabilityStatements using this Profile: [MII CPS Onkology CapabilityStatement](CapabilityStatement-mii-cps-onko-capabilitystatement.md)
 
@@ -132,7 +132,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_Fernmetastasen",
   "title" : "MII PR Onkologie Fernmetastasen",
   "status" : "active",
-  "date" : "2026-08-28T07:24:31+00:00",
+  "date" : "2026-08-28T07:40:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

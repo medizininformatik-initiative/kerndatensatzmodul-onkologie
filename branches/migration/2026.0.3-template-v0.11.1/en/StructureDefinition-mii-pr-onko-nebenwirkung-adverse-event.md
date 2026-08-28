@@ -68,7 +68,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-neben
   "name" : "MII_PR_Onko_Nebenwirkung_Adverse_Event",
   "title" : "MII PR Onkologie Nebenwirkung von Strahlentherapie und systemische Therapie",
   "status" : "active",
-  "date" : "2026-08-28T07:24:31+00:00",
+  "date" : "2026-08-28T07:40:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -383,8 +383,9 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-neben
       "path" : "AdverseEvent.suspectEntity.instance",
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Procedure",
-        "http://hl7.org/fhir/StructureDefinition/MedicationStatement"]
+        "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"]
       }],
       "mustSupport" : true
     }]

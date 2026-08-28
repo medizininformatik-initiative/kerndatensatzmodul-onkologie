@@ -20,7 +20,7 @@
   "name" : "MII_PR_Onko_KRK_Operation",
   "title" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
   "status" : "active",
-  "date" : "2026-08-28T07:24:31+00:00",
+  "date" : "2026-08-28T07:40:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -2372,6 +2372,13 @@
     {
       "id" : "Procedure.basedOn",
       "path" : "Procedure.basedOn",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "type",
+          "path" : "$this.resolve()"
+        }],
+        "rules" : "open"
+      },
       "short" : "A request for this procedure",
       "definition" : "A reference to a resource that contains details of the request for this procedure.",
       "comment" : "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.",
@@ -2386,6 +2393,61 @@
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/CarePlan"]
+      }],
+      "condition" : ["ele-1"],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      },
+      {
+        "key" : "ref-1",
+        "severity" : "error",
+        "human" : "SHALL have a contained resource if a local reference is provided",
+        "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
+        "xpath" : "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Reference"
+      }],
+      "mustSupport" : true,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      },
+      {
+        "identity" : "rim",
+        "map" : "The target of a resource reference is a RIM entry point (Act, Role, or Entity)"
+      },
+      {
+        "identity" : "workflow",
+        "map" : "Event.basedOn"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".outboundRelationship[typeCode=FLFS].target[classCode=(various e.g. PROC, OBS, PCPR, ACT,  moodCode=RQO].code"
+      }]
+    },
+    {
+      "id" : "Procedure.basedOn:tumorkonferenz",
+      "path" : "Procedure.basedOn",
+      "sliceName" : "tumorkonferenz",
+      "short" : "A request for this procedure",
+      "definition" : "A reference to a resource that contains details of the request for this procedure.",
+      "comment" : "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.",
+      "alias" : ["fulfills"],
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Procedure.basedOn",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"]
       }],
       "condition" : ["ele-1"],
       "constraint" : [{

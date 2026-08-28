@@ -58,7 +58,7 @@
   <name value="MII_PR_Onko_Mamma_Operation"/>
   <title value="MII PR Onkologie Mamma Operation"/>
   <status value="active"/>
-  <date value="2026-08-28T07:24:31+00:00"/>
+  <date value="2026-08-28T07:40:52+00:00"/>
   <publisher value="Medizininformatik Initiative"/>
   <contact>
     <name value="Medizininformatik Initiative"/>
@@ -2290,6 +2290,13 @@
     </element>
     <element id="Procedure.basedOn">
       <path value="Procedure.basedOn"/>
+      <slicing>
+        <discriminator>
+          <type value="type"/>
+          <path value="$this.resolve()"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
       <short value="A request for this procedure"/>
       <definition value="A reference to a resource that contains details of the request for this procedure."/>
       <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository."/>
@@ -2304,6 +2311,60 @@
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/CarePlan"/>
+      </type>
+      <condition value="ele-1"/>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ref-1"/>
+        <severity value="error"/>
+        <human value="SHALL have a contained resource if a local reference is provided"/>
+        <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))"/>
+        <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Reference"/>
+      </constraint>
+      <mustSupport value="true"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="The target of a resource reference is a RIM entry point (Act, Role, or Entity)"/>
+      </mapping>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Event.basedOn"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outboundRelationship[typeCode=FLFS].target[classCode=(various e.g. PROC, OBS, PCPR, ACT,  moodCode=RQO].code"/>
+      </mapping>
+    </element>
+    <element id="Procedure.basedOn:tumorkonferenz">
+      <path value="Procedure.basedOn"/>
+      <sliceName value="tumorkonferenz"/>
+      <short value="A request for this procedure"/>
+      <definition value="A reference to a resource that contains details of the request for this procedure."/>
+      <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository."/>
+      <alias value="fulfills"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Procedure.basedOn"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"/>
       </type>
       <condition value="ele-1"/>
       <constraint>

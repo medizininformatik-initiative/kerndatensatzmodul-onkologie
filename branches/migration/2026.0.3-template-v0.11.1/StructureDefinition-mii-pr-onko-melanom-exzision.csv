@@ -195,6 +195,12 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "
 "Procedure.basedOn","Procedure.basedOn","","fulfills
 ","",0,*,"Y","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/CarePlan]]}
+","A request for this procedure","A reference to a resource that contains details of the request for this procedure.","References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.","","","","","","","","",,,,,"","type:$this.resolve()}
+","",,"open","Procedure.basedOn",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ref-1:SHALL have a contained resource if a local reference is provided {reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))}"
+"Procedure.basedOn:tumorkonferenz","Procedure.basedOn","tumorkonferenz","fulfills
+","",0,1,"Y","","Y","Reference {[]} {[CanonicalType[https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz]]}
 ","A request for this procedure","A reference to a resource that contains details of the request for this procedure.","References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.","","","","","","","","",,,,,"",,,,"Procedure.basedOn",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ref-1:SHALL have a contained resource if a local reference is provided {reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))}"
