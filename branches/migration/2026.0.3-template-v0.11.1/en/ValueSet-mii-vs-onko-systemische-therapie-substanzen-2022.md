@@ -24,8 +24,6 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
 
 ### Expansion
 
-No Expansion for this valueset (Unsupported Code System Version)
-
 -------
 
  [Description of the above table(s)](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology). 
@@ -140,7 +138,7 @@ No Expansion for this valueset (Unsupported Code System Version)
   "title" : "MII VS Onkologie Systemische Therapie Substanzen ATC 2022",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-28T15:48:09+00:00",
+  "date" : "2026-08-28T18:25:22+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

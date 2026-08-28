@@ -18,7 +18,7 @@ Profile: [MII PR Onkologie Diagnose Primärtumor](StructureDefinition-mii-pr-onk
 
 **MII EX Onko Histology Morphology Behavior ICDO3**: Hämangiosarkom
 
-**Condition Due To**: [Procedure 8-52](Procedure-mii-exa-onko-strahlentherapie-strahlentherapie-1.md)
+**Condition Due To**: [Procedure Strahlentherapie](Procedure-mii-exa-onko-strahlentherapie-strahlentherapie-1.md)
 
 **clinicalStatus**: Active
 

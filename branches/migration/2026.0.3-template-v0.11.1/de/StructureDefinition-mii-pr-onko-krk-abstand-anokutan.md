@@ -238,7 +238,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_KRK_Abstand_Anokutan",
   "title" : "MII PR Onkologie Abstand Anokutan",
   "status" : "active",
-  "date" : "2026-08-28T15:48:09+00:00",
+  "date" : "2026-08-28T18:25:22+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

@@ -24,7 +24,7 @@ Profile: [MII PR Onkologie Systemische Therapie](StructureDefinition-mii-pr-onko
 
 **status**: Completed
 
-**category**: 18629005
+**category**: Administration of medication
 
 **code**: Nicht komplexe Chemotherapie
 

@@ -20,13 +20,13 @@ Profile: [MII PR Onkologie Strahlentherapie](StructureDefinition-mii-pr-onko-str
 
 **MII EX Onko Strahlentherapie Bestrahlung Einzeldosis**: 2.5 Gy
 
-**partOf**: [Procedure 8-52](Procedure-mii-exa-onko-strahlentherapie-pci-sclc.md)
+**partOf**: [Procedure Strahlentherapie](Procedure-mii-exa-onko-strahlentherapie-pci-sclc.md)
 
 **status**: Completed
 
 **category**: Radiotherapy (procedure)
 
-**code**: 8-52
+**code**: Strahlentherapie
 
 **subject**: [Erika Beispiel Female, DoB: 1965-04-12](Patient-example.md)
 

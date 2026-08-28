@@ -25,7 +25,7 @@ oBDS-spezifisches ValueSet für Strahlungseinheit en für Strahlen- und Nuklearm
 
 ### Expansion
 
-No Expansion for this valueset (Unsupported Code System Version)
+No Expansion for this valueset (Unknown Code System)
 
 -------
 
@@ -141,7 +141,7 @@ No Expansion for this valueset (Unsupported Code System Version)
   "title" : "MII VS Onkologie Strahlentherapie Strahlungseinheit",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-28T15:48:09+00:00",
+  "date" : "2026-08-28T18:25:22+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

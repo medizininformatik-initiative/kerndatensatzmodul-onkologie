@@ -18,7 +18,7 @@ Profile: [MII PR Onkologie TNM V-Kategorie](StructureDefinition-mii-pr-onko-tnm-
 
 **status**: Final
 
-**code**: 371493002
+**code**: Status of venous (large vessel) invasion by tumor
 
 **subject**: [Kim Musterperson (no stated gender), DoB: 1956-03-14](Patient-PatientKimMusterperson.md)
 

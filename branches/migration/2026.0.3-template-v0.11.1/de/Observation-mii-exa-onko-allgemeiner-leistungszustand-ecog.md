@@ -16,7 +16,7 @@ Profile: [MII PR Onkologie Allgemeiner Leistungszustand ECOG](StructureDefinitio
 
 **status**: Final
 
-**code**: 423740007
+**code**: ECOG performance status
 
 **subject**: [Erika Beispiel Female, DoB: 1965-04-12](Patient-example.md)
 

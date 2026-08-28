@@ -24,7 +24,7 @@ Profile: [MII PR Onkologie TNM y-Symbol](StructureDefinition-mii-pr-onko-tnm-y-s
 
 **effective**: 2021-06-22
 
-**value**: 421755005
+**value**: y
 
 **method**: 8. Auflage
 

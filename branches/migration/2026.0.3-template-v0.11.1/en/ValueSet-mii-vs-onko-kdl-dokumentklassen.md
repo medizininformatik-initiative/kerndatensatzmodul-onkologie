@@ -168,8 +168,6 @@ For document-based exchange (XDS infrastructures) and international interoperabi
 
 ### Expansion
 
-No Expansion for this valueset (Unknown Code System)
-
 -------
 
  [Description of the above table(s)](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology). 
@@ -284,7 +282,7 @@ No Expansion for this valueset (Unknown Code System)
   "title" : "MII VS Onkologie KDL Dokumentklassen",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-28T15:48:09+00:00",
+  "date" : "2026-08-28T18:25:22+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

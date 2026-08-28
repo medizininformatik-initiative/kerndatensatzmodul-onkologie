@@ -16,7 +16,7 @@
 
 **intent**: Proposal
 
-**category**: 387713003
+**category**: Surgical procedure
 
 **code**: Neurochirurgische Konsultation für Hirnmetastasen
 
