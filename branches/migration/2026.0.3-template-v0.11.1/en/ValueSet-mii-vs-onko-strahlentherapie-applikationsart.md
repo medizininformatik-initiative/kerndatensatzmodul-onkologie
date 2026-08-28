@@ -139,7 +139,7 @@ oBDS-spezifisches Codesystem für Klassifikation von Applikationsart der Strahle
   "title" : "MII VS Onkologie Strahlentherapie Applikationsart",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-28T15:24:04+00:00",
+  "date" : "2026-08-28T15:48:09+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
