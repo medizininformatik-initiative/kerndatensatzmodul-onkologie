@@ -184,7 +184,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-mamma
   "name" : "MII_PR_Onko_Mamma_Menopausenstatus",
   "title" : "MII PR Onkologie Menopausenstatus Mamma",
   "status" : "active",
-  "date" : "2026-08-28T14:33:40+00:00",
+  "date" : "2026-08-28T14:57:41+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

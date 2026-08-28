@@ -227,7 +227,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_Tumorgroesse",
   "title" : "MII PR Onkologie Tumorgröße",
   "status" : "active",
-  "date" : "2026-08-28T14:33:40+00:00",
+  "date" : "2026-08-28T14:57:41+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

@@ -137,7 +137,7 @@ oBDS-spezifisches ValueSet für Nebenwirkung nach CTCAE-Grad
   "title" : "MII VS Onkologie Nebenwirkung nach CTCAE Grad",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-28T14:33:40+00:00",
+  "date" : "2026-08-28T14:57:41+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

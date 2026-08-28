@@ -276,7 +276,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_Mamma_Rezeptorstatus_Estrogen",
   "title" : "MII PR Onkologie Rezeptorstatus Estrogen",
   "status" : "active",
-  "date" : "2026-08-28T14:33:40+00:00",
+  "date" : "2026-08-28T14:57:41+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
