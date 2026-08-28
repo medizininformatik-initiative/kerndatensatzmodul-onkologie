@@ -70,7 +70,7 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [MII_PR_Prozedur_Procedure](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.base@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure) 
+Diese Struktur ist abgeleitet von [MII_PR_Prozedur_Procedure](https://medizininformatik-initiative.github.io/kerndatensatz-basis/2026.0.1/StructureDefinition-mii-pr-prozedur-procedure.html) 
 
 #### Terminology Bindings (Differential)
 
@@ -78,7 +78,7 @@ Diese Struktur ist abgeleitet von [MII_PR_Prozedur_Procedure](https://simplifier
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [MII_PR_Prozedur_Procedure](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.base@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure) 
+Diese Struktur ist abgeleitet von [MII_PR_Prozedur_Procedure](https://medizininformatik-initiative.github.io/kerndatensatz-basis/2026.0.1/StructureDefinition-mii-pr-prozedur-procedure.html) 
 
 ** Summary **
 
@@ -115,7 +115,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
 
  **Differential-Ansicht** 
 
-Diese Struktur ist abgeleitet von [MII_PR_Prozedur_Procedure](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.base@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure) 
+Diese Struktur ist abgeleitet von [MII_PR_Prozedur_Procedure](https://medizininformatik-initiative.github.io/kerndatensatz-basis/2026.0.1/StructureDefinition-mii-pr-prozedur-procedure.html) 
 
 #### Terminology Bindings (Differential)
 
@@ -125,7 +125,7 @@ Diese Struktur ist abgeleitet von [MII_PR_Prozedur_Procedure](https://simplifier
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [MII_PR_Prozedur_Procedure](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.base@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure) 
+Diese Struktur ist abgeleitet von [MII_PR_Prozedur_Procedure](https://medizininformatik-initiative.github.io/kerndatensatz-basis/2026.0.1/StructureDefinition-mii-pr-prozedur-procedure.html) 
 
 ** Summary **
 
@@ -171,18 +171,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
     "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition"]
   },
   "extension" : [{
-    "url" : "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/spdx-license",
-        "code" : "CC-BY-4.0",
-        "display" : "Creative Commons Attribution 4.0 International"
-      }]
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/version-algorithm",
+      "code" : "semver",
+      "display" : "SemVer"
     }
-  },
-  {
-    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-usage",
-    "valueMarkdown" : "Use this profile as the technical FHIR representation of the corresponding Medical Informatics Initiative logical model. The profile constrains a base FHIR resource for the MII module context by specifying how elements are used, which elements are required or not used, which extensions and terminology bindings apply, and how the resource maps to the module-specific content model. Implementers should produce and consume resource instances that conform to this profile when exchanging data for the corresponding MII module."
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
@@ -203,8 +197,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
     }
   },
   {
-    "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
-    "valueDate" : "2026-01-03"
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-usage",
+    "valueMarkdown" : "Use this profile as the technical FHIR representation of the corresponding Medical Informatics Initiative logical model. The profile constrains a base FHIR resource for the MII module context by specifying how elements are used, which elements are required or not used, which extensions and terminology bindings apply, and how the resource maps to the module-specific content model. Implementers should produce and consume resource instances that conform to this profile when exchanging data for the corresponding MII module."
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
@@ -269,13 +263,23 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
         "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
       }]
     }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
+    "valueDate" : "2026-01-03"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+    "valuePeriod" : {
+      "start" : "2026"
+    }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin",
   "version" : "2026.0.3",
   "name" : "MII_PR_Onko_Strahlentherapie_Bestrahlung_Nuklearmedizin",
   "title" : "MII PR Onkologie Strahlentherapie Nuklearmedizin",
   "status" : "active",
-  "date" : "2026-08-28T13:57:18+00:00",
+  "date" : "2026-08-28T14:33:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -296,6 +300,21 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "mapping" : [{
     "identity" : "oBDS",
     "name" : "Mapping FHIR zu oBDS"
+  },
+  {
+    "identity" : "workflow",
+    "uri" : "http://hl7.org/fhir/workflow",
+    "name" : "Workflow Pattern"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  },
+  {
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 v2 Mapping"
   }],
   "kind" : "resource",
   "abstract" : false,

@@ -4,7 +4,7 @@
 * [**Artefaktübersicht**](artifacts.md)
 * **MII VS Onkologie Mamma Menopause Status**
 
-## ValueSet: MII VS Onkologie Mamma Menopause Status (Experimentell) 
+## ValueSet: MII VS Onkologie Mamma Menopause Status 
 
 | | |
 | :--- | :--- |
@@ -140,8 +140,8 @@ No Expansion for this valueset (Unsupported Code System Version)
   "name" : "MII_VS_Onko_Mamma_Menopause_Status",
   "title" : "MII VS Onkologie Mamma Menopause Status",
   "status" : "active",
-  "experimental" : true,
-  "date" : "2026-08-28T13:57:18+00:00",
+  "experimental" : false,
+  "date" : "2026-08-28T14:33:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

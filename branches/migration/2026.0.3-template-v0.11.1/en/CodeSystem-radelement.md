@@ -37,7 +37,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "RSNA RadElement Common Data Elements (Fragment)",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-28T13:57:18+00:00",
+  "date" : "2026-08-28T14:33:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

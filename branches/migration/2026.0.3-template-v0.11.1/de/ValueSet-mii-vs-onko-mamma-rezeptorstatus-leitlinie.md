@@ -4,7 +4,7 @@
 * [**Artefaktübersicht**](artifacts.md)
 * **MII VS Onkologie Mamma Rezeptorstatus Leitlinie**
 
-## ValueSet: MII VS Onkologie Mamma Rezeptorstatus Leitlinie (Experimentell) 
+## ValueSet: MII VS Onkologie Mamma Rezeptorstatus Leitlinie 
 
 | | |
 | :--- | :--- |
@@ -138,8 +138,8 @@ Value Set für oBDS-Rezeptorstatus Mamma
   "name" : "MII_VS_Onko_Mamma_Rezeptorstatus_Leitlinie",
   "title" : "MII VS Onkologie Mamma Rezeptorstatus Leitlinie",
   "status" : "active",
-  "experimental" : true,
-  "date" : "2026-08-28T13:57:18+00:00",
+  "experimental" : false,
+  "date" : "2026-08-28T14:33:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

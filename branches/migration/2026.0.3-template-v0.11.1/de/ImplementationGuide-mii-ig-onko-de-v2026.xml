@@ -169,7 +169,7 @@
   <dependsOn id="de_medizininformatikinitiative_kerndatensatz_base">
     <uri value="https://www.medizininformatik-initiative.de/fhir/modul-base/ImplementationGuide/mii-ig-base"/>
     <packageId value="de.medizininformatikinitiative.kerndatensatz.base"/>
-    <version value="2026.0.0"/>
+    <version value="2026.0.1"/>
   </dependsOn>
   <dependsOn id="de_medizininformatikinitiative_kerndatensatz_biobank">
     <uri value="http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.biobank/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.biobank"/>
@@ -7878,6 +7878,14 @@
           </extension>
           <nameUrl value="tumormarker-loinc.html"/>
           <title value="Tumormarker: kuratierte LOINC-Codes"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="konformitaets-mappings.html"/>
+          </extension>
+          <nameUrl value="konformitaets-mappings.html"/>
+          <title value="Concept Mappings: Overview and Review"/>
           <generation value="markdown"/>
         </page>
       </page>

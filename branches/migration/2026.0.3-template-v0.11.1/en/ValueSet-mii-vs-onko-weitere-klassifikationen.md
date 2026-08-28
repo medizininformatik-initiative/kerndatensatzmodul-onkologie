@@ -4,7 +4,7 @@
 * [**Artifacts Summary**](artifacts.md)
 * **MII Value Set Onkologie - Weitere Klassifikationen**
 
-## ValueSet: MII Value Set Onkologie - Weitere Klassifikationen (Experimental) 
+## ValueSet: MII Value Set Onkologie - Weitere Klassifikationen 
 
 | | |
 | :--- | :--- |
@@ -139,8 +139,8 @@ No Expansion for this valueset (Unsupported Code System Version)
   "name" : "MII_VS_Onko_Weitere_Klassifikationen",
   "title" : "MII Value Set Onkologie - Weitere Klassifikationen",
   "status" : "active",
-  "experimental" : true,
-  "date" : "2026-08-28T13:57:18+00:00",
+  "experimental" : false,
+  "date" : "2026-08-28T14:33:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

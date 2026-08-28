@@ -4,7 +4,7 @@
 * [**Artifacts Summary**](artifacts.md)
 * **MII VS Onkologie KRK Abstand Resektionslinie Aboral**
 
-## ValueSet: MII VS Onkologie KRK Abstand Resektionslinie Aboral (Experimental) 
+## ValueSet: MII VS Onkologie KRK Abstand Resektionslinie Aboral 
 
 | | |
 | :--- | :--- |
@@ -137,8 +137,8 @@ Value Set für semantische Kodierung des oBDS-Abstand des Tumorrandes zur aboral
   "name" : "MII_VS_Onko_KRK_Abstand_Resektionslinie_Aboral",
   "title" : "MII VS Onkologie KRK Abstand Resektionslinie Aboral",
   "status" : "active",
-  "experimental" : true,
-  "date" : "2026-08-28T13:57:18+00:00",
+  "experimental" : false,
+  "date" : "2026-08-28T14:33:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

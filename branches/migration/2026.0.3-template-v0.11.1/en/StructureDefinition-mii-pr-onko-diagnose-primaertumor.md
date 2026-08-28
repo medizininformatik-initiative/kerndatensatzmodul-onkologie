@@ -108,18 +108,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-diagn
     "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition"]
   },
   "extension" : [{
-    "url" : "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/spdx-license",
-        "code" : "CC-BY-4.0",
-        "display" : "Creative Commons Attribution 4.0 International"
-      }]
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/version-algorithm",
+      "code" : "semver",
+      "display" : "SemVer"
     }
-  },
-  {
-    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-usage",
-    "valueMarkdown" : "Use this profile as the technical FHIR representation of the corresponding Medical Informatics Initiative logical model. The profile constrains a base FHIR resource for the MII module context by specifying how elements are used, which elements are required or not used, which extensions and terminology bindings apply, and how the resource maps to the module-specific content model. Implementers should produce and consume resource instances that conform to this profile when exchanging data for the corresponding MII module."
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
@@ -140,8 +134,8 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-diagn
     }
   },
   {
-    "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
-    "valueDate" : "2026-01-03"
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-usage",
+    "valueMarkdown" : "Use this profile as the technical FHIR representation of the corresponding Medical Informatics Initiative logical model. The profile constrains a base FHIR resource for the MII module context by specifying how elements are used, which elements are required or not used, which extensions and terminology bindings apply, and how the resource maps to the module-specific content model. Implementers should produce and consume resource instances that conform to this profile when exchanging data for the corresponding MII module."
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
@@ -206,6 +200,16 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-diagn
         "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
       }]
     }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
+    "valueDate" : "2026-01-03"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+    "valuePeriod" : {
+      "start" : "2026"
+    }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor",
   "version" : "2026.0.3",
@@ -225,7 +229,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-diagn
     }]
   },
   "status" : "active",
-  "date" : "2026-08-28T13:57:18+00:00",
+  "date" : "2026-08-28T14:33:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -267,6 +271,31 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-diagn
   {
     "identity" : "LogicalModel",
     "name" : "FHIR-Profil zu LogicalModel Mapping"
+  },
+  {
+    "identity" : "workflow",
+    "uri" : "http://hl7.org/fhir/workflow",
+    "name" : "Workflow Pattern"
+  },
+  {
+    "identity" : "sct-concept",
+    "uri" : "http://snomed.info/conceptdomain",
+    "name" : "SNOMED CT Concept Domain Binding"
+  },
+  {
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 v2 Mapping"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  },
+  {
+    "identity" : "sct-attr",
+    "uri" : "http://snomed.org/attributebinding",
+    "name" : "SNOMED CT Attribute Binding"
   }],
   "kind" : "resource",
   "abstract" : false,
@@ -585,14 +614,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-diagn
     {
       "id" : "Condition.verificationStatus.coding:primaertumorDiagnosesicherung.system",
       "path" : "Condition.verificationStatus.coding.system",
-      "min" : 1,
-      "mustSupport" : true
+      "min" : 1
     },
     {
       "id" : "Condition.verificationStatus.coding:primaertumorDiagnosesicherung.code",
       "path" : "Condition.verificationStatus.coding.code",
       "min" : 1,
-      "mustSupport" : true,
       "mapping" : [{
         "identity" : "oBDS",
         "map" : "5.7",

@@ -4,7 +4,7 @@
 * [**Artefaktübersicht**](artifacts.md)
 * **MII VS Onkologie Prostata Gleason Pattern LOINC**
 
-## ValueSet: MII VS Onkologie Prostata Gleason Pattern LOINC (Experimentell) 
+## ValueSet: MII VS Onkologie Prostata Gleason Pattern LOINC 
 
 | | |
 | :--- | :--- |
@@ -137,8 +137,8 @@ Value Set der LOINC-Codes für Primär-, Sekundär- und Tertiär-Gleason-Pattern
   "name" : "MII_VS_Onko_Prostata_Gleason_Pattern_LOINC",
   "title" : "MII VS Onkologie Prostata Gleason Pattern LOINC",
   "status" : "active",
-  "experimental" : true,
-  "date" : "2026-08-28T13:57:18+00:00",
+  "experimental" : false,
+  "date" : "2026-08-28T14:33:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

@@ -249,7 +249,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-mamma
   "name" : "MII_PR_Onko_Mamma_Her2neu_Status",
   "title" : "MII PR Onkologie Her2neu Status",
   "status" : "active",
-  "date" : "2026-08-28T13:57:18+00:00",
+  "date" : "2026-08-28T14:33:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

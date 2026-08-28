@@ -338,7 +338,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
     "id" : "de_medizininformatikinitiative_kerndatensatz_base",
     "uri" : "https://www.medizininformatik-initiative.de/fhir/modul-base/ImplementationGuide/mii-ig-base",
     "packageId" : "de.medizininformatikinitiative.kerndatensatz.base",
-    "version" : "2026.0.0"
+    "version" : "2026.0.1"
   },
   {
     "id" : "de_medizininformatikinitiative_kerndatensatz_biobank",
@@ -11814,6 +11814,15 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
               "url" : "http://hl7.org/fhir/StructureDefinition/translation"
             }]
           },
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "konformitaets-mappings.html"
+          }],
+          "nameUrl" : "konformitaets-mappings.html",
+          "title" : "Concept Mappings: Overview and Review",
           "generation" : "markdown"
         }]
       },

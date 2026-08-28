@@ -983,23 +983,7 @@
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose|2026.0.0"
-  },
-  {
-    "name" : "default-canonical-version",
-    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/StructureDefinition|4.0.1"
-  },
-  {
-    "name" : "default-valueset-version",
-    "valueCanonical" : "http://hl7.org/fhir/ValueSet/security-labels|4.0.1"
-  },
-  {
-    "name" : "default-valueset-version",
-    "valueCanonical" : "http://hl7.org/fhir/ValueSet/common-tags|4.0.1"
-  },
-  {
-    "name" : "default-valueset-version",
-    "valueCanonical" : "http://hl7.org/fhir/ValueSet/languages|4.0.1"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose|2026.0.1"
   },
   {
     "name" : "default-canonical-version",
@@ -1050,28 +1034,20 @@
     "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-primaertumor-diagnosesicherung|2026.0.3"
   },
   {
-    "name" : "default-valueset-version",
-    "valueCanonical" : "http://hl7.org/fhir/ValueSet/condition-category|4.0.1"
-  },
-  {
-    "name" : "default-valueset-version",
-    "valueCanonical" : "http://hl7.org/fhir/ValueSet/condition-severity|4.0.1"
-  },
-  {
-    "name" : "default-valueset-version",
-    "valueCanonical" : "http://hl7.org/fhir/ValueSet/condition-code|4.0.1"
-  },
-  {
     "name" : "default-canonical-version",
     "valueCanonical" : "http://fhir.de/StructureDefinition/CodingICD10GM|1.5.4"
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-icd10gm|2026.0.0"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-icd10gm|2026.0.1"
   },
   {
     "name" : "default-canonical-version",
     "valueCanonical" : "http://fhir.de/StructureDefinition/icd-10-gm-mehrfachcodierungs-kennzeichen|1.5.4"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "http://fhir.de/ValueSet/icd-10-gm-mehrfachcodierungs-kennzeichen|1.5.4"
   },
   {
     "name" : "default-canonical-version",
@@ -1087,35 +1063,23 @@
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-alphaid|2026.0.0"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-alphaid|2026.0.1"
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/diagnoses-sct|2026.0.0"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/diagnoses-sct|2026.0.1"
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-orphanet|2026.0.0"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-orphanet|2026.0.1"
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "http://hl7.org/fhir/ValueSet/body-site|4.0.1"
-  },
-  {
-    "name" : "default-valueset-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-bodystructure-snomed|2026.0.0"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-bodystructure-snomed|2026.0.1"
   },
   {
     "name" : "default-valueset-version",
     "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-topographie|2026.0.3"
-  },
-  {
-    "name" : "default-canonical-version",
-    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Reference|4.0.1"
-  },
-  {
-    "name" : "default-canonical-version",
-    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1"
   },
   {
     "name" : "default-canonical-version",
@@ -1124,34 +1088,6 @@
   {
     "name" : "default-valueset-version",
     "valueCanonical" : "http://fhir.de/ValueSet/lebensphase-de|1.5.4"
-  },
-  {
-    "name" : "default-canonical-version",
-    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1"
-  },
-  {
-    "name" : "default-canonical-version",
-    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/PractitionerRole|4.0.1"
-  },
-  {
-    "name" : "default-canonical-version",
-    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/RelatedPerson|4.0.1"
-  },
-  {
-    "name" : "default-valueset-version",
-    "valueCanonical" : "http://hl7.org/fhir/ValueSet/condition-stage|4.0.1"
-  },
-  {
-    "name" : "default-canonical-version",
-    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/ClinicalImpression|4.0.1"
-  },
-  {
-    "name" : "default-valueset-version",
-    "valueCanonical" : "http://hl7.org/fhir/ValueSet/condition-stage-type|4.0.1"
-  },
-  {
-    "name" : "default-valueset-version",
-    "valueCanonical" : "http://hl7.org/fhir/ValueSet/manifestation-or-symptom|4.0.1"
   },
   {
     "name" : "default-valueset-version",
@@ -1168,6 +1104,10 @@
   {
     "name" : "default-canonical-version",
     "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante|2026.0.4"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "http://hl7.org/fhir/ValueSet/languages|4.0.1"
   },
   {
     "name" : "default-canonical-version",
@@ -1199,6 +1139,10 @@
   },
   {
     "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Reference|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
     "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/MedicationDispense|4.0.1"
   },
   {
@@ -1219,11 +1163,27 @@
   },
   {
     "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/PractitionerRole|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
     "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Organization|4.0.1"
   },
   {
     "name" : "default-canonical-version",
     "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/CareTeam|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/RelatedPerson|4.0.1"
   },
   {
     "name" : "default-valueset-version",
@@ -1244,6 +1204,10 @@
   {
     "name" : "default-canonical-version",
     "valueCanonical" : "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/annotation-code|3.0.0"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "http://hl7.org/fhir/ValueSet/body-site|4.0.1"
   },
   {
     "name" : "default-canonical-version",
@@ -1331,7 +1295,7 @@
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure|2026.0.0"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure|2026.0.1"
   },
   {
     "name" : "default-canonical-version",
@@ -1339,7 +1303,11 @@
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht|2026.0.0"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht|2026.0.1"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/ValueSet/procedures-intend|2026.0.1"
   },
   {
     "name" : "default-canonical-version",
@@ -1350,40 +1318,8 @@
     "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-urgency|2026.0.3"
   },
   {
-    "name" : "default-canonical-version",
-    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/PlanDefinition|4.0.1"
-  },
-  {
-    "name" : "default-canonical-version",
-    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/ActivityDefinition|4.0.1"
-  },
-  {
-    "name" : "default-canonical-version",
-    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Measure|4.0.1"
-  },
-  {
-    "name" : "default-canonical-version",
-    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/OperationDefinition|4.0.1"
-  },
-  {
-    "name" : "default-canonical-version",
-    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Questionnaire|4.0.1"
-  },
-  {
     "name" : "default-valueset-version",
-    "valueCanonical" : "http://hl7.org/fhir/ValueSet/procedure-not-performed-reason|4.0.1"
-  },
-  {
-    "name" : "default-valueset-version",
-    "valueCanonical" : "http://hl7.org/fhir/ValueSet/procedure-category|4.0.1"
-  },
-  {
-    "name" : "default-valueset-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/ValueSet/procedures-category-sct|2026.0.0"
-  },
-  {
-    "name" : "default-valueset-version",
-    "valueCanonical" : "http://hl7.org/fhir/ValueSet/procedure-code|4.0.1"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/ValueSet/procedures-category-sct|2026.0.1"
   },
   {
     "name" : "default-canonical-version",
@@ -1391,31 +1327,15 @@
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/ValueSet/mii-vs-prozedur-ops|2026.0.0"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/ValueSet/mii-vs-prozedur-ops|2026.0.1"
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/ValueSet/procedures-sct|2026.0.0"
-  },
-  {
-    "name" : "default-valueset-version",
-    "valueCanonical" : "http://hl7.org/fhir/ValueSet/performer-role|4.0.1"
-  },
-  {
-    "name" : "default-canonical-version",
-    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Location|4.0.1"
-  },
-  {
-    "name" : "default-valueset-version",
-    "valueCanonical" : "http://hl7.org/fhir/ValueSet/procedure-reason|4.0.1"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/ValueSet/procedures-sct|2026.0.1"
   },
   {
     "name" : "default-valueset-version",
     "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-beurteilung-lokaler-residualstatus|2026.0.3"
-  },
-  {
-    "name" : "default-canonical-version",
-    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Composition|4.0.1"
   },
   {
     "name" : "default-valueset-version",
@@ -1424,26 +1344,6 @@
   {
     "name" : "default-valueset-version",
     "valueCanonical" : "http://fhir.de/ValueSet/bfarm/icd-10-gm|1.5.4"
-  },
-  {
-    "name" : "default-valueset-version",
-    "valueCanonical" : "http://hl7.org/fhir/ValueSet/procedure-followup|4.0.1"
-  },
-  {
-    "name" : "default-valueset-version",
-    "valueCanonical" : "http://hl7.org/fhir/ValueSet/device-action|4.0.1"
-  },
-  {
-    "name" : "default-canonical-version",
-    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Medication|4.0.1"
-  },
-  {
-    "name" : "default-canonical-version",
-    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Substance|4.0.1"
-  },
-  {
-    "name" : "default-valueset-version",
-    "valueCanonical" : "http://hl7.org/fhir/ValueSet/device-kind|4.0.1"
   },
   {
     "name" : "default-valueset-version",
@@ -1464,10 +1364,6 @@
   {
     "name" : "default-valueset-version",
     "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-stoma-status-reason|2026.0.3"
-  },
-  {
-    "name" : "default-valueset-version",
-    "valueCanonical" : "http://hl7.org/fhir/ValueSet/procedure-outcome|4.0.1"
   },
   {
     "name" : "default-valueset-version",
@@ -1631,6 +1527,10 @@
   },
   {
     "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie|2026.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
     "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/ResearchStudy|4.0.1"
   },
   {
@@ -1640,6 +1540,18 @@
   {
     "name" : "default-canonical-version",
     "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationStatement|2026.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/StructureDefinition|4.0.1"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "http://hl7.org/fhir/ValueSet/security-labels|4.0.1"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "http://hl7.org/fhir/ValueSet/common-tags|4.0.1"
   },
   {
     "name" : "default-valueset-version",
@@ -1652,6 +1564,10 @@
   {
     "name" : "default-valueset-version",
     "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/ValueSet/fallkontext|2026.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Medication|4.0.1"
   },
   {
     "name" : "default-valueset-version",
@@ -1676,6 +1592,10 @@
   {
     "name" : "default-canonical-version",
     "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Resource|4.0.1"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "http://hl7.org/fhir/ValueSet/condition-code|4.0.1"
   },
   {
     "name" : "default-canonical-version",
@@ -1768,6 +1688,10 @@
   {
     "name" : "default-valueset-version",
     "valueCanonical" : "http://hl7.org/fhir/ValueSet/medicationrequest-category|4.0.1"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "http://hl7.org/fhir/ValueSet/performer-role|4.0.1"
   },
   {
     "name" : "default-valueset-version",

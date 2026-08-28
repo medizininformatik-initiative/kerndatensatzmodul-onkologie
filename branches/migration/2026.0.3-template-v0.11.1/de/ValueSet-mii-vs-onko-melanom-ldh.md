@@ -4,7 +4,7 @@
 * [**Artefaktübersicht**](artifacts.md)
 * **MII VS Onkologie Melanom LDH**
 
-## ValueSet: MII VS Onkologie Melanom LDH (Experimentell) 
+## ValueSet: MII VS Onkologie Melanom LDH 
 
 | | |
 | :--- | :--- |
@@ -137,8 +137,8 @@ Value Set für Laktatdehydrogenase (LDH) Laborwerte beim Malignen Melanom
   "name" : "MII_VS_Onko_Melanom_LDH",
   "title" : "MII VS Onkologie Melanom LDH",
   "status" : "active",
-  "experimental" : true,
-  "date" : "2026-08-28T13:57:18+00:00",
+  "experimental" : false,
+  "date" : "2026-08-28T14:33:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

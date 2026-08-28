@@ -4,7 +4,7 @@
 * [**Artefaktübersicht**](artifacts.md)
 * **MII CS Onkologie KRK Stoma Anzeichnung**
 
-## CodeSystem: MII CS Onkologie KRK Stoma Anzeichnung (Experimentell) 
+## CodeSystem: MII CS Onkologie KRK Stoma Anzeichnung 
 
 | | |
 | :--- | :--- |
@@ -126,8 +126,8 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "name" : "MII_CS_Onko_KRK_Stoma_Anzeichnung",
   "title" : "MII CS Onkologie KRK Stoma Anzeichnung",
   "status" : "active",
-  "experimental" : true,
-  "date" : "2026-08-28T13:57:18+00:00",
+  "experimental" : false,
+  "date" : "2026-08-28T14:33:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

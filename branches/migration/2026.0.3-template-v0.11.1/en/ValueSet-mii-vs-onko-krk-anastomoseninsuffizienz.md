@@ -4,7 +4,7 @@
 * [**Artifacts Summary**](artifacts.md)
 * **MII VS Onkologie KRK Anastomoseninsuffizienz**
 
-## ValueSet: MII VS Onkologie KRK Anastomoseninsuffizienz (Experimental) 
+## ValueSet: MII VS Onkologie KRK Anastomoseninsuffizienz 
 
 | | |
 | :--- | :--- |
@@ -137,8 +137,8 @@ Value Set für die Bewertung der Anastomoseninsuffizienz beim Kolorektalen Karzi
   "name" : "MII_VS_Onko_KRK_Anastomoseninsuffizienz",
   "title" : "MII VS Onkologie KRK Anastomoseninsuffizienz",
   "status" : "active",
-  "experimental" : true,
-  "date" : "2026-08-28T13:57:18+00:00",
+  "experimental" : false,
+  "date" : "2026-08-28T14:33:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

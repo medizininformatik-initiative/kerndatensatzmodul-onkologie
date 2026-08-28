@@ -90,18 +90,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
     "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition"]
   },
   "extension" : [{
-    "url" : "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/spdx-license",
-        "code" : "CC-BY-4.0",
-        "display" : "Creative Commons Attribution 4.0 International"
-      }]
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/version-algorithm",
+      "code" : "semver",
+      "display" : "SemVer"
     }
-  },
-  {
-    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-usage",
-    "valueMarkdown" : "Use this profile as the technical FHIR representation of the corresponding Medical Informatics Initiative logical model. The profile constrains a base FHIR resource for the MII module context by specifying how elements are used, which elements are required or not used, which extensions and terminology bindings apply, and how the resource maps to the module-specific content model. Implementers should produce and consume resource instances that conform to this profile when exchanging data for the corresponding MII module."
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
@@ -120,6 +114,10 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
         "display" : "Package"
       }]
     }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-usage",
+    "valueMarkdown" : "Use this profile as the technical FHIR representation of the corresponding Medical Informatics Initiative logical model. The profile constrains a base FHIR resource for the MII module context by specifying how elements are used, which elements are required or not used, which extensions and terminology bindings apply, and how the resource maps to the module-specific content model. Implementers should produce and consume resource instances that conform to this profile when exchanging data for the corresponding MII module."
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
@@ -188,13 +186,19 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
     "valueDate" : "2026-01-03"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+    "valuePeriod" : {
+      "start" : "2026"
+    }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-exzision",
   "version" : "2026.0.3",
   "name" : "MII_PR_Onko_Melanom_Exzision",
   "title" : "MII PR Onko Melanom Exzision",
   "status" : "active",
-  "date" : "2026-08-28T13:57:18+00:00",
+  "date" : "2026-08-28T14:33:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -219,6 +223,21 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   {
     "identity" : "oBDS",
     "name" : "Mapping FHIR zu oBDS"
+  },
+  {
+    "identity" : "workflow",
+    "uri" : "http://hl7.org/fhir/workflow",
+    "name" : "Workflow Pattern"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  },
+  {
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 v2 Mapping"
   }],
   "kind" : "resource",
   "abstract" : false,

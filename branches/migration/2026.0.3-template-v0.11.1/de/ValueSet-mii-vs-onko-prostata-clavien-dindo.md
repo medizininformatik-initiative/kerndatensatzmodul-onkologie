@@ -4,7 +4,7 @@
 * [**Artefaktübersicht**](artifacts.md)
 * **MII VS Onkologie Prostata Clavien Dindo**
 
-## ValueSet: MII VS Onkologie Prostata Clavien Dindo (Experimentell) 
+## ValueSet: MII VS Onkologie Prostata Clavien Dindo 
 
 | | |
 | :--- | :--- |
@@ -140,8 +140,8 @@ No Expansion for this valueset (Unsupported Code System Version)
   "name" : "MII_VS_Onko_Prostata_Clavien_Dindo",
   "title" : "MII VS Onkologie Prostata Clavien Dindo",
   "status" : "active",
-  "experimental" : true,
-  "date" : "2026-08-28T13:57:18+00:00",
+  "experimental" : false,
+  "date" : "2026-08-28T14:33:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

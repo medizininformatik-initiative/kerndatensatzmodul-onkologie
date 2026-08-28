@@ -4,7 +4,7 @@
 * [**Artefaktübersicht**](artifacts.md)
 * **MII CodeSystem Onkologie - Weitere Klassifikationen oBDS**
 
-## CodeSystem: MII CodeSystem Onkologie - Weitere Klassifikationen oBDS (Experimentell) 
+## CodeSystem: MII CodeSystem Onkologie - Weitere Klassifikationen oBDS 
 
 | | |
 | :--- | :--- |
@@ -125,8 +125,8 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "name" : "MII_CS_Onko_Weitere_Klassifikationen_OBDS",
   "title" : "MII CodeSystem Onkologie - Weitere Klassifikationen oBDS",
   "status" : "active",
-  "experimental" : true,
-  "date" : "2026-08-28T13:57:18+00:00",
+  "experimental" : false,
+  "date" : "2026-08-28T14:33:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

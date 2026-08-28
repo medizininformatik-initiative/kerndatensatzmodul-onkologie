@@ -4,7 +4,7 @@
 * [**Artifacts Summary**](artifacts.md)
 * **MII VS Onkologie KRK Abstand Circumferelle Resektionsrand**
 
-## ValueSet: MII VS Onkologie KRK Abstand Circumferelle Resektionsrand (Experimental) 
+## ValueSet: MII VS Onkologie KRK Abstand Circumferelle Resektionsrand 
 
 | | |
 | :--- | :--- |
@@ -137,8 +137,8 @@ Value Set für semantische Kodierung des oBDS-Abstand des Tumorrandes zur circum
   "name" : "MII_VS_Onko_KRK_Abstand_Circumferelle_Resektionsrand",
   "title" : "MII VS Onkologie KRK Abstand Circumferelle Resektionsrand",
   "status" : "active",
-  "experimental" : true,
-  "date" : "2026-08-28T13:57:18+00:00",
+  "experimental" : false,
+  "date" : "2026-08-28T14:33:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
