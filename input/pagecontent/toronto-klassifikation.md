@@ -121,6 +121,34 @@ Hodgkin Lymphoma* (NCIt `C141178`).
 - **No invariants** that tie permissible stage values to the entity of the
   referenced diagnosis — plausibility is currently not machine-checkable.
 
+### Transmission to the cancer registries (§65c reporting portal)
+
+The implementation guide of the §65c platform lists the Toronto stages as a
+transmittable "additional classification" — as the **TNM alternative for most
+diagnoses in children and adolescents** (valid for `C00.0–D48.9`). The tier is
+carried directly in the classification name
+(`tblMeldungDiagnoseWeitereKlass.strKlassifikation`):
+
+| Classification name (reporting portal) | Corresponds to | Permitted stage codes |
+|---|---|---|
+| **Toronto Stufe 2** | Tier 2 (established entity-specific system) | `0`, `1`, `1A`, `1B`, `2`, `2A`, `2B`, `3`, `3A`, `3B`, `4`, `4A`, `4B`, `A`, `CNS1`, `CNS2`, `CNS3`, `CNS-`, `CNS+`, `L`, `L1`, `L2`, `M`, `M0`, `M1`, `M2`, `M3`, `M4`, `MS`, `y1`, `y2`, `y3`, `X`, `ND` |
+| **Toronto Stufe 1** | Tier 1 (coarse staging) | `1A`, `1B`, `2A`, `2B`, `3A`, `3B`, `4A`, `4B`, `A`, `CNS-`, `CNS+`, `L` (limited/localized), `LR` (locoregional), `M`, `MS`, `R` (regional), `X`, `ND` |
+
+Rules from the implementation guide:
+
+- **Tier 2 can always be collapsed to Tier 1** — registries collecting Tier 2
+  can derive Tier 1 from it.
+- **Assignment to the tumour entity is morphology-based**, not via the ICD-10
+  diagnosis; content validation (which codes are permitted for which entity)
+  happens behind the reporting portal.
+- For the FHIR representation via `MII_PR_Onko_Weitere_Klassifikationen` this
+  means: `code.text` = "Toronto Stufe 1" or "Toronto Stufe 2",
+  `valueCodeableConcept.text` = stage code from the respective list.
+
+Source: [§65c implementation guide — Weitere Klassifikationen](https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532511/Weitere+Klassifikationen)
+(the CSV minimum list maintained there, as of 2025-05-19, carries Toronto in
+the page text, not in the CSV).
+
 ### Outlook
 
 The 2014 guidelines were revised by an international expert panel at the

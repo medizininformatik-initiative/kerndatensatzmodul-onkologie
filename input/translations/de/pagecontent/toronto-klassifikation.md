@@ -127,6 +127,34 @@ INRGSS (SNOMED CT `1287643004`), das Stannard-System für das Retinoblastom
   referenzierten Diagnose koppeln — Plausibilität ist derzeit nicht
   maschinell prüfbar.
 
+### Übermittlung an die Krebsregister (§65c-Melderportal)
+
+Der Umsetzungsleitfaden der Plattform §65c führt die Toronto-Stadien als
+übermittelbare „Weitere Klassifikation" — als **TNM-Alternative für die meisten
+Diagnosen bei Kindern und Jugendlichen** (gültig für `C00.0–D48.9`). Die
+Tier-Stufe wird dabei direkt im Klassifikationsnamen transportiert
+(`tblMeldungDiagnoseWeitereKlass.strKlassifikation`):
+
+| Klassifikationsname (Melderportal) | Entspricht | Zulässige Stadienkürzel |
+|---|---|---|
+| **Toronto Stufe 2** | Tier 2 (etabliertes entitätsspezifisches System) | `0`, `1`, `1A`, `1B`, `2`, `2A`, `2B`, `3`, `3A`, `3B`, `4`, `4A`, `4B`, `A`, `CNS1`, `CNS2`, `CNS3`, `CNS-`, `CNS+`, `L`, `L1`, `L2`, `M`, `M0`, `M1`, `M2`, `M3`, `M4`, `MS`, `y1`, `y2`, `y3`, `X`, `ND` |
+| **Toronto Stufe 1** | Tier 1 (grobes Staging) | `1A`, `1B`, `2A`, `2B`, `3A`, `3B`, `4A`, `4B`, `A`, `CNS-`, `CNS+`, `L` (begrenzt/lokalisiert), `LR` (lokoregionär), `M`, `MS`, `R` (regionär), `X`, `ND` |
+
+Regeln aus dem Umsetzungsleitfaden:
+
+- **Stufe 2 kann immer zu Stufe 1 zusammengefasst werden** — wer Tier 2 erhebt,
+  kann Tier 1 daraus ableiten.
+- Die **Zuordnung zur Tumorentität erfolgt morphologiebasiert**, nicht über die
+  ICD-10-Diagnose; die inhaltliche Prüfung (welche Kürzel für welche Entität
+  zulässig sind) liegt hinter dem Melderportal.
+- Für die FHIR-Abbildung über `MII_PR_Onko_Weitere_Klassifikationen` heißt das:
+  `code.text` = „Toronto Stufe 1" bzw. „Toronto Stufe 2",
+  `valueCodeableConcept.text` = Stadienkürzel aus der jeweiligen Liste.
+
+Quelle: [Umsetzungsleitfaden §65c — Weitere Klassifikationen](https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532511/Weitere+Klassifikationen)
+(die dort ebenfalls gepflegte Liste der Weiteren Klassifikationen, Stand
+19.05.2025, führt Toronto im Seitentext, nicht in der CSV-Mindestliste).
+
 ### Ausblick
 
 Die Guidelines von 2014 wurden durch ein internationales Expertengremium an der
