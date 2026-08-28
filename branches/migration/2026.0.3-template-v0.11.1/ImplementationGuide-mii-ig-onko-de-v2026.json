@@ -3555,6 +3555,42 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "AdverseEvent"
+      }],
+      "reference" : {
+        "reference" : "AdverseEvent/mii-exa-onko-nebenwirkung-anaemie-grad3"
+      },
+      "name" : "MII EXA Onkologie Nebenwirkung Anämie CTCAE Grad 3",
+      "description" : "Anämie CTCAE Grad 3 (MedDRA 10002272, deutsches Display aus dem Supplement) unter systemischer Therapie — mit SNOMED-CT-Zweitkodierung aus der ConceptMap.",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "AdverseEvent"
+      }],
+      "reference" : {
+        "reference" : "AdverseEvent/mii-exa-onko-nebenwirkung-crs-grad4"
+      },
+      "name" : "MII EXA Onkologie Nebenwirkung Cytokine-Release-Syndrom CTCAE Grad 4",
+      "description" : "Cytokine-Release-Syndrom CTCAE Grad 4 (MedDRA 10052015) unter medikamentöser systemischer Therapie — SNOMED-Zweitkodierung auf das aktive Nachfolgekonzept Cytokine storm syndrome (der frühere Code 710027002 ist inaktiviert).",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "AdverseEvent"
+      }],
+      "reference" : {
+        "reference" : "AdverseEvent/mii-exa-onko-nebenwirkung-rektale-mukositis-grad2"
+      },
+      "name" : "MII EXA Onkologie Nebenwirkung Rektale Mukositis CTCAE Grad 2 (MedDRA-only)",
+      "description" : "Rektale Mukositis CTCAE Grad 2 (MedDRA 10063190) nach Strahlentherapie — Beispiel für einen Term OHNE SNOMED-CT-Äquivalent (in der ConceptMap als unmatched geführt): Die Kodierung bleibt MedDRA-only, der optionale snomed-Slice entfällt.",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Specimen"
       }],
       "reference" : {

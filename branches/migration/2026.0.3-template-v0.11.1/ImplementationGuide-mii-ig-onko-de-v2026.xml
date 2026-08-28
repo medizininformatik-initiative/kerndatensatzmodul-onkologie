@@ -3051,6 +3051,39 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="AdverseEvent"/>
+      </extension>
+      <reference>
+        <reference value="AdverseEvent/mii-exa-onko-nebenwirkung-anaemie-grad3"/>
+      </reference>
+      <name value="MII EXA Onkologie Nebenwirkung Anämie CTCAE Grad 3"/>
+      <description value="Anämie CTCAE Grad 3 (MedDRA 10002272, deutsches Display aus dem Supplement) unter systemischer Therapie — mit SNOMED-CT-Zweitkodierung aus der ConceptMap."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="AdverseEvent"/>
+      </extension>
+      <reference>
+        <reference value="AdverseEvent/mii-exa-onko-nebenwirkung-crs-grad4"/>
+      </reference>
+      <name value="MII EXA Onkologie Nebenwirkung Cytokine-Release-Syndrom CTCAE Grad 4"/>
+      <description value="Cytokine-Release-Syndrom CTCAE Grad 4 (MedDRA 10052015) unter medikamentöser systemischer Therapie — SNOMED-Zweitkodierung auf das aktive Nachfolgekonzept Cytokine storm syndrome (der frühere Code 710027002 ist inaktiviert)."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="AdverseEvent"/>
+      </extension>
+      <reference>
+        <reference value="AdverseEvent/mii-exa-onko-nebenwirkung-rektale-mukositis-grad2"/>
+      </reference>
+      <name value="MII EXA Onkologie Nebenwirkung Rektale Mukositis CTCAE Grad 2 (MedDRA-only)"/>
+      <description value="Rektale Mukositis CTCAE Grad 2 (MedDRA 10063190) nach Strahlentherapie — Beispiel für einen Term OHNE SNOMED-CT-Äquivalent (in der ConceptMap als unmatched geführt): Die Kodierung bleibt MedDRA-only, der optionale snomed-Slice entfällt."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Specimen"/>
       </extension>
       <reference>

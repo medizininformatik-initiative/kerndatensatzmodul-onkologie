@@ -187,7 +187,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-allge
   "name" : "MII_PR_Onko_Allgemeiner_Leistungszustand_ECOG",
   "title" : "MII PR Onkologie Allgemeiner Leistungszustand ECOG",
   "status" : "active",
-  "date" : "2026-08-28T09:53:30+00:00",
+  "date" : "2026-08-28T10:16:47+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

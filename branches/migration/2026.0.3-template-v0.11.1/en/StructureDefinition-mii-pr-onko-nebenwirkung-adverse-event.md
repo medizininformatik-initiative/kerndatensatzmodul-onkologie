@@ -42,7 +42,7 @@ Adverse event without MedDRA coding:
 
 **Usages:**
 
-* Examples for this Profile: [AdverseEvent/mii-pr-onko-nebenwirkung-0](AdverseEvent-mii-pr-onko-nebenwirkung-0.md) and [AdverseEvent/mii-pr-onko-nebenwirkung-text](AdverseEvent-mii-pr-onko-nebenwirkung-text.md)
+* Examples for this Profile: [AdverseEvent/mii-exa-onko-nebenwirkung-anaemie-grad3](AdverseEvent-mii-exa-onko-nebenwirkung-anaemie-grad3.md), [AdverseEvent/mii-exa-onko-nebenwirkung-crs-grad4](AdverseEvent-mii-exa-onko-nebenwirkung-crs-grad4.md), [AdverseEvent/mii-exa-onko-nebenwirkung-rektale-mukositis-grad2](AdverseEvent-mii-exa-onko-nebenwirkung-rektale-mukositis-grad2.md), [AdverseEvent/mii-pr-onko-nebenwirkung-0](AdverseEvent-mii-pr-onko-nebenwirkung-0.md) and [AdverseEvent/mii-pr-onko-nebenwirkung-text](AdverseEvent-mii-pr-onko-nebenwirkung-text.md)
 * CapabilityStatements using this Profile: [MII CPS Onkology CapabilityStatement](CapabilityStatement-mii-cps-onko-capabilitystatement.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.onkologie|current/StructureDefinition/StructureDefinition-mii-pr-onko-nebenwirkung-adverse-event.json)
@@ -162,7 +162,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-neben
   "name" : "MII_PR_Onko_Nebenwirkung_Adverse_Event",
   "title" : "MII PR Onkologie Nebenwirkung von Strahlentherapie und systemische Therapie",
   "status" : "active",
-  "date" : "2026-08-28T09:53:30+00:00",
+  "date" : "2026-08-28T10:16:47+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
