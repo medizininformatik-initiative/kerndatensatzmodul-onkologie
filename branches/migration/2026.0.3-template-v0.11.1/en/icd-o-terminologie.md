@@ -21,7 +21,7 @@ For ICD-O-3 there are two German revisions that occur side by side in legacy dat
 | First revision | 2014 | ICD-O-3.1 | widespread in cancer registry legacy data |
 | Second revision | 2019 | ICD-O-3.2 | current edition (publication completed 12/2020) |
 
-The second revision differs substantially (morphology axis: **124 new** and **55 removed** codes alongside approximately 1,080 unchanged ones):
+The second revision differs substantially (morphology axis: **124 new** and **56 removed** codes alongside approximately 1,080 unchanged ones; 55 verified against the server, plus 8153/1 per the official BfArM update list of 2021-01-29):
 
 * **New codes** mainly concern molecularly defined entities (e.g. `8023/3` NUT carcinoma, `8085/3`/`8086/3` HPV-positive/-negative squamous cell carcinoma).
 * **Re-assessed behaviour**: entities that the WHO uniformly classifies as malignant lost their `/0` and `/1` variants — among them GIST (`8936/1` → `8936/3`), phaeochromocytoma (`8700/0` → `8700/3`), thymomas type A–B3 (`/1` → `/3`) and the paragangliomas (`868x`/`869x`).
@@ -56,7 +56,7 @@ The binding of the profiles points to the **union ValueSets** of both revisions:
 | [`mii-vs-onko-icdo3-topographie`](ValueSet-mii-vs-onko-icdo3-topographie.md) | Topography, union 2014 + 2019 | Profile binding |
 | [`mii-vs-onko-icdo3-morphologie-2014`](ValueSet-mii-vs-onko-icdo3-morphologie-2014.md)/[`-2019`](ValueSet-mii-vs-onko-icdo3-morphologie-2019.md) | Morphology, revision-specific | DQ checks, ETL, analysis per data stock |
 | [`mii-vs-onko-icdo3-topographie-2014`](ValueSet-mii-vs-onko-icdo3-topographie-2014.md)/[`-2019`](ValueSet-mii-vs-onko-icdo3-topographie-2019.md) | Topography, revision-specific | DQ checks, ETL |
-| [`mii-cm-onko-icdo3-transitions-2019`](ConceptMap-mii-cm-onko-icdo3-transitions-2019.md) | 55 morphology transitions 3.1 → 3.2 | Migration of legacy data |
+| [`mii-cm-onko-icdo3-transitions-2019`](ConceptMap-mii-cm-onko-icdo3-transitions-2019.md) | 56 morphology transitions 3.1 → 3.2 | Migration of legacy data |
 
 ### Outlook: ICD-O-4
 

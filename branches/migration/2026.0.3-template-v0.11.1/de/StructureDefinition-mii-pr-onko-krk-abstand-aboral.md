@@ -154,7 +154,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_KRK_Abstand_Aboral",
   "title" : "MII PR Onkologie Abstand Aboral",
   "status" : "active",
-  "date" : "2026-08-28T07:40:52+00:00",
+  "date" : "2026-08-28T08:03:44+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

@@ -74,6 +74,16 @@ Diese ConceptMap dokumentiert die Morphologie-Code-Änderungen der ICD-O-3 von d
       }]
     },
     {
+      "code" : "8153/1",
+      "display" : "Gastrinom o.n.A.",
+      "target" : [{
+        "code" : "8153/3",
+        "display" : "Malignes Gastrinom",
+        "equivalence" : "equivalent",
+        "comment" : "Streichung in der Zweiten Revision (Aktualisierungsliste 29.01.2021): Zusammenlegung in das bereits bestehende Konzept 8153/3. Achtung: Die amtliche BfArM-ClaML-Fassung (und damit der MII-Terminologieserver, der sie exakt spiegelt) enthaelt 8153/1 in der 2019er-Version weiterhin - im Widerspruch zu Aktualisierungsliste und amtlicher Online-Fassung, die den Code streichen (BfArM-Meldung, beads dq9)."
+      }]
+    },
+    {
       "code" : "8156/1",
       "display" : "Somatostatinom o.n.A.",
       "target" : [{

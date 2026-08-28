@@ -57,7 +57,7 @@ The following tables are generated at build time via SQL directly from this IG's
 | | |
 | :--- | :--- |
 | Relationship | Count |
-| equivalent | 680 |
+| equivalent | 681 |
 | source-is-narrower-than-target | 38 |
 | source-is-broader-than-target | 32 |
 

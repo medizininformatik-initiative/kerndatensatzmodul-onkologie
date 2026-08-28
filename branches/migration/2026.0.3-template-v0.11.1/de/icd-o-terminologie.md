@@ -21,7 +21,7 @@ Für die ICD-O-3 existieren zwei deutsche Revisionsstände, die in Bestandsdaten
 | Erste Revision | 2014 | ICD-O-3.1 | in Krebsregister-Bestandsdaten weit verbreitet |
 | Zweite Revision | 2019 | ICD-O-3.2 | aktuelle Ausgabe (Publikation abgeschlossen 12/2020) |
 
-Die Zweite Revision unterscheidet sich substanziell (Morphologie-Achse: **124 neue** und **55 gestrichene** Codes bei ~1.080 unveränderten):
+Die Zweite Revision unterscheidet sich substanziell (Morphologie-Achse: **124 neue** und **56 gestrichene** Codes bei ~1.080 unveränderten; 55 davon serververifiziert, zusätzlich 8153/1 gemäß amtlicher Aktualisierungsliste vom 29.01.2021):
 
 * **Neue Codes** betreffen v. a. molekular definierte Entitäten (z. B. `8023/3` NUT-Karzinom, `8085/3`/`8086/3` HPV-positives/-negatives Plattenepithelkarzinom).
 * **Dignitäts-Neubewertungen**: Entitäten, die die WHO einheitlich als maligne einstuft, verloren ihre `/0`-/`/1`-Varianten — u. a. GIST (`8936/1` → `8936/3`), Phäochromozytom (`8700/0` → `8700/3`), Thymome Typ A–B3 (`/1` → `/3`) und die Paragangliome (`868x`/`869x`).
@@ -56,7 +56,7 @@ Das Binding der Profile zeigt auf die **Union-ValueSets** beider Revisionen: Bes
 | [`mii-vs-onko-icdo3-topographie`](ValueSet-mii-vs-onko-icdo3-topographie.md) | Topographie, Union 2014 + 2019 | Profil-Binding |
 | [`mii-vs-onko-icdo3-morphologie-2014`](ValueSet-mii-vs-onko-icdo3-morphologie-2014.md)/[`-2019`](ValueSet-mii-vs-onko-icdo3-morphologie-2019.md) | Morphologie, revisionsscharf | DQ-Prüfung, ETL, Auswertung je Datenbestand |
 | [`mii-vs-onko-icdo3-topographie-2014`](ValueSet-mii-vs-onko-icdo3-topographie-2014.md)/[`-2019`](ValueSet-mii-vs-onko-icdo3-topographie-2019.md) | Topographie, revisionsscharf | DQ-Prüfung, ETL |
-| [`mii-cm-onko-icdo3-transitions-2019`](ConceptMap-mii-cm-onko-icdo3-transitions-2019.md) | 55 Morphologie-Umsteiger 3.1 → 3.2 | Migration von Bestandsdaten |
+| [`mii-cm-onko-icdo3-transitions-2019`](ConceptMap-mii-cm-onko-icdo3-transitions-2019.md) | 56 Morphologie-Umsteiger 3.1 → 3.2 | Migration von Bestandsdaten |
 
 ### Ausblick: ICD-O-4
 

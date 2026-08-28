@@ -87,7 +87,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-syste
   "name" : "MII_PR_Onko_Systemische_Therapie_Medikation",
   "title" : "MII PR Onkologie Systemische Therapie Medikation",
   "status" : "active",
-  "date" : "2026-08-28T07:40:52+00:00",
+  "date" : "2026-08-28T08:03:44+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
