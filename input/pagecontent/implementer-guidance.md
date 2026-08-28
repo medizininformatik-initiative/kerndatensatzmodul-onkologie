@@ -78,6 +78,22 @@ tumor concepts of March 2025.
 The individual mappings are documented as intro texts on the respective
 ConceptMap pages (see the [artifact overview](artifacts.html)).
 
+#### Mapping overview (generated from the ConceptMaps)
+
+The following tables are generated at build time via SQL directly from this
+IG's ConceptMap resources (the IG Publisher's `package.db`) — they therefore
+cannot diverge from the artifacts.
+
+**Distribution of equivalence levels (all ConceptMaps):**
+
+{% sql SELECT Relationship, count(*) AS Count FROM ConceptMappings GROUP BY Relationship ORDER BY Count DESC %}
+
+**All mappings of the oBDS answer lists** (module-own code systems → SNOMED CT/LOINC;
+the year-versioned ATC/ICD-O transitions are described on
+[ATC](atc-terminologie.html) and [ICD-O](icd-o-terminologie.html)):
+
+{% sql SELECT replace(SourceSystem, 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/', '') AS SourceSystem, SourceCode, Relationship, replace(replace(TargetSystem,'http://snomed.info/sct','SNOMED CT'),'http://loinc.org','LOINC') AS TargetSystem, TargetCode FROM ConceptMappings WHERE SourceSystem LIKE '%modul-onko/CodeSystem%' ORDER BY SourceSystem, CAST(SourceCode AS INTEGER), SourceCode %}
+
 ### References
 
 The CDS module Oncology is based on the German oncology base dataset (oBDS)

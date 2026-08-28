@@ -79,6 +79,22 @@ Residualtumorkonzepte aus dem März 2025.
 Die einzelnen Mappings sind als Intro-Texte auf den jeweiligen
 ConceptMap-Seiten dokumentiert (siehe [Artefakt-Übersicht](artifacts.html)).
 
+#### Mapping-Gesamtübersicht (aus den ConceptMaps generiert)
+
+Die folgenden Tabellen werden beim Build per SQL direkt aus den
+ConceptMap-Ressourcen dieses IGs erzeugt (Datenbasis `package.db` des IG
+Publishers) — sie können daher nicht von den Artefakten abweichen.
+
+**Verteilung der Äquivalenzlevel (alle ConceptMaps):**
+
+{% sql SELECT Relationship AS Beziehung, count(*) AS Anzahl FROM ConceptMappings GROUP BY Relationship ORDER BY Anzahl DESC %}
+
+**Alle Mappings der oBDS-Antwortlisten** (modul-eigene CodeSysteme → SNOMED CT/LOINC;
+die jahresversionierten ATC-/ICD-O-Überleitungen sind auf
+[ATC](atc-terminologie.html) bzw. [ICD-O](icd-o-terminologie.html) beschrieben):
+
+{% sql SELECT replace(SourceSystem, 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/', '') AS Quellsystem, SourceCode AS Code, Relationship AS Beziehung, replace(replace(TargetSystem,'http://snomed.info/sct','SNOMED CT'),'http://loinc.org','LOINC') AS Zielsystem, TargetCode AS Zielcode FROM ConceptMappings WHERE SourceSystem LIKE '%modul-onko/CodeSystem%' ORDER BY Quellsystem, CAST(Code AS INTEGER), Code %}
+
 ### Referenzen
 
 Das KDS-Modul Onkologie basiert auf dem onkologischen Basisdatensatz (oBDS) in
