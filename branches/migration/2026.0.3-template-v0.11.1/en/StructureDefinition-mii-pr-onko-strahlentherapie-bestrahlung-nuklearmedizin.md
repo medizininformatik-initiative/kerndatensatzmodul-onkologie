@@ -87,7 +87,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-strah
   "name" : "MII_PR_Onko_Strahlentherapie_Bestrahlung_Nuklearmedizin",
   "title" : "MII PR Onkologie Strahlentherapie Nuklearmedizin",
   "status" : "active",
-  "date" : "2026-08-28T06:12:02+00:00",
+  "date" : "2026-08-28T06:31:49+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

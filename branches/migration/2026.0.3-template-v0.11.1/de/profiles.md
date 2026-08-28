@@ -161,7 +161,7 @@ Die Diagnose enthält sowohl Informationen zur Primärdiagnose selbst als auch z
 
 #### Verlauf, Tumorkonferenz, Tod und Genetische Variante
 
-![](MII_Onko_17-20_23_Others.svg)
+![](MII_Onko_17-20_24_Others.svg)
 
 ### Lymphknotenuntersuchungen
 

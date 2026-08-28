@@ -161,7 +161,7 @@ The diagnosis contains information on the primary diagnosis itself as well as on
 
 #### Follow-up, tumor conference, death and genetic variant
 
-![](MII_Onko_17-20_23_Others.svg)
+![](MII_Onko_17-20_24_Others.svg)
 
 ### Lymph node examinations
 

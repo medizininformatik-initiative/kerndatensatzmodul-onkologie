@@ -84,7 +84,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tnm-k
   "name" : "MII_PR_Onko_TNM_Klassifikation",
   "title" : "MII PR Onkologie TNM-Klassifikation",
   "status" : "active",
-  "date" : "2026-08-28T06:12:02+00:00",
+  "date" : "2026-08-28T06:31:49+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -326,7 +326,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tnm-k
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "TNM-Version nach 8.5 oBDS 2021",
+      "definition" : "TNM-Version nach 8.2 oBDS 2021",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -335,7 +335,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tnm-k
           },
           {
             "url" : "content",
-            "valueString" : "TNM-Version nach 8.5 oBDS 2021"
+            "valueString" : "TNM-Version nach 8.2 oBDS 2021"
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]

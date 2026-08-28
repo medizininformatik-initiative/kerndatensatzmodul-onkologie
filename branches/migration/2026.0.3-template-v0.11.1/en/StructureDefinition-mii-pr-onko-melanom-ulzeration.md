@@ -90,7 +90,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-melan
   "name" : "MII_PR_Onko_Melanom_Ulzeration",
   "title" : "MII PR Onkologie Melanom Ulzeration",
   "status" : "active",
-  "date" : "2026-08-28T06:12:02+00:00",
+  "date" : "2026-08-28T06:31:49+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

@@ -27,7 +27,7 @@ Mapping der oBDS-Codes für ECOG Performance Status zu LOINC Answer List LL529-9
   "title" : "Mapping oBDS ECOG zu LOINC",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-28T06:12:02+00:00",
+  "date" : "2026-08-28T06:31:49+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
