@@ -519,6 +519,500 @@ das in KDL 2025 durch <code class="language-plaintext highlighter-rouge">SD15010
 Auswahlunterstützung und für Abfragen gedacht, nicht als verpflichtende
 Einschränkung: Instanzen dürfen weiterhin jede gültige KDL-Klasse verwenden.</p>
 
+<h3 id="zuordnung-zu-ihe-xds-snomed-ct-und-loinc">Zuordnung zu IHE-XDS, SNOMED CT und LOINC</h3>
+
+<p>Für den dokumentenbasierten Austausch (XDS-Infrastrukturen) und die internationale
+Interoperabilität sind die 45 KDL-Klassen den entsprechenden Dokumenttyp-Terminologien
+zugeordnet. Legende: ≡ bedeutungsgleich, ⊃ Zielkonzept weiter gefasst, ⊂ Zielkonzept
+enger gefasst, — keine vertretbare Zuordnung.</p>
+
+<p class="bg-info"><strong>Hinweise zur Herkunft und Verbindlichkeit:</strong> Die <strong>IHE-XDS-Spalte</strong> ist amtlich —
+sie stammt per <code class="language-plaintext highlighter-rouge">$translate</code> aus der offiziellen DVMD-ConceptMap
+(<code class="language-plaintext highlighter-rouge">kdl-ihe-typecode</code>, KDL→IHE-D-XDS-typeCode) auf dem MII-Terminologieserver.
+Eine offizielle KDL→SNOMED-CT- oder KDL→LOINC-Zuordnung existiert dagegen <strong>nicht</strong>;
+die Spalten SNOMED CT (Teilbaum <code class="language-plaintext highlighter-rouge">229059009 |Report|</code> bzw. <code class="language-plaintext highlighter-rouge">419891008 |Record artifact|</code>)
+und LOINC (Document Ontology) sind eine <strong>projektseitige, konservative Kuratierung</strong>
+(Stand 2026-08-28, alle Zielcodes serververifiziert und aktiv). Für Vollständigkeit
+und Korrektheit wird keine Gewähr übernommen; vor einer Nutzung in Produktivsystemen
+ist eine eigenverantwortliche fachliche Prüfung erforderlich. Deutsche Register- und
+Studienformulare (z.B. Meldebogen Krebsregister, CRF-Bogen) haben erwartungsgemäß
+kein internationales Äquivalent und bleiben KDL-only.</p>
+
+<p><strong>Cluster 1 — Diagnose &amp; Erstmeldung (oBDS 5, 6)</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>KDL</th>
+      <th>Dokumentklasse</th>
+      <th>IHE-XDS typeCode (amtlich, DVMD)</th>
+      <th>SNOMED CT (kuratiert)</th>
+      <th>LOINC (kuratiert)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">PT080102</code></td>
+      <td>Histologiebefund</td>
+      <td><code class="language-plaintext highlighter-rouge">PATH</code> Pathologiebefundberichte (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">371528001</code> Pathology report (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">11526-1</code> Pathology study (⊃)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">PT260102</code></td>
+      <td>Zytologiebefund</td>
+      <td><code class="language-plaintext highlighter-rouge">PATH</code> Pathologiebefundberichte (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">726738003</code> Cytology report (≡)</td>
+      <td><code class="language-plaintext highlighter-rouge">11526-1</code> Pathology study (⊃)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">PT130102</code></td>
+      <td>Molekularpathologiebefund</td>
+      <td><code class="language-plaintext highlighter-rouge">PATH</code> Pathologiebefundberichte (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">371528001</code> Pathology report (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">51969-4</code> Genetic analysis report (⊃)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">SD150102</code></td>
+      <td>Meldebogen Krebsregister</td>
+      <td><code class="language-plaintext highlighter-rouge">ONKO</code> Onkologische Dokumente (⊃)</td>
+      <td>—</td>
+      <td><code class="language-plaintext highlighter-rouge">72134-0</code> Cancer event report (≡)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">SD150104</code></td>
+      <td>Tumorlokalisationsbogen</td>
+      <td><code class="language-plaintext highlighter-rouge">ONKO</code> Onkologische Dokumente (⊃)</td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Cluster 2 — Staging &amp; Bildgebung (oBDS 8, 11)</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>KDL</th>
+      <th>Dokumentklasse</th>
+      <th>IHE-XDS typeCode (amtlich, DVMD)</th>
+      <th>SNOMED CT (kuratiert)</th>
+      <th>LOINC (kuratiert)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">DG020103</code></td>
+      <td>CT-Befund</td>
+      <td><code class="language-plaintext highlighter-rouge">BILD</code> Ergebnisse bildgebender Diagnostik (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">4261000179100</code> Computed tomography imaging report (≡)</td>
+      <td><code class="language-plaintext highlighter-rouge">18748-4</code> Diagnostic imaging study (⊃)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">DG020105</code></td>
+      <td>Endoskopiebefund</td>
+      <td><code class="language-plaintext highlighter-rouge">BILD</code> Ergebnisse bildgebender Diagnostik (⊃)</td>
+      <td>—</td>
+      <td><code class="language-plaintext highlighter-rouge">18751-8</code> Endoscopy study (≡)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">DG020107</code></td>
+      <td>MRT-Befund</td>
+      <td><code class="language-plaintext highlighter-rouge">BILD</code> Ergebnisse bildgebender Diagnostik (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">4251000179103</code> Magnetic resonance imaging report (≡)</td>
+      <td><code class="language-plaintext highlighter-rouge">18748-4</code> Diagnostic imaging study (⊃)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">DG020109</code></td>
+      <td>PET-Befund</td>
+      <td><code class="language-plaintext highlighter-rouge">BILD</code> Ergebnisse bildgebender Diagnostik (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">4271000179106</code> Nuclear medicine report (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">18748-4</code> Diagnostic imaging study (⊃)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">DG020110</code></td>
+      <td>Röntgenbefund</td>
+      <td><code class="language-plaintext highlighter-rouge">BILD</code> Ergebnisse bildgebender Diagnostik (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">371527006</code> Radiology report (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">18748-4</code> Diagnostic imaging study (⊃)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">DG020111</code></td>
+      <td>Sonographiebefund</td>
+      <td><code class="language-plaintext highlighter-rouge">BILD</code> Ergebnisse bildgebender Diagnostik (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">4221000179107</code> Ultrasound imaging report (≡)</td>
+      <td><code class="language-plaintext highlighter-rouge">18748-4</code> Diagnostic imaging study (⊃)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">DG020112</code></td>
+      <td>SPECT-Befund</td>
+      <td><code class="language-plaintext highlighter-rouge">BILD</code> Ergebnisse bildgebender Diagnostik (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">4271000179106</code> Nuclear medicine report (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">18748-4</code> Diagnostic imaging study (⊃)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">DG020113</code></td>
+      <td>Szintigraphiebefund</td>
+      <td><code class="language-plaintext highlighter-rouge">BILD</code> Ergebnisse bildgebender Diagnostik (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">4271000179106</code> Nuclear medicine report (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">18748-4</code> Diagnostic imaging study (⊃)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">DG020114</code></td>
+      <td>Mammographiebefund</td>
+      <td><code class="language-plaintext highlighter-rouge">BILD</code> Ergebnisse bildgebender Diagnostik (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">4231000179109</code> Mammography report (≡)</td>
+      <td><code class="language-plaintext highlighter-rouge">18748-4</code> Diagnostic imaging study (⊃)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">DG020199</code></td>
+      <td>Sonstige Dokumentation bildgebende Diagnostik</td>
+      <td><code class="language-plaintext highlighter-rouge">BILD</code> Ergebnisse bildgebender Diagnostik (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">4201000179104</code> Imaging report (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">18748-4</code> Diagnostic imaging study (⊃)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Cluster 3 — Tumorkonferenz (oBDS 18/19); NICHT AD060106 (deprecated)</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>KDL</th>
+      <th>Dokumentklasse</th>
+      <th>IHE-XDS typeCode (amtlich, DVMD)</th>
+      <th>SNOMED CT (kuratiert)</th>
+      <th>LOINC (kuratiert)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">SD150103</code></td>
+      <td>Tumorkonferenzprotokoll</td>
+      <td><code class="language-plaintext highlighter-rouge">ONKO</code> Onkologische Dokumente (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">444804000</code> Multidisciplinary care conference report (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">85231-9</code> Tumor board Note (≡)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">AD060103</code></td>
+      <td>Konsilbericht intern</td>
+      <td><code class="language-plaintext highlighter-rouge">FALL</code> Fallbesprechungen (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">371530004</code> Clinical consultation report (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">11488-4</code> Consult note (⊃)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">AD060104</code></td>
+      <td>Konsilbericht extern</td>
+      <td><code class="language-plaintext highlighter-rouge">FALL</code> Fallbesprechungen (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">371530004</code> Clinical consultation report (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">11488-4</code> Consult note (⊃)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">AD060110</code></td>
+      <td>Konsilbericht</td>
+      <td><code class="language-plaintext highlighter-rouge">FALL</code> Fallbesprechungen (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">371530004</code> Clinical consultation report (≡)</td>
+      <td><code class="language-plaintext highlighter-rouge">11488-4</code> Consult note (≡)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Cluster 4 — Operation (oBDS 13)</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>KDL</th>
+      <th>Dokumentklasse</th>
+      <th>IHE-XDS typeCode (amtlich, DVMD)</th>
+      <th>SNOMED CT (kuratiert)</th>
+      <th>LOINC (kuratiert)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">OP150103</code></td>
+      <td>OP-Bericht</td>
+      <td><code class="language-plaintext highlighter-rouge">OPDK</code> OP-Dokumente (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">371526002</code> Operative report (≡)</td>
+      <td><code class="language-plaintext highlighter-rouge">11504-8</code> Surgical operation note (≡)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">OP150104</code></td>
+      <td>OP-Bilddokumentation</td>
+      <td><code class="language-plaintext highlighter-rouge">OPDK</code> OP-Dokumente (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">723394009</code> Photographic image record (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">72170-4</code> Photographic image (⊃)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">OP150106</code></td>
+      <td>OP-Protokoll</td>
+      <td><code class="language-plaintext highlighter-rouge">OPDK</code> OP-Dokumente (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">416868005</code> Surgical intraoperative record (≡)</td>
+      <td><code class="language-plaintext highlighter-rouge">11504-8</code> Surgical operation note (⊃)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">AM010303</code></td>
+      <td>Operationsaufklärungsbogen</td>
+      <td><code class="language-plaintext highlighter-rouge">EINW</code> Einwilligungen/Aufklärungen (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">721914005</code> Patient consent document (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">61358-8</code> Surgical operation consent Document (≡)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Cluster 5 — Strahlentherapie (oBDS 14)</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>KDL</th>
+      <th>Dokumentklasse</th>
+      <th>IHE-XDS typeCode (amtlich, DVMD)</th>
+      <th>SNOMED CT (kuratiert)</th>
+      <th>LOINC (kuratiert)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">TH020101</code></td>
+      <td>Bestrahlungsplan</td>
+      <td><code class="language-plaintext highlighter-rouge">BSTR</code> Bestrahlungsdokumentation (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">736249004</code> Radiotherapy care plan (⊃)</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">TH020102</code></td>
+      <td>Bestrahlungsprotokoll</td>
+      <td><code class="language-plaintext highlighter-rouge">BSTR</code> Bestrahlungsdokumentation (⊃)</td>
+      <td>—</td>
+      <td><code class="language-plaintext highlighter-rouge">34832-6</code> Radiation oncology Note (⊃)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">TH020103</code></td>
+      <td>Bestrahlungsverordnung</td>
+      <td><code class="language-plaintext highlighter-rouge">BSTR</code> Bestrahlungsdokumentation (⊃)</td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">TH020104</code></td>
+      <td>Radiojodtherapieprotokoll</td>
+      <td><code class="language-plaintext highlighter-rouge">BSTR</code> Bestrahlungsdokumentation (⊃)</td>
+      <td>—</td>
+      <td><code class="language-plaintext highlighter-rouge">90344-3</code> Nuclear medicine Note (⊃)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">TH020105</code></td>
+      <td>Therapieprotokoll mit Radionukliden</td>
+      <td><code class="language-plaintext highlighter-rouge">BSTR</code> Bestrahlungsdokumentation (⊃)</td>
+      <td>—</td>
+      <td><code class="language-plaintext highlighter-rouge">90344-3</code> Nuclear medicine Note (⊃)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Cluster 6 — Systemische Therapie (oBDS 16)</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>KDL</th>
+      <th>Dokumentklasse</th>
+      <th>IHE-XDS typeCode (amtlich, DVMD)</th>
+      <th>SNOMED CT (kuratiert)</th>
+      <th>LOINC (kuratiert)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">TH130102</code></td>
+      <td>Arzneiadministration</td>
+      <td><code class="language-plaintext highlighter-rouge">MEDI</code> Medikamentöse Therapien (⊃)</td>
+      <td>—</td>
+      <td><code class="language-plaintext highlighter-rouge">80565-5</code> Medication administration record (≡)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">TH130103</code></td>
+      <td>Chemotherapieprotokoll</td>
+      <td><code class="language-plaintext highlighter-rouge">MEDI</code> Medikamentöse Therapien (⊃)</td>
+      <td>—</td>
+      <td><code class="language-plaintext highlighter-rouge">11486-8</code> Chemotherapy records (⊃)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">TH130104</code></td>
+      <td>Hormontherapieprotokoll</td>
+      <td><code class="language-plaintext highlighter-rouge">MEDI</code> Medikamentöse Therapien (⊃)</td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">TH130107</code></td>
+      <td>Medikationsplan</td>
+      <td><code class="language-plaintext highlighter-rouge">MEDI</code> Medikamentöse Therapien (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">761931002</code> Medication treatment plan report (≡)</td>
+      <td><code class="language-plaintext highlighter-rouge">56445-0</code> Medication summary Document (≡)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">AM010304</code></td>
+      <td>Aufklärungsbogen Therapie</td>
+      <td><code class="language-plaintext highlighter-rouge">EINW</code> Einwilligungen/Aufklärungen (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">721914005</code> Patient consent document (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">59284-0</code> Consent Document (⊃)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Cluster 7 — Verlauf &amp; Nachsorge (oBDS 17)</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>KDL</th>
+      <th>Dokumentklasse</th>
+      <th>IHE-XDS typeCode (amtlich, DVMD)</th>
+      <th>SNOMED CT (kuratiert)</th>
+      <th>LOINC (kuratiert)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">SD150101</code></td>
+      <td>Follow up-Bogen</td>
+      <td><code class="language-plaintext highlighter-rouge">ONKO</code> Onkologische Dokumente (⊃)</td>
+      <td>—</td>
+      <td><code class="language-plaintext highlighter-rouge">72134-0</code> Cancer event report (⊃)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">LB120102</code></td>
+      <td>Laborbefund extern</td>
+      <td><code class="language-plaintext highlighter-rouge">BEFU</code> Ergebnisse Diagnostik (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">4241000179101</code> Laboratory report (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">11502-2</code> Laboratory report (⊃)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">LB120103</code></td>
+      <td>Laborbefund intern</td>
+      <td><code class="language-plaintext highlighter-rouge">BEFU</code> Ergebnisse Diagnostik (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">4241000179101</code> Laboratory report (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">11502-2</code> Laboratory report (⊃)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">LB120106</code></td>
+      <td>Hämatologisches Speziallabor</td>
+      <td><code class="language-plaintext highlighter-rouge">BEFU</code> Ergebnisse Diagnostik (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">4321000179101</code> Hematology report (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">11502-2</code> Laboratory report (⊃)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">LB120107</code></td>
+      <td>Laborbefund</td>
+      <td><code class="language-plaintext highlighter-rouge">BEFU</code> Ergebnisse Diagnostik (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">4241000179101</code> Laboratory report (≡)</td>
+      <td><code class="language-plaintext highlighter-rouge">11502-2</code> Laboratory report (≡)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Cluster 8 — Tod (oBDS 20)</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>KDL</th>
+      <th>Dokumentklasse</th>
+      <th>IHE-XDS typeCode (amtlich, DVMD)</th>
+      <th>SNOMED CT (kuratiert)</th>
+      <th>LOINC (kuratiert)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">AD020103</code></td>
+      <td>Todesbescheinigung</td>
+      <td><code class="language-plaintext highlighter-rouge">BESC</code> Ärztliche Bescheinigungen (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">307930005</code> Death certificate (≡)</td>
+      <td><code class="language-plaintext highlighter-rouge">64297-5</code> Death certificate (≡)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Cluster 9 — Studien / Forschungsvorhaben</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>KDL</th>
+      <th>Dokumentklasse</th>
+      <th>IHE-XDS typeCode (amtlich, DVMD)</th>
+      <th>SNOMED CT (kuratiert)</th>
+      <th>LOINC (kuratiert)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">SF190101</code></td>
+      <td>CRF-Bogen</td>
+      <td><code class="language-plaintext highlighter-rouge">STUD</code> Studiendokumente (⊃)</td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">SF190102</code></td>
+      <td>Einwilligung Studie</td>
+      <td><code class="language-plaintext highlighter-rouge">STUD</code> Studiendokumente (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">721914005</code> Patient consent document (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">77602-1</code> Research study consent (≡)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">SF190106</code></td>
+      <td>Studienbericht</td>
+      <td><code class="language-plaintext highlighter-rouge">STUD</code> Studiendokumente (⊃)</td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Cluster 10 — Übergreifend</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>KDL</th>
+      <th>Dokumentklasse</th>
+      <th>IHE-XDS typeCode (amtlich, DVMD)</th>
+      <th>SNOMED CT (kuratiert)</th>
+      <th>LOINC (kuratiert)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">AD010103</code></td>
+      <td>Entlassungsbericht intern</td>
+      <td><code class="language-plaintext highlighter-rouge">BERI</code> Arztberichte (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">373942005</code> Discharge summary (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">18842-5</code> Discharge summary (⊃)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">AD010104</code></td>
+      <td>Entlassungsbericht extern</td>
+      <td><code class="language-plaintext highlighter-rouge">BERI</code> Arztberichte (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">373942005</code> Discharge summary (⊃)</td>
+      <td><code class="language-plaintext highlighter-rouge">18842-5</code> Discharge summary (⊃)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">SD150199</code></td>
+      <td>Sonstiger onkologischer Dokumentationsbogen</td>
+      <td><code class="language-plaintext highlighter-rouge">ONKO</code> Onkologische Dokumente (⊃)</td>
+      <td>—</td>
+      <td><code class="language-plaintext highlighter-rouge">34806-0</code> Oncology Note (⊃)</td>
+    </tr>
+  </tbody>
+</table>
+
 
 </div>
 
@@ -576,7 +1070,7 @@ Einschränkung: Instanzen dürfen weiterhin jede gültige KDL-Klasse verwenden.<
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.onkologie#2026.0.3 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Fri, Aug 28, 2026 12:26+0000">2026-08-28</span>
+          Erstellt <span title="Fri, Aug 28, 2026 12:47+0000">2026-08-28</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

@@ -253,7 +253,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_Melanom_LDH",
   "title" : "MII PR Onkologie Melanom LDH",
   "status" : "active",
-  "date" : "2026-08-28T12:26:30+00:00",
+  "date" : "2026-08-28T12:47:27+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
