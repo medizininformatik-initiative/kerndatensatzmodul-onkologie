@@ -14,7 +14,7 @@ Der PSA-Wert ist eine wichtige tumorspezifische Beobachtung:
 ---
 
 ### oBDS-Kontext
-Gemäß oBDS P1 wird der PSA-Wert als Tumormarker für Diagnostik und Verlaufskontrolle dokumentiert. Es können sowohl Diagnose- als auch Verlaufs-PSA-Werte erfasst werden.
+Gemäß oBDS P7 (PSA-Wert) und P8 (Datum PSA-Wert) wird der PSA-Wert als Tumormarker für Diagnostik und Verlaufskontrolle dokumentiert. Es können sowohl Diagnose- als auch Verlaufs-PSA-Werte erfasst werden.
 
 ### Terminologie-Binding
 Das ValueSet für PSA-Codes ist **required** gebunden, da LOINC-Codes für PSA-Bestimmungen standardisiert und eindeutig definiert sind.

@@ -33,6 +33,12 @@
   ],
   "description": "Das vorliegende Profil beschreibt eine radiologisch durchgeführte Markierung von Tumorgewebe mittels  der Brust. Dabei können verschiedene Methoden gewählt werden. Die  ",
   "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "oBDS-Organ",
+      "name": "Mapping FHIR zu oBDS (organspezifisches Zusatzmodul)"
+    }
+  ],
   "kind": "resource",
   "abstract": false,
   "type": "Procedure",
@@ -40,6 +46,17 @@
   "derivation": "constraint",
   "differential": {
     "element": [
+      {
+        "id": "Procedure",
+        "path": "Procedure",
+        "mapping": [
+          {
+            "identity": "oBDS-Organ",
+            "map": "KR6",
+            "comment": "Art des Eingriffs"
+          }
+        ]
+      },
       {
         "id": "Procedure.partOf",
         "path": "Procedure.partOf",
@@ -57,6 +74,17 @@
         "path": "Procedure.code",
         "short": "Kolorektale Operation",
         "definition": "Operation des Kolons und des Rektums, z.B. Exzision eines Tumors, "
+      },
+      {
+        "id": "Procedure.code.coding",
+        "path": "Procedure.code.coding",
+        "mapping": [
+          {
+            "identity": "oBDS-Organ",
+            "map": "KR6",
+            "comment": "Art des kolorektalen Eingriffs (OPS/SNOMED CT)"
+          }
+        ]
       },
       {
         "id": "Procedure.reasonReference",

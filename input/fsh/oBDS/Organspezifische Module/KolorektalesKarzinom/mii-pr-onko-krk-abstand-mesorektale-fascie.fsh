@@ -45,7 +45,7 @@ Description: "Dieses Profil beschreibt den Abstand des Tumors zur mesorektalen F
 * insert Translation(valueCodeableConcept ^short, de-DE, MRT/CT Status)
 * insert Translation(valueCodeableConcept ^definition, de-DE, Status der MRT/CT Untersuchung gemäß oBDS 2021 KR5)
 
-// P3 Datum der Stanzen
+// Datum der MRT/CT Untersuchung
 * effective[x] only dateTime
 * effectiveDateTime 0..1 MS
 * insert Label(effectiveDateTime, Datum MRT/CT, Datum der MRT/CT Untersuchung)

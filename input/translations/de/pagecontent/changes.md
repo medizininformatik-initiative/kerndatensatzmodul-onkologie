@@ -279,10 +279,10 @@ Diese Änderungen erfordern möglicherweise Anpassungen in bestehenden Implement
   - **Abstand Anokutanlinie**: [KRKAbstandTumorAnokutanlinie](StructureDefinition-mii-pr-onko-krk-abstand-anokutan.html) (oBDS KR1, LOINC 33748-5)
   - **Circumferelle Resektionsebene**: [KRKAbstandCircumferelleResektionsebene](StructureDefinition-mii-pr-onko-krk-abstand-circumferelle-resektionsebene.html) (oBDS KR3)
   - **Aboraler Resektionsrand**: [KRKAbstandResektionsrandAboral](StructureDefinition-mii-pr-onko-krk-abstand-aboral.html) (oBDS KR2)
-  - **MRT Mesorektale Faszie**: [KRKMRTMesorektale](StructureDefinition-mii-pr-onko-krk-mrt-mesorektale-faszie.html) mit Abstandsmessung (oBDS KR2)
+  - **MRT Mesorektale Faszie**: [KRKMRTMesorektale](StructureDefinition-mii-pr-onko-krk-mrt-mesorektale-faszie.html) mit Abstandsmessung (oBDS KR5)
   - **ASA-Klassifikation**: **KRKASAKlassifikation** (oBDS KR9, LOINC 97816-3)
   - **Anastomoseninsuffizienz**: [KRKAnastomoseninsuffizienz](StructureDefinition-mii-pr-onko-krk-anastomoseninsuffizienz.html) (oBDS KR8, SNOMED CT 235919008)
-  - **KRK-Operation**: [KRKOperation](StructureDefinition-mii-pr-onko-krk-operation.html) mit TME-Qualitätsbewertung (oBDS KR4)
+  - **KRK-Operation**: [KRKOperation](StructureDefinition-mii-pr-onko-krk-operation.html) (oBDS KR6); TME-Qualitätsbewertung am Specimen (oBDS KR4)
   - **KRK-Specimen**: [KRKSpecimen](StructureDefinition-mii-pr-onko-krk-specimen.html) mit pathologischer TME-Qualität
   - **Stoma-Markierung**: [KRKStomaMarkierung](StructureDefinition-mii-pr-onko-krk-stoma-markierung.html) (oBDS KR7)
   - **Bundle-Beispiel**: [KRKBundle](profiles.html) demonstriert vollständigen KRK-Workflow

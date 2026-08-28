@@ -49,17 +49,13 @@ Description: "Das vorliegende Profil beschreibt operative Eingriffe an der Brust
 * usedCode[PraeoperativeMarkierung] ^definition = "Modalität der präoperativen Markierung (Drahtmarkierung, Markierungsclips, Seed-Markierung)"
 * usedCode[PraeoperativeMarkierung].coding from MII_VS_Onko_Mamma_Praeoperative_Markierung_Modalitaet (extensible)
 
-/*
-Some error, likely due to mapping duplication of the parent profile. Not necessary here. 
+// Eigene Mapping-Identity, da die vom Elternprofil geerbte Identity "oBDS" in SUSHI nicht erneut deklariert werden kann
 Mapping: FHIR-oBDS-MammaOperation
-Id: oBDS
-Title: "Mapping FHIR zu oBDS"
+Id: oBDS-Organ
+Title: "Mapping FHIR zu oBDS (organspezifisches Zusatzmodul)"
 Source: MII_PR_Onko_Mamma_Operation
-* -> "13" "Operation"
-* code.coding[ops].code -> "13.3" "OPS - Mamma-spezifische Operationen"
-* code.coding[sct].code -> "13.3" "SNOMED CT - Mamma-spezifische Operationen"
+* -> "kein oBDS-Modulfeld" "Operative Therapie über oBDS Kapitel 13 (OP) und OPS; das Mamma-Modul kennt kein eigenes Operationsfeld"
+* code.coding[ops].code -> "kein oBDS-Modulfeld" "Art der Mamma-Operation nach OPS (oBDS Kapitel 13)"
+* code.coding[sct].code -> "kein oBDS-Modulfeld" "Art der Mamma-Operation nach SNOMED CT (oBDS Kapitel 13)"
 * usedCode[IntraoperativesImaging].coding.code -> "M6" "Intraoperatives Präparatröntgen/Sonografie"
 * usedCode[PraeoperativeMarkierung].coding.code -> "M5" "Präoperative Drahtmarkierung durch Bildgebung gesteuert"
-* performedDateTime -> "13.2" "OP Datum"
-
-*/

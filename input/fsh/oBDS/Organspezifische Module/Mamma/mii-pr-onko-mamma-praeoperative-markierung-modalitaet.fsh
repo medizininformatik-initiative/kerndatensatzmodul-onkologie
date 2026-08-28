@@ -27,14 +27,10 @@ Description: "Das vorliegende Profil beschreibt eine präoperativ durchgeführte
 
 
 
-/*
 Mapping: FHIR-oBDS-PraeoperativeMarkierung
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
 Source: MII_PR_Onko_Mamma_Praeoperative_Markierung
-* -> "M" "Mamma-spezifische präoperative Markierung"
-* code.coding.code -> "M.1" "Art der präoperativen Markierung"
-* usedCode.coding[PraeoperativeMarkierung].code -> "M.2" "Modalität der Markierung"
-* performedDateTime -> "M.3" "Datum der Markierung"
-
-*/
+* -> "M5" "Präoperative Drahtmarkierung durch Bildgebung gesteuert"
+* code.coding -> "M5 (Komponente)" "Modalität der präoperativen Markierung; keine eigene oBDS-Feldnummer"
+* performedDateTime -> "M5" "Datum der präoperativen Markierung"

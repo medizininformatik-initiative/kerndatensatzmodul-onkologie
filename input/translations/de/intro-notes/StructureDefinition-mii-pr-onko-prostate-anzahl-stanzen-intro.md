@@ -14,7 +14,7 @@ Die Anzahl der Stanzen ist eine wichtige Biopsie-Parameter:
 ---
 
 ### oBDS-Kontext
-Gemäß oBDS P4.1 wird die Gesamtanzahl der entnommenen Biopsie-Stanzen dokumentiert. Diese Information ist essentiell für die Beurteilung der Adequatheit der Probeentnahme.
+Gemäß oBDS P4 (Anzahl der Stanzen) wird die Gesamtanzahl der entnommenen Biopsie-Stanzen dokumentiert. Diese Information ist essentiell für die Beurteilung der Adequatheit der Probeentnahme.
 
 ### Terminologie-Binding
 Der LOINC-Code für die Anzahl der Stanzen ist **required** gebunden.

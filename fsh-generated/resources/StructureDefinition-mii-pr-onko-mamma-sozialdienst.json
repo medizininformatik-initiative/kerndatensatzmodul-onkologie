@@ -33,6 +33,12 @@
   ],
   "description": "Das vorliegende Profil beschreibt eine radiologisch durchgeführte Markierung von Tumorgewebe mittels  der Brust. Dabei können verschiedene Methoden gewählt werden. Die  ",
   "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "oBDS-Organ",
+      "name": "Mapping FHIR zu oBDS (organspezifisches Zusatzmodul)"
+    }
+  ],
   "kind": "resource",
   "abstract": false,
   "type": "Procedure",
@@ -40,6 +46,17 @@
   "derivation": "constraint",
   "differential": {
     "element": [
+      {
+        "id": "Procedure",
+        "path": "Procedure",
+        "mapping": [
+          {
+            "identity": "oBDS-Organ",
+            "map": "M9 (XSD: Modul_Allgemein.Sozialdienstkontakt)",
+            "comment": "Datum des Sozialdienstkontaktes"
+          }
+        ]
+      },
       {
         "id": "Procedure.code",
         "path": "Procedure.code",
@@ -67,7 +84,14 @@
             "code": "dateTime"
           }
         ],
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS-Organ",
+            "map": "M9 (XSD: Modul_Allgemein.Sozialdienstkontakt)",
+            "comment": "Datum des Kontakts mit dem Sozialdienst"
+          }
+        ]
       },
       {
         "id": "Procedure.reasonReference",

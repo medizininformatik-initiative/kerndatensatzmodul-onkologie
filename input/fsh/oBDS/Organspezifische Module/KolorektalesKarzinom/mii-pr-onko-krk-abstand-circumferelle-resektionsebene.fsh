@@ -34,11 +34,11 @@ Description: "Dieses Profil beschreibt den minimalen Abstand des Tumorrandes zur
 * valueQuantity.unit = "mm"
 * valueQuantity.value 1.. MS
 
-* insert Label (valueQuantity, Minimaler Abstand Tumorrand aboral, Minimaler Abstand des aboralen Tumorrandes zum aboralen Resektionsrand in mm. gemäß oBDS 2021 KR2 )
+* insert Label (valueQuantity, Minimaler Abstand Tumorrand circumferentiell, Minimaler Abstand des Tumorrandes zur circumferentiellen Resektionsebene in mm. gemäß oBDS 2021 KR3 )
 * insert Translation(valueQuantity ^short, de-DE, Minimaler Abstand Tumorrand circumferell )
-* insert Translation(valueQuantity ^definition, de-DE, Minimaler Abstand des aboralen Tumorrandes zum aboralen Resektionsrand in mm. gemäß oBDS 2021 KR2)
+* insert Translation(valueQuantity ^definition, de-DE, Minimaler Abstand des Tumorrandes zur circumferentiellen Resektionsebene in mm. gemäß oBDS 2021 KR3)
 
-// P3 Datum der Stanzen
+// Datum der Untersuchung
 * effective[x] only dateTime
 * effectiveDateTime 0..1 MS
 * insert Label(effectiveDateTime, Datum der Untersuchung, Datum der Untersuchung )
@@ -46,3 +46,11 @@ Description: "Dieses Profil beschreibt den minimalen Abstand des Tumorrandes zur
 * insert Translation(effectiveDateTime ^definition, de-DE, Datum der Untersuchung)
 
 
+
+Mapping: FHIR-oBDS-KRK-Abstand-Circumferell
+Id: oBDS
+Title: "Mapping FHIR zu oBDS"
+Source: MII_PR_Onko_KRK_Abstand_Circumferelle_Resektionsebene
+* -> "KR3" "Rektum: Abstand zur circumferentiellen Resektionsebene"
+* valueQuantity.value -> "KR3" "Minimaler Abstand des Tumorrandes zur circumferentiellen Resektionsebene in mm"
+* effectiveDateTime -> "KR3" "Datum der Untersuchung"

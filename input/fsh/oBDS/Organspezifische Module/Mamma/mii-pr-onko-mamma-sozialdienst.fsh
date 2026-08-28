@@ -27,3 +27,10 @@ Description: "Das vorliegende Profil beschreibt eine radiologisch durchgeführte
 * performedDateTime ^short = "Datum"
 
 
+
+Mapping: FHIR-oBDS-MammaSozialdienst
+Id: oBDS-Organ
+Title: "Mapping FHIR zu oBDS (organspezifisches Zusatzmodul)"
+Source: MII_PR_Onko_Mamma_Sozialdienst
+* -> "M9 (XSD: Modul_Allgemein.Sozialdienstkontakt)" "Datum des Sozialdienstkontaktes"
+* performedDateTime -> "M9 (XSD: Modul_Allgemein.Sozialdienstkontakt)" "Datum des Kontakts mit dem Sozialdienst"

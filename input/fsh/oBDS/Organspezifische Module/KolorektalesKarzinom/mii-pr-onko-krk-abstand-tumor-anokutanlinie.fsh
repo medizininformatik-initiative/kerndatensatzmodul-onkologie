@@ -38,7 +38,7 @@ Description: "Dieses Profil beschreibt den Abstand des Tumorunterrandes zur Anok
 * insert Translation(valueQuantity ^short, de-DE, Abstand des Tumorunterrandes zur Anokutanlinie )
 * insert Translation(valueQuantity ^definition, de-DE, Abstand des Tumorunterrandes zur Anokutanlinie in cm nach oBDS 2021 KR1 )
 
-// P3 Datum der Stanzen
+// Datum der Untersuchung
 * effective[x] only dateTime
 * effectiveDateTime 0..1 MS
 * insert Label(effectiveDateTime, Datum der Untersuchung, Datum der Untersuchung )
@@ -46,3 +46,11 @@ Description: "Dieses Profil beschreibt den Abstand des Tumorunterrandes zur Anok
 * insert Translation(effectiveDateTime ^definition, de-DE, Datum der Untersuchung)
 
 
+
+Mapping: FHIR-oBDS-KRK-Abstand-Anokutan
+Id: oBDS
+Title: "Mapping FHIR zu oBDS"
+Source: MII_PR_Onko_KRK_Abstand_Anokutan
+* -> "KR1" "Rektum: Abstand des Tumorunterrandes zur Anokutanlinie"
+* valueQuantity.value -> "KR1" "Abstand des Tumorunterrandes zur Anokutanlinie in cm"
+* effectiveDateTime -> "KR1" "Datum der Untersuchung"

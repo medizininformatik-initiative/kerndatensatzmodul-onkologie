@@ -44,3 +44,11 @@ Description: "Dieses Profil beschreibt die Anzahl positiver Stanzen einer Prosta
 * insert Translation(effectiveDateTime ^definition, de-DE, Datum der Probenentnahme der Prostata-Biopise oder des Prostata-Exzisats)
 
 
+
+Mapping: FHIR-oBDS-ProstataAnzahlPositiveStanzen
+Id: oBDS
+Title: "Mapping FHIR zu oBDS"
+Source: MII_PR_Onko_Prostata_Anzahl_Positive_Stanzen
+* -> "P5" "Anzahl der positiven Stanzen"
+* valueInteger -> "P5" "Anzahl der tumorpositiven Stanzen"
+* effectiveDateTime -> "P3" "Datum der Stanzen"

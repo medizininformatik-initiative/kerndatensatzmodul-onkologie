@@ -19,6 +19,12 @@
   ],
   "description": "Dieses Profil beschreibt den (prätherapeutischen) Menopausenstatus einer Patientin mit Mamma-Karzinom in der Onkologie",
   "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "oBDS",
+      "name": "Mapping FHIR zu oBDS"
+    }
+  ],
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
@@ -26,6 +32,17 @@
   "derivation": "constraint",
   "differential": {
     "element": [
+      {
+        "id": "Observation",
+        "path": "Observation",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "M1",
+            "comment": "Prätherapeutischer Menopausenstatus"
+          }
+        ]
+      },
       {
         "id": "Observation.meta.profile",
         "path": "Observation.meta.profile",
@@ -92,7 +109,14 @@
         "binding": {
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-menopause-status"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "M1",
+            "comment": "Menopausenstatus prätherapeutisch; perimenopausal wird unter prämenopausal subsumiert"
+          }
+        ]
       },
       {
         "id": "Observation.value[x].coding.code",

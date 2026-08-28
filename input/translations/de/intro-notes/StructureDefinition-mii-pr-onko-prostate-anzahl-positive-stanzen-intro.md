@@ -15,7 +15,7 @@ Die Anzahl positiver Stanzen ist ein wichtiger Biopsie-Parameter:
 ---
 
 ### oBDS-Kontext
-Gemäß oBDS P4.2 wird die Anzahl der tumorpositiven Stanzen dokumentiert. Diese Information ist zusammen mit der Gesamtanzahl der Stanzen essentiell für die Beurteilung der Tumorlast.
+Gemäß oBDS P5 (Anzahl der positiven Stanzen) wird die Anzahl der tumorpositiven Stanzen dokumentiert. Diese Information ist zusammen mit der Gesamtanzahl der Stanzen essentiell für die Beurteilung der Tumorlast.
 
 ### Terminologie-Binding
 Der LOINC-Code für die Anzahl positiver Stanzen ist **required** gebunden.

@@ -19,6 +19,12 @@
   ],
   "description": "Dieses Profil beschreibt den minimalen Abstand des Tumorrandes zur aboralen Dissektionlinie im Kolorektalen Karzinom",
   "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "oBDS",
+      "name": "Mapping FHIR zu oBDS"
+    }
+  ],
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
@@ -26,6 +32,17 @@
   "derivation": "constraint",
   "differential": {
     "element": [
+      {
+        "id": "Observation",
+        "path": "Observation",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "KR2",
+            "comment": "Rektum: Minimaler Abstand vom aboralen Resektionsrand"
+          }
+        ]
+      },
       {
         "id": "Observation.meta.profile",
         "path": "Observation.meta.profile",
@@ -122,7 +139,14 @@
             "code": "dateTime"
           }
         ],
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "KR2",
+            "comment": "Datum der Untersuchung"
+          }
+        ]
       },
       {
         "id": "Observation.value[x]",
@@ -174,7 +198,14 @@
         "id": "Observation.value[x].value",
         "path": "Observation.value[x].value",
         "min": 1,
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "KR2",
+            "comment": "Minimaler Abstand des Tumors zum aboralen Resektionsrand in mm"
+          }
+        ]
       },
       {
         "id": "Observation.value[x].unit",

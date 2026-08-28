@@ -19,6 +19,12 @@
   ],
   "description": "Dieses Profil beschreibt den diagnostischen Estrogen-Rezeptorstatus eines pathologisch untersuchten Probe beim Mamma-Karzinom in der Onkologie",
   "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "oBDS",
+      "name": "Mapping FHIR zu oBDS"
+    }
+  ],
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
@@ -26,6 +32,17 @@
   "derivation": "constraint",
   "differential": {
     "element": [
+      {
+        "id": "Observation",
+        "path": "Observation",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "M2",
+            "comment": "HormonrezeptorStatus: Östrogen"
+          }
+        ]
+      },
       {
         "id": "Observation.meta.profile",
         "path": "Observation.meta.profile",
@@ -88,7 +105,14 @@
             "code": "CodeableConcept"
           }
         ],
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "M2",
+            "comment": "Kategoriale Bewertung des Estrogen-Rezeptorstatus"
+          }
+        ]
       },
       {
         "id": "Observation.value[x].coding",
@@ -206,7 +230,14 @@
       {
         "id": "Observation.component:AnteilPositiveZellen.value[x].value",
         "path": "Observation.component.value[x].value",
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "M2 (Komponente)",
+            "comment": "Anteil positiver Zellen in Prozent; keine eigene oBDS-Feldnummer (S3-Leitlinie)"
+          }
+        ]
       },
       {
         "id": "Observation.component:AnteilPositiveZellen.value[x].unit",
@@ -258,7 +289,14 @@
         "binding": {
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-faerbeintensitaet"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "M2 (Komponente)",
+            "comment": "Färbeintensität; keine eigene oBDS-Feldnummer (S3-Leitlinie)"
+          }
+        ]
       }
     ]
   }

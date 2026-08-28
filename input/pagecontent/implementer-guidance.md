@@ -92,7 +92,7 @@ cannot diverge from the artifacts.
 the year-versioned ATC/ICD-O transitions are described on
 [ATC](atc-terminologie.html) and [ICD-O](icd-o-terminologie.html)):
 
-{% sql SELECT replace(SourceSystem, 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/', '') AS SourceSystem, SourceCode, Relationship, replace(replace(TargetSystem,'http://snomed.info/sct','SNOMED CT'),'http://loinc.org','LOINC') AS TargetSystem, TargetCode FROM ConceptMappings WHERE SourceSystem LIKE '%modul-onko/CodeSystem%' ORDER BY SourceSystem, CAST(SourceCode AS INTEGER), SourceCode %}
+{% sql SELECT replace(SourceSystem, 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-', '') AS SourceSystem, SourceCode, Relationship, CASE WHEN TargetSystem LIKE 'http://snomed.info/sct%' THEN 'SNOMED CT' WHEN TargetSystem LIKE 'http://loinc.org%' THEN 'LOINC' ELSE TargetSystem END AS TargetSystem, TargetCode FROM ConceptMappings WHERE SourceSystem LIKE '%modul-onko/CodeSystem%' ORDER BY SourceSystem, CAST(SourceCode AS INTEGER), SourceCode %}
 
 ### References
 

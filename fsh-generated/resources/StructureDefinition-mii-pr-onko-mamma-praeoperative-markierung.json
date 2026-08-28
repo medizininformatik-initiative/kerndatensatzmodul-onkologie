@@ -19,6 +19,12 @@
   ],
   "description": "Das vorliegende Profil beschreibt eine präoperativ durchgeführte Markierung von Tumorgewebe in der Brust. Dabei können verschiedene Markierungsmodalitäten gewählt werden, wie z.B. Drahtmarkierungen, Seed-Markierungen oder andere Lokalisationstechniken.",
   "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "oBDS",
+      "name": "Mapping FHIR zu oBDS"
+    }
+  ],
   "kind": "resource",
   "abstract": false,
   "type": "Procedure",
@@ -26,6 +32,17 @@
   "derivation": "constraint",
   "differential": {
     "element": [
+      {
+        "id": "Procedure",
+        "path": "Procedure",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "M5",
+            "comment": "Präoperative Drahtmarkierung durch Bildgebung gesteuert"
+          }
+        ]
+      },
       {
         "id": "Procedure.meta.profile",
         "path": "Procedure.meta.profile",
@@ -64,7 +81,14 @@
         "binding": {
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-praeoperative-markierung-modalitaet"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "M5 (Komponente)",
+            "comment": "Modalität der präoperativen Markierung; keine eigene oBDS-Feldnummer"
+          }
+        ]
       },
       {
         "id": "Procedure.subject",
@@ -83,6 +107,39 @@
         "id": "Procedure.encounter",
         "path": "Procedure.encounter",
         "mustSupport": true
+      },
+      {
+        "id": "Procedure.performed[x]",
+        "path": "Procedure.performed[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Procedure.performed[x]:performedDateTime",
+        "path": "Procedure.performed[x]",
+        "sliceName": "performedDateTime",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "M5",
+            "comment": "Datum der präoperativen Markierung"
+          }
+        ]
       }
     ]
   }

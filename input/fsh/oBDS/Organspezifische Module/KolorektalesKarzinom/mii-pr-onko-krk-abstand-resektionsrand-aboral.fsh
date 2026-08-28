@@ -38,7 +38,7 @@ Description: "Dieses Profil beschreibt den minimalen Abstand des Tumorrandes zur
 * insert Translation(valueQuantity ^short, de-DE, Minimaler Abstand Tumorrand aboral )
 * insert Translation(valueQuantity ^definition, de-DE, Minimaler Abstand des aboralen Tumorrandes zum aboralen Resektionsrand in mm. gemäß oBDS 2021 KR2)
 
-// P3 Datum der Stanzen
+// Datum der Untersuchung
 * effective[x] only dateTime
 * effectiveDateTime 0..1 MS
 * insert Label(effectiveDateTime, Datum der Untersuchung, Datum der Untersuchung )
@@ -46,3 +46,11 @@ Description: "Dieses Profil beschreibt den minimalen Abstand des Tumorrandes zur
 * insert Translation(effectiveDateTime ^definition, de-DE, Datum der Untersuchung)
 
 
+
+Mapping: FHIR-oBDS-KRK-Abstand-Aboral
+Id: oBDS
+Title: "Mapping FHIR zu oBDS"
+Source: MII_PR_Onko_KRK_Abstand_Aboral
+* -> "KR2" "Rektum: Minimaler Abstand vom aboralen Resektionsrand"
+* valueQuantity.value -> "KR2" "Minimaler Abstand des Tumors zum aboralen Resektionsrand in mm"
+* effectiveDateTime -> "KR2" "Datum der Untersuchung"

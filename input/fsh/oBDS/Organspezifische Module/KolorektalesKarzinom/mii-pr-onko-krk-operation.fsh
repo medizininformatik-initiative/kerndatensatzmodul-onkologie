@@ -35,3 +35,10 @@ Description: "Das vorliegende Profil beschreibt eine radiologisch durchgeführte
 * usedCode.coding ^slicing.description = "Slicing für die intraoperative Verwendung von z.B. Drahtmarkierungen, Markierungsclips oder Seed-Markierungen"
 
 
+
+Mapping: FHIR-oBDS-KRK-Operation
+Id: oBDS-Organ
+Title: "Mapping FHIR zu oBDS (organspezifisches Zusatzmodul)"
+Source: MII_PR_Onko_KRK_Operation
+* -> "KR6" "Art des Eingriffs"
+* code.coding -> "KR6" "Art des kolorektalen Eingriffs (OPS/SNOMED CT)"

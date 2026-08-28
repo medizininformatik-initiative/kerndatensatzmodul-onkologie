@@ -16,7 +16,7 @@ The PSA value is an important tumor-specific observation:
 ---
 
 ### oBDS context
-According to oBDS P1, the PSA value is documented as a tumor marker for diagnostics and follow-up. Both diagnostic and follow-up PSA values can be recorded.
+According to oBDS P7 (PSA-Wert) and P8 (Datum PSA-Wert), the PSA value is documented as a tumor marker for diagnostics and follow-up. Both diagnostic and follow-up PSA values can be recorded.
 
 ### Terminology binding
 The ValueSet for PSA codes is bound with **required** strength, since LOINC codes for PSA determinations are standardized and uniquely defined.

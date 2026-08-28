@@ -33,6 +33,12 @@
   ],
   "description": "Prostata-spezifische Operation. Dieses Profil spezialisiert die allgemeine onkologische Operation für Prostata-spezifische Eingriffe mit einem required Binding zu einem ValueSet basierend auf SNOMED CT 118877007 und dessen Kindern.",
   "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "oBDS-Organ",
+      "name": "Mapping FHIR zu oBDS (organspezifisches Zusatzmodul)"
+    }
+  ],
   "kind": "resource",
   "abstract": false,
   "type": "Procedure",
@@ -40,6 +46,17 @@
   "derivation": "constraint",
   "differential": {
     "element": [
+      {
+        "id": "Procedure",
+        "path": "Procedure",
+        "mapping": [
+          {
+            "identity": "oBDS-Organ",
+            "map": "kein oBDS-Modulfeld",
+            "comment": "Operative Therapie über oBDS Kapitel 13 (OP) und OPS; P9 (Postoperative Komplikation) wird im Kontext dieser Operation erhoben"
+          }
+        ]
+      },
       {
         "id": "Procedure.code.coding:sct",
         "path": "Procedure.code.coding",

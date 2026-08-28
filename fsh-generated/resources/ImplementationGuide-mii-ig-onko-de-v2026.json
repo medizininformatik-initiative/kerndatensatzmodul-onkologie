@@ -1722,7 +1722,7 @@
           "reference": "StructureDefinition/mii-lm-onko-organspezifische-zusatzmodule"
         },
         "name": "MII LM Onkologie Organspezifische Zusatzmodule",
-        "description": "Logisches Modell für die organspezifischen Zusatzmodule des oBDS",
+        "description": "Logisches Modell für die organspezifischen Zusatzmodule des oBDS. Feldnummern und Struktur folgen dem amtlichen oBDS-XML-Schema (oBDS v3.0.5, Modul_Mamma/Darm/Prostata/Malignes_Melanom/Allgemein) sowie dem Feldkatalog auf basisdatensatz.de.",
         "exampleBoolean": false
       },
       {
@@ -2771,6 +2771,14 @@
         },
         "name": "MII VS Onkologie Prostata Clavien Dindo",
         "description": "Value Set für Gleason Score",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-prostata-gleason-pattern-loinc"
+        },
+        "name": "MII VS Onkologie Prostata Gleason Pattern LOINC",
+        "description": "Value Set der LOINC-Codes für Primär-, Sekundär- und Tertiär-Gleason-Pattern. Dient als optionale LOINC-Zweitkodierung zum verpflichtenden SNOMED-CT-Slice im Profil MII_PR_Onko_Prostata_Gleason_Pattern (GitHub-Issue #259).",
         "exampleBoolean": false
       },
       {

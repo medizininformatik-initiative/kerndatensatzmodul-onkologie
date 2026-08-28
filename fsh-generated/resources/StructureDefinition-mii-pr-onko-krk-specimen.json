@@ -19,6 +19,12 @@
   ],
   "description": "Histologie: Dieses Profil beschreibt eine Gewebeprobe in der Onkologie.",
   "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "oBDS-Organ",
+      "name": "Mapping FHIR zu oBDS (organspezifisches Zusatzmodul)"
+    }
+  ],
   "kind": "resource",
   "abstract": false,
   "type": "Specimen",
@@ -31,9 +37,9 @@
         "path": "Specimen",
         "mapping": [
           {
-            "identity": "oBDS",
-            "map": "6",
-            "comment": "Histologie"
+            "identity": "oBDS-Organ",
+            "map": "KR4",
+            "comment": "Rektum: Qualität des TME-Präparats"
           }
         ]
       },
@@ -42,9 +48,9 @@
         "path": "Specimen.accessionIdentifier.value",
         "mapping": [
           {
-            "identity": "oBDS",
+            "identity": "oBDS-Organ",
             "map": "6.2",
-            "comment": "Histologie-Einsendenummer"
+            "comment": "Histologie-Einsendenummer (oBDS Kapitel 6 Histologie)"
           }
         ]
       },
@@ -95,9 +101,9 @@
         ],
         "mapping": [
           {
-            "identity": "oBDS",
+            "identity": "oBDS-Organ",
             "map": "6.1",
-            "comment": "Tumor Histologiedatum"
+            "comment": "Tumor Histologiedatum (oBDS Kapitel 6 Histologie)"
           }
         ]
       },
@@ -108,7 +114,14 @@
         "binding": {
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-tme-qualitaet"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "oBDS-Organ",
+            "map": "KR4",
+            "comment": "Qualität des TME-Präparats (Mesorektum-Beurteilung)"
+          }
+        ]
       }
     ]
   }

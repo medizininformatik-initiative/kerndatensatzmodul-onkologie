@@ -19,6 +19,12 @@
   ],
   "description": "Dieses Profil beschreibt den Abstand des Tumorunterrandes zur Anokutanlinie im Kolorektalen Karzinom",
   "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "oBDS",
+      "name": "Mapping FHIR zu oBDS"
+    }
+  ],
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
@@ -26,6 +32,17 @@
   "derivation": "constraint",
   "differential": {
     "element": [
+      {
+        "id": "Observation",
+        "path": "Observation",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "KR1",
+            "comment": "Rektum: Abstand des Tumorunterrandes zur Anokutanlinie"
+          }
+        ]
+      },
       {
         "id": "Observation.meta.profile",
         "path": "Observation.meta.profile",
@@ -123,7 +140,14 @@
             "code": "dateTime"
           }
         ],
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "KR1",
+            "comment": "Datum der Untersuchung"
+          }
+        ]
       },
       {
         "id": "Observation.value[x]",
@@ -175,7 +199,14 @@
         "id": "Observation.value[x].value",
         "path": "Observation.value[x].value",
         "min": 1,
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "KR1",
+            "comment": "Abstand des Tumorunterrandes zur Anokutanlinie in cm"
+          }
+        ]
       },
       {
         "id": "Observation.value[x].unit",
