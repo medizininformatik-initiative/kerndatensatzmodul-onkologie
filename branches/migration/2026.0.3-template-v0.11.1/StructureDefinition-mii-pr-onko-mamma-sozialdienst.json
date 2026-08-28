@@ -20,7 +20,7 @@
   "name" : "MII_PR_Onko_Mamma_Sozialdienst",
   "title" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
   "status" : "active",
-  "date" : "2026-08-28T06:49:57+00:00",
+  "date" : "2026-08-28T07:24:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -39,6 +39,10 @@
   }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
+    "identity" : "oBDS-Organ",
+    "name" : "Mapping FHIR zu oBDS (organspezifisches Zusatzmodul)"
+  },
+  {
     "identity" : "oBDS",
     "name" : "Mapping FHIR zu oBDS"
   }],
@@ -120,6 +124,11 @@
         "source" : "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure"
       }],
       "mapping" : [{
+        "identity" : "oBDS-Organ",
+        "map" : "M9 (XSD: Modul_Allgemein.Sozialdienstkontakt)",
+        "comment" : "Datum des Sozialdienstkontaktes"
+      },
+      {
         "identity" : "oBDS",
         "map" : "13",
         "comment" : "Operation"
@@ -4875,6 +4884,11 @@
       "mustSupport" : true,
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "oBDS-Organ",
+        "map" : "M9 (XSD: Modul_Allgemein.Sozialdienstkontakt)",
+        "comment" : "Datum des Kontakts mit dem Sozialdienst"
+      },
+      {
         "identity" : "oBDS",
         "map" : "13.2",
         "comment" : "OP Datum"
@@ -8576,7 +8590,12 @@
   "differential" : {
     "element" : [{
       "id" : "Procedure",
-      "path" : "Procedure"
+      "path" : "Procedure",
+      "mapping" : [{
+        "identity" : "oBDS-Organ",
+        "map" : "M9 (XSD: Modul_Allgemein.Sozialdienstkontakt)",
+        "comment" : "Datum des Sozialdienstkontaktes"
+      }]
     },
     {
       "id" : "Procedure.code",
@@ -8603,7 +8622,12 @@
       "type" : [{
         "code" : "dateTime"
       }],
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "oBDS-Organ",
+        "map" : "M9 (XSD: Modul_Allgemein.Sozialdienstkontakt)",
+        "comment" : "Datum des Kontakts mit dem Sozialdienst"
+      }]
     },
     {
       "id" : "Procedure.reasonReference",

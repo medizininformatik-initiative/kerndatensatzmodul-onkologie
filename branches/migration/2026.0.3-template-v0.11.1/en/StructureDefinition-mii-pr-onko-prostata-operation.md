@@ -52,7 +52,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-prost
   "name" : "MII_PR_Onko_Prostata_Operation",
   "title" : "MII PR Onko Prostata Operation",
   "status" : "active",
-  "date" : "2026-08-28T06:49:57+00:00",
+  "date" : "2026-08-28T07:24:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -71,6 +71,10 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-prost
   }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
+    "identity" : "oBDS-Organ",
+    "name" : "Mapping FHIR zu oBDS (organspezifisches Zusatzmodul)"
+  },
+  {
     "identity" : "oBDS",
     "name" : "Mapping FHIR zu oBDS"
   }],
@@ -82,7 +86,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-prost
   "differential" : {
     "element" : [{
       "id" : "Procedure",
-      "path" : "Procedure"
+      "path" : "Procedure",
+      "mapping" : [{
+        "identity" : "oBDS-Organ",
+        "map" : "kein oBDS-Modulfeld",
+        "comment" : "Operative Therapie über oBDS Kapitel 13 (OP) und OPS; P9 (Postoperative Komplikation) wird im Kontext dieser Operation erhoben"
+      }]
     },
     {
       "id" : "Procedure.code.coding:sct",

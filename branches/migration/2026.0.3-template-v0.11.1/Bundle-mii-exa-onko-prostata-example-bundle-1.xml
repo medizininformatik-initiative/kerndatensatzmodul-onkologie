@@ -253,7 +253,7 @@
           <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-grade-group|2026.0.3"/>
         </meta>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><a name="Observation_mii-exa-onko-prostata-gleason-pattern-grade-group-1"> </a><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-onko-prostata-gleason-pattern-grade-group-1</b></p><a name="mii-exa-onko-prostata-gleason-pattern-grade-group-1"> </a><a name="hcmii-exa-onko-prostata-gleason-pattern-grade-group-1"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-prostate-gleason-grade-group.html">MII PR Onkologie Prostata Gleason Grade Group</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 1812491000004107}">Histologic grade of primary malignant neoplasm of prostate by International Society of Urological Pathology technique (observable entity)</span></p><p><b>subject</b>: <a href="Patient-mii-exa-onko-prostata-bundle-patient.html">Peter ProstataCa  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: <a href="Condition-mii-exa-onko-prostata-diagnose.html">Condition Bösartige Neubildung der Prostata</a></p><p><b>effective</b>: 2024-01-02</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 1279714001}">International Society of Urological Pathology grade group 2 (Gleason score 3 + 4 = 7) (qualifier value)</span></p><p><b>derivedFrom</b>: </p><ul><li><a href="Observation-mii-exa-onko-prostata-gleason-pattern-primary-1.html">Observation Primary Gleason pattern (observable entity)</a></li><li><a href="Observation-mii-exa-onko-prostata-gleason-pattern-secondary-1.html">Observation Secondary Gleason pattern (observable entity)</a></li></ul></div></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><a name="Observation_mii-exa-onko-prostata-gleason-pattern-grade-group-1"> </a><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-onko-prostata-gleason-pattern-grade-group-1</b></p><a name="mii-exa-onko-prostata-gleason-pattern-grade-group-1"> </a><a name="hcmii-exa-onko-prostata-gleason-pattern-grade-group-1"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-prostate-gleason-grade-group.html">MII PR Onkologie Prostata Gleason Grade Group</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 1812491000004107}, {http://loinc.org 94734-1}">Histologic grade of primary malignant neoplasm of prostate by International Society of Urological Pathology technique (observable entity)</span></p><p><b>subject</b>: <a href="Patient-mii-exa-onko-prostata-bundle-patient.html">Peter ProstataCa  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: <a href="Condition-mii-exa-onko-prostata-diagnose.html">Condition Bösartige Neubildung der Prostata</a></p><p><b>effective</b>: 2024-01-02</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 1279714001}">International Society of Urological Pathology grade group 2 (Gleason score 3 + 4 = 7) (qualifier value)</span></p><p><b>derivedFrom</b>: </p><ul><li><a href="Observation-mii-exa-onko-prostata-gleason-pattern-primary-1.html">Observation Primary Gleason pattern (observable entity)</a></li><li><a href="Observation-mii-exa-onko-prostata-gleason-pattern-secondary-1.html">Observation Secondary Gleason pattern (observable entity)</a></li></ul></div></div>
         </text>
         <status value="final"/>
         <code>
@@ -261,6 +261,11 @@
             <system value="http://snomed.info/sct"/>
             <code value="1812491000004107"/>
             <display value="Histologic grade of primary malignant neoplasm of prostate by International Society of Urological Pathology technique (observable entity)"/>
+          </coding>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="94734-1"/>
+            <display value="Prostate cancer grade group [Score] in Prostate tumor Qualitative"/>
           </coding>
         </code>
         <subject>
@@ -299,7 +304,7 @@
           <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns|2026.0.3"/>
         </meta>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><a name="Observation_mii-exa-onko-prostata-gleason-pattern-primary-1"> </a><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-onko-prostata-gleason-pattern-primary-1</b></p><a name="mii-exa-onko-prostata-gleason-pattern-primary-1"> </a><a name="hcmii-exa-onko-prostata-gleason-pattern-primary-1"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-prostate-gleason-patterns.html">MII PR Onkologie Prostata Gleason Pattern</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 384994009}">Primary Gleason pattern (observable entity)</span></p><p><b>subject</b>: <a href="Patient-mii-exa-onko-prostata-bundle-patient.html">Peter ProstataCa  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: <a href="Condition-mii-exa-onko-prostata-diagnose.html">Condition Bösartige Neubildung der Prostata</a></p><p><b>effective</b>: 2024-01-02</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 369772003}">Gleason Pattern 3</span></p></div></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><a name="Observation_mii-exa-onko-prostata-gleason-pattern-primary-1"> </a><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-onko-prostata-gleason-pattern-primary-1</b></p><a name="mii-exa-onko-prostata-gleason-pattern-primary-1"> </a><a name="hcmii-exa-onko-prostata-gleason-pattern-primary-1"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-prostate-gleason-patterns.html">MII PR Onkologie Prostata Gleason Pattern</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 384994009}, {http://loinc.org 44641-9}">Primary Gleason pattern (observable entity)</span></p><p><b>subject</b>: <a href="Patient-mii-exa-onko-prostata-bundle-patient.html">Peter ProstataCa  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: <a href="Condition-mii-exa-onko-prostata-diagnose.html">Condition Bösartige Neubildung der Prostata</a></p><p><b>effective</b>: 2024-01-02</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 369772003}">Gleason Pattern 3</span></p></div></div>
         </text>
         <status value="final"/>
         <code>
@@ -307,6 +312,11 @@
             <system value="http://snomed.info/sct"/>
             <code value="384994009"/>
             <display value="Primary Gleason pattern (observable entity)"/>
+          </coding>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="44641-9"/>
+            <display value="Gleason pattern.primary in Prostate tumor"/>
           </coding>
         </code>
         <subject>
@@ -339,7 +349,7 @@
           <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns|2026.0.3"/>
         </meta>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><a name="Observation_mii-exa-onko-prostata-gleason-pattern-secondary-1"> </a><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-onko-prostata-gleason-pattern-secondary-1</b></p><a name="mii-exa-onko-prostata-gleason-pattern-secondary-1"> </a><a name="hcmii-exa-onko-prostata-gleason-pattern-secondary-1"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-prostate-gleason-patterns.html">MII PR Onkologie Prostata Gleason Pattern</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 384995005}">Secondary Gleason pattern (observable entity)</span></p><p><b>subject</b>: <a href="Patient-mii-exa-onko-prostata-bundle-patient.html">Peter ProstataCa  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: <a href="Condition-mii-exa-onko-prostata-diagnose.html">Condition Bösartige Neubildung der Prostata</a></p><p><b>effective</b>: 2024-01-02</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 369773008}">Gleason Pattern 4</span></p></div></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><a name="Observation_mii-exa-onko-prostata-gleason-pattern-secondary-1"> </a><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-onko-prostata-gleason-pattern-secondary-1</b></p><a name="mii-exa-onko-prostata-gleason-pattern-secondary-1"> </a><a name="hcmii-exa-onko-prostata-gleason-pattern-secondary-1"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-prostate-gleason-patterns.html">MII PR Onkologie Prostata Gleason Pattern</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 384995005}, {http://loinc.org 44642-7}">Secondary Gleason pattern (observable entity)</span></p><p><b>subject</b>: <a href="Patient-mii-exa-onko-prostata-bundle-patient.html">Peter ProstataCa  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: <a href="Condition-mii-exa-onko-prostata-diagnose.html">Condition Bösartige Neubildung der Prostata</a></p><p><b>effective</b>: 2024-01-02</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 369773008}">Gleason Pattern 4</span></p></div></div>
         </text>
         <status value="final"/>
         <code>
@@ -347,6 +357,11 @@
             <system value="http://snomed.info/sct"/>
             <code value="384995005"/>
             <display value="Secondary Gleason pattern (observable entity)"/>
+          </coding>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="44642-7"/>
+            <display value="Gleason pattern.secondary in Prostate tumor"/>
           </coding>
         </code>
         <subject>

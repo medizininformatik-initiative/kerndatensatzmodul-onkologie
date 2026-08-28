@@ -52,7 +52,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-melan
   "name" : "MII_PR_Onko_Melanom_Exzision",
   "title" : "MII PR Onko Melanom Exzision",
   "status" : "active",
-  "date" : "2026-08-28T06:49:57+00:00",
+  "date" : "2026-08-28T07:24:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -71,6 +71,10 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-melan
   }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
+    "identity" : "oBDS-Organ",
+    "name" : "Mapping FHIR zu oBDS (organspezifisches Zusatzmodul)"
+  },
+  {
     "identity" : "oBDS",
     "name" : "Mapping FHIR zu oBDS"
   }],
@@ -82,7 +86,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-melan
   "differential" : {
     "element" : [{
       "id" : "Procedure",
-      "path" : "Procedure"
+      "path" : "Procedure",
+      "mapping" : [{
+        "identity" : "oBDS-Organ",
+        "map" : "kein oBDS-Modulfeld",
+        "comment" : "Operative Therapie über oBDS Kapitel 13 (OP) und OPS; MM1 (Sicherheitsabstand) wird am Exzidat bestimmt"
+      }]
     },
     {
       "id" : "Procedure.code.coding:sct",

@@ -153,7 +153,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_KRK_Anastomoseninsuffizienz",
   "title" : "MII PR Onkologie KRK Anastomoseninsuffizienz",
   "status" : "active",
-  "date" : "2026-08-28T06:49:57+00:00",
+  "date" : "2026-08-28T07:24:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -211,8 +211,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "path" : "Observation",
       "mapping" : [{
         "identity" : "oBDS",
-        "map" : "KR-Anastomose",
-        "comment" : "Anastomoseninsuffizienz"
+        "map" : "KR8",
+        "comment" : "Rektumkarzinom: Anastomoseninsuffizienz"
       }]
     },
     {
@@ -297,7 +297,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "oBDS",
-        "map" : "KR-Anastomose",
+        "map" : "KR8",
         "comment" : "Datum der Bewertung"
       }]
     },
@@ -346,7 +346,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "path" : "Observation.value[x].coding.code",
       "mapping" : [{
         "identity" : "oBDS",
-        "map" : "KR-Anastomose",
+        "map" : "KR8",
         "comment" : "Bewertung der Anastomoseninsuffizienz"
       }]
     }]

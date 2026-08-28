@@ -110,7 +110,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_Mamma_Sozialdienst",
   "title" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
   "status" : "active",
-  "date" : "2026-08-28T06:49:57+00:00",
+  "date" : "2026-08-28T07:24:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -129,6 +129,10 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
+    "identity" : "oBDS-Organ",
+    "name" : "Mapping FHIR zu oBDS (organspezifisches Zusatzmodul)"
+  },
+  {
     "identity" : "oBDS",
     "name" : "Mapping FHIR zu oBDS"
   }],
@@ -140,7 +144,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "differential" : {
     "element" : [{
       "id" : "Procedure",
-      "path" : "Procedure"
+      "path" : "Procedure",
+      "mapping" : [{
+        "identity" : "oBDS-Organ",
+        "map" : "M9 (XSD: Modul_Allgemein.Sozialdienstkontakt)",
+        "comment" : "Datum des Sozialdienstkontaktes"
+      }]
     },
     {
       "id" : "Procedure.code",
@@ -167,7 +176,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "type" : [{
         "code" : "dateTime"
       }],
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "oBDS-Organ",
+        "map" : "M9 (XSD: Modul_Allgemein.Sozialdienstkontakt)",
+        "comment" : "Datum des Kontakts mit dem Sozialdienst"
+      }]
     },
     {
       "id" : "Procedure.reasonReference",

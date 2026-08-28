@@ -18,7 +18,7 @@
   <name value="MII_PR_Onko_KRK_Specimen"/>
   <title value="MII PR Onkologie Specimen"/>
   <status value="active"/>
-  <date value="2026-08-28T06:49:57+00:00"/>
+  <date value="2026-08-28T07:24:31+00:00"/>
   <publisher value="Medizininformatik Initiative"/>
   <contact>
     <name value="Medizininformatik Initiative"/>
@@ -36,6 +36,10 @@
     </coding>
   </jurisdiction>
   <fhirVersion value="4.0.1"/>
+  <mapping>
+    <identity value="oBDS-Organ"/>
+    <name value="Mapping FHIR zu oBDS (organspezifisches Zusatzmodul)"/>
+  </mapping>
   <mapping>
     <identity value="oBDS"/>
     <name value="Mapping FHIR zu oBDS"/>
@@ -118,6 +122,11 @@
       </constraint>
       <isModifier value="false"/>
       <isSummary value="false"/>
+      <mapping>
+        <identity value="oBDS-Organ"/>
+        <map value="KR4"/>
+        <comment value="Rektum: Qualität des TME-Präparats"/>
+      </mapping>
       <mapping>
         <identity value="oBDS"/>
         <map value="6"/>
@@ -939,6 +948,11 @@
       <isModifier value="false"/>
       <isSummary value="true"/>
       <mapping>
+        <identity value="oBDS-Organ"/>
+        <map value="6.2"/>
+        <comment value="Histologie-Einsendenummer (oBDS Kapitel 6 Histologie)"/>
+      </mapping>
+      <mapping>
         <identity value="oBDS"/>
         <map value="6.2"/>
         <comment value="Histologie-Einsendenummer"/>
@@ -1528,9 +1542,14 @@
       <isModifier value="false"/>
       <isSummary value="true"/>
       <mapping>
+        <identity value="oBDS-Organ"/>
+        <map value="6.1"/>
+        <comment value="Tumor Histologiedatum (oBDS Kapitel 6 Histologie)"/>
+      </mapping>
+      <mapping>
         <identity value="oBDS"/>
         <map value="6.1"/>
-        <comment value="Tumor Histologiedatum"/>
+        <comment value="Tumor Histologiedatum (Datum der Probenentnahme)"/>
       </mapping>
       <mapping>
         <identity value="w5"/>
@@ -2387,6 +2406,11 @@
         <valueSet value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-tme-qualitaet"/>
       </binding>
       <mapping>
+        <identity value="oBDS-Organ"/>
+        <map value="KR4"/>
+        <comment value="Qualität des TME-Präparats (Mesorektum-Beurteilung)"/>
+      </mapping>
+      <mapping>
         <identity value="v2"/>
         <map value="SPM-24"/>
       </mapping>
@@ -2429,17 +2453,17 @@
     <element id="Specimen">
       <path value="Specimen"/>
       <mapping>
-        <identity value="oBDS"/>
-        <map value="6"/>
-        <comment value="Histologie"/>
+        <identity value="oBDS-Organ"/>
+        <map value="KR4"/>
+        <comment value="Rektum: Qualität des TME-Präparats"/>
       </mapping>
     </element>
     <element id="Specimen.accessionIdentifier.value">
       <path value="Specimen.accessionIdentifier.value"/>
       <mapping>
-        <identity value="oBDS"/>
+        <identity value="oBDS-Organ"/>
         <map value="6.2"/>
-        <comment value="Histologie-Einsendenummer"/>
+        <comment value="Histologie-Einsendenummer (oBDS Kapitel 6 Histologie)"/>
       </mapping>
     </element>
     <element id="Specimen.collection.collected[x]:collectedDateTime">
@@ -2451,9 +2475,9 @@
         <code value="dateTime"/>
       </type>
       <mapping>
-        <identity value="oBDS"/>
+        <identity value="oBDS-Organ"/>
         <map value="6.1"/>
-        <comment value="Tumor Histologiedatum"/>
+        <comment value="Tumor Histologiedatum (oBDS Kapitel 6 Histologie)"/>
       </mapping>
     </element>
     <element id="Specimen.condition">
@@ -2463,6 +2487,11 @@
         <strength value="extensible"/>
         <valueSet value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-tme-qualitaet"/>
       </binding>
+      <mapping>
+        <identity value="oBDS-Organ"/>
+        <map value="KR4"/>
+        <comment value="Qualität des TME-Präparats (Mesorektum-Beurteilung)"/>
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>

@@ -35,11 +35,11 @@ Die Gleason Patterns sind wichtige histopathologische Beobachtungen:
 
 ### oBDS-Kontext
 
-Gemäß oBDS P2 werden Gleason Patterns als primäres, sekundäres oder tertiäres Pattern dokumentiert. Die Pattern-Werte von 1-5 entsprechen der internationalen Gleason-Graduierung, wobei Pattern ab Grad 3 als maligne klassifiziert werden.
+Als Komponente von oBDS P1 (Gleason-Score) werden Gleason Patterns als primäres, sekundäres oder tertiäres Pattern dokumentiert. Die Pattern-Werte von 1-5 entsprechen der internationalen Gleason-Graduierung, wobei Pattern ab Grad 3 als maligne klassifiziert werden.
 
 ### Terminologie-Binding
 
-Das ValueSet für Gleason Pattern-Codes ist **required** gebunden, da die LOINC-Codes für Gleason-Patterns standardisiert sind.
+`Observation.code` ist gesliced (GitHub-Issue #259): Ein **SNOMED-CT-Coding ist verpflichtend** (1..1, required gebunden an das ValueSet der Primär-/Sekundär-/Tertiär-Pattern-Observables), ein **LOINC-Coding ist optional** (0..1, Codes 44641-9/44642-7/44643-5) als Zweitkodierung für die Interoperabilität mit LOINC-basierten Systemen (z.B. KDS-Modul Pathologie-Befund).
 
 #### ValueSet: MII VS Onko Prostata Gleason Patterns
 
@@ -98,14 +98,20 @@ Diese Struktur ist abgeleitet von [Observation](http://hl7.org/fhir/R4/observati
 
 ** Summary **
 
-Mandatory: 2 elements(1 nested mandatory element)
- Must-Support: 9 elements
+Mandatory: 6 elements(3 nested mandatory elements)
+ Must-Support: 15 elements
 
 **Structures**
 
 This structure refers to these other structures:
 
 * [MII PR Onkologie Diagnose Primärtumor (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)](StructureDefinition-mii-pr-onko-diagnose-primaertumor.md)
+
+**Slices**
+
+This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+
+* The element 1 is sliced based on the value of Observation.code.coding
 
  **Schlüsselelemente-Ansicht** 
 
@@ -129,14 +135,20 @@ Diese Struktur ist abgeleitet von [Observation](http://hl7.org/fhir/R4/observati
 
 ** Summary **
 
-Mandatory: 2 elements(1 nested mandatory element)
- Must-Support: 9 elements
+Mandatory: 6 elements(3 nested mandatory elements)
+ Must-Support: 15 elements
 
 **Structures**
 
 This structure refers to these other structures:
 
 * [MII PR Onkologie Diagnose Primärtumor (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)](StructureDefinition-mii-pr-onko-diagnose-primaertumor.md)
+
+**Slices**
+
+This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+
+* The element 1 is sliced based on the value of Observation.code.coding
 
  
 
@@ -155,7 +167,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_Prostata_Gleason_Pattern",
   "title" : "MII PR Onkologie Prostata Gleason Pattern",
   "status" : "active",
-  "date" : "2026-08-28T06:49:57+00:00",
+  "date" : "2026-08-28T07:24:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -174,6 +186,10 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
+    "identity" : "oBDS",
+    "name" : "Mapping FHIR zu oBDS"
+  },
+  {
     "identity" : "workflow",
     "uri" : "http://hl7.org/fhir/workflow",
     "name" : "Workflow Pattern"
@@ -206,7 +222,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "differential" : {
     "element" : [{
       "id" : "Observation",
-      "path" : "Observation"
+      "path" : "Observation",
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "P1 (Komponente)",
+        "comment" : "Gleason Patterns (primär/sekundär/tertiär); keine eigene oBDS-Feldnummer"
+      }]
     },
     {
       "id" : "Observation.meta.profile",
@@ -218,15 +239,74 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "path" : "Observation.code",
       "short" : "Gleason Pattern (primär, sekundär, tertiär)",
       "definition" : "Primäres, sekundäres oder tertiäres Gleason Pattern. Das Pattern kann einen Wert zwischen 1-5 annehmen, wobei erst Werte ab 3 als maligne gelten. Das primäre Pattern ist das häufigste, das sekundäre das zweithäufigste. In seltenen Fällen wird auch ein tertiäres Pattern angegeben. Der Gleason Score ist ein histopathologisches Klassifikationssystem zur Beurteilung der Morphologie von Adenokarzinomen der Prostata und wird aus der Summe von primären und sekundärem Pattern berechnet.",
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "P1 (Komponente)",
+        "comment" : "Art des Gleason Patterns (primär/sekundär/tertiär)"
+      }]
     },
     {
       "id" : "Observation.code.coding",
       "path" : "Observation.code.coding",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "pattern",
+          "path" : "system"
+        }],
+        "rules" : "open"
+      },
+      "min" : 1
+    },
+    {
+      "id" : "Observation.code.coding:snomed",
+      "path" : "Observation.code.coding",
+      "sliceName" : "snomed",
+      "min" : 1,
+      "max" : "1",
+      "mustSupport" : true,
       "binding" : {
         "strength" : "required",
         "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-primary-secondary-tertiary"
       }
+    },
+    {
+      "id" : "Observation.code.coding:snomed.system",
+      "path" : "Observation.code.coding.system",
+      "min" : 1,
+      "patternUri" : "http://snomed.info/sct",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.code.coding:snomed.code",
+      "path" : "Observation.code.coding.code",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.code.coding:loinc",
+      "path" : "Observation.code.coding",
+      "sliceName" : "loinc",
+      "min" : 0,
+      "max" : "1",
+      "mustSupport" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-pattern-loinc"
+      }
+    },
+    {
+      "id" : "Observation.code.coding:loinc.system",
+      "path" : "Observation.code.coding.system",
+      "min" : 1,
+      "patternUri" : "http://loinc.org",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.code.coding:loinc.code",
+      "path" : "Observation.code.coding.code",
+      "min" : 1,
+      "mustSupport" : true
     },
     {
       "id" : "Observation.subject",
@@ -286,7 +366,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "type" : [{
         "code" : "dateTime"
       }],
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "P3",
+        "comment" : "Datum der Stanzen"
+      }]
     },
     {
       "id" : "Observation.value[x]",
@@ -299,7 +384,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "binding" : {
         "strength" : "extensible",
         "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-patterns"
-      }
+      },
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "P1 (Komponente)",
+        "comment" : "Gleason Pattern Wert (1-5, ab 3 maligne)"
+      }]
     },
     {
       "id" : "Observation.value[x].coding",

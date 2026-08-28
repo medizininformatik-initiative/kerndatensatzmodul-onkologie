@@ -40,7 +40,7 @@
   <name value="MII_PR_Onko_KRK_Anastomoseninsuffizienz"/>
   <title value="MII PR Onkologie KRK Anastomoseninsuffizienz"/>
   <status value="active"/>
-  <date value="2026-08-28T06:49:57+00:00"/>
+  <date value="2026-08-28T07:24:31+00:00"/>
   <publisher value="Medizininformatik Initiative"/>
   <contact>
     <name value="Medizininformatik Initiative"/>
@@ -178,8 +178,8 @@
       <isSummary value="false"/>
       <mapping>
         <identity value="oBDS"/>
-        <map value="KR-Anastomose"/>
-        <comment value="Anastomoseninsuffizienz"/>
+        <map value="KR8"/>
+        <comment value="Rektumkarzinom: Anastomoseninsuffizienz"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
@@ -1341,7 +1341,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="oBDS"/>
-        <map value="KR-Anastomose"/>
+        <map value="KR8"/>
         <comment value="Datum der Bewertung"/>
       </mapping>
       <mapping>
@@ -1803,7 +1803,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="oBDS"/>
-        <map value="KR-Anastomose"/>
+        <map value="KR8"/>
         <comment value="Bewertung der Anastomoseninsuffizienz"/>
       </mapping>
       <mapping>
@@ -3109,8 +3109,8 @@
       <path value="Observation"/>
       <mapping>
         <identity value="oBDS"/>
-        <map value="KR-Anastomose"/>
-        <comment value="Anastomoseninsuffizienz"/>
+        <map value="KR8"/>
+        <comment value="Rektumkarzinom: Anastomoseninsuffizienz"/>
       </mapping>
     </element>
     <element id="Observation.meta.profile">
@@ -3180,7 +3180,7 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="oBDS"/>
-        <map value="KR-Anastomose"/>
+        <map value="KR8"/>
         <comment value="Datum der Bewertung"/>
       </mapping>
     </element>
@@ -3219,7 +3219,7 @@
       <path value="Observation.value[x].coding.code"/>
       <mapping>
         <identity value="oBDS"/>
-        <map value="KR-Anastomose"/>
+        <map value="KR8"/>
         <comment value="Bewertung der Anastomoseninsuffizienz"/>
       </mapping>
     </element>

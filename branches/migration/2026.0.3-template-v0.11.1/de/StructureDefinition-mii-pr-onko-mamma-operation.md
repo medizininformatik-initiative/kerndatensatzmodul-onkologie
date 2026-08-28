@@ -197,7 +197,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_Mamma_Operation",
   "title" : "MII PR Onkologie Mamma Operation",
   "status" : "active",
-  "date" : "2026-08-28T06:49:57+00:00",
+  "date" : "2026-08-28T07:24:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -216,6 +216,10 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
+    "identity" : "oBDS-Organ",
+    "name" : "Mapping FHIR zu oBDS (organspezifisches Zusatzmodul)"
+  },
+  {
     "identity" : "oBDS",
     "name" : "Mapping FHIR zu oBDS"
   }],
@@ -227,7 +231,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "differential" : {
     "element" : [{
       "id" : "Procedure",
-      "path" : "Procedure"
+      "path" : "Procedure",
+      "mapping" : [{
+        "identity" : "oBDS-Organ",
+        "map" : "kein oBDS-Modulfeld",
+        "comment" : "Operative Therapie über oBDS Kapitel 13 (OP) und OPS; das Mamma-Modul kennt kein eigenes Operationsfeld"
+      }]
     },
     {
       "id" : "Procedure.partOf",
@@ -253,6 +262,15 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       }
     },
     {
+      "id" : "Procedure.code.coding:ops.code",
+      "path" : "Procedure.code.coding.code",
+      "mapping" : [{
+        "identity" : "oBDS-Organ",
+        "map" : "kein oBDS-Modulfeld",
+        "comment" : "Art der Mamma-Operation nach OPS (oBDS Kapitel 13)"
+      }]
+    },
+    {
       "id" : "Procedure.code.coding:sct",
       "path" : "Procedure.code.coding",
       "sliceName" : "sct",
@@ -260,6 +278,15 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
         "strength" : "required",
         "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-operation-sct"
       }
+    },
+    {
+      "id" : "Procedure.code.coding:sct.code",
+      "path" : "Procedure.code.coding.code",
+      "mapping" : [{
+        "identity" : "oBDS-Organ",
+        "map" : "kein oBDS-Modulfeld",
+        "comment" : "Art der Mamma-Operation nach SNOMED CT (oBDS Kapitel 13)"
+      }]
     },
     {
       "id" : "Procedure.performed[x]:performedDateTime",
@@ -309,6 +336,15 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       }
     },
     {
+      "id" : "Procedure.usedCode:IntraoperativesImaging.coding.code",
+      "path" : "Procedure.usedCode.coding.code",
+      "mapping" : [{
+        "identity" : "oBDS-Organ",
+        "map" : "M6",
+        "comment" : "Intraoperatives Präparatröntgen/Sonografie"
+      }]
+    },
+    {
       "id" : "Procedure.usedCode:PraeoperativeMarkierung",
       "path" : "Procedure.usedCode",
       "sliceName" : "PraeoperativeMarkierung",
@@ -325,6 +361,15 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
         "strength" : "extensible",
         "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-praeoperative-markierung-modalitaet"
       }
+    },
+    {
+      "id" : "Procedure.usedCode:PraeoperativeMarkierung.coding.code",
+      "path" : "Procedure.usedCode.coding.code",
+      "mapping" : [{
+        "identity" : "oBDS-Organ",
+        "map" : "M5",
+        "comment" : "Präoperative Drahtmarkierung durch Bildgebung gesteuert"
+      }]
     }]
   }
 }

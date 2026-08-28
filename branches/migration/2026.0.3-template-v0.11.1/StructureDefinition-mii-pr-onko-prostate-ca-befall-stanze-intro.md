@@ -23,7 +23,7 @@ observation:
 
 ### oBDS context
 
-According to oBDS P4.3, the percentage carcinoma involvement of the most
+According to oBDS P6 (Ca-Befall Stanze), the percentage carcinoma involvement of the most
 affected core of a prostate biopsy is documented. This is an important
 parameter for the histopathological assessment of tumor extent.
 

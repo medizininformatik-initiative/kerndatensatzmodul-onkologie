@@ -57,7 +57,7 @@ Diese definieren Datenmodelle, die den von diesem Implementierungsleitfaden abge
 | :--- | :--- |
 | [ MII LM Modellvorhaben Genomsequenzierung Onkologie  ](StructureDefinition-mii-lm-mvgenomseq-onkologie.md) | MII LogicalModel Modellvorhaben Genomsequenzierung Onkologie |
 | [ MII LM Onkologie  ](StructureDefinition-mii-lm-onko.md) | MII LogicalModel Modul Onkologie |
-| [ MII LM Onkologie Organspezifische Zusatzmodule  ](StructureDefinition-mii-lm-onko-organspezifische-zusatzmodule.md) | Logisches Modell für die organspezifischen Zusatzmodule des oBDS |
+| [ MII LM Onkologie Organspezifische Zusatzmodule  ](StructureDefinition-mii-lm-onko-organspezifische-zusatzmodule.md) | Logisches Modell für die organspezifischen Zusatzmodule des oBDS. Feldnummern und Struktur folgen dem amtlichen oBDS-XML-Schema (oBDS v3.0.5, Modul_Mamma/Darm/Prostata/Malignes_Melanom/Allgemein) sowie dem Feldkatalog auf basisdatensatz.de. |
 
 ### Strukturen: Ressourcenprofile 
 
@@ -229,6 +229,7 @@ Diese definieren Wertemengen, die von Systemen verwendet werden, die mit dem Imp
 | [ MII VS Onkologie Primärtumor Diagnosesicherung  ](ValueSet-mii-vs-onko-primaertumor-diagnosesicherung.md) | Codes für Primärtumor Diagnosesicherung, d.h. die höchste erreichte Diagnosesicherheit der Diagnose. |
 | [ MII VS Onkologie Primärtumor Seitenlokalisation  ](ValueSet-mii-vs-onko-seitenlokalisation.md) | Codes für Seitenlokalisation, d.h. organspezifische Angabe der betroffenen Seite. |
 | [ MII VS Onkologie Prostata Clavien Dindo  ](ValueSet-mii-vs-onko-prostata-clavien-dindo.md) | Value Set für Gleason Score |
+| [ MII VS Onkologie Prostata Gleason Pattern LOINC  ](ValueSet-mii-vs-onko-prostata-gleason-pattern-loinc.md) | Value Set der LOINC-Codes für Primär-, Sekundär- und Tertiär-Gleason-Pattern. Dient als optionale LOINC-Zweitkodierung zum verpflichtenden SNOMED-CT-Slice im Profil MII_PR_Onko_Prostata_Gleason_Pattern (GitHub-Issue #259). |
 | [ MII VS Onkologie Prostata Gleason Patterns  ](ValueSet-mii-vs-onko-prostata-gleason-patterns.md) | Value Set für die histopathologische Bewertung von Prostata-Adenokarzinomen mittels Gleason-Patterns. Dieser Value Set wird verwendet, um die verschiedenen Gleason-Patterns zu kodieren, die bei der Beurteilung von Prostatakarzinomen auftreten können. |
 | [ MII VS Onkologie Prostata Gleason Primary Secondary Tertiary  ](ValueSet-mii-vs-onko-prostata-gleason-primary-secondary-tertiary.md) | Value Set für Primär-, Sekundär- und Tertiär-Gleason Patterns in der Onkologie Prostata. Der häufigste Gleason Pattern wird als primär, der zweithäufigste als sekundär und (seltener, meistens bei Gleason Pattern 5) der dritthäufigste als tertiär bezeichnet. Diese Value Set wird verwendet, um die verschiedenen Gleason Patterns zu kodieren, die bei der Beurteilung von Prostatakarzinomen auftreten können. |
 | [ MII VS Onkologie Prostata Gleason Score  ](ValueSet-mii-vs-onko-prostata-gleason-score.md) | Value Set für den Gleason Score in Kombination mit der ISUP Grade Group. Da ISUP Grade Groups erst ab einem Gleason-Gesamtscore von 6 definiert sind, deckt dieses Value Set nur Scores >= 6 ab. Liegt nur das Score-Ergebnis ohne Grade Group vor oder ein Gesamtscore < 6, ist MII_VS_Onko_Prostata_Gleason_Score_Gesamt zu verwenden. |

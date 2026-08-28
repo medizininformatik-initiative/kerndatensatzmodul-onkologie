@@ -32,7 +32,7 @@
   <name value="MII_PR_Onko_Melanom_LDH"/>
   <title value="MII PR Onkologie Melanom LDH"/>
   <status value="active"/>
-  <date value="2026-08-28T06:49:57+00:00"/>
+  <date value="2026-08-28T07:24:31+00:00"/>
   <publisher value="Medizininformatik Initiative"/>
   <contact>
     <name value="Medizininformatik Initiative"/>
@@ -170,8 +170,8 @@
       <isSummary value="false"/>
       <mapping>
         <identity value="oBDS"/>
-        <map value="LDH"/>
-        <comment value="Laktatdehydrogenase"/>
+        <map value="MM3"/>
+        <comment value="LDH"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
@@ -1476,7 +1476,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="oBDS"/>
-        <map value="LDH"/>
+        <map value="MM3"/>
         <comment value="Datum der LDH Bestimmung"/>
       </mapping>
       <mapping>
@@ -1729,8 +1729,8 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="oBDS"/>
-        <map value="LDH"/>
-        <comment value="LDH Wert"/>
+        <map value="MM3"/>
+        <comment value="LDH-Wert in U/L"/>
       </mapping>
       <mapping>
         <identity value="v2"/>
@@ -1817,7 +1817,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="oBDS"/>
-        <map value="LDH"/>
+        <map value="MM3"/>
         <comment value="LDH Einheit (U/L)"/>
       </mapping>
       <mapping>
@@ -1985,8 +1985,8 @@
       </binding>
       <mapping>
         <identity value="oBDS"/>
-        <map value="LDH"/>
-        <comment value="Bewertung LDH (normal/erhöht)"/>
+        <map value="MM3 (Komponente)"/>
+        <comment value="Bewertung des LDH-Werts (normal/erhöht); keine eigene oBDS-Feldnummer"/>
       </mapping>
       <mapping>
         <identity value="sct-concept"/>
@@ -3078,8 +3078,8 @@
       <path value="Observation"/>
       <mapping>
         <identity value="oBDS"/>
-        <map value="LDH"/>
-        <comment value="Laktatdehydrogenase"/>
+        <map value="MM3"/>
+        <comment value="LDH"/>
       </mapping>
     </element>
     <element id="Observation.meta.profile">
@@ -3147,7 +3147,7 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="oBDS"/>
-        <map value="LDH"/>
+        <map value="MM3"/>
         <comment value="Datum der LDH Bestimmung"/>
       </mapping>
     </element>
@@ -3166,8 +3166,8 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="oBDS"/>
-        <map value="LDH"/>
-        <comment value="LDH Wert"/>
+        <map value="MM3"/>
+        <comment value="LDH-Wert in U/L"/>
       </mapping>
     </element>
     <element id="Observation.value[x].unit">
@@ -3177,7 +3177,7 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="oBDS"/>
-        <map value="LDH"/>
+        <map value="MM3"/>
         <comment value="LDH Einheit (U/L)"/>
       </mapping>
     </element>
@@ -3200,8 +3200,8 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="oBDS"/>
-        <map value="LDH"/>
-        <comment value="Bewertung LDH (normal/erhöht)"/>
+        <map value="MM3 (Komponente)"/>
+        <comment value="Bewertung des LDH-Werts (normal/erhöht); keine eigene oBDS-Feldnummer"/>
       </mapping>
     </element>
     <element id="Observation.note">

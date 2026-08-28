@@ -18,7 +18,7 @@ Dieses Profil beschreibt einen Gleasonscore in der Onkologie
 
 Dieses Profil beschreibt den Gleason Score und die entsprechende Grade Group bei der histopathologischen Graduierung des Prostatakarzinoms. Der Gleason Score ergibt sich aus der Summe des primären und sekundären Gleason Patterns, während die Grade Group (1-5) eine internationale Standardklassifikation darstellt.
 
-Das Profil basiert auf einer FHIR Observation-Ressource und verwendet LOINC zur Kodierung. Die Grade Group wird als Komponente der Observation dokumentiert.
+Das Profil basiert auf einer FHIR Observation-Ressource. `Observation.code` ist SNOMED-CT-kodiert (verpflichtender Slice, ISUP-Observable 1812491000004107) mit optionaler LOINC-Zweitkodierung (94734-1, GitHub-Issue #259). Score und Grade Group werden als `valueCodeableConcept` dokumentiert.
 
 -------
 
@@ -36,11 +36,11 @@ Der Gleason Score ist eine zentrale histopathologische Bewertung:
 
 ### oBDS-Kontext
 
-Gemäß oBDS P3 wird der Gleason Score als Summe aus primärem und sekundärem Pattern dokumentiert. Die Grade Group stellt eine moderne internationale Klassifikation dar, die in der aktuellen onkologischen Praxis Standard ist.
+Gemäß oBDS P1 (Gleason-Score) wird der Gleason Score als Summe aus primärem und sekundärem Pattern dokumentiert. Die Grade Group stellt eine moderne internationale Klassifikation dar, die in der aktuellen onkologischen Praxis Standard ist.
 
 ### Terminologie-Binding
 
-Das ValueSet für Gleason Score-Codes ist **required** gebunden. Die Grade Group-Codes sind ebenfalls **required** gebunden, da sie international standardisiert sind.
+`Observation.code` ist gesliced (GitHub-Issue #259): SNOMED CT verpflichtend (1..1), LOINC optional (0..1) als Zweitkodierung. Das ValueSet für die Score-/Grade-Group-Werte in `valueCodeableConcept` ist **extensible** gebunden.
 
 #### ValueSet: MII VS Onko Prostata Gleason Score
 
@@ -97,14 +97,20 @@ Diese Struktur ist abgeleitet von [Observation](http://hl7.org/fhir/R4/observati
 
 ** Summary **
 
-Mandatory: 2 elements(1 nested mandatory element)
- Must-Support: 8 elements
+Mandatory: 6 elements(3 nested mandatory elements)
+ Must-Support: 14 elements
 
 **Structures**
 
 This structure refers to these other structures:
 
 * [MII PR Onkologie Diagnose Primärtumor (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)](StructureDefinition-mii-pr-onko-diagnose-primaertumor.md)
+
+**Slices**
+
+This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+
+* The element 1 is sliced based on the value of Observation.code.coding
 
  **Schlüsselelemente-Ansicht** 
 
@@ -128,14 +134,20 @@ Diese Struktur ist abgeleitet von [Observation](http://hl7.org/fhir/R4/observati
 
 ** Summary **
 
-Mandatory: 2 elements(1 nested mandatory element)
- Must-Support: 8 elements
+Mandatory: 6 elements(3 nested mandatory elements)
+ Must-Support: 14 elements
 
 **Structures**
 
 This structure refers to these other structures:
 
 * [MII PR Onkologie Diagnose Primärtumor (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)](StructureDefinition-mii-pr-onko-diagnose-primaertumor.md)
+
+**Slices**
+
+This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+
+* The element 1 is sliced based on the value of Observation.code.coding
 
  
 
@@ -154,7 +166,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_Prostata_Gleason_Grade_Group",
   "title" : "MII PR Onkologie Prostata Gleason Grade Group",
   "status" : "active",
-  "date" : "2026-08-28T06:49:57+00:00",
+  "date" : "2026-08-28T07:24:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -173,6 +185,10 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
+    "identity" : "oBDS",
+    "name" : "Mapping FHIR zu oBDS"
+  },
+  {
     "identity" : "workflow",
     "uri" : "http://hl7.org/fhir/workflow",
     "name" : "Workflow Pattern"
@@ -205,7 +221,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "differential" : {
     "element" : [{
       "id" : "Observation",
-      "path" : "Observation"
+      "path" : "Observation",
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "P1",
+        "comment" : "Gleason-Score"
+      }]
     },
     {
       "id" : "Observation.meta.profile",
@@ -222,11 +243,64 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
     {
       "id" : "Observation.code.coding",
       "path" : "Observation.code.coding",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "pattern",
+          "path" : "system"
+        }],
+        "rules" : "open"
+      },
+      "min" : 1
+    },
+    {
+      "id" : "Observation.code.coding:snomed",
+      "path" : "Observation.code.coding",
+      "sliceName" : "snomed",
+      "min" : 1,
+      "max" : "1",
       "patternCoding" : {
         "system" : "http://snomed.info/sct",
         "code" : "1812491000004107",
         "display" : "Histologic grade of primary malignant neoplasm of prostate by International Society of Urological Pathology technique (observable entity)"
-      }
+      },
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.code.coding:snomed.system",
+      "path" : "Observation.code.coding.system",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.code.coding:snomed.code",
+      "path" : "Observation.code.coding.code",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.code.coding:loinc",
+      "path" : "Observation.code.coding",
+      "sliceName" : "loinc",
+      "min" : 0,
+      "max" : "1",
+      "patternCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "94734-1",
+        "display" : "Prostate cancer grade group [Score] in Prostate tumor Qualitative"
+      },
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.code.coding:loinc.system",
+      "path" : "Observation.code.coding.system",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.code.coding:loinc.code",
+      "path" : "Observation.code.coding.code",
+      "min" : 1,
+      "mustSupport" : true
     },
     {
       "id" : "Observation.subject",
@@ -286,7 +360,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "type" : [{
         "code" : "dateTime"
       }],
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "P3",
+        "comment" : "Datum der Stanzen"
+      }]
     },
     {
       "id" : "Observation.value[x]",
@@ -299,7 +378,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "binding" : {
         "strength" : "extensible",
         "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-score"
-      }
+      },
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "P1 (abgeleitet)",
+        "comment" : "Internationale Standard Grade Group (ISUP 1-5); keine eigene oBDS-Feldnummer"
+      }]
     },
     {
       "id" : "Observation.value[x].coding",

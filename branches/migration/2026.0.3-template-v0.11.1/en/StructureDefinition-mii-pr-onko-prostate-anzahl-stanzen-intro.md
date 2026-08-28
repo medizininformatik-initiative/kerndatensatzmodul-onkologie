@@ -16,7 +16,7 @@ The number of biopsy cores is an important biopsy parameter:
 ---
 
 ### oBDS context
-According to oBDS P4.1, the total number of biopsy cores taken is documented. This information is essential for assessing the adequacy of the sample collection.
+According to oBDS P4 (Anzahl der Stanzen), the total number of biopsy cores taken is documented. This information is essential for assessing the adequacy of the sample collection.
 
 ### Terminology binding
 The LOINC code for the number of biopsy cores is bound as **required**.

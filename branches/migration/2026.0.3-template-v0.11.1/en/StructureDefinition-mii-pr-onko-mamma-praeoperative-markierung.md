@@ -111,7 +111,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-mamma
   "name" : "MII_PR_Onko_Mamma_Praeoperative_Markierung",
   "title" : "MII PR Onkologie Präoperative Markierung Mamma",
   "status" : "active",
-  "date" : "2026-08-28T06:49:57+00:00",
+  "date" : "2026-08-28T07:24:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -130,6 +130,10 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-mamma
   }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
+    "identity" : "oBDS",
+    "name" : "Mapping FHIR zu oBDS"
+  },
+  {
     "identity" : "workflow",
     "uri" : "http://hl7.org/fhir/workflow",
     "name" : "Workflow Pattern"
@@ -152,7 +156,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-mamma
   "differential" : {
     "element" : [{
       "id" : "Procedure",
-      "path" : "Procedure"
+      "path" : "Procedure",
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "M5",
+        "comment" : "Präoperative Drahtmarkierung durch Bildgebung gesteuert"
+      }]
     },
     {
       "id" : "Procedure.meta.profile",
@@ -188,7 +197,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-mamma
       "binding" : {
         "strength" : "extensible",
         "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-praeoperative-markierung-modalitaet"
-      }
+      },
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "M5 (Komponente)",
+        "comment" : "Modalität der präoperativen Markierung; keine eigene oBDS-Feldnummer"
+      }]
     },
     {
       "id" : "Procedure.subject",
@@ -203,6 +217,33 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-mamma
       "id" : "Procedure.encounter",
       "path" : "Procedure.encounter",
       "mustSupport" : true
+    },
+    {
+      "id" : "Procedure.performed[x]",
+      "path" : "Procedure.performed[x]",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "type",
+          "path" : "$this"
+        }],
+        "ordered" : false,
+        "rules" : "open"
+      }
+    },
+    {
+      "id" : "Procedure.performed[x]:performedDateTime",
+      "path" : "Procedure.performed[x]",
+      "sliceName" : "performedDateTime",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "dateTime"
+      }],
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "M5",
+        "comment" : "Datum der präoperativen Markierung"
+      }]
     }]
   }
 }

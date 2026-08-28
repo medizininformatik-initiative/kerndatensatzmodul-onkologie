@@ -43,6 +43,11 @@ Profile: [MII PR Onkologie Prostata Gleason Pattern](StructureDefinition-mii-pr-
       "system" : "http://snomed.info/sct",
       "code" : "384995005",
       "display" : "Secondary Gleason pattern (observable entity)"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "44642-7",
+      "display" : "Gleason pattern.secondary in Prostate tumor"
     }]
   },
   "subject" : {

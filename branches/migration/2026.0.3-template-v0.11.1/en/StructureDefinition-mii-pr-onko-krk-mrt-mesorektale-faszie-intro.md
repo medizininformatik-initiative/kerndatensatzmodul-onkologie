@@ -1,7 +1,7 @@
 <!-- TODO:REVIEW machine translation of source page StructureDefinition-mii-pr-onko-krk-mrt-mesorektale-faszie-intro.md (de) -->
 
 ### Content
-This profile describes the distance to the mesorectal fascia on imaging (MRI/CT) in colorectal carcinoma according to oBDS KR2. This preoperative imaging assessment is essential for therapy planning in rectal carcinomas and for assessing local tumor spread.
+This profile describes the distance to the mesorectal fascia on imaging (MRI/CT) in colorectal carcinoma according to oBDS KR5 (MRI/thin-slice CT performed, with distance to the mesorectal fascia). This preoperative imaging assessment is essential for therapy planning in rectal carcinomas and for assessing local tumor spread.
 
 The profile is based on a FHIR Observation resource and includes both the quantity measurement and the reason for missing distance measurements. The distance is given as a Quantity value in millimeters.
 

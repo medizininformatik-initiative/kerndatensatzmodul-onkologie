@@ -10,7 +10,7 @@
   "name" : "MII_PR_Onko_Melanom_Breslow_Tiefe",
   "title" : "MII PR Onkologie Melanom Breslow Tiefe",
   "status" : "active",
-  "date" : "2026-08-28T06:49:57+00:00",
+  "date" : "2026-08-28T07:24:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -152,8 +152,8 @@
       "isSummary" : false,
       "mapping" : [{
         "identity" : "oBDS",
-        "map" : "Breslow",
-        "comment" : "Breslow-Tumordicke"
+        "map" : "MM2",
+        "comment" : "Tumordicke (Breslow)"
       },
       {
         "identity" : "rim",
@@ -1365,7 +1365,7 @@
       "isSummary" : true,
       "mapping" : [{
         "identity" : "oBDS",
-        "map" : "Breslow",
+        "map" : "MM2",
         "comment" : "Datum der histopathologischen Untersuchung"
       },
       {
@@ -1651,8 +1651,8 @@
       "isSummary" : true,
       "mapping" : [{
         "identity" : "oBDS",
-        "map" : "Breslow",
-        "comment" : "Breslow-Tumordicke in mm"
+        "map" : "MM2",
+        "comment" : "Tumordicke nach Breslow in mm"
       },
       {
         "identity" : "v2",
@@ -3202,8 +3202,8 @@
       "path" : "Observation",
       "mapping" : [{
         "identity" : "oBDS",
-        "map" : "Breslow",
-        "comment" : "Breslow-Tumordicke"
+        "map" : "MM2",
+        "comment" : "Tumordicke (Breslow)"
       }]
     },
     {
@@ -3288,7 +3288,7 @@
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "oBDS",
-        "map" : "Breslow",
+        "map" : "MM2",
         "comment" : "Datum der histopathologischen Untersuchung"
       }]
     },
@@ -3334,8 +3334,8 @@
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "oBDS",
-        "map" : "Breslow",
-        "comment" : "Breslow-Tumordicke in mm"
+        "map" : "MM2",
+        "comment" : "Tumordicke nach Breslow in mm"
       }]
     },
     {

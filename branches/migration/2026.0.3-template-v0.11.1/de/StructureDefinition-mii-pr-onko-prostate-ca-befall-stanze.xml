@@ -28,7 +28,7 @@
   <name value="MII_PR_Onko_Prostata_CA_Befall_Stanze"/>
   <title value="MII PR Onkologie Ca-Befall Stanze"/>
   <status value="active"/>
-  <date value="2026-08-28T06:49:57+00:00"/>
+  <date value="2026-08-28T07:24:31+00:00"/>
   <publisher value="Medizininformatik Initiative"/>
   <contact>
     <name value="Medizininformatik Initiative"/>
@@ -46,6 +46,10 @@
     </coding>
   </jurisdiction>
   <fhirVersion value="4.0.1"/>
+  <mapping>
+    <identity value="oBDS"/>
+    <name value="Mapping FHIR zu oBDS"/>
+  </mapping>
   <mapping>
     <identity value="workflow"/>
     <uri value="http://hl7.org/fhir/workflow"/>
@@ -160,6 +164,11 @@
       </constraint>
       <isModifier value="false"/>
       <isSummary value="false"/>
+      <mapping>
+        <identity value="oBDS"/>
+        <map value="P6"/>
+        <comment value="Ca-Befall Stanze"/>
+      </mapping>
       <mapping>
         <identity value="rim"/>
         <map value="Entity. Role, or Act"/>
@@ -1556,6 +1565,11 @@
       <isModifier value="false"/>
       <isSummary value="true"/>
       <mapping>
+        <identity value="oBDS"/>
+        <map value="P6"/>
+        <comment value="Prozentualer Karzinombefall der am stärksten befallenen Stanze"/>
+      </mapping>
+      <mapping>
         <identity value="v2"/>
         <map value="SN.2  / CQ - N/A"/>
       </mapping>
@@ -2885,6 +2899,11 @@
   <differential>
     <element id="Observation">
       <path value="Observation"/>
+      <mapping>
+        <identity value="oBDS"/>
+        <map value="P6"/>
+        <comment value="Ca-Befall Stanze"/>
+      </mapping>
     </element>
     <element id="Observation.meta.profile">
       <path value="Observation.meta.profile"/>
@@ -2938,6 +2957,11 @@
     <element id="Observation.value[x].value">
       <path value="Observation.value[x].value"/>
       <min value="1"/>
+      <mapping>
+        <identity value="oBDS"/>
+        <map value="P6"/>
+        <comment value="Prozentualer Karzinombefall der am stärksten befallenen Stanze"/>
+      </mapping>
     </element>
     <element id="Observation.value[x].unit">
       <path value="Observation.value[x].unit"/>

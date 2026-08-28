@@ -182,7 +182,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_Mamma_Rezeptorstatus_Progesteron",
   "title" : "MII PR Onkologie Rezeptorstatus Progesteron",
   "status" : "active",
-  "date" : "2026-08-28T06:49:57+00:00",
+  "date" : "2026-08-28T07:24:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -201,6 +201,10 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
+    "identity" : "oBDS",
+    "name" : "Mapping FHIR zu oBDS"
+  },
+  {
     "identity" : "workflow",
     "uri" : "http://hl7.org/fhir/workflow",
     "name" : "Workflow Pattern"
@@ -233,7 +237,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "differential" : {
     "element" : [{
       "id" : "Observation",
-      "path" : "Observation"
+      "path" : "Observation",
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "M3",
+        "comment" : "HormonrezeptorStatus: Progesteron"
+      }]
     },
     {
       "id" : "Observation.meta.profile",
@@ -286,7 +295,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "type" : [{
         "code" : "CodeableConcept"
       }],
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "M3",
+        "comment" : "Kategoriale Bewertung des Progesteron-Rezeptorstatus"
+      }]
     },
     {
       "id" : "Observation.value[x].coding",
@@ -380,7 +394,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
     {
       "id" : "Observation.component:AnteilPositiveZellen.value[x].value",
       "path" : "Observation.component.value[x].value",
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "M3 (Komponente)",
+        "comment" : "Anteil positiver Zellen in Prozent; keine eigene oBDS-Feldnummer (S3-Leitlinie)"
+      }]
     },
     {
       "id" : "Observation.component:AnteilPositiveZellen.value[x].unit",
@@ -425,7 +444,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "binding" : {
         "strength" : "extensible",
         "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-faerbeintensitaet"
-      }
+      },
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "M3 (Komponente)",
+        "comment" : "Färbeintensität; keine eigene oBDS-Feldnummer (S3-Leitlinie)"
+      }]
     }]
   }
 }

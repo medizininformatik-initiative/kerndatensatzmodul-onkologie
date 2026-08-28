@@ -152,7 +152,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_KRK_Abstand_Circumferelle_Resektionsebene",
   "title" : "MII PR Onkologie Abstand Circumferelle Resektionsebene",
   "status" : "active",
-  "date" : "2026-08-28T06:49:57+00:00",
+  "date" : "2026-08-28T07:24:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -171,6 +171,10 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
+    "identity" : "oBDS",
+    "name" : "Mapping FHIR zu oBDS"
+  },
+  {
     "identity" : "workflow",
     "uri" : "http://hl7.org/fhir/workflow",
     "name" : "Workflow Pattern"
@@ -203,7 +207,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "differential" : {
     "element" : [{
       "id" : "Observation",
-      "path" : "Observation"
+      "path" : "Observation",
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "KR3",
+        "comment" : "Rektum: Abstand zur circumferentiellen Resektionsebene"
+      }]
     },
     {
       "id" : "Observation.meta.profile",
@@ -283,12 +292,17 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "type" : [{
         "code" : "dateTime"
       }],
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "KR3",
+        "comment" : "Datum der Untersuchung"
+      }]
     },
     {
       "id" : "Observation.value[x]",
       "path" : "Observation.value[x]",
-      "short" : "Minimaler Abstand Tumorrand aboral",
+      "short" : "Minimaler Abstand Tumorrand circumferentiell",
       "_short" : {
         "extension" : [{
           "extension" : [{
@@ -302,7 +316,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "Minimaler Abstand des aboralen Tumorrandes zum aboralen Resektionsrand in mm. gemäß oBDS 2021 KR2",
+      "definition" : "Minimaler Abstand des Tumorrandes zur circumferentiellen Resektionsebene in mm. gemäß oBDS 2021 KR3",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -311,7 +325,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
           },
           {
             "url" : "content",
-            "valueString" : "Minimaler Abstand des aboralen Tumorrandes zum aboralen Resektionsrand in mm. gemäß oBDS 2021 KR2"
+            "valueString" : "Minimaler Abstand des Tumorrandes zur circumferentiellen Resektionsebene in mm. gemäß oBDS 2021 KR3"
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
@@ -325,7 +339,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "id" : "Observation.value[x].value",
       "path" : "Observation.value[x].value",
       "min" : 1,
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "KR3",
+        "comment" : "Minimaler Abstand des Tumorrandes zur circumferentiellen Resektionsebene in mm"
+      }]
     },
     {
       "id" : "Observation.value[x].unit",

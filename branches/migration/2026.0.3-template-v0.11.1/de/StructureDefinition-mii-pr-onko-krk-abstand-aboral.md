@@ -154,7 +154,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_KRK_Abstand_Aboral",
   "title" : "MII PR Onkologie Abstand Aboral",
   "status" : "active",
-  "date" : "2026-08-28T06:49:57+00:00",
+  "date" : "2026-08-28T07:24:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -173,6 +173,10 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
+    "identity" : "oBDS",
+    "name" : "Mapping FHIR zu oBDS"
+  },
+  {
     "identity" : "workflow",
     "uri" : "http://hl7.org/fhir/workflow",
     "name" : "Workflow Pattern"
@@ -205,7 +209,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "differential" : {
     "element" : [{
       "id" : "Observation",
-      "path" : "Observation"
+      "path" : "Observation",
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "KR2",
+        "comment" : "Rektum: Minimaler Abstand vom aboralen Resektionsrand"
+      }]
     },
     {
       "id" : "Observation.meta.profile",
@@ -285,7 +294,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "type" : [{
         "code" : "dateTime"
       }],
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "KR2",
+        "comment" : "Datum der Untersuchung"
+      }]
     },
     {
       "id" : "Observation.value[x]",
@@ -327,7 +341,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "id" : "Observation.value[x].value",
       "path" : "Observation.value[x].value",
       "min" : 1,
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "KR2",
+        "comment" : "Minimaler Abstand des Tumors zum aboralen Resektionsrand in mm"
+      }]
     },
     {
       "id" : "Observation.value[x].unit",

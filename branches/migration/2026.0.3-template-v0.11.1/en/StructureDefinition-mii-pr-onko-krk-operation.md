@@ -104,7 +104,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-krk-o
   "name" : "MII_PR_Onko_KRK_Operation",
   "title" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
   "status" : "active",
-  "date" : "2026-08-28T06:49:57+00:00",
+  "date" : "2026-08-28T07:24:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -123,6 +123,10 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-krk-o
   }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
+    "identity" : "oBDS-Organ",
+    "name" : "Mapping FHIR zu oBDS (organspezifisches Zusatzmodul)"
+  },
+  {
     "identity" : "oBDS",
     "name" : "Mapping FHIR zu oBDS"
   }],
@@ -134,7 +138,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-krk-o
   "differential" : {
     "element" : [{
       "id" : "Procedure",
-      "path" : "Procedure"
+      "path" : "Procedure",
+      "mapping" : [{
+        "identity" : "oBDS-Organ",
+        "map" : "KR6",
+        "comment" : "Art des Eingriffs"
+      }]
     },
     {
       "id" : "Procedure.partOf",
@@ -149,6 +158,15 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-krk-o
       "path" : "Procedure.code",
       "short" : "Kolorektale Operation",
       "definition" : "Operation des Kolons und des Rektums, z.B. Exzision eines Tumors, "
+    },
+    {
+      "id" : "Procedure.code.coding",
+      "path" : "Procedure.code.coding",
+      "mapping" : [{
+        "identity" : "oBDS-Organ",
+        "map" : "KR6",
+        "comment" : "Art des kolorektalen Eingriffs (OPS/SNOMED CT)"
+      }]
     },
     {
       "id" : "Procedure.reasonReference",

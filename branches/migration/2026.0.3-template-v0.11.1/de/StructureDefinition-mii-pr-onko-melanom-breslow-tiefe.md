@@ -16,7 +16,7 @@ Dieses Profil beschreibt die Breslow-Tumordicke beim Malignen Melanom der Haut
 
 ### Inhalt
 
-Dieses Profil beschreibt die Breslow-Tumordicke beim Malignen Melanom der Haut gemäß oBDS MM2 "Breslow". Die Breslow-Tiefe ist der wichtigste prognostische Faktor beim primären Melanom und beschreibt die vertikale Tumordicke in Millimetern von der Granularschicht der Epidermis bis zur tiefsten Stelle der Tumorinvasion.
+Dieses Profil beschreibt die Breslow-Tumordicke beim Malignen Melanom der Haut gemäß oBDS MM2 (Tumordicke nach Breslow). Die Breslow-Tiefe ist der wichtigste prognostische Faktor beim primären Melanom und beschreibt die vertikale Tumordicke in Millimetern von der Granularschicht der Epidermis bis zur tiefsten Stelle der Tumorinvasion.
 
 Das Profil basiert auf einer FHIR Observation-Ressource und verwendet SNOMED CT zur standardisierten Kodierung der Breslow-Messung. Die Tumordicke wird als Quantity-Wert in Millimetern angegeben.
 
@@ -144,7 +144,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_Melanom_Breslow_Tiefe",
   "title" : "MII PR Onkologie Melanom Breslow Tiefe",
   "status" : "active",
-  "date" : "2026-08-28T06:49:57+00:00",
+  "date" : "2026-08-28T07:24:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -202,8 +202,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "path" : "Observation",
       "mapping" : [{
         "identity" : "oBDS",
-        "map" : "Breslow",
-        "comment" : "Breslow-Tumordicke"
+        "map" : "MM2",
+        "comment" : "Tumordicke (Breslow)"
       }]
     },
     {
@@ -288,7 +288,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "oBDS",
-        "map" : "Breslow",
+        "map" : "MM2",
         "comment" : "Datum der histopathologischen Untersuchung"
       }]
     },
@@ -334,8 +334,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "oBDS",
-        "map" : "Breslow",
-        "comment" : "Breslow-Tumordicke in mm"
+        "map" : "MM2",
+        "comment" : "Tumordicke nach Breslow in mm"
       }]
     },
     {

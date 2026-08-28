@@ -34,7 +34,7 @@ The number of biopsy cores is an important biopsy parameter:
 
 ### oBDS context
 
-According to oBDS P4.1, the total number of biopsy cores taken is documented. This information is essential for assessing the adequacy of the sample collection.
+According to oBDS P4 (Anzahl der Stanzen), the total number of biopsy cores taken is documented. This information is essential for assessing the adequacy of the sample collection.
 
 ### Terminology binding
 
@@ -84,7 +84,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-prost
   "name" : "MII_PR_Onko_Prostata_Anzahl_Stanzen",
   "title" : "MII PR Onkologie Prostata Anzahl Stanzen",
   "status" : "active",
-  "date" : "2026-08-28T06:49:57+00:00",
+  "date" : "2026-08-28T07:24:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -103,6 +103,10 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-prost
   }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
+    "identity" : "oBDS",
+    "name" : "Mapping FHIR zu oBDS"
+  },
+  {
     "identity" : "workflow",
     "uri" : "http://hl7.org/fhir/workflow",
     "name" : "Workflow Pattern"
@@ -135,7 +139,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-prost
   "differential" : {
     "element" : [{
       "id" : "Observation",
-      "path" : "Observation"
+      "path" : "Observation",
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "P4",
+        "comment" : "Anzahl der Stanzen"
+      }]
     },
     {
       "id" : "Observation.meta.profile",
@@ -216,7 +225,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-prost
       "type" : [{
         "code" : "dateTime"
       }],
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "P3",
+        "comment" : "Datum der Stanzen"
+      }]
     },
     {
       "id" : "Observation.value[x]",
@@ -252,7 +266,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-prost
       "type" : [{
         "code" : "integer"
       }],
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "P4",
+        "comment" : "Gesamtanzahl der entnommenen Stanzen"
+      }]
     }]
   }
 }

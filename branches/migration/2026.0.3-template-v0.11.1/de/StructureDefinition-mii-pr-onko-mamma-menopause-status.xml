@@ -25,7 +25,7 @@
   <name value="MII_PR_Onko_Mamma_Menopausenstatus"/>
   <title value="MII PR Onkologie Menopausenstatus Mamma"/>
   <status value="active"/>
-  <date value="2026-08-28T06:49:57+00:00"/>
+  <date value="2026-08-28T07:24:31+00:00"/>
   <publisher value="Medizininformatik Initiative"/>
   <contact>
     <name value="Medizininformatik Initiative"/>
@@ -43,6 +43,10 @@
     </coding>
   </jurisdiction>
   <fhirVersion value="4.0.1"/>
+  <mapping>
+    <identity value="oBDS"/>
+    <name value="Mapping FHIR zu oBDS"/>
+  </mapping>
   <mapping>
     <identity value="workflow"/>
     <uri value="http://hl7.org/fhir/workflow"/>
@@ -157,6 +161,11 @@
       </constraint>
       <isModifier value="false"/>
       <isSummary value="false"/>
+      <mapping>
+        <identity value="oBDS"/>
+        <map value="M1"/>
+        <comment value="Prätherapeutischer Menopausenstatus"/>
+      </mapping>
       <mapping>
         <identity value="rim"/>
         <map value="Entity. Role, or Act"/>
@@ -1440,6 +1449,11 @@
         <strength value="extensible"/>
         <valueSet value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-menopause-status"/>
       </binding>
+      <mapping>
+        <identity value="oBDS"/>
+        <map value="M1"/>
+        <comment value="Menopausenstatus prätherapeutisch; perimenopausal wird unter prämenopausal subsumiert"/>
+      </mapping>
       <mapping>
         <identity value="sct-concept"/>
         <map value="&lt; 441742003 |Evaluation finding|"/>
@@ -3046,6 +3060,11 @@
   <differential>
     <element id="Observation">
       <path value="Observation"/>
+      <mapping>
+        <identity value="oBDS"/>
+        <map value="M1"/>
+        <comment value="Prätherapeutischer Menopausenstatus"/>
+      </mapping>
     </element>
     <element id="Observation.meta.profile">
       <path value="Observation.meta.profile"/>
@@ -3097,6 +3116,11 @@
         <strength value="extensible"/>
         <valueSet value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-menopause-status"/>
       </binding>
+      <mapping>
+        <identity value="oBDS"/>
+        <map value="M1"/>
+        <comment value="Menopausenstatus prätherapeutisch; perimenopausal wird unter prämenopausal subsumiert"/>
+      </mapping>
     </element>
     <element id="Observation.value[x].coding.code">
       <path value="Observation.value[x].coding.code"/>

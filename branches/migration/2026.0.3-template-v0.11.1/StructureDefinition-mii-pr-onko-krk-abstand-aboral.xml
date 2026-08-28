@@ -38,7 +38,7 @@
   <name value="MII_PR_Onko_KRK_Abstand_Aboral"/>
   <title value="MII PR Onkologie Abstand Aboral"/>
   <status value="active"/>
-  <date value="2026-08-28T06:49:57+00:00"/>
+  <date value="2026-08-28T07:24:31+00:00"/>
   <publisher value="Medizininformatik Initiative"/>
   <contact>
     <name value="Medizininformatik Initiative"/>
@@ -56,6 +56,10 @@
     </coding>
   </jurisdiction>
   <fhirVersion value="4.0.1"/>
+  <mapping>
+    <identity value="oBDS"/>
+    <name value="Mapping FHIR zu oBDS"/>
+  </mapping>
   <mapping>
     <identity value="workflow"/>
     <uri value="http://hl7.org/fhir/workflow"/>
@@ -170,6 +174,11 @@
       </constraint>
       <isModifier value="false"/>
       <isSummary value="false"/>
+      <mapping>
+        <identity value="oBDS"/>
+        <map value="KR2"/>
+        <comment value="Rektum: Minimaler Abstand vom aboralen Resektionsrand"/>
+      </mapping>
       <mapping>
         <identity value="rim"/>
         <map value="Entity. Role, or Act"/>
@@ -1328,6 +1337,11 @@
       <isModifier value="false"/>
       <isSummary value="true"/>
       <mapping>
+        <identity value="oBDS"/>
+        <map value="KR2"/>
+        <comment value="Datum der Untersuchung"/>
+      </mapping>
+      <mapping>
         <identity value="workflow"/>
         <map value="Event.occurrence[x]"/>
       </mapping>
@@ -1593,6 +1607,11 @@
       <mustSupport value="true"/>
       <isModifier value="false"/>
       <isSummary value="true"/>
+      <mapping>
+        <identity value="oBDS"/>
+        <map value="KR2"/>
+        <comment value="Minimaler Abstand des Tumors zum aboralen Resektionsrand in mm"/>
+      </mapping>
       <mapping>
         <identity value="v2"/>
         <map value="SN.2  / CQ - N/A"/>
@@ -2925,6 +2944,11 @@
   <differential>
     <element id="Observation">
       <path value="Observation"/>
+      <mapping>
+        <identity value="oBDS"/>
+        <map value="KR2"/>
+        <comment value="Rektum: Minimaler Abstand vom aboralen Resektionsrand"/>
+      </mapping>
     </element>
     <element id="Observation.meta.profile">
       <path value="Observation.meta.profile"/>
@@ -2990,6 +3014,11 @@
         <code value="dateTime"/>
       </type>
       <mustSupport value="true"/>
+      <mapping>
+        <identity value="oBDS"/>
+        <map value="KR2"/>
+        <comment value="Datum der Untersuchung"/>
+      </mapping>
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]"/>
@@ -3022,6 +3051,11 @@
       <path value="Observation.value[x].value"/>
       <min value="1"/>
       <mustSupport value="true"/>
+      <mapping>
+        <identity value="oBDS"/>
+        <map value="KR2"/>
+        <comment value="Minimaler Abstand des Tumors zum aboralen Resektionsrand in mm"/>
+      </mapping>
     </element>
     <element id="Observation.value[x].unit">
       <path value="Observation.value[x].unit"/>

@@ -17,7 +17,7 @@ The number of positive biopsy cores is an important biopsy parameter:
 ---
 
 ### oBDS context
-According to oBDS P4.2, the number of tumor-positive biopsy cores is documented. This information, together with the total number of biopsy cores, is essential for assessing tumor burden.
+According to oBDS P5 (Anzahl der positiven Stanzen), the number of tumor-positive biopsy cores is documented. This information, together with the total number of biopsy cores, is essential for assessing tumor burden.
 
 ### Terminology binding
 The LOINC code for the number of positive biopsy cores is bound **required**.

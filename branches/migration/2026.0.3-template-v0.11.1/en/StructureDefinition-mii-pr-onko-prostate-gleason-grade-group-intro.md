@@ -3,7 +3,7 @@
 ### Content
 This profile describes the Gleason Score and the corresponding Grade Group in the histopathological grading of prostate cancer. The Gleason Score results from the sum of the primary and secondary Gleason Pattern, while the Grade Group (1-5) represents an international standard classification.
 
-The profile is based on a FHIR Observation resource and uses LOINC for coding. The Grade Group is documented as a component of the Observation.
+The profile is based on a FHIR Observation resource. `Observation.code` is coded in SNOMED CT (mandatory slice, ISUP observable 1812491000004107) with an optional secondary LOINC coding (94734-1, GitHub issue #259). Score and grade group are documented as `valueCodeableConcept`.
 
 ---
 
@@ -18,7 +18,7 @@ The Gleason Score is a central histopathological assessment:
 ---
 
 ### oBDS context
-According to oBDS P3, the Gleason Score is documented as the sum of the primary and secondary pattern. The Grade Group represents a modern international classification that is standard in current oncological practice.
+According to oBDS P1 (Gleason-Score), the Gleason Score is documented as the sum of the primary and secondary pattern. The Grade Group represents a modern international classification that is standard in current oncological practice.
 
 ### Terminology binding
 The ValueSet for Gleason Score codes is bound **required**. The Grade Group codes are likewise bound **required**, since they are internationally standardized.

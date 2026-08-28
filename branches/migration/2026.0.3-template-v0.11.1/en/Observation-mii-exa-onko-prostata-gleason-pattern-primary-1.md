@@ -43,6 +43,11 @@ Profile: [MII PR Onkologie Prostata Gleason Pattern](StructureDefinition-mii-pr-
       "system" : "http://snomed.info/sct",
       "code" : "384994009",
       "display" : "Primary Gleason pattern (observable entity)"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "44641-9",
+      "display" : "Gleason pattern.primary in Prostate tumor"
     }]
   },
   "subject" : {

@@ -43,6 +43,11 @@ Profile: [MII PR Onkologie Prostata Gleason Score Gesamt](StructureDefinition-mi
       "system" : "http://snomed.info/sct",
       "code" : "372278000",
       "display" : "Gleason score (observable entity)"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "35266-6",
+      "display" : "Gleason score in Specimen Qualitative"
     }]
   },
   "subject" : {

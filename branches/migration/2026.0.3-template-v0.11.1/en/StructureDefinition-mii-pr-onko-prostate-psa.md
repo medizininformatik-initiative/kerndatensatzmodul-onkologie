@@ -34,7 +34,7 @@ The PSA value is an important tumor-specific observation:
 
 ### oBDS context
 
-According to oBDS P1, the PSA value is documented as a tumor marker for diagnostics and follow-up. Both diagnostic and follow-up PSA values can be recorded.
+According to oBDS P7 (PSA-Wert) and P8 (Datum PSA-Wert), the PSA value is documented as a tumor marker for diagnostics and follow-up. Both diagnostic and follow-up PSA values can be recorded.
 
 ### Terminology binding
 
@@ -90,7 +90,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-prost
   "name" : "MII_PR_Onko_Prostata_PSA",
   "title" : "MII PR Onkologie PSA-Wert",
   "status" : "active",
-  "date" : "2026-08-28T06:49:57+00:00",
+  "date" : "2026-08-28T07:24:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

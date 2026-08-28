@@ -46,14 +46,20 @@ Diese Struktur ist abgeleitet von [Observation](http://hl7.org/fhir/R4/observati
 
 ** Summary **
 
-Mandatory: 2 elements(1 nested mandatory element)
- Must-Support: 9 elements
+Mandatory: 6 elements(3 nested mandatory elements)
+ Must-Support: 15 elements
 
 **Structures**
 
 This structure refers to these other structures:
 
 * [MII PR Onkologie Diagnose Primärtumor (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)](StructureDefinition-mii-pr-onko-diagnose-primaertumor.md)
+
+**Slices**
+
+This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+
+* The element 1 is sliced based on the value of Observation.code.coding
 
  **Schlüsselelemente-Ansicht** 
 
@@ -77,14 +83,20 @@ Diese Struktur ist abgeleitet von [Observation](http://hl7.org/fhir/R4/observati
 
 ** Summary **
 
-Mandatory: 2 elements(1 nested mandatory element)
- Must-Support: 9 elements
+Mandatory: 6 elements(3 nested mandatory elements)
+ Must-Support: 15 elements
 
 **Structures**
 
 This structure refers to these other structures:
 
 * [MII PR Onkologie Diagnose Primärtumor (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)](StructureDefinition-mii-pr-onko-diagnose-primaertumor.md)
+
+**Slices**
+
+This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+
+* The element 1 is sliced based on the value of Observation.code.coding
 
  
 
@@ -103,7 +115,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_Prostata_Gleason_Score_Gesamt",
   "title" : "MII PR Onkologie Prostata Gleason Score Gesamt",
   "status" : "active",
-  "date" : "2026-08-28T06:49:57+00:00",
+  "date" : "2026-08-28T07:24:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -122,6 +134,10 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
+    "identity" : "oBDS",
+    "name" : "Mapping FHIR zu oBDS"
+  },
+  {
     "identity" : "workflow",
     "uri" : "http://hl7.org/fhir/workflow",
     "name" : "Workflow Pattern"
@@ -154,7 +170,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "differential" : {
     "element" : [{
       "id" : "Observation",
-      "path" : "Observation"
+      "path" : "Observation",
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "P1",
+        "comment" : "Gleason-Score"
+      }]
     },
     {
       "id" : "Observation.meta.profile",
@@ -171,11 +192,64 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
     {
       "id" : "Observation.code.coding",
       "path" : "Observation.code.coding",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "pattern",
+          "path" : "system"
+        }],
+        "rules" : "open"
+      },
+      "min" : 1
+    },
+    {
+      "id" : "Observation.code.coding:snomed",
+      "path" : "Observation.code.coding",
+      "sliceName" : "snomed",
+      "min" : 1,
+      "max" : "1",
       "patternCoding" : {
         "system" : "http://snomed.info/sct",
         "code" : "372278000",
         "display" : "Gleason score (observable entity)"
-      }
+      },
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.code.coding:snomed.system",
+      "path" : "Observation.code.coding.system",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.code.coding:snomed.code",
+      "path" : "Observation.code.coding.code",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.code.coding:loinc",
+      "path" : "Observation.code.coding",
+      "sliceName" : "loinc",
+      "min" : 0,
+      "max" : "1",
+      "patternCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "35266-6",
+        "display" : "Gleason score in Specimen Qualitative"
+      },
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.code.coding:loinc.system",
+      "path" : "Observation.code.coding.system",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.code.coding:loinc.code",
+      "path" : "Observation.code.coding.code",
+      "min" : 1,
+      "mustSupport" : true
     },
     {
       "id" : "Observation.subject",
@@ -235,7 +309,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "type" : [{
         "code" : "dateTime"
       }],
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "P3",
+        "comment" : "Datum der Stanzen"
+      }]
     },
     {
       "id" : "Observation.value[x]",
@@ -248,7 +327,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "binding" : {
         "strength" : "extensible",
         "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-score-gesamt"
-      }
+      },
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "P1",
+        "comment" : "Gleason-Score Gesamtwert (Summe aus primärem und sekundärem Pattern)"
+      }]
     },
     {
       "id" : "Observation.value[x].coding",

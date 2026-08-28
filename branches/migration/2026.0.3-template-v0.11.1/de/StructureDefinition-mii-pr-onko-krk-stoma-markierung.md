@@ -163,7 +163,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_KRK_Stoma_Markierung",
   "title" : "MII PR Onkologie KRK Stoma-Markierung",
   "status" : "active",
-  "date" : "2026-08-28T06:49:57+00:00",
+  "date" : "2026-08-28T07:24:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -196,8 +196,17 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "path" : "Procedure",
       "mapping" : [{
         "identity" : "oBDS",
-        "map" : "KR-Stoma",
-        "comment" : "Präoperative Stoma-Markierung"
+        "map" : "KR7",
+        "comment" : "Rektum: Präoperative Anzeichnung der Stomaposition"
+      }]
+    },
+    {
+      "id" : "Procedure.status",
+      "path" : "Procedure.status",
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "KR7",
+        "comment" : "Status der präoperativen Stoma-Markierung"
       }]
     },
     {
@@ -207,7 +216,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "binding" : {
         "strength" : "extensible",
         "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-stoma-status-reason"
-      }
+      },
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "KR7 (Komponente)",
+        "comment" : "Grund für den Markierungsstatus; keine eigene oBDS-Feldnummer"
+      }]
     },
     {
       "id" : "Procedure.category",
@@ -303,7 +317,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "oBDS",
-        "map" : "KR-Stoma.1",
+        "map" : "KR7",
         "comment" : "Datum der Stoma-Markierung"
       }]
     },

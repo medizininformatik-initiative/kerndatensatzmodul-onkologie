@@ -31,7 +31,7 @@ The carcinoma involvement of the core is an important histopathological observat
 
 ### oBDS context
 
-According to oBDS P4.3, the percentage carcinoma involvement of the most affected core of a prostate biopsy is documented. This is an important parameter for the histopathological assessment of tumor extent.
+According to oBDS P6 (Ca-Befall Stanze), the percentage carcinoma involvement of the most affected core of a prostate biopsy is documented. This is an important parameter for the histopathological assessment of tumor extent.
 
 ### Terminology binding
 
@@ -71,7 +71,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-prost
   "name" : "MII_PR_Onko_Prostata_CA_Befall_Stanze",
   "title" : "MII PR Onkologie Ca-Befall Stanze",
   "status" : "active",
-  "date" : "2026-08-28T06:49:57+00:00",
+  "date" : "2026-08-28T07:24:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -90,6 +90,10 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-prost
   }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
+    "identity" : "oBDS",
+    "name" : "Mapping FHIR zu oBDS"
+  },
+  {
     "identity" : "workflow",
     "uri" : "http://hl7.org/fhir/workflow",
     "name" : "Workflow Pattern"
@@ -122,7 +126,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-prost
   "differential" : {
     "element" : [{
       "id" : "Observation",
-      "path" : "Observation"
+      "path" : "Observation",
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "P6",
+        "comment" : "Ca-Befall Stanze"
+      }]
     },
     {
       "id" : "Observation.meta.profile",
@@ -209,7 +218,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-prost
     {
       "id" : "Observation.value[x].value",
       "path" : "Observation.value[x].value",
-      "min" : 1
+      "min" : 1,
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "P6",
+        "comment" : "Prozentualer Karzinombefall der am stärksten befallenen Stanze"
+      }]
     },
     {
       "id" : "Observation.value[x].unit",

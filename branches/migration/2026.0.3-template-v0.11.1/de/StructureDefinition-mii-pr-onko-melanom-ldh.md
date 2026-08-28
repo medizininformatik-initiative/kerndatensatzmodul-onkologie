@@ -159,7 +159,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_Melanom_LDH",
   "title" : "MII PR Onkologie Melanom LDH",
   "status" : "active",
-  "date" : "2026-08-28T06:49:57+00:00",
+  "date" : "2026-08-28T07:24:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -217,8 +217,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "path" : "Observation",
       "mapping" : [{
         "identity" : "oBDS",
-        "map" : "LDH",
-        "comment" : "Laktatdehydrogenase"
+        "map" : "MM3",
+        "comment" : "LDH"
       }]
     },
     {
@@ -321,7 +321,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "oBDS",
-        "map" : "LDH",
+        "map" : "MM3",
         "comment" : "Datum der LDH Bestimmung"
       }]
     },
@@ -368,8 +368,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "oBDS",
-        "map" : "LDH",
-        "comment" : "LDH Wert"
+        "map" : "MM3",
+        "comment" : "LDH-Wert in U/L"
       }]
     },
     {
@@ -380,7 +380,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "oBDS",
-        "map" : "LDH",
+        "map" : "MM3",
         "comment" : "LDH Einheit (U/L)"
       }]
     },
@@ -406,8 +406,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "oBDS",
-        "map" : "LDH",
-        "comment" : "Bewertung LDH (normal/erhöht)"
+        "map" : "MM3 (Komponente)",
+        "comment" : "Bewertung des LDH-Werts (normal/erhöht); keine eigene oBDS-Feldnummer"
       }]
     },
     {

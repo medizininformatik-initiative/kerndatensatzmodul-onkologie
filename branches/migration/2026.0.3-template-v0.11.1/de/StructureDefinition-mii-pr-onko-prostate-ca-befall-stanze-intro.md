@@ -24,7 +24,7 @@ Beobachtung:
 
 ### oBDS-Kontext
 
-Gemäß oBDS P4.3 wird der prozentuale Karzinombefall der am stärksten
+Gemäß oBDS P6 (Ca-Befall Stanze) wird der prozentuale Karzinombefall der am stärksten
 befallenen Stanze einer Prostata-Biopsie dokumentiert. Dies ist ein wichtiger
 Parameter für die histopathologische Beurteilung der Tumorausdehnung.
 

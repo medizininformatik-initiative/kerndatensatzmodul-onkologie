@@ -184,7 +184,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_Prostata_Clavien_Dindo",
   "title" : "MII PR Onkologie Clavien Dindo",
   "status" : "active",
-  "date" : "2026-08-28T06:49:57+00:00",
+  "date" : "2026-08-28T07:24:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -203,6 +203,10 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
+    "identity" : "oBDS",
+    "name" : "Mapping FHIR zu oBDS"
+  },
+  {
     "identity" : "workflow",
     "uri" : "http://hl7.org/fhir/workflow",
     "name" : "Workflow Pattern"
@@ -235,7 +239,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "differential" : {
     "element" : [{
       "id" : "Observation",
-      "path" : "Observation"
+      "path" : "Observation",
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "P9",
+        "comment" : "Postoperative Komplikation (Clavien-Dindo Grad III/IV innerhalb 6 Monaten)"
+      }]
     },
     {
       "id" : "Observation.meta.profile",
@@ -373,7 +382,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "binding" : {
         "strength" : "required",
         "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-clavien-dindo"
-      }
+      },
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "P9",
+        "comment" : "Clavien-Dindo Klassifikation postoperativer Komplikationen"
+      }]
     },
     {
       "id" : "Observation.value[x].coding:ClavienDindo.system",
@@ -391,7 +405,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "binding" : {
         "strength" : "required",
         "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-postsurgical-complications"
-      }
+      },
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "P9 (Komponente)",
+        "comment" : "Spezifische Art der postoperativen Komplikation; keine eigene oBDS-Feldnummer"
+      }]
     },
     {
       "id" : "Observation.value[x].coding:OBDSPostOPKompl.system",

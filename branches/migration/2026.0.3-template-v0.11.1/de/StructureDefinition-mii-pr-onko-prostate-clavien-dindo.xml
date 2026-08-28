@@ -40,7 +40,7 @@
   <name value="MII_PR_Onko_Prostata_Clavien_Dindo"/>
   <title value="MII PR Onkologie Clavien Dindo"/>
   <status value="active"/>
-  <date value="2026-08-28T06:49:57+00:00"/>
+  <date value="2026-08-28T07:24:31+00:00"/>
   <publisher value="Medizininformatik Initiative"/>
   <contact>
     <name value="Medizininformatik Initiative"/>
@@ -58,6 +58,10 @@
     </coding>
   </jurisdiction>
   <fhirVersion value="4.0.1"/>
+  <mapping>
+    <identity value="oBDS"/>
+    <name value="Mapping FHIR zu oBDS"/>
+  </mapping>
   <mapping>
     <identity value="workflow"/>
     <uri value="http://hl7.org/fhir/workflow"/>
@@ -172,6 +176,11 @@
       </constraint>
       <isModifier value="false"/>
       <isSummary value="false"/>
+      <mapping>
+        <identity value="oBDS"/>
+        <map value="P9"/>
+        <comment value="Postoperative Komplikation (Clavien-Dindo Grad III/IV innerhalb 6 Monaten)"/>
+      </mapping>
       <mapping>
         <identity value="rim"/>
         <map value="Entity. Role, or Act"/>
@@ -1721,6 +1730,11 @@
         <valueSet value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-clavien-dindo"/>
       </binding>
       <mapping>
+        <identity value="oBDS"/>
+        <map value="P9"/>
+        <comment value="Clavien-Dindo Klassifikation postoperativer Komplikationen"/>
+      </mapping>
+      <mapping>
         <identity value="v2"/>
         <map value="C*E.1-8, C*E.10-22"/>
       </mapping>
@@ -2034,6 +2048,11 @@
         <strength value="required"/>
         <valueSet value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-postsurgical-complications"/>
       </binding>
+      <mapping>
+        <identity value="oBDS"/>
+        <map value="P9 (Komponente)"/>
+        <comment value="Spezifische Art der postoperativen Komplikation; keine eigene oBDS-Feldnummer"/>
+      </mapping>
       <mapping>
         <identity value="v2"/>
         <map value="C*E.1-8, C*E.10-22"/>
@@ -3532,6 +3551,11 @@
   <differential>
     <element id="Observation">
       <path value="Observation"/>
+      <mapping>
+        <identity value="oBDS"/>
+        <map value="P9"/>
+        <comment value="Postoperative Komplikation (Clavien-Dindo Grad III/IV innerhalb 6 Monaten)"/>
+      </mapping>
     </element>
     <element id="Observation.meta.profile">
       <path value="Observation.meta.profile"/>
@@ -3635,6 +3659,11 @@
         <strength value="required"/>
         <valueSet value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-clavien-dindo"/>
       </binding>
+      <mapping>
+        <identity value="oBDS"/>
+        <map value="P9"/>
+        <comment value="Clavien-Dindo Klassifikation postoperativer Komplikationen"/>
+      </mapping>
     </element>
     <element id="Observation.value[x].coding:ClavienDindo.system">
       <path value="Observation.value[x].coding.system"/>
@@ -3651,6 +3680,11 @@
         <strength value="required"/>
         <valueSet value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-postsurgical-complications"/>
       </binding>
+      <mapping>
+        <identity value="oBDS"/>
+        <map value="P9 (Komponente)"/>
+        <comment value="Spezifische Art der postoperativen Komplikation; keine eigene oBDS-Feldnummer"/>
+      </mapping>
     </element>
     <element id="Observation.value[x].coding:OBDSPostOPKompl.system">
       <path value="Observation.value[x].coding.system"/>

@@ -56,7 +56,7 @@
   <name value="MII_PR_Onko_Melanom_Breslow_Tiefe"/>
   <title value="MII PR Onkologie Melanom Breslow Tiefe"/>
   <status value="active"/>
-  <date value="2026-08-28T06:49:57+00:00"/>
+  <date value="2026-08-28T07:24:31+00:00"/>
   <publisher value="Medizininformatik Initiative"/>
   <contact>
     <name value="Medizininformatik Initiative"/>
@@ -194,8 +194,8 @@
       <isSummary value="false"/>
       <mapping>
         <identity value="oBDS"/>
-        <map value="Breslow"/>
-        <comment value="Breslow-Tumordicke"/>
+        <map value="MM2"/>
+        <comment value="Tumordicke (Breslow)"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
@@ -1357,7 +1357,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="oBDS"/>
-        <map value="Breslow"/>
+        <map value="MM2"/>
         <comment value="Datum der histopathologischen Untersuchung"/>
       </mapping>
       <mapping>
@@ -1628,8 +1628,8 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="oBDS"/>
-        <map value="Breslow"/>
-        <comment value="Breslow-Tumordicke in mm"/>
+        <map value="MM2"/>
+        <comment value="Tumordicke nach Breslow in mm"/>
       </mapping>
       <mapping>
         <identity value="v2"/>
@@ -3127,8 +3127,8 @@
       <path value="Observation"/>
       <mapping>
         <identity value="oBDS"/>
-        <map value="Breslow"/>
-        <comment value="Breslow-Tumordicke"/>
+        <map value="MM2"/>
+        <comment value="Tumordicke (Breslow)"/>
       </mapping>
     </element>
     <element id="Observation.meta.profile">
@@ -3198,7 +3198,7 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="oBDS"/>
-        <map value="Breslow"/>
+        <map value="MM2"/>
         <comment value="Datum der histopathologischen Untersuchung"/>
       </mapping>
     </element>
@@ -3234,8 +3234,8 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="oBDS"/>
-        <map value="Breslow"/>
-        <comment value="Breslow-Tumordicke in mm"/>
+        <map value="MM2"/>
+        <comment value="Tumordicke nach Breslow in mm"/>
       </mapping>
     </element>
     <element id="Observation.value[x].unit">

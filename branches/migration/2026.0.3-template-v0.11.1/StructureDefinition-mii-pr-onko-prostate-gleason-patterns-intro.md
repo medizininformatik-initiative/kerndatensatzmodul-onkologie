@@ -3,7 +3,7 @@
 ### Content
 This profile describes the individual Gleason patterns (primary, secondary, tertiary) in the histopathological grading of prostate carcinoma. The Gleason patterns form the basis for calculating the Gleason score and are decisive for prognosis assessment.
 
-The profile is based on a FHIR Observation resource and uses LOINC for coding the different pattern types. Each pattern is scored with a value of 1-5, whereby patterns ≥3 are considered malignant.
+The profile is based on a FHIR Observation resource; `Observation.code` uses a mandatory SNOMED CT slice for the pattern type (primary/secondary/tertiary) with an optional secondary LOINC coding (GitHub issue #259). Each pattern is scored with a value of 1-5, whereby patterns ≥3 are considered malignant.
 
 ---
 
@@ -17,10 +17,10 @@ The Gleason patterns are important histopathological observations:
 ---
 
 ### oBDS context
-According to oBDS P2, Gleason patterns are documented as primary, secondary, or tertiary pattern. The pattern values of 1-5 correspond to the international Gleason grading, whereby patterns from grade 3 upward are classified as malignant.
+As a component of oBDS P1 (Gleason-Score), Gleason patterns are documented as primary, secondary, or tertiary pattern. The pattern values of 1-5 correspond to the international Gleason grading, whereby patterns from grade 3 upward are classified as malignant.
 
 ### Terminology binding
-The ValueSet for Gleason pattern codes has a **required** binding, since the LOINC codes for Gleason patterns are standardized.
+`Observation.code` is sliced (GitHub issue #259): a **SNOMED CT coding is mandatory** (1..1, required binding to the primary/secondary/tertiary pattern observables), a **LOINC coding is optional** (0..1, codes 44641-9/44642-7/44643-5) as a secondary coding for interoperability with LOINC-based systems (e.g. the CDS pathology report module).
 
 #### ValueSet: MII VS Onko Prostata Gleason Patterns
 

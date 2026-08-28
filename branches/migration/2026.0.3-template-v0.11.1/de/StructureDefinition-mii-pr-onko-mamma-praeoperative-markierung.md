@@ -125,6 +125,12 @@ This structure refers to these other structures:
 
 * [MII PR Onkologie Operation (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation)](StructureDefinition-mii-pr-onko-operation.md)
 
+**Slices**
+
+This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+
+* The element 1 is sliced based on the value of Procedure.performed[x]
+
  **Schlüsselelemente-Ansicht** 
 
 #### Terminology Bindings
@@ -156,6 +162,12 @@ This structure refers to these other structures:
 
 * [MII PR Onkologie Operation (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation)](StructureDefinition-mii-pr-onko-operation.md)
 
+**Slices**
+
+This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+
+* The element 1 is sliced based on the value of Procedure.performed[x]
+
  
 
 Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-mamma-praeoperative-markierung.csv), [Excel](../StructureDefinition-mii-pr-onko-mamma-praeoperative-markierung.xlsx), [Schematron](../StructureDefinition-mii-pr-onko-mamma-praeoperative-markierung.sch) 
@@ -173,7 +185,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_Mamma_Praeoperative_Markierung",
   "title" : "MII PR Onkologie Präoperative Markierung Mamma",
   "status" : "active",
-  "date" : "2026-08-28T06:49:57+00:00",
+  "date" : "2026-08-28T07:24:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -192,6 +204,10 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
+    "identity" : "oBDS",
+    "name" : "Mapping FHIR zu oBDS"
+  },
+  {
     "identity" : "workflow",
     "uri" : "http://hl7.org/fhir/workflow",
     "name" : "Workflow Pattern"
@@ -214,7 +230,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "differential" : {
     "element" : [{
       "id" : "Procedure",
-      "path" : "Procedure"
+      "path" : "Procedure",
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "M5",
+        "comment" : "Präoperative Drahtmarkierung durch Bildgebung gesteuert"
+      }]
     },
     {
       "id" : "Procedure.meta.profile",
@@ -250,7 +271,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "binding" : {
         "strength" : "extensible",
         "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-praeoperative-markierung-modalitaet"
-      }
+      },
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "M5 (Komponente)",
+        "comment" : "Modalität der präoperativen Markierung; keine eigene oBDS-Feldnummer"
+      }]
     },
     {
       "id" : "Procedure.subject",
@@ -265,6 +291,33 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "id" : "Procedure.encounter",
       "path" : "Procedure.encounter",
       "mustSupport" : true
+    },
+    {
+      "id" : "Procedure.performed[x]",
+      "path" : "Procedure.performed[x]",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "type",
+          "path" : "$this"
+        }],
+        "ordered" : false,
+        "rules" : "open"
+      }
+    },
+    {
+      "id" : "Procedure.performed[x]:performedDateTime",
+      "path" : "Procedure.performed[x]",
+      "sliceName" : "performedDateTime",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "dateTime"
+      }],
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "M5",
+        "comment" : "Datum der präoperativen Markierung"
+      }]
     }]
   }
 }

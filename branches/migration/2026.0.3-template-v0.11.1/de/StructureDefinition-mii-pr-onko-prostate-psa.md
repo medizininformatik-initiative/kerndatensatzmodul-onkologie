@@ -34,7 +34,7 @@ Der PSA-Wert ist eine wichtige tumorspezifische Beobachtung:
 
 ### oBDS-Kontext
 
-Gemäß oBDS P1 wird der PSA-Wert als Tumormarker für Diagnostik und Verlaufskontrolle dokumentiert. Es können sowohl Diagnose- als auch Verlaufs-PSA-Werte erfasst werden.
+Gemäß oBDS P7 (PSA-Wert) und P8 (Datum PSA-Wert) wird der PSA-Wert als Tumormarker für Diagnostik und Verlaufskontrolle dokumentiert. Es können sowohl Diagnose- als auch Verlaufs-PSA-Werte erfasst werden.
 
 ### Terminologie-Binding
 
@@ -164,7 +164,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_Prostata_PSA",
   "title" : "MII PR Onkologie PSA-Wert",
   "status" : "active",
-  "date" : "2026-08-28T06:49:57+00:00",
+  "date" : "2026-08-28T07:24:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

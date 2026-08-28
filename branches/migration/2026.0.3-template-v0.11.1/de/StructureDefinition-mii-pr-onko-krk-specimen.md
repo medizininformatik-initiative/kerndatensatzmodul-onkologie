@@ -144,7 +144,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_KRK_Specimen",
   "title" : "MII PR Onkologie Specimen",
   "status" : "active",
-  "date" : "2026-08-28T06:49:57+00:00",
+  "date" : "2026-08-28T07:24:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -163,6 +163,10 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
+    "identity" : "oBDS-Organ",
+    "name" : "Mapping FHIR zu oBDS (organspezifisches Zusatzmodul)"
+  },
+  {
     "identity" : "oBDS",
     "name" : "Mapping FHIR zu oBDS"
   },
@@ -186,18 +190,18 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "id" : "Specimen",
       "path" : "Specimen",
       "mapping" : [{
-        "identity" : "oBDS",
-        "map" : "6",
-        "comment" : "Histologie"
+        "identity" : "oBDS-Organ",
+        "map" : "KR4",
+        "comment" : "Rektum: Qualität des TME-Präparats"
       }]
     },
     {
       "id" : "Specimen.accessionIdentifier.value",
       "path" : "Specimen.accessionIdentifier.value",
       "mapping" : [{
-        "identity" : "oBDS",
+        "identity" : "oBDS-Organ",
         "map" : "6.2",
-        "comment" : "Histologie-Einsendenummer"
+        "comment" : "Histologie-Einsendenummer (oBDS Kapitel 6 Histologie)"
       }]
     },
     {
@@ -236,9 +240,9 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
         "code" : "dateTime"
       }],
       "mapping" : [{
-        "identity" : "oBDS",
+        "identity" : "oBDS-Organ",
         "map" : "6.1",
-        "comment" : "Tumor Histologiedatum"
+        "comment" : "Tumor Histologiedatum (oBDS Kapitel 6 Histologie)"
       }]
     },
     {
@@ -248,7 +252,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "binding" : {
         "strength" : "extensible",
         "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-tme-qualitaet"
-      }
+      },
+      "mapping" : [{
+        "identity" : "oBDS-Organ",
+        "map" : "KR4",
+        "comment" : "Qualität des TME-Präparats (Mesorektum-Beurteilung)"
+      }]
     }]
   }
 }

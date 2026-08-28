@@ -12,7 +12,7 @@
 | Active Stand: 2026-08-28 | *Maschinenlesbarer Name*:MII_LM_Onko_Organspezifische_Zusatzmodule |
 
  
-Logisches Modell für die organspezifischen Zusatzmodule des oBDS 
+Logisches Modell für die organspezifischen Zusatzmodule des oBDS. Feldnummern und Struktur folgen dem amtlichen oBDS-XML-Schema (oBDS v3.0.5, Modul_Mamma/Darm/Prostata/Malignes_Melanom/Allgemein) sowie dem Feldkatalog auf basisdatensatz.de. 
 
 **Usages:**
 
@@ -73,7 +73,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
   "name" : "MII_LM_Onko_Organspezifische_Zusatzmodule",
   "title" : "MII LM Onkologie Organspezifische Zusatzmodule",
   "status" : "active",
-  "date" : "2026-08-28T06:49:57+00:00",
+  "date" : "2026-08-28T07:24:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -82,7 +82,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       "value" : "https://www.medizininformatik-initiative.de/"
     }]
   }],
-  "description" : "Logisches Modell für die organspezifischen Zusatzmodule des oBDS",
+  "description" : "Logisches Modell für die organspezifischen Zusatzmodule des oBDS. Feldnummern und Struktur folgen dem amtlichen oBDS-XML-Schema (oBDS v3.0.5, Modul_Mamma/Darm/Prostata/Malignes_Melanom/Allgemein) sowie dem Feldkatalog auf basisdatensatz.de.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -109,13 +109,13 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       "id" : "OrganspezifischeZusatzmodule",
       "path" : "OrganspezifischeZusatzmodule",
       "short" : "MII LM Onkologie Organspezifische Zusatzmodule",
-      "definition" : "Logisches Modell für die organspezifischen Zusatzmodule des oBDS"
+      "definition" : "Logisches Modell für die organspezifischen Zusatzmodule des oBDS. Feldnummern und Struktur folgen dem amtlichen oBDS-XML-Schema (oBDS v3.0.5, Modul_Mamma/Darm/Prostata/Malignes_Melanom/Allgemein) sowie dem Feldkatalog auf basisdatensatz.de."
     },
     {
       "id" : "OrganspezifischeZusatzmodule.Mamma",
       "path" : "OrganspezifischeZusatzmodule.Mamma",
       "short" : "Mamma",
-      "definition" : "Mamma",
+      "definition" : "Organspezifisches Modul Mammakarzinom, oBDS M1–M8 (XSD Modul_Mamma_Typ)",
       "min" : 0,
       "max" : "*",
       "type" : [{
@@ -127,8 +127,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       },
       {
         "identity" : "oBDS",
-        "map" : "Mamma-Zusatzmodul nach oBDS",
-        "comment" : "Basiert auf oBDS Mammakarzinom-Modul: https://www.basisdatensatz.de/module/5/mammakarzinom"
+        "map" : "Modul Mamma (M1–M8)",
+        "comment" : "Amtlicher Feldkatalog: https://basisdatensatz.de/module/5/mammakarzinom; XSD Modul_Mamma_Typ (oBDS v3.0.5)"
       }]
     },
     {
@@ -148,14 +148,14 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       {
         "identity" : "oBDS",
         "map" : "M1",
-        "comment" : "Menopausenstatus - oBDS 2021: perimenopausal wird unter prämenopausal subsumiert"
+        "comment" : "Prätherapeutischer Menopausenstatus - oBDS 2021: perimenopausal wird unter prämenopausal subsumiert"
       }]
     },
     {
       "id" : "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusEstrogen",
       "path" : "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusEstrogen",
       "short" : "Rezeptorstatus Estrogen",
-      "definition" : "Rezeptorstatus Estrogen",
+      "definition" : "Hormonrezeptorstatus Östrogen. oBDS M2 (XSD: HormonrezeptorStatus_Oestrogen)",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -167,8 +167,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       },
       {
         "identity" : "oBDS",
-        "map" : "M2.1",
-        "comment" : "Estrogen-Rezeptorstatus - Duale Kodierung: oBDS-Definition und S3-Leitlinien-Definition"
+        "map" : "M2",
+        "comment" : "HormonrezeptorStatus: Östrogen"
       }]
     },
     {
@@ -187,7 +187,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       },
       {
         "identity" : "oBDS",
-        "map" : "M2.1.1",
+        "map" : "M2",
         "comment" : "Kategoriale Bewertung des Estrogen-Rezeptorstatus"
       }]
     },
@@ -195,7 +195,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       "id" : "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusEstrogen.AnteilPositiveZellen",
       "path" : "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusEstrogen.AnteilPositiveZellen",
       "short" : "Anteil positive Zellen",
-      "definition" : "Quantitative Bestimmung in Prozent.",
+      "definition" : "Quantitative Bestimmung in Prozent. Komponente zu oBDS M2 (keine eigene Feldnummer, S3-Leitlinie).",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -207,15 +207,15 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       },
       {
         "identity" : "oBDS",
-        "map" : "M2.1.2",
-        "comment" : "Quantitative Estrogen-Bestimmung in Prozent"
+        "map" : "M2 (Komponente)",
+        "comment" : "Quantitative Estrogen-Bestimmung in Prozent; keine eigene oBDS-Feldnummer (S3-Leitlinie)"
       }]
     },
     {
       "id" : "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusEstrogen.Faerbeintensitaet",
       "path" : "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusEstrogen.Faerbeintensitaet",
       "short" : "Färbeintensität",
-      "definition" : "Qualitative Bewertung der Färbeintensität.",
+      "definition" : "Qualitative Bewertung der Färbeintensität. Komponente zu oBDS M2 (keine eigene Feldnummer, S3-Leitlinie).",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -227,15 +227,15 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       },
       {
         "identity" : "oBDS",
-        "map" : "M2.1.3",
-        "comment" : "Estrogen-Färbeintensität"
+        "map" : "M2 (Komponente)",
+        "comment" : "Estrogen-Färbeintensität; keine eigene oBDS-Feldnummer (S3-Leitlinie)"
       }]
     },
     {
       "id" : "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusProgesteron",
       "path" : "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusProgesteron",
       "short" : "Rezeptorstatus Progesteron",
-      "definition" : "Rezeptorstatus Progesteron",
+      "definition" : "Hormonrezeptorstatus Progesteron. oBDS M3 (XSD: HormonrezeptorStatus_Progesteron)",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -247,8 +247,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       },
       {
         "identity" : "oBDS",
-        "map" : "M2.2",
-        "comment" : "Progesteron-Rezeptorstatus"
+        "map" : "M3",
+        "comment" : "HormonrezeptorStatus: Progesteron"
       }]
     },
     {
@@ -267,7 +267,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       },
       {
         "identity" : "oBDS",
-        "map" : "M2.2.1",
+        "map" : "M3",
         "comment" : "Kategoriale Bewertung des Progesteron-Rezeptorstatus"
       }]
     },
@@ -275,7 +275,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       "id" : "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusProgesteron.AnteilPositiveZellen",
       "path" : "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusProgesteron.AnteilPositiveZellen",
       "short" : "Anteil positive Zellen",
-      "definition" : "Quantitative Bestimmung in Prozent.",
+      "definition" : "Quantitative Bestimmung in Prozent. Komponente zu oBDS M3 (keine eigene Feldnummer, S3-Leitlinie).",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -287,15 +287,15 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       },
       {
         "identity" : "oBDS",
-        "map" : "M2.2.2",
-        "comment" : "Quantitative Progesteron-Bestimmung in Prozent"
+        "map" : "M3 (Komponente)",
+        "comment" : "Quantitative Progesteron-Bestimmung in Prozent; keine eigene oBDS-Feldnummer (S3-Leitlinie)"
       }]
     },
     {
       "id" : "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusProgesteron.Faerbeintensitaet",
       "path" : "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusProgesteron.Faerbeintensitaet",
       "short" : "Färbeintensität",
-      "definition" : "Qualitative Bewertung der Färbeintensität.",
+      "definition" : "Qualitative Bewertung der Färbeintensität. Komponente zu oBDS M3 (keine eigene Feldnummer, S3-Leitlinie).",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -307,15 +307,35 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       },
       {
         "identity" : "oBDS",
-        "map" : "M2.2.3",
-        "comment" : "Progesteron-Färbeintensität"
+        "map" : "M3 (Komponente)",
+        "comment" : "Progesteron-Färbeintensität; keine eigene oBDS-Feldnummer (S3-Leitlinie)"
+      }]
+    },
+    {
+      "id" : "OrganspezifischeZusatzmodule.Mamma.StatusHer2neu",
+      "path" : "OrganspezifischeZusatzmodule.Mamma.StatusHer2neu",
+      "short" : "Her2neu-Status",
+      "definition" : "Her2neu-Status des Tumorgewebes. oBDS M4 (XSD: Her2neuStatus)",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.where(code.coding.system='http://loinc.org' and code.coding.code='48676-1').valueCodeableConcept (Profil mii-pr-onko-mamma-status-her2neu)"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "M4",
+        "comment" : "Her2neu Status"
       }]
     },
     {
       "id" : "OrganspezifischeZusatzmodule.Mamma.PraeoperativeMarkierung",
       "path" : "OrganspezifischeZusatzmodule.Mamma.PraeoperativeMarkierung",
       "short" : "Präoperative Markierung",
-      "definition" : "Präoperative Markierung",
+      "definition" : "Präoperative Drahtmarkierung durch Bildgebung gesteuert. oBDS M5 (XSD: PraeopDrahtmarkierung)",
       "min" : 0,
       "max" : "*",
       "type" : [{
@@ -328,14 +348,14 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       {
         "identity" : "oBDS",
         "map" : "M5",
-        "comment" : "Präoperative Markierung"
+        "comment" : "Präoperative Drahtmarkierung durch Bildgebung gesteuert"
       }]
     },
     {
       "id" : "OrganspezifischeZusatzmodule.Mamma.PraeoperativeMarkierung.Modalitaet",
       "path" : "OrganspezifischeZusatzmodule.Mamma.PraeoperativeMarkierung.Modalitaet",
       "short" : "Markierungsmodalität",
-      "definition" : "Art der präoperativen Markierung",
+      "definition" : "Art/Steuerung der präoperativen Markierung. Komponente zu oBDS M5.",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -347,7 +367,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       },
       {
         "identity" : "oBDS",
-        "map" : "M5.1",
+        "map" : "M5 (Komponente)",
         "comment" : "Modalität der präoperativen Markierung"
       }]
     },
@@ -355,7 +375,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       "id" : "OrganspezifischeZusatzmodule.Mamma.MammaOperation",
       "path" : "OrganspezifischeZusatzmodule.Mamma.MammaOperation",
       "short" : "Mamma-Operation",
-      "definition" : "Mamma-Operation",
+      "definition" : "Operative Therapie; kein eigenes oBDS-Modulfeld (Abbildung über oBDS Kapitel 13/OPS).",
       "min" : 0,
       "max" : "*",
       "type" : [{
@@ -367,15 +387,15 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       },
       {
         "identity" : "oBDS",
-        "map" : "M4",
-        "comment" : "Mamma-Operationen"
+        "map" : "kein oBDS-Modulfeld",
+        "comment" : "Operative Therapie über oBDS Kapitel 13 (OP) und OPS"
       }]
     },
     {
       "id" : "OrganspezifischeZusatzmodule.Mamma.MammaOperation.Operationstyp",
       "path" : "OrganspezifischeZusatzmodule.Mamma.MammaOperation.Operationstyp",
       "short" : "Operationstyp",
-      "definition" : "Art der Mamma-Operation.",
+      "definition" : "Art der Mamma-Operation. Kein oBDS-Modulfeld (OPS, oBDS Kapitel 13).",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -387,15 +407,15 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       },
       {
         "identity" : "oBDS",
-        "map" : "M4.1",
-        "comment" : "Art der Mamma-Operation (BET, Mastektomie, Lymphknotenoperation, Rekonstruktion)"
+        "map" : "kein oBDS-Modulfeld",
+        "comment" : "Art der Mamma-Operation (BET, Mastektomie, Lymphknotenoperation, Rekonstruktion) nach OPS"
       }]
     },
     {
       "id" : "OrganspezifischeZusatzmodule.Mamma.MammaOperation.IntraoperativesImaging",
       "path" : "OrganspezifischeZusatzmodule.Mamma.MammaOperation.IntraoperativesImaging",
-      "short" : "Intraoperatives Imaging",
-      "definition" : "Intraoperatives Imagung und weitere Markierungen und Hilfsmittel während der Operation.",
+      "short" : "Intraoperatives Präparatröntgen/Sonografie",
+      "definition" : "Intraoperative Präparatkontrolle mittels Röntgen/Sonografie. oBDS M6 (XSD: IntraopPraeparatkontrolle)",
       "min" : 0,
       "max" : "*",
       "type" : [{
@@ -407,15 +427,55 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       },
       {
         "identity" : "oBDS",
-        "map" : "M4.2",
-        "comment" : "Intraoperative Hilfsmittel und Markierungen"
+        "map" : "M6",
+        "comment" : "Intraoperatives Präparatröntgen/Sonografie"
+      }]
+    },
+    {
+      "id" : "OrganspezifischeZusatzmodule.Mamma.TumorgroesseInvasiv",
+      "path" : "OrganspezifischeZusatzmodule.Mamma.TumorgroesseInvasiv",
+      "short" : "Tumorgröße invasives Karzinom",
+      "definition" : "Größte Ausdehnung des invasiven Karzinoms in mm. oBDS M7 (XSD: TumorgroesseInvasiv)",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Quantity"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.valueQuantity (kein dediziertes Profil in v2027)"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "M7",
+        "comment" : "Tumorgröße Invasives Karzinom"
+      }]
+    },
+    {
+      "id" : "OrganspezifischeZusatzmodule.Mamma.TumorgroesseDCIS",
+      "path" : "OrganspezifischeZusatzmodule.Mamma.TumorgroesseDCIS",
+      "short" : "Tumorgröße DCIS",
+      "definition" : "Größte Ausdehnung des duktalen Carcinoma in situ in mm. oBDS M8 (XSD: TumorgroesseDCIS)",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Quantity"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.valueQuantity (kein dediziertes Profil in v2027)"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "M8",
+        "comment" : "Tumorgröße DCIS"
       }]
     },
     {
       "id" : "OrganspezifischeZusatzmodule.KolorektalesKarzinom",
       "path" : "OrganspezifischeZusatzmodule.KolorektalesKarzinom",
       "short" : "Kolorektales Karzinom",
-      "definition" : "Kolorektales Karzinom",
+      "definition" : "Organspezifisches Modul Kolorektales Karzinom, oBDS KR1–KR10 (XSD Modul_Darm_Typ)",
       "min" : 0,
       "max" : "*",
       "type" : [{
@@ -427,8 +487,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       },
       {
         "identity" : "oBDS",
-        "map" : "KRK-Zusatzmodul nach oBDS",
-        "comment" : "Organspezifische Erweiterungen für Kolorektales Karzinom basierend auf oBDS-Modul"
+        "map" : "Modul Kolorektales Karzinom (KR1–KR10)",
+        "comment" : "Amtlicher Feldkatalog: https://basisdatensatz.de/module/6/kolorektales-karzinom; XSD Modul_Darm_Typ (oBDS v3.0.5)"
       }]
     },
     {
@@ -455,7 +515,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       "id" : "OrganspezifischeZusatzmodule.KolorektalesKarzinom.TumorLokalisation.AbstandAnokutanlinie",
       "path" : "OrganspezifischeZusatzmodule.KolorektalesKarzinom.TumorLokalisation.AbstandAnokutanlinie",
       "short" : "Abstand Anokutanlinie",
-      "definition" : "Höhe des Sitzes des Rektumkarzinoms ab Anokutanlinie in cm. oBDS KR1",
+      "definition" : "Höhe des Sitzes des Rektumkarzinoms ab Anokutanlinie in cm. oBDS KR1 (XSD: RektumAbstandAnokutanlinie)",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -468,7 +528,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       {
         "identity" : "oBDS",
         "map" : "KR1",
-        "comment" : "Rektum: Höhe des Sitzes des Rektumkarzinoms ab Anokutanlinie in cm"
+        "comment" : "Rektum: Abstand des Tumorunterrandes zur Anokutanlinie"
       }]
     },
     {
@@ -495,7 +555,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       "id" : "OrganspezifischeZusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren.MRTMesorektale",
       "path" : "OrganspezifischeZusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren.MRTMesorektale",
       "short" : "MRT/CT Mesorektale Faszie",
-      "definition" : "MRT/CT Mesorektale Faszie",
+      "definition" : "MRT oder Dünnschicht-CT mit Angabe Abstand mesorektale Faszie. oBDS KR5 (XSD: RektumMRTDuennschichtAngabemesorektaleFaszie)",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -535,7 +595,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       "id" : "OrganspezifischeZusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren.MRTMesorektale.AbstandNichtVerfuegbarGrund",
       "path" : "OrganspezifischeZusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren.MRTMesorektale.AbstandNichtVerfuegbarGrund",
       "short" : "Grund für fehlende Abstandsmessung",
-      "definition" : "Grund warum der Abstand zur mesorektalen Faszie nicht verfügbar ist (nicht durchgeführt/nicht angegeben/unbekannt).",
+      "definition" : "Grund, warum der Abstand zur mesorektalen Faszie nicht verfügbar ist (nicht durchgeführt/nicht angegeben/unbekannt). Statusangabe zu oBDS KR5.",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -547,7 +607,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       },
       {
         "identity" : "oBDS",
-        "map" : "KR5",
+        "map" : "KR5 (Statusangabe)",
         "comment" : "Status: D/N/U (durchgeführt aber nicht angegeben/nicht durchgeführt/unbekannt)"
       }]
     },
@@ -567,15 +627,15 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       },
       {
         "identity" : "oBDS",
-        "map" : "KR-Operation",
+        "map" : "KR6, KR7, KR9",
         "comment" : "KRK-spezifische operative Verfahren"
       }]
     },
     {
       "id" : "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.Operationstyp",
       "path" : "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.Operationstyp",
-      "short" : "Operationstyp",
-      "definition" : "Art der kolorektalen Operation (TME, PME, lokale Exzision, etc.).",
+      "short" : "Art des Eingriffs",
+      "definition" : "Art des Eingriffs beim kolorektalen Karzinom. oBDS KR6 (XSD: ArtEingriff)",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -587,15 +647,15 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       },
       {
         "identity" : "oBDS",
-        "map" : "OPS",
-        "comment" : "Art der kolorektalen Operation nach OPS-Katalog"
+        "map" : "KR6",
+        "comment" : "Art des Eingriffs"
       }]
     },
     {
       "id" : "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.ASAKlassifikation",
       "path" : "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.ASAKlassifikation",
       "short" : "ASA-Klassifikation",
-      "definition" : "American Society of Anesthesiologists Physical Status Classification System. oBDS KR4",
+      "definition" : "American Society of Anesthesiologists Physical Status Classification System. oBDS KR9 (XSD: ASA)",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -615,7 +675,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       "id" : "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.StomaMarkierung",
       "path" : "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.StomaMarkierung",
       "short" : "Stoma Markierung",
-      "definition" : "Stoma Markierung",
+      "definition" : "Präoperative Anzeichnung der Stomaposition. oBDS KR7 (XSD: RektumAnzeichnungStomaposition)",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -635,7 +695,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       "id" : "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.StomaMarkierung.Status",
       "path" : "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.StomaMarkierung.Status",
       "short" : "Markierungsstatus",
-      "definition" : "Status der präoperativen Stoma-Markierung.",
+      "definition" : "Status der präoperativen Stoma-Markierung. oBDS KR7",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -655,7 +715,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       "id" : "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.StomaMarkierung.StatusGrund",
       "path" : "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.StomaMarkierung.StatusGrund",
       "short" : "Status Grund",
-      "definition" : "Grund für Markierungsstatus (geplant/nicht geplant/abgelehnt).",
+      "definition" : "Grund für Markierungsstatus (geplant/nicht geplant/abgelehnt). Komponente zu oBDS KR7.",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -667,7 +727,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       },
       {
         "identity" : "oBDS",
-        "map" : "KR7",
+        "map" : "KR7 (Komponente)",
         "comment" : "Grund für Markierungsstatus"
       }]
     },
@@ -687,7 +747,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       },
       {
         "identity" : "oBDS",
-        "map" : "KR2-KR4",
+        "map" : "KR2–KR4, KR10",
         "comment" : "Pathologische Bewertung"
       }]
     },
@@ -695,7 +755,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       "id" : "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PathologischeBewertung.ResektionsraenderAboral",
       "path" : "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PathologischeBewertung.ResektionsraenderAboral",
       "short" : "Resektionsrand aboral",
-      "definition" : "Minimaler Abstand des aboralen Tumorrandes zum aboralen Resektionsrand in mm. oBDS KR2",
+      "definition" : "Minimaler Abstand des aboralen Tumorrandes zum aboralen Resektionsrand in mm. oBDS KR2 (XSD: RektumAbstandAboralerResektionsrand)",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -708,14 +768,14 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       {
         "identity" : "oBDS",
         "map" : "KR2",
-        "comment" : "Minimaler Abstand des aboralen Tumorrandes zum aboralen Resektionsrand in mm"
+        "comment" : "Rektum: Minimaler Abstand vom aboralen Resektionsrand"
       }]
     },
     {
       "id" : "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PathologischeBewertung.ResektionsraenderCircumferell",
       "path" : "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PathologischeBewertung.ResektionsraenderCircumferell",
       "short" : "Resektionsrand circumferell",
-      "definition" : "Minimaler Abstand des Tumors zur circumferellen Resektionsebene in mm. oBDS KR3",
+      "definition" : "Minimaler Abstand des Tumors zur circumferentiellen Resektionsebene in mm. oBDS KR3 (XSD: RektumAbstandCircResektionsebene)",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -728,14 +788,14 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       {
         "identity" : "oBDS",
         "map" : "KR3",
-        "comment" : "Minimaler Abstand des Tumors zur circumferellen Resektionsebene in mm"
+        "comment" : "Rektum: Abstand zur circumferentiellen Resektionsebene"
       }]
     },
     {
       "id" : "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PathologischeBewertung.TMEQualitaet",
       "path" : "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PathologischeBewertung.TMEQualitaet",
       "short" : "TME Qualität",
-      "definition" : "Qualität der totalen mesorektalen Exzision (Grad 1-3).",
+      "definition" : "Qualität des TME-Präparats (Grad 1-3). oBDS KR4 (XSD: RektumQualitaetTME)",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -749,6 +809,26 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
         "identity" : "oBDS",
         "map" : "KR4",
         "comment" : "Rektum: Qualität des TME-Präparats"
+      }]
+    },
+    {
+      "id" : "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PathologischeBewertung.RASMutation",
+      "path" : "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PathologischeBewertung.RASMutation",
+      "short" : "RAS-Mutation",
+      "definition" : "Mutation des K-ras-Onkogens. oBDS KR10 (XSD: RASMutation)",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation (kein dediziertes Profil in v2027; Abbildung über KDS-Modul Molekulares Tumorboard/MolGen)"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "KR10",
+        "comment" : "Mutation K-ras-Onkogen"
       }]
     },
     {
@@ -775,7 +855,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       "id" : "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PostoperativeKomplikationen.Anastomoseninsuffizienz",
       "path" : "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PostoperativeKomplikationen.Anastomoseninsuffizienz",
       "short" : "Anastomoseninsuffizienz",
-      "definition" : "Bewertung der Anastomoseninsuffizienz nach Grad A/B/C.",
+      "definition" : "Grad der Anastomoseninsuffizienz beim Rektumkarzinom (Grad A/B/C). oBDS KR8 (XSD: GradRektumAnastomoseninsuffizienz)",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -795,7 +875,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       "id" : "OrganspezifischeZusatzmodule.Prostata",
       "path" : "OrganspezifischeZusatzmodule.Prostata",
       "short" : "Prostata",
-      "definition" : "Prostata",
+      "definition" : "Organspezifisches Modul Prostatakarzinom, oBDS P1–P9 (XSD Modul_Prostata_Typ)",
       "min" : 0,
       "max" : "*",
       "type" : [{
@@ -807,35 +887,75 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       },
       {
         "identity" : "oBDS",
-        "map" : "Prostata-Zusatzmodul nach oBDS",
-        "comment" : "Organspezifische Erweiterungen für Prostatakarzinom basierend auf oBDS-Modul"
+        "map" : "Modul Prostata (P1–P9)",
+        "comment" : "Amtlicher Feldkatalog: https://basisdatensatz.de/module/4/prostatakarzinom; XSD Modul_Prostata_Typ (oBDS v3.0.5)"
       }]
     },
     {
-      "id" : "OrganspezifischeZusatzmodule.Prostata.PSAWert",
-      "path" : "OrganspezifischeZusatzmodule.Prostata.PSAWert",
-      "short" : "PSA-Wert",
-      "definition" : "Prostataspezifisches Antigen in ng/ml für Diagnostik und Verlaufskontrolle.",
+      "id" : "OrganspezifischeZusatzmodule.Prostata.GleasonScore",
+      "path" : "OrganspezifischeZusatzmodule.Prostata.GleasonScore",
+      "short" : "Gleason Score",
+      "definition" : "Gleason-Score. oBDS P1 (XSD: GleasonScore)",
       "min" : 0,
       "max" : "1",
       "type" : [{
-        "code" : "Quantity"
+        "code" : "BackboneElement"
       }],
       "mapping" : [{
         "identity" : "FHIR",
-        "map" : "Observation.where(code.coding.system='http://loinc.org' and code.coding.code='2857-1').valueQuantity"
+        "map" : "Observation.where(code.coding.system='http://snomed.info/sct' and code.coding.code='372278000') (Profil mii-pr-onko-prostata-gleason-score-gesamt; LOINC-Zweitkodierung 35266-6)"
       },
       {
         "identity" : "oBDS",
         "map" : "P1",
-        "comment" : "PSA-Wert als Tumormarker für Diagnostik und Verlaufskontrolle"
+        "comment" : "Gleason-Score"
+      }]
+    },
+    {
+      "id" : "OrganspezifischeZusatzmodule.Prostata.GleasonScore.Score",
+      "path" : "OrganspezifischeZusatzmodule.Prostata.GleasonScore.Score",
+      "short" : "Gleason Score",
+      "definition" : "Summe aus primärem und sekundärem Pattern. oBDS P1",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.valueCodeableConcept"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "P1",
+        "comment" : "Gleason Score Gesamtwert"
+      }]
+    },
+    {
+      "id" : "OrganspezifischeZusatzmodule.Prostata.GleasonScore.GradeGroup",
+      "path" : "OrganspezifischeZusatzmodule.Prostata.GleasonScore.GradeGroup",
+      "short" : "Grade Group",
+      "definition" : "Internationale Standard Grade Group (1-5). Keine eigene oBDS-Feldnummer (ISUP-Ableitung aus P1).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.where(code.coding.system='http://snomed.info/sct' and code.coding.code='1812491000004107').valueCodeableConcept (Profil mii-pr-onko-prostate-gleason-grade-group; LOINC-Zweitkodierung 94734-1)"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "P1 (abgeleitet)",
+        "comment" : "Internationale Standard Grade Group (1-5); keine eigene oBDS-Feldnummer (ISUP-Ableitung)"
       }]
     },
     {
       "id" : "OrganspezifischeZusatzmodule.Prostata.GleasonPattern",
       "path" : "OrganspezifischeZusatzmodule.Prostata.GleasonPattern",
       "short" : "Gleason Pattern",
-      "definition" : "Gleason Pattern",
+      "definition" : "Gleason Patterns (primär/sekundär/tertiär). Komponenten zu oBDS P1 (keine eigene Feldnummer).",
       "min" : 0,
       "max" : "*",
       "type" : [{
@@ -847,8 +967,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       },
       {
         "identity" : "oBDS",
-        "map" : "P2",
-        "comment" : "Gleason Pattern (primär, sekundär, tertiär) für histopathologische Klassifikation"
+        "map" : "P1 (Komponente)",
+        "comment" : "Gleason Patterns (primär/sekundär/tertiär); keine eigene oBDS-Feldnummer"
       }]
     },
     {
@@ -867,7 +987,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       },
       {
         "identity" : "oBDS",
-        "map" : "P2.1",
+        "map" : "P1 (Komponente)",
         "comment" : "Art des Gleason Patterns (primär/sekundär/tertiär)"
       }]
     },
@@ -887,35 +1007,15 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       },
       {
         "identity" : "oBDS",
-        "map" : "P2.2",
+        "map" : "P1 (Komponente)",
         "comment" : "Gleason Pattern Wert (1-5, ab 3 maligne)"
       }]
     },
     {
-      "id" : "OrganspezifischeZusatzmodule.Prostata.GleasonScore",
-      "path" : "OrganspezifischeZusatzmodule.Prostata.GleasonScore",
-      "short" : "Gleason Score",
-      "definition" : "Gleason Score",
-      "min" : 0,
-      "max" : "1",
-      "type" : [{
-        "code" : "BackboneElement"
-      }],
-      "mapping" : [{
-        "identity" : "FHIR",
-        "map" : "Observation.where(code.coding.system='http://loinc.org' and code.coding.code='44642-7')"
-      },
-      {
-        "identity" : "oBDS",
-        "map" : "P3",
-        "comment" : "Gleason Score als Summe der Patterns"
-      }]
-    },
-    {
-      "id" : "OrganspezifischeZusatzmodule.Prostata.GleasonScore.Score",
-      "path" : "OrganspezifischeZusatzmodule.Prostata.GleasonScore.Score",
-      "short" : "Gleason Score",
-      "definition" : "Summe aus primärem und sekundärem Pattern.",
+      "id" : "OrganspezifischeZusatzmodule.Prostata.AnlassGleasonScore",
+      "path" : "OrganspezifischeZusatzmodule.Prostata.AnlassGleasonScore",
+      "short" : "Anlass Gleason-Score",
+      "definition" : "Anlass der Gleason-Score-Bestimmung (Stanze/OP). oBDS P2 (XSD: AnlassGleasonScore)",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -923,39 +1023,19 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       }],
       "mapping" : [{
         "identity" : "FHIR",
-        "map" : "Observation.valueCodeableConcept"
+        "map" : "Observation (Anlass als Komponente/Methode der Gleason-Score-Observation; kein dediziertes Profil in v2027)"
       },
       {
         "identity" : "oBDS",
-        "map" : "P3.1",
-        "comment" : "Gleason Score Gesamtwert"
-      }]
-    },
-    {
-      "id" : "OrganspezifischeZusatzmodule.Prostata.GleasonScore.GradeGroup",
-      "path" : "OrganspezifischeZusatzmodule.Prostata.GleasonScore.GradeGroup",
-      "short" : "Grade Group",
-      "definition" : "Internationale Standard Grade Group (1-5).",
-      "min" : 0,
-      "max" : "1",
-      "type" : [{
-        "code" : "CodeableConcept"
-      }],
-      "mapping" : [{
-        "identity" : "FHIR",
-        "map" : "Observation.component.where(code.coding.system='http://loinc.org' and code.coding.code='79892-6').valueCodeableConcept"
-      },
-      {
-        "identity" : "oBDS",
-        "map" : "P3.2",
-        "comment" : "Internationale Standard Grade Group (1-5)"
+        "map" : "P2",
+        "comment" : "Anlass Gleason (Stanze/OP)"
       }]
     },
     {
       "id" : "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse",
       "path" : "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse",
       "short" : "Biopsie Ergebnisse",
-      "definition" : "Biopsie Ergebnisse",
+      "definition" : "Prostatastanzbiopsie-Ergebnisse. oBDS P3–P6",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -967,15 +1047,35 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       },
       {
         "identity" : "oBDS",
-        "map" : "P4",
+        "map" : "P3–P6",
         "comment" : "Prostatabiopsie-Ergebnisse"
+      }]
+    },
+    {
+      "id" : "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse.DatumStanzen",
+      "path" : "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse.DatumStanzen",
+      "short" : "Datum der Stanzen",
+      "definition" : "Datum der Entnahme der Stanzen. oBDS P3 (XSD: DatumStanzen)",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "dateTime"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Specimen.collection.collectedDateTime bzw. Observation.effectiveDateTime der Stanzen-Observations"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "P3",
+        "comment" : "Datum der Stanzen"
       }]
     },
     {
       "id" : "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse.AnzahlStanzen",
       "path" : "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse.AnzahlStanzen",
       "short" : "Anzahl Stanzen",
-      "definition" : "Gesamtanzahl der entnommenen Biopsie-Stanzen.",
+      "definition" : "Gesamtanzahl der entnommenen Biopsie-Stanzen. oBDS P4 (XSD: AnzahlStanzen)",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -987,15 +1087,15 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       },
       {
         "identity" : "oBDS",
-        "map" : "P4.1",
-        "comment" : "Gesamtanzahl entnommener Biopsie-Stanzen"
+        "map" : "P4",
+        "comment" : "Anzahl der Stanzen"
       }]
     },
     {
       "id" : "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse.AnzahlPositiverStanzen",
       "path" : "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse.AnzahlPositiverStanzen",
       "short" : "Anzahl positive Stanzen",
-      "definition" : "Anzahl der tumorpositiven Stanzen.",
+      "definition" : "Anzahl der tumorpositiven Stanzen. oBDS P5 (XSD: AnzahlPosStanzen)",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -1007,15 +1107,15 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       },
       {
         "identity" : "oBDS",
-        "map" : "P4.2",
-        "comment" : "Anzahl tumorpositiver Stanzen"
+        "map" : "P5",
+        "comment" : "Anzahl der positiven Stanzen"
       }]
     },
     {
       "id" : "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse.KarzinomBefallStanze",
       "path" : "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse.KarzinomBefallStanze",
       "short" : "Karzinom-Befall je Stanze",
-      "definition" : "Prozentuale Ausdehnung des Karzinoms in der Stanze.",
+      "definition" : "Prozentuale Ausdehnung des Karzinoms in der am stärksten befallenen Stanze. oBDS P6 (XSD: CaBefallStanze)",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -1027,15 +1127,55 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       },
       {
         "identity" : "oBDS",
-        "map" : "P4.3",
-        "comment" : "Prozentuale Ausdehnung Karzinom je Stanze"
+        "map" : "P6",
+        "comment" : "Ca-Befall Stanze (prozentualer Befall der am stärksten befallenen Stanze)"
+      }]
+    },
+    {
+      "id" : "OrganspezifischeZusatzmodule.Prostata.PSAWert",
+      "path" : "OrganspezifischeZusatzmodule.Prostata.PSAWert",
+      "short" : "PSA-Wert",
+      "definition" : "Prostataspezifisches Antigen in ng/ml für Diagnostik und Verlaufskontrolle. oBDS P7 (XSD: PSA)",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Quantity"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.where(code.coding.system='http://loinc.org' and code.coding.code='2857-1').valueQuantity"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "P7",
+        "comment" : "PSA-Wert"
+      }]
+    },
+    {
+      "id" : "OrganspezifischeZusatzmodule.Prostata.DatumPSA",
+      "path" : "OrganspezifischeZusatzmodule.Prostata.DatumPSA",
+      "short" : "Datum PSA-Wert",
+      "definition" : "Datum der Blutentnahme zur PSA-Bestimmung. oBDS P8 (XSD: DatumPSA)",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "dateTime"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.where(code.coding.system='http://loinc.org' and code.coding.code='2857-1').effectiveDateTime"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "P8",
+        "comment" : "Datum PSA-Wert"
       }]
     },
     {
       "id" : "OrganspezifischeZusatzmodule.Prostata.ChirurgischeKomplikationen",
       "path" : "OrganspezifischeZusatzmodule.Prostata.ChirurgischeKomplikationen",
       "short" : "Chirurgische Komplikationen",
-      "definition" : "Chirurgische Komplikationen",
+      "definition" : "Postoperative Komplikation Clavien-Dindo Grad III/IV innerhalb der ersten 6 Monate. oBDS P9 (XSD: KomplPostOP_ClavienDindo)",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -1047,15 +1187,15 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       },
       {
         "identity" : "oBDS",
-        "map" : "P5",
-        "comment" : "Postoperative Komplikationen nach Prostatektomie"
+        "map" : "P9",
+        "comment" : "Postoperative Komplikation (Clavien-Dindo Grad III/IV innerhalb 6 Monate)"
       }]
     },
     {
       "id" : "OrganspezifischeZusatzmodule.Prostata.ChirurgischeKomplikationen.ClavienDindoGrad",
       "path" : "OrganspezifischeZusatzmodule.Prostata.ChirurgischeKomplikationen.ClavienDindoGrad",
       "short" : "Clavien-Dindo Grad",
-      "definition" : "Graduierung postoperativer Komplikationen nach Clavien-Dindo.",
+      "definition" : "Graduierung postoperativer Komplikationen nach Clavien-Dindo. oBDS P9",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -1067,7 +1207,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       },
       {
         "identity" : "oBDS",
-        "map" : "P5.1",
+        "map" : "P9",
         "comment" : "Clavien-Dindo Klassifikation postoperativer Komplikationen"
       }]
     },
@@ -1075,7 +1215,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       "id" : "OrganspezifischeZusatzmodule.Prostata.ChirurgischeKomplikationen.KomplikationsArt",
       "path" : "OrganspezifischeZusatzmodule.Prostata.ChirurgischeKomplikationen.KomplikationsArt",
       "short" : "Komplikationsart",
-      "definition" : "Spezifische Art der postoperativen Komplikation.",
+      "definition" : "Spezifische Art der postoperativen Komplikation. Komponente zu oBDS P9 (keine eigene Feldnummer).",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -1087,15 +1227,15 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       },
       {
         "identity" : "oBDS",
-        "map" : "P5.2",
-        "comment" : "Spezifische Art der postoperativen Komplikation"
+        "map" : "P9 (Komponente)",
+        "comment" : "Spezifische Art der postoperativen Komplikation; keine eigene oBDS-Feldnummer"
       }]
     },
     {
       "id" : "OrganspezifischeZusatzmodule.MalignesMelanom",
       "path" : "OrganspezifischeZusatzmodule.MalignesMelanom",
       "short" : "Malignes Melanom",
-      "definition" : "Malignes Melanom",
+      "definition" : "Organspezifisches Modul Malignes Melanom, oBDS MM1–MM4 (XSD Modul_Malignes_Melanom_Typ)",
       "min" : 0,
       "max" : "*",
       "type" : [{
@@ -1107,15 +1247,15 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       },
       {
         "identity" : "oBDS",
-        "map" : "Melanom-Zusatzmodul nach oBDS",
-        "comment" : "Organspezifische Erweiterungen für Malignes Melanom basierend auf oBDS-Modul"
+        "map" : "Modul Malignes Melanom (MM1–MM4)",
+        "comment" : "Amtlicher Feldkatalog: https://basisdatensatz.de/module/3/malignes-melanom; XSD Modul_Malignes_Melanom_Typ (oBDS v3.0.5)"
       }]
     },
     {
       "id" : "OrganspezifischeZusatzmodule.MalignesMelanom.Sicherheitsabstand",
       "path" : "OrganspezifischeZusatzmodule.MalignesMelanom.Sicherheitsabstand",
       "short" : "Sicherheitsabstand Primärtumor",
-      "definition" : "Minimaler Sicherheitsabstand zum Primärtumor in mm gemäß oBDS MM1",
+      "definition" : "Minimaler Sicherheitsabstand zum Primärtumor in mm. oBDS MM1 (XSD: Sicherheitsabstand_Primaertumor)",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -1128,14 +1268,14 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       {
         "identity" : "oBDS",
         "map" : "MM1",
-        "comment" : "Minimaler Sicherheitsabstand zum Primärtumor in mm nach definitivem operativem Eingriff"
+        "comment" : "Sicherheitsabstand Primärtumor in mm nach definitivem operativem Eingriff"
       }]
     },
     {
       "id" : "OrganspezifischeZusatzmodule.MalignesMelanom.BreslowTiefe",
       "path" : "OrganspezifischeZusatzmodule.MalignesMelanom.BreslowTiefe",
-      "short" : "Breslow-Tiefe",
-      "definition" : "Breslow-Tumordicke in mm beim Malignen Melanom der Haut",
+      "short" : "Tumordicke (Breslow)",
+      "definition" : "Breslow-Tumordicke in mm beim Malignen Melanom der Haut. oBDS MM2 (XSD: Tumordicke)",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -1147,15 +1287,75 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       },
       {
         "identity" : "oBDS",
-        "map" : "Breslow",
-        "comment" : "Breslow-Tumordicke in mm - vertikale Tumordicke von der Granularschicht der Epidermis bis zur tiefsten Tumorinvasion"
+        "map" : "MM2",
+        "comment" : "Tumordicke (Breslow) in mm - vertikale Tumordicke von der Granularschicht der Epidermis bis zur tiefsten Tumorinvasion"
+      }]
+    },
+    {
+      "id" : "OrganspezifischeZusatzmodule.MalignesMelanom.LDH",
+      "path" : "OrganspezifischeZusatzmodule.MalignesMelanom.LDH",
+      "short" : "Laktatdehydrogenase",
+      "definition" : "Laktatdehydrogenase als prognostischer Marker. oBDS MM3 (XSD: LDH)",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "BackboneElement"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.where(code.coding.memberOf('mii-vs-onko-melanom-ldh'))"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "MM3",
+        "comment" : "LDH als prognostischer Marker beim metastasierten Melanom"
+      }]
+    },
+    {
+      "id" : "OrganspezifischeZusatzmodule.MalignesMelanom.LDH.Wert",
+      "path" : "OrganspezifischeZusatzmodule.MalignesMelanom.LDH.Wert",
+      "short" : "LDH-Wert",
+      "definition" : "Laktatdehydrogenase Aktivität in U/L als prognostischer Marker. oBDS MM3",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Quantity"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.valueQuantity"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "MM3",
+        "comment" : "LDH-Wert in U/L"
+      }]
+    },
+    {
+      "id" : "OrganspezifischeZusatzmodule.MalignesMelanom.LDH.Bewertung",
+      "path" : "OrganspezifischeZusatzmodule.MalignesMelanom.LDH.Bewertung",
+      "short" : "LDH-Bewertung",
+      "definition" : "Klinische Bewertung des LDH-Werts (normal/erhöht). Komponente zu oBDS MM3.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.interpretation"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "MM3 (Komponente)",
+        "comment" : "Bewertung des LDH-Werts (normal/erhöht)"
       }]
     },
     {
       "id" : "OrganspezifischeZusatzmodule.MalignesMelanom.Ulzeration",
       "path" : "OrganspezifischeZusatzmodule.MalignesMelanom.Ulzeration",
       "short" : "Ulzeration",
-      "definition" : "Pathologisches Kriterium der Ulzeration beim Malignen Melanom der Haut gemäß oBDS MM4",
+      "definition" : "Pathologisches Kriterium der Ulzeration beim Malignen Melanom der Haut. oBDS MM4 (XSD: Ulzeration)",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -1172,63 +1372,83 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       }]
     },
     {
-      "id" : "OrganspezifischeZusatzmodule.MalignesMelanom.LDH",
-      "path" : "OrganspezifischeZusatzmodule.MalignesMelanom.LDH",
-      "short" : "Laktatdehydrogenase",
-      "definition" : "Laktatdehydrogenase",
+      "id" : "OrganspezifischeZusatzmodule.ModulAllgemein",
+      "path" : "OrganspezifischeZusatzmodule.ModulAllgemein",
+      "short" : "Modul Allgemein",
+      "definition" : "Organübergreifende Zusatzitems (XSD Modul_Allgemein_Typ). Im Feldkatalog auf basisdatensatz.de noch organbezogen geführt (M9/M10 bzw. KR11/KR12), im oBDS-XML-Schema zentralisiert.",
       "min" : 0,
-      "max" : "1",
+      "max" : "*",
       "type" : [{
         "code" : "BackboneElement"
       }],
       "mapping" : [{
         "identity" : "FHIR",
-        "map" : "Observation.where(code.coding.memberOf('mii-vs-onko-melanom-ldh'))"
+        "map" : "Organübergreifende Ressourcen"
       },
       {
         "identity" : "oBDS",
-        "map" : "LDH",
-        "comment" : "Laktatdehydrogenase als prognostischer Marker beim metastasierten Melanom"
+        "map" : "Modul Allgemein",
+        "comment" : "XSD Modul_Allgemein_Typ (oBDS v3.0.5); im Web-Feldkatalog organbezogen als M9/M10 bzw. KR11/KR12 geführt"
       }]
     },
     {
-      "id" : "OrganspezifischeZusatzmodule.MalignesMelanom.LDH.Wert",
-      "path" : "OrganspezifischeZusatzmodule.MalignesMelanom.LDH.Wert",
-      "short" : "LDH-Wert",
-      "definition" : "Laktatdehydrogenase Aktivität in U/L als prognostischer Marker",
+      "id" : "OrganspezifischeZusatzmodule.ModulAllgemein.Sozialdienstkontakt",
+      "path" : "OrganspezifischeZusatzmodule.ModulAllgemein.Sozialdienstkontakt",
+      "short" : "Datum des Sozialdienstkontaktes",
+      "definition" : "Datum des Sozialdienstkontaktes. Web-Feldkatalog: M9 (Mamma) / KR11 (Kolorektal); XSD: Modul_Allgemein.Sozialdienstkontakt",
       "min" : 0,
       "max" : "1",
       "type" : [{
-        "code" : "Quantity"
+        "code" : "dateTime"
       }],
       "mapping" : [{
         "identity" : "FHIR",
-        "map" : "Observation.valueQuantity"
+        "map" : "Procedure.where(code.coding.system='http://snomed.info/sct' and code.coding.code='306238000').performedDateTime (Profil mii-pr-onko-mamma-sozialdienst)"
       },
       {
         "identity" : "oBDS",
-        "map" : "LDH",
-        "comment" : "LDH-Wert in U/L"
+        "map" : "M9 / KR11",
+        "comment" : "Datum des Sozialdienstkontaktes"
       }]
     },
     {
-      "id" : "OrganspezifischeZusatzmodule.MalignesMelanom.LDH.Bewertung",
-      "path" : "OrganspezifischeZusatzmodule.MalignesMelanom.LDH.Bewertung",
-      "short" : "LDH-Bewertung",
-      "definition" : "Klinische Bewertung des LDH-Werts (normal/erhöht)",
+      "id" : "OrganspezifischeZusatzmodule.ModulAllgemein.Psychoonkologiekontakt",
+      "path" : "OrganspezifischeZusatzmodule.ModulAllgemein.Psychoonkologiekontakt",
+      "short" : "Datum des Psychoonkologiekontaktes",
+      "definition" : "Datum des Psychoonkologiekontaktes. XSD: Modul_Allgemein.Psychoonkologiekontakt (kein Feld im Web-Feldkatalog der Organmodule)",
       "min" : 0,
       "max" : "1",
       "type" : [{
-        "code" : "CodeableConcept"
+        "code" : "dateTime"
       }],
       "mapping" : [{
         "identity" : "FHIR",
-        "map" : "Observation.interpretation"
+        "map" : "Procedure (kein dediziertes Profil in v2027)"
       },
       {
         "identity" : "oBDS",
-        "map" : "LDH",
-        "comment" : "Bewertung des LDH-Werts (normal/erhöht)"
+        "map" : "Modul_Allgemein",
+        "comment" : "Datum des Psychoonkologiekontaktes (nur XSD, kein Web-Feldkatalog-Eintrag der Organmodule)"
+      }]
+    },
+    {
+      "id" : "OrganspezifischeZusatzmodule.ModulAllgemein.Studienteilnahme",
+      "path" : "OrganspezifischeZusatzmodule.ModulAllgemein.Studienteilnahme",
+      "short" : "Datum der Studienrekrutierung",
+      "definition" : "Datum der Studienrekrutierung. Web-Feldkatalog: M10 (Mamma) / KR12 (Kolorektal); XSD: Modul_Allgemein.Studienteilnahme",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "dateTime"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "ResearchSubject.period.start (Profil mii-pr-onko-studienteilnahme, oBDS Kapitel 24)"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "M10 / KR12",
+        "comment" : "Datum der Studienrekrutierung"
       }]
     }]
   }
