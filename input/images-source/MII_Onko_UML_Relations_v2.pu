@@ -1,7 +1,7 @@
 //skinparam linetype polyline 
 //skinparam linetype ortho
 @startuml MII_Onko_UML_Relations_v2
-skinparam linetype polyline
+skinparam linetype ortho
 object Onko_OP [[StructureDefinition-mii-pr-onko-operation.html]] #9999FF
 object Onko_Strahlentherapie [[StructureDefinition-mii-pr-onko-strahlentherapie.html]] #9999FF
 object Onko_SystemischeTherapie [[StructureDefinition-mii-pr-onko-systemische-therapie.html]] #9999FF
@@ -16,7 +16,7 @@ Onko_SystemischeTherapie <--- MedicationStatement : partOf
 Therapieplanung_Tumorkonferenz <--- MedicationStatement: basedOn
 object Diagnose_Primaertumor [[StructureDefinition-mii-pr-onko-diagnose-primaertumor.html]] #FFFF66
 object Evidenz_Erstdiagnose [[StructureDefinition-mii-pr-onko-liste-evidenz-erstdiagnose.html]] #EEEEEE
-Diagnose_Primaertumor --left--> Evidenz_Erstdiagnose : evidence.detail
+Diagnose_Primaertumor ---> Evidenz_Erstdiagnose : evidence.detail
 
 
 rectangle "Onkologie Observations"{
@@ -28,6 +28,7 @@ rectangle "Onkologie Observations"{
     object HistologieGrading [[StructureDefinition-mii-pr-onko-histologie-icdo3.html]] #22FF22
     object Residualstatus [[StructureDefinition-mii-pr-onko-residualstatus.html]] #22FF22
     object Allgemeiner_Leistungszustand [[StructureDefinition-mii-pr-onko-allgemeiner-leistungszustand-ecog.html]] #22FF22
+    object Studienteilnahme [[StructureDefinition-mii-pr-onko-studienteilnahme.html]] #22FF22
     object Tod [[StructureDefinition-mii-pr-onko-tod.html]] #22FF22
     object Onko_Befund [[StructureDefinition-mii-pr-onko-befund.html]] #88FF88
 }
@@ -44,7 +45,7 @@ Diagnose_Primaertumor <--- Fernmetastasen :focus
 Therapieplanung_Tumorkonferenz <--- Onko_Befund  : basedOn
 
 object Verlauf [[StructureDefinition-mii-pr-onko-verlauf.html]] #22FF22
-PrimaerDiagnose <----  Verlauf : focus
+Diagnose_Primaertumor <----  Verlauf : focus
 Verlauf ---> Tod: hasMember
 Verlauf ---> TNM_Klassifikation:  hasMember
 Verlauf --->  Lymphknotenuntersuchung : hasMember
@@ -57,7 +58,7 @@ rectangle "Modul Pathologiebefund" {
     object MII_PathoAnforderung #DDFFDD
     object MII_PathoBefund #88FF88 
 }
-MII_PathoBefund <-- MII_PathoAnforderung : request
+MII_PathoAnforderung <-- MII_PathoBefund : basedOn
 MII_PathoBefund ----> TNM_Klassifikation : result
 MII_PathoBefund ----> WeitereKlassifikation : result
 MII_PathoBefund ----> HistologieGrading : result
@@ -71,7 +72,7 @@ rectangle "Modul MolGen-Befundbericht" {
     object MII_MolGenAnforderung #DDFFDD
     object MII_MolGenBefund #88FF88
 }
-MII_MolGenBefund <-- MII_MolGenAnforderung: request
+MII_MolGenAnforderung <-- MII_MolGenBefund: basedOn
 
 rectangle "Modul Biobank" {
     object MII_Bioprobe #44FFFF
@@ -81,12 +82,30 @@ rectangle "Modul Forschungsvorhaben" {
     object MII_ResearchStudy #CCFFCC
     object MII_ResearchSubject #CCFFCC
 }
-MII_ResearchSubject <-- MII_ResearchStudy: study
-MII_ResearchSubject ...> Diagnose_Primaertumor: condition
+
+rectangle "Modul Bildgebung" {
+    object MII_Bildgebung #EEEEEE
+}
+note bottom of MII_Bildgebung
+  geplant 2027 - Anbindung
+  (ImagingStudy / DiagnosticReport)
+  noch nicht modelliert
+end note
+
+rectangle "Modul Dokument (KDL)" {
+    object MII_Dokument #EEEEEE
+}
+note bottom of MII_Dokument
+  KDL-Dokumentklassen (DocumentReference),
+  Kompatibilitaet ohne Vererbung
+end note
+MII_ResearchStudy <-- MII_ResearchSubject: study
+MII_ResearchStudy <--- Studienteilnahme : focus[studie]
+Diagnose_Primaertumor <--- Studienteilnahme : focus[primaertumor]
 
 MII_MolGenBefund ....> Onko_Variante: result[variant]
-MII_PathoAnforderung  ....> PrimaerDiagnose : reasonReference
-MII_MolGenAnforderung ....> PrimaerDiagnose: reasonReference
+MII_PathoAnforderung  ....> Diagnose_Primaertumor : reasonReference
+MII_MolGenAnforderung ....> Diagnose_Primaertumor: reasonReference
 MII_PathoAnforderung ...> MII_Bioprobe: specimen
 MII_PathoAnforderung <... MII_Bioprobe: request
 MII_MolGenAnforderung ...> MII_Bioprobe: specimen
@@ -109,6 +128,7 @@ legend right
 |<#FF9999>|AdverseEvent|
 |<#44FFFF>|Specimen|
 |<#CCFFCC>|ResearchStudy / ResearchSubject|
+|<#EEEEEE>|List / noch nicht modellierte Module|
 endlegend
 
 

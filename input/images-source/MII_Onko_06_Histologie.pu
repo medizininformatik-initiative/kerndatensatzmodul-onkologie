@@ -25,15 +25,15 @@ map NrBefalleneSentinelLymphknoten  #22FF22 {
 }
 R4_Observation <|-down-- NrBefalleneSentinelLymphknoten
 
-map Onko_Verlaufshistologie #22FF22 {
+map Onko_Histologie_ICDO3 #22FF22 {
     06.1 Datum der histologischen Untersuchung => Observation.effectiveDateTime
-    06.3 Morphologie-Code => Observation.valueCodeableConcept.coding[icd-o-3].code
-    06.4 Morphologie ICD-O/Blue Book Version => Observation.valueCodeableConcept.coding[icd-o-3].version
+    06.3 Morphologie-Code => Observation.valueCodeableConcept.coding.code
+    06.4 Morphologie ICD-O/Blue Book Version => Observation.valueCodeableConcept.coding.version
     06.5 Morphologie-Freitext => Observation.valueCodeableConcept.text
 }
 
 
-R4_Observation <|-down-- Onko_Verlaufshistologie
+R4_Observation <|-down-- Onko_Histologie_ICDO3
 
 
 map Onko_Grading #22FF22 {
@@ -49,12 +49,12 @@ M7/M8 Tumorgröße => Observation.valueQuantity.value
 
 R4_Observation <|-- Onko_Tumorgroesse
 
-map Onko_Befund #AAFFAA {
+map Onko_Befund #88FF88 {
 6.11 Befund => DiagnosticReport.conclusion
 }
 
  
-object R4_DiagnosticReport #AAFFAA
+object R4_DiagnosticReport #88FF88
 R4_DiagnosticReport <|-- Onko_Befund 
 
 map Onko_Specimen #44FFFF {
@@ -64,7 +64,22 @@ map Onko_Specimen #44FFFF {
 
 object R4_Specimen #44FFFF
 R4_Specimen <|---- Onko_Specimen
-Onko_Verlaufshistologie "1..1" --> Onko_Specimen : specimen
+Onko_Histologie_ICDO3 "1..1" --> Onko_Specimen : specimen
+Onko_Befund "0..*" --> Onko_Specimen : specimen
+
+object Tumorkonferenz_Kap18_19 #CCCCFF {
+    + Tumorkonferenz (Kap. 18/19) — CarePlan
+}
+Onko_Befund "0..1" --> Tumorkonferenz_Kap18_19 : basedOn[tumorkonferenz]
+
+object MII_Diagnose #FFFF66
+Onko_Histologie_ICDO3 --> "0..1" MII_Diagnose : focus
+Onko_Grading --> "0..1" MII_Diagnose : focus
+Onko_Tumorgroesse --> "0..1" MII_Diagnose : focus
+NrUntersuchteLymphknoten --> "0..1" MII_Diagnose : focus
+NrBefalleneLymphknoten --> "0..1" MII_Diagnose : focus
+NrUntersuchteSentinelLymphknoten --> "0..1" MII_Diagnose : focus
+NrBefalleneSentinelLymphknoten --> "0..1" MII_Diagnose : focus
 
 legend right 
 |Color|Type|
@@ -72,7 +87,7 @@ legend right
 |<#CCCCFF>|CarePlan|
 |<#9999FF>|Procedure|
 |<#DDFFDD>|ServiceRequest|
-|<#AAFFAA>|DiagnosticReport|
+|<#88FF88>|DiagnosticReport|
 |<#22FF22>|Observation|
 |<#FFCCFF>|Medication|
 |<#FF9999>|AdverseEvent|

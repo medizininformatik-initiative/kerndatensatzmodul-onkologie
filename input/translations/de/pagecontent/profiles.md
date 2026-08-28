@@ -173,7 +173,7 @@ zur Histologie und Lokalisation des Primärtumors.
 
 #### Verlauf, Tumorkonferenz, Tod und Genetische Variante
 
-![Verlauf und weitere — Vererbung und oBDS-Mapping](MII_Onko_17-20_23_Others.svg)
+![Verlauf und weitere — Vererbung und oBDS-Mapping](MII_Onko_17-20_24_Others.svg)
 
 ### Lymphknotenuntersuchungen
 

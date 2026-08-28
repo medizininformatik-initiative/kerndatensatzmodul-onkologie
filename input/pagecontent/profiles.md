@@ -172,7 +172,7 @@ on histology and localization of the primary tumor.
 
 #### Follow-up, tumor conference, death and genetic variant
 
-![Follow-up and others — inheritance and oBDS mapping](MII_Onko_17-20_23_Others.svg)
+![Follow-up and others — inheritance and oBDS mapping](MII_Onko_17-20_24_Others.svg)
 
 ### Lymph node examinations
 

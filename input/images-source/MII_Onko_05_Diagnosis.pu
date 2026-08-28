@@ -6,14 +6,15 @@ Map 05_Diagnose #FFFF66 {
  05.3 Primärtumor Tumordiagnose Text => Condition.code.text
  05.4 Primärtumor Topographie ICD O => Condition.bodySite.coding[icd-o-3].code
  05.5 Primärtumor Topographie ICD O Version => Condition.bodySite.coding[icd-o-3].version
- 05.6 Primärtumor Diagnosedatum => Condition.recordedDate
+ 05.6 Primärtumor Diagnosedatum => Condition.extension[Feststellungsdatum].valueDateTime [1..1]
  05.7 Primärtumor Diagnosesicherung => Condition.verificationStatus.coding[primaertumorDiagnosesicherung].code
  05.8 Primärtumor Seitenlokalisation => Condition.bodySite.coding[primaertumorSeitenlokalisation].code
  05.9 Frühere Tumorerkrankungen => Condition.extension[occurredFollowing].valueReference
- 06.3 Morphologie-Code => Condition.extension[morphology-behaviour-icdo3].valueCodeableConcept.coding[icd-o-3].code
- 06.4 Morphologie ICD-O/Blue Book Version => Condition.extension[morphology-behaviour-icdo3].valueCodeableConcept.coding[icd-o-3].version
- 06.5 Morphologie-Freitext => Condition.extension[morphology-behaviour-icdo3].valueCodeableConcept.text
-} 
+ 06.3 Morphologie-Code => Condition.extension[morphology-behavior-icdo3].valueCodeableConcept.coding.code [0..*]
+ 06.4 Morphologie ICD-O/Blue Book Version => Condition.extension[morphology-behavior-icdo3].valueCodeableConcept.coding.version
+ 06.5 Morphologie-Freitext => Condition.extension[morphology-behavior-icdo3].valueCodeableConcept.text
+ Tumor-ID => Condition.identifier [0..*]
+}
 
 MII_Diagnose <|-down- 05_Diagnose
 
@@ -25,9 +26,17 @@ object Fruehere_Tumorerkrankung #FFFF66 {
     + extension[morphology-behavior-icdo3] [0..1]
     + extension[assertedDate] [0..1]
     + clinicalStatus [0..1]
+    + category[oncology] [1..1] = SCT#394593009
 }
 R4_Condition <|---- Fruehere_Tumorerkrankung
 05_Diagnose --> "0..*" Fruehere_Tumorerkrankung : extension[occurredFollowing]
+05_Diagnose --> "0..*" 05_Diagnose : extension[occurredFollowing]
+05_Diagnose --> "0..*" 05_Diagnose : extension[transformationVon]
+
+object Ursache_dueTo #EEEEEE {
+    + Ziel offen: Condition | Procedure | MedicationStatement | Immunization
+}
+05_Diagnose ..> "0..*" Ursache_dueTo : extension[dueTo] (Ziel offen)
 
 object R4_List #EEEEEE
 object Evidenz_Primärdiagnose #EEEEEE {
@@ -35,6 +44,7 @@ object Evidenz_Primärdiagnose #EEEEEE {
     + soll aus Diagnosemeldung befüllt werden
 }
 R4_List <|---- Evidenz_Primärdiagnose
+05_Diagnose --> "0..1" Evidenz_Primärdiagnose : evidence.detail
 
 legend right 
 |Color|Type|

@@ -24,17 +24,35 @@ R4_Observation <|-down-- 10_Residualstatus
 Map 11_Fernmetastasen #22FF22{
     11.1 Lokalisation von Fernmetastase(n)  => Observation.valueCodeableConcept
     11.2 Datum der diagnostischen Sicherung => Observation.effectiveDateTime
- 
+    Exakte Lokalisation => Observation.bodySite.coding[icd-o-3 / snomed]
 }
 R4_Observation <|-down--- 11_Fernmetastasen
 
 
-Map 12_Allgemeiner_Leistungszustand #22FF22{
-    12.1 Allgemeiner_Leistungszustand => Observation.component[ecog / karnofsky].valueCodeableConcept
-    KR9 ASA_Klassifikation => Observation.valueCodeableConcept
-
+Map Leistungszustand_ECOG #22FF22{
+    12.1 Allgemeiner Leistungszustand => Observation.valueCodeableConcept.coding[obds].code
 }
-R4_Observation <|-down---- 12_Allgemeiner_Leistungszustand
+R4_Observation <|-down---- Leistungszustand_ECOG
+
+Map Leistungszustand_Karnofsky #22FF22{
+    12.1 Allgemeiner Leistungszustand => Observation.valueCodeableConcept.coding[obds].code
+}
+R4_Observation <|-down---- Leistungszustand_Karnofsky
+
+note bottom of Leistungszustand_ECOG
+    Unterscheidung über code.coding[snomed]:
+    ECOG = 423740007, Karnofsky = 761869008
+end note
+
+Map ASA_Klassifikation #22FF22{
+    KR9 ASA-Klassifikation => Observation.valueCodeableConcept.coding.code
+}
+R4_Observation <|-down---- ASA_Klassifikation
+
+note bottom of ASA_Klassifikation
+    mii-pr-onko-asa-klassifikation
+    value[x] required gebunden an mii-vs-onko-asa-obds
+end note
 
 legend right 
 |Color|Type|

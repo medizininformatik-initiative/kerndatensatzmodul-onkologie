@@ -1,23 +1,47 @@
-@startuml MII_Onko_17-20_23_Others
+@startuml MII_Onko_17-20_24_Others
 object R4_Observation #22FF22
+object MII_Diagnose #FFFF66
+
 Map 17_Verlauf #22FF22{
     17.1 Untersuchungsdatum Verlauf => Observation.effectiveDateTime
-    17.2 Gesamtbeurteilung Tumorstatus => Observation.component[Gesamtbeurteilung].coding.code
-    17.3 Tumorstatus Primärtumor => Observation.component[Primaertumor].coding.code
-    17.4 Tumorstatus Lymphknoten => Observation.component[Lymphknoten].coding.code
-    17.5 Tumorstatus Fernmetastasen => Observation.component[Fernmetastasen].coding.code
+    17.2 Gesamtbeurteilung Tumorstatus => Observation.valueCodeableConcept.coding.code
+    17.3 Tumorstatus Primärtumor => Observation.component[Tumor_Verlauf].coding.code
+    17.4 Tumorstatus Lymphknoten => Observation.component[Lymphknoten_Verlauf].coding.code
+    17.5 Tumorstatus Fernmetastasen => Observation.component[Fernmetastasen_Verlauf].coding.code
 
 }
 R4_Observation <|-down-- 17_Verlauf
+17_Verlauf --> "1..1" MII_Diagnose : focus
 
 object R4_CarePlan #CCCCFF
 Map 18_19_Tumorkonferenz_Therapieempfehlung #CCCCFF{
     18.1 Tumorkonferenz Therapieplanung Datum => CarePlan.created
     18.2 Tumorkonferenz Therapieplanung Typ => CarePlan.category
-    19.1 Tumorkonferenz Therapieempfehlung Typ => CarePlan.activity.detail.code
-    19.2 Tumorkonferenz/Therapieempfehlung Therapieabweichung auf Wunsch des Patienten => CarePlan.activityStatus / activityStatusReason
+    19.1 Tumorkonferenz Therapieempfehlung Typ => CarePlan.activity[obds].detail.code
+    19.2 Tumorkonferenz/Therapieempfehlung Therapieabweichung auf Wunsch des Patienten => CarePlan.activity[obds].detail.status / activity[obds].detail.statusReason
 }
 R4_CarePlan <|-down-- 18_19_Tumorkonferenz_Therapieempfehlung
+
+Map Therapieempfehlung_Kombinationstherapie #E0E0FA {
+    Protokoll-Kopf (Schema) => RequestGroup.action.code
+    Einzelmaßnahmen => RequestGroup.action.action.resource
+}
+
+Map Therapieempfehlung_Medikation #FFCCFF {
+    Wirkstoff/Präparat => MedicationRequest.medicationCodeableConcept.coding
+    Bezug zum Primärtumor => MedicationRequest.reasonReference[Primaertumor]
+}
+
+Map Therapieempfehlung_Operation #DDFFDD {
+    Empfohlene Maßnahme => ServiceRequest.category
+    Begründung => ServiceRequest.reasonReference
+}
+
+18_19_Tumorkonferenz_Therapieempfehlung --> "0..*" Therapieempfehlung_Kombinationstherapie : activity[extended].reference
+18_19_Tumorkonferenz_Therapieempfehlung --> "0..*" Therapieempfehlung_Medikation : activity[extended].reference
+18_19_Tumorkonferenz_Therapieempfehlung --> "0..*" Therapieempfehlung_Operation : activity[extended].reference
+Therapieempfehlung_Kombinationstherapie --> Therapieempfehlung_Medikation : action.action.resource
+Therapieempfehlung_Medikation --> "1..1" MII_Diagnose : reasonReference[Primaertumor]
 
 Map 20_Tod_Todesursache #22FF22 {
  20.1 Sterbedatum => Observation.effectiveDateTime 
@@ -28,18 +52,24 @@ Map 20_Tod_Todesursache #22FF22 {
 R4_Observation <|-down- 20_Tod_Todesursache
 
 object MII_MolGen_Variante #22FF22
+object Onko_Bioprobe #44FFFF
 Map 23_Genetische_Variante #22FF22 {
-    23.1 Genetische Variante Name => Observation.component[conclusion-string]
-    23.2 Genetische Variante Ausprägung => Observation.component[molecular-consequence]
+    23.1 Genetische Variante Name => Observation.note.text
+    23.2 Genetische Variante Ausprägung => Observation.interpretation[oBDS].coding.code
 }
 MII_MolGen_Variante <|-down- 23_Genetische_Variante
+23_Genetische_Variante --> "0..1" Onko_Bioprobe : specimen
+23_Genetische_Variante --> "0..1" MII_Diagnose : focus
 
 
+object R4_ResearchStudy #EEEEEE
 Map 24_Studienteilnahme #22FF22 {
     24.1 Studienteilnahme Status => Observation.valueCodeableConcept.coding.code
     24.2 Studienteilnahme Datum => Observation.effectiveDateTime
 }
 R4_Observation <|-down- 24_Studienteilnahme
+24_Studienteilnahme --> MII_Diagnose : focus[primaertumor]
+24_Studienteilnahme --> R4_ResearchStudy : focus[studie]
 
 
 
@@ -47,13 +77,15 @@ legend right
 |Color|Type|
 |<#FFFF66>|Condition|
 |<#CCCCFF>|CarePlan|
+|<#E0E0FA>|RequestGroup|
 |<#9999FF>|Procedure|
 |<#DDFFDD>|ServiceRequest|
 |<#88FF88>|DiagnosticReport|
 |<#22FF22>|Observation|
-|<#FFCCFF>|Medication|
+|<#FFCCFF>|Medication / MedicationRequest|
 |<#FF9999>|AdverseEvent|
 |<#44FFFF>|Specimen|
+|<#EEEEEE>|ResearchStudy|
 endlegend
 
 @enduml
