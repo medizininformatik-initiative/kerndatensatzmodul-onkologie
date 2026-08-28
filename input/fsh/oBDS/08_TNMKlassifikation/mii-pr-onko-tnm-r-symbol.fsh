@@ -2,10 +2,10 @@ Profile: MII_PR_Onko_TNM_r_Symbol
 Parent: Observation
 Id: mii-pr-onko-tnm-r-symbol
 Title: "MII PR Onkologie TNM r-Symbol"
-Description: "TNM-Klassifikation: TNM r-Symbol. Gibt an, ob die Klassifikation ein Rezidiv beurteilt."
+Description: "DEPRECATED seit v2027: Die eigenständigen Symbol-Profile sind abgelöst — das r-Symbol wird als modifierExtension an den T-/N-/M-Kategorien erfasst (oBDS 8.3–8.5). Dieses Profil bleibt zum Lesen von Bestandsdaten definiert. — TNM-Klassifikation: TNM r-Symbol. Gibt an, ob die Klassifikation ein Rezidiv beurteilt."
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #active
+* ^status = #retired
 * meta.profile 0..* MS
 * encounter 0..1 MS
 
