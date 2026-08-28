@@ -1,0 +1,45 @@
+{
+  "resourceType": "AdverseEvent",
+  "id": "mii-exa-onko-nebenwirkung-anaemie-grad3",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event"
+    ]
+  },
+  "event": {
+    "coding": [
+      {
+        "system": "https://www.meddra.org",
+        "code": "10002272",
+        "display": "Anämie",
+        "version": "Version 4"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "271737000",
+        "display": "Anaemia"
+      }
+    ]
+  },
+  "actuality": "actual",
+  "subject": {
+    "reference": "Patient/PatientKimMusterperson"
+  },
+  "date": "2021-08-30",
+  "seriousness": {
+    "coding": [
+      {
+        "code": "3",
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad",
+        "display": "schwerwiegend"
+      }
+    ]
+  },
+  "suspectEntity": [
+    {
+      "instance": {
+        "reference": "Procedure/PatientKimMusterperson-SystemicTherapy-1"
+      }
+    }
+  ]
+}

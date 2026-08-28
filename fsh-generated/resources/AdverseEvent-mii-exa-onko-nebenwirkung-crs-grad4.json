@@ -1,0 +1,45 @@
+{
+  "resourceType": "AdverseEvent",
+  "id": "mii-exa-onko-nebenwirkung-crs-grad4",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event"
+    ]
+  },
+  "event": {
+    "coding": [
+      {
+        "system": "https://www.meddra.org",
+        "code": "10052015",
+        "display": "Zytokin-Freisetzungs-Syndrom",
+        "version": "Version 4"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "891589671000119104",
+        "display": "Cytokine storm syndrome"
+      }
+    ]
+  },
+  "actuality": "actual",
+  "subject": {
+    "reference": "Patient/PatientKimMusterperson"
+  },
+  "date": "2021-09-02",
+  "seriousness": {
+    "coding": [
+      {
+        "code": "4",
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad",
+        "display": "lebensbedrohlich"
+      }
+    ]
+  },
+  "suspectEntity": [
+    {
+      "instance": {
+        "reference": "MedicationStatement/PatientKimMusterperson-SystemicTherapyMedication-1a"
+      }
+    }
+  ]
+}
