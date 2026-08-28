@@ -1,7 +1,7 @@
 CodeSystem: MII_CS_Onko_TNM_UICC
 Id: mii-cs-onko-tnm-uicc
 Title: "MII CS Onkologie TNM UICC"
-Description: "Codes für TNM UICC Ausprägungen."
+Description: "Codes für TNM UICC Ausprägungen. HINWEIS zur Auflagen-Versionierung: Dieses CodeSystem ist bewusst eine auflagen-übergreifende Union (8. Auflage + Ergänzungen der 9. Auflage, z.B. T1b3/M1c1/M1c2); die verwendete Auflage wird als eigenes Datenelement (TNM-Version, oBDS 8.2) dokumentiert. Eine formal strengere, auflagen-versionierte Validierung (je Auflage ein CS-/VS-Stand nach dem Muster der ATC-/ICD-O-Jahresversionen) ist als spätere Ausbaustufe vorgesehen."
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
 * ^url = "https://www.uicc.org/resources/tnm"
 * ^status = #active
