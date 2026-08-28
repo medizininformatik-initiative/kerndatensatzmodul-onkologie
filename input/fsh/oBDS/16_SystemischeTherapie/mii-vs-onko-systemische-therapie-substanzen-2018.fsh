@@ -14,7 +14,7 @@ Description: "ATC-Codes für Substanzen der systemischen Therapie, validiert geg
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2018"
 * ^status = #active
-* ^experimental = true  // Historical ValueSet
+* ^experimental = false  // Historical ValueSet
 * insert Publisher
 * insert PR_CS_VS_Version
 * insert OnkoCRMIValueSet

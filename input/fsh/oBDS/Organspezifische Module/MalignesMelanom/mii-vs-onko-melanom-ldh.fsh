@@ -4,7 +4,7 @@ Title: "MII VS Onkologie Melanom LDH"
 Description: "Value Set für Laktatdehydrogenase (LDH) Laborwerte beim Malignen Melanom"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 * ^status = #active
-* ^experimental = true
+* ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
 * insert OnkoCRMIValueSet

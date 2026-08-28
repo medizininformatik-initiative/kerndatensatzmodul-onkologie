@@ -4,7 +4,7 @@ Title: "MII VS Onkologie Mamma Präoperative Markierung Modalität"
 Description: "Value Set für Imagingmodalität der präoperativen Markierung bei Mamma-Karzinom"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 * ^status = #active
-* ^experimental = true
+* ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
 * insert OnkoCRMIValueSet

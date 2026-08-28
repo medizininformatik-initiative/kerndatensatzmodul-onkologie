@@ -4,7 +4,7 @@ Title: "MII VS Onkologie KRK Abstand Resektionslinie Aboral"
 Description: "Value Set für semantische Kodierung des oBDS-Abstand des Tumorrandes zur aboralen Resektionslinie im Kolorektalen Karzinom"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 * ^status = #active
-* ^experimental = true
+* ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
 * insert OnkoCRMIValueSet

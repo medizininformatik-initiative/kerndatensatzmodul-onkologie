@@ -3,7 +3,7 @@ Id: mii-vs-onko-weitere-klassifikationen
 Title: "MII Value Set Onkologie - Weitere Klassifikationen"
 Description: "Comprehensive collection of cancer staging systems and classification schemes used in oncology beyond TNM classification. This includes AJCC, FIGO, hematological classifications, and specialized organ-specific systems. Based on mCODE STU4 and German oBDS catalogue. Covers entity-specific classifications (e.g., FIGO for gynecological tumors), hematological classifications, and WHO classifications for CNS tumors."
 * ^status = #active
-* ^experimental = true
+* ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
 * insert OnkoCRMIValueSet

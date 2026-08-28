@@ -4,7 +4,7 @@ Title: "MII VS Onkologie Mamma Rezeptorstatus Leitlinie"
 Description: "Value Set für oBDS-Rezeptorstatus Mamma"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 * ^status = #active
-* ^experimental = true
+* ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
 * insert OnkoCRMIValueSet

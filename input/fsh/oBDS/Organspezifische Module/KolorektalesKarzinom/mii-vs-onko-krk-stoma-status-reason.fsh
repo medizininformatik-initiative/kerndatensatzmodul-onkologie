@@ -4,7 +4,7 @@ Title: "MII VS Onkologie KRK Stoma Status Reason"
 Description: "Value Set für SNOMED CT Codes zur Begründung des Status der präoperativen Stoma-Anzeichnung"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 * ^status = #active
-* ^experimental = true
+* ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
 * insert OnkoCRMIValueSet

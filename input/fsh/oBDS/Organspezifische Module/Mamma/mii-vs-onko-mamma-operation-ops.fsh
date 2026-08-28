@@ -4,7 +4,7 @@ Title: "MII VS Onkologie Mamma Operation OPS"
 Description: "Value Set für Mamma-Operationen basierend auf OPS"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 * ^status = #active
-* ^experimental = true
+* ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
 * insert OnkoCRMIValueSet

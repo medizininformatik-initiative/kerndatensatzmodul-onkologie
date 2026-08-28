@@ -5,7 +5,7 @@ Description: "Value Set für Gleason Score"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 //* ^url = ""
 * ^status = #active
-* ^experimental = true
+* ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
 * insert OnkoCRMIValueSet

@@ -4,7 +4,7 @@ Title: "MII VS Onkologie Mamma Intraoperatives Imaging Präparat"
 Description: "Value Set für intraoperatives Imaging des Präparats nach Exzision bei Mamma-Karzinom"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 * ^status = #active
-* ^experimental = true
+* ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
 * insert OnkoCRMIValueSet
