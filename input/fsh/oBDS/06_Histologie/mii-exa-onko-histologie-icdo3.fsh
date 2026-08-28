@@ -6,5 +6,5 @@ Usage: #example
 * code.coding = $LNC#59847-4
 * valueCodeableConcept.coding = $ICDO3#8500/3 "Invasives duktales Karzinom o.n.A."
 * subject = Reference(Patient/example)
-* specimen = Reference (Specimen/example)
+* specimen = Reference(mii-exa-onko-specimen-1)
 * bodySite.coding = $ICDO3#C50.4 "Oberer äußerer Quadrant der Brust"

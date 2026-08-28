@@ -6,7 +6,7 @@ Description: "Example surgical therapy"
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation)
 * subject = Reference(Patient/example)
 * encounter = Reference(Encounter/example)
-* basedOn = Reference(CarePlan/example)
+* basedOn = Reference(mii-exa-onko-tumorkonferenz-01)
 * status = #completed
 * extension[Intention].valueCodeableConcept = $mii-cs-onko-intention#K // kurativ
 * category = $SCT#387713003 "Surgical procedure (procedure)"

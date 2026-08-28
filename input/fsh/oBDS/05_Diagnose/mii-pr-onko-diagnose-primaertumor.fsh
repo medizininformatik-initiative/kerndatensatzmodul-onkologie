@@ -86,6 +86,10 @@ Description: "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der 
 * insert Label (extension[morphology-behavior-icdo3], ICD-O-Morphologie, Morphologie des Primärtumors nach ICD-O-3 nach 6.3 oBDS)
 * insert Translation(extension[morphology-behavior-icdo3] ^short, de-DE, ICD-O-Morphologie)
 * insert Translation(extension[morphology-behavior-icdo3] ^definition, de-DE, Morphologie des Primärtumors nach ICD-O-3 nach 6.3 oBDS)
+// Bewusste Asymmetrie (beads agi): an der Diagnose 0..* (gemischte Histologie,
+// Re-Klassifikation im Verlauf); die Histologie-Observation dokumentiert dagegen
+// je Befund genau EINE Morphologie (value 1..1) mit Specimen- und Datumskontext.
+* extension[morphology-behavior-icdo3] ^comment = "An der Diagnose können mehrere Morphologie-Angaben stehen (0..*) — etwa bei gemischter Histologie oder Re-Klassifikation im Krankheitsverlauf. Befundbezogen wird jede Morphologie zusätzlich als Histologie-Observation (mii-pr-onko-histologie-icdo3) dokumentiert: dort genau eine Morphologie je Befund, mit Specimen- und Datumsbezug."
 
 // Zwei orthogonale Achsen (beads 14w.9):
 // occurredFollowing = rein ZEITLICH "trat auf nach" — Ziel kann eine registrierte

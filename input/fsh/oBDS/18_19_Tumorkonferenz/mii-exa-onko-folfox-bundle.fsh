@@ -26,6 +26,18 @@ Description: "Comprehensive Bundle demonstrating complete FOLFOX workflow from t
 * entry[0].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-folfox-patient"
 * entry[=].resource = mii-exa-onko-folfox-patient
 
+// ENTRY: ENCOUNTER DIAGNOSESTELLUNG
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-folfox-encounter-diagnosis"
+* entry[=].resource = mii-exa-onko-folfox-encounter-diagnosis
+
+// ENTRY: ENCOUNTER SIGMARESEKTION
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-folfox-encounter-surgery"
+* entry[=].resource = mii-exa-onko-folfox-encounter-surgery
+
+// ENTRY: ENCOUNTER CHEMOTHERAPIE
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-folfox-encounter-chemo"
+* entry[=].resource = mii-exa-onko-folfox-encounter-chemo
+
 // ENTRY: COLORECTAL CANCER DIAGNOSIS
 * entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-colorectal-cancer-diagnosis"
 * entry[=].resource = mii-exa-onko-colorectal-cancer-diagnosis

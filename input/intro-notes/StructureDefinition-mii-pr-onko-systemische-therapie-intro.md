@@ -36,6 +36,7 @@ For these individual therapies, the oBDS captures further data elements that are
 #### Therapy protocol
 - As **usedCode**, the specific therapy protocols used in the systemic therapy are documented.
 - The protocols are based on the [oBDS implementation guide](https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532385/Systemische+Therapie+SYST+Protokolle) and contain standardized substance combinations.
+- **Leading element for oBDS 16.4:** The protocol is primarily documented on the therapy bracket (`Procedure.usedCode`, bound extensible to the protocol ValueSet). The additional free-text entry in `MedicationStatement.note.text` of the individual substance resources serves solely to assign individual substances to their regimen (e.g. for combination therapies) and is not an independent second coding.
 - Each protocol is documented with its characteristic designation (e.g. "FOLFOX", "R-CHOP", "AC") and the active ingredients it contains.
 - Coding is done via the **MII CodeSystem Systemic Therapy Protocols**, which covers all common oncological therapy protocols.
 - Protocols not included can still be documented - however, harmonization across sites is decisive here. New protocols should therefore be submitted via [GitHub Issues](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues).

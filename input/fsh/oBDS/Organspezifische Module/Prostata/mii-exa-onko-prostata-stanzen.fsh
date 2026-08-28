@@ -31,7 +31,7 @@ Usage: #example
 * effectiveDateTime = "2024-01-02"
 * subject = Reference(mii-exa-onko-prostata-bundle-patient)
 * focus = Reference(mii-exa-onko-prostata-diagnose)
-* specimen = Reference(Specimen/exampleProstateBiopsySlide)
+* specimen = Reference(mii-exa-onko-prostata-specimen-stanze)
 
 * valueQuantity.value = 80 
 * valueQuantity.unit = "%" 

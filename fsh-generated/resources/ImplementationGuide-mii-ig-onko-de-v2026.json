@@ -308,6 +308,78 @@
       },
       {
         "reference": {
+          "reference": "Encounter/example"
+        },
+        "name": "Beispiel-Kontakt (Anker)",
+        "description": "Minimaler Anker-Kontakt für die generischen Referenzen Encounter/example.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/example-chemo-phase1"
+        },
+        "name": "Beispiel-Kontakt Chemotherapie Phase 1 (Anker)",
+        "description": "Minimaler Anker-Kontakt für Encounter/example-chemo-phase1.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/example-chemo-phase2"
+        },
+        "name": "Beispiel-Kontakt Chemotherapie Phase 2 (Anker)",
+        "description": "Minimaler Anker-Kontakt für Encounter/example-chemo-phase2.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/example-diagnosis"
+        },
+        "name": "Beispiel-Kontakt Diagnosestellung (Anker)",
+        "description": "Minimaler Anker-Kontakt für Encounter/example-diagnosis.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/example-diagnosis-modification"
+        },
+        "name": "Beispiel-Kontakt Diagnosestellung FOLFOX-Modifikation (Anker)",
+        "description": "Minimaler Anker-Kontakt für Encounter/example-diagnosis-modification.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/example-surgery"
+        },
+        "name": "Beispiel-Kontakt Operation (Anker)",
+        "description": "Minimaler Anker-Kontakt für Encounter/example-surgery.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/example-surgery-modification"
+        },
+        "name": "Beispiel-Kontakt Operation FOLFOX-Modifikation (Anker)",
+        "description": "Minimaler Anker-Kontakt für Encounter/example-surgery-modification.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/example"
+        },
+        "name": "Beispiel-Patient (Anker)",
+        "description": "Minimaler Anker-Patient für die generischen Referenzen Patient/example in den Beispielen des Moduls.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/example-modification"
+        },
+        "name": "Beispiel-Patient FOLFOX-Modifikation (Anker)",
+        "description": "Minimaler Anker-Patient für das FOLFOX-Modifikations-Szenario (Patient/example-modification).",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "MedicationStatement/mii-exa-onko-systemische-therapie-medikation1"
         },
         "name": "Example chemotherapy 1",
@@ -406,6 +478,30 @@
         "name": "FOLFOX - Oxaliplatin tatsächlich verabreicht",
         "description": "Oxaliplatin medication statement as part of FOLFOX4 protocol",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
+      },
+      {
+        "reference": {
+          "reference": "Encounter/mii-exa-onko-folfox-encounter-chemo"
+        },
+        "name": "FOLFOX Kontakt Chemotherapie",
+        "description": "Ambulanter Kontakt, unter dem die FOLFOX-Chemotherapie appliziert wurde",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/mii-exa-onko-folfox-encounter-diagnosis"
+        },
+        "name": "FOLFOX Kontakt Diagnosestellung",
+        "description": "Ambulanter Kontakt, in dem die Kolonkarzinom-Diagnose gestellt und gestaged wurde",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/mii-exa-onko-folfox-encounter-surgery"
+        },
+        "name": "FOLFOX Kontakt Sigmaresektion",
+        "description": "Stationärer Kontakt der Sigmaresektion samt zugehöriger Teilprozeduren",
+        "exampleBoolean": true
       },
       {
         "reference": {
@@ -1692,6 +1788,14 @@
         },
         "name": "MII EXA Onkologie Diagnose t-AML nach Chemotherapie (dueTo)",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+      },
+      {
+        "reference": {
+          "reference": "Specimen/mii-exa-onko-prostata-specimen-stanze"
+        },
+        "name": "MII EXA Onkologie Prostata Stanzbiopsie Specimen",
+        "description": "Gewebeprobe einer Prostata-Stanzbiopsie, auf die sich die Befunde zum Karzinombefall der Stanze beziehen.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-specimen"
       },
       {
         "reference": {

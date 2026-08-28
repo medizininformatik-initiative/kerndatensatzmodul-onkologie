@@ -11,4 +11,4 @@ Usage: #example
 * event.coding[snomed] = $SCT#84229001 "Fatigue"
 * subject = Reference(Patient/example)
 * seriousness.coding = $mii-cs-onko-nebenwirkung-ctcae-grad#4 "Lebensbedrohlich"
-* suspectEntity.instance = Reference(Procedure/Strahlentherapie)
+* suspectEntity.instance = Reference(mii-exa-onko-strahlentherapie-strahlentherapie-1)

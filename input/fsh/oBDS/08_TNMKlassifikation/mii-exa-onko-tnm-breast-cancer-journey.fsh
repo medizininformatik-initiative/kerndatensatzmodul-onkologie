@@ -330,7 +330,7 @@ Usage: #example
 * status = #final
 * code = $SCT#396432002 "Status of regression of tumor (observable entity)"
 * subject = Reference(Patient/example)
-* focus = Reference(Condition/exampleOncologicCondition)
+* focus = Reference(primaertumor-example)
 * effectiveDateTime = "2024-05-20"
 * valueCodeableConcept = $mii-cs-onko-verlauf-gesamtbeurteilung#T "Teilremission (partial remission, PR)"
 * component[Tumor_Verlauf].code.coding = $SCT#445200009 "Status of residual neoplasm (observable entity)"
@@ -348,7 +348,7 @@ Usage: #example
 * status = #final
 * code = $SCT#396432002 "Status of regression of tumor (observable entity)"
 * subject = Reference(Patient/example)
-* focus = Reference(Condition/exampleOncologicCondition)
+* focus = Reference(primaertumor-example)
 * effectiveDateTime = "2024-06-15"
 * valueCodeableConcept = $mii-cs-onko-verlauf-gesamtbeurteilung#V "Vollremission (complete remission, CR)"
 * component[Tumor_Verlauf].code.coding = $SCT#445200009 "Status of residual neoplasm (observable entity)"
@@ -366,7 +366,7 @@ Usage: #example
 * status = #final
 * code = $SCT#396432002 "Status of regression of tumor (observable entity)"
 * subject = Reference(Patient/example)
-* focus = Reference(Condition/exampleOncologicCondition)
+* focus = Reference(primaertumor-example)
 * effectiveDateTime = "2027-06-20"
 * valueCodeableConcept = $mii-cs-onko-verlauf-gesamtbeurteilung#P "Progression"
 * component[Tumor_Verlauf].code.coding = $SCT#445200009 "Status of residual neoplasm (observable entity)"
