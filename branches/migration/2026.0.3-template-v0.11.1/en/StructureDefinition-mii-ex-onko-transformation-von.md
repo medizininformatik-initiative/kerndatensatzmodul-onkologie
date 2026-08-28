@@ -139,7 +139,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-onko-trans
   "name" : "MII_EX_Onko_Transformation_Von",
   "title" : "MII EX Onkologie Transformation von",
   "status" : "active",
-  "date" : "2026-08-28T12:10:16+00:00",
+  "date" : "2026-08-28T12:26:30+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
