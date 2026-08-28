@@ -31,7 +31,27 @@
   },
   {
     "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem|2.0.0"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecodesystem|2.0.0"
+  },
+  {
+    "name" : "default-canonical-version",
     "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/shareablevalueset|4.0.2"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset|2.0.0"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset|2.0.0"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-computablevalueset|2.0.0"
   },
   {
     "name" : "system-version",
@@ -264,6 +284,14 @@
   {
     "name" : "default-canonical-version",
     "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-pr-meta-searchparameter|2026.0.0"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecapabilitystatement|2.0.0"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecapabilitystatement|2.0.0"
   },
   {
     "name" : "default-canonical-version",
@@ -860,6 +888,14 @@
   {
     "name" : "default-canonical-version",
     "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-score-gesamt|2026.0.3"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition|2.0.0"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition|2.0.0"
   },
   {
     "name" : "default-canonical-version",

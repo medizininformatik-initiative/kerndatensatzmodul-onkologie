@@ -2,20 +2,108 @@
   "resourceType" : "CodeSystem",
   "id" : "mii-cs-onko-grading",
   "meta" : {
-    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablecodesystem"]
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablecodesystem",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecodesystem"]
   },
   "language" : "en",
   "text" : {
     "status" : "generated",
-    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-onko-grading</b></p><a name=\"mii-cs-onko-grading\"> </a><a name=\"hcmii-cs-onko-grading\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">0<a name=\"mii-cs-onko-grading-0\"> </a></td><td>primär erworbene Melanose ohne zelluläre Atypien</td><td>(nur beim malignen Melanom der Konjunktiva)</td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"mii-cs-onko-grading-1\"> </a></td><td>gut differenziert</td><td/></tr><tr><td style=\"white-space:nowrap\">2<a name=\"mii-cs-onko-grading-2\"> </a></td><td>mäßig differenziert</td><td/></tr><tr><td style=\"white-space:nowrap\">3<a name=\"mii-cs-onko-grading-3\"> </a></td><td>schlecht differenziert</td><td/></tr><tr><td style=\"white-space:nowrap\">4<a name=\"mii-cs-onko-grading-4\"> </a></td><td>undifferenziert</td><td/></tr><tr><td style=\"white-space:nowrap\">5<a name=\"mii-cs-onko-grading-5\"> </a></td><td>nur für C61, TNM8</td><td/></tr><tr><td style=\"white-space:nowrap\">X<a name=\"mii-cs-onko-grading-X\"> </a></td><td>nicht bestimmbar</td><td/></tr><tr><td style=\"white-space:nowrap\">L<a name=\"mii-cs-onko-grading-L\"> </a></td><td>low grade (G1 oder G2)</td><td/></tr><tr><td style=\"white-space:nowrap\">M<a name=\"mii-cs-onko-grading-M\"> </a></td><td>intermediate grade (G2 oder G3)</td><td/></tr><tr><td style=\"white-space:nowrap\">H<a name=\"mii-cs-onko-grading-H\"> </a></td><td>high grade (G3 oder G4)</td><td/></tr><tr><td style=\"white-space:nowrap\">B<a name=\"mii-cs-onko-grading-B\"> </a></td><td>Borderline</td><td/></tr><tr><td style=\"white-space:nowrap\">U<a name=\"mii-cs-onko-grading-U\"> </a></td><td>unbekannt</td><td/></tr><tr><td style=\"white-space:nowrap\">T<a name=\"mii-cs-onko-grading-T\"> </a></td><td>trifft nicht zu</td><td/></tr></table></div>"
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-onko-grading</b></p><a name=\"mii-cs-onko-grading\"> </a><a name=\"hcmii-cs-onko-grading\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablecodesystem.html\">Shareable CodeSystem</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareablecodesystem.html\">CRMI Shareable CodeSystem</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishablecodesystem.html\">CRMI Publishable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">0<a name=\"mii-cs-onko-grading-0\"> </a></td><td>primär erworbene Melanose ohne zelluläre Atypien</td><td>(nur beim malignen Melanom der Konjunktiva)</td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"mii-cs-onko-grading-1\"> </a></td><td>gut differenziert</td><td/></tr><tr><td style=\"white-space:nowrap\">2<a name=\"mii-cs-onko-grading-2\"> </a></td><td>mäßig differenziert</td><td/></tr><tr><td style=\"white-space:nowrap\">3<a name=\"mii-cs-onko-grading-3\"> </a></td><td>schlecht differenziert</td><td/></tr><tr><td style=\"white-space:nowrap\">4<a name=\"mii-cs-onko-grading-4\"> </a></td><td>undifferenziert</td><td/></tr><tr><td style=\"white-space:nowrap\">5<a name=\"mii-cs-onko-grading-5\"> </a></td><td>nur für C61, TNM8</td><td/></tr><tr><td style=\"white-space:nowrap\">X<a name=\"mii-cs-onko-grading-X\"> </a></td><td>nicht bestimmbar</td><td/></tr><tr><td style=\"white-space:nowrap\">L<a name=\"mii-cs-onko-grading-L\"> </a></td><td>low grade (G1 oder G2)</td><td/></tr><tr><td style=\"white-space:nowrap\">M<a name=\"mii-cs-onko-grading-M\"> </a></td><td>intermediate grade (G2 oder G3)</td><td/></tr><tr><td style=\"white-space:nowrap\">H<a name=\"mii-cs-onko-grading-H\"> </a></td><td>high grade (G3 oder G4)</td><td/></tr><tr><td style=\"white-space:nowrap\">B<a name=\"mii-cs-onko-grading-B\"> </a></td><td>Borderline</td><td/></tr><tr><td style=\"white-space:nowrap\">U<a name=\"mii-cs-onko-grading-U\"> </a></td><td>unbekannt</td><td/></tr><tr><td style=\"white-space:nowrap\">T<a name=\"mii-cs-onko-grading-T\"> </a></td><td>trifft nicht zu</td><td/></tr></table></div>"
   },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "shareable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "publishable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes",
+        "code" : "package",
+        "display" : "Package"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
+    "valueDate" : "2026-01-03"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+        "code" : "C3262"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-author",
+    "valueContactDetail" : {
+      "telecom" : [{
+        "system" : "email",
+        "value" : "thomas.debertshaeuser@charite.de"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-editor",
+    "valueContactDetail" : {
+      "name" : "Taskforce Core Data Set"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+    "valueContactDetail" : {
+      "name" : "Interoperability Working Group",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+    "valueContactDetail" : {
+      "name" : "National Steering Committee",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+    "valueContactDetail" : {
+      "name" : "Interoperability Working Group",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+    "valueContactDetail" : {
+      "name" : "National Steering Committee",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+      }]
+    }
+  }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading",
   "version" : "2026.0.3",
   "name" : "MII_CS_Onko_Grading",
   "title" : "MII CS Onkologie Grading",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-28T09:05:47+00:00",
+  "date" : "2026-08-28T09:25:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

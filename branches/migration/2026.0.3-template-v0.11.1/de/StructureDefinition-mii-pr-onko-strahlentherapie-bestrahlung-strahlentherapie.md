@@ -172,6 +172,10 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
 {
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition"]
+  },
   "extension" : [{
     "url" : "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable",
     "valueCodeableConcept" : {
@@ -181,13 +185,103 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
         "display" : "Creative Commons Attribution 4.0 International"
       }]
     }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-usage",
+    "valueMarkdown" : "Use this profile as the technical FHIR representation of the corresponding Medical Informatics Initiative logical model. The profile constrains a base FHIR resource for the MII module context by specifying how elements are used, which elements are required or not used, which extensions and terminology bindings apply, and how the resource maps to the module-specific content model. Implementers should produce and consume resource instances that conform to this profile when exchanging data for the corresponding MII module."
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "shareable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "publishable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes",
+        "code" : "package",
+        "display" : "Package"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
+    "valueDate" : "2026-01-03"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+        "code" : "C3262"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-author",
+    "valueContactDetail" : {
+      "telecom" : [{
+        "system" : "email",
+        "value" : "thomas.debertshaeuser@charite.de"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-editor",
+    "valueContactDetail" : {
+      "name" : "Taskforce Core Data Set"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+    "valueContactDetail" : {
+      "name" : "Interoperability Working Group",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+    "valueContactDetail" : {
+      "name" : "National Steering Committee",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+    "valueContactDetail" : {
+      "name" : "Interoperability Working Group",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+    "valueContactDetail" : {
+      "name" : "National Steering Committee",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+      }]
+    }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie",
   "version" : "2026.0.3",
   "name" : "MII_PR_Onko_Strahlentherapie_Bestrahlung_Strahlentherapie",
   "title" : "MII PR Onkologie Strahlentherapie",
   "status" : "active",
-  "date" : "2026-08-28T09:05:47+00:00",
+  "date" : "2026-08-28T09:25:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

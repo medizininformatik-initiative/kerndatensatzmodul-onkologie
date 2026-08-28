@@ -2,20 +2,113 @@
   "resourceType" : "ValueSet",
   "id" : "mii-vs-onko-tnm-uicc-stadium",
   "meta" : {
-    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-computablevalueset"]
   },
   "language" : "de",
   "text" : {
     "status" : "generated",
-    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-onko-tnm-uicc-stadium</b></p><a name=\"de-mii-vs-onko-tnm-uicc-stadium\"> </a><a name=\"de-hcmii-vs-onko-tnm-uicc-stadium\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablevalueset.html\">Shareable ValueSet</a></p></div><ul><li>Include these codes as defined in <a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html\"><code>https://www.uicc.org/resources/tnm</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;2026.0.3</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-okk\">okk</a></td><td>Stadium X</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-0\">0</a></td><td>Stadium 0</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-0a\">0a</a></td><td>Stadium 0a</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-0is\">0is</a></td><td>Stadium 0is</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-I\">I</a></td><td>Stadium I</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IA1\">IA1</a></td><td>Stadium IA1</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IA2\">IA2</a></td><td>Stadium IA2</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IA3\">IA3</a></td><td>Stadium IA3</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IB\">IB</a></td><td>Stadium IB</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IB1\">IB1</a></td><td>Stadium IB1</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IB2\">IB2</a></td><td>Stadium IB2</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IC\">IC</a></td><td>Stadium IC</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IS\">IS</a></td><td>Stadium IS</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-II\">II</a></td><td>Stadium II</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIA\">IIA</a></td><td>Stadium IIA</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIA1\">IIA1</a></td><td>Stadium IIA1</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIA2\">IIA2</a></td><td>Stadium IIA2</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIB\">IIB</a></td><td>Stadium IIB</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIC\">IIC</a></td><td>Stadium IIC</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-III\">III</a></td><td>Stadium III</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIIA\">IIIA</a></td><td>Stadium IIIA</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIIA1\">IIIA1</a></td><td>Stadium IIIA1</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIIA2\">IIIA2</a></td><td>Stadium IIIA2</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIIB\">IIIB</a></td><td>Stadium IIIB</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIIC\">IIIC</a></td><td>Stadium IIIC</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIIC1\">IIIC1</a></td><td>Stadium IIIC1</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIIC2\">IIIC2</a></td><td>Stadium IIIC2</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IV\">IV</a></td><td>Stadium IV</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IVA\">IVA</a></td><td>Stadium IVA</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IVB\">IVB</a></td><td>Stadium IVB</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IVC\">IVC</a></td><td>Stadium IVC</td></tr></table></li></ul></div>"
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-onko-tnm-uicc-stadium</b></p><a name=\"de-mii-vs-onko-tnm-uicc-stadium\"> </a><a name=\"de-hcmii-vs-onko-tnm-uicc-stadium\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablevalueset.html\">Shareable ValueSet</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareablevalueset.html\">CRMI Shareable ValueSet</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishablevalueset.html\">CRMI Publishable ValueSet</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-computablevalueset.html\">CRMI Computable ValueSet</a></p></div><ul><li>Include these codes as defined in <a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html\"><code>https://www.uicc.org/resources/tnm</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;2026.0.3</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-okk\">okk</a></td><td>Stadium X</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-0\">0</a></td><td>Stadium 0</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-0a\">0a</a></td><td>Stadium 0a</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-0is\">0is</a></td><td>Stadium 0is</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-I\">I</a></td><td>Stadium I</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IA1\">IA1</a></td><td>Stadium IA1</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IA2\">IA2</a></td><td>Stadium IA2</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IA3\">IA3</a></td><td>Stadium IA3</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IB\">IB</a></td><td>Stadium IB</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IB1\">IB1</a></td><td>Stadium IB1</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IB2\">IB2</a></td><td>Stadium IB2</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IC\">IC</a></td><td>Stadium IC</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IS\">IS</a></td><td>Stadium IS</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-II\">II</a></td><td>Stadium II</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIA\">IIA</a></td><td>Stadium IIA</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIA1\">IIA1</a></td><td>Stadium IIA1</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIA2\">IIA2</a></td><td>Stadium IIA2</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIB\">IIB</a></td><td>Stadium IIB</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIC\">IIC</a></td><td>Stadium IIC</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-III\">III</a></td><td>Stadium III</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIIA\">IIIA</a></td><td>Stadium IIIA</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIIA1\">IIIA1</a></td><td>Stadium IIIA1</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIIA2\">IIIA2</a></td><td>Stadium IIIA2</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIIB\">IIIB</a></td><td>Stadium IIIB</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIIC\">IIIC</a></td><td>Stadium IIIC</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIIC1\">IIIC1</a></td><td>Stadium IIIC1</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IIIC2\">IIIC2</a></td><td>Stadium IIIC2</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IV\">IV</a></td><td>Stadium IV</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IVA\">IVA</a></td><td>Stadium IVA</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IVB\">IVB</a></td><td>Stadium IVB</td></tr><tr><td><a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html#mii-cs-onko-tnm-uicc-IVC\">IVC</a></td><td>Stadium IVC</td></tr></table></li></ul></div>"
   },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "shareable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "publishable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "computable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes",
+        "code" : "package",
+        "display" : "Package"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
+    "valueDate" : "2026-01-03"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+        "code" : "C3262"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-author",
+    "valueContactDetail" : {
+      "telecom" : [{
+        "system" : "email",
+        "value" : "thomas.debertshaeuser@charite.de"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-editor",
+    "valueContactDetail" : {
+      "name" : "Taskforce Core Data Set"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+    "valueContactDetail" : {
+      "name" : "Interoperability Working Group",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+    "valueContactDetail" : {
+      "name" : "National Steering Committee",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+    "valueContactDetail" : {
+      "name" : "Interoperability Working Group",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+    "valueContactDetail" : {
+      "name" : "National Steering Committee",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+      }]
+    }
+  }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-uicc-stadium",
   "version" : "2026.0.3",
   "name" : "MII_VS_Onko_TNM_UICC_Stadium",
   "title" : "MII VS Onkologie TNM UICC Stadium",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-28T09:05:47+00:00",
+  "date" : "2026-08-28T09:25:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
