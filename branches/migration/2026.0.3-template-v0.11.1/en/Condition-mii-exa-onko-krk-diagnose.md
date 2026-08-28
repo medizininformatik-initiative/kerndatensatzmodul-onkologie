@@ -20,6 +20,8 @@ Profile: [MII PR Onkologie Diagnose Primärtumor](StructureDefinition-mii-pr-onk
 
 **verificationStatus**: Confirmed
 
+**category**: Neoplastic disease
+
 **code**: Bösartige Neubildung des Kolons
 
 **subject**: [Klaus KolorektalCa (no stated gender), DoB Unknown](Patient-mii-exa-onko-krk-bundle-patient.md)
@@ -53,6 +55,13 @@ Profile: [MII PR Onkologie Diagnose Primärtumor](StructureDefinition-mii-pr-onk
       "code" : "confirmed"
     }]
   },
+  "category" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "55342001",
+      "display" : "Neoplastic disease"
+    }]
+  }],
   "code" : {
     "coding" : [{
       "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",

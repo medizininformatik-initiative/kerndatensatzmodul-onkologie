@@ -138,7 +138,7 @@ Das ValueSet enthält die TNM T-Kategorie Codes aus der UICC TNM - Klassifikatio
   "title" : "MII VS Onkologie TNM T Kategorie Werte",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-28T10:16:47+00:00",
+  "date" : "2026-08-28T12:10:16+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -229,6 +229,10 @@ Das ValueSet enthält die TNM T-Kategorie Codes aus der UICC TNM - Klassifikatio
       {
         "code" : "T1b2",
         "display" : "T1b2"
+      },
+      {
+        "code" : "T1b3",
+        "display" : "T1b3"
       },
       {
         "code" : "T1c",

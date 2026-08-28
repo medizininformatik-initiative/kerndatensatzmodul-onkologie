@@ -88,7 +88,7 @@ con-4con-5","ele-1:All FHIR elements must have a @value or children {hasValue() 
 The data type is CodeableConcept because verificationStatus has some clinical judgment involved, such that there might need to be more specificity than the required FHIR value set allows. For example, a SNOMED coding might allow for additional specificity.","","","","","","","","",,"required","","http://hl7.org/fhir/ValueSet/condition-ver-status","",,,,"Condition.verificationStatus",0,1,"con-3
 con-5","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Event.status","< 410514004 |Finding context value|","PRB-13","FiveWs.status","408729009"
-"Condition.category","Condition.category","","","",1,*,"Y","","","CodeableConcept {[]} {[]}
+"Condition.category","Condition.category","","","",2,*,"Y","","","CodeableConcept {[]} {[]}
 ","problem-list-item | encounter-diagnosis","A category assigned to the condition.","The categorization is often highly contextual and may appear poorly differentiated or not very useful in other contexts.","","","","","","","","",,"extensible","A category assigned to the condition.","http://hl7.org/fhir/ValueSet/condition-category|4.0.1","","pattern:$this}
 ","",,"open","Condition.category",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","< 404684003 |Clinical finding|","'problem' if from PRB-3. 'diagnosis' if from DG1 segment in PV1 message","FiveWs.class"
@@ -98,6 +98,15 @@ con-5","ele-1:All FHIR elements must have a @value or children {hasValue() or (c
     <system value=""http://snomed.info/sct""/>
     <code value=""394593009""/>
     <display value=""Medical oncology (qualifier value)""/>
+  </coding>
+</valueCodeableConcept>","","","",,"extensible","A category assigned to the condition.","http://hl7.org/fhir/ValueSet/condition-category|4.0.1","",,,,"Condition.category",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","< 404684003 |Clinical finding|","'problem' if from PRB-3. 'diagnosis' if from DG1 segment in PV1 message","FiveWs.class"
+"Condition.category:onkologie","Condition.category","onkologie","","",1,1,"Y","","","CodeableConcept {[]} {[]}
+","Onkologie-Kennzeichnung","Kennzeichnet die Diagnose als onkologische Diagnose des KDS-Moduls Onkologie und macht sie über die category-Suche auffindbar","The categorization is often highly contextual and may appear poorly differentiated or not very useful in other contexts.","","","","","<valueCodeableConcept xmlns=""http://hl7.org/fhir"">
+  <coding>
+    <system value=""http://snomed.info/sct""/>
+    <code value=""55342001""/>
+    <display value=""Neoplastic disease""/>
   </coding>
 </valueCodeableConcept>","","","",,"extensible","A category assigned to the condition.","http://hl7.org/fhir/ValueSet/condition-category|4.0.1","",,,,"Condition.category",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","< 404684003 |Clinical finding|","'problem' if from PRB-3. 'diagnosis' if from DG1 segment in PV1 message","FiveWs.class"

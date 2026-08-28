@@ -7,7 +7,7 @@
   </meta>
   <language value="de"/>
   <text>
-    <status value="extensions"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Condition mii-exa-onko-fruehere-tumorerkrankung-mamma</b></p><a name="de-mii-exa-onko-fruehere-tumorerkrankung-mamma"> </a><a name="de-hcmii-exa-onko-fruehere-tumorerkrankung-mamma"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-fruehere-tumorerkrankung.html">MII PR Onkologie Frühere Tumorerkrankung</a> version: 2026.0.3</p></div><p><b>Condition Asserted Date</b>: 2013</p><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical resolved}">Resolved</span></p><p><b>verificationStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}">Confirmed</span></p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 394593009}">Medical oncology (qualifier value)</span></p><p><b>code</b>: <span title="Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm C50.9}">Mamma-Ca, links</span></p><p><b>bodySite</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/icd-o-3 C50.9}">Brust o.n.A.</span></p><p><b>subject</b>: <a href="Patient-example.html">Erika Beispiel  Female, DoB: 1965-04-12</a></p><p><b>recordedDate</b>: 2024-06-14</p><p><b>note</b>: </p><blockquote><div><p>Z.n. brusterhaltender Therapie und Radiatio, derzeit tumorfrei</p>
+    <status value="extensions"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Condition mii-exa-onko-fruehere-tumorerkrankung-mamma</b></p><a name="de-mii-exa-onko-fruehere-tumorerkrankung-mamma"> </a><a name="de-hcmii-exa-onko-fruehere-tumorerkrankung-mamma"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-fruehere-tumorerkrankung.html">MII PR Onkologie Frühere Tumorerkrankung</a> version: 2026.0.3</p></div><p><b>Condition Asserted Date</b>: 2013</p><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical resolved}">Resolved</span></p><p><b>verificationStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}">Confirmed</span></p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 394593009}">Medical oncology (qualifier value)</span>, <span title="Codes:{http://snomed.info/sct 55342001}">Neoplastic disease</span></p><p><b>code</b>: <span title="Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm C50.9}">Mamma-Ca, links</span></p><p><b>bodySite</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/icd-o-3 C50.9}">Brust o.n.A.</span></p><p><b>subject</b>: <a href="Patient-example.html">Erika Beispiel  Female, DoB: 1965-04-12</a></p><p><b>recordedDate</b>: 2024-06-14</p><p><b>note</b>: </p><blockquote><div><p>Z.n. brusterhaltender Therapie und Radiatio, derzeit tumorfrei</p>
 </div></blockquote></div>
   </text>
   <extension url="http://hl7.org/fhir/StructureDefinition/condition-assertedDate">
@@ -30,6 +30,13 @@
       <system value="http://snomed.info/sct"/>
       <code value="394593009"/>
       <display value="Medical oncology (qualifier value)"/>
+    </coding>
+  </category>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="55342001"/>
+      <display value="Neoplastic disease"/>
     </coding>
   </category>
   <code>

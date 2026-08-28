@@ -247,7 +247,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_KRK_Anastomoseninsuffizienz",
   "title" : "MII PR Onkologie KRK Anastomoseninsuffizienz",
   "status" : "active",
-  "date" : "2026-08-28T10:16:47+00:00",
+  "date" : "2026-08-28T12:10:16+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

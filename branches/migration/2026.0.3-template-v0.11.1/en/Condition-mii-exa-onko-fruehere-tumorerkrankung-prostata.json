@@ -7,7 +7,7 @@
   "language" : "en",
   "text" : {
     "status" : "extensions",
-    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Condition mii-exa-onko-fruehere-tumorerkrankung-prostata</b></p><a name=\"mii-exa-onko-fruehere-tumorerkrankung-prostata\"> </a><a name=\"hcmii-exa-onko-fruehere-tumorerkrankung-prostata\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-fruehere-tumorerkrankung.html\">MII PR Onkologie Frühere Tumorerkrankung</a> version: 2026.0.3</p></div><p><b>Condition Asserted Date</b>: 2018-03-15</p><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical remission}\">Remission</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 394593009}\">Medical oncology (qualifier value)</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm C61}\">Prostatakarzinom</span></p><p><b>bodySite</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/icd-o-3 C61.9}\">Prostata</span></p><p><b>subject</b>: <a href=\"Patient-example.html\">Erika Beispiel  Female, DoB: 1965-04-12</a></p><p><b>recordedDate</b>: 2024-06-14</p><p><b>note</b>: </p><blockquote><div><p>Z.n. radikaler Prostatektomie 2018, PSA aktuell &lt;0.1 ng/ml</p>\n</div></blockquote></div>"
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Condition mii-exa-onko-fruehere-tumorerkrankung-prostata</b></p><a name=\"mii-exa-onko-fruehere-tumorerkrankung-prostata\"> </a><a name=\"hcmii-exa-onko-fruehere-tumorerkrankung-prostata\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-fruehere-tumorerkrankung.html\">MII PR Onkologie Frühere Tumorerkrankung</a> version: 2026.0.3</p></div><p><b>Condition Asserted Date</b>: 2018-03-15</p><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical remission}\">Remission</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 394593009}\">Medical oncology (qualifier value)</span>, <span title=\"Codes:{http://snomed.info/sct 55342001}\">Neoplastic disease</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm C61}\">Prostatakarzinom</span></p><p><b>bodySite</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/icd-o-3 C61.9}\">Prostata</span></p><p><b>subject</b>: <a href=\"Patient-example.html\">Erika Beispiel  Female, DoB: 1965-04-12</a></p><p><b>recordedDate</b>: 2024-06-14</p><p><b>note</b>: </p><blockquote><div><p>Z.n. radikaler Prostatektomie 2018, PSA aktuell &lt;0.1 ng/ml</p>\n</div></blockquote></div>"
   },
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
@@ -30,6 +30,13 @@
       "system" : "http://snomed.info/sct",
       "code" : "394593009",
       "display" : "Medical oncology (qualifier value)"
+    }]
+  },
+  {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "55342001",
+      "display" : "Neoplastic disease"
     }]
   }],
   "code" : {

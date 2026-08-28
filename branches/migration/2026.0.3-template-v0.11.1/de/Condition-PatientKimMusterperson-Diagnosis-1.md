@@ -20,6 +20,8 @@ Profile: [MII PR Onkologie Diagnose Primärtumor](StructureDefinition-mii-pr-onk
 
 **verificationStatus**: klinische Diagnostik
 
+**category**: Neoplastic disease
+
 **code**: Bösartige Neubildung: Peritoneum, nicht näher bezeichnet
 
 **bodySite**: Ovar
@@ -60,6 +62,13 @@ Profile: [MII PR Onkologie Diagnose Primärtumor](StructureDefinition-mii-pr-onk
       "display" : "klinische Diagnostik"
     }]
   },
+  "category" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "55342001",
+      "display" : "Neoplastic disease"
+    }]
+  }],
   "code" : {
     "coding" : [{
       "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",

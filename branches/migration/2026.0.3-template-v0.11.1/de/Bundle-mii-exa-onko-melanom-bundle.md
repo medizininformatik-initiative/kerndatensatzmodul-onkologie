@@ -197,7 +197,7 @@ Das Bundle zeigt die praktische Anwendung verschiedener Terminologien:
       },
       "text" : {
         "status" : "extensions",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Condition_mii-exa-onko-melanom-diagnose\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition mii-exa-onko-melanom-diagnose</b></p><a name=\"mii-exa-onko-melanom-diagnose\"> </a><a name=\"hcmii-exa-onko-melanom-diagnose\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-diagnose-primaertumor.html\">MII PR Onkologie Diagnose Primärtumor</a> version: 2026.0.3</p></div><p><b>Condition Asserted Date</b>: 2024-01-02</p><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}, {https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung 7.1}\">histologische Untersuchung eines Primärtumors</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm C43.9}\">Bösartiges Melanom der Haut, nicht näher bezeichnet</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-melanom-bundle-patient.html\">Maria Melanom  (no stated gender), DoB Unknown</a></p><p><b>encounter</b>: <a href=\"Encounter-mii-exa-onko-melanom-bundle-encounter.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP)</a></p><p><b>recordedDate</b>: 2024-01-02</p></div></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Condition_mii-exa-onko-melanom-diagnose\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition mii-exa-onko-melanom-diagnose</b></p><a name=\"mii-exa-onko-melanom-diagnose\"> </a><a name=\"hcmii-exa-onko-melanom-diagnose\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-diagnose-primaertumor.html\">MII PR Onkologie Diagnose Primärtumor</a> version: 2026.0.3</p></div><p><b>Condition Asserted Date</b>: 2024-01-02</p><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}, {https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung 7.1}\">histologische Untersuchung eines Primärtumors</span></p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 55342001}\">Neoplastic disease</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm C43.9}\">Bösartiges Melanom der Haut, nicht näher bezeichnet</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-melanom-bundle-patient.html\">Maria Melanom  (no stated gender), DoB Unknown</a></p><p><b>encounter</b>: <a href=\"Encounter-mii-exa-onko-melanom-bundle-encounter.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP)</a></p><p><b>recordedDate</b>: 2024-01-02</p></div></div>"
       },
       "extension" : [{
         "url" : "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
@@ -220,6 +220,13 @@ Das Bundle zeigt die praktische Anwendung verschiedener Terminologien:
           "display" : "histologische Untersuchung eines Primärtumors"
         }]
       },
+      "category" : [{
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "55342001",
+          "display" : "Neoplastic disease"
+        }]
+      }],
       "code" : {
         "coding" : [{
           "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",

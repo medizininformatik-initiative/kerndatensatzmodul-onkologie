@@ -138,7 +138,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "MII CS Onkologie TNM UICC",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-28T10:16:47+00:00",
+  "date" : "2026-08-28T12:10:16+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -157,7 +157,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   }],
   "caseSensitive" : true,
   "content" : "complete",
-  "count" : 135,
+  "count" : 138,
   "concept" : [{
     "code" : "y",
     "display" : "y",
@@ -259,6 +259,10 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   {
     "code" : "T1b2",
     "display" : "T1b2"
+  },
+  {
+    "code" : "T1b3",
+    "display" : "T1b3"
   },
   {
     "code" : "T1c",
@@ -475,6 +479,14 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   {
     "code" : "M1c",
     "display" : "M1c"
+  },
+  {
+    "code" : "M1c1",
+    "display" : "M1c1"
+  },
+  {
+    "code" : "M1c2",
+    "display" : "M1c2"
   },
   {
     "code" : "M1d",

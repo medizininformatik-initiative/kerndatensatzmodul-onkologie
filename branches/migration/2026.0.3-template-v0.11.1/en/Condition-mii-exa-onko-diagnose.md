@@ -22,6 +22,8 @@ Profile: [MII PR Onkologie Diagnose Primärtumor](StructureDefinition-mii-pr-onk
 
 **verificationStatus**: histologische Untersuchung eines Primärtumors
 
+**category**: Neoplastic disease
+
 **code**: Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse
 
 **bodySite**: Structure of upper outer quadrant of breast (body structure)
@@ -72,6 +74,13 @@ Profile: [MII PR Onkologie Diagnose Primärtumor](StructureDefinition-mii-pr-onk
       "display" : "histologische Untersuchung eines Primärtumors"
     }]
   },
+  "category" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "55342001",
+      "display" : "Neoplastic disease"
+    }]
+  }],
   "code" : {
     "coding" : [{
       "extension" : [{

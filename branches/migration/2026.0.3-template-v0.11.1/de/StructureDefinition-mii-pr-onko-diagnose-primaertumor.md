@@ -115,8 +115,8 @@ Diese Struktur ist abgeleitet von [MII_PR_Diagnose_Condition](https://simplifier
 
 ** Summary **
 
-Mandatory: 2 elements(6 nested mandatory elements)
- Must-Support: 20 elements
+Mandatory: 4 elements(6 nested mandatory elements)
+ Must-Support: 21 elements
 
 **Structures**
 
@@ -144,6 +144,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
 
 * The element 1 is sliced based on the value of Condition.extension.value[x]
 * The element 1 is sliced based on the value of Condition.verificationStatus.coding
+* The element 1 is sliced based on the value of Condition.category
 
  **Schlüsselelemente-Ansicht** 
 
@@ -169,8 +170,8 @@ Diese Struktur ist abgeleitet von [MII_PR_Diagnose_Condition](https://simplifier
 
 ** Summary **
 
-Mandatory: 2 elements(6 nested mandatory elements)
- Must-Support: 20 elements
+Mandatory: 4 elements(6 nested mandatory elements)
+ Must-Support: 21 elements
 
 **Structures**
 
@@ -198,6 +199,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
 
 * The element 1 is sliced based on the value of Condition.extension.value[x]
 * The element 1 is sliced based on the value of Condition.verificationStatus.coding
+* The element 1 is sliced based on the value of Condition.category
 
  
 
@@ -333,7 +335,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
     }]
   },
   "status" : "active",
-  "date" : "2026-08-28T10:16:47+00:00",
+  "date" : "2026-08-28T12:10:16+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -706,6 +708,48 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
         "map" : "5.7",
         "comment" : "Primärtumor Diagnosesicherung"
       }]
+    },
+    {
+      "id" : "Condition.category",
+      "path" : "Condition.category",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "pattern",
+          "path" : "$this"
+        }],
+        "rules" : "open"
+      },
+      "min" : 1
+    },
+    {
+      "id" : "Condition.category:onkologie",
+      "path" : "Condition.category",
+      "sliceName" : "onkologie",
+      "short" : "Onkologie-Kennzeichnung",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Onkologie-Kennzeichnung"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Kennzeichnet die Diagnose als onkologische Diagnose des KDS-Moduls Onkologie und macht sie über die category-Suche auffindbar",
+      "min" : 1,
+      "max" : "1",
+      "patternCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "55342001",
+          "display" : "Neoplastic disease"
+        }]
+      },
+      "mustSupport" : true
     },
     {
       "id" : "Condition.code.coding:icd10-gm",

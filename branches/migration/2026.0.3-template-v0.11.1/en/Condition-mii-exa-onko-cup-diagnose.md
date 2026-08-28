@@ -24,6 +24,8 @@ Profile: [MII PR Onkologie Diagnose Primärtumor](StructureDefinition-mii-pr-onk
 
 **verificationStatus**: histologische Untersuchung eines Primärtumors
 
+**category**: Neoplastic disease
+
 **code**: Bösartige Neubildung, primäre Lokalisation unbekannt, so bezeichnet
 
 **bodySite**: Unbekannte Primärlokalisation
@@ -79,6 +81,13 @@ Profile: [MII PR Onkologie Diagnose Primärtumor](StructureDefinition-mii-pr-onk
       "display" : "histologische Untersuchung eines Primärtumors"
     }]
   },
+  "category" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "55342001",
+      "display" : "Neoplastic disease"
+    }]
+  }],
   "code" : {
     "coding" : [{
       "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",

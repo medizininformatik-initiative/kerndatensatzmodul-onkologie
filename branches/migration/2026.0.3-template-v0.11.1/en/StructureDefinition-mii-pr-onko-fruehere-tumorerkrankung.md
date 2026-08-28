@@ -259,7 +259,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-frueh
     }]
   },
   "status" : "active",
-  "date" : "2026-08-28T10:16:47+00:00",
+  "date" : "2026-08-28T12:10:16+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -403,7 +403,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-frueh
         }],
         "rules" : "open"
       },
-      "min" : 1,
+      "min" : 2,
       "mustSupport" : true
     },
     {
@@ -431,6 +431,36 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-frueh
           "system" : "http://snomed.info/sct",
           "code" : "394593009",
           "display" : "Medical oncology (qualifier value)"
+        }]
+      },
+      "mustSupport" : true
+    },
+    {
+      "id" : "Condition.category:onkologie",
+      "path" : "Condition.category",
+      "sliceName" : "onkologie",
+      "short" : "Onkologie-Kennzeichnung",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Onkologie-Kennzeichnung"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Kennzeichnet die Diagnose als onkologische Diagnose des KDS-Moduls Onkologie und macht sie über die category-Suche auffindbar",
+      "min" : 1,
+      "max" : "1",
+      "patternCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "55342001",
+          "display" : "Neoplastic disease"
         }]
       },
       "mustSupport" : true

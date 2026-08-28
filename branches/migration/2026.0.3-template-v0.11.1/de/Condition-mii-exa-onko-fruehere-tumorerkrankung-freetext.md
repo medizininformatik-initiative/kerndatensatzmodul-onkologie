@@ -18,7 +18,7 @@ Profile: [MII PR Onkologie Frühere Tumorerkrankung](StructureDefinition-mii-pr-
 
 **clinicalStatus**: Resolved
 
-**category**: Medical oncology (qualifier value)
+**category**: Medical oncology (qualifier value), Neoplastic disease
 
 **code**: Hautkrebs am Rücken, ca. 2010
 
@@ -59,6 +59,13 @@ Patient berichtet von operativ entferntem Hautkrebs vor ca. 14 Jahren, keine wei
       "system" : "http://snomed.info/sct",
       "code" : "394593009",
       "display" : "Medical oncology (qualifier value)"
+    }]
+  },
+  {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "55342001",
+      "display" : "Neoplastic disease"
     }]
   }],
   "code" : {

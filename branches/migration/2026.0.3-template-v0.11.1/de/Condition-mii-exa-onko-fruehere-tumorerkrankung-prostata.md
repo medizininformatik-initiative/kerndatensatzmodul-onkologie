@@ -20,7 +20,7 @@ Profile: [MII PR Onkologie Frühere Tumorerkrankung](StructureDefinition-mii-pr-
 
 **verificationStatus**: Confirmed
 
-**category**: Medical oncology (qualifier value)
+**category**: Medical oncology (qualifier value), Neoplastic disease
 
 **code**: Prostatakarzinom
 
@@ -69,6 +69,13 @@ Z.n. radikaler Prostatektomie 2018, PSA aktuell <0.1 ng/ml
       "system" : "http://snomed.info/sct",
       "code" : "394593009",
       "display" : "Medical oncology (qualifier value)"
+    }]
+  },
+  {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "55342001",
+      "display" : "Neoplastic disease"
     }]
   }],
   "code" : {

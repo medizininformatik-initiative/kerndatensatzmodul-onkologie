@@ -138,7 +138,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "MII CS Onkologie TNM UICC",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-28T10:16:47+00:00",
+  "date" : "2026-08-28T12:10:16+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -157,7 +157,7 @@ This Code system is referenced in the definition of the following value sets:
   }],
   "caseSensitive" : true,
   "content" : "complete",
-  "count" : 135,
+  "count" : 138,
   "concept" : [{
     "code" : "y",
     "display" : "y",
@@ -259,6 +259,10 @@ This Code system is referenced in the definition of the following value sets:
   {
     "code" : "T1b2",
     "display" : "T1b2"
+  },
+  {
+    "code" : "T1b3",
+    "display" : "T1b3"
   },
   {
     "code" : "T1c",
@@ -475,6 +479,14 @@ This Code system is referenced in the definition of the following value sets:
   {
     "code" : "M1c",
     "display" : "M1c"
+  },
+  {
+    "code" : "M1c1",
+    "display" : "M1c1"
+  },
+  {
+    "code" : "M1c2",
+    "display" : "M1c2"
   },
   {
     "code" : "M1d",

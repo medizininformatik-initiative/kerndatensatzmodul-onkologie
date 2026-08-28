@@ -141,7 +141,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-onko-opera
   "name" : "MII_EX_Onko_Operation_Intention",
   "title" : "MII EX Onko Operation Intention",
   "status" : "active",
-  "date" : "2026-08-28T10:16:47+00:00",
+  "date" : "2026-08-28T12:10:16+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
