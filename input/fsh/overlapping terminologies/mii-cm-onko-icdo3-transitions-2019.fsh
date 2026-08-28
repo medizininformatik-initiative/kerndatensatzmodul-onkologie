@@ -2,8 +2,9 @@
 // Revision (2019) — analog zum ATC-Transitions-Muster (mii-cm-onko-atc-transitions-*).
 // Kuratierung: 56 in 2019 gestrichene Codes - 55 server-verifiziert gegen beide
 // CS-Versionen auf dem MII-Ontoserver (Diff-Basis: examples-source/icdo/) plus
-// 8153/1 (Gastrinom o.n.A.), das die amtliche Aktualisierungsliste streicht,
-// der Server aber noch in der 2019er-Version fuehrt (TermServ-Meldung, dq9).
+// 8153/1 (Gastrinom o.n.A.), das Aktualisierungsliste und Online-Fassung
+// streichen, die amtliche ClaML aber weiterhin fuehrt; der Server spiegelt
+// die ClaML exakt (1622 Klassen) -> BfArM-Meldung, beads dq9.
 // Muster: Dignitäts-Neubewertungen (equivalent), Entitäts-Zusammenlegungen
 // (equivalent/wider), unsichere /1-Konzepte mit mehreren Nachfolgern (narrower),
 // Syndrom-Konzepte ohne Nachfolger (unmatched, mit Guidance).
@@ -54,7 +55,7 @@ Usage: #definition
 * group[=].element[=].target[+].code = #8153/3
 * group[=].element[=].target[=].display = "Malignes Gastrinom"
 * group[=].element[=].target[=].equivalence = #equivalent
-* group[=].element[=].target[=].comment = "Streichung in der Zweiten Revision (Aktualisierungsliste 29.01.2021): Zusammenlegung in das bereits bestehende Konzept 8153/3. Achtung: Auf dem MII-Terminologieserver ist 8153/1 in der 2019er-CS-Version derzeit noch enthalten (Stand nicht nachgezogen) - amtlich ist der Code gestrichen."
+* group[=].element[=].target[=].comment = "Streichung in der Zweiten Revision (Aktualisierungsliste 29.01.2021): Zusammenlegung in das bereits bestehende Konzept 8153/3. Achtung: Die amtliche BfArM-ClaML-Fassung (und damit der MII-Terminologieserver, der sie exakt spiegelt) enthaelt 8153/1 in der 2019er-Version weiterhin - im Widerspruch zu Aktualisierungsliste und amtlicher Online-Fassung, die den Code streichen (BfArM-Meldung, beads dq9)."
 
 * group[=].element[+].code = #8156/1
 * group[=].element[=].display = "Somatostatinom o.n.A."
