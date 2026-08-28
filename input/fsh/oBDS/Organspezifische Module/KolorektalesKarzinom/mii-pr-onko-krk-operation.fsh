@@ -35,13 +35,3 @@ Description: "Das vorliegende Profil beschreibt eine radiologisch durchgeführte
 * usedCode.coding ^slicing.description = "Slicing für die intraoperative Verwendung von z.B. Drahtmarkierungen, Markierungsclips oder Seed-Markierungen"
 
 
-/*
-Mapping: FHIR-oBDS-Studienteilnahme
-Id: oBDS
-Title: "Mapping FHIR zu oBDS"
-Source: MII_PR_Onko_Studienteilnahme
-* -> "24" "Studienteilnahme"
-*  valueCodeableConcept.coding.code -> "24.1" "Studienteilnahme Status"
-*  effectiveDateTime -> "24.2" "Studienteilnahme Datum"
-
-*/

@@ -42,13 +42,3 @@ Description: "Dieses Profil beschreibt einen Gleasonscore in der Onkologie"
 * insert Translation(effectiveDateTime ^definition, de-DE, Datum der Probenentnahme der Prostata-Biopise oder des Prostata-Exzisats)
 
 
-/*
-Mapping: FHIR-oBDS-Studienteilnahme
-Id: oBDS
-Title: "Mapping FHIR zu oBDS"
-Source: MII_PR_Onko_Studienteilnahme
-* -> "24" "Studienteilnahme"
-*  valueCodeableConcept.coding.code -> "24.1" "Studienteilnahme Status"
-*  effectiveDateTime -> "24.2" "Studienteilnahme Datum"
-
-*/

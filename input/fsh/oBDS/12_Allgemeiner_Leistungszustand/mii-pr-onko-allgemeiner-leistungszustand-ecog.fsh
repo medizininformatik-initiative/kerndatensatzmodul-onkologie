@@ -10,6 +10,8 @@ Description: "OBDS Beschreibung des allgemeines Leistungszustandes nach ECOG"
 * meta.profile 0..* MS
 * subject 1..1 MS
 * subject only Reference(Patient)
+* focus MS
+* focus only Reference(MII_PR_Onko_Diagnose_Primaertumor)
 * encounter 0..1 MS
 
 

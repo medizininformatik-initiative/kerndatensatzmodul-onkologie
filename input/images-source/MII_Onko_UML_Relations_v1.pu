@@ -56,11 +56,7 @@ Diagnose_Primaertumor <--- Lymphknotenuntersuchung: focus
 Diagnose_Primaertumor <--- HistologieGrading :focus
 Diagnose_Primaertumor <--- Onko_Variante :focus
 Diagnose_Primaertumor <--- WeitereKlassifikation: focus
-Diagnose_Primaertumor <... Allgemeiner_Leistungszustand :focus
-note on link
-  focus fehlt derzeit in den
-  ECOG-/Karnofsky-Profilen (Ticket agi)
-end note
+Diagnose_Primaertumor <--- Allgemeiner_Leistungszustand :focus
 Diagnose_Primaertumor <--- Fernmetastasen :focus
 
 TNM_Klassifikation ---> TNM_Kategorien : hasMember
