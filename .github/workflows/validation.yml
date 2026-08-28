@@ -118,9 +118,11 @@ jobs:
       - name: Probe
         id: probe
         env:
-          C: ${{ secrets.SU_TERMSERV_CLIENT_CERT }}
-          K: ${{ secrets.SU_TERMSERV_CLIENT_KEY }}
-          P: ${{ secrets.SU_TERMSERV_CLIENT_PASSWORD }}
+          # MII-Org-Secrets (die der aufgerufene meta-Workflow tatsächlich liest);
+          # Template-Namen bleiben als Rückfall für Forks.
+          C: ${{ secrets.CDS_DEV_CLIENT_CERT || secrets.SU_TERMSERV_CLIENT_CERT }}
+          K: ${{ secrets.CDS_DEV_CLIENT_KEY || secrets.SU_TERMSERV_CLIENT_KEY }}
+          P: ${{ secrets.CDS_DEV_CLIENT_CERT_PASSWORD || secrets.SU_TERMSERV_CLIENT_PASSWORD }}
         run: |
           if [ -n "${C}" ] && [ -n "${K}" ] && [ -n "${P}" ]; then
             echo "has_cert=true" >> "${GITHUB_OUTPUT}"
