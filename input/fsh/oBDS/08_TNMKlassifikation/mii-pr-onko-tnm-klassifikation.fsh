@@ -26,9 +26,9 @@ Description: "TNM-Klassifikation: Grouper-Profil für Komponenten der TNM-Klassi
 * method ^short = "TNM Version"
 * method ^definition = "Gibt an, nach welcher Version des TNM klassifiziert wurde."
 * method from mii-vs-onko-tnm-version (required)
-* insert Label(method.coding, TNM-Version, TNM-Version nach 8.5 oBDS 2021)
+* insert Label(method.coding, TNM-Version, TNM-Version nach 8.2 oBDS 2021)
 * insert Translation(method.coding ^short, de-DE, TNM-Version)
-* insert Translation(method.coding ^definition, de-DE, TNM-Version nach 8.5 oBDS 2021 )
+* insert Translation(method.coding ^definition, de-DE, TNM-Version nach 8.2 oBDS 2021 )
 
 * hasMember MS
 * hasMember only Reference (MII_PR_Onko_TNM_L_Kategorie or MII_PR_Onko_TNM_M_Kategorie or MII_PR_Onko_TNM_m_Symbol or MII_PR_Onko_TNM_N_Kategorie or MII_PR_Onko_TNM_T_Kategorie or MII_PR_Onko_TNM_Pn_Kategorie or MII_PR_Onko_TNM_S_Kategorie or MII_PR_Onko_TNM_V_Kategorie or MII_PR_Onko_TNM_a_Symbol or MII_PR_Onko_TNM_r_Symbol or MII_PR_Onko_TNM_y_Symbol)
