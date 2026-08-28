@@ -2,7 +2,10 @@
 // 790 CTCAE-v4.03-Terme (offizielle NCI-Liste, examples-source/ctcae/) gegen
 // SNOMED CT (lokaler Snowstorm/MII-Ontoserver) gematcht: 441 automatisch
 // (adversarial stichproben-verifiziert, 3 Korrekturen, Aktiv-Check aller Codes),
-// 267 agentenkuratiert (equivalent/narrower/wider konservativ), 82 unmatched.
+// 267 agentenkuratiert (equivalent/narrower/wider konservativ), 83 unmatched.
+// ALLE Zielcodes gegen den Projekt-Pin SNOMED International 20250701 geprüft
+// (Expansions-Manifest) — 6 Codes aus neueren Releases wurden auf pin-gültige
+// Konzepte zurückgeführt bzw. als unmatched geführt.
 Instance: mii-cm-onko-nebenwirkung-meddra-sct
 InstanceOf: ConceptMap
 Usage: #definition
@@ -17,13 +20,14 @@ Usage: #definition
 * description = "Kuratierte Zuordnung der MedDRA-Codes der CTCAE-v4.03-Nebenwirkungsterme zu SNOMED CT für die optionale SNOMED-Zweitkodierung in AdverseEvent.event (Profil mii-pr-onko-nebenwirkung-adverse-event). WICHTIGE HINWEISE: (1) Es existiert eine offizielle, lizenzpflichtige MedDRA-SNOMED-CT-Map (MedDRA MSSO / SNOMED International); diese ConceptMap ist eine davon unabhängige, projektseitig kuratierte Zuordnung und ersetzt die offizielle Map nicht. (2) Die Zuordnungen wurden automatisiert erstellt und stichproben- bzw. einzelfallkuratiert; für Vollständigkeit und Korrektheit wird KEINE GEWÄHR übernommen. Vor einer Nutzung in Produktivsystemen ist eine eigenverantwortliche fachliche Prüfung erforderlich. (3) Nicht jeder CTCAE-/MedDRA-Term hat ein SNOMED-CT-Äquivalent — solche Terme sind als unmatched gekennzeichnet und verbleiben MedDRA-only."
 * purpose = "Ableitung der optionalen SNOMED-CT-Zweitkodierung (event.coding[snomed]) aus der MedDRA-Pflichtkodierung der Nebenwirkungsart (oBDS 15.2)."
 * sourceCanonical = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-nebenwirkung-art"
-// ConceptMap.target verweist bewusst auf das implizite SNOMED-CT-ValueSet
-// (ConceptMap.target MUSS ein ValueSet sein; die Zielmenge ist nicht auf ein
-// eigenes VS eingeschränkt, sondern SNOMED CT als Ganzes).
-* targetUri = "http://snomed.info/sct?fhir_vs"
+// ConceptMap.target MUSS ein ValueSet sein — hier das implizite SNOMED-CT-VS der
+// im Expansions-Manifest gepinnten Edition/Version (International 20250701).
+// Alle Zielcodes sind gegen genau diese Version verifiziert.
+* targetUri = "http://snomed.info/sct/900000000000207008/version/20250701?fhir_vs"
 
 * group[+].source = "https://www.meddra.org"
 * group[=].target = "http://snomed.info/sct"
+* group[=].targetVersion = "http://snomed.info/sct/900000000000207008/version/20250701"
 
 * group[=].element[+].code = #10000060
 * group[=].element[=].display = "Abdominal distension"
@@ -3325,9 +3329,10 @@ Usage: #definition
 
 * group[=].element[+].code = #10050662
 * group[=].element[=].display = "Prostate infection"
-* group[=].element[=].target[+].code = #1371408008
-* group[=].element[=].target[=].display = "Infection of prostate"
-* group[=].element[=].target[=].equivalence = #equivalent
+* group[=].element[=].target[+].code = #9713002
+* group[=].element[=].target[=].display = "Prostatitis"
+* group[=].element[=].target[=].equivalence = #wider
+* group[=].element[=].target[=].comment = "Im Pin 20250701 kein spezifisches Konzept Infection of prostate; Prostatitis ist das nächstliegende Konzept, umfasst aber auch nicht-infektiöse Formen."
 
 * group[=].element[+].code = #10050816
 * group[=].element[=].display = "Tracheal stenosis"
@@ -3404,10 +3409,10 @@ Usage: #definition
 
 * group[=].element[+].code = #10052015
 * group[=].element[=].display = "Cytokine release syndrome"
-* group[=].element[=].target[+].code = #891589671000119104
-* group[=].element[=].target[=].display = "Cytokine storm syndrome"
+* group[=].element[=].target[+].code = #710027002
+* group[=].element[=].target[=].display = "Cytokine release syndrome"
 * group[=].element[=].target[=].equivalence = #equivalent
-* group[=].element[=].target[=].comment = "Korrektur aus adversarialer Verifikation"
+* group[=].element[=].target[=].comment = "Pin-Version 20250701: 710027002 ist hier aktiv (Inaktivierung erst in einem späteren Release; das Nachfolgekonzept Cytokine storm syndrome existiert im Pin noch nicht)."
 
 * group[=].element[+].code = #10052298
 * group[=].element[=].display = "Urethral infection"
@@ -4315,10 +4320,8 @@ Usage: #definition
 
 * group[=].element[+].code = #10065748
 * group[=].element[=].display = "Urostomy site bleeding"
-* group[=].element[=].target[+].code = #16751421000119105
-* group[=].element[=].target[=].display = "Hemorrhage of incontinent urostomy stoma"
-* group[=].element[=].target[=].equivalence = #narrower
-* group[=].element[=].target[=].comment = "SNOMED trennt kontinentes (16751471000119106) und inkontinentes Urostoma; das inkontinente (Ileum-Conduit) ist der Regelfall in der Onkologie."
+* group[=].element[=].target[+].equivalence = #unmatched
+* group[=].element[=].target[=].comment = "Kein Konzept im Pin 20250701 (nur Ileostomie-Blutung, andere Lokalisation) — Term verbleibt MedDRA-only."
 
 * group[=].element[+].code = #10065749
 * group[=].element[=].display = "Tracheostomy site bleeding"
@@ -4615,10 +4618,10 @@ Usage: #definition
 
 * group[=].element[+].code = #10065826
 * group[=].element[=].display = "Intraoperative arterial injury"
-* group[=].element[=].target[+].code = #1375944001
-* group[=].element[=].target[=].display = "Traumatic injury to artery during surgery"
-* group[=].element[=].target[=].equivalence = #equivalent
-* group[=].element[=].target[=].comment = "Woertliche Entsprechung des intraoperativen Arterienschadens."
+* group[=].element[=].target[+].code = #63043004
+* group[=].element[=].target[=].display = "Injury of artery"
+* group[=].element[=].target[=].equivalence = #wider
+* group[=].element[=].target[=].comment = "Im Pin 20250701 kein Konzept für die intraoperative Genese; Oberkonzept Arterienverletzung, der operative Kontext ergibt sich aus AdverseEvent.suspectEntity."
 
 * group[=].element[+].code = #10065827
 * group[=].element[=].display = "Intraoperative hepatobiliary injury"
@@ -4707,10 +4710,10 @@ Usage: #definition
 
 * group[=].element[+].code = #10065845
 * group[=].element[=].display = "Intraoperative renal injury"
-* group[=].element[=].target[+].code = #1375936001
-* group[=].element[=].target[=].display = "Traumatic injury to kidney during surgery"
-* group[=].element[=].target[=].equivalence = #equivalent
-* group[=].element[=].target[=].comment = "Woertliche Entsprechung."
+* group[=].element[=].target[+].code = #40095003
+* group[=].element[=].target[=].display = "Injury of kidney"
+* group[=].element[=].target[=].equivalence = #wider
+* group[=].element[=].target[=].comment = "Im Pin 20250701 kein Konzept für die intraoperative Genese; Oberkonzept Nierenverletzung, der operative Kontext ergibt sich aus AdverseEvent.suspectEntity."
 
 * group[=].element[+].code = #10065846
 * group[=].element[=].display = "Intraoperative skin injury"
@@ -4726,10 +4729,10 @@ Usage: #definition
 
 * group[=].element[+].code = #10065848
 * group[=].element[=].display = "Intraoperative venous injury"
-* group[=].element[=].target[+].code = #1375937005
-* group[=].element[=].target[=].display = "Traumatic injury to vein during surgery"
-* group[=].element[=].target[=].equivalence = #equivalent
-* group[=].element[=].target[=].comment = "Woertliche Entsprechung."
+* group[=].element[=].target[+].code = #64583005
+* group[=].element[=].target[=].display = "Injury of vein"
+* group[=].element[=].target[=].equivalence = #wider
+* group[=].element[=].target[=].comment = "Im Pin 20250701 kein Konzept für die intraoperative Genese; Oberkonzept Venenverletzung, der operative Kontext ergibt sich aus AdverseEvent.suspectEntity."
 
 * group[=].element[+].code = #10065849
 * group[=].element[=].display = "Injury to jugular vein"
