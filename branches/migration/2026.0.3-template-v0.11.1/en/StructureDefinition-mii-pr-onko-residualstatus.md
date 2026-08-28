@@ -149,7 +149,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-resid
   "name" : "MII_PR_Onko_Residualstatus",
   "title" : "MII PR Onkologie Residualstatus",
   "status" : "active",
-  "date" : "2026-08-28T09:25:31+00:00",
+  "date" : "2026-08-28T09:53:30+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

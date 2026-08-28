@@ -171,7 +171,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-verla
   "name" : "MII_PR_Onko_Verlauf",
   "title" : "MII PR Onkologie Verlauf",
   "status" : "active",
-  "date" : "2026-08-28T09:25:31+00:00",
+  "date" : "2026-08-28T09:53:30+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

@@ -57,9 +57,9 @@ Die folgenden Tabellen werden beim Build per SQL direkt aus den ConceptMap-Resso
 | | |
 | :--- | :--- |
 | Beziehung | Anzahl |
-| equivalent | 681 |
-| source-is-narrower-than-target | 38 |
-| source-is-broader-than-target | 32 |
+| equivalent | 1319 |
+| source-is-narrower-than-target | 80 |
+| source-is-broader-than-target | 60 |
 
 **Alle Mappings der oBDS-Antwortlisten** (modul-eigene CodeSysteme → SNOMED CT/LOINC; die jahresversionierten ATC-/ICD-O-Überleitungen sind auf [ATC](atc-terminologie.md) bzw. [ICD-O](icd-o-terminologie.md) beschrieben):
 

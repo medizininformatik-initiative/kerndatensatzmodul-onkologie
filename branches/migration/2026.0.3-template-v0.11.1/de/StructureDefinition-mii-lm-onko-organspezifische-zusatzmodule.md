@@ -167,7 +167,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
   "name" : "MII_LM_Onko_Organspezifische_Zusatzmodule",
   "title" : "MII LM Onkologie Organspezifische Zusatzmodule",
   "status" : "active",
-  "date" : "2026-08-28T09:25:31+00:00",
+  "date" : "2026-08-28T09:53:30+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
