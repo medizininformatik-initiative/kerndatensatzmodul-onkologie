@@ -67,7 +67,7 @@
   <name value="MII_PR_Onko_Diagnose_Primaertumor"/>
   <title value="MII PR Onkologie Diagnose Primärtumor"/>
   <status value="active"/>
-  <date value="2026-08-28T08:03:44+00:00"/>
+  <date value="2026-08-28T09:05:47+00:00"/>
   <publisher value="Medizininformatik Initiative"/>
   <contact>
     <name value="Medizininformatik Initiative"/>
@@ -849,6 +849,7 @@
       <sliceName value="morphology-behavior-icdo3"/>
       <short value="ICD-O-Morphologie"/>
       <definition value="Morphologie des Primärtumors nach ICD-O-3 nach 6.3 oBDS"/>
+      <comment value="An der Diagnose können mehrere Morphologie-Angaben stehen (0..*) — etwa bei gemischter Histologie oder Re-Klassifikation im Krankheitsverlauf. Befundbezogen wird jede Morphologie zusätzlich als Histologie-Observation (mii-pr-onko-histologie-icdo3) dokumentiert: dort genau eine Morphologie je Befund, mit Specimen- und Datumsbezug."/>
       <min value="0"/>
       <max value="*"/>
       <base>
@@ -9602,6 +9603,7 @@
       <sliceName value="morphology-behavior-icdo3"/>
       <short value="ICD-O-Morphologie"/>
       <definition value="Morphologie des Primärtumors nach ICD-O-3 nach 6.3 oBDS"/>
+      <comment value="An der Diagnose können mehrere Morphologie-Angaben stehen (0..*) — etwa bei gemischter Histologie oder Re-Klassifikation im Krankheitsverlauf. Befundbezogen wird jede Morphologie zusätzlich als Histologie-Observation (mii-pr-onko-histologie-icdo3) dokumentiert: dort genau eine Morphologie je Befund, mit Specimen- und Datumsbezug."/>
       <min value="0"/>
       <max value="*"/>
       <type>

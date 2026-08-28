@@ -28,7 +28,7 @@ Profile: [MII PR Onkologie Systemische Therapie](StructureDefinition-mii-pr-onko
 
 **subject**: [Hans Schmidt Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)](Patient-mii-exa-onko-folfox-patient.md)
 
-**encounter**: [Encounter/example](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Encounter/example)
+**encounter**: [Encounter: status = finished; class = ambulatory (ActCode#AMB)](Encounter-mii-exa-onko-folfox-encounter-chemo.md)
 
 **performed**: 2024-03-20 --> 2024-09-15
 
@@ -104,7 +104,7 @@ Patient received 12 cycles of adjuvant FOLFOX4 chemotherapy for stage III colon 
     "reference" : "Patient/mii-exa-onko-folfox-patient"
   },
   "encounter" : {
-    "reference" : "Encounter/example"
+    "reference" : "Encounter/mii-exa-onko-folfox-encounter-chemo"
   },
   "performedPeriod" : {
     "start" : "2024-03-20",

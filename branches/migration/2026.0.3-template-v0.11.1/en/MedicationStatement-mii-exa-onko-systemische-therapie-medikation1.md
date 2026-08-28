@@ -20,7 +20,7 @@ Profile: [MII PR Onkologie Systemische Therapie Medikation](StructureDefinition-
 
 **medication**: Cyclophosphamid
 
-**subject**: [Patient/example](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example)
+**subject**: [Erika Beispiel Female, DoB: 1965-04-12](Patient-example.md)
 
 **effective**: 2021-12-04 --> 2022-04-06
 

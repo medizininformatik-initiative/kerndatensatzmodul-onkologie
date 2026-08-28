@@ -131,7 +131,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-diagn
     }]
   },
   "status" : "active",
-  "date" : "2026-08-28T08:03:44+00:00",
+  "date" : "2026-08-28T09:05:47+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -242,6 +242,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-diagn
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
+      "comment" : "An der Diagnose können mehrere Morphologie-Angaben stehen (0..*) — etwa bei gemischter Histologie oder Re-Klassifikation im Krankheitsverlauf. Befundbezogen wird jede Morphologie zusätzlich als Histologie-Observation (mii-pr-onko-histologie-icdo3) dokumentiert: dort genau eine Morphologie je Befund, mit Specimen- und Datumsbezug.",
       "min" : 0,
       "max" : "*",
       "type" : [{

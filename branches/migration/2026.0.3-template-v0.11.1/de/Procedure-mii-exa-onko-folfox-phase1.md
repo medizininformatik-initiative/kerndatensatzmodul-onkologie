@@ -26,9 +26,9 @@ Profile: [MII PR Onkologie Systemische Therapie](StructureDefinition-mii-pr-onko
 
 **code**: Nicht komplexe Chemotherapie
 
-**subject**: [Patient/example-modification](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example-modification)
+**subject**: [Martin Beispiel Male, DoB: 1958-11-03](Patient-example-modification.md)
 
-**encounter**: [Encounter/example-chemo-phase1](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Encounter/example-chemo-phase1)
+**encounter**: [Encounter: status = finished; class = ambulatory (ActCode#AMB)](Encounter-example-chemo-phase1.md)
 
 **performed**: 2024-03-15 --> 2024-06-10
 

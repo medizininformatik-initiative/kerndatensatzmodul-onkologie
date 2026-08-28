@@ -38,7 +38,7 @@ Hierbei müssen zusätzlich zu den beiden oberen Datenpunkte folgende Elemente f
 
 * Derived from this Profile: [MII PR Onkologie Specimen](StructureDefinition-mii-pr-onko-krk-specimen.md)
 * Refer to this Profile: [MII PR Onkologie Befund](StructureDefinition-mii-pr-onko-befund.md), [MII PR Onkologie Genetische Variante](StructureDefinition-mii-pr-onko-genetische-variante.md), [MII PR Onkologie Histologie ICD-O-3](StructureDefinition-mii-pr-onko-histologie-icdo3.md) and [MII PR Onkologie TNM-Klassifikation](StructureDefinition-mii-pr-onko-tnm-klassifikation.md)
-* Examples for this Profile: [Specimen/mii-exa-onko-specimen-1](Specimen-mii-exa-onko-specimen-1.md)
+* Examples for this Profile: [Specimen/mii-exa-onko-prostata-specimen-stanze](Specimen-mii-exa-onko-prostata-specimen-stanze.md) and [Specimen/mii-exa-onko-specimen-1](Specimen-mii-exa-onko-specimen-1.md)
 * CapabilityStatements using this Profile: [MII CPS Onkology CapabilityStatement](CapabilityStatement-mii-cps-onko-capabilitystatement.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.onkologie|current/StructureDefinition/StructureDefinition-mii-pr-onko-specimen.json)
@@ -122,7 +122,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_Specimen",
   "title" : "MII PR Onkologie Specimen",
   "status" : "active",
-  "date" : "2026-08-28T08:03:44+00:00",
+  "date" : "2026-08-28T09:05:47+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

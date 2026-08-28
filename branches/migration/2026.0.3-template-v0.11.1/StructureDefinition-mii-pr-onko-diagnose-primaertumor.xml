@@ -129,7 +129,7 @@
     </extension>
   </title>
   <status value="active"/>
-  <date value="2026-08-28T08:03:44+00:00"/>
+  <date value="2026-08-28T09:05:47+00:00"/>
   <publisher value="Medizininformatik Initiative"/>
   <contact>
     <name value="Medizininformatik Initiative"/>
@@ -972,6 +972,7 @@
           </extension>
         </extension>
       </definition>
+      <comment value="An der Diagnose können mehrere Morphologie-Angaben stehen (0..*) — etwa bei gemischter Histologie oder Re-Klassifikation im Krankheitsverlauf. Befundbezogen wird jede Morphologie zusätzlich als Histologie-Observation (mii-pr-onko-histologie-icdo3) dokumentiert: dort genau eine Morphologie je Befund, mit Specimen- und Datumsbezug."/>
       <min value="0"/>
       <max value="*"/>
       <base>
@@ -10275,6 +10276,7 @@
           </extension>
         </extension>
       </definition>
+      <comment value="An der Diagnose können mehrere Morphologie-Angaben stehen (0..*) — etwa bei gemischter Histologie oder Re-Klassifikation im Krankheitsverlauf. Befundbezogen wird jede Morphologie zusätzlich als Histologie-Observation (mii-pr-onko-histologie-icdo3) dokumentiert: dort genau eine Morphologie je Befund, mit Specimen- und Datumsbezug."/>
       <min value="0"/>
       <max value="*"/>
       <type>

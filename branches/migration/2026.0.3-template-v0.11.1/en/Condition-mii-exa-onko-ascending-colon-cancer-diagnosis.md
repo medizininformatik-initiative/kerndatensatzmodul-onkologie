@@ -24,9 +24,9 @@ Profile: [MII PR Onkologie Diagnose Primärtumor](StructureDefinition-mii-pr-onk
 
 **code**: Bösartige Neubildung: Colon ascendens
 
-**subject**: [Patient/example-modification](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example-modification)
+**subject**: [Martin Beispiel Male, DoB: 1958-11-03](Patient-example-modification.md)
 
-**encounter**: [Encounter/example-diagnosis-modification](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Encounter/example-diagnosis-modification)
+**encounter**: [Encounter: status = finished; class = ambulatory (ActCode#AMB)](Encounter-example-diagnosis-modification.md)
 
 **onset**: 2024-01-20
 

@@ -1008,6 +1008,83 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/example"/>
+      </reference>
+      <name value="Beispiel-Kontakt (Anker)"/>
+      <description value="Minimaler Anker-Kontakt für die generischen Referenzen Encounter/example."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/example-chemo-phase1"/>
+      </reference>
+      <name value="Beispiel-Kontakt Chemotherapie Phase 1 (Anker)"/>
+      <description value="Minimaler Anker-Kontakt für Encounter/example-chemo-phase1."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/example-chemo-phase2"/>
+      </reference>
+      <name value="Beispiel-Kontakt Chemotherapie Phase 2 (Anker)"/>
+      <description value="Minimaler Anker-Kontakt für Encounter/example-chemo-phase2."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/example-diagnosis-modification"/>
+      </reference>
+      <name value="Beispiel-Kontakt Diagnosestellung FOLFOX-Modifikation (Anker)"/>
+      <description value="Minimaler Anker-Kontakt für Encounter/example-diagnosis-modification."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/example-surgery-modification"/>
+      </reference>
+      <name value="Beispiel-Kontakt Operation FOLFOX-Modifikation (Anker)"/>
+      <description value="Minimaler Anker-Kontakt für Encounter/example-surgery-modification."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/example"/>
+      </reference>
+      <name value="Beispiel-Patient (Anker)"/>
+      <description value="Minimaler Anker-Patient für die generischen Referenzen Patient/example in den Beispielen des Moduls."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/example-modification"/>
+      </reference>
+      <name value="Beispiel-Patient FOLFOX-Modifikation (Anker)"/>
+      <description value="Minimaler Anker-Patient für das FOLFOX-Modifikations-Szenario (Patient/example-modification)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="MedicationStatement"/>
       </extension>
       <reference>
@@ -1145,6 +1222,39 @@
       <name value="FOLFOX - Oxaliplatin tatsächlich verabreicht"/>
       <description value="Oxaliplatin medication statement as part of FOLFOX4 protocol"/>
       <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/mii-exa-onko-folfox-encounter-chemo"/>
+      </reference>
+      <name value="FOLFOX Kontakt Chemotherapie"/>
+      <description value="Ambulanter Kontakt, unter dem die FOLFOX-Chemotherapie appliziert wurde"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/mii-exa-onko-folfox-encounter-diagnosis"/>
+      </reference>
+      <name value="FOLFOX Kontakt Diagnosestellung"/>
+      <description value="Ambulanter Kontakt, in dem die Kolonkarzinom-Diagnose gestellt und gestaged wurde"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/mii-exa-onko-folfox-encounter-surgery"/>
+      </reference>
+      <name value="FOLFOX Kontakt Sigmaresektion"/>
+      <description value="Stationärer Kontakt der Sigmaresektion samt zugehöriger Teilprozeduren"/>
+      <exampleBoolean value="true"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -2917,6 +3027,17 @@
       </reference>
       <name value="MII EXA Onkologie Diagnose t-AML nach Chemotherapie (dueTo)"/>
       <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/mii-exa-onko-prostata-specimen-stanze"/>
+      </reference>
+      <name value="MII EXA Onkologie Prostata Stanzbiopsie Specimen"/>
+      <description value="Gewebeprobe einer Prostata-Stanzbiopsie, auf die sich die Befunde zum Karzinombefall der Stanze beziehen."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-specimen"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

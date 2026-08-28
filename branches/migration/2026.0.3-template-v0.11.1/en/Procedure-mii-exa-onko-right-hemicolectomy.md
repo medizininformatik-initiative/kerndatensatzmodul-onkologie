@@ -22,9 +22,9 @@ Profile: [MII PR Onkologie Operation](StructureDefinition-mii-pr-onko-operation.
 
 **code**: Laparoskopische Hemikolektomie rechts mit Lymphknotendissektion
 
-**subject**: [Patient/example-modification](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example-modification)
+**subject**: [Martin Beispiel Male, DoB: 1958-11-03](Patient-example-modification.md)
 
-**encounter**: [Encounter/example-surgery-modification](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Encounter/example-surgery-modification)
+**encounter**: [Encounter: status = finished; class = inpatient encounter (ActCode#IMP)](Encounter-example-surgery-modification.md)
 
 **performed**: 2024-02-20
 

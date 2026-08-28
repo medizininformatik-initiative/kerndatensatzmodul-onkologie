@@ -18,7 +18,7 @@ Profile: [MII PR Onkologie TNM T-Kategorie](StructureDefinition-mii-pr-onko-tnm-
 
 **code**: pT category (observable entity)
 
-**subject**: [Patient/example-modification](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example-modification)
+**subject**: [Martin Beispiel Male, DoB: 1958-11-03](Patient-example-modification.md)
 
 **focus**: [Condition Bösartige Neubildung: Colon ascendens](Condition-mii-exa-onko-ascending-colon-cancer-diagnosis.md)
 

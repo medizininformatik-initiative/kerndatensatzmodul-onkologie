@@ -16,7 +16,7 @@
 
 **event**: Oxaliplatin-induced peripheral neuropathy, grade 3 (CTCAE v5.0)
 
-**subject**: [Patient/example-modification](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example-modification)
+**subject**: [Martin Beispiel Male, DoB: 1958-11-03](Patient-example-modification.md)
 
 **date**: 2024-06-10
 

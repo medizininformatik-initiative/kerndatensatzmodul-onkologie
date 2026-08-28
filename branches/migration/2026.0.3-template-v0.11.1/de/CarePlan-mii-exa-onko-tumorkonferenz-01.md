@@ -22,7 +22,7 @@ Profile: [MII PR Onkologie Tumorkonferenz](StructureDefinition-mii-pr-onko-tumor
 
 **category**: postoperative Tumorkonferenz (Planung der postoperativen Therapie, z. B. zur Frage adjuvante Therapie)
 
-**subject**: [Patient/example](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example)
+**subject**: [Erika Beispiel Female, DoB: 1965-04-12](Patient-example.md)
 
 **created**: 2024-01-11
 

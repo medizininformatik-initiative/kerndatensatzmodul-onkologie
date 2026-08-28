@@ -403,6 +403,13 @@ Dies sind Beispielinstanzen, die zeigen, wie Daten aussehen könnten, die von Sy
 | [ Beispiel Strahlentherapie oBDS 2014 - Mamma mit Lymphknoten (3.1.+)  ](Procedure-mii-exa-onko-strahlentherapie-2014-mamma-mit-lk.md) | oBDS 2014: Ein Bestrahlungsverfahren für Mamma inklusive Lymphknoten als kombinierter Code |
 | [ Beispiel Strahlentherapie oBDS 2021 - Axilläre Lymphknoten  ](Procedure-mii-exa-onko-strahlentherapie-2021-mamma-lymphknoten.md) | oBDS 2021: Bestrahlung der axillären Lymphknoten (entspricht 2014 '3.1.+' Lymphknotenanteil) |
 | [ Beispiel Strahlentherapie oBDS 2021 - Mamma Primärzielgebiet  ](Procedure-mii-exa-onko-strahlentherapie-2021-mamma-primaer.md) | oBDS 2021: Bestrahlung der Mamma als Primärzielgebiet (entspricht 2014 '3.1.+' Organanteil) |
+| [ Beispiel-Kontakt (Anker)  ](Encounter-example.md) | Minimaler Anker-Kontakt für die generischen Referenzen Encounter/example. |
+| [ Beispiel-Kontakt Chemotherapie Phase 1 (Anker)  ](Encounter-example-chemo-phase1.md) | Minimaler Anker-Kontakt für Encounter/example-chemo-phase1. |
+| [ Beispiel-Kontakt Chemotherapie Phase 2 (Anker)  ](Encounter-example-chemo-phase2.md) | Minimaler Anker-Kontakt für Encounter/example-chemo-phase2. |
+| [ Beispiel-Kontakt Diagnosestellung FOLFOX-Modifikation (Anker)  ](Encounter-example-diagnosis-modification.md) | Minimaler Anker-Kontakt für Encounter/example-diagnosis-modification. |
+| [ Beispiel-Kontakt Operation FOLFOX-Modifikation (Anker)  ](Encounter-example-surgery-modification.md) | Minimaler Anker-Kontakt für Encounter/example-surgery-modification. |
+| [ Beispiel-Patient (Anker)  ](Patient-example.md) | Minimaler Anker-Patient für die generischen Referenzen Patient/example in den Beispielen des Moduls. |
+| [ Beispiel-Patient FOLFOX-Modifikation (Anker)  ](Patient-example-modification.md) | Minimaler Anker-Patient für das FOLFOX-Modifikations-Szenario (Patient/example-modification). |
 | [ Example Primaertumor Condition for Extended Examples  ](Condition-primaertumor-example.md) | Minimal primaertumor condition for referencing in molecular tumor board examples |
 | [ Example chemotherapy 1  ](MedicationStatement-mii-exa-onko-systemische-therapie-medikation1.md) | Example for the FHIR profile systemic therapy based on German |
 | [ Example chemotherapy 2  ](MedicationStatement-mii-exa-onko-systemische-therapie-medikation2.md) | Example for the FHIR profile systemic therapy based on German |
@@ -416,6 +423,9 @@ Dies sind Beispielinstanzen, die zeigen, wie Daten aussehen könnten, die von Sy
 | [ FOLFOX - Folinsäure tatsächlich verabreicht  ](MedicationStatement-mii-exa-onko-folfox-leucovorin-statement.md) | Folinic acid (Leucovorin) medication statement as part of FOLFOX4 protocol |
 | [ FOLFOX - Oxaliplatin MedicationRequest  ](MedicationRequest-mii-exa-onko-folfox-oxaliplatin-request.md) |  |
 | [ FOLFOX - Oxaliplatin tatsächlich verabreicht  ](MedicationStatement-mii-exa-onko-folfox-oxaliplatin-statement.md) | Oxaliplatin medication statement as part of FOLFOX4 protocol |
+| [ FOLFOX Kontakt Chemotherapie  ](Encounter-mii-exa-onko-folfox-encounter-chemo.md) | Ambulanter Kontakt, unter dem die FOLFOX-Chemotherapie appliziert wurde |
+| [ FOLFOX Kontakt Diagnosestellung  ](Encounter-mii-exa-onko-folfox-encounter-diagnosis.md) | Ambulanter Kontakt, in dem die Kolonkarzinom-Diagnose gestellt und gestaged wurde |
+| [ FOLFOX Kontakt Sigmaresektion  ](Encounter-mii-exa-onko-folfox-encounter-surgery.md) | Stationärer Kontakt der Sigmaresektion samt zugehöriger Teilprozeduren |
 | [ FOLFOX Patient - 65-jähriger mit Kolonkarzinom  ](Patient-mii-exa-onko-folfox-patient.md) | Patient for FOLFOX colorectal cancer treatment example |
 | [ FOLFOX Systemische Therapie (tatsächlich durchgeführt)  ](Procedure-mii-exa-onko-folfox-procedure.md) | Actual FOLFOX chemotherapy given, linked back to tumor board recommendation |
 | [ FOLFOX Therapieempfehlung (RequestGroup)  ](RequestGroup-mii-exa-onko-folfox-requestgroup.md) | Tumor board recommendation for FOLFOX protocol with therapy type and protocol coding |
@@ -467,6 +477,7 @@ Dies sind Beispielinstanzen, die zeigen, wie Daten aussehen könnten, die von Sy
 | [ MII EXA Onkologie Diagnose radiogenes Angiosarkom nach Strahlentherapie (dueTo)  ](Condition-mii-exa-onko-diagnose-angiosarkom-nach-radiatio.md) |  |
 | [ MII EXA Onkologie Diagnose sekundäre AML (Transformation aus MDS)  ](Condition-mii-exa-onko-diagnose-aml-transformation.md) |  |
 | [ MII EXA Onkologie Diagnose t-AML nach Chemotherapie (dueTo)  ](Condition-mii-exa-onko-diagnose-taml-nach-chemo.md) |  |
+| [ MII EXA Onkologie Prostata Stanzbiopsie Specimen  ](Specimen-mii-exa-onko-prostata-specimen-stanze.md) | Gewebeprobe einer Prostata-Stanzbiopsie, auf die sich die Befunde zum Karzinombefall der Stanze beziehen. |
 | [ MII EXA Onkologie Strahlentherapie PCI bei SCLC (prophylaktisch)  ](Procedure-mii-exa-onko-strahlentherapie-pci-sclc.md) |  |
 | [ MII EXA Onkologie TNM Klassifikation CUP (cTX cNX cM1, ohne Stadium)  ](Observation-mii-exa-onko-cup-tnm-klassifikation.md) |  |
 | [ MedicationRequest - Fluorouracil (vollständig verabreicht)  ](MedicationRequest-mii-exa-onko-modification-5fu-request.md) | Fluorouracil recommendation - completed for all 12 cycles |

@@ -22,7 +22,7 @@ Profile: [MII PR Onkologie Frühere Tumorerkrankung](StructureDefinition-mii-pr-
 
 **code**: Hautkrebs am Rücken, ca. 2010
 
-**subject**: [Patient/example](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example)
+**subject**: [Erika Beispiel Female, DoB: 1965-04-12](Patient-example.md)
 
 **recordedDate**: 2024-06-14
 

@@ -26,7 +26,7 @@ Profile: [MII PR Onkologie Ca-Befall Stanze](StructureDefinition-mii-pr-onko-pro
 
 **value**: 80 %
 
-**specimen**: [Specimen/exampleProstateBiopsySlide](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Specimen/exampleProstateBiopsySlide)
+**specimen**: [Specimen: accessionIdentifier = P-2024-000812](Specimen-mii-exa-onko-prostata-specimen-stanze.md)
 
 
 
@@ -59,7 +59,7 @@ Profile: [MII PR Onkologie Ca-Befall Stanze](StructureDefinition-mii-pr-onko-pro
     "unit" : "%"
   },
   "specimen" : {
-    "reference" : "Specimen/exampleProstateBiopsySlide"
+    "reference" : "Specimen/mii-exa-onko-prostata-specimen-stanze"
   }
 }
 

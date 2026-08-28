@@ -106,7 +106,7 @@ This publication includes IP covered under the following statements.
 * [Provenance participant type](http://terminology.hl7.org/7.3.0/CodeSystem-provenance-participant-type.html): [Bundle/mii-exa-onko-kim-musterperson-synthesized](Bundle-mii-exa-onko-kim-musterperson-synthesized.md) and [Provenance/mii-exa-onko-kim-synthesis-provenance](Provenance-mii-exa-onko-kim-synthesis-provenance.md)
 * [ResearchStudyPrimaryPurposeType](http://terminology.hl7.org/7.3.0/CodeSystem-research-study-prim-purp-type.html): [ResearchStudy/mii-exa-onko-studie-prob](ResearchStudy-mii-exa-onko-studie-prob.md)
 * [diagnosticServiceSectionId](http://terminology.hl7.org/7.3.0/CodeSystem-v2-0074.html): [MII_PR_Onko_Genetische_Variante](StructureDefinition-mii-pr-onko-genetische-variante.md) and [Observation/mii-exa-onko-genetische-variante-braf](Observation-mii-exa-onko-genetische-variante-braf.md)
-* [ActCode](http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html): [Bundle/mii-exa-onko-krk-bundle](Bundle-mii-exa-onko-krk-bundle.md), [Bundle/mii-exa-onko-mamma-example-bundle-1](Bundle-mii-exa-onko-mamma-example-bundle-1.md)... Show 6 more, [Bundle/mii-exa-onko-melanom-bundle](Bundle-mii-exa-onko-melanom-bundle.md), [Bundle/mii-exa-onko-prostata-example-bundle-1](Bundle-mii-exa-onko-prostata-example-bundle-1.md), [Encounter/mii-exa-onko-krk-bundle-encounter](Encounter-mii-exa-onko-krk-bundle-encounter.md), [Encounter/mii-exa-onko-mamma-bundle-encounter](Encounter-mii-exa-onko-mamma-bundle-encounter.md), [Encounter/mii-exa-onko-melanom-bundle-encounter](Encounter-mii-exa-onko-melanom-bundle-encounter.md) and [Encounter/mii-exa-onko-prostata-bundle-encounter](Encounter-mii-exa-onko-prostata-bundle-encounter.md)
+* [ActCode](http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html): [Bundle/mii-exa-onko-folfox-workflow-bundle](Bundle-mii-exa-onko-folfox-workflow-bundle.md), [Bundle/mii-exa-onko-krk-bundle](Bundle-mii-exa-onko-krk-bundle.md)... Show 15 more, [Bundle/mii-exa-onko-mamma-example-bundle-1](Bundle-mii-exa-onko-mamma-example-bundle-1.md), [Bundle/mii-exa-onko-melanom-bundle](Bundle-mii-exa-onko-melanom-bundle.md), [Bundle/mii-exa-onko-prostata-example-bundle-1](Bundle-mii-exa-onko-prostata-example-bundle-1.md), [Encounter/example](Encounter-example.md), [Encounter/example-chemo-phase1](Encounter-example-chemo-phase1.md), [Encounter/example-chemo-phase2](Encounter-example-chemo-phase2.md), [Encounter/example-diagnosis-modification](Encounter-example-diagnosis-modification.md), [Encounter/example-surgery-modification](Encounter-example-surgery-modification.md), [Encounter/mii-exa-onko-folfox-encounter-chemo](Encounter-mii-exa-onko-folfox-encounter-chemo.md), [Encounter/mii-exa-onko-folfox-encounter-diagnosis](Encounter-mii-exa-onko-folfox-encounter-diagnosis.md), [Encounter/mii-exa-onko-folfox-encounter-surgery](Encounter-mii-exa-onko-folfox-encounter-surgery.md), [Encounter/mii-exa-onko-krk-bundle-encounter](Encounter-mii-exa-onko-krk-bundle-encounter.md), [Encounter/mii-exa-onko-mamma-bundle-encounter](Encounter-mii-exa-onko-mamma-bundle-encounter.md), [Encounter/mii-exa-onko-melanom-bundle-encounter](Encounter-mii-exa-onko-melanom-bundle-encounter.md) and [Encounter/mii-exa-onko-prostata-bundle-encounter](Encounter-mii-exa-onko-prostata-bundle-encounter.md)
 * [ObservationInterpretation](http://terminology.hl7.org/7.3.0/CodeSystem-v3-ObservationInterpretation.html): [Bundle/mii-exa-onko-melanom-bundle](Bundle-mii-exa-onko-melanom-bundle.md) and [Observation/mii-exa-onko-melanom-ldh](Observation-mii-exa-onko-melanom-ldh.md)
 
 
@@ -1483,6 +1483,118 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Encounter-example.html"
+      }],
+      "reference" : {
+        "reference" : "Encounter/example"
+      },
+      "name" : "Beispiel-Kontakt (Anker)",
+      "description" : "Minimaler Anker-Kontakt für die generischen Referenzen Encounter/example.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Encounter-example-chemo-phase1.html"
+      }],
+      "reference" : {
+        "reference" : "Encounter/example-chemo-phase1"
+      },
+      "name" : "Beispiel-Kontakt Chemotherapie Phase 1 (Anker)",
+      "description" : "Minimaler Anker-Kontakt für Encounter/example-chemo-phase1.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Encounter-example-chemo-phase2.html"
+      }],
+      "reference" : {
+        "reference" : "Encounter/example-chemo-phase2"
+      },
+      "name" : "Beispiel-Kontakt Chemotherapie Phase 2 (Anker)",
+      "description" : "Minimaler Anker-Kontakt für Encounter/example-chemo-phase2.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Encounter-example-diagnosis-modification.html"
+      }],
+      "reference" : {
+        "reference" : "Encounter/example-diagnosis-modification"
+      },
+      "name" : "Beispiel-Kontakt Diagnosestellung FOLFOX-Modifikation (Anker)",
+      "description" : "Minimaler Anker-Kontakt für Encounter/example-diagnosis-modification.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Encounter-example-surgery-modification.html"
+      }],
+      "reference" : {
+        "reference" : "Encounter/example-surgery-modification"
+      },
+      "name" : "Beispiel-Kontakt Operation FOLFOX-Modifikation (Anker)",
+      "description" : "Minimaler Anker-Kontakt für Encounter/example-surgery-modification.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Patient-example.html"
+      }],
+      "reference" : {
+        "reference" : "Patient/example"
+      },
+      "name" : "Beispiel-Patient (Anker)",
+      "description" : "Minimaler Anker-Patient für die generischen Referenzen Patient/example in den Beispielen des Moduls.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Patient-example-modification.html"
+      }],
+      "reference" : {
+        "reference" : "Patient/example-modification"
+      },
+      "name" : "Beispiel-Patient FOLFOX-Modifikation (Anker)",
+      "description" : "Minimaler Anker-Patient für das FOLFOX-Modifikations-Szenario (Patient/example-modification).",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "MedicationStatement"
       },
       {
@@ -1684,6 +1796,54 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       "name" : "FOLFOX - Oxaliplatin tatsächlich verabreicht",
       "description" : "Oxaliplatin medication statement as part of FOLFOX4 protocol",
       "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Encounter-mii-exa-onko-folfox-encounter-chemo.html"
+      }],
+      "reference" : {
+        "reference" : "Encounter/mii-exa-onko-folfox-encounter-chemo"
+      },
+      "name" : "FOLFOX Kontakt Chemotherapie",
+      "description" : "Ambulanter Kontakt, unter dem die FOLFOX-Chemotherapie appliziert wurde",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Encounter-mii-exa-onko-folfox-encounter-diagnosis.html"
+      }],
+      "reference" : {
+        "reference" : "Encounter/mii-exa-onko-folfox-encounter-diagnosis"
+      },
+      "name" : "FOLFOX Kontakt Diagnosestellung",
+      "description" : "Ambulanter Kontakt, in dem die Kolonkarzinom-Diagnose gestellt und gestaged wurde",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Encounter-mii-exa-onko-folfox-encounter-surgery.html"
+      }],
+      "reference" : {
+        "reference" : "Encounter/mii-exa-onko-folfox-encounter-surgery"
+      },
+      "name" : "FOLFOX Kontakt Sigmaresektion",
+      "description" : "Stationärer Kontakt der Sigmaresektion samt zugehöriger Teilprozeduren",
+      "exampleBoolean" : true
     },
     {
       "extension" : [{
@@ -4266,6 +4426,22 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       "name" : "MII EXA Onkologie Diagnose t-AML nach Chemotherapie (dueTo)",
       "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Specimen-mii-exa-onko-prostata-specimen-stanze.html"
+      }],
+      "reference" : {
+        "reference" : "Specimen/mii-exa-onko-prostata-specimen-stanze"
+      },
+      "name" : "MII EXA Onkologie Prostata Stanzbiopsie Specimen",
+      "description" : "Gewebeprobe einer Prostata-Stanzbiopsie, auf die sich die Befunde zum Karzinombefall der Stanze beziehen.",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-specimen"
     },
     {
       "extension" : [{

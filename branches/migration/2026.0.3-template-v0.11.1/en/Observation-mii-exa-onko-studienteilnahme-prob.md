@@ -18,7 +18,7 @@ Profile: [MII PR Onkologie Studienteilnahme](StructureDefinition-mii-pr-onko-stu
 
 **code**: Enrollment in clinical trial (procedure)
 
-**subject**: [Patient/example](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example)
+**subject**: [Erika Beispiel Female, DoB: 1965-04-12](Patient-example.md)
 
 **focus**: 
 

@@ -18,7 +18,7 @@ Profile: [MII PR Onkologie Weitere Klassifikationen](StructureDefinition-mii-pr-
 
 **code**: FIGO Grading für gynäkologische Tumore
 
-**subject**: [Patient/example](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example)
+**subject**: [Erika Beispiel Female, DoB: 1965-04-12](Patient-example.md)
 
 **focus**: [Condition Bösartige Neubildung: Brustdrüse, nicht näher bezeichnet](Condition-primaertumor-example.md)
 
@@ -26,7 +26,7 @@ Profile: [MII PR Onkologie Weitere Klassifikationen](StructureDefinition-mii-pr-
 
 **value**: FIGO Grad 2
 
-**specimen**: [Specimen/example](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Specimen/example)
+**specimen**: [Specimen: accessionIdentifier = 357532265](Specimen-mii-exa-onko-specimen-1.md)
 
 
 
@@ -64,7 +64,7 @@ Profile: [MII PR Onkologie Weitere Klassifikationen](StructureDefinition-mii-pr-
     "text" : "FIGO Grad 2"
   },
   "specimen" : {
-    "reference" : "Specimen/example"
+    "reference" : "Specimen/mii-exa-onko-specimen-1"
   }
 }
 

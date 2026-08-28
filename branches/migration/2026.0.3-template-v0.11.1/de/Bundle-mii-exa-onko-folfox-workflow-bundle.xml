@@ -28,6 +28,69 @@
     </resource>
   </entry>
   <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-folfox-encounter-diagnosis"/>
+    <resource>
+      <Encounter>
+        <id value="mii-exa-onko-folfox-encounter-diagnosis"/>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="finished"/>
+        <class>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+          <code value="AMB"/>
+          <display value="ambulatory"/>
+        </class>
+        <subject>
+          <reference value="Patient/mii-exa-onko-folfox-patient"/>
+        </subject>
+      </Encounter>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-folfox-encounter-surgery"/>
+    <resource>
+      <Encounter>
+        <id value="mii-exa-onko-folfox-encounter-surgery"/>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="finished"/>
+        <class>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+          <code value="IMP"/>
+          <display value="inpatient encounter"/>
+        </class>
+        <subject>
+          <reference value="Patient/mii-exa-onko-folfox-patient"/>
+        </subject>
+      </Encounter>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-folfox-encounter-chemo"/>
+    <resource>
+      <Encounter>
+        <id value="mii-exa-onko-folfox-encounter-chemo"/>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="finished"/>
+        <class>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+          <code value="AMB"/>
+          <display value="ambulatory"/>
+        </class>
+        <subject>
+          <reference value="Patient/mii-exa-onko-folfox-patient"/>
+        </subject>
+      </Encounter>
+    </resource>
+  </entry>
+  <entry>
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-colorectal-cancer-diagnosis"/>
     <resource>
       <Condition>
@@ -72,7 +135,7 @@
           <reference value="Patient/mii-exa-onko-folfox-patient"/>
         </subject>
         <encounter>
-          <reference value="Encounter/example-diagnosis"/>
+          <reference value="Encounter/mii-exa-onko-folfox-encounter-diagnosis"/>
         </encounter>
         <onsetDateTime value="2024-01-15"/>
         <recordedDate value="2024-01-15"/>
@@ -527,7 +590,7 @@
           <reference value="Patient/mii-exa-onko-folfox-patient"/>
         </subject>
         <encounter>
-          <reference value="Encounter/example-surgery"/>
+          <reference value="Encounter/mii-exa-onko-folfox-encounter-surgery"/>
         </encounter>
         <performedDateTime value="2024-02-15"/>
         <reasonReference>
@@ -590,7 +653,7 @@
           <reference value="Patient/mii-exa-onko-folfox-patient"/>
         </subject>
         <encounter>
-          <reference value="Encounter/example-surgery"/>
+          <reference value="Encounter/mii-exa-onko-folfox-encounter-surgery"/>
         </encounter>
         <performedDateTime value="2024-02-15"/>
         <reasonReference>
@@ -646,7 +709,7 @@
           <reference value="Patient/mii-exa-onko-folfox-patient"/>
         </subject>
         <encounter>
-          <reference value="Encounter/example-surgery"/>
+          <reference value="Encounter/mii-exa-onko-folfox-encounter-surgery"/>
         </encounter>
         <performedDateTime value="2024-02-15"/>
         <reasonReference>
@@ -702,7 +765,7 @@
           <reference value="Patient/mii-exa-onko-folfox-patient"/>
         </subject>
         <encounter>
-          <reference value="Encounter/example-surgery"/>
+          <reference value="Encounter/mii-exa-onko-folfox-encounter-surgery"/>
         </encounter>
         <performedDateTime value="2024-02-15"/>
         <reasonReference>
@@ -772,7 +835,7 @@
           <reference value="Patient/mii-exa-onko-folfox-patient"/>
         </subject>
         <encounter>
-          <reference value="Encounter/example"/>
+          <reference value="Encounter/mii-exa-onko-folfox-encounter-chemo"/>
         </encounter>
         <performedPeriod>
           <start value="2024-03-20"/>

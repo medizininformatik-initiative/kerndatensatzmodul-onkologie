@@ -38,6 +38,66 @@
     }
   },
   {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-folfox-encounter-diagnosis",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "mii-exa-onko-folfox-encounter-diagnosis",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Encounter_mii-exa-onko-folfox-encounter-diagnosis\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Encounter mii-exa-onko-folfox-encounter-diagnosis</b></p><a name=\"mii-exa-onko-folfox-encounter-diagnosis\"> </a><a name=\"hcmii-exa-onko-folfox-encounter-diagnosis\"> </a><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode: AMB</a> (ambulatory)</p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p></div></div>"
+      },
+      "status" : "finished",
+      "class" : {
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code" : "AMB",
+        "display" : "ambulatory"
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-folfox-patient"
+      }
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-folfox-encounter-surgery",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "mii-exa-onko-folfox-encounter-surgery",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Encounter_mii-exa-onko-folfox-encounter-surgery\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Encounter mii-exa-onko-folfox-encounter-surgery</b></p><a name=\"mii-exa-onko-folfox-encounter-surgery\"> </a><a name=\"hcmii-exa-onko-folfox-encounter-surgery\"> </a><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html#v3-ActCode-IMP\">ActCode: IMP</a> (inpatient encounter)</p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p></div></div>"
+      },
+      "status" : "finished",
+      "class" : {
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code" : "IMP",
+        "display" : "inpatient encounter"
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-folfox-patient"
+      }
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-folfox-encounter-chemo",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "mii-exa-onko-folfox-encounter-chemo",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Encounter_mii-exa-onko-folfox-encounter-chemo\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Encounter mii-exa-onko-folfox-encounter-chemo</b></p><a name=\"mii-exa-onko-folfox-encounter-chemo\"> </a><a name=\"hcmii-exa-onko-folfox-encounter-chemo\"> </a><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode: AMB</a> (ambulatory)</p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p></div></div>"
+      },
+      "status" : "finished",
+      "class" : {
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code" : "AMB",
+        "display" : "ambulatory"
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-folfox-patient"
+      }
+    }
+  },
+  {
     "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-colorectal-cancer-diagnosis",
     "resource" : {
       "resourceType" : "Condition",
@@ -47,7 +107,7 @@
       },
       "text" : {
         "status" : "extensions",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Condition_mii-exa-onko-colorectal-cancer-diagnosis\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition mii-exa-onko-colorectal-cancer-diagnosis</b></p><a name=\"mii-exa-onko-colorectal-cancer-diagnosis\"> </a><a name=\"hcmii-exa-onko-colorectal-cancer-diagnosis\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-diagnose-primaertumor.html\">MII PR Onkologie Diagnose Primärtumor</a></p></div><p><b>Condition Asserted Date</b>: 2024-01-15</p><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category encounter-diagnosis}\">Encounter Diagnosis</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm C18.7}\">Bösartige Neubildung: Colon sigmoideum</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p><p><b>encounter</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Encounter/example-diagnosis\">Encounter/example-diagnosis</a></p><p><b>onset</b>: 2024-01-15</p><p><b>recordedDate</b>: 2024-01-15</p><p><b>note</b>: </p><blockquote><div><p>Adenokarzinom des Colon sigmoideum, Stadium III (T3N1M0)</p>\n</div></blockquote></div></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Condition_mii-exa-onko-colorectal-cancer-diagnosis\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition mii-exa-onko-colorectal-cancer-diagnosis</b></p><a name=\"mii-exa-onko-colorectal-cancer-diagnosis\"> </a><a name=\"hcmii-exa-onko-colorectal-cancer-diagnosis\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-diagnose-primaertumor.html\">MII PR Onkologie Diagnose Primärtumor</a></p></div><p><b>Condition Asserted Date</b>: 2024-01-15</p><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category encounter-diagnosis}\">Encounter Diagnosis</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm C18.7}\">Bösartige Neubildung: Colon sigmoideum</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p><p><b>encounter</b>: <a href=\"Encounter-mii-exa-onko-folfox-encounter-diagnosis.html\">Encounter: status = finished; class = ambulatory (ActCode#AMB)</a></p><p><b>onset</b>: 2024-01-15</p><p><b>recordedDate</b>: 2024-01-15</p><p><b>note</b>: </p><blockquote><div><p>Adenokarzinom des Colon sigmoideum, Stadium III (T3N1M0)</p>\n</div></blockquote></div></div>"
       },
       "extension" : [{
         "url" : "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
@@ -83,7 +143,7 @@
         "reference" : "Patient/mii-exa-onko-folfox-patient"
       },
       "encounter" : {
-        "reference" : "Encounter/example-diagnosis"
+        "reference" : "Encounter/mii-exa-onko-folfox-encounter-diagnosis"
       },
       "onsetDateTime" : "2024-01-15",
       "recordedDate" : "2024-01-15",
@@ -499,7 +559,7 @@
       },
       "text" : {
         "status" : "extensions",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Procedure_mii-exa-onko-sigmoid-resection\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Procedure mii-exa-onko-sigmoid-resection</b></p><a name=\"mii-exa-onko-sigmoid-resection\"> </a><a name=\"hcmii-exa-onko-sigmoid-resection\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-operation.html\">MII PR Onkologie Operation</a></p></div><p><b>MII EX Onko Operation Intention</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}\">Kurativ</span></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 387713003}\">Surgical procedure</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/ops 5-484.5}\">Laparoskopische Sigmaresektion mit TME und Lymphknotendissektion</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p><p><b>encounter</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Encounter/example-surgery\">Encounter/example-surgery</a></p><p><b>performed</b>: 2024-02-15</p><p><b>reasonReference</b>: <a href=\"Condition-mii-exa-onko-colorectal-cancer-diagnosis.html\">Condition Bösartige Neubildung: Colon sigmoideum</a></p><p><b>outcome</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus R0}\">Kein Residualtumor</span></p><p><b>note</b>: </p><blockquote><div><p>Laparoscopic sigmoid resection with TME and lymphadenectomy. No intraoperative complications. Tumor completely resected with clear margins (R0). 18 lymph nodes removed, 3 positive. Surgery performed in 3 components: resection, anastomosis, and lymph node dissection.</p>\n</div></blockquote></div></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Procedure_mii-exa-onko-sigmoid-resection\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Procedure mii-exa-onko-sigmoid-resection</b></p><a name=\"mii-exa-onko-sigmoid-resection\"> </a><a name=\"hcmii-exa-onko-sigmoid-resection\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-operation.html\">MII PR Onkologie Operation</a></p></div><p><b>MII EX Onko Operation Intention</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}\">Kurativ</span></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 387713003}\">Surgical procedure</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/ops 5-484.5}\">Laparoskopische Sigmaresektion mit TME und Lymphknotendissektion</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p><p><b>encounter</b>: <a href=\"Encounter-mii-exa-onko-folfox-encounter-surgery.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP)</a></p><p><b>performed</b>: 2024-02-15</p><p><b>reasonReference</b>: <a href=\"Condition-mii-exa-onko-colorectal-cancer-diagnosis.html\">Condition Bösartige Neubildung: Colon sigmoideum</a></p><p><b>outcome</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus R0}\">Kein Residualtumor</span></p><p><b>note</b>: </p><blockquote><div><p>Laparoscopic sigmoid resection with TME and lymphadenectomy. No intraoperative complications. Tumor completely resected with clear margins (R0). 18 lymph nodes removed, 3 positive. Surgery performed in 3 components: resection, anastomosis, and lymph node dissection.</p>\n</div></blockquote></div></div>"
       },
       "extension" : [{
         "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention",
@@ -532,7 +592,7 @@
         "reference" : "Patient/mii-exa-onko-folfox-patient"
       },
       "encounter" : {
-        "reference" : "Encounter/example-surgery"
+        "reference" : "Encounter/mii-exa-onko-folfox-encounter-surgery"
       },
       "performedDateTime" : "2024-02-15",
       "reasonReference" : [{
@@ -560,7 +620,7 @@
       },
       "text" : {
         "status" : "extensions",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Procedure_mii-exa-onko-sigmoid-resection-part1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Procedure mii-exa-onko-sigmoid-resection-part1</b></p><a name=\"mii-exa-onko-sigmoid-resection-part1\"> </a><a name=\"hcmii-exa-onko-sigmoid-resection-part1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-operation.html\">MII PR Onkologie Operation</a></p></div><p><b>MII EX Onko Operation Intention</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}\">Kurativ</span></p><p><b>partOf</b>: <a href=\"Procedure-mii-exa-onko-sigmoid-resection.html\">Procedure Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion</a></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 387713003}\">Surgical procedure</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/ops 5-484.5}\">Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p><p><b>encounter</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Encounter/example-surgery\">Encounter/example-surgery</a></p><p><b>performed</b>: 2024-02-15</p><p><b>reasonReference</b>: <a href=\"Condition-mii-exa-onko-colorectal-cancer-diagnosis.html\">Condition Bösartige Neubildung: Colon sigmoideum</a></p><p><b>note</b>: </p><blockquote><div><p>Sigmoid colon resected including tumor. End-to-end anastomosis created.</p>\n</div></blockquote></div></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Procedure_mii-exa-onko-sigmoid-resection-part1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Procedure mii-exa-onko-sigmoid-resection-part1</b></p><a name=\"mii-exa-onko-sigmoid-resection-part1\"> </a><a name=\"hcmii-exa-onko-sigmoid-resection-part1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-operation.html\">MII PR Onkologie Operation</a></p></div><p><b>MII EX Onko Operation Intention</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}\">Kurativ</span></p><p><b>partOf</b>: <a href=\"Procedure-mii-exa-onko-sigmoid-resection.html\">Procedure Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion</a></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 387713003}\">Surgical procedure</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/ops 5-484.5}\">Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p><p><b>encounter</b>: <a href=\"Encounter-mii-exa-onko-folfox-encounter-surgery.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP)</a></p><p><b>performed</b>: 2024-02-15</p><p><b>reasonReference</b>: <a href=\"Condition-mii-exa-onko-colorectal-cancer-diagnosis.html\">Condition Bösartige Neubildung: Colon sigmoideum</a></p><p><b>note</b>: </p><blockquote><div><p>Sigmoid colon resected including tumor. End-to-end anastomosis created.</p>\n</div></blockquote></div></div>"
       },
       "extension" : [{
         "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention",
@@ -595,7 +655,7 @@
         "reference" : "Patient/mii-exa-onko-folfox-patient"
       },
       "encounter" : {
-        "reference" : "Encounter/example-surgery"
+        "reference" : "Encounter/mii-exa-onko-folfox-encounter-surgery"
       },
       "performedDateTime" : "2024-02-15",
       "reasonReference" : [{
@@ -616,7 +676,7 @@
       },
       "text" : {
         "status" : "extensions",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Procedure_mii-exa-onko-sigmoid-resection-part2\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Procedure mii-exa-onko-sigmoid-resection-part2</b></p><a name=\"mii-exa-onko-sigmoid-resection-part2\"> </a><a name=\"hcmii-exa-onko-sigmoid-resection-part2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-operation.html\">MII PR Onkologie Operation</a></p></div><p><b>MII EX Onko Operation Intention</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}\">Kurativ</span></p><p><b>partOf</b>: <a href=\"Procedure-mii-exa-onko-sigmoid-resection.html\">Procedure Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion</a></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 387713003}\">Surgical procedure</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/ops 5-407.0}\">Radikale (systematische) Lymphadenektomie im Rahmen einer anderen Operation: Axillär</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p><p><b>encounter</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Encounter/example-surgery\">Encounter/example-surgery</a></p><p><b>performed</b>: 2024-02-15</p><p><b>reasonReference</b>: <a href=\"Condition-mii-exa-onko-colorectal-cancer-diagnosis.html\">Condition Bösartige Neubildung: Colon sigmoideum</a></p><p><b>note</b>: </p><blockquote><div><p>Regional lymph node dissection performed. 18 lymph nodes removed from mesenteric and para-aortic regions.</p>\n</div></blockquote></div></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Procedure_mii-exa-onko-sigmoid-resection-part2\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Procedure mii-exa-onko-sigmoid-resection-part2</b></p><a name=\"mii-exa-onko-sigmoid-resection-part2\"> </a><a name=\"hcmii-exa-onko-sigmoid-resection-part2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-operation.html\">MII PR Onkologie Operation</a></p></div><p><b>MII EX Onko Operation Intention</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}\">Kurativ</span></p><p><b>partOf</b>: <a href=\"Procedure-mii-exa-onko-sigmoid-resection.html\">Procedure Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion</a></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 387713003}\">Surgical procedure</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/ops 5-407.0}\">Radikale (systematische) Lymphadenektomie im Rahmen einer anderen Operation: Axillär</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p><p><b>encounter</b>: <a href=\"Encounter-mii-exa-onko-folfox-encounter-surgery.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP)</a></p><p><b>performed</b>: 2024-02-15</p><p><b>reasonReference</b>: <a href=\"Condition-mii-exa-onko-colorectal-cancer-diagnosis.html\">Condition Bösartige Neubildung: Colon sigmoideum</a></p><p><b>note</b>: </p><blockquote><div><p>Regional lymph node dissection performed. 18 lymph nodes removed from mesenteric and para-aortic regions.</p>\n</div></blockquote></div></div>"
       },
       "extension" : [{
         "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention",
@@ -651,7 +711,7 @@
         "reference" : "Patient/mii-exa-onko-folfox-patient"
       },
       "encounter" : {
-        "reference" : "Encounter/example-surgery"
+        "reference" : "Encounter/mii-exa-onko-folfox-encounter-surgery"
       },
       "performedDateTime" : "2024-02-15",
       "reasonReference" : [{
@@ -672,7 +732,7 @@
       },
       "text" : {
         "status" : "extensions",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Procedure_mii-exa-onko-sigmoid-resection-part3\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Procedure mii-exa-onko-sigmoid-resection-part3</b></p><a name=\"mii-exa-onko-sigmoid-resection-part3\"> </a><a name=\"hcmii-exa-onko-sigmoid-resection-part3\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-operation.html\">MII PR Onkologie Operation</a></p></div><p><b>MII EX Onko Operation Intention</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}\">Kurativ</span></p><p><b>partOf</b>: <a href=\"Procedure-mii-exa-onko-sigmoid-resection.html\">Procedure Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion</a></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 387713003}\">Surgical procedure</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/ops 5-986.x}\">Minimalinvasive Technik: Sonstige</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p><p><b>encounter</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Encounter/example-surgery\">Encounter/example-surgery</a></p><p><b>performed</b>: 2024-02-15</p><p><b>reasonReference</b>: <a href=\"Condition-mii-exa-onko-colorectal-cancer-diagnosis.html\">Condition Bösartige Neubildung: Colon sigmoideum</a></p><p><b>note</b>: </p><blockquote><div><p>Four laparoscopic ports placed for minimally invasive approach.</p>\n</div></blockquote></div></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Procedure_mii-exa-onko-sigmoid-resection-part3\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Procedure mii-exa-onko-sigmoid-resection-part3</b></p><a name=\"mii-exa-onko-sigmoid-resection-part3\"> </a><a name=\"hcmii-exa-onko-sigmoid-resection-part3\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-operation.html\">MII PR Onkologie Operation</a></p></div><p><b>MII EX Onko Operation Intention</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}\">Kurativ</span></p><p><b>partOf</b>: <a href=\"Procedure-mii-exa-onko-sigmoid-resection.html\">Procedure Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion</a></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 387713003}\">Surgical procedure</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/ops 5-986.x}\">Minimalinvasive Technik: Sonstige</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p><p><b>encounter</b>: <a href=\"Encounter-mii-exa-onko-folfox-encounter-surgery.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP)</a></p><p><b>performed</b>: 2024-02-15</p><p><b>reasonReference</b>: <a href=\"Condition-mii-exa-onko-colorectal-cancer-diagnosis.html\">Condition Bösartige Neubildung: Colon sigmoideum</a></p><p><b>note</b>: </p><blockquote><div><p>Four laparoscopic ports placed for minimally invasive approach.</p>\n</div></blockquote></div></div>"
       },
       "extension" : [{
         "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention",
@@ -707,7 +767,7 @@
         "reference" : "Patient/mii-exa-onko-folfox-patient"
       },
       "encounter" : {
-        "reference" : "Encounter/example-surgery"
+        "reference" : "Encounter/mii-exa-onko-folfox-encounter-surgery"
       },
       "performedDateTime" : "2024-02-15",
       "reasonReference" : [{
@@ -728,7 +788,7 @@
       },
       "text" : {
         "status" : "extensions",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Procedure_mii-exa-onko-folfox-procedure\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Procedure mii-exa-onko-folfox-procedure</b></p><a name=\"mii-exa-onko-folfox-procedure\"> </a><a name=\"hcmii-exa-onko-folfox-procedure\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-systemische-therapie.html\">MII PR Onkologie Systemische Therapie</a></p></div><p><b>MII EX Onko Systemische Therapie Intention</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}\">Kurativ</span></p><p><b>MII EX Onko Systemische Therapie Stellung zur OP</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop A}\">Adjuvant</span></p><p><b>basedOn</b>: <a href=\"CarePlan-mii-exa-onko-tumorkonferenz-folfox.html\">CarePlan: identifier = Tumorkonferenz_FOLFOX_001; status = active; intent = plan; category = prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie); created = 2024-03-10</a></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 277132007}\">Therapeutic procedure</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/ops 8-542}, {https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art CH}\">Nicht komplexe Chemotherapie</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p><p><b>encounter</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Encounter/example\">Encounter/example</a></p><p><b>performed</b>: 2024-03-20 --&gt; 2024-09-15</p><p><b>reasonReference</b>: <a href=\"Condition-mii-exa-onko-colorectal-cancer-diagnosis.html\">Condition Bösartige Neubildung: Colon sigmoideum</a></p><p><b>outcome</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund E}\">Reguläres Ende</span></p><p><b>note</b>: </p><blockquote><div><p>Patient received 12 cycles of adjuvant FOLFOX4 chemotherapy for stage III colon cancer. Treatment completed without major complications.</p>\n</div></blockquote><p><b>usedCode</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle FOLFOX4}\">FOLFOX4</span></p></div></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Procedure_mii-exa-onko-folfox-procedure\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Procedure mii-exa-onko-folfox-procedure</b></p><a name=\"mii-exa-onko-folfox-procedure\"> </a><a name=\"hcmii-exa-onko-folfox-procedure\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-systemische-therapie.html\">MII PR Onkologie Systemische Therapie</a></p></div><p><b>MII EX Onko Systemische Therapie Intention</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}\">Kurativ</span></p><p><b>MII EX Onko Systemische Therapie Stellung zur OP</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop A}\">Adjuvant</span></p><p><b>basedOn</b>: <a href=\"CarePlan-mii-exa-onko-tumorkonferenz-folfox.html\">CarePlan: identifier = Tumorkonferenz_FOLFOX_001; status = active; intent = plan; category = prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie); created = 2024-03-10</a></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 277132007}\">Therapeutic procedure</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/ops 8-542}, {https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art CH}\">Nicht komplexe Chemotherapie</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-folfox-patient.html\">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p><p><b>encounter</b>: <a href=\"Encounter-mii-exa-onko-folfox-encounter-chemo.html\">Encounter: status = finished; class = ambulatory (ActCode#AMB)</a></p><p><b>performed</b>: 2024-03-20 --&gt; 2024-09-15</p><p><b>reasonReference</b>: <a href=\"Condition-mii-exa-onko-colorectal-cancer-diagnosis.html\">Condition Bösartige Neubildung: Colon sigmoideum</a></p><p><b>outcome</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund E}\">Reguläres Ende</span></p><p><b>note</b>: </p><blockquote><div><p>Patient received 12 cycles of adjuvant FOLFOX4 chemotherapy for stage III colon cancer. Treatment completed without major complications.</p>\n</div></blockquote><p><b>usedCode</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle FOLFOX4}\">FOLFOX4</span></p></div></div>"
       },
       "extension" : [{
         "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention",
@@ -778,7 +838,7 @@
         "reference" : "Patient/mii-exa-onko-folfox-patient"
       },
       "encounter" : {
-        "reference" : "Encounter/example"
+        "reference" : "Encounter/mii-exa-onko-folfox-encounter-chemo"
       },
       "performedPeriod" : {
         "start" : "2024-03-20",

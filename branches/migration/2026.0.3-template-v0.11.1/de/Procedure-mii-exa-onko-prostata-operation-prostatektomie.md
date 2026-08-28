@@ -22,11 +22,11 @@ Profile: [MII PR Onko Prostata Operation](StructureDefinition-mii-pr-onko-prosta
 
 **code**: Radikale Prostatovesikulektomie: Retropubisch: Mit regionaler Lymphadenektomie
 
-**subject**: [Patient/example](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example)
+**subject**: [Peter ProstataCa (no stated gender), DoB Unknown](Patient-mii-exa-onko-prostata-bundle-patient.md)
 
 **performed**: 2024-03-15
 
-**reasonReference**: [Condition/example](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Condition/example)
+**reasonReference**: [Condition Bösartige Neubildung der Prostata](Condition-mii-exa-onko-prostata-diagnose.md)
 
 **outcome**: Kein Residualtumor
 
@@ -73,11 +73,11 @@ Profile: [MII PR Onko Prostata Operation](StructureDefinition-mii-pr-onko-prosta
     }]
   },
   "subject" : {
-    "reference" : "Patient/example"
+    "reference" : "Patient/mii-exa-onko-prostata-bundle-patient"
   },
   "performedDateTime" : "2024-03-15",
   "reasonReference" : [{
-    "reference" : "Condition/example"
+    "reference" : "Condition/mii-exa-onko-prostata-diagnose"
   }],
   "outcome" : {
     "coding" : [{

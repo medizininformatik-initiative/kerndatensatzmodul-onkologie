@@ -20,7 +20,7 @@ Profile: [MII PR Onkologie Therapieempfehlung Medikation](StructureDefinition-mi
 
 **medication**: 5-Fluorouracil (5-FU)
 
-**subject**: [Patient/example-modification](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example-modification)
+**subject**: [Martin Beispiel Male, DoB: 1958-11-03](Patient-example-modification.md)
 
 **authoredOn**: 2024-03-05
 

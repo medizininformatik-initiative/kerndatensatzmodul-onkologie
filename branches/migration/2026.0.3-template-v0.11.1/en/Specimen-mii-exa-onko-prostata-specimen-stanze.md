@@ -1,0 +1,50 @@
+# MII EXA Onkologie Prostata Stanzbiopsie Specimen - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **MII EXA Onkologie Prostata Stanzbiopsie Specimen**
+
+## Example Specimen: MII EXA Onkologie Prostata Stanzbiopsie Specimen
+
+-------
+
+**English**
+
+-------
+
+Profile: [MII PR Onkologie Specimen](StructureDefinition-mii-pr-onko-specimen.md) version: 2026.0.3
+
+**accessionIdentifier**: P-2024-000812
+
+**subject**: [Peter ProstataCa (no stated gender), DoB Unknown](Patient-mii-exa-onko-prostata-bundle-patient.md)
+
+### Collections
+
+| | |
+| :--- | :--- |
+| - | **Collected[x]** |
+| * | 2024-01-02 |
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Specimen",
+  "id" : "mii-exa-onko-prostata-specimen-stanze",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-specimen|2026.0.3"]
+  },
+  "accessionIdentifier" : {
+    "value" : "P-2024-000812"
+  },
+  "subject" : {
+    "reference" : "Patient/mii-exa-onko-prostata-bundle-patient"
+  },
+  "collection" : {
+    "collectedDateTime" : "2024-01-02"
+  }
+}
+
+```

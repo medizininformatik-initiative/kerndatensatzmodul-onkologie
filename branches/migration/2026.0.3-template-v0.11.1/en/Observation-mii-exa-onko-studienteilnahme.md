@@ -18,9 +18,9 @@ Profile: [MII PR Onkologie Studienteilnahme](StructureDefinition-mii-pr-onko-stu
 
 **code**: 709491003
 
-**subject**: [Patient/example](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example)
+**subject**: [Erika Beispiel Female, DoB: 1965-04-12](Patient-example.md)
 
-**focus**: [Condition/exampleOncologicCondition](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Condition/exampleOncologicCondition)
+**focus**: [Condition Bösartige Neubildung: Brustdrüse, nicht näher bezeichnet](Condition-primaertumor-example.md)
 
 **effective**: 2024-01-02
 
@@ -48,7 +48,7 @@ Profile: [MII PR Onkologie Studienteilnahme](StructureDefinition-mii-pr-onko-stu
     "reference" : "Patient/example"
   },
   "focus" : [{
-    "reference" : "Condition/exampleOncologicCondition"
+    "reference" : "Condition/primaertumor-example"
   }],
   "effectiveDateTime" : "2024-01-02",
   "valueCodeableConcept" : {

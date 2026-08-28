@@ -20,7 +20,7 @@ Profile: [MII PR Onkologie Anzahl der befallenen Sentinel-Lymphknoten](Structure
 
 **code**: Sentinel lymph nodes with metastasis [#] in Cancer specimen
 
-**subject**: [Patient/example](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example)
+**subject**: [Erika Beispiel Female, DoB: 1965-04-12](Patient-example.md)
 
 **effective**: 2024-01-11
 

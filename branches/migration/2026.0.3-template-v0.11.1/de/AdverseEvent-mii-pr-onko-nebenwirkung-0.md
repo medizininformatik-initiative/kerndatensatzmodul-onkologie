@@ -18,7 +18,7 @@ Profile: [MII PR Onkologie Nebenwirkung von Strahlentherapie und systemische The
 
 **event**: Fatigue
 
-**subject**: [Patient/example](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example)
+**subject**: [Erika Beispiel Female, DoB: 1965-04-12](Patient-example.md)
 
 **seriousness**: Lebensbedrohlich
 
@@ -27,7 +27,7 @@ Profile: [MII PR Onkologie Nebenwirkung von Strahlentherapie und systemische The
 | | |
 | :--- | :--- |
 | - | **Instance** |
-| * | [Procedure/Strahlentherapie](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Procedure/Strahlentherapie) |
+| * | [Procedure 8-52](Procedure-mii-exa-onko-strahlentherapie-strahlentherapie-1.md) |
 
 
 
@@ -66,7 +66,7 @@ Profile: [MII PR Onkologie Nebenwirkung von Strahlentherapie und systemische The
   },
   "suspectEntity" : [{
     "instance" : {
-      "reference" : "Procedure/Strahlentherapie"
+      "reference" : "Procedure/mii-exa-onko-strahlentherapie-strahlentherapie-1"
     }
   }]
 }

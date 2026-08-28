@@ -26,7 +26,7 @@ Profile: [MII PR Onkologie Diagnose Primärtumor](StructureDefinition-mii-pr-onk
 
 **subject**: [Hans Schmidt Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)](Patient-mii-exa-onko-folfox-patient.md)
 
-**encounter**: [Encounter/example-diagnosis](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Encounter/example-diagnosis)
+**encounter**: [Encounter: status = finished; class = ambulatory (ActCode#AMB)](Encounter-mii-exa-onko-folfox-encounter-diagnosis.md)
 
 **onset**: 2024-01-15
 
@@ -84,7 +84,7 @@ Adenokarzinom des Colon sigmoideum, Stadium III (T3N1M0)
     "reference" : "Patient/mii-exa-onko-folfox-patient"
   },
   "encounter" : {
-    "reference" : "Encounter/example-diagnosis"
+    "reference" : "Encounter/mii-exa-onko-folfox-encounter-diagnosis"
   },
   "onsetDateTime" : "2024-01-15",
   "recordedDate" : "2024-01-15",

@@ -14,15 +14,15 @@
 
 Profile: [MII PR Onkologie Systemische Therapie Medikation](StructureDefinition-mii-pr-onko-systemische-therapie-medikation.md) version: 2026.0.3
 
-**basedOn**: [CarePlan/example](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/CarePlan/example)
+**basedOn**: [CarePlan: identifier = Tumorkonferenz_1; status = active; intent = plan; category = postoperative Tumorkonferenz (Planung der postoperativen Therapie, z. B. zur Frage adjuvante Therapie); created = 2024-01-11](CarePlan-mii-exa-onko-tumorkonferenz-01.md)
 
-**partOf**: [Procedure/systemische-therapie-example](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Procedure/systemische-therapie-example)
+**partOf**: [Procedure Chemotherapie](Procedure-mii-exa-onko-systemische-therapie-1.md)
 
 **status**: Completed
 
 **medication**: Imatinib (BCR-ABL Tyrosinkinase-Inhibitor)
 
-**subject**: [Patient/example](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example)
+**subject**: [Erika Beispiel Female, DoB: 1965-04-12](Patient-example.md)
 
 **effective**: 2020-12-01 --> 2024-08-30
 
@@ -45,10 +45,10 @@ CML-Protokoll mit Imatinib
     "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation|2026.0.3"]
   },
   "basedOn" : [{
-    "reference" : "CarePlan/example"
+    "reference" : "CarePlan/mii-exa-onko-tumorkonferenz-01"
   }],
   "partOf" : [{
-    "reference" : "Procedure/systemische-therapie-example"
+    "reference" : "Procedure/mii-exa-onko-systemische-therapie-1"
   }],
   "status" : "completed",
   "medicationCodeableConcept" : {

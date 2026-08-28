@@ -60,6 +60,7 @@ Zu diesen einzelnen Therapien werden im oBDS weitere Datenelemente erfasst und h
 * Jedes Protokoll ist mit seiner charakteristischen Bezeichnung (z.B. "FOLFOX", "R-CHOP", "AC") und den enthaltenen Wirkstoffen dokumentiert.
 * Die Kodierung erfolgt über das **MII CodeSystem Systemische Therapie Protokolle**, das alle gängigen onkologischen Therapieprotokolle umfasst.
 * Nicht enthaltene Protokolle können trotzdem dokumentiert werden - hier ist jedoch eine Harmonisierung über die Standorte entscheidend. Neue Protokolle sind daher bitte unter [GitHub Issues](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues) einzureichen.
+* **Führendes Element für oBDS 16.4:** Das Protokoll wird führend an der Therapie-Klammer dokumentiert (`Procedure.usedCode`, extensible an das Protokoll-ValueSet gebunden). Die zusätzliche Freitext-Angabe unter `MedicationStatement.note.text` der einzelnen Wirkstoff-Ressourcen dient ausschließlich der Zuordnung der Einzelwirkstoffe zu ihrem Schema (z.B. bei Kombinationstherapien) und ist keine eigenständige zweite Kodierung.
 
 #### Implementierungsempfehlung
 
@@ -234,7 +235,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_Systemische_Therapie",
   "title" : "MII PR Onkologie Systemische Therapie",
   "status" : "active",
-  "date" : "2026-08-28T08:03:44+00:00",
+  "date" : "2026-08-28T09:05:47+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

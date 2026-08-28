@@ -28,7 +28,7 @@ Profile: [MII PR Onkologie Strahlentherapie](StructureDefinition-mii-pr-onko-str
 
 **code**: 8-52
 
-**subject**: [Patient/example](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example)
+**subject**: [Erika Beispiel Female, DoB: 1965-04-12](Patient-example.md)
 
 **performed**: 2019-07-04 --> 2019-09-14
 

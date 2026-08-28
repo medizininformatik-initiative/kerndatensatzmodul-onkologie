@@ -18,7 +18,7 @@ Profile: [MII PR Onkologie TNM-Klassifikation](StructureDefinition-mii-pr-onko-t
 
 **code**: Clinical TNM stage grouping
 
-**subject**: [Patient/example](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example)
+**subject**: [Erika Beispiel Female, DoB: 1965-04-12](Patient-example.md)
 
 **effective**: 2024-05-20
 

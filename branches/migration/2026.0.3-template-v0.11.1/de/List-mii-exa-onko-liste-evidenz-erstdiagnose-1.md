@@ -19,17 +19,17 @@ Profile: [MII PR Onkologie Evidenz Diagnose Primärtumor](StructureDefinition-mi
 | | |
 | :--- | :--- |
 | Mode: Snapshot List | Status: Current |
-| Subject:[Patient/example](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example) | |
+| Subject:[Erika Beispiel Female, DoB: 1965-04-12](Patient-example.md) | |
 
-* **Items**: [Observation/example-ecog-zustand](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Observation/example-ecog-zustand)
-* **Items**: [Observation/example-tnm-klassifikation](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Observation/example-tnm-klassifikation)
-* **Items**: [Observation/example-tnm-t-kategorie](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Observation/example-tnm-t-kategorie)
-* **Items**: [Observation/example-tnm-n-kategorie](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Observation/example-tnm-n-kategorie)
-* **Items**: [Observation/example-tnm-m-kategorie](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Observation/example-tnm-m-kategorie)
-* **Items**: [Observation/example-tnm-l-kategorie](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Observation/example-tnm-l-kategorie)
-* **Items**: [Observation/example-fernmetastase-1](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Observation/example-fernmetastase-1)
-* **Items**: [Observation/example-fernmetastase-2](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Observation/example-fernmetastase-2)
-* **Items**: [DiagnosticReport/example-pathobefund-1](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/DiagnosticReport/example-pathobefund-1)
+* **Items**: [Observation 423740007](Observation-mii-exa-onko-allgemeiner-leistungszustand-ecog.md)
+* **Items**: [Observation Clinical TNM stage grouping](Observation-mii-exa-onko-tnm-klassifikation-TisN0M0.md)
+* **Items**: [Observation cT category (observable entity)](Observation-mii-exa-onko-tnm-t-kategorie-Tis.md)
+* **Items**: [Observation cN category (observable entity)](Observation-mii-exa-onko-tnm-n-kategorie-N0.md)
+* **Items**: [Observation cM category (observable entity)](Observation-mii-exa-onko-tnm-m-kategorie-M0.md)
+* **Items**: [Observation Status of lymphatic (small vessel) invasion by tumor (observable entity)](Observation-mii-exa-onko-tnm-l-kategorie-L1.md)
+* **Items**: [Observation 385421009](Observation-mii-exa-onko-fernmetastasen-1.md)
+* **Items**: [Observation 385421009](Observation-mii-exa-onko-cup-fernmetastase-hep.md)
+* **Items**: [Diagnostic Report for 'Pathology report Cancer Narrative' for '->Kim Musterperson (no stated gender), DoB: 1956-03-14'](DiagnosticReport-mii-exa-onko-befund-1.md)
 
 
 
@@ -50,47 +50,47 @@ Profile: [MII PR Onkologie Evidenz Diagnose Primärtumor](StructureDefinition-mi
   },
   "entry" : [{
     "item" : {
-      "reference" : "Observation/example-ecog-zustand"
+      "reference" : "Observation/mii-exa-onko-allgemeiner-leistungszustand-ecog"
     }
   },
   {
     "item" : {
-      "reference" : "Observation/example-tnm-klassifikation"
+      "reference" : "Observation/mii-exa-onko-tnm-klassifikation-TisN0M0"
     }
   },
   {
     "item" : {
-      "reference" : "Observation/example-tnm-t-kategorie"
+      "reference" : "Observation/mii-exa-onko-tnm-t-kategorie-Tis"
     }
   },
   {
     "item" : {
-      "reference" : "Observation/example-tnm-n-kategorie"
+      "reference" : "Observation/mii-exa-onko-tnm-n-kategorie-N0"
     }
   },
   {
     "item" : {
-      "reference" : "Observation/example-tnm-m-kategorie"
+      "reference" : "Observation/mii-exa-onko-tnm-m-kategorie-M0"
     }
   },
   {
     "item" : {
-      "reference" : "Observation/example-tnm-l-kategorie"
+      "reference" : "Observation/mii-exa-onko-tnm-l-kategorie-L1"
     }
   },
   {
     "item" : {
-      "reference" : "Observation/example-fernmetastase-1"
+      "reference" : "Observation/mii-exa-onko-fernmetastasen-1"
     }
   },
   {
     "item" : {
-      "reference" : "Observation/example-fernmetastase-2"
+      "reference" : "Observation/mii-exa-onko-cup-fernmetastase-hep"
     }
   },
   {
     "item" : {
-      "reference" : "DiagnosticReport/example-pathobefund-1"
+      "reference" : "DiagnosticReport/mii-exa-onko-befund-1"
     }
   }]
 }

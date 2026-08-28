@@ -26,7 +26,7 @@ Profile: [MII PR Onkologie Operation](StructureDefinition-mii-pr-onko-operation.
 
 **subject**: [Hans Schmidt Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)](Patient-mii-exa-onko-folfox-patient.md)
 
-**encounter**: [Encounter/example-surgery](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Encounter/example-surgery)
+**encounter**: [Encounter: status = finished; class = inpatient encounter (ActCode#IMP)](Encounter-mii-exa-onko-folfox-encounter-surgery.md)
 
 **performed**: 2024-02-15
 
@@ -83,7 +83,7 @@ Regional lymph node dissection performed. 18 lymph nodes removed from mesenteric
     "reference" : "Patient/mii-exa-onko-folfox-patient"
   },
   "encounter" : {
-    "reference" : "Encounter/example-surgery"
+    "reference" : "Encounter/mii-exa-onko-folfox-encounter-surgery"
   },
   "performedDateTime" : "2024-02-15",
   "reasonReference" : [{

@@ -26,7 +26,7 @@ Profile: [MII PR Onkologie Diagnose Primärtumor](StructureDefinition-mii-pr-onk
 
 **bodySite**: Structure of upper outer quadrant of breast (body structure)
 
-**subject**: [Patient/example](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example)
+**subject**: [Erika Beispiel Female, DoB: 1965-04-12](Patient-example.md)
 
 **recordedDate**: 2020-02-16
 

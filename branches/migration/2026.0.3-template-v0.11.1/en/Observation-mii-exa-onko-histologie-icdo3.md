@@ -18,13 +18,13 @@ Profile: [MII PR Onkologie Histologie ICD-O-3](StructureDefinition-mii-pr-onko-h
 
 **code**: Histology and Behavior ICD-O-3 Cancer
 
-**subject**: [Patient/example](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example)
+**subject**: [Erika Beispiel Female, DoB: 1965-04-12](Patient-example.md)
 
 **value**: Invasives duktales Karzinom o.n.A.
 
 **bodySite**: Oberer äußerer Quadrant der Brust
 
-**specimen**: [Specimen/example](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Specimen/example)
+**specimen**: [Specimen: accessionIdentifier = 357532265](Specimen-mii-exa-onko-specimen-1.md)
 
 
 
@@ -62,7 +62,7 @@ Profile: [MII PR Onkologie Histologie ICD-O-3](StructureDefinition-mii-pr-onko-h
     }]
   },
   "specimen" : {
-    "reference" : "Specimen/example"
+    "reference" : "Specimen/mii-exa-onko-specimen-1"
   }
 }
 

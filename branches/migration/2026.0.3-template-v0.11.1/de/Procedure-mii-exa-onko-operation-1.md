@@ -16,7 +16,7 @@ Profile: [MII PR Onkologie Operation](StructureDefinition-mii-pr-onko-operation.
 
 **MII EX Onko Operation Intention**: kurativ
 
-**basedOn**: [CarePlan/example](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/CarePlan/example)
+**basedOn**: [CarePlan: identifier = Tumorkonferenz_1; status = active; intent = plan; category = postoperative Tumorkonferenz (Planung der postoperativen Therapie, z. B. zur Frage adjuvante Therapie); created = 2024-01-11](CarePlan-mii-exa-onko-tumorkonferenz-01.md)
 
 **status**: Completed
 
@@ -24,9 +24,9 @@ Profile: [MII PR Onkologie Operation](StructureDefinition-mii-pr-onko-operation.
 
 **code**: Partielle (brusterhaltende) Exzision der Mamma und Destruktion von Mammagewebe
 
-**subject**: [Patient/example](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example)
+**subject**: [Erika Beispiel Female, DoB: 1965-04-12](Patient-example.md)
 
-**encounter**: [Encounter/example](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Encounter/example)
+**encounter**: [Encounter: status = finished; class = ambulatory (ActCode#AMB)](Encounter-example.md)
 
 **performed**: 2021-12-04
 
@@ -55,7 +55,7 @@ Profile: [MII PR Onkologie Operation](StructureDefinition-mii-pr-onko-operation.
     }
   }],
   "basedOn" : [{
-    "reference" : "CarePlan/example"
+    "reference" : "CarePlan/mii-exa-onko-tumorkonferenz-01"
   }],
   "status" : "completed",
   "category" : {

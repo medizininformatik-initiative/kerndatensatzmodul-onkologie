@@ -36,7 +36,7 @@ Mäßig differenziertes invasiv duktales Karzinom (8500/3), Grading G2 an der re
     "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-befund|2026.0.3"]
   },
   "basedOn" : [{
-    "reference" : "CarePlan/example-tumorboard-1"
+    "reference" : "CarePlan/mii-exa-onko-tumorkonferenz-01"
   }],
   "status" : "final",
   "code" : {
@@ -49,7 +49,7 @@ Mäßig differenziertes invasiv duktales Karzinom (8500/3), Grading G2 an der re
     "reference" : "Patient/PatientKimMusterperson"
   },
   "specimen" : [{
-    "reference" : "Specimen/example-specimen-2"
+    "reference" : "Specimen/mii-exa-onko-specimen-1"
   }],
   "conclusion" : "Mäßig differenziertes invasiv duktales Karzinom (8500/3), Grading G2 an der rechten Mamma, ..."
 }

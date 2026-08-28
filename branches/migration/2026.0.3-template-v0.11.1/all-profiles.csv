@@ -4705,7 +4705,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "mii-pr-onko-diagnose-primaertumor","Condition.extension:morphology-behavior-icdo3","Condition.extension","morphology-behavior-icdo3","","",0,*,"Y","","","Extension {[CanonicalType[https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3]]} {[]}
-","ICD-O-Morphologie","Morphologie des Primärtumors nach ICD-O-3 nach 6.3 oBDS","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ICD-O-Morphologie","Morphologie des Primärtumors nach ICD-O-3 nach 6.3 oBDS","An der Diagnose können mehrere Morphologie-Angaben stehen (0..*) — etwa bei gemischter Histologie oder Re-Klassifikation im Krankheitsverlauf. Befundbezogen wird jede Morphologie zusätzlich als Histologie-Observation (mii-pr-onko-histologie-icdo3) dokumentiert: dort genau eine Morphologie je Befund, mit Specimen- und Datumsbezug.","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "mii-pr-onko-diagnose-primaertumor","Condition.extension:morphology-behavior-icdo3.id","Condition.extension.id","","","",0,1,"","","","string {[]} {[]}

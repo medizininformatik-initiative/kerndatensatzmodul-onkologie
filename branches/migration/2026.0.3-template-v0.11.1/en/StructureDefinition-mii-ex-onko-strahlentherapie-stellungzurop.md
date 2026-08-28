@@ -47,7 +47,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-onko-strah
   "name" : "MII_EX_Onko_Strahlentherapie_StellungZurOp",
   "title" : "MII EX Onko Strahlentherapie Stellung zur OP",
   "status" : "active",
-  "date" : "2026-08-28T08:03:44+00:00",
+  "date" : "2026-08-28T09:05:47+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

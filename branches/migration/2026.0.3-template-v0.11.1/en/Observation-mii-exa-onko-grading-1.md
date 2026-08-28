@@ -20,13 +20,13 @@ Profile: [MII PR Onkologie Grading](StructureDefinition-mii-pr-onko-grading.md) 
 
 **code**: Histology grade [Identifier] in Cancer specimen
 
-**subject**: [Patient/example](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example)
+**subject**: [Erika Beispiel Female, DoB: 1965-04-12](Patient-example.md)
 
 **effective**: 2022-04-21
 
 **value**: schlecht differenziert
 
-**specimen**: [Specimen/example](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Specimen/example)
+**specimen**: [Specimen: accessionIdentifier = 357532265](Specimen-mii-exa-onko-specimen-1.md)
 
 
 
@@ -64,7 +64,7 @@ Profile: [MII PR Onkologie Grading](StructureDefinition-mii-pr-onko-grading.md) 
     }]
   },
   "specimen" : {
-    "reference" : "Specimen/example"
+    "reference" : "Specimen/mii-exa-onko-specimen-1"
   }
 }
 
