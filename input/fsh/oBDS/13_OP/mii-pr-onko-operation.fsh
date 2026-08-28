@@ -75,6 +75,12 @@ Description: "Operation nach OPS inklusive Intention, Datum und Komplikationen:"
 // Referenz auf Tumorboard
 * basedOn MS
 * basedOn only Reference(CarePlan)
+// agi: Tumorkonferenz typsicher referenzierbar (Muster: mii-pr-onko-befund)
+* basedOn ^slicing.discriminator.type = #type
+* basedOn ^slicing.discriminator.path = "$this.resolve()"
+* basedOn ^slicing.rules = #open
+* basedOn contains tumorkonferenz 0..1 MS
+* basedOn[tumorkonferenz] only Reference(MII_PR_Onko_Tumorkonferenz)
 
 // Referenz auf Primaerdiagnose oder andere Condition
 * reasonReference MS 

@@ -49,6 +49,15 @@
       {
         "id": "MedicationStatement.basedOn",
         "path": "MedicationStatement.basedOn",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this.resolve()"
+            }
+          ],
+          "rules": "open"
+        },
         "short": "Therapieplan oder Therapieempfehlung",
         "definition": "Referenz auf den CarePlan (Therapieplan) oder MedicationRequest (Therapieempfehlung) auf dem diese Medikation basiert.",
         "type": [
@@ -60,6 +69,38 @@
             ]
           }
         ]
+      },
+      {
+        "id": "MedicationStatement.basedOn:tumorkonferenz",
+        "path": "MedicationStatement.basedOn",
+        "sliceName": "tumorkonferenz",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.basedOn:therapieempfehlung",
+        "path": "MedicationStatement.basedOn",
+        "sliceName": "therapieempfehlung",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation"
+            ]
+          }
+        ],
+        "mustSupport": true
       },
       {
         "id": "MedicationStatement.partOf",

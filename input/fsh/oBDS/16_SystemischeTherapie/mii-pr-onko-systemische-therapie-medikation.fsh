@@ -79,6 +79,15 @@ Description: "Medikation der Systemische Therapie. Dieses Profil beschreibt die 
 * insert Translation(effectivePeriod.end ^definition, de-DE, Enddatum der systemischen Medikation gemäß 16.8 oBDS 2021. )
 * basedOn MS
 * basedOn only Reference(CarePlan or MedicationRequest)
+// agi: Tumorkonferenz + Therapieempfehlung typsicher referenzierbar
+* basedOn ^slicing.discriminator.type = #type
+* basedOn ^slicing.discriminator.path = "$this.resolve()"
+* basedOn ^slicing.rules = #open
+* basedOn contains
+    tumorkonferenz 0..1 MS and
+    therapieempfehlung 0..1 MS
+* basedOn[tumorkonferenz] only Reference(MII_PR_Onko_Tumorkonferenz)
+* basedOn[therapieempfehlung] only Reference(MII_PR_Onko_Therapieempfehlung_Medikation)
 * basedOn ^short = "Therapieplan oder Therapieempfehlung"
 * basedOn ^definition = "Referenz auf den CarePlan (Therapieplan) oder MedicationRequest (Therapieempfehlung) auf dem diese Medikation basiert."
 

@@ -106,6 +106,14 @@
           ]
         },
         "definition": "Referenz auf das erzeugende System (Device) bei automatisierter Erzeugung. Die Algorithmus-/Softwareversion wird in Device.version dokumentiert; eine zusätzliche Provenance-Ressource (activity = Derivation) KANN für Audit-Anforderungen ergänzt werden.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Device"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {

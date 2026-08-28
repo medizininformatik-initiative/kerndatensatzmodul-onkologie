@@ -458,15 +458,15 @@
         "id": "CarePlan.activity:extended.reference",
         "path": "CarePlan.activity.reference",
         "short": "Detailed therapy recommendation - RequestGroup, MedicationRequest, or ServiceRequest",
-        "definition": "Reference to detailed therapy recommendations: RequestGroup for complex multi-agent protocols, MedicationRequest for specific medication orders, or ServiceRequest for therapy referrals (surgery, radiation, etc.)",
+        "definition": "Reference to detailed therapy recommendations: Therapieempfehlung Kombinationstherapie (RequestGroup) for complex multi-agent protocols, Therapieempfehlung Medikation (MedicationRequest) for specific medication orders, or Therapieempfehlung Operation (ServiceRequest) for therapy referrals (surgery, radiation, etc.)",
         "min": 1,
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
               "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie",
-              "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
-              "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation",
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-operation"
             ]
           }
         ],

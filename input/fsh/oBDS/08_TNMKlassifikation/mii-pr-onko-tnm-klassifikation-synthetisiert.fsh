@@ -58,6 +58,7 @@ Description: "Synthetisierte TNM-Klassifikation: Aggregat aus mehreren Meldungs-
 // (Device.version = Algorithmusversion) und/oder vollständig über eine Provenance
 // (activity = w3c#Derivation, agent.who = Device). Provenance ist optional (Audit).
 * device MS
+* device only Reference(Device)
 * device ^short = "Erzeugendes System (bei automatisierter Synthese)"
 * device ^definition = "Referenz auf das erzeugende System (Device) bei automatisierter Erzeugung. Die Algorithmus-/Softwareversion wird in Device.version dokumentiert; eine zusätzliche Provenance-Ressource (activity = Derivation) KANN für Audit-Anforderungen ergänzt werden."
 * insert Translation(device ^short, de-DE, Erzeugendes System bei automatisierter Synthese)
