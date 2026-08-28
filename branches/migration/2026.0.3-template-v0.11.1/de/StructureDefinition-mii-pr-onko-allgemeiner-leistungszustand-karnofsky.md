@@ -266,7 +266,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_Allgemeiner_Leistungszustand_Karnofsky",
   "title" : "MII PR Onkologie Allgemeiner Leistungszustand nach Karnofsky",
   "status" : "active",
-  "date" : "2026-08-28T13:10:09+00:00",
+  "date" : "2026-08-28T13:33:24+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

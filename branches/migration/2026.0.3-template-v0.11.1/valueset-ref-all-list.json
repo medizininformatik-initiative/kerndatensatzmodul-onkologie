@@ -2427,6 +2427,18 @@
     "StructureDefinition-mii-pr-onko-genetische-variante.html" : "MII PR Onkologie Genetische Variante"
   },
   {
+    "url" : "http://snomed.info/sct?fhir_vs",
+    "version" : null,
+    "status" : "active",
+    "name" : "SCTValueSetAll",
+    "title" : "All Codes SCT ValueSet",
+    "description" : "Value Set for All SNOMED CT Concepts",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "ConceptMap-mii-cm-onko-nebenwirkung-meddra-sct.html" : "MII CM Onko Nebenwirkung MedDRA zu SNOMED CT (CTCAE v4.03)"
+  },
+  {
     "url" : "http://terminology.hl7.org/ValueSet/v2-0371",
     "version" : "3.0.0",
     "status" : "active",
@@ -2710,8 +2722,8 @@
     "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-karnofsky"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-onko-allgemeiner-leistungszustand-karnofsky.html" : "MII PR Onkologie Allgemeiner Leistungszustand nach Karnofsky",
-    "ConceptMap-mii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc.html" : "Mapping oBDS Karnofsky zu LOINC"
+    "ConceptMap-mii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc.html" : "Mapping oBDS Karnofsky zu LOINC",
+    "StructureDefinition-mii-pr-onko-allgemeiner-leistungszustand-karnofsky.html" : "MII PR Onkologie Allgemeiner Leistungszustand nach Karnofsky"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-karnofsky-loinc",
@@ -3579,8 +3591,8 @@
     "systems" : ["http://fhir.de/CodeSystem/bfarm/atc"],
     "uses" : {
     },
-    "ConceptMap-mii-cm-onko-atc-transitions-2021.html" : "MII CM Onko ATC Code Changes 2020 to 2021",
-    "ConceptMap-mii-cm-onko-atc-transitions-2022.html" : "MII CM Onko ATC Code Changes 2021 to 2022"
+    "ConceptMap-mii-cm-onko-atc-transitions-2022.html" : "MII CM Onko ATC Code Changes 2021 to 2022",
+    "ConceptMap-mii-cm-onko-atc-transitions-2021.html" : "MII CM Onko ATC Code Changes 2020 to 2021"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2022",
@@ -3592,8 +3604,8 @@
     "systems" : ["http://fhir.de/CodeSystem/bfarm/atc"],
     "uses" : {
     },
-    "ConceptMap-mii-cm-onko-atc-transitions-2023.html" : "MII CM Onko ATC Code Changes 2022 to 2023",
-    "ConceptMap-mii-cm-onko-atc-transitions-2022.html" : "MII CM Onko ATC Code Changes 2021 to 2022"
+    "ConceptMap-mii-cm-onko-atc-transitions-2022.html" : "MII CM Onko ATC Code Changes 2021 to 2022",
+    "ConceptMap-mii-cm-onko-atc-transitions-2023.html" : "MII CM Onko ATC Code Changes 2022 to 2023"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2023",
@@ -3618,8 +3630,8 @@
     "systems" : ["http://fhir.de/CodeSystem/bfarm/atc"],
     "uses" : {
     },
-    "ConceptMap-mii-cm-onko-atc-transitions-2024.html" : "MII CM Onko ATC Code Changes 2023 to 2024",
-    "ConceptMap-mii-cm-onko-atc-transitions-2025.html" : "MII CM Onko ATC Code Changes 2024 to 2025"
+    "ConceptMap-mii-cm-onko-atc-transitions-2025.html" : "MII CM Onko ATC Code Changes 2024 to 2025",
+    "ConceptMap-mii-cm-onko-atc-transitions-2024.html" : "MII CM Onko ATC Code Changes 2023 to 2024"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2025",

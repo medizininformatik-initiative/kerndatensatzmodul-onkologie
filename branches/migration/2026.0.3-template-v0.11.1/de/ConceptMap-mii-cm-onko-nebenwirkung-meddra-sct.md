@@ -47,7 +47,7 @@ Kuratierte Zuordnung der MedDRA-Codes der CTCAE-v4.03-Nebenwirkungsterme zu SNOM
   }],
   "purpose" : "Ableitung der optionalen SNOMED-CT-Zweitkodierung (event.coding[snomed]) aus der MedDRA-Pflichtkodierung der Nebenwirkungsart (oBDS 15.2).",
   "sourceCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-nebenwirkung-art",
-  "targetUri" : "http://snomed.info/sct",
+  "targetUri" : "http://snomed.info/sct?fhir_vs",
   "group" : [{
     "source" : "https://www.meddra.org",
     "target" : "http://snomed.info/sct",
