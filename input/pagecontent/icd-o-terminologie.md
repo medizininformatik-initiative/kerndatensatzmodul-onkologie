@@ -26,7 +26,7 @@ data:
 | Second revision | 2019 | ICD-O-3.2 | current edition (publication completed 12/2020) |
 
 The second revision differs substantially (morphology axis: **124 new** and
-**55 removed** codes alongside approximately 1,080 unchanged ones):
+**56 removed** codes alongside approximately 1,080 unchanged ones; 55 verified against the server, plus 8153/1 per the official BfArM update list of 2021-01-29):
 
 - **New codes** mainly concern molecularly defined entities (e.g. `8023/3`
   NUT carcinoma, `8085/3`/`8086/3` HPV-positive/-negative squamous cell carcinoma).
@@ -85,7 +85,7 @@ quality, ETL) the per-year ValueSets are available.
 | [`mii-vs-onko-icdo3-topographie`](ValueSet-mii-vs-onko-icdo3-topographie.html) | Topography, union 2014 + 2019 | Profile binding |
 | [`mii-vs-onko-icdo3-morphologie-2014`](ValueSet-mii-vs-onko-icdo3-morphologie-2014.html) / [`-2019`](ValueSet-mii-vs-onko-icdo3-morphologie-2019.html) | Morphology, revision-specific | DQ checks, ETL, analysis per data stock |
 | [`mii-vs-onko-icdo3-topographie-2014`](ValueSet-mii-vs-onko-icdo3-topographie-2014.html) / [`-2019`](ValueSet-mii-vs-onko-icdo3-topographie-2019.html) | Topography, revision-specific | DQ checks, ETL |
-| [`mii-cm-onko-icdo3-transitions-2019`](ConceptMap-mii-cm-onko-icdo3-transitions-2019.html) | 55 morphology transitions 3.1 → 3.2 | Migration of legacy data |
+| [`mii-cm-onko-icdo3-transitions-2019`](ConceptMap-mii-cm-onko-icdo3-transitions-2019.html) | 56 morphology transitions 3.1 → 3.2 | Migration of legacy data |
 
 ### Outlook: ICD-O-4
 

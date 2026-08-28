@@ -1,11 +1,17 @@
 // ConceptMap der ICD-O-3-Morphologie-Umsteiger von der Ersten (2014) zur Zweiten
 // Revision (2019) — analog zum ATC-Transitions-Muster (mii-cm-onko-atc-transitions-*).
-// Kuratierung: 55 in 2019 gestrichene Codes, server-verifiziert gegen beide
-// CS-Versionen auf dem MII-Ontoserver (Diff-Basis: examples-source/icdo/).
+// Kuratierung: 56 in 2019 gestrichene Codes - 55 server-verifiziert gegen beide
+// CS-Versionen auf dem MII-Ontoserver (Diff-Basis: examples-source/icdo/) plus
+// 8153/1 (Gastrinom o.n.A.), das die amtliche Aktualisierungsliste streicht,
+// der Server aber noch in der 2019er-Version fuehrt (TermServ-Meldung, dq9).
 // Muster: Dignitäts-Neubewertungen (equivalent), Entitäts-Zusammenlegungen
 // (equivalent/wider), unsichere /1-Konzepte mit mehreren Nachfolgern (narrower),
 // Syndrom-Konzepte ohne Nachfolger (unmatched, mit Guidance).
-// Abgleich gegen die BfArM-Aktualisierungsliste (29.01.2021) steht aus (14w.30).
+// Abgleich gegen die BfArM-Aktualisierungsliste (29.01.2021) ERLEDIGT (2026-08-28):
+// Farbbasierte PDF-Auswertung (blau=Streichung, rot=Einfuegung, Ziffern-Diffs bei
+// Dignitaetswechseln). Ergebnis: alle 55 Server-Diff-Codes amtlich bestaetigt;
+// 1 zusaetzliche amtliche Streichung (8153/1) ergaenzt; alle 119 amtlichen
+// Neueinfuegungen auf dem Server vorhanden.
 Instance: mii-cm-onko-icdo3-transitions-2019
 InstanceOf: ConceptMap
 Usage: #definition
@@ -42,6 +48,13 @@ Usage: #definition
 * group[=].element[=].target[=].display = "Glukagonom"
 * group[=].element[=].target[=].equivalence = #equivalent
 * group[=].element[=].target[=].comment = "Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."
+
+* group[=].element[+].code = #8153/1
+* group[=].element[=].display = "Gastrinom o.n.A."
+* group[=].element[=].target[+].code = #8153/3
+* group[=].element[=].target[=].display = "Malignes Gastrinom"
+* group[=].element[=].target[=].equivalence = #equivalent
+* group[=].element[=].target[=].comment = "Streichung in der Zweiten Revision (Aktualisierungsliste 29.01.2021): Zusammenlegung in das bereits bestehende Konzept 8153/3. Achtung: Auf dem MII-Terminologieserver ist 8153/1 in der 2019er-CS-Version derzeit noch enthalten (Stand nicht nachgezogen) - amtlich ist der Code gestrichen."
 
 * group[=].element[+].code = #8156/1
 * group[=].element[=].display = "Somatostatinom o.n.A."

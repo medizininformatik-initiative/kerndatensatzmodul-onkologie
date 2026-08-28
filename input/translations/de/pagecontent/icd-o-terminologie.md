@@ -26,7 +26,7 @@ nebeneinander vorkommen:
 | Zweite Revision | 2019 | ICD-O-3.2 | aktuelle Ausgabe (Publikation abgeschlossen 12/2020) |
 
 Die Zweite Revision unterscheidet sich substanziell (Morphologie-Achse:
-**124 neue** und **55 gestrichene** Codes bei ~1.080 unveränderten):
+**124 neue** und **56 gestrichene** Codes bei ~1.080 unveränderten; 55 davon serververifiziert, zusätzlich 8153/1 gemäß amtlicher Aktualisierungsliste vom 29.01.2021):
 
 - **Neue Codes** betreffen v. a. molekular definierte Entitäten (z. B. `8023/3`
   NUT-Karzinom, `8085/3`/`8086/3` HPV-positives/-negatives Plattenepithelkarzinom).
@@ -84,7 +84,7 @@ Prüfungen (Data Quality, ETL) stehen die Jahres-ValueSets bereit.
 | [`mii-vs-onko-icdo3-topographie`](ValueSet-mii-vs-onko-icdo3-topographie.html) | Topographie, Union 2014 + 2019 | Profil-Binding |
 | [`mii-vs-onko-icdo3-morphologie-2014`](ValueSet-mii-vs-onko-icdo3-morphologie-2014.html) / [`-2019`](ValueSet-mii-vs-onko-icdo3-morphologie-2019.html) | Morphologie, revisionsscharf | DQ-Prüfung, ETL, Auswertung je Datenbestand |
 | [`mii-vs-onko-icdo3-topographie-2014`](ValueSet-mii-vs-onko-icdo3-topographie-2014.html) / [`-2019`](ValueSet-mii-vs-onko-icdo3-topographie-2019.html) | Topographie, revisionsscharf | DQ-Prüfung, ETL |
-| [`mii-cm-onko-icdo3-transitions-2019`](ConceptMap-mii-cm-onko-icdo3-transitions-2019.html) | 55 Morphologie-Umsteiger 3.1 → 3.2 | Migration von Bestandsdaten |
+| [`mii-cm-onko-icdo3-transitions-2019`](ConceptMap-mii-cm-onko-icdo3-transitions-2019.html) | 56 Morphologie-Umsteiger 3.1 → 3.2 | Migration von Bestandsdaten |
 
 ### Ausblick: ICD-O-4
 
