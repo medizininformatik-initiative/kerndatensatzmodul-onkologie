@@ -213,11 +213,22 @@ jobs:
         if: ${{ steps.build.outputs.mode == 'full' }}
         shell: bash
         env:
-          SU_TERMSERV_CLIENT_CERT: ${{ secrets.SU_TERMSERV_CLIENT_CERT }}
-          SU_TERMSERV_CLIENT_KEY: ${{ secrets.SU_TERMSERV_CLIENT_KEY }}
-          SU_TERMSERV_CLIENT_PASSWORD: ${{ secrets.SU_TERMSERV_CLIENT_PASSWORD }}
+          # MII-Organisations-Secrets (in der Org hinterlegt, so auch von
+          # kerndatensatz-meta/ci_java_validation.yml verwendet):
+          CDS_DEV_CLIENT_CERT: ${{ secrets.CDS_DEV_CLIENT_CERT }}
+          CDS_DEV_CLIENT_KEY: ${{ secrets.CDS_DEV_CLIENT_KEY }}
+          CDS_DEV_CLIENT_CERT_PASSWORD: ${{ secrets.CDS_DEV_CLIENT_CERT_PASSWORD }}
+          # Template-Namen als Rückfall, falls ein Fork eigene Secrets setzt:
+          SU_TERMSERV_CLIENT_CERT_FALLBACK: ${{ secrets.SU_TERMSERV_CLIENT_CERT }}
+          SU_TERMSERV_CLIENT_KEY_FALLBACK: ${{ secrets.SU_TERMSERV_CLIENT_KEY }}
+          SU_TERMSERV_CLIENT_PASSWORD_FALLBACK: ${{ secrets.SU_TERMSERV_CLIENT_PASSWORD }}
         run: |
           set -euo pipefail
+          # Org-Secrets bevorzugen, Template-Namen als Rückfall.
+          SU_TERMSERV_CLIENT_CERT="${CDS_DEV_CLIENT_CERT:-${SU_TERMSERV_CLIENT_CERT_FALLBACK:-}}"
+          SU_TERMSERV_CLIENT_KEY="${CDS_DEV_CLIENT_KEY:-${SU_TERMSERV_CLIENT_KEY_FALLBACK:-}}"
+          SU_TERMSERV_CLIENT_PASSWORD="${CDS_DEV_CLIENT_CERT_PASSWORD:-${SU_TERMSERV_CLIENT_PASSWORD_FALLBACK:-}}"
+          export SU_TERMSERV_CLIENT_PASSWORD
           # Prefer the MII terminology server (SU-TermServ) through a client-cert
           # nginx proxy; otherwise fall back to the public HL7 server. The build
           # must not hard-fail without the certificate.
