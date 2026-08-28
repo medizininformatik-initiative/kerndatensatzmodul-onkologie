@@ -2,10 +2,10 @@
 // 790 CTCAE-v4.03-Terme (offizielle NCI-Liste, examples-source/ctcae/) gegen
 // SNOMED CT (lokaler Snowstorm/MII-Ontoserver) gematcht: 441 automatisch
 // (adversarial stichproben-verifiziert, 3 Korrekturen, Aktiv-Check aller Codes),
-// 267 agentenkuratiert (equivalent/narrower/wider konservativ), 83 unmatched.
-// ALLE Zielcodes gegen den Projekt-Pin SNOMED International 20250701 geprüft
-// (Expansions-Manifest) — 6 Codes aus neueren Releases wurden auf pin-gültige
-// Konzepte zurückgeführt bzw. als unmatched geführt.
+// 267 agentenkuratiert (equivalent/narrower/wider konservativ), 82 unmatched.
+// ALLE Zielcodes gegen die Kurationsversion (International 20260501) verifiziert.
+// Ein Ausreißer wurde korrigiert: 891589671000119104 (Cytokine storm syndrome)
+// existiert in dieser Version NICHT — gültig ist 710027002 Cytokine release syndrome.
 Instance: mii-cm-onko-nebenwirkung-meddra-sct
 InstanceOf: ConceptMap
 Usage: #definition
@@ -21,13 +21,15 @@ Usage: #definition
 * purpose = "Ableitung der optionalen SNOMED-CT-Zweitkodierung (event.coding[snomed]) aus der MedDRA-Pflichtkodierung der Nebenwirkungsart (oBDS 15.2)."
 * sourceCanonical = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-nebenwirkung-art"
 // ConceptMap.target MUSS ein ValueSet sein — hier das implizite SNOMED-CT-VS der
-// im Expansions-Manifest gepinnten Edition/Version (International 20250701).
-// Alle Zielcodes sind gegen genau diese Version verifiziert.
-* targetUri = "http://snomed.info/sct/900000000000207008/version/20250701?fhir_vs"
+// Version, GEGEN DIE kuratiert wurde (International 20260501); group.targetVersion
+// trägt dieselbe Angabe. Das ist Provenienz, nicht Validierungsvorgabe: Der
+// Expansions-Pin des IG (20250701) ist eine andere Achse; wer gegen eine ältere
+// Version validiert, findet die jüngsten Konzepte erwartungsgemäß nicht.
+* targetUri = "http://snomed.info/sct/900000000000207008/version/20260501?fhir_vs"
 
 * group[+].source = "https://www.meddra.org"
 * group[=].target = "http://snomed.info/sct"
-* group[=].targetVersion = "http://snomed.info/sct/900000000000207008/version/20250701"
+* group[=].targetVersion = "http://snomed.info/sct/900000000000207008/version/20260501"
 
 * group[=].element[+].code = #10000060
 * group[=].element[=].display = "Abdominal distension"
@@ -3329,10 +3331,9 @@ Usage: #definition
 
 * group[=].element[+].code = #10050662
 * group[=].element[=].display = "Prostate infection"
-* group[=].element[=].target[+].code = #9713002
-* group[=].element[=].target[=].display = "Prostatitis"
-* group[=].element[=].target[=].equivalence = #wider
-* group[=].element[=].target[=].comment = "Im Pin 20250701 kein spezifisches Konzept Infection of prostate; Prostatitis ist das nächstliegende Konzept, umfasst aber auch nicht-infektiöse Formen."
+* group[=].element[=].target[+].code = #1371408008
+* group[=].element[=].target[=].display = "Infection of prostate"
+* group[=].element[=].target[=].equivalence = #equivalent
 
 * group[=].element[+].code = #10050816
 * group[=].element[=].display = "Tracheal stenosis"
@@ -4320,8 +4321,10 @@ Usage: #definition
 
 * group[=].element[+].code = #10065748
 * group[=].element[=].display = "Urostomy site bleeding"
-* group[=].element[=].target[+].equivalence = #unmatched
-* group[=].element[=].target[=].comment = "Kein Konzept im Pin 20250701 (nur Ileostomie-Blutung, andere Lokalisation) — Term verbleibt MedDRA-only."
+* group[=].element[=].target[+].code = #16751421000119105
+* group[=].element[=].target[=].display = "Hemorrhage of incontinent urostomy stoma"
+* group[=].element[=].target[=].equivalence = #narrower
+* group[=].element[=].target[=].comment = "SNOMED trennt kontinentes und inkontinentes Urostoma; gewählt ist die inkontinente Variante als häufigerer Fall."
 
 * group[=].element[+].code = #10065749
 * group[=].element[=].display = "Tracheostomy site bleeding"
@@ -4618,10 +4621,10 @@ Usage: #definition
 
 * group[=].element[+].code = #10065826
 * group[=].element[=].display = "Intraoperative arterial injury"
-* group[=].element[=].target[+].code = #63043004
-* group[=].element[=].target[=].display = "Injury of artery"
-* group[=].element[=].target[=].equivalence = #wider
-* group[=].element[=].target[=].comment = "Im Pin 20250701 kein Konzept für die intraoperative Genese; Oberkonzept Arterienverletzung, der operative Kontext ergibt sich aus AdverseEvent.suspectEntity."
+* group[=].element[=].target[+].code = #1375944001
+* group[=].element[=].target[=].display = "Traumatic injury to artery during surgery"
+* group[=].element[=].target[=].equivalence = #equivalent
+* group[=].element[=].target[=].comment = "Wörtliche Entsprechung des intraoperativen Arterienschadens."
 
 * group[=].element[+].code = #10065827
 * group[=].element[=].display = "Intraoperative hepatobiliary injury"
@@ -4710,10 +4713,10 @@ Usage: #definition
 
 * group[=].element[+].code = #10065845
 * group[=].element[=].display = "Intraoperative renal injury"
-* group[=].element[=].target[+].code = #40095003
-* group[=].element[=].target[=].display = "Injury of kidney"
-* group[=].element[=].target[=].equivalence = #wider
-* group[=].element[=].target[=].comment = "Im Pin 20250701 kein Konzept für die intraoperative Genese; Oberkonzept Nierenverletzung, der operative Kontext ergibt sich aus AdverseEvent.suspectEntity."
+* group[=].element[=].target[+].code = #1375936001
+* group[=].element[=].target[=].display = "Traumatic injury to kidney during surgery"
+* group[=].element[=].target[=].equivalence = #equivalent
+* group[=].element[=].target[=].comment = "Wörtliche Entsprechung."
 
 * group[=].element[+].code = #10065846
 * group[=].element[=].display = "Intraoperative skin injury"
@@ -4729,10 +4732,10 @@ Usage: #definition
 
 * group[=].element[+].code = #10065848
 * group[=].element[=].display = "Intraoperative venous injury"
-* group[=].element[=].target[+].code = #64583005
-* group[=].element[=].target[=].display = "Injury of vein"
-* group[=].element[=].target[=].equivalence = #wider
-* group[=].element[=].target[=].comment = "Im Pin 20250701 kein Konzept für die intraoperative Genese; Oberkonzept Venenverletzung, der operative Kontext ergibt sich aus AdverseEvent.suspectEntity."
+* group[=].element[=].target[+].code = #1375937005
+* group[=].element[=].target[=].display = "Traumatic injury to vein during surgery"
+* group[=].element[=].target[=].equivalence = #equivalent
+* group[=].element[=].target[=].comment = "Wörtliche Entsprechung."
 
 * group[=].element[+].code = #10065849
 * group[=].element[=].display = "Injury to jugular vein"

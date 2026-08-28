@@ -22,12 +22,12 @@
   "description": "Kuratierte Zuordnung der MedDRA-Codes der CTCAE-v4.03-Nebenwirkungsterme zu SNOMED CT für die optionale SNOMED-Zweitkodierung in AdverseEvent.event (Profil mii-pr-onko-nebenwirkung-adverse-event). WICHTIGE HINWEISE: (1) Es existiert eine offizielle, lizenzpflichtige MedDRA-SNOMED-CT-Map (MedDRA MSSO / SNOMED International); diese ConceptMap ist eine davon unabhängige, projektseitig kuratierte Zuordnung und ersetzt die offizielle Map nicht. (2) Die Zuordnungen wurden automatisiert erstellt und stichproben- bzw. einzelfallkuratiert; für Vollständigkeit und Korrektheit wird KEINE GEWÄHR übernommen. Vor einer Nutzung in Produktivsystemen ist eine eigenverantwortliche fachliche Prüfung erforderlich. (3) Nicht jeder CTCAE-/MedDRA-Term hat ein SNOMED-CT-Äquivalent — solche Terme sind als unmatched gekennzeichnet und verbleiben MedDRA-only.",
   "purpose": "Ableitung der optionalen SNOMED-CT-Zweitkodierung (event.coding[snomed]) aus der MedDRA-Pflichtkodierung der Nebenwirkungsart (oBDS 15.2).",
   "sourceCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-nebenwirkung-art",
-  "targetUri": "http://snomed.info/sct/900000000000207008/version/20250701?fhir_vs",
+  "targetUri": "http://snomed.info/sct/900000000000207008/version/20260501?fhir_vs",
   "group": [
     {
       "source": "https://www.meddra.org",
       "target": "http://snomed.info/sct",
-      "targetVersion": "http://snomed.info/sct/900000000000207008/version/20250701",
+      "targetVersion": "http://snomed.info/sct/900000000000207008/version/20260501",
       "element": [
         {
           "code": "10000060",
@@ -5997,10 +5997,9 @@
           "display": "Prostate infection",
           "target": [
             {
-              "code": "9713002",
-              "display": "Prostatitis",
-              "equivalence": "wider",
-              "comment": "Im Pin 20250701 kein spezifisches Konzept Infection of prostate; Prostatitis ist das nächstliegende Konzept, umfasst aber auch nicht-infektiöse Formen."
+              "code": "1371408008",
+              "display": "Infection of prostate",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -7783,8 +7782,10 @@
           "display": "Urostomy site bleeding",
           "target": [
             {
-              "equivalence": "unmatched",
-              "comment": "Kein Konzept im Pin 20250701 (nur Ileostomie-Blutung, andere Lokalisation) — Term verbleibt MedDRA-only."
+              "code": "16751421000119105",
+              "display": "Hemorrhage of incontinent urostomy stoma",
+              "equivalence": "narrower",
+              "comment": "SNOMED trennt kontinentes und inkontinentes Urostoma; gewählt ist die inkontinente Variante als häufigerer Fall."
             }
           ]
         },
@@ -8326,10 +8327,10 @@
           "display": "Intraoperative arterial injury",
           "target": [
             {
-              "code": "63043004",
-              "display": "Injury of artery",
-              "equivalence": "wider",
-              "comment": "Im Pin 20250701 kein Konzept für die intraoperative Genese; Oberkonzept Arterienverletzung, der operative Kontext ergibt sich aus AdverseEvent.suspectEntity."
+              "code": "1375944001",
+              "display": "Traumatic injury to artery during surgery",
+              "equivalence": "equivalent",
+              "comment": "Wörtliche Entsprechung des intraoperativen Arterienschadens."
             }
           ]
         },
@@ -8498,10 +8499,10 @@
           "display": "Intraoperative renal injury",
           "target": [
             {
-              "code": "40095003",
-              "display": "Injury of kidney",
-              "equivalence": "wider",
-              "comment": "Im Pin 20250701 kein Konzept für die intraoperative Genese; Oberkonzept Nierenverletzung, der operative Kontext ergibt sich aus AdverseEvent.suspectEntity."
+              "code": "1375936001",
+              "display": "Traumatic injury to kidney during surgery",
+              "equivalence": "equivalent",
+              "comment": "Wörtliche Entsprechung."
             }
           ]
         },
@@ -8532,10 +8533,10 @@
           "display": "Intraoperative venous injury",
           "target": [
             {
-              "code": "64583005",
-              "display": "Injury of vein",
-              "equivalence": "wider",
-              "comment": "Im Pin 20250701 kein Konzept für die intraoperative Genese; Oberkonzept Venenverletzung, der operative Kontext ergibt sich aus AdverseEvent.suspectEntity."
+              "code": "1375937005",
+              "display": "Traumatic injury to vein during surgery",
+              "equivalence": "equivalent",
+              "comment": "Wörtliche Entsprechung."
             }
           ]
         },
