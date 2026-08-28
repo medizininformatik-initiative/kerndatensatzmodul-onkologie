@@ -17,8 +17,8 @@
     "uses" : {
     },
     "ConceptMap-mii-cm-onko-allgemeiner-leistungszustand-sct.html" : "MII CM Onko Allgemeiner Leistungszustand SNOMED Mapping",
-    "ConceptMap-mii-cm-onko-allgemeiner-leistungszustand-ecog-loinc.html" : "Mapping oBDS ECOG zu LOINC",
-    "ValueSet-mii-vs-onko-allgemeiner-leistungszustand-ecog.html" : "MII VS Onkologie Allgemeiner Leistungszustand nach ECOG"
+    "ValueSet-mii-vs-onko-allgemeiner-leistungszustand-ecog.html" : "MII VS Onkologie Allgemeiner Leistungszustand nach ECOG",
+    "ConceptMap-mii-cm-onko-allgemeiner-leistungszustand-ecog-loinc.html" : "Mapping oBDS ECOG zu LOINC"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-karnofsky",
@@ -65,8 +65,8 @@
     "description" : "oBDS-spezifisches Codesystem Konsequenz der genetischen Variante Ausprägung",
     "uses" : {
     },
-    "ConceptMap-mii-cm-onko-genetische-variante-auspraegung-sct.html" : "MII CM Onko Genetische Variante Auspraegung SNOMED Mapping",
-    "ValueSet-mii-vs-onko-genetische-variante-auspraegung.html" : "MII_VS Onkologie Genetische Variante Ausprägung"
+    "ValueSet-mii-vs-onko-genetische-variante-auspraegung.html" : "MII_VS Onkologie Genetische Variante Ausprägung",
+    "ConceptMap-mii-cm-onko-genetische-variante-auspraegung-sct.html" : "MII CM Onko Genetische Variante Auspraegung SNOMED Mapping"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading",
@@ -89,9 +89,9 @@
     "description" : "oBDS-spezifisches Codesystem für Klassifikation von Intention der OP, der Strahlentherapie und der Systemischen Therapie.",
     "uses" : {
     },
-    "ConceptMap-mii-cm-onko-intention-sct.html" : "MII CM Onko Intention SNOMED Mapping",
-    "ValueSet-mii-vs-onko-systemische-therapie-intention.html" : "MII VS Onkologie Systemische Therapie Intention",
     "ValueSet-mii-vs-onko-operation-intention.html" : "MII VS Onkologie Operation Intention",
+    "ValueSet-mii-vs-onko-systemische-therapie-intention.html" : "MII VS Onkologie Systemische Therapie Intention",
+    "ConceptMap-mii-cm-onko-intention-sct.html" : "MII CM Onko Intention SNOMED Mapping",
     "ValueSet-mii-vs-onko-strahlentherapie-intention.html" : "MII VS Onkologie Strahlentherapie Intention"
   },
   {
@@ -133,8 +133,8 @@
     "description" : "oBDS-basiertes Codesystem für die präoperative Anzeichnung der Stoma-Position beim Rektumkarzinom",
     "uses" : {
     },
-    "ValueSet-mii-vs-onko-krk-stoma-anzeichnung.html" : "MII VS Onkologie KRK Stoma Anzeichnung",
-    "ConceptMap-mii-cm-onko-krk-stoma-obds-sct.html" : "Mapping oBDS Stoma-Anzeichnung zu SNOMED CT"
+    "ConceptMap-mii-cm-onko-krk-stoma-obds-sct.html" : "Mapping oBDS Stoma-Anzeichnung zu SNOMED CT",
+    "ValueSet-mii-vs-onko-krk-stoma-anzeichnung.html" : "MII VS Onkologie KRK Stoma Anzeichnung"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-tme-qualitaet",
@@ -200,8 +200,8 @@
     "description" : "Gibt an, zu welchem Schweregrad von Nebenwirkungen es bei der Bestrahlung oder der systemischen Therapie gekommen ist.",
     "uses" : {
     },
-    "ValueSet-mii-vs-onko-nebenwirkung-ctcae-grad.html" : "MII VS Onkologie Nebenwirkung nach CTCAE Grad",
-    "ConceptMap-mii-cm-onko-nebenwirkung-sct.html" : "MII CM Onko Nebenwirkung SNOMED Mapping"
+    "ConceptMap-mii-cm-onko-nebenwirkung-sct.html" : "MII CM Onko Nebenwirkung SNOMED Mapping",
+    "ValueSet-mii-vs-onko-nebenwirkung-ctcae-grad.html" : "MII VS Onkologie Nebenwirkung nach CTCAE Grad"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-meddra-de",
@@ -220,8 +220,8 @@
     "description" : "oBDS-spezifisches Codesystem für Klassifikation von Komplikationen während der OP",
     "uses" : {
     },
-    "ValueSet-mii-vs-onko-operation-komplikation.html" : "MII VS Onkologie Operation Komplikationen",
-    "ConceptMap-mii-cm-onko-operation-komplikation-sct.html" : "MII CM Onko Operation Komplikation SNOMED Mapping"
+    "ConceptMap-mii-cm-onko-operation-komplikation-sct.html" : "MII CM Onko Operation Komplikation SNOMED Mapping",
+    "ValueSet-mii-vs-onko-operation-komplikation.html" : "MII VS Onkologie Operation Komplikationen"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-urgency",
@@ -278,8 +278,8 @@
     "description" : "Codes für Seitenlokalisation, d.h. organspezifische Angabe der betroffenen Seite.",
     "uses" : {
     },
-    "ValueSet-mii-vs-onko-seitenlokalisation.html" : "MII VS Onkologie Primärtumor Seitenlokalisation",
-    "ConceptMap-mii-cm-onko-seitenlokalisation-sct.html" : "MII CM Onko Seitenlokalisation SNOMED Mapping"
+    "ConceptMap-mii-cm-onko-seitenlokalisation-sct.html" : "MII CM Onko Seitenlokalisation SNOMED Mapping",
+    "ValueSet-mii-vs-onko-seitenlokalisation.html" : "MII VS Onkologie Primärtumor Seitenlokalisation"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart",
@@ -290,8 +290,8 @@
     "description" : "oBDS-spezifisches Codesystem für Klassifikation von Intention der OP",
     "uses" : {
     },
-    "ConceptMap-mii-cm-onko-strahlentherapie-applikationsart-sct.html" : "MII CM Onko Strahlentherapie Applikationsart SNOMED Mapping",
-    "ValueSet-mii-vs-onko-strahlentherapie-applikationsart.html" : "MII VS Onkologie Strahlentherapie Applikationsart"
+    "ValueSet-mii-vs-onko-strahlentherapie-applikationsart.html" : "MII VS Onkologie Strahlentherapie Applikationsart",
+    "ConceptMap-mii-cm-onko-strahlentherapie-applikationsart-sct.html" : "MII CM Onko Strahlentherapie Applikationsart SNOMED Mapping"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost",
@@ -302,8 +302,8 @@
     "description" : "oBDS-spezifisches Codesystem für Klassifikation von Strahlentherapie-Boosts",
     "uses" : {
     },
-    "ValueSet-mii-vs-onko-strahlentherapie-boost.html" : "MII VS Onkologie Strahlentherapie Boost",
-    "ConceptMap-mii-cm-onko-strahlentherapie-boost-sct.html" : "MII CM Onko Strahlentherapie Boost SNOMED Mapping"
+    "ConceptMap-mii-cm-onko-strahlentherapie-boost-sct.html" : "MII CM Onko Strahlentherapie Boost SNOMED Mapping",
+    "ValueSet-mii-vs-onko-strahlentherapie-boost.html" : "MII VS Onkologie Strahlentherapie Boost"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart",
@@ -314,8 +314,8 @@
     "description" : "oBDS-spezifisches Codesystem für Klassifikation von eingesetzter Strahlenart",
     "uses" : {
     },
-    "ValueSet-mii-vs-onko-strahlentherapie-strahlenart.html" : "MII VS Onkologie Strahlentherapie Strahlenart",
-    "ConceptMap-mii-cm-onko-strahlentherapie-strahlenart-sct.html" : "MII CM Onko Strahlentherapie Strahlenart SNOMED Mapping"
+    "ConceptMap-mii-cm-onko-strahlentherapie-strahlenart-sct.html" : "MII CM Onko Strahlentherapie Strahlenart SNOMED Mapping",
+    "ValueSet-mii-vs-onko-strahlentherapie-strahlenart.html" : "MII VS Onkologie Strahlentherapie Strahlenart"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet",
@@ -326,8 +326,8 @@
     "description" : "oBDS-spezifisches Codesystem für Klassifikation von Zielgebiet von Strahlentherapie",
     "uses" : {
     },
-    "ValueSet-mii-vs-onko-strahlentherapie-zielgebiet.html" : "MII VS Onkologie Strahlentherapie Zielgebiet",
-    "ConceptMap-mii-cm-onko-strahlentherapie-zielgebiet-sct.html" : "MII CM Onko Strahlentherapie Zielgebiet SNOMED Mapping"
+    "ConceptMap-mii-cm-onko-strahlentherapie-zielgebiet-sct.html" : "MII CM Onko Strahlentherapie Zielgebiet SNOMED Mapping",
+    "ValueSet-mii-vs-onko-strahlentherapie-zielgebiet.html" : "MII VS Onkologie Strahlentherapie Zielgebiet"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet-2014",
@@ -372,8 +372,8 @@
     "description" : "oBDS-spezifisches Codesystem für Klassifikation des Grundes der Beendigung der Strahlentherapie oder der systemischen Therapie",
     "uses" : {
     },
-    "ValueSet-mii-vs-onko-strahlentherapie-ende-grund.html" : "MII VS Onkologie Strahlentherapie Ende Grund",
-    "ValueSet-mii-vs-onko-systemische-therapie-ende-grund.html" : "MII VS Onkologie Systemische Therapie Ende Grund"
+    "ValueSet-mii-vs-onko-systemische-therapie-ende-grund.html" : "MII VS Onkologie Systemische Therapie Ende Grund",
+    "ValueSet-mii-vs-onko-strahlentherapie-ende-grund.html" : "MII VS Onkologie Strahlentherapie Ende Grund"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop",
@@ -397,9 +397,9 @@
     "description" : "Typ der Therapie",
     "uses" : {
     },
-    "ConceptMap-mii-cm-onko-therapie-typ-sct.html" : "MII CM Onko Therapie Typ SNOMED Mapping",
     "ValueSet-mii-vs-onko-therapieempfehlung-typ.html" : "MII VS Onkologie Therapieempfehlung Typ",
-    "ValueSet-mii-vs-onko-systemische-therapie-art.html" : "MII VS Onkologie Systemische Therapie Art"
+    "ValueSet-mii-vs-onko-systemische-therapie-art.html" : "MII VS Onkologie Systemische Therapie Art",
+    "ConceptMap-mii-cm-onko-therapie-typ-sct.html" : "MII CM Onko Therapie Typ SNOMED Mapping"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieabweichung",
@@ -410,8 +410,8 @@
     "description" : "oBDS-spezifisches Codesystem für die Therapieabweichung auf Wunsch des Patients.",
     "uses" : {
     },
-    "ValueSet-mii-vs-onko-therapieabweichung.html" : "MII VS Onkologie Therapieabweichung",
-    "ConceptMap-mii-cm-onko-therapieabweichung-sct.html" : "MII CM Onko Therapieabweichung SNOMED Mapping"
+    "ConceptMap-mii-cm-onko-therapieabweichung-sct.html" : "MII CM Onko Therapieabweichung SNOMED Mapping",
+    "ValueSet-mii-vs-onko-therapieabweichung.html" : "MII VS Onkologie Therapieabweichung"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ",
@@ -422,8 +422,8 @@
     "description" : "oBDS-spezifisches Codesystem für den Therapieplanungstyp",
     "uses" : {
     },
-    "ConceptMap-mii-cm-onko-therapieplanung-sct.html" : "MII CM Onko Therapieplanung SNOMED Mapping",
-    "ValueSet-mii-vs-onko-therapieplanung-typ.html" : "MII VS Onkologie Therapieplanung Typ"
+    "ValueSet-mii-vs-onko-therapieplanung-typ.html" : "MII VS Onkologie Therapieplanung Typ",
+    "ConceptMap-mii-cm-onko-therapieplanung-sct.html" : "MII CM Onko Therapieplanung SNOMED Mapping"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-formel",
@@ -453,8 +453,8 @@
     "description" : "oBDS-spezifisches Codesystem tumorbedingter Tod",
     "uses" : {
     },
-    "ValueSet-mii-vs-onko-tod.html" : "MII VS Onkologie Tod",
-    "ConceptMap-mii-cm-onko-tod-sct.html" : "MII CM Onko Tod SNOMED Mapping"
+    "ConceptMap-mii-cm-onko-tod-sct.html" : "MII CM Onko Tod SNOMED Mapping",
+    "ValueSet-mii-vs-onko-tod.html" : "MII VS Onkologie Tod"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen",
@@ -465,8 +465,8 @@
     "description" : "oBDS-spezifisches Codesystem für die Beurteilung von Fernmetastasen im Behandlungsverlauf",
     "uses" : {
     },
-    "ValueSet-mii-vs-onko-verlauf-fernmetastasen.html" : "MII VS Onkologie Verlauf Fernmetastasen",
-    "ConceptMap-mii-cm-onko-verlauf-fernmetastasen-sct.html" : "MII CM Onko Verlauf Fernmetastasen SNOMED Mapping"
+    "ConceptMap-mii-cm-onko-verlauf-fernmetastasen-sct.html" : "MII CM Onko Verlauf Fernmetastasen SNOMED Mapping",
+    "ValueSet-mii-vs-onko-verlauf-fernmetastasen.html" : "MII VS Onkologie Verlauf Fernmetastasen"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung",
@@ -477,8 +477,8 @@
     "description" : "oBDS-spezifisches Codesystem für die Gesamtbeurteilung im Behandlungsverlauf",
     "uses" : {
     },
-    "ValueSet-mii-vs-onko-verlauf-gesamtbeurteilung.html" : "MII VS Onkologie Verlauf Gesamtbeurteilung",
-    "ConceptMap-mii-cm-onko-verlauf-gesamtbeurteilung-sct.html" : "MII CM Onko Verlauf Gesamtbeurteilung SNOMED Mapping"
+    "ConceptMap-mii-cm-onko-verlauf-gesamtbeurteilung-sct.html" : "MII CM Onko Verlauf Gesamtbeurteilung SNOMED Mapping",
+    "ValueSet-mii-vs-onko-verlauf-gesamtbeurteilung.html" : "MII VS Onkologie Verlauf Gesamtbeurteilung"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-lymphknoten",
@@ -501,8 +501,8 @@
     "description" : "oBDS-spezifisches Codesystem für die Beurteilung des Primärtumors im Behandlungsverlauf",
     "uses" : {
     },
-    "ValueSet-mii-vs-onko-verlauf-primaertumor.html" : "MII VS Onkologie Verlauf Primärtumor",
-    "ConceptMap-mii-cm-onko-verlauf-primaertumor-sct.html" : "MII CM Onko Verlauf Primaertumor SNOMED Mapping"
+    "ConceptMap-mii-cm-onko-verlauf-primaertumor-sct.html" : "MII CM Onko Verlauf Primaertumor SNOMED Mapping",
+    "ValueSet-mii-vs-onko-verlauf-primaertumor.html" : "MII VS Onkologie Verlauf Primärtumor"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds",
@@ -524,19 +524,19 @@
     "description" : "Codes für TNM UICC Ausprägungen. HINWEIS zur Auflagen-Versionierung: Dieses CodeSystem ist bewusst eine auflagen-übergreifende Union (8. Auflage + Ergänzungen der 9. Auflage, z.B. T1b3/M1c1/M1c2); die verwendete Auflage wird als eigenes Datenelement (TNM-Version, oBDS 8.2) dokumentiert. Eine formal strengere, auflagen-versionierte Validierung (je Auflage ein CS-/VS-Stand nach dem Muster der ATC-/ICD-O-Jahresversionen) ist als spätere Ausbaustufe vorgesehen.",
     "uses" : {
     },
-    "ValueSet-mii-vs-onko-tnm-itc-suffix.html" : "MII VS Onkologie TNM ITC Suffix",
     "ValueSet-mii-vs-onko-tnm-m-symbol.html" : "MII VS Onkologie TNM m-Symbol",
+    "ValueSet-mii-vs-onko-tnm-uicc-stadium.html" : "MII VS Onkologie TNM UICC Stadium",
     "ValueSet-mii-vs-onko-tnm-pn-kategorie-werte.html" : "MII VS Onkologie TNM Pn Kategorie Werte",
-    "ConceptMap-mii-cm-onko-tnm-uicc-sct-pathological.html" : "MII CM Onko Pathological TNM UICC SNOMED",
-    "ValueSet-mii-vs-onko-tnm-v-kategorie-werte.html" : "MII VS Onkologie TNM V Kategorie Werte",
-    "ValueSet-mii-vs-onko-tnm-n-kategorie-werte.html" : "MII VS Onkologie TNM N Kategorie Werte",
-    "ValueSet-mii-vs-onko-tnm-cp-praefix.html" : "MII VS Onkologie TNM c/p/u Praefix",
     "ValueSet-mii-vs-onko-tnm-s-kategorie-werte.html" : "MII VS Onkologie TNM S Kategorie Werte",
-    "ValueSet-mii-vs-onko-tnm-m-kategorie-werte.html" : "MII VS Onkologie TNM M Kategorie Werte",
-    "ValueSet-mii-vs-onko-tnm-t-kategorie-werte.html" : "MII VS Onkologie TNM T Kategorie Werte",
     "ValueSet-mii-vs-onko-tnm-l-kategorie-werte.html" : "MII VS Onkologie TNM L Kategorie Werte",
+    "ValueSet-mii-vs-onko-tnm-itc-suffix.html" : "MII VS Onkologie TNM ITC Suffix",
+    "ValueSet-mii-vs-onko-tnm-v-kategorie-werte.html" : "MII VS Onkologie TNM V Kategorie Werte",
+    "ValueSet-mii-vs-onko-tnm-cp-praefix.html" : "MII VS Onkologie TNM c/p/u Praefix",
     "ConceptMap-mii-cm-onko-tnm-uicc-sct-clinical.html" : "MII CM Onko Clincal TNM UICC SNOMED",
-    "ValueSet-mii-vs-onko-tnm-sn-suffix.html" : "MII VS Onkologie TNM SN Suffix",
-    "ValueSet-mii-vs-onko-tnm-uicc-stadium.html" : "MII VS Onkologie TNM UICC Stadium"
+    "ValueSet-mii-vs-onko-tnm-n-kategorie-werte.html" : "MII VS Onkologie TNM N Kategorie Werte",
+    "ConceptMap-mii-cm-onko-tnm-uicc-sct-pathological.html" : "MII CM Onko Pathological TNM UICC SNOMED",
+    "ValueSet-mii-vs-onko-tnm-t-kategorie-werte.html" : "MII VS Onkologie TNM T Kategorie Werte",
+    "ValueSet-mii-vs-onko-tnm-m-kategorie-werte.html" : "MII VS Onkologie TNM M Kategorie Werte",
+    "ValueSet-mii-vs-onko-tnm-sn-suffix.html" : "MII VS Onkologie TNM SN Suffix"
   }]
 }

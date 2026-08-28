@@ -144,7 +144,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-gradi
   "name" : "MII_PR_Onko_Grading",
   "title" : "MII PR Onkologie Grading",
   "status" : "active",
-  "date" : "2026-08-28T18:25:22+00:00",
+  "date" : "2026-08-28T19:18:26+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

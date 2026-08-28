@@ -137,7 +137,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-anzah
   "name" : "MII_PR_Onko_Anzahl_Befallene_Sentinel_Lymphknoten",
   "title" : "MII PR Onkologie Anzahl der befallenen Sentinel-Lymphknoten",
   "status" : "active",
-  "date" : "2026-08-28T18:25:22+00:00",
+  "date" : "2026-08-28T19:18:26+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
