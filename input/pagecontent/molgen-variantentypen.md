@@ -162,9 +162,16 @@ continues to apply: `Observation.note` (variant name) and
 ### Implementation Status
 
 This page is the **clinical documentation basis** for representing the variant
-types; it describes recommendations, not profiled constraints. The **structured
-coding of the variant types** — gene identity via HGNC, marker type codes via
-LOINC as well as categorical variants via GA4GH Cat-VRS, tiered by availability
-(*tiered*) — is **being implemented** as a separate work package and is planned
-for a forthcoming module version. The respective current status as well as the
-resulting profiles and ValueSets are tracked in the release notes of the module.
+types. The *tiered* strategy is **partly profiled**:
+
+- **Implemented (v2027):** **gene identity** is structurally profiled —
+  `Observation.component:gene-studied` is bound **extensibly** in profile
+  [`MII_PR_Onko_Genetische_Variante`](StructureDefinition-mii-pr-onko-genetische-variante.html)
+  to the value set
+  [`mii-vs-onko-marker-gene-hgnc`](ValueSet-mii-vs-onko-marker-gene-hgnc.html)
+  (40 HGNC genes from the §65c marker list). Extensible means: the list covers
+  the common oncological marker genes, further genes are explicitly permitted.
+  The free-text gene name per oBDS 23.1 remains in `note.text`.
+- **Still a recommendation (not profiled):** marker-type codes via LOINC and
+  categorical variants (exon, fusion, amplification) via GA4GH Cat-VRS — the
+  FHIR binding for these is too young for binding constraints.

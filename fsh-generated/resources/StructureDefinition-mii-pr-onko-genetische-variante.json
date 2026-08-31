@@ -378,6 +378,38 @@
             ]
           }
         ]
+      },
+      {
+        "id": "Observation.component:gene-studied",
+        "path": "Observation.component",
+        "sliceName": "gene-studied"
+      },
+      {
+        "id": "Observation.component:gene-studied.value[x]",
+        "path": "Observation.component.value[x]",
+        "short": "Untersuchtes Gen",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Untersuchtes Gen als HGNC-Gensymbol"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Untersuchtes Gen als HGNC-Gensymbol - strukturierte Entsprechung des Freitext-Gennamens nach 23.1 oBDS",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-marker-gene-hgnc"
+        }
       }
     ]
   }

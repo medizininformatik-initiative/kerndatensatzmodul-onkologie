@@ -13,6 +13,19 @@ Description: "Genetische Variante wie im oBDS beschrieben"
 * subject 1..1 MS
 * subject only Reference(Patient)
 
+// Strukturierte Gen-Identitaet (beads 14w.1): Das oBDS uebermittelt den Gennamen
+// als Freitext (23.1, unten in note.text); fuer die strukturierte Sicht wird das
+// vom MolGen-Profil geerbte component:gene-studied genutzt und an die Liste der
+// onkologischen Marker-Gene gebunden. Binding EXTENSIBLE — die Liste deckt die
+// gebraeuchlichen Marker ab, schliesst weitere Gene aber ausdruecklich nicht aus.
+// Die Zuordnung Markertyp -> MolGen-Komponente (Exon, Fusion, Amplifikation,
+// IHC, Zytogenetik) beschreibt die IG-Seite zu den Variantentypen.
+* component[gene-studied] MS
+* component[gene-studied].value[x] only CodeableConcept
+* component[gene-studied].valueCodeableConcept from MII_VS_Onko_Marker_Gene_HGNC (extensible)
+* insert Label(component[gene-studied].valueCodeableConcept, Untersuchtes Gen, Untersuchtes Gen als HGNC-Gensymbol - strukturierte Entsprechung des Freitext-Gennamens nach 23.1 oBDS)
+* insert Translation(component[gene-studied].valueCodeableConcept ^short, de-DE, Untersuchtes Gen als HGNC-Gensymbol)
+
 * note MS 
 * note.text MS 
 * insert Label(note.text, Genetische Variante Name, Genetische Variante Name gemäß 23.1 oBDS 2021)
