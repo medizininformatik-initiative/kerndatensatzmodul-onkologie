@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie | *Version*:2026.0.3 |
-| Active as of 2026-08-28 | *Computable Name*:MII_PR_Onko_TNM_N_Kategorie |
+| Active as of 2026-08-31 | *Computable Name*:MII_PR_Onko_TNM_N_Kategorie |
 
  
 TNM-Klassifikation: TNM N-Kategorie. Ausbreitung von regionären Lymphknotenmetastasen, erfolgt gemäß Tumorentität nach TNM. 
@@ -149,7 +149,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tnm-n
   "name" : "MII_PR_Onko_TNM_N_Kategorie",
   "title" : "MII PR Onkologie TNM N-Kategorie",
   "status" : "active",
-  "date" : "2026-08-28T19:18:26+00:00",
+  "date" : "2026-08-31T13:44:47+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

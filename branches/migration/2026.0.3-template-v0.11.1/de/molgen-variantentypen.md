@@ -99,5 +99,8 @@ Ist MolGen an einem Standort **nicht** implementierbar, gilt weiterhin das Direk
 
 ### Stand der Umsetzung
 
-Diese Seite ist die **fachliche Dokumentationsgrundlage** für die Abbildung der Variantentypen; sie beschreibt Empfehlungen, keine profilierten Constraints. Die **strukturierte Codierung der Variantentypen** — Gen-Identität über HGNC, Markertyp-Codes über LOINC sowie kategoriale Varianten über GA4GH Cat-VRS, gestuft nach Verfügbarkeit (**tiered**) — ist als eigenes Arbeitspaket **in Umsetzung** und für eine kommende Modulversion vorgesehen. Der jeweils aktuelle Stand sowie die daraus entstehenden Profile und ValueSets werden in den Release Notes des Moduls geführt.
+Diese Seite ist die **fachliche Dokumentationsgrundlage** für die Abbildung der Variantentypen. Die **tiered**-Strategie ist **teilweise profiliert**:
+
+* **Umgesetzt (v2027):** Die **Gen-Identität** ist strukturiert profiliert — `Observation.component:gene-studied` ist im Profil [`MII_PR_Onko_Genetische_Variante`](StructureDefinition-mii-pr-onko-genetische-variante.md) **extensible** an das ValueSet [`mii-vs-onko-marker-gene-hgnc`](ValueSet-mii-vs-onko-marker-gene-hgnc.md) gebunden (40 HGNC-Gene der §65c-Markerliste). Extensible bedeutet: Die Liste deckt die gebräuchlichen onkologischen Marker-Gene ab, weitere Gene sind ausdrücklich zulässig. Der Freitext-Genname nach oBDS 23.1 bleibt in `note.text` erhalten.
+* **Weiterhin Empfehlung (nicht profiliert):** Markertyp-Codes über LOINC sowie kategoriale Varianten (Exon, Fusion, Amplifikation) über GA4GH Cat-VRS — hier ist die FHIR-Bindung noch zu jung für verbindliche Constraints. Der jeweils aktuelle Stand sowie die daraus entstehenden Profile und ValueSets werden in den Release Notes des Moduls geführt.
 

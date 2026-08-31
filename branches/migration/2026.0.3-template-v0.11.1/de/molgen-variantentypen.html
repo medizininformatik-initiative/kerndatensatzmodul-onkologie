@@ -651,13 +651,24 @@ Direktmapping der oBDS-Felder gemäß dem Profil
 <h3 id="stand-der-umsetzung">Stand der Umsetzung</h3>
 
 <p>Diese Seite ist die <strong>fachliche Dokumentationsgrundlage</strong> für die Abbildung der
-Variantentypen; sie beschreibt Empfehlungen, keine profilierten Constraints. Die
-<strong>strukturierte Codierung der Variantentypen</strong> — Gen-Identität über HGNC,
-Markertyp-Codes über LOINC sowie kategoriale Varianten über GA4GH Cat-VRS, gestuft
-nach Verfügbarkeit (<em>tiered</em>) — ist als eigenes Arbeitspaket <strong>in Umsetzung</strong> und
-für eine kommende Modulversion vorgesehen. Der jeweils aktuelle Stand sowie die
+Variantentypen. Die <em>tiered</em>-Strategie ist <strong>teilweise profiliert</strong>:</p>
+
+<ul>
+  <li><strong>Umgesetzt (v2027):</strong> Die <strong>Gen-Identität</strong> ist strukturiert profiliert —
+<code class="language-plaintext highlighter-rouge">Observation.component:gene-studied</code> ist im Profil
+<a href="StructureDefinition-mii-pr-onko-genetische-variante.html"><code class="language-plaintext highlighter-rouge">MII_PR_Onko_Genetische_Variante</code></a>
+<strong>extensible</strong> an das ValueSet
+<a href="ValueSet-mii-vs-onko-marker-gene-hgnc.html"><code class="language-plaintext highlighter-rouge">mii-vs-onko-marker-gene-hgnc</code></a>
+gebunden (40 HGNC-Gene der §65c-Markerliste). Extensible bedeutet: Die Liste
+deckt die gebräuchlichen onkologischen Marker-Gene ab, weitere Gene sind
+ausdrücklich zulässig. Der Freitext-Genname nach oBDS 23.1 bleibt in
+<code class="language-plaintext highlighter-rouge">note.text</code> erhalten.</li>
+  <li><strong>Weiterhin Empfehlung (nicht profiliert):</strong> Markertyp-Codes über LOINC sowie
+kategoriale Varianten (Exon, Fusion, Amplifikation) über GA4GH Cat-VRS — hier
+ist die FHIR-Bindung noch zu jung für verbindliche Constraints. Der jeweils aktuelle Stand sowie die
 daraus entstehenden Profile und ValueSets werden in den Release Notes des Moduls
-geführt.</p>
+geführt.</li>
+</ul>
 
 
 
@@ -684,7 +695,7 @@ geführt.</p>
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.onkologie#2026.0.3 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Fri, Aug 28, 2026 19:18+0000">2026-08-28</span>
+          Erstellt <span title="Mon, Aug 31, 2026 13:44+0000">2026-08-31</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

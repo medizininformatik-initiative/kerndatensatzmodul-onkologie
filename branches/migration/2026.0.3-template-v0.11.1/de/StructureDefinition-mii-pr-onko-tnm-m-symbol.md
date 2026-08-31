@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-symbol | *Version*:2026.0.3 |
-| Active Stand: 2026-08-28 | *Maschinenlesbarer Name*:MII_PR_Onko_TNM_m_Symbol |
+| Active Stand: 2026-08-31 | *Maschinenlesbarer Name*:MII_PR_Onko_TNM_m_Symbol |
 
  
 TNM-Klassifikation: TNM m-Symbol. Kennzeichnet Vorhandensein multipler Primärtumoren in einem anatomischen Bezirk. 
@@ -208,7 +208,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_TNM_m_Symbol",
   "title" : "MII PR Onkologie TNM m-Symbol",
   "status" : "active",
-  "date" : "2026-08-28T19:18:26+00:00",
+  "date" : "2026-08-31T13:44:47+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

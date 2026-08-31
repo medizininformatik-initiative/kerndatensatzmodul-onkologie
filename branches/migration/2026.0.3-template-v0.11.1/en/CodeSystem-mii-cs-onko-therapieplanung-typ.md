@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ | *Version*:2026.0.3 |
-| Active as of 2026-08-28 | *Computable Name*:MII_CS_Onko_Therapieplanung_Typ |
+| Active as of 2026-08-31 | *Computable Name*:MII_CS_Onko_Therapieplanung_Typ |
 
  
 oBDS-spezifisches Codesystem für den Therapieplanungstyp 
@@ -127,7 +127,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "MII CS Onkologie Therapieplanung Typ",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-28T19:18:26+00:00",
+  "date" : "2026-08-31T13:44:47+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

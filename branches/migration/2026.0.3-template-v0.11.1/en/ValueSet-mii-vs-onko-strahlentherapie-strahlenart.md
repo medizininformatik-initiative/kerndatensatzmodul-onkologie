@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-strahlenart | *Version*:2026.0.3 |
-| Active as of 2026-08-28 | *Computable Name*:MII_VS_Onko_Strahlentherapie_Strahlenart |
+| Active as of 2026-08-31 | *Computable Name*:MII_VS_Onko_Strahlentherapie_Strahlenart |
 
  
 oBDS-spezifisches ValueSet für Klassifikation von Strahlenart bei Strahlentherapie 
@@ -139,7 +139,7 @@ oBDS-spezifisches ValueSet für Klassifikation von Strahlenart bei Strahlenthera
   "title" : "MII VS Onkologie Strahlentherapie Strahlenart",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-28T19:18:26+00:00",
+  "date" : "2026-08-31T13:44:47+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

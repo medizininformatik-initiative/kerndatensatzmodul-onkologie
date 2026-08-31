@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-y-symbol | *Version*:2026.0.3 |
-| Retired as of 2026-08-28 | *Computable Name*:MII_PR_Onko_TNM_y_Symbol |
+| Retired as of 2026-08-31 | *Computable Name*:MII_PR_Onko_TNM_y_Symbol |
 
  
 DEPRECATED seit v2027: Die eigenständigen Symbol-Profile sind abgelöst — das y-Symbol wird als modifierExtension an den T-/N-/M-Kategorien erfasst (oBDS 8.3–8.5). Dieses Profil bleibt zum Lesen von Bestandsdaten definiert. — TNM-Klassifikation: TNM y-Symbol. Gibt an, ob die Klassifikation während oder nach initialer multimodaler Therapie erfolgte. 
@@ -141,7 +141,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tnm-y
   "name" : "MII_PR_Onko_TNM_y_Symbol",
   "title" : "MII PR Onkologie TNM y-Symbol",
   "status" : "retired",
-  "date" : "2026-08-28T19:18:26+00:00",
+  "date" : "2026-08-31T13:44:47+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

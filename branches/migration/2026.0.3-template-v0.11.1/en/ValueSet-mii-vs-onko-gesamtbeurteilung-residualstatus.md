@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-gesamtbeurteilung-residualstatus | *Version*:2026.0.3 |
-| Active as of 2026-08-28 | *Computable Name*:MII_VS_Onko_Gesamtbeurteilung_Residualstatus |
+| Active as of 2026-08-31 | *Computable Name*:MII_VS_Onko_Gesamtbeurteilung_Residualstatus |
 
  
 Value Set für oBDS-Codes für die Gesamtbeurteilung des Residualstatus 
@@ -138,7 +138,7 @@ Value Set für oBDS-Codes für die Gesamtbeurteilung des Residualstatus
   "title" : "MII VS Onkologie Gesamtbeurteilung des Residualstatus",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-28T19:18:26+00:00",
+  "date" : "2026-08-31T13:44:47+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

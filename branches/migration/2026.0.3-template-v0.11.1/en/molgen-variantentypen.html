@@ -680,12 +680,21 @@ continues to apply: <code class="language-plaintext highlighter-rouge">Observati
 <h3 id="implementation-status">Implementation Status</h3>
 
 <p>This page is the <strong>clinical documentation basis</strong> for representing the variant
-types; it describes recommendations, not profiled constraints. The <strong>structured
-coding of the variant types</strong> — gene identity via HGNC, marker type codes via
-LOINC as well as categorical variants via GA4GH Cat-VRS, tiered by availability
-(<em>tiered</em>) — is <strong>being implemented</strong> as a separate work package and is planned
-for a forthcoming module version. The respective current status as well as the
-resulting profiles and ValueSets are tracked in the release notes of the module.</p>
+types. The <em>tiered</em> strategy is <strong>partly profiled</strong>:</p>
+
+<ul>
+  <li><strong>Implemented (v2027):</strong> <strong>gene identity</strong> is structurally profiled —
+<code class="language-plaintext highlighter-rouge">Observation.component:gene-studied</code> is bound <strong>extensibly</strong> in profile
+<a href="StructureDefinition-mii-pr-onko-genetische-variante.html"><code class="language-plaintext highlighter-rouge">MII_PR_Onko_Genetische_Variante</code></a>
+to the value set
+<a href="ValueSet-mii-vs-onko-marker-gene-hgnc.html"><code class="language-plaintext highlighter-rouge">mii-vs-onko-marker-gene-hgnc</code></a>
+(40 HGNC genes from the §65c marker list). Extensible means: the list covers
+the common oncological marker genes, further genes are explicitly permitted.
+The free-text gene name per oBDS 23.1 remains in <code class="language-plaintext highlighter-rouge">note.text</code>.</li>
+  <li><strong>Still a recommendation (not profiled):</strong> marker-type codes via LOINC and
+categorical variants (exon, fusion, amplification) via GA4GH Cat-VRS — the
+FHIR binding for these is too young for binding constraints.</li>
+</ul>
 
 
 
@@ -712,7 +721,7 @@ resulting profiles and ValueSets are tracked in the release notes of the module.
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.onkologie#2026.0.3 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Fri, Aug 28, 2026 19:18+0000">2026-08-28</span>
+          Generated <span title="Mon, Aug 31, 2026 13:44+0000">2026-08-31</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

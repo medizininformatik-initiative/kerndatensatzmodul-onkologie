@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-s-kategorie | *Version*:2026.0.3 |
-| Active as of 2026-08-28 | *Computable Name*:MII_PR_Onko_TNM_S_Kategorie |
+| Active as of 2026-08-31 | *Computable Name*:MII_PR_Onko_TNM_S_Kategorie |
 
  
 TNM-Klassifikation: TNM S-Kategorie. Serumtumormarker. 
@@ -145,7 +145,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tnm-s
   "name" : "MII_PR_Onko_TNM_S_Kategorie",
   "title" : "MII PR Onkologie TNM S-Kategorie",
   "status" : "active",
-  "date" : "2026-08-28T19:18:26+00:00",
+  "date" : "2026-08-31T13:44:47+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

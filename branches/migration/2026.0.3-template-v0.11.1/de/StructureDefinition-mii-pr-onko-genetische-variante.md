@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-genetische-variante | *Version*:2026.0.3 |
-| Active Stand: 2026-08-28 | *Maschinenlesbarer Name*:MII_PR_Onko_Genetische_Variante |
+| Active Stand: 2026-08-31 | *Maschinenlesbarer Name*:MII_PR_Onko_Genetische_Variante |
 
  
 Genetische Variante wie im oBDS beschrieben 
@@ -276,7 +276,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_Genetische_Variante",
   "title" : "MII PR Onkologie Genetische Variante",
   "status" : "active",
-  "date" : "2026-08-28T19:18:26+00:00",
+  "date" : "2026-08-31T13:44:47+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -500,6 +500,34 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
         "code" : "Reference",
         "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-specimen"]
       }]
+    },
+    {
+      "id" : "Observation.component:gene-studied",
+      "path" : "Observation.component",
+      "sliceName" : "gene-studied"
+    },
+    {
+      "id" : "Observation.component:gene-studied.value[x]",
+      "path" : "Observation.component.value[x]",
+      "short" : "Untersuchtes Gen",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Untersuchtes Gen als HGNC-Gensymbol"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Untersuchtes Gen als HGNC-Gensymbol - strukturierte Entsprechung des Freitext-Gennamens nach 23.1 oBDS",
+      "binding" : {
+        "strength" : "extensible",
+        "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-marker-gene-hgnc"
+      }
     }]
   }
 }

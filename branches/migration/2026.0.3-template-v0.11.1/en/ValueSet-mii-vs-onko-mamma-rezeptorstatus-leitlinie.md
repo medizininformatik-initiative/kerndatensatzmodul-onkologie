@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-rezeptorstatus-leitlinie | *Version*:2026.0.3 |
-| Active as of 2026-08-28 | *Computable Name*:MII_VS_Onko_Mamma_Rezeptorstatus_Leitlinie |
+| Active as of 2026-08-31 | *Computable Name*:MII_VS_Onko_Mamma_Rezeptorstatus_Leitlinie |
 
  
 Value Set für oBDS-Rezeptorstatus Mamma 
@@ -139,7 +139,7 @@ Value Set für oBDS-Rezeptorstatus Mamma
   "title" : "MII VS Onkologie Mamma Rezeptorstatus Leitlinie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-28T19:18:26+00:00",
+  "date" : "2026-08-31T13:44:47+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

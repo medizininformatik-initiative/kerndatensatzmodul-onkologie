@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-itc-suffix | *Version*:2026.0.3 |
-| Active as of 2026-08-28 | *Computable Name*:MII_EX_Onko_TNM_ITC_Suffix |
+| Active as of 2026-08-31 | *Computable Name*:MII_EX_Onko_TNM_ITC_Suffix |
 
 Die Extension verleiht TNM N- und M-Kategorien isolierte Tumorzellen (ITC) Suffixe.
 
@@ -139,7 +139,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-onko-tnm-i
   "name" : "MII_EX_Onko_TNM_ITC_Suffix",
   "title" : "MII EX Onkologie TNM ITC Suffix",
   "status" : "active",
-  "date" : "2026-08-28T19:18:26+00:00",
+  "date" : "2026-08-31T13:44:47+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

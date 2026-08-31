@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-faerbeintensitaet | *Version*:2026.0.3 |
-| Active Stand: 2026-08-28 | *Maschinenlesbarer Name*:MII_VS_Onko_Mamma_Faerbeintensitaet |
+| Active Stand: 2026-08-31 | *Maschinenlesbarer Name*:MII_VS_Onko_Mamma_Faerbeintensitaet |
 
  
 Färbeintensität der immunhistochemischen Rezeptorbestimmung (Weak, Moderate, Strong). Enumerierte Fassung der LOINC-Answer-List LL4358-9. 
@@ -139,7 +139,7 @@ Färbeintensität der immunhistochemischen Rezeptorbestimmung (Weak, Moderate, S
   "title" : "MII VS Onkologie Mamma Färbeintensität",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-28T19:18:26+00:00",
+  "date" : "2026-08-31T13:44:47+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

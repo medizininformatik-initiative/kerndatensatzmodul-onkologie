@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet-2014 | *Version*:2026.0.3 |
-| Active as of 2026-08-28 | *Computable Name*:MII_CS_Onko_Strahlentherapie_Zielgebiet_2014 |
+| Active as of 2026-08-31 | *Computable Name*:MII_CS_Onko_Strahlentherapie_Zielgebiet_2014 |
 
  
 oBDS 2014 Legacy-Codesystem für Klassifikation von Zielgebiet von Strahlentherapie - nur für Datenimport und Migration 
@@ -127,7 +127,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "MII CS Onkologie Strahlentherapie Zielgebiet oBDS 2014 (Legacy)",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-28T19:18:26+00:00",
+  "date" : "2026-08-31T13:44:47+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

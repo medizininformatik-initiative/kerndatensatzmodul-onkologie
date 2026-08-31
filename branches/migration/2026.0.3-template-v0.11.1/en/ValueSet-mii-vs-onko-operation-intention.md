@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-operation-intention | *Version*:2026.0.3 |
-| Active as of 2026-08-28 | *Computable Name*:MII_VS_Onko_Operation_Intention |
+| Active as of 2026-08-31 | *Computable Name*:MII_VS_Onko_Operation_Intention |
 
  
 Value Set für oBDS-Codes für Klassifikation von Intention der OP 
@@ -138,7 +138,7 @@ Value Set für oBDS-Codes für Klassifikation von Intention der OP
   "title" : "MII VS Onkologie Operation Intention",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-28T19:18:26+00:00",
+  "date" : "2026-08-31T13:44:47+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

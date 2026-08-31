@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://radelement.org | *Version*:2026.0.3 |
-| Active as of 2026-08-28 | *Computable Name*:RadElement |
+| Active as of 2026-08-31 | *Computable Name*:RadElement |
 | **Copyright/Legal**: RadElement Common Data Elements © Radiological Society of North America (RSNA). | |
 
  
@@ -37,7 +37,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "RSNA RadElement Common Data Elements (Fragment)",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-28T19:18:26+00:00",
+  "date" : "2026-08-31T13:44:47+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

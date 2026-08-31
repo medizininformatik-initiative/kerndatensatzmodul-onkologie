@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieempfehlung-typ | *Version*:2026.0.3 |
-| Active Stand: 2026-08-28 | *Maschinenlesbarer Name*:MII_VS_Onko_Therapieempfehlung_Typ |
+| Active Stand: 2026-08-31 | *Maschinenlesbarer Name*:MII_VS_Onko_Therapieempfehlung_Typ |
 
  
 oBDS-spezifisches ValueSet für den Therapieempfehlungstyp 
@@ -139,7 +139,7 @@ oBDS-spezifisches ValueSet für den Therapieempfehlungstyp
   "title" : "MII VS Onkologie Therapieempfehlung Typ",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-28T19:18:26+00:00",
+  "date" : "2026-08-31T13:44:47+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

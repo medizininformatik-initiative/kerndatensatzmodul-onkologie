@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-beurteilung-lokaler-residualstatus | *Version*:2026.0.3 |
-| Active as of 2026-08-28 | *Computable Name*:MII_VS_Onko_Beurteilung_Lokaler_Residualstatus |
+| Active as of 2026-08-31 | *Computable Name*:MII_VS_Onko_Beurteilung_Lokaler_Residualstatus |
 
  
 Value Set für oBDS-Codes für die Beurteilung des lokalen Residualstatus 
@@ -138,7 +138,7 @@ Value Set für oBDS-Codes für die Beurteilung des lokalen Residualstatus
   "title" : "MII VS Onkologie Beurteilung des lokalen Residualstatus",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-28T19:18:26+00:00",
+  "date" : "2026-08-31T13:44:47+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

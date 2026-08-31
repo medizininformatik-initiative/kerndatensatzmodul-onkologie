@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-operation-urgency | *Version*:2026.0.3 |
-| Active as of 2026-08-28 | *Computable Name*:MII_VS_Onko_Operation_Urgency |
+| Active as of 2026-08-31 | *Computable Name*:MII_VS_Onko_Operation_Urgency |
 
  
 Value Set für semantische Kodierung der oBDS-Modalität der Eingriffsdurchführung (Art des Eingriffs KR6) 
@@ -138,7 +138,7 @@ Value Set für semantische Kodierung der oBDS-Modalität der Eingriffsdurchführ
   "title" : "MII VS Onkologie Operation Urgency",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-28T19:18:26+00:00",
+  "date" : "2026-08-31T13:44:47+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

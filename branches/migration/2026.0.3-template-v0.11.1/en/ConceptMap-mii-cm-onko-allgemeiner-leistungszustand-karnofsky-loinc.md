@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc | *Version*:2026.0.3 |
-| Active as of 2026-08-28 | *Computable Name*: |
+| Active as of 2026-08-31 | *Computable Name*: |
 
  
 Mapping der oBDS-Codes für Karnofsky Performance Status zu LOINC Answer List LL4986-7 
@@ -27,7 +27,7 @@ Mapping der oBDS-Codes für Karnofsky Performance Status zu LOINC Answer List LL
   "title" : "Mapping oBDS Karnofsky zu LOINC",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-28T19:18:26+00:00",
+  "date" : "2026-08-31T13:44:47+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

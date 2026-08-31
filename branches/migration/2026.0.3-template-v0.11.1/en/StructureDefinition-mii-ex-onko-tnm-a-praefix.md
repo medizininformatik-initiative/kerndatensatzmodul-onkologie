@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-a-praefix | *Version*:2026.0.3 |
-| Active as of 2026-08-28 | *Computable Name*:MII_EX_Onko_TNM_a_Praefix |
+| Active as of 2026-08-31 | *Computable Name*:MII_EX_Onko_TNM_a_Praefix |
 
 Kennzeichnet eine TNM T-, N- oder M-Kategorie, deren Feststellung erst im Rahmen einer Autopsie erfolgte (UICC a-Präfix). Als modifierExtension zu verwenden, da das a-Präfix die Interpretation des Kategorie-Wertes verändert.
 
@@ -138,7 +138,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-onko-tnm-a
   "name" : "MII_EX_Onko_TNM_a_Praefix",
   "title" : "MII EX Onkologie TNM a-Präfix",
   "status" : "active",
-  "date" : "2026-08-28T19:18:26+00:00",
+  "date" : "2026-08-31T13:44:47+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

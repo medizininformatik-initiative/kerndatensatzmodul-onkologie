@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation | *Version*:2026.0.3 |
-| Active as of 2026-08-28 | *Computable Name*:MII_PR_Onko_Operation |
+| Active as of 2026-08-31 | *Computable Name*:MII_PR_Onko_Operation |
 
  
 Operation nach OPS inklusive Intention, Datum und Komplikationen: 
@@ -278,7 +278,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-opera
   "name" : "MII_PR_Onko_Operation",
   "title" : "MII PR Onkologie Operation",
   "status" : "active",
-  "date" : "2026-08-28T19:18:26+00:00",
+  "date" : "2026-08-31T13:44:47+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

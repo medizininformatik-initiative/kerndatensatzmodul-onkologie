@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-karnofsky | *Version*:2026.0.3 |
-| Active Stand: 2026-08-28 | *Maschinenlesbarer Name*:MII_VS_Onko_Allgemeiner_Leistungszustand_Karnofsky |
+| Active Stand: 2026-08-31 | *Maschinenlesbarer Name*:MII_VS_Onko_Allgemeiner_Leistungszustand_Karnofsky |
 
  
 Value Set für oBDS-Codes für den Allgemeinen Leistungszustand nach Karnofsky 
@@ -138,7 +138,7 @@ Value Set für oBDS-Codes für den Allgemeinen Leistungszustand nach Karnofsky
   "title" : "MII VS Onkologie Allgemeiner Leistungszustand nach Karnofsky",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-28T19:18:26+00:00",
+  "date" : "2026-08-31T13:44:47+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
