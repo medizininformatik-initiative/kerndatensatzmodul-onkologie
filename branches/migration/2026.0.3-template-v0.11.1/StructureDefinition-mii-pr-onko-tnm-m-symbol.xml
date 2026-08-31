@@ -123,8 +123,8 @@
   <version value="2026.0.3"/>
   <name value="MII_PR_Onko_TNM_m_Symbol"/>
   <title value="MII PR Onkologie TNM m-Symbol"/>
-  <status value="active"/>
-  <date value="2026-08-31T14:28:40+00:00"/>
+  <status value="retired"/>
+  <date value="2026-08-31T15:22:09+00:00"/>
   <publisher value="Medizininformatik Initiative"/>
   <contact>
     <name value="Medizininformatik Initiative"/>
@@ -133,7 +133,7 @@
       <value value="https://www.medizininformatik-initiative.de/"/>
     </telecom>
   </contact>
-  <description value="TNM-Klassifikation: TNM m-Symbol. Kennzeichnet Vorhandensein multipler Primärtumoren in einem anatomischen Bezirk."/>
+  <description value="DEPRECATED seit v2027: Die Angabe multipler Primärtumoren (UICC-m-Suffix, oBDS 8.10) erfolgt jetzt als Component multipleTumoren an der T-Kategorie (mii-pr-onko-tnm-t-kategorie) — das Suffix ist T-exklusiv und gehört an die Kategorie, nicht als eigene Observation daneben. Bestandsdaten bleiben lesbar; für Neuimplementierungen ist die Component zu verwenden. Ursprüngliche Beschreibung: TNM-Klassifikation: TNM m-Symbol. Kennzeichnet Vorhandensein multipler Primärtumoren in einem anatomischen Bezirk."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

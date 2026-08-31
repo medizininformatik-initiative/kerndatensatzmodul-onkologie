@@ -525,6 +525,56 @@ MII PR Onkologie TNM-Klassifikation
 
 <p><a href="Observation-mii-exa-onko-tnm-klassifikation-uT2a2pN0023i-sncM1.html">mii-exa-onko-tnm-klassifikation-uT2a2pN0023i-sncM1</a></p>
 
+<h3 id="how-prefixes-symbols-and-category-values-are-coded">How prefixes, symbols and category values are coded</h3>
+
+<p>For statements that look structurally similar the module deliberately uses three
+different mechanisms — what matters is whether the statement is <em>binary</em>,
+<em>value-bearing</em>, or <em>the category itself</em>:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Statement</th>
+      <th>Semantics</th>
+      <th>Representation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>c/p prefix</strong></td>
+      <td>how was the category established?</td>
+      <td>extension on the category's <code class="language-plaintext highlighter-rouge">code</code></td>
+    </tr>
+    <tr>
+      <td><strong>y, r, a prefix</strong></td>
+      <td>binary prefix — applies or not (multimodal pre-treatment, recurrence, autopsy)</td>
+      <td><strong><code class="language-plaintext highlighter-rouge">modifierExtension</code></strong> on the respective category (they change how the value is interpreted)</td>
+    </tr>
+    <tr>
+      <td><strong>(m) suffix</strong></td>
+      <td><strong>value-bearing</strong>: multiple primary tumours, oBDS 8.10 — <code class="language-plaintext highlighter-rouge">(m)</code>, <code class="language-plaintext highlighter-rouge">(2)</code>, <code class="language-plaintext highlighter-rouge">(3)</code>, <code class="language-plaintext highlighter-rouge">(4)</code></td>
+      <td><strong><code class="language-plaintext highlighter-rouge">component[multipleTumoren]</code></strong> on the T category (LOINC <code class="language-plaintext highlighter-rouge">42030-7</code> as component code, value from the UICC code system) — the suffix is T-exclusive</td>
+    </tr>
+    <tr>
+      <td><strong>category value</strong> (T2, N0, M1c …)</td>
+      <td>the category itself</td>
+      <td>dual coding in <code class="language-plaintext highlighter-rouge">valueCodeableConcept</code>: <code class="language-plaintext highlighter-rouge">uicc</code> (1..1) plus optional <code class="language-plaintext highlighter-rouge">snomed-ct</code> (0..1)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Why the (m) symbol looks different from y/r/a.</strong> It is not a presence flag but
+carries a value: <code class="language-plaintext highlighter-rouge">(3)</code> means three simultaneous primary tumours. A
+<code class="language-plaintext highlighter-rouge">modifierExtension</code> without a value would lose that information. In addition, no
+SNOMED CT equivalent exists for the counting variants <code class="language-plaintext highlighter-rouge">(2)</code>/<code class="language-plaintext highlighter-rouge">(3)</code>/<code class="language-plaintext highlighter-rouge">(4)</code>, which is
+why — unlike for the categories — no dual coding is offered here.</p>
+
+<p class="bg-info"><strong>Note on the former symbol profiles.</strong> Up to and including v2026 there were
+dedicated Observation profiles for y, r, a and (m). They are <strong>deprecated</strong> as of
+v2027 (<code class="language-plaintext highlighter-rouge">status = retired</code>); the prefixes y/r/a are carried as <code class="language-plaintext highlighter-rouge">modifierExtension</code>
+on the categories, the m suffix as a component of the T category. Legacy data remains readable; new implementations should
+use the modifier extensions.</p>
+
 
 </div>
 
@@ -681,7 +731,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-mii-pr-onko-tnm-l-kategorie.html">MII PR Onkologie TNM L-Kategorie</a> | <a href="StructureDefinition-mii-pr-onko-tnm-m-kategorie.html">MII PR Onkologie TNM M-Kategorie</a> | <a href="StructureDefinition-mii-pr-onko-tnm-m-symbol.html">MII PR Onkologie TNM m-Symbol</a> | <a href="StructureDefinition-mii-pr-onko-tnm-n-kategorie.html">MII PR Onkologie TNM N-Kategorie</a> | <a href="StructureDefinition-mii-pr-onko-tnm-t-kategorie.html">MII PR Onkologie TNM T-Kategorie</a> | <a href="StructureDefinition-mii-pr-onko-tnm-pn-kategorie.html">MII PR Onkologie TNM Pn-Kategorie</a> | <a href="StructureDefinition-mii-pr-onko-tnm-s-kategorie.html">MII PR Onkologie TNM S-Kategorie</a> | <a href="StructureDefinition-mii-pr-onko-tnm-v-kategorie.html">MII PR Onkologie TNM V-Kategorie</a> | <a href="StructureDefinition-mii-pr-onko-tnm-a-symbol.html">MII PR Onkologie TNM a-Symbol</a> | <a href="StructureDefinition-mii-pr-onko-tnm-r-symbol.html">MII PR Onkologie TNM r-Symbol</a> | <a href="StructureDefinition-mii-pr-onko-tnm-y-symbol.html">MII PR Onkologie TNM y-Symbol</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Related resource that belongs to the Observation group<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // df5cdd46-2df3-46cb-8d9e-d73115c51e4b
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // dd42f824-6260-4e61-82c9-ebf87b4f6bc9
 document.getElementById('cbmii-pr-onko-tnm-klassifikationK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-tnm-klassifikationK'), 'binding', document.getElementById('cbmii-pr-onko-tnm-klassifikationK-binding').checked, document.getElementById('ppmii-pr-onko-tnm-klassifikationK'));
 document.getElementById('cbmii-pr-onko-tnm-klassifikationK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -986,7 +1036,7 @@ filterDesc(document.getElementById('mii-pr-onko-tnm-klassifikationK'), 'obligati
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-mii-pr-onko-tnm-l-kategorie.html">MII PR Onkologie TNM L-Kategorie</a> | <a href="StructureDefinition-mii-pr-onko-tnm-m-kategorie.html">MII PR Onkologie TNM M-Kategorie</a> | <a href="StructureDefinition-mii-pr-onko-tnm-m-symbol.html">MII PR Onkologie TNM m-Symbol</a> | <a href="StructureDefinition-mii-pr-onko-tnm-n-kategorie.html">MII PR Onkologie TNM N-Kategorie</a> | <a href="StructureDefinition-mii-pr-onko-tnm-t-kategorie.html">MII PR Onkologie TNM T-Kategorie</a> | <a href="StructureDefinition-mii-pr-onko-tnm-pn-kategorie.html">MII PR Onkologie TNM Pn-Kategorie</a> | <a href="StructureDefinition-mii-pr-onko-tnm-s-kategorie.html">MII PR Onkologie TNM S-Kategorie</a> | <a href="StructureDefinition-mii-pr-onko-tnm-v-kategorie.html">MII PR Onkologie TNM V-Kategorie</a> | <a href="StructureDefinition-mii-pr-onko-tnm-a-symbol.html">MII PR Onkologie TNM a-Symbol</a> | <a href="StructureDefinition-mii-pr-onko-tnm-r-symbol.html">MII PR Onkologie TNM r-Symbol</a> | <a href="StructureDefinition-mii-pr-onko-tnm-y-symbol.html">MII PR Onkologie TNM y-Symbol</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Related resource that belongs to the Observation group</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // df5cdd46-2df3-46cb-8d9e-d73115c51e4b
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // dd42f824-6260-4e61-82c9-ebf87b4f6bc9
 document.getElementById('cbmii-pr-onko-tnm-klassifikationD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-tnm-klassifikationD'), 'binding', document.getElementById('cbmii-pr-onko-tnm-klassifikationD-binding').checked, document.getElementById('ppmii-pr-onko-tnm-klassifikationD'));
 document.getElementById('cbmii-pr-onko-tnm-klassifikationD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1536,7 +1586,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">See <a href="http://hl7.org/fhir/R4/observation.html#Observation.referenceRange" title="Observation.referenceRange">referenceRange (Observation)</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Provides guide for interpretation of component result<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // df5cdd46-2df3-46cb-8d9e-d73115c51e4b
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // dd42f824-6260-4e61-82c9-ebf87b4f6bc9
 document.getElementById('cbmii-pr-onko-tnm-klassifikationS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-tnm-klassifikationS'), 'binding', document.getElementById('cbmii-pr-onko-tnm-klassifikationS-binding').checked, document.getElementById('ppmii-pr-onko-tnm-klassifikationS'));
 document.getElementById('cbmii-pr-onko-tnm-klassifikationS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2194,7 +2244,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-mii-pr-onko-tnm-l-kategorie.html">MII PR Onkologie TNM L-Kategorie</a> | <a href="StructureDefinition-mii-pr-onko-tnm-m-kategorie.html">MII PR Onkologie TNM M-Kategorie</a> | <a href="StructureDefinition-mii-pr-onko-tnm-m-symbol.html">MII PR Onkologie TNM m-Symbol</a> | <a href="StructureDefinition-mii-pr-onko-tnm-n-kategorie.html">MII PR Onkologie TNM N-Kategorie</a> | <a href="StructureDefinition-mii-pr-onko-tnm-t-kategorie.html">MII PR Onkologie TNM T-Kategorie</a> | <a href="StructureDefinition-mii-pr-onko-tnm-pn-kategorie.html">MII PR Onkologie TNM Pn-Kategorie</a> | <a href="StructureDefinition-mii-pr-onko-tnm-s-kategorie.html">MII PR Onkologie TNM S-Kategorie</a> | <a href="StructureDefinition-mii-pr-onko-tnm-v-kategorie.html">MII PR Onkologie TNM V-Kategorie</a> | <a href="StructureDefinition-mii-pr-onko-tnm-a-symbol.html">MII PR Onkologie TNM a-Symbol</a> | <a href="StructureDefinition-mii-pr-onko-tnm-r-symbol.html">MII PR Onkologie TNM r-Symbol</a> | <a href="StructureDefinition-mii-pr-onko-tnm-y-symbol.html">MII PR Onkologie TNM y-Symbol</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Related resource that belongs to the Observation group<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // df5cdd46-2df3-46cb-8d9e-d73115c51e4b
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // dd42f824-6260-4e61-82c9-ebf87b4f6bc9
 document.getElementById('cbmii-pr-onko-tnm-klassifikationKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-tnm-klassifikationKA'), 'binding', document.getElementById('cbmii-pr-onko-tnm-klassifikationKA-binding').checked, document.getElementById('ppmii-pr-onko-tnm-klassifikationKA'));
 document.getElementById('cbmii-pr-onko-tnm-klassifikationKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2498,7 +2548,7 @@ filterDesc(document.getElementById('mii-pr-onko-tnm-klassifikationKA'), 'obligat
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-mii-pr-onko-tnm-l-kategorie.html">MII PR Onkologie TNM L-Kategorie</a> | <a href="StructureDefinition-mii-pr-onko-tnm-m-kategorie.html">MII PR Onkologie TNM M-Kategorie</a> | <a href="StructureDefinition-mii-pr-onko-tnm-m-symbol.html">MII PR Onkologie TNM m-Symbol</a> | <a href="StructureDefinition-mii-pr-onko-tnm-n-kategorie.html">MII PR Onkologie TNM N-Kategorie</a> | <a href="StructureDefinition-mii-pr-onko-tnm-t-kategorie.html">MII PR Onkologie TNM T-Kategorie</a> | <a href="StructureDefinition-mii-pr-onko-tnm-pn-kategorie.html">MII PR Onkologie TNM Pn-Kategorie</a> | <a href="StructureDefinition-mii-pr-onko-tnm-s-kategorie.html">MII PR Onkologie TNM S-Kategorie</a> | <a href="StructureDefinition-mii-pr-onko-tnm-v-kategorie.html">MII PR Onkologie TNM V-Kategorie</a> | <a href="StructureDefinition-mii-pr-onko-tnm-a-symbol.html">MII PR Onkologie TNM a-Symbol</a> | <a href="StructureDefinition-mii-pr-onko-tnm-r-symbol.html">MII PR Onkologie TNM r-Symbol</a> | <a href="StructureDefinition-mii-pr-onko-tnm-y-symbol.html">MII PR Onkologie TNM y-Symbol</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Related resource that belongs to the Observation group</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // df5cdd46-2df3-46cb-8d9e-d73115c51e4b
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // dd42f824-6260-4e61-82c9-ebf87b4f6bc9
 document.getElementById('cbmii-pr-onko-tnm-klassifikationDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-tnm-klassifikationDA'), 'binding', document.getElementById('cbmii-pr-onko-tnm-klassifikationDA-binding').checked, document.getElementById('ppmii-pr-onko-tnm-klassifikationDA'));
 document.getElementById('cbmii-pr-onko-tnm-klassifikationDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -3045,7 +3095,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">See <a href="http://hl7.org/fhir/R4/observation.html#Observation.referenceRange" title="Observation.referenceRange">referenceRange (Observation)</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Provides guide for interpretation of component result<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // df5cdd46-2df3-46cb-8d9e-d73115c51e4b
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // dd42f824-6260-4e61-82c9-ebf87b4f6bc9
 document.getElementById('cbmii-pr-onko-tnm-klassifikationSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-tnm-klassifikationSA'), 'binding', document.getElementById('cbmii-pr-onko-tnm-klassifikationSA-binding').checked, document.getElementById('ppmii-pr-onko-tnm-klassifikationSA'));
 document.getElementById('cbmii-pr-onko-tnm-klassifikationSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -3631,7 +3681,7 @@ Summary
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.onkologie#2026.0.3 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Mon, Aug 31, 2026 14:28+0000">2026-08-31</span>
+          Generated <span title="Mon, Aug 31, 2026 15:22+0000">2026-08-31</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

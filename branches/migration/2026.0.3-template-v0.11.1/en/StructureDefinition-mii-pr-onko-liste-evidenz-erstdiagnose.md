@@ -150,7 +150,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-liste
   "name" : "MII_PR_Onko_Liste_Evidenz_Erstdiagnose",
   "title" : "MII PR Onkologie Evidenz Diagnose Primärtumor",
   "status" : "active",
-  "date" : "2026-08-31T14:28:40+00:00",
+  "date" : "2026-08-31T15:22:09+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

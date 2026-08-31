@@ -149,7 +149,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tnm-t
   "name" : "MII_PR_Onko_TNM_T_Kategorie",
   "title" : "MII PR Onkologie TNM T-Kategorie",
   "status" : "active",
-  "date" : "2026-08-31T14:28:40+00:00",
+  "date" : "2026-08-31T15:22:09+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -567,6 +567,63 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tnm-t
         }]
       },
       "mustSupport" : true
+    },
+    {
+      "id" : "Observation.component",
+      "path" : "Observation.component",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "pattern",
+          "path" : "code"
+        }],
+        "rules" : "open"
+      }
+    },
+    {
+      "id" : "Observation.component:multipleTumoren",
+      "path" : "Observation.component",
+      "sliceName" : "multipleTumoren",
+      "short" : "Multiple Primaertumoren als m-Suffix",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Multiple Primaertumoren - m-Suffix"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Multiple Primaertumoren in einem anatomischen Bezirk nach 8.10 oBDS 2021 - UICC-m-Suffix der T-Kategorie",
+      "min" : 0,
+      "max" : "1",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.component:multipleTumoren.code",
+      "path" : "Observation.component.code",
+      "patternCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "42030-7",
+          "display" : "Multiple tumors reported as single primary Cancer"
+        }]
+      }
+    },
+    {
+      "id" : "Observation.component:multipleTumoren.value[x]",
+      "path" : "Observation.component.value[x]",
+      "comment" : "(m) = multiple Tumoren ohne Angabe der Zahl; (2)/(3)/(4) = Anzahl der multiplen Tumoren; nicht angegeben = keine multiplen Tumoren. Fuer die reine Mehrfachigkeit existiert in SNOMED CT das Qualifier-Konzept 369755005 |Multiple tumors|; fuer die Zaehlvarianten gibt es keine Entsprechung, daher hier kein Dual-Coding.",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-m-symbol"
+      }
     }]
   }
 }

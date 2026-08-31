@@ -54,6 +54,21 @@ The prefixes y, r and a are modelled as a **modifierExtension**, because they ch
 
 [mii-exa-onko-tnm-klassifikation-uT2a2pN0023i-sncM1](Observation-mii-exa-onko-tnm-klassifikation-uT2a2pN0023i-sncM1.md)
 
+### How prefixes, symbols and category values are coded
+
+For statements that look structurally similar the module deliberately uses three different mechanisms — what matters is whether the statement is **binary**, **value-bearing**, or **the category itself**:
+
+| | | |
+| :--- | :--- | :--- |
+| **c/p prefix** | how was the category established? | extension on the category's`code` |
+| **y, r, a prefix** | binary prefix — applies or not (multimodal pre-treatment, recurrence, autopsy) | **`modifierExtension`**on the respective category (they change how the value is interpreted) |
+| **(m) suffix** | **value-bearing**: multiple primary tumours, oBDS 8.10 —`(m)`,`(2)`,`(3)`,`(4)` | **`component[multipleTumoren]`**on the T category (LOINC`42030-7`as component code, value from the UICC code system) — the suffix is T-exclusive |
+| **category value**(T2, N0, M1c …) | the category itself | dual coding in`valueCodeableConcept`:`uicc`(1..1) plus optional`snomed-ct`(0..1) |
+
+**Why the (m) symbol looks different from y/r/a.** It is not a presence flag but carries a value: `(3)` means three simultaneous primary tumours. A `modifierExtension` without a value would lose that information. In addition, no SNOMED CT equivalent exists for the counting variants `(2)`/`(3)`/`(4)`, which is why — unlike for the categories — no dual coding is offered here.
+
+**Note on the former symbol profiles.** Up to and including v2026 there were dedicated Observation profiles for y, r, a and (m). They are **deprecated** as of v2027 (`status = retired`); the prefixes y/r/a are carried as `modifierExtension` on the categories, the m suffix as a component of the T category. Legacy data remains readable; new implementations should use the modifier extensions.
+
 **Usages:**
 
 * Derived from this Profile: [MII PR Onkologie TNM-Klassifikation (synthetisiert)](StructureDefinition-mii-pr-onko-tnm-klassifikation-synthetisiert.md)
@@ -178,7 +193,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tnm-k
   "name" : "MII_PR_Onko_TNM_Klassifikation",
   "title" : "MII PR Onkologie TNM-Klassifikation",
   "status" : "active",
-  "date" : "2026-08-31T14:28:40+00:00",
+  "date" : "2026-08-31T15:22:09+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

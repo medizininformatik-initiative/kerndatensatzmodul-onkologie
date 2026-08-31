@@ -17,6 +17,7 @@ Kennzeichnet Vorhandensein multipler Primärtumoren in einem anatomischen Bezirk
  **References** 
 
 * [MII PR Onkologie TNM m-Symbol](StructureDefinition-mii-pr-onko-tnm-m-symbol.md)
+* [MII PR Onkologie TNM T-Kategorie](StructureDefinition-mii-pr-onko-tnm-t-kategorie.md)
 
 ### Logical Definition (CLD)
 
@@ -138,7 +139,7 @@ Kennzeichnet Vorhandensein multipler Primärtumoren in einem anatomischen Bezirk
   "title" : "MII VS Onkologie TNM m-Symbol",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-31T14:28:40+00:00",
+  "date" : "2026-08-31T15:22:09+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
