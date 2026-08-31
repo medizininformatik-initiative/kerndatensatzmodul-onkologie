@@ -113,6 +113,18 @@ base profile `mii-pr-mtb-immunohistochemistry` with the generic SNOMED code plus
 > modules involved are in **draft/STU/trial-use** — this assignment is a guide and
 > may still change as MolGen/MTB mature.
 
+**IGHV mutation status (CLL).** The §65c marker list carries `IGHV` as a single
+entry — clinically it covers two statements that must be represented separately:
+
+- The **rearranged V segment** (prognostically relevant, e.g. IGHV3-21) belongs in
+  `component:gene-studied` as a gene statement. HGNC holds no collective "IGHV"
+  entity, only the 167 individual segments — they are listed in
+  [`mii-vs-onko-ighv-gensegmente-hgnc`](ValueSet-mii-vs-onko-ighv-gensegmente-hgnc.html).
+- **Mutated or unmutated** is not a gene but the result: the oBDS represents it via
+  the qualifier (`M` = mutation, `W` = wild type / unmutated), i.e. in FHIR via the
+  value of the variant observation (`valueCodeableConcept`, present / wild type).
+  **No separate status resource** is required — see the qualifier table below.
+
 ### Qualifiers of the Genetics Report (section 65c / oBDS `Menge_Genetik_Typ`)
 
 The marker type (table above) is only one axis of the report. The second axis is

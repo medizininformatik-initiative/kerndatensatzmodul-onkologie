@@ -3,7 +3,9 @@
 // (Blatt "Gen"), 41 Gensymbole; 40 davon in HGNC aufloesbar und hier gelistet.
 // NICHT enthalten (bewusst):
 //   - IGHV: keine Einzelgen-, sondern eine Genfamilie (IGHV-Mutationsstatus bei
-//     CLL) — in HGNC nur als Einzelsegmente IGHV1-2 usw. gefuehrt.
+//     CLL) — in HGNC nur als Einzelsegmente IGHV1-2 usw. gefuehrt. Die 167
+//     Segmente stehen in mii-vs-onko-ighv-gensegmente-hgnc; mutiert/unmutiert
+//     wird ueber die Auspraegung der Variante abgebildet (oBDS M / W = Wildtyp).
 //   - Immunhistochemie-Pseudoeintraege der Liste (ALK_IHC, HER2_IHC, PD-L1_IHC,
 //     p16_IHC, p53_IHC, POLE_IHC, ROS1_IHC, TRK-A/B/C_IHC, panTRK_IHC, IDH1_IHC,
 //     L1CAM_IHC): keine Gene — Abbildung ueber das IHC-Profil des Moduls MTB.

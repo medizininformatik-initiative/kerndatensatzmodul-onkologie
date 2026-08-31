@@ -110,6 +110,20 @@ Basis-Profil `mii-pr-mtb-immunohistochemistry` mit generischem SNOMED-Code plus
 > sich in **Draft/STU/Trial-Use** — diese Zuordnung ist eine Orientierungshilfe und
 > kann sich mit der Reifung von MolGen/MTB noch ändern.
 
+**IGHV-Mutationsstatus (CLL).** In der §65c-Markerliste steht `IGHV` als ein
+Eintrag — fachlich verbergen sich dahinter zwei Angaben, die getrennt abzubilden
+sind:
+
+- Das **rearrangierte V-Segment** (prognostisch relevant, z. B. IGHV3-21) gehört
+  als Gen-Angabe nach `component:gene-studied`. HGNC führt keine Sammelentität
+  „IGHV", sondern die 167 Einzelsegmente — sie stehen im ValueSet
+  [`mii-vs-onko-ighv-gensegmente-hgnc`](ValueSet-mii-vs-onko-ighv-gensegmente-hgnc.html).
+- **Mutiert oder unmutiert** ist dagegen kein Gen, sondern das Ergebnis: Der oBDS
+  bildet es über die Ausprägung ab (`M` = Mutation, `W` = Wildtyp/nicht mutiert),
+  in FHIR also über den Wert der Varianten-Observation
+  (`valueCodeableConcept`, Present/Wild type). Es braucht dafür **keine eigene
+  Statusressource** — siehe die Ausprägungstabelle weiter unten.
+
 ### Ausprägungen der Genetik-Meldung (§65c / oBDS `Menge_Genetik_Typ`)
 
 Der Markertyp (Tabelle oben) ist nur die eine Achse der Meldung. Die zweite Achse
