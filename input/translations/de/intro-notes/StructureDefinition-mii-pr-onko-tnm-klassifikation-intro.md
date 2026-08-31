@@ -37,3 +37,29 @@ Die Präfixe y, r und a sind als **modifierExtension** modelliert, weil sie die 
 [mii-exa-onko-tnm-klassifikation-TisN0M0](Observation-mii-exa-onko-tnm-klassifikation-TisN0M0.html)
 
 [mii-exa-onko-tnm-klassifikation-uT2a2pN0023i-sncM1](Observation-mii-exa-onko-tnm-klassifikation-uT2a2pN0023i-sncM1.html)
+
+### Wie Präfixe, Symbole und Kategoriewerte kodiert werden
+
+Für strukturell ähnlich aussehende Angaben verwendet das Modul bewusst drei
+verschiedene Mechanismen — maßgeblich ist, ob die Angabe *binär*, *wertetragend*
+oder *die Kategorie selbst* ist:
+
+| Angabe | Semantik | Abbildung |
+|---|---|---|
+| **c/p-Präfix** | Wie wurde die Kategorie festgestellt? | Extension am `code` der Kategorie |
+| **y-, r-, a-Präfix** | binäres Präfix — trifft zu oder nicht (multimodale Vortherapie, Rezidiv, Autopsie) | **`modifierExtension`** an der jeweiligen Kategorie (sie verändern die Interpretation des Werts) |
+| **(m)-Symbol** | **wertetragend**: Anzahl simultaner Primärtumoren, oBDS 8.10 — `(m)`, `(2)`, `(3)`, `(4)` | eigenes Profil [`MII_PR_Onko_TNM_m_Symbol`](StructureDefinition-mii-pr-onko-tnm-m-symbol.html) mit `valueCodeableConcept` aus dem UICC-CodeSystem |
+| **Kategoriewert** (T2, N0, M1c …) | die Kategorie selbst | Dual-Coding im `valueCodeableConcept`: `uicc` (1..1) + optional `snomed-ct` (0..1) |
+
+**Warum das (m)-Symbol anders aussieht als y/r/a.** Es ist kein Präsenz-Flag,
+sondern trägt eine Ausprägung: Bei `(3)` sind drei simultane Primärtumoren
+gemeint. Ein `modifierExtension` ohne Wert würde diese Information verlieren.
+Für die Zählvarianten `(2)`/`(3)`/`(4)` existiert zudem kein SNOMED-CT-Äquivalent,
+weshalb hier — anders als bei den Kategorien — kein Dual-Coding angeboten wird.
+
+{:.bg-info}
+**Hinweis zu den früheren Symbol-Profilen.** Bis einschließlich v2026 gab es für
+y, r und a eigene Observation-Profile mit fixem SNOMED-Code. Sie sind ab v2027
+**deprecated** (`status = retired`); die Präfixe werden an den Kategorien selbst
+geführt. Bestandsdaten bleiben lesbar, für Neuimplementierungen sind die
+modifierExtensions zu verwenden.
