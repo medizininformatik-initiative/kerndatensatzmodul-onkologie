@@ -74,6 +74,11 @@ Für Marker ohne spezifisches Profil (p16, p53, panTRK, ROS1-IHC …) das Basis-
 
 > **Hinweis (Architektur & Reifegrad):** Das MTB-Modul integriert genetische Befunde **oberhalb** von Onkologie und MolGen — es deklariert selbst `kerndatensatz.onkologie` und `kerndatensatz.molgen` als Dependencies. Onkologie kann MTB daher **nicht** als Dependency aufnehmen (Zirkelbezug); die MTB-Referenzen hier sind **dokumentarisch** (empfohlener Zielort), nicht technisch aufgelöst. Die beteiligten Module befinden sich in **Draft/STU/Trial-Use** — diese Zuordnung ist eine Orientierungshilfe und kann sich mit der Reifung von MolGen/MTB noch ändern.
 
+**IGHV-Mutationsstatus (CLL).** In der §65c-Markerliste steht `IGHV` als ein Eintrag — fachlich verbergen sich dahinter zwei Angaben, die getrennt abzubilden sind:
+
+* Das **rearrangierte V-Segment** (prognostisch relevant, z. B. IGHV3-21) gehört als Gen-Angabe nach `component:gene-studied`. HGNC führt keine Sammelentität „IGHV", sondern die 167 Einzelsegmente — sie stehen im ValueSet [`mii-vs-onko-ighv-gensegmente-hgnc`](ValueSet-mii-vs-onko-ighv-gensegmente-hgnc.md).
+* **Mutiert oder unmutiert** ist dagegen kein Gen, sondern das Ergebnis: Der oBDS bildet es über die Ausprägung ab (`M` = Mutation, `W` = Wildtyp/nicht mutiert), in FHIR also über den Wert der Varianten-Observation (`valueCodeableConcept`, Present/Wild type). Es braucht dafür **keine eigene Statusressource** — siehe die Ausprägungstabelle weiter unten.
+
 ### Ausprägungen der Genetik-Meldung (§65c / oBDS Menge_Genetik_Typ)
 
 Der Markertyp (Tabelle oben) ist nur die eine Achse der Meldung. Die zweite Achse ist die **Ausprägung** des Befundes. Der oBDS-Typ `Menge_Genetik_Typ` sieht je `Genetische_Variante` genau **eine** Angabe vor — entweder einen Code aus der Auswahlliste `Auspraegung` **oder** das Freitextfeld `Sonstige_Auspraegung` (`xs:choice`). Die Auswahlliste umfasst fünf Codes; die Modul-Terminologie ergänzt `S` als Code für den Freitextfall.

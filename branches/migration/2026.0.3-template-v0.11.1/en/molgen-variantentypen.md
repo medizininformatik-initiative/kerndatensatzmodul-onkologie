@@ -72,6 +72,11 @@ For markers without a specific profile (p16, p53, panTRK, ROS1 IHC, …) use the
 
 > **Note (architecture and maturity):** The MTB module integrates genetic findings **above** Oncology and MolGen — it declares `kerndatensatz.onkologie` and `kerndatensatz.molgen` as dependencies itself. Oncology can therefore **not** take MTB as a dependency (circular reference); the MTB references here are **documentary** (recommended target location), not technically resolved. The modules involved are in **draft/STU/trial-use** — this assignment is a guide and may still change as MolGen/MTB mature.
 
+**IGHV mutation status (CLL).** The §65c marker list carries `IGHV` as a single entry — clinically it covers two statements that must be represented separately:
+
+* The **rearranged V segment** (prognostically relevant, e.g. IGHV3-21) belongs in `component:gene-studied` as a gene statement. HGNC holds no collective "IGHV" entity, only the 167 individual segments — they are listed in [`mii-vs-onko-ighv-gensegmente-hgnc`](ValueSet-mii-vs-onko-ighv-gensegmente-hgnc.md).
+* **Mutated or unmutated** is not a gene but the result: the oBDS represents it via the qualifier (`M` = mutation, `W` = wild type / unmutated), i.e. in FHIR via the value of the variant observation (`valueCodeableConcept`, present / wild type). **No separate status resource** is required — see the qualifier table below.
+
 ### Qualifiers of the Genetics Report (section 65c / oBDS Menge_Genetik_Typ)
 
 The marker type (table above) is only one axis of the report. The second axis is the **qualifier** of the finding. The oBDS type `Menge_Genetik_Typ` provides for exactly **one** statement per `Genetische_Variante` — either a code from the selection list `Auspraegung` **or** the free-text field `Sonstige_Auspraegung` (`xs:choice`). The selection list comprises five codes; the module terminology adds `S` as the code for the free-text case.

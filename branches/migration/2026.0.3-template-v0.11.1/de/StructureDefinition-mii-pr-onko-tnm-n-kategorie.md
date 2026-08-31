@@ -257,7 +257,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_TNM_N_Kategorie",
   "title" : "MII PR Onkologie TNM N-Kategorie",
   "status" : "active",
-  "date" : "2026-08-31T13:44:47+00:00",
+  "date" : "2026-08-31T14:28:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

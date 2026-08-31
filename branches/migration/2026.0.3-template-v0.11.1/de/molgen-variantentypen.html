@@ -562,6 +562,22 @@ sich in <strong>Draft/STU/Trial-Use</strong> — diese Zuordnung ist eine Orient
 kann sich mit der Reifung von MolGen/MTB noch ändern.</p>
 </blockquote>
 
+<p><strong>IGHV-Mutationsstatus (CLL).</strong> In der §65c-Markerliste steht <code class="language-plaintext highlighter-rouge">IGHV</code> als ein
+Eintrag — fachlich verbergen sich dahinter zwei Angaben, die getrennt abzubilden
+sind:</p>
+
+<ul>
+  <li>Das <strong>rearrangierte V-Segment</strong> (prognostisch relevant, z. B. IGHV3-21) gehört
+als Gen-Angabe nach <code class="language-plaintext highlighter-rouge">component:gene-studied</code>. HGNC führt keine Sammelentität
+„IGHV", sondern die 167 Einzelsegmente — sie stehen im ValueSet
+<a href="ValueSet-mii-vs-onko-ighv-gensegmente-hgnc.html"><code class="language-plaintext highlighter-rouge">mii-vs-onko-ighv-gensegmente-hgnc</code></a>.</li>
+  <li><strong>Mutiert oder unmutiert</strong> ist dagegen kein Gen, sondern das Ergebnis: Der oBDS
+bildet es über die Ausprägung ab (<code class="language-plaintext highlighter-rouge">M</code> = Mutation, <code class="language-plaintext highlighter-rouge">W</code> = Wildtyp/nicht mutiert),
+in FHIR also über den Wert der Varianten-Observation
+(<code class="language-plaintext highlighter-rouge">valueCodeableConcept</code>, Present/Wild type). Es braucht dafür <strong>keine eigene
+Statusressource</strong> — siehe die Ausprägungstabelle weiter unten.</li>
+</ul>
+
 <h3 id="ausprägungen-der-genetik-meldung-65c--obds-menge_genetik_typ">Ausprägungen der Genetik-Meldung (§65c / oBDS <code class="language-plaintext highlighter-rouge">Menge_Genetik_Typ</code>)</h3>
 
 <p>Der Markertyp (Tabelle oben) ist nur die eine Achse der Meldung. Die zweite Achse
@@ -695,7 +711,7 @@ geführt.</li>
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.onkologie#2026.0.3 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Mon, Aug 31, 2026 13:44+0000">2026-08-31</span>
+          Erstellt <span title="Mon, Aug 31, 2026 14:28+0000">2026-08-31</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

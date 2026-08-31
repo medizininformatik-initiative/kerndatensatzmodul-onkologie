@@ -200,7 +200,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-prost
   "name" : "MII_PR_Onko_Prostata_Clavien_Dindo",
   "title" : "MII PR Onkologie Clavien Dindo",
   "status" : "active",
-  "date" : "2026-08-31T13:44:47+00:00",
+  "date" : "2026-08-31T14:28:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

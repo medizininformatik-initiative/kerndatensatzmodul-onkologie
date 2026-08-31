@@ -257,7 +257,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tumor
   "name" : "MII_PR_Onko_Tumorkonferenz",
   "title" : "MII PR Onkologie Tumorkonferenz",
   "status" : "active",
-  "date" : "2026-08-31T13:44:47+00:00",
+  "date" : "2026-08-31T14:28:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
