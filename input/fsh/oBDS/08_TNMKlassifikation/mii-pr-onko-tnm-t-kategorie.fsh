@@ -73,6 +73,23 @@ Description: "TNM-Klassifikation: TNM T-Kategorie. Ausbreitung des Primärtumors
 * valueCodeableConcept.coding[snomed-ct].system = $SCT
 * valueCodeableConcept.coding[snomed-ct].code 1.. MS
 
+// Multiple Primaertumoren, UICC-m-Suffix (oBDS 8.10) — ab v2027 als Component
+// der T-Kategorie statt als eigene Observation: Das Suffix ist T-exklusiv
+// (pT2(m), T1(3); es gibt kein N(m)/M(m)) und aendert den T-Wert nicht, sondern
+// ergaenzt ihn — daher component und nicht modifierExtension (anders als die
+// Praefixe y/r/a, die die Interpretation der Kategorie veraendern).
+// Das fruehere Profil MII_PR_Onko_TNM_m_Symbol ist deprecated.
+* component ^slicing.discriminator.type = #pattern
+* component ^slicing.discriminator.path = "code"
+* component ^slicing.rules = #open
+* component contains multipleTumoren 0..1 MS
+* component[multipleTumoren].code = $LNC#42030-7 "Multiple tumors reported as single primary Cancer"
+* component[multipleTumoren].value[x] only CodeableConcept
+* component[multipleTumoren].valueCodeableConcept from MII_VS_Onko_TNM_m_Symbol (required)
+* component[multipleTumoren].valueCodeableConcept ^comment = "(m) = multiple Tumoren ohne Angabe der Zahl; (2)/(3)/(4) = Anzahl der multiplen Tumoren; nicht angegeben = keine multiplen Tumoren. Fuer die reine Mehrfachigkeit existiert in SNOMED CT das Qualifier-Konzept 369755005 |Multiple tumors|; fuer die Zaehlvarianten gibt es keine Entsprechung, daher hier kein Dual-Coding."
+* insert Label(component[multipleTumoren], Multiple Primaertumoren als m-Suffix, Multiple Primaertumoren in einem anatomischen Bezirk nach 8.10 oBDS 2021 - UICC-m-Suffix der T-Kategorie)
+* insert Translation(component[multipleTumoren] ^short, de-DE, Multiple Primaertumoren - m-Suffix)
+
 // Referenz zu Primärtumor
 * focus MS
 * focus only Reference(MII_PR_Onko_Diagnose_Primaertumor)

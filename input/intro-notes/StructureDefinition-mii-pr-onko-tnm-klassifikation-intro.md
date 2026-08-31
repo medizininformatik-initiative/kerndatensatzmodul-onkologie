@@ -49,7 +49,7 @@ different mechanisms — what matters is whether the statement is *binary*,
 |---|---|---|
 | **c/p prefix** | how was the category established? | extension on the category's `code` |
 | **y, r, a prefix** | binary prefix — applies or not (multimodal pre-treatment, recurrence, autopsy) | **`modifierExtension`** on the respective category (they change how the value is interpreted) |
-| **(m) symbol** | **value-bearing**: number of simultaneous primary tumours, oBDS 8.10 — `(m)`, `(2)`, `(3)`, `(4)` | dedicated profile [`MII_PR_Onko_TNM_m_Symbol`](StructureDefinition-mii-pr-onko-tnm-m-symbol.html) with `valueCodeableConcept` from the UICC code system |
+| **(m) suffix** | **value-bearing**: multiple primary tumours, oBDS 8.10 — `(m)`, `(2)`, `(3)`, `(4)` | **`component[multipleTumoren]`** on the T category (LOINC `42030-7` as component code, value from the UICC code system) — the suffix is T-exclusive |
 | **category value** (T2, N0, M1c …) | the category itself | dual coding in `valueCodeableConcept`: `uicc` (1..1) plus optional `snomed-ct` (0..1) |
 
 **Why the (m) symbol looks different from y/r/a.** It is not a presence flag but
@@ -60,7 +60,7 @@ why — unlike for the categories — no dual coding is offered here.
 
 {:.bg-info}
 **Note on the former symbol profiles.** Up to and including v2026 there were
-dedicated Observation profiles for y, r and a with a fixed SNOMED code. They are
-**deprecated** as of v2027 (`status = retired`); the prefixes are carried on the
-categories themselves. Legacy data remains readable; new implementations should
+dedicated Observation profiles for y, r, a and (m). They are **deprecated** as of
+v2027 (`status = retired`); the prefixes y/r/a are carried as `modifierExtension`
+on the categories, the m suffix as a component of the T category. Legacy data remains readable; new implementations should
 use the modifier extensions.
