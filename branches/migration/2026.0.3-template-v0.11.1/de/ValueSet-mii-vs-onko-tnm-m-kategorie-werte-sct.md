@@ -139,7 +139,7 @@ SNOMED CT Codes für die TNM M-Kategorie (alle Präfix-Kombinationen: cM, pM, rc
   "title" : "MII VS Onkologie TNM M Kategorie Werte SNOMED CT",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-01T14:29:01+00:00",
+  "date" : "2026-09-01T19:43:49+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

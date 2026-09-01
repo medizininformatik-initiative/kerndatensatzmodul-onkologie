@@ -223,7 +223,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_Prostata_CA_Befall_Stanze",
   "title" : "MII PR Onkologie Ca-Befall Stanze",
   "status" : "active",
-  "date" : "2026-09-01T14:29:01+00:00",
+  "date" : "2026-09-01T19:43:49+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

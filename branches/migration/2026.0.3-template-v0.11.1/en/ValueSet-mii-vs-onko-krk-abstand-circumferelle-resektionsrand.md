@@ -138,7 +138,7 @@ Value Set für semantische Kodierung des oBDS-Abstand des Tumorrandes zur circum
   "title" : "MII VS Onkologie KRK Abstand Circumferelle Resektionsrand",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-01T14:29:01+00:00",
+  "date" : "2026-09-01T19:43:49+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

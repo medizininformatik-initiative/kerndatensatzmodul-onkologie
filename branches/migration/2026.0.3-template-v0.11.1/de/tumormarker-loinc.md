@@ -38,9 +38,10 @@ Jeder Code wurde einzeln gegen LOINC verifiziert (MII-Terminologieserver und tx.
 | Serotonin | `18253-5` | Serotonin [Mass/time] in 24 hour Urine | NET (Serotonin-produzierend) |
 | ACTH | `2141-0` | Corticotropin [Mass/volume] in Plasma | ACTH-produzierende Tumoren |
 | Calcitonin | `1992-7` | Calcitonin [Mass/volume] in Serum or Plasma | Medulläres Schilddrüsenkarzinom |
-| HVA (Urin) | `2436-4` | Homovanillate [Mass/time] in 24 hour Urine | Neuroblastom |
-| VMA (Urin) | `3122-9` | Vanillylmandelate [Mass/time] in 24 hour Urine | Neuroblastom |
-| Katecholamine (Urin) | `27055-3` | Catecholamines Free [Mass/time] in 24 hour Urine | Phäochromozytom |
+| HVA | `2436-4`u.a. | Homovanillate — 24-h-Urin, Konzentration, Kreatinin-Quotient (auch Spontanurin) | Neuroblastom |
+| VMA | `3122-9`u.a. | Vanillylmandelate — 24-h-Urin, Konzentration, Kreatinin-Quotient (auch Spontanurin) | Neuroblastom |
+| Katecholamine | `27055-3`,`2058-6`,`2056-0` | frei/gesamt im 24-h-Urin, Katecholamine im Plasma | Phäochromozytom |
+| **Metanephrine** | `43108-0`,`57462-4`,`2609-6` | Metanephrin-/Normetanephrin-Panel in Serum/Plasma (diagnostischer Standard), Metanephrine im 24-h-Urin | Phäochromozytom |
 | Prolaktin | `2842-3` | Prolactin [Mass/volume] in Serum or Plasma | Prolaktinom |
 | GH/Somatotropin | `2963-7` | Somatotropin [Mass/volume] in Serum or Plasma | Hypophysentumoren |
 | FSH | `15067-2` | Follitropin [Units/volume] in Serum or Plasma | Hypophysentumoren |
