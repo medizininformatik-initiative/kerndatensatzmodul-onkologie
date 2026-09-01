@@ -12,7 +12,7 @@
 | Draft as of 2025-04-25 | *Computable Name*:MII_CM_MVGenomSeq_Onkologie |
 
  
-Mapping der einzelnen MII-OnkologieProfile auf den Klinischen Datenkranz der MVGenomSeq 
+Mapping der einzelnen MII-Onkologieprofile auf den Klinischen Datenkranz der Modellvorhaben-Genomsequenzierung. ABGRENZUNG: Diese ConceptMap deckt bewusst nur OncologyCase.json ab — die klinischen Falldaten, die im KDS-Modul Onkologie gefuehrt werden. Die uebrigen Schemata des Datenkranzes (OncologyMolecular, OncologyPlan, OncologyFollowUp, Oncology) betreffen die molekulare Diagnostik und die Therapieplanung des Molekularen Tumorboards und werden im KDS-Modul MTB abgebildet, nicht hier. Zielfelder gegen mvgenomseq_schemas/2024-12/OncologyCase.json verifiziert. 
 
 
 
@@ -37,7 +37,7 @@ Mapping der einzelnen MII-OnkologieProfile auf den Klinischen Datenkranz der MVG
       "value" : "https://www.medizininformatik-initiative.de/"
     }]
   }],
-  "description" : "Mapping der einzelnen MII-OnkologieProfile auf den Klinischen Datenkranz der MVGenomSeq",
+  "description" : "Mapping der einzelnen MII-Onkologieprofile auf den Klinischen Datenkranz der Modellvorhaben-Genomsequenzierung. ABGRENZUNG: Diese ConceptMap deckt bewusst nur OncologyCase.json ab — die klinischen Falldaten, die im KDS-Modul Onkologie gefuehrt werden. Die uebrigen Schemata des Datenkranzes (OncologyMolecular, OncologyPlan, OncologyFollowUp, Oncology) betreffen die molekulare Diagnostik und die Therapieplanung des Molekularen Tumorboards und werden im KDS-Modul MTB abgebildet, nicht hier. Zielfelder gegen mvgenomseq_schemas/2024-12/OncologyCase.json verifiziert.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

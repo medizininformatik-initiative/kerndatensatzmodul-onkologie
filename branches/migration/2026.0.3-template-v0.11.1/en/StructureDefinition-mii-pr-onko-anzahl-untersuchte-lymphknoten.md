@@ -137,7 +137,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-anzah
   "name" : "MII_PR_Onko_Anzahl_Untersuchte_Lymphknoten",
   "title" : "MII PR Onkologie Anzahl der untersuchten Lymphknoten",
   "status" : "active",
-  "date" : "2026-09-01T09:38:31+00:00",
+  "date" : "2026-09-01T11:08:21+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
