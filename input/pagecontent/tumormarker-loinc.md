@@ -53,9 +53,10 @@ of somatostatin (`2961-1`).
 | Serotonin | `18253-5` | Serotonin [Mass/time] in 24 hour Urine | NET (serotonin-producing) |
 | ACTH | `2141-0` | Corticotropin [Mass/volume] in Plasma | ACTH-producing tumours |
 | Calcitonin | `1992-7` | Calcitonin [Mass/volume] in Serum or Plasma | Medullary thyroid carcinoma |
-| HVA (urine) | `2436-4` | Homovanillate [Mass/time] in 24 hour Urine | Neuroblastoma |
-| VMA (urine) | `3122-9` | Vanillylmandelate [Mass/time] in 24 hour Urine | Neuroblastoma |
-| Catecholamines (urine) | `27055-3` | Catecholamines Free [Mass/time] in 24 hour Urine | Phaeochromocytoma |
+| HVA | `2436-4` et al. | homovanillate — 24-hour urine, concentration, creatinine ratio (also random urine) | Neuroblastoma |
+| VMA | `3122-9` et al. | vanillylmandelate — 24-hour urine, concentration, creatinine ratio (also random urine) | Neuroblastoma |
+| Catecholamines | `27055-3`, `2058-6`, `2056-0` | free/total in 24-hour urine, catecholamines in plasma | Phaeochromocytoma |
+| **Metanephrines** | `43108-0`, `57462-4`, `2609-6` | metanephrine/normetanephrine panel in serum or plasma (diagnostic standard), metanephrines in 24-hour urine | Phaeochromocytoma |
 | Prolactin | `2842-3` | Prolactin [Mass/volume] in Serum or Plasma | Prolactinoma |
 | GH/somatotropin | `2963-7` | Somatotropin [Mass/volume] in Serum or Plasma | Pituitary tumours |
 | FSH | `15067-2` | Follitropin [Units/volume] in Serum or Plasma | Pituitary tumours |

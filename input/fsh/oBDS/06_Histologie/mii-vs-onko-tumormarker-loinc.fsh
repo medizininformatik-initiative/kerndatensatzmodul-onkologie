@@ -44,9 +44,27 @@ Description: "Kuratierte LOINC-Codes der in der Onkologie gebraeuchlichen Tumorm
 * $LNC#44288-9 "5-Hydroxyindoleacetate/Creatinine [Mass Ratio] in 24 hour Urine" // 5-HIES/Kreatinin-Quotient — NET
 * $LNC#2141-0 "Corticotropin [Mass/volume] in Plasma" // ACTH — ACTH-produzierende Tumoren
 * $LNC#1992-7 "Calcitonin [Mass/volume] in Serum or Plasma" // Calcitonin — Medulläres Schilddrüsenkarzinom
-* $LNC#2436-4 "Homovanillate [Mass/time] in 24 hour Urine" // HVA (Urin) — Neuroblastom
-* $LNC#3122-9 "Vanillylmandelate [Mass/time] in 24 hour Urine" // VMA (Urin) — Neuroblastom
-* $LNC#27055-3 "Catecholamines Free [Mass/time] in 24 hour Urine" // Katecholamine (Urin) — Phäochromozytom
+// Neuroblastom-Marker HVA/VMA: 24-h-Sammelurin ist der Standard; bei Kindern wird
+// haeufig der Kreatinin-Quotient im Spontanurin bestimmt, weil das Sammeln schwierig ist.
+* $LNC#2436-4 "Homovanillate [Mass/time] in 24 hour Urine" // HVA 24h-Urin — Neuroblastom
+* $LNC#53595-5 "Homovanillate [Mass/volume] in 24 hour Urine" // HVA 24h-Urin (Konzentration)
+* $LNC#13760-4 "Homovanillate/Creatinine [Mass Ratio] in 24 hour Urine" // HVA/Kreatinin 24h-Urin
+* $LNC#11146-8 "Homovanillate/Creatinine [Mass Ratio] in Urine" // HVA/Kreatinin Spontanurin — paediatrisch
+* $LNC#3122-9 "Vanillylmandelate [Mass/time] in 24 hour Urine" // VMA 24h-Urin — Neuroblastom
+* $LNC#26706-2 "Vanillylmandelate [Mass/volume] in 24 hour Urine" // VMA 24h-Urin (Konzentration)
+* $LNC#30571-4 "Vanillylmandelate/Creatinine [Mass Ratio] in 24 hour Urine" // VMA/Kreatinin 24h-Urin
+* $LNC#3124-5 "Vanillylmandelate/Creatinine [Mass Ratio] in Urine" // VMA/Kreatinin Spontanurin — paediatrisch
+// Phaeochromozytom: Freie Metanephrine im Plasma sind heute der diagnostische
+// Standard (hoechste Sensitivitaet); Katecholamine und Metanephrine im 24-h-Urin
+// bleiben gebraeuchliche Alternativen.
+* $LNC#27055-3 "Catecholamines Free [Mass/time] in 24 hour Urine" // Katecholamine frei 24h-Urin — Phaeochromozytom
+* $LNC#2058-6 "Catecholamines [Mass/time] in 24 hour Urine" // Katecholamine 24h-Urin
+* $LNC#2056-0 "Catecholamines [Mass/volume] in Plasma" // Katecholamine Plasma
+* $LNC#43108-0 "Metanephrine and Normetanephrine panel [Mass/volume] - Serum or Plasma" // Metanephrine-Panel Serum/Plasma — Standard Phaeochromozytom
+* $LNC#57462-4 "Normetanephrine Free [Mass/volume] in Serum or Plasma" // freies Normetanephrin Plasma
+* $LNC#2669-0 "Normetanephrine [Mass/volume] in Serum or Plasma" // Normetanephrin Serum/Plasma
+* $LNC#2609-6 "Metanephrines [Mass/time] in 24 hour Urine" // Metanephrine 24h-Urin
+* $LNC#2671-6 "Normetanephrine [Mass/time] in 24 hour Urine" // Normetanephrin 24h-Urin
 * $LNC#2842-3 "Prolactin [Mass/volume] in Serum or Plasma" // Prolaktin — Prolaktinom
 * $LNC#2963-7 "Somatotropin [Mass/volume] in Serum or Plasma" // GH/Somatotropin — Hypophysentumoren
 * $LNC#15067-2 "Follitropin [Units/volume] in Serum or Plasma" // FSH — Hypophysentumoren
