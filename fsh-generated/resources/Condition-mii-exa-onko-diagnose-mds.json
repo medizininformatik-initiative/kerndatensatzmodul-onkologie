@@ -1,0 +1,85 @@
+{
+  "resourceType": "Condition",
+  "id": "mii-exa-onko-diagnose-mds",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor|2026.0.3"
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "55342001",
+          "system": "http://snomed.info/sct",
+          "display": "Neoplastic disease"
+        }
+      ]
+    }
+  ],
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+      "valueDateTime": "2023-03-10"
+    },
+    {
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/icd-o-3",
+            "code": "9983/3",
+            "display": "Refraktäre Anämie mit Ringsideroblasten",
+            "version": "2019"
+          }
+        ]
+      },
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+        "code": "D46.2",
+        "display": "Myelodysplastisches Syndrom: Refraktäre Anämie mit Ringsideroblasten",
+        "version": "2023"
+      }
+    ]
+  },
+  "verificationStatus": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+        "code": "confirmed"
+      },
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung",
+        "code": "7",
+        "display": "histologische Untersuchung eines Primärtumors"
+      }
+    ]
+  },
+  "bodySite": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/icd-o-3",
+          "code": "C42.1",
+          "display": "Knochenmark"
+        }
+      ]
+    }
+  ],
+  "clinicalStatus": {
+    "coding": [
+      {
+        "code": "active",
+        "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "recordedDate": "2023-03-10"
+}
