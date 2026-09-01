@@ -17,6 +17,15 @@ Description: "Dieses Profil beschreibt die Nebenwirkung von Strahlentherapie und
 
 // Hier wird entweder die Bezeichnung von CTCAE Grad oder die MedDRA Code genutzt
 * event 1..1 MS
+// CTCAE-Katalogversion (oBDS 15.3) als eigene Extension — NICHT in
+// event.coding[meddra].version: Dort gehoert die Version des MedDRA-Katalogs hin,
+// aus dem der Code stammt (CTCAE v4.03 basiert auf MedDRA v12.0). Die frueher hier
+// gefuehrte Angabe "Version 4" meinte die CTCAE-Version und liess den Code im
+// ValueSet unauffindbar.
+* extension contains MII_EX_Onko_Nebenwirkung_CTCAE_Version named ctcaeVersion 0..1 MS
+* insert Label(extension[ctcaeVersion], CTCAE-Version, Version des CTCAE-Katalogs nach 15.3 oBDS 2021)
+* insert Translation(extension[ctcaeVersion] ^short, de-DE, CTCAE-Version)
+
 * event.coding 0..* MS
 * event.coding ^slicing.discriminator.type = #pattern
 * event.coding ^slicing.discriminator.path = "system"
@@ -27,6 +36,7 @@ Description: "Dieses Profil beschreibt die Nebenwirkung von Strahlentherapie und
 * event.coding[meddra].system = "https://www.meddra.org"
 * event.coding[meddra].code 1..1 MS
 * event.coding[meddra].version MS
+* event.coding[meddra].version ^comment = "Version des MEDDRA-Katalogs (z. B. 12.0 fuer die von CTCAE v4.03 verwendeten Codes). Die CTCAE-Katalogversion nach oBDS 15.3 steht in der Extension ctcaeVersion."
 // Binding auf Slice-Ebene (nicht event.coding gesamt): das Art-VS enthält nur
 // MedDRA-Codes — ein Binding über alle Slices würde den snomed-Slice invalidieren.
 * event.coding[meddra] from mii-vs-onko-nebenwirkung-art (required)
@@ -71,4 +81,5 @@ Title: "Mapping FHIR zu oBDS"
 Source: MII_PR_Onko_Nebenwirkung_Adverse_Event
 * seriousness -> "15.1" "Nebenwirkungen nach CTCAE-Grad"
 * event.coding.code -> "15.2" "Nebenwirkungen nach CTCAE Art"
-* event.coding.version -> "15.3" "Nebenwirkungen nach CTCAE Version"
+* extension[ctcaeVersion] -> "15.3" "Nebenwirkungen nach CTCAE Version"
+* event.coding[meddra].version -> "kein oBDS-Feld" "Version des MedDRA-Katalogs, aus dem der Code stammt - vom oBDS nicht erhoben"

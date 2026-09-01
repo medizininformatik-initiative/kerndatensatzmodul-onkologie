@@ -20,6 +20,20 @@
       }
     ]
   },
+  "extension": [
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-nebenwirkung-ctcae-version",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "4.03",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-version",
+            "display": "CTCAE Version 4.03"
+          }
+        ]
+      }
+    }
+  ],
   "actuality": "actual",
   "subject": {
     "reference": "Patient/PatientKimMusterperson"

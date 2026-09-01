@@ -5,6 +5,7 @@ Usage: #example
 * actuality = #actual
 * event.coding[meddra].system = "https://www.meddra.org"
 * event.coding[meddra].code = #10016256
+* extension[ctcaeVersion].valueCodeableConcept = $mii-cs-onko-nebenwirkung-ctcae-version#4.03 "CTCAE Version 4.03"
 * event.coding[meddra].display = "Fatigue"
 // SNOMED-CT-Übersetzung via ConceptMap mii-cm-onko-nebenwirkung-meddra-sct (server-verifiziert)
 * event.coding[snomed] = $SCT#84229001 "Fatigue"

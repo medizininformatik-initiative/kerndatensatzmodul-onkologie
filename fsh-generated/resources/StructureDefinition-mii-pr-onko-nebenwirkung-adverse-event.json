@@ -200,6 +200,62 @@
         "mustSupport": true
       },
       {
+        "id": "AdverseEvent.extension",
+        "path": "AdverseEvent.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "AdverseEvent.extension:ctcaeVersion",
+        "path": "AdverseEvent.extension",
+        "sliceName": "ctcaeVersion",
+        "short": "CTCAE-Version",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "CTCAE-Version"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Version des CTCAE-Katalogs nach 15.3 oBDS 2021",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-nebenwirkung-ctcae-version"
+            ]
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "15.3",
+            "comment": "Nebenwirkungen nach CTCAE Version"
+          }
+        ]
+      },
+      {
         "id": "AdverseEvent.event",
         "path": "AdverseEvent.event",
         "min": 1,
@@ -264,14 +320,7 @@
             }
           ]
         },
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "oBDS",
-            "map": "15.3",
-            "comment": "Nebenwirkungen nach CTCAE Version"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "AdverseEvent.event.coding.code",
@@ -343,7 +392,15 @@
       {
         "id": "AdverseEvent.event.coding:meddra.version",
         "path": "AdverseEvent.event.coding.version",
-        "mustSupport": true
+        "comment": "Version des MEDDRA-Katalogs (z. B. 12.0 fuer die von CTCAE v4.03 verwendeten Codes). Die CTCAE-Katalogversion nach oBDS 15.3 steht in der Extension ctcaeVersion.",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "kein oBDS-Feld",
+            "comment": "Version des MedDRA-Katalogs, aus dem der Code stammt - vom oBDS nicht erhoben"
+          }
+        ]
       },
       {
         "id": "AdverseEvent.event.coding:meddra.code",

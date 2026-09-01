@@ -11,6 +11,7 @@ Description: "Anämie CTCAE Grad 3 (MedDRA 10002272, deutsches Display aus dem S
 * actuality = #actual
 * event.coding[meddra].system = "https://www.meddra.org"
 * event.coding[meddra].code = #10002272
+* extension[ctcaeVersion].valueCodeableConcept = $mii-cs-onko-nebenwirkung-ctcae-version#4.03 "CTCAE Version 4.03"
 * event.coding[meddra].display = "Anämie"
 * event.coding[snomed] = $SCT#271737000 "Anaemia"
 * subject = Reference(PatientKimMusterperson)
@@ -26,6 +27,7 @@ Description: "Cytokine-Release-Syndrom CTCAE Grad 4 (MedDRA 10052015) unter medi
 * actuality = #actual
 * event.coding[meddra].system = "https://www.meddra.org"
 * event.coding[meddra].code = #10052015
+* extension[ctcaeVersion].valueCodeableConcept = $mii-cs-onko-nebenwirkung-ctcae-version#4.03 "CTCAE Version 4.03"
 * event.coding[meddra].display = "Zytokin-Freisetzungs-Syndrom"
 * event.coding[snomed] = $SCT#710027002 "Cytokine release syndrome"
 * subject = Reference(PatientKimMusterperson)
@@ -41,6 +43,7 @@ Description: "Rektale Mukositis CTCAE Grad 2 (MedDRA 10063190) nach Strahlenther
 * actuality = #actual
 * event.coding[meddra].system = "https://www.meddra.org"
 * event.coding[meddra].code = #10063190
+* extension[ctcaeVersion].valueCodeableConcept = $mii-cs-onko-nebenwirkung-ctcae-version#4.03 "CTCAE Version 4.03"
 * event.coding[meddra].display = "Rektale Mukositis"
 * subject = Reference(PatientKimMusterperson)
 * date = "2021-09-10"

@@ -79,6 +79,7 @@ Alias: $mii-cs-onko-allgemeiner-leistungszustand-karnofsky = https://www.medizin
 
 //15
 Alias: $mii-cs-onko-nebenwirkung-ctcae-grad = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad
+Alias: $mii-cs-onko-nebenwirkung-ctcae-version = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-version
 
 //20
 Alias: $mii-cs-onko-tod = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tod
