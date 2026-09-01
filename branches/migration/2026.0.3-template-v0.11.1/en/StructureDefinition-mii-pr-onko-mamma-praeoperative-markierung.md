@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-praeoperative-markierung | *Version*:2026.0.3 |
-| Active as of 2026-08-31 | *Computable Name*:MII_PR_Onko_Mamma_Praeoperative_Markierung |
+| Active as of 2026-09-01 | *Computable Name*:MII_PR_Onko_Mamma_Praeoperative_Markierung |
 
  
 Das vorliegende Profil beschreibt eine präoperativ durchgeführte Markierung von Tumorgewebe in der Brust. Dabei können verschiedene Markierungsmodalitäten gewählt werden, wie z.B. Drahtmarkierungen, Seed-Markierungen oder andere Lokalisationstechniken. 
@@ -205,7 +205,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-mamma
   "name" : "MII_PR_Onko_Mamma_Praeoperative_Markierung",
   "title" : "MII PR Onkologie Präoperative Markierung Mamma",
   "status" : "active",
-  "date" : "2026-08-31T15:22:09+00:00",
+  "date" : "2026-09-01T08:53:35+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

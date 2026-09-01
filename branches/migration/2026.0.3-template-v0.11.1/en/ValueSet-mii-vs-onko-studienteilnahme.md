@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-studienteilnahme | *Version*:2026.0.3 |
-| Active as of 2026-08-31 | *Computable Name*:MII_VS_Onko_Studienteilnahme |
+| Active as of 2026-09-01 | *Computable Name*:MII_VS_Onko_Studienteilnahme |
 
  
 Value Set für oBDS-Codes des Studienteilnahme Status 
@@ -138,7 +138,7 @@ Value Set für oBDS-Codes des Studienteilnahme Status
   "title" : "MII VS Onkologie Studienteilnahme",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-31T15:22:09+00:00",
+  "date" : "2026-09-01T08:53:35+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

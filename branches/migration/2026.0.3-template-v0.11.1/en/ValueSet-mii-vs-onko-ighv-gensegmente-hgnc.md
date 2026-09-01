@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-ighv-gensegmente-hgnc | *Version*:2026.0.3 |
-| Active as of 2026-08-31 | *Computable Name*:MII_VS_Onko_IGHV_Gensegmente_HGNC |
+| Active as of 2026-09-01 | *Computable Name*:MII_VS_Onko_IGHV_Gensegmente_HGNC |
 
  
 Alle IGHV-Gensegmente (Immunglobulin-Schwerketten-V-Region) als HGNC-Gen-IDs. Auswahlunterstuetzung fuer die Angabe des rearrangierten V-Segments in Observation.component:gene-studied — insbesondere bei der chronischen lymphatischen Leukaemie, wo einzelne Segmente wie IGHV3-21 eigene prognostische Bedeutung haben. Ob das Segment mutiert oder unmutiert ist, wird nicht hier, sondern ueber die Auspraegung der Varianten-Observation abgebildet (oBDS M = Mutation, W = Wildtyp). 
@@ -138,7 +138,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "title" : "MII VS Onkologie IGHV-Gensegmente HGNC",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-31T15:22:09+00:00",
+  "date" : "2026-09-01T08:53:35+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

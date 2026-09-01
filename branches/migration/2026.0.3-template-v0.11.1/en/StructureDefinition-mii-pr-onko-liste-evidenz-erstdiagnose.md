@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-liste-evidenz-erstdiagnose | *Version*:2026.0.3 |
-| Active as of 2026-08-31 | *Computable Name*:MII_PR_Onko_Liste_Evidenz_Erstdiagnose |
+| Active as of 2026-09-01 | *Computable Name*:MII_PR_Onko_Liste_Evidenz_Erstdiagnose |
 
  
 Dieses Profil beschreibt eine Liste, die alle Observationen und Berichte enthält, die für eine Erstdiagnostik relevant waren. (synchrone Observationen im Sinne der Krebsregister) 
@@ -150,7 +150,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-liste
   "name" : "MII_PR_Onko_Liste_Evidenz_Erstdiagnose",
   "title" : "MII PR Onkologie Evidenz Diagnose Primärtumor",
   "status" : "active",
-  "date" : "2026-08-31T15:22:09+00:00",
+  "date" : "2026-09-01T08:53:35+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

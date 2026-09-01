@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-praeoperative-markierung-modalitaet | *Version*:2026.0.3 |
-| Active as of 2026-08-31 | *Computable Name*:MII_VS_Onko_Mamma_Praeoperative_Markierung_Modalitaet |
+| Active as of 2026-09-01 | *Computable Name*:MII_VS_Onko_Mamma_Praeoperative_Markierung_Modalitaet |
 | **Copyright/Legal**: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. | |
 
  
@@ -140,7 +140,7 @@ Value Set für Imagingmodalität der präoperativen Markierung bei Mamma-Karzino
   "title" : "MII VS Onkologie Mamma Präoperative Markierung Modalität",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-31T15:22:09+00:00",
+  "date" : "2026-09-01T08:53:35+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

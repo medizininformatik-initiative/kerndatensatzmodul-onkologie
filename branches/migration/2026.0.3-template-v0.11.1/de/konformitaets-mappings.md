@@ -53,7 +53,7 @@ Jede einzelne ConceptMap rendert zusätzlich als eigene Seite unter [Artefakte](
 | oBDS-CS therapieplanung-typ | 3 | 0 | 3 | 0 |
 | oBDS-CS therapieabweichung | 3 | 3 | 0 | 0 |
 | oBDS-CS studienteilnahme | 3 | 3 | 0 | 0 |
-| [https://www.medizininformatik-initiative.de/fhir/ext/modul-diagnose/StructureDefinition/Diagnose](https://www.medizininformatik-initiative.de/fhir/ext/modul-diagnose/StructureDefinition/Diagnose) | 3 | 1 | 0 | 2 |
+| [https://www.medizininformatik-initiative.de/fhir/ext/modul-diagnose/StructureDefinition/Diagnose](https://www.medizininformatik-initiative.de/fhir/ext/modul-diagnose/StructureDefinition/Diagnose) | 2 | 0 | 0 | 2 |
 | [MII PR Onkologie Grading](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading) | 1 | 1 | 0 | 0 |
 | [MII PR Onkologie Allgemeiner Leistungszustand ECOG](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog) | 1 | 1 | 0 | 0 |
 

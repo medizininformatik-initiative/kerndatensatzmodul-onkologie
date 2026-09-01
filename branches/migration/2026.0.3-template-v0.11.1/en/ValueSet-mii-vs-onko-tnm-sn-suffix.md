@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-sn-suffix | *Version*:2026.0.3 |
-| Active as of 2026-08-31 | *Computable Name*:MII_VS_Onko_TNM_SN_Suffix |
+| Active as of 2026-09-01 | *Computable Name*:MII_VS_Onko_TNM_SN_Suffix |
 
  
 Das ValueSet enthält das Schildwächterlymphknoten (Sentinel Lymph Node) Suffix für die N-Kategorie aus der UICC TNM - Klassifikation maligner Tumoren Achte Auflage. 
@@ -138,7 +138,7 @@ Das ValueSet enthält das Schildwächterlymphknoten (Sentinel Lymph Node) Suffix
   "title" : "MII VS Onkologie TNM SN Suffix",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-31T15:22:09+00:00",
+  "date" : "2026-09-01T08:53:35+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

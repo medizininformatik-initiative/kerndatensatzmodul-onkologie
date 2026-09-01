@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus | *Version*:2026.0.3 |
-| Active as of 2026-08-31 | *Computable Name*:MII_CS_Onko_Residualstatus |
+| Active as of 2026-09-01 | *Computable Name*:MII_CS_Onko_Residualstatus |
 
  
 oBDS-spezifisches Codesystem für R-Klassifikation 
@@ -128,7 +128,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "MII CS Onkologie Residualstatus",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-31T15:22:09+00:00",
+  "date" : "2026-09-01T08:53:35+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

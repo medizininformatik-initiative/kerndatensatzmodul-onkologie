@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-systemische-therapie-ende-grund | *Version*:2026.0.3 |
-| Active Stand: 2026-08-31 | *Maschinenlesbarer Name*:MII_VS_Onko_Systemische_Therapie_Ende_Grund |
+| Active Stand: 2026-09-01 | *Maschinenlesbarer Name*:MII_VS_Onko_Systemische_Therapie_Ende_Grund |
 
  
 oBDS-spezifisches ValueSet für Klassifikation des Grundes der Beendigung der Systemischen Therapie 
@@ -138,7 +138,7 @@ oBDS-spezifisches ValueSet für Klassifikation des Grundes der Beendigung der Sy
   "title" : "MII VS Onkologie Systemische Therapie Ende Grund",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-31T15:22:09+00:00",
+  "date" : "2026-09-01T08:53:35+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

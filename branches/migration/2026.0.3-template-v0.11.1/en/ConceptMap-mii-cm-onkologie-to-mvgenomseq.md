@@ -50,14 +50,14 @@ Mapping der einzelnen MII-OnkologieProfile auf den Klinischen Datenkranz der MVG
   "targetUri" : "https://www.bfarm.de/DE/Das-BfArM/Aufgaben/Modellvorhaben-Genomsequenzierung",
   "group" : [{
     "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor",
-    "sourceVersion" : "2025.0.4",
+    "sourceVersion" : "2026.0.3",
     "target" : "https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json",
     "targetVersion" : "1.1.1",
     "element" : [{
       "code" : "Condition.code",
       "display" : "Diagnose Primärtumor",
       "target" : [{
-        "code" : "diagnosisOd.mainDiagnosis",
+        "code" : "diagnosisOD.mainDiagnosis",
         "display" : "Haupttumordiagnose",
         "equivalence" : "equivalent",
         "comment" : "Abbildung über ICD-10-GM-Coding Code/System/Version"
@@ -67,7 +67,7 @@ Mapping der einzelnen MII-OnkologieProfile auf den Klinischen Datenkranz der MVG
       "code" : "Condition.extension:Feststellungsdatum",
       "display" : "Feststellungsdatum",
       "target" : [{
-        "code" : "diagnosisOd.mainDiagnosis.date",
+        "code" : "diagnosisOD.diagnosisDate",
         "display" : "Datum der Diagnose",
         "equivalence" : "equivalent",
         "comment" : "Wenn Tag unbekannt, soll auf 15. gesetzt werden"
@@ -77,7 +77,7 @@ Mapping der einzelnen MII-OnkologieProfile auf den Klinischen Datenkranz der MVG
       "code" : "Condition.bodySite.coding:icd-o-3.code",
       "display" : "ICD-O-3 Topographie",
       "target" : [{
-        "code" : "diagnosisOd.mainDiagnosis.icdoTopography",
+        "code" : "diagnosisOD.topography.code",
         "display" : "ICD-O-3 Topographie",
         "equivalence" : "equivalent"
       }]
@@ -86,7 +86,7 @@ Mapping der einzelnen MII-OnkologieProfile auf den Klinischen Datenkranz der MVG
       "code" : "Condition.bodySite.coding:icd-o-3.version",
       "display" : "ICD-O-3 Version",
       "target" : [{
-        "code" : "diagnosisOd.mainDiagnosis.icdoVersion",
+        "code" : "diagnosisOD.topography.version",
         "display" : "ICD-O-3 Version",
         "equivalence" : "equivalent"
       }]
@@ -95,7 +95,7 @@ Mapping der einzelnen MII-OnkologieProfile auf den Klinischen Datenkranz der MVG
       "code" : "Condition.extension:morphology-behavior-icdo3.valueCodeableConcept.coding.code",
       "display" : "ICD-O-3 Morphologie-Code",
       "target" : [{
-        "code" : "DiagnosisOd.mainDiagnosis.icdoMorphology",
+        "code" : "diagnosisOD.histology.code",
         "display" : "ICD-O-3 Morphologie",
         "equivalence" : "equivalent"
       }]
@@ -103,31 +103,29 @@ Mapping der einzelnen MII-OnkologieProfile auf den Klinischen Datenkranz der MVG
   },
   {
     "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-diagnose/StructureDefinition/Diagnose",
-    "sourceVersion" : "2025.0.0",
+    "sourceVersion" : "2026.0.3",
     "target" : "https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json",
     "targetVersion" : "1.1.1",
     "element" : [{
       "code" : "Condition.code.coding",
       "display" : "Diagnosecode",
       "target" : [{
-        "code" : "DiagnosisOd.additionalDiagnoses",
+        "code" : "diagnosisOD.additionalDiagnoses",
         "display" : "Diagnosecode",
         "equivalence" : "narrower",
-        "comment" : "Abbildung über ICD-10-GM/OrphaCode/AlphaID jeweils mit Code/System/Version. Hier hauptsächlich relevante onkologische Begleit- und Vorerkrankungen. Diagnostizierte Keimbahnerkrankungen sollen über "
+        "comment" : "Abbildung über ICD-10-GM/OrphaCode/AlphaID jeweils mit Code/System/Version. Hier hauptsächlich relevante onkologische Begleit- und Vorerkrankungen. Diagnostizierte Keimbahnerkrankungen sind ueber diagnosisOD.germlineDiagnosisCode zu uebermitteln."
       }]
     },
     {
       "code" : "Condition.extension:Feststellungsdatum",
       "display" : "Feststellungsdatum",
       "target" : [{
-        "code" : "DiagnosisOd.additionalDiagnoses.date",
-        "display" : "Datum der Diagnose",
-        "equivalence" : "equivalent",
-        "comment" : "Wenn Tag unbekannt, soll auf 15. gesetzt werden"
+        "equivalence" : "unmatched",
+        "comment" : "Kein Zielfeld: diagnosisOD.additionalDiagnoses ist im Datenkranz ein reines Coding-Array ohne Datumsattribut. Ein Feststellungsdatum je Nebendiagnose kann nicht uebermittelt werden; diagnosisOD.diagnosisDate bezieht sich auf die Hauptdiagnose."
       }]
     },
     {
-      "code" : "Condition.code.coding\"",
+      "code" : "Condition.code.coding",
       "display" : "Diagnosecode",
       "target" : [{
         "equivalence" : "unmatched"
@@ -136,14 +134,14 @@ Mapping der einzelnen MII-OnkologieProfile auf den Klinischen Datenkranz der MVG
   },
   {
     "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog",
-    "sourceVersion" : "2025.0.4",
+    "sourceVersion" : "2026.0.3",
     "target" : "https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json",
     "targetVersion" : "1.1.1",
     "element" : [{
       "code" : "Observation.valueCodeableConcept.coding.code",
       "display" : "ECOG-Performance-Status",
       "target" : [{
-        "code" : "ecogPerformanceStatusScore",
+        "code" : "diagnosisOD.ECOGPerformanceStatusScore",
         "display" : "ECOG-Performance-Status",
         "equivalence" : "equivalent"
       }]
@@ -151,14 +149,14 @@ Mapping der einzelnen MII-OnkologieProfile auf den Klinischen Datenkranz der MVG
   },
   {
     "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading",
-    "sourceVersion" : "2025.0.4",
+    "sourceVersion" : "2026.0.3",
     "target" : "https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json",
     "targetVersion" : "1.1.1",
     "element" : [{
       "code" : "Observation.valueCodeableConcept.coding.code",
       "display" : "Histologisches Grading",
       "target" : [{
-        "code" : "grading",
+        "code" : "diagnosisOD.grading",
         "display" : "Histologisches Grading",
         "equivalence" : "equivalent"
       }]
@@ -166,14 +164,14 @@ Mapping der einzelnen MII-OnkologieProfile auf den Klinischen Datenkranz der MVG
   },
   {
     "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation",
-    "sourceVersion" : "2025.0.4",
+    "sourceVersion" : "2026.0.3",
     "target" : "https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json",
     "targetVersion" : "1.1.1",
     "element" : [{
       "code" : "Observation.valueCodeableConcept.coding.code",
       "display" : "TNM-Klassifikation",
       "target" : [{
-        "code" : "ecogPerformanceStatusScore",
+        "code" : "diagnosisOD.ECOGPerformanceStatusScore",
         "display" : "TNM-KLassifkation",
         "equivalence" : "equivalent",
         "comment" : "für Primärtherapie entscheidendes TNM(auswerterelevanter TNM)"
@@ -183,7 +181,7 @@ Mapping der einzelnen MII-OnkologieProfile auf den Klinischen Datenkranz der MVG
       "code" : "Observation.valueCodeableConcept.coding.code",
       "display" : "TNM-T-Kategorie",
       "target" : [{
-        "code" : "ecogPerformanceStatusScore",
+        "code" : "diagnosisOD.ECOGPerformanceStatusScore",
         "display" : "TNM-KLassifkation",
         "equivalence" : "equivalent"
       }]
@@ -192,7 +190,7 @@ Mapping der einzelnen MII-OnkologieProfile auf den Klinischen Datenkranz der MVG
       "code" : "Observation.valueCodeableConcept.coding.code",
       "display" : "TNM-N-Kategorie",
       "target" : [{
-        "code" : "ecogPerformanceStatusScore",
+        "code" : "diagnosisOD.ECOGPerformanceStatusScore",
         "display" : "TNM-KLassifkation",
         "equivalence" : "equivalent"
       }]
@@ -201,7 +199,7 @@ Mapping der einzelnen MII-OnkologieProfile auf den Klinischen Datenkranz der MVG
       "code" : "Observation.valueCodeableConcept.coding.code",
       "display" : "TNM-M-Kategorie",
       "target" : [{
-        "code" : "ecogPerformanceStatusScore",
+        "code" : "diagnosisOD.ECOGPerformanceStatusScore",
         "display" : "TNM-KLassifkation",
         "equivalence" : "equivalent"
       }]

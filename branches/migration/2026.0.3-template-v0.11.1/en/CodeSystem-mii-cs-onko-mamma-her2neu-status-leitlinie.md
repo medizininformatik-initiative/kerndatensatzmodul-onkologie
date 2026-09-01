@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-leitlinie | *Version*:2026.0.3 |
-| Active as of 2026-08-31 | *Computable Name*:MII_CS_Onko_Mamma_Her2neu_Status_Leitlinie |
+| Active as of 2026-09-01 | *Computable Name*:MII_CS_Onko_Mamma_Her2neu_Status_Leitlinie |
 
  
 Codesystem für Her2neu Status basierend auf der S3-Leitlinie Mammakarzinom und ASCO/CAP Guidelines mit erweiterten Klassifikationen (HER2-low, HER2-ultralow) 
@@ -127,7 +127,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "MII CS Onkologie Mamma Her2neu Status Leitlinie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-31T15:22:09+00:00",
+  "date" : "2026-09-01T08:53:35+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

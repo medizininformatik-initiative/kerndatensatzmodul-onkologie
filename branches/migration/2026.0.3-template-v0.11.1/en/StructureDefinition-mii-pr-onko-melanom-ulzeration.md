@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-ulzeration | *Version*:2026.0.3 |
-| Active as of 2026-08-31 | *Computable Name*:MII_PR_Onko_Melanom_Ulzeration |
+| Active as of 2026-09-01 | *Computable Name*:MII_PR_Onko_Melanom_Ulzeration |
 
  
 Dieses Profil beschreibt die Ulzeration beim Malignen Melanom der Haut 
@@ -184,7 +184,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-melan
   "name" : "MII_PR_Onko_Melanom_Ulzeration",
   "title" : "MII PR Onkologie Melanom Ulzeration",
   "status" : "active",
-  "date" : "2026-08-31T15:22:09+00:00",
+  "date" : "2026-09-01T08:53:35+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

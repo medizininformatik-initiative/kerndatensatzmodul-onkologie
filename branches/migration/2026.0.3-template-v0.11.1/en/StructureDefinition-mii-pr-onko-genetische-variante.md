@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-genetische-variante | *Version*:2026.0.3 |
-| Active as of 2026-08-31 | *Computable Name*:MII_PR_Onko_Genetische_Variante |
+| Active as of 2026-09-01 | *Computable Name*:MII_PR_Onko_Genetische_Variante |
 
  
 Genetische Variante wie im oBDS beschrieben 
@@ -200,7 +200,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-genet
   "name" : "MII_PR_Onko_Genetische_Variante",
   "title" : "MII PR Onkologie Genetische Variante",
   "status" : "active",
-  "date" : "2026-08-31T15:22:09+00:00",
+  "date" : "2026-09-01T08:53:35+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

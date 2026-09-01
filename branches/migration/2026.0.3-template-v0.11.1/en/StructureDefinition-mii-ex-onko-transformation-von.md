@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-transformation-von | *Version*:2026.0.3 |
-| Active as of 2026-08-31 | *Computable Name*:MII_EX_Onko_Transformation_Von |
+| Active as of 2026-09-01 | *Computable Name*:MII_EX_Onko_Transformation_Von |
 
 Kennzeichnet, dass diese onkologische Diagnose eine Transformation aus einem bereits registrierten Primärtumor derselben Tumor-Linie ist — für Fälle, in denen das Krebsregister-Regelwerk eine neue Tumor-Entität führt (z. B. MDS → sekundäre AML, ZNS-Tumor /0 → /3). Abzugrenzen von occurredFollowing (rein zeitliche Abfolge unabhängiger Erkrankungen) und von der CUP-Auflösung nach der Best-Of-Regel, bei der dieselbe Entität aktualisiert wird (keine zweite Ressource).
 
@@ -139,7 +139,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-onko-trans
   "name" : "MII_EX_Onko_Transformation_Von",
   "title" : "MII EX Onkologie Transformation von",
   "status" : "active",
-  "date" : "2026-08-31T15:22:09+00:00",
+  "date" : "2026-09-01T08:53:35+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

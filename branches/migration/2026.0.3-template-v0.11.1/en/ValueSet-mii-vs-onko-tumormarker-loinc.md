@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tumormarker-loinc | *Version*:2026.0.3 |
-| Active as of 2026-08-31 | *Computable Name*:MII_VS_Onko_Tumormarker_LOINC |
+| Active as of 2026-09-01 | *Computable Name*:MII_VS_Onko_Tumormarker_LOINC |
 
  
 Kuratierte LOINC-Codes der in der Onkologie gebraeuchlichen Tumormarker (Serum-/Plasma- bzw. Urin-Bestimmungen). Verwendung als Auswahlliste fuer Observation.code im Profil MII_PR_Onko_Tumormarker (Ableitung des KDS-Moduls Laborbefund). Die Liste ist nicht abschliessend gemeint: Weitere Laborwerte werden ueber das KDS-Modul Laborbefund abgebildet. 
@@ -138,7 +138,7 @@ Kuratierte LOINC-Codes der in der Onkologie gebraeuchlichen Tumormarker (Serum-/
   "title" : "MII VS Onkologie Tumormarker LOINC",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-31T15:22:09+00:00",
+  "date" : "2026-09-01T08:53:35+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

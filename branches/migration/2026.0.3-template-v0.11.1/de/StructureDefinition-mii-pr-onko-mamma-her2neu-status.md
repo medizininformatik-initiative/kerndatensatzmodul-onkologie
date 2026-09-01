@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-her2neu-status | *Version*:2026.0.3 |
-| Active Stand: 2026-08-31 | *Maschinenlesbarer Name*:MII_PR_Onko_Mamma_Her2neu_Status |
+| Active Stand: 2026-09-01 | *Maschinenlesbarer Name*:MII_PR_Onko_Mamma_Her2neu_Status |
 
  
 Dieses Profil beschreibt den Her2neu Status einer pathologisch untersuchten Probe beim Mamma-Karzinom in der Onkologie 
@@ -325,7 +325,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_Mamma_Her2neu_Status",
   "title" : "MII PR Onkologie Her2neu Status",
   "status" : "active",
-  "date" : "2026-08-31T15:22:09+00:00",
+  "date" : "2026-09-01T08:53:35+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

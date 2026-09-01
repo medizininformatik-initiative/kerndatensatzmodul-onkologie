@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-s-kategorie-werte | *Version*:2026.0.3 |
-| Active as of 2026-08-31 | *Computable Name*:MII_VS_Onko_TNM_S_Kategorie_Werte |
+| Active as of 2026-09-01 | *Computable Name*:MII_VS_Onko_TNM_S_Kategorie_Werte |
 
  
 Das ValueSet enthält die TNM Codes für Serumtumormarker aus der UICC TNM - Klassifikation maligner Tumoren Achte Auflage. 
@@ -138,7 +138,7 @@ Das ValueSet enthält die TNM Codes für Serumtumormarker aus der UICC TNM - Kla
   "title" : "MII VS Onkologie TNM S Kategorie Werte",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-31T15:22:09+00:00",
+  "date" : "2026-09-01T08:53:35+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

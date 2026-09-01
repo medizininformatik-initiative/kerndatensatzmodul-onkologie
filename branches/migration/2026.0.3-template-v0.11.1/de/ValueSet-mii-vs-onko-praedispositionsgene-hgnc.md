@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-praedispositionsgene-hgnc | *Version*:2026.0.3 |
-| Active Stand: 2026-08-31 | *Maschinenlesbarer Name*:MII_VS_Onko_Praedispositionsgene_HGNC |
+| Active Stand: 2026-09-01 | *Maschinenlesbarer Name*:MII_VS_Onko_Praedispositionsgene_HGNC |
 
  
 Krebsprädispositionsgene der §65c-Liste (Manual Plus, Krebsprädispositionssyndrom und -gen) als HGNC-Gen-IDs, inkl. Expansion der Sammel-Einträge (FANCA-FANCW, IDH1/2, XP-Komplementationsgruppen). Begleitartefakt ohne Profil-Binding (Andockung an die genetischen Profile folgt mit dem Konzept für genetische Marker). Zytogenetische Aberrationen der Quell-Liste (11p13/11p15, Trisomien, ETV-RUNX1-Fusion) sind keine Gene und hier nicht enthalten. Projektseitige Code-Auflösung ohne Gewähr; fachliche Prüfung vor Produktivnutzung erforderlich. 
@@ -138,7 +138,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "title" : "MII VS Onkologie Krebsprädispositionsgene HGNC",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-31T15:22:09+00:00",
+  "date" : "2026-09-01T08:53:35+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

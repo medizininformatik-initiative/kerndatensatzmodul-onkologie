@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-exzision | *Version*:2026.0.3 |
-| Active as of 2026-08-31 | *Computable Name*:MII_PR_Onko_Melanom_Exzision |
+| Active as of 2026-09-01 | *Computable Name*:MII_PR_Onko_Melanom_Exzision |
 
  
 Melanom-spezifische Exzision. Dieses Profil spezialisiert die allgemeine onkologische Operation für Melanom-Exzisionen mit einem präferierten ValueSet basierend auf SNOMED CT Codes für Hautexzisionen. 
@@ -150,7 +150,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-melan
   "name" : "MII_PR_Onko_Melanom_Exzision",
   "title" : "MII PR Onko Melanom Exzision",
   "status" : "active",
-  "date" : "2026-08-31T15:22:09+00:00",
+  "date" : "2026-09-01T08:53:35+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

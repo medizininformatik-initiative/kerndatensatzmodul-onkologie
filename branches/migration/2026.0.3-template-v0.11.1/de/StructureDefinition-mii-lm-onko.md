@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/Onkologie | *Version*:2026.0.3 |
-| Active Stand: 2026-08-31 | *Maschinenlesbarer Name*:MII_LM_Onko |
+| Active Stand: 2026-09-01 | *Maschinenlesbarer Name*:MII_LM_Onko |
 
  
 MII LogicalModel Modul Onkologie 
@@ -171,7 +171,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
   "name" : "MII_LM_Onko",
   "title" : "MII LM Onkologie",
   "status" : "active",
-  "date" : "2026-08-31T15:22:09+00:00",
+  "date" : "2026-09-01T08:53:35+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -192,6 +192,10 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
   "mapping" : [{
     "identity" : "FHIR",
     "name" : "Onkologie LogicalModel FHIR Mapping"
+  },
+  {
+    "identity" : "oBDS",
+    "name" : "Onkologie LogicalModel oBDS Mapping"
   }],
   "kind" : "logical",
   "abstract" : false,
@@ -218,6 +222,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Condition"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "5",
+        "comment" : "Diagnose - oBDS Kapitel 5. Amtlicher Feldkatalog: https://basisdatensatz.de"
       }]
     },
     {
@@ -233,6 +242,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Condition.code.coding.where(system='http://fhir.de/CodeSystem/bfarm/icd-10-gm').code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "5.1",
+        "comment" : "Primärtumor Tumordiagnose ICD Code - Kodierung nach aktueller ICD-10-GM"
       }]
     },
     {
@@ -248,6 +262,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Condition.code.coding.where(system='http://fhir.de/CodeSystem/bfarm/icd-10-gm').version"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "5.2",
+        "comment" : "Primärtumor Tumordiagnose ICD-Version"
       }]
     },
     {
@@ -263,6 +282,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Condition.code.text"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "5.3",
+        "comment" : "Primärtumor Tumordiagnose Text - Klartextbezeichnung der meldepflichtigen Erkrankung"
       }]
     },
     {
@@ -278,6 +302,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Condition.bodySite.coding.where(system='http://terminology.hl7.org/CodeSystem/icd-o-3').code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "5.4",
+        "comment" : "Primärtumor Topographie ICD-O"
       }]
     },
     {
@@ -293,6 +322,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Condition.bodySite.coding.where(system='http://terminology.hl7.org/CodeSystem/icd-o-3').version"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "5.5",
+        "comment" : "Primärtumor Topographie ICD-O-Version"
       }]
     },
     {
@@ -308,6 +342,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Condition.assertedDate"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "5.6",
+        "comment" : "Primärtumor Diagnosedatum - Datum der Erstdiagnose"
       }]
     },
     {
@@ -323,6 +362,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Condition.verificationStatus.coding.where(system='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung').code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "5.7",
+        "comment" : "Primärtumor Diagnosesicherung - höchste erreichte Diagnosesicherheit"
       }]
     },
     {
@@ -338,6 +382,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Condition.bodySite.coding.where(system='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-seitenlokalisation').code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "5.8",
+        "comment" : "Primärtumor Seitenlokalisation"
       }]
     },
     {
@@ -353,6 +402,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Condition"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "5.9",
+        "comment" : "Frühere Tumorerkrankungen - eigenständig kodierte Vordiagnosen; im Profil MII_PR_Onko_Fruehere_Tumorerkrankung sind alle Detailangaben ebenfalls unter 5.9 geführt"
       }]
     },
     {
@@ -364,6 +418,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "max" : "*",
       "type" : [{
         "code" : "BackboneElement"
+      }],
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "6",
+        "comment" : "Histologie - oBDS Kapitel 6"
       }]
     },
     {
@@ -379,6 +438,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Specimen.collection.collectedDateTime"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "6.1",
+        "comment" : "Tumor Histologiedatum - Datum der Probenentnahme"
       }]
     },
     {
@@ -394,6 +458,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Specimen.accessionIdentifier"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "6.2",
+        "comment" : "Histologie-Einsendenummer bzw. Auftragsnummer des Pathologischen Instituts"
       }]
     },
     {
@@ -409,6 +478,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3').valueCodeableConcept.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "6.3",
+        "comment" : "Morphologie-Code nach ICD-O-3"
       }]
     },
     {
@@ -424,6 +498,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3').valueCodeableConcept.version"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "6.4",
+        "comment" : "Morphologie ICD-O/Blue Book Version"
       }]
     },
     {
@@ -439,6 +518,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Condition.code.text"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "6.5",
+        "comment" : "Morphologie-Freitext - Originalbezeichnung der morphologischen Diagnose"
       }]
     },
     {
@@ -454,6 +538,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.valueCodeableConcept.coding.where(system='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading').code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "6.6",
+        "comment" : "Grading - Differenzierungsgrad nach aktueller TNM-Auflage"
       }]
     },
     {
@@ -469,6 +558,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.code.coding.where(system='http://loinc.org' and code='2708-6').select(%resource.valueQuantity.value)"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "6.7",
+        "comment" : "Anzahl der untersuchten Lymphknoten einschließlich Sentinel"
       }]
     },
     {
@@ -484,6 +578,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.code.coding.where(system='http://loinc.org' and code='21893-3').select(%resource.valueQuantity.value)"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "6.8",
+        "comment" : "Anzahl der befallenen Lymphknoten einschließlich Sentinel"
       }]
     },
     {
@@ -499,6 +598,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.code.coding.where(system='http://loinc.org' and code='85347-3').select(%resource.valueQuantity.value)"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "6.9",
+        "comment" : "Anzahl der untersuchten Sentinel-Lymphknoten"
       }]
     },
     {
@@ -514,6 +618,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.code.coding.where(system='http://loinc.org' and code='92832-5').select(%resource.valueQuantity.value)"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "6.10",
+        "comment" : "Anzahl der befallenen Sentinel-Lymphknoten"
       }]
     },
     {
@@ -529,6 +638,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "DiagnosticReport.code.coding.where(system='http://loinc.org' and code='60568-3').select(%resource.conclusion)"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "6.11",
+        "comment" : "Befund - vollständiger Befundbericht des Pathologen"
       }]
     },
     {
@@ -540,6 +654,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "max" : "*",
       "type" : [{
         "code" : "BackboneElement"
+      }],
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "8",
+        "comment" : "TNM-Klassifikation - oBDS Kapitel 8"
       }]
     },
     {
@@ -555,6 +674,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.effectiveDateTime"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "8.1",
+        "comment" : "TNM Datum - Bezugsdatum der Klassifikation"
       }]
     },
     {
@@ -570,6 +694,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.method"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "8.2",
+        "comment" : "TNM Version - verwendete TNM-Auflage"
       }]
     },
     {
@@ -590,6 +719,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.valueCodeableConcept.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "8.3",
+        "comment" : "TNM y-Symbol - Klassifikation während oder nach initialer multimodaler Therapie"
       }]
     },
     {
@@ -610,6 +744,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.valueCodeableConcept.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "8.4",
+        "comment" : "TNM r-Symbol - Klassifikation eines Rezidivs"
       }]
     },
     {
@@ -630,6 +769,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.valueCodeableConcept.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "8.5",
+        "comment" : "TNM a-Symbol - Klassifikation aus Anlass einer Autopsie"
       }]
     },
     {
@@ -645,6 +789,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.code.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix').value.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "8.6",
+        "comment" : "TNM c/p-Präfix T"
       }]
     },
     {
@@ -660,6 +809,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.code.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix').value.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "8.7",
+        "comment" : "TNM c/p-Präfix N"
       }]
     },
     {
@@ -675,6 +829,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.code.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix').value.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "8.8",
+        "comment" : "TNM c/p-Präfix M"
       }]
     },
     {
@@ -690,6 +849,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.valueCodeableConcept.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "8.9",
+        "comment" : "TNM T-Kategorie - Ausbreitung des Primärtumors"
       }]
     },
     {
@@ -705,6 +869,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.valueCodeableConcept.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "8.10",
+        "comment" : "TNM m-Symbol - multiple Primärtumoren in einem anatomischen Bezirk"
       }]
     },
     {
@@ -720,6 +889,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.valueCodeableConcept.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "8.12",
+        "comment" : "TNM M-Kategorie - Fehlen oder Vorhandensein von Fernmetastasen"
       }]
     },
     {
@@ -735,6 +909,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.valueCodeableConcept.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "8.11",
+        "comment" : "TNM N-Kategorie - regionäre Lymphknotenmetastasen"
       }]
     },
     {
@@ -755,6 +934,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.valueCodeableConcept.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "8.13",
+        "comment" : "TNM L-Kategorie - Lymphgefäßinvasion"
       }]
     },
     {
@@ -775,6 +959,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.valueCodeableConcept.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "8.14",
+        "comment" : "TNM V-Kategorie - Veneninvasion"
       }]
     },
     {
@@ -795,6 +984,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.valueCodeableConcept.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "8.15",
+        "comment" : "TNM Pn-Kategorie - Perineuralinvasion"
       }]
     },
     {
@@ -815,6 +1009,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.valueCodeableConcept.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "8.16",
+        "comment" : "TNM S-Kategorie - Serumtumormarker"
       }]
     },
     {
@@ -830,6 +1029,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.valueCodeableConcept.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "8.17",
+        "comment" : "UICC Stadium nach aktuell gültiger TNM-Klassifikation"
       }]
     },
     {
@@ -843,6 +1047,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "9",
+        "comment" : "Weitere Klassifikationen - oBDS Kapitel 9; in den Profilen zweistellig als 09 geführt"
       }]
     },
     {
@@ -858,6 +1067,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.effectiveDateTime"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "9.1",
+        "comment" : "Hämatoonkologische und sonstige Klassifikationen Datum - im Profil als 09.1 geführt"
       }]
     },
     {
@@ -873,6 +1087,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.code.text"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "9.2",
+        "comment" : "Hämatoonkologische und sonstige Klassifikationen Name - im Profil als 09.2 geführt"
       }]
     },
     {
@@ -888,6 +1107,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.value[x]"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "9.3",
+        "comment" : "Hämatoonkologische und sonstige Klassifikationen Einstufung - im Profil als 09.3 geführt"
       }]
     },
     {
@@ -899,6 +1123,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "max" : "*",
       "type" : [{
         "code" : "BackboneElement"
+      }],
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "10",
+        "comment" : "Residualstatus - oBDS Kapitel 10"
       }]
     },
     {
@@ -914,6 +1143,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Procedure.outcome"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "10.1",
+        "comment" : "Beurteilung des lokalen Residualstatus nach Abschluss der Operation - im Profil MII_PR_Onko_Operation als Procedure.outcome geführt"
       }]
     },
     {
@@ -929,6 +1163,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.valueCodeableConcept.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "10.2",
+        "comment" : "Gesamtbeurteilung des Residualstatus einschließlich etwaiger Fernmetastasen"
       }]
     },
     {
@@ -940,6 +1179,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "max" : "*",
       "type" : [{
         "code" : "BackboneElement"
+      }],
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "11",
+        "comment" : "Fernmetastasen - oBDS Kapitel 11"
       }]
     },
     {
@@ -955,6 +1199,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.bodySite"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "11.1",
+        "comment" : "Lokalisation von Fernmetastasen"
       }]
     },
     {
@@ -970,6 +1219,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.effectiveDateTime"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "11.2",
+        "comment" : "Datum der diagnostischen Sicherung von Fernmetastasen"
       }]
     },
     {
@@ -981,6 +1235,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "max" : "*",
       "type" : [{
         "code" : "BackboneElement"
+      }],
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "12",
+        "comment" : "Allgemeiner Leistungszustand - oBDS Kapitel 12"
       }]
     },
     {
@@ -996,6 +1255,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.value[x]"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "12.1",
+        "comment" : "Allgemeiner Leistungszustand nach ECOG oder Karnofsky - oBDS führt beide Skalen unter derselben Feldnummer"
       }]
     },
     {
@@ -1007,6 +1271,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "max" : "*",
       "type" : [{
         "code" : "BackboneElement"
+      }],
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "13",
+        "comment" : "Operation - oBDS Kapitel 13"
       }]
     },
     {
@@ -1022,6 +1291,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Procedure.extension.valueCodeableConcept.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "13.1",
+        "comment" : "Intention der Operation"
       }]
     },
     {
@@ -1037,6 +1311,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Procedure.performedDateTime"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "13.2",
+        "comment" : "OP Datum"
       }]
     },
     {
@@ -1052,6 +1331,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Procedure.code.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "13.3",
+        "comment" : "OPS - Operationen- und Prozedurenschlüssel"
       }]
     },
     {
@@ -1067,6 +1351,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Procedure.code.coding.version"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "13.4",
+        "comment" : "OPS Version - Jahresversion nach BfArM"
       }]
     },
     {
@@ -1082,6 +1371,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Procedure.complication.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "13.5",
+        "comment" : "OP Komplikationen"
       }]
     },
     {
@@ -1093,6 +1387,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "max" : "*",
       "type" : [{
         "code" : "BackboneElement"
+      }],
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "14",
+        "comment" : "Strahlentherapie - oBDS Kapitel 14"
       }]
     },
     {
@@ -1108,6 +1407,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Procedure.extension[Intention].valueCodeableConcept.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "14.1",
+        "comment" : "Intention der Strahlentherapie"
       }]
     },
     {
@@ -1123,6 +1427,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Procedure.extension[Stellung].valueCodeableConcept.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "14.2",
+        "comment" : "Strahlentherapie Stellung zu operativer Therapie"
       }]
     },
     {
@@ -1138,6 +1447,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Procedure.outcome.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "14.13",
+        "comment" : "Strahlentherapie Ende Grund"
       }]
     },
     {
@@ -1153,6 +1467,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Procedure.extension[Bestrahlung]"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "14.3-14.12",
+        "comment" : "Bestrahlung - eine Bestrahlung mit spezifischem Zielgebiet Methodik und Dosis; im oBDS keine eigene Feldnummer sondern Gruppierung der Felder 14.3 bis 14.12"
       }]
     },
     {
@@ -1168,6 +1487,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Procedure.extension[Bestrahlung].extension[Zielgebiet].valueCodeableConcept.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "14.3",
+        "comment" : "Strahlentherapie Zielgebiet"
       }]
     },
     {
@@ -1183,6 +1507,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Procedure.extension[Bestrahlung].extension[Zielgebiet_Lateralitaet].valueCodeableConcept.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "14.4",
+        "comment" : "Strahlentherapie Seite Zielgebiet - Pflichtangabe bei mit r/l gekennzeichneten Zielgebieten"
       }]
     },
     {
@@ -1198,6 +1527,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Procedure.performedPeriod.start"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "14.5",
+        "comment" : "Strahlentherapie Beginn"
       }]
     },
     {
@@ -1213,6 +1547,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Procedure.performedPeriod.end"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "14.6",
+        "comment" : "Strahlentherapie Ende"
       }]
     },
     {
@@ -1228,6 +1567,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Procedure.extension[Bestrahlung].extension[Applikationsart].valueCodeableConcept.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "14.7",
+        "comment" : "Strahlentherapie Applikationsart"
       }]
     },
     {
@@ -1243,6 +1587,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Procedure.extension[Bestrahlung].extension[Strahlenart].valueCodeableConcept.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "14.8",
+        "comment" : "Strahlentherapie Strahlenart"
       }]
     },
     {
@@ -1258,6 +1607,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Procedure.extension[Bestrahlung].extension[Gesamtdosis].valueQuantity.value"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "14.9",
+        "comment" : "Strahlentherapie Gesamtdosis inklusive Boost"
       }]
     },
     {
@@ -1273,6 +1627,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Procedure.extension[Bestrahlung].extension[Einzeldosis].valueQuantity.value"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "14.10",
+        "comment" : "Strahlentherapie Einzeldosis pro Tag"
       }]
     },
     {
@@ -1288,6 +1647,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Procedure.extension[Bestrahlung].extension[Einheit].valueCodeableConcept.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "14.11",
+        "comment" : "Strahlentherapie Einheit zu Einzel- und Gesamtdosis - in den Profilen als Quantity.unit an 14.9 und 14.10 abgebildet"
       }]
     },
     {
@@ -1303,6 +1667,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Procedure.extension[Bestrahlung].extension[Boost].valueCodeableConcept.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "14.12",
+        "comment" : "Strahlentherapie Boost"
       }]
     },
     {
@@ -1314,6 +1683,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "max" : "*",
       "type" : [{
         "code" : "BackboneElement"
+      }],
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "16",
+        "comment" : "Systemische Therapie - oBDS Kapitel 16"
       }]
     },
     {
@@ -1329,6 +1703,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Procedure.extension[Intention].valueCodeableConcept.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "16.1",
+        "comment" : "Intention der systemischen Therapie"
       }]
     },
     {
@@ -1344,6 +1723,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Procedure.extension[Stellung].valueCodeableConcept.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "16.2",
+        "comment" : "Systemische Therapie Stellung zu operativer Therapie"
       }]
     },
     {
@@ -1359,6 +1743,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Procedure.code.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "16.3",
+        "comment" : "Art der systemischen oder abwartenden Therapie"
       }]
     },
     {
@@ -1374,6 +1763,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "MedicationStatement.medicationCodeableConcept.text "
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "16.4",
+        "comment" : "Systemische Therapie Protokoll"
       }]
     },
     {
@@ -1389,6 +1783,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "MedicationStatement.medicationCodeableConcept[atcClassDe].coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "16.6",
+        "comment" : "Systemische Therapie Substanz - nach Möglichkeit ATC-kodiert"
       }]
     },
     {
@@ -1404,6 +1803,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Procedure.performedPeriod.start"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "16.5",
+        "comment" : "Systemische Therapie Beginn"
       }]
     },
     {
@@ -1419,6 +1823,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Procedure.performedPeriod.end"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "16.8",
+        "comment" : "Systemische Therapie Ende - Enddatum; die Kurzbeschreibung im LM ist mit der von SystemischeTherapieEndeGrund vertauscht"
       }]
     },
     {
@@ -1434,6 +1843,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Procedure.outcome.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "16.7",
+        "comment" : "Systemische Therapie Ende Grund; die Kurzbeschreibung im LM ist mit der von SystemischeTherapieEnde vertauscht"
       }]
     },
     {
@@ -1445,6 +1859,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "max" : "*",
       "type" : [{
         "code" : "BackboneElement"
+      }],
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "15",
+        "comment" : "Nebenwirkungen der Strahlentherapie und systemischen Therapie - oBDS Kapitel 15"
       }]
     },
     {
@@ -1460,6 +1879,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "AdverseEvent.seriousness.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "15.1",
+        "comment" : "Nebenwirkungen nach CTCAE-Grad"
       }]
     },
     {
@@ -1475,6 +1899,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "AdverseEvent.event.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "15.2",
+        "comment" : "Nebenwirkungen nach CTCAE Art"
       }]
     },
     {
@@ -1490,6 +1919,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "AdverseEvent.event.coding.version"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "15.3",
+        "comment" : "Nebenwirkungen nach CTCAE Version"
       }]
     },
     {
@@ -1501,6 +1935,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "max" : "*",
       "type" : [{
         "code" : "BackboneElement"
+      }],
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "17",
+        "comment" : "Verlauf - oBDS Kapitel 17"
       }]
     },
     {
@@ -1512,6 +1951,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "max" : "*",
       "type" : [{
         "code" : "date"
+      }],
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "17.1",
+        "comment" : "Untersuchungsdatum Verlauf"
       }]
     },
     {
@@ -1523,6 +1967,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "max" : "*",
       "type" : [{
         "code" : "code"
+      }],
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "17.2",
+        "comment" : "Gesamtbeurteilung des Tumorstatus"
       }]
     },
     {
@@ -1534,6 +1983,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "max" : "*",
       "type" : [{
         "code" : "code"
+      }],
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "17.3",
+        "comment" : "Tumorstatus Primärtumor"
       }]
     },
     {
@@ -1545,6 +1999,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "max" : "*",
       "type" : [{
         "code" : "code"
+      }],
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "17.4",
+        "comment" : "Tumorstatus Lymphknoten"
       }]
     },
     {
@@ -1556,6 +2015,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "max" : "*",
       "type" : [{
         "code" : "code"
+      }],
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "17.5",
+        "comment" : "Tumorstatus Fernmetastasen"
       }]
     },
     {
@@ -1567,6 +2031,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "max" : "*",
       "type" : [{
         "code" : "BackboneElement"
+      }],
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "18, 19",
+        "comment" : "Tumorkonferenz oBDS Kapitel 18 und Therapieempfehlung oBDS Kapitel 19"
       }]
     },
     {
@@ -1582,6 +2051,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "CarePlan.created"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "18.1",
+        "comment" : "Tumorkonferenz Therapieplanung Datum"
       }]
     },
     {
@@ -1597,6 +2071,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "CarePlan.category"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "18.2",
+        "comment" : "Tumorkonferenz Therapieplanung Typ"
       }]
     },
     {
@@ -1612,6 +2091,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "RequestGroup.code (Therapy type: CH, OP, ST, etc.)"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "19.1",
+        "comment" : "Tumorkonferenz Therapieempfehlung Typ - z.B. CH OP ST"
       }]
     },
     {
@@ -1627,6 +2111,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "RequestGroup.action.code (Protocol: FOLFOX4, R-CHOP, etc.)"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "19.1 (Erweiterung)",
+        "comment" : "Empfohlenes Therapieprotokoll - MII-Erweiterung zu 19.1; der oBDS erfasst in 19.1 nur den Therapietyp ohne Protokollangabe"
       }]
     },
     {
@@ -1642,6 +2131,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "MedicationRequest.medicationCodeableConcept (referenced from RequestGroup.action.action.resource)"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "19.1 (Erweiterung)",
+        "comment" : "Einzelne empfohlene Substanzen - MII-Erweiterung zu 19.1; der oBDS erfasst in 19.1 nur den Therapietyp ohne Substanzangabe"
       }]
     },
     {
@@ -1657,6 +2151,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "CarePlan.activity.detail.status & statusReason"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "19.2",
+        "comment" : "Tumorkonferenz bzw. Therapieempfehlung Therapieabweichung auf Wunsch des Patienten"
       }]
     },
     {
@@ -1668,6 +2167,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "max" : "1",
       "type" : [{
         "code" : "BackboneElement"
+      }],
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "20",
+        "comment" : "Tod - oBDS Kapitel 20"
       }]
     },
     {
@@ -1683,6 +2187,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.effectiveDateTime"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "20.1",
+        "comment" : "Sterbedatum"
       }]
     },
     {
@@ -1698,6 +2207,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.interpretation.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "20.2",
+        "comment" : "Tod tumorbedingt - Krebs-Tod-Relation"
       }]
     },
     {
@@ -1713,6 +2227,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.valueCodeableConcept.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "20.3",
+        "comment" : "Todesursache ICD im Sinne des Grundleidens"
       }]
     },
     {
@@ -1728,6 +2247,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.valueCodeableConcept.coding.version"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "20.4",
+        "comment" : "Todesursache ICD-Version"
       }]
     },
     {
@@ -1743,6 +2267,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "23",
+        "comment" : "Genetische Variante - oBDS Kapitel 23"
       }]
     },
     {
@@ -1758,6 +2287,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.note"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "23.1",
+        "comment" : "Genetische Variante Name - z.B. K-ras BRAFV600 NRAS C-KIT"
       }]
     },
     {
@@ -1773,6 +2307,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.interpretation"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "23.2",
+        "comment" : "Genetische Variante Ausprägung"
       }]
     },
     {
@@ -1788,6 +2327,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "24",
+        "comment" : "Studienteilnahme - oBDS Kapitel 24"
       }]
     },
     {
@@ -1803,6 +2347,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.valueCodeableConcept.coding.code"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "24.1",
+        "comment" : "Studienteilnahme Status - Einschluss in eine Studie mit Ethikvotum"
       }]
     },
     {
@@ -1818,6 +2367,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.effectiveDateTime"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "24.2",
+        "comment" : "Studienteilnahme Datum - erstes Einschlussdatum"
       }]
     },
     {
@@ -1833,6 +2387,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       "mapping" : [{
         "identity" : "FHIR",
         "map" : "Observation.focus.where(resolve() is ResearchStudy)"
+      },
+      {
+        "identity" : "oBDS",
+        "map" : "kein oBDS-Feld",
+        "comment" : "Referenz auf die konkrete Studie als ResearchStudy - MII-Ergänzung; der oBDS benennt Studien nur im pädiatrischen Zusatzmodul DKKR/GPOH mit Studienname und Studiennummer nicht in Kapitel 24"
       }]
     }]
   }

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-version | *Version*:2026.0.3 |
-| Active as of 2026-08-31 | *Computable Name*:MII_VS_Onko_TNM_Version |
+| Active as of 2026-09-01 | *Computable Name*:MII_VS_Onko_TNM_Version |
 
  
 Codes für TNM Version/Auflage nach welcher Version des TNM klassifiziert wird. 
@@ -145,7 +145,7 @@ Codes für TNM Version/Auflage nach welcher Version des TNM klassifiziert wird.
   "title" : "MII VS Onkologie TNM Version",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-31T15:22:09+00:00",
+  "date" : "2026-09-01T08:53:35+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

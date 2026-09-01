@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading | *Version*:2026.0.3 |
-| Active as of 2026-08-31 | *Computable Name*:MII_CS_Onko_Grading |
+| Active as of 2026-09-01 | *Computable Name*:MII_CS_Onko_Grading |
 
  
 Codes für Histologie Grading. Gibt den Differenzierungsgrad des Tumors entsprechend der aktuellen TNM-Auflage an. 
@@ -127,7 +127,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "MII CS Onkologie Grading",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-31T15:22:09+00:00",
+  "date" : "2026-09-01T08:53:35+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
