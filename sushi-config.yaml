@@ -170,9 +170,9 @@ extension:
 # check reject floating versions; the dependency checker proposes bumps).
 dependencies:
   # German base profiles (kerndatensatz-basis pins the same 1.5.4).
-  de.basisprofil.r4: 1.5.4
+  de.basisprofil.r4: 1.6.0
   # MII cross-module meta package (kerndatensatz-basis pins the same 2026.0.0).
-  de.medizininformatikinitiative.kerndatensatz.meta: 2026.0.0
+  de.medizininformatikinitiative.kerndatensatz.meta: 2027.0.0-ballot.rc3
   # R5→R4 cross-version extensions (kerndatensatz-basis pins the same 0.1.0).
   # basis needs it for R5 extensions — for example Encounter.plannedStartDate;
   # remove it if your module defines no R5 cross-version extensions.
@@ -182,7 +182,7 @@ dependencies:
   # same 2.0.0).
   hl7.fhir.uv.crmi: 2.0.0
   # ── Modul-Dependencies (Quelle: sushi-config v2026.0.3; floating Pins lt. fhirpkg.lock.json 2026-03-28 aufgelöst) ──
-  de.medizininformatikinitiative.kerndatensatz.base: 2026.0.1
+  de.medizininformatikinitiative.kerndatensatz.base: 2027.0.0-ballot.rc1
   de.medizininformatikinitiative.kerndatensatz.biobank: 2026.0.1
   de.medizininformatikinitiative.kerndatensatz.laborbefund: 2026.0.3
   de.medizininformatikinitiative.kerndatensatz.medikation: 2026.0.1
