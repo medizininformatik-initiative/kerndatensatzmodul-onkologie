@@ -161,10 +161,17 @@ jobs:
     # storing the same cert twice under two different secret names.
     # If your organisation already provisions CDS_DEV_CLIENT_* centrally, replace
     # this block with `secrets: inherit`.
+    # The fallback order MUST match the guard above (CDS_DEV_CLIENT_* first,
+    # SU_TERMSERV_* as the fork fallback). Passing only the SU_TERMSERV_* names
+    # here while the guard also accepts CDS_DEV_CLIENT_* let the job start with
+    # an EMPTY certificate whenever only the MII org secrets were provisioned:
+    # the validator then silently lost the SU-TermServ and fell back to the
+    # local Snowstorm, which serves SNOMED only — every LOINC expansion failed
+    # with "no declared filter called LIST on code system http://loinc.org".
     secrets:
-      CDS_DEV_CLIENT_CERT: ${{ secrets.SU_TERMSERV_CLIENT_CERT }}
-      CDS_DEV_CLIENT_KEY: ${{ secrets.SU_TERMSERV_CLIENT_KEY }}
-      CDS_DEV_CLIENT_CERT_PASSWORD: ${{ secrets.SU_TERMSERV_CLIENT_PASSWORD }}
+      CDS_DEV_CLIENT_CERT: ${{ secrets.CDS_DEV_CLIENT_CERT || secrets.SU_TERMSERV_CLIENT_CERT }}
+      CDS_DEV_CLIENT_KEY: ${{ secrets.CDS_DEV_CLIENT_KEY || secrets.SU_TERMSERV_CLIENT_KEY }}
+      CDS_DEV_CLIENT_CERT_PASSWORD: ${{ secrets.CDS_DEV_CLIENT_CERT_PASSWORD || secrets.SU_TERMSERV_CLIENT_PASSWORD }}
 
   template-repo-notice:
     name: Validation skipped on the template repo
