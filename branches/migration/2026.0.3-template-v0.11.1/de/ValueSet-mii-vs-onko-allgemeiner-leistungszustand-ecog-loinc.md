@@ -138,7 +138,7 @@ LOINC-Answer-Codes für den ECOG Performance Status. Enumerierte Fassung der LOI
   "title" : "MII VS Onkologie Allgemeiner Leistungszustand ECOG LOINC",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-01T11:08:21+00:00",
+  "date" : "2026-09-01T14:29:01+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

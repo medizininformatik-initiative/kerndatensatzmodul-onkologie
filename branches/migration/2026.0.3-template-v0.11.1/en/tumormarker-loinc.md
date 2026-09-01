@@ -51,7 +51,17 @@ Each code was verified individually against LOINC (MII terminology server and tx
 | IgA | `2458-8` | IgA [Mass/volume] in Serum or Plasma | Multiple myeloma |
 | IgM | `2472-9` | IgM [Mass/volume] in Serum or Plasma | Waldenström's disease, myeloma |
 
-Note on serotonin: the 24-hour urine code was chosen (clinically, 5-HIAA in urine or serotonin in serum are also common) — the matrix question is part of the open clinical review.
+**Note on specimen material (matrix).** Which marker and which specimen a laboratory uses depends on the clinical question and the assay — where this is ambiguous the list therefore carries **all** common variants rather than picking one. For serotonin-producing NET these are:
+
+| | | |
+| :--- | :--- | :--- |
+| **5-HIAA**(clinical standard, metabolite) | 24-hour urine | `1695-6`(mass/time),`31203-3`(concentration) |
+| 5-HIAA | random urine | `1694-9` |
+| 5-HIAA/creatinine ratio | 24-hour urine | `44288-9` |
+| Serotonin | 24-hour urine | `18253-5` |
+| Serotonin | serum / plasma / whole blood | `27057-9`/`2940-5`/`2939-7` |
+
+5-HIAA is more stable than serotonin itself, which fluctuates strongly (platelet content, food intake, time of day). As the value set is bound **extensibly**, further matrices are permitted anyway.
 
 ### ENCR Table 4: marker → permissible morphology
 
@@ -109,5 +119,5 @@ For **gastrin, calcitonin, M-protein, IgA and IgM** the LOINC-SNOMED ontology ho
 * Clinical review of the core list (codes and entity assignments).
 * LOINC-SNOMED anchors: 23 of 28 verified; for 5 markers no grouper exists (a request to SNOMED International would be required).
 * Decision on the binding location **decided (2026-08-28):** laboratory values are carried by the CDS module Laboratory Report. This module provides the profile [`MII_PR_Onko_Tumormarker`](StructureDefinition-mii-pr-onko-tumormarker.md) — a derivation of `MII_PR_Labor_Laboruntersuchung` that binds `Observation.code` extensibly to the union list [`mii-vs-onko-tumormarker-loinc`](ValueSet-mii-vs-onko-tumormarker-loinc.md) and adds the link to the oncological diagnosis (`focus`).
-* Serotonin: matrix (24-hour urine vs. serum) and possibly the addition of 5-HIAA.
+* Serotonin matrix **decided (2026-09-01):** all common variants including 5-HIAA are listed; the choice depends on laboratory and specimen (see the note above).
 

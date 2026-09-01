@@ -536,9 +536,52 @@ statt VIP (<code class="language-plaintext highlighter-rouge">3125-2</code>) und
   </tbody>
 </table>
 
-<p>Hinweis zu Serotonin: gewählt ist der 24h-Urin-Code (klinisch üblich ist häufig
-auch 5-HIES im Urin bzw. Serotonin im Serum) — die Matrix-Frage ist Teil des
-offenen fachlichen Reviews.</p>
+<p><strong>Hinweis zum Probenmaterial (Matrix).</strong> Für welchen Marker und welches
+Probenmaterial ein Labor sich entscheidet, hängt von Fragestellung und
+Analytik ab — die Liste bildet deshalb bei mehrdeutigen Fällen <em>alle</em>
+gebräuchlichen Varianten ab, statt eine auszuwählen. Beim
+Serotonin-produzierenden NET sind das:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Marker</th>
+      <th>Material</th>
+      <th>LOINC</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>5-HIES</strong> (klinischer Standard, Abbauprodukt)</td>
+      <td>24-h-Sammelurin</td>
+      <td><code class="language-plaintext highlighter-rouge">1695-6</code> (Menge/Zeit), <code class="language-plaintext highlighter-rouge">31203-3</code> (Konzentration)</td>
+    </tr>
+    <tr>
+      <td>5-HIES</td>
+      <td>Spontanurin</td>
+      <td><code class="language-plaintext highlighter-rouge">1694-9</code></td>
+    </tr>
+    <tr>
+      <td>5-HIES/Kreatinin-Quotient</td>
+      <td>24-h-Sammelurin</td>
+      <td><code class="language-plaintext highlighter-rouge">44288-9</code></td>
+    </tr>
+    <tr>
+      <td>Serotonin</td>
+      <td>24-h-Sammelurin</td>
+      <td><code class="language-plaintext highlighter-rouge">18253-5</code></td>
+    </tr>
+    <tr>
+      <td>Serotonin</td>
+      <td>Serum / Plasma / Vollblut</td>
+      <td><code class="language-plaintext highlighter-rouge">27057-9</code> / <code class="language-plaintext highlighter-rouge">2940-5</code> / <code class="language-plaintext highlighter-rouge">2939-7</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>5-HIES ist stabiler als Serotonin selbst, das stark schwankt (Thrombozytengehalt,
+Nahrungsaufnahme, Tageszeit). Da das ValueSet <strong>extensible</strong> gebunden ist, sind
+weitere Matrizes ohnehin zulässig.</p>
 
 <h3 id="encr-table-4-marker--zulässige-morphologie">ENCR Table 4: Marker → zulässige Morphologie</h3>
 
@@ -753,7 +796,7 @@ einzeln über FSN und Kindkonzepte gegengeprüft.</p>
   <li>Fachliches Review der Kernliste (Codes und Entitäts-Zuordnungen).</li>
   <li>LOINC-SNOMED-Anker: 23 von 28 verifiziert; für 5 Marker existiert kein Grouper (Anregung an SNOMED International wäre nötig).</li>
   <li><del>Entscheidung zum Binding-Ort</del> <strong>entschieden (2026-08-28):</strong> Laborwerte laufen über das KDS-Modul Laborbefund. Das Modul stellt dafür das Profil <a href="StructureDefinition-mii-pr-onko-tumormarker.html"><code class="language-plaintext highlighter-rouge">MII_PR_Onko_Tumormarker</code></a> bereit — eine Ableitung von <code class="language-plaintext highlighter-rouge">MII_PR_Labor_Laboruntersuchung</code>, die <code class="language-plaintext highlighter-rouge">Observation.code</code> extensible an die Union-Liste <a href="ValueSet-mii-vs-onko-tumormarker-loinc.html"><code class="language-plaintext highlighter-rouge">mii-vs-onko-tumormarker-loinc</code></a> bindet und den Bezug zur onkologischen Diagnose (<code class="language-plaintext highlighter-rouge">focus</code>) ergänzt.</li>
-  <li>Serotonin: Matrix (24h-Urin vs. Serum) und ggf. Ergänzung 5-HIES.</li>
+  <li><del>Serotonin-Matrix</del> <strong>entschieden (2026-09-01):</strong> alle gebräuchlichen Varianten inkl. 5-HIES sind aufgenommen; die Wahl hängt von Labor und Probenmaterial ab (siehe Hinweis oben).</li>
 </ul>
 
 
@@ -781,7 +824,7 @@ einzeln über FSN und Kindkonzepte gegengeprüft.</p>
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.onkologie#2026.0.3 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Tue, Sep 1, 2026 11:08+0000">2026-09-01</span>
+          Erstellt <span title="Tue, Sep 1, 2026 14:29+0000">2026-09-01</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

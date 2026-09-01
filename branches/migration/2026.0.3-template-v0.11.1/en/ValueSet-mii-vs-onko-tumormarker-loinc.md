@@ -138,7 +138,7 @@ Kuratierte LOINC-Codes der in der Onkologie gebraeuchlichen Tumormarker (Serum-/
   "title" : "MII VS Onkologie Tumormarker LOINC",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-01T11:08:21+00:00",
+  "date" : "2026-09-01T14:29:01+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -213,6 +213,34 @@ Kuratierte LOINC-Codes der in der Onkologie gebraeuchlichen Tumormarker (Serum-/
       {
         "code" : "18253-5",
         "display" : "Serotonin [Mass/time] in 24 hour Urine"
+      },
+      {
+        "code" : "27057-9",
+        "display" : "Serotonin [Mass/volume] in Serum"
+      },
+      {
+        "code" : "2940-5",
+        "display" : "Serotonin [Mass/volume] in Plasma"
+      },
+      {
+        "code" : "2939-7",
+        "display" : "Serotonin [Mass/volume] in Blood"
+      },
+      {
+        "code" : "1695-6",
+        "display" : "5-Hydroxyindoleacetate [Mass/time] in 24 hour Urine"
+      },
+      {
+        "code" : "31203-3",
+        "display" : "5-Hydroxyindoleacetate [Mass/volume] in 24 hour Urine"
+      },
+      {
+        "code" : "1694-9",
+        "display" : "5-Hydroxyindoleacetate [Mass/volume] in Urine"
+      },
+      {
+        "code" : "44288-9",
+        "display" : "5-Hydroxyindoleacetate/Creatinine [Mass Ratio] in 24 hour Urine"
       },
       {
         "code" : "2141-0",

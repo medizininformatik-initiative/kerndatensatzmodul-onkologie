@@ -51,7 +51,17 @@ Jeder Code wurde einzeln gegen LOINC verifiziert (MII-Terminologieserver und tx.
 | IgA | `2458-8` | IgA [Mass/volume] in Serum or Plasma | Multiples Myelom |
 | IgM | `2472-9` | IgM [Mass/volume] in Serum or Plasma | M. Waldenström, Myelom |
 
-Hinweis zu Serotonin: gewählt ist der 24h-Urin-Code (klinisch üblich ist häufig auch 5-HIES im Urin bzw. Serotonin im Serum) — die Matrix-Frage ist Teil des offenen fachlichen Reviews.
+**Hinweis zum Probenmaterial (Matrix).** Für welchen Marker und welches Probenmaterial ein Labor sich entscheidet, hängt von Fragestellung und Analytik ab — die Liste bildet deshalb bei mehrdeutigen Fällen **alle** gebräuchlichen Varianten ab, statt eine auszuwählen. Beim Serotonin-produzierenden NET sind das:
+
+| | | |
+| :--- | :--- | :--- |
+| **5-HIES**(klinischer Standard, Abbauprodukt) | 24-h-Sammelurin | `1695-6`(Menge/Zeit),`31203-3`(Konzentration) |
+| 5-HIES | Spontanurin | `1694-9` |
+| 5-HIES/Kreatinin-Quotient | 24-h-Sammelurin | `44288-9` |
+| Serotonin | 24-h-Sammelurin | `18253-5` |
+| Serotonin | Serum / Plasma / Vollblut | `27057-9`/`2940-5`/`2939-7` |
+
+5-HIES ist stabiler als Serotonin selbst, das stark schwankt (Thrombozytengehalt, Nahrungsaufnahme, Tageszeit). Da das ValueSet **extensible** gebunden ist, sind weitere Matrizes ohnehin zulässig.
 
 ### ENCR Table 4: Marker → zulässige Morphologie
 
@@ -109,5 +119,5 @@ Für **Gastrin, Calcitonin, M-Protein, IgA und IgM** existiert in der LOINC-SNOM
 * Fachliches Review der Kernliste (Codes und Entitäts-Zuordnungen).
 * LOINC-SNOMED-Anker: 23 von 28 verifiziert; für 5 Marker existiert kein Grouper (Anregung an SNOMED International wäre nötig).
 * Entscheidung zum Binding-Ort **entschieden (2026-08-28):** Laborwerte laufen über das KDS-Modul Laborbefund. Das Modul stellt dafür das Profil [`MII_PR_Onko_Tumormarker`](StructureDefinition-mii-pr-onko-tumormarker.md) bereit — eine Ableitung von `MII_PR_Labor_Laboruntersuchung`, die `Observation.code` extensible an die Union-Liste [`mii-vs-onko-tumormarker-loinc`](ValueSet-mii-vs-onko-tumormarker-loinc.md) bindet und den Bezug zur onkologischen Diagnose (`focus`) ergänzt.
-* Serotonin: Matrix (24h-Urin vs. Serum) und ggf. Ergänzung 5-HIES.
+* Serotonin-Matrix **entschieden (2026-09-01):** alle gebräuchlichen Varianten inkl. 5-HIES sind aufgenommen; die Wahl hängt von Labor und Probenmaterial ab (siehe Hinweis oben).
 
