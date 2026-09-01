@@ -16,6 +16,7 @@
 Instance: mii-cm-onko-icdo3-transitions-2019
 InstanceOf: ConceptMap
 Usage: #definition
+* insert OnkoCRMIConceptMap
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-icdo3-transitions-2019"
 * name = "MII_CM_Onko_ICDO3_Transitions_2019"
 * title = "MII CM Onko ICD-O-3 Code Changes 2014 to 2019"

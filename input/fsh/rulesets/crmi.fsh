@@ -349,3 +349,53 @@ RuleSet: CRMIVersionAlgorithm
 RuleSet: CRMIEffectivePeriod(jahr)
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod"
 * ^extension[=].valuePeriod.start = "{jahr}"
+
+// ── ConceptMap und SearchParameter (User 2026-09-01) ──────────────────────────
+// Beides sind Konformitaetsressourcen mit eigenen CRMI-Profilen; sie werden als
+// FSH-Instanzen deklariert, daher Instance-Pfade (ohne Caret).
+
+RuleSet: OnkoCRMIConceptMap
+* meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableconceptmap"
+* meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableconceptmap"
+* insert CRMIMetaLicenseAndSourceInstance
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"
+* extension[=].valueCode = #shareable
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"
+* extension[=].valueCode = #publishable
+* insert CRMIVersionPolicyStrictInstance
+* insert CRMIApprovalDateInstance(2026-01-03)
+* insert CRMIArtifactTopicInstance(http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C3262)
+* insert CRMIArtifactContributorsInstance
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm"
+* extension[=].valueCoding = http://hl7.org/fhir/version-algorithm#semver "SemVer"
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod"
+* extension[=].valuePeriod.start = "2026"
+
+RuleSet: OnkoCRMISearchParameter
+* meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablesearchparameter"
+* meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablesearchparameter"
+* insert CRMIMetaLicenseAndSourceInstance
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"
+* extension[=].valueCode = #shareable
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"
+* extension[=].valueCode = #publishable
+* insert CRMIVersionPolicyStrictInstance
+* insert CRMIApprovalDateInstance(2026-01-03)
+* insert CRMIArtifactContributorsInstance
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm"
+* extension[=].valueCoding = http://hl7.org/fhir/version-algorithm#semver "SemVer"
+
+RuleSet: OnkoCRMILibrary
+* meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablelibrary"
+* meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablelibrary"
+* insert CRMIMetaLicenseAndSourceInstance
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"
+* extension[=].valueCode = #shareable
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"
+* extension[=].valueCode = #publishable
+* insert CRMIVersionPolicyStrictInstance
+* insert CRMIApprovalDateInstance(2026-01-03)
+* insert CRMIArtifactTopicInstance(http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C3262)
+* insert CRMIArtifactContributorsInstance
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm"
+* extension[=].valueCoding = http://hl7.org/fhir/version-algorithm#semver "SemVer"

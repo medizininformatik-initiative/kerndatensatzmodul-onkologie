@@ -9,6 +9,7 @@
 Instance: mii-cm-onko-nebenwirkung-meddra-sct
 InstanceOf: ConceptMap
 Usage: #definition
+* insert OnkoCRMIConceptMap
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-nebenwirkung-meddra-sct"
 * name = "MII_CM_Onko_Nebenwirkung_MedDRA_SCT"
 * title = "MII CM Onko Nebenwirkung MedDRA zu SNOMED CT (CTCAE v4.03)"

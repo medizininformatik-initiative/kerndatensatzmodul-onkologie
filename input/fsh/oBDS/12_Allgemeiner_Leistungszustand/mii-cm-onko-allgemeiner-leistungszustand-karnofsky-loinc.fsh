@@ -3,6 +3,7 @@ InstanceOf: ConceptMap
 Usage: #definition
 Title: "Mapping oBDS Karnofsky zu LOINC"
 Description: "Mapping der oBDS-Codes für Karnofsky Performance Status zu LOINC Answer List LL4986-7"
+* insert OnkoCRMIConceptMap
 * status = #active
 * experimental = false
 * insert Version

@@ -203,6 +203,7 @@ Source: MII_PR_Onko_Diagnose_Primaertumor
 Instance: mii-cm-mii-to-mvgenomseq-condition-diagnose-primaertumor
 InstanceOf: ConceptMap
 Usage: #definition
+* insert OnkoCRMIConceptMap
 * status = #draft
 * sourceCanonical = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onkologie/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
 * targetUri = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onkologie/ConceptMap/mii-lm-mvgenomseq-onkologie"

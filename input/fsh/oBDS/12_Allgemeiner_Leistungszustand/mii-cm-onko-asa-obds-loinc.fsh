@@ -1,6 +1,7 @@
 Instance: mii-cm-onko-asa-obds-loinc
 InstanceOf: ConceptMap
 Usage: #definition
+* insert OnkoCRMIConceptMap
 * insert Version
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-asa-obds-loinc"
 * name = "MII_CM_Onko_ASA_oBDS_LOINC"

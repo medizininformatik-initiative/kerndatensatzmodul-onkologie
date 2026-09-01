@@ -1,15 +1,16 @@
 Instance: mii-cm-onko-tnm-uicc-sct-pathological
 InstanceOf: ConceptMap
 Usage: #definition
+* insert OnkoCRMIConceptMap
 * insert Version
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-tnm-uicc-sct-pathological"
 * name = "MII CM Onko Pathological TNM UICC SCT Mapping"
 * title = "MII CM Onko Pathological TNM UICC SNOMED"
 * status = #active
 * insert SNOMEDCopyrightForInstance
-* experimental = false
+* experimental = true
 * date = "2024-01-05"
-* description = "Mapping pathological TNM UICC Codes zu SNOMED-CT"
+* description = "Mapping pathological TNM UICC Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."
 * group.source = "https://www.uicc.org/resources/tnm"
 * group.target = "http://snomed.info/sct/900000000000207008/version/20240401"
 * group.element[+].code = #y

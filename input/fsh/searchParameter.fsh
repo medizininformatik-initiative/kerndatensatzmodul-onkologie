@@ -6,6 +6,7 @@ The SearchParameters listed here are only specific for the extensions used in On
 Instance: mii-sp-onko-condition-ext-morphology-behavior-icdo3
 InstanceOf: SearchParameter
 Usage: #definition
+* insert OnkoCRMISearchParameter
 * insert SP_Publisher
 * insert LicenseCodeableCCBY40Instance
 * insert SP_Profile
@@ -28,6 +29,7 @@ Usage: #definition
 Instance: mii-sp-onko-observation-tnm-cp-praefix
 InstanceOf: SearchParameter
 Usage: #definition
+* insert OnkoCRMISearchParameter
 * insert SP_Publisher
 * insert LicenseCodeableCCBY40Instance
 * insert SP_Profile
@@ -45,6 +47,7 @@ Usage: #definition
 Instance: mii-sp-onko-observation-tnm-y-praefix
 InstanceOf: SearchParameter
 Usage: #definition
+* insert OnkoCRMISearchParameter
 * insert SP_Publisher
 * insert LicenseCodeableCCBY40Instance
 * insert SP_Profile
@@ -62,6 +65,7 @@ Usage: #definition
 Instance: mii-sp-onko-observation-tnm-r-praefix
 InstanceOf: SearchParameter
 Usage: #definition
+* insert OnkoCRMISearchParameter
 * insert SP_Publisher
 * insert LicenseCodeableCCBY40Instance
 * insert SP_Profile
@@ -79,6 +83,7 @@ Usage: #definition
 Instance: mii-sp-onko-observation-ext-tnm-n-itc
 InstanceOf: SearchParameter
 Usage: #definition
+* insert OnkoCRMISearchParameter
 * insert SP_Publisher
 * insert LicenseCodeableCCBY40Instance
 * insert SP_Profile
@@ -96,6 +101,7 @@ Usage: #definition
 Instance: mii-sp-onko-observation-ext-tnm-n-sn-suffix
 InstanceOf: SearchParameter
 Usage: #definition
+* insert OnkoCRMISearchParameter
 * insert SP_Publisher
 * insert LicenseCodeableCCBY40Instance
 * insert SP_Profile
@@ -113,6 +119,7 @@ Usage: #definition
 Instance: mii-sp-onko-procedure-ext-operation-intention
 InstanceOf: SearchParameter
 Usage: #definition
+* insert OnkoCRMISearchParameter
 * insert SP_Publisher
 * insert LicenseCodeableCCBY40Instance
 * insert SP_Profile
@@ -130,6 +137,7 @@ Usage: #definition
 Instance: mii-sp-onko-procedure-ext-strahlentherapie-intention
 InstanceOf: SearchParameter
 Usage: #definition
+* insert OnkoCRMISearchParameter
 * insert SP_Publisher
 * insert LicenseCodeableCCBY40Instance
 * insert SP_Profile
@@ -147,6 +155,7 @@ Usage: #definition
 Instance: mii-sp-onko-ext-strahlentherapie-stellungzurop
 InstanceOf: SearchParameter
 Usage: #definition
+* insert OnkoCRMISearchParameter
 * insert SP_Publisher
 * insert Version
 * name = "MII_SP_Procedure_Extension_Strahlentherapie_StellungZurOp"
@@ -162,6 +171,7 @@ Usage: #definition
 Instance: mii-sp-onko-procedure-strahlentherapie-applikationsart
 InstanceOf: SearchParameter
 Usage: #definition
+* insert OnkoCRMISearchParameter
 * insert SP_Publisher
 * insert LicenseCodeableCCBY40Instance
 * insert SP_Profile
@@ -179,6 +189,7 @@ Usage: #definition
 Instance: mii-sp-onko-procedure-strahlentherapie-strahlenart
 InstanceOf: SearchParameter
 Usage: #definition
+* insert OnkoCRMISearchParameter
 * insert SP_Publisher
 * insert LicenseCodeableCCBY40Instance
 * insert SP_Profile
@@ -197,6 +208,7 @@ Usage: #definition
 Instance: mii-sp-onko-procedure-strahlentherapie-lateralitaet
 InstanceOf: SearchParameter
 Usage: #definition
+* insert OnkoCRMISearchParameter
 * insert SP_Publisher
 * insert LicenseCodeableCCBY40Instance
 * insert SP_Profile
@@ -216,6 +228,7 @@ Usage: #definition
 Instance: mii-sp-onko-procedure-ext-strahlentherapie-bs-gesamtdosis
 InstanceOf: SearchParameter
 Usage: #definition
+* insert OnkoCRMISearchParameter
 * insert SP_Publisher
 * insert LicenseCodeableCCBY40Instance
 * insert SP_Profile
@@ -233,6 +246,7 @@ Usage: #definition
 Instance: mii-sp-onko-procedure-ext-strahlentherapie-bs-einzeldosis
 InstanceOf: SearchParameter
 Usage: #definition
+* insert OnkoCRMISearchParameter
 * insert SP_Publisher
 * insert LicenseCodeableCCBY40Instance
 * insert SP_Profile
@@ -250,6 +264,7 @@ Usage: #definition
 Instance: mii-sp-onko-procedure-ext-strahlentherapie-bs-boost
 InstanceOf: SearchParameter
 Usage: #definition
+* insert OnkoCRMISearchParameter
 * insert SP_Publisher
 * insert LicenseCodeableCCBY40Instance
 * insert SP_Profile
@@ -267,6 +282,7 @@ Usage: #definition
 Instance: mii-sp-onko-procedure-ext-systemischetherapie-intention
 InstanceOf: SearchParameter
 Usage: #definition
+* insert OnkoCRMISearchParameter
 * insert SP_Publisher
 * insert LicenseCodeableCCBY40Instance
 * insert SP_Profile
@@ -284,6 +300,7 @@ Usage: #definition
 Instance: mii-sp-onko-ext-systemischetherapie-stellungzurop
 InstanceOf: SearchParameter
 Usage: #definition
+* insert OnkoCRMISearchParameter
 * insert SP_Publisher
 * insert Version
 * name = "MII_SP_Procedure_Extension_Systemischetherapie_StellungZurOp"

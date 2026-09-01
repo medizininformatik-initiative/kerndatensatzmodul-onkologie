@@ -3,6 +3,7 @@ InstanceOf: ConceptMap
 Usage: #definition
 Title: "Mapping oBDS ECOG zu LOINC"
 Description: "Mapping der oBDS-Codes für ECOG Performance Status zu LOINC Answer List LL529-9"
+* insert OnkoCRMIConceptMap
 * status = #active
 * experimental = false
 * insert Version

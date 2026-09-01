@@ -4,6 +4,7 @@ InstanceOf: ConceptMap
 Title: "MII Concept Map Modellvorhaben Genomsequenzierung Onkologie"
 Description: "MII LogicalModel Modellvorhaben Genomsequenzierung Onkologie"
 Usage: #definition
+* insert OnkoCRMIConceptMap
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onkologie-to-mvgenomseq"
 * version = "0.1.0"
 * name = "MII_CM_MVGenomSeq_Onkologie"
