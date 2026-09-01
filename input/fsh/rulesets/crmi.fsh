@@ -399,3 +399,18 @@ RuleSet: OnkoCRMILibrary
 * insert CRMIArtifactContributorsInstance
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm"
 * extension[=].valueCoding = http://hl7.org/fhir/version-algorithm#semver "SemVer"
+
+// Variante fuer CodeSystems mit FREMDEM Inhalt unter fremder Kanonical-URL
+// (aktuell: UICC-TNM). Wie OnkoCRMICodeSystem, aber OHNE crmi-license — die
+// Lizenz des Inhalts liegt beim Herausgeber der Klassifikation, nicht bei uns;
+// der Rechtehinweis steht im copyright-Feld (RuleSet UICCCopyright).
+RuleSet: OnkoCRMICodeSystemFremdinhalt
+* insert CRMIShareableCodeSystem
+* insert CRMIPublishableCodeSystem
+* insert CRMIKnowledgeCapabilitiesCodeSystem
+* insert CRMIVersionPolicyStrict
+* insert CRMIApprovalDate(2026-01-03)
+* insert CRMIArtifactTopic(http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C3262)
+* insert CRMIArtifactContributors
+* insert CRMIVersionAlgorithm
+* insert CRMIEffectivePeriod(2026)

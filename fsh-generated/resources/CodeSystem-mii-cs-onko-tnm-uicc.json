@@ -584,29 +584,6 @@
       "http://hl7.org/fhir/StructureDefinition/shareablecodesystem",
       "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem",
       "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecodesystem"
-    ],
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-license",
-        "valueCode": "CC-BY-4.0"
-      },
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/package-source",
-        "extension": [
-          {
-            "url": "packageId",
-            "valueId": "de.medizininformatikinitiative.kerndatensatz.onkologie"
-          },
-          {
-            "url": "version",
-            "valueString": "2026.0.3"
-          },
-          {
-            "url": "uri",
-            "valueUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"
-          }
-        ]
-      }
     ]
   },
   "experimental": false,
@@ -738,6 +715,7 @@
       }
     }
   ],
+  "copyright": "Die TNM-Klassifikation maligner Tumoren ist urheberrechtlich geschuetzt: TNM Classification of Malignant Tumours © Union for International Cancer Control (UICC). Die hier gefuehrten Codes sind eine Zusammenstellung der im MII-Kerndatensatzmodul Onkologie verwendeten TNM-Kategorien und -Werte zum Zweck der FHIR-Validierung; sie ersetzen nicht die amtliche UICC-Ausgabe und begruenden keine eigenen Rechte an der Klassifikation. Nutzende benoetigen fuer den produktiven Einsatz die entsprechende UICC-Berechtigung.",
   "caseSensitive": true,
   "count": 138
 }
