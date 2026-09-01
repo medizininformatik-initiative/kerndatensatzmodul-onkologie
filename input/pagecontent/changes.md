@@ -70,6 +70,7 @@ These changes may require adjustments in existing implementations:
 - `documentation` **New overview page "Concept Mappings"**: all 1,459 mappings in five SQL-generated tables, produced at build time from the package database.
 - `documentation` **ENCR Table 4 on the tumour-marker page**, plus the specimen-matrix question for serotonin/5-HIAA, HVA/VMA, catecholamines and the newly added metanephrines.
 - `documentation` **KDL document classes with mapping table** (IHE XDS official via the DVMD ConceptMap, SNOMED CT and LOINC curated).
+- `documentation` **oBDS diagnostic certainty 16.4 and morphology cardinalities**: the leading system for the therapy protocol is documented (`Procedure.usedCode` is authoritative, `MedicationStatement.note.text` only for schema assignment), as is the deliberate asymmetry of the morphology statements (diagnosis 0..*, histology observation exactly one per finding).
 - `documentation` **Toronto classification**: §65c transmission rules added.
 - `documentation` **Genetics: transmission notation of the §65c marker list** (two-position model, HGVSp/HGVSc, fusion notation).
 - `documentation` **TNM: the three coding mechanisms explained.**
