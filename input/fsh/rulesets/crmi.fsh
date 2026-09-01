@@ -217,6 +217,9 @@ RuleSet: OnkoCRMIProfile
 * insert CRMIApprovalDate(2026-01-03)
 * insert CRMIArtifactTopic(http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C3262)
 * insert CRMIArtifactContributors
+* insert CRMIMetaLicenseAndSource
+* insert CRMIVersionAlgorithm
+* insert CRMIEffectivePeriod(2026)
 
 RuleSet: OnkoCRMIExtension
 * insert CRMIShareableStructureDefinition
@@ -227,6 +230,9 @@ RuleSet: OnkoCRMIExtension
 * insert CRMIApprovalDate(2026-01-03)
 * insert CRMIArtifactTopic(http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C3262)
 * insert CRMIArtifactContributors
+* insert CRMIMetaLicenseAndSource
+* insert CRMIVersionAlgorithm
+* insert CRMIEffectivePeriod(2026)
 
 RuleSet: OnkoCRMILogicalModel
 * insert CRMIShareableStructureDefinition
@@ -237,6 +243,9 @@ RuleSet: OnkoCRMILogicalModel
 * insert CRMIApprovalDate(2026-01-03)
 * insert CRMIArtifactTopic(http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C3262)
 * insert CRMIArtifactContributors
+* insert CRMIMetaLicenseAndSource
+* insert CRMIVersionAlgorithm
+* insert CRMIEffectivePeriod(2026)
 
 RuleSet: OnkoCRMIValueSet
 * insert CRMIShareableValueSet
@@ -247,6 +256,9 @@ RuleSet: OnkoCRMIValueSet
 * insert CRMIApprovalDate(2026-01-03)
 * insert CRMIArtifactTopic(http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C3262)
 * insert CRMIArtifactContributors
+* insert CRMIMetaLicenseAndSource
+* insert CRMIVersionAlgorithm
+* insert CRMIEffectivePeriod(2026)
 
 RuleSet: OnkoCRMICodeSystem
 * insert CRMIShareableCodeSystem
@@ -256,6 +268,9 @@ RuleSet: OnkoCRMICodeSystem
 * insert CRMIApprovalDate(2026-01-03)
 * insert CRMIArtifactTopic(http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C3262)
 * insert CRMIArtifactContributors
+* insert CRMIMetaLicenseAndSource
+* insert CRMIVersionAlgorithm
+* insert CRMIEffectivePeriod(2026)
 
 RuleSet: OnkoCRMICapabilityStatement
 * insert CRMIShareableCapabilityStatement
@@ -300,3 +315,37 @@ RuleSet: OnkoCRMIProfileUK
 
 RuleSet: CRMIArtifactUsageProfileUK
 * ^extension[http://hl7.org/fhir/StructureDefinition/artifact-usage].valueMarkdown = "Use this profile as the technical FHIR representation of the corresponding Medical Informatics Initiative logical model. The profile constrains a base FHIR resource for the MII module context by specifying how elements are used, which elements are required or not used, which extensions and terminology bindings apply, and how the resource maps to the module-specific content model. Implementers should produce and consume resource instances that conform to this profile when exchanging data for the corresponding MII module."
+
+// ── Nachgepflegt aus base 2027.0.0-ballot.rc1 (User 2026-09-01) ───────────────
+// Vier Bausteine, die base setzt und dem Modul bisher fehlten:
+// crmi-license + package-source (beide in meta.extension), artifact-versionAlgorithm
+// und resource-effectivePeriod. Die effectivePeriod nennt das Jahr der Ausgabe,
+// die das Artefakt traegt — bei base 2027.
+
+RuleSet: CRMIMetaLicenseAndSource
+* ^meta.extension[+].url = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-license"
+* ^meta.extension[=].valueCode = #CC-BY-4.0
+* ^meta.extension[+].url = "http://hl7.org/fhir/StructureDefinition/package-source"
+* ^meta.extension[=].extension[+].url = "packageId"
+* ^meta.extension[=].extension[=].valueId = "de.medizininformatikinitiative.kerndatensatz.onkologie"
+* ^meta.extension[=].extension[+].url = "version"
+* ^meta.extension[=].extension[=].valueString = "2026.0.3"
+* ^meta.extension[=].extension[+].url = "uri"
+* ^meta.extension[=].extension[=].valueUri = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"
+
+RuleSet: CRMIMetaLicenseAndSourceInstance
+* meta.extension[+].url = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-license"
+* meta.extension[=].valueCode = #CC-BY-4.0
+* meta.extension[+].url = "http://hl7.org/fhir/StructureDefinition/package-source"
+* meta.extension[=].extension[+].url = "packageId"
+* meta.extension[=].extension[=].valueId = "de.medizininformatikinitiative.kerndatensatz.onkologie"
+* meta.extension[+].url = "version"
+* meta.extension[=].valueString = "2026.0.3"
+
+RuleSet: CRMIVersionAlgorithm
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm"
+* ^extension[=].valueCoding = http://hl7.org/fhir/version-algorithm#semver "SemVer"
+
+RuleSet: CRMIEffectivePeriod(jahr)
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod"
+* ^extension[=].valuePeriod.start = "{jahr}"
