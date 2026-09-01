@@ -1,0 +1,51 @@
+{
+  "resourceType": "RequestGroup",
+  "id": "mii-exa-onko-molecular-her2-alternatives",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie|2026.0.3"
+    ]
+  },
+  "intent": "proposal",
+  "status": "active",
+  "code": {
+    "coding": [
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ",
+        "code": "ZS"
+      }
+    ],
+    "text": "HER2-gerichtete Therapie - Resistenz-basierte Auswahl"
+  },
+  "subject": {
+    "reference": "Patient/mii-exa-onko-molecular-board-patient"
+  },
+  "authoredOn": "2024-01-16",
+  "reasonReference": [
+    {
+      "reference": "Condition/primaertumor-example"
+    }
+  ],
+  "action": [
+    {
+      "title": "HER2-Therapie Optionen",
+      "description": "Auswahl basierend auf Resistenzprofil und klinischer Situation",
+      "selectionBehavior": "any",
+      "requiredBehavior": "must",
+      "action": [
+        {
+          "title": "Zweite Linie: T-DM1",
+          "resource": {
+            "reference": "MedicationRequest/mii-exa-onko-tdm1-option"
+          }
+        },
+        {
+          "title": "Dritte Linie: Tucatinib-Kombination",
+          "resource": {
+            "reference": "MedicationRequest/mii-exa-onko-tucatinib-option"
+          }
+        }
+      ]
+    }
+  ]
+}

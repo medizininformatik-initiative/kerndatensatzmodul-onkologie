@@ -1,0 +1,42 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-prostata-gleason-pattern-primary-1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns|2026.0.3"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "384994009",
+        "display": "Primary Gleason pattern (observable entity)"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "44641-9",
+        "display": "Gleason pattern.primary in Prostate tumor"
+      }
+    ]
+  },
+  "status": "final",
+  "subject": {
+    "reference": "Patient/mii-exa-onko-prostata-bundle-patient"
+  },
+  "focus": [
+    {
+      "reference": "Condition/mii-exa-onko-prostata-diagnose"
+    }
+  ],
+  "effectiveDateTime": "2024-01-02",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "369772003",
+        "system": "http://snomed.info/sct",
+        "display": "Gleason Pattern 3"
+      }
+    ]
+  }
+}

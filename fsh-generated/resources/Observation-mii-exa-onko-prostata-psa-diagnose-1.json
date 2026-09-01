@@ -1,0 +1,32 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-prostata-psa-diagnose-1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-psa|2026.0.3"
+    ]
+  },
+  "valueQuantity": {
+    "unit": "ng/ml",
+    "value": 12
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "2857-1",
+        "system": "http://loinc.org",
+        "display": "Prostate specific Ag [Mass/volume] in Serum or Plasma"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/mii-exa-onko-prostata-bundle-patient"
+  },
+  "focus": [
+    {
+      "reference": "Condition/mii-exa-onko-prostata-diagnose"
+    }
+  ],
+  "effectiveDateTime": "2024-01-02"
+}

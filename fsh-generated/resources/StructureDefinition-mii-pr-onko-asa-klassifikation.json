@@ -1,0 +1,292 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-pr-onko-asa-klassifikation",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition",
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "shareable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "publishable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-usage",
+      "valueMarkdown": "Use this profile as the technical FHIR representation of the corresponding Medical Informatics Initiative logical model. The profile constrains a base FHIR resource for the MII module context by specifying how elements are used, which elements are required or not used, which extensions and terminology bindings apply, and how the resource maps to the module-specific content model. Implementers should produce and consume resource instances that conform to this profile when exchanging data for the corresponding MII module."
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "package",
+            "system": "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes",
+            "display": "Package"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
+      "valueDate": "2026-01-03"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-topic",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "C3262",
+            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-author",
+      "valueContactDetail": {
+        "telecom": [
+          {
+            "system": "email",
+            "value": "thomas.debertshaeuser@charite.de"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-editor",
+      "valueContactDetail": {
+        "name": "Taskforce Core Data Set"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+      "valueContactDetail": {
+        "name": "Interoperability Working Group",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+      "valueContactDetail": {
+        "name": "National Steering Committee",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+      "valueContactDetail": {
+        "name": "Interoperability Working Group",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+      "valueContactDetail": {
+        "name": "National Steering Committee",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+          }
+        ]
+      }
+    }
+  ],
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-asa-klassifikation",
+  "version": "2026.0.3",
+  "name": "MII_PR_Onko_ASA_Klassifikation",
+  "title": "MII PR Onkologie ASA-Klassifikation",
+  "status": "active",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "description": "Dieses Profil beschreibt die ASA-Klassifikation (American Society of Anesthesiologists Physical Status Classification) in der Onkologie. Die ASA-Klassifikation dient primär der präoperativen Risikobewertung, kann aber auch als Komorbidätsindex für systemische Therapieentscheidungen verwendet werden. Ursprünglich aus oBDS KR9 (Kolorektales Karzinom), nun generalisiert für alle onkologischen Indikationen.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "oBDS",
+      "name": "Mapping FHIR zu oBDS"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation",
+        "path": "Observation",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "KR9",
+            "comment": "ASA-Klassifikation (ursprünglich Kolorektales Karzinom Modul, generalisiert für alle Entitäten)"
+          }
+        ]
+      },
+      {
+        "id": "Observation.meta.profile",
+        "path": "Observation.meta.profile",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "short": "ASA-Klassifikation",
+        "definition": "ASA-Klassifikation zur Bewertung des präoperativen Risikos gemäß American Society of Anesthesiologists Physical Status Classification System. oBDS KR9",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code.coding",
+        "path": "Observation.code.coding",
+        "patternCoding": {
+          "code": "97816-3",
+          "system": "http://loinc.org",
+          "display": "American society of anesthesiologists morbidity state"
+        }
+      },
+      {
+        "id": "Observation.subject",
+        "path": "Observation.subject",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.focus",
+        "path": "Observation.focus",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.encounter",
+        "path": "Observation.encounter",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "KR9",
+            "comment": "Datum der ASA-Bewertung"
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "short": "ASA-Klassifikation",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "ASA-Klassifikation"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "ASA-Klassifikation zur präoperativen Risikobewertung - ASA I-VI",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "ASA-Klassifikation zur präoperativen Risikobewertung gemäß oBDS KR9"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-asa-obds"
+        }
+      },
+      {
+        "id": "Observation.value[x].coding.code",
+        "path": "Observation.value[x].coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "KR9",
+            "comment": "ASA-Klassifikation (ASA I bis VI, U = Unbekannt)"
+          }
+        ]
+      }
+    ]
+  }
+}

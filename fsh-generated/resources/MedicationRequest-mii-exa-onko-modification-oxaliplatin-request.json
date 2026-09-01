@@ -1,0 +1,45 @@
+{
+  "resourceType": "MedicationRequest",
+  "id": "mii-exa-onko-modification-oxaliplatin-request",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation|2026.0.3"
+    ]
+  },
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/atc",
+        "code": "L01XA03",
+        "display": "Oxaliplatin"
+      }
+    ],
+    "text": "Oxaliplatin"
+  },
+  "status": "stopped",
+  "statusReason": {
+    "coding": [
+      {
+        "code": "281647001",
+        "system": "http://snomed.info/sct",
+        "display": "Adverse reaction (disorder)"
+      }
+    ],
+    "text": "Oxaliplatin discontinued after cycle 6 due to grade 3 peripheral neuropathy (CTCAE). Patient continued with 5-FU + Leucovorin only for remaining 6 cycles."
+  },
+  "intent": "proposal",
+  "subject": {
+    "reference": "Patient/example-modification"
+  },
+  "authoredOn": "2024-03-05",
+  "reasonReference": [
+    {
+      "reference": "Condition/mii-exa-onko-ascending-colon-cancer-diagnosis"
+    }
+  ],
+  "note": [
+    {
+      "text": "Administered for cycles 1-6 only. Stopped due to cumulative neurotoxicity."
+    }
+  ]
+}

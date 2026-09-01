@@ -1,0 +1,542 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-pr-onko-histologie-icdo3",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition",
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "shareable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "publishable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-usage",
+      "valueMarkdown": "Use this profile as the technical FHIR representation of the corresponding Medical Informatics Initiative logical model. The profile constrains a base FHIR resource for the MII module context by specifying how elements are used, which elements are required or not used, which extensions and terminology bindings apply, and how the resource maps to the module-specific content model. Implementers should produce and consume resource instances that conform to this profile when exchanging data for the corresponding MII module."
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "package",
+            "system": "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes",
+            "display": "Package"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
+      "valueDate": "2026-01-03"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-topic",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "C3262",
+            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-author",
+      "valueContactDetail": {
+        "telecom": [
+          {
+            "system": "email",
+            "value": "thomas.debertshaeuser@charite.de"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-editor",
+      "valueContactDetail": {
+        "name": "Taskforce Core Data Set"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+      "valueContactDetail": {
+        "name": "Interoperability Working Group",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+      "valueContactDetail": {
+        "name": "National Steering Committee",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+      "valueContactDetail": {
+        "name": "Interoperability Working Group",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+      "valueContactDetail": {
+        "name": "National Steering Committee",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+          }
+        ]
+      }
+    }
+  ],
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-histologie-icdo3",
+  "version": "2026.0.3",
+  "name": "MII_PR_Onko_Histologie_ICDO3",
+  "title": "MII PR Onkologie Histologie ICD-O-3",
+  "status": "active",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "description": "Histologie-Kodierung nach ICD-0 für die Verwendung von Folgediagnostik. Bei der histologischen Beurteilung des Primärtumors sind die histologischen Informationen direkt über die Condition-Ressource abzubilden.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "oBDS",
+      "name": "Mapping FHIR zu oBDS"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.meta.profile",
+        "path": "Observation.meta.profile",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "short": "Histologische Bewertung nach ICD-0-3",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code.coding",
+        "path": "Observation.code.coding",
+        "patternCoding": {
+          "code": "59847-4",
+          "system": "http://loinc.org"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.subject",
+        "path": "Observation.subject",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.focus",
+        "path": "Observation.focus",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.encounter",
+        "path": "Observation.encounter",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "short": "Datum der histologischen Untersuchung",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Datum der histologischen Untersuchung"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Datum der histologischen Untersuchung im Krankheitsverlauf",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Datum der histologischen Untersuchung im Krankheitsverlauf"
+                }
+              ]
+            }
+          ]
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "6.1",
+            "comment": "Datum der histologischen Untersuchung (oBDS 6.1 'Tumor Histologiedatum' = Probenentnahme ist im Specimen.collection.collectedDateTime abgebildet)"
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-morphologie"
+        }
+      },
+      {
+        "id": "Observation.value[x].coding",
+        "path": "Observation.value[x].coding",
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x].coding.version",
+        "path": "Observation.value[x].coding.version",
+        "short": "Morphologie-Kode-Version",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Morphologie-Kode-Version"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Version der ICD-O-3 bzw. Blue Book nach 6.4 oBDS 2021",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Version der ICD-O-3 bzw. Blue Book nach 6.4 oBDS 2021"
+                }
+              ]
+            }
+          ]
+        },
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "6.4",
+            "comment": "Morphologie ICD-O/Blue Book Version"
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x].coding.code",
+        "path": "Observation.value[x].coding.code",
+        "short": "Morphologie-Kode",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Morphologie-Kode"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Morphologie als ICD-O-3 nach 6.3 oBDS 2021",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Morphologie als ICD-O-3 nach 6.3 oBDS 2021"
+                }
+              ]
+            }
+          ]
+        },
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "6.3",
+            "comment": "Morphologie-Code"
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x].text",
+        "path": "Observation.value[x].text",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "6.5",
+            "comment": "Morphologie Freitext"
+          }
+        ]
+      },
+      {
+        "id": "Observation.bodySite.coding",
+        "path": "Observation.bodySite.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.bodySite.coding:Seitenlokalisation",
+        "path": "Observation.bodySite.coding",
+        "sliceName": "Seitenlokalisation",
+        "short": "Seitenlokalisation",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Seitenlokalisation"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Seitenlokalisation bei paarigen Organen",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Seitenlokalisation bei paarigen Organen"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation"
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-seitenlokalisation"
+        }
+      },
+      {
+        "id": "Observation.bodySite.coding:Seitenlokalisation.system",
+        "path": "Observation.bodySite.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.bodySite.coding:Seitenlokalisation.code",
+        "path": "Observation.bodySite.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.bodySite.coding:icd-o-3",
+        "path": "Observation.bodySite.coding",
+        "sliceName": "icd-o-3",
+        "short": "ICD-O-3 Topographie",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "ICD-O-3 Topographie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "ICD-O-3 Topographie bei vom Primärtumor abweichender Lokalisation in der Verlaufsbeschreibung",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "ICD-O-3 Topographie bei vom Primärtumor abweichender Lokalisation in der Verlaufsbeschreibung"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://terminology.hl7.org/CodeSystem/icd-o-3"
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-topographie"
+        }
+      },
+      {
+        "id": "Observation.bodySite.coding:icd-o-3.system",
+        "path": "Observation.bodySite.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.bodySite.coding:icd-o-3.code",
+        "path": "Observation.bodySite.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.specimen",
+        "path": "Observation.specimen",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-specimen"
+            ]
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "6.1",
+            "comment": "Tumor Histologiedatum = Datum der Probenentnahme (siehe Specimen.collection.collectedDateTime)"
+          }
+        ]
+      }
+    ]
+  }
+}

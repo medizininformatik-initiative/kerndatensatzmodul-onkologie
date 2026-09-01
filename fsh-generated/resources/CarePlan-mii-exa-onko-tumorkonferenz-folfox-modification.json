@@ -1,0 +1,48 @@
+{
+  "resourceType": "CarePlan",
+  "id": "mii-exa-onko-tumorkonferenz-folfox-modification",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz|2026.0.3"
+    ]
+  },
+  "intent": "plan",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ",
+          "code": "praeth",
+          "display": "prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie)"
+        }
+      ]
+    }
+  ],
+  "identifier": [
+    {
+      "value": "Tumorkonferenz_FOLFOX_Modification_001"
+    }
+  ],
+  "status": "active",
+  "subject": {
+    "reference": "Patient/example-modification"
+  },
+  "created": "2024-03-05",
+  "addresses": [
+    {
+      "reference": "Condition/mii-exa-onko-ascending-colon-cancer-diagnosis"
+    }
+  ],
+  "activity": [
+    {
+      "reference": {
+        "reference": "RequestGroup/mii-exa-onko-folfox-requestgroup-modification"
+      },
+      "progress": [
+        {
+          "text": "Tumor board recommends FOLFOX4 chemotherapy protocol for stage III colon cancer, adjuvant setting"
+        }
+      ]
+    }
+  ]
+}

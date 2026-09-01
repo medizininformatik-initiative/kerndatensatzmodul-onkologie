@@ -1,0 +1,64 @@
+{
+  "resourceType": "Condition",
+  "id": "mii-exa-onko-melanom-diagnose",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor|2026.0.3"
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "55342001",
+          "system": "http://snomed.info/sct",
+          "display": "Neoplastic disease"
+        }
+      ]
+    }
+  ],
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+      "valueDateTime": "2024-01-02"
+    }
+  ],
+  "verificationStatus": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+        "code": "confirmed"
+      },
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung",
+        "code": "7.1",
+        "display": "histologische Untersuchung eines Primärtumors"
+      }
+    ]
+  },
+  "clinicalStatus": {
+    "coding": [
+      {
+        "code": "active",
+        "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+      }
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "C43.9",
+        "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+        "display": "Bösartiges Melanom der Haut, nicht näher bezeichnet",
+        "version": "2024"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/mii-exa-onko-melanom-bundle-patient"
+  },
+  "encounter": {
+    "reference": "Encounter/mii-exa-onko-melanom-bundle-encounter"
+  },
+  "recordedDate": "2024-01-02"
+}

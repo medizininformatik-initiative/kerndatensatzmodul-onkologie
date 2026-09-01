@@ -1,0 +1,61 @@
+{
+  "resourceType": "CarePlan",
+  "id": "mii-exa-onko-tumorkonferenz-mixed-approach",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz|2026.0.3"
+    ]
+  },
+  "intent": "plan",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ",
+          "code": "praeth"
+        }
+      ],
+      "text": "Molekulares Tumorboard"
+    }
+  ],
+  "activity": [
+    {
+      "detail": {
+        "code": {
+          "coding": [
+            {
+              "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ",
+              "code": "OP"
+            }
+          ]
+        },
+        "status": "scheduled"
+      }
+    },
+    {
+      "reference": {
+        "reference": "RequestGroup/mii-exa-onko-molecular-cdk46-protocol"
+      },
+      "progress": [
+        {
+          "text": "Molecular profiling shows HR+/HER2- status with PI3K pathway activation - CDK4/6 inhibitor combination recommended"
+        }
+      ]
+    }
+  ],
+  "identifier": [
+    {
+      "value": "Tumorkonferenz_Mixed_001"
+    }
+  ],
+  "status": "active",
+  "subject": {
+    "reference": "Patient/mii-exa-onko-molecular-board-patient"
+  },
+  "created": "2024-01-15",
+  "addresses": [
+    {
+      "reference": "Condition/primaertumor-example"
+    }
+  ]
+}

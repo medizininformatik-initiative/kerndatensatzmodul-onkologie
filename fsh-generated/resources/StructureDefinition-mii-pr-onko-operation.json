@@ -1,0 +1,731 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-pr-onko-operation",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition",
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+      "valueCoding": {
+        "system": "http://hl7.org/fhir/version-algorithm",
+        "code": "semver",
+        "display": "SemVer"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "shareable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "publishable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes",
+            "version": "3.0.0",
+            "code": "package",
+            "display": "Package"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-usage",
+      "valueMarkdown": "Use this profile as the technical FHIR representation of the corresponding Medical Informatics Initiative logical model. The profile constrains a base FHIR resource for the MII module context by specifying how elements are used, which elements are required or not used, which extensions and terminology bindings apply, and how the resource maps to the module-specific content model. Implementers should produce and consume resource instances that conform to this profile when exchanging data for the corresponding MII module."
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-topic",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+            "code": "C3262"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-author",
+      "valueContactDetail": {
+        "telecom": [
+          {
+            "system": "email",
+            "value": "thomas.debertshaeuser@charite.de"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-editor",
+      "valueContactDetail": {
+        "name": "Taskforce Core Data Set"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+      "valueContactDetail": {
+        "name": "Interoperability Working Group",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+      "valueContactDetail": {
+        "name": "National Steering Committee",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+      "valueContactDetail": {
+        "name": "Interoperability Working Group",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+      "valueContactDetail": {
+        "name": "National Steering Committee",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
+      "valueDate": "2026-01-03"
+    }
+  ],
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation",
+  "version": "2026.0.3",
+  "name": "MII_PR_Onko_Operation",
+  "title": "MII PR Onkologie Operation",
+  "status": "active",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "description": "Operation nach OPS inklusive Intention, Datum und Komplikationen:",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "oBDS",
+      "name": "Mapping FHIR zu oBDS"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Procedure",
+  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Procedure",
+        "path": "Procedure",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "13",
+            "comment": "Operation"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.extension",
+        "path": "Procedure.extension",
+        "min": 1
+      },
+      {
+        "id": "Procedure.extension:Intention",
+        "path": "Procedure.extension",
+        "sliceName": "Intention",
+        "short": "Intention der OP",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Intention der OP"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Intention der OP gemäß 13.1 oBDS 2021",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Intention der OP gemäß 13.1 oBDS 2021"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.extension:Intention.value[x].coding.code",
+        "path": "Procedure.extension.value[x].coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "13.1",
+            "comment": "Intention der Operation"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.extension:Urgency",
+        "path": "Procedure.extension",
+        "sliceName": "Urgency",
+        "short": "Art des Eingriffs",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Art des Eingriffs"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Modalität der Eingriffsdurchführung gemäß KR6 oBDS 2021",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Modalität der Eingriffsdurchführung - Elektiveingriff vs. Notfalleingriff - gemäß KR6 oBDS 2021"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-urgency"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.extension:Urgency.value[x].coding.code",
+        "path": "Procedure.extension.value[x].coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "KR6",
+            "comment": "Art des Eingriffs (Modalität der Eingriffsdurchführung)"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.basedOn",
+        "path": "Procedure.basedOn",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this.resolve()"
+            }
+          ],
+          "rules": "open"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/CarePlan"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.basedOn:tumorkonferenz",
+        "path": "Procedure.basedOn",
+        "sliceName": "tumorkonferenz",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.partOf",
+        "path": "Procedure.partOf",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Observation",
+              "http://hl7.org/fhir/StructureDefinition/Procedure"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.code.coding:ops",
+        "path": "Procedure.code.coding",
+        "sliceName": "ops",
+        "short": "OPS-Kode der Operation",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "OPS-Kode der Operation"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueString": "OPS code"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "OPS-Kode der Operation gemäß 13.3 oBDS 2021",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "OPS-Kode der Operation gemäß 13.3 oBDS 2021"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueString": "A reference to a code defined by the German Procedure Classification OPS"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Procedure.code.coding:ops.extension:Seitenlokalisation",
+        "path": "Procedure.code.coding.extension",
+        "sliceName": "Seitenlokalisation",
+        "short": "Seitenlokalisation (OPS-Seitenzusatz R/L/B)",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Seitenlokalisation - OPS-Seitenzusatz R/L/B"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Seitenangabe bei paarigen Organen und OPS-Codes mit Seitenzusatzpflicht über die Basisprofil-Extension seitenlokalisation (R/L/B). Das oBDS sieht am OP kein eigenes Seitenfeld vor; führend ist der OPS-Seitenzusatz."
+      },
+      {
+        "id": "Procedure.code.coding:ops.version",
+        "path": "Procedure.code.coding.version",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "13.4",
+            "comment": "OPS Version"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.code.coding:ops.code",
+        "path": "Procedure.code.coding.code",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "13.3",
+            "comment": "OPS"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.subject",
+        "path": "Procedure.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Procedure.performed[x]",
+        "path": "Procedure.performed[x]",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.performed[x]:performedDateTime",
+        "path": "Procedure.performed[x]",
+        "sliceName": "performedDateTime",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "13.2",
+            "comment": "OP Datum"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.reasonReference",
+        "path": "Procedure.reasonReference",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor",
+              "http://hl7.org/fhir/StructureDefinition/Condition"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.outcome",
+        "path": "Procedure.outcome",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-beurteilung-lokaler-residualstatus"
+        },
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "10.1",
+            "comment": "Beurteilung des lokalen Residualstatus nach Abschluss der Operation"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.outcome.coding",
+        "path": "Procedure.outcome.coding",
+        "short": "Lokaler Residualstatus",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Lokaler Residualstatus"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Lokaler Residualstatus der OP gemäß 10.1 oBDS 2021. Globaler Residualstatus wird prozedurenunabhängig als eigenständige Observation kodiert.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Lokaler Residualstatus der OP gemäß 10.1 oBDS 2021. Globaler Residualstatus wird prozedurenunabhängig als eigenständige Observation kodiert."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "Procedure.outcome.coding.system",
+        "path": "Procedure.outcome.coding.system",
+        "patternUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus",
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.outcome.coding.code",
+        "path": "Procedure.outcome.coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.complication",
+        "path": "Procedure.complication",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "13.5",
+            "comment": "OP Komplikationen "
+          }
+        ]
+      },
+      {
+        "id": "Procedure.complication:compl_obds",
+        "path": "Procedure.complication",
+        "sliceName": "compl_obds",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-operation-komplikation"
+        }
+      },
+      {
+        "id": "Procedure.complication:compl_obds.coding",
+        "path": "Procedure.complication.coding",
+        "short": "Komplikation der OP laut oBDS",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Komplikation der OP laut oBDS"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Komplikation der OP gemäß 13.5 oBDS 2021",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Komplikation der OP gemäß 13.5 oBDS 2021"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "Procedure.complication:compl_obds.coding.system",
+        "path": "Procedure.complication.coding.system",
+        "patternUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation"
+      },
+      {
+        "id": "Procedure.complication:compl_obds.coding.code",
+        "path": "Procedure.complication.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.complication:compl_icd10",
+        "path": "Procedure.complication",
+        "sliceName": "compl_icd10",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://fhir.de/ValueSet/bfarm/icd-10-gm"
+        }
+      },
+      {
+        "id": "Procedure.complication:compl_icd10.coding",
+        "path": "Procedure.complication.coding",
+        "short": "Komplikation der OP Sonstige ICD-10",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Komplikation der OP Sonstige ICD-10"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Komplikation der OP - soweit nicht in 13.1 oBDS 2021 enthalten - als ICD-10-GM",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Komplikation der OP - soweit nicht in 13.1 oBDS 2021 enthalten - als ICD-10-GM"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "Procedure.complication:compl_icd10.coding.system",
+        "path": "Procedure.complication.coding.system",
+        "min": 1,
+        "patternUri": "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
+      },
+      {
+        "id": "Procedure.complication:compl_icd10.coding.code",
+        "path": "Procedure.complication.coding.code",
+        "min": 1
+      }
+    ]
+  }
+}

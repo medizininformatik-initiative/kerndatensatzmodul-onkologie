@@ -1,0 +1,46 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-studienteilnahme-prob",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-studienteilnahme|2026.0.3"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "709491003",
+        "system": "http://snomed.info/sct",
+        "display": "Enrollment in clinical trial (procedure)"
+      }
+    ]
+  },
+  "status": "final",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "focus": [
+    {
+      "reference": "Condition/primaertumor-example"
+    },
+    {
+      "reference": "ResearchStudy/mii-exa-onko-studie-prob"
+    }
+  ],
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "J",
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-studienteilnahme",
+        "display": "Ja"
+      }
+    ],
+    "text": "Patientin wurde in PRO-B Studie eingeschlossen"
+  },
+  "effectiveDateTime": "2021-06-20",
+  "note": [
+    {
+      "text": "Patientin mit metastasiertem Mammakarzinom in PRO-B Studie randomisiert. Teilnahme am alarm-basierten PROMs-Monitoring zur Erfassung von Symptomen und Nebenwirkungen."
+    }
+  ]
+}

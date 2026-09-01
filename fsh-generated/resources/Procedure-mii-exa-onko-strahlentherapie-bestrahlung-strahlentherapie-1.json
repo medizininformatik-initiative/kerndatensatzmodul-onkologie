@@ -1,0 +1,106 @@
+{
+  "resourceType": "Procedure",
+  "id": "mii-exa-onko-strahlentherapie-bestrahlung-strahlentherapie-1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie|2026.0.3"
+    ]
+  },
+  "bodySite": [
+    {
+      "extension": [
+        {
+          "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "L",
+                "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation"
+              }
+            ]
+          }
+        }
+      ],
+      "coding": [
+        {
+          "code": "3.4",
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet"
+        }
+      ]
+    }
+  ],
+  "category": {
+    "coding": [
+      {
+        "code": "1287742003",
+        "system": "http://snomed.info/sct",
+        "display": "Radiotherapy (procedure)"
+      }
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/procedure-method",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "PRCJ",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart"
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis",
+      "valueQuantity": {
+        "value": 60,
+        "unit": "Gy"
+      }
+    },
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis",
+      "valueQuantity": {
+        "value": 12,
+        "unit": "Gy"
+      }
+    },
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-boost",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "SIB",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost"
+          }
+        ]
+      }
+    }
+  ],
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "status": "completed",
+  "code": {
+    "coding": [
+      {
+        "code": "8-52",
+        "system": "http://fhir.de/CodeSystem/bfarm/ops",
+        "version": "2019"
+      }
+    ]
+  },
+  "performedPeriod": {
+    "start": "2019-07-04",
+    "end": "2019-09-14"
+  },
+  "usedCode": [
+    {
+      "coding": [
+        {
+          "code": "PN",
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart"
+        }
+      ]
+    }
+  ]
+}

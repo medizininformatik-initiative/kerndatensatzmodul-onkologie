@@ -1,0 +1,104 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-modification-verlauf-6months",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "396432002",
+        "system": "http://snomed.info/sct",
+        "display": "Status of regression of tumor (observable entity)"
+      }
+    ]
+  },
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "445200009",
+            "system": "http://snomed.info/sct",
+            "display": "Status of residual neoplasm (observable entity)"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-primaertumor",
+            "code": "K",
+            "display": "Kein Tumor nachweisbar"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "399656008",
+            "system": "http://snomed.info/sct",
+            "display": "Presence of metastatic neoplasm in regional lymph node (observable entity)"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-lymphknoten",
+            "code": "K",
+            "display": "kein Lymphknotenbefall nachweisbar"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "399608002",
+            "system": "http://snomed.info/sct",
+            "display": "Status of distant metastasis (observable entity)"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen",
+            "code": "K",
+            "display": "Keine Fernmetastasen nachweisbar"
+          }
+        ]
+      }
+    }
+  ],
+  "status": "final",
+  "subject": {
+    "reference": "Patient/example-modification"
+  },
+  "focus": [
+    {
+      "reference": "Condition/mii-exa-onko-ascending-colon-cancer-diagnosis"
+    }
+  ],
+  "effectiveDateTime": "2025-03-10",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung",
+        "code": "V",
+        "display": "Vollremission (complete remission, CR)"
+      }
+    ]
+  },
+  "note": [
+    {
+      "text": "Patient completed modified chemotherapy protocol (6 cycles FOLFOX4 + 6 cycles LV5FU2). Despite early discontinuation of oxaliplatin due to neuropathy, patient achieved complete response. CT scan and colonoscopy show no evidence of recurrence. CEA normal (1.8 ng/mL). Peripheral neuropathy has improved to grade 1 but persists. Patient is disease-free at 6-month follow-up."
+    }
+  ]
+}

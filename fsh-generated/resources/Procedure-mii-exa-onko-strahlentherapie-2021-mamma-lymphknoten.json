@@ -1,0 +1,92 @@
+{
+  "resourceType": "Procedure",
+  "id": "mii-exa-onko-strahlentherapie-2021-mamma-lymphknoten",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie|2026.0.3"
+    ]
+  },
+  "category": {
+    "coding": [
+      {
+        "code": "1287742003",
+        "system": "http://snomed.info/sct",
+        "display": "Radiotherapy (procedure)"
+      }
+    ]
+  },
+  "bodySite": [
+    {
+      "extension": [
+        {
+          "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "R",
+                "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation",
+                "display": "rechts"
+              }
+            ]
+          }
+        }
+      ],
+      "coding": [
+        {
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet",
+          "code": "9.3",
+          "display": "Axilläre Lymphknoten (r, l)"
+        }
+      ]
+    }
+  ],
+  "extension": [
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis",
+      "valueQuantity": {
+        "value": 46,
+        "code": "Gy",
+        "system": "http://unitsofmeasure.org"
+      }
+    },
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis",
+      "valueQuantity": {
+        "value": 2,
+        "code": "Gy",
+        "system": "http://unitsofmeasure.org"
+      }
+    }
+  ],
+  "status": "completed",
+  "code": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/ops",
+        "code": "8-522",
+        "display": "Hochvoltstrahlentherapie",
+        "version": "2024"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "encounter": {
+    "reference": "Encounter/example"
+  },
+  "reasonReference": [
+    {
+      "reference": "Condition/primaertumor-example"
+    }
+  ],
+  "partOf": [
+    {
+      "reference": "Procedure/mii-exa-onko-strahlentherapie-2021-mamma-primaer"
+    }
+  ],
+  "performedPeriod": {
+    "start": "2023-03-15",
+    "end": "2023-04-20"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "resourceType": "MedicationRequest",
+  "id": "mii-exa-onko-folfox-oxaliplatin-request",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation|2026.0.3"
+    ]
+  },
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/atc",
+        "code": "L01XA03",
+        "display": "Oxaliplatin"
+      }
+    ],
+    "text": "Oxaliplatin"
+  },
+  "status": "active",
+  "intent": "proposal",
+  "subject": {
+    "reference": "Patient/mii-exa-onko-folfox-patient"
+  },
+  "authoredOn": "2024-03-10",
+  "reasonReference": [
+    {
+      "reference": "Condition/mii-exa-onko-colorectal-cancer-diagnosis"
+    }
+  ]
+}

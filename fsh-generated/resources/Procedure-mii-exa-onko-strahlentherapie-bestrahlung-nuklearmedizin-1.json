@@ -1,0 +1,101 @@
+{
+  "resourceType": "Procedure",
+  "id": "mii-exa-onko-strahlentherapie-bestrahlung-nuklearmedizin-1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin|2026.0.3"
+    ]
+  },
+  "category": {
+    "coding": [
+      {
+        "code": "399315003",
+        "system": "http://snomed.info/sct",
+        "display": "Radionuclide therapy"
+      }
+    ]
+  },
+  "bodySite": [
+    {
+      "extension": [
+        {
+          "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "L",
+                "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation"
+              }
+            ]
+          }
+        }
+      ],
+      "coding": [
+        {
+          "code": "6.14",
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet",
+          "display": "Becken (r, l)"
+        }
+      ]
+    }
+  ],
+  "extension": [
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis",
+      "valueQuantity": {
+        "value": 30,
+        "unit": "GBq"
+      }
+    },
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-boost",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "N",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/procedure-method",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "MPSMA",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart"
+          }
+        ]
+      }
+    }
+  ],
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "status": "completed",
+  "code": {
+    "coding": [
+      {
+        "code": "8-530.d0",
+        "system": "http://fhir.de/CodeSystem/bfarm/ops",
+        "display": "Therapie mit offenen Radionukliden: Intravenöse Radioliganden-Therapie: Therapie mit Lutetium-177-PSMA-Liganden",
+        "version": "2019"
+      }
+    ]
+  },
+  "performedPeriod": {
+    "start": "2019-07-04",
+    "end": "2019-09-14"
+  },
+  "usedCode": [
+    {
+      "coding": [
+        {
+          "code": "Lu-177",
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart"
+        }
+      ]
+    }
+  ]
+}

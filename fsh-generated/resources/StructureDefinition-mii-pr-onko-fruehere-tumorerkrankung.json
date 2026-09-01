@@ -1,0 +1,496 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-pr-onko-fruehere-tumorerkrankung",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition",
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "shareable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "publishable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-usage",
+      "valueMarkdown": "Use this profile as the technical FHIR representation of the corresponding Medical Informatics Initiative logical model. The profile constrains a base FHIR resource for the MII module context by specifying how elements are used, which elements are required or not used, which extensions and terminology bindings apply, and how the resource maps to the module-specific content model. Implementers should produce and consume resource instances that conform to this profile when exchanging data for the corresponding MII module."
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "package",
+            "system": "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes",
+            "display": "Package"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
+      "valueDate": "2026-01-03"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-topic",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "C3262",
+            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-author",
+      "valueContactDetail": {
+        "telecom": [
+          {
+            "system": "email",
+            "value": "thomas.debertshaeuser@charite.de"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-editor",
+      "valueContactDetail": {
+        "name": "Taskforce Core Data Set"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+      "valueContactDetail": {
+        "name": "Interoperability Working Group",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+      "valueContactDetail": {
+        "name": "National Steering Committee",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+      "valueContactDetail": {
+        "name": "Interoperability Working Group",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+      "valueContactDetail": {
+        "name": "National Steering Committee",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+          }
+        ]
+      }
+    }
+  ],
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung",
+  "version": "2026.0.3",
+  "name": "MII_PR_Onko_Fruehere_Tumorerkrankung",
+  "title": "MII PR Onkologie Frühere Tumorerkrankung",
+  "_title": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "de-DE"
+          },
+          {
+            "url": "content",
+            "valueString": "Frühere Tumorerkrankung"
+          }
+        ]
+      }
+    ]
+  },
+  "status": "active",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "description": "Dieses Profil beschreibt frühere Tumorerkrankungen, die in der Anamnese zu einem früheren Zeitpunkt diagnostiziert/behandelt wurden. Basiert auf FHIR Condition, da historische Daten oft nur als Freitext vorliegen.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "oBDS",
+      "name": "Mapping FHIR zu oBDS"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Condition",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Condition",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Condition",
+        "path": "Condition",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "5.9",
+            "comment": "Frühere Tumorerkrankungen"
+          }
+        ]
+      },
+      {
+        "id": "Condition.meta.profile",
+        "path": "Condition.meta.profile",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.extension",
+        "path": "Condition.extension",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.extension:assertedDate",
+        "path": "Condition.extension",
+        "sliceName": "assertedDate",
+        "short": "Diagnosedatum der früheren Tumorerkrankung",
+        "definition": "Datum der früheren Tumorerkrankung",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/condition-assertedDate"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.extension:assertedDate.value[x]",
+        "path": "Condition.extension.value[x]",
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "5.9",
+            "comment": "Frühere Tumorerkrankung Diagnosedatum"
+          }
+        ]
+      },
+      {
+        "id": "Condition.extension:morphology-behavior-icdo3",
+        "path": "Condition.extension",
+        "sliceName": "morphology-behavior-icdo3",
+        "short": "ICD-O-Morphologie",
+        "definition": "Morphologie der früheren Tumorerkrankung nach ICD-O-3",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.clinicalStatus",
+        "path": "Condition.clinicalStatus",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/condition-clinical"
+        }
+      },
+      {
+        "id": "Condition.verificationStatus",
+        "path": "Condition.verificationStatus",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/condition-ver-status"
+        }
+      },
+      {
+        "id": "Condition.category",
+        "path": "Condition.category",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 2,
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.category:oncology",
+        "path": "Condition.category",
+        "sliceName": "oncology",
+        "short": "Kategorisierung als onkologische Diagnose",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Kategorisierung als onkologische Diagnose"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "394593009",
+              "system": "http://snomed.info/sct",
+              "display": "Medical oncology (qualifier value)"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.category:onkologie",
+        "path": "Condition.category",
+        "sliceName": "onkologie",
+        "short": "Onkologie-Kennzeichnung",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Onkologie-Kennzeichnung"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Kennzeichnet die Diagnose als onkologische Diagnose des KDS-Moduls Onkologie und macht sie über die category-Suche auffindbar",
+        "min": 1,
+        "max": "1",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "55342001",
+              "system": "http://snomed.info/sct",
+              "display": "Neoplastic disease"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code",
+        "path": "Condition.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding",
+        "path": "Condition.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Condition.code.coding:icd10-gm",
+        "path": "Condition.code.coding",
+        "sliceName": "icd10-gm",
+        "short": "ICD-10-GM Kodierung (optional)",
+        "definition": "ICD-10-GM Kodierung der früheren Tumorerkrankung, falls verfügbar",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:icd10-gm.system",
+        "path": "Condition.code.coding.system",
+        "min": 1,
+        "patternUri": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:icd10-gm.version",
+        "path": "Condition.code.coding.version",
+        "min": 1,
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "5.9",
+            "comment": "Frühere Tumorerkrankung ICD-10-GM Version"
+          }
+        ]
+      },
+      {
+        "id": "Condition.code.coding:icd10-gm.code",
+        "path": "Condition.code.coding.code",
+        "min": 1,
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "5.9",
+            "comment": "Frühere Tumorerkrankung ICD-10-GM Code"
+          }
+        ]
+      },
+      {
+        "id": "Condition.code.text",
+        "path": "Condition.code.text",
+        "short": "Textuelle Beschreibung der früheren Tumorerkrankung (Pflichtfeld)",
+        "definition": "Freitextbeschreibung der früheren Tumorerkrankung",
+        "min": 1,
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "5.9",
+            "comment": "Frühere Tumorerkrankung Beschreibung"
+          }
+        ]
+      },
+      {
+        "id": "Condition.bodySite",
+        "path": "Condition.bodySite",
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.bodySite.coding",
+        "path": "Condition.bodySite.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Condition.bodySite.coding:icd-o-3",
+        "path": "Condition.bodySite.coding",
+        "sliceName": "icd-o-3",
+        "short": "ICD-O-3 Topographie",
+        "definition": "Anatomische Lokalisation nach ICD-O-3",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-topographie"
+        }
+      },
+      {
+        "id": "Condition.bodySite.coding:icd-o-3.system",
+        "path": "Condition.bodySite.coding.system",
+        "min": 1,
+        "patternUri": "http://terminology.hl7.org/CodeSystem/icd-o-3",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.bodySite.coding:icd-o-3.code",
+        "path": "Condition.bodySite.coding.code",
+        "min": 1,
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "oBDS",
+            "map": "5.9",
+            "comment": "Frühere Tumorerkrankung ICD-O-3 Topographie"
+          }
+        ]
+      },
+      {
+        "id": "Condition.subject",
+        "path": "Condition.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.encounter",
+        "path": "Condition.encounter",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.recordedDate",
+        "path": "Condition.recordedDate",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.note",
+        "path": "Condition.note",
+        "mustSupport": true
+      }
+    ]
+  }
+}

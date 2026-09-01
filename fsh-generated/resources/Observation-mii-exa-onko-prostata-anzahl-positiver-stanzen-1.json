@@ -1,0 +1,29 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-prostata-anzahl-positiver-stanzen-1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-anzahl-positive-stanzen|2026.0.3"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "44651-8",
+        "system": "http://loinc.org",
+        "display": "Tissue cores.positive.carcinoma in Tissue core"
+      }
+    ]
+  },
+  "status": "final",
+  "subject": {
+    "reference": "Patient/mii-exa-onko-prostata-bundle-patient"
+  },
+  "focus": [
+    {
+      "reference": "Condition/mii-exa-onko-prostata-diagnose"
+    }
+  ],
+  "effectiveDateTime": "2024-01-02",
+  "valueInteger": 8
+}

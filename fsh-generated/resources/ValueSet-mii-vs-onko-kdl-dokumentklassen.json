@@ -1,0 +1,325 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Onko_KDL_Dokumentklassen",
+  "id": "mii-vs-onko-kdl-dokumentklassen",
+  "title": "MII VS Onkologie KDL Dokumentklassen",
+  "description": "Kuratierte Auswahl der KDL-Dokumentklassen (KDL 2025) entlang des onkologischen Behandlungspfads (oBDS-Kapitel: Diagnose/Pathologie, Staging-Bildgebung, Tumorkonferenz, Operation, Strahlentherapie, Systemische Therapie, Verlauf/Labor, Tod, Studien, übergreifende Dokumente) als Begleitartefakt für DocumentReference.type. Teilmenge des KDL-Bindings im MII-KDS-Modul Dokument; deprecated-Klassen sind ausgeschlossen.",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-kdl-dokumentklassen",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset",
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset",
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset",
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-computablevalueset"
+    ]
+  },
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2026.0.3",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "shareable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "publishable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "computable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "package",
+            "system": "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes",
+            "display": "Package"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
+      "valueDate": "2026-01-03"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-topic",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "C3262",
+            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-author",
+      "valueContactDetail": {
+        "telecom": [
+          {
+            "system": "email",
+            "value": "thomas.debertshaeuser@charite.de"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-editor",
+      "valueContactDetail": {
+        "name": "Taskforce Core Data Set"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+      "valueContactDetail": {
+        "name": "Interoperability Working Group",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+      "valueContactDetail": {
+        "name": "National Steering Committee",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+      "valueContactDetail": {
+        "name": "Interoperability Working Group",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+      "valueContactDetail": {
+        "name": "National Steering Committee",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+          }
+        ]
+      }
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://dvmd.de/fhir/CodeSystem/kdl",
+        "concept": [
+          {
+            "code": "PT080102",
+            "display": "Histologiebefund"
+          },
+          {
+            "code": "PT260102",
+            "display": "Zytologiebefund"
+          },
+          {
+            "code": "PT130102",
+            "display": "Molekularpathologiebefund"
+          },
+          {
+            "code": "SD150102",
+            "display": "Meldebogen Krebsregister"
+          },
+          {
+            "code": "SD150104",
+            "display": "Tumorlokalisationsbogen"
+          },
+          {
+            "code": "DG020103",
+            "display": "CT-Befund"
+          },
+          {
+            "code": "DG020105",
+            "display": "Endoskopiebefund"
+          },
+          {
+            "code": "DG020107",
+            "display": "MRT-Befund"
+          },
+          {
+            "code": "DG020109",
+            "display": "PET-Befund"
+          },
+          {
+            "code": "DG020110",
+            "display": "Röntgenbefund"
+          },
+          {
+            "code": "DG020111",
+            "display": "Sonographiebefund"
+          },
+          {
+            "code": "DG020112",
+            "display": "SPECT-Befund"
+          },
+          {
+            "code": "DG020113",
+            "display": "Szintigraphiebefund"
+          },
+          {
+            "code": "DG020114",
+            "display": "Mammographiebefund"
+          },
+          {
+            "code": "DG020199",
+            "display": "Sonstige Dokumentation bildgebende Diagnostik"
+          },
+          {
+            "code": "SD150103",
+            "display": "Tumorkonferenzprotokoll"
+          },
+          {
+            "code": "AD060103",
+            "display": "Konsilbericht intern"
+          },
+          {
+            "code": "AD060104",
+            "display": "Konsilbericht extern"
+          },
+          {
+            "code": "AD060110",
+            "display": "Konsilbericht"
+          },
+          {
+            "code": "OP150103",
+            "display": "OP-Bericht"
+          },
+          {
+            "code": "OP150104",
+            "display": "OP-Bilddokumentation"
+          },
+          {
+            "code": "OP150106",
+            "display": "OP-Protokoll"
+          },
+          {
+            "code": "AM010303",
+            "display": "Operationsaufklärungsbogen"
+          },
+          {
+            "code": "TH020101",
+            "display": "Bestrahlungsplan"
+          },
+          {
+            "code": "TH020102",
+            "display": "Bestrahlungsprotokoll"
+          },
+          {
+            "code": "TH020103",
+            "display": "Bestrahlungsverordnung"
+          },
+          {
+            "code": "TH020104",
+            "display": "Radiojodtherapieprotokoll"
+          },
+          {
+            "code": "TH020105",
+            "display": "Therapieprotokoll mit Radionukliden"
+          },
+          {
+            "code": "TH130102",
+            "display": "Arzneiadministration"
+          },
+          {
+            "code": "TH130103",
+            "display": "Chemotherapieprotokoll"
+          },
+          {
+            "code": "TH130104",
+            "display": "Hormontherapieprotokoll"
+          },
+          {
+            "code": "TH130107",
+            "display": "Medikationsplan"
+          },
+          {
+            "code": "AM010304",
+            "display": "Aufklärungsbogen Therapie"
+          },
+          {
+            "code": "SD150101",
+            "display": "Follow up-Bogen"
+          },
+          {
+            "code": "LB120102",
+            "display": "Laborbefund extern"
+          },
+          {
+            "code": "LB120103",
+            "display": "Laborbefund intern"
+          },
+          {
+            "code": "LB120106",
+            "display": "Hämatologisches Speziallabor"
+          },
+          {
+            "code": "LB120107",
+            "display": "Laborbefund"
+          },
+          {
+            "code": "AD020103",
+            "display": "Todesbescheinigung"
+          },
+          {
+            "code": "SF190101",
+            "display": "CRF-Bogen"
+          },
+          {
+            "code": "SF190102",
+            "display": "Einwilligung Studie"
+          },
+          {
+            "code": "SF190106",
+            "display": "Studienbericht"
+          },
+          {
+            "code": "AD010103",
+            "display": "Entlassungsbericht intern"
+          },
+          {
+            "code": "AD010104",
+            "display": "Entlassungsbericht extern"
+          },
+          {
+            "code": "SD150199",
+            "display": "Sonstiger onkologischer Dokumentationsbogen"
+          }
+        ]
+      }
+    ]
+  }
+}

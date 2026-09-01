@@ -1,0 +1,52 @@
+{
+  "resourceType": "Procedure",
+  "id": "mii-exa-onko-prostata-surgery-1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation|2026.0.3"
+    ]
+  },
+  "extension": [
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "K",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention",
+            "display": "Kurativ"
+          }
+        ]
+      }
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/ops",
+        "code": "5-604",
+        "display": "Radikale Prostatovesikulektomie",
+        "version": "2024"
+      }
+    ]
+  },
+  "status": "completed",
+  "category": {
+    "coding": [
+      {
+        "code": "387713003",
+        "system": "http://snomed.info/sct",
+        "display": "Surgical procedure"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/mii-exa-onko-prostata-bundle-patient"
+  },
+  "reasonReference": [
+    {
+      "reference": "Condition/mii-exa-onko-prostata-diagnose"
+    }
+  ],
+  "performedDateTime": "2024-06-24"
+}

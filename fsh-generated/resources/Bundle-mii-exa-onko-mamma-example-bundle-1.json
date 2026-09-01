@@ -1,0 +1,423 @@
+{
+  "resourceType": "Bundle",
+  "id": "mii-exa-onko-mamma-example-bundle-1",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/Bundle"
+    ]
+  },
+  "identifier": {
+    "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko",
+    "value": "mamma-example-bundle-2024-001"
+  },
+  "type": "transaction",
+  "timestamp": "2024-03-25T10:00:00+01:00",
+  "entry": [
+    {
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-mamma-bundle-patient",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "mii-exa-onko-mamma-bundle-patient",
+        "name": [
+          {
+            "given": [
+              "Martha"
+            ],
+            "family": "MammaCa"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-mamma-diagnose",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "mii-exa-onko-mamma-diagnose",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "55342001",
+                "system": "http://snomed.info/sct",
+                "display": "Neoplastic disease"
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+            "valueDateTime": "2020-03-07"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+              "code": "C50.3",
+              "display": "Bösartige Neubildung: Unterer innerer Quadrant der Brustdrüse",
+              "version": "2024"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "code": "confirmed",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/mii-exa-onko-mamma-bundle-patient"
+        },
+        "recordedDate": "2024-01-02"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-mamma-bundle-encounter",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "mii-exa-onko-mamma-bundle-encounter",
+        "status": "finished",
+        "class": {
+          "code": "IMP",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "display": "inpatient encounter"
+        },
+        "subject": {
+          "reference": "Patient/mii-exa-onko-mamma-bundle-patient"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
+      }
+    },
+    {
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-mamma-menopause-status-1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "mii-exa-onko-mamma-menopause-status-1",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-menopause-status|2026.0.3"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "161712005",
+              "system": "http://snomed.info/sct",
+              "display": "Menopause, function (observable entity)"
+            }
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/mii-exa-onko-mamma-bundle-patient"
+        },
+        "focus": [
+          {
+            "reference": "Condition/mii-exa-onko-mamma-diagnose"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "22636003",
+              "system": "http://snomed.info/sct",
+              "display": "Premenopausal state (finding)"
+            }
+          ]
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-mamma-rezeptorstatus-estrogen-1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "mii-exa-onko-mamma-rezeptorstatus-estrogen-1",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-rezeptorstatus-estrogen|2026.0.3"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "40556-3",
+              "system": "http://loinc.org",
+              "display": "Estrogen receptor Ag [Presence] in Tissue by Immune stain"
+            }
+          ]
+        },
+        "component": [
+          {
+            "valueQuantity": {
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "value": 5
+            },
+            "code": {
+              "coding": [
+                {
+                  "code": "1234804006",
+                  "system": "http://snomed.info/sct",
+                  "display": "Percent of cells with estrogen receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
+                }
+              ]
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "1236874005",
+                  "system": "http://snomed.info/sct",
+                  "display": "Intensity of stain of estrogen receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "LA13034-6",
+                  "system": "http://loinc.org",
+                  "display": "Weak"
+                }
+              ]
+            }
+          }
+        ],
+        "status": "final",
+        "subject": {
+          "reference": "Patient/mii-exa-onko-mamma-bundle-patient"
+        },
+        "focus": [
+          {
+            "reference": "Condition/mii-exa-onko-mamma-diagnose"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "LA6576-8",
+              "system": "http://loinc.org",
+              "display": "Positive"
+            }
+          ]
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-mamma-rezeptorstatus-progesteron-1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "mii-exa-onko-mamma-rezeptorstatus-progesteron-1",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-rezeptorstatus-progesteron|2026.0.3"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "85339-0",
+              "system": "http://loinc.org",
+              "display": "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+            }
+          ]
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "LA6576-8",
+              "display": "Positive"
+            }
+          ]
+        },
+        "component": [
+          {
+            "valueQuantity": {
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "value": 25
+            },
+            "code": {
+              "coding": [
+                {
+                  "code": "1234803000",
+                  "system": "http://snomed.info/sct",
+                  "display": "Percent of cells with progesterone receptor in primary malignant neoplasm of breast by immunohistochemistry"
+                }
+              ]
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "1237278006",
+                  "system": "http://snomed.info/sct",
+                  "display": "Intensity of stain of progesterone receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "LA13034-6",
+                  "system": "http://loinc.org",
+                  "display": "Weak"
+                }
+              ]
+            }
+          }
+        ],
+        "status": "final",
+        "subject": {
+          "reference": "Patient/mii-exa-onko-mamma-bundle-patient"
+        },
+        "focus": [
+          {
+            "reference": "Condition/mii-exa-onko-mamma-diagnose"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-mamma-tumorgroesse-1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "mii-exa-onko-mamma-tumorgroesse-1",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorgroesse|2026.0.3"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "21889-1",
+              "system": "http://loinc.org",
+              "display": "Size Tumor"
+            },
+            {
+              "code": "371479009",
+              "system": "http://snomed.info/sct",
+              "display": "Tumor size, largest dimension (observable entity)"
+            }
+          ]
+        },
+        "valueQuantity": {
+          "unit": "mm",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm",
+          "value": 25
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/mii-exa-onko-mamma-bundle-patient"
+        },
+        "focus": [
+          {
+            "reference": "Condition/mii-exa-onko-mamma-diagnose"
+          }
+        ],
+        "effectiveDateTime": "2024-01-02T10:00:00Z",
+        "bodySite": {
+          "coding": [
+            {
+              "code": "110494001",
+              "system": "http://snomed.info/sct",
+              "display": "Structure of upper inner quadrant of right breast (body structure)"
+            }
+          ]
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-mamma-praeoperative-markierung-1",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "mii-exa-onko-mamma-praeoperative-markierung-1",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-praeoperative-markierung|2026.0.3"
+          ]
+        },
+        "status": "completed",
+        "category": {
+          "coding": [
+            {
+              "code": "103693007",
+              "system": "http://snomed.info/sct",
+              "display": "Diagnostic procedure (procedure)"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "433222002",
+              "system": "http://snomed.info/sct",
+              "display": "Insertion of guide wire into breast using ultrasound guidance (procedure)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/mii-exa-onko-mamma-bundle-patient"
+        },
+        "reasonReference": [
+          {
+            "reference": "Condition/mii-exa-onko-mamma-diagnose"
+          }
+        ],
+        "performedDateTime": "2024-01-15T09:00:00+01:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Procedure"
+      }
+    }
+  ]
+}

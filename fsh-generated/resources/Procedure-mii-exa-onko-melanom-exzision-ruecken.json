@@ -1,0 +1,82 @@
+{
+  "resourceType": "Procedure",
+  "id": "mii-exa-onko-melanom-exzision-ruecken",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-exzision|2026.0.3"
+    ]
+  },
+  "extension": [
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "K",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention",
+            "display": "kurativ"
+          }
+        ]
+      }
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/ops",
+        "code": "5-894.0a",
+        "display": "Lokale Exzision von erkranktem Gewebe an Haut und Unterhaut: Ohne primären Wundverschluss: Brustwand und Rücken",
+        "version": "2024"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "177281002",
+        "display": "Excision of melanoma (procedure)"
+      }
+    ]
+  },
+  "status": "completed",
+  "category": {
+    "coding": [
+      {
+        "code": "387713003",
+        "system": "http://snomed.info/sct",
+        "display": "Surgical procedure"
+      }
+    ]
+  },
+  "bodySite": [
+    {
+      "coding": [
+        {
+          "code": "304036007",
+          "system": "http://snomed.info/sct",
+          "display": "Structure of posterior region of neck"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "Patient/mii-exa-onko-melanom-bundle-patient"
+  },
+  "performedDateTime": "2024-04-05",
+  "reasonReference": [
+    {
+      "reference": "Condition/mii-exa-onko-melanom-diagnose"
+    }
+  ],
+  "outcome": {
+    "coding": [
+      {
+        "code": "R0",
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus",
+        "display": "Kein Residualtumor"
+      }
+    ]
+  },
+  "note": [
+    {
+      "text": "Nachexzision mit 2cm Sicherheitsabstand"
+    }
+  ]
+}

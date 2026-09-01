@@ -1,0 +1,54 @@
+{
+  "resourceType": "MedicationStatement",
+  "id": "mii-exa-onko-modification-oxaliplatin-phase1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
+    ]
+  },
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/atc",
+        "code": "L01XA03",
+        "display": "Oxaliplatin"
+      }
+    ],
+    "text": "Oxaliplatin"
+  },
+  "status": "stopped",
+  "statusReason": [
+    {
+      "coding": [
+        {
+          "code": "281647001",
+          "system": "http://snomed.info/sct",
+          "display": "Adverse reaction (disorder)"
+        }
+      ],
+      "text": "Grade 3 peripheral neuropathy (CTCAE) - cumulative neurotoxicity from oxaliplatin"
+    }
+  ],
+  "subject": {
+    "reference": "Patient/example-modification"
+  },
+  "partOf": [
+    {
+      "reference": "Procedure/mii-exa-onko-folfox-phase1"
+    }
+  ],
+  "basedOn": [
+    {
+      "reference": "CarePlan/mii-exa-onko-tumorkonferenz-folfox-modification"
+    }
+  ],
+  "effectivePeriod": {
+    "start": "2024-03-15",
+    "end": "2024-06-10"
+  },
+  "note": [
+    {
+      "text": "FOLFOX4 - Cycles 1-6 only. Discontinued due to severe peripheral neuropathy. Patient experienced numbness and tingling in hands and feet (grade 3 CTCAE), interfering with daily activities."
+    }
+  ]
+}

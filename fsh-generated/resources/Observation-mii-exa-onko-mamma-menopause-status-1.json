@@ -1,0 +1,36 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-mamma-menopause-status-1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-menopause-status|2026.0.3"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "161712005",
+        "system": "http://snomed.info/sct",
+        "display": "Menopause, function (observable entity)"
+      }
+    ]
+  },
+  "status": "final",
+  "subject": {
+    "reference": "Patient/mii-exa-onko-mamma-bundle-patient"
+  },
+  "focus": [
+    {
+      "reference": "Condition/mii-exa-onko-mamma-diagnose"
+    }
+  ],
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "22636003",
+        "system": "http://snomed.info/sct",
+        "display": "Premenopausal state (finding)"
+      }
+    ]
+  }
+}

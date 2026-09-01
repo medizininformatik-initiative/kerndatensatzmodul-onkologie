@@ -1,0 +1,47 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "mii-sp-onko-observation-tnm-r-praefix",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-pr-meta-searchparameter"
+    ]
+  },
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-tnm-r-praefix",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "extension": [
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "CC-BY-4.0",
+            "system": "http://hl7.org/fhir/spdx-license",
+            "display": "Creative Commons Attribution 4.0 International"
+          }
+        ]
+      }
+    }
+  ],
+  "version": "2026.0.3",
+  "name": "MII_SP_Observation_TNM_r_Praefix",
+  "description": "SearchParameter for Observation.modifierExtension[r-praefix]. Kennzeichnet TNM-Kategorien, die zur Beurteilung eines Rezidivs festgestellt wurden (UICC r-Präfix). Die Unterscheidung zwischen T-, N- und M-Kategorie erfolgt über den Kategorie-Code der Observation.",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-08-25",
+  "code": "tnm-r-praefix",
+  "base": [
+    "Observation"
+  ],
+  "type": "token",
+  "expression": "Observation.modifierExtension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-r-praefix').value"
+}

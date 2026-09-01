@@ -1,0 +1,77 @@
+{
+  "resourceType": "Procedure",
+  "id": "mii-exa-onko-melanom-exzision-oberarm",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-exzision|2026.0.3"
+    ]
+  },
+  "extension": [
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "K",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention",
+            "display": "kurativ"
+          }
+        ]
+      }
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/ops",
+        "code": "5-894.06",
+        "display": "Lokale Exzision von erkranktem Gewebe an Haut und Unterhaut: Ohne primären Wundverschluss: Schulter und Axilla",
+        "version": "2024"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "177281002",
+        "display": "Excision of melanoma (procedure)"
+      }
+    ]
+  },
+  "status": "completed",
+  "category": {
+    "coding": [
+      {
+        "code": "387713003",
+        "system": "http://snomed.info/sct",
+        "display": "Surgical procedure"
+      }
+    ]
+  },
+  "bodySite": [
+    {
+      "coding": [
+        {
+          "code": "368208006",
+          "system": "http://snomed.info/sct",
+          "display": "Left upper arm structure"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "Patient/mii-exa-onko-melanom-bundle-patient"
+  },
+  "performedDateTime": "2024-03-20",
+  "reasonReference": [
+    {
+      "reference": "Condition/mii-exa-onko-melanom-diagnose"
+    }
+  ],
+  "outcome": {
+    "coding": [
+      {
+        "code": "R0",
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus",
+        "display": "Kein Residualtumor"
+      }
+    ]
+  }
+}

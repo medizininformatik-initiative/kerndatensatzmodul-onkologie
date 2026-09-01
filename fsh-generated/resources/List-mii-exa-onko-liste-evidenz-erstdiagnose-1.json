@@ -1,0 +1,62 @@
+{
+  "resourceType": "List",
+  "id": "mii-exa-onko-liste-evidenz-erstdiagnose-1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-liste-evidenz-erstdiagnose|2026.0.3"
+    ]
+  },
+  "status": "current",
+  "mode": "snapshot",
+  "title": "Liste der Evidenz zum Erstdiagnosezeitpunkt",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "entry": [
+    {
+      "item": {
+        "reference": "Observation/mii-exa-onko-allgemeiner-leistungszustand-ecog"
+      }
+    },
+    {
+      "item": {
+        "reference": "Observation/mii-exa-onko-tnm-klassifikation-TisN0M0"
+      }
+    },
+    {
+      "item": {
+        "reference": "Observation/mii-exa-onko-tnm-t-kategorie-Tis"
+      }
+    },
+    {
+      "item": {
+        "reference": "Observation/mii-exa-onko-tnm-n-kategorie-N0"
+      }
+    },
+    {
+      "item": {
+        "reference": "Observation/mii-exa-onko-tnm-m-kategorie-M0"
+      }
+    },
+    {
+      "item": {
+        "reference": "Observation/mii-exa-onko-tnm-l-kategorie-L1"
+      }
+    },
+    {
+      "item": {
+        "reference": "Observation/mii-exa-onko-fernmetastasen-1"
+      }
+    },
+    {
+      "item": {
+        "reference": "Observation/mii-exa-onko-cup-fernmetastase-hep"
+      }
+    },
+    {
+      "item": {
+        "reference": "DiagnosticReport/mii-exa-onko-befund-1"
+      }
+    }
+  ]
+}
