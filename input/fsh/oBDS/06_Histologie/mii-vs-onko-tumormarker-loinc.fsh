@@ -29,7 +29,19 @@ Description: "Kuratierte LOINC-Codes der in der Onkologie gebraeuchlichen Tumorm
 * $LNC#2333-3 "Gastrin [Mass/volume] in Serum or Plasma" // Gastrin — Gastrinom
 * $LNC#3125-2 "Vasoactive intestinal peptide [Mass/volume] in Serum or Plasma" // VIP — VIPom
 * $LNC#2961-1 "Somatostatin [Mass/volume] in Plasma" // Somatostatin — Somatostatinom
-* $LNC#18253-5 "Serotonin [Mass/time] in 24 hour Urine" // Serotonin — NET (Serotonin-produzierend)
+// Serotonin-produzierender NET: Welcher Marker und welches Probenmaterial bestimmt
+// wird, entscheiden Labor und Fragestellung — daher sind hier alle gebraeuchlichen
+// Varianten gelistet. Klinischer Standard ist 5-HIES im 24-Stunden-Sammelurin
+// (Abbauprodukt, stabiler als Serotonin selbst); Serotonin im Serum/Plasma/Blut
+// wird ergaenzend oder alternativ bestimmt.
+* $LNC#18253-5 "Serotonin [Mass/time] in 24 hour Urine" // Serotonin 24h-Urin — NET
+* $LNC#27057-9 "Serotonin [Mass/volume] in Serum" // Serotonin Serum — NET
+* $LNC#2940-5 "Serotonin [Mass/volume] in Plasma" // Serotonin Plasma — NET
+* $LNC#2939-7 "Serotonin [Mass/volume] in Blood" // Serotonin Vollblut — NET
+* $LNC#1695-6 "5-Hydroxyindoleacetate [Mass/time] in 24 hour Urine" // 5-HIES 24h-Urin — NET, klinischer Standard
+* $LNC#31203-3 "5-Hydroxyindoleacetate [Mass/volume] in 24 hour Urine" // 5-HIES 24h-Urin (Konzentration) — NET
+* $LNC#1694-9 "5-Hydroxyindoleacetate [Mass/volume] in Urine" // 5-HIES Spontanurin — NET
+* $LNC#44288-9 "5-Hydroxyindoleacetate/Creatinine [Mass Ratio] in 24 hour Urine" // 5-HIES/Kreatinin-Quotient — NET
 * $LNC#2141-0 "Corticotropin [Mass/volume] in Plasma" // ACTH — ACTH-produzierende Tumoren
 * $LNC#1992-7 "Calcitonin [Mass/volume] in Serum or Plasma" // Calcitonin — Medulläres Schilddrüsenkarzinom
 * $LNC#2436-4 "Homovanillate [Mass/time] in 24 hour Urine" // HVA (Urin) — Neuroblastom
