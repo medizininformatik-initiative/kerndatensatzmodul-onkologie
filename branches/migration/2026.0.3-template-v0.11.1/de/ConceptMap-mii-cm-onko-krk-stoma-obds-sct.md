@@ -147,7 +147,7 @@ Mapping der oBDS-Codes für präoperative Stoma-Anzeichnung zu SNOMED CT
   "title" : "Mapping oBDS Stoma-Anzeichnung zu SNOMED CT",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-09-01T21:24:42+00:00",
+  "date" : "2026-09-01T22:10:57+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
