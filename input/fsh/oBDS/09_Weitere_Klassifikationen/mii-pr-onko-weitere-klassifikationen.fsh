@@ -66,7 +66,7 @@ Mapping: FHIR-oBDS-Weitere-Klassifikationen
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
 Source: MII_PR_Onko_Weitere_Klassifikationen
-* -> "09" "Weitere Klassifikationen"
-* effectiveDateTime -> "09.1" "Hämatoonkologische und sonstige Klassifikationen Datum" 
-* code.text -> "09.2" "Hämatoonkologische und sonstige Klassifikationen Name"
-* value[x] -> "09.3" "Hämatoonkologische und sonstige Klassifikationen Einstufung"
+* -> "9" "Weitere Klassifikationen"
+* effectiveDateTime -> "9.1" "Hämatoonkologische und sonstige Klassifikationen Datum" 
+* code.text -> "9.2" "Hämatoonkologische und sonstige Klassifikationen Name"
+* value[x] -> "9.3" "Hämatoonkologische und sonstige Klassifikationen Einstufung"
