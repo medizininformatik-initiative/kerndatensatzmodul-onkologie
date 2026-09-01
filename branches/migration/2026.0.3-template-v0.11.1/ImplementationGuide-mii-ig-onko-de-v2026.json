@@ -2662,6 +2662,18 @@
         "valueString" : "CodeSystem"
       }],
       "reference" : {
+        "reference" : "CodeSystem/mii-cs-onko-nebenwirkung-ctcae-version"
+      },
+      "name" : "MII CS Onkologie Nebenwirkung CTCAE-Version",
+      "description" : "Versionsbezeichnungen des CTCAE-Katalogs nach oBDS 15.3. Werte gemaess oBDS-XML-Schema (Nebenwirkung/Version).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
         "reference" : "CodeSystem/mii-cs-onko-operation-komplikation"
       },
       "name" : "MII CS Onkologie Operation Komplikationen",
@@ -3098,6 +3110,18 @@
       },
       "name" : "MII EX Onko Systemische Therapie Stellung zur OP",
       "description" : "Systemische Therapie Stellung zur OP",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/mii-ex-onko-nebenwirkung-ctcae-version"
+      },
+      "name" : "MII EX Onkologie Nebenwirkung CTCAE-Version",
+      "description" : "Version des CTCAE-Katalogs, aus dem die Nebenwirkungsart stammt (oBDS 15.3). Nicht zu verwechseln mit der MedDRA-Version in event.coding[meddra].version: Die CTCAE fuehrt ihre Terme mit MedDRA-Codes, CTCAE v4.03 basiert auf MedDRA v12.0.",
       "exampleBoolean" : false
     },
     {
@@ -5174,6 +5198,18 @@
       },
       "name" : "MII VS Onkologie Melanom Ulzeration",
       "description" : "Codes für die Ulzeration beim Malignen Melanom der Haut",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/mii-vs-onko-nebenwirkung-ctcae-version"
+      },
+      "name" : "MII VS Onkologie Nebenwirkung CTCAE-Version",
+      "description" : "Versionsbezeichnungen des CTCAE-Katalogs nach oBDS 15.3.",
       "exampleBoolean" : false
     },
     {

@@ -14,6 +14,8 @@
 
 Profile: [MII PR Onkologie Nebenwirkung von Strahlentherapie und systemische Therapie](StructureDefinition-mii-pr-onko-nebenwirkung-adverse-event.md)
 
+**MII EX Onkologie Nebenwirkung CTCAE-Version**: CTCAE Version 4.03
+
 **actuality**: Adverse Event
 
 **event**: Fatigue
@@ -40,11 +42,20 @@ Profile: [MII PR Onkologie Nebenwirkung von Strahlentherapie und systemische The
   "meta" : {
     "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event"]
   },
+  "extension" : [{
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-nebenwirkung-ctcae-version",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-version",
+        "code" : "4.03",
+        "display" : "CTCAE Version 4.03"
+      }]
+    }
+  }],
   "actuality" : "actual",
   "event" : {
     "coding" : [{
       "system" : "https://www.meddra.org",
-      "version" : "Version 4",
       "code" : "10016256",
       "display" : "Fatigue"
     },

@@ -157,6 +157,7 @@ These define constraints on FHIR data types for systems conforming to this imple
 | [ MII EX Onko Strahlentherapie Stellung zur OP  ](StructureDefinition-mii-ex-onko-strahlentherapie-stellungzurop.md) | Strahlentherapie Stellung zur OP |
 | [ MII EX Onko Systemische Therapie Intention  ](StructureDefinition-mii-ex-onko-systemische-therapie-intention.md) | Systemische Therapie Intention |
 | [ MII EX Onko Systemische Therapie Stellung zur OP  ](StructureDefinition-mii-ex-onko-systemische-therapie-stellungzurop.md) | Systemische Therapie Stellung zur OP |
+| [ MII EX Onkologie Nebenwirkung CTCAE-Version  ](StructureDefinition-mii-ex-onko-nebenwirkung-ctcae-version.md) | Version des CTCAE-Katalogs, aus dem die Nebenwirkungsart stammt (oBDS 15.3). Nicht zu verwechseln mit der MedDRA-Version in event.coding[meddra].version: Die CTCAE fuehrt ihre Terme mit MedDRA-Codes, CTCAE v4.03 basiert auf MedDRA v12.0. |
 | [ MII EX Onkologie TNM ITC Suffix  ](StructureDefinition-mii-ex-onko-tnm-itc-suffix.md) | Die Extension verleiht TNM N- und M-Kategorien isolierte Tumorzellen (ITC) Suffixe. |
 | [ MII EX Onkologie TNM SN Suffix  ](StructureDefinition-mii-ex-onko-tnm-sn-suffix.md) | Die Extension verleiht der TNM N-Kategorie das Schildwächterlymphknoten (Sentinel Lymph Node) Suffix. |
 | [ MII EX Onkologie TNM a-Präfix  ](StructureDefinition-mii-ex-onko-tnm-a-praefix.md) | Kennzeichnet eine TNM T-, N- oder M-Kategorie, deren Feststellung erst im Rahmen einer Autopsie erfolgte (UICC a-Präfix). Als modifierExtension zu verwenden, da das a-Präfix die Interpretation des Kategorie-Wertes verändert. |
@@ -222,6 +223,7 @@ These define sets of codes used by systems conforming to this implementation gui
 | [ MII VS Onkologie Marker-Gene HGNC  ](ValueSet-mii-vs-onko-marker-gene-hgnc.md) | Gensymbole der onkologisch gebraeuchlichen Marker-Gene aus der Genetik-Markerliste der §65c-Plattform, als HGNC-Gen-IDs. Auswahlunterstuetzung fuer Observation.component:gene-studied im Profil MII_PR_Onko_Genetische_Variante (extensible gebunden — weitere Gene sind zulaessig). Nicht-Gene der Quellliste (IHC-Marker, zytogenetische Aberrationen) sind bewusst ausgeschlossen; siehe die Kommentare in der FSH-Quelle und die IG-Seite zu den Variantentypen. |
 | [ MII VS Onkologie Melanom LDH  ](ValueSet-mii-vs-onko-melanom-ldh.md) | Value Set für Laktatdehydrogenase (LDH) Laborwerte beim Malignen Melanom |
 | [ MII VS Onkologie Melanom Ulzeration  ](ValueSet-mii-vs-onko-melanom-ulzeration.md) | Codes für die Ulzeration beim Malignen Melanom der Haut |
+| [ MII VS Onkologie Nebenwirkung CTCAE-Version  ](ValueSet-mii-vs-onko-nebenwirkung-ctcae-version.md) | Versionsbezeichnungen des CTCAE-Katalogs nach oBDS 15.3. |
 | [ MII VS Onkologie Nebenwirkung nach CTCAE Art  ](ValueSet-mii-vs-onko-nebenwirkung-art.md) | Alle MedDRA-Codes der CTCAE v4.03 (Art der Nebenwirkung). Deutsche/englische Displays via CodeSystem-Supplements mii-cs-onko-nebenwirkung-meddra-de/-en. |
 | [ MII VS Onkologie Nebenwirkung nach CTCAE Grad  ](ValueSet-mii-vs-onko-nebenwirkung-ctcae-grad.md) | oBDS-spezifisches ValueSet für Nebenwirkung nach CTCAE-Grad |
 | [ MII VS Onkologie OPS Nuklearmedizin  ](ValueSet-mii-vs-onko-ops-nuklearmedizin.md) | OPS-Codes für Nuklearmedizinische Therapie |
@@ -320,6 +322,7 @@ These define new code systems used by systems conforming to this implementation 
 | [ MII CS Onkologie Mamma Her2neu Status oBDS  ](CodeSystem-mii-cs-onko-mamma-her2neu-status-obds.md) | oBDS-spezifisches Codesystem für Her2neu Status gemäß oBDS Feld M4 (243) |
 | [ MII CS Onkologie Mamma Rezeptorstatus  ](CodeSystem-mii-cs-onko-mamma-rezeptorstatus-leitlinie.md) | oBDS-spezifisches Codesystem Mamma-Rezeptorstatus, basierend auf der S3-Leitlinie Mammakarzinom v5.02 Abschnitt 4.5.4 |
 | [ MII CS Onkologie Melanom Ulzeration  ](CodeSystem-mii-cs-onko-melanom-ulzeration.md) | Codes für die Ulzeration beim Malignen Melanom der Haut nach oBDS |
+| [ MII CS Onkologie Nebenwirkung CTCAE-Version  ](CodeSystem-mii-cs-onko-nebenwirkung-ctcae-version.md) | Versionsbezeichnungen des CTCAE-Katalogs nach oBDS 15.3. Werte gemaess oBDS-XML-Schema (Nebenwirkung/Version). |
 | [ MII CS Onkologie Operation Komplikationen  ](CodeSystem-mii-cs-onko-operation-komplikation.md) | oBDS-spezifisches Codesystem für Klassifikation von Komplikationen während der OP |
 | [ MII CS Onkologie Operation Urgency  ](CodeSystem-mii-cs-onko-operation-urgency.md) | oBDS-basiertes Codesystem für die Modalität der Eingriffsdurchführung (Art des Eingriffs KR6) |
 | [ MII CS Onkologie Primärtumor Diagnosesicherung  ](CodeSystem-mii-cs-onko-primaertumor-diagnosesicherung.md) | Codes für Primärtumor Diagnosesicherung, d.h. die höchste erreichte Diagnosesicherheit der Diagnose. |

@@ -168,7 +168,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-onko.csv),
   "name" : "MII_LM_Onko",
   "title" : "MII LM Onkologie",
   "status" : "active",
-  "date" : "2026-09-01T20:38:11+00:00",
+  "date" : "2026-09-01T21:24:42+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -1907,7 +1907,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-onko.csv),
       "id" : "Onkologie.Nebenwirkungen.NebenwirkungenCTCAEVersion",
       "path" : "Onkologie.Nebenwirkungen.NebenwirkungenCTCAEVersion",
       "short" : "Nebenwirkungen nach CTCAE Version",
-      "definition" : "Für den medizinischen Katalog gültige Versionsbezeichnungen.",
+      "definition" : "Für den medizinischen Katalog gültige Versionsbezeichnungen (4, 4.03, 5.0, Sonstige). Gemeint ist die Version des CTCAE-Katalogs, nicht die des MedDRA-Katalogs, aus dem die Codes stammen — CTCAE v4.03 basiert auf MedDRA v12.0.",
       "min" : 1,
       "max" : "1",
       "type" : [{
@@ -1915,7 +1915,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-onko.csv),
       }],
       "mapping" : [{
         "identity" : "FHIR",
-        "map" : "AdverseEvent.event.coding.version"
+        "map" : "AdverseEvent.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-nebenwirkung-ctcae-version').valueCodeableConcept"
       },
       {
         "identity" : "oBDS",

@@ -146,7 +146,7 @@ Mapping der oBDS-Codes für ECOG Performance Status zu LOINC Answer List LL529-9
   "title" : "Mapping oBDS ECOG zu LOINC",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-01T20:38:11+00:00",
+  "date" : "2026-09-01T21:24:42+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -164,7 +164,7 @@ Mapping der oBDS-Codes für ECOG Performance Status zu LOINC Answer List LL529-9
     }]
   }],
   "sourceCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-ecog",
-  "targetCanonical" : "http://loinc.org/vs/LL529-9",
+  "targetCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-ecog-loinc",
   "group" : [{
     "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-ecog",
     "target" : "http://loinc.org",

@@ -7,13 +7,21 @@
   </meta>
   <language value="de"/>
   <text>
-    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: AdverseEvent mii-exa-onko-nebenwirkung-anaemie-grad3</b></p><a name="de-mii-exa-onko-nebenwirkung-anaemie-grad3"> </a><a name="de-hcmii-exa-onko-nebenwirkung-anaemie-grad3"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-nebenwirkung-adverse-event.html">MII PR Onkologie Nebenwirkung von Strahlentherapie und systemische Therapie</a></p></div><p><b>actuality</b>: Adverse Event</p><p><b>event</b>: <span title="Codes:{https://www.meddra.org 10002272}, {http://snomed.info/sct 271737000}">Anämie</span></p><p><b>subject</b>: <a href="Patient-PatientKimMusterperson.html">Kim Musterperson  (no stated gender), DoB: 1956-03-14</a></p><p><b>date</b>: 2021-08-30</p><p><b>seriousness</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad 3}">schwerwiegend</span></p><h3>SuspectEntities</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Instance</b></td></tr><tr><td style="display: none">*</td><td><a href="Procedure-PatientKimMusterperson-SystemicTherapy-1.html">Procedure Zytostatische Chemotherapie, Immuntherapie und antiretrovirale Therapie</a></td></tr></table></div>
+    <status value="extensions"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: AdverseEvent mii-exa-onko-nebenwirkung-anaemie-grad3</b></p><a name="de-mii-exa-onko-nebenwirkung-anaemie-grad3"> </a><a name="de-hcmii-exa-onko-nebenwirkung-anaemie-grad3"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-nebenwirkung-adverse-event.html">MII PR Onkologie Nebenwirkung von Strahlentherapie und systemische Therapie</a></p></div><p><b>MII EX Onkologie Nebenwirkung CTCAE-Version</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-version 4.03}">CTCAE Version 4.03</span></p><p><b>actuality</b>: Adverse Event</p><p><b>event</b>: <span title="Codes:{https://www.meddra.org 10002272}, {http://snomed.info/sct 271737000}">Anämie</span></p><p><b>subject</b>: <a href="Patient-PatientKimMusterperson.html">Kim Musterperson  (no stated gender), DoB: 1956-03-14</a></p><p><b>date</b>: 2021-08-30</p><p><b>seriousness</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad 3}">schwerwiegend</span></p><h3>SuspectEntities</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Instance</b></td></tr><tr><td style="display: none">*</td><td><a href="Procedure-PatientKimMusterperson-SystemicTherapy-1.html">Procedure Zytostatische Chemotherapie, Immuntherapie und antiretrovirale Therapie</a></td></tr></table></div>
   </text>
+  <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-nebenwirkung-ctcae-version">
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-version"/>
+        <code value="4.03"/>
+        <display value="CTCAE Version 4.03"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
   <actuality value="actual"/>
   <event>
     <coding>
       <system value="https://www.meddra.org"/>
-      <version value="Version 4"/>
       <code value="10002272"/>
       <display value="Anämie"/>
     </coding>

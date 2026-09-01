@@ -12,6 +12,7 @@
   <sch:pattern>
     <sch:title>f:AdverseEvent</sch:title>
     <sch:rule context="f:AdverseEvent">
+      <sch:assert test="count(f:extension[@url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-nebenwirkung-ctcae-version']) &lt;= 1">extension with URL = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-nebenwirkung-ctcae-version': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:event) &gt;= 1">event: minimum cardinality of 'event' is 1</sch:assert>
       <sch:assert test="count(f:seriousness) &gt;= 1">seriousness: minimum cardinality of 'seriousness' is 1</sch:assert>
       <sch:assert test="count(f:suspectEntity) &gt;= 1">suspectEntity: minimum cardinality of 'suspectEntity' is 1</sch:assert>

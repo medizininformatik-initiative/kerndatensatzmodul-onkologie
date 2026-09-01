@@ -195,7 +195,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-neben
   "name" : "MII_PR_Onko_Nebenwirkung_Adverse_Event",
   "title" : "MII PR Onkologie Nebenwirkung von Strahlentherapie und systemische Therapie",
   "status" : "active",
-  "date" : "2026-09-01T20:38:11+00:00",
+  "date" : "2026-09-01T21:24:42+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -243,6 +243,50 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-neben
       "id" : "AdverseEvent.meta.profile",
       "path" : "AdverseEvent.meta.profile",
       "mustSupport" : true
+    },
+    {
+      "id" : "AdverseEvent.extension",
+      "path" : "AdverseEvent.extension",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "url"
+        }],
+        "ordered" : false,
+        "rules" : "open"
+      }
+    },
+    {
+      "id" : "AdverseEvent.extension:ctcaeVersion",
+      "path" : "AdverseEvent.extension",
+      "sliceName" : "ctcaeVersion",
+      "short" : "CTCAE-Version",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "CTCAE-Version"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Version des CTCAE-Katalogs nach 15.3 oBDS 2021",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-nebenwirkung-ctcae-version"]
+      }],
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "15.3",
+        "comment" : "Nebenwirkungen nach CTCAE Version"
+      }]
     },
     {
       "id" : "AdverseEvent.event",
@@ -299,12 +343,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-neben
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "mustSupport" : true,
-      "mapping" : [{
-        "identity" : "oBDS",
-        "map" : "15.3",
-        "comment" : "Nebenwirkungen nach CTCAE Version"
-      }]
+      "mustSupport" : true
     },
     {
       "id" : "AdverseEvent.event.coding.code",
@@ -366,7 +405,13 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-neben
     {
       "id" : "AdverseEvent.event.coding:meddra.version",
       "path" : "AdverseEvent.event.coding.version",
-      "mustSupport" : true
+      "comment" : "Version des MEDDRA-Katalogs (z. B. 12.0 fuer die von CTCAE v4.03 verwendeten Codes). Die CTCAE-Katalogversion nach oBDS 15.3 steht in der Extension ctcaeVersion.",
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "kein oBDS-Feld",
+        "comment" : "Version des MedDRA-Katalogs, aus dem der Code stammt - vom oBDS nicht erhoben"
+      }]
     },
     {
       "id" : "AdverseEvent.event.coding:meddra.code",

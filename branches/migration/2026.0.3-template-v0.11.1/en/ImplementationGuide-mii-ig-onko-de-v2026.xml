@@ -2223,6 +2223,17 @@
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
+        <reference value="CodeSystem/mii-cs-onko-nebenwirkung-ctcae-version"/>
+      </reference>
+      <name value="MII CS Onkologie Nebenwirkung CTCAE-Version"/>
+      <description value="Versionsbezeichnungen des CTCAE-Katalogs nach oBDS 15.3. Werte gemaess oBDS-XML-Schema (Nebenwirkung/Version)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
         <reference value="CodeSystem/mii-cs-onko-operation-komplikation"/>
       </reference>
       <name value="MII CS Onkologie Operation Komplikationen"/>
@@ -2623,6 +2634,17 @@
       </reference>
       <name value="MII EX Onko Systemische Therapie Stellung zur OP"/>
       <description value="Systemische Therapie Stellung zur OP"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/mii-ex-onko-nebenwirkung-ctcae-version"/>
+      </reference>
+      <name value="MII EX Onkologie Nebenwirkung CTCAE-Version"/>
+      <description value="Version des CTCAE-Katalogs, aus dem die Nebenwirkungsart stammt (oBDS 15.3). Nicht zu verwechseln mit der MedDRA-Version in event.coding[meddra].version: Die CTCAE fuehrt ihre Terme mit MedDRA-Codes, CTCAE v4.03 basiert auf MedDRA v12.0."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -4525,6 +4547,17 @@
       </reference>
       <name value="MII VS Onkologie Melanom Ulzeration"/>
       <description value="Codes für die Ulzeration beim Malignen Melanom der Haut"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mii-vs-onko-nebenwirkung-ctcae-version"/>
+      </reference>
+      <name value="MII VS Onkologie Nebenwirkung CTCAE-Version"/>
+      <description value="Versionsbezeichnungen des CTCAE-Katalogs nach oBDS 15.3."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

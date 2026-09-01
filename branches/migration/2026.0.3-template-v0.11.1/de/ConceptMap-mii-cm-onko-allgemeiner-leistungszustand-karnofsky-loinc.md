@@ -146,7 +146,7 @@ Mapping der oBDS-Codes für Karnofsky Performance Status zu LOINC Answer List LL
   "title" : "Mapping oBDS Karnofsky zu LOINC",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-01T20:38:11+00:00",
+  "date" : "2026-09-01T21:24:42+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -164,7 +164,7 @@ Mapping der oBDS-Codes für Karnofsky Performance Status zu LOINC Answer List LL
     }]
   }],
   "sourceCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-karnofsky",
-  "targetCanonical" : "http://loinc.org/vs/LL4986-7",
+  "targetCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-karnofsky-loinc",
   "group" : [{
     "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-karnofsky",
     "target" : "http://loinc.org",
