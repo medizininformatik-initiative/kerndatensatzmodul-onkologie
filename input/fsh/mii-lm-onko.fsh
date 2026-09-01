@@ -217,7 +217,7 @@ Source: MII_LM_Onko
 * Nebenwirkungen 
   * NebenwirkungenCTCAEGrad -> "AdverseEvent.seriousness.coding.code"
   * NebenwirkungenCTCAEArt -> "AdverseEvent.event.coding.code"
-  * NebenwirkungenCTCAEVersion -> "AdverseEvent.event.coding.version"
+  * NebenwirkungenCTCAEVersion -> "AdverseEvent.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-nebenwirkung-ctcae-version').valueCodeableConcept"
 
 * Tumorkonferenz
   * TumorkonferenzTherapieplanungDatum -> "CarePlan.created"
