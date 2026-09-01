@@ -12,7 +12,6 @@ Description: "Anämie CTCAE Grad 3 (MedDRA 10002272, deutsches Display aus dem S
 * event.coding[meddra].system = "https://www.meddra.org"
 * event.coding[meddra].code = #10002272
 * event.coding[meddra].display = "Anämie"
-* event.coding[meddra].version = "Version 4"
 * event.coding[snomed] = $SCT#271737000 "Anaemia"
 * subject = Reference(PatientKimMusterperson)
 * date = "2021-08-30"
@@ -28,7 +27,6 @@ Description: "Cytokine-Release-Syndrom CTCAE Grad 4 (MedDRA 10052015) unter medi
 * event.coding[meddra].system = "https://www.meddra.org"
 * event.coding[meddra].code = #10052015
 * event.coding[meddra].display = "Zytokin-Freisetzungs-Syndrom"
-* event.coding[meddra].version = "Version 4"
 * event.coding[snomed] = $SCT#710027002 "Cytokine release syndrome"
 * subject = Reference(PatientKimMusterperson)
 * date = "2021-09-02"
@@ -44,7 +42,6 @@ Description: "Rektale Mukositis CTCAE Grad 2 (MedDRA 10063190) nach Strahlenther
 * event.coding[meddra].system = "https://www.meddra.org"
 * event.coding[meddra].code = #10063190
 * event.coding[meddra].display = "Rektale Mukositis"
-* event.coding[meddra].version = "Version 4"
 * subject = Reference(PatientKimMusterperson)
 * date = "2021-09-10"
 * seriousness.coding = $mii-cs-onko-nebenwirkung-ctcae-grad#2 "moderat"

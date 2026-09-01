@@ -9,7 +9,11 @@ Description: "Mapping der oBDS-Codes für ECOG Performance Status zu LOINC Answe
 * insert Version
 
 * sourceCanonical = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-ecog"
-* targetCanonical = "http://loinc.org/vs/LL529-9"
+// Ziel ist die enumerierte Fassung im Modul, NICHT die implizite LOINC-Answer-List
+// http://loinc.org/vs/LL529-9: Deren Expansion scheitert auf dem Terminologieserver
+// ("no declared filter called LIST"), weil Answer-Lists intern ueber einen
+// LIST-Filter aufgeloest werden. Inhaltlich sind beide deckungsgleich.
+* targetCanonical = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-ecog-loinc"
 
 * group[+].source = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-ecog"
 * group[=].target = "http://loinc.org"
