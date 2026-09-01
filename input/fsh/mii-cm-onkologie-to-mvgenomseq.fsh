@@ -15,7 +15,7 @@ Usage: #definition
 * contact.telecom.system = #url
 * contact.telecom.value = "https://mii.zulipchat.com/#narrow/channel/480436-MV-Genom-.C2.A764e/topic/Welcher.20Support.20hilft.20am.20meisten.3F/with/514104856"
 * contact.telecom.use = #work
-* description = "Mapping der einzelnen MII-OnkologieProfile auf den Klinischen Datenkranz der MVGenomSeq"
+* description = "Mapping der einzelnen MII-Onkologieprofile auf den Klinischen Datenkranz der Modellvorhaben-Genomsequenzierung. ABGRENZUNG: Diese ConceptMap deckt bewusst nur OncologyCase.json ab — die klinischen Falldaten, die im KDS-Modul Onkologie gefuehrt werden. Die uebrigen Schemata des Datenkranzes (OncologyMolecular, OncologyPlan, OncologyFollowUp, Oncology) betreffen die molekulare Diagnostik und die Therapieplanung des Molekularen Tumorboards und werden im KDS-Modul MTB abgebildet, nicht hier. Zielfelder gegen mvgenomseq_schemas/2024-12/OncologyCase.json verifiziert."
 * jurisdiction.coding.system = "urn:iso:std:iso:3166"
 * jurisdiction.coding.code = #DEU
 * purpose = "Das Ziel dieser ConceptMap ist die Abbildung der MII-OnkologieProfile auf den MVGenomSeq-Datenkranz. Die ConceptMap ist ein Teil des MII-Onkologiemoduls und soll den Datenintegrationszentren das Erstellen von harmonisierbaren ETL-Strecken erleichtern."
