@@ -138,7 +138,7 @@ Value Set für die Bewertung der Anastomoseninsuffizienz beim Kolorektalen Karzi
   "title" : "MII VS Onkologie KRK Anastomoseninsuffizienz",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-01T08:53:35+00:00",
+  "date" : "2026-09-01T09:38:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

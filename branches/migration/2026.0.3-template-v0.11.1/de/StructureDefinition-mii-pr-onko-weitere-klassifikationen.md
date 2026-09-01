@@ -324,7 +324,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_Weitere_Klassifikationen",
   "title" : "MII PR Onkologie Weitere Klassifikationen",
   "status" : "active",
-  "date" : "2026-09-01T08:53:35+00:00",
+  "date" : "2026-09-01T09:38:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -382,7 +382,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "path" : "Observation",
       "mapping" : [{
         "identity" : "oBDS",
-        "map" : "09",
+        "map" : "9",
         "comment" : "Weitere Klassifikationen"
       }]
     },
@@ -467,7 +467,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "oBDS",
-        "map" : "09.2",
+        "map" : "9.2",
         "comment" : "Hämatoonkologische und sonstige Klassifikationen Name"
       }]
     },
@@ -532,7 +532,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "oBDS",
-        "map" : "09.1",
+        "map" : "9.1",
         "comment" : "Hämatoonkologische und sonstige Klassifikationen Datum"
       }]
     },
@@ -578,7 +578,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "oBDS",
-        "map" : "09.3",
+        "map" : "9.3",
         "comment" : "Hämatoonkologische und sonstige Klassifikationen Einstufung"
       }]
     },

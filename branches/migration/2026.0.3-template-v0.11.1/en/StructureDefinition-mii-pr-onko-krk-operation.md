@@ -202,7 +202,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-krk-o
   "name" : "MII_PR_Onko_KRK_Operation",
   "title" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
   "status" : "active",
-  "date" : "2026-09-01T08:53:35+00:00",
+  "date" : "2026-09-01T09:38:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

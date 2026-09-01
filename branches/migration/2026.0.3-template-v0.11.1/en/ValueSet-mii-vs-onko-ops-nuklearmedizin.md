@@ -138,7 +138,7 @@ OPS-Codes für Nuklearmedizinische Therapie
   "title" : "MII VS Onkologie OPS Nuklearmedizin",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-01T08:53:35+00:00",
+  "date" : "2026-09-01T09:38:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
