@@ -155,6 +155,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-syste
     "valueCodeableConcept" : {
       "coding" : [{
         "system" : "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes",
+        "version" : "3.0.0",
         "code" : "package",
         "display" : "Package"
       }]
@@ -235,7 +236,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-syste
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
     "valuePeriod" : {
-      "start" : "2026"
+      "start" : "2027"
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie",
@@ -243,7 +244,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-syste
   "name" : "MII_PR_Onko_Systemische_Therapie",
   "title" : "MII PR Onkologie Systemische Therapie",
   "status" : "active",
-  "date" : "2026-09-01T19:43:49+00:00",
+  "date" : "2026-09-01T20:38:11+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

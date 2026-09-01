@@ -86,13 +86,25 @@
       </telecom>
     </valueContactDetail>
   </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm">
+    <valueCoding>
+      <system value="http://hl7.org/fhir/version-algorithm"/>
+      <code value="semver"/>
+      <display value="SemVer"/>
+    </valueCoding>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2026"/>
+    </valuePeriod>
+  </extension>
   <url value="https://www.uicc.org/resources/tnm"/>
   <version value="2026.0.3"/>
   <name value="MII_CS_Onko_TNM_UICC"/>
   <title value="MII CS Onkologie TNM UICC"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2026-09-01T19:43:49+00:00"/>
+  <date value="2026-09-01T20:38:11+00:00"/>
   <publisher value="Medizininformatik Initiative"/>
   <contact>
     <name value="Medizininformatik Initiative"/>
@@ -109,6 +121,7 @@
       <display value="Germany"/>
     </coding>
   </jurisdiction>
+  <copyright value="Die TNM-Klassifikation maligner Tumoren ist urheberrechtlich geschuetzt: TNM Classification of Malignant Tumours © Union for International Cancer Control (UICC). Die hier gefuehrten Codes sind eine Zusammenstellung der im MII-Kerndatensatzmodul Onkologie verwendeten TNM-Kategorien und -Werte zum Zweck der FHIR-Validierung; sie ersetzen nicht die amtliche UICC-Ausgabe und begruenden keine eigenen Rechte an der Klassifikation. Nutzende benoetigen fuer den produktiven Einsatz die entsprechende UICC-Berechtigung."/>
   <caseSensitive value="true"/>
   <content value="complete"/>
   <count value="138"/>

@@ -392,21 +392,30 @@
     "http://hl7.org/fhir/StructureDefinition/artifact-author": [
       "CapabilityStatement",
       "CodeSystem",
+      "ConceptMap",
       "ImplementationGuide",
+      "Library",
+      "SearchParameter",
       "StructureDefinition",
       "ValueSet"
     ],
     "http://hl7.org/fhir/StructureDefinition/artifact-editor": [
       "CapabilityStatement",
       "CodeSystem",
+      "ConceptMap",
       "ImplementationGuide",
+      "Library",
+      "SearchParameter",
       "StructureDefinition",
       "ValueSet"
     ],
     "http://hl7.org/fhir/StructureDefinition/artifact-endorser": [
       "CapabilityStatement",
       "CodeSystem",
+      "ConceptMap",
       "ImplementationGuide",
+      "Library",
+      "SearchParameter",
       "StructureDefinition",
       "ValueSet"
     ],
@@ -416,14 +425,19 @@
     "http://hl7.org/fhir/StructureDefinition/artifact-reviewer": [
       "CapabilityStatement",
       "CodeSystem",
+      "ConceptMap",
       "ImplementationGuide",
+      "Library",
+      "SearchParameter",
       "StructureDefinition",
       "ValueSet"
     ],
     "http://hl7.org/fhir/StructureDefinition/artifact-topic": [
       "CapabilityStatement",
       "CodeSystem",
+      "ConceptMap",
       "ImplementationGuide",
+      "Library",
       "StructureDefinition",
       "ValueSet"
     ],
@@ -433,18 +447,28 @@
       "StructureDefinition"
     ],
     "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm": [
+      "CodeSystem",
+      "ConceptMap",
       "ImplementationGuide",
-      "StructureDefinition"
+      "Library",
+      "SearchParameter",
+      "StructureDefinition",
+      "ValueSet"
     ],
     "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy": [
       "CapabilityStatement",
       "CodeSystem",
+      "ConceptMap",
       "ImplementationGuide",
+      "Library",
+      "SearchParameter",
       "StructureDefinition",
       "ValueSet"
     ],
     "http://hl7.org/fhir/StructureDefinition/bodySite": [
-      "Observation"
+      "Condition.bodySite",
+      "Observation",
+      "Procedure.bodySite"
     ],
     "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation": [
       "CapabilityStatement.rest.resource",
@@ -471,7 +495,10 @@
     "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability": [
       "CapabilityStatement",
       "CodeSystem",
+      "ConceptMap",
       "ImplementationGuide",
+      "Library",
+      "SearchParameter",
       "StructureDefinition",
       "ValueSet"
     ],
@@ -497,7 +524,13 @@
       "Observation"
     ],
     "http://hl7.org/fhir/StructureDefinition/package-source": [
-      "ImplementationGuide"
+      "CodeSystem.meta",
+      "ConceptMap.meta",
+      "ImplementationGuide",
+      "Library.meta",
+      "SearchParameter.meta",
+      "StructureDefinition.meta",
+      "ValueSet.meta"
     ],
     "http://hl7.org/fhir/StructureDefinition/procedure-method": [
       "Procedure"
@@ -511,13 +544,19 @@
     "http://hl7.org/fhir/StructureDefinition/resource-approvalDate": [
       "CapabilityStatement",
       "CodeSystem",
+      "ConceptMap",
       "ImplementationGuide",
+      "Library",
+      "SearchParameter",
       "StructureDefinition",
       "ValueSet"
     ],
     "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod": [
+      "CodeSystem",
+      "ConceptMap",
       "ImplementationGuide",
-      "StructureDefinition"
+      "StructureDefinition",
+      "ValueSet"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
       "StructureDefinition.snapshot.element"
@@ -565,6 +604,14 @@
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
       "StructureDefinition.snapshot"
+    ],
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-license": [
+      "CodeSystem.meta",
+      "ConceptMap.meta",
+      "Library.meta",
+      "SearchParameter.meta",
+      "StructureDefinition.meta",
+      "ValueSet.meta"
     ],
     "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/annotation-code": [
       "Observation.note"
@@ -646,6 +693,11 @@
     "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable": [
       "SearchParameter",
       "StructureDefinition"
+    ],
+    "version": [
+      "ConceptMap.meta",
+      "Library.meta",
+      "SearchParameter.meta"
     ]
   }
 }

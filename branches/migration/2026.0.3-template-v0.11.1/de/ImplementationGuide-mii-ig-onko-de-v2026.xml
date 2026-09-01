@@ -149,12 +149,12 @@
   <dependsOn id="de_basisprofil_r4">
     <uri value="http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4"/>
     <packageId value="de.basisprofil.r4"/>
-    <version value="1.5.4"/>
+    <version value="1.6.0"/>
   </dependsOn>
   <dependsOn id="de_medizininformatikinitiative_kerndatensatz_meta">
     <uri value="https://www.medizininformatik-initiative.de/fhir/modul-meta/ImplementationGuide/mii-ig-meta"/>
     <packageId value="de.medizininformatikinitiative.kerndatensatz.meta"/>
-    <version value="2026.0.0"/>
+    <version value="2027.0.0-ballot.rc3"/>
   </dependsOn>
   <dependsOn id="hl7_fhir_uv_xver_r5_r4">
     <uri value="http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"/>
@@ -169,12 +169,12 @@
   <dependsOn id="de_medizininformatikinitiative_kerndatensatz_base">
     <uri value="https://www.medizininformatik-initiative.de/fhir/modul-base/ImplementationGuide/mii-ig-base"/>
     <packageId value="de.medizininformatikinitiative.kerndatensatz.base"/>
-    <version value="2026.0.1"/>
+    <version value="2027.0.0-ballot.rc1"/>
   </dependsOn>
   <dependsOn id="de_medizininformatikinitiative_kerndatensatz_biobank">
     <uri value="http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.biobank/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.biobank"/>
     <packageId value="de.medizininformatikinitiative.kerndatensatz.biobank"/>
-    <version value="2026.0.1"/>
+    <version value="2027.0.0-ballot.rc1"/>
   </dependsOn>
   <dependsOn id="de_medizininformatikinitiative_kerndatensatz_laborbefund">
     <uri value="http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.laborbefund/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.laborbefund"/>
@@ -197,9 +197,9 @@
     <version value="3.0.0"/>
   </dependsOn>
   <dependsOn id="de_medizininformatikinitiative_kerndatensatz_studie">
-    <uri value="http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.studie/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.studie"/>
+    <uri value="https://www.medizininformatik-initiative.de/fhir/modul-studie/ImplementationGuide/mii-ig-studie"/>
     <packageId value="de.medizininformatikinitiative.kerndatensatz.studie"/>
-    <version value="2026.0.2"/>
+    <version value="2027.0.0-ballot.rc1"/>
   </dependsOn>
   <dependsOn id="hl7_terminology_r4">
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
@@ -1588,7 +1588,7 @@
         <reference value="ConceptMap/mii-cm-onko-allgemeiner-leistungszustand-sct"/>
       </reference>
       <name value="MII CM Onko Allgemeiner Leistungszustand SNOMED Mapping"/>
-      <description value="Mapping Allgemeiner Leistungszustand Codes zu SNOMED-CT"/>
+      <description value="Mapping Allgemeiner Leistungszustand Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1665,7 +1665,7 @@
         <reference value="ConceptMap/mii-cm-onko-tnm-uicc-sct-clinical"/>
       </reference>
       <name value="MII CM Onko Clincal TNM UICC SNOMED"/>
-      <description value="Mapping clincal TNM UICC Codes zu SNOMED-CT"/>
+      <description value="Mapping clincal TNM UICC Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1687,7 +1687,7 @@
         <reference value="ConceptMap/mii-cm-onko-genetische-variante-auspraegung-sct"/>
       </reference>
       <name value="MII CM Onko Genetische Variante Auspraegung SNOMED Mapping"/>
-      <description value="Mapping Therapieabweichung Codes zu SNOMED-CT"/>
+      <description value="Mapping Therapieabweichung Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1698,7 +1698,7 @@
         <reference value="ConceptMap/mii-cm-onko-grading-sct"/>
       </reference>
       <name value="MII CM Onko Grading SNOMED Mapping"/>
-      <description value="Mapping Grading Codes zu SNOMED-CT"/>
+      <description value="Mapping Grading Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1720,7 +1720,7 @@
         <reference value="ConceptMap/mii-cm-onko-intention-sct"/>
       </reference>
       <name value="MII CM Onko Intention SNOMED Mapping"/>
-      <description value="Mapping Intention Codes zu SNOMED-CT"/>
+      <description value="Mapping Intention Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1742,7 +1742,7 @@
         <reference value="ConceptMap/mii-cm-onko-nebenwirkung-sct"/>
       </reference>
       <name value="MII CM Onko Nebenwirkung SNOMED Mapping"/>
-      <description value="Mapping Nebenwirkung CTCAE Codes zu SNOMED-CT"/>
+      <description value="Mapping Nebenwirkung CTCAE Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1753,7 +1753,7 @@
         <reference value="ConceptMap/mii-cm-onko-operation-komplikation-sct"/>
       </reference>
       <name value="MII CM Onko Operation Komplikation SNOMED Mapping"/>
-      <description value="Mapping Operation Komplikation Codes zu SNOMED-CT"/>
+      <description value="Mapping Operation Komplikation Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1764,7 +1764,7 @@
         <reference value="ConceptMap/mii-cm-onko-tnm-uicc-sct-pathological"/>
       </reference>
       <name value="MII CM Onko Pathological TNM UICC SNOMED"/>
-      <description value="Mapping pathological TNM UICC Codes zu SNOMED-CT"/>
+      <description value="Mapping pathological TNM UICC Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1775,7 +1775,7 @@
         <reference value="ConceptMap/mii-cm-onko-primaertumor-diagnosesicherung-sct"/>
       </reference>
       <name value="MII CM Onko Primaertumor Diagnosesicherung SNOMED Mapping"/>
-      <description value="Mapping Primärtumor Diagnosesicherung Codes zu SNOMED-CT"/>
+      <description value="Mapping Primärtumor Diagnosesicherung Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1786,7 +1786,7 @@
         <reference value="ConceptMap/mii-cm-onko-residualstatus-uicc-sct"/>
       </reference>
       <name value="MII CM Onko Residualstatus UICC SNOMED"/>
-      <description value="Mapping Residualstatus UICC Codes zu SNOMED-CT"/>
+      <description value="Mapping Residualstatus UICC Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1797,7 +1797,7 @@
         <reference value="ConceptMap/mii-cm-onko-seitenlokalisation-sct"/>
       </reference>
       <name value="MII CM Onko Seitenlokalisation SNOMED Mapping"/>
-      <description value="Mapping Seitenlokalisation Codes zu SNOMED-CT"/>
+      <description value="Mapping Seitenlokalisation Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1808,7 +1808,7 @@
         <reference value="ConceptMap/mii-cm-onko-strahlentherapie-applikationsart-sct"/>
       </reference>
       <name value="MII CM Onko Strahlentherapie Applikationsart SNOMED Mapping"/>
-      <description value="Mapping Strahlentherapie Applikationsart Codes zu SNOMED-CT"/>
+      <description value="Mapping Strahlentherapie Applikationsart Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1819,7 +1819,7 @@
         <reference value="ConceptMap/mii-cm-onko-strahlentherapie-boost-sct"/>
       </reference>
       <name value="MII CM Onko Strahlentherapie Boost SNOMED Mapping"/>
-      <description value="Mapping Strahlentherapie Boost Codes zu SNOMED-CT"/>
+      <description value="Mapping Strahlentherapie Boost Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1830,7 +1830,7 @@
         <reference value="ConceptMap/mii-cm-onko-strahlentherapie-strahlenart-sct"/>
       </reference>
       <name value="MII CM Onko Strahlentherapie Strahlenart SNOMED Mapping"/>
-      <description value="Mapping Strahlentherapie Strahlenart Codes zu SNOMED-CT"/>
+      <description value="Mapping Strahlentherapie Strahlenart Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1841,7 +1841,7 @@
         <reference value="ConceptMap/mii-cm-onko-strahlentherapie-strahleneinheit-sct"/>
       </reference>
       <name value="MII CM Onko Strahlentherapie Strahleneinheit SNOMED Mapping"/>
-      <description value="Mapping Strahlentherapie Strahleneinheit Codes zu SNOMED-CT"/>
+      <description value="Mapping Strahlentherapie Strahleneinheit Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1852,7 +1852,7 @@
         <reference value="ConceptMap/mii-cm-onko-strahlentherapie-zielgebiet-sct"/>
       </reference>
       <name value="MII CM Onko Strahlentherapie Zielgebiet SNOMED Mapping"/>
-      <description value="Mapping Strahlentherapie Zielgebiet Codes zu SNOMED-CT"/>
+      <description value="Mapping Strahlentherapie Zielgebiet Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1863,7 +1863,7 @@
         <reference value="ConceptMap/mii-cm-onko-studienteilnahme-sct"/>
       </reference>
       <name value="MII CM Onko Studienteilnahme SNOMED Mapping"/>
-      <description value="Mapping Studienteilnahme Status Codes zu SNOMED-CT"/>
+      <description value="Mapping Studienteilnahme Status Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1874,7 +1874,7 @@
         <reference value="ConceptMap/mii-cm-onko-therapie-ende-sct"/>
       </reference>
       <name value="MII CM Onko Therapie Ende SNOMED Mapping"/>
-      <description value="Mapping Therapie Ende Codes zu SNOMED-CT"/>
+      <description value="Mapping Therapie Ende Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1885,7 +1885,7 @@
         <reference value="ConceptMap/mii-cm-onko-therapie-stellung-sct"/>
       </reference>
       <name value="MII CM Onko Therapie Stellung SNOMED Mapping"/>
-      <description value="Mapping Therapie Stellung Codes zu SNOMED-CT"/>
+      <description value="Mapping Therapie Stellung Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1896,7 +1896,7 @@
         <reference value="ConceptMap/mii-cm-onko-therapie-typ-sct"/>
       </reference>
       <name value="MII CM Onko Therapie Typ SNOMED Mapping"/>
-      <description value="Mapping Therapie Typ Codes zu SNOMED-CT"/>
+      <description value="Mapping Therapie Typ Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1907,7 +1907,7 @@
         <reference value="ConceptMap/mii-cm-onko-therapieabweichung-sct"/>
       </reference>
       <name value="MII CM Onko Therapieabweichung SNOMED Mapping"/>
-      <description value="Mapping Therapieabweichung Codes zu SNOMED-CT"/>
+      <description value="Mapping Therapieabweichung Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1918,7 +1918,7 @@
         <reference value="ConceptMap/mii-cm-onko-therapieplanung-sct"/>
       </reference>
       <name value="MII CM Onko Therapieplanung SNOMED Mapping"/>
-      <description value="Mapping Therapieplanung Codes zu SNOMED-CT"/>
+      <description value="Mapping Therapieplanung Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1929,7 +1929,7 @@
         <reference value="ConceptMap/mii-cm-onko-tod-sct"/>
       </reference>
       <name value="MII CM Onko Tod SNOMED Mapping"/>
-      <description value="Mapping Tod Codes zu SNOMED-CT"/>
+      <description value="Mapping Tod Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1940,7 +1940,7 @@
         <reference value="ConceptMap/mii-cm-onko-verlauf-fernmetastasen-sct"/>
       </reference>
       <name value="MII CM Onko Verlauf Fernmetastasen SNOMED Mapping"/>
-      <description value="Mapping Verlauf Fernmetastasen Codes zu SNOMED-CT"/>
+      <description value="Mapping Verlauf Fernmetastasen Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1951,7 +1951,7 @@
         <reference value="ConceptMap/mii-cm-onko-verlauf-gesamtbeurteilung-sct"/>
       </reference>
       <name value="MII CM Onko Verlauf Gesamtbeurteilung SNOMED Mapping"/>
-      <description value="Mapping Gesamtbeurteilung Codes zu SNOMED-CT"/>
+      <description value="Mapping Gesamtbeurteilung Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1962,7 +1962,7 @@
         <reference value="ConceptMap/mii-cm-onko-verlauf-lymphknoten-sct"/>
       </reference>
       <name value="MII CM Onko Verlauf Lymphknoten SNOMED Mapping"/>
-      <description value="Mapping Lymphknoten Codes zu SNOMED-CT"/>
+      <description value="Mapping Lymphknoten Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1973,7 +1973,7 @@
         <reference value="ConceptMap/mii-cm-onko-verlauf-primaertumor-sct"/>
       </reference>
       <name value="MII CM Onko Verlauf Primaertumor SNOMED Mapping"/>
-      <description value="Mapping Verlauf-Primaertumor Codes zu SNOMED-CT"/>
+      <description value="Mapping Verlauf-Primaertumor Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

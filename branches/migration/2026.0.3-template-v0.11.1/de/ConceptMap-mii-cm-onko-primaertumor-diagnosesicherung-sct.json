@@ -1,17 +1,136 @@
 {
   "resourceType" : "ConceptMap",
   "id" : "mii-cm-onko-primaertumor-diagnosesicherung-sct",
+  "meta" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-license",
+      "valueCode" : "CC-BY-4.0"
+    },
+    {
+      "extension" : [{
+        "url" : "packageId",
+        "valueId" : "de.medizininformatikinitiative.kerndatensatz.onkologie"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/package-source"
+    },
+    {
+      "url" : "version",
+      "valueString" : "2026.0.3"
+    }],
+    "profile" : ["http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableconceptmap",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableconceptmap"]
+  },
   "language" : "de",
   "text" : {
     "status" : "generated",
-    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap mii-cm-onko-primaertumor-diagnosesicherung-sct</b></p><a name=\"de-mii-cm-onko-primaertumor-diagnosesicherung-sct\"> </a><a name=\"de-hcmii-cm-onko-primaertumor-diagnosesicherung-sct\"> </a><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <a href=\"CodeSystem-mii-cs-onko-primaertumor-diagnosesicherung.html\">MII CS Onkologie Primärtumor Diagnosesicherung</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>1 (klinisch)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>373795004 (Cancer diagnosis based on clinical evidence (finding))</td><td/></tr><tr><td>2 (klinische Diagnostik)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>373796003 (Cancer diagnosis based on investigations, without a tissue diagnosis (finding))</td><td>übergreifender Begriff, gültig für alle diagnostischen Mittel</td></tr><tr><td/><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-narrower\" title=\"narrower\">narrower</a></td><td>363680008 (Radiographic imaging procedure (procedure))</td><td>Röntgen als Spezifizierung</td></tr><tr><td/><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-narrower\" title=\"narrower\">narrower</a></td><td>423827005 (Endoscopy (procedure))</td><td>Endoskopie als Spezifizierung</td></tr><tr><td/><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-narrower\" title=\"narrower\">narrower</a></td><td>363679005 (Imaging (procedure))</td><td>Imaging als Spezifizierung</td></tr><tr><td/><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-narrower\" title=\"narrower\">narrower</a></td><td>16310003 (Ultrasonography (procedure))</td><td>Ultraschall als Spezifizierung</td></tr><tr><td/><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-narrower\" title=\"narrower\">narrower</a></td><td>122458006 (Exploration procedure (procedure))</td><td>Explorativer Eingriff als Spezifizierung</td></tr><tr><td>4 (spezifische Tumor-Marker)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>373797007 (Cancer diagnosis based on specific tumor markers (finding))</td><td/></tr><tr><td>5 (Zytologie)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>373798002 (Cancer diagnosis based on cytological evidence (finding))</td><td/></tr><tr><td>6 (histologische Untersuchung einer Metastase)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>373799005 (Cancer diagnosis based on metastatic histological evidence (finding))</td><td>Auswahlmöglichkeit veraltet, entspricht 7.2</td></tr><tr><td>7 (histologische Untersuchung eines Primärtumors)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>373800009 (Cancer diagnosis based on primary site histological evidence (finding))</td><td>Auswahlmöglichkeit veraltet, entspricht 7.1</td></tr><tr><td>7.1 (histologische Untersuchung eines Primärtumors)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>373800009 (Cancer diagnosis based on primary site histological evidence (finding))</td><td/></tr><tr><td>7.2 (histologische Untersuchung einer Metastase)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>373799005 (Cancer diagnosis based on metastatic histological evidence (finding))</td><td/></tr><tr><td>7.3 (histologische Untersuchung des Gewebes bei Autopsie)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">keine direktes Mapping möglich, ggfs. über Postkoordination mit Autopsie -Prozedur</td></tr><tr><td>8 (Zytogenetisch und/oder molekularer Test)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>394804000 (Clinical cytogenetics and molecular genetics (qualifier value))</td><td/></tr><tr><td>9 (unbekannt)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>261665006 (Unknown (qualifier value))</td><td/></tr></table></div>"
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap mii-cm-onko-primaertumor-diagnosesicherung-sct</b></p><a name=\"de-mii-cm-onko-primaertumor-diagnosesicherung-sct\"> </a><a name=\"de-hcmii-cm-onko-primaertumor-diagnosesicherung-sct\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareableconceptmap.html\">CRMI Shareable ConceptMap</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishableconceptmap.html\">CRMI Publishable ConceptMap</a></p></div><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <a href=\"CodeSystem-mii-cs-onko-primaertumor-diagnosesicherung.html\">MII CS Onkologie Primärtumor Diagnosesicherung</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>1 (klinisch)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>373795004 (Cancer diagnosis based on clinical evidence (finding))</td><td/></tr><tr><td>2 (klinische Diagnostik)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>373796003 (Cancer diagnosis based on investigations, without a tissue diagnosis (finding))</td><td>übergreifender Begriff, gültig für alle diagnostischen Mittel</td></tr><tr><td/><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-narrower\" title=\"narrower\">narrower</a></td><td>363680008 (Radiographic imaging procedure (procedure))</td><td>Röntgen als Spezifizierung</td></tr><tr><td/><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-narrower\" title=\"narrower\">narrower</a></td><td>423827005 (Endoscopy (procedure))</td><td>Endoskopie als Spezifizierung</td></tr><tr><td/><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-narrower\" title=\"narrower\">narrower</a></td><td>363679005 (Imaging (procedure))</td><td>Imaging als Spezifizierung</td></tr><tr><td/><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-narrower\" title=\"narrower\">narrower</a></td><td>16310003 (Ultrasonography (procedure))</td><td>Ultraschall als Spezifizierung</td></tr><tr><td/><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-narrower\" title=\"narrower\">narrower</a></td><td>122458006 (Exploration procedure (procedure))</td><td>Explorativer Eingriff als Spezifizierung</td></tr><tr><td>4 (spezifische Tumor-Marker)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>373797007 (Cancer diagnosis based on specific tumor markers (finding))</td><td/></tr><tr><td>5 (Zytologie)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>373798002 (Cancer diagnosis based on cytological evidence (finding))</td><td/></tr><tr><td>6 (histologische Untersuchung einer Metastase)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>373799005 (Cancer diagnosis based on metastatic histological evidence (finding))</td><td>Auswahlmöglichkeit veraltet, entspricht 7.2</td></tr><tr><td>7 (histologische Untersuchung eines Primärtumors)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>373800009 (Cancer diagnosis based on primary site histological evidence (finding))</td><td>Auswahlmöglichkeit veraltet, entspricht 7.1</td></tr><tr><td>7.1 (histologische Untersuchung eines Primärtumors)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>373800009 (Cancer diagnosis based on primary site histological evidence (finding))</td><td/></tr><tr><td>7.2 (histologische Untersuchung einer Metastase)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>373799005 (Cancer diagnosis based on metastatic histological evidence (finding))</td><td/></tr><tr><td>7.3 (histologische Untersuchung des Gewebes bei Autopsie)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">keine direktes Mapping möglich, ggfs. über Postkoordination mit Autopsie -Prozedur</td></tr><tr><td>8 (Zytogenetisch und/oder molekularer Test)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>394804000 (Clinical cytogenetics and molecular genetics (qualifier value))</td><td/></tr><tr><td>9 (unbekannt)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>261665006 (Unknown (qualifier value))</td><td/></tr></table></div>"
   },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "shareable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "publishable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes",
+        "code" : "package",
+        "display" : "Package"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
+    "valueDate" : "2026-01-03"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+        "code" : "C3262"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-author",
+    "valueContactDetail" : {
+      "telecom" : [{
+        "system" : "email",
+        "value" : "thomas.debertshaeuser@charite.de"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-editor",
+    "valueContactDetail" : {
+      "name" : "Taskforce Core Data Set"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+    "valueContactDetail" : {
+      "name" : "Interoperability Working Group",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+    "valueContactDetail" : {
+      "name" : "National Steering Committee",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+    "valueContactDetail" : {
+      "name" : "Interoperability Working Group",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+    "valueContactDetail" : {
+      "name" : "National Steering Committee",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/version-algorithm",
+      "code" : "semver",
+      "display" : "SemVer"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+    "valuePeriod" : {
+      "start" : "2026"
+    }
+  }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-primaertumor-diagnosesicherung-sct",
   "version" : "2026.0.3",
   "name" : "MII CM Onko Primaertumor Diagnosesicherung SCT Mapping",
   "title" : "MII CM Onko Primaertumor Diagnosesicherung SNOMED Mapping",
   "status" : "active",
-  "experimental" : false,
+  "experimental" : true,
   "date" : "2024-04-10",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
@@ -21,7 +140,7 @@
       "value" : "https://www.medizininformatik-initiative.de/"
     }]
   }],
-  "description" : "Mapping Primärtumor Diagnosesicherung Codes zu SNOMED-CT",
+  "description" : "Mapping Primärtumor Diagnosesicherung Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

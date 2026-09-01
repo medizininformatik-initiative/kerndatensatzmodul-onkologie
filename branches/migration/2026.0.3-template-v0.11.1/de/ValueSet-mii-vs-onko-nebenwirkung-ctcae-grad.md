@@ -37,6 +37,25 @@ oBDS-spezifisches ValueSet für Nebenwirkung nach CTCAE-Grad
   "resourceType" : "ValueSet",
   "id" : "mii-vs-onko-nebenwirkung-ctcae-grad",
   "meta" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-license",
+      "valueCode" : "CC-BY-4.0"
+    },
+    {
+      "extension" : [{
+        "url" : "packageId",
+        "valueId" : "de.medizininformatikinitiative.kerndatensatz.onkologie"
+      },
+      {
+        "url" : "version",
+        "valueString" : "2026.0.3"
+      },
+      {
+        "url" : "uri",
+        "valueUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/package-source"
+    }],
     "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset",
     "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset",
     "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-computablevalueset"]
@@ -130,6 +149,20 @@ oBDS-spezifisches ValueSet für Nebenwirkung nach CTCAE-Grad
         "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
       }]
     }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/version-algorithm",
+      "code" : "semver",
+      "display" : "SemVer"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+    "valuePeriod" : {
+      "start" : "2026"
+    }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-nebenwirkung-ctcae-grad",
   "version" : "2026.0.3",
@@ -137,7 +170,7 @@ oBDS-spezifisches ValueSet für Nebenwirkung nach CTCAE-Grad
   "title" : "MII VS Onkologie Nebenwirkung nach CTCAE Grad",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-01T19:43:49+00:00",
+  "date" : "2026-09-01T20:38:11+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
