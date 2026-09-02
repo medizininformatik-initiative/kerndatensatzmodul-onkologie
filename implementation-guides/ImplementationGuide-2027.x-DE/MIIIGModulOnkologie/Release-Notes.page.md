@@ -6,7 +6,7 @@ topic: ReleaseNotes
 ## {{page-title}}
 Hier sind alle Änderungen aufgelistet. 
 
-## Änderungen v2027.0.0 (noch nicht veröffentlicht)
+## Änderungen v2027.0.0-ballot.rc1 (Ballot-Kandidat, noch nicht veröffentlicht)
 
 ### ⚠️ Breaking Changes
 

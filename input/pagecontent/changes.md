@@ -5,7 +5,7 @@ All changes to this module are listed here. The complete, detailed release
 history is maintained in the German edition of this page; the current release
 cycle is translated in full below.
 
-### Changes v2027.0.0 (not yet released)
+### Changes v2027.0.0-ballot.rc1 (ballot candidate, not yet released)
 
 #### ⚠️ Breaking Changes
 

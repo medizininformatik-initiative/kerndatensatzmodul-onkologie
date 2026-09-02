@@ -151,7 +151,7 @@
     }
   ],
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie",
-  "version": "2026.0.3",
+  "version": "2027.0.0-ballot.rc1",
   "name": "MII_PR_Onko_TNM_N_Kategorie",
   "title": "MII PR Onkologie TNM N-Kategorie",
   "status": "active",
@@ -198,6 +198,20 @@
         "id": "Observation.meta.profile",
         "path": "Observation.meta.profile",
         "mustSupport": true
+      },
+      {
+        "id": "Observation.modifierExtension",
+        "path": "Observation.modifierExtension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
       },
       {
         "id": "Observation.modifierExtension:yPraefix",
