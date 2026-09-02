@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-diagnose-angiosarkom-nach-radiatio"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor|2026.0.3"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="extensions"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Condition mii-exa-onko-diagnose-angiosarkom-nach-radiatio</b></p><a name="de-mii-exa-onko-diagnose-angiosarkom-nach-radiatio"> </a><a name="de-hcmii-exa-onko-diagnose-angiosarkom-nach-radiatio"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-diagnose-primaertumor.html">MII PR Onkologie Diagnose Primärtumor</a> version: 2026.0.3</p></div><p><b>Condition Asserted Date</b>: 2026-07-01</p><p><b>MII EX Onko Histology Morphology Behavior ICDO3</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/icd-o-3 9120/3}">Hämangiosarkom</span></p><p><b>Condition Due To</b>: <a href="Procedure-mii-exa-onko-strahlentherapie-strahlentherapie-1.html">Procedure 8-52</a></p><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}">Active</span></p><p><b>verificationStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}, {https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung 7}">histologische Untersuchung eines Primärtumors</span></p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 55342001}">Neoplastic disease</span></p><p><b>code</b>: <span title="Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm C49.3}">Bösartige Neubildung: Bindegewebe und andere Weichteilgewebe des Thorax</span></p><p><b>bodySite</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/icd-o-3 C49.3}">Bindegewebe des Thorax</span></p><p><b>subject</b>: <a href="Patient-example.html">Erika Beispiel  Female, DoB: 1965-04-12</a></p><p><b>recordedDate</b>: 2026-07-01</p></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/condition-assertedDate">
+    <valueDateTime value="2026-07-01"/>
+  </extension>
+  <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/icd-o-3"/>
+        <version value="2019"/>
+        <code value="9120/3"/>
+        <display value="Hämangiosarkom"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/condition-dueTo">
+    <valueReference>
+      <reference value="Procedure/mii-exa-onko-strahlentherapie-strahlentherapie-1"/>
+    </valueReference>
+  </extension>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="active"/>
+    </coding>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+      <code value="confirmed"/>
+    </coding>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung"/>
+      <code value="7"/>
+      <display value="histologische Untersuchung eines Primärtumors"/>
+    </coding>
+  </verificationStatus>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="55342001"/>
+      <display value="Neoplastic disease"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://fhir.de/CodeSystem/bfarm/icd-10-gm"/>
+      <version value="2026"/>
+      <code value="C49.3"/>
+      <display value="Bösartige Neubildung: Bindegewebe und andere Weichteilgewebe des Thorax"/>
+    </coding>
+  </code>
+  <bodySite>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/icd-o-3"/>
+      <code value="C49.3"/>
+      <display value="Bindegewebe des Thorax"/>
+    </coding>
+  </bodySite>
+  <subject>
+    <reference value="Patient/example"/>
+  </subject>
+  <recordedDate value="2026-07-01"/>
+</Condition>

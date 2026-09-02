@@ -1,0 +1,63 @@
+{
+  "resourceType" : "Observation",
+  "id" : "mii-exa-onko-mamma-rezeptorstatus-estrogen-1",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-rezeptorstatus-estrogen|2026.0.3"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-mamma-rezeptorstatus-estrogen-1</b></p><a name=\"mii-exa-onko-mamma-rezeptorstatus-estrogen-1\"> </a><a name=\"hcmii-exa-onko-mamma-rezeptorstatus-estrogen-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-mamma-rezeptorstatus-estrogen.html\">MII PR Onkologie Rezeptorstatus Estrogen</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 40556-3}\">Estrogen receptor Ag [Presence] in Tissue by Immune stain</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-mamma-bundle-patient.html\">Martha MammaCa  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: <a href=\"Condition-mii-exa-onko-mamma-diagnose.html\">Condition Bösartige Neubildung: Unterer innerer Quadrant der Brustdrüse</a></p><p><b>value</b>: <span title=\"Codes:{http://loinc.org LA6576-8}\">Positive</span></p><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 1234804006}\">Percent of cells with estrogen receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)</span></p><p><b>value</b>: 5 %</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 1236874005}\">Intensity of stain of estrogen receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)</span></p><p><b>value</b>: <span title=\"Codes:{http://loinc.org LA13034-6}\">Weak</span></p></blockquote></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "40556-3",
+      "display" : "Estrogen receptor Ag [Presence] in Tissue by Immune stain"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/mii-exa-onko-mamma-bundle-patient"
+  },
+  "focus" : [{
+    "reference" : "Condition/mii-exa-onko-mamma-diagnose"
+  }],
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "LA6576-8",
+      "display" : "Positive"
+    }]
+  },
+  "component" : [{
+    "code" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "1234804006",
+        "display" : "Percent of cells with estrogen receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
+      }]
+    },
+    "valueQuantity" : {
+      "value" : 5,
+      "unit" : "%",
+      "system" : "http://unitsofmeasure.org"
+    }
+  },
+  {
+    "code" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "1236874005",
+        "display" : "Intensity of stain of estrogen receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
+      }]
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "LA13034-6",
+        "display" : "Weak"
+      }]
+    }
+  }]
+}

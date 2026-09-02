@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-tumorgroesse"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorgroesse"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-onko-tumorgroesse</b></p><a name="de-mii-exa-onko-tumorgroesse"> </a><a name="de-hcmii-exa-onko-tumorgroesse"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-tumorgroesse.html">MII PR Onkologie Tumorgröße</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://loinc.org 21889-1}, {http://snomed.info/sct 371479009}">Size Tumor</span></p><p><b>subject</b>: <a href="Patient-example.html">Erika Beispiel  Female, DoB: 1965-04-12</a></p><p><b>focus</b>: <a href="Condition-primaertumor-example.html">Condition Bösartige Neubildung: Brustdrüse, nicht näher bezeichnet</a></p><p><b>effective</b>: 2024-03-15</p><p><b>value</b>: 25 mm<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemm = 'mm')</span></p><p><b>bodySite</b>: <span title="Codes:{http://snomed.info/sct 80248007}">Left breast structure (body structure)</span></p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="21889-1"/>
+      <display value="Size Tumor"/>
+    </coding>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="371479009"/>
+      <display value="Tumor size, largest dimension (observable entity)"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/example"/>
+  </subject>
+  <focus>
+    <reference value="Condition/primaertumor-example"/>
+  </focus>
+  <effectiveDateTime value="2024-03-15"/>
+  <valueQuantity>
+    <value value="25"/>
+    <unit value="mm"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="mm"/>
+  </valueQuantity>
+  <bodySite>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="80248007"/>
+      <display value="Left breast structure (body structure)"/>
+    </coding>
+  </bodySite>
+</Observation>

@@ -1,0 +1,713 @@
+{
+  "package": "de.medizininformatikinitiative.kerndatensatz.onkologie",
+  "version": "2026.0.3",
+  "fhirVersion": "4.0.1",
+  "jurisdiction": "DE",
+  "extensions": [
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3",
+      "title": "MII EX Onko Histology Morphology Behavior ICDO3",
+      "types": [
+        "CodeableConcept",
+        "string",
+        "Extension",
+        "Coding",
+        "string",
+        "Extension",
+        "uri",
+        "string",
+        "code",
+        "string",
+        "boolean",
+        "string"
+      ]
+    },
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-nebenwirkung-ctcae-version",
+      "title": "MII EX Onkologie Nebenwirkung CTCAE-Version",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention",
+      "title": "MII EX Onko Operation Intention",
+      "types": [
+        "CodeableConcept",
+        "string",
+        "Extension",
+        "Coding",
+        "string",
+        "Extension",
+        "uri",
+        "string",
+        "code",
+        "string",
+        "boolean",
+        "string"
+      ]
+    },
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-urgency",
+      "title": "MII EX Onko Operation Urgency",
+      "types": [
+        "CodeableConcept",
+        "string",
+        "Extension",
+        "Coding",
+        "string",
+        "Extension",
+        "uri",
+        "string",
+        "code",
+        "string",
+        "boolean",
+        "string"
+      ]
+    },
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-boost",
+      "title": "MII EX Onko Strahlentherapie Bestrahlung Boost",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis",
+      "title": "MII EX Onko Strahlentherapie Bestrahlung Einzeldosis",
+      "types": [
+        "Quantity",
+        "string",
+        "Extension",
+        "decimal",
+        "code",
+        "string",
+        "uri",
+        "code"
+      ]
+    },
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis",
+      "title": "MII EX Onko Strahlentherapie Bestrahlung Gesamtdosis",
+      "types": [
+        "Quantity",
+        "string",
+        "Extension",
+        "decimal",
+        "code",
+        "string",
+        "uri",
+        "code"
+      ]
+    },
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation",
+      "title": "MII EX Onko Strahlentherapie Bestrahlung Seitenlokalisation",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention",
+      "title": "MII EX Onko Strahlentherapie Intention",
+      "types": [
+        "CodeableConcept",
+        "string",
+        "Extension",
+        "Coding",
+        "string",
+        "Extension",
+        "uri",
+        "string",
+        "code",
+        "string",
+        "boolean",
+        "string"
+      ]
+    },
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop",
+      "title": "MII EX Onko Strahlentherapie Stellung zur OP",
+      "types": [
+        "CodeableConcept",
+        "string",
+        "Extension",
+        "Coding",
+        "string",
+        "Extension",
+        "uri",
+        "string",
+        "code",
+        "string",
+        "boolean",
+        "string"
+      ]
+    },
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention",
+      "title": "MII EX Onko Systemische Therapie Intention",
+      "types": [
+        "CodeableConcept",
+        "string",
+        "Extension",
+        "Coding",
+        "string",
+        "Extension",
+        "uri",
+        "string",
+        "code",
+        "string",
+        "boolean",
+        "string"
+      ]
+    },
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellungzurop",
+      "title": "MII EX Onko Systemische Therapie Stellung zur OP",
+      "types": [
+        "CodeableConcept",
+        "string",
+        "Extension",
+        "Coding",
+        "string",
+        "Extension",
+        "uri",
+        "string",
+        "code",
+        "string",
+        "boolean",
+        "string"
+      ]
+    },
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-a-praefix",
+      "title": "MII EX Onkologie TNM a-Präfix",
+      "types": [
+        "CodeableConcept",
+        "string",
+        "Extension",
+        "Coding",
+        "string",
+        "Extension",
+        "uri",
+        "string",
+        "code",
+        "string",
+        "boolean",
+        "string"
+      ]
+    },
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix",
+      "title": "MII EX Onkologie TNM c/p Präfix",
+      "types": [
+        "CodeableConcept",
+        "string",
+        "Extension",
+        "Coding",
+        "string",
+        "Extension",
+        "uri",
+        "string",
+        "code",
+        "string",
+        "boolean",
+        "string"
+      ]
+    },
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-itc-suffix",
+      "title": "MII EX Onkologie TNM ITC Suffix",
+      "types": [
+        "CodeableConcept",
+        "string",
+        "Extension",
+        "Coding",
+        "string",
+        "Extension",
+        "uri",
+        "string",
+        "code",
+        "string",
+        "boolean",
+        "string"
+      ]
+    },
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-r-praefix",
+      "title": "MII EX Onkologie TNM r-Präfix",
+      "types": [
+        "CodeableConcept",
+        "string",
+        "Extension",
+        "Coding",
+        "string",
+        "Extension",
+        "uri",
+        "string",
+        "code",
+        "string",
+        "boolean",
+        "string"
+      ]
+    },
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-sn-suffix",
+      "title": "MII EX Onkologie TNM SN Suffix",
+      "types": [
+        "CodeableConcept",
+        "string",
+        "Extension",
+        "Coding",
+        "string",
+        "Extension",
+        "uri",
+        "string",
+        "code",
+        "string",
+        "boolean",
+        "string"
+      ]
+    },
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-y-praefix",
+      "title": "MII EX Onkologie TNM y-Präfix",
+      "types": [
+        "CodeableConcept",
+        "string",
+        "Extension",
+        "Coding",
+        "string",
+        "Extension",
+        "uri",
+        "string",
+        "code",
+        "string",
+        "boolean",
+        "string"
+      ]
+    },
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-transformation-von",
+      "title": "MII EX Onkologie Transformation von",
+      "types": [
+        "Reference"
+      ]
+    }
+  ],
+  "profiles": {
+    "Observation": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumormarker",
+        "title": "MII PR Onkologie Tumormarker"
+      },
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf",
+        "title": "MII PR Onkologie Verlauf"
+      },
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen",
+        "title": "MII PR Onkologie Weitere Klassifikationen"
+      }
+    ],
+    "DiagnosticReport": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-befund",
+        "title": "MII PR Onkologie Befund"
+      }
+    ],
+    "Condition": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung",
+        "title": "MII PR Onkologie Frühere Tumorerkrankung"
+      }
+    ],
+    "Procedure": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie",
+        "title": "MII PR Onkologie Systemische Therapie"
+      }
+    ],
+    "Specimen": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-specimen",
+        "title": "MII PR Onkologie Specimen"
+      }
+    ],
+    "List": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-liste-evidenz-erstdiagnose",
+        "title": "MII PR Onkologie Evidenz Diagnose Primärtumor"
+      }
+    ],
+    "AdverseEvent": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event",
+        "title": "MII PR Onkologie Nebenwirkung von Strahlentherapie und systemische Therapie"
+      }
+    ],
+    "MedicationStatement": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation",
+        "title": "MII PR Onkologie Systemische Therapie Medikation"
+      }
+    ],
+    "RequestGroup": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie",
+        "title": "MII PR Onkologie Therapieempfehlung Kombinationstherapie"
+      }
+    ],
+    "MedicationRequest": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation",
+        "title": "MII PR Onkologie Therapieempfehlung Medikation"
+      }
+    ],
+    "ServiceRequest": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-operation",
+        "title": "MII PR Onkologie Therapieempfehlung Operation"
+      }
+    ],
+    "CarePlan": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz",
+        "title": "MII PR Onkologie Tumorkonferenz"
+      }
+    ]
+  },
+  "usage": {
+    "http://fhir.de/StructureDefinition/ProzedurDokumentationsdatum": [
+      "Procedure"
+    ],
+    "http://fhir.de/StructureDefinition/icd-10-gm-diagnosesicherheit": [
+      "Condition.code.coding"
+    ],
+    "http://fhir.de/StructureDefinition/icd-10-gm-mehrfachcodierungs-kennzeichen": [
+      "Condition.code.coding"
+    ],
+    "http://fhir.de/StructureDefinition/lebensphase": [
+      "Condition.onset[x]",
+      "Condition.onset[x].end",
+      "Condition.onset[x].start"
+    ],
+    "http://fhir.de/StructureDefinition/seitenlokalisation": [
+      "Condition.code.coding",
+      "Procedure.code.coding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/artifact-author": [
+      "CapabilityStatement",
+      "CodeSystem",
+      "ConceptMap",
+      "ImplementationGuide",
+      "Library",
+      "SearchParameter",
+      "StructureDefinition",
+      "ValueSet"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/artifact-editor": [
+      "CapabilityStatement",
+      "CodeSystem",
+      "ConceptMap",
+      "ImplementationGuide",
+      "Library",
+      "SearchParameter",
+      "StructureDefinition",
+      "ValueSet"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/artifact-endorser": [
+      "CapabilityStatement",
+      "CodeSystem",
+      "ConceptMap",
+      "ImplementationGuide",
+      "Library",
+      "SearchParameter",
+      "StructureDefinition",
+      "ValueSet"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/artifact-purpose": [
+      "ImplementationGuide"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/artifact-reviewer": [
+      "CapabilityStatement",
+      "CodeSystem",
+      "ConceptMap",
+      "ImplementationGuide",
+      "Library",
+      "SearchParameter",
+      "StructureDefinition",
+      "ValueSet"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/artifact-topic": [
+      "CapabilityStatement",
+      "CodeSystem",
+      "ConceptMap",
+      "ImplementationGuide",
+      "Library",
+      "StructureDefinition",
+      "ValueSet"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/artifact-usage": [
+      "CapabilityStatement",
+      "ImplementationGuide",
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm": [
+      "CodeSystem",
+      "ConceptMap",
+      "ImplementationGuide",
+      "Library",
+      "SearchParameter",
+      "StructureDefinition",
+      "ValueSet"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy": [
+      "CapabilityStatement",
+      "CodeSystem",
+      "ConceptMap",
+      "ImplementationGuide",
+      "Library",
+      "SearchParameter",
+      "StructureDefinition",
+      "ValueSet"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/bodySite": [
+      "Condition.bodySite",
+      "Observation",
+      "Procedure.bodySite"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation": [
+      "CapabilityStatement.rest.resource",
+      "CapabilityStatement.rest.resource.interaction",
+      "CapabilityStatement.rest.resource.searchParam",
+      "CapabilityStatement.rest.resource.supportedProfile"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/condition-assertedDate": [
+      "Bundle.entry.resource",
+      "Condition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/condition-dueTo": [
+      "Condition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/condition-occurredFollowing": [
+      "Condition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/condition-related": [
+      "Condition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/cqf-expansionParameters": [
+      "ImplementationGuide"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability": [
+      "CapabilityStatement",
+      "CodeSystem",
+      "ConceptMap",
+      "ImplementationGuide",
+      "Library",
+      "SearchParameter",
+      "StructureDefinition",
+      "ValueSet"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/extension-quantity-translation": [
+      "Observation.value[x]"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/observation-secondaryFinding": [
+      "Observation"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/package-source": [
+      "CodeSystem.meta",
+      "ConceptMap.meta",
+      "ImplementationGuide",
+      "Library.meta",
+      "SearchParameter.meta",
+      "StructureDefinition.meta",
+      "ValueSet.meta"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/procedure-method": [
+      "Procedure"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/quantity-precision": [
+      "Observation.value[x].value"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/regex": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/resource-approvalDate": [
+      "CapabilityStatement",
+      "CodeSystem",
+      "ConceptMap",
+      "ImplementationGuide",
+      "Library",
+      "SearchParameter",
+      "StructureDefinition",
+      "ValueSet"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod": [
+      "CodeSystem",
+      "ConceptMap",
+      "ImplementationGuide",
+      "StructureDefinition",
+      "ValueSet"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/translation": [
+      "ImplementationGuide.definition.page.page.page.title",
+      "ImplementationGuide.definition.page.page.title",
+      "ImplementationGuide.definition.page.title",
+      "ImplementationGuide.title",
+      "StructureDefinition.description",
+      "StructureDefinition.differential.element.definition",
+      "StructureDefinition.differential.element.short",
+      "StructureDefinition.snapshot.element.definition",
+      "StructureDefinition.snapshot.element.short",
+      "StructureDefinition.title"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name": [
+      "ImplementationGuide.definition.page",
+      "ImplementationGuide.definition.page.page",
+      "ImplementationGuide.definition.page.page.page"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
+      "StructureDefinition.snapshot"
+    ],
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-license": [
+      "CodeSystem.meta",
+      "ConceptMap.meta",
+      "Library.meta",
+      "SearchParameter.meta",
+      "StructureDefinition.meta",
+      "ValueSet.meta"
+    ],
+    "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/annotation-code": [
+      "Observation.note"
+    ],
+    "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/repeat-motif-order": [
+      "Observation.component"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/InterpretationsbeeinflussendeEigenschaft": [
+      "Observation"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/QuelleKlinischesBezugsdatum": [
+      "Observation.effective[x]"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht": [
+      "Procedure"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3": [
+      "Bundle.entry.resource",
+      "Condition"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-nebenwirkung-ctcae-version": [
+      "AdverseEvent"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention": [
+      "Bundle.entry.resource",
+      "Procedure"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-urgency": [
+      "Procedure"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-boost": [
+      "Procedure"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis": [
+      "Procedure"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis": [
+      "Procedure"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation": [
+      "Procedure.bodySite"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention": [
+      "Procedure"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop": [
+      "Procedure"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention": [
+      "Bundle.entry.resource",
+      "Procedure"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellungzurop": [
+      "Bundle.entry.resource",
+      "Procedure"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-a-praefix": [
+      "Observation"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix": [
+      "Bundle.entry.resource.code",
+      "Observation.code"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-itc-suffix": [
+      "Observation.valueCodeableConcept",
+      "Observation.value[x]"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-r-praefix": [
+      "Observation"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-sn-suffix": [
+      "Observation.valueCodeableConcept",
+      "Observation.value[x]"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-y-praefix": [
+      "Bundle.entry.resource",
+      "Observation"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-transformation-von": [
+      "Condition"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable": [
+      "SearchParameter",
+      "StructureDefinition"
+    ],
+    "version": [
+      "ConceptMap.meta",
+      "Library.meta",
+      "SearchParameter.meta"
+    ]
+  }
+}

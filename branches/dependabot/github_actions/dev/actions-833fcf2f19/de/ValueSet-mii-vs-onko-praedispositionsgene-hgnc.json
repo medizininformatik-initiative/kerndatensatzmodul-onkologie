@@ -1,0 +1,602 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-onko-praedispositionsgene-hgnc",
+  "meta" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-license",
+      "valueCode" : "CC-BY-4.0"
+    },
+    {
+      "extension" : [{
+        "url" : "packageId",
+        "valueId" : "de.medizininformatikinitiative.kerndatensatz.onkologie"
+      },
+      {
+        "url" : "version",
+        "valueString" : "2026.0.3"
+      },
+      {
+        "url" : "uri",
+        "valueUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/package-source"
+    }],
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-computablevalueset"]
+  },
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-onko-praedispositionsgene-hgnc</b></p><a name=\"de-mii-vs-onko-praedispositionsgene-hgnc\"> </a><a name=\"de-hcmii-vs-onko-praedispositionsgene-hgnc\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablevalueset.html\">Shareable ValueSet</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareablevalueset.html\">CRMI Shareable ValueSet</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishablevalueset.html\">CRMI Publishable ValueSet</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-computablevalueset.html\">CRMI Computable ValueSet</a></p></div><ul><li>Include these codes as defined in <code>http://www.genenames.org/geneId</code><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>HGNC:427</td><td>ALK</td></tr><tr><td>HGNC:26837</td><td>AMER1</td></tr><tr><td>HGNC:583</td><td>APC</td></tr><tr><td>HGNC:18318</td><td>ASXL1</td></tr><tr><td>HGNC:795</td><td>ATM</td></tr><tr><td>HGNC:1058</td><td>BLM</td></tr><tr><td>HGNC:1076</td><td>BMPR1A</td></tr><tr><td>HGNC:1097</td><td>BRAF</td></tr><tr><td>HGNC:1100</td><td>BRCA1</td></tr><tr><td>HGNC:1101</td><td>BRCA2</td></tr><tr><td>HGNC:20473</td><td>BRIP1</td></tr><tr><td>HGNC:1149</td><td>BUB1B</td></tr><tr><td>HGNC:1541</td><td>CBL</td></tr><tr><td>HGNC:1833</td><td>CEBPA</td></tr><tr><td>HGNC:30794</td><td>CEP57</td></tr><tr><td>HGNC:16850</td><td>CTR9</td></tr><tr><td>HGNC:2718</td><td>DDB2</td></tr><tr><td>HGNC:17098</td><td>DICER1</td></tr><tr><td>HGNC:28648</td><td>DIS3L2</td></tr><tr><td>HGNC:2890</td><td>DKC1</td></tr><tr><td>HGNC:3309</td><td>ELANE</td></tr><tr><td>HGNC:5959</td><td>ELP1</td></tr><tr><td>HGNC:3374</td><td>EPAS1</td></tr><tr><td>HGNC:11529</td><td>EPCAM</td></tr><tr><td>HGNC:3433</td><td>ERCC1</td></tr><tr><td>HGNC:3434</td><td>ERCC2</td></tr><tr><td>HGNC:3435</td><td>ERCC3</td></tr><tr><td>HGNC:3436</td><td>ERCC4</td></tr><tr><td>HGNC:3437</td><td>ERCC5</td></tr><tr><td>HGNC:3495</td><td>ETV6</td></tr><tr><td>HGNC:3527</td><td>EZH2</td></tr><tr><td>HGNC:3582</td><td>FANCA</td></tr><tr><td>HGNC:3583</td><td>FANCB</td></tr><tr><td>HGNC:3584</td><td>FANCC</td></tr><tr><td>HGNC:3585</td><td>FANCD2</td></tr><tr><td>HGNC:3586</td><td>FANCE</td></tr><tr><td>HGNC:3587</td><td>FANCF</td></tr><tr><td>HGNC:3588</td><td>FANCG</td></tr><tr><td>HGNC:25568</td><td>FANCI</td></tr><tr><td>HGNC:20748</td><td>FANCL</td></tr><tr><td>HGNC:23168</td><td>FANCM</td></tr><tr><td>HGNC:4451</td><td>GPC3</td></tr><tr><td>HGNC:23694</td><td>GPR161</td></tr><tr><td>HGNC:5173</td><td>HRAS</td></tr><tr><td>HGNC:5382</td><td>IDH1</td></tr><tr><td>HGNC:5383</td><td>IDH2</td></tr><tr><td>HGNC:13176</td><td>IKZF1</td></tr><tr><td>HGNC:6407</td><td>KRAS</td></tr><tr><td>HGNC:6764</td><td>MAD2L2</td></tr><tr><td>HGNC:6913</td><td>MAX</td></tr><tr><td>HGNC:7010</td><td>MEN1</td></tr><tr><td>HGNC:7127</td><td>MLH1</td></tr><tr><td>HGNC:7325</td><td>MSH2</td></tr><tr><td>HGNC:7329</td><td>MSH6</td></tr><tr><td>HGNC:7652</td><td>NBN</td></tr><tr><td>HGNC:7765</td><td>NF1</td></tr><tr><td>HGNC:7989</td><td>NRAS</td></tr><tr><td>HGNC:14234</td><td>NSD1</td></tr><tr><td>HGNC:26144</td><td>PALB2</td></tr><tr><td>HGNC:8619</td><td>PAX5</td></tr><tr><td>HGNC:9143</td><td>PHOX2B</td></tr><tr><td>HGNC:8975</td><td>PIK3CA</td></tr><tr><td>HGNC:9122</td><td>PMS2</td></tr><tr><td>HGNC:9181</td><td>POLH</td></tr><tr><td>HGNC:9585</td><td>PTCH1</td></tr><tr><td>HGNC:9588</td><td>PTEN</td></tr><tr><td>HGNC:9644</td><td>PTPN11</td></tr><tr><td>HGNC:9817</td><td>RAD51</td></tr><tr><td>HGNC:9820</td><td>RAD51C</td></tr><tr><td>HGNC:9884</td><td>RB1</td></tr><tr><td>HGNC:9949</td><td>RECQL4</td></tr><tr><td>HGNC:9966</td><td>REST</td></tr><tr><td>HGNC:9967</td><td>RET</td></tr><tr><td>HGNC:25539</td><td>RFWD3</td></tr><tr><td>HGNC:10402</td><td>RPS19</td></tr><tr><td>HGNC:15888</td><td>RTEL1</td></tr><tr><td>HGNC:10471</td><td>RUNX1</td></tr><tr><td>HGNC:1348</td><td>SAMD9</td></tr><tr><td>HGNC:1349</td><td>SAMD9L</td></tr><tr><td>HGNC:10680</td><td>SDHA</td></tr><tr><td>HGNC:26034</td><td>SDHAF2</td></tr><tr><td>HGNC:10681</td><td>SDHB</td></tr><tr><td>HGNC:10682</td><td>SDHC</td></tr><tr><td>HGNC:10683</td><td>SDHD</td></tr><tr><td>HGNC:23845</td><td>SLX4</td></tr><tr><td>HGNC:6770</td><td>SMAD4</td></tr><tr><td>HGNC:11100</td><td>SMARCA4</td></tr><tr><td>HGNC:11103</td><td>SMARCB1</td></tr><tr><td>HGNC:11119</td><td>SMO</td></tr><tr><td>HGNC:11187</td><td>SOS1</td></tr><tr><td>HGNC:11389</td><td>STK11</td></tr><tr><td>HGNC:16466</td><td>SUFU</td></tr><tr><td>HGNC:11633</td><td>TCF3</td></tr><tr><td>HGNC:11727</td><td>TERC</td></tr><tr><td>HGNC:11730</td><td>TERT</td></tr><tr><td>HGNC:11824</td><td>TINF2</td></tr><tr><td>HGNC:26038</td><td>TMEM127</td></tr><tr><td>HGNC:11998</td><td>TP53</td></tr><tr><td>HGNC:16384</td><td>TRIM28</td></tr><tr><td>HGNC:7523</td><td>TRIM37</td></tr><tr><td>HGNC:12307</td><td>TRIP13</td></tr><tr><td>HGNC:12362</td><td>TSC1</td></tr><tr><td>HGNC:12363</td><td>TSC2</td></tr><tr><td>HGNC:25009</td><td>UBE2T</td></tr><tr><td>HGNC:12687</td><td>VHL</td></tr><tr><td>HGNC:12796</td><td>WT1</td></tr><tr><td>HGNC:12814</td><td>XPA</td></tr><tr><td>HGNC:12816</td><td>XPC</td></tr><tr><td>HGNC:12829</td><td>XRCC2</td></tr></table></li></ul></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "shareable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "publishable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "computable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes",
+        "code" : "package",
+        "display" : "Package"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
+    "valueDate" : "2026-01-03"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+        "code" : "C3262"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-author",
+    "valueContactDetail" : {
+      "telecom" : [{
+        "system" : "email",
+        "value" : "thomas.debertshaeuser@charite.de"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-editor",
+    "valueContactDetail" : {
+      "name" : "Taskforce Core Data Set"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+    "valueContactDetail" : {
+      "name" : "Interoperability Working Group",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+    "valueContactDetail" : {
+      "name" : "National Steering Committee",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+    "valueContactDetail" : {
+      "name" : "Interoperability Working Group",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+    "valueContactDetail" : {
+      "name" : "National Steering Committee",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/version-algorithm",
+      "code" : "semver",
+      "display" : "SemVer"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+    "valuePeriod" : {
+      "start" : "2026"
+    }
+  }],
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-praedispositionsgene-hgnc",
+  "version" : "2026.0.3",
+  "name" : "MII_VS_Onko_Praedispositionsgene_HGNC",
+  "title" : "MII VS Onkologie Krebsprädispositionsgene HGNC",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-09-02T03:26:39+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Krebsprädispositionsgene der §65c-Liste (Manual Plus, Krebsprädispositionssyndrom und -gen) als HGNC-Gen-IDs, inkl. Expansion der Sammel-Einträge (FANCA-FANCW, IDH1/2, XP-Komplementationsgruppen). Begleitartefakt ohne Profil-Binding (Andockung an die genetischen Profile folgt mit dem Konzept für genetische Marker). Zytogenetische Aberrationen der Quell-Liste (11p13/11p15, Trisomien, ETV-RUNX1-Fusion) sind keine Gene und hier nicht enthalten. Projektseitige Code-Auflösung ohne Gewähr; fachliche Prüfung vor Produktivnutzung erforderlich.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.genenames.org/geneId",
+      "concept" : [{
+        "code" : "HGNC:427",
+        "display" : "ALK"
+      },
+      {
+        "code" : "HGNC:26837",
+        "display" : "AMER1"
+      },
+      {
+        "code" : "HGNC:583",
+        "display" : "APC"
+      },
+      {
+        "code" : "HGNC:18318",
+        "display" : "ASXL1"
+      },
+      {
+        "code" : "HGNC:795",
+        "display" : "ATM"
+      },
+      {
+        "code" : "HGNC:1058",
+        "display" : "BLM"
+      },
+      {
+        "code" : "HGNC:1076",
+        "display" : "BMPR1A"
+      },
+      {
+        "code" : "HGNC:1097",
+        "display" : "BRAF"
+      },
+      {
+        "code" : "HGNC:1100",
+        "display" : "BRCA1"
+      },
+      {
+        "code" : "HGNC:1101",
+        "display" : "BRCA2"
+      },
+      {
+        "code" : "HGNC:20473",
+        "display" : "BRIP1"
+      },
+      {
+        "code" : "HGNC:1149",
+        "display" : "BUB1B"
+      },
+      {
+        "code" : "HGNC:1541",
+        "display" : "CBL"
+      },
+      {
+        "code" : "HGNC:1833",
+        "display" : "CEBPA"
+      },
+      {
+        "code" : "HGNC:30794",
+        "display" : "CEP57"
+      },
+      {
+        "code" : "HGNC:16850",
+        "display" : "CTR9"
+      },
+      {
+        "code" : "HGNC:2718",
+        "display" : "DDB2"
+      },
+      {
+        "code" : "HGNC:17098",
+        "display" : "DICER1"
+      },
+      {
+        "code" : "HGNC:28648",
+        "display" : "DIS3L2"
+      },
+      {
+        "code" : "HGNC:2890",
+        "display" : "DKC1"
+      },
+      {
+        "code" : "HGNC:3309",
+        "display" : "ELANE"
+      },
+      {
+        "code" : "HGNC:5959",
+        "display" : "ELP1"
+      },
+      {
+        "code" : "HGNC:3374",
+        "display" : "EPAS1"
+      },
+      {
+        "code" : "HGNC:11529",
+        "display" : "EPCAM"
+      },
+      {
+        "code" : "HGNC:3433",
+        "display" : "ERCC1"
+      },
+      {
+        "code" : "HGNC:3434",
+        "display" : "ERCC2"
+      },
+      {
+        "code" : "HGNC:3435",
+        "display" : "ERCC3"
+      },
+      {
+        "code" : "HGNC:3436",
+        "display" : "ERCC4"
+      },
+      {
+        "code" : "HGNC:3437",
+        "display" : "ERCC5"
+      },
+      {
+        "code" : "HGNC:3495",
+        "display" : "ETV6"
+      },
+      {
+        "code" : "HGNC:3527",
+        "display" : "EZH2"
+      },
+      {
+        "code" : "HGNC:3582",
+        "display" : "FANCA"
+      },
+      {
+        "code" : "HGNC:3583",
+        "display" : "FANCB"
+      },
+      {
+        "code" : "HGNC:3584",
+        "display" : "FANCC"
+      },
+      {
+        "code" : "HGNC:3585",
+        "display" : "FANCD2"
+      },
+      {
+        "code" : "HGNC:3586",
+        "display" : "FANCE"
+      },
+      {
+        "code" : "HGNC:3587",
+        "display" : "FANCF"
+      },
+      {
+        "code" : "HGNC:3588",
+        "display" : "FANCG"
+      },
+      {
+        "code" : "HGNC:25568",
+        "display" : "FANCI"
+      },
+      {
+        "code" : "HGNC:20748",
+        "display" : "FANCL"
+      },
+      {
+        "code" : "HGNC:23168",
+        "display" : "FANCM"
+      },
+      {
+        "code" : "HGNC:4451",
+        "display" : "GPC3"
+      },
+      {
+        "code" : "HGNC:23694",
+        "display" : "GPR161"
+      },
+      {
+        "code" : "HGNC:5173",
+        "display" : "HRAS"
+      },
+      {
+        "code" : "HGNC:5382",
+        "display" : "IDH1"
+      },
+      {
+        "code" : "HGNC:5383",
+        "display" : "IDH2"
+      },
+      {
+        "code" : "HGNC:13176",
+        "display" : "IKZF1"
+      },
+      {
+        "code" : "HGNC:6407",
+        "display" : "KRAS"
+      },
+      {
+        "code" : "HGNC:6764",
+        "display" : "MAD2L2"
+      },
+      {
+        "code" : "HGNC:6913",
+        "display" : "MAX"
+      },
+      {
+        "code" : "HGNC:7010",
+        "display" : "MEN1"
+      },
+      {
+        "code" : "HGNC:7127",
+        "display" : "MLH1"
+      },
+      {
+        "code" : "HGNC:7325",
+        "display" : "MSH2"
+      },
+      {
+        "code" : "HGNC:7329",
+        "display" : "MSH6"
+      },
+      {
+        "code" : "HGNC:7652",
+        "display" : "NBN"
+      },
+      {
+        "code" : "HGNC:7765",
+        "display" : "NF1"
+      },
+      {
+        "code" : "HGNC:7989",
+        "display" : "NRAS"
+      },
+      {
+        "code" : "HGNC:14234",
+        "display" : "NSD1"
+      },
+      {
+        "code" : "HGNC:26144",
+        "display" : "PALB2"
+      },
+      {
+        "code" : "HGNC:8619",
+        "display" : "PAX5"
+      },
+      {
+        "code" : "HGNC:9143",
+        "display" : "PHOX2B"
+      },
+      {
+        "code" : "HGNC:8975",
+        "display" : "PIK3CA"
+      },
+      {
+        "code" : "HGNC:9122",
+        "display" : "PMS2"
+      },
+      {
+        "code" : "HGNC:9181",
+        "display" : "POLH"
+      },
+      {
+        "code" : "HGNC:9585",
+        "display" : "PTCH1"
+      },
+      {
+        "code" : "HGNC:9588",
+        "display" : "PTEN"
+      },
+      {
+        "code" : "HGNC:9644",
+        "display" : "PTPN11"
+      },
+      {
+        "code" : "HGNC:9817",
+        "display" : "RAD51"
+      },
+      {
+        "code" : "HGNC:9820",
+        "display" : "RAD51C"
+      },
+      {
+        "code" : "HGNC:9884",
+        "display" : "RB1"
+      },
+      {
+        "code" : "HGNC:9949",
+        "display" : "RECQL4"
+      },
+      {
+        "code" : "HGNC:9966",
+        "display" : "REST"
+      },
+      {
+        "code" : "HGNC:9967",
+        "display" : "RET"
+      },
+      {
+        "code" : "HGNC:25539",
+        "display" : "RFWD3"
+      },
+      {
+        "code" : "HGNC:10402",
+        "display" : "RPS19"
+      },
+      {
+        "code" : "HGNC:15888",
+        "display" : "RTEL1"
+      },
+      {
+        "code" : "HGNC:10471",
+        "display" : "RUNX1"
+      },
+      {
+        "code" : "HGNC:1348",
+        "display" : "SAMD9"
+      },
+      {
+        "code" : "HGNC:1349",
+        "display" : "SAMD9L"
+      },
+      {
+        "code" : "HGNC:10680",
+        "display" : "SDHA"
+      },
+      {
+        "code" : "HGNC:26034",
+        "display" : "SDHAF2"
+      },
+      {
+        "code" : "HGNC:10681",
+        "display" : "SDHB"
+      },
+      {
+        "code" : "HGNC:10682",
+        "display" : "SDHC"
+      },
+      {
+        "code" : "HGNC:10683",
+        "display" : "SDHD"
+      },
+      {
+        "code" : "HGNC:23845",
+        "display" : "SLX4"
+      },
+      {
+        "code" : "HGNC:6770",
+        "display" : "SMAD4"
+      },
+      {
+        "code" : "HGNC:11100",
+        "display" : "SMARCA4"
+      },
+      {
+        "code" : "HGNC:11103",
+        "display" : "SMARCB1"
+      },
+      {
+        "code" : "HGNC:11119",
+        "display" : "SMO"
+      },
+      {
+        "code" : "HGNC:11187",
+        "display" : "SOS1"
+      },
+      {
+        "code" : "HGNC:11389",
+        "display" : "STK11"
+      },
+      {
+        "code" : "HGNC:16466",
+        "display" : "SUFU"
+      },
+      {
+        "code" : "HGNC:11633",
+        "display" : "TCF3"
+      },
+      {
+        "code" : "HGNC:11727",
+        "display" : "TERC"
+      },
+      {
+        "code" : "HGNC:11730",
+        "display" : "TERT"
+      },
+      {
+        "code" : "HGNC:11824",
+        "display" : "TINF2"
+      },
+      {
+        "code" : "HGNC:26038",
+        "display" : "TMEM127"
+      },
+      {
+        "code" : "HGNC:11998",
+        "display" : "TP53"
+      },
+      {
+        "code" : "HGNC:16384",
+        "display" : "TRIM28"
+      },
+      {
+        "code" : "HGNC:7523",
+        "display" : "TRIM37"
+      },
+      {
+        "code" : "HGNC:12307",
+        "display" : "TRIP13"
+      },
+      {
+        "code" : "HGNC:12362",
+        "display" : "TSC1"
+      },
+      {
+        "code" : "HGNC:12363",
+        "display" : "TSC2"
+      },
+      {
+        "code" : "HGNC:25009",
+        "display" : "UBE2T"
+      },
+      {
+        "code" : "HGNC:12687",
+        "display" : "VHL"
+      },
+      {
+        "code" : "HGNC:12796",
+        "display" : "WT1"
+      },
+      {
+        "code" : "HGNC:12814",
+        "display" : "XPA"
+      },
+      {
+        "code" : "HGNC:12816",
+        "display" : "XPC"
+      },
+      {
+        "code" : "HGNC:12829",
+        "display" : "XRCC2"
+      }]
+    }]
+  }
+}

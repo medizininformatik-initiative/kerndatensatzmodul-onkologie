@@ -1,0 +1,50 @@
+{
+  "resourceType" : "Procedure",
+  "id" : "mii-exa-onko-trastuzumab-therapie",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie|2026.0.3"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Procedure mii-exa-onko-trastuzumab-therapie</b></p><a name=\"mii-exa-onko-trastuzumab-therapie\"> </a><a name=\"hcmii-exa-onko-trastuzumab-therapie\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-systemische-therapie.html\">MII PR Onkologie Systemische Therapie</a> version: 2026.0.3</p></div><p><b>MII EX Onko Systemische Therapie Intention</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}\">kurativ</span></p><p><b>basedOn</b>: <a href=\"CarePlan-mii-exa-onko-tumorkonferenz-molekular.html\">CarePlan: status = active; intent = plan; category = prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie); created = 2024-01-15</a></p><p><b>status</b>: Preparation</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 18629005}\">18629005</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/ops 6-001.k}, {https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art ZS}\">Trastuzumab</span></p><p><b>subject</b>: <a href=\"Patient-example.html\">Erika Beispiel  Female, DoB: 1965-04-12</a></p><p><b>performed</b>: 2024-02-01 --&gt; (ongoing)</p></div>"
+  },
+  "extension" : [{
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention",
+        "code" : "K"
+      }]
+    }
+  }],
+  "basedOn" : [{
+    "reference" : "CarePlan/mii-exa-onko-tumorkonferenz-molekular"
+  }],
+  "status" : "preparation",
+  "category" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "18629005"
+    }]
+  },
+  "code" : {
+    "coding" : [{
+      "system" : "http://fhir.de/CodeSystem/bfarm/ops",
+      "version" : "2024",
+      "code" : "6-001.k",
+      "display" : "Applikation von Medikamenten, Liste 1: Trastuzumab, intravenös"
+    },
+    {
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art",
+      "code" : "ZS"
+    }],
+    "text" : "Trastuzumab"
+  },
+  "subject" : {
+    "reference" : "Patient/example"
+  },
+  "performedPeriod" : {
+    "start" : "2024-02-01"
+  }
+}

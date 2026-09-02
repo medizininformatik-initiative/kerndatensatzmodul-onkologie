@@ -1,0 +1,50 @@
+{
+  "resourceType" : "Observation",
+  "id" : "mii-exa-onko-tnm-synth-meldung1-klassifikation",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation|2026.0.3"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-tnm-synth-meldung1-klassifikation</b></p><a name=\"mii-exa-onko-tnm-synth-meldung1-klassifikation\"> </a><a name=\"hcmii-exa-onko-tnm-synth-meldung1-klassifikation\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-tnm-klassifikation.html\">MII PR Onkologie TNM-Klassifikation</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 399537006}\">Clinical TNM stage grouping</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-tnm-synth-patient.html\">Tobias TNMSynth  Male, DoB: 1962-04-18</a></p><p><b>focus</b>: <a href=\"Condition-mii-exa-onko-tnm-synth-diagnose.html\">Condition Bösartige Neubildung des Rektums</a></p><p><b>effective</b>: 2024-01-11</p><p><b>value</b>: <span title=\"Codes:{https://www.uicc.org/resources/tnm IIIB}\">Stadium IIIB</span></p><p><b>method</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version 8}\">8. Auflage</span></p><p><b>hasMember</b>: </p><ul><li><a href=\"Observation-mii-exa-onko-tnm-synth-meldung1-t-cT3.html\">Observation cT category (observable entity)</a></li><li><a href=\"Observation-mii-exa-onko-tnm-synth-meldung1-n-cN2.html\">Observation cN category (observable entity)</a></li><li><a href=\"Observation-mii-exa-onko-tnm-synth-meldung1-m-cM0.html\">Observation cM category (observable entity)</a></li></ul></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "399537006",
+      "display" : "Clinical TNM stage grouping"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/mii-exa-onko-tnm-synth-patient"
+  },
+  "focus" : [{
+    "reference" : "Condition/mii-exa-onko-tnm-synth-diagnose"
+  }],
+  "effectiveDateTime" : "2024-01-11",
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "https://www.uicc.org/resources/tnm",
+      "code" : "IIIB",
+      "display" : "Stadium IIIB"
+    }]
+  },
+  "method" : {
+    "coding" : [{
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+      "code" : "8",
+      "display" : "8. Auflage"
+    }]
+  },
+  "hasMember" : [{
+    "reference" : "Observation/mii-exa-onko-tnm-synth-meldung1-t-cT3"
+  },
+  {
+    "reference" : "Observation/mii-exa-onko-tnm-synth-meldung1-n-cN2"
+  },
+  {
+    "reference" : "Observation/mii-exa-onko-tnm-synth-meldung1-m-cM0"
+  }]
+}

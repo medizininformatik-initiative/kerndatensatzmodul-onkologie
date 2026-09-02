@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-ascending-colon-tnm-n"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie|2026.0.3"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-onko-ascending-colon-tnm-n</b></p><a name="de-mii-exa-onko-ascending-colon-tnm-n"> </a><a name="de-hcmii-exa-onko-ascending-colon-tnm-n"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-tnm-n-kategorie.html">MII PR Onkologie TNM N-Kategorie</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 371494008}">pN category (observable entity)</span></p><p><b>subject</b>: <a href="Patient-example-modification.html">Martin Beispiel  Male, DoB: 1958-11-03</a></p><p><b>focus</b>: <a href="Condition-mii-exa-onko-ascending-colon-cancer-diagnosis.html">Condition Bösartige Neubildung: Colon ascendens</a></p><p><b>effective</b>: 2024-02-25</p><p><b>value</b>: <span title="Codes:{https://www.uicc.org/resources/tnm N1}">N1</span></p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix">
+      <valueCodeableConcept>
+        <coding>
+          <system value="https://www.uicc.org/resources/tnm"/>
+          <code value="p"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="371494008"/>
+      <display value="pN category (observable entity)"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/example-modification"/>
+  </subject>
+  <focus>
+    <reference value="Condition/mii-exa-onko-ascending-colon-cancer-diagnosis"/>
+  </focus>
+  <effectiveDateTime value="2024-02-25"/>
+  <valueCodeableConcept>
+    <coding>
+      <system value="https://www.uicc.org/resources/tnm"/>
+      <code value="N1"/>
+    </coding>
+  </valueCodeableConcept>
+</Observation>

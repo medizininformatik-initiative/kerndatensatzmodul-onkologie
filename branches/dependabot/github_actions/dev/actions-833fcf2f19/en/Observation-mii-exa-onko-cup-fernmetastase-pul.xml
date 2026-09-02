@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-cup-fernmetastase-pul"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen|2026.0.3"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-onko-cup-fernmetastase-pul</b></p><a name="mii-exa-onko-cup-fernmetastase-pul"> </a><a name="hcmii-exa-onko-cup-fernmetastase-pul"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-fernmetastasen.html">MII PR Onkologie Fernmetastasen</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 385421009}">385421009</span></p><p><b>subject</b>: <a href="Patient-mii-exa-onko-cup-patient.html">CUP Musterfall  Male, DoB: 1958-11-02</a></p><p><b>focus</b>: <a href="Condition-mii-exa-onko-cup-diagnose.html">Condition Bösartige Neubildung, primäre Lokalisation unbekannt, so bezeichnet</a></p><p><b>effective</b>: 2026-02-11</p><p><b>value</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen PUL}">Lunge</span></p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="385421009"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/mii-exa-onko-cup-patient"/>
+  </subject>
+  <focus>
+    <reference value="Condition/mii-exa-onko-cup-diagnose"/>
+  </focus>
+  <effectiveDateTime value="2026-02-11"/>
+  <valueCodeableConcept>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen"/>
+      <code value="PUL"/>
+      <display value="Lunge"/>
+    </coding>
+  </valueCodeableConcept>
+</Observation>

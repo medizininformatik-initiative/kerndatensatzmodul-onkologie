@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Procedure xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-strahlentherapie-2021-mamma-primaer"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie|2026.0.3"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="extensions"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Procedure mii-exa-onko-strahlentherapie-2021-mamma-primaer</b></p><a name="de-mii-exa-onko-strahlentherapie-2021-mamma-primaer"> </a><a name="de-hcmii-exa-onko-strahlentherapie-2021-mamma-primaer"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.html">MII PR Onkologie Strahlentherapie</a> version: 2026.0.3</p></div><p><b>MII EX Onko Strahlentherapie Bestrahlung Gesamtdosis</b>: 50 Gy<span style="background: LightGoldenRodYellow"> (Details: UCUM  codeGy = 'Gy')</span></p><p><b>MII EX Onko Strahlentherapie Bestrahlung Einzeldosis</b>: 2 Gy<span style="background: LightGoldenRodYellow"> (Details: UCUM  codeGy = 'Gy')</span></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 1287742003}">Radiotherapy (procedure)</span></p><p><b>code</b>: <span title="Codes:{http://fhir.de/CodeSystem/bfarm/ops 8-522}">Hochvoltstrahlentherapie</span></p><p><b>subject</b>: <a href="Patient-example.html">Erika Beispiel  Female, DoB: 1965-04-12</a></p><p><b>encounter</b>: <a href="Encounter-example.html">Encounter: status = finished; class = ambulatory (ActCode#AMB)</a></p><p><b>performed</b>: 2023-03-15 --&gt; 2023-04-20</p><p><b>reasonReference</b>: <a href="Condition-primaertumor-example.html">Condition Bösartige Neubildung: Brustdrüse, nicht näher bezeichnet</a></p><p><b>bodySite</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet 3.1}">Mamma als Ganzbrust (r, l)</span></p></div>
+  </text>
+  <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis">
+    <valueQuantity>
+      <value value="50"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="Gy"/>
+    </valueQuantity>
+  </extension>
+  <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis">
+    <valueQuantity>
+      <value value="2"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="Gy"/>
+    </valueQuantity>
+  </extension>
+  <status value="completed"/>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="1287742003"/>
+      <display value="Radiotherapy (procedure)"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://fhir.de/CodeSystem/bfarm/ops"/>
+      <version value="2024"/>
+      <code value="8-522"/>
+      <display value="Hochvoltstrahlentherapie"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/example"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/example"/>
+  </encounter>
+  <performedPeriod>
+    <start value="2023-03-15"/>
+    <end value="2023-04-20"/>
+  </performedPeriod>
+  <reasonReference>
+    <reference value="Condition/primaertumor-example"/>
+  </reasonReference>
+  <bodySite>
+    <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation">
+      <valueCodeableConcept>
+        <coding>
+          <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation"/>
+          <code value="R"/>
+          <display value="rechts"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet"/>
+      <code value="3.1"/>
+      <display value="Mamma als Ganzbrust (r, l)"/>
+    </coding>
+  </bodySite>
+</Procedure>

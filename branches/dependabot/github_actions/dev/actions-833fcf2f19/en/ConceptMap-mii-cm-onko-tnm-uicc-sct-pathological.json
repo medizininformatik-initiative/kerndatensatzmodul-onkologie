@@ -1,0 +1,1257 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "mii-cm-onko-tnm-uicc-sct-pathological",
+  "meta" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-license",
+      "valueCode" : "CC-BY-4.0"
+    },
+    {
+      "extension" : [{
+        "url" : "packageId",
+        "valueId" : "de.medizininformatikinitiative.kerndatensatz.onkologie"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/package-source"
+    },
+    {
+      "url" : "version",
+      "valueString" : "2026.0.3"
+    }],
+    "profile" : ["http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableconceptmap",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableconceptmap"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap mii-cm-onko-tnm-uicc-sct-pathological</b></p><a name=\"mii-cm-onko-tnm-uicc-sct-pathological\"> </a><a name=\"hcmii-cm-onko-tnm-uicc-sct-pathological\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareableconceptmap.html\">CRMI Shareable ConceptMap</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishableconceptmap.html\">CRMI Publishable ConceptMap</a></p></div><p>This mapping does not specify any particular context of use.</p><br/><p>Mapping from <a href=\"CodeSystem-mii-cs-onko-tnm-uicc.html\">MII CS Onkologie TNM UICC</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>y</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>421755005 (Tumor staging descriptor y (tumor staging))</td></tr><tr><td>r</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>421188008 (Tumor staging descriptor r (tumor staging))</td></tr><tr><td>a</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>421426001 (Tumor staging descriptor a (tumor staging))</td></tr><tr><td>c</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>p</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>u</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>TX</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352532000 (Union for International Cancer Control pTX (qualifier value))</td></tr><tr><td>T0</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352552004 (Union for International Cancer Control pT0 (qualifier value))</td></tr><tr><td>Ta</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352539009 (Union for International Cancer Control pTa (qualifier value))</td></tr><tr><td>Tis</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352558000 (Union for International Cancer Control pTis (qualifier value))</td></tr><tr><td>Tis(LAMN)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352555002 (Union for International Cancer Control pTis(LAMN) (qualifier value))</td></tr><tr><td>Tis(DCIS)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352535003 (Union for International Cancer Control pTis(DCIS) (qualifier value))</td></tr><tr><td>Tis(LCIS)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1351847000 (Union for International Cancer Control pTis(LCIS) (qualifier value))</td></tr><tr><td>Tis(Paget)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352563001 (Union for International Cancer Control pTis(Paget) (qualifier value))</td></tr><tr><td>Tis(pu)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>Tis(pd)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>T1</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352559008 (Union for International Cancer Control pT1 (qualifier value))</td></tr><tr><td>T1mi</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352562006 (Union for International Cancer Control pT1mi (qualifier value))</td></tr><tr><td>T1a</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352560003 (Union for International Cancer Control pT1a (qualifier value))</td></tr><tr><td>T1a1</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352550007 (Union for International Cancer Control pT1a1 (qualifier value))</td></tr><tr><td>T1a2</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352566009 (Union for International Cancer Control pT1a2 (qualifier value))</td></tr><tr><td>T1b</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352543008 (Union for International Cancer Control pT1b (qualifier value))</td></tr><tr><td>T1b1</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352536002 (Union for International Cancer Control pT1b1 (qualifier value))</td></tr><tr><td>T1b2</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352554003 (Union for International Cancer Control pT1b2 (qualifier value))</td></tr><tr><td>T1c</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352537006 (Union for International Cancer Control pT1c (qualifier value))</td></tr><tr><td>T1c1</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352544002 (Union for International Cancer Control pT1c1 (qualifier value))</td></tr><tr><td>T1c2</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352541005 (Union for International Cancer Control pT1c2 (qualifier value))</td></tr><tr><td>T1c3</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352549007 (Union for International Cancer Control pT1c3 (qualifier value))</td></tr><tr><td>T1d</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352568005 (Union for International Cancer Control pT1d (qualifier value))</td></tr><tr><td>T2</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352545001 (Union for International Cancer Control pT2 (qualifier value))</td></tr><tr><td>T2a</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352564007 (Union for International Cancer Control pT2a (qualifier value))</td></tr><tr><td>T2a1</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352546000 (Union for International Cancer Control pT2a1 (qualifier value))</td></tr><tr><td>T2a2</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352567000 (Union for International Cancer Control pT2a2 (qualifier value))</td></tr><tr><td>T2b</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352547009 (Union for International Cancer Control pT2b (qualifier value))</td></tr><tr><td>T2c (T2c2)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352569002 (Union for International Cancer Control pT2c (qualifier value))</td></tr><tr><td>T2d</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352548004 (Union for International Cancer Control pT2d (qualifier value))</td></tr><tr><td>T3</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352533005 (Union for International Cancer Control pT3 (qualifier value))</td></tr><tr><td>T3a</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352551006 (Union for International Cancer Control pT3a (qualifier value))</td></tr><tr><td>T3b</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352534004 (Union for International Cancer Control pT3b (qualifier value))</td></tr><tr><td>T3c</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352556001 (Union for International Cancer Control pT3c (qualifier value))</td></tr><tr><td>T3d (Td3)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352531007 (Union for International Cancer Control pT3d (qualifier value))</td></tr><tr><td>T3e</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>T4</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352553009 (Union for International Cancer Control pT4 (qualifier value))</td></tr><tr><td>T4a</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352538001 (Union for International Cancer Control pT4a (qualifier value))</td></tr><tr><td>T4b</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352561004 (Union for International Cancer Control pT4b (qualifier value))</td></tr><tr><td>T4c</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352540006 (Union for International Cancer Control pT4c (qualifier value))</td></tr><tr><td>T4d</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352557005 (Union for International Cancer Control pT4d (qualifier value))</td></tr><tr><td>T4e</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352542003 (Union for International Cancer Control pT4e (qualifier value))</td></tr><tr><td>m</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>2</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>3</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>4</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>5</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>6</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>7</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>8</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>9</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>10</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>NX</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352605004 (Union for International Cancer Control pNX (qualifier value))</td></tr><tr><td>N0</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352621009 (Union for International Cancer Control pN0 (qualifier value))</td></tr><tr><td>N1</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352614009 (Union for International Cancer Control pN1 (qualifier value))</td></tr><tr><td>N1mi (N1(mi))</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352620005 (Union for International Cancer Control pN1mi (qualifier value))</td></tr><tr><td>N1a</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352619004 (Union for International Cancer Control pN1a (qualifier value))</td></tr><tr><td>N1b</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352616006 (Union for International Cancer Control pN1b (qualifier value))</td></tr><tr><td>N1c</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352617002 (Union for International Cancer Control pN1c (qualifier value))</td></tr><tr><td>N2</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352610000 (Union for International Cancer Control pN2 (qualifier value))</td></tr><tr><td>N2a</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352608002 (Union for International Cancer Control pN2a (qualifier value))</td></tr><tr><td>N2b</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352612008 (Union for International Cancer Control pN2b (qualifier value))</td></tr><tr><td>N2c</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352613003 (Union for International Cancer Control pN2c (qualifier value))</td></tr><tr><td>N3</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352622002 (Union for International Cancer Control pN3 (qualifier value))</td></tr><tr><td>N3a</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352618007 (Union for International Cancer Control pN3a (qualifier value))</td></tr><tr><td>N3b</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352623007 (Union for International Cancer Control pN3b (qualifier value))</td></tr><tr><td>N3c</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352606003 (Union for International Cancer Control pN3c (qualifier value))</td></tr><tr><td>M0</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>M1</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352583000 (Union for International Cancer Control pM1 (qualifier value))</td></tr><tr><td>M1a</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352573004 (Union for International Cancer Control pM1a (qualifier value))</td></tr><tr><td>M1b</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352578008 (Union for International Cancer Control pM1b (qualifier value))</td></tr><tr><td>M1c</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352574005 (Union for International Cancer Control pM1c (qualifier value))</td></tr><tr><td>M1d</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352580002 (Union for International Cancer Control pM1d (qualifier value))</td></tr><tr><td>MX</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>i+</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>i-</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>mol+</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>mol-</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>sn</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>L0</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>L1</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>LX</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>V0</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>V1</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>V2</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>VX</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>Pn0</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>Pn1</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>PnX</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>S0</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>S1</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>S2</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>S3</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>SX</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>okk (Stadium X)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>0 (Stadium 0)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352916008 (Union for International Cancer Control stage 0 (qualifier value))</td></tr><tr><td>0a (Stadium 0a)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352825003 (Union for International Cancer Control stage 0a (qualifier value))</td></tr><tr><td>0is (Stadium 0is)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352895007 (Union for International Cancer Control stage 0is (qualifier value))</td></tr><tr><td>I (Stadium I)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352927005 (Union for International Cancer Control stage I (qualifier value))</td></tr><tr><td>IA1 (Stadium IA1)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352890002 (Union for International Cancer Control stage IA1 (qualifier value))</td></tr><tr><td>IA2 (Stadium IA2)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352945005 (Union for International Cancer Control stage IA2 (qualifier value))</td></tr><tr><td>IA3 (Stadium IA3)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352854009 (Union for International Cancer Control stage IA3 (qualifier value))</td></tr><tr><td>IB (Stadium IB)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352911003 (Union for International Cancer Control stage IB (qualifier value))</td></tr><tr><td>IB1 (Stadium IB1)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352816009 (Union for International Cancer Control stage IB1 (qualifier value))</td></tr><tr><td>IB2 (Stadium IB2)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352864000 (Union for International Cancer Control stage IB2 (qualifier value))</td></tr><tr><td>IC (Stadium IC)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352919001 (Union for International Cancer Control stage IC (qualifier value))</td></tr><tr><td>IS (Stadium IS)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352880005 (Union for International Cancer Control stage IS (qualifier value))</td></tr><tr><td>II (Stadium II)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352944009 (Union for International Cancer Control stage II (qualifier value))</td></tr><tr><td>IIA (Stadium IIA)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352856006 (Union for International Cancer Control stage IIA (qualifier value))</td></tr><tr><td>IIA1 (Stadium IIA1)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352829009 (Union for International Cancer Control stage IIA1 (qualifier value))</td></tr><tr><td>IIA2 (Stadium IIA2)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352892005 (Union for International Cancer Control stage IIA2 (qualifier value))</td></tr><tr><td>IIB (Stadium IIB)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352861008 (Union for International Cancer Control stage IIB (qualifier value))</td></tr><tr><td>IIC (Stadium IIC)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352831000 (Union for International Cancer Control stage IIC (qualifier value))</td></tr><tr><td>III (Stadium III)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352871005 (Union for International Cancer Control stage III (qualifier value))</td></tr><tr><td>IIIA (Stadium IIIA)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352915007 (Union for International Cancer Control stage IIIA (qualifier value))</td></tr><tr><td>IIIA1 (Stadium IIIA1)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352935008 (Union for International Cancer Control stage IIIA1 (qualifier value))</td></tr><tr><td>IIIA2 (Stadium IIIA2)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352882002 (Union for International Cancer Control stage IIIA2 (qualifier value))</td></tr><tr><td>IIIB (Stadium IIIB)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352896008 (Union for International Cancer Control stage IIIB (qualifier value))</td></tr><tr><td>IIIC (Stadium IIIC)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352848008 (Union for International Cancer Control stage IIIC (qualifier value))</td></tr><tr><td>IIIC1 (Stadium IIIC1)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352862001 (Union for International Cancer Control stage IIIC1 (qualifier value))</td></tr><tr><td>IIIC2 (Stadium IIIC2)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352833002 (Union for International Cancer Control stage IIIC2 (qualifier value))</td></tr><tr><td>IV (Stadium IV)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352913000 (Union for International Cancer Control stage IV (qualifier value))</td></tr><tr><td>IVA (Stadium IVA)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352822000 (Union for International Cancer Control stage IVA (qualifier value))</td></tr><tr><td>IVB (Stadium IVB)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352836005 (Union for International Cancer Control stage IVB (qualifier value))</td></tr><tr><td>IVC (Stadium IVC)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>1352921006 (Union for International Cancer Control stage IVC (qualifier value))</td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "shareable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "publishable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes",
+        "code" : "package",
+        "display" : "Package"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
+    "valueDate" : "2026-01-03"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+        "code" : "C3262"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-author",
+    "valueContactDetail" : {
+      "telecom" : [{
+        "system" : "email",
+        "value" : "thomas.debertshaeuser@charite.de"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-editor",
+    "valueContactDetail" : {
+      "name" : "Taskforce Core Data Set"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+    "valueContactDetail" : {
+      "name" : "Interoperability Working Group",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+    "valueContactDetail" : {
+      "name" : "National Steering Committee",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+    "valueContactDetail" : {
+      "name" : "Interoperability Working Group",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+    "valueContactDetail" : {
+      "name" : "National Steering Committee",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/version-algorithm",
+      "code" : "semver",
+      "display" : "SemVer"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+    "valuePeriod" : {
+      "start" : "2026"
+    }
+  }],
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-tnm-uicc-sct-pathological",
+  "version" : "2026.0.3",
+  "name" : "MII CM Onko Pathological TNM UICC SCT Mapping",
+  "title" : "MII CM Onko Pathological TNM UICC SNOMED",
+  "status" : "active",
+  "experimental" : true,
+  "date" : "2024-01-05",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Mapping pathological TNM UICC Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "copyright" : "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license.",
+  "group" : [{
+    "source" : "https://www.uicc.org/resources/tnm",
+    "target" : "http://snomed.info/sct/900000000000207008/version/20240401",
+    "element" : [{
+      "code" : "y",
+      "display" : "y",
+      "target" : [{
+        "code" : "421755005",
+        "display" : "Tumor staging descriptor y (tumor staging)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "r",
+      "display" : "r",
+      "target" : [{
+        "code" : "421188008",
+        "display" : "Tumor staging descriptor r (tumor staging)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "a",
+      "display" : "a",
+      "target" : [{
+        "code" : "421426001",
+        "display" : "Tumor staging descriptor a (tumor staging)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "c",
+      "display" : "c",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "p",
+      "display" : "p",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "u",
+      "display" : "u",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "TX",
+      "display" : "TX",
+      "target" : [{
+        "code" : "1352532000",
+        "display" : "Union for International Cancer Control pTX (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "T0",
+      "display" : "T0",
+      "target" : [{
+        "code" : "1352552004",
+        "display" : "Union for International Cancer Control pT0 (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "Ta",
+      "display" : "Ta",
+      "target" : [{
+        "code" : "1352539009",
+        "display" : "Union for International Cancer Control pTa (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "Tis",
+      "display" : "Tis",
+      "target" : [{
+        "code" : "1352558000",
+        "display" : "Union for International Cancer Control pTis (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "Tis(LAMN)",
+      "display" : "Tis(LAMN)",
+      "target" : [{
+        "code" : "1352555002",
+        "display" : "Union for International Cancer Control pTis(LAMN) (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "Tis(DCIS)",
+      "display" : "Tis(DCIS)",
+      "target" : [{
+        "code" : "1352535003",
+        "display" : "Union for International Cancer Control pTis(DCIS) (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "Tis(LCIS)",
+      "display" : "Tis(LCIS)",
+      "target" : [{
+        "code" : "1351847000",
+        "display" : "Union for International Cancer Control pTis(LCIS) (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "Tis(Paget)",
+      "display" : "Tis(Paget)",
+      "target" : [{
+        "code" : "1352563001",
+        "display" : "Union for International Cancer Control pTis(Paget) (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "Tis(pu)",
+      "display" : "Tis(pu)",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "Tis(pd)",
+      "display" : "Tis(pd)",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "T1",
+      "display" : "T1",
+      "target" : [{
+        "code" : "1352559008",
+        "display" : "Union for International Cancer Control pT1 (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "T1mi",
+      "display" : "T1mi",
+      "target" : [{
+        "code" : "1352562006",
+        "display" : "Union for International Cancer Control pT1mi (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "T1a",
+      "display" : "T1a",
+      "target" : [{
+        "code" : "1352560003",
+        "display" : "Union for International Cancer Control pT1a (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "T1a1",
+      "display" : "T1a1",
+      "target" : [{
+        "code" : "1352550007",
+        "display" : "Union for International Cancer Control pT1a1 (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "T1a2",
+      "display" : "T1a2",
+      "target" : [{
+        "code" : "1352566009",
+        "display" : "Union for International Cancer Control pT1a2 (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "T1b",
+      "display" : "T1b",
+      "target" : [{
+        "code" : "1352543008",
+        "display" : "Union for International Cancer Control pT1b (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "T1b1",
+      "display" : "T1b1",
+      "target" : [{
+        "code" : "1352536002",
+        "display" : "Union for International Cancer Control pT1b1 (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "T1b2",
+      "display" : "T1b2",
+      "target" : [{
+        "code" : "1352554003",
+        "display" : "Union for International Cancer Control pT1b2 (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "T1c",
+      "display" : "T1c",
+      "target" : [{
+        "code" : "1352537006",
+        "display" : "Union for International Cancer Control pT1c (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "T1c1",
+      "display" : "T1c1",
+      "target" : [{
+        "code" : "1352544002",
+        "display" : "Union for International Cancer Control pT1c1 (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "T1c2",
+      "display" : "T1c2",
+      "target" : [{
+        "code" : "1352541005",
+        "display" : "Union for International Cancer Control pT1c2 (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "T1c3",
+      "display" : "T1c3",
+      "target" : [{
+        "code" : "1352549007",
+        "display" : "Union for International Cancer Control pT1c3 (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "T1d",
+      "display" : "T1d",
+      "target" : [{
+        "code" : "1352568005",
+        "display" : "Union for International Cancer Control pT1d (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "T2",
+      "display" : "T2",
+      "target" : [{
+        "code" : "1352545001",
+        "display" : "Union for International Cancer Control pT2 (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "T2a",
+      "display" : "T2a",
+      "target" : [{
+        "code" : "1352564007",
+        "display" : "Union for International Cancer Control pT2a (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "T2a1",
+      "display" : "T2a1",
+      "target" : [{
+        "code" : "1352546000",
+        "display" : "Union for International Cancer Control pT2a1 (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "T2a2",
+      "display" : "T2a2",
+      "target" : [{
+        "code" : "1352567000",
+        "display" : "Union for International Cancer Control pT2a2 (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "T2b",
+      "display" : "T2b",
+      "target" : [{
+        "code" : "1352547009",
+        "display" : "Union for International Cancer Control pT2b (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "T2c",
+      "display" : "T2c2",
+      "target" : [{
+        "code" : "1352569002",
+        "display" : "Union for International Cancer Control pT2c (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "T2d",
+      "display" : "T2d",
+      "target" : [{
+        "code" : "1352548004",
+        "display" : "Union for International Cancer Control pT2d (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "T3",
+      "display" : "T3",
+      "target" : [{
+        "code" : "1352533005",
+        "display" : "Union for International Cancer Control pT3 (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "T3a",
+      "display" : "T3a",
+      "target" : [{
+        "code" : "1352551006",
+        "display" : "Union for International Cancer Control pT3a (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "T3b",
+      "display" : "T3b",
+      "target" : [{
+        "code" : "1352534004",
+        "display" : "Union for International Cancer Control pT3b (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "T3c",
+      "display" : "T3c",
+      "target" : [{
+        "code" : "1352556001",
+        "display" : "Union for International Cancer Control pT3c (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "T3d",
+      "display" : "Td3",
+      "target" : [{
+        "code" : "1352531007",
+        "display" : "Union for International Cancer Control pT3d (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "T3e",
+      "display" : "T3e",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "T4",
+      "display" : "T4",
+      "target" : [{
+        "code" : "1352553009",
+        "display" : "Union for International Cancer Control pT4 (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "T4a",
+      "display" : "T4a",
+      "target" : [{
+        "code" : "1352538001",
+        "display" : "Union for International Cancer Control pT4a (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "T4b",
+      "display" : "T4b",
+      "target" : [{
+        "code" : "1352561004",
+        "display" : "Union for International Cancer Control pT4b (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "T4c",
+      "display" : "T4c",
+      "target" : [{
+        "code" : "1352540006",
+        "display" : "Union for International Cancer Control pT4c (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "T4d",
+      "display" : "T4d",
+      "target" : [{
+        "code" : "1352557005",
+        "display" : "Union for International Cancer Control pT4d (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "T4e",
+      "display" : "T4e",
+      "target" : [{
+        "code" : "1352542003",
+        "display" : "Union for International Cancer Control pT4e (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "m",
+      "display" : "m",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "2",
+      "display" : "2",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "3",
+      "display" : "3",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "4",
+      "display" : "4",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "5",
+      "display" : "5",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "6",
+      "display" : "6",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "7",
+      "display" : "7",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "8",
+      "display" : "8",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "9",
+      "display" : "9",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "10",
+      "display" : "10",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "NX",
+      "display" : "Nx",
+      "target" : [{
+        "code" : "1352605004",
+        "display" : "Union for International Cancer Control pNX (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "N0",
+      "display" : "N0",
+      "target" : [{
+        "code" : "1352621009",
+        "display" : "Union for International Cancer Control pN0 (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "N1",
+      "display" : "N1",
+      "target" : [{
+        "code" : "1352614009",
+        "display" : "Union for International Cancer Control pN1 (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "N1mi",
+      "display" : "N1(mi)",
+      "target" : [{
+        "code" : "1352620005",
+        "display" : "Union for International Cancer Control pN1mi (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "N1a",
+      "display" : "N1a",
+      "target" : [{
+        "code" : "1352619004",
+        "display" : "Union for International Cancer Control pN1a (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "N1b",
+      "display" : "N1b",
+      "target" : [{
+        "code" : "1352616006",
+        "display" : "Union for International Cancer Control pN1b (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "N1c",
+      "display" : "N1c",
+      "target" : [{
+        "code" : "1352617002",
+        "display" : "Union for International Cancer Control pN1c (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "N2",
+      "display" : "N2",
+      "target" : [{
+        "code" : "1352610000",
+        "display" : "Union for International Cancer Control pN2 (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "N2a",
+      "display" : "N2a",
+      "target" : [{
+        "code" : "1352608002",
+        "display" : "Union for International Cancer Control pN2a (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "N2b",
+      "display" : "N2b",
+      "target" : [{
+        "code" : "1352612008",
+        "display" : "Union for International Cancer Control pN2b (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "N2c",
+      "display" : "N2c",
+      "target" : [{
+        "code" : "1352613003",
+        "display" : "Union for International Cancer Control pN2c (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "N3",
+      "display" : "N3",
+      "target" : [{
+        "code" : "1352622002",
+        "display" : "Union for International Cancer Control pN3 (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "N3a",
+      "display" : "N3a",
+      "target" : [{
+        "code" : "1352618007",
+        "display" : "Union for International Cancer Control pN3a (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "N3b",
+      "display" : "N3b",
+      "target" : [{
+        "code" : "1352623007",
+        "display" : "Union for International Cancer Control pN3b (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "N3c",
+      "display" : "N3c",
+      "target" : [{
+        "code" : "1352606003",
+        "display" : "Union for International Cancer Control pN3c (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "M0",
+      "display" : "M0",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "M1",
+      "display" : "M1",
+      "target" : [{
+        "code" : "1352583000",
+        "display" : "Union for International Cancer Control pM1 (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "M1a",
+      "display" : "M1a",
+      "target" : [{
+        "code" : "1352573004",
+        "display" : "Union for International Cancer Control pM1a (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "M1b",
+      "display" : "M1b",
+      "target" : [{
+        "code" : "1352578008",
+        "display" : "Union for International Cancer Control pM1b (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "M1c",
+      "display" : "M1c",
+      "target" : [{
+        "code" : "1352574005",
+        "display" : "Union for International Cancer Control pM1c (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "M1d",
+      "display" : "M1d",
+      "target" : [{
+        "code" : "1352580002",
+        "display" : "Union for International Cancer Control pM1d (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "MX",
+      "display" : "MX",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "i+",
+      "display" : "i+",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "i-",
+      "display" : "i-",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "mol+",
+      "display" : "mol+",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "mol-",
+      "display" : "mol-",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "sn",
+      "display" : "sn",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "L0",
+      "display" : "L0",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "L1",
+      "display" : "L1",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "LX",
+      "display" : "LX",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "V0",
+      "display" : "V0",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "V1",
+      "display" : "V1",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "V2",
+      "display" : "V2",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "VX",
+      "display" : "VX",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "Pn0",
+      "display" : "Pn0",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "Pn1",
+      "display" : "Pn1",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "PnX",
+      "display" : "PnX",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "S0",
+      "display" : "S0",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "S1",
+      "display" : "S1",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "S2",
+      "display" : "S2",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "S3",
+      "display" : "S3",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "SX",
+      "display" : "SX",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "okk",
+      "display" : "Stadium X",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "0",
+      "display" : "Stadium 0",
+      "target" : [{
+        "code" : "1352916008",
+        "display" : "Union for International Cancer Control stage 0 (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "0a",
+      "display" : "Stadium 0a",
+      "target" : [{
+        "code" : "1352825003",
+        "display" : "Union for International Cancer Control stage 0a (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "0is",
+      "display" : "Stadium 0is",
+      "target" : [{
+        "code" : "1352895007",
+        "display" : "Union for International Cancer Control stage 0is (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "I",
+      "display" : "Stadium I",
+      "target" : [{
+        "code" : "1352927005",
+        "display" : "Union for International Cancer Control stage I (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "IA1",
+      "display" : "Stadium IA1",
+      "target" : [{
+        "code" : "1352890002",
+        "display" : "Union for International Cancer Control stage IA1 (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "IA2",
+      "display" : "Stadium IA2",
+      "target" : [{
+        "code" : "1352945005",
+        "display" : "Union for International Cancer Control stage IA2 (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "IA3",
+      "display" : "Stadium IA3",
+      "target" : [{
+        "code" : "1352854009",
+        "display" : "Union for International Cancer Control stage IA3 (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "IB",
+      "display" : "Stadium IB",
+      "target" : [{
+        "code" : "1352911003",
+        "display" : "Union for International Cancer Control stage IB (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "IB1",
+      "display" : "Stadium IB1",
+      "target" : [{
+        "code" : "1352816009",
+        "display" : "Union for International Cancer Control stage IB1 (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "IB2",
+      "display" : "Stadium IB2",
+      "target" : [{
+        "code" : "1352864000",
+        "display" : "Union for International Cancer Control stage IB2 (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "IC",
+      "display" : "Stadium IC",
+      "target" : [{
+        "code" : "1352919001",
+        "display" : "Union for International Cancer Control stage IC (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "IS",
+      "display" : "Stadium IS",
+      "target" : [{
+        "code" : "1352880005",
+        "display" : "Union for International Cancer Control stage IS (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "II",
+      "display" : "Stadium II",
+      "target" : [{
+        "code" : "1352944009",
+        "display" : "Union for International Cancer Control stage II (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "IIA",
+      "display" : "Stadium IIA",
+      "target" : [{
+        "code" : "1352856006",
+        "display" : "Union for International Cancer Control stage IIA (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "IIA1",
+      "display" : "Stadium IIA1",
+      "target" : [{
+        "code" : "1352829009",
+        "display" : "Union for International Cancer Control stage IIA1 (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "IIA2",
+      "display" : "Stadium IIA2",
+      "target" : [{
+        "code" : "1352892005",
+        "display" : "Union for International Cancer Control stage IIA2 (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "IIB",
+      "display" : "Stadium IIB",
+      "target" : [{
+        "code" : "1352861008",
+        "display" : "Union for International Cancer Control stage IIB (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "IIC",
+      "display" : "Stadium IIC",
+      "target" : [{
+        "code" : "1352831000",
+        "display" : "Union for International Cancer Control stage IIC (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "III",
+      "display" : "Stadium III",
+      "target" : [{
+        "code" : "1352871005",
+        "display" : "Union for International Cancer Control stage III (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "IIIA",
+      "display" : "Stadium IIIA",
+      "target" : [{
+        "code" : "1352915007",
+        "display" : "Union for International Cancer Control stage IIIA (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "IIIA1",
+      "display" : "Stadium IIIA1",
+      "target" : [{
+        "code" : "1352935008",
+        "display" : "Union for International Cancer Control stage IIIA1 (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "IIIA2",
+      "display" : "Stadium IIIA2",
+      "target" : [{
+        "code" : "1352882002",
+        "display" : "Union for International Cancer Control stage IIIA2 (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "IIIB",
+      "display" : "Stadium IIIB",
+      "target" : [{
+        "code" : "1352896008",
+        "display" : "Union for International Cancer Control stage IIIB (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "IIIC",
+      "display" : "Stadium IIIC",
+      "target" : [{
+        "code" : "1352848008",
+        "display" : "Union for International Cancer Control stage IIIC (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "IIIC1",
+      "display" : "Stadium IIIC1",
+      "target" : [{
+        "code" : "1352862001",
+        "display" : "Union for International Cancer Control stage IIIC1 (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "IIIC2",
+      "display" : "Stadium IIIC2",
+      "target" : [{
+        "code" : "1352833002",
+        "display" : "Union for International Cancer Control stage IIIC2 (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "IV",
+      "display" : "Stadium IV",
+      "target" : [{
+        "code" : "1352913000",
+        "display" : "Union for International Cancer Control stage IV (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "IVA",
+      "display" : "Stadium IVA",
+      "target" : [{
+        "code" : "1352822000",
+        "display" : "Union for International Cancer Control stage IVA (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "IVB",
+      "display" : "Stadium IVB",
+      "target" : [{
+        "code" : "1352836005",
+        "display" : "Union for International Cancer Control stage IVB (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "IVC",
+      "display" : "Stadium IVC",
+      "target" : [{
+        "code" : "1352921006",
+        "display" : "Union for International Cancer Control stage IVC (qualifier value)",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

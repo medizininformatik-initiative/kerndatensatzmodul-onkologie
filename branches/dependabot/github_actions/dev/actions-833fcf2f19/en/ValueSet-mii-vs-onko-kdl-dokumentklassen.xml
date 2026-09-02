@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-onko-kdl-dokumentklassen"/>
+  <meta>
+    <extension url="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-license">
+      <valueCode value="CC-BY-4.0"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/package-source">
+      <extension url="packageId">
+        <valueId value="de.medizininformatikinitiative.kerndatensatz.onkologie"/>
+      </extension>
+      <extension url="version">
+        <valueString value="2026.0.3"/>
+      </extension>
+      <extension url="uri">
+        <valueUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"/>
+      </extension>
+    </extension>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-computablevalueset"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-onko-kdl-dokumentklassen</b></p><a name="mii-vs-onko-kdl-dokumentklassen"> </a><a name="hcmii-vs-onko-kdl-dokumentklassen"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablevalueset.html">Shareable ValueSet</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareablevalueset.html">CRMI Shareable ValueSet</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishablevalueset.html">CRMI Publishable ValueSet</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-computablevalueset.html">CRMI Computable ValueSet</a></p></div><ul><li>Include these codes as defined in <code>http://dvmd.de/fhir/CodeSystem/kdl</code><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>PT080102</td><td>Histologiebefund</td></tr><tr><td>PT260102</td><td>Zytologiebefund</td></tr><tr><td>PT130102</td><td>Molekularpathologiebefund</td></tr><tr><td>SD150102</td><td>Meldebogen Krebsregister</td></tr><tr><td>SD150104</td><td>Tumorlokalisationsbogen</td></tr><tr><td>DG020103</td><td>CT-Befund</td></tr><tr><td>DG020105</td><td>Endoskopiebefund</td></tr><tr><td>DG020107</td><td>MRT-Befund</td></tr><tr><td>DG020109</td><td>PET-Befund</td></tr><tr><td>DG020110</td><td>Röntgenbefund</td></tr><tr><td>DG020111</td><td>Sonographiebefund</td></tr><tr><td>DG020112</td><td>SPECT-Befund</td></tr><tr><td>DG020113</td><td>Szintigraphiebefund</td></tr><tr><td>DG020114</td><td>Mammographiebefund</td></tr><tr><td>DG020199</td><td>Sonstige Dokumentation bildgebende Diagnostik</td></tr><tr><td>SD150103</td><td>Tumorkonferenzprotokoll</td></tr><tr><td>AD060103</td><td>Konsilbericht intern</td></tr><tr><td>AD060104</td><td>Konsilbericht extern</td></tr><tr><td>AD060110</td><td>Konsilbericht</td></tr><tr><td>OP150103</td><td>OP-Bericht</td></tr><tr><td>OP150104</td><td>OP-Bilddokumentation</td></tr><tr><td>OP150106</td><td>OP-Protokoll</td></tr><tr><td>AM010303</td><td>Operationsaufklärungsbogen</td></tr><tr><td>TH020101</td><td>Bestrahlungsplan</td></tr><tr><td>TH020102</td><td>Bestrahlungsprotokoll</td></tr><tr><td>TH020103</td><td>Bestrahlungsverordnung</td></tr><tr><td>TH020104</td><td>Radiojodtherapieprotokoll</td></tr><tr><td>TH020105</td><td>Therapieprotokoll mit Radionukliden</td></tr><tr><td>TH130102</td><td>Arzneiadministration</td></tr><tr><td>TH130103</td><td>Chemotherapieprotokoll</td></tr><tr><td>TH130104</td><td>Hormontherapieprotokoll</td></tr><tr><td>TH130107</td><td>Medikationsplan</td></tr><tr><td>AM010304</td><td>Aufklärungsbogen Therapie</td></tr><tr><td>SD150101</td><td>Follow up-Bogen</td></tr><tr><td>LB120102</td><td>Laborbefund extern</td></tr><tr><td>LB120103</td><td>Laborbefund intern</td></tr><tr><td>LB120106</td><td>Hämatologisches Speziallabor</td></tr><tr><td>LB120107</td><td>Laborbefund</td></tr><tr><td>AD020103</td><td>Todesbescheinigung</td></tr><tr><td>SF190101</td><td>CRF-Bogen</td></tr><tr><td>SF190102</td><td>Einwilligung Studie</td></tr><tr><td>SF190106</td><td>Studienbericht</td></tr><tr><td>AD010103</td><td>Entlassungsbericht intern</td></tr><tr><td>AD010104</td><td>Entlassungsbericht extern</td></tr><tr><td>SD150199</td><td>Sonstiger onkologischer Dokumentationsbogen</td></tr></table></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="shareable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="publishable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="computable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes"/>
+        <code value="package"/>
+        <display value="Package"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-approvalDate">
+    <valueDate value="2026-01-03"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-topic">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"/>
+        <code value="C3262"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-author">
+    <valueContactDetail>
+      <telecom>
+        <system value="email"/>
+        <value value="thomas.debertshaeuser@charite.de"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-editor">
+    <valueContactDetail>
+      <name value="Taskforce Core Data Set"/>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-reviewer">
+    <valueContactDetail>
+      <name value="Interoperability Working Group"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-reviewer">
+    <valueContactDetail>
+      <name value="National Steering Committee"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-endorser">
+    <valueContactDetail>
+      <name value="Interoperability Working Group"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-endorser">
+    <valueContactDetail>
+      <name value="National Steering Committee"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm">
+    <valueCoding>
+      <system value="http://hl7.org/fhir/version-algorithm"/>
+      <code value="semver"/>
+      <display value="SemVer"/>
+    </valueCoding>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2026"/>
+    </valuePeriod>
+  </extension>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-kdl-dokumentklassen"/>
+  <version value="2026.0.3"/>
+  <name value="MII_VS_Onko_KDL_Dokumentklassen"/>
+  <title value="MII VS Onkologie KDL Dokumentklassen"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-09-02T03:26:39+00:00"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="Kuratierte Auswahl der KDL-Dokumentklassen (KDL 2025) entlang des onkologischen Behandlungspfads (oBDS-Kapitel: Diagnose/Pathologie, Staging-Bildgebung, Tumorkonferenz, Operation, Strahlentherapie, Systemische Therapie, Verlauf/Labor, Tod, Studien, übergreifende Dokumente) als Begleitartefakt für DocumentReference.type. Teilmenge des KDL-Bindings im MII-KDS-Modul Dokument; deprecated-Klassen sind ausgeschlossen."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://dvmd.de/fhir/CodeSystem/kdl"/>
+      <concept>
+        <code value="PT080102"/>
+        <display value="Histologiebefund"/>
+      </concept>
+      <concept>
+        <code value="PT260102"/>
+        <display value="Zytologiebefund"/>
+      </concept>
+      <concept>
+        <code value="PT130102"/>
+        <display value="Molekularpathologiebefund"/>
+      </concept>
+      <concept>
+        <code value="SD150102"/>
+        <display value="Meldebogen Krebsregister"/>
+      </concept>
+      <concept>
+        <code value="SD150104"/>
+        <display value="Tumorlokalisationsbogen"/>
+      </concept>
+      <concept>
+        <code value="DG020103"/>
+        <display value="CT-Befund"/>
+      </concept>
+      <concept>
+        <code value="DG020105"/>
+        <display value="Endoskopiebefund"/>
+      </concept>
+      <concept>
+        <code value="DG020107"/>
+        <display value="MRT-Befund"/>
+      </concept>
+      <concept>
+        <code value="DG020109"/>
+        <display value="PET-Befund"/>
+      </concept>
+      <concept>
+        <code value="DG020110"/>
+        <display value="Röntgenbefund"/>
+      </concept>
+      <concept>
+        <code value="DG020111"/>
+        <display value="Sonographiebefund"/>
+      </concept>
+      <concept>
+        <code value="DG020112"/>
+        <display value="SPECT-Befund"/>
+      </concept>
+      <concept>
+        <code value="DG020113"/>
+        <display value="Szintigraphiebefund"/>
+      </concept>
+      <concept>
+        <code value="DG020114"/>
+        <display value="Mammographiebefund"/>
+      </concept>
+      <concept>
+        <code value="DG020199"/>
+        <display value="Sonstige Dokumentation bildgebende Diagnostik"/>
+      </concept>
+      <concept>
+        <code value="SD150103"/>
+        <display value="Tumorkonferenzprotokoll"/>
+      </concept>
+      <concept>
+        <code value="AD060103"/>
+        <display value="Konsilbericht intern"/>
+      </concept>
+      <concept>
+        <code value="AD060104"/>
+        <display value="Konsilbericht extern"/>
+      </concept>
+      <concept>
+        <code value="AD060110"/>
+        <display value="Konsilbericht"/>
+      </concept>
+      <concept>
+        <code value="OP150103"/>
+        <display value="OP-Bericht"/>
+      </concept>
+      <concept>
+        <code value="OP150104"/>
+        <display value="OP-Bilddokumentation"/>
+      </concept>
+      <concept>
+        <code value="OP150106"/>
+        <display value="OP-Protokoll"/>
+      </concept>
+      <concept>
+        <code value="AM010303"/>
+        <display value="Operationsaufklärungsbogen"/>
+      </concept>
+      <concept>
+        <code value="TH020101"/>
+        <display value="Bestrahlungsplan"/>
+      </concept>
+      <concept>
+        <code value="TH020102"/>
+        <display value="Bestrahlungsprotokoll"/>
+      </concept>
+      <concept>
+        <code value="TH020103"/>
+        <display value="Bestrahlungsverordnung"/>
+      </concept>
+      <concept>
+        <code value="TH020104"/>
+        <display value="Radiojodtherapieprotokoll"/>
+      </concept>
+      <concept>
+        <code value="TH020105"/>
+        <display value="Therapieprotokoll mit Radionukliden"/>
+      </concept>
+      <concept>
+        <code value="TH130102"/>
+        <display value="Arzneiadministration"/>
+      </concept>
+      <concept>
+        <code value="TH130103"/>
+        <display value="Chemotherapieprotokoll"/>
+      </concept>
+      <concept>
+        <code value="TH130104"/>
+        <display value="Hormontherapieprotokoll"/>
+      </concept>
+      <concept>
+        <code value="TH130107"/>
+        <display value="Medikationsplan"/>
+      </concept>
+      <concept>
+        <code value="AM010304"/>
+        <display value="Aufklärungsbogen Therapie"/>
+      </concept>
+      <concept>
+        <code value="SD150101"/>
+        <display value="Follow up-Bogen"/>
+      </concept>
+      <concept>
+        <code value="LB120102"/>
+        <display value="Laborbefund extern"/>
+      </concept>
+      <concept>
+        <code value="LB120103"/>
+        <display value="Laborbefund intern"/>
+      </concept>
+      <concept>
+        <code value="LB120106"/>
+        <display value="Hämatologisches Speziallabor"/>
+      </concept>
+      <concept>
+        <code value="LB120107"/>
+        <display value="Laborbefund"/>
+      </concept>
+      <concept>
+        <code value="AD020103"/>
+        <display value="Todesbescheinigung"/>
+      </concept>
+      <concept>
+        <code value="SF190101"/>
+        <display value="CRF-Bogen"/>
+      </concept>
+      <concept>
+        <code value="SF190102"/>
+        <display value="Einwilligung Studie"/>
+      </concept>
+      <concept>
+        <code value="SF190106"/>
+        <display value="Studienbericht"/>
+      </concept>
+      <concept>
+        <code value="AD010103"/>
+        <display value="Entlassungsbericht intern"/>
+      </concept>
+      <concept>
+        <code value="AD010104"/>
+        <display value="Entlassungsbericht extern"/>
+      </concept>
+      <concept>
+        <code value="SD150199"/>
+        <display value="Sonstiger onkologischer Dokumentationsbogen"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

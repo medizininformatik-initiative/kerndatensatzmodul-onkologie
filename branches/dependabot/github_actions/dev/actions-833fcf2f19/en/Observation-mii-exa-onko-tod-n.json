@@ -1,0 +1,38 @@
+{
+  "resourceType" : "Observation",
+  "id" : "mii-exa-onko-tod-n",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tod|2026.0.3"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-tod-n</b></p><a name=\"mii-exa-onko-tod-n\"> </a><a name=\"hcmii-exa-onko-tod-n\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-tod.html\">MII PR Onkologie Tod</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 184305005}\">184305005</span></p><p><b>subject</b>: <a href=\"Patient-example.html\">Erika Beispiel  Female, DoB: 1965-04-12</a></p><p><b>effective</b>: 2024-02-07</p><p><b>value</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm C50.3}\">Bösartige Neubildung: Unterer innerer Quadrant der Brustdrüse</span></p><p><b>interpretation</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tod N}\">Nein, die Person ist nicht an einer Tumorerkrankung oder Folge einer Tumorerkrankung (einschließlich Behandlungskomplikation) verstorben.</span></p></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "184305005"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/example"
+  },
+  "effectiveDateTime" : "2024-02-07",
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+      "version" : "2019",
+      "code" : "C50.3",
+      "display" : "Bösartige Neubildung: Unterer innerer Quadrant der Brustdrüse"
+    }]
+  },
+  "interpretation" : [{
+    "coding" : [{
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tod",
+      "code" : "N",
+      "display" : "Nein, die Person ist nicht an einer Tumorerkrankung oder Folge einer Tumorerkrankung (einschließlich Behandlungskomplikation) verstorben."
+    }]
+  }]
+}

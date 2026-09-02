@@ -1,0 +1,30 @@
+{
+  "resourceType" : "Observation",
+  "id" : "mii-exa-onko-fernmetastasen-1",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen|2026.0.3"]
+  },
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-fernmetastasen-1</b></p><a name=\"de-mii-exa-onko-fernmetastasen-1\"> </a><a name=\"de-hcmii-exa-onko-fernmetastasen-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-fernmetastasen.html\">MII PR Onkologie Fernmetastasen</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 385421009}\">385421009</span></p><p><b>subject</b>: <a href=\"Patient-example.html\">Erika Beispiel  Female, DoB: 1965-04-12</a></p><p><b>effective</b>: 2024-02-08</p><p><b>value</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen PUL}\">Lunge</span></p></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "385421009"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/example"
+  },
+  "effectiveDateTime" : "2024-02-08",
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen",
+      "code" : "PUL",
+      "display" : "Lunge"
+    }]
+  }
+}

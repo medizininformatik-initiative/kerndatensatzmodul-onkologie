@@ -1,0 +1,1408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-onko-systemische-therapie-substanzen-2018"/>
+  <meta>
+    <extension url="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-license">
+      <valueCode value="CC-BY-4.0"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/package-source">
+      <extension url="packageId">
+        <valueId value="de.medizininformatikinitiative.kerndatensatz.onkologie"/>
+      </extension>
+      <extension url="version">
+        <valueString value="2026.0.3"/>
+      </extension>
+      <extension url="uri">
+        <valueUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"/>
+      </extension>
+    </extension>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-computablevalueset"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-onko-systemische-therapie-substanzen-2018</b></p><a name="de-mii-vs-onko-systemische-therapie-substanzen-2018"> </a><a name="de-hcmii-vs-onko-systemische-therapie-substanzen-2018"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablevalueset.html">Shareable ValueSet</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareablevalueset.html">CRMI Shareable ValueSet</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishablevalueset.html">CRMI Publishable ValueSet</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-computablevalueset.html">CRMI Computable ValueSet</a></p></div><ul><li>Include these codes as defined in <code>http://fhir.de/CodeSystem/bfarm/atc</code><span title="Version is explicitly stated to be 2018"> version &#x1F4CD;2018</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>L02BX01</td><td>Abarelix</td></tr><tr><td>L04AA24</td><td>Abatacept</td></tr><tr><td>L04AA22</td><td>Abetimus</td></tr><tr><td>L02BX03</td><td>Abirateron</td></tr><tr><td>L01DB04</td><td>Aclarubicin</td></tr><tr><td>L04AB04</td><td>Adalimumab</td></tr><tr><td>L01XE13</td><td>Afatinib</td></tr><tr><td>L04AB03</td><td>Afelimomab</td></tr><tr><td>L01XX44</td><td>Aflibercept</td></tr><tr><td>L03AC01</td><td>Aldesleukin</td></tr><tr><td>L01XE36</td><td>Alectinib</td></tr><tr><td>L04AA15</td><td>Alefacept</td></tr><tr><td>L04AA34</td><td>Alemtuzumab</td></tr><tr><td>M05BA04</td><td>Alendronsäure</td></tr><tr><td>L01XX22</td><td>Alitretinoin</td></tr><tr><td>L01XX03</td><td>Altretamin</td></tr><tr><td>V03AM01</td><td>Amilomer</td></tr><tr><td>L02BG01</td><td>Aminoglutethimid</td></tr><tr><td>L01XD04</td><td>Aminolevulinsäure</td></tr><tr><td>L01DB10</td><td>Amrubicin</td></tr><tr><td>L01XX01</td><td>Amsacrin</td></tr><tr><td>L01XX35</td><td>Anagrelid</td></tr><tr><td>L04AC03</td><td>Anakinra</td></tr><tr><td>L02BG03</td><td>Anastrozol</td></tr><tr><td>L04AA04</td><td>Antithymozytäres Immunglobulin (Kaninchen)</td></tr><tr><td>L01XX27</td><td>Arsentrioxid</td></tr><tr><td>P01BE03</td><td>Artesunat</td></tr><tr><td>L01XX02</td><td>Asparaginase</td></tr><tr><td>L01XC32</td><td>Atezolizumab</td></tr><tr><td>L01XC31</td><td>Avelumab</td></tr><tr><td>L01XE17</td><td>Axitinib</td></tr><tr><td>L01BC07</td><td>Azacitidin</td></tr><tr><td>L04AX01</td><td>Azathioprin</td></tr><tr><td>L04AC02</td><td>Basiliximab</td></tr><tr><td>L03AX03</td><td>BCG-Impfstoff</td></tr><tr><td>L04AA28</td><td>Belatacept</td></tr><tr><td>L04AA26</td><td>Belimumab</td></tr><tr><td>L01XX49</td><td>Belinostat</td></tr><tr><td>L01AA09</td><td>Bendamustin</td></tr><tr><td>L01XC07</td><td>Bevacizumab</td></tr><tr><td>L01XX25</td><td>Bexaroten</td></tr><tr><td>L02BB03</td><td>Bicalutamid</td></tr><tr><td>L01DC01</td><td>Bleomycin</td></tr><tr><td>L01XC19</td><td>Blinatumomab</td></tr><tr><td>L01XX32</td><td>Bortezomib</td></tr><tr><td>L01XE14</td><td>Bosutinib</td></tr><tr><td>L01XC12</td><td>Brentuximab vedotin</td></tr><tr><td>L04AC09</td><td>Briakinumab</td></tr><tr><td>N04BC01</td><td>Bromocriptin</td></tr><tr><td>L02AE01</td><td>Buserelin</td></tr><tr><td>L01AB01</td><td>Busulfan</td></tr><tr><td>L01CD04</td><td>Cabazitaxel</td></tr><tr><td>N04BC06</td><td>Cabergolin</td></tr><tr><td>L01XE26</td><td>Cabozantinib</td></tr><tr><td>V03AF04</td><td>Calciumlevofolinat</td></tr><tr><td>L01XC06</td><td>Cetuximab</td></tr><tr><td>L01XC24</td><td>Daratumumab</td></tr><tr><td>L01XC28</td><td>Durvalumab</td></tr><tr><td>L01XC26</td><td>Inotuzumab ozogamicin</td></tr><tr><td>L01XC11</td><td>Ipilimumab</td></tr><tr><td>V03AF06</td><td>Natriumfolinat</td></tr><tr><td>L04AC08</td><td>Canakinumab</td></tr><tr><td>L01BC06</td><td>Capecitabin</td></tr><tr><td>L01XA02</td><td>Carboplatin</td></tr><tr><td>L01AC03</td><td>Carboquon</td></tr><tr><td>L01XX45</td><td>Carfilzomib</td></tr><tr><td>L01BC04</td><td>Carmofur</td></tr><tr><td>L01AD01</td><td>Carmustin</td></tr><tr><td>L01XE28</td><td>Ceritinib</td></tr><tr><td>L04AB05</td><td>Certolizumab pegol</td></tr><tr><td>H01CC02</td><td>Cetrorelix</td></tr><tr><td>L01AA02</td><td>Chlorambucil</td></tr><tr><td>G03DB06</td><td>Chlormadinon</td></tr><tr><td>L01AA05</td><td>Chlormethin</td></tr><tr><td>L04AD01</td><td>Ciclosporin</td></tr><tr><td>L01XA01</td><td>Cisplatin</td></tr><tr><td>L01BB04</td><td>Cladribin</td></tr><tr><td>M05BA02</td><td>Clodronsäure</td></tr><tr><td>L01BB06</td><td>Clofarabin</td></tr><tr><td>L01XE38</td><td>Cobimetinib</td></tr><tr><td>L01XE16</td><td>Crizotinib</td></tr><tr><td>L01AA01</td><td>Cyclophosphamid</td></tr><tr><td>G03HA01</td><td>Cyproteron</td></tr><tr><td>L01BC01</td><td>Cytarabin</td></tr><tr><td>L01XE23</td><td>Dabrafenib</td></tr><tr><td>L01AX04</td><td>Dacarbazin</td></tr><tr><td>L04AC01</td><td>Daclizumab</td></tr><tr><td>L01DA01</td><td>Dactinomycin</td></tr><tr><td>B03XA02</td><td>Darbepoetin alfa</td></tr><tr><td>L01XE06</td><td>Dasatinib</td></tr><tr><td>L01DB02</td><td>Daunorubicin</td></tr><tr><td>L01BC08</td><td>Decitabin</td></tr><tr><td>L02BX02</td><td>Degarelix</td></tr><tr><td>L01CC01</td><td>Demecolcin</td></tr><tr><td>L01XX29</td><td>Denileukindiftitox</td></tr><tr><td>M05BX04</td><td>Denosumab</td></tr><tr><td>H02AB02</td><td>Dexamethason</td></tr><tr><td>L01CD02</td><td>Docetaxel</td></tr><tr><td>L01DB01</td><td>Doxorubicin</td></tr><tr><td>G04CB02</td><td>Dutasterid</td></tr><tr><td>L04AA25</td><td>Eculizumab</td></tr><tr><td>L04AA21</td><td>Efalizumab</td></tr><tr><td>L01XD06</td><td>Efaproxiral</td></tr><tr><td>B02BX05</td><td>Eltrombopag</td></tr><tr><td>L02BB04</td><td>Enzalutamid</td></tr><tr><td>L01DB03</td><td>Epirubicin</td></tr><tr><td>L01XX41</td><td>Eribulin</td></tr><tr><td>L01XE03</td><td>Erlotinib</td></tr><tr><td>B03XA01</td><td>Erythropoietin</td></tr><tr><td>L01XX11</td><td>Estramustin</td></tr><tr><td>L04AB01</td><td>Etanercept</td></tr><tr><td>M05BA01</td><td>Etidronsäure</td></tr><tr><td>L01AG01</td><td>Etoglucid</td></tr><tr><td>L01CB01</td><td>Etoposid</td></tr><tr><td>L01XE10</td><td>Everolimus</td></tr><tr><td>L02BG06</td><td>Exemestan</td></tr><tr><td>L03AA02</td><td>Filgrastim</td></tr><tr><td>G04CB01</td><td>Finasterid</td></tr><tr><td>L04AA27</td><td>Fingolimod</td></tr><tr><td>L01BB05</td><td>Fludarabin</td></tr><tr><td>L01BC02</td><td>Fluorouracil</td></tr><tr><td>L01BC52</td><td>Fluorouracil, Kombinationen</td></tr><tr><td>L02BB01</td><td>Flutamid</td></tr><tr><td>V03AF03</td><td>Calciumfolinat</td></tr><tr><td>L02BG02</td><td>Formestan</td></tr><tr><td>L02AA04</td><td>Fosfestrol</td></tr><tr><td>L01AD05</td><td>Fotemustin</td></tr><tr><td>L02BA03</td><td>Fulvestrant</td></tr><tr><td>L01XE02</td><td>Gefitinib</td></tr><tr><td>L01BC05</td><td>Gemcitabin</td></tr><tr><td>L02AB03</td><td>Gestonoron</td></tr><tr><td>L04AB06</td><td>Golimumab</td></tr><tr><td>H01CA01</td><td>Gonadorelin</td></tr><tr><td>L02AE03</td><td>Goserelin</td></tr><tr><td>L04AA19</td><td>Gusperimus</td></tr><tr><td>L03AX14</td><td>Histamindihydrochlorid</td></tr><tr><td>L02AE05</td><td>Histrelin</td></tr><tr><td>L01XX05</td><td>Hydroxycarbamid</td></tr><tr><td>M05BA06</td><td>Ibandronsäure</td></tr><tr><td>V10XX02</td><td>(90Y)Ibritumomabtiuxetan</td></tr><tr><td>L01XE27</td><td>Ibrutinib</td></tr><tr><td>L01DB06</td><td>Idarubicin</td></tr><tr><td>L01XX47</td><td>Idelalisib</td></tr><tr><td>L01AA06</td><td>Ifosfamid</td></tr><tr><td>L01XE01</td><td>Imatinib</td></tr><tr><td>D06BB10</td><td>Imiquimod</td></tr><tr><td>L04AB02</td><td>Infliximab</td></tr><tr><td>D06BX02</td><td>Ingenolmebutat</td></tr><tr><td>L03AB01</td><td>Interferon alfa, natürlich</td></tr><tr><td>L03AB04</td><td>Interferon alfa-2a</td></tr><tr><td>L03AB05</td><td>Interferon alfa-2b</td></tr><tr><td>L03AB18</td><td>Interferon gamma-1b</td></tr><tr><td>L01XX19</td><td>Irinotecan</td></tr><tr><td>L01DC04</td><td>Ixabepilon</td></tr><tr><td>L01XX50</td><td>Ixazomib</td></tr><tr><td>H01CB03</td><td>Lanreotid</td></tr><tr><td>L01XE07</td><td>Lapatinib</td></tr><tr><td>L04AA13</td><td>Leflunomid</td></tr><tr><td>L04AX04</td><td>Lenalidomid</td></tr><tr><td>L03AA10</td><td>Lenograstim</td></tr><tr><td>L01XE29</td><td>Lenvatinib</td></tr><tr><td>L02BG04</td><td>Letrozol</td></tr><tr><td>L02AE02</td><td>Leuprorelin</td></tr><tr><td>L03AA14</td><td>Lipegfilgrastim</td></tr><tr><td>L01AD02</td><td>Lomustin</td></tr><tr><td>L01XX07</td><td>Lonidamin</td></tr><tr><td>G03DC03</td><td>Lynestrenol</td></tr><tr><td>L01AB03</td><td>Mannosulfan</td></tr><tr><td>J05AX09</td><td>Maraviroc</td></tr><tr><td>L01XX10</td><td>Masoprocol</td></tr><tr><td>L02AB02</td><td>Medroxyprogesteron</td></tr><tr><td>L02AB01</td><td>Megestrol</td></tr><tr><td>L01AA03</td><td>Melphalan</td></tr><tr><td>R03DX09</td><td>Mepolizumab</td></tr><tr><td>L01BB02</td><td>Mercaptopurin</td></tr><tr><td>V03AF01</td><td>Mesna</td></tr><tr><td>N07BC02</td><td>Methadon</td></tr><tr><td>L01BA01</td><td>Methotrexat</td></tr><tr><td>L01XD10</td><td>Methoxsalen</td></tr><tr><td>B03XA03</td><td>Methoxy-Polyethylenglycol-Epoetin beta</td></tr><tr><td>L01XD03</td><td>Methylaminolevulinat</td></tr><tr><td>H02AB04</td><td>Methylprednisolon</td></tr><tr><td>L01XE39</td><td>Midostaurin</td></tr><tr><td>L03AX15</td><td>Mifamurtid</td></tr><tr><td>L01XX09</td><td>Miltefosin</td></tr><tr><td>L01CH01</td><td>Mistelkraut</td></tr><tr><td>L01CP01</td><td>Mistelkraut</td></tr><tr><td>L01AX01</td><td>Mitobronitol</td></tr><tr><td>L01XX16</td><td>Mitoguazon</td></tr><tr><td>L01DC03</td><td>Mitomycin</td></tr><tr><td>L01XX23</td><td>Mitotan</td></tr><tr><td>L01DB07</td><td>Mitoxantron</td></tr><tr><td>L03AA03</td><td>Molgramostim</td></tr><tr><td>L04AA02</td><td>Muromonab-CD3</td></tr><tr><td>L04AA06</td><td>Mycophenolsäure</td></tr><tr><td>L04AA23</td><td>Natalizumab</td></tr><tr><td>V03AF10</td><td>Natriumlevofolinat</td></tr><tr><td>L01BB07</td><td>Nelarabin</td></tr><tr><td>L01XE08</td><td>Nilotinib</td></tr><tr><td>L02BB02</td><td>Nilutamid</td></tr><tr><td>L01AD06</td><td>Nimustin</td></tr><tr><td>L01XE31</td><td>Nintedanib</td></tr><tr><td>L01XC17</td><td>Nivolumab</td></tr><tr><td>L01XC15</td><td>Obinutuzumab</td></tr><tr><td>L01XX36</td><td>Oblimersen</td></tr><tr><td>H01CB02</td><td>Octreotid</td></tr><tr><td>L01XX46</td><td>Olaparib</td></tr><tr><td>L01XC27</td><td>Olaratumab</td></tr><tr><td>L01XX40</td><td>Omacetaxinmepesuccinat</td></tr><tr><td>L03AC02</td><td>Oprelvekin</td></tr><tr><td>L01XE35</td><td>Osimertinib</td></tr><tr><td>L01XA03</td><td>Oxaliplatin</td></tr><tr><td>L01CD01</td><td>Paclitaxel</td></tr><tr><td>L01CD03</td><td>Paclitaxelpoliglumex</td></tr><tr><td>L01XE33</td><td>Palbociclib</td></tr><tr><td>V03AF08</td><td>Palifermin</td></tr><tr><td>M05BA03</td><td>Pamidronsäure</td></tr><tr><td>L01XC08</td><td>Panitumumab</td></tr><tr><td>L01XX42</td><td>Panobinostat</td></tr><tr><td>L01XX24</td><td>Pegaspargase</td></tr><tr><td>L03AA13</td><td>Pegfilgrastim</td></tr><tr><td>L03AB11</td><td>Peginterferon alfa-2a</td></tr><tr><td>L03AB10</td><td>Peginterferon alfa-2b</td></tr><tr><td>L01XC18</td><td>Pembrolizumab</td></tr><tr><td>L01BA04</td><td>Pemetrexed</td></tr><tr><td>L01XX08</td><td>Pentostatin</td></tr><tr><td>L01XC13</td><td>Pertuzumab</td></tr><tr><td>L01AX02</td><td>Pipobroman</td></tr><tr><td>L01DB08</td><td>Pirarubicin</td></tr><tr><td>L01DB11</td><td>Pixantron</td></tr><tr><td>V03AX10</td><td>Placebo</td></tr><tr><td>L03AX16</td><td>Plerixafor</td></tr><tr><td>L01DC02</td><td>Plicamycin</td></tr><tr><td>L03AX08</td><td>Poly ICLC</td></tr><tr><td>L02AA02</td><td>Polyestradiolphosphat</td></tr><tr><td>L01XA05</td><td>Polyplatillen</td></tr><tr><td>L04AX06</td><td>Pomalidomid</td></tr><tr><td>L01XE24</td><td>Ponatinib</td></tr><tr><td>L01XD01</td><td>Porfimer natrium</td></tr><tr><td>L01BA05</td><td>Pralatrexat</td></tr><tr><td>D07AC18</td><td>Prednicarbat</td></tr><tr><td>L01AA08</td><td>Prednimustin</td></tr><tr><td>H02AB06</td><td>Prednisolon</td></tr><tr><td>H02AB07</td><td>Prednison</td></tr><tr><td>L01XB01</td><td>Procarbazin</td></tr><tr><td>D05AD</td><td>Psoralene zur topischen Anwendung</td></tr><tr><td>D05BA</td><td>Psoralene zur systemischen Anwendung</td></tr><tr><td>G03XC01</td><td>Raloxifen</td></tr><tr><td>L01BA03</td><td>Raltitrexed</td></tr><tr><td>L01XC21</td><td>Ramucirumab</td></tr><tr><td>L01AD07</td><td>Ranimustin</td></tr><tr><td>L01XE21</td><td>Regorafenib</td></tr><tr><td>L01XE42</td><td>Ribociclib</td></tr><tr><td>L04AC04</td><td>Rilonacept</td></tr><tr><td>M05BA07</td><td>Risedronsäure</td></tr><tr><td>L01XC02</td><td>Rituximab</td></tr><tr><td>L01XX39</td><td>Romidepsin</td></tr><tr><td>B02BX04</td><td>Romiplostim</td></tr><tr><td>L01XE18</td><td>Ruxolitinib</td></tr><tr><td>L01XA04</td><td>Satraplatin</td></tr><tr><td>L01AD03</td><td>Semustin</td></tr><tr><td>L04AC11</td><td>Siltuximab</td></tr><tr><td>L04AA10</td><td>Sirolimus</td></tr><tr><td>H01CB01</td><td>Somatostatin</td></tr><tr><td>L01XE05</td><td>Sorafenib</td></tr><tr><td>L01AD04</td><td>Streptozocin</td></tr><tr><td>L01XE04</td><td>Sunitinib</td></tr><tr><td>L04AD02</td><td>Tacrolimus</td></tr><tr><td>L01XX51</td><td>Talimogen laherparepvec</td></tr><tr><td>L02BA01</td><td>Tamoxifen</td></tr><tr><td>L03AX11</td><td>Tasonermin</td></tr><tr><td>L01BC53</td><td>Tegafur, Kombinationen</td></tr><tr><td>L01BC63</td><td>Tegafur und Uracil</td></tr><tr><td>L01BC73</td><td>Tegafur, Gimeracil und Oteracil</td></tr><tr><td>L01XD05</td><td>Temoporfin</td></tr><tr><td>L01AX03</td><td>Temozolomid</td></tr><tr><td>L01XE09</td><td>Temsirolimus</td></tr><tr><td>L01CB02</td><td>Teniposid</td></tr><tr><td>L04AX02</td><td>Thalidomid</td></tr><tr><td>L01AC01</td><td>Thiotepa</td></tr><tr><td>L01XX18</td><td>Tiazofurin</td></tr><tr><td>M05BA05</td><td>Tiludronsäure</td></tr><tr><td>L01BB03</td><td>Tioguanin</td></tr><tr><td>L01XE34</td><td>Tivozanib</td></tr><tr><td>L04AC07</td><td>Tocilizumab</td></tr><tr><td>L01XX17</td><td>Topotecan</td></tr><tr><td>L02BA02</td><td>Toremifen</td></tr><tr><td>V10XA53</td><td>Tositumomab/(131I)Iodtositumomab</td></tr><tr><td>L01CX01</td><td>Trabectedin</td></tr><tr><td>L01XE25</td><td>Trametinib</td></tr><tr><td>L01XC03</td><td>Trastuzumab</td></tr><tr><td>L01XC14</td><td>Trastuzumab emtansin</td></tr><tr><td>L01AB02</td><td>Treosulfan</td></tr><tr><td>L01XX14</td><td>Tretinoin</td></tr><tr><td>L01AC02</td><td>Triaziquon</td></tr><tr><td>L01BC59</td><td>Trifluridin, Kombinationen</td></tr><tr><td>L02AE04</td><td>Triptorelin</td></tr><tr><td>L01AA07</td><td>Trofosfamid</td></tr><tr><td>N03AG01</td><td>Valproinsäure</td></tr><tr><td>L01DB09</td><td>Valrubicin</td></tr><tr><td>L01XE12</td><td>Vandetanib</td></tr><tr><td>L01XE15</td><td>Vemurafenib</td></tr><tr><td>L01XX52</td><td>Venetoclax</td></tr><tr><td>L01CA01</td><td>Vinblastin</td></tr><tr><td>L01CA02</td><td>Vincristin</td></tr><tr><td>L01CA03</td><td>Vindesin</td></tr><tr><td>L01CA05</td><td>Vinflunin</td></tr><tr><td>L01CA04</td><td>Vinorelbin</td></tr><tr><td>L01XX43</td><td>Vismodegib</td></tr><tr><td>L04AD03</td><td>Voclosporin</td></tr><tr><td>L01XX38</td><td>Vorinostat</td></tr><tr><td>L02BG05</td><td>Vorozol</td></tr><tr><td>L01XX53</td><td>Vosaroxin</td></tr><tr><td>M05BA08</td><td>Zoledronsäure</td></tr><tr><td>L01DB05</td><td>Zorubicin</td></tr></table></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="shareable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="publishable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="computable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes"/>
+        <code value="package"/>
+        <display value="Package"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-approvalDate">
+    <valueDate value="2026-01-03"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-topic">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"/>
+        <code value="C3262"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-author">
+    <valueContactDetail>
+      <telecom>
+        <system value="email"/>
+        <value value="thomas.debertshaeuser@charite.de"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-editor">
+    <valueContactDetail>
+      <name value="Taskforce Core Data Set"/>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-reviewer">
+    <valueContactDetail>
+      <name value="Interoperability Working Group"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-reviewer">
+    <valueContactDetail>
+      <name value="National Steering Committee"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-endorser">
+    <valueContactDetail>
+      <name value="Interoperability Working Group"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-endorser">
+    <valueContactDetail>
+      <name value="National Steering Committee"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm">
+    <valueCoding>
+      <system value="http://hl7.org/fhir/version-algorithm"/>
+      <code value="semver"/>
+      <display value="SemVer"/>
+    </valueCoding>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2026"/>
+    </valuePeriod>
+  </extension>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2018"/>
+  <version value="2026.0.3"/>
+  <name value="MII_VS_Onko_Systemische_Therapie_Substanzen_2018"/>
+  <title value="MII VS Onkologie Systemische Therapie Substanzen ATC 2018"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-09-02T03:26:39+00:00"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="ATC-Codes für Substanzen der systemischen Therapie, validiert gegen ATC-DE Version 2018. Für historische Datenvalidierung."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://fhir.de/CodeSystem/bfarm/atc"/>
+      <version value="2018"/>
+      <concept>
+        <code value="L02BX01"/>
+        <display value="Abarelix"/>
+      </concept>
+      <concept>
+        <code value="L04AA24"/>
+        <display value="Abatacept"/>
+      </concept>
+      <concept>
+        <code value="L04AA22"/>
+        <display value="Abetimus"/>
+      </concept>
+      <concept>
+        <code value="L02BX03"/>
+        <display value="Abirateron"/>
+      </concept>
+      <concept>
+        <code value="L01DB04"/>
+        <display value="Aclarubicin"/>
+      </concept>
+      <concept>
+        <code value="L04AB04"/>
+        <display value="Adalimumab"/>
+      </concept>
+      <concept>
+        <code value="L01XE13"/>
+        <display value="Afatinib"/>
+      </concept>
+      <concept>
+        <code value="L04AB03"/>
+        <display value="Afelimomab"/>
+      </concept>
+      <concept>
+        <code value="L01XX44"/>
+        <display value="Aflibercept"/>
+      </concept>
+      <concept>
+        <code value="L03AC01"/>
+        <display value="Aldesleukin"/>
+      </concept>
+      <concept>
+        <code value="L01XE36"/>
+        <display value="Alectinib"/>
+      </concept>
+      <concept>
+        <code value="L04AA15"/>
+        <display value="Alefacept"/>
+      </concept>
+      <concept>
+        <code value="L04AA34"/>
+        <display value="Alemtuzumab"/>
+      </concept>
+      <concept>
+        <code value="M05BA04"/>
+        <display value="Alendronsäure"/>
+      </concept>
+      <concept>
+        <code value="L01XX22"/>
+        <display value="Alitretinoin"/>
+      </concept>
+      <concept>
+        <code value="L01XX03"/>
+        <display value="Altretamin"/>
+      </concept>
+      <concept>
+        <code value="V03AM01"/>
+        <display value="Amilomer"/>
+      </concept>
+      <concept>
+        <code value="L02BG01"/>
+        <display value="Aminoglutethimid"/>
+      </concept>
+      <concept>
+        <code value="L01XD04"/>
+        <display value="Aminolevulinsäure"/>
+      </concept>
+      <concept>
+        <code value="L01DB10"/>
+        <display value="Amrubicin"/>
+      </concept>
+      <concept>
+        <code value="L01XX01"/>
+        <display value="Amsacrin"/>
+      </concept>
+      <concept>
+        <code value="L01XX35"/>
+        <display value="Anagrelid"/>
+      </concept>
+      <concept>
+        <code value="L04AC03"/>
+        <display value="Anakinra"/>
+      </concept>
+      <concept>
+        <code value="L02BG03"/>
+        <display value="Anastrozol"/>
+      </concept>
+      <concept>
+        <code value="L04AA04"/>
+        <display value="Antithymozytäres Immunglobulin (Kaninchen)"/>
+      </concept>
+      <concept>
+        <code value="L01XX27"/>
+        <display value="Arsentrioxid"/>
+      </concept>
+      <concept>
+        <code value="P01BE03"/>
+        <display value="Artesunat"/>
+      </concept>
+      <concept>
+        <code value="L01XX02"/>
+        <display value="Asparaginase"/>
+      </concept>
+      <concept>
+        <code value="L01XC32"/>
+        <display value="Atezolizumab"/>
+      </concept>
+      <concept>
+        <code value="L01XC31"/>
+        <display value="Avelumab"/>
+      </concept>
+      <concept>
+        <code value="L01XE17"/>
+        <display value="Axitinib"/>
+      </concept>
+      <concept>
+        <code value="L01BC07"/>
+        <display value="Azacitidin"/>
+      </concept>
+      <concept>
+        <code value="L04AX01"/>
+        <display value="Azathioprin"/>
+      </concept>
+      <concept>
+        <code value="L04AC02"/>
+        <display value="Basiliximab"/>
+      </concept>
+      <concept>
+        <code value="L03AX03"/>
+        <display value="BCG-Impfstoff"/>
+      </concept>
+      <concept>
+        <code value="L04AA28"/>
+        <display value="Belatacept"/>
+      </concept>
+      <concept>
+        <code value="L04AA26"/>
+        <display value="Belimumab"/>
+      </concept>
+      <concept>
+        <code value="L01XX49"/>
+        <display value="Belinostat"/>
+      </concept>
+      <concept>
+        <code value="L01AA09"/>
+        <display value="Bendamustin"/>
+      </concept>
+      <concept>
+        <code value="L01XC07"/>
+        <display value="Bevacizumab"/>
+      </concept>
+      <concept>
+        <code value="L01XX25"/>
+        <display value="Bexaroten"/>
+      </concept>
+      <concept>
+        <code value="L02BB03"/>
+        <display value="Bicalutamid"/>
+      </concept>
+      <concept>
+        <code value="L01DC01"/>
+        <display value="Bleomycin"/>
+      </concept>
+      <concept>
+        <code value="L01XC19"/>
+        <display value="Blinatumomab"/>
+      </concept>
+      <concept>
+        <code value="L01XX32"/>
+        <display value="Bortezomib"/>
+      </concept>
+      <concept>
+        <code value="L01XE14"/>
+        <display value="Bosutinib"/>
+      </concept>
+      <concept>
+        <code value="L01XC12"/>
+        <display value="Brentuximab vedotin"/>
+      </concept>
+      <concept>
+        <code value="L04AC09"/>
+        <display value="Briakinumab"/>
+      </concept>
+      <concept>
+        <code value="N04BC01"/>
+        <display value="Bromocriptin"/>
+      </concept>
+      <concept>
+        <code value="L02AE01"/>
+        <display value="Buserelin"/>
+      </concept>
+      <concept>
+        <code value="L01AB01"/>
+        <display value="Busulfan"/>
+      </concept>
+      <concept>
+        <code value="L01CD04"/>
+        <display value="Cabazitaxel"/>
+      </concept>
+      <concept>
+        <code value="N04BC06"/>
+        <display value="Cabergolin"/>
+      </concept>
+      <concept>
+        <code value="L01XE26"/>
+        <display value="Cabozantinib"/>
+      </concept>
+      <concept>
+        <code value="V03AF04"/>
+        <display value="Calciumlevofolinat"/>
+      </concept>
+      <concept>
+        <code value="L01XC06"/>
+        <display value="Cetuximab"/>
+      </concept>
+      <concept>
+        <code value="L01XC24"/>
+        <display value="Daratumumab"/>
+      </concept>
+      <concept>
+        <code value="L01XC28"/>
+        <display value="Durvalumab"/>
+      </concept>
+      <concept>
+        <code value="L01XC26"/>
+        <display value="Inotuzumab ozogamicin"/>
+      </concept>
+      <concept>
+        <code value="L01XC11"/>
+        <display value="Ipilimumab"/>
+      </concept>
+      <concept>
+        <code value="V03AF06"/>
+        <display value="Natriumfolinat"/>
+      </concept>
+      <concept>
+        <code value="L04AC08"/>
+        <display value="Canakinumab"/>
+      </concept>
+      <concept>
+        <code value="L01BC06"/>
+        <display value="Capecitabin"/>
+      </concept>
+      <concept>
+        <code value="L01XA02"/>
+        <display value="Carboplatin"/>
+      </concept>
+      <concept>
+        <code value="L01AC03"/>
+        <display value="Carboquon"/>
+      </concept>
+      <concept>
+        <code value="L01XX45"/>
+        <display value="Carfilzomib"/>
+      </concept>
+      <concept>
+        <code value="L01BC04"/>
+        <display value="Carmofur"/>
+      </concept>
+      <concept>
+        <code value="L01AD01"/>
+        <display value="Carmustin"/>
+      </concept>
+      <concept>
+        <code value="L01XE28"/>
+        <display value="Ceritinib"/>
+      </concept>
+      <concept>
+        <code value="L04AB05"/>
+        <display value="Certolizumab pegol"/>
+      </concept>
+      <concept>
+        <code value="H01CC02"/>
+        <display value="Cetrorelix"/>
+      </concept>
+      <concept>
+        <code value="L01AA02"/>
+        <display value="Chlorambucil"/>
+      </concept>
+      <concept>
+        <code value="G03DB06"/>
+        <display value="Chlormadinon"/>
+      </concept>
+      <concept>
+        <code value="L01AA05"/>
+        <display value="Chlormethin"/>
+      </concept>
+      <concept>
+        <code value="L04AD01"/>
+        <display value="Ciclosporin"/>
+      </concept>
+      <concept>
+        <code value="L01XA01"/>
+        <display value="Cisplatin"/>
+      </concept>
+      <concept>
+        <code value="L01BB04"/>
+        <display value="Cladribin"/>
+      </concept>
+      <concept>
+        <code value="M05BA02"/>
+        <display value="Clodronsäure"/>
+      </concept>
+      <concept>
+        <code value="L01BB06"/>
+        <display value="Clofarabin"/>
+      </concept>
+      <concept>
+        <code value="L01XE38"/>
+        <display value="Cobimetinib"/>
+      </concept>
+      <concept>
+        <code value="L01XE16"/>
+        <display value="Crizotinib"/>
+      </concept>
+      <concept>
+        <code value="L01AA01"/>
+        <display value="Cyclophosphamid"/>
+      </concept>
+      <concept>
+        <code value="G03HA01"/>
+        <display value="Cyproteron"/>
+      </concept>
+      <concept>
+        <code value="L01BC01"/>
+        <display value="Cytarabin"/>
+      </concept>
+      <concept>
+        <code value="L01XE23"/>
+        <display value="Dabrafenib"/>
+      </concept>
+      <concept>
+        <code value="L01AX04"/>
+        <display value="Dacarbazin"/>
+      </concept>
+      <concept>
+        <code value="L04AC01"/>
+        <display value="Daclizumab"/>
+      </concept>
+      <concept>
+        <code value="L01DA01"/>
+        <display value="Dactinomycin"/>
+      </concept>
+      <concept>
+        <code value="B03XA02"/>
+        <display value="Darbepoetin alfa"/>
+      </concept>
+      <concept>
+        <code value="L01XE06"/>
+        <display value="Dasatinib"/>
+      </concept>
+      <concept>
+        <code value="L01DB02"/>
+        <display value="Daunorubicin"/>
+      </concept>
+      <concept>
+        <code value="L01BC08"/>
+        <display value="Decitabin"/>
+      </concept>
+      <concept>
+        <code value="L02BX02"/>
+        <display value="Degarelix"/>
+      </concept>
+      <concept>
+        <code value="L01CC01"/>
+        <display value="Demecolcin"/>
+      </concept>
+      <concept>
+        <code value="L01XX29"/>
+        <display value="Denileukindiftitox"/>
+      </concept>
+      <concept>
+        <code value="M05BX04"/>
+        <display value="Denosumab"/>
+      </concept>
+      <concept>
+        <code value="H02AB02"/>
+        <display value="Dexamethason"/>
+      </concept>
+      <concept>
+        <code value="L01CD02"/>
+        <display value="Docetaxel"/>
+      </concept>
+      <concept>
+        <code value="L01DB01"/>
+        <display value="Doxorubicin"/>
+      </concept>
+      <concept>
+        <code value="G04CB02"/>
+        <display value="Dutasterid"/>
+      </concept>
+      <concept>
+        <code value="L04AA25"/>
+        <display value="Eculizumab"/>
+      </concept>
+      <concept>
+        <code value="L04AA21"/>
+        <display value="Efalizumab"/>
+      </concept>
+      <concept>
+        <code value="L01XD06"/>
+        <display value="Efaproxiral"/>
+      </concept>
+      <concept>
+        <code value="B02BX05"/>
+        <display value="Eltrombopag"/>
+      </concept>
+      <concept>
+        <code value="L02BB04"/>
+        <display value="Enzalutamid"/>
+      </concept>
+      <concept>
+        <code value="L01DB03"/>
+        <display value="Epirubicin"/>
+      </concept>
+      <concept>
+        <code value="L01XX41"/>
+        <display value="Eribulin"/>
+      </concept>
+      <concept>
+        <code value="L01XE03"/>
+        <display value="Erlotinib"/>
+      </concept>
+      <concept>
+        <code value="B03XA01"/>
+        <display value="Erythropoietin"/>
+      </concept>
+      <concept>
+        <code value="L01XX11"/>
+        <display value="Estramustin"/>
+      </concept>
+      <concept>
+        <code value="L04AB01"/>
+        <display value="Etanercept"/>
+      </concept>
+      <concept>
+        <code value="M05BA01"/>
+        <display value="Etidronsäure"/>
+      </concept>
+      <concept>
+        <code value="L01AG01"/>
+        <display value="Etoglucid"/>
+      </concept>
+      <concept>
+        <code value="L01CB01"/>
+        <display value="Etoposid"/>
+      </concept>
+      <concept>
+        <code value="L01XE10"/>
+        <display value="Everolimus"/>
+      </concept>
+      <concept>
+        <code value="L02BG06"/>
+        <display value="Exemestan"/>
+      </concept>
+      <concept>
+        <code value="L03AA02"/>
+        <display value="Filgrastim"/>
+      </concept>
+      <concept>
+        <code value="G04CB01"/>
+        <display value="Finasterid"/>
+      </concept>
+      <concept>
+        <code value="L04AA27"/>
+        <display value="Fingolimod"/>
+      </concept>
+      <concept>
+        <code value="L01BB05"/>
+        <display value="Fludarabin"/>
+      </concept>
+      <concept>
+        <code value="L01BC02"/>
+        <display value="Fluorouracil"/>
+      </concept>
+      <concept>
+        <code value="L01BC52"/>
+        <display value="Fluorouracil, Kombinationen"/>
+      </concept>
+      <concept>
+        <code value="L02BB01"/>
+        <display value="Flutamid"/>
+      </concept>
+      <concept>
+        <code value="V03AF03"/>
+        <display value="Calciumfolinat"/>
+      </concept>
+      <concept>
+        <code value="L02BG02"/>
+        <display value="Formestan"/>
+      </concept>
+      <concept>
+        <code value="L02AA04"/>
+        <display value="Fosfestrol"/>
+      </concept>
+      <concept>
+        <code value="L01AD05"/>
+        <display value="Fotemustin"/>
+      </concept>
+      <concept>
+        <code value="L02BA03"/>
+        <display value="Fulvestrant"/>
+      </concept>
+      <concept>
+        <code value="L01XE02"/>
+        <display value="Gefitinib"/>
+      </concept>
+      <concept>
+        <code value="L01BC05"/>
+        <display value="Gemcitabin"/>
+      </concept>
+      <concept>
+        <code value="L02AB03"/>
+        <display value="Gestonoron"/>
+      </concept>
+      <concept>
+        <code value="L04AB06"/>
+        <display value="Golimumab"/>
+      </concept>
+      <concept>
+        <code value="H01CA01"/>
+        <display value="Gonadorelin"/>
+      </concept>
+      <concept>
+        <code value="L02AE03"/>
+        <display value="Goserelin"/>
+      </concept>
+      <concept>
+        <code value="L04AA19"/>
+        <display value="Gusperimus"/>
+      </concept>
+      <concept>
+        <code value="L03AX14"/>
+        <display value="Histamindihydrochlorid"/>
+      </concept>
+      <concept>
+        <code value="L02AE05"/>
+        <display value="Histrelin"/>
+      </concept>
+      <concept>
+        <code value="L01XX05"/>
+        <display value="Hydroxycarbamid"/>
+      </concept>
+      <concept>
+        <code value="M05BA06"/>
+        <display value="Ibandronsäure"/>
+      </concept>
+      <concept>
+        <code value="V10XX02"/>
+        <display value="(90Y)Ibritumomabtiuxetan"/>
+      </concept>
+      <concept>
+        <code value="L01XE27"/>
+        <display value="Ibrutinib"/>
+      </concept>
+      <concept>
+        <code value="L01DB06"/>
+        <display value="Idarubicin"/>
+      </concept>
+      <concept>
+        <code value="L01XX47"/>
+        <display value="Idelalisib"/>
+      </concept>
+      <concept>
+        <code value="L01AA06"/>
+        <display value="Ifosfamid"/>
+      </concept>
+      <concept>
+        <code value="L01XE01"/>
+        <display value="Imatinib"/>
+      </concept>
+      <concept>
+        <code value="D06BB10"/>
+        <display value="Imiquimod"/>
+      </concept>
+      <concept>
+        <code value="L04AB02"/>
+        <display value="Infliximab"/>
+      </concept>
+      <concept>
+        <code value="D06BX02"/>
+        <display value="Ingenolmebutat"/>
+      </concept>
+      <concept>
+        <code value="L03AB01"/>
+        <display value="Interferon alfa, natürlich"/>
+      </concept>
+      <concept>
+        <code value="L03AB04"/>
+        <display value="Interferon alfa-2a"/>
+      </concept>
+      <concept>
+        <code value="L03AB05"/>
+        <display value="Interferon alfa-2b"/>
+      </concept>
+      <concept>
+        <code value="L03AB18"/>
+        <display value="Interferon gamma-1b"/>
+      </concept>
+      <concept>
+        <code value="L01XX19"/>
+        <display value="Irinotecan"/>
+      </concept>
+      <concept>
+        <code value="L01DC04"/>
+        <display value="Ixabepilon"/>
+      </concept>
+      <concept>
+        <code value="L01XX50"/>
+        <display value="Ixazomib"/>
+      </concept>
+      <concept>
+        <code value="H01CB03"/>
+        <display value="Lanreotid"/>
+      </concept>
+      <concept>
+        <code value="L01XE07"/>
+        <display value="Lapatinib"/>
+      </concept>
+      <concept>
+        <code value="L04AA13"/>
+        <display value="Leflunomid"/>
+      </concept>
+      <concept>
+        <code value="L04AX04"/>
+        <display value="Lenalidomid"/>
+      </concept>
+      <concept>
+        <code value="L03AA10"/>
+        <display value="Lenograstim"/>
+      </concept>
+      <concept>
+        <code value="L01XE29"/>
+        <display value="Lenvatinib"/>
+      </concept>
+      <concept>
+        <code value="L02BG04"/>
+        <display value="Letrozol"/>
+      </concept>
+      <concept>
+        <code value="L02AE02"/>
+        <display value="Leuprorelin"/>
+      </concept>
+      <concept>
+        <code value="L03AA14"/>
+        <display value="Lipegfilgrastim"/>
+      </concept>
+      <concept>
+        <code value="L01AD02"/>
+        <display value="Lomustin"/>
+      </concept>
+      <concept>
+        <code value="L01XX07"/>
+        <display value="Lonidamin"/>
+      </concept>
+      <concept>
+        <code value="G03DC03"/>
+        <display value="Lynestrenol"/>
+      </concept>
+      <concept>
+        <code value="L01AB03"/>
+        <display value="Mannosulfan"/>
+      </concept>
+      <concept>
+        <code value="J05AX09"/>
+        <display value="Maraviroc"/>
+      </concept>
+      <concept>
+        <code value="L01XX10"/>
+        <display value="Masoprocol"/>
+      </concept>
+      <concept>
+        <code value="L02AB02"/>
+        <display value="Medroxyprogesteron"/>
+      </concept>
+      <concept>
+        <code value="L02AB01"/>
+        <display value="Megestrol"/>
+      </concept>
+      <concept>
+        <code value="L01AA03"/>
+        <display value="Melphalan"/>
+      </concept>
+      <concept>
+        <code value="R03DX09"/>
+        <display value="Mepolizumab"/>
+      </concept>
+      <concept>
+        <code value="L01BB02"/>
+        <display value="Mercaptopurin"/>
+      </concept>
+      <concept>
+        <code value="V03AF01"/>
+        <display value="Mesna"/>
+      </concept>
+      <concept>
+        <code value="N07BC02"/>
+        <display value="Methadon"/>
+      </concept>
+      <concept>
+        <code value="L01BA01"/>
+        <display value="Methotrexat"/>
+      </concept>
+      <concept>
+        <code value="L01XD10"/>
+        <display value="Methoxsalen"/>
+      </concept>
+      <concept>
+        <code value="B03XA03"/>
+        <display value="Methoxy-Polyethylenglycol-Epoetin beta"/>
+      </concept>
+      <concept>
+        <code value="L01XD03"/>
+        <display value="Methylaminolevulinat"/>
+      </concept>
+      <concept>
+        <code value="H02AB04"/>
+        <display value="Methylprednisolon"/>
+      </concept>
+      <concept>
+        <code value="L01XE39"/>
+        <display value="Midostaurin"/>
+      </concept>
+      <concept>
+        <code value="L03AX15"/>
+        <display value="Mifamurtid"/>
+      </concept>
+      <concept>
+        <code value="L01XX09"/>
+        <display value="Miltefosin"/>
+      </concept>
+      <concept>
+        <code value="L01CH01"/>
+        <display value="Mistelkraut"/>
+      </concept>
+      <concept>
+        <code value="L01CP01"/>
+        <display value="Mistelkraut"/>
+      </concept>
+      <concept>
+        <code value="L01AX01"/>
+        <display value="Mitobronitol"/>
+      </concept>
+      <concept>
+        <code value="L01XX16"/>
+        <display value="Mitoguazon"/>
+      </concept>
+      <concept>
+        <code value="L01DC03"/>
+        <display value="Mitomycin"/>
+      </concept>
+      <concept>
+        <code value="L01XX23"/>
+        <display value="Mitotan"/>
+      </concept>
+      <concept>
+        <code value="L01DB07"/>
+        <display value="Mitoxantron"/>
+      </concept>
+      <concept>
+        <code value="L03AA03"/>
+        <display value="Molgramostim"/>
+      </concept>
+      <concept>
+        <code value="L04AA02"/>
+        <display value="Muromonab-CD3"/>
+      </concept>
+      <concept>
+        <code value="L04AA06"/>
+        <display value="Mycophenolsäure"/>
+      </concept>
+      <concept>
+        <code value="L04AA23"/>
+        <display value="Natalizumab"/>
+      </concept>
+      <concept>
+        <code value="V03AF10"/>
+        <display value="Natriumlevofolinat"/>
+      </concept>
+      <concept>
+        <code value="L01BB07"/>
+        <display value="Nelarabin"/>
+      </concept>
+      <concept>
+        <code value="L01XE08"/>
+        <display value="Nilotinib"/>
+      </concept>
+      <concept>
+        <code value="L02BB02"/>
+        <display value="Nilutamid"/>
+      </concept>
+      <concept>
+        <code value="L01AD06"/>
+        <display value="Nimustin"/>
+      </concept>
+      <concept>
+        <code value="L01XE31"/>
+        <display value="Nintedanib"/>
+      </concept>
+      <concept>
+        <code value="L01XC17"/>
+        <display value="Nivolumab"/>
+      </concept>
+      <concept>
+        <code value="L01XC15"/>
+        <display value="Obinutuzumab"/>
+      </concept>
+      <concept>
+        <code value="L01XX36"/>
+        <display value="Oblimersen"/>
+      </concept>
+      <concept>
+        <code value="H01CB02"/>
+        <display value="Octreotid"/>
+      </concept>
+      <concept>
+        <code value="L01XX46"/>
+        <display value="Olaparib"/>
+      </concept>
+      <concept>
+        <code value="L01XC27"/>
+        <display value="Olaratumab"/>
+      </concept>
+      <concept>
+        <code value="L01XX40"/>
+        <display value="Omacetaxinmepesuccinat"/>
+      </concept>
+      <concept>
+        <code value="L03AC02"/>
+        <display value="Oprelvekin"/>
+      </concept>
+      <concept>
+        <code value="L01XE35"/>
+        <display value="Osimertinib"/>
+      </concept>
+      <concept>
+        <code value="L01XA03"/>
+        <display value="Oxaliplatin"/>
+      </concept>
+      <concept>
+        <code value="L01CD01"/>
+        <display value="Paclitaxel"/>
+      </concept>
+      <concept>
+        <code value="L01CD03"/>
+        <display value="Paclitaxelpoliglumex"/>
+      </concept>
+      <concept>
+        <code value="L01XE33"/>
+        <display value="Palbociclib"/>
+      </concept>
+      <concept>
+        <code value="V03AF08"/>
+        <display value="Palifermin"/>
+      </concept>
+      <concept>
+        <code value="M05BA03"/>
+        <display value="Pamidronsäure"/>
+      </concept>
+      <concept>
+        <code value="L01XC08"/>
+        <display value="Panitumumab"/>
+      </concept>
+      <concept>
+        <code value="L01XX42"/>
+        <display value="Panobinostat"/>
+      </concept>
+      <concept>
+        <code value="L01XX24"/>
+        <display value="Pegaspargase"/>
+      </concept>
+      <concept>
+        <code value="L03AA13"/>
+        <display value="Pegfilgrastim"/>
+      </concept>
+      <concept>
+        <code value="L03AB11"/>
+        <display value="Peginterferon alfa-2a"/>
+      </concept>
+      <concept>
+        <code value="L03AB10"/>
+        <display value="Peginterferon alfa-2b"/>
+      </concept>
+      <concept>
+        <code value="L01XC18"/>
+        <display value="Pembrolizumab"/>
+      </concept>
+      <concept>
+        <code value="L01BA04"/>
+        <display value="Pemetrexed"/>
+      </concept>
+      <concept>
+        <code value="L01XX08"/>
+        <display value="Pentostatin"/>
+      </concept>
+      <concept>
+        <code value="L01XC13"/>
+        <display value="Pertuzumab"/>
+      </concept>
+      <concept>
+        <code value="L01AX02"/>
+        <display value="Pipobroman"/>
+      </concept>
+      <concept>
+        <code value="L01DB08"/>
+        <display value="Pirarubicin"/>
+      </concept>
+      <concept>
+        <code value="L01DB11"/>
+        <display value="Pixantron"/>
+      </concept>
+      <concept>
+        <code value="V03AX10"/>
+        <display value="Placebo"/>
+      </concept>
+      <concept>
+        <code value="L03AX16"/>
+        <display value="Plerixafor"/>
+      </concept>
+      <concept>
+        <code value="L01DC02"/>
+        <display value="Plicamycin"/>
+      </concept>
+      <concept>
+        <code value="L03AX08"/>
+        <display value="Poly ICLC"/>
+      </concept>
+      <concept>
+        <code value="L02AA02"/>
+        <display value="Polyestradiolphosphat"/>
+      </concept>
+      <concept>
+        <code value="L01XA05"/>
+        <display value="Polyplatillen"/>
+      </concept>
+      <concept>
+        <code value="L04AX06"/>
+        <display value="Pomalidomid"/>
+      </concept>
+      <concept>
+        <code value="L01XE24"/>
+        <display value="Ponatinib"/>
+      </concept>
+      <concept>
+        <code value="L01XD01"/>
+        <display value="Porfimer natrium"/>
+      </concept>
+      <concept>
+        <code value="L01BA05"/>
+        <display value="Pralatrexat"/>
+      </concept>
+      <concept>
+        <code value="D07AC18"/>
+        <display value="Prednicarbat"/>
+      </concept>
+      <concept>
+        <code value="L01AA08"/>
+        <display value="Prednimustin"/>
+      </concept>
+      <concept>
+        <code value="H02AB06"/>
+        <display value="Prednisolon"/>
+      </concept>
+      <concept>
+        <code value="H02AB07"/>
+        <display value="Prednison"/>
+      </concept>
+      <concept>
+        <code value="L01XB01"/>
+        <display value="Procarbazin"/>
+      </concept>
+      <concept>
+        <code value="D05AD"/>
+        <display value="Psoralene zur topischen Anwendung"/>
+      </concept>
+      <concept>
+        <code value="D05BA"/>
+        <display value="Psoralene zur systemischen Anwendung"/>
+      </concept>
+      <concept>
+        <code value="G03XC01"/>
+        <display value="Raloxifen"/>
+      </concept>
+      <concept>
+        <code value="L01BA03"/>
+        <display value="Raltitrexed"/>
+      </concept>
+      <concept>
+        <code value="L01XC21"/>
+        <display value="Ramucirumab"/>
+      </concept>
+      <concept>
+        <code value="L01AD07"/>
+        <display value="Ranimustin"/>
+      </concept>
+      <concept>
+        <code value="L01XE21"/>
+        <display value="Regorafenib"/>
+      </concept>
+      <concept>
+        <code value="L01XE42"/>
+        <display value="Ribociclib"/>
+      </concept>
+      <concept>
+        <code value="L04AC04"/>
+        <display value="Rilonacept"/>
+      </concept>
+      <concept>
+        <code value="M05BA07"/>
+        <display value="Risedronsäure"/>
+      </concept>
+      <concept>
+        <code value="L01XC02"/>
+        <display value="Rituximab"/>
+      </concept>
+      <concept>
+        <code value="L01XX39"/>
+        <display value="Romidepsin"/>
+      </concept>
+      <concept>
+        <code value="B02BX04"/>
+        <display value="Romiplostim"/>
+      </concept>
+      <concept>
+        <code value="L01XE18"/>
+        <display value="Ruxolitinib"/>
+      </concept>
+      <concept>
+        <code value="L01XA04"/>
+        <display value="Satraplatin"/>
+      </concept>
+      <concept>
+        <code value="L01AD03"/>
+        <display value="Semustin"/>
+      </concept>
+      <concept>
+        <code value="L04AC11"/>
+        <display value="Siltuximab"/>
+      </concept>
+      <concept>
+        <code value="L04AA10"/>
+        <display value="Sirolimus"/>
+      </concept>
+      <concept>
+        <code value="H01CB01"/>
+        <display value="Somatostatin"/>
+      </concept>
+      <concept>
+        <code value="L01XE05"/>
+        <display value="Sorafenib"/>
+      </concept>
+      <concept>
+        <code value="L01AD04"/>
+        <display value="Streptozocin"/>
+      </concept>
+      <concept>
+        <code value="L01XE04"/>
+        <display value="Sunitinib"/>
+      </concept>
+      <concept>
+        <code value="L04AD02"/>
+        <display value="Tacrolimus"/>
+      </concept>
+      <concept>
+        <code value="L01XX51"/>
+        <display value="Talimogen laherparepvec"/>
+      </concept>
+      <concept>
+        <code value="L02BA01"/>
+        <display value="Tamoxifen"/>
+      </concept>
+      <concept>
+        <code value="L03AX11"/>
+        <display value="Tasonermin"/>
+      </concept>
+      <concept>
+        <code value="L01BC53"/>
+        <display value="Tegafur, Kombinationen"/>
+      </concept>
+      <concept>
+        <code value="L01BC63"/>
+        <display value="Tegafur und Uracil"/>
+      </concept>
+      <concept>
+        <code value="L01BC73"/>
+        <display value="Tegafur, Gimeracil und Oteracil"/>
+      </concept>
+      <concept>
+        <code value="L01XD05"/>
+        <display value="Temoporfin"/>
+      </concept>
+      <concept>
+        <code value="L01AX03"/>
+        <display value="Temozolomid"/>
+      </concept>
+      <concept>
+        <code value="L01XE09"/>
+        <display value="Temsirolimus"/>
+      </concept>
+      <concept>
+        <code value="L01CB02"/>
+        <display value="Teniposid"/>
+      </concept>
+      <concept>
+        <code value="L04AX02"/>
+        <display value="Thalidomid"/>
+      </concept>
+      <concept>
+        <code value="L01AC01"/>
+        <display value="Thiotepa"/>
+      </concept>
+      <concept>
+        <code value="L01XX18"/>
+        <display value="Tiazofurin"/>
+      </concept>
+      <concept>
+        <code value="M05BA05"/>
+        <display value="Tiludronsäure"/>
+      </concept>
+      <concept>
+        <code value="L01BB03"/>
+        <display value="Tioguanin"/>
+      </concept>
+      <concept>
+        <code value="L01XE34"/>
+        <display value="Tivozanib"/>
+      </concept>
+      <concept>
+        <code value="L04AC07"/>
+        <display value="Tocilizumab"/>
+      </concept>
+      <concept>
+        <code value="L01XX17"/>
+        <display value="Topotecan"/>
+      </concept>
+      <concept>
+        <code value="L02BA02"/>
+        <display value="Toremifen"/>
+      </concept>
+      <concept>
+        <code value="V10XA53"/>
+        <display value="Tositumomab/(131I)Iodtositumomab"/>
+      </concept>
+      <concept>
+        <code value="L01CX01"/>
+        <display value="Trabectedin"/>
+      </concept>
+      <concept>
+        <code value="L01XE25"/>
+        <display value="Trametinib"/>
+      </concept>
+      <concept>
+        <code value="L01XC03"/>
+        <display value="Trastuzumab"/>
+      </concept>
+      <concept>
+        <code value="L01XC14"/>
+        <display value="Trastuzumab emtansin"/>
+      </concept>
+      <concept>
+        <code value="L01AB02"/>
+        <display value="Treosulfan"/>
+      </concept>
+      <concept>
+        <code value="L01XX14"/>
+        <display value="Tretinoin"/>
+      </concept>
+      <concept>
+        <code value="L01AC02"/>
+        <display value="Triaziquon"/>
+      </concept>
+      <concept>
+        <code value="L01BC59"/>
+        <display value="Trifluridin, Kombinationen"/>
+      </concept>
+      <concept>
+        <code value="L02AE04"/>
+        <display value="Triptorelin"/>
+      </concept>
+      <concept>
+        <code value="L01AA07"/>
+        <display value="Trofosfamid"/>
+      </concept>
+      <concept>
+        <code value="N03AG01"/>
+        <display value="Valproinsäure"/>
+      </concept>
+      <concept>
+        <code value="L01DB09"/>
+        <display value="Valrubicin"/>
+      </concept>
+      <concept>
+        <code value="L01XE12"/>
+        <display value="Vandetanib"/>
+      </concept>
+      <concept>
+        <code value="L01XE15"/>
+        <display value="Vemurafenib"/>
+      </concept>
+      <concept>
+        <code value="L01XX52"/>
+        <display value="Venetoclax"/>
+      </concept>
+      <concept>
+        <code value="L01CA01"/>
+        <display value="Vinblastin"/>
+      </concept>
+      <concept>
+        <code value="L01CA02"/>
+        <display value="Vincristin"/>
+      </concept>
+      <concept>
+        <code value="L01CA03"/>
+        <display value="Vindesin"/>
+      </concept>
+      <concept>
+        <code value="L01CA05"/>
+        <display value="Vinflunin"/>
+      </concept>
+      <concept>
+        <code value="L01CA04"/>
+        <display value="Vinorelbin"/>
+      </concept>
+      <concept>
+        <code value="L01XX43"/>
+        <display value="Vismodegib"/>
+      </concept>
+      <concept>
+        <code value="L04AD03"/>
+        <display value="Voclosporin"/>
+      </concept>
+      <concept>
+        <code value="L01XX38"/>
+        <display value="Vorinostat"/>
+      </concept>
+      <concept>
+        <code value="L02BG05"/>
+        <display value="Vorozol"/>
+      </concept>
+      <concept>
+        <code value="L01XX53"/>
+        <display value="Vosaroxin"/>
+      </concept>
+      <concept>
+        <code value="M05BA08"/>
+        <display value="Zoledronsäure"/>
+      </concept>
+      <concept>
+        <code value="L01DB05"/>
+        <display value="Zorubicin"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

@@ -1,0 +1,73 @@
+{
+  "resourceType" : "Procedure",
+  "id" : "mii-exa-onko-strahlentherapie-bestrahlung-pci-sclc",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie|2026.0.3"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Procedure mii-exa-onko-strahlentherapie-bestrahlung-pci-sclc</b></p><a name=\"mii-exa-onko-strahlentherapie-bestrahlung-pci-sclc\"> </a><a name=\"hcmii-exa-onko-strahlentherapie-bestrahlung-pci-sclc\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.html\">MII PR Onkologie Strahlentherapie</a> version: 2026.0.3</p></div><p><b>Procedure Method</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart PRCN}\">perkutan ohne Chemotherapie/Sensitizer</span></p><p><b>MII EX Onko Strahlentherapie Bestrahlung Gesamtdosis</b>: 25 Gy</p><p><b>MII EX Onko Strahlentherapie Bestrahlung Einzeldosis</b>: 2.5 Gy</p><p><b>partOf</b>: <a href=\"Procedure-mii-exa-onko-strahlentherapie-pci-sclc.html\">Procedure 8-52</a></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 1287742003}\">Radiotherapy (procedure)</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/ops 8-52}\">8-52</span></p><p><b>subject</b>: <a href=\"Patient-example.html\">Erika Beispiel  Female, DoB: 1965-04-12</a></p><p><b>performed</b>: 2026-05-04 --&gt; 2026-05-18</p><p><b>bodySite</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet 1.1}\">Ganzhirn (Neurokranium, inklusive Meningen)</span></p><p><b>usedCode</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart PN}\">Protonen (leichte Wasserstoffionen/H1/Leichtionen)</span></p></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/procedure-method",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart",
+        "code" : "PRCN"
+      }]
+    }
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis",
+    "valueQuantity" : {
+      "value" : 25,
+      "unit" : "Gy"
+    }
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis",
+    "valueQuantity" : {
+      "value" : 2.5,
+      "unit" : "Gy"
+    }
+  }],
+  "partOf" : [{
+    "reference" : "Procedure/mii-exa-onko-strahlentherapie-pci-sclc"
+  }],
+  "status" : "completed",
+  "category" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "1287742003",
+      "display" : "Radiotherapy (procedure)"
+    }]
+  },
+  "code" : {
+    "coding" : [{
+      "system" : "http://fhir.de/CodeSystem/bfarm/ops",
+      "version" : "2026",
+      "code" : "8-52"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/example"
+  },
+  "performedPeriod" : {
+    "start" : "2026-05-04",
+    "end" : "2026-05-18"
+  },
+  "bodySite" : [{
+    "coding" : [{
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet",
+      "code" : "1.1",
+      "display" : "Ganzhirn (Neurokranium, inklusive Meningen)"
+    }]
+  }],
+  "usedCode" : [{
+    "coding" : [{
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart",
+      "code" : "PN"
+    }]
+  }]
+}

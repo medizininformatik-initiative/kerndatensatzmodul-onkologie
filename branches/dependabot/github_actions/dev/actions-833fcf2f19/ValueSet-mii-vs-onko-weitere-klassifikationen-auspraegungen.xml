@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-onko-weitere-klassifikationen-auspraegungen"/>
+  <meta>
+    <extension url="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-license">
+      <valueCode value="CC-BY-4.0"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/package-source">
+      <extension url="packageId">
+        <valueId value="de.medizininformatikinitiative.kerndatensatz.onkologie"/>
+      </extension>
+      <extension url="version">
+        <valueString value="2026.0.3"/>
+      </extension>
+      <extension url="uri">
+        <valueUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"/>
+      </extension>
+    </extension>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-computablevalueset"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-onko-weitere-klassifikationen-auspraegungen</b></p><a name="mii-vs-onko-weitere-klassifikationen-auspraegungen"> </a><a name="hcmii-vs-onko-weitere-klassifikationen-auspraegungen"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareablevalueset.html">CRMI Shareable ValueSet</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishablevalueset.html">CRMI Publishable ValueSet</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-computablevalueset.html">CRMI Computable ValueSet</a></p></div><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-binet">binet</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-stadium">ann-arbor-stadium</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-iss">iss</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-isswm">isswm</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-who-grad">who-grad</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-formen">formen</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-eln-klassifikation">eln-klassifikation</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-durie-salmon-stadium">durie-salmon-stadium</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-figo">figo</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-bismuth">bismuth</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-masaoka">masaoka</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-mitoserate-gist">mitoserate-gist</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-p16">p16</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-eutos-score">eutos-score</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-sanz-score">sanz-score</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-ipi">ipi</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-flipi">flipi</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-mipi">mipi</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-risikogruppen-ghsg">risikogruppen-ghsg</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-ipss">ipss</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-her2-neu">her2-neu</a></li><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/1290294004">1290294004</a></td><td>International Federation of Gynecology and Obstetrics grading system (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/1290302009">1290302009</a></td><td>International Federation of Gynecology and Obstetrics grading system grade 1 (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/1290303004">1290303004</a></td><td>International Federation of Gynecology and Obstetrics grading system grade 2 (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/1290304005">1290304005</a></td><td>International Federation of Gynecology and Obstetrics grading system grade 3 (qualifier value)</td></tr></table></li></ul></div><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-onko-weitere-klassifikationen-auspraegungen</b></p><a name="de-mii-vs-onko-weitere-klassifikationen-auspraegungen"> </a><a name="de-hcmii-vs-onko-weitere-klassifikationen-auspraegungen"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareablevalueset.html">CRMI Shareable ValueSet</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishablevalueset.html">CRMI Publishable ValueSet</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-computablevalueset.html">CRMI Computable ValueSet</a></p></div><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-binet">binet</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-stadium">ann-arbor-stadium</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-iss">iss</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-isswm">isswm</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-who-grad">who-grad</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-formen">formen</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-eln-klassifikation">eln-klassifikation</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-durie-salmon-stadium">durie-salmon-stadium</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-figo">figo</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-bismuth">bismuth</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-masaoka">masaoka</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-mitoserate-gist">mitoserate-gist</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-p16">p16</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-eutos-score">eutos-score</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-sanz-score">sanz-score</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-ipi">ipi</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-flipi">flipi</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-mipi">mipi</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-risikogruppen-ghsg">risikogruppen-ghsg</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-ipss">ipss</a></li><li>Include codes from<a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2026.0.3</span> where concept  is-a <a href="CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.html#mii-cs-onko-weitere-klassifikationen-obds-her2-neu">her2-neu</a></li><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/1290294004">1290294004</a></td><td>International Federation of Gynecology and Obstetrics grading system (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/1290302009">1290302009</a></td><td>International Federation of Gynecology and Obstetrics grading system grade 1 (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/1290303004">1290303004</a></td><td>International Federation of Gynecology and Obstetrics grading system grade 2 (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/1290304005">1290304005</a></td><td>International Federation of Gynecology and Obstetrics grading system grade 3 (qualifier value)</td></tr></table></li></ul></div></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="shareable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="publishable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="computable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes"/>
+        <code value="package"/>
+        <display value="Package"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-approvalDate">
+    <valueDate value="2026-01-03"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-topic">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"/>
+        <code value="C3262"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-author">
+    <valueContactDetail>
+      <telecom>
+        <system value="email"/>
+        <value value="thomas.debertshaeuser@charite.de"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-editor">
+    <valueContactDetail>
+      <name value="Taskforce Core Data Set"/>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-reviewer">
+    <valueContactDetail>
+      <name value="Interoperability Working Group"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-reviewer">
+    <valueContactDetail>
+      <name value="National Steering Committee"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-endorser">
+    <valueContactDetail>
+      <name value="Interoperability Working Group"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-endorser">
+    <valueContactDetail>
+      <name value="National Steering Committee"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm">
+    <valueCoding>
+      <system value="http://hl7.org/fhir/version-algorithm"/>
+      <code value="semver"/>
+      <display value="SemVer"/>
+    </valueCoding>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2026"/>
+    </valuePeriod>
+  </extension>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-weitere-klassifikationen-auspraegungen"/>
+  <version value="2026.0.3"/>
+  <name value="MII_VS_Onko_Weitere_Klassifikationen_Auspraegungen"/>
+  <title value="MII Value Set Onkologie - Weitere Klassifikationen - Auspraegungen"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-09-02T03:26:39+00:00"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="Comprehensive collection of cancer staging systems and classification schemes used in oncology beyond TNM classification. This includes AJCC, FIGO, hematological classifications, and specialized organ-specific systems. Based on mCODE STU4 and German oBDS catalogue. Covers entity-specific classifications (e.g., FIGO for gynecological tumors), hematological classifications, and WHO classifications for CNS tumors."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license."/>
+  <compose>
+    <include>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="binet"/>
+      </filter>
+    </include>
+    <include>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="ann-arbor-stadium"/>
+      </filter>
+    </include>
+    <include>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="iss"/>
+      </filter>
+    </include>
+    <include>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="isswm"/>
+      </filter>
+    </include>
+    <include>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="who-grad"/>
+      </filter>
+    </include>
+    <include>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="formen"/>
+      </filter>
+    </include>
+    <include>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="eln-klassifikation"/>
+      </filter>
+    </include>
+    <include>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="durie-salmon-stadium"/>
+      </filter>
+    </include>
+    <include>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="figo"/>
+      </filter>
+    </include>
+    <include>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="bismuth"/>
+      </filter>
+    </include>
+    <include>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="masaoka"/>
+      </filter>
+    </include>
+    <include>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="mitoserate-gist"/>
+      </filter>
+    </include>
+    <include>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="p16"/>
+      </filter>
+    </include>
+    <include>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="eutos-score"/>
+      </filter>
+    </include>
+    <include>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="sanz-score"/>
+      </filter>
+    </include>
+    <include>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="ipi"/>
+      </filter>
+    </include>
+    <include>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="flipi"/>
+      </filter>
+    </include>
+    <include>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="mipi"/>
+      </filter>
+    </include>
+    <include>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="risikogruppen-ghsg"/>
+      </filter>
+    </include>
+    <include>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="ipss"/>
+      </filter>
+    </include>
+    <include>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="her2-neu"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="1290294004"/>
+        <display value="International Federation of Gynecology and Obstetrics grading system (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="1290302009"/>
+        <display value="International Federation of Gynecology and Obstetrics grading system grade 1 (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="1290303004"/>
+        <display value="International Federation of Gynecology and Obstetrics grading system grade 2 (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="1290304005"/>
+        <display value="International Federation of Gynecology and Obstetrics grading system grade 3 (qualifier value)"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-mamma-menopause-status-1"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-menopause-status|2026.0.3"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-onko-mamma-menopause-status-1</b></p><a name="de-mii-exa-onko-mamma-menopause-status-1"> </a><a name="de-hcmii-exa-onko-mamma-menopause-status-1"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-mamma-menopause-status.html">MII PR Onkologie Menopausenstatus Mamma</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 161712005}">Menopause, function (observable entity)</span></p><p><b>subject</b>: <a href="Patient-mii-exa-onko-mamma-bundle-patient.html">Martha MammaCa  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: <a href="Condition-mii-exa-onko-mamma-diagnose.html">Condition Bösartige Neubildung: Unterer innerer Quadrant der Brustdrüse</a></p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 22636003}">Premenopausal state (finding)</span></p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="161712005"/>
+      <display value="Menopause, function (observable entity)"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/mii-exa-onko-mamma-bundle-patient"/>
+  </subject>
+  <focus>
+    <reference value="Condition/mii-exa-onko-mamma-diagnose"/>
+  </focus>
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="22636003"/>
+      <display value="Premenopausal state (finding)"/>
+    </coding>
+  </valueCodeableConcept>
+</Observation>

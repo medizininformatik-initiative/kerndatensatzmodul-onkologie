@@ -1,0 +1,210 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-onko-allgemeiner-leistungszustand-karnofsky-loinc",
+  "meta" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-license",
+      "valueCode" : "CC-BY-4.0"
+    },
+    {
+      "extension" : [{
+        "url" : "packageId",
+        "valueId" : "de.medizininformatikinitiative.kerndatensatz.onkologie"
+      },
+      {
+        "url" : "version",
+        "valueString" : "2026.0.3"
+      },
+      {
+        "url" : "uri",
+        "valueUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/package-source"
+    }],
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-computablevalueset"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-onko-allgemeiner-leistungszustand-karnofsky-loinc</b></p><a name=\"mii-vs-onko-allgemeiner-leistungszustand-karnofsky-loinc\"> </a><a name=\"hcmii-vs-onko-allgemeiner-leistungszustand-karnofsky-loinc\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablevalueset.html\">Shareable ValueSet</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareablevalueset.html\">CRMI Shareable ValueSet</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishablevalueset.html\">CRMI Publishable ValueSet</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-computablevalueset.html\">CRMI Computable ValueSet</a></p></div><ul><li>Include these codes as defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"https://loinc.org/LA29175-9/\">LA29175-9</a></td><td>Normal; no complaints; no evidence of disease</td></tr><tr><td><a href=\"https://loinc.org/LA29176-7/\">LA29176-7</a></td><td>Able to carry on normal activity; minor signs or symptoms of disease</td></tr><tr><td><a href=\"https://loinc.org/LA29177-5/\">LA29177-5</a></td><td>Normal activity with effort; some signs or symptoms of disease</td></tr><tr><td><a href=\"https://loinc.org/LA29178-3/\">LA29178-3</a></td><td>Cares for self; unable to carry on normal activity or do active work</td></tr><tr><td><a href=\"https://loinc.org/LA29179-1/\">LA29179-1</a></td><td>Requires occasional assistance but is able to care for most needs</td></tr><tr><td><a href=\"https://loinc.org/LA29180-9/\">LA29180-9</a></td><td>Requires considerable assistance and frequent medical care</td></tr><tr><td><a href=\"https://loinc.org/LA29181-7/\">LA29181-7</a></td><td>Disabled; requires special care and assistance</td></tr><tr><td><a href=\"https://loinc.org/LA29182-5/\">LA29182-5</a></td><td>Severely disabled; hospitalization is indicated, although death not imminent</td></tr><tr><td><a href=\"https://loinc.org/LA29183-3/\">LA29183-3</a></td><td>Very sick; hospitalization necessary; active supportive treatment necessary</td></tr><tr><td><a href=\"https://loinc.org/LA29184-1/\">LA29184-1</a></td><td>Moribund; fatal processes progressing rapidly</td></tr><tr><td><a href=\"https://loinc.org/LA9627-6/\">LA9627-6</a></td><td>Dead</td></tr></table></li></ul></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "shareable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "publishable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "computable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes",
+        "code" : "package",
+        "display" : "Package"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
+    "valueDate" : "2026-01-03"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+        "code" : "C3262"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-author",
+    "valueContactDetail" : {
+      "telecom" : [{
+        "system" : "email",
+        "value" : "thomas.debertshaeuser@charite.de"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-editor",
+    "valueContactDetail" : {
+      "name" : "Taskforce Core Data Set"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+    "valueContactDetail" : {
+      "name" : "Interoperability Working Group",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+    "valueContactDetail" : {
+      "name" : "National Steering Committee",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+    "valueContactDetail" : {
+      "name" : "Interoperability Working Group",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+    "valueContactDetail" : {
+      "name" : "National Steering Committee",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/version-algorithm",
+      "code" : "semver",
+      "display" : "SemVer"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+    "valuePeriod" : {
+      "start" : "2026"
+    }
+  }],
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-karnofsky-loinc",
+  "version" : "2026.0.3",
+  "name" : "MII_VS_Onko_Allgemeiner_Leistungszustand_Karnofsky_LOINC",
+  "title" : "MII VS Onkologie Allgemeiner Leistungszustand Karnofsky LOINC",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-09-02T03:26:39+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "LOINC-Answer-Codes für den Karnofsky Performance Status. Enumerierte Fassung der LOINC-Answer-List LL4986-7.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "LA29175-9",
+        "display" : "Normal; no complaints; no evidence of disease"
+      },
+      {
+        "code" : "LA29176-7",
+        "display" : "Able to carry on normal activity; minor signs or symptoms of disease"
+      },
+      {
+        "code" : "LA29177-5",
+        "display" : "Normal activity with effort; some signs or symptoms of disease"
+      },
+      {
+        "code" : "LA29178-3",
+        "display" : "Cares for self; unable to carry on normal activity or do active work"
+      },
+      {
+        "code" : "LA29179-1",
+        "display" : "Requires occasional assistance but is able to care for most needs"
+      },
+      {
+        "code" : "LA29180-9",
+        "display" : "Requires considerable assistance and frequent medical care"
+      },
+      {
+        "code" : "LA29181-7",
+        "display" : "Disabled; requires special care and assistance"
+      },
+      {
+        "code" : "LA29182-5",
+        "display" : "Severely disabled; hospitalization is indicated, although death not imminent"
+      },
+      {
+        "code" : "LA29183-3",
+        "display" : "Very sick; hospitalization necessary; active supportive treatment necessary"
+      },
+      {
+        "code" : "LA29184-1",
+        "display" : "Moribund; fatal processes progressing rapidly"
+      },
+      {
+        "code" : "LA9627-6",
+        "display" : "Dead"
+      }]
+    }]
+  }
+}

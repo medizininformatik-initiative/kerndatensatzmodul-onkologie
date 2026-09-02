@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="mii-cm-onko-strahlentherapie-strahlenart-sct"/>
+  <meta>
+    <extension url="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-license">
+      <valueCode value="CC-BY-4.0"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/package-source">
+      <extension url="packageId">
+        <valueId value="de.medizininformatikinitiative.kerndatensatz.onkologie"/>
+      </extension>
+    </extension>
+    <extension url="version">
+      <valueString value="2026.0.3"/>
+    </extension>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableconceptmap"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableconceptmap"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap mii-cm-onko-strahlentherapie-strahlenart-sct</b></p><a name="mii-cm-onko-strahlentherapie-strahlenart-sct"> </a><a name="hcmii-cm-onko-strahlentherapie-strahlenart-sct"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareableconceptmap.html">CRMI Shareable ConceptMap</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishableconceptmap.html">CRMI Publishable ConceptMap</a></p></div><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <a href="CodeSystem-mii-cs-onko-strahlentherapie-strahlenart.html">MII CS Onkologie Strahlentherapie Strahlenart</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>UH (Photonen (ultraharte Röntgenstrahlen, inklusive Gamma-Strahler))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>290006006 (Photon (substance))</td><td/></tr><tr><td>EL (Elektronen)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>46602004 (Electron (substance))</td><td/></tr><tr><td>NE (Neutronen)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>58607005 (Neutron (substance))</td><td/></tr><tr><td>PN (Protonen (leichte Wasserstoffionen/H1/Leichtionen))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>89177007 (Proton (substance))</td><td/></tr><tr><td>SI (Schwerionen (schwere Kohlenstoff-Ionen/C12/Sauerstoffionen/Heliumionen))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>312253001 (Heavy ion radiation (physical force))</td><td/></tr><tr><td>RO (Weichstrahl (kV))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>286630003 (Soft X-radiation (physical force))</td><td/></tr><tr><td>SO (Sonstige (inklusive Mixed Beams, exklusive Nuklide))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>74964007 (Other (qualifier value))</td><td/></tr><tr><td>Lu-177</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>447553000 (Lutetium-177 (substance))</td><td/></tr><tr><td>Lu-177</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-narrower" title="narrower">narrower</a></td><td>1263784000 (Radioligand therapy using lutetium (177-Lu) vipivotide tetraxetan (procedure))</td><td>Verwendung einer bestimmten Verbindung. Momentan wird Lu-177 hauptsächlich damit verwendet; es ist aber nicht auszuschließen, dass in Zukunft auch andere Substanzen zum Einsatz kommen.</td></tr><tr><td>J-131</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>1368003 (Iodine-131 (substance))</td><td/></tr><tr><td>Y-90</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>14691008 (Yttrium-90 (substance))</td><td/></tr><tr><td>Y-90</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-narrower" title="narrower">narrower</a></td><td>764677008 (Selective internal radiotherapy of liver using yttrium (90-Y) labeled microspheres (procedure))</td><td>Kombination einer bestimmten Strahlequelle mit einer bestimmten Applikation (Microsphären). Andere Anwendungen sind theoretisch in Zukunft denkbar und werden von diesem Code nicht miterfasst.</td></tr><tr><td>Ra-223</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>24853006 (Radium-223 (substance))</td><td/></tr><tr><td>Ac-225</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>32059002 (Actinium-225 (substance))</td><td/></tr><tr><td>Sm-153</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>419804008 (Samarium-153 (substance))</td><td/></tr><tr><td>Tb-161</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr><tr><td>Sr-89</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>7770004 (Strontium-89 (substance))</td><td/></tr><tr><td>Ir-192</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>48341001 (Iridium-192 (substance))</td><td/></tr><tr><td>Co-60</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>5405008 (Cobalt-60 (substance))</td><td/></tr><tr><td>SONU (Sonstige Nuklide)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>89457008 (Radioactive isotope (substance))</td><td/></tr></table></div><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap mii-cm-onko-strahlentherapie-strahlenart-sct</b></p><a name="de-mii-cm-onko-strahlentherapie-strahlenart-sct"> </a><a name="de-hcmii-cm-onko-strahlentherapie-strahlenart-sct"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareableconceptmap.html">CRMI Shareable ConceptMap</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishableconceptmap.html">CRMI Publishable ConceptMap</a></p></div><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <a href="CodeSystem-mii-cs-onko-strahlentherapie-strahlenart.html">MII CS Onkologie Strahlentherapie Strahlenart</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>UH (Photonen (ultraharte Röntgenstrahlen, inklusive Gamma-Strahler))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>290006006 (Photon (substance))</td><td/></tr><tr><td>EL (Elektronen)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>46602004 (Electron (substance))</td><td/></tr><tr><td>NE (Neutronen)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>58607005 (Neutron (substance))</td><td/></tr><tr><td>PN (Protonen (leichte Wasserstoffionen/H1/Leichtionen))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>89177007 (Proton (substance))</td><td/></tr><tr><td>SI (Schwerionen (schwere Kohlenstoff-Ionen/C12/Sauerstoffionen/Heliumionen))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>312253001 (Heavy ion radiation (physical force))</td><td/></tr><tr><td>RO (Weichstrahl (kV))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>286630003 (Soft X-radiation (physical force))</td><td/></tr><tr><td>SO (Sonstige (inklusive Mixed Beams, exklusive Nuklide))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>74964007 (Other (qualifier value))</td><td/></tr><tr><td>Lu-177</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>447553000 (Lutetium-177 (substance))</td><td/></tr><tr><td>Lu-177</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-narrower" title="narrower">narrower</a></td><td>1263784000 (Radioligand therapy using lutetium (177-Lu) vipivotide tetraxetan (procedure))</td><td>Verwendung einer bestimmten Verbindung. Momentan wird Lu-177 hauptsächlich damit verwendet; es ist aber nicht auszuschließen, dass in Zukunft auch andere Substanzen zum Einsatz kommen.</td></tr><tr><td>J-131</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>1368003 (Iodine-131 (substance))</td><td/></tr><tr><td>Y-90</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>14691008 (Yttrium-90 (substance))</td><td/></tr><tr><td>Y-90</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-narrower" title="narrower">narrower</a></td><td>764677008 (Selective internal radiotherapy of liver using yttrium (90-Y) labeled microspheres (procedure))</td><td>Kombination einer bestimmten Strahlequelle mit einer bestimmten Applikation (Microsphären). Andere Anwendungen sind theoretisch in Zukunft denkbar und werden von diesem Code nicht miterfasst.</td></tr><tr><td>Ra-223</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>24853006 (Radium-223 (substance))</td><td/></tr><tr><td>Ac-225</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>32059002 (Actinium-225 (substance))</td><td/></tr><tr><td>Sm-153</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>419804008 (Samarium-153 (substance))</td><td/></tr><tr><td>Tb-161</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr><tr><td>Sr-89</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>7770004 (Strontium-89 (substance))</td><td/></tr><tr><td>Ir-192</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>48341001 (Iridium-192 (substance))</td><td/></tr><tr><td>Co-60</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>5405008 (Cobalt-60 (substance))</td><td/></tr><tr><td>SONU (Sonstige Nuklide)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>89457008 (Radioactive isotope (substance))</td><td/></tr></table></div></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="shareable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="publishable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes"/>
+        <code value="package"/>
+        <display value="Package"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-approvalDate">
+    <valueDate value="2026-01-03"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-topic">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"/>
+        <code value="C3262"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-author">
+    <valueContactDetail>
+      <telecom>
+        <system value="email"/>
+        <value value="thomas.debertshaeuser@charite.de"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-editor">
+    <valueContactDetail>
+      <name value="Taskforce Core Data Set"/>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-reviewer">
+    <valueContactDetail>
+      <name value="Interoperability Working Group"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-reviewer">
+    <valueContactDetail>
+      <name value="National Steering Committee"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-endorser">
+    <valueContactDetail>
+      <name value="Interoperability Working Group"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-endorser">
+    <valueContactDetail>
+      <name value="National Steering Committee"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm">
+    <valueCoding>
+      <system value="http://hl7.org/fhir/version-algorithm"/>
+      <code value="semver"/>
+      <display value="SemVer"/>
+    </valueCoding>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2026"/>
+    </valuePeriod>
+  </extension>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-strahlentherapie-strahlenart-sct"/>
+  <version value="2026.0.3"/>
+  <name value="MII CM Onko Strahlentherapie Strahlenart SCT Mapping"/>
+  <title value="MII CM Onko Strahlentherapie Strahlenart SNOMED Mapping"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2024-04-11"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="Mapping Strahlentherapie Strahlenart Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <purpose value="Technical mapping to transform oBDS-Data into SNOMED"/>
+  <copyright value="This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license."/>
+  <sourceUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/"/>
+  <targetUri value="http://snomed.info/sct/900000000000207008/version/20240401"/>
+  <group>
+    <source value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart"/>
+    <target value="http://snomed.info/sct/900000000000207008/version/20240401"/>
+    <element>
+      <code value="UH"/>
+      <display value="Photonen (ultraharte Röntgenstrahlen, inklusive Gamma-Strahler)"/>
+      <target>
+        <code value="290006006"/>
+        <display value="Photon (substance)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="EL"/>
+      <display value="Elektronen"/>
+      <target>
+        <code value="46602004"/>
+        <display value="Electron (substance)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="NE"/>
+      <display value="Neutronen"/>
+      <target>
+        <code value="58607005"/>
+        <display value="Neutron (substance)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="PN"/>
+      <display value="Protonen (leichte Wasserstoffionen/H1/Leichtionen)"/>
+      <target>
+        <code value="89177007"/>
+        <display value="Proton (substance)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="SI"/>
+      <display value="Schwerionen (schwere Kohlenstoff-Ionen/C12/Sauerstoffionen/Heliumionen)"/>
+      <target>
+        <code value="312253001"/>
+        <display value="Heavy ion radiation (physical force)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="RO"/>
+      <display value="Weichstrahl (kV)"/>
+      <target>
+        <code value="286630003"/>
+        <display value="Soft X-radiation (physical force)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="SO"/>
+      <display value="Sonstige (inklusive Mixed Beams, exklusive Nuklide)"/>
+      <target>
+        <code value="74964007"/>
+        <display value="Other (qualifier value)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Lu-177"/>
+      <display value="Lu-177"/>
+      <target>
+        <code value="447553000"/>
+        <display value="Lutetium-177 (substance)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Lu-177"/>
+      <display value="Lu-177"/>
+      <target>
+        <code value="1263784000"/>
+        <display value="Radioligand therapy using lutetium (177-Lu) vipivotide tetraxetan (procedure)"/>
+        <equivalence value="narrower"/>
+        <comment value="Verwendung einer bestimmten Verbindung. Momentan wird Lu-177 hauptsächlich damit verwendet; es ist aber nicht auszuschließen, dass in Zukunft auch andere Substanzen zum Einsatz kommen."/>
+      </target>
+    </element>
+    <element>
+      <code value="J-131"/>
+      <display value="J131"/>
+      <target>
+        <code value="1368003"/>
+        <display value="Iodine-131 (substance)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Y-90"/>
+      <display value="Y-90"/>
+      <target>
+        <code value="14691008"/>
+        <display value="Yttrium-90 (substance)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Y-90"/>
+      <display value="Y-90"/>
+      <target>
+        <code value="764677008"/>
+        <display value="Selective internal radiotherapy of liver using yttrium (90-Y) labeled microspheres (procedure)"/>
+        <equivalence value="narrower"/>
+        <comment value="Kombination einer bestimmten Strahlequelle mit einer bestimmten Applikation (Microsphären). Andere Anwendungen sind theoretisch in Zukunft denkbar und werden von diesem Code nicht miterfasst."/>
+      </target>
+    </element>
+    <element>
+      <code value="Ra-223"/>
+      <display value="Ra-223"/>
+      <target>
+        <code value="24853006"/>
+        <display value="Radium-223 (substance)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Ac-225"/>
+      <display value="Ac-225"/>
+      <target>
+        <code value="32059002"/>
+        <display value="Actinium-225 (substance)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Sm-153"/>
+      <display value="Sm-153"/>
+      <target>
+        <code value="419804008"/>
+        <display value="Samarium-153 (substance)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Tb-161"/>
+      <display value="Tb-161"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="Sr-89"/>
+      <display value="Sr-89"/>
+      <target>
+        <code value="7770004"/>
+        <display value="Strontium-89 (substance)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Ir-192"/>
+      <display value="Ir-192"/>
+      <target>
+        <code value="48341001"/>
+        <display value="Iridium-192 (substance)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Co-60"/>
+      <display value="Co-60"/>
+      <target>
+        <code value="5405008"/>
+        <display value="Cobalt-60 (substance)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="SONU"/>
+      <display value="Sonstige Nuklide"/>
+      <target>
+        <code value="89457008"/>
+        <display value="Radioactive isotope (substance)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

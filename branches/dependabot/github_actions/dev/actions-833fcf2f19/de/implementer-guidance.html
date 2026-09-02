@@ -1,0 +1,569 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+<html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Anleitung für Implementierende - MII IG Kerndatensatz-Modul Onkologie v2026.0.3</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Branding override for the fhir2.base.template CSS placeholder
+     (base ships includes/fragment-css.html as a single comment; it is included
+     in <head> AFTER all base stylesheets, so the linked files win the
+     cascade).
+     Load model (docs/styleguide.md §1/§10): bootstrap-accessibility.css
+     (PayPal Bootstrap Accessibility Plugin v1.0.7, vendored + pinned - §8)
+     patches Bootstrap-3 component styling for accessibility (focus outlines,
+     alert contrast) and loads FIRST so the template's own rules can override;
+     then template-base.css carries the
+     brand-INDEPENDENT rule blocks and always loads; then EXACTLY ONE palette
+     file follows - num-diz.css, the DEFAULT design, unless the consuming IG
+     ships input/data/brand.json with { "design": "mii" } (read as
+     site.data.brand.design via the base's input/data -> _data pre-process),
+     which selects mii.css instead. Only the exact value 'mii' selects the
+     MII design; anything else - including no brand.json at all and unknown
+     values - renders NUM-DIZ. Both palettes declare the same variable set
+     (scripts/brand-switch.test.mjs). -->
+<link href="assets/css/bootstrap-accessibility.css" rel="stylesheet"/>
+<link href="assets/css/template-base.css" rel="stylesheet"/>
+
+<link href="assets/css/num-diz.css" rel="stylesheet"/>
+
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"2.7"}
+    h3,h4,h5,h6{--heading-prefix:"2.7"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Branding override for the fhir2.base.template header placeholder
+     (base ships includes/fragment-header.html as a single comment; it is included
+     inside "#segment-header > .container", before the #ig-status block).
+     Language handling: only the asset and its descriptive alt text switch on
+     include.lang (the pattern kerndatensatz-basis uses); no translatable UI
+     strings are hard-coded.
+     Brand handling: the project logo additionally switches on
+     site.data.brand.design (input/data/brand.json in the consuming IG, see
+     docs/styleguide.md §10). Only the exact value 'mii' selects the MII
+     logos - anything else, including no brand.json at all, falls through to
+     the NUM-DIZ default.
+     Two logos, mirroring kerndatensatz-basis: the HL7 FHIR logo (links to the
+     FHIR spec) in #family-nav, and the project logo in #project-nav.
+     fhir-logo-www.png is shipped by fhir2.base.template
+     (content/assets/images/), so it resolves from the inherited assets without
+     shipping it here. -->
+<div id="family-nav">
+  <a id="family-logo" no-external="true" href="https://hl7.org/fhir">
+    <img height="50" alt="HL7 FHIR" src="assets/images/fhir-logo-www.png"/>
+  </a>
+</div>
+<div id="project-nav">
+
+  <a id="project-logo" no-external="true" href="https://www.netzwerk-universitaetsmedizin.de/forschung/num-diz">
+
+    <img height="50" alt="NUM-DIZ (Netzwerk Universitätsmedizin — Datenintegrationszentrum)" src="assets/images/logo-num-diz-de.svg"/>
+
+  </a>
+
+</div>
+<!-- Font-size control (A / A+ / A++): three reader-selectable levels; level A
+     is the untouched default. Logic in assets/js/font-size-control.js, the
+     zoom mapping + button styling in template-base.css ("font-size control"
+     block). All three buttons read "A" — the button's own font size shows the level; labels are language-neutral; only the aria texts switch
+     on include.lang. REMOVAL: delete this block, the js file and the CSS
+     block - one commit, styleguide §5a. -->
+
+<div class="ig-fontsize" role="group" aria-label="Schriftgröße">
+  <button type="button" data-level="0" aria-pressed="true" aria-label="Schriftgröße: Standard">A</button>
+  <button type="button" data-level="1" aria-pressed="false" aria-label="Schriftgröße: größer">A</button>
+  <button type="button" data-level="2" aria-pressed="false" aria-label="Schriftgröße: am größten">A</button>
+</div>
+
+<script src="assets/js/font-size-control.js" defer></script>
+<!-- PayPal Bootstrap Accessibility Plugin v1.0.7 (vendored + pinned, §8):
+     patches the Bootstrap-3 components the publisher renders - navbar
+     dropdowns gain ARIA menu semantics + arrow-key navigation, tab panels
+     (structure-tabs) the full ARIA tabs pattern, alerts live-region
+     announcements. `defer` guarantees it executes AFTER the parser-inserted
+     bootstrap.min.js at the end of the body. Vendored from
+     paypal/bootstrap-accessibility-plugin @ v1.0.7 (the admin-ch fork was
+     evaluated and rejected: 151 commits behind upstream, its 6 deltas are
+     site-specific tab tweaks). REMOVAL: delete this tag, both vendored
+     assets and the fragment-css link - guard test pins the hashes. -->
+<script src="assets/js/bootstrap-accessibility.min.js" defer></script>
+<!-- Back-to-top button: appears after one viewport of scrolling (logic in
+     assets/js/back-to-top.js, styling in template-base.css "back-to-top"
+     block). Rendered here inside #segment-header, which is OUTSIDE the
+     data-fontsize zoom regions, so the fixed button never scales. REMOVAL:
+     this block, the js file and the CSS block - one commit, styleguide §8. -->
+
+<button type="button" class="ig-back-to-top" aria-label="Zurück zum Seitenanfang">↑</button>
+
+<script src="assets/js/back-to-top.js" defer></script>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Onkologie</span>
+            <br/>
+            <span style="display:inline-block;">2026.0.3 - 
+
+
+
+  <img alt="Germany Flagge" src="assets/images/deu.svg" height="16" title="Germany"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- German translation of input/includes/menu.xml.
+     Keep the href targets IDENTICAL to the source menu; translate only labels.
+     Structure notes (OPTIONAL entries, link-only entries, the interim
+     meta-wiki links) are documented in the source menu's header and in
+     docs/page-structure.md / docs/optional-pages.md. -->
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">Startseite</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="guidance.html" class="dropdown-toggle">Anleitung<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="guidance.html">Anleitung</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="researcher-guidance.html">Anleitung für Forschende (optional)</a></li>
+      <li><a href="implementer-guidance.html">Anleitung für Implementierende</a></li>
+      <!-- Nur-Link-Eintrag: die Seite "Logische Modelle" (Begründung im Quell-Menü) -->
+      <li><a href="datasets-and-descriptions.html">Datensätze inkl. Beschreibungen</a></li>
+      <li><a href="uml-diagrams.html">UML-Diagramme</a></li>
+      <li><a href="anwendungsfaelle-informationsmodell.html">Anwendungsfälle und Informationsmodell</a></li>
+      <li><a href="icd-o-terminologie.html">ICD-O: Revisionen und Validierung</a></li>
+      <li><a href="atc-terminologie.html">ATC: Jahresversionen und Überleitungen</a></li>
+      <li><a href="weitere-klassifikationen-terminologien.html">Weitere Klassifikationen: Terminologien</a></li>
+      <li><a href="tumormarker-loinc.html">Tumormarker: kuratierte LOINC-Codes</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <!-- Eltern-Eintrag und die ersten vier Einträge verlinken die KDS-weiten
+         Konformitätsregeln des Meta-Moduls (INTERIM: Meta-Wiki; siehe
+         Quell-Menü). -->
+    <a data-toggle="dropdown" href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance" class="dropdown-toggle">Konformität<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance">Konformität</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#anforderungsdokumentation">Allgemeine Anforderungen</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#must-support-ms">Must-Support</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#fehlende-daten">Umgang mit fehlenden Daten</a></li>
+      <li><a href="security-and-privacy.html">Sicherheit und Datenschutz</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="artifacts.html" class="dropdown-toggle">Artefakte<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="artifacts.html">Artefakt-Übersicht</a></li>
+      <li><a href="profiles.html">Profile</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="extensions.html">Extensions (optional)</a></li>
+      <li><a href="capability-statements.html">CapabilityStatements</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="search-parameters.html">Suchparameter (optional)</a></li>
+      <li><a href="logical-models.html">Logische Modelle</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="value-sets.html">ValueSets (optional)</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="code-systems.html">CodeSystems (optional)</a></li>
+      <li><a href="examples.html">Beispiele</a></li>
+    </ul>
+  </li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li><a href="changes.html">Änderungshistorie</a></li>
+  <li class="dropdown">
+    <!-- Der Eltern-Eintrag verlinkt bewusst das PFLICHT-Kind (Versionierung):
+         die Metadaten-Übersicht ist optional. -->
+    <a data-toggle="dropdown" href="version-history.html" class="dropdown-toggle">Metadaten<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="metadata.html">Metadaten-Übersicht (optional)</a></li>
+      <li><a href="version-history.html">Versionierung</a></li>
+    </ul>
+  </li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-de.png"/>Deutsch</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Sprache:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag de" src="assets/images/lang-de.png"/>Deutsch</div>
+
+    <div><a href="../en/implementer-guidance.html"><img class="flag" src="assets/images/lang-en.png" alt="flag en"/>English</a></div>
+
+  </div>
+</div>
+
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Inhaltsverzeichnis</b></a></li><li><a href='guidance.html'><b>Anleitung</b></a></li><li><b>Anleitung für Implementierende</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Onkologie - Local Development build (v2026.0.3) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Anleitung für Implementierende</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#kontext-im-gesamtprojekt--bezüge-zu-anderen-modulen" id="markdown-toc-kontext-im-gesamtprojekt--bezüge-zu-anderen-modulen">Kontext im Gesamtprojekt — Bezüge zu anderen Modulen</a></li>
+  <li><a href="#profil-beziehungen-und-referenzen" id="markdown-toc-profil-beziehungen-und-referenzen">Profil-Beziehungen und Referenzen</a></li>
+  <li><a href="#obds-snomed-ct-mapping-methodik" id="markdown-toc-obds-snomed-ct-mapping-methodik">oBDS-SNOMED-CT-Mapping: Methodik</a></li>
+  <li><a href="#referenzen" id="markdown-toc-referenzen">Referenzen</a></li>
+  <li><a href="#qualitätssicherung-und-validierung" id="markdown-toc-qualitätssicherung-und-validierung">Qualitätssicherung und Validierung</a></li>
+</ul>
+
+</div>
+<!-- markdownlint-disable MD041 -->
+
+<h3 id="kontext-im-gesamtprojekt--bezüge-zu-anderen-modulen">Kontext im Gesamtprojekt — Bezüge zu anderen Modulen</h3>
+
+<p>Das KDS-Modul Onkologie bedient sich umfassend der Basismodule des MII:</p>
+
+<ul>
+  <li>Die onkologische Primärdiagnose basiert auf dem MII-Modul
+<a href="https://simplifier.net/mii-basismodul-diagnose-2024">Diagnose</a>.</li>
+  <li>Die Therapiedokumentation von Operationen, Strahlentherapien und allgemeine
+Angaben zu Systemischen Therapien basieren auf dem MII-Modul
+<a href="https://simplifier.net/mii-basismodul-prozedur-2024">Prozedur</a>.</li>
+  <li>Die spezifische Kodierung von Wirkstoffen als Teil der Systemischen Therapie
+basiert auf dem MII-Modul
+<a href="https://simplifier.net/mii-basismodul-medikation-2024">Medikation</a>.</li>
+</ul>
+
+<p>Da die Datenerfassung für den oBDS auf den Krebsregistermeldungen basiert, ist
+eine Abbildung über die oben genannten Module jedoch nur teilweise möglich.</p>
+
+<p>Für eine weitergehende Verknüpfung der onkologischen Registerdaten sind
+besonders folgende KDS-Module relevant:</p>
+
+<ul>
+  <li><a href="https://simplifier.net/medizininformatikinitiative-modulpathologie">Pathologiebefundbericht</a></li>
+  <li><a href="https://simplifier.net/medizininformatikinitiative-modulbiobank">Biobank</a></li>
+  <li><a href="https://simplifier.net/medizininformatikinitiative-modulomics">Molekulargenetischer Befundbericht</a></li>
+  <li><a href="https://simplifier.net/Medizininformatik-Initiative-Modul-Bildgebung">Bildgebung</a>
+(noch nicht umgesetzt, Integration geplant für Version 2027)</li>
+  <li><a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.dokument">Dokument</a>
+— für die Dokumentenebene, siehe die Zuordnung der onkologie-relevanten
+KDL-Dokumentklassen im
+<a href="ValueSet-mii-vs-onko-kdl-dokumentklassen.html">Intro der KDL-Werteliste</a></li>
+</ul>
+
+<p>Langfristig ist eine enge Verzahnung mit den genannten Modulen geplant. In den
+ersten Versionen ist diese jedoch komplett optional, vor allem aus einem
+Grund: Die Erzeugung von FHIR-Ressourcen aus anderen Modulen erfordert
+teilweise die Existenz von Daten, die in dieser Form nicht Teil des oBDS sind
+(Beispiel: das Modul Bioprobe erfordert bei der Erstellung zwingend die Angabe
+der Verfügbarkeit). Da FHIR-Ressourcen noch nicht flächendeckend aus
+Primärsystemen ausgespielt werden können und nicht jeder DIZ-Standort alle
+KDS-Module in ETL-Strecken erzeugen kann, ist die Verwendung anderer
+MII-Module angedacht, aber optional.</p>
+
+<p>Das KDS-Modul Onkologie bildet darüber hinaus die Grundlage für das
+<a href="https://simplifier.net/mii-erweiterungsmodul-molekulares-tumorboard">KDS-Modul Molekulares Tumorboard</a>,
+in dem tiefergehende onkologisch relevante Fragestellungen wie
+Leitlinien-Behandlung, Next-Generation-Sequencing und personalisierte
+Therapien detailliert abgebildet werden können. Benötigte Anpassungen wurden
+für das MTB-Modul ausspezifiziert und in die Version v2026 übernommen.</p>
+
+<h3 id="profil-beziehungen-und-referenzen">Profil-Beziehungen und Referenzen</h3>
+
+<p>Die folgende Übersicht stellt die Referenzen der Ressourcen untereinander dar:</p>
+
+<object type="image/svg+xml" data="MII_Onko_UML_Relations_v1.svg" style="max-width:100%;"><img src="MII_Onko_UML_Relations_v1.svg" alt="Übersicht der Profil-Beziehungen" style="max-width:100%;" /></object>
+
+<h4 id="zukünftig-angedachte-einbindung-der-module-biobank-molgen-befundbericht-und-pathologiebefund">Zukünftig angedachte Einbindung der Module Biobank, MolGen-Befundbericht und Pathologiebefund</h4>
+
+<object type="image/svg+xml" data="MII_Onko_UML_Relations_v2.svg" style="max-width:100%;"><img src="MII_Onko_UML_Relations_v2.svg" alt="Zukünftige Modul-Einbindung" style="max-width:100%;" /></object>
+
+<h3 id="obds-snomed-ct-mapping-methodik">oBDS-SNOMED-CT-Mapping: Methodik</h3>
+
+<p>Die ConceptMap-Artefakte dieses Moduls enthalten die Ergebnisse eines Mappings
+der oBDS-Antwortlisten auf SNOMED CT, durchgeführt mit der internationalen
+SNOMED-CT-Version März 2024, ergänzt um die UICC-TNM- und
+Residualtumorkonzepte aus dem März 2025.</p>
+
+<ol>
+  <li>Der Fokus lag auf den im oBDS hinterlegten Antwortlisten. Für das Mapping
+anderer nationaler und internationaler Klassifikationen und Terminologien
+(ICD-10, ICD-O, OPS, ATC, …) ist das BfArM der zuständige Ansprechpartner.</li>
+  <li>Neben den Antwortlisten sind die Datenfelder selbst häufig ebenfalls in
+SNOMED CT und/oder LOINC kodiert (zu finden als <code class="language-plaintext highlighter-rouge">code</code>-Element an den
+meisten Ressourcen).</li>
+  <li>Äquivalenz-Bewertung: Jeder Code trägt eine von vier Kodierungen, die die
+inhaltliche Beziehung von Quell- und Zielkonzept beschreibt:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">equivalent</code>: inhaltlich (nahezu) identisch und gleichwertig zu behandeln</li>
+      <li><code class="language-plaintext highlighter-rouge">wider</code>: das Zielkonzept ist allgemeiner als das Quellkonzept</li>
+      <li><code class="language-plaintext highlighter-rouge">narrower</code>: das Zielkonzept ist spezifischer als das Quellkonzept</li>
+      <li><code class="language-plaintext highlighter-rouge">unmatched</code>: kein adäquat vergleichbares Zielkonzept gefunden</li>
+    </ul>
+  </li>
+</ol>
+
+<p>Die einzelnen Mappings sind als Intro-Texte auf den jeweiligen
+ConceptMap-Seiten dokumentiert (siehe <a href="artifacts.html">Artefakt-Übersicht</a>).</p>
+
+<h4 id="mapping-gesamtübersicht-aus-den-conceptmaps-generiert">Mapping-Gesamtübersicht (aus den ConceptMaps generiert)</h4>
+
+<p>Die folgenden Tabellen werden beim Build per SQL direkt aus den
+ConceptMap-Ressourcen dieses IGs erzeugt (Datenbasis <code class="language-plaintext highlighter-rouge">package.db</code> des IG
+Publishers) — sie können daher nicht von den Artefakten abweichen.</p>
+
+<p><strong>Verteilung der Äquivalenzlevel (alle ConceptMaps):</strong></p>
+
+<table class="grid"><tr><td style="background-color: #eeeeee">Beziehung</td><td style="background-color: #eeeeee">Anzahl</td></tr><tr><td>equivalent</td><td>1318</td></tr><tr><td>source-is-narrower-than-target</td><td>80</td></tr><tr><td>source-is-broader-than-target</td><td>60</td></tr></table>
+
+<p><strong>Alle Mappings der oBDS-Antwortlisten</strong> (modul-eigene CodeSysteme → SNOMED CT/LOINC;
+die jahresversionierten ATC-/ICD-O-Überleitungen sind auf
+<a href="atc-terminologie.html">ATC</a> bzw. <a href="icd-o-terminologie.html">ICD-O</a> beschrieben):</p>
+
+<table class="grid"><tr><td style="background-color: #eeeeee">Quellsystem</td><td style="background-color: #eeeeee">Code</td><td style="background-color: #eeeeee">Beziehung</td><td style="background-color: #eeeeee">Zielsystem</td><td style="background-color: #eeeeee">Zielcode</td></tr><tr><td>oBDS-CS allgemeiner-leistungszustand-ecog</td><td>#0</td><td>equivalent</td><td>LOINC</td><td>#LA9622-7</td></tr><tr><td>oBDS-CS allgemeiner-leistungszustand-ecog</td><td>#0</td><td>equivalent</td><td>SNOMED CT</td><td>#425389002</td></tr><tr><td>oBDS-CS allgemeiner-leistungszustand-ecog</td><td>#1</td><td>equivalent</td><td>LOINC</td><td>#LA9623-5</td></tr><tr><td>oBDS-CS allgemeiner-leistungszustand-ecog</td><td>#1</td><td>equivalent</td><td>SNOMED CT</td><td>#422512005</td></tr><tr><td>oBDS-CS allgemeiner-leistungszustand-ecog</td><td>#2</td><td>equivalent</td><td>LOINC</td><td>#LA9624-3</td></tr><tr><td>oBDS-CS allgemeiner-leistungszustand-ecog</td><td>#2</td><td>equivalent</td><td>SNOMED CT</td><td>#422894000</td></tr><tr><td>oBDS-CS allgemeiner-leistungszustand-ecog</td><td>#3</td><td>equivalent</td><td>LOINC</td><td>#LA9625-0</td></tr><tr><td>oBDS-CS allgemeiner-leistungszustand-ecog</td><td>#3</td><td>equivalent</td><td>SNOMED CT</td><td>#423053003</td></tr><tr><td>oBDS-CS allgemeiner-leistungszustand-ecog</td><td>#4</td><td>equivalent</td><td>LOINC</td><td>#LA9626-8</td></tr><tr><td>oBDS-CS allgemeiner-leistungszustand-ecog</td><td>#4</td><td>equivalent</td><td>SNOMED CT</td><td>#423237006</td></tr><tr><td>oBDS-CS allgemeiner-leistungszustand-ecog</td><td>#U</td><td>equivalent</td><td>SNOMED CT</td><td>#261665006</td></tr><tr><td>oBDS-CS allgemeiner-leistungszustand-karnofsky</td><td>#0%</td><td>equivalent</td><td>LOINC</td><td>#LA9627-6</td></tr><tr><td>oBDS-CS allgemeiner-leistungszustand-karnofsky</td><td>#10%</td><td>equivalent</td><td>LOINC</td><td>#LA29184-1</td></tr><tr><td>oBDS-CS allgemeiner-leistungszustand-karnofsky</td><td>#100%</td><td>equivalent</td><td>LOINC</td><td>#LA29175-9</td></tr><tr><td>oBDS-CS allgemeiner-leistungszustand-karnofsky</td><td>#20%</td><td>equivalent</td><td>LOINC</td><td>#LA29183-3</td></tr><tr><td>oBDS-CS allgemeiner-leistungszustand-karnofsky</td><td>#30%</td><td>equivalent</td><td>LOINC</td><td>#LA29182-5</td></tr><tr><td>oBDS-CS allgemeiner-leistungszustand-karnofsky</td><td>#40%</td><td>equivalent</td><td>LOINC</td><td>#LA29181-7</td></tr><tr><td>oBDS-CS allgemeiner-leistungszustand-karnofsky</td><td>#50%</td><td>equivalent</td><td>LOINC</td><td>#LA29180-9</td></tr><tr><td>oBDS-CS allgemeiner-leistungszustand-karnofsky</td><td>#60%</td><td>equivalent</td><td>LOINC</td><td>#LA29179-1</td></tr><tr><td>oBDS-CS allgemeiner-leistungszustand-karnofsky</td><td>#70%</td><td>equivalent</td><td>LOINC</td><td>#LA29178-3</td></tr><tr><td>oBDS-CS allgemeiner-leistungszustand-karnofsky</td><td>#80%</td><td>equivalent</td><td>LOINC</td><td>#LA29177-5</td></tr><tr><td>oBDS-CS allgemeiner-leistungszustand-karnofsky</td><td>#90%</td><td>equivalent</td><td>LOINC</td><td>#LA29176-7</td></tr><tr><td>oBDS-CS asa-obds</td><td>#1</td><td>equivalent</td><td>LOINC</td><td>#LA28813-6</td></tr><tr><td>oBDS-CS asa-obds</td><td>#2</td><td>equivalent</td><td>LOINC</td><td>#LA28814-4</td></tr><tr><td>oBDS-CS asa-obds</td><td>#3</td><td>equivalent</td><td>LOINC</td><td>#LA28815-1</td></tr><tr><td>oBDS-CS asa-obds</td><td>#4</td><td>equivalent</td><td>LOINC</td><td>#LA28816-9</td></tr><tr><td>oBDS-CS asa-obds</td><td>#5</td><td>equivalent</td><td>LOINC</td><td>#LA28817-7</td></tr><tr><td>oBDS-CS asa-obds</td><td>#6</td><td>equivalent</td><td>LOINC</td><td>#LA28818-5</td></tr><tr><td>oBDS-CS fernmetastasen</td><td>#ADR</td><td>equivalent</td><td>SNOMED CT</td><td>#258339009</td></tr><tr><td>oBDS-CS fernmetastasen</td><td>#BRA</td><td>equivalent</td><td>SNOMED CT</td><td>#313367003</td></tr><tr><td>oBDS-CS fernmetastasen</td><td>#GEN</td><td>equivalent</td><td>SNOMED CT</td><td>#405843009</td></tr><tr><td>oBDS-CS fernmetastasen</td><td>#HEP</td><td>equivalent</td><td>SNOMED CT</td><td>#258334004</td></tr><tr><td>oBDS-CS fernmetastasen</td><td>#LYM</td><td>equivalent</td><td>SNOMED CT</td><td>#258336002</td></tr><tr><td>oBDS-CS fernmetastasen</td><td>#MAR</td><td>equivalent</td><td>SNOMED CT</td><td>#14016003</td></tr><tr><td>oBDS-CS fernmetastasen</td><td>#OSS</td><td>equivalent</td><td>SNOMED CT</td><td>#258333005</td></tr><tr><td>oBDS-CS fernmetastasen</td><td>#OTH</td><td>equivalent</td><td>SNOMED CT</td><td>#258348004</td></tr><tr><td>oBDS-CS fernmetastasen</td><td>#PER</td><td>equivalent</td><td>SNOMED CT</td><td>#258338001</td></tr><tr><td>oBDS-CS fernmetastasen</td><td>#PLE</td><td>equivalent</td><td>SNOMED CT</td><td>#258337006</td></tr><tr><td>oBDS-CS fernmetastasen</td><td>#PUL</td><td>equivalent</td><td>SNOMED CT</td><td>#258332000</td></tr><tr><td>oBDS-CS fernmetastasen</td><td>#SKI</td><td>equivalent</td><td>SNOMED CT</td><td>#258340006</td></tr><tr><td>oBDS-CS genetische-variante-auspraegung</td><td>#M</td><td>equivalent</td><td>SNOMED CT</td><td>#55446002</td></tr><tr><td>oBDS-CS genetische-variante-auspraegung</td><td>#N</td><td>equivalent</td><td>SNOMED CT</td><td>#1156316003</td></tr><tr><td>oBDS-CS genetische-variante-auspraegung</td><td>#P</td><td>equivalent</td><td>SNOMED CT</td><td>#50334000</td></tr><tr><td>oBDS-CS genetische-variante-auspraegung</td><td>#S</td><td>equivalent</td><td>SNOMED CT</td><td>#74964007</td></tr><tr><td>oBDS-CS genetische-variante-auspraegung</td><td>#U</td><td>equivalent</td><td>SNOMED CT</td><td>#261665006</td></tr><tr><td>oBDS-CS genetische-variante-auspraegung</td><td>#W</td><td>equivalent</td><td>SNOMED CT</td><td>#412730000</td></tr><tr><td>oBDS-CS grading</td><td>#0</td><td>equivalent</td><td>SNOMED CT</td><td>#415175000</td></tr><tr><td>oBDS-CS grading</td><td>#1</td><td>equivalent</td><td>SNOMED CT</td><td>#373375007</td></tr><tr><td>oBDS-CS grading</td><td>#2</td><td>equivalent</td><td>SNOMED CT</td><td>#373377004</td></tr><tr><td>oBDS-CS grading</td><td>#3</td><td>equivalent</td><td>SNOMED CT</td><td>#373373000</td></tr><tr><td>oBDS-CS grading</td><td>#4</td><td>equivalent</td><td>SNOMED CT</td><td>#373374006</td></tr><tr><td>oBDS-CS grading</td><td>#B</td><td>equivalent</td><td>SNOMED CT</td><td>#1268929003</td></tr><tr><td>oBDS-CS grading</td><td>#H</td><td>equivalent</td><td>SNOMED CT</td><td>#1155707008</td></tr><tr><td>oBDS-CS grading</td><td>#L</td><td>equivalent</td><td>SNOMED CT</td><td>#1155708003</td></tr><tr><td>oBDS-CS grading</td><td>#M</td><td>equivalent</td><td>SNOMED CT</td><td>#1286893008</td></tr><tr><td>oBDS-CS grading</td><td>#T</td><td>equivalent</td><td>SNOMED CT</td><td>#385432009</td></tr><tr><td>oBDS-CS grading</td><td>#U</td><td>equivalent</td><td>SNOMED CT</td><td>#261665006</td></tr><tr><td>oBDS-CS grading</td><td>#X</td><td>equivalent</td><td>SNOMED CT</td><td>#1155705000</td></tr><tr><td>oBDS-CS https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende</td><td>#E</td><td>equivalent</td><td>SNOMED CT</td><td>#385656004</td></tr><tr><td>oBDS-CS https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende</td><td>#P</td><td>source-is-narrower-than-target</td><td>SNOMED CT</td><td>#419835002</td></tr><tr><td>oBDS-CS https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende</td><td>#S</td><td>source-is-narrower-than-target</td><td>SNOMED CT</td><td>#74964007</td></tr><tr><td>oBDS-CS https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende</td><td>#T</td><td>equivalent</td><td>SNOMED CT</td><td>#419099009</td></tr><tr><td>oBDS-CS https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende</td><td>#U</td><td>equivalent</td><td>SNOMED CT</td><td>#261665006</td></tr><tr><td>oBDS-CS https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende</td><td>#V</td><td>equivalent</td><td>SNOMED CT</td><td>#183948000</td></tr><tr><td>oBDS-CS intention</td><td>#D</td><td>equivalent</td><td>SNOMED CT</td><td>#261004008</td></tr><tr><td>oBDS-CS intention</td><td>#K</td><td>equivalent</td><td>SNOMED CT</td><td>#373808002</td></tr><tr><td>oBDS-CS intention</td><td>#O</td><td>source-is-narrower-than-target</td><td>SNOMED CT</td><td>#373808002</td></tr><tr><td>oBDS-CS intention</td><td>#P</td><td>equivalent</td><td>SNOMED CT</td><td>#363676003</td></tr><tr><td>oBDS-CS intention</td><td>#R</td><td>equivalent</td><td>SNOMED CT</td><td>#255231005</td></tr><tr><td>oBDS-CS intention</td><td>#S</td><td>equivalent</td><td>SNOMED CT</td><td>#74964007</td></tr><tr><td>oBDS-CS intention</td><td>#X</td><td>equivalent</td><td>SNOMED CT</td><td>#1287211007</td></tr><tr><td>oBDS-CS krk-stoma-anzeichnung</td><td>#K</td><td>equivalent</td><td>SNOMED CT</td><td>#428119001</td></tr><tr><td>oBDS-CS krk-stoma-anzeichnung</td><td>#N</td><td>equivalent</td><td>SNOMED CT</td><td>#262008008</td></tr><tr><td>oBDS-CS krk-stoma-anzeichnung</td><td>#S</td><td>equivalent</td><td>SNOMED CT</td><td>#373068000</td></tr><tr><td>oBDS-CS krk-stoma-anzeichnung</td><td>#U</td><td>equivalent</td><td>SNOMED CT</td><td>#261665006</td></tr><tr><td>oBDS-CS nebenwirkung-ctcae-grad</td><td>#1</td><td>equivalent</td><td>SNOMED CT</td><td>#255604002</td></tr><tr><td>oBDS-CS nebenwirkung-ctcae-grad</td><td>#2</td><td>equivalent</td><td>SNOMED CT</td><td>#1255665007</td></tr><tr><td>oBDS-CS nebenwirkung-ctcae-grad</td><td>#3</td><td>equivalent</td><td>SNOMED CT</td><td>#24484000</td></tr><tr><td>oBDS-CS nebenwirkung-ctcae-grad</td><td>#4</td><td>equivalent</td><td>SNOMED CT</td><td>#442452003</td></tr><tr><td>oBDS-CS nebenwirkung-ctcae-grad</td><td>#5</td><td>equivalent</td><td>SNOMED CT</td><td>#399166001</td></tr><tr><td>oBDS-CS nebenwirkung-ctcae-grad</td><td>#K</td><td>equivalent</td><td>SNOMED CT</td><td>#260413007</td></tr><tr><td>oBDS-CS nebenwirkung-ctcae-grad</td><td>#U</td><td>equivalent</td><td>SNOMED CT</td><td>#261665006</td></tr><tr><td>oBDS-CS operation-komplikation</td><td /><td>source-is-broader-than-target</td><td>SNOMED CT</td><td>#405950009</td></tr><tr><td>oBDS-CS operation-komplikation</td><td /><td>source-is-narrower-than-target</td><td>SNOMED CT</td><td>#128477000</td></tr><tr><td>oBDS-CS operation-komplikation</td><td /><td>equivalent</td><td>SNOMED CT</td><td>#236090001</td></tr><tr><td>oBDS-CS operation-komplikation</td><td /><td>source-is-broader-than-target</td><td>SNOMED CT</td><td>#60168000</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#ABD</td><td>source-is-narrower-than-target</td><td>SNOMED CT</td><td>#128477000</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#ABS</td><td>source-is-broader-than-target</td><td>SNOMED CT</td><td>#75100008</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#AEP</td><td>equivalent</td><td>SNOMED CT</td><td>#8635005</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#ALR</td><td>equivalent</td><td>SNOMED CT</td><td>#419076005</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#ANI</td><td>equivalent</td><td>SNOMED CT</td><td>#723189000</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#ANS</td><td>equivalent</td><td>SNOMED CT</td><td>#735173007</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#API</td><td>equivalent</td><td>SNOMED CT</td><td>#230690007</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#ASF</td><td>source-is-narrower-than-target</td><td>SNOMED CT</td><td>#128477000</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#BIF</td><td>equivalent</td><td>SNOMED CT</td><td>#53206008</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#BOG</td><td>equivalent</td><td>SNOMED CT</td><td>#37372002</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#CHI</td><td>equivalent</td><td>SNOMED CT</td><td>#82403002</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#DAI</td><td>source-is-broader-than-target</td><td>SNOMED CT</td><td>#236091002</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#DEP</td><td>equivalent</td><td>SNOMED CT</td><td>#772133000</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#DIC</td><td>equivalent</td><td>SNOMED CT</td><td>#67406007</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#DLU</td><td>equivalent</td><td>SNOMED CT</td><td>#1163215007</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#DPS</td><td>equivalent</td><td>SNOMED CT</td><td>#81060008</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#DSI</td><td>equivalent</td><td>SNOMED CT</td><td>#236089005</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#ENF</td><td>equivalent</td><td>SNOMED CT</td><td>#735426009</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#GER</td><td>equivalent</td><td>SNOMED CT</td><td>#64779008</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#HAE</td><td>equivalent</td><td>SNOMED CT</td><td>#355001</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#HEM</td><td>equivalent</td><td>SNOMED CT</td><td>#8765009</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#HFI</td><td>equivalent</td><td>SNOMED CT</td><td>#57243009</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#HNA</td><td>equivalent</td><td>SNOMED CT</td><td>#73013002</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#HNK</td><td>equivalent</td><td>SNOMED CT</td><td>#95347000</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#HOP</td><td>equivalent</td><td>SNOMED CT</td><td>#2776000</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#HRS</td><td>equivalent</td><td>SNOMED CT</td><td>#698247007</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#HUR</td><td>equivalent</td><td>SNOMED CT</td><td>#34436003</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#HYB</td><td>equivalent</td><td>SNOMED CT</td><td>#14783006</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#HYF</td><td>equivalent</td><td>SNOMED CT</td><td>#126663003</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#HZI</td><td>equivalent</td><td>SNOMED CT</td><td>#84114007</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#IFV</td><td>equivalent</td><td>SNOMED CT</td><td>#234044007</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#KAS</td><td>equivalent</td><td>SNOMED CT</td><td>#89138009</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#KDS</td><td>equivalent</td><td>SNOMED CT</td><td>#26629001</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#KIM</td><td>equivalent</td><td>SNOMED CT</td><td>#19220005</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#KRA</td><td>equivalent</td><td>SNOMED CT</td><td>#91175000</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#LEV</td><td>equivalent</td><td>SNOMED CT</td><td>#59927004</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#LOE</td><td>equivalent</td><td>SNOMED CT</td><td>#19242006</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#LYE</td><td>equivalent</td><td>SNOMED CT</td><td>#234109007</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#LYF</td><td>equivalent</td><td>SNOMED CT</td><td>#234105001</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#MAT</td><td>source-is-broader-than-target</td><td>SNOMED CT</td><td>#243410003</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#MED</td><td>equivalent</td><td>SNOMED CT</td><td>#373409004</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#MES</td><td>equivalent</td><td>SNOMED CT</td><td>#386211005</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#MIL</td><td>equivalent</td><td>SNOMED CT</td><td>#46420000</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#MYI</td><td>equivalent</td><td>SNOMED CT</td><td>#22298006</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#N</td><td>equivalent</td><td>SNOMED CT</td><td>#373067005</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#NAB</td><td>equivalent</td><td>SNOMED CT</td><td>#110265006</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#OES</td><td>equivalent</td><td>SNOMED CT</td><td>#16761005</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#OSM</td><td>source-is-broader-than-target</td><td>SNOMED CT</td><td>#274144001</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#PAB</td><td>equivalent</td><td>SNOMED CT</td><td>#6072007</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#PAE</td><td>equivalent</td><td>SNOMED CT</td><td>#59282003</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#PAF</td><td>equivalent</td><td>SNOMED CT</td><td>#25803005</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#PAV</td><td>equivalent</td><td>SNOMED CT</td><td>#399957001</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#PDA</td><td>equivalent</td><td>SNOMED CT</td><td>#1162567000</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#PER</td><td>equivalent</td><td>SNOMED CT</td><td>#48661000</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#PEY</td><td>equivalent</td><td>SNOMED CT</td><td>#58554001</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#PIT</td><td>equivalent</td><td>SNOMED CT</td><td>#75694006</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#PLB</td><td>equivalent</td><td>SNOMED CT</td><td>#698817002</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#PLE</td><td>equivalent</td><td>SNOMED CT</td><td>#60046008</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#PMN</td><td>equivalent</td><td>SNOMED CT</td><td>#233604007</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#PNT</td><td>equivalent</td><td>SNOMED CT</td><td>#36118008</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#RIN</td><td>equivalent</td><td>SNOMED CT</td><td>#409623005</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#RNB</td><td>equivalent</td><td>SNOMED CT</td><td>#308896002</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#RPA</td><td>source-is-broader-than-target</td><td>SNOMED CT</td><td>#1052240009</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#SES</td><td>equivalent</td><td>SNOMED CT</td><td>#76571007</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#SFH</td><td>equivalent</td><td>SNOMED CT</td><td>#76314005</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#SKI</td><td>source-is-narrower-than-target</td><td>SNOMED CT</td><td>#19220005</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#STK</td><td>equivalent</td><td>SNOMED CT</td><td>#302918009</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#TIA</td><td>equivalent</td><td>SNOMED CT</td><td>#266257000</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#TRZ</td><td>equivalent</td><td>SNOMED CT</td><td>#82545002</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#TZP</td><td>equivalent</td><td>SNOMED CT</td><td>#302215000</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#U</td><td>equivalent</td><td>SNOMED CT</td><td>#261665006</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#WSS</td><td>equivalent</td><td>SNOMED CT</td><td>#271618001</td></tr><tr><td>oBDS-CS operation-komplikation</td><td>#WUH</td><td>equivalent</td><td>SNOMED CT</td><td>#239160006</td></tr><tr><td>oBDS-CS primaertumor-diagnosesicherung</td><td /><td>source-is-broader-than-target</td><td>SNOMED CT</td><td>#363680008</td></tr><tr><td>oBDS-CS primaertumor-diagnosesicherung</td><td /><td>source-is-broader-than-target</td><td>SNOMED CT</td><td>#423827005</td></tr><tr><td>oBDS-CS primaertumor-diagnosesicherung</td><td /><td>source-is-broader-than-target</td><td>SNOMED CT</td><td>#363679005</td></tr><tr><td>oBDS-CS primaertumor-diagnosesicherung</td><td /><td>source-is-broader-than-target</td><td>SNOMED CT</td><td>#16310003</td></tr><tr><td>oBDS-CS primaertumor-diagnosesicherung</td><td /><td>source-is-broader-than-target</td><td>SNOMED CT</td><td>#122458006</td></tr><tr><td>oBDS-CS primaertumor-diagnosesicherung</td><td>#1</td><td>equivalent</td><td>SNOMED CT</td><td>#373795004</td></tr><tr><td>oBDS-CS primaertumor-diagnosesicherung</td><td>#2</td><td>equivalent</td><td>SNOMED CT</td><td>#373796003</td></tr><tr><td>oBDS-CS primaertumor-diagnosesicherung</td><td>#4</td><td>equivalent</td><td>SNOMED CT</td><td>#373797007</td></tr><tr><td>oBDS-CS primaertumor-diagnosesicherung</td><td>#5</td><td>equivalent</td><td>SNOMED CT</td><td>#373798002</td></tr><tr><td>oBDS-CS primaertumor-diagnosesicherung</td><td>#6</td><td>equivalent</td><td>SNOMED CT</td><td>#373799005</td></tr><tr><td>oBDS-CS primaertumor-diagnosesicherung</td><td>#7</td><td>equivalent</td><td>SNOMED CT</td><td>#373800009</td></tr><tr><td>oBDS-CS primaertumor-diagnosesicherung</td><td>#7.1</td><td>equivalent</td><td>SNOMED CT</td><td>#373800009</td></tr><tr><td>oBDS-CS primaertumor-diagnosesicherung</td><td>#7.2</td><td>equivalent</td><td>SNOMED CT</td><td>#373799005</td></tr><tr><td>oBDS-CS primaertumor-diagnosesicherung</td><td>#8</td><td>equivalent</td><td>SNOMED CT</td><td>#394804000</td></tr><tr><td>oBDS-CS primaertumor-diagnosesicherung</td><td>#9</td><td>equivalent</td><td>SNOMED CT</td><td>#261665006</td></tr><tr><td>oBDS-CS seitenlokalisation</td><td>#B</td><td>equivalent</td><td>SNOMED CT</td><td>#51440002</td></tr><tr><td>oBDS-CS seitenlokalisation</td><td>#L</td><td>equivalent</td><td>SNOMED CT</td><td>#7771000</td></tr><tr><td>oBDS-CS seitenlokalisation</td><td>#M</td><td>equivalent</td><td>SNOMED CT</td><td>#260528009</td></tr><tr><td>oBDS-CS seitenlokalisation</td><td>#R</td><td>equivalent</td><td>SNOMED CT</td><td>#24028007</td></tr><tr><td>oBDS-CS seitenlokalisation</td><td>#T</td><td>equivalent</td><td>SNOMED CT</td><td>#385432009</td></tr><tr><td>oBDS-CS seitenlokalisation</td><td>#U</td><td>equivalent</td><td>SNOMED CT</td><td>#261665006</td></tr><tr><td>oBDS-CS strahlentherapie-applikationsart</td><td>#I</td><td>equivalent</td><td>SNOMED CT</td><td>#113120007</td></tr><tr><td>oBDS-CS strahlentherapie-applikationsart</td><td>#IHDR</td><td>source-is-narrower-than-target</td><td>SNOMED CT</td><td>#113120007</td></tr><tr><td>oBDS-CS strahlentherapie-applikationsart</td><td>#ILDR</td><td>source-is-narrower-than-target</td><td>SNOMED CT</td><td>#113120007</td></tr><tr><td>oBDS-CS strahlentherapie-applikationsart</td><td>#IPDR</td><td>source-is-narrower-than-target</td><td>SNOMED CT</td><td>#113120007</td></tr><tr><td>oBDS-CS strahlentherapie-applikationsart</td><td>#K</td><td>equivalent</td><td>SNOMED CT</td><td>#384692006</td></tr><tr><td>oBDS-CS strahlentherapie-applikationsart</td><td>#KHDR</td><td>source-is-narrower-than-target</td><td>SNOMED CT</td><td>#384692006</td></tr><tr><td>oBDS-CS strahlentherapie-applikationsart</td><td>#KLDR</td><td>source-is-narrower-than-target</td><td>SNOMED CT</td><td>#384692006</td></tr><tr><td>oBDS-CS strahlentherapie-applikationsart</td><td>#KPDR</td><td>source-is-narrower-than-target</td><td>SNOMED CT</td><td>#384692006</td></tr><tr><td>oBDS-CS strahlentherapie-applikationsart</td><td>#M</td><td>source-is-narrower-than-target</td><td>SNOMED CT</td><td>#399315003</td></tr><tr><td>oBDS-CS strahlentherapie-applikationsart</td><td>#MRIT</td><td>equivalent</td><td>SNOMED CT</td><td>#118640001</td></tr><tr><td>oBDS-CS strahlentherapie-applikationsart</td><td>#MRJT</td><td>equivalent</td><td>SNOMED CT</td><td>#64291000052106</td></tr><tr><td>oBDS-CS strahlentherapie-applikationsart</td><td>#P</td><td>equivalent</td><td>SNOMED CT</td><td>#33195004</td></tr><tr><td>oBDS-CS strahlentherapie-applikationsart</td><td>#P-4D</td><td>equivalent</td><td>SNOMED CT</td><td>#721061000124106</td></tr><tr><td>oBDS-CS strahlentherapie-applikationsart</td><td>#P-ST</td><td>equivalent</td><td>SNOMED CT</td><td>#395096001</td></tr><tr><td>oBDS-CS strahlentherapie-applikationsart</td><td>#S</td><td>equivalent</td><td>SNOMED CT</td><td>#74964007</td></tr><tr><td>oBDS-CS strahlentherapie-boost</td><td>#J</td><td>equivalent</td><td>SNOMED CT</td><td>#445232009</td></tr><tr><td>oBDS-CS strahlentherapie-boost</td><td>#KON</td><td>source-is-narrower-than-target</td><td>SNOMED CT</td><td>#445232009</td></tr><tr><td>oBDS-CS strahlentherapie-boost</td><td>#N</td><td>equivalent</td><td>SNOMED CT</td><td>#373067005</td></tr><tr><td>oBDS-CS strahlentherapie-boost</td><td>#SEQ</td><td>source-is-narrower-than-target</td><td>SNOMED CT</td><td>#445232009</td></tr><tr><td>oBDS-CS strahlentherapie-boost</td><td>#SIB</td><td>source-is-narrower-than-target</td><td>SNOMED CT</td><td>#445232009</td></tr><tr><td>oBDS-CS strahlentherapie-strahlenart</td><td>#Ac-225</td><td>equivalent</td><td>SNOMED CT</td><td>#32059002</td></tr><tr><td>oBDS-CS strahlentherapie-strahlenart</td><td>#Co-60</td><td>equivalent</td><td>SNOMED CT</td><td>#5405008</td></tr><tr><td>oBDS-CS strahlentherapie-strahlenart</td><td>#EL</td><td>equivalent</td><td>SNOMED CT</td><td>#46602004</td></tr><tr><td>oBDS-CS strahlentherapie-strahlenart</td><td>#Ir-192</td><td>equivalent</td><td>SNOMED CT</td><td>#48341001</td></tr><tr><td>oBDS-CS strahlentherapie-strahlenart</td><td>#J-131</td><td>equivalent</td><td>SNOMED CT</td><td>#1368003</td></tr><tr><td>oBDS-CS strahlentherapie-strahlenart</td><td>#Lu-177</td><td>equivalent</td><td>SNOMED CT</td><td>#447553000</td></tr><tr><td>oBDS-CS strahlentherapie-strahlenart</td><td>#Lu-177</td><td>source-is-broader-than-target</td><td>SNOMED CT</td><td>#1263784000</td></tr><tr><td>oBDS-CS strahlentherapie-strahlenart</td><td>#NE</td><td>equivalent</td><td>SNOMED CT</td><td>#58607005</td></tr><tr><td>oBDS-CS strahlentherapie-strahlenart</td><td>#PN</td><td>equivalent</td><td>SNOMED CT</td><td>#89177007</td></tr><tr><td>oBDS-CS strahlentherapie-strahlenart</td><td>#RO</td><td>equivalent</td><td>SNOMED CT</td><td>#286630003</td></tr><tr><td>oBDS-CS strahlentherapie-strahlenart</td><td>#Ra-223</td><td>equivalent</td><td>SNOMED CT</td><td>#24853006</td></tr><tr><td>oBDS-CS strahlentherapie-strahlenart</td><td>#SI</td><td>equivalent</td><td>SNOMED CT</td><td>#312253001</td></tr><tr><td>oBDS-CS strahlentherapie-strahlenart</td><td>#SO</td><td>equivalent</td><td>SNOMED CT</td><td>#74964007</td></tr><tr><td>oBDS-CS strahlentherapie-strahlenart</td><td>#SONU</td><td>equivalent</td><td>SNOMED CT</td><td>#89457008</td></tr><tr><td>oBDS-CS strahlentherapie-strahlenart</td><td>#Sm-153</td><td>equivalent</td><td>SNOMED CT</td><td>#419804008</td></tr><tr><td>oBDS-CS strahlentherapie-strahlenart</td><td>#Sr-89</td><td>equivalent</td><td>SNOMED CT</td><td>#7770004</td></tr><tr><td>oBDS-CS strahlentherapie-strahlenart</td><td>#UH</td><td>equivalent</td><td>SNOMED CT</td><td>#290006006</td></tr><tr><td>oBDS-CS strahlentherapie-strahlenart</td><td>#Y-90</td><td>equivalent</td><td>SNOMED CT</td><td>#14691008</td></tr><tr><td>oBDS-CS strahlentherapie-strahlenart</td><td>#Y-90</td><td>source-is-broader-than-target</td><td>SNOMED CT</td><td>#764677008</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#1.1</td><td>equivalent</td><td>SNOMED CT</td><td>#258335003</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#1.2</td><td>equivalent</td><td>SNOMED CT</td><td>#119235005</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#1.3</td><td>equivalent</td><td>SNOMED CT</td><td>#389079005</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#1.4</td><td>equivalent</td><td>SNOMED CT</td><td>#56329008</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#1.5</td><td>equivalent</td><td>SNOMED CT</td><td>#74964007</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#10.1</td><td>source-is-narrower-than-target</td><td>SNOMED CT</td><td>#38266002</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#10.2</td><td>equivalent</td><td>SNOMED CT</td><td>#309795001</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#10.3</td><td>equivalent</td><td>SNOMED CT</td><td>#74964007</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#2.1</td><td>equivalent</td><td>SNOMED CT</td><td>#81745001</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#2.10</td><td>equivalent</td><td>SNOMED CT</td><td>#4596009</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#2.11</td><td>equivalent</td><td>SNOMED CT</td><td>#69748006</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#2.12</td><td>equivalent</td><td>SNOMED CT</td><td>#774007</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#2.2</td><td>equivalent</td><td>SNOMED CT</td><td>#1286894002</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#2.3</td><td>equivalent</td><td>SNOMED CT</td><td>#74262004</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#2.4</td><td>equivalent</td><td>SNOMED CT</td><td>#117590005</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#2.5</td><td>equivalent</td><td>SNOMED CT</td><td>#385294005</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#2.6</td><td>equivalent</td><td>SNOMED CT</td><td>#54066008</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#2.7</td><td>equivalent</td><td>SNOMED CT</td><td>#71836000</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#2.8</td><td>equivalent</td><td>SNOMED CT</td><td>#31389004</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#2.9</td><td>equivalent</td><td>SNOMED CT</td><td>#81502006</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#3.1</td><td>equivalent</td><td>SNOMED CT</td><td>#181131000</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#3.2</td><td>equivalent</td><td>SNOMED CT</td><td>#119184005</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#3.3</td><td>equivalent</td><td>SNOMED CT</td><td>#78904004</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#3.4</td><td>equivalent</td><td>SNOMED CT</td><td>#39607008</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#3.5</td><td>equivalent</td><td>SNOMED CT</td><td>#32849002</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#3.6</td><td>equivalent</td><td>SNOMED CT</td><td>#72410000</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#3.7</td><td>equivalent</td><td>SNOMED CT</td><td>#9875009</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#3.8</td><td>equivalent</td><td>SNOMED CT</td><td>#51185008</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#4.1</td><td>equivalent</td><td>SNOMED CT</td><td>#69695003</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#4.10</td><td>equivalent</td><td>SNOMED CT</td><td>#80581009</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#4.11</td><td>equivalent</td><td>SNOMED CT</td><td>#28273000</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#4.12</td><td>equivalent</td><td>SNOMED CT</td><td>#28231008</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#4.13</td><td>equivalent</td><td>SNOMED CT</td><td>#818983003</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#4.2</td><td>equivalent</td><td>SNOMED CT</td><td>#15776009</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#4.3</td><td>source-is-narrower-than-target</td><td>SNOMED CT</td><td>#10200004</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#4.4</td><td>equivalent</td><td>SNOMED CT</td><td>#78961009</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#4.5</td><td>equivalent</td><td>SNOMED CT</td><td>#64033007</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#4.6</td><td>equivalent</td><td>SNOMED CT</td><td>#23451007</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#4.7</td><td>equivalent</td><td>SNOMED CT</td><td>#82849001</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#4.8</td><td>equivalent</td><td>SNOMED CT</td><td>#87953007</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#4.9</td><td>equivalent</td><td>SNOMED CT</td><td>#822992007</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#5.1</td><td>equivalent</td><td>SNOMED CT</td><td>#34402009</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#5.10</td><td>equivalent</td><td>SNOMED CT</td><td>#76784001</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#5.11</td><td>equivalent</td><td>SNOMED CT</td><td>#3665003</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#5.12</td><td>equivalent</td><td>SNOMED CT</td><td>#826984001</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#5.2</td><td>equivalent</td><td>SNOMED CT</td><td>#53505006</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#5.3</td><td>equivalent</td><td>SNOMED CT</td><td>#89837001</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#5.4</td><td>equivalent</td><td>SNOMED CT</td><td>#41216001</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#5.5</td><td>equivalent</td><td>SNOMED CT</td><td>#40689003</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#5.6</td><td>equivalent</td><td>SNOMED CT</td><td>#18911002</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#5.7</td><td>equivalent</td><td>SNOMED CT</td><td>#35039007</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#5.8</td><td>equivalent</td><td>SNOMED CT</td><td>#71252005</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#5.9</td><td>equivalent</td><td>SNOMED CT</td><td>#45292006</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#6.1</td><td>equivalent</td><td>SNOMED CT</td><td>#89546000</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#6.10</td><td>source-is-narrower-than-target</td><td>SNOMED CT</td><td>#896747000</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#6.11</td><td>equivalent</td><td>SNOMED CT</td><td>#85050009</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#6.12</td><td>equivalent</td><td>SNOMED CT</td><td>#299701004</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#6.13</td><td>equivalent</td><td>SNOMED CT</td><td>#24097009</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#6.14</td><td>equivalent</td><td>SNOMED CT</td><td>#12921003</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#6.15</td><td>equivalent</td><td>SNOMED CT</td><td>#28254004</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#6.16</td><td>equivalent</td><td>SNOMED CT</td><td>#71341001</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#6.17</td><td>equivalent</td><td>SNOMED CT</td><td>#702468001</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#6.18</td><td>equivalent</td><td>SNOMED CT</td><td>#84167007</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#6.19</td><td>source-is-narrower-than-target</td><td>SNOMED CT</td><td>#74964007</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#6.2</td><td>equivalent</td><td>SNOMED CT</td><td>#31467002</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#6.3</td><td>equivalent</td><td>SNOMED CT</td><td>#363654007</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#6.4</td><td>equivalent</td><td>SNOMED CT</td><td>#84667006</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#6.5</td><td>equivalent</td><td>SNOMED CT</td><td>#35769007</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#6.6</td><td>equivalent</td><td>SNOMED CT</td><td>#73903008</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#6.7</td><td>equivalent</td><td>SNOMED CT</td><td>#699698002</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#6.8</td><td>equivalent</td><td>SNOMED CT</td><td>#113197003</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#6.9</td><td>equivalent</td><td>SNOMED CT</td><td>#56873002</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#7.1</td><td>equivalent</td><td>SNOMED CT</td><td>#774007</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#7.2</td><td>equivalent</td><td>SNOMED CT</td><td>#53120007</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#7.3</td><td>equivalent</td><td>SNOMED CT</td><td>#61685007</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#7.4</td><td>equivalent</td><td>SNOMED CT</td><td>#51185008</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#7.5</td><td>equivalent</td><td>SNOMED CT</td><td>#302553009</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#7.6</td><td>equivalent</td><td>SNOMED CT</td><td>#12921003</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#7.7</td><td>equivalent</td><td>SNOMED CT</td><td>#1490004</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#7.8</td><td>equivalent</td><td>SNOMED CT</td><td>#276825009</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#7.9</td><td>source-is-narrower-than-target</td><td>SNOMED CT</td><td>#74964007</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#8.1</td><td>equivalent</td><td>SNOMED CT</td><td>#181469002</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#8.2</td><td>equivalent</td><td>SNOMED CT</td><td>#119181002</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#9.1</td><td>equivalent</td><td>SNOMED CT</td><td>#81105003</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#9.10</td><td>equivalent</td><td>SNOMED CT</td><td>#54268001</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#9.11</td><td>equivalent</td><td>SNOMED CT</td><td>#8928004</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#9.13</td><td>equivalent</td><td>SNOMED CT</td><td>#397440000</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#9.15</td><td>source-is-narrower-than-target</td><td>SNOMED CT</td><td>#59441001</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#9.2</td><td>equivalent</td><td>SNOMED CT</td><td>#9659009</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#9.3</td><td>equivalent</td><td>SNOMED CT</td><td>#245269009</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#9.4</td><td>source-is-broader-than-target</td><td>SNOMED CT</td><td>#245282001</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#9.5</td><td>equivalent</td><td>SNOMED CT</td><td>#62683002</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#9.6</td><td>equivalent</td><td>SNOMED CT</td><td>#264016003</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#9.7</td><td>equivalent</td><td>SNOMED CT</td><td>#818991007</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#9.8</td><td>source-is-broader-than-target</td><td>SNOMED CT</td><td>#245285004</td></tr><tr><td>oBDS-CS strahlentherapie-zielgebiet</td><td>#9.9</td><td>equivalent</td><td>SNOMED CT</td><td>#91394001</td></tr><tr><td>oBDS-CS studienteilnahme</td><td>#J</td><td>equivalent</td><td>SNOMED CT</td><td>#373066001</td></tr><tr><td>oBDS-CS studienteilnahme</td><td>#N</td><td>equivalent</td><td>SNOMED CT</td><td>#373067005</td></tr><tr><td>oBDS-CS studienteilnahme</td><td>#U</td><td>equivalent</td><td>SNOMED CT</td><td>#261665006</td></tr><tr><td>oBDS-CS therapie-stellungzurop</td><td>#A</td><td>equivalent</td><td>SNOMED CT</td><td>#373846009</td></tr><tr><td>oBDS-CS therapie-stellungzurop</td><td>#I</td><td>equivalent</td><td>SNOMED CT</td><td>#277671009</td></tr><tr><td>oBDS-CS therapie-stellungzurop</td><td>#N</td><td>equivalent</td><td>SNOMED CT</td><td>#373847000</td></tr><tr><td>oBDS-CS therapie-stellungzurop</td><td>#S</td><td>equivalent</td><td>SNOMED CT</td><td>#74964007</td></tr><tr><td>oBDS-CS therapie-stellungzurop</td><td>#Z</td><td>equivalent</td><td>SNOMED CT</td><td>#260364009</td></tr><tr><td>oBDS-CS therapie-typ</td><td /><td>source-is-broader-than-target</td><td>SNOMED CT</td><td>#1255831008</td></tr><tr><td>oBDS-CS therapie-typ</td><td /><td>source-is-broader-than-target</td><td>SNOMED CT</td><td>#1255831008</td></tr><tr><td>oBDS-CS therapie-typ</td><td>#AS</td><td>equivalent</td><td>SNOMED CT</td><td>#424313000</td></tr><tr><td>oBDS-CS therapie-typ</td><td>#CH</td><td>equivalent</td><td>SNOMED CT</td><td>#367336001</td></tr><tr><td>oBDS-CS therapie-typ</td><td>#CI</td><td>equivalent</td><td>SNOMED CT</td><td>#897713009</td></tr><tr><td>oBDS-CS therapie-typ</td><td>#CIZ</td><td>source-is-broader-than-target</td><td>SNOMED CT</td><td>#897713009</td></tr><tr><td>oBDS-CS therapie-typ</td><td>#CZ</td><td>equivalent</td><td>SNOMED CT</td><td>#1255831008</td></tr><tr><td>oBDS-CS therapie-typ</td><td>#HO</td><td>equivalent</td><td>SNOMED CT</td><td>#169413002</td></tr><tr><td>oBDS-CS therapie-typ</td><td>#IM</td><td>equivalent</td><td>SNOMED CT</td><td>#897713009</td></tr><tr><td>oBDS-CS therapie-typ</td><td>#IZ</td><td>source-is-broader-than-target</td><td>SNOMED CT</td><td>#76334006</td></tr><tr><td>oBDS-CS therapie-typ</td><td>#KW</td><td>equivalent</td><td>SNOMED CT</td><td>#897016006</td></tr><tr><td>oBDS-CS therapie-typ</td><td>#OP</td><td>equivalent</td><td>SNOMED CT</td><td>#387713003</td></tr><tr><td>oBDS-CS therapie-typ</td><td>#SO</td><td>equivalent</td><td>SNOMED CT</td><td>#74964007</td></tr><tr><td>oBDS-CS therapie-typ</td><td>#ST</td><td>equivalent</td><td>SNOMED CT</td><td>#1287742003</td></tr><tr><td>oBDS-CS therapie-typ</td><td>#SZ</td><td>equivalent</td><td>SNOMED CT</td><td>#1269349006</td></tr><tr><td>oBDS-CS therapie-typ</td><td>#WS</td><td>equivalent</td><td>SNOMED CT</td><td>#310341009</td></tr><tr><td>oBDS-CS therapie-typ</td><td>#WW</td><td>equivalent</td><td>SNOMED CT</td><td>#373818007</td></tr><tr><td>oBDS-CS therapie-typ</td><td>#ZS</td><td>equivalent</td><td>SNOMED CT</td><td>#1255831008</td></tr><tr><td>oBDS-CS therapieabweichung</td><td>#J</td><td>equivalent</td><td>SNOMED CT</td><td>#373066001</td></tr><tr><td>oBDS-CS therapieabweichung</td><td>#N</td><td>equivalent</td><td>SNOMED CT</td><td>#373067005</td></tr><tr><td>oBDS-CS therapieabweichung</td><td>#U</td><td>equivalent</td><td>SNOMED CT</td><td>#261665006</td></tr><tr><td>oBDS-CS therapieplanung-typ</td><td>#postop</td><td>source-is-narrower-than-target</td><td>SNOMED CT</td><td>#262061000</td></tr><tr><td>oBDS-CS therapieplanung-typ</td><td>#postth</td><td>source-is-narrower-than-target</td><td>SNOMED CT</td><td>#303110006</td></tr><tr><td>oBDS-CS therapieplanung-typ</td><td>#praeth</td><td>source-is-narrower-than-target</td><td>SNOMED CT</td><td>#307153007</td></tr><tr><td>oBDS-CS tod</td><td>#J</td><td>source-is-narrower-than-target</td><td>SNOMED CT</td><td>#373066001</td></tr><tr><td>oBDS-CS tod</td><td>#N</td><td>source-is-narrower-than-target</td><td>SNOMED CT</td><td>#373067005</td></tr><tr><td>oBDS-CS tod</td><td>#U</td><td>source-is-narrower-than-target</td><td>SNOMED CT</td><td>#261665006</td></tr><tr><td>oBDS-CS verlauf-fernmetastasen</td><td /><td>source-is-broader-than-target</td><td>SNOMED CT</td><td>#263855007</td></tr><tr><td>oBDS-CS verlauf-fernmetastasen</td><td>#F</td><td>equivalent</td><td>SNOMED CT</td><td>#64957009</td></tr><tr><td>oBDS-CS verlauf-fernmetastasen</td><td>#K</td><td>equivalent</td><td>SNOMED CT</td><td>#261985008</td></tr><tr><td>oBDS-CS verlauf-fernmetastasen</td><td>#N</td><td>equivalent</td><td>SNOMED CT</td><td>#260388006</td></tr><tr><td>oBDS-CS verlauf-fernmetastasen</td><td>#P</td><td>equivalent</td><td>SNOMED CT</td><td>#255314001</td></tr><tr><td>oBDS-CS verlauf-fernmetastasen</td><td>#R</td><td>source-is-broader-than-target</td><td>SNOMED CT</td><td>#7147002</td></tr><tr><td>oBDS-CS verlauf-fernmetastasen</td><td>#T</td><td>equivalent</td><td>SNOMED CT</td><td>#65320000</td></tr><tr><td>oBDS-CS verlauf-fernmetastasen</td><td>#U</td><td>equivalent</td><td>SNOMED CT</td><td>#261665006</td></tr><tr><td>oBDS-CS verlauf-fernmetastasen</td><td>#X</td><td>equivalent</td><td>SNOMED CT</td><td>#1287211007</td></tr><tr><td>oBDS-CS verlauf-gesamtbeurteilung</td><td>#B</td><td>equivalent</td><td>SNOMED CT</td><td>#84190002</td></tr><tr><td>oBDS-CS verlauf-gesamtbeurteilung</td><td>#K</td><td>equivalent</td><td>SNOMED CT</td><td>#260388006</td></tr><tr><td>oBDS-CS verlauf-gesamtbeurteilung</td><td>#P</td><td>equivalent</td><td>SNOMED CT</td><td>#419835002</td></tr><tr><td>oBDS-CS verlauf-gesamtbeurteilung</td><td>#R</td><td>source-is-narrower-than-target</td><td>SNOMED CT</td><td>#550991000124107</td></tr><tr><td>oBDS-CS verlauf-gesamtbeurteilung</td><td>#T</td><td>equivalent</td><td>SNOMED CT</td><td>#551001000124108</td></tr><tr><td>oBDS-CS verlauf-gesamtbeurteilung</td><td>#U</td><td>equivalent</td><td>SNOMED CT</td><td>#385432009</td></tr><tr><td>oBDS-CS verlauf-gesamtbeurteilung</td><td>#V</td><td>equivalent</td><td>SNOMED CT</td><td>#550991000124107</td></tr><tr><td>oBDS-CS verlauf-gesamtbeurteilung</td><td>#X</td><td>equivalent</td><td>SNOMED CT</td><td>#1287211007</td></tr><tr><td>oBDS-CS verlauf-gesamtbeurteilung</td><td>#Y</td><td>equivalent</td><td>SNOMED CT</td><td>#1259237005</td></tr><tr><td>oBDS-CS verlauf-lymphknoten</td><td>#F</td><td>equivalent</td><td>SNOMED CT</td><td>#64957009</td></tr><tr><td>oBDS-CS verlauf-lymphknoten</td><td>#K</td><td>equivalent</td><td>SNOMED CT</td><td>#399647000</td></tr><tr><td>oBDS-CS verlauf-lymphknoten</td><td>#N</td><td>equivalent</td><td>SNOMED CT</td><td>#260388006</td></tr><tr><td>oBDS-CS verlauf-lymphknoten</td><td>#P</td><td>equivalent</td><td>SNOMED CT</td><td>#255314001</td></tr><tr><td>oBDS-CS verlauf-lymphknoten</td><td>#R</td><td>equivalent</td><td>SNOMED CT</td><td>#263855007</td></tr><tr><td>oBDS-CS verlauf-lymphknoten</td><td>#T</td><td>equivalent</td><td>SNOMED CT</td><td>#65320000</td></tr><tr><td>oBDS-CS verlauf-lymphknoten</td><td>#U</td><td>equivalent</td><td>SNOMED CT</td><td>#261665006</td></tr><tr><td>oBDS-CS verlauf-lymphknoten</td><td>#X</td><td>equivalent</td><td>SNOMED CT</td><td>#1287211007</td></tr><tr><td>oBDS-CS verlauf-primaertumor</td><td>#F</td><td>equivalent</td><td>SNOMED CT</td><td>#64957009</td></tr><tr><td>oBDS-CS verlauf-primaertumor</td><td>#K</td><td>equivalent</td><td>SNOMED CT</td><td>#58899004</td></tr><tr><td>oBDS-CS verlauf-primaertumor</td><td>#N</td><td>equivalent</td><td>SNOMED CT</td><td>#260388006</td></tr><tr><td>oBDS-CS verlauf-primaertumor</td><td>#P</td><td>equivalent</td><td>SNOMED CT</td><td>#255314001</td></tr><tr><td>oBDS-CS verlauf-primaertumor</td><td>#R</td><td>equivalent</td><td>SNOMED CT</td><td>#1259237005</td></tr><tr><td>oBDS-CS verlauf-primaertumor</td><td>#T</td><td>equivalent</td><td>SNOMED CT</td><td>#65320000</td></tr><tr><td>oBDS-CS verlauf-primaertumor</td><td>#U</td><td>equivalent</td><td>SNOMED CT</td><td>#261665006</td></tr><tr><td>oBDS-CS verlauf-primaertumor</td><td>#X</td><td>equivalent</td><td>SNOMED CT</td><td>#1287211007</td></tr></table>
+
+<h3 id="referenzen">Referenzen</h3>
+
+<p>Das KDS-Modul Onkologie basiert auf dem onkologischen Basisdatensatz (oBDS) in
+der im Bundesanzeiger 2021 veröffentlichten Version. Die Inhalte sind
+öffentlich verfügbar:</p>
+
+<ul>
+  <li>Webseite des oBDS mit allen relevanten Datenfeldern, Beschreibungen und
+Antwortmöglichkeiten: <a href="https://basisdatensatz.de/basisdatensatz">basisdatensatz.de/basisdatensatz</a></li>
+  <li>Das oBDS-XML-Schema (Hierarchie, Feld-IDs, Datenvalidierung):
+<a href="https://basisdatensatz.de/xml/oBDS_v3.0.3.xsd">aktuelle Version</a>,
+<a href="https://basisdatensatz.de/xml/">ältere Versionen</a></li>
+  <li>Umsetzungsleitfaden der Krebsregister-Plattform §65c auf
+<a href="https://plattform65c.atlassian.net/wiki/spaces/UMK/overview">Confluence</a>,
+insbesondere das
+<a href="https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532576/Datenmodell">Datenmodell</a>
+und die
+<a href="https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532143/Meldungsinhalte">Meldungsinhalte</a></li>
+  <li>Ältere Vorarbeiten zur Abbildung des oBDS als Informationsmodell auf
+<a href="https://art-decor.org/art-decor/decor-datasets--mide-?id=2.16.840.1.113883.3.1937.777.24.1.1&amp;effectiveDate=2018-06-05T12%3A44%3A12&amp;conceptId=2.16.840.1.113883.3.1937.777.24.2.62&amp;conceptEffectiveDate=2018-06-06T06%3A13%3A32">ART-DECOR</a>
+(bilden den aktuellen Stand nicht vollständig ab)</li>
+</ul>
+
+<h3 id="qualitätssicherung-und-validierung">Qualitätssicherung und Validierung</h3>
+
+<!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/QA-Validierung.page.md gate=B -->
+<blockquote class="ig-highlight ig-highlight-grey">
+  <p>Mit dem Umzug auf den HL7 IG Publisher entsteht der maßgebliche QA-Report bei
+jedem Build automatisch (siehe <code class="language-plaintext highlighter-rouge">qa.html</code> im publizierten Guide). Die
+Validierungskonfiguration mit begründeten Unterdrückungen liegt in
+<a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/blob/dev/advisor.json"><code class="language-plaintext highlighter-rouge">advisor.json</code></a>;
+die kontinuierliche Validierung läuft über
+<a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/actions">GitHub Actions</a>.</p>
+</blockquote>
+
+<p>Der folgende, zuletzt zur Version 2026.0.0 manuell gepflegte Stand
+(2025-12-16) wird als historische Dokumentation der
+Simplifier-Ära beibehalten:</p>
+
+<ul>
+  <li><strong>Actionable Fehler</strong>: 9 · <strong>Gefilterte Meldungen</strong>: ~700+ (via advisor.json)</li>
+  <li>Gefiltert wurden insbesondere <code class="language-plaintext highlighter-rouge">Terminology_TX_NoValid_16</code> (~310, externe
+TX-Server-Limitation), <code class="language-plaintext highlighter-rouge">eld-20</code> (~294, Validator-Limitation),
+<code class="language-plaintext highlighter-rouge">UNABLE_TO_INFER_CODESYSTEM</code> (~100), <code class="language-plaintext highlighter-rouge">MSG_DRAFT</code> (~14) und <code class="language-plaintext highlighter-rouge">dom-6</code>.</li>
+  <li>Verbleibende Fehlerkategorien betrafen u. a. Mamma-Rezeptorstatus-Codes,
+das MedDRA-Binding des AdverseEvent (proprietäre Terminologie, extern) und
+die TX-Server-Verfügbarkeit einzelner ICD-O-Morphologie-Codes.</li>
+</ul>
+
+<p>Wenn Sie zur Verbesserung der Validierung beitragen möchten: Prüfen Sie die
+aktuellen CI-Läufe, laden Sie die Validierungs-Artefakte herunter und
+erstellen Sie einen Issue oder Pull Request im
+<a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie">GitHub-Repository</a>.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
+          Package de.medizininformatikinitiative.kerndatensatz.onkologie#2026.0.3 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt <span title="Wed, Sep 2, 2026 03:26+0000">2026-09-02</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <!-- Branding override for the fhir2.base.template footer fragment.
+     Unlike header/css, the base footer fragment is NOT an empty placeholder: it
+     renders "Links: Table of Contents | QA Report [| feedback dashboards]".
+     The base uses site.data.stringsBase[include.lang][...] for the labels. The
+     reason this override supplies its own is the Imprint label: the base ships no
+     stringsBase key for it and a child template cannot add one (docs/styleguide.md
+     section 6), and the same include.lang branch then has to carry the other
+     labels too. (The blank-label problem that first motivated this is separately
+     mitigated: this repo vendors the base's own German catalogs into
+     translations/ — see translations/README.md.) The override preserves the base
+     links (TOC, QA, feedback dashboards) and appends the project information links.
+     NUM-DIZ takes over IG development and maintenance when MII funding ends
+     (end-2026), so the NUM-DIZ website link renders BEFORE the MII website link —
+     in BOTH brand designs and both languages; the MII links stay because the
+     modules remain MII content. Both anchors are the SITE ROOTS with the bare
+     domain as anchor text (TF-KDS feedback 2026-08-14: aligned anchor style;
+     domains are language-neutral, styleguide §6).
+     Imprint: points at the NUM-DIZ website's legal pages since 2026-08-14
+     (TF-KDS: NUM-DIZ takes over from MII in 2027, so legal-aspect links use
+     the NUM-DIZ counterpart where one exists) - German /impressum and English
+     /en/legal-notice (both verified HTTP 200 on 2026-08-14). -->
+
+          Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-Bericht</a>
+                 
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.netzwerk-universitaetsmedizin.de/">netzwerk-universitaetsmedizin.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.medizininformatik-initiative.de/">medizininformatik-initiative.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.netzwerk-universitaetsmedizin.de/impressum">Impressum</a>
+                 <br/>
+                 <!-- HL7 trademark attribution (required wherever the FHIR flame
+                      renders - the header shows it on every page; see HL7's
+                      trademark guidelines; permission request tracked in issue #109). The sentence is
+                      HL7's prescribed formula and stays in English on every
+                      language's pages (legal wording, styleguide §6). -->
+                 <span>HL7®, FHIR® and the FHIR flame design are registered trademarks of Health Level Seven International. Their use does not constitute endorsement by HL7.</span>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
